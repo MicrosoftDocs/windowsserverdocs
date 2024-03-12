@@ -321,13 +321,13 @@ Windows Server 2022 images, including Server Core, Nano Server, and [Server imag
 
 #### Virtualized time zone
 
-With Windows Server 2022, Windows containers support the ability to maintain a virtualized time zone configuration separate from the host. All of the configurations traditionally used for the host time zone have been virtualized and are instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) Powershell cmdlet. To learn more, see [Virtualized time zone](../manage-containers/virtual-time-zone.md).
+With Windows Server 2022, Windows containers can now maintain a virtualized time zone configuration separate from the host. All configurations the host time zone typically uses are now virtualized and instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) Powershell cmdlet. To learn more, see [Virtualized time zone](/virtualization/windowscontainers/manage-containers/virtual-time-zone).
 
 #### Scalability improvements for overlay networking support
 
-Windows Server 2022 aggregates several performance and scale improvements that have been made across the last four Semi-Annual Channel (SAC) releases of Windows Server (but have not been backported into Windows Server 2019). The areas of improvement are listed below:
+Windows Server 2022 aggregates several performance and scale improvements that were already in four earlier Semi-Annual Channel (SAC) releases of Windows Server that hadn't been backported into Windows Server 2019:
 
-- The port exhaustion issue when using hundreds of Kubernetes services and pods on a node is now fixed.
+- Fixed the issue that caused port exhaustion when using hundreds of Kubernetes services and pods on the same node.
 - Improved packet forwarding performance in the Hyper-V virtual switch (vSwitch).
 - Increased reliability across Container Networking Interface (CNI) restarts in Kubernetes.
 - Improvements in the Host Networking Service (HNS) control plane and in the data plane used by Windows Server containers and Kubernetes networking.
@@ -336,23 +336,23 @@ To learn more about the performance and scalability improvements for overlay net
 
 #### Direct Server Return routing for overlay and l2bridge networks
 
-Direct Server Return (DSR) is an implementation of asymmetric network load distribution in load balanced systems, which means that the request and response traffic use different network paths. Using different network paths helps avoid extra hops and reduces the latency which not only speeds up the response time between the client and the service, but also removes some extra load from the load balancer. DSR transparently achieves increased network performance for applications with little to no infrastructure changes.
+Direct Server Return (DSR) is an asymmetric network load distribution in load balanced systems that makes request and response traffic use different network paths. Using different network paths helps avoid extra hops and reduces latency, speeding up response time between the client and service and removing extra load from the load balancer. DSR transparently achieves increased network performance for applications with little to no infrastructure changes.
 
 To learn more, see [DSR in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#load-balancing-and-services).
 
 #### gMSA improvements
 
-You can use Group Managed Service Accounts (gMSA) with Windows containers to facilitate Active Directory (AD) authentication. When introduced in Windows Server 2019, gMSA required joining the container host to a domain to retrieve the gMSA credentials from Active Directory. In Windows Server 2022, gMSA for containers with a non-domain joined host uses a portable user identity instead of a host identity to retrieve gMSA credentials, and therefore, manually joining Windows worker nodes to a domain is no longer necessary. The user identity is saved as a secret in Kubernetes. gMSA for containers with a non-domain joined host provides the flexibility of creating containers with gMSA without joining the host node to the domain.
+You can use Group Managed Service Accounts (gMSA) with Windows containers to facilitate Active Directory (AD) authentication. When introduced in Windows Server 2019, gMSA required joining the container host to a domain to retrieve the gMSA credentials from Active Directory. In Windows Server 2022, gMSA for containers with a non-domain joined host uses a portable user identity instead of a host identity to retrieve gMSA credentials. Therefore, manually joining Windows worker nodes to a domain is no longer necessary. After authentication, Kubernetes saves the user identity as a secret. gMSA for containers with a non-domain joined host provides the flexibility of creating containers with gMSA without joining the host node to the domain.
 
-To learn more about the gMSA improvements, see [Create gMSAs for Windows containers](../manage-containers/manage-serviceaccounts.md).
+To learn more about the gMSA improvements, see [Create gMSAs for Windows containers](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts).
 
 #### IPv6 support
 
-The first step to fully supporting the IPv6 dual stack has been implemented for Kuberenetes in Windows. The IPv6 dual stack is supported for L2Bridge-based networks on the platform. IPv6 is dependent on the CNI used in Kubernetes, and it also required Kubernetes version 1.20 to enable the IPv6 support end-to-end. For more information, see [IPv4/IPv6 in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#ipv4-ipv6-dual-stack).
+Kubernetes in Windows now supports the IPV6 dual stack in L2Bridge-based networks in Windows Server.IPv6 is dependent on the CNI <!--acronym----> that Kubernetes uses, and also requires Kubernetes version 1.20 or later to enable end-to-end IPv6 support. For more information, see [IPv4/IPv6 in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#ipv4-ipv6-dual-stack).
 
 #### Multi-subnet support for Windows worker nodes with Calico for Windows
 
-The Host Network Service (HNS) has been improved and now allows the use of more restrictive subnets (such as subnets with a longer prefix length) as well as multiple subnets for each Windows worker node. Previously, HNS was restricting the Kubernetes container endpoint configurations to only use the prefix length of the underlying subnet. The first CNI that makes use of this functionality is [Calico for Windows](https://techcommunity.microsoft.com/t5/networking-blog/calico-for-windows-goes-open-source/ba-p/1620297).  For more information, see [Multiple subnet support in Host Networking Service](../container-networking/multi-subnet.md).
+The Host Network Service (HNS) now allows you to use more restrictive subnets, such as subnets with a longer prefix length, and also multiple subnets for each Windows worker node. Previously, HNS restricted Kubernetes container endpoint configurations to only use the prefix length of the underlying subnet. The first CNI that makes use of this functionality is [Calico for Windows](https://techcommunity.microsoft.com/t5/networking-blog/calico-for-windows-goes-open-source/ba-p/1620297). For more information, see [Multiple subnet support in Host Networking Service](/virtualization/windowscontainers/container-networking/multi-subnet).
 
 #### HostProcess containers for node management
 
