@@ -141,19 +141,6 @@ The following video shows how to use Storage Migration Service to migrate to Azu
 
 If you want to lift and shift virtual machines to Azure without migrating to a later operating system, consider using Azure Migrate. For more information, see [About Azure Migrate](/azure/migrate/migrate-services-overview).
 
-## What's new in Storage Migration Service
-
-Windows Admin Center version 1910 added the ability to deploy Azure virtual machines. This update integrates Azure VM deployment into Storage Migration Service. For more information, see [Azure VM migration](#azure-vm-migration).
-
-You can access the following post-RTM features when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed or on Windows Server 2022:
-
-- Migrate local users and groups to the new server.
-- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
-- Migrate storage from a Linux server that uses Samba.
-- Sync migrated shares more easily into Azure by using Azure File Sync.
-- Migrate to new networks such as Azure.
-- Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
-
 ## Related links
 
 - [Use Storage Migration Service to migrate a server](migrate-data.md)
