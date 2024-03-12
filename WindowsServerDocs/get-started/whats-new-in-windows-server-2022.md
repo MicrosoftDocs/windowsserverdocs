@@ -306,11 +306,13 @@ Microsoft's Resilient File System (ReFS) now includes the ability to snapshot fi
 
 Enhancement to SMB in Windows Server 2022 and Windows 11 allows a user or application to compress files as they transfer over the network. Users no longer have to manually zip files in order to transfer much faster on slower or more congested networks. For details, see [SMB Compression](../storage/file-server/smb-compression.md).
 
-<!----Containers---->
+### Containers
+
+Windows Server 2022 includes the following changes to Windows containers.
 
 #### Server Core image size reduction
 
-We've reduced the size of Server Core images. This smaller image size allows you to deploy containerized applications faster. In Windows Server 2022, the Server Core container image RTM <!--acronym---> layer at the time of GA clocks in at 2.76 GB uncompressed on disk. Compared to the Windows Server 2019 RTM layer at the time of GA, which clocks in at 3.47 GB uncompressed on disk, that's a 33% reduction in on-disk footprint for that layer. While you shouldn't expect the total image size to be reduced by 33%, a smaller RTM layer size generally means the overall image size will be smaller.
+We've reduced the size of Server Core images. This smaller image size allows you to deploy containerized applications faster. In Windows Server 2022, the Server Core container image release to manufacturing (RTM) layer at the time of GA clocks in at 2.76 GB uncompressed on disk. Compared to the Windows Server 2019 RTM layer at the time of GA, which clocks in at 3.47 GB uncompressed on disk, that's a 33% reduction in on-disk footprint for that layer. While you shouldn't expect the total image size to be reduced by 33%, a smaller RTM layer size generally means the overall image size will be smaller.
 
 > [!NOTE]
 > Windows container base images ship as two layers: and RTM layer and a patch layer that contains the latest security fixes for OS libraries and binaries that's overlaid on the RTM layer. The patch layer's size changes over the life of the container image support cycle depending on how many changes are in the binaries. When you pull a container base image onto a new host, you need to pull both layers.
@@ -348,7 +350,7 @@ To learn more about the gMSA improvements, see [Create gMSAs for Windows contain
 
 #### IPv6 support
 
-Kubernetes in Windows now supports the IPV6 dual stack in L2Bridge-based networks in Windows Server.IPv6 is dependent on the CNI <!--acronym----> that Kubernetes uses, and also requires Kubernetes version 1.20 or later to enable end-to-end IPv6 support. For more information, see [IPv4/IPv6 in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#ipv4-ipv6-dual-stack).
+Kubernetes in Windows now supports the IPV6 dual stack in L2Bridge-based networks in Windows Server.IPv6 is dependent on the CNI that Kubernetes uses, and also requires Kubernetes version 1.20 or later to enable end-to-end IPv6 support. For more information, see [IPv4/IPv6 in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#ipv4-ipv6-dual-stack).
 
 #### Multi-subnet support for Windows worker nodes with Calico for Windows
 
@@ -356,33 +358,29 @@ The Host Network Service (HNS) now allows you to use more restrictive subnets, s
 
 #### HostProcess containers for node management
 
-HostProcess containers are a new container type that runs directly on the host and extends the Windows container model to enable a wider range of Kubernetes cluster management scenarios. With HostProcess containers, users can package and distribute management operations that require host access while retaining versioning and deployment methods provided by containers. This allows you to use Windows containers for a variety of device plug-in, storage, and networking management scenarios in Kubernetes.
+HostProcess containers are a new container type that runs directly on the host and extends the Windows container model to enable a wider range of Kubernetes cluster management scenarios. With HostProcess containers, users can package and distribute management operations that require host access while retaining versioning and deployment methods provided by containers. You can use Windows containers for a variety of device plug-in, storage, and networking management scenarios in Kubernetes.
 
 HostProcess containers have the following benefits:
 
-- Cluster users no longer need to log in and individually configure each Windows node for administrative tasks and management of Windows services.
+- Cluster users no longer need to sign in and individually configure each Windows node for administrative tasks and management of Windows services.
 - Users can utilize the container model to deploy management logic to as many clusters as needed.
-- HostProcess containers can be built on top of existing Windows server 2019 (or later) base images, managed through the Windows container runtime, and run as any user that is available in the domain of the host machine.
+- Users can build HostProcess containers on top of existing Windows server 2019 or later base images, manage them using Windows container runtime, and run as any user available in the domain of the host machine.
 - HostProcess containers provide the best way to manage Windows nodes in Kubernetes.
 
 For more information, see [Windows HostProcess Containers](https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/).
 
 #### Windows Admin Center improvements
 
-The Containers extension was previously added to Windows Admin Center to help you containerize existing web applications based on ASP.Net from .NET Framework. You could either provide a static folder or a Visual Studio solution from your developer.
+Windows Server 2022 expands on the Containers extension added to Windows Admin Center to containerize existing web applications based on ASP.Net from .NET Framework. You can use static folders or Visual Studio solutions from your developer.
 
 Windows Admin Center includes the following enhancements:
 
-- The Containers extension includes added support for Web Deploy files, allowing you to extract the app and its configuration from a running server and then containerize the application.
+- The Containers extension now supports Web Deploy files, which lets you extract the app and its configuration from a running server and then containerize the application.
 - You can validate the image locally and then push that image to Azure Container Registry.
-- Basic management functionality has been added for Azure Container Registry and Azure Container Instance. This allows you to create and delete registries, manage images, start and stop new container instances &mdash; all directly from the Windows Admin Center UI.
+- Azure Container Registry and Azure Container Instance now have basic management functionality. You can now use the Windows Admin Center UI to create and delete registries, manage images, and start and stop new container instances.
 
 #### Azure Migrate App Containerization tooling
 
-Azure Migrate App Containerization is an end-to-end solution to containerize and move existing web applications to Azure Kubernetes Service. It’s step-by-step approach provides functionality to assess existing web servers, create a container image, push the image to ACR, create a Kubernetes deployment, and finally deploy it to AKS.
+Azure Migrate App Containerization is an end-to-end solution that containerizes and moves existing web applications to the Azure Kubernetes Service. You can assess existing web servers, create a container image, push the image to the Azure Container Registry, create a Kubernetes deployment, and finally deploy it to the Azure Kubernetes Service.
 
-For more information on using the Azure Migrate App Containerization tool, see the following topics:
-
-[ASP.NET app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes)
-
-[Java web app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-java-kubernetes)
+For more information about the Azure Migrate App Containerization tool, see [ASP.NET app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) and [Java web app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-java-kubernetes).
