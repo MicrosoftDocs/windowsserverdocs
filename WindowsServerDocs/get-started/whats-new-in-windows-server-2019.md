@@ -139,11 +139,11 @@ It's now possible to prevent the File Server Resource Manager service from creat
 
 ### Storage Migration Service
 
-Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. This a graphical tool inventories data on servers, then transfers the data and configuration to newer servers. The Storage Migration Service can also optionally move the identities of the old servers to the new servers so users don't have to reconfigure their profiles. For more information, see [Storage Migration Service](../storage/storage-migration-service/overview.md).
+Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. This graphical tool inventories data on servers, then transfers the data and configuration to newer servers. The Storage Migration Service can also move the identities of the old servers to the new servers so users don't have to reconfigure their profiles and apps. For more information, see [Storage Migration Service](../storage/storage-migration-service/overview.md).
 
 Windows Admin Center version 1910 added the ability to deploy Azure virtual machines. This update integrates Azure VM deployment into Storage Migration Service. For more information, see [Azure VM migration](../storage/storage-migration-service/overview.md#azure-vm-migration).
 
-You can access the following post-release-to-manufacturing (RTM) features when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed or on Windows Server 2022:
+You can also access the following post-release-to-manufacturing (RTM) features when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed or on Windows Server 2022:
 
 - Migrate local users and groups to the new server.
 - Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
