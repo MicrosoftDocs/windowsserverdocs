@@ -96,7 +96,7 @@ The following virtual appliances are provided with Windows Server 2016:
 
 **Software load balancer**
 
-A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](/previous-versions/windows/server/mt632286(v=ws.12)). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](https://azure.microsoft.com/en-us/blog/microsoft-azure-load-balancing-services/).
+A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](/previous-versions/windows/server/mt632286(v=ws.12)). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](https://azure.microsoft.com/blog/microsoft-azure-load-balancing-services/).
 
 **Gateway**. RAS Gateway provides all combinations of the following gateway functions.
 
