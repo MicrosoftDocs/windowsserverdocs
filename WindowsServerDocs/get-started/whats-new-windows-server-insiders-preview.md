@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server I
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 03/06/2024
+ms.date: 03/14/2024
 ---
 
 # What's new in Windows Server Insiders Preview
@@ -164,6 +164,8 @@ Server Message Block (SMB) is one of the most widely used protocols in networkin
 - Beginning with build 25931, [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-signing-required-by-default-in-windows-insider/ba-p/3831704) is now required by default for all SMB outbound connections where previously it was only required when connecting to shares named **SYSVOL** and **NETLOGON** on AD domain controllers.
 
 - The [Remote Mailslot](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-beginning-of-the-end-of-remote-mailslots-as-part-of-windows/ba-p/3762048) protocol is disabled by default starting in build 25314.
+
+- SMB compression adds support for industry standard LZ4 compression algorithm, in addition to its existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
 
 ### Storage Replica Enhanced Log
 
