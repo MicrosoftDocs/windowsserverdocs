@@ -165,7 +165,7 @@ Server Message Block (SMB) is one of the most widely used protocols in networkin
 
 - The [Remote Mailslot](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-beginning-of-the-end-of-remote-mailslots-as-part-of-windows/ba-p/3762048) protocol is disabled by default starting in build 25314.
 
-- SMB compression uses the industry standard LZ4 compression algorithm that achieves high compression ratios with little overhead.
+- SMB compression adds support for industry standard LZ4 compression algorithm, in addition to its existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
 
 ### Storage Replica Enhanced Log
 
