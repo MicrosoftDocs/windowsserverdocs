@@ -4,17 +4,20 @@ description: Learn how to partition and share a GPU with multiple virtual machin
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 02/08/2024
+ms.date: 03/15/2024
 zone_pivot_groups: windows-os
+#customer intent: As a customer, I want to learn how to partition and assign GPUs to a virtual machine in Hyper-V so that I can use the GPU resources efficiently.
 ---
 
 # Partition and assign GPUs to a virtual machine
 
 :::zone pivot="windows-server"
+
 >Applies to: Windows Server Insider Preview build 26040 or later
 
 > [!IMPORTANT]
 > GPU partitioning in Windows Server Insider builds is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"

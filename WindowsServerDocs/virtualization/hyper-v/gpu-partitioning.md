@@ -1,10 +1,10 @@
 ---
 title: Partition and share GPUs with virtual machines on Hyper-V
-description: Learn how to partition and share a GPU with multiple virtual machines on Windows Server and Azure Stack HCI.
+description: Learn about how GPU partitioning works with multiple virtual machines on Windows Server and Azure Stack HCI.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: how-to
-ms.date: 04/05/2023
+ms.topic: concept
+ms.date: 03/15/2024
 zone_pivot_groups: windows-os
 ---
 
@@ -55,8 +55,9 @@ GPU partitioning on Windows Server supports these guest operating systems:
 GPU partitioning on Azure Stack HCI supports these guest operating systems:
 :::zone-end
 
-- Windows 10, Windows 11, Windows 10 Enterprise multi-session​, Windows 11 Enterprise multi-session
-- Windows Server 2019, Windows Server 2022
+- Windows 10 or later
+- Windows 10 Enterprise multi-session​ or later
+- Windows Server 2019 or later
 - Linux Ubuntu 18.04 LTS, Linux Ubuntu 20.04 LTS​
 
 ## Supported GPUs
@@ -67,6 +68,8 @@ The following GPUs support GPU partitioning:
 - NVIDIA A10
 - NVIDIA A16
 - NVIDIA A40
+- NVIDIA L4
+- NVIDIA L40
 
 We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support additional GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA) or GPU passthrough. Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
 
@@ -76,7 +79,7 @@ For best performance, we recommend that you create a homogeneous configuration f
 
 Consider the following limitations when using the GPU partitioning feature:
 
--  GPU partitioning is unsupported if your configuration isn't homogeneous. Here are some examples of unsupported configurations:
+- GPU partitioning is unsupported if your configuration isn't homogeneous. Here are some examples of unsupported configurations:
 
   - Mixing GPUs from different vendors in the same cluster.
 
@@ -104,7 +107,7 @@ Consider the following limitations when using the GPU partitioning feature:
 
 :::zone-end
 
-## Next steps
+## Related content
 
 :::zone pivot="windows-server"
 
