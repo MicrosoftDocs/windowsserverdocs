@@ -189,22 +189,13 @@ The [Windows Insider Program](/windows-insider/get-started) provides early acces
 
 ### Windows Local Administrator Password Solution (LAPS)
 
-The latest update to Windows LAPS includes an automatic account management feature that allows IT admins to create a managed local account with ease. With this feature, you can customize the account name, enable or disable the account, and even randomize the account name for enhanced security. Additionally, the update includes improved integration with Microsoft's existing local account management policies. To learn more about this feature, see [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes).
+Windows LAPS helps organizations manage local administrator passwords on their domain-joined computers. It automatically generates unique passwords for each computer's local administrator account, stores them securely in AD, and updates them regularly. This helps to improve security by reducing the risk of attackers gaining access to sensitive systems using compromised or easily guessable passwords.
 
-Improvements to LAPS also include:
+Several features are introduced to Microsoft LAPS that bring the following improvements:
 
-- **Improved readability password dictionary**
-  
-  LAPS introduces a new _PasswordComplexity_ setting that enables IT admins to create less complex passwords. This feature allows you to customize LAPS to use all four character categories (upper case letters, lower case letters, numbers, and special characters) like the existing complexity setting of 4. However, with the new setting of 5, the more complex characters are excluded to enhance password readability and minimize confusion. For example, the number "**1**" and the letter "**I**" are never used with the new setting.
+- **New automatic account management feature**
 
-  When _PasswordComplexity_ is configured to 5, the following changes are made to the default password dictionary character set:
-
-  1. Don’t use these letters: '**I**', '**O**', '**Q**', '**l**', '**o**'
-  1. Don’t use these numbers: '**0**', '**1**'
-  1. Don’t use these "special" characters: '**,**', '**.**', '**&**', '**{**', '**}**', '**[**', '**]**', '**(**', '**)**', '**;**'
-  1. Start using these "special" characters: '**:**', '**=**', '**?**', '**\***'
-
-  The Active Directory Users and Computers snap-in (via Microsoft Management Console) now features an improved Windows LAPS tab. The Windows LAPS password is now displayed in a new font that enhances its readability when shown in plain text.
+  The latest update allows IT admins to create a managed local account with ease. With this feature, you can customize the account name, enable or disable the account, and even randomize the account name for enhanced security. Additionally, the update includes improved integration with Microsoft's existing local account management policies. To learn more about this feature, see [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes).
 
 - **New image rollback detection feature**
   
@@ -228,6 +219,19 @@ Improvements to LAPS also include:
 
   > [!NOTE]
   > Windows LAPS doesn't allow for customization of the built-in word lists nor the use of customer-configured word lists.
+
+- **Improved readability password dictionary**
+
+  Windows LAPS introduces a new _PasswordComplexity_ setting that enables IT admins to create less complex passwords. This feature allows you to customize LAPS to use all four character categories (upper case letters, lower case letters, numbers, and special characters) like the existing complexity setting of 4. However, with the new setting of 5, the more complex characters are excluded to enhance password readability and minimize confusion. For example, the number "**1**" and the letter "**I**" are never used with the new setting.
+
+  When _PasswordComplexity_ is configured to 5, the following changes are made to the default password dictionary character set:
+
+  1. Don’t use these letters: '**I**', '**O**', '**Q**', '**l**', '**o**'
+  1. Don’t use these numbers: '**0**', '**1**'
+  1. Don’t use these "special" characters: '**,**', '**.**', '**&**', '**{**', '**}**', '**[**', '**]**', '**(**', '**)**', '**;**'
+  1. Start using these "special" characters: '**:**', '**=**', '**?**', '**\***'
+
+  The Active Directory Users and Computers snap-in (via Microsoft Management Console) now features an improved Windows LAPS tab. The Windows LAPS password is now displayed in a new font that enhances its readability when shown in plain text.
 
 - **PostAuthenticationAction support for terminating individual processes**
 
