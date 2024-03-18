@@ -209,7 +209,7 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
 - **New passphrase feature**
 
-  IT admins can now utilize a new feature in Windows LAPS that enables the generation of less complex passphrases. An example would be a passphrase such as "EatYummyGummyBears", which is easier to read, remember, and type, compared to a traditional password like "V3r_b4tim#963?".
+  IT admins can now utilize a new feature in Windows LAPS that enables the generation of less complex passphrases. An example would be a passphrase such as "EatYummyCaramelCandy", which is easier to read, remember, and type, compared to a traditional password like "V3r_b4tim#963?".
 
   This new feature also allows the _PasswordComplexity_ policy setting to be configured to select one of three different passphrase word lists, all of which are included in Windows without requiring a separate download. A new policy setting called _PassphraseLength_ controls the number of words used in the passphrase.
 
@@ -241,7 +241,7 @@ Several features are introduced to Microsoft LAPS that bring the following impro
   
   Furthermore, the expansion of logging events during post-authentication-action execution provides deeper insights into the operation.
 
-To learn more about LAPS, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview).
+To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview).
 
 ### Windows Terminal
 
