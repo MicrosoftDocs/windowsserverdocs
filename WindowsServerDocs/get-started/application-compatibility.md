@@ -6,6 +6,7 @@ ms.author: roharwoo
 author: robinharwood
 manager: femila
 ms.date: 02/07/2023
+zone_pivot_groups: windows-os-version
 ---
 
 # Microsoft server applications compatibility for Windows Server
