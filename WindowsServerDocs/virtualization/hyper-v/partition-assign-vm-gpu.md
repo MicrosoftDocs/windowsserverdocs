@@ -13,10 +13,10 @@ zone_pivot_groups: windows-os
 
 :::zone pivot="windows-server"
 
->Applies to: Windows Server Insider Preview build 26040 or later
+>Applies to: Windows Server 2025 (preview)
 
 > [!IMPORTANT]
-> GPU partitioning in Windows Server Insider builds is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ::: zone-end
 
