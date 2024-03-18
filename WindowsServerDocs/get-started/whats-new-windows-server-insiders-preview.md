@@ -206,10 +206,6 @@ Improvements to LAPS also include:
 
   The Active Directory Users and Computers snap-in (via Microsoft Management Console) now features an improved Windows LAPS tab. The Windows LAPS password is now displayed in a new font that enhances its readability when shown in plain text.
 
-- **New automatic account management feature**
-
-  IT admins can set up Windows LAPS to automatically create a managed local account. In addition, it's possible to customize the account name, enable or disable the account, and optionally randomize the account name for better security. Moreover, improvement in the integration with Microsoft's current local account management policies.
-
 - **New image rollback detection feature**
   
   Windows LAPS now detects when an image rollback occurs. If a rollback does happen, the password stored in AD may no longer match the password stored locally on the device. Rollbacks can result in a "torn state" where the IT admin is unable to sign into the device using the persisted Windows LAPS password.
