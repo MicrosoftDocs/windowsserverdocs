@@ -15,33 +15,33 @@ ms.topic: article
 
 This topic provides descriptions for the controls on the following wizard pages that comprise the AD DS server role installation and removal in Server Manager.
 
--   [Deployment Configuration](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DepConfigPage)
+-   [Deployment Configuration](#BKMK_DepConfigPage)
 
--   [Domain Controller Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DCOptionsPage)
+-   [Domain Controller Options](#BKMK_DCOptionsPage)
 
--   [DNS Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage)
+-   [DNS Options](#BKMK_DNSOptionsPage)
 
--   [RODC Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_RODCOptionsPage)
+-   [RODC Options](#BKMK_RODCOptionsPage)
 
--   [Additional Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_AdditionalOptionsPage)
+-   [Additional Options](#BKMK_AdditionalOptionsPage)
 
--   [Paths](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_Paths)
+-   [Paths](#BKMK_Paths)
 
--   [Preparation Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_AdprepCreds)
+-   [Preparation Options](#BKMK_AdprepCreds)
 
--   [Review Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_ViewInstallOptionsPage)
+-   [Review Options](#BKMK_ViewInstallOptionsPage)
 
--   [Prerequisites Check](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_PrerqCheckPage)
+-   [Prerequisites Check](#BKMK_PrerqCheckPage)
 
--   [Results](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_Results)
+-   [Results](#BKMK_Results)
 
--   [Role Removal credentials](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_RemovalCredsPage)
+-   [Role Removal credentials](#BKMK_RemovalCredsPage)
 
--   [AD DS Removal Options and Warnings](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_RemovalOptionsPage)
+-   [AD DS Removal Options and Warnings](#BKMK_RemovalOptionsPage)
 
--   [New Administrator Password](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_NewAdminPwdPage)
+-   [New Administrator Password](#BKMK_NewAdminPwdPage)
 
--   [Confirm Role Removal Selections](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_ConfirmRoleRemovalPage)
+-   [Confirm Role Removal Selections](#BKMK_ConfirmRoleRemovalPage)
 
 ## <a name="BKMK_DepConfigPage"></a>Deployment Configuration
 Server Manager begins every domain controller installation with the **Deployment Configuration** page. The remaining options and required fields change on this page and subsequent pages, depending on which deployment operation you select. For example, if you create a new forest, the **Preparation Options** page does not appear, but it does if you install the first domain controller that runs  Windows Server 2012  in an existing forest or domain.
@@ -58,7 +58,7 @@ The following options appear when you create a new forest.
 
 -   You must be a member of Administrators group on the server where you want to create a new forest.
 
-For more information about how to create a forest, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).
+For more information about how to create a forest, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).
 
 The following options appear when you create a new domain.
 
@@ -75,7 +75,7 @@ The following options appear when you create a new domain.
 
 -   The Active Directory Domain Services Configuration Wizard prompts you for domain credentials if your current credentials are not from the domain. Click **Change** to provide domain credentials.
 
-For more information about how to create a domain, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md).
+For more information about how to create a domain, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md).
 
 The following options appear when you add a new domain controller to an existing domain.
 
@@ -87,7 +87,7 @@ The following options appear when you add a new domain controller to an existing
 
     In addition, installing the first domain controller that runs  Windows Server 2012  in a forest requires credentials that include group memberships in both the Enterprise Admins and Schema Admins groups. The Active Directory Domain Services Configuration Wizard prompts you later if your current credentials do not have adequate permissions or group memberships.
 
-For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
+For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](./Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
 
 ## <a name="BKMK_DCOptionsPage"></a>Domain Controller Options
 If you are creating a new forest, the Domain Controller Options page has these options:
@@ -105,7 +105,7 @@ If you are creating a new forest, the Domain Controller Options page has these o
 
 -   The Directory Services Restore Mode (DSRM) password is needed in order to log on to a domain controller where AD DS is not running. The password you specify must adhere to the password policy applied to the server, which by default does not require a strong password; only a non-blank password. Always choose a strong, complex password or preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see [KB 961320](https://support.microsoft.com/kb/961320).
 
-For more information about how to create a forest, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).
+For more information about how to create a forest, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).
 
 If you are creating a child domain, the Domain Controller Options page has these options:
 
@@ -122,7 +122,7 @@ If you are creating a child domain, the Domain Controller Options page has these
     > [!IMPORTANT]
     > If the server does not belong to an Active Directory subnet and there is more than one site, nothing is selected and the **Next** button is unavailable until you choose a site from the list.
 
-For more information about how to create a domain, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md).
+For more information about how to create a domain, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md).
 
 If you are adding a domain controller to a domain, the Domain Controller Options page has these options:
 
@@ -132,7 +132,7 @@ If you are adding a domain controller to a domain, the Domain Controller Options
 
     Microsoft recommends that all domain controllers provide DNS and global catalog services for high availability in distributed environments, which is why the wizard enables these options by default. For more information about deploying RODCs, see [Read-Only Domain Controller Planning and Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771744(v=ws.10)).
 
-For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
+For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](./Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
 
 ## <a name="BKMK_DNSOptionsPage"></a>DNS Options
 If you install DNS server, the following **DNS Options** page appears:
@@ -174,7 +174,7 @@ The following options appear when you install a read-only domain controller (ROD
 
     Any users or computers who are not allowed (including implicit) or denied do not cache their password. If those users or computers do not have access to a writable domain controller, they cannot access AD DS-provided resources or functionality. For more information about the PRP, see [Password Replication Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730883(v=ws.10)). For more information about managing the PRP, see [Administering the Password Replication Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754646(v=ws.10)).
 
-For more information about installing RODCs, see [Install a Windows Server 2012 Active Directory Read-Only Domain Controller &#40;RODC&#41; &#40;Level 200&#41;](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md).
+For more information about installing RODCs, see [Install a Windows Server 2012 Active Directory Read-Only Domain Controller &#40;RODC&#41; &#40;Level 200&#41;](./RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md).
 
 ## <a name="BKMK_AdditionalOptionsPage"></a>Additional Options
 The following option appears on the **Additional Options** page if you are creating a new domain:
@@ -189,7 +189,7 @@ The following options appear on the **Additional Options** page if you install a
 
 -   You can also choose to install the domain controller using backed up media using the Install from media (IFM) option. If the installation media is stored locally, the **Install from media Path** option allows you to browse to the file location. The browse option is not available for a remote installation. You can click **Verify** to ensure the provided path is valid media. Media used by the IFM option must be created with Windows Server Backup or Ntdsutil.exe from another existing  Windows Server 2012  computer only; you cannot use a Windows Server 2008 R2 or previous operating system to create media for a  Windows Server 2012  domain controller. If the media is protected with a SYSKEY, Server Manager prompts for the image's password during verification.
 
-For more information about how to create a domain, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md). For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
+For more information about how to create a domain, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md). For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](./Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
 
 ## <a name="BKMK_Paths"></a>Paths
 The following options appear on the **Paths** page.
@@ -211,7 +211,7 @@ If you are not currently logged on with sufficient credentials to run adprep.exe
 
 -   Adprep /rodcprep must be run to add the first RODC to an existing forest. This command must be run by a member of the Enterprise Admins group. For this command to complete successfully, there must be connectivity between the computer where you run the command and the infrastructure master for each application directory partition in the forest.
 
-For more information about Adprep.exe, see [Adprep.exe integration](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep) and see [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
+For more information about Adprep.exe, see [Adprep.exe integration](./What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep) and see [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
 ## <a name="BKMK_ViewInstallOptionsPage"></a>Review Options
 ![Screenshot of the Review Options page of the Active Directory Domain Services Configuration Wizard.](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_ReviewOptions.gif)
@@ -225,9 +225,9 @@ For more information about Adprep.exe, see [Adprep.exe integration](../../ad-ds/
 
 Some of the warnings that appear on this page include:
 
--   Domain controllers that run  Windows Server 2008  or later have a default setting for "Allow cryptography algorithms compatible with Windows NT 4" that prevents weaker cryptography algorithms when establishing secure channel sessions. For more information about the potential impact and a workaround, see KB article [942564](https://support.microsoft.com/kb/942564).
+-   Domain controllers that run  Windows Server 2008  or later have a default setting for "Allow cryptography algorithms compatible with Windows NT 4" that prevents weaker cryptography algorithms when establishing secure channel sessions. For more information about the potential impact and a workaround, see [Disable the AllowNT4Crypto setting on all affected domain controllers](/services-hub/unified/health/remediation-steps-ad/disable-the-allownt4crypto-setting-on-all-affected-domain-controllers).
 
--   DNS delegation could not be created or updated. For more information, see [DNS Options](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage).
+-   DNS delegation could not be created or updated. For more information, see [DNS Options](#BKMK_DNSOptionsPage).
 
 -   The prerequisite check requires WMI calls. They can fail if they are blocked firewall rules block, and return an RPC server unavailable error.
 

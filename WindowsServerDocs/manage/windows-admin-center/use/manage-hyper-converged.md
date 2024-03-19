@@ -1,18 +1,18 @@
 ---
-title: Manage Hyper-Converged Infrastructure with Windows Admin Center
+title: Manage Azure Stack HCI
 description: Manage Hyper-Converged Infrastructure with Windows Admin Center (Project Honolulu)
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 03/01/2019
+ms.date: 03/15/2023
 ---
-# Manage Hyper-Converged Infrastructure with Windows Admin Center
+# Manage Azure Stack HCI
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## What is Hyper-Converged Infrastructure
 
-Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](../../../storage/storage-spaces/storage-spaces-direct-overview.md), [Software Defined Networking](../../../networking/sdn/software-defined-networking.md) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
+Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview), [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
 
 > [!Tip]
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
@@ -20,7 +20,7 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 > [!IMPORTANT]
 > Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](../overview.md)
 
-## What is Windows Admin Center
+## What is Windows Admin Center?
 
 [Windows Admin Center](../overview.md) is the next-generation management tool for Windows Server, the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an Internet connection. You can use Windows Admin Center to manage and monitor Hyper-Converged Infrastructure running Windows Server 2016 or Windows Server 2019.
 
@@ -31,15 +31,15 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 Highlights of Windows Admin Center for Hyper-Converged Infrastructure include:
 
 - **Unified single-pane-of-glass for compute, storage, and soon networking.** View your virtual machines, host servers, volumes, drives, and more within one purpose-built, consistent, interconnected experience.
-- **Create and manage Storage Spaces and Hyper-V virtual machines.** Radically simple workflows to create, open, resize, and delete volumes; and create, start, connect to, and move virtual machines; and much more.
-- **Powerful cluster-wide monitoring.** The dashboard graphs memory and CPU usage, storage capacity, IOPS, throughput, and latency in real-time, across every server in the cluster, with clear alerts when something's not right.
+- **Create and manage Storage Spaces and Hyper-V virtual machines.** Radically simple workflows to create, open, resize, and delete volumes, or to create, start, connect to, and move virtual machines, and much more.
+- **Powerful cluster-wide monitoring.** The dashboard graphs memory and CPU usage, storage capacity, IOPS, throughput, and latency in real-time, across every server in the cluster, and with clear alerts when something's not right.
 - **Software Defined Networking (SDN) support.** Manage and monitor virtual networks, subnets, connect virtual machines to virtual networks, and monitor SDN infrastructure.
 
 Windows Admin Center for Hyper-Converged Infrastructure is being actively developed by Microsoft. It receives frequent updates that improve existing features and add new features.
 
 ## Before you start
 
-To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center, it needs to be running Windows Server 2016 or Windows Server 2019, and have Hyper-V and Storage Spaces Direct enabled. Optionally, it can also have Software Defined Networking enabled and managed through Windows Admin Center.
+To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center, it needs to be running Windows Server 2016 or Windows Server 2019 and have Hyper-V and Storage Spaces Direct enabled. Optionally, it can also have Software Defined Networking enabled and managed through Windows Admin Center.
 
 > [!Tip]
 > Windows Admin Center also offers a general-purpose management experience for any cluster supporting any workload, available for Windows Server 2012 and later. If this sounds like a better fit, when you add your cluster to Windows Admin Center, select [**Failover Cluster**](manage-failover-clusters.md) instead of **Hyper-Converged Cluster**.
@@ -175,38 +175,24 @@ If you're just getting started, here are some quick tutorials to help you learn 
                <li>(0:26) <a href="https://youtu.be/DbjF8r2F6Jo">How to delete a volume</a></li>
 </ul>
 
-<table>
-    <tr>
-        <td>
-            <strong>Create volume, three-way mirror</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/o66etKq70N8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-        </td>
-        <td>
-            <strong>Create volume, mirror-accelerated parity</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Open volume and add files</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/j59z7ulohs4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-        </td>
-        <td>
-            <strong>Turn on deduplication and compression</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Expand volume</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-        </td>
-        <td>
-            <strong>Delete volume</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-        </td>
-    </tr>
-</table>
+#### Create volume, three-way mirror
+> [!VIDEO https://www.youtube-nocookie.com/embed/o66etKq70N8]
+       
+#### Create volume, mirror-accelerated parity
+> [!VIDEO https://www.youtube-nocookie.com/embed/R72QHudqWpE]
+
+#### Open volume and add files
+> [!VIDEO https://www.youtube-nocookie.com/embed/j59z7ulohs4]
+        
+#### Turn on deduplication and compression
+> [!VIDEO https://www.youtube-nocookie.com/embed/PRibTacyKko]
+        
+#### Expand volume
+> [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
+        
+#### Delete volume
+> [!VIDEO https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo]
+        
 
 ### Create a new virtual machine
 
@@ -274,26 +260,26 @@ You can also configure the virtual network when creating a virtual machine.
 1. Select **GPUs** from the navigation on the left side. 
 2. View the available GPUs from your clustered VMs and provide GPU acceleration to workloads running in the clustered VMs through Discrete Device Assignment (DDA). [Learn more about using GPUs with clustered VMs.](https://aka.ms/useGPUWithClusteredVM)
 
-[![Here is a screenshot of how you can manage your GPUs.](../media/manage-hyper-converged/gpu-tool.png)](../media/manage-hyper-converged/gpu-tool.png#lightbox)
+![Here is a screenshot of how you can manage your GPUs.](../media/manage-hyper-converged/gpu-tool.png)
 
 ### Security tool
 
 1. Select **Security** from the navigation on the left side. 
 2. Select the **Secured-core** tab and enable or disable the available security features. 
 
-[![Here is a screenshot of how you can check the security of your resources.](../media/manage-hyper-converged/security-tool.png)](../media/manage-hyper-converged/security-tool.png#lightbox)
+![Here is a screenshot of how you can check the security of your resources.](../media/manage-hyper-converged/security-tool.png)
 
 ## Give us feedback
 
 It's all about your feedback! The most important benefit of frequent updates is to hear what's working and what needs to be improved. Here are some ways to let us know what you're thinking:
 
-- [Submit and vote for feature requests on UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
+- [Submit ideas for feature requests and provide feedback](https://aka.ms/wacfeedback)
 - [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - Tweet to `@servermgmt`
 
 ### Additional References
 
 - [Windows Admin Center](../overview.md)
-- [Storage Spaces Direct](../../../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md)
-- [Software Defined Networking](../../../networking/sdn/software-defined-networking.md)
+- [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking)

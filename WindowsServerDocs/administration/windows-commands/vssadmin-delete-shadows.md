@@ -37,7 +37,7 @@ To delete the oldest shadow copy of volume C, type:
 vssadmin delete shadows /for=c: /oldest
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

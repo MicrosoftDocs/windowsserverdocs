@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -288,7 +288,7 @@ manager: mtillman
  You can log on to Remote Web Access from your smart phone to view the files and folders in the shared folders on the server.
 
 > [!NOTE]
->  You can also download and use the My Server app for Windows Server Essentials from the [Windows Phone Marketplace](http://www.windowsphone.com/apps/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a) to access your shared folders and media files that are stored on the server.
+>  You can also download and use the My Server app for Windows Server Essentials from the [Windows Phone Marketplace](https://www.windowsphone.com/apps/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a) to access your shared folders and media files that are stored on the server.
 
 ##### To log on to Remote Web Access from a mobile device
 

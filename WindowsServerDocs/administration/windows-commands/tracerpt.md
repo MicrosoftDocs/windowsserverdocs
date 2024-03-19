@@ -77,6 +77,6 @@ To read the real-time Event Trace Session NT Kernel Logger and to produce the du
 tracerpt -rt NT Kernel Logger -o logfile.csv -of CSV
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

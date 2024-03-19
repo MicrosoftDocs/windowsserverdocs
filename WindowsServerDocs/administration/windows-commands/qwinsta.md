@@ -78,7 +78,7 @@ To display information about active session *modeM02*, type:
 qwinsta modeM02
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

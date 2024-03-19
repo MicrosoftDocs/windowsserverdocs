@@ -16,7 +16,7 @@ ms.date: 08/29/2018
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
-3.  Run [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx) in an elevated PowerShell window on the first HGS node. The syntax of this cmdlet supports many different inputs, but the 2 most common invocations are below:
+3.  Run [Initialize-HgsServer](/powershell/module/hgsserver/initialize-hgsserver) in an elevated PowerShell window on the first HGS node. The syntax of this cmdlet supports many different inputs, but the 2 most common invocations are below:
 
     -   If you are using PFX files for your signing and encryption certificates, run the following commands:
 

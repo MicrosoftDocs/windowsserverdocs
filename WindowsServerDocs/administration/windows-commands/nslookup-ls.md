@@ -37,7 +37,7 @@ ls [<option>] <DNSdomain> [{[>] <filename>|[>>] <filename>}]
 
 - If your output is directed to a file, hash marks are added for every 50 records received from the server.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

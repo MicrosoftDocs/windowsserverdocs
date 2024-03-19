@@ -3,13 +3,13 @@ title: Supported FreeBSD virtual machines on Hyper-V
 description: Lists the FreeBSD/Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 01/08/2021
+ms.author: kkashanjat
+author: kkkashan
+ms.date: 09/27/2023
 ---
 # Supported FreeBSD virtual machines on Hyper-V
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+> Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 The following feature distribution map indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.
 
@@ -21,44 +21,44 @@ The following feature distribution map indicates the features in each version. T
 
 * (*blank*) - Feature not available
 
-|**Feature**|**Windows Server operating system version**|**12-12.1**|**11.1-11.3**|**11.0**|**10.3**|**10.2**|**10.0 - 10.1**|**9.1 - 9.3, 8.4**|
-|-|-|-|-|-|-|-|-|-|
-|**Availability**||Built in|Built in|Built in|Built in|Built in|Built in|[Ports](https://svnweb.freebsd.org/ports/branches/2015Q1/emulators/hyperv-is/) |
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016 Accurate Time|2019, 2016|&#10004;|&#10004;||||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
-|Jumbo frames|2019, 2016, 2012 R2|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|&#10004; Note 3|
-|VLAN tagging and trunking|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Live migration|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Static IP Injection|2019, 2016, 2012 R2|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004; Note 4|&#10004;|
-|vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|||||
-|TCP Segmentation and Checksum Offloads|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
-|Large Receive Offload (LRO)|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||||
-|SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;|||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||Note1|Note 1|Note 1|Note 1|Note 1|Note 1,2|Note 1,2|
-|VHDX resize|2019, 2016, 2012 R2|&#10004; Note 6|&#10004; Note 6|&#10004; Note 6|||||
-|Virtual Fibre Channel|2019, 2016, 2012 R2||||||||
-|Live virtual machine backup|2019, 2016, 2012 R2|&#10004;|&#10004;||||||
-|TRIM support|2019, 2016, 2012 R2|&#10004;|&#10004;||||||
-|SCSI WWN|2019, 2016, 2012 R2||||||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||||||
-|PAE Kernel Support|2019, 2016, 2012 R2||||||||
-|Configuration of MMIO gap|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Dynamic Memory - Hot-Add|2019, 2016, 2012 R2||||||||
-|Dynamic Memory - Ballooning|2019, 2016, 2012 R2||||||||
-|Runtime Memory Resize|2019, 2016||||||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|||||||||
-|Hyper-V specific video device|2019, 2016, 2012 R2||||||||
-|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|||||||||
-|Key/value pair|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; Note 5|&#10004;|
-|Non-Maskable Interrupt|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|File copy from host to guest|2019, 2016, 2012 R2||||||||
-|lsvmbus command|2019, 2016, 2012 R2||||||||
-|Hyper-V Sockets|2019, 2016||||||||
-|PCI Passthrough/DDA|2019, 2016|&#10004;|&#10004;||||||
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**|||||||||
-|Boot using UEFI|2019, 2016, 2012 R2|&#10004;|&#10004;||||||
-|Secure boot|2019, 2016||||||||
+| **Feature** | **Windows Server operating system version** | **13.0-13.1** | **12.0-12.3** | **11.2-11.4** | **10.4** |
+|--|--|--|--|--|--|
+| **Availability** |  | Built in | Built in | Built in | Built in |
+| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | 2019, 2016 | ✔ | ✔ | ✔ |  |
+| **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)** |  |  |  |  |  |
+| Jumbo frames | 2019, 2016, 2012 R2 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 |
+| VLAN tagging and trunking | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| Live migration | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| Static IP Injection | 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| vRSS | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| TCP Segmentation and Checksum Offloads | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| Large Receive Offload (LRO) | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| SR-IOV | 2019, 2016 | ✔ | ✔ | ✔ | ✔ |
+| **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  | Note 1 | Note1 | Note 1 | Note 1 |
+| VHDX resize | 2019, 2016, 2012 R2 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 |
+| Virtual Fibre Channel | 2019, 2016, 2012 R2 |  |  |  |  |
+| Live virtual machine backup | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |  |
+| TRIM support | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |  |
+| SCSI WWN | 2019, 2016, 2012 R2 |  |  |  |  |
+| **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** |  |  |  |  |  |
+| PAE Kernel Support | 2019, 2016, 2012 R2 |  |  |  |  |
+| Configuration of MMIO gap | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | 2019, 2016, 2012 R2 |  |  |  |  |
+| Dynamic Memory - Ballooning | 2019, 2016, 2012 R2 |  |  |  |  |
+| Runtime Memory Resize | 2019, 2016 |  |  |  |  |
+| **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** |  |  |  |  |  |
+| Hyper-V specific video device | 2019, 2016, 2012 R2 |  |  |  |  |
+| **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** |  |  |  |  |  |
+| Key/value pair | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| Non-Maskable Interrupt | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
+| File copy from host to guest | 2019, 2016, 2012 R2 |  |  |  |  |
+| lsvmbus command | 2019, 2016, 2012 R2 |  |  |  |  |
+| Hyper-V Sockets | 2019, 2016 |  |  |  |  |
+| PCI Passthrough/DDA | 2019, 2016 | ✔ | ✔ | ✔ |  |
+| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |  |  |  |  |  |
+| Boot using UEFI | 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |  |
+| Secure boot | 2019, 2016 |  |  |  |  |
 
 ## <a name="BKMK_notes"></a>Notes
 

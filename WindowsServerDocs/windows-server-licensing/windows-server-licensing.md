@@ -21,4 +21,4 @@ Review our Windows Server-related license terms.
 
 - [Microsoft Software License Terms - MICROSOFT.WINDOWSSERVER.SYSTEMINSIGHTS.CAPABILITIES](/legal/windows-server/system-insights-capabilities-eula)
 
-- [Windows Admin Center - License Terms](/legal/windows-server/windows-admin-center/windows-admin-center-licensing)
+- [Windows Admin Center - License Terms](/legal/windows-server/windows-admin-center/wac-product-ga-eula)

@@ -1,21 +1,21 @@
 ---
 title: bitsadmin peers and list
-description: Reference article for the bitsadmin peers and list command, which lists all peers.
+description: Reference article for the bitsadmin peers and list command that lists all peers.
 ms.topic: reference
-ms.assetid: 18ec60c9-34d2-466e-982c-6165478ef224
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 04/01/2023
 ---
 
 # bitsadmin peers and list
 
-Lists all peers.
+Applies to: Windows Server (All supported versions)
+
+The `bitsadmin` command lists all peers when it's combined with the **peers** and **list** switches.
 
 ## Syntax
 
-```
+```CLI
 bitsadmin /peers /list
 ```
 
@@ -23,11 +23,11 @@ bitsadmin /peers /list
 
 To list all peers:
 
-```
+```CLI
 bitsadmin /peers /list
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

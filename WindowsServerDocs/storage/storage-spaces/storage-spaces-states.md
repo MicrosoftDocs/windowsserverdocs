@@ -9,9 +9,9 @@ manager: brianlic
 ---
 # Troubleshoot Storage Spaces and Storage Spaces Direct health and operational states
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
+>Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
 
-This topic describes the health and operational states of storage pools, virtual disks (which sit underneath volumes in Storage Spaces), and drives in [Storage Spaces Direct](storage-spaces-direct-overview.md) and [Storage Spaces](overview.md). These states can be invaluable when trying to troubleshoot various issues such as why you can't delete a virtual disk because of a read-only configuration. It also discusses why a drive can't be added to a pool (the CannotPoolReason).
+This topic describes the health and operational states of storage pools, virtual disks (which sit underneath volumes in Storage Spaces), and drives in [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) and [Storage Spaces](overview.md). These states can be invaluable when trying to troubleshoot various issues such as why you can't delete a virtual disk because of a read-only configuration. It also discusses why a drive can't be added to a pool (the CannotPoolReason).
 
 Storage Spaces has three primary objects - *physical disks* (hard drives, SSDs, etc.) that are added to a *storage pool*, virtualizing the storage so that you can create *virtual disks* from free space in the pool, as shown here. Pool metadata is written to each drive in the pool. Volumes are created on top of the virtual disks and store your files, but we're not going to talk about volumes here.
 
@@ -201,6 +201,6 @@ The following table gives a little more detail on each of the reasons.
 
 ## Additional References
 
-- [Storage Spaces Direct](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)
 - [Understanding cluster and pool quorum](understand-quorum.md)

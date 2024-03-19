@@ -164,7 +164,7 @@ To set the Pre-Boot execution Environment (PXE) server to attempt to bind to TCP
 ```
 wdsutil /Set-server /UseDhcpPorts:No /DhcpOption60:Yes
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-server command](wdsutil-disable-server.md)
 - [wdsutil enable-server command](wdsutil-enable-server.md)

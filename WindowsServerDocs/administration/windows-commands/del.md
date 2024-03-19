@@ -5,8 +5,7 @@ ms.topic: reference
 ms.assetid: 346eede2-2085-44f5-9936-6877b5d5a833
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 6/22/2022
 ---
 
 # del
@@ -77,6 +76,13 @@ del c:\test
 del c:\test\*.*
 ```
 
+To delete all the files in a folder where the folder has a space in its name, the full path needs to be wrapped in double quotes. Type either of the following:
+
+```
+del "c:\test folder\"
+del "c:\test folder\*.*"
+```
+
 To delete all files with the .bat file name extension from the current directory, type:
 
 ```
@@ -89,7 +95,7 @@ To delete all read-only files in the current directory, type:
 del /a:r *.*
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -41,7 +41,7 @@ To start the data collector *perf_log*, on the remote computer *server_1*, type:
 logman start perf_log -s server_1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

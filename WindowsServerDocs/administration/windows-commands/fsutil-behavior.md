@@ -122,7 +122,7 @@ To override the default behavior for TRIM (disabledeletenotify) for NTFS and ReF
 fsutil behavior set disabledeletenotify 1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

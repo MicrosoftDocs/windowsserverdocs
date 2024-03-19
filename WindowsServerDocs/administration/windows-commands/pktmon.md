@@ -3,7 +3,7 @@ title: pktmon
 description: Reference article for the pktmon network diagnostics tool for Windows that can be used for packet capture, packet drop detection, packet filtering, and counting.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 06/24/2021
 ---
 
@@ -36,7 +36,7 @@ pktmon { filter | list | start | stop | status | unload | counters | reset | etl
 | pktmon hex2pkt | Decode packet in hexadecimal format. |
 | pktmon help | Show help text for specific command. |
 
-## Additional References
+## Related links
 
 - [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)
 - [Pktmon support for Microsoft Network Monitor (Netmon)](../../networking/technologies/pktmon/pktmon-netmon-support.md)

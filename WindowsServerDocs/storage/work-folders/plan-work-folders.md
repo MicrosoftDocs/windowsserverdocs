@@ -126,14 +126,14 @@ Work Folders has the following software requirements for client computers:
 
  You can also use Windows Intune to selectively wipe the data from Work Folders on a user's device without affecting the rest of their data – handy for if a user leaves your organization or has their device stolen.
 
-### Web Application Proxy/Azure AD Application Proxy
+### Web Application Proxy or Microsot Entra Application Proxy
  Work Folders is built around the concept of allowing Internet-connected devices to retrieve business data securely from the internal network, which allows users to "take their data with them" on their tablets and devices that would not normally be able to access work files. To do this, a reverse proxy must be used to publish sync server URLs and make them available to Internet clients.
 
-Work Folders supports using Web Application Proxy, Azure AD Application Proxy or 3rd party reverse proxy solutions:
+Work Folders supports using Web Application Proxy, Microsoft Entra application proxy or 3rd party reverse proxy solutions:
 
--  Web Application Proxy is an on-premises reverse proxy solution. To learn more, see [Web Application Proxy in Windows Server 2016](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
+-  Web Application Proxy is an on-premises reverse proxy solution. To learn more, see [Web Application Proxy in Windows Server 2016](../../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md).
 
--  Azure AD Application Proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](/azure/active-directory/active-directory-application-proxy-get-started)
+-  Microsoft Entra application proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](/azure/active-directory/active-directory-application-proxy-get-started)
 
 ## Additional design considerations
  In addition to understanding each of the components noted above, customers need to spend time in their design thinking about the number of sync servers and shares to operate, and whether or not to leverage failover clustering to provide fault tolerance on those sync servers
@@ -248,4 +248,4 @@ The following set of design questions is intended to aid customers in designing 
 |Content type|References|
 |------------------|----------------|
 |**Product evaluation**|-   [Work Folders](work-folders-overview.md)<br />-   [Work Folders for Windows 7](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
-|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Deploying Work Folders with Azure AD Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Performance Considerations for Work Folders Deployments](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
+|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Deploying Work Folders with Microsoft Entra Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Performance Considerations for Work Folders Deployments](../../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|

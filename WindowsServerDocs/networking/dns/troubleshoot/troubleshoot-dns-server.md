@@ -10,6 +10,9 @@ author: Deland-Han
 
 # Troubleshooting DNS servers
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806264" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DNS issues.
+
 This article discusses how to troubleshoot issues on DNS servers.
 
 ## Check IP configuration
@@ -92,7 +95,7 @@ The problem might be caused by user error when users enter data into the zone. O
 
    If the name is not correct on the primary server, go to step 4.
 
-2. If the name is correct on the primary server, check whether the serial number on the primary server is less than or equal to the serial number on the secondary server. If it is, modify either the primary server or the secondary server so that the serial number on the primary server is greater than than the serial number on the secondary server.
+2. If the name is correct on the primary server, check whether the serial number on the primary server is less than or equal to the serial number on the secondary server. If it is, modify either the primary server or the secondary server so that the serial number on the primary server is greater than the serial number on the secondary server.
 
 3. On the secondary server, force a zone transfer from within the DNS console or by running the following command:
 

@@ -6,12 +6,15 @@ ms.assetid: ead1b672-a120-4e16-94aa-a8e13602c1d0
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/31/2023
 ---
 
 # msdt
 
 Invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
+
+> [!Note] 
+> The Microsoft Support Diagnostic Tool (MSDT) is deprecated. For more information, see [Deprecated Windows features](/windows/whats-new/deprecated-features).
 
 ## Syntax
 
@@ -32,7 +35,7 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 | /moreoptions `<true|false>` | Enables (true) or suppresses (false) the final troubleshooting screen that asks if the user wants to explore additional options. This parameter is typically used when the troubleshooting pack is launched by a troubleshooter that isn't part of the operating system. |
 | /param `<parameters>` | Specifies a set of interaction responses at the command line, similar to an answer file. This parameter isn't typically used within the context of troubleshooting packs created with TSP Designer. For more information about developing custom parameters, see [Windows Troubleshooting Platform](/previous-versions/windows/desktop/wintt/windows-troubleshooting-toolkit-portal). |
 | /advanced | Expands the advanced link on the Welcome page by default when the troubleshooting pack is started. |
-| /custom | Prompts the user to confirm each possible resolution before it is applied. |
+| /custom | Prompts the user to confirm each possible resolution before it's applied. |
 
 ### Return codes
 
@@ -43,12 +46,12 @@ Troubleshooting packs comprise a set of root causes, each of which describes a s
 | -1 | **Interruption:** The troubleshooter was closed before the troubleshooting tasks were completed. |
 | 0 | **Fixed:** The troubleshooter identified and fixed at least one root cause, and no root causes remain in a not fixed state. |
 | 1 | **Present, but not fixed:** The troubleshooter identified one or more root causes that remain in a not fixed state. This code is returned even if another root cause was fixed. |
-| 2 | **Not found:** The troubleshooter did not identify any root causes. |
+| 2 | **Not found:** The troubleshooter didn't identify any root causes. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [Available troubleshooting packs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)
 
-- [TroubleshootingPack Powershell reference](/powershell/module/troubleshootingpack/)
+- [TroubleshootingPack PowerShell reference](/powershell/module/troubleshootingpack/)

@@ -14,7 +14,7 @@ ms.date: 08/29/2018
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 A fabric administrator needs to configure the fabric DNS takes to allow guarded hosts to resolve the HGS cluster.
-The HGS cluster must already be [set up by the HGS administrator](/WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
+The HGS cluster must already be set up by the [HGS administrator](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs).
 
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)]
 

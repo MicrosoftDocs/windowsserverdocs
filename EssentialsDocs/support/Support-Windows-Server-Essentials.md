@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -87,13 +87,13 @@ This section provides information to help you troubleshoot common problems that 
 
 - [Support for Windows Small Business Server](https://support.microsoft.com/oas/default.aspx?gprid=1167&st=1&wfxredirect=1&sd=gn)
 
-- [Microsoft partner learning paths](https://mspartnerlp.mspartner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=559&rowId=1078&trackPathId=6605)
+- [Microsoft partner training](https://partner.microsoft.com/training)
 
 - [Microsoft Partner Network Support](https://mspartner.microsoft.com/en/us/Pages/Support/get-support.aspx)
 
 - [Microsoft Business Hub](http://www.microsoftbusinesshub.com/Gigya/Insider)
 
-- [Microsoft Premier Support Services](https://www.microsoft.com/microsoftservices/support.aspx)
+- [Microsoft Premier Support Services](https://www.microsoft.com/unifiedsupport/premier)
 
 - [For users outside the U.S.](https://support.microsoft.com/common/international.aspx?&sd=tech)
 

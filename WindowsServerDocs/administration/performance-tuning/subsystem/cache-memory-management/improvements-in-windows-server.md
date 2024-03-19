@@ -15,7 +15,7 @@ This topic describes Cache Manager and Memory Manager improvements in Windows Se
 Cache manager is now NUMA aware, which ensures the system is better at avoiding data movement across NUMA boundaries. Avoiding accesses from a NUMA node to memory and other kernel resources on another NUMA node adds a lot of overhead. By making Cache manager NUMA aware, we have eliminated such cross-NUMA hops, thus optimizing cached IO workloads running on multi node configurations.
 
 ## Cache Manager improvements in Windows Server 2019
-We added Zero-Copy support for Persistent Memory (PMEM) Storage.  For more information on persistent memory, see [Understand and deploy persistent memory](https://docs.microsoft.com/azure-stack/hci/concepts/deploy-persistent-memory).
+We added Zero-Copy support for Persistent Memory (PMEM) Storage.  For more information on persistent memory, see [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory).
 In Direct Access (DAX) mode, PMEM operates like memory to get the lowest latency, wherein we eliminate an extra copy of data and bypass a lot of overhead from Filesystem Mini-Filters and the storage stack. This mode only works with NTFS as a filesystem.
 
 ## Cache Manager improvements in Windows Server 2016

@@ -39,6 +39,6 @@ wdsutil /Remove-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufa
 wdsutil /Remove-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer /FilterType:OSLanguage
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

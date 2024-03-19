@@ -34,7 +34,7 @@ For more information about Extended Port Access Control Lists in this library, s
 
 ## NIC Teaming
 
-NIC Teaming, also called NIC bonding, is the aggregation of multiple NIC ports into an entity the host perceives as a single NIC port. NIC Teaming protects against the failure of a single NIC port (or the cable connected to it). It also aggregates network traffic for faster throughput. For more details, see [NIC Teaming](../nic-teaming/nic-teaming.md).
+NIC Teaming, also called NIC bonding, is the aggregation of multiple NIC ports into an entity the host perceives as a single NIC port. NIC Teaming protects against the failure of a single NIC port (or the cable connected to it). It also aggregates network traffic for faster throughput.
 
 With Windows Server 2016 you have two ways to do teaming:
 

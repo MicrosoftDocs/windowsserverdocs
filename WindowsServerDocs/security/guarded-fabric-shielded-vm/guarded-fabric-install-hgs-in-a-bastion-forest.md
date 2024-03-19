@@ -37,7 +37,7 @@ You can also pre-stage the cluster objects if the account you are initializing H
 
 ## Group managed service account
 
-The group managed service account (gMSA) is the identity used by HGS to retrieve and use its certificates. Use [New-ADServiceAccount](/powershell/module/addsadministration/new-adserviceaccount) to create a gMSA.
+The group managed service account (gMSA) is the identity used by HGS to retrieve and use its certificates. Use [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount) to create a gMSA.
 If this is the first gMSA in the domain, you will need to add a Key Distribution Service root key.
 
 Each HGS node will need to be permitted to access the gMSA password.
@@ -77,7 +77,7 @@ You are not required to use JEA to manage HGS, but it still must be configured w
 The configuration of the JEA endpoint consists of designating 2 security groups that contain your HGS admins and HGS reviewers.
 Users who belong to the admin group can add, change, or remove policies on HGS; reviewers can only view the current configuration.
 
-Create 2 security groups for these JEA groups using Active Directory admin tools or [New-ADGroup](/powershell/module/addsadministration/new-adgroup).
+Create 2 security groups for these JEA groups using Active Directory admin tools or [New-ADGroup](/powershell/module/activedirectory/new-adgroup).
 
 ```powershell
 New-ADGroup -Name 'HgsJeaReviewers' -GroupScope DomainLocal
@@ -136,7 +136,7 @@ Check your Group Policy objects for the following settings and follow the guidan
 
 **Policy Name:** Network Security: Configure encryption types allowed for Kerberos
 
-**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](/powershell/module/addsadministration/set-adserviceaccount) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
+**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](/powershell/module/activedirectory/set-adserviceaccount) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
 
 
 

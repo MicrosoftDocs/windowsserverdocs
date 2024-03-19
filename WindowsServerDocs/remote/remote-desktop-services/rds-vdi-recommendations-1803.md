@@ -184,7 +184,7 @@ You can enable or disable a specific Windows optional feature as in this example
 Enable-WindowsOptionalFeature -Online -FeatureName "DirectPlay"
 ```
 
-For more about this, see the [Windows a PowerShell forum](/answers/topics/windows-server-powershell.ht).
+For more about this, see the [Windows a PowerShell forum](/answers/topics/windows-server-powershell.html).
 
 #### Enable or disable Windows features by using DISM
 
@@ -212,7 +212,7 @@ The following settings specifically do not counter or conflict with any setting 
 | **Local Computer Policy \\ Computer Configuration \\ Administrative Templates \\ Control Panel** |  |  |  |
 | \***Control Panel** | Allow Online Tips |  | Disabled (Settings will not contact Microsoft content services to retrieve tips and help content) |
 | **\*Control Panel**\\ Personalization | Do not display the lock screen |  | Enabled (This policy setting controls whether the lock screen appears for users. If you enable this policy setting, users that are not required to press CTRL + ALT + DEL before signing in will see their selected tile after locking their PC.) |
-| **\*Control Panel**\\ Personalization | Force a specific default lock screen and logon image | [![Image of UI to set path to lock screen image](media/lock-screen-image-settings.png)](media/lock-screen-image-settings.png) | Enabled (This setting lets you specify the default lock screen and logon image shown when no user is signed in, and also sets the specified image as the default for all users--it replaces the default image.) A low resolution, non-complex image would cause less data transmitted over the network each time the image is rendered. |
+| **\*Control Panel**\\ Personalization | Force a specific default lock screen and logon image | ![Image of UI to set path to lock screen image](media/lock-screen-image-settings.png) | Enabled (This setting lets you specify the default lock screen and logon image shown when no user is signed in, and also sets the specified image as the default for all users--it replaces the default image.) A low resolution, non-complex image would cause less data transmitted over the network each time the image is rendered. |
 | **\*Control Panel**\\ Regional and Language Options\\Handwriting personalization | Turn off automatic learning |  | Enabled (If you enable this policy setting, automatic learning stops, and any stored data is deleted. Users cannot configure this setting in Control Panel) |
 | **Local Computer Policy \\ Computer Configuration \\ Administrative Templates \\ Network** |  |  |  |
 | **Background Intelligent Transfer Service (BITS)** | Do not allow the BITS client to use Windows Branch Cache |  | Enabled |

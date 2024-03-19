@@ -1,17 +1,17 @@
 ---
 title: bitsadmin peers and discover
-description: Reference article for the bitsadmin peers and discover command, which discovers peers again.
+description: Reference article for the bitsadmin peers and discover command that rediscovers peers.
 ms.topic: reference
-ms.assetid: 254fa0a3-4501-4272-a020-6ccdb3fcb29b
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/03/2023
 ---
 
 # bitsadmin peers and discover
 
-Discovers peers again.
+Applies to: Windows Server (All supported versions)
+
+The bitsadmin peers and discover command rediscovers peers.
 
 ## Syntax
 
@@ -21,13 +21,13 @@ bitsadmin /peers /discover
 
 ## Examples
 
-To discover peers again:
+To rediscover peers:
 
 ```
 bitsadmin /peers /discover
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

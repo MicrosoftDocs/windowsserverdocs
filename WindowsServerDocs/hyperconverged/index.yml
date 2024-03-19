@@ -20,43 +20,44 @@ productDirectory:
     # Card
     - title: Hyper-V
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-virtualize.svg
+      imageSrc: /windows-server/media/i-virtualize.svg
       links:
         - url: /windows-server/virtualization/hyper-v/
           text: Virtualizes server hardware, enabling you to run virtual machines across servers in a hyper-converged cluster.
     # Card
     - title: Storage Spaces Direct
-      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-store.svg
+      imageSrc: /windows-server/media/i-store.svg
       links:
-        - url: ../storage/storage-spaces/storage-spaces-direct-overview.md
+        - url: /azure-stack/hci/concepts/storage-spaces-direct-overview
           text: Virtualizes storage hardware, enabling you to create volumes on top of a virtualized pool of drives spread across servers in a hyper-converged cluster.
     # Card
     - title: Failover Clustering
-      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-cluster.svg
+      imageSrc: /windows-server/media/i-cluster.svg
       links:
         - url: ../failover-clustering/failover-clustering-overview.md
           text: Groups multiple servers together so that workloads such as virtual machines can run on any server in the cluster, load-balancing and failing over gracefully between servers.
     # Card
     - title: Software Defined Networking
-      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-network.svg
+      imageSrc: /windows-server/media/i-network.svg
       links:
         - url: ../networking/sdn/index.yml
           text: Virtualizes your network hardware, enabling you to dynamically create and manage networks and policies that abstract your workloads from underlying physical networks.
     # Card
     - title: Windows Admin Center
-      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-admin-center.svg
+      imageSrc: /windows-server/media/i-admin-center.svg
       links:
         - url: ../manage/windows-admin-center/overview.md
           text: Virtualizes server hardware, enabling you to run virtual machines across servers in a hyper-converged cluster.
     # Card
     - title: Connect to Azure hybrid services
-      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-microsoft-azure.svg
+      imageSrc: /windows-server/media/i-microsoft-azure.svg
       links:
         - url: /windows-server/azure-hybrid-services
           text: Connects your cluster to Azure hybrid services for site recovery, monitoring, and more.
     # Card
     - title: Azure Stack HCI
-      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-azure-stack.svg
+      imageSrc: /windows-server/media/i-azure-stack.svg
       links:
         - url: /windows-server/azure-stack-hci
-          text: Pairs Windows Server virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.
+          text: Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service.
+ 

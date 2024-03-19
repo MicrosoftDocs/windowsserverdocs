@@ -21,7 +21,7 @@ Resets (deletes) a session on a Remote Desktop Session Host server.
 > [!NOTE]
 > To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
-## Additional References
+## Related links
 
 - [reset session](reset-session.md)
 

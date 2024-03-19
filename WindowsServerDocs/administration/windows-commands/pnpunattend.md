@@ -50,6 +50,6 @@ To command shows how to use the **PNPUnattend.exe** to audit a computer for poss
 pnpunattend auditsystem /s /l
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

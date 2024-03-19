@@ -6,7 +6,7 @@ ms.assetid: 106aeeb9-ea79-4e6e-829c-eca06309bab2
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 06/30/2022
 ---
 
 # dfsdiag testdfsconfig
@@ -44,10 +44,10 @@ dfsdiag /testdfsconfig /DFSroot:<namespace>
 To verify the configuration of Distributed File System (DFS) namespaces in *contoso.com\MyNamespace*, type:
 
 ```
-dfsdiag /testdfsconfig /DFSroot:\contoso.com\MyNamespace
+dfsdiag /testdfsconfig /DFSroot:\\contoso.com\MyNamespace
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

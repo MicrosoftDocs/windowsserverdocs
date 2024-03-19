@@ -94,6 +94,6 @@ To list the file name extensions of all the files in the current directory in co
 forfiles /S /M *.* /C "cmd /c echo The extension of @file is 0x09@ext"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

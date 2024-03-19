@@ -113,7 +113,7 @@ Windows Admin Center can set up a site-to-site VPN and extend your on-premises I
 You can use Azure Monitor, also known as Virtual Machines Insights, to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server. Windows Admin Center can also set up default email alerts for server health performance and cluster health events.
 For more info, see [Connect your servers to Azure Monitor and configure email notifications](azure-monitor.md).
 
-- **Centrally manage operating system updates for all your Windows Servers with [Azure Update Management](/azure/automation/automation-update-management)**
+- **Centrally manage operating system updates for all your Windows Servers with [Azure Update Management](/azure/automation/update-management/overview)**
 You can manage updates and patches for multiple servers and VMs from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your servers are Azure VMs, hosted by other cloud providers, or on-premises.
 For more info, see [Configure servers for Azure Update Management](azure-update-management.md).
 
@@ -159,9 +159,9 @@ These are the Azure services that provide functionality to clusters as a whole:
 You can use Windows Admin Center to manage your Azure VMs as well as on-premises machines. By configuring your Windows Admin Center gateway to connect to your Azure VNet, you can manage virtual machines in Azure using the consistent, simplified tools that Windows Admin Center provides.
 For more info, see [Configure Windows Admin Center to manage VMs in Azure](manage-azure-vms.md).
 
-- **Add an layer of security to Windows Admin Center by adding [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) authentication**
-You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multifactor authentication.
-For more info, see [Configure Azure AD authentication for Windows Admin Center](../configure/user-access-control.md#azure-active-directory).
+- **Add an layer of security to Windows Admin Center by adding [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/) authentication**
+You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Microsoft Entra identities to access the gateway. Microsoft Entra authentication also lets you take advantage of Microsoft Entra ID’s security features like conditional access and multifactor authentication.
+For more info, see [Configure Microsoft Entra authentication for Windows Admin Center](../configure/user-access-control.md#azure-active-directory).
 
 - **Manage Azure resources directly through [Azure Cloud Shell](/azure/cloud-shell/overview) embedded in Windows Admin Center**
 Leverage Azure Cloud Shell to get a Bash or PowerShell experience within Windows Admin Center to give you easy access to Azure management tasks.

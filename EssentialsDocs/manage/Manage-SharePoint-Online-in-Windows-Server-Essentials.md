@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 282f3634-6de6-4691-803c-df6c3c16660d
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -39,7 +39,7 @@ You can manage your  SharePoint Online libraries and team sites from the Dashboa
 ### Manage your team sites
 
 - **Manage SharePoint team sites.** The **Manage team sites** action lets you sign in to  Microsoft 365 and manage your  SharePoint Online team sites. What you can do in  Microsoft 365 will be determined by the online account that you sign in with. When you close  Microsoft 365 and return to the Dashboard, click **Refresh** to show the changes.
-- **View or change team site permissions.** Since a library inherits permissions from its team site by default, it's helpful to have easy access to the team site. To view or change   permissions for a team site, select the team site or any of its libraries, and click **View the site permissions**. **Tip:** Need help with the fine points of SharePoint team site permissions? There's a useful [Learn more](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/introduction-control-user-access-with-permissions-HA102771919.aspx?CTT=5&origin=HA102771924) link in the team site permissions.
+- **View or change team site permissions.** Since a library inherits permissions from its team site by default, it's helpful to have easy access to the team site. To view or change   permissions for a team site, select the team site or any of its libraries, and click **View the site permissions**.
 
 ## Tips
 

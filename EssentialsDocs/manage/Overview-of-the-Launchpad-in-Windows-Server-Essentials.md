@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -61,7 +61,7 @@ The Windows Server Essentials Launchpad is a small application that is installed
 >  To use this feature, you must have the proper access or permissions to log on to the server.
 
 ### Microsoft 365
- The **Microsoft 365** link only appears on the Launchpad if the user has an Microsoft 365 account. Click  **Microsoft 365** to access additional links to the Microsoft 365 resources. For more information, see [Quick Start Guide to Using Microsoft 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).
+ The **Microsoft 365** link only appears on the Launchpad if the user has a Microsoft 365 account. Click  **Microsoft 365** to access additional links to the Microsoft 365 resources. For more information, see [Quick Start Guide to Using Microsoft 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).
 
 ### Computer health alerts
  Alerts that appear on the Launchpad provide a quick status as to the immediate health of the computer. To view information about a health alert, click an alert indicator to open the alert viewer. Health alerts appear in the viewer based on level of severity. The most severe alerts appear first in the list; less severe alerts appear later in the list. For more information about computer health alerts, see [Manage System Health](Manage-System-Health-in-Windows-Server-Essentials.md).

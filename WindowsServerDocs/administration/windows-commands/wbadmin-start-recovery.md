@@ -76,16 +76,16 @@ To run a recovery of the backup from April 30, 2020, taken at 9:00 A.M., of the 
 wbadmin start recovery -version:04/30/2020-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [wbadmin command](wbadmin.md)
 
-- [Start-WBFileRecovery](/powershell/module/windowserverbackup/Start-WBFileRecovery)
+- [Start-WBFileRecovery](/powershell/module/windowsserverbackup/start-wbfilerecovery)
 
-- [Start-WBHyperVRecovery](/powershell/module/windowserverbackup/Start-WBHyperVRecovery)
+- [Start-WBHyperVRecovery](/powershell/module/windowsserverbackup/start-wbhypervrecovery)
 
-- [Start-WBSystemStateRecovery](/powershell/module/windowserverbackup/Start-WBSystemStateRecovery)
+- [Start-WBSystemStateRecovery](/powershell/module/windowsserverbackup/start-wbsystemstaterecovery)
 
-- [Start-WBVolumeRecovery](/powershell/module/windowserverbackup/Start-WBVolumeRecovery)
+- [Start-WBVolumeRecovery](/powershell/module/windowsserverbackup/start-wbvolumerecovery)

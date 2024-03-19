@@ -37,7 +37,7 @@ To unexpose the shadow copy associated with *drive P:\*, type:
 unexpose P:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

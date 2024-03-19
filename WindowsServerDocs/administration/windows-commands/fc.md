@@ -41,7 +41,7 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 
 #### Remarks
 
-- This command is implemeted by c:\WINDOWS\fc.exe. You can use this command within PowerShell, but be sure to spell out the full executable (fc.exe) since 'fc' is also an alias for Format-Custom.
+- This command is implemented by c:\WINDOWS\fc.exe. You can use this command within PowerShell, but be sure to spell out the full executable (fc.exe) since 'fc' is also an alias for Format-Custom.
 
 - When you use **fc** for an ASCII comparison, **fc** displays the differences between two files in the following order:
 
@@ -120,6 +120,6 @@ To compare each batch file in the root directory on drive C to the file with the
 fc c:*.bat d:*.bat
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

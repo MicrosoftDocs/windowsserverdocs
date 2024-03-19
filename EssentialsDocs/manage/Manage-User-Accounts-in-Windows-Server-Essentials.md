@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -53,7 +53,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 -   Assign user groups ( Windows Server Essentials only).
 
 > [!NOTE]
-> - Non-ASCII characters are not supported in  Microsoft Azure Active Directory (Azure AD). Do not use any non-ASCII characters in your password, if your server is integrated with  Azure AD.
+> - Non-ASCII characters are not supported in Microsoft Entra ID. Do not use any non-ASCII characters in your password, if your server is integrated with Microsoft Entra ID.
 >   -   The email options are only available if you install an add-in that provides email service.
 
 ##### To add a user account
@@ -292,8 +292,8 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 
    > [!IMPORTANT]
    > - You may not be able to change your password if the password policy for your account has been set to **Passwords never expire**.
-   >   -   Non-ASCII characters are not supported in  Azure AD. Therefore, if your server is integrated with  Azure AD, do not use any non-ASCII characters in your password.
-   >   -   If a Microsoft online account (known in  Windows Server Essentials as a Microsoft 365 account) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Microsoft 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).
+   >   - Non-ASCII characters are not supported in Microsoft Entra ID. Therefore, if your server is integrated with Microsoft Entra ID, do not use any non-ASCII characters in your password.
+   >   - If a Microsoft online account (known in Windows Server Essentials as a Microsoft 365 account) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Microsoft 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).
 
 ###  <a name="BKMK_Access3"></a> What you should know about password policies
  The password policy is a set of rules that define how users create and use passwords. The policy helps to prevent unauthorized access to user data and other information that is stored on the server. The password policy is applied to all user accounts that access the network.

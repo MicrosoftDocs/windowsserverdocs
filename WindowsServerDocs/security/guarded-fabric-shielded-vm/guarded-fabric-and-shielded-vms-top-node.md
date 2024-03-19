@@ -20,7 +20,7 @@ One of the most important goals of providing a hosted environment is to guarante
 
 ## Videos, blog, and overview topic about guarded fabrics and shielded VMs
 
-- Video: [How to protect your virtualization fabric from insider threats with Windows Server 2019](https://myignite.techcommunity.microsoft.com/sessions/64690)
+- Video: [How to protect your virtualization fabric from insider threats with Windows Server 2019](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity)
 - Video: Introduction to Shielded Virtual Machines in Windows Server 2016
 - Video: Dive into Shielded VMs with Windows Server 2016 Hyper-V
 - Video: [Deploying Shielded VMs and a Guarded Fabric with Windows Server 2016](https://mva.microsoft.com/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474)

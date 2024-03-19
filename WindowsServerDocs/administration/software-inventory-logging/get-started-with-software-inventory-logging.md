@@ -35,6 +35,6 @@ Software Inventory Logging can assist server administrators in performing the fo
 ## See Also
 [Software Inventory Logging Aggregator](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt572043(v=ws.11))<br>
 [Manage Software Inventory Logging](manage-software-inventory-logging.md)<br>
-[Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)<br>
+[Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)<br>
 [Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/en/details.aspx?id=7826)
 [Volume Activation Management Tool](https://blogs.technet.com/b/volume-licensing/)

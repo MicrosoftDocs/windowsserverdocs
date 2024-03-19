@@ -65,7 +65,7 @@ Cross domain trust scenarios are an area that has been consistently a pain point
 
 For all trust scenarios, credentials are routed according to the domain specified in the authentication requests. This is also true for queries to the LookupAccountName and LsaLookupNames (as well as others, these are just the most commonly used) APIs. When the domain parameters for these APIs are passed a NULL value, the domain controller will attempt to find the account name specified in every trusted domain available.
 
--   Disable checking all available trusts when NULL domain is specified. [How to restrict the lookup of isolated names in external trusted domains by using the LsaLookupRestrictIsolatedNameLevel registry entry](https://support.microsoft.com/kb/818024)
+-   Disable checking all available trusts when NULL domain is specified. [How to restrict the lookup of isolated names in external trusted domains by using the LsaLookupRestrictIsolatedNameLevel registry entry](/troubleshoot/windows-server/identity/poor-performance-calling-lookup-functions)
 
 -   Disable passing authentication requests with NULL domain specified across all available trusts. [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/kb/923241/EN-US)
 

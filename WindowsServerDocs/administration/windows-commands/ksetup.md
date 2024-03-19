@@ -74,6 +74,6 @@ ksetup
 | [ksetup delenctypeattr](ksetup-delenctypeattr.md) | Deletes the encryption types trust attribute for the domain. |
 | /? | Displays Help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

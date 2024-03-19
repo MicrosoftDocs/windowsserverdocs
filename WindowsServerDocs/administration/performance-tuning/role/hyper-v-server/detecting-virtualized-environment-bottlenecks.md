@@ -2,7 +2,7 @@
 title: Detecting bottlenecks in a virtualized environment
 description: How to detect and resolve potential Hyper-v performance bottlenecks
 ms.topic: article
-ms.author: asmahi
+ms.author: wscontent
 author: phstee
 ms.date: 10/16/2017
 ---

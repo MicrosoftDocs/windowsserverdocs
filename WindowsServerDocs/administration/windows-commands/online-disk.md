@@ -43,6 +43,6 @@ To take the disk with focus online, type:
 online disk
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,9 +1,9 @@
 ---
 title: pktmon list
-description: Reference article for the pktmon list command.
+description: Reference article for the pktmon list command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 06/24/2021
 ---
 
@@ -27,7 +27,7 @@ pktmon list [--all] [--include-hidden] [--json]
 | **-i, --include-hidden** | Show components that are hidden by default. |
 | **--json** | Output the list in JSON format. Implies -i and -a. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

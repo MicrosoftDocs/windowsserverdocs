@@ -5,8 +5,9 @@ title: SPN and UPN uniqueness
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/18/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # SPN and UPN uniqueness
@@ -22,7 +23,7 @@ ms.topic: article
 Domain Controllers running Windows Server 2012 R2 block the creation of duplicate service principal names (SPN) and user principal names (UPN). This includes if the restoration or reanimation of a deleted object or the renaming of an object would result in a duplicate.
 
 ### Background
-Duplicate Service Principal Names (SPN) commonly occur and result in authentication failures and may lead to excessive LSASS CPU utilization. There is no in-box method to block the addition of a duplicate SPN or UPN. *
+Duplicate Service Principal Names (SPN) commonly occur and result in authentication failures and may lead to excessive LSASS CPU utilization. There's no in-box method to block the addition of a duplicate SPN or UPN. *
 
 Duplicate UPN values break synchronization between on-premises AD and Office 365.
 
@@ -32,7 +33,7 @@ Duplicate UPN values break synchronization between on-premises AD and Office 365
 
 |Feature|Comment|
 |-----------|-----------|
-|UPN uniqueness|Duplicate UPNs break synchronization of on-premises AD accounts with Windows Azure AD-based services such as Office 365.|
+|UPN uniqueness|Duplicate UPNs break synchronization of on-premises AD accounts with Microsoft Entra ID-based services such as Office 365.|
 |SPN uniqueness|Kerberos requires SPNs for mutual authentication.  Duplicate SPNs result in authentication failures.|
 
 For more information about uniqueness requirements for UPNs and SPNs, see [Uniqueness Constraints](/openspecs/windows_protocols/ms-adts/3c154285-454c-4353-9a99-fb586e806944).
@@ -46,10 +47,10 @@ Error codes 8467 or 8468 or their hex, symbolic or string equivalents are logged
 
 |Decimal|Hex|Symbolic|String|
 |-----------|-------|------------|----------|
-|8467|21C7|ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because SPN value provided for addition/modification is not unique forest-wide.|
-|8648|21C8|ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because UPN value provided for addition/modification is not unique forest-wide.|
+|8647|21C7|ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because SPN value provided for addition/modification isn't unique forest-wide.|
+|8648|21C8|ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because UPN value provided for addition/modification isn't unique forest-wide.|
 
-## New user creation fails if UPN is not unique
+## New user creation fails if UPN isn't unique
 
 ### DSA.msc
 The user logon name you have chosen is already in use in this enterprise. Choose another logon name, and then try again.
@@ -63,7 +64,8 @@ The specified user logon name already exists in the enterprise. Specify a new on
 ![Screenshot that shows a message that says the logon name you used already exists in the enterprise.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig02_DupUPNMod.gif)
 
 ### Active Directory Administrative Center (DSAC.exe)
-An attempt to create a new user in Active Directory Administrative Center with a UPN that already exists will yield the following error.
+
+An attempt to create a new user in Active Directory Administrative Center with a UPN that already exists returns the following error.
 
 ![Screenshot that shows a message that says the new user was not created.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig03_DupUPNADAC.gif)
 
@@ -86,7 +88,7 @@ The event 2974 lists the value that was blocked and a list of one or more object
 > -   identify attempts to create duplicate UPN or SPNs
 > -   identify objects that already contain duplicates
 
-8648 = "The operation failed because UPN value provided for addition/modification is not unique forest-wide."
+8648 = "The operation failed because UPN value provided for addition/modification isn't unique forest-wide."
 
 ### SetSPN:
 Setspn.exe has had duplicate SPN detection built-in to it since the Windows Server 2008 release when using the **"-S"** option.  You can bypass the duplicate SPN detection by using the **"-A"** option however.  Creation of a duplicate SPN is blocked when targeting a Windows Server 2012 R2 DC using SetSPN with the -A option.  The error message displayed is the same as the one displayed when using the -S option: "Duplicate SPN found, aborting operation!"
@@ -104,11 +106,12 @@ The operation failed because UPN value provided for addition/modification is not
 **Figure  SEQ Figure \\\* ARABIC 4  Error message displayed in ADSIEdit when addition of duplicate UPN is blocked**
 
 ### Windows PowerShell
+
 Windows Server 2012 R2:
 
 ![Screenshot that shows a message indicating that the operation failed.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig07_SetADUser2012.gif)
 
-PS running from Server 2012 targeting a Windows Server 2012 R2 DC:
+PowerShell running from Server 2012 targeting a Windows Server 2012 R2 DC:
 
 ![Screenshot that shows an unknown error.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig08_SetADUser2012R2.gif)
 
@@ -191,7 +194,7 @@ Get-ADObject -LdapFilter "(userPrincipalName=dhunt@blue.contoso.com)" -IncludeDe
 
 ![SPN and UPN uniqueness](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig13_GlobalSearchPS.gif)
 
-If the object needs to be restored, you will need remove the duplicate UPNs from the other objects.  For only one object, it is simple enough to use ADSIEdit to remove the duplicate.  If there are multiple objects with duplicates, then Windows PowerShell might be the better tool to use.
+If the object needs to be restored, you'll need remove the duplicate UPNs from the other objects.  For only one object, it's simple enough to use ADSIEdit to remove the duplicate.  If there are multiple objects with duplicates, then Windows PowerShell might be the better tool to use.
 
 To null out the UserPrincipalName attribute using Windows PowerShell:
 
@@ -259,9 +262,9 @@ servicePrincipalName Value=<SPN>
 
 -   **If DC != GC**
 
-    -   Offbox call **desirable** but not critical, i.e. this is a best-effort uniqueness check
+    -   Offbox call **desirable** but not critical, that is, this is a best-effort uniqueness check
 
-        -   Check proceeds against local DIT only if GC cannot be located
+        -   Check proceeds against local DIT only if GC can't be located
 
         -   Event logged to indicate such
 
@@ -297,9 +300,9 @@ servicePrincipalName Value=<SPN>
 
                         *ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST*
 
-When deleted objects are re-animated, SPN or UPN values present are checked for uniqueness. If a duplicate is found, the request fails.
+When deleted objects are reanimated, SPN or UPN values present are checked for uniqueness. If a duplicate is found, the request fails.
 
--   For certain attribute changes like DNS Host Name, SAM Account Name etc, when the modification is made, SPNs are updated accordingly. In the process, the obsolete SPNs are deleted and new SPNs are constructed and added to the database. The requisite attribute modifications against which this path is triggered are:
+-   For certain attribute changes like DNS Host Name, SAM Account Name etc., when the modification is made, SPNs are updated accordingly. In the process, the obsolete SPNs are deleted and new SPNs are constructed and added to the database. The requisite attribute modifications against which this path is triggered are:
 
     -   ATT_DNS_HOST_NAME
 
@@ -316,7 +319,8 @@ When deleted objects are re-animated, SPN or UPN values present are checked for 
 If any of the new SPN value is a duplicate, we fail the modification. Of the above list, the important attributes are ATT_DNS_HOST_NAME (Machine name) and ATT_SAM_ACCOUNT_NAME (SAM Account Name).
 
 ### Try This: Exploring SPN and UPN uniqueness
-This is the first of several "**Try This**" activities in the module.  There is not a separate lab guide for this module.  The **Try This** activities are essentially free-form activities that allow you explore the lesson material in the lab environment.  You have the option of following the prompt or going off script and come up with your own activity.
+
+This is the first of several "**Try This**" activities in the module.  There isn't a separate lab guide for this module.  The **Try This** activities are free-form activities that allow you explore the lesson material in the lab environment.  You have the option of following the prompt or going off script and come up with your own activity.
 
 > [!NOTE]
 > -   This is the first of several "**Try This**" activities.
@@ -331,7 +335,7 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
 
 2.  Create accounts with SPNs
 
-3.  Either create a new user with a UPN already previously defined or change an existing account's UPN.  Do the same for a SPN on another account
+3.  Either create a new user with a UPN already previously defined or change an existing account's UPN.  Do the same for an SPN on another account
 
     1.  Populate an existing user account with a UPN already in use
 
@@ -345,7 +349,7 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
 
 **Optionally**
 
-1.  Verify with the classroom instructor that it is ok to enable the *[AD Recycle Bin](../../get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-.md#BKMK_EnableRecycleBin)* in Active Directory Administrative Center.  If so, move on to the next step.
+1.  Verify with the classroom instructor that it's ok to enable the *[AD Recycle Bin](../../get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-.md#BKMK_EnableRecycleBin)* in Active Directory Administrative Center.  If so, move on to the next step.
 
 2.  Populate the UPN on a user account
 
@@ -355,5 +359,4 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
 
 5.  Attempt to use the Recycle Bin GUI to restore the account
 
-6.  Imagine you have just been presented with the error you see in the previous step.  (and don't have a history of the steps you just performed)Your goal is to complete the restore of the account.  See the workbook for example steps.
-
+6.  Imagine you have been presented with the error you see in the previous step.  (and don't have a history of the steps you just performed) Your goal is to complete the restore of the account.  See the workbook, for example,  steps.

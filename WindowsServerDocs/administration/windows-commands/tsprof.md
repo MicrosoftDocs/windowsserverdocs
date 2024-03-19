@@ -57,7 +57,7 @@ To set the Remote Desktop Services profile path for *LocalUser1* to a directory 
 tsprof /update /local /profile:c:\profiles LocalUser1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

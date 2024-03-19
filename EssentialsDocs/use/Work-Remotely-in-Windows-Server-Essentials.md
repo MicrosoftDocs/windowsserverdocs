@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -65,9 +65,9 @@ manager: mtillman
 
  You can download either app from the Windows Phone store:
 
-- [Install My Server for Windows Phone](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)
+- [Install My Server for Windows Phone](https://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)
 
-- [Install My Server 2012 R2 for Windows Phone](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)
+- [Install My Server 2012 R2 for Windows Phone](https://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)
 
   For more information about the My Server phone app, see the blog entry [My Server phone app for Windows Server Essentials](/archive/blogs/sbs/my-server-phone-app-for-windows-server-2012-essentials). For more information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](/archive/blogs/sbs/my-server-2012-r2-windows-and-windows-phone-apps).
 

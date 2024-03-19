@@ -50,7 +50,7 @@ To check a namespace root to verify the site association, along with enumerating
 dfsdiag /testsites /DFSpath:\\contoso.com\namespace2 /recurse /full
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

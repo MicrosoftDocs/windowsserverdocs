@@ -22,7 +22,7 @@ Tests whether writer involvement in restore sessions will be successful on the c
 simulate restore
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

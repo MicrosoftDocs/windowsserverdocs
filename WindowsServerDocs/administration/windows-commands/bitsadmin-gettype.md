@@ -44,7 +44,7 @@ To retrieve the job type for the job named *myDownloadJob*:
 bitsadmin /gettype myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

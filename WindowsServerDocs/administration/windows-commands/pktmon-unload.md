@@ -1,9 +1,9 @@
 ---
 title: pktmon unload
-description: Reference article for the pktmon unload command.
+description: Reference article for the pktmon unload command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 06/24/2021
 ---
 
@@ -19,7 +19,7 @@ Stop the PktMon driver service and unload PktMon.sys. Effectively equivalent to 
 pktmon unload
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

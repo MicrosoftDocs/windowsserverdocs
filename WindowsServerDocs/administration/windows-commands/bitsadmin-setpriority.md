@@ -34,7 +34,7 @@ To set the priority for the job named *myDownloadJob* to normal:
 bitsadmin /setpriority myDownloadJob NORMAL
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

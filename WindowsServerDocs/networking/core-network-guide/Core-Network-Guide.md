@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
 ms.author: jgerend
 author: JasonGerend
-ms.date: 08/07/2020
+ms.date: 02/06/2023
 ---
 # Core network components
 
@@ -14,10 +14,7 @@ ms.date: 08/07/2020
 
 This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 
-> [!NOTE]
-> This guide is available for download in Microsoft Word format from TechNet Gallery. For more information, see [Core Network Guide for  Windows Server 2016](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683).
-
-This guide contains the following sections.
+This guide contains the following sections:
 
 - [About this guide](#BKMK_about)
 
@@ -158,7 +155,7 @@ The following illustration shows the Windows Server Core Network topology.
 Following are the components of a core network.
 
 ##### Router
-This deployment guide provides instructions for deploying a core network with two subnets separated by a router that has DHCP forwarding enabled. You can, however, deploy a Layer 2 switch, a Layer 3 switch, or a hub, depending on your requirements and resources. If you deploy a switch, the switch must be capable of DHCP forwarding or you must place a DHCP server on each subnet. If you deploy a hub, you are deploying a single subnet and do not need DHCP forwarding or a second scope on your DHCP server.
+This deployment guide provides instructions for deploying a core network with two subnets separated by a router that has DHCP forwarding enabled. You can, however, deploy a Layer 2 switch, a Layer 3 switch, or a hub, depending on your requirements and resources. If you deploy a switch, the switch must be capable of DHCP forwarding, or you must place a DHCP server on each subnet. If you deploy a hub, you are deploying a single subnet and do not need DHCP forwarding or a second scope on your DHCP server.
 
 ##### Static TCP/IP configurations
 The servers in this deployment are configured with static IPv4 addresses. Client computers are configured by default to receive IP address leases from the DHCP server.

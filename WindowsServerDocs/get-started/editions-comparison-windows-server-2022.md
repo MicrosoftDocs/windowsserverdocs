@@ -3,17 +3,18 @@ title: Comparison of Standard, Datacenter, and Datacenter Azure Edition editions
 description: Comparison of Standard, Datacenter, and Datacenter Azure Edition editions of Windows Server 2022.
 ms.topic: conceptual
 author: dknappettmsft
-ms.author: daknappe
+ms.author: alalve
 manager: femila
-ms.date: 6/17/2021
-ms.prod: windows-server
+ms.date: 09/16/2022
 ---
 
 # Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022
 
 Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022 to see which will be most appropriate.
 
-## Features available generally
+## Features generally available
+
+# [Full Comparison](#tab/full-comparison)
 
 |Features available generally|Windows Server 2022 Standard|Windows Server 2022 Datacenter|Windows Server 2022 Datacenter: Azure Edition|
 |--|--|--|--|
@@ -31,21 +32,38 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Server Core installation option|Yes|Yes|Yes|
 |Server Manager|Yes|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|Yes (not supported in Azure)|
+|SMB Compression|Yes|Yes|Yes|
 |SMB over QUIC|No|No|**Yes**|
 |Software-defined Networking|No|**Yes**|**Yes**|
 |Storage Migration Service|Yes|Yes|Yes|
 |Storage Replica| Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** | Yes, **unlimited** |
+|Storage Replica Compression|No|No|**Yes**|
 |Storage Spaces|Yes|Yes|Yes|
 |Storage Spaces Direct|No|**Yes**|**Yes**|
-|Volume Activation Services|Yes|Yes|Yes|
+|Volume Activation Services|Yes|Yes|Yes, (Cannot Configure as a KMS host)|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|Yes|
-|Windows System Resource Manager|Yes|Yes|Yes|
 |Server license logging|Yes|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** | **Can be a host or a guest** |
 |Work Folders|Yes|Yes|Yes|
 
+# [Version Differences](#tab/version-differences)
+
+|Features available generally|Windows Server 2022 Standard|Windows Server 2022 Datacenter|Windows Server 2022 Datacenter: Azure Edition|
+|-------------------|----------|---------------------------|
+|Azure Extended Network|No|No|**Yes**|
+|Hotpatching|No|No|**Yes**|
+|SMB over QUIC|No|No|**Yes**|
+|Software-defined Networking|No|**Yes**|**Yes**|
+|Storage Replica| Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** | Yes, **unlimited** |
+|Storage Spaces Direct|No|**Yes**|**Yes**|
+|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** | **Can be a host or a guest** |
+
+---
+
 ## Locks and Limits
+
+# [Full Comparison](#tab/full-comparison)
 
 | Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter |
 | -------------------              | ---------------------------  | --------------------------- |
@@ -65,15 +83,25 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 | DirectAccess                    | Yes                           | Yes |
 | DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
+# [Version Differences](#tab/version-differences)
+
+| Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter |
+| -------------------              | ---------------------------  | --------------------------- |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+
+---
+
 ## Server roles
+
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server roles available|Role services|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
 |-------------------|----------|----------|---------------------------|
 |Active Directory Certificate Services| |Yes|Yes|
 |Active Directory Domain Services| |Yes|Yes|
 |Active Directory Federation Services| |Yes|Yes|
-|AD Lightweight Directory Services| |Yes|Yes|
-|AD Rights Management Services| |Yes|Yes|
+|Active Directory Lightweight Directory Services| |Yes|Yes|
+|Active Directory Rights Management Services| |Yes|Yes|
 |Device Health Attestation| |Yes|Yes|
 |DHCP Server| |Yes|Yes|
 |DNS Server| |Yes|Yes|
@@ -100,10 +128,19 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Volume Activation Services| |Yes|Yes|
 |Web Services (IIS)| |Yes|Yes|
 |Windows Deployment Services| |Yes|Yes|
-|Windows Server Essentials Experience| |No | No |
 |Windows Server Update Services| |Yes|Yes|
 
+# [Version Differences](#tab/version-differences)
+
+|Windows Server roles available|Role services|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
+|-------------------|----------|----------|---------------------------|
+|Network Controller| |No| **Yes** |
+
+---
+
 ## Features
+
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server Features available|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
 |-------------------|----------|---------------------------|
@@ -129,7 +166,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Management OData IIS Extension|Yes|Yes|
 |Media Foundation|Yes|Yes|
 |Message Queueing|Yes|Yes|
-|Microsoft Defender Antivirus|Installed|Installed|
+|Microsoft Defender Antivirus|Yes|Yes|
 |Multipath I/O|Yes|Yes|
 |MultiPoint Connector|Yes|Yes|
 |Network Load Balancing|Yes|Yes|
@@ -143,7 +180,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |RPC over HTTP Proxy|Yes|Yes|
 |Setup and Boot Event Collection|Yes|Yes|
 |Simple TCP/IP Services|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|SMB 1.0/CIFS File Sharing Support|Installed|Installed|
+|SMB 1.0/CIFS File Sharing Support|Yes|Yes|
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
@@ -160,10 +197,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Internal Database|Yes|Yes|
-|Windows PowerShell 5.1|Installed|Installed|
-|Windows PowerShell 2.0 Engine|Yes|Yes|
-|Windows PowerShell Desired State Configuration Service|Yes|Yes|
-|Windows PowerShell Web Access|Yes|Yes|
+|Windows PowerShell|Yes|Yes|
 |Windows Process Activation Service|Yes|Yes|
 |Windows Search Service|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Server Backup|Yes|Yes|
@@ -174,5 +208,13 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |WinRM IIS Extension|Yes|Yes|
 |WINS Server|Yes|Yes|
 |Wireless LAN Service|Yes|Yes|
-|WoW64 support|Installed|Installed|
-|XPS Viewer|Installed with Server with Desktop Experience|Installed with Server with Desktop Experience|
+|WoW64 support|Yes|Yes|
+|XPS Viewer|Yes, installed with Server with Desktop Experience|Yes, installed with Server with Desktop Experience|
+
+# [Version Differences](#tab/version-differences)
+
+|Windows Server Features available|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
+|-------------------|----------|---------------------------|
+|Host Guardian Hyper-V Support|No| **Yes** |
+
+---

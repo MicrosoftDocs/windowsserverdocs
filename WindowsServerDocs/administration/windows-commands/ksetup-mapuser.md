@@ -69,7 +69,7 @@ To map all accounts within the CONTOSO Kerberos realm to any existing account of
 ksetup /mapuser * *
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

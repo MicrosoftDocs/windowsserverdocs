@@ -5,7 +5,7 @@ title: Appendix B - Privileged Accounts and Groups in Active Directory
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 09/26/2023
 ms.topic: article
 ---
 
@@ -94,11 +94,17 @@ Within this document, permissions refers to capabilities that are granted or den
 It is for this reason that this document encourages you to avoid using powerful accounts and groups for day-to-day administration, rather than trying to restrict the capabilities of the accounts and groups. It is not effectively possible to stop a determined user who has access to powerful credentials from using those credentials to gain access to any securable resource.
 
 ### Built-in Privileged Accounts and Groups
+
 Active Directory is intended to facilitate delegation of administration and the principle of least privilege in assigning rights and permissions. "Regular" users who have accounts in an Active Directory domain are, by default, able to read much of what is stored in the directory, but are able to change only a very limited set of data in the directory. Users who require additional privilege can be granted membership in various privileged groups that are built into the directory so that they may perform specific tasks related to their roles, but cannot perform tasks that are not relevant to their duties.
 
-Within Active Directory, there are three built-in groups that comprise the highest privilege groups in the directory: the Enterprise Admins (EA) group, the Domain Admins (DA) group, and the built-in Administrators (BA) group.
+Within Active Directory, there are three built-in groups that comprise the highest privilege groups in the directory, plus a fourth group, the Schema Admins (SA) group: 
 
-A fourth group, the Schema Admins (SA) group, has privileges that, if abused, can damage or destroy an entire Active Directory forest, but this group is more restricted in its capabilities than the EA, DA, and BA groups.
+- [Enterprise Admins (EA)](#enterprise-admins)
+- [Domain Admins (DA)](#domain-admins)
+- [Built-in Administrators (BA)](#administrators)
+- [Schema Admins (SA)](#schema-admins)
+
+The Schema Admins (SA) group, has privileges that, if abused, can damage or destroy an entire Active Directory forest, but this group is more restricted in its capabilities than the EA, DA, and BA groups.
 
 In addition to these four groups, there are a number of additional built-in and default accounts and groups in Active Directory, each of which is granted rights and permissions that allow specific administrative tasks to be performed. Although this appendix does not provide a thorough discussion of every built-in or default group in Active Directory, it does provide a table of the groups and accounts that you're most likely to see in your installations.
 
@@ -186,7 +192,7 @@ In addition to the highest privileged groups described earlier in this appendix,
 |Remote Management Users (Windows Server 2012)|Built-in container<p>Domain-local security group|Members of this group can access WMI resources over management protocols (such as WS-Management via the Windows Remote Management service). This applies only to WMI namespaces that grant access to the user.<p>**Direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
 |Replicator|Built-in container<p>Domain-local security group|Supports legacy file replication in a domain.<p>**Direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
 |Schema Admins (exists only in forest root domain)|Users container<p>Universal security group|Schema admins are the only users who can make modifications to the Active Directory schema, and only if the schema is write-enabled.<p>**Direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
-|Server Operators|Built-in container<p>Domain-local security group|Members of this group can administer domain servers.<p>**Direct user rights:**<p>Allow log on locally<p>Back up files and directories<p>Change the system time<p>Change the time zone<p>Force shutdown from a remote system<p>Restore files and directories<p>Shut down the system<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
+|Server Operators|Built-in container<p>Domain-local security group|Members of this group can administer domain controllers.<p>**Direct user rights:**<p>Allow log on locally<p>Back up files and directories<p>Change the system time<p>Change the time zone<p>Force shutdown from a remote system<p>Restore files and directories<p>Shut down the system<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
 |Terminal Server License Servers|Built-in container<p>Domain-local security group|Members of this group can update user accounts in Active Directory with information about license issuance, for the purpose of tracking and reporting TS Per User CAL usage<p>**Default direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
 |Users|Built-in container<p>Domain-local security group|Users have permissions that allow them to read many objects and attributes in Active Directory, although they cannot change most. Users are prevented from making accidental or intentional system-wide changes and can run most applications.<p>**Direct user rights:**<p>Increase a process working set<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking|
 |Windows Authorization Access Group|Built-in container<p>Domain-local security group|Members of this group have access to the computed tokenGroupsGlobalAndUniversal attribute on User objects<p>**Direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|

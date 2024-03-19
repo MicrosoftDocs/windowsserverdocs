@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -75,7 +75,7 @@ manager: mtillman
 
 
 ##  <a name="BKMK_Phone"></a> Using My Server app for Windows Phone
- You can access shared folders through your Windows Phone by using the My Server app for Windows Phone. You can download this app from the [Marketplace for Windows Phone](http://www.windowsphone.com/apps/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a).
+ You can access shared folders through your Windows Phone by using the My Server app for Windows Phone. You can download this app from the [Marketplace for Windows Phone](https://www.windowsphone.com/apps/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a).
 
 ##  <a name="BKMK_App"></a> Using My Server app for Windows 8
  You can access shared folders through Windows 8 by using the My Server app for Windows 8. You can download this app from the [Windows 8 App store](https://windows.microsoft.com/windows-8/apps).

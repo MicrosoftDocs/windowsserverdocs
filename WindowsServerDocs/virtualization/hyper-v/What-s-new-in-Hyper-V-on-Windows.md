@@ -162,7 +162,7 @@ After you update the cluster functional level:
 > [!NOTE]
 > Hyper-V on Windows 10 doesn't support failover clustering.
 
-For details and instructions, see the [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx).
+For details and instructions, see the [Cluster Operating System Rolling Upgrade](/windows-server/failover-clustering/Cluster-Operating-System-Rolling-Upgrade).
 
 ### Shared virtual hard disks \(updated\)
 You can now resize shared virtual hard disks (.vhdx files) used for guest clustering, without downtime. Shared virtual hard disks can be grown or shrunk while the virtual machine is online. Guest clusters can now also protect shared virtual hard disks by using Hyper-V Replica for disaster recovery.

@@ -1,9 +1,9 @@
 ---
 title: pktmon start
-description: Reference article for the pktmon start command.
+description: Reference article for the pktmon start command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 06/24/2021
 ---
 
@@ -102,7 +102,7 @@ C:\Test> pktmon start --trace -p Microsoft-Windows-TCPIP -p Microsoft-Windows-ND
 C:\Test> pktmon start --capture --trace -p Microsoft-Windows-TCPIP -k 0xFF -l 4
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

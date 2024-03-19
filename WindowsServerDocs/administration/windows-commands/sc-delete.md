@@ -14,7 +14,7 @@ ms.date: 10/16/2017
 Deletes a service subkey from the registry. If the service is running or if another process has an open handle to the service, the service is marked for deletion.
 
 > [!NOTE]
-> We don't recommend you to use this command to delete built-in operating system services such as DHCP, DNS, or Internet Information Services. To install, remove, or reconfigure operating system roles, services and components, see [Install or Uninstall Roles, Role Services, or Features](/WindowsServerDocs/administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)
+> We don't recommend you to use this command to delete built-in operating system services such as DHCP, DNS, or Internet Information Services. To install, remove, or reconfigure operating system roles, services and components, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features)
 
 ## Syntax
 
@@ -38,6 +38,6 @@ To delete the service subkey **NewServ** from the registry on the local computer
 sc.exe delete NewServ
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

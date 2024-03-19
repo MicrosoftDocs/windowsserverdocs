@@ -1,18 +1,20 @@
 ---
 title: Troubleshoot Active Directory Domain Services performance
-description: Troubleshooting guidance in Active Directory performance tuning.
+description: Resources and guidance to help with troubleshooting in Active Directory performance tuning.
 ms.topic: article
 ms.author: timwi
 author: phstee
-ms.date: 10/16/2017
+ms.date: 01/03/2023
 ---
-
 
 # Troubleshooting Active Directory Domain Services performance
 
-For additional information on ADDS performance troubleshooting, see [Monitoring Your Branch Office Environment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd736504(v=ws.10)).
+Applies to: Windows Server (All supported versions)
 
-## Additional References
+For more information on AD DS performance tuning troubleshooting, see [Monitoring Your Branch Office Environment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd736504(v=ws.10)).
+
+## Related links
+
 - [Performance tuning Active Directory Servers](index.md)
 - [Hardware considerations](hardware-considerations.md)
 - [LDAP considerations](ldap-considerations.md)

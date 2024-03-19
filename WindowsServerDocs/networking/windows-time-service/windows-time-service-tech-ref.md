@@ -59,4 +59,4 @@ This guide does **not** discuss configuring the Windows Time service. There are 
 - [How the Windows Time Service Works](How-the-Windows-Time-Service-Works.md)
 - [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
 - [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md)
-- [Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)
+<!-- [Microsoft Knowledge Base article 902229](/windows-server/networking/windows-time-service/windows-time-service-top)-->

@@ -34,7 +34,7 @@ To add a custom HTTP header for the job named *myDownloadJob*:
 bitsadmin /setcustomheaders myDownloadJob accept-encoding:deflate/gzip
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

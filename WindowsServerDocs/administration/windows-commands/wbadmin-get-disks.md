@@ -21,10 +21,10 @@ To list the online disks using this command, you must be a member of the **Backu
 wbadmin get disks
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [wbadmin command](wbadmin.md)
 
-- [Get-WBDisk](/powershell/module/windowserverbackup/Get-WBDisk)
+- [Get-WBDisk](/powershell/module/windowsserverbackup/get-wbdisk)

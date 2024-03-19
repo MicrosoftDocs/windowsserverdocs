@@ -36,7 +36,7 @@ To shift the focus to the VHD named *c:\test\test.vhd*, type:
 select vdisk file=c:\test\test.vhd
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

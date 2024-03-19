@@ -4,8 +4,8 @@ ms.assetid: e2c940f5-4b1f-457a-bc71-dcced0c752f7
 title: AD FS Technical Reference
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 # AD FS Technical Reference

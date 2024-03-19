@@ -45,7 +45,7 @@ To set the selected disk as read-only, type:
 attributes disk set readonly
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

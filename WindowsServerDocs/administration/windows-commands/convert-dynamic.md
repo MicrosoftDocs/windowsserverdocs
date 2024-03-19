@@ -40,7 +40,7 @@ To convert a basic disk into a dynamic disk, type:
 convert dynamic
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

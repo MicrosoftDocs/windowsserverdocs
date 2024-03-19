@@ -5,7 +5,7 @@ ms.date: 05/07/2016
 ms.topic: article
 ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddb
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -13,7 +13,7 @@ manager: mtillman
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- You can connect your computers to the Windows Server Essentials server by using the Connector software. The Connector software is installed when you connect a computer to the server by using the Connect a Computer to the Server Wizard. You can start this wizard by typing **http://<servername\>/connect**, where **<servername\>** is the name of your server.
+ You can connect your computers to the Windows Server Essentials server by using the Connector software. The Connector software is installed when you connect a computer to the server by using the Connect a Computer to the Server Wizard. You can start this wizard by typing **https://<servername\>/connect**, where **<servername\>** is the name of your server.
 
  In this topic:
 
@@ -384,10 +384,10 @@ manager: mtillman
 
 2.  Open an Internet browser, such as Internet Explorer.
 
-3.  In the address bar, type **http://<servername\>/Connect**, and then press Enter.
+3.  In the address bar, type **https://<servername\>/Connect**, and then press Enter.
 
     > [!NOTE]
-    >  If your computer is at a remote location outside of the Windows Server Essentials network, to run the Connect a Computer to the Server Wizard, type **http://<domainname\>/connect** in the address bar of your web browser (where <domain\> is the domain name of your organization). You can get your domain name information from your network administrator.
+    >  If your computer is at a remote location outside of the Windows Server Essentials network, to run the Connect a Computer to the Server Wizard, type **https://<domainname\>/connect** in the address bar of your web browser (where <domain\> is the domain name of your organization). You can get your domain name information from your network administrator.
 
 4.  The **Connect your computer to the server** page appears. Do one of the following:
 
@@ -499,13 +499,13 @@ manager: mtillman
 
 1.  Log on to the server that you want to connect to the Windows Server Essentials network.
 
-2.  Open an Internet browser, and in the address bar, type **http://<servername\>/Connect**, where *<servername\>* is the name of the server running Windows Server Essentials, and then press Enter.
+2.  Open an Internet browser, and in the address bar, type **https://<servername\>/Connect**, where *<servername\>* is the name of the server running Windows Server Essentials, and then press Enter.
 
 3.  If Internet Explorer Enhanced Security Configuration is enabled on the server that you are trying to connect to the Windows Server Essentials network, complete the following; otherwise, skip this step.
 
     1.  To accept the blocking message, click **Close**.
 
-    2.  Add the **http://<servername\>/Connect** website to the trusted websites as follows:
+    2.  Add the **https://<servername\>/Connect** website to the trusted websites as follows:
 
         1.  In the browser navigation pane, click **Tools**, and then click **Internet Options**.
 
@@ -556,10 +556,10 @@ manager: mtillman
 - The second server's Group Policy status displays as **Not applicable**.
 
 ###  <a name="BKMK_11"></a> Install the Connector software
- The Connector software in Windows Server Essentials is installed when you connect your computer to the server by using the Connect a Computer to the Server Wizard. You can launch this wizard by typing **http://<ServerName\>/connect** in the address bar of your web browser (where *<ServerName\>* is the name of your server).
+ The Connector software in Windows Server Essentials is installed when you connect your computer to the server by using the Connect a Computer to the Server Wizard. You can launch this wizard by typing **https://<ServerName\>/connect** in the address bar of your web browser (where *<ServerName\>* is the name of your server).
 
 > [!NOTE]
->  If your computer is at a remote location, to run the Connect a Computer to the Server Wizard, type **http://<domainname\>/connect** in the address bar of your web browser (where *<domain\>* is the domain name of your organization). You can get your domain name information from your network administrator.
+>  If your computer is at a remote location, to run the Connect a Computer to the Server Wizard, type **https://<domainname\>/connect** in the address bar of your web browser (where *<domain\>* is the domain name of your organization). You can get your domain name information from your network administrator.
 
  The Connector software does the following:
 
@@ -578,7 +578,7 @@ manager: mtillman
 ###  <a name="BKMK_12"></a> Move computer data and settings manually
   Windows Server Essentials and  Windows Server Essentials support user profile migration only for client computers that are running the Windows 7 operating system. When you connect a Windows 7-based computer to the server, the Connect Computer to the Server Wizard can automatically migrate the user profile.
 
- The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer. For information about using Windows Easy Transfer to transfer files and settings, see [article 2735227](https://support.microsoft.com/kb/2735227) in the Microsoft Knowledge Base.
+ The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer.
 
 ###  <a name="BKMK_Transfer"></a> Transfer multiple user profiles during computer deployment
  Before you connect a computer running the Windows 7 or Windows 7 SP1 operating system to the Windows Server Essentials server, in order to transfer multiple local user profiles you must first create the corresponding network user accounts on the server. For more information about creating network user accounts, see [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1).

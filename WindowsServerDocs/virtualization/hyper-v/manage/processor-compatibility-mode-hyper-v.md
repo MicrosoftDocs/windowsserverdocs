@@ -1,9 +1,9 @@
-﻿---
+---
 title: Processor compatibility mode in Hyper-V
 description: Describes how to use processor compatibility mode to move a running virtual machine or save state between virtualization hosts that use different generations of processors.
 ms.topic: how-to
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 10/06/2021
 ---
 
@@ -35,7 +35,7 @@ To avoid these failures, Hyper-V performs “pre-flight” checks whenever a VM 
 
 Processor compatibility mode ensures that the set of processor features available to VMs across a disparate set of virtualization hosts will match by presenting only a limited set of processor features to the VM. Processor compatibility mode hides newer processor instructions sets, typically those introduced within the last 10 years. However, hiding these features means that the guest operating system and application software cannot take advantage of these processor instruction set enhancements.
 
-For a complete list of features that are hidden for processor compatibility mode, refer to section 5.2.11 in the [Hypervisor Top-Level Functional Specification](https://download.microsoft.com/download/a/b/4/ab43a34e-bdd0-4fa6-bdef-79eef16e880b/hypervisor+top+level+functional+specification+v4.0.docx).
+For a complete list of features that are hidden for processor compatibility mode, refer to section 5.2.11 in the [Hypervisor Top-Level Functional Specification](/virtualization/hyper-v-on-windows/tlfs/tlfs).
 
 :::image type="content" source="media/how-processor-compatibility-mode-works.jpg" alt-text="Processor compatibility mode hides newer processor instructions sets for smooth VM migrations between host servers":::
 

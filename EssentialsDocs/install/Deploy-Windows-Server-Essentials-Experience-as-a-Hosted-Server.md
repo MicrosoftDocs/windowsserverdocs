@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -46,7 +46,7 @@ This document includes information that is specific to hosters who intend to dep
 
 -   **Data storage and protection** You can store the customer „¢s data in a centralized location and protect server and client data by backing up the server and client computers (less than 75) within the network.
 
--   **User management** You can manage the users and groups through the simplified server dashboard. In addition, integration with  Microsoft Azure Active Directory (Azure AD) enables easy data access for Microsoft online services (for example, Microsoft 365, Exchange Online, and SharePoint Online) for users by using their domain credentials.
+-   **User management** You can manage the users and groups through the simplified server dashboard. In addition, integration with  Microsoft Entra ID enables easy data access for Microsoft online services (for example, Microsoft 365, Exchange Online, and SharePoint Online) for users by using their domain credentials.
 
 -   **Service integration** You can integrate the server with Microsoft online services (such as Microsoft 365, SharePoint Online, and  Microsoft Azure Backup). You can also integrate the server with your services or services provided by third-party providers.
 

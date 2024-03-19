@@ -24,7 +24,7 @@ To get the status of the currently running backup or recovery operation using th
 wbadmin get status
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
@@ -32,4 +32,4 @@ wbadmin get status
 
 - [wbadmin stop job command](wbadmin-stop-job.md)
 
-- [Get-WBJob](/powershell/module/windowserverbackup/Get-WBJob)
+- [Get-WBJob](/powershell/module/windowsserverbackup/get-wbjob)

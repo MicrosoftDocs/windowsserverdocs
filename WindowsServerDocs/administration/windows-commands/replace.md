@@ -72,6 +72,6 @@ To update all the versions of a file named *Phones.cli* (which appear in multipl
 replace a:\phones.cli c:\ /s
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

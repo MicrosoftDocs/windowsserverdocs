@@ -44,7 +44,7 @@ To see a list of available backups that are stored in the remote shared folder `
 wbadmin get versions -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
@@ -52,4 +52,4 @@ wbadmin get versions -backupTarget:\\servername\share -machine:server01
 
 - [wbadmin get items command](wbadmin-get-items.md)
 
-- [Get-WBBackupTarget](/powershell/module/windowserverbackup/Get-WBBackupTarget)
+- [Get-WBBackupTarget](/powershell/module/windowsserverbackup/get-wbbackuptarget)

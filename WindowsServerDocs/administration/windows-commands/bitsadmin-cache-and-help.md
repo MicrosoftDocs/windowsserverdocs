@@ -27,7 +27,7 @@ To show the command-line help for the **cache** switches.
 bitsadmin /cache /help
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -28,7 +28,7 @@ bitsadmin /sethelpertoken <job> [<user_name@domain> <password>]
 | job | The job's display name or GUID. |
 | `<username@domain>` `<password>` | Optional. The local user account credentials for which token to use. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

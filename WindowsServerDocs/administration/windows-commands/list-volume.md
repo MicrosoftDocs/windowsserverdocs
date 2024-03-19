@@ -32,6 +32,6 @@ To delete *volume 2*, type:
 delete volume=2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

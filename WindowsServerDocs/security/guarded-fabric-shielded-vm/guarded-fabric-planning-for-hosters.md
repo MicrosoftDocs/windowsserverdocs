@@ -1,11 +1,11 @@
 ---
-description: "Learn more about: Guarded Fabric and Shielded VM Planning Guide for Hosters"
+description: Describes the two major decisions that are needed to enable shielded virtual machines on a Hyper-V fabric setup.
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
 author: nirb-ms
-ms.author: nirb
+ms.author: wscontent
 ms.date: 08/29/2018
 ---
 
@@ -18,7 +18,7 @@ This topic covers planning decisions that will need to be made to enable shielde
 - The Host Guardian Service (HGS) provides attestation and key protection so that you can make sure that shielded VMs will run only on approved and healthy Hyper-V hosts. 
 - Approved and healthy Hyper-V hosts on which shielded VMs (and regular VMs) can run — these are known as guarded hosts.
 
-![HGS and a guarded host](../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-plus-host-diagram-basic.png)
+![Diagram showing the H G S's attestation and key protection services are linked to the shielded virtual machine's guarded Hyper V hosts.](../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-plus-host-diagram-basic.png)
 
 ## Decision #1: Trust level in the fabric
 
@@ -66,7 +66,7 @@ Deploy the Host Guardian Service (HGS) in a highly secure environment, whether t
 
 | Area | Details |
 |------|---------|
-| Hardware | <ul><li>Host key attestation: You can use any existing hardware as your guarded host. There are a few exceptions (to make sure that your host can use new security mechanisms beginning with Windows Server 2016, see [Compatible hardware with Windows Server 2016 Virtualization-based protection of Code Integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md).</li><li>TPM-trusted attestation: You can use any hardware that has the [Hardware Assurance Additional Qualification](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/systems#system-server-assurance) as long as it is configured appropriately (see [Server configurations that are compliant with Shielded VMs and Virtualization-based protection of code integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md) for the specific configuration). This includes TPM 2.0, and UEFI version 2.3.1c and above.</li></ul> |
+| Hardware | <ul><li>Host key attestation: You can use any existing hardware as your guarded host. There are a few exceptions (to make sure that your host can use new security mechanisms beginning with Windows Server 2016, see [Compatible hardware with Windows Server 2016 Virtualization-based protection of Code Integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md).</li><li>TPM-trusted attestation: You can use any hardware that has the [Hardware Assurance Additional Qualification](/windows-hardware/design/compatibility/) as long as it is configured appropriately (see [Server configurations that are compliant with Shielded VMs and Virtualization-based protection of code integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md) for the specific configuration). This includes TPM 2.0, and UEFI version 2.3.1c and above.</li></ul> |
 | OS | We recommend using Server Core option for the Hyper-V host OS. |
 | Performance implications | Based on performance testing, we anticipate a roughly 5% density-difference between running shielded VMs and non-shielded VMs. This means that if a given Hyper-V host can run 20 non-shielded VMs, we expect that it can run 19 shielded VMs.<br><br>Make sure to verify sizing with your typical workloads. For example, there might be some outliers with intensive write-oriented IO workloads that will further affect the density difference. |
 | Branch office considerations | Beginning with Windows Server version 1709, you can specify a fallback URL for a virtualized HGS server running locally as a shielded VM in the branch office. The fallback URL can be used when the branch office loses connectivity to HGS servers in the datacenter. On previous versions of Windows Server, a Hyper-V host running in a branch office needs connectivity to the Host Guardian Service to power-on or to live migrate shielded VMs. For more information, see [Branch office considerations](guarded-fabric-manage-branch-office.md). |

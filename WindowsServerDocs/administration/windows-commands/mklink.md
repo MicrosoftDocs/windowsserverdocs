@@ -41,7 +41,7 @@ rd \MyFolder
 del \MyFile.file
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
@@ -49,4 +49,4 @@ del \MyFile.file
 
 - [rd command](rd.md)
 
-- [New-Item in Windows PowerShell](/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
+- [New-Item in Windows PowerShell](/powershell/module/microsoft.powershell.management/new-item?view=powershell-6&preserve-view=true)

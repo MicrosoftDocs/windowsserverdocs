@@ -37,7 +37,7 @@ To set the upload-reply filename file path for the job named *myDownloadJob*:
 bitsadmin /setreplyfilename myDownloadJob c:\upload-reply
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

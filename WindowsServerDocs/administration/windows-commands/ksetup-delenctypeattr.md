@@ -53,7 +53,7 @@ To remove the set encryption type attribute for the domain mit.contoso.com, type
 ksetup /delenctypeattr mit.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

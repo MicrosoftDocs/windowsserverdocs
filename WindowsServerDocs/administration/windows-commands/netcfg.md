@@ -30,9 +30,14 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 | /winpe | Installs TCP/IP, NetBIOS, and Microsoft Client for Windows preinstallation environment (WinPE). |
 | /l | Provides the location of the INF file. |
 | /c | Provides the class of the component to be installed; **protocol**, **service**, or **client**. |
-| /i | Provides the component ID. |
+| /i `<comp-ID>` | Provides the component ID. |
 | /s | Provides the type of components to show, including **\ta** for adapters or **n** for net components. |
 | /b | Displays the binding paths, when followed by a string containing the name of the path. |
+| /q `<comp-ID>` | Queries whether component ID is installed |
+| /u `<comp-ID>` | Uninstalls the component ID. |
+| /m | Outputs the binding map to NetworkBindingMap.txt in the current directory. Using with /v will also display the binding map to the console. |
+| /d | Performs a cleanup on all networking devices. This will require a reboot. |
+| /x | Performs a cleanup on networking devices, skipping those without physical object names. This will require a reboot. |
 | /? | Displays help at the command prompt. |
 
 ### Examples
@@ -79,6 +84,6 @@ To display binding paths containing *MS_TCPIP*, type:
 netcfg /b ms_tcpip
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

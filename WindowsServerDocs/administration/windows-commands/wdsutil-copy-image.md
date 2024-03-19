@@ -47,7 +47,7 @@ wdsutil /verbose /Progress /copy-Image image:Windows Vista with Office /Server:M
 /Filename:install.wim /DestinationImage /Name:copy of Windows Vista with Office /Filename:WindowsVista.wim /Description:This is a copy of the original Windows image with Office installed
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

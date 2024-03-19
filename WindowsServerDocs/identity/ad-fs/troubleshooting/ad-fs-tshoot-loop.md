@@ -3,8 +3,8 @@ title: AD FS Troubleshooting - Loop Detection
 description:  This document describes how to troubleshoot loop detection
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 02/21/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

@@ -41,7 +41,7 @@ wdsutil /verbose /Add-DriverPackage /InfFile:C:\Temp\Display.inf
 wdsutil /Add-DriverPackage /Server:MyWDSServer /InfFile:C:\Temp\Display.inf /Architecture:x86 /DriverGroup:x86Drivers /Name:Display Driver
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,0 +1,138 @@
+### YamlMime:FAQ
+metadata:
+  title: Windows LAPS frequently asked questions
+  description: Get answers to frequently asked questions about Windows LAPS.
+  author: jay98014
+  ms.author: jsimmons
+  ms.topic: faq
+  ms.date: 04/20/2023
+title: Windows LAPS frequently asked questions
+summary: |
+  This article provides answers to many commonly asked questions about Windows Local Administrator
+  Password Solution (Windows LAPS).
+
+sections:
+  - name: General
+    questions:
+      - question: Is it supported to run 3rd-party local account password manager products side-by-side with Windows LAPS?
+        answer: |  
+          Yes, this scenario is supported with the following condition. You must take care to
+          configure Windows LAPS and the 3rd-party product to manage different local accounts. If
+          you mistakenly configure both to manage the same account, Windows LAPS rejects attempts by
+          the 3rd-party product to modify the account's password. See [Account password tampering protection](laps-concepts-overview.md#account-password-tampering-protection).
+
+      - question: Why can't I change the password of a local admin account currently managed by Windows LAPS?
+        answer: |
+          Windows LAPS prevents accidental or spurious changes to the managed account's password. This protection
+          helps prevent a torn state situation where the password stored in the directory doesn't match the password
+          stored locally on the device. See [Account password tampering protection](laps-concepts-overview.md#account-password-tampering-protection).
+
+      - question: Why isn't the Windows LAPS PowerShell module hosted on GitHub, PowerShell Gallery, or similar?
+        answer: |
+          The Windows LAPS PowerShell module is part of Windows and not available outside of
+          the operating system.
+
+      - question: How can I copy the Windows LAPS PowerShell module to an older operating system?
+        answer: This scenario isn't supported.
+
+      - question: How can I submit unanswered questions or feature requests?
+        answer: |
+          See [Submitting feedback](laps-overview.md#submitting-feedback).
+
+      - question: I see errors in my Windows LAPS event log - how do I fix them?
+        answer: |
+          See [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance).
+
+      - question: Microsoft promotes a password-less strategy and direction. Why was a password-based feature like Windows LAPS added to Windows?
+        answer: |
+          All Windows LAPS scenarios involve the management of a Windows local account's password
+          for use with help desk tasks, device recovery, and other scenarios. Since Windows only
+          supports password-based authentication for local accounts, password management is
+          necessary.
+
+  - name: Windows LAPS and Active Directory
+    questions:
+      - question: Can I deploy and use Windows LAPS even if my domain is running older domain controllers?
+        answer: |
+          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
+
+      - question: Can I deploy and use Windows LAPS even if my domain isn't yet at Windows Server 2016 Domain Functional Level?
+        answer: |
+          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
+
+      - question: Do I need to deploy a Windows Server 2022 or 2019 DC in order to extend my forest's schema with the Windows LAPS schema extensions?
+        answer: |
+          No - you can run the `Update-LapsADSchema` cmdlet from any operating system updated with the Windows LAPS
+          feature. The only requirement is that the client credentials are authorized to modify the Active Directory
+          schema. See [Update the Windows Server Active Directory schema](laps-scenarios-windows-server-active-directory.md#update-the-windows-server-active-directory-schema).
+
+      - question: How can I copy the Windows LAPS-enabled Active Directory User and Computers snap-in to an older operating system?
+        answer: This scenario isn't supported.
+
+      - question: I installed RSAT and I still don't see the new LAPS-enabled Active Directory User and Computers snap-in?
+        answer: |
+          The new snap-in is only available in the Windows in-box versions of RSAT on supported Windows LAPS platforms. See [Windows LAPS snap-in availability](laps-management-user-interface.md#windows-laps-snap-in-availability).
+
+      - question: Why don't I see the new Windows LAPS policy in my GPO central store?
+        answer: |
+          The new Windows LAPS policy isn't automatically installed as part of the GPO central store. See [Group Policy Object Central Store](laps-management-policy-settings.md#group-policy-object-central-store).
+
+      - question: Are Windows LAPS DSRM passwords available during a catastrophic AD disaster scenario?
+        answer: |
+          Windows LAPS DSRM password backup is only one component of a comprehensive Active Directory disaster recovery plan. For more information, see [DSRM password support](laps-concepts-overview.md#dsrm-password-support).
+
+      - question: Is it supported to run legacy Microsoft LAPS side-by-side with Windows LAPS?
+        answer: |
+          Yes, this scenario is supported with the following conditions. A new Windows LAPS policy
+          must be configured, and you must take care to configure Windows LAPS and the legacy LAPS
+          to manage different local accounts.
+
+  - name: Windows LAPS and Microsoft Entra ID
+    questions:
+      - question: Why is my Microsoft Entra joined device getting an error when attempting to post the password to Microsoft Entra ID?
+        answer: |
+          The most common reason for this forgetting to enable the LAPS feature for your Microsoft Entra tenant. See [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
+
+      - question: Do I need to extend my forest's schema if I'm only planning to back up passwords to Microsoft Entra ID?
+        answer: |
+          No.
+
+      - question: Do I need Intune in order to use Windows LAPS?
+        answer: |
+          No. It's supported to deploy and use Windows LAPS in either Active Directory or Microsoft Entra mode
+          without Intune. Intune does provide many benefits to the Windows LAPS scenario (for example,
+          policy deployment at scale, monitoring, and password-reset action support).
+
+      - question: Do I need Microsoft Entra Connect in order to use Windows LAPS?
+        answer: |
+          No. There are no dependencies between these two features. See [Windows LAPS and Microsoft Entra Connect in hybrid environments](laps-scenarios-azure-active-directory.md#windows-laps-and-azure-ad-connect-in-hybrid-environments).
+
+      - question: How do I configure a hybrid-joined device to back up the password to both Microsoft Entra ID and AD?
+        answer: This scenario isn't supported. You can only back up the password to one directory at a time.
+
+      - question: Which specific Azure clouds support Windows LAPS?
+        answer: |
+          See [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps) and 
+          [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information
+          on which specific clouds are supported.
+
+      - question: Does Microsoft Entra Domain Services support Windows LAPS?
+        answer: |
+          [Microsoft Entra Domain Services](/azure/active-directory-domain-services/overview) doesn't currently support Windows LAPS.
+
+      - question: How are Windows LAPS passwords protected when stored in Microsoft Entra ID?
+        answer: |
+          Windows LAPS passwords are always protected in transit (https) when sent from the managed device to the
+          cloud. Windows LAPS passwords that are stored in the cloud are always encrypted with AES256. The decryption
+          keys are only available to those internal Microsoft Entra services that have a technical need to actually handle
+          the clear-text passwords, for example during storage or query operations. This encryption layer is specific
+          to Windows LAPS passwords, and is always enabled in addition to the default Microsoft Entra data protection
+          mechanisms - see [Microsoft Entra Data Security Considerations](https://azure.microsoft.com/resources/azure-active-directory-data-security-considerations).
+
+additionalContent: |
+    ## Next steps
+      To learn more about Windows LAPS, here are some more resources.
+
+      - [Windows LAPS schema and rights extensions for Windows Server Active Directory](laps-technical-reference.md)
+      - [Use Windows LAPS event logs](laps-management-event-log.md)
+      - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)

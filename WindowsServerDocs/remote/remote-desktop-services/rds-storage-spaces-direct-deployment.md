@@ -15,7 +15,7 @@ manager: scottman
 Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct with Windows Server 2016. If you're not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
 
 > [!NOTE]
-> Microsoft just published an [Azure template to deploy a Storage Spaces Direct scale-out file server](https://azure.microsoft.com/documentation/templates/301-storage-spaces-direct/)! You can use the template to create your deployment, or use the steps in this article.
+> Microsoft just published an [Azure template to deploy a Storage Spaces Direct scale-out file server](https://azure.microsoft.com/resources/templates/storage-spaces-direct/)! You can use the template to create your deployment, or use the steps in this article.
 
 We recommend deploying your SOFS with DS-series VMs and premium storage data disks, where there are the same number and size of data disks on each VM. You will need a minimum of two storage accounts. 
 
@@ -46,8 +46,8 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    - Replication option: LRS
 4. Set up an Active Directory forest by either using a quickstart template or deploying the forest manually.
    - Deploy using an Azure quickstart template:
-      - [Create an Azure VM with a new AD forest](https://azure.microsoft.com/documentation/templates/active-directory-new-domain/)
-      - [Create a new AD domain with 2 domain controllers](https://azure.microsoft.com/documentation/templates/active-directory-new-domain-ha-2-dc/) (for high availability)
+      - [Create an Azure VM with a new AD forest](https://azure.microsoft.com/resources/templates/active-directory-new-domain/)
+      - [Create a new AD domain with 2 domain controllers](https://azure.microsoft.com/resources/templates/active-directory-new-domain-ha-2-dc/) (for high availability)
    - Manually [deploy the forest](../../identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md) with the following configurations:
       - Create the virtual network in the same resource group as the storage account.
       - Recommended size: DS2 (increase the size if the domain controller will host more domain objects)
@@ -124,4 +124,3 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
        ```
 
 You now have a share at `\\my-sofs1\UpdStorage`, which you can use for UPD storage when you [enable UPD](https://techcommunity.microsoft.com/t5/ask-the-performance-team/migrating-user-profile-disks-in-remote-desktop-services/ba-p/375630) for your users.
-

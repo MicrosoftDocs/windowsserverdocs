@@ -2,8 +2,8 @@
 title: Additional server performance tuning resources
 description: Additional server performance tuning resources
 ms.topic: article
-ms.author: phstee
-author: phstee
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -26,7 +26,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Using PowerCfg to Evaluate System Energy Efficiency](/previous-versions/windows/it-pro/windows-vista/cc748940(v=ws.10))
 
--   [Interrupt-Affinity Policy Tool](https://support.microsoft.com/kb/252867)
+-   [Interrupt-Affinity](/windows-hardware/drivers/kernel/interrupt-affinity-and-priority)
 
 ## Networking Subsystem Tuning Resources
 
@@ -113,4 +113,4 @@ Here's a list of performance tuning guidelines for previous versions of Windows 
 
 -   [Performance Tuning Guidelines for Windows Server 2008 R2](https://download.microsoft.com/download/6/B/2/6B2EBD3A-302E-4553-AC00-9885BBF31E21/Perf-tun-srv-R2.docx)
 
--   [Performance Tuning Guidelines for Windows Server 2016](https://docs.microsoft.com/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf)
+-   [Performance Tuning Guidelines for Windows Server 2016](/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf)

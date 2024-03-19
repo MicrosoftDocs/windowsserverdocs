@@ -37,7 +37,7 @@ To specify *User1* with the password *Password1*, type:
 user User1 Password1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

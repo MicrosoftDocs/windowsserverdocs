@@ -1,9 +1,9 @@
 ---
 title: pktmon status
-description: Reference article for the pktmon status command.
+description: Reference article for the pktmon status command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 06/24/2021
 ---
 
@@ -25,7 +25,7 @@ pktmon status [--buffer-info]
 | ------------- | --------------- |
 | **-b, --buffer-info** | Display ETW buffer information. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

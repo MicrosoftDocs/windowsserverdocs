@@ -6,12 +6,11 @@ ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/12/2016
+ms.date: 04/13/2022
 ---
 # Getting Started with Group Managed Service Accounts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 
 This guide provides step-by-step instructions and background information for enabling and using group Managed Service Accounts in  Windows Server 2012 .
 
@@ -44,18 +43,18 @@ When a client computer connects to a service which is hosted on a server farm us
 
 Services have the following principals from which to choose, and each has certain limitations.
 
-|Principals|Scope|Services supported|Password management|
-|-------|-----|-----------|------------|
-|Computer Account of Windows system|Domain|Limited to one domain joined server|Computer manages|
-|Computer Account without Windows system|Domain|Any domain joined server|None|
-|Virtual Account|Local|Limited to one server|Computer manages|
-|Windows 7 standalone Managed Service Account|Domain|Limited to one domain joined server|Computer manages|
-|User Account|Domain|Any domain joined server|None|
-|Group Managed Service Account|Domain|Any Windows Server 2012 domain-joined server|The domain controller manages, and the host retrieves|
+|Principals|Services supported|Password management|
+|-------|-----------|------------|
+|Computer Account of Windows system|Limited to one domain joined server|Computer manages|
+|Computer Account without Windows system|Any domain joined server|None|
+|Virtual Account|Limited to one server|Computer manages|
+|Windows 7 standalone Managed Service Account|Limited to one domain joined server|Computer manages|
+|User Account|Any domain joined server|None|
+|Group Managed Service Account|Any Windows Server 2012 domain-joined server|The domain controller manages, and the host retrieves|
 
-A Windows computer account, or a Windows 7 standalone Managed Service Account (sMSA), or virtual accounts cannot be shared across multiple systems. If you configure one account for services on server farms to share, you would have to choose a user account or a computer account apart from a Windows system. Either way, these accounts do not have the capability of single-point-of-control password management. This creates problem where each organization needs to create an expensive solution to update keys for the service in Active Directory and then distribute the keys to all instances of those services.
+A Windows computer account, a Windows 7 standalone Managed Service Account (sMSA), or virtual accounts cannot be shared across multiple systems. In the case of virtual accounts, the identity is also local to the machine and not recognized by the domain. If you configure one account for services on server farms to share, you would have to choose a user account or a computer account apart from a Windows system. Either way, these accounts do not have the capability of single-point-of-control password management. This creates problem where each organization needs to create an expensive solution to update keys for the service in Active Directory and then distribute the keys to all instances of those services.
 
-With  Windows Server 2012 , services or service administrators do not need to manage password synchronization between service instances when using group Managed Service Accounts (gMSA). You provision the gMSA in AD and then configure the service which supports Managed Service Accounts. You can provision a gMSA using the *-ADServiceAccount cmdlets which are part of the Active Directory module. Service identity configuration on the host is supported by:
+With  Windows Server 2012, services or service administrators do not need to manage password synchronization between service instances when using group Managed Service Accounts (gMSA). You provision the gMSA in AD and then configure the service which supports Managed Service Accounts. Use of the gMSA is scoped to any machine that is able to use LDAP to retrieve the gMSA's credentials. You can provision a gMSA using the *-ADServiceAccount cmdlets which are part of the Active Directory module. Service identity configuration on the host is supported by:
 
 -   Same APIs as sMSA, so products which support sMSA will support gMSA
 

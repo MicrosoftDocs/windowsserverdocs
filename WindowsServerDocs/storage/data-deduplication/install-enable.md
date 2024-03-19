@@ -5,12 +5,12 @@ ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
-ms.date: 10/15/2021
+ms.date: 02/18/2022
 description: How to install Data Deduplication on Windows Server, determine whether a workload is a good candidate for deduplication, and enable deduplication on volumes.
 ---
 
 # Install and enable Data Deduplication
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 This topic explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on specific volumes.
 
@@ -31,21 +31,21 @@ This topic explains how to install [Data Deduplication](overview.md), evaluate w
 To install Data Deduplication, run the following PowerShell command as an administrator:
 `Install-WindowsFeature -Name FS-Data-Deduplication`
 
-To install Data Deduplication in a Nano Server installation:
+To install Data Deduplication:
 
-1. Create a Nano Server installation with the Storage installed as described in [Getting Started with Nano Server](../../get-started/getting-started-with-nano-server.md).
-2. From a server running Windows Server 2016 in any mode other than Nano Server, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):
-	```PowerShell
-	Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication
+- From a server running Windows Server 2016 or later, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the server name (replace 'MyServer' with the real name of the server instance):
+
+    ```powershell
+    Install-WindowsFeature -ComputerName <MyServer> -Name FS-Data-Deduplication
     ```
-	<br />
-    <strong>-- OR --</strong>
-	<br />
-	Connect remotely to the Nano Server instance with PowerShell remoting and install Data Deduplication by using DISM:
 
-	```PowerShell
-	Enter-PSSession -ComputerName MyNanoServer
-	dism /online /enable-feature /featurename:dedup-core /all
+    Or
+
+- Connect remotely to the server instance with PowerShell remoting and install Data Deduplication by using DISM:
+
+    ```powershell
+    Enter-PSSession -ComputerName MyServer
+    dism /online /enable-feature /featurename:dedup-core /all
     ```
 
 ## <a id="enable-dedup"></a>Enable Data Deduplication
@@ -69,24 +69,26 @@ To determine whether a workload works well with deduplication, answer the follow
 
 1. **Does my workload's dataset have enough duplication to benefit from enabling deduplication?**
 	Before enabling Data Deduplication for a workload, investigate how much duplication your workload's dataset has by using the Data Deduplication Savings Evaluation tool, or DDPEval. After installing Data Deduplication, you can find this tool at `C:\Windows\System32\DDPEval.exe`. DDPEval can evaluate the potential for optimization against directly connected volumes (including local drives or Cluster Shared Volumes) and mapped or unmapped network shares.
-	&nbsp;
+
 	Running DDPEval.exe will return an output similar to the following:
-	&nbsp;
-	`Data Deduplication Savings Evaluation Tool`
-	`Copyright 2011-2012 Microsoft Corporation.  All Rights Reserved.`
-	&nbsp;
-	`Evaluated folder: E:\Test`
-	`Processed files: 34`
-	`Processed files size: 12.03MB`
-	`Optimized files size: 4.02MB`
-	`Space savings: 8.01MB`
-	`Space savings percent: 66`
-	`Optimized files size (no compression): 11.47MB`
-	`Space savings (no compression): 571.53KB`
-	`Space savings percent (no compression): 4`
-	`Files with duplication: 2`
-	`Files excluded by policy: 20`
-	`Files excluded by error: 0`
+
+	```
+	Data Deduplication Savings Evaluation Tool
+	Copyright 2011-2012 Microsoft Corporation.  All Rights Reserved.
+	
+	Evaluated folder: E:\Test
+	Processed files: 34
+	Processed files size: 12.03MB
+	Optimized files size: 4.02MB
+	Space savings: 8.01MB
+	Space savings percent: 66
+	Optimized files size (no compression): 11.47MB
+	Space savings (no compression): 571.53KB
+	Space savings percent (no compression): 4
+	Files with duplication: 2
+	Files excluded by policy: 20
+	Files excluded by error: 0
+	```
 
 2. **What do my workload's I/O patterns to its dataset look like? What performance do I have for my workload?**
 	 Data Deduplication optimizes files as a periodic job, rather than when the file is written to disk. As a result, it is important to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store and attempts to organize the Chunk Store by file as much as possible, read operations perform best when they are applied to sequential ranges of a file.
@@ -129,7 +131,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 2. If you are running a recommended workload, you're done. For other workloads, see [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]
-> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), can be run remotely by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run [`New-CimSession`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)).
+> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](/powershell/module/deduplication/enable-dedupvolume), can be run remotely by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a server instance. To create a new CIM Session run [`New-CimSession`](/powershell/module/cimcmdlets/new-cimsession).
 
 #### <a id="enable-dedup-sometimes-considerations"></a>Other considerations
 > [!Important]

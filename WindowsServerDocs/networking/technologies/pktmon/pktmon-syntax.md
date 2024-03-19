@@ -1,9 +1,9 @@
 ---
 title: Pktmon command formatting
-description: Use this page to understand pktmon command formatting and output.
+description: Provides an overview of Pktmon command formatting with a quick start guide and provides guidance on usage.
 ms.topic: how-to
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 10/27/2021
 ---
 
@@ -208,6 +208,8 @@ A typical binding consists of:
 Each component is uniquely identified by a Packet Monitor component ID, which are used for targeting individual components for monitoring.
 
 >[!NOTE]
->IDs are not persistent and may change across reboots and as Packet Monitor's driver restarts.
+>IDs are not persistent and may change across reboots and as Packet Monitor's driver restarts.  
+>
+>Some IDs that appear in Packet Monitor's output may not appear in the component list.  This is due to aggregation of some components into a single ID to make selecting and displaying them easier.  To find the original IDs for these components, use **pktmon list --json** and look for the SecondaryId property in the output.
 
 For more information, see [pktmon list syntax](../../../administration/windows-commands/pktmon-list.md).

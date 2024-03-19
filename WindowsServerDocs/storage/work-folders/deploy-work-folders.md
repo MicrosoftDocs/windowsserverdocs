@@ -3,7 +3,6 @@ ms.assetid: d2429185-9720-4a04-ad94-e89a9350cdba
 title: Deploying Work Folders
 ms.topic: article
 author: JasonGerend
-manager: dongill
 ms.author: jgerend
 ms.date: 6/24/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
@@ -12,18 +11,19 @@ description: How to deploy Work Folders, including installing the server role, c
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
-This topic discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).
+This article discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).
 
- To deploy Work Folders, a process that can involve multiple servers and technologies, use the following steps.
+ To deploy Work Folders, a process that can involve multiple servers and technologies use the following steps.
 
 > [!TIP]
->  The simplest Work Folders deployment is a single file server (often called a sync server) without support for syncing over the Internet, which can be a useful deployment for a test lab or as a sync solution for domain-joined client computers. To create a simple deployment, these are minimum steps to follow:
->  -   Step 1: Obtain SSL certificates
->  -   Step 2: Create DNS records
->  -   Step 3: Install Work Folders on file servers
->  -   Step 4: Binding the SSL certificate on the sync servers
->  -   Step 5: Create security groups for Work Folders
->  -   Step 7: Create sync shares for user data
+> The simplest Work Folders deployment is a single file server (often called a sync server) without support for syncing over the Internet, which can be a useful deployment for a test lab or as a sync solution for domain-joined client computers. To create a simple deployment, these are minimum steps to follow:
+>
+> - Step 1: Obtain SSL certificates
+> - Step 2: Create DNS records
+> - Step 3: Install Work Folders on file servers
+> - Step 4: Binding the SSL certificate on the sync servers
+> - Step 5: Create security groups for Work Folders
+> - Step 7: Create sync shares for user data
 
 ## Step 1: Obtain SSL certificates
  Work Folders uses HTTPS to securely synchronize files between the Work Folders clients and the Work Folders server. The requirements for SSL certificates used by Work Folders are as follows:
@@ -43,7 +43,7 @@ This topic discusses the steps needed to deploy Work Folders. It assumes that yo
 ## Step 2: Create DNS records
  To allow users to sync across the Internet, you must create a Host (A) record in public DNS to allow Internet clients to resolve your Work Folders URL. This DNS record should resolve to the external interface of the reverse proxy server.
 
- On your internal network, create a CNAME record in DNS named workfolders which resolves to the FDQN of a Work Folders server. When Work Folders clients use auto discovery, the URL used to discover the Work Folders server is https:\//workfolders.domain.com. If you plan to use auto discovery, the workfolders CNAME record must exist in DNS.
+ On your internal network, create a CNAME record in DNS named *workfolders* that resolves to the FDQN of a Work Folders server. When Work Folders clients use auto discovery, the URL used to discover the Work Folders server is https:\//workfolders.domain.com. If you plan to use auto discovery, the workfolders CNAME record must exist in DNS.
 
 ## Step 3: Install Work Folders on file servers
  You can install Work Folders on a domain-joined server by using Server Manager or by using Windows PowerShell, locally or remotely across a network. This is useful if you are configuring multiple sync servers across your network.
@@ -153,7 +153,7 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 ```
 
 > [!NOTE]
->  The delegation operation might take a while to run in domains with a large number of users.
+> The delegation operation might take a while to run in domains with a large number of users.
 
 ## Step 7: Create sync shares for user data
  At this point, you're ready to designate a folder on the sync server to store your user's files. This folder is called a sync share, and you can use the following procedure to create one.
@@ -167,7 +167,7 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 4. On the **Select the server and path** page, specify where to store the sync share. If you already have a file share created for this user data, you can choose that share. Alternatively you can create a new folder.
 
    > [!NOTE]
-   >  By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) cmdlet to create a file share, preferably with access-based enumeration enabled.
+   > By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) cmdlet to create a file share, preferably with access-based enumeration enabled.
 
 5. On the **Specify the structure for user folders** page, choose a naming convention for user folders within the sync share. There are two options available:
 
@@ -175,7 +175,7 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 
    - <strong>User alias@domain</strong> creates user folders that include a domain name. If you aren't using a file share already in use with Folder Redirection or another user data solution, select this naming convention to eliminate folder naming conflicts when multiple users of the share have identical aliases (which can happen if the users belong to different domains).
 
-6. On the **Enter the sync share name** page, specify a name and a description for the sync share. This is not advertised on the network but is visible in Server Manager and Windows Powershell to help distinguish sync shares from each other.
+6. On the **Enter the sync share name** page, specify a name and a description for the sync share. This is not advertised on the network but is visible in Server Manager and Windows PowerShell to help distinguish sync shares from each other.
 
 7. On the **Grant sync access to groups** page, specify the group that you created that lists the users allowed to use this sync share.
 
@@ -193,16 +193,16 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 
 9. Review your selections and complete the wizard to create the sync share.
 
-You can create sync shares using Windows PowerShell by using the [New-SyncShare](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh994572(v=ws.11)) cmdlet. Below is an example of this method:
+You can create sync shares using Windows PowerShell by using the [New-SyncShare](/powershell/module/syncshare/new-syncshare?view=windowsserver2022-ps) cmdlet. Below is an example of this method:
 
 ```powershell
 New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 ```
 
-The example above creates a new sync share named *Share01* with the path *K:\Share-1*, and access granted to the group named *HR Sync Share Users*
+The example above creates a new sync share named *HR Sync Share* with the path *K:\Share-1*, and access granted to the group named *HR Sync Share Users*
 
 > [!TIP]
->  After you create sync shares you can use File Server Resource Manager functionality to manage the data in the shares. For example, you can use the **Quota** tile inside the Work Folders page in Server Manager to set quotas on the user folders. You can also use [File Screening Management](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732074(v=ws.11)) to control the types of files that Work Folders will sync, or you can use the scenarios described in [Dynamic Access Control](../../identity/solution-guides/dynamic-access-control--scenario-overview.md) for more sophisticated file classification tasks.
+> After you create sync shares you can use File Server Resource Manager functionality to manage the data in the shares. For example, you can use the **Quota** tile inside the Work Folders page in Server Manager to set quotas on the user folders. You can also use [File Screening Management](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732074(v=ws.11)) to control the types of files that Work Folders will sync, or you can use the scenarios described in [Dynamic Access Control](../../identity/solution-guides/dynamic-access-control--scenario-overview.md) for more sophisticated file classification tasks.
 
 ## Step 8: Optionally specify a tech support email address
  After installing Work Folders on a file server, you probably want to specify an administrative contact email address for the server. To add an email address, use the following procedure:
@@ -218,15 +218,14 @@ The example above creates a new sync share named *Share01* with the path *K:\Sha
      Work Folders users can click a link in the Work Folders Control Panel item that sends an email containing diagnostic information about the client PC to the address(es) you specify here.
 
 ## Step 9: Optionally set up server automatic discovery
- If you are hosting multiple sync servers in your environment, you should configure server automatic discovery by populating the **msDS-SyncServerURL** property on user accounts in AD DS.
+If you are hosting multiple sync servers in your environment, you should configure server automatic discovery by populating the **msDS-SyncServerURL** property on user accounts in AD DS.
 
->[!NOTE]
->The msDS-SyncServerURL property in Active Directory should not be defined for remote users that are accessing Work Folders through a reverse proxy solution such as Web Application Proxy or Azure AD Application Proxy. If the msDS-SyncServerURL property is defined, the Work Folders client will try to access an internal URL that's not accessible through the reverse proxy solution. When using Web Application Proxy or Azure AD Application Proxy, you need to create unique proxy applications for each Work Folders server. For more details, see [Deploying Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md) or [Deploying Work Folders with Azure AD Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+> [!NOTE]
+> The msDS-SyncServerURL property in Active Directory should not be defined for remote users that are accessing Work Folders through a reverse proxy solution such as Web Application Proxy or Microsoft Entra application proxy. If the msDS-SyncServerURL property is defined, the Work Folders client will try to access an internal URL that's not accessible through the reverse proxy solution. When using Web Application Proxy or Microsoft Entra application proxy, you need to create unique proxy applications for each Work Folders server. For more details, see [Deploying Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md) or [Deploying Work Folders with Microsoft Entra application proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
+Before you can do so, you must install a Windows Server 2012 R2 domain controller or update the forest and domain schemas by using the `Adprep /forestprep` and `Adprep /domainprep` commands. For information on how to safely run these commands, see [Running Adprep](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
- Before you can do so, you must install a Windows Server 2012 R2 domain controller or update the forest and domain schemas by using the `Adprep /forestprep` and `Adprep /domainprep` commands. For information on how to safely run these commands, see [Running Adprep](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
-
- You probably also want to create a security group for file server administrators and give them delegated permissions to modify this particular user attribute, as described in Step 5 and Step 6. Without these steps you would need to get a member of the Domain Admins or Enterprise Admins group to configure automatic discovery for each user.
+You probably also want to create a security group for file server administrators and give them delegated permissions to modify this particular user attribute, as described in Step 5 and Step 6. Without these steps you would need to get a member of the Domain Admins or Enterprise Admins group to configure automatic discovery for each user.
 
 #### To specify the sync server for users
 
@@ -256,13 +255,15 @@ Set-ADUser –Add @{"msDS-SyncServerURL"=$SyncServerURL}
 
 ```
 
-## Step 10: Optionally configure Web Application Proxy, Azure AD Application Proxy, or another reverse proxy
+<a name='step-10-optionally-configure-web-application-proxy-azure-ad-application-proxy-or-another-reverse-proxy'></a>
 
-To enable remote users to access their files, you need to publish the Work Folders server through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, Azure Active Directory Application Proxy, or another reverse proxy solution.
+## Step 10: Optionally configure Web Application Proxy, Microsoft Entra application proxy, or another reverse proxy
+
+To enable remote users to access their files, you need to publish the Work Folders server through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, Microsoft Entra application proxy, or another reverse proxy solution.
 
 To configure Work Folders access using AD FS and Web Application Proxy, see [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md). For background information about Web Application Proxy, see [Web Application Proxy in Windows Server 2016](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md). For details on publishing applications such as Work Folders on the Internet using Web Application Proxy, see [Publishing Applications using AD FS Preauthentication](../../remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md).
 
-To configure Work Folders access using Azure Active Directory Application Proxy, see [Enable remote access to Work Folders using Azure Active Directory Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
+To configure Work Folders access using Microsoft Entra application proxy, see [Enable remote access to Work Folders using Microsoft Entra application proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
 
 ## Step 11: Optionally use Group Policy to configure domain-joined PCs
 
@@ -289,4 +290,4 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 |**Understanding**|-   [Work Folders](work-folders-overview.md)|
 |**Planning**|-   [Designing a Work Folders Implementation](plan-work-folders.md)|
 |**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [A new user attribute for Work Folders server Url](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
-|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264(v=ws.11))<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/?view=win10-ps)|
+|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/)|

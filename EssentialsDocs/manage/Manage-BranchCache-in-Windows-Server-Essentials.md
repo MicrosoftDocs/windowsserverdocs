@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f6e05aec-d07c-4e0b-94ab-f20279e9ffd1
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -48,7 +48,7 @@ BranchCache can help you optimize Internet usage, improve performance of network
 -   In distributed cache mode, all client computers must be on same subnet.
 
     > [!NOTE]
-    >  If you connected client computers to your Windows Server Essentials server without joining them to the domain, those computers are excluded from caching by default. To include a client computer that is not domain-joined in caching, run the [Enable-BCDistributed](https://technet.microsoft.com/library/hh848398.aspx) Windows PowerShell cmdlet on the client computer. For more information, see [BranchCache Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848392.aspx).
+    >  If you connected client computers to your Windows Server Essentials server without joining them to the domain, those computers are excluded from caching by default. To include a client computer that is not domain-joined in caching, run the [Enable-BCDistributed](/powershell/module/branchcache/enable-bcdistributed) Windows PowerShell cmdlet on the client computer. For more information, see [BranchCache Cmdlets in Windows PowerShell](/powershell/module/branchcache/).
 
 
 ## Turn BranchCache on

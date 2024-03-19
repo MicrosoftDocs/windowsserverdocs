@@ -43,7 +43,7 @@ To list items from the backup of server01 that was run on April 30, 2013 at 9:00
 wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
@@ -51,4 +51,4 @@ wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -ma
 
 - [wbadmin get versions command](wbadmin-get-versions.md)
 
-- [Get-WBBackupSet](/powershell/module/windowserverbackup/Get-WBBackupSet)
+- [Get-WBBackupSet](/powershell/module/windowsserverbackup/get-wbbackupset)

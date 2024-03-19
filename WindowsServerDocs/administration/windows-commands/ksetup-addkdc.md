@@ -52,7 +52,7 @@ ksetup
 ```
 Check the registry to make sure the mapping occurred as intended.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

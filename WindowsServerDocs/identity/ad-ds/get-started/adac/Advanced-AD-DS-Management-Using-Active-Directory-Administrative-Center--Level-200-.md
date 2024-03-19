@@ -434,7 +434,7 @@ Setting the Verbose level also shows the .NET stacks for each function, but thes
 - Network communications are blocked to the ADWS service from the computer running the Active Directory Administrative Center.
 
 > [!IMPORTANT]
-> There is also an out-of-band version of the service called the [Active Directory Management Gateway](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=2852), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.
+> There is also an out-of-band version of the service called the [Active Directory Management Gateway](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391908(v=ws.10)#what-does-the-active-directory-management-gateway-service-do), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.
 >
 
 The errors shown when no Active Directory Web Services instances are available are:

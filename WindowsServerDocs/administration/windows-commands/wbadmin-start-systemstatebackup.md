@@ -39,10 +39,10 @@ To create a system state backup and store it on volume f, type:
 wbadmin start systemstatebackup -backupTarget:f:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [wbadmin command](wbadmin.md)
 
-- [Start-WBBackup](/powershell/module/windowserverbackup/Start-WBBackup)
+- [Start-WBBackup](/powershell/module/windowsserverbackup/start-wbbackup)

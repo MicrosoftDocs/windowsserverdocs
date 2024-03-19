@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c09f4cf6-4d12-49fe-9ae4-e6cb14027b9d
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -192,7 +192,7 @@ When you integrate your  Windows Server Essentials server with Microsoft 365, yo
 
 1.  On the Dashboard, click **Users**.
 
-2.  Right-click the user account in the list, and then click **Unassign a Microsoft online account** (in  Windows Server Essentials, click **Unassign an Microsoft 365 account**).
+2.  Right-click the user account in the list, and then click **Unassign a Microsoft online account** (in  Windows Server Essentials, click **Unassign a Microsoft 365 account**).
 
 3.  At the confirmation prompt, click **Yes**.
 

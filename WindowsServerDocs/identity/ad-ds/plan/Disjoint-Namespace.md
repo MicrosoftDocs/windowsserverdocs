@@ -89,7 +89,7 @@ Before you modify a namespace, review the following considerations, which apply 
 
     For more information, see [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
 
-    - If you use Windows Server 2003-based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base, [The SPN does not appear in the list of services that can be delegated to an account when you try to configure constrained delegation on a computer that is running Windows Server 2003](https://support.microsoft.com/help/936628) (404).
+    - If you use Windows Server 2003-based computers with constrained delegation, those computers may require you to manually edit the **msDS-AllowedToDelegateTo** attribute in Active Directory. For more information, see the [ms-DS-Allowed-To-Delegate-To attribute](/windows/win32/adschema/a-msds-allowedtodelegateto).
 
     - If you want to delegate permissions to modify SPNs to subordinate administrators, see [Delegating Authority to Modify SPNs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770439(v=ws.10)).
 

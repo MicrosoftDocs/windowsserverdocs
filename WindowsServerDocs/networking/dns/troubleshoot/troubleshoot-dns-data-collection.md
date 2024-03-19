@@ -10,6 +10,9 @@ author: Deland-Han
 
 # Troubleshooting Domain Name System (DNS) issues
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806264" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DNS issues.
+
 Domain Name resolution issues can be broken down into client-side and server-side issues. In general, you should start with client-side troubleshooting unless you determine during the scoping phase that the issue is definitely occurring on the server side.
 
 - [Troubleshooting DNS clients](troubleshoot-dns-client.md)

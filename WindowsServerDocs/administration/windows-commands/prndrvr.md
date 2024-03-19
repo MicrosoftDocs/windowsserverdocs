@@ -66,7 +66,7 @@ To delete a version 3 Windows x64 printer driver for Laser printer model 1, type
 cscript prndrvr -a -m Laser printer model 1 -v 3 -e Windows x64
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

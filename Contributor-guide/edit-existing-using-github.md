@@ -8,11 +8,11 @@ ms.date: 05/06/2019
 
 # Edit an existing Windows Server article using GitHub and Visual Studio Code
 
-There are two separate locations where we keep Windows Server technical content. One of the locations is public (windowsserverdocs) while the other is private (windowsserverdocs-pr). Who you are determines which location you contribute to:
+There are two separate locations where we keep Windows Server technical content. One of the locations is public (`windowsserverdocs`) while the other is private (`windowsserverdocs-pr`). Who you are determines which location you contribute to:
 
 - **I'm a Microsoft employee.** As a Microsoft employee, you have options, based on what you're trying to do:
 
-    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, you can follow the instructions in the [Create new Windows Server articles using GitHub and Visual Studio Code](create-new-using-github.md) article.
+    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the `windowsserverdocs-pr` repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, you can follow the instructions in the [Create new Windows Server articles using GitHub and Visual Studio Code](create-new-using-github.md) article.
 
     - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in this article.
 
@@ -26,7 +26,7 @@ Follow these steps to edit an existing article.
 
 ### Create a new branch and locate the file you want to update
 
-Before you can start to work on your content, you must first change to the windowsserverdocs-pr repo and then locate the article you want to update.
+Before you can start to work on your content, you must first change to the `windowsserverdocs-pr` repo and then locate the article you want to update.
 
 #### To create a new branch in Git Bash
 
@@ -98,7 +98,8 @@ After you've completed your updates, you must get approval from your writer (all
 
 #### To submit your pull request
 
-1. Go to https://github.com/MicrosoftDocs/windowsserverdocs-pr and select the **Pull requests** tab.
+1. Browse to the [`windowsserverdocs-pr` GitHub repository](https://github.com/MicrosoftDocs/windowsserverdocs-pr)
+ and select the **Pull requests** tab.
 
 2. In the **Reviewers** area of the right pane, select the gear icon, and then enter the _windowsservercontent_ alias for review.
 
@@ -133,6 +134,6 @@ For more information about GitHub and the markdown language, see:
 
 ### Markdown
 
-- [Our internal markdown guidance](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)
+- [Our internal markdown guidance](/contribute/markdown-reference)
 
 - [External, GitHub tutorial](https://www.markdowntutorial.com/)

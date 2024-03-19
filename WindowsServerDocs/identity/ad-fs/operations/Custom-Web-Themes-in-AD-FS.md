@@ -4,8 +4,8 @@ ms.assetid: 0379abc3-25c7-46ab-9a6b-80a5152365b0
 title: Custom Web Themes in AD FS
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

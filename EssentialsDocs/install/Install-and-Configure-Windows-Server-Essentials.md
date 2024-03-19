@@ -1,11 +1,11 @@
 ---
 title: "Install and Configure Windows Server Essentials"
 description: Learn how to install and configure Windows Server Essentials.
-ms.date: 06/17/2013
+ms.date: 07/20/2023
 ms.topic: article
 ms.assetid: e95cf219-46a4-4041-bd81-0c4c2a0622cf
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -15,11 +15,9 @@ manager: mtillman
 
 ##  <a name="BKMK_InstallConfigure"></a>
 
- This document provides step-by-step instructions for installing and configuring  Windows Server Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md).
+This document provides step-by-step instructions for installing and configuring  Windows Server Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md).
 
- This document provides step-by-step instructions for installing and configuring  Windows Server Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server Essentials](../install/Before-You-Install-Windows-Server-Essentials.md).
-
- You install and configure  Windows Server Essentials in two steps:
+Install and configure  Windows Server Essentials in two steps:
 
 
 ###  <a name="BKMK_ManualInstallation"></a> Step 1: Install the Windows Server Essentials operating system

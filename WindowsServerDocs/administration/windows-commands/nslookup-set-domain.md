@@ -37,7 +37,7 @@ set domain=<domainname>
 
 - Use the [nslookup set srchlist](nslookup-set-srchlist.md) command to specify a different list and the [nslookup set all](nslookup-set-all.md) command to display the list.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

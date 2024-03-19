@@ -35,7 +35,7 @@ To create a directory called *dir1* on the remote computer, type:
 mkdir dir1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

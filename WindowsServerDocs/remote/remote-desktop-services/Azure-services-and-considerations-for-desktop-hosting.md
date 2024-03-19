@@ -39,7 +39,6 @@ For more information, see the following articles:
 
 - [Security and protection](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831778(v=ws.11))
 - [Security best practices for IIS 8](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635855(v=ws.11))
-- [Secure Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831360(v=ws.11))
 
 ## Design considerations
 
@@ -58,8 +57,10 @@ For more information, see the following articles:
 - [Hyper-V overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831531(v=ws.11))
 - [Azure Storage scalability and performance targets](/azure/storage/common/storage-scalability-targets)
 
-## Azure Active Directory Application Proxy
+<a name='azure-active-directory-application-proxy'></a>
 
-Azure Active Directory (AD) Application Proxy is a service provided in paid SKUs of Azure AD that allow users to connect to internal applications through Azure's own reverse-proxy service. This allows the RD Web and RD Gateway endpoints to be hidden inside of the virtual network, eliminating the need to be exposed to the internet by a public IP address. Hosters can use Azure AD Application Proxy to condense the number of virtual machines in the tenant's environment while still maintaining a full deployment. Azure AD Application Proxy also enables many of the benefits that Azure AD provides, such as conditional access and multi-factor authentication.
+## Microsoft Entra application proxy
+
+Microsoft Entra application proxy is a service provided in paid SKUs of Microsoft Entra ID that allow users to connect to internal applications through Azure's own reverse-proxy service. This allows the RD Web and RD Gateway endpoints to be hidden inside of the virtual network, eliminating the need to be exposed to the internet by a public IP address. Hosters can use Microsoft Entra application proxy to condense the number of virtual machines in the tenant's environment while still maintaining a full deployment. Microsoft Entra application proxy also enables many of the benefits that Microsoft Entra ID provides, such as conditional access and multi-factor authentication.
 
 For more information, see [Get started with Application Proxy and install the connector](/azure/active-directory/manage-apps/application-proxy-enable).

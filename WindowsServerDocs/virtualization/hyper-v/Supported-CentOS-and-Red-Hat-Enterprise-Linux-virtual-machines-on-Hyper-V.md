@@ -3,16 +3,13 @@ title: Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 description: Lists the versions of Linux integration services for supported CentOS and Red Hat Enterprise distributions
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
-author: jperrin
-ms.author: japerrin
-ms.date: 10/21/2021
+author: kkkashan        
+ms.author: kkashanjat
+ms.date: 09/27/2023
 ---
-Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
-=========================================================================
+# Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 
->   Applies To: Azure Stack HCI, version 20H2; Windows Server 2022, Windows Server 2019, Hyper-V Server 2019, Windows Server 2016,
->   Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 11, Windows
->   10, Windows 8.1
+> Applies To: Azure Stack HCI, Windows Server 2022, Windows Server Windows Server 2019, Hyper-V Server Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 11, Windows 10, Windows 8.1
 
 The following feature distribution maps indicate the features that are present
 in built-in and downloadable versions of Linux Integration Services. The known
@@ -21,7 +18,7 @@ issues and workarounds for each distribution are listed after the tables.
 The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V
 (available since Red Hat Enterprise Linux 6.4) are sufficient for Red Hat
 Enterprise Linux guests to run using the high performance synthetic devices on
-Hyper-V hosts.These built-in drivers are certified by Red Hat for this use.
+Hyper-V hosts. These built-in drivers are certified by Red Hat for this use.
 Certified configurations can be viewed on this Red Hat web page: [Red Hat
 Certification
 Catalog](https://access.redhat.com/ecosystem/search/#/ecosystem/Red%20Hat%20Enterprise%20Linux?sort=sortTitle%20asc&vendors=Microsoft&category=Server).
@@ -35,11 +32,12 @@ downloadable LIS support when you upgrade the kernel, disable automatic updates,
 uninstall the LIS downloadable packages, update the kernel, reboot, and then
 install the latest LIS release, and reboot again.
 
->   [!NOTE] Official Red Hat Enterprise Linux certification information is
->   available through the [Red Hat Customer
->   Portal](https://access.redhat.com/ecosystem/search/#/category/Server?sort=sortTitle%20asc&query=windows%20server&ecosystem=Red%20Hat%20Enterprise%20Linux).
+> [!NOTE]
+> Official Red Hat Enterprise Linux certification information is available through the [Red Hat Customer Portal](https://access.redhat.com/ecosystem/search/#/category/Server?sort=sortTitle%20asc&query=windows%20server&ecosystem=Red%20Hat%20Enterprise%20Linux).
 
 In this section:
+
+-   [RHEL/CentOS 9.x Series](#rhelcentos-9x-series)
 
 -   [RHEL/CentOS 8.x Series](#rhelcentos-8x-series)
 
@@ -51,104 +49,141 @@ In this section:
 
 -   [Notes](#notes)
 
-Table legend
-------------
+## Table legend
 
 -   **Built in** - LIS are included as part of this Linux distribution. The
-    kernel module version numbers for the built in LIS (as shown by **lsmod**,
+    kernel module version numbers for the built-in LIS (as shown by **lsmod**,
     for example) are different from the version number on the Microsoft-provided
-    LIS download package. A mismatch does not indicate that the built in LIS is
+    LIS download package. A mismatch does not indicate that the built-in LIS is
     out of date.
 
 -   ✔ - Feature available
 
 -   (*blank*) - Feature not available
+## RHEL/CentOS 9.x Series
+| **Feature** | **Host OS** | **9.x** |
+|--|--|--|
+| LIS Availability |  | Built in |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ |
+| Windows Server 2016 Accurate Time | Windows Server 2022, 2019, 2016<br/> Azure Stack HCI | ✔ |
+| \>256 vCPUs |  | ✔ |
+| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |
+| Jumbo frames | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| VLAN tagging and trunking | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Live Migration | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Static IP Injection | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 2 |
+| vRSS | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| TCP Segmentation and Checksum Offloads | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| SR-IOV | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |
+| VHDX resize | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Virtual Fibre Channel | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 3 |
+| Live virtual machine backup | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 5 |
+| TRIM support | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| SCSI WWN | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |
+| PAE Kernel Support | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI |  |
+| Configuration of MMIO gap | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 9, 10 |
+| Dynamic Memory - Ballooning | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 9,10 |
+| Runtime Memory Resize | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |
+| Hyper-V-specific video device | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |
+| Key-Value Pair | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Non-Maskable Interrupt | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| File copy from host to guest | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| lsvmbus command | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Hyper-V Sockets | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| PCI Passthrough/DDA | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |
+| Boot using UEFI | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 14, 17 |
+| Secure boot | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 
-RHEL/CentOS 8.x Series
-----------------------
+## RHEL/CentOS 8.x Series
 
-| **Feature** | **Windows Server version** | **8.1-8.4** |  **8.0** |
-|-------------|----------------------------|-------------|----------|
-| LIS Availability|                        |  Built in   | Built in  |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)| 2019, 2016, 2012 R2  | ✔ | ✔|
-| Windows Server 2016 Accurate Time | 2019, 2016 |  ✔  | ✔  |
-| \>256 vCPUs  |  |  ✔ |    |
-| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)| | | |
-| Jumbo frames | 2019, 2016, 2012 R2  |  ✔  |   ✔  |
-| VLAN tagging and trunking   | 2019, 2016, 2012 R2  |  ✔  | ✔ |
-| Live Migration | 2019, 2016, 2012 R2  |  ✔  | ✔  |
-| Static IP Injection | 2019, 2016, 2012 R2 | ✔ Note 2  | ✔ Note 2  |
-| vRSS | 2019, 2016, 2012 R2  |  ✔   | ✔  |
-| TCP Segmentation and Checksum Offloads  | 2019, 2016, 2012 R2 |  ✔  | ✔  |
-| SR-IOV  | 2019, 2016   |  ✔  | ✔  |
-| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |   |
-| VHDX resize  | 2019, 2016, 2012 R2 | ✔  | ✔ |
-| Virtual Fibre Channel   | 2019, 2016, 2012 R2 |   ✔ Note 3  | ✔ Note 3  |
-| Live virtual machine backup  | 2019, 2016, 2012 R2  |  ✔ Note 5  | ✔ Note 5   |
-| TRIM support  | 2019, 2016, 2012 R2 | ✔  | ✔  |
-| SCSI WWN  | 2019, 2016, 2012 R2  | ✔  | ✔   |
-| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)  |  |   |   |
-| PAE Kernel Support  | 2019, 2016, 2012 R2   |  N/A  | N/A    |
-| Configuration of MMIO gap  | 2019, 2016, 2012 R2  |  ✔  | ✔  |
-| Dynamic Memory - Hot-Add  | 2019, 2016, 2012 R2  | ✔ Note 9, 10 | ✔ Note 9, 10   |
-| Dynamic Memory - Ballooning  | 2019, 2016, 2012 R2  | ✔ Note 9, 10 | ✔ Note 9, 10   |
-| Runtime Memory Resize  | 2019, 2016 |  ✔ | ✔  |
-| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)  |  |  |  |
-| Hyper-V-specific video device | 2019, 2016, 2012 R2  |  ✔  | ✔  |
-| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)  |   |  |         |
-| Key-Value Pair  | 2019, 2016, 2012 R2 |  ✔ | ✔ |
-| Non-Maskable Interrupt  | 2019, 2016, 2012 R2  | ✔  | ✔ |
-| File copy from host to guest | 2019, 2016, 2012 R2 | ✔  | ✔ |
-| lsvmbus command  | 2019, 2016, 2012 R2  |  ✔ | ✔   |
-| Hyper-V Sockets  | 2019, 2016 | ✔   | ✔ |
-| PCI Passthrough/DDA | 2019, 2016  |  ✔  | ✔  |
-| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  | |   |
-| Boot using UEFI  | 2019, 2016, 2012 R2  |  ✔ Note 14       | ✔ Note 14         |
-| Secure boot | 2019, 2016 |  ✔  | ✔  |
+| **Feature** | **Host OS** | **8.1-8.6+** | **8.0** |
+|--|--|--|--|
+| LIS Availability |  | Built in | Built in |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| \>256 vCPUs |  | ✔ |  |
+| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |  |
+| Jumbo frames | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| VLAN tagging and trunking | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Live Migration | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Static IP Injection | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 2 | ✔ Note 2 |
+| vRSS | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| TCP Segmentation and Checksum Offloads | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| SR-IOV | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |  |
+| VHDX resize | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Virtual Fibre Channel | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 3 | ✔ Note 3 |
+| Live virtual machine backup | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 5 | ✔ Note 5 |
+| TRIM support | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| SCSI WWN | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |  |
+| PAE Kernel Support | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | N/A | N/A |
+| Configuration of MMIO gap | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 |
+| Dynamic Memory - Ballooning | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 |
+| Runtime Memory Resize | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |  |
+| Hyper-V-specific video device | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |  |
+| Key-Value Pair | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Non-Maskable Interrupt | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| File copy from host to guest | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| lsvmbus command | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Hyper-V Sockets | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| PCI Passthrough/DDA | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |  |
+| Boot using UEFI | Windows Server 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 14, 17 | ✔ Note 14 |
+| Secure boot | Windows Server 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 
 RHEL/CentOS 7.x Series
 ----------------------
 
 This series only has 64-bit kernels.
 
-| **Feature**  | **Windows Server version**  | **7.5-7.7** | **7.3-7.4** | **7.0-7.2**  | **7.6-7.9** | **7.5**  | **7.4**  | **7.3**  | **7.2**  | **7.1** | **7.0** |
-|--------------|---------------------------- |----------|----------------|--------------|-------------|----------|----------|----------|-----------|---------|---------|
-| LIS Availability   |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built in   | Built in  | Built in  | Built in  | Built in  | Built in  | Built in|
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  | ✔ | ✔ | ✔ | ✔  | ✔ | ✔  | ✔   |
-| Windows Server 2016 Accurate Time  | 2019, 2016  | ✔  | ✔  |  | ✔ | ✔ | ✔ |  |   |   |
+| **Feature** | **Host OS** | **7.5-7.7** | **7.3-7.4** | **7.0-7.2** | **7.6-7.9** | **7.5** | **7.4** | **7.3** | **7.2** | **7.1** | **7.0** |
+|--|--|--|--|--|--|--|--|--|--|--|--|
+| LIS Availability |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built in | Built in | Built in | Built in | Built in | Built in | Built in |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | Windows Server 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ |  |  |  |
 | \>256 vCPUs |  |  |  |  | ✔ Note 16 |  |  |  |  |  |  |
-| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) | | |  |  | |  |   |  |  |  |   |
-| Jumbo frames | 2019, 2016, 2012 R2 | ✔ | ✔   | ✔ | ✔ | ✔ | ✔  | ✔ | ✔ | ✔ | ✔  |
-| VLAN tagging and trunking | 2019, 2016, 2012 R2 | ✔  | ✔  | ✔  | ✔  | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Live Migration | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  | ✔  | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Static IP Injection  | 2019, 2016, 2012 R2 | ✔ Note 2  | ✔ Note 2 | ✔ Note 2 | ✔ Note 2  | ✔ Note 2 | ✔ Note 2 | ✔ Note 2  | ✔ Note 2| ✔ Note 2 | ✔ Note 2  |
-| vRSS  | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔ | ✔ | ✔            | ✔            | ✔            | ✔            | ✔            |                  |
-| TCP Segmentation and Checksum Offloads | 2019, 2016, 2012 R2   | ✔  | ✔  | ✔  | ✔  | ✔ | ✔  | ✔ | ✔  | ✔   |   |
-| SR-IOV | 2019, 2016  | ✔| ✔ |   | ✔            | ✔            | ✔            |               |               |    |
-| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)  |  |   |   |  |  |  |   |   |   |   |   |
-| VHDX resize | 2019, 2016, 2012 R2  | ✔  | ✔  | ✔   | ✔   | ✔  | ✔  | ✔ | ✔  |   | |
-| Virtual Fibre Channel | 2019, 2016, 2012 R2        | ✔ Note 3        | ✔ Note 3  | ✔ Note 3 | ✔ Note 3 | ✔ Note 3     | ✔ Note 3     | ✔ Note 3     | ✔ Note 3     | ✔ Note 3     | ✔ Note 3        |
-| Live virtual machine backup | 2019, 2016, 2012 R2 | ✔ Note 5 | ✔ Note 5  | ✔ Note 5 | ✔ Note 4,5 | ✔ Note 4,5   | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5     |
-| TRIM support| 2019, 2016, 2012 R2 | ✔ | ✔   | ✔  | ✔ | ✔ | ✔  | ✔  | ✔   |    |
-| SCSI WWN | 2019, 2016, 2012 R2  | ✔  | ✔   | ✔ | ✔ |  |  |  |   |  |
-| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) | |  |  | |  | |  |  |     |               |                  |
-| PAE Kernel Support | 2019, 2016, 2012 R2        | N/A  | N/A | N/A  | N/A                                                                 | N/A           | N/A           | N/A           | N/A           | N/A           | N/A              |
-| Configuration of MMIO gap  | 2019, 2016, 2012 R2 | ✔  | ✔ | ✔ | ✔ | ✔| ✔  | ✔  | ✔ | ✔  | ✔  |
-| Dynamic Memory - Hot-Add | 2019, 2016, 2012 R2        | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10  | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 8, 9, 10 |
-| Dynamic Memory - Ballooning | 2019, 2016, 2012 R2        | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10  | ✔ Note 9, 10  | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note  9, 10 |
-| Runtime Memory Resize   | 2019, 2016  | ✔  | ✔ | ✔  | |   |  |  |   | |
-| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) | | |  | |  | | |   |  |  |                  |
-| Hyper-V-specific video device | 2019, 2016, 2012 R2 | ✔  | ✔ | ✔  | ✔  | ✔ | ✔ | ✔  | ✔ | ✔ | ✔   |
-| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)  |  | | |  | | | |  || | |
-| Key-Value Pair  | 2019, 2016, 2012 R2  | ✔  | ✔  | ✔  | ✔ Note 4  | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
-| Non-Maskable Interrupt | 2019, 2016, 2012 R2| ✔  | ✔    | ✔| ✔ | ✔ | ✔  | ✔  | ✔  | ✔  | ✔      |
-| File copy from host to guest | 2019, 2016, 2012 R2 | ✔  | ✔  | ✔  | ✔ Note 4  | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4   | ✔ Note 4   |
-| lsvmbus command  | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  |  |  |  |  |  | |
-| Hyper-V Sockets | 2019, 2016| ✔  | ✔  | ✔ | |   |  |    |   |    |
-| PCI Passthrough/DDA  | 2019, 2016 | ✔ | ✔  |   | ✔  | ✔ | ✔  | ✔ |   |    |
-| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) | |  |  || | | |  |  | |                  |
-| Boot using UEFI | 2019, 2016, 2012 R2| ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14    | ✔ Note 14    | ✔ Note 14    | ✔ Note 14    | ✔ Note 14    | ✔ Note 14 |
-| Secure boot  | 2019, 2016  | ✔  | ✔  | ✔| ✔  | ✔ | ✔  | ✔ | ✔ | ✔ | ✔  |
+| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |  |  |  |  |  |  |  |  |  |
+| Jumbo frames | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Live Migration | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Static IP Injection | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| vRSS | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| TCP Segmentation and Checksum Offloads | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| SR-IOV | Windows Server 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ |  |  |  |
+| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |  |  |  |  |  |  |  |  |  |
+| VHDX resize | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| Virtual Fibre Channel | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 |
+| Live virtual machine backup | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 5 | ✔ Note 5 | ✔ Note 5 | ✔ Note 4,5 | ✔ Note 4,5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 |
+| TRIM support | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| SCSI WWN | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |  |  |
+| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |  |  |  |  |  |  |  |  |  |
+| PAE Kernel Support | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Configuration of MMIO gap | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 8, 9, 10 |
+| Dynamic Memory - Ballooning | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note  9, 10 |
+| Runtime Memory Resize | Windows Server 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |  |  |
+| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |  |  |  |  |  |  |  |  |  |
+| Hyper-V-specific video device | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |  |  |  |  |  |  |  |  |  |
+| Key-Value Pair | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| Non-Maskable Interrupt | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| File copy from host to guest | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| lsvmbus command | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |  |  |
+| Hyper-V Sockets | Windows Server 2022, 2019, 2016 | ✔ | ✔ | ✔ |  |  |  |  |  |  |
+| PCI Passthrough/DDA | Windows Server 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ | ✔ |  |  |
+| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |  |  |  |  |  |  |  |  |  |
+| Boot using UEFI | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 |
+| Secure boot | Windows Server 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 RHEL/CentOS 6.x Series
 ----------------------
@@ -156,45 +191,44 @@ RHEL/CentOS 6.x Series
 The 32-bit kernel for this series is PAE enabled. There is no built-in LIS
 support for RHEL/CentOS 6.0-6.3.
 
-| **Feature**                                                                                                                              | **Windows Server version** | **6.7-6.10**                                                        | **6.4-6.6**                                                         | **6.0-6.3**                                                         | **6.10, 6.9, 6.8** | **6.6, 6.7**       | **6.5**            | **6.4**             |
-|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|--------------------|--------------------|--------------------|---------------------|
-| LIS Availability                                                                                                                        |                            | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built in           | Built in           | Built in           | Built in            |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  | ✔                   |
-| Windows Server 2016 Accurate Time                                                                                                        | 2019, 2016                 |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| \>256 vCPUs                                                                                                                              |                            |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)                                       |                            |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| Jumbo frames                                                                                                                             | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  | ✔                   |
-| VLAN tagging and trunking                                                                                                                | 2019, 2016, 2012 R2        | ✔ Note 1                                                            | ✔ Note 1                                                            | ✔ Note 1                                                            | ✔ Note 1           | ✔ Note 1           | ✔ Note 1           | ✔ Note 1            |
-| Live Migration                                                                                                                           | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  | ✔                   |
-| Static IP Injection                                                                                                                      | 2019, 2016, 2012 R2        | ✔ Note 2                                                            | ✔ Note 2                                                            | ✔ Note 2                                                            | ✔ Note 2           | ✔ Note 2           | ✔ Note 2           | ✔ Note 2            |
-| vRSS                                                                                                                                     | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  |                    |                     |
-| TCP Segmentation and Checksum Offloads                                                                                                   | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  |                    |                     |
-| SR-IOV                                                                                                                                   | 2019, 2016                 |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)                                             |                            |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| VHDX resize                                                                                                                              | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  |                     |
-| Virtual Fibre Channel                                                                                                                    | 2019, 2016, 2012 R2        | ✔ Note 3                                                            | ✔ Note 3                                                            | ✔ Note 3                                                            | ✔ Note 3           | ✔ Note 3           | ✔ Note 3           |                     |
-| Live virtual machine backup                                                                                                              | 2019, 2016, 2012 R2        | ✔ Note 5                                                            | ✔ Note 5                                                            | ✔ Note 5                                                            | ✔ Note 4, 5        | ✔ Note 4, 5        | ✔ Note 4, 5, 6     | ✔ Note 4, 5, 6      |
-| TRIM support                                                                                                                             | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  |                    |                    |                     |
-| SCSI WWN                                                                                                                                 | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   |                    |                    |                    |                     |
-| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)                                               |                            |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| PAE Kernel Support                                                                                                                       | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  | ✔                   |
-| Configuration of MMIO gap                                                                                                                | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  | ✔                   |
-| Dynamic Memory - Hot-Add                                                                                                                 | 2019, 2016, 2012 R2        | ✔ Note 7, 9, 10                                                     | ✔ Note 7, 9, 10                                                     | ✔ Note 7, 9, 10                                                     | ✔ Note 7, 9, 10    | ✔ Note 7, 8, 9, 10 | ✔ Note 7, 8, 9, 10 |                     |
-| Dynamic Memory - Ballooning                                                                                                              | 2019, 2016, 2012 R2        | ✔ Note 7, 9, 10                                                     | ✔ Note 7, 9, 10                                                     | ✔ Note 7, 9, 10                                                     | ✔ Note 7, 9, 10    | ✔ Note 7, 9, 10    | ✔ Note 7, 9, 10    | ✔ Note 7, 9, 10, 11 |
-| Runtime Memory Resize                                                                                                                    | 2019, 2016                 |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)                                                 |                            |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| Hyper-V-specific video device                                                                                                            | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  |                     |
-| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)                                 |                            |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| Key-Value Pair                                                                                                                           | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔ Note 12          | ✔ Note 12          | ✔ Note 12, 13      | ✔ Note 12, 13       |
-| Non-Maskable Interrupt                                                                                                                   | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   | ✔                  | ✔                  | ✔                  | ✔                   |
-| File copy from host to guest                                                                                                             | 2019, 2016, 2012 R2        | ✔ | ✔  | ✔   | ✔ Note 12 | ✔ Note 12  |                    |                     |
-| lsvmbus command                                                                                                                          | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔                                                                   |                    |                    |                    |                     |
-| Hyper-V Sockets                                                                                                                          | 2019, 2016                 | ✔                                                                   | ✔                                                                   | ✔                                                                   |                    |                    |                    |                     |
-| PCI Passthrough/DDA                                                                                                                      | 2019, 2016                 | ✔                                                                   |                                                                     |                                                                     |                    |                    |                    |                     |
-| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |                            |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-| Boot using UEFI                                                                                                                          | 2012 R2                    |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
-|                                                                                                                                          | 2019, 2016                 | ✔ Note 14                                                           | ✔ Note 14                                                           | ✔ Note 14                                                           | ✔ Note 14          |                    |                    |                     |
-| Secure boot                                                                                                                              | 2019, 2016                 |                                                                     |                                                                     |                                                                     |                    |                    |                    |                     |
+| **Feature** | **Host OS** | **6.7-6.10** | **6.4-6.6** | **6.0-6.3** | **6.10, 6.9, 6.8** | **6.6, 6.7** | **6.5** | **6.4** |
+|--|--|--|--|--|--|--|--|--|
+| LIS Availability |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built in | Built in | Built in | Built in |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |  |  |  |  |
+| \>256 vCPUs |  |  |  |  |  |  |  |  |
+| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |  |  |  |  |  |  |
+| Jumbo frames | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
+| Live Migration | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Static IP Injection | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| vRSS | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| TCP Segmentation and Checksum Offloads | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| SR-IOV | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |  |  |  |  |
+| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |  |  |  |  |  |  |
+| VHDX resize | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| Virtual Fibre Channel | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 |  |
+| Live virtual machine backup | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 5 | ✔ Note 5 | ✔ Note 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5, 6 | ✔ Note 4, 5, 6 |
+| TRIM support | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
+| SCSI WWN | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |
+| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |  |  |  |  |  |  |
+| PAE Kernel Support | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Configuration of MMIO gap | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 8, 9, 10 | ✔ Note 7, 8, 9, 10 |  |
+| Dynamic Memory - Ballooning | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10, 11 |
+| Runtime Memory Resize | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |  |  |  |  |
+| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |  |  |  |  |  |  |
+| Hyper-V-specific video device | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |  |  |  |  |  |  |
+| Key-Value Pair | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 12 | ✔ Note 12 | ✔ Note 12, 13 | ✔ Note 12, 13 |
+| Non-Maskable Interrupt | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| File copy from host to guest | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 12 | ✔ Note 12 |  |  |
+| lsvmbus command | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |
+| Hyper-V Sockets | Windows Server 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |
+| PCI Passthrough/DDA | Windows Server 2022, 2019, 2016<br />Azure Stack HCI | ✔ |  |  |  |  |  |  |
+| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |  |  |  |  |  |  |
+| Boot using UEFI | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 |  |  |  |
+| Secure boot | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |  |  |  |  |
 
 RHEL/CentOS 5.x Series
 ----------------------
@@ -202,44 +236,44 @@ RHEL/CentOS 5.x Series
 This series has a supported 32-bit PAE kernel available. There is no built-in
 LIS support for RHEL/CentOS before 5.9.
 
-| **Feature**                                                                                                                              | **Windows Server version** | 5.2 -5.11                                                           | **5.2-5.11**                                                        | **5.9 - 5.11** |
-|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|----------------|
-| LIS Availability                                                                                                                         |                            | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612) | Built in       |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔              |
-| Windows Server 2016 Accurate Time                                                                                                        | 2019, 2016                 |                                                                     |                                                                     |                |
-| \>256 vCPUs                                                                                                                              |                            |                                                                     |                                                                     |                |
-| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)                                       |                            |                                                                     |                                                                     |                |
-| Jumbo frames                                                                                                                             | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔              |
-| VLAN tagging and trunking                                                                                                                | 2019, 2016, 2012 R2        | ✔ Note 1                                                            | ✔ Note 1                                                            | ✔ Note 1       |
-| Live Migration                                                                                                                           | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔              |
-| Static IP Injection                                                                                                                      | 2019, 2016, 2012 R2        | ✔ Note 2                                                            | ✔ Note 2                                                            | ✔ Note 2       |
-| vRSS                                                                                                                                     | 2019, 2016, 2012 R2        |                                                                     |                                                                     |                |
-| TCP Segmentation and Checksum Offloads                                                                                                   | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   |                |
-| SR-IOV                                                                                                                                   | 2019, 2016                 |                                                                     |                                                                     |                |
-| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)                                             |                            |                                                                     |                                                                     |                |
-| VHDX resize                                                                                                                              | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   |                |
-| Virtual Fibre Channel                                                                                                                    | 2019, 2016, 2012 R2        | ✔ Note 3                                                            | ✔ Note 3                                                            |                |
-| Live virtual machine backup                                                                                                              | 2019, 2016, 2012 R2        | ✔ Note 5, 15                                                        | ✔ Note 5                                                            | ✔ Note 4, 5, 6 |
-| TRIM support                                                                                                                             | 2019, 2016, 2012 R2        |                                                                     |                                                                     |                |
-| SCSI WWN                                                                                                                                 | 2019, 2016, 2012 R2        |                                                                     |                                                                     |                |
-| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)                                               |                            |                                                                     |                                                                     |                |
-| PAE Kernel Support                                                                                                                       | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔              |
-| Configuration of MMIO gap                                                                                                                | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔              |
-| Dynamic Memory - Hot-Add                                                                                                                 | 2019, 2016, 2012 R2        |                                                                     |                                                                     |                |
-| Dynamic Memory - Ballooning                                                                                                              | 2019, 2016, 2012 R2        | ✔ Note 7, 9, 10, 11                                                 | ✔ Note 7, 9, 10, 11                                                 |                |
-| Runtime Memory Resize                                                                                                                    | 2019, 2016                 |                                                                     |                                                                     |                |
-| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)                                                 |                            |                                                                     |                                                                     |                |
-| Hyper-V-specific video device                                                                                                            | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   |                |
-| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)                                 |                            |                                                                     |                                                                     |                |
-| Key-Value Pair                                                                                                                           | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   |                |
-| Non-Maskable Interrupt                                                                                                                   | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   | ✔              |
-| File copy from host to guest                                                                                                             | 2019, 2016, 2012 R2        | ✔                                                                   | ✔                                                                   |                |
-| lsvmbus command                                                                                                                          | 2019, 2016, 2012 R2        |                                                                     |                                                                     |                |
-| Hyper-V Sockets                                                                                                                          | 2019, 2016                 |                                                                     |                                                                     |                |
-| PCI Passthrough/DDA                                                                                                                      | 2019, 2016                 |                                                                     |                                                                     |                |
-| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |                            |                                                                     |                                                                     |                |
-| Boot using UEFI                                                                                                                          | 2019, 2016, 2012 R2        |                                                                     |                                                                     |                |
-| Secure boot                                                                                                                              | 2019, 2016                 |                                                                     |                                                                     |                |
+| **Feature** | **Host OS** | 5.2 -5.11 | **5.2-5.11** | **5.9 - 5.11** |
+|--|--|--|--|--|
+| LIS Availability |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | LIS 4.1 | Built in |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
+| \>256 vCPUs |  |  |  |  |
+| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |  |  |
+| Jumbo frames | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
+| Live Migration | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| Static IP Injection | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| vRSS | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| TCP Segmentation and Checksum Offloads | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
+| SR-IOV | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
+| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |  |  |
+| VHDX resize | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
+| Virtual Fibre Channel | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 |  |
+| Live virtual machine backup | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 5, 15 | ✔ Note 5 | ✔ Note 4, 5, 6 |
+| TRIM support | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| SCSI WWN | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |  |  |
+| PAE Kernel Support | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| Configuration of MMIO gap | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| Dynamic Memory - Ballooning | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 7, 9, 10, 11 | ✔ Note 7, 9, 10, 11 |  |
+| Runtime Memory Resize | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
+| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |  |  |
+| Hyper-V-specific video device | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
+| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |  |  |
+| Key-Value Pair | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
+| Non-Maskable Interrupt | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| File copy from host to guest | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
+| lsvmbus command | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| Hyper-V Sockets | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
+| PCI Passthrough/DDA | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
+| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |  |  |
+| Boot using UEFI | Windows Server 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| Secure boot | Windows Server 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 
 Notes
 -----
@@ -295,9 +329,11 @@ Notes
         ```
         The Linux Integration Services download can be applied to existing Generation 2 VMs but does not impart Generation 2 capability.
 
-15.  In Red Hat Enterprise Linux or CentOS 5.2, 5.3, and 5.4 the filesystem freeze functionality is not available, so Live Virtual Machine Backup is also not available.
- 
+15. In Red Hat Enterprise Linux or CentOS 5.2, 5.3, and 5.4 the filesystem freeze functionality is not available, so Live Virtual Machine Backup is also not available.
+
 16. For RHEL 7.6, support for >256 vcpus is available in kernel 3.10.0-957.38.1 or later and kernel 3.10.0-1062.4.1 or later is required for RHEL 7.7.
+
+17. RHEL 8.5 requires Windows Server 2019 or newer, or Azure Stack HCI 20H2 or newer.
 
 See Also
 

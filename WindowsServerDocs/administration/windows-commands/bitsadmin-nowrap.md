@@ -27,7 +27,7 @@ To retrieve the state for the job named *myDownloadJob* while not wrapping the o
 bitsadmin /nowrap /getstate myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

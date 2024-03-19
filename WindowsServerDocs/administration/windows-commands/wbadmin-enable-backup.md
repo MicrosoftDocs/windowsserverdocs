@@ -64,7 +64,7 @@ To schedule daily backups of volume T: and the D:\documents folder at 1:00 AM to
 wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

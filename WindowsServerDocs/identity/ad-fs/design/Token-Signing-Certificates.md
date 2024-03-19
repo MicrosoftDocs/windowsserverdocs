@@ -4,8 +4,8 @@ ms.assetid: 98c5ef45-2bcb-4f87-86c8-5ac6c16a6097
 title: Token-Signing Certificates
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

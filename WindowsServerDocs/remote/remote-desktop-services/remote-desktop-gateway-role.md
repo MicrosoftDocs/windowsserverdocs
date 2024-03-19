@@ -1,6 +1,6 @@
 ---
-title: Deploy RD Gateway role Azure Virtual Desktop
-description: How to deploy the RD Gateway role in Azure Virtual Desktop.
+title: Deploy Remote Desktop Gateway role for Remote Desktop Services
+description: How to deploy the Remote Desktop Gateway role for Remote Desktop Services.
 author: Heidilohr
 ms.topic: how-to
 ms.date: 02/23/2021
@@ -8,9 +8,9 @@ ms.author: helohr
 manager: femila
 ---
 
-# Deploy the RD Gateway role
+# Deploy the Remote Desktop Gateway role
 
-This article will tell you how to use the Remote Desktop Gateway (RD Gateway) role to deploy Remote Desktop Gateway servers in your Azure Virtual Desktop or Remote Desktop environment. You can install the server roles on physical machines or virtual machines depending on whether you are creating an on-premises, cloud-based, or hybrid environment.
+This article will tell you how to use the Remote Desktop Gateway (RD Gateway) role to deploy Remote Desktop Gateway servers in your Remote Desktop environment. You can install the server roles on physical machines or virtual machines depending on whether you are creating an on-premises, cloud-based, or hybrid environment.
 
 ## Install the RD Gateway role
 

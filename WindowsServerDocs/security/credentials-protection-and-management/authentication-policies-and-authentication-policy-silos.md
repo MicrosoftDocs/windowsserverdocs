@@ -121,7 +121,7 @@ The Protected Users security group triggers non-configurable protection on devic
 
 -   The default Kerberos TGTs lifetime setting of four hours is configurable by using authentication policies and silos, which can be accessed through the Active Directory Administrative Center. This means that when four hours has passed, the user must authenticate again.
 
-For more information about this security group, see [How the Protected Users group works](protected-users-security-group.md#BKMK_HowItWorks).
+For more information about this security group, see [How the Protected Users group works](protected-users-security-group.md#how-the-protected-users-group-works).
 
 **Silos and authentication policies**
 

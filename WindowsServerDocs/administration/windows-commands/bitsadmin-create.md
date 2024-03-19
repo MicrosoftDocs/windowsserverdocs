@@ -39,7 +39,7 @@ To create a download job named *myDownloadJob*:
 bitsadmin /create myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

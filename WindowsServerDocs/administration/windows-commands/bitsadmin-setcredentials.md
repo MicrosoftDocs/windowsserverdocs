@@ -40,7 +40,7 @@ To add credentials to the job named *myDownloadJob*:
 bitsadmin /setcredentials myDownloadJob SERVER BASIC Edward password20
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

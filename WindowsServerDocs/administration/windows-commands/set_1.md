@@ -3,10 +3,9 @@ title: set
 description: Reference article for set, which displays, sets, or removes cmd.exe environment variables.
 ms.topic: reference
 ms.assetid: 5fdd60d6-addf-4574-8c92-8aa53fa73d76
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: wscontent
+author: xelu86
+ms.date: 09/06/2023
 ---
 
 # set (environment variable)
@@ -50,7 +49,7 @@ set /a <variable>=<expression>
 
 - If you specify values for `<variable>` and `<string>`, the specified `<variable>` value is added to the environment and `<string>` is associated with that variable. If the variable already exists in the environment, the new string value replaces the old string value.
 
-- If you specify only a variable and an equal sign (without `<string>`) for the **set** command, the `<string>` value associated with the variable is cleared (as if the variable is not there).
+- If you specify only a variable and an equal sign (without `<string>`) for the **set** command, the `<string>` value associated with the variable is cleared (as if the variable isn't there).
 
 - If you use the **/a** parameter, the following operators are supported, in descending order of precedence:
 
@@ -66,7 +65,7 @@ set /a <variable>=<expression>
   | `= *= /= %= += -= &= ^=` | `= <<= >>=` |
   | `,` | Expression separator |
 
-- If you use logical (`&&` or `||`) or modulus (**%**) operators, enclose the expression string in quotation marks. Any non-numeric strings in the expression are considered environment variable names, and their values are converted to numbers before they are processed. If you specify an environment variable name that is not defined in the current environment, a value of zero is allotted, which allows you to perform arithmetic with environment variable values without using the % to retrieve a value.
+- If you use logical (`&&` or `||`) or modulus (**%**) operators, enclose the expression string in quotation marks. Any non-numeric strings in the expression are considered environment variable names, and their values are converted to numbers before they're processed. If you specify an environment variable name that isn't defined in the current environment, a value of zero is allotted, which allows you to perform arithmetic with environment variable values without using the % to retrieve a value.
 
 - If you run **set /a** from the command line outside of a command script, it displays the final value of the expression.
 
@@ -83,26 +82,26 @@ set /a <variable>=<expression>
 To set the value *TEST^1* for the environment variable named `testVar`, type:
 
 ```
-set testVar=test^^1
+set testVar=TEST^^1
 ```
 
-The **set** command assigns everything that follows the equal sign (=) to the value of the variable. Therefore, if you type `set testVar=test^1`, you'll get the following result, `testVar=test^1`.
+The **set** command assigns everything that follows the equal sign (=) to the value of the variable. Therefore, if you type `set testVar=TEST^1`, you'll get the following result, `testVar=TEST1`.
 
 To set the value *TEST&1* for the environment variable `testVar`, type:
 
 ```
-set testVar=test^&1
+set testVar=TEST^&1
 ```
 
-To set an environment variable named *INCLUDE* so the string *c:\directory* is associated with it, type:
+To set an environment variable named *include* so the string *c:\directory* is associated with it, type:
 
 ```
 set include=c:\directory
 ```
 
-You can then use the string *c:\directory* in batch files by enclosing the name INCLUDE with percent signs (**%**). For example, you can use `dir %include%` in a batch file to display the contents of the directory associated with the INCLUDE environment variable. After this command is processed, the string c:\directory replaces **%include%**.
+You can then use the string *c:\directory* in batch files by enclosing the name *include* with percent signs (**%**). For example, you can use `dir %include%` in a batch file to display the contents of the directory associated with the *include* environment variable. After this command is processed, the string c:\directory replaces **%include%**.
 
-To use the **set** command in a batch program to add a new directory to the *PATH* environment variable, type:
+To use the **set** command in a batch program to add a new directory to the *path* environment variable, type:
 
 ```
 @echo off
@@ -112,12 +111,18 @@ set path=%1;%path%
 set
 ```
 
-To display a list of all of the environment variables that begin with the letter *P*, type:
+To display a list of all of the environment variables that begin with the letter *p*, type:
 
 ```
 set p
 ```
 
-## Additional References
+To display a list of all of the environment variables on the current device, type:
+
+```
+set
+```
+
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

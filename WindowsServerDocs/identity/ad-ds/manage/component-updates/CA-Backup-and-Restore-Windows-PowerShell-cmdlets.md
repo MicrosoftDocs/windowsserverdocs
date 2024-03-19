@@ -2,11 +2,11 @@
 description: "Learn more about: CA Backup and Restore Windows PowerShell cmdlets"
 ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA Backup and Restore Windows PowerShell cmdlets
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
+author: xelu86
+ms.author: alalve
+ms.date: 05/16/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # CA Backup and Restore Windows PowerShell cmdlets
@@ -26,7 +26,6 @@ The ADCSAdministration Windows PowerShell module was introduced in Window Server
 -   Restore-CARoleService
 
 ## Backup-CARoleService
-**Table  SEQ Table \\\* ARABIC 17: Backup and Restore Windows PowerShell Cmdlets**
 
 **ADCSAdministration Cmdlet: Backup-CARoleService**
 
@@ -36,9 +35,9 @@ The ADCSAdministration Windows PowerShell module was introduced in Window Server
 |-KeyOnly|-   Backup the CA certificate without the database<p>**Example:**<p>Backup-CARoleService c:\adcsbackup3 -KeyOnly|
 |-Password|-   Specifies the password to protect CA certificates and private keys<br />-   Must be a secure string<br />-   Not valid with the -DatabaseOnly parameter<p>Example:<p>Backup-CARoleService c:\adcsbackup4 -Password (Read-Host -prompt "Password:" -AsSecureString)<p>Backup-CARoleService c:\adcsbackup5 -Password (ConvertTo-SecureString "Pa55w0rd!" -AsPlainText -Force)|
 |-DatabaseOnly|-   Backup the database without the CA certificate<p>Backup-CARoleService c:\adcsbackup6 -DatabaseOnly|
-|-Force|1.  Allows you to overwrite the backup that preexists in the location specified in the -Path parameter<p>Backup-CARoleService c:\adcsbackup1 -Force|
+|-Force|1.  Allows you to overwrite the backup that pre-exists in the location specified in the -Path parameter<p>Backup-CARoleService c:\adcsbackup1 -Force|
 |-Incremental|-   Perform an incremental backup<p>Backup-CARoleService c:\adcsbackup7 -Incremental|
-|-KeepLog|1.  Instructs the command to keep log files. If the switch is not specified, log files are truncated by default except in the Incremental scenario<p>Backup-CARoleService c:\adcsbackup7 -KeepLog|
+|-KeepLog|1.  Instructs the command to keep log files. If the switch isn't specified, log files are truncated by default except in the Incremental scenario<p>Backup-CARoleService c:\adcsbackup7 -KeepLog|
 
 ### -Password \<Secure String>
 If the -Password parameter is used, the supplied password must be a secure string.  Use the **Read-Host** cmdlet to launch an interactive prompt for secure password entry, or use the **ConvertTo-SecureString** cmdlet to specify the password in-line.
@@ -69,19 +68,19 @@ Backup-CARoleService c:\adcsbackup5 -Password (ConvertTo-SecureString "Pa55w0rd!
 |-Force|-   Allows you to overwrite the preexisting keys<br />-   Is an optional parameter but when restoring in-place, it is likely required<p>Restore-CARoleService c:\adcsbackup1 -Force|
 
 ### Issues
-A non-password protected backup is taken if the ConvertTo-SecureString function fails while using the Backup-CARoleService with the -Password parameter.
+A nonpassword protected backup is taken if the ConvertTo-SecureString function fails while using the Backup-CARoleService with the -Password parameter.
 
 ![CA backup and restore](media/CA-Backup-and-Restore-Windows-PowerShell-cmdlets/GTR_ADDS_BackupCARole.gif)
 
-**Table  SEQ Table \\\* ARABIC 18: Common Errors**
+### Common errors
 
 |Action|Error|Comment|
 |----------|---------|-----------|
-|**Restore-CARoleService C:\ADCSBackup**|Restore-CARoleService : The process cannot access the file because it is being used by another process. (Exception from HRESULT:<p>0x80070020)|Stop the Active Directory Certificate Services service prior to running the Restore-CARoleService cmdlet|
-|**Restore-CARoleService C:\ADCSBackup**|Restore-CARoleService : The directory is not empty. (Exception from HRESULT: 0x80070091)|Use the -Force parameter to overwrite preexisting keys|
-|**Backup-CARoleService C:\ADCSBackup -Password (Read-Host -Prompt "Password:" -AsSecureString) -DatabaseOnly**|Backup-CARoleService : Parameter set cannot be resolved using the specified named parameters.|The -Password parameter is only used to password protect private keys and is therefore invalid when you are not backing them up|
-|**Restore-CARoleService C:\ADCSBack15 -Password (Read-Host -Prompt "Password:" -AsSecureString) -DatabaseOnly**|Restore-CARoleService : Parameter set cannot be resolved using the specified named parameters.|The -Password parameter is only used to password protect private keys and is therefore invalid when you are not restoring them|
-|**Restore-CARoleService C:\ADCSBack14 -Password (Read-Host -Prompt "Password:" -AsSecureString)**|Restore-CARoleService : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)|The path specified does not contain a valid database backup.  Perhaps the path is invalid or the backup was taken with the -KeysOnly option?|
+|**Restore-CARoleService C:\ADCSBackup**|Restore-CARoleService : The process can't access the file because it's being used by another process. (Exception from HRESULT:<p>0x80070020)|Stop the Active Directory Certificate Services service prior to running the Restore-CARoleService cmdlet|
+|**Restore-CARoleService C:\ADCSBackup**|Restore-CARoleService : The directory isn't empty. (Exception from HRESULT: 0x80070091)|Use the -Force parameter to overwrite preexisting keys|
+|**Backup-CARoleService C:\ADCSBackup -Password (Read-Host -Prompt "Password:" -AsSecureString) -DatabaseOnly**|Backup-CARoleService : Parameter set can't be resolved using the specified named parameters.|The -Password parameter is only used to password protect private keys and is therefore invalid when you aren't backing them up|
+|**Restore-CARoleService C:\ADCSBack15 -Password (Read-Host -Prompt "Password:" -AsSecureString) -DatabaseOnly**|Restore-CARoleService : Parameter set can't be resolved using the specified named parameters.|The -Password parameter is only used to password protect private keys and is therefore invalid when you aren't restoring them|
+|**Restore-CARoleService C:\ADCSBack14 -Password (Read-Host -Prompt "Password:" -AsSecureString)**|Restore-CARoleService : The system can't find the file specified. (Exception from HRESULT: 0x80070002)|The path specified doesn't contain a valid database backup.  Perhaps the path is invalid or the backup was taken with the -KeysOnly option?|
 
 ## Additional Resources
 [Active Directory Certificate Services Migration Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee126170(v=ws.10))

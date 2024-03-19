@@ -5,19 +5,20 @@ ms.topic: article
 ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 12/06/2016
+ms.date: 02/16/2023
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 11, Windows 10, Windows 8.1
 
-Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how configure the host and then give the virtual machine access to a local resource.
+Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how to configure the host and then give the virtual machine access to a local resource.
 
-Enhanced session mode and Type clipboard text are available only for virtual machines that run recent Windows operating systems. \(See [Requirements for using local resources](#requirements-for-using-local-resources), below.\)
+Enhanced session mode and Type clipboard text are available only for virtual machines that run recent Windows operating systems. See [Requirements for using local resources](#requirements-for-using-local-resources).
 
 For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](/archive/blogs/virtual_pc_guy/changing-ubuntu-screen-resolution-in-a-hyper-v-vm).
 
 ## Turn on enhanced session mode on a Hyper-V host
+
 If your Hyper-V host runs Windows 10 or Windows 8.1, enhanced session mode is on by default, so you can skip this and move to the next section. But if your host runs Windows Server 2016 or Windows Server 2012 R2, do this first.
 
 Turn on enhanced session mode:
@@ -50,7 +51,7 @@ Turn on enhanced session mode:
 
 ## Choose a local resource
 
-Local resources include printers, the clipboard, and a local drive on the computer where you're running VMConnect. For more details, see [Requirements for using local resources](#requirements-for-using-local-resources), below.
+Local resources include printers, the clipboard, and local drive(s) on the computer where you're running VMConnect. For more information, see [Requirements for using local resources](#requirements-for-using-local-resources).
 
 To choose a local resource:
 
@@ -79,6 +80,8 @@ To choose a local resource:
     ![Screenshot that calls out the checkbox to select for this option.](media/HyperV-VMConnect-SaveSettings.png)
 
 8.  Click **Connect**.
+
+The path to the local drive shared to the virtual machine, in a Windows-based guest VM, is located at **This PC** under **Redirected drives and folders**.  The path for a Linux-based guest VM is located at **/home/shared-drives**.
 
 ## Edit VMConnect settings
 
@@ -118,7 +121,8 @@ If the computer running VMConnect and the virtual machine both meet the requirem
 -   Supported plug and play devices
 
 ## Why use a computer's local resources?
-You might want use a computer's local resources to:
+
+You may want to use the computer's local resources to:
 
 -   Troubleshoot a virtual machine without a network connection to the virtual machine.
 
@@ -130,6 +134,7 @@ You might want use a computer's local resources to:
 
 -   Test and troubleshoot developer applications that require USB and sound redirection without using RDP.
 
-## See Also
+## See also
 [Connect to a Virtual Machine](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc742407(v=ws.11))
+
 [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)

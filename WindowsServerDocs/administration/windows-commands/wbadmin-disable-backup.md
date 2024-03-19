@@ -27,7 +27,7 @@ wbadmin disable backup [-quiet]
 |--|--|
 | -quiet | Runs the command without prompts to the user. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

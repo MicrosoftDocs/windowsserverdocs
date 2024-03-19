@@ -29,7 +29,7 @@ To disconnect from the remote computer and remains at the `ftp>` prompt, type:
 disconnect
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

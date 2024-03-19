@@ -37,6 +37,6 @@ To remove the imported shadow copy *%Import_1%*, type:
 mask %Import_1%
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

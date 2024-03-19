@@ -5,7 +5,6 @@ ms.topic: article
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 9/16/2021
-ms.prod: windows-server
 ---
 
 # Plan for Hyper-V scalability in Windows Server
@@ -31,7 +30,7 @@ These maximums apply to each virtual machine. Not all components are available i
 |Virtual floppy devices|1 virtual floppy drive|None.|
 |Virtual hard disk capacity|64 TB for VHDX format;<br/>2040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|240 for generation 2;<br/>64 for generation 1;<br/>320 available to the host OS (root partition)|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|240 for generation 2;<br/>64 for generation 1;<br/>320 available to the host OS (root partition)|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system. The root partition limit of 320 applies to Windows Server 2016 and 2019. Beginning in Windows Server 2022, the limit is increased to 1,024.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|Windows Server 2019 and later supports 68 total:<ul><li>64 Hyper-V specific network adapters</li><li>4 legacy network adapters;</li></ul>Windows Server 2016 supports 12 total:<ul><li>8 Hyper-V specific network adapters</li><li>4 legacy network adapters</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
@@ -42,9 +41,9 @@ These maximums apply to each Hyper-V host.
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
-|Logical processors|512|Both of these must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>The host OS (root partition) will only see maximum 320 logical processors|
+|Logical processors|512|Both of these must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>On Windows Server 2016 and 2019, the host OS (root partition) will only see maximum 320 logical processors. Beginning in Windows Server 2022 the host OS (root partition) will see maximum 1,024 processors.|
 |Memory|48 TB (Windows Server 2022 and Azure Stack HCI 21H2);<br/>24 TB (Windows Server 2016 and 2019)|None.|
-|Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|For details, see [NIC Teaming](../../../networking/technologies/nic-teaming/NIC-Teaming.md).|
+|Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|None.|
 |Physical network adapters|No limits imposed by Hyper-V.|None.|
 |Running virtual machines per server|1024|None.|
 |Storage|Limited by what is supported by the host operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage is not supported.|

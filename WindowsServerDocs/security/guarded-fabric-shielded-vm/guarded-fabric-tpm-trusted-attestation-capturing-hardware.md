@@ -6,7 +6,7 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: IngridAtMicrosoft
 ms.author: inhenkel
-ms.date: 04/01/2019
+ms.date: 1/24/2023
 ---
 
 # Authorize guarded hosts using TPM-based attestation
@@ -44,6 +44,7 @@ A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use t
     ```powershell
     (Get-PlatformIdentifier -Name '<HostName>').InnerXml | Out-file <Path><HostName>.xml -Encoding UTF8
     ```
+
 3.  Repeat the preceding steps for each host that will become a guarded host, being sure to give each XML file a unique name.
 
 4.  Provide the resulting XML files to the HGS administrator.
@@ -79,7 +80,7 @@ It is recommended that you first create the CI policy in audit (logging) mode to
 If you use the [New-CIPolicy](/powershell/module/configci/new-cipolicy) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use.
 We recommend a primary level of **Publisher** with fallback to **Hash**, which allows most digitally signed software to be updated without changing the CI policy.
 New software written by the same publisher can also be installed on the server without changing the CI policy.
-Executables that are not digitally signed will be hashed -- updates to these files will require you to create a new CI policy.
+Executables that are not digitally signed will be hashed. Updates to these files will require you to create a new CI policy.
 For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) and cmdlet help.
 
 1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **Publisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
@@ -130,15 +131,11 @@ For more information about the available CI policy rule levels, see [Deploy code
 
 7.  In the HGS domain, copy the code integrity policy to an HGS server and run the following command.
 
-    For `<PolicyName>`, specify a name for the CI policy that describes the type of host it applies to. A best practice is to name it after the make/model of your machine and any special software configuration running on it.<br>For `<Path>`, specify the path and filename of the code integrity policy.
+    For `<PolicyName>`, specify a name for the CI policy that describes the type of host it applies to. A best practice is to name it after the make/model of your machine and any special software configuration running on it. For `<Path>`, specify the path and filename of the code integrity policy.
 
     ```powershell
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
     ```
-    
-    > [!NOTE]
-    > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS. The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
-
 
     > [!NOTE]
     > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS. The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.

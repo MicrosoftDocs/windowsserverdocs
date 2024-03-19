@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Volume Shadow Copy Service"
 title: Volume Shadow Copy Service
-ms.date: 01/30/2019
+ms.date: 12/06/2022
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
@@ -30,7 +30,6 @@ VSS coordinates the actions that are required to create a consistent shadow copy
 
   - You need a fast recovery from data loss by restoring data to the original Logical Unit Number (LUN) or to an entirely new LUN that replaces an original LUN that failed.
 
-
 Windows features and applications that use VSS include the following:
 
   - [Windows Server Backup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754572(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=180891)
@@ -39,8 +38,7 @@ Windows features and applications that use VSS include the following:
 
   - [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=180892) (https://go.microsoft.com/fwlink/?LinkId=180892)
 
-  - [System Restore](https://go.microsoft.com/fwlink/?linkid=180893) (https://go.microsoft.com/fwlink/?LinkId=180893)
-
+  - [System Restore](https://support.microsoft.com/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e) (https://support.microsoft.com/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e)
 
 ## How Volume Shadow Copy Service Works
 
@@ -86,7 +84,6 @@ To create a shadow copy, the requester, writer, and provider perform the followi
 
 8.  VSS tells the writers to thaw application write I/O requests. At this point applications are free to resume writing data to the disk that is being shadow-copied.
 
-
 > [!NOTE]
 > The shadow copy creation can be aborted if the writers are kept in the freeze state for longer than 60 seconds or if the providers take longer than 10 seconds to commit the shadow copy.
 <br>
@@ -94,7 +91,6 @@ To create a shadow copy, the requester, writer, and provider perform the followi
 9. The requester can retry the process (go back to step 1) or notify the administrator to retry at a later time.
 
 10. If the shadow copy is successfully created, the Volume Shadow Copy Service returns the location information for the shadow copy to the requester. In some cases, the shadow copy can be temporarily made available as a read-write volume so that VSS and one or more applications can alter the contents of the shadow copy before the shadow copy is finished. After VSS and the applications make their alterations, the shadow copy is made read-only. This phase is called Auto-recovery, and it is used to undo any file-system or application transactions on the shadow copy volume that were not completed before the shadow copy was created.
-
 
 ### How the Provider Creates a Shadow Copy
 
@@ -113,7 +109,6 @@ A complete copy is usually created by making a "split mirror" as follows:
 1. The original volume and the shadow copy volume are a mirrored volume set.
 
 2. The shadow copy volume is separated from the original volume. This breaks the mirror connection.
-
 
 After the mirror connection is broken, the original volume and the shadow copy volume are independent. The original volume continues to accept all changes (write I/O requests), while the shadow copy volume remains an exact read-only copy of the original data at the time of the break.
 
@@ -161,7 +156,6 @@ The copy-on-write method is a quick method for creating a shadow copy, because i
 ### Redirect-on-write method
 
 In the redirect-on-write method, whenever the original volume receives a change (write I/O request), the change is not applied to the original volume. Instead, the change is written to another volume's shadow copy storage area.
-
 
 <table>
 <colgroup>
@@ -221,7 +215,7 @@ A software-based shadow copy provider must maintain a "point-in-time" view of a 
 
 A software provider is applicable to a wider range of storage platforms than a hardware-based provider, and it should work with basic disks or logical volumes equally well. (A logical volume is a volume that is created by combining free space from two or more disks.) In contrast to hardware shadow copies, software providers consume operating system resources to maintain the shadow copy.
 
-For more information about basic disks, see [What Are Basic Disks and Volumes?](/previous-versions/windows/it-pro/windows-server-2003/cc787202(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=180894) on TechNet.
+For more information about basic disks, see [What Are Basic Disks and Volumes?](/previous-versions/windows/it-pro/windows-server-2003/cc787202(v=ws.10)).
 
 ### System provider
 
@@ -239,21 +233,17 @@ The component files that make up the system provider are swprv.dll and volsnap.s
 
 The Windows operating system includes a set of VSS writers that are responsible for enumerating the data that is required by various Windows features.
 
-For more information about these writers, see the following Microsoft Docs Web page:
-
-- [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers)
-
+For more information about these writers, see [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers).
 
 ## How Shadow Copies Are Used
 
 In addition to backing up application data and system state information, shadow copies can be used for a number of purposes, including the following:
 
-  - Restoring LUNs (LUN resynchronization and LUN swapping)
+- Restoring LUNs (LUN resynchronization and LUN swapping)
 
-  - Restoring individual files (Shadow Copies for Shared Folders)
+- Restoring individual files (Shadow Copies for Shared Folders)
 
-  - Data mining by using transportable shadow copies
-
+- Data mining by using transportable shadow copies
 
 ### Restoring LUNs (LUN resynchronization and LUN swapping)
 
@@ -261,11 +251,8 @@ In Windows Server 2008 R2 and Windows 7, VSS requesters can use a hardware sh
 
 The shadow copy can be a full clone or a differential shadow copy. In either case, at the end of the resync operation, the destination LUN will have the same contents as the shadow copy LUN. During the resync operation, the array performs a block-level copy from the shadow copy to the destination LUN.
 
-
 > [!NOTE]
 > The shadow copy must be a transportable hardware shadow copy.
-<br>
-
 
 Most arrays allow production I/O operations to resume shortly after the resync operation begins. While the resync operation is in progress, read requests are redirected to the shadow copy LUN, and write requests to the destination LUN. This allows arrays to recover very large data sets and resume normal operations in several seconds.
 
@@ -277,11 +264,8 @@ LUN resynchronization is different from LUN swapping. A LUN swap is a fast recov
 
   - If the destination LUN is unusable and needs to be recreated, LUN swapping may be more economical because it doesn't require a destination LUN.
 
-
 > [!WARNING]
 > All of the operations listed are LUN-level operations. If you attempt to recover a specific volume by using LUN resynchronization, you are unwittingly going to revert all the other volumes that are sharing the LUN.
-<br>
-
 
 ### Restoring individual files (Shadow Copies for Shared Folders)
 
@@ -307,11 +291,8 @@ With the Volume Shadow Copy Service and a storage array with a hardware provider
 
 **Figure 3**   Shadow copy creation and transport between two servers
 
-
 > [!NOTE]
 > A transportable shadow copy that is created on Windows Server 2003 cannot be imported onto a server that is running Windows Server 2008 or Windows Server 2008 R2. A transportable shadow copy that was created on Windows Server 2008 or Windows Server 2008 R2 cannot be imported onto a server that is running Windows Server 2003. However, a shadow copy that is created on Windows Server 2008 can be imported onto a server that is running Windows Server 2008 R2 and vice versa.
-<br>
-
 
 Shadow copies are read-only. If you want to convert a shadow copy to a read/write LUN, you can use a Virtual Disk Service-based storage-management application (including some requesters) in addition to the Volume Shadow Copy Service. By using this application, you can remove the shadow copy from Volume Shadow Copy Service management and convert it to a read/write LUN.
 
@@ -355,13 +336,11 @@ For more information, see the following Microsoft TechNet Web sites:
 
 - [Windows Server Backup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754572(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkID=180891)
 
-
 ### Can I exclude files from a shadow copy to save space?
 
 VSS is designed to create shadow copies of entire volumes. Temporary files, such as paging files, are automatically omitted from shadow copies to save space.
 
 To exclude specific files from shadow copies, use the following registry key: **FilesNotToSnapshot**.
-
 
 > [!NOTE]
 > The <STRONG>FilesNotToSnapshot</STRONG> registry key is intended to be used only by applications. Users who attempt to use it will encounter limitations such as the following:
@@ -371,7 +350,6 @@ To exclude specific files from shadow copies, use the following registry key: **
 > <LI>It cannot delete files from shadow copies for shared folders.<BR><BR>
 > <LI>It can delete files from a shadow copy that was created by using the <a href="/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](../../administration/windows-commands/diskshadow.md)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](../../administration/windows-commands/vssadmin.md)">Vssadmin</a> utility.<BR><BR>
 > <LI>Files are deleted from a shadow copy on a best-effort basis. This means that they are not guaranteed to be deleted.<BR><BR></LI></UL>
-
 
 For more information, see [Excluding Files from Shadow Copies](/windows/win32/vss/excluding-files-from-shadow-copies) (https://go.microsoft.com/fwlink/?LinkId=180904) on MSDN.
 
@@ -403,7 +381,6 @@ The following criteria are evaluated, in this order, to determine the diff area 
 
   - If the volume being shadow copied is one of the possible locations, then a local association is created. Otherwise an association with the volume with the most available space is created.
 
-
 ### Can VSS create shadow copies of non-NTFS volumes?
 
 Yes. However, persistent shadow copies can be made only for NTFS volumes. In addition, at least one volume mounted on the system must be an NTFS volume.
@@ -434,7 +411,6 @@ The Windows operating system provides the following tools for working with VSS:
 
   - [VssAdmin](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754968(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=84008)
 
-
 ### DiskShadow
 
 DiskShadow is a VSS requester that you can use to manage all the hardware and software snapshots that you can have on a system. DiskShadow includes commands such as the following:
@@ -448,7 +424,6 @@ DiskShadow is a VSS requester that you can use to manage all the hardware and so
   - **expose**: Exposes a persistent shadow copy (as a drive letter, for example)
 
   - **revert**: Reverts a volume back to a specified shadow copy
-
 
 This tool is intended for use by IT professionals, but developers might also find it useful when testing a VSS writer or VSS provider.
 
@@ -470,7 +445,6 @@ VssAdmin includes commands such as the following:
 
   - **resize shadowstorage**: Changes the maximum size of the shadow copy storage area
 
-
 VssAdmin can only be used to administer shadow copies that are created by the system software provider.
 
 VssAdmin is available on Windows client and Windows Server operating system versions.
@@ -485,7 +459,6 @@ The following registry keys are available for use with VSS:
 
   - **MinDiffAreaFileSize**
 
-
 ### VssAccessControl
 
 This key is used to specify which users have access to shadow copies.
@@ -495,7 +468,6 @@ For more information, see the following entries on the MSDN Web site:
   - [Security Considerations for Writers](/windows/win32/vss/security-considerations-for-writers) (https://go.microsoft.com/fwlink/?LinkId=157739)
 
   - [Security Considerations for Requesters](/windows/win32/vss/security-considerations-for-requestors) (https://go.microsoft.com/fwlink/?LinkId=180908)
-
 
 ### MaxShadowCopies
 
@@ -516,7 +488,6 @@ For more information, see the following entry on the MSDN Web site:
 ### Supported Operating System Versions
 
 The following table lists the minimum supported operating system versions for VSS features.
-
 
 <table>
 <colgroup>

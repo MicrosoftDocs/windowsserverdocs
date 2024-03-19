@@ -37,7 +37,7 @@ wdsutil /Disable-Server
 wdsutil /Verbose /Disable-Server /Server:MyWDSServer
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

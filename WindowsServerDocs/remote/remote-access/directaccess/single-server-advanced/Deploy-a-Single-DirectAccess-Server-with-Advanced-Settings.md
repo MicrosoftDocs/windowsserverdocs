@@ -12,6 +12,10 @@ ms.date: 08/07/2020
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
+
+>[!IMPORTANT]
+>Microsoft highly recommends that you use Always On VPN instead of DirectAccess for new deployments. For more information, see [Always on VPN](../../overview-always-on-vpn.md).
+
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.
 
 ## Before you begin deploying, see the list of unsupported configurations, known issues, and prerequisites

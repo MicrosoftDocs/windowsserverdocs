@@ -4,8 +4,8 @@ ms.assetid: ec26705c-4446-4226-b9b4-b775b642f0f4
 title: Where to Place a Federation Server Proxy
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
