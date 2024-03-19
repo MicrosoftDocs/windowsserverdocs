@@ -23,11 +23,11 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 > [!NOTE]
 > Self-signed certificates accessed on `https://localhost:[port]` may cause Windows Admin Center to be blocked on both Microsoft Edge and Google Chrome browsers. When this happens, you may see an error explaining that your connection is not private. Update your Windows Admin Center installation to the latest version to fix this issue.
 
-- Using certain versions of extensions with older versions of Windows Admin Center may result in icons not displaying properly. To fix this issue, please upgrade to the latest build of Windows Admin Center.
+- Using certain versions of extensions with older versions of Windows Admin Center may result in icons not displaying properly. To fix this issue, upgrade to the latest build of Windows Admin Center.
 
-- Manually modifying URLs to include the names of different machines while using Windows Admin Center, without going through the connection experience in the UI, may result in improper loading of extensions, especially those which are compatible with specific hardware. The manual modification of URLs for navigation in Windows Admin Center isn't recommended.
+- Manually modifying URLs to include the names of different machines while using Windows Admin Center, without going through the connection experience in the UI, can result in improper loading of extensions that are compatible with specific hardware. The manual modification of URLs for navigation in Windows Admin Center isn't recommended.
 
-- If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains `Faulting application name: sme.exe` and `Faulting module name: WsmSvc.dll`. This is due to a bug that has been fixed in Windows Server 2019. The patch for Windows Server 2016 was included the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
+- If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains `Faulting application name: sme.exe` and `Faulting module name: WsmSvc.dll`. This issue is due to a bug that was fixed in Windows Server 2019. The patch for Windows Server 2016 was included the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
 
@@ -38,11 +38,11 @@ If you encounter an issue not described on this page, [let us know](https://aka.
   2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
   3. Reinstall Windows Admin Center
 
-- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this issue, [send us feedback](https://aka.ms/WACfeedback).
+- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this error occurs, refresh your browser. If you encounter this issue, submit it via our [WAC Feedback](https://aka.ms/WACfeedback) page.
 
 - There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the third party Software Notice.
 
-- Windows Admin Center tool APIs may be accessed and used through other methods while a session of Windows Admin Center is active and a user has access to that session. The actions taken using these APIs will only affect the gateway machine (the machine Windows Admin Center is installed on). This won't affect machines managed remotely without authentication through the Windows Admin Center gateway.
+- Windows Admin Center tool APIs may be accessed and used through other methods while a session of Windows Admin Center is active and a user has access to that session. The actions taken using these APIs affects only the gateway machine (the machine Windows Admin Center is installed on). This won't affect machines managed remotely without authentication through the Windows Admin Center gateway.
 
 ### Extension Manager
 
@@ -57,7 +57,7 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 
 ### Microsoft Edge
 
-- If you have Windows Admin Center deployed as a service and you're using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding `https://login.microsoftonline.com`, `https://login.live.com`, the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-microsoft-edge). [17990376]
+- If you have Windows Admin Center deployed as a service and you're using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding `https://login.microsoftonline.com`, `https://login.live.com`, the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser. To resolve this issue, see [Azure features don't work properly in Microsoft Edge](troubleshooting.md#azure-features-dont-work-properly-in-microsoft-edge). [17990376]
 
 ### Google Chrome
 
@@ -137,7 +137,7 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
 
 - Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this issue, enable **Allow users to connect remotely by using Remote Desktop Services** under **Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections**.
 
-- Remote Desktop is affected by [websocket compatibility](#websocket-compatibility-when-using-a-proxy-service).
+- Remote Desktop is affected by the [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service).
 
 - The Remote Desktop tool doesn't currently support any text, image, or file copy/paste between the local desktop and the remote session.
 
@@ -169,9 +169,7 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
 
 ### Updates
 
-- After installing updates, install status may be cached and require a browser refresh.
-
-- You may encounter the error: "Keyset doesn't exist" when attempting to set up Azure Update management. In this case, try the following remediation steps on the managed node:
+After installing updates, install status may be cached and require a browser refresh. You may encounter the error: "**Keyset doesn't exist**" when attempting to set up Azure Update management. In this case, try the following remediation steps on the managed node:
 
   1. Stop 'Cryptographic Services' service.
   1. Change folder options to show hidden files (if necessary).
@@ -197,7 +195,7 @@ The Computer Management solution contains a subset of the tools from the Server 
 
 - If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Microsoft Entra ID to sign in to your Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account. [16568455]
 
-- When you try to manage the localhost, you'll be prompted to elevate the gateway process. If you click **No** in the User Account Control popup that follows, you must cancel the connection attempt and start over.
+- When you try to manage the localhost, you're prompted to elevate the gateway process. If you select **No** in the User Account Control popup that follows, you must cancel the connection attempt and start over.
 
 - Windows 10 doesn't have WinRM/PowerShell remoting on by default.
 
@@ -209,7 +207,7 @@ The Computer Management solution contains a subset of the tools from the Server 
 
 ### Step 1.2
 
-Mixed workgroup machines are currently not supported when adding servers. All machines used for clustering need to belong to same workgroup. If they don't, the next button will be disabled, and the following error will appear: "Can't create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again."
+Mixed workgroup machines are currently not supported when adding servers. All machines used for clustering need to belong to same workgroup. If they don't, the next button will be disabled, and the following error will appear: "**Can't create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again**".
 
 ### Step 1.4
 
@@ -229,7 +227,7 @@ Sometimes servers take longer than expected to restart after updates are install
 
 If you would like to restart the server manually, exit the current wizard session. After you have restarted the server, you may restart the wizard.
 
-### Stage 4 Storage
+### Stage 4 storage
 
 In stage 4, an error can occur if a user has deleted a cluster and hasn't cleared the storage pools from the cluster. That means the storage pools that are on the system are locked by the old cluster object and only the user can manually clear them.
 
@@ -276,7 +274,7 @@ To avoid this scenario in the first place, the user needs to run the following:
     Remove-Cluster -CleanupAD
     ```
 
-1. On all nodes run:
+1. On all nodes, run:
 
     ```powershell
     Clear-ClusterNode
@@ -288,7 +286,7 @@ It's recommended to use servers that are domain-joined when creating a stretch c
 
 ### Undo and start over
 
-When using the same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. See the page on [deploying hyper-converged infrastructure](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over) for instructions on how to clean up your cluster.
+When using the same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. For instructions on how to clean up your cluster, see [Deploy hyperconverged infrastructure with Windows Admin Center](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over).
 
 ### CredSSP in cluster creation
 
@@ -379,9 +377,9 @@ The cluster deployment wizard in Windows Admin Center version 2007 doesn't provi
 
 ### Azure login and gateway registration
 
-When attempting to register your Windows Admin Center gateway in the Azure China or Azure US Gov cloud domains in version 2211, you may be redirected to the Azure Global sign-in experience. To work around this issue, please use an earlier version of Windows Admin Center.
+When attempting to register your Windows Admin Center gateway in the Azure China or Azure US Gov cloud domains in version 2211, you may be redirected to the Azure Global sign-in experience. To work around this issue, use an earlier version of Windows Admin Center.
 
-In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues:
+In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The following should help you mitigate these issues:
 
 - Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you're signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  
 
@@ -389,7 +387,7 @@ In the 2009 release, you may run into issues logging into Azure or registering y
 
 - The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently.
 
-- If you have already given admin approval for Windows Admin Center in the Azure portal and you're still seeing an error message saying "**Need admin approval**", try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page.
+- If you have given admin approval for Windows Admin Center in the Azure portal and you're still seeing an error message saying "**Need admin approval**", try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page.
 
 - If your proxy is mis-configured, then you may get the error message "**Error: Value can't be null. Parameter name: httpClientFactory**". Ensure that your proxy is configured correctly by going to **Settings** page.
 
@@ -414,7 +412,7 @@ Azure management services including Azure Monitor, Azure Update Management, and 
 
 1. Go to the **Control Panel** > **Microsoft Monitoring Agent** to disconnect your server from the existing [Azure management solutions](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) (like Azure Monitor or Azure Security Center). Then set up Azure Update Management in Windows Admin Center. After that, you can go back to set up your other Azure management solutions through Windows Admin Center without issues.
 
-1. You can manually set up the Azure resources needed for [Azure Update Management](/azure/automation/automation-update-management) and then manually update the [Microsoft Monitoring Agent](/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) (outside of Windows Admin Center) to add the new workspace corresponding to the Update Management solution you wish to use.
+1. You can manually set up the Azure resources needed for [Azure Update Management](/azure/automation/update-management/overview) and then manually [add or remove a workspace](/azure/azure-monitor/agents/agent-manage?tabs=PowerShellLinux#add-or-remove-a-workspace), outside of Windows Admin Center, to add the new workspace corresponding to the Update Management solution you wish to use.
 
 ## Windows Remote Management errors
 
