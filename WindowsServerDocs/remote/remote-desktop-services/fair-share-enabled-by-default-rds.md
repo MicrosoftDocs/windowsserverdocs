@@ -20,9 +20,12 @@ _Original KB number:_ &nbsp; 4494631
 
 ## Introduction
 
-Remote Desktop Services (RDS) server, Windows 10 Enterprise multi-session and Windows 11 Enterprise multi-session use Fair Share technologies for CPU resources to manage resources. RDS builds on the Fair Share technologies to add features for allocating network bandwidth and disk resources. Fair Share technologies are enabled by default, but you can disable them using Windows PowerShell and WMI.
+Remote Desktop Services (RDS) server, Windows 10 Enterprise multi-session and Windows 11 Enterprise multi-session use Fair Share technologies for CPU resources to manage resources. RDS builds on the Fair Share technologies to add features for allocating network bandwidth and disk resources. Fair Share CPU Scheduling is enabled by default, while Dynamic Disk Fair Share and Dynamic Network Fair Share are disabled. You can change the defaults by using PowerShell and WMI.
 
 For more information about the related properties in WMI, see [Win32_TerminalServiceSetting class: Properties](/windows/desktop/termserv/win32-terminalservicesetting#properties).
+
+> [!NOTE]
+> Before turning on Dynamic Disk Fair Share or Dynamic Network Fair Share, it's recommended to review performance on applications that require exchanging larger amounts of data.
 
 ## Fair Share CPU Scheduling
 
