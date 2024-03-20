@@ -1,10 +1,10 @@
 ---
-title: What's new in Windows Server Insiders Preview
-description: This article describes some of the new features in Windows Server Insiders Preview.
+title: What's new in Windows Server Insiders 2025 (Preview)
+description: This article describes some of the new features in Windows Server 2025 for Insiders Preview.
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 03/06/2024
+ms.date: 03/18/2024
 ---
 
 # What's new in Windows Server Insiders Preview
@@ -143,7 +143,7 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 ### Server Message Block
 
-Server Message Block (SMB) is one of the most widely used protocols in networking in providing a reliable way to share files and other resources between devices on your network. Windows Server Preview brings the following SMB capabilities:
+Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server Preview brings the following SMB capabilities:
 
 - The [SMB over Quick UDP Internet Connections](../storage/file-server/smb-over-quic.md) (QUIC) server feature, which was only available in Windows Server Azure Edition, is now available in both Windows Server Standard and Windows Server Datacenter versions. SMB over QUIC adds the benefits of the QUIC, which provides low-latency, encrypted connections over the internet. For more information, see [SMB over QUIC now available in Windows Server Insider Datacenter and Standard editions](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-over-quic-now-available-in-windows-server-insider-datacenter/ba-p/3975242).
 
@@ -165,6 +165,8 @@ Server Message Block (SMB) is one of the most widely used protocols in networkin
 
 - The [Remote Mailslot](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-beginning-of-the-end-of-remote-mailslots-as-part-of-windows/ba-p/3762048) protocol is disabled by default starting in build 25314.
 
+- SMB compression adds support for industry standard LZ4 compression algorithm, in addition to its existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
+
 ### Storage Replica Enhanced Log
 
 Enhanced Logs help the Storage Replica log implementation to eliminate the performance costs associated with file system abstractions, leading to improved block replication performance. To learn more, see [Storage Replica Enhanced Log](../storage/storage-replica/storage-replica-enhanced-log.md).
@@ -184,6 +186,62 @@ Winget is installed by default, which is a command line Windows Package Manager 
 ### Windows Insider Program
 
 The [Windows Insider Program](/windows-insider/get-started) provides early access to the latest Windows OS releases for a community of enthusiasts. As a member, you can be among the first to try out new ideas and concepts that Microsoft is developing. After registering as a member, you can opt to participate in different release channels by going to go to **Start > Settings > Windows Update > Windows Insider Program**.
+
+### Windows Local Administrator Password Solution (LAPS)
+
+Windows LAPS helps organizations manage local administrator passwords on their domain-joined computers. It automatically generates unique passwords for each computer's local administrator account, stores them securely in AD, and updates them regularly. This helps to improve security by reducing the risk of attackers gaining access to sensitive systems using compromised or easily guessable passwords.
+
+Several features are introduced to Microsoft LAPS that bring the following improvements:
+
+- **New automatic account management feature**
+
+  The latest update allows IT admins to create a managed local account with ease. With this feature, you can customize the account name, enable or disable the account, and even randomize the account name for enhanced security. Additionally, the update includes improved integration with Microsoft's existing local account management policies. To learn more about this feature, see [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes).
+
+- **New image rollback detection feature**
+  
+  Windows LAPS now detects when an image rollback occurs. If a rollback does happen, the password stored in AD may no longer match the password stored locally on the device. Rollbacks can result in a "torn state" where the IT admin is unable to sign into the device using the persisted Windows LAPS password.
+
+  To address this issue, a new feature was added that includes an AD attribute called **msLAPS-CurrentPasswordVersion**. This attribute contains a random GUID written by Windows LAPS every time a new password is persisted in AD and saved locally. During every processing cycle, the GUID stored in **msLAPS-CurrentPasswordVersion** is queried and compared to the locally persisted copy. If they're different, the password is immediately rotated.
+
+  To enable this feature, it's necessary to run the latest version of the `Update-LapsADSchema` cmdlet. Once complete, Windows LAPS recognizes the new attribute and begins using it. If you don't run the updated version of the `Update-LapsADSchema` cmdlet, Windows LAPS logs a 10108 warning event in the event log, but continues to function normally in all other respects.
+
+  No policy settings are used to enable or configure this feature. The feature is always enabled once the new schema attribute is added.
+
+- **New passphrase feature**
+
+  IT admins can now utilize a new feature in Windows LAPS that enables the generation of less complex passphrases. An example would be a passphrase such as "EatYummyCaramelCandy", which is easier to read, remember, and type, compared to a traditional password like "V3r_b4tim#963?".
+
+  This new feature also allows the _PasswordComplexity_ policy setting to be configured to select one of three different passphrase word lists, all of which are included in Windows without requiring a separate download. A new policy setting called _PassphraseLength_ controls the number of words used in the passphrase.
+
+  When you're creating a passphrase, the specified number of words are randomly selected from the chosen word list and concatenated. The first letter of each word is capitalized to enhance readability. This feature also fully supports backing passwords up to either Windows Server AD or Microsoft Entra ID.
+
+  The passphrase word lists used in the three new _PasswordComplexity_ passphrase settings are sourced from the Electronic Frontier Foundation's article, "[Deep Dive: EFF's New Wordlists for Random Passphrases](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases)". The [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471) is licensed under the CC-BY-3.0 Attribution license and is available for download.
+
+  > [!NOTE]
+  > Windows LAPS doesn't allow for customization of the built-in word lists nor the use of customer-configured word lists.
+
+- **Improved readability password dictionary**
+
+  Windows LAPS introduces a new _PasswordComplexity_ setting that enables IT admins to create less complex passwords. This feature allows you to customize LAPS to use all four character categories (upper case letters, lower case letters, numbers, and special characters) like the existing complexity setting of 4. However, with the new setting of 5, the more complex characters are excluded to enhance password readability and minimize confusion. For example, the number "**1**" and the letter "**I**" are never used with the new setting.
+
+  When _PasswordComplexity_ is configured to 5, the following changes are made to the default password dictionary character set:
+
+  1. Don’t use these letters: '**I**', '**O**', '**Q**', '**l**', '**o**'
+  1. Don’t use these numbers: '**0**', '**1**'
+  1. Don’t use these "special" characters: '**,**', '**.**', '**&**', '**{**', '**}**', '**[**', '**]**', '**(**', '**)**', '**;**'
+  1. Start using these "special" characters: '**:**', '**=**', '**?**', '**\***'
+
+  The Active Directory Users and Computers snap-in (via Microsoft Management Console) now features an improved Windows LAPS tab. The Windows LAPS password is now displayed in a new font that enhances its readability when shown in plain text.
+
+- **PostAuthenticationAction support for terminating individual processes**
+
+  A new option is added to the PostAuthenticationActions (PAA) Group Policy setting, “_Reset the password, sign out the managed account, and terminate any remaining processes_” located in **Computer Configuration > Administrative Templates > System > LAPS > Post-authentication actions**.
+
+  This new option is an extension of the previous "_Reset the password and sign out the managed account_" option. Once configured, the PAA notifies and then terminates any interactive sign-in sessions. It enumerates and terminates any remaining processes that are still running under the Windows LAPS-managed local account identity. It's important to note that no notification precedes this termination.
+  
+  Furthermore, the expansion of logging events during post-authentication-action execution provides deeper insights into the operation.
+
+To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview).
 
 ### Windows Terminal
 
