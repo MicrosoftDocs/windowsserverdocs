@@ -17,12 +17,10 @@ ms.date: 02/29/2024
 
 Server Message Block protocol (SMB) over the QUIC transport layer network protocol introduces an alternative to the Transmission Control Protocol (TCP) network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an Internet Engineering Task Force (IETF)-standardized protocol with many benefits when compared with TCP.
 
-<!-- QUIC is not an acronym in IETF usage; it is simply the name of the protocol; this is why it is not spelled out. -->
-
 +This article explains how to configure SMB over QUIC Client Access Control (CAC) in Windows and Windows Server Insider builds. For more detailed information, see [SMB over QUIC](../file-server/smb-over-quic.md).
 
 >[!IMPORTANT]
->SMB over QUIC is not enabled by default. A file server administrator must opt in to enable SMB over QUIC. A client can't force a file server to enable SMB over QUIC.
+>SMB over QUIC isn't enabled by default. A file server administrator must opt in to enable SMB over QUIC. A client can't force a file server to enable SMB over QUIC.
 
 ## SMB over QUIC Client Access Control
 
@@ -61,10 +59,14 @@ To configure SMB over QUIC CAC using PowerShell:
 
 1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for the inbound UDP 443 port.
 
-<!-- Looking for a link to an article that shows how to do this. -->
+#### [Windows Server](#tab/windows-server)
+
+<!--- Hi Robin, instructions on how to do this should go here. Attempting to find some guidance on this but have found nothing satisfactory; do you know of anything usable? Or do you think it's necessary for this article to explain how to do this?-->
 
    >[!NOTE]
    >Don't allow the inbound TCP 445 port access to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
+
+#### [PowerShell](#tab/powershell)
 
 1. Connect to the server with Windows Admin Center and select the **Settings** icon in the lower left corner of the window.
 
