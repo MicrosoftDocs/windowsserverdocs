@@ -25,7 +25,7 @@ To begin developing with the SDK, download and install the following prerequisit
 
 * [Windows Admin Center](../overview.md) (GA or preview version)
 * Visual Studio or [Visual Studio Code](https://code.visualstudio.com)
-* [Node.js](https://nodejs.org/en/download/release/v12.18.2) (download and install the .msi file for version 12.18.2)
+* [Node.js](https://nodejs.org/download/release/v16.20.2/) (download and install the .msi file for version 16.20.2)
 * [Node Package Manager](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (6.14.5 or later)
 * [NuGet](https://www.nuget.org/downloads) (for publishing extensions)
 
