@@ -154,7 +154,7 @@ preferred method because it makes the overall process of creating or maintaining
 
 [Removing Windows 10 in-box apps during a task sequence](/archive/blogs/mniehaus/removing-windows-10-in-box-apps-during-a-task-sequence)
 
-[Removing Built-in apps from Windows 10 WIM-File with Powershell - Version 1.3](https://gallery.technet.microsoft.com/Removing-Built-in-apps-65dc387b)
+[Removing Built-in apps from Windows 10 WIM-File with Powershell - Version 1.3](https://www.softpedia.com/get/Tweak/System-Tweak/Remove-Windows-10-8-and-8-1-Built-In-Apps-Using-PowerShell.shtml)
 
 [Windows 10 1607: Keeping apps from coming back when deploying the feature update](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update)
 
