@@ -4,7 +4,7 @@ description: Learn more about configuring Microsoft Entra multifactor authentica
 ms.author: wscontent
 author: billmath
 manager: amycolannino
-ms.date: 01/18/2024
+ms.date: 03/13/2024
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref
 ---
@@ -118,6 +118,7 @@ In order to enable the AD FS servers to communicate with the Azure multifactor a
 > In order to complete this step you need to connect to your instance of Microsoft Entra ID with Microsoft Graph PowerShell by using `Connect-MgGraph`. These steps assume you've already connected via PowerShell. 
 
 ```powershell
+Connect-MgGraph -Scopes 'Application.ReadWrite.All'
 $servicePrincipalId = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").Id
 $keyCredentials = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").KeyCredentials
 $certX509 = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($certBase64))
@@ -125,7 +126,7 @@ $newKey = @(@{
     CustomKeyIdentifier = $null
     DisplayName = $certX509.Subject
     EndDateTime = $null
-    Key = [System.Text.Encoding]::ASCII.GetBytes($certBase64)
+    Key = $certX509.GetRawCertData()
     KeyId = [guid]::NewGuid()
     StartDateTime = $null
     Type = "AsymmetricX509Cert"
@@ -207,6 +208,7 @@ By default, when you configure AD FS with Microsoft Entra multifactor authentica
    > In order to complete this step you need to connect to your instance of Microsoft Entra ID with Microsoft Graph PowerShell by using `Connect-MgGraph`. These steps assume you've already connected via PowerShell. 
 
     ```powershell
+    Connect-MgGraph -Scopes 'Application.ReadWrite.All'
     $servicePrincipalId = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").Id
     $keyCredentials = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").KeyCredentials
     $certX509 = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($newcert))
@@ -214,7 +216,7 @@ By default, when you configure AD FS with Microsoft Entra multifactor authentica
         CustomKeyIdentifier = $null
         DisplayName = $certX509.Subject
         EndDateTime = $null
-        Key = [System.Text.Encoding]::ASCII.GetBytes($newcert)
+        Key = $certX509.GetRawCertData()
         KeyId = [guid]::NewGuid()
         StartDateTime = $null
         Type = "AsymmetricX509Cert"
