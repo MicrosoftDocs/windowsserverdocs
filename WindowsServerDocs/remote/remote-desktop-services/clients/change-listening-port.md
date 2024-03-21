@@ -52,4 +52,10 @@ Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\W
 
 New-NetFirewallRule -DisplayName 'RDPPORTLatest-TCP-In' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort $portvalue 
 New-NetFirewallRule -DisplayName 'RDPPORTLatest-UDP-In' -Profile 'Public' -Direction Inbound -Action Allow -Protocol UDP -LocalPort $portvalue 
+
+# Disable the (read-only) built in firewall entries:
+Disable-NetFirewallRule -DisplayName "Remote Desktop - User Mode (TCP-In)"
+Disable-NetFirewallRule -DisplayName "Remote Desktop - User Mode (UDP-In)"
+
+
 ```
