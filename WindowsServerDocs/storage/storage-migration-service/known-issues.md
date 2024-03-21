@@ -954,13 +954,13 @@ To resolve this issue, ensure all the disks assigned to the file role are added 
 4. repeat for all other clustered disks.
 5. Close the snap-in and inventory the source again. All disks should now appear and be available for transfer. 
 
-###  Cut over of Windows Server 2022 fails with error 5 at computer rename 
+### Cut over of Windows Server 2022 fails with error 5 at computer rename
 
-After starting the cut over process, the rename of a Windows Server 2022 source computer fails to complete at 41%. If migrating to a Windows Server 2022 destination computer, rename fails to complete at 75%. Examining the SMS debug logs shows "error 5: access denied."
+After you start the cut over process, the rename of a Windows Server 2022 source computer fails to complete at 41%. If migrating to a Windows Server 2022 destination computer, rename fails to complete at 75%. Examining the SMS debug logs shows `error 5: access denied`.
 
-This issue is caused by the March 12, 2024 KB5035857 Cumulative Update for Windows Server 2022. A solution for this regression is currently under investigation. 
+This issue occurs after installing the [March 12, 2024 - KB5035857 Cumulative Update for Windows Server 2022](https://support.microsoft.com/help/5035857). A solution for this regression is currently under investigation.
 
-To workaround this issue, use the steps in [Manual Cutover](https://learn.microsoft.com/windows-server/storage/storage-migration-service/cutover#manual-cutover).
+To work around this issue, use the steps in [Manual cutover](cutover.md#manual-cutover).
 
 ## See also
 
