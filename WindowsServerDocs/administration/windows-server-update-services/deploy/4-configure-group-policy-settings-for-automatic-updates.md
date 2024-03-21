@@ -174,7 +174,7 @@ Specifies whether automatic updates are enabled on this computer.
 |---------|-------|
 |Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
-Configure automatic updates under **Computer Configuration\Administrative Templates\Windows Components\Windows Update\Configure Automatic Updates**.
+Configure automatic updates under **Computer Configuration\Administrative Templates\Windows Components\Windows Update\Manage end user experience\Configure Automatic Updates**.
 
 - If this setting is set to **Not Configured**, the use of automatic updates isn't specified at the Group Policy level. An administrator can still configure automatic updates through the Settings app, under **Settings** > **Update & security** > **Windows Update** > **Advanced options**.
 
@@ -195,7 +195,8 @@ Configure automatic updates under **Computer Configuration\Administrative Templa
   |**7 - Auto Download, Notify to install, Notify to Restart**|*This option is available only in Windows Server SKU, versions 2016 and later.* With this option, local administrators can use Windows Update to proceed with installations or reboots manually. Windows downloads applicable updates to the device, and notifies users that updates are ready to be installed. Once updates are installed, users are notified to restart the device.|
 
 > [!NOTE]
-> Microsoft ships Windows Server OSs with the Automatic Update Options policy configured to 3 in the registry. This is not reflected in the GP Editor UI. If an admin configures the Automatic Update Options policy to a different setting the new setting will apply. Setting the Automatic Update Options policy to "Not Configured" will result in the behavior of automatically downloading and installing updates.
+> Microsoft ships the Windows Server OS with the Automatic Update Options policy configured to **3** in the registry. This isn't reflected in the GPO editor. If an admin configures the Automatic Update Options policy to a different setting, the new setting will take affect. Setting the Automatic Update Options policy to "Not Configured" will still allow automatically downloading and installing updates if the admin configures Automatic Updates through the Control Panel.
+
 #### Delay restart for scheduled installations
 
 Specifies the amount of time automatic updates wait before proceeding with a scheduled restart.
@@ -567,7 +568,7 @@ This setting enables you to remove WSUS client access to Windows Update.
 |Policy setting state|Behavior|
 |-|-|
 |**Not Configured**|Users can connect to the Windows Update website.|
-|**Enabled**|All Windows Update features are removed. This includes blocking access to the [Windows Update website](https://windowsupdate.microsoft.com) from the Windows Update hyperlink on the **Start** menu or startup screen, and on the **Tools** menu in Internet Explorer. <p>Windows automatic updates are also disabled. The user is neither notified about nor receives critical updates from Windows Update. This setting also prevents Device Manager from automatically installing driver updates from the Windows Update website.<p>You can configure one of the following notification options:<p>**0 - Do not show any notifications**<br />    This setting removes all access to Windows Update features, and no notifications are shown.<p>**1 - Show restart required notifications**<br />    This setting shows notifications about restarts that are required to complete an installation. On computers running Windows 8 and Windows RT, only notifications related to restarts and the inability to detect updates are shown. The notification options aren't supported. Notifications on the sign-in screen are always displayed.|
+|**Enabled**|All Windows Update features are removed. This includes blocking access to the Windows Update website `http://windowsupdate.microsoft.com` from the Windows Update hyperlink on the **Start** menu or startup screen, and on the **Tools** menu in Internet Explorer. <p>Windows automatic updates are also disabled. The user is neither notified about nor receives critical updates from Windows Update. This setting also prevents Device Manager from automatically installing driver updates from the Windows Update website.<p>You can configure one of the following notification options:<p>**0 - Do not show any notifications**<br />    This setting removes all access to Windows Update features, and no notifications are shown.<p>**1 - Show restart required notifications**<br />    This setting shows notifications about restarts that are required to complete an installation. On computers running Windows 8 and Windows RT, only notifications related to restarts and the inability to detect updates are shown. The notification options aren't supported. Notifications on the sign-in screen are always displayed.|
 |**Disabled**|Users can connect to the Windows Update website.|
 
 **Options:** See **Enabled** in the table for this setting.
