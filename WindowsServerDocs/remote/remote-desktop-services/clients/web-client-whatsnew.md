@@ -150,7 +150,6 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 - New sign in experience within the web client.
 - No longer prompted for credentials when launching a desktop or app connection (Single sign on).
-- Moved the web client to a new URL: <https://server_FQDN/RDWeb/webclient/index.html>
 - Added time zone redirection.
 - Various bug fixes.
 
