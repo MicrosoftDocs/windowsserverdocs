@@ -19,7 +19,7 @@ This article discusses the following Storage Migration Service aspects:
 - Why you'd want to use Storage Migration Service.
 - How the migration process works.
 - What the requirements are for source and destination servers.
-- [What's new in Storage Migration Service](#whats-new-in-storage-migration-service).
+- [What's new in Storage Migration Service](../../get-started/whats-new-in-windows-server-2019.md#storage-migration-service).
 
 ## Why use Storage Migration Service
 
