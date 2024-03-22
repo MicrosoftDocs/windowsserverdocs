@@ -6,7 +6,7 @@ author: billmath
 manager: amycolannino
 ms.date: 03/13/2024
 ms.topic: article
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # Configure Microsoft Entra multifactor authentication as authentication provider using AD FS
@@ -80,6 +80,8 @@ The following prerequisites are required when you use Microsoft Entra multifacto
 - [Microsoft Azure Active Directory module for Windows PowerShell](/powershell/module/azuread/).
 - Global administrator permissions on your instance of Microsoft Entra ID to configure it by using Azure AD PowerShell.
 - Enterprise administrator credentials to configure the AD FS farm for Microsoft Entra multifactor authentication.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../WindowsServerDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Configure the AD FS Servers
 
