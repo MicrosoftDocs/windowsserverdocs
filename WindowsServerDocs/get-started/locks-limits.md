@@ -16,6 +16,9 @@ Use this article to compare the operating system locks and limits across the dif
 
 :::zone pivot="windows-server-2025"
 
+> [!IMPORTANT]
+> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
 # [Full Comparison](#tab/full-comparison)
 
 | Locks and limits | Windows Server 2025 Standard | Windows Server 2025 Datacenter | Windows Server 2025 Datacenter: Azure Edition |
@@ -33,7 +36,6 @@ Use this article to compare the operating system locks and limits across the dif
 | Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited | Unlimited |
 | Windows Server Containers | Unlimited Windows containers and up to two Hyper-V containers | Unlimited Windows containers and Hyper-V containers |
 | Storage Replica | 1 partnership and 1 resource group with a single 2TB volume | **Unlimited** | **Unlimited** |
-| FIXME: Edge network protection/firewall | No | No | Yes |
 
 # [Version Differences](#tab/version-differences)
 
@@ -67,7 +69,6 @@ Use this article to compare the operating system locks and limits across the dif
 | Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited | Unlimited |
 | Windows Server Containers | Unlimited Windows containers and up to two Hyper-V containers | Unlimited Windows containers and Hyper-V containers |
 | Storage Replica | 1 partnership and 1 resource group with a single 2TB volume | **Unlimited** | **Unlimited** |
-| FIXME: Edge network protection/firewall | No | No | Yes |
 
 # [Version Differences](#tab/version-differences)
 
