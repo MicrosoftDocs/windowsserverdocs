@@ -65,7 +65,7 @@ To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the 
 
 #### Number of licenses
 
-You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. For example, 8 core licenses are still required if you run a 4-core instance. You may also run instances larger than 8 cores by allocating licenses equal to the core size of the instance. For example, 12 core licenses are required for a 12-core instance. For customers with processor licenses, each 2 processor license is equivalent to 16 core licenses.
+You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. For example, 8 core licenses are still required if you run a 4-core instance. You may also run instances larger than 8 cores by allocating licenses equal to the core size of the instance. For example, 12 core licenses are required for a 12-core instance. For customers with processor licenses, each 2-core processor license is equivalent to 16 core licenses.
 
 #### Use rights
 
@@ -130,15 +130,15 @@ To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the follo
 
 #### Number of licenses
 
-Each Windows Server core license entitles use on one physical core of Azure Stack HCI. You need to allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
+- Each Windows Server core license entitles use on one physical core of Azure Stack HCI. You need to allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
 
 #### Unlimited virtualization
 
-You can use any number of Windows Server VMs on the Azure Stack HCI cluster if you allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
+- You can use any number of Windows Server VMs on the Azure Stack HCI cluster if you allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
 
 #### Use rights
 
-Licenses must be used either on-premises or on Azure Stack HCI, but not on both. You have 180 days of concurrent licensing to migrate your servers.
+- Licenses must be used either on-premises or on Azure Stack HCI, but not on both. You have 180 days of concurrent licensing to migrate your servers.
 
 ### How to apply Azure Hybrid Benefit for Azure Stack HCI
 
@@ -164,11 +164,11 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 #### Number of licenses
 
-Each Windows Server core license entitles use on one virtual core of AKS.
+- Each Windows Server core license entitles use on one virtual core of AKS.
 
 #### Use rights
 
-Azure Hybrid Benefit for AKS is additive. Core licenses used for Azure Hybrid Benefit for AKS can be used at the same time with on-premises Windows Server licensing, as well as Azure Hybrid Benefit for other workloads in this article.
+- Azure Hybrid Benefit for AKS is additive. Core licenses used for Azure Hybrid Benefit for AKS can be used at the same time with on-premises Windows Server licensing, as well as Azure Hybrid Benefit for other workloads in this article.
 
 ### How to apply Azure Hybrid Benefit for AKS
 
