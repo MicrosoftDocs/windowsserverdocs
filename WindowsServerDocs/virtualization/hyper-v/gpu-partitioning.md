@@ -21,8 +21,6 @@ zone_pivot_groups: windows-os
 
 [!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
 
-[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-stack/includes/hci-arc-vm.md)]
-
 ::: zone-end
 
 GPU partitioning allows you to share a physical GPU device with multiple virtual machines (VMs). With GPU partitioning or GPU virtualization, each VM gets a dedicated fraction of the GPU instead of the entire GPU.
