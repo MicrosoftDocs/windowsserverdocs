@@ -1,5 +1,5 @@
 ---
-title: What's new in Windows Server Insiders 2025 (Preview)
+title: What's new in Windows Server 2025 Insiders Preview
 description: This article describes some of the new features in Windows Server 2025 for Insiders Preview.
 ms.topic: article
 author: xelu86
