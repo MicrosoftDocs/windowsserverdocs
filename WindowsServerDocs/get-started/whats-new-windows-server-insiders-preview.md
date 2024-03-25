@@ -1,10 +1,10 @@
 ---
-title: What's new in Windows Server Insiders 2025 (Preview)
+title: What's new in Windows Server 2025 Insiders Preview
 description: This article describes some of the new features in Windows Server 2025 for Insiders Preview.
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 03/18/2024
+ms.date: 03/25/2024
 ---
 
 # What's new in Windows Server Insiders Preview
@@ -179,9 +179,9 @@ Build 26040 now sports the modern Task Manager app with mica material conforming
 
 It's now easier to enable wireless capabilities as the Wireless LAN Service feature is now installed by default. The wireless startup service is set to manual and can be enabled by running `net start wlansvc` in the Command Prompt, Windows Terminal, or PowerShell.
 
-### Winget
+### Windows containers portability
 
-Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
+Portability is a crucial aspect of container management and has the ability to simplify upgrades by applying enhanced flexibility and compatibility of containers in Windows. Portability is a feature of Windows Server Annual Channel for container hosts that allows users to move container images, and their associated data, between different hosts or environments without requiring any modifications. Users can create a container image on one host and then deploy it on another host without having to worry about compatibility issues. To learn more, see [Portability for containers](/virtualization/windowscontainers/deploy-containers/portability).
 
 ### Windows Insider Program
 
@@ -246,6 +246,10 @@ To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/id
 ### Windows Terminal
 
 The Windows Terminal, a powerful and efficient multishell application for command-line users, is available in this build. Search for "Terminal" in the search bar.
+
+### Winget
+
+Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
 
 ## See also
 
