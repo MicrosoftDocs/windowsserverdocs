@@ -158,10 +158,6 @@
     - name: Overview
       href: dns/dns-top.md
       items:
-      - name: What's new in DNS
-        items:
-        - name: What's new in DNS client in Windows Server
-          href: dns/What-s-New-in-DNS-Client.md
       - name: Anycast DNS
         href: dns/deploy/anycast.md
       - name: DNS policies overview

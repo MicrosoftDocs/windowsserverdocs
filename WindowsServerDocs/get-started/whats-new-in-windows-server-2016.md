@@ -237,3 +237,16 @@ Windows DNS server now includes IPv6 root hints published by the Internet Assign
 ### Windows PowerShell support
 
 Windows Server 2016 includes new commands you can use to configure DNS in PowerShell. For more information, see [Windows Server 2016 DnsServer module](/powershell/module/dnsserver/?view=windowsserver2016-ps&preserve-view=true) and [Windows Server 2016 DnsClient module](/powershell/module/dnsclient/?view=windowsserver2016-ps&preserve-view=true).
+
+## DNS client
+
+The DNS client service now offers enhanced support for computers with more than one network interface.
+
+Multi-homed computers can also use DNS client service binding to improve server resolution:
+
+- When you use a DNS server configured on a specific interface to resolve a DNS query, the DNS client binds to the interface before sending the query. This binding lets the DNS client specify the interface where name resolution should take place, optimizing communications between applications and DNS client over the network interface.
+
+- If the DNS server you're using was designated by a Group Policy setting from the Name Resolution Policy Table (NRPT), the DNS client service doesn't bind to the specified interface.
+
+> [!NOTE]
+> Changes to the DNS Client service in Windows 10 are also present in computers running Windows Server 2016 and later.
