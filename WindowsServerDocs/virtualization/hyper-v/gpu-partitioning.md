@@ -87,7 +87,7 @@ Consider the following limitations when using the GPU partitioning feature:
 
 - You can assign only a single GPU partition to a VM.
 
-- Partition are auto-assigned to the VMs. You can't choose a specific partition for a specific VM.
+- Partitions are auto-assigned to the VMs. You can't choose a specific partition for a specific VM.
 
 :::zone pivot="azure-stack-hci"
 

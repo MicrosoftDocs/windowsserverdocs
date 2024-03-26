@@ -32,11 +32,11 @@ This article describes how to configure graphics processing unit (GPU) partition
 
 To provision the GPU partitioning feature, you'll need to complete the following steps:
 
-1. [Complete all the prerequisites](#prerequisites).
-1. [Verify GPU driver installation](#verify-gpu-driver-installation).
-1. [Configure partition count](#configure-gpu-partition-count).
-1. [Assign GPU partition to a VM](#assign-gpu-partition-to-a-vm).
-1. [If necessary, unassign a GPU partition from a VM](#unassign-a-partition-from-a-vm).
+- [Complete all the prerequisites](#prerequisites).
+- [Verify GPU driver installation](#verify-gpu-driver-installation).
+- [Configure partition count](#configure-gpu-partition-count).
+- [Assign GPU partition to a VM](#assign-gpu-partition-to-a-vm).
+- [If necessary, unassign a GPU partition from a VM](#unassign-a-partition-from-a-vm).
 
 ## Prerequisites
 
