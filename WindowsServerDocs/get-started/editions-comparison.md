@@ -157,8 +157,6 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 
 3. When installed as Server with Desktop Experience
 
-4. Not supported in Azure
-
 ::: zone-end
 
 :::zone pivot="windows-server-2022"
@@ -261,7 +259,7 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 > | TFTP Client                                      |                                                                | <sup>&#160;&#160;&#8201;</sup><sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>&sup3;     | <sup>&#160;&#160;&#8201;</sup><sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>&sup3;| <sup>&#160;&#160;&#8201;</sup><sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>&sup3; |
 > | Virtualization                                   |                                                                | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                         | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                    | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                     |
 > |                                                  | Containers                                                     | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                         | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                    | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                     |
-> |                                                  | Container Portability &#8309;                                  | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                         | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                    | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                     |
+> |                                                  | Container Portability &#8308;                                  | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                         | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                    | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                     |
 > |                                                  | Hyper-V                                                        | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                         | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                    | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                     |
 > |                                                  | VM Shielding Tools for Fabric Management                       | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                         | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                    | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                     |
 > | Volume Activation Services                       |                                                                | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                         | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                    | <sub>:::image type="icon" source="../media/yes.svg" border="false":::</sub>                                     |
@@ -298,9 +296,7 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 
 3. When installed as Server with Desktop Experience
 
-4. Not supported in Azure
-
-5. Only when using Windows Server Annual Channel for Containers
+4. Only when using Windows Server Annual Channel for Containers
 
 ::: zone-end
 
@@ -438,8 +434,6 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 1. Activated by Azure and can't be configured as a KMS host
 
 1. When installed as Server with Desktop Experience
-
-1. Not supported in Azure
 
 ::: zone-end
 
