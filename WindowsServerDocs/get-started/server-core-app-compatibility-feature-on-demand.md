@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: wscontent
 manager: femila
 ms.date: 03/07/2023
-ms.prod: windows-server
 ---
 
 # Server Core App Compatibility Feature on Demand

@@ -7,7 +7,7 @@ metadata:
   ms.author: niwashbu
   ms.localizationpriority: medium
   ms.date: 12/02/2019
-  ms.prod: windows-server
+  ms.service: windows-server
 title: Windows Admin Center frequently asked questions
 summary: |
   > Applies to: Windows Admin Center, Windows Admin Center Preview

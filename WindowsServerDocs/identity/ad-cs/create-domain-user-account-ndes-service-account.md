@@ -214,7 +214,7 @@ aren't supported.
 
 Now that you've configured the role service, you can learn detailed information about NDES
 configuration and operation see
-[Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)](https://social.technet.microsoft.com/wiki/contents/articles/9063.network-device-enrollment-service-ndes-in-active-directory-certificate-services-ad-cs.aspx).
+[Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)](/archive/technet-wiki/9063.active-directory-certificate-services-ad-cs-network-device-enrollment-service-ndes).
 
 > [!TIP]
 > If you make configuration changes for NDES or to the certificate templates that are used by NDES,
