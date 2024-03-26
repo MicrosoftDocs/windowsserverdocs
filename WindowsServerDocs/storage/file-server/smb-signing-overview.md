@@ -18,7 +18,7 @@ SMB signing means that every SMB message contains a signature generated using a 
 
 SMB signing is a security feature that uses the session key and cipher suite to add a signature to a message going across a connection. SMB2 message integrity manifests on a signed session where signed packets flow from client to server. On a signed session, every signed packet includes a signature that the receiver can validate. Unlike SMB1 signing which uses the MD5 [RFC1321] hashing algorithm, SMB2 uses a better hashing for signing. The security model in MS-SMB2 relies upon authenticating the client-user identity before accessing a share on the server. After the user is authenticated, the server can mandate message signing or encryption. The server also controls access to the share based on which users, groups, or claims are authorized to have various levels of access.
 
-Signing algorithms have evolved over time, with SMB 2.02 signing was improved with HMAC-SHA-256, replacing the old MD5 method that was in SMB1. Additionally, SMB 3.0 introduced AES-CMAC. Windows Server 2022 and Windows 11 introduced AES-128-GMAC signing acceleration. To learn more about the AES-128-GMAC signing, see [AES-128-GMAC signing acceleration](../storage/file-server/smb-security.md#new-signing-algorithm).
+Signing algorithms have evolved over time, with SMB 2.02 signing was improved with HMAC-SHA-256, replacing the old MD5 method that was in SMB1. Additionally, SMB 3.0 introduced AES-CMAC. Windows Server 2022 and Windows 11 introduced AES-128-GMAC signing acceleration. To learn more about the AES-128-GMAC signing, see [AES-128-GMAC signing acceleration](smb-security.md#new-signing-algorithm).
 
 SMB signing is enabled in all versions of Windows. SMB signing requirements can involve both outbound signing, which covers traffic from the SMB client, and inbound signing, which covers traffic to the server. Windows and Windows Server can require outbound signing only, inbound signing only, both, or neither. If your environment uses third-party servers, your system settings can prevent the default settings and connections from taking effect. In this case, you'll want to disable SMB signing. See [Control SMB signing behavior](smb-signing.md) for guidance on how to disable SMB signing.
 
@@ -77,7 +77,7 @@ Signing is not used when:
 
 ## Related content
 
-- [Control SMB signing behavior](../storage/file-server/smb-signing.md)
+- [Control SMB signing behavior](smb-signing.md)
 
 - [Overview of File Sharing using the SMB 3 protocol in Windows Server](file-server-smb-overview.md)
 
