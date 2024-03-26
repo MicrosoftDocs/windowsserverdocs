@@ -29,21 +29,21 @@ After you assess your current environment, you have to identify the functional l
 
 - Windows native-mode environment to Windows Server 2012, Windows Server 2016. Windows Server 2019, Windows Server 2022 or Windows Server 2025 (Preview)
 
-- Windows Server forest to Windows Server 2012, Windows Server 2016. Windows Server 2019, Windows Server 2022 or Windows Server 2025 (Preview)
+- Windows Server forest to Windows Server 2012, Windows Server 2016, Windows Server 2019, Windows Server 2022, or Windows Server 2025 (Preview)
 
-## Upgrading functional levels in a native Windows 2000 Active Directory forest
+## Upgrading functional levels in a native Windows Active Directory forest
 
-In a Windows 2000 native environment that consists only of Windows 2000-based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
+In a Windows native environment that consists only of Windows-based domain controllers, the functional levels are set by default and they remain at thoselevels until you raise them manually.
 
 - Windows 2000 native domain functional level
 
 - Windows 2000 forest functional level
 
-To use all the forest-level and domain-level features in Windows Server 2008 or Windows Server 2008 R2, you have to upgrade this Windows 2000 environment to Windows Server 2008 or Windows Server 2008 R2. You can perform this upgrade in either of the following ways:
+To use all the forest-level and domain-level features in Windows Server, you have to upgrade your Windows natuive environment to Windows Server 2016. You can perform this upgrade in either of the following ways:
 
-- Introduce newly installed Windows Server 2008 -based or Windows Server 2008 R2 -based domain controllers into the forest, and then retire all domain controllers running Windows 2000.
+- Introduce newly installed Windows Server 2016-based domain controllers into the forest, and then retire all domain controllers running your Windows native environment.
 
-- Perform an in-place upgrade of all existing domain controllers running Windows 2000 in the forest to domain controllers running Windows Server 2003. Then, perform an in-place upgrade of those domain controllers to Windows Server 2008 or Windows Server 2008 R2. For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
+- Perform an in-place upgrade of all existing domain controllers running Windows in the forest to domain controllers running Windows Server 2016. Then, perform an in-place upgrade of those domain controllers to Windows Server. For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
 
     > [!IMPORTANT]
     > Windows Server 2008 R2 is an x64-based operating system. If your server is running an x64-based version of Windows Server 2003, you can successfully perform an in-place upgrade of this computer's operating system to Windows Server 2008 R2. If your server is running an x86-based version of Windows Server 2003, you cannot upgrade this computer to Windows Server 2008 R2.
