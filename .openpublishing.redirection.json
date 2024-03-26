@@ -11522,17 +11522,17 @@
     },
     {
       "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2016.md",
-      "redirect_url": "/windows-server/get-started/editions-comparison",
+      "redirect_url": "/windows-server/get-started/editions-comparison?pivots=windows-server-2016",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2019.md",
-      "redirect_url": "/windows-server/get-started/editions-comparison",
+      "redirect_url": "/windows-server/get-started/editions-comparison?pivots=windows-server-2019",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2022.md",
-      "redirect_url": "/windows-server/get-started/editions-comparison",
+      "redirect_url": "/windows-server/get-started/editions-comparison?pivots=windows-server-2022",
       "redirect_document_id": false
     }
   ]
