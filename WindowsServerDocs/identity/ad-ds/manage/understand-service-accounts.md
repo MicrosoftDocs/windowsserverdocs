@@ -4,7 +4,7 @@ description: Windows Server standalone and group-managed service accounts in Act
 author: robinharwood
 ms.author: roharwoo
 ms.topic: article
-ms.date: 07/21/2022
+ms.date: 03/25/2024
 ---
 
 # Service accounts
@@ -44,7 +44,7 @@ Group-managed service accounts are an extension of standalone managed service ac
 
 A group-managed service account provides the same functionality as a standalone managed service account within the domain, but it extends that functionality over multiple servers. When you're connecting to a service that's hosted on a server farm, such as Network Load Balancing, the authentication protocols that support mutual authentication require all instances of the services to use the same principal. When group-managed service accounts are used as service principals, the Windows Server operating system manages the password for the account instead of relying on the administrator to manage the password.
 
-The Microsoft Key Distribution Service (kdssvc.dll) provides the mechanism to securely obtain the latest key or a specific key with a key identifier for an Active Directory account. This service was introduced in Windows Server 2012, and it doesn't run on earlier versions of the Windows Server operating system. The Key Distribution Service shares a secret, which is used to create keys for the account. These keys are periodically changed. For a group-managed service account, the domain controller computes the password on the key that's provided by the Key Distribution Service, in addition to other attributes of the group-managed service account.
+The Microsoft Key Distribution Service (kdssvc.dll) provides the mechanism to securely obtain the latest key or a specific key with a key identifier for an Active Directory (AD) account. This service was introduced in Windows Server 2012, and it doesn't run on earlier versions of the Windows Server operating system. The Key Distribution Service shares a secret, which is used to create keys for the account. These keys are periodically changed. For a group-managed service account, the domain controller computes the password on the key that's provided by the Key Distribution Service, in addition to other attributes of the group-managed service account.
 
 ### Group-managed practical applications
 
@@ -60,16 +60,22 @@ Group-managed service accounts can be configured and administered only on comput
 
 A 64-bit architecture is required to run the Windows PowerShell commands that are used to administer group-managed service accounts.
 
-A managed service account is dependent on encryption types that are supported by Kerberos. When a client computer authenticates to a server by using the Kerberos protocol, the domain controller creates a Kerberos service ticket that's protected with encryption that the domain controller and the server support. The domain controller uses the account’s *msDS-SupportedEncryptionTypes* attribute to determine what encryption the server supports. If there is no attribute, it assumes that the client computer doesn't support stronger encryption types. The Advanced Encryption Standard (AES) must always be configured for managed service accounts. If computers that host the managed service account are configured to *not* support RC4, authentication will always fail.
+A managed service account is dependent on encryption types that are supported by Kerberos. When a client computer authenticates to a server by using the Kerberos protocol, the domain controller creates a Kerberos service ticket that's protected with encryption that the domain controller and the server support. The domain controller uses the account’s *msDS-SupportedEncryptionTypes* attribute to determine what encryption the server supports. If there's no attribute, it assumes that the client computer doesn't support stronger encryption types. The Advanced Encryption Standard (AES) must always be configured for managed service accounts. If computers that host the managed service account are configured to *not* support RC4, authentication will always fail.
 
 > [!NOTE]
 > Introduced in Windows Server 2008 R2, the Data Encryption Standard (DES) is disabled by default. Group-managed service accounts aren't applicable in Windows operating systems earlier than Windows Server 2012.
 
 For more information about supported encryption types, see [Changes in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560670(v=ws.10)).
 
+## Delegated managed service accounts
+
+Introduced in Windows Server 2025, the addition of a new type of account called delegated Managed Service Account (dMSA) is now supported. This account type enables users to transition from traditional service accounts to machine accounts that have managed and fully randomized keys, while also disabling the original service account passwords. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. By using dMSA, users can prevent the common issue of credential harvesting using a compromised account that is associated with traditional service accounts.
+
+Users have the option to create a dMSA as a standalone account or replace an existing standard service account with it. If an existing account is replaced by a dMSA, authentication using the old account's password is blocked. Instead, the request is redirected to the Local Security Authority (LSA) for authentication using the dMSA, which will have access to the same resources as the previous account in AD. To learn more, see [Delegated Managed Service Accounts overview](/windows-server/security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview).
+
 ## Virtual accounts
 
-Virtual accounts were introduced in Windows Server 2008 R2 and Windows 7. They are managed local accounts that simplify service administration by providing the following benefits:
+Virtual accounts were introduced in Windows Server 2008 R2 and Windows 7. They're managed local accounts that simplify service administration by providing the following benefits:
 
 - The virtual account is automatically managed.
 - The virtual account can access the network in a domain environment.
