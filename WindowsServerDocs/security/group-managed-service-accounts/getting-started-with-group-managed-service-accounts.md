@@ -189,7 +189,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to create msD
   **Example**
 
 ```PowerShell
-New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$
+New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$
 ```
 
 ### <a name="BKMK_ConfigureServiceIdentity"></a>Step 2: Configuring service identity application service
