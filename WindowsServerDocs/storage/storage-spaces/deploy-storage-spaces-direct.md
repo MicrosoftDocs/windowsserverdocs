@@ -320,14 +320,14 @@ Add-ClusterScaleOutFileServerRole -Name SOFS -Cluster FSCLUSTER
 
 After you've created your virtual disks and added them to CSVs, it's time to create file shares on them - one file share per CSV per virtual disk. System Center Virtual Machine Manager (VMM) is probably the handiest way to do this because it handles permissions for you, but if you don't have it in your environment, you can use Windows PowerShell to partially automate the deployment.
 
-Use the scripts included in the [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) script, which partially automates the process of creating groups and shares. It's written for Hyper-V workloads, so if you're deploying other workloads, you might have to modify the settings or perform additional steps after you create the shares. For example, if you're using Microsoft SQL Server, the SQL Server service account must be granted full control on the share and the file system.
+Use the scripts included in the SMB Share Configuration for Hyper-V Workloads script, which partially automates the process of creating groups and shares. It's written for Hyper-V workloads, so if you're deploying other workloads, you might have to modify the settings or perform additional steps after you create the shares. For example, if you're using Microsoft SQL Server, the SQL Server service account must be granted full control on the share and the file system.
 
 > [!NOTE]
 >  You'll have to update the group membership when you add cluster nodes unless you use System Center Virtual Machine Manager to create your shares.
 
 To create file shares by using PowerShell scripts, do the following:
 
-1. Download the scripts included in [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) to one of the nodes of the file server cluster.
+1. Download the scripts included in SMB Share Configuration for Hyper-V Workloads to one of the nodes of the file server cluster.
 2. Open a Windows PowerShell session with Domain Administrator credentials on the management system, and then use the following script to create an Active Directory group for the Hyper-V computer objects, changing the values for the variables as appropriate for your environment:
 
     ```PowerShell
@@ -361,7 +361,7 @@ To create file shares by using PowerShell scripts, do the following:
 
 ### Step 4.3 Enable Kerberos constrained delegation
 
-To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a). Here's a little wrapper for the script:
+To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in SMB Share Configuration for Hyper-V Workloads. Here's a little wrapper for the script:
 
 ```PowerShell
 $HyperVClusterName = "Compute01"

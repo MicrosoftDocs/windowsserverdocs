@@ -212,7 +212,7 @@ Software Inventory Logging will temporarily store hourly collections of data if 
 > If for any reason managing the retention duration of data logged locally by SIL becomes important, this can be configured by changing the registry value here: \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. The default is ‘30' for 30 days.
 
 ## <a name="BKMK_Step6"></a>Reading data logged and published by Software Inventory Logging
-Data logged by SIL, but stored locally (if the forward to the target URI fails), or data that is successfully forwarded to the target aggregation server, is stored in a binary file (for each day's data). To display this data in PowerShell, use the [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx) cmdlet.
+Data logged by SIL, but stored locally (if the forward to the target URI fails), or data that is successfully forwarded to the target aggregation server, is stored in a binary file (for each day's data). To display this data in PowerShell, use the [Import-BinaryMiLog](/powershell/module/cimcmdlets/import-binarymilog) cmdlet.
 
 ## <a name="BKMK_Step7"></a>Software Inventory Logging Security
 Administrative privileges on the local server are required to successfully retrieve data from Software Inventory Logging WMI and PowerShell APIs.
