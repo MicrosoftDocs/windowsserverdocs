@@ -510,8 +510,6 @@
           href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md
         - name: Hyper-V network virtualization technical details
           href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md
-        - name: What's new in Hyper-V Network virtualization
-          href: sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md
       - name: Internal DNS service (iDNS) for SDN
         href: sdn/technologies/Idns-for-Sdn.md
       - name: Network Controller
