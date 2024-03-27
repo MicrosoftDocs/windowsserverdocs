@@ -45,15 +45,17 @@ Select which architecture type to add and set the `DefaultSecureProtocols` regis
 1. To create and set the `DefaultSecureProtocols` registry key, run the following commands and replace `{value}` with the `DefaultSecureProtocols` value that you selected from [Calculate the value](#prerequisites).
 
     ```powershell
+    # Addresses 64-bit applications
     Get-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
 
+    # Addresses 32-bit applications
     Get-Item -Path "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
     ```
 
 1. Either reboot the machine or restart whichever services are using WinHTTP.
 
 > [!NOTE]
-> To ensure proper addressing for both types of applications on x64 based systems, it's required that both registry keys be present.
+> On x64 based systems, having both registry keys present simultaneously is required to ensure proper addressing for both types of applications.
 
 ---
 
