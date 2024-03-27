@@ -121,7 +121,7 @@ For more information on using GPUs with your VMs and GPU partitioning, see:
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
-- [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json)
+- [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json)
 - [Use GPUs with clustered VMs](/azure-stack/hci/manage/use-gpu-with-clustered-vm)
 - [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
 
