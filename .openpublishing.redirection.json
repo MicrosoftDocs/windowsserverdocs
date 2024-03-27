@@ -11514,6 +11514,11 @@
       "source_path": "WindowsServerDocs/networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/sdn-whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
     }
   ]
 }
