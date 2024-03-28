@@ -10,7 +10,9 @@ ms.topic: article
 
 # Find the current Active Directory schema
 
-<!--For the intro, get more info from the PM about what this process is for--->
+An Active Directory (AD) schema is a set of rules that defines what kinds of object classes you can create in an AD forest. For more information, see [Active Directory schema (AD DS)](/windows/win32/ad/active-directory-schema).
+
+This article walks you through how to find the schema version and Exchange Services schema version that your forest uses.
 
 ## Prerequisites
 
