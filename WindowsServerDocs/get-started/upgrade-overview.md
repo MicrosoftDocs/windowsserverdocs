@@ -49,7 +49,7 @@ delivers the best performance.
 
 > [!TIP]
 >
-> - Beginning with Windows Server 2025, you can upgrade from an older version of Windows Server from Windows Server 2016 and later.
+> - Beginning with Windows Server 2025, you can upgrade from an older version of Windows Server from Windows Server 2012 R2 and later.
 >
 > - With Windows Server 2022 and earlier, you can upgrade to a newer version of Windows Server by up
 > to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019
