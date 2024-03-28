@@ -9,15 +9,15 @@ ms.date: 03/28/2024
 # that my server remains supported and I can use the latest features.
 ---
 
-# Perform an in-place Feature Update of Windows Server
+# Perform a Feature Update of Windows Server
 
-An in-place Feature Update allows you to go from an older operating system to a newer one while keeping
-your settings, server roles, and data intact. This article teaches you how to move to a later
-version of Windows Server by using an in-place Feature Update.
+A Feature Update, also known as an in-place upgrade, allows you to go from an older operating system
+to a newer one while keeping your settings, server roles, and data intact. This article teaches you
+how to move to a later version of Windows Server by using a Feature Update.
 
 > [!IMPORTANT]
 >
-> - This article covers the in-place Windows Server Feature Update process for non-Azure servers and virtual machines (VMs) only. To do an in-place Feature Update of Windows Server running in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+> - This article covers the Windows Server Feature Update process for non-Azure servers and virtual machines (VMs) only. To do a Feature Update of Windows Server running in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 >
 > - For users using Microsoft Entra Connect who're looking to upgrade, see [Microsoft Entra Connect: Upgrade from a previous version to the latest](/entra/identity/hybrid/connect/how-to-upgrade-previous-version).
 
@@ -66,7 +66,7 @@ To collect your information:
 
 After you've collected all of your Windows Server-related information, we recommend that you back up
 your server operating system, apps, and VMs. You must also shut down, quick migrate, or
-live migrate any VMs currently running on the server. You can't have any VMs running during the in-place Feature Update.
+live migrate any VMs currently running on the server. You can't have any VMs running during the Feature Update.
 
 ## Perform the Feature Update
 
@@ -75,7 +75,7 @@ perform the Feature Update. In this section, you use Windows Server Setup to sel
 the Feature Update. Windows Server Setup uses these settings to update your version of Windows Server,
 during which time your computer restarts several times.
 
-To perform the in-place Feature Update:
+To perform the Feature Update:
 
 1. Using **File Explorer**, navigate to the Windows Server Setup media. Then open **setup.exe**.
    For example, if you're using removal media the file path might be _D:\setup.exe_.
@@ -95,11 +95,11 @@ To perform the in-place Feature Update:
 
 1. Review the applicable notices and license terms. If you agree to the terms, select **Accept**.
 
-1. Select **Keep personal files and apps** to choose to do an in-place Feature Update, and then select **Next**.
+1. Select **Keep personal files and apps** to choose to do an Feature Update, and then select **Next**.
 
 1. After Setup finishes analyzing your device, it displays the **Ready to install** screen. To continue the Feature Update, select **Install**.
 
-The in-place Feature Update starts, and you should see a progress bar. After the Feature Update finishes, your server restarts.
+The Feature Update starts, and you should see a progress bar. After the Feature Update finishes, your server restarts.
 
 ## Checking if your Feature Update was successful
 
