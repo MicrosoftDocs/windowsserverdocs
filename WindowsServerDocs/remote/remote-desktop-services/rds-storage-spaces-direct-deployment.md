@@ -53,7 +53,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       - Recommended size: DS2 (increase the size if the domain controller will host more domain objects)
       - Use an automatically generated VNet.
       - Follow the steps to install AD DS.
-5. Set up the file server cluster nodes. You can do this by deploying the [Windows Server 2016 Storage Spaces Direct SOFS cluster Azure template](https://azure.microsoft.com/resources/templates/301-storage-spaces-direct/) or by following steps 6-11 to deploy manually.
+5. Set up the file server cluster nodes. You can do this by deploying the [Windows Server 2016 Storage Spaces Direct SOFS cluster Azure template](/samples/azure/azure-quickstart-templates/storage-spaces-direct/) or by following steps 6-11 to deploy manually.
 6. To manually set up the file server cluster nodes:
    1. Create the first node:
       1. Create a new virtual machine using the Windows Server 2016 image. (Click **New > Virtual Machines > Windows Server 2016.** Select **Resource Manager**, and then click **Create**.)

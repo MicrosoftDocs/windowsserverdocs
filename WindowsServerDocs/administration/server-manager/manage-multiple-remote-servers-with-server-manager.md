@@ -73,7 +73,7 @@ The Server Manager console is included with [Remote Server Administration Tools]
 
 3.  if neither the **Administrative Tools** nor the **Server Manager** tiles are displayed on the **start** screen after installing Remote Server Administration Tools, and searching for Server Manager on the **start** screen does not display results, verify that the **Show administrative tools** setting is turned on. To view this setting, hover the mouse cursor over the upper right corner of the **start** screen, and then click **Settings**. If **Show administrative tools** is turned off, turn the setting on to display tools that you have installed as part of Remote Server Administration Tools.
 
-for more information about running Remote Server Administration Tools for Windows 8 to manage remote servers, see [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=221055) on the TechNet Wiki.
+for more information about running Remote Server Administration Tools for Windows 8 to manage remote servers, see [Remote Server Administration Tools](/troubleshoot/windows-server/system-management-components/remote-server-administration-tools) on the TechNet Wiki.
 
 #### Configure remote management on servers that you want to manage
 

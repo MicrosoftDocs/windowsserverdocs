@@ -20,6 +20,12 @@ This page is updated monthly, so revisit it regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.0.0.340 - March 2023
+
+### Fixed
+- Fixed an issue where the Remote Desktop tool was not working or resizing it would make it unusable
+- Fixed an issue where the text in some languages was garbled
+
 ## Version 0.0.0.332 - December 2023
 
 ### New features

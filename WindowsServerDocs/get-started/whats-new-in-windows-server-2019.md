@@ -74,7 +74,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     protects sensitive data from ransomware by blocking untrusted processes from
     accessing your protected folders.
 
-- [Exploit protection](/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
+- [Exploit protection](/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET) that can
     be easily configured to protect your system and applications.
 
 - [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also known as Code Integrity (CI) policy) was released in Windows Server 2016. We've made deployment easier by including default CI policies. The default policy allows all Windows in-box files and Microsoft applications, such as SQL Server, and blocks known executables that can bypass CI.
@@ -112,6 +112,24 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 - Upgraded HTTP/2's server-side cipher suite negotiation for automatic mitigation of connection failures and ease of deployment.
 
 - Changed our default TCP congestion provider to Cubic to give you more throughput!
+
+### Encrypted networks
+
+Virtual network encryption encrypts virtual network traffic between virtual machines within subnets that have the **Encryption Enabled** label. Encrypted networks also use Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects your data from eavesdropping, tampering, and forgery by anyone with access to the physical network.
+
+For more information, see [Encrypted networks](../networking/sdn/vnet-encryption/sdn-vnet-encryption.md).
+
+### Firewall auditing
+
+[Firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules and access control lists (ACLs) that have logging enabled.
+
+### Virtual network peering
+
+[Virtual network peering](../networking/sdn/vnet-peering/sdn-vnet-peering.md) lets you connect two virtual networks seamlessly. Once peered, the virtual networks appear in monitoring as one.
+
+### Egress metering
+
+[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allow list of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
 
 ## Storage
 
