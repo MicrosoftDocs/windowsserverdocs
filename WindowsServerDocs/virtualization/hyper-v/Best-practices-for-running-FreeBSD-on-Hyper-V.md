@@ -66,7 +66,7 @@ During startup, device nodes are created as new devices are discovered. This can
    ```
    # mount
    /dev/label/rootfs on / (ufs, local, journaled soft-updates)
-   devfs on /dev (devfs, local, mutilabel)
+   devfs on /dev (devfs, local, multilabel)
    ```
 
 ## Use a wireless network adapter as the virtual switch

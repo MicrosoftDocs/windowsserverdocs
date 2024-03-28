@@ -62,7 +62,7 @@ However, individual VM caps are important, as we'll see a bit later.
 
 For simplicity's sake, let's assume each VM has 1 VP, and that our host has 8 LPs. We'll start with an empty host.
 
-To create the "B" tier, the host adminstartor sets the group cap to 50%:
+To create the "B" tier, the host administrator sets the group cap to 50%:
 
 - G = n * C
 - G = 8 * 50%
@@ -165,7 +165,7 @@ LpIndex NodeNumber PackageId CoreId RootVpIndex
 
 ### Example 2 – Print all CPU groups on the host
 
-Here, we'll list all CPU groups on the current host, their GroupId, the group's CPU cap, and the indicies of LPs assigned to that group.
+Here, we'll list all CPU groups on the current host, their GroupId, the group's CPU cap, and the indices of LPs assigned to that group.
 
 Note that valid CPU cap values are in the range [0, 65536], and these values express the group cap in percent (e.g., 32768 = 50%).
 

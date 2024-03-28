@@ -44,7 +44,7 @@ Operating system components that are available as part of the Server Core App Co
 - Failover Cluster Manager (CluAdmin.msc)
 
   > [!NOTE]
-  > Failover Cluster Manager requires adding the Failover Clustering Windows Server feature first, which can be done by running the following command from an an elevated PowerShell session:
+  > Failover Cluster Manager requires adding the Failover Clustering Windows Server feature first, which can be done by running the following command from an elevated PowerShell session:
   >
   > ```PowerShell
   > Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools

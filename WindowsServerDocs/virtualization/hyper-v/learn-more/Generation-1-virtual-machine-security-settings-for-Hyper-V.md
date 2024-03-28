@@ -23,7 +23,7 @@ To enable this option, you must add a key storage drive for the virtual machine.
 
 ## Key storage drive in Hyper-V Manager
 
-A key storage drive provides a small drive to the virtual machine for a BitLocker key to be stored. This allows the virtual machine to encrypt its operating system disk without requiring a virtualized Trusted Platform Module (TPM) chip. The contents of the key storage drive are encrypted by using a Key Protector. The Key Protector authories the Hyper-V host to run the virtual machine. Both the contents of the key storage drive and the Key Protector are stored as part of the virtual machine's runtime state.
+A key storage drive provides a small drive to the virtual machine for a BitLocker key to be stored. This allows the virtual machine to encrypt its operating system disk without requiring a virtualized Trusted Platform Module (TPM) chip. The contents of the key storage drive are encrypted by using a Key Protector. The Key Protector authorizes the Hyper-V host to run the virtual machine. Both the contents of the key storage drive and the Key Protector are stored as part of the virtual machine's runtime state.
 
 To decrypt the contents of the key storage drive and start the virtual machine, the Hyper-V host needs to be either:
 

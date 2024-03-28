@@ -51,7 +51,7 @@ The core scheduler offers the following benefits:
 
 * Use of SMT in guest VMs - The OS and applications running in the guest virtual machine can utilize SMT behavior and programming interfaces (APIs) to control and distribute work across SMT threads, just as they would when run non-virtualized.
 
-The core scheduler is currently used on Azure virtualization hosts, specifically to take advantage of the strong security boundary and low workload variabilty. Microsoft believes that the core scheduler type should be and will continue to be the default hypervisor scheduling type for the majority of virtualization  scenarios.  Therefore, to ensure our customers are secure by default, Microsoft is making this change for Windows Server 2019 now.
+The core scheduler is currently used on Azure virtualization hosts, specifically to take advantage of the strong security boundary and low workload variability. Microsoft believes that the core scheduler type should be and will continue to be the default hypervisor scheduling type for the majority of virtualization  scenarios.  Therefore, to ensure our customers are secure by default, Microsoft is making this change for Windows Server 2019 now.
 
 ### Core scheduler performance impacts on guest workloads
 
@@ -82,7 +82,7 @@ Deploying Hyper-V hosts with the maximum security posture requires use of the hy
 
     2. If the VM has more VPs than LP cores, the VM will be treated as an SMT VM by the core scheduler. However, the VM will not observe other indications that it is an SMT VM. For example, use of the CPUID instruction or Windows APIs to query CPU toplogy by the OS or applications will not indicate that SMT is enabled.
 
-* When an existing VM is explicitly updated from eariler VM versions to version 9.0 through the Update-VM operation, the VM will retain its current value for HwThreadCountPerCore.  The VM will not have SMT force-enabled.
+* When an existing VM is explicitly updated from earlier VM versions to version 9.0 through the Update-VM operation, the VM will retain its current value for HwThreadCountPerCore.  The VM will not have SMT force-enabled.
 
 * On Windows Server 2016, Microsoft recommends enabling SMT for guest VMs.  By default, VMs created on Windows Server 2016 would have SMT disabled, that is HwThreadCountPerCore is set to 1, unless explicitly changed.
 
@@ -97,7 +97,7 @@ The guest virtual machine SMT configuration is set on a per-VM basis. The host a
 
 2. Configure VMs to run as non-SMT
 
-The SMT configuaration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done by using the VM Settings or PowerShell.
+The SMT configuration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done by using the VM Settings or PowerShell.
 
 #### Configuring VM SMT settings using PowerShell
 

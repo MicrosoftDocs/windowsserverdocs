@@ -25,7 +25,7 @@ If you use System Center Operations Manager, the System Center Data Warehouse da
 
 ## Is the KMS client computer activated?
 
-On the KMS client computer, open the **System** control panel, and look for the **Windows is activated** message. Alternatively, run Slmgr.vbs and use the the **/dli** command-line option.
+On the KMS client computer, open the **System** control panel, and look for the **Windows is activated** message. Alternatively, run Slmgr.vbs and use the **/dli** command-line option.
 
 ## The KMS client computer does not activate
 

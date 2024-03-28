@@ -25,7 +25,7 @@ Credential theft attacks are those in which an attacker initially gains highest-
 
     3.  Accounts for legal staff who have access to an organization's bid and contract documents, whether the documents are for their own organization or client organizations
 
-    4.  Product planners who have access to plans and specifications for products in an company's development pipeline, regardless of the types of products the company makes
+    4.  Product planners who have access to plans and specifications for products in a company's development pipeline, regardless of the types of products the company makes
 
     5.  Researchers whose accounts are used to access study data, product formulations, or any other research of interest to an attacker
 

@@ -126,7 +126,7 @@ Work Folders has the following software requirements for client computers:
 
  You can also use Windows Intune to selectively wipe the data from Work Folders on a user's device without affecting the rest of their data – handy for if a user leaves your organization or has their device stolen.
 
-### Web Application Proxy or Microsot Entra Application Proxy
+### Web Application Proxy or Microsoft Entra Application Proxy
  Work Folders is built around the concept of allowing Internet-connected devices to retrieve business data securely from the internal network, which allows users to "take their data with them" on their tablets and devices that would not normally be able to access work files. To do this, a reverse proxy must be used to publish sync server URLs and make them available to Internet clients.
 
 Work Folders supports using Web Application Proxy, Microsoft Entra application proxy or 3rd party reverse proxy solutions:

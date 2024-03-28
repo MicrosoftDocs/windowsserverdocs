@@ -47,7 +47,7 @@ To retrieve the display orientation settings, view the **station settings** for 
 
 ## List of users
 1. Click the **Users** tab in MultiPoint Manager.
-2. Record the **Administrator** and **MultiPoint Dashboard User** accoutns.
+2. Record the **Administrator** and **MultiPoint Dashboard User** accounts.
 3. Record the standard users.
 
 ## VDI template location

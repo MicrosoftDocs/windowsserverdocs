@@ -37,7 +37,7 @@ winsat mfmedia <parameters>
 |-xml \<file name>|Save the output of the assessment as the specified XML file. If the specified file exists, it will be overwritten.|
 |-idiskinfo|Save information about physical volumes and logical disks as part of the **\<SystemConfig>** section in the XML output.|
 |-iguid|Create a globally unique identifier (GUID) in the XML output file.|
-|-note note text|Add the note text to the **\<note>** section in the XML output file.|
+|-note text|Add the note text to the **\<note>** section in the XML output file.|
 |-icn|Include the local computer name in the XML output file.|
 |-eef|Enumerate extra system information in the XML output file.|
 
