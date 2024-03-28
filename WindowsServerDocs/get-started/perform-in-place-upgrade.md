@@ -4,7 +4,7 @@ description: Learn how to perform an in-place upgrade to Windows Server.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 09/14/2023
+ms.date: 03/28/2024
 # Customer intent: As a server administrator, I want perform a Feature Update of Windows Server, so
 # that my server remains supported and I can use the latest features.
 ---
