@@ -1,6 +1,6 @@
 ---
-title: Perform an in-place Feature Update of Windows Server | Microsoft Docs
-description: Learn how to perform an in-place upgrade to Windows Server.
+title: Perform a Feature Update of Windows Server | Microsoft Docs
+description: Learn how to perform a Feature Update of Windows Server, also known as an in-place upgrade.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
