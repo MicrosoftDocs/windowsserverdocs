@@ -133,11 +133,25 @@ Just Enough Administration in Windows Server 2016 is security technology that en
 
 ### Credential Guard
 
-Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. See [Protect derived domain credentials with Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard).
+Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. For more information, see [Protect derived domain credentials with Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard).
+
+Credential Guard for Windows Server 2016 includes the following updates for signed-in user sessions:
+
+- Kerberos and NTLM <!--acronym?--> use virtualization-based security to protect Kerberos amd NTLM secrets for signed-in user sessions.
+
+- Credential Manager protects saved domain credentials using virtualization-based security. Signed-in credentials and saved domain credentials don't pass to remote hosts using Remote Desktop.
+
+- You can enable Credential Guard without a UEFI <!--acronym--> lock.
 
 ### Remote Credential Guard
 
-Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard).
+Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. For more information, see [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard).
+
+Remote Credential Guard for Windows Server 2016 includes the following updates for signed-in users:
+
+- Remote Credential Guard keeps Kerberos and NTLM secrets for signed-in user credentials on the client device. Any authentication requests from the remote host for assessing network resources as the user require the client device to use the secrets.
+
+- Remote Credential Guard protects supplied user credentials when using Remote Desktop.
 
 ### Device Guard (Code Integrity)
 
