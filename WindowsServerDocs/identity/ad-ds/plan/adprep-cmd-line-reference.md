@@ -86,11 +86,11 @@ The following table lists exit codes that Adprep can return after an operation c
 
 ## Examples
 
-The following example prepares a forest for a domain controller that runs Windows Server 2008:
+The following example prepares a forest for a domain controller that runs Windows Server:
 
     adprep /forestprep
 
-The following example prepares a domain for a domain controller that runs Windows Server 2008:
+The following example prepares a domain for a domain controller that runs Windows Server:
 
     adprep /domainprep
 
