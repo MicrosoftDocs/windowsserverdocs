@@ -20,7 +20,7 @@ SMB signing is a security feature that uses the session key and cipher suite to 
 
 Signing algorithms have evolved over time, with SMB 2.02 signing was improved with HMAC-SHA-256, replacing the old MD5 method that was in SMB1. Additionally, SMB 3.0 introduced AES-CMAC. Windows Server 2022 and Windows 11 introduced AES-128-GMAC signing acceleration. To learn more about the AES-128-GMAC signing, see [AES-128-GMAC signing acceleration](smb-security.md#new-signing-algorithm).
 
-SMB signing is enabled in all versions of Windows. SMB signing requirements can involve both outbound signing, which covers traffic from the SMB client, and inbound signing, which covers traffic to the server. Windows and Windows Server can require outbound signing only, inbound signing only, both, or neither. If your environment uses non-Microsoft file servers, your system settings can prevent the default settings and connections from taking effect. In this case, you might want to disable SMB signing. See [Control SMB signing behavior](smb-signing.md) for guidance on how to disable SMB signing.
+SMB signing is enabled in all versions of Windows. SMB signing requirements can involve both outbound signing, which covers traffic from the SMB client, and inbound signing, which covers traffic to the server. Windows and Windows Server can require outbound signing only, inbound signing only, both, or neither. If your environment uses non-Microsoft file servers, your system settings can prevent the default settings and connections from taking effect. In this case, you might need to disable the requirement for SMB signing. See [Control SMB signing behavior](smb-signing.md) for guidance on how to disable SMB signing.
 
 ### Security considerations in SMB2 and SMB3
 
@@ -32,7 +32,7 @@ When using SMB signing, you should consider:
 - Using Kerberos instead of NTLMv2 is recommended so that your session key starts strong.
 - Don't connect to shares by using IP addresses or CNAME records, otherwise NTLM is used instead of Kerberos. We recommend using Kerberos. To learn more about alternatives to using CNAME records, see [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064).
 
-By default, domain controllers require SMB signing of anyone connecting to them, typically for SYSVOL and NETLOGON to get group policy and logon scripts. UNC Hardening from the client also requires signing when talking to those same two shares and goes further by requiring Kerberos.
+By default, domain controllers require SMB signing of anyone connecting to them, typically for SYSVOL and NETLOGON to get group policy and logon scripts. UNC Hardening from the client also requires signing when talking to those same two shares and goes further by requiring Kerberos. SMB signing is also automatically used as part of pre-authentication integrity to prevent downgrade attacks. See [SMB 3.1.1 Pre-authentication integrity in Windows 10](https://learn.microsoft.com/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10?WT.mc_id=ITOPSTALK-blog-abartolo) for more information.
 
 ## Policy locations for SMB signing
 
@@ -43,22 +43,12 @@ The policies for SMB signing are located in **Computer Configuration** > **Windo
   Registry value: **RequireSecuritySignature**  
   Data Type: `REG_DWORD`  
   Data: 0 (disable), 1 (enable)
-- **Microsoft network client: Digitally sign communications (if server agrees)**  
-  Registry key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters`  
-  Registry value: **EnableSecuritySignature**  
-  Data Type: `REG_DWORD`  
-  Data: 0 (disable), 1 (enable)
 - **Microsoft network server: Digitally sign communications (always)**  
   Registry key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters`  
   Registry value: **RequireSecuritySignature**  
   Data Type: `REG_DWORD`
   Data: 0 (disable), 1 (enable)
-- **Microsoft network server: Digitally sign communications (if client agrees)**  
-  Registry key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters`  
-  Registry value: **EnableSecuritySignature**  
-  Data Type: `REG_DWORD`  
-  Data: 0 (disable), 1 (enable)
-
+s
 **Note** In these policies *always* indicates that SMB signing is required, and *if server agrees* or *if client agrees* indicates that SMB signing is enabled.
 
 ### Understanding "RequireSecuritySignature" and "EnableSecuritySignature"
