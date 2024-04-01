@@ -112,7 +112,7 @@ sections:
 
       - question: Which specific Azure clouds support Windows LAPS?
         answer: |
-          See [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps) and 
+          See [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps) and 
           [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information
           on which specific clouds are supported.
 
