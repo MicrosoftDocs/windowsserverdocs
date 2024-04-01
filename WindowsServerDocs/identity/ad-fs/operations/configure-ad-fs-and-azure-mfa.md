@@ -6,7 +6,7 @@ author: billmath
 manager: amycolannino
 ms.date: 03/13/2024
 ms.topic: article
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # Configure Microsoft Entra multifactor authentication as authentication provider using AD FS
