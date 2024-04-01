@@ -116,7 +116,7 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 
 ## Support statement
 
-Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=46899). Windows LAPS shipped as part of Windows Updates released on April 11, 2023 for the platforms listed in [Windows LAPS and Microsoft Entra ID](laps-overview.md#laps-overview.md#windows-laps-and-microsoft-entra-id).
+Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=46899). Windows LAPS shipped as part of Windows Updates released on April 11, 2023 for the platforms listed in [Windows LAPS and Microsoft Entra ID](laps-overview.md#windows-laps-and-microsoft-entra-id).
 
 Microsoft and its support delivery organization offer assisted support for both Microsoft LAPS and Windows LAPS including interoperability between the two products.
 
