@@ -187,5 +187,5 @@ Although they are not listed in the Server Manager console **Tools** menu, Windo
 
 ## See Also
 >- [Remote Server Administration Tools for Windows 10](https://go.microsoft.com/fwlink/?LinkID=404281)
->- [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](https://go.microsoft.com/fwlink/p/?LinkID=221055)
+>- [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](/archive/technet-wiki/)
 '
