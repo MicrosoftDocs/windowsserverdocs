@@ -18,8 +18,8 @@ Following are the versions of Windows Server that are supported as guest operati
 
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|
 |-------------------------------------|----------------------------------------|------------------------|---------|
-|Windows Server 2025 |2,048 for generation 2;<br>64 for generation 1;<br>1024 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2025 and later |
-|Windows Server 2022 |240 for generation 2;<br>64 for generation 1;<br>1024 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2019 and later, Azure Stack HCI, version 20H2 and later.|
+|Windows Server 2025 |2,048 for generation 2;<br>64 for generation 1;<br>2,048 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2025 and later |
+|Windows Server 2022 |240 for generation 2;<br>64 for generation 1;<br>1,024 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2019 and later, Azure Stack HCI, version 20H2 and later.|
 |Windows Server 2019 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
 |Windows Server 2016 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
 |Windows Server 2012 R2 |64|Built-in||
