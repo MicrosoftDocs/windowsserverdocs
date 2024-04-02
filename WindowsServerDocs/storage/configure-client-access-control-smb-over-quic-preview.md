@@ -4,7 +4,7 @@ description: Learn how to configure SMB over QUIC client access control using Po
 ms.topic: how-to
 author: gswashington
 ms.author: nedpyle
-ms.date: 03/27/2024
+ms.date: 04/02/2024
 #customer intent: As an administrator, I want to configure SMB over QUIC client access control in Windows Server so that I can restrict which clients can access SMB over QUIC servers.
 ---
 
@@ -13,7 +13,7 @@ ms.date: 03/27/2024
 > [!IMPORTANT]
 > Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-SMB over QUIC Client Access Control (CAC) enables you to restrict which clients can access SMB over QUIC servers, creating an allowlist for trusted devices to connect to the file server. This gives organizations more protection but does not change the Windows authentication used to make the SMB connection nor does it alter the end user experience.
+SMB over QUIC Client Access Control (CAC) enables you to restrict which clients can access SMB over QUIC servers, creating an allowlist for trusted devices to connect to the file server. CAC gives organizations more protection but doesn't change the authentication used when making the SMB connection, nor does it alter the end user experience.
 
 This article explains how to configure SMB over QUIC Client Access Control (CAC) using PowerShell in Windows and Windows Server.
 
@@ -21,13 +21,13 @@ To learn more about SMB over QUIC, see [SMB over QUIC](../file-server/smb-over-q
 
 ## How Client Access Control work
 
-SMB over QUIC CAC controls access by making any client trying to access a server require a shared root authority key. The admin issues this certificate to the client and adds the hash to an allow list maintained by the server. When the client tries to connect to the server, the server compares the client certificate info against the allow list. If the certificate is valid, the server certificate creates a TLS 1.3-encrypted tunnel over UDP port 443 and grants the client access to the share. SMB over QUIC CAC also supports  certificates with subject alternative names, not just a single subject.
+SMB over QUIC CAC controls access by making any client trying to access a server require a shared root authority key. The admin issues this certificate to the client and adds the hash to an allowlist maintained by the server. When the client tries to connect to the server, the server compares the client certificate info against the allowlist. If the certificate is valid, the server certificate creates a TLS 1.3-encrypted tunnel over UDP port 443 and grants the client access to the share. SMB over QUIC CAC also supports  certificates with subject alternative names, not just a single subject.
 
-You can also configure SMB over QUIC to block access by revoking certificates or explicitly denying certain devices or users access. For example, you can configure SMB over QUIC to block connection requests from third-party users or unsupported devices that use earlier, less secure SMB dialects.
+You can also configure SMB over QUIC to block access by revoking certificates or explicitly denying certain devices or users access. For example, you can configure SMB over QUIC to block connection requests from non-Microsoft users or unsupported devices that use earlier, less secure SMB dialects.
 
 ## Prerequisites
 
-Before you can configure SMB over QUIC CAC, you an *SMB server* with the following:
+Before you can configure SMB over QUIC CAC, you need an *SMB server* with the following prerequisites.
 
 - An SMB server running on one of the following operating systems:
   - [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later.
@@ -36,12 +36,12 @@ Before you can configure SMB over QUIC CAC, you an *SMB server* with the followi
 - If you're using client certificates issues by a different certificate authority (CA) than the server, you need to ensure that the CA is trusted by the server.
 - Administrative privileges for the SMB server you're configuring.
 
-You also need an *SMB client* with the following:
+You also need an *SMB client* with the following prerequisites.
 
 - An SMB client running on one of the following operating systems:
   - [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later.
   - [Windows 11 Insider Preview Build 25977 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/18/announcing-windows-11-insider-preview-build-25977-canary-channel/) or later.
-- A client certificate which is:
+- A client certificate that is:
   - Issued by a certificate authority trusted by the SMB server.
   - Installed in the client's certificate store.
   - Administrative privileges for the SMB server you're configuring.
@@ -63,13 +63,13 @@ To gather your client certificate hash using PowerShell:
    Get-ChildItem -Path Cert:\LocalMachine\My
    ```
 
-1. Run the following command to store the certificate in a variable by replacing `<subject name>` with the subject name of the certificate you want to use.
+1. Run the following command to store the certificate in a variable. Replace `<subject name>` with the subject name of the certificate you want to use.
 
    ```powershell
    $clientCert = Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object {$_.Subject -Match "<subject name>"}
    ```
 
-1. Make a note of client certificate SHA256 hash by running the following command. You'll need this when configuring client access control.
+1. Make a note of client certificate SHA256 hash by running the following command. You need this hash when configuring client access control.
 
    ```powershell
    $clientCert.GetCertHashString("SHA256")
@@ -84,17 +84,17 @@ To map the client certificate to the SMB client:
 
 1. Open an elevated PowerShell prompt on the SMB client.
 
-1. Run the `New-SmbClientCertificateMapping` command to map the client certificate to the SMB client. Replace `<namespace>` with the SMB servers fully qualified domain nanme (FQDN) and use the SHA1 client certificate thumbprint you gathered in the previous section.
+1. Run the `New-SmbClientCertificateMapping` command to map the client certificate to the SMB client. Replace `<namespace>` with the SMB servers fully qualified domain name (FQDN) and use the SHA1 client certificate thumbprint you gathered in the previous section.
 
    ```powershell
    New-SmbClientCertificateMapping -Namespace <namespace> -Thumbprint $clientCert.Thumbprint -StoreName My
    ```
 
-You're client certificated will now be used by the SMB client to authenticate to the SMB server matching the FQDN.
+Once complete, your client certificated is used by the SMB client to authenticate to the SMB server matching the FQDN.
 
 ## Grant individual clients using CAC
 
-To grant a specific client access to the SMB server using CAC use the following steps.
+Follow the steps to grant a specific client access to the SMB server using CAC.
 
 1. Sign in to the SMB server.
 
@@ -110,7 +110,7 @@ You've now granted access to the client certificate. You can verify the client c
 
 ## Grant specific certification authorities using CAC
 
-To grant clients from a specific issuer access to the SMB server using CAC use the following steps.
+Follow the steps to grant clients from a specific certification authority, also known as an issuer, using CAC.
 
 1. Sign in to the SMB server.
 
@@ -130,13 +130,13 @@ When you're finished, test whether you can connect to the server by running one 
 NET USE \\server DNS name\share /TRANSPORT:QUIC
 ```
 
-or
+Or
 
 ```powershell
 New-SmbMapping -RemotePath \\server DNS name\share -TransportType QUIC
 ```
 
-If you can connect to the server, you've successfully configured SMB over QUIC CAC.
+If you can connect to the server, you've successfully configured SMB over QUIC using CAC.
 
 ## Related content
 
