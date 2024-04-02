@@ -43,6 +43,7 @@ The policies for SMB signing are located in **Computer Configuration** > **Windo
   Registry value: **RequireSecuritySignature**  
   Data Type: `REG_DWORD`  
   Data: 0 (disable), 1 (enable)
+  
 - **Microsoft network server: Digitally sign communications (always)**  
   Registry key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters`  
   Registry value: **RequireSecuritySignature**  
