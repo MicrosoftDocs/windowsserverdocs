@@ -72,13 +72,13 @@ To gather your client certificate hash using PowerShell:
 1. Make a note of client certificate SHA256 hash by running the following command. You'll need this when configuring client access control.
 
    ```powershell
-   $clientCert.GetCertHashString("SHA256")`
+   $clientCert.GetCertHashString("SHA256")
    ```
 
 > [!NOTE]
 > The thumbprint algorithm is SHA1 stored in the `$clientCert` object. This is used by commands like `New-SmbClientCertificateMapping`. You'll also need SHA256 thumbprint to configure client access control, these thumbprints will be different devired using different algorithms against the same certificate.
 
-## Map client cerficate to the SMB client
+## Map client certificate to the SMB client
 
 To map the client certificate to the SMB client:
 
@@ -94,6 +94,8 @@ You're client certificated will now be used by the SMB client to authenticate to
 
 ## Grant individual clients using CAC
 
+To grant a specific client access to the SMB server using CAC use the following steps.
+
 1. Sign in to the SMB server.
 
 1. Open an elevated PowerShell prompt on the SMB server.
@@ -101,14 +103,24 @@ You're client certificated will now be used by the SMB client to authenticate to
 1. Run the `Grant-SmbClientAccessToServer` to grant access to the client certificate. Replace `<name>` with the SMB servers hostname and `<thumbprint>` using the SHA256 client certificate thumbprint you gathered in the [Gather the SMB client certificate information](#gather-the-smb-client-certificate-information) section.
 
    ```powershell
-   Grant-SmbClientAccessToServer -Name <name> -Thumbprint <thumbprint>
+   Grant-SmbClientAccessToServer -Name <name> -IdentifierType SHA256 -Identifier <thumbprint>
    ```
 
 You've now granted access to the client certificate. You can verify the client certificate access by running the `Get-SmbClientAccessToServer` command.
 
 ## Grant specific certification authorities using CAC
 
-TODO:
+To grant clients from a specific issuer access to the SMB server using CAC use the following steps.
+
+1. Sign in to the SMB server.
+
+1. Open an elevated PowerShell prompt on the SMB server.
+
+1. Run the `Grant-SmbClientAccessToServer` to grant access to the client certificate. Replace `<name>` with the SMB servers hostname and `<subject name>` with the complete X.500 distinguished name of the issuer certificate. For example, `CN=Contoso CA, DC=Contoso, DC=com`.
+
+   ```powershell
+   Grant-SmbClientAccessToServer -Name <name> -IdentifierType ISSUER -Identifier "<subject name>"
+   ```
 
 ## Connect to the SMB server using SMB over QUIC
 
