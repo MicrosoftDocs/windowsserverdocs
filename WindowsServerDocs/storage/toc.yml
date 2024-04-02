@@ -97,6 +97,8 @@ items:
       href: file-server/smb-secure-traffic.md
     - name: Protect SMB traffic from interception
       href: file-server/smb-interception-defense.md
+    - name: SMB signing
+      href: file-server/smb-signing-overview.md
     - name: Control SMB signing behavior
       href: file-server/smb-signing.md
     - name: Configure alternative SMB ports
