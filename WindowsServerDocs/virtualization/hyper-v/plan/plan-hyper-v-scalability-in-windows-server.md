@@ -17,7 +17,7 @@ This article gives you details about the maximum configuration for components yo
 
 ## Maximums for virtual machines
 
-These maximums apply to each virtual machine. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md)
+These maximums apply to each virtual machine when running selected product version as the guest operating system. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md)
 
 :::zone pivot="windows-server-2025"
 
@@ -100,7 +100,7 @@ These maximums apply to each virtual machine. Not all components are available i
 
 ## Maximums for Hyper-V hosts
 
-These maximums apply to each Hyper-V host.
+These maximums apply to each Hyper-V host running the selected product version.
 
 :::zone pivot="windows-server-2025"
 
