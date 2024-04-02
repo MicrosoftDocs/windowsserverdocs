@@ -4,7 +4,7 @@ description: Find out what is new in Windows Server 2022.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 10/19/2023
+ms.date: 04/02/2024
 ---
 
 # What's new in Windows Server 2022
@@ -350,7 +350,7 @@ To learn more about the gMSA improvements, see [Create gMSAs for Windows contain
 
 #### IPv6 support
 
-Kubernetes in Windows now supports the IPV6 dual stack in L2Bridge-based networks in Windows Server.IPv6 is dependent on the CNI that Kubernetes uses, and also requires Kubernetes version 1.20 or later to enable end-to-end IPv6 support. For more information, see [IPv4/IPv6 in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#ipv4-ipv6-dual-stack).
+Kubernetes in Windows now supports the IPV6 dual stack in L2Bridge-based networks in Windows Server. IPv6 is dependent on the CNI that Kubernetes uses, and also requires Kubernetes version 1.20 or later to enable end-to-end IPv6 support. For more information, see [IPv4/IPv6 in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#ipv4-ipv6-dual-stack).
 
 #### Multi-subnet support for Windows worker nodes with Calico for Windows
 
@@ -364,7 +364,7 @@ HostProcess containers have the following benefits:
 
 - Cluster users no longer need to sign in and individually configure each Windows node for administrative tasks and management of Windows services.
 - Users can utilize the container model to deploy management logic to as many clusters as needed.
-- Users can build HostProcess containers on top of existing Windows server 2019 or later base images, manage them using Windows container runtime, and run as any user available in the domain of the host machine.
+- Users can build HostProcess containers on top of existing Windows Server 2019 or later base images, manage them using Windows container runtime, and run as any user available in the domain of the host machine.
 - HostProcess containers provide the best way to manage Windows nodes in Kubernetes.
 
 For more information, see [Windows HostProcess Containers](https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/).
