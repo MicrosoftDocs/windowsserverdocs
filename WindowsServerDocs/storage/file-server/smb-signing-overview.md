@@ -50,7 +50,8 @@ The policies for SMB signing are located in **Computer Configuration** > **Windo
   Data Type: `REG_DWORD`
   Data: 0 (disable), 1 (enable)
   
-**Note** In these policies *always* indicates that SMB signing is required.
+>[!Note]
+>In these policies *always* indicates that SMB signing is required.
 
 ### Understanding "RequireSecuritySignature" and "EnableSecuritySignature"
 
