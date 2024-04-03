@@ -84,6 +84,8 @@ items:
       href: file-server/smb-direct.md
     - name: SMB over QUIC
       href: file-server/smb-over-quic.md
+    - name: Configure client access control for SMB over QUIC
+      href: file-server/configure-smb-over-quic-client-access-control.md
     - name: SMB compression
       href: file-server/smb-compression.md
     - name: Configure SMB authentication rate limiter
