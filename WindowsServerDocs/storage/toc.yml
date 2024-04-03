@@ -93,6 +93,7 @@ items:
     - name: SMB security enhancements
       href: file-server/smb-security.md
     - name: Manage SMB dialects
+      href: file-server/manage-smb-dialects.md
     - name: 'SMB: File and printer sharing ports should be open'
       href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
     - name: Secure SMB traffic
