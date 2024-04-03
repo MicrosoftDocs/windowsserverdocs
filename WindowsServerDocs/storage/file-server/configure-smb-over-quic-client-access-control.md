@@ -17,7 +17,7 @@ SMB over QUIC client access control enables you to restrict which clients can ac
 
 This article explains how to configure client access control for SMB over QUIC using PowerShell in Windows and Windows Server.
 
-To learn more about configuring SMB over QUIC, see [SMB over QUIC](../file-server/smb-over-quic.md).
+To learn more about configuring SMB over QUIC, see [SMB over QUIC](smb-over-quic.md).
 
 ## How client access control works
 
@@ -32,7 +32,7 @@ Before you can configure client access control, you need an *SMB server* with th
 - An SMB server running on one of the following operating systems:
   - [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later.
   - [Windows 11 Insider Preview Build 25977 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/18/announcing-windows-11-insider-preview-build-25977-canary-channel/) or later.
-- SMB over QUIC enabled and configured on the server. To learn how to configure SMB over QUIC, see [SMB over QUIC](../file-server/smb-over-quic.md).
+- SMB over QUIC enabled and configured on the server. To learn how to configure SMB over QUIC, see [SMB over QUIC](smb-over-quic.md).
 - If you're using client certificates issued by a different certificate authority (CA), you need to ensure that the CA is trusted by the server.
 - Administrative privileges for the SMB server you're configuring.
 
@@ -142,7 +142,7 @@ If you can connect to the server, you've successfully configured SMB over QUIC u
 
 ## Related content
 
-- [SMB over QUIC](/file-server/smb-over-quic)
+- [SMB over QUIC](smb-over-quic.md)
 
 - [Storage at Microsoft blog](https://aka.ms/FileCab)
 
