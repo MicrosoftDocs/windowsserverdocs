@@ -84,6 +84,8 @@ items:
       href: file-server/smb-direct.md
     - name: SMB over QUIC
       href: file-server/smb-over-quic.md
+    - name: Configure client access control for SMB over QUIC
+      href: file-server/configure-smb-over-quic-client-access-control.md
     - name: SMB compression
       href: file-server/smb-compression.md
     - name: Configure SMB authentication rate limiter
@@ -97,6 +99,8 @@ items:
       href: file-server/smb-secure-traffic.md
     - name: Protect SMB traffic from interception
       href: file-server/smb-interception-defense.md
+    - name: SMB signing
+      href: file-server/smb-signing-overview.md
     - name: Control SMB signing behavior
       href: file-server/smb-signing.md
     - name: Configure alternative SMB ports

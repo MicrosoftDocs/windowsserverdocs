@@ -195,8 +195,7 @@ Configure automatic updates under **Computer Configuration\Administrative Templa
   |**7 - Auto Download, Notify to install, Notify to Restart**|*This option is available only in Windows Server SKU, versions 2016 and later.* With this option, local administrators can use Windows Update to proceed with installations or reboots manually. Windows downloads applicable updates to the device, and notifies users that updates are ready to be installed. Once updates are installed, users are notified to restart the device.|
 
 > [!NOTE]
-> Microsoft ships the Windows Server OS with the Automatic Update Options policy configured to **3** in the registry. This isn't reflected in the GPO editor. If an admin configures the Automatic Update Options policy to a different setting, the new setting will take affect. Setting the Automatic Update Options policy to "Not Configured" will still allow automatically downloading and installing updates if the admin configures Automatic Updates through the Control Panel.
-
+> Microsoft ships the Windows Server OS with the Automatic Update Options policy configured to **3** in the registry. This isn't reflected in the GPO editor. If an admin configures the Automatic Update Options policy to a different setting, the new setting will take affect. Setting the Automatic Update Options policy to "Not Configured" will result in the behavior of automatically downloading and installing updates. 
 #### Delay restart for scheduled installations
 
 Specifies the amount of time automatic updates wait before proceeding with a scheduled restart.
