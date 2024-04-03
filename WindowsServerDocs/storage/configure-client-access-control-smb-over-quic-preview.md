@@ -49,9 +49,9 @@ You also need an *SMB client* with the following prerequisites.
 > [!NOTE]
 > We recommend using SMB over QUIC with Active Directory domains, however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM.
 
-## Configure client access control
+## Configure the SMB client
 
-## Gather the SMB client certificate information
+### Gather the SMB client certificate information
 
 To gather your client certificate hash using PowerShell:
 
@@ -78,7 +78,7 @@ To gather your client certificate hash using PowerShell:
 > [!NOTE]
 > The thumbprint stored in the `$clientCert` object uses the SHA1 algorithm. This is used by commands like `New-SmbClientCertificateMapping`. You'll also need the SHA256 thumbprint to configure client access control, these thumbprints will be different derived using different algorithms against the same certificate.
 
-## Map the client certificate to the SMB client
+### Map the client certificate to the SMB client
 
 To map the client certificate to the SMB client:
 
@@ -92,7 +92,9 @@ To map the client certificate to the SMB client:
 
 Once complete, the client certificated is used by the SMB client to authenticate to the SMB server matching the FQDN.
 
-## Grant individual clients
+## Configure client access control
+
+### Grant individual clients
 
 Follow the steps to grant a specific client access to the SMB server using client access control.
 
@@ -108,7 +110,7 @@ Follow the steps to grant a specific client access to the SMB server using clien
 
 You've now granted access to the client certificate. You can verify the client certificate access by running the `Get-SmbClientAccessToServer` command.
 
-## Grant specific certification authorities
+### Grant specific certification authorities
 
 Follow the steps to grant clients from a specific certification authority, also known as an issuer, using client access control.
 
