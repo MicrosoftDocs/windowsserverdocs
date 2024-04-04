@@ -1,11 +1,10 @@
 ---
-title: 
-description: 
-author: 
-ms.author: 
-manager: 
-ms.date: 
-ms.topic: article
+title: Find the current Active Directory Schema version
+description: This article describes how to find the current Schema version in Active Directory for Windows Server.
+author: Heidilohr
+ms.author: wscontent
+ms.date: 04/03/2024
+ms.topic: how-to
 ---
 
 # Find the current Active Directory schema
@@ -16,29 +15,34 @@ This article walks you through how to find the schema version and Exchange Servi
 
 ## Prerequisites
 
-In order to perform the tasks described in this article, you need the following things:
+In order to perform the tasks described in this article, your environment must meet the following requirements:
 
-- Admin-level permissions
+- Your machine should run Microsoft Exchange Server 2016 or later.
+- You must install the Active Directory Domain Services (AD DS) role. To learn more, see [Install or uninstall roles, role services, or features](../../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md).
+- The server must be a domain controller (DC).
+- Users must be part of the Domain Admins or Enterprise Admins groups.
 
 ## Finding the schema version
 
 To find the current Active Directory schema version:
 
 > [!NOTE]
-> The internal root domain that we use in this demo is **contoso.local**.
+> The internal root domain that we use in this demo is **contoso.local**. You'll need to modify the DC= field to correspond with the AD configuration in your own environment.
+>
+>Depending on your configuration, you might also need to import the AD PowerShell module by running the `Import-Module ActiveDirectory` command before you can start running AD cmdlets.
 
-#### [Active Directory](#tab/active-directory)
+#### [GUI](#tab/gui)
 
 1. Use *ADSIEdit.msc* or *LDP.exe* to navigate to:  
     **CN=Schema,CN=Configuration,DC=contoso,DC=local**.
 
 1. Review the **objectVersion** attribute.
 
-#### [Command-line interface](#tab/cli)
+#### [CMD](#tab/cmd)
 
 Use the `DSQuery` command line. Run the following command:
 
-```console
+```cmd
 dsquery * "cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr objectVersion
 ```
 
@@ -76,18 +80,18 @@ To find the current Exchange Schema Version, you can use one of the following me
 >[!Note]
 >The internal root domain that we use in this demo is **contoso.local**.
 
-#### [Active Directory](#tab/active-directory)
+#### [GUI](#tab/gui)
 
 1. Use *ADSIEdit.msc* or *LDP.exe* to navigate to:  
    **CN=ms-Exch-Schema-Version-Pt, CN=Schema,CN=Configuration,DC=contoso,DC=local**
 
 2. Review the current **rangeUpper** attribute.
 
-#### [Command-line interface](#tab/cli)
+#### [CMD](#tab/cmd)
 
 Use the `DSQuery` command line:
 
-```console
+```cmd
 dsquery * "CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr rangeUpper
 ```
 
