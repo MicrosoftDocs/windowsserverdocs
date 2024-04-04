@@ -1,36 +1,54 @@
 ---
 title: Deploy graphics devices by using Discrete Device Assignment
 description: Learn how to use DDA to deploy graphics devices in Windows Server and how to mount a GPU to a virtual machine.
-ms.topic: article
+ms.topic: how-to
 ms.author: wscontent
 author: robinharwood
-ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
-ms.date: 06/08/2023
+ms.date: 04/04/2024
 ---
 # Deploy graphics devices by using Discrete Device Assignment
 
-> Applies to: Windows Server 2022, Windows Server 2019, Microsoft Hyper-V Server 2019, Windows Server 2016, Microsoft Hyper-V Server 2016
+Learn how to use Discrete Device Assignment (DDA) to pass an entire PCIe device into a virtual machine (VM) with PowerShell. Doing so allows high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or graphics cards from within a VM while being able to apply the device's native drivers. For more information on devices that work and possible security implications, see [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
-Starting with Windows Server 2016, you can use Discrete Device Assignment (DDA) to pass an entire PCIe device into a virtual machine (VM). Doing so allows high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or graphics cards from within a VM while being able to apply the device's native drivers. For more information on devices that work and possible security implications, see [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
-
-> [!IMPORTANT]
-> Though not required, if [Single Root I/O Virtualization (SR-IOV)](/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-) isn't enabled or supported, you might encounter issues when you use DDA to deploy graphics devices.
-
-There are three steps to using a device with DDA:
+This article takes you through the steps to use a device with DDA:
 
 1. [Configure the VM for DDA](#configure-the-vm-for-dda)
 1. [Dismount the device from the host partition](#dismount-the-device-from-the-host-partition)
 1. [Assign the device to the guest VM](#assign-the-device-to-the-guest-vm)
 
-You can execute all commands on the host on a Windows PowerShell console as an administrator.
+## Prerequisites
+
+Before you can use DDA to deploy graphics devices, you need to have the following.
+
+- A Hyper-V host running Windows Server 2016 or later.
+
+- A VM running one of the following operating systems:
+
+  - Windows Server 2016 or later.
+
+  - Windows 10 or later.
+
+- Review [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) to ensure your hardware is compatible with DDA.
+
+  - Run the [SurveyDDA.ps1.](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1) PowerShell script to identify if the server is configured correctly. The script will also display which devices can be passed through by using Discrete Device Assignment.
+
+- Administrative rights to the Hyper-V host.
+
+- (Optional) Though not required, if [Single Root I/O Virtualization (SR-IOV)](/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-) isn't enabled or supported, you might encounter issues when you use DDA to deploy graphics devices.
 
 ## Configure the VM for DDA
 
-The first step in the solution is to address DDA restrictions to the VMs. Configure the `Automatic Stop Action` of a VM to enable **TurnOff** with the following PowerShell cmdlet:
+The first step in the solution is to address DDA restrictions to the VMs.
 
-```powershell
-Set-VM -Name VMName -AutomaticStopAction TurnOff
-```
+1. Sign in to the Hyper-V host as an administrator.
+
+1. Open an elevated PowerShell prompt.
+
+1. Configure the `Automatic Stop Action` of a VM to enable **TurnOff** with the following PowerShell cmdlet:
+
+   ```powershell
+   Set-VM -Name VMName -AutomaticStopAction TurnOff
+   ```
 
 ### VM preparation for graphics devices
 
@@ -110,13 +128,14 @@ If you want to return the device back to its original state, you must stop the V
 ```powershell
 # Remove the device from the VM
 Remove-VMAssignableDevice -LocationPath $locationPath -VMName VMName
+
 # Mount the device back in the host
 Mount-VMHostAssignableDevice -LocationPath $locationPath
 ```
 
 You can then re-enable the device in Device Manager, and the host operating system is able to interact with the device again.
 
-## Mount a GPU to a VM
+## Example - Mount a GPU to a VM
 
 This example uses PowerShell to configure a VM named **ddatest1** to take the first GPU available by the manufacturer NVIDIA and assign it into the VM.
 
@@ -151,7 +170,7 @@ Add-VMAssignableDevice -LocationPath $locationPath -VMName $vm
 
 ### Troubleshoot issues with mounting a GPU
 
-If you've passed a GPU into a VM but Remote Desktop Services or an application isn't recognizing the GPU, check for the following common issues:
+If you've passed a GPU into a VM but Remote Desktop Services or an application isn't recognizing the GPU, check for the following common issues.
 
 - Make sure you've installed the most recent version of the GPU vendor's supported driver, and that the driver isn't reporting errors. You can do so by checking the device state in Device Manager.
 - Make sure your device has enough MMIO space allocated within the VM. For more information, see [MMIO Space](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md#mmio-space).
