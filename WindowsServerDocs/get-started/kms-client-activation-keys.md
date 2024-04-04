@@ -2,8 +2,8 @@
 title: Key Management Services (KMS) client activation and product keys for Windows Server and Windows
 description: Get the product keys needed for setup and activation of Windows Server and other Windows products from a KMS host server.
 ms.topic: conceptual
-author: dknappettmsft
-ms.author: alalve
+author: xelu86
+ms.author: wscontent
 ms.date: 04/05/2024
 ---
 
@@ -26,7 +26,7 @@ There are some scenarios, however, where you'll need to add the GVLK to the comp
 
 If you're converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable product key (GVLK) from the list in this article. To install a client product key, open an administrative command prompt on the client, and run the following command and then press `Enter`:
 
-```
+```cmd
 slmgr /ipk <product key>
 ```
 
@@ -40,7 +40,7 @@ slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
 
 In the tables that follow, you'll find the GVLKs for each version and edition of Windows. LTSC is _Long-Term Servicing Channel_, while LTSB is _Long-Term Servicing Branch_.
 
-### Windows Server LTSC versions
+### Windows Server LTSC
 
 # [Windows Server 2025](#tab/server2025)
 
@@ -76,7 +76,7 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 
 ---
 
-### Windows Server Semi-Annual Channel versions
+### Windows Server Semi-Annual Channel
 
 #### Windows Server, versions 20H2, 2004, 1909, 1903, and 1809
 
@@ -90,28 +90,28 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 >
 > Customers using Windows Server SAC should move to **[Azure Stack HCI](/azure-stack/hci/)**. Alternatively, customers may use the Long-Term Servicing Channel of Windows Server.
 
-### Windows 11 and Windows 10 Semi-Annual Channel versions
+### Windows 11 and Windows 10 Semi-Annual Channel
 
 See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
-| Windows 11 Pro<br/>Windows 10 Pro | W269N-WFGWX-YVC9B-4J6C9-T83GX |
-| Windows 11 Pro N<br/>Windows 10 Pro N | MH37W-N47XK-V7XM9-C7227-GCQG9 |
-| Windows 11 Pro for Workstations<br/>Windows 10 Pro for Workstations | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J |
-| Windows 11 Pro for Workstations N<br/>Windows 10 Pro for Workstations N | 9FNHH-K3HBT-3W4TD-6383H-6XYWF |
-| Windows 11 Pro Education<br/>Windows 10 Pro Education | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y |
-| Windows 11 Pro Education N<br/>Windows 10 Pro Education N | YVWGF-BXNMC-HTQYQ-CPQ99-66QFC |
-| Windows 11 Education<br/>Windows 10 Education | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
-| Windows 11 Education N<br/>Windows 10 Education N | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
-| Windows 11 Enterprise<br/>Windows 10 Enterprise | NPPR9-FWDCX-D2C8J-H872K-2YT43 |
-| Windows 11 Enterprise N<br/>Windows 10 Enterprise N | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 |
-| Windows 11 Enterprise G<br/>Windows 10 Enterprise G | YYVX9-NTFWV-6MDM3-9PT4T-4M68B |
-| Windows 11 Enterprise G N<br/>Windows 10 Enterprise G N | 44RPN-FTY23-9VTTB-MP9BX-T84FV |
+| Windows 11 Pro<br>Windows 10 Pro | W269N-WFGWX-YVC9B-4J6C9-T83GX |
+| Windows 11 Pro N<br>Windows 10 Pro N | MH37W-N47XK-V7XM9-C7227-GCQG9 |
+| Windows 11 Pro for Workstations<br>Windows 10 Pro for Workstations | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J |
+| Windows 11 Pro for Workstations N<br>Windows 10 Pro for Workstations N | 9FNHH-K3HBT-3W4TD-6383H-6XYWF |
+| Windows 11 Pro Education<br>Windows 10 Pro Education | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y |
+| Windows 11 Pro Education N<br>Windows 10 Pro Education N | YVWGF-BXNMC-HTQYQ-CPQ99-66QFC |
+| Windows 11 Education<br>Windows 10 Education | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
+| Windows 11 Education N<br>Windows 10 Education N | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
+| Windows 11 Enterprise<br>Windows 10 Enterprise | NPPR9-FWDCX-D2C8J-H872K-2YT43 |
+| Windows 11 Enterprise N<br>Windows 10 Enterprise N | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 |
+| Windows 11 Enterprise G<br>Windows 10 Enterprise G | YYVX9-NTFWV-6MDM3-9PT4T-4M68B |
+| Windows 11 Enterprise G N<br>Windows 10 Enterprise G N | 44RPN-FTY23-9VTTB-MP9BX-T84FV |
 
-### Windows Enterprise LTSC and LTSB versions
+### Windows Enterprise LTSC and LTSB
 
-# [Windows 11 LTSC 2024 / Windows 10 LTSC 2021, 2019](#tab/windows1110ltsc)
+# [Windows 11 LTSC 2024 <br> Windows 10 LTSC 2021, 2019](#tab/windows1110ltsc)
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
@@ -122,7 +122,10 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
-| Windows IoT Enterprise LTSC 2024 <br> Windows IoT Enterprise LTSC 2021 | KBN8V-HFGQ4-MGXVD-347P6-PDQGT <br><br> For ImageVersion: 10.0.19044.2905 or later, see [Windows IoT Enterprise LTSC in Volume License](/windows/iot/iot-enterprise/deployment/volume-license). |
+| Windows IoT Enterprise LTSC 2024 <br> Windows IoT Enterprise LTSC 2021 | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
+
+> [!NOTE]
+> For ImageVersion: 10.0.19044.2905 or later, see [Windows IoT Enterprise LTSC in Volume License](/windows/iot/iot-enterprise/deployment/volume-license).
   
 # [Windows 10 LTSB 2016](#tab/windows102016)
 
@@ -142,21 +145,21 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 ### Earlier versions of Windows Server
 
-# [Version 1803](#tab/version1803)
+# [Windows Server, 1803](#tab/version1803)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
-# [Version 1709](#tab/version1709)
+# [Windows Server, 1709](#tab/version1709)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
 
-# [2012 R2](#tab/2012r2)
+# [Windows Server 2012 R2](#tab/2012r2)
 
 | Operating system edition               | KMS Client Product Key        |
 |----------------------------------------|-------------------------------|
@@ -164,7 +167,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2012 R2 Datacenter      | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9 |
 | Windows Server 2012 R2 Essentials      | KNC87-3J2TX-XB4WP-VCPJV-M4FWM |
 
-# [2012](#tab/2012)
+# [Windows Server 2012](#tab/2012)
 
 | Operating system edition                | KMS Client Product Key        |
 |-----------------------------------------|-------------------------------|
@@ -178,7 +181,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
 | Windows Server 2012 Essentials          | HTDQM-NBMMG-KGYDT-2DTKT-J2MPV |
 
-# [2008 R2](#tab/2008r2)
+# [Windows Server 2008 R2](#tab/2008r2)
 
 | Operating system edition                         | KMS Client Product Key        |
 |--------------------------------------------------|-------------------------------|
@@ -189,7 +192,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
 | Windows Server 2008 R2 for Itanium-based Systems | GT63C-RJFQ3-4GMB6-BRFB9-CB83V |
 
-# [2008](#tab/2008)
+# [Windows Server 2008](#tab/2008)
 
 | Operating system edition                       | KMS Client Product Key        |
 |------------------------------------------------|-------------------------------|
