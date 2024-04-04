@@ -106,7 +106,7 @@ These maximums apply to each Hyper-V host running the selected product version.
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
-|Logical processors|512|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>The host OS (root partition) can only use a maximum of 1,024 processors.|
+|Logical processors|2,048|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>|
 |Memory|<ul><li>4 PB for hosts that support 5-Level paging</li><li>256 TB for hosts that support 48-bit address width</li></ul>|None.|
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|None.|
 |Physical network adapters|No limits imposed by Hyper-V.|None.|
@@ -125,7 +125,7 @@ These maximums apply to each Hyper-V host running the selected product version.
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
-|Logical processors|512|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>The host OS (root partition) can only use a maximum of  1,024 processors.|
+|Logical processors|1,024|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>|
 |Memory|<ul><li>4 PB for hosts that support 5-Level paging</li><li>256 TB for hosts that support 48-bit address width</li></ul>|None.|
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|None.|
 |Physical network adapters|No limits imposed by Hyper-V.|None.|
@@ -144,7 +144,7 @@ These maximums apply to each Hyper-V host running the selected product version.
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
-|Logical processors|512|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>The host OS (root partition) can only use a maximum of 320 logical processors.|
+|Logical processors|512|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>|
 |Memory|24 TB |None.|
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|None.|
 |Physical network adapters|No limits imposed by Hyper-V.|None.|
@@ -163,7 +163,7 @@ These maximums apply to each Hyper-V host running the selected product version.
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
-|Logical processors|512|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>The host OS (root partition) can only use a maximum of 320 logical processors.|
+|Logical processors|512|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>|
 |Memory|24 TB|None.|
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|None.|
 |Physical network adapters|No limits imposed by Hyper-V.|None.|
