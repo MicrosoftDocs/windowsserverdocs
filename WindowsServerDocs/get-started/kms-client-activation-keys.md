@@ -145,14 +145,14 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 ### Earlier versions of Windows Server
 
-# [Windows Server, 1803](#tab/version1803)
+# [Windows Server, version 1803](#tab/version1803)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
-# [Windows Server, 1709](#tab/version1709)
+# [Windows Server, version 1709](#tab/version1709)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
