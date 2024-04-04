@@ -4,7 +4,7 @@ description: Get the product keys needed for setup and activation of Windows Ser
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: alalve
-ms.date: 09/05/2023
+ms.date: 04/05/2024
 ---
 
 # Key Management Services (KMS) client activation and product keys
@@ -20,37 +20,45 @@ There are some scenarios, however, where you'll need to add the GVLK to the comp
 > [!IMPORTANT]
 > To use the keys listed here (which are GVLKs), you must first have a KMS host available on your local network. If you don't already have a KMS host, please see how to [create a KMS host](kms-create-host.md) to learn more.
 >
-> If you want to activate Windows without a KMS host available and outside of a volume-activation scenario (for example, you're trying to activate a retail version of Windows client), **these keys will not work**. You will need to use another method of activating Windows, such as using a MAK, or purchasing a retail license. Get help to [find your Windows product key](https://support.microsoft.com/help/10749/windows-product-key) and learn about [genuine versions of Windows](https://support.microsoft.com/help/15087/windows-genuine).
+> If you want to activate Windows without a KMS host available and outside of a volume-activation scenario (for example, you're trying to activate a retail version of Windows client), **these keys won't work**. You will need to use another method of activating Windows, such as using a MAK, or purchasing a retail license. Get help to [find your Windows product key](https://support.microsoft.com/help/10749/windows-product-key) and learn about [genuine versions of Windows](https://support.microsoft.com/help/15087/windows-genuine).
 
 ## Install a product key
 
-If you're converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable product key (GVLK) from the list below. To install a client product key, open an administrative command prompt on the client, and run the following command and then press `Enter`:
+If you're converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable product key (GVLK) from the list in this article. To install a client product key, open an administrative command prompt on the client, and run the following command and then press `Enter`:
 
 ```
 slmgr /ipk <product key>
 ```
 
-For example, to install the product key for Windows Server 2022 Datacenter edition, run the following command and then press `Enter`:
+For example, to install the product key for Windows Server 2022 Datacenter Edition, run the following command and then press `Enter`:
 
-```
+```cmd
 slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
 ```
 
-## Generic Volume License Keys (GVLK)
+## Generic Volume License Keys
 
-In the tables that follow, you'll find the GVLKs for each version and edition of Windows. LTSC is *Long-Term Servicing Channel*, while LTSB is *Long-Term Servicing Branch*.
+In the tables that follow, you'll find the GVLKs for each version and edition of Windows. LTSC is _Long-Term Servicing Channel_, while LTSB is _Long-Term Servicing Branch_.
 
-### Windows Server (LTSC versions)
+### Windows Server LTSC versions
 
-#### Windows Server 2022
+# [Windows Server 2025](#tab/server2025)
+
+| Operating system edition       | KMS Client Product Key        |
+|--------------------------------|-------------------------------|
+| Windows Server 2025 Standard |	TVRH6-WHNXV-R9WG3-9XRFY-MY832 |
+| Windows Server 2025 Datacenter | D764K-2NDRG-47T6Q-P8T8W-YP6DF |
+| Windows Server 2025 Azure Edition | XGN3F-F394H-FD2MY-PP6FD-8MCRC |
+
+# [Windows Server 2022](#tab/server2022)
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
 | Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
-| Windows Server 2022 Datacenter<br/>Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV |
+| Windows Server 2022 Datacenter<br>Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV |
 | Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
 
-#### Windows Server 2019
+# [Windows Server 2019](#tab/server2019)
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
@@ -58,7 +66,7 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 | Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C |
 | Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726 |
 
-#### Windows Server 2016
+# [Windows Server 2016](#tab/server2016)
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
@@ -66,7 +74,9 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
 | Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
 
-### Windows Server (Semi-Annual Channel versions)
+---
+
+### Windows Server Semi-Annual Channel versions
 
 #### Windows Server, versions 20H2, 2004, 1909, 1903, and 1809
 
@@ -80,7 +90,7 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 >
 > Customers using Windows Server SAC should move to **[Azure Stack HCI](/azure-stack/hci/)**. Alternatively, customers may use the Long-Term Servicing Channel of Windows Server.
 
-### Windows 11 and Windows 10 (Semi-Annual Channel versions)
+### Windows 11 and Windows 10 Semi-Annual Channel versions
 
 See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
 
@@ -99,46 +109,54 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 11 Enterprise G<br/>Windows 10 Enterprise G | YYVX9-NTFWV-6MDM3-9PT4T-4M68B |
 | Windows 11 Enterprise G N<br/>Windows 10 Enterprise G N | 44RPN-FTY23-9VTTB-MP9BX-T84FV |
 
-### Windows 10 (LTSC/LTSB versions)
+### Windows Enterprise LTSC and LTSB versions
 
-#### Windows 10 LTSC 2021 and 2019
+# [Windows 11 LTSC 2024 / Windows 10 LTSC 2021, 2019](#tab/windows1110ltsc)
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
-| Windows 10 Enterprise LTSC 2021<br/>Windows 10 Enterprise LTSC 2019   | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
-| Windows 10 Enterprise N LTSC 2021<br/>Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
+| Windows 11 Enterprise LTSC 2024 <br> Windows 10 Enterprise LTSC 2021 <br> Windows 10 Enterprise LTSC 2019 | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
+| Windows 11 Enterprise N LTSC 2024 <br> Windows 10 Enterprise N LTSC 2021 <br> Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 
-#### Windows 10 LTSB 2016
+# [Windows IoT LTSC](#tab/winowsiot)
+
+| Operating system edition          | KMS Client Product Key        |
+|-----------------------------------|-------------------------------|
+| Windows IoT Enterprise LTSC 2024 <br> Windows IoT Enterprise LTSC 2021 | KBN8V-HFGQ4-MGXVD-347P6-PDQGT <br><br> For ImageVersion: 10.0.19044.2905 or later, see [Windows IoT Enterprise LTSC in Volume License](/windows/iot/iot-enterprise/deployment/volume-license). |
+  
+# [Windows 10 LTSB 2016](#tab/windows102016)
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
 | Windows 10 Enterprise LTSB 2016   | DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ |
 | Windows 10 Enterprise N LTSB 2016 | QFFDN-GRT3P-VKWWX-X7T3R-8B639 |
 
-#### Windows 10 LTSB 2015
+# [Windows 10 LTSB 2015](#tab/windows102015)
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
-| Windows 10 Enterprise 2015 LTSB   | WNMTR-4C88C-JK8YV-HQ7T2-76DF9 |
-| Windows 10 Enterprise 2015 LTSB N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
+| Windows 10 Enterprise LTSB 2015   | WNMTR-4C88C-JK8YV-HQ7T2-76DF9 |
+| Windows 10 Enterprise LTSB N 2015 | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
+
+---
 
 ### Earlier versions of Windows Server
 
-#### Windows Server, version 1803
+# [Version 1803](#tab/version1803)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
-#### Windows Server, version 1709
+# [Version 1709](#tab/version1709)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
 
-#### Windows Server 2012 R2
+# [2012 R2](#tab/2012r2)
 
 | Operating system edition               | KMS Client Product Key        |
 |----------------------------------------|-------------------------------|
@@ -146,7 +164,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2012 R2 Datacenter      | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9 |
 | Windows Server 2012 R2 Essentials      | KNC87-3J2TX-XB4WP-VCPJV-M4FWM |
 
-#### Windows Server 2012
+# [2012](#tab/2012)
 
 | Operating system edition                | KMS Client Product Key        |
 |-----------------------------------------|-------------------------------|
@@ -160,7 +178,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
 | Windows Server 2012 Essentials          | HTDQM-NBMMG-KGYDT-2DTKT-J2MPV |
 
-#### Windows Server 2008 R2
+# [2008 R2](#tab/2008r2)
 
 | Operating system edition                         | KMS Client Product Key        |
 |--------------------------------------------------|-------------------------------|
@@ -171,7 +189,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
 | Windows Server 2008 R2 for Itanium-based Systems | GT63C-RJFQ3-4GMB6-BRFB9-CB83V |
 
-#### Windows Server 2008
+# [2008](#tab/2008)
 
 | Operating system edition                       | KMS Client Product Key        |
 |------------------------------------------------|-------------------------------|
@@ -185,9 +203,11 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2008 Datacenter without Hyper-V | 22XQ2-VRXRG-P8D42-K34TD-G3QQC |
 | Windows Server 2008 for Itanium-Based Systems  | 4DWFP-JF3DJ-B7DTH-78FJB-PDRHK |
 
-### Earlier versions of Windows
+---
 
-#### Windows 8.1
+### Earlier versions of Windows Client
+
+# [Windows 8.1](#tab/windows81)
 
 | Operating system edition | KMS Client Product Key        |
 |--------------------------|-------------------------------|
@@ -196,7 +216,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 8.1 Enterprise   | MHF9N-XY6XB-WVXMC-BTDCT-MKKG7 |
 | Windows 8.1 Enterprise N | TT4HM-HN7YT-62K67-RGRQJ-JFFXW |
 
-#### Windows 8
+# [Windows 8](#tab/windows8)
 
 | Operating system edition | KMS Client Product Key        |
 |--------------------------|-------------------------------|
@@ -205,7 +225,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 8 Enterprise     | 32JNW-9KQ84-P47T8-D8GGY-CWCK7 |
 | Windows 8 Enterprise N   | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT |
 
-#### Windows 7
+# [Windows 7](#tab/windows7)
 
 | Operating system edition | KMS Client Product Key        |
 |--------------------------|-------------------------------|
@@ -216,7 +236,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 7 Enterprise N   | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
 | Windows 7 Enterprise E   | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
 
-#### Windows Vista
+# [Windows Vista](#tab/windowsvista)
 
 | Operating system edition | KMS Client Product Key        |
 |--------------------------|-------------------------------|
@@ -224,3 +244,5 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 |Windows Vista Business N | HMBQG-8H2RH-C77VX-27R82-VMQBT |
 |Windows Vista Enterprise | VKK3X-68KWM-X2YGT-QR4M6-4BWMV |
 |Windows Vista Enterprise N | VTC42-BM838-43QHV-84HX6-XJXKV |
+
+---
