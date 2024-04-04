@@ -33,10 +33,19 @@ To find the current Active Directory schema version:
 
 #### [GUI](#tab/gui)
 
-1. Use *ADSIEdit.msc* or *LDP.exe* to navigate to:  
-    **CN=Schema,CN=Configuration,DC=contoso,DC=local**.
+1. Open the **Start** menu.
 
-1. Review the **objectVersion** attribute.
+1. Enter **ADSIEdit.msc**, then select **Enter** to open the Active Directory Service Interfaces (ADSI) Editor.
+
+1. In the pane on the left side of the window, right-click on **ADSI Edit**, then select **Connect to**.
+
+1. In the **Connection Settings** window under **Select a well-known Naming Context**, select **Schema**, then select **OK**.
+
+1. In the pane on the left side of the window, expand the schema for your DC.
+
+1. Right-click on `CN=Schema,CN=Configuration,DC=contoso,DC=local`, then select **Properties**.
+
+1. Go to the **Attribute** list and scroll down until you find the *objectvVersion* attribute. That number is the schema version.
 
 #### [CMD](#tab/cmd)
 
@@ -56,36 +65,44 @@ Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=contoso,DC=local' -Name obje
 
 ---
 
-### "objectVersion" attribute to Operating System
+### Mapping the objectVersion attribute
 
 The following information provides a mapping between the **objectVersion** attribute value and the Active Directory Schema commutability:
 
 | Version | Operating System |
 |---|---|
-|13|Windows 2000 Server|
-|30|Windows Server 2003 RTM, Windows 2003 Service Pack 1, Windows 2003 Service Pack 2|
-|31|Windows Server 2003 R2|
-|44|Windows Server 2008 RTM|
-|47|Windows Server 2008 R2|
-|56|Windows Server 2012|
-|69|Windows Server 2012 R2|
-|87|Windows Server 2016|
-|88|Windows Server 2019|
+|91|Windows Server 2025 (preview)|
 |88|Windows Server 2022|
+|88|Windows Server 2019|
+|87|Windows Server 2016|
+|69|Windows Server 2012 R2|
+|56|Windows Server 2012|
+|47|Windows Server 2008 R2|
+|44|Windows Server 2008 RTM|
+|31|Windows Server 2003 R2|
+|30|Windows Server 2003 RTM, Windows 2003 Service Pack 1, Windows 2003 Service Pack 2|
 
-## Find the current Exchange Schema Version
+## Find the current Exchange Schema version
 
-To find the current Exchange Schema Version, you can use one of the following methods:  
-
->[!Note]
->The internal root domain that we use in this demo is **contoso.local**.
+To find the current Exchange Schema version, you can use one of the following methods:
 
 #### [GUI](#tab/gui)
 
-1. Use *ADSIEdit.msc* or *LDP.exe* to navigate to:  
-   **CN=ms-Exch-Schema-Version-Pt, CN=Schema,CN=Configuration,DC=contoso,DC=local**
+1. Open the **Start** menu.
 
-2. Review the current **rangeUpper** attribute.
+1. Enter **ADSIEdit.msc**, then select **Enter** to open the Active Directory Service Interfaces (ADSI) Editor.
+
+1. In the pane on the left side of the window, right-click on **ADSI Edit**, then select **Connect to**.
+
+1. In the **Connection Settings** window under **Select a well-known Naming Context**, select **Schema**, then select **OK**.
+
+1. In the pane on the left side of the window, expand the schema for your DC.
+
+1. Right-click on `CN=Schema,CN=Configuration,DC=contoso,DC=local`.
+
+1. In the pane in the center of the window, scrol down to the **Name** list and open `CN=ms-Exch-Schema-Version-Pt`.
+
+1. Go to the **Attribute** list and scroll down until you find the *rangeUpper* attribute. That number is the schema version.
 
 #### [CMD](#tab/cmd)
 
@@ -105,8 +122,6 @@ Get-ItemProperty "AD:\CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,$(
 
 ---
 
-### Some "rangeUpper" attribute map
-
 The following articles provide a mapping between the **rangeUpper** attribute value and the Exchange Schema commutability:
 
 - [Exchange 2016 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2016&preserve-view=true#exchange-2016-active-directory-versions)
@@ -114,4 +129,4 @@ The following articles provide a mapping between the **rangeUpper** attribute va
 
 ## Related content
 
-- [Schema updates](Schema-Updates.md)
+- [Windows Server Active Directory schema updates](Schema-Updates.md)
