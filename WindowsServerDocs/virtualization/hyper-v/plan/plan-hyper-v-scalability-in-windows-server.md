@@ -17,7 +17,7 @@ This article gives you details about the maximum configuration for components yo
 
 ## Maximums for virtual machines
 
-These maximums apply to each virtual machine when running selected product version as the guest operating system. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md)
+These maximums apply to each virtual machine when the host is run the selected product version. The guest operating system might support less than the virtual machine maximum. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md)
 
 :::zone pivot="windows-server-2025"
 
@@ -31,7 +31,7 @@ These maximums apply to each virtual machine when running selected product versi
 |Virtual floppy devices|1 virtual floppy drive|None.|
 |Virtual hard disk capacity|64 TB for VHDX format;<br/>2,040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|2048 for the host OS (root partition)<br/>2048 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|2048 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|68 adapters total:<ul><li>64 Hyper-V specific network adapters</li><li>4 legacy network adapters;</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
@@ -53,7 +53,7 @@ These maximums apply to each virtual machine when running selected product versi
 |Virtual floppy devices|1 virtual floppy drive|None.|
 |Virtual hard disk capacity|64 TB for VHDX format;<br/>2,040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|1024 for the host OS (root partition)<br/>240 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|240 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|68 adapters total:<ul><li>64 Hyper-V specific network adapters</li><li>4 legacy network adapters;</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
@@ -72,7 +72,7 @@ These maximums apply to each virtual machine when running selected product versi
 |Virtual floppy devices|1 virtual floppy drive|None.|
 |Virtual hard disk capacity|64 TB for VHDX format;<br/>2,040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|320 for the host OS (root partition)<br/>250 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|250 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|68 adapters total:<ul><li>64 Hyper-V specific network adapters</li><li>4 legacy network adapters;</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
@@ -91,7 +91,7 @@ These maximums apply to each virtual machine when running selected product versi
 |Virtual floppy devices|1 virtual floppy drive|None.|
 |Virtual hard disk capacity|64 TB for VHDX format;<br/>2,040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|320 for the host OS (root partition)<br/>240 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|240 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|12 adapters total:<ul><li>8 Hyper-V specific network adapters</li><li>4 legacy network adapters</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
@@ -107,12 +107,13 @@ These maximums apply to each Hyper-V host running the selected product version.
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
 |Logical processors|512|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>The host OS (root partition) can only use a maximum of 1,024 processors.|
-|Memory|48 TB|None.|
+|Memory|<ul><li>4 PB for hosts that support 5-Level paging</li><li>256 TB for hosts that support 48-bit address width</li></ul>|None.|
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|None.|
 |Physical network adapters|No limits imposed by Hyper-V.|None.|
 |Running virtual machines per server|1024|None.|
 |Storage|Limited by what is supported by the host operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage isn't supported.|
 |Virtual network switch ports per server|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|
+|Virtual processors available the host|2,048|The limit is applied to the host operating system (root partition)|
 |Virtual processors per logical processor|No ratio imposed by Hyper-V.|None.|
 |Virtual processors per server|2048|None.|
 |Virtual storage area networks (SANs)|No limits imposed by Hyper-V.|None.|
@@ -125,12 +126,13 @@ These maximums apply to each Hyper-V host running the selected product version.
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
 |Logical processors|512|Both of these features must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>The host OS (root partition) can only use a maximum of  1,024 processors.|
-|Memory|48 TB|None.|
+|Memory|<ul><li>4 PB for hosts that support 5-Level paging</li><li>256 TB for hosts that support 48-bit address width</li></ul>|None.|
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|None.|
 |Physical network adapters|No limits imposed by Hyper-V.|None.|
 |Running virtual machines per server|1024|None.|
 |Storage|Limited by what is supported by the host operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage isn't supported.|
 |Virtual network switch ports per server|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|
+|Virtual processors available the host|1,024|The limit is applied to the host operating system (root partition)|
 |Virtual processors per logical processor|No ratio imposed by Hyper-V.|None.|
 |Virtual processors per server|2048|None.|
 |Virtual storage area networks (SANs)|No limits imposed by Hyper-V.|None.|
@@ -149,6 +151,7 @@ These maximums apply to each Hyper-V host running the selected product version.
 |Running virtual machines per server|1024|None.|
 |Storage|Limited by what is supported by the host operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage isn't supported.|
 |Virtual network switch ports per server|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|
+|Virtual processors available the host|320|The limit is applied to the host operating system (root partition)|
 |Virtual processors per logical processor|No ratio imposed by Hyper-V.|None.|
 |Virtual processors per server|2048|None.|
 |Virtual storage area networks (SANs)|No limits imposed by Hyper-V.|None.|
@@ -167,6 +170,7 @@ These maximums apply to each Hyper-V host running the selected product version.
 |Running virtual machines per server|1024|None.|
 |Storage|Limited by what is supported by the host operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage isn't supported.|
 |Virtual network switch ports per server|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|
+|Virtual processors available the host|320|The limit is applied to the host operating system (root partition)|
 |Virtual processors per logical processor|No ratio imposed by Hyper-V.|None.|
 |Virtual processors per server|2048|None.|
 |Virtual storage area networks (SANs)|No limits imposed by Hyper-V.|None.|
