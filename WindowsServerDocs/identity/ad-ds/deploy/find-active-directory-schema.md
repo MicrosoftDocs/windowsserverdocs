@@ -43,7 +43,7 @@ To find the current Active Directory schema version:
 
 1. In the pane on the left side of the window, expand the schema for your DC.
 
-1. Right-click on `CN=Schema,CN=Configuration,DC=contoso,DC=local`, then select **Properties**.
+1. Right-click on `CN=Schema,CN=Configuration,DC=<contoso>,DC=local`, then select **Properties**.
 
 1. Go to the **Attribute** list and scroll down until you find the *objectvVersion* attribute. That number is the schema version.
 
@@ -65,11 +65,13 @@ Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=contoso,DC=local' -Name obje
 
 ---
 
+When you're finished, use the table in [Mapping the objectVersion attribute](#mapping-the-objectversion-attribute) to find which operating system (OS) version corresponds to your version number.
+
 ### Mapping the objectVersion attribute
 
-The following information provides a mapping between the **objectVersion** attribute value and the Active Directory Schema commutability:
+The following table maps the number shown in the **objectVersion** attribute value with its corresponding OS version:
 
-| Version | Operating System |
+| Version | Operating system |
 |---|---|
 |91|Windows Server 2025 (preview)|
 |88|Windows Server 2022|
@@ -122,7 +124,11 @@ Get-ItemProperty "AD:\CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,$(
 
 ---
 
-The following articles provide a mapping between the **rangeUpper** attribute value and the Exchange Schema commutability:
+When you're finished, use the information in [Mapping the rangeUpper attribute](#mapping-the-rangeupper-attribute) to determine which version of Exchange Schema corresponds to your attribute value.
+
+### Mapping the rangeUpper attribute
+
+The following articles show how to map the **rangeUpper** attribute value with its corresponding Eschange Schema version:
 
 - [Exchange 2016 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2016&preserve-view=true#exchange-2016-active-directory-versions)
 - [Exchange 2019 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019&preserve-view=true#exchange-2019-active-directory-versions)
