@@ -1,11 +1,10 @@
 ---
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
 description: Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs.
-ms.topic: article
-ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 11/9/2021
+ms.topic: conceptual
+ms.author: wscontent
+author: robinharwood
+ms.date: 04/02/2024
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
@@ -48,6 +47,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 
 | 64-bit versions of Windows | Generation 1 | Generation 2 |
 |--|--|--|
+| Windows Server 2025 |&#10004;|&#10004;|
 | Windows Server 2022 |&#10004;|&#10004;|
 | Windows Server 2019 |&#10004;|&#10004;|
 | Windows Server 2016 |&#10004;|&#10004;|
