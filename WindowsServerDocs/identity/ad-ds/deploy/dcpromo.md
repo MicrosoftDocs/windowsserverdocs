@@ -232,211 +232,47 @@ This section describes the fields and the entries that you can use in the answer
 
 #### Installation operation parameters
 
-##### AllowDomainReinstall
-
-- Yes | No
-- This entry specifies whether an existing domain is re-created.
-
-##### AllowDomainControllerReinstall
-
-- Yes | No
-- This entry specifies whether to continue to install this domain controller even though an active domain controller account that uses the same name is detected. Specify "Yes" (no quotation marks) only if you're sure that the account is no longer being used.
-
-##### ApplicationPartitionsToReplicate
-
-- No default
-- This entry specifies the application partitions that have to be replicated in the format ""partition1" "partition2"". If * is specified, all application partitions will be replicated. Use space-separated or comma-and-space-separated distinguished names. Enclose the whole string in quotation marks.
-
-##### ChildName
-
-- No default
-- This is the name of the subordinate domain that is appended to the ParentDomainDNSName entry. If the parent domain is "A.COM," and the subordinate domain is "B," enter "B.A.COM and B" (no quotation marks) for ChildName.
-
-##### ConfirmGc
-
-- Yes | No
-- This entry specifies whether the replica is also a global catalog. "Yes" makes the replica a global catalog if the backup was a global catalog. "No" doesn't make the replica a global catalog. (These entries don't require quotation marks.)
-
-##### CreateDNSDelegation
-
-- Yes | No
-- No default
-- This entry indicates whether to create a DNS delegation that references this new DNS server. This entry is valid for AD DS-integrated DNS only.
-
-##### CriticalReplicationOnly
-
-- Yes | No
-- This entry specifies whether the installation operation performs only important replication before a restart and then skips the noncritical and potentially lengthy part of replication. The noncritical replication occurs after the role installation is complete, and the computer restarts.
-
-##### DatabasePath
-
-- %systemroot%\\NTDS
-- This entry is the path of the fully qualified, non-Universal Naming Convention (UNC) directory on a hard disk of the local computer. This directory will host the AD DS database (NTDS.DIT). If the directory exists, it must be empty. If it doesn't exist, it will be created. Free disk space on the logical drive that is selected must be 200 megabytes (MB). To accommodate rounding errors or all objects in the domain, free disk space may have to be larger. For best performance, locate the directory on a dedicated hard disk.
-
-##### DelegatedAdmin
-
-- No default
-- This entry specifies the name of the user or the group who will install and administer the RODC. If no value is specified, only members of the Domain Admins group or the Enterprise Admins group can install and administer the RODC.
-
-##### DNSDelegationPassword
-
-- \<Password> | *
-
-- No default
-- This entry specifies the password for the user account that is used to create or remove the DNS delegation. Specify * to prompt the user to enter credentials.
-
-##### DNSDelegationUserName
-
-- No default
-- This entry specifies the user name to be used when the DNS delegation is created or removed. If you don't specify a value, the account credentials that you specify for the installation or removal of AD DS are used for the DNS delegation.
-
-##### DNSOnNetwork
-
-- Yes | No
-- This entry specifies whether the DNS service is available on the network. This entry is used only when the network adapter for this computer isn't configured to use the name of a DNS server for name resolution. Specify "No" (no quotation marks) to indicate that DNS will be installed on this computer for name resolution. Otherwise, the network adapter must be configured to use a DNS server name first.
-
-##### DomainLevel
-
-- 0 | 2 | 3
-- No default
-- This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest. Value descriptions are as follows:
-  - 0 = Windows 2000 Server native mode
-  - 2 = Windows Server 2003
-  - 3 = Windows Server 2008
-
-##### DomainNetbiosName
-
-- No default
-- This entry is the NetBIOS name that is used by pre-AD DS clients to access the domain. The DomainNetbiosName must be unique on the network.
-
-##### ForestLevel
-
-- 0 | 2 | 3
-
-- This entry specifies the forest functional level when a new domain is created in a new forest as follows:
-
-- 0 = Windows 2000 Server
-  - 2 = Windows Server 2003
-  - 3 = Windows Server 2008
-You must not use this entry when you install a new domain controller in an existing forest. The ForestLevel entry replaces the SetForestVersion entry that is available in Windows Server 2003.
-
-##### InstallDNS
-
-- Yes | No
-- The default value changes depending on the operation. For a new forest, the DNS server role is installed by default. For a new tree, a new child domain, or a replica, a DNS server is installed by default if an existing DNS infrastructure is detected by the Active Directory Domain Services Installation Wizard. If no existing DNS infrastructure is detected by the wizard, a DNS server isn't installed by default.
-- This entry specifies whether DNS is configured for a new domain if the Active Directory Domain Services Installation Wizard detects that the DNS dynamic update protocol isn't available. This entry also applies if the wizard detects an insufficient number of DNS servers for an existing domain.
-
-##### LogPath
-
-- %systemroot%\\NTDS
-- This is the path of the fully qualified, non-UNC directory on a hard disk on the local computer that will host the AD DS log files. If the directory exists, it must be empty. If it doesn't exist, it will be created.
-
-##### NewDomain
-
-- Tree | Child | Forest
-- "Tree" means the new domain is the root of a new tree in an existing forest. "Child" means the new domain is a child of an existing domain. "Forest" means the new domain is the first domain in a new forest of domain trees.
-
-##### NewDomainDNSName
-
-- No default
-- This entry is used in "new tree in existing forest" or "new forest" installations. The value is a DNS domain name that is currently not being used.
-
-##### ParentDomainDNSName
-
-- No default
-- This entry specifies the name of an existing parent DNS domain for a child domain installation.
-
-##### Password
-
-- \<Password> | *
-- No default
-- This entry specifies the password that corresponds to the user account that is used to configure the domain controller. Specify * to prompt the user to enter credentials. For protection, passwords are removed from the answer file following an installation. Passwords must be redefined every time that an answer file is used.
-
-##### PasswordReplicationAllowed
-
-- \<Security_Principal> | NONE
-
-- No default
-- This entry specifies the names of computer accounts and user accounts whose passwords can be replicated to this RODC. Specify "NONE" (no quotation marks) if you want to keep the value empty. By default, no user credentials will be cached on this RODC. To specify more than one security principal, add the entry multiple times.
-
-##### PasswordReplicationDenied
-
-- \<Security_Principal> | NONE
-
-- This entry specifies the names of the user, group, and computer accounts whose passwords aren't to be replicated to the RODC. Specify "NONE" (no quotation marks) if you don't want to deny the replication of credentials for any users or computers. To specify more than one security principal, add the entry multiple times.
-
-##### RebootOnCompletion
-
-- Yes | No
-- This entry specifies whether to restart the computer after you install or remove AD DS regardless of whether the operation was successful.
-
-##### RebootOnSuccess
-
-- Yes | No | NoAndNoPromptEither
-
-- This entry specifies whether the computer must be restarted after AD DS has been installed or removed successfully. A restart is always required to complete a change in an AD DS role.
-
-##### ReplicaDomainDNSName
-
-- No default
-- This entry specifies the FQDN of the domain in which you want to configure an additional domain controller.
-
-##### ReplicaOrNewDomain
-
-- Replica | ReadOnlyReplica | Domain
-
-- This entry is used only for new installations. "Domain" (no quotation marks) converts the server into the first domain controller of a new domain. "ReadOnlyReplica" (no quotation marks) converts the server into a RODC. "Replica" (no quotation marks) converts the server into an additional domain controller.
-
-##### ReplicationSourceDC
-
-- No default
-- This entry specifies the FQDN of the partner domain controller from which AD DS data is replicated to create the new domain controller.
-
-##### ReplicationSourcePath
-
-- No default
-- This entry specifies the location of the installation files that are used to create a new domain controller.
-
-##### SafeModeAdminPassword
-
-- \<Password> | NONE
-- No default
-- This entry is used to supply the password for the offline administrator account that is used in Directory Service Restore Mode. You can't specify an empty password.
-
-##### SiteName
-
-- Default-First-Site-Name
-- This entry specifies the site name when you install a new forest. For a new forest, the default is Default-First-Site-Name. For all other scenarios, a site will be selected by using the current site and the subnet configuration of the forest.
-
-##### SkipAutoConfigDNS
-
-- No default
-- This entry is for expert users who want to skip automatic configuration of client settings, forwarders, and root hints. The entry is only in effect if the DNS Server service is already installed on the server. In this case, you'll receive an informational message that confirms that the automatic configuration of DNS was skipped. Otherwise, this entry is ignored. If you specify this switch, make sure that zones are created and configured correctly before you install AD DS, or the domain controller won't operate correctly. This entry doesn't skip automatic creation of the DNS delegation in the parent DNS zone. To control DNS delegation creation, use the DNSDelegation entry.
-
-##### Syskey
-
-- \<system_key> | NONE
-- This entry specifies the system key for the media from which you replicate the data.
-
-##### SYSVOLPath
-
-- %systemroot%\\SYSVOL
-- This entry specifies a fully qualified, non-UNC directory on the hard disk of the local computer. This directory will host the AD DS log files. If the directory already exists, it must be empty. If it doesn't exist it will be created. The directory must be located on a partition that was formatted by using the NTFS 5.0 file system. Locate the directory on a different physical hard disk than the operating system for best performance.
-
-##### TransferIMRoleIfNeeded
-
-- Yes | No
-- This entry specifies whether to transfer the infrastructure master role to this domain controller. This entry is useful if the domain controller is currently hosted on a global catalog server, and you don't plan to make the domain controller a global catalog server. Specify "Yes" (no quotation marks) to transfer the infrastructure master role to this domain controller. If you specify "Yes," make sure that you specify the ConfirmGC=No entry.
-
-##### UserDomain
-
-- No default
-- This entry specifies the domain name for the user account that is used for install AD DS on a server.
-
-##### UserName
-
-- No default
-- This entry specifies the user account name that is used for installing AD DS on a server. We recommend that you specify the account credentials in the \<domain>\\<user_name> format.
+| Parameter | Default value | Description |
+|-----|------|-----|
+| AllowDomainReinstall | `Yes \| No` | This entry specifies whether an existing domain is re-created. |
+| AllowDomainControllerReinstall | `Yes \| No` | This entry specifies whether to continue to install this domain controller even though an active domain controller account that uses the same name is detected. Specify "Yes" (no quotation marks) only if you're sure that the account is no longer being used. |
+| ApplicationPartitionsToReplicate | No default | This entry specifies the application partitions that have to be replicated in the format ""partition1" "partition2"". If * is specified, all application partitions will be replicated. Use space-separated or comma-and-space-separated distinguished names. Enclose the whole string in quotation marks. |
+| ChildName | No default | This is the name of the subordinate domain that is appended to the ParentDomainDNSName entry. If the parent domain is "A.COM," and the subordinate domain is "B," enter "B.A.COM and B" (no quotation marks) for ChildName. |
+| ConfirmGc | `Yes \| No` | This entry specifies whether the replica is also a global catalog. "Yes" makes the replica a global catalog if the backup was a global catalog. "No" doesn't make the replica a global catalog. (These entries don't require quotation marks.) |
+| CreateDNSDelegation | `Yes \| No`, no default | This entry indicates whether to create a DNS delegation that references this new DNS server. This entry is valid for AD DS-integrated DNS only. |
+| CriticalReplicationOnly | `Yes \| No` | This entry specifies whether the installation operation performs only important replication before a restart and then skips the noncritical and potentially lengthy part of replication. The noncritical replication occurs after the role installation is complete, and the computer restarts. |
+| DatabasePath | `%systemroot%\\NTDS` | This entry is the path of the fully qualified, non-Universal Naming Convention (UNC) directory on a hard disk of the local computer. This directory will host the AD DS database (NTDS.DIT). If the directory exists, it must be empty. If it doesn't exist, it will be created. Free disk space on the logical drive that is selected must be 200 megabytes (MB). To accommodate rounding errors or all objects in the domain, free disk space may have to be larger. For best performance, locate the directory on a dedicated hard disk. |
+| DelegatedAdmin | No default | This entry specifies the name of the user or the group who will install and administer the RODC. If no value is specified, only members of the Domain Admins group or the Enterprise Admins group can install and administer the RODC. |
+| DNSDelegationPassword | `\<Password> \| *`, no default | This entry specifies the password for the user account that is used to create or remove the DNS delegation. Specify * to prompt the user to enter credentials. |
+| DNSDelegationUserName | No default | This entry specifies the user name to be used when the DNS delegation is created or removed. If you don't specify a value, the account credentials that you specify for the installation or removal of AD DS are used for the DNS delegation. |
+| DNSOnNetwork | `Yes \| No` | This entry specifies whether the DNS service is available on the network. This entry is used only when the network adapter for this computer isn't configured to use the name of a DNS server for name resolution. Specify "No" (no quotation marks) to indicate that DNS will be installed on this computer for name resolution. Otherwise, the network adapter must be configured to use a DNS server name first. |
+| DomainLevel | `0 \| 2 \| 3`, no default | This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest. Value descriptions are as follows: </br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008  |
+| DomainNetbiosName | No default | This entry is the NetBIOS name that is used by pre-AD DS clients to access the domain. The DomainNetbiosName must be unique on the network. |
+| ForestLevel | `0 \| 2 \| 3`  | This entry specifies the forest functional level when a new domain is created in a new forest as follows:</br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008</br>You must not use this entry when you install a new domain controller in an existing forest. The ForestLevel entry replaces the SetForestVersion entry that is available in Windows Server 2003. |
+| InstallDNS | `Yes \| No`, default value changes depending on the operation. \* | This entry specifies whether DNS is configured for a new domain if the Active Directory Domain Services Installation Wizard detects that the DNS dynamic update protocol isn't available. This entry also applies if the wizard detects an insufficient number of DNS servers for an existing domain. |
+| LogPath | `%systemroot%\\NTDS` | This is the path of the fully qualified, non-UNC directory on a hard disk on the local computer that will host the AD DS log files. If the directory exists, it must be empty. If it doesn't exist, it will be created. |
+| NewDomain | `Tree \| Child \| Forest` | "Tree" means the new domain is the root of a new tree in an existing forest. "Child" means the new domain is a child of an existing domain. "Forest" means the new domain is the first domain in a new forest of domain trees. |
+| NewDomainDNSName | No default | This entry is used in "new tree in existing forest" or "new forest" installations. The value is a DNS domain name that is currently not being used. |
+| ParentDomainDNSName | No default | This entry specifies the name of an existing parent DNS domain for a child domain installation. |
+| Password | `\<Password> \| *`, no default | This entry specifies the password that corresponds to the user account that is used to configure the domain controller. Specify * to prompt the user to enter credentials. For protection, passwords are removed from the answer file following an installation. Passwords must be redefined every time that an answer file is used. |
+| PasswordReplicationAllowed | `\<Security_Principal> \| NONE`, no default | This entry specifies the names of computer accounts and user accounts whose passwords can be replicated to this RODC. Specify "NONE" (no quotation marks) if you want to keep the value empty. By default, no user credentials will be cached on this RODC. To specify more than one security principal, add the entry multiple times. |
+| PasswordReplicationDenied | `\<Security_Principal> \| NONE` | This entry specifies the names of the user, group, and computer accounts whose passwords aren't to be replicated to the RODC. Specify "NONE" (no quotation marks) if you don't want to deny the replication of credentials for any users or computers. To specify more than one security principal, add the entry multiple times. |
+| RebootOnCompletion | `Yes \| No` | This entry specifies whether to restart the computer after you install or remove AD DS regardless of whether the operation was successful. |
+| RebootOnSuccess | `Yes \| No \| NoAndNoPromptEither` | This entry specifies whether the computer must be restarted after AD DS has been installed or removed successfully. A restart is always required to complete a change in an AD DS role. |
+| ReplicaDomainDNSName | No default | This entry specifies the FQDN of the domain in which you want to configure an additional domain controller. |
+| ReplicaOrNewDomain | `Replica \| ReadOnlyReplica \| Domain` | This entry is used only for new installations. "Domain" (no quotation marks) converts the server into the first domain controller of a new domain. "ReadOnlyReplica" (no quotation marks) converts the server into a RODC. "Replica" (no quotation marks) converts the server into an additional domain controller. |
+| ReplicationSourceDC | No default | This entry specifies the FQDN of the partner domain controller from which AD DS data is replicated to create the new domain controller. |
+| ReplicationSourcePath | No default | This entry specifies the location of the installation files that are used to create a new domain controller. |
+| SafeModeAdminPassword | `\<Password> \| NONE`, no default | This entry is used to supply the password for the offline administrator account that is used in Directory Service Restore Mode. You can't specify an empty password. |
+| SiteName | Default-First-Site-Name | This entry specifies the site name when you install a new forest. For a new forest, the default is Default-First-Site-Name. For all other scenarios, a site will be selected by using the current site and the subnet configuration of the forest. |
+| SkipAutoConfigDNS | No default | This entry is for expert users who want to skip automatic configuration of client settings, forwarders, and root hints. The entry is only in effect if the DNS Server service is already installed on the server. In this case, you'll receive an informational message that confirms that the automatic configuration of DNS was skipped. Otherwise, this entry is ignored. If you specify this switch, make sure that zones are created and configured correctly before you install AD DS, or the domain controller won't operate correctly. This entry doesn't skip automatic creation of the DNS delegation in the parent DNS zone. To control DNS delegation creation, use the DNSDelegation entry. |
+| Syskey | `\<system_key> \| NONE` | This entry specifies the system key for the media from which you replicate the data. |
+| SYSVOLPath | `%systemroot%\\SYSVOL` | This entry specifies a fully qualified, non-UNC directory on the hard disk of the local computer. This directory will host the AD DS log files. If the directory already exists, it must be empty. If it doesn't exist it will be created. The directory must be located on a partition that was formatted by using the NTFS 5.0 file system. Locate the directory on a different physical hard disk than the operating system for best performance. |
+| TransferIMRoleIfNeeded | `Yes \| No` | This entry specifies whether to transfer the infrastructure master role to this domain controller. This entry is useful if the domain controller is currently hosted on a global catalog server, and you don't plan to make the domain controller a global catalog server. Specify "Yes" (no quotation marks) to transfer the infrastructure master role to this domain controller. If you specify "Yes," make sure that you specify the ConfirmGC=No entry. |
+| UserDomain | No default | This entry specifies the domain name for the user account that is used for install AD DS on a server. |
+| UserName | No default | This entry specifies the user account name that is used for installing AD DS on a server. We recommend that you specify the account credentials in the \<domain>\\<user_name> format. |
+
+\* For a new forest, the DNS server role is installed by default. For a new tree, a new child domain, or a replica, a DNS server is installed by default if an existing DNS infrastructure is detected by the Active Directory Domain Services Installation Wizard. If no existing DNS infrastructure is detected by the wizard, a DNS server isn't installed by default.
 
 #### Removal operation parameters
 
