@@ -35,17 +35,17 @@ To find the current Active Directory schema version:
 
 1. Open the **Start** menu.
 
-1. Enter **ADSIEdit.msc**, then select **Enter** to open the Active Directory Service Interfaces (ADSI) Editor.
+1. Enter **ADSIEdit.msc**, then select **Enter** to open **ADSI Edit**.
 
 1. In the pane on the left side of the window, right-click on **ADSI Edit**, then select **Connect to**.
 
-1. In the **Connection Settings** window under **Select a well-known Naming Context**, select **Schema**, then select **OK**.
+1. In the **Connection Settings** window under **Select a well known Naming Context**, select **Schema**, then select **OK**.
 
 1. In the pane on the left side of the window, expand the schema for your DC.
 
-1. Right-click on `CN=Schema,CN=Configuration,DC=<contoso>,DC=local`, then select **Properties**.
+1. Right-click on **CN=Schema,CN=Configuration,DC=contoso,DC=local**, then select **Properties**.
 
-1. Go to the **Attribute** list and scroll down until you find the *objectvVersion* attribute. That number is the schema version.
+1. In the **Attribute** list, scroll down until you find the *objectvVersion* attribute. The value is the schema version.
 
 #### [CMD](#tab/cmd)
 
@@ -73,7 +73,7 @@ The following table maps the number shown in the **objectVersion** attribute val
 
 | Version | Operating system |
 |---|---|
-|91|Windows Server 2025 (preview)|
+|91|Windows Server 2025|
 |88|Windows Server 2022|
 |88|Windows Server 2019|
 |87|Windows Server 2016|
@@ -100,11 +100,11 @@ To find the current Exchange Schema version, you can use one of the following me
 
 1. In the pane on the left side of the window, expand the schema for your DC.
 
-1. Right-click on `CN=Schema,CN=Configuration,DC=contoso,DC=local`.
+1. Select **CN=Schema,CN=Configuration,DC=contoso,DC=local**.
 
-1. In the pane in the center of the window, scrol down to the **Name** list and open `CN=ms-Exch-Schema-Version-Pt`.
+1. In the pane in the center of the window, scroll down to the **Name** list and open **CN=ms-Exch-Schema-Version-Pt**.
 
-1. Go to the **Attribute** list and scroll down until you find the *rangeUpper* attribute. That number is the schema version.
+1. In the **Attribute** list, scroll down until you find the *rangeUpper* attribute. The value is the schema version.
 
 #### [CMD](#tab/cmd)
 
