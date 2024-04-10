@@ -137,11 +137,11 @@ Credential Guard uses virtualization-based security to isolate secrets so that o
 
 Credential Guard for Windows Server 2016 includes the following updates for signed-in user sessions:
 
-- Kerberos and NTLM <!--acronym?--> use virtualization-based security to protect Kerberos amd NTLM secrets for signed-in user sessions.
+- Kerberos and New Technology LAN Manager (NTLM) use virtualization-based security to protect Kerberos amd NTLM secrets for signed-in user sessions.
 
 - Credential Manager protects saved domain credentials using virtualization-based security. Signed-in credentials and saved domain credentials don't pass to remote hosts using Remote Desktop.
 
-- You can enable Credential Guard without a UEFI <!--acronym--> lock.
+- You can enable Credential Guard without a Unified Extensible Firmware Interface (UEFI) lock.
 
 ### Remote Credential Guard
 
@@ -161,23 +161,23 @@ Domain protections now require an Active Directory domain.
 
 If a domain-joined device can register its bound public key with a Windows Server 2016 domain controller (DC), then the device can authenticate with the public key using Kerberos PKINIT authentication to a Windows Server 2016 DC.
 
-Domain-joined devices with bound public keys registered with a Windows Server 2016 domain controller can now authenticate using Kerberos PKINIT <!--Acronym---> authentication to a Windows Server 2016 domain controller.
+Domain-joined devices with bound public keys registered with a Windows Server 2016 domain controller can now authenticate to a Windows Server 2016 domain controller using Kerberos Public Key Cryptography for Initial Authentication (PKINIT) protocols.
 
-KDCs <!--Acronym---> now supports authentication using Kerberos key trust.
+Key Distribution Centers (KDCs) now support authentication using Kerberos key trust.
 
-[Learn more about public key support for domain-joined devices & Kerberos key trust](../kerberos/whats-new-in-kerberos-authentication.md).
+For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kdc-support-for-public-key-trust-based-client-authentication).
 
 ### PKINIT Freshness extension support
 
-Kerberos clients now attempt the PKInit <!--Acronym---> freshness extension for public key based sign-ons.
+Kerberos clients now attempt the PKINIT freshness extension for public key based sign-ons.
 
-KDCs now support the PKInit freshness extension. However, they don't offer the PKInit freshness extension by default.
+KDCs now support the PKInit freshness extension. However, they don't offer the PKINIT freshness extension by default.
 
-[Learn more about PKINIT freshness extension support](../kerberos/whats-new-in-kerberos-authentication.md).
+For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kerberos-client-and-kdc-support-for-rfc-8070-pkinit-freshness-extension).
 
 ### Rolling public key only user's NTLM secrets
 
-Starting with the Windows Server 2016 domain functional level (DFL), DCs <!--Acronym---> now support rolling the NTLM <!--Acronym---> secrets of a public-key-only user. This feature is unavailable in lower DFLs.
+Starting with the Windows Server 2016 domain functional level (DFL), DCs now support rolling the NTLM secrets of a public-key-only user. This feature is unavailable in lower domain functioning levels (DFLs).
 
 > [!WARNING]
 > Adding a DC enabled before the November 8, 2016 update to a domain that supports rolling NTLM secrets can cause the DC to crash.
@@ -186,23 +186,21 @@ For new domains, this feature is enabled by default. For existing domains, you m
 
 1. From the Active Directory Administrative center, right-click the domain on the left pane and select **Properties**.
 
-    ![Domain properties](../media/Credentials-Protection-And-Management/domain-properties.png)
+    ![Domain properties](../security/credentials-protection-and-management/media/Credentials-Protection-And-Management/domain-properties.png)
 
 2. Select **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Windows Hello for Business or smart card for interactive logon**.
 
-    ![Autoroll expiring NTLM secrets](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)
+    ![Autoroll expiring NTLM secrets](../security/credentials-protection-and-management/media/Credentials-Protection-And-Management/autoroll-ntlm.png)
 
-3. Click **OK**.
+3. Select **OK**.
 
 ### Allowing network NTLM when user is restricted to specific domain-joined devices
 
-<!--Last section-->
+DCs can now support allowing network NTLM when a user is restricted to specific domain-joined devices in the Windows Server 2016 DFL and higher. This feature is unavailable in DFLs running an earlier operating system than Windows Server 2016.
 
-Beginning with Windows Server 2016 domain functional level (DFL), DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices. This feature is unavailable in lower DFLs.
+To configure this setting, in the authentication policy, select **Allow NTLM network authentication when the user is restricted to selected devices**.
 
-Configuration: On the authentication policy, click **Allow NTLM network authentication when the user is restricted to selected devices**.
-
-[Learn more about authentication policies](./authentication-policies-and-authentication-policy-silos.md).
+For more information, see [Authentication policies and authentication policy silos](../security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos.md).
 
 ### Device Guard (Code Integrity)
 
