@@ -11519,6 +11519,11 @@
       "source_path": "WindowsServerDocs/networking/sdn/sdn-whats-new.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/server-1709-relnotes.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
     }
   ]
 }
