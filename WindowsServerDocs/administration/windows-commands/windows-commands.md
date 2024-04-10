@@ -304,6 +304,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [dnscmd](dnscmd.md)
 - [doskey](doskey.md)
 - [driverquery](driverquery.md)
+- [dtrace](dtrace.md)
 
 ### E
 
