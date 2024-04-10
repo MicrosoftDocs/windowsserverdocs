@@ -4,7 +4,7 @@ description: Lists the maximum supported number for components you can add to or
 ms.topic: article
 ms.author: wscontent
 author: robinharwood
-ms.date: 04/02/2024
+ms.date: 04/10/2024
 zone_pivot_groups: windows-os-version
 ---
 
@@ -31,14 +31,14 @@ These maximums apply to each virtual machine when the host is run the selected p
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
 |Checkpoints|50|The actual number might be lower, depending on the available storage. Each checkpoint is stored as an .avhd file that uses physical storage.|
-|Memory|240 TB for generation 2; <br/>1 TB for generation 1|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|
+|Memory|<ul><li>240 TB for generation 2</li><li>1 TB for generation 1</li></ul>|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|
 |Serial (COM) ports|2|None.|
 |Size of physical disks attached directly to a virtual machine|Varies|Maximum size is determined by the guest operating system.|
 |Virtual Fibre Channel adapters|4|As a best practice, we recommended that you connect each virtual Fibre Channel Adapter to a different virtual SAN.|
 |Virtual floppy devices|1 virtual floppy drive|None.|
-|Virtual hard disk capacity|64 TB for VHDX format;<br/>2,040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
+|Virtual hard disk capacity|<ul><li>64 TB for VHDX format</li><li>2,040 GB for VHD format</li></ul>|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|2048 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|<ul><li>2048 for generation 2</li><li>64 for generation 1</li></ul>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|68 adapters total:<ul><li>64 Hyper-V specific network adapters</li><li>4 legacy network adapters;</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
@@ -53,14 +53,14 @@ These maximums apply to each virtual machine when the host is run the selected p
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
 |Checkpoints|50|The actual number might be lower, depending on the available storage. Each checkpoint is stored as an .avhd file that uses physical storage.|
-|Memory|240 TB for generation 2; <br/>1 TB for generation 1|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|
+|Memory|<ul><li>240 TB for generation 2</li><li>1 TB for generation 1</li></ul>|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|
 |Serial (COM) ports|2|None.|
 |Size of physical disks attached directly to a virtual machine|Varies|Maximum size is determined by the guest operating system.|
 |Virtual Fibre Channel adapters|4|As a best practice, we recommended that you connect each virtual Fibre Channel Adapter to a different virtual SAN.|
 |Virtual floppy devices|1 virtual floppy drive|None.|
-|Virtual hard disk capacity|64 TB for VHDX format;<br/>2,040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
+|Virtual hard disk capacity|<ul><li>64 TB for VHDX format</li><li>2,040 GB for VHD format</li></ul>|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|1,024 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|<ul><li>1,024 for generation 2</li><li>64 for generation 1</li></ul>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|68 adapters total:<ul><li>64 Hyper-V specific network adapters</li><li>4 legacy network adapters;</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
@@ -72,14 +72,14 @@ These maximums apply to each virtual machine when the host is run the selected p
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
 |Checkpoints|50|The actual number might be lower, depending on the available storage. Each checkpoint is stored as an .avhd file that uses physical storage.|
-|Memory|12 TB for generation 2; <br/>1 TB for generation 1|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|
+|Memory|<ul><li>12 TB for generation 2</li><li>1 TB for generation 1</li></ul>|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|
 |Serial (COM) ports|2|None.|
 |Size of physical disks attached directly to a virtual machine|Varies|Maximum size is determined by the guest operating system.|
 |Virtual Fibre Channel adapters|4|As a best practice, we recommended that you connect each virtual Fibre Channel Adapter to a different virtual SAN.|
 |Virtual floppy devices|1 virtual floppy drive|None.|
-|Virtual hard disk capacity|64 TB for VHDX format;<br/>2,040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
+|Virtual hard disk capacity|<ul><li>64 TB for VHDX format</li><li>2,040 GB for VHD format</li></ul>|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|250 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|<ul><li>250 for generation 2</li><li>64 for generation 1</li></ul>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|68 adapters total:<ul><li>64 Hyper-V specific network adapters</li><li>4 legacy network adapters;</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
@@ -91,14 +91,14 @@ These maximums apply to each virtual machine when the host is run the selected p
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
 |Checkpoints|50|The actual number might be lower, depending on the available storage. Each checkpoint is stored as an .avhd file that uses physical storage.|
-|Memory|12 TB for generation 2; <br/>1 TB for generation 1|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|
+|Memory|<ul><li>12 TB for generation 2</li><li>1 TB for generation 1</li></ul>|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|
 |Serial (COM) ports|2|None.|
 |Size of physical disks attached directly to a virtual machine|Varies|Maximum size is determined by the guest operating system.|
 |Virtual Fibre Channel adapters|4|As a best practice, we recommended that you connect each virtual Fibre Channel Adapter to a different virtual SAN.|
 |Virtual floppy devices|1 virtual floppy drive|None.|
-|Virtual hard disk capacity|64 TB for VHDX format;<br/>2,040 GB for VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
+|Virtual hard disk capacity|<ul><li>64 TB for VHDX format</li><li>2,040 GB for VHD format</li></ul>|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|
-|Virtual processors|240 for generation 2 VMs;<br/>64 for generation 1;<br/>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
+|Virtual processors|<ul><li>240 for generation 2</li><li>64 for generation 1</li></ul>|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|
 |Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) and [Supported Windows guest operating systems](../supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).|
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|
 |Virtual network adapters|12 adapters total:<ul><li>8 Hyper-V specific network adapters</li><li>4 legacy network adapters</li></ul>|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server](plan-hyper-v-networking-in-windows-server.md).|
