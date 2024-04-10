@@ -4,14 +4,29 @@ description: DTrace is a dynamic tracing framework that allows users to monitor 
 ms.topic: reference
 author: xelu86
 ms.author: wscontent
-ms.date: 03/28/2024
+ms.date: 04/10/2024
 ---
 
 # DTrace
 
-Beginning with Windows Server 2025, `dtrace` is included as a built-in tool. DTrace is a command-line utility that allows users to monitor and debug their system performance in real-time. With `dtrace`, users can dynamically instrument the kernel and user-space code without modifying the code itself. This powerful tool supports various data collection and analysis techniques, including aggregations, histograms, and tracing of user-level events.
+Beginning with Windows Server 2025 and Windows 11, `dtrace` is included as a built-in tool. DTrace is a command-line utility that allows users to monitor and debug their system performance in real-time. With `dtrace`, users can dynamically instrument the kernel and user-space code without modifying the code itself.
 
-Probes can be specified in `dtrace` scripts where the script defines the probes to be monitored and the actions to be taken when the probes fire. Actions can include printing output, recording data, or other operations, such as sending a signal or modifying a variable. A probe is a specific point in the code where data can be collected to perform these actions.
+This powerful tool supports various data collection and analysis techniques, including aggregations, histograms, and tracing of user-level events. Probes can be specified in `dtrace` scripts where the script defines the probes to be monitored and the actions to be taken when the probes fire. A probe is a specific point in the code where data can be collected to perform these actions.
+
+> [!NOTE]
+> The built-in version of `dtrace` differs from DTrace for Windows surrounding the available parameters and other functionality. To learn more about the port of DTrace for Windows, see [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace).
+>
+> For a comprehensive guide on using DTrace, see the [Dynamic Tracing Guide](https://illumos.org/books/dtrace/bookinfo.html).
+
+## Enable DTrace
+
+Before `dtrace` can be used, it must first be enabled. To enable `dtrace`, open an elevated command prompt or PowerShell as admin and run:
+
+```cmd
+bcdedit /set dtrace on
+```
+
+A reboot is required for this change to take effect.
 
 ## Syntax
 
@@ -32,40 +47,40 @@ name [[ predicate ] action ]] [-i probe-id [[ predicate ] action ]] [ args ... ]
 | Parameter | Description |
 |-|-|
 | -b `<bufsz>` | Sets the size of the buffer used to store trace data, where _bufsz_ is the desired size of the buffer in bytes, kilobytes (**k**), megabytes (**m**), or gigabytes (**g**). |
-| -c `<cmd>` | Runs the specified command and exits once it completes, where _cmd_ is the command that you want to run before starting the trace. |
-| -C | Runs the **ucpp** preprocessor on script files before running dtrace. |
-| -D `<name>` =`<def>` | Defines a symbol when invoking the preprocessor, where _name_ is the name of the symbol to define, and _def_ is an optional value to assign to the symbol. |
+| -c `<cmd>` | Runs the specified command and exits once it completes, where _cmd_ is the command that you want to run before starting the trace. If more than one instance of **-c** is used, dtrace exits when all commands finish running and reports the exit status for each child process. |
+| -C | Runs the ucpp preprocessor on script files before running the trace. |
+| -D `<name>`=`<def>` | Defines a symbol when invoking the preprocessor, where _name_ is the name of the symbol to define, and _def_ is an optional value to assign to the symbol. |
 | -e | Exits after compiling a request but before enabling probes. |
 | -f | Enables or lists probes that match the specified function name. |
 | -F | Combines the trace output by function, making it easier to analyze. |
 | -h | Generates a header file with definitions for static probes. |
 | -i `<probe-id>` | Enables or lists probes that match the specified probe ID, where _probe-id_ is the identifier for the probe to be traced. |
-| -I `<path>` | Adds the specified directory to the preprocessor search path, where _path_ is the directory that you want to add. |
-| -l | Lists probes that match specified criteria. |
-| -L `<path>` | Adds the specified directory to the library search path, where _path_ is the directory that you want to add. |
-| -m | Enables or lists probes that match the specified module name. |
-| -n | Enables or lists probes that match the specified probe name. |
+| -I `<path>` | Adds the specified directory to the preprocessor search path, where _path_ is the directory that you want to add that contain the _#include_ files. |
+| -l | Lists probes that match specified criteria based on the **-P**, **-m**, **-f**, **-n**, **-i**, and **-s** parameters. If these parameters aren't specified, all probes are listed. |
+| -L `<path>` | Adds the specified directory to the library search path, where _path_ is the library directory that you want to add that contain common definitions. |
+| -m | Enables or lists probes that match the specified module name in an argument using the format _provider:module_ or _module_. If qualifiers aren't specified besides the module name, all probes with that module name are matched. |
+| -n | Enables or lists probes that match the specified probe name in an argument using the format _provider:module:function:name_, _module:function:name_, _function:name_, or _name_. If qualifiers aren't specified besides the probe name, all probes with that name are matched. |
 | -o `<output>` | Sets the output file for the trace data, where _output_ is the name of the file that you want to use for the trace data. |
-| -p `<pid>` | Grabs the specified process ID and caches its symbol tables, which can be used to analyze the program's behavior, where _pid_ is the process ID. |
-| -P `<provider>` | Enables or lists probes that match the specified provider name, where _provider_ is the name of the provider. |
+| -p `<pid>` | Grabs the specified process-ID (PID) and caches its symbol tables, which can be used to analyze the program's behavior. |
+| -P `<provider>` | Enables or lists probes that match the specified provider name, where _provider_ is the name of the provider. More than one instance of the **-P** parameter can be used at the same time. |
 | -q | Sets quiet mode, which only outputs explicitly traced data. |
-| -s `<script>` | Enables or lists probes according to the specified D-language script, where _script_ is the name of the script that you want to run. |
-| -S | Prints the D-language compiler intermediate code for debugging. |
+| -s `<script>` | Enables or lists probes according to the specified D script, where _script_ is the name of the script that you want to run. If **-e** is specified, the program is compiled but no data collection is performed. If **-l** is specified, the program is compiled and the list of probes matched are displayed, but no data collection is performed. If **-e** or **-l** aren't specified, the program is compiled, data collection is performed according to the probes specified and tracing begins. |
+| -S | Prints the D-language compiler intermediate code for debugging to _stderr_. |
 | -U `<name>` | Undefines a symbol when invoking the preprocessor, where _name_ is the name of the symbol that you want to undefine. |
 | -v | Sets verbose mode, which reports stability attributes and arguments. |
 | -V | Displays the version of the dtrace API. |
-| -w | Permits destructive actions, such as modifying system state. |
-| -x `<opt>` =`<val>` | Enables or modifies the compiler and tracing options, where _opt_ is the name of the option that you want to enable or modify, and _val_ is an optional value. |
-| -X `<a\|c\|s\|t>` | Sets the stability level of a dtrace feature. The stability level is an important consideration when used in production environments as depending on which level is used can produce different results. <br> <ul><li> `a`: Sets the stability level to `alpha`, which means that the feature is still under development and is subject to change. It may not be fully functional or may have bugs. Features with an alpha stability level aren't recommended for production use. <li> `c`: Sets the stability level to `current`, which means that the feature is stable and isn't expected to change in future releases. Features with a current stability level are safe to use in production environments. <li> `s`: Sets the stability level to `stable`, which means that the feature is stable and won't change in future releases, but may be removed in a future release. Features with a stable stability level are safe to use in production environments, but may require changes if they're removed in a future release. <li> `t`: Sets the stability level to `testing`, which means that the feature is available for testing but isn't yet stable. Features with a testing stability level aren't recommended for production use.</ul></li> |
+| -w | Permits destructive actions when specified with the **-s**, **-P**, **-m**, **-f**, **-n**, or **-i** parameters. Destructive actions can include actions such as modifying kernel variables, changing the behavior of system calls, or crashing the system. |
+| -x `<opt>`=`<val>` | Enables or modifies the compiler and tracing options, where _opt_ is the name of the option that you want to enable or modify, and _val_ is an optional value. |
+| -X`<a\|c\|s\|t>` | Controls how strict the C code being compiled adheres to the ISO C standard when invoking the cpp. The available arguments are: <br><ul><li> `-Xa` (default): provides ISO C plus K&R compatibility extensions with semantic changes required by ISO C. The predefined macro \_\_STDC__ has a value of **0** when cpp is invoked. <li> `-Xc` (conformance): Provides a strict conformant of ISO C without K&R C compatibility extensions. The predefined macro \_\_STDC__ has a value of **1** when cpp is invoked. <li> `-Xs` (K&R C): Provides K&R C only, and the \_\_STDC__ macro isn't defined when cpp is invoked. <li> `-Xt` (transition): Provides ISO C plus K&R C compatibility extensions without semantic changes required by ISO C. The predefined macro \_\_STDC__ has a value of **0** when cpp is invoked. </ul></li> |
 | -y `<symbol path>` | Sets the symbol search path for the dtrace script to resolve, where _symbol path_ is the path to the shared library or directory that contains the symbols. |
 | -Y | Uses the default symbol search path for the dtrace script. |
 | -Z | Permits probe descriptions that match zero probes for debugging. |
 
 The following list describes the remaining descriptions:
 
-- **Predicate**: A D-language expression that is evaluated each time a probe fires. If the predicate evaluates to true, the associated action is executed. Predicates can be used to filter the output of `dtrace` based on certain conditions, such as the value of a variable or the occurrence of an event.
+- **Predicate**: The predicate is enclosed in forward slashes (`/ /`) and is a D-expression, which is a boolean expression that can reference variables, constants, and functions. Predicates can be used to filter the output of `dtrace` based on these events. This expression is evaluated each time a probe fires. If the predicate evaluates to true, the associated action is executed.
 
-- **Action**: A D-language expression that is executed when a probe fires and its associated predicate, if any, evaluates to true. Actions can be used to print output, record data, or perform other operations, such as sending a signal or modifying a variable.
+- **Action**: The action is enclosed in curly braces (`{}`) and is a set of D-language statements that are executed when a probe fires and its associated predicate, if any, evaluates to true. Actions can be used to print output statements, record data, or perform other operations, such as sending a signal or modifying a variable.
 
 - **Module**: A component of a provider that contains a set of related probes. For example, the `syscall` provider has modules for different types of system calls, such as `read` and `write`. Modules can be specified in `dtrace` scripts to limit the scope of the script to a specific module or set of modules.
 
@@ -75,9 +90,32 @@ The following list describes the remaining descriptions:
 
 ## Examples
 
+To trace all system calls, print the name of the executable and the name of the system call being made, run:
+
+```cmd
+dtrace -n 'syscall:::entry { printf("%s called syscall %s", execname, probefunc); }'
+```
+
+To trace the "read" system call and print the PID of the process making the call, the number of bytes being read, and the file descriptor being read from, run:
+
+```cmd
+dtrace -n 'syscall::read:entry { printf("Process %d read %d bytes from file descriptor %d", pid, arg2, arg0); }'
+```
+
+To trace the "write" system call and print the name of the executable, the number of bytes written, and the file descriptor being written to, run:
+
+```cmd
+dtrace -n 'syscall::write:entry { printf("%s wrote %d bytes to file descriptor %d", execname, arg2, arg0); }'
+```
+
+This command traces the "function_name" function in the process with the specified PID and prints the name of the function, the PID of the process calling it, and the name of the executable.
+
+```cmd
+dtrace -n 'pid$target::function_name:entry { printf("Function %s called by process %d (%s)", probefunc, pid, execname); }' -p <PID>
+```
+
 ## See also
 
-- [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace)
 - [DTrace Programming](/windows-hardware/drivers/devtest/dtrace-programming)
 - [DTrace Code Samples](/windows-hardware/drivers/devtest/dtrace-code-samples)
 - [DTrace Event Tracing for Windows](/windows-hardware/drivers/devtest/dtrace-etw)
