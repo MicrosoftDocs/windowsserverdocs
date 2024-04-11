@@ -14,7 +14,7 @@ Beginning with Windows Server 2025 and Windows 11, `dtrace` is included as a bui
 This powerful tool supports various data collection and analysis techniques, including aggregations, histograms, and tracing of user-level events. Probes can be specified in `dtrace` scripts where the script defines the probes to be monitored and the actions to be taken when the probes fire. A probe is a specific point in the code where data can be collected to perform these actions.
 
 > [!NOTE]
-> The built-in version of `dtrace` differs from DTrace for Windows surrounding the available parameters and other functionality. To learn more about the port of DTrace for Windows, see [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace).
+> This built-in port of `dtrace` differs from DTrace for Windows surrounding parameters and other capabilities. To learn more about DTrace for Windows, see [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace).
 >
 > For a comprehensive guide on using DTrace, see the [Dynamic Tracing Guide](https://illumos.org/books/dtrace/bookinfo.html).
 
