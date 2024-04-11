@@ -4,7 +4,7 @@ description: DTrace is a dynamic tracing framework that allows users to monitor 
 ms.topic: reference
 author: xelu86
 ms.author: wscontent
-ms.date: 04/10/2024
+ms.date: 04/12/2024
 ---
 
 # DTrace
@@ -72,7 +72,7 @@ name [[ predicate ] action ]] [-i probe-id [[ predicate ] action ]] [ args ... ]
 | -w | Permits destructive actions when specified with the **-s**, **-P**, **-m**, **-f**, **-n**, or **-i** parameters. Destructive actions can include actions such as modifying kernel variables, changing the behavior of system calls, or crashing the system. |
 | -x `<opt>`=`<val>` | Enables or modifies the compiler and tracing options, where _opt_ is the name of the option that you want to enable or modify, and _val_ is an optional value. |
 | -X `<a\|c\|s\|t>` | Controls how strict the C code being compiled adheres to the ISO C standard when invoking the cpp. The available arguments are: <br><ul><li> `-Xa` (default): provides ISO C plus K&R compatibility extensions with semantic changes required by ISO C. The predefined macro \_\_STDC__ has a value of **0** when cpp is invoked. <li> `-Xc` (conformance): Provides a strict conformant of ISO C without K&R C compatibility extensions. The predefined macro \_\_STDC__ has a value of **1** when cpp is invoked. <li> `-Xs` (K&R C): Provides K&R C only, and the \_\_STDC__ macro isn't defined when cpp is invoked. <li> `-Xt` (transition): Provides ISO C plus K&R C compatibility extensions without semantic changes required by ISO C. The predefined macro \_\_STDC__ has a value of **0** when cpp is invoked. </ul></li> |
-| -y `<symbol path>` | Sets the symbol search path for the dtrace script to resolve, where _symbol path_ is the path to the shared library or directory that contains the symbols. |
+| -y `<symbol path>` | Sets the symbol search path for the dtrace script to resolve, where _symbol path_ is the path to the shared library or directory that contains the symbols. To learn more, see [Symbol Paths](/win32/debug/symbol-paths). |
 | -Y | Uses the default symbol search path for the dtrace script. |
 | -Z | Permits probe descriptions that match zero probes for debugging. |
 
@@ -82,9 +82,9 @@ The following list describes the remaining descriptions:
 
 - **Action**: The action is enclosed in curly braces (`{ }`) and is a set of D-language statements that are executed when a probe fires and its associated predicate, if any, evaluates to true. Actions can be used to print output statements, record data, or perform other operations, such as sending a signal or modifying a variable.
 
-- **Module**: A component of a provider that contains a set of related probes. For example, the `syscall` provider has modules for different types of system calls, such as `read` and `write`. Modules can be specified in `dtrace` scripts to limit the scope of the script to a specific module or set of modules.
+- **Module**: A component of a provider that contains a set of related probes. Modules can be specified in `dtrace` scripts to limit the scope of the script to a specific module or set of modules.
 
-- **Func**: A function name that is associated with a probe. For example, the `syscall::read` probe is associated with the `read` function. Functions can be specified in `dtrace` scripts to limit the scope of the script to a specific function or set of functions.
+- **Func**: A function name that is associated with a probe. For example, the `syscall::NtReadFile` probe is associated with the `read` function. Functions can be specified in `dtrace` scripts to limit the scope of the script to a specific function or set of functions.
 
 - **Args**: The arguments that are passed to the action expression when a probe fires and its associated predicate, if any, evaluates to true. Args can be used to capture data from the probe context, such as the values of function arguments or system call return values. Args can also be used to pass data between probes or to modify the behavior of the script.
 
@@ -96,23 +96,13 @@ To trace all system calls, print the name of the executable and the name of the 
 dtrace -n 'syscall:::entry { printf("%s called syscall %s", execname, probefunc); }'
 ```
 
-To trace the "read" system call and print the PID of the process making the call, the number of bytes being read, and the file descriptor being read from, run:
-
-```cmd
-dtrace -n 'syscall::read:entry { printf("Process %d read %d bytes from file descriptor %d", pid, arg2, arg0); }'
-```
-
-To trace the "write" system call and print the name of the executable, the number of bytes written, and the file descriptor being written to, run:
-
-```cmd
-dtrace -n 'syscall::write:entry { printf("%s wrote %d bytes to file descriptor %d", execname, arg2, arg0); }'
-```
-
 This command traces the "function_name" function in the process with the specified PID and prints the name of the function, the PID of the process calling it, and the name of the executable.
 
 ```cmd
 dtrace -n 'pid$target::function_name:entry { printf("Function %s called by process %d (%s)", probefunc, pid, execname); }' -p <PID>
 ```
+
+For further examples on using `dtrace`, see [Getting started with DTrace - One line commands](/windows-hardware/drivers/devtest/dtrace#getting-started-with-dtrace---one-line-commands).
 
 ## See also
 
