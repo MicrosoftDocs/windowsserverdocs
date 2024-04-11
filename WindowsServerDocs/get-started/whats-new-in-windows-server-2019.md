@@ -288,3 +288,6 @@ Now, with Windows Server 2019, it's easy to deploy and manage through a new depl
 ### Windows Subsystem for Linux (WSL)
 
 WSL enables server administrators to use existing tools and scripts from Linux on Windows Server. Many improvements showcased in the [command line blog](https://devblogs.microsoft.com/commandline/tag/wsl/) are now part of Windows Server, including Background tasks, DriveFS, WSLPath, and much more.
+
+## Active Directory Federation Services
+
