@@ -38,12 +38,8 @@ For more information about running **adprep /rodcprep**, see [Prepare a Forest f
 | Parameter | Description |
 |---|---|
 | /forestprep | <p>Prepares a forest for the introduction of a domain controller that runs Windows Server. You run this command only once in the forest. You must run this command on the domain controller that holds the schema operations master role (also known as flexible single master operations or FSMO) for the forest. You must be a member of all the following groups to run this command:</p>
-<ul>
-<li><p>The Enterprise Admins group</p></li>
-<li><p>The Schema Admins group</p></li>
-<li><p>The Domain Admins group of the domain that hosts the schema master</p></li>
-</ul> |
-| /domainprep | <p>Prepares a domain for the introduction of a domain controller that runs Windows Server. You run this command after the <strong>forestprep</strong> command finishes and after the changes replicate to all the domain controllers in the forest.</p>
+<ul><li>The Enterprise Admins group</li><li>The Schema Admins group</li><li>The Domain Admins group of the domain that hosts the schema master</li></ul> |
+| /domainprep | <p>Prepares a domain for the introduction of a domain controller that runs Windows Server. You run this command after the <strong>forestprep</strong> command finishes and after the changes replicate to all the domain controllers in the forest.</p> |
 <p>Run this command in each domain where you plan to add a domain controller that runs Windows Server. You must run this command on the domain controller that holds the infrastructure operations master role for the domain. You must be a member of the Domain Admins group to run this command.</p> |
 | <p>/domainprep <p>/gpprep | <p>Performs similar updates as <strong>domainprep</strong>. However, this command also provides updates that are necessary to enable Resultant Set of Policy (RSOP) Planning Mode functionality.</p>
 <p>In Active Directory environments that run Microsoft Windows, this command performs updates during off-peak hours. This minimizes replication traffic that is created in those environments by updates to file system permissions and Active Directory permissions on existing Group Policy objects (GPOs).</p>
