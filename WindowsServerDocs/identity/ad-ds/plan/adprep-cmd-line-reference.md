@@ -3,7 +3,7 @@ title: Adprep
 description: Learn about Adprep command line tool to prepare a forest and domain for a domain controller for Windows Server.
 ms.topic: reference
 author: gswashington
-ms.author: 
+ms.author: nedpyle 
 ms.date: 04/14/2024
 
 ---
@@ -30,7 +30,7 @@ For more information about running **adprep /rodcprep**, see [Prepare a Forest f
 
 ## Syntax
 
-    adprep {/forestprep | /domainprep | /domainprep /gpprep | /rodcprep | /wssg | /silent }
+adprep {/forestprep | /domainprep | /domainprep /gpprep | /rodcprep | /wssg | /silent }
 
 ## Parameters
 
@@ -38,8 +38,7 @@ For more information about running **adprep /rodcprep**, see [Prepare a Forest f
 | Parameter | Description |
 |---|---|
 | /forestprep | <p>Prepares a forest for the introduction of a domain controller that runs Windows Server. You run this command only once in the forest. You must run this command on the domain controller that holds the schema operations master role (also known as flexible single master operations or FSMO) for the forest. You must be a member of all the following groups to run this command:</p><p><ul><li>The Enterprise Admins group</li><li>The Schema Admins group</li><li>The Domain Admins group of the domain that hosts the schema master</li></ul></p> |
-| /domainprep | <p>Prepares a domain for the introduction of a domain controller that runs Windows Server. You run this command after the <strong>forestprep</strong> command finishes and after the changes replicate to all the domain controllers in the forest.</p> |
-<p>Run this command in each domain where you plan to add a domain controller that runs Windows Server. You must run this command on the domain controller that holds the infrastructure operations master role for the domain. You must be a member of the Domain Admins group to run this command.</p> |
+| /domainprep | <p>Prepares a domain for the introduction of a domain controller that runs Windows Server. You run this command after the <strong>forestprep</strong> command finishes and after the changes replicate to all the domain controllers in the forest.</p><p>Run this command in each domain where you plan to add a domain controller that runs Windows Server. You must run this command on the domain controller that holds the infrastructure operations master role for the domain. You must be a member of the Domain Admins group to run this command.</p> |
 | <p>/domainprep <p>/gpprep | <p>Performs similar updates as <strong>domainprep</strong>. However, this command also provides updates that are necessary to enable Resultant Set of Policy (RSOP) Planning Mode functionality.</p>
 <p>In Active Directory environments that run Microsoft Windows, this command performs updates during off-peak hours. This minimizes replication traffic that is created in those environments by updates to file system permissions and Active Directory permissions on existing Group Policy objects (GPOs).</p>
 <p>Run this command after the <strong>forestprep</strong> command finishes and after the changes replicate to all domain controllers in the forest. You must run this command on the infrastructure master for the domain. For more information about running this command in Windows Active Directory environments, see [Prepare Your Infrastructure for Upgrade](https://go.microsoft.com/fwlink/?linkid=94798).</p> |
@@ -83,15 +82,15 @@ The following table lists exit codes that Adprep can return after an operation c
 
 The following example prepares a forest for a domain controller that runs Windows Server:
 
-    adprep /forestprep
+adprep /forestprep
 
 The following example prepares a domain for a domain controller that runs Windows Server:
 
-    adprep /domainprep
+adprep /domainprep
 
 The following example prepares a domain for an RODC:
 
-    adprep /rodcprep
+adprep /rodcprep
 
 ## See also
 
