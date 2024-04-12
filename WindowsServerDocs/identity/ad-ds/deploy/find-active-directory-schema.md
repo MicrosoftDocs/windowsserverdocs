@@ -92,11 +92,11 @@ To find the current Exchange Schema version, you can use one of the following me
 
 1. Open the **Start** menu.
 
-1. Enter **ADSIEdit.msc**, then select **Enter** to open the Active Directory Service Interfaces (ADSI) Editor.
+1. Enter **ADSIEdit.msc**, then select **Enter** to open **ADSI Edit**.
 
 1. In the pane on the left side of the window, right-click on **ADSI Edit**, then select **Connect to**.
 
-1. In the **Connection Settings** window under **Select a well-known Naming Context**, select **Schema**, then select **OK**.
+1. In the **Connection Settings** window under **Select a well known Naming Context**, select **Schema**, then select **OK**.
 
 1. In the pane on the left side of the window, expand the schema for your DC.
 
