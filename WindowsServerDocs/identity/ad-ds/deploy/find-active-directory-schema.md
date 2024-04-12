@@ -128,7 +128,7 @@ When you're finished, use the information in [Mapping the rangeUpper attribute](
 
 ### Mapping the rangeUpper attribute
 
-The following articles show how to map the **rangeUpper** attribute value with its corresponding Eschange Schema version:
+The following articles show how to map the **rangeUpper** attribute value with its corresponding Exchange Schema version:
 
 - [Exchange 2016 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2016&preserve-view=true#exchange-2016-active-directory-versions)
 - [Exchange 2019 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019&preserve-view=true#exchange-2019-active-directory-versions)
