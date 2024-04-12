@@ -291,3 +291,90 @@ WSL enables server administrators to use existing tools and scripts from Linux o
 
 ## Active Directory Federation Services
 
+### Protected sign ins
+
+Protected sign ins with Active Directory Federation Services (AD FS) now include the following updates:
+
+- Users can now use third-party authentication products as their first factor without exposing passwords. In cases where the external authentication provider can prove two factors, it can claim multifactor authentication (MFA).
+
+- Users can now use passwords as an extra factor after using a non-password option as the first factor. This in-box support improves overall experience from AD FS 2016, which required downloading a GitHub adapter.
+
+- Users can now build their own plug-in risk assessment modules to block certain types of requests during the preauthentication stage. This feature makes it easier to use cloud intelligence such as identity protection to block risky users or transactions. For more information, see [Build Plug-ins with AD FS 2019 Risk Assessment Model](../../ad-fs/development/ad-fs-risk-assessment-model.md).
+
+- Improves ESL <!--Acronym--> quick-fix engineering (QFE) by adding the following capabilities:
+  
+  - You can now use audit mode while protected by classic extranet lockout functionality.
+
+  - Users can now use independent lockout thresholds for familiar locations. This feature lets you run multiple instances of apps within a common service account to roll over passwords with minimal disruption.
+
+### Other security improvements
+
+AD FS 2019 includes the following security improvements:
+
+- Remote PowerShell using SmartCard Sign-in lets users remote connect to AD FS with SmartCards by running PowerShell commands. Users can also use this method to manage all PowerShell functions including multi-node cmdlets.
+
+- HTTP header customization lets users customize HTTP headers created during AD FS responses. Header customization includes the following types of headers:
+
+  - HSTS: AD FS endpoints can only be used on HTTPS endpoints for a compliant browser to enforce.
+  
+  - x-frame-options: Allows AD FS admins to allow specific relying parties to embed iFrames for AD FS interactive sign-in pages. This header should be used with care and only on HTTPS hosts.
+  
+  - Future header: Other future headers can be configured as well.
+
+  For more information, see [Customize HTTP security response headers with AD FS 2019](../../ad-fs/operations/customize-http-security-headers-ad-fs.md).
+
+### Authentication and policy capabilities
+
+AD FS 2019 includes the following authentication and policy capabilities:
+
+- Users can now create rules to specify which authentication provider their deployment invokes for extra authentication. This feature helps with transitioning between authentication providers and securing specific apps that have special requirements for extra authentication providers.
+
+- Optional restrictions for Transport Layer Security (TLS)-based device authentications so that only applications that require TLS can use them. Users can restrict client TLS-based device authentications so that only applications doing device-based conditional access can use them. This feature prevents unwanted prompts for device authentication for applications that don't require TLS-based device authentication.
+
+- AD FS now supports redoing second-factor credentials based on the second factor credential freshness. This feature allows users to only require TFA for the first transaction, then only require the second factor on a periodic basis. You can only use this feature on applications that can provide an extra parameter in the request, since it's not a configurable setting in AD FS. 
+
+
+- **Restrict Transport Layer Security (TLS) based device auth only to applications that require it**. Customers can now restrict client TLS-based device authentications to only applications performing device based conditional access. This option prevents any unwanted prompts for device authentication (or failures if the client application can't handle) for applications that don't require TLS-based device authentication.
+- **Multi-factor authentication (MFA) freshness support**. AD FS now supports the ability to redo second factor credential based on the freshness of the second factor credential. This feature allows customers to do an initial transaction with two factors and only prompt for the second factor on a periodic basis. This feature is only available to applications that can provide an extra parameter in the request and isn't a configurable setting in AD FS. Azure AD supports this parameter when you configure "Remember my MFA for X days" and set the 'supportsMFA' flag to true on the Azure AD federated domain trust settings.
+
+### Single sign-on improvements
+
+The following single sign-on SSO improvements have been made in AD FS 2019:
+
+- **Paginated UX with Centered Theme**. AD FS now has moved to a [paginated UX flow](../operations/AD-FS-paginated-sign-in.md) that allows AD FS to validate and provide a more smoother sign-in experience. AD FS now uses a centered UI (instead of the right side of the screen). You might need newer logo and background images to align with this experience. This change also mirrors functionality offered in Azure AD.
+- **Bug fix: Persistent SSO state for Win10 devices when doing Primary Refresh Token (PRT) auth**. This change resolves an issue where MFA state didn't persist when using PRT authentication for Windows 10 devices. The result of the issue was that end users would get prompted for second factor credential (MFA) frequently. The fix also makes the experience consistent when device auth is successfully performed via client TLS and via PRT mechanism.
+
+### Support for building modern line-of-business apps
+
+The following support for building modern line-of-business LOB apps has been added to AD FS 2019:
+
+- **Oauth Device flow/profile**. AD FS now supports the OAuth device flow profile to sign in on devices that don't have a UI surface area to support rich sign-in experiences. This feature allows the user to complete the sign-in experience on a different device. This functionality is required for the Azure CLI experience in Azure Stack and can be used in other cases.
+- **Removal of 'Resource' parameter**. AD FS has now removed the requirement to specify a resource parameter, which is in line with current Oauth specifications. Clients can now provide the relying party trust identifier as the scope parameter in addition to permissions requested.
+- **Cross-origin resource sharing (CORS) headers in AD FS responses**. Customers can now build single page applications that allow client-side JavaScript libraries to validate the signature of the id_token by querying for the signing keys from the OpenID Connect (OIDC) discovery document on AD FS.
+- **Proof Key for Code Exchange (PKCE) support**. AD FS adds PKCE support to provide a secure auth code flow within OAuth. This feature adds an extra layer of security to this flow to prevent hijacking the code and replaying it from a different client.
+- **Bug fix: Send x5t and kid claim**. This change is a minor bug fix. AD FS now additionally sends the "kid" claim to denote the key ID hint for verifying the signature. Previously, AD FS only sent the "x5t" claim.
+
+### Supportability improvements
+
+The following improvements to supportability are now part of AD FS 2019:
+
+- **Send error details to AD FS admins**. Allows admins to configure end users to send debug logs relating to a failure in end-user authentication to be stored as a zipped filed for easy consumption. Admins can also configure a Simple Mail Transfer Protocol (SMTP) connection to automail the zipped file to a triage email account or to auto create a ticket based on the email.
+
+### Deployment updates
+
+The following deployment updates are now included in AD FS 2019:
+
+- **Farm Behavior Level 2019**. As with AD FS 2016, there's a new farm behavior level version that's required to enable new functionality discussed [later in the article](#moving-from-ad-fs-in-windows-server-2012-r2-to-ad-fs-in-windows-server-2016-is-easier). This update allows going from:
+  - AD FS on Windows Server 2012 R2 to AD FS on Windows Server 2016.
+  - AD FS on Windows Server 2016 to AD FS on Windows Server 2019.
+
+### SAML updates
+
+The following Security Assertion Markup Language (SAML) update is in AD FS 2019:
+
+- **Bug fix: Fix bugs in aggregated federation**. There have been numerous bug fixes around aggregated federation support (for example, InCommon). The following areas have received fixes:
+  - Improved scaling for a large number of entities in the aggregated federation metadata doc. Previously, scaling would fail with an "ADMIN0017" error.
+  - Query using 'ScopeGroupID' parameter via `Get-AdfsRelyingPartyTrustsGroup` PowerShell cmdlet.
+  - Handling error conditions around duplicate entityID.
+
+<!---Check source aritcle for longer sections--->
