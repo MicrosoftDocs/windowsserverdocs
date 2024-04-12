@@ -4,7 +4,7 @@ description: Learn about SMB dialect management in Windows Server Insider builds
 ms.topic: reference
 author: gswashington
 ms.author: 
-ms.date: 04/15/2024
+ms.date: 04/20/2024
 ---
 
 # Dcpromo
