@@ -102,7 +102,7 @@ To find the current Exchange Schema version, you can use one of the following me
 
 1. Select **CN=Schema,CN=Configuration,DC=contoso,DC=local**.
 
-1. In the pane in the center of the window, scroll down to the **Name** list and open **CN=ms-Exch-Schema-Version-Pt**.
+1. In the pane in the center of the window, scroll down the **Name** list and open **CN=ms-Exch-Schema-Version-Pt**.
 
 1. In the **Attribute** list, scroll down until you find the *rangeUpper* attribute. The value is the schema version.
 
