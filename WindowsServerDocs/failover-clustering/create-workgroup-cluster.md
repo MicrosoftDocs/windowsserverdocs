@@ -11,7 +11,7 @@ ms.date: 04/09/2024
 
 >Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-In this article, learn about and create a workgroup cluster. First, you'll understand what workgroup clusters are and how they differ from traditional failover clusters. Then, create a workgroup cluster either using the Failover Cluster Manager or Windows PowerShell.
+In this article, learn about and create a workgroup cluster. First, understand what workgroup clusters are and how they differ from traditional failover clusters. Then, create a workgroup cluster either using the Failover Cluster Manager or Windows PowerShell.
 
 ## Understand workgroup clusters
 
@@ -42,7 +42,7 @@ The following prerequisites must be met for your workgroup cluster to meet the c
 This section describes various workloads and whether they support workgroup clusters. Workgroup clusters are recommended for:
 
 - **Hyper-V VMs.** Supported cluster workload.
-- **SQL Server Availability Groups.** SQL Server is a supported workload. If this is the workload you want to deploy, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1)
+- **SQL Server Availability Groups.** SQL Server is a supported workload. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1)
 
 Workgroup clusters aren't recommended for:
 
@@ -75,7 +75,7 @@ To get started, you need to configure your servers. This includes creating an id
 1. On the **Select server roles** page, select **Next**.
 1. On the **Select features** page, select the **Failover Clustering** check box.
 1. To install the Failover Cluster management tools, select **Add Features** and then select **Next**.
-1. On the **Confirm installation selections** page, select **Install**. Note: A server restart is not required for the Failover Clustering feature.
+1. On the **Confirm installation selections** page, select **Install**. Note: A server restart isn't required for the Failover Clustering feature.
 1. When the installation completes, select **Close**.
 1. Repeat this procedure on every server that you want to add as a failover cluster node.
 
@@ -110,12 +110,12 @@ After validation passes, you may now create the workgroup cluster.
 1. On the **Tools** menu, select **Failover Cluster Manager**.
 1. In the **Failover Cluster Manager** pane, under **Management**, select **Create Cluster**. The Create Cluster Wizard opens.
 1. On the **Before You Begin** page, select **Next**.
-1. If the **Select Servers** page appears, in the **Enter name** box enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node and then select **Add**. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or a semicolon. For example, enter the names in the format *server1.contoso.com; server2.contoso.com*. When you're finished, select **Next**.
+1. If the **Select Servers** page appears, in the **Enter name** box enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node, and then select **Add**. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or a semicolon. For example, enter the names in the format *server1.contoso.com; server2.contoso.com*. When you're finished, select **Next**.
     > [!NOTE]
     > If you chose to create the cluster immediately after running validation, you won't see the **Select Servers** page. The nodes that were validated are automatically added to the Create Cluster Wizard so that you don't have to enter them again.
 1. If you skipped validation earlier, the **Validation Warning** page appears. We strongly recommend that you run cluster validation. Only clusters that pass all validation tests are supported by Microsoft. To run the validation tests, select **Yes**, and then select **Next**. Complete the Validate a Configuration Wizard as described in [Run cluster validation tests](#run-cluster-validation-tests).
 1. On the **Access Point for Administering the Cluster** page, enter the **Cluster Name** that you want to use to administer the cluster.
-1. If the server does not have a network adapter that is configured to use DHCP, you must configure one or more static IP addresses for the failover cluster. Select the check box next to each network that you want to use for cluster management. Select the **Address** field next to a selected network and then enter the IP address that you want to assign to the cluster. This IP address (or addresses) will be associated with the cluster name in Domain Name System (DNS).
+1. If the server doesn't have a network adapter that is configured to use DHCP, you must configure one or more static IP addresses for the failover cluster. Select the check box next to each network that you want to use for cluster management. Select the **Address** field next to a selected network and then enter the IP address that you want to assign to the cluster. This IP address (or addresses) will be associated with the cluster name in Domain Name System (DNS).
 1. When you're finished, select **Next**.
 1. On the **Confirmation** page, review the settings. By default, the **Add all eligible storage to the cluster** check box is selected. Clear this check box if you want to configure storage later.
 1. Select **Next** to create the failover cluster.
