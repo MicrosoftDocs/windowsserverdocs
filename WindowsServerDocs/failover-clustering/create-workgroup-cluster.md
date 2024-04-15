@@ -15,11 +15,11 @@ In this article, learn about and create a workgroup cluster. First, you'll under
 
 ## Understand workgroup clusters
 
-A workgroup cluster is a specific type of failover cluster configuration. With workgroup clusters, two or more nodes are joined as member servers. They don't use an on-premises domain controller or Active Directory forest. They aren't domain joined, and instead are joined by a workgroup.
+A workgroup cluster is a specific type of failover cluster configuration. With workgroup clusters, two or more nodes are joined as member servers. They don't use an on-premises domain controller or Active Directory forest. Workgroup clusters aren't domain joined, and instead are workgroup joined. They still require use of a Domain Name System (DNS).
 
-The goal of removing the requirement on Active Directory from Failover Clustering is to reduce the cost of hardware, maintenance, security, and other operational overhead. Traditionally, Active Directory has been necessary to do many things like maintain highly available domain controllers, and store identity. Now there are other technologies that exist outside of Active Directory that can be used for the same purposes.
+Customers want to run a Failover Cluster without Active Directory to reduce the cost of hardware, maintenance, security, and other operational overhead. Traditionally, Active Directory has been necessary to do many things like maintain highly available domain controllers, and store identity. Now there are other technologies that exist outside of Active Directory that can be used for the same purposes.
 
-Workgroup clusters offer the same centralized identity and high security, focusing on keeping your applications highly available. And by not using Active Directory, your business will still achieve the most availability at the lowest cost.
+Workgroup clusters offer the same centralized identity and high security, focusing on keeping your applications highly available. And by not using Active Directory, customers can still achieve the most availability at the lowest cost.
 
 ## Prerequisites 
 
@@ -32,7 +32,7 @@ The following prerequisites must be met for your workgroup cluster to meet the c
 - Create a local user account on each server node. The username and password of the account must all be the same.
 - Confirm that the fully configured solution, including servers, network, and storage, passes all tests in the cluster validation.
 - Confirm the storage requirements
-  - Either Storage Spaces Direct or SAN storage is required. If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
+  - Either Storage Spaces Direct (S2D), SAN, or NAS is required. If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
   - To add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
 - Confirm the quorum configuration
   - [Quorum should be configured for a cluster](/windows-server/failover-clustering/manage-cluster-quorum). Either a Cloud Witness or Disk Witness can be used. A File Share Witness isn't currently supported.
@@ -47,15 +47,15 @@ This section describes various workloads and whether they support workgroup clus
 Workgroup clusters aren't recommended for:
 
 - **File Servers.** Not supported because of authentication issues.
-- **SQL Server FCI.** Not supported because of authentication issues.
+- **SQL Server FCI.** Not supported.
 
 ## Create a two-node workgroup cluster
 
-Follow the directions in the next sections to create a two-node, Hyper-V VM workgroup cluster, with Storage Spaces Direct storage.
+Follow the directions in the next sections to create a **two-node, Hyper-V VM workgroup cluster, with Storage Spaces Direct storage**.
 
 ### Step 1: Prepare your servers
 
-To get started, you need to configure your servers. This will include creating an identical user account in each server node, adding the servers as trusted hosts, and ensuring that each server has a common primary DNS suffix. Follow these steps on each node of the cluster.
+To get started, you need to configure your servers. This includes creating an identical user account in each server node, adding the servers as trusted hosts, and ensuring that each server has a common primary DNS suffix. Follow these steps on each node of the cluster.
 
 1. Create a consistent admin user account on each node. The username and password of these accounts must be the same on all the nodes and the account must also be added to the local Administrators group. If the non-builtin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The policy can be done in PowerShell with the following command:
 `New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System –Name LocalAccountTokenFilterPolicy -Value 1​`
@@ -76,7 +76,7 @@ To get started, you need to configure your servers. This will include creating a
 1. On the **Select features** page, select the **Failover Clustering** check box.
 1. To install the Failover Cluster management tools, select **Add Features** and then select **Next**.
 1. On the **Confirm installation selections** page, select **Install**. Note: A server restart is not required for the Failover Clustering feature.
-1. When the installation is completed, select **Close**.
+1. When the installation completes, select **Close**.
 1. Repeat this procedure on every server that you want to add as a failover cluster node.
 
 ### Step 3: Create the workgroup cluster
