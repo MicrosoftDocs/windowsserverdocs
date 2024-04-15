@@ -4,7 +4,7 @@ description:
 ms.topic: conceptual
 ms.author: helohr
 author: Heidilohr
-ms.date: 004/12/2024
+ms.date: 04/12/2024
 ---
 
 # Hyper-V Virtual Fibre Channel
@@ -39,12 +39,37 @@ There are several components to this feature that allow it to offload management
 
 ### NPIV support
 
-Virtual Fibre Channel for Hyper-V guests uses the existing N_Port ID Virtualization (NPIV) T11 standard to map multiple virtual N_Port IDs to a single physical Fibre Channel N_port. A new NPIV port is created on the host each time you start a virtual machine that is configured with a virtual HBA. When the virtual machine stops running on the host, the NPIV port is removed. Due to the use of NPIV, the HBA ports used for virtual Fibre Channel should be set up in a Fibre Channel topology that supports NPIV, and the SAN should support NPIV ports.
+Virtual Fibre Channel for Hyper-V guests uses the existing N_Port ID Virtualization (NPIV) T11 standard to map multiple virtual N_Port IDs to a single physical Fibre Channel N_port. The service creates a new NPIV port on the host every time you start a VM configured with a virtual HBA. When the VM stops running on the host, the system removes the NPIV port. You should configure any HBA ports that you use for Virtual Fibre Channel into a Fibre Channel topology that supports NPIV, and your SAN should also support NPIV ports.
 
 ### Virtual SAN support
 
-### Tape library support
+A virtual SAN defines a named group of physical Fibre Channel ports connected to the same physical SAN. Hyper-V lets you define virtual SANs on the host in scenarios where you connect a single Hyper-V host to different SANs through many Fibre Channel ports.
+
+For example, if a Hyper-V host is connected to a production SAN and a test SAN, then the host is connected to each SAN through two physical Fibre Channel ports. In this scenario, you can configure two virtual SANs. The virtual production SAN has the two physical Fibre Channel ports connected to the physical production SAN. The virtual test SAN has two physical Fibre Channel ports connected to the test SAN. You can use the same technique to name two different paths to the same storage target.
+
+You can configure up to four virtual Fibre Channel adapters on a VM and associate each one with a virtual SAN. Each virtual Fibre Channel adapter usually connects with one WWN address, and you can set each WWN address automatically or manually. However, in live migration scenarios, you can assign two WWN addresses to each adapter.
 
 ### Live migration
 
+In scenarios that support live migration of VMs across Hyper-V hosts while maintaining Fibre Channel connectivity, you must assign two WWNs for each Virtual Fibre Channel adapter, as shown in the following diagram.
+
+:::image type="content" source="./images/alternating-wwn-addresses.png" alt-text="A diagram showing the live migration process for Virtual Fibre Channel. The deployment switches from World Wide Name Set A and World Wide Name Set B and back during live migration.":::
+
+Configuring your adapters to have two WWNs ensures all LUNs are available on the destination host before migration. When the example deployment in the diagram alternates from WWN Set A to WWN Set B, it stays connected to Fibre channel through the WWNs assigned to WWN Set B. When migration is finished, it alternates back to WWN Set A. Alternating between WWNs ensures your users don't experience any downtime during the migration process.
+
+### Tape library support
+
+Windows Server only supports virtual tape libraries configured with Fibre Channel adapters when using System Center Data Protection Manager 2012 R2 U3 or later with certified hardware. You can check if your virtual Fibre Channel adapter supports a tape library by contacting the tape library hardware vendor or running the DPM<!---Acronym----> Tape Library Compatibility Test tool on the virtual tape library in a guest VM. For more information about the DPM Tape Library COmpatibility Test, see [Verify tape library compatibility](https://technet.microsoft.com/library/jj733581.aspx).
+
 ### MPIO functionality
+
+Hyper-V in Windows Server can use the multipath I/O (MPIO) functionality to ensure continuous connectivity to Fibre Channel storage from within a VM. You can use MPIO functionality with Fibre Channel in the following ways:
+
+- Use MPIO for host access. To use this functionality, you install multiple Fibre Channel ports on the host, then use MPIO to provide highly available connectivity to the LUNs the host can access.
+
+- Virtualize workloads that use MPIO. To use this functionality, configure multiple virtual Fibre Channel adapters inside a VM, then use a separate copy of MPIO within the VM operating system to connect to the LUNs that the VM can access. This configuration can coexist with a host MPIO setup.
+
+- Use different device-specific modules (DSMs) for the host or each VM. This approach allows live migration of the virtual machine configuration, including DSM, connectivity between hosts, and compatibility with existing server configurations and DSMs.
+
+>[!NOTE]
+>Live migration scenarios where the guest VM uses MPIO don't support Asymmetric Logical Unit Assignment (ALUA).
