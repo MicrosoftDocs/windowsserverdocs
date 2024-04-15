@@ -67,6 +67,8 @@
         href: hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md
       - name: What is Nested Virtualization?
         href: /virtualization/hyper-v-on-windows/user-guide/nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Virtual Fibre Channel for Hyper-V
+        href: hyper-v/plan/virtual-fibre-channel-for-hyper-v.md
     - name: Deploy
       href: hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md
       items:
