@@ -13,17 +13,17 @@ ms.topic: how-to
 
 Before you can raise domain and forest functional levels, you have to evaluate your current environment and identify the functional level requirement that best meets the needs of your organization. Assess your current environment by identifying the domains in your forest, the domain controllers that are located in each domain, the operating system and service packs that each domain controller is running, and the date that you plan to upgrade the domain controllers. If you plan to retire a domain controller, make sure that you understand the full impact that doing so will have on your environment.
 
-The following circumstances might prevent you from upgrading to the Windows Server 2008 or Windows Server 2008 R2 functional level:
+The following circumstances might prevent you from upgrading Windows Server functional level:
 
 - Insufficient hardware
 
-- A domain controller running an antivirus program that is incompatible with Windows Server 2008 or Windows Server 2008 R2
+- A domain controller running an antivirus program that is incompatible with newer versions of Windows Server
 
 - Use of a version-specific program that isn't compatible with newer versions of Windows Server
 
 - The need to upgrade a program with the latest service pack
 
-Documenting this information can help you identify the steps to take to ensure that you have a fully functional Windows Server 2008 or Windows Server 2008 R2 environment.
+Documenting this information can help you identify the steps to take to ensure that you have a fully functional Windows Server environment.
 
 After you assess your current environment, you have to identify the functional level upgrade that applies to your organization. These options are available:
 
