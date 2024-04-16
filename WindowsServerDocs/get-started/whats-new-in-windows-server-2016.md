@@ -182,17 +182,7 @@ Starting with the Windows Server 2016 domain functional level (DFL), DCs now sup
 > [!WARNING]
 > Adding a DC enabled before the November 8, 2016 update to a domain that supports rolling NTLM secrets can cause the DC to crash.
 
-For new domains, this feature is enabled by default. For existing domains, you must configure it in the Active Directory Administrative center. <!--What should I do about this section? These instructions should be in a how-to, but they don't appear in any other documentation in this repo.-->
-
-1. From the Active Directory Administrative center, right-click the domain on the left pane and select **Properties**.
-
-    ![Domain properties](../security/credentials-protection-and-management/media/Credentials-Protection-And-Management/domain-properties.png)
-
-2. Select **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Windows Hello for Business or smart card for interactive logon**.
-
-    ![Autoroll expiring NTLM secrets](../security/credentials-protection-and-management/media/Credentials-Protection-And-Management/autoroll-ntlm.png)
-
-3. Select **OK**.
+For new domains, this feature is enabled by default. For existing domains, you must configure it in the Active Directory Administrative center. From the Active Directory Administrative Center, right-click on the domain in the left pane and select **Properties**. Select the checkbox **Enable rolling of expiring NTLM secrets during sign on for users who are required to use Windows Hello for Business or smart card for interactive logon**. After that, select **OK** to apply this change.
 
 ### Allowing network NTLM when user is restricted to specific domain-joined devices
 
