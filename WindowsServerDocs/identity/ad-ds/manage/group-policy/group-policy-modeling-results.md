@@ -1,6 +1,6 @@
 ---
 title: Group Policy Modeling and Results in Windows
-description: Understand how to model group policy results and evaluate group policy settings using the Group Policy Management Console in Windows Server.
+description: Learn how to model group policy results and evaluate group policy settings using the Group Policy Management Console in Windows Server.
 author: Orin-Thomas
 ms.topic: how-to
 ms.author: orthomas

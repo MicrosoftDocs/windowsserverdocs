@@ -1,6 +1,6 @@
 ---
 title: Group Policy processing for Windows
-description: Use this article to understand how Group Policy processing works in Active Directory Domain Services on Windows Server and Windows client computers.
+description: Learn about how Group Policy processing works in Active Directory Domain Services on Windows Server and Windows client computers.
 author: Orin-Thomas
 ms.topic: conceptual
 ms.author: orthomas
