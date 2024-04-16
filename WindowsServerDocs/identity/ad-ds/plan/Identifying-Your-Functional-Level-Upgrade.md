@@ -35,34 +35,9 @@ After you assess your current environment, you have to identify the functional l
 
 - New Windows Server 2008 R2 forest
 
-- Windows Server 2016 forest to Windows Server 2022 or Windows Server 2025 (preview) 
+- Windows Server 2016 forest to Windows Server 2022 or Windows Server 2025 (preview)
 
-## Upgrading functional levels in a Windows 2016 Active Directory forest
-
-In a Windows 2016 native environment that consists only of Windows 2016-based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
-
-- Windows 2016 native domain functional level
-
-- Windows 2016 forest functional level
-
-In addition, the follow must be true prior to upgrade:
-
-- All domain controllers must be running Windows Server 2016, Windows Server 2019, or Windows Server 2022.
-
-- The Active Directory forest functional level must be at least Windows Server 2003.
-
-- All applications and services must be compatible with the new functional level.
-
-There are two upgrade options to choose from, as follows: 
-
-- In-place upgrade of existing domain controllers
-
-- Migration to new domain controllers running Windows Server 2016
-
-   > [!IMPORTANT]
-   > You must check for deprecated features prior to upgrade to make certain that none are being used. Also verify that all domain controllers are correctly replicated both before and after the upgrade.  
-
-### Upgrading functional levels to Windows Server 2025 (preview)
+## Upgrading functional levels to Windows Server 2025 (preview)
 
 Functional level upgrade for Windows Server 2025 (preview) includes the following requirements:
 
@@ -78,6 +53,31 @@ Upgrade methods include the following options:
 
    > [!IMPORTANT]
    > A Windows Server 2025 (preview) domain controller can only be added to an existing domain that is running Windows Server 2016 Domain Functional Level or newer version. You must also ensure that all hardware and software requirements for Windows Server 2025 (preview) are met.
+
+## Upgrading functional levels in a Windows 2016 Active Directory forest
+
+In a Windows 2016 native environment that consists only of Windows 2016-based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
+
+- Windows 2016 native domain functional level
+
+- Windows 2016 forest functional level
+
+In addition, the following must be true prior to upgrade:
+
+- All domain controllers must be running Windows Server 2016, Windows Server 2019, or Windows Server 2022.
+
+- The Active Directory forest functional level must be at least Windows Server 2003.
+
+- All applications and services must be compatible with the new functional level.
+
+There are two upgrade options to choose from, as follows: 
+
+- In-place upgrade of existing domain controllers
+
+- Migration to new domain controllers running Windows Server 2016
+
+   > [!IMPORTANT]
+   > You must check for deprecated features prior to upgrade to make certain that none are being used. Also verify that all domain controllers are correctly replicated both before and after the upgrade.  
 
 ## Upgrading functional levels in a native Windows 2000 Active Directory forest
 
