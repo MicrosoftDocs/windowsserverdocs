@@ -401,7 +401,18 @@
             href: ad-ds/manage/component-updates/Command-line-process-auditing.md
         - name: Directory services component updates
           href: ad-ds/manage/component-updates/directory-Services-component-updates.md
-      -
+      - name: Group Policy management
+        items:
+        - name: Group Policy overview
+          href: ad-ds/manage/group-policy/group-policy-overview.md
+        - name: Group Policy processing
+          href: ad-ds/manage/group-policy/group-policy-processing.md
+        - name: Group Policy modeling and results
+          href: ad-ds/manage/group-policy/group-policy-modeling-results.md
+        - name: Group Policy Management Console
+          href: ad-ds/manage/group-policy/group-policy-management-console.md
+        - name: Backup and restore Group Policy in Windows
+          href: ad-ds/manage/group-policy/group-policy-backup-restore.md
       - name: Active Directory accounts
         href: ad-ds/manage/understand-default-user-accounts.md
       - name: Special identities
