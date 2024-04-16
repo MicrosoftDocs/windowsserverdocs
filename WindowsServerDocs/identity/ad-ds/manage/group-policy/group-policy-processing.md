@@ -5,7 +5,7 @@ author: Orin-Thomas
 ms.topic: conceptual
 ms.author: orthomas
 contributor: orthomas
-ms.date: 02/18/2024
+ms.date: 04/16/2024
 ---
 
 # Group Policy Processing
