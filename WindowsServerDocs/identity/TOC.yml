@@ -266,6 +266,8 @@
         href: ad-ds/deploy/upgrade-domain-controllers.md
       - name: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
         href: ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md
+      - name: Find the current Schema version
+        href: ad-ds\deploy\find-active-directory-schema.md
       - name: AD DS Simplified Administration
         href: ad-ds/manage/AD-DS-Simplified-Administration.md
         items:

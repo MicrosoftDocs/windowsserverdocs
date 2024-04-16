@@ -33,7 +33,8 @@ SMB Direct requires the following:
   - Windows Server 2012 and later.
   - Windows 10 Enterprise and later.
   - Windows 10 Education and later.
-  - Windows 10 Pro and later.
+  - Windows 10 Pro for Workstations and later
+  - Windows 10 Pro 22H2 (cleanly installed, not upgraded from older versions) and later.
 
 > [!NOTE]
 > Windows 10 and Windows 11 family are restricted to client-only and can't act as an SMB Direct server.
