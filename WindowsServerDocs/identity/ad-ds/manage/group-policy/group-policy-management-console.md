@@ -32,15 +32,15 @@ The GPMC provides the following capabilities:
 To use the GPMC, you must complete the following prerequisites.
 
 - Have the Group Policy Management feature installed on a computer running Windows Server or a Windows client operating system.
-- Have Edit settings, delete, and modify security permissions on the GPO.
-- To link GPOs, you need the modify permission on that site, domain, or OU. By default, only Domain Administrators and Enterprise Administrators have this permission.
+- Have _Edit settings_, _delete_, and _modify_ security permissions on the GPO.
+- To link GPOs, you need the _modify_ permission on that site, domain, or OU. By default, only Domain Administrators and Enterprise Administrators have this permission.
   - Users and groups with permission to link GPOs to a specific site, domain, or OU can link GPOs, change link order, and set block inheritance on that site, domain, or OU.
 
 ## Create an unlinked GPO
 
 To create an unlinked GPO, perform the following steps:
 
-1. To open the GPMC, select **Start**, select **Administrative Tools**, and then select **Group Policy Management**.
+1. To open the GPMC, select **Start**, enter **Group Policy Management** in the search box, and then select **Group Policy Management**.
 1. In the GPMC console tree, right-click **Group Policy Objects** in the forest and domain in which you want to create a new unlinked GPO.
 1. Select **New**.
 1. In the New GPO dialog box, specify a name for the new GPO, and then select **OK**.
@@ -96,19 +96,8 @@ To create a GPO to set only user-related policy settings, disable the Computer C
    - Enabled (default)
    - User configuration settings disabled
 
-## Use loopback processing mode
+## Related content
 
-Loopback processing mode keeps the configuration of the computer the same regardless of who logs on. This policy setting is appropriate in certain closely managed environments with special-use computers, such as classrooms, public kiosks, and reception areas. For example, you might want to enable this policy setting for a specific server, such as a terminal server. Enabling the loopback processing mode policy setting directs the system to apply the same user policy settings for any user who signs in the computer, based on the computer.
-
-When you apply GPOs to users, normally the same set of user policy settings applies to those users when they sign in any computer. By enabling the loopback processing policy setting in a GPO, you can configure user policy settings based on the computer that they sign in. Those policy settings are applied regardless of which user logs on. When you enable the loopback processing mode policy setting, you must ensure that both the Computer Configuration and User Configuration settings in the GPO are enabled.
-
-You can configure the loopback policy setting by using the GPMC to edit the GPO and enabling the User Group Policy loopback processing mode policy setting under **Computer Configuration\Policies\Administrative Templates\System\Group Policy**. Two options are available:
-
-- Merge mode: In this mode, the list of GPOs for the user is gathered during the logon process. Then, the list of GPOs for the computer is gathered. Next, the list of GPOs for the computer is added to the end of the GPOs for the user. As a result, the computer’s GPOs have higher precedence than the user’s GPOs. If the policy settings conflict, the user policy settings in the computer's GPOs are applied rather than the user's normal policy settings.
-- Replace mode: In this mode, the list of GPOs for the user isn't gathered. Instead, only the list of GPOs based on the computer object is used. The User Configuration settings from this list are applied to the user.
-
-## Restoring Default Domain Policy GPO and Default Domain Controller GPO
-
-`Dcgpofix.exe` is a command-line tool that in a disaster completely restores the Default Domain Policy GPO and Default Domain Controller GPO to their original states. `Dcgpofix.exe` is included with Windows Server and is located in the `C:\Windows\system32\` folder.
-
-`Dcgpofix.exe` restores only the policy settings that are contained in the default GPOs at the time they're generated. `Dcgpofix.exe` doesn't restore other GPOs that administrators create, it's only intended for disaster recovery of the default GPOs.
+- [Group Policy Processing](group-policy-processing.md)
+- [Backing up, restoring, migrating, and copying Group Policy Objects (GPOs)](group-policy-backup-restore.md)
+- [Group Policy Modeling and Group Policy Results](group-policy-modeling-results.md)

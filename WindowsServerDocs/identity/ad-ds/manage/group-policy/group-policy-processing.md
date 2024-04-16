@@ -65,6 +65,18 @@ Security filtering enables you to refine which users and computers receive and a
 
 WMI allows you to use a WMI query to filter the application of group policy. When you use WMI filtering, the GPO applies to security principals that meet the conditions of the WMI query. Each GPO can be linked to one WMI filter; however, the same WMI filter can be linked to multiple GPOs. Before you can link a WMI filter to a GPO, you must create the filter. The WMI filter is evaluated on the destination computer during the processing of Group Policy. The GPO applies only if the WMI filter evaluates to true.
 
+## Loopback processing mode
+
+Loopback processing mode applies the user configuration settings of Group Policy Objects assigned to the computer regardless of who logs on. Loopback processing will either merge or replace the user settings from the GPOs assigned to the user. This policy setting is appropriate in certain closely managed environments with special-use computers, such as classrooms, public kiosks, and reception areas. For example, you might want to enable this policy setting for a specific server, where you must modify the user setting based on the computer that is being used. Enabling the loopback processing mode policy setting directs the system to apply the same user policy settings for any user who signs in the computer, based on the policy applied to the computer.
+
+By enabling the loopback processing policy setting in a GPO, you can configure user policy settings based on the computer that they sign in. Without loopback processing, GPOs applying a computer object will only process the computer configuration settings. GPOs applied to users will only process user configuration settings.  When you enable the loopback processing mode policy setting, you must ensure that both the Computer Configuration and User Configuration settings in the GPO are enabled. Those policy settings are applied regardless of which user logs on.
+
+You can configure the loopback policy setting by using the the Group Policy Management Console to edit the GPO and enabling the **Configure user Group Policy loopback processing mode** policy setting under **Computer Configuration\Policies\Administrative Templates\System\Group Policy**. Two options are available:
+
+- Merge mode: In this mode, the list of GPOs for the user is gathered during the logon process. Then, the list of GPOs for the computer is gathered. Next, the list of GPOs for the computer is added to the end of the GPOs for the user. As a result, the computer’s GPOs have higher precedence than the user’s GPOs. If the policy settings conflict, the user policy settings in the computer's GPOs are applied rather than the user's normal policy settings.
+
+- Replace mode: In this mode, the list of GPOs for the user isn't gathered. Instead, only the list of GPOs based on the computer object is used. The User Configuration settings from this list are applied to the user.
+
 ## Group Policy refresh
 
 The primary mechanisms for refreshing Group Policy are at startup and logon. Group Policy is also refreshed at other intervals regularly. The policy refresh interval affects how quickly changes to GPOs are applied. By default, clients and servers check for changes to GPOs every 90 minutes using a randomized offset of up to 30 minutes. Changes to Group Policy settings might not be immediately available on users’ desktops because changes to the GPO must first replicate to the appropriate domain controller.
