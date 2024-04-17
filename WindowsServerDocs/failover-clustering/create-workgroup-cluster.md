@@ -59,13 +59,13 @@ To get started, you need to configure your servers. This includes creating an id
 
 1. Create a consistent admin user account on each node. The username and password of these accounts must be the same on all the nodes and the account must also be added to the local Administrators group. If the non-builtin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The policy can be done in PowerShell with the following command:
 `New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System –Name LocalAccountTokenFilterPolicy -Value 1​`
-1. Add each server node as a trusted host. To do that, modify the `TrustedHosts` file by adding an entry for each server that will be allowed to connect to the local machine. There are many ways to add trusted hosts, including by hostname,  by domain name, or by IP address. The following PowerShell command allows each hostname specified to access the local machine:
+1. Add each server node as a trusted host. To do that, modify the `TrustedHosts` file by adding an entry for each server that will be allowed to connect to the local machine. There are many ways to add trusted hosts, including by hostname, by domain name, or by IP address. The following PowerShell command allows each hostname specified to access the local machine:
 `Set-Item WSMan:\localhost\Client\TrustedHosts -Value "server1,server2"`
-1. Set a primary DNS suffix on each server node. To do so, navigate to **System Properties** and in the Computer Name tab, select **Change...**. In the Computer Name/Domain Changes dialog, confirm that the Member of option selected is `Workgroup`. Then select **More...**. In the DNS Suffix and NetBIOS Computer Name dialog, enter a **Primary DNS suffix of this computer** of your choice. 
+1. Set a primary DNS suffix on each server node. To do so, navigate to **System Properties** and in the Computer Name tab, select **Change...**. In the Computer Name/Domain Changes dialog, confirm that the Member of option selected is **Workgroup**. Then select **More...**. In the DNS Suffix and NetBIOS Computer Name dialog, enter a **Primary DNS suffix of this computer** of your choice. 
 
-### Step 2: Install the necessary features
+### Step 2: Install the Failover Clustering feature
 
-[Install the Failover Clustering feature](/windows-server/failover-clustering/create-failover-cluster#install-the-failover-clustering-feature) if you haven't already. This feature can be installed in the Server Manager.
+[Install the Failover Clustering feature](/windows-server/failover-clustering/create-failover-cluster#install-the-failover-clustering-feature) if you haven't already. The following steps show how to install this feature in the Server Manager.
 
 1. Start Server Manager.
 1. On the **Manage** menu, select **Add Roles and Features**.
@@ -133,7 +133,3 @@ If you prefer to create a workgroup cluster using PowerShell, follow these steps
 1. Validate the configuration before creating the workgroup cluster using the following command: `Test-Cluster -Node server1, server2`
 1. After validation passes, create the workgroup cluster using the following command: `New-Cluster –Name MyCluster -Node server1, server2 -AdministrativeAccessPoint DNS`
 1. After the cluster has been successfully created, you can do things such as verify cluster [quorum configuration](/azure-stack/hci/concepts/quorum), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
-
-
-
-
