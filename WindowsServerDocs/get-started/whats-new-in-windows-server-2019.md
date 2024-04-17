@@ -413,6 +413,8 @@ You can also use claim rules to choose which authentication provider to use for 
 
 <!--Stopped here--->
 
+You can configure this setting by using the `https://schemas.microsoft.com/claims/authnmethodsproviders` claim from other authentication policies with the name of the authentication provider in its value, as shown in the following examples.
+
 This configuration could be achieved by issuing the claim `https://schemas.microsoft.com/claims/authnmethodsproviders` from other authentication policies. The value of this claim should be the Name of the authentication provider.
 
 Now in 2019 they can modify the previous claim rule to choose auth providers based on their scenarios.  
