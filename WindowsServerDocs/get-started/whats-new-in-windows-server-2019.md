@@ -411,11 +411,9 @@ You can now set extra authorization policies for a specific RP<!--acronym--> by 
 
 You can also use claim rules to choose which authentication provider to use for extra authentication. This feature is useful for scenarios where customers are transitioning between authentication providers or need to use a different provider for specific applications.
 
-<!--Stopped here--->
-
 You can configure this setting by using the `https://schemas.microsoft.com/claims/authnmethodsproviders` claim from other authentication policies with the name of the authentication provider in its value, as shown in the following examples.
 
-This configuration could be achieved by issuing the claim `https://schemas.microsoft.com/claims/authnmethodsproviders` from other authentication policies. The value of this claim should be the Name of the authentication provider.
+<!--Stopped here--->
 
 Now in 2019 they can modify the previous claim rule to choose auth providers based on their scenarios.  
 
