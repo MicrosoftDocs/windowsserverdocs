@@ -11500,5 +11500,35 @@
       "redirect_url": "/windows-server/get-started/whats-new-windows-server-insiders-preview",
       "redirect_document_id": false
     },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/What-s-New-in-DNS-Server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/What-s-New-in-DNS-Client.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/sdn-whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/server-1709-relnotes.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/credentials-protection-and-management/whats-new-in-credential-protection.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    }
   ]
 }

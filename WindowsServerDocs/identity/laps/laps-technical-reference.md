@@ -175,7 +175,6 @@ Like Windows LAPS, legacy Microsoft LAPS also requires you to use schema extensi
 |`msLAPS-EncryptedPasswordHistory`|Doesn't apply|
 |`msLAPS-EncryptedDSRMPassword`|Doesn't apply|
 |`msLAPS-EncryptedDSRMPasswordHistory`|Doesn't apply|
-|`ms-LAPS-Encrypted-Password-Attributes`|Doesn't apply|
 
 ## Next steps
 

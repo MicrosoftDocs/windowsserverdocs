@@ -124,7 +124,7 @@ To use the Quorum Configuration setup workflow to configure Cloud Witness:
 
 To configure Cloud Witness using PowerShell:
 
-1. Run the `Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format to set up Cloud Witness.
+1. Run the [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format to set up Cloud Witness.
 
    ```powershell
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
@@ -136,7 +136,7 @@ To configure Cloud Witness using PowerShell:
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
    ```
 
-1. To verify that the setup process was successful, run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
+1. To verify that the setup process was successful, run the [`Get-ClusterQuorum`](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
 
    ```powershell
    Get-ClusterQuorum
@@ -166,6 +166,30 @@ To set up Cloud Witness in the Windows Admin Center:
 1. Verify your configuration was successful by checking the witness resource status. If the status is online, that means the Cloud Witness is configured and ready to use.
 
 ---
+
+## Proxy considerations with Cloud Witness
+
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses **.core.windows.net** as the endpoint. You need to ensure that this endpoint is included in any firewall allow lists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
+
+To use the Netsh command to configure a default proxy server, follow these steps: 
+
+> [!NOTE]
+>
+> - This will change the default proxy configuration for WinHTTP. Any application, including Windows services, that use WinHTTP may be affected. </br>
+
+1. Open an elevated command line:
+   1. Go to **Start** and type **cmd**.
+   1. Right-click **Command prompt** and select **Run as administrator**.
+
+2. Enter the following command and press **Enter**:
+
+   ```cmd
+   netsh winhttp set proxy proxy-server="<ProxyServerName>:<port>" bypass-list="<HostsList>"
+   ```
+
+   For example: `netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; *.contoso.com"`
+
+See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts) to learn more.
 
 ## Related content
 

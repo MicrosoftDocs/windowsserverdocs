@@ -158,12 +158,6 @@
     - name: Overview
       href: dns/dns-top.md
       items:
-      - name: What's new in DNS
-        items:
-        - name: What's new in DNS server in Windows Server
-          href: dns/What-s-New-in-DNS-Server.md
-        - name: What's new in DNS client in Windows Server
-          href: dns/What-s-New-in-DNS-Client.md
       - name: Anycast DNS
         href: dns/deploy/anycast.md
       - name: DNS policies overview
@@ -516,8 +510,6 @@
           href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md
         - name: Hyper-V network virtualization technical details
           href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md
-        - name: What's new in Hyper-V Network virtualization
-          href: sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md
       - name: Internal DNS service (iDNS) for SDN
         href: sdn/technologies/Idns-for-Sdn.md
       - name: Network Controller

@@ -5,7 +5,7 @@ description: Learn about the requirements for installing Active Directory Federa
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 02/12/2024
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

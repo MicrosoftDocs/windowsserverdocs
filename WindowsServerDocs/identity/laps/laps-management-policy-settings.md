@@ -269,6 +269,9 @@ If not specified, this setting defaults to 3.
 >
 > From a security perspective, a malicious user who acquires administrative privileges on a device using a valid Windows LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
 
+> [!IMPORTANT]
+> PostAuthenticationActions value 11 is supported in Windows Server 2025 and later.
+
 ### AutomaticAccountManagementEnabled
 
 Use this setting to enable automatic account management.

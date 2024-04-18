@@ -5,7 +5,7 @@ description: Description of new features and improvements in Active Directory Do
 ms.topic: article
 author: Femila
 ms.author: billmath
-ms.date: 05/31/2017
+ms.date: 02/13/2024
 ---
 # What's new in Active Directory Domain Services
 

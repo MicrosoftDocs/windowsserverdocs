@@ -32,7 +32,7 @@ Use these steps to create your small-footprint RDS deployment from the Azure Mar
    4. Click **Remote Desktop Services (RDS) - Basic - Dev/Test**, and then click **Create**.
    5. Follow the steps in the portal to create and deploy RDS. You'll add key configuration details, like the information listed above.
 2. Connect to your deployment. When the deployment finishes, check the outputs section for final steps to complete and connect to your deployment.
-   1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) on your test device to install any certificates needed to connect to the RDS deployment.
+   1. Download and run [this PowerShell script](/azure/azure-resource-manager/management/manage-resources-portal) on your test device to install any certificates needed to connect to the RDS deployment.
 
       This step is only necessary during the testing phase. When you deploy RDS in Azure in production, make sure to follow best practices like purchasing and using a publicly trusted SSL certificate on your web servers.
 
@@ -59,7 +59,7 @@ Use these steps to create your small-footprint RDS deployment with an Azure RDS 
    4. You'll need to provide some details (like admin user name, AD domain name) in the Azure portal. This varies based on the template you choose.
    5. Click **Purchase**.
 2. Connect to your deployment.
-   1. Download and run [this PowerShell script](https://gallery.technet.microsoft.com/Azure-Resource-Manager-4ea7e328) on your test device to install any certificates needed to connect to the RDS deployment.
+   1. Download and run [this PowerShell script](/azure/azure-resource-manager/management/manage-resources-portal) on your test device to install any certificates needed to connect to the RDS deployment.
 
       This step is only necessary during the testing phase. When you deploy RDS in Azure in production, make sure to follow best practices like purchasing and using a publicly trusted SSL certificate on your web servers.
 
