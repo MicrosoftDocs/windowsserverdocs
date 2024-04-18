@@ -92,5 +92,5 @@ adprep /rodcprep
 
 ## See also
 
-[Command-Line Syntax Key](cc771080\(v=ws.11\).md)
+[Command-Line Syntax Key](/dotnet/standard/commandline/syntax)
 
