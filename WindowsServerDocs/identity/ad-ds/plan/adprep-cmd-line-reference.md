@@ -18,15 +18,15 @@ Adprep.exe is a command-line tool available in Windows Server. You must run **ad
 
 Adprep is available in a 32-bit version and a 64-bit version. The 64-bit version runs by default. If you need to run Adprep on a 32-bit computer, run the 32-bit version (Adprep32.exe).
 
-For more information about running Adprep.exe and how to resolve errors that can occur when you run it, see [Running Adprep.exe](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
+For more information about running Adprep.exe and how to resolve errors that can occur when you run it, see [Running Adprep.exe](/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
 For examples of how this command can be used, see [Examples]().
 
-For more information about running **adprep /forestprep**, see [Prepare a Windows 2000 or Windows Server 2003 Forest Schema for a Domain Controller that Runs Windows Server 2008 or Windows Server 2008 R2](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753437(v=ws.10)).
+For more information about running **adprep /forestprep**, see [Prepare a Windows 2000 or Windows Server 2003 Forest Schema for a Domain Controller that Runs Windows Server 2008 or Windows Server 2008 R2](/windows/it-pro/windows-server-2008-R2-and-2008/cc753437(v=ws.10)).
 
-For more information about running **adprep /domainprep /gpprep**, see [Prepare a Windows 2000 or Windows Server 2003 Domain for a Domain Controller That Runs Windows Server 2008 or Windows Server 2008 R2](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754670(v=ws.10)).
+For more information about running **adprep /domainprep /gpprep**, see [Prepare a Windows 2000 or Windows Server 2003 Domain for a Domain Controller That Runs Windows Server 2008 or Windows Server 2008 R2](/windows/it-pro/windows-server-2008-R2-and-2008/cc754670(v=ws.10)).
 
-For more information about running **adprep /rodcprep**, see [Prepare a Forest for a Read-Only Domain Controller](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771055(v=ws.10)).
+For more information about running **adprep /rodcprep**, see [Prepare a Forest for a Read-Only Domain Controller](/windows/it-pro/windows-server-2008-R2-and-2008/cc771055(v=ws.10)).
 
 ## Syntax
 
@@ -51,7 +51,7 @@ adprep {/forestprep | /domainprep | /domainprep /gpprep | /rodcprep | /wssg | /s
 
 - To prepare an existing Windows or Windows Server Active Directory environment for a Windows Server domain controller, be sure to run the version of Adprep that's included in the Windows Server installation media.
 
-- You can also perform verification steps before and after you run the **adprep** command to help ensure that the operations complete successfully. For more information, see [Steps for Extending the Schema](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773360(v=ws.10)).
+- You can also perform verification steps before and after you run the **adprep** command to help ensure that the operations complete successfully. For more information, see [Steps for Extending the Schema](/windows/it-pro/windows-server-2003/cc773360(v=ws.10)).
 
 ## Exit Codes
 
@@ -93,3 +93,4 @@ adprep /rodcprep
 ## See also
 
 [Command-Line Syntax Key](cc771080\(v=ws.11\).md)
+
