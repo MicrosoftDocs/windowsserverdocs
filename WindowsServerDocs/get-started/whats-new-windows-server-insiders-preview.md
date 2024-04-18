@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 03/25/2024
+ms.date: 04/17/2024
 ---
 
 # What's new in Windows Server Insiders Preview
@@ -139,13 +139,78 @@ Flighting is only available for the Canary Channel release beginning in early 20
 
 ### Pinned apps
 
-Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26040, the default pinned apps in Preview are currently **Edge**, **File Explorer**, and **Settings**.
+Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26085, the default pinned apps in Preview are currently:
+
+- Azure Arc Setup
+- Feedback Hub
+- File Explorer
+- Microsoft Edge
+- Server Manager
+- Settings
+- Terminal
+- Windows PowerShell
 
 ### Server Message Block
 
 Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server Preview brings the following SMB capabilities:
 
-- The [SMB over Quick UDP Internet Connections](../storage/file-server/smb-over-quic.md) (QUIC) server feature, which was only available in Windows Server Azure Edition, is now available in both Windows Server Standard and Windows Server Datacenter versions. SMB over QUIC adds the benefits of the QUIC, which provides low-latency, encrypted connections over the internet. For more information, see [SMB over QUIC now available in Windows Server Insider Datacenter and Standard editions](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-over-quic-now-available-in-windows-server-insider-datacenter/ba-p/3975242).
+Starting with build 26090, another set of SMB protocol changes are introduced for disabling QUIC, signing, and encryption.
+
+- **SMB over QUIC disablement**
+
+  Administrators can disable SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC using Group Policy, set the **Enable SMB over QUIC** policy in these paths to **Disabled**:
+
+  - **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
+
+  - **Computer Configuration\Administrative Templates\Network\Lanman Server**
+  
+  To disable SMB over QUIC using PowerShell, run this command in an elevated PowerShell prompt:
+
+  ```powershell
+  Set-SmbClientConfiguration -EnableSMBQUIC $false
+  ```
+
+- **SMB signing and encryption auditing**  
+
+  Administrators can enable auditing of the SMB server and client for support of SMB signing and encryption. If a third-party client or server lacks support for SMB encryption or signing, it can be detected. When your third-party device or software states it supports SMB 3.1.1, but fails to support SMB signing, it violates the [SMB 3.1.1 Pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
+
+  You can configure SMB signing and encryption auditing settings using Group Policy or PowerShell. These policies can be changed in the following Group Policy paths:
+  
+  - **Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support encryption**
+  
+  - **Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support signing**
+  
+  - **Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support encryption**
+  
+  - **Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support signing**
+  
+  To perform these changes using PowerShell, run these commands in an elevated prompt where `$true` is to enable and `$false` to disable these settings:
+
+  ```powershell
+  Set-SmbServerConfiguration -AuditClientDoesNotSupportEncryption $true
+  Set-SmbServerConfiguration -AuditClientDoesNotSupportSigning $true
+
+  Set-SmbClientConfiguration -AuditServerDoesNotSupportEncryption $true
+  Set-SmbClientConfiguration -AuditServerDoesNotSupportSigning $true
+  ```
+
+  Event logs for these changes are stored in the following Event Viewer paths with their given Event ID:
+
+  |Path|Event ID|
+  |-|-|
+  |Applications and Services Logs\Microsoft\Windows\SMBClient\Audit|31998 <br> 31999|
+  |Applications and Services Logs\Microsoft\Windows\SMBServer\Audit|3021 <br> 3022|
+
+- **SMB over QUIC auditing**
+
+  SMB over QUIC client connection auditing captures events that are written to an event log to include the QUIC transport in the Event Viewer. These logs are stored in the following paths with their given Event ID:
+
+  |Path|Event ID|
+  |-|-|
+  |Applications and Services Logs\Microsoft\Windows\SMBClient\Connectivity|30832|
+  |Applications and Services Logs\Microsoft\Windows\SMBServer\Connectivity|1913|
+  
+- The [SMB over QUIC](../storage/file-server/smb-over-quic.md) server feature, which was only available in Windows Server Azure Edition, is now available in both Windows Server Standard and Windows Server Datacenter versions. SMB over QUIC adds the benefits of the QUIC, which provides low-latency, encrypted connections over the internet. For more information, see [SMB over QUIC now available in Windows Server Insider Datacenter and Standard editions](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-over-quic-now-available-in-windows-server-insider-datacenter/ba-p/3975242).
 
   Previously, SMB server in Windows mandated inbound connections to use the IANA-registered port TCP/445 while the SMB TCP client only allowed outbound connections to that same TCP port. Now, SMB over QUIC allows for [SMB alternative ports](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-alternative-ports-now-supported-in-windows-insider/ba-p/3974509) where QUIC-mandated UDP/443 ports are available for both server and client devices.
 
