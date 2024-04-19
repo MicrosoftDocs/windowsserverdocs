@@ -42,7 +42,7 @@ You also need an *SMB client* with the following prerequisites.
   - [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later.
   - [Windows 11 Insider Preview Build 25977 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/18/announcing-windows-11-insider-preview-build-25977-canary-channel/) or later.
 - A client certificate that is:
-  - Issued for the purpose of Client Authentication (EKU 1.3.6.1.5.5.7.3.2).
+  - Issued for Client Authentication (EKU 1.3.6.1.5.5.7.3.2).
   - Issued by a certificate authority trusted by the SMB server.
   - Installed in the client's certificate store.
 - Administrative privileges for the SMB server you're configuring.
@@ -125,11 +125,23 @@ Follow the steps to grant clients from a specific certification authority, also 
    Grant-SmbClientAccessToServer -Name <name> -IdentifierType ISSUER -Identifier "<subject name>"
    ```
 
+### Disable SMB over QUIC
+
+Starting with Windows 11 Insider build 26090, admins can now disable SMB over QUIC for client by running the following command:
+
+```powershell
+Set-SmbClientConfiguration -EnableSMBQUIC $false
+```
+
+Similarly, this operation can be performed in Group Policy by disabling the **Enable SMB over QUIC** policy in the following path:
+
+- **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
+
 ## Connect to the SMB server
 
 When you're finished, test whether you can connect to the server by running one of the following commands:
 
-```powershell
+```cmd
 NET USE \\<server DNS name>\<share name> /TRANSPORT:QUIC
 ```
 
@@ -144,13 +156,8 @@ If you can connect to the server, you've successfully configured SMB over QUIC u
 ## Related content
 
 - [SMB over QUIC](smb-over-quic.md)
-
 - [Storage at Microsoft blog](https://aka.ms/FileCab)
-
 - [QUIC Working Group homepage](https://quicwg.org/)
-
 - [Microsoft MsQuic GitHub homepage](https://github.com/microsoft/msquic)
-
 - [QUIC Wikipedia](https://en.wikipedia.org/wiki/QUIC)
-
 - [TLS 1.3 Working Group homepage](https://tlswg.org/)
