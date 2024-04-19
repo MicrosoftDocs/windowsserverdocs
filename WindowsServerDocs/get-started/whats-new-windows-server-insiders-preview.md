@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 04/17/2024
+ms.date: 04/18/2024
 ---
 
 # What's new in Windows Server Insiders Preview
@@ -152,13 +152,13 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 ### Server Message Block
 
-Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server Preview brings the following SMB capabilities:
+Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server Preview brings the following SMB capabilities.
 
 Starting with build 26090, another set of SMB protocol changes are introduced for disabling QUIC, signing, and encryption.
 
 - **SMB over QUIC disablement**
 
-  Administrators can disable SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC using Group Policy, set the **Enable SMB over QUIC** policy in these paths to **Disabled**:
+  Administrators can disable SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC using Group Policy, set the **Enable SMB over QUIC** policy in these paths to **Disabled**.
 
   - **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
 
@@ -194,7 +194,7 @@ Starting with build 26090, another set of SMB protocol changes are introduced fo
   Set-SmbClientConfiguration -AuditServerDoesNotSupportSigning $true
   ```
 
-  Event logs for these changes are stored in the following Event Viewer paths with their given Event ID:
+  Event logs for these changes are stored in the following Event Viewer paths with their given Event ID.
 
   |Path|Event ID|
   |-|-|
@@ -203,7 +203,7 @@ Starting with build 26090, another set of SMB protocol changes are introduced fo
 
 - **SMB over QUIC auditing**
 
-  SMB over QUIC client connection auditing captures events that are written to an event log to include the QUIC transport in the Event Viewer. These logs are stored in the following paths with their given Event ID:
+  SMB over QUIC client connection auditing captures events that are written to an event log to include the QUIC transport in the Event Viewer. These logs are stored in the following paths with their given Event ID.
 
   |Path|Event ID|
   |-|-|
