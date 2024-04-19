@@ -4,7 +4,7 @@ description: Learn how to configure SMB over QUIC client access control using Po
 ms.topic: how-to
 author: gswashington
 ms.author: nedpyle
-ms.date: 04/02/2024
+ms.date: 04/19/2024
 #customer intent: As an administrator, I want to configure SMB over QUIC client access control in Windows Server so that I can restrict which clients can access SMB over QUIC servers.
 ---
 
@@ -15,7 +15,7 @@ ms.date: 04/02/2024
 
 SMB over QUIC client access control enables you to restrict which clients can access SMB over QUIC servers. Client access control creates allow and blocklists for devices to connect to the file server. Client access control gives organizations more protection without changing the authentication used when making the SMB connection, nor does it alter the end user experience.
 
-This article explains how to configure client access control for SMB over QUIC using PowerShell in Windows 11 and Windows Server 2022 Datacenter: Azure Edition when they have installed March Update KB5035853 or KB5035857, respectively or are running a recent Windows Insider and Windows Server Insider build. 
+The article explains how to use PowerShell to configure client access control for SMB over QUIC on Windows 11 and Windows Server 2022 Datacenter: Azure Edition. To proceed with the instructions, you must have either the March Update KB5035853 or KB5035857 installed, be running a recent Windows 11 Insider build, or Windows Server Insider build.
 
 To learn more about configuring SMB over QUIC, see [SMB over QUIC](smb-over-quic.md).
 
