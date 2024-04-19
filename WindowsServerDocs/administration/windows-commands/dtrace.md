@@ -4,17 +4,17 @@ description: DTrace is a dynamic tracing framework that allows users to monitor 
 ms.topic: reference
 author: xelu86
 ms.author: wscontent
-ms.date: 04/12/2024
+ms.date: 04/18/2024
 ---
 
 # DTrace
 
-Beginning with Windows Server 2025 and Windows 11, `dtrace` is included as a built-in tool. DTrace is a command-line utility that allows users to monitor and debug their system performance in real-time. With `dtrace`, users can dynamically instrument the kernel and user-space code without modifying the code itself.
+Beginning with Windows Server 2025, `dtrace` is included as a built-in tool. DTrace is a command-line utility that allows users to monitor and debug their system performance in real-time. With `dtrace`, users can dynamically instrument the kernel and user-space code without modifying the code itself.
 
 This powerful tool supports various data collection and analysis techniques, including aggregations, histograms, and tracing of user-level events. Probes can be specified in `dtrace` scripts where the script defines the probes to be monitored and the actions to be taken when the probes fire. A probe is a specific point in the code where data can be collected to perform these actions.
 
 > [!NOTE]
-> This built-in port of `dtrace` differs from DTrace for Windows surrounding parameters and other capabilities. To learn more about DTrace for Windows, see [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace).
+> This built-in port of `dtrace` differs from the MSI installer of DTrace for Windows surrounding parameters and other capabilities. To learn more about DTrace for Windows, see [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace).
 >
 > For a comprehensive guide on using DTrace, see the [Dynamic Tracing Guide](https://illumos.org/books/dtrace/bookinfo.html).
 
@@ -22,7 +22,7 @@ This powerful tool supports various data collection and analysis techniques, inc
 
 Before `dtrace` can be used, it must first be enabled. To enable `dtrace`, open an elevated command prompt or PowerShell as admin and run:
 
-```cmd
+```
 bcdedit /set dtrace on
 ```
 
@@ -73,7 +73,7 @@ name [[ predicate ] action ]] [-i probe-id [[ predicate ] action ]] [ args ... ]
 | -x `<opt>`=`<val>` | Enables or modifies the compiler and tracing options, where _opt_ is the name of the option that you want to enable or modify, and _val_ is an optional value. |
 | -X `<a\|c\|s\|t>` | Controls how strict the C code being compiled adheres to the ISO C standard when invoking the cpp. The available arguments are: <br><ul><li> `-Xa` (default): provides ISO C plus K&R compatibility extensions with semantic changes required by ISO C. The predefined macro \_\_STDC__ has a value of **0** when cpp is invoked. <li> `-Xc` (conformance): Provides a strict conformant of ISO C without K&R C compatibility extensions. The predefined macro \_\_STDC__ has a value of **1** when cpp is invoked. <li> `-Xs` (K&R C): Provides K&R C only, and the \_\_STDC__ macro isn't defined when cpp is invoked. <li> `-Xt` (transition): Provides ISO C plus K&R C compatibility extensions without semantic changes required by ISO C. The predefined macro \_\_STDC__ has a value of **0** when cpp is invoked. </ul></li> |
 | -y `<symbol path>` | Sets the symbol search path for the dtrace script to resolve, where _symbol path_ is the path to the shared library or directory that contains the symbols. To learn more, see [Symbol Paths](/win32/debug/symbol-paths). |
-| -Y | Uses the default symbol search path for the dtrace script. |
+| -Y | Uses the **default** symbol search path for the dtrace script. |
 | -Z | Permits probe descriptions that match zero probes for debugging. |
 
 The following list describes the remaining descriptions:
