@@ -78,7 +78,7 @@ Note that the local computer account and the AD FS admin account need to be gran
 ```
 PS:\>$localadminobj = get-aduser "localadmin"
 PS:\>$adfsnodecomputeracct = get-adcomputer "contoso_adfs_node"
-PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( add=$localadmin.sid.value, $computeracct.sid.value) -PrincipalsAllowedToDelegateToAccount @( add=$localadmin.sid.value, $computeracct.sid.value)
+PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( add=$localadminobj.sid.value, $adfsnodecomputeracct.sid.value) -PrincipalsAllowedToDelegateToAccount @( add=$localadminobj.sid.value, $adfsnodecomputeracct.sid.value)
 PS:\>$localAdminCred = (get-credential)
 PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFDB65E0 -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\fsgmsaacct$" -OverwriteConfiguration -AdminConfiguration $adminConfig
 ```
