@@ -133,7 +133,7 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 ### SMB over QUIC client auditing
 
-Auditing is used to track client connections for SMB over QUIC, with events being written to an event log. The Event Viewer captures this information for the QUIC transport protocol. This feature is to SMB Client starting with Windows 11 Insider build 26090. To view these logs, follow these steps:
+Auditing is used to track client connections for SMB over QUIC, with events being written to an event log. The Event Viewer captures this information for the QUIC transport protocol. This feature is available to SMB Client starting with Windows 11 Insider build 26090. To view these logs, follow these steps:
 
 1. Open the **Event Viewer**.
 1. Navigate to **Applications and Services Logs\Microsoft\Windows\SMBClient\Connectivity**.
