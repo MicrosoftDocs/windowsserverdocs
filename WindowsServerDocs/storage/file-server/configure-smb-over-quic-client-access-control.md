@@ -1,5 +1,5 @@
 ---
-title: "Configure SMB over QUIC client access control in Windows Server (preview)"
+title: "Configure SMB over QUIC client access control in Windows Server"
 description: Learn how to configure SMB over QUIC client access control using PowerShell in Windows and Windows Server.
 ms.topic: how-to
 author: gswashington
@@ -8,14 +8,14 @@ ms.date: 04/02/2024
 #customer intent: As an administrator, I want to configure SMB over QUIC client access control in Windows Server so that I can restrict which clients can access SMB over QUIC servers.
 ---
 
-# Configure SMB over QUIC client access control in Windows Insider (preview)
+# Configure SMB over QUIC client access control in Windows Server 2022 Azure Edition and Windows Server Insider (preview)
 
 > [!IMPORTANT]
 > Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 SMB over QUIC client access control enables you to restrict which clients can access SMB over QUIC servers. Client access control creates allow and blocklists for devices to connect to the file server. Client access control gives organizations more protection without changing the authentication used when making the SMB connection, nor does it alter the end user experience.
 
-This article explains how to configure client access control for SMB over QUIC using PowerShell in Windows and Windows Server.
+This article explains how to configure client access control for SMB over QUIC using PowerShell in Windows 11 and Windows Server 2022 Datacenter: Azure Edition when they have installed March Update KB5035853 or KB5035857, respectively or are running a recent Windows Insider and Windows Server Insider build. 
 
 To learn more about configuring SMB over QUIC, see [SMB over QUIC](smb-over-quic.md).
 
@@ -29,7 +29,7 @@ You can also configure SMB over QUIC to block access by revoking certificates or
 
 Before you can configure client access control, you need an *SMB server* with the following prerequisites.
 
-- An SMB server running [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later.
+- An SMB server running Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later.
 - SMB over QUIC enabled and configured on the server. To learn how to configure SMB over QUIC, see [SMB over QUIC](smb-over-quic.md).
 - If you're using client certificates issued by a different certificate authority (CA), you need to ensure that the CA is trusted by the server.
 - Administrative privileges for the SMB server you're configuring.
@@ -37,6 +37,8 @@ Before you can configure client access control, you need an *SMB server* with th
 You also need an *SMB client* with the following prerequisites.
 
 - An SMB client running on one of the following operating systems:
+  - Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c)
+  - Windows 11 with the [March 12, 2024—KB5035853 Update](https://support.microsoft.com/topic/march-12-2024-kb5035853-os-builds-22621-3296-and-22631-3296-a69ac07f-e893-4d16-bbe1-554b7d9dd39b).
   - [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later.
   - [Windows 11 Insider Preview Build 25977 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/18/announcing-windows-11-insider-preview-build-25977-canary-channel/) or later.
 - A client certificate that is:
