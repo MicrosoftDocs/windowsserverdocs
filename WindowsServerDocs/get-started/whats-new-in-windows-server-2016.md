@@ -313,3 +313,44 @@ Multi-homed computers can also use DNS client service binding to improve server 
 
 > [!NOTE]
 > Changes to the DNS Client service in Windows 10 are also present in computers running Windows Server 2016 and later.
+
+## Remote Desktop Services
+
+Remote Desktop Services (RDS) made the following changes for Windows Server 2016.
+
+### App compatibility
+
+RDS and Windows Server 2016 are compatible with many Windows 10 applications, creating a user experience that's almost identical to a physical desktop.
+
+## Azure SQL Database
+
+The RD Connection Broker can now store all deployment information, such as connection states and user-host mappings, in a shared Azure SQL database.
+
+
+
+The RD Connection Broker is able to store all of the deployment information (like connection states and user/host mappings) in a shared SQL database, such as an Azure SQL database. Ditch the SQL Server Always On Availability Group deployment manual, grab the connection string to the Azure SQL database, and start using your highly available environment.
+
+Additional information: [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](https://techcommunity.microsoft.com/t5/microsoft-security-and/new-windows-server-2016-capability-use-azure-sql-db-for-your/ba-p/249787)
+
+## Remote Desktop IP Virtualization on Windows Server 2019
+If you want to use IP virtualization on Windows Server 2019, please follow [these steps](/support/windows-server/remote/remote-desktop-ip-virtualization).
+
+## Graphics - solving graphics needs across various scenarios
+Thanks to Hyper-V's Discrete Device Assignment, you can now map GPUs on a host machine directly to a VM to be consumed by its GPU-requiring applications. Improvements have also been made in RemoteFX vGPU, including support for OpenGL 4.4, OpenCL 1.1, 4k resolution, and Windows Server virtual machines.
+
+Additional information: [Discrete Device Assignment](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization)
+
+## RD Connection Broker - improved connection handling during logon storms
+With improved connection handling, the RD Connection Broker is now able to handle over 10,000 concurrent logon requests, sometimes seen during "logon storms". The improved RD Connection Broker also makes maintenance of the deployment simpler by being able to more quickly add servers back into the environment.
+
+Additional information: [Improved Remote Desktop Connection Broker Performance](https://techcommunity.microsoft.com/t5/microsoft-security-and/improved-remote-desktop-connection-broker-performance-with/ba-p/249559)
+
+## RDP 10 - new capabilities built into the protocol
+RDP 10 now uses the H.264/AVC 444 codec, appropriately optimizing across both video and text. With this release, pen remoting is also supported. With these capabilities, your remote sessions start to feel even more like a local session.
+
+Additional information: [RDP 10 AVC/H.264 improvements in Windows 10 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-security-and/remote-desktop-protocol-rdp-10-avc-h-264-improvements-in-windows/ba-p/249588)
+
+## Personal session desktops - providing individual desktops to any end-user
+Personal session desktops is a new way to have your own personal desktop hosted for you in the cloud. Administrative privileges and dedicated session hosts removes the complexity of hosting environments where users want to manage the desktop like it's their own.
+
+Additional information: [Personal Session Desktops](rds-personal-session-desktops.md)
