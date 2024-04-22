@@ -389,6 +389,8 @@
       href: dcdiag.md
     - name: dcgpofix
       href: dcgpofix.md
+    - name: dcpromo
+      href: dcpromo.md
     - name: defrag
       href: defrag.md
     - name: del
