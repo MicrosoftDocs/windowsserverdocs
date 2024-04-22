@@ -123,7 +123,7 @@ For more information about attaching a server to an RODC account, see [Performin
 | LogPath:"path_to_log_files" |<p>Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that contains the domain log files, for example, C:\Windows\Logs.</p><p>The default is **%SYSTEMROOT%\NTDS**.</p> |
 | Password:"password" | <p>Specifies the password that corresponds to the user name (account credentials) that is used to install the domain controller. Use this parameter in conjunction with the **UserName** parameter.</p><p>Use * to prompt the user to supply a password.</p> |
 | RebootOnCompletion:{\<Yes> \| No} | <p>Specifies whether to restart the computer upon completion, regardless of success.</p><p>The default is **Yes**.</p> |
-| RebootOnSuccess:{\<Yes> \| No | NoAndNoPromptEither} | <p>Specifies whether to restart the computer upon successful completion.</p><p>The default is **Yes**.</p> |
+| RebootOnSuccess:{\<Yes> \| No \| NoAndNoPromptEither} | <p>Specifies whether to restart the computer upon successful completion.</p><p>The default is **Yes**.</p> |
 | ReplicaDomainDNSName:"DNS_name_of_domain" | Specifies the FQDN of the domain in which you want to install an additional domain controller. |
 | ReplicationSourceDC:"DNS_name_of_DC" | Indicates the FQDN of the partner domain controller from which you replicate the domain information. |
 | ReplicationSourcePath:"replication_source_path" | Indicates the location of the installation media that will be used to install a new domain controller. |
@@ -131,7 +131,6 @@ For more information about attaching a server to an RODC account, see [Performin
 | SkipAutoConfigDns | Skips automatic configuration of DNS client settings, forwarders, and root hints. This parameter is in effect only if the DNS Server service is already installed. |
 | Syskey:{\<none> \| system key} | <p>Specifies the system key for the media from which you replicate the data.</p><p>The default is **none**.</p> |
 | SysVolPath:"path_to_database_file" | <p>Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer, for example, **C:\Windows\SYSVOL**.</p><p>The default is **%SYSTEMROOT%\SYSVOL**.</p> |
-|  |  |
 | UserDomain:"domain_name" | Specifies the domain name for the user name (account credentials) for the operation. This parameter also helps to specify the forest where you plan to install the domain controller or create an RODC account. If no value is specified, the domain of the computer will be used. |
 | UserName:"user_name" | Specifies the user name (account credentials) for the operation. If no value is specified, the credentials of the current user are used for the operation. |
 
@@ -160,7 +159,7 @@ For more information about forcing the removal of a domain controller, see [Forc
 | RebootOnCompletion:{\<Yes> \| No} | <p>Specifies whether to restart the computer upon completion, regardless of success.</p><p>The default is **Yes**.</p> |
 | RebootOnSuccess:{\<Yes> \| No \| NoAndNoPromptEither} | <p>Specifies whether to restart the computer upon successful completion.</p><p>The default is **Yes**.</p> |
 | RemoveApplicationPartitions:{Yes \| \<No>} | <p>Specifies whether to remove application partitions during the removal of AD DS from a domain controller.</p><p>The default is **No**.</p> |
-| RemoveDNSDelegation:{<Yes> \| No} | <p>Specifies whether to remove DNS delegations that point to this DNS server from the parent DNS zone.</p><p>The default is **Yes**.</p> |
+| RemoveDNSDelegation:{\<Yes> \| No} | <p>Specifies whether to remove DNS delegations that point to this DNS server from the parent DNS zone.</p><p>The default is **Yes**.</p> |
 | RetainDCMetadata:{Yes \| \<No>} | <p>Retains domain controller metadata in the domain after AD DS removal to allow a delegated administrator to remove AD DS from an RODC.</p><p>**The default is No**.</p> |
 | UserDomain:"domain_name" | Specifies the domain name for the user name (account credentials) for the operation. This parameter also helps to specify the forest where you plan to install the domain controller or create an RODC account. If no value is specified, the domain of the computer will be used. |
 | UserName:"user_name" | Specifies the user name (account credentials) for the operation. If no value is specified, the credentials of the current user are used for the operation. |
