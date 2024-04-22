@@ -272,6 +272,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [date](date.md)
 - [dcdiag](dcdiag.md)
 - [dcgpofix](dcgpofix.md)
+- [dcpromo](dcpromo.md)
 - [defrag](defrag.md)
 - [del](del.md)
 - [delete](delete.md)
