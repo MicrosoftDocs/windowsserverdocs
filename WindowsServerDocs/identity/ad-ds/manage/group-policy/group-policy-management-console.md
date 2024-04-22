@@ -1,6 +1,6 @@
 ---
 title: Group Policy Management Console in Windows
-description: Laern how to create, edit, link, and manage Group Policy Objects using the Group Policy Management Console.
+description: Learn how to create, edit, link, and manage Group Policy Objects using the Group Policy Management Console.
 author: Orin-Thomas
 ms.topic: how-to
 ms.author: orthomas

@@ -54,7 +54,7 @@ In addition, you can disable policy settings on the GPO itself in four other way
 
 - A GPO can be disabled
 - A GPO can have its computer settings disabled
-- It's user settings disabled
+- Its user settings disabled
 - All of its settings disabled
 
 ## Group Policy Filtering
@@ -71,7 +71,7 @@ Loopback processing mode applies the user configuration settings of Group Policy
 
 By enabling the loopback processing policy setting in a GPO, you can configure user policy settings based on the computer that they sign in. Without loopback processing, GPOs applying a computer object will only process the computer configuration settings. GPOs applied to users will only process user configuration settings.  When you enable the loopback processing mode policy setting, you must ensure that both the Computer Configuration and User Configuration settings in the GPO are enabled. Those policy settings are applied regardless of which user logs on.
 
-You can configure the loopback policy setting by using the the Group Policy Management Console to edit the GPO and enabling the **Configure user Group Policy loopback processing mode** policy setting under **Computer Configuration\Policies\Administrative Templates\System\Group Policy**. Two options are available:
+You can configure the loopback policy setting by using the Group Policy Management Console to edit the GPO and enabling the **Configure user Group Policy loopback processing mode** policy setting under **Computer Configuration\Policies\Administrative Templates\System\Group Policy**. Two options are available:
 
 - Merge mode: In this mode, the list of GPOs for the user is gathered during the logon process. Then, the list of GPOs for the computer is gathered. Next, the list of GPOs for the computer is added to the end of the GPOs for the user. As a result, the computer’s GPOs have higher precedence than the user’s GPOs. If the policy settings conflict, the user policy settings in the computer's GPOs are applied rather than the user's normal policy settings.
 

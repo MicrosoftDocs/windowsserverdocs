@@ -211,7 +211,7 @@ To use a migration table during a copy or import operation, perform the followin
 1. Select the backed-up GPO that you want to import, then select **Next**.
 
 1. Review the scan results, then select **Next**.
-1. 
+
 1. Select **Using this migration table to map them in the destination GPO**, then select **Browse** to locate the migration table you want to use. Select **Next**.
 
 1. Select **Finish** to import the GPO.
