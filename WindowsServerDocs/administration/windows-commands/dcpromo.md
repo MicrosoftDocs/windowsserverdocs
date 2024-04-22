@@ -43,7 +43,7 @@ For more information about creating a new domain, see [Installing a New Windows�
 
 For more information about creating a new domain tree, see [Installing a New Windows Server 2008 Domain Tree](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733006(v=ws.10)).
 
-For more information about creating an another domain controller for a domain, see [Installing an Additional Windows Server 2008 Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733027(v=ws.10)).
+For more information about creating another domain controller for a domain, see [Installing an Additional Windows Server 2008 Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733027(v=ws.10)).
 
 | Parameter and value pair | Description and default |
 |---|---|
@@ -136,7 +136,7 @@ For more information about attaching a server to an RODC account, see [Performin
 
 ## dcpromo Demotion operation parameters
 
-You can use parameters in the following list when you remove AD Ds from a domain controller that runs Windows Server.
+You can use parameters in the following list when you remove AD DS from a domain controller that runs Windows Server.
 
 For more information about removing a domain controller from a domain, see [Removing a Windows Server 2008 Domain Controller from a Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771844(v=ws.10)).
 
