@@ -56,6 +56,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [add](add.md)
 - [add alias](add-alias.md)
 - [add volume](add-volume.md)
+- [adprep](adprep.md)
 - [append](append.md)
 - [arp](arp.md)
 - [assign](assign.md)
