@@ -78,7 +78,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic                                        |Description|
 |---                                                         |---           |
 |[Use Storage Migration Service to migrate a server](storage-migration-service/migrate-data.md)| Added some clarification on how we transfer files |
-|[Cluster to Cluster Storage Replica cross region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Added validation steps|
+|[Cluster to Cluster Storage Replica Cross-Region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Added validation steps|
 |[Cluster to Cluster Storage Replica within the same region in Azure](storage-replica/cluster-to-cluster-azure-one-region.md)|Added validation steps|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)| Added support statement for Data Deduplication|
 
@@ -209,8 +209,8 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic|Description|
 |---|---|
-|[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|Added info about Azure AD Application Proxy support & updated requirements.|
-|[Work Folders](work-folders/work-folders-overview.md)|Added info about Azure AD Application Proxy support & updated requirements.|
+|[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|Added info about Microsoft Entra application proxy support & updated requirements.|
+|[Work Folders](work-folders/work-folders-overview.md)|Added info about Microsoft Entra application proxy support & updated requirements.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Removed Nano Server from supported installation options.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|New topic for Windows Server 2016.|
 
@@ -219,7 +219,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |                                                           New or changed topic                                                           |                                          Description                                           |
 |------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | [Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md) |              Updated the system requirements to include a newer software update.               |
-|                                      [Deploying Work Folders](work-folders/deploy-work-folders.md)                                       |         Added info about Azure AD Application Proxy support & updated required steps.          |
+|                                      [Deploying Work Folders](work-folders/deploy-work-folders.md)                                       |         Added info about Microsoft Entra application proxy support & updated required steps.          |
 |                            [Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)                             | Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos. |
 |               [Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)                |             Added info on how to choose between different replication topologies.              |
 |               [Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)               |                    Changed drive endurance requirements for cache devices.                     |
@@ -264,5 +264,5 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |[Managing Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)|New topic.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Updated port requirements and clarified how extending replicated volumes works.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added info about a fix in the December 9, 2016 Cumulative Update and added info about how to resolve an error when extending a replicated volume.|
-|[Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)|Added visually-oriented Understand/Plan/Deploy/Manage section to serve as a learning map for our topics.|
+|[Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)|Added visually oriented Understand/Plan/Deploy/Manage section to serve as a learning map for our topics.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Removed some obsolete content and added new links.|

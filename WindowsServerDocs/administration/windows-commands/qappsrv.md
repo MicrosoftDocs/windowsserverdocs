@@ -18,7 +18,7 @@ Displays a list of all Remote Desktop Session Host servers on the network. To fi
 > [!NOTE]
 > This command is the same as the [query termserver command](query-termserver.md).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -51,6 +51,6 @@ To translate the raw trace file into a human readable format and to save the res
 sxstrace parse -logfile:sxstrace.etl -outfile:sxstrace.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

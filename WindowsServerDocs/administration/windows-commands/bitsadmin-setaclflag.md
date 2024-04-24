@@ -34,7 +34,7 @@ To set the access control list propagation flags for the job named *myDownloadJo
 bitsadmin /setaclflags myDownloadJob og
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -3,16 +3,19 @@ title: Get started with the macOS client
 description: Learn how to set up the Remote Desktop client for Mac
 ms.topic: article
 ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 07/15/2021
+author: Heidilohr
+manager: femila
+ms.author: helohr
+ms.date: 11/03/2022
 ---
 # Get started with the macOS client
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 11, Windows 10, Windows Server 2016
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
+
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for macOS](/azure/virtual-desktop/users/connect-macos).
 
 >[!NOTE]
 > - Curious about the new releases for the macOS client? Check out [What's new for Remote Desktop on Mac?](mac-whatsnew.md)
@@ -40,12 +43,9 @@ Subscribe to the feed your admin gave you to get the list of managed resources a
 To subscribe to a feed:
 
 1. Select **Add feed** on the main page to connect to the service and retrieve your resources.
-2. Enter the feed URL. This can be a URL or email address:
-   - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
-      - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-      - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-      - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-   - To use email, enter your email address. This tells the client to search for a URL associated with your email address if your admin configured the server that way.
+2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
+   - If you use a URL, use the one your admin gave you.
+   - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Select **Subscribe**.
 4. Sign in with your user account when prompted.
 
@@ -148,7 +148,7 @@ By default, the remote session will use the same keyboard locale as the OS you'r
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
 
-Windows Server 2012 R2 introduced support for a new authentication method, Remote Desktop Gateway pluggable authentication and authorization, which provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client.
+Remote Desktop Gateway pluggable authentication and authorization provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client.
 
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 aren't supported, although the article above discusses them.

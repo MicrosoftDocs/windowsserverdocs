@@ -29,7 +29,7 @@ To display the current remote computer directory, type:
 pwd
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

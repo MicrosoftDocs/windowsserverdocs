@@ -1,17 +1,17 @@
 ---
-title: Cluster to cluster Storage Replica within the same region in Azure
-description: Cluster to cluster Storage Replication within the same region in Azure
+title: Cluster-to-cluster storage replication within the same Azure region
+description: Cluster-to-cluster storage replication within the same Azure region
 author: arduppal
 ms.author: arduppal
 ms.date: 04/26/2019
 ms.topic: article
 manager: mchad
 ---
-# Cluster to cluster Storage Replica within the same region in Azure
+# Cluster to Cluster Storage Replication Within the same Azure Region
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-You can configure cluster to cluster storage replication within the same region in Azure. In the examples below, we use a two-node cluster, but cluster to cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
+You can configure cluster to cluster storage replication within the same Azure Region. In the examples below, we use a two-node cluster, but cluster to cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
 
 Watch the videos below for a complete walk-through of the process.
 
@@ -118,7 +118,7 @@ Part two
      Get-Cluster -Name SRAZC2 (ran from az2az1)
     ```
 
-15. Create cloud witnesses for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**).
+15. Create cloud witnesses for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in Azure one for each cluster in the same resource group (**SR-AZ2AZ**).
 
     - Copy the storage account name and key from "access keys"
     - Create the cloud witness from "failover cluster manager" and use the above account name and key to create it.
@@ -155,5 +155,5 @@ Run the following command:
 
 ```PowerShell
 
-New-SRPartnership -SourceComputerName SRAZC1 -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\DataDisk1 -SourceLogVolumeName  g: -DestinationComputerName **SRAZC2** -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\DataDisk2 -DestinationLogVolumeName  g:
+New-SRPartnership -SourceComputerName SRAZC1 -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\DataDisk1 -SourceLogVolumeName  g: -DestinationComputerName **SRAZC2** -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\DataDisk2 -DestinationLogVolumeName  g: -LogType Raw
 ```

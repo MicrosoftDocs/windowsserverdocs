@@ -94,7 +94,7 @@ To end all processes that have a process ID *greater than or equal to 1000*, reg
 taskkill /f /fi "PID ge 1000" /im *
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

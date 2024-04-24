@@ -27,7 +27,7 @@ pktmon filter { list | add | remove } [OPTIONS | help]
 | **pktmon filter add** |  Add a filter to control which packets are reported. |
 | **pktmon filter remove** | Remove all packet filters. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

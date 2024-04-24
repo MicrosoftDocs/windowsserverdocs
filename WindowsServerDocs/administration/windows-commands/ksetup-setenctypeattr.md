@@ -58,7 +58,7 @@ To verify that the encryption type attribute was set as intended for the domain,
 ksetup /getenctypeattr corp.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -6,23 +6,24 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.reviewer: cahick
-ms.date: 04/30/2021
+ms.date: 05/01/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # Winlogon automatic restart sign-on (ARSO)
 
-During a Windows Update, there are user specific processes that must happen for the update to be complete. These processes require the user to be logged in to their device. On the first login after an update has been initiated, users must wait until these user specific processes are complete before they can start using their device.
+During a Windows Update, there are user specific processes that must happen for the update to be complete. These processes require the user to be logged in to their device. On the first sign in after an update has been initiated, users must wait until these user specific processes are complete before they can start using their device.
 
 ## How does it work?
 
-When Windows Update initiates an automatic reboot, ARSO extracts the currently logged in user's derived credentials, persists it to disk, and configures Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.
+When Windows Update initiates an automatic reboot, ARSO extracts the currently logged in user's derived credentials, persists it to disk, and configures Autologon for the user. Windows Update running as system with TCB privilege initiates the RPC call.
 
-After the final Windows Update reboot, the user will automatically be logged in via the Autologon mechanism, and the user's session is rehydrated with the persisted secrets. Additionally, the device is locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by the Local Security Authority (LSA). Upon a successful ARSO configuration and login, the saved credentials are immediately deleted from disk.
+After the final Windows Update reboot, the user will automatically be logged in via the Autologon mechanism, and the user's session is rehydrated with the persisted secrets. Additionally, the device is locked to protect the user's session. The locking is initiated via Winlogon whereas the credential management is done by the Local Security Authority (LSA). Upon a successful ARSO configuration and sign in, the saved credentials are immediately deleted from disk.
 
 By automatically logging in and locking the user on the console, Windows Update can complete the user specific processes before the user returns to the device. In this way, the user can immediately start using their device.
 
-ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO. For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Azure Active Directory.
+ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO. For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Microsoft Entra ID.
 
 | Windows Update | shutdown -g -t 0 | User-initiated reboots | APIs with SHUTDOWN_ARSO / EWX_ARSO flags |
 |--|--|--|--|
@@ -37,9 +38,9 @@ ARSO treats unmanaged and managed devices differently. For unmanaged devices, de
 
 ### Sign-in and lock last interactive user automatically after a restart
 
-In Windows 10, ARSO is disabled for Server SKUs and opt out for Client SKUs.
+In Windows 10, ARSO is disabled for Server SKUs and opted out for Client SKUs.
 
-**Group policy location:** Computer Configuration > Administrative Templates > Windows Components > Windows Logon Options
+**Group policy location:** Computer Configuration > Administrative Templates > Windows Components > Windows sign in Options
 
 **Intune policy:**
 
@@ -53,15 +54,15 @@ In Windows 10, ARSO is disabled for Server SKUs and opt out for Client SKUs.
 
 This policy setting controls whether a device will automatically sign in and lock the last interactive user after the system restarts or after a shutdown and cold boot.
 
-This only occurs if the last interactive user didn't sign out before the restart or shutdown.
+It only occurs if the last interactive user didn't sign out before the restart or shutdown.
 
-If the device is joined to Active Directory or Azure Active Directory, this policy only applies to Windows Update restarts. Otherwise, this will apply to both Windows Update restarts and user-initiated restarts and shutdowns.
+If the device is joined to Active Directory or Microsoft Entra ID, this policy only applies to Windows Update restarts. Otherwise, it applies to both Windows Update restarts and user-initiated restarts and shutdowns.
 
-If you don't configure this policy setting, it is enabled by default. When the policy is enabled, the user is automatically signed in and the session is automatically locked with all lock screen apps configured for that user after the device boots.
+If you don't configure this policy setting, it's enabled by default. When the policy is enabled, the user is automatically signed in. Additionally, after the device boots, the session is locked with all lock screen apps configured for that user.
 
-After enabling this policy, you can configure its settings through the ConfigAutomaticRestartSignOn policy, which configures the mode of automatically signing in and locking the last interactive user after a restart or cold boot.
+After enabling this policy, you can configure its settings through the ConfigAutomaticRestartSignOn policy. It sets the mode to automatic sign in and locks the last interactive user after a restart or cold boot.
 
-If you disable this policy setting, the device does not configure automatic sign in. The user's lock screen apps are not restarted after the system restarts.
+If you disable this policy setting, the device doesn't configure automatic sign in. The user's lock screen apps aren't restarted after the system restarts.
 
 **Registry editor:**
 
@@ -92,15 +93,15 @@ If you disable this policy setting, the device does not configure automatic sign
 
 **Description:**
 
-This policy setting controls the configuration under which an automatic restart and sign on and lock occurs after a restart or cold boot. If you chose “Disabled” in the “Sign-in and lock last interactive user automatically after a restart” policy, then automatic sign on will not occur and this policy does not need to be configured.
+This policy setting controls the configuration under which an automatic restart and sign on and lock occurs after a restart or cold boot. If you chose “Disabled” in the “Sign-in and lock last interactive user automatically after a restart” policy, then automatic sign on won't occur and this policy doesn't need to be configured.
 
 If you enable this policy setting, you can choose one of the following two options:
 
-1. “Enabled if BitLocker is on and not suspended” specifies that automatic sign on and lock will only occur if BitLocker is active and not suspended during the reboot or shutdown. Personal data can be accessed on the device's hard drive at this time if BitLocker is not on or suspended during an update. BitLocker suspension temporarily removes protection for system components and data but may be needed in certain circumstances to successfully update boot-critical components.
+1. “Enabled if BitLocker is on and not suspended” specifies that automatic sign on and lock will only occur if BitLocker is active and not suspended during the reboot or shutdown. Personal data can be accessed on the device's hard drive at this time if BitLocker isn't on or suspended during an update. BitLocker suspension temporarily removes protection for system components and data but may be needed in certain circumstances to successfully update boot-critical components.
    - BitLocker is suspended during updates if:
       - The device doesn't have TPM 2.0 and PCR7, or
       - The device doesn't use a TPM-only protector
-2. “Always Enabled” specifies that automatic sign on will happen even if BitLocker is off or suspended during reboot or shutdown. When BitLocker is not enabled, personal data is accessible on the hard drive. Automatic restart and sign on should only be run under this condition if you are confident that the configured device is in a secure physical location.
+2. “Always Enabled” specifies that automatic sign on will happen even if BitLocker is off or suspended during reboot or shutdown. When BitLocker isn't enabled, personal data is accessible on the hard drive. Automatic restart and sign on should only be run under this condition if you're confident that the configured device is in a secure physical location.
 
 If you disable or don't configure this setting, automatic sign on will default to the “Enabled if BitLocker is on and not suspended” behavior.
 
@@ -119,21 +120,24 @@ If you disable or don't configure this setting, automatic sign on will default t
 
 ## Troubleshooting
 
-When WinLogon automatically locks, WinLogon's state trace will be stored in the WinLogon event log.
+When Winlogon performs a sign-in, Winlogon's state trace is stored in the Winlogon event log. Check **Applications and Services Logs > Microsoft > Windows > Winlogon > Operational** in Event Viewer for the following Winlogon events:
 
-The status of an Autologon configuration attempt is logged
+| Event ID | Event description | Event source |
+| --- | --- | --- |
+| 1 | `Authentication started.` | Winlogon |
+| 2 | `Authentication stopped. Result 0` | Winlogon |
 
-- If it is successful
-   - records it as such
-- If it is a failure:
-   - records what the failure was
-- When BitLocker's state changes:
-   - the removal of credentials will be logged
-   - These will be stored in the LSA Operational log.
+The status of an ARSO configuration attempt is stored in the LSA event log. Check **Applications and Services Logs > Microsoft > Windows > LSA > Operational** in Event Viewer for the following LSA events:
+
+| Event ID | Event description | Event source |
+| --- | --- | --- |
+| 320 | `Automatic restart sign on successfully configured the autologon credentials for: Account name: <accountName> Account Domain: <accountDomain>` | LSA |
+| 321 | `Automatic restart sign on successfully deleted autologon credentials from LSA memory` | LSA |
+| 322 | `Automatic restart sign on failed to configure the autologon credentials with error: <errorText>` | LSA |
 
 ### Reasons why autologon might fail
 
-There are several cases in which a user automatic login cannot be achieved.  This section is intended to capture the known scenarios in which this can occur.
+There are several cases in which a user automatic login can't be achieved.  This section is intended to capture the known scenarios in which this can occur.
 
 ### User must change password at next login
 
@@ -145,13 +149,13 @@ An existing user session can be maintained even if disabled.  Restart for an acc
 
 ### Logon hours and parental controls
 
-The Logon Hours and parental controls can prohibit a new user session from being created.  If a restart were to occur during this window, the user would not be permitted to login.  There is additional policy that causes lock or logout as a compliance action. The status of an Autologon configuration attempt is logged.
+The Logon Hours and parental controls can prohibit a new user session from being created.  If a restart were to occur during this window, the user wouldn't be permitted to log in.  The policy also causes lock or logout as a compliance action. The status of an Autologon configuration attempt is logged.
 
 ## Security details
 
-In environments where the device’s physical security is of concern (for example, the device can be stolen), Microsoft does not recommend using ARSO. ARSO relies on the integrity of the platform firmware and TPM, an attacker with physical access maybe able to compromise these and as such access the credentials stored on disk with ARSO enabled.
+In environments where the device’s physical security is of concern (for example, the device can be stolen), Microsoft doesn't recommend using ARSO. ARSO relies on the integrity of the platform firmware and TPM, an attacker with physical access maybe able to compromise these and as such access the credentials stored on disk with ARSO enabled.
 
-In enterprise environments where the security for user data protected by Data Protection API (DPAPI) is of concern, Microsoft does not recommend using ARSO. ARSO negatively impacts user data protected by DPAPI because decryption doesn't requires user credentials. Enterprises should test the impact on the security of user data protected by DPAPI before using ARSO.
+In enterprise environments where the security for user data protected by Data Protection API (DPAPI) is of concern, Microsoft doesn't recommend using ARSO. ARSO negatively impacts user data protected by DPAPI because decryption doesn't requires user credentials. Enterprises should test the impact on the security of user data protected by DPAPI before using ARSO.
 
 ### Credentials stored
 
@@ -159,7 +163,7 @@ In enterprise environments where the security for user data protected by Data Pr
 |--|--|--|--|
 | Local account - Yes | Local account - Yes | Local account - No | Local account - No |
 | MSA account - Yes | MSA account - Yes | MSA account - No | MSA account - No |
-| Azure AD joined account - Yes | Azure AD joined account - Yes | Azure AD joined account - Yes (if hybrid) | Azure AD joined account - Yes |
+| Microsoft Entra joined account - Yes | Microsoft Entra joined account - Yes | Microsoft Entra joined account - Yes (if hybrid) | Microsoft Entra joined account - Yes |
 | Domain joined account - Yes | Domain joined account - Yes | Domain joined account - Yes | Domain joined account - Yes (if hybrid) |
 
 ### Credential Guard interaction
@@ -168,4 +172,4 @@ ARSO is supported with Credential Guard enabled on devices beginning with Window
 
 ## Additional resources
 
-Autologon is a feature that has been present in Windows for several releases. It is a documented feature of Windows that even has tools such as Autologon for Windows [http:/technet.microsoft.com/sysinternals/bb963905.aspx](/sysinternals/downloads/autologon). It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret. This could be problematic for many child cases where account lockdown may occur between bed time and wake-up, particularly if the maintenance window is commonly during this time.
+Autologon is a feature that has been present in Windows for several releases. It's a documented feature of Windows that even has tools such as Autologon for Windows [http:/technet.microsoft.com/sysinternals/bb963905.aspx](/sysinternals/downloads/autologon). It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret. This could be problematic for many child cases where account lockdown may occur between bed time and wake-up, particularly if the maintenance window is commonly during this time.

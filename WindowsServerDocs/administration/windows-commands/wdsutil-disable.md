@@ -22,7 +22,7 @@ Disables all services for Windows Deployment Services.
 | [wdsutil disable-server command](wdsutil-disable-server.md) | Disables all Windows Deployment Services services on a specified server (Deployment Server). |
 | [wdsutil disable-transportserver command](wdsutil-disable-transportserver.md) | Disables all Windows Deployment Services services on a specified Transport Server. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

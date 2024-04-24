@@ -41,7 +41,7 @@ To change the directory on the remote computer to *May Videos*, type:
 cd  May Videos
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

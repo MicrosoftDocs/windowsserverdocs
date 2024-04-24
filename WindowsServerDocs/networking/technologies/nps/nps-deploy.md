@@ -35,4 +35,4 @@ To deploy NPS for wireless access, you can use the guide [Deploy Password-Based 
 
 You can use NPS to process connection requests for Always On Virtual Private Network \(VPN\) connections for remote employees that are using computers and devices running Windows 10.
 
-For more information, see the [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](../../../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md).
+For more information, see the [Remote Access Always On VPN Deployment Tutorial for Windows Server 2016 and Windows 10](../../../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md).

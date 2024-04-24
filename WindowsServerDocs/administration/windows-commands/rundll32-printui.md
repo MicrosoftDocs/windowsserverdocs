@@ -143,7 +143,7 @@ To view the properties of a printer, printer3, type:
 rundll32 printui.dll PrintUIEntry /p /n\\printer3
 ```
 
-## Additional References
+## Related links
 
 - [rundll32](rundll32.md)
 

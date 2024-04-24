@@ -45,7 +45,7 @@ To unregister the Security Configuration Database *MyApp*, located at `\\kbserve
 scwcmd register /d /kbname:MyApp /kb:\\kbserver\kb
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

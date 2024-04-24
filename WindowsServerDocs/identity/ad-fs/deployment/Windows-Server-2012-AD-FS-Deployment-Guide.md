@@ -4,8 +4,8 @@ ms.assetid: e2ad9e80-a036-4bac-a4fb-afa83756aa1f
 title: Windows Server 2012 AD FS Deployment Guide
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

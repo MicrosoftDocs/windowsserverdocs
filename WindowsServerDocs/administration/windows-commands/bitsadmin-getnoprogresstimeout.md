@@ -33,7 +33,7 @@ To retrieve the progress time out value for the job named *myDownloadJob*:
 bitsadmin /getnoprogresstimeout myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

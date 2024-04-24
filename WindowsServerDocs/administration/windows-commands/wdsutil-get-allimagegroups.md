@@ -40,7 +40,7 @@ wdsutil /get-allimagegroups
 wdsutil /verbose /get-allimagegroups /server:MyWDSServer /detailed
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

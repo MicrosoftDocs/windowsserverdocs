@@ -64,7 +64,7 @@ To log on to the ftp server named `ftp.example.microsoft.com` and run the **ftp*
 ftp -s:resync.txt ftp.example.microsoft.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

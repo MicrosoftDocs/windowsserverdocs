@@ -62,5 +62,5 @@ for more detailed information about using Dynamic Update and installing multiple
 for information about modifying boot settings, see the Windows Deployment and Resource Kits for Windows Server 2003. For more information, see [Using the Windows Deployment and Resource Kits](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10)).
 Using the **/unattend** command-line option to automate setup affirms that you have read and accepted the Microsoft License Agreement for Windows Server 2003. Before using this command-line option to install Windows Server 2003 on behalf of an organization other than your own, you must confirm that the end user (whether an individual, or a single entity) has received, read, and accepted the terms of the Microsoft License Agreement for that product.  OEMs may not specify this key on machines being sold to end users.
 
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)

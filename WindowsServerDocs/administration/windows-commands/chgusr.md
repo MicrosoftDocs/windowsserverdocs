@@ -17,7 +17,7 @@ Changes the install mode for the Remote Desktop Session Host server.
 > [!NOTE]
 > This command has been replaced by the **change user command**. For more information, including the syntax and parameter details, see [change user command](change-user.md).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

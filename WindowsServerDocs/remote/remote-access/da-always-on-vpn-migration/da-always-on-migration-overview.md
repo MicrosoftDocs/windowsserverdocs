@@ -48,7 +48,7 @@ In this deployment scenario, you use a simple DirectAccess deployment scenario a
 Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](../vpn/vpn-map-da.md) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. Also, you can refer to the [Always On VPN enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md) to add options to your Always On VPN deployment.
 
 >[!NOTE]
->For nondomain-joined devices, there are additional considerations, such as certificate enrollment. For details, see [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy.md).
+>For nondomain-joined devices, there are additional considerations, such as certificate enrollment. For details, see [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md).
 
 ### Deployment scenario feature list
 

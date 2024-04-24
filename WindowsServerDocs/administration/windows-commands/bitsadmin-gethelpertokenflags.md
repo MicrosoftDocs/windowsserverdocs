@@ -43,7 +43,7 @@ To retrieve the usage flags for a helper token associated with a BITS transfer 
 bitsadmin /gethelpertokenflags myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

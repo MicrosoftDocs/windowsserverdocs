@@ -75,7 +75,7 @@ To create an API trace counter called trace_notepad, for the executable file c:\
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

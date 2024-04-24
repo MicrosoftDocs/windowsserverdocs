@@ -2,9 +2,9 @@
 title: Plan for Hyper-V networking in Windows Server
 description: Describes what's needed for basic networking in Hyper-V and gives links to instructions
 ms.topic: article
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 10/04/2016
+ms.author: roharwoo
+author: robinharwood
+ms.date: 12/02/2022
 ---
 # Plan for Hyper-V networking in Windows Server
 
@@ -33,6 +33,13 @@ Virtual switch types are:
 -   **Internal virtual switch** - Connects to a network that can be used only by the virtual machines running on the host that has the virtual switch, and between the host and the virtual machines.
 
 -   **Private virtual switch** - Connects to a network that can be used only by the virtual machines running on the host that has the virtual switch, but doesn't provide networking between the host and the virtual machines.
+
+Virtual switch options:
+
+| Setting name | Description |
+|---|---|
+| Allow management operating system to share this network adapter | Allow the Hyper-V host to share the use of the virtual switch and NIC or NIC team with the virtual machine. With this enabled, the host can use any of the settings that you configure for the virtual switch, such as Quality of Service (QoS) settings, security settings, or other features of the Hyper-V virtual switch. |
+| Enable single-root I/O virtualization (SR-IOV) | Allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. SR-IOV is only available for virtual machines running Windows Server. For more information, see [Single-Root I/O Virtualization](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn641211(v=ws.11)#Sec4) in the Poster Companion Reference: Hyper-V Networking. |
 
 Virtual network adapter types are:
 

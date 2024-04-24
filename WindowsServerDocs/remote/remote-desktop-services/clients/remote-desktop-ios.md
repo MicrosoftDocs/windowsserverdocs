@@ -6,16 +6,19 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/15/2021
+ms.date: 11/03/2022
 ---
 
 # Get started with the iOS client
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
+
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for iOS and iPadOS](/azure/virtual-desktop/users/connect-ios-ipados).
 
 > [!NOTE]
 > - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md).
@@ -65,10 +68,6 @@ To add a workspace:
 1. On the Connection Center screen, tap **+**, and then tap **Add workspace**.
 2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
    - If you use a URL, use the one your admin gave you.
-      - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
-        - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-        - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-        - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your credentials when prompted.
@@ -165,14 +164,17 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Mouse wheel          | Double-tap and hold with two fingers, then drag up or down |
 | Mouse pointer | Zoom                 | With two fingers, pinch to zoom out and spread fingers apart to zoom in |
 
-## Supported input devices
+## Supported input devices and redirection
+
+### Mouse input
 
 The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS.
 
 For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 
-> [!TIP]
-> Swiftpoint is offering an [exclusive discount on the ProPoint mouse](https://www.swiftpoint.com/microsoft) for iOS client users.
+### Camera redirection
+
+Camera redirection protocol (MS-RDPECAM) doesn't support dynamically changing the camera resolution while the camera is in use, such as when rotating the device. You need to start and restart the camera. For example, in the camera app, assuming you're using the front camera, change to the rear camera, then back to the front camera.
 
 ## Use a keyboard in a remote session
 

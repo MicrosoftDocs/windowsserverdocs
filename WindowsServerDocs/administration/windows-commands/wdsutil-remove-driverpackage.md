@@ -35,6 +35,6 @@ wdsutil /remove-DriverPackage /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
 ```
 wdsutil /remove-DriverPackage /Server:MyWdsServer /DriverPackage:MyDriverPackage
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil remove-driverpackages command](wdsutil-remove-driverpackages.md)

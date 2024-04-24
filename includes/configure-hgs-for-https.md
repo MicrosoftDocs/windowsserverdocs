@@ -1,6 +1,6 @@
 First, obtain an SSL certificate for HGS from your certificate authority. Each host machine will need to trust the SSL certificate, so it is recommended that you issue the SSL certificate from your company's public key infrastructure or a third party CA. Any SSL certificate supported by IIS is supported by HGS, however **the subject name on the certificate must match the fully qualified HGS service name** (cluster distributed network name). For instance, if the HGS domain is "bastion.local" and your HGS service name is "hgs", your SSL certificate should be issued for "hgs.bastion.local". You can add additional DNS names to the certificate's subject alternative name field if necessary.
 
-Once you have the SSL certificate, open an elevated PowerShelll session and either provide the certificate path when you run [Set-HgsServer](https://technet.microsoft.com/itpro/powershell/windows/host-guardian-service/server/set-hgsserver):
+Once you have the SSL certificate, open an elevated PowerShelll session and either provide the certificate path when you run [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver):
 
 
 ```powershell

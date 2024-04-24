@@ -103,6 +103,6 @@ U hello.txt
 
 Where the **Private** directory is now marked as encrypted.
 
-### Additional References
+### Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

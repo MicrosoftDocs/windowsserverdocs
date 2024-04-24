@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: daknappe
 manager: femila
 ms.date: 01/11/2022
-ms.prod: windows-server
 ---
 
 # Guest operating system and application supportability on Hyper-V
@@ -19,7 +18,7 @@ The table below shows which Hyper-V build numbers are available in which compati
 
 | Hyper-V build | Compatible products |
 |--|--|
-| 20348 | Windows Server 2022 Datacenter<br />Windows Server 2022 Standard<br />Windows Server 2022 Essentials<br />Azure Stack HCI version 21H2 |
+| 20348 | Windows Server 2022 Datacenter<br />Windows Server 2022 Standard<br />Windows Server 2022 Essentials<br />Azure Stack HCI version 21H2 <br />Azure Stack HCI version 22H2|
 | 17763 and 17784 | Windows Server 2019 Datacenter<br />Windows Server 2019 Standard<br />Windows Server 2019 Essentials<br />Hyper-V Server 2019<br />Azure Stack HCI version 20H2|
 | 14393 | Windows Server 2016 Datacenter<br />Windows Server 2016 Standard<br />Windows Server 2016 Essentials<br />Hyper-V Server 2016 |
 

@@ -32,7 +32,7 @@ If you're managing older virtual machines, use Virtual Machine Connection (VMCon
     ```
 
     ```
-    Enter-PSSession -VMGUID <VMGUID>
+    Enter-PSSession -VMId <VM GUID>
     ```
 
 3. Type your credentials for the virtual machine.

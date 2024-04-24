@@ -31,6 +31,7 @@
       "externalReference": [],
       "globalMetadata": {
          "breadcrumb_path": "/windows-server-essentials/breadcrumbs/toc.json",
+         "uhfHeaderId": "MSDocsHeader-WindowsServer",
          "_op_documentIdPathDepotMapping": {
             "./": {
                "depot_name": "WS.EssentialsDocs"
@@ -39,11 +40,15 @@
          "recommendations": true
       },
       "fileMetadata": {
-         "ms.prod": {
+         "ms.subservice": {
+            "**/*.md": "essentials"
+         },
+         "ms.service": {
             "**/*.md": "windows-server"
          },
+         "ms.prod": {
+         },
          "ms.technology": {
-            "**/*.md": "essentials"
          }
       },
        "template": [],

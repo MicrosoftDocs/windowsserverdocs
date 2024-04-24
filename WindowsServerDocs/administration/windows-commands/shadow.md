@@ -61,7 +61,7 @@ To shadow the session *ACCTG01*, type:
 shadow ACCTG01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

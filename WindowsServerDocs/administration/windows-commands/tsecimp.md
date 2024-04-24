@@ -153,7 +153,7 @@ To add permanent device *1000* and to remove line *88888* from *User1's* access,
 </UserList>
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

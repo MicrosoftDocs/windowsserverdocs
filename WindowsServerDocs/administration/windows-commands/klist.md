@@ -188,6 +188,6 @@ To rediscover domain controllers, or to flush the cache before creating new doma
 klist purge_bind
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

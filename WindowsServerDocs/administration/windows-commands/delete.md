@@ -3,10 +3,9 @@ title: delete
 description: Reference article for the delete command, which deletes a partition or a volume.
 ms.topic: reference
 ms.assetid: 021799a3-11a2-4e7f-8fdc-fba24ca2ba21
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: wscontent
+author: xelu86
+ms.date: 10/12/2023
 ---
 
 # delete
@@ -18,7 +17,6 @@ Deletes a partition or a volume. It also deletes a dynamic disk from the list of
 ```
 delete disk
 delete partition
-delete shadows
 delete volume
 ```
 
@@ -28,9 +26,8 @@ delete volume
 |---------- | ----------- |
 | [Delete disk](delete-disk.md) | Deletes a missing dynamic disk from the list of disks. |
 | [Delete partition](delete-partition.md) | Deletes a partition. |
-| [Delete shadows](delete-shadows.md) | Deletes shadow copies. |
 | [Delete volume](delete-volume.md) | Deletes a volume. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

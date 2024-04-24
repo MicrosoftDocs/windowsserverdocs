@@ -33,7 +33,7 @@ wbadmin delete catalog [-quiet]
 
 - We strongly recommend you create a new backup after you delete a backup catalog.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

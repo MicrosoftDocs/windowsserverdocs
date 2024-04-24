@@ -29,7 +29,7 @@ To toggle debug mode on and off, type:
 debug
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

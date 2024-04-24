@@ -40,6 +40,6 @@ To move all files with the .xls extension from the *\Data* directory to the *\Se
 move \data\*.xls \second_q\reports\
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

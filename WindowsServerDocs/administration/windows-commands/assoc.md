@@ -72,19 +72,19 @@ To send the output of **assoc** to the file assoc.txt, type:
 assoc>assoc.txt
 ```
 
-Associatie **.log** to text files:
+Associate **.log** to text files:
 
 ```
 assoc .log=txtfile
 ```
 
-Associatie files with no extension to text files:
+Associate files with no extension to text files:
 
 ```
 assoc .=txtfile
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

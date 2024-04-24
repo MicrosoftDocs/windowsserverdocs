@@ -43,12 +43,12 @@ To display, one screen at a time, the files in all the directories on drive C, t
 tree c:\ /f | more
 ```
 
-To print a list of all the directories on drive C, type:
+To print a list of all the directories on drive C to a file, type:
 
 ```
-tree c:\ /f  prn
+tree c:\ /f > <driveletter>:\<filepath>\filename.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

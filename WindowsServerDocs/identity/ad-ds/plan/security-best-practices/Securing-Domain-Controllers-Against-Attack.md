@@ -4,15 +4,15 @@ ms.assetid: ba28bd05-16e6-465f-982b-df49633cfde4
 title: Securing Domain Controllers Against Attack
 ms.author: joflore
 author: MicrosoftGuyJFlo
-ms.date: 06/23/2022
+ms.date: 04/10/2023
 ms.topic: article
 ms.reviewer: rickys
 ---
 # Securing Domain Controllers Against Attack
 
->Applies to: Windows Server 2022 Preview, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)
+*Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](/security/zero-trust/ten-laws-of-security#immutable-laws-of-security-v2).
 
 Domain controllers provide the physical storage for the Active Directory Domain Services (AD DS) database, in addition to providing the services and data that allow enterprises to effectively manage their servers, workstations, users, and applications. If privileged access to a domain controller is obtained by a malicious user, they can modify, corrupt, or destroy the AD DS database and, by extension, all of the systems and accounts that are managed by Active Directory.
 
@@ -60,7 +60,7 @@ You should run all domain controllers on the newest version of Windows Server th
 
 ## Secure Configuration of Domain Controllers
 
-Tools can be used to create an initial security configuration baseline for domain controllers that can later be enforced by GPOs. These tools are described in [Administer security policy settings](/windows/security/threat-protection/security-policy-settings/administer-security-policy-settings) section of Microsoft operating systems documentation.
+Tools can be used to create an initial security configuration baseline for domain controllers that can later be enforced by GPOs. These tools are described in [Administer security policy settings](/windows/security/threat-protection/security-policy-settings/administer-security-policy-settings) section of Microsoft operating systems documentation or [Desired State Configuration (DSC) for Windows](/powershell/dsc/overview).
 
 ### RDP Restrictions
 
@@ -80,9 +80,9 @@ Although Windows Server and current versions of Internet Explorer offer many pro
 
 Launching web browsers on domain controllers should be restricted by policy and technical controls. Further to this, general Internet access to and from domain controllers should also be strictly controlled.
 
-Microsoft encourages all organizations to move to a cloud-based approach to identity and access management and migrate from Active Directory to Azure Active Directory (Azure AD). Azure AD is a complete cloud identity and access management solution for managing directories, enabling access to on-premises and cloud apps, and protecting identities from security threats. Azure AD also offers a robust and granular set of security controls to help protect identities, such as multi-factor authentication, Conditional Access policies, Identity Protection, identity governance, and Privileged Identity Management.
+Microsoft encourages all organizations to move to a cloud-based approach to identity and access management and migrate from Active Directory to Microsoft Entra ID. Microsoft Entra ID is a complete cloud identity and access management solution for managing directories, enabling access to on-premises and cloud apps, and protecting identities from security threats. Microsoft Entra ID also offers a robust and granular set of security controls to help protect identities, such as multi-factor authentication, Conditional Access policies, Identity Protection, identity governance, and Privileged Identity Management.
 
-Most organizations will operate in a hybrid identity model during their transition to the cloud, where some element of their on-premises Active Directory will be synchronized using Azure AD Connect. Whilst this hybrid model exists in any organization, Microsoft recommends cloud powered protection of those on-premises identities using Microsoft Defender for Identity. The configuration of the Defender for Identity sensor on domain controllers and AD FS servers allows for a highly secured, one-way connection to the cloud service through a proxy and to specific endpoints. A complete explanation on how to configure this proxy connection can be found in the technical documentation for Defender for Identity. This tightly controlled configuration ensures that the risk of connecting these servers to the cloud service is mitigated, and organizations benefit from the increase in protection capabilities Defender for Identity offers. Microsoft also recommends that these servers are protected with cloud powered endpoint detection like Microsoft Defender for Servers.
+Most organizations will operate in a hybrid identity model during their transition to the cloud, where some element of their on-premises Active Directory will be synchronized using Microsoft Entra Connect. Whilst this hybrid model exists in any organization, Microsoft recommends cloud powered protection of those on-premises identities using Microsoft Defender for Identity. The configuration of the Defender for Identity sensor on domain controllers and AD FS servers allows for a highly secured, one-way connection to the cloud service through a proxy and to specific endpoints. A complete explanation on how to configure this proxy connection can be found in the technical documentation for Defender for Identity. This tightly controlled configuration ensures that the risk of connecting these servers to the cloud service is mitigated, and organizations benefit from the increase in protection capabilities Defender for Identity offers. Microsoft also recommends that these servers are protected with cloud powered endpoint detection like Microsoft Defender for Servers.
 
 For those organizations that have regulatory or other policy driven requirements to maintain an on-premises only implementation of Active Directory, Microsoft recommends entirely restricting internet access to and from domain controllers.
 

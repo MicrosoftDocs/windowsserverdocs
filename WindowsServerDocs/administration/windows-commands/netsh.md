@@ -40,6 +40,7 @@ netsh [-a <Aliasfile>][-c <Context>][-r <Remotecomputer>][-u [<domainname>\<user
 
 - If your string value contains spaces between characters, you must enclose the string value in quotation marks. For example, `-r "contoso remote device"`
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Network shell (netsh)](/windows-server/networking/technologies/netsh/netsh)

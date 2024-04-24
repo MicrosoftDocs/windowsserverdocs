@@ -38,12 +38,12 @@
     - name: Choose how you pay
       href: rds-plan-choose-how-you-pay.md
     - name: Office 2016 in RDS and VDI deployments
-      href: /deployoffice/rds-office-vdi-rdsh
+      href: /deployoffice/rds-office-vdi-rdsh?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
       items:
-      - name: Dealing with Outlook search in non-persistent environments
-        href: /deployoffice/rds-outlook-search
+      - name: Outlook search in non-persistent environments
+        href: /deployoffice/rds-outlook-search?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
       - name: OneDrive for Business and VDI environments
-        href: /deployoffice/rds-onedrive-business-vdi
+        href: /sharepoint/sync-vdi-support?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
     - name: Desktop Hosting Reference Architecture
       href: Desktop-Hosting-Reference-Architecture.md
       items:
@@ -75,10 +75,16 @@
       href: rds-deploy-infrastructure.md
     - name: Create and deploy a Remote Desktop Services collection
       href: rds-create-collection.md
+    - name: Configure the RD Gateway role
+      href: remote-desktop-gateway-role.md
     - name: Set up the Remote Desktop web client for your users
       href: clients/remote-desktop-web-client-admin.md
+    - name: Disable Automatic Reconnection
+      href: automatic-reconnection-lock-screen.md
     - name: Set up email discovery for your users
       href: rds-email-discovery.md
+    - name: Fair Share technologies
+      href: fair-share-enabled-by-default-rds.md
     - name: License your Remote Desktop deployment
       href: rds-client-access-license.md
       items:
@@ -86,6 +92,8 @@
         href: rds-activate-license-server.md
       - name: Install RDS CALs on the license server
         href: rds-install-cals.md
+      - name: License RDS session hosts
+        href: rds-license-session-hosts.md
       - name: Track the CALs used in your deployment
         href: rds-track-cals.md
     - name: Integrate Azure services
@@ -93,9 +101,9 @@
       items:
       - name: Learn how to use Multi-factor Authentication with RDS
         href: /azure/multi-factor-authentication/nps-extension-remote-desktop-gateway
-      - name: Integrate Azure AD Domain Services with your RDS deployment
+      - name: Integrate Microsoft Entra Domain Services with your RDS deployment
         href: rds-azure-adds.md
-      - name: Publish Remote Desktop with Azure AD Application Proxy
+      - name: Publish Remote Desktop with Microsoft Entra application proxy
         href: /azure/active-directory/application-proxy-publish-remote-desktop
     - name: Extend your RDS environment for high availability
       items:
@@ -128,6 +136,8 @@
     items:
     - name: Manage personal desktop session collections
       href: rds-manage-personal-collection.md
+    - name: Remote Desktop IP Virtualization
+      href: internet-protocol-virtualization.md
     - name: Recommended configuration for VDI desktops
       href: rds-vdi-recommendations.md
     - name: Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
@@ -146,18 +156,6 @@
     items:
     - name: Available Remote Desktop clients
       href: clients/remote-desktop-clients.md
-    - name: Windows Desktop client
-      items:
-      - name: Get started with the Windows Desktop client
-        href: clients/windowsdesktop.md
-      - name: Windows Desktop client for admins
-        href: clients/windowsdesktop-admin.md
-      - name: What's new in the Windows Desktop client
-        href: clients/windowsdesktop-whatsnew.md
-      - name: Supported configurations
-        href: clients/windowsdesktop-supported-config.md
-      - name: Shortcut keys
-        href: /windows/win32/termserv/terminal-services-shortcut-keys
     - name: Microsoft Store client
       items:
       - name: Get started with the Microsoft Store client
@@ -188,6 +186,12 @@
         href: clients/remote-desktop-web-client.md
       - name: What's new in the web client
         href: clients/web-client-whatsnew.md
+    - name: Remote Desktop Connection client for Windows (MSTSC)
+      items:
+      - name: Connect using single sign-on with Microsoft Entra authentication
+        href: clients/remote-desktop-connection-single-sign-on.md
+      - name: Uninstall and reinstall Remote Desktop Connection
+        href: clients/uninstall-remote-desktop-connection.md
     - name: Setting up your PC for Remote Desktop
       items:
       - name: Supported PCs
@@ -198,15 +202,13 @@
         href: clients/remote-desktop-allow-outside-access.md
       - name: Change the RD listening port on your PC
         href: clients/change-listening-port.md
-      - name: Configure the RD Gateway role
-        href: remote-desktop-gateway-role.md
     - name: Advanced information
       items:
       - name: 'Compare the clients: features'
         href: clients/remote-desktop-features.md
       - name: 'Compare the clients: redirections'
         href: clients/remote-desktop-app-compare.md
-      - name: Supported Remote Desktop RDP file settings
+      - name: Supported RDP properties
         href: clients/rdp-files.md
       - name: Remote Desktop URI scheme
         href: clients/remote-desktop-uri.md
@@ -216,27 +218,5 @@
         href: clients/remote-privacy-settings.md
     - name: Known issues
       items:
-      - name: General Remote Desktop connection troubleshooting
-        href: troubleshoot/rdp-error-general-troubleshooting.md
-      - name: Credential limit per app
-        href: troubleshoot/credential-limit.md
-      - name: Clients can't connect and get the "Class not registered" error
-        href: troubleshoot/rdp-error-class-not-registered.md
       - name: Clients can't connect and see "No licenses available" error
         href: troubleshoot/rdp-error-no-licenses-available.md
-      - name: User can't authenticate or must authenticate twice
-        href: troubleshoot/cannot-authenticate-or-must-authenticate-twice.md
-      - name: '"Remote Desktop Service is currently busy" error on connecting'
-        href: troubleshoot/remote-desktop-service-currently-busy.md
-      - name: Remote Desktop client disconnects and can't reconnect to the same session
-        href: troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md
-      - name: Remote laptop disconnects from wireless network
-        href: troubleshoot/remote-laptop-disconnects-wireless-network.md
-      - name: Poor performance or application problems during remote desktop connection
-        href: troubleshoot/poor-performance-or-application-problems.md
-      - name: Input method editor issue in RemoteApp scenarios
-        href: troubleshoot/input-method-editor-error.md
-      - name: '"Out of memory" error'
-        href: troubleshoot/out-of-memory-error.md
-  - name: Additional resources
-    href: rds-get-support.md

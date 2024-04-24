@@ -1,19 +1,19 @@
 ---
 title: Remote Desktop - compare the client apps redirections
-description: Learn how the different RD apps compare when it comes to redirections.
+description: Learn how the different Remote Desktop apps compare when it comes to redirections.
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/24/2022
+ms.date: 10/24/2023
 ---
 
 # Compare the clients: redirections
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
 
-We're often asked how the different Remote Desktop clients compare to each other. Do they all support the same redirection? Here's the answer to that questions.
+We're often asked how the different Remote Desktop clients compare to each other when connecting to Remote Desktop Services or remote PCs. Here's the answer to these questions.
 
 ## Redirection support
 
@@ -26,41 +26,43 @@ If you remote into your personal desktop, there are other redirections that you 
 
 ### Input redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client    |
-|-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|---------------|
-| Keyboard    | X                         | X                           | X             | X       | X   | X     | X             |
-| Mouse       | X                         | X                           | X             | X       | X\* | X     | X             |
-| Touch       | X                         | X                           | X             | X       | X   |       | X (except IE) |
-| Pen         | X                         | X                           |               | X (as touch) |  X (as touch)  |       |               |
+| Redirection | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS | macOS | Web client    |
+|-------------|---------------------------|---------------|---------|-----|-------|---------------|
+| Keyboard    | X                         | X             | X       | X   | X     | X             |
+| Mouse       | X                         | X             | X       | X\* | X     | X             |
+| Touch       | X                         | X             | X       | X   |       | X (except IE) |
+| Pen         | X                         |               | X       | X   | | |
 
-*View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices).
+\* View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices-and-redirection).
 
 ### Port redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client |
-|-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|------------|
-| Serial port | X                         | X                           |               |         |     |       |            |
-| USB         | X                         | X                           |               |         |     |       |            |
+| Redirection | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS | macOS | Web client |
+|-------------|---------------------------|---------------|---------|-----|-------|------------|
+| Serial port | X                         |               |         |     |       |            |
+| USB         | X                         |               |         |     |       |            |
 
 When you enable USB port redirection, all USB devices attached to USB ports are automatically recognized in the remote session. For the devices to work as expected, you must make sure to install their required drivers on both the endpoint and host. Also, make sure the drivers are certified to run in remote scenarios. If you need more information about using your USB device in remote scenarios, talk to the device manufacturer.
 
 ### Other redirection (devices, etc.)
 
-| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
-|---------------------|---------------------------|-----------------------------|---------------|---------|--------------|---------------------------------|---------------|
-| Cameras             | X                         | X                           |               |         |   X          | X                               |               |
-| Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | Text          |
-| Local drive/storage | X                         | X                           |               | X       | X            | X                               |               |
-| Location            | X                         | X                           |               |         |              |                                 |               |
-| Microphones         | X                         | X                           | X             | X       |  X           | X                               | X             |
-| Printers            | X                         | X                           |               |         |              | X (CUPS only)                   | PDF print     |
-| Scanners            | X                         | X                           |               |         |              |                                 |               |
-| Smart cards         | X                         | X                           |               |         |              | X (Windows sign-in not supported) |               |
-| Speakers            | X                         | X                           | X             | X       | X            | X                               | X (except IE) |
-| Third-party virtual channel plugins | X         | X                           |               |         |              |                                 |               |
-| WebAuthn            | X                         | X                           |               |         |              |                                 |               |
+| Redirection         | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS         | macOS                           | Web client    |
+|---------------------|---------------------------|---------------|---------|--------------|---------------------------------|---------------|
+| Cameras             | X                         |               |  X       |   X          | X                               | X              |
+| Clipboard           | X                         | X             | Text    | Text, images | X                               | Text          |
+| Local drive/storage | X                         |               | X       | X            | X                               |  X\*             |
+| Location            | X                         |  X             |         |              |                                 |               |
+| Microphones         | X                         | X             | X       |  X           | X                               | X             |
+| Printers            | X                         |               |         |              | X\*\* (CUPS only)                   | PDF print     |
+| Scanners            | X                         |               |         |              |                                 |               |
+| Smart cards         | X                         |               |         |              | X (Windows sign-in not supported) |               |
+| Speakers            | X                         | X             | X       | X            | X                               | X (except IE) |
+| Third-party virtual channel plugins | X         |               |         |              |                                 |               |
+| WebAuthn            | X                         |               |         |              |                                 |               |
 
-*For printer redirection, the macOS app supports the Publisher Imagesetter printer driver by default. The app doesn't support the native printer drivers.
+\* Limited to uploading and downloading files through the Remote Desktop Web client.
+
+\*\* For printer redirection, the macOS app supports the Publisher Imagesetter printer driver by default. The app doesn't support the native printer drivers.
 
 ## Other resources
 

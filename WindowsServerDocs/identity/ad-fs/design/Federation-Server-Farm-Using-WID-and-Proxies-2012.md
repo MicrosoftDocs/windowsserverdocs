@@ -4,8 +4,8 @@ ms.assetid: 8890ccc9-068d-4da2-bd51-8a2964173ff1
 title: AD FS Federation Server Farm Using WID and Proxies
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

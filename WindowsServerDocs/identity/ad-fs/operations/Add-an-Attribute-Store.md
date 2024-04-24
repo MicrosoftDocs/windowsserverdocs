@@ -4,8 +4,8 @@ ms.assetid: c60227a8-7b44-40f8-b807-a6532851a4a6
 title: Add an Attribute Store
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

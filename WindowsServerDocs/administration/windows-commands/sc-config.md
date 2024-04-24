@@ -51,6 +51,6 @@ To specify a binary path for the *NewService* service, type:
 sc.exe config NewService binpath= c:\windows\system32\NewServ.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

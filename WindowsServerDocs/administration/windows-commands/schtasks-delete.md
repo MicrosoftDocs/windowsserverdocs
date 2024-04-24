@@ -47,7 +47,7 @@ schtasks /delete /tn * /f
 
 This command uses the **/tn &#42;** parameter to represent all tasks on the computer and the **/f** parameter to suppress the confirmation message.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

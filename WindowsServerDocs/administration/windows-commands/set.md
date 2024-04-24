@@ -33,6 +33,6 @@ set metadata
 | [set verbose](set-verbose.md) | Turns the verbose output mode on or off. |
 | /? | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

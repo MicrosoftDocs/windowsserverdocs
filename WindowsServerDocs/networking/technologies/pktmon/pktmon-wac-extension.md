@@ -20,7 +20,7 @@ Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool f
 Windows Admin Center is a locally-deployed, browser-based management tool that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet. Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC.
 
 ## Before you start
-- To use the tool, the target server needs to be running Windows Server 2019 version 1903 (19H1) and above.
+- To use the tool, the target server needs to be running Windows Server 2019, version 1903 or later.
 - [Install Windows Admin Center](../../../manage/windows-admin-center/deploy/install.md).
 - Add a server to Windows Admin Center:
   1. Click **+ Add** under **All Connections**.

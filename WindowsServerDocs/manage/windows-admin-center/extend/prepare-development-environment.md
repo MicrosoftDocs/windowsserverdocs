@@ -25,8 +25,8 @@ To begin developing with the SDK, download and install the following prerequisit
 
 * [Windows Admin Center](../overview.md) (GA or preview version)
 * Visual Studio or [Visual Studio Code](https://code.visualstudio.com)
-* [Node.js](https://nodejs.org/en/download/releases/) (version 12.18.2)
-* [Node Package Manager](https://npmjs.com/get-npm) (6.14.5 or later)
+* [Node.js](https://nodejs.org/download/release/v16.20.2/) (download and install the .msi file for version 16.20.2)
+* [Node Package Manager](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (6.14.5 or later)
 * [NuGet](https://www.nuget.org/downloads) (for publishing extensions)
 
 > [!NOTE]
@@ -35,20 +35,22 @@ To begin developing with the SDK, download and install the following prerequisit
 >  To enable Dev Mode, install Windows Admin Center from the command line with the parameter DEV_MODE=1. In the example below, replace ```<version>``` with the version you are installing, i.e. ```WindowsAdminCenter1809.msi```.
 >
 > ```msiexec /i WindowsAdminCenter<version>.msi DEV_MODE=1```
+> 
+> If you have already installed Windows Admin Center without enabling Dev Mode, you can edit the value of the Dev Mode property using Registry Editor. Properties for Windows Admin Center can be found under the following path:
+>
+>  ```Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerManagementGateway```
 
 ## Install global dependencies
 
 Next, install or update dependencies required for your projects, with Node Package Manager. These dependencies will be installed globally, and will be available for all projects.
 
 ```
-npm install -g npm
-
 npm install -g @angular/cli@11.2.14
 
 npm install -g gulp
 npm install -g typescript
 npm install -g tslint
-npm install -g @microsoft/windows-admin-center-sdk
+npm install -g @microsoft/windows-admin-center-sdk@latest
 ```
 
 >[!NOTE]

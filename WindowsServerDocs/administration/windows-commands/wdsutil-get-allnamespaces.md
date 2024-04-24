@@ -54,7 +54,7 @@ To view all namespaces except those that are deactivated, type:
   wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:MyContentProv /details:Clients /ExcludedeletePending
   ```
 
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil new-namespace command](wdsutil-new-namespace.md)
 - [wdsutil remove-namespace command](wdsutil-remove-namespace.md)

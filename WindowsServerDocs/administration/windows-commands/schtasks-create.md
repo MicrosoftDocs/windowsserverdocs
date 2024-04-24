@@ -1,11 +1,10 @@
 ---
 title: schtasks create
-description: Reference article for the schtasks create command, which
+description: Reference article for the schtasks create command to automate tasks.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 06/30/2022
+author: xelu86
+ms.author: wscontent
+ms.date: 10/10/2023
 ---
 
 # schtasks create
@@ -15,36 +14,42 @@ Schedules a task.
 ## Syntax
 
 ```
-schtasks /create /sc <scheduletype> /tn <taskname> /tr <taskrun> [/s <computer> [/u [<domain>\]<user> [/p <password>]]] [/ru {[<domain>\]<user> | system}] [/rp <password>] [/mo <modifier>] [/d <day>[,<day>...] | *] [/m <month>[,<month>...]] [/i <idletime>] [/st <starttime>] [/ri <interval>] [/rl <level>] [{/et <endtime> | /du <duration>} [/k]] [/sd <startdate>] [/ed <enddate>] [/it] [/z] [/f]
+schtasks /create /sc <scheduletype> /tn <taskname> /tr <taskrun> [/s <computer> [/u [<domain>\]<user> [/p <password>]]] [/ru {[<domain>\]<user> | system}] [/rp <password>] [/mo <modifier>] [/d <day>[,<day>...] | *] [/m <month>[,<month>...]] [/i <idletime>] [/st <starttime>] [/ri <interval>] [{/et <endtime> | /du <duration>} [/k]] [/sd <startdate>] [/ed <enddate>] [/it] [/np] [/z] [/xml <xmlfile>] [/v1] [/f] [/rl <level>] [/delay <delaytime>] [/hresult]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 |--|--|
-| /sc `<scheduletype>` | Specifies the schedule type. The valid values include:<ul><li>**MINUTE** - Specifies the number of minutes before the task should run.</li><li>**HOURLY** - Specifies the number of hours before the task should run.</li><li>**DAILY** - Specifies the number of days before the task should run.</li><li>**WEEKLY** Specifies the number of weeks before the task should run.</li><li>**MONTHLY** - Specifies the number of months before the task should run.</li><li>**ONCE** - Specifies that that task runs once at a specified date and time.</li><li>**ONSTART** - Specifies that the task runs every time the system starts. You can specify a start date, or run the task the next time the system starts.</li><li>**ONLOGON** - Specifies that the task runs whenever a user (any user) logs on. You can specify a date, or run the task the next time the user logs on.</li><li>**ONIDLE** - Specifies that the task runs whenever the system is idle for a specified period of time. You can specify a date, or run the task the next time the system is idle.</li></ul> |
-| /tn `<taskname>` | Specifies a name for the task. Each task on the system must have a unique name and must conform to the rules for file names, not exceeding 238 characters. Use quotation marks to enclose names that include spaces. |
+| /sc `<scheduletype>` | Specifies the schedule type. The valid values include:<ul><li>**MINUTE** - Specifies the number of minutes before the task should run.</li><li>**HOURLY** - Specifies the number of hours before the task should run.</li><li>**DAILY** - Specifies the number of days before the task should run.</li><li>**WEEKLY** Specifies the number of weeks before the task should run.</li><li>**MONTHLY** - Specifies the number of months before the task should run.</li><li>**ONCE** - Specifies that that task runs once at a specified date and time.</li><li>**ONSTART** - Specifies that the task runs every time the system starts. You can specify a start date, or run the task the next time the system starts.</li><li>**ONLOGON** - Specifies that the task runs whenever a user (any user) logs on. You can specify a date, or run the task the next time the user logs on.</li><li>**ONIDLE** - Specifies that the task runs whenever the system is idle for a specified period of time. You can specify a date, or run the task the next time the system is idle.</li><li>**ONEVENT** - Specifies that the task runs based on an event that matches information from the system event log including the EventID. |
+| /tn `<taskname>` | Specifies a name for the task. Each task on the system must have a unique name and must conform to the rules for file names, not exceeding 238 characters. Use quotation marks to enclose names that include spaces. To store your scheduled task in a different folder, run **/tn** `<folder name\task name>`. |
 | /tr `<Taskrun>` | Specifies the program or command that the task runs. Type the fully qualified path and file name of an executable file, script file, or batch file. The path name must not exceed 262 characters. If you don't add the path, **schtasks** assumes that the file is in the `<systemroot>\System32` directory. |
 | /s `<computer>` | Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer. |
 | /u `[<domain>]` | Runs this command with the permissions of the specified user account. The default is the permissions of the current user of the local computer. The **/u** and **/p** parameters are valid only when you use **/s**. The permissions of the specified account are used to schedule the task and to run the task. To run the task with the permissions of a different user, use the **/ru** parameter. The user account must be a member of the Administrators group on the remote computer. Also, the local computer must be in the same domain as the remote computer, or must be in a domain that is trusted by the remote computer domain. |
 | /p `<password>` | Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter without the **/p** parameter or the password argument, schtasks will prompt you for a password. The **/u** and **/p** parameters are valid only when you use **/s**. |
 | /ru {[`<domain>`\]`<user>` \| `system}` | Runs the task with permissions of the specified user account. By default, the task runs with the permissions of the current user of the local computer, or with the permission of the user specified by the **/u** parameter, if one is included. The **/ru** parameter is valid when scheduling tasks on local or remote computers. The valid options include:<ul><li>**Domain** - Specifies an alternate user account.</li><li>**System** - Specifies the local System account, a highly privileged account used by the operating system and system services.</li></ul> |
 | /rp `<password>` | Specifies the password for the existing user account, or the user account specified by the **/ru** parameter. If you don't use this parameter when specifying a user account, SchTasks.exe will prompt you for the password next time you sign in. Don't use the **/rp** parameter for tasks that run with System account credentials (**/ru System**). The System account doesn't have a password and SchTasks.exe doesn't prompt for one. |
-| /mo `<modifiers>` | Specifies how often the task runs within its schedule type. The valid options include:<ul><li>**MINUTE** - Specifies that the task runs every \<n\> minutes. You can use any value between 1 - 1439 minutes. By default, this is 1 minute.</li><li>**HOURLY** - Specifies that the task runs every \<n\> hours. You can use any value between 1 - 23 hours. By default, this is 1 hour.</li><li>**DAILY** - Specifies that the task runs every \<n\> days. You can use any value between 1 - 365 days. By default, this is 1 day.</li><li>**WEEKLY** - Specifies that the task runs every \<n\> weeks. You can use any value between 1 - 52 weeks. By default, this is 1 week.</li><li>**MONTHLY** - Specifies that the task runs every \<n\> months. You can use any of the following values:<ul><li>A number between 1 - 12 months</li><li>**LASTDAY** - To run the task on the last day of the month</li><li>**FIRST, SECOND, THIRD, or FOURTH along with the `/d <day>` parameter** - Specifies the particular week and day to run the task. For example, on the third Wednesday of the month.</li></ul></li><li>**ONCE** - Specifies that the task runs once.</li><li>**ONSTART** - Specifies that the task runs at startup.</li><li>**ONLOGON** - Specifies that the task runs when the user specified by the **/u** parameter logs on.</li><li>**ONIDLE** - Specifies that the task runs after the system is idle for the number of minutes specified by the **/i** parameter</li></ul> |
+| /mo `<modifiers>` | Specifies how often the task runs within its schedule type. The valid options include:<ul><li>**MINUTE** - Specifies that the task runs every \<n\> minutes. You can use any value between 1 - 1439 minutes. By default, this is 1 minute.</li><li>**HOURLY** - Specifies that the task runs every \<n\> hours. You can use any value between 1 - 23 hours. By default, this is 1 hour.</li><li>**DAILY** - Specifies that the task runs every \<n\> days. You can use any value between 1 - 365 days. By default, this is 1 day.</li><li>**WEEKLY** - Specifies that the task runs every \<n\> weeks. You can use any value between 1 - 52 weeks. By default, this is 1 week.</li><li>**MONTHLY** - Specifies that the task runs every \<n\> months. You can use any of the following values:<ul><li>A number between 1 - 12 months</li><li>**LASTDAY** - To run the task on the last day of the month</li><li>**FIRST, SECOND, THIRD, or FOURTH along with the `/d <day>` parameter** - Specifies the particular week and day to run the task. For example, on the third Wednesday of the month.</li></ul></li><li>**ONCE** - Specifies that the task runs once.</li><li>**ONSTART** - Specifies that the task runs at startup.</li><li>**ONLOGON** - Specifies that the task runs when the user specified by the **/ru** parameter logs on.</li><li>**ONIDLE** - Specifies that the task runs after the system is idle for the number of minutes specified by the **/i** parameter</li></ul> |
 | /d DAY[,DAY...] | Specifies how often the task runs within its schedule type. The valid options include:<ul><li>**WEEKLY** - Specifies that the task runs weekly by providing a value between 1-52 weeks. Optionally, you can also add a specific day of the week by adding a value of MON - SUN or a range of [MON - SUN...]).</li><li>**MONTHLY** - Specifies that the task runs weekly each month by providing a value of FIRST, SECOND, THIRD, FOURTH, LAST. Optionally, you can also add a specific day of the week by adding a value of MON - SUN or by providing a number between 1 - 12 months. If you use this option, you can also add a specific day of the month, by providing a number between 1-31.<p>**NOTE:** The date value of 1 - 31 is valid only without the **/mo** parameter, or if the **/mo** parameter is monthly (1 - 12). The default is day 1 (the first day of the month).</li></ul> |
 | /m MONTH[,MONTH...] | Specifies a month or months of the year during which the scheduled task should run. The valid options include JAN - DEC and `*` (every month). The **/m** parameter is valid only with a MONTHLY schedule. It's required when the LASTDAY modifier is used. Otherwise, it's optional and the default value is `*` (every month). |
 | /i `<Idletime>` | Specifies how many minutes the computer is idle before the task starts. A valid value is a whole number from 1 to 999. This parameter is valid only with an ONIDLE schedule, and then it's required. |
 | /st `<Starttime>` | Specifies the start time for the task, using the 24-hour time format, HH:mm. The default value is the current time on the local computer. The **/st** parameter is valid with MINUTE, HOURLY, DAILY, WEEKLY, MONTHLY, and ONCE schedules. It's required for a ONCE schedule. |
-| /ri `<interval>` | Specifies the repetition interval for the scheduled task, in minutes. This isn't applicable for schedule types: MINUTE, HOURLY, ONSTART, ONLOGON, and ONIDLE. Valid range is 1 - 599940 (599940 minutes = 9999 hours). If either the **/et** or **/du** parameters are specified, the default is **10 minutes**. |
-| /rl `<level>` | Specifies the Run Level for the job. Acceptable values are LIMITED (scheduled tasks will be ran with the least level of privileges, such as Standard User accounts) and HIGHEST (scheduled tasks will be ran with the highest level of privileges, such as Superuser accounts). (**Note**: LIMITED is the default value).
-| /et `<Endtime>` | Specifies the time of day that a minute or hourly task schedule ends in \<HH:MM\> 24-hour format. After the specified end time, schtasks does not start the task again until the start time recurs. By default, task schedules have no end time. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
+| /ri `<interval>` | Specifies the repetition interval for the scheduled task, in minutes. This isn't applicable for schedule types: MINUTE, HOURLY, ONSTART, ONLOGON,ONIDLE, and ONEVENT. Valid range is 1 - 599940 (599940 minutes = 9999 hours). If either the **/et** or **/du** parameters are specified, the default is **10 minutes**. |
+| /et `<endtime>` | Specifies the time of day that a minute or hourly task schedule ends in \<HH:MM\> 24-hour format. After the specified end time, schtasks does not start the task again until the start time recurs. By default, task schedules have no end time. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
 | /du `<duration>` | Specifies a maximum length of time for a minute or hourly schedule in \<HHHH:MM\> 24-hour format. After the specified time elapses, schtasks does not start the task again until the start time recurs. By default, task schedules have no maximum duration. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
 | /k | Stops the program that the task runs at the time specified by **/et** or **/du**. Without **/k**, schtasks doesn't start the program again after it reaches the time specified by **/et** or **/du** nor does it stop the program if it's still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
 | /sd `<Startdate>` | Specifies the date on which the task schedule starts. The default value is the current date on the local computer. The format for **Startdate** varies with the locale selected for the local computer in **Regional and Language Options**. Only one format is valid for each locale. The valid date formats include (be sure to choose the format most similar to the format selected for **Short date** in **Regional and Language Options** on the local computer):<ul><li>`<MM>//` - Specifies to use month-first formats, such as English (United States) and Spanish (Panama).</li><li>`<DD>//` - Specifies to use day-first formats, such as Bulgarian and Dutch (Netherlands).</li><li>`<YYYY>//` - Specifies to use for year-first formats, such as Swedish and French (Canada).</li></ul> |
-| /ed `<Enddate>` | Specifies the date on which the schedule ends. This parameter is optional. It isn't valid in a ONCE, ONSTART, ONLOGON, or ONIDLE schedule. By default, schedules have no ending date. The default value is the current date on the local computer. The format for **Enddate** varies with the locale selected for the local computer in **Regional and Language Options**. Only one format is valid for each locale. The valid date formats include (be sure to choose the format most similar to the format selected for **Short date** in **Regional and Language Options** on the local computer):<ul><li>`<MM>//` - Specifies to use month-first formats, such as English (United States) and Spanish (Panama).</li><li>`<DD>//` - Specifies to use day-first formats, such as Bulgarian and Dutch (Netherlands).</li><li>`<YYYY>//` - Specifies to use for year-first formats, such as Swedish and French (Canada).</li></ul> |
+| /ed `<Enddate>` | Specifies the date on which the schedule ends. This parameter is optional. It isn't valid in a ONCE, ONSTART, ONLOGON, ONIDLE, or ONEVENT schedule. By default, schedules have no ending date. The default value is the current date on the local computer. The format for **Enddate** varies with the locale selected for the local computer in **Regional and Language Options**. Only one format is valid for each locale. The valid date formats include (be sure to choose the format most similar to the format selected for **Short date** in **Regional and Language Options** on the local computer):<ul><li>`<MM>//` - Specifies to use month-first formats, such as English (United States) and Spanish (Panama).</li><li>`<DD>//` - Specifies to use day-first formats, such as Bulgarian and Dutch (Netherlands).</li><li>`<YYYY>//` - Specifies to use for year-first formats, such as Swedish and French (Canada).</li></ul> |
+| /ec `<channelname>` | Specifies the event channel name triggered by the ONEVENT schedule type that matches a system event log criteria. |
 | /it | Specifies to run the scheduled task only when the run as user (the user account under which the task runs) is logged on to the computer. This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You can't use a change command to remove the interactive-only property from a task. By default, run as user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the run as user is the account specified by the **/ru** parameter. |
+| /np | No password is stored.  The task runs non-interactively as the given user. Only local resources are available.|
 | /z | Specifies to delete the task upon the completion of its schedule. |
+| /xml `<xmlfile>` | Creates a task specified in the XML file. Can be combined with the **/ru** and **/rp** parameters, or with the **/rp** parameter by itself if the XML file already contains the user account information. |
+| /v1 | Creates a task visible to pre-Vista operating systems. This is not compatible with the **/XML** parameter. |
 | /f | Specifies to create the task and suppress warnings if the specified task already exists. |
+| /rl `<level>` | Specifies the Run Level for the job. Acceptable values are **LIMITED** (scheduled tasks will be ran with the least level of privileges, such as Standard User accounts) and **HIGHEST** (scheduled tasks will be ran with the highest level of privileges, such as Superuser accounts). The default value is **Limited**. |
+| /delay `<delaytime>` | Specifies the wait time to delay running the task after it's triggered in mmmm:ss format. This is only valid for the ONSTART, ONLOGON, and ONEVENT schedule types. |
+| /hresult | Specifies the process exit code to be in HRESULT format. |
 | /? | Displays help at the command prompt. |
 
 ## To schedule a task to run every `<n>` minutes
@@ -78,7 +83,7 @@ In an hourly schedule, the **/sc hourly** parameter is required. The **/mo** (mo
 - To schedule the MyApp program to run every five hours, beginning on the first day of March 2002, type:
 
     ```
-    schtasks /create /sc hourly /mo 5 /sd 03/01/2002 /tn My App /tr c:\apps\myapp.exe
+    schtasks /create /sc hourly /mo 5 /sd 03/01/2002 /tn MyApp /tr c:\apps\myapp.exe
     ```
 
     In this example, the local computer uses the **English (Zimbabwe)** option in **Regional and Language Options**, so the format for the start date is MM/DD/YYYY (03/01/2002).
@@ -92,7 +97,7 @@ In an hourly schedule, the **/sc hourly** parameter is required. The **/mo** (mo
 - To schedule the MyApp program to run every 3 hours, for 10 hours total, type:
 
     ```
-    schtasks /create /tn MyApp /tr myapp.exe /sc hourly /mo 3 /st 00:00 /du 0010:00
+    schtasks /create /tn MyApp /tr MyApp.exe /sc hourly /mo 3 /st 00:00 /du 0010:00
     ```
 
     In this example, the task runs at 12:00 A.M., 3:00 A.M., 6:00 A.M., and 9:00 A.M. Because the duration is 10 hours, the task isn't run again at 12:00 P.M. Instead, it starts again at 12:00 A.M. the next day. Also, because the program runs for just a few minutes, the **/k** parameter, which stops the program if it's still running when the duration expires, isn't necessary.
@@ -364,7 +369,7 @@ You can schedule tasks of all types to run with permissions of an alternate acco
 
     ```
     Please enter the run as password for Admin06: ********
-    SUCCESS: The scheduled task My App has successfully been created.
+    SUCCESS: The scheduled task MyApp has successfully been created.
     ```
 
 - To run the MyApp program on the *Marketing* computer every four days, type:
@@ -380,7 +385,7 @@ You can schedule tasks of all types to run with permissions of an alternate acco
     ```
     Type the password for Marketing\Admin01:********
     Please enter the run as password for Reskits\User01: ********
-    SUCCESS: The scheduled task My App has successfully been created.
+    SUCCESS: The scheduled task MyApp has successfully been created.
     ```
 
 - To run schedule the *AdminCheck.exe* program to run on the Public computer every Friday at 4:00 A.M.,, but only if the administrator of the computer is logged on, type:
@@ -417,7 +422,7 @@ Tasks of all types can run with permissions of the **System** account on both th
 
     ```
     INFO: The task will be created under user name (NT AUTHORITY\SYSTEM).
-    SUCCESS: The Scheduled task My App has successfully been created.
+    SUCCESS: The Scheduled task MyApp has successfully been created.
     ```
 
 - To schedule the MyApp program to run on the *Finance01* computer every morning at 4:00 A.M., using system permissions, type:
@@ -433,9 +438,9 @@ Tasks of all types can run with permissions of the **System** account on both th
     ```
     Type the password for Admin01:**********
 
-    INFO: The Schedule Task My App will be created under user name (NT AUTHORITY\
+    INFO: The Schedule Task MyApp will be created under user name (NT AUTHORITY\
     SYSTEM).
-    SUCCESS: The scheduled task My App has successfully been created.
+    SUCCESS: The scheduled task MyApp has successfully been created.
     ```
 
 ## To schedule a task that runs more than one program
@@ -567,7 +572,7 @@ To schedule a task to run on a remote computer, you must add the task to the rem
 
 - You can test a task as soon as you create it. Use the run operation to test the task and then check the SchedLgU.txt file (SystemRoot\SchedLgU.txt) for errors.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

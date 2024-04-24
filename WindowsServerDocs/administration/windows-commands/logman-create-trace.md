@@ -68,7 +68,7 @@ To create an event trace data collector called *trace_log*, using no fewer than 
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

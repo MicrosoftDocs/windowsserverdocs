@@ -59,6 +59,6 @@ To extend the file system of a volume after it was extended, type:
 extend filesystem
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

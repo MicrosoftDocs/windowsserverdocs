@@ -26,7 +26,7 @@ In this example, Contoso Gift Services is successfully expanding their presence 
 
 Similar to North America, the company now has web servers hosted in European datacenters.
 
-Contoso Gift Services DNS Administrators want to configure application load balancing for European datacenters in a similar manner to the DNS policy implementation in the United States, with application traffic distributed among Web servers that are located in Dublin, Ireland, Amsterdam, Holland, and elsewhere.
+Contoso Gift Services DNS Administrators want to configure application load balancing for European datacenters in a similar manner to the DNS policy implementation in the United States, with application traffic distributed among Web servers that are located in Dublin, Ireland, Amsterdam, Netherlands, and elsewhere.
 
 DNS Administrators also want all queries from other locations in the world distributed equally between all of their datacenters.
 

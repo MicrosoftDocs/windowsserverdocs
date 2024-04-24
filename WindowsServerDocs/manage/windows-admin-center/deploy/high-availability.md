@@ -2,8 +2,8 @@
 title: Deploy Windows Admin Center with High Availability
 description: Deploy Windows Admin Center with High Availability (Project Honolulu)
 ms.topic: article
-author: jwwool
-ms.author: jeffrew
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 08/07/2020
 ---
 
@@ -17,7 +17,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 
 ## Prerequisites
 
-- A failover cluster of 2 or more nodes on Windows Server 2016 or 2019. [Learn more about deploying a Failover Cluster](../../../failover-clustering/failover-clustering-overview.md).
+- A failover cluster of 2 or more nodes on Windows Server 2016, 2019, or 2022. [Learn more about deploying a Failover Cluster](../../../failover-clustering/failover-clustering-overview.md).
 - A cluster shared volume (CSV) for Windows Admin Center to store persistent data that can be accessed by all the nodes in the cluster. 10 GB will be sufficient for your CSV.
 - High-availability deployment script from [Windows Admin Center HA Script zip file](https://aka.ms/WACHAScript). Download the .zip file containing the script to your local machine and then copy the script as needed based on the guidance below.
 - Recommended, but optional: a signed certificate .pfx & password. You don't need to have already installed the certificate on the cluster nodes - the script will do that for you. If you don't supply one, the installation script generates a self-signed certificate, which expires after 60 days.

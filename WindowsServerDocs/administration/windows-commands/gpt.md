@@ -44,7 +44,7 @@ To prevent the computer from automatically assigning a drive letter to the parti
 gpt attributes=0x8000000000000000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -200,7 +200,7 @@ In this step, you'll run the cluster validation tool to ensure that the server n
 Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
 
 ```PowerShell
-Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
+Test-Cluster -Node <MachineName1, MachineName2, MachineName3, MachineName4> -Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
 ```
 
 ### Step 3.3: Create the cluster
@@ -210,10 +210,10 @@ In this step, you'll create a cluster with the nodes that you have validated for
 When creating the cluster, you'll get a warning that states - "There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below." You can safely ignore this warning. It's due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster.
 
 > [!Note]
-> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress &lt;X.X.X.X&gt;.
+> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:-StaticAddress &lt;X.X.X.X&gt;.
 > In the following command the ClusterName placeholder should be replaced with a netbios name that is unique and 15 characters or less.
 > ```PowerShell
-> New-Cluster –Name <ClusterName> –Node <MachineName1,MachineName2,MachineName3,MachineName4> –NoStorage
+> New-Cluster -Name <ClusterName> -Node <MachineName1,MachineName2,MachineName3,MachineName4> -NoStorage
 > ```
 
 After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn't successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
@@ -240,7 +240,7 @@ After creating the cluster, use the `Enable-ClusterStorageSpacesDirect` PowerShe
 From the management system, in a PowerShell command windows opened with Administrator privileges, initiate the following command. The cluster name is the name of the cluster that you created in the previous steps. If this command is run locally on one of the nodes, the -CimSession parameter is not necessary.
 
 ```PowerShell
-Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
+Enable-ClusterStorageSpacesDirect -CimSession <ClusterName>
 ```
 
 To enable Storage Spaces Direct using the above command, you can also use the node name instead of the cluster name. Using the node name may be more reliable due to DNS replication delays that may occur with the newly created cluster name.
@@ -320,14 +320,14 @@ Add-ClusterScaleOutFileServerRole -Name SOFS -Cluster FSCLUSTER
 
 After you've created your virtual disks and added them to CSVs, it's time to create file shares on them - one file share per CSV per virtual disk. System Center Virtual Machine Manager (VMM) is probably the handiest way to do this because it handles permissions for you, but if you don't have it in your environment, you can use Windows PowerShell to partially automate the deployment.
 
-Use the scripts included in the [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) script, which partially automates the process of creating groups and shares. It's written for Hyper-V workloads, so if you're deploying other workloads, you might have to modify the settings or perform additional steps after you create the shares. For example, if you're using Microsoft SQL Server, the SQL Server service account must be granted full control on the share and the file system.
+Use the scripts included in the SMB Share Configuration for Hyper-V Workloads script, which partially automates the process of creating groups and shares. It's written for Hyper-V workloads, so if you're deploying other workloads, you might have to modify the settings or perform additional steps after you create the shares. For example, if you're using Microsoft SQL Server, the SQL Server service account must be granted full control on the share and the file system.
 
 > [!NOTE]
 >  You'll have to update the group membership when you add cluster nodes unless you use System Center Virtual Machine Manager to create your shares.
 
 To create file shares by using PowerShell scripts, do the following:
 
-1. Download the scripts included in [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) to one of the nodes of the file server cluster.
+1. Download the scripts included in SMB Share Configuration for Hyper-V Workloads to one of the nodes of the file server cluster.
 2. Open a Windows PowerShell session with Domain Administrator credentials on the management system, and then use the following script to create an Active Directory group for the Hyper-V computer objects, changing the values for the variables as appropriate for your environment:
 
     ```PowerShell
@@ -361,7 +361,7 @@ To create file shares by using PowerShell scripts, do the following:
 
 ### Step 4.3 Enable Kerberos constrained delegation
 
-To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a). Here's a little wrapper for the script:
+To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in SMB Share Configuration for Hyper-V Workloads. Here's a little wrapper for the script:
 
 ```PowerShell
 $HyperVClusterName = "Compute01"

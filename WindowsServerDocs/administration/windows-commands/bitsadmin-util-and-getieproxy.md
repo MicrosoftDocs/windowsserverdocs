@@ -35,7 +35,7 @@ To display the proxy usage for the NETWORK SERVICE account:
 bitsadmin /util /getieproxy NETWORKSERVICE
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

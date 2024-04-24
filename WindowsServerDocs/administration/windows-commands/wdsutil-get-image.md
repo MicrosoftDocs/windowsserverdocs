@@ -56,7 +56,7 @@ wdsutil /Get-Image:Windows Vista with Office imagetype:Install
 wdsutil /verbose /Get-Image:Windows Vista with Office /Server:MyWDSServer imagetype:Install imagegroup:ImageGroup1 /Filename:install.wim
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-image command](wdsutil-add-image.md)

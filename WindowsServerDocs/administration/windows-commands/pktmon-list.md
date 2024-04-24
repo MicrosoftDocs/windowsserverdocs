@@ -27,7 +27,7 @@ pktmon list [--all] [--include-hidden] [--json]
 | **-i, --include-hidden** | Show components that are hidden by default. |
 | **--json** | Output the list in JSON format. Implies -i and -a. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

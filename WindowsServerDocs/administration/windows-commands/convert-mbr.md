@@ -39,7 +39,7 @@ To convert a basic disc from GPT partition style to MBR partition style, type>:
 convert mbr
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

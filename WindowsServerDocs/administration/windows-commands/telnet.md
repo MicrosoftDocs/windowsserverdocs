@@ -49,7 +49,7 @@ To use telnet to connect to the computer running the telnet Server Service at *t
 telnet /f telnetlog.txt telnet.microsoft.com 44
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

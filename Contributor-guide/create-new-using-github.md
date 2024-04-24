@@ -24,19 +24,19 @@ There are two separate locations where we keep Windows Server technical content.
 
 Before you can start working in the repo, you must create and set up your GitHub account, set up two-factor verification, and install and configure all the necessary tools. If you've already done this, you can skip down to the [Fork the repository section](#fork-the-repository) of this article.
 
-1. [Create a GitHub account and profile](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#create-a-github-account-and-set-up-your-profile)
+1. [Create a GitHub account and profile](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main#create-a-github-account-and-set-up-your-profile)
 
-2. [Link your account to your Microsoft account and to the Microsoft and MicrosoftDocs organizations](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#link-your-github-and-microsoft-accounts)
+2. [Link your account to your Microsoft account and to the Microsoft and MicrosoftDocs organizations](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main#link-your-github-and-microsoft-accounts)
 
-3. [Turn on two-factor verification](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#enable-two-factor-authentication-and-create-an-access-token)
+3. [Turn on two-factor verification](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main#enable-two-factor-authentication-and-create-an-access-token)
 
-4. [Authorize the build system to access your GitHub account](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#authorize-the-ops-build-system-to-access-your-github-account)
+4. [Authorize the build system to access your GitHub account](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main#authorize-the-ops-build-system-to-access-your-github-account)
 
-5. [Install Visual Studio Code](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=master#install-visual-studio-code)
+5. [Install Visual Studio Code](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=main#install-visual-studio-code)
 
-6. [Install GitHub and its tools](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=master#install-git-client-tools)
+6. [Install GitHub and its tools](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=main#install-git-client-tools)
 
-7. [Install the Docs Authoring Pack](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=master#install-the-docs-authoring-pack)
+7. [Install the Docs Authoring Pack](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=main#install-the-docs-authoring-pack)
 
 ## Set up your own version of the repo
 
@@ -222,6 +222,6 @@ For more information about GitHub and the markdown language, see:
 
 ### Markdown
 
-- [Our internal markdown guidance](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)
+- [Our internal markdown guidance](https://review.learn.microsoft.com/help/contribute/markdown-reference?branch=main)
 
 - [External, GitHub tutorial](https://www.markdowntutorial.com/)

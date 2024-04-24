@@ -37,7 +37,7 @@ To create a mirrored volume of 1000 megabytes in size, on disks 1 and 2, type:
 create volume mirror size=1000 disk=1,2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

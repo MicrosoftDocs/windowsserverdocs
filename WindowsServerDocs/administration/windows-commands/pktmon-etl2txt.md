@@ -43,7 +43,7 @@ Where `<file>` is the ETL file to convert.
 | **-e, --no-ethernet** | Don't print ethernet header. |
 | **-l, --vxlan \<port\>** | Custom VXLAN port. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

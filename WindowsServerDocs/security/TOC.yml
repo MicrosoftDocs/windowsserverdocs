@@ -5,6 +5,8 @@
     href: gdpr/gdpr-winserver-whitepaper.md
   - name: Secured-core server
     href: secured-core-server.md
+  - name: Configure Secured-core Server
+    href: configure-secured-core-server.md
   - name: Set up HGS for a guarded fabric and shielded VMs
     href: guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
     items:
@@ -120,17 +122,6 @@
         href: guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md
       - name: Upgrade a guarded fabric to Windows Server 2019
         href: guarded-fabric-shielded-vm/guarded-fabric-upgrade-to-2019.md
-    - name: Troubleshoot
-      href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md
-      items:
-      - name: Guarded Fabric Diagnostic Tool
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md
-      - name: HGS
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md
-      - name: Guarded Hosts
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md
-      - name: Shielded VMs
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md
   - name: Device Health attestation
     href: device-health-attestation.md
   - name: Disabling System Services in Windows Server 2016
@@ -161,8 +152,6 @@
     items:
     - name: Configuring additional LSA Protection
       href: credentials-protection-and-management/configuring-additional-lsa-protection.md
-    - name: What's New in Credential Protection
-      href: credentials-protection-and-management/whats-new-in-credential-protection.md
     - name: Protect derived domain credentials with Credential Guard
       href: /windows/security/identity-protection/credential-guard/credential-guard
     - name: Protect Remote Desktop credentials with Remote Credential Guard
@@ -171,6 +160,12 @@
       href: credentials-protection-and-management/protected-users-security-group.md
     - name: Authentication Policies and Authentication Policy Silos
       href: credentials-protection-and-management/authentication-policies-and-authentication-policy-silos.md
+  - name: Delegated Managed Service Accounts
+    items:
+    - name: Delegated Managed Service Accounts overview
+      href: delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
+    - name: Setting up Delegated Managed Service Accounts
+      href: delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
   - name: Group Managed Service Accounts
     href: group-managed-service-accounts/group-managed-service-accounts-overview.md
     items:
@@ -203,6 +198,8 @@
       href: kerberos/passwords-technical-overview.md
     - name: System key utility technical overview
       href: kerberos/system-key-utility-technical-overview.md
+  - name: RPC Interface Restriction
+    href: rpc-interface-restrict.md
   - name: TLS - SSL (Schannel SSP)
     href: tls/tls-ssl-schannel-ssp-overview.md
     items:

@@ -51,6 +51,6 @@ To set the type field to be a basic data partition, type:
 set id=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

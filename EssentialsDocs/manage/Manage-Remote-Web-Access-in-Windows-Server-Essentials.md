@@ -349,7 +349,7 @@ manager: mtillman
 
 ##### To create an A Record
 
-1.  Decide on a host name, such as remote. This is the domain name prefix. The domain name prefix plus your domain name will define the URL to open your Remote Web Access logon page; for example, **http://remote.contoso.com**.
+1.  Decide on a host name, such as remote. This is the domain name prefix. The domain name prefix plus your domain name will define the URL to open your Remote Web Access logon page; for example, **https://remote.contoso.com**.
 
 2.  In your domain name service providers configuration dashboard (usually on their webpage), create the A record for the host name that you decided on in Step 1. Ensure that the IP address that you specify in the A record is the IP address on the WAN side of your router (the Internet facing side). Consult your router documentation to find your WAN IP address.
 

@@ -6,7 +6,7 @@ ms.assetid: afcd666c-0cef-47c2-9bcc-02d202b983b3
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 07/11/2018
+ms.date: 10/05/2022
 ---
 
 # route
@@ -20,7 +20,7 @@ Displays and modifies the entries in the local IP routing table. If used without
 
 ## Syntax
 
-```
+```cmd
 route [/f] [/p] [<command> [<destination>] [mask <netmask>] [<gateway>] [metric <metric>]] [if <interface>]]
 ```
 
@@ -32,7 +32,8 @@ route [/f] [/p] [<command> [<destination>] [mask <netmask>] [<gateway>] [metric 
 | /p | When used with the add command, the specified route is added to the registry and is used to initialize the IP routing table whenever the TCP/IP protocol is started. By default, added routes are not preserved when the TCP/IP protocol is started. When used with the print command, the list of persistent routes is displayed. This parameter is ignored for all other commands. Persistent routes are stored in the registry location **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\PersistentRoutes**. |
 | `<command>` | Specifies the command you want to run. The valid commands include:<ul><li>**add** - Adds a route.</li><li>**change** - Modifies an existing route.</li><li>**delete:** - Deletes a route or routes.</li><li>**print** - Prints a route or routes.</li></ul> |
 | `<destination>` | Specifies the network destination of the route. The destination can be an IP network address (where the host bits of the network address are set to 0), an IP address for a host route, or 0.0.0.0 for the default route. |
-| mask `<netmask>` | Specifies the network destination of the route. The destination can be an IP network address (where the host bits of the network address are set to 0), an IP address for a host route, or 0.0.0.0 for the default route. |
+| `<mask>` | Specifies the next parameter for the 'netmask' value. |
+| `<netmask>` | Specifies the network destination subnet mask. Defaults to 255.255.255.255 if not specified. |
 | `<gateway>` | Specifies the forwarding or next hop IP address over which the set of addresses defined by the network destination and subnet mask are reachable. For locally attached subnet routes, the gateway address is the IP address assigned to the interface that is attached to the subnet. For remote routes, available across one or more routers, the gateway address is a directly reachable IP address that is assigned to a neighboring router. |
 | metric `<metric>` | Specifies an integer cost metric (ranging from 1 to 9999) for the route, which is used when choosing among multiple routes in the routing table that most closely match the destination address of a packet being forwarded. The route with the lowest metric is chosen. The metric can reflect the number of hops, the speed of the path, path reliability, path throughput, or administrative properties. |
 | if `<interface>` | Specifies the interface index for the interface over which the destination is reachable. For a list of interfaces and their corresponding interface indexes, use the display of the route print command. You can use either decimal or hexadecimal values for the interface index. For hexadecimal values, precede the hexadecimal number with 0x. When the if parameter is omitted, the interface is determined from the gateway address. |
@@ -44,7 +45,7 @@ route [/f] [/p] [<command> [<destination>] [mask <netmask>] [<gateway>] [metric 
 
 - Names can be used for *destination* if an appropriate entry exists in the local *Networks* file stored in the `systemroot\System32\Drivers\\` folder. Names can be used for the *gateway* as long as they can be resolved to an IP address through standard host name resolution techniques such as Domain Name System (DNS) queries, use of the local Hosts file stored in the `systemroot\system32\drivers\\` folder, and NetBIOS name resolution.
 
-- if the command is **print** or **delete**, the *gateway* parameter can be omitted and wildcards can be used for the destination and gateway. The *destination* value can be a wildcard value specified by an asterisk `(*)`. If the destination specified contains an asterisk `(*)` or a question mark (?), it's treated as a wildcard and only matching destination routes are printed or deleted. The asterisk matches any string, and the question mark matches any single character. For example, `10.\*.1, 192.168.\*`, `127.\*`, and `\*224\*` are all valid uses of the asterisk wildcard.
+- if the command is **print** or **delete**, the *gateway* parameter can be omitted and wildcards can be used for the destination and gateway. The *destination* value can be a wildcard value specified by an asterisk `(*)`. If the destination specified contains an asterisk `(*)` or a question mark (?), it's treated as a wildcard, and only matching destination routes are printed or deleted. The asterisk matches any string, and the question mark matches any single character. For example, `10.\*.1, 192.168.\*`, `127.\*`, and `\*224\*` are all valid uses of the asterisk wildcard.
 
 - Using an unsupported combination of a destination and subnet mask (netmask) value displays a "Route: bad gateway address netmask" error message. This error message appears when the destination contains one or more bits set to 1 in bit locations where the corresponding subnet mask bit is set to 0. To test this condition, express the destination and subnet mask using binary notation. The subnet mask in binary notation consists of a series of 1 bits, representing the network address portion of the destination, and a series of 0 bits, representing the host address portion of the destination. Check to determine whether there are bits in the destination that are set to 1 for the portion of the destination that is the host address (as defined by the subnet mask).
 
@@ -52,64 +53,64 @@ route [/f] [/p] [<command> [<destination>] [mask <netmask>] [<gateway>] [metric 
 
 To display the entire contents of the IP routing table, type:
 
-```
+```cmd
 route print
 ```
 
 To display the routes in the IP routing table that begin with 10, type:
 
-```
+```cmd
 route print 10.*
 ```
 
 To add a default route with the default gateway address of 192.168.12.1, type:
 
-```
+```cmd
 route add 0.0.0.0 mask 0.0.0.0 192.168.12.1
 ```
 
 To add a route to the destination 10.41.0.0 with the subnet mask of 255.255.0.0 and the next hop address of 10.27.0.1, type:
 
-```
+```cmd
 route add 10.41.0.0 mask 255.255.0.0 10.27.0.1
 ```
 
 To add a persistent route to the destination 10.41.0.0 with the subnet mask of 255.255.0.0 and the next hop address of 10.27.0.1, type:
 
-```
+```cmd
 route /p add 10.41.0.0 mask 255.255.0.0 10.27.0.1
 ```
 
 To add a route to the destination 10.41.0.0 with the subnet mask of 255.255.0.0, the next hop address of 10.27.0.1, and the cost metric of 7, type:
 
-```
+```cmd
 route add 10.41.0.0 mask 255.255.0.0 10.27.0.1 metric 7
 ```
 
 To add a route to the destination 10.41.0.0 with the subnet mask of 255.255.0.0, the next hop address of 10.27.0.1, and using the interface index 0x3, type:
 
-```
+```cmd
 route add 10.41.0.0 mask 255.255.0.0 10.27.0.1 if 0x3
 ```
 
 To delete the route to the destination 10.41.0.0 with the subnet mask of 255.255.0.0, type:
 
-```
+```cmd
 route delete 10.41.0.0 mask 255.255.0.0
 ```
 
 To delete all routes in the IP routing table that begin with 10, type:
 
-```
+```cmd
 route delete 10.*
 ```
 
 To change the next hop address of the route with the destination of 10.41.0.0 and the subnet mask of 255.255.0.0 from 10.27.0.1 to 10.27.0.25, type:
 
-```
+```cmd
 route change 10.41.0.0 mask 255.255.0.0 10.27.0.25
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

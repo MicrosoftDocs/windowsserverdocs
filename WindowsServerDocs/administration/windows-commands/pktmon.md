@@ -36,7 +36,7 @@ pktmon { filter | list | start | stop | status | unload | counters | reset | etl
 | pktmon hex2pkt | Decode packet in hexadecimal format. |
 | pktmon help | Show help text for specific command. |
 
-## Additional References
+## Related links
 
 - [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)
 - [Pktmon support for Microsoft Network Monitor (Netmon)](../../networking/technologies/pktmon/pktmon-netmon-support.md)

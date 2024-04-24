@@ -3,10 +3,9 @@ title: typeperf
 description: Reference article for the typeperf command, which writes performance data to the command window or to a log file.
 ms.topic: reference
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: wscontent
+author: Xelu86
+ms.date: 06/15/2023
 ---
 
 # typeperf
@@ -26,7 +25,7 @@ typeperf -qx [object] [options]
 
 | Parameter | Description |
 |--|--|
-| `<counter [counter […]]>` | Specifies performance counters to monitor. The `<counter>` parameter is the full name of a performance counter in \\Computer\Object(Instance)\Counter format, such as `\\Server1\Processor(0)\% User Time`.  |
+| `<counter [counter [...]]>` | Specifies performance counters to monitor. The `<counter>` parameter is the full name of a performance counter in \\Computer\Object(Instance)\Counter format, such as `\\Server1\Processor(0)\% User Time`.  |
 
 #### Options
 
@@ -36,7 +35,7 @@ typeperf -qx [object] [options]
 | -cf `<filename>` | Specifies a file containing a list of performance counters to monitor, with one counter per line. |
 | -si `<[[hh:]mm:]ss>` | Specifies the sample interval. The default is one second. |
 | -o `<filename>` | Specifies the path for the output file, or the SQL database. The default is STDOUT (written to the command window). |
-| -q `[object]` | Display a list of installed counters (no instances). To list counters for one object, include the object name. ***EXAMPLE |
+| -q `[object]` | Display a list of installed counters (no instances). To list counters for one object, include the object name. |
 | -qx `[object]` | Display a list of installed counters with instances. To list counters for one object, include the object name. |
 | -sc `<samples>` | Specifies the number of samples to collect. The default is to collect data until CTRL+C is pressed. |
 | -config `<filename>` | Specifies a settings file containing command options. |
@@ -64,6 +63,6 @@ To query installed counters with instances for the counter object *PhysicalDisk*
 typeperf -qx PhysicalDisk -o counters.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

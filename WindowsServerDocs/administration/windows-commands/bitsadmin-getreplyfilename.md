@@ -36,7 +36,7 @@ To retrieve the upload-reply filename for the job named *myDownloadJob*:
 bitsadmin /getreplyfilename myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

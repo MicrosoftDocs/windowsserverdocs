@@ -53,6 +53,6 @@ To display information for *all users* on the computer *users.microsoft.com*, ty
 finger @users.microsoft.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

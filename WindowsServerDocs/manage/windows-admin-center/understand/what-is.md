@@ -2,15 +2,15 @@
 title: What is Windows Admin Center
 description: What is Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
-ms.date: 07/27/2022
+author: davannaw-msft
+ms.author: dawhite
+ms.date: 01/02/2024
 ---
 # What is Windows Admin Center?
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center is a new, locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
+Windows Admin Center is a locally-deployed, browser-based management tool set that lets you manage your Windows Clients, Servers, and Clusters without needing to connect to the cloud. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
 
 Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC. It complements System Center - it's not a replacement.
 
@@ -32,7 +32,7 @@ Windows Admin Center is the evolution of long-standing, well known management pl
 
 ### Easy to install and use
 
-[Install](../deploy/install.md) on a Windows 10 computer, and start managing in minutes, or install on a Windows 2016 server acting as a gateway to enable your entire organization to manage computers from their web browser.
+[Install](../deploy/install.md) on a Windows 11 computer, and start managing in minutes, or install on a Windows 2022 server acting as a gateway to enable your entire organization to manage computers from their web browser.
 
 ### Complements existing solutions
 
@@ -40,19 +40,19 @@ Windows Admin Center works with solutions like System Center and Azure managemen
 
 ### Manage from anywhere
 
-Publish your Windows Admin Center gateway server to the public Internet, then you can connect to and manage servers your from anywhere, all in a secure manner.
+Publish your Windows Admin Center gateway server to the public Internet, then you can connect to and manage your servers from anywhere, all in a secure manner.
 
 ### Enhanced security for your management platform
 
-Windows Admin Center has many enhancements that make your management platform [more secure](../plan/user-access-options.md). Role-based access control lets you fine-tune which administrators have access to which management features. Gateway authentication options include local groups, local domain-based Active Directory, and cloud-based Azure Active Directory.  Also, [gain insight](../use/logging.md) into management actions performed in your environment.
+Windows Admin Center has many enhancements that make your management platform [more secure](../plan/user-access-options.md). Role-based access control lets you fine-tune which administrators have access to which management features. Gateway authentication options include local groups, local domain-based Active Directory, and cloud-based Microsoft Entra ID.  Also, [gain insight](../use/logging.md) into management actions performed in your environment.
 
-### Azure integration
+### Azure integration for on-premises and hybrid machines
 
-Windows Admin Center has many points of [integration with Azure services](../azure/index.md), including Azure Active Directory, Azure Backup, Azure Site Recovery, and more.
+Windows Admin Center has many points of [integration with Azure services](../azure/index.md), including Microsoft Entra ID, Azure Backup, Azure Site Recovery, and more.
 
-### Windows Admin Center in Azure (Preview)
+### Windows Admin Center in Azure
 
-Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers, Azure Stack HCI cluster nodes, and Azure VMs.
+Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers (preview), Azure Stack HCI cluster nodes (preview), and Azure VMs.
 
 You can securely manage your machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 

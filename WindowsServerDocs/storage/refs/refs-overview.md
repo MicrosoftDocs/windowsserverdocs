@@ -1,11 +1,11 @@
 ---
 description: "Learn more about: Resilient File System (ReFS) overview"
 title: Resilient File System (ReFS) overview
-ms.author: anhansen
-manager: femila
+ms.author: billy
+manager: candyc
 ms.topic: article
-author: anhansen
-ms.date: 8/31/2021
+author: wbsmolen
+ms.date: 10/28/2022
 ---
 # Resilient File System (ReFS) overview
 
@@ -26,7 +26,7 @@ ReFS introduces new features that can precisely detect corruptions and also fix 
 
 ### Performance
 
-In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
+In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse valid data length (VDL) are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
 - **[Mirror-accelerated parity](./mirror-accelerated-parity.md)** - Mirror-accelerated parity delivers both high performance and also capacity efficient storage for your data.
 
@@ -139,13 +139,14 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Named streams | Yes | Yes |
 | Thin Provisioning | Yes<sup>5</sup> | Yes |
 | Trim/Unmap | Yes<sup>5</sup> | Yes |
+| Page file support | Yes<sup>6</sup> | Yes |
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
 3. CSV will not use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
-4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. [Hard links](/windows/win32/fileio/hard-links-and-junctions) support is added for **newly formatted volumes** only. Hard links can't be used on volumes that have been upgraded from previous versions.
-
+4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. [Hard links](/windows/win32/fileio/hard-links-and-junctions) support is added for **newly formatted volumes** only. Hard links can't be used on volumes that have been upgraded from previous versions
 5. Storage Spaces only.
+6. Available on ReFS 3.7 and later.
 
 #### The following features are only available with ReFS:
 
@@ -171,7 +172,6 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Extended attributes | No | Yes |
 | Disk quotas | No | Yes |
 | Bootable | No | Yes |
-| Page file support | No | Yes |
 | Supported on removable media | No | Yes |
 
 ## Additional References

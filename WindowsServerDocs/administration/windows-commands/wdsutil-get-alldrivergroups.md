@@ -40,7 +40,7 @@ wdsutil /get-alldrivergroups /server:MyWdsServer /show:All
 wdsutil /get-alldrivergroups [/show:packagemetadata]
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -

@@ -91,6 +91,6 @@ To list the processes on the remote computer *srvmain*, using the credentials of
 tasklist /s srvmain /u maindom\hiropln /p p@ssW23
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

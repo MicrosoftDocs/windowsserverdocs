@@ -10,7 +10,7 @@ metadata:
   author: thomasmaurer
   ms.author: thmaure
   ms.date: 02/25/2022
-  ms.prod: windows-server
+  ms.service: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -60,7 +60,7 @@ landingContent:
       - linkListType: learn
         links:
           - text: Learning path
-            url: /learn/paths/manage-hybrid-infrastructure-with-azure-arc
+            url: /training/paths/manage-hybrid-infrastructure-with-azure-arc
         
   # Card
   - title: Windows Admin Center

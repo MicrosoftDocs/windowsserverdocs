@@ -2,8 +2,8 @@
 title: Additional server performance tuning resources
 description: Additional server performance tuning resources
 ms.topic: article
-ms.author: phstee
-author: phstee
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

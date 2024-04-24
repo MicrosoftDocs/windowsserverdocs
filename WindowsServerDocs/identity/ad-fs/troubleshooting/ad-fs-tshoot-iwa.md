@@ -3,13 +3,16 @@ title: AD FS Troubleshooting - Integrated Windows Authentication
 description:  This document describes how to troubleshoot integrated  windows authentication
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 02/21/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # AD FS Troubleshooting - Integrated Windows Authentication
 Integrated Windows authentication enables users to log in with their Windows credentials and experience single-sign on (SSO), using Kerberos or NTLM.
+
+
 
 ## Reason integrated windows authentication fails
 There are three main reasons why integrated windows authentication will fail. They are:
@@ -47,11 +50,14 @@ This can be caused by:
  - Fiddler
  - Reverse proxies performing SSL bridging
 
-By default, AD FS has this set to "Allow".  You can change this setting using the PowerShell cmdlet `Set-ADFSProperties -ExtendedProtectionTokenCheck`
+By default, AD FS has this set to "Allow".  You can change this setting using the PowerShell cmdlet `Set-ADFSProperties -ExtendedProtectionTokenCheck None`
 
 For more information on this, see [Best Practices for Secure Planning and Deployment of AD FS](../../ad-fs/design/best-practices-for-secure-planning-and-deployment-of-ad-fs.md).
 
 ## Internet Explorer configuration
+
+> [!NOTE]
+> If you are using Chrome, add it to the WIA supported user agents list.
 
 By default, Internet explorer will behave the following way:
 

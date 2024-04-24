@@ -58,7 +58,7 @@ To end the process explorer running on session 5, type:
 tskill explorer /id:5
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

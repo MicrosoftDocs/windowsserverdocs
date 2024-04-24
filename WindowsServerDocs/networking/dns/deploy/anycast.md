@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: greglin
 author: greg-lindsay
-ms.date: 10/23/2020
+ms.date: 02/13/2023
 ---
 # Anycast DNS overview
 
@@ -25,15 +25,21 @@ With Anycast DNS, you can enable a DNS server, or a group of servers, to respond
 
 ### How Anycast DNS works
 
-Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS queries to a preferred DNS server or group of DNS servers (for example: a group of DNS servers managed by a load balancer). This can optimize DNS communications by obtaining DNS responses from a DNS server that is closest to a client.
+Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS queries to a preferred DNS server or group of DNS servers (for example: a group of DNS servers managed by a load balancer). This design can optimize DNS communications by obtaining DNS responses from a DNS server that is closest to a client.
 
-With Anycast, servers that exist in multiple geographical locations each advertise a single, identical IP address to their local gateway (router). When a DNS client initiates a query to the Anycast address, the available routes are evaluated, and the DNS query is sent to the preferred location. In general, this is the closest location based on network topology. See the following example.
+With Anycast, servers that exist in multiple geographical locations each advertise a single, identical IP address to their local gateway (router). When a DNS client initiates a query to the Anycast address, the available routes are evaluated, and the DNS query is sent to the preferred location. In general, this location is the closest based on network topology. See the following example.
 
 ![Four DNS servers, located at different sites, announce the same Anycast IP address to the network](../../media/Anycast/anycast.png)
 
-**Figure 1**: Four DNS servers located at different sites on a network each announce the same Anycast IP address (black arrows) to the network. A DNS client device sends out a request to the Anycast IP address. Network devices analyze the available routes and send the client’s DNS query to the nearest location (blue arrow).
+**Figure 1**: Example Anycast network
+- Four DNS servers (blue circles), located at different sites on a network, each announce the same Anycast IP address to their local routing device (not shown).
+- Routes are shared among devices on the network (black arrows).
+- A DNS client device (green circle) sends out a DNS query to the Anycast IP address. 
+- The client's DNS request is received by a routing device on the network (not shown).
+- The routing device analyzes the available routes to the Anycast IP address, and routes the DNS query using the shortest available route.
+- The DNS query is sent to the nearest DNS server (blue arrow).
 
-Anycast DNS is used commonly today to route DNS traffic for many global DNS services. For example, the root DNS server system depends heavily on Anycast DNS. Anycast also works with a variety of routing protocols and can be used exclusively on intranets.
+Anycast DNS is used commonly today to route DNS traffic for many global DNS services. For example, the root DNS server system depends heavily on Anycast DNS. Anycast also works with many different routing protocols and can be used exclusively on intranets.
 
 ## Windows Server native BGP Anycast demo
 
@@ -46,7 +52,7 @@ The following procedure demonstrates how native BGP on Windows Server can be use
 - 2 client VMs (any operating system).
   - Installation of BIND tools for DNS such as dig are recommended.
 - 3 server VMs (Windows Server 2016 or Windows Server 2019).
-  - If the Windows PowerShell LoopbackAdapter module is not already installed on server VMs (DC001, DC002), Internet access is temporarily required to install this module.
+  - If the Windows PowerShell LoopbackAdapter module isn't already installed on server VMs (DC001, DC002), Internet access is temporarily required to install this module.
 
 ### Hyper-V setup
 
@@ -138,6 +144,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
 Install-RemoteAccess -VpnType RoutingOnly
 Add-BgpRouter -BgpIdentifier “10.10.10.254” -LocalASN 8075
 Add-BgpPeer -Name "DC001" -LocalIPAddress 10.10.10.254 -PeerIPAddress 10.10.10.1 -PeerASN 65511 –LocalASN 8075
+Add-BgpPeer -Name "DC002" -LocalIPAddress 10.10.10.254 -PeerIPAddress 10.10.10.2 -PeerASN 65511 –LocalASN 8075
 ```
 
 2.	DC001
@@ -169,7 +176,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 1.	Verify BGP routing on the gateway server
 
-    PS C:\> Get-BgpRouteInformation
+    `PS C:\> Get-BgpRouteInformation`
 
     DestinationNetwork NextHop    LearnedFromPeer State LocalPref MED<br>
     ------------------ -------    --------------- ----- --------- ---<br>
@@ -178,7 +185,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 2.	On client1 and client2, verify that you can reach 51.51.51.51
 
-    PS C:\> ping 51.51.51.51
+    `PS C:\> ping 51.51.51.51`
 
     Pinging 51.51.51.51 with 32 bytes of data:<br>
     Reply from 51.51.51.51: bytes=32 time<1ms TTL=126<br>
@@ -188,43 +195,43 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
     Ping statistics for 51.51.51.51:<br>
     Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),<br>
-    Approximate round trip times in milli-seconds:<br>
+    Approximate round trip times in milliseconds:<br>
     Minimum = 0ms, Maximum = 0ms, Average = 0ms
 
     > [!NOTE]
     > If ping fails, also check there are no firewall rules blocking ICMP.
 
-3.	On client1 and client2, use nslookup or dig to query the TXT record. Examples of both are shown below.
+3.	On client1 and client2, use nslookup or dig to query the TXT record. Examples of both are shown.
 
-    PS C:\> dig server.zone.tst TXT +short<br>
-    PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51
+    `PS C:\> dig server.zone.tst TXT +short`<br>
+    `PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51`
 
-    One client will display “DC001” and the other client will display “DC002” verifying that Anycast is working properly.  You can also query from the gateway server.
+    One client displays “DC001” and the other client displays “DC002”, verifying that Anycast is working properly.  You can also query from the gateway server.
 
 4.	Next, disable the Ethernet adapter on DC001.
 
-    PS C:\> (Get-NetAdapter).Name<br>
+    `PS C:\> (Get-NetAdapter).Name`<br>
     Loopback<br>
     Ethernet 2<br>
-    PS C:\> Disable-NetAdapter "Ethernet 2"<br>
+    `PS C:\> Disable-NetAdapter "Ethernet 2"`<br>
     Confirm<br>
     Are you sure you want to perform this action?<br>
     Disable-NetAdapter 'Ethernet 2'<br>
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):<br>
-    PS C:\> (Get-NetAdapter).Status<br>
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend [?] Help (default is "Y"):<br>
+    `PS C:\> (Get-NetAdapter).Status`<br>
     Up<br>
     Disabled
 
 5.	Confirm that DNS clients that were previously receiving responses from DC001 have switched to DC002.
 
-    PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51<br>
+    `PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51`<br>
     Server:  UnKnown<br>
     Address:  51.51.51.51<br>
 
     server.zone.tst text =
 
     "DC001"<br>
-    PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51<br>
+    `PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51`<br>
     Server:  UnKnown<br>
     Address:  51.51.51.51<br>
 
@@ -236,18 +243,18 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 7.	Enable the Ethernet adapter on DC001 again and confirm that the BGP session is restored and clients receive DNS responses from DC001 again.
 
 > [!NOTE]
-> If a load balancer is not used, an individual client will use the same back-end DNS server if it is available. This creates a consistent BGP path for the client. For more information, see section 4.4.3 of RFC4786: [Equal-Cost Paths](https://tools.ietf.org/html/rfc4786#page-10).
+> If a load balancer isn't used, an individual client will use the same back-end DNS server if it is available. This creates a consistent BGP path for the client. For more information, see section 4.4.3 of RFC4786: [Equal-Cost Paths](https://tools.ietf.org/html/rfc4786#page-10).
 
 ## Frequently asked questions
 
 Q: Is Anycast DNS a good solution to use in an on-premises DNS environment?<br>
-A: Anycast DNS works seamlessly with an on-premises DNS service. However, Anycast is not *required* for the DNS service to scale.
+A: Anycast DNS works seamlessly with an on-premises DNS service. However, Anycast isn't *required* for the DNS service to scale.
 
 Q: What is the impact of implementing Anycast DNS in an environment with a large number (ex: >50) of domain controllers? <br>
-A: There is no direct impact on functionality. If a load balancer is used then no additional configuration on domain controllers is required.
+A: There's no direct impact on functionality. If a load balancer is used, then no other configuration on domain controllers is required.
 
 Q: Is an Anycast DNS configuration supported by Microsoft customer service?<br>
-A: If you use a non-Microsoft load balancer to forward DNS queries, Microsoft will support issues related to the DNS Server service. Consult the load balancer vendor for issues related to DNS forwarding.
+A: If you use a non-Microsoft load balancer to forward DNS queries, Microsoft supports issues related to the DNS Server service. Consult the load balancer vendor for issues related to DNS forwarding.
 
 Q: What is the best practice for Anycast DNS with a large number (ex: >50) of domain controllers?<br>
 A: The best practice is to use a load balancer at each geographical location. Load balancers are typically provided by an external vendor.

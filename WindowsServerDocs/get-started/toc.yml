@@ -1,18 +1,20 @@
-items:
 - name: Get started
+  expanded: true
   items:
   - name: Get started with Windows Server
     href: get-started-with-windows-server.md
+    items:
+    - name: Windows Server Insiders Preview
+      href: get-started-with-windows-server-insiders-preview.md
   - name: Overview
+    expanded: true
     items:
     - name: What's new in Windows Server
       items:
+      - name: Windows Server Insiders Preview
+        href: whats-new-windows-server-insiders-preview.md  
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
-      - name: Windows Server, versions 2004 and 20H2
-        href: whats-new-in-windows-server-2004-20h2.md
-      - name: Windows Server, versions 1903 and 1909
-        href: whats-new-in-windows-server-1903-1909.md
       - name: Windows Server 2019
         href: whats-new-in-windows-server-2019.md
       - name: Windows Server 2016
@@ -21,6 +23,10 @@ items:
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
       items:
+      - name: Azure Edition
+        href: azure-edition.md
+      - name: Windows Server Annual Channel for Containers
+        href: annual-channel-for-containers.md
       - name: Windows Server 2022
         href: editions-comparison-windows-server-2022.md
       - name: Windows Server 2019
@@ -31,10 +37,10 @@ items:
       href: hardware-requirements.md
     - name: Features removed or no longer developed
       items:
+      - name: Windows Server 2025
+        href: removed-deprecated-features-windows-server-2025.md
       - name: Windows Server 2022
         href: removed-deprecated-features-windows-server-2022.md
-      - name: Windows Server, version 1903 and 1909
-        href: removed-deprecated-features-windows-server-1903-1909.md
       - name: Windows Server 2019
         href: removed-deprecated-features-windows-server-2019.md
       - name: Windows Server 2016
@@ -45,7 +51,6 @@ items:
       href: extended-security-updates-overview.md
     - name: Upgrade Windows Server
       href: upgrade-overview.md
-    expanded: true
   - name: Concepts
     items:
     - name: Install, upgrade, or migrate
@@ -75,6 +80,10 @@ items:
         href: application-compatibility-windows-server-2016.md
     - name: Azure Hybrid Benefit for Windows Server
       href: azure-hybrid-benefit.md
+    - name: What is Hotpatch?
+      href: hotpatch.md
+    - name: Secured-core server
+      href: ../security/secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
   - name: How-to guides
     items:
     - name: Activation
@@ -83,10 +92,18 @@ items:
         href: kms-create-host.md
       - name: KMS client activation
         href: kms-client-activation-keys.md
+    - name: Connect Windows Server to Azure Arc
+      href: /azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Get Extended Security Updates
       href: extended-security-updates-deploy.md
+    - name: Deliver Extended Security Updates with Azure Arc
+      href: /azure/azure-arc/servers/deliver-extended-security-updates?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Enable Azure Edition Hotpatch from ISO
+      href: enable-hotpatch-azure-edition.md
     - name: Perform an in-place upgrade
       href: perform-in-place-upgrade.md
+    - name: Configure Secured-core Server
+      href: ../security/configure-secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
   - name: Troubleshooting
     items:
     - name: Activation
@@ -99,8 +116,6 @@ items:
         href: activation-slmgr-vbs-options.md
       - name: Solutions to common activation issues
         items:
-        - name: Resolve Windows activation error codes
-          href: activation-error-codes.md
         - name: 'KMS activation: known issues'
           href: activation-troubleshoot-KMS-issues.md
         - name: 'MAK activation: known issues'
@@ -109,8 +124,6 @@ items:
           href: common-troubleshooting-procedures-kms-dns.md
         - name: Rebuild the Tokens.dat file
           href: activation-rebuild-tokens-dat-file.md
-        - name: 'Example: Troubleshooting ADBA clients that do not activate'
-          href: activation-troubleshoot-adba-clients.md
   - name: Resources
     items:
     - name: Windows release health
@@ -119,4 +132,3 @@ items:
       href: https://www.microsoft.com/windows-server
     - name: Windows Server license terms
       href: ../windows-server-licensing/windows-server-licensing.md
-  expanded: true

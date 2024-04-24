@@ -6,6 +6,7 @@ ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 04/24/2024
+
 ---
 # Deploy a file share witness
 

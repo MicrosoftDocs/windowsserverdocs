@@ -24,7 +24,7 @@ We've tried to make editing an existing, public file as simple as possible.
 
 ### To edit a topic
 
-1. Browse to the [Windows Server](https://docs.microsoft.com/windows-server) article that you want to update, and then select **Edit**.
+1. Browse to the [Windows Server](https://learn.microsoft.com/windows-server) article that you want to update, and then select **Edit**.
 
     ![GitHub Web, showing the Edit link](media/contribute-link.png)
 

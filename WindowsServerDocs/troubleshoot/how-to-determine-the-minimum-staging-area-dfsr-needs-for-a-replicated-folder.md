@@ -141,9 +141,10 @@ Based on this data you would set my staging area to 71 GB if you round up to the
 
 While a manual walkthrough is interesting it is likely not the best use of your time to do the math yourself. To automate the process, use command 3 from the examples above. The results will look like this
 
-> [![image]
-
-/// @Delan, these images (one thumbnail, one expanded) were pointing to non-existent blog sites. I was able to locate the full sized image from Wayback Machine and it is here - \\redmond\scratchfs\Teams\has\nedpyle\Delan\0876.image_03A39EFE.png .Can you add it to this article? ///
+<!--
+> TODO
+> @Delan, these images (one thumbnail, one expanded) were pointing to non-existent blog sites. I was able to locate the full sized image from Wayback Machine and it is here - \\redmond\scratchfs\Teams\has\nedpyle\Delan\0876.image_03A39EFE.png .Can you add it to this article? ///
+-->
 
 Using the example command 3 without any extra effort except for rounding to the nearest whole number, you can determine that you need a 6 GB staging area quota for d:\\docs.
 

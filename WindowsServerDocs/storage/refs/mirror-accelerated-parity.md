@@ -132,8 +132,8 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Policies -Name DataDestage
 
 Increasing the size of the mirrored tier enables ReFS to retain a larger portion of the working set in mirror. This improves the likelihood that ReFS can write directly to mirror, which will help achieve better performance. The PowerShell cmdlets below demonstrate how to increase the size of the mirrored tier:
 ```PowerShell
-Resize-StorageTier -FriendlyName “Performance” -Size 20GB
-Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName “Performance”) -Size 20GB
+Resize-StorageTier -FriendlyName "Performance" -Size 20GB
+Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName "Performance") -Size 20GB
 ```
 >[!TIP]
 >Make sure to resize the **Partition** and **Volume** after you resize the **StorageTier**. For more information and examples, see [Extend volumes](/azure-stack/hci/manage/extend-volumes).
@@ -143,7 +143,7 @@ Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName “Performance”
 The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information and examples, see [Creating volumes in Storage Spaces Direct](/azure-stack/hci/manage/create-volumes).
 
 ```PowerShell
-New-Volume -FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePoolFriendlyName “StoragePoolName” -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
+New-Volume -FriendlyName "TestVolume" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName "StoragePoolName" -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
 ```
 
 ## Additional References

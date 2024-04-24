@@ -27,6 +27,6 @@ online volume
 | [online disk](online-disk.md) | Takes the offline disk with focus to the online state. |
 | [online volume](online-volume.md) | Takes the offline volume with focus to the online state. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -42,7 +42,7 @@ manage-bde -w C:
 manage-bde -wipefreespace C:
 ```
 
-To cancel the wipe of tje free space on drive C, type either:
+To cancel the wipe of the free space on drive C, type either:
 
 ```
 manage-bde -w -cancel C:
@@ -52,7 +52,7 @@ manage-bde -w -cancel C:
 manage-bde -wipefreespace -cancel C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -37,6 +37,6 @@ To enable boot from USB:
 pwlauncher /enable
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

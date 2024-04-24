@@ -36,7 +36,7 @@ To designate an existing drive (P) as the system drive:
 bdehdcfg -target P: merge
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
