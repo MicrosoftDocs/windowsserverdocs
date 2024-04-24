@@ -313,3 +313,31 @@ Multi-homed computers can also use DNS client service binding to improve server 
 
 > [!NOTE]
 > Changes to the DNS Client service in Windows 10 are also present in computers running Windows Server 2016 and later.
+
+## Kerberos authentication
+
+Windows Server 2016 includes the following updates for Kerberos authentication.
+
+## KDC support for Public Key Trust-based client authentication
+
+Key Distribution Centers (KDCs) now support public key mapping. If you provision a public key for an account, the KDC supports Kerberos PKInit explicitly using that key. Because there's no certificate validation, Kerberos supports self-signed certificates but doesn't support authentication mechanism assurance.
+
+Accounts you've configured to use Key Trust will only use Key Trust regardless of how you configured the UseSubjectAltName setting.
+
+## Kerberos client and KDC support for RFC 8070 PKInit Freshness Extension
+
+Starting with Windows 10, version 1607 and Windows Server 2016, Kerberos clients can use the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key-based sign-ons. KDCs have the PKInit freshness extension disabled by default, so to enable it you must configure the KDC support for PKInIt Freshness Extension KDC administrative template policy on all DCs in your domain.
+
+The policy has the following settings available when your domain is in the Windows Server 2016 domain functional level (DFL):
+
+- **Disabled**: The KDC never offers the PKInit Freshness Extension and accepts valid authentication requests without checking for freshness. Users don't receive the fresh public key identity SID.
+- **Supported**: Kerberos supports PKInit Freshness Extension on request. Kerberos clients successfully authenticating with the PKInit Freshness Extension receive the fresh public key identity SID.
+- **Required**: PKInit Freshness Extension is required for successful authentication. Kerberos clients that don't support the PKInit Freshness Extension will always fail when using public key credentials.
+
+## Kerberos clients allow IPv4 and IPv6 address host names in Service Principal Names (SPNs)
+
+Starting with Windows 10 version 1507 and Windows Server 2016, you can configure Kerberos clients to support IPv4 and IPv6 host names in SPNs. For more information, see [Configuring Kerberos for IP Addresses](configuring-kerberos-over-ip.md).
+
+## KDC support for Key Trust account mapping
+
+Domain controllers now support Key Trust account mapping and fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. <!--Should I have removed the instructions?-->
