@@ -10,17 +10,17 @@ ms.topic: conceptual
 
 # DCPROMO answer file syntax
 
-This article describes the parameters and options that the DCPROMO answer file uses to install and remove Active Directory Domain Services (AD DS) on domain controllers. You can use this information to build answer files to perform unattended installations of AD DS on domain controllers. You can also use the answer files to remove AD DS in unattended mode.
+This article describes the parameters and options that the dcpromo answer file uses to install and remove Active Directory Domain Services (AD DS) on domain controllers. You can use this information to build answer files to perform unattended installations of AD DS on domain controllers. You can also use the answer files to remove AD DS in unattended mode.
 
 ## DCPROMO summary
 
-The Dcpromo.exe program (DCPROMO) is a program you can use to promote and demote Active Directory domain controllers. Administrators can use DCPROMO answer files to do the following unattended tasks:
+Dcpromo.exe is a program you can use to promote and demote Active Directory domain controllers. Administrators can use dcpromo answer files to do the following unattended tasks:
 
 - Promote workgroup and member servers to Active Directory domain controllers.
 - Upgrade Microsoft Windows NT 4.0 domain controllers to Active Directory domain controllers.
 - Demote domain controllers.
 
-Windows Server 2012 replaced DCPROMO with PowerShell cmdlets. However, the following versions of Windows Server still support the DCPROMO answer file syntax:
+Windows Server 2012 replaced dcpromo with PowerShell cmdlets. However, the following versions of Windows Server still support the dcpromo answer file syntax:
 
 - Windows Server 2019
 - Windows Server 2016
@@ -33,7 +33,7 @@ Windows Server 2012 replaced DCPROMO with PowerShell cmdlets. However, the follo
 
 The DCPROMO answer file is an ASCII text file that provides automated user input for each page of the DCPROMO wizard.
 
-To start DCPROMO in unattended mode, go to **Start** > **Run** to open an administrative Command Prompt window, then run the following command:
+To start `dcpromo` in unattended mode, go to **Start**, enter **dcpromo**, then run the following command to run the program in an elevated command prompt window:
 
 ```cmd
 dcpromo /answer:<answer.txt>
@@ -46,8 +46,8 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
 
 - For new forest installations, the following options apply:
 
+    ```
     [DCINSTALL]
-
     InstallDNS=yes  
     NewDomain=forest  
     NewDomainDNSName=\<The fully qualified Domain Name System (DNS) name>  
@@ -61,9 +61,11 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
     RebootOnCompletion=yes  
     SYSVOLPath="\<The path of a folder on a local volume>"  
     SafeModeAdminPassword=\<The password for an offline administrator account>  
+    ```
 
 - For child domain installations, the following options apply:
 
+    ```
     [DCINSTALL]  
     ParentDomainDNSName=\<Fully qualified DNS name of parent domain>  
     UserName=\<The administrative account in the parent domain>  
@@ -86,10 +88,12 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
     DNSDelegationUserName= \<The account that has permissions to create a DNS delegation> The account that is being used to install AD DS may differ from the account in the parent domain that has the permissions that are required to create a DNS delegation. In this case, specify the account that can create the DNS delegation for this parameter. Specify \* to prompt the user for credentials during the installation.  
     DNSDelegationPassword= \<The password for the account that is specified for DNSDelegationUserName> Specify * to prompt the user for a password during the installation.  
     SafeModeAdminPassword=\<The password for an offline administrator account>  
-    RebootOnCompletion=yes  
+    RebootOnCompletion=yes 
+    ```
 
 - For a new tree in existing forest installations, the following options apply:
 
+    ```
     [DCINSTALL]  
     UserName=\<An administrative account in the parent domain>  
     UserDomain=\<The name of the domain of the user account>  
@@ -109,38 +113,30 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
     DNSDelegationPassword=\<The password for the account that is specified for DNSDelegationUserName> Specify * to prompt the user for a password during the installation.  
     SafeModeAdminPassword=\<The password for an offline administrator account>  
     RebootOnCompletion=yes  
+    ```
 
 - For additional domain controller installations, the following options apply:
 
+    ```
     [DCINSTALL]  
     UserName=\<The administrative account in the domain of the new domain controller>  
-
     UserDomain=\<The name of the domain of the new domain controller>  
-
     Password=\<The password for the UserName account>  
-
     SiteName=\<The name of the AD DS site in which this domain controller will reside> This site must be created in advance in the Dssites.msc snap-in.  
-
     ReplicaOrNewDomain=replica  
-
     ReplicaDomainDNSName=\<The fully qualified domain name (FQDN) of the domain in which you want to add an additional domain controller>  
-
     DatabasePath="\<The path of a folder on a local volume>"  
-
     LogPath="\<The path of a folder on a local volume>"  
-
     SYSVOLPath="\<The path of a folder on a local volume>"  
-
     InstallDNS=yes  
-
     ConfirmGC=yes  
-
     SafeModeAdminPassword=\<The password for an offline administrator account>  
-
     RebootOnCompletion=yes  
+    ```
 
 - For additional domain controller installations that use the Install From Media (IFM) method, the following options apply:
 
+    ```
     [DCINSTALL]  
     UserName=\<The administrative account in the domain of the new domain controller>  
     Password=\<The password for the UserName account>  
@@ -160,10 +156,12 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
 
     ReplicationSourcePath=\<The local drive and the path of the backup>  
 
-    RebootOnCompletion=yes  
+    RebootOnCompletion=yes 
+    ``` 
 
 - For read-only domain controller (RODC) installations, the following options apply:
 
+    ```
     [DCINSTALL]  
     UserName=\<The administrative account in the domain of the new domain controller>  
     UserDomain=\<The name of the domain of the user account>  
@@ -184,9 +182,11 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
     ConfirmGC=yes  
     SafeModeAdminPassword=\<The password for an offline administrator account>  
     RebootOnCompletion=yes  
+    ```
 
 - For removal of AD DS, the following options apply:
 
+    ```
     [DCINSTALL]  
     UserName=\<An administrative account in the domain>  
     UserDomain=\<The domain name of the administrative account>  
@@ -197,9 +197,11 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
     DNSDelegationUserName=\<The DNS server administrative account for the DNS zone that contains the DNS delegation>  
     DNSDelegationPassword=\<The password for the DNSDelegationUserName account>  
     RebootOnCompletion=yes  
+    ```
 
 - For removal of AD DS from the last domain controller in a domain, the following options apply:
 
+    ```
     [DCINSTALL]  
     UserName=\<An administrative account in the parent domain>  
     UserDomain=\<The domain name of the UserName account>  
@@ -211,9 +213,11 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
     DNSDelegationUserName=\<The DNS server administrative account for the DNS zone that contains the DNS delegation>  
     DNSDelegationPassword=\<The password for the DNS server administrative account>  
     RebootOnCompletion=yes  
+    ```
 
 - For removal of the last domain controller in a forest, the following options apply:
 
+    ```
     [DCINSTALL]  
     UserName=\<An administrative account in the parent domain>  
     UserDomain=\<The domain name of the UserName account>  
@@ -225,6 +229,7 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
     DNSDelegationUserName=\<The DNS server administrative account for the DNS zone that contains the DNS delegation>  
     DNSDelegationPassword=\<The password for the DNS server administrative account>  
     RebootOnCompletion=yes  
+    ```
 
 ### Field definitions
 
@@ -272,7 +277,8 @@ This section describes the fields and the entries that you can use in the answer
 | UserDomain | No default | This entry specifies the domain name for the user account you plan to use to install AD DS on a server. |
 | UserName | No default | This entry specifies the user account name that is used for installing AD DS on a server. We recommend that you specify the account credentials in the `\<domain>\\<user_name>` format. |
 
-\* For a new forest, the DNS server role is installed by default. For a new tree, a new child domain, or a replica, a DNS server is installed by default if an existing DNS infrastructure is detected by the Active Directory Domain Services Installation Wizard. If no existing DNS infrastructure is detected by the wizard, a DNS server isn't installed by default.
+>[!NOTE]
+>**\*** For a new forest, the DNS server role is installed by default. For a new tree, a new child domain, or a replica, a DNS server is installed by default if an existing DNS infrastructure is detected by the Active Directory Domain Services Installation Wizard. If no existing DNS infrastructure is detected by the wizard, a DNS server isn't installed by default.
 
 #### Removal operation parameters
 
