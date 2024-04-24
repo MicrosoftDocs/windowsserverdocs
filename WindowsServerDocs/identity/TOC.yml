@@ -266,6 +266,8 @@
         href: ad-ds/deploy/upgrade-domain-controllers.md
       - name: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
         href: ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md
+      - name: Find the current Schema version
+        href: ad-ds\deploy\find-active-directory-schema.md
       - name: AD DS Simplified Administration
         href: ad-ds/manage/AD-DS-Simplified-Administration.md
         items:
@@ -403,6 +405,18 @@
             href: ad-ds/manage/component-updates/Command-line-process-auditing.md
         - name: Directory services component updates
           href: ad-ds/manage/component-updates/directory-Services-component-updates.md
+      - name: Group Policy management
+        items:
+        - name: Group Policy overview
+          href: ad-ds/manage/group-policy/group-policy-overview.md
+        - name: Group Policy processing
+          href: ad-ds/manage/group-policy/group-policy-processing.md
+        - name: Group Policy modeling and results
+          href: ad-ds/manage/group-policy/group-policy-modeling-results.md
+        - name: Group Policy Management Console
+          href: ad-ds/manage/group-policy/group-policy-management-console.md
+        - name: Backup and restore Group Policy in Windows
+          href: ad-ds/manage/group-policy/group-policy-backup-restore.md
       - name: Active Directory accounts
         href: ad-ds/manage/understand-default-user-accounts.md
       - name: Special identities
