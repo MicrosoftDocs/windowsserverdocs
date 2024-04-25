@@ -75,7 +75,7 @@ To get started, you need to configure your servers. This includes creating an id
 1. On the **Select server roles** page, select **Next**.
 1. On the **Select features** page, select the **Failover Clustering** check box.
 1. To install the Failover Cluster management tools, select **Add Features** and then select **Next**.
-1. On the **Confirm installation selections** page, select **Install**. Note: A server restart isn't required for the Failover Clustering feature.
+1. On the **Confirm installation selections** page, select **Install**. A server restart isn't required for the Failover Clustering feature.
 1. When the installation completes, select **Close**.
 1. Repeat this procedure on every server that you want to add as a failover cluster node.
 
