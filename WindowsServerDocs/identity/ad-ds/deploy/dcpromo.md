@@ -31,7 +31,7 @@ Windows Server 2012 replaced dcpromo with PowerShell cmdlets. However, the follo
 
 ## Basic syntax
 
-The DCPROMO answer file is an ASCII text file that provides automated user input for each page of the DCPROMO wizard.
+The dcpromo answer file is an ASCII text file that provides automated user input for each page of the Active Directory Domain Services Configuration Wizard.
 
 To start `dcpromo` in unattended mode, go to **Start**, enter **dcpromo**, then run the following command to run the program in an elevated command prompt window:
 
@@ -42,7 +42,7 @@ dcpromo /answer:<answer.txt>
 > [!NOTE]  
 > In this example command, `<answer.txt>` is a placeholder for the path and file name of the answer file that you plan to use for demotion or promotion.
 
-Each DCPROMO operation requires answers to specific fields in the [DCInstall] section of the answer file. The following list provides the required fields for each operation. The default values are used if the option is not specified. The default values for these fields are described in [Field Definitions](#field-definitions).
+Each dcpromo operation requires answers to specific fields in the [DCInstall] section of the answer file. The following list provides the required fields for each operation. The default values are used if the option is not specified. The default values for these fields are described in [Field Definitions](#field-definitions).
 
 - For new forest installations, the following options apply:
 
@@ -233,7 +233,7 @@ Each DCPROMO operation requires answers to specific fields in the [DCInstall] se
 
 ### Field definitions
 
-This section describes the fields and the entries that you can use in the answer file. The default value for each entry appears in bold text.
+This section describes the fields and the entries that you can use in the answer file.
 
 #### Installation operation parameters
 
@@ -241,7 +241,7 @@ This section describes the fields and the entries that you can use in the answer
 |-----|------|-----|
 | AllowDomainReinstall | Yes \| No | This entry specifies whether an existing domain is a recreated one. |
 | AllowDomainControllerReinstall | Yes \| No | This entry specifies whether to continue to install this domain controller even though the service detects an active domain controller account that uses the same name. Specify **Yes** only if you're sure that the existing account is no longer active. |
-| ApplicationPartitionsToReplicate | No default | This entry specifies the application partitions that have to be replicated in the format `"partition1" "partition2"`. If you specify \*, the service replicates all application partitions. Use space-separated or comma-and-space-separated distinguished names. Enclose the whole string in quotation marks. |
+| ApplicationPartitionsToReplicate | No default | This entry specifies the application partitions that have to be replicated in the format `"partition1 partition2"`. If you specify \*, the service replicates all application partitions. Use space-separated or comma-and-space-separated distinguished names. Enclose the whole string in quotation marks. |
 | ChildName | No default | This is the name of the subordinate domain appended to the ParentDomainDNSName entry. If the parent domain is A.COM and the subordinate domain is B, enter `B.A.COM and B` for ChildName. |
 | ConfirmGc | Yes \| No | This entry specifies whether the replica is also a global catalog. Yes makes the replica a global catalog if the backup was a global catalog. No doesn't make the replica a global catalog. These entries don't require quotation marks. |
 | CreateDNSDelegation | Yes \| No, no default | This entry indicates whether to create a DNS delegation that references this new DNS server. This entry is valid for AD DS-integrated DNS only. |
