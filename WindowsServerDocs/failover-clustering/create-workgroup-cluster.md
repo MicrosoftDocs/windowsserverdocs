@@ -1,6 +1,6 @@
 ---
-title: Create a workgroup cluster
-description: This article describes creating a Failover Cluster without Active Directory.
+title: Create a workgroup cluster in Windows Server
+description: Learn how-to create Failover Cluster without Active Directory using the Failover Cluster Manager or PowerShell.
 manager: femila
 ms.topic: how-to
 ms.author: wscontent
@@ -17,9 +17,9 @@ In this article, learn about and create a workgroup cluster. First, understand w
 
 A workgroup cluster is a specific type of failover cluster configuration. With workgroup clusters, two or more nodes are joined as member servers. They don't use an on-premises domain controller or Active Directory forest. Workgroup clusters aren't domain joined, and instead are workgroup joined. They still require use of a Domain Name System (DNS).
 
-Customers want to run a Failover Cluster without Active Directory to reduce the cost of hardware, maintenance, security, and other operational overhead. Traditionally, Active Directory has been necessary to do many things like maintain highly available domain controllers, and store identity. Now there are other technologies that exist outside of Active Directory that can be used for the same purposes.
+Typically, Failover Cluster are part of an Active Directory Domain Services domain to provide identity services and management at scale. However, in some scenarios you might want to run a Failover Cluster without Active Directory to reduce the cost of hardware, maintenance, and other operational overheads. 
 
-Workgroup clusters offer the same centralized identity and high security, focusing on keeping your applications highly available. And by not using Active Directory, customers can still achieve the most availability at the lowest cost.
+Workgroup clusters offer a centralized identity and the same high security, to keep your applications highly available. And by not using Active Directory, customers can still achieve the high availability at a lower cost.
 
 ## Prerequisites 
 
@@ -31,15 +31,17 @@ The following prerequisites must be met for your workgroup cluster to meet the c
 - Make sure that each server is added as trusted hosts. 
 - Create a local user account on each server node. The username and password of the account must all be the same.
 - Confirm that the fully configured solution, including servers, network, and storage, passes all tests in the cluster validation.
-- Confirm the storage requirements
+- Your cluster must have one of the following storage technologies configured and available to all cluster nodes. To learn more about Failover Clustering storage requirements, see [Failover clustering storage requirements](/windows-server/failover-clustering/clustering-requirements#storage).
+  - Storage Spaces Direct (S2D). If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
+  - SAN attached storage.
+  - NAS using SMB 3.0 or later.
   - Either Storage Spaces Direct (S2D), SAN, or NAS is required. If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
   - To add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
-- Confirm the quorum configuration
-  - [Quorum should be configured for a cluster](/windows-server/failover-clustering/manage-cluster-quorum). Either a Cloud Witness or Disk Witness can be used. A File Share Witness isn't currently supported.
+- Review [Quorum should be configured for a cluster](/windows-server/failover-clustering/manage-cluster-quorum) to determine the quorum type most suitable for your requirements. Either a Cloud Witness or Disk Witness can be used. A File Share Witness isn't currently supported.
 
 ## Cluster workloads
 
-This section describes various workloads and whether they support workgroup clusters. Workgroup clusters are recommended for:
+Workgroup clusters support several workload, workgroup clusters are recommended for:
 
 - **Hyper-V VMs.** Supported cluster workload.
 - **SQL Server Availability Groups.** SQL Server is a supported workload. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1)
@@ -105,6 +107,11 @@ Before you create the failover cluster, we strongly recommend that you validate 
 ##### Create the workgroup cluster
 
 After validation passes, you may now create the workgroup cluster.
+
+> [!IMPORTANT]
+> Only clusters that pass all validation tests are supported by Microsoft. To run the validation tests, complete the Validate a Configuration Wizard as described in [Run cluster validation tests](#run-cluster-validation-tests).
+
+To create a new cluster, follow the steps below.
 
 1. Start Server Manager.
 1. On the **Tools** menu, select **Failover Cluster Manager**.
