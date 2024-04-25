@@ -4,7 +4,7 @@ title: DCPROMO answer file syntax
 author: Heidilohr
 ms.author: helohr
 manager: femila
-ms.date: 03/22/2024
+ms.date: 04/25/2024
 ms.topic: conceptual
 ---
 
@@ -20,7 +20,7 @@ Dcpromo.exe is a program you can use to promote and demote Active Directory doma
 - Upgrade Microsoft Windows NT 4.0 domain controllers to Active Directory domain controllers.
 - Demote domain controllers.
 
-Windows Server 2000 and later support the dcpromo answer file syntax. However, while Windows Server 2012 and later still support the dcpromo answer file syntax, they replaced dcpromo.exe with PowerShell cmdlets. For more information, see the [Active Directory PowerShell module reference](/powershell/module/activedirectory/?view=winserver2012-ps).
+Windows Server 2000 and later support the dcpromo answer file syntax. However, while Windows Server 2012 and later still support the dcpromo answer file syntax, they replaced dcpromo.exe with PowerShell cmdlets. For more information, see the [Active Directory PowerShell module reference](/powershell/module/activedirectory/).
 
 ## Basic syntax
 
@@ -244,9 +244,9 @@ This section describes the fields and the entries that you can use in the answer
 | DNSDelegationPassword | \<Password> \| \*, no default | This entry specifies the password for the user account that creates or removes the DNS delegation. Specify \* to prompt the user to enter credentials. |
 | DNSDelegationUserName | No default | This entry specifies the user name the service uses when it creates or removes the DNS delegation. If you don't specify a value, the service uses the account credentials that you specify for the installation or removal of AD DS for the DNS delegation. |
 | DNSOnNetwork | Yes \| No | This entry specifies whether the DNS service is available on the network. The service only uses this entry when the network adapter for this computer isn't configured to use the name of a DNS server for name resolution. Specify No to indicate that DNS is installed on this computer for name resolution. Otherwise, you must the network adapter to use a DNS server name first. |
-| DomainLevel | 0 \| 2 \| 3, no default | This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest. Value descriptions are as follows: </br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008</br>- 4 = Windows Server 2008 R2</br>- 5 = Windows Server 2012</br>- 6 = Windows Server 2012 R2</br>- 7 = Windows Server 2016</br>- 10 = Windows Server 2025  |
+| DomainLevel | 0 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 10, no default | This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest. Value descriptions are as follows: </br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008</br>- 4 = Windows Server 2008 R2</br>- 5 = Windows Server 2012</br>- 6 = Windows Server 2012 R2</br>- 7 = Windows Server 2016</br>- 10 = Windows Server 2025  |
 | DomainNetbiosName | No default | This entry is the NetBIOS name that is used by pre-AD DS clients to access the domain. The DomainNetbiosName must be unique on the network. |
-| ForestLevel | 0 \| 2 \| 3  | This entry specifies the forest functional level when a new domain is created in a new forest as follows:</br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008</br></br>- 4 = Windows Server 2008 R2</br>- 5 = Windows Server 2012</br>- 6 = Windows Server 2012 R2</br>- 7 = Windows Server 2016</br>- 10 = Windows Server 2025</br>You must not use this entry when you install a new domain controller in an existing forest. The ForestLevel entry replaces the SetForestVersion entry that is available in Windows Server 2003. |
+| ForestLevel | 0 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 10 | This entry specifies the forest functional level when a new domain is created in a new forest as follows:</br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008</br></br>- 4 = Windows Server 2008 R2</br>- 5 = Windows Server 2012</br>- 6 = Windows Server 2012 R2</br>- 7 = Windows Server 2016</br>- 10 = Windows Server 2025</br>You must not use this entry when you install a new domain controller in an existing forest. The ForestLevel entry replaces the SetForestVersion entry that is available in Windows Server 2003. |
 | InstallDNS | Yes \| No, default value changes depending on the operation<sup>1</sup>. | This entry specifies whether the service configures DNS for a new domain if the Active Directory Domain Services Installation Wizard detects that the DNS dynamic update protocol isn't available. This entry also applies if the wizard detects an insufficient number of DNS servers for an existing domain. |
 | LogPath | `%systemroot%\\NTDS` | This is the path of the fully qualified, non-UNC directory on a hard disk on the local computer that hosts the AD DS log files. If the directory exists, it must be empty. If it doesn't exist, the service will create it. |
 | NewDomain | Tree \| Child \| Forest | Tree means the new domain is the root of a new tree in an existing forest. Child means the new domain is a child of an existing domain. Forest means the new domain is the first domain in a new forest of domain trees. |
