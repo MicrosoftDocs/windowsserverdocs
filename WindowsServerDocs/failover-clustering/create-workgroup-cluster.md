@@ -96,6 +96,8 @@ The following steps show how to install this feature in the Server Manager.
    ```
 1. Repeat this procedure on every server that you want to add as a failover cluster node.
 
+---
+
 ### Step 3: Create the workgroup cluster
 
 Now you're ready to create a workgroup cluster with the server nodes you prepared. You may use either the [Failover Cluster Manager](/windows-server/failover-clustering/create-failover-cluster#validate-the-configuration) or [Microsoft PowerShell](/windows-server/failover-clustering/create-failover-cluster#create-a-failover-cluster-by-using-windows-powershell).
@@ -153,3 +155,5 @@ If you prefer to create a workgroup cluster using PowerShell, follow these steps
 1. Validate the configuration before creating the workgroup cluster using the following command: `Test-Cluster -Node server1, server2`
 1. After validation passes, create the workgroup cluster using the following command: `New-Cluster –Name MyCluster -Node server1, server2 -AdministrativeAccessPoint DNS`
 1. After the cluster has been successfully created, you can do things such as verify cluster [quorum configuration](/azure-stack/hci/concepts/quorum), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
+
+---
