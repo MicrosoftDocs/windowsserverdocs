@@ -4,8 +4,6 @@
   - name: Get started
     href: rds-get-started.md
     items:
-    - name: What's new in RDS?
-      href: rds-whats-new.md
     - name: Supported configurations for RDS
       href: rds-supported-config.md
     - name: Supported security configurations for Windows 10 VDI
