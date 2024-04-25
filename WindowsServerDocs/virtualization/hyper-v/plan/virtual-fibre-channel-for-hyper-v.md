@@ -1,6 +1,6 @@
 ---
-title: Hyper-V Virtual Fibre Channel
-description: 
+title: Hyper-V Virtual Fibre Channel in Windows Server
+description: Learn about how Virtual Fibre Channel works and device support in Hyper-V for Windows Server.
 ms.topic: conceptual
 ms.author: helohr
 author: Heidilohr
@@ -8,8 +8,6 @@ ms.date: 04/12/2024
 ---
 
 # Hyper-V Virtual Fibre Channel
-
-> Applies to: Windows Server 2019, Windows Server 2016
 
 Hyper-V provides Fibre Channel ports within guest operating systems (OSes) that let you connect to Fibre Channel directly from your virtual machines (VMs). This feature lets you virtualize workloads that use direct access to Fibre Channel storage, cluster guests over Fibre Channel, and gives you more storage options for servers hosted in your virtualization infrastructure. This article gives a brief overview of Fibre Channel on Hyper-V so you can understand how to implement the Virtual Fibre Channel into your Hyper-V planning.
 
