@@ -150,6 +150,10 @@ Pinning your most used apps is now available through the **Start** menu and is c
 - Terminal
 - Windows PowerShell
 
+### Remote Access
+
+L2TP and PPTP are disabled by default for new installations of Remote Access in Windows Server 2025. IKEv2 and SSTP are still enabled by default. Existing and upgraded installation retain their existing configuration. For example, if you're running Windows Server 2019 and have L2TP or PPTP enabled, when you upgrade your system to Windows Server 2025 using an in-place update L2TP and PPTP will stay enabled.
+
 ### Server Message Block
 
 Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server Preview brings the following SMB capabilities.

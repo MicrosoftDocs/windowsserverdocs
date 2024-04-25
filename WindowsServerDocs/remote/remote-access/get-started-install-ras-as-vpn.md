@@ -70,6 +70,9 @@ Membership in Administrators, or equivalent, is the minimum required to perform 
 
 In this section, we'll configure Remote Access to allow IKEv2 VPN connections and to deny connections from other VPN protocols. We'll also assign a static IP address pool for the issuance of IP addresses to connecting authorized VPN clients.
 
+> [!TIP]
+> Beginning with Windows Server 2025 (preview), L2TP and PPTP are disabled by default for new installations. IKEv2 and SSTP are still enabled by default. Existing and upgraded installation retain their existing configuration. For example, if you're running Windows Server 2019 and have L2TP or PPTP enabled, when you upgrade your system to Windows Server 2025 using an in-place update L2TP and PPTP will stay enabled.
+
 >[!NOTE]
 >Instead of IKEv2, you can also choose to use SSTP. We don't recommend that you use PPTP, due to its lack of security features.
 
