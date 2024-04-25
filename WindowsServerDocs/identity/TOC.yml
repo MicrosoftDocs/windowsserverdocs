@@ -286,6 +286,8 @@
           href: ad-ds/deploy/RODC/Install-a-Windows-Server-2012-active-directory-Read-Only-Domain-Controller--RODC---Level-200-.md
       - name: Demoting Domain Controllers
         href: ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md
+      - name: Dcpromo answer file syntax
+        href: ad-ds/deploy/dcpromo.md
         items:
         - name: AD DS metadata cleanup
           href: ad-ds/deploy/ad-ds-metadata-cleanup.md
