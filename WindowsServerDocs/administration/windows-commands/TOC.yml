@@ -16,6 +16,8 @@
         href: remote-desktop-services-terminal-services-command-reference.md
       - name: Windows Server Backup Command Reference
         href: windows-server-backup-command-reference.md
+    - name: adprep
+      href: adprep.md
     - name: append
       href: append.md
     - name: arp
@@ -389,6 +391,8 @@
       href: dcdiag.md
     - name: dcgpofix
       href: dcgpofix.md
+    - name: dcpromo
+      href: dcpromo.md
     - name: defrag
       href: defrag.md
     - name: del
