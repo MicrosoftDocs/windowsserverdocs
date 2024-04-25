@@ -25,18 +25,16 @@ Workgroup clusters offer a centralized identity and the same high security, to k
 
 The following prerequisites must be met for your workgroup cluster to meet the criteria for an officially supported deployment:
 
-- Make sure that all servers to be used as cluster nodes are running the same version of Windows Server.
-- Make sure that all servers must have the Failover Clustering feature installed. 
-- Make sure that all servers have a common primary DNS suffix.
+- All servers to be used as cluster nodes are running the same version of Windows Server.
+- All servers have a common primary DNS suffix.
 - Make sure that each server is added as trusted hosts. 
-- Create a local user account on each server node. The username and password of the account must all be the same.
 - Confirm that the fully configured solution, including servers, network, and storage, passes all tests in the cluster validation.
 - Your cluster must have one of the following storage technologies configured and available to all cluster nodes. To learn more about Failover Clustering storage requirements, see [Failover clustering storage requirements](/windows-server/failover-clustering/clustering-requirements#storage).
   - Storage Spaces Direct (S2D). If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
   - SAN attached storage.
   - NAS using SMB 3.0 or later.
   - Either Storage Spaces Direct (S2D), SAN, or NAS is required. If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
-  - To add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
+  - To add clustered storage during cluster creation, make sure that all servers can access the storage. You can also add clustered storage after you create the cluster.
 - Review [Quorum should be configured for a cluster](/windows-server/failover-clustering/manage-cluster-quorum) to determine the quorum type most suitable for your requirements. Either a Cloud Witness or Disk Witness can be used. A File Share Witness isn't currently supported.
 
 ## Cluster workloads
