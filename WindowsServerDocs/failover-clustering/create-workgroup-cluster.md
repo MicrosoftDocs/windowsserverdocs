@@ -48,7 +48,10 @@ Workgroup clusters aren't recommended for:
 
 ## Create a two-node workgroup cluster
 
-Follow the directions in the next sections to create a **two-node, Hyper-V VM workgroup cluster, with Storage Spaces Direct storage**.
+In the following sections you create two-node workgroup cluster with Storage Spaces Direct storage that is capability of hosting Hyper-V virtual machines. The process is composed of the following steps:
+
+1. Prepare you servers. Each server must have identical users accounts, the Windows Remote Management (WinRM) Trust Host list populated, and a common primary DNS suff.
+1. Etc. etc.
 
 ### Step 1: Prepare your servers
 
