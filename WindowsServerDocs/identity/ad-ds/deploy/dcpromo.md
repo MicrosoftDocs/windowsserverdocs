@@ -20,20 +20,13 @@ Dcpromo.exe is a program you can use to promote and demote Active Directory doma
 - Upgrade Microsoft Windows NT 4.0 domain controllers to Active Directory domain controllers.
 - Demote domain controllers.
 
-Windows Server 2012 replaced dcpromo with PowerShell cmdlets. However, the following versions of Windows Server still support the dcpromo answer file syntax:
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
-- Windows Server 2008 R2
-- Windows Server 2008
+Windows Server 2000 and later support the dcpromo answer file syntax. However, while Windows Server 2012 and later still support the dcpromo answer file syntax, they replaced dcpromo.exe with PowerShell cmdlets. For more information, see the [Active Directory PowerShell module reference](/powershell/module/activedirectory/?view=winserver2012-ps).
 
 ## Basic syntax
 
 The dcpromo answer file is an ASCII text file that provides automated user input for each page of the Active Directory Domain Services Configuration Wizard.
 
-To start `dcpromo` in unattended mode, go to **Start**, enter **dcpromo**, then run the following command to run the program in an elevated command prompt window:
+To start `dcpromo` in unattended mode, go to **Start**, enter **dcpromo**, then run the following command in an elevated command prompt window:
 
 ```cmd
 dcpromo /answer:<answer.txt>
@@ -46,7 +39,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For new forest installations, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]
     InstallDNS=yes  
     NewDomain=forest  
@@ -65,7 +58,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For child domain installations, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]  
     ParentDomainDNSName=\<Fully qualified DNS name of parent domain>  
     UserName=\<The administrative account in the parent domain>  
@@ -93,7 +86,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For a new tree in existing forest installations, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]  
     UserName=\<An administrative account in the parent domain>  
     UserDomain=\<The name of the domain of the user account>  
@@ -117,7 +110,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For additional domain controller installations, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]  
     UserName=\<The administrative account in the domain of the new domain controller>  
     UserDomain=\<The name of the domain of the new domain controller>  
@@ -136,7 +129,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For additional domain controller installations that use the Install From Media (IFM) method, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]  
     UserName=\<The administrative account in the domain of the new domain controller>  
     Password=\<The password for the UserName account>  
@@ -161,7 +154,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For read-only domain controller (RODC) installations, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]  
     UserName=\<The administrative account in the domain of the new domain controller>  
     UserDomain=\<The name of the domain of the user account>  
@@ -186,7 +179,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For removal of AD DS, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]  
     UserName=\<An administrative account in the domain>  
     UserDomain=\<The domain name of the administrative account>  
@@ -201,7 +194,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For removal of AD DS from the last domain controller in a domain, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]  
     UserName=\<An administrative account in the parent domain>  
     UserDomain=\<The domain name of the UserName account>  
@@ -217,7 +210,7 @@ Each dcpromo operation requires answers to specific fields in the [DCInstall] se
 
 - For removal of the last domain controller in a forest, the following options apply:
 
-    ```
+    ```txt
     [DCINSTALL]  
     UserName=\<An administrative account in the parent domain>  
     UserDomain=\<The domain name of the UserName account>  
@@ -251,10 +244,10 @@ This section describes the fields and the entries that you can use in the answer
 | DNSDelegationPassword | \<Password> \| \*, no default | This entry specifies the password for the user account that creates or removes the DNS delegation. Specify \* to prompt the user to enter credentials. |
 | DNSDelegationUserName | No default | This entry specifies the user name the service uses when it creates or removes the DNS delegation. If you don't specify a value, the service uses the account credentials that you specify for the installation or removal of AD DS for the DNS delegation. |
 | DNSOnNetwork | Yes \| No | This entry specifies whether the DNS service is available on the network. The service only uses this entry when the network adapter for this computer isn't configured to use the name of a DNS server for name resolution. Specify No to indicate that DNS is installed on this computer for name resolution. Otherwise, you must the network adapter to use a DNS server name first. |
-| DomainLevel | 0 \| 2 \| 3, no default | This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest. Value descriptions are as follows: </br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008  |
+| DomainLevel | 0 \| 2 \| 3, no default | This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest. Value descriptions are as follows: </br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008</br>- 4 = Windows Server 2008 R2</br>- 5 = Windows Server 2012</br>- 6 = Windows Server 2012 R2</br>- 7 = Windows Server 2016</br>- 10 = Windows Server 2025  |
 | DomainNetbiosName | No default | This entry is the NetBIOS name that is used by pre-AD DS clients to access the domain. The DomainNetbiosName must be unique on the network. |
-| ForestLevel | 0 \| 2 \| 3  | This entry specifies the forest functional level when a new domain is created in a new forest as follows:</br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008</br>You must not use this entry when you install a new domain controller in an existing forest. The ForestLevel entry replaces the SetForestVersion entry that is available in Windows Server 2003. |
-| InstallDNS | Yes \| No, default value changes depending on the operation. \* | This entry specifies whether the service configures DNS for a new domain if the Active Directory Domain Services Installation Wizard detects that the DNS dynamic update protocol isn't available. This entry also applies if the wizard detects an insufficient number of DNS servers for an existing domain. |
+| ForestLevel | 0 \| 2 \| 3  | This entry specifies the forest functional level when a new domain is created in a new forest as follows:</br>- 0 = Windows 2000 Server native mode</br>- 2 = Windows Server 2003</br>- 3 = Windows Server 2008</br></br>- 4 = Windows Server 2008 R2</br>- 5 = Windows Server 2012</br>- 6 = Windows Server 2012 R2</br>- 7 = Windows Server 2016</br>- 10 = Windows Server 2025</br>You must not use this entry when you install a new domain controller in an existing forest. The ForestLevel entry replaces the SetForestVersion entry that is available in Windows Server 2003. |
+| InstallDNS | Yes \| No, default value changes depending on the operation<sup>1</sup>. | This entry specifies whether the service configures DNS for a new domain if the Active Directory Domain Services Installation Wizard detects that the DNS dynamic update protocol isn't available. This entry also applies if the wizard detects an insufficient number of DNS servers for an existing domain. |
 | LogPath | `%systemroot%\\NTDS` | This is the path of the fully qualified, non-UNC directory on a hard disk on the local computer that hosts the AD DS log files. If the directory exists, it must be empty. If it doesn't exist, the service will create it. |
 | NewDomain | Tree \| Child \| Forest | Tree means the new domain is the root of a new tree in an existing forest. Child means the new domain is a child of an existing domain. Forest means the new domain is the first domain in a new forest of domain trees. |
 | NewDomainDNSName | No default | This entry is used in "new tree in existing forest" or "new forest" installations. The value is a an unused DNS domain. |
@@ -278,7 +271,7 @@ This section describes the fields and the entries that you can use in the answer
 | UserName | No default | This entry specifies the user account name that is used for installing AD DS on a server. We recommend that you specify the account credentials in the `\<domain>\\<user_name>` format. |
 
 >[!NOTE]
->**\*** For a new forest, the DNS server role is installed by default. For a new tree, a new child domain, or a replica, a DNS server is installed by default if an existing DNS infrastructure is detected by the Active Directory Domain Services Installation Wizard. If no existing DNS infrastructure is detected by the wizard, a DNS server isn't installed by default.
+><sup>1</sup> For a new forest, the DNS server role is installed by default. For a new tree, a new child domain, or a replica, a DNS server is installed by default if an existing DNS infrastructure is detected by the Active Directory Domain Services Installation Wizard. If no existing DNS infrastructure is detected by the wizard, a DNS server isn't installed by default.
 
 #### Removal operation parameters
 
