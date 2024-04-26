@@ -57,13 +57,14 @@ In the following sections you create two-node workgroup cluster with Storage Spa
 
 To get started, you need to configure your servers. This includes creating an identical user account in each server node, adding the servers as trusted hosts, and ensuring that each server has a common primary DNS suffix. Follow these steps on each node of the cluster.
 
-#### [Desktop](#tab/desktop)
-
 #### Create a consistent admin account on each node.
 
-A consistent admininstrator user account must be created on each node. The username and password of these accounts must be the same on all the nodes and the account must also be added to the local Administrators group. If the non-builtin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry.
+A consistent admininstrator user account must be created on each node. The username and password of these accounts must be the same on all the nodes and the account must also be added to the local Administrators group.
 
-The following set of steps describes how to set the LocalAccountTokenFilterPolicy.
+##### [Desktop](#tab/desktop)
+
+1. Create a new user account on each node with the same username and password.
+1. If the non-builtin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The following set of steps describes how to set the LocalAccountTokenFilterPolicy.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
@@ -78,36 +79,55 @@ The following set of steps describes how to set the LocalAccountTokenFilterPolic
 1. In the **Value data** box, type _1_, and then select **OK**.
 1. Exit Registry Editor.
 
-#### Ensure nodes are trusted hosts for remote management
+##### [PowerShell](#tab/powershell)
 
-Add each server node as a trusted host. To do that, modify the `TrustedHosts` file by adding an entry for each server that will be allowed to connect to the local machine.
-
-Set this via local policy (gpedit.msc) using Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > Windows Remote Management (WinRM) > WinRM Client > Trusted Hosts
-
-#### Set primary DNS Suffix
-
-1. Set a primary DNS suffix on each server node. To do so, navigate to **System Properties** and in the Computer Name tab, select **Change...**. In the Computer Name/Domain Changes dialog, confirm that the Member of option selected is **Workgroup**. Then select **More...**. In the DNS Suffix and NetBIOS Computer Name dialog, enter a **Primary DNS suffix of this computer** of your choice. 
-
-
-#### [PowerShell](#tab/powershell)
-
-#### Create a consistent admin account on each node.
-
-Create a consistent admin user account on each node. The username and password of these accounts must be the same on all the nodes and the account must also be added to the local Administrators group.
-
-If the non-builtin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The policy can be done in PowerShell with the following command:
+1. Create a new user account on each node with the same username and password.s
+1. If the non-builtin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The policy can be done in PowerShell with the following command:
 `New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System –Name LocalAccountTokenFilterPolicy -Value 1​`
 
+---
+
 #### Ensure nodes are trusted hosts for remote management
+
+Each server node must be added to Windows Remote Management (WinRM) as a trusted host. To do that, modify the `TrustedHosts` file by adding an entry for each server that will be allowed to connect to the local machine.
+
+##### [Desktop](#tab/desktop)
+
+1. From the start menu, enter: **gpedit.msc**. The Local Group Policy Editor dialog opens.
+1. Navigate to **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Remote Management (WinRM)** > **WinRM Client** > **Trusted Hosts**.
+1. In the Trusted Hosts dialog, select the **Enabled** radio button and then enter a comma separated list of trusted hosts by hostname.
+1. Select **Apply** and then **OK**.
+1. Complete this process on each server node.
+
+##### [PowerShell](#tab/powershell)
 
 1. Add each server node as a trusted host. To do that, modify the `TrustedHosts` file by adding an entry for each server that will be allowed to connect to the local machine. There are many ways to add trusted hosts, including by hostname, by domain name, or by IP address. The following PowerShell command allows each hostname specified to access the local machine:
 `Set-Item WSMan:\localhost\Client\TrustedHosts -Value "server1,server2"`
+1. Complete this process on each server node.
+
+---
+
+
+#### Set primary DNS Suffix
+
+Set a primary DNS suffix on each server node with the following steps.
+
+##### [Desktop](#tab/desktop)
+
+1. In the Search bar, enter **system properties** and select **View advanced system settings**. This opens the **System Properties** dialog. In the Computer Name tab, select the **Change...** button.
+1. In the Computer Name/Domain Changes dialog, confirm that the Member of option selected is **Workgroup**. Then select the **More...** button.
+1. In the DNS Suffix and NetBIOS Computer Name dialog, enter a **Primary DNS suffix of this computer** of your choice. The select **OK** to close the dialog window.
+1. Select **OK** again to close the Computer Name/Domain Changes dialog, and then you'll be prompted to restart your computer to apply changes. Select **OK** to restart and follow the prompts to restart your computer now.
+
+#### [PowerShell](#tab/powershell)
 
 #### Set primary DNS Suffix
 
 1. Set a primary DNS suffix on each server node. To do so, use the following command in PowerShell:
     ```PowerShell
     ```
+
+---
 
 ### Step 2: Install the Failover Clustering feature
 
