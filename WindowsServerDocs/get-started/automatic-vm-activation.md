@@ -114,6 +114,8 @@ The VM automatically activates, providing that the virtualization host itself is
 | Standard | DBGBW-NPF86-BJVTX-K3WKJ-MTB6V |
 | Essentials | K2XGM-NMBT3-2R6Q8-WF2FK-P36R2 |
 
+---
+
 ## Reporting and tracking
 
 The Key-Value Pair (KVP) exchange between the virtualization host and the VM provides real-time tracking data for the guest operating systems, including activation information. This activation information is stored in the Windows registry of the VM. Historical data about AVMA requests is logged in Event Viewer on the virtualization host.
