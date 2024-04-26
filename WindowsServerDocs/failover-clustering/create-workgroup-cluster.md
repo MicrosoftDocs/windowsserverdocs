@@ -83,7 +83,9 @@ A consistent admininstrator user account must be created on each node. The usern
 
 1. Create a new user account on each node with the same username and password.s
 1. If the non-builtin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The policy can be done in PowerShell with the following command:
-`New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System –Name LocalAccountTokenFilterPolicy -Value 1​`
+    ```PowerShell
+    New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System –Name LocalAccountTokenFilterPolicy -Value 1​
+    ```
 
 ---
 
@@ -102,7 +104,9 @@ Each server node must be added to Windows Remote Management (WinRM) as a trusted
 ##### [PowerShell](#tab/powershell)
 
 1. Add each server node as a trusted host. To do that, modify the `TrustedHosts` file by adding an entry for each server that will be allowed to connect to the local machine. There are many ways to add trusted hosts, including by hostname, by domain name, or by IP address. The following PowerShell command allows each hostname specified to access the local machine:
-`Set-Item WSMan:\localhost\Client\TrustedHosts -Value "server1,server2"`
+    ```PowerShell
+    Set-Item WSMan:\localhost\Client\TrustedHosts -Value "server1,server2"
+    ```
 1. Complete this process on each server node.
 
 ---
@@ -125,7 +129,7 @@ Set a primary DNS suffix on each server node with the following steps.
 
 1. Set a primary DNS suffix on each server node. To do so, use the following command in PowerShell:
     ```PowerShell
-    Set-DnsClient -ConnectionSpecificSuffix "corp.contoso.com"
+    Set-DnsClient -ConnectionSpecificSuffix "contoso.com"
     ```
 
 ---
