@@ -264,6 +264,7 @@ $machineName = "<name_of_hybrid_machine>"
 $resourceGroup = "<resource_group>"
 $subscription = "<subscription_id>"
 $port = "6516"
+$portint = 6516
         
 #Deploy Windows Admin Center
 $Setting = @{"port" = $port; "proxy" = @{"mode" = "application"; "address" = "http://[address]:[port]";}} #proxy configuration is optional
@@ -273,7 +274,7 @@ New-AzConnectedMachineExtension -Name "AdminCenter" -ResourceGroupName $resource
 $putPayload = "{'properties': {'type': 'default'}}"
 Invoke-AzRestMethod -Method PUT -Uri "https://management.azure.com/subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2023-03-15" -Payload $putPayload
 
-$patch = @{ "properties" =  @{ "serviceName" = "WAC"; "port" = $port}} 
+$patch = @{ "properties" =  @{ "serviceName" = "WAC"; "port" = $portint}} 
 $patchPayload = ConvertTo-Json $patch 
 Invoke-AzRestMethod -Method PUT -Path /subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default/serviceconfigurations/WAC?api-version=2023-03-15 -Payload $patchPayload
 ```
