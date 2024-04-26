@@ -11,8 +11,8 @@
     items:
     - name: What's new in Windows Server
       items:
-      - name: Windows Server Insiders Preview
-        href: whats-new-windows-server-insiders-preview.md  
+      - name: Windows Server 2025
+        href: whats-new-windows-server-2025.md  
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
       - name: Windows Server 2019
