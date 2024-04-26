@@ -1,18 +1,20 @@
 ---
-title: What's new in Windows Server 2025 Insiders Preview
-description: This article describes some of the new features in Windows Server 2025 for Insiders Preview.
+title: What's new in Windows Server 2025
+description: This article describes some of the new features in Windows Server 2025.
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 04/18/2024
+ms.date: 04/25/2024
 ---
 
-# What's new in Windows Server Insiders Preview
+# What's new in Windows Server 2025 (preview)
 
 > [!IMPORTANT]
-> Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-This article describes some of the new features in Windows Server Insiders Preview. Windows Server Insiders Preview is built on the strong foundation of Windows Server 2022 and brings many innovations.
+This article describes some of the newest developments in Windows Server 2025, which boasts advanced features that improve security, performance, and flexibility. With faster storage options and the ability to integrate with hybrid cloud environments, managing your infrastructure is now more streamlined. Windows Server 2025 builds on the strong foundation of its predecessor while introducing a range of innovative enhancements to adapt to your needs.
+
+If you're interested in trying out the latest features of Windows Server 2025 before official release, see [Get started with Windows Server Insiders Preview](get-started-with-windows-server-insiders-preview.md).
 
 ## What's new
 
@@ -39,7 +41,7 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 
 - **Forest and Domain Functional Levels** - The new functional level is used for general supportability and is required for the new 32K database page size feature. The new functional level maps to the value of `DomainLevel 10` and `ForestLevel 10` for unattended installs. Microsoft has no plans to retrofit functional levels for Windows Server 2019 and Windows Server 2022. To perform an unattended promotion and demotion of a Domain Controller (DC), see [DCPROMO answer file syntax for unattended promotion and demotion of domain controllers](/troubleshoot/windows-server/identity/syntax-build-answer-files-unattended-installation-ad-ds).
 
-  The [DsGetDcName](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew) Application Programming Interface (API) also supports a new flag `DS_DIRECTORY_SERVICE_13_REQUIRED` that enables location of DCs running Windows Server Insider Preview. You can learn more about functional levels in the following articles:
+  The [DsGetDcName](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew) Application Programming Interface (API) also supports a new flag `DS_DIRECTORY_SERVICE_13_REQUIRED` that enables location of DCs running Windows Server 2025. You can learn more about functional levels in the following articles:
 
   - [Forest and Domain Functional Levels](../identity/ad-ds/active-directory-functional-levels.md)
   
@@ -105,7 +107,7 @@ By default, the Azure Arc setup Feature-on-Demand is installed, which offers a u
 
 ### Bluetooth
 
-You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server Preview.
+You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
 
 ### Desktop shell
 
@@ -115,9 +117,13 @@ When you sign in for the first time, the desktop shell experience conforms to th
 
 This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](../security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md).
 
+### DTrace
+
+Windows Server 2025 comes equipped with dtrace as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real-time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for additional capabilities.
+
 ### Email & accounts
 
-You can now add the following accounts in **Settings > Accounts > Email & accounts** for Windows Server Preview:
+You can now add the following accounts in **Settings > Accounts > Email & accounts** for Windows Server 2025:
 
 - Microsoft Entra ID
 - Microsoft account
@@ -127,7 +133,7 @@ It's important to keep in mind that domain join is still required for most situa
 
 ### Feedback Hub
 
-Submitting feedback or reporting problems encountered while using Windows Server Preview can now be done using the Windows Feedback Hub. You can include screenshots or recordings of the process that caused the issue to help us understand your situation and share suggestions to enhance your Windows experience. To learn more, see [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app).
+Submitting feedback or reporting problems encountered while using Windows Server 2025 can now be done using the Windows Feedback Hub. You can include screenshots or recordings of the process that caused the issue to help us understand your situation and share suggestions to enhance your Windows experience. To learn more, see [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app).
 
 ### File Compression
 
@@ -135,11 +141,11 @@ Build 26040 has a new compression feature when compressing an item by performing
 
 ### Flighting
 
-Flighting is only available for the Canary Channel release beginning in early 2024 starting with Preview build 26010, which allows users to receive Windows Server flights similar to Windows client. To enable flighting on your device, go to **Start > Settings > Windows Update > Windows Insider Program**. From there, you can choose to opt into your desired Insiders release.
+Flighting is only available for the Canary Channel release beginning in early 2024 starting with build 26010, which allows users to receive Windows Server flights similar to Windows client. To enable flighting on your device, go to **Start > Settings > Windows Update > Windows Insider Program**. From there, you can choose to opt into your desired Insiders release.
 
 ### Pinned apps
 
-Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26085, the default pinned apps in Preview are currently:
+Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26085, the default pinned apps are currently:
 
 - Azure Arc Setup
 - Feedback Hub
@@ -152,7 +158,7 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 ### Server Message Block
 
-Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server Preview brings the following SMB capabilities.
+Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server 2025 brings the following SMB capabilities.
 
 Starting with build 26090, another set of SMB protocol changes are introduced for disabling QUIC, signing, and encryption.
 
