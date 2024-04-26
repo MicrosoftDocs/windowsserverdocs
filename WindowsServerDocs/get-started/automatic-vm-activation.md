@@ -84,7 +84,7 @@ The VM automatically activates, providing that the virtualization host itself is
 | Standard | TNK62-RXVTB-4P47B-2D623-4GF74 |
 | Essentials | 2CTP7-NHT64-BP62M-FV6GG-HFV28 |
 
-# [Windows Server versions<br>1909, 1903, and 1809](#tab/server1909)
+# [Windows Server versions 1909,<br> 1903, and 1809](#tab/server1909)
 
 | Edition | AVMA key |
 |--|--|
