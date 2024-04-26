@@ -75,6 +75,7 @@ The VM automatically activates, providing that the virtualization host itself is
 | Datacenter | YQB4H-NKHHJ-Q6K4R-4VMY6-VCH67 |
 | Datacenter<br/>Azure Edition | VK6GV-24NHF-W97PV-3JQV2-HH9YT |
 | Standard | WWVGQ-PNHV9-B89P4-8GGM9-9HPQ4 |
+| Azure Core | 6NMQ9-T38WF-6MFGM-QYGYM-88J4F |
 
 # [Windows Server 2022](#tab/server2022)
 
