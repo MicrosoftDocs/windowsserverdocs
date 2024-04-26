@@ -81,7 +81,7 @@ A consistent admininstrator user account must be created on each node. The usern
 
 ##### [PowerShell](#tab/powershell)
 
-1. Create a new user account on each node with the same username and password.s
+1. Create a new user account on each node with the same username and password.
 1. If the non-builtin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The policy can be done in PowerShell with the following command:
     ```PowerShell
     New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System –Name LocalAccountTokenFilterPolicy -Value 1​
