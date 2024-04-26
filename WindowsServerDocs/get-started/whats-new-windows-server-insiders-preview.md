@@ -152,7 +152,9 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 ### Remote Access
 
-L2TP and PPTP are disabled by default for new installations of Remote Access in Windows Server 2025. IKEv2 and SSTP are still enabled by default. Existing and upgraded installation retain their existing configuration. For example, if you're running Windows Server 2019 and have L2TP or PPTP enabled, when you upgrade your system to Windows Server 2025 using an in-place update L2TP and PPTP will stay enabled.
+By default new Routing and Remote Access Services (RRAS) setups don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
+
+Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to get started with Remote Access, see [Install Remote Access as a VPN server](../remote/remote-access/get-started-install-ras-as-vpn.md).
 
 ### Server Message Block
 
