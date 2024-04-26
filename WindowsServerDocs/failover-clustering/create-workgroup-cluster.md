@@ -125,6 +125,7 @@ Set a primary DNS suffix on each server node with the following steps.
 
 1. Set a primary DNS suffix on each server node. To do so, use the following command in PowerShell:
     ```PowerShell
+    Set-DnsClient -ConnectionSpecificSuffix "corp.contoso.com"
     ```
 
 ---
@@ -144,7 +145,7 @@ The following steps show how to install the Failover Clustering feature in the S
 1. On the **Select destination server** page, select the server where you want to install the feature and then select **Next**.
 1. On the **Select server roles** page, select **Next**.
 1. On the **Select features** page, select the **Failover Clustering** check box.
-1. To install the Failover Cluster management tools, select **Add Features** and then select **Next**.
+1. To install the Failover Cluster managementse tools, select **Add Features** and then select **Next**.
 1. On the **Confirm installation selections** page, select **Install**. A server restart isn't required for the Failover Clustering feature.
 1. When the installation completes, select **Close**.
 1. Repeat this procedure on every server that you want to add as a failover cluster node.
