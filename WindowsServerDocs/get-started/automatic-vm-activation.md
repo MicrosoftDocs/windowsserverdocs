@@ -91,7 +91,7 @@ The VM automatically activates, providing that the virtualization host itself is
 | Datacenter | H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW |
 | Standard | TNK62-RXVTB-4P47B-2D623-4GF74 |
 
-# [Windows Server versions<br>1803 and 1709](#tab/server1803)
+# [Windows Server versions 1803<br> and 1709](#tab/server1803)
 
 | Edition | AVMA key |
 |--|--|
