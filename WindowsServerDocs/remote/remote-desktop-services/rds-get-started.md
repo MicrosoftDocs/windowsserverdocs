@@ -14,7 +14,7 @@ manager: dongill
 
 Use the following information to begin exploring and using Remote Desktop Services in Windows Server 2016.
 
-- [What's new in Remote Desktop Services?](rds-whats-new.md) - Check out the new features added in Windows Server 2016, as well as improvements to existing features and scenarios.
+- [What's new in Remote Desktop Services?](../../get-started/whats-new-in-windows-server-2016.md#remote-desktop-services) - Check out the new features added in Windows Server 2016, as well as improvements to existing features and scenarios.
 - [Remote Desktop Services planning poster](rds-poster.md) - We've created a poster that walks you through all the considerations for planning your Remote Desktop Deployment.
 - [Host Windows desktops and applications - learning path](rds-hosting-partners.md) - Need to create a desktop hosting solution on virtual machines? Learn about the new Remote Desktop Services learning path, as well as identify partners that can help you build your environment.
 
