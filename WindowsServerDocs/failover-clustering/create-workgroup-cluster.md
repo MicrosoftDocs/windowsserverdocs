@@ -116,23 +116,11 @@ Each server node must be added to Windows Remote Management (WinRM) as a trusted
 
 Set a primary DNS suffix on each server node with the following steps.
 
-##### [Desktop](#tab/desktop)
-
 1. In the Search bar, enter **system properties** and select **View advanced system settings**. This opens the **System Properties** dialog. In the Computer Name tab, select the **Change...** button.
 1. In the Computer Name/Domain Changes dialog, confirm that the Member of option selected is **Workgroup**. Then select the **More...** button.
 1. In the DNS Suffix and NetBIOS Computer Name dialog, enter a **Primary DNS suffix of this computer** of your choice. The select **OK** to close the dialog window.
 1. Select **OK** again to close the Computer Name/Domain Changes dialog, and then you'll be prompted to restart your computer to apply changes. Select **OK** to restart and follow the prompts to restart your computer now.
 
-#### [PowerShell](#tab/powershell)
-
-#### Set primary DNS Suffix
-
-1. Set a primary DNS suffix on each server node. To do so, use the following command in PowerShell:
-    ```PowerShell
-    Set-DnsClient -ConnectionSpecificSuffix "contoso.com"
-    ```
-
----
 
 ### Step 2: Install the Failover Clustering feature
 
