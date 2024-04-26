@@ -51,11 +51,9 @@ You can configure up to four virtual Fibre Channel adapters on a VM and associat
 
 ### Live migration
 
-To support live migration of virtual machines across Hyper-V hosts while maintaining Fibre Channel connectivity, two WWNs are configured for each virtual Fibre Channel adapter, as shown in Figure 1: Set A and Set B. Hyper-V automatically alternates between the Set A and Set B WWN addresses during a live migration. This ensures that all LUNs are available on the destination host before the migration and that no downtime occurs during the migration.
+To support live migration of virtual machines across Hyper-V hosts while maintaining Fibre Channel connectivity, two WWNs are configured for each virtual Fibre Channel adapter, as shown in the following diagram. Hyper-V automatically alternates between the Set A and Set B WWN addresses during a live migration. This ensures that all LUNs are available on the destination host before the migration and that no downtime occurs during the migration.
 
 :::image type="content" source="./images/alternating-wwn-addresses.png" alt-text="A diagram showing the live migration process for Virtual Fibre Channel. The deployment switches from World Wide Name Set A and World Wide Name Set B and back during live migration.":::
-
-**Figure 1 Alternating WWN addresses during a live migration**
 
 ### Tape library support
 
