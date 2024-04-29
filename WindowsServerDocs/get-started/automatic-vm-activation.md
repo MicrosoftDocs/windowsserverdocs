@@ -4,7 +4,7 @@ description: Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purc
 ms.topic: conceptual
 author: xelu86
 ms.author: wscontent
-ms.date: 04/26/2024
+ms.date: 04/29/2024
 ---
 
 # Automatic Virtual Machine Activation in Windows Server
@@ -34,12 +34,13 @@ For a virtualization server host to run guest VMs, you must activate it. To do s
 
 AVMA requires a Windows Server Datacenter edition with the Hyper-V server host role installed. The Windows Server version of the host determines which versions it can activate in a guest VM. The following table lists the guest VM versions that each host version is able to activate. A host version can access all the editions (Datacenter, Standard, or Essentials) of its eligible guest VM versions.
 
-| Server host version | Windows Server 2022 guest VM | Windows Server 2019 guest VM | Windows Server 2016 guest VM | Windows Server 2012 R2 guest VM |
-|--|:--:|:--:|:--:|:--:|
-| Windows Server 2022 | X | X | X | X |
-| Windows Server 2019 | | X | X | X |
-| Windows Server 2016 | | | X | X |
-| Windows Server 2012 R2 | | | | X |
+| Server host version | Windows Server 2025 guest VM | Windows Server 2022 guest VM | Windows Server 2019 guest VM | Windows Server 2016 guest VM | Windows Server 2012 R2 guest VM |
+|--|:--:|:--:|:--:|:--:|:--:|
+| Windows Server 2025 | X | X | X | X | X |
+| Windows Server 2022 | | X | X | X | X |
+| Windows Server 2019 | | | X | X | X |
+| Windows Server 2016 | | | | X | X |
+| Windows Server 2012 R2 | | | | | X |
 
 > [!NOTE]
 > AVMA does not work with other server virtualization technologies.
@@ -68,17 +69,25 @@ The VM automatically activates, providing that the virtualization host itself is
 
 ## AVMA keys
 
+# [Windows Server 2025](#tab/server2025)
+
+| Edition | Key |
+|--|--|
+| Datacenter | YQB4H-NKHHJ-Q6K4R-4VMY6-VCH67 |
+| Datacenter:<br/>Azure Edition | VK6GV-24NHF-W97PV-3JQV2-HH9YT |
+| Standard | WWVGQ-PNHV9-B89P4-8GGM9-9HPQ4 |
+
 # [Windows Server 2022](#tab/server2022)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | W3GNR-8DDXR-2TFRP-H8P33-DV9BG |
-| Datacenter<br/>Azure Edition | F7TB6-YKN8Y-FCC6R-KQ484-VMK3J |
+| Datacenter:<br/>Azure Edition | F7TB6-YKN8Y-FCC6R-KQ484-VMK3J |
 | Standard | YDFWN-MJ9JR-3DYRK-FXXRW-78VHK |
 
 # [Windows Server 2019](#tab/server2019)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW |
 | Standard | TNK62-RXVTB-4P47B-2D623-4GF74 |
@@ -86,21 +95,21 @@ The VM automatically activates, providing that the virtualization host itself is
 
 # [Windows Server versions 1909,<br> 1903, and 1809](#tab/server1909)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW |
 | Standard | TNK62-RXVTB-4P47B-2D623-4GF74 |
 
 # [Windows Server versions 1803<br> and 1709](#tab/server1803)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J |
 | Standard | C3RCX-M6NRP-6CXC9-TW2F2-4RHYD |
 
 # [Windows Server 2016](#tab/server2016)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J |
 | Standard | C3RCX-M6NRP-6CXC9-TW2F2-4RHYD |
@@ -108,7 +117,7 @@ The VM automatically activates, providing that the virtualization host itself is
 
 # [Windows Server 2012 R2](#tab/server2012r2)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | Y4TGP-NPTV9-HTC2H-7MGQ3-DV4TW |
 | Standard | DBGBW-NPF86-BJVTX-K3WKJ-MTB6V |
