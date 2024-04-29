@@ -370,7 +370,7 @@ Starting with Windows 10 version 1507 and Windows Server 2016, you can configure
 
 Domain controllers now support Key Trust account mapping and fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. You can configure the UseSubjectAltName variable to the following settings:
 
-- Setting the variable to 0 makes explicitmapping required. Users must use either a Key Trust or set an ExplicitAltSEcID variable.
+- Setting the variable to 0 makes explicit mapping required. Users must use either a Key Trust or set an ExplicitAltSEcID variable.
 
 - Setting the variable to 1, which is the default value, allows implicit mapping.
 
