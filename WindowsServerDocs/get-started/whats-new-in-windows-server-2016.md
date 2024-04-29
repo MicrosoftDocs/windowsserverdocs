@@ -368,4 +368,14 @@ Starting with Windows 10 version 1507 and Windows Server 2016, you can configure
 
 ## KDC support for Key Trust account mapping
 
-Domain controllers now support Key Trust account mapping and fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. <!--Should I have removed the instructions?-->
+Domain controllers now support Key Trust account mapping and fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. You can configure the UseSubjectAltName variable to the following settings:
+
+- Setting the variable to 0 makes explicitmapping required. Users must use either a Key Trust or set an ExplicitAltSEcID variable.
+
+- Setting the variable to 1, which is the default value, allows implicit mapping.
+
+  - If you configure a Key Trust for an account in Windows Server 2016 or later, then KDC uses the KeyTrust for mapping.
+
+  - If there's no UPN in the SAN, KDC will attempt to use the AltSecID for mapping.
+  
+  - If there's a UPN in the SAN, KDC will attempt to use the UPN for mapping.
