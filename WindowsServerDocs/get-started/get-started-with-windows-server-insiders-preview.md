@@ -5,7 +5,7 @@ ms.topic: article
 author: xelu86
 ms.author: wscontent
 ms.contributor: stacycl
-ms.date: 01/23/2024
+ms.date: 04/25/2024
 ---
 
 # Get started with Windows Server Insiders Preview
@@ -61,5 +61,5 @@ Use your registered Windows 10 or Windows 11 device and open the [Feedback Hub](
 
 ## See also
 
-- [What's new in Windows Server Insiders Preview](whats-new-windows-server-insiders-preview.md)
+- [What's new in Windows Server 2025](whats-new-windows-server-2025.md)
 - [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app)
