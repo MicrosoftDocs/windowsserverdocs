@@ -636,6 +636,66 @@ A successful token response looks like:
 |refresh_token|Issued if the original scope parameter included offline_access.|
 |refresh_token_expires_in|Number of seconds before the included refresh token is valid for.|
 
+### Proof Key for Code Exchange (PKCE) support for OAuth
+
+OAuth public clients that use the Authorization Code Grant are susceptible to authorization code interception attacks. To mitigate these types of attacks, AD FS for Windows Server 2019 now supports Proof Key for Code Exchange (PKCE) protocols during the OAuth Authorization Code Grant flow. For more information, see [Request an authorization code](/entra/identity-platform/v2-oauth2-auth-code-flow#request-an-authorization-code) and the [PKCE RFC](https://tools.ietf.org/html/rfc7636).
+
+#### How to choose extra auth providers in 2019
+
+You can now set extra authorization policies for a specific RP<!--acronym--> by creating an extra claim rule policy. You can set this policy by running the [Set-AdfsRelyingPartyTrust](/powershell/module/adfs/set-adfsrelyingpartytrust) cmdlet in PowerShell using either the *AdditionalAuthenticationRules* or *AdditionalAuthenticationRulesFile* parameters. You can set this extra policy globally by running the [Set-AdfsAdditionalAuthenticationRule](/powershell/module/adfs/set-adfsadditionalauthenticationrule) cmdlet instead.
+
+You can also use claim rules to choose which authentication provider to use for extra authentication. This feature is useful for scenarios where customers are transitioning between authentication providers or need to use a different provider for specific applications.
+
+You can configure this setting by using the `https://schemas.microsoft.com/claims/authnmethodsproviders` claim from other authentication policies with the name of the authentication provider in its value, as shown in the following examples.
+
+### Transitioning from one auth provider to another
+
+As of Windows Server 2019, you can modify the claim rules to choose auth providers based on which setting best fits your scenario.
+
+For example, let's look at a scenario where you modify a claim rule to choose Azure AD Multi-Factor Authentication for users in group SID S-1-5-21-608905689-872870963-3921916988-12345. You can use this modification for a group you manage by enterprise, which tracks the users registered for Azure AD Multi-Factor Authentication. This modification also works for any other users you want to configure to use certificate authentication.
+
+For this example, to modify the claim rule, you'd run the following command in PowerShell:
+
+```powershell
+'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
+
+ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-21-608905689-872870963-3921916988-12345"] => issue(Type = "`https://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "AzureMfaAuthentication"); 
+
+not exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value=="S-1-5-21-608905689-872870963-3921916988-12345"]) => issue(Type = "`https://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "CertificateAuthentication");’ 
+```
+
+### Setting two different auth providers for two different applications
+
+You can also modify claim rules to set two different authentication providers for two different authentications.
+
+For example, let's say you have two applications: Application A and Application B. You want to set Application A to use Azure AD Multi-factor Authentication as an extra authentication provider. However, you want Application B to use Certificate as its extra authentication provider.
+
+To set Application A to use Azure AD Multi-factor Authentication, run this command in PowerShell.
+
+```powershell
+Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
+
+c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication");' 
+```
+
+To set Application B to use Certificate as an extra auth provider, run this command:
+
+```powershell
+Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
+
+c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");' 
+```
+
+### Allowing more than one extra authentication provider for the same application
+
+You can also configure rules to allow more than one extra authentication provider. In this scenario, AD FS shows a list of the issued auth methods providers for users to choose from. To allow multiple extra authentication providers, you should issue multiple claims using the value `https://schemas.microsoft.com/claims/authnmethodsproviders`.
+
+If the claim evaluation returns none of the auth providers, AD FS instead shows all extra auth providers configured by the admin on AD FS. The user needs to then select the appropriate auth provider.
+
+To get all the other authentication providers allowed, you can run the cmdlet `(Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticationProvider` in PowerShell. The output should return the `https://schemas.microsoft.com/claims/authnmethodsproviders` claim as one of the provider names.
+
+AD FS doesn't support triggering an extra auth provider if the RP is using [Access Control Policies in AD FS Windows Server 2016](../operations/access-control-policies-in-ad-fs.md). When you remove an appplication from Access control policy, AD FS copies the corresponding policy from Access Control Policy into *AdditionalAuthenticationRules* and *IssuanceAuthorizationRules*. If you want to use a particular auth provider, you must use Access Control Policy and modify the *AdditionalAuthenticationRules* variable.
+
 ## Related content
 
 See [AD FS Development](../AD-FS-Development.md) for the complete list of walk-through articles, which provide step-by-step instructions on using the related flows.
