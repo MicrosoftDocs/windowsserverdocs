@@ -63,20 +63,35 @@ Here's how to configure the file share witness on a domain-joined Windows device
 > The SMB file share must be hosted on a Windows server joined to the same Active Directory forest as the cluster.
 
 1. Sign in to the device, from the Windows desktop, open the **Start** menu, type **Computer Management**, right-click **Computer Management**, and select **Run as administrator**.
+
 1. In the Computer Management console, expand **System Tools > Shared Folders > Shares**.
+
 1. Right-click **Shares** from the left-side panel, then select **New Share**.
+
 1. From the **Create A Shared Folder Wizard**, select **Next** to begin.
+
 1. Enter the path to the folder that you want to share or select **Browser** to choose a folder, then select **Next**.
+
 1. Enter a name for the share, then select **Change** to configure the offline settings.
+
 1. Select the **No files or programs from the shared folder are available offline** radio option, then select **OK**. Then select **Next**.
+
 1. In the **Shared Folder Permissions** screen, select **Customize permissions**, then select **Custom**.
+
 1. Select **Everyone**, then select **Remove**.
+
 1. Select **Add**, then enter the name of the Cluster Name Object (CNO) for the cluster or suitable Active Directory group containing the CNO, then select **OK**.
+
 1. Check the **Change** and **Read** permissions for the CNO or Active Directory group.
+
 1. Select the **Security** tab, then select **Advanced**.
+
 1. From the **Advanced Security Settings** dialog, and select **Add** to add the CNO.
+
 1. Check the **Modify**, **Read & execute**, **List folder contents**, and **Read** permissions for the CNO or Active Directory group, select **OK**.
+
 1. Confirm and configure any other folder permissions to meet your organization's requirements, select **OK** for each dialog until you return to the **Shared Folder Permissions** screen.
+
 1. Select **Finish** to create the share.
 
 Now you have a file share on a domain-joined Windows device with the correct permissions you can configure the cluster quorum settings.
