@@ -1,6 +1,6 @@
 ---
 title: Configure a file share witness for Failover Clustering in Windows Server
-description: Learn how-to use a file share witnesses as a cluster quorum using Failover Cluster Manager and PowerShell.
+description: Learn how-to use a file share witness as a cluster quorum using Failover Cluster Manager and PowerShell.
 ms.topic: how-to
 author: robhind
 ms.author: wscontent
@@ -10,12 +10,12 @@ ms.date: 04/29/2024
 
 # Configure a file share witness for Failover Clustering
 
-In this article learn how-to configure a file share witness for your Failover Cluster. A file share witness is a type of quorum witness that uses a SMB file share on a server to maintains cluster information in a log file. The file share witness is used to determine the availability of the cluster nodes in addition to the node majority vote. The file share witness is a useful for multisite clusters with replicated storage.
+In this article, learn how-to configure a file share witness for your Failover Cluster. A file share witness is a type of quorum witness that uses an SMB file share on a server to maintain cluster information in a log file. The file share witness is used to determine the availability of the cluster nodes in addition to the node majority vote. The file share witness is a useful for multisite clusters with replicated storage.
 
-You might you a file share witness when:
+You might use a file share witness when:
 
 - A cloud witness can't be used because your cluster nodes don't a reliable internet connection or don't have internet connectivity.
-- A disk witness can't be used because there aren't any shared drives to use for a disk witness. For example, a Storage Spaces Direct cluster, SQL Server Always On Availability Groups (AG), or Exchange Database Availability Group (DAG).  None of these types of clusters use shared disks.
+- A disk witness can't be used because there aren't any shared drives to use for a disk witness. For example, a Storage Spaces Direct cluster, SQL Server Always On Availability Groups (AG), or Exchange Database Availability Group (DAG). None of these types of clusters use shared disks.
 
 For information about quorum configuration options, see [Configure and manage quorum](manage-cluster-quorum.md).
 
@@ -27,7 +27,7 @@ Before you can use a file share witness, you must have the following prerequisit
 
 - You have the **Full Control** permission the Failover Cluster.
 
-- A device to host the file share witness. You device can be any device that can host an SMB 2 or later file share.
+- A device to host the file share witness. Your device can be any device that can host an SMB 2 or later file share.
 
   - If you're using a non-domain joined device, your cluster must be running Windows Server 2019 or later.
 
@@ -37,11 +37,11 @@ Before you can use a file share witness, you must have the following prerequisit
 
 ## Configure the file share
 
-When configuring the a file share witness for the cluster quorum, the file share:
+When configuring a file share witness for the cluster quorum, the file share:
 
 - Must be dedicated to the single cluster and not used to store user or application data.
   - A single file server can be configured with file share witnesses for multiple clusters.
-- Should be physical separate from the cluster nodes or cluster sites. This allows equal opportunity for any cluster note or site to survive if network communication between them is lost.
+- Should be physical separate from the cluster nodes or cluster sites. Separation allows opportunity for cluster notes or sites to survive if network communication between them is lost.
 - You can use a separate Failover Cluster for high availability of the file share.
 
 > [!WARNING]
@@ -51,7 +51,7 @@ The file share witness can be hosted on a domain-joined Windows device or a non-
 
 - Network-attached storage (NAS) devices.
 - Windows computers joined to a workgroup.
-- Routers with locally-connected USB storage.
+- Routers with local USB storage.
 
 The steps to configure the file share witness are different depending on the type of device hosting the file share. To create the file share, select the relevant tab for your scenario and follow the steps.
 
@@ -62,8 +62,7 @@ Here's how to configure the file share witness on a domain-joined Windows device
 > [!IMPORTANT]
 > The SMB file share must be hosted on a Windows server joined to the same Active Directory forest as the cluster.
 
-1. Sign in to the domain-joined Windows device that will host the file share witness.
-1. From the Windows desktop, open the **Start** menu, type **Computer Management**, right-click **Computer Management**, and select **Run as administrator**.
+1. Sign in to the device, from the Windows desktop, open the **Start** menu, type **Computer Management**, right-click **Computer Management**, and select **Run as administrator**.
 1. In the Computer Management console, expand **System Tools > Shared Folders > Shares**.
 1. Right-click **Shares** from the left-side panel, then select **New Share**.
 1. From the **Create A Shared Folder Wizard**, select **Next** to begin.
@@ -76,11 +75,11 @@ Here's how to configure the file share witness on a domain-joined Windows device
 1. Check the **Change** and **Read** permissions for the CNO or Active Directory group.
 1. Select the **Security** tab, then select **Advanced**.
 1. From the **Advanced Security Settings** dialog, and select **Add** to add the CNO.
-1. Check the **Modify**, **Read & execute**, **List folder contents**, and **Read** permissions for the CNO or Active Directory group., select **OK**.
+1. Check the **Modify**, **Read & execute**, **List folder contents**, and **Read** permissions for the CNO or Active Directory group, select **OK**.
 1. Confirm and configure any other folder permissions to meet your organization's requirements, select **OK** for each dialog until you return to the **Shared Folder Permissions** screen.
 1. Select **Finish** to create the share.
 
-Now you have a file share on a domain-joined Windows device with the correct permissions, you can configure the cluster quorum settings.
+Now you have a file share on a domain-joined Windows device with the correct permissions you can configure the cluster quorum settings.
 
 ### [Non-domain joined device](#tab/non-domain-joined-witness)
 
@@ -99,7 +98,7 @@ Here's how to configure the file share witness on a non-domain joined device.
 
 1. Update the share permissions to remove all users and groups except the new local account and any permissions required to meet your organization's requirements. The new local account should have the **Change** and **Read** permissions.
 
-1. If required, modify your file system permissions. Grant the new local account **Modify**, **Read & execute**, **List folder contents**, and **Read** permissions as applicable to your file system. The local account must have write access.
+1. If necessary, modify your file system permissions. Grant the new local account **Modify**, **Read & execute**, **List folder contents**, and **Read** permissions as applicable to your file system. The local account must have write access.
 
 1. Confirm and configure any other folder permissions to meet your organization's requirements.
 
@@ -117,7 +116,7 @@ You can configure the cluster quorum settings by using Failover Cluster Manager 
 
 Here's how to configure the cluster quorum to use a file share witness on a domain joined device using Failover Cluster Manager.
 
-1. On a computer that has the Failover Cluster Management Tools installed from the Remote Server Administration Tools or on a server where you installed the Failover Clustering feature, start Failover Cluster Manager. To do this on a server, start Server Manager and then on the **Tools** menu, select **Failover Cluster Manager**.
+1. On a computer that has the Failover Cluster Management Tools installed from the Remote Server Administration Tools or on a server where you installed the Failover Clustering feature, start Failover Cluster Manager. Start **Server Manager** and then on the **Tools** menu, select **Failover Cluster Manager**.
 
 1. In Failover Cluster Manager, select the cluster that you want to change.
 
@@ -127,11 +126,11 @@ Here's how to configure the cluster quorum to use a file share witness on a doma
 
 1. On the **Select Quorum Witness** screen, select **Configure a file share witness**, then select **Next**.
 
-1. On the **Configure File Share Witness** screen, type or browse to a file share that will be used as the witness resource, then select **Next**.
+1. On the **Configure File Share Witness** screen, type or browse to a file share to use as the witness resource, then select **Next**.
 
 1. On the **Confirmation** screen, review your changes and select **Next**.
 
-1. After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, select **View Report**. The most recent report will remain in the `C:\Cluster\Reports` folder with the name `QuorumConfiguration.mht`.
+1. After the wizard runs and the **Summary** page appears, if you want to view a report of the tasks that the wizard performed, select **View Report**. The most recent report remains in the `C:\Cluster\Reports` folder with the name `QuorumConfiguration.mht`.
 
 > [!NOTE]
 > After you configure the cluster quorum, we recommend that you run the **Validate Quorum Configuration** test to verify the updated quorum settings.
@@ -143,7 +142,7 @@ Here's how to configure the cluster quorum to use a file share witness on a non-
 
 1. Sign in to a computer that has the Failover Cluster Management Tools installed from the Remote Server Administration Tools or on a server where you installed the Failover Clustering feature. Run PowerShell.
 
-1. Run the following command to configure the cluster quorum to use a file share witness, you'll be prompted to enter the local credential for the file share witness. Replace `<ClusterName>` with the name of your cluster and `\\FileShareWitnessServer\WitnessShare` with the path to the file share witness.
+1. Run the following command to configure the cluster quorum to use a file share witness, you're prompted to enter the local credential for the file share witness. Replace `<ClusterName>` with the name of your cluster and `\\FileShareWitnessServer\WitnessShare` with the path to the file share witness.
 
     ```powershell
     Set-ClusterQuorum -Cluster <ClusterName> -FileShareWitness \\FileShareWitnessServer\WitnessShare -Credential (Get-Credential)
