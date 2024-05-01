@@ -1,8 +1,8 @@
 ---
 title: Offer all available integration services to virtual machines
 description: Learn what to do when one or more available integration services are not enabled on virtual machines.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
 ms.date: 8/16/2016
