@@ -1,8 +1,8 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows Server 2008 and enabled for Dynamic Memory
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory required for Windows Server 2008.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: 0aaa7138-ce83-4b17-add7-fdfa3d469bea
 ms.date: 8/16/2016

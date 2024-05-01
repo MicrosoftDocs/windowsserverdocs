@@ -3,8 +3,8 @@ title: Deploy Hyper-V on Windows Server
 description: Gives links to articles on deploying Hyper-V
 ms.topic: article
 ms.assetid: e13abdca-5412-4c0a-99f3-2ab83666ec66
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.date: 08/21/2019
 ---
 # Deploy Hyper-V on Windows Server
