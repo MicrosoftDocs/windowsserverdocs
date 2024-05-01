@@ -15,6 +15,7 @@ In this article, learn how-to configure a file share witness for your Failover C
 You might use a file share witness when:
 
 - A cloud witness can't be used because your cluster nodes don't a reliable internet connection or don't have internet connectivity.
+
 - A disk witness can't be used because there aren't any shared drives to use for a disk witness. For example, a Storage Spaces Direct cluster, SQL Server Always On Availability Groups (AG), or Exchange Database Availability Group (DAG). None of these types of clusters use shared disks.
 
 For information about quorum configuration options, see [Configure and manage quorum](manage-cluster-quorum.md).
@@ -40,8 +41,11 @@ Before you can use a file share witness, you must have the following prerequisit
 When configuring a file share witness for the cluster quorum, the file share:
 
 - Must be dedicated to the single cluster and not used to store user or application data.
+
   - A single file server can be configured with file share witnesses for multiple clusters.
+
 - Should be physical separate from the cluster nodes or cluster sites. Separation allows opportunity for cluster notes or sites to survive if network communication between them is lost.
+
 - You can use a separate Failover Cluster for high availability of the file share.
 
 > [!WARNING]
@@ -50,7 +54,9 @@ When configuring a file share witness for the cluster quorum, the file share:
 The file share witness can be hosted on a domain-joined Windows device or a non-domain joined device, for example:
 
 - Network-attached storage (NAS) devices.
+
 - Windows computers joined to a workgroup.
+
 - Routers with local USB storage.
 
 The steps to configure the file share witness are different depending on the type of device hosting the file share. To create the file share, select the relevant tab for your scenario and follow the steps.
