@@ -10,47 +10,15 @@ ms.topic: conceptual
 
 # Active Directory maximum limits and scalability
 
-Applies To: Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2
+>Applies to: Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2
 
-This topic describes Active Directory scalability and other limitations, as well as recommendations that apply when you are designing or implementing an Active Directory infrastructure. These limitations include the following:
-
-Maximum Number of Objects
-
-Maximum Number of Security Identifiers
-
-Maximum Number of entries in Discretionary and Security Access Control Lists
-
-Group Memberships for Security Principals
-
-FQDN Length Limitations
-
-File Name and Path Length Limitations
-
-Additional Name Length Limitations
-
-Maximum Number of GPOs Applied
-
-Trust Limitations
-
-Maximum Number of Accounts per LDAP Transaction
-
-Recommended Maximum Number of Users in a Group
-
-Recommended Maximum Number of Domains in a Forest
-
-Recommended Maximum Number of Domain Controllers in a Domain
-
-Recommended Maximum Kerberos Settings
-
-Maximum number of non-linked attribute values
-
-Maximum size of Active Directory objects
+This article describes the maximum limits for certain aspects of your Active Directory environment that can affect scalability. We recommend you keep these limits in mind while planning for your Active Directory deployment.
 
 ## Maximum Number of Objects
 
-Each domain controller in an Active Directory forest can create a little bit less than 2.15 billion objects during its lifetime.
+Each domain controller in an Active Directory forest can create almost 2.15 billion objects during its lifetime.
 
-Each Active Directory domain controller has a unique identifier that is specific to the individual domain controller. These identifiers, which are called Distinguished Name Tags (DNTs), are not replicated or otherwise visible to other domain controllers. The range of values for DNTs is from 0 through 2,147,483,393 (231 minus 255). As objects are created on a domain controller, a unique value is used. A DNT is not reused when an object is deleted. Therefore, domain controllers are limited to creating approximately 2 billion objects (including objects that are created through replication). This limit applies to the aggregate of all objects from all partitions (domain NC, configuration, schema, and any application directory partitions) that are hosted on the domain controller.
+Each Active Directory domain controller has a unique identifier specific to the individual domain controller. These identifiers, which are called Distinguished Name Tags (DNTs), are unique values that aren't replicated or otherwise visible to other domain controllers. The range of values for DNTs is from 0 through 2,147,483,393 (231 minus 255). When you delete an object, no new objects you create afterwards can use the same DNT. Therefore, domain controllers are limited to creating under two billion objects, which also includes objects the domain controller replicates. This limit applies to the aggregate of all objects from all partitions (domain NC, configuration, schema, and any application directory partitions) that are hosted on the domain controller.
 
 Because new domain controllers start with low initial DNT values (typically, anywhere from 100 up to 2,000), it may be possible to work around the domain controller lifetime creation limit—assuming, of course, that the domain is currently maintaining less than 2 billion objects. For example, if the lifetime creation limit is reached because approximately 2 billion objects are created, but 500 million objects are removed from the domain (for example, deleted and then permanently removed from the database through the garbage collection process), installing a new domain controller and allowing it to replicate the remaining objects from the existing domain controllers is a potential workaround. However, it is important that the new domain controller receives the objects through replication and that such domain controllers not be promoted with the Install from Media (IFM) option. Domain controllers that are installed with IFM inherit the DNT values from the domain controller that was used to create the IFM backup.
 
