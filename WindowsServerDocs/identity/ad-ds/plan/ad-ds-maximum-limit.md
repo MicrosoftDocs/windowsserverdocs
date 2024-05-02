@@ -14,77 +14,82 @@ ms.topic: conceptual
 
 This article describes the maximum limits for certain aspects of your Active Directory environment that can affect scalability. We recommend you keep these limits in mind while planning for your Active Directory deployment.
 
-## Maximum Number of Objects
+## Maximum number of objects
 
 Each domain controller in an Active Directory forest can create almost 2.15 billion objects during its lifetime.
 
-Each Active Directory domain controller has a unique identifier specific to the individual domain controller. These identifiers, which are called Distinguished Name Tags (DNTs), are unique values that aren't replicated or otherwise visible to other domain controllers. The range of values for DNTs is from 0 through 2,147,483,393 (231 minus 255). When you delete an object, no new objects you create afterwards can use the same DNT. Therefore, domain controllers are limited to creating under two billion objects, which also includes objects the domain controller replicates. This limit applies to the aggregate of all objects from all partitions (domain NC, configuration, schema, and any application directory partitions) that are hosted on the domain controller.
+Each Active Directory domain controller has a unique identifier specific to the individual domain controller. These identifiers, which are called Distinguished Name Tags (DNTs), are unique values that aren't replicated or otherwise visible to other domain controllers. The range of values for DNTs is from 0 through 2,147,483,393 (231 minus 255). When you delete an object, no new objects you create afterwards can use the same DNT. Therefore, domain controllers are limited to creating under two billion objects, which also includes objects the domain controller replicates. This limit applies to the aggregate of all objects from all partitions hosted on the domain controller, including the domain NC<!--Acronym-->, configuration, schema, and any application directory partitions.
 
-Because new domain controllers start with low initial DNT values (typically, anywhere from 100 up to 2,000), it may be possible to work around the domain controller lifetime creation limit—assuming, of course, that the domain is currently maintaining less than 2 billion objects. For example, if the lifetime creation limit is reached because approximately 2 billion objects are created, but 500 million objects are removed from the domain (for example, deleted and then permanently removed from the database through the garbage collection process), installing a new domain controller and allowing it to replicate the remaining objects from the existing domain controllers is a potential workaround. However, it is important that the new domain controller receives the objects through replication and that such domain controllers not be promoted with the Install from Media (IFM) option. Domain controllers that are installed with IFM inherit the DNT values from the domain controller that was used to create the IFM backup.
+There are possible ways to work around the domain controller lifetime creation limit. For example, you can remove objects from the domain by deleting them permanently. You can also install a new domain controller that replicates the remaining objects from the potential domain controller. However, you must make sure the new domain controller receives the objects through replication, and that you don't promote it using the Install from Media (IFM) option. Domain controllers installed using IFM inherit the DNT values from the domain controller the IFM backup was based on.
 
-At the database level, the error that occurs when the DNT limit is reached is “Error: Add: Operations Error. <1> Server error: 000020EF: SvcErr: DSID-0208044C, problem 5012 (DIR_ERROR), data -1076.”
+When you reach the DNT limit on a database, you see the following error message:
+
+```cmd
+Error: Add: Operations Error. <1> Server error: 000020EF: SvcErr: DSID-0208044C, problem 5012 (DIR_ERROR), data -1076.
+```
 
 >[!NOTE]
->KB article [2548145](https://support.microsoft.com/kb/2548145) includes a hotfix to correct a problem where the size of the Active Directory database can increase rapidly on a domain controller that hosts the DNS server role, with most of the growth contributed by deleted DNS records. To remove those records, the garbage collection task processes a maximum of 5000 records in a single database transaction (also known as MAX_DUMPSTER_SIZE), and will continue to re-schedule itself until it is done. The hotfix does not change the garbage collection process; it only changes behavior in the DNS Server component and how it deals with deletions of dnsNode objects. For more information about garbage collection, see [How the Active Directory–Data Store Really Works (Inside NTDS.dit)–Part 4](https://blog.chrisse.se/?p=942).
+>If you run into an issue where the size of your Active Directory database increases rapidly on a domain controller that hosts the DNS<!--acronym--> server role due to deleted DNS records, see [KB 2548145](https://support.microsoft.com/kb/2548145). This KB article describes a hotfix that changes how the DNS Server component deals with dnsNode object deletions during the garbage collection process.
 
-Beginning with Windows Server 2012, you can check a rootDSE operational attribute named approximateHighestInternalObjectID to determine the actual highest DNT in use on a domain controller. The following script can be used to retrieve this attribute value:
+You can run the following command to check the *approximateHighestInternalObjectID* attribute to see the highest DNT your domain controller currently uses:
 
 ```cmd
 $ossupported = $false
- 
+ 
 # max possible DNTs
 $maxdnts = [System.Math]::Pow(2, 31) - 255
- 
+ 
 # connect rootDSE
 $root = [ADSI]"LDAP://rootDSE"
- 
+ 
 # get operational attribute dsaVersionString
 $root.RefreshCache("dsaVersionString")
- 
+ 
 # get version string usable in System.Version
 $osverstring = $root.dsaVersionString[0].Substring(0, $root.dsaVersionString[0].IndexOf(" "))
- 
+ 
 try
 {
-    $osver = New-Object System.Version $osverstring
- 
-    # we need at least W2K12 DC to see the approximateHighestInternalObjectID exposed
-    if ($osver.Major -gt 6)
-    { $ossupported = $true }
- 
-    elseif ($osver.Major -eq 6)
-    { $ossupported = ($osver.Minor -ge 2) }
+    $osver = New-Object System.Version $osverstring
+ 
+    # we need at least W2K12 DC to see the approximateHighestInternalObjectID exposed
+    if ($osver.Major -gt 6)
+    { $ossupported = $true }
+ 
+    elseif ($osver.Major -eq 6)
+    { $ossupported = ($osver.Minor -ge 2) }
 }
- 
+ 
 catch
-{ Write-Host "ERROR: Could not evaluate DC OsVer!"  }
- 
+{ Write-Host "ERROR: Could not evaluate DC OsVer!"  }
+ 
 if ($ossupported)
 {
-    # get operational attribute approximateHighestInternalObjectID
-    $root.RefreshCache("approximateHighestInternalObjectID")
- 
-    Write-Host "Approx highest committed DNT: $($root.approximateHighestInternalObjectID[0])"
- 
-    Write-Host "DNTs left for new assignments: $($maxdnts - $root.approximateHighestInternalObjectID[0]) from $maxdnts"
+    # get operational attribute approximateHighestInternalObjectID
+    $root.RefreshCache("approximateHighestInternalObjectID")
+ 
+    Write-Host "Approx highest committed DNT: $($root.approximateHighestInternalObjectID[0])"
+ 
+    Write-Host "DNTs left for new assignments: $($maxdnts - $root.approximateHighestInternalObjectID[0]) from $maxdnts"
 }
- 
+ 
 else
 { Write-Host "approximateHighestInternalObjectID not exposed (DC OsVer: $osverstring)" }
 ```
 
-## Maximum Number of Security Identifiers
+## Maximum number of security identifiers
 
-Beginning with Windows Server 2012, the maximum number of security identifiers that can be created over the life of a domain is increased to 2,147,483,647 RIDs. This increase is part of a series of improvements made to how RIDS are issued and monitored. For more information, see [Managing RID Issuance](https://technet.microsoft.com/en-us/library/jj574229.aspx).
+The maximum number of security identifiers you can create over the lifetime of a domain controller is 2,147,483,647 RIDs. For more information about issuing and monitoring RIDs, see [Managing RID Issuance](https://technet.microsoft.com/library/jj574229.aspx).
 
-In Windows Server 2008 R2 and earlier operating systems, there is a limit of approximately 1 billion security identifiers (SIDs) over the life of a domain. This limit is due to the size of the global relative identifier (RID) pool of 30 bits that makes each SID (that is assigned to user, group, and computer accounts) in a domain unique. The actual limit is 230 or 1,073,741,823 RIDs. Because RIDs are not reused—even if security principals are deleted—the maximum limit applies, even if there are less than 1 billion security principals in the domain.
+This limit is due to the size of the global relative identifier (RID) pool that makes each SID assigned to user, group, and computer accounts in a domain unique. RIDs aren't reused even if you delete their security principals, so the maximum limit always applies no matter how many security principals are in the domain.
 
 >[!NOTE]
->RIDs are assigned in blocks of 500 by default from the domain controller that holds the RID operations master role in each domain. If a domain controller is demoted, the unused RIDs that were allocated to the domain controller are not returned to the global RID pool and are therefore no longer available for use in the domain.
+>RIDs are assigned in blocks of 500 by default from the domain controller that holds the RID operations master role in each domain. If you demote a domain controller, the unused RIDs originally allocated to the domain controller don't return to the global RID pool and become unavailable for use in the domain.
 
-Beginning in Windows Server 2012, an artificial ceiling is introduced when the number of available RIDs reaches within 10 percent of the limit for the global RID space. When within one percent of the artificial ceiling, domain controllers that request RID pools will log Directory-Services-SAM warning event 16656 to their System event log. For more information, see [Managing RID Issuance](https://technet.microsoft.com/en-us/library/jj574229.aspx).
+Windows Server begins to prepare an artificial limit for RID issuance when the number of available RIDs reaches 90 percent of the available global RID space. When the number of available RIDs reaches comes within one percent of that limit, domain controllers that request RID pools will receive the Directory-Services-SAM warning event 16656 in their System event log.
 
-In Windows Server 2008 R2 and earlier operating systems, when all the available RIDs are assigned for a domain, the Directory Service log in the Application and Service Logs of Event Viewer also displays Event ID 16644 from an event log source of the Security Accounts Manager (SAM) that reads “The maximum domain account identifier value has been reached. No further account-identifier pools can be allocated to domain controllers in this domain.” If you run Dcdiag when all the available RIDs are assigned for a domain, you see the error message “The DS has corrupt data: rIDAvailablePool value is not valid.”
+A partial workaround to the RID limit is creating an additional domain for holding accounts, then migrating accounts to that new domain. However, you must create this account and any required trust relationships before you reach the limit. 
+
 
 A partial work-around to this limitation is to create an additional domain to hold accounts and then migrate accounts to the new domain. However, you must create a trust relationship to migrate accounts in advance of reaching the limit. Creating a trust requires the creation of a security principal, which is also known as a trust user account. For more information about this limit, see articles [316201](https://go.microsoft.com/fwlink/?LinkID=115211) and [305475](https://go.microsoft.com/fwlink/?LinkId=115212) in the Microsoft Knowledge Base.
 
