@@ -88,65 +88,58 @@ This limit is due to the size of the global relative identifier (RID) pool that 
 
 Windows Server begins to prepare an artificial limit for RID issuance when the number of available RIDs reaches 90 percent of the available global RID space. When the number of available RIDs reaches comes within one percent of that limit, domain controllers that request RID pools will receive the Directory-Services-SAM warning event 16656 in their System event log.
 
-A partial workaround to the RID limit is creating an additional domain for holding accounts, then migrating accounts to that new domain. However, you must create this account and any required trust relationships before you reach the limit. 
-
-
-A partial work-around to this limitation is to create an additional domain to hold accounts and then migrate accounts to the new domain. However, you must create a trust relationship to migrate accounts in advance of reaching the limit. Creating a trust requires the creation of a security principal, which is also known as a trust user account. For more information about this limit, see articles [316201](https://go.microsoft.com/fwlink/?LinkID=115211) and [305475](https://go.microsoft.com/fwlink/?LinkId=115212) in the Microsoft Knowledge Base.
+A partial workaround to the RID limit is creating an extra domain for holding accounts, then migrating accounts to that new domain. However, you must create any required trust relationships for the new domain before you reach the limit. Creating a trust relationship requires a security principle, also known as a trust user account. For more information about the RID limit, see [KB 316201](https://go.microsoft.com/fwlink/?LinkID=115211) and [KB 305475](https://go.microsoft.com/fwlink/?LinkId=115212).
 
 >[!NOTE]
->The Active Directory database does not set limits on the number of objects in a container, such as organizational units (OUs). You might experience limits when you work with multiple thousands of objects. These limits are configured to help provide a certain level of application or service availability. For example, the Active Directory Users and Computers snap-in is configured by default to display a maximum of 2,000 objects per container. You can adjust this value by using the Filter Options settings on the View menu. There are also adjustable Lightweight Directory Access Protocol (LDAP) policies that are set by default to improve domain controller performance. These policies are described in article [315071](https://go.microsoft.com/fwlink/?LinkID=135481).
+> The Active Directory database doesn't set limits on the number of objects in a container, but does set limits when you work with many thousands of objects. Microsoft configured these limits to provide a certain level of application or service availablility. You can adjust these limits by either reconfiguring Filter Options settings on the view menu or changing the Lightweight Directory Access Protocol (LDAP) policies. For more information, see [KB 315071](https://go.microsoft.com/fwlink/?LinkID=135481).
 
 ## Maximum Number of entries in Discretionary and Security Access Control Lists
 
-The limitation for the number of entries in a discretionary access control list (DACL) or a security access control list (SACL) of an Active Directory object using the ntSecurityDescriptor attribute comes from a limitation in the size of the access control list (ACL), which is 64K. Since access control entries (ACEs) vary in size, the actual number of entries (SIDs) is approximately 1,820. For additional details, see [How Security Descriptors and Access Control Lists Work](https://go.microsoft.com/fwlink/?LinkId=214683).
+This limitation applies to how many entries you can have in a discretionary access control list (DACL) or a security access control list (SACL) of an Active Directory object using the ntSecurityDescriptor attribute. The limit itself is based on the size limitations of the access control list (ACL), which is 64K. Because access control entries (ACEs) can vary in size, the actual maximum number of entries (SIDs) is about 1,820. For more details, see [How Security Descriptors and Access Control Lists Work](https://go.microsoft.com/fwlink/?LinkId=214683).
 
-## Group Memberships for Security Principals
+## Group Memberships for security principals
 
-Security principals (that is, user, group, and computer accounts) can be members of a maximum of approximately 1,015 groups. This limitation is due to the size limit for the access token that is created for each security principal. The limitation is not affected by how the groups may or may not be nested. For more information, see article 328889 in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkID=115213). For a detailed discussion of access token limitations, see Addressing Problems Due to Access Token Limitation (https://go.microsoft.com/fwlink/?LinkId=146571).
+Security principals, such as user, group, and computer accounts, can be members of a maximum of 1,015 groups. This limitation is because the access token that you create for each security principal has a size limit, which isn't affected by how you nest the groups. For more information, see [KB 328889](https://go.microsoft.com/fwlink/?LinkID=115213) and [Addressing Problems Due to Access Token Limitation](https://go.microsoft.com/fwlink/?LinkId=146571).
 
-For more information about how a domain controller creates the data structure that is used for authorization decisions, see:
+For more information about how a domain controller creates the data structure that is used for authorization decisions, see the following articles:
 
-[MS-PAC]: Privilege Attribute Certificate Data Structure (https://msdn.microsoft.com/en-us/library/cc237917(PROT.13).aspx)
+- [MS-PAC: Privilege Attribute Certificate Data Structure](https://msdn.microsoft.com/library/cc237917(PROT.13).aspx)
 
-3.3.5.3.2 Initial Population of the PAC (https://msdn.microsoft.com/en-us/library/cc233956(PROT.13).aspx)
+- [Initial Population of the PAC](https://msdn.microsoft.com/library/cc233956(PROT.13).aspx)
 
-3.3.5.4.3 Domain Local Group Membership (https://msdn.microsoft.com/en-us/library/cc233950(PROT.13).aspx)
+- [Domain Local Group Membership](https://msdn.microsoft.com/library/cc233950(PROT.13).aspx)
 
-## FQDN Length Limitations
+## FQDN length limitations
 
-Fully qualified domain names (FQDNs) in Active Directory cannot exceed 64 characters in total length, including hyphens and periods (.). For example, the following host name has 65 characters; therefore, it is not valid in an Active Directory domain:
+Fully qualified domain names (FQDNs) in Active Directory can't exceed 64 characters in total length, including hyphens and periods. This limitation exists because the Win3 application programming interfaces (APIs) and Group Policy objects (GPOs) stored in the SYSVOL share define the MAX_PATH value as 260 characters. For more information, see [KB 245809](https://go.microsoft.com/fwlink/?LinkID=115219) and [KB 909264](https://go.microsoft.com/fwlink/?LinkID=106629).
 
-server10.branch-15.southaz.westernregion.northamerica.contoso.com
+## Filename and path limitations
 
-This is an important limitation to keep in mind when you name domains. This limitation is due to the MAX_PATH length of 260 characters that the Win32 application programming interfaces (APIs) define, in combination with the way in which Group Policy objects (GPOs) are stored in the SYSVOL share. For more information, see article 245809 in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkID=115219). For more information about naming limitations, see article 909264 in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkID=106629).
+The physical files that Active Directory components use, such as SYSVOL, database (NTDS.DIT), and log file paths, are limited by the MAX_PATH length of 260 characters, as defined by the Win32 APIs. When deciding where to place your SYSVOL and database files during Active Directory installation, avoid nested folder structures that make the full file path to any physical files in your Active Directory longer than 260 characters. For more information, see [KB 245809](https://go.microsoft.com/fwlink/?LinkId=115219).
 
-## File Name and Path Length Limitations
+## Other name length limitations
 
-The physical files that Active Directory components use, such as SYSVOL, database (NTDS.DIT), and log file paths, are constrained by the MAX_PATH length of 260 characters, as defined by the Win32 APIs. When you are determining where to place your SYSVOL and database files during Active Directory installation, avoid nested folder structures that make the full file path to the SYSVOL folder, database, and log files longer than 260 characters. For more information, see article 245809 in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=115219).
+The following name length limits, which are described in [KB 909264](https://go.microsoft.com/fwlink/?LinkID=106629), also apply to resource and file names in Active Directory:
 
-## Additional Name Length Limitations
+- NetBIOS computer and domain names can only be 15 characters long.
 
-There are additional limitations regarding name lengths in Active Directory. The following limits are described in article 909264 in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkID=106629):
+- Domain Name System (DNS) host names can only be 24 characters long.
 
-NetBIOS computer and domain names are limited to 15 characters.
+- OU names can only be 64 characters long.
 
-Domain Name System (DNS) host names are limited to 24 characters.
+## Name length limits from the schema
 
-OU names are limited to 64 characters.
+The schema imposes the following default limits on attribute names for Active Directory objects:
 
-## Name Length Limits from the Schema
+- Display names can only be 256 characters long, as described in [Display-Name Attribute](https://go.microsoft.com/fwlink/?LinkId=153705).
 
-Default limits on attribute names for Active Directory objects that are imposed by the schema include the following. These items provide examples of schema-limited name attributes:
+- Common names can only be 64 characters long, as described in [Common-Name Attribute](https://go.microsoft.com/fwlink/?LinkId=153706).
 
-Display names are limited to 256 characters. For more information, see Display-Name Attribute (https://go.microsoft.com/fwlink/?LinkId=153705).
+- The SAM-Account-Name attribute can only be 256 characters long in the schema. However, for the purpose of backward compatibility, the Active Directory limit is 20 characters long. For more information, see [SAM-Account-Name Attribute](https://go.microsoft.com/fwlink/?LinkId=153707).
 
-Common names are limited to 64 characters. For more information, see Common-Name Attribute (https://go.microsoft.com/fwlink/?LinkId=153706).
+## Name length limitations for LDAP simple bind operations
 
-The SAM-Account-Name attribute (also known as the pre–Windows 2000 user logon name) is limited to 256 characters in the schema. However, for the purpose of backward compatibility the limit is 20 characters. For more information, see SAM-Account-Name Attribute (https://go.microsoft.com/fwlink/?LinkId=153707).
-
-## Name Length Limitations for LDAP Simple Bind Operations
-
-During binds to the directory, simple LDAP bind operations limit the distinguished name (also known as DN) of the user to 255 total characters. If you attempt a simple LDAP bind with more than 255 characters, you might experience authentication errors, such as the following:
+During binds to the directory, simple LDAP bind operations limit the distinguished name (DN) for the user to 255 characters. If you attempt a simple LDAP bind with more than 255 characters, you might experience authentication errors, such as the following:
 
 ```text
 Error <49>: ldap_simple_bind_s() failed: Invalid Credentials
@@ -154,42 +147,37 @@ Server error: 80090308: LdapErr: DSID-0C0903AA, comment: AcceptSecurityContext e
 Error 0x80090308 The token supplied to the function is invalid
 ```
 
-You can avoid this issue by ensuring that the applications, scripts, and utilities that attempt to bind to your directory use secure LDAP binds. You can also avoid this issue by reducing the depth of the OU structure or the length of the OU names. For example, the following distinguished name is 261 characters:
+You can avoid this issue by ensuring that the applications, scripts, and utilities that attempt to bind to your directory use secure LDAP binds. You can also try reducing the depth of the OU structure or the length of the OU names. For example, the following distinguished name is 261 characters:
 
 ```text
 CN=BobKelly,OU=CorporateVicePresidents,OU=CorporateOfficers,OU=ViewOfPugetSoundOffices,OU=TopFloor,OU=Building1557,OU=CorporateCampus,OU=Redmond,OU=Washington,OU=NorthWestern,OU=UnitedStatesOfAmerica,OU=NorthAmerica,DC=BusinessGroup,DC=humongousinsurance,DC=com
 ```
 
-If the OU named CorporateVicePresidents is shortened to CVP, the distinguished name for the user account BobKelly is only 242 characters.
+If you shorten the OU named `CorporateVicePresidents` to `CVP`, the distinguished name for the `BobKelly` user account is now only 242 characters and is therefore within the limit.
 
-## Maximum Number of GPOs Applied
+## Maximum number of GPOs applied
 
-There is a limit of 999 Group Policy objects (GPOs) that you can apply to a user account or computer account. This does not mean that the total number of policy settings on the system is limited to 999. Rather, a single user or computer will not be able to process more than 999 GPOs. This limit exists for performance reasons.
+Active Directory limits the amount of GPOs you can apply to a user or computer account to 999. This limit doesn't mean the total number of policy settings on the system is limited to 999. Instead, a single user or computer can't process more than 999 GPOs. This limitation exists to prevent performance issues caused by processing too many GPOs at the same time.
 
-## Trust Limitations
+## Trust limitations
 
-Trust limitations arise from the number of trusted domain objects (TDOs), the length of trust paths, and the ability of clients to discover available trusts. Limitations that apply include the following:
+Trust limitations apply to the number of trusted domain objects (TDOs), the length of trust paths, and the ability of clients to discover available trusts. The trust limitations for Active Directory include the following:
 
-- Kerberos clients can traverse a maximum of 10 trust links to locate a requested resource in another domain. If the trust path between the domains exceeds this limit, the attempt to access the domain fails.
+- Kerberos clients can traverse up to 10 trust links to locate a requested resource in another domain. If the trust path between the domains exceeds this limit, the attempt to access the domain fails.
 
-- When a client searches out a trust path, the search is limited to the trusts that are established directly with a domain and the trusts that are transitive within a forest.
+- When a client searches out a trust path, the search is limited to trusts established directly with a domain and trusts that are transitive within a forest.
 
 - Previous testing shows that the increased time to complete TDO-related operations, such as authentication across domains, deteriorates performance noticeably if the Active Directory implementation in an organization contains more than 2,400 TDOs.
 
-For more information about trust limitations, see “Practical Limitations of Trusts” in How Domain and Forest Trusts Work (https://go.microsoft.com/fwlink/?LinkID=35356).
+For more information about trust limitations, see [Practical limitations of trusts](/previous-versions/windows/it-pro/windows-server-2003/cc773178(v=ws.10)?redirectedfrom=MSDN#practical-limitations-of-trusts).
 
-## Maximum Number of Accounts per LDAP Transaction
+## Maximum number of accounts per LDAP transaction
 
-When you write scripts or applications that perform LDAP transactions, the recommended limit is to perform no more than 5,000 operations per LDAP transaction. An LDAP transaction is a group of directory operations (such as add, delete, and modify) that are treated as one unit. If your script or application performs more than 5,000 operations in a single LDAP transaction, you are at risk of running into resource limits and an operational time-out. If that happens, all the operations (changes, additions, and modifications) in the transaction are rolled back, which means that you lose all those changes.
+When you write scripts or design applications that perform LDAP transactions, we recommend that you perform no more than 5,000 operations per LDAP transaction. An LDAP transaction is a group of directory operations that are treated as one unit, such as add, delete, and modify. If you perform more than 5,000 operations in one LDAP transaction, you're at risk of running into resource limits and an operational time-out. If you run into that issue, all operations in the transaction are rolled back, causing you to lose any changes you made during the transaction. To learn more about the LDAP data structure that commits changes, see [LDAPModA Structure](/windows/win32/api/winldap/ns-winldap-ldapmoda).
 
-As an example, if you are using Active Directory Service Interfaces (ADSI) to write a script, the SetInfo method completes a transaction. For more information about ADSI Methods, see Active Directory Service Interfaces (https://go.microsoft.com/fwlink/?LinkID=4487).
+## Recommended maximum number of users in a group
 
-As another example, when you use the System.DirectoryServices (S.DS) namespace in the Microsoft .NET Framework, the DirectoryEntry.CommitChanges method completes an LDAP transaction. For more information about the DirectoryEntry.CommitChanges method, see DirectoryEntry.CommitChanges () (https://go.microsoft.com/fwlink/?LinkId=115220).
-
->[!NOTE]
->Regardless of the method that you use for LDAP transactions, you should plan to send less than 5,000 directory operations in a single transaction. To learn more about the LDAP data structure that commits changes, see LDAPMod (https://go.microsoft.com/fwlink/?LinkId=115221).
-
-## Recommended Maximum Number of Users in a Group
+<!---Stopped here--->
 
 For Windows 2000 Active Directory environments, the recommended maximum number of members in a group is 5,000. This recommendation is based on the number of concurrent atomic changes that can be committed in a single database transaction.
 
