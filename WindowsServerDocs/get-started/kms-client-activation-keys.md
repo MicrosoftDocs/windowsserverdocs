@@ -54,24 +54,24 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
-| Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 | Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
+| Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 | Windows Server 2022 Datacenter: Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV |
 
 # [Windows Server 2019](#tab/server2019)
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
-| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 | Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C |
+| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 | Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726 |
 
 # [Windows Server 2016](#tab/server2016)
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
-| Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
+| Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
 | Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
 
 ---
@@ -82,8 +82,8 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
-| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
+| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 
 > [!IMPORTANT]
 > Windows Server, version 20H2 reached end of service on August 9, 2022 and is no longer receiving security updates. This includes the retirement of Windows Server Semi-Annual Channel (SAC) with no future releases.
@@ -149,15 +149,15 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
-| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 
 # [Windows Server, version 1709](#tab/version1709)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
-| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 
 # [Windows Server 2012 R2](#tab/2012r2)
 
