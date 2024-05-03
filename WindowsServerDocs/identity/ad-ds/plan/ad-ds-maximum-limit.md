@@ -1,6 +1,6 @@
 ---
 title: Active Directory maximum limits and scalability
-description: 
+description: Recommended limits for ensuring your Active Directory depoyment performs optimally.
 author: Heidilohr
 ms.author: helohr
 manager: helohr
@@ -18,7 +18,7 @@ This article describes the maximum limits for certain aspects of your Active Dir
 
 Each domain controller in an Active Directory forest can create almost 2.15 billion objects during its lifetime.
 
-Each Active Directory domain controller has a unique identifier specific to the individual domain controller. These identifiers, which are called Distinguished Name Tags (DNTs), are unique values that aren't replicated or otherwise visible to other domain controllers. The range of values for DNTs is from 0 through 2,147,483,393 (231 minus 255). When you delete an object, no new objects you create afterwards can use the same DNT. Therefore, domain controllers are limited to creating under two billion objects, which also includes objects the domain controller replicates. This limit applies to the aggregate of all objects from all partitions hosted on the domain controller, including the domain NC<!--Acronym-->, configuration, schema, and any application directory partitions.
+Each Active Directory domain controller has a unique identifier specific to the individual domain controller. These identifiers, which are called Distinguished Name Tags (DNTs), are unique values that aren't replicated or otherwise visible to other domain controllers. The range of values for DNTs is from 0 through 2,147,483,393 (231 minus 255). When you delete an object, no new objects you create afterwards can use the same DNT. Therefore, domain controllers are limited to creating under two billion objects, which also includes objects the domain controller replicates. This limit applies to the aggregate of all objects from all partitions hosted on the domain controller, including the domain network computer (NC), configuration, schema, and any application directory partitions.
 
 There are possible ways to work around the domain controller lifetime creation limit. For example, you can remove objects from the domain by deleting them permanently. You can also install a new domain controller that replicates the remaining objects from the potential domain controller. However, you must make sure the new domain controller receives the objects through replication, and that you don't promote it using the Install from Media (IFM) option. Domain controllers installed using IFM inherit the DNT values from the domain controller the IFM backup was based on.
 
@@ -29,7 +29,7 @@ Error: Add: Operations Error. <1> Server error: 000020EF: SvcErr: DSID-0208044C,
 ```
 
 >[!NOTE]
->If you run into an issue where the size of your Active Directory database increases rapidly on a domain controller that hosts the DNS<!--acronym--> server role due to deleted DNS records, see [KB 2548145](https://support.microsoft.com/kb/2548145). This KB article describes a hotfix that changes how the DNS Server component deals with dnsNode object deletions during the garbage collection process.
+>If you run into an issue when you delete Domain Name Server (DNS) records and the size of your Active Directory database increases rapidly on a domain controller that hosts the DNS server role, see [KB 2548145](https://support.microsoft.com/kb/2548145). This KB article describes a hotfix that changes how the DNS Server component deals with dnsNode object deletions during the garbage collection process.
 
 You can run the following command to check the *approximateHighestInternalObjectID* attribute to see the highest DNT your domain controller currently uses:
 
@@ -95,11 +95,11 @@ A partial workaround to the RID limit is creating an extra domain for holding ac
 
 ## Maximum Number of entries in Discretionary and Security Access Control Lists
 
-This limitation applies to how many entries you can have in a discretionary access control list (DACL) or a security access control list (SACL) of an Active Directory object using the ntSecurityDescriptor attribute. The limit itself is based on the size limitations of the access control list (ACL), which is 64K. Because access control entries (ACEs) can vary in size, the actual maximum number of entries (SIDs) is about 1,820. For more details, see [How Security Descriptors and Access Control Lists Work](https://go.microsoft.com/fwlink/?LinkId=214683).
+This limitation applies to how many entries you can have in a discretionary access control list (DACL) or a security access control list (SACL) of an Active Directory object using the ntSecurityDescriptor attribute. The limit itself is based on the size limitations of the access control list (ACL), which is 64K. Because access control entries (ACEs) can vary in size, the actual maximum number of entries (SIDs) is about 1,820. For more details, see [How Security Descriptors and Access Control Lists Work](/previous-versions/windows/it-pro/windows-server-2003/cc781716(v=ws.10)?redirectedfrom=MSDN).
 
 ## Group Memberships for security principals
 
-Security principals, such as user, group, and computer accounts, can be members of a maximum of 1,015 groups. This limitation is because the access token that you create for each security principal has a size limit, which isn't affected by how you nest the groups. For more information, see [KB 328889](https://go.microsoft.com/fwlink/?LinkID=115213) and [Addressing Problems Due to Access Token Limitation](https://go.microsoft.com/fwlink/?LinkId=146571).
+Security principals, such as user, group, and computer accounts, can be members of a maximum of 1,015 groups. This limitation is because the access token that you create for each security principal has a size limit, which isn't affected by how you nest the groups. For more information, see [KB 328889](https://go.microsoft.com/fwlink/?LinkID=115213).
 
 For more information about how a domain controller creates the data structure that is used for authorization decisions, see the following articles:
 
@@ -131,11 +131,11 @@ The following name length limits, which are described in [KB 909264](https://go.
 
 The schema imposes the following default limits on attribute names for Active Directory objects:
 
-- Display names can only be 256 characters long, as described in [Display-Name Attribute](https://go.microsoft.com/fwlink/?LinkId=153705).
+- Display names can only be 256 characters long, as described in [Display-Name Attribute](/windows/win32/adschema/a-displayname).
 
-- Common names can only be 64 characters long, as described in [Common-Name Attribute](https://go.microsoft.com/fwlink/?LinkId=153706).
+- Common names can only be 64 characters long, as described in [Common-Name Attribute](/windows/win32/adschema/a-cn).
 
-- The SAM-Account-Name attribute can only be 256 characters long in the schema. However, for the purpose of backward compatibility, the Active Directory limit is 20 characters long. For more information, see [SAM-Account-Name Attribute](https://go.microsoft.com/fwlink/?LinkId=153707).
+- The SAM-Account-Name attribute can only be 256 characters long in the schema. However, for the purpose of backward compatibility, the Active Directory limit is 20 characters long. For more information, see [SAM-Account-Name Attribute](/windows/win32/adschema/a-samaccountname).
 
 ## Name length limitations for LDAP simple bind operations
 
@@ -177,7 +177,7 @@ When you write scripts or design applications that perform LDAP transactions, we
 
 ## Recommended maximum number of users in a group
 
-<!---Stopped here--->
+<!---All the information in this section is about Windows Server 2000 and 2003. Is there more recent data I can use to present a recommended limit or should I just delete this section entirely?--->
 
 For Windows 2000 Active Directory environments, the recommended maximum number of members in a group is 5,000. This recommendation is based on the number of concurrent atomic changes that can be committed in a single database transaction.
 
@@ -186,52 +186,41 @@ Starting with Windows Server 2003, the ability to replicate discrete changes to 
 So far, testing in this area has yet to reveal any new recommended limits to the number of members in a group or any other linked multivalued attribute. Production environments have been reported to exceed 4 million members, and Microsoft scalability testing reached 500 million members.
 
 >[!IMPORTANT]
->Increasing the forest functional level to Windows Server 2003 interim or higher does not modify the way that existing group members are stored or replicated. To do that, you must remove the members that were added to the group before the forest functional level was increased to Windows Server 2003 and then add them back again to the appropriate groups. Any group members that you either add or remove after the forest functional level is increased will be LVR enabled, even if the group contains other members that are not LVR enabled. For more information about linked attributes, see Linked Attributes (https://go.microsoft.com/fwlink/?LinkId=142909). For more information about the replication process, see How the Active Directory Replication Model Works (https://go.microsoft.com/fwlink/?LinkId=142908).
+>Increasing the forest functional level to Windows Server 2003 interim or higher does not modify the way that existing group members are stored or replicated. To do that, you must remove the members that were added to the group before the forest functional level was increased to Windows Server 2003 and then add them back again to the appropriate groups. Any group members that you either add or remove after the forest functional level is increased will be LVR enabled, even if the group contains other members that are not LVR enabled. For more information about linked attributes, see [Linked Attributes](/windows/win32/ad/linked-attributes). For more information about the replication process, see [How the Active Directory Replication Model Works](/previous-versions/windows/it-pro/windows-server-2003/cc772726(v=ws.10)).
 
 ## Recommended Maximum Number of Domains in a Forest
 
-For Windows 2000 Server, the recommended maximum number of domains in a forest is 800. For Windows Server 2003, the recommended maximum number of domains when the forest functional level is set to Windows Server 2003 (also known as forest functional level 2) is 1,200. This restriction is a limitation of multivalued, nonlinked attributes in Windows Server 2003. For more information, see “Maximum Database Record Size” in How the Data Store Works (https://go.microsoft.com/fwlink/?LinkId=134791).
+<!--Again, all this information is about Windows Server 2000/2003. Is there more recent information I need to add here or can I just use the 1,2000 limit as-is?-->
 
-## Recommended Maximum Number of Domain Controllers in a Domain
+For Windows 2000 Server, the recommended maximum number of domains in a forest is 800. For Windows Server 2003, the recommended maximum number of domains when the forest functional level is set to Windows Server 2003 (also known as forest functional level 2) is 1,200. This restriction is a limitation of multivalued, nonlinked attributes in Windows Server 2003. For more information, see “Maximum Database Record Size” in How the Data Store Works (/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)).
 
-To ensure reliable recovery of SYSVOL, we recommend a limit of 1200 domain controllers per domain.  
+## Recommended maximum number of domain controllers in a domain
 
-If any Active Directory domain in your network is expected to exceed 800 domain controllers and those domain controllers are hosting Active Directory–integrated Domain Name System (DNS) zones, review article 267855 in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=115222).
+We recommend that you limit the amount of domain controllers you use per domain to 1,200. This limit ensures you can reliably recover your SYSVOL in the event of a disaster.
 
-For more information about FRS limitations, see the FRS Technical Reference (https://go.microsoft.com/fwlink/?LinkId=115302).
+If you expect an Active Directory domain in your network to have more than 800 domain controllers, and those domain controllers host Active Directory-integrated Domain Name System (DNS) zones, we recommend you review [KB 267855](https://go.microsoft.com/fwlink/?LinkId=115222) for planning purposes.
 
-## Recommended Maximum Kerberos Settings
+For more information about FRS limitations, see the [FRS Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc759297(v=ws.10)?redirectedfrom=MSDN).
 
-The maximum recommended size for a Kerberos ticket is 48,000 bytes, which is configured through the MaxTokenSize REG_DWORD value in the registry (HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Lsa\Kerberos\Parameters) or through Group Policy, as described in KB article [938118](https://support.microsoft.com/kb/938118).
+## Recommended maximum Kerberos ticket size
+
+The maximum recommended size for a Kerberos ticket is 48,000 bytes. You can set the ticket size by configuring the MaxTokenSize REG_DWORD value in the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Lsa\Kerberos\Parameters** registry or through Group Policy, as described in [KB 938118](https://support.microsoft.com/kb/938118).
 
 >[!NOTE]
->The maximum allowed value of MaxTokenSize is 65,535 bytes. If you are using Kerberos for IPSEC key management, the limit of 65,536 bytes. However, because of HTTP’s base64 encoding of authentication context tokens, we do not recommend that you set the maxTokenSize registry entry to a value larger than 48,000 bytes. Starting with Windows Server 2012, the default value of the MaxTokenSize registry entry is 48,000 bytes.
+>The maximum allowed value of MaxTokenSize is 65,535 bytes. If you're using Kerberos for IP Security (IPsec) key management, the limit is 65,536 bytes. However, because of the HTTP base64 encoding of authentication context tokens, we recommend that you don't set the maxTokenSize registry entry to a value larger than 48,000 bytes. Starting with Windows Server 2012, the default value of the MaxTokenSize registry entry is 48,000 bytes.
 
-For additional information about Kerberos tickets, including error conditions that can occur when Kerberos ticket size limits are set too low or too high, see Additional Resources for Troubleshooting Kerberos (https://go.microsoft.com/fwlink/?LinkId=134740).
+For more information about Kerberos tickets, see [Additional resources for troubleshooting Kerberos](/previous-versions/windows/it-pro/windows-server-2003/cc758921(v=ws.10)).
 
 ## Maximum number of non-linked attribute values
 
-The Active Directory database stores non-linked attribute values in a linked directory that has to fit on a database page. This results in a maximum limit of non-linked attribute values of approximately 1300 entries for an object that carries only this attribute. In real-world deployments, errors begin to occur when reaching approximately 1200 attribute values.
+The Active Directory database stores non-linked attribute values in a linked directory that must fit on a database page. As a result of this size requirement, the maximum imit of non-link attributes for an object that carries only one attribute is 1,300.
 
-The status code is 0x00000b and maps to error "LDAP_ADMIN_LIMIT_EXCEEDED Administration limit on the server has exceeded."
+In real-world deployments, errors begin to appear when the object approaches 1,200 non-linked attributes. The status code for these types of errors is 0x00000b and maps to the string "LDAP_ADMIN_LIMIT_EXCEEDED Administration limit on the server has exceeded."
 
-The limit is discussed in the [AD database details article](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)#maximum-database-record-size).
-
-For example, this limit might be reached when there are [many DNS records on a single DNS name](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/problems-with-dc-ad-integrated-dns-zones). That’s the case when an Active Directory domain has many DCs.
-
-This article describes the problem when it happens during replication:
-
-[Active Directory replication error 8304: "The maximum size on an object has been exceeded"](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/active-directory-replication-error-8304)
+For more information about the limit, see the [AD database details article](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)#maximum-database-record-size), [many DNS records on a single DNS name](/troubleshoot/windows-server/identity/problems-with-dc-ad-integrated-dns-zones), and [Active Directory replication error 8304: The maximum size on an object has been exceeded](/troubleshoot/windows-server/identity/active-directory-replication-error-8304).
 
 ## Maximum size of Active Directory objects
 
-To change an attribute with a lot of data, the new and old values must be stored in the database transaction. That allows to roll back the transaction if the database is closed in the middle of the transaction. The maximum size of a transaction limits the total blob size of attribute value data to approximately 5 MB.
+To change an attribute with a lot of data, you must store the new and old values in the database transaction. Storing the values lets you roll back the transaction if the database shuts down in the middle of the transaction. The maximum size of a transaction limits the total blob size of attribute value data to 5 MB.
 
-The limit of the maximum number of group members prior to link-value replication and to the maximum number of transactions in group membership changes actually exist because of the maximum size of an AD transaction you can have.
-
-Instances of this limit being reached occur with DFS volumes prior to Windows Server 2008. In versions prior to Window Server 2008, all DFS volume meta-data was stored in a single attribute “PKT” for the volume. When this attribute is updated, the total size of the transaction sometimes exceeds the database limit, causing the update to fail.
-
-Starting with Windows Server 2008, DFS-N added version 2 namespaces where each DFS target is stored in a separate Active Directory object, thus avoiding this limit.
-
-For more information about DFS v1 volumes, see [How DFS Works](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc782417(v=ws.10)), section “Characteristics of Namespace Types”.
-
+The maximum size of the Active Directory transactions you can perform also affects the limit of how many group members you can have before link-value replication and how many transactions in group membership changes exist.
