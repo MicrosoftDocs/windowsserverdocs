@@ -29,7 +29,16 @@ You can also configure SMB over QUIC to block access by revoking certificates or
 
 Before you can configure client access control, you need an *SMB server* with the following prerequisites.
 
-- An SMB server running Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later. To unlock the preview feature you must also install [Windows Server 2022 KB5035857 240302_030531 Feature Preview](https://download.microsoft.com/download/d/c/b/dcb54178-7997-4a5a-84bf-6269cfa3bb68/Windows%20Server%202022%20KB5035857%20240302_030531%20Feature%20Preview.msi).  
+- An SMB server running Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later. To unlock the preview feature you must also install [Windows Server 2022 KB5035857 240302_030531 Feature Preview](https://download.microsoft.com/download/d/c/b/dcb54178-7997-4a5a-84bf-6269cfa3bb68/Windows%20Server%202022%20KB5035857%20240302_030531%20Feature%20Preview.msi).
+
+> [!IMPORTANT]
+> When using Windows Server 2022 Datacenter: Azure Edition with KB5035857, you must also enable a Group Policy:
+>
+> 1. Install the KB5035857 update.
+> 2. Open GPEDIT.MSC
+> 3. Navigate to Computer Configuration \ Administrative Templates \ KB5035857_240302_030531 Feature Preview
+> 4. Enable the policy.
+
 - SMB over QUIC enabled and configured on the server. To learn how to configure SMB over QUIC, see [SMB over QUIC](smb-over-quic.md).
 - If you're using client certificates issued by a different certificate authority (CA), you need to ensure that the CA is trusted by the server.
 - Administrative privileges for the SMB server you're configuring.
@@ -37,8 +46,26 @@ Before you can configure client access control, you need an *SMB server* with th
 You also need an *SMB client* with the following prerequisites.
 
 - An SMB client running on one of the following operating systems:
-  - Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c). To unlock the preview feature you must also install [Windows Server 2022 KB5035857 240302_030531 Feature Preview](https://download.microsoft.com/download/d/c/b/dcb54178-7997-4a5a-84bf-6269cfa3bb68/Windows%20Server%202022%20KB5035857%20240302_030531%20Feature%20Preview.msi).  
+  - Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c). To unlock the preview feature you must also install [Windows Server 2022 KB5035857 240302_030531 Feature Preview](https://download.microsoft.com/download/d/c/b/dcb54178-7997-4a5a-84bf-6269cfa3bb68/Windows%20Server%202022%20KB5035857%20240302_030531%20Feature%20Preview.msi).
+
+> [!IMPORTANT]
+> When using Windows Server 2022 Datacenter: Azure Edition with KB5035857, you must also enable a Group Policy:
+>
+> 1. Install the KB5035857 update.
+> 2. Open GPEDIT.MSC
+> 3. Navigate to Computer Configuration \ Administrative Templates \ KB5035857_240302_030531 Feature Preview
+> 4. Enable the policy. 
+  
   - Windows 11 with the [March 12, 2024—KB5035853 Update](https://support.microsoft.com/topic/march-12-2024-kb5035853-os-builds-22621-3296-and-22631-3296-a69ac07f-e893-4d16-bbe1-554b7d9dd39b). To unlock the preview feature you must also install [Windows 11 (original release) KB5035854 240302_030535 Feature Preview](https://download.microsoft.com/download/9/7/e/97ecf574-855e-441c-9141-bfb61ec2074e/Windows%2011%20(original%20release)%20KB5035854%20240302_030535%20Feature%20Preview.msi).
+
+> [!IMPORTANT]
+> When using Windows 11 with KB5035853, you must also enable a Group Policy:
+>
+> 1. Install the KB5035853 update.
+> 2. Open GPEDIT.MSC
+> 3. Navigate to Computer Configuration \ Administrative Templates \ KB5035853_240302_030535 Feature Preview
+> 4. Enable the policy.
+
   - [Windows Server Insiders build 25977](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25977/m-p/3958483) or later.
   - [Windows 11 Insider Preview Build 25977 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/18/announcing-windows-11-insider-preview-build-25977-canary-channel/) or later.
 - A client certificate that is:
