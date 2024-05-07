@@ -23,28 +23,25 @@ Changes to the domain and forest functional levels are usually irreversible. In 
 > [!NOTE]
 > The latest domain and forest functional levels only affect how the domain controllers operate together as a group. The clients that interact with the domain or with the forest are unaffected by the changes. Applications are also unaffected by these changes. However, applications can use new features they can access in later versions of Windows Server once the administrator raises the domain level.For more information, see [Features associated with the various functional levels](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771294(v=ws.11)).
 
-## Raising Active Directory domain and forest functional levels in Windows Server
+## Prerequisites
 
-The following requirements apply to Active Directory domain and functional levels for Windows Server 2016 and later versions.
-
-Prerequisites for Windows Server 2016:
+You need the following things to raise the domain functional level in Windows Server 2016:
 
 - Promoting an Active Directory or Active Directory Lightweight Directory Services replica requires that the existing domain or config set is already running with a functional level of Windows Server 2016 or greater.
 
-Prerequisites for later versions of Windows Server
-
 - For newly created Active Directory forests under Windows Server 2025 (preview), you must set the minimum functional level to Windows Server 2016.
-- ...
 
 > [!NOTE]
 > If you're promoting Windows Server 2025 (preview) to a domain controller in an existing domain, that domain must also be at least at the Windows Server 2016 functional level.
 
 ### Upgrade options
 
-We recommend you upgrade Active Directory and Active Directory Lightweight Directory Services servers to Windows Server 2022 to prepare for the Windows Server 2025 (preview) release. When setting up a new domain function level and forest function level for a new forest and domain, specify these levels when promoting a server to a domain controller. When you install Active Directory Domain Services on Windows Server 2025 (preview), it automatically runs adprep on any forest or domain running earlier versions of Windows Server.
+We recommend you upgrade Active Directory and Active Directory Lightweight Directory Services servers to Windows Server 2022 to prepare for the Windows Server 2025 (preview) release. When setting up a new domain function level and forest function level for a new forest and domain, specify these levels when promoting a server to a domain controller.
 
 > [!NOTE] 
 > Before you can promote a machine running Windows Server 2025 to a domain controller, you must make sure all domain controllers in the existing domain are running Windows Server 2016 or later. Earlier versions of Windows Server don't support Windows Server 2025 domain controllers.
+
+When you install Active Directory Domain Services on Windows Server 2025 (preview), it automatically runs adprep on any forest or domain running earlier versions of Windows Server.
 
 > [!NOTE] 
 > Improved algorithms for Name/Sid Lookups in Windows Server 2025 (preview) no longer use the legacy Netlogon secure channel and instead use Kerberos authentication and the DC Locator algorithm.
