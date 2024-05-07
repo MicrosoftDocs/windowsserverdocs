@@ -35,7 +35,7 @@ After you assess your current environment, you have to identify the functional l
 
 - New Windows Server 2008 R2 forest
 
-- Windows Server 2016 forest to Windows Server 2022 or Windows Server 2025 (preview)
+- Windows Server 2016 forest to Windows Server 2025 (preview)
 
 ## Upgrading functional levels to Windows Server 2025 (preview)
 
@@ -43,7 +43,10 @@ Functional level upgrade for Windows Server 2025 (preview) includes the followin
 
 - For new Active Directory forests, the minimum functional level must be set to Server 2016.
 
-- Existing domains must be at least at the 2016 functional level to promote a Windows Server 2025 to a domain controller.
+- Existing domains must be at the 2016 functional level to promote a Windows Server 2025 to a domain controller.
+
+> [!NOTE]
+> Windows Server 2022 used Windows Server 2016 as the most recent functional levels prior to Windows Server 2025.
 
 Upgrade methods include the following options:
 
