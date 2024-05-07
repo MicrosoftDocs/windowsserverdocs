@@ -13,7 +13,7 @@ Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2
 
 ## 32K database page size feature
 
-The latest enhancements to Active Directory Domain Services (AD DS) and Active Directory Lightweight Domain Services (AD LDS) introduce a range of new functionalities and capabilities aimed at optimizing your domain management experience. Among these is the 32k database page size optional feature. See [32K pages in Active Directory Domain Services](/32K-page-feature-ad-domain-services.md) for more information.
+The latest enhancements to Active Directory Domain Services (AD DS) and Active Directory Lightweight Domain Services (AD LDS) introduce a range of new functionalities and capabilities aimed at optimizing your domain management experience. Among these is the 32k database page size optional feature. See [32k pages in Active Directory Domain Services](/32K-page-feature-ad-domain-services.md) for more information.
 
 ## Prerequisites
 
