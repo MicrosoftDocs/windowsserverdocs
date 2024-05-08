@@ -9,73 +9,77 @@ manager: femila
 ---
 # Using certificates in Remote Desktop Services
 
-Remote Desktop Services uses certificates to sign the communication between two computers. When a client connects to a server, the identity of the server and the information from the client is validated using certificates. 
+Remote Desktop Services (RDS) uses certificates to secure communication between two computers. A certificate is a signature that validates the identity of the server and client when they try to connect to each other.
 
-Using certificates for authentication prevents possible man-in-the-middle attacks. When a communication channel is set up between the client and the server, the authority that generates the certificates vouches that the server is authentic. As long as the client trusts the server it is communicating with, the data being sent to and from the server is considered secure.
+Certificates prevent man-in-the-middle attacks<!---Elaborate?----> by verifying that the server sending information to the client is authentic. When this trust relationship is set up, the client considers the connection secure and can accept data going to and from the server.
 
-Certificates in Remote Desktop Services need to meet the following requirements: 
+Certificates in Remote Desktop Services need to meet the following requirements:
 
-- The certificate is installed in the local computer’s “Personal” certificate store. 
+- You must install the certificate in the personal certificate store on the local computer.
 
-- The certificate has a corresponding private key. 
+- The certificate has a corresponding private key.
 
-- The Enhanced Key Usage extension has a value of either “Server Authentication” or “Remote Desktop Authentication” (1.3.6.1.4.1.311.54.1.2).
+- The Enhanced Key Usage extension has a value of either `Server Authentication` or `Remote Desktop Authentication (1.3.6.1.4.1.311.54.1.2)`.
 
-## Create a Server Authentication certificate 
+## Create a Server Authentication certificate
 
-The easiest way to get certificates, if you control the client computers, is by using Active Directory Certificate Services. You can request and deploy your own certificates, and they will be trusted by every computer in the AD domain. 
+When you control the client computers, the easiest way to get certificates is by using Active Directory Certificate Services<!---Acronym?--->. You can use this service to request and deploy your own certificates, which are trusted by every computer in the Active Directory (AD) domain.
 
-As the name suggests, a Server Authentication certificate is required. You can use either the Web Server or the computer Authentication template to generate this certificate, if necessary. 
+Communicating with computers in your AD domain requires a Server Authentication certificate. You can create this certificate with either the Web Server or the computer authentication template.
 
-To create the Server Authentication certificate from the template: 
+To create a Server Authentication certificate from the template:
 
-1. Open CERTSRV.MSC and configure certificates. 
+1. Open CERTSRV.MSC and configure certificates. <!--What does "configure certificates" mean here? Aren't we already configuring the certificate?-->
 
-1. Open the Certificate Authority. 
+1. Open the **Certificate Authority**.
 
-1. In the Details pane, expand the computer name. 
+1. In the **Details** pane, select the name of the computer you want to create a certificate for to expand the accordion menu.
 
-1. Right-click Certificate Templates, and then click Manage. This opens the Certificate Templates Console. Right-click Web Server and then click Duplicate Template. 
+1. Right-click **Certificate Templates**, then select **Manage** from the drop-down menu to open the Certificate Templates Console.
 
-1. On the General tab, change the Template display name to Client Server Authentication, and select Publish certificate in Active Directory. 
+1. Right-click **Web Server**, then select **Duplicate Template**.
 
-1. On the Security tab, select Allow Autoenroll next to Domain Computers. Click OK, and then close the Certificates Templates console. 
+1. On the **General** tab, change the **Template display name** to **Client Server Authentication**.
 
-1. In the certsrv snap-in right-click Certificate Templates, and then click New > Certificate Template to Issue. 
+1. Select **Publish certificate in Active Directory**.
 
-1. Select Client-Server Authentication, and then click OK. You can validate that the certificate was created in the Certificates MMC snap-in. When you open the new certificate, the General tab of the certificate will list the purpose as “Server Authentication.” 
+1. On the **Security** tab, under the options for **Domain Computers**, select **Allow Autoenroll**, then select **OK** to save your changes.
+
+1. Close the Certificates Templates console.
+
+1. In the certsrv snap-in<!--Elaborate?-->, right-click **Certificate Templates**, then select **New** > **Certificate Template to Issue**.
+
+1. Select **Client-Server Authentication**, then select **OK**.
+
+1. Validate that the certificate exists in the Certificates MMC<!--Acronym---> snap-in. When you open the new certificate, the General tab of the certificate will list the purpose as Server Authentication.
 
 Certificates created from this template will contain: <!---Images with no context/alt text--->
 
-If you are going to let users to connect externally, and they are not part of your AD domain, you need to deploy certificates from a public CA, such as GoDaddy, Verisign, Entrust, Thawte, or DigiCert. Refer to their documentation on the type of certificates they can offer. 
+If you want to let users connect externally without being part of your AD domain, you must deploy certificates from a public CA, such as GoDaddy, Verisign, Entrust, Thawte, or DigiCert.
 
-You can also use self-signed certificates for your deployments. But keep in mind that, by default, the self-signed certificate is not a trusted certificate, and self-signed certificates are recommended only for testing and evaluation purposes. When using this, you will have to add the self-signed certificates to the personal computer store of the client machines to avoid warnings or errors. 
+You can also use self-signed certificates for your deployments. However, self-signed certificates aren't trusted certificates by default. We recommend only using self-signed certificates for testing and evaluation environments. While testing, you must add the self-signed certificate to the personal computer store of the client machines to avoid issues or error messages.
 
-## Certificate contents 
+## Certificate contents
 
-In RDS, clients connect directly to the broker which is now the entry point of the RDS deployment.  
+In RDS, clients connect directly to the broker, which is the entry point of the RDS deployment.
 
-The certificates you deploy need to have a subject name or subject alternate name that matches the name of the server that the user is connecting to.  
+The certificates you deploy must have a subject name or subject alternate name that matches the name of the server the user is trying to connect to.  
 
-In Server Manager, we can configure the certificates for 4 components: 
+In Server Manager, you can configure the certificates for the following four roles:
 
-- RD Connection Broker – Enable Single Sign-on  (This certificate is required for server authentication to the Remote Desktop Services deployment) 
+- RD Connection Broker: Enable Single Sign-on. This certificate is required for server authentication to the Remote Desktop Services deployment.
 
-- RD Connection Broker – Publishing  (This certificate is required to sign RDP files to avoid any additional warning messages for the user) 
+- RD Connection Broker: Publishing. This certificate is required to sign RDP files to avoid any additional warning messages for the user.
 
-- RD Web Access  (This certificate is required to enable RemoteApp and Desktop Connection subscription and server authentication for RD Web Access) 
+- RD Web Access. This certificate is required to enable RemoteApp and Desktop Connection subscription and server authentication for RD Web Access.
 
-- RD Gateway  (This certificate is required for server authentication for connections through RD Gateway) 
+- RD Gateway. This certificate is required for server authentication for connections through RD Gateway.
 
 Example: <!--Image-->
 
-If you are going to let users to connect externally, and they are not part of your AD domain, you need to deploy certificates from a public CA, such as GoDaddy, Verisign, Entrust, Thawte, or DigiCert. Refer to their documentation on the type of certificates they can offer. 
+Depending on your deployment topology, you may have to create different certificates to assign to each role.
 
-You can also use self-signed certificates for your deployments. But keep in mind that, by default, the self-signed certificate is not a trusted certificate, and self-signed certificates are recommended only for testing and evaluation purposes. When using this, you will have to add the self-signed certificates to the personal computer store of the client machines to avoid warnings or errors. 
-
-Depending on your deployment topology, you may have to create different certificates to be assigned for each of the roles.  
-
-You may also want to use a single certificate for all. If you have a deployment with many machines, this approach may be problematic. Instead, you may want to get a wildcard certificate to cover all the servers in the deployment. 
+You may also want to use a single certificate for all four roles. However, this approach works better with single machines, as it can cause problems in deployments with multiple machines. You can instead use a wildcard certificate to cover all servers in your deployment instead.
 
 For Publishing, the certificate needs to contain the FQDN names of all the RDS Broker servers in the deployment. If we are in High Availability mode, the certificate will need to contain all the FQDN names of the brokers, in addition to the DNS name for the RD Connection Broker High Availability cluster. 
 
