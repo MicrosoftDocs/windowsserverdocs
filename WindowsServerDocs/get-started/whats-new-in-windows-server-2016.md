@@ -157,21 +157,11 @@ Remote Credential Guard for Windows Server 2016 includes the following updates f
 
 Domain protections now require an Active Directory domain.
 
-### Domain-joined device support for authentication using public key
+### PKInit Freshness extension support
 
-If a domain-joined device can register its bound public key with a Windows Server 2016 domain controller (DC), then the device can authenticate with the public key using Kerberos PKINIT authentication to a Windows Server 2016 DC.
+Kerberos clients now attempt the PKInit freshness extension for public key based sign-ons.
 
-Domain-joined devices with bound public keys registered with a Windows Server 2016 domain controller can now authenticate to a Windows Server 2016 domain controller using Kerberos Public Key Cryptography for Initial Authentication (PKINIT) protocols.
-
-Key Distribution Centers (KDCs) now support authentication using Kerberos key trust.
-
-For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kdc-support-for-public-key-trust-based-client-authentication).
-
-### PKINIT Freshness extension support
-
-Kerberos clients now attempt the PKINIT freshness extension for public key based sign-ons.
-
-KDCs now support the PKInit freshness extension. However, they don't offer the PKINIT freshness extension by default.
+KDCs now support the PKInit freshness extension. However, they don't offer the PKInit freshness extension by default.
 
 For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kerberos-client-and-kdc-support-for-rfc-8070-pkinit-freshness-extension).
 
@@ -346,15 +336,15 @@ Personal session desktops is a new feature that lets you host your own personal 
 
 Windows Server 2016 includes the following updates for Kerberos authentication.
 
-## KDC support for Public Key Trust-based client authentication
+### KDC support for Public Key Trust-based client authentication
 
 Key Distribution Centers (KDCs) now support public key mapping. If you provision a public key for an account, the KDC supports Kerberos PKInit explicitly using that key. Because there's no certificate validation, Kerberos supports self-signed certificates but doesn't support authentication mechanism assurance.
 
 Accounts you've configured to use Key Trust will only use Key Trust regardless of how you configured the UseSubjectAltName setting.
 
-## Kerberos client and KDC support for RFC 8070 PKInit Freshness Extension
+### Kerberos client and KDC support for RFC 8070 PKInit Freshness Extension
 
-Starting with Windows 10, version 1607 and Windows Server 2016, Kerberos clients can use the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key-based sign-ons. KDCs have the PKInit freshness extension disabled by default, so to enable it you must configure the KDC support for PKInIt Freshness Extension KDC administrative template policy on all DCs in your domain.
+Starting with Windows 10, version 1607 and Windows Server 2016, Kerberos clients can use the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key-based sign-ons. KDCs have the PKInit freshness extension disabled by default, so to enable it you must configure the KDC support for PKInit Freshness Extension KDC administrative template policy on all DCs in your domain.
 
 The policy has the following settings available when your domain is in the Windows Server 2016 domain functional level (DFL):
 
@@ -362,15 +352,33 @@ The policy has the following settings available when your domain is in the Windo
 - **Supported**: Kerberos supports PKInit Freshness Extension on request. Kerberos clients successfully authenticating with the PKInit Freshness Extension receive the fresh public key identity SID.
 - **Required**: PKInit Freshness Extension is required for successful authentication. Kerberos clients that don't support the PKInit Freshness Extension will always fail when using public key credentials.
 
-## Kerberos clients allow IPv4 and IPv6 address host names in Service Principal Names (SPNs)
+### Domain-joined device support for authentication using public key
+
+If a domain-joined device can register its bound public key with a Windows Server 2016 domain controller (DC), then the device can authenticate with the public key using Kerberos PKInit authentication to a Windows Server 2016 DC.
+
+Domain-joined devices with bound public keys registered with a Windows Server 2016 domain controller can now authenticate to a Windows Server 2016 domain controller using Kerberos Public Key Cryptography for Initial Authentication (PKInit) protocols. To learn more, see [Domain-joined Device Public Key Authentication](../security/kerberos/domain-joined-device-public-key-authentication.md).
+
+Key Distribution Centers (KDCs) now support authentication using Kerberos key trust.
+
+For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kdc-support-for-public-key-trust-based-client-authentication).
+
+### Kerberos clients allow IPv4 and IPv6 address host names in Service Principal Names (SPNs)
 
 Starting with Windows 10 version 1507 and Windows Server 2016, you can configure Kerberos clients to support IPv4 and IPv6 host names in SPNs. For more information, see [Configuring Kerberos for IP Addresses](configuring-kerberos-over-ip.md).
 
-## KDC support for Key Trust account mapping
+Registry path:
+
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+
+To configure support for IP address host names in SPNs, create a TryIPSPN entry. This entry doesn't exist in the registry by default. After creating the entry, change the DWORD value to 1. IF this value isn't configured, Kerberos won't attempt IP address host names.
+
+Kerberos authentication only succeeds if the SPN is registered in Active Directory.
+
+### KDC support for Key Trust account mapping
 
 Domain controllers now support Key Trust account mapping and fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. You can configure the UseSubjectAltName variable to the following settings:
 
-- Setting the variable to 0 makes explicit mapping required. Users must use either a Key Trust or set an ExplicitAltSEcID variable.
+- Setting the variable to 0 makes explicit mapping required. Users must use either a Key Trust or set an ExplicitAltSecID variable.
 
 - Setting the variable to 1, which is the default value, allows implicit mapping.
 
