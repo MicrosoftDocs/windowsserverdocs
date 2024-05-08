@@ -81,15 +81,15 @@ Depending on your deployment topology, you may have to create different certific
 
 You may also want to use a single certificate for all four roles. However, this approach works better with single machines, as it can cause problems in deployments with multiple machines. You can instead use a wildcard certificate to cover all servers in your deployment instead.
 
-For Publishing, the certificate needs to contain the FQDN names of all the RDS Broker servers in the deployment. If we are in High Availability mode, the certificate will need to contain all the FQDN names of the brokers, in addition to the DNS name for the RD Connection Broker High Availability cluster. 
+For Publishing, the certificate needs to contain the FQDN names of all RDS Broker servers in your deployment. If your deployment is in High Availability mode, the certificate must contain all the fully qualified domain name (FQDN) names of the brokers and the domain name services (DNS) name for the RD Connection Broker High Availability cluster.
 
-For Single Sign On, the Certificates requirements are the same as for Publishing. You may use the same certificate depending on your topology. 
+For Single Sign-On, the certificate requirements are the same as the ones for Publishing. Depending on your topology requirements, you can sometimes use the same certificate for both Single Sign-On and Publishing.
 
-The certificate for RDWeb needs to contain the FQDN of the URL, based on the name the users connect to. If you have users connecting externally, this needs to be an external name (it needs to match what they connect to). If you have users connecting internally to RDWeb, the name needs to match the internal name.  
+The certificate for RDWeb needs to contain the FQDN of the URL based on the name users connect to. If your users connect externally, this name must be an external name that matches the domain your users are trying to connect to. If your users connect internally to RDWeb, the name needs to match the internal name.  
 
-For RD Gateway, the certificate needs to contain the FQDN of the gateway server. If the gateway is in High Availability mode, the certificate will need to contain the FQDN of all the RD Gateway machines in addition to the Load Balancer virtual name. 
+For RD Gateway, the certificate needs to contain the FQDN of the gateway server. If the gateway is in High Availability mode, the certificate will need to contain the FQDN of all RD Gateway machines and the Load Balancer virtual name.
 
-For example, imagine a Remote Desktop High Availability deployment with the following computers: 
+For example, imagine a Remote Desktop High Availability deployment with the following computers:
 
 | Computer name | Description |
 |---|---|
@@ -102,79 +102,88 @@ For example, imagine a Remote Desktop High Availability deployment with the foll
 | RDWEB1.CONTOSO.COM  | RDWeb and Gateway server  |
 | RDWEB2.CONTOSO.COM  | RDWeb and Gateway server  |
 
-We have a DNS Round Robin or a Load balancer in front of the brokers which is listening on RDCBHA.CONTOSO.COM. 
+This example deployment contains a DNS Round Robin or load balancer in front of the brokers that listens on RDCBHA.CONTOSO.COM. There's a second load balancer in front of the RDWeb1 and RDWeb2 machines that listens on RDWEB.CONTOSO.COM.
 
-We have a Load Balancer in front of the RDWeb1 and RDWeb2 machines which listens on RDWEB.CONTOSO.COM. 
+In this example, RDWEB1 and RDWEB2 both have RDWEB and RD Gateway roles installed, so you shouldn't configure different certificates for these roles. You must use the same certificate for the RD Web Access and RD Gateway role.
 
-As RDWEB1 and RDWEB2 both have RDWEB and RD Gateway roles installed, you should not configure different certificates for these roles. You will have to use the same certificate for the RD Web Access and RD Gateway role. 
+In this example scenario, you can create the following certificates:
 
-In this situation, you can create these certificates. 
+One certificate for RD Connection Broker Certificate for both Publishing and Single Sign On: 
 
-1 certificate for RD Connection Broker Certificate for both Publishing and Single Sign On: 
-
-Type: Server Authentication 
-
-Name: RDCBHA.CONTOSO.COM 
-
-CN: RDCBHA.CONTOSO.COM 
-
+```text
+Type: Server Authentication
+Name: RDCBHA.CONTOSO.COM
+CN: RDCBHA.CONTOSO.COM
 SAN (DNS Name): RDCB1.CONTOSO.COM; RDCB2.CONTOSO.COM; RDCBHA.CONTOSO.COM.  
+```
 
-1 Certificate for both RD Web Access and RD Gateway: 
+One certificate for both RD Web Access and RD Gateway:
 
-Type: Server Authentication 
+```text
+Type: Server Authentication
+Name: RDWEB.CONTOSO.COM
+CN: RDWEB.CONTOSO.COM
+SAN (DNS Name):  RDWEB.CONTOSO.COM; RDWEB1.CONTOSO.COM; RDWEB2.CONTOSO.COM
+```
 
-Name: RDWEB.CONTOSO.COM 
+For a simpler scenario, you may want to choose a wildcard certificate to assign to all roles in the deployment. The following example certificate is based on the information in our example deployment:
 
-CN: RDWEB.CONTOSO.COM 
-
-SAN (DNS Name):  RDWEB.CONTOSO.COM; RDWEB1.CONTOSO.COM; RDWEB2.CONTOSO.COM 
-
-For a simpler scenario, you may want to choose a wildcard certificate and use this certificate for all the roles. For our example, it would contain: 
-
-Type: Server Authentication 
-
-Name: *.CONTOSO.COM 
-
-CN: *.CONTOSO.COM 
-
-SAN (DNS Name):  *.CONTOSO.COM 
-
-Note: Even with a wildcard certificate, you might run into problems in the following scenario if you have external users that access the deployment: 
-
-External name: RDWEB.CONTOSO.com 
-
-Internal name: RDWEB.CONTOSO.local 
-
-If you have a certificate with RDWEB.CONTOSO.COM in the name, you will see certificate errors. This is because the certificate is supposed to validate a server with the FQDN of “RDWEB.CONTOSO.COM,” but your server name is “RDWEB.CONTOSO.local.” (Changing the .com to .local occurs at your public firewall or router using port forwarding.) 
-
-In this case, you can get a certificate from a public CA with the external name (RDWEB.CONTOSO.COM) and bind it to the RD Web Access and RD Gateway roles (These are the only roles that are exposed to the Internet). For the RD Connection Broker – Publishing and RD Connection Broker – Enable Single Sign On roles, you can use an internal certificate with the DOMAIN.local name on it.  
-
-The RD Gateway and Remote Desktop Client provides external users with a secure connection to the deployment. Once connected to the deployment, the internal certificate with the ‘.local’ name will take care of RemoteApp signing (publishing) and Single Sign On. 
-
-## Selecting which certificate to use 
-
-Now that you have created your certificates and understand their contents, you need to configure Remote Desktop to use those certificates. 
-
-1. On the Connection Broker, open the Server Manager. Click Remote Desktop Services in the left navigation pane. 
-
-1. Click Tasks > Edit Deployment Properties. 
-
-1. In the Configure the deployment window, click Certificates. 
-
-1. Click Select existing certificates, and then browse to the location where you saved the certificate you created previously. Look for the file with the .pfx extension. 
-
-1. Import the certificate. 
-
-1. You can use a single certificate for all the roles if your clients are internal to the domain only, by generating a wildcard certificate (*.CONTOSO.com) and binding it to all roles. 
+```text
+Type: Server Authentication
+Name: *.CONTOSO.COM
+CN: *.CONTOSO.COM
+SAN (DNS Name):  *.CONTOSO.COM
+```
 
 >[!NOTE]
->Even if you have multiple servers in the deployment, Server Manager will import the certificate to all servers, place the certificate in the trusted root for each server, and then bind the certificate to the respective roles. 
+>Even with a wildcard certificate, you might run into problems in the following scenario if you have external users that access the deployment:
+>
+>```text
+>External name: RDWEB.CONTOSO.com 
+>Internal name: RDWEB.CONTOSO.local
+>```
 
-You can also use the Set-RDCertificate Powershell CmdLet to set the certificates for the RDS deployment roles: 
+If you have a certificate with RDWEB.CONTOSO.COM in the name, certificate error messages appear. The certificate is supposed to validate a server with the FQDN of RDWEB.CONTOSO.COM, but your public firewall or router during port forwarding changed the server name to RDWEB.CONTOSO.local, causing a mismatch.
 
-[Set-RDCertificate](/powershell/module/remotedesktop/set-rdcertificate?view=windowsserver2016-ps&viewFallbackFrom=windowsserver2016)
+You can resolve this issue by getting a certificate from a public certificate authority (CA) with the external name (RDWEB.CONTOSO.COM) and binding it to the RD Web Access and RD Gateway roles. These two roles are the only ones exposed to the internet. For the RD Connection Broker: Publishing and RD Connection Broker: Enable Single Sign-On roles, you can use an internal certificate with the DOMAIN.local name instead.
 
-Note: in addition to the certificates configured in Server Manager, you may want to use certificates for the RDS Session Host. For this, please refer to this documentation: 
+The RD Gateway and Remote Desktop Client provides external users with a secure connection to the deployment. Once connected to the deployment, the internal certificate with the .local name take care of RemoteApp signing (publishing) and Single Sign-On.
 
-[Remote Desktop listener certificate configurations](/troubleshoot/windows-server/remote/remote-desktop-listener-certificate-configurations)
+## Configure Remote Desktop to use certificates
+
+Now that you created your certificates and understand their contents, you must configure Remote Desktop to use those certificates.
+
+To configure Remote Desktop to use specific certificates:
+
+### [GUI](#tab/gui)
+
+1. On the **Connection Broker**, open **Server Manager**. 
+
+1. Select **Remote Desktop Services** in the navigation pane on the left side of the window.
+
+1. Go to **Tasks** > **Edit Deployment Properties**.
+
+1. In the **Configure the deployment** window, select **Certificates**.
+
+1. Go to **Select existing certificates**, then browse to the location where you saved the certificate you created in the previous section. Look for the file with the .pfx extension.
+
+1. Import the certificate.
+
+1. Optionally, if your clients are all internal to the domain only, you can use one certificate for all roles by generating a wildcard certificate, such as *.CONTOSO.com, and binding it to all roles.
+
+>[!NOTE]
+>Even if you have multiple servers in the deployment, Server Manager imports the certificate to all servers. Server Manager places the certificate in the trusted root for each server, then binds the certificate to its respective roles.
+
+### [PowerShell](#tab/powershell)
+
+1. Open an elevated PowerShell window.
+
+1. Run the [Set-RDCertificate](/powershell/module/remotedesktop/set-rdcertificate?view=windowsserver2016-ps&viewFallbackFrom=windowsserver2016) command.
+
+---
+
+You might want to use certificates for the RDS Session Host along with the certificates you configured in Server Manager. For more information about RDS Session Host certificates, see [Remote Desktop listener certificate configurations](/troubleshoot/windows-server/remote/remote-desktop-listener-certificate-configurations).
+
+## Related content
+
+<!---To be filled later.-->
