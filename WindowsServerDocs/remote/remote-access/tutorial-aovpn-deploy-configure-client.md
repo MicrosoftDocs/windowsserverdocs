@@ -4,8 +4,8 @@ description:  Learn how to deploy Always On VPN profile for Windows 10+ clients.
 ms.topic: article
 ms.date:  03/14/2023
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-ms.author: anaharris
-author: anaharris-ms
+ms.author: wscontent
+author: robinharwood
 ---
 # Tutorial: Deploy Always On VPN - Configure Always On VPN profile for Windows 10+ clients
 

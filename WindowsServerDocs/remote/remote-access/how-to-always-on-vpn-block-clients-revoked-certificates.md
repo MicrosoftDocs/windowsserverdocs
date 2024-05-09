@@ -4,7 +4,7 @@ description: This article shows you how to configure RRAS server to block VPN cl
 ms.topic: article
 ms.date: 05/04/2023
 ms.author: wscontent
-author: anaharris-ms
+author: robinharwood
 ---
 # Block VPN clients that use revoked certificates
 
