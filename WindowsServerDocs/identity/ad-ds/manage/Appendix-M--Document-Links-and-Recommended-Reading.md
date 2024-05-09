@@ -3,7 +3,7 @@ description: "Learn more about: Appendix M: Document Links and Recommended Readi
 ms.assetid: 6785de86-4f7d-4ed1-9055-8de0871d59b5
 title: Appendix M - Document Links and Recommended Reading
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -133,7 +133,6 @@ The following table contains a list of links to external documents and their URL
 | [AD DS Backup and Recovery Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771290(v=ws.10)) | [https://technet.microsoft.com/library/cc771290(v=ws.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771290(v=ws.10)) |
 | [Windows Configurations for Kerberos Supported Encryption Type](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type) | [/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type) |
 | [UAC Processes and Interactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd835561(v=ws.10)) | [https://technet.microsoft.com/library/dd835561(v=WS.10).aspx#1](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd835561(v=ws.10)) |
-| [EmpowerID](http://www.empowerid.com/products/authorizationservices) | [http://www.empowerid.com/products/authorizationservices](http://www.empowerid.com/products/authorizationservices) |
 | [Role-based access control (RBAC)](https://www.ibm.com/docs/en/aix/7.3?topic=control-aix-rbac) | [https://www.ibm.com/docs/en/aix/7.3?topic=control-aix-rbac](https://www.ibm.com/docs/en/aix/7.3?topic=control-aix-rbac) |
 | [The RBAC model](http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html) | [http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html](http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html) |
 | [Active Directory-centric access control](http://www.centrify.com/solutions/it-security-access-control.asp) | [http://www.centrify.com/solutions/it-security-access-control.asp](http://www.centrify.com/solutions/it-security-access-control.asp) |

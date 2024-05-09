@@ -2,7 +2,7 @@
 title: Configuring Kerberos for IP Address
 description: Kerberos support for IP-based SPNs
 author: daveba
-ms.author: daveba
+ms.author: justinha
 ms.date: 07/27/2020
 ms.topic: article
 ---

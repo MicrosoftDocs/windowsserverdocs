@@ -2,7 +2,7 @@
 title: Windows LAPS account management modes
 description: Documents account management modes for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 12/25/2023
 ms.topic: conceptual
 ---
