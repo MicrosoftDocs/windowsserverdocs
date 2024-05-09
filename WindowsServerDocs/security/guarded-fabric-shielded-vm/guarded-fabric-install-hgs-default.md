@@ -3,8 +3,8 @@ description: "Learn more about: Install HGS in a new forest"
 title: Install HGS in a new forest
 ms.topic: article
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 08/29/2018
 ---
 

@@ -3,8 +3,8 @@ description: "Learn more about: Initialize HGS using host key attestation"
 title: Initialize HGS using host key attestation
 ms.topic: article
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 08/29/2018
 ---
 
