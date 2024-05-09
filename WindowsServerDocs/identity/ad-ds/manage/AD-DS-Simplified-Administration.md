@@ -2,7 +2,7 @@
 description: "Learn more about: AD DS Simplified Administration"
 ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: AD DS Simplified Administration
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018

@@ -2,7 +2,7 @@
 description: "Learn more about Active Directory Domain Services Functional Levels in Windows Server."
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Active Directory Domain Services Functional Levels in Windows Server
-ms.author: daveba
+ms.author: justinha
 author: dknappettmsft
 ms.contributor: alalve
 ms.date: 06/16/2023

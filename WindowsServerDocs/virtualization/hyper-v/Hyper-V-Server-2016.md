@@ -3,8 +3,8 @@ description: "Learn more about: Microsoft Hyper-V Server 2016"
 title: Microsoft Hyper-V Server 2016
 ms.topic: how-to
 ms.assetid: f815ada0-4c63-4e73-9c24-dc5eb21526c7
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.date: 07/26/2017
 ---
 # Microsoft Hyper-V Server 2016

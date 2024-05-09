@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: AD Forest Recovery - Devising an AD Forest Recovery Plan"
 title: AD Forest Recovery - Devising an AD Forest Recovery Plan
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 06/12/2023

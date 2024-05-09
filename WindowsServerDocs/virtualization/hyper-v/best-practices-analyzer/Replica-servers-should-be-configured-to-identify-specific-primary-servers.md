@@ -1,8 +1,8 @@
 ---
 title: Replica servers should be configured to identify specific primary servers authorized to send replication traffic
 description: Learn what to do when, as configured, your Replica server accepts replication traffic from all primary servers and stores them in a single location.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
 ms.date: 8/16/2016

@@ -3,7 +3,7 @@ title: Deploy a two-node Storage Spaces Direct SOFS for UPD storage in Azure
 description: Learn how to use Storage Spaces Direct with RDS.
 ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
-author: IngridAtMicrosoft
+author: robinharwood
 ms.author: wscontent
 ms.date: 10/18/2021
 manager: scottman
