@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: AD Forest Recovery - Resetting the computer account on the DC legacy"
 title: AD Forest Recovery - Resetting the computer account on the DC legacy
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 06/21/2023

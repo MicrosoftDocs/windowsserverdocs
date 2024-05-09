@@ -1,8 +1,8 @@
 ---
 title: Configure virtual machines to use SR-IOV only when supported by the guest operating system
 description: Learn what to do when one or more virtual machines are configured to use single-root I/O virtualization (SR-IOV), but the guest operating system does not support SR-IOV.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: 33cf5b68-e43e-47ef-adbc-6b266c1d4dce
 ms.date: 8/16/2016

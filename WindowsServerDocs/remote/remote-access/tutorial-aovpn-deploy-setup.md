@@ -3,8 +3,8 @@ title: Tutorial - Set up infrastructure for Always On VPN
 description: Learn how to deploy Always On VPN (AOV) connections for Windows client computers that are working offsite (for example, from home, a customer site, or a public wireless access point).
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
-ms.author: anaharris
-author: anaharris-ms
+ms.author: wscontent
+author: robinharwood
 ms.date:  03/14/2023
 ---
 

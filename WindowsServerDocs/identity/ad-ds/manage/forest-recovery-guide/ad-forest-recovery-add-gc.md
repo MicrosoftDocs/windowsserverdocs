@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: AD Forest Recovery - Adding the GC"
 title: AD Forest Recovery - Adding the GC
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 06/21/2023
