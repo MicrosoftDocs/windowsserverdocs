@@ -13,7 +13,7 @@ zone_pivot_groups: windows-os
 
 :::zone pivot="windows-server"
 
->Applies to: Windows Server 2025 (preview)
+>Applies to: Windows Server 2025 Datacenter (preview)
 
 > [!IMPORTANT]
 > GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
@@ -30,7 +30,7 @@ zone_pivot_groups: windows-os
 
 This article describes how to configure graphics processing unit (GPU) partitions and assign a partition to a virtual machine (VM). It provides instructions on how to configure GPU partition count, assign GPU partitions, and unassign GPU partitions via Windows Admin Center and PowerShell.
 
-To provision the GPU partitioning feature, you'll need to complete the following steps:
+To provision the GPU partitioning feature, you need to complete the following steps:
 
 - [Complete all the prerequisites](#prerequisites).
 - [Verify GPU driver installation](#verify-gpu-driver-installation).
@@ -46,7 +46,9 @@ There are several requirements and things to consider before you begin to use th
 
 :::zone pivot="windows-server"
 
-- A Windows Server with the Hyper-V role installed and configured. See [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md) to found out how to get stared.
+- You must have Datacenter edition of Windows Server 2025 or later installed on the host server.
+
+- The Hyper-V role installed and configured on your server. See [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md) to found out how to get stared.
 
 ::: zone-end
 
@@ -188,7 +190,7 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
     Get-VMHostPartitionableGpu | FL Name,ValidPartitionCounts
     ```
 
-    Note down the **Name** and **ValidPartitionCounts** values from the output of the `Get-VMHostPartitionableGpu` command. You'll use them later to configure partition count.
+    Note down the **Name** and **ValidPartitionCounts** values from the output of the `Get-VMHostPartitionableGpu` command. You use them later to configure partition count.
 
     Here's a sample output of the `Get-VMHostPartitionableGpu` command, which shows that two partitionable GPU drivers are installed on this server. The configured partition count for the first GPU is 16 and for the second GPU is 4.
 
