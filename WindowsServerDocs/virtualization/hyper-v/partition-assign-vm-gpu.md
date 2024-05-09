@@ -95,7 +95,7 @@ For detailed information on how to use PowerShell commands for GPU partitioning,
 
 ## Verify GPU driver installation
 
-After you've completed all the [prerequisites](#prerequisites), you must verify if the GPU driver is installed and partitionable.
+After you complete all the [prerequisites](#prerequisites), you must verify if the GPU driver is installed and partitionable.
 
 ## [Windows Admin Center](#tab/windows-admin-center)
 
@@ -235,9 +235,9 @@ Follow these steps to configure partition count via Windows Admin Center:
 
    :::image type="content" source="./media/partition-assign-vm-gpu/configure-partition-count.png" alt-text="Screenshot of the Configure partition count on GPUs showing the inventory of GPUs to configure the partition count." lightbox="./media/partition-assign-vm-gpu/configure-partition-count.png" :::
 
-    You may see a warning or an error depending on what selections you make:
+    You might see a warning or an error depending on what selections you make:
 
-    - **Warning.** If you deselect one or more GPUs from the homogeneous set of GPUs, Windows Admin Center gives you a warning, but doesn't stop you from proceeding further. Warning text indicates that you're not selecting all the GPUs and it may result in different partition count, which isn't recommended.
+    - **Warning.** If you deselect one or more GPUs from the homogeneous set of GPUs, Windows Admin Center gives you a warning, but doesn't stop you from proceeding further. Warning text indicates that you're not selecting all the GPUs and it might result in different partition count, which isn't recommended.
 
         :::image type="content" source="./media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" alt-text="Screenshot showing a warning when all the GPUs within a homogeneous set aren't selected." lightbox="./media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" :::
 
@@ -356,13 +356,13 @@ Follow these steps to assign GPU partition to a VM using PowerShell:
     > [!NOTE]
     > If a failure occurs, you need to shutdown the VM, drain the server, and manually fail over the VM to another server.
 
-1. Run the following command to assign the partition.
+1. To assign the partition, run the following command.
 
     ```powershell
     Add-VMGpuPartitionAdapter -VMName $VMName
     ```
 
-1. Run the following command to verify if the partition is assigned:
+1. To verify if the partition is assigned, run the following command.
 
     ```powershell
     Get-VMGpuPartitionAdapter -VMName $VMName | FL InstancePath,PartitionId,PartitionVfLuid
@@ -412,7 +412,7 @@ Follow these steps to unassign a partition from a VM:
 
 1. From **Choose the server** list, select the server that has the GPU partition that you want to unassign.
 
-1. From **Choose virtual machine to unassign partition from** list, search or select the VM to unassign the partition from.
+1. From **Choose virtual machine to unassign partition from** list, search, or select the VM to unassign the partition from.
 
 1. Select **Unassign partition**.
 
