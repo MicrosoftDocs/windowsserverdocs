@@ -364,7 +364,7 @@ For more information, see [What's new in Kerberos authentication](../security/ke
 
 ### Kerberos clients allow IPv4 and IPv6 address host names in Service Principal Names (SPNs)
 
-Starting with Windows 10 version 1507 and Windows Server 2016, you can configure Kerberos clients to support IPv4 and IPv6 host names in SPNs. For more information, see [Configuring Kerberos for IP Addresses](configuring-kerberos-over-ip.md).
+Starting with Windows 10 version 1507 and Windows Server 2016, you can configure Kerberos clients to support IPv4 and IPv6 host names in SPNs. For more information, see [Configuring Kerberos for IP Addresses](../security/kerberos/configuring-kerberos-over-ip.md).
 
 Registry path:
 
