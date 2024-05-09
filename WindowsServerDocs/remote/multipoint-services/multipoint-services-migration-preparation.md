@@ -4,9 +4,9 @@ description: Describes information to gather before you migrate to MultiPoint Se
 ms.date: 07/29/2016
 ms.topic: article
 ms.assetid: 3060c531-98a2-4957-a02c-be273f25f493
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: wscontent
 ---
 # Prepare to migrate to MultiPoint Services in Windows Server 2016
 

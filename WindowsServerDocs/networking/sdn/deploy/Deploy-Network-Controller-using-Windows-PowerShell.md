@@ -4,7 +4,7 @@ description: This topic provides instructions on using Windows PowerShell to dep
 ms.topic: how-to
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 ms.author: v-mandhiman
-author: ManikaDhiman
+author: robinharwood
 manager: grcusanz
 ms.date: 10/28/2021
 ---
