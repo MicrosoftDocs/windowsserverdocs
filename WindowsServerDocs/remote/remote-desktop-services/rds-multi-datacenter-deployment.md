@@ -107,7 +107,7 @@ The Active Directory servers in each deployment are replicas within the same For
 Provide a [per-user RD CAL](rds-client-access-license.md) for each named user that is authorized to access the geo-redundant deployment. Distribute the per user CALs evenly across the two RD License Servers in the active deployment. Then, duplicate these CALs to the two RD License Servers in the passive deployment. Because the CALs are duplicated between the active and passive deployment, at any given time only one deployment can be active with users connecting; otherwise, you violate the license agreement.
 
 ### Image Management
-As you update your RDSH images to provide software updates or new applications, you'll need to separately update the RDSH collections in each deployment to maintain a common user experience across both deployments. You can use the [Update RDSH collection template](/Azure/RDS-Templates/tree/master/rds-update-rdsh-collection), but note that the passive deployment's RDS infrastructure and RDSH VMs must be running to run the template.
+As you update your RDSH images to provide software updates or new applications, you'll need to separately update the RDSH collections in each deployment to maintain a common user experience across both deployments. You can use the [Update RDSH collection template](https://github.com/Azure/RDS-Templates/tree/master/rds-update-rdsh-collection), but note that the passive deployment's RDS infrastructure and RDSH VMs must be running to run the template.
 
 ## Failover
 
