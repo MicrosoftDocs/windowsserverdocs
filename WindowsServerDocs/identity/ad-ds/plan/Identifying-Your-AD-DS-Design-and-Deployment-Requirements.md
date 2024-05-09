@@ -3,7 +3,7 @@ description: "Learn more about: Identifying Your AD DS Design and Deployment Req
 ms.assetid: f0398494-773d-4070-aa4e-25b4815b001e
 title: Identifying Your AD DS Design and Deployment Requirements
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

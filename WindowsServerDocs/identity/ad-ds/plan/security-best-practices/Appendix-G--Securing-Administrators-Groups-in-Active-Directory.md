@@ -3,7 +3,7 @@ description: "Learn more about: Appendix G: Securing Administrators Groups in Ac
 ms.assetid: 4baefbd3-038f-44c0-85ba-f24e9722b757
 title: Appendix G - Securing Administrators Groups in Active Directory
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

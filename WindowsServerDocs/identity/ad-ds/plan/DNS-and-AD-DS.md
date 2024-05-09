@@ -2,7 +2,7 @@
 description: "Learn more about: DNS and AD DS"
 ms.assetid: c32606b4-2ee2-4df3-a704-8ac6723e188f
 title: DNS and AD DS
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018

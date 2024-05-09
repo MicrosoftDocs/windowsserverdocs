@@ -3,7 +3,7 @@ description: "Learn more about: Appendix M: Document Links and Recommended Readi
 ms.assetid: 6785de86-4f7d-4ed1-9055-8de0871d59b5
 title: Appendix M - Document Links and Recommended Reading
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
