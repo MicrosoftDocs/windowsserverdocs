@@ -7,7 +7,7 @@ ms.date: 05/10/2024
 ms.topic: how-to
 ---
 
-# Enable 32K pages in Active Directory Domain Services
+# Enable 32K pages in Active Directory Domain Services (preview)
 
 Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
 
@@ -21,23 +21,11 @@ A 32K database page format offers a huge improvement in scalability, including m
 
 In this article, you learn how to enable the 32k page feature in Active Directory Domain Services using PowerShell.
 
-## Considerations enabling 32k page feature
-
-When you create a backup of an AD database, the page size of the database is preserved on a backup media. Before Windows Server 2025, all backup media was limited to 8k-page databases, which was the only page size supported. However, a Windows Server 2025 machine might have either an 8k or 32k-page database. It might have an 8K page database if it was upgraded from a previous version of Windows Server. It might have a 32K page database if it was:
-
-- Installed as a new DC in a Windows Server 2025 forest.
-- Promoted to a DC over-the-wire.
-- Restored from a 32k-page backup image.
-
-Before you enable the 32k-page feature, either 8k or 32k page backup media can be used to restore a Windows Server 2025 DC. After you enable the 32k-page feature, only 32k page backup media can be used to restore a Windows Server 2025 DC. It's important to note that enabling the 32k-page feature is irreversible. As a result, any 8k-page backup media created before enabling the feature is unusable unless a complete authoritative forest recovery is performed.
-
-Enabling the larger 32K page sizes can affect server performance due to increased memory usage.
-
 ## Prerequisites
 
 Before you can enable 32k pages in your Active Directory Domain Services, you need to complete the following prerequisites.
 
-- Review the article TODO: blah for other considerations before enabling the 32k page feature.
+- Review the article [32K pages in Active Directory Domain Services and Active Directory Lightweight Domain Services](32K-page-feature-ad-domain-services.md) for other considerations before enabling the 32k page feature.
 - Your Active Directory domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 - All domain controllers must be upgraded to Windows Server 2025 or later.
 - Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
