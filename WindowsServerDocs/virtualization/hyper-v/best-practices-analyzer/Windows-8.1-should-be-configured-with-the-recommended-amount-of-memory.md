@@ -1,8 +1,8 @@
 ---
 title: Windows 8.1 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows 8.1 is configured with less than the recommended amount of RAM, which is 1 GB.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: 4972101a-c266-4045-bdd6-4e75a9cd750e
 ms.date: 8/16/2016

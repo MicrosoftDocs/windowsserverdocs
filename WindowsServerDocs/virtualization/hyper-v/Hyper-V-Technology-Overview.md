@@ -3,8 +3,8 @@ title: Hyper-V Technology Overview
 description: Describes what Hyper-V is, how to get it, key features, and common uses.
 ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.date: 11/29/2016
 ---
 # Hyper-V Technology Overview
