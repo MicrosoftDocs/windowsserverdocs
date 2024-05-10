@@ -21,6 +21,16 @@ Certificates in Remote Desktop Services need to meet the following requirements:
 
 - The Enhanced Key Usage extension has a value of either `Server Authentication` or `Remote Desktop Authentication (1.3.6.1.4.1.311.54.1.2)`.
 
+## Prerequisites
+
+In order to use certificates in RDS, you need to meet the following requirements:
+
+- Install Active Directory Certificate Services (AD CS) on Server Manager.
+
+- Install and configure an RDS deployment.
+
+- Install the RD Connection Broker role on your domain controller.
+
 ## Create a Server Authentication certificate
 
 When you control the client computers, the easiest way to get certificates is by using Active Directory Certificate Services<!---Acronym?--->. You can use this service to request and deploy your own certificates, which are trusted by every computer in the Active Directory (AD) domain.
@@ -29,11 +39,9 @@ Communicating with computers in your AD domain requires a Server Authentication 
 
 To create a Server Authentication certificate from the template:
 
-1. Open CERTSRV.MSC and configure certificates. <!--What does "configure certificates" mean here? Aren't we already configuring the certificate?-->
+1. Open **Certification Authority**.
 
-1. Open the **Certificate Authority**.
-
-1. In the **Details** pane, select the name of the computer you want to create a certificate for to expand the accordion menu.
+1. In the left pane, select the name of the computer you want to create a certificate for to expand its accordion menu.
 
 1. Right-click **Certificate Templates**, then select **Manage** from the drop-down menu to open the Certificate Templates Console.
 
@@ -41,19 +49,17 @@ To create a Server Authentication certificate from the template:
 
 1. On the **General** tab, change the **Template display name** to **Client Server Authentication**.
 
-1. Select **Publish certificate in Active Directory**.
+1. Select the **Publish certificate in Active Directory** checkbox.
 
 1. On the **Security** tab, under the options for **Domain Computers**, select **Allow Autoenroll**, then select **OK** to save your changes.
 
 1. Close the Certificates Templates console.
 
-1. In the certsrv snap-in<!--Elaborate?-->, right-click **Certificate Templates**, then select **New** > **Certificate Template to Issue**.
+1. In the Certification Authority snap-in menu, right-click **Certificate Templates**, then select **New** > **Certificate Template to Issue**.
 
-1. Select **Client-Server Authentication**, then select **OK**.
+1. Select **Client Server Authentication**, then select **OK**.
 
 1. Validate that the certificate exists in the Certificates MMC<!--Acronym---> snap-in. When you open the new certificate, the General tab of the certificate will list the purpose as Server Authentication.
-
-Certificates created from this template will contain: <!---Images with no context/alt text--->
 
 If you want to let users connect externally without being part of your AD domain, you must deploy certificates from a public CA, such as GoDaddy, Verisign, Entrust, Thawte, or DigiCert.
 
@@ -157,15 +163,17 @@ To configure Remote Desktop to use specific certificates:
 
 ### [GUI](#tab/gui)
 
-1. On the **Connection Broker**, open **Server Manager**. 
+1. Open **Server Manager**.
 
 1. Select **Remote Desktop Services** in the navigation pane on the left side of the window.
 
-1. Go to **Tasks** > **Edit Deployment Properties**.
+1. Select **Servers**.
+
+1. On the **Overview** tab, look for the **Deployment Overview** menu, then select **TASKS** > **Edit Deployment Properties**.
 
 1. In the **Configure the deployment** window, select **Certificates**.
 
-1. Go to **Select existing certificates**, then browse to the location where you saved the certificate you created in the previous section. Look for the file with the .pfx extension.
+1. Choose **Select existing certificates**, then browse to the location where you saved the certificate you created in the previous section. Look for the file with the .pfx extension.
 
 1. Import the certificate.
 
