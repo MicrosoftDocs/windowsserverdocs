@@ -2,7 +2,7 @@
 title: Enable 32K pages in Active Directory Domain Services in Windows Server
 description: Learn about enable 32K pages in Active Directory Domain Services and how to enable the optional feature using PowerShell.
 author: gswashington
-ms.author: robinharwood
+ms.author: wscontent
 ms.date: 05/10/2024
 ms.topic: how-to
 ---
@@ -14,7 +14,7 @@ Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-A 32K database page format offers a huge improvement in scalability, including multi-valued attributes are now able to hold up to ~3,200 values. Beginning with Windows Server 2025, new Active Directory domain controllers (DCs) can be installed with a 32K page database that uses 64-bit Long Value IDs (LIDs). By default these new DCs runs in an 8k page mode for compatibility with previous versions. An upgraded DC continues to use its current database format and 8K pages. Moving to 32K database pages is done on a forest-wide basis and requires that all DCs in the forest have a 32k page capable database. 32K database page size optional feature. For more information about using 32K pages in Active Directory, see [32k pages in Active Directory Domain Services](/32K-page-feature-ad-domain-services.md).
+A 32K database page format offers a huge improvement in scalability, including multi-valued attributes are now able to hold up to ~3,200 values. Beginning with Windows Server 2025, new Active Directory domain controllers (DCs) can be installed with a 32K page database that uses 64-bit Long Value IDs (LIDs). By default these new DCs runs in an 8k page mode for compatibility with previous versions. An upgraded DC continues to use its current database format and 8K pages. Moving to 32K database pages is done on a forest-wide basis and requires that all DCs in the forest have a 32k page capable database. 32K database page size optional feature. For more information about using 32K pages in Active Directory, see [32k pages in Active Directory Domain Services](32K-pages-optional-feature.md).
 
 > [!WARNING]
 > Once you have enabled the 32k database page feature, you can't revert back to the previous 8k page mode. As a result, any 8k-page backup media created prior to enabling the feature will be unusable unless a complete authoritative forest recovery is performed.
