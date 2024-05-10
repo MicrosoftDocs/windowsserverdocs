@@ -204,9 +204,9 @@ This group includes all Read-only Domain Controllers (RODC) in an Active Directo
 
 ### Everyone
 
-All interactive, network, dial-up, and authenticated users are members of the Everyone group. This special identity group gives wide access to system resources. When a user logs on to the network, the user is automatically added to the Everyone group. Membership is controlled by the operating system.
+All interactive, network, dial-up, and authenticated users are members of the Everyone group. This special identity group gives wide access to system resources. When a user logs on to the network, the user is automatically added to the Everyone group. Membership is controlled by the operating system. It is recommended that makers do not share any resource with this group.
 
-On computers running Windows 2000 and earlier, the Everyone group included the Anonymous Logon group as a default member. Beginning in Windows Server 2003, the Everyone group contains only Authenticated Users and Guest. The group no longer includes Anonymous Logon by default. To change the Everyone group setting to include the Anonymous Logon group, in Registry Editor, go to the **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** key and set the value of the **everyoneincludesanonymous** DWORD to **1**.
+On computers running Windows 2000 and earlier, the Everyone group included the Anonymous Logon group as a default member. Beginning in Windows Server 2003, the Everyone group contains only Authenticated Users and Guest. The group no longer includes Anonymous Logon by default. To change the Everyone group setting to include the Anonymous Logon group, in Registry Editor, go to the **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** key and set the value of the **everyoneincludesanonymous** DWORD to **1**. 
 
 |Attribute|Value|
 | --- | --- |
