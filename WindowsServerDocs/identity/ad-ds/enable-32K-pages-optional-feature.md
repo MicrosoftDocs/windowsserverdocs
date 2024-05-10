@@ -25,7 +25,7 @@ In this article, you learn how to enable the 32k page feature in Active Director
 
 Before you can enable 32k pages in your Active Directory Domain Services, you need to complete the following prerequisites.
 
-- Review the article [32K pages in Active Directory Domain Services and Active Directory Lightweight Domain Services](32K-page-feature-ad-domain-services.md) for other considerations before enabling the 32k page feature.
+- Review the article [32K pages in Active Directory Domain Services and Active Directory Lightweight Domain Services](32K-pages-optional-feature.md) for other considerations before enabling the 32k page feature.
 - Your Active Directory domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 - All domain controllers must be upgraded to Windows Server 2025 or later.
 - Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
