@@ -45,8 +45,6 @@ Enabling the larger 32K page sizes can affect server performance due to increase
 > [!WARNING]
 > Once you have enabled the 32k database page feature, you can't revert back to the previous 8k page mode. As a result, any 8k-page backup media created prior to enabling the feature will be unusable unless a complete authoritative forest recovery is performed.
 
-## Related reading
+## Next steps
 
-- [What's new in Windows Server 2025 (preview)](https://learn.microsoft.com/windows-server/get-started/whats-new-windows-server-2025#active-directory-domain-services)
-
-- [Enable 32k pages in Active Directory Domain Services](enable-32K-pages-active-directory-domain-services.md)
+To enable the 32k pages optional feature in your forest or domain, see [Enable 32k pages in Active Directory Domain Services](enable-32K-pages-optional-feature.md).
