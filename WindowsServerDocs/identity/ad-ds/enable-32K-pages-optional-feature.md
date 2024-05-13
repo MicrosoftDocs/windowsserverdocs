@@ -29,8 +29,8 @@ Before you can enable 32k pages in your Active Directory Domain Services, you ne
 - Your Active Directory domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 - All domain controllers must be upgraded to Windows Server 2025 or later.
 - Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
-- Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Server domain controller before making changes.
-- All applications and services that interact with Active Directory must are compatible with the 32K pages feature.
+- Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Server domain controllers before making changes.
+- All applications and services that interact with Active Directory must be compatible with the 32K pages feature.
 
 ## Enable the 32k page feature using PowerShell
 
@@ -40,7 +40,7 @@ The 32k database page size is an optional feature in AD and isn't enabled by def
 
 1. Open an elevated PowerShell prompt.
 
-1. To enable the 32k page feature in PowerShell, run the `Enable-ADOptionalFeature` cmdlet from an elevated prompt. In this example, the command enables this feature for the device named DC1 in the contoso domain. Make sure to replace the values for the `Server`, and `Target` parameters with your own values.
+1. To enable the 32k page feature in PowerShell, use the `Enable-ADOptionalFeature` cmdlet from an elevated prompt. In this example, the command enables this feature for the device named DC1 in the contoso domain. Make sure to replace the values for the `Server`, and `Target` parameters with your own values.
 
    ```powershell
    $params = @{

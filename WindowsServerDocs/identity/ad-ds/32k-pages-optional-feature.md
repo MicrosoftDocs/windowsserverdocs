@@ -16,7 +16,7 @@ Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2
 
 Beginning with Windows Server 2025, new Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) installs use a 32K page database. A 32K database page format offers a huge improvement in scalability, including multi-valued attributes are now able to hold up to ~3,200 values, which is an increase by a factor of 2.6. New domain controllers, or application directory partitions for LDS, are installed with a 32k page database. The 32k page database uses 64-bit Long Value IDs (LIDs), by default new installs run in an 8k page mode for compatibility with previous versions. An upgraded DC continues to use its current database format and 8k pages. Moving to 32k database pages is done on a forest-wide basis and requires that all DCs in the forest have a 32k page capable database.
 
-Active Directory (AD) uses an Extensible Storage Engine (ESE) database since its introduction in Windows 2000 that used an 8k database page size, this architecture limited the scale of forest and domain objects. An example of this limitation is a single record AD object, which can't exceed 8k bytes in size. For more information about the Active Directory's scalability, see [Active Directory Maximum Limits - Scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101%28v=ws.10%29).
+Active Directory (AD) uses an Extensible Storage Engine (ESE) database, since its introduction in Windows 2000 it's used an 8k database page size, this architecture limited the scale of forest and domain objects. An example of this limitation is a single record AD object, which can't exceed 8k bytes in size. For more information about the Active Directory's scalability, see [Active Directory Maximum Limits - Scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101%28v=ws.10%29).
 
 The 32k database page-size functionality is an optional feature in Active Directory. The feature it isn't enabled by default for new installations of AD DS and AD LDS in Windows Server. The exception is in Windows Server 2025 (preview) domains and forests, where the 32k database page size feature is enabled by default.
 
@@ -27,8 +27,8 @@ Before you can enable 32k pages in your Active Directory Domain Services, you ne
 - Your Active Directory forest and domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 - All domain controllers must be upgraded to Windows Server 2025 or later.
 - Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
-- Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Server domain controller before making changes.
-- All applications and services that interact with Active Directory must are compatible with the 32K pages feature.
+- Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Server domain controllers before making changes.
+- All applications and services that interact with Active Directory must be compatible with the 32K pages feature.
 
 ## Considerations enabling 32k page feature
 
@@ -38,9 +38,7 @@ When you create a backup of an AD database, the page size of the database is pre
 - Promoted to a DC over-the-wire.
 - Restored from a 32k-page backup image.
 
-Before you enable the 32k-page feature, either 8k or 32k page backup media can be used to restore a Windows Server 2025 DC. After you enable the 32k-page feature, only 32k page backup media can be used to restore a Windows Server 2025 DC. It's important to note that enabling the 32k-page feature is irreversible. As a result, any 8k-page backup media created before enabling the feature is unusable unless a complete authoritative forest recovery is performed.
-
-Enabling the larger 32K page sizes can affect server performance due to increased memory usage.
+Before you enable the 32k-page feature, either 8k or 32k page backup media can be used to restore a Windows Server 2025 DC. After you enable the 32k-page feature, only 32k page backup media can be used to restore a Windows Server 2025 DC. Enabling the larger 32K page sizes can affect server performance due to increased memory usage.
 
 > [!WARNING]
 > Once you have enabled the 32k database page feature, you can't revert back to the previous 8k page mode. As a result, any 8k-page backup media created prior to enabling the feature will be unusable unless a complete authoritative forest recovery is performed.
