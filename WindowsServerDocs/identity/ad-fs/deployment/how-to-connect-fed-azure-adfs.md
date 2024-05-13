@@ -11,9 +11,9 @@ ms.date: 02/13/2024
 
 # Deploy Active Directory Federation Services in Azure
 
-Active Directory Federation Services (AD FS) provides simplified, secured identity federation and web single sign-on (SSO) capabilities. Federation with Microsoft Entra ID or Microsoft 365 lets users authenticate using on-premises credentials and access all cloud resources. As a result, it becomes important to have a highly available AD FS infrastructure to ensure access to resources both on-premises and in the cloud.
+Active Directory Federation Services (AD FS) provides simplified, secured identity federation and web single sign-on (SSO) capabilities. Users federated with Microsoft Entra ID or Windows 365 can authenticate using on-premises credentials to access all cloud resources. As a result, your deployment must have a highly available AD FS infrastructure to ensure access to resources both on-premises and in the cloud.
 
-Deploying AD FS in Azure can help achieve the high availability required with minimal efforts. There are several advantages of deploying AD FS in Azure:
+Deploying AD FS in Azure can help achieve high availability without too much effort. There are several advantages of deploying AD FS in Azure:<!---Do we need this? I don't think we have to sell people on AD FS if they're already looking at a how-to article.--->
 
 - **High Availability** - With the power of Azure availability sets, you ensure a highly available infrastructure.
 - **Easy to Scale** – Need more performance? Easily migrate to more powerful machines with just a few selections in Azure.
@@ -22,29 +22,25 @@ Deploying AD FS in Azure can help achieve the high availability required with mi
 
 ## Design principles
 
-This diagram shows the recommended basic topology to start deploying your AD FS infrastructure in Azure.
+The following diagram shows the recommended basic topology for deploying AD FS infrastructure in Azure.
 
-![Screenshot of deployment design.](./media/how-to-connect-fed-azure-adfs/deployment.png)
+![Screenshot of deployment design.](./media/how-to-connect-fed-azure-adfs/deployment.png) <!---Needs alt text.-->
 
 The following are principles behind the various components of the topology:
 
-- **DC/AD FS servers**: If you have fewer than 1,000 users, you can install AD FS role on your domain controllers (DCs). If you don't want any performance effect on the DCs, or if you have more than 1,000 users, deploy AD FS on separate servers.
-- **WAP server** – It's necessary to deploy web application proxy servers so that users can reach the AD FS when they aren't on the company network.
-- **DMZ**: The web application proxy servers are placed in the DMZ and only TCP/443 access is allowed between the DMZ and the internal subnet.
+- **DC/AD FS servers**: If you have fewer than 1,000 users, you can install the AD FS role on your domain controllers (DCs). If you don't want any performance effect on the DCs, or if you have more than 1,000 users, deploy AD FS on separate servers.
+- **WAP server** – You must deploy web application proxy servers so that users can reach the AD FS when they aren't on the company network.
+- **DMZ**: Place the web application proxy servers in the DMZ and only allow TCP/443 access between the DMZ and internal subnet.
 - **Load balancers**: To ensure high availability of AD FS and web application proxy servers, we recommend using an internal load balancer for AD FS servers and Azure Load Balancer for web application proxy servers.
 - **Availability sets**: To provide redundancy to your AD FS deployment, we recommend that you group two or more virtual machines (VMs) in an availability set for similar workloads. This configuration ensures that during either a planned or unplanned maintenance event, at least one VM is available.
 - **Storage accounts**: We recommend you have two storage accounts. Having a single storage account can lead to creating a single point of failure. If you have only one storage account, it can cause the deployment to become unavailable in the unlikely event where the storage account fails. Two storage accounts help associate one storage account for each fault line.
 - **Network segregation**: Web application proxy servers should be deployed in a separate DMZ network. You can divide one virtual network into two subnets and then deploy the web application proxy servers in an isolated subnet. You can configure the network security group settings for each subnet and allow only required communication between the two subnets. More details are given per the following deployment scenario.
 
-## Steps to deploy AD FS in Azure
+## Deploy the network
 
-This section outlines the steps to deploy an AD FS infrastructure in Azure.
+You can either create two subnets in a single virtual network or create two different virtual networks. This article focuses on deploying a single virtual network and dividing it into two subnets. This approach is currently easier as two separate virtual networks would require a virtual network to virtual network gateway for communications.
 
-### Deploy the network
-
-As outlined previously, you can either create two subnets in a single virtual network or create two different virtual networks. This article focuses on deploying a single virtual network and dividing it into two subnets. This approach is currently easier as two separate virtual networks would require a virtual network to virtual network gateway for communications.
-
-#### Create a virtual network
+### Create a virtual network
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) with your Azure account.
 1. In the portal, search for and select **Virtual networks**.
@@ -80,7 +76,7 @@ You now have a virtual network that includes two subnets, each with an associate
 
 :::image type="content" source="./media/how-to-connect-fed-azure-adfs/subnets-with-nsgs.png" alt-text="Screenshot showing the new subnets and their network security groups.":::
 
-#### Secure the virtual network
+### Secure the virtual network
 
 A Network security group (NSG) contains a list of Access Control List (ACL) rules that allow or deny network traffic to your VM instances in a Virtual Network. NSGs can be associated with either subnets or individual VM instances within that subnet. When an NSG is associated with a subnet, the ACL rules apply to all the VM instances in that subnet.
 
@@ -125,7 +121,7 @@ After configuration, the **NSG** pages look like this example:
 > [!NOTE]
 > If client user certificate authentication (clientTLS authentication using X.509 user certificates) is required, then AD FS requires TCP port 49443 to be enabled for inbound access.
 
-#### Create connection to on-premises
+### Create connection to on-premises
 
 You need a connection to on-premises to deploy the DC in Azure. Azure offers various options to connect your on-premises infrastructure to your Azure infrastructure.
 
@@ -137,7 +133,7 @@ We recommend you use ExpressRoute. ExpressRoute lets you create private connecti
 
 While we recommend you use ExpressRoute, you can choose any connection method best suited for your organization. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](/azure/expressroute/expressroute-introduction).
 
-### Create storage accounts
+## Create storage accounts
 
 To maintain high availability and avoid dependence on a single storage account, create two storage accounts. Divide the machines in each availability set into two groups, and then assign each group a separate storage account.
 
@@ -163,7 +159,7 @@ To create your two storage accounts, search for and select **Storage accounts** 
 
 1. Repeat the previous steps to create a second storage account with the name **contososac2**.
 
-### Create availability sets
+## Create availability sets
 
 For each role (DC/AD FS and WAP), create availability sets that contain at least two machines each. This configuration helps achieve higher availability for each role. While creating the availability sets, you must decide on the following domains:
 
@@ -194,7 +190,7 @@ To create availability sets, search for and select **Availability sets** in the 
 
 <!--{{{NOTE}}}The original documentation has a table below the screenshot and lists a column for "Role" with the following values for each availability set: contosodcset with a role of DC/AD FS and contosowapset with a role of WAP. I don't see an equivalent behavior in the new UI.-->
 
-### Deploy virtual machines
+## Deploy virtual machines
 
 The next step is to deploy VMs that host the different roles in your infrastructure. We recommend a minimum of two machines in each availability set. So for this example, we create four VMs for the basic deployment.
 
@@ -252,7 +248,7 @@ If you're managing the DNS, we recommend you use a static IP address. You can us
 
 Your **Virtual machines** page should show all four VMs after the deployment completes.
 
-### Configure the DC / AD FS servers
+## Configure the DC / AD FS servers
 
 To authenticate any incoming request, AD FS needs to contact the DC. To save the costly trip from Azure to on-premises DC for authentication, we recommend you deploy a replica of the DC in Azure. In order to attain high availability, it's better to create an availability set of at least two DCs.
 
@@ -264,7 +260,7 @@ To authenticate any incoming request, AD FS needs to contact the DC. To save the
 - Promote the two servers as replica DCs with DNS
 - Configure the AD FS servers by installing the AD FS role using the server manager.
 
-### Create and deploy the internal load balancer (ILB)
+## Create and deploy the internal load balancer (ILB)
 
 To create and deploy an ILB, search for and select **Load Balancers** in the Azure portal and choose **+ Create**.
 
@@ -320,7 +316,7 @@ After you select **Create** and the ILB deploys, you can see it in the list of l
 
 :::image type="content" source="./media/how-to-connect-fed-azure-adfs/list-of-load-balancers.png" alt-text="Screenshot showing the new load balancer you just created.":::
 
-#### Update the DNS server with ILB
+### Update the DNS server with ILB
 
 Using your internal DNS server, create an A record for the ILB. The A record should be for the federation service with the IP address pointing to the IP address of the ILB. For example, if the ILB IP address is 10.3.0.8 and the federation service installed is fs.contoso.com, create an A record for fs.contoso.com pointing to 10.3.0.8.
 
@@ -332,20 +328,20 @@ This setting ensures that all data transmitted to fs.contoso.com ends up at the 
 > [!NOTE]
 > If your deployment is also using IPv6, create a corresponding AAAA record.
 
-#### Configure the web application proxy servers to reach AD FS servers
+### Configure the web application proxy servers to reach AD FS servers
 
 To ensure that web application proxy servers are able to reach the AD FS servers behind the ILB, create a record in the %systemroot%\system32\drivers\etc\hosts file for the ILB. The distinguished name (DN) should be the federation service name, such as fs.contoso.com. And the IP entry should be the ILB's IP address (10.3.0.8, as shown in the example).
 
 > [!WARNING]
 > If you're using the Windows Internal Database (WID) for your AD FS database, set this value instead to temporarily point to your primary AD FS server or else the web application proxy fails enrollment. After you've successfully enrolled all web application proxy servers, change this DNS entry to point to the load balancer.
 
-#### Install the web application proxy role
+### Install the web application proxy role
 
 After you ensure that web application proxy servers are able to reach the AD FS servers behind ILB, you can next install the web application proxy servers. Web application proxy servers don't need to be joined to the domain. Install the web application proxy roles on the two web application proxy servers by selecting the **Remote Access** role. The server manager guides you to complete the WAP installation.
 
 For more information on how to deploy WAP, see [Install and Configure the web application proxy Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383662(v=ws.11)).
 
-### Create and deploy the internet-facing (public) load balancer
+## Create and deploy the internet-facing (public) load balancer
 
 1. In the Azure portal, select **Load balancers** and then choose **Create**.
 1. In **Create load balancer**,enter or select this information in the **Basics** tab:
@@ -399,7 +395,7 @@ After you select **Create** and the public ILB deploys, you can see it in the li
 
 :::image type="content" source="./media/how-to-connect-fed-azure-adfs/list-of-load-balancers-public.png" alt-text="Screenshot showing how to save an inbound rule.":::
 
-#### Assign a DNS label to the public IP
+### Assign a DNS label to the public IP
 
 Use the **Search resources** feature and search for **Public IP addresses**. Use the following steps to configure the DNS label for the public IP.
 
@@ -407,7 +403,7 @@ Use the **Search resources** feature and search for **Public IP addresses**. Use
 1. Under **Provide a DNS label (optional)**, add an entry in the text field (like fs.contoso.com) that resolves to the DNS label of the external load balancer (like contosofs.westus.cloudapp.azure.com).
 1. Select **Save** to complete assigning a DNS label.
 
-### Test the AD FS sign-in
+## Test the AD FS sign-in
 
 The easiest way to test AD FS is by using the IdpInitiatedSignon.aspx page. To do that, you must enable the IdpInitiatedSignOn on the AD FS properties. Use the following steps to verify your AD FS setup.
 
