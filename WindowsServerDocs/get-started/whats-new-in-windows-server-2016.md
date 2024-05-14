@@ -137,7 +137,7 @@ Credential Guard uses virtualization-based security to isolate secrets so that o
 
 Credential Guard for Windows Server 2016 includes the following updates for signed-in user sessions:
 
-- Kerberos and New Technology LAN Manager (NTLM) use virtualization-based security to protect Kerberos amd NTLM secrets for signed-in user sessions.
+- Kerberos and New Technology LAN Manager (NTLM) use virtualization-based security to protect Kerberos and NTLM secrets for signed-in user sessions.
 
 - Credential Manager protects saved domain credentials using virtualization-based security. Signed-in credentials and saved domain credentials don't pass to remote hosts using Remote Desktop.
 
