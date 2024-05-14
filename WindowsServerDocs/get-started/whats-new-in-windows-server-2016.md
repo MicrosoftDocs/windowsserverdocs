@@ -163,7 +163,7 @@ Kerberos clients now attempt the PKInit freshness extension for public key based
 
 KDCs now support the PKInit freshness extension. However, they don't offer the PKInit freshness extension by default.
 
-For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kerberos-client-and-kdc-support-for-rfc-8070-pkinit-freshness-extension).
+For more information, see [Kerberos client and KDC support for RFC 8070 PKInit freshness extension](#kerberos-client-and-kdc-support-for-rfc-8070-pkinit-freshness-extension).
 
 ### Rolling public key only user's NTLM secrets
 
@@ -360,7 +360,7 @@ Domain-joined devices with bound public keys registered with a Windows Server 20
 
 Key Distribution Centers (KDCs) now support authentication using Kerberos key trust.
 
-For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kdc-support-for-public-key-trust-based-client-authentication).
+For more information, see [KDC support for Key Trust account mapping](#kdc-support-for-key-trust-account-mapping).
 
 ### Kerberos clients allow IPv4 and IPv6 address host names in Service Principal Names (SPNs)
 
