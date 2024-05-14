@@ -5,7 +5,7 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 manager: femila
-ms.date: 04/25/2024
+ms.date: 05/14/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -366,11 +366,13 @@ For more information, see [What's new in Kerberos authentication](../security/ke
 
 Starting with Windows 10 version 1507 and Windows Server 2016, you can configure Kerberos clients to support IPv4 and IPv6 host names in SPNs. For more information, see [Configuring Kerberos for IP Addresses](../security/kerberos/configuring-kerberos-over-ip.md).
 
-Registry path:
+To configure support for IP address host names in SPNs, create a TryIPSPN entry. This entry doesn't exist in the registry by default. You should place this entry on the following path:
 
+```text
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+```
 
-To configure support for IP address host names in SPNs, create a TryIPSPN entry. This entry doesn't exist in the registry by default. After creating the entry, change the DWORD value to 1. IF this value isn't configured, Kerberos won't attempt IP address host names.
+After creating the entry, change its DWORD value to 1. If this value isn't configured, Kerberos won't attempt IP address host names.
 
 Kerberos authentication only succeeds if the SPN is registered in Active Directory.
 
