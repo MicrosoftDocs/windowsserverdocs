@@ -179,8 +179,6 @@
   - name: Kerberos Authentication
     href: kerberos/kerberos-authentication-overview.md
     items:
-    - name: What's new in Kerberos authentication
-      href: kerberos/whats-new-in-kerberos-authentication.md
     - name: Domain-joined Device Public Key Authentication
       href: kerberos/domain-joined-device-public-key-authentication.md
     - name: Kerberos Constrained delegation
