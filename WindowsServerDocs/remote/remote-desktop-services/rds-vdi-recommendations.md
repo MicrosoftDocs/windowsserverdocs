@@ -1,7 +1,7 @@
 ---
 title: Recommended configuration for VDI desktops
 description: Recommended settings and configuration to minimize overhead for Windows 10 1607 (10.0.1393) desktops used as VDI images
-ms.author: elizapo
+ms.author: wscontent
 ms.date: 12/18/2018
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c

@@ -1,10 +1,10 @@
 ---
 title: Deploy a File Share Witness in Windows Server 2019
 description: File share witnesses allow you to use a file share to vote in cluster quorum. This topic describes file share witnesses and the new functionality, including using a USB drive connected to a router as a file share witness.
-manager: femila
+manager: eldenc
 ms.topic: article
-ms.author: wscontent
-author: robinharwood
+author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 10/20/2021
 ---
 # Deploy a file share witness
@@ -59,8 +59,6 @@ The steps for creating a file share witness using a USB device on this particula
 
 
 1. Log into the router with the USB device plugged in.
-
-   ![NetGear Interface](media/File-Share-Witness/FSW2.png)
 
 2. From the list of options, select ReadySHARE which is where shares can be created.
 

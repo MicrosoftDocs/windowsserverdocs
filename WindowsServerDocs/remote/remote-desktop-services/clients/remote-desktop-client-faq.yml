@@ -4,9 +4,9 @@ metadata:
   description: Frequently asked questions about the Remote Desktop clients
   ms.topic: faq
   ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
-  author: lizap
+  author: robinharwood
   manager: dongill
-  ms.author: elizapo
+  ms.author: wscontent
   ms.date: 02/07/2022
   ms.localizationpriority: medium
   ms.service: windows-server

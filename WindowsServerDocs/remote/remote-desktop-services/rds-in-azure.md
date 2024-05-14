@@ -3,9 +3,9 @@ title: Seamlessly deploy RDS with ARM and Azure Marketplace
 description: Learn how to create a small RDS deployment in Azure by using ARM templates and the Azure Marketplace.
 ms.topic: article
 ms.assetid: 5f72ceb6-6f90-48f6-bfc3-bdad63984ce7
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: wscontent
 ms.date: 02/10/2017
 ---
 # Seamlessly deploy RDS with Azure Resource Manager (ARM) and Azure Marketplace

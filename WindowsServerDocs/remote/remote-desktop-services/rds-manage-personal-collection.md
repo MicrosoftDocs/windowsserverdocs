@@ -1,10 +1,10 @@
 ---
 title: Manage a personal desktop session collection in RDS
 description: Learn how to manage a personal desktop session collection in Remote Desktop Services.
-ms.author: elizapo
+ms.author: wscontent
 ms.date: 11/08/2016
 ms.topic: article
-author: lizap
+author: robinharwood
 manager: dongill
 ---
 

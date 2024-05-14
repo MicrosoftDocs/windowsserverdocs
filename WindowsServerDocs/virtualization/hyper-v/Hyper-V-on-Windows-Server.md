@@ -3,8 +3,8 @@ title: Hyper-V on Windows Server
 description: Provides links to key articles about trying out, planning, deploying, and managing Hyper-V
 ms.topic: article
 ms.assetid: 0baef6b8-598c-4fe0-9f31-5869fc4e0f69
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/07/2016
 ---
 # Hyper-V on Windows Server

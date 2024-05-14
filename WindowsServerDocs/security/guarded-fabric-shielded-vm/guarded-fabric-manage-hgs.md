@@ -4,8 +4,8 @@ title: Managing the Host Guardian Service
 ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 12/10/2020
 ---
 
@@ -121,7 +121,7 @@ For more information, check out the [Windows Event Forwarding documentation](/wi
 You can also use System Center 2016 - Operations Manager to monitor HGS and your guarded hosts.
 The guarded fabric management pack has event monitors to check for common misconfigurations that can lead to datacenter downtime, including hosts not passing attestation and HGS servers reporting errors.
 
-To get started, [install and configure SCOM 2016](/services-hub/premier/health/setup-config-log-analytics-scom) and [download the guarded fabric management pack](https://www.microsoft.com/download/details.aspx?id=52764).
+To get started, [install and configure SCOM 2016](/services-hub/unified/health/setup-config-log-analytics-scom) and [download the guarded fabric management pack](https://www.microsoft.com/download/details.aspx?id=52764).
 The included management pack guide explains how to configure the management pack and understand the scope of its monitors.
 
 ## Backing up and restoring HGS
