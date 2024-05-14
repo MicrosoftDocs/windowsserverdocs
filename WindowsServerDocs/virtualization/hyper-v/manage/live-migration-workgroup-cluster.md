@@ -11,11 +11,9 @@ ms.date: 04/17/2024
 
 >Applies to: Windows Server 2025
 
-This article describes how to move a virtual machine by doing a live migration between hosts using workgroup clusters. Workgroup clusters are a type of Failover Cluster that don't use an on-premises domain controller or Active Directory forest. Instead, workgroup clusters are joined by workgroup.
+This article describes how to move a virtual machine by doing a live migration between hosts using workgroup clusters. Workgroup clusters are a type of Failover Cluster that don't use an on-premises domain controller or Active Directory forest. Instead, workgroup clusters are joined by workgroup. Workgroup clusters were introduced in Windows Server 2016. However, live migration for workgroup clusters wasn't supported until now, in Windows Server 2025. Benefit from the flexibility of live migration combined with the high availability of workgroup clusters.
 
-Workgroup clusters were introduced in Windows Server 2016. However, live migration for workgroup clusters wasn't supported until now, in Windows Server 2025. You can now benefit from the flexibility of live migration combined with the high availability of workgroup clusters.
-
-Learn about how virtual machine live migration works with workgroup and follow along to perform your own live migration.
+Follow the steps in this article to perform your own live migration.
 
 ## Prerequisites
 
@@ -26,21 +24,20 @@ The following prerequisites must be met in order to live migrate hosts using wor
 
 ## Do a live migration with Hyper-V workgroup clusters
 
-In the next sections,you'll do the following:
+In the next sections, you'll do the following:
 
 - **Install the Hyper-V role and Hyper-V management tools.** Each virtual machine needs Hyper-V installed in order to be able to connect to other hosts and do a live migration.
 - **Create a new virtual machine and add it to the workgroup cluster.** Add in a virtual machine role to facilitate the live migration.
 - **Set up source and destination servers.** Set up each server node to enable live migrations.
 - **Move a running virtual machine with live migration.** Complete a live migration by moving a running virtual machine between Hyper-V hosts without any noticeable downtime.
 
-
 ### Step 1: Install the Hyper-V role
 
-The Hyper-V role must be installed on the source and destination servers and set up for live migrations. If you haven't already installed this role, do it now before continuing.
+The Hyper-V role must be installed on the source and destination servers and set up for live migrations. If you haven't installed this role, do it now before continuing.
 
 #### 1.1 Enable Nested Virtualization on the source host.
 
-Nested Virualization allows you to run Hyper-V inside of a Hyper-V virtual machine. [Nested Virtualization must first be enabled](/virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization) before Hyper-V can be installed on a virtual machine.
+Nested Virtualization allows you to run Hyper-V inside of a Hyper-V virtual machine. [Nested Virtualization must first be enabled](/virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization) before Hyper-V can be installed on a virtual machine.
 
 To enable Nested Virtualization:
 
@@ -91,17 +88,19 @@ Add a new Hyper-V virtual machine as a role to your workgroup cluster in order t
 1. Open a PowerShell session as an Administrator.
 1. Run the following command to create a new virtual machine using an existing VHDX on the server node.
     ```powershell
-    New-VM -Name "VM1" -MemoryStartupBytes 10GB -VHDPath C:\ClusterStorage\VDisk01\WS2025Datacenter.vhdx
+    New-VM -Name "<VM_NAME>" -MemoryStartupBytes 10GB -VHDPath <PATH_TO_VHDX_FILE>
     ```
 1. Add in the virtual machine as a **Virtual Machine** role in the workgroup cluster enable automatic failover.
     ```powershell
-    Add-ClusterVirtualMachineRole -VirtualMachine VM1
+    Add-ClusterVirtualMachineRole -VirtualMachine <VM_NAME>
     ```
 
 #### [Server Manager](#tab/server-manager)
 
 1. Connect to one of your server nodes.
-1. In the Hyper-V manager, select **New**, then  **Virtual Machine...**.
+1. Open up Server Manager.
+1. Select Tools, and then Hyper-V Manager.
+1. In the Hyper-V Manager, select **New**, then  **Virtual Machine...**.
 1. Complete the steps in the **New Virtual Machine Wizard** to create a new virtual machine.
 1. Add in the virtual machine as a **Virtual Machine** role in the workgroup cluster using the Failover Cluster Manager.
 
@@ -109,7 +108,7 @@ Add a new Hyper-V virtual machine as a role to your workgroup cluster in order t
 
 ### Step 3: Set up the source and destination computers for live migration
 
-In this step, setup your source and host destination virtual machines to enable live migrations.
+In this step, set up your source and host destination virtual machines to enable live migrations.
 
 #### [PowerShell](#tab/powershell)
 
@@ -132,17 +131,17 @@ In this step, setup your source and host destination virtual machines to enable 
 #### [Server Manager](#tab/server-manager)
 
 1. From Server Manager, open Hyper-V Manager.
-1. Connect to whichever server you want to setup.
+1. Connect to whichever server you want to set up.
 1. In the **Actions** pane, select **Hyper-V Settings...**, then **Live Migrations**.
 1. In the **Live Migrations** pane, confirm that **Enable incoming and outgoing live migrations** is selected.
 1. Under **Simultaneous live migrations**, specify a different number if you don't want to use the default of 1.
 1. Under **Incoming live migrations**, if you want to use specific network connections to accept live migration traffic, select **Add** to type the IP address information. Otherwise, select **Use any available network for live migration**. Select **OK**.
 1. Review the details. Select **OK**.
-1. Repeat the steps in the Hyper-V manager for the other server node.
+1. Repeat the steps in the Hyper-V Manager for the other server node.
 
 ---
 
-### Step 4: Move a running virutal machine with live migration
+### Step 4: Move a running virtual machine with live migration
 
 Finally, do a live migration to move a running virtual machine.
  
