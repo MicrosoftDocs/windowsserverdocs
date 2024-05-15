@@ -88,6 +88,8 @@
       items:
       - name: Activate the license server
         href: rds-activate-license-server.md
+      - name: Reactivate or Deactivate the license server
+        href: rds-reactivate-deactivate-license-server.md
       - name: Install RDS CALs on the license server
         href: rds-install-cals.md
       - name: License RDS session hosts
