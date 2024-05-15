@@ -9,7 +9,7 @@ ms.date: 05/15/2024
 
 # How to enable insecure guest logons in SMB2 and SMB3
 
-This article describes enabling guest logons in SMB2 and SMB3, which can be useful in situations where you want to allow users who don't have a user account on the server to access shared resources. In scenarios where a user needs to access a resource on a server but doesn't have a user account on that server, enabling this setting can be useful. By enabling guest access, the server allows the user to access the resource without requiring authentication. However, it's important to note that guest access can also be a security risk, as it allows anyone to access the shared resources without any authentication. Therefore, it's recommended to use guest access only in specific scenarios where it's necessary.
+This article describes enabling guest logons for SMB2 and SMB3. In situations where a user needs to access a server resource but doesn't possess a user account on that server, enabling this setting provides this capability.
 
 ## Reason for enabling guest logons
 
@@ -40,7 +40,7 @@ Enabling insecure guest logons can be performed through Group Policy or PowerShe
 
 # [Group Policy](#tab/group-policy)
 
-1. Click **Start**, type **gpedit.msc**, and select **Edit group policy**.
+1. Select **Start**, type **gpedit.msc**, and select **Edit group policy**.
 1. In the left pane under **Local Computer Policy**, navigate to **Computer Configuration\Administrative Templates\Network\Lanman Workstation**.
 1. Open **Enable insecure guest logons**, select **Enabled**, then select **OK**.
 
@@ -59,36 +59,54 @@ Set-SmbClientConfiguration -EnableInsecureGuestLogons $true -Force
 Once the insecure guest logons policy is enabled, these events are captured in the **Event Viewer**. To review these logs, perform the following steps:
 
 1. Right-click on **Start**, select **Event Viewer**.
-1. In the left pane, navigate to **Applications and Service Logs\Microsoft\Windows\SMBClient\Security**
+1. In the left pane, navigate to **Applications and Service Logs\Microsoft\Windows\SMBClient\Security**.
 
 In the middle pane, you can review the following information concerning these events:
 
 ```output
-Log Name: Microsoft-Windows-SmbClient/Security  
-Source: Microsoft-Windows-SMBClient  
-Logged: Date/Time  
-Event ID: 31018  
-Task Category: InsecureGuestAuthEnabled  
-Level: Warning  
-Keywords: Authentication 
-User: NETWORK SERVICE  
-Computer:   
+Log Name: Microsoft-Windows-SmbClient/Security
+Source: Microsoft-Windows-SMBClient
+Logged: Date/Time
+Event ID: 31017
+Task Category: RejectedInsecureGuestAuth
+Level: Error
+Keywords: Authentication
+User: NETWORK SERVICE
+Computer:
+Description: Rejected an insecure guest logon.
+
+             The machine attempted to connect to the server using an
+             insecure guest logon. The server denied the connection.
+             Ensure that the guest account is enabled on the server
+             and configured to allow access from the network.
+```
+
+```output
+Log Name: Microsoft-Windows-SmbClient/Security
+Source: Microsoft-Windows-SMBClient
+Logged: Date/Time
+Event ID: 31018
+Task Category: InsecureGuestAuthEnabled
+Level: Warning
+Keywords: Authentication
+User: NETWORK SERVICE
+Computer:
 Description: An administrator has enabled AllowInsecureGuestAuth.
              Clients using insecure guest logons are more vulnerable
              to attackers-in-the-middle, phishing, and malware.
 ```
 
 ```output
-Log Name: Microsoft-Windows-SmbClient/Security  
-Source: Microsoft-Windows-SMBClient  
-Logged: Date/Time  
-Event ID: 31022  
-Task Category: AllowedInsecureGuestAuth  
-Level: Warning  
-Keywords: Authentication 
-User: SYSTEM  
-Computer:  
-Description: Allowed an insecure guest logon. 
+Log Name: Microsoft-Windows-SmbClient/Security
+Source: Microsoft-Windows-SMBClient
+Logged: Date/Time
+Event ID: 31022
+Task Category: AllowedInsecureGuestAuth
+Level: Warning
+Keywords: Authentication
+User: SYSTEM
+Computer:
+Description: Allowed an insecure guest logon.
 
              Username: nonexistantaccount
              Server name: 
