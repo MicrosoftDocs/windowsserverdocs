@@ -9,7 +9,7 @@ ms.date: 05/15/2024
 
 # How to enable insecure guest logons in SMB2 and SMB3
 
-In this article learn about Server Message Block (SMB) insecure guest logons default behaviors, why you might enable guest access, and how to enable it for the SMB client using Group Policy and PowerShell.
+This article describes Server Message Block (SMB) insecure guest logon default behaviors, why you might enable guest access, and how to enable it for the SMB client using Group Policy and PowerShell.
 
 Since Windows 2000, Windows disabled inbound guest access and prevented SMB2 and SMB3 client guest authentication since Windows 10. However, guest credentials may still be required when connecting to a third-party device that doesn't support a username and password. The recommendation is to upgrade or replace any third-party software or devices that only support guest authentication.
 
