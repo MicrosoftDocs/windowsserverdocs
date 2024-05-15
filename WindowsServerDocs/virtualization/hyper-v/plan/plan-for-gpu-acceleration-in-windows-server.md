@@ -61,12 +61,12 @@ To learn more about GPU partitioning, see these articles:
 
 Consider the following functionality and support differences between graphics virtualization technologies when planning your deployment:
 
-| Description | RemoteFX vGPU | Discrete Device Assignment | GPU Partitioning |
-|--|--|--|--|
-| GPU resource model | Dedicated or shared | Dedicated only | Partitioned |
-| VM density | High (one or more GPUs to many VMs) | Low (one or more GPUs to one VM) | High (one or more GPUs to many VMs) |
-| App compatibility | DX 11.1, OpenGL 4.4, OpenCL 1.1 | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA) | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA) |
-| AVC444 | Enabled by default | Available through Group Policy | Available through Group Policy |
-| GPU VRAM | Up to 1 GB dedicated VRAM | Up to VRAM supported by the GPU | Up to VRAM supported by the GPU per partition |
-| Frame rate | Up to 30fps | Up to 60fps | Dependent on the GPU and workload |
-| GPU driver in guest | RemoteFX 3D adapter display driver (Microsoft) | GPU vendor driver (NVIDIA, AMD, Intel) | GPU vendor driver (NVIDIA, AMD, Intel) |
+| Description | Discrete Device Assignment | GPU Partitioning |
+|--|--|--|
+| GPU resource model | Dedicated only | Partitioned |
+| VM density | Low (one or more GPUs to one VM) | High (one or more GPUs to many VMs) |
+| App compatibility | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA) | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA) |
+| AVC444 | Available through Group Policy | Available through Group Policy |
+| GPU VRAM | Up to VRAM supported by the GPU | Up to VRAM supported by the GPU per partition |
+| Frame rate | Up to 60fps | Dependent on the GPU and workload |
+| GPU driver in guest | GPU vendor driver (NVIDIA, AMD, Intel) | GPU vendor driver (NVIDIA, AMD, Intel) |
