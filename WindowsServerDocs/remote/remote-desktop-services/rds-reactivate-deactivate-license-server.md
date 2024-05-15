@@ -13,15 +13,15 @@ manager: femila
 
 You must reactivate a Remote Desktop license server when any of the following occur: 
 
-- The license server certificate has become corrupted.
-- The license server certificate has expired. 
-- The license server private key has been compromised. 
+- The license server certificate is corrupted.
+- The license server certificate is expired. 
+- The license server private key is compromised. 
 
 Reactivate a license server by using one of the following methods: 
 
-- [Reactivate a License Server Automatically]()
-- [Reactivate a License Server by Using a Web Browser]() 
-- [Reactivate a License Server by Using the Telephone]()
+- [Reactivate a License Server Automatically](./rds-reactivate-deactivate-license-server#reactivate-a-license-server-automatically)
+- [Reactivate a License Server by Using a Web Browser](./rds-reactivate-deactivate-license-server#reactivate-a-license-server-using-a-web-browser) 
+- [Reactivate a License Server by Using the Telephone](./rds-reactivate-deactivate-license-server#reactivate-a-license-server-by-telephone)
 
 ### Prerequisites
 
@@ -29,7 +29,7 @@ Membership in the **Administrators** group, or equivalent, is required to co
 
 ### Reactivate a license server automatically 
 
-The automatic reactivation method requires Internet connectivity from the computer running the RD Licensing Manager tool.  
+The automatic reactivation method requires internet connectivity from the computer running the Remote Desktop Licensing Manager tool. Complete the following steps to reactivate a license server automatically:
 
 1. In Server Manager, select **Remote Desktop Services** > **Servers**. Right-click the server where you installed the Remote Desktop Licensing role and select **RD Licensing Manager**. 
 1. Verify that the connection method for the license server is set to **Automatic connection (recommended)** by right-clicking the license server that you want to reactivate, and then clicking **Properties**. On the **Connection Method** tab, change the connection method if necessary. 
@@ -41,33 +41,33 @@ The automatic reactivation method requires Internet connectivity from the comput
 
 ### Reactivate a license server using a web browser 
 
-The web reactivation method can be used when the computer running the TS Licensing Manager tool doesn't have Internet connectivity, but you have access to the web by means of a web browser from another computer. The URL for the web method is displayed in the Reactivate Server Wizard. 
+The web reactivation method can be used when the computer running the Terminal Services Licensing Manager tool doesn't have internet connectivity, but you have access to the web from another computer. The URL for the web method is displayed in the Reactivate Server Wizard. 
 
 ### Reactivate a license server by telephone 
 
-The telephone reactivation method allows you to talk to a Microsoft customer service representative to complete the reactivation process. The appropriate telephone number is determined by the country/region that is configured for the Terminal Services license server, and that telephone number will be displayed in the Reactivate Server Wizard. 
+The telephone reactivation method allows you to talk to a Microsoft customer service representative to complete the reactivation process. The appropriate telephone number depends on the country/region that is configured for the Terminal Services license server, and that telephone number is displayed in the Reactivate Server Wizard. 
 
-To reactivate a Terminal Services license server by telephone:
+To reactivate a Terminal Services license server by telephone, complete the following steps:
 
 1. Select **Start**, point to Administrative Tools, point to Terminal Services, and then click **TS Licensing Manager**. 
 1. Verify that the connection method for the Terminal Services license server is set to **Telephone** by right-clicking the license server that you want to reactivate, and then clicking **Properties**. On the **Connection Method** tab, change the connection method, if necessary, ensure that the correct country or region is selected in the Select Country or Region list, and then select **OK**. 
 1. Right-click the license server that you want to reactivate, point to **Advanced**, and then select **Reactivate Server**. The Reactivate Server Wizard starts. 
 1. On the **Welcome** page, select **Next**. 
 1. Call Microsoft by using the telephone number that is displayed on the **License Server Reactivation** page, and then provide the Microsoft customer support representative with the product ID and license server ID that is displayed on your screen. 
-1. The representative will process your request to reactivate the license server, and will provide you with a new license server ID. On the **License Server Reactivation** page in the Reactivate Server Wizard, type the new license server ID that the representative provides, and then select **Next**. The license server is reactivated. 
+1. The representative processes your request to reactivate the license server, and provides you with a new license server ID. On the **License Server Reactivation** page in the Reactivate Server Wizard, type the new license server ID that the representative provides, and then select **Next**. The license server is reactivated. 
 1. On the **Completing the Reactivate Server Wizard** page, select **Finish**.
 
 ## Deactive a license server
 
-You may have to deactivate a license server if the certificate of the server has either expired or become damaged, or if you redeploy the server. You are prompted to reactivate the license server when its registration has expired. 
+You may have to deactivate a license server if the certificate of the server expires or become damaged, or if you redeploy the server. You are prompted to reactivate the license server when its registration expires. 
 
 The following steps describe how to deactivate a license server:
 
 1. Select **Start**, point to Administrative Tools, point to Terminal Services, and then click TS Licensing Manager.
-1. In the console tree, right-click the license server that you want to deactivate, point to Advanced, and then click Deactivate Server. 
-1. After the Licensing Wizard starts, confirm that your name, your phone number (optional), and your e-mail address that are listed under Information Needed are correct, and then click Next. Your request to deactivate the license server is sent to Microsoft where it is processed.
+1. In the console tree, right-click the license server that you want to deactivate, point to **Advanced**, and then select **Deactivate Server**. 
+1. After the Licensing Wizard starts, confirm that your name, your phone number (optional), and your e-mail address that are listed under Information Needed are correct. Then select **Next**. Your request to deactivate the license server is sent to Microsoft where it is processed.
     > [!NOTE]
     > Your e-mail address is required if you are using the Internet method.
 1. Select Finish. 
 
-When you deactivate a license server, you cannot license additional client computers from this server until the license server is reactivated. 
+When you deactivate a license server, you can't license other client computers from this server until the license server is reactivated. 
