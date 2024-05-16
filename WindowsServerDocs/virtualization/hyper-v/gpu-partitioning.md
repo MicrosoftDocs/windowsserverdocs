@@ -11,10 +11,10 @@ zone_pivot_groups: windows-os
 # GPU partitioning
 
 :::zone pivot="windows-server"
->Applies to: Windows Server 2025 (preview)
+>Applies to: Windows Server 2025 Datacenter (preview)
 
 > [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> GPU partitioning in Windows Server 2025 Datacenter is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"
@@ -29,7 +29,7 @@ The GPU partitioning feature uses the [Single Root IO Virtualization (SR-IOV) in
 
 :::zone pivot="windows-server"
 
-Windows Server introduces live migration with GPU partitioning. There are specific requirements to use GPU partitioning live migration. Aside from recommended live migration best practices, your cluster hosts will need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs will be automatically restarted and placed where GPU resources are available.
+Windows Server introduces live migration with GPU partitioning. There are specific requirements to use GPU partitioning live migration. Aside from recommended live migration best practices, your cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs are automatically restarted where GPU resources are available.
 
 :::zone-end
 
@@ -46,7 +46,7 @@ For example:
 ## Supported guest operating systems
 
 :::zone pivot="windows-server"
-GPU partitioning on Windows Server supports these guest operating systems:
+GPU partitioning on Windows Server 2025 Datacenter edition and later supports these guest operating systems:
 :::zone-end
 
 :::zone pivot="azure-stack-hci"
@@ -70,7 +70,7 @@ The following GPUs support GPU partitioning:
 - NVIDIA L40
 - NVIDIA L40S
 
-We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support additional GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA) or GPU passthrough. Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
+We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support more GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA) or GPU passthrough. Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
 
 For best performance, we recommend that you create a homogeneous configuration for GPUs across all the servers in your cluster. A homogeneous configuration consists of installing the same make and model of the GPU, and configuring the same partition count in the GPUs across all the servers in the cluster. For example, in a cluster of two servers with one or more GPUs installed, all the GPUs must have the same make, model, and size. The partition count on each GPU must also match.
 
@@ -88,7 +88,7 @@ Consider the following limitations when using the GPU partitioning feature:
 
 - You can assign only a single GPU partition to a VM.
 
-- Partitions are auto-assigned to the VMs. You can't choose a specific partition for a specific VM.
+- Partitions are autoassigned to the VMs. You can't choose a specific partition for a specific VM.
 
 :::zone pivot="azure-stack-hci"
 
@@ -102,7 +102,7 @@ Consider the following limitations when using the GPU partitioning feature:
 
 :::zone pivot="windows-server"
 
-- When live migrating a virtual machine with a GPU partition assigned, Hyper-V live migration will automatically fall back to using TCP/IP with compression. This has the potential effect of increasing the CPU utilization of a host. In addition, live migrations could take longer than with virtual machines without GPU partitions attached.
+- When live migrating a virtual machine with a GPU partition assigned, Hyper-V live migration automatically falls back to using TCP/IP with compression. Migrating a virtual machine has the potential effect of increasing the CPU utilization of a host. In addition, live migrations could take longer than with virtual machines without GPU partitions attached.
 
 :::zone-end
 
