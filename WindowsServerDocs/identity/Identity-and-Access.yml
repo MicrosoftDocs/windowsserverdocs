@@ -20,10 +20,6 @@ landingContent:
   # Card (optional)
   - title: About Identity and Access technologies
     linkLists:
-      - linkListType: whats-new
-        links:
-          - text: What's new?
-            url: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
       - linkListType: overview
         links:
           - text: Privileged Access Management for Active Directory Domain Services & AD DS

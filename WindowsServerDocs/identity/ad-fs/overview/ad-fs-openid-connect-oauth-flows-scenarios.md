@@ -24,7 +24,7 @@ Applies to AD FS 2019 and later
 |Web App calls Web API using user credentials||[Resource owner password credentials](#resource-owner-password-credentials-grant-flow-not-recommended)|Public, Confidential|
 |Browserless App calls Web API||[Device code](#device-code-flow)|Public, Confidential|
 |Web App calls Web API | Sample using MSAL | Authorization Code | Confidential|
-|PKCE Implementation | | [Authorization Code](/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios#authorization-code-grant-flow) | Public|
+|PKCE Implementation | | [Authorization Code](#authorization-code-grant-flow) | Public|
 
 ## Implicit grant flow
 

@@ -456,8 +456,6 @@
     - name: AD FS Overview
       href: ad-fs/AD-FS-Overview.md
       items:
-      - name: What's new in Active Directory Federation Services
-        href: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
       - name: AD FS 2016 Requirements
         href: ad-fs/overview/AD-FS-Requirements.md
     - name: AD FS Design
