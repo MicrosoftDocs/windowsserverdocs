@@ -90,7 +90,7 @@
         href: hyper-v/deploy/deploying-storage-devices-using-dda.md
       - name: Enable Nested Virtualization
         href: /virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
-      - name: Use 
+      - name: Use GPUs with clustered VMs
         href: hyper-v/deploy/use-gpu-with-clustered-vm.md
     - name: Manage
       href: hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md
