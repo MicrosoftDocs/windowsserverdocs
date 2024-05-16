@@ -8,42 +8,61 @@ ms.date: 05/31/2024
 
 ---
 
-# Active Directory DCLocator performance counters
+# DCLocator performance counters
 
 Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Beginning with Windows Server 2025, new Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) ....
+DC location refers to the algorithm by which a client machine finds a suitable domain controller. DC location is a critical baseline functionality in all enterprise environments.
 
-Active Directory (AD) uses ... 
+DC location in Windows can operate in two basic modes:
 
-## Requirements for using Active Directory DCLocater performance counters
+- DNS-based discovery 
+- NetBIOS-based discovery
 
-Before you can enable performance counters in your Active Directory Domain Services, you need to meet the following requirements.
+Beginning with Windows Server 2025, Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) feature three new domain controller locater performance counter sets:
 
-- Your Active Directory forest and domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
-- All domain controllers must be upgraded to Windows Server 2025 or later.
-- Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
-- Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Server domain controllers before making changes.
-- All applications and services that interact with Active Directory must be compatible with the 32K pages feature.
+- DC Locater (Client)
+- DC Locater (DC)
+- DC Locater (Netlogon)
 
-## Considerations enabling DCLocater performance counters 
+## DC Locater (Client)
 
-When you ...
+DC Locater (Client) measures per process running on the local client machine. Requests can be broken down based on what flags are being set, for example, requests per second, GC required, KDC required, and so on. Examples of available counters include Average Failure Latency (secs), Average Success Latency (secs), Failures/sec, Successes/sec, and Total Active Site Name Queries/sec.
 
-... if it was:
+The following table shows the client counters that can be added when running DC Locater (Client), type of counter (flag or request), and notes on output.
 
-- Installed as a
-- Promoted to a DC
-- Restored from a 
+| Counter name | Type | Description |
+|-----|-----|-----|
+| DS Required (Windows Server 2000 and later) Requests/sec | Flag | Returns instances of object |
+| DS Required (Windows Server 2008 and later) Requests/sec | Flag | Returns instances of object |
+| DS Required (Windows Server 2012 R2 and later) Requests/sec | Flag | Returns instances of object |
+| DS Required (Windows Server 2012 and later) Requests/sec | Flag | Returns instances of object |
+| DS Required (Windows Server 2016 and later) Requests/sec | Flag | Returns instances of object |
+| Force Rediscovery Requests/sec | Flag | Returns instances of object |
+| GC Required Requests/sec | Flag | Returns instances of object |
+| KDC Required Requests/sec | Flag | Returns instances of object |
+| KeyList Support Required | Flag | Returns instances of object |
+| PDC Required Requests/sec | Flag | Returns instances of object |
+| Time Server Required Requests/sec | Flag | Returns instances of object |
+| TryNextClosestSite Requests/sec | Flag | Returns instances of object |
+| Writable Required Requests/sec | Flag | Returns instances of object |
+| Average Failure Latency | Request | Returns instances of object |
+| Average Success Latency | Request | Returns instances of object |
+| Failures/sec | Request | Returns instances of object |
+| Successes/sec | Request | Returns instances of object |
+| Total Active Site Name Queries/sec | Request | Returns instances of object |
 
-Before you enable the performance counters, ... After you enable the performance counters feature, only ...  can be used to restore a Windows Server 2025 ... Enabling the ... can affect server performance due to ...
+## DC Locater (DC) 
 
-> [!WARNING]
-> Once you have enabled the DCLocater performance counter feature, you can't revert back to the previous ...  mode. As a result, any ... created prior to enabling the feature will be unusable unless a complete ... is performed.
+DC Locater (DC) counters exist only on the domain controller; these are incoming LDAP pings and mailslot pings for DC lookups.
+
+## DC Locater (Netlogon)
+
+Netlogon downloads and caches naming information about domains and child domains in all trusting forests. DC Locater (Netlogon) is similar to DC Locater Client counters except output is organized by name lookup. There are a few objects available that are cache-based, such as Cache: Hits/sec and Cache: Misses/sec. This allows you to see how many times a DC lookup is being resolved by the cache or has to make a call on the wire and then make the DNS quiries.
 
 ## Next steps
 
-- 
+- [How domain controllers are located in Windows](/identity/how-domain-controllers-are-located)
