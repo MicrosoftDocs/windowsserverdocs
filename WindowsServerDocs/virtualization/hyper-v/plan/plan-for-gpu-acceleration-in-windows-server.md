@@ -4,7 +4,7 @@ description: Learn about the different Hyper-V technologies for GPU acceleration
 author: robinharwood
 ms.author: wscontent
 ms.topic: article
-ms.date: 05/15/2024
+ms.date: 05/16/2024
 ---
 
 # Plan for GPU acceleration in Windows Server
@@ -68,5 +68,4 @@ Consider the following functionality and support differences between graphics vi
 | App compatibility | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA) | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA) |
 | AVC444 | Available through Group Policy | Available through Group Policy |
 | GPU VRAM | Up to VRAM supported by the GPU | Up to VRAM supported by the GPU per partition |
-| Frame rate | Up to 60fps | Dependent on the GPU and workload |
 | GPU driver in guest | GPU vendor driver (NVIDIA, AMD, Intel) | GPU vendor driver (NVIDIA, AMD, Intel) |
