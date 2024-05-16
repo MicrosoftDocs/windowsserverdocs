@@ -2,7 +2,6 @@
   href: welcome-to-rds.md
   items:
   - name: Get started
-    href: rds-get-started.md
     items:
     - name: Supported configurations for RDS
       href: rds-supported-config.md
@@ -10,8 +9,6 @@
       href: rds-vdi-supported-config.md
     - name: Planning poster for Remote Desktop Services
       href: rds-poster.md
-    - name: Remote Desktop Services hosting partners
-      href: rds-hosting-partners.md
   - name: Plan and design
     href: rds-plan-and-design.md
     items:
