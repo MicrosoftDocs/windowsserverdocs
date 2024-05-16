@@ -19,9 +19,9 @@ You must reactivate a Remote Desktop license server when any of the following oc
 
 Reactivate a license server by using one of the following methods: 
 
-- [Reactivate a License Server Automatically](./rds-reactivate-deactivate-license-server#reactivate-a-license-server-automatically)
-- [Reactivate a License Server by Using a Web Browser](./rds-reactivate-deactivate-license-server#reactivate-a-license-server-using-a-web-browser) 
-- [Reactivate a License Server by Using the Telephone](./rds-reactivate-deactivate-license-server#reactivate-a-license-server-by-telephone)
+- [Reactivate a License Server Automatically](#reactivate-a-license-server-automatically)
+- [Reactivate a License Server by Using a Web Browser](#reactivate-a-license-server-using-a-web-browser) 
+- [Reactivate a License Server by Using the Telephone](#reactivate-a-license-server-by-telephone)
 
 ### Prerequisites
 

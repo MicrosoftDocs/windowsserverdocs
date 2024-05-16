@@ -1,8 +1,8 @@
 ---
 title: Supported configurations for Remote Desktop Services
-description: Provides information about supported configurations for RDS in Windows Server 2016 and Windows Server 2019.
+description: Provides information about supported configurations for RDS in Windows Server.
 ms.author: wscontent
-ms.date: 07/14/2020
+ms.date: 05/15/2024
 ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
 author: robinharwood
@@ -10,9 +10,9 @@ manager: dongill
 ---
 # Supported configurations for Remote Desktop Services
 
->Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2016, Windows Server 2019
 
-When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you may have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to Windows Server 2016 to take advantage of the new features (like support for OpenGL/OpenCL, Discrete Device Assignment, or Storage Spaces Direct). The question then becomes, which RDS components can work with different versions and which need to be the same?
+When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you may have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to Windows Server 2025 to take advantage of the new features. The question then becomes, which RDS components can work with different versions and which need to be the same?
 
 So with that in mind, here are basic guidelines for supported configurations of Remote Desktop Services in Windows Server.
 
@@ -23,9 +23,9 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 - Use the most recent version of Windows Server for your Remote Desktop infrastructure (the Web Access, Gateway, Connection Broker, and license server). Windows Server is backward-compatible with these components, which means a Windows Server 2016 RD Session Host can connect to a 2019 RD Connection Broker, but not the other way around.
 
-- For RD Session Hosts - all Session Hosts in a collection need to be at the same level, but you can have multiple collections. You can have a collection with Windows Server 2016 Session Hosts and one with Windows Server 2019 Session Hosts.
+- For RD Session Hosts - all Session Hosts in a collection need to be at the same level, but you can have multiple collections. You can have a collection with Windows Server 2016 Session Hosts and one with Windows Server 2025 Session Hosts.
 
-- If you upgrade your RD Session Host to Windows Server 2019, also upgrade the license server. Remember that a 2019 license server can process CALs from all previous versions of Windows Server, down to Windows Server 2003.
+- If you upgrade your RD Session Host to Windows Server 2025, also upgrade the license server. Remember that a 2025 license server can only process CALs from previous versions of Windows Server.
 
 - Follow the upgrade order recommended in [Upgrading your Remote Desktop Services environment](upgrade-to-rds.md#flow-for-deployment-upgrades).
 

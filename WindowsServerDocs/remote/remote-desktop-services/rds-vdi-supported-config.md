@@ -1,20 +1,22 @@
 ---
-title: Supported Windows 10 security configurations for Remote Desktop Services VDI
-description: Provides information about supported configurations for Windows 10 VDI with RDS in Windows Server 2016.
+title: Supported Windows security configurations for Remote Desktop Services VDI
+description: Provides information about supported configurations for Windows VDI with RDS in Windows Server.
 ms.author: wscontent
-ms.date: 10/27/2016
+ms.date: 05/15/2024
 ms.topic: article
 ms.assetid: 8f164f5d-a498-4f91-a12f-3e01d554f810
 author: robinharwood
 manager: dongill
 ---
-# Supported Windows 10 security configurations for Remote Desktop Services VDI
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+# Supported Windows security configurations for Remote Desktop Services VDI
 
-Windows 10 and Windows Server 2016 have new layers of protection built into the operating system to further safeguard against security breaches, help block malicious attacks and enhance the security of virtual machines, applications, and data.
+>Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
+
+Windows 10 and Windows Server 2016 and newer have new layers of protection built into the operating system to further safeguard against security breaches, help block malicious attacks and enhance the security of virtual machines, applications, and data.
 
 > [!NOTE]
+> Features like Credential Guard may have performance implication on user density. Ensure to test your scenarios. Learn more about other considerations for [credential guard configuration](/windows/security/identity-protection/credential-guard/considerations-known-issues). 
 > Make sure to review the [Remote Desktop Services supported configuration information](rds-supported-config.md).
 
 The following table outlines which of these new features are supported in a VDI deployment using RDS.
@@ -26,13 +28,13 @@ The following table outlines which of these new features are supported in a VDI 
 | [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard)             | No               | No                 | No                                                     | No                                                     |
 | [Shielded & Encryption Supported VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | No               | No                 | Encryption supported VMs with additional configuration | Encryption supported VMs with additional configuration |
 
-## Remote Credential Guard:
+## Remote Credential Guard
 
 Remote Credential Guard is only supported for direct connections to the target machines and not for the ones via Remote Desktop Connection Broker and Remote Desktop Gateway.
 > [!NOTE]
 > If you have a Connection Broker in a single-instance environment, and the DNS name matches the computer name, you may be able to use Remote Credential Guard, although this is not supported.
 
-## Shielded VMs and Encryption Supported VMs:
+## Shielded VMs and Encryption Supported VMs
 
 - Shielded VMs are not supported in Remote Desktop Services VDI
 

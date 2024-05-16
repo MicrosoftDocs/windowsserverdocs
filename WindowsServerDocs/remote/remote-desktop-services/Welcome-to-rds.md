@@ -1,8 +1,8 @@
 ---
-title: Welcome to Remote Desktop Services in Windows Server 2016
+title: Welcome to Remote Desktop Services in Windows Server
 description: Provides an overview of Remote Desktop Services
 ms.author: chrimo
-ms.date: 02/22/2017
+ms.date: 05/15/2024
 ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
@@ -14,7 +14,7 @@ Remote Desktop Services (RDS) is the platform of choice for building virtualizat
 
 ![Remote Desktop Services overview](./media/rds-overview.png)
 
-RDS offers deployment flexibility, cost efficiency, and extensibility—all delivered through a variety of deployment options, including Windows Server 2016 for on-premises deployments, Microsoft Azure for cloud deployments, and a robust array of partner solutions.
+RDS offers deployment flexibility, cost efficiency, and extensibility—all delivered through a variety of deployment options, including Windows Server for on-premises deployments, Microsoft Azure for cloud deployments, and a robust array of partner solutions.
 
 Depending on your environment and preferences, you can set up the RDS solution for session-based virtualization, as a virtual desktop infrastructure (VDI), or as a combination of the two:
 
@@ -23,10 +23,8 @@ Depending on your environment and preferences, you can set up the RDS solution f
 
 Within these virtualization environments, you have additional flexibility in what you publish to your users:
 
-- **Desktops**: Give your users a full desktop experience with a variety of applications that you install and manage. Ideal for users that rely on these computers as their primary workstations or that are coming from thin clients, such as with MultiPoint Services.
+- **Desktops**: Give your users a full desktop experience with a variety of applications that you install and manage. Ideal for users that rely on these computers as their primary workstations.
 - **RemoteApps**: Specify individual applications that are hosted/run on the virtualized machine but appear as if they're running on the user's desktop like local applications. The apps have their own taskbar entry and can be resized and moved across monitors. Ideal for deploying and managing key applications in the secure, remote environment while allowing users to work from and customize their own desktops.
-
-For environments where cost-effectiveness is crucial and you want to extend the benefits of deploying full desktops in a session-based virtualization environment, you can use [MultiPoint Services](../multipoint-services/multipoint-services.md) to deliver the best value.
 
 With these options and configurations, you have the flexibility to deploy the desktops and applications your users need in a remote, secure, and cost-effective fashion.
 

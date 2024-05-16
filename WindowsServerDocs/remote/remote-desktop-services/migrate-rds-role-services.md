@@ -1,24 +1,21 @@
 ---
-title: Migrate your Remote Desktop Services deployment to Windows Server 2016
-description: This article describes how to migrate your Remote Desktop Services deployment to new Windows Server 2016 servers.
+title: Migrate your Remote Desktop Services deployment to Windows Server 2025
+description: This article describes how to migrate your Remote Desktop Services deployment to new Windows Server 2025 servers.
 ms.author: chrimo
-ms.date: 11/01/2016
+ms.date: 05/15/2025
 ms.topic: article
 ms.assetid: 9b1fa833-4325-48a8-bf34-46265f40c001
 author: christianmontoya
 manager: scottman
 ---
-# Migrate your Remote Desktop Services deployment to Windows Server 2016
+# Migrate your Remote Desktop Services deployment to Windows Server 2025
 
-If you are currently running Remote Desktop Services in an earlier version of Windows Server, you can move to Windows Server 2016 to take advantage of new features like support for Azure SQL and Storage Spaces Direct.
-
-Migration for a Remote Desktop Services deployment is supported from source servers running Windows Server 2016 to destination servers running Windows Server 2016. In other words, there is no direct in-place migration from RDS in an earlier version of Windows Server to Windows Server 2016. Instead, for most of the RDS components, you first upgrade to Windows Server 2016 and then migrate data and licenses. The only components with a direct migration are RD Web, RD Gateway, and the licensing server.
+Migration for a Remote Desktop Services deployment is supported from source servers running Windows Server 2025 to destination servers running Windows Server 2025. In other words, there is no direct in-place migration from RDS in an earlier version of Windows Server to the latest Windows Server version. Instead, for most of the RDS components, you first upgrade to the latest Windows Server version and then migrate data and licenses. The only components with a direct migration are RD Web, RD Gateway, and the licensing server.
 
 For more information on the upgrade process and requirements, see [upgrading your Remote Desktop Services deployments to Windows Server 2016](./upgrade-to-rds.md).
 
 Use the following steps to migrate your Remote Desktop Services deployment:
 
-- [Migrate your Remote Desktop Services deployment to Windows Server 2016](#migrate-your-remote-desktop-services-deployment-to-windows-server-2016)
   - [Migrate RD Connection Broker servers](#migrate-rdconnection-broker-servers)
   - [Migrate session collections](#migrate-session-collections)
   - [Migrate virtual desktop collections](#migrate-virtual-desktop-collections)
