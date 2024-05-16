@@ -34,7 +34,7 @@ In addition to VM workloads, Windows Server also supports GPU acceleration of co
 
 ## Discrete Device Assignment (DDA)
 
-Discrete Device Assignment (DDA), also known as GPU pass-through, allows you to dedicate one or more physical GPUs to a virtual machine. In a DDA deployment, virtualized workloads run on the native driver and typically have full access to the GPU's functionality. DDA offers the highest level of app compatibility and potential performance. DDA can also provide GPU acceleration to Linux VMs, subject to support.
+Discrete Device Assignment (DDA) allows you to dedicate one or more physical GPUs to a virtual machine. In a DDA deployment, virtualized workloads run on the native driver and typically have full access to the GPU's functionality. DDA offers the highest level of app compatibility and potential performance. DDA can also provide GPU acceleration to Linux VMs, subject to support.
 
 A DDA deployment can accelerate only a limited number of virtual machines, since each physical GPU can provide acceleration to at most one VM. If you're developing a service whose architecture supports shared virtual machines, consider hosting multiple accelerated workloads per VM. For example, if you're building a Remote Desktop Services solution, you can improve user scale by using the multi-session capabilities of Windows Server to host multiple user desktops on each VM. These users share the benefits of GPU acceleration.
 
