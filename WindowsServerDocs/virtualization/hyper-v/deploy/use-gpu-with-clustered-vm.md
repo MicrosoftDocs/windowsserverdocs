@@ -174,7 +174,13 @@ You can also remove an assigned GPU from a VM. To do so, in PowerShell, run the 
 
 #### Fail over a VM with an assigned GPU
 
-To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](maintain-servers.md). The cluster will restart the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+:::zone pivot="windows-server"
+To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure-stack/hci/manage/maintain-servers?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json). The cluster will restart the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+:::zone-end
+
+:::zone pivot="azure-stack-hci"
+To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure-stack/hci/manage/maintain-servers). The cluster will restart the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+:::zone-end
 
 ## Next steps
 
@@ -191,7 +197,7 @@ For more information on using GPUs with your clustered VMs, see:
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
-- [Manage VMs with Windows Admin Center](vm.md)
+- [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm)
 - [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json)
 
 :::zone-end
