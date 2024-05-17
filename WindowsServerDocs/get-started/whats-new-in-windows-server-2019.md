@@ -301,7 +301,7 @@ Protected sign ins with AD FS now include the following updates:
 
 - Users can now use passwords as an extra factor after using a non-password option as the first factor. This in-box support improves overall experience from AD FS 2016, which required downloading a GitHub adapter.
 
-- Users can now build their own plug-in risk assessment modules to block certain types of requests during the preauthentication stage. This feature makes it easier to use cloud intelligence such as identity protection to block risky users or transactions. For more information, see [Build Plug-ins with AD FS 2019 Risk Assessment Model](../../ad-fs/development/ad-fs-risk-assessment-model.md).
+- Users can now build their own plug-in risk assessment modules to block certain types of requests during the preauthentication stage. This feature makes it easier to use cloud intelligence such as identity protection to block risky users or transactions. For more information, see [Build Plug-ins with AD FS 2019 Risk Assessment Model](../identity/ad-fs/development/ad-fs-risk-assessment-model.md).
 
 - Improves Extranet Smart Lockout (ESL) quick-fix engineering (QFE) by adding the following capabilities:
   
@@ -323,7 +323,7 @@ AD FS 2019 includes the following security improvements:
   
   - Future header. You can also configure multiple future headers.
 
-  For more information, see [Customize HTTP security response headers with AD FS 2019](../../ad-fs/operations/customize-http-security-headers-ad-fs.md).
+  For more information, see [Customize HTTP security response headers with AD FS 2019](../identity/ad-fs/operations/customize-http-security-headers-ad-fs.md).
 
 ### Authentication and policy capabilities
 
@@ -339,7 +339,7 @@ AD FS 2019 includes the following authentication and policy capabilities:
 
 AD FS 2019 also includes the following single sign-on (SSO) improvements:
 
-- AD FS now uses a [paginated UX flow](../operations/AD-FS-paginated-sign-in.md) and a centered user interface (UI) that provides a smoother sign-in experience for users. This change mirrors functionality offered in Azure AD. You may need to update your organization's logo and background images to suit the new UI.
+- AD FS now uses a [paginated UX flow](../identity/ad-fs/operations/AD-FS-paginated-sign-in.md) and a centered user interface (UI) that provides a smoother sign-in experience for users. This change mirrors functionality offered in Azure AD. You may need to update your organization's logo and background images to suit the new UI.
 
 - We fixed an issue that caused the MFA state to not persist when using Primary Refresh Token (PRT) authentication on Windows 10 devices. Users should now be prompted for second factor credentials less often. The experience should now be consistent when device authentication is successful on client TLS and PRT authentication.
 
@@ -363,8 +363,6 @@ Admins can now configure AD FS to allow users to send error reports and debug lo
 
 ### Deployment updates
 
-<!--Return to this section after pulling the longer content from the source article.--->
-
 The following deployment updates are now included in AD FS 2019:
 
 - AD FS has [a similar function to its Windows Server 2016 version](whats-new-in-windows-server-2016.md#moving-from-ad-fs-in-windows-server-2012-r2-to-ad-fs-in-windows-server-2016-is-easier) that makes it easier to upgrade Windows Server 2016 server farms into Windows Server 2019 server farms. A Windows Server 2019 server added to a Windows Server 2016 server farm will only behave like a Windows Server 2016 server until you're ready to upgrade. For more information, see [Upgrading to AD FS in Windows Server 2016](../deployment/upgrading-to-ad-fs-in-windows-server.md).
@@ -381,8 +379,6 @@ AD FS 2019 includes the following Security Assertion Markup Language (SAML) upda
   
   - Improved handling of error conditions for duplicate *entityID* values.
 
-<!---Check source article for longer sections--->
-
 ### Azure AD style resource specification in scope parameter
 
 Previously, AD FS required the desired resource and scope to be in a separate parameter in any authentication request. For example, the following example OAuth request contains a scope parameter:
@@ -398,4 +394,3 @@ The scope parameter can now be organized as a space-separated list that structur
 
 > [!NOTE]
 > You can only specify one resource in the authentication request. If you include more than one resource in the request, AD FS returns an error and authentication doesn't succeed.
-

@@ -422,11 +422,11 @@ AD FS 2016 builds on previous device registration capabilities to enable sign on
 
 AD FS provides the on-premises component of conditional access policies in a hybrid scenario. When you register devices with Azure AD for conditional access to cloud resources, you can also use the device identity for AD FS policies.
 
-:::image type="content" source="media/whats-new-in-active-directory-federation-services-for-windows-server-2016/ADFS_ITPRO4.png" alt-text="Diagram of a hybrid solution and the relationships between users and on-premises active directory.":::
+:::image type="content" source="./media/ADFS_ITPRO_1.png" alt-text="Diagram of a hybrid solution and the relationships between users and on-premises active directory.":::
 
 For more information about using device based conditional access in the cloud, see [Azure Active Directory Conditional Access](/azure/active-directory/conditional-access/overview).
 
-For more information about using device based conditional access with AD FS, see [Planning for Device Based Conditional Access with AD FS](../../ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md) and [Access Control Policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
+For more information about using device based conditional access with AD FS, see [Planning for Device Based Conditional Access with AD FS](../identity/ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md) and [Access Control Policies in AD FS](../identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
 
 ### Sign in with Windows Hello for Business
 
@@ -441,7 +441,7 @@ For more information about using Windows Hello for Business in your organization
 
 AD FS 2016 supports the latest modern protocols that provide a better user experience for Windows 10 and the latest iOS and Android devices and apps.
 
-For more information, see [AD FS Scenarios for Developers](../../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md).
+For more information, see [AD FS Scenarios for Developers](../identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md).
 
 ### Configure access control policies without having to know claim rules language
 
@@ -455,7 +455,7 @@ Previously, AD FS administrators had to configure policies by using the AD FS cl
 
 The templates are easy to customize. You can apply extra exceptions or policy rules, and you can apply these changes to one or more applications for consistent policy enforcement.
 
-For more information, see [Access control policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
+For more information, see [Access control policies in AD FS](../identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
 
 ### Enable sign on with non-AD LDAP directories
 
@@ -467,30 +467,30 @@ Many organizations combine Active Directory with third-party directories. AD FS 
 
 - Users in Active Directory Lightweight Directory Services (AD LDS).
 
-For more information, see [Configure AD FS to authenticate users stored in LDAP directories](../../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md).
+For more information, see [Configure AD FS to authenticate users stored in LDAP directories](../identity/ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md).
 
 ### Customize sign in experience for AD FS applications
 
 Previously, AD FS in Windows Server 2012 R2 provided a common sign-on experience for all relying party applications, with the ability to customize a subset of text-based content per application. With Windows Server 2016, you can customize not only the messages, but images, logo and web theme per application. Additionally, you can create new, custom web themes and apply these themes per relying party.
 
-For more information, see [AD FS user sign-in customization](../../ad-fs/operations/AD-FS-user-sign-in-customization.md).
+For more information, see [AD FS user sign-in customization](../identity/ad-fs/operations/AD-FS-user-sign-in-customization.md).
 
 ### Streamlined auditing for easier administrative management
 
-In previous versions of AD FS, a single request could generate many audit events. Relevant information about sign-in or token issuance activities were often absent or spread across multiple audit events, making issues harder to diagnose. As a result, audit events were turned off by default. However, in AD FS 2016, the auditing process is more streamlined and relevant information easier to find. For more information, see [Auditing enhancements to AD FS in Windows Server 2016](../../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md).
+In previous versions of AD FS, a single request could generate many audit events. Relevant information about sign-in or token issuance activities were often absent or spread across multiple audit events, making issues harder to diagnose. As a result, audit events were turned off by default. However, in AD FS 2016, the auditing process is more streamlined and relevant information easier to find. For more information, see [Auditing enhancements to AD FS in Windows Server 2016](../identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md).
 
 ### Improved interoperability with SAML 2.0 for participation in confederations
 
 AD FS 2016 contains more SAML protocol support, including support for importing trusts based on metadata that contains multiple entities. This change enables you to configure AD FS to participate in confederations such as InCommon Federation and other implementations conforming to the eGov 2.0 standard.
 
-For more information, see [Improved interoperability with SAML 2.0](../../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md).
+For more information, see [Improved interoperability with SAML 2.0](../identity/ad-fs/operations/Improved-interoperability-with-SAML-2.0.md).
 
 ### Simplified password management for federated Microsoft 365 users
 
 You can configure AD FS to send password expiry claims to any relying party trusts or applications that it protects. How these claims appear varies between applications. For example, with Office 365 as your relying party, updates have been implemented to Exchange and Outlook to notify federated users of their soon-to-be-expired passwords.
 
-For more information, see [Configure AD FS to send password expiry claims](../../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md).
+For more information, see [Configure AD FS to send password expiry claims](../identity/ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md).
 
 ### Moving from AD FS in Windows Server 2012 R2 to AD FS in Windows Server 2016 is easier
 
-Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process much easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and have removed the older servers, you can change the operational level to Windows Server 2016. For more information, see [Upgrading to AD FS in Windows Server 2016](../deployment/upgrading-to-ad-fs-in-windows-server.md).
+Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process much easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and have removed the older servers, you can change the operational level to Windows Server 2016. For more information, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).
