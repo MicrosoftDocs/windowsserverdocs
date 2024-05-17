@@ -15,36 +15,55 @@ Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Beginning with Windows Server 2025, new Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) ....
+The latest enhancements to Active Directory Domain Services (AD DS) and Active Directory Lightweight Domain Services (AD LDS) in Windows Server 2025 introduce new functionalities for domain management, including client performance counters for Lightweight Directory Access Protocol (LDAP). 
 
-Active Directory (AD) uses ... 
+LDAP is an integral part of Windows Server that enables querying and modification of directories. LDAP interacts with Active Directory to manage all network resources, including users, groups, permissions, and other data stored within the directory.
 
-## Requirements for using Active Directory LDAP client performance counters
+<!-- Need to verify lines 23-26 are accurate  -->
+LDAP performance counters in Windows Server operates in two basic modes:
 
-Before you can enable performance counters in your Active Directory Domain Services, you need to meet the following requirements.
+- DNS-based discovery
+- NetBIOS-based discovery
 
-- Your Active Directory forest and domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
-- All domain controllers must be upgraded to Windows Server 2025 or later.
-- Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
-- Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Server domain controllers before making changes.
-- All applications and services that interact with Active Directory must be compatible with the 32K pages feature.
+The performance counters are accessed via Performance Monitor.
 
-## Considerations enabling LDAP client performance counters 
+Beginning with Windows Server 2025, Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) feature 
 
-When you ...
+## LDAP client performance counters
 
-... if it was:
+LDAP client performance counters measure per process running on the local client machine. Multiple processes can be asessed simultaneously.Examples of available counters include binds, connections, and operations.
 
-- Installed as a
-- Promoted to a DC
-- Restored from a 
+The following table shows the client counters that can be added when running LDAP performance counters, type of counter (binds, connections, operations, requests, responses, and outputs), and notes on object data generated.
 
-Before you enable the performance counters, ... After you enable the performance counters feature, only ...  can be used to restore a Windows Server 2025 ... Enabling the ... can affect server performance due to ...
-
-> [!WARNING]
-> Once you have enabled the DCLocater performance counter feature, you can't revert back to the previous ...  mode. As a result, any ... created prior to enabling the feature will be unusable unless a complete ... is performed.
+| Counter name | Type | Description |
+|-----|-----|-----|
+| Digest Binds/sec | Binds | Outputs instances of object |
+| Negotiate Binds/sec | Binds | Outputs instances of object |
+| NTLM Binds/sec | Binds | Outputs instances of object |
+| Simple Binds/sec | Binds | Outputs instances of object |
+| Total Binds/sec | Binds | Outputs instances of object |
+| New Connections/sec | Connections | Outputs instances of object |
+| New TCP Connections/sec | Connections | Outputs instances of object |
+| New TLS Connections/sec | Connections | Outputs instances of object |
+| New LDP Connections/sec | Connections | Outputs instances of object |
+| Open Connections | Connections | Outputs instances of object |
+| Abandons/sec | Operations | Outputs instances of object |
+| Adds/sec | Operations | Outputs instances of object |
+| Deletes/sec | Operations | Outputs instances of object |
+| Modify/sec | Operations | Outputs instances of object |
+| New Requests/sec | Requests | Outputs instances of object |
+| Request Count | Requests | Outputs instances of object |
+| Average Response Time | Responses | Outputs instances of object |
+| Failure Polling Responses/sec | Responses | Outputs instances of object |
+| Failure Responses/sec | Responses | Outputs instances of object |
+| Pending Responses | Responses | Outputs instances of object |
+| Successful Polling Responses/sec | Responses | Outputs instances of object |
+| Successful Responses/sec | Responses | Outputs instances of object |
+| Base Searches/sec | Searches | Outputs instances of object |
+| Subtree Searches/sec | Searches | Outputs instances of object |
 
 ## Next steps
 
-- 
+- [How LDAP server cookies are handled](/identity/ad-ds/manage/how-ldap-server-cookies-are-handled)
 
+- [Step by Step Guide to Setup LDAPS on Windows Server](https://techcommunity.microsoft.com/t5/sql-server-blog/step-by-step-guide-to-setup-ldaps-on-windows-server/ba-p/385362)
