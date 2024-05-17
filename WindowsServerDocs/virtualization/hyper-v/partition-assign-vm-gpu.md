@@ -103,7 +103,7 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
 
 1. Launch Windows Admin Center and make sure the **GPUs** extension is already installed.
 
-1. Select **Cluster Manager** from the top dropdown menu and connect to your Azure Stack HCI cluster.
+1. Select **Cluster Manager** from the top dropdown menu and connect to your cluster.
 
 1. From the **Settings** menu, select **Extensions** > **GPUs**.
 
