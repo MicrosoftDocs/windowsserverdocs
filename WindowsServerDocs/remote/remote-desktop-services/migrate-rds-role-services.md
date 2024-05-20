@@ -2,7 +2,7 @@
 title: Migrate your Remote Desktop Services deployment to Windows Server 2025
 description: This article describes how to migrate your Remote Desktop Services deployment to new Windows Server 2025 servers.
 ms.author: chrimo
-ms.date: 05/15/2025
+ms.date: 5/20/2024
 ms.topic: article
 ms.assetid: 9b1fa833-4325-48a8-bf34-46265f40c001
 author: christianmontoya
