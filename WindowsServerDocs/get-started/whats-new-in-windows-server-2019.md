@@ -365,7 +365,7 @@ Admins can now configure AD FS to allow users to send error reports and debug lo
 
 The following deployment updates are now included in AD FS 2019:
 
-- AD FS has [a similar function to its Windows Server 2016 version](whats-new-in-windows-server-2016.md#moving-from-ad-fs-in-windows-server-2012-r2-to-ad-fs-in-windows-server-2016-is-easier) that makes it easier to upgrade Windows Server 2016 server farms into Windows Server 2019 server farms. A Windows Server 2019 server added to a Windows Server 2016 server farm will only behave like a Windows Server 2016 server until you're ready to upgrade. For more information, see [Upgrading to AD FS in Windows Server 2016](../deployment/upgrading-to-ad-fs-in-windows-server.md).
+- AD FS has [a similar function to its Windows Server 2016 version](whats-new-in-windows-server-2016.md#moving-from-ad-fs-in-windows-server-2012-r2-to-ad-fs-in-windows-server-2016-is-easier) that makes it easier to upgrade Windows Server 2016 server farms into Windows Server 2019 server farms. A Windows Server 2019 server added to a Windows Server 2016 server farm will only behave like a Windows Server 2016 server until you're ready to upgrade. For more information, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).
 
 ### SAML updates
 
