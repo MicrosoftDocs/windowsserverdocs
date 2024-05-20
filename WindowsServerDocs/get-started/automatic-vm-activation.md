@@ -4,7 +4,7 @@ description: Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purc
 ms.topic: conceptual
 author: xelu86
 ms.author: wscontent
-ms.date: 04/26/2024
+ms.date: 04/29/2024
 ---
 
 # Automatic Virtual Machine Activation in Windows Server
@@ -70,15 +70,15 @@ The VM automatically activates, providing that the virtualization host itself is
 
 # [Windows Server 2022](#tab/server2022)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | W3GNR-8DDXR-2TFRP-H8P33-DV9BG |
-| Datacenter<br/>Azure Edition | F7TB6-YKN8Y-FCC6R-KQ484-VMK3J |
+| Datacenter:<br/>Azure Edition | F7TB6-YKN8Y-FCC6R-KQ484-VMK3J |
 | Standard | YDFWN-MJ9JR-3DYRK-FXXRW-78VHK |
 
 # [Windows Server 2019](#tab/server2019)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW |
 | Standard | TNK62-RXVTB-4P47B-2D623-4GF74 |
@@ -86,21 +86,21 @@ The VM automatically activates, providing that the virtualization host itself is
 
 # [Windows Server versions 1909,<br> 1903, and 1809](#tab/server1909)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW |
 | Standard | TNK62-RXVTB-4P47B-2D623-4GF74 |
 
 # [Windows Server versions 1803<br> and 1709](#tab/server1803)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J |
 | Standard | C3RCX-M6NRP-6CXC9-TW2F2-4RHYD |
 
 # [Windows Server 2016](#tab/server2016)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J |
 | Standard | C3RCX-M6NRP-6CXC9-TW2F2-4RHYD |
@@ -108,7 +108,7 @@ The VM automatically activates, providing that the virtualization host itself is
 
 # [Windows Server 2012 R2](#tab/server2012r2)
 
-| Edition | AVMA key |
+| Edition | Key |
 |--|--|
 | Datacenter | Y4TGP-NPTV9-HTC2H-7MGQ3-DV4TW |
 | Standard | DBGBW-NPF86-BJVTX-K3WKJ-MTB6V |
