@@ -84,8 +84,6 @@
         href: hyper-v/partition-assign-vm-gpu.md
       - name: Deploy graphics devices using DDA
         href: hyper-v/deploy/deploying-graphics-devices-using-dda.md
-      - name: Deploy graphics devices using RemoteFX vGPU
-        href: hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md
       - name: Deploy storage devices using DDA
         href: hyper-v/deploy/deploying-storage-devices-using-dda.md
       - name: Enable Nested Virtualization

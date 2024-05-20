@@ -16,7 +16,7 @@ zone_pivot_groups: windows-os
 >Applies to: Windows Server 2025 Datacenter (preview)
 
 > [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> GPU partitioning in Windows Server 2025 Datacenter is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ::: zone-end
 
@@ -103,7 +103,7 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
 
 1. Launch Windows Admin Center and make sure the **GPUs** extension is already installed.
 
-1. Select **Cluster Manager** from the top dropdown menu and connect to your Azure Stack HCI cluster.
+1. Select **Cluster Manager** from the top dropdown menu and connect to your cluster.
 
 1. From the **Settings** menu, select **Extensions** > **GPUs**.
 
