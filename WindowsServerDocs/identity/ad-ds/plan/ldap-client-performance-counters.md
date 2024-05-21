@@ -25,15 +25,13 @@ LDAP performance counters in Windows Server operates in two basic modes:
 - DNS-based discovery
 - NetBIOS-based discovery
 
-The performance counters are accessed via Performance Monitor.
-
-Beginning with Windows Server 2025, Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) feature 
+You can access these performance counters at Performance Monitor.
 
 ## LDAP client performance counters
 
 LDAP client performance counters measure per process running on the local client machine. Multiple processes can be asessed simultaneously.Examples of available counters include binds, connections, and operations.
 
-The following table shows the client counters that can be added when running LDAP performance counters, type of counter (binds, connections, operations, requests, responses, and outputs), and notes on object data generated.
+The following table shows the client counters that can be added when running LDAP performance counters, their counter types, and descriptions of what object data they generate.
 
 | Counter name | Type | Description |
 |-----|-----|-----|
