@@ -38,27 +38,37 @@ The following are principles behind the various components of the topology:
 
 ## Deploy the network
 
-You can either create two subnets in a single virtual network or create two different virtual networks. This article focuses on deploying a single virtual network and dividing it into two subnets. This approach is currently easier as two separate virtual networks would require a virtual network to virtual network gateway for communications.
+When creating a network, you can either create two subnets in the same virtual network or create two different virtual networks. This article mainly focuses on how to deploy a single network and divide it into subnets.<!--Is there a doc I can link to for multiple virtual networks here?---> We recommend using the single-network approach, as creating two separate virtual networks also requires creating two separate virtual network gateways for communication purposes.
 
 ### Create a virtual network
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) with your Azure account.
-1. In the portal, search for and select **Virtual networks**.
-1. On the **Virtual networks** page, select **Create**.
-1. In **Create virtual network**, enter or select this information in the **Basics** tab:
+To create a virtual network:
 
-    | Setting | Value |
-    | ------- | ----- |
-    | **Project details** |   |
-    | Subscription | Select your subscription. |
-    | Resource group | Select your resource group. Or select **Create new** to create one. |
-    | **Instance details** |   |
-    | Virtual network name | Enter a name for your virtual network. |
-    | Region | Choose a region. |
+1. Sign in to the [Azure portal](https://portal.azure.com/) with your Azure account.
+
+1. In the portal, search for and select **Virtual networks**.
+
+1. On the **Virtual networks** page, select **Create**.
+
+1. In **Create virtual network**, go to the **Basics** tab and configure the following settings:
+
+ - Configure the following settings under **Project details**:
+  
+  - For **Subscription**, select the name of your subscription.
+     
+  - For **Resource group**, either select the name of an existing resource group or select **Create new** to make a new one.
+
+- Configure the following settings for **Instance details**
+
+  - For **Virtual network name**, enter a name for your virtual network.
+
+  - For **Region**, select the region you want to create your virtual network in.
 
 1. Select **Next**.
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vnet.png" alt-text="Screenshot showing the basics tab for the Create virtual network page.":::
-1. In the **Security** tab, enable any security service you might want and select **Next**.
+
+1. In the **Security** tab, enable any security service you want to use, then select **Next**.
+
 1. On the **IP addresses** tab, a default subnet is already created and ready for VMs to be added. For this example, select **default** to edit the subnet.
     1. On the **Edit subnet** page, rename the subnet to **INT**.
     1. Enter **IP address** and **Subnet size** information as necessary to define an **IP address space**.
