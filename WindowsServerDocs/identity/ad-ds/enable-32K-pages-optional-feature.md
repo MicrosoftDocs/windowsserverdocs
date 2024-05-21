@@ -1,61 +1,108 @@
 ---
-title: Enable 32K pages in Active Directory Domain Services on Windows Server
-description: Learn how-to enable 32K pages in Active Directory Domain Services and how to enable the optional feature using PowerShell.
+title: Enable Database 32k pages optional feature in Active Directory Domain Services on Windows Server
+description: Learn how-to enable the Database 32k pages optional feature in Active Directory Domain Services and how to enable the optional feature using PowerShell.
 author: gswashington
 ms.author: wscontent
 ms.date: 05/21/2024
 ms.topic: how-to
-#customer intent: As an Active Directory administrator, I want to enable the 32K pages feature in Active Directory Domain Services, so that I can improve scalability.
+#customer intent: As an Active Directory administrator, I want to enable the Database 32k pages optional feature in Active Directory Domain Services, so that I can improve scalability.
 ---
 
-# Enable 32K pages in Active Directory Domain Services (preview)
+# Enable Database 32k Feature in Active Directory Domain Services (preview)
 
-Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
+Applies to: Windows Server 2025 (preview)
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-The 32K database page format is an optional Active Directory feature offering a huge improvement in scalability, including multi-valued attributes able to hold approximately 3,200 values. Beginning with Windows Server 2025, new Active Directory domain controllers are installed with a 32K page, by default these new domain controllers use an 8k page mode to support previous versions. An upgraded DC continues to use an 8K database format and pages. Moving to a 32k database page-size is a forest-wide operation and requires that all domain controllers in the forest have a 32k page capable database. Enabling database for 32k pages enables the database to use 64-bit Long Value IDs (LIDs). For more information about using 32K pages in Active Directory, see [32k pages in Active Directory Domain Services](32K-pages-optional-feature.md).
+The Database 32k pages optional feature offers a huge improvement in scalability. Beginning with Windows Server 2025, new Active Directory domain controllers are installed with a 32K database page format. By default these new domain controllers use an 8k database page mode to support previous versions. An upgraded DC continues to use an 8K database format and pages. Moving to a 32k database page-size is a forest-wide operation and requires that all domain controllers in the forest have a 32k page capable database. For more information about using the Database 32k pages optional feature in Active Directory, see [Database 32k pages optional feature](32K-pages-optional-feature.md).
 
 > [!WARNING]
-> Once you have enabled the 32k database page feature, you can't revert back to the previous 8k page mode. As a result, any 8k-page backup media created prior to enabling the feature will be unusable unless a complete authoritative forest recovery is performed.
+> Once you have enabled the Database 32k pages optional feature, you can't revert back to the previous 8k page mode. As a result, any 8k-page backup media created prior to enabling the feature will be unusable unless a complete authoritative forest recovery is performed.
 
-In this article, you learn how to enable the 32k page feature in Active Directory Domain Services using PowerShell.
+In this article, you learn how to enable the Database 32k pages optional feature in Active Directory Domain Services using PowerShell.
 
 ## Prerequisites
 
-Before you can enable 32k pages in Active Directory Domain Services, you need to complete the following prerequisites.
+Before you can enable the Database 32k pages optional feature in Active Directory Domain Services, you need to complete the following prerequisites.
 
 - Review the article [32K pages in Active Directory Domain Services and Active Directory Lightweight Domain Services](32K-pages-optional-feature.md) for other considerations before enabling the 32k page feature.
 - Your Active Directory domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
-- All domain controllers must be upgraded to Windows Server 2025 or later.
+- All domain controllers are running Windows Server 2025 or later, and have a 32k page capable database.
 - Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see the article [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
 - Identify all your domain controllers hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Server domain controllers before making changes.
-- All the applications and services that interact with Active Directory must be compatible with the 32K pages feature.
-- Your account must be a member of the Domain Admins group or have equivalent permissions.
+- Validate your backup software is compatible with the 32k pages database format by backing up and restoring a 32k page capable database in a test environment.
+- Your account must be a member of the Enterprise Admins group or have equivalent permissions.
+
+## Optional: Verify you have a 32k page capable database
+
+If you want to manually verify the database page size on each domain controller prior to enabling the Database 32k pages optional feature, you can use the following steps.
+
+> [!NOTE]
+> When you enable the feature using the `Enable-ADOptionalFeature` cmdlet in the [Enable the 32k page feature using PowerShell](#enable-the-32k-page-feature-using-powershell) the cmdlet checks all domain controllers have a 32k page capable database.
+
+## [Desktop](#tab/desktop)
+
+To verify the database page size of a domain controller using ADSI Edit, follow these steps.
+
+1. Sign on to a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
+
+1. Select the **Start** button, type **ADSI Edit**, and then select **ADSI Edit** from the search results.
+
+1. Right-click **ADSI Edit** from the console tree, then select **Connect to...**.
+
+1. In the **Connection Settings** dialog box, select **Select a well known Naming Context**, and then select **Configuration** from the drop-down list.
+
+1. Expand the domain and server you want to check. For example, a server called FABRIKAMDC01, in the Corp Datacenter AD site in the fabrikam.com domain, would have the path **Configuration > CN=Configuration,DC=Fabrikam,DC=com > CN=Sites > CN=Corp Datacenter > CN=Servers > CN=FABRIKAMDC01**.
+
+1. Right-click the **CN=NTDS Settings** object for the server you want to check, and then select **Properties**.
+
+1. Find the **msDS-JetDBPageSize** attribute in the attributes list. The value is the database page size capability. A value of `32768` means it is a 32k database page capable domain controller. A value of `8192` means an 8k database page size. No value means the domain controller is running Windows Server 2022 or earlier.
+
+## [PowerShell](#tab/PowerShell)
+
+To verify the database page size of a domain controller using PowerShell, follow these steps.
+
+1. Sign on to a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
+
+1. Run the following PowerShell command to verify the database page size on a domain controller. Replace the values for the `SearchBase` parameter with your own values.
+
+   ```powershell
+   Get-ADObject -LDAPFilter "(ObjectClass=nTDSDSA)" -SearchBase "CN=Configuration,DC=fabrikam,DC=com" -properties msDS-JetDBPageSize | FL distinguishedName,msDs-JetDBPageSize
+   ```
+
+The output shows the distinguished name of the NTDS Settings object and the `msDS-JetDBPageSize` attribute. A value of `32768` means it is a 32k database page capable DC. `8192` means an 8k database page size. No value means the domain controller is running Windows Server 2022 or earlier. The following is an example output of a 32k page capable domain controller.
+
+```Output
+distinguishedName  : CN=NTDS Settings,CN=FABRIKAMDC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,D
+                     C=fabrikam,DC=com
+msDs-JetDBPageSize : 32768
+```
+
+---
 
 ## Enable the 32k page feature using PowerShell
 
-The 32k database page size is an optional feature in AD and isn't enabled by default. To enable the 32k page feature in your forest or domain, follow the steps.
+The 32k database page size is an optional feature in AD and isn't enabled by default. To enable the Database 32k pages optional feature in your forest or domain, follow the steps.
 
-1. Sign in to a domain controller with an account that is a member of the Domain Admins group or has equivalent permissions.
+1. Sign in to a domain controller.
 
 1. Open an elevated PowerShell prompt.
 
-1. To enable the 32k page feature in PowerShell, use the `Enable-ADOptionalFeature` cmdlet from an elevated prompt. In this example, the command enables this feature for the device named DC1 in the `contoso.com` domain. Make sure to replace the values for the `Server` and `Target` parameters with your own values.
+1. To enable the Database 32k pages optional feature in PowerShell, use the `Enable-ADOptionalFeature` cmdlet from an elevated prompt. In this example, the command enables this feature for the device named `FABRIKAMDC01` in the `fabrikam.com` domain. Make sure to replace the values for the `Server` and `Target` parameters with your own values.
 
    ```powershell
    $params = @{
    Identity = 'Database 32K pages feature'
    Scope = 'ForestOrConfigurationSet'
-   Server = 'DC1'
-   Target = 'contoso.com'
+   Server = 'FABRIKAMDC01'
+   Target = 'fabrikam.com'
    }
-   Enable-ADOptionalFeature $params
+   Enable-ADOptionalFeature @params
    ```
 
-1. When you run the command, you're prompted to confirm the action. Enter **Yes** or **Yes to All** to proceed.
+1. When you run the command, you're prompted to confirm the action. Enter **Yes** or **Yes to All** to proceed. An example of the output is shown in the following image.
 
-1. After the 32k Page feature is enabled, monitor the replication traffic after the change; the initial replication might be larger than usual.
+   :::image type="content" source="media/enable-32k-pages-optional-feature/powershell-output.png" alt-text="A screenshot showing the output of the command Enable-ADOptionalFeature." lightbox="media/enable-32k-pages-optional-feature/powershell-output.png":::
 
-1. Verify for your scripts or applications continue to work as expected.
+1. After the Database 32k pages optional feature is enabled, monitor the replication traffic after the change.
