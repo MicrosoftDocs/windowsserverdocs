@@ -3,9 +3,8 @@ title: Using certificates in Remote Desktop Services
 description: How to create and use authentication certificates for Remote Desktop Services.
 ms.author: helohr
 ms.date: 05/06/24
-ms.topic: conceptual
+ms.topic: how-to
 author: Heidilohr
-manager: femila
 ---
 # Using certificates in Remote Desktop Services
 
@@ -13,53 +12,58 @@ Remote Desktop Services (RDS) uses certificates to secure communication between 
 
 Certificates prevent man-in-the-middle attacks<!---Elaborate?----> by verifying that the server sending information to the client is authentic. When this trust relationship is set up, the client considers the connection secure and can accept data going to and from the server.
 
-Certificates in Remote Desktop Services need to meet the following requirements:
-
-- You must install the certificate in the personal certificate store on the local computer.
-
-- The certificate has a corresponding private key.
-
-- The Enhanced Key Usage extension has a value of either `Server Authentication` or `Remote Desktop Authentication (1.3.6.1.4.1.311.54.1.2)`.
-
 ## Prerequisites
 
-In order to use certificates in RDS, you need to meet the following requirements:
+The following things are required to use certificates in RDS:
 
-- Install Active Directory Certificate Services (AD CS) on Server Manager.
+- A computer or computers with the RDS role configured. To learn more, see [Install or uninstall roles, role services, or features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md).
 
-- Install and configure an RDS deployment.
+- An account with administrator rights or equivalent to the RDS server(s).
 
-- Install the RD Connection Broker role on your domain controller.
+- A client certificate that meets the following requirements:
+
+  - Issued for Server Authentication (EKU 1.3.6.1.4.1.311.54.1.2).
+
+  - Issued by a certificate authority trusted by the RDS server(s) and clients.
+
+  - Installed in the local computer’s “Personal” certificate store.
+
+  - An export of the certificate with the corresponding private key in .pfx format. To learn more about exporting the private key, see [Export a certificate with its private key](../../identity/ad-cs/export-certificate-private-key.md).
+
+>[!NOTE]
+>If you're using Active Directory Certificate Services (AD CS) to issue certificates, you should also create a certificate template. To learn more about creating certificate templates, see [Create a new certificate template](../../identity/ad-cs/manage-certificate-templates.md#create-a-new-certificate-template).
 
 ## Create a Server Authentication certificate
 
-When you control the client computers, the easiest way to get certificates is by using Active Directory Certificate Services<!---Acronym?--->. You can use this service to request and deploy your own certificates, which are trusted by every computer in the Active Directory (AD) domain.
+You can generate certificates for your environment using Certification Authority. This service enables you to submit and implement your own certificates that are trusted by all computers within the Active Directory (AD) domain.
 
 Communicating with computers in your AD domain requires a Server Authentication certificate. You can create this certificate with either the Web Server or the computer authentication template.
 
-To create a Server Authentication certificate from the template:
+To create a Server Authentication certificate from a template, follow these steps:
 
-1. Open **Certification Authority**.
+1. Select **Start** and enter **certserv.msc**. In the search results, open **Certification Authority**.
 
-1. In the left pane, select the name of the computer you want to create a certificate for to expand its accordion menu.
+1. In the left pane, select the arrow next to the name of the computer you want to create a certificate in to expand it.
 
-1. Right-click **Certificate Templates**, then select **Manage** from the drop-down menu to open the Certificate Templates Console.
+1. Right-click **Certificate Templates**, then select **Manage** to open the **Certificate Templates Console**.
 
-1. Right-click **Web Server**, then select **Duplicate Template**.
+1. In the **Certificate Templates Console**, under **Template Display Name**, right-click **Web Server**, then select **Duplicate Template**.
 
 1. On the **General** tab, change the **Template display name** to **Client Server Authentication**.
 
 1. Select the **Publish certificate in Active Directory** checkbox.
 
-1. On the **Security** tab, under the options for **Domain Computers**, select **Allow Autoenroll**, then select **OK** to save your changes.
+1. In the **Request Handling** tab, select the **Allow private key to exported** checkbox.
 
-1. Close the Certificates Templates console.
+1. In the **Security** tab under **Group or user names**, select **Domain Computers**. Under **Permissions for Authenticated Users**, select **Allow Autoenroll**, then select **OK**.
 
-1. In the Certification Authority snap-in menu, right-click **Certificate Templates**, then select **New** > **Certificate Template to Issue**.
+1. Close the **Certificates Templates console**.
+
+1. In **Certification Authority**, right-click **Certificate Templates**, then select **New** > **Certificate Template to Issue**.
 
 1. Select **Client Server Authentication**, then select **OK**.
 
-1. Validate that the certificate exists in the Certificates MMC<!--Acronym---> snap-in. When you open the new certificate, the General tab of the certificate will list the purpose as Server Authentication.
+1. Restart your device.
 
 If you want to let users connect externally without being part of your AD domain, you must deploy certificates from a public CA, such as GoDaddy, Verisign, Entrust, Thawte, or DigiCert.
 
@@ -163,31 +167,31 @@ To configure Remote Desktop to use specific certificates:
 
 ### [GUI](#tab/gui)
 
-1. Open **Server Manager**.
+1. In **Server Manager**, on the left pane, select **Remote Desktop Services**.
 
-1. Select **Remote Desktop Services** in the navigation pane on the left side of the window.
-
-1. Select **Servers**.
-
-1. On the **Overview** tab, look for the **Deployment Overview** menu, then select **TASKS** > **Edit Deployment Properties**.
+1. On the **Overview** tab, under **Deployment Overview**, select **TASKS**, then select **Edit Deployment Properties**.
 
 1. In the **Configure the deployment** window, select **Certificates**.
 
-1. Choose **Select existing certificates**, then browse to the location where you saved the certificate you created in the previous section. Look for the file with the .pfx extension.
+1. Choose **Select existing certificate**, select **Browse**, locate your certificate file in `.pfx` format, then select **Open**.
 
-1. Import the certificate.
+1. In the **Password** field, enter the password for the certificate you created, then select **OK**.
 
-1. Optionally, if your clients are all internal to the domain only, you can use one certificate for all roles by generating a wildcard certificate, such as *.CONTOSO.com, and binding it to all roles.
+1. Select the **Allow the certificate to be added to the Trusted Root Certification Authorities certificate store on the destination computers** checkbox, then select **OK**.
+
+1. Select **OK** to finalize your deployment.
 
 >[!NOTE]
 >Even if you have multiple servers in the deployment, Server Manager imports the certificate to all servers. Server Manager places the certificate in the trusted root for each server, then binds the certificate to its respective roles.
 
 ### [PowerShell](#tab/powershell)
 
-1. Open an elevated PowerShell window.
+1. Open an elevated PowerShell window and run the following command:
 
-1. Run the [Set-RDCertificate](/powershell/module/remotedesktop/set-rdcertificate?view=windowsserver2016-ps&viewFallbackFrom=windowsserver2016) command.
-
+  ```powershell
+  Set-RDCertificate -Role RDWebAccess -ImportPath "<Path to PFX file>" -Password (ConvertTo-SecureString -String "<Certificate Password>" -AsPlainText -Force)
+  ```
+  
 ---
 
 You might want to use certificates for the RDS Session Host along with the certificates you configured in Server Manager. For more information about RDS Session Host certificates, see [Remote Desktop listener certificate configurations](/troubleshoot/windows-server/remote/remote-desktop-listener-certificate-configurations).
