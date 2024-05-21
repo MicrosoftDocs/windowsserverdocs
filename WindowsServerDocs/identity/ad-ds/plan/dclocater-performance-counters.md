@@ -15,22 +15,24 @@ Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-DC location refers to the algorithm by which a client machine finds a suitable domain controller. DC location is a critical baseline functionality in all enterprise environments.
+DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments.
 
-DC location in Windows can operate in two basic modes:
+DC location in Windows operates in two basic modes:
 
 - DNS-based discovery 
 - NetBIOS-based discovery
 
-Beginning with Windows Server 2025, Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) feature three new domain controller locater performance counter sets:
+Starting with Windows Server 2025 (preview), Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) feature the following three new domain controller locater performance counter sets:
 
 - DC Locater (Client)
 - DC Locater (DC)
 - DC Locater (Netlogon)
 
+You can access these performance counters at Performance Monitor.
+
 ## DC Locater (Client)
 
-DC Locater (Client) measures per process running on the local client machine. Requests can be broken down based on what flags are being set, for example, requests per second, GC required, KDC required, and so on. Examples of available counters include Average Failure Latency (secs), Average Success Latency (secs), Failures/sec, Successes/sec, and Total Active Site Name Queries/sec.
+DC Locater (Client) measures per process running on the local client machine. You can break down requests based on which flags you set, such as requests per second, GC required, KDC required, and so on. Examples of available counters include Average Failure Latency (secs), Average Success Latency (secs), Failures/sec, Successes/sec, and Total Active Site Name Queries/sec.
 
 The following table shows the client counters that can be added when running DC Locater (Client), type of counter (flag or request), and notes on output.
 
@@ -61,7 +63,7 @@ DC Locater (DC) counters exist only on the domain controller; these are incoming
 
 ## DC Locater (Netlogon)
 
-Netlogon downloads and caches naming information about domains and child domains in all trusting forests. DC Locater (Netlogon) is similar to DC Locater Client counters except output is organized by name lookup. There are a few objects available that are cache-based, such as Cache: Hits/sec and Cache: Misses/sec. This allows you to see how many times a DC lookup is being resolved by the cache or has to make a call on the wire and then make the DNS quiries.
+Netlogon downloads and caches naming information about domains and child domains in all trusting forests. DC Locater (Netlogon) is similar to DC Locater Client counters except output is organized by name lookup. There are a few objects available that are cache-based, such as Cache: Hits/sec and Cache: Misses/sec. You can use these objects to see how many times a DC lookup is being resolved by the cache or has to make a call on the wire and then make the DNS queries.
 
 ## Next steps
 
