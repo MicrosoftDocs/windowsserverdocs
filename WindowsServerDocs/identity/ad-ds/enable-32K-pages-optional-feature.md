@@ -41,7 +41,7 @@ If you want to manually verify the database page size on each domain controller 
 > [!NOTE]
 > When you enable the feature using the `Enable-ADOptionalFeature` cmdlet in the [Enable the 32k page feature using PowerShell](#enable-the-32k-page-feature-using-powershell) section, the command checks all domain controllers have a 32k page capable database.
 
-## [Desktop](#tab/desktop)
+### [Desktop](#tab/desktop)
 
 To verify the database page size of a domain controller using ADSI Edit, follow these steps.
 
@@ -59,7 +59,7 @@ To verify the database page size of a domain controller using ADSI Edit, follow 
 
 1. Find the **msDS-JetDBPageSize** attribute in the attributes list. The value is the database page size capability. A value of `32768` means it's a 32k database page capable domain controller. A value of `8192` means an 8k database page size. No value means the domain controller is running Windows Server 2022 or earlier.
 
-## [PowerShell](#tab/PowerShell)
+### [PowerShell](#tab/PowerShell)
 
 To verify the database page size of a domain controller using PowerShell, follow these steps.
 
@@ -89,7 +89,7 @@ The 32k database page size is an optional feature in AD and isn't enabled by def
 
 1. Open an elevated PowerShell prompt.
 
-1. To enable the Database 32k pages optional feature in PowerShell, use the `Enable-ADOptionalFeature` cmdlet from an elevated prompt. In this example, the command enables this feature for the device named `FABRIKAMDC01` in the `fabrikam.com` domain. Make sure to replace the values for the `Server` and `Target` parameters with your own values.
+1. Run the following command to enable the Database 32k pages optional feature. In this example, the command enables this feature for the device named `FABRIKAMDC01` in the `fabrikam.com` domain. Make sure to replace the values for the `Server` and `Target` parameters with your own values.
 
    ```powershell
    $params = @{
