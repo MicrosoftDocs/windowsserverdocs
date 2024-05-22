@@ -30,7 +30,7 @@ Before you can enable the Database 32k pages optional feature in Active Director
 - Your Active Directory domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 - All domain controllers are running Windows Server 2025 or later, and have a 32k page capable database.
 - Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see the article [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
-- Identify all your domain controllers hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Services domain controllers before making changes.
+- Identify all your domain controllers hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of these Active Directory Domain Services domain controllers before making changes.
 - Validate your backup software is compatible with the 32k database page format by backing up and restoring a 32k page capable database in a test environment.
 - Your account must be a member of the Enterprise Admins group or have equivalent permissions.
 
