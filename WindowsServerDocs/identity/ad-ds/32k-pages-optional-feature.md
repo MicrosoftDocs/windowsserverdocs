@@ -1,5 +1,5 @@
 ---
-title: Database 32k pages optional feature for Active Directory Domain Services on Windows Server
+title: Database 32k pages optional feature for Active Directory on Windows Server
 description: Learn about Database 32k page optional feature for Active Directory Domain Services and Active Directory Lightweight Domain Services on Windows Server.
 author: gswashington
 ms.author: wscontent
