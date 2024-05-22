@@ -398,7 +398,7 @@ AD FS for Windows Server 2016 contains the following updates.
 
 AD FS 2016 builds upon the multi-factor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires an Azure AD Multi-Factor Authentication code instead of a username or password.
 
-- When you configure Azure AD Multi-Factor Authentication as the primary authentication method, AD FS prompts the user for their username and the OTP<!--Acronym--> code from the Azure Authenticator app.
+- When you configure Azure AD Multi-Factor Authentication as the primary authentication method, AD FS prompts the user for their username and the one-time password (OTP) code from the Azure Authenticator app.
 
 - When you configure Azure AD Multi-Factor Authentication as the secondary or extra authentication method, the user provides primary authentication credentials. Users can sign in by using Windows Integrated Authentication, which can request their username and password, smart card, or a user or device certificate. Next, the user sees a prompt for their secondary credentials, such as text, voice, or OTP-based Azure AD Multi-Factor Authentication sign-in.
 
@@ -429,9 +429,6 @@ For more information about using device based conditional access in the cloud, s
 For more information about using device based conditional access with AD FS, see [Planning for Device Based Conditional Access with AD FS](../identity/ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md) and [Access Control Policies in AD FS](../identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
 
 ### Sign in with Windows Hello for Business
-
-> [!NOTE]
-> Currently, Google Chrome and [Microsoft Edge built on Chromium](https://www.microsoft.com/edge?form=MB110A&OCID=MB110A) open source project browsers don't support browser-based single-sign on (SSO) with Windows Hello for Business. We recommend you use this setting on Internet Explorer or an older version of Microsoft Edge.<!--This note seems really old. Is it still applicable?--->
 
 Windows 10 devices introduce Windows Hello and Windows Hello for Business, replacing user passwords with strong device-bound user credentials protected by a user's gesture, such as entering a PIN, a biometric gesture like a fingerprint, or facial recognition. With Windows Hello, users can sign in to AD FS applications from an intranet or extranet without requiring a password.
 

@@ -388,7 +388,7 @@ https:&#47;&#47;fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_i
 ClaimsXray/TokenResponse&prompt=login
 ```
 
-With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. This change is consistent with authentication against Microsoft Entra ID.
+With AD FS on Windows Server 2019, you can now pass the resource value embedded in the scope parameter. This change is consistent with authentication against Microsoft Entra ID.
 
 The scope parameter can now be organized as a space-separated list that structures each entity as a resource or scope.
 
