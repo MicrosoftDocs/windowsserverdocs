@@ -35,11 +35,12 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 Windows Server 2016 removes the restriction for the number of Connection Brokers you can have in a deployment when using Remote Desktop Session Hosts (RDSH) and Remote Desktop Virtualization Hosts (RDVH) that also run Windows Server 2016. The following table shows which versions of RDS components work in a highly available deployment with three or more Connection Brokers.
 
-|3+ Connection Brokers in HA|RDSH or RDVH 2022|RDSH or RDVH 2019|RDSH or RDVH 2016|
-|---|---|---|---|
- |Windows Server 2022 Connection Broker|Supported|Supported|Supported|
- |Windows Server 2019 Connection Broker|N/A|Supported|Supported|
- |Windows Server 2016 Connection Broker|N/A|N/A|Supported|
+|3+ Connection Brokers in HA|RDSH or RDVH 2025|RDSH or RDVH 2022|RDSH or RDVH 2019|RDSH or RDVH 2016|
+|---|---|---|---|---|
+ |Windows Server 2025 Connection Broker|Supported|Supported|Supported|Supported|
+ |Windows Server 2022 Connection Broker|N/A|Supported|Supported|Supported|
+ |Windows Server 2019 Connection Broker|N/A|N/A|Supported|Supported|
+ |Windows Server 2016 Connection Broker|N/A|N/A|N/A|Supported|
 
 ## Support for graphics processing unit (GPU) acceleration
 
@@ -57,13 +58,13 @@ GPUs presented by a non-Microsoft hypervisor or Cloud Platform must have drivers
 
 The following table shows the scenarios supported by different versions of RDSH hosts.
 
-|Feature|Windows Server 2016|Windows Server 2019|Windows Server 2022|
-|---|---|---|---|
-|Use of hardware GPU for all RDP sessions|Yes|Yes|Yes|
-|H.264/AVC hardware encoding (if supported by the GPU)|Yes|Yes|Yes|
-|Load balancing between multiple GPUs presented to the OS|No|Yes|Yes|
-|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|Yes|Yes|
-|H.264/AVC support for 4K resolution|No|Yes|Yes|
+|Feature|Windows Server 2016|Windows Server 2019|Windows Server 2022|Windows Server 2025|
+|---|---|---|---|---|
+|Use of hardware GPU for all RDP sessions|Yes|Yes|Yes|Yes|
+|H.264/AVC hardware encoding (if supported by the GPU)|Yes|Yes|Yes|Yes|
+|Load balancing between multiple GPUs presented to the OS|No|Yes|Yes|Yes|
+|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|Yes|Yes|Yes|
+|H.264/AVC support for 4K resolution|No|Yes|Yes|Yes|
 
 ### VDI support for GPUs
 
