@@ -446,31 +446,13 @@ sections:
           1. If the configuration window doesn't pop up, then you need to collect trace logs and troubleshoot further.
 
       - question: |
-          bloop
+          Can I pass a resource value as part of the scope value like a typical request against Azure AD?
           
         answer: |
-          bloop
+          Yes, but only in Windows Server 2019 or later. You can organize the scope parameter as a space-separated list where each entry is structured as a resource or scope, such as `<create a valid sample request>`.
 
       - question: |
-          bloop
+           Does AD FS support the PKCE extension?
           
         answer: |
-          bloop
-
-      - question: |
-          bloop
-          
-        answer: |
-          bloop
-
-      - question: |
-          bloop
-          
-        answer: |
-          bloop
-
-      - question: |
-          bloop
-          
-        answer: |
-          bloop
+          Yes, but only in Windows Server 2019 or later. AD FS supports Proof Key for Code Exchange (PKCE) for the OAuth Authorization Code Grant flow.
