@@ -1,16 +1,16 @@
 ---
-title: Upgrading your Remote Desktop Virtualization Host to Windows Server 2016
-description: Learn how to upgrade your existing Remote Desktop Virtualization Host to Windows Server 2016.
+title: Upgrading your Remote Desktop Virtualization Host
+description: Learn how to upgrade your existing Remote Desktop Virtualization Host.
 ms.author: spatnaik
-ms.date: 08/01/2016
+ms.date: 05/21/2024
 ms.topic: article
 ms.assetid: 5aed8ba7-f541-4416-b01c-4d3b1712e2b1
 author: spatnaik
 manager: scottman
 ---
-# Upgrading your Remote Desktop Virtualization Host to Windows Server 2016
+# Upgrading your Remote Desktop Virtualization Host
 
->Applies to: Windows Server 2016
+> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server 2016
 
 ## RD Virtualization Host servers in the deployment where VMs are stored locally
 
@@ -18,7 +18,7 @@ These servers should be upgraded all at once. Follow the following steps to upgr
 
 1. Log off all users.
 1. Turn off or save all virtual machines on each host.
-1. Upgrade the servers to Windows Server 2016.
+1. Upgrade the servers to the latest Windows Server version.
 1. All collections should be available and functional after the upgrades are complete.
 
 ## RD Virtualization Host servers in the deployment where VMs are stored in Cluster Shared Volumes (CSV)

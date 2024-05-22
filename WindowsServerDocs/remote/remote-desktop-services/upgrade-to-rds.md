@@ -2,7 +2,7 @@
 title: Upgrade Remote Desktop Services deployments
 description: Learn about which Remote Desktop Services versions can be upgraded and the order to upgrade your Remote Desktop role services.
 ms.author: wscontent
-ms.date: 06/01/2023
+ms.date: 05/21/2024
 ms.topic: article
 ms.assetid: f7b1f1f6-57c8-40ab-a235-e36240dcc1f8
 author: spatnaik
@@ -16,7 +16,7 @@ In this article, learn about which Remote Desktop Services (RDS) versions can be
 
 ## Supported OS upgrades with RDS role installed
 
-You can upgrade to a newer version of Windows Server by two versions at a time. For example, you can upgrade to Windows Server 2022 from Windows Server 2016.
+You can upgrade to a newer version of Windows Server by two versions at a time. For example, you can upgrade to Windows Server 2025 from Windows Server 2019.
 
 ## Flow for deployment upgrades
 
@@ -31,9 +31,9 @@ In order to keep the downtime to a minimum, use the following guide:
    > [!NOTE]
    > RD license servers from an older version of Windows Server work with newer versions, but they can only process client access licenses (CALs) from the older Windows Server version. They can't use the newer Windows Server CALs. For more information about RD license servers, see [RDS CAL version compatibility](rds-client-access-license.md#rds-cal-version-compatibility).
 
-3. **RD Session Host servers** can be upgraded next. Avoid downtime during upgrade by splitting the servers to be upgraded into steps as detailed. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading your Remote Desktop Session Host to Windows Server 2016](upgrade-to-rdsh.md).
+3. **RD Session Host servers** can be upgraded next. Avoid downtime during upgrade by splitting the servers to be upgraded into steps as detailed. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading your Remote Desktop Session Host to the latest Windows Server version](upgrade-to-rdsh.md).
 
-4. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading your Remote Desktop Virtualization Host to Windows Server 2016](upgrade-to-rdvh.md).
+4. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading your Remote Desktop Virtualization Host to the latest Windows Server version](upgrade-to-rdvh.md).
 
 5. **RD Web Access servers** can be upgraded anytime.
    > [!NOTE]

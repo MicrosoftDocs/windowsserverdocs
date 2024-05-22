@@ -4,16 +4,16 @@ description: Learn how to install CALs for RD clients.
 ms.topic: article
 author: robinharwood
 ms.author: wscontent
-ms.date: 09/20/2016
+ms.date: 05/22/2024
 manager: dongill
 ---
 # Install RDS client access licenses on the Remote Desktop license server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Use the following information to install Remote Desktop Services client access licenses (CALs) on the license server. Once the CALs are installed, the license server will issue them to users as appropriate.
+Use the following information to install Remote Desktop Services client access licenses (CALs) on the license server. Once the CALs are installed, the license server will issue them to users as appropriate. Be sure to [activate your license server](./rds-activate-license-server.md) first before continuing with the following steps.
 
-Note you need Internet connectivity on the computer running Remote Desktop Licensing Manager but not on the computer running the license server.
+Note: you need Internet connectivity on the computer running Remote Desktop Licensing Manager but not on the computer running the license server.
 
 1. On the license server (usually the first RD Connection Broker), open the Remote Desktop Licensing Manager.
 2. Right-click the license server, and then click **Install licenses**.

@@ -1,16 +1,16 @@
 ---
-title: Upgrading your Remote Desktop Session Host to Windows Server 2016
-description: Learn how to upgrade your existing Remote Desktop Session Host to Windows Server 2016.
+title: Upgrading your Remote Desktop Session Host
+description: Learn how to upgrade your existing Remote Desktop Session Host.
 ms.author: spatnaik
-ms.date: 08/01/2016
+ms.date: 05/21/2024
 ms.topic: article
 ms.assetid: 5c9b98b8-4eca-4a39-b10b-2bac729f7f44
 author: spatnaik
 manager: scottman
 ---
-# Upgrading your Remote Desktop Session Host to Windows Server 2016
+# Upgrading your Remote Desktop Session Host
 
->Applies to: Windows Server 2016
+> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server 2016
 
 > [!IMPORTANT]
 > All applications must be uninstalled before the upgrade and reinstalled after the upgrade to avoid any app compatibility issues that may rise because of the upgrade.
@@ -23,12 +23,12 @@ In order to keep the down-time to a minimum, it's best to follow these steps whi
 2. Prevent new connections to these servers by setting **Allow New Connections** to false.
 3. Log off all sessions on these servers.
 4. Remove these servers from the collection.
-5. Upgrade the servers to Windows Server 2016.
+5. Upgrade the servers to the latest Windows Server version.
 6. Set **Allow New Connections** to "false" on the remaining servers in the collection.
 7. Add the upgraded servers back to their corresponding collections.
 8. Remove the remaining set of servers to be upgraded from the collection.
 9. Set **Allow New Connections** to "true" on the upgraded servers in the collection.
-10. Now upgrade the remaining servers in the deployment by following steps 3 through 9 above.
+10. Now upgrade the remaining servers in the deployment by following steps 3 through 9.
 
 ## Upgrading a standalone RD Session Host server
 

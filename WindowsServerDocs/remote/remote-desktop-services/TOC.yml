@@ -55,11 +55,11 @@
     items:
     - name: Deploy a proof-of-concept RDS environment with ARM and Azure Marketplace
       href: rds-in-azure.md
-    - name: Migrate your Remote Desktop Services deployments to Windows Server 2016
+    - name: Migrate your Remote Desktop Services deployments
       href: migrate-rds-role-services.md
     - name: Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
       href: migrate-rds-cals.md
-    - name: Upgrade your Remote Desktop Services deployments to Windows Server 2016
+    - name: Upgrade your Remote Desktop Services deployments
       href: upgrade-to-rds.md
       items:
       - name: Upgrade Remote Desktop Session Host servers
@@ -213,6 +213,8 @@
         href: clients/remote-desktop-client-faq.yml
       - name: Privacy settings for managed apps and desktops
         href: clients/remote-privacy-settings.md
+      - name: Remote Desktop Web Access FAQ
+        href: rd-web-access-faq.yml 
     - name: Known issues
       items:
       - name: Clients can't connect and see "No licenses available" error

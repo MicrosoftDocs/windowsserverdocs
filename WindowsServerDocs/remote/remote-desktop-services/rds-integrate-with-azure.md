@@ -9,7 +9,7 @@ author: robinharwood
 
 # Remote Desktop Services - Integrating with Azure services
 
-Windows Server 2016 combines the powerful secure delivery of desktops and apps through Remote Desktop Services with the flexible, scalable services provided by Microsoft Azure. You can deploy RDS with Azure services to help reduce infrastructure maintenance cost for on-premises servers, increase stability by using Azure services to ensure high availability, improve security by using Multi-factor Authentication, and improve your users' experience by using existing identities to access resources in RDS.
+Windows Server combines the powerful secure delivery of desktops and apps through Remote Desktop Services with the flexible, scalable services provided by Microsoft Azure. You can deploy RDS with Azure services to help reduce infrastructure maintenance cost for on-premises servers, increase stability by using Azure services to ensure high availability, improve security by using Multi-factor Authentication, and improve your users' experience by using existing identities to access resources in RDS.
 
 Use the following information to integrate Azure into your Remote Desktop deployment:
 

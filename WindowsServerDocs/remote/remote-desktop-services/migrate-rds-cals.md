@@ -35,7 +35,7 @@ Before migration ensure that the destination license server is activated. Follow
 
        On the Source License Server Information page, enter the name or IP address of the source license server.
 
-       If the source license server is available on the network, click **Next**. The wizard contacts the source license server and you will have an option to Obtain Client License Key Pack.
+       If the source license server is available on the network, click **Next**. The wizard contacts the source license server and you will have an option to **Obtain Client License Key Pack**.
 
        If the source license server is not available on the network, select **The specified source license server is not available on the network**. Specify the operating system that the source license server is running, and then provide the license server ID for the source license server. After you click **Next**, you are reminded that you must remove the RDS CALs manually from the source license server after the wizard has completed. After you confirm that you understand this requirement, the **Obtain Client License Key Pack** page appears.
 
@@ -45,7 +45,8 @@ The next step is to migrate the CALs - use the information below to complete the
 
 ## Migrate RDS CALs
 
-There are three mechanisms to migrate licenses to the destination license server; continue the steps corresponding to the **Connection method** verified in Step 2 in the previous section:
+There are three ways to migrate licenses to the destination license server; follow the steps corresponding to the **Connection method** verified in Step 2 in the previous section:
+
   - [Automatic connection method](#automatic-connection-method)
   - [Using a web browser](#using-a-web-browser)
   - [Using a telephone](#using-a-telephone)
