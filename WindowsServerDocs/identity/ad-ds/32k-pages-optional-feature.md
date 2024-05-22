@@ -1,9 +1,9 @@
 ---
 title: Database 32k pages optional feature for Active Directory Domain Services on Windows Server
-description: Learn about Datebase 32k page optional feature for Active Directory Domain Services and Active Directory Lightweight Domain Services on Windows Server.
+description: Learn about Database 32k page optional feature for Active Directory Domain Services and Active Directory Lightweight Domain Services on Windows Server.
 author: gswashington
 ms.author: wscontent
-ms.date: 05/21/2024
+ms.date: 05/22/2024
 ms.topic: conceptual
 #customer intent: As an Active Directory administrator, I want to learn about the Database 32k pages feature in Active Directory Domain Services, so that I can improve scalability.
 ---
@@ -15,16 +15,16 @@ Applies to: Windows Server 2025 (preview)
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) uses an [Extensible Storage Engine (ESE) database](/windows/win32/extensible-storage-engine/extensible-storage-engine-files). Since its introduction in Windows 2000 ESE used an 8k database page size, this architecture limited the scale of forest and domain objects. A 32k database page format offers an improvement in scalability using 64-bit [Long Value IDs](/windows/win32/extensible-storage-engine/long-value-columns) (LIDs). Multi-valued attributes are now able to hold approximately 3,200 values, which is an increase by a factor of 2.6. For more information about the Active Directory's scalability, see [Active Directory Maximum Limits - Scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101%28v=ws.10%29).
+Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) uses an [Extensible Storage Engine (ESE) database](/windows/win32/extensible-storage-engine/extensible-storage-engine-files). Since its introduction in Windows 2000, ESE used an 8k database page size, this architecture limited the scale of forest and domain objects. A 32k database page format offers an improvement in scalability using 64-bit [Long Value IDs](/windows/win32/extensible-storage-engine/long-value-columns) (LIDs). Multi-valued attributes are now able to hold approximately 3,200 values, which is an increase by a factor of 2.6. For more information about Active Directory's scalability, see [Active Directory Maximum Limits - Scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101%28v=ws.10%29).
 
 To learn more about the ESE database, see [ESE Deep Dive: Part 1: The Anatomy of an ESE database](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/ese-deep-dive-part-1-the-anatomy-of-an-ese-database/ba-p/400496).
 
-Beginning with Windows Server 2025, new Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) installs uses a 32k database page format.
+Beginning with Windows Server 2025, new installs of Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) use a 32k database page format.
 
 New domain controllers, or LDS instances, are installed with a 32k page capable database but use an 8k page mode for compatibility with earlier versions. Moving to a 32k database page-size is a forest-wide operation and requires that all domain controllers in the forest have a 32k page capable database.
 
 > [!IMPORTANT]
-> Domain controllers that have had a Feature Update, also known as an in-place upgrade, continues to use its current 8K page database format and pages.
+> Domain controllers that have had a Feature Update, also known as an in-place upgrade, continue to their current 8K page database format and pages.
 
 ## Requirements
 
@@ -33,8 +33,8 @@ Before you can enable the _Database 32k pages optional feature_ in your Active D
 - Your Active Directory forest and domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 - All domain controllers are running Windows Server 2025 or later, and have a 32k page capable database.
 - Domain and forest functional levels are upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
-- Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of theses Active Directory Domain Server domain controllers before making changes.
-- Validate your backup software is compatible with the 32k pages database format by backing up and restoring a 32k page capable database in a test environment.
+- Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of these Active Directory Domain Services domain controllers before making changes.
+- Validate your backup software is compatible with the 32k page database format by backing up and restoring a 32k page capable database in a test environment.
 
 ## Considerations
 
@@ -51,4 +51,4 @@ Before you enable the Database 32k pages optional feature, you can use either 8k
 
 ## Next steps
 
-To enable the Database 32k pages optional feature in your forest or domain, see [Enable 32k pages in Active Directory Domain Services](enable-32k-pages-optional-feature.md).
+To enable the Database 32k pages optional feature in your forest or domain, see [Enable Database 32k pages optional feature in Active Directory Domain Services](enable-32k-pages-optional-feature.md).
