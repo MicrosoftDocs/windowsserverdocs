@@ -65,22 +65,30 @@ To create a virtual network:
   - For **Region**, select the region you want to create your virtual network in.
 
 1. Select **Next**.
-   :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vnet.png" alt-text="Screenshot showing the basics tab for the Create virtual network page.":::
 
 1. In the **Security** tab, enable any security service you want to use, then select **Next**.
 
-1. On the **IP addresses** tab, a default subnet is already created and ready for VMs to be added. For this example, select **default** to edit the subnet.
-    1. On the **Edit subnet** page, rename the subnet to **INT**.
-    1. Enter **IP address** and **Subnet size** information as necessary to define an **IP address space**.
-    1. For **Network security group**, select **Create new**.
-    1. For this example, enter the name **NSG_INT** and select **OK**, then select **Save**. You've created your first subnet.
+1. On the **IP addresses** tab, select the name of the subnet you want to edit. For this example, we're editing the **default** subnet that the service automatically creates.
+
+1. On the **Edit subnet** page, rename the subnet to **INT**.
+
+1. Enter the **IP address** and **Subnet size** information for your subnet to define an **IP address space**.
+
+1. For **Network security group**, select **Create new**.
+
+1. For this example, enter the name **NSG_INT** and select **OK**, then select **Save**. You've created your first subnet.
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-subnet-with-int-nsg.png" alt-text="Screenshot showing how to edit a subnet and add an internal network security group.":::
-    1. To create your second subnet, select **+ Add a subnet**.
-    1. On the **Add a subnet** page, enter **DMZ** for the second subnet name and enter information as necessary to define an **IP address space**.
-    1. For **Network security group**, select **Create new**.
-    1. Enter the name **NSG_DMZ**, select **OK**, then select **Add**.
+
+1. To create your second subnet, select **+ Add a subnet**.
+
+1. On the **Add a subnet** page, enter **DMZ** for the second subnet name, then enter information about your subnet into the empty fields to define an **IP address space**.
+
+1. For **Network security group**, select **Create new**.
+
+1. Enter the name **NSG_DMZ**, select **OK**, then select **Add**.
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-subnet-with-dmz-nsg.png" alt-text="Screenshot showing how to add a new subnet that includes a network security group.":::
-1. Select **Review + create**, and if everything looks okay, select **Create**.
+
+1. Select **Review + create**, then select **Create**.
 
 You now have a virtual network that includes two subnets, each with an associated network security group.
 
@@ -88,14 +96,16 @@ You now have a virtual network that includes two subnets, each with an associate
 
 ### Secure the virtual network
 
-A Network security group (NSG) contains a list of Access Control List (ACL) rules that allow or deny network traffic to your VM instances in a Virtual Network. NSGs can be associated with either subnets or individual VM instances within that subnet. When an NSG is associated with a subnet, the ACL rules apply to all the VM instances in that subnet.
+A Network security group (NSG) contains a list of Access Control List (ACL) rules that allow or deny network traffic to your VM instances in a virtual network. You can associate NSGs with either subnets or individual VM instances within that subnet. When an NSG is associated with a subnet, the ACL rules apply to all the VM instances in that subnet.
 
 The NSGs associated with your subnets automatically include some default inbound and outbound rules. You can't delete default security rules, but you can override them with rules that have a higher priority. And, you can add more inbound and outbound rules according to the level of security you want.
 
 Now, add a couple of rules to each of our two security groups. For the first example, let's add an inbound security rule to the **NSG_INT** security group.
 
 1. On your virtual network's **Subnets** page, select **NSG_INT**.
+
 1. On the left, select **Inbound security rules**, then select **+ Add**.
+
 1. In **Add inbound security rule**, enter or select this information:
 
     | Setting | Value |
