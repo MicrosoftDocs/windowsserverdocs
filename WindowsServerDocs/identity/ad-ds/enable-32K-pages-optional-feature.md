@@ -15,7 +15,7 @@ Applies to: Windows Server 2025 (preview)
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-The Database 32k pages optional feature offers a huge improvement in scalability. Beginning with Windows Server 2025, new Active Directory domain controllers are installed with a 32K database page format. By default these new domain controllers use an 8k database page mode to support previous versions. An upgraded DC continues to use an 8K database format and pages. Moving to a 32k database page-size is a forest-wide operation and requires that all domain controllers in the forest have a 32k page capable database. For more information about using the Database 32k pages optional feature in Active Directory, see [Database 32k pages optional feature](32K-pages-optional-feature.md).
+The Database 32k pages optional feature offers a huge improvement in scalability. Beginning with Windows Server 2025, new Active Directory domain controllers are installed with a 32k database page format. By default these new domain controllers use an 8k database page mode to support previous versions. An upgraded DC continues to use an 8K database format and pages. Moving to a 32k database page-size is a forest-wide operation and requires that all domain controllers in the forest have a 32k page capable database. For more information about using the Database 32k pages optional feature in Active Directory, see [Database 32k pages optional feature](32k-pages-optional-feature.md).
 
 > [!WARNING]
 > Once you have enabled the Database 32k pages optional feature, you can't revert back to the previous 8k page mode. As a result, any 8k-page backup media created prior to enabling the feature will be unusable unless a complete authoritative forest recovery is performed.
@@ -26,7 +26,7 @@ In this article, you learn how to enable the Database 32k pages optional feature
 
 Before you can enable the Database 32k pages optional feature in Active Directory Domain Services, you need to complete the following prerequisites.
 
-- Review the article [32K pages in Active Directory Domain Services and Active Directory Lightweight Domain Services](32K-pages-optional-feature.md) for other considerations before enabling the 32k page feature.
+- Review the article [32k pages in Active Directory Domain Services and Active Directory Lightweight Domain Services](32k-pages-optional-feature.md) for other considerations before enabling the 32k page feature.
 - Your Active Directory domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 - All domain controllers are running Windows Server 2025 or later, and have a 32k page capable database.
 - Domain and forest functional levels must be upgraded to Windows Server 2025 or later. To learn more about raising the functional levels, see the article [Raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
@@ -93,7 +93,7 @@ The 32k database page size is an optional feature in AD and isn't enabled by def
 
    ```powershell
    $params = @{
-   Identity = 'Database 32K pages feature'
+   Identity = 'Database 32k pages feature'
    Scope = 'ForestOrConfigurationSet'
    Server = 'FABRIKAMDC01'
    Target = 'fabrikam.com'
