@@ -39,7 +39,7 @@ Before you can enable the Database 32k pages optional feature in Active Director
 If you want to manually verify the page database size on each domain controller before enabling the Database 32k pages optional feature, you can use the following steps.
 
 > [!NOTE]
-> When you enable the feature using the `Enable-ADOptionalFeature` cmdlet in the [Enable the 32k page feature using PowerShell](#enable-the-32k-page-feature-using-powershell) section, the command checks all domain controllers have a 32k page capable database.
+> When you enable the feature using the `Enable-ADOptionalFeature` cmdlet in the [Enable the Database 32k pages optional feature](#enable-the-database-32k-pages-optional-feature) section, the command checks all domain controllers have a 32k page capable database.
 
 ### [Desktop](#tab/desktop)
 
