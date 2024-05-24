@@ -142,6 +142,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Page file support | Yes<sup>6</sup> | Yes |
 | File system encryption | Yes<sup>7</sup> | Yes |
 | File system compression | Yes | Yes |
+| Extended attributes | Yes | Yes |
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
@@ -170,7 +171,6 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Object IDs | No | Yes |
 | Offloaded Data Transfer (ODX) | No | Yes |
 | Short names | No | Yes |
-| Extended attributes | No | Yes |
 | Disk quotas | No | Yes |
 | Bootable | No | Yes |
 | Supported on removable media | No | Yes |
