@@ -1,6 +1,6 @@
 ---
 title: Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
-description: This article describes how to migrate your Remote Desktop Services Client Access Licenses to new Windows Server 2025 license servers.
+description: This article describes how to migrate your Remote Desktop Services Client Access Licenses to a new Windows Server license servers.
 ms.author: chrimo
 ms.date: 5/20/2024
 ms.topic: article

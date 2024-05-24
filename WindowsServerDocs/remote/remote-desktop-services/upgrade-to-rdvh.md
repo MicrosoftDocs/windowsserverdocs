@@ -18,7 +18,7 @@ These servers should be upgraded all at once. Follow the following steps to upgr
 
 1. Log off all users.
 1. Turn off or save all virtual machines on each host.
-1. Upgrade the servers to the latest Windows Server version.
+1. Upgrade the servers to the new Windows Server version.
 1. All collections should be available and functional after the upgrades are complete.
 
 ## RD Virtualization Host servers in the deployment where VMs are stored in Cluster Shared Volumes (CSV)

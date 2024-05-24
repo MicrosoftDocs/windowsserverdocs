@@ -13,7 +13,7 @@ manager: dongill
 
 >Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Windows 10 and Windows Server 2016 and newer have new layers of protection built into the operating system to:
+Windows and Windows Server have new layers of protection built into the operating system to:
 
 - Safeguard against security breaches
 - Help block malicious attacks
@@ -36,11 +36,11 @@ The following table outlines which of these new features are supported in a VDI 
 
 Remote Credential Guard is only supported for direct connections to the target machines and not for the ones via Remote Desktop Connection Broker and Remote Desktop Gateway.
 > [!NOTE]
-> If you have a Connection Broker in a single-instance environment, and the DNS name matches the computer name, you may be able to use Remote Credential Guard, although this is not supported.
+> If you have a Connection Broker in a single-instance environment, and the DNS name matches the computer name, you may be able to use Remote Credential Guard, although this isn't supported.
 
 ## Shielded VMs and Encryption Supported VMs
 
-- Shielded VMs aren't supported in Remote Desktop Services VDI
+Shielded VMs aren't supported in Remote Desktop Services VDI.
 
 For leveraging Encryption Supported VMs:
 - Use an unmanaged collection and a provisioning technology outside of the Remote Desktop Services collection creation process to provision the virtual machines.

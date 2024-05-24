@@ -19,13 +19,13 @@ You must reactivate a Remote Desktop license server when any of the following oc
 
 Reactivate a license server by using one of the following methods: 
 
-- [Reactivate a License Server Automatically](#reactivate-a-license-server-automatically)
-- [Reactivate a License Server by Using a Web Browser](#reactivate-a-license-server-using-a-web-browser) 
-- [Reactivate a License Server by Using the Telephone](#reactivate-a-license-server-by-telephone)
+- [Reactivate a license server automatically](#reactivate-a-license-server-automatically)
+- [Reactivate a license server using a web browser](#reactivate-a-license-server-using-a-web-browser) 
+- [Reactivate a license server by telephone](#reactivate-a-license-server-by-telephone)
 
 ### Prerequisites
 
-Membership in the **Administrators** group, or equivalent, is required to complete this procedure.
+Membership in the **Administrators** group, or equivalent, is required to complete either reactivation or deactivation.
 
 ### Reactivate a license server automatically 
 
@@ -59,7 +59,7 @@ To reactivate a Terminal Services license server by telephone, complete the foll
 
 ## Deactive a license server
 
-You may have to deactivate a license server if the certificate of the server expires or become damaged, or if you redeploy the server. You are prompted to reactivate the license server when its registration expires. 
+You may have to deactivate a license server if the certificate of the server expires, gets damaged, or if you redeploy the server.
 
 The following steps describe how to deactivate a license server:
 
@@ -70,4 +70,4 @@ The following steps describe how to deactivate a license server:
     > Your e-mail address is required if you are using the Internet method.
 1. Select Finish. 
 
-When you deactivate a license server, you can't license other client computers from this server until the license server is reactivated. 
+When you deactivate a license server, you can't license other client computers from this server until the license server is reactivated. You're prompted to reactivate the license server when its registration expires. 
