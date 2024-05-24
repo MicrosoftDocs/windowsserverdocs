@@ -106,25 +106,30 @@ Now, add a couple of rules to each of our two security groups. For the first exa
 
 1. On the left, select **Inbound security rules**, then select **+ Add**.
 
-1. In **Add inbound security rule**, enter or select this information:
+1. In **Add inbound security rule**, configure the rule with the following information:
 
-    | Setting | Value |
-    | ------- | ----- |
-    | Source | **10.0.1.0/24**. |
-    | Source port ranges | Leave (or select) asterisk. An asterisk (*) allows traffic on any port. For this example, choose asterisk for all of the rules you create.|
-    | Destination | **10.0.0.0/24**. |
-    | Service | Select **HTTPS**. <br> The settings for **Destination port ranges** and **Protocol** are automatically filled based on the specified **Service**.|
-    | Action | Choose **Allow**. |
-    | Priority | **1010**. <br> Rules are processed in priority order; the lower the number, the higher the priority. |
-    | Name | **AllowHTTPSFromDMZ**. |
-    | Description | Allow the HTTPS communication from DMZ. |
+    - For **Source**, enter **10.0.1.0/24**.
+
+    - For the **Source port ranges**, either leave it blank if you don't want to allow traffic or select an asterisk (*) to allow traffic on any port.
+
+    - For **Destination**, enter **10.0.0.0/24**.
+
+    - For **Service**, select **HTTPS**. The service automatically fills the information fields for **Destination port ranges** and **Protocol** depending on which service you choose.
+
+    - For **Action**, select **Allow**.
+
+    - For **Priority**, enter **1010**.
+
+    - For **Name**, enter **AllowHTTPSFromDMZ**.
+
+    - For **Description**, enter **Allow the HTTPS communication from DMZ.**
 
 1. After you've made your choices, select **Add**.
 
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/nsg-add-rules.png" alt-text="Screenshot showing how to add an inbound security rule.":::
    The new inbound security rule is now added to the top of the list of rules for **NSG_INT**.
 
-1. Repeat these steps with the values shown in the following table. In addition to the new rule you created, you must add the following extra rules in the priority order listed to help secure your internal and DMZ subnet.
+1. Repeat these steps with the values shown in the following table. In addition to the new rule you created, you must add the following extra rules in the priority order listed to help secure your internal and DMZ subnet.<!---Oh, boy. There has to be a better way to format all this. Also, search the docs to see if there's a link we can forward people to for creating these specific rules.--->
 
     | NSG | Type of rule | Source | Destination | Service | Action | Priority | Name | Description |
     |:--- |:--- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -132,46 +137,52 @@ Now, add a couple of rules to each of our two security groups. For the first exa
     | NSG_DMZ | Inbound | Any | Any | Custom (Asterisk (*)/Any) | Allow | 1010 | AllowHTTPSFromInternet | Allow HTTPS from internet to the DMZ. |
     | NSG_DMZ | Outbound | Any | Service Tag/Internet | Custom (80/Any) | Deny | 100 | DenyInternetOutbound | Anything except HTTPS to internet is blocked. |
 
-    After you've entered the values for each new rule, select **Add** and proceed to the next until two new security rules are added for each NSG.
+1. After you've entered the values for each new rule, select **Add** and proceed to the next until two new security rules are added for each NSG.
 
-After configuration, the **NSG** pages look like this example:
+After configuration, the **NSG** pages should look like the following screenshot:
 
 :::image type="content" source="./media/how-to-connect-fed-azure-adfs/nsgs-with-security-rules.png" alt-text="Screenshot showing your NSGs after you added security rules.":::
 
 > [!NOTE]
-> If client user certificate authentication (clientTLS authentication using X.509 user certificates) is required, then AD FS requires TCP port 49443 to be enabled for inbound access.
+> If the virtual network requires client user certificate authentication, such as clientTLS authentication using X.509 user certificates, you must enable TCP port 49443 for inbound access.
 
 ### Create connection to on-premises
 
-You need a connection to on-premises to deploy the DC in Azure. Azure offers various options to connect your on-premises infrastructure to your Azure infrastructure.
+You need a connection to on-premises to deploy the DC in Azure. You can connect your on-premises infrastructure to your Azure infrastructure using one of the following options:
 
 - Point-to-site
 - Virtual Network site-to-site
 - ExpressRoute
 
-We recommend you use ExpressRoute. ExpressRoute lets you create private connections between Azure datacenters and infrastructure that's on your premises or in a colocation environment. ExpressRoute connections don't go over the public internet. They offer more reliability, faster speeds, lower latencies and higher security than typical connections over the internet.
-
-While we recommend you use ExpressRoute, you can choose any connection method best suited for your organization. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](/azure/expressroute/expressroute-introduction).
+We recommend you use ExpressRoute if your organization doesn't require point-to-site or Virtual Network site-to-site connections. ExpressRoute lets you create private connections between Azure datacenters and infrastructure that's on your premises or in a colocation environment. ExpressRoute connections also don't connect to the public internet, which makes them more reliable, faster, and more secure. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](/azure/expressroute/expressroute-introduction).
 
 ## Create storage accounts
 
-To maintain high availability and avoid dependence on a single storage account, create two storage accounts. Divide the machines in each availability set into two groups, and then assign each group a separate storage account.
+To maintain high availability and avoid dependence on a single storage account, you should create two storage accounts by dividing the machines in each availability set into two groups, then assigning each group a separate storage account.
 
-To create your two storage accounts, search for and select **Storage accounts** in the Azure portal and choose **+ Create**
+To create the two storage accounts:
 
-1. In **Create a storage account**, enter or select this information in the **Basics** tab:
+1. Open the Azure portal, search for and select **Storage accounts**, then select **+ Create**.
 
-    | Setting | Value |
-    | ------- | ----- |
-    | **Project details** |   |
-    | Subscription | Select your subscription. |
-    | Resource group | Select your resource group. Or select **Create new** to create one. |
-    | **Instance details** |   |
-    | Storage account name | Enter a name for your storage account. For this example, enter **contososac1**. |
-    | Region | Select your region. |
-    | Performance | Select **Premium** for the performance level. |
-    | Premium account type | Select the type of storage account you need: block blobs, file shares, or page blobs. |
-    | Redundancy | Select **Locally-redundant storage (LRS)**. |
+1. In **Create a storage account**, go to the **Basics** tab and enter the following information:
+
+    - Under **Product details**:
+
+      - For **Subscription**, select the name of your subscription.
+
+      - For **Resource group**, either select an existing resource group or **Create new** to make a new one.
+
+    - Under **Instance details**:
+
+      - For **Storage account name**, enter the name for your storage account. For this example, enter **contosoac1**.
+
+      - For **Region**, select the region you want to use.
+
+      - For **Performance**, select **Premium**.
+
+      - For **Premium account type**, select either **block blobs**, **file shares**, or **page blobs** depending on your organization's needs.
+
+      - For **Redundancy**, select **Locally-redundant storage (LRS)**.
 
 1. Continue through the remaining tabs. When ready, select **Create** on the **Review** tab.
 
@@ -181,30 +192,39 @@ To create your two storage accounts, search for and select **Storage accounts** 
 
 ## Create availability sets
 
-For each role (DC/AD FS and WAP), create availability sets that contain at least two machines each. This configuration helps achieve higher availability for each role. While creating the availability sets, you must decide on the following domains:
+For each role (DC/AD FS and WAP), create availability sets that contain at least two machines each. This configuration helps achieve higher availability for each role. While creating the availability sets, you must decide which of the following domains you want to use:
 
-- **Fault Domains**: VMs in the same fault domain share the same power source and physical network switch. We recommend a minimum of two fault domains. The default value is 2 and you can leave it as-is for this deployment.
-- **Update domains**: Machines belonging to the same update domain are restarted together during an update. We recommend a minimum of two update domains. The default value is 5, and you can leave it as is for this deployment.
+- In a fault domain, VMs share the same power source and physical network switch. We recommend a minimum of two fault domains. The default value is **2** and you can leave it as-is for this deployment.
 
-To create availability sets, search for and select **Availability sets** in the Azure portal and choose **+ Create**
+- In an update domain, machines restart together during an update. We recommend a minimum of two update domains. The default value is **5**, and you can leave it as-is for this deployment.
 
-1. In **Create availability set**, enter or select this information in the **Basics** tab:
+To create availability sets:
 
-    | Setting | Value |
-    | ------- | ----- |
-    | **Project details** |   |
-    | Subscription | Select your subscription. |
-    | Resource group | Select your resource group. Or select **Create new** to create one. |
-    | **Instance details** |   |
-    | Name | Enter a name for your availability set. For this example, enter **contosodcset**. |
-    | Region | Select your region. |
-    | Fault domains | **2** |
-    | Update domains | **5** |
-    | Use managed disks | For this example, select **No (Classic)**. |
+1. Search for and select **Availability sets** in the Azure portal, then select **+ Create**.
+
+1. In **Create availability set**, go to the **Basics** tab and enter the following information:
+
+    - Under **Project details**:
+
+      - For **Subscription**, select the name of your subscription.
+
+      - For **Resource group**, either select an existing resource group or **Create new** to make a new one.
+
+    - Under **Instance details**:
+
+      - For **Name**, enter the name for your availability set. For this example, enter **contosodcset**.
+
+      - For **Region**, select the region you want to use.
+
+      - For **Fault domains**, leave it on the default value of **2**.
+
+      - For **Update domains**, leave it at the default value of **5**.
+
+      - For **Use managed disks**, select **No (Classic)** for this example.
 
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-availability-set.png" alt-text="Screenshot showing how to create availability sets.":::
 
-1. After you've made all your choices, select **Review + Create** and if everything looks good, select **Create**.
+1. After you've made all your choices, select **Review + Create**, then **Create**.
 
 1. Repeat the previous steps to create a second availability set with the name **contososac2**.
 
@@ -214,47 +234,66 @@ To create availability sets, search for and select **Availability sets** in the 
 
 The next step is to deploy VMs that host the different roles in your infrastructure. We recommend a minimum of two machines in each availability set. So for this example, we create four VMs for the basic deployment.
 
-To create VMs, search for and select **Virtual machines** in the Azure portal.
+To create VMs:
+
+1. Search for and select **Virtual machines** in the Azure portal.
 
 1. On the **Virtual machines** page, select **+ Create**, then choose **Azure virtual machine**.
-1. In **Create a virtual machine**, enter or select this information in the **Basics** tab:
 
-    | Setting | Value |
-    | ------- | ----- |
-    | **Project details** |   |
-    | Subscription | Select your subscription. |
-    | Resource group | Select your resource group. Or select **Create new** to create one. |
-    | **Instance details** |   |
-    | Virtual machine name | Enter a name for your VM. For the first machine, enter **contosodc1**. |
-    | Region | Select your region. |
-    | Availability options | Select **Availability set**. |
-    | Availability set | Select **contosodcset**. |
-    | Security type | Select **Standard**. |
-    | Image | Select your image. Then select **Configure VM generation** and select Gen 1. For this example, you need to use a Gen 1 image. |
-    | **Administrator account** |   |
-    | Authentication type | Select **SSH public key**. |
-    | Username | Enter a user name. |
-    | Key pair name | Enter a key pair name. |
+1. In **Create a virtual machine**, go to the **Basics** tab and enter the following information:
 
-   For anything not specified, you can leave the defaults, and when ready, select **Next : Disks**.
+    - Under **Project details**:
+
+      - For **Subscription**, select the name of your subscription.
+
+      - For **Resource group**, either select an existing resource group or **Create new** to make a new one.
+
+    - Under **Instance details**:
+
+      - For **Virtual machine name**, enter a name for your VM. For the first machine in this example, enter **contosodc1**.
+
+      - For **Region**, select the region you want to use.
+
+      - For **Availability options**, select **Availability set**.
+
+      - For **Availability set**, select **contosodcset**
+
+      - For **Security type**, select **Standard**.
+
+      - For **Subscription**, select the name of your subscription.
+
+      - For **Image**, select the image you want to use, then select **Conifgure VM generation** and select **Gen 1**.
+
+    - Under **Administrator account**:
+
+      - For **Authentication type**, select **SSH public key**.
+
+      - For **Username**, enter a user name to use for the account.
+
+      - For **Key pair name**, enter a key pair name to use for the account.
+
+    - For anything not specified, you can leave the default values.
+
+1. When you're finished, select **Next: Disks**.
     :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vm-basics-tab.png" alt-text="Screenshot showing the first steps in how to create a virtual machine.":::
 
-1. On the **Disks** tab under **Advanced**, deselect **Use managed disks** and then select the **contososac1** storage account that you created previously. When ready, select **Next : Networking**.
+1. On the **Disks** tab under **Advanced**, deselect the **Use managed disks** checkbox, then select the **contososac1** storage account that you created in the previous section. When you're finished, select **Next: Networking**.
     :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vm-disks-tab.png" alt-text="Screenshot showing the Disks tab for how to create a virtual machine.":::
-1. In the **Networking** tab, enter or select this information:
 
-    | Setting | Value |
-    | ------- | ----- |
-    | Virtual network | Select your virtual network that contains the subnets you created previously. |
-    | Subnet | For this first VM, select your **INT** subnet. |
-    | NIC network security group | Select **None**. |
+1. In the **Networking** tab, enter the following information:
+   
+   - For **virtual network**, select the name of the virtual network that contains the subnets you created in the previous section.
+   
+   - For **Subnet**, select your **INT** subnet.
+   
+   - For **NIC network security group**, select **None**.
 
-   For anything not specified, you can leave the defaults.
+   - For anything not specified, you can leave the defaults.
     :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vm-networking-tab.png" alt-text="Screenshot showing the Networking tab for how to create a virtual machine.":::
 
-After you've made all your choices, select **Review + Create** and if everything looks good, select **Create**.
+1. After you've made all your choices, select **Review + Create**, then select **Create**.
 
-Repeat these steps using the information in this table to create the three remaining VMs:
+Repeat these steps using the information in this table to create the three remaining VMs:<!--Again, this needs reformatting.-->
 
 | Virtual machine name | Subnet | Availability options | Availability set | Storage account |
 |:---:|:---:|:---:|:---:|:---:|
