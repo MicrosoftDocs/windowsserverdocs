@@ -223,18 +223,20 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
     `Set-ADServiceAccount [-Identity] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>`
 
+The following example adds a member to a server farm using the parameters in the table.
+
 |Parameter|String|Example|
 |-------|-----|------|
 |Name|Name the account|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|Host1, Host2, Host3|
 
-**Example**
-
-For example, to add member hosts type the following commands, and then press ENTER.
+The following example gets the current members of the farm `ITFarm1`.
 
 ```PowerShell
 Get-ADServiceAccount [-Identity] ITFarm1 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
+
+The following example adds member hosts to an existing server farm `ITFarm1`.
 
 ```PowerShell
 Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
@@ -276,24 +278,26 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 1. At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    `Get-ADServiceAccount [-Identity] <string> -Properties PrincipalsAllowedToRetrieveManagedPassword`
+   `Get-ADServiceAccount [-Identity] <string> -Properties PrincipalsAllowedToRetrieveManagedPassword`
 
 1. At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    `Set-ADServiceAccount [-Identity] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>`
+   `Set-ADServiceAccount [-Identity] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>`
+
+The following example removes a member to a server farm using the parameters in the table.
 
 |Parameter|String|Example|
 |-------|-----|------|
 |Name|Name the account|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|Host1,  Host3|
 
-**Example**
-
-For example, to remove member hosts type the following commands, and then press ENTER.
+The following example gets the current members of the farm `ITFarm1`.
 
 ```PowerShell
 Get-ADServiceAccount [-Identity] ITFarm1 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
+
+The following example removes member hosts from an existing server farm `ITFarm1`.
 
 ```PowerShell
 Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
@@ -311,15 +315,13 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 1. At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Uninstall-ADServiceAccount <ADServiceAccount>**
+   `Uninstall-ADServiceAccount <ADServiceAccount>`
 
-    **Example**
+   The following example uninstalls an Active Directory managed service account from a computer.
 
-    For example, to remove the cached credentials for a gMSA named ITFarm1 type the following command, and then press ENTER:
-
-    ```PowerShell
-    Uninstall-ADServiceAccount ITFarm1
-    ```
+   ```PowerShell
+   Uninstall-ADServiceAccount ITFarm1
+   ```
 
 For more information about the Uninstall-ADServiceAccount cmdlet, at the Active Directory module for Windows PowerShell command prompt, type **Get-Help Uninstall-ADServiceAccount**, and then press ENTER, or see the information on the TechNet web at [Uninstall-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617202(v=technet.10)).
 
