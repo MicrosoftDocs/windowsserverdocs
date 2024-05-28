@@ -28,6 +28,8 @@ The following baseline audit policy settings are recommended for normal security
 
 This section contains tables that list the audit setting recommendations that apply to the following operating systems:
 
+- Windows Server 2022
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012
 - Windows Server 2012 R2
