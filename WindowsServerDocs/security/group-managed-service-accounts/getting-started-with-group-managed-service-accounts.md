@@ -109,7 +109,7 @@ When the service administrator deploys a new server farm, they need to determine
 You can create a gMSA only if the forest schema is Windows Server 2012 or later. You must also deploy the KDS Root Key for Active Directory, and have at least one Windows Server 2012 or later domain controller in the domain where you want to create a gMSA.
 
 > [!IMPORTANT]
-> gMSA account names must be unique within a forest level and not just a domain. Attempting to create a gMSA account with a duplicate nam ewill fail, even in different domains.
+> gMSA account names must be unique within a forest level and not just a domain. Attempting to create a gMSA account with a duplicate name will fail, even in different domains.
 
 Membership in **Domain Admins** or the  ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
 
