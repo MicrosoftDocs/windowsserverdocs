@@ -1,11 +1,11 @@
 ---
-title: SMB over QUIC
-description: Describes the SMB over QUIC feature in Windows Server 2022 Datacenter Azure Edition, Windows 11  
+title: SMB over QUIC in Windows
+description: Describes the SMB over QUIC feature in Windows Server and Windows client.
 ms.topic: article
 author: NedPyle
 ms.author: wscontent
 ms.contributor: inhenkel
-ms.date: 04/19/2024
+ms.date: 05/28/2024
 ---
 
 # SMB over QUIC
@@ -28,9 +28,19 @@ A file server administrator must opt in to enabling SMB over QUIC. It isn't on b
 
 To use SMB over QUIC, you need the following things:
 
-- A file server running Windows Server 2022 Datacenter: Azure Edition ([Microsoft Server Operating Systems](https://aka.ms/ws2022ae-ga)) or later
+- An SMB server running on one of the following operating systems.
+
+  - Windows Server 2022 Datacenter: Azure Edition ([Microsoft Server Operating Systems](https://aka.ms/ws2022ae-ga)) or later
+
+  - Any edition of Windows Server 2025 (preview) or later
+
+  > [!IMPORTANT]
+  > SMB over QUIC for Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
 - A Windows 11 device ([Windows for business](https://www.microsoft.com/windows/business))
+
 - Windows Admin Center (WAC) ([Homepage](https://aka.ms/windowsadmincenter))
+
 - A Public Key Infrastructure (PKI) to issue certificates like Active Directory Certificate Server or access to a trusted third party certificate issuer like Verisign, Digicert, Let's Encrypt, etc.
 
 ## Deploy SMB over QUIC
