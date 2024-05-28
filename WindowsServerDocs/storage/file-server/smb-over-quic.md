@@ -137,6 +137,8 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 1. Sign in to your file server as an administrator.
 
+1. Open an elevated PowerShell prompt.
+
 1. List the certificates in the server's certificate store by running the following command.
 
    ```powershell
