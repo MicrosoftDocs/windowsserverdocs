@@ -47,7 +47,7 @@ The following table lists the operating system requirements for Kerberos authent
 
 A 64-bit architecture is required to run the Windows PowerShell commands used to administer group Managed Service Accounts.
 
-### Operating system requirements
+### Operating system
 
 | Element                                 | Requirement                                                            |
 |-----------------------------------------|------------------------------------------------------------------------|
@@ -60,13 +60,11 @@ A 64-bit architecture is required to run the Windows PowerShell commands used to
 | Backend service account's domain DCs    | RFC compliant KDC                                                      |
 | Windows PowerShell for Active Directory | The Active Directory Domain Services Remote Server Administrator Tools |
 
-### Active Directory Domain Service requirements
+### Active Directory Domain Services
 
 Group Managed Service Accounts have the following requirements in Active Directory Domain Services (AD DS).
 
 - The Active Directory domain and forest functional level must be Windows Server 2012 or later. To learn more about updating the schema, see [Raising the Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
-
-- New gMSA account provisioned.
 
 - If you're managing the service host permission to use gMSA by group, then new or existing security group.
 
@@ -110,10 +108,10 @@ When the service administrator deploys a new server farm, they need to determine
 
 You can create a gMSA only if the forest schema is Windows Server 2012 or later. You must also deploy the KDS Root Key for Active Directory, and have at least one Windows Server 2012 or later domain controller in the domain where you want to create a gMSA.
 
-Membership in **Domain Admins** or the  ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
+> [!IMPORTANT]
+> gMSA account names must be unique within a forest level and not just a domain. Attempting to create a gMSA account with a duplicate nam ewill fail, even in different domains.
 
-> [!NOTE]
-> A value for the `-Name` parameter is always required (whether you specify `-Name` or not), with `-DNSHostName`, `-RestrictToSingleComputer`, and `-RestrictToOutboundAuthentication` being secondary requirements for the three deployment scenarios.
+Membership in **Domain Admins** or the  ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
 
 To create a gMSA using PowerShell, follow these steps.
 
@@ -121,28 +119,31 @@ To create a gMSA using PowerShell, follow these steps.
 
 1. At the command prompt for the Windows PowerShell, type the following commands, and then press ENTER. (The Active Directory module loads automatically.)
 
-    `New-ADServiceAccount [-Name] <string> -DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>] [-SamAccountName <string>] [-ServicePrincipalNames <string[]>]`
+   `New-ADServiceAccount [-Name] <string> -DNSHostName <string> [-KerberosEncryptionType <ADKerberosEncryptionType>] [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>] [-SamAccountName <string>] [-ServicePrincipalNames <string[]>]`
 
-    |Parameter|String|Example|
-    |-------|-----|------|
-    |Name|Name of the account|ITFarm1|
-    |DNSHostName|DNS host name of service|ITFarm1.contoso.com|
-    |KerberosEncryptionType|Any encryption types supported by the host servers|None, RC4, AES128, AES256|
-    |ManagedPasswordIntervalInDays|Password change interval in days (default is 30 days if not provided)|90|
-    |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|ITFarmHosts|
-    |SamAccountName|NetBIOS name for the service if not same as Name|ITFarm1|
-    |ServicePrincipalNames|Service Principal Names (SPNs) for the service|http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso, MSSQLSvc/ITFarm1.contoso.com:1433, MSSQLSvc/ITFarm1.contoso.com:INST01|
+   > [!NOTE]
+   > A value for the `-Name` parameter is always required (whether you specify `-Name` or not), with `-DNSHostName`, `-RestrictToSingleComputer`, and `-RestrictToOutboundAuthentication` being secondary requirements for the three deployment scenarios.
 
-    > [!IMPORTANT]
-    > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
+   |Parameter|String|Example|
+   |-------|-----|------|
+   |Name|Name of the account|ITFarm1|
+   |DNSHostName|DNS host name of service|ITFarm1.contoso.com|
+   |KerberosEncryptionType|Any encryption types supported by the host servers|None, RC4, AES128, AES256|
+   |ManagedPasswordIntervalInDays|Password change interval in days (default is 30 days if not provided)|90|
+   |PrincipalsAllowedToRetrieveManagedPassword|The computer accounts of the member hosts or the security group that the member hosts are a member of|ITFarmHosts|
+   |SamAccountName|NetBIOS name for the service if not same as Name|ITFarm1|
+   |ServicePrincipalNames|Service Principal Names (SPNs) for the service|http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso, MSSQLSvc/ITFarm1.contoso.com:1433, MSSQLSvc/ITFarm1.contoso.com:INST01|
 
-    For example, to create a new gMSA called `ITFarm1` for the group  use the following command. The gMSA allows the service to use the Kerberos encryption types RC4, AES128, and AES256. The service is allowed to use the SPNs `http/ITFarm1.contoso.com/contoso.com`, `http/ITFarm1.contoso.com/contoso`, `http/ITFarm1/contoso.com`, and `http/ITFarm1/contoso`.
+   > [!IMPORTANT]
+   > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
 
-    Enter the command on a single line, even though they might appear word-wrapped across several lines here because of formatting constraints.
+   For example, to create a new gMSA called `ITFarm1` for the group  use the following command. The gMSA allows the service to use the Kerberos encryption types RC4, AES128, and AES256. The service is allowed to use the SPNs `http/ITFarm1.contoso.com/contoso.com`, `http/ITFarm1.contoso.com/contoso`, `http/ITFarm1/contoso.com`, and `http/ITFarm1/contoso`.
 
-    ```Powershell
+   Enter the command on a single line, even though they might appear word-wrapped across several lines here because of formatting constraints.
+
+   ```Powershell
     New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
-    ```
+   ```
 
 Membership in **Domain Admins**, **Account Operators**, or ability to create `msDS-GroupManagedServiceAccount` objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Active Directory security groups](../../identity/ad-ds/manage/understand-security-groups.md).
 
