@@ -37,7 +37,7 @@ The following prerequisites must be met for your workgroup cluster to meet the c
 Workgroup clusters support several workloads. Workgroup clusters are recommended and supported for:
 
 - **Hyper-V VMs.** Supported cluster workload.
-- **SQL Server Availability Groups.** SQL Server is a supported workload. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1)
+- **SQL Server Availability Groups.** SQL Server is a supported workload. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1).
 
 Workgroup clusters aren't supported for:
 
