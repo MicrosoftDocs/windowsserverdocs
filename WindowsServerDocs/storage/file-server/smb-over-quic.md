@@ -39,9 +39,11 @@ To use SMB over QUIC, you need the following things:
 
 - A Windows 11 device ([Windows for business](https://www.microsoft.com/windows/business))
 
-- The SMB server and client must be joined to an Active Directory domain or the client must have a local user account on the SMB server. The SMB server must have access to at least one domain controller for authentication, but no domain controller requires any internet access. We recommended using SMB over QUIC with Active Directory domains, however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM.
+- The SMB server and client must be joined to an Active Directory domain or the client must have a local user account on the SMB server. The SMB server must have access to at least one domain controller for authentication, but no domain controller requires any internet access. We recommended using SMB over QUIC with Active Directory domains however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM.
 
-- Your server must be accessible to clients on it's public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
+- Your server must be accessible to clients on it's public interface by adding a firewall allow rule to allow SMB over QUIC. By default SMB over QUIC uses UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. To learn about how to change the default port, see [Configure alternative SMB ports](smb-ports.md).
+
+- The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
 
 - Windows Admin Center (WAC) ([Homepage](https://aka.ms/windowsadmincenter))
 
@@ -163,9 +165,9 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
    New-SmbServerCertificateMapping -Name <server FQDN> -ThumbPrint $serverCert.Thumbprint -Storename My 
    ```
 
-If you want to use an alternative port for SMB over QUIC, see [Configure alternative SMB ports (preview)](smb-ports.md).
-
 ---
+
+If you want to apply control to SMB over client, you can use Client Access Control. To learn more how to restrict which clients can access SMB over QUIC servers, see [Configure SMB over QUIC client access control](configure-smb-over-quic-client-access-control.md).
 
 ### Step 3: Connect to SMB shares
 
