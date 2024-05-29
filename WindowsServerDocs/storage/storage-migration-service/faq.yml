@@ -196,7 +196,7 @@ sections:
 
       - question: What are my options to give feedback, file bugs, or get support?
         answer: |
-          For technical assistance with Storage Replica, you can post at [Microsoft Q & A](https://learn.microsoft.com/en-us/answers/index.html) or contact [Microsoft Business Support](https://support.microsoft.com/contactus). For issues with this documentation, see Feedback section at the bottom of this page, and select This page.
+          For technical assistance with the Storage Migration Service, you can post at [Microsoft Q & A](https://learn.microsoft.com/en-us/answers/index.html) or contact [Microsoft Business Support](https://support.microsoft.com/contactus). For issues with this documentation, see Feedback section at the bottom of this page, and select This page.
           
 additionalContent: |
 
