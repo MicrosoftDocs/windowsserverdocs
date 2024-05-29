@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: AD Forest Recovery - Removing the global catalog"
 title: AD Forest Recovery - Remove the global catalog
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 06/21/2023

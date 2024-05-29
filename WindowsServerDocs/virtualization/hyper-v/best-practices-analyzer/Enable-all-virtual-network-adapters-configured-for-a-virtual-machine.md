@@ -1,8 +1,8 @@
 ---
 title: Enable all virtual network adapters configured for a virtual machine
 description: Learn what to do when one or more network adapters may be disabled in a virtual machine.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: fcd350b7-4240-4359-aadd-93e7ac4d314e
 ms.date: 8/16/2016

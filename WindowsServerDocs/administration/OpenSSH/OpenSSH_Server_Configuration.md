@@ -198,7 +198,6 @@ Server and the Windows client:
 * AuthorizedKeysCommandUser
 * AuthorizedPrincipalsCommand
 * AuthorizedPrincipalsCommandUser
-* Compression
 * ExposeAuthInfo
 * GSSAPICleanupCredentials
 * GSSAPIStrictAcceptorCheck

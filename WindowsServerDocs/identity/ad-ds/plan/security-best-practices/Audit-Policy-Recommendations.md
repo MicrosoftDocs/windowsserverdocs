@@ -3,7 +3,7 @@ ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 title: Audit Policy Recommendations
 description: Addresses the Windows default audit policy settings, baseline recommended audit policy settings, and the more aggressive recommendations from Microsoft, for workstation and server products.
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 08/03/2023
 ms.topic: article
@@ -28,6 +28,8 @@ The following baseline audit policy settings are recommended for normal security
 
 This section contains tables that list the audit setting recommendations that apply to the following operating systems:
 
+- Windows Server 2022
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012
 - Windows Server 2012 R2

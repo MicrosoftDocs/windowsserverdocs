@@ -3,7 +3,7 @@ metadata:
   title: Windows LAPS frequently asked questions
   description: Get answers to frequently asked questions about Windows LAPS.
   author: jay98014
-  ms.author: jsimmons
+  ms.author: justinha
   ms.topic: faq
   ms.date: 04/20/2023
 title: Windows LAPS frequently asked questions
@@ -112,7 +112,7 @@ sections:
 
       - question: Which specific Azure clouds support Windows LAPS?
         answer: |
-          See [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps) and 
+          See [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps) and 
           [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information
           on which specific clouds are supported.
 

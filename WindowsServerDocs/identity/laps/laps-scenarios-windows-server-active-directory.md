@@ -2,7 +2,7 @@
 title: Get started with Windows LAPS and Windows Server Active Directory
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: conceptual
 ---
@@ -157,7 +157,7 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 ## See also
 
 - [Introducing Windows Local Administrator Password Solution with Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
-- [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps)
+- [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps)
 - [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups)
 - [Microsoft Intune](/mem/intune)
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)

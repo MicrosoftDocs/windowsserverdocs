@@ -1,0 +1,22 @@
+### YamlMime:ZonePivotGroups
+groups:
+- id: windows-os
+  title: Products
+  prompt: "Choose your product:"
+  pivots:
+  - id: windows-server
+    title: Windows Server
+  - id: azure-stack-hci
+    title: Azure Stack HCI
+- id: windows-os-version
+  title: Version
+  prompt: "Choose your product version:"
+  pivots:
+  - id: windows-server-2025
+    title: Windows Server 2025 (preview)
+  - id: windows-server-2022
+    title: Windows Server 2022
+  - id: windows-server-2019
+    title: Windows Server 2019
+  - id: windows-server-2016
+    title: Windows Server 2016

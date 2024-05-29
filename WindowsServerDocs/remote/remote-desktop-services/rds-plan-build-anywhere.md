@@ -3,8 +3,8 @@ title: Remote Desktop Services - Build anywhere
 description: Planning information to help you determine where to host your RDS deployment.
 ms.topic: article
 ms.assetid: c803a383-0eea-4e11-bca5-d204ab758048
-author: lizap
-ms.author: elizapo
+author: robinharwood
+ms.author: wscontent
 ms.date: 09/07/2016
 manager: dongill
 
