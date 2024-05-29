@@ -53,7 +53,8 @@ The following architectural diagram shows the setup that was used to validate an
 
 1. In the **AD FS Configuration wizard**, join the new Windows Server 2016 server to the existing AD FS farm.
 
-1. On the **Welcome** screen, select **Next**.
+1. On the **Welcome** screen, select **Add a federation server to a federation server farm**, then select **Next**.
+
 
 1. On the **Connect to Active Directory Domain Services** screen, **specify an administrator account** with permissions to perform the federation services configuration, and select **Next**.
 
