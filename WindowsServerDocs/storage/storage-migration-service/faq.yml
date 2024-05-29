@@ -196,21 +196,7 @@ sections:
 
       - question: What are my options to give feedback, file bugs, or get support?
         answer: |
-          To give feedback on the Storage Migration Service:
-          
-          - Use the Feedback Hub tool included in Windows 10, select **Suggest a Feature**, and specifying the category of **Windows Server** and subcategory of **Storage Migration**
-          - Email smsfeed@microsoft.com
-          
-          To file bugs:
-          
-          - Use the Feedback Hub tool included in Windows 10, select **Report a Problem**, and specifying the category of **Windows Server** and subcategory of **Storage Migration**
-          - Open a support case via [Microsoft Support](https://support.microsoft.com)
-          
-          To get support:
-          
-           - Post a question on the [Windows Server Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server)
-           - Post on the [Windows Server 2019 forum](/answers/topics/windows-server-2019.html)
-           - Open a support case via [Microsoft Support](https://support.microsoft.com)
+          For technical assistance with Storage Replica, you can post at [Microsoft Q & A](https://learn.microsoft.com/en-us/answers/index.html) or contact [Microsoft Business Support](https://support.microsoft.com/contactus). For issues with this documentation, see Feedback section at the bottom of this page, and select This page.
           
 additionalContent: |
 
