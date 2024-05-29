@@ -41,7 +41,7 @@ To use SMB over QUIC, you need the following things:
 
 - The SMB server and client must be joined to an Active Directory domain or the client must have a local user account on the SMB server. The SMB server must have access to at least one domain controller for authentication, but no domain controller requires any internet access. We recommended using SMB over QUIC with Active Directory domains however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM.
 
-- Your server must be accessible to clients on it's public interface by adding a firewall allow rule to allow SMB over QUIC. By default SMB over QUIC uses UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. To learn about how to change the default port, see [Configure alternative SMB ports](smb-ports.md).
+- Your server must be accessible to clients on its public interface by adding a firewall allow rule to allow SMB over QUIC. By default SMB over QUIC uses UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. To learn about how to change the default port, see [Configure alternative SMB ports](smb-ports.md).
 
 - The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
 
