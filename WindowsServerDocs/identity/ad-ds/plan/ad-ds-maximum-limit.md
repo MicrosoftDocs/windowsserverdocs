@@ -88,10 +88,10 @@ This limit is due to the size of the global relative identifier (RID) pool that 
 
 Windows Server begins to prepare an artificial limit for RID issuance when the number of available RIDs reaches 90 percent of the available global RID space. When the number of available RIDs reaches comes within one percent of that limit, domain controllers that request RID pools will receive the Directory-Services-SAM warning event 16656 in their System event log.
 
-A partial workaround to the RID limit is creating an extra domain for holding accounts, then migrating accounts to that new domain. However, you must create any required trust relationships for the new domain before you reach the limit. Creating a trust relationship requires a security principle, also known as a trust user account. For more information about the RID limit, see [KB 316201](https://go.microsoft.com/fwlink/?LinkID=115211) and [KB 305475](https://go.microsoft.com/fwlink/?LinkId=115212).
+A partial workaround to the RID limit is creating an extra domain for holding accounts, then migrating accounts to that new domain. However, you must create any required trust relationships for the new domain before you reach the limit. Creating a trust relationship requires a security principle, also known as a trust user account.
 
 >[!NOTE]
-> The Active Directory database doesn't set limits on the number of objects in a container, but does set limits when you work with many thousands of objects. Microsoft configured these limits to provide a certain level of application or service availablility. You can adjust these limits by either reconfiguring Filter Options settings on the view menu or changing the Lightweight Directory Access Protocol (LDAP) policies. For more information, see [KB 315071](https://go.microsoft.com/fwlink/?LinkID=135481).
+> The Active Directory database doesn't set limits on the number of objects in a container, but does set limits when you work with many thousands of objects. Microsoft configured these limits to provide a certain level of application or service availability. You can adjust these limits by either reconfiguring Filter Options settings on the view menu or changing the Lightweight Directory Access Protocol (LDAP) policies. For more information, see [KB 315071](https://go.microsoft.com/fwlink/?LinkID=135481).
 
 ## Maximum Number of entries in Discretionary and Security Access Control Lists
 
@@ -188,7 +188,7 @@ So far, testing in this area has yet to reveal any new recommended limits to the
 >[!IMPORTANT]
 >Increasing the forest functional level to Windows Server 2003 interim or higher does not modify the way that existing group members are stored or replicated. To do that, you must remove the members that were added to the group before the forest functional level was increased to Windows Server 2003 and then add them back again to the appropriate groups. Any group members that you either add or remove after the forest functional level is increased will be LVR enabled, even if the group contains other members that are not LVR enabled. For more information about linked attributes, see [Linked Attributes](/windows/win32/ad/linked-attributes). For more information about the replication process, see [How the Active Directory Replication Model Works](/previous-versions/windows/it-pro/windows-server-2003/cc772726(v=ws.10)).
 
-## Recommended Maximum Number of Domains in a Forest
+## Recommended maximum dumber of domains in a forest
 
 <!--Again, all this information is about Windows Server 2000/2003. Is there more recent information I need to add here or can I just use the 1,2000 limit as-is?-->
 
