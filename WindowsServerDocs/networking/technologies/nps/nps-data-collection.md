@@ -6,7 +6,7 @@ ms.author: joflore
 ms.reviewer: richagi
 ms.custom: it-pro
 ms.topic: article
-ms.date: 05/01/2018
+ms.date: 05/29/2024
 
 ---
 # Network Policy Server user data collection
