@@ -218,6 +218,34 @@ You can now use storage quality of service (QoS) to centrally monitor end-to-end
 
 For more info, see [Storage Quality of Service](../storage/storage-qos/storage-qos-overview.md).
 
+### Data deduplication
+
+Windows Server 2016 includes the following new features for data deduplication.
+
+### Support for large volumes
+
+Starting with Windows Server 2016, the Data Deduplication Job pipeline can now run multiple threads in parallel using many I/O queues for each volume. This change increases performance to levels previously only possible by dividing data into several smaller volumes. These optimizations apply to [all Data Deduplication Jobs](understand.md#job-info), not just the Optimization Job. The following diagram demonstrates how the pipeline changed between versions of Windows Server.
+
+![A visualization comparing the Data Deduplication Job Pipeline in Windows Server 2012 R2 to Windows Server 2016](media/server-2016-dedup-job-pipeline.png)
+
+Because of these performance improvements, on Windows Server 2016, Data Deduplication has high performance on volumes up to 64 TB.
+
+### Large file support
+
+As of Windows Server 2016, Data Deduplication uses stream map structures and other improvements to increase optimization throughput and access performance. The Deduplication Processing Pipeline can also resume optimization after failover scenarios instead of starting over from the beginning. This change improves the performance of files up to 1 TB, allowing administrators to apply deduplication savings to a larger range of workloads, such as large files associated with backup workloads.
+
+### Support for Nano Server
+
+Nano Server is a headless deployment option in Windows Server 2016 that requires a far smaller system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Nano Server also fully supports Data Deduplication. For more information about Nano Server, see [Container Base Images](/virtualization/windowscontainers/manage-containers/container-base-images).
+
+### Simplified configuration for Virtualized Backup Applications
+
+Starting with Windows Server 2016, Data Deduplication for Virtualized Backup Applications scenarios are vastly simplified. This scenario is now a predefined Usage Type option. You no longer need to manually tune the deduplication settings, just enable Deduplication for a volume just like you would General Purpose File Server and Virtual Desktop Infrastructure (VDI).
+
+### Cluster OS Rolling Upgrade support
+
+Windows Server Failover Clusters running Data Deduplication can have a mix of nodes that run the Windows Server 2012 R2 and Windows Server 2016 versions of Data Deduplication. This mixed-mode cluster feature gives full data access to all deduplicated volumes during cluster rolling upgrades. You can now gradually roll out later versions of Data Deduplications on clusters running earlier versions of Windows Server without any downtime.
+
 ## [Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
 
 Windows Server 2016 includes many new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
