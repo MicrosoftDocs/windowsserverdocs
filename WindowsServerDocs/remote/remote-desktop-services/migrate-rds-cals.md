@@ -23,7 +23,7 @@ Before migration ensure that the destination license server is activated. Follow
 
 ## Establish RDS CAL migration method
 
-1. On the destination license server, open **Remote Desktop Licensing Manager**. (Alternatively, the licensing manager can be launched with the following steps: Click **Start > Administrative Tools**. Enter the **Remote Desktop Services** directory, and launch **Remote Desktop Licensing Manager**.)
+1. On the destination license server, open **Remote Desktop Licensing Manager**. (Alternatively, the licensing manager can be launched with the following steps: Select **Start > Administrative Tools**. Enter the **Remote Desktop Services** directory, and launch **Remote Desktop Licensing Manager**.)
 2. Verify the connection method for the Remote Desktop license server: right-click the license server to which you want to migrate the RDS CALs, and then click **Properties**. On the **Connection Method** tab, verify the **Connection method** - you can change it in the dropdown menu. Click **OK**.
 3. Right-click the license server to which you want to migrate the RDS CALs, and then click **Manage Licenses**.
 4. Follow the steps in the wizard to the **Action Selection** page. Click **Migrate RDS CALs from another license server to this license server**.
@@ -35,7 +35,7 @@ Before migration ensure that the destination license server is activated. Follow
 
        On the Source License Server Information page, enter the name or IP address of the source license server.
 
-       If the source license server is available on the network, click **Next**. The wizard contacts the source license server and you'll have an option to **Obtain Client License Key Pack**.
+       If the source license server is available on the network, select **Next**. The wizard contacts the source license server and has an option to **Obtain Client License Key Pack**.
 
        If the source license server isn't available on the network, select **The specified source license server isn't available on the network**. Specify the operating system that the source license server is running, and then provide the license server ID for the source license server. After you click **Next**, you're reminded that you must remove the RDS CALs manually from the source license server after the wizard has completed. After you confirm that you understand this requirement, the **Obtain Client License Key Pack** page appears.
 

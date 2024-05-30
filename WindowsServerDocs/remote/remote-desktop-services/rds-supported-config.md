@@ -21,11 +21,11 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 ## Best practices
 
-- Use the most recent version of Windows Server for your Remote Desktop infrastructure (the Web Access, Gateway, Connection Broker, and license server). Windows Server is backward-compatible with these components, which means a Windows Server 2022 RD Session Host can connect to a 2025 RD Connection Broker, but not the other way around.
+- Use the most recent version of Windows Server for your Remote Desktop infrastructure (the Web Access, Gateway, Connection Broker, and license server). Windows Server is backward-compatible with these components. Meaning a Windows Server 2022 RD Session Host can connect to a 2025 RD Connection Broker, but not the other way around.
 
-- For RD Session Hosts - all Session Hosts in a collection need to be at the same level, but you can have multiple collections. You can have a collection with Windows Server 2019 Session Hosts and one with Windows Server 2025 Session Hosts.
+- For RD Session Hosts - all Session Hosts in a collection need to be at the same level, but you can have multiple collections. For example, you can have a collection with Windows Server 2019 Session Hosts and one with Windows Server 2025 Session Hosts.
 
-- If you upgrade your RD Session Host to Windows Server 2025, also upgrade the license server. Remember that a 2025 license server can only process client access licenses (CALs) from previous versions of Windows Server.
+- An RDS license server can only process client access licenses (CALs) from the same or previous versions of Windows Server. Meaning, if you upgrade your RD Session Host to Windows Server 2025, you also need to upgrade the license server.
 
 - Follow the upgrade order recommended in [Upgrading your Remote Desktop Services environment](upgrade-to-rds.md#flow-for-deployment-upgrades).
 

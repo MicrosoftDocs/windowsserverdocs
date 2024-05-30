@@ -7,7 +7,7 @@ ms.author: wscontent
 ms.date: 05/14/2024
 manager: femila
 ---
-# Reactivate or deactive the Remote Desktop Services license server
+# Reactivate or deactivate a Remote Desktop Services license server
 
 ## Reactive a license server
 

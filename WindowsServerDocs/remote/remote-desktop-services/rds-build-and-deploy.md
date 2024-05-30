@@ -18,10 +18,10 @@ See [Remote Desktop Services architecture](desktop-hosting-logical-architecture.
 
 Have an existing Remote Desktop deployment built on a previous version of Windows Server? Check out your options for moving to the latest version of Windows Server, where you can take advantage of new and better functionality around performance and scale:
 
-- [Migrate your RDS deployment to Windows Server 2025](migrate-rds-role-services.md)
-- [Upgrade your RDS deployment to Windows Server 2025](./upgrade-to-rds.md)
+- [Migrate your RDS deployment](migrate-rds-role-services.md)
+- [Upgrade your RDS deployment](./upgrade-to-rds.md)
 
-Want to create a new Remote Desktop deployment? Use the following information to deploy Remote Desktop in Windows Server 2025:
+Want to create a new Remote Desktop deployment? Use the following information to deploy Remote Desktop in Windows Server:
 
 - [Deploy the Remote Desktop Services infrastructure](rds-deploy-infrastructure.md)
 - [Create a session collection to hold the apps and resources you want to share](rds-create-collection.md)

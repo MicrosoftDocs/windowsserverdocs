@@ -10,7 +10,7 @@ manager: scottman
 ---
 # Migrate your Remote Desktop Services deployment to a newer Windows Server version
 
-Migration for a Remote Desktop Services deployment is supported from source servers running a Windows Server version to destination servers running the same Windows Server version (for example: from Windows Server 2025 to Windows Server 2025). In other words, there is no direct in-place migration from RDS in an earlier version of Windows Server to a later Windows Server version. Instead, for most of the RDS components, you first upgrade to a later Windows Server version and then migrate data and licenses. The only components with a direct migration are RD Web, RD Gateway, and the licensing server.
+Migration of a Remote Desktop Services deployment is supported from source servers running a Windows Server version to destination servers running the same Windows Server version. For example, from Windows Server 2025 to Windows Server 2025. Meaning, there is no direct in-place migration from RDS in an earlier version of Windows Server to a later Windows Server version. Instead, you need to upgrade most RDS components first to a later Windows Server version, then migrate data and licenses. The only components that support a direct migration are RD Web, RD Gateway, and the licensing server.
 
 For more information on the upgrade process and requirements, see [upgrading your Remote Desktop Services deployments](./upgrade-to-rds.md).
 

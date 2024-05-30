@@ -20,8 +20,10 @@ Windows and Windows Server have new layers of protection built into the operatin
 - Enhance the security of virtual machines, applications, and data.
 
 > [!NOTE]
-> Features like Credential Guard may have performance implication on user density. Ensure to test your scenarios. Learn more about other considerations for [credential guard configuration](/windows/security/identity-protection/credential-guard/considerations-known-issues). 
-> Make sure to review the [Remote Desktop Services supported configuration information](rds-supported-config.md).
+>
+> - Features like Credential Guard may have performance implication on user density. Ensure to test your scenarios. Learn more about other considerations for [credential guard configuration](/windows/security/identity-protection/credential-guard/considerations-known-issues).
+>
+> - Make sure to review the [Remote Desktop Services supported configuration information](rds-supported-config.md).
 
 The following table outlines which of these new features are supported in a VDI deployment using RDS.
 
