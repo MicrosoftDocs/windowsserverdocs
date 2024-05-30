@@ -40,10 +40,34 @@ For detailed information and other installation options, see [Install or uninsta
 
 1. In the **RD Licensing Manager**, select the server, and then select **Action** > **Activate Server**.
 
-1. Confirm your preferred Connection method. Select **Next**.
+1. Confirm your preferred Connection method for license server activation and select **Next**.. The three options available are:
+    1. **Automatic connection (recommended)**: This recommended method communicates via internet directly to the Microsoft Clearinghouse outbound over TCP port 443.
 
-1. Enter your required **Company information** page, then enter your optional company information. Select **Next** until you complete the Activate Server Wizard.
+    1. **Web Browser**: This method requires the administrator to connect to the Microsoft Clearinghouse web site. Use this method if the license server doesn't have internet access, but you have internet access through another computer.
+
+    1. **Telephone**: This method allows the administrator to complete the migration process over the phone with a Microsoft Clearinghouse operator. Use this method if you don't have internet access.
+    
+### Activate with automatic connection
+
+1. Enter your required **Company information** including First name, Last name, Company, and Country or Region. Select **Next**.
+
+1. Then enter your optional company information. Select **Next** until you complete the Activate Server Wizard.
 
 1. Accept the defaults for the remaining pages until the final page. Clear **Start Install Licenses Wizard now**, and then select **Finish**.
 
-1. Select **Action** > **Review Configuration** > **Add to Group** > **OK** and enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you're using Microsoft Entra Domain Services, but you can ignore any warnings or errors.
+1. Select **Action** > **Install Licenses**. Enter your license code ready to enter when prompted.
+
+### Activate using a web browser
+
+1. On the **License Server Activation** page, copy the URL for the Remote Desktop Licensing Web Site. Then open a web browser and navigate to the site.
+
+1. Complete the steps on the Remote Desktop Licensing Web Site.
+
+1. Return to the **License Server Activation** page and enter in the **license server ID**. Selext **Next**.
+
+### Activate by telephone
+
+1. Select your Country or Region. Then select **Next**.
+
+1. On the **License Server Activation** page, call Microsoft at the number displayed. The representative will provide you with a license server ID to enter. Select **Next**.
+
