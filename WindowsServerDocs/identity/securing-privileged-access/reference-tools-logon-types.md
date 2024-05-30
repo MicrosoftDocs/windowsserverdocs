@@ -3,7 +3,7 @@ title: Administrative tools and logon types reference - Windows Server
 description: Identify the risk of credential exposure associated with different administrative tools
 
 ms.topic: reference
-ms.date: 12/15/2020
+ms.date: 05/30/2024
 
 ms.author: joflore
 author: MicrosoftGuyJFlo

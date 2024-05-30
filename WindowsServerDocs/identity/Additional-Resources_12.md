@@ -4,7 +4,7 @@ ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
 title: Additional Resources
 ms.author: joflore
 author: MicrosoftGuyJFlo
-ms.date: 08/07/2018
+ms.date: 05/30/2024
 ms.topic: reference
 ---
 # Additional Resources
