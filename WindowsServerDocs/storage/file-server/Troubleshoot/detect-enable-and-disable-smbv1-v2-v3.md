@@ -249,7 +249,7 @@ Here is how to detect status, enable, and disable SMB protocols on the SMB Clien
 - Detect
 
   ```cmd
-  sc.exe qc lanmanworkstation
+  sc.exe qc mrxsmb10
   ```
 
 - Disable:
@@ -273,7 +273,7 @@ For more information, see [Server storage at Microsoft](https://techcommunity.mi
 - Detect:
 
   ```cmd
-  sc.exe qc lanmanworkstation
+  sc.exe qc mrxsmb20
   ```
 
 - Disable:
