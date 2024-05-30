@@ -20,15 +20,24 @@ manager: scottman
 In order to keep the down-time to a minimum, it's best to follow these steps while upgrading a RDS session-based collection:
 
 1. Identify the servers to be upgraded, say, half the servers in the collection.
-2. Prevent new connections to these servers by setting **Allow New Connections** to false.
-3. Log off all sessions on these servers.
-4. Remove these servers from the collection.
-5. Upgrade the servers to the latest Windows Server version.
-6. Set **Allow New Connections** to "false" on the remaining servers in the collection.
-7. Add the upgraded servers back to their corresponding collections.
-8. Remove the remaining set of servers to be upgraded from the collection.
-9. Set **Allow New Connections** to "true" on the upgraded servers in the collection.
-10. Now upgrade the remaining servers in the deployment by following steps 3 through 9.
+
+1. Prevent new connections to these servers by setting **Allow New Connections** to false.
+
+1. Log off all sessions on these servers.
+
+1. Remove these servers from the collection.
+
+1. Upgrade the servers to the latest Windows Server version.
+
+1. Set **Allow New Connections** to "false" on the remaining servers in the collection.
+
+1. Add the upgraded servers back to their corresponding collections.
+
+1. Remove the remaining set of servers to be upgraded from the collection.
+
+1. Set **Allow New Connections** to "true" on the upgraded servers in the collection.
+
+1. Upgrade the remaining servers in the deployment by following steps 3 through 9.
 
 ## Upgrading a standalone RD Session Host server
 

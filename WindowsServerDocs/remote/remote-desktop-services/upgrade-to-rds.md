@@ -27,21 +27,21 @@ In order to keep the downtime to a minimum, use the following guide:
    > [!NOTE]
    > It's mandatory to upgrade all RD Connection Broker servers. Windows Server RD Connection Broker servers in a mixed deployment are not supported. Once the RD Connection Broker server(s) are running a new Windows Server version, the deployment remains functional, even if the rest of the servers in the deployment are still running the previous version.
 
-2. **RD License servers** should be upgraded before you upgrade your RD Session Host servers.
+1. **RD License servers** should be upgraded before you upgrade your RD Session Host servers.
    > [!NOTE]
    > RD license servers from an older version of Windows Server work with newer versions, but they can only process client access licenses (CALs) from the older Windows Server version. They can't use the newer Windows Server CALs. For more information about RD license servers, see [RDS CAL version compatibility](rds-client-access-license.md#rds-cal-version-compatibility).
 
-3. **RD Session Host servers** can be upgraded next. Avoid downtime during upgrade by splitting the servers to be upgraded into steps as detailed. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading your Remote Desktop Session Host to the latest Windows Server version](upgrade-to-rdsh.md).
+1. **RD Session Host servers** can be upgraded next. Avoid downtime during upgrade by splitting the servers to be upgraded into steps as detailed. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading your Remote Desktop Session Host to the latest Windows Server version](upgrade-to-rdsh.md).
 
-4. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading your Remote Desktop Virtualization Host to the latest Windows Server version](upgrade-to-rdvh.md).
+1. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading your Remote Desktop Virtualization Host to the latest Windows Server version](upgrade-to-rdvh.md).
 
-5. **RD Web Access servers** can be upgraded anytime.
+1. **RD Web Access servers** can be upgraded anytime.
    > [!NOTE]
    >
    > - Upgrading RD Web might reset Internet Information Services (IIS) properties, such as any configuration files. To not lose your changes, make notes or copies of customizations done to the RD Web site in IIS.
    > - RD Web Access servers from an older version of Windows Server work with newer versions.
 
-6. **RD Gateway servers** can be upgraded anytime.
+1. **RD Gateway servers** can be upgraded anytime.
    > [!NOTE]
    >
    > - Windows Server 2016 and later doesn't include Network Access Protection (NAP) policies&mdash;they have to be removed. The easiest way to remove the correct policies is by running the upgrade wizard. If there are any NAP policies you must delete, the upgrade blocks and creates a text file on the desktop that includes the specific policies. To manage NAP policies, open the Network Policy Server tool. After deleting them, select **Refresh** in the Setup tool to continue with the upgrade process.

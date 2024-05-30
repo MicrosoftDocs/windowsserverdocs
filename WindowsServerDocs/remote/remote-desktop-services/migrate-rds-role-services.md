@@ -33,9 +33,9 @@ This is the first and most important step for migrating: migrating your RD Conne
 
 1. If you have more than one RD Connection Broker server in the high availability setup, remove all the RD Connection Broker servers except the one that is currently active.
 
-2. [Upgrade](./upgrade-to-rds.md) the remaining RD Connection Broker server in the deployment to a later Windows Server version.
+1. [Upgrade](./upgrade-to-rds.md) the remaining RD Connection Broker server in the deployment to a later Windows Server version.
 
-3. Add the new Windows Server version RD Connection Broker servers into the high availability deployment.
+1. Add the new Windows Server version RD Connection Broker servers into the high availability deployment.
 
 > [!NOTE]
 > - A mixed high availability configuration with different versions of Windows Server is not supported for RD Connection Broker servers.
@@ -50,9 +50,9 @@ Follow these steps to migrate a session collection in an earlier version of Wind
 
 1. [Upgrade the session collection](./upgrade-to-rdsh.md) to a later version of Windows Server.
 
-2. Add the new RD Session Host server running the new Windows Server version to the session collection.
+1. Add the new RD Session Host server running the new Windows Server version to the session collection.
 
-3. Sign out of all sessions in the RD Session Host servers, and remove the servers that require migration from the session collection.
+1. Sign out of all sessions in the RD Session Host servers, and remove the servers that require migration from the session collection.
 
    > [!NOTE]
    > If the UVHD template (UVHD-template.vhdx) is enabled in the session collection and the file server has been migrated to a new server, update the User Profile Disks: Location collection property with the new path. The User Profile Disks must be available at the same relative path in the new location as they were on the source server.
@@ -68,11 +68,11 @@ Follow these steps to migrate a virtual desktop collection from a source server 
 
 1. [Upgrade the virtual desktop collection](./upgrade-to-rdvh.md) from the server running the earlier version of Windows Server to a later version of Windows Server.
 
-2. Add the new Windows Server version RD Virtualization Host servers to the virtual desktop collection.
+1. Add the new Windows Server version RD Virtualization Host servers to the virtual desktop collection.
 
-3. Migrate all virtual machines in the current virtual desktop collection that are running on RD Virtualization Host servers to the new servers.
+1. Migrate all virtual machines in the current virtual desktop collection that are running on RD Virtualization Host servers to the new servers.
 
-4. Remove all RD Virtualization Host servers that required migration from the virtual desktop collection in the source server.
+1. Remove all RD Virtualization Host servers that required migration from the virtual desktop collection in the source server.
 
 > [!NOTE]
 > If the UVHD template (UVHD-template.vhdx) is enabled in the session collection and the file server has been migrated to a new server, update the User Profile Disks: Location collection property with the new path. The User Profile Disks must be available at the same relative path in the new location as they were on the source server.
@@ -109,11 +109,11 @@ Follow these steps to migrate an RD Licensing server from a source server runni
 
 1. [Migrate the Remote Desktop Services client access licenses (RDS CALs)](migrate-rds-cals.md) from the source server to the destination server.
 
-2. Edit the **Deployment Properties** in **Server Manager** on the Remote Desktop management server (which is typically being run on the first RD Connection Broker server) to include only the new RD Licensing servers running the new version of Windows Server.
+1. Edit the **Deployment Properties** in **Server Manager** on the Remote Desktop management server (which is typically being run on the first RD Connection Broker server) to include only the new RD Licensing servers running the new version of Windows Server.
 
-3. Deactivate the source RD Licensing server: In **Remote Desktop Licensing Manager**, right-click the appropriate server, hover over **Advanced** to select **Deactivate Server**, and then follow the steps in the wizard.
+1. Deactivate the source RD Licensing server: In **Remote Desktop Licensing Manager**, right-click the appropriate server, hover over **Advanced** to select **Deactivate Server**, and then follow the steps in the wizard.
 
-4. Remove the source RD Licensing servers from the deployment in **Server Manager** on the Remote Desktop management server.
+1. Remove the source RD Licensing servers from the deployment in **Server Manager** on the Remote Desktop management server.
 
 ## Migrate certificates
 
