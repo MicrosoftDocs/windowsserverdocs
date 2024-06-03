@@ -91,7 +91,7 @@ Windows Server begins to prepare an artificial limit for RID issuance when the n
 A partial workaround to the RID limit is creating an extra domain for holding accounts, then migrating accounts to that new domain. However, you must create any required trust relationships for the new domain before you reach the limit. Creating a trust relationship requires a security principle, also known as a trust user account.
 
 >[!NOTE]
-> The Active Directory database doesn't set limits on the number of objects in a container, but does set limits when you work with many thousands of objects. Microsoft configured these limits to provide a certain level of application or service availability. You can adjust these limits by either reconfiguring Filter Options settings on the view menu or changing the Lightweight Directory Access Protocol (LDAP) policies. For more information, see [KB 315071](https://go.microsoft.com/fwlink/?LinkID=135481).
+> The Active Directory database doesn't set limits on the number of objects in a container, but does set limits when you work with many thousands of objects. Microsoft configured these limits to provide a certain level of application or service availability. You can adjust these limits by either reconfiguring Filter Options settings on the view menu or changing the Lightweight Directory Access Protocol (LDAP) policies. For more information, see [KB 315071](/troubleshoot/windows-server/active-directory/view-set-ldap-policy-using-ntdsutil).
 
 ## Maximum Number of entries in Discretionary and Security Access Control Lists
 
@@ -99,7 +99,7 @@ This limitation applies to how many entries you can have in a discretionary acce
 
 ## Group Memberships for security principals
 
-Security principals, such as user, group, and computer accounts, can be members of a maximum of 1,015 groups. This limitation is because the access token that you create for each security principal has a size limit, which isn't affected by how you nest the groups. For more information, see [KB 328889](https://go.microsoft.com/fwlink/?LinkID=115213).
+Security principals, such as user, group, and computer accounts, can be members of a maximum of 1,015 groups. This limitation is because the access token that you create for each security principal has a size limit, which isn't affected by how you nest the groups. For more information, see [KB 328889](/troubleshoot/windows-server/windows-security/logging-on-user-account-fails).
 
 For more information about how a domain controller creates the data structure that is used for authorization decisions, see the following articles:
 
@@ -111,15 +111,15 @@ For more information about how a domain controller creates the data structure th
 
 ## FQDN length limitations
 
-Fully qualified domain names (FQDNs) in Active Directory can't exceed 64 characters in total length, including hyphens and periods. This limitation exists because the Win3 application programming interfaces (APIs) and Group Policy objects (GPOs) stored in the SYSVOL share define the MAX_PATH value as 260 characters. For more information, see [KB 245809](https://go.microsoft.com/fwlink/?LinkID=115219) and [KB 909264](https://go.microsoft.com/fwlink/?LinkID=106629).
+Fully qualified domain names (FQDNs) in Active Directory can't exceed 64 characters in total length, including hyphens and periods. This limitation exists because the Win3 application programming interfaces (APIs) and Group Policy objects (GPOs) stored in the SYSVOL share define the MAX_PATH value as 260 characters. For more information, see [KB 909264](/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou).
 
 ## Filename and path limitations
 
-The physical files that Active Directory components use, such as SYSVOL, database (NTDS.DIT), and log file paths, are limited by the MAX_PATH length of 260 characters, as defined by the Win32 APIs. When deciding where to place your SYSVOL and database files during Active Directory installation, avoid nested folder structures that make the full file path to any physical files in your Active Directory longer than 260 characters. For more information, see [KB 245809](https://go.microsoft.com/fwlink/?LinkId=115219).
+The physical files that Active Directory components use, such as SYSVOL, database (NTDS.DIT), and log file paths, are limited by the MAX_PATH length of 260 characters, as defined by the Win32 APIs. When deciding where to place your SYSVOL and database files during Active Directory installation, avoid nested folder structures that make the full file path to any physical files in your Active Directory longer than 260 characters.
 
 ## Other name length limitations
 
-The following name length limits, which are described in [KB 909264](https://go.microsoft.com/fwlink/?LinkID=106629), also apply to resource and file names in Active Directory:
+The following name length limits, which are described in [KB 909264](/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou), also apply to resource and file names in Active Directory:
 
 - NetBIOS computer and domain names can only be 15 characters long.
 
@@ -198,13 +198,13 @@ For Windows 2000 Server, the recommended maximum number of domains in a forest i
 
 We recommend that you limit the amount of domain controllers you use per domain to 1,200. This limit ensures you can reliably recover your SYSVOL in the event of a disaster.
 
-If you expect an Active Directory domain in your network to have more than 800 domain controllers, and those domain controllers host Active Directory-integrated Domain Name System (DNS) zones, we recommend you review [KB 267855](https://go.microsoft.com/fwlink/?LinkId=115222) for planning purposes.
+If you expect an Active Directory domain in your network to have more than 800 domain controllers, and those domain controllers host Active Directory-integrated Domain Name System (DNS) zones, we recommend you review [KB 267855](/troubleshoot/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones) for planning purposes.
 
 For more information about FRS limitations, see the [FRS Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc759297(v=ws.10)?redirectedfrom=MSDN).
 
 ## Recommended maximum Kerberos ticket size
 
-The maximum recommended size for a Kerberos ticket is 48,000 bytes. You can set the ticket size by configuring the MaxTokenSize REG_DWORD value in the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Lsa\Kerberos\Parameters** registry or through Group Policy, as described in [KB 938118](https://support.microsoft.com/kb/938118).
+The maximum recommended size for a Kerberos ticket is 48,000 bytes. You can set the ticket size by configuring the MaxTokenSize REG_DWORD value in the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Lsa\Kerberos\Parameters** registry or through Group Policy, as described in [KB 938118](/troubleshoot/windows-server/group-policy/group-policy-add-maxtokensize-registry-entry).
 
 >[!NOTE]
 >The maximum allowed value of MaxTokenSize is 65,535 bytes. If you're using Kerberos for IP Security (IPsec) key management, the limit is 65,536 bytes. However, because of the HTTP base64 encoding of authentication context tokens, we recommend that you don't set the maxTokenSize registry entry to a value larger than 48,000 bytes. Starting with Windows Server 2012, the default value of the MaxTokenSize registry entry is 48,000 bytes.
