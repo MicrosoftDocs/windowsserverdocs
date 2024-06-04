@@ -4,7 +4,7 @@ description: "Learn about the Active Directory Federation Services (AD FS) Rapid
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.custom: inhenkel
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
@@ -55,7 +55,7 @@ The `RngCryptoServiceProvider` Class generates the salt (binary blob) used by AE
 To get started with the AD FS Rapid Restore tool, first review the following system and tool requirements.
 
 - The tool works for AD FS in Windows Server 2016 and later.
-- The tool requires .NET framework 4.0 or later.
+- The tool requires .NET framework 4.6 or later.
 - If you use a WID, the tool must run on the primary AD FS server. Use the `Get-AdfsSyncProperties` cmdlet to check if your server is the primary server.
 - A restore must run on an AD FS server of the same version as the backup server, and use the same Active Directory account as the AD FS service account.
 
@@ -324,6 +324,14 @@ A log file is created for every backup and restore operation. The log files can 
 ## Version release history
 
 The following sections identify version details for the AD FS Rapid Restore tool.
+
+### Version 2.0.2464.1
+
+Release: December 2023
+
+**Fixed issues:**
+
+- Bug fix: Distinguish CNG & CSP keys during restore
 
 ### Version 1.0.82.3
 

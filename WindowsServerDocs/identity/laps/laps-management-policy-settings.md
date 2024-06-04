@@ -2,7 +2,7 @@
 title: Configure policy settings for Windows LAPS
 description: Learn how to configure policy settings for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: conceptual
 ---
@@ -268,6 +268,9 @@ If not specified, this setting defaults to 3.
 > The allowed post-authentication actions are intended to help limit the amount of time a Windows LAPS password can be used before it's reset. Signing out of the managed account or restarting the device are options that help ensure the time is limited. Abruptly terminating signed-in sessions or restarting the device might result in data loss.
 >
 > From a security perspective, a malicious user who acquires administrative privileges on a device using a valid Windows LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
+
+> [!IMPORTANT]
+> PostAuthenticationActions value 11 is supported in Windows Server 2025 and later.
 
 ### AutomaticAccountManagementEnabled
 

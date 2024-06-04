@@ -4,8 +4,6 @@
   - name: Get started
     href: rds-get-started.md
     items:
-    - name: What's new in RDS?
-      href: rds-whats-new.md
     - name: Supported configurations for RDS
       href: rds-supported-config.md
     - name: Supported security configurations for Windows 10 VDI
@@ -101,9 +99,9 @@
       items:
       - name: Learn how to use Multi-factor Authentication with RDS
         href: /azure/multi-factor-authentication/nps-extension-remote-desktop-gateway
-      - name: Integrate Azure AD Domain Services with your RDS deployment
+      - name: Integrate Microsoft Entra Domain Services with your RDS deployment
         href: rds-azure-adds.md
-      - name: Publish Remote Desktop with Azure AD Application Proxy
+      - name: Publish Remote Desktop with Microsoft Entra application proxy
         href: /azure/active-directory/application-proxy-publish-remote-desktop
     - name: Extend your RDS environment for high availability
       items:
@@ -136,6 +134,8 @@
     items:
     - name: Manage personal desktop session collections
       href: rds-manage-personal-collection.md
+    - name: Remote Desktop IP Virtualization
+      href: internet-protocol-virtualization.md
     - name: Recommended configuration for VDI desktops
       href: rds-vdi-recommendations.md
     - name: Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role

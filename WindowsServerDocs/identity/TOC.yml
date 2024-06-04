@@ -61,7 +61,7 @@
     - name: What's new in Active Directory Domain Services
       href: whats-new-active-directory-domain-services.md
     - name: What's new in Active Directory Domain Services Insider Preview
-      href: ad-ds/whats-new-active-directory-domain-services-insider-preview.md
+      href: ../get-started/whats-new-windows-server-insiders-preview.md
     - name: AD DS Getting started
       items:
       - name: Active Directory Administrative Center
@@ -88,6 +88,8 @@
             href: ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md
           - name: Virtualized Domain Controller Troubleshooting
             href: ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md
+          - name: Restore a Virtualized Domain Controller
+            href: ad-ds/manage/virtual-dc/restore-virtualized-domain-controller.md
           - name: Virtualized Domain Controller Technical Reference appendix
             href: ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md
           - name: Virtualized Domain Controller additional Resources
@@ -264,6 +266,8 @@
         href: ad-ds/deploy/upgrade-domain-controllers.md
       - name: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
         href: ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md
+      - name: Find the current Schema version
+        href: ad-ds\deploy\find-active-directory-schema.md
       - name: AD DS Simplified Administration
         href: ad-ds/manage/AD-DS-Simplified-Administration.md
         items:
@@ -282,6 +286,8 @@
           href: ad-ds/deploy/RODC/Install-a-Windows-Server-2012-active-directory-Read-Only-Domain-Controller--RODC---Level-200-.md
       - name: Demoting Domain Controllers
         href: ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md
+      - name: Dcpromo answer file syntax
+        href: ad-ds/deploy/dcpromo.md
         items:
         - name: AD DS metadata cleanup
           href: ad-ds/deploy/ad-ds-metadata-cleanup.md
@@ -401,6 +407,18 @@
             href: ad-ds/manage/component-updates/Command-line-process-auditing.md
         - name: Directory services component updates
           href: ad-ds/manage/component-updates/directory-Services-component-updates.md
+      - name: Group Policy management
+        items:
+        - name: Group Policy overview
+          href: ad-ds/manage/group-policy/group-policy-overview.md
+        - name: Group Policy processing
+          href: ad-ds/manage/group-policy/group-policy-processing.md
+        - name: Group Policy modeling and results
+          href: ad-ds/manage/group-policy/group-policy-modeling-results.md
+        - name: Group Policy Management Console
+          href: ad-ds/manage/group-policy/group-policy-management-console.md
+        - name: Backup and restore Group Policy in Windows
+          href: ad-ds/manage/group-policy/group-policy-backup-restore.md
       - name: Active Directory accounts
         href: ad-ds/manage/understand-default-user-accounts.md
       - name: Special identities
@@ -850,6 +868,8 @@
         href: ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md
       - name: Configuring Alternate Login ID
         href: ad-fs/operations/Configuring-Alternate-Login-ID.md
+      - name: Configure Token Signing and Decrypting certificates
+        href: ad-fs/operations/configure-TS-TD-certs-ad-fs.md
       - name: Create a Claims Provider Trust
         href: ad-fs/operations/create-a-Claims-Provider-Trust.md
       - name: Create a Non-Claims Aware Relying Party Trust
@@ -979,24 +999,32 @@
         href: ad-cs/certification-authority-role.md
       - name: Certification Authority Web Enrollment Role Service
         href: ad-cs/certificate-authority-web-enrollment.md
-      - name: PKI design considerations
-        href: ad-cs/pki-design-considerations.md
-      - name: Network Device Enrollment Service
-        href: ad-cs/network-device-enrollment-service-overview.md
       - name: Certificates and trust
         href: ad-cs/certificate-trust.md
+      - name: Certificate template concepts
+        href: ad-cs/certificate-template-concepts.md
+      - name: Network Device Enrollment Service
+        href: ad-cs/network-device-enrollment-service-overview.md
+      - name: PKI design considerations
+        href: ad-cs/pki-design-considerations.md
     - name: How-to guides
       items:
       - name: Configure Network Device Enrollment Service to use a domain user account
         href: ad-cs/create-domain-user-account-ndes-service-account.md
       - name: Configure trusted roots and disallowed certificates
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
+      - name: Distribute certificates using Group Policy
+        href: ad-cs/distribute-certificates-group-policy.md
+      - name: Export a certificate with its private key
+        href: ad-cs/export-certificate-private-key.md  
+      - name: Manage certificate templates
+        href: ad-cs/manage-certificate-templates.md  
       - name: Request certificates using Web Enrollment
         href: ad-cs/request-certificate-windows-server.md
-      - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
-        href: ad-cs/submit-pkcs-certificate-request.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
+      - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
+        href: ad-cs/submit-pkcs-certificate-request.md     
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
@@ -1023,6 +1051,8 @@
         href: laps/laps-concepts-overview.md
       - name: Account management modes
         href: laps/laps-concepts-account-management-modes.md
+      - name: Passwords and passphrases
+        href: laps/laps-concepts-passwords-passphrases.md
     - name: Windows LAPS scenarios
       items:
       - name: Windows LAPS and Microsoft Entra ID

@@ -3,8 +3,8 @@ title: Remote Desktop Services - Multi-Factor Authentication
 description: Planning information for using MFA with RDS.
 ms.topic: article
 ms.assetid: 09ea784e-5644-417a-a3d9-bdbcebc313f9
-author: lizap
-ms.author: elizapo
+author: robinharwood
+ms.author: wscontent
 ms.date: 09/25/2023
 manager: dongill
 ---
@@ -20,4 +20,4 @@ For your end-users connecting to their desktops and applications, the experience
 - Upon connecting to the RD Gateway for secure, remote access, receive a mobile application MFA challenge.
 - Correctly authenticate and get connected to their resource!
 
-For more details on the configuration process, check out [Integrate your Remote Desktop Gateway infrastructure using the Network Policy Server (NPS) extension and Azure AD](/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway).
+For more details on the configuration process, check out [Integrate your Remote Desktop Gateway infrastructure using the Network Policy Server (NPS) extension and Microsoft Entra ID](/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway).

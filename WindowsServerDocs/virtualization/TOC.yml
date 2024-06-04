@@ -67,6 +67,8 @@
         href: hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md
       - name: What is Nested Virtualization?
         href: /virtualization/hyper-v-on-windows/user-guide/nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Virtual Fibre Channel for Hyper-V
+        href: hyper-v/plan/virtual-fibre-channel-for-hyper-v.md
     - name: Deploy
       href: hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md
       items:
@@ -76,10 +78,12 @@
         href: hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
       - name: Upgrade virtual machine version
         href: hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md
+      - name: GPU Partitioning
+        href: hyper-v/gpu-partitioning.md
+      - name: Partition and assign GPUs to a virtual machine
+        href: hyper-v/partition-assign-vm-gpu.md
       - name: Deploy graphics devices using DDA
         href: hyper-v/deploy/deploying-graphics-devices-using-dda.md
-      - name: Deploy graphics devices using RemoteFX vGPU
-        href: hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md
       - name: Deploy storage devices using DDA
         href: hyper-v/deploy/deploying-storage-devices-using-dda.md
       - name: Enable Nested Virtualization

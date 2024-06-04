@@ -2,7 +2,7 @@
 description: "Learn more about: Reviewing DNS Concepts"
 ms.assetid: 133474ee-316d-4b1c-acc6-ad5434a064d5
 title: Reviewing DNS Concepts
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018

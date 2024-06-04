@@ -3,8 +3,8 @@ title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: article
 author: davannaw-msft
-ms.author: dawhite
-ms.date: 01/03/2024
+ms.author: wscontent
+ms.date: 03/19/2024
 ---
 # Windows Admin Center known issues
 
@@ -100,9 +100,9 @@ Scenarios involving using Windows Admin Center with a proxy service often don't 
 
 - Windows Events
 
-## Support for Windows Server 2012 R2, 2012, and 2008 R2
+## Windows Management Framework
 
-Windows Admin Center requires PowerShell features that aren't included in Windows Server 2012 R2, 2012, or 2008 R2. You must install Windows Management Framework (WMF) version 5.1 or later on any servers using these versions of Windows Server with Windows Admin Center.
+Windows Admin Center requires PowerShell features that might not be included in earlier versions of Windows Server. You must install the latest version of Windows Management Framework (WMF) on any servers using Windows Server with Windows Admin Center.
 
 To install WMF:
 
@@ -188,6 +188,8 @@ Registry Editor for Windows Admin Center for Windows Server hasn't implemented s
 
   - PrtScn
 
+- When using Remote Desktop to connect to a machine, keyboard language mapping may not work properly.
+
 ### Roles and Features
 
 - When you select roles or features that don't have available installation sources, the system skips them.
@@ -206,9 +208,7 @@ Registry Editor for Windows Admin Center for Windows Server hasn't implemented s
 
 ### Updates
 
-- After the system installs updates, it sometimes caches the install status and requires a browser refresh.
-
-- If you see an error message that says "Keyset does not exist" when attempting to set up Azure Update management, follow these directions on the managed node:
+After the system installs updates, it sometimes caches the install status and requires a browser refresh. If you see an error message that says "Keyset does not exist" when attempting to set up Azure Update management, follow these directions on the managed node:
 
   1. Stop the **Cryptographic Services** service.
   
@@ -262,7 +262,7 @@ You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying t
 
 To install Hyper-V on VMs running Azure Stack HCI, open an elevated PowerShell prompt and run the following command:
 
-```PowerShell
+```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
 ```
 
@@ -408,7 +408,7 @@ To resolve this issue:
 
 When you're validating Azure Stack HCI cluster deployments on VMs, you must enable nested virtualization before you enable roles or features by running the following command in PowerShell:
 
-```PowerShell
+```powershell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
 ```
 
@@ -420,7 +420,7 @@ Get-VM | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTe
 
 If you're deploying a cluster using the Azure Stack HCI OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To preinstall these features, run the following command before creating the VMs:
 
-```PowerShell
+```powershell
 Install-WindowsFeature –VHD <Path to the VHD> -Name Hyper-V, RSAT-Hyper-V-Tools, Hyper-V-PowerShell
 ```
 
@@ -516,3 +516,132 @@ To resolve the issue using Azure Update Management:
 1. Follow the instructions in [Update Management overview](/azure/automation/update-management/overview) to manually set up the Azure resources you need for Azure Update Management.
 
 1. Follow the directions in [Adding or removing a workspace](/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) to manually update the Microsoft Monitoring Agent outside of Windows Admin Center and add the new workspace for the Update Management solution you want to use.
+
+## Windows Remote Management errors
+
+You may encounter the following error messages when using Windows Remote Management.
+
+### General connection error
+
+When you encounter this error, the following error message appears:
+
+```error
+Cluster wasn't created Connecting to remote server tk5-3wp13r1131.cfdev.nttest.microsoft.com failed
+with the following error message:
+WinRM cannot complete the operation. Verify that the specified computer name is valid, that the
+computer is accessible over the network, and that a firewall exception for the WinRM service is
+enabled and allows access from this computer. By default, the WinRM firewall exception for public
+profiles limits access to remote computers within the same local subnet. For more information, see
+the about_Remote_Troubleshooting Help topic.
+```
+
+This error usually appears when you're trying to connect using WinRM. It can happen for the following reasons:
+
+- If the service couldn't resolve DNS, make sure you entered the correct server name.
+
+- If the service couldn't reach the server name at all, this is likely due to a network connection issue, such as a network disruption.
+
+- If the firewall rules aren't configured for the WinRM service, you must reconfigure them for domain and private profiles.
+
+- If the WinRM service isn't running or disabled, enable the service and make sure it keeps running.
+
+### Authentication error
+
+When you encounter this error, the following error message appears:
+
+```error
+Connecting to remote server ack failed with the following error message:
+WinRM cannot process the request. The following error with error code 0x8009030e occurred while
+using Negotiate authentication: A specified logon session does not exist. It may already have been
+terminated. \r\n This can occur if the provided credentials are not valid on the target server, or
+if the server identity could not be verified. If you trust the server identity add the server name
+to the TrustedHosts list, and then retry the request. User winrm.cmd to view or edit the
+TrustedHosts list. Note that computers in the TrustedHosts list might not be authenticated. For
+more information about how to edit the TrustedHosts list, run the following command: winrm help
+config. For more information, see the about_Remote_Troubleshooting Help topic.
+```
+
+This error usually occurs on cluster connections when WinRM can't connect because of the following reasons:
+
+- The user is trying to remotely connect to a domain-connected machine while signed in as a local user administrator account.
+
+- The user trying to sign in is in the domain but can't contact the domain even though they can reach the server. When this happens, WinRM treats the user like they aren't in the domain but are connecting to a domain account.
+
+You can try the following methods to resolve this issue:
+
+- Make sure users can always contact the domain, especially after a network operation.
+
+- You should add all computers you're connecting to into the trusted hosts (FQDNS), such as `@{TrustedHosts="VS1.contoso.com,VS2.contoso.com,my2012cluster.contoso.com"}`.
+
+- The General connection error should pass all validations.
+
+### WinRM service
+
+When you encounter this error, the following error message appears:
+
+```error
+We cannot display the changes right now:
+Connecting to remote server localhost failed with the
+following error message : The client cannot connect to the destination specified in the request.
+Verify that the service on the destination is running and is accepting requests. Consult the logs
+and documentation for the WS-Management services running on the destination, mostly commonly IIS or
+WinRM. If the destination is the WinRM service, run the following command on the destination to
+analyze and configure the WinRM service: "winrm quickconfig". For more information, see the
+about_Remote_Troubleshooting Help topic.
+```
+
+You can encounter this error for the following reasons:
+
+- The WinRM service isn't running. The service could be temporarily disabled or completely shut down. To resolve this issue, make sure the WinRM service is always running.
+
+- The WinRM listener isn't configured or is corrupted. The quickest way to solve this problem is to run WinRM quickconfig, which creates a listener. WinRM also has two built-in listeners for HTTPS and HTTP connections. The HTTPS server and client should both have the same valid certificates.
+
+### Security error
+
+When you encounter this error, the following error message appears:
+
+```error
+Connecting to remote server dc1.root.contoso.com failed with the following error message:
+WinRM cannot process the request. The following error with errorcode 0x80090322 occurred while
+using Kerberos authentication. An unknown security error occurred. At line:1 char:1 +
+Enter-PSSession dc1.root.contoso.com + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ + CategoryInfo
+:InvalidArgument:(dc1.root.contoso.com:String)[Enter-PSSession], PSRemotingTransportException +
+FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+```
+
+This error is uncommon. You usually encounter this area when an account tries to create a remote connection. In most cases, one or more default HTTP SPNs are registered to a service account, causing Kerberos authentication to fail. This issue usually happens because some software installed on the server needs one or more SPNs to function properly, such as SQL Server Reporting Services, Microsoft Dynamics, SharePoint, and so on.
+
+In some cases, one of the SPNs is registered to a service account while the other on/e isn't. In that case, the WinRM connection succeeds when trying to start a session with the server name, but fails when it tries to start a session using the FQDN.
+
+To resolve this issue, check if one or more default HTTP SPNs are registered to a service account by running the following command in PowerShell:
+
+```powershell
+setspn -q HTTP/servername.or.fqdn
+```
+
+If the service finds the SPN but the server name isn't in the highlighted field of the error message, run the following command to set up dedicated SPNs for WinRM by specifying the port number and the machine account:
+
+```powershell
+setspn -s HTTP/servername.or.fqdn:5985 servername
+```
+
+If you're connecting remotely using PowerShell, make sure to also us/e the *IncludePortInSPN* parameter, as shown in the following example command:
+
+```powershell
+Enter-PSSession -ComputerName servername.or.fqdn -SessionOption (New-PSSessionOption -IncludePortInSPN)
+```
+
+### WinRM status 500
+
+When you encounter this error, the following error message appears:
+
+```error
+Error: Connecting to remote server YAZSHCISIIH01.ad.yara.com failed with the following error message:
+The WinRM client received an HTTP server error status (500), but the remote service did not include
+any other information about the cause of the failure. For more information, see the
+about_Remote_Troubleshooting Help topic.
+```
+
+This error is very rare. When you see this error message, it usually means WinRM couldn't process the request. The reason why this error appears varies based on context.
+
+To resolve this issue, make sure remoting is enabled and that you configure the WinRM listener to accept requests. We also recommend you check the event logs for other errors, such as if WinRM can't access certain files in teh file system due to the files only having read permissions.

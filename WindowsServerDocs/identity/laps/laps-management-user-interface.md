@@ -2,7 +2,7 @@
 title: Set up Windows LAPS in the LAPS properties dialog
 description: Learn how to use the LAPS properties dialog to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: conceptual
 ---
@@ -21,7 +21,7 @@ One way to install the `AD DS Snap-Ins and Command-Line Tools` feature is from t
 dism.exe /online /enable-feature:DirectoryServices-DomainController-Tools /all
 ```
 
-The Windows LAPS-enabled Active Directory Users and Computers management snap-in is available on supported Windows Client platforms that have been patched with the Windows LAPS feature, via Remote Server Administration Tools (RSAT). You may install RSAT on client platforms by going to Settings, then Apps, then Optional Features, and then install RSAT (specifically search for and install "RSAT: Active Directory Domain Services and Lightweight Directory Services Tools").
+The Windows LAPS-enabled Active Directory Users and Computers management snap-in is available on supported Windows Client platforms that have been patched with the Windows LAPS feature, via Remote Server Administration Tools (RSAT). You may add RSAT on client platforms by going to Settings, then System (or Apps if on a version older than Windows 10 22H2), then Optional Features, and then add RSAT (specifically search for and add "RSAT: Active Directory Domain Services and Lightweight Directory Services Tools").
 
 The Windows LAPS-enabled Active Directory Users and Computers management snap-in isn't available on older platforms that don't support Windows LAPS. The older Remote Server Administration tools package is not updated to support the new snap-in.
 

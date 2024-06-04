@@ -15,11 +15,9 @@ manager: scottman
 > [!IMPORTANT]
 > All applications must be uninstalled before the upgrade and reinstalled after the upgrade to avoid any app compatibility issues that may rise because of the upgrade.
 
-## Supported OS upgrades with RDS role installed
-Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2.
-
 ## Upgrading a RDS session-based collection
-In order to keep the down-time to a minimum, it is best to follow the steps below while upgrading a RDS session-based collection:
+
+In order to keep the down-time to a minimum, it's best to follow these steps while upgrading a RDS session-based collection:
 
 1. Identify the servers to be upgraded, say, half the servers in the collection.
 2. Prevent new connections to these servers by setting **Allow New Connections** to false.
@@ -33,4 +31,5 @@ In order to keep the down-time to a minimum, it is best to follow the steps belo
 10. Now upgrade the remaining servers in the deployment by following steps 3 through 9 above.
 
 ## Upgrading a standalone RD Session Host server
+
 A standalone RD Session Host server can be upgraded anytime.

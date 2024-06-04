@@ -152,8 +152,6 @@
     items:
     - name: Configuring additional LSA Protection
       href: credentials-protection-and-management/configuring-additional-lsa-protection.md
-    - name: What's New in Credential Protection
-      href: credentials-protection-and-management/whats-new-in-credential-protection.md
     - name: Protect derived domain credentials with Credential Guard
       href: /windows/security/identity-protection/credential-guard/credential-guard
     - name: Protect Remote Desktop credentials with Remote Credential Guard
@@ -162,6 +160,12 @@
       href: credentials-protection-and-management/protected-users-security-group.md
     - name: Authentication Policies and Authentication Policy Silos
       href: credentials-protection-and-management/authentication-policies-and-authentication-policy-silos.md
+  - name: Delegated Managed Service Accounts
+    items:
+    - name: Delegated Managed Service Accounts overview
+      href: delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
+    - name: Setting up Delegated Managed Service Accounts
+      href: delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
   - name: Group Managed Service Accounts
     href: group-managed-service-accounts/group-managed-service-accounts-overview.md
     items:
@@ -175,8 +179,6 @@
   - name: Kerberos Authentication
     href: kerberos/kerberos-authentication-overview.md
     items:
-    - name: What's new in Kerberos authentication
-      href: kerberos/whats-new-in-kerberos-authentication.md
     - name: Domain-joined Device Public Key Authentication
       href: kerberos/domain-joined-device-public-key-authentication.md
     - name: Kerberos Constrained delegation

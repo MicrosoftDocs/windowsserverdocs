@@ -5,8 +5,7 @@ ms.topic: article
 author: robinharwood
 ms.author: roharwoo
 manager: femila
-ms.date: 11/28/2022
-ms.prod: windows-server
+ms.date: 04/01/2024
 ---
 
 # What's new in Windows Server 2019
@@ -75,7 +74,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     protects sensitive data from ransomware by blocking untrusted processes from
     accessing your protected folders.
 
-- [Exploit protection](/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
+- [Exploit protection](/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET) that can
     be easily configured to protect your system and applications.
 
 - [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also known as Code Integrity (CI) policy) was released in Windows Server 2016. We've made deployment easier by including default CI policies. The default policy allows all Windows in-box files and Microsoft applications, such as SQL Server, and blocks known executables that can bypass CI.
@@ -114,6 +113,24 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 
 - Changed our default TCP congestion provider to Cubic to give you more throughput!
 
+### Encrypted networks
+
+Virtual network encryption encrypts virtual network traffic between virtual machines within subnets that have the **Encryption Enabled** label. Encrypted networks also use Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects your data from eavesdropping, tampering, and forgery by anyone with access to the physical network.
+
+For more information, see [Encrypted networks](../networking/sdn/vnet-encryption/sdn-vnet-encryption.md).
+
+### Firewall auditing
+
+[Firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules and access control lists (ACLs) that have logging enabled.
+
+### Virtual network peering
+
+[Virtual network peering](../networking/sdn/vnet-peering/sdn-vnet-peering.md) lets you connect two virtual networks seamlessly. Once peered, the virtual networks appear in monitoring as one.
+
+### Egress metering
+
+[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allow list of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
+
 ## Storage
 
 Here are some of the changes we've made to storage in Windows Server 2019. For details, see [What's new in Storage](../storage/whats-new-in-storage.md).
@@ -140,7 +157,18 @@ It's now possible to prevent the File Server Resource Manager service from creat
 
 ### Storage Migration Service
 
-Storage Migration Service is a new technology that makes it easier to migrate servers to a newer version of Windows Server. We've provided a graphical tool that inventories data on servers, then transfers the data and configuration to newer servers.  The Storage Migration Service will also optionally move the identities of the old servers to the new servers, so that apps and users don't need to change anything. For more info, see [Storage Migration Service](../storage/storage-migration-service/overview.md).
+Storage Migration Service makes it easier to migrate servers to a newer version of Windows Server. This graphical tool inventories data on servers, then transfers the data and configuration to newer servers. The Storage Migration Service can also move the identities of the old servers to the new servers so users don't have to reconfigure their profiles and apps. For more information, see [Storage Migration Service](../storage/storage-migration-service/overview.md).
+
+Windows Admin Center version 1910 added the ability to deploy Azure virtual machines. This update integrates Azure VM deployment into Storage Migration Service. For more information, see [Azure VM migration](../storage/storage-migration-service/overview.md#azure-vm-migration).
+
+You can also access the following post-release-to-manufacturing (RTM) features when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed or on Windows Server 2022:
+
+- Migrate local users and groups to the new server.
+- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
+- Migrate storage from a Linux server that uses Samba.
+- Sync migrated shares more easily into Azure by using Azure File Sync.
+- Migrate to new networks such as Azure.
+- Migrate NetApp Common Internet File System (CIFS) servers from NetApp Federated Authentication Service (FAS) arrays to Windows servers and clusters.
 
 ### Storage Spaces Direct
 

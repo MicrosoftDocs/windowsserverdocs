@@ -2,7 +2,7 @@
 title: Windows LAPS account management modes
 description: Documents account management modes for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 12/25/2023
 ms.topic: conceptual
 ---
@@ -12,13 +12,13 @@ ms.topic: conceptual
 Learn about the different account management modes supported by Windows Local Administrator Password Solution (Windows LAPS).
 
 > [!IMPORTANT]
-> The Windows LAPS automatic account management feature is only available in Windows 11 Insider Preview Build 26022 and later.
+> The Windows LAPS automatic account management feature is supported in Windows Server 2025 and later.
 
 ## Overview
 
 The primary purpose of Windows LAPS is regularly rotate the password of a local Windows account. This account can either be the built-in Administrator account, or a custom new account. The IT admin has two different modes to choose from for configuring and managing the target account: manual and automatic. Both modes have their pros and cons.
 
-There are two different modes available to manage the target account. Manual account management mode is the default mode. In manual mode, the IT admin is responsible for configuration of all aspects of the managed account except for the password, which Windows LAPS manages and controls. Automatic account management mode is an optional mode. In automatic mode, Windows LAPS is responsible for configuration of all aspects of the managed account, including creation and deletion as required, plus the password.
+There are two different modes available to manage the target account.
 
 Manual account management mode is the default mode. In manual mode, the IT admin is responsible for configuration of all aspects of the managed account *except* the password, which Windows LAPS manages and controls.
 
@@ -41,7 +41,7 @@ Automatic mode is an off-by-default mode. Once enabled the IT admin can choose f
 - Whether to enable or disable the account
 - Whether to randomize the name of the account
 
-## Automatic account configuration details
+### Automatic account configuration details
 
 When automatic mode is enabled, the managed account is configured as follows:
 
@@ -50,7 +50,7 @@ When automatic mode is enabled, the managed account is configured as follows:
 - The password-never-expires flag is disabled
 - The account description is modified to indicate that Windows LAPS is controlling the account
 
-## Integration with local account management policies
+### Integration with local account management policies
 
 Windows supports multiple policies for managing the membership of Windows local groups:
 
@@ -61,7 +61,7 @@ Windows supports multiple policies for managing the membership of Windows local 
 
 Each of the above policies supports a configuration mode that can be used to force the removal of all members of a specified local group. The above policies now ignore any attempt to remove the Windows LAPS automatically managed account from the local Administrators group.
 
-## Account tampering protection
+### Account tampering protection
 
 Account tampering protection is expanded in automatic mode. Windows LAPS controls *all* configuration aspects of an automatically managed account. External attempts to modify the managed account are blocked. IT admins shouldn't author policies or scripts that attempt to modify the managed account.
 
@@ -90,6 +90,7 @@ Windows LAPS supports managing the password of the Directory Services Repair Mod
 ## See also
 
 - [Key concepts in Windows LAPS](laps-concepts-overview.md)
+- [Windows LAPS passwords and passphrases](laps-concepts-passwords-passphrases.md)
 
 ## Next steps
 
