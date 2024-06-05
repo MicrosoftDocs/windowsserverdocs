@@ -105,7 +105,7 @@ To resolve this issue:
   
 1. Open an elevated command prompt on the gateway machine.
   
-1. Run the following cmdlet:
+1. Run the following command:
 
   ```cmd
   winrm set winrm/config @{MaxEnvelopeSizekb="8192"}
@@ -578,7 +578,7 @@ You can encounter this error for the following reasons:
 
 - The WinRM service isn't running. The service could be temporarily disabled or completely shut down. To resolve this issue, make sure the WinRM service is always running.
 
-- The WinRM listener isn't configured or is corrupted. The quickest way to solve this problem is to run WinRM quickconfig, which creates a listener. WinRM also has two built-in listeners for HTTPS and HTTP connections. The HTTPS server and client should both have the same valid certificates.
+- The WinRM listener isn't configured or is corrupted. The quickest way to solve this problem is to run `WinRM quickconfig` in PowerShell, which creates a listener. WinRM also has two built-in listeners for HTTPS and HTTP connections. The HTTPS server and client should both have the same valid certificates.
 
 ### Security error
 
@@ -595,7 +595,7 @@ FullyQualifiedErrorId : CreateRemoteRunspaceFailed
 
 This error is uncommon. You usually encounter this area when an account tries to create a remote connection. In most cases, one or more default HTTP SPNs are registered to a service account, causing Kerberos authentication to fail. This issue usually happens because some software installed on the server needs one or more SPNs to function properly, such as SQL Server Reporting Services, Microsoft Dynamics, SharePoint, and so on.
 
-In some cases, one of the SPNs is registered to a service account while the other on/e isn't. In that case, the WinRM connection succeeds when trying to start a session with the server name, but fails when it tries to start a session using the FQDN.
+In some cases, one of the SPNs is registered to a service account while the other one isn't. In that case, the WinRM connection succeeds when trying to start a session with the server name, but fails when it tries to start a session using the FQDN.
 
 To resolve this issue, check if one or more default HTTP SPNs are registered to a service account by running the following command in PowerShell:
 
@@ -609,7 +609,7 @@ If the service finds the SPN but the server name isn't in the highlighted field 
 setspn -s HTTP/servername.or.fqdn:5985 servername
 ```
 
-If you're connecting remotely using PowerShell, make sure to also us/e the *IncludePortInSPN* parameter, as shown in the following example command:
+If you're connecting remotely using PowerShell, make sure to also use the *IncludePortInSPN* parameter, as shown in the following example command:
 
 ```powershell
 Enter-PSSession -ComputerName servername.or.fqdn -SessionOption (New-PSSessionOption -IncludePortInSPN)
@@ -628,4 +628,4 @@ about_Remote_Troubleshooting Help topic.
 
 This error is very rare. When you see this error message, it usually means WinRM couldn't process the request. The reason why this error appears varies based on context.
 
-To resolve this issue, make sure remoting is enabled and that you configure the WinRM listener to accept requests. We also recommend you check the event logs for other errors, such as if WinRM can't access certain files in teh file system due to the files only having read permissions.
+To resolve this issue, make sure remoting is enabled and that you configure the WinRM listener to accept requests. We also recommend you check the event logs for other errors, such as if WinRM can't access certain files in the file system due to the files only having read permissions.
