@@ -20,7 +20,7 @@ highlightedContent:
       url: ./get-started/get-started-with-windows-server.md
     - title: What's new in Windows Server?
       itemType: whats-new
-      url: ./get-started/whats-new-in-windows-server-2025.md
+      url: ./get-started/whats-new-windows-server-2025.md
     - title: Windows Admin Center
       itemType: overview
       url: ./manage/windows-admin-center/overview.md
