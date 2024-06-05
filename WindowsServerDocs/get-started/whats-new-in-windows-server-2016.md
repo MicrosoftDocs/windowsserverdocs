@@ -4,8 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-manager: femila
-ms.date: 05/14/2024
+ms.date: 06/05/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -218,7 +217,7 @@ You can now use storage quality of service (QoS) to centrally monitor end-to-end
 
 For more info, see [Storage Quality of Service](../storage/storage-qos/storage-qos-overview.md).
 
-## [Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
+## Failover Clustering
 
 Windows Server 2016 includes many new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
 

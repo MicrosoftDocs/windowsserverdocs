@@ -5,7 +5,7 @@ title: AD FS OpenID Connect/OAuth flows and Application Scenarios
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 02/13/2024
+ms.date: 06/05/2024
 ms.topic: article
 ---
 
@@ -158,7 +158,6 @@ code=AwABAAAAvPM1KaPlrEqdFSBzjqfTGBCmLdgfSTLEMPGYuNHSUYBrq...
 &state=12345
 ```
 
-
 |Parameter|Description|
 |-----|-----|
 |code|The `authorization_code` that the app requested. The app can use the authorization code to request an access token for the target resource. Authorization_codes are short lived, typically they expire after about 10 minutes.|
@@ -209,8 +208,8 @@ A successful token response looks like:
 |Parameter|Description|
 |-----|-----|
 |access_token|The requested access token. The app can use this token to authenticate to the secured resource (Web API).|
-|token_type|Indicates the token type value. The only type that AD FS supports is Bearer.
-|expires_in|How long the access token is valid (in seconds).
+|token_type|Indicates the token type value. The only type that AD FS supports is Bearer.|
+|expires_in|How long the access token is valid (in seconds).|
 |refresh_token|An OAuth 2.0 refresh token. The app can use this token to acquire more access tokens after the current access token expires. Refresh_tokens are long-lived, and can be used to retain access to resources for extended periods of time.|
 |refresh_token_expires_in|How long the refresh token is valid (in seconds).|
 |id_token|A JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
@@ -229,7 +228,7 @@ Access_tokens are short lived, and you must refresh them after they expire to co
 
 Refresh tokens don't have specified lifetimes. Typically, the lifetimes of refresh tokens are relatively long. However, in some cases, refresh tokens expire, are revoked, or lack sufficient privileges for the desired action. Your application needs to expect and handle errors returned by the token issuance endpoint correctly.
 
-Although refresh tokens aren't revoked when used to acquire new access tokens, you're expected to discard the old refresh token. As per the OAuth 2.0 spec says: "The authorization server MAY issue a new refresh token, in which case the client MUST discard the old refresh token and replace it with the new refresh token. The authorization server MAY revoke the old refresh token after issuing a new refresh token to the client." AD FS issues refresh token when the new refresh token lifetime is longer than previous refresh token lifetime.  To view additional information on AD FS refresh token lifetimes, visit [AD FS Single Sign On Settings](../operations/ad-fs-single-sign-on-settings.md).
+Although refresh tokens aren't revoked when used to acquire new access tokens, you're expected to discard the old refresh token. As per the OAuth 2.0 spec says: "The authorization server MAY issue a new refresh token, in which case the client MUST discard the old refresh token and replace it with the new refresh token. The authorization server MAY revoke the old refresh token after issuing a new refresh token to the client." AD FS issues refresh token when the new refresh token lifetime is longer than previous refresh token lifetime. To view additional information on AD FS refresh token lifetimes, visit [AD FS Single Sign On Settings](../operations/ad-fs-single-sign-on-settings.md).
 
 ```http
 // Line breaks for legibility only
@@ -296,17 +295,11 @@ In the section labeled D, AD FS transforms the `code_verifier`secret and compare
 
 #### How to choose multiple auth providers for the same rule policy in Windows Server 2019
 
-AD FS already supports triggering extra authentication based on a claim rule policy (RP). These policies You can set them for a particular RP or at global level. You can set an extra auth policy for a particular RP by opening PowerShell as an administrator and running the [Set-AdfsRelyingPartyTrust](/powershell/module/adfs/set-adfsrelyingpartytrust) cmdlet by passing either the *AdditionalAuthenticationRules* or *AdditionalAuthenticationRulesFile* parameter. To set it globally, an admin can use the [Set-AdfsAdditionalAuthenticationRule](/powershell/module/adfs/set-adfsadditionalauthenticationrule) cmdlet. Setting extra policies lets you use more than one authentication provider for the same application.
+AD FS already supports triggering extra authentication based on a claim rule policy (RP). These policies You can set them for a particular RP or at global level. You can set an extra auth policy for a particular RP by opening PowerShell as an administrator and running the [Set-AdfsRelyingPartyTrust](/powershell/module/adfs/set-adfsrelyingpartytrust) cmdlet by passing either the **AdditionalAuthenticationRules** or **AdditionalAuthenticationRulesFile** parameter. To set it globally, an admin can use the [Set-AdfsAdditionalAuthenticationRule](/powershell/module/adfs/set-adfsadditionalauthenticationrule) cmdlet. Setting extra policies lets you use more than one authentication provider for the same application.
 
-For example, in Windows Server 2012 R2, you can run the following cmdlet to configure a rule that prompts extra authentication for requests that come from the extranet:
+Claim rules provide the option to select the authentication provider for additional authentication, which proves beneficial in situations where customers are switching between providers or require a distinct provider for certain applications. As of Windows Server 2019, you can now use claims rules to decide which other authentication provider to invoke for extra authentication. This feature is useful for two scenarios:
 
-```powershell
-Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );' 
-```
-
-As of Windows Server 2019, you can now use claims rules to decide which other authentication provider to invoke for extra authentication. This feature is useful for two scenarios:
-
-- Users are transitioning from one other authentication provider to another. As you onboard users to to a newer authentication provider, they can use groups to control which extra authentication provider the service uses.
+- Users are transitioning from one other authentication provider to another. As you onboard users to a newer authentication provider, they can use groups to control which extra authentication provider the service uses.
 
 - Users need a specific extra authentication provider for certain applications but also need to use a different method for other applications.
 
@@ -358,7 +351,7 @@ If your preferred authentication provider isn't on the list, you can run the fol
 
 The value you use for the `http://schemas.microsoft.com/claims/authnmethodsproviders` claim should be one of the provider names returned by the list of providers AD FS returned.
 
-AD FS doesn't support triggering a particular extra authentication provider while the RP is using [Access Control Policies in AD FS Windows Server 2016](../operations/access-control-policies-in-ad-fs.md). When you move an application out of an Access Control policy, AD FS copies the corresponding policy from Access Control Policy to AdditionalAuthenticationRules and IssuanceAuthorizationRules. If an admin wants to use a specific authentication provider, they should stop using the Access Control policy and instead modify AdditionalAuthenticationRules.
+AD FS doesn't support triggering a particular extra authentication provider while the RP is using [Access Control Policies in AD FS Windows Server 2016](../operations/access-control-policies-in-ad-fs.md). When you move an application out of an Access Control policy, AD FS copies the corresponding policy from Access Control Policy to _AdditionalAuthenticationRules_ and _IssuanceAuthorizationRules_. If an admin wants to use a specific authentication provider, they should stop using the Access Control policy and instead modify _AdditionalAuthenticationRules_.
 
 ## On-Behalf-Of flow
 
@@ -377,10 +370,10 @@ The steps that follow constitute the OBO flow and are explained with the help of
 
   1. The client application makes a request to API A with token A.
   Note: While configuring OBO flow in AD FS, make sure scope `user_impersonation` is selected and client do request `user_impersonation` scope in the request.
-  2. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. Note: While configuring this flow in AD FS, make sure API A is also registered as a server application with clientID having the same value as the resource ID in API A.
-  3. The AD FS token issuance endpoint validates API A's credentials with token A and issues the access token for API B (token B).
-  4. Token B is set in the authorization header of the request to API B.
-  5. Data from the secured resource is returned by API B.
+  1. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. Note: While configuring this flow in AD FS, make sure API A is also registered as a server application with clientID having the same value as the resource ID in API A.
+  1. The AD FS token issuance endpoint validates API A's credentials with token A and issues the access token for API B (token B).
+  1. Token B is set in the authorization header of the request to API B.
+  1. Data from the secured resource is returned by API B.
 
 ### Service-to-service access token request
 
@@ -500,7 +493,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFCbmZpRy1tQ…
 
 ## Client credentials grant flow
 
-> [!NOTE] 
+> [!NOTE]
 > Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on client credentials grant flow in Microsoft Entra ID, see [Client credentials grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow).
 
 You can use the OAuth 2.0 client credentials grant specified in [RFC 6749](https://tools.ietf.org/html/rfc6749#section-4.4), to access web-hosted resources by using the identity of an application. This type of grant is commonly used for server-to-server interactions that must run in the background, without immediate interaction with a user. These types of applications are often referred to as daemons or service accounts.
@@ -574,7 +567,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZn
 
 ## Resource owner password credentials grant flow (Not recommended)
 
-> [!NOTE] 
+> [!NOTE]
 > Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on resource owner password credentials grant flow in Microsoft Entra ID, see [Resource owner password credentials grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth-ropc).
 
 Resource owner password credential (ROPC) grant allows an application to sign in the user by directly handling their password. The ROPC flow requires a high degree of trust and user exposure and you should only use this flow when other, more secure, flows can't be used.
@@ -641,7 +634,7 @@ You can use the refresh token to acquire new access tokens and refresh tokens us
 
 ## Device code flow
 
-> [!NOTE] 
+> [!NOTE]
 > Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on device code flow in Microsoft Entra ID, see [Device code flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-device-code).
 
 Device code grant allows users to sign in to input-constrained devices such as a smart TV, IoT device, or printer. To enable this flow, the device has the user visit a webpage in their browser on another device to sign in. Once the user signs in, the device is able to get access tokens and refresh tokens as needed.
@@ -654,7 +647,7 @@ The entire device code flow looks similar to the next diagram. We describe each 
 
 ### Device authorization request
 
-The client must first check with the authentication server for a device and user code that's used to initiate authentication. The client collects this request from the /devicecode endpoint. In this request, the client should also include the permissions it needs to acquire from the user. From the moment this request is sent, the user has only 15 minutes to sign in (the usual value for expires_in), so only make this request when the user has indicated they're ready to sign in.
+The client must first check with the authentication server for a device and user code that's used to initiate authentication. The client collects this request from the `/devicecode` endpoint. In this request, the client should also include the permissions it needs to acquire from the user. From the moment this request is sent, the user has only 15 minutes to sign in (the usual value for expires_in), so only make this request when the user has indicated they're ready to sign in.
 
 ```http
 // Line breaks are for legibility only.
@@ -683,12 +676,12 @@ A successful response is a JSON object containing the required information to al
 |verification_uri_complete|The URI the user should go to with the user_code in order to sign in. It's prefilled with user_code so that user doesn't need to enter user_code|
 |expires_in|The number of seconds before the device_code and user_code expire.|
 |interval|The number of seconds the client should wait between polling requests.|
-|message|A human-readable string with instructions for the user. It can be localized by including a query parameter in the request of the form ?mkt=xx-XX, filling in the appropriate language culture code.
+|message|A human-readable string with instructions for the user. It can be localized by including a query parameter in the request of the form ?mkt=xx-XX, filling in the appropriate language culture code.|
 
 ### Authenticating the user
 
 After the client receives the user_code and verification_uri, it displays these details to the user, instructing them to sign in using their mobile phone or PC browser. Additionally, the client can use a QR code or similar mechanism to display the verfication_uri_complete, which takes the step of entering the user_code for the user.
-While the user is authenticating at the verification_uri, the client should be polling the /token endpoint for the requested token using the device_code.
+While the user is authenticating at the verification_uri, the client should be polling the `/token` endpoint for the requested token using the device_code.
 
 ```http
 POST https://adfs.contoso.com /adfs/oauth2/token
@@ -718,56 +711,6 @@ A successful token response looks like:
 |id_token|Issued if the original scope parameter included the openid scope.|
 |refresh_token|Issued if the original scope parameter included offline_access.|
 |refresh_token_expires_in|Number of seconds before the included refresh token is valid for.|
-
-### Proof Key for Code Exchange (PKCE) support for OAuth
-
-OAuth public clients that use the Authorization Code Grant are susceptible to authorization code interception attacks. To mitigate these types of attacks, AD FS for Windows Server 2019 now supports Proof Key for Code Exchange (PKCE) protocols during the OAuth Authorization Code Grant flow. For more information, see [Request an authorization code](/entra/identity-platform/v2-oauth2-auth-code-flow#request-an-authorization-code) and the [PKCE RFC](https://tools.ietf.org/html/rfc7636).
-
-#### How to choose extra auth providers in 2019
-
-You can now set extra authorization policies for a specific RP<!--acronym--> by creating an extra claim rule policy. You can set this policy by running the [Set-AdfsRelyingPartyTrust](/powershell/module/adfs/set-adfsrelyingpartytrust) cmdlet in PowerShell using either the *AdditionalAuthenticationRules* or *AdditionalAuthenticationRulesFile* parameters. You can set this extra policy globally by running the [Set-AdfsAdditionalAuthenticationRule](/powershell/module/adfs/set-adfsadditionalauthenticationrule) cmdlet instead.
-
-You can also use claim rules to choose which authentication provider to use for extra authentication. This feature is useful for scenarios where customers are transitioning between authentication providers or need to use a different provider for specific applications.
-
-You can configure this setting by using the `https://schemas.microsoft.com/claims/authnmethodsproviders` claim from other authentication policies with the name of the authentication provider in its value, as shown in the following examples.
-
-### Transitioning from one auth provider to another
-
-As of Windows Server 2019, you can modify the claim rules to choose auth providers based on which setting best fits your scenario.
-
-For example, let's look at a scenario where you modify a claim rule to choose Azure AD Multi-Factor Authentication for users in group SID S-1-5-21-608905689-872870963-3921916988-12345. You can use this modification for a group you manage by enterprise, which tracks the users registered for Azure AD Multi-Factor Authentication. This modification also works for any other users you want to configure to use certificate authentication.
-
-For this example, to modify the claim rule, you'd run the following command in PowerShell:
-
-```powershell
-'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
-
- c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-21-608905689-872870963-3921916988-12345"] => issue(Type = "`https://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "AzureMfaAuthentication"); 
-
-not exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value=="S-1-5-21-608905689-872870963-3921916988-12345"]) => issue(Type = "`https://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "CertificateAuthentication");’ 
-```
-
-### Setting two different auth providers for two different applications
-
-You can also modify claim rules to set two different authentication providers for two different authentications.
-
-For example, let's say you have two applications: Application A and Application B. You want to set Application A to use Azure AD Multi-factor Authentication as an extra authentication provider. However, you want Application B to use Certificate as its extra authentication provider.
-
-To set Application A to use Azure AD Multi-factor Authentication, run this command in PowerShell.
-
-```powershell
-Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
-
-c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication");' 
-```
-
-To set Application B to use Certificate as an extra auth provider, run this command:
-
-```powershell
-Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
-
-c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");' 
-```
 
 ## Related content
 

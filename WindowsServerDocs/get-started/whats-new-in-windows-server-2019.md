@@ -4,8 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-manager: femila
-ms.date: 04/01/2024
+ms.date: 06/05/2024
 ---
 
 # What's new in Windows Server 2019
@@ -24,7 +23,7 @@ For more info, see [Windows Admin Center](../manage/windows-admin-center/overvie
 
 ### Desktop experience
 
-Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the **Desktop Experience**. (Semi-Annual Channel \(SAC\) releases don't include the Desktop Experience by design; they're strictly Server Core and Nano Server container image releases.) As with Windows Server 2016, during setup of the operating system you can choose between Server Core installations or Server with Desktop Experience installations.
+Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the **Desktop Experience**. Semi-Annual Channel (SAC) releases don't include the Desktop Experience by design; they're strictly Server Core and Nano Server container image releases. As with Windows Server 2016, during setup of the operating system you can choose between Server Core installations or Server with Desktop Experience installations.
 
 ### System Insights
 
@@ -236,7 +235,7 @@ Windows Server 2019 continues the improvements to compute, networking, and stora
 
     The base container image download sizes, size on disk and startup times have been improved to speed up container workflows.
 
-- **Management experience using Windows Admin Center \(preview\)**
+- **Management experience using Windows Admin Center (preview)**
 
     We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](../manage/windows-admin-center/configure/using-extensions.md).
 
