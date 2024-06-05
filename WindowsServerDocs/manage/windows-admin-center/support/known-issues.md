@@ -93,20 +93,57 @@ Scenarios involving using Windows Admin Center with a proxy service often don't 
 
 - PowerShell
 
-> [!NOTE]
-> Windows Admin Center requires PowerShell features that aren't included in Windows Server 2012 R2, 2012, or 2008 R2. If you plan to manage Windows Server with Windows Admin Center, you must install Windows Management Framework (WMF) version 5.1 or later on those servers.
-
 - Packet Monitoring
 
 - Windows Events
 
-## Windows Management Framework
+### Events
 
-Windows Admin Center requires PowerShell features that might not be included in earlier versions of Windows Server. You must install the latest version of Windows Management Framework (WMF) on any servers using Windows Server with Windows Admin Center.
+When you export large log files, you can sometimes receive an error message about packet size.
+
+To resolve this issue:
+  
+1. Open an elevated command prompt on the gateway machine.
+  
+1. Run the following cmdlet:
+
+  ```cmd
+  winrm set winrm/config @{MaxEnvelopeSizekb="8192"}
+  ```
+
+### Remote Desktop
+
+- When you deploy Windows Admin Center as a service, the Remote Desktop tool sometimes doesn't load after the Windows Admin Center service updates to a new version. To work around this issue, clear your browser cache.
+
+- The Remote Desktop tool sometimes doesn't connect when managing Windows Server 2012.
+
+- When using the Remote Desktop to connect to a machine that isn't Domain joined, you must enter your account in the `MACHINENAME\USERNAME` syntax.
+
+- Some configurations can block Windows Admin Center's remote desktop client with group policy. If you're blocked by this issue, open the **Local Group Policy Editor** and reconfigure the **Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections** Group Policy Object (GPO).
+
+- The Remote Desktop tool doesn't currently support any text, image, or file copy and paste between the local desktop and the remote session.
+
+- You can copy text the same way you would during a local session by either right-clicking and selecting **Copy** or pressing the **Ctrl+C** keys, but you can only paste by right-clicking and selecting **Paste**.
+
+- Remote sessions don't support the following keys and keyboard shortcuts:
+
+  - Alt+Tab
+
+  - Function keys
+
+  - Windows Key
+
+  - PrtScn
+
+- When using Remote Desktop to connect to a machine, keyboard language mapping may not work properly.
+
+## Support for Windows Server 2012 R2, 2012, and 2008 R2
+
+Windows Admin Center requires PowerShell features that aren't included in Windows Server 2012 R2, 2012, or 2008 R2. If you plan to manage Windows Server with Windows Admin Center, you must install Windows Management Framework (WMF) version 5.1 or later on those servers.
 
 To install WMF:
 
-1. Open a PowerShell window.
+1. Open an elevated PowerShell window.
 
 1. Enter `$PSVersiontable` to verify if you have WMF installed and check the version number.
 
@@ -128,22 +165,6 @@ This section describes common issues you can run into in Server Manager on Windo
 
 Server Manager on Windows Admin Center doesn't currently support importing the .PFX Encrypted Certificate into the current user store.
 
-### Events
-
-- The issue described in [WebSocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service) affects Windows Events.
-
-- When you export large log files, you can sometimes receive an error message about packet size.
-
-  To resolve this issue:
-  
-  1. Open an elevated command prompt on the gateway machine.
-  
-  1. Run the following command:
-
-   ```cmd
-   winrm set winrm/config @{MaxEnvelopeSizekb="8192"}
-   ```
-
 ### Files
 
 Windows Admin Center doesn't currently support uploading or downloading files over 100 MB in size.
@@ -161,34 +182,6 @@ Windows Admin Center doesn't currently support uploading or downloading files ov
 ### Registry Editor
 
 Registry Editor for Windows Admin Center for Windows Server hasn't implemented search functionality.
-
-### Remote Desktop
-
-- When you deploy Windows Admin Center as a service, the Remote Desktop tool sometimes doesn't load after the Windows Admin Center service updates to a new version. To work around this issue, clear your browser cache.
-
-- The Remote Desktop tool sometimes doesn't connect when managing Windows Server 2012.
-
-- When using the Remote Desktop to connect to a machine that isn't Domain joined, you must enter your account in the `MACHINENAME\USERNAME` syntax.
-
-- Some configurations can block Windows Admin Center's remote desktop client with group policy. If you're blocked by this issue, go to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host Connections** and enable the **Allow Users to connect remotely by using Remote Desktop Services** setting.
-
-- The issue described in [Websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service) affects Remote Desktop.
-
-- The Remote Desktop tool doesn't currently support any text, image, or file copy and paste between the local desktop and the remote session.
-
-- You can copy text the same way you would during a local session by either right-clicking and selecting **Copy** or pressing the **Ctrl+C** keys, but you can only paste by right-clicking and selecting **Paste**.
-
-- Remote sessions don't support the following keys and keyboard shortcuts:
-
-  - Alt+Tab
-
-  - Function keys
-
-  - Windows Key
-
-  - PrtScn
-
-- When using Remote Desktop to connect to a machine, keyboard language mapping may not work properly.
 
 ### Roles and Features
 
@@ -242,9 +235,9 @@ The Computer Management solution contains some Server Manager tools, so the same
 
 - Windows 10 has WinRM and PowerShell remoting disabled by default.
 
-  - To enable management of the Windows 10 Client, open an elevated PowerShell prompt and run the `Enable-PSRemoting` command.
+  - To enable management of the Windows 10 Client, open an elevated PowerShell prompt and run the `Enable-PSRemoting` cmdlet.
 
-  - You should also update your firewall to allow connections from outside the local subnet by running the `Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any` command. For more information about how to update your firewall in more restrictive network scenarios, see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
+  - You should also update your firewall to allow connections from outside the local subnet by running `Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any`. For more information about how to update your firewall in more restrictive network scenarios, see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
 
 ## Cluster deployment
 
@@ -256,7 +249,7 @@ Windows Admin Center doesn't currently support scenarios with mixed work group m
 
 ### Enabling Hyper-V on VMs
 
-You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying to enable Hyper-V on VMs without Azure Stack HCI makes an error message that says "A prerequisite check for the Hyper-V feature failed," as shown in the following screenshot.
+You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying to enable Hyper-V on VMs without Azure Stack HCI generates an error message that says "A prerequisite check for the Hyper-V feature failed," as shown in the following screenshot.
 
 :::image type="content" source="../media/cluster-create-install-hyperv.png" alt-text="A screenshot of the Windows Admin Center Server Manager Roles and Features page displaying the enabling Hyper-V error message.":::
 
@@ -268,13 +261,13 @@ Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
 
 ### Server restart time after updates
 
-Sometimes servers can take longer than expected to restart after you install updates. Windows Admin Center cluster deployment checks the server restart state periodically to make sure the restart succeeds. However, if you try to restart the server manually without cluster deployment active, then Windows Admin Center can't capture the server state.
+At times, servers may take longer than anticipated to restart after installing updates. To determine if the server has restarted successfully, the Windows Admin Center cluster deployment wizard periodically checks the server's restart state. However, if the user manually restarts the server outside of the wizard, the wizard is unable to capture the server state in a suitable manner.
 
-To work around this issue, close the cluster deployment feature before manually restarting the server. Once you've restarted the server, you can open cluster deployment again.
+To work around this issue, close the cluster deployment wizard before manually restarting the server. Once you've restarted the server, you can open the cluster deployment wizard again.
 
 ### Storage error after deleting a cluster
 
-If you delete a cluster, you can encounter an error if you haven't cleared the storage pools from the deleted cluster yet. The deleted cluster object locks the storage pools, so you must manually clear the pools.
+If you delete a cluster, you can encounter an error if you haven't cleared the storage pools from the deleted cluster. The deleted cluster object locks the storage pools, so you must manually clear the pools.
 
 If you've already encountered this error message, here's how to clear the deleted cluster object from the storage pools:
 
@@ -286,16 +279,13 @@ If you've already encountered this error message, here's how to clear the delete
    Clear-ClusterNode
    ```
 
-1. Next, remove all pervious storage pools.
-
-1. Run the following commands:
+1. Next, remove all previous storage pools by running the following command:
 
     ```powershell
-    get-storagepool
-    get-storagepool -IsPrimordial 0 | remove-storagepool
+    Get-StoragePool -IsPrimordial 0 | Remove-StoragePool
     ```
   
-1. If you've configured the storage pools to be read only, then you must change the storage pools to write mode before removing them by running the following command:
+1. If you've configured the storage pools to be read-only, then you must change the storage pools to write mode before removing them by running the following command:
 
     ```powershell
     Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false
@@ -305,22 +295,16 @@ If you haven't encountered this error but want to avoid it, follow these instruc
 
 1. Open an elevated PowerShell window.
 
-    ```PowerShell
-    get-virtualdisk | Remove-VirtualDisk
-    ```
-
 1. Run this command to remove the virtual disk:
 
     ```PowerShell
-    get-storagepool
-    get-storagepool -IsPrimordial 0 | remove-storagepool
+    Get-VirtualDisk | Remove-VirtualDisk
     ```
 
 1. Next, Run this command to remove the storage pools:
 
     ```PowerShell
-    get-storagepool
-    get-storagepool -IsPrimordial 0 | remove-storagepool
+    Get-StoragePool -IsPrimordial 0 | Remove-StoragePool
     ```
 
 1. After that, run this command to remove resources associated with the cluster:
@@ -352,7 +336,7 @@ When you use the same machines repeatedly while deploying clusters, you need to 
 
 ### CredSSP in cluster creation
 
-The Windows Admin Center cluster deployment feature uses CredSSP. Sometimes, CredSSP can cause an error message that says "There was an error during the validation. Review error and try again" appear when you're validating a cluster, as shown in the following screenshot.
+The Windows Admin Center cluster deployment wizard uses CredSSP. Sometimes, CredSSP can cause an error message that says "There was an error during the validation. Review error and try again" appear when you're validating a cluster, as shown in the following screenshot.
 
 :::image type="content" source="../media/cluster-create-credssp-error.jpg" alt-text="A screenshot of the Cred S S P error message in Windows Admin Center cluster deployment that can appear when the user tries to validate the cluster.":::
 
@@ -365,13 +349,13 @@ To resolve this issue:
    - Run this command on your gateway machine:  
 
      ```PowerShell
-     Disable-WsmanCredSSP -Role Client
+     Disable-WSManCredSSP -Role Client
      ```
   
    - Run this command on all nodes in your cluster:
 
      ```PowerShell
-     Disable-WsmanCredSSP -Role Server
+     Disable-WSManCredSSP -Role Server
      ```
 
 1. Run the following command on all nodes to repair their trusts.
@@ -391,7 +375,7 @@ To resolve this issue:
 1. After rebooting the nodes, open PowerShell again and run the following command to test the connectivity between your gateway machine and target nodes.
 
    ```PowerShell
-   Enter-PSSession -computername <node fqdn>
+   Enter-PSSession -ComputerName <node fqdn>
    ```
 
 ## CredSSP
@@ -415,7 +399,7 @@ Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
 If you're using virtual switch teaming in a VM environment, you also need to run this command on the session host after creating a VM:
 
 ```powershell
-Get-VM | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
+Get-VM | %{ Set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming On }
 ```
 
 If you're deploying a cluster using the Azure Stack HCI OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To preinstall these features, run the following command before creating the VMs:
@@ -430,12 +414,12 @@ The cluster deployment feature in Windows Admin Center 2007 doesn't support remo
 
 ## Failover Cluster Manager solution
 
-- When managing a hyper-converged or traditional cluster, you can sometimes see an error message that says "Shell not found." You can do one of the following things to resolve this issue:
+- When managing a hyper-converged or traditional cluster, you can sometimes see an error message that says "Shell not found." You can do one of the following to resolve this issue:
 
   - Reload your browser
   - Go to another tool, then return to Failover Cluster Manager
 
-- You can sometimes encounter an issue when managing a down-level cluster with an incomplete configuration. To resolve this issue, make sure the cluster has the RSAT-Clustering-PowerShell feature installed and enabled on each member node. If not, open PowerShell and enter the following command on each cluster node:
+- You can sometimes encounter an issue when managing a down-level cluster with an incomplete configuration. To resolve this issue, make sure the cluster has the **RSAT-Clustering-PowerShell** feature installed and enabled on each member node. If not, open PowerShell and enter the following command on each cluster node:
   
   ```powershell
   Install-WindowsFeature -Name RSAT-Clustering-PowerShell
@@ -457,13 +441,13 @@ The following sections describe issues you can encounter when using Azure servic
 
 - When attempting to register your Windows Admin Center gateway in the Azure China 21Vianet or Azure US Gov cloud domains in version 2211, the gateway can sometimes redirect you to the Azure Global sign-in experience. To work around this issue, use an earlier version of Windows Admin Center.
 
-- In the 2009 release, you can run into issues signing in to Azure or registering your Windows Admin Center gateway with Azure. Try doing the following things to troubleshoot the issue:
+- In the 2009 release, you can run into issues signing in to Azure or registering your Windows Admin Center gateway with Azure. Try doing the following to troubleshoot the issue:
 
   - Before using any Azure features in Windows Admin Center, including gateway registration, make sure you've signed in to your Azure account in a different tab or window. We recommend you sign in through the [Azure portal](https://portal.azure.com/).  
 
   - If you successfully sign in to Azure during gateway registration but don't see visual confirmation on the **Azure** page of your Windows Admin Center settings, refresh the page by going to another page, then returning.
 
-  - If you've already given admin approval for Windows Admin Center in the portal but still see an error message that says "Need admin approval," try signing in to Azure using the banners around Windows Admin Center instead of going to the Settings page.
+  - If you've already given admin approval for Windows Admin Center in the portal but still see an error message that says "Need admin approval", try signing in to Azure using the banners around Windows Admin Center instead of going to the Settings page.
 
   - If your proxy is misconfigured, you can see an error message that says "Error: Value cannot be null. Parameter name: httpClientFactory." To resolve this issue, go to the **Settings** page and adjust your settings to the correct configuration.
 
