@@ -4,8 +4,7 @@ description: Get started with detailed information about Windows Server and get 
 ms.topic: landing-page
 author: dknappettmsft
 ms.author: daknappe
-manager: femila
-ms.date: 6/17/2021
+ms.date: 06/05/2024
 ---
 
 # Get started with Windows Server
