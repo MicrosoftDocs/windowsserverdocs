@@ -4,7 +4,7 @@ description: How to disable SMB signing on third-party servers in Windows 11 and
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
-ms.date: 05/30/2024
+ms.date: 06/05/2024
 ---
 
 # Control SMB signing behavior (preview)
@@ -40,7 +40,9 @@ Although all versions of Windows and Windows Server support SMB signing, a third
 When you try to connect to third-party devices that use guest accounts to simplify access, you may receive one of these error messages:
 
   ```error
-  You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
+  You can't access this shared folder because your organization's security policies block
+  unauthenticated guest access. These policies help protect your PC from unsafe or malicious
+  devices on the network.
   ```
 
   ```error
@@ -135,7 +137,7 @@ To enable SMB signing in Group Policy, perform the following steps:
 
 1. In the **Local Group Policy Editor**, navigate to **Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**.
 
-1. Open **Microsoft network client: Digitally sign communications (always)**, select **Disabled**, then select **OK**.
+1. Open **Microsoft network client: Digitally sign communications (always)**, select **Enabled**, then select **OK**.
 
 # [PowerShell](#tab/powershell)
 
