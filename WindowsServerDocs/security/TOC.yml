@@ -148,12 +148,10 @@
       - name: Group Policy Settings Used in Windows Authentication
         href: windows-authentication/group-policy-settings-used-in-windows-authentication.md
   - name: Credentials Protection and Management
-    href: credentials-protection-and-management/credentials-protection-and-management.md
+    href: /windows/security/identity-protection/credential-guard/credential-guard
     items:
     - name: Configuring additional LSA Protection
       href: credentials-protection-and-management/configuring-additional-lsa-protection.md
-    - name: Protect derived domain credentials with Credential Guard
-      href: /windows/security/identity-protection/credential-guard/credential-guard
     - name: Protect Remote Desktop credentials with Remote Credential Guard
       href: /windows/security/identity-protection/remote-credential-guard
     - name: Protected Users Security Group
