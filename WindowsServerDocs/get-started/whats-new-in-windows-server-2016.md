@@ -393,21 +393,21 @@ Domain controllers now support Key Trust account mapping and fallback to existin
 
 AD FS for Windows Server 2016 contains the following updates.
 
-### Sign in with Azure Active Directory multi-factor authentication
+### Sign in with Microsoft Entra mutlifactor authentication
 
-AD FS 2016 builds upon the multi-factor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires an Azure AD Multi-Factor Authentication code instead of a username or password.
+AD FS 2016 builds upon the multifactor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires an Microsoft Entra multifactor authentication code instead of a username or password.
 
-- When you configure Azure AD Multi-Factor Authentication as the primary authentication method, AD FS prompts the user for their username and the one-time password (OTP) code from the Azure Authenticator app.
+- When you configure Microsoft Entra multifactor authentication as the primary authentication method, AD FS prompts the user for their username and the one-time password (OTP) code from the Azure Authenticator app.
 
-- When you configure Azure AD Multi-Factor Authentication as the secondary or extra authentication method, the user provides primary authentication credentials. Users can sign in by using Windows Integrated Authentication, which can request their username and password, smart card, or a user or device certificate. Next, the user sees a prompt for their secondary credentials, such as text, voice, or OTP-based Azure AD Multi-Factor Authentication sign-in.
+- When you configure Microsoft Entra multifactor authentication as the secondary or extra authentication method, the user provides primary authentication credentials. Users can sign in by using Windows Integrated Authentication, which can request their username and password, smart card, or a user or device certificate. Next, the user sees a prompt for their secondary credentials, such as text, voice, or OTP-based Microsoft Entra multifactor authentication sign-in.
 
-- The new built-in Azure AD Multi-Factor Authentication adapter offers simpler setup and configuration for Azure AD Multi-Factor Authentication with AD FS.
+- The new built-in Microsoft Entra multifactor authentication adapter offers simpler setup and configuration for Microsoft Entra multifactor authentication with AD FS.
 
-- Organizations can use Azure AD Multi-Factor Authentication without needing an on-premises Azure AD Multi-Factor Authentication server.
+- Organizations can use Microsoft Entra multifactor authentication without needing an on-premises Microsoft Entra multifactor authentication server.
 
-- You can configure Azure AD Multi-Factor Authentication for intranet, extranet, or as part of any access control policy.
+- You can configure Microsoft Entra multifactor authentication for intranet, extranet, or as part of any access control policy.
 
-For more information about Azure AD Multi-Factor Authentication with AD FS, see [Configure AD FS 2016 and Azure AD Multi-Factor Authentication](../identity/ad-fs/operations/configure-ad-fs-and-azure-mfa.md).
+For more information about Microsoft Entra multifactor authentication with AD FS, see [Configure AD FS 2016 and Microsoft Entra multifactor authentication](../identity/ad-fs/operations/configure-ad-fs-and-azure-mfa.md).
 
 ### Passwordless access from compliant devices
 
@@ -417,11 +417,11 @@ AD FS 2016 builds on previous device registration capabilities to enable sign on
 
 - Enable Extranet Access only from devices that are managed and/or compliant.
 
-- Require multi-factor authentication for computers that aren't managed or compliant.
+- Require multifactor authentication for computers that aren't managed or compliant.
 
 AD FS provides the on-premises component of conditional access policies in a hybrid scenario. When you register devices with Azure AD for conditional access to cloud resources, you can also use the device identity for AD FS policies.
 
-:::image type="content" source="./media/ADFS_ITPRO_1.png" alt-text="Diagram of a hybrid solution and the relationships between users and on-premises active directory.":::
+:::image type="content" source="./media/conditional-access-control-architecture.png" alt-text="Diagram of a hybrid solution and the relationships between users and on-premises active directory.":::
 
 For more information about using device based conditional access in the cloud, see [Azure Active Directory Conditional Access](/azure/active-directory/conditional-access/overview).
 

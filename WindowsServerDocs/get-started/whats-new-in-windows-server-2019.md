@@ -318,7 +318,7 @@ AD FS 2019 includes the following security improvements:
 
   - HSTS, which only lets you use AD FS endpoints on HTTPS endpoints for a compliant browser to enforce.
   
-  - x-frame-options, which lets AD FS admins allow specific relying parties to embed iFrames for AD FS interactive sign-in pages. You should only use this header on HTTPS hosts.
+  - X-frame-options, which lets AD FS admins allow specific relying parties to embed iFrames for AD FS interactive sign-in pages. You should only use this header on HTTPS hosts.
   
   - Future header. You can also configure multiple future headers.
 
@@ -348,7 +348,7 @@ AD FS 2019 includes the following features to support building modern line-of-bu
 
 - AD FS now includes OAuth device flow profile support for signing in using devices without a UI surface area to support rich sign-in experiences. This feature lets users finish signing in on a different device. The Azure Command-Line Interface (CLI) experience in Azure Stack requires this functionality, and you can also use it in other scenarios.
 
-- You no longer require the *Resource* parameter to use AD FS, which is in line with current OAUth specifications. CLients now only need to provide the relying party trust identifier as the scope parameter long with requested permissions.
+- You no longer require the *Resource* parameter to use AD FS, which is in line with current OAUth specifications. Clients now only need to provide the relying party trust identifier as the scope parameter long with requested permissions.
 
 - You can use cross-origin resource sharing (CORS) headers in AD FS responses. These new headings let users build single-page applications that allow client-side JavaScript libraries to validate the *id_token* signature by querying for the signing keys from the Open ID Connect (OIDC) discovery document on AD FS.
 

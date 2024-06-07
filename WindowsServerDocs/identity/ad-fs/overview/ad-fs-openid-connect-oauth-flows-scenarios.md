@@ -285,7 +285,7 @@ The PKCE support specification adds more parameters to the OAuth 2.0 Authorizati
 
 :::image type="content" source="media/adfs-scenarios-for-developers/adfs2019.png" alt-text="Diagram of the PKCE relationship between the client and AD FS 2019.":::
 
-In the section labeled A, the client creates and records a secret named `code_verifier` and derives a transformed version of the secret called `t(code_verifier)`, also known as `code_challenge`. The the client then sends the secret in the OAuth 2.0 Authorization Request along with the `t_m` transformation method.
+In the section labeled A, the client creates and records a secret named `code_verifier` and derives a transformed version of the secret called `t(code_verifier)`, also known as `code_challenge`. The client then sends the secret in the OAuth 2.0 Authorization Request along with the `t_m` transformation method.
 
 In the section labeled B, the authorization endpoint responds as usual, but records the `t(code_verifier)` secret and the transformation method.
 

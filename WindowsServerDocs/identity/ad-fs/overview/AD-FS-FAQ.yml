@@ -429,7 +429,7 @@ sections:
            AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value `Win2019` until it becomes stale after two months and is automatically removed from the farm. To avoid getting this event, migrate the primary federation role to the federation server with the latest version. Follow the instructions in [To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level](/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level).
 
       - question: |
-          How do I resolve the AD FS Admin event logs error: “Received invalid Oauth request. The client <NAME> is forbidden to access the resource with scope ugs?”
+          How do I resolve the AD FS Admin event logs error: “Received invalid Oauth request. The client <NAME> is forbidden to access the resource with scope ugs"?
           
         answer: |
           To resolve the issue, follow these steps:
