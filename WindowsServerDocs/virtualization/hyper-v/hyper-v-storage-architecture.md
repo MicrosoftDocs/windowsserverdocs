@@ -35,9 +35,9 @@ If you plan to use this configuration, remember that the following details can a
 
 - Data gets replicated to other nodes in the cluster to increase storage resilience. Storage Spaces Direct supports several storage resiliency models. For more information, see [Fault tolerance and storage efficiency on Azure Stack HCI and Windows Server clusters](/azure-stack/hci/concepts/fault-tolerance).
 
-- In this model, each physical host contains storage and compute resources. As a result, those resources scale symmetrically: every new host automatically adds both compute and storage resources. Each cluster can contain between one and sixteen nodes.
+- In this model, each physical host contains storage and compute resources. As a result, those resources scale symmetrically. Every new host automatically adds both compute and storage resources. Each cluster can contain between 1 and 16 nodes.
 
-:::image type="content" source="./plan/images/hyper-v-storage-architecture/hyperconverged-hyper-v-storage-transparent.png" alt-text="A diagram showing a basic example of a deployment of a hyperconverged Hyper-V and Storage Spaces Direct":::
+:::image type="content" source="./plan/images/hyper-v-storage-architecture/hyperconverged-hyper-v-storage-transparent.png" alt-text="A diagram showing a basic example of a deployment of a hyperconverged Hyper-V and Storage Spaces Direct.":::
 
 ## Disaggregated Hyper-V with hyperconverged storage
 
@@ -51,9 +51,9 @@ If you plan to use this configuration, keep the following details in mind:
 
 In this model, compute and storage scale independently from each other. This feature makes hyperconverged storage ideal for scenarios where your storage and compute requirements grow at different rates. For example, if you need more RAM or CPU resources to host VMs, you can add extra clusters without also adding more storage. If you have VMs that consume a lot of storage but don't consume many CPU resources, you can add another storage cluster without adding more compute resources.
 
-- Each Compute cluster can contain between one and 64 nodes.
+- Each Compute cluster can contain between 1 and 64 nodes.
 
-- Each storage cluster can contain between one and 16 nodes.
+- Each storage cluster can contain between 1 and 16 nodes.
 
 For example, the following diagram shows a simple deployment with one compute cluster and one storage cluster.
 
@@ -63,7 +63,7 @@ When you add more computing resources to run your VMs, you can either add a new 
 
 :::image type="content" source="./plan/images/hyper-v-storage-architecture/hyperconverged-basic-compute.png" alt-text="A diagram that shows the basic deployment with a new cluster added to its compute tier.":::
 
-When you add more storage reources for hosting data without adding more computing resources, youc an either add a new node to the existing storage cluster or add a new cluster. The following diagram shows what the simple deployment looks like when you add a new cluster without adding computing resources like RAM or CPU.
+When you add more storage resources for hosting data without adding more computing resources, you can either add a new node to the existing storage cluster or add a new cluster. The following diagram shows what the simple deployment looks like when you add a new cluster without adding computing resources like RAM or CPU.
 
 :::image type="content" source="./plan/images/hyper-v-storage-architecture/hyperconverged-basic-storage.png" alt-text="A diagram that shows the basic deployment with a new storage cluster added to its storage tier.":::
 
@@ -77,7 +77,7 @@ If you plan to use this configuration, keep the following details in mind:
 
 - SAN and NAS systems provide their own availability guarantees.
 
-In this model, the compute and storage scales independently from one another. For example, if you need more RAM or CPU resources to host your VMs, you can add additional compute nodes or clusters without adding more storage. Each compute cluster can contain between one and 64 nodes.
+In this model, the compute and storage scales independently from one another. For example, if you need more RAM or CPU resources to host your VMs, you can add additional compute nodes or clusters without adding more storage. Each compute cluster can contain between 1 and 64 nodes.
 
 Storage cluster scaling is vendor-specific, which means you need to contact your vendors to understand how the storage solution they offer can scale.
 
@@ -87,13 +87,13 @@ Hyper-V can support the combining the following types of architectures in the sa
 
 - Disaggregated Hyper-V with hyperconverged storage
 
-- Disaggregated Hyper-V with SAN storage
+- Disaggregated Hyper-V with SAN
 
 - Disaggregated Hyper-V with NAS
 
 ### Network Storage Protocols
 
-Windows Server supports the following file protocols:
+Windows Server supports the following network protocols:
 
 - SMB over TCP
 
@@ -109,10 +109,10 @@ Windows Server also supports the following block protocols:
 
 - Fibre Channel
 
-- Infiniband
+- InfiniBand
 
 >[!NOTE]
->Configuration specifics ultimately determine whether your deployment can support these protocols. For example, deployments that use the Hyper-V virtual switch don't support Infiniband. However, they can support Infiniband devices when they aren't bound to the virtual switch.
+>Configuration specifics ultimately determine whether your deployment can support these protocols. For example, deployments that use the Hyper-V virtual switch don't support InfiniBand. However, they can support InfiniBand devices when they aren't bound to the virtual switch.
 
 Microsoft also provides the following in-box software-based block initiators for network storage:
 
