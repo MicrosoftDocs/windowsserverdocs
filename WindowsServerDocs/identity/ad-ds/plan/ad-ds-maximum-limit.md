@@ -95,7 +95,7 @@ A partial workaround to the RID limit is creating an extra domain for holding ac
 
 ## Maximum Number of entries in Discretionary and Security Access Control Lists
 
-This limitation applies to how many entries you can have in a discretionary access control list (DACL) or a security access control list (SACL) of an Active Directory object using the ntSecurityDescriptor attribute. The limit itself is based on the size limitations of the access control list (ACL), which is 64K. Because access control entries (ACEs) can vary in size, the actual maximum number of entries (SIDs) is about 1,820. For more details, see [How Security Descriptors and Access Control Lists Work](/previous-versions/windows/it-pro/windows-server-2003/cc781716(v=ws.10)?redirectedfrom=MSDN).
+This limitation applies to how many entries you can have in a discretionary access control list (DACL) or a security access control list (SACL) of an Active Directory object using the ntSecurityDescriptor attribute. The limit itself is based on the size limitations of the access control list (ACL), which is 64K. Because access control entries (ACEs) can vary in size due to containing one or more GUIDs, the actual maximum number of entries (SIDs) can be between 1,100 and 1,820. For more details, see [How Security Descriptors and Access Control Lists Work](/previous-versions/windows/it-pro/windows-server-2003/cc781716(v=ws.10)?redirectedfrom=MSDN).
 
 ## Group Memberships for security principals
 
@@ -194,13 +194,13 @@ So far, testing in this area has yet to reveal any new recommended limits to the
 
 For Windows 2000 Server, the recommended maximum number of domains in a forest is 800. For Windows Server 2003, the recommended maximum number of domains when the forest functional level is set to Windows Server 2003 (also known as forest functional level 2) is 1,200. This restriction is a limitation of multivalued, nonlinked attributes in Windows Server 2003. For more information, see “Maximum Database Record Size” in How the Data Store Works (/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)).
 
+For Windows Server 2025, the maximum number of domains in a forest is 3,000.
+
 ## Recommended maximum number of domain controllers in a domain
 
 We recommend that you limit the amount of domain controllers you use per domain to 1,200. This limit ensures you can reliably recover your SYSVOL in the event of a disaster.
 
 If you expect an Active Directory domain in your network to have more than 800 domain controllers, and those domain controllers host Active Directory-integrated Domain Name System (DNS) zones, we recommend you review [KB 267855](/troubleshoot/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones) for planning purposes.
-
-For more information about FRS limitations, see the [FRS Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc759297(v=ws.10)?redirectedfrom=MSDN).
 
 ## Recommended maximum Kerberos ticket size
 
@@ -213,9 +213,9 @@ For more information about Kerberos tickets, see [Additional resources for troub
 
 ## Maximum number of non-linked attribute values
 
-The Active Directory database stores non-linked attribute values in a linked directory that must fit on a database page. As a result of this size requirement, the maximum imit of non-link attributes for an object that carries only one attribute is 1,300.
+The Active Directory database stores non-linked attribute values in a linked directory that must fit on a database page. As a result of this size requirement, the maximum imit of non-link attributes for an object that carries only one attribute is 3,000.
 
-In real-world deployments, errors begin to appear when the object approaches 1,200 non-linked attributes. The status code for these types of errors is 0x00000b and maps to the string "LDAP_ADMIN_LIMIT_EXCEEDED Administration limit on the server has exceeded."
+In real-world deployments, errors begin to appear when the object approaches the non-linked attributes limit. The status code for these types of errors is 0x00000b and maps to the string "LDAP_ADMIN_LIMIT_EXCEEDED Administration limit on the server has exceeded."
 
 For more information about the limit, see the [AD database details article](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)#maximum-database-record-size), [many DNS records on a single DNS name](/troubleshoot/windows-server/identity/problems-with-dc-ad-integrated-dns-zones), and [Active Directory replication error 8304: The maximum size on an object has been exceeded](/troubleshoot/windows-server/identity/active-directory-replication-error-8304).
 
