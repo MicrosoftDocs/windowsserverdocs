@@ -23,7 +23,7 @@ If you plan to use this configuration, it's important to keep the following deta
 
 - You can optionally configure local disk resiliency for local drives. SAN and NAS systems provide their own availability guarantees. If you need more information, we recommend you contact your storage vendor.
 
-:::image type="content" source="./plan/images/hyper-v-storage-architecture/standalone-hyper-v-local-transparent.png" alt-text="A diagram showing an example of a basic deployment of a standalone Hyper-V with local disks.":::
+:::image type="content" source="media/hyper-v-storage-architecture/standalone-hyper-v-local.png" alt-text="A diagram showing an example of a basic deployment of a standalone Hyper-V with local disks.":::
 
 ## Hyperconverged Hyper-V and Storage Spaces Direct
 
@@ -37,7 +37,7 @@ If you plan to use this configuration, remember that the following details can a
 
 - In this model, each physical host contains storage and compute resources. As a result, those resources scale symmetrically. Every new host automatically adds both compute and storage resources. Each cluster can contain between 1 and 16 nodes.
 
-:::image type="content" source="./plan/images/hyper-v-storage-architecture/hyperconverged-hyper-v-storage-transparent.png" alt-text="A diagram showing a basic example of a deployment of a hyperconverged Hyper-V and Storage Spaces Direct.":::
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-hyper-v-storage.png" alt-text="A diagram showing a basic example of a deployment of a hyperconverged Hyper-V and Storage Spaces Direct.":::
 
 ## Disaggregated Hyper-V with hyperconverged storage
 
@@ -57,15 +57,15 @@ In this model, compute and storage scale independently from each other. This fea
 
 For example, the following diagram shows a simple deployment with one compute cluster and one storage cluster.
 
-:::image type="content" source="./plan/images/hyper-v-storage-architecture/hyperconverged-basic-example-transparent.png" alt-text="A diagram showing a basic deployment of disaggregated Hyper-V with hyperconverged storage.":::
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-example.png" alt-text="A diagram showing a basic deployment of disaggregated Hyper-V with hyperconverged storage.":::
 
 When you add more computing resources to run your VMs, you can either add a new node to the existing compute cluster or add a new cluster. The following diagram shows what happens to the simple deployment if you add a new cluster to it without adding more storage.
 
-:::image type="content" source="./plan/images/hyper-v-storage-architecture/hyperconverged-basic-compute.png" alt-text="A diagram that shows the basic deployment with a new cluster added to its compute tier.":::
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-compute.png" alt-text="A diagram that shows the basic deployment with a new cluster added to its compute tier.":::
 
 When you add more storage resources for hosting data without adding more computing resources, you can either add a new node to the existing storage cluster or add a new cluster. The following diagram shows what the simple deployment looks like when you add a new cluster without adding computing resources like RAM or CPU.
 
-:::image type="content" source="./plan/images/hyper-v-storage-architecture/hyperconverged-basic-storage.png" alt-text="A diagram that shows the basic deployment with a new storage cluster added to its storage tier.":::
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-storage.png" alt-text="A diagram that shows the basic deployment with a new storage cluster added to its storage tier.":::
 
 ## Disaggregated Hyper-V with NAS or SAN Storage
 
