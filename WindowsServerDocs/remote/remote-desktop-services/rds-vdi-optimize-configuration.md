@@ -12,41 +12,41 @@ ms.date: 06/05/2024
 
 # Optimizing Windows configuration for VDI desktops
 
-Although the Windows operating system is very well tuned out of the box, there are opportunities for you to refine it further, specifically for the corporate Microsoft Virtual Desktop Infrastructure (VDI) environment. In the VDI environment, many background services and tasks are disabled from the beginning. 
+Although the Windows operating system is well tuned out of the box, there are opportunities for you to refine it further, specifically for the corporate Microsoft Virtual Desktop Infrastructure (VDI) environment. In the VDI environment, many background services and tasks are disabled from the beginning. 
 
-This topic is not a blueprint, but rather a guide or starting point. Some recommendations might disable functionality that you would prefer to use, so you should consider the cost versus the benefit of adjusting any particular setting in your scenario. 
+This article is a guide or starting point for how you might optimize your configuration. Some recommendations will disable functionality that you prefer to use, so you must consider the cost versus the benefit of adjusting a particular setting in your scenario. 
 
 >[!NOTE]
 > Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
 
 ## VDI optimization principles 
 
-A "full" virtual desktop environment can present a complete desktop session, including applications, to a computer user over a network. The network delivery vehicle can be an on-premises network, the Internet, or both. Some implementations of virtual desktop environments use a "base" operating system image, which then becomes the basis for the desktops subsequently presented to the users for work. There are variations of virtual desktop implementations such as **persistent**, **non-persistent**, and **desktop session**.
+A "full" virtual desktop environment can present a complete desktop session, including applications, to a computer user over a network. The network delivery vehicle can be an on-premises network, the Internet, or both. Some implementations of virtual desktop environments use a "base" operating system image, which then becomes the basis for the desktops then presented to the users for work. There are variations of virtual desktop implementations such as **persistent**, **non-persistent**, and **desktop session**.
 
 -  The persistent type preserves changes to the virtual desktop operating system from one session to the next.
 - The non-persistent type doesn't preserve changes to the virtual desktop operating system from one session to the next.
 - The desktop session is like sessions on other virtual or physical devices, and accessed over a network. 
 
-The optimization settings could take place on a reference machine. A virtual machine (VM) would be an ideal place to build the VM, because state can be saved, checkpoints can be made, backups can be made, and so on. A default OS installation is performed to the base VM. That base VM is then optimized by removing unneeded apps, installing Windows updates, installing other updates, deleting temporary files, applying settings, and so on. 
+The optimization settings could take place on a reference machine. A virtual machine (VM) would be an ideal place to build the VM, because state can be saved, checkpoints can be made, and backups can be made. A default OS installation is performed to the base VM. That base VM is then optimized by doing things like removing unneeded apps, installing updates, deleting temporary files, and applying settings. 
 
 Security and stability are among the highest priorities for Microsoft when it comes to products and services. In the virtual desktop realm, security isn't handled much differently than physical devices. Enterprise customers may choose to utilize the built-in to Windows services of Windows Security, which comprises a suite of services that work well connected or not connected to the Internet. For those virtual desktop environments not connected to the Internet, security signatures can be downloaded proactively several times per day, because Microsoft may release more than one signature update per day. Those signatures can then be provided to the virtual desktop devices and scheduled to be installed during production, regardless of persistent or non-persistent. That way the VM protection is as current as possible. 
  
 There are some security settings that aren't applicable to virtual desktop environments that aren't connected to the Internet, and thus not able to participate in cloud-enabled security. There are other settings that "normal" Windows devices may utilize such as Cloud Experience, The Windows Store, and so on. Removing access to unused features reduces footprint, network bandwidth, and attack surface. 
 
-Regarding updates, Windows utilizes a monthly update rhythm. In some cases, virtual desktop administrators control the process of updating through a process of shutting down VMs based on a "master" or "gold" image, unseal that image which is read-only, patch the image, then reseal it and bring it back into production. Therefore, there is no need to have virtual desktop devices checking Windows Update. However, there are cases where normal patching procedures take place, like the case of persistent "personal" virtual desktop devices. In some cases, Windows Update can be utilized. In some cases, Intune could be utilized. In some cases, Microsoft Endpoint Configuration Manager (formerly SCCM) is utilized to handle update and other package delivery. It is up to each organization to determine the best approach to updating virtual desktop devices, while reducing overhead cycles. 
+Regarding updates, Windows utilizes a monthly update rhythm. In some cases, virtual desktop administrators control the update process by shutting down VMs based on a "master" or "gold" image, unsealing that read-only image, patching the image, then resealing it and bringing it back into production. Therefore, there's no need to have virtual desktop devices checking Windows Update. However, there are cases where normal patching procedures take place, like the case of persistent "personal" virtual desktop devices. In some cases, Windows Update can be utilized. In some cases, Intune could be utilized. In some cases, Microsoft Endpoint Configuration Manager (formerly SCCM) is utilized to handle update and other package delivery. It is up to each organization to determine the best approach to updating virtual desktop devices, while reducing overhead cycles. 
 
-The local policy settings, as well as many other settings in this guide, can be overridden with domain-based policy. It is recommended to go through the policy settings thoroughly and remove or not use any that aren't desired or applicable to your environment. The settings listed in this document try to achieve the best balance of performance optimization in virtual desktop environments, while maintaining a quality user experience. 
+The local policy settings, and many other settings in this guide, can be overridden with domain-based policy. It is recommended to go through the policy settings thoroughly and remove or not use any that aren't desired or applicable to your environment. The settings listed in this document try to achieve the best balance of performance optimization in virtual desktop environments, while maintaining a quality user experience. 
 
 >[!NOTE]
 > There is a set of [scripts available on GitHub](https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool) that'll do all the work items documented in this paper. The scripts are designed to be easily customizable for your environment and requirements. The main code is PowerShell, and the work is done by calling input files, which are plain text (now .JSON), with also Local Group Policy Object (LGPO) tool export files. These text files contain lists of the apps to be removed, services to be disabled, and so on. If you don't want to remove a particular app or disable a particular service, you can edit the corresponding text file and remove the item you don't want acted upon. Finally, there is an export of local policy settings that can be imported into your environment machines. It's better to have some of the settings within the base image, than to have the settings applied through group policy, as some of the settings take effect on the next restart or when a component is first used.
 
-### Non-persistent virtual desktop environments 
+## Non-persistent virtual desktop environments 
 
 When a non-persistent virtual desktop implementation is based on a base or "gold" image, the optimizations are mostly performed in the base image, and then through local settings and local policies. 
 
 With image-based non-persistent (NP) virtual desktop environments, the base image is read-only. When an NP virtual desktop device (VM) is started, a copy of the base image is streamed to the VM. Activity that occurs during startup and thereafter until the next reboot is redirected to a temporary location. Usually, the users are provided network locations to store their data. In some cases, the user’s profile is merged with the standard VM to provide the user with their settings. 
 
-One important aspect of NP virtual desktop that is based on a single image, is servicing. Updates to the operating system (OS) and components of the OS are delivered usually once per month. With image based virtual desktop environment, there is a set of processes that must be performed to get updates to the image: 
+One important aspect of NP virtual desktop that is based on a single image, is servicing. Updates to the operating system (OS) and components of the OS are delivered once per month. With image based virtual desktop environment, there's a set of processes that must be performed to get updates to the image: 
 
 - On a given host, all the VMs on that host, based on the base image must be shut down or turned off. This means the users are redirected to other VMs. 
 - In some implementations, this is referred to as "draining." The virtual machine or session host, when set to draining mode, stops accepting new requests, but continues servicing users currently connected to the device. 
@@ -72,29 +72,29 @@ Depending on the architecture of virtual desktop device, things like PreFetch an
 > [!NOTE]
 > If preparing an image using virtualization, and if connected to the Internet during image creation process, on first logon you should postpone Feature Updates by going to **Settings** > **Windows Update**.
 
-### To sysprep or not sysprep
+## To sysprep or not sysprep
 
 Windows has a built-in capability called the [System Preparation Tool](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview), also known as sysprep. The sysprep tool is used to prepare a customized Windows 10 image for duplication. The sysprep process assures the resulting OS is properly unique to run in production.
 
-There are reasons for and against running sysprep. In the case of virtual desktop environments, you may want the ability to customize the default user profile which would be used as the profile template for subsequent users that sign in using this image. You may have apps that you want installed, but also want to be able to control per-app settings.
+There are reasons for and against running sysprep. In the case of virtual desktop environments, you may want the ability to customize the default user profile, which would be used as the profile template for later users that sign in using this image. You may have apps that you want installed, but also want to be able to control per-app settings.
 
 The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications. You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO)](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10#what-is-the-local-group-policy-object-lgpo-tool) tool.
 
 To learn more about image preparation for Azure, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image)
 
-### Supportability 
+## Supportability 
 
 Anytime that Windows defaults are changed, questions arise regarding supportability. Once a virtual desktop image (VM or session) is customized, every change made to the image needs to be tracked in a change log. If a time comes to troubleshoot, often an image can be isolated in a pool and configured for problem analysis. Once a problem has been tracked to root cause, that change can then be rolled out to the test environment first, and ultimately to the production workload. 
 
-This document intentionally avoids touching system services, policies, or tasks that affect security. After that comes Windows servicing. The ability to service virtual desktop images outside of maintenance windows is removed, as maintenance windows are when most servicing events take place in virtual desktop environments, except for security software updates. Microsoft has published guidance for Windows Security in virtual desktop environments in the [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
+This document intentionally avoids touching system services, policies, or tasks that affect security. After that comes Windows servicing. The ability to service virtual desktop images outside of maintenance windows is removed, as maintenance windows are when most servicing events take place in virtual desktop environments, except for security software updates. Microsoft's guidance for Windows Security in virtual desktop environments is documented in the [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
 
-Consider supportability when altering default Windows settings. Occasionally difficult to solve problems arise when altering system services, policies, or scheduled tasks, in the name of hardening, "lightening," and so on. Consult the Microsoft Knowledge Base for current known issues regarding altered default settings. The guidance in this document, and the associated script on GitHub will be maintained with respect to known issues, if any arise. In addition, you can report issues in a number of ways to Microsoft. 
+Consider supportability when altering default Windows settings. Occasionally difficult to solve problems arise when altering system services, policies, or scheduled tasks, in the name of hardening, "lightening," and so on. Consult the Microsoft Knowledge Base for current known issues regarding altered default settings. The guidance in this document, and the associated script on GitHub are maintained with respect to known issues, if any arise. In addition, you can report issues in a number of ways to Microsoft. 
 
 You can use your favorite search engine with the terms `"start value" site:support.microsoft.com` to bring up known issues regarding default start values for services. 
 
 You might note that this document and the associated scripts on GitHub don't modify any default permissions. If you're interested in increasing your security settings, start with the project known as AaronLocker. For more information, ["AaronLocker" overview](https://github.com/microsoft/AaronLocker).
 
-### Virtual desktop optimization categories 
+## Virtual desktop optimization categories 
 
 The following categories are ways in which the virtual desktop can be optimized:
 
@@ -107,7 +107,7 @@ The following categories are ways in which the virtual desktop can be optimized:
 - Automatic Windows traces
 - Windows Defender optimization with VDI
 - Client network performance tuning by registry settings
-- Additional settings from the "Windows Restricted Traffic Limited Functionality Baseline" guidance.
+- Other settings from the "Windows Restricted Traffic Limited Functionality Baseline" guidance.
 - Disk cleanup
 
 The following sections explain each category in more detail.
@@ -154,11 +154,11 @@ As a final note on this topic, each UWP app should be evaluated for applicabilit
 > [!NOTE]
 > If you're using the scripts from GitHub, you can easily control which apps are removed before running the script. After downloading the script files, locate the AppxPackage.json file, edit that file, and remove entries for apps that you want to keep, such as Calculator, Sticky Notes, and so on.
 
-## Optional features cleanup
+### Optional features cleanup
 
 This section describes optional features that can be optimized.
 
-### Managing optional features with PowerShell
+#### Managing optional features with PowerShell
 
 You can manage Windows Optional Features using PowerShell. To enumerate currently installed Windows Features, run the following PowerShell command:
 
@@ -198,11 +198,11 @@ If you want to remove the Windows Media Player package (to free up about 60 MB d
 PS C:\Windows\system32> Remove-WindowsPackage -PackageName Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.19041.153 -Online
 ```
 
-### Enable or disabling Windows features using DISM
+#### Enable or disabling Windows features using DISM
 
 You can use the built-in `Dism.exe` tool to enumerate and control Windows Optional Features. A Dism.exe script could be developed and run during an operating system installation task sequence with [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
-### Default user settings
+#### Default user settings
 
 You can customize the Windows registry file at `C:\Users\Default\NTUSER.DAT`. Any setting changes you make to this file will be applied to any subsequent user profiles created from a machine running this image. You can control which settings you wish to apply to the default user profile by editing the **DefaultUserSettings.txt** file.
 
@@ -405,7 +405,7 @@ Internet Communication Management\ Internet Communication settings|Turn off the 
 |*Speech|Allow Automatic Update of Speech Data| N/A |**Disabled** (Specifies whether the device will receive updates to the speech recognition and speech synthesis models.)|
 |Store|Turn off the offer to update to the latest version of Windows| N/A |**Enabled** (Enables or disables the Store offer to update to the latest version of Windows. If you enable this setting, the Store application will not offer updates to the latest version of Windows.)|
 |Text Input|Improve inking and typing recognition| N/A |**Disabled** (This policy setting controls the ability to send inking and typing data to Microsoft to improve the language recognition and suggestion capabilities of apps and services running on Windows.)|
-|Windows Error Reporting|Disable Windows Error Reporting| N/A |**Enabled** (With this policy setting enabled, Windows Error Reporting does not send any problem information to Microsoft. Additionally, solution information is not available in Security and Maintenance in Control Panel.)|
+|Windows Error Reporting|Disable Windows Error Reporting| N/A |**Enabled** (With this policy setting enabled, Windows Error Reporting does not send any problem information to Microsoft. And solution information isn't available in Security and Maintenance in Control Panel.)|
 |Windows Game Recording and Broadcasting|Enables or disables Windows Game Recording and Broadcasting| N/A |**Disabled** (With this setting disabled, Windows Game Recording will not be allowed.)|
 |Windows Ink Workspace|Allow Windows Ink Workspace|Choose one of the following actions: Disabled|**Enabled** (With this setting enabled and sub-setting set to disabled, Windows Ink Workspace functionality is unavailable.)|
 |Windows Installer|Control maximum size of baseline file cache|5|**Enabled** (This policy controls the percentage of disk space available to the Windows Installer baseline file cache. With this policy setting enabled you can modify the maximum size of the Windows Installer baseline file cache.)|
@@ -551,7 +551,7 @@ Whether from Microsoft Update, or from your internal resources, apply available 
 
 #### Servicing OS and apps
 
-At some point during the image optimization process available Windows updates should be applied. There is a setting in Windows 10 update settings that can provide additional updates. You can find it at **Settings** > **Advanced options**. Once there, set **Give me updates for other uMirosoft products when I update Windows** to **On**.
+At some point during the image optimization process available Windows updates should be applied. There is a setting in Windows 10 update settings that can provide more updates. You can find it at **Settings** > **Advanced options**. Once there, set **Give me updates for other uMirosoft products when I update Windows** to **On**.
 
 This would be a good setting in case you're going to install Microsoft applications such as Microsoft Office to the base image. That way Office is up to date when the image is put in service. There are also .NET updates and certain third-party components such as Adobe that have updates available through Windows Update.
 
@@ -592,13 +592,13 @@ The following table lists some system traces that you should consider disabling 
 |WiFiSession|Diagnostic log for WLAN technology. If Wi-Fi isn't implemented, there's no need for this logger|
 |WinPhoneCritical|Diagnostic log for phone (Windows?). If not using phones, no need for this logger|
 
-#### Windows Defender optimization in the virtual desktop environment
+### Windows Defender optimization in the virtual desktop environment
 
 For more details about how to optimize Windows Defender in a virtual desktop environment, check out the [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus).
 
 The deployment guide contains procedures to service the "gold" virtual desktop image, and how to maintain the virtual desktop clients as they are running. To reduce network bandwidth when virtual desktop devices need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where practical, have those files shares on the same or close networking segments as the virtual desktop devices.
 
-#### Client network performance tuning by registry settings
+### Client network performance tuning by registry settings
 
 There are some registry settings that can increase network performance. This is especially important in environments where the virtual desktop device or physical computer has a workload that is primarily network-based. The settings in this section are recommended to tune performance for the networking workload profile, by setting up additional buffering and caching of things like directory entries and so on.
 
@@ -643,13 +643,13 @@ You can configure many of these SMB settings by using the [Set-SmbClientConfigur
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
 ```
 
-#### Additional settings from the Windows Restricted Traffic Limited Functionality Baseline guidance
+### Additional settings from the Windows Restricted Traffic Limited Functionality Baseline guidance
 
 Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
 
 The [Windows Restricted Traffic Limited Functionality Baseline](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) settings are called out in the group policy table with an asterisk.
 
-#### Disk cleanup (including using the Disk Cleanup Wizard)
+### Disk cleanup
 
 Disk cleanup can be especially helpful with gold/master image virtual desktop implementations. After the gold/master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup. The optimization scripts on Github.com have PowerShell code to perform common disk cleanup tasks
 
