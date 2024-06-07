@@ -456,8 +456,6 @@
     - name: AD FS Overview
       href: ad-fs/AD-FS-Overview.md
       items:
-      - name: What's new in Active Directory Federation Services
-        href: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
       - name: AD FS 2016 Requirements
         href: ad-fs/overview/AD-FS-Requirements.md
     - name: AD FS Design
@@ -973,7 +971,7 @@
         href: ad-fs/technical-reference/device-registration-technical-reference.md
       - name: AD FS Password Attack Protection
         href: ad-fs/technical-reference/ad-fs-password-protection.md
-    - name: AD FS 2016 FAQ
+    - name: AD FS FAQ
       href: ad-fs/overview/AD-FS-FAQ.yml
     - name: AD FS Decommission
       href: ad-fs/ad-fs-decommission.md
