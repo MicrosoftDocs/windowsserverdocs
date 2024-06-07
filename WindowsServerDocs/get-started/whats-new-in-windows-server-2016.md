@@ -393,7 +393,7 @@ Domain controllers now support Key Trust account mapping and fallback to existin
 
 AD FS for Windows Server 2016 contains the following updates.
 
-### Sign in with Microsoft Entra mutlifactor authentication
+### Sign in with Microsoft Entra multifactor authentication
 
 AD FS 2016 builds upon the multifactor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires an Microsoft Entra multifactor authentication code instead of a username or password.
 
