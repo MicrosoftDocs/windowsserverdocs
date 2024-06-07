@@ -160,7 +160,7 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 By default new Routing and Remote Access Services (RRAS) setups don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
 
-Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to get started with Remote Access, see [Install Remote Access as a VPN server](../remote/remote-access/get-started-install-ras-as-vpn.md).
+Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
 ### Server Message Block
 
