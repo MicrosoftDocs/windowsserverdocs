@@ -42,4 +42,4 @@ On the MultiPoint server:
 When successfully set up Dashboard Manager can monitor users working on the managed device.
 
 > [!IMPORTANT]
-> When monitoring managed Windows 10 devices administratrive users cannot be monitored except the server settings have been changed accordingly. See [Edit Server Settings](Edit-Server-Settings.md)
+> When monitoring managed Windows 10 devices administrative users cannot be monitored except the server settings have been changed accordingly. See [Edit Server Settings](Edit-Server-Settings.md)
