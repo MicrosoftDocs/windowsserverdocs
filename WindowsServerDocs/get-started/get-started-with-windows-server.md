@@ -4,8 +4,7 @@ description: Get started with detailed information about Windows Server and get 
 ms.topic: landing-page
 author: dknappettmsft
 ms.author: daknappe
-manager: femila
-ms.date: 6/17/2021
+ms.date: 06/05/2024
 ---
 
 # Get started with Windows Server
@@ -15,7 +14,7 @@ Windows Server is the platform for building an infrastructure of connected appli
 This collection of articles contains detailed information to help you understand and get the most from Windows Server, and help determine if you're ready to move to the latest version. Once you've checked the system requirements, upgrade options, and other information about Windows Server, you're ready to start down the path of installing the best edition and installation option for your needs.
 
 > [!TIP]
-> To download Windows Server, see [Windows Server evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) in the Evaluation Center.
+> To download Windows Server, see [Windows Server evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2025) in the Evaluation Center.
 
 > [!NOTE]
 > If you're looking for information about earlier versions that are no longer supported, see the [Windows previous versions documentation](/previous-versions/windows/).
@@ -36,10 +35,10 @@ The Windows Insider Program for Windows Server provides preview builds of Window
 
 To get started, find out more from these resources.
 
-* [What's new in Windows Server 2022](../windows-server-2022/get-started/whats-new.md) provides an overview of the latest features in Windows Server.
+* [What's new in Windows Server 2025](whats-new-windows-server-2025.md) provides an overview of the latest features in Windows Server.
 * Learn about the [different servicing channels](../get-started/servicing-channels-comparison.md), which each is used for, and what it means for your workloads and support.
 * Compare the [differences in the editions in Windows Server 2022](../get-started/editions-comparison-windows-server-2022.md).
 * Choose the right installation option based on whether you want the [Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md) or a [minimal Core interface](Getting-Started-with-Server-Core.md).
 * Understand the [hardware requirements](../get-started/hardware-requirements.md) to run Windows Server.
 * Follow the learning path for [Windows Server deployment, configuration, and administration](/training/paths/windows-server-deployment-configuration-administration/).
-* If you still need to use Windows Server 2008, Windows Server 2008 R2 (and in future Windows Server 2012, or Windows Server 2012 R2) [Extended Security Updates](extended-security-updates-overview.md) are available to help keep you safe with security updates and bulletins rated critical and important.
+* If you still need to use Windows Server 2012, or Windows Server 2012 R2 [Extended Security Updates](extended-security-updates-overview.md) are available to help keep you safe with security updates and bulletins rated critical and important.
