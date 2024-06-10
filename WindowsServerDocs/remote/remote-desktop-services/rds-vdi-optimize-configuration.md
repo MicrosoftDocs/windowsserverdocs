@@ -214,7 +214,7 @@ The following settings are applied to the default user profile registry hive, ma
 - Show shadows under windows
 - Smooth edges of screen fonts
 
-![A screenshot of the performance options menu with the relevant items selected.](media/performance-options.png)
+![A screenshot of the performance options menu with the relevant items selected.](media/rds-vdi-optimize-configuration/performance-options.png)
 
 And there is a method to disable the following two privacy settings for any user profile created after you run the optimization:
 
@@ -226,7 +226,7 @@ Optionally, disable the following two privacy settings for any user profile crea
 - Let websites provide locally relevant content by accessing my language list 
 - Show me suggested content in the Settings app 
 
-![A screenshot of the privacy settings window. The two disabled settings are highlighted in red.](media/privacy-settings.png)
+![A screenshot of the privacy settings window. The two disabled settings are highlighted in red.](media/rds-vdi-optimize-configuration/privacy-settings.png)
 
 The following are the optimization settings applied to the default user profile registry hive to optimize performance. This operation is performed by first loading the default user profile registry hive **NTUser.dat**, as the ephemeral key name **Temp**, and then making the following modifications:
 
