@@ -107,17 +107,17 @@ Microsoft Entra join enhances identity experiences for enterprise, business, and
 
 - Access organizational resources on mobile devices, such as phones and tablets, that can't be joined to a Windows Domain, whether they're corporate-owned or bring your own device (BYOD).
 
-- Single-Sign On for Office 365 and other organizational apps, websites, and resources.
+- Use Single-Sign On (SSO) for Office 365 and other organizational apps, websites, and resources.
 
-- On BYOD devices, add a work account from an on-premises domain or Azure AD to a personally owned device. You can use SSO to access work resources through apps or on the web while remaining compliant with new capabilities such as Conditional Account Control and Device Health attestation.
+- On BYOD devices, add a work account from an on-premises domain or Azure AD to a personally owned device. You can use SSO to access work resources through apps or on the web while remaining compliant with new features such as Conditional Account Control and Device Health attestation.
 
 - Mobile device management (MDM) integration lets you autoenroll devices to your mobile device management (MDM) tool (Microsoft Intune or third-party).
 
 - Set up kiosk mode and shared devices for multiple users in your organization.
 
-- Developer experience* lets you build apps that cater to both enterprise and personal contexts with a shared programming stack.
+- Developer experience lets you build apps that cater to both enterprise and personal contexts with a shared programming stack.
 
-- Imaging option lets you choose between imaging and allowing your users to configure corp-owned devices directly during the first-run experience.
+- The imaging option lets you choose between imaging and allowing your users to configure corporate-owned devices directly during the first-run experience.
 
 ### Active Directory Federation Services
 
