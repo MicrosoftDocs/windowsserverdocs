@@ -5,7 +5,7 @@ author: Orin-Thomas
 ms.topic: how-to
 ms.author: orthomas
 contributor: orthomas
-ms.date: 06/95/2024
+ms.date: 06/05/2024
 ---
 # Flexible Single Master Operations roles
 
