@@ -10,7 +10,7 @@ ms.date: 05/31/2024
 
 # Active Directory LDAP client performance counters
 
-Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
+Applies to: Windows Server 2025 (preview), Windows Server 2022
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
@@ -19,17 +19,11 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 
 LDAP is an integral part of Windows Server that enables querying and modification of directories. LDAP interacts with Active Directory to manage all network resources, including users, groups, permissions, and other data stored within the directory.
 
-<!-- Need to verify lines 23-26 are accurate  -->
-LDAP performance counters in Windows Server operates in two basic modes:
-
-- DNS-based discovery
-- NetBIOS-based discovery
-
 You can access these performance counters at Performance Monitor.
 
 ## LDAP client performance counters
 
-LDAP client performance counters measure per process running on the local client machine. Multiple processes can be asessed simultaneously.Examples of available counters include binds, connections, and operations.
+LDAP client performance counters measure per process running on the local client machine. Multiple processes can be assessed simultaneously. Examples of available counters include binds, connections, and operations.
 
 The following table shows the client counters that can be added when running LDAP performance counters, their counter types, and descriptions of what object data they generate.
 
