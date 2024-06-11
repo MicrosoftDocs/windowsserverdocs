@@ -70,7 +70,54 @@ Active Directory Certificate Services (AD CS) in Windows Server 2016 increases s
 
 ### Active Directory Domain Services
 
-Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices. For more information, see [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](../identity/whats-new-active-directory-domain-services.md).
+Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices.
+
+#### Privileged access management
+
+Privileged access management (PAM) helps mitigate security concerns in Active Directory environments caused by credential theft techniques, such as pass-the-hash, spear phishing, and so on. You can configure this new administrative access solution using Microsoft Identity Manager (MIM), and it introduces the following features:
+
+- The bastion Active Directory forest, provisioned by MIM, has a special PAM trust ith an existing forest. Bastion forests are a new type of Active Directory environment that's free of malicious activity due to being isolated from existing forests and only allowing access to privileged accounts.
+
+- New processes in MIM to request administrative privileges, including new workflows for approving requests.
+
+- New shadow security principals, or groups, provisioned in the bastion forest by MIM in response to administrative privilege requests. The shadow security groups have an attribute that references the SID of an administrative group in an existing forest. This allows the shadow group to access resources in existing forests without changing any access control lists (ACLs).
+
+- An expiring links feature, which enables limited time memberships to a shadow group. You can add users to the group for a set amount of time that allows them to perform administrative tasks. The limited time membership is configured by a time-to-live (TTL) value that's propagated to Kerberos ticket lifetime.
+
+  >[!NOTE]
+  >Expiring links are available on all linked attributes. However, only the *member/memberOF* linked attribute relationship between a group and a user comes preconfigured with PAM to use the expiring links feature.
+
+- Built-in Kerberos Domain Controller (KDC) enhancements allow Active Directory domain controllers to restrict Kerberos ticket lifetimes to the lowest possible TTL value when user have multiple limited-time memberships to administrative groups. For example, if you're a member of time-bound group A, then when you sign on, the Kerberos ticket-granting ticket (TGT) lifetime is equal to how much time you have left in group A. If you also join time-bound group B, which has a lower TTL than group A, then your TGT lifetime is equal to how much time you have left in group B.
+
+- New monitoring capabilities that let you identify which users requested access, what access the administrators granted to them, and what activities they performed while signed in.
+
+#### Microsoft Entra join
+
+Microsoft Entra join enhances identity experiences for enterprise, business, and education customers, as well as including improved capabilities for corporate and personal devices.
+
+- Modern Settings are now available on corporate-owned Windows devices. You no longer need a personal Microsoft account to use core Windows capabilities, and they new run using existing user work accounts to ensure compliance. These services work on PCs joined to an on-premises Windows domain and devices joined to Microsoft Entra. These settings include:
+
+  - Roaming or personalization, accessibility settings, and credentials
+
+  - Backup and restore
+
+  - Access to the Microsoft Store with your work account
+
+  - Live tiles and notifications
+
+- Access organizational resources on mobile devices, such as phones and tablets, that can't be joined to a Windows Domain, whether they're corporate-owned or bring your own device (BYOD).
+
+- Single-Sign On for Office 365 and other organizational apps, websites, and resources.
+
+- On BYOD devices, add a work account from an on-premises domain or Azure AD to a personally owned device. You can use SSO to access work resources through apps or on the web while remaining compliant with new capabilities such as Conditional Account Control and Device Health attestation.
+
+- Mobile device management (MDM) integration lets you autoenroll devices to your mobile device management (MDM) tool (Microsoft Intune or third-party).
+
+- Set up kiosk mode and shared devices for multiple users in your organization.
+
+- Developer experience* lets you build apps that cater to both enterprise and personal contexts with a shared programming stack.
+
+- Imaging option lets you choose between imaging and allowing your users to configure corp-owned devices directly during the first-run experience.
 
 ### Active Directory Federation Services
 
