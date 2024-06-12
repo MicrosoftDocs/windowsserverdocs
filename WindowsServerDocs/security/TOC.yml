@@ -148,12 +148,24 @@
       - name: Group Policy Settings Used in Windows Authentication
         href: windows-authentication/group-policy-settings-used-in-windows-authentication.md
   - name: Credentials Protection and Management
-    href: /windows/security/identity-protection/credential-guard/credential-guard
+    href: credentials-protection-and-management/credentials-protection-and-management.md
     items:
     - name: Configuring additional LSA Protection
       href: credentials-protection-and-management/configuring-additional-lsa-protection.md
-    - name: Protect Remote Desktop credentials with Remote Credential Guard
-      href: /windows/security/identity-protection/remote-credential-guard
+    - name: Credential Guard
+      items:
+       - name: Overview
+         href: /windows/security/identity-protection/credential-guard?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: How Credential Guard Works
+         href: /windows/security/identity-protection/credential-guard/how-it-works?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: Configure Credential Guard
+         href: /windows/security/identity-protection/credential-guard/configure?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: Additional mitigations 
+         href: /windows/security/identity-protection/credential-guard/additional-mitigations?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: Considerations and known issues
+         href: /windows/security/identity-protection/credential-guard/considerations-known-issues?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: Protect Remote Desktop credentials with Remote Credential Guard
+         href: /windows/security/identity-protection/remote-credential-guard?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Protected Users Security Group
       href: credentials-protection-and-management/protected-users-security-group.md
     - name: Authentication Policies and Authentication Policy Silos
