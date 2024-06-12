@@ -83,25 +83,25 @@ Follow these steps to migrate a virtual desktop collection from a source server 
 
 Follow these steps to migrate RD Web Access servers:
 
-- Join the destination servers running the new version of Windows Server to the Remote Desktop Services deployment and install the RD Web role
+1. Join the destination servers running the new version of Windows Server to the Remote Desktop Services deployment and install the RD Web role
 
-- Use [IIS Web Deploy tool](https://www.iis.net/) to migrate the RD Web website settings from the current RD Web Access servers to the destination servers running the new version of Windows Server.
+1. Use [IIS Web Deploy tool](https://www.iis.net/) to migrate the RD Web website settings from the current RD Web Access servers to the destination servers running the new version of Windows Server.
 
-- [Migrate certificates](#migrate-certificates) to the destination servers running the new version of Windows Server.
+1. [Migrate certificates](#migrate-certificates) to the destination servers running the new version of Windows Server.
 
-- Remove the source servers from the Remote Desktop Services deployment.
+1. Remove the source servers from the Remote Desktop Services deployment.
 
 ## Migrate RD Gateway servers
 
 Follow these steps to migrate RD Gateway servers:
 
-- Join the destination servers running the new version of Windows Server to the Remote Desktop Services deployment and install the RD Gateway role
+1. Join the destination servers running the new version of Windows Server to the Remote Desktop Services deployment and install the RD Gateway role
 
-- Use the [IIS Web Deploy tool](https://www.iis.net/) to migrate the RD Gateway endpoint settings from the current RD Gateway servers to the destination servers running the new version of Windows Server.
+1. Use the [IIS Web Deploy tool](https://www.iis.net/) to migrate the RD Gateway endpoint settings from the current RD Gateway servers to the destination servers running the new version of Windows Server.
 
-- [Migrate certificates](#migrate-certificates) to the destination servers running the new version of Windows Server.
+1. [Migrate certificates](#migrate-certificates) to the destination servers running the new version of Windows Server.
 
-- Remove the source servers from the Remote Desktop Services deployment.
+1. Remove the source servers from the Remote Desktop Services deployment.
 
 ## Migrate RD Licensing servers
 

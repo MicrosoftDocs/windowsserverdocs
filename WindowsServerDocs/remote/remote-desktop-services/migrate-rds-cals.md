@@ -12,11 +12,11 @@ manager: scottman
 
 You have three options to migrate your RDS CALs:
 
-1. Automatic connection method: This recommended method communicates via internet directly to the Microsoft Clearinghouse outbound over TCP port 443.
+- **Automatic connection method**: This recommended method communicates via internet directly to the Microsoft Clearinghouse outbound over TCP port 443.
 
-1. Using a web browser: This method allows migration when the server running the Remote Desktop Licensing Manager tool does not have internet connectivity, but the administrator has internet connectivity on a separate device. The URL for the Web migration method is displayed in the Manage RDS CALs Wizard.
+- **Using a web browser**: This method allows migration when the server running the Remote Desktop Licensing Manager tool does not have internet connectivity, but the administrator has internet connectivity on a separate device. The URL for the Web migration method is displayed in the Manage RDS CALs Wizard.
 
-1. Using a telephone: This method allows the administrator to complete the migration process over the phone with a Microsoft representative. The appropriate telephone number is determined by the country/region that you chose in the Activate Server Wizard and is displayed in the Manage RDS CALs Wizard.
+- **Using a telephone**: This method allows the administrator to complete the migration process over the phone with a Microsoft representative. The appropriate telephone number is determined by the country/region that you chose in the Activate Server Wizard and is displayed in the Manage RDS CALs Wizard.
 
 In this article, the [establish RDS CAL migration method](#establish-rds-cal-migration-method) highlights the general steps common across any RDS CAL migration method, while [migrate RDS CALs](#migrate-rds-cals) highlights the steps specific to each migration method.
 

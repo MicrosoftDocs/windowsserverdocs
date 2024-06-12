@@ -40,12 +40,12 @@ For detailed information and other installation options, see [Install or uninsta
 
 1. In the **RD Licensing Manager**, select the server, and then select **Action** > **Activate Server**.
 
-1. Confirm your preferred Connection method for license server activation and select **Next**.. The three options available are:
-    1. **Automatic connection (recommended)**: This recommended method communicates via internet directly to the Microsoft Clearinghouse outbound over TCP port 443.
+1. Confirm your preferred Connection method for license server activation and select **Next**. The three options available are:
+    - **Automatic connection (recommended)**: This recommended method communicates via internet directly to the Microsoft Clearinghouse outbound over TCP port 443.
 
-    1. **Web Browser**: This method requires the administrator to connect to the Microsoft Clearinghouse web site. Use this method if the license server doesn't have internet access, but you have internet access through another computer.
+    - **Web Browser**: This method requires the administrator to connect to the Microsoft Clearinghouse web site. Use this method if the license server doesn't have internet access, but you have internet access through another computer.
 
-    1. **Telephone**: This method allows the administrator to complete the migration process over the phone with a Microsoft Clearinghouse operator. Use this method if you don't have internet access.
+    - **Telephone**: This method allows the administrator to complete the migration process over the phone with a Microsoft Clearinghouse operator. Use this method if you don't have internet access.
     
 ### Activate with automatic connection
 
@@ -63,7 +63,7 @@ For detailed information and other installation options, see [Install or uninsta
 
 1. Complete the steps on the Remote Desktop Licensing Web Site.
 
-1. Return to the **License Server Activation** page and enter in the **license server ID**. Selext **Next**.
+1. Return to the **License Server Activation** page and enter in the **license server ID**. Select **Next**.
 
 ### Activate by telephone
 

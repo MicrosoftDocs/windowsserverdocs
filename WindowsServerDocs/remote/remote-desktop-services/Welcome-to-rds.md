@@ -32,5 +32,5 @@ With these options and configurations, you have the flexibility to deploy the de
 
 Here are some next steps to help you get a better understanding of RDS and even start deploying your own environment:
 - Understand the [supported configurations](rds-supported-config.md) for RDS with the various Windows and Windows Server versions
-- [Plan and design](rds-plan-and-design.md) an RDS environment to accommodate various requirements, such as high availability and multi-factor authentication.
+- [Plan and design](rds-plan-and-design.md) an RDS environment to accommodate various requirements, such as high availability and multifactor authentication.
 - Review the [Remote Desktop Services architecture models](desktop-hosting-logical-architecture.md) that work best for your desired environment.

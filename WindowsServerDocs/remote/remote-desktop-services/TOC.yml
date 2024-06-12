@@ -86,7 +86,7 @@
       - name: Activate the license server
         href: rds-activate-license-server.md
       - name: Reactivate or Deactivate the license server
-        href: rds-reactivate-deactivate-license-server.md
+        href: remote-desktop-services-reactivate-deactivate-license-server.md
       - name: Install RDS CALs on the license server
         href: rds-install-cals.md
       - name: License RDS session hosts
@@ -206,7 +206,7 @@
       - name: Privacy settings for managed apps and desktops
         href: clients/remote-privacy-settings.md
       - name: Remote Desktop Web Access FAQ
-        href: rd-web-access-faq.yml 
+        href: remote-desktop-web-access-faq.yml 
     - name: Known issues
       items:
       - name: Clients can't connect and see "No licenses available" error
