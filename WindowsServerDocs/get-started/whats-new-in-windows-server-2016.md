@@ -119,6 +119,25 @@ Microsoft Entra join enhances identity experiences for enterprise, business, and
 
 - The imaging option lets you choose between imaging and allowing your users to configure corporate-owned devices directly during the first-run experience.
 
+#### Windows Hello For Business
+
+Windows Hello for Business is a key-based authentication approach for organizations and consumers that goes beyond passwords. This form of authentication relies on credentials that are resistant to breaches, theft, and phishing.
+
+The user signs in to the device with a biometric or PIN linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), by phone, or a different notification mechanism.
+
+For more information, see, [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+
+#### Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels
+
+Although File Replication Service (FRS) and the Windows Server 2003 functional levels were deprecated in previous versions of Windows Server, we would like to remind you that AD DS no longer supports Windows Server 2003. You should remove any domain controller that runs Windows Server 2003 from the domain. You should also raise the domain and forest functional level to at least Windows Server 2008.
+
+At the Windows Server 2008 and higher domain functional levels, AD DS uses Distributed File Service (DFS) Replication to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication automatically replicates the SYSVOL folder. If you created the domain at a lower functional level, you must migrate from using FRS to DFS replication for the SYSVOL folder. For migration steps, you can either follow the directions in [Install, upgrade, or migrate to Windows Server](install-upgrade-migrate.md) or refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+
+For more information, see the following resources:
+
+- [Understanding Active Directory Domain Services (AD DS) Functional Levels](../identity/ad-ds/active-directory-functional-levels.md)
+- [How to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels)
+
 ### Active Directory Federation Services
 
 Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories.
