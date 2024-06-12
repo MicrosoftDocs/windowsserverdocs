@@ -45,6 +45,9 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 - You can access and use Windows Admin Center tool application programming interfaces (APIs) through other methods during an active session of Windows Admin Center if you have access to that session. The actions you take using these APIs only affect the machine you installed Windows Admin Center on, also known as the gateway machine. They don't affect machines managed remotely without authentication through the Windows Admin Center gateway.
 
+- Some APIs used by Windows Admin Center, including the DeploymentShare API, require the user to be a local administrator. Network share creation operations cannot be performed by a standard Windows user by default. Windows Admin Center cannot elevate a standard user account to administrator. Adding the user to the "Gateway administrators" group in Settings only changes the permissions the user has within the gateway, not on the system.
+   - You may not run into this issue on modernized gateway builds of Windows Admin Center. By default, modernized gateway builds utilize a form login to access the gateway, which does not have the local administrator restriction. Existing versions of Windows Admin Center utilize NTLM/Kerberos, which obtains a token limited to the localhost environment. NTLM/Kerberos login is also available on modernized gateway builds.
+
 ### Extension Manager
 
 - When you update Windows Admin Center, you must reinstall your extensions.
