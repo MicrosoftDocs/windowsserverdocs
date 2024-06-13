@@ -42,7 +42,9 @@ Consider how you want to set up the following:
 - **Network preference**: Will you allow live migration traffic through any available network, or isolate the traffic to specific networks? As a security best practice, we recommend that you isolate the traffic onto trusted, private networks because live migration traffic is not encrypted when it is sent over the network. Network isolation can be achieved through a physically isolated network or through another trusted networking technology such as VLANs.
 
 >[!IMPORTANT]
->Starting with Windows Server 2025 (preview), Credential Guard is automatically enabled by default on deployments that meet certain requirements.
+>Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
+Starting with Windows Server 2025 (preview), Credential Guard is automatically enabled by default on deployments that meet certain requirements.
 
 ## <a name="BKMK_Step1"></a>Step 1: Configure constrained delegation (optional)
 If you have decided to use Kerberos to authenticate live migration traffic, configure constrained delegation using an account that is a member of the Domain Administrators group.
@@ -67,9 +69,9 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
 
 9. From **Add Services**, in the list of available services, do the following and then click **OK**:
 
-    -   To move virtual machine storage, select **cifs**. This is required if you want to move the storage along with the virtual machine, as well as if you want to move only a virtual machine's storage. If the server is configured to use SMB storage for Hyper-V, this should already be selected.
+    - To move virtual machine storage, select **cifs**. This is required if you want to move the storage along with the virtual machine, as well as if you want to move only a virtual machine's storage. If the server is configured to use SMB storage for Hyper-V, this should already be selected.
 
-    -   To move virtual machines, select **Microsoft Virtual System Migration Service**.
+    - To move virtual machines, select **Microsoft Virtual System Migration Service**.
 
 10. On the **Delegation** tab of the Properties dialog box, verify that the services you selected in the previous step are listed as the services to which the destination computer can present delegated credentials. Click **OK**.
 
