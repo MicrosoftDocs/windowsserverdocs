@@ -33,7 +33,7 @@ Supported domain controller operating systems:
 * Windows Server 2019
 * Windows Server 2016
 
-The minimum requirement to add one a domain controller of one of these versions of Windows Server is a Windows Server 2008 functional level. The domain also has to use DFS-R as the engine to replicate SYSVOL.
+The minimum requirement to add a Domaincontroller running Windows Server 2016 and newer is a functional Level of Windows Server 2008. That is, because Windows Server 2016 and newer only supports DFS-R as replication engine for SYSVOL. The domain also has to use DFS-R as the engine to replicate SYSVOL, when you want to install a Domaincontroller on Windows Server 2016, 2019, 2022, of course. 
 
 ### Windows Server 2016 forest functional level features
 
