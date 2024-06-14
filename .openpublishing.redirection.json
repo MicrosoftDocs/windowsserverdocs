@@ -11579,6 +11579,26 @@
       "source_path": "WindowsServerDocs/identity/ad-ds/plan/Finding-Additional-Resources-for-Enabling-Advanced-Features.md",
       "redirect_url": "/windows-server/identity/ad-ds/plan/enabling-advanced-features-for-ad-ds",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-started.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-hosting-partners.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-in-azure.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-integrate-with-azure.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
     }
   ]
 }
