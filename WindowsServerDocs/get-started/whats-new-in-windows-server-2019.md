@@ -195,17 +195,35 @@ Here's what's new in Storage Replica. For details, see [What's new in Storage Re
 
 ## Failover Clustering
 
-Here's a list of what's new in Failover Clustering. For details, see [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
+We added the following features to failover clustering in Windows Server 2019:
 
-- Cluster sets
-- Azure-aware clusters
-- Cross-domain cluster migration
-- USB witness
-- Cluster infrastructure improvements
-- Cluster Aware Updating supports Storage Spaces Direct
-- File share witness enhancements
+- Cluster sets group multiple clusters together into a loosely coupled grouping of multiple failover clusters that come in three types: compute, storage, and hyper-converged. This grouping increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. With cluster sets, you can move online virtual machines between clusters within the cluster set. For more information, see [Cluster sets](../failover-clustering/cluster-set.md).
+
+- Clusters are now Azure-aware by default. Azure-aware clusters automatically detect when they're running in Azure IaaS virtual machines, then optimize their configuration to achieve the highest levels of availability. These optimizations include proactive failover and logging of Azure planned maintenance events. Automated optimization makes deployment simpler by removing the need to configure the load balancer with Distributed Network Name for the cluster name.
+
+- Cross-domain cluster migration lets failover clusters dynamically move from one Active Directory domain to another, simplifying domain consolidation and allowing hardware partners to create clusters and join them to the customer's domain at a later time.
+
+- The USB witness feature lets you use a USB drive attached to a network switch as a witness in determining quorum for a cluster. This feature includes extended File Share Witness support for any SMB2-compliant device.
+
+- The CSV cache is now enabled by default to boost virtual machine performance. MSDTC now supports Cluster Shared Volumes to allow deploying MSDTC workloads on Storage Spaces Direct, such as with SQL Server. Enhanced logic to detect partitioned nodes with self-healing to return nodes to cluster membership. Enhanced cluster network route detection and self-healing.
+
+- Cluster Aware Updating (CAU) is now integrated and aware of Storage Spaces Direct, validating and ensuring data resynchronization completes on each node. Cluster Aware Updating inspects updates to intelligently restart only if necessary. This feature lets you restart all servers in the cluster for planned maintenance.
+
+- You can now use file share witnesses in the following scenarios:
+
+  - Absent or poor Internet access because of a remote location, preventing the use of a cloud witness.
+  
+  - Lack of shared drives for a disk witness. For example, a configuration that doesn't use shared disks, such as Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an * Exchange Database Availability Group (DAG).
+  
+  - Lack of domain controller connection due to the cluster being behind a DMZ.
+  
+  - A workgroup or cross-domain cluster that doesn't have an Active Directory cluster name object (CNO).
+
 - Cluster hardening
+
 - Failover Cluster no longer uses NTLM authentication
+
+    Windows Server now also blocks using a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
 
 ## Application Platform
 
