@@ -1,7 +1,7 @@
 ---
 ms.assetid: 2a5d5271-6ac6-4c1b-b4ef-9b568932a55a
-title: Active Directory domain-wide schema updates
-description: Domain-wide schema updates performed by adprep /domainprep when promoting a Domain Controller
+title: Active Directory domain-wide updates
+description: Domain-wide updates performed by adprep /domainprep when promoting a Domain Controller
 author: iainfoulds
 ms.author: justinha
 manager: daveba
@@ -12,7 +12,7 @@ ms.custom: inhenkel
 ---
 # Domain-wide schema updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can review the following set of changes to help understand and prepare for the schema updates performed by adprep /domainprep in Windows Server.
 
@@ -20,9 +20,9 @@ Beginning in Windows Server 2012, Adprep commands run automatically as needed du
 
 For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](/windows/win32/secauthz/ace-strings). For more information about how to interpret the security ID (SID) strings, see [SID strings](/windows/win32/secauthz/sid-strings).
 
-## Windows Server (Semi-Annual Channel): Domain-wide updates
+## Windows Server (Semi-Annual Channel) and Windows Server 2019: Domain-wide updates
 
-After the operations that are performed by **domainprep** in Windows Server 2016 (operation 89) complete, the **revision** attribute for the CN=ActiveDirectoryUpdate,CN=DomainUpdates,CN=System,DC=ForestRootDomain object is set to **16**.
+After the operations that are performed by **domainprep** in Windows Server 2019 (operation 89) complete, the **revision** attribute for the CN=ActiveDirectoryUpdate,CN=DomainUpdates,CN=System,DC=ForestRootDomain object is set to **16**.
 
 |Operations number and GUID|Description|Permissions|
 |------------------------------|---------------|--------------|---------------|
