@@ -225,6 +225,10 @@ We added the following features to failover clustering in Windows Server 2019:
 
     Windows Server now also blocks using a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
 
+- Intra-cluster communication over Server Message Block (SMB) for Cluster Shared Volumes and Storage Spaces Direct now uses certificates for extra platform security. This cluster hardening allows Failover Clusters to operate with no dependencies on NTLM and enable security baselines.
+
+- Failover Clusters no longer use NTLM authentication. Instead, Windows Server 2019 clusters now exclusively use Kerberos and certificate-based authentication. Users don't need to make any changes or deploy anything to take advantage of this security enhancement. This change also lets you deploy failover clusters in environments where NTLM is disabled.
+
 ## Application Platform
 
 ### Linux containers on Windows

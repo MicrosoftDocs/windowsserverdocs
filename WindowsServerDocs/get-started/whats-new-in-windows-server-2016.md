@@ -217,27 +217,83 @@ You can now use storage quality of service (QoS) to centrally monitor end-to-end
 
 For more info, see [Storage Quality of Service](../storage/storage-qos/storage-qos-overview.md).
 
-## Failover Clustering
-
-Windows Server 2016 includes many new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
-
-### Cluster Operating System Rolling Upgrade
-
-Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
-
-For more info, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
-
-### Cloud Witness
-
-Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in the  quorum calculations. You can configure cloud witness as a quorum witness using the Configure a Cluster Quorum Wizard.
-
-For more info, see [Deploy Cloud Witness](../failover-clustering/deploy-cloud-witness.md).
-
 ### Health Service
 
 The Health Service improves the day-to-day monitoring, operations, and maintenance experience of cluster resources on a Storage Spaces Direct cluster.
 
 For more info, see [Health Service](../failover-clustering/health-service-overview.md).
+
+## Failover Clustering
+
+Windows Server 2016 includes many new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature.
+
+### Cluster Operating System Rolling Upgrade
+
+Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or Scale-Out File Server workloads. You can use this feature to avoid downtime penalties against Service Level Agreements (SLAs).
+
+For more information, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
+
+### Cloud Witness
+
+Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in quorum calculations. You can configure Cloud Witness as a quorum witness using the Configure a Cluster Quorum wizard.
+
+For more info, see [Deploy Cloud Witness](../failover-clustering/deploy-cloud-witness.md).
+
+### Virtual Machine resiliency
+
+Windows Server 2016 includes increased virtual machine (VM) compute resiliency to help reduce intra-cluster communication issues in your compute cluster. This increased resiliency includes the following updates:
+
+- You can now configure the following options to define how the VMs should behave during transient failures:
+
+  - **Resiliency Level** defines how your deployment should handle transient failures.
+
+  - **Resiliency Period**  defines how long all VMs are allowed to run isolated.
+
+- Unhealthy nodes are quarantined and are no longer allowed to join the cluster. This feature prevents unhealthy nodes from negatively affecting other nodes and the overall cluster.
+
+For more information about compute resiliency features, see [Virtual Machine Compute Resiliency in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/virtual-machine-compute-resiliency-in-windows-server-2016/ba-p/372027).
+
+Windows Server 2016 VMs also include new storage resiliency features for handling transient storage failures. Improved resiliency helps preserve tenant VM session states in the event of a storage disruption. When a VM disconnects from its underlying storage, it pauses and waits for storage to recover. While paused, the VM retains the context of applications that were running in it at the time of the storage failure. When the connection between the VM and storage is restored, the VM returns to its running state. As a result, the tenant machine's session state is retained on recovery.
+
+The new storage resiliency features also apply to guest clusters.
+
+### Diagnostic improvements
+
+To help diagnose issues with failover clusters, Windows Server 2016 includes the following:
+
+- Several enhancements to cluster log files, such as Time Zone Information and DiagnosticVerbose log, make it easier to troubleshoot failover clustering issues. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372005).
+
+- A new type of active memory dump filters out most memory pages allocated to VMs, making the memory.dmp file much smaller and easier to save or copy. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372008).
+
+### Site-aware failover clusters
+
+Windows Server 2016 includes site-aware failover clusters that enable group nodes in stretched clusters based on their physical location, or site. Cluster site-awareness enhances key operations during the cluster lifecycle, such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/site-aware-failover-clusters-in-windows-server-2016/ba-p/372060).
+
+### Workgroup and Multi-domain clusters
+
+In Windows Server 2012 R2 and earlier, a cluster can only be created between member nodes joined to the same domain. Windows Server 2016 breaks down these barriers and introduces the ability to create a Failover Cluster without Active Directory dependencies. You can now create failover clusters in the following configurations:
+
+- Single-domain Clusters, which have all their nodes joined to the same domain.
+
+- Multi-domain Clusters, which have nodes that are members of different domains.
+
+- Workgroup Clusters, which have nodes that are member servers or workgroups that aren't domain-joined.
+
+For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/workgroup-and-multi-domain-clusters-in-windows-server-2016/ba-p/372059)
+
+### Virtual Machine Load Balancing
+
+Virtual Machine Load Balancing is a new feature in Failover Clustering that seamlessly load balances VMs across the nodes in a cluster. The feature identifies overcommitted nodes based on VM memory and CPU utilization on the node. It then live migrates the VMs from the overcommitted node to nodes with available bandwidth. You can adjust how aggressively the feature balances nodes to ensure optimal cluster performance and utilization. Load Balancing is enabled by default in Windows Server 2016 Technical Preview. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled.
+
+### Virtual Machine Start Order
+
+Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for VMs and other groups in a cluster. You can now group VMs into tiers, then create start order dependencies between different tiers. These dependencies ensure that the most important VMs, such as Domain Controllers or Utility VMs, start up first. VMs on lower-priority tiers don't start until after the VMs that they have a dependency on start up.
+
+### Simplified SMB Multichannel and Multi-NIC Cluster Networks
+
+Failover cluster networks are no longer limited to a single network interface card (NIC) per subnet or network. With Simplified Server Message Block (SMB) Multichannel and Multi-NIC Cluster Networks, network configuration is automatic and every NIC on the subnet can be used for cluster and workload traffic. This enhancement allows customers to maximize network throughput for Hyper-V, SQL Server Failover Cluster Instance, and other SMB workloads.
+
+For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](smb-multichannel.md).
 
 ## Application development
 
