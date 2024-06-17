@@ -19,9 +19,9 @@ Hyper-V supports several non-clustered, or standalone, configurations where you 
 
 If you plan to use this configuration, it's important to keep the following details that can affect high availability in your deployment in mind:
 
-- This configuration doesn't support automatic failover of virtual machine (VM) workloads due to its compute systems being non-clustered. For example, if the physical host loses power, the VMs running on it will restart when you power the physical host back on. However, you can manually live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
+- This configuration doesn't support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute systems being non-clustered. For example, if the physical host loses power, the VMs running on it will restart when you power the physical host back on. However, you can manually live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
 
-- You can optionally configure local disk resiliency for local drives. SAN and NAS systems provide their own availability guarantees. If you need more information, we recommend you contact your storage vendor.
+- You can optionally configure local disk resiliency for local drives using hardware or software solutions such as [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview). SAN and NAS systems provide their own availability guarantees. If you need more information, we recommend you contact your storage vendor.
 
 :::image type="content" source="media/hyper-v-storage-architecture/standalone-hyper-v-local.png" alt-text="A diagram showing an example of a basic deployment of a standalone Hyper-V with local disks.":::
 
@@ -29,7 +29,7 @@ If you plan to use this configuration, it's important to keep the following deta
 
 In this configuration, you install Hyper-V and Storage Spaces Direct on each node in a cluster. Each node contains local disks with data replicated to other nodes in the same cluster.
 
-If you plan to use this configuration, remember that the following details can affect the performance of your deployment:
+If you plan to use this configuration, remember that the following details can affect the availability of your deployment:
 
 - VMs automatically failover to any node in the cluster in the event of a disaster scenario.
 
@@ -41,7 +41,7 @@ If you plan to use this configuration, remember that the following details can a
 
 ## Disaggregated Hyper-V with hyperconverged storage
 
-In this configuration, you install Hyper-V and Storage Spaces Direct in separate clusters and have the VMs access their storage over the network.
+In this configuration, you install Hyper-V and Storage Spaces Direct in separate clusters and access the VMs' configuration and storage over the network.
 
 If you plan to use this configuration, keep the following details in mind:
 
@@ -49,13 +49,13 @@ If you plan to use this configuration, keep the following details in mind:
 
 - Data gets replicated to other nodes in the cluster to increase storage resilience. Storage Spaces Direct supports several storage resiliency models. For more information, see [Fault tolerance and storage efficiency on Azure Stack HCI and Windows Server clusters](/azure-stack/hci/concepts/fault-tolerance).
 
-In this model, compute and storage scale independently from each other. This feature makes hyperconverged storage ideal for scenarios where your storage and compute requirements grow at different rates. For example, if you need more RAM or CPU resources to host VMs, you can add extra clusters without also adding more storage. If you have VMs that consume a lot of storage but don't consume many CPU resources, you can add another storage cluster without adding more compute resources.
+In this model, compute and storage scale independently from each other. This architecture is ideal for scenarios where your storage and compute requirements grow at different rates. For example, if you need more RAM or CPU resources to host VMs, you can add extra cluster nodes without also adding more storage. If you have VMs that consume a lot of storage but don't consume many CPU resources, you can add another storage node  or cluster without adding more compute resources.
 
-- Each Compute cluster can contain between 1 and 64 nodes.
+- Each compute cluster can contain between 1 and 64 nodes.
 
 - Each storage cluster can contain between 1 and 16 nodes.
 
-For example, the following diagram shows a simple deployment with one compute cluster and one storage cluster.
+The following diagram shows a simple example deployment with one compute cluster and one storage cluster.
 
 :::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-example.png" alt-text="A diagram showing a basic deployment of disaggregated Hyper-V with hyperconverged storage.":::
 
@@ -93,7 +93,7 @@ Hyper-V can support the combining the following types of architectures in the sa
 
 ### Network Storage Protocols
 
-Windows Server supports the following network protocols:
+Windows Server supports the following network storage protocols:
 
 - SMB over TCP
 
@@ -116,7 +116,7 @@ Windows Server also supports the following block protocols:
 
 Microsoft also provides the following in-box software-based block initiators for network storage:
 
-- SCSI
+- iSCSI
 
 - NVMe-oF (coming soon) <!--Is this in preview? If not, maybe we should add it in later.-->
 
