@@ -23,7 +23,7 @@ If you plan to use this configuration, it's important to keep the following deta
 
 - You can optionally configure local disk resiliency for local drives using hardware or software solutions such as [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview). SAN and NAS systems provide their own availability guarantees. If you need more information, we recommend you contact your storage vendor.
 
-:::image type="content" source="media/hyper-v-storage-architecture/standalone-hyper-v-local.png" alt-text="A diagram showing an example of a basic deployment of a standalone Hyper-V with local disks.":::
+:::image type="content" source="media/hyper-v-storage-architecture/standalone-hyper-v-local.png" alt-text="A diagram showing an example of a basic deployment of a standalone Hyper-V with local disks." lightbox="media/hyper-v-storage-architecture/standalone-hyper-v-local.png":::
 
 ## Hyperconverged Hyper-V and Storage Spaces Direct
 
@@ -37,7 +37,7 @@ If you plan to use this configuration, remember that the following details can a
 
 - In this model, each physical host contains storage and compute resources. As a result, those resources scale symmetrically. Every new host automatically adds both compute and storage resources. Each cluster can contain between 1 and 16 nodes.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-hyper-v-storage.png" alt-text="A diagram showing a basic example of a deployment of a hyperconverged Hyper-V and Storage Spaces Direct.":::
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-hyper-v-storage.png" alt-text="A diagram showing a basic example of a deployment of a hyperconverged Hyper-V and Storage Spaces Direct." lightbox="media/hyper-v-storage-architecture/hyperconverged-hyper-v-storage.png":::
 
 ## Disaggregated Hyper-V with hyperconverged storage
 
@@ -49,7 +49,7 @@ If you plan to use this configuration, keep the following details in mind:
 
 - Data gets replicated to other nodes in the cluster to increase storage resilience. Storage Spaces Direct supports several storage resiliency models. For more information, see [Fault tolerance and storage efficiency on Azure Stack HCI and Windows Server clusters](/azure-stack/hci/concepts/fault-tolerance).
 
-In this model, compute and storage scale independently from each other. This architecture is ideal for scenarios where your storage and compute requirements grow at different rates. For example, if you need more RAM or CPU resources to host VMs, you can add extra cluster nodes without also adding more storage. If you have VMs that consume a lot of storage but don't consume many CPU resources, you can add another storage node  or cluster without adding more compute resources.
+In this model, compute and storage scale independently from each other. This architecture is ideal for scenarios where your storage and compute requirements grow at different rates. For example, if you need more RAM or CPU resources to host VMs, you can add extra cluster nodes without also adding more storage. If you have VMs that consume a lot of storage but don't consume many CPU resources, you can add another storage node or cluster without adding more compute resources.
 
 - Each compute cluster can contain between 1 and 64 nodes.
 
@@ -57,15 +57,15 @@ In this model, compute and storage scale independently from each other. This arc
 
 The following diagram shows a simple example deployment with one compute cluster and one storage cluster.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-example.png" alt-text="A diagram showing a basic deployment of disaggregated Hyper-V with hyperconverged storage.":::
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-example.png" alt-text="A diagram showing a basic deployment of disaggregated Hyper-V with hyperconverged storage." lightbox="media/hyper-v-storage-architecture/hyperconverged-basic-example.png":::
 
 When you add more computing resources to run your VMs, you can either add a new node to the existing compute cluster or add a new cluster. The following diagram shows what happens to the simple deployment if you add a new cluster to it without adding more storage.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-compute.png" alt-text="A diagram that shows the basic deployment with a new cluster added to its compute tier.":::
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-compute.png" alt-text="A diagram that shows the basic deployment with a new cluster added to its compute tier." lightbox="media/hyper-v-storage-architecture/hyperconverged-basic-compute.png":::
 
 When you add more storage resources for hosting data without adding more computing resources, you can either add a new node to the existing storage cluster or add a new cluster. The following diagram shows what the simple deployment looks like when you add a new cluster without adding computing resources like RAM or CPU.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-storage.png" alt-text="A diagram that shows the basic deployment with a new storage cluster added to its storage tier.":::
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-storage.png" alt-text="A diagram that shows the basic deployment with a new storage cluster added to its storage tier." lightbox="media/hyper-v-storage-architecture/hyperconverged-basic-storage.png":::
 
 ## Disaggregated Hyper-V with NAS or SAN Storage
 
@@ -95,11 +95,11 @@ Hyper-V can support the combining the following types of architectures in the sa
 
 Windows Server supports the following network storage protocols:
 
-- SMB over TCP
+- [SMB over TCP](/troubleshoot/windows-server/networking/direct-hosting-of-smb-over-tcpip)
 
-- SMB over QUIC
+- [SMB over QUIC](../../storage/file-server/smb-over-quic.md)
 
-- SMB over RDMA (SMB Direct)
+- [SMB over RDMA (SMB Direct)](../../storage/file-server/smb-direct.md)
 
 Windows Server also supports the following block protocols:
 
@@ -117,7 +117,5 @@ Windows Server also supports the following block protocols:
 Microsoft also provides the following in-box software-based block initiators for network storage:
 
 - iSCSI
-
-- NVMe-oF (coming soon) <!--Is this in preview? If not, maybe we should add it in later.-->
 
 You can also use a storage vendor client for any device available in the Windows Server catalog.
