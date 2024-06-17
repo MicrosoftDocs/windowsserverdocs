@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 ms.author: wscontent
 author: robinharwood
-ms.date: 9/30/2016
+ms.date: 6/18/2024
 ---
 # Set up hosts for live migration without Failover Clustering
 
