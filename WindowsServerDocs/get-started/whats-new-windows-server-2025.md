@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 04/26/2024
+ms.date: 06/15/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -108,6 +108,10 @@ By default, the Azure Arc setup Feature-on-Demand is installed, which offers a u
 ### Bluetooth
 
 You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
+
+## Credential Guard
+
+Starting with Windows Server 2025, Credential Guard is now enabled by default on devices that meet the requirements. For more information about Credential Guard, see [Configure Credential Guard](/windows/security/identity-protection/credential-guard/configure).
 
 ### Desktop shell
 
