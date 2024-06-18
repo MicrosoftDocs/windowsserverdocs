@@ -2,7 +2,7 @@
 description: "Learn more about Active Directory Domain Services Functional Levels in Windows Server."
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Active Directory Domain Services Functional Levels in Windows Server
-ms.author: daveba
+ms.author: justinha
 author: dknappettmsft
 ms.contributor: alalve
 ms.date: 06/16/2023
@@ -47,7 +47,7 @@ The minimum requirement to add one a domain controller of one of these versions 
    * DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
    * Kerberos clients successfully authenticating with the PKInit Freshness Extension will get the fresh public key identity SID.
 
-    For more information, see [What's New in Kerberos Authentication](../../security/kerberos/whats-new-in-kerberos-authentication.md) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md)
+    For more information, see [What's New in Kerberos Authentication](../../get-started/whats-new-in-windows-server-2016.md#kerberos-authentication) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md)
 
 ## Windows Server 2012 R2 functional levels
 

@@ -4,8 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-manager: femila
-ms.date: 04/25/2024
+ms.date: 06/05/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -75,7 +74,7 @@ Active Directory Domain Services includes improvements to help organizations sec
 
 ### Active Directory Federation Services
 
-Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md).
+Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories.
 
 ### Web Application Proxy
 
@@ -137,7 +136,7 @@ Credential Guard uses virtualization-based security to isolate secrets so that o
 
 Credential Guard for Windows Server 2016 includes the following updates for signed-in user sessions:
 
-- Kerberos and New Technology LAN Manager (NTLM) use virtualization-based security to protect Kerberos amd NTLM secrets for signed-in user sessions.
+- Kerberos and New Technology LAN Manager (NTLM) use virtualization-based security to protect Kerberos and NTLM secrets for signed-in user sessions.
 
 - Credential Manager protects saved domain credentials using virtualization-based security. Signed-in credentials and saved domain credentials don't pass to remote hosts using Remote Desktop.
 
@@ -157,23 +156,13 @@ Remote Credential Guard for Windows Server 2016 includes the following updates f
 
 Domain protections now require an Active Directory domain.
 
-### Domain-joined device support for authentication using public key
+### PKInit Freshness extension support
 
-If a domain-joined device can register its bound public key with a Windows Server 2016 domain controller (DC), then the device can authenticate with the public key using Kerberos PKINIT authentication to a Windows Server 2016 DC.
+Kerberos clients now attempt the PKInit freshness extension for public key based sign-ons.
 
-Domain-joined devices with bound public keys registered with a Windows Server 2016 domain controller can now authenticate to a Windows Server 2016 domain controller using Kerberos Public Key Cryptography for Initial Authentication (PKINIT) protocols.
+KDCs now support the PKInit freshness extension. However, they don't offer the PKInit freshness extension by default.
 
-Key Distribution Centers (KDCs) now support authentication using Kerberos key trust.
-
-For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kdc-support-for-public-key-trust-based-client-authentication).
-
-### PKINIT Freshness extension support
-
-Kerberos clients now attempt the PKINIT freshness extension for public key based sign-ons.
-
-KDCs now support the PKInit freshness extension. However, they don't offer the PKINIT freshness extension by default.
-
-For more information, see [What's new in Kerberos authentication](../security/kerberos/whats-new-in-kerberos-authentication.md#kerberos-client-and-kdc-support-for-rfc-8070-pkinit-freshness-extension).
+For more information, see [Kerberos client and KDC support for RFC 8070 PKInit freshness extension](#kerberos-client-and-kdc-support-for-rfc-8070-pkinit-freshness-extension).
 
 ### Rolling public key only user's NTLM secrets
 
@@ -228,7 +217,7 @@ You can now use storage quality of service (QoS) to centrally monitor end-to-end
 
 For more info, see [Storage Quality of Service](../storage/storage-qos/storage-qos-overview.md).
 
-## [Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
+## Failover Clustering
 
 Windows Server 2016 includes many new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
 
@@ -341,3 +330,163 @@ Remote Desktop Protocol (RDP) 10 now uses the H.264/AVC 444 codec, which optimiz
 ### Personal session desktops
 
 Personal session desktops is a new feature that lets you host your own personal desktop in the cloud. Administrative privileges and dedicated session hosts removes the complexity of hosting environments where users want to manage a remote desktop like a local desktop. For more information, see [Personal Session Desktops](../remote/remote-desktop-services/rds-personal-session-desktops.md).
+
+## Kerberos authentication
+
+Windows Server 2016 includes the following updates for Kerberos authentication.
+
+### KDC support for Public Key Trust-based client authentication
+
+Key Distribution Centers (KDCs) now support public key mapping. If you provision a public key for an account, the KDC supports Kerberos PKInit explicitly using that key. Because there's no certificate validation, Kerberos supports self-signed certificates but doesn't support authentication mechanism assurance.
+
+Accounts you've configured to use Key Trust will only use Key Trust regardless of how you configured the UseSubjectAltName setting.
+
+### Kerberos client and KDC support for RFC 8070 PKInit Freshness Extension
+
+Starting with Windows 10, version 1607 and Windows Server 2016, Kerberos clients can use the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key-based sign-ons. KDCs have the PKInit freshness extension disabled by default, so to enable it you must configure the KDC support for PKInit Freshness Extension KDC administrative template policy on all DCs in your domain.
+
+The policy has the following settings available when your domain is in the Windows Server 2016 domain functional level (DFL):
+
+- **Disabled**: The KDC never offers the PKInit Freshness Extension and accepts valid authentication requests without checking for freshness. Users don't receive the fresh public key identity SID.
+- **Supported**: Kerberos supports PKInit Freshness Extension on request. Kerberos clients successfully authenticating with the PKInit Freshness Extension receive the fresh public key identity SID.
+- **Required**: PKInit Freshness Extension is required for successful authentication. Kerberos clients that don't support the PKInit Freshness Extension will always fail when using public key credentials.
+
+### Domain-joined device support for authentication using public key
+
+If a domain-joined device can register its bound public key with a Windows Server 2016 domain controller (DC), then the device can authenticate with the public key using Kerberos PKInit authentication to a Windows Server 2016 DC.
+
+Domain-joined devices with bound public keys registered with a Windows Server 2016 domain controller can now authenticate to a Windows Server 2016 domain controller using Kerberos Public Key Cryptography for Initial Authentication (PKInit) protocols. To learn more, see [Domain-joined Device Public Key Authentication](../security/kerberos/domain-joined-device-public-key-authentication.md).
+
+Key Distribution Centers (KDCs) now support authentication using Kerberos key trust.
+
+For more information, see [KDC support for Key Trust account mapping](#kdc-support-for-key-trust-account-mapping).
+
+### Kerberos clients allow IPv4 and IPv6 address host names in Service Principal Names (SPNs)
+
+Starting with Windows 10 version 1507 and Windows Server 2016, you can configure Kerberos clients to support IPv4 and IPv6 host names in SPNs. For more information, see [Configuring Kerberos for IP Addresses](../security/kerberos/configuring-kerberos-over-ip.md).
+
+To configure support for IP address host names in SPNs, create a TryIPSPN entry. This entry doesn't exist in the registry by default. You should place this entry on the following path:
+
+```text
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+```
+
+After creating the entry, change its DWORD value to 1. If this value isn't configured, Kerberos won't attempt IP address host names.
+
+Kerberos authentication only succeeds if the SPN is registered in Active Directory.
+
+### KDC support for Key Trust account mapping
+
+Domain controllers now support Key Trust account mapping and fallback to existing AltSecID and User Principal Name (UPN) in the SAN behavior. You can configure the UseSubjectAltName variable to the following settings:
+
+- Setting the variable to 0 makes explicit mapping required. Users must use either a Key Trust or set an ExplicitAltSecID variable.
+
+- Setting the variable to 1, which is the default value, allows implicit mapping.
+
+  - If you configure a Key Trust for an account in Windows Server 2016 or later, then KDC uses the KeyTrust for mapping.
+
+  - If there's no UPN in the SAN, KDC will attempt to use the AltSecID for mapping.
+  
+  - If there's a UPN in the SAN, KDC will attempt to use the UPN for mapping.
+
+## Active Directory Federation Services (AD FS)
+
+AD FS for Windows Server 2016 contains the following updates.
+
+### Sign in with Microsoft Entra multifactor authentication
+
+AD FS 2016 builds upon the multifactor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires an Microsoft Entra multifactor authentication code instead of a username or password.
+
+- When you configure Microsoft Entra multifactor authentication as the primary authentication method, AD FS prompts the user for their username and the one-time password (OTP) code from the Azure Authenticator app.
+
+- When you configure Microsoft Entra multifactor authentication as the secondary or extra authentication method, the user provides primary authentication credentials. Users can sign in by using Windows Integrated Authentication, which can request their username and password, smart card, or a user or device certificate. Next, the user sees a prompt for their secondary credentials, such as text, voice, or OTP-based Microsoft Entra multifactor authentication sign-in.
+
+- The new built-in Microsoft Entra multifactor authentication adapter offers simpler setup and configuration for Microsoft Entra multifactor authentication with AD FS.
+
+- Organizations can use Microsoft Entra multifactor authentication without needing an on-premises Microsoft Entra multifactor authentication server.
+
+- You can configure Microsoft Entra multifactor authentication for intranet, extranet, or as part of any access control policy.
+
+For more information about Microsoft Entra multifactor authentication with AD FS, see [Configure AD FS 2016 and Microsoft Entra multifactor authentication](../identity/ad-fs/operations/configure-ad-fs-and-azure-mfa.md).
+
+### Passwordless access from compliant devices
+
+AD FS 2016 builds on previous device registration capabilities to enable sign on and access control on devices based on their compliance status. Users can sign on using the device credential, and AD FS reevaluates compliance whenever device attributes change to ensure policies are being enforced. This feature enables the following policies:
+
+- Enable Access only from devices that are managed and/or compliant.
+
+- Enable Extranet Access only from devices that are managed and/or compliant.
+
+- Require multifactor authentication for computers that aren't managed or compliant.
+
+AD FS provides the on-premises component of conditional access policies in a hybrid scenario. When you register devices with Azure AD for conditional access to cloud resources, you can also use the device identity for AD FS policies.
+
+:::image type="content" source="./media/conditional-access-control-architecture.png" alt-text="Diagram of a hybrid solution and the relationships between users and on-premises active directory.":::
+
+For more information about using device based conditional access in the cloud, see [Azure Active Directory Conditional Access](/azure/active-directory/conditional-access/overview).
+
+For more information about using device based conditional access with AD FS, see [Planning for Device Based Conditional Access with AD FS](../identity/ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md) and [Access Control Policies in AD FS](../identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
+
+### Sign in with Windows Hello for Business
+
+Windows 10 devices introduce Windows Hello and Windows Hello for Business, replacing user passwords with strong device-bound user credentials protected by a user's gesture, such as entering a PIN, a biometric gesture like a fingerprint, or facial recognition. With Windows Hello, users can sign in to AD FS applications from an intranet or extranet without requiring a password.
+
+For more information about using Windows Hello for Business in your organization, see [Enable Windows Hello for Business in your organization](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+
+### Modern authentication
+
+AD FS 2016 supports the latest modern protocols that provide a better user experience for Windows 10 and the latest iOS and Android devices and apps.
+
+For more information, see [AD FS Scenarios for Developers](../identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md).
+
+### Configure access control policies without having to know claim rules language
+
+Previously, AD FS administrators had to configure policies by using the AD FS claim rule language, making it difficult to configure and maintain policies. With access control policies, administrators can use built-in templates to apply common policies. For example, you can use templates to apply the following policies:
+
+- Permit intranet access only.
+
+- Permit everyone and require MFA from extranet.
+
+- Permit everyone and require MFA from a specific group.
+
+The templates are easy to customize. You can apply extra exceptions or policy rules, and you can apply these changes to one or more applications for consistent policy enforcement.
+
+For more information, see [Access control policies in AD FS](../identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
+
+### Enable sign on with non-AD LDAP directories
+
+Many organizations combine Active Directory with third-party directories. AD FS support for authenticating users stored in Lightweight Directory Access Protocol (LDAP) v3-compliant directories means you can now use AD FS in the following scenarios:
+
+- Users in third party, LDAP v3-compliant directories.
+
+- Users in Active Directory forests that don't have a configured Active Directory two-way trust.
+
+- Users in Active Directory Lightweight Directory Services (AD LDS).
+
+For more information, see [Configure AD FS to authenticate users stored in LDAP directories](../identity/ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md).
+
+### Customize sign in experience for AD FS applications
+
+Previously, AD FS in Windows Server 2012 R2 provided a common sign-on experience for all relying party applications, with the ability to customize a subset of text-based content per application. With Windows Server 2016, you can customize not only the messages, but images, logo and web theme per application. Additionally, you can create new, custom web themes and apply these themes per relying party.
+
+For more information, see [AD FS user sign-in customization](../identity/ad-fs/operations/AD-FS-user-sign-in-customization.md).
+
+### Streamlined auditing for easier administrative management
+
+In previous versions of AD FS, a single request could generate many audit events. Relevant information about sign-in or token issuance activities were often absent or spread across multiple audit events, making issues harder to diagnose. As a result, audit events were turned off by default. However, in AD FS 2016, the auditing process is more streamlined and relevant information easier to find. For more information, see [Auditing enhancements to AD FS in Windows Server 2016](../identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md).
+
+### Improved interoperability with SAML 2.0 for participation in confederations
+
+AD FS 2016 contains more SAML protocol support, including support for importing trusts based on metadata that contains multiple entities. This change enables you to configure AD FS to participate in confederations such as InCommon Federation and other implementations conforming to the eGov 2.0 standard.
+
+For more information, see [Improved interoperability with SAML 2.0](../identity/ad-fs/operations/Improved-interoperability-with-SAML-2.0.md).
+
+### Simplified password management for federated Microsoft 365 users
+
+You can configure AD FS to send password expiry claims to any relying party trusts or applications that it protects. How these claims appear varies between applications. For example, with Office 365 as your relying party, updates have been implemented to Exchange and Outlook to notify federated users of their soon-to-be-expired passwords.
+
+For more information, see [Configure AD FS to send password expiry claims](../identity/ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md).
+
+### Moving from AD FS in Windows Server 2012 R2 to AD FS in Windows Server 2016 is easier
+
+Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process much easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and have removed the older servers, you can change the operational level to Windows Server 2016. For more information, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).

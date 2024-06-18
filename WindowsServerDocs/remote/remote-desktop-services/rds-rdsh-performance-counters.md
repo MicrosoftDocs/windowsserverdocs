@@ -4,7 +4,7 @@ description: Learn about performance counters you can use to diagnose app perfor
 ms.author: wscontent
 ms.date: 05/31/2023
 ms.topic: article
-author: lizap
+author: robinharwood
 manager: dougkim
 ---
 

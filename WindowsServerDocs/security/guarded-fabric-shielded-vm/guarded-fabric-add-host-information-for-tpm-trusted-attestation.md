@@ -4,8 +4,8 @@ description: Information about adding host information for TPM-trusted attestati
 ms.topic: article
 ms.assetid: f0aa575b-b34e-4f6c-8416-ed3e398e0ad2
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 06/21/2019
 ---
 
