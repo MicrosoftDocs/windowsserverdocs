@@ -1,58 +1,58 @@
 ---
-title: Active Directory LDAP client performance counters
-description: Learn about Active Directory LDAP client performance counters
+title: Active Directory LDAP client performance counters in Windows Server
+description: Learn about Active Directory LDAP client performance counters in Windows Server.
 ms.topic: conceptual
 author: gswashington
 ms.author: wscontent
-ms.date: 05/31/2024
+ms.date: 06/18/2024
 
 ---
 
 # Active Directory LDAP client performance counters
 
-Applies to: Windows Server 2025 (preview), Windows Server 2022
+Applies to: Windows Server 2025 (preview)
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-The latest enhancements to Active Directory Domain Services (AD DS) and Active Directory Lightweight Domain Services (AD LDS) in Windows Server 2025 introduce new functionalities for domain management, including client performance counters for Lightweight Directory Access Protocol (LDAP). 
+Beginning with Windows Server 2025, you can use Active Directory Lightweight Directory Access Protocol (LDAP) client performance counters to monitor the performance of LDAP clients. These counters provide valuable insights into the performance of LDAP clients, including the number of binds, connections, and operations that are being processed.
 
 LDAP is an integral part of Windows Server that enables querying and modification of directories. LDAP interacts with Active Directory to manage all network resources, including users, groups, permissions, and other data stored within the directory.
 
-You can access these performance counters at Performance Monitor.
+You can access these performance counters using Performance Monitor (`perfmon.exe`).
 
 ## LDAP client performance counters
 
-LDAP client performance counters measure per process running on the local client machine. Multiple processes can be assessed simultaneously. Examples of available counters include binds, connections, and operations.
+LDAP client performance counters can be monitored per process running on the local client machine. Multiple processes can be assessed simultaneously. Examples of available counters include binds, connections, and operations.
 
-The following table shows the client counters that can be added when running LDAP performance counters, their counter types, and descriptions of what object data they generate.
+The following table shows the counters that can be monitored when using a process that performs LDAP queries. The table shows the counter name, and type.
 
 | Counter name | Type | Description |
 |-----|-----|-----|
-| Digest Binds/sec | Binds | Outputs instances of object |
-| Negotiate Binds/sec | Binds | Outputs instances of object |
-| NTLM Binds/sec | Binds | Outputs instances of object |
-| Simple Binds/sec | Binds | Outputs instances of object |
-| Total Binds/sec | Binds | Outputs instances of object |
-| New Connections/sec | Connections | Outputs instances of object |
-| New TCP Connections/sec | Connections | Outputs instances of object |
-| New TLS Connections/sec | Connections | Outputs instances of object |
-| New LDP Connections/sec | Connections | Outputs instances of object |
-| Open Connections | Connections | Outputs instances of object |
-| Abandons/sec | Operations | Outputs instances of object |
-| Adds/sec | Operations | Outputs instances of object |
-| Deletes/sec | Operations | Outputs instances of object |
-| Modify/sec | Operations | Outputs instances of object |
-| New Requests/sec | Requests | Outputs instances of object |
-| Request Count | Requests | Outputs instances of object |
-| Average Response Time | Responses | Outputs instances of object |
-| Failure Polling Responses/sec | Responses | Outputs instances of object |
-| Failure Responses/sec | Responses | Outputs instances of object |
-| Pending Responses | Responses | Outputs instances of object |
-| Successful Polling Responses/sec | Responses | Outputs instances of object |
-| Successful Responses/sec | Responses | Outputs instances of object |
-| Base Searches/sec | Searches | Outputs instances of object |
-| Subtree Searches/sec | Searches | Outputs instances of object |
+| Digest Binds/sec | Binds | The number of binds per second performed using digest authentication with LDAP and SASL. |
+| Negotiate Binds/sec | Binds | The number of binds per second performed using negotiated authentication with LDAP and SASL. |
+| NTLM Binds/sec | Binds | The number of binds per second performed using NTLM authentication with LDAP and SASL. |
+| Simple Binds/sec | Binds | The number of binds per second performed using simple authentication with LDAP and SASL. |
+| Total Binds/sec | Binds | The total number of binds per second performed with LDAP and SASL. |
+| New Connections/sec | Connections | The number of new connections per second to the LDAP server. |
+| New TCP Connections/sec | Connections | The number of new TCP connections per second to the LDAP server. |
+| New TLS Connections/sec | Connections | The number of new TLS connections per second to the LDAP server. |
+| New LDP Connections/sec | Connections | The number of new LDP connections per second to the LDAP server. |
+| Open Connections | Connections | The total number of open connections to the LDAP server. |
+| Abandons/sec | Operations | The number of abandoned operations per second. |
+| Adds/sec | Operations | The number of add operations per second. |
+| Deletes/sec | Operations | The number of LDAP delete operations per second. |
+| Modify/sec | Operations | The number of LDAP modify operations per second. |
+| New Requests/sec | Requests | The number of new LDAP requests per second. |
+| Request Count | Requests | The total number of LDAP requests since monitoring began. |
+| Average Response Time | Responses | The average response time for LDAP requests since monitoring began. |
+| Failure Polling Responses/sec | Responses | The number of failed polling responses per second. |
+| Failure Responses/sec | Responses | The number of failed LDAP responses per second. |
+| Pending Responses | Responses | The number of LDAP responses pending a response. |
+| Successful Polling Responses/sec | Responses | The number of successful LDAP polling responses per second. |
+| Successful Responses/sec | Responses | The number of successful LDAP responses per second. |
+| Base Searches/sec | Searches | The number of LDAP base searches per second. |
+| Subtree Searches/sec | Searches | The number of LDAP subtree searches per second. |
 
 ## Next steps
 
