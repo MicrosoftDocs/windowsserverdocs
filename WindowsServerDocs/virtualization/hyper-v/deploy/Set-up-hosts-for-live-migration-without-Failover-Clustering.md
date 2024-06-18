@@ -37,7 +37,7 @@ Consider how you want to set up the following:
       "Virtual machine migration operation failed at migration Source.
       Failed to establish a connection with host *computer name*: No credentials are available in the security package 0x8009030E."
 
-- **Performance**: Does it makes sense to configure performance options? These options can reduce network and CPU usage, as well as make live migrations go faster. Consider your requirements and your infrastructure, and test different configurations to help you decide. The options are described at the end of step 2.
+- **Performance**: Does it make sense to configure performance options? These options can reduce network and CPU usage, as well as make live migrations go faster. Consider your requirements and your infrastructure, and test different configurations to help you decide. The options are described at the end of step 2.
 
 - **Network preference**: Will you allow live migration traffic through any available network, or isolate the traffic to specific networks? As a security best practice, we recommend that you isolate the traffic onto trusted, private networks because live migration traffic is not encrypted when it is sent over the network. Network isolation can be achieved through a physically isolated network or through another trusted networking technology such as VLANs.
 
@@ -139,7 +139,7 @@ This table describes how the performance options work.
 |----------|---------------|
     |TCP/IP|Copies the memory of the virtual machine to the destination server over a TCP/IP connection.|
     |Compression|Compresses the memory content of the virtual machine before copying it to the destination server over a TCP/IP connection. **Note:** This is the **default** setting.|
-    |SMB|Copies the memory of the virtual machine to the destination server over a SMB 3.0 connection.<p>- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access (RDMA) capabilities enabled.<br />- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<p>For more information, see [Improve Performance of a File Server with SMB Direct](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134210(v=ws.11)).|
+    |SMB|Copies the memory of the virtual machine to the destination server over an SMB 3.0 connection.<p>- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access (RDMA) capabilities enabled.<br />- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<p>For more information, see [Improve Performance of a File Server with SMB Direct](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134210(v=ws.11)).|
 
  ## Next steps
 
