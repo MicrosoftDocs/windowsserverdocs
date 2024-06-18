@@ -1,4 +1,4 @@
-- name: Remote Desktop Services overview
+- name: Remote Desktop Services
   href: remote-desktop-services-overview.md
   items:
   - name: Get started
