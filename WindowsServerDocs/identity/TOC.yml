@@ -439,6 +439,10 @@
         href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
       - name: DC locator changes
         href: ad-ds/manage/dc-locator-changes.md
+      - name: Monitoring
+        items:
+        - name: LSA performance counters
+          href: ad-ds/lsa-performance-counters.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
       items:
