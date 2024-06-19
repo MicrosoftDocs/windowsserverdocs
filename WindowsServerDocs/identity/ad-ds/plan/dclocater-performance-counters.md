@@ -1,69 +1,104 @@
 ---
-title: Active Directory DCLocator performance counters
-description: Learn about Active Directory DCLocator performance counters
+title: Active Directory DCLocator performance counters in Windows Server
+description: Learn about Active Directory DCLocator performance counters in Windows Server.
 ms.topic: conceptual
 author: gswashington
 ms.author: wscontent
-ms.date: 05/31/2024
+ms.date: 06/18/2024
 
 ---
 
 # DCLocator performance counters
 
-Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
+Applies to: Windows Server 2025 (preview), Windows Server 2022
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments.
+Beginning with Windows Server 2025, you can use Active Directory Domain Service Domain Controller (DC) Locater performance counters to monitor the performance of DC locater clients. These counters provide insights into the performance of DC locater requests per second by type, average success and failure latency, and other metrics.
 
-DC location in Windows operates in two basic modes:
+DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments. To learn more about the DC location process, see [Active Directory DC locator](../manage/dc-locator-changes.md).
 
-- DNS-based discovery 
-- NetBIOS-based discovery
-
-Starting with Windows Server 2025 (preview), Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) feature the following three new domain controller locater performance counter sets:
+There are following three domain controller locater performance counter sets:
 
 - DC Locater (Client)
 - DC Locater (DC)
 - DC Locater (Netlogon)
 
-You can access these performance counters at Performance Monitor.
+You can access these performance counters using Performance Monitor (`perfmon.exe`).
 
 ## DC Locater (Client)
 
-DC Locater (Client) measures per process running on the local client machine. You can break down requests based on which flags you set, such as requests per second, GC required, KDC required, and so on. Examples of available counters include Average Failure Latency (secs), Average Success Latency (secs), Failures/sec, Successes/sec, and Total Active Site Name Queries/sec.
+DC Locater (Client) performance counters measure per process running on the local client machine. You can break down requests based on which flags are used, such as the number of requests per second with the GC flag required, KDC flag required, and so on. Examples of available counters include Average Failure Latency (secs), Average Success Latency (secs), Failures/sec, Successes/sec, and Total Active Site Name Queries/sec.
 
-The following table shows the client counters that can be added when running DC Locater (Client), type of counter (flag or request), and notes on output.
+The following table shows the client counters that can be added when the DC Locater (Client) performance counters.
 
-| Counter name | Type | Description |
-|-----|-----|-----|
-| DS Required (Windows Server 2000 and later) Requests/sec | Flag | Returns instances of object |
-| DS Required (Windows Server 2008 and later) Requests/sec | Flag | Returns instances of object |
-| DS Required (Windows Server 2012 R2 and later) Requests/sec | Flag | Returns instances of object |
-| DS Required (Windows Server 2012 and later) Requests/sec | Flag | Returns instances of object |
-| DS Required (Windows Server 2016 and later) Requests/sec | Flag | Returns instances of object |
-| Force Rediscovery Requests/sec | Flag | Returns instances of object |
-| GC Required Requests/sec | Flag | Returns instances of object |
-| KDC Required Requests/sec | Flag | Returns instances of object |
-| KeyList Support Required | Flag | Returns instances of object |
-| PDC Required Requests/sec | Flag | Returns instances of object |
-| Time Server Required Requests/sec | Flag | Returns instances of object |
-| TryNextClosestSite Requests/sec | Flag | Returns instances of object |
-| Writable Required Requests/sec | Flag | Returns instances of object |
-| Average Failure Latency | Request | Returns instances of object |
-| Average Success Latency | Request | Returns instances of object |
-| Failures/sec | Request | Returns instances of object |
-| Successes/sec | Request | Returns instances of object |
-| Total Active Site Name Queries/sec | Request | Returns instances of object |
+| Counter name                                 | Description                                                                                                 |
+|----------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Flags: DS Required (W2K+) Requests/sec       | The number of requests per second that have the Windows 2000 and later Directory Service flag set           |
+| Flags: DS Required (WS2008+) Requests/sec    | The number of requests per second that have the Windows Server 2008 and later Directory Service flag set    |
+| Flags: DS Required (WS2012 R2+) Requests/sec | The number of requests per second that have the Windows Server 2012 R2 and later Directory Service flag set |
+| Flags: DS Required (WS2012+) Requests/sec    | The number of requests per second that have the Windows Server 2012 and later Directory Service flag set    |
+| Flags: DS Required (WS2016+) Requests/sec    | The number of requests per second that have the Windows Server 2016 and later Directory Service flag set    |
+| Flags: Force Rediscovery Requests/sec        | The number of requests per second that have the force rediscovery flag set                                  |
+| Flags: GC Required Requests/sec              | Number of requests per second that have the Global Catalog flag set                                         |
+| Flags: KDC Required Requests/sec             | Number of requests per second that have the Key Distribution Center flag set                                |
+| Flags: KeyList Support Required              | Number of requests per second that have the KeyList support flag set                                        |
+| Flags: PDC Required Requests/sec             | Requests per second that have the Primary Domain Controller flag set                                        |
+| Flags: Time Server Required Requests/sec     | Requests per second that have the Time Server flag set                                                      |
+| Flags: TryNextClosestSite Requests/sec       | Requests per second that have the `TryNextClosestSite` flag set                                             |
+| Flags: Writable Required Requests/sec        | Requests per second that have the Writable flag set                                                         |
+| Requests: Average Failure Latency            | The average latency of failed requests in seconds                                                           |
+| Requests: Average Success Latency            | The average latency of successful requests in seconds                                                       |
+| Requests: Failures/sec                       | Number of failed requests per second                                                                        |
+| Requests: Successes/sec                      | Number of successful requests per second                                                                    |
+| Requests: Total Active Site Name Queries/sec | The total number of active site name queries per second                                                     |
+| Site Name Queries/sec                        | Number of site name queries per second                                                                      |
 
-## DC Locater (DC) 
+## DC Locater (DC)
 
-DC Locater (DC) counters exist only on the domain controller; these are incoming LDAP pings and mailslot pings for DC lookups.
+DC Locater (DC) counters exist only on the domain controller. The DC Locater (DC) counters measured by the incoming LDAP and mailslot ping requests used for locating domain controllers.
+
+| Counter name                                | Description                                               |
+|---------------------------------------------|-----------------------------------------------------------|
+| Pings: Active Mailslot Pings                | Returns the number of active Mailslot pings               |
+| Pings: Active UDP LDAP Pings                | Returns the number of active UDP LDAP pings               |
+| Pings: Average Mailslot Ping Latency (secs) | Returns the average latency of Mailslot pings in seconds  |
+| Pings: Average UDP LDAP Ping Latency (secs) | Returns the average latency of IJDP LDAP pings in seconds |
+| Pings: Mailslot Pings Received/sec          | Returns the number of Mailslot pings received per second  |
+| Pings: UDP LDAP Pings Received/sec          | Returns the number of UDP LDAP pings received per second  |
 
 ## DC Locater (Netlogon)
 
-Netlogon downloads and caches naming information about domains and child domains in all trusting forests. DC Locater (Netlogon) is similar to DC Locater Client counters except output is organized by name lookup. There are a few objects available that are cache-based, such as Cache: Hits/sec and Cache: Misses/sec. You can use these objects to see how many times a DC lookup is being resolved by the cache or has to make a call on the wire and then make the DNS queries.
+The Netlogon service downloads and caches naming information about domains and child domains in all trusting forests. The DC Locater (Netlogon) performance counters are similar to DC Locater (Client) counters except output is organized by name lookup. There are a few more cache-based objects available, such as Cache: Hits/sec and Cache: Misses/sec. You can use these objects to see how many times a DC lookup is being resolved by the cache or has to make a call on the wire and then make the DNS queries.
+
+| Counter name                                 | Description                                                                                            |
+|----------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| Cache: Hits/sec                              | Returns the number of cache hits per second                                                            |
+| Cache: Misses/sec                            | Returns the number of cache misses per second                                                          |
+| DNS Query Failures/sec                       | Returns the number of DNS query failures per second                                                    |
+| Flags: DS Required (W2K+) Requests/sec       | Returns instances of Directory Service required requests per second (Windows 2000 and later)           |
+| Flags: DS Required (WS2008+) Requests/sec    | Returns instances of Directory Service required requests per second (Windows Server 2008 and later)    |
+| Flags: DS Required (WS2012 R2+) Requests/sec | Returns instances of Directory Service required requests per second (Windows Server 2012 R2 and later) |
+| Flags: DS Required (WS2012+) Requests/sec    | Returns instances of Directory Service required requests per second (Windows Server 2012 and later)    |
+| Flags: DS Required (WS2016+) Requests/sec    | Returns instances of Directory Service required requests per second (Windows Server 2016 and later)    |
+| Flags: Force Rediscovery Requests/sec        | Returns instances of forced rediscovery requests per second                                            |
+| Flags: GC Required Requests/sec              | Returns instances of Global Catalog required requests per second                                       |
+| Flags: KDC Required Requests/sec             | Returns instances of Key Distribution Center required requests per second                              |
+| Flags: KeyList Support Required Requests/sec | Returns instances where KeyList support is required                                                    |
+| Flags: PDC Required Requests/sec             | Returns instances of Primary Domain Controller required requests per second                            |
+| Flags: Time Server Required Requests/sec     | Returns instances of Time Server required requests per second                                          |
+| Flags: TryNextClosestSite Requests/sec       | Returns instances of Try Next Closest Site requests per second                                         |
+| Flags: Writable Required Requests/sec        | Returns instances of Writable required requests per second                                             |
+| Pings: Mailslot Pings Sent/sec               | Returns the number of Mailslot pings sent per second                                                   |
+| Pings: UDP Pings Sent/sec                    | Returns the number of UDP pings sent per second                                                        |
+| Requests: Average Failure Latency (secs)     | Returns the average latency of failed requests in seconds                                              |
+| Requests: Average Success Latency (secs)     | Returns the average latency of successful requests in seconds                                          |
+| Requests: Failures/sec                       | Returns the number of failed requests per second                                                       |
+| Requests: Rejected/sec                       | Returns the number of rejected requests per second                                                     |
+| Requests: Successes/sec                      | Returns the number of successful requests per second                                                   |
+| Requests: Total Active                       | Returns the total number of active requests                                                            |
+| UDP Ports Opened                             | Returns the number of UDP ports opened                                                                 |
 
 ## Next steps
 
