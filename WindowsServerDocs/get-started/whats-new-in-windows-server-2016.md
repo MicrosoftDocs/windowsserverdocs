@@ -91,6 +91,8 @@ Privileged access management (PAM) helps mitigate security concerns in Active Di
 
 - New monitoring capabilities that let you identify which users requested access, what access the administrators granted to them, and what activities they performed while signed in.
 
+To learn more about PAM, see [Privileged Access Management for Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
+
 #### Microsoft Entra join
 
 Microsoft Entra join enhances identity experiences for enterprise, business, and education customers, as well as including improved capabilities for corporate and personal devices.
@@ -131,7 +133,7 @@ For more information, see, [Windows Hello for Business](/windows/security/identi
 
 Although File Replication Service (FRS) and the Windows Server 2003 functional levels were deprecated in previous versions of Windows Server, we would like to remind you that AD DS no longer supports Windows Server 2003. You should remove any domain controller that runs Windows Server 2003 from the domain. You should also raise the domain and forest functional level to at least Windows Server 2008.
 
-At the Windows Server 2008 and higher domain functional levels, AD DS uses Distributed File Service (DFS) Replication to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication automatically replicates the SYSVOL folder. If you created the domain at a lower functional level, you must migrate from using FRS to DFS replication for the SYSVOL folder. For migration steps, you can either follow the directions in [Install, upgrade, or migrate to Windows Server](install-upgrade-migrate.md) or refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+At the Windows Server 2008 and higher domain functional levels, AD DS uses Distributed File Service (DFS) Replication to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication automatically replicates the SYSVOL folder. If you created the domain at a lower functional level, you must migrate from using FRS to DFS replication for the SYSVOL folder. For more detailed migration steps, you can either follow the directions in [Install, upgrade, or migrate to Windows Server](install-upgrade-migrate.md) or refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 For more information, see the following resources:
 
