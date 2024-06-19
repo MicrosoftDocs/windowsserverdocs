@@ -102,4 +102,6 @@ The Netlogon service downloads and caches naming information about domains and c
 
 ## Next steps
 
-- [How domain controllers are located in Windows](/identity/how-domain-controllers-are-located)
+- [How domain controllers are located in Windows](/troubleshoot/windows-server/active-directory/how-domain-controllers-are-located)
+
+- [Active Directory DC locator changes](manage/dc-locator-changes.md)
