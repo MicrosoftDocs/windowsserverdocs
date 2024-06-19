@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 06/05/2024
+ms.date: 06/19/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -70,7 +70,75 @@ Active Directory Certificate Services (AD CS) in Windows Server 2016 increases s
 
 ### Active Directory Domain Services
 
-Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices. For more information, see [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](../identity/whats-new-active-directory-domain-services.md).
+Active Directory Domain Services (AD DS) includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices.
+
+#### Privileged access management
+
+Privileged access management (PAM) helps mitigate security concerns in Active Directory environments caused by credential theft techniques, such as pass-the-hash, spear phishing, and so on. You can configure this new administrative access solution using Microsoft Identity Manager (MIM), and it introduces the following features:
+
+- The bastion Active Directory forest, provisioned by MIM, has a special PAM trust with an existing forest. Bastion forests are a new type of Active Directory environment that's free of malicious activity due to being isolated from existing forests and only allowing access to privileged accounts.
+
+- New processes in MIM to request administrative privileges, including new workflows for approving requests.
+
+- New shadow security principals, or groups, provisioned in the bastion forest by MIM in response to administrative privilege requests. The shadow security groups have an attribute that references the SID of an administrative group in an existing forest. This allows the shadow group to access resources in existing forests without changing any access control lists (ACLs).
+
+- An expiring links feature, which enables limited time memberships to a shadow group. You can add users to the group for a set amount of time that allows them to perform administrative tasks. The limited time membership is configured by a time-to-live (TTL) value that's propagated to Kerberos ticket lifetime.
+
+  >[!NOTE]
+  >Expiring links are available on all linked attributes. However, only the *member/memberOF* linked attribute relationship between a group and a user comes preconfigured with PAM to use the expiring links feature.
+
+- Built-in Kerberos Domain Controller (KDC) enhancements allow Active Directory domain controllers to restrict Kerberos ticket lifetimes to the lowest possible TTL value when users have multiple limited-time memberships to administrative groups. For example, if you're a member of time-bound group **A**, then when you sign on, the Kerberos ticket-granting ticket (TGT) lifetime is equal to how much time you have left in group **A**. If you also join time-bound group **B**, which has a lower TTL than group **A**, then your TGT lifetime is equal to how much time you have left in group **B**.
+
+- New monitoring capabilities that let you identify which users requested access, what access the administrators granted to them, and what activities they performed while signed in.
+
+To learn more about PAM, see [Privileged Access Management for Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
+
+#### Microsoft Entra join
+
+Microsoft Entra join enhances identity experiences for enterprise, business, and education customers, as well as including improved capabilities for corporate and personal devices.
+
+- Modern Settings are now available on corporate-owned Windows devices. You no longer need a personal Microsoft account to use core Windows capabilities, and they new run using existing user work accounts to ensure compliance. These services work on PCs joined to an on-premises Windows domain and devices joined to Microsoft Entra. These settings include:
+
+  - Roaming or personalization, accessibility settings, and credentials
+
+  - Back up and restore
+
+  - Access to the Microsoft Store with your work account
+
+  - Live tiles and notifications
+
+- Access organizational resources on mobile devices, such as phones and tablets, that can't be joined to a Windows Domain, whether they're corporate-owned or bring your own device (BYOD).
+
+- Use Single-Sign On (SSO) for Office 365 and other organizational apps, websites, and resources.
+
+- On BYOD devices, add a work account from an on-premises domain or Azure AD to a personally owned device. You can use SSO to access work resources through apps or on the web while remaining compliant with new features such as Conditional Account Control and Device Health attestation.
+
+- Mobile device management (MDM) integration lets you autoenroll devices to your mobile device management (MDM) tool (Microsoft Intune or third-party).
+
+- Set up kiosk mode and shared devices for multiple users in your organization.
+
+- Developer experience lets you build apps that cater to both enterprise and personal contexts with a shared programming stack.
+
+- The imaging option lets you choose between imaging and allowing your users to configure corporate-owned devices directly during the first-run experience.
+
+#### Windows Hello For Business
+
+Windows Hello for Business is a key-based authentication approach for organizations and consumers that goes beyond passwords. This form of authentication relies on credentials that are resistant to breaches, theft, and phishing.
+
+The user signs in to the device with a biometric or PIN linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), by phone, or a different notification mechanism.
+
+For more information, see, [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/).
+
+#### Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels
+
+Although File Replication Service (FRS) and the Windows Server 2003 functional levels were deprecated in previous versions of Windows Server, we would like to remind you that AD DS no longer supports Windows Server 2003. You should remove any domain controller that runs Windows Server 2003 from the domain. You should also raise the domain and forest functional level to at least Windows Server 2008.
+
+At the Windows Server 2008 and higher domain functional levels, AD DS uses Distributed File Service (DFS) Replication to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication automatically replicates the SYSVOL folder. If you created the domain at a lower functional level, you must migrate from using FRS to DFS replication for the SYSVOL folder. For more detailed migration steps, see [Install, upgrade, or migrate to Windows Server](install-upgrade-migrate.md).
+
+For more information, see the following resources:
+
+- [Understanding Active Directory Domain Services (AD DS) Functional Levels](../identity/ad-ds/active-directory-functional-levels.md)
+- [How to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels)
 
 ### Active Directory Federation Services
 
@@ -395,7 +463,7 @@ AD FS for Windows Server 2016 contains the following updates.
 
 ### Sign in with Microsoft Entra multifactor authentication
 
-AD FS 2016 builds upon the multifactor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires an Microsoft Entra multifactor authentication code instead of a username or password.
+AD FS 2016 builds upon the multifactor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires a Microsoft Entra multifactor authentication code instead of a username or password.
 
 - When you configure Microsoft Entra multifactor authentication as the primary authentication method, AD FS prompts the user for their username and the one-time password (OTP) code from the Azure Authenticator app.
 
@@ -411,7 +479,7 @@ For more information about Microsoft Entra multifactor authentication with AD FS
 
 ### Passwordless access from compliant devices
 
-AD FS 2016 builds on previous device registration capabilities to enable sign on and access control on devices based on their compliance status. Users can sign on using the device credential, and AD FS reevaluates compliance whenever device attributes change to ensure policies are being enforced. This feature enables the following policies:
+AD FS 2016 builds on previous device registration capabilities to enable sign-on and access control on devices based on their compliance status. Users can sign on using the device credential, and AD FS reevaluates compliance whenever device attributes change to ensure policies are being enforced. This feature enables the following policies:
 
 - Enable Access only from devices that are managed and/or compliant.
 
