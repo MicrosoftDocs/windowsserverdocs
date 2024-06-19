@@ -56,6 +56,4 @@ The following table shows the counters that can be monitored when using a proces
 
 ## Next steps
 
-- [How LDAP server cookies are handled](/identity/ad-ds/manage/how-ldap-server-cookies-are-handled)
-
-- [Step by Step Guide to Setup LDAPS on Windows Server](https://techcommunity.microsoft.com/t5/sql-server-blog/step-by-step-guide-to-setup-ldaps-on-windows-server/ba-p/385362)
+- [LDAP considerations in ADDS performance tuning](../../administration/performance-tuning/role/active-directory-server/ldap-considerations.md)
