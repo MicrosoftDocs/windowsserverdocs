@@ -65,4 +65,4 @@ The following table shows the counters that can be added from the LSA Lookup per
 
 ## Next steps
 
-- [Configure added LSA protection](/security/credentials-protection-and-management/configuring-additional-lsa-protection)
+- [Configure added LSA protection](../../security/credentials-protection-and-management/configuring-additional-lsa-protection.md)

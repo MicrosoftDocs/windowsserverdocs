@@ -446,7 +446,7 @@
       - name: Monitoring
         items:
         - name: LSA performance counters
-          href: ad-ds/lsa-performance-counters.md
+          href: ad-ds/lsa-lookup-performance-counters.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
       items:
