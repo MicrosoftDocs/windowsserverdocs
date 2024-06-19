@@ -11609,6 +11609,11 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-integrate-with-azure.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/welcome-to-rds.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
     }
   ]
 }

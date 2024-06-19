@@ -31,3 +31,11 @@ items:
   tocHref: /azure/
   topicHref: /windows-server/index
 
+### For linking to the Credential Guard topics from Security
+- name: Windows Server
+  tocHref: /windows/      
+  topicHref: /windows-server/
+  items:
+  - name: Security
+    tocHref: /windows/security/
+    topicHref: /windows-server/security/security-and-assurance

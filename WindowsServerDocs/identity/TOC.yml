@@ -249,6 +249,10 @@
           href: ad-ds/active-directory-functional-levels.md
         - name: Identifying Your Functional Level Upgrade
           href: ad-ds/plan/Identifying-Your-Functional-Level-Upgrade.md
+        - name: Finding additional Resources for Enabling Advanced Features
+          href: ad-ds/plan/finding-additional-Resources-for-Enabling-Advanced-Features.md
+        - name: Database 32k pages optional feature
+          href: ad-ds/32k-pages-optional-feature.md
       - name: Evaluating AD DS Deployment Strategy Examples
         href: ad-ds/plan/Evaluating-AD-DS-Deployment-Strategy-Examples.md
       - name: 'Appendix A: Reviewing Key AD DS Terms'
@@ -435,6 +439,8 @@
         href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
       - name: DC locator changes
         href: ad-ds/manage/dc-locator-changes.md
+      - name: Enable Database 32k pages optional feature
+        href: ad-ds/enable-32K-pages-optional-feature.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
       items:
