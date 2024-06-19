@@ -43,16 +43,16 @@ The following table shows the client counters that can be added when the DC Loca
 | Flags: Force Rediscovery Requests/sec        | The number of requests per second that have the force rediscovery flag set                                  |
 | Flags: GC Required Requests/sec              | Number of requests per second that have the Global Catalog flag set                                         |
 | Flags: KDC Required Requests/sec             | Number of requests per second that have the Key Distribution Center flag set                                |
-| Flags: KeyList Support Required              | Number of requests per second that have the KeyList support flag set                                        |
+| Flags: KeyList Support Required Requests/sec | Number of requests per second that have the KeyList support flag set                                        |
 | Flags: PDC Required Requests/sec             | Requests per second that have the Primary Domain Controller flag set                                        |
 | Flags: Time Server Required Requests/sec     | Requests per second that have the Time Server flag set                                                      |
 | Flags: TryNextClosestSite Requests/sec       | Requests per second that have the `TryNextClosestSite` flag set                                             |
-| Flags: Writable Required Requests/sec        | Requests per second that have the Writable flag set                                                         |
-| Requests: Average Failure Latency            | The average latency of failed requests in seconds                                                           |
-| Requests: Average Success Latency            | The average latency of successful requests in seconds                                                       |
+| Flags: Writable Required Requests/sec        | Requests pr second that have the Writable flag set                                                          |
+| Requests: Average Failure Latency (secs)      | The average latency of failed requests in seconds                                                           |
+| Requests: Average Success Latency (secs)     | The average latency of successful requests in seconds                                                       |
 | Requests: Failures/sec                       | Number of failed requests per second                                                                        |
 | Requests: Successes/sec                      | Number of successful requests per second                                                                    |
-| Requests: Total Active Site Name Queries/sec | The total number of active site name queries per second                                                     |
+| Requests: Total Active                       | The total number of active requests per second                                                              |
 | Site Name Queries/sec                        | Number of site name queries per second                                                                      |
 
 ## DC Locater (DC)
@@ -77,19 +77,19 @@ The Netlogon service downloads and caches naming information about domains and c
 | Cache: Hits/sec                              | Returns the number of cache hits per second                                                            |
 | Cache: Misses/sec                            | Returns the number of cache misses per second                                                          |
 | DNS Query Failures/sec                       | Returns the number of DNS query failures per second                                                    |
-| Flags: DS Required (W2K+) Requests/sec       | Returns instances of Directory Service required requests per second (Windows 2000 and later)           |
-| Flags: DS Required (WS2008+) Requests/sec    | Returns instances of Directory Service required requests per second (Windows Server 2008 and later)    |
-| Flags: DS Required (WS2012 R2+) Requests/sec | Returns instances of Directory Service required requests per second (Windows Server 2012 R2 and later) |
-| Flags: DS Required (WS2012+) Requests/sec    | Returns instances of Directory Service required requests per second (Windows Server 2012 and later)    |
-| Flags: DS Required (WS2016+) Requests/sec    | Returns instances of Directory Service required requests per second (Windows Server 2016 and later)    |
-| Flags: Force Rediscovery Requests/sec        | Returns instances of forced rediscovery requests per second                                            |
-| Flags: GC Required Requests/sec              | Returns instances of Global Catalog required requests per second                                       |
-| Flags: KDC Required Requests/sec             | Returns instances of Key Distribution Center required requests per second                              |
-| Flags: KeyList Support Required Requests/sec | Returns instances where KeyList support is required                                                    |
-| Flags: PDC Required Requests/sec             | Returns instances of Primary Domain Controller required requests per second                            |
-| Flags: Time Server Required Requests/sec     | Returns instances of Time Server required requests per second                                          |
-| Flags: TryNextClosestSite Requests/sec       | Returns instances of Try Next Closest Site requests per second                                         |
-| Flags: Writable Required Requests/sec        | Returns instances of Writable required requests per second                                             |
+| Flags: DS Required (W2K+) Requests/sec       | The number of requests per second that have the Windows 2000 and later Directory Service flag set           |
+| Flags: DS Required (WS2008+) Requests/sec    | The number of requests per second that have the Windows Server 2008 and later Directory Service flag set    |
+| Flags: DS Required (WS2012 R2+) Requests/sec | The number of requests per second that have the Windows Server 2012 R2 and later Directory Service flag set |
+| Flags: DS Required (WS2012+) Requests/sec    | The number of requests per second that have the Windows Server 2012 and later Directory Service flag set    |
+| Flags: DS Required (WS2016+) Requests/sec    | The number of requests per second that have the Windows Server 2016 and later Directory Service flag set    |
+| Flags: Force Rediscovery Requests/sec        | The number of requests per second that have the force rediscovery flag set                                  |
+| Flags: GC Required Requests/sec              | Number of requests per second that have the Global Catalog flag set                                         |
+| Flags: KDC Required Requests/sec             | Number of requests per second that have the Key Distribution Center flag set                                |
+| Flags: KeyList Support Required              | Number of requests per second that have the KeyList support flag set                                        |
+| Flags: PDC Required Requests/sec             | Requests per second that have the Primary Domain Controller flag set                                        |
+| Flags: Time Server Required Requests/sec     | Requests per second that have the Time Server flag set                                                      |
+| Flags: TryNextClosestSite Requests/sec       | Requests per second that have the `TryNextClosestSite` flag set                                             |
+| Flags: Writable Required Requests/sec        | Requests per second that have the Writable flag set                                                         |
 | Pings: Mailslot Pings Sent/sec               | Returns the number of Mailslot pings sent per second                                                   |
 | Pings: UDP Pings Sent/sec                    | Returns the number of UDP pings sent per second                                                        |
 | Requests: Average Failure Latency (secs)     | Returns the average latency of failed requests in seconds                                              |
