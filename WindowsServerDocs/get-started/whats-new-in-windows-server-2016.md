@@ -70,7 +70,7 @@ Active Directory Certificate Services (AD CS) in Windows Server 2016 increases s
 
 ### Active Directory Domain Services
 
-Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices.
+Active Directory Domain Services (AD DS) includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices.
 
 #### Privileged access management
 
@@ -87,7 +87,7 @@ Privileged access management (PAM) helps mitigate security concerns in Active Di
   >[!NOTE]
   >Expiring links are available on all linked attributes. However, only the *member/memberOF* linked attribute relationship between a group and a user comes preconfigured with PAM to use the expiring links feature.
 
-- Built-in Kerberos Domain Controller (KDC) enhancements allow Active Directory domain controllers to restrict Kerberos ticket lifetimes to the lowest possible TTL value when user have multiple limited-time memberships to administrative groups. For example, if you're a member of time-bound group A, then when you sign on, the Kerberos ticket-granting ticket (TGT) lifetime is equal to how much time you have left in group A. If you also join time-bound group B, which has a lower TTL than group A, then your TGT lifetime is equal to how much time you have left in group B.
+- Built-in Kerberos Domain Controller (KDC) enhancements allow Active Directory domain controllers to restrict Kerberos ticket lifetimes to the lowest possible TTL value when user have multiple limited-time memberships to administrative groups. For example, if you're a member of time-bound group **A**, then when you sign on, the Kerberos ticket-granting ticket (TGT) lifetime is equal to how much time you have left in group **A**. If you also join time-bound group **B**, which has a lower TTL than group **A**, then your TGT lifetime is equal to how much time you have left in group **B**.
 
 - New monitoring capabilities that let you identify which users requested access, what access the administrators granted to them, and what activities they performed while signed in.
 
@@ -125,13 +125,13 @@ Windows Hello for Business is a key-based authentication approach for organizati
 
 The user signs in to the device with a biometric or PIN linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), by phone, or a different notification mechanism.
 
-For more information, see, [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+For more information, see, [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/).
 
 #### Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels
 
 Although File Replication Service (FRS) and the Windows Server 2003 functional levels were deprecated in previous versions of Windows Server, we would like to remind you that AD DS no longer supports Windows Server 2003. You should remove any domain controller that runs Windows Server 2003 from the domain. You should also raise the domain and forest functional level to at least Windows Server 2008.
 
-At the Windows Server 2008 and higher domain functional levels, AD DS uses Distributed File Service (DFS) Replication to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication automatically replicates the SYSVOL folder. If you created the domain at a lower functional level, you must migrate from using FRS to DFS replication for the SYSVOL folder. For migration steps, you can either follow the directions in [Install, upgrade, or migrate to Windows Server](install-upgrade-migrate.md) or refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+At the Windows Server 2008 and higher domain functional levels, AD DS uses Distributed File Service (DFS) Replication to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication automatically replicates the SYSVOL folder. If you created the domain at a lower functional level, you must migrate from using FRS to DFS replication for the SYSVOL folder. For migration steps, see [Install, upgrade, or migrate to Windows Server](install-upgrade-migrate.md).
 
 For more information, see the following resources:
 
