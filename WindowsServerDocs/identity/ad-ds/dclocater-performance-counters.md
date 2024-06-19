@@ -31,7 +31,7 @@ You can access these performance counters using Performance Monitor (`perfmon.ex
 
 DC Locater (Client) performance counters measure per process running on the local client machine. You can break down requests based on which flags are used, such as the number of requests per second with the GC flag required, KDC flag required, and so on. Examples of available counters include Average Failure Latency (secs), Average Success Latency (secs), Failures/sec, Successes/sec, and Total Active Site Name Queries/sec.
 
-The following table shows the client counters that can be added when the DC Locater (Client) performance counters.
+The following table shows the client counters that can be added when using the DC Locater (Client) performance counter set.
 
 | Counter name                                 | Description                                                                                                 |
 |----------------------------------------------|-------------------------------------------------------------------------------------------------------------|
@@ -59,6 +59,8 @@ The following table shows the client counters that can be added when the DC Loca
 
 DC Locater (DC) counters exist only on the domain controller. The DC Locater (DC) counters measured the number of incoming LDAP and mailslot pings and requests received for locating domain controllers.
 
+The following table shows the server-side counters that can be added when using the DC Locater (DC) performance counter set.
+
 | Counter name                                | Description                                               |
 |---------------------------------------------|-----------------------------------------------------------|
 | Pings: Active Mailslot Pings                | Returns the number of active Mailslot pings               |
@@ -71,6 +73,8 @@ DC Locater (DC) counters exist only on the domain controller. The DC Locater (DC
 ## DC Locater (Netlogon)
 
 The Netlogon service downloads and caches naming information about domains and child domains in all trusting forests. The DC Locater (Netlogon) performance counters are similar to DC Locater (Client) counters except the counter instances are organized by name lookup. There are also a few more cache-based counters available, such as Cache: Hits/sec and Cache: Misses/sec. You can use these objects to see how many times a lookup is resolved from the cache or over the wire.
+
+The following table shows the counters that can be added when using the DC Locater (Netlogon) performance counter set.
 
 | Counter name                                 | Description                                                                                                 |
 |----------------------------------------------|-------------------------------------------------------------------------------------------------------------|
