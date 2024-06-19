@@ -11586,6 +11586,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/identity/whats-new-active-directory-domain-services.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/What-s-new-in-Active-Directory-Domain-Services.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-started.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
       "redirect_document_id": false
@@ -11603,6 +11613,11 @@
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-integrate-with-azure.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/welcome-to-rds.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
       "redirect_document_id": false
     }
   ]
