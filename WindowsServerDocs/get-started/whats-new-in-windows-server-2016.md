@@ -76,7 +76,7 @@ Active Directory Domain Services (AD DS) includes improvements to help organizat
 
 Privileged access management (PAM) helps mitigate security concerns in Active Directory environments caused by credential theft techniques, such as pass-the-hash, spear phishing, and so on. You can configure this new administrative access solution using Microsoft Identity Manager (MIM), and it introduces the following features:
 
-- The bastion Active Directory forest, provisioned by MIM, has a special PAM trust ith an existing forest. Bastion forests are a new type of Active Directory environment that's free of malicious activity due to being isolated from existing forests and only allowing access to privileged accounts.
+- The bastion Active Directory forest, provisioned by MIM, has a special PAM trust with an existing forest. Bastion forests are a new type of Active Directory environment that's free of malicious activity due to being isolated from existing forests and only allowing access to privileged accounts.
 
 - New processes in MIM to request administrative privileges, including new workflows for approving requests.
 
@@ -87,7 +87,7 @@ Privileged access management (PAM) helps mitigate security concerns in Active Di
   >[!NOTE]
   >Expiring links are available on all linked attributes. However, only the *member/memberOF* linked attribute relationship between a group and a user comes preconfigured with PAM to use the expiring links feature.
 
-- Built-in Kerberos Domain Controller (KDC) enhancements allow Active Directory domain controllers to restrict Kerberos ticket lifetimes to the lowest possible TTL value when user have multiple limited-time memberships to administrative groups. For example, if you're a member of time-bound group **A**, then when you sign on, the Kerberos ticket-granting ticket (TGT) lifetime is equal to how much time you have left in group **A**. If you also join time-bound group **B**, which has a lower TTL than group **A**, then your TGT lifetime is equal to how much time you have left in group **B**.
+- Built-in Kerberos Domain Controller (KDC) enhancements allow Active Directory domain controllers to restrict Kerberos ticket lifetimes to the lowest possible TTL value when users have multiple limited-time memberships to administrative groups. For example, if you're a member of time-bound group **A**, then when you sign on, the Kerberos ticket-granting ticket (TGT) lifetime is equal to how much time you have left in group **A**. If you also join time-bound group **B**, which has a lower TTL than group **A**, then your TGT lifetime is equal to how much time you have left in group **B**.
 
 - New monitoring capabilities that let you identify which users requested access, what access the administrators granted to them, and what activities they performed while signed in.
 
@@ -101,7 +101,7 @@ Microsoft Entra join enhances identity experiences for enterprise, business, and
 
   - Roaming or personalization, accessibility settings, and credentials
 
-  - Backup and restore
+  - Back up and restore
 
   - Access to the Microsoft Store with your work account
 
@@ -463,7 +463,7 @@ AD FS for Windows Server 2016 contains the following updates.
 
 ### Sign in with Microsoft Entra multifactor authentication
 
-AD FS 2016 builds upon the multifactor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires an Microsoft Entra multifactor authentication code instead of a username or password.
+AD FS 2016 builds upon the multifactor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2. You can now allow sign-on that only requires a Microsoft Entra multifactor authentication code instead of a username or password.
 
 - When you configure Microsoft Entra multifactor authentication as the primary authentication method, AD FS prompts the user for their username and the one-time password (OTP) code from the Azure Authenticator app.
 
@@ -479,7 +479,7 @@ For more information about Microsoft Entra multifactor authentication with AD FS
 
 ### Passwordless access from compliant devices
 
-AD FS 2016 builds on previous device registration capabilities to enable sign on and access control on devices based on their compliance status. Users can sign on using the device credential, and AD FS reevaluates compliance whenever device attributes change to ensure policies are being enforced. This feature enables the following policies:
+AD FS 2016 builds on previous device registration capabilities to enable sign-on and access control on devices based on their compliance status. Users can sign on using the device credential, and AD FS reevaluates compliance whenever device attributes change to ensure policies are being enforced. This feature enables the following policies:
 
 - Enable Access only from devices that are managed and/or compliant.
 
