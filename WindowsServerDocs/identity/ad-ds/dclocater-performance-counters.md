@@ -19,7 +19,7 @@ Beginning with Windows Server 2025, you can use Active Directory Domain Service 
 
 DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments. To learn more about the DC location process, see [Active Directory DC locator](../manage/dc-locator-changes.md).
 
-There are following three domain controller locater performance counter sets:
+There are the following domain controller locater performance counter sets:
 
 - DC Locater (Client)
 - DC Locater (DC)
@@ -48,7 +48,7 @@ The following table shows the client counters that can be added when the DC Loca
 | Flags: Time Server Required Requests/sec     | Requests per second that have the Time Server flag set                                                      |
 | Flags: TryNextClosestSite Requests/sec       | Requests per second that have the `TryNextClosestSite` flag set                                             |
 | Flags: Writable Required Requests/sec        | Requests pr second that have the Writable flag set                                                          |
-| Requests: Average Failure Latency (secs)      | The average latency of failed requests in seconds                                                           |
+| Requests: Average Failure Latency (secs)     | The average latency of failed requests in seconds                                                           |
 | Requests: Average Success Latency (secs)     | The average latency of successful requests in seconds                                                       |
 | Requests: Failures/sec                       | Number of failed requests per second                                                                        |
 | Requests: Successes/sec                      | Number of successful requests per second                                                                    |
@@ -57,7 +57,7 @@ The following table shows the client counters that can be added when the DC Loca
 
 ## DC Locater (DC)
 
-DC Locater (DC) counters exist only on the domain controller. The DC Locater (DC) counters measured by the incoming LDAP and mailslot ping requests used for locating domain controllers.
+DC Locater (DC) counters exist only on the domain controller. The DC Locater (DC) counters measured the number of incoming LDAP and mailslot pings and requests received for locating domain controllers.
 
 | Counter name                                | Description                                               |
 |---------------------------------------------|-----------------------------------------------------------|
@@ -70,13 +70,13 @@ DC Locater (DC) counters exist only on the domain controller. The DC Locater (DC
 
 ## DC Locater (Netlogon)
 
-The Netlogon service downloads and caches naming information about domains and child domains in all trusting forests. The DC Locater (Netlogon) performance counters are similar to DC Locater (Client) counters except output is organized by name lookup. There are a few more cache-based objects available, such as Cache: Hits/sec and Cache: Misses/sec. You can use these objects to see how many times a DC lookup is being resolved by the cache or has to make a call on the wire and then make the DNS queries.
+The Netlogon service downloads and caches naming information about domains and child domains in all trusting forests. The DC Locater (Netlogon) performance counters are similar to DC Locater (Client) counters except the counter instances are organized by name lookup. There are also a few more cache-based counters available, such as Cache: Hits/sec and Cache: Misses/sec. You can use these objects to see how many times a lookup is resolved from the cache or over the wire.
 
-| Counter name                                 | Description                                                                                            |
-|----------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Cache: Hits/sec                              | Returns the number of cache hits per second                                                            |
-| Cache: Misses/sec                            | Returns the number of cache misses per second                                                          |
-| DNS Query Failures/sec                       | Returns the number of DNS query failures per second                                                    |
+| Counter name                                 | Description                                                                                                 |
+|----------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Cache: Hits/sec                              | Returns the number of cache hits per second                                                                 |
+| Cache: Misses/sec                            | Returns the number of cache misses per second                                                               |
+| DNS Query Failures/sec                       | Returns the number of DNS query failures per second                                                         |
 | Flags: DS Required (W2K+) Requests/sec       | The number of requests per second that have the Windows 2000 and later Directory Service flag set           |
 | Flags: DS Required (WS2008+) Requests/sec    | The number of requests per second that have the Windows Server 2008 and later Directory Service flag set    |
 | Flags: DS Required (WS2012 R2+) Requests/sec | The number of requests per second that have the Windows Server 2012 R2 and later Directory Service flag set |
@@ -90,15 +90,15 @@ The Netlogon service downloads and caches naming information about domains and c
 | Flags: Time Server Required Requests/sec     | Requests per second that have the Time Server flag set                                                      |
 | Flags: TryNextClosestSite Requests/sec       | Requests per second that have the `TryNextClosestSite` flag set                                             |
 | Flags: Writable Required Requests/sec        | Requests per second that have the Writable flag set                                                         |
-| Pings: Mailslot Pings Sent/sec               | Returns the number of Mailslot pings sent per second                                                   |
-| Pings: UDP Pings Sent/sec                    | Returns the number of UDP pings sent per second                                                        |
-| Requests: Average Failure Latency (secs)     | Returns the average latency of failed requests in seconds                                              |
-| Requests: Average Success Latency (secs)     | Returns the average latency of successful requests in seconds                                          |
-| Requests: Failures/sec                       | Returns the number of failed requests per second                                                       |
-| Requests: Rejected/sec                       | Returns the number of rejected requests per second                                                     |
-| Requests: Successes/sec                      | Returns the number of successful requests per second                                                   |
-| Requests: Total Active                       | Returns the total number of active requests                                                            |
-| UDP Ports Opened                             | Returns the number of UDP ports opened                                                                 |
+| Pings: Mailslot Pings Sent/sec               | Returns the number of Mailslot pings sent per second                                                        |
+| Pings: UDP Pings Sent/sec                    | Returns the number of UDP pings sent per second                                                             |
+| Requests: Average Failure Latency (secs)     | Returns the average latency of failed requests in seconds                                                   |
+| Requests: Average Success Latency (secs)     | Returns the average latency of successful requests in seconds                                               |
+| Requests: Failures/sec                       | Returns the number of failed requests per second                                                            |
+| Requests: Rejected/sec                       | Returns the number of rejected requests per second                                                          |
+| Requests: Successes/sec                      | Returns the number of successful requests per second                                                        |
+| Requests: Total Active                       | Returns the total number of active requests                                                                 |
+| UDP Ports Opened                             | Returns the number of UDP ports opened                                                                      |
 
 ## Next steps
 
