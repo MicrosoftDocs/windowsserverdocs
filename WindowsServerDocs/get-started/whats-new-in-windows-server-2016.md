@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 06/19/2024
+ms.date: 06/20/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -18,7 +18,7 @@ The [Virtualization area](../virtualization/virtualization.yml) includes virtual
 
 ### General
 
-Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations that require a 1ms accuracy with regard to UTC.
+Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations that require a 1ms accuracy regarding UTC.
 
 ### Hyper-V
 
@@ -48,7 +48,7 @@ Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to pro
 
 - Full support for converting existing non-shielded Generation 2 virtual machines to shielded virtual machines, including automated disk encryption.
 
-- Hyper-V Virtual Machine Manager can now view the fabrics upon which a shielded virtual is authorized to run, providing a way for the fabric administrator to open a shielded virtual machine's key protector (KP) and view the fabrics it is permitted to run on.
+- Hyper-V Virtual Machine Manager can now view the fabrics upon which a shielded virtual is authorized to run, providing a way for the fabric administrator to open a shielded virtual machine's key protector (KP) and view the fabrics it's permitted to run on.
 
 - You can switch Attestation modes on a running Host Guardian Service. Now you can switch on the fly between the less secure but simpler Active Directory-based attestation and TPM-based attestation.
 
@@ -58,7 +58,7 @@ Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to pro
 
 - Host Guardian Service support for existing safe Active Directory – you can direct the Host Guardian Service to use an existing Active Directory forest as its Active Directory instead of creating its own Active Directory instance
 
-For more details and instructions for working with shielded virtual machines, see [Guarded Fabric and Shielded VMs](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
+For more information and instructions for working with shielded virtual machines, see [Guarded Fabric and Shielded VMs](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
 
 ## Identity and Access
 
@@ -66,11 +66,7 @@ New features in [Identity](../identity/Identity-and-Access.yml) improve the abil
 
 ### Active Directory Certificate Services
 
-Active Directory Certificate Services (AD CS) in Windows Server 2016 increases support for TPM key attestation: You can now use Smart Card KSP for key attestation, and devices that are not joined to the domain can now use NDES enrollment to get certificates that can be attested for keys being in a TPM.
-
-### Active Directory Domain Services
-
-Active Directory Domain Services (AD DS) includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices.
+Active Directory Certificate Services (AD CS) in Windows Server 2016 increases support for TPM key attestation: You can now use Smart Card KSP for key attestation, and devices that aren't joined to the domain can now use NDES enrollment to get certificates that can be attested for keys being in a TPM.
 
 #### Privileged access management
 
@@ -188,7 +184,7 @@ You can now both mirror and route traffic to new or existing virtual appliances.
 
 The default Initial Congestion Window (ICW) has been increased from 4 to 10 and TCP Fast Open (TFO) has been implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
 
-In order to improve TCP behavior when recovering from packet loss we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
+In order to improve TCP behavior when recovering from packet loss, we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
 
 ### Dynamic Host Configuration Protocol (DHCP)
 
@@ -210,7 +206,7 @@ The [Security and Assurance area](../security/Security-and-Assurance.yml) Includ
 
 ### Just Enough Administration
 
-Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. Capabilities include support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](https://aka.ms/JEA).
+Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. Capabilities include support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more information, see [JEA on GitHub](https://aka.ms/JEA).
 
 ### Credential Guard
 
@@ -226,7 +222,7 @@ Credential Guard for Windows Server 2016 includes the following updates for sign
 
 ### Remote Credential Guard
 
-Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. For more information, see [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard).
+Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and aren't exposed on the server side. This also provides Single Sign On for Remote Desktop. For more information, see [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard).
 
 Remote Credential Guard for Windows Server 2016 includes the following updates for signed-in users:
 
@@ -271,7 +267,7 @@ Device Guard provides kernel mode code integrity (KMCI) and user mode code integ
 
 ### Windows Defender
 
-[Windows Defender Overview for Windows Server 2016](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.
+[Windows Defender Overview for Windows Server 2016](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware isn't installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.
 
 ### Control Flow Guard
 
@@ -340,7 +336,7 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 
 - A new interface for Resource Manager Rejoin can be used by a resource manager to determine the outcome of an in-doubt transaction after a database restarts due to an error. See [IResourceManagerRejoinable::Rejoin](/previous-versions/windows/desktop/mt203799(v=vs.85)) for details.
 
-- The DSN name limit is enlarged from 256 bytes to 3072 bytes. See [IDtcToXaHelperFactory::Create](/previous-versions/windows/desktop/ms686861(v=vs.85)), [IDtcToXaHelperSinglePipe::XARMCreate](/previous-versions/windows/desktop/ms679248(v=vs.85)), or [IDtcToXaMapper::RequestNewResourceManager](/previous-versions/windows/desktop/ms680310(v=vs.85)) for details.
+- The DSN name limit is enlarged from 256 bytes to 3,072 bytes. See [IDtcToXaHelperFactory::Create](/previous-versions/windows/desktop/ms686861(v=vs.85)), [IDtcToXaHelperSinglePipe::XARMCreate](/previous-versions/windows/desktop/ms679248(v=vs.85)), or [IDtcToXaMapper::RequestNewResourceManager](/previous-versions/windows/desktop/ms680310(v=vs.85)) for details.
 
 - Improved tracing allowing you to set a registry key to include an image file path in the Tracelog file name so you can tell which Tracelog file to check. See [How to enable diagnostic tracing for MS DTC on a Windows-based computer](https://support.microsoft.com/kb/926099) for details on configuring tracing for MSDTC.
 
@@ -467,9 +463,9 @@ Domain controllers now support Key Trust account mapping and fallback to existin
 
   - If you configure a Key Trust for an account in Windows Server 2016 or later, then KDC uses the KeyTrust for mapping.
 
-  - If there's no UPN in the SAN, KDC will attempt to use the AltSecID for mapping.
+  - If there's no UPN in the SAN, KDC attempts to use the AltSecID for mapping.
   
-  - If there's a UPN in the SAN, KDC will attempt to use the UPN for mapping.
+  - If there's a UPN in the SAN, KDC attempts to use the UPN for mapping.
 
 ## Active Directory Federation Services (AD FS)
 
@@ -571,4 +567,4 @@ For more information, see [Configure AD FS to send password expiry claims](../id
 
 ### Moving from AD FS in Windows Server 2012 R2 to AD FS in Windows Server 2016 is easier
 
-Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process much easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and have removed the older servers, you can change the operational level to Windows Server 2016. For more information, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).
+Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and have removed the older servers, you can change the operational level to Windows Server 2016. For more information, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).
