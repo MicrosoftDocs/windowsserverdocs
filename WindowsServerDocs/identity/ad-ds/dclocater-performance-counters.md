@@ -17,7 +17,7 @@ Applies to: Windows Server 2025 (preview), Windows Server 2022
 
 Beginning with Windows Server 2025, you can use Active Directory Domain Service Domain Controller (DC) Locater performance counters to monitor the performance of DC locater clients. These counters provide insights into the performance of DC locater requests per second by type, average success and failure latency, and other metrics.
 
-DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments. To learn more about the DC location process, see [Active Directory DC locator](../manage/dc-locator-changes.md).
+DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments. To learn more about the DC location process, see [Active Directory DC locator changes](manage/dc-locator-changes.md).
 
 There are the following domain controller locater performance counter sets:
 
