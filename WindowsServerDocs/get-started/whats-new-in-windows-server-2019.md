@@ -197,7 +197,7 @@ Here's what's new in Storage Replica. For details, see [What's new in Storage Re
 
 We added the following features to failover clustering in Windows Server 2019:
 
-- Cluster sets group multiple clusters together into a loosely coupled grouping of multiple failover clusters that come in three types: compute, storage, and hyper-converged. This grouping increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. With cluster sets, you can move online virtual machines between clusters within the cluster set. For more information, see [Cluster sets](../failover-clustering/cluster-set.md).
+- Cluster sets group multiple clusters together into a loosely coupled grouping of multiple failover clusters that come in three types: compute, storage, and hyper-converged. This grouping increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. With cluster sets, you can move online virtual machines between clusters within the cluster set. For more information, see [Deploy a cluster set](../failover-clustering/cluster-set.md).
 
 - Clusters are now Azure-aware by default. Azure-aware clusters automatically detect when they're running in Azure IaaS virtual machines, then optimize their configuration to achieve the highest levels of availability. These optimizations include proactive failover and logging of Azure planned maintenance events. Automated optimization makes deployment simpler by removing the need to configure the load balancer with Distributed Network Name for the cluster name.
 
@@ -213,19 +213,13 @@ We added the following features to failover clustering in Windows Server 2019:
 
   - Absent or poor Internet access because of a remote location, preventing the use of a cloud witness.
   
-  - Lack of shared drives for a disk witness. For example, a configuration that doesn't use shared disks, such as Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an * Exchange Database Availability Group (DAG).
+  - Lack of shared drives for a disk witness. For example, a configuration that doesn't use shared disks, such as Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an Exchange Database Availability Group (DAG).
   
   - Lack of domain controller connection due to the cluster being behind a DMZ.
   
-  - A workgroup or cross-domain cluster that doesn't have an Active Directory cluster name object (CNO).
+  - A workgroup or cross-domain cluster that doesn't have an Active Directory cluster name object (CNO). Windows Server now also blocks using a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
 
-- Cluster hardening
-
-- Failover Cluster no longer uses NTLM authentication
-
-    Windows Server now also blocks using a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
-
-- Intra-cluster communication over Server Message Block (SMB) for Cluster Shared Volumes and Storage Spaces Direct now uses certificates for extra platform security. This cluster hardening allows Failover Clusters to operate with no dependencies on NTLM and enable security baselines.
+- A cluster hardening feature has been implemented that enhances the security of intra-cluster communication over Server Message Block (SMB) for Cluster Shared Volumes and Storage Spaces Direct. This feature leverages certificates to provide the most secure platform possible. By doing so, Failover Clusters can now operate without any dependencies on NTLM, which enables security baselines to be established.
 
 - Failover Clusters no longer use NTLM authentication. Instead, Windows Server 2019 clusters now exclusively use Kerberos and certificate-based authentication. Users don't need to make any changes or deploy anything to take advantage of this security enhancement. This change also lets you deploy failover clusters in environments where NTLM is disabled.
 
