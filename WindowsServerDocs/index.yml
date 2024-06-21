@@ -125,7 +125,7 @@ conceptualContent:
 
     - title: Remote
       links:
-        - url: ./remote/remote-desktop-services/welcome-to-rds.md
+        - url: ./remote/remote-desktop-services/remote-desktop-services-overview.md
           itemType: overview
           text: Remote Desktop Services overview
         - url: ./remote/remote-desktop-services/clients/remote-desktop-clients.md
