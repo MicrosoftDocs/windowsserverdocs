@@ -441,6 +441,10 @@
         href: ad-ds/manage/dc-locator-changes.md
       - name: Enable Database 32k pages optional feature
         href: ad-ds/enable-32K-pages-optional-feature.md
+      - name: Monitoring
+        items:
+        - name: LDAP client performance counters
+          href: ad-ds/ldap-client-performance-counters.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
       items:
