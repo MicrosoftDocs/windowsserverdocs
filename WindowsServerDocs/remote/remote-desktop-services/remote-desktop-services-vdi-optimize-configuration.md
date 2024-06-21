@@ -1,13 +1,13 @@
 ---
 title: Optimizing Windows configuration for VDI desktops
-description: Recommended settings and configuration to minimize overhead for Windows VDI desktops.
+description: Recommended settings and configuration to minimize overhead for Windows Virtual Desktop Infrastructure (VDI) environments.
 ms.service: windows-server
 ms.subservice: remote-desktop-services
 author: meaghanlewis
 ms.author: mosagie
 ms.topic: article
 manager: femila
-ms.date: 06/05/2024
+ms.date: 06/21/2024
 ---
 
 # Optimizing Windows configuration for VDI desktops
@@ -214,7 +214,7 @@ The following settings are applied to the default user profile registry hive, ma
 - Show shadows under windows
 - Smooth edges of screen fonts
 
-![A screenshot of the performance options menu with the relevant items selected.](media/rds-vdi-optimize-configuration/performance-options.png)
+![A screenshot of the performance options menu with the relevant items selected.](media/remote-desktop-services-vdi-optimize-configuration/performance-options.png)
 
 And there is a method to disable the following two privacy settings for any user profile created after you run the optimization:
 
@@ -226,7 +226,7 @@ Optionally, disable the following two privacy settings for any user profile crea
 - Let websites provide locally relevant content by accessing my language list 
 - Show me suggested content in the Settings app 
 
-![A screenshot of the privacy settings window. The two disabled settings are highlighted in red.](media/rds-vdi-optimize-configuration/privacy-settings.png)
+![A screenshot of the privacy settings window. The two disabled settings are highlighted in red.](media/remote-desktop-services-vdi-optimize-configuration/privacy-settings.png)
 
 The following are the optimization settings applied to the default user profile registry hive to optimize performance. This operation is performed by first loading the default user profile registry hive **NTUser.dat**, as the ephemeral key name **Temp**, and then making the following modifications:
 
@@ -287,7 +287,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | Network List Manager policies | All networks properties | Network location | **User cannot change location** (This is set to prevent the right-hand side pop-up when a new network is detected) |
 | Local Computer Policy \\ Computer Configuration \\ Administrative Templates \\ Control Panel | N/A | N/A |
 | Control Panel | Allow Online Tips | N/A  | **Disabled** (Settings won't contact Microsoft content services to retrieve tips and help content) |
-| Control Panel \ Personalization | Force a specific default lock screen and logon image) | N/A | Enabled (This setting allows you to force a specific default lock screen and logon image by entering the path (location) of the image file. The same image is used for both the lock and logon screens. <p>The reason for this recommendation is to reduce bytes transmitted over the network for virtual desktop environments. This setting can be removed or customized for each environment.)|
+| Control Panel \ Personalization | Force a specific default lock screen and logon image | N/A | Enabled (This setting allows you to force a specific default lock screen and logon image by entering the path (location) of the image file. The same image is used for both the lock and logon screens. <p>The reason for this recommendation is to reduce bytes transmitted over the network for virtual desktop environments. This setting can be removed or customized for each environment.)|
 |Control Panel\ Regional and Language Options\Handwriting personalization|Turn off automatic learning| N/A |**Enabled** (With this policy setting enabled, automatic learning stops, and any stored data is deleted. Users cannot configure this setting in Control Panel)|
 |Local Computer Policy \\ Computer Configuration \\ Administrative Templates \\ Network|N/A|N/A|N/A|
 |Background Intelligent Transfer Service (BITS)|Allow BITS Peercaching| N/A |**Disabled** (This policy setting determines if the Background Intelligent Transfer Service (BITS) peer caching feature is enabled on a specific computer.)|
