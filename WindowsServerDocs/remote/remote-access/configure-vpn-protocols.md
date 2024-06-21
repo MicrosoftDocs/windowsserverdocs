@@ -31,8 +31,6 @@ Existing configurations and Windows Server releases retain their behavior. For e
 
 In this section, configure Remote Access to allow L2TP VPN connections. Select the tab that corresponds to the method you want to use to configure VPN protocols.
 
-### [Remote Access Microsoft Management Console](#tab/rras-mmc)
-
 To enable L2TP VPN connections using the Routing and Remote Access MMC, follow these steps:
 
 1. On the VPN server, in Server Manager, select **Tools** and then select **Routing and Remote Access** to open the Routing and Remote Access Microsoft Management Console (MMC).
@@ -56,34 +54,6 @@ To enable L2TP VPN connections using the Routing and Remote Access MMC, follow t
 1. To apply the changes, restart the Routing and Remote Access service. In the Routing and Remote Access MMC, right-click the VPN server and select **All Tasks** > **Restart** to restart the service.
 
 Your VPN server is now configured to accept L2TP and if selected PPTP VPN connections.
-
-### [Command line](#tab/cli)
-
-To enable L2TP VPN connections using the `netsh` command, follow these steps:
-
-1. Open a command prompt as an administrator.
-
-1. Run the following command to enable the L2TP VPN protocols for incoming connections and set the maximum number of ports to 128.
-
-    ```cmd
-    netsh ras set wanports device="WAN Miniport (L2TP)" rasinonly=enabled maxports=128
-    ```
-
-1. Optional: To enable the PPTP VPN protocols for incoming connections and set the maximum number of ports to 128, run the following command.
-
-    ```cmd
-    netsh ras set wanports device="WAN Miniport (PPTP)" rasinonly=enabled maxports=128
-    ```
-
-1. To apply the changes using the following command to restart the Routing and Remote Access service:
-
-    ```cmd
-    net stop remoteaccess && net start remoteaccess
-    ```
-
-Your VPN server is now configured to accept L2TP and if selected PPTP VPN connections.
-
----
 
 ## Related content
 
