@@ -365,7 +365,7 @@ Virtual Machine Load Balancing is a new feature in Failover Clustering that seam
 
 ### Virtual Machine Start Order
 
-Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for VMs and other groups in a cluster. You can now group VMs into tiers, then create start order dependencies between different tiers. These dependencies ensure that the most important VMs, such as Domain Controllers or Utility VMs, start up first. VMs on lower-priority tiers don't start until after the VMs that they have a dependency on start up.
+Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for VMs and other groups in a cluster. You can now group VMs into tiers, then create start order dependencies between different tiers. These dependencies ensure that the most important VMs, such as Domain Controllers or Utility VMs, start up first. VMs on lower-priority tiers don't start until after the VMs that they have a dependency on startup.
 
 ### Simplified SMB Multichannel and Multi-NIC Cluster Networks
 

@@ -128,7 +128,7 @@ For more information, see [Encrypted networks](../networking/sdn/vnet-encryption
 
 ### Egress metering
 
-[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allow list of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
+[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allowlist of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
 
 ## Storage
 
