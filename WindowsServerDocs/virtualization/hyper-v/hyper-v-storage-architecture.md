@@ -4,7 +4,7 @@ description: An overview of the types of physical storage architectures you can 
 ms.topic: conceptual
 ms.author: helohr
 author: Heidilohr
-ms.date: 05/31/2024
+ms.date: 06/24/2024
 ---
 # Physical storage architectures for Hyper-V
 
