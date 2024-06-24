@@ -11619,6 +11619,11 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/welcome-to-rds.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/whats-new-in-failover-clustering.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
     }
   ]
 }
