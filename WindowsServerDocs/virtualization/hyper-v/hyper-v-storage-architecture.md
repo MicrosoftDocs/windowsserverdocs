@@ -17,9 +17,9 @@ Windows Server Hyper-V is a mature hypervisor platform that supports a wide rang
 
 Hyper-V supports several nonclustered, or standalone, configurations where you install Hyper-V on a standalone server and use local storage, network-attached storage (NAS), or storage area network (SAN) storage.
 
-If you plan to use this configuration, it's important to keep the following details that can affect high availability in your deployment in mind:
+When using this configuration:
 
-- This configuration doesn't support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute (VM processing and memory) systems being nonclustered. For example, if the physical host loses power, the VMs running on it restart when you power the physical host back on. You can also live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
+- Standalone Hyper-V with local disks doesn't support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute (VM processing and memory) systems being nonclustered. For example, if the physical host loses power, the VMs running on it restart when you power the physical host back on. You can also live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
 
 - You can optionally configure local disk resiliency for local drives using hardware or software RAID solutions. If you need more information, we recommend you contact your storage vendor.
 
@@ -29,7 +29,7 @@ If you plan to use this configuration, it's important to keep the following deta
 
 In this configuration, you install Hyper-V is a cluster with VMs that access their storage over the network like [hyperconverged storage](#disaggregated-hyper-v-with-hyperconverged-storage), but Hyper-V uses SAN or NAS storage from a storage vendor instead.
 
-If you plan to use this configuration, keep the following details in mind:
+When using this configuration:
 
 - VMs are highly available to any node in the same compute cluster.
 
@@ -43,7 +43,7 @@ You can scale storage independently from the compute cluster. Storage cluster sc
 
 In this configuration, you install Hyper-V and Storage Spaces Direct on each node in a cluster. Each node contains local disks with data replicated to other nodes in the same cluster.
 
-If you plan to use this configuration, remember that the following:
+When using this configuration:
 
 - You can move VMs to any node in the cluster using Live Migrate or automatically restart after a failure (failover).
 
@@ -57,7 +57,7 @@ If you plan to use this configuration, remember that the following:
 
 In this configuration, you install Hyper-V and Storage Spaces Direct in separate clusters and access the VMs' configuration and storage over the network.
 
-If you plan to use this configuration, keep the following details in mind:
+When using this configuration:
 
 - VMs are highly available to any node in the same compute cluster.
 
@@ -113,18 +113,9 @@ Windows Server also supports the following network block storage protocols:
 
 - InfiniBand
 
-  >[!NOTE]
-  >Configuration specifics ultimately determine whether your deployment can support these protocols. For example, deployments that use the Hyper-V virtual switch don't support InfiniBand. However, they can support InfiniBand devices when they aren't bound to the virtual switch.
+>[!NOTE]
+>Configuration specifics ultimately determine whether your deployment can support these protocols. For example, deployments that use the Hyper-V virtual switch don't support InfiniBand. However, they can support InfiniBand devices when they aren't bound to the virtual switch.
 
-- (Preview) NVMe-oF (NVMe over Fabric)
-
-> [!IMPORTANT]
-> NVMe-oF (NVMe over Fabric) for Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-Microsoft also provides in-box software-based block initiators for network storage:
-
-- iSCSI
-
-- (Preview) NVMe-oF
+Microsoft also provides an in-box software-based iSCSI initiator for network block storage.
 
 You can also use a storage vendor client for any device available in the Windows Server catalog.
