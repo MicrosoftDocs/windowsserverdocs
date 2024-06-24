@@ -371,7 +371,7 @@ Virtual machine Start Order is a new feature in Failover Clustering that introdu
 
 Failover cluster networks are no longer limited to a single network interface card (NIC) per subnet or network. With Simplified Server Message Block (SMB) Multichannel and Multi-NIC Cluster Networks, network configuration is automatic and every NIC on the subnet can be used for cluster and workload traffic. This enhancement allows customers to maximize network throughput for Hyper-V, SQL Server Failover Cluster Instance, and other SMB workloads.
 
-For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](smb-multichannel.md).
+For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](../failover-clustering/smb-multichannel.md).
 
 ## Application development
 
