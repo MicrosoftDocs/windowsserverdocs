@@ -6,7 +6,7 @@ ms.author: helohr
 author: Heidilohr
 ms.date: 05/31/2024
 ---
-# Physical storage architectures for Hyper-V in Windows Server
+# Physical storage architectures for Hyper-V
 
 Windows Server Hyper-V is a mature hypervisor platform that supports a wide range of physical storage architectures, from standalone systems with no resiliency to clustered systems with complex resiliency requirements. This article is an overview of some of the most widely used configuration options.
 
@@ -15,11 +15,11 @@ Windows Server Hyper-V is a mature hypervisor platform that supports a wide rang
 
 ## Standalone Hyper-V with local disks
 
-Hyper-V supports several non-clustered, or standalone, configurations where you install Hyper-V on a standalone server and use local storage, network-attached storage (NAS), or storage area network (SAN) storage.
+Hyper-V supports several nonclustered, or standalone, configurations where you install Hyper-V on a standalone server and use local storage, network-attached storage (NAS), or storage area network (SAN) storage.
 
 If you plan to use this configuration, it's important to keep the following details that can affect high availability in your deployment in mind:
 
-- This configuration doesn't support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute (VM processing and memory) systems being non-clustered. For example, if the physical host loses power, the VMs running on it will restart when you power the physical host back on. However, you can manually live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
+- This configuration doesn't support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute (VM processing and memory) systems being nonclustered. For example, if the physical host loses power, the VMs running on it restart when you power the physical host back on. You can also live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
 
 - You can optionally configure local disk resiliency for local drives using hardware or software RAID solutions. If you need more information, we recommend you contact your storage vendor.
 
@@ -35,7 +35,7 @@ If you plan to use this configuration, keep the following details in mind:
 
 - SAN and NAS systems provide their own availability guarantees.
 
-In this model, the compute and storage scales independently from one another. For example, if you need more processing or memory resources to host your VMs (CPU or RAM), you can add additional compute nodes or clusters without adding more storage. Each compute cluster can contain between 1 and 64 nodes.
+In this model, the compute and storage scales independently from one another. For example, if you need more processing or memory resources to host your VMs (CPU or RAM), you can add more compute nodes or clusters without adding more storage. Each compute cluster can contain between 1 and 64 nodes.
 
 You can scale storage independently from the compute cluster. Storage cluster scaling is vendor-specific. Contact your vendors to understand how the storage solution they offer can scale.
 
@@ -90,6 +90,10 @@ Hyper-V can support the combining the following types of architectures in the sa
 - Disaggregated Hyper-V with SAN
 
 - Disaggregated Hyper-V with NAS
+
+The following diagram shows an example of a deployment with a compute cluster containing a mix of disaggregated SAN and NAS storage.
+
+:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-mixed-example.png" alt-text="A diagram that shows a deployment with a compute cluster containing a mix of disaggregated SAN and NAS storage." lightbox="media/hyper-v-storage-architecture/hyperconverged-mixed-example.png":::
 
 ### Network Storage Protocols
 
