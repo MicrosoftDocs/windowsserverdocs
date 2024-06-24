@@ -225,7 +225,7 @@
   - name: Remote Server Administration Tools
     href: remote-server-administration-tools.md
   - name: Remote Desktop Services
-    href: remote-desktop-services/welcome-to-rds.md
+    href: remote-desktop-services/remote-desktop-services-overview.md
   - name: Remote Access
     items:
     - name: Overview
@@ -438,6 +438,8 @@
           href: /windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
         - name: How to use single sign-on (SSO) over VPN and Wi-Fi connections
           href: /windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        - name: Configure VPN protocols
+          href: remote-access/configure-vpn-protocols.md
     - name: Concepts
       items:
       - name: DirectAccess

@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 04/26/2024
+ms.date: 06/15/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -109,6 +109,10 @@ By default, the Azure Arc setup Feature-on-Demand is installed, which offers a u
 
 You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
 
+## Credential Guard
+
+Starting with Windows Server 2025, Credential Guard is now enabled by default on devices that meet the requirements. For more information about Credential Guard, see [Configure Credential Guard](/windows/security/identity-protection/credential-guard/configure).
+
 ### Desktop shell
 
 When you sign in for the first time, the desktop shell experience conforms to the style and appearance of Windows 11.
@@ -155,6 +159,12 @@ Pinning your most used apps is now available through the **Start** menu and is c
 - Settings
 - Terminal
 - Windows PowerShell
+
+### Remote Access
+
+By default new Routing and Remote Access Services (RRAS) setups don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
+
+Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
 ### Server Message Block
 

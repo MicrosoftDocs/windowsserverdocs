@@ -1,14 +1,15 @@
 ---
-title: Remote Desktop Services Overview in Windows Server
+title: Remote Desktop Services overview in Windows Server
 description: Provides an overview of Remote Desktop Services.
 ms.author: chrimo
-ms.date: 05/15/2024
+ms.date: 06/18/2024
 ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
 manager: scottman
 ---
-# Welcome to Remote Desktop Services
+
+# Remote Desktop Services overview in Windows Server
 
 Remote Desktop Services (RDS) is the platform of choice for building virtualization solutions for every end customer need, including delivering individual virtualized applications, providing secure mobile and remote desktop access, and providing end users the ability to run their applications and desktops from the cloud.
 
