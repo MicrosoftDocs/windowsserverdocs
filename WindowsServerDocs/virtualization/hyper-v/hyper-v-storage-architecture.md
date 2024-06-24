@@ -23,7 +23,7 @@ When using this configuration:
 
 - You can optionally configure local disk resiliency for local drives using hardware or software RAID solutions. If you need more information, we recommend you contact your storage vendor.
 
-:::image type="content" source="media/hyper-v-storage-architecture/standalone-hyper-v-local.png" alt-text="A diagram showing an example of a basic deployment of a standalone Hyper-V with local disks." lightbox="media/hyper-v-storage-architecture/standalone-hyper-v-local.png":::
+:::image type="content" source="media/hyper-v-storage-architecture/standalone-hyper-v-local.png" alt-text="A diagram showing an example of a basic deployment of a standalone Hyper-V with local disks.":::
 
 ## Disaggregated Hyper-V with SAN or NAS Storage
 
