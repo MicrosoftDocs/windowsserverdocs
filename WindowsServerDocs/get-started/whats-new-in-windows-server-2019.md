@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/05/2024
+ms.date: 06/24/2024
 ---
 
 # What's new in Windows Server 2019
