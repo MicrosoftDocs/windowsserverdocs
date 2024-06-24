@@ -224,7 +224,6 @@
       - name: Install and configure DHCP server
         href: technologies/dhcp/quickstart-install-configure-dhcp-server.md
     - name: What's new in DHCP
-      href: technologies/dhcp/What-s-New-in-DHCP.md
       items:
       - name: DHCP subnet selection options
         href: technologies/dhcp/dhcp-subnet-options.md

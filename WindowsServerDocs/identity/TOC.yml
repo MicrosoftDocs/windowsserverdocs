@@ -58,8 +58,6 @@
     items:
     - name: Active Directory Domain Services Overview
       href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
-    - name: What's new in Active Directory Domain Services
-      href: whats-new-active-directory-domain-services.md
     - name: What's new in Active Directory Domain Services Insider Preview
       href: ../get-started/whats-new-windows-server-insiders-preview.md
     - name: AD DS Getting started
@@ -253,6 +251,8 @@
           href: ad-ds/plan/Identifying-Your-Functional-Level-Upgrade.md
         - name: Finding additional Resources for Enabling Advanced Features
           href: ad-ds/plan/finding-additional-Resources-for-Enabling-Advanced-Features.md
+        - name: Database 32k pages optional feature
+          href: ad-ds/32k-pages-optional-feature.md
       - name: Evaluating AD DS Deployment Strategy Examples
         href: ad-ds/plan/Evaluating-AD-DS-Deployment-Strategy-Examples.md
       - name: 'Appendix A: Reviewing Key AD DS Terms'
@@ -439,6 +439,12 @@
         href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
       - name: DC locator changes
         href: ad-ds/manage/dc-locator-changes.md
+      - name: Enable Database 32k pages optional feature
+        href: ad-ds/enable-32K-pages-optional-feature.md
+      - name: Monitoring
+        items:
+        - name: LDAP client performance counters
+          href: ad-ds/ldap-client-performance-counters.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
       items:
@@ -456,8 +462,6 @@
     - name: AD FS Overview
       href: ad-fs/AD-FS-Overview.md
       items:
-      - name: What's new in Active Directory Federation Services
-        href: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
       - name: AD FS 2016 Requirements
         href: ad-fs/overview/AD-FS-Requirements.md
     - name: AD FS Design
@@ -973,7 +977,7 @@
         href: ad-fs/technical-reference/device-registration-technical-reference.md
       - name: AD FS Password Attack Protection
         href: ad-fs/technical-reference/ad-fs-password-protection.md
-    - name: AD FS 2016 FAQ
+    - name: AD FS FAQ
       href: ad-fs/overview/AD-FS-FAQ.yml
     - name: AD FS Decommission
       href: ad-fs/ad-fs-decommission.md

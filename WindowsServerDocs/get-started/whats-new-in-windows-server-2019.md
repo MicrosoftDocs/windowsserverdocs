@@ -4,8 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-manager: femila
-ms.date: 04/01/2024
+ms.date: 06/24/2024
 ---
 
 # What's new in Windows Server 2019
@@ -24,7 +23,7 @@ For more info, see [Windows Admin Center](../manage/windows-admin-center/overvie
 
 ### Desktop experience
 
-Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the **Desktop Experience**. (Semi-Annual Channel \(SAC\) releases don't include the Desktop Experience by design; they're strictly Server Core and Nano Server container image releases.) As with Windows Server 2016, during setup of the operating system you can choose between Server Core installations or Server with Desktop Experience installations.
+Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the **Desktop Experience**. Semi-Annual Channel (SAC) releases don't include the Desktop Experience by design; they're strictly Server Core and Nano Server container image releases. As with Windows Server 2016, during setup of the operating system you can choose between Server Core installations or Server with Desktop Experience installations.
 
 ### System Insights
 
@@ -129,7 +128,7 @@ For more information, see [Encrypted networks](../networking/sdn/vnet-encryption
 
 ### Egress metering
 
-[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allow list of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
+[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allowlist of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
 
 ## Storage
 
@@ -196,17 +195,33 @@ Here's what's new in Storage Replica. For details, see [What's new in Storage Re
 
 ## Failover Clustering
 
-Here's a list of what's new in Failover Clustering. For details, see [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
+We added the following features to failover clustering in Windows Server 2019:
 
-- Cluster sets
-- Azure-aware clusters
-- Cross-domain cluster migration
-- USB witness
-- Cluster infrastructure improvements
-- Cluster Aware Updating supports Storage Spaces Direct
-- File share witness enhancements
-- Cluster hardening
-- Failover Cluster no longer uses NTLM authentication
+- Cluster sets group multiple clusters together into a loosely coupled grouping of multiple failover clusters that come in three types: compute, storage, and hyper-converged. This grouping increases the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. With cluster sets, you can move online virtual machines between clusters within the cluster set. For more information, see [Deploy a cluster set](../failover-clustering/cluster-set.md).
+
+- Clusters are now Azure-aware by default. Azure-aware clusters automatically detect when they're running in Azure IaaS virtual machines, then optimize their configuration to achieve the highest levels of availability. These optimizations include proactive failover and logging of Azure planned maintenance events. Automated optimization makes deployment simpler by removing the need to configure the load balancer with Distributed Network Name for the cluster name.
+
+- Cross-domain cluster migration lets failover clusters dynamically move from one Active Directory domain to another, simplifying domain consolidation and allowing hardware partners to create clusters and join them to the customer's domain at a later time.
+
+- The USB witness feature lets you use a USB drive attached to a network switch as a witness in determining quorum for a cluster. This feature includes extended File Share Witness support for any SMB2-compliant device.
+
+- The CSV cache is now enabled by default to boost virtual machine performance. MSDTC now supports Cluster Shared Volumes to allow deploying MSDTC workloads on Storage Spaces Direct, such as with SQL Server. Enhanced logic to detect partitioned nodes with self-healing to return nodes to cluster membership. Enhanced cluster network route detection and self-healing.
+
+- Cluster Aware Updating (CAU) is now integrated and aware of Storage Spaces Direct, validating and ensuring data resynchronization completes on each node. Cluster Aware Updating inspects updates to intelligently restart only if necessary. This feature lets you restart all servers in the cluster for planned maintenance.
+
+- You can now use file share witnesses in the following scenarios:
+
+  - Absent or poor Internet access because of a remote location, preventing the use of a cloud witness.
+  
+  - Lack of shared drives for a disk witness. For example, a configuration that doesn't use shared disks, such as Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an Exchange Database Availability Group (DAG).
+  
+  - Lack of domain controller connection due to the cluster being behind a DMZ.
+  
+  - A workgroup or cross-domain cluster that doesn't have an Active Directory cluster name object (CNO). Windows Server now also blocks using a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
+
+- A cluster hardening feature has been implemented that enhances the security of intra-cluster communication over Server Message Block (SMB) for Cluster Shared Volumes and Storage Spaces Direct. This feature leverages certificates to provide the most secure platform possible. By doing so, Failover Clusters can now operate without any dependencies on NTLM, which enables security baselines to be established.
+
+- Failover Clusters no longer use NTLM authentication. Instead, Windows Server 2019 clusters now exclusively use Kerberos and certificate-based authentication. Users don't need to make any changes or deploy anything to take advantage of this security enhancement. This change also lets you deploy failover clusters in environments where NTLM is disabled.
 
 ## Application Platform
 
@@ -236,7 +251,7 @@ Windows Server 2019 continues the improvements to compute, networking, and stora
 
     The base container image download sizes, size on disk and startup times have been improved to speed up container workflows.
 
-- **Management experience using Windows Admin Center \(preview\)**
+- **Management experience using Windows Admin Center (preview)**
 
     We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](../manage/windows-admin-center/configure/using-extensions.md).
 
@@ -288,3 +303,109 @@ Now, with Windows Server 2019, it's easy to deploy and manage through a new depl
 ### Windows Subsystem for Linux (WSL)
 
 WSL enables server administrators to use existing tools and scripts from Linux on Windows Server. Many improvements showcased in the [command line blog](https://devblogs.microsoft.com/commandline/tag/wsl/) are now part of Windows Server, including Background tasks, DriveFS, WSLPath, and much more.
+
+## Active Directory Federation Services
+
+Active Directory Federation Services (AD FS) for Windows Server 2019 includes the following changes.
+
+### Protected sign ins
+
+Protected sign ins with AD FS now include the following updates:
+
+- Users can now use third-party authentication products as their first factor without exposing passwords. In cases where the external authentication provider can prove two factors, it can use multifactor authentication (MFA).
+
+- Users can now use passwords as an extra factor after using a non-password option as the first factor. This in-box support improves overall experience from AD FS 2016, which required downloading a GitHub adapter.
+
+- Users can now build their own plug-in risk assessment modules to block certain types of requests during the preauthentication stage. This feature makes it easier to use cloud intelligence such as identity protection to block risky users or transactions. For more information, see [Build Plug-ins with AD FS 2019 Risk Assessment Model](../identity/ad-fs/development/ad-fs-risk-assessment-model.md).
+
+- Improves Extranet Smart Lockout (ESL) quick-fix engineering (QFE) by adding the following capabilities:
+  
+  - You can now use audit mode while protected by classic extranet lockout functionality.
+
+  - Users can now use independent lockout thresholds for familiar locations. This feature lets you run multiple instances of apps within a common service account to roll over passwords with minimal disruption.
+
+### Other security improvements
+
+AD FS 2019 includes the following security improvements:
+
+- Remote PowerShell using SmartCard Sign-in lets users remote connect to AD FS with SmartCards by running PowerShell commands. Users can also use this method to manage all PowerShell functions including multi-node cmdlets.
+
+- HTTP header customization lets users customize HTTP headers created during AD FS responses. Header customization includes the following types of headers:
+
+  - HSTS, which only lets you use AD FS endpoints on HTTPS endpoints for a compliant browser to enforce.
+  
+  - X-frame-options, which lets AD FS admins allow specific relying parties to embed iFrames for AD FS interactive sign-in pages. You should only use this header on HTTPS hosts.
+  
+  - Future header. You can also configure multiple future headers.
+
+  For more information, see [Customize HTTP security response headers with AD FS 2019](../identity/ad-fs/operations/customize-http-security-headers-ad-fs.md).
+
+### Authentication and policy capabilities
+
+AD FS 2019 includes the following authentication and policy capabilities:
+
+- Users can now create rules to specify which authentication provider their deployment invokes for extra authentication. This feature helps with transitioning between authentication providers and securing specific apps that have special requirements for extra authentication providers.
+
+- Optional restrictions for Transport Layer Security (TLS)-based device authentications so that only applications that require TLS can use them. Users can restrict client TLS-based device authentications so that only applications doing device-based conditional access can use them. This feature prevents unwanted prompts for device authentication for applications that don't require TLS-based device authentication.
+
+- AD FS now supports redoing second-factor credentials based on the second factor credential freshness. This feature allows users to only require TFA for the first transaction, then only require the second factor on a periodic basis. You can only use this feature on applications that can provide an extra parameter in the request, since it's not a configurable setting in AD FS. Microsoft Entra ID supports this parameter if you configure the **Remember my MFA for X Days** setting to have *supportsMFA* set to **True** in the Microsoft Entra ID federated domain trust settings.
+
+### Single sign-on improvements
+
+AD FS 2019 also includes the following single sign-on (SSO) improvements:
+
+- AD FS now uses a [paginated UX flow](../identity/ad-fs/operations/AD-FS-paginated-sign-in.md) and a centered user interface (UI) that provides a smoother sign-in experience for users. This change mirrors functionality offered in Azure AD. You may need to update your organization's logo and background images to suit the new UI.
+
+- We fixed an issue that caused the MFA state to not persist when using Primary Refresh Token (PRT) authentication on Windows 10 devices. Users should now be prompted for second factor credentials less often. The experience should now be consistent when device authentication is successful on client TLS and PRT authentication.
+
+### Support for building modern line-of-business apps
+
+AD FS 2019 includes the following features to support building modern line-of-business (LOB) apps:
+
+- AD FS now includes OAuth device flow profile support for signing in using devices without a UI surface area to support rich sign-in experiences. This feature lets users finish signing in on a different device. The Azure Command-Line Interface (CLI) experience in Azure Stack requires this functionality, and you can also use it in other scenarios.
+
+- You no longer require the *Resource* parameter to use AD FS, which is in line with current OAUth specifications. Clients now only need to provide the relying party trust identifier as the scope parameter long with requested permissions.
+
+- You can use cross-origin resource sharing (CORS) headers in AD FS responses. These new headings let users build single-page applications that allow client-side JavaScript libraries to validate the *id_token* signature by querying for the signing keys from the Open ID Connect (OIDC) discovery document on AD FS.
+
+- AD FS includes Proof Key for Code Exchange (PKCE) support for secure auth code flow within OAuth. This extra layer of security prevents malicious actors from hijacking the code and replaying it from a different client.
+
+- We fixed a minor issue that caused AD FS to only send the x5t claim. AD FS now also sends a kid claim to denote the key ID hint for signature verification.
+
+### Supportability improvements
+
+Admins can now configure AD FS to allow users to send error reports and debug logs to them as a ZIP file for troubleshooting. Admins can also configure a Simple Mail Transfer Protocol (SMTP) connection to automatically send the ZIP file to a triage email account. Another setting lets admins automatically create a ticket for their support system based on that email.
+
+### Deployment updates
+
+The following deployment updates are now included in AD FS 2019:
+
+- AD FS has [a similar function to its Windows Server 2016 version](whats-new-in-windows-server-2016.md#moving-from-ad-fs-in-windows-server-2012-r2-to-ad-fs-in-windows-server-2016-is-easier) that makes it easier to upgrade Windows Server 2016 server farms into Windows Server 2019 server farms. A Windows Server 2019 server added to a Windows Server 2016 server farm will only behave like a Windows Server 2016 server until you're ready to upgrade. For more information, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).
+
+### SAML updates
+
+AD FS 2019 includes the following Security Assertion Markup Language (SAML) updates:
+
+- We fixed issues in aggregated federation support, such as InCommon, in these areas:
+
+  - Improved scaling for many entities in the aggregated federation metadata document. Previously, scaling for these entities would be unsuccessful and return an ADMIN0017 error message.
+  
+  - You can now make queries using the *ScopeGroupID* parameter by running the `Get-AdfsRelyingPartyTrustsGroup` PowerShell cmdlet.
+  
+  - Improved handling of error conditions for duplicate *entityID* values.
+
+### Azure AD style resource specification in scope parameter
+
+Previously, AD FS required the desired resource and scope to be in a separate parameter in any authentication request. For example, the following example OAuth request contains a scope parameter:
+
+```http
+https:&#47;&#47;fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:adfs:claimsxray&scope=oauth&redirect_uri=https:&#47;&#47;adfshelp.microsoft.com/
+ClaimsXray/TokenResponse&prompt=login
+```
+
+With AD FS on Windows Server 2019, you can now pass the resource value embedded in the scope parameter. This change is consistent with authentication against Microsoft Entra ID.
+
+The scope parameter can now be organized as a space-separated list that structures each entity as a resource or scope.
+
+> [!NOTE]
+> You can only specify one resource in the authentication request. If you include more than one resource in the request, AD FS returns an error and authentication doesn't succeed.
