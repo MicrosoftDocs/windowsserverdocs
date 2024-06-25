@@ -131,7 +131,7 @@ In this step you transfer data after specifying where to put it on the destinati
    - **Don't transfer users and groups** skips migrating local users and groups, which is required when your source or destination is a domain controller, or when seeding data for DFS Replication (DFS Replication doesn't support local groups and users).
 
    > [!NOTE]
-   > Migrated user accounts are disabled on the destination and assigned a 127-character password that's both complex and random, so you'll have to enable them and assign a new password when you're finished to keep using them. This helps ensure any old accounts with forgotten and weak passwords on the source don't continue to be a security problem on the destination. You should also review [What is Windows LAPS?]((/windows-server/identity/laps/laps-overview)) as a way to manage local Administrator passwords.
+   > Migrated user accounts are disabled on the destination and assigned a 127-character password that's both complex and random, so you'll have to enable them and assign a new password when you're finished to keep using them. This helps ensure any old accounts with forgotten and weak passwords on the source don't continue to be a security problem on the destination. You should also review [What is Windows LAPS?](/windows-server/identity/laps/laps-overview) as a way to manage local Administrator passwords.
 
 1. Select **Validate** and then select **Next**.
 1. Select **Start transfer** to start transferring data.
