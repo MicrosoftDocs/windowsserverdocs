@@ -58,8 +58,6 @@
     items:
     - name: Active Directory Domain Services Overview
       href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
-    - name: What's new in Active Directory Domain Services
-      href: whats-new-active-directory-domain-services.md
     - name: What's new in Active Directory Domain Services Insider Preview
       href: ../get-started/whats-new-windows-server-insiders-preview.md
     - name: AD DS Getting started
@@ -447,6 +445,8 @@
         items:
         - name: DC Locator client performance counters
           href: ad-ds/dclocater-performance-counters.md
+        - name: LDAP client performance counters
+          href: ad-ds/ldap-client-performance-counters.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
       items:

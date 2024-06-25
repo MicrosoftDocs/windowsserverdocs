@@ -1,14 +1,14 @@
 ---
-title: Manage a Windows Server VM using Windows Admin Center in Azure
-description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Windows Server VMs in an Azure VM
+title: Manage a Windows VMs using Windows Admin Center in Azure
+description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Windows Server and Client Azure VMs
 ms.topic: overview
 author: prasidharora
 ms.author: praror
 ms.date: 07/26/2022
 ---
-# Manage a Windows Server VM using Windows Admin Center in Azure
+# Manage a Windows VM using Windows Admin Center in Azure
 
-You can now use Windows Admin Center in the Azure portal to manage the Windows Server operating system inside an Azure VM. Manage operating system functions from the Azure portal and work with files in the VM without using Remote Desktop or PowerShell.
+You can now use Windows Admin Center in the Azure portal to manage the Windows operating system inside an Azure VM. Manage operating system functions from the Azure portal and work with files in the VM without using Remote Desktop or PowerShell.
 
 This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a single VM. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
@@ -16,7 +16,7 @@ This article provides an overview of the functionality provided, requirements, a
 
 ## Overview of functionality
 
-Windows Admin Center in the Azure portal provides the essential set of management tools for managing Windows Server in a single Azure VM:
+Windows Admin Center in the Azure portal provides the essential set of management tools for managing Windows Server and Client Azure VMs:
 
 - Certificates
 - Devices
@@ -66,7 +66,7 @@ Learn more about [configuring role assignment for your VM](#configuring-role-ass
 
 To use Windows Admin Center in the Azure portal, we install Windows Admin Center in each Azure VM that you want to use it to manage. The Azure VM has the following requirements:
 
-- Windows Server 2022, Windows Server 2019 or Windows Server 2016
+- Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, or Windows 11
 - At least 3 GiB of memory
 - Be in any region of an Azure public cloud (it's not supported in Azure China, Azure Government, or other non-public clouds)
 
@@ -77,10 +77,6 @@ The VM also has the following networking requirements, which we step through dur
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the `WindowsAdminCenter` and `AzureActiveDirectory` service tag
 
 - An inbound port rule if using a public IP address to connect to the VM (not recommended)
-
-> [!NOTE]
-> Confiuring Windows Admin Center to communicate outbound through an HTTP/HTTPS proxy server is currently not supported.
-
 
 Just like with Remote Desktop, we recommend connecting to the VM using a private IP address in the VM's virtual network to increase security. Using a private IP address doesn't require an inbound port rule, though it does require access to the virtual network (which we discuss next).
 
@@ -122,7 +118,7 @@ However, we recommend instead using a private IP address to connect with, or at 
 
 ## Using with a VM
 
-After you've installed Windows Admin Center in an Azure VM, here's how to connect to it and use it to manage Windows Server:
+After you've installed Windows Admin Center in an Azure VM, here's how to connect to it and use it to manage Windows:
 
 1. Open the Azure portal and navigate to your VM, then Windows Admin Center.
 1. Select the IP address you want to use when connecting to the VM, and then select **Connect**.
@@ -257,7 +253,7 @@ Here are some tips to try in case something isn't working. For general help trou
     1. In the Azure portal, navigate to “Connect” > “RDP” > “Download RDP File”.
     1. Open the RDP file and sign in with your administrator credentials.
     1. Open Task Manager (Ctrl+Shift+Esc) and navigate to “Services”.
-    1. Make sure ServerManagementGateway / Windows Admin Center is Running. If not, start the service.
+    1. Make sure WindowsAdminCenter is Running. If not, start the service.
 1. Check that your installation is in a good state.
     1. In the Azure portal, navigate to “Connect” > “RDP” > “Download RDP File”.
     1. Open the RDP file and sign in with your administrator credentials.
@@ -426,9 +422,9 @@ There's no cost to using the Windows Admin Center in the Azure portal.
 
 You can install the Hyper-V role using the Roles and Features extension. Once installed, refresh your browser, and Windows Admin Center will show the Virtual Machine and Switch extensions.
 
-### What servers can I manage using this extension?
+### What operating systems can I manage using this extension?
 
-You can use the extension to manage VMs running Windows Server 2016 or higher.
+You can use the extension to manage VMs running Windows Server 2016 or higher, or Windows 10/11.
 
 ### How does Windows Admin Center handle security?
 
@@ -441,13 +437,6 @@ Windows Admin Center installs on your Azure Virtual Machine. The installation co
 ### Why must I create an outbound port rule?
 
 There's an external Windows Admin Center service that manages certificates and DNS records for you. To allow your VM to interact with our service, you must create an outbound port rule.
-
-### How do I find the port used for Windows Admin Center installation?
-
-There are two ways to find out the port:
-
-- Navigate to the Windows Admin Center extension in the Azure portal. Try to connect via an IP address that will result in a failed connection.
-- To verify this value on your VM, open the Registry Editor on your VM and look for the “SmePort” registry key in “\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerManagementGateway”
 
 ### Can I use PowerShell or the Azure CLI to install the extension on my VM?
 

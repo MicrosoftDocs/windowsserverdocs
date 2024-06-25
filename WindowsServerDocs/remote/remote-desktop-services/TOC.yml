@@ -1,5 +1,5 @@
 - name: Remote Desktop Services
-  href: welcome-to-rds.md
+  href: remote-desktop-services-overview.md
   items:
   - name: Get started
     items:
