@@ -261,6 +261,8 @@ Windows Server 2022 uses TCP [HyStart++](https://datatracker.ietf.org/doc/html/d
 
 Virtual switches in Hyper-V have been enhanced with updated Receive Segment Coalescing (RSC). RSC allows the hypervisor network to coalesce packets and process as one larger segment. CPU cycles are reduced and segments will remain coalesced across the entire data path until processed by the intended application. RSC results in improved performance for both network traffic from an external host, received by a virtual NIC, and from a virtual NIC to another virtual NIC on the same host.
 
+In vSwitch, RSC can also coalesce multiple TCP segments into a larger segment before data traversing the vSwitch. This change also improves networking performance for virtual workloads. RSC is enabled on external virtual switches by default.
+
 #### System Insights disk anomaly detection
 
 [System Insights](../manage/system-insights/overview.md) has another capability via Windows Admin Center, disk anomaly detection.
