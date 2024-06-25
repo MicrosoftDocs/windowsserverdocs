@@ -5,7 +5,7 @@ metadata:
   author: nedpyle
   ms.author: nedpyle
   manager: siroy
-  ms.date: 01/29/2021
+  ms.date: 06/25/2024
   ms.topic: faq
   ms.service: windows-server
 title: Storage Migration Service frequently asked questions (FAQ)
@@ -87,7 +87,7 @@ sections:
       - question: |
           Can I consolidate multiple servers into one server?
         answer: |
-          The Storage Migration Service doesn't support consolidating multiple servers into one server. An example of consolidation would be migrating three separate source servers - which may have the same share names and local file paths - onto a single new server that virtualized those paths and shares to prevent any overlap or collision, then answered all three previous servers names and IP address. You can migrate standalone servers onto multiple file server resources on a single cluster, however, and this is the recommended way to consolidate servers.
+          The Storage Migration Service doesn't support consolidating multiple servers into one server. An example of consolidation would be migrating three separate source servers - which may have the same share names and local file paths - onto a single new server that virtualized those paths and shares to prevent any overlap or collision, then answered all three previous servers names and IP address. You can migrate standalone servers onto multiple file server resources on a single cluster, and this is the recommended way to consolidate servers.
 
       - question: |
           Can I migrate from sources other than Windows Server?
@@ -143,7 +143,7 @@ sections:
           
           - **Enable high-performance processing.** Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required. Don't forget to return these to appropriate states after completing migration.
           
-          - **Tune hardware** Review the  (Performance Tuning Guidelines for Windows Server 2022)[/windows-server/administration/performance-tuning/] for tuning the orchestrator and destination computers running Windows Server. The [Network Subsystem Performance Tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md) section contains especially valuable information. There are also guides for older operating systems.
+          - **Tune hardware.** Review the [Performance Tuning Guidelines for Windows Server 2022](/windows-server/administration/performance-tuning) for tuning the orchestrator and destination computers running Windows Server. The [Network Subsystem Performance Tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md) section contains especially valuable information. There are also guides for older operating systems.
           
           - **Use faster storage.** While it may be difficult to upgrade the source computer storage speed, you should ensure the destination storage is at least as fast at write IO performance as the source is at read IO performance in order to ensure there's no unnecessary  bottleneck in transfers. If the destination is a VM, ensure that, at least for the purposes of migration, it runs in the fastest storage layer of your hypervisor hosts, such as on the flash tier or with Storage Spaces Direct HCI clusters utilizing mirrored all-flash or hybrid spaces. When the SMS migration is complete the VM can be live migrated to a slower tier or host.
           
