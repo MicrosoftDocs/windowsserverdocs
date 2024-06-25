@@ -4,7 +4,7 @@ description: Learn about Active Directory DCLocator performance counters in Wind
 ms.topic: conceptual
 author: gswashington
 ms.author: wscontent
-ms.date: 06/18/2024
+ms.date: 06/25/2024
 
 ---
 
@@ -47,7 +47,7 @@ The following table shows the client counters that can be added when using the D
 | `Flags: PDC Required Requests/sec`             | Requests per second that have the Primary Domain Controller flag set                                        |
 | `Flags: Time Server Required Requests/sec`     | Requests per second that have the Time Server flag set                                                      |
 | `Flags: TryNextClosestSite Requests/sec`       | Requests per second that have the `TryNextClosestSite` flag set                                             |
-| `Flags: Writable Required Requests/sec`        | Requests pr second that have the Writable flag set                                                          |
+| `Flags: Writable Required Requests/sec`        | Requests per second that have the Writable flag set                                                          |
 | `Requests: Average Failure Latency (secs)`     | The average latency of failed requests in seconds                                                           |
 | `Requests: Average Success Latency (secs)`     | The average latency of successful requests in seconds                                                       |
 | `Requests: Failures/sec`                       | Number of failed requests per second                                                                        |
