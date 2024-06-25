@@ -2,22 +2,22 @@
   "redirections": [
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds_vdi-recommendations-1909.md",
-      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2019/remote/remote-desktop-services/rds_vdi-recommendations-1909",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds_vdi-recommendations-1909",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations-1803.md",
-      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-1803",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-1803",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations-2004.md",
-      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-2004",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-2004",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations.md",
-      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations",
       "redirect_document_id": false
     },
     {
