@@ -195,7 +195,7 @@ Here's what's new in Storage Replica. For details, see [What's new in Storage Re
 
 ### Data deduplication
 
-Windows Server 2019 now supports the Resilient File System (ReFS). ReFS lets you store up to ten times more data on the same volume with deduplication and compression for the ReFS filesystem. The variable-size chunk store comes with an optional compression feature that can maximize savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. ReFS supports volumes up to 64 TB and deduplicates the first 4 TB of each file. Check out [this video](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) for a quick demonstration of how to enable ReFS in Windows Admin Center.
+Windows Server 2019 now supports the Resilient File System (ReFS). ReFS lets you store up to ten times more data on the same volume with deduplication and compression for the ReFS filesystem. The variable-size chunk store comes with an optional compression feature that can maximize savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. ReFS supports volumes up to 64 TB and deduplicates the first 4 TB of each file. To learn more, see [How to turn on deduplication and compression in Windows Admin Center](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) for a quick video demonstration.
 
 ## Failover Clustering
 

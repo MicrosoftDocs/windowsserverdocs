@@ -301,7 +301,7 @@ Windows Server 2016 includes the following new features for data deduplication.
 
 ### Support for large volumes
 
-Starting with Windows Server 2016, the Data Deduplication Job pipeline can now run multiple threads in parallel using many I/O queues for each volume. This change increases performance to levels previously only possible by dividing data into several smaller volumes. These optimizations apply to [all Data Deduplication Jobs](../storage/data-deduplication/understand.md#job-info), not just the Optimization Job. The following diagram demonstrates how the pipeline changed between versions of Windows Server.
+Starting with Windows Server 2016, the Data Deduplication Job pipeline can now run multiple threads in parallel using many I/O queues for each volume. This change increases performance to levels previously only possible by dividing data into several smaller volumes. These optimizations apply to all [Data Deduplication Jobs](../storage/data-deduplication/understand.md#job-info), not just the Optimization Job. The following diagram demonstrates how the pipeline changed between versions of Windows Server.
 
 :::image type="content" source="../storage/data-deduplication/media/server-2016-dedup-job-pipeline.png" alt-text="A visualization comparing the Data Deduplication Job Pipeline in Windows Server 2012 R2 to Windows Server 2016.":::
 
