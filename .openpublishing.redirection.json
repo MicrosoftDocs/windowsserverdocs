@@ -11626,7 +11626,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/storage/whats-new-in-storage.md",
+      "source_path": "WindowsServerDocs/storage/data-deduplication/whats-new.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
       "redirect_document_id": false
     }
