@@ -24,7 +24,7 @@ Windows will trust the server certificate if one of the following conditions is 
   > If the user is connecting without a preconfigured profile or if user prompts for server validation are enabled in the profile, the thumbprint will automatically be added to the profile if the user accepts the server through the UI prompt.
 - All of the following conditions are met:
   1. The server certificate chain is trusted by the machine or user.
-      - This trust is based on the root certificate being present in the machine or user trusted root store, depending on the OneX [authMode](/windows/win32/nativewifi/onexschema-authmode-onex-element).
+      - This trust is based on the root certificate being present in the machine or user trusted root store, depending on the OneX [authMode](/windows/win32/nativewifi/onexschema-onex-element).
   1. The trusted root certificate thumbprint has been added to the profile.
   1. If server name validation is enabled (recommended), the name matches what is specified in the profile.
       - For more information, see [Server validation](network-access.md#server-validation) for more information about configuring server name validation in the profile.
