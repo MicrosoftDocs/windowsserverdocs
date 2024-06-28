@@ -39,7 +39,7 @@ Another thing to note is that server name matching is case sensitive in Windows 
 
 ### Wildcard certificates
 
-In Windows 11, Windows will no longer immediately reject server certificates that contain a wildcard (`*`) in the certificate Common Name (CN). However, it is recommended that DNS name in the Subject Alternate Name (SubjectAltName/SAN) extension field is used, as Windows will ignore the CN components when checking for a DNS match if the SAN contains a DNS name choice. The SubjectAltName DNS name supports a wildcard in Windows 11, as it has on prior versions of Windows.
+In Windows 11, Windows will no longer immediately reject server certificates that contain a wildcard (`*`) in the certificate Common Name (CN). However, it's recommended that DNS name in the Subject Alternate Name (SubjectAltName/SAN) extension field is used, as Windows will ignore the CN components when checking for a DNS match if the SAN contains a DNS name choice. The SubjectAltName DNS name supports a wildcard in Windows 11, as it has on prior versions of Windows.
   > [!NOTE]
   > All of the conditions described above for trusting the server certificate still apply for wildcard certificates.
 
