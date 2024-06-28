@@ -244,7 +244,7 @@ IPAM provides highly customizable administrative and monitoring capabilities for
 
 - You can use Windows PowerShell to set access scopes on IPAM objects.
 
-For more information, see [What's New in IPAM](technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](../networking/technologies/ipam/Manage-IPAM.md).
+For more information, see [What's New in IPAM](../networking/technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](../networking/technologies/ipam/Manage-IPAM.md).
 
 ## Security and Assurance
 
