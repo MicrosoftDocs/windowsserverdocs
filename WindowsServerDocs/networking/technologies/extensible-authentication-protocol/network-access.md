@@ -4,7 +4,7 @@ description: This article presents information about the Extensible Authenticati
 author: xelu86
 ms.author: wscontent
 ms.topic: conceptual
-ms.date: 06/19/2023
+ms.date: 06/28/2024
 ms.contributor: samyun
 ms.reviewer: samyun
 ---
@@ -90,7 +90,7 @@ The profiles used for different connections types are XML files that contain the
 
 However, when configured to use EAP, each profile schema has a child element [EapHostConfig](/windows/win32/eaphost/eaphostconfigschema-schema) element.
 
-- Wired/Wireless: `EapHostConfig` is a child element of the [EAPConfig](/windows/win32/nativewifi/onexschema-eapconfig-onex-element) element. **MSM > security** ([Wired](/windows/win32/nativewifi/lan-profileschema-security-msm-element)/[Wireless](/windows/win32/nativewifi/wlan-profileschema-security-msm-element)) **>** [OneX](/windows/win32/nativewifi/onexschema-elements) **> EAPConfig**
+- Wired/Wireless: `EapHostConfig` is a child element of the [EAPConfig](/windows/win32/nativewifi/onexschema-onex-element?branch=main#eapconfig) element. **MSM > security** ([Wired](/windows/win32/nativewifi/lan-profileschema-security-msm-element)/[Wireless](/windows/win32/nativewifi/wlan-profileschema-security-msm-element)) **>** [OneX](/windows/win32/nativewifi/onexschema-elements) **> EAPConfig**
 - VPN: `EapHostConfig` is a child element of **NativeProfile > Authentication > Eap > Configuration**
 
 This configuration syntax is defined in the [Group Policy: Wireless/Wired Protocol Extension](/openspecs/windows_protocols/ms-gpwl) specification.
