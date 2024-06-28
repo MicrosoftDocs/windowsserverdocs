@@ -91,7 +91,7 @@ Then, on each RD Session Host servers that need to connect to the RD licensing s
 
 1. Connect to the RD Session Host machine. If doing so remotely, you may need to start the Remote Desktop Connection application if the target machine can’t contact any RD licensing server. Open Remote Desktop Connection as an administrator, or use the command: `mstsc.exe /admin`.
 
-1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. For example, using PsExec from the [Sysinternals Utilities](https://learn.microsoft.com/sysinternals/downloads/), this can be achieved with the command: `psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe`. 
+1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. For example, using PsExec from the [Sysinternals Utilities](/sysinternals/downloads/), this can be achieved with the command: `psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe`. 
 
 1. Then, run `cmdkey /add:< NAME-OF-THE-LICENSING-SERVER> /user:< NAME-OF-THE-LICENSING-SERVER>\<USERNAME-SELECTED-ABOVE> /pass`. 
 
