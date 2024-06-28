@@ -2,8 +2,8 @@
 title: Use personal session desktops with Remote Desktop Services
 description: Learn how to share personalized, assigned desktops through RDS.
 ms.topic: article
-author: lizap
-ms.author: elizapo
+author: robinharwood
+ms.author: wscontent
 ms.date: 10/22/2019
 manager: dongill
 ---

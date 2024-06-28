@@ -2,7 +2,7 @@
 title: Use Windows LAPS event logs
 description: Learn about key events in Windows Local Administrator Password Solution (Windows LAPS) and how to view the logs.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: conceptual
 ---
