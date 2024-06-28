@@ -108,11 +108,11 @@ The following table explains the configurable security settings for a profile th
 
 |Setting|XML element|Description|
 |--|--|--|
-|Select a network authentication method:|[EAPConfig](/windows/win32/nativewifi/onexschema-eapconfig-onex-element)|Allows you to select the EAP method to use for authentication. See [Authentication method configuration settings](#authentication-method-configuration-settings) and [Cellular authentication configuration settings](#cellular-authentication-configuration-settings)|
+|Select a network authentication method:|[EAPConfig](/windows/win32/nativewifi/onexschema-onex-element#eapconfig)|Allows you to select the EAP method to use for authentication. See [Authentication method configuration settings](#authentication-method-configuration-settings) and [Cellular authentication configuration settings](#cellular-authentication-configuration-settings)|
 |Properties||Opens the properties dialog for the selected EAP method.|
-|Authentication Mode|[authMode](/windows/win32/nativewifi/onexschema-authmode-onex-element)|Specifies the type of credentials used for authentication. The following values are supported: <br><br>1. User or computer authentication<br>2. Computer authentication<br>3. User authentication<br>4. Guest authentication<br><br>"Computer", in this context, means "Machine" in other references. `machineOrUser` is the default in Windows.|
-|Max Authentication Failures|[maxAuthFailures](/windows/win32/nativewifi/onexschema-maxauthfailures-onex-element)|Specifies the maximum number of authentication failures allowed for a set of credentials, defaulting to `1`.|
-|Cache user information for subsequent connections to this network|[cacheUserData](/windows/win32/nativewifi/onexschema-cacheuserdata-onex-element)|Specifies whether the user's credentials should be cached for subsequent connections to the same network, defaulting to `true`.|
+|Authentication Mode|[authMode](/windows/win32/nativewifi/onexschema-onex-element#authmode)|Specifies the type of credentials used for authentication. The following values are supported: <br><br>1. User or computer authentication<br>2. Computer authentication<br>3. User authentication<br>4. Guest authentication<br><br>"Computer", in this context, means "Machine" in other references. `machineOrUser` is the default in Windows.|
+|Max Authentication Failures|[maxAuthFailures](/windows/win32/nativewifi/onexschema-onex-element#maxauthfailures)|Specifies the maximum number of authentication failures allowed for a set of credentials, defaulting to `1`.|
+|Cache user information for subsequent connections to this network|[cacheUserData](/windows/win32/nativewifi/onexschema-onex-element#cacheuserdata)|Specifies whether the user's credentials should be cached for subsequent connections to the same network, defaulting to `true`.|
 
 ### Advanced security settings > IEEE 802.1X
 
@@ -120,11 +120,11 @@ If **Enforce advanced 802.1X settings** is checked, all of the following setting
 
 |Setting|XML element|Description|
 |--|--|--|
-|Max Eapol-Start Msgs|[maxStart](/windows/win32/nativewifi/onexschema-maxstart-onex-element)|Specifies the maximum number of EAPOL-Start messages that can be sent to the authenticator (RADIUS server) before the supplicant (Windows client) assumes there's no authenticator present, defaulting to `3`.|
-|Start Period (seconds)|[startPeriod](/windows/win32/nativewifi/onexschema-startperiod-onex-element)|Specifies the time period (in seconds) to wait before an EAPOL-Start message is sent to start the 802.1X authentication process, defaulting to `5`.|
-|Held Period (seconds)|[heldPeriod](/windows/win32/nativewifi/onexschema-heldperiod-onex-element)|Specifies the time period (in seconds) to wait after a failed authentication attempt to reattempt authentication, defaulting to `1`.|
-|Auth Period (seconds)|[authPeriod](/windows/win32/nativewifi/onexschema-authperiod-onex-element)|Specifies the time period (in seconds) to wait for a response from the authenticator (RADIUS server) before assuming there's no authenticator present, defaulting to `18`.|
-|Eapol-Start Message|[supplicantMode](/windows/win32/nativewifi/onexschema-supplicantmode-onex-element)|Specifies the method of transmission used for EAPOL-Start messages. The following values are supported: <br><br>1. Do not transmit (`inhibitTransmission`)<br>2. Transmit (`includeLearning`)<br>3. Transmit per IEEE 802.1X (`compliant`)<br><br>"Computer", in this context, means "Machine" in other references. `compliant` is the default in Windows, and is the only valid option for wireless profiles.|
+|Max Eapol-Start Msgs|[maxStart](/windows/win32/nativewifi/onexschema-onex-element#maxstart)|Specifies the maximum number of EAPOL-Start messages that can be sent to the authenticator (RADIUS server) before the supplicant (Windows client) assumes there's no authenticator present, defaulting to `3`.|
+|Start Period (seconds)|[startPeriod](/windows/win32/nativewifi/onexschema-onex-element#startperiod)|Specifies the time period (in seconds) to wait before an EAPOL-Start message is sent to start the 802.1X authentication process, defaulting to `5`.|
+|Held Period (seconds)|[heldPeriod](/windows/win32/nativewifi/onexschema-onex-element#heldperiod)|Specifies the time period (in seconds) to wait after a failed authentication attempt to reattempt authentication, defaulting to `1`.|
+|Auth Period (seconds)|[authPeriod](/windows/win32/nativewifi/onexschema-onex-element#authperiod)|Specifies the time period (in seconds) to wait for a response from the authenticator (RADIUS server) before assuming there's no authenticator present, defaulting to `18`.|
+|Eapol-Start Message|[supplicantMode](/windows/win32/nativewifi/onexschema-onex-element#supplicantmode)|Specifies the method of transmission used for EAPOL-Start messages. The following values are supported: <br><br>1. Do not transmit (`inhibitTransmission`)<br>2. Transmit (`includeLearning`)<br>3. Transmit per IEEE 802.1X (`compliant`)<br><br>"Computer", in this context, means "Machine" in other references. `compliant` is the default in Windows, and is the only valid option for wireless profiles.|
 
 ### Advanced security settings > Single Sign On
 
@@ -133,10 +133,10 @@ The following table explains the settings for [Single Sign On (SSO), formerly kn
 |Setting|XML element|Description|
 |--|--|--|
 |Enable Single Sign On for this network|[singleSignOn](/windows/win32/nativewifi/onexschema-singlesignon-onex-element)|Specifies whether SSO is enabled for this network, defaulting to `false`. Don't use `singleSignOn` in a profile if the network doesn't require it.|
-|Perform immediately before User<br><br>Perform immediately after User|[type](/windows/win32/nativewifi/onexschema-type-singlesignon-element)|Specifies when SSO should be performed - either before or after the user logs on.|
-|Max delay for connectivity(seconds)|[maxDelay](/windows/win32/nativewifi/onexschema-maxdelay-singlesignon-element)|Specifies the maximum delay (in seconds) before the SSO attempt fails, defaulting to `10`.|
-|Allow additional dialogs to be displayed during Single Sign On|**allowAdditionalDialogs**|Specified whether to allow EAP dialogs to be displayed during SSO, defaulting to `false`.|
-|This network uses different VLAN for authentication with machine and user credentials|[userBasedVirtualLan](/windows/win32/nativewifi/onexschema-userbasedvirtuallan-singlesignon-element)|Specifies whether the virtual LAN (VLAN) used by the device changes based on the user's credentials, defaulting to `false`.|
+|Perform immediately before User<br><br>Perform immediately after User|[type](/windows/win32/nativewifi/onexschema-singlesignon-onex-element#type)|Specifies when SSO should be performed - either before or after the user logs on.|
+|Max delay for connectivity(seconds)|[maxDelay](/windows/win32/nativewifi/onexschema-singlesignon-onex-element#maxdelay)|Specifies the maximum delay (in seconds) before the SSO attempt fails, defaulting to `10`.|
+|Allow additional dialogs to be displayed during Single Sign On|[allowAdditionalDialogs](/windows/win32/nativewifi/onexschema-singlesignon-onex-element#allowadditionaldialogs)|Specified whether to allow EAP dialogs to be displayed during SSO, defaulting to `false`.|
+|This network uses different VLAN for authentication with machine and user credentials|[userBasedVirtualLan](/windows/win32/nativewifi/onexschema-singlesignon-onex-element#userbasedvirtuallan)|Specifies whether the virtual LAN (VLAN) used by the device changes based on the user's credentials, defaulting to `false`.|
 
 ## Authentication method configuration settings
 
