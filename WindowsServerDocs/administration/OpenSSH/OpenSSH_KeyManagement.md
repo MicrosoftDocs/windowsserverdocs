@@ -34,7 +34,7 @@ Multi-factor authentication may be implemented with key pairs by entering a pass
 
 > [!IMPORTANT]
 > A remote session opened via key based authentication does not have associated user credentials and
-> hence is not capable of outbound authentication as the user, this is by design.
+> hence is not capable of outbound authentication as the user, which is by design.
 
 ## Host key generation
 
@@ -53,11 +53,11 @@ Get-Service -Name sshd | Set-Service -StartupType Automatic
 Start-Service sshd
 ```
 
-Since there's no user associated with the sshd service, the host keys are stored under C:\ProgramData\ssh.
+Since there's no user associated with the sshd service, the host keys are stored under `C:\ProgramData\ssh`.
 
 ## User key generation
 
-To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified. If no algorithm is specified, RSA is used. A strong algorithm and key length should be used, such as Ed25519 in this example.
+To use key-based authentication, you first need to generate public/private key pairs for your client. `ssh-keygen.exe` is used to generate key files and the algorithms `DSA`, `RSA`, `ECDSA`, or `Ed25519` can be specified. If no algorithm is specified, RSA is used. A strong algorithm and key length should be used, such as `Ed25519` in this example.
 
 To generate key files using the Ed25519 algorithm, run the following command from a PowerShell or cmd prompt on your client:
 
@@ -98,7 +98,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Now you have a public/private ed25519 key pair in the location specified. The .pub files are public keys, and files without an extension are private keys:
+Now you have a public/private ed25519 key pair in the location specified. The `.pub` files are public keys, and files without an extension are private keys:
 
 ```Output
 Mode                LastWriteTime         Length Name
@@ -136,11 +136,11 @@ Once you've added the key to the ssh-agent on your client, the ssh-agent will au
 
 ## Deploying the public key
 
-To use the user key that was created above, the contents of your public key (_\\.ssh\id\_ed25519.pub_) needs to be placed on the server into a text file. The name and location of the file depends on whether the user account is a member of the local administrators group or a standard user account. The following sections cover both standard and administrative users.
+To use the user key that was created above, the contents of your public key (`_\\.ssh\id\_ed25519.pub_`) needs to be placed on the server into a text file. The name and location of the file depends on whether the user account is a member of the local administrators group or a standard user account. The following sections cover both standard and administrative users.
 
 ### Standard user
 
-The contents of your public key (_\\.ssh\id\_ed25519.pub_) needs to be placed on the server into a text file called `authorized_keys` in _C:\Users\username\\.ssh\\_. You can copy your public key using the OpenSSH scp secure file-transfer utility, or using a PowerShell to write the key to the file.
+The contents of your public key (`_\\.ssh\id\_ed25519.pub_`) needs to be placed on the server into a text file called `authorized_keys` in `_C:\Users\username\\.ssh\\_`. You can copy your public key using the OpenSSH scp secure file-transfer utility, or using a PowerShell to write the key to the file.
 
 The example below copies the public key to the server (where "username" is replaced by your username). You'll need to use the password for the user account for the server initially.
 
@@ -157,7 +157,7 @@ ssh username@domain1@contoso.com $remotePowershell
 
 ### Administrative user
 
-The contents of your public key (_\\.ssh\id\_ed25519.pub_) needs to be placed on the server into a text file called `administrators_authorized_keys` in _C:\ProgramData\ssh\\_. You can copy your public key using the OpenSSH scp secure file-transfer utility, or using a PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and System.
+The contents of your public key (`_\\.ssh\id\_ed25519.pub_`) needs to be placed on the server into a text file called `administrators_authorized_keys` in `_C:\ProgramData\ssh\\_`. You can copy your public key using the OpenSSH scp secure file-transfer utility, or using a PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and System.
 
 The example below copies the public key to the server and configures the ACL (where "username" is
 replaced by your user name). You'll need to use the password for the user account for the server
