@@ -275,16 +275,18 @@ This functionality requires the server to be using the [Server Core installation
 
 ### Storage
 
+Windows Server 2022 includes the following Storage updates. Storage is also affected by the updates to [System Insights disk anomaly detection](#system-insights-disk-anomaly-detection) and [Windows Admin Center](#windows-admin-center).
+
 #### Storage Migration Service
 
 Enhancements to Storage Migration Service in Windows Server 2022 makes it easier to migrate storage to Windows Server or to Azure from more source locations. Here are the features that are available when running the Storage Migration Server orchestrator on Windows Server 2022:
 
-* Migrate local users and groups to the new server.
-* Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
-* Migrate storage from a Linux server that uses Samba.
-* More easily synchronize migrated shares into Azure by using Azure File Sync.
-* Migrate to new networks such as Azure.
-* Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
+- Migrate local users and groups to the new server.
+- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
+- Migrate storage from a Linux server that uses Samba.
+- More easily synchronize migrated shares into Azure by using Azure File Sync.
+- Migrate to new networks such as Azure.
+- Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
 
 #### Adjustable storage repair speed
 
