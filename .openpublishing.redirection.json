@@ -27,6 +27,11 @@
     },
     {
       "source_path": "WindowsServerDocs/get-started/Deploy-Nano-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/deploy-nano-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Deploy-Nano-Server.md",
       "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
       "redirect_document_id": false
     },
