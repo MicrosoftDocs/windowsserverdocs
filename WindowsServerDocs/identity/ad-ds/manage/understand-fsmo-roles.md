@@ -5,11 +5,11 @@ author: Orin-Thomas
 ms.topic: conceptual
 ms.author: orthomas
 contributor: orthomas
-ms.date: 06/05/2024
+ms.date: 07/01/2024
 #customer intent: As an Active Directory Domain Services administrator, I need to understand the Flexible Single Master Operations (FSMO) roles so that I can place them effectively.
 ---
 
-# Flexible Single Master Operations roles
+# Flexible Single Master Operations roles in Active Directory Domain Services
 
 Domain controllers that hold operations master, also known as flexible single master operations or FSMO, roles keep the directory functioning properly by performing a unique set of domain and forest management tasks.
 
