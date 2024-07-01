@@ -28,10 +28,10 @@ If you remote into your personal desktop, there are other redirections that you 
 
 | Redirection | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS | macOS | Web client    |
 |-------------|---------------------------|---------------|---------|-----|-------|---------------|
-| Keyboard    | X                         | X             | X       | X   | X     | X             |
-| Mouse       | X                         | X             | X       | X\* | X     | X             |
-| Touch       | X                         | X             | X       | X   |       | X (except IE) |
-| Pen         | X                         |               | X       | X   | | |
+| Keyboard    | ✓                         | ✓             | ✓       | ✓   | ✓     | ✓             |
+| Mouse       | ✓                         | ✓             | ✓       | ✓\* | ✓     | ✓             |
+| Touch       | ✓                         | ✓             | ✓       | ✓   |       | ✓ (except IE) |
+| Pen         | ✓                         |               | ✓       | ✓   | | |
 
 \* View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices-and-redirection).
 
@@ -39,8 +39,8 @@ If you remote into your personal desktop, there are other redirections that you 
 
 | Redirection | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS | macOS | Web client |
 |-------------|---------------------------|---------------|---------|-----|-------|------------|
-| Serial port | X                         |               |         |     |       |            |
-| USB         | X                         |               |         |     |       |            |
+| Serial port | ✓                         |               |         |     |       |            |
+| USB         | ✓                         |               |         |     |       |            |
 
 When you enable USB port redirection, all USB devices attached to USB ports are automatically recognized in the remote session. For the devices to work as expected, you must make sure to install their required drivers on both the endpoint and host. Also, make sure the drivers are certified to run in remote scenarios. If you need more information about using your USB device in remote scenarios, talk to the device manufacturer.
 
@@ -48,17 +48,17 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 
 | Redirection         | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|---------------|---------|--------------|---------------------------------|---------------|
-| Cameras             | X                         |               |  X       |   X          | X                               | X              |
-| Clipboard           | X                         | X             | Text    | Text, images | X                               | Text          |
-| Local drive/storage | X                         |               | X       | X            | X                               |  X\*             |
-| Location            | X                         |  X             |         |              |                                 |               |
-| Microphones         | X                         | X             | X       |  X           | X                               | X             |
-| Printers            | X                         |               |         |              | X\*\* (CUPS only)                   | PDF print     |
-| Scanners            | X                         |               |         |              |                                 |               |
-| Smart cards         | X                         |               |         |              | X (Windows sign-in not supported) |               |
-| Speakers            | X                         | X             | X       | X            | X                               | X (except IE) |
-| Third-party virtual channel plugins | X         |               |         |              |                                 |               |
-| WebAuthn            | X                         |               |         |              |                                 |               |
+| Cameras             | ✓                         |               |  ✓       |   ✓          | ✓                               | ✓              |
+| Clipboard           | ✓                         | ✓             | Text    | Text, images | ✓                               | Text          |
+| Local drive/storage | ✓                         |               | ✓       | ✓            | ✓                               |  ✓\*             |
+| Location            | ✓                         | ✓             |         |              |                                 |               |
+| Microphones         | ✓                         | ✓             | ✓       |  ✓           | ✓                               | ✓             |
+| Printers            | ✓                         |               |         |              | ✓\*\* (CUPS only)                   | PDF print     |
+| Scanners            | ✓                         |               |         |              |                                 |               |
+| Smart cards         | ✓                         |               |         |              | ✓ (Windows sign-in not supported) |               |
+| Speakers            | ✓                         | ✓             | ✓       | ✓            | ✓                               | ✓ (except IE) |
+| Third-party virtual channel plugins | ✓         |               |         |              |                                 |               |
+| WebAuthn            | ✓                         |               |         |              |                                 |               |
 
 \* Limited to uploading and downloading files through the Remote Desktop Web client.
 
