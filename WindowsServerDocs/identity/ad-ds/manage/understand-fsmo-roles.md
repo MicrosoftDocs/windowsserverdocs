@@ -45,7 +45,7 @@ The infrastructure master manages references from objects in its domain to objec
 
 The schema master governs all changes to the schema. The Active Directory schema defines the structure and rules for the directory's data. The schema determines what types of objects (such as users, computers, and groups) can exist in the directory, the attributes that these objects can have, and the relationships between different object types. There's only one schema master in an AD DS forest.
 
-The schema master governs all changes to the schema. The Active Directory schema defines the structure and rules for the directory's data. The schema determines what types of objects can exist, their attributes, and the relationships between them. There is only one schema master in an AD DS forest.
+The schema master governs all changes to the schema. The Active Directory schema defines the structure and rules for the directory's data. The schema determines what types of objects can exist, their attributes, and the relationships between them. There's only one schema master in an AD DS forest.
 
 ### Domain Naming Master
 
@@ -55,7 +55,7 @@ The domain naming master adds and removes domain directory partitions and applic
 
 To perform their respective operations, the domain controllers that host operations master roles must be consistently available and they must be located in areas where network reliability is high. Careful placement of your operations masters becomes more important as you add more domains and sites to your forest.
 
-Although you can assign the forest-level and domain-level operations master roles to any domain controller in the forest and domain, respectively, improper infrastructure master role placement can cause the infrastructure master to perform incorrectly. Other improper operations master configurations can increase administrative overhead. The following guidelines help to minimize administrative overhead and ensure the proper performance of Active Directory Domain Services (AD DS). The guidelines also simplifies the recovery process if a domain controller that is hosting an operations master role fails.
+Although you can assign the forest-level and domain-level operations master roles to any domain controller in the forest and domain, respectively, improper infrastructure master role placement can cause the infrastructure master to perform incorrectly. Other improper operations master configurations can increase administrative overhead. The following guidelines help to minimize administrative overhead and ensure the proper performance of Active Directory Domain Services (AD DS). The guidelines simplify the recovery process if a domain controller that is hosting an operations master role fails.
 
 Guidelines for operations master role placement:
 
@@ -78,4 +78,5 @@ The PDC emulator role requires a powerful and reliable domain controller to ensu
 ## Next steps
 
 - [Transfer Flexible Single Master Operations (FSMO) roles](manage-fsmo-roles.md)
+
 - [Managing RID Issuance](Managing-RID-Issuance.md)
