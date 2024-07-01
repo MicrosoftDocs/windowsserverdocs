@@ -1,5 +1,5 @@
 ---
-title: Transfer Flexible Single Master Operations (FSMO) roles in Windows Server
+title: Transfer Flexible Single Master Operations roles in Windows Server
 description: Learn how to transfer FSMO roles in Active Directory Domain Services (AD DS) to optimize performance and simplify administration.
 author: Orin-Thomas
 ms.topic: how-to
@@ -9,9 +9,9 @@ ms.date: 07/01/2024
 #customer intent: As an Active Directory Domain Services administrator, I need to manage the Flexible Single Master Operations (FSMO) roles so that I can optimize performance and perform administration tasks.
 ---
 
-# Transfer Flexible Single Master Operations (FSMO) roles
+# Transfer Flexible Single Master Operations roles
 
-When you create a new domain, the Active Directory Domain Services Installation Wizard automatically assigns all the domain-level operations master roles to the first domain controller that is created in that domain. When you create a new forest, the wizard also assigns the two forest-level operations master roles to the first domain controller. After the domain is created and functioning, you might transfer various operations master roles to different domain controllers to optimize performance and simplify administration.
+When you create a new domain, the Active Directory Domain Services Installation Wizard automatically assigns all the domain-level Flexible Single Master Operations (FSMO) to the first domain controller that is created in that domain. When you create a new forest, the wizard also assigns the two forest-level operations master roles to the first domain controller. After the domain is created and functioning, you might want to transfer various operations master roles to different domain controllers to optimize performance and simplify administration.
 
 Consider moving the operations master role or roles when any of the following conditions exist:
 
@@ -25,7 +25,7 @@ Consider moving the operations master role or roles when any of the following co
 
 ## Prerequisites
 
-Before you transfer an operations master role, you'll need to complete the following prerequisites.
+Before you transfer an operations master role, you need to complete the following prerequisites.
 
 - Review the article [Flexible Single Master Operations roles](understand-fsmo-roles.md) for other considerations before transferring a FSMO role.
 
@@ -43,24 +43,28 @@ Before you transfer an operations master role, you'll need to complete the follo
 
 ## Find the current role holders
 
-To determine which domain controller holds a specific operations master role, you can use the Active Directory Users and Computers snap-in or the PowerShell cmdlet `Get-ADDomainController`. To find the current role holders, run the following PowerShell command:
+To determine which domain controller holds a specific operations master role, you can use the Active Directory Users and Computers snap-in or the PowerShell cmdlet `Get-ADDomainController`. To find the current role holders, run the following steps.
 
-```powershell
-$domainControllers = Get-ADDomainController -Filter *
-foreach ($dc in $domainControllers) {
-    Write-Output "Name: $($dc.Name)"
-    Write-Output "OperationMasterRoles:"
-    foreach ($role in $dc.OperationMasterRoles) {
-        Write-Output "- $role"
-    }
-}
-```
+1. Sign on to a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
+
+1. Open a PowerShell window.
+
+1. Run the following PowerShell commands to list the domain controllers and their operations master roles. The script lists the domain controllers in the domain and the operations master roles that they hold.
+
+   ```powershell
+   $domainControllers = Get-ADDomainController -Filter *
+   foreach ($dc in $domainControllers) {
+       Write-Output "Name: $($dc.Name)"
+       Write-Output "OperationMasterRoles:"
+       foreach ($role in $dc.OperationMasterRoles) {
+           Write-Output "- $role"
+       }
+   }
+   ```
 
 ## Transfer Schema master role
 
 To transfer the Schema master role, follow these steps.
-
-1. Sign on to a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
 
 1. Run the following PowerShell command to transfer the Schema Master role to another domain controller. Replace `<TargetServer>` with the name of the domain controller that you want to transfer the role to.
 
@@ -82,8 +86,6 @@ If the domain controller that currently holds the Schema Master role has failed,
 
 To transfer the Domain Naming Master role, run the following PowerShell command:
 
-1. Sign on to a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
-
 1. Run the following PowerShell command to transfer the Domain Naming Master role to another domain controller. Replace `<TargetServer>` with the name of the domain controller that you want to transfer the role to.
 
    ```powershell
@@ -103,8 +105,6 @@ If the domain controller that currently holds the Domain Naming Master role has 
 ## Transfer PDC Emulator role
 
 To transfer the PDC Emulator role, run the following PowerShell command:
-
-1. Sign on to a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
 
 1. Run the following PowerShell command to transfer the PDC Emulator role to another domain controller. Replace `<TargetServer>` with the name of the domain controller that you want to transfer the role to.
 
@@ -126,8 +126,6 @@ If the domain controller that currently holds the PDC Emulator role has failed, 
 
 To transfer the RID Master role, follow these steps.
 
-1. Sign on to a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
-
 1. Run the following PowerShell command to transfer the RID Master role to another domain controller. Replace `<TargetServer>` with the name of the domain controller that you want to transfer the role to.
 
    ```powershell
@@ -147,8 +145,6 @@ If the domain controller that currently holds the RID Master role has failed, yo
 ## Transfer Infrastructure Master role
 
 To transfer the Infrastructure Master role, follow these steps.
-
-1. Sign on to a computer with the AD DS Remote Server Administration Tools (RSAT) installed.
 
 1. Run the following PowerShell command to transfer the Infrastructure Master role to another domain controller. Replace `<TargetServer>` with the name of the domain controller that you want to transfer the role to.
 
