@@ -140,6 +140,9 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Thin Provisioning | Yes<sup>5</sup> | Yes |
 | Trim/Unmap | Yes<sup>5</sup> | Yes |
 | Page file support | Yes<sup>6</sup> | Yes |
+| File system encryption | Yes<sup>7</sup> | Yes |
+| File system compression | Yes | Yes |
+| Extended attributes | Yes | Yes |
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
@@ -147,6 +150,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. [Hard links](/windows/win32/fileio/hard-links-and-junctions) support is added for **newly formatted volumes** only. Hard links can't be used on volumes that have been upgraded from previous versions
 5. Storage Spaces only.
 6. Available on ReFS 3.7 and later.
+7. Available on ReFS 3.14 and later.
 
 #### The following features are only available with ReFS:
 
@@ -163,13 +167,10 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 
 | Functionality | ReFS | NTFS |
 |--|--|--|
-| File system compression | No | Yes |
-| File system encryption | No | Yes |
 | Transactions | No | Yes |
 | Object IDs | No | Yes |
 | Offloaded Data Transfer (ODX) | No | Yes |
 | Short names | No | Yes |
-| Extended attributes | No | Yes |
 | Disk quotas | No | Yes |
 | Bootable | No | Yes |
 | Supported on removable media | No | Yes |
