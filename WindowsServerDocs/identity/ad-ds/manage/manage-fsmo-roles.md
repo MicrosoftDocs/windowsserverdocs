@@ -23,13 +23,13 @@ Consider moving the operations master role or roles when any of the following co
 
 - Administrative configuration changes that affect operations master role placement
 
-If an operations master role holder has failed or been decommissioned before you can transfer the role, you must seize and transfer the role to a healthy domain controller. If you can't fix the previous role holder, or if you seized the roles, remove the previous role holder from the domain and clean up it's metadata. To learn more about metadata cleanup, see [Clean up Active Directory Domain Controller server metadata](../deploy/ad-ds-metadata-cleanup.md). If you plan to reuse the repaired computer as a domain control, we recommend you format and rebuild the computer instead of restoring the domain controller from a backup. Restored domain controllers would as be role holders again and cause a conflict.
+If an operations master role holder has failed or been decommissioned before you can transfer the role, you must seize and transfer the role to a healthy domain controller. If you can't fix the previous role holder, or if you seized the roles, remove the previous role holder from the domain and clean up its metadata. To learn more about metadata cleanup, see [Clean up Active Directory Domain Controller server metadata](../deploy/ad-ds-metadata-cleanup.md). If you plan to reuse the repaired computer as a domain control, we recommend you format and rebuild the computer instead of restoring the domain controller from a backup. Restored domain controllers would as be role holders again and cause a conflict.
 
 ## Prerequisites
 
 Before you transfer an operations master role, you need to complete the following prerequisites.
 
-- Review the article [Flexible Single Master Operations roles](understand-fsmo-roles.md) for other considerations before transferring a FSMO role.
+- Review the article [Flexible Single Master Operations roles](understand-fsmo-roles.md) for other considerations before transferring an FSMO role.
 
 - To transfer the Schema Master role, your account must be a member of the Schema Admins group and should also be a member of the Enterprise Admins group.
 
