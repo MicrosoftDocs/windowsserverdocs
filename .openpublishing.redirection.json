@@ -11624,6 +11624,12 @@
       "source_path": "WindowsServerDocs/failover-clustering/whats-new-in-failover-clustering.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/processor-compatibility-mode-hyper-v.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/dynamic-processor-compatibility-mode",
+      "redirect_document_id": false
     }
+
   ]
 }
