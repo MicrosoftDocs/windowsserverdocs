@@ -6,7 +6,7 @@ ms.author: billmath
 manager: amycolannino
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
 ms.topic: how-to
-ms.date: 05/31/2024
+ms.date: 07/03/2024
 ---
 
 # Deploy Active Directory Federation Services in Azure
@@ -28,12 +28,11 @@ The following diagram shows the recommended basic topology for deploying AD FS i
 
 We recommend your network topology follows these general principles:
 
-- Deploy AD FS on separate servers to avoid effecting the performance your domain controllers.
+- Deploy AD FS on separate servers to avoid affecting the performance your domain controllers.
 - You must deploy web application proxy (WAP) servers so that users can reach the AD FS when they aren't on the company network.
 - You should set up the web application proxy servers in the demilitarized zone (DMZ) and only allow TCP/443 access between the DMZ and internal subnet.
 - To ensure high availability of AD FS and web application proxy servers, we recommend using an internal load balancer for AD FS servers and Azure Load Balancer for web application proxy servers.
 - To provide redundancy to your AD FS deployment, we recommend that you group two or more virtual machines (VMs) in an availability set for similar workloads. This configuration ensures that during either a planned or unplanned maintenance event, at least one VM is available.
-- We recommend you have two storage accounts. Having only one storage account can create a single point of failure. The deployment can become unavailable in the unlikely event where the storage account fails. Two storage accounts help associate one storage account for each fault line.
 - You should deploy web application proxy servers in a separate DMZ network. You can divide one virtual network into two subnets and then deploy the web application proxy servers in an isolated subnet. You can configure the network security group settings for each subnet and allow only required communication between the two subnets.
 
 ## Deploy the network
@@ -156,40 +155,6 @@ You need a connection to on-premises to deploy the DC in Azure. You can connect 
 
 We recommend you use ExpressRoute if your organization doesn't require point-to-site or Virtual Network site-to-site connections. ExpressRoute lets you create private connections between Azure datacenters and infrastructure that's on your premises or in a colocation environment. ExpressRoute connections also don't connect to the public internet, which makes them more reliable, faster, and more secure. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](/azure/expressroute/expressroute-introduction).
 
-## Create storage accounts
-
-To maintain high availability and avoid dependence on a single storage account, you should create two storage accounts by dividing the machines in each availability set into two groups, then assigning each group a separate storage account.
-
-To create the two storage accounts:
-
-1. Open the Azure portal, search for and select **Storage accounts**, then select **+ Create**.
-
-1. In **Create a storage account**, go to the **Basics** tab and enter the following information:
-
-    - Under **Product details**:
-
-      - For **Subscription**, select the name of your subscription.
-
-      - For **Resource group**, either select an existing resource group or **Create new** to make a new one.
-
-    - Under **Instance details**:
-
-      - For **Storage account name**, enter the name for your storage account. For this example, enter **contosoac1**.
-
-      - For **Region**, select the region you want to use.
-
-      - For **Performance**, select **Premium**.
-
-      - For **Premium account type**, select either **block blobs**, **file shares**, or **page blobs** depending on your organization's needs.
-
-      - For **Redundancy**, select **Locally-redundant storage (LRS)**.
-
-1. Continue through the remaining tabs. When ready, select **Create** on the **Review** tab.
-
-   :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-storage-account.png" alt-text="Screenshot showing how to create storage accounts.":::
-
-1. Repeat the previous steps to create a second storage account with the name **contososac2**.
-
 ## Create availability sets
 
 For each role (DC/AD FS and WAP), create availability sets that contain at least two machines each. This configuration helps achieve higher availability for each role. While creating the availability sets, you must decide which of the following domains you want to use:
@@ -260,7 +225,7 @@ To create VMs:
 
       - For **Subscription**, select the name of your subscription.
 
-      - For **Image**, select the image you want to use, then select **Conifgure VM generation** and select **Gen 1**.
+      - For **Image**, select the image you want to use, then select **Configure VM generation** and select **Gen 1**.
 
     - Under **Administrator account**:
 
@@ -274,9 +239,6 @@ To create VMs:
 
 1. When you're finished, select **Next: Disks**.
     :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vm-basics-tab.png" alt-text="Screenshot showing the first steps in how to create a virtual machine.":::
-
-1. On the **Disks** tab under **Advanced**, deselect the **Use managed disks** checkbox, then select the **contososac1** storage account that you created in the previous section. When you're finished, select **Next: Networking**.
-    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vm-disks-tab.png" alt-text="Screenshot showing the Disks tab for how to create a virtual machine.":::
 
 1. In the **Networking** tab, enter the following information:
   
