@@ -3,8 +3,8 @@ title: Deploy Always On VPN profile to Windows 10+ clients with Microsoft Config
 description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Endpoint Configuration Manager.
 ms.topic: article
 ms.date:  03/14/2023
-ms.author: anaharris
-author: anaharris-ms
+ms.author: wscontent
+author: robinharwood
 ---
 
 

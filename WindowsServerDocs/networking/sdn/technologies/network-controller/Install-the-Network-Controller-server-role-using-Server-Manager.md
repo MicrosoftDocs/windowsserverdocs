@@ -4,8 +4,8 @@ description: This topic provides instructions on how to install the Network Cont
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
-ms.author: v-mandhiman
-author: ManikaDhiman
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Install the Network Controller Server Role Using Server Manager

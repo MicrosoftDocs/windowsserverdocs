@@ -20,6 +20,14 @@ This page is updated monthly, so revisit it regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.31.0.0 - June 2024
+
+### New features
+- Support for Windows 10/11 machines
+
+### Fixed
+- Fixed an issue where connection to Azure Stack HCI clusters fails
+
 ## Version 0.24.0.0 - April 2024
 
 ### New features
