@@ -8,7 +8,7 @@ author: Heidilohr
 ---
 # Using certificates in Remote Desktop Services
 
-Remote Desktop Services (RDS) uses certificates to secure communication between two computers. A certificate is a signature that validates the identity of the server and client when they try to connect to each other.
+You can use certificates to secure connections to your Remote Desktop Services (RDS) deployment and between RDS server roles. RDS uses Secure Socket Layer (SSL) or Transport Layer Security (TLS) to encrypt connections to the RDS Web, Connection Broker and Gateway role services.
 
 Certificates prevent man-in-the-middle attacks<!---Elaborate?----> by verifying that the server sending information to the client is authentic. When this trust relationship is set up, the client considers the connection secure and can accept data going to and from the server.
 
@@ -20,13 +20,11 @@ The following things are required to use certificates in RDS:
 
 - An account with administrator rights or equivalent to the RDS server(s).
 
-- A client certificate that meets the following requirements:
+- A server certificate that meets the following requirements:
 
-  - Issued for Server Authentication (EKU 1.3.6.1.4.1.311.54.1.2).
+  - Issued for Server Authentication (EKU 1.3.6.1.5.5.7.3.1).
 
   - Issued by a certificate authority trusted by the RDS server(s) and clients.
-
-  - Installed in the local computer’s “Personal” certificate store.
 
   - An export of the certificate with the corresponding private key in .pfx format. To learn more about exporting the private key, see [Export a certificate with its private key](../../identity/ad-cs/export-certificate-private-key.md).
 
