@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 09ea784e-5644-417a-a3d9-bdbcebc313f9
 author: robinharwood
 ms.author: wscontent
-ms.date: 09/25/2023
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Remote Desktop Services - Multi-Factor Authentication

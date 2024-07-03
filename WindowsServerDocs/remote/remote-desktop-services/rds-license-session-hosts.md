@@ -7,6 +7,7 @@ ms.author: helohr
 ms.date: 07/03/2024
 manager: femila
 ---
+
 # License Remote Desktop session hosts
 
 >Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016

@@ -4,7 +4,7 @@ description: Learn about recent changes to the Remote Desktop client for Android
 ms.topic: conceptual
 author: heidilohr
 ms.author: helohr
-ms.date: 05/29/2024
+ms.date: 7/3/2024
 ---
 
 # What's new in the Remote Desktop client for Android and Chrome OS
