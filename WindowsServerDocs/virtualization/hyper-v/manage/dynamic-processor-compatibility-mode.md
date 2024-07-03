@@ -57,14 +57,6 @@ To overcome this limitation, processor compatibility mode now provides enhanced,
 
 The new processor compatibility mode ensures that the set of processor features available to VMs across virtualization hosts match by presenting a common capability set across all servers in the cluster. Each VM receives the maximum number of processor instruction sets that are present across all servers in the cluster. This process occurs automatically and is always enabled and replicated across the cluster, so there's no command to enable or disable the process.
 
-## How processor compatibility mode works
-
-Processor compatibility mode ensures that the set of processor features available to VMs across a disparate set of virtualization hosts match by presenting a limited set of processor features to the VM. Processor compatibility mode hides newer processor instructions sets, typically those introduced within the last 10 years. However, hiding these features means that the guest operating system and application software can't take advantage of these processor instruction set enhancements.
-
-For a complete list of features that are hidden for processor compatibility mode, refer to section 5.2.11 in the [Hypervisor Top-Level Functional Specification](/virtualization/hyper-v-on-windows/tlfs/tlfs).
-
-:::image type="content" source="media/dynamic-processor-compatibility-mode/how-processor-compatibility-mode-works.jpg" alt-text="Processor compatibility mode hides newer processor instructions sets for smooth VM migrations between host servers":::
-
 ## Using processor compatibility mode
 
 There are important concepts to understand when using processor compatibility mode in Hyper-V:
@@ -137,6 +129,9 @@ To enable processor compatibility mode using Windows Admin Center:
 :::zone pivot="windows-server"
 
 This section explains how to configure a VM to use processor compatibility mode using either Hyper-V manager or PowerShell. It's possible to run VMs with and without compatibility mode in the same cluster.
+
+> [!IMPORTANT]
+> You must shut down the VM before you can enable or disable processor compatibility mode.
 
 ### Enable processor compatibility mode using Hyper-V Manager
 
@@ -213,20 +208,3 @@ get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcess
 ```
 
 Then restart the VM.
-
-## Next steps
-
-For more information, see also:
-
-:::zone pivot="azure-stack-hci"
-
-- [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm)
-- [Manage VMs with PowerShell](/azure-stack/hci/manage/vm-powershell)
-
-:::zone-end
-
-:::zone pivot="windows-server"
-
-- [Manage hotst with Hyper-V manager](/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts)
-
-:::zone-end
