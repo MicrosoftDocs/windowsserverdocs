@@ -6,7 +6,7 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/03/2022
+ms.date: 7/3/2024
 ---
 # Get started with the macOS client
 

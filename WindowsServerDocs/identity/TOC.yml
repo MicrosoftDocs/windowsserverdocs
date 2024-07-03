@@ -267,7 +267,7 @@
       - name: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
         href: ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md
       - name: Find the current Schema version
-        href: ad-ds\deploy\find-active-directory-schema.md
+        href: ad-ds/deploy/find-active-directory-schema.md
       - name: AD DS Simplified Administration
         href: ad-ds/manage/AD-DS-Simplified-Administration.md
         items:
@@ -387,6 +387,10 @@
           href: ad-ds/manage/powershell/Introduction-to-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-100-.md
         - name: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
           href: ad-ds/manage/powershell/Advanced-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-200-.md
+      - name: Flexible Single Master Operations roles
+        href: ad-ds/manage/understand-fsmo-roles.md
+      - name: Transfer FSMO roles
+        href: ad-ds/manage/manage-fsmo-roles.md
       - name: Managing RID issuance
         href: ad-ds/manage/Managing-RID-Issuance.md
       - name: Active Directory Domain Services component updates
@@ -443,6 +447,8 @@
         href: ad-ds/enable-32K-pages-optional-feature.md
       - name: Monitoring
         items:
+        - name: DC Locator client performance counters
+          href: ad-ds/dc-locator-performance-counters.md
         - name: LDAP client performance counters
           href: ad-ds/ldap-client-performance-counters.md
     - name: AD DS Troubleshooting
