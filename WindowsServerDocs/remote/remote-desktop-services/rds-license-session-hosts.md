@@ -1,6 +1,6 @@
 ---
 title: License Remote Desktop session hosts
-description: Learn how to install licenses for Remote Desktop session hosts.
+description: Learn how to install and configure licenses for Remote Desktop session hosts.
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
@@ -9,7 +9,7 @@ manager: femila
 ---
 # License Remote Desktop session hosts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the information in this article to configure licensing for session hosts on your Remote Desktop Services (RDS) deployments. The process is slightly different depending on which roles you assigned to the session host you're licensing.
 
@@ -69,11 +69,11 @@ To specify a license server:
 
 This section only applies to work groups. Skip this section if your RD Session Host and RD licensing server are joined to a domain in Active Directory. You can also skip this section if the RD licensing server and RD Session Host server are the same machine. 
 
-After the security update known as [CVE-2024-38099](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38099), RD licensing servers enforce that RD Session Host servers present non anonymous credentials when requesting or querying licenses. To enforce, ensure that the _NT AUTHORITY\NETWORK SERVICE_ account under which the Remote Desktop Service runs on the RD Session Host has access to such credentials. Configure the machines in a work group using the following steps. 
+After security update [CVE-2024-38099](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38099), RD licensing servers enforce that RD Session Host servers present nonanonymous credentials when requesting or querying licenses. To enforce nonanymous credentials exist, confirm that the _NT AUTHORITY\NETWORK SERVICE_ account under which the Remote Desktop Service runs on the RD Session Host has access to credentials. Configure the machines in a work group using the following steps. 
 
 First, we recommend creating a dedicated user on the RD licensing server: 
 
-1. Connect to the RD licensing server. If doing so remotely, you may need to start the Remote Desktop Connection application using the `mstsc.exe /admin` command if the target machine can't contact any RD licensing server. 
+1. Connect to the RD licensing server. If doing so remotely, you may need to start the **Remote Desktop Connection** application using the `mstsc.exe /admin` command if the target machine can't contact a RD licensing server. 
 
 1. Once connected, right-click **Start**, then select **Run**, and enter `lusrmgr.msc`. Then press ENTER. 
 
@@ -89,11 +89,19 @@ First, we recommend creating a dedicated user on the RD licensing server:
 
 Then, on each RD Session Host server that needs to connect to the RD licensing server, add the user: 
 
-1. Connect to the RD Session Host machine. If doing so remotely, you may need to start the Remote Desktop Connection application if the target machine can’t contact any RD licensing server. Open Remote Desktop Connection as an administrator, or use the command: `mstsc.exe /admin`.
+1. Connect to the RD Session Host machine. If doing so remotely, you may need to start the **Remote Desktop Connection** application if the target machine can’t contact any RD licensing server. Open **Remote Desktop Connection** as an administrator, or use the command: `mstsc.exe /admin`.
 
-1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. Using PsExec from the [Sysinternals Utilities](/sysinternals/downloads/), run the command: `psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe`. 
+1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. You can do this by using [PsExec](sysinternals/downloads/psexec) from the [Sysinternals Utilities](/sysinternals/downloads/), and running the command:
 
-1. Then, run `cmdkey /add:< NAME-OF-THE-LICENSING-SERVER> /user:< NAME-OF-THE-LICENSING-SERVER>\<USERNAME-SELECTED-ABOVE> /pass`. 
+```cmd
+psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe
+``` 
+
+1. Then, add a username and password to the host computer with the following command:
+
+```cmd
+cmdkey /add:< NAME-OF-THE-LICENSING-SERVER> /user:< NAME-OF-THE-LICENSING-SERVER>\<USERNAME> /pass
+```
 
 1. When prompted for the password, enter the password previously selected and press ENTER. 
 
@@ -106,9 +114,9 @@ Alternatively, the requirement for proper authentication can be disabled on the 
 >
 > If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
 
-To set the following HKLM registry key and value on the RD licensing server: 
+To update the registry key and value on the RD licensing server: 
 
-1. Start the Registry Editor. 
+1. Start the **Registry Editor**. 
 
 1. Modify the key: `HKLM\ SYSTEM\CurrentControlSet\Services\TermServLicensing\Parameters` with the following values: 
 
