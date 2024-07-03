@@ -6,7 +6,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 10/24/2023
+ms.date: 7/3/2024
 ---
 
 # Compare the clients: redirections
