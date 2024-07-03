@@ -28,16 +28,16 @@ The dynamic processor compatibility mode is updated to take advantage of new pro
 Processor compatibility mode allows you to move a live VM (live migrating) or move a VM that is saved between nodes with different process capability sets. However, even when processor compatibility is enabled, you can't move VMs between hosts with different processor manufacturers. For example, you can't move running VMs or saved state VMs from a host with Intel processors to a host with AMD processors. If you must move a VM in this manner, shut down the VM first, then restart it on the new host.
 
 > [!IMPORTANT]
-> Only Hyper-V VMs with the latest configuration version (10.0) benefit from the dynamic configuration. VMs with older versions don't benefit from the dynamic configuration and won't continue to use [fixed processor capabilities](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn859550(v=ws.11)) from the previous version.
+> Only Hyper-V VMs with the latest configuration version (10.0) benefit from the dynamic configuration. VMs with older versions don't benefit from the dynamic configuration and won't continue to use [fixed processor capabilities](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn859550(v=ws.11)) from the previous version.
 
 :::zone pivot="azure-stack-hci"
 
 We recommend enabling processor compatibility mode for VMs running on Azure Stack HCI. This provides the highest level of capabilities, and when it's time to migrate to new hardware, moving the VMs doesn't require downtime.
 
+:::zone-end
+
 > [!NOTE]
 > You don't need to use processor compatibility mode if you plan to stop and restart the VMs. Any time a VM is restarted, the guest operating system enumerates the processor compatibilities that are available on the new host computer.
-
-:::zone-end
 
 ## Why processor compatibility mode is needed
 
@@ -55,11 +55,7 @@ In the past, all new processor instructions sets were hidden, meaning that the g
 
 To overcome this limitation, processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation (SLAT). This new functionality calculates the common denominator of the CPU features supported by the nodes in the cluster and updates the existing processor compatibility mode on a VM to use this dynamically calculated feature set instead of the old hard-coded feature set.
 
-:::zone pivot="azure-stack-hci"
-
-In Azure Stack HCI environments, the new processor compatibility mode ensures that the set of processor features available to VMs across virtualization hosts match by presenting a common capability set across all servers in the cluster. Each VM receives the maximum number of processor instruction sets that are present across all servers in the cluster. This process occurs automatically and is always enabled and replicated across the cluster, so there's no command to enable or disable the process.
-
-:::zone-end
+The new processor compatibility mode ensures that the set of processor features available to VMs across virtualization hosts match by presenting a common capability set across all servers in the cluster. Each VM receives the maximum number of processor instruction sets that are present across all servers in the cluster. This process occurs automatically and is always enabled and replicated across the cluster, so there's no command to enable or disable the process.
 
 ## How processor compatibility mode works
 
@@ -68,32 +64,6 @@ Processor compatibility mode ensures that the set of processor features availabl
 For a complete list of features that are hidden for processor compatibility mode, refer to section 5.2.11 in the [Hypervisor Top-Level Functional Specification](/virtualization/hyper-v-on-windows/tlfs/tlfs).
 
 :::image type="content" source="media/dynamic-processor-compatibility-mode/how-processor-compatibility-mode-works.jpg" alt-text="Processor compatibility mode hides newer processor instructions sets for smooth VM migrations between host servers":::
-
-## Migrating running VMs between clusters
-
-:::zone pivot="azure-stack-hci"
-
-Assuming that all servers in each cluster are running the same hardware, which is a requirement for Azure Stack HCI, it's possible to live migrate running VMs between clusters. There are three common scenarios.
-
-:::zone-end
-
-- **Live migrating a VM from a cluster with new processors to a cluster with the same processors.** The VM capabilities are transferred to the destination cluster. This scenario doesn't require processor compatibility mode to be enabled; however, leaving it enabled won't cause any problems.
-
-- **Live migrating a VM from a cluster with older processors to a cluster with newer processors.** The VM capabilities are transferred to the destination cluster. In this scenario, if the VM is restarted, it receives the latest calculated capability of the destination cluster.
-
-- **Live migrating a VM from a cluster with newer processors to a cluster with older processors.** You'll need to set the VM processor to use the `MinimumFeatureSet` for the `CompatibilityForMigrationMode` parameter in PowerShell, or select **Compatible across other hosts with the same CPU manufacturer** in Windows Admin Center under **Virtual machines > Settings > Processors**. This settings assigns the VM to the minimum processor capabilities offered on the server. Once the compatibility is moved to **Compatible across the cluster (Recommended)** and the VM is restarted, it receives the latest calculated capability of the destination cluster.
-
-## Ramifications of using processor compatibility mode
-
-It's difficult to quantify the overall performance effects of processor compatibility mode. The performance loss is primarily dependent on the workload running in the VM. Some workloads may be unaffected, while others show a noticeable difference. Software that heavily relies on hardware optimizations (such as encryption, compression, or intensive floating-point calculations) is impacted the most.
-
-The following example describes how AES encryption is affected by using processor compatibility mode, and there are many more. If you're concerned about the performance impact of processor compatibility mode, it's best to compare VM workload performance with processor compatibility mode enabled and with it disabled.
-
-### Example: AES encryption
-
-One example of an operation that is impacted by processor compatibility mode is AES encryption (a common form of encryption). Many new Intel and AMD processors include an ISA extension that accelerates AES by using hardware. Intel claims this optimization provides a 2-3 fold performance gain, with some implementations providing a 10-fold gain. (For more information, see [Intel Advanced Encryption Standard Instructions](https://software.intel.com/articles/intel-advanced-encryption-standard-instructions-aes-ni/).)
-
-Applications that encrypt or decrypt a large amount of data benefit from this processor feature, so turning it off by enabling processor compatibility mode impacts the performance of these specific operations.
 
 ## Using processor compatibility mode
 
@@ -107,17 +77,39 @@ There are important concepts to understand when using processor compatibility mo
 
   - Anytime a VM is restarted, the guest operating system enumerates the processor features that are available on the new host computer.
 
+:::zone pivot="windows-server"
+
    > [!NOTE]
    > In Windows Server, Microsoft recommends turning on processor compatibility mode only before VM migration scenarios, and then turning it off when the migration is complete.
 
 :::zone-end
 
+## Migrating running VMs between clusters
+
+Assuming that all servers in each cluster are running the same hardware, it's possible to live migrate running VMs between clusters. There are three common scenarios.
+
+- **Live migrating a VM from a cluster with new processors to a cluster with the same processors.** The VM capabilities are transferred to the destination cluster. This scenario doesn't require processor compatibility mode to be enabled; however, leaving it enabled won't cause any problems.
+
+- **Live migrating a VM from a cluster with older processors to a cluster with newer processors.** The VM capabilities are transferred to the destination cluster. In this scenario, if the VM is restarted, it receives the latest calculated capability of the destination cluster.
+
+- **Live migrating a VM from a cluster with newer processors to a cluster with older processors.** You'll need to set the VM processor to use the `MinimumFeatureSet` for the `CompatibilityForMigrationMode` parameter in PowerShell, or select **Compatible across other hosts with the same CPU manufacturer** in Windows Admin Center under **Virtual machines > Settings > Processors**. This settings assigns the VM to the minimum processor capabilities offered on the server. Once the compatibility is moved to **Compatible across the cluster (Recommended)** and the VM is restarted, it receives the latest calculated capability of the destination cluster.
+
+## Ramifications of using processor compatibility mode
+
+It's difficult to quantify the overall performance effects of processor compatibility mode. The performance loss is primarily dependent on the workload running in the VM. Some workloads may be unaffected, while others show a noticeable difference. Software that heavily relies on hardware optimizations (such as encryption, compression, or intensive floating-point calculations) is impacted the most.
+
+Applications that encrypt or decrypt a large amount of data benefit from this processor feature, so turning it off by enabling processor compatibility mode impacts the performance of these specific operations.
+
+If you're concerned about the performance impact of processor compatibility mode, it's best to compare VM workload performance with processor compatibility mode enabled and with it disabled.
+
 ## Configure a VM to use processor compatibility mode
+
+:::zone pivot="azure-stack-hci"
 
 This section explains how to configure a VM to use processor compatibility mode. It's possible to run VMs with and without compatibility mode in the same cluster.
 
-   > [!IMPORTANT]
-   > You must shut down the VM before you can enable or disable processor compatibility mode.
+> [!IMPORTANT]
+> You must shut down the VM before you can enable or disable processor compatibility mode.
 
 ### Enable processor compatibility mode using Windows Admin Center
 
@@ -140,31 +132,11 @@ To enable processor compatibility mode using Windows Admin Center:
 
 1. Select **Save processor settings** and restart the VM.
 
-### Enable processor compatibility mode using PowerShell
-
-To enable processor compatibility mode, run the following cmdlet:
-
-```PowerShell
-get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true 
-```
-
-We recommend setting the VM's CPU features to the maximum level supported by all servers in the cluster. This maximizes VM performance while preserving the ability to move the running VM to other servers in the cluster. 
-
-To enable the VM to use the cluster node common features, run the following cmdlet:
-
-```PowerShell
-get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true -CompatibilityForMigrationMode CommonClusterFeatureSet
-```
-
-Alternatively, you can set the VM's CPU features to minimum, ensuring that you can move the running VM to other Hyper-V hosts outside the cluster if they have the same CPU manufacturer.
-
-To enable the VM to use the default minimum features to migrate across clusters, run the following cmdlet:
-
-```PowerShell
-get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true -CompatibilityForMigrationMode MinimumFeatureSet
-```
+:::zone-end
 
 :::zone pivot="windows-server"
+
+This section explains how to configure a VM to use processor compatibility mode using either Hyper-V manager or PowerShell. It's possible to run VMs with and without compatibility mode in the same cluster.
 
 ### Enable processor compatibility mode using Hyper-V Manager
 
@@ -208,18 +180,29 @@ To disable processor compatibility mode for a VM using Hyper-V Manager:
 
 :::zone-end
 
-## Enable processor compatibility mode using PowerShell
+### Enable processor compatibility mode using PowerShell
 
-To enable processor compatibility mode for a VM using PowerShell, shut down the VM and run the `Set-VMProcessor` cmdlet, setting `CompatibilityForMigrationEnabled` to **$true**:
+To enable processor compatibility mode, run the following cmdlet:
 
 ```PowerShell
-get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true
+get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true 
 ```
 
-Then restart the VM.
+We recommend setting the VM's CPU features to the maximum level supported by all servers in the cluster. This maximizes VM performance while preserving the ability to move the running VM to other servers in the cluster. 
 
-   > [!WARNING]
-   > You may see additional parameters for `Set-VMProcessor` that are intended for use with Azure Stack HCI. Do not attempt to use these with Windows Server, or you'll get an error message. The default and only `CompatibilityForMigrationMode` available for Windows Server is `MinimumFeatureSet`. [Learn about dynamic CPU compatibility mode in Azure Stack HCI](/azure-stack/hci/manage/processor-compatibility-mode).
+To enable the VM to use the cluster node common features, run the following cmdlet:
+
+```PowerShell
+get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true -CompatibilityForMigrationMode CommonClusterFeatureSet
+```
+
+Alternatively, you can set the VM's CPU features to minimum, ensuring that you can move the running VM to other Hyper-V hosts outside the cluster if they have the same CPU manufacturer.
+
+To enable the VM to use the default minimum features to migrate across clusters, run the following cmdlet:
+
+```PowerShell
+get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true -CompatibilityForMigrationMode MinimumFeatureSet
+```
 
 ## Disable processor compatibility mode using PowerShell
 
@@ -235,5 +218,15 @@ Then restart the VM.
 
 For more information, see also:
 
+:::zone pivot="azure-stack-hci"
+
 - [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm)
 - [Manage VMs with PowerShell](/azure-stack/hci/manage/vm-powershell)
+
+:::zone-end
+
+:::zone pivot="windows-server"
+
+- [Manage hotst with Hyper-V manager](/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts)
+
+:::zone-end
