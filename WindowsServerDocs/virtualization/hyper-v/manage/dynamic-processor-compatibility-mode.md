@@ -199,7 +199,7 @@ To enable the VM to use the default minimum features to migrate across clusters,
 get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true -CompatibilityForMigrationMode MinimumFeatureSet
 ```
 
-## Disable processor compatibility mode using PowerShell
+### Disable processor compatibility mode using PowerShell
 
 To disable processor compatibility mode for a VM using PowerShell, shut down the VM and run the `Set-VMProcessor` cmdlet, setting `CompatibilityForMigrationEnabled` to **$false**:
 
