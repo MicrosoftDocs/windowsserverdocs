@@ -4,29 +4,29 @@ description: Learn how to install licenses for Remote Desktop session hosts.
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
-ms.date: 06/26/2024
+ms.date: 07/03/2024
 manager: femila
 ---
 # License Remote Desktop session hosts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-You can use the information in this article to configure licensing for session hosts on your Remote Desktop Services (RDS) deployments. The process will be slightly different depending on which roles you've assigned to the session host you're licensing.
+You can use the information in this article to configure licensing for session hosts on your Remote Desktop Services (RDS) deployments. The process is slightly different depending on which roles you assigned to the session host you're licensing.
 
 ## Prerequisites
 
-In order to install licenses for your session hosts, you'll need a Remote Desktop license server with per-user or per-device client access licenses (CALs) activated.
+In order to install licenses for your session hosts, you need a Remote Desktop license server with per-user or per-device client access licenses (CALs) activated.
 
 ## Configure licensing for an RDS deployment that includes the RD Connection Broker role
 
-If you need to license session hosts where your RDS deployment doesn't include the connection broker role, you'll need to specify a license server by using group policy either centrally from your Active Directory domain or locally on each session host. You'll also need to do specify a license server when using Windows Server with Azure Virtual Desktop.
+If you need to license session hosts where your RDS deployment doesn't include the connection broker role, you must specify a license server by using group policy either centrally from your Active Directory domain, or locally on each session host. You also need to do specify a license server when using Windows Server with Azure Virtual Desktop.
 
 To specify a license server:
 
 1. On the RD Connection Broker computer, open Server Manager.
 2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.
 
-   :::image type="content" source="media/rds-license-session-hosts/server-manager-rd-config.png" alt-text="A screenshot of the set up remote desktop services deployment page. The user selects the tasks drop-down menu and selects Edit Deployment Properties.":::
+   :::image type="content" source="media/rds-license-session-hosts/server-manager-rd-config.png" alt-text="A screenshot of the setup remote desktop services deployment page. The user selects the tasks drop-down menu and selects Edit Deployment Properties.":::
 
 3. Select the Remote Desktop licensing mode (either **Per User** or **Per Device**, as appropriate for your deployment).
 
@@ -69,11 +69,11 @@ To specify a license server:
 
 This section only applies to work groups. Skip this section if your RD Session Host and RD licensing server are joined to a domain in Active Directory. You can also skip this section if the RD licensing server and RD Session Host server are the same machine. 
 
-After the security update known as [CVE-2024-38099](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38099), RD licensing servers enforce that RD Session Host servers present non anonymous credentials when requesting or querying licenses. To enforce , ensure that the _NT AUTHORITY\NETWORK SERVICE_ account under which the Remote Desktop Service runs on the RD Session Host has access to such credentials. Configure the machines in a work group using the following steps. 
+After the security update known as [CVE-2024-38099](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38099), RD licensing servers enforce that RD Session Host servers present non anonymous credentials when requesting or querying licenses. To enforce, ensure that the _NT AUTHORITY\NETWORK SERVICE_ account under which the Remote Desktop Service runs on the RD Session Host has access to such credentials. Configure the machines in a work group using the following steps. 
 
 First, we recommend creating a dedicated user on the RD licensing server: 
 
-1. Connect to the RD licensing server. If doing so remotely, you may need to start the Remote Desktop Connection application using the `mstsc.exe /admin` command if the target machine cannot contact any RD licensing server. 
+1. Connect to the RD licensing server. If doing so remotely, you may need to start the Remote Desktop Connection application using the `mstsc.exe /admin` command if the target machine can't contact any RD licensing server. 
 
 1. Once connected, right-click **Start**, then select **Run**, and enter `lusrmgr.msc`. Then press ENTER. 
 
@@ -87,11 +87,11 @@ First, we recommend creating a dedicated user on the RD licensing server:
 
 1. Select **Create**. 
 
-Then, on each RD Session Host servers that need to connect to the RD licensing server, add the user: 
+Then, on each RD Session Host server that needs to connect to the RD licensing server, add the user: 
 
 1. Connect to the RD Session Host machine. If doing so remotely, you may need to start the Remote Desktop Connection application if the target machine can’t contact any RD licensing server. Open Remote Desktop Connection as an administrator, or use the command: `mstsc.exe /admin`.
 
-1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. For example, using PsExec from the [Sysinternals Utilities](/sysinternals/downloads/), this can be achieved with the command: `psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe`. 
+1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. Using PsExec from the [Sysinternals Utilities](/sysinternals/downloads/), run the command: `psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe`. 
 
 1. Then, run `cmdkey /add:< NAME-OF-THE-LICENSING-SERVER> /user:< NAME-OF-THE-LICENSING-SERVER>\<USERNAME-SELECTED-ABOVE> /pass`. 
 
