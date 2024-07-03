@@ -2,9 +2,9 @@
 title: Dynamic Processor compatibility mode
 description: Describes how to use dynamic processor compatibility mode to move a live virtual machine or move a saved virtual machine on Windows Server and Azure Stack HCI.
 ms.topic: how-to
-author: khdownie
-ms.author: wscontent
-ms.date: 07/02/2024
+author: meaghanlewis
+ms.author: mosagie
+ms.date: 07/03/2024
 zone_pivot_groups: windows-os
 ---
 
