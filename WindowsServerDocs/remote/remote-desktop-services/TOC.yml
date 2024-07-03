@@ -141,6 +141,8 @@
       href: rds-work-resources.md
     - name: Diagnose app performance issues with performance counters
       href: rds-rdsh-performance-counters.md
+    - name: Optimizing Windows configuration for VDI desktops
+      href: remote-desktop-services-vdi-optimize-configuration.md 
   - name: Access your Remote Desktop resources
     items:
     - name: Available Remote Desktop clients
