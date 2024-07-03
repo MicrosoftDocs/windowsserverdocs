@@ -2,7 +2,7 @@
 title: Understanding the desktop hosting environment
 description: Overview of an RDS deployment using Azure IaaS.
 ms.author: wscontent
-ms.date: 08/01/2016
+ms.date: 7/3/2024
 ms.topic: article
 author: robinharwood
 manager: dongill

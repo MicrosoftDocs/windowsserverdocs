@@ -4,7 +4,7 @@ description: Provides steps for installing the RD Web and Gateway servers in an 
 ms.topic: article
 author: robinharwood
 ms.author: wscontent
-ms.date: 11/08/2016
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Add high availability to the RD Web and Gateway web front

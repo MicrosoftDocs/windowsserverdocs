@@ -7,7 +7,7 @@ author: meaghanlewis
 ms.author: mosagie
 ms.topic: article
 manager: femila
-ms.date: 06/21/2024
+ms.date: 7/3/2024
 ---
 
 # Optimizing Windows configuration for VDI desktops
