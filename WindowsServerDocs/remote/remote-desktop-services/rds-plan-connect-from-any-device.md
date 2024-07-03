@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: d3596907-4233-4c8e-86ad-8404720b760d
 author: robinharwood
 ms.author: spatnaik
-ms.date: 09/23/2016
+ms.date: 7/3/2024
 manager: scottman
 ---
 # Remote Desktop Services - Connect from any device

@@ -2,7 +2,7 @@
 title: Set up the Remote Desktop web client for your users
 description: Describes how an admin can set up the Remote Desktop web client.
 ms.author: helohr
-ms.date: 09/28/2023
+ms.date: 7/3/2024
 ms.topic: article
 author: Heidilohr
 ---
