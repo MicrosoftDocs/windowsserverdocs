@@ -164,7 +164,7 @@ ssh domain\username@servername
 Once connected, you get a message similar to the following output.
 
 ```Output
-The authenticity of host 'servername (10.00.00.001)' can't be established.
+The authenticity of host 'servername (10.0.0.1)' can't be established.
 ECDSA key fingerprint is SHA256:(<a large string>).
 Are you sure you want to continue connecting (yes/no)?
 ```
