@@ -10,7 +10,7 @@ author: Heidilohr
 
 You can use certificates to secure connections to your Remote Desktop Services (RDS) deployment and between RDS server roles. RDS uses Secure Socket Layer (SSL) or Transport Layer Security (TLS) to encrypt connections to the RDS Web, Connection Broker and Gateway role services.
 
-Certificates prevent man-in-the-middle attacks<!---Elaborate?----> by verifying that the server sending information to the client is authentic. When this trust relationship is set up, the client considers the connection secure and can accept data going to and from the server.
+Certificates prevent man-in-the-middle attacks, where a bad actor intercepts traffic between the Remote Desktop Protocol (RDP) server and client to steal confidential information or deny access to credentials, by verifying that the server sending information to the client is authentic. When this trust relationship is set up, the client considers the connection secure and can accept data going to and from the server.
 
 ## Prerequisites
 
@@ -58,10 +58,20 @@ To configure Remote Desktop to use specific certificates:
 
 ### [PowerShell](#tab/powershell)
 
-1. Open an elevated PowerShell window and run the following command:
+1. Sign on to a computer with the RDS Remote Server Administration Tools (RSAT) installed and the RD role you wish to configure.
+
+1. Open an elevated PowerShell session.
+
+1. Enter the certificate password for the exported certificate as a secure string in PowerShell using the following command.
 
   ```powershell
-  Set-RDCertificate -Role RDWebAccess -ImportPath "<Path to PFX file>" -Password (ConvertTo-SecureString -String "<Certificate Password>" -AsPlainText -Force)
+  $password = Read-Host -AsSecureString -Prompt "Enter Password"
+  ```
+
+1. Set the certificate used by [the RD role](/powershell/module/rdmgmt/set-rdcertificate?view=windowsserver2022-ps#-role) you want to configure using the following command.
+
+  ```powershell
+  Set-RDCertificate -Role RDWebAccess -ImportPath "<Path to PFX file>" -Password $password
   ```
   
 ---
@@ -70,4 +80,6 @@ You might want to use certificates for the RDS Session Host along with the certi
 
 ## Related content
 
-<!---To be filled later.-->
+- [Secure data storage](rds-plan-secure-data-storage.md)
+
+- [Use multifactor authentication for RDS](rds-plan-mfa.md)
