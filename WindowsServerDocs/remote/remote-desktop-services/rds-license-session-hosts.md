@@ -70,7 +70,7 @@ To specify a license server:
 
 This section only applies to work groups. Skip this section if your RD Session Host and RD licensing server are joined to a domain in Active Directory. You can also skip this section if the RD licensing server and RD Session Host server are the same machine. 
 
-After security update [CVE-2024-38099](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38099), RD licensing servers enforce that RD Session Host servers present nonanonymous credentials when requesting or querying licenses. To enforce nonanymous credentials exist, confirm that the _NT AUTHORITY\NETWORK SERVICE_ account under which the Remote Desktop Service runs on the RD Session Host has access to credentials. Configure the machines in a work group using the following steps. 
+After applying the security update for [CVE-2024-38099](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38099), RD licensing servers enforce that RD Session Host servers present nonanonymous credentials when requesting or querying licenses. To enforce nonanymous credentials exist, confirm that the _NT AUTHORITY\NETWORK SERVICE_ account under which the Remote Desktop Service runs on the RD Session Host has access to credentials. Configure the machines in a work group using the following steps. 
 
 First, we recommend creating a dedicated user on the RD licensing server: 
 
@@ -92,7 +92,7 @@ Then, on each RD Session Host server that needs to connect to the RD licensing s
 
 1. Connect to the RD Session Host machine. If doing so remotely, you may need to start the **Remote Desktop Connection** application if the target machine can’t contact any RD licensing server. Open **Remote Desktop Connection** as an administrator, or use the command: `mstsc.exe /admin`.
 
-1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. You can do this by using [PsExec](sysinternals/downloads/psexec) from the [Sysinternals Utilities](/sysinternals/downloads/), and running the command:
+1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. You can do this with [PsExec](/sysinternals/downloads/psexec) from the [Sysinternals Utilities](/sysinternals/downloads/), by running the following command as an administrator:
 
    ```cmd
    psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe
@@ -101,7 +101,7 @@ Then, on each RD Session Host server that needs to connect to the RD licensing s
 1. Then, add a username and password to the host computer with the following command:
 
    ```cmd
-   cmdkey /add:< NAME-OF-THE-LICENSING-SERVER> /user:< NAME-OF-THE-LICENSING-SERVER>\<USERNAME> /pass
+   cmdkey /add:<NAME-OF-THE-LICENSING-SERVER> /user:<NAME-OF-THE-LICENSING-SERVER>\<USERNAME> /pass
    ```
 
 1. When prompted for the password, enter the password previously selected and press ENTER. 
