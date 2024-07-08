@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: wscontent
 ms.reviewer: spatnaik
 ms.topic: how-to
-ms.date: 08/15/2023
+ms.date: 7/3/2024
 ---
 # Disable Automatic Reconnection
 

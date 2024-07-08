@@ -6,7 +6,7 @@ ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
 author: robinharwood
 manager: dongill
 ms.author: wscontent
-ms.date: 06/05/2018
+ms.date: 7/3/2024
 ---
 # Enable Remote Desktop on your PC
 

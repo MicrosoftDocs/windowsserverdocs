@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: ec630ea0-ab80-4dfe-a25f-f4f601651f72
 author: robinharwood
 ms.author: wscontent
-ms.date: 09/07/2016
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Remote Desktop Services - High availability
