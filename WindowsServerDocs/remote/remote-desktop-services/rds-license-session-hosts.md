@@ -94,15 +94,15 @@ Then, on each RD Session Host server that needs to connect to the RD licensing s
 
 1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. You can do this by using [PsExec](sysinternals/downloads/psexec) from the [Sysinternals Utilities](/sysinternals/downloads/), and running the command:
 
-```cmd
-psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe
-``` 
+   ```cmd
+   psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe
+   ``` 
 
 1. Then, add a username and password to the host computer with the following command:
 
-```cmd
-cmdkey /add:< NAME-OF-THE-LICENSING-SERVER> /user:< NAME-OF-THE-LICENSING-SERVER>\<USERNAME> /pass
-```
+   ```cmd
+   cmdkey /add:< NAME-OF-THE-LICENSING-SERVER> /user:< NAME-OF-THE-LICENSING-SERVER>\<USERNAME> /pass
+   ```
 
 1. When prompted for the password, enter the password previously selected and press ENTER. 
 
