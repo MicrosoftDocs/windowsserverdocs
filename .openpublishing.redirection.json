@@ -2,87 +2,87 @@
   "redirections": [
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds_vdi-recommendations-1909.md",
-      "redirect_url": "/previous-versions/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds_vdi-recommendations-1909",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations-1803.md",
-      "redirect_url": "/previous-versions/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-1803",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-1803",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations-2004.md",
-      "redirect_url": "/previous-versions/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-2004",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations.md",
-      "redirect_url": "/previous-versions/windows-server/remote/remote-desktop-services/rds-vdi-recommendations",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md",
-      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Deploy-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/deploy-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Developing-PowerShell-Cmdlets-for-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/developing-powerShell-cmdlets-for-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Developing-on-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/developing-on-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Getting-Started-with-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/getting-started-with-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/IIS-on-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/iis-on-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/MPIO-on-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/mpio-on-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Manage-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/manage-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Nano-Server-Quick-Start.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/nano-server-quick-start",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/PowerShell-on-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/powershell-on-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Update-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/update-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Troubleshooting-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/troubleshooting-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/nano-in-semi-annual-channel.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/nano-in-semi-annual-channel",
       "redirect_document_id": false
     },
     {
@@ -11576,8 +11576,23 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/networking/technologies/dhcp/What-s-New-in-DHCP.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/plan/Finding-Additional-Resources-for-Enabling-Advanced-Features.md",
       "redirect_url": "/windows-server/identity/ad-ds/plan/enabling-advanced-features-for-ad-ds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/whats-new-active-directory-domain-services.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/What-s-new-in-Active-Directory-Domain-Services.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
       "redirect_document_id": false
     },
     {
@@ -11598,6 +11613,21 @@
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-integrate-with-azure.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/welcome-to-rds.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/whats-new-in-failover-clustering.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/data-deduplication/whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
       "redirect_document_id": false
     }
   ]

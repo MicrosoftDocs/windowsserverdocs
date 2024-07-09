@@ -39,8 +39,8 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Remote Desktop Services Overview
-            url: ./remote-desktop-services/welcome-to-rds.md
+          - text: Remote Desktop Services overview
+            url: ./remote-desktop-services/remote-desktop-services-overview.md
       - linkListType: how-to-guide
         links:
           - text: Plan and design
