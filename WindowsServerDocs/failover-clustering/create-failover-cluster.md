@@ -62,7 +62,17 @@ You must install the Failover Clustering feature on every server that you want t
 
 1. In **Check the prerequisites**, make sure your deployment meets the requirements for servers and networks, then select **Next**.
 
-1. 
+1. In **Add servers**, enter a username and password for the administrator account for connecting ot the servers.
+
+1. Next, enter the computer name, IP address, or fully qualified domain name (FQDN) for each server you want to add, then select **Add**.
+
+1. Join a domain. <!--Screenshot missing--->
+
+1. Install any required features by selecting **Install features**.
+
+1. Optionally, you can install any operating system updates by selecting **Install updates**.
+
+
 
 ### [PowerShell](#tab/powershell)
 
