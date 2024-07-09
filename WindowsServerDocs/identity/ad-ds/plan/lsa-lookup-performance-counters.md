@@ -23,7 +23,7 @@ LSA Lookup performance counters help you troubleshoot and monitor performance of
 
 ## LSA Lookup performance counters
 
-LSA Lookup performance counters measure per process running on the client or server machine. Multiple processes can be asessed simultaneously. 
+LSA Lookup performance counters measure per process running on the client or server machine. Multiple processes can be asessed simultaneously.
 
 The following table shows the counters that can be added when running LSA Lookup performance counters, type of counter (requests, connections, queries and so on) and notes on object data generated.
 
