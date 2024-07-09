@@ -48,6 +48,22 @@ You must install the Failover Clustering feature on every server that you want t
 
 ### [Windows Admin Center](#tab/admin-center)
 
+1. Sign in to Windows Admin Center.
+
+1. Under **All connections**, select **Add**.
+
+1. In the **Add or create resources** panel, under **Choose the cluster type**, select **Windows Server**.
+
+1. Under **Select the workload type**, select **Virtual machines**.
+
+1. Under **Select Server locations**, select **All servers in one site**.
+
+1. Select **Create**.
+
+1. In **Check the prerequisites**, make sure your deployment meets the requirements for servers and networks, then select **Next**.
+
+1. 
+
 ### [PowerShell](#tab/powershell)
 
 > [!NOTE]
