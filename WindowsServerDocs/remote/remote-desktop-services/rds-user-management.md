@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 2727e1ab-69b8-46f3-9f6d-2540324fe596
 author: christianmontoya
 ms.author: chrimo
-ms.date: 03/27/2018
+ms.date: 7/3/2024
 manager: scottman
 ---
 # Manage users in your RDS collection
