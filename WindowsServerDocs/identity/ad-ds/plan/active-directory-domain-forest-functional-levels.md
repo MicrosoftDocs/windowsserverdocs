@@ -10,7 +10,7 @@ ms.date: 07/30/2024
 
 >Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012
 
-Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels don't affect which operating systems you can run on workstations and member servers joined to the domain or forest.
+Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels don't affect which operating systems you can run on workstations and member servers joined to the domain or forest. The purpose of this article is to help you determine compatability between versions of Windows Server and available functioning levels.
 
 When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support in order to use as many AD DS features as possible. When you deploy a new forest, you're first prompted to set the forest functional level, then prompted to set the domain functional level. You can set the domain functional level to a value that's higher than the forest functional level, but you can't set the domain functional level to a value lower than the forest functional level.
 
