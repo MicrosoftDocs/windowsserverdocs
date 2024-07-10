@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 06/27/2024
+ms.date: 07/10/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -182,15 +182,15 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
 - Network Controller, which lets you automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).
 
-- Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch).
+- Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
 - Network Function Virtualization (NFV), which lets you mirror or route network functions performed by hardware appliances to virtual appliances, such as load balancers, firewalls, routers, switches, and so on. You can also deploy and manage your entire SDN stack using System Center Virtual Machine Manager. You can manage Windows Server container networking with Docker and associate SDN policies with both virtual machines and containers.
 
-- A Datacenter Firewall that provides granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. To learn more, see [What is Datacenter Firewall?](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/datacenter-firewall-overview).
+- A Datacenter Firewall that provides granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. To learn more, see [What is Datacenter Firewall?](/azure-stack/hci/concepts/datacenter-firewall-overview).
 
-- RAS Gateway, which lets you route traffic between virtual networks and physical networks, including site-to-site VPN connections from your cloud datacenter to your tenants' remote sites. Border Gateway Protocol (BGP) lets you deploy and provide dynamic routing between networks for all gateway scenarios, including Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networks (VPNs), Layer 3 (L3) VPNs, and Generic Routing Encapsulation (GRE) gateways. Gateways now also support gateway pools and M+N redundancy. To learn more, see [What is Remote Access Service (RAS) Gateway for Software Defined Networking?](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/gateway-overview).
+- RAS Gateway, which lets you route traffic between virtual networks and physical networks, including site-to-site VPN connections from your cloud datacenter to your tenants' remote sites. Border Gateway Protocol (BGP) lets you deploy and provide dynamic routing between networks for all gateway scenarios, including Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networks (VPNs), Layer 3 (L3) VPNs, and Generic Routing Encapsulation (GRE) gateways. Gateways now also support gateway pools and M+N redundancy. To learn more, see [What is Remote Access Service (RAS) Gateway for Software Defined Networking?](/azure-stack/hci/concepts/gateway-overview).
 
-- Software Load Balancer (SLB) and Network Address Translation (NAT) enhances throughput by supporting Direct Server Return. This allows the return network traffic to bypass the Load Balancing multiplexer, and can be achieved using a north-south and east-west layer 4 load balancer and NAT. To learn more, see [What is Software Load Balancer (SLB) for SDN?](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/software-load-balancer) and [Network Function Virtualization](https://learn.microsoft.com/en-us/windows-server/networking/sdn/technologies/network-function-virtualization/network-function-virtualization).
+- Software Load Balancer (SLB) and Network Address Translation (NAT) enhances throughput by supporting Direct Server Return. This allows the return network traffic to bypass the Load Balancing multiplexer, and can be achieved using a north-south and east-west layer 4 load balancer and NAT. To learn more, see [What is Software Load Balancer (SLB) for SDN?](/azure-stack/hci/concepts/software-load-balancer) and [Network Function Virtualization](../networking/sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).
 
 - Flexible encapsulation technologies that operate at the data plane and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE).
 
@@ -231,6 +231,8 @@ The Dynamic Host Configuration Protocol (DHCP) has the following changes in Wind
 RAS Gateway now supports high availability Generic Routing Encapsulation (GRE) tunnels for site-to-site connections and M+N redundancy of gateways. GRE is a lightweight tunneling protocol that encapsulates a wide variety of network layer protocols inside virtual point-to-point links over an Internet Protocol internetwork. For more information, see [GRE Tunneling in Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md).
 
 ### IP Address Management (IPAM)
+
+IPAM has the following updates:
 
 - Enhanced IP address management. IPAM has improved capabilities for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.
 
