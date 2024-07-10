@@ -122,7 +122,7 @@
       - name: Enable Intel Performance Monitoring Hardware
         href: hyper-v/manage/Performance-Monitoring-Hardware.md
       - name: Enable processor compatibility mode
-        href: hyper-v/manage/processor-compatibility-mode-hyper-v.md
+        href: hyper-v/manage/dynamic-processor-compatibility-mode.md
       - name: Move VMs with live migration
         href: hyper-v/manage/Live-migration-overview.md
         items:
