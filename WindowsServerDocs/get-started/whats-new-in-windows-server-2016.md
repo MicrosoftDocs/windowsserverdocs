@@ -182,15 +182,15 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
 - Network Controller, which lets you automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).
 
-- Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure.
+- Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch).
 
 - Network Function Virtualization (NFV), which lets you mirror or route network functions performed by hardware appliances to virtual appliances, such as load balancers, firewalls, routers, switches, and so on. You can also deploy and manage your entire SDN stack using System Center Virtual Machine Manager. You can manage Windows Server container networking with Docker and associate SDN policies with both virtual machines and containers.
 
-- A Datacenter Firewall that provides granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level.
+- A Datacenter Firewall that provides granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. To learn more, see [What is Datacenter Firewall?](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/datacenter-firewall-overview).
 
-- RAS Gateway, which lets you route traffic between virtual networks and physical networks, including site-to-site VPN connections from your cloud datacenter to your tenants' remote sites. Border Gateway Protocol (BGP) lets you deploy and provide dynamic routing between networks for all gateway scenarios, including Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networks (VPNs), Layer 3 (L3) VPNs, and Generic Routing Encapsulation (GRE) gateways. Gateways now also support gateway pools and M+N redundancy.
+- RAS Gateway, which lets you route traffic between virtual networks and physical networks, including site-to-site VPN connections from your cloud datacenter to your tenants' remote sites. Border Gateway Protocol (BGP) lets you deploy and provide dynamic routing between networks for all gateway scenarios, including Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networks (VPNs), Layer 3 (L3) VPNs, and Generic Routing Encapsulation (GRE) gateways. Gateways now also support gateway pools and M+N redundancy. To learn more, see [What is Remote Access Service (RAS) Gateway for Software Defined Networking?](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/gateway-overview).
 
-- Software Load Balancer (SLB) and Network Address Translation (NAT) enhances throughput by supporting Direct Server Return, which lets return network traffic bypass the Load Balancing multiplexer.
+- Software Load Balancer (SLB) and Network Address Translation (NAT) enhances throughput by supporting Direct Server Return. This allows the return network traffic to bypass the Load Balancing multiplexer, and can be achieved using a north-south and east-west layer 4 load balancer and NAT. To learn more, see [What is Software Load Balancer (SLB) for SDN?](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/software-load-balancer) and [Network Function Virtualization](https://learn.microsoft.com/en-us/windows-server/networking/sdn/technologies/network-function-virtualization/network-function-virtualization).
 
 - Flexible encapsulation technologies that operate at the data plane and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE).
 
@@ -204,7 +204,7 @@ Windows Server 2016 includes the following cloud scale fundamentals:
 
 - Packet Direct provides a high network traffic throughput and low-latency packet processing infrastructure.
 
-- Switch Embedded Teaming (SET) is an NIC Teaming solution integrated into the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to using Server Message Block (SMB) and RDMA. You can also use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Remote Direct Memory Access and Switch Embedded Teaming](/azure-stack/hci/concepts/host-network-requirements).
+- Switch Embedded Teaming (SET) is a NIC Teaming solution integrated into the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICs into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to using Server Message Block (SMB) and RDMA. You can also use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
 ### TCP performance improvements
 
@@ -230,9 +230,7 @@ The Dynamic Host Configuration Protocol (DHCP) has the following changes in Wind
 
 RAS Gateway now supports high availability Generic Routing Encapsulation (GRE) tunnels for site-to-site connections and M+N redundancy of gateways. GRE is a lightweight tunneling protocol that encapsulates a wide variety of network layer protocols inside virtual point-to-point links over an Internet Protocol internetwork. For more information, see [GRE Tunneling in Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md).
 
-### IP address management (IPAM)
-
-IPAM provides highly customizable administrative and monitoring capabilities for the IP address and DNS infrastructure on an organization network. You can use IPAM to monitor, audit, and manage servers that are running Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) using the following features:
+### IP Address Management (IPAM)
 
 - Enhanced IP address management. IPAM has improved capabilities for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.
 
@@ -242,7 +240,7 @@ IPAM provides highly customizable administrative and monitoring capabilities for
 
 - Multiple Active Directory Forest support. You can use IPAM to manage the DNS and DHCP servers of multiple Active Directory forests when there's a two-way trust relationship between the forest where you installed IPAM and each of the remote forests.
 
-- You can use Windows PowerShell to set access scopes on IPAM objects.
+- With Windows PowerShell's Role Based Access Control (RBAC) capabilities, you have the ability to define access scopes for IPAM objects through the command-line.
 
 For more information, see [What's New in IPAM](../networking/technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](../networking/technologies/ipam/Manage-IPAM.md).
 
