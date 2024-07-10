@@ -113,7 +113,7 @@ To enable processor compatibility mode using Windows Admin Center:
 
 1. Select **Settings**, then **Processors**, and check the box for **Processor compatibility**.
 
-:::image type="content" source="media/dynamic-processor-compatibility-mode/processor-compatibility.png" alt-text="Screenshot of the checkbox to enable processor compatibility" lightbox="media/dynamic-processor-compatibility-mode/processor-compatibility.png":::
+:::image type="content" source="media/dynamic-processor-compatibility-mode/processor-compatibility.png" alt-text="Screenshot of the checkbox to enable processor compatibility." lightbox="media/dynamic-processor-compatibility-mode/processor-compatibility.png":::
 
 1. If you want to set the VM's CPU features to the maximum level supported by all servers in a cluster, select **Compatible across the cluster (Recommended)**. This maximizes VM performance while preserving the ability to move the running VM to other servers in the cluster. We recommend enabling this for all VMs running on Azure Stack HCI 21H2 clusters. If disabled, the VM must be restarted to move to a host with a different level of supported CPU instructions, common with different generations of CPUs. 
 
