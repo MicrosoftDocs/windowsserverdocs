@@ -70,9 +70,42 @@ You must install the Failover Clustering feature on every server that you want t
 
 1. Install any required features by selecting **Install features**.
 
+1. Select **Next**,
+
 1. Optionally, you can install any operating system updates by selecting **Install updates**.
 
+1. Select **Next**,
 
+1. Select **Restart servers** to restart the servers and apply changes.
+
+1. Select **Next: Networking**.
+
+1. Under **Networking**, a popup window will appear asking you if you want to remove existing virtual switches. If you want to remove them, select **Yes**. If not, select **No**.
+
+1. The wizard will check the network adapters. To enable a network adapter, select the name of the adapter, then select **Enable**. To disable an adapter, select the name of the adapter, then select **Disable**.
+
+  >[!NOTE]
+  >If the wizard can't find the servers, select **Back**, then select **Next** to refresh the page. If you still see an error message, try using a server that isn't on a VLAN instead.
+
+1. Select **Next**.
+
+1. On **Select the adapters to use for management**, select **One physical network adapter for management**, then select **Next**.
+
+1. On **Virtual switch**, select **Create one virtual switch for compute and storage together**, then select **Next**.
+
+1. On **Optionally configure RDMA**, select **Next**.
+
+1. On **Define networks**, enter the name, IP address, Subnet mask, and VLAN ID of the adapters you want to use for storage and compute traffic for VMS within the cluster. When you're done, select **Apply and test** to validate the adapters.
+
+1. When the validation process is finished, select **Next: Clustering**.
+
+1. On **Validate the cluster**, select **Validate**.
+
+1. When the validation process finishes, review any warning messages that appear and resolve them if you can. Once you're finished, select **Next**.
+
+1. On **Create the cluster**, enter a name for your cluster, then select **Specify one or more static addresses**. Next, select the **Use network** checkbox and enter the IP address for your cluster in the **IP address** field. when you're done, select **Create cluster**.
+
+1. When the cluster creation process is done, select **Finish**.
 
 ### [PowerShell](#tab/powershell)
 
