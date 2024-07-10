@@ -67,18 +67,18 @@ The following table shows the counters that can be added from the LSA Lookup per
 
 For troubleshooting, you can collect a LSA Lookup debug log to track the processes and client details performing sid/name lookups.
 
-- **Log file**
+### Log file
 
 `%systemroot%\debug\lsp.log & lsp.bak` The default log file size is 10MB.
 
-- **Enable**
+### Enable
 
 `Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgInfoLevel -Value 0x800 -Type dword -Force`
 `Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgTraceOptions -Value 0x1 -Type dword -Force`
 
 No reboot is necessary.
 
-- **Disable**
+### Disable
 
 `Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgInfoLevel -Value 0x0 -Type dword -Force`
 `Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgTraceOptions -Value 0x0 -Type dword -Force`
@@ -110,7 +110,7 @@ The LSA name cache can be tuned using the following settings under `HKLM:\SYSTEM
 
 ### Negative Isolated name cache
 
-Member workstations and member servers maintain local in-memory cache of isolated names that haven't and can't be resolved. See For more information about Isolated names refer see [LsaLookupNames2 function (ntsecapi.h)](https://learn.microsoft.com/en-us/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2). 
+Member workstations and member servers maintain local in-memory cache of isolated names that haven't and can't be resolved. See For more information about Isolated names refer see [LsaLookupNames2 function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2). 
 
 Negative Isolated name cache is not configurable. The maximum size is 8000 entries with a maximum duration of 2 hours each. Names are automatically removed from the this cache if they're resolved. Stale entries are cleaned up by a background task.
 
