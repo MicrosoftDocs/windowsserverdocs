@@ -4,7 +4,7 @@ description: Find out what is new in Windows Server 2022.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 04/02/2024
+ms.date: 07/10/2024
 ---
 
 # What's new in Windows Server 2022
