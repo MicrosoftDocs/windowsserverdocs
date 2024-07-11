@@ -10,7 +10,7 @@ ms.date: 07/30/2024
 
 >Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012
 
-Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels don't affect which operating systems you can run on workstations and member servers joined to the domain or forest. The purpose of this article is to help you determine compatability between versions of Windows Server and available functioning levels.
+Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels don't affect which operating systems you can run on workstations and member servers joined to the domain or forest. This article describes which functioning levels are compatible with which versions of Windows Server.
 
 When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support in order to use as many AD DS features as possible. When you deploy a new forest, you're first prompted to set the forest functional level, then prompted to set the domain functional level. You can set the domain functional level to a value that's higher than the forest functional level, but you can't set the domain functional level to a value lower than the forest functional level.
 
@@ -42,9 +42,7 @@ Windows Server 2025 includes all Active Directory features from earlier domain f
 
 - DCs can support automatic rolling of the NTLM and other password-based secrets on a user account configured to require PKI authentication. This configuration is also known as "Smart card required for interactive logon."See [Interactive Logon Using Smart Cards](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-pkca/53dd48a1-8325-4c0f-971f-d8c538d07f96) for more information.
 - DCs support allowing network NTLM when a user is restricted to specific domain-joined devices.
-- Kerberos clients that successfully authenticate with the PKInit Freshness Extension receive the fresh public key identity SID.
-
-    For more information, see [What's New in Kerberos Authentication](../../get-started/whats-new-in-windows-server-2016.md#kerberos-authentication) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md)
+- Kerberos clients that successfully authenticate with the PKInit Freshness Extension receive the fresh public key identity SID. For more information, see [What's New in Kerberos Authentication](../../get-started/whats-new-in-windows-server-2016.md#kerberos-authentication) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md).
 
 ## Windows Server 2016 functional levels
 
