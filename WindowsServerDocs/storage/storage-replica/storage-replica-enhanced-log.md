@@ -2,9 +2,9 @@
 description: Learn about Storage Replica Enhanced Log and the performance improvements it delivers your replication groups
 title: Storage Replica Enhanced Log
 manager: candyc
-ms.author: billy
+ms.author: wscontent
 ms.topic: how-to
-author: wbsmolen
+author: robinharwood
 ms.date: 06/23/2023
 ---
 
