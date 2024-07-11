@@ -2,7 +2,7 @@
 ms.date:  2/12/2024 
 contributor:  damaerte
 keywords:  OpenSSH, SSH, Win32-OpenSSH
-ms.topic: OpenSSH, SSH, Win32-OpenSSH
+ms.topic: how-to
 author: maertendmsft
 ms.author: damaerte
 title:  Manage OpenSSH with Group Policy

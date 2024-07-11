@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 06/20/2024
+ms.date: 07/10/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -178,13 +178,39 @@ The [Networking area](../networking/index.yml) addresses networking products and
 
 ### Software-Defined Networking
 
-You can now both mirror and route traffic to new or existing virtual appliances. Together with a distributed firewall and Network security groups, this enables you to dynamically segment and secure workloads in a manner similar to Azure. Second, you can deploy and manage the entire Software-defined networking (SDN) stack using System Center Virtual Machine Manager. Finally, you can use Docker to manage Windows Server container networking, and associate SDN policies not only with virtual machines but containers as well. For more information, see [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure).
+Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) solution that includes the following features:
+
+- Network Controller, which lets you automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).
+
+- Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+
+- Network Function Virtualization (NFV), which lets you mirror or route network functions performed by hardware appliances to virtual appliances, such as load balancers, firewalls, routers, switches, and so on. You can also deploy and manage your entire SDN stack using System Center Virtual Machine Manager. You can manage Windows Server container networking with Docker and associate SDN policies with both virtual machines and containers.
+
+- A Datacenter Firewall that provides granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. To learn more, see [What is Datacenter Firewall?](/azure-stack/hci/concepts/datacenter-firewall-overview).
+
+- RAS Gateway, which lets you route traffic between virtual networks and physical networks, including site-to-site VPN connections from your cloud datacenter to your tenants' remote sites. Border Gateway Protocol (BGP) lets you deploy and provide dynamic routing between networks for all gateway scenarios, including Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networks (VPNs), Layer 3 (L3) VPNs, and Generic Routing Encapsulation (GRE) gateways. Gateways now also support gateway pools and M+N redundancy. To learn more, see [What is Remote Access Service (RAS) Gateway for Software Defined Networking?](/azure-stack/hci/concepts/gateway-overview).
+
+- Software Load Balancer (SLB) and Network Address Translation (NAT) enhances throughput by supporting Direct Server Return. This allows the return network traffic to bypass the Load Balancing multiplexer, and can be achieved using a north-south and east-west layer 4 load balancer and NAT. To learn more, see [What is Software Load Balancer (SLB) for SDN?](/azure-stack/hci/concepts/software-load-balancer) and [Network Function Virtualization](../networking/sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).
+
+- Flexible encapsulation technologies that operate at the data plane and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE).
+
+For more information, see [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure).
+
+### Cloud scale fundamentals
+
+Windows Server 2016 includes the following cloud scale fundamentals:
+
+- Converged Network Interface Card (NIC), which lets you use a single network adapter for management, Remote Direct Memory Access (RDMA)-enabled storage, and tenant traffic. A Converged NIC reduces cost for each server in your datacenter because it requires fewer network adapters to manage different types of traffic per server.
+
+- Packet Direct provides a high network traffic throughput and low-latency packet processing infrastructure.
+
+- Switch Embedded Teaming (SET) is a NIC Teaming solution integrated into the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICs into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to using Server Message Block (SMB) and RDMA. You can also use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
 ### TCP performance improvements
 
 The default Initial Congestion Window (ICW) has been increased from 4 to 10 and TCP Fast Open (TFO) has been implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
 
-In order to improve TCP behavior when recovering from packet loss, we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
+In order to improve TCP behavior when recovering from packet loss, we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
 
 ### Dynamic Host Configuration Protocol (DHCP)
 
@@ -199,6 +225,26 @@ The Dynamic Host Configuration Protocol (DHCP) has the following changes in Wind
 - New logging events for scenarios where DNS record registrations fail on the DNS server. For more information, see [DHCP Logging Events for DNS Registrations](../networking/technologies/dhcp/dhcp-dns-events.md).
 
 - The DHCP Server role no longer supports Network Access Protection (NAP). DHCP servers don't enforce NAP policies, and DHCP scopes can't be NAP-enabled. DHCP client computers that are also NAP clients send a statement of health (SoH) with the DHCP request. If the DHCP server is running Windows Server 2016, these requests are processed as if no SoH is present. The DHCP server grants a normal DHCP lease to the client. If servers running Windows Server 2016 are Remote Authentication Dial-In User Service (RADIUS) proxies that forward authentication requests to a Network Policy Server (NPS) that supports NAP, the NPS evaluates these clients as non-NAP capable, causing NAP processing to fail. For more information about NAP and NAP deprecation, see [Features Removed or Deprecated in Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)).
+
+### GRE tunneling
+
+RAS Gateway now supports high availability Generic Routing Encapsulation (GRE) tunnels for site-to-site connections and M+N redundancy of gateways. GRE is a lightweight tunneling protocol that encapsulates a wide variety of network layer protocols inside virtual point-to-point links over an Internet Protocol internetwork. For more information, see [GRE Tunneling in Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md).
+
+### IP Address Management (IPAM)
+
+IPAM has the following updates:
+
+- Enhanced IP address management. IPAM has improved capabilities for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.
+
+- Enhanced DNS service management. IPAM supports DNS resource record, conditional forwarder, and DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers.
+
+- Integrated DNS, DHCP, and IP address (DDI) management. Several new experiences and integrated lifecycle management operations are enabled, such as visualizing all DNS resource records that pertain to an IP address, automated inventory of IP addresses based on DNS resource records, and IP address lifecycle management for both DNS and DHCP operations.
+
+- Multiple Active Directory Forest support. You can use IPAM to manage the DNS and DHCP servers of multiple Active Directory forests when there's a two-way trust relationship between the forest where you installed IPAM and each of the remote forests.
+
+- With Windows PowerShell's Role Based Access Control (RBAC) capabilities, you have the ability to define access scopes for IPAM objects through the command-line.
+
+For more information, see [What's New in IPAM](../networking/technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](../networking/technologies/ipam/Manage-IPAM.md).
 
 ## Security and Assurance
 
@@ -295,27 +341,105 @@ You can now use storage quality of service (QoS) to centrally monitor end-to-end
 
 For more info, see [Storage Quality of Service](../storage/storage-qos/storage-qos-overview.md).
 
+### Data deduplication
+
+Windows Server 2016 includes the following new features for data deduplication.
+
+### Support for large volumes
+
+Starting with Windows Server 2016, the Data Deduplication Job pipeline can now run multiple threads in parallel using many I/O queues for each volume. This change increases performance to levels previously only possible by dividing data into several smaller volumes. These optimizations apply to all [Data Deduplication Jobs](../storage/data-deduplication/understand.md#job-info), not just the Optimization Job. The following diagram demonstrates how the pipeline changed between versions of Windows Server.
+
+:::image type="content" source="../storage/data-deduplication/media/server-2016-dedup-job-pipeline.png" alt-text="A visualization comparing the Data Deduplication Job Pipeline in Windows Server 2012 R2 to Windows Server 2016.":::
+
+Because of these performance improvements, on Windows Server 2016, Data Deduplication has high performance on volumes up to 64 TB.
+
+### Large file support
+
+As of Windows Server 2016, Data Deduplication uses stream map structures and other improvements to increase optimization throughput and access performance. The Deduplication Processing Pipeline can also resume optimization after failover scenarios instead of starting over from the beginning. This change improves the performance of files up to 1 TB, allowing administrators to apply deduplication savings to a larger range of workloads, such as large files associated with backup workloads.
+
+### Support for Nano Server
+
+Nano Server is a headless deployment option in Windows Server 2016 that requires a far smaller system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Nano Server also fully supports Data Deduplication. For more information about Nano Server, see [Container Base Images](/virtualization/windowscontainers/manage-containers/container-base-images).
+
+### Simplified configuration for Virtualized Backup Applications
+
+Starting with Windows Server 2016, Data Deduplication for Virtualized Backup Applications scenarios are vastly simplified. This scenario is now a predefined Usage Type option. You no longer need to manually tune the deduplication settings, just enable Deduplication for a volume just like you would General Purpose File Server and Virtual Desktop Infrastructure (VDI).
+
+### Cluster OS Rolling Upgrade support
+
+Windows Server Failover Clusters running Data Deduplication can have a mix of nodes that run the Windows Server 2012 R2 and Windows Server 2016 versions of Data Deduplication. This mixed-mode cluster feature gives full data access to all deduplicated volumes during cluster rolling upgrades. You can now gradually roll out later versions of Data Deduplications on clusters running earlier versions of Windows Server without any downtime.
+
 ## Failover Clustering
 
-Windows Server 2016 includes many new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
+Windows Server 2016 includes many new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature.
 
 ### Cluster Operating System Rolling Upgrade
 
-Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
+Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or Scale-Out File Server workloads. You can use this feature to avoid downtime penalties against Service Level Agreements (SLAs).
 
-For more info, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
+For more information, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
 
 ### Cloud Witness
 
-Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in the  quorum calculations. You can configure cloud witness as a quorum witness using the Configure a Cluster Quorum Wizard.
+Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in quorum calculations. You can configure Cloud Witness as a quorum witness using the Configure a Cluster Quorum wizard.
 
-For more info, see [Deploy Cloud Witness](../failover-clustering/deploy-cloud-witness.md).
+For more information, see [Deploy Cloud Witness for a failover cluster](../failover-clustering/deploy-cloud-witness.md).
 
-### Health Service
+### Virtual Machine resiliency
 
-The Health Service improves the day-to-day monitoring, operations, and maintenance experience of cluster resources on a Storage Spaces Direct cluster.
+Windows Server 2016 includes increased virtual machine (VM) compute resiliency to help reduce intra-cluster communication issues in your compute cluster. This increased resiliency includes the following updates:
 
-For more info, see [Health Service](../failover-clustering/health-service-overview.md).
+- You can now configure the following options to define how the VMs should behave during transient failures:
+
+  - **Resiliency Level** defines how your deployment should handle transient failures.
+
+  - **Resiliency Period**  defines how long all VMs are allowed to run isolated.
+
+- Unhealthy nodes are quarantined and are no longer allowed to join the cluster. This feature prevents unhealthy nodes from negatively affecting other nodes and the overall cluster.
+
+For more information about compute resiliency features, see [Virtual Machine Compute Resiliency in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/virtual-machine-compute-resiliency-in-windows-server-2016/ba-p/372027).
+
+Windows Server 2016 VMs also include new storage resiliency features for handling transient storage failures. Improved resiliency helps preserve tenant VM session states in the event of a storage disruption. When a VM disconnects from its underlying storage, it pauses and waits for storage to recover. While paused, the VM retains the context of applications that were running in it at the time of the storage failure. When the connection between the VM and storage is restored, the VM returns to its running state. As a result, the tenant machine's session state is retained on recovery.
+
+The new storage resiliency features also apply to guest clusters.
+
+### Diagnostic improvements
+
+To help diagnose issues with failover clusters, Windows Server 2016 includes the following:
+
+- Several enhancements to cluster log files, such as Time Zone Information and DiagnosticVerbose log, make it easier to troubleshoot failover clustering issues. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372005).
+
+- A new type of active memory dump filters out most memory pages allocated to VMs, making the memory.dmp file much smaller and easier to save or copy. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372008).
+
+### Site-aware failover clusters
+
+Windows Server 2016 includes site-aware failover clusters that enable group nodes in stretched clusters based on their physical location, or site. Cluster site-awareness enhances key operations during the cluster lifecycle, such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/site-aware-failover-clusters-in-windows-server-2016/ba-p/372060).
+
+### Workgroup and Multi-domain clusters
+
+In Windows Server 2012 R2 and earlier, a cluster can only be created between member nodes joined to the same domain. Windows Server 2016 breaks down these barriers and introduces the ability to create a Failover Cluster without Active Directory dependencies. You can now create failover clusters in the following configurations:
+
+- Single-domain Clusters, which have all their nodes joined to the same domain.
+
+- Multi-domain Clusters, which have nodes that are members of different domains.
+
+- Workgroup Clusters, which have nodes that are member servers or workgroups that aren't domain-joined.
+
+For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/workgroup-and-multi-domain-clusters-in-windows-server-2016/ba-p/372059)
+
+### Virtual Machine Load Balancing
+
+Virtual Machine Load Balancing is a new feature in Failover Clustering that seamlessly load balances VMs across the nodes in a cluster. The feature identifies overcommitted nodes based on VM memory and CPU utilization on the node. It then live migrates the VMs from the overcommitted node to nodes with available bandwidth. You can adjust how aggressively the feature balances nodes to ensure optimal cluster performance and utilization. Load Balancing is enabled by default in Windows Server 2016 Technical Preview. However, Load Balancing is disabled when SCVMM Dynamic Optimization is enabled.
+
+### Virtual Machine Start Order
+
+Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for VMs and other groups in a cluster. You can now group VMs into tiers, then create start order dependencies between different tiers. These dependencies ensure that the most important VMs, such as Domain Controllers or Utility VMs, start up first. VMs on lower-priority tiers don't start until after the VMs that they have a dependency on startup.
+
+### Simplified SMB Multichannel and Multi-NIC Cluster Networks
+
+Failover cluster networks are no longer limited to a single network interface card (NIC) per subnet or network. With Simplified Server Message Block (SMB) Multichannel and Multi-NIC Cluster Networks, network configuration is automatic and every NIC on the subnet can be used for cluster and workload traffic. This enhancement allows customers to maximize network throughput for Hyper-V, SQL Server Failover Cluster Instance, and other SMB workloads.
+
+For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](../failover-clustering/smb-multichannel.md).
 
 ## Application development
 
@@ -367,6 +491,13 @@ Windows DNS server now includes IPv6 root hints published by the Internet Assign
 ### Windows PowerShell support
 
 Windows Server 2016 includes new commands you can use to configure DNS in PowerShell. For more information, see [Windows Server 2016 DnsServer module](/powershell/module/dnsserver/?view=windowsserver2016-ps&preserve-view=true) and [Windows Server 2016 DnsClient module](/powershell/module/dnsclient/?view=windowsserver2016-ps&preserve-view=true).
+
+### Nano Server support for file-based DNS
+
+You can deploy DNS servers in Windows Server 2016 on a Nano Server image. This deployment option is available if you're using file-based DNS. By running DNS server on a Nano Server image, you can run your DNS servers with reduced footprint, quick boot up, and minimal patching.
+
+> [!NOTE]
+> Active Directory integrated DNS is not supported on Nano Server.
 
 ## DNS client
 

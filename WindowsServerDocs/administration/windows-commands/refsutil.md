@@ -1,8 +1,8 @@
 ---
 title: ReFSUtil
 description: Reference article for the ReFSUtil tool, which attempts to diagnose heavily damaged ReFS volumes, identify remaining files, and copy those files to another volume.
-author: wbsmolen
-ms.author: billy
+author: robinharwood
+ms.author: wscontent
 ms.date: 2/14/2023
 ms.topic: reference
 ---

@@ -4,7 +4,7 @@ description: Learn how to connect to a remote PC using Microsoft Entra authentic
 ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
-ms.date: 10/04/2023
+ms.date: 7/3/2024
 ---
 
 # Use the Remote Desktop Connection app to connect to a remote PC using single sign-on with Microsoft Entra authentication

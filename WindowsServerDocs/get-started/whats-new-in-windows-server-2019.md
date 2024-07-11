@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/05/2024
+ms.date: 07/10/2024
 ---
 
 # What's new in Windows Server 2019
@@ -48,6 +48,12 @@ With Azure AD integration you can use Conditional Access policies, Multifactor A
 ## Networking
 
 We made several improvements to the core network stack, such as TCP Fast Open (TFO), Receive Window Autotuning, IPv6, and more. For more information, see the [Core Network Stack feature improvement](https://techcommunity.microsoft.com/t5/networking-blog/core-network-stack-features-in-the-creators-update-for-windows/ba-p/339676) post.
+
+### Dynamic vRSS and VMMQ
+
+In the past, Virtual Machine Queues and Virtual Machine Multi-Queues (VMMQs) enabled much higher throughput to individual VMs as network throughputs first reached the 10GbE mark and beyond. Unfortunately, the planning, baselining, tuning, and monitoring required for success became a much larger undertaking than IT administrators anticipated.
+
+Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as needed. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
 ## Security
 
@@ -128,7 +134,7 @@ For more information, see [Encrypted networks](../networking/sdn/vnet-encryption
 
 ### Egress metering
 
-[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allow list of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
+[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allowlist of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
 
 ## Storage
 
@@ -193,19 +199,39 @@ Here's what's new in Storage Replica. For details, see [What's new in Storage Re
 - Storage Replica log performance improvements
 - Windows Admin Center support
 
+### Data deduplication
+
+Windows Server 2019 now supports the Resilient File System (ReFS). ReFS lets you store up to ten times more data on the same volume with deduplication and compression for the ReFS filesystem. The variable-size chunk store comes with an optional compression feature that can maximize savings rates, while the multi-threaded post-processing architecture keeps performance impact minimal. ReFS supports volumes up to 64 TB and deduplicates the first 4 TB of each file. To learn more, see [How to turn on deduplication and compression in Windows Admin Center](https://www.youtube.com/watch?v=PRibTacyKko&feature=youtu.be) for a quick video demonstration.
+
 ## Failover Clustering
 
-Here's a list of what's new in Failover Clustering. For details, see [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
+We added the following features to failover clustering in Windows Server 2019:
 
-- Cluster sets
-- Azure-aware clusters
-- Cross-domain cluster migration
-- USB witness
-- Cluster infrastructure improvements
-- Cluster Aware Updating supports Storage Spaces Direct
-- File share witness enhancements
-- Cluster hardening
-- Failover Cluster no longer uses NTLM authentication
+- Cluster sets group multiple clusters together into a loosely coupled grouping of multiple failover clusters that come in three types: compute, storage, and hyper-converged. This grouping increases the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. With cluster sets, you can move online virtual machines between clusters within the cluster set. For more information, see [Deploy a cluster set](../failover-clustering/cluster-set.md).
+
+- Clusters are now Azure-aware by default. Azure-aware clusters automatically detect when they're running in Azure IaaS virtual machines, then optimize their configuration to achieve the highest levels of availability. These optimizations include proactive failover and logging of Azure planned maintenance events. Automated optimization makes deployment simpler by removing the need to configure the load balancer with Distributed Network Name for the cluster name.
+
+- Cross-domain cluster migration lets failover clusters dynamically move from one Active Directory domain to another, simplifying domain consolidation and allowing hardware partners to create clusters and join them to the customer's domain at a later time.
+
+- The USB witness feature lets you use a USB drive attached to a network switch as a witness in determining quorum for a cluster. This feature includes extended File Share Witness support for any SMB2-compliant device.
+
+- The CSV cache is now enabled by default to boost virtual machine performance. MSDTC now supports Cluster Shared Volumes to allow deploying MSDTC workloads on Storage Spaces Direct, such as with SQL Server. Enhanced logic to detect partitioned nodes with self-healing to return nodes to cluster membership. Enhanced cluster network route detection and self-healing.
+
+- Cluster Aware Updating (CAU) is now integrated and aware of Storage Spaces Direct, validating and ensuring data resynchronization completes on each node. Cluster Aware Updating inspects updates to intelligently restart only if necessary. This feature lets you restart all servers in the cluster for planned maintenance.
+
+- You can now use file share witnesses in the following scenarios:
+
+  - Absent or poor Internet access because of a remote location, preventing the use of a cloud witness.
+  
+  - Lack of shared drives for a disk witness. For example, a configuration that doesn't use shared disks, such as Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an Exchange Database Availability Group (DAG).
+  
+  - Lack of domain controller connection due to the cluster being behind a DMZ.
+  
+  - A workgroup or cross-domain cluster that doesn't have an Active Directory cluster name object (CNO). Windows Server now also blocks using a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
+
+- A cluster hardening feature has been implemented that enhances the security of intra-cluster communication over Server Message Block (SMB) for Cluster Shared Volumes and Storage Spaces Direct. This feature leverages certificates to provide the most secure platform possible. By doing so, Failover Clusters can now operate without any dependencies on NTLM, which enables security baselines to be established.
+
+- Failover Clusters no longer use NTLM authentication. Instead, Windows Server 2019 clusters now exclusively use Kerberos and certificate-based authentication. Users don't need to make any changes or deploy anything to take advantage of this security enhancement. This change also lets you deploy failover clusters in environments where NTLM is disabled.
 
 ## Application Platform
 
