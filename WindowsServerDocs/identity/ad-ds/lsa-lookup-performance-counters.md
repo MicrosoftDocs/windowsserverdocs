@@ -25,7 +25,7 @@ LSA Lookup performance counters are accessed using Performance Monitor (`perfmon
 
 LSA Lookup performance counters measure the performance of the LSA lookup process running on the client or server machine.
 
-The following table shows the counters that can be added from the LSA Lookup performance counter set and their description.
+The following table shows the counters that can be added from the LSA Lookup performance counter set and their description, including whether each counter relates to DC, non-DC, or both.
 
 | Counter name | Description | DC | Non-DC |
 |--|--|--|--|
