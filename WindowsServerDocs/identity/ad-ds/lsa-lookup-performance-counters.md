@@ -110,7 +110,7 @@ The LSA name cache can be tuned using the following settings under `HKLM:\SYSTEM
 
 ### Negative Isolated name cache
 
-Member workstations and member servers maintain local in-memory cache of isolated names that haven't and can't be resolved. See For more information about Isolated names refer see [LsaLookupNames2 function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2). 
+Member workstations and member servers maintain local in-memory cache of isolated names that haven't and can't be resolved. See [LsaLookupNames2 function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2) for more information about Isolated names.
 
 Negative Isolated name cache is not configurable. The maximum size is 8000 entries with a maximum duration of 2 hours each. Names are automatically removed from the this cache if they're resolved. Stale entries are cleaned up by a background task.
 
