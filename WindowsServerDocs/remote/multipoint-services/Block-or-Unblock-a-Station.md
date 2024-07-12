@@ -3,9 +3,9 @@ title: Block or Unblock a Station
 description: Learn how to stop a user or group from accessing a MultiPoint Services system.
 ms.topic: article
 ms.assetid: 12bdbb60-03a5-4e7d-acb1-e4fdcb950c29
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: wscontent
 ms.date: 08/04/2016
 ---
 # Block or Unblock a Station

@@ -3,8 +3,8 @@ title: Hyper-V Technology Overview
 description: Describes what Hyper-V is, how to get it, key features, and common uses.
 ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.date: 11/29/2016
 ---
 # Hyper-V Technology Overview
@@ -87,7 +87,7 @@ Hyper-V also has tools for management and connectivity. You can install these on
 These are some technologies from Microsoft that are often used with Hyper-V:
 
 - [Failover Clustering](../../failover-clustering/whats-new-in-failover-clustering.md)
-- [Remote Desktop Services](../../remote/remote-desktop-services/welcome-to-rds.md)
+- [Remote Desktop Services](../../remote/remote-desktop-services/remote-desktop-services-overview.md)
 - [System Center Virtual Machine Manager](/system-center/vmm/overview)
 
 Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct

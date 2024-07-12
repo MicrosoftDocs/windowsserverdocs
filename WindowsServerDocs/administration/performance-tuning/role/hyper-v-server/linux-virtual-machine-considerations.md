@@ -3,7 +3,7 @@ title: Linux Virtual Machine Considerations
 description: Linux and BSD virtual machine
 ms.topic: article
 ms.author: wscontent
-author: phstee
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

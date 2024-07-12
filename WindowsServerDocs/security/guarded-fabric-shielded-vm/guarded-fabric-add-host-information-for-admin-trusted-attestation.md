@@ -4,8 +4,8 @@ title: Add host information for Admin-trusted attestation
 ms.topic: article
 ms.assetid: 87089ebc-b953-4aa3-96b5-966cf91acb02
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 08/29/2018
 ---
 

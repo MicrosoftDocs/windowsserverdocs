@@ -3,8 +3,6 @@
   items:
   - name: Windows Server supported networking scenarios
     href: windows-server-supported-networking-scenarios.md
-  - name: What's new in networking
-    href: What-s-New-in-Networking.md
   - name: Configure secure protocol options for WinHTTP
     href: configure-secure-protocol-options-winhttp.md
   - name: Core network guidance for Windows Server
@@ -224,7 +222,6 @@
       - name: Install and configure DHCP server
         href: technologies/dhcp/quickstart-install-configure-dhcp-server.md
     - name: What's new in DHCP
-      href: technologies/dhcp/What-s-New-in-DHCP.md
       items:
       - name: DHCP subnet selection options
         href: technologies/dhcp/dhcp-subnet-options.md

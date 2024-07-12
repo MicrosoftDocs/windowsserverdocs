@@ -2,7 +2,7 @@
 title: Windows LAPS schema and rights extensions for Windows Server Active Directory
 description: Get details about schema and rights extensions to deploy and manage Windows Local Administrator Password Solution (Windows LAPS) in Windows Server Active Directory.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: reference
 ---

@@ -33,9 +33,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
       "uhfHeaderId": "MSDocsHeader-WindowsServer",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
-      "feedback_product_url": "https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server",
+      "feedback_system": "Standard",
       "_op_documentIdPathDepotMapping": {
           "manage/windows-admin-center/license/": {
             "depot_name": "MSDN.WindowsServerDocs-pr",
@@ -95,10 +93,7 @@
           "security/tls/*.md": "wscontent"
         },
         "ms.prod": {
-        },
-        "ms.technology": {
-          "upgrade/**/*.md": "upgrade"
-          }
+        }
         },
     "template": [
       "docs.html"

@@ -4,8 +4,8 @@ description: This topic covers how to deploy a Microsoft Software Defined Networ
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
-ms.author: v-mandhiman
-author: ManikaDhiman
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/28/2021
 ---
 

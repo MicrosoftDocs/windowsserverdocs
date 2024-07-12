@@ -1,7 +1,5 @@
 - name: Failover Clustering
   href: failover-clustering-overview.md
-- name: What's New in Failover Clustering
-  href: whats-new-in-failover-clustering.md
 - name: Understand
   items:
   - name: Scale-Out File Server for application data
