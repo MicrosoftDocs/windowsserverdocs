@@ -1,6 +1,6 @@
 ---
-title: Active Directory LSA Lookup performance counters
-description: Learn about Active Directory LSA Lookup performance counters
+title: LSA Lookups performance counters
+description: Learn about Local Security Authority (LSA) Lookups performance counters
 ms.topic: conceptual
 author: gswashington
 ms.author: wscontent
@@ -8,64 +8,81 @@ ms.date: 07/31/2024
 
 ---
 
-# Active Directory LSA Lookup performance counters
+# LSA Lookups performance counters
 
 Applies to: Windows Server 2025 (preview)
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Beginning with Windows Server 2025, you can use Local Security Authority (LSA) performance counters to monitor the performance of LSA lookups. These counters provide insights into the performance of name and SID lookups through the `LsaLookupNames`, `LsaLookupSids`, and equivalent APIs. These performances counters are available for both Windows client and Windows Server.
+Excessive Account Name and Account SID lookups can contribute to Active Directory performance degradation. Active Directory performance problems can result in a wide variety of symptoms including (but not limited to) user authentication prompts, outlook/exchange problems, slow logon, LDAP application timeouts and more.
+
+The top causes of excessive LSA Name/SID lookups usually include:
+
+- The client LSA SID/Name Lookup Cache is too small, causing many name lookups to be sent to the domain controller repeatedly.
+- An application sending repeated lookup requests that don’t resolve, causing them to be sent to the domain controller repeatedly.
+- Isolated names that don't contain a domain name portion and need to be sent to a remote domain controller across every trust resulting in delays.
+- Remote lookups taking a long time when DC has to request a lookup from cross-forest, which may contribute to the domain controller running out of RPC threads or building a queue at RPC level, resulting in failures, timeouts, and problems on the client application such as Exchange outages.
+
+It's important therefore to monitor performance of LSA name/SID lookups and adjust applications and configuration accordingly.
+
+Beginning with Windows Server 2025, you can use Local Security Authority (LSA) performance counters to monitor the performance of LSA lookups. The LSA Lookups performance counter set consists of counters that measure performance of LSA Account name and SID lookups. These performances counters are available for both Windows client and Windows Server. See [LsaLookupNames function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupSids function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids)for an explanation of the algorithm that's used when a name/SID needs to be translated.
 
 LSA enforces security policies, handling user logins, authentication, and authorization processes. LSA verifies credentials when users attempt to access the system based on configured policies. LSA is also used to manage password changes and create access tokens that define permissions for available resources and operations.
 
-LSA Lookup performance counters are accessed using Performance Monitor (`perfmon.exe`).
+LSA Lookups performance counters are accessed using Performance Monitor (`perfmon.exe`).
 
-## LSA Lookup performance counters
+## LSA Lookups performance counters
 
-LSA Lookup performance counters measure the performance of the LSA lookup process running on the client or server machine.
+LSA Lookups performance counters measure the performance of the LSA lookup process running on the client or server machine.
 
-The following table shows the counters that can be added from the LSA Lookup performance counter set and their description, including whether each counter relates to DC, non-DC, or both.
+There are three categories of LSA Lookups performance counters:
+
+- **Name lookups** "Name" counters can be used to measure Name translation via LsaLookupNames and equivalent.
+- **SID/Name pair Cache** Can be used to measure the efficiency and size of the sid/name pair cache. Domain controllers do not maintain a name/SID cache. These counters are valid on only a member server/workstation.
+- **SID Lookups** "SID" counters can be used to measure SID translation via `LsaLookupSids` and equivalent.
+
+The following table shows the counters that can be added from the LSA Lookups performance counter set and their description, including whether each counter relates to DC, non-DC, or both. Non-DC signifies a member server or member workstation.
 
 | Counter name | Description | DC | Non-DC |
 |--|--|--|--|
-| `Isolated Names Inbound Requests/sec` | The number of name lookup requests per second that are received from another remote machine that don't include the domain name. |  |  |
-| `Isolated Names Outbound Requests/sec` | The number of name lookup requests per second that are sent to another remote machine that don't include the domain name. For example, requests forwarded to the primary domain controller. |  |  |
-| `Name/SID cache entries added/sec` | The number of name/SID cache entries added per second. The local LSA keeps a cache of the SID-name pair. The cache is used to speed up the lookup process and reduce the number of requests to the remote machine. Measuring the growth of the cache and the number of requests can help with understanding the performance of the LSA lookup process and if the cache needs to be resized. |  |  |
-| `Name/SID cache entries purged/sec` | The number of name/SID cache entries purged per second. The local LSA keeps a cache of the SID-name pair. The cache is used to speed up the lookup process and reduce the number of requests to the remote machine. Measuring the growth of the cache and the number of requests can help with understanding the performance of the LSA lookup process and if the cache needs to be resized. |  |  |
-| `Name/SID Cache Size (Max Entries)` | The maximum number of entries that the name/SID cache can hold. |  |  |
-| `Names/Cache % Full` | The percentage of the name cache that is full. |  |  |
-| `Names/Cache %` | The percentage of name lookups that are resolved from the cache. |  |  |
-| `Names Completion Time` | Measures how long it takes to complete a name lookup request. |
-| `Names Errors/sec` | The number of errors per second that occur during name lookup requests. For example, if a server is busy, it might not be able to respond to a name lookup request. |  |  |
-| `Names Inbound Requests/sec` | The number of all name lookup requests per second that are received from another remote machine. |  |  |
-| `Names Outbound Requests/sec` | The number of all name lookup requests per second that are sent to another remote machine. |  |  |
-| `Names Primary Domain Requests/sec` | The number of name lookup requests per second that are sent to the primary domain. The primary domain is the domain your machine is a member of. |  |  |
-| `Names Primary Domain Time` | Measures the time it takes to complete a name lookup request that is sent to the primary domain. The primary domain is the domain your machine is a member of. |  |  |
-| `Names Remote Request Time` | Measures the time it takes to complete a name lookup request that is received from another remote machine. |  |  |
-| `Names Trusted Domain Request Time` | Measures the time it takes to complete a name lookup request that is sent to a trusted domain. |
-| `Names Trusted Domain Requests/sec` | The number of name lookup requests per second that are sent to a trusted domain. |  |  |
-| `Names Unresolved/sec` | The number of unresolved name lookup requests per second. For example, when a name lookup couldn't be found. |  |  |
-| `Names Xforest Requests/sec` | The number of name lookup requests per second that are sent to another forest. |  |  |
-| `Names Xforest Time` | Measures the time it takes to complete a name lookup request that is sent to another forest. |  |  |
-| `SIDs Cache % Full` | The percentage of the SID cache that is full. |  |  |
-| `SIDs Cache % Hit` | The percentage of SID lookups that are resolved from the cache. |  |  |
-| `SIDs Completion Time` | Measures how long it takes to complete a SID lookup request. |  |  |
-| `SIDs Errors/sec` | The number of errors per second that occur during SID lookup requests. For example, if a server is busy, it might not be able to respond to a SID lookup request. |  |  |
-| `SIDs Inbound Requests/sec` | The number of all SID lookup requests per second that are received from another remote machine. |  |  |
-| `SIDS Outbound Requests/sec` | The number of all SID lookup requests per second that are sent to another remote machine. |  |  |
-| `SIDS Primary Domain Request Time` | Measures the time it takes to complete a SID lookup request that is sent to the primary domain. The primary domain is the domain your machine is a member of. |  |  |
-| `SIDS Primary Domain Requests/sec` | The number of SID lookup requests per second that are sent to the primary domain. The primary domain is the domain your machine is a member of. |  |  |
-| `SIDS Remote Request Time` | Measures the time it takes to complete a SID lookup request that is received from another remote machine. |  |  |
-| `SIDS Trusted Domain Request Time` | Measures the time it takes to complete a SID lookup request that is sent to a trusted domain. |  |  |
-| `SIDS Trusted Domain Requests/sec` | The number of SID lookup requests per second that are sent to a trusted domain. |  |  |
-| `SIDS Unresolved/sec` | The number of unresolved SID lookup requests per second. For example, when a SID lookup couldn't be found. |  |  |
-| `SIDS Xforest Request Time` | Measures the time it takes to complete a SID lookup request that is sent to another forest. |  |  |
-| `SIDS Xforest Requests/sec` | The number of SID lookup requests per second that are sent to another forest. |  |  |
+| `Isolated Names Inbound Requests/sec` | The number of name lookup requests per second that are received from another remote machine that don't include the domain name. | X | X |
+| `Isolated Names Outbound Requests/sec` | The number of name lookup requests per second that are sent to another remote machine that don't include the domain name. For example, requests forwarded to the primary domain controller. | X | X |
+| `Name/SID cache entries added/sec` | The number of name/SID cache entries added per second. The local LSA keeps a cache of the SID-name pair. The cache is used to speed up the lookup process and reduce the number of requests to the remote machine. Measuring the growth of the cache and the number of requests can help with understanding the performance of the LSA lookup process and if the cache needs to be resized. |  | X |
+| `Name/SID cache entries purged/sec` | The number of name/SID cache entries purged per second. The local LSA keeps a cache of the SID-name pair. The cache is used to speed up the lookup process and reduce the number of requests to the remote machine. Measuring the growth of the cache and the number of requests can help with understanding the performance of the LSA lookup process and if the cache needs to be resized. |  | X |
+| `Name/SID Cache Size (Max Entries)` | The maximum number of entries that the name/SID cache can hold. |  | X |
+| `Names/Cache % Full` | The percentage of the name cache that is full. |  | X |
+| `Names/Cache %` | The percentage of name lookups that are resolved from the cache. |  | X |
+| `Names Completion Time` | Measures how long it takes to complete a name lookup request. | X | X |
+| `Names Errors/sec` | The number of errors per second that occur during name lookup requests. For example, if a server is busy, it might not be able to respond to a name lookup request. | X | X |
+| `Names Inbound Requests/sec` | The number of all name lookup requests per second that are received from another remote machine. Received from another remote machine or a process running on this machine. | X | X |
+| `Names Outbound Requests/sec` | The number of all name lookup requests per second that are sent to another remote machine. | X | X |
+| `Names Primary Domain Requests/sec` | The number of name lookup requests per second that are sent to the primary domain. The primary domain is the domain your machine is a member of. this counter is a subset of the Names Outbound Requests/sec counter.|  | X |
+| `Names Primary Domain Time` | Measures the time it takes to complete a name lookup request that is sent to a domain controller in the primary domain. The primary domain is the domain your machine is a member of. |  | X |
+| `Names Remote Request Time` | Measures the time it takes to complete a name lookup request that is received from another remote machine. | X | X |
+| `Names Trusted Domain Request Time` | Measures the time it takes to complete a name lookup request that is sent to a trusted domain. This counter is a subset of the Names Remote Request time counter | X |  |
+| `Names Trusted Domain Requests/sec` | The number of name lookup requests per second that are sent to a trusted domain. This counter is a subset of the Names Outbound Requests/sec counter| X |  |
+| `Names Unresolved/sec` | The number of unresolved name lookup requests per second. For example, when a name lookup can't be found. | X | X |
+| `Names Xforest Requests/sec` | The number of name lookup requests per second that are sent to another forest. | X |  |
+| `Names Xforest Time` | Measures the time it takes to complete a name lookup request that is sent to another forest. | X |  |
+| `SIDs Cache % Full` | The percentage of the SID-name pair cache in use during a SID lookup. |  | X |
+| `SIDs Cache % Hit` | The percentage of SID lookups that are resolved from the cache. If this counter is low and the cache is full, consider increasing the cache size. |  | X |
+| `SIDs Completion Time` | Measures how long it takes to complete a SID lookup request. | X | X |
+| `SIDs Errors/sec` | The number of errors per second that occur during SID lookup requests. For example, if a server is busy, it might not be able to respond to a SID lookup request. | X | X |
+| `SIDs Inbound Requests/sec` | The number of all SID lookup requests per second that are received from another remote machine or a process running on this machine.| X | X |
+| `SIDS Outbound Requests/sec` | The number of all SID lookup requests per second that are sent to another remote machine. | X | X |
+| `SIDS Primary Domain Request Time` | Measures the time it takes to complete a SID lookup request that is sent to the primary domain. The primary domain is the domain your machine is a member of. Counter is a subset of SIDs Outbound Requests/sec |  | X |
+| `SIDS Primary Domain Requests/sec` | The number of SID lookup requests per second that are sent to the primary domain. The primary domain is the domain your machine is a member of. Counter is a subset of SIDs Outbound Requests/sec |  | X |
+| `SIDS Remote Request Time` | Measures the time it takes to complete a SID lookup request that is received from another remote machine. | X | X |
+| `SIDS Trusted Domain Request Time` | Measures the time it takes to complete a SID lookup request that is sent to a trusted domain. Counter is a subset of SIDs Outbound Requests/sec | X |  |
+| `SIDS Trusted Domain Requests/sec` | The number of SID lookup requests per second that are sent to a trusted domain. | X |  |
+| `SIDS Unresolved/sec` | The number of unresolved SID lookup requests per second. For example, when a SID lookup couldn't be found. | X | X |
+| `SIDS Xforest Request Time` | Measures the time it takes to complete a SID lookup request that is sent to another forest. | X |  |
+| `SIDS Xforest Requests/sec` | The number of SID lookup requests per second that are sent to another forest. | X |  |
 
 ## LSA Lookup debug log
 
-For troubleshooting, you can collect a LSA Lookup debug log to track the processes and client details performing sid/name lookups.
+For troubleshooting, you can collect a LSA Lookups debug log to track the processes and client details performing sid/name lookups.
 
 ### Log file
 
@@ -86,9 +103,9 @@ No reboot is necessary.
 > [!NOTE]
 > A larger log file size may be needed in a busy environment. It can be specified using the last 4 bits of the DWORD in LsapDbgTraceOptions. The value should be specified in MBs in hexadecimal. For example, to set the log file size to 50MB, set LspDbgTraceOptions to 0x00320001. Setting the file size to a very large value might make it impossible to open and read using some text editors.
 
-## LSA Lookup caches
+## LSA Lookups caches
 
-Two LSA Looup caches exist. LSA Name cache, for successfully translated names; and Negative Isolated name cache, for unresolved names.
+The LSA maintains several caches, two of which are discussed here: LSA Name cache, for successfully translated names; and Negative Isolated name cache, for unresolved names.
 
 ### LSA Name cache
 
