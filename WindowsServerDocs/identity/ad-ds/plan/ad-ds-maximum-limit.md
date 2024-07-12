@@ -8,9 +8,9 @@ ms.date: 04/30/2024
 ms.topic: conceptual
 ---
 
-# Active Directory maximum limits and scalability
+# Active Directory Domain Services maximum limits
 
->Applies to: Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2
+>Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Windows Server 2012 R2
 
 This article describes the maximum limits for certain aspects of your Active Directory environment that can affect scalability. We recommend you keep these limits in mind while planning for your Active Directory deployment.
 
@@ -188,7 +188,7 @@ So far, testing in this area has yet to reveal any new recommended limits to the
 >[!IMPORTANT]
 >Increasing the forest functional level to Windows Server 2003 interim or higher does not modify the way that existing group members are stored or replicated. To do that, you must remove the members that were added to the group before the forest functional level was increased to Windows Server 2003 and then add them back again to the appropriate groups. Any group members that you either add or remove after the forest functional level is increased will be LVR enabled, even if the group contains other members that are not LVR enabled. For more information about linked attributes, see [Linked Attributes](/windows/win32/ad/linked-attributes). For more information about the replication process, see [How the Active Directory Replication Model Works](/previous-versions/windows/it-pro/windows-server-2003/cc772726(v=ws.10)).
 
-## Recommended maximum dumber of domains in a forest
+## Recommended maximum number of domains in a forest
 
 <!--Again, all this information is about Windows Server 2000/2003. Is there more recent information I need to add here or can I just use the 1,2000 limit as-is?-->
 
