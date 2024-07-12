@@ -27,10 +27,7 @@ You can use the following operating systems as domain controllers (DCs) with the
 
 The Windows Server 2025 domain functional level includes all features available in earlier domain functional levels, but also has the following new features:
 
-- Delegated Managed Service Accounts
-- 32k database page size optional feature
-- AD object repair
-- Replication priority order
+- Database 32k pages optional feature. To learn more about using the 32k database page size, see [Database 32k pages for Active Directory](/windows-server/identity/ad-ds/32k-pages-optional-feature).
 
 To learn more about these new features, see [What's new in Windows Server 2025](../../get-started/whats-new-in-windows-server-2025.md).
 
@@ -51,9 +48,12 @@ You can use the following operating systems as domain controllers (DCs) with the
 
 ### Windows Server 2016 forest and domain functional level features
 
-All default Active Directory features in earlier domain functional levels plus the following features are available:
+All default Active Directory features in earlier forest functional levels plus the following features are available:
 
 - [Privileged access management (PAM) using Microsoft Identity Manager (MIM)](../whats-new-active-directory-domain-services.md#privileged-access-management)
+
+All default Active Directory features in earlier domain functional levels plus the following features are available:
+
 - DCs can support automatic rolling of the New Technology LAN Manager (NTLM) and other password-based secrets on a user account configured to require public key infrastructure (PKI) authentication. This configuration is also known as "Smart card required for interactive logon".
 - DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
 - Kerberos clients successfully authenticating with the PKInit Freshness Extension get the fresh public key identity security identifier (SID).
@@ -92,9 +92,9 @@ All default Active Directory features, all features from the Windows Server 2012
 
   - New forest-based Active Directory object to be used to classify accounts for authentication policies or for authentication isolation. The new object can create a relationship between user, managed service, and computer accounts.
 
-## Functional and domain levels in a previous versions of Windows Server
+## Functional and domain levels in a previous version of Windows Server
 
-If you are looking to identify functional levels for a previous version of Windows Server, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754918(v=ws.10)).
+If you're looking to identify functional levels for a previous version of Windows Server, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754918(v=ws.10)).
 
 ## Next steps
 
