@@ -92,6 +92,10 @@ All default Active Directory features, all features from the Windows Server 2012
 
   - New forest-based Active Directory object to be used to classify accounts for authentication policies or for authentication isolation. The new object can create a relationship between user, managed service, and computer accounts.
 
+## Functional and domain levels in a previous versions of Windows Server
+
+If you are looking to identify functional levels for a previous version of Windows Server, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754918(v=ws.10)).
+
 ## Next steps
 
 - [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11))
