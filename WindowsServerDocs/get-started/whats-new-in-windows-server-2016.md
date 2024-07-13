@@ -236,7 +236,23 @@ IPAM has the following updates:
 
 - Enhanced IP address management. IPAM has improved capabilities for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.
 
-- Enhanced DNS service management. IPAM supports DNS resource record, conditional forwarder, and DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers.
+- You can now run the `Find-IpamFreeSubnet` cmdlet to find available subnets for allocation. This function doesn't allocate the subnets, only reports their availability. However, you can pipe the cmdlet output to the `Add-IpamSubnet` cmdlet to create a subnet. For more information, see [Find-IpamFreeSubnet](/powershell/module/ipamserver/Find-IpamFreeSubnet).
+
+- You can now run the `Find-IpamFreeRange` cmdlet to find available IP address ranges within an IP block, prefix length, and number of requested subnets. This cmdlet doesn't allocate the IP address range, only reports their availability. However, you can pipe the output into the `AddIpamRange` cmdlet to create the range. For more information, see [Find-IpamFreeRange](/powershell/module/ipamserver/Find-IpamFreeRange).
+
+- Enhanced DNS service management:
+
+  - DNS resource records collection for non-DNSSEC DNS servers.
+  
+  - Configuring properties and operations on all types of non-DNSSEC Resource Records.
+  
+  - DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers. You can manage all types of DNS zones, including Primary, Secondary, and Stub zones.
+  
+  - Trigger tasks on Secondary and STub zones regardless of whether they're forward or reverse lookup zones.
+  
+  - Role-based access control for supported DNS configurations for records and zones.
+
+  - Conditional forwarders
 
 - Integrated DNS, DHCP, and IP address (DDI) management. Several new experiences and integrated lifecycle management operations are enabled, such as visualizing all DNS resource records that pertain to an IP address, automated inventory of IP addresses based on DNS resource records, and IP address lifecycle management for both DNS and DHCP operations.
 
