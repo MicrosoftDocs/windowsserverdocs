@@ -1,6 +1,6 @@
 ---
 title: Use live migration with workgroup clusters
-description: This article provices an overview of live migration functionality with workgroup clusters in Windows Server 2025.
+description: This article provides an overview of live migration functionality with workgroup clusters in Windows Server 2025.
 ms.topic: article
 ms.author: mosagie
 author: meaghanlewis
@@ -24,7 +24,7 @@ The following prerequisites must be met in order to live migrate hosts using wor
 
 ## Do a live migration with Hyper-V workgroup clusters
 
-In the next sections, you'll do the following:
+In the next sections, you'll complete the following steps:
 
 - **Install the Hyper-V role and Hyper-V management tools.** Each virtual machine needs Hyper-V installed in order to be able to connect to other hosts and do a live migration.
 - **Create a new virtual machine and add it to the workgroup cluster.** Add in a virtual machine role to facilitate the live migration.
@@ -33,7 +33,7 @@ In the next sections, you'll do the following:
 
 ### Step 1: Install the Hyper-V role
 
-The Hyper-V role must be installed on the source and destination servers and set up for live migrations. If you haven't installed this role, do it now before continuing.
+The Hyper-V role must be installed on the source and destination servers and set up for live migrations. Install this role before continuing.
 
 #### 1.1 Enable Nested Virtualization on the source host.
 
