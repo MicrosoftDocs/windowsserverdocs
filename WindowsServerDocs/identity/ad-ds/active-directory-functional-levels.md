@@ -2,7 +2,7 @@
 title: Active Directory Domain Services functional levels
 description: Learn more about the different Active Directory Domain and Forest functional levels in Windows Server
 ms.topic: conceptual
-ms.author: robinharwood
+ms.author: wscontent
 author: gswashington
 ms.date: 07/12/2024
 ---
@@ -29,7 +29,7 @@ The Windows Server 2025 domain functional level includes all features available 
 
 - Database 32k pages optional feature. To learn more about using the 32k database page size, see [Database 32k pages for Active Directory](/windows-server/identity/ad-ds/32k-pages-optional-feature).
 
-To learn more about these new features, see [What's new in Windows Server 2025](../../get-started/whats-new-in-windows-server-2025.md).
+To learn more about these new features, see [What's new in Windows Server 2025](../../get-started/whats-new-windows-server-2025.md).
 
 > [!NOTE]
 > Windows Server 2019 and Windows Server 2022 use Windows Server 2016 as the most recent functional levels.
@@ -44,7 +44,7 @@ You can use the following operating systems as domain controllers (DCs) with the
 - Windows Server 2016
 
 > [!NOTE]
-> Domains must use DFS-R as the engine to replicate SYSVOL. To learn more about migrating to DFSR, see [Streamlined Migration of FRS to DFSR SYSVOL blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405). Windows Server 2016 is the last Windows Server release that supports the File Replication Service (FRS). To learn more, see [Windows Server version 1709 no longer supports FRS](../troubleshoot/windows-server/networking/windows-server-version-1709-no-longer-supports-frs) for information on how to work around this issue.
+> Domains must use DFS-R as the engine to replicate SYSVOL. To learn more about migrating to DFSR, see [Streamlined Migration of FRS to DFSR SYSVOL blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405). Windows Server 2016 is the last Windows Server release that supports the File Replication Service (FRS). To learn more, see [Windows Server version 1709 no longer supports FRS](/troubleshoot/windows-server/networking/windows-server-version-1709-no-longer-supports-frs) for information on how to work around this issue.
 
 ### Windows Server 2016 forest and domain functional level features
 
@@ -100,4 +100,4 @@ If you're looking to identify functional levels for a previous version of Window
 
 - [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11))
 
-- [How to raise Active Directory domain and forest functional levels](/raise-domain-forest-functional-levels?branch=pr-en-us-4776)
+- [How to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels)
