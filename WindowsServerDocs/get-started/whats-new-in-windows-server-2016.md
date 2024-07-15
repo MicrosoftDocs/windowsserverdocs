@@ -254,7 +254,7 @@ IPAM has the following updates:
 
   - Conditional forwarders
 
-- Integrated DNS, DHCP, and IP address (DDI) management. You can now view all DNS resource records associated with an IP address in the IP Address Inventory. You can also automatically keep PTR<!--Acronym--> records of IP addresses and manage IP address lifecycles for both DNS and DHCP operations.
+- Integrated DNS, DHCP, and IP address (DDI) management. You can now view all DNS resource records associated with an IP address in the IP Address Inventory. You can also automatically keep pointer (PTR) records of IP addresses and manage IP address lifecycles for both DNS and DHCP operations.
 
 - Multiple Active Directory Forest support. You can use IPAM to manage the DNS and DHCP servers of multiple Active Directory forests when there's a two-way trust relationship between the forest where you installed IPAM and each of the remote forests. For more information, see [Manage Resources in Multiple Active Directory Forests](../networking/technologies/ipam/Manage-Resources-in-Multiple-Active-Directory-Forests.md).
 
