@@ -270,4 +270,4 @@ These registry settings only apply to SChannel SSP and don't affect any third-pa
 > [!WARNING]
 > Attempting to create or adjust any SChannel registry settings that are not explicitly detailed in this article isn't recommended due to potential risks and unintended consequences that may arise from unsupported configurations.
 
-To learn about managing the TLS cipher suite using PowerShell, see [TLS command reference](https://learn.microsoft.com/en-us/powershell/module/tls). If interested in managing TLS settings via Group Policy, see [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
+To learn about managing the TLS cipher suite using PowerShell, see [TLS command reference](/powershell/module/tls). If interested in managing TLS settings via Group Policy, see [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
