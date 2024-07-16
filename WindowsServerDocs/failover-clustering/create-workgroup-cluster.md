@@ -5,7 +5,7 @@ manager: femila
 ms.topic: how-to
 ms.author: wscontent
 author: meaghanlewis
-ms.date: 04/26/2024
+ms.date: 07/16/2024
 ---
 # Create a workgroup cluster
 
@@ -15,7 +15,7 @@ In this article, learn about and create a workgroup cluster. First, understand w
 
 ## Understand workgroup clusters
 
-A workgroup cluster is a specific type of failover cluster configuration. With workgroup clusters, two or more nodes are joined as member servers. They don't use an on-premises domain controller or Active Directory forest. Workgroup clusters aren't domain joined, and instead are workgroup joined. They still require use of a Domain Name System (DNS).
+A workgroup cluster is a specific type of failover cluster configuration introduced in Windows Server 2016. With workgroup clusters, two or more nodes are joined as member servers. They don't use an on-premises domain controller or Active Directory forest. Workgroup clusters aren't domain joined, and instead are workgroup joined. They still require use of a Domain Name System (DNS).
 
 Typically, failover clusters are part of an Active Directory Domain Services domain to provide identity services and management at scale. However, in some scenarios you might want to run a failover cluster without Active Directory to reduce the cost of hardware, maintenance, and other operational overheads. 
 
@@ -25,7 +25,8 @@ Workgroup clusters offer a centralized identity and the same high security, to k
 
 The following prerequisites must be met for your workgroup cluster to meet the criteria for an officially supported deployment:
 
-- All servers to be used as cluster nodes are running the same version of Windows Server. 
+- All servers to be used as workgroup cluster nodes are running the same version of Windows Server.
+- All workgroup cluster nodes must be in a workgroup, and can't be joined to an Active Directory domain. Any nodes what were previously in an Active Directory domain must not only moved to a workgroup, but must also be renamed to remove any Active Directory caching.
 - Your cluster must have one of the following storage technologies configured and available to all cluster nodes. To learn more about Failover Clustering storage requirements, see [Failover clustering storage requirements](/windows-server/failover-clustering/clustering-requirements#storage).
   - Storage Spaces Direct (S2D). If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
   - SAN attached storage.
@@ -36,8 +37,8 @@ The following prerequisites must be met for your workgroup cluster to meet the c
 
 Workgroup clusters support several workloads. Workgroup clusters are recommended and supported for:
 
-- **Hyper-V VMs.** Supported cluster workload.
-- **SQL Server Availability Groups.** SQL Server is a supported workload. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1).
+- **Hyper-V VMs.** Supported cluster workload starting in Windows Server S2025.
+- **SQL Server Availability Groups.** SQL Server is a supported workload for Windows Server 2016 throuh Windows Server 2025. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1).
 
 Workgroup clusters aren't supported for:
 
