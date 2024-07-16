@@ -17,7 +17,7 @@ zone_pivot_groups: windows-os
 
 :::zone pivot="azure-stack-hci"
 
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
+[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-22h2.md)]
 
 ::: zone-end
 
