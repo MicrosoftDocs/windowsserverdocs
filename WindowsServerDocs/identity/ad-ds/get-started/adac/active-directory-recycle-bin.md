@@ -6,9 +6,9 @@ author: orin-thomas
 ms.date: 07/15/2024
 ms.topic: article
 ---
-Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # Active Directory Recycle Bin
+
+Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Accidental deletion of Active Directory objects is a common occurrence for users of Active Directory Domain Services. Active Directory Recycle Bin allows you to preserve and recover accidentally deleted Active Directory objects.
 

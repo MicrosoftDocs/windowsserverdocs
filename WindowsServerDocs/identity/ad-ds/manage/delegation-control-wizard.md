@@ -6,9 +6,9 @@ author: orin-thomas
 ms.date: 07/15/2024
 ms.topic: article
 ---
-Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # Delegation of Control Wizard
+
+Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 By delegating administration, you can assign a range of administrative tasks to the appropriate users and groups. You can assign basic administrative tasks to regular users or groups, and leave domain-wide and forest-wide administration to members of the Domain Admins and Enterprise Admins groups. By delegating administration, you can allow groups within your organization to take more control of their local resources. You also help secure your Active Directory environment accidental or malicious damage by limiting the membership of administrator groups.
 
