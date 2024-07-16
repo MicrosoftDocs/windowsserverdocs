@@ -8,6 +8,8 @@ ms.topic: article
 ---
 Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
+# Fine Grained Password Policies
+
 Fine Grained Password Policies provide you with a way to define different password and account lockout policies for different sets of users in a domain. You can use fine-grained password policies to specify multiple password policies within a single domain and apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users. 
 
 If you plan to use fine-grained password policies, consider the following:
@@ -16,7 +18,7 @@ If you plan to use fine-grained password policies, consider the following:
 
 - You use Active Directory Administrative Center to administer fine-grained password policies through a graphical user interface.
 
-### Fine-Grained Password Policy step-by-step
+### Fine Grained Password Policy step-by-step
 
 To create a new fine grained password policy, perform the following steps:
 
