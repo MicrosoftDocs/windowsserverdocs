@@ -192,9 +192,15 @@ So far, testing in this area has yet to reveal any new recommended limits to the
 
 <!--Again, all this information is about Windows Server 2000/2003. Is there more recent information I need to add here or can I just use the 1,2000 limit as-is?-->
 
-For Windows 2000 Server, the recommended maximum number of domains in a forest is 800. For Windows Server 2003, the recommended maximum number of domains when the forest functional level is set to Windows Server 2003 (also known as forest functional level 2) is 1,200. This restriction is a limitation of multivalued, nonlinked attributes in Windows Server 2003. For more information, see “Maximum Database Record Size” in How the Data Store Works (/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)).
+The following table lists the recommended maximum number of domains for each domain functioning level.
 
-For Windows Server 2025, the maximum number of domains in a forest is 3,000.
+| Domain functioning level | Recommended maximum number of domains |
+|---|---|
+| Windows 2000 Server | 800 |
+| Windows Server 2003 | 1,200 |
+| Windows Server 2025 | 3,000 |
+
+The 1,200 limit for Windows Server 2003 is a limitation of multivalued, nonlinked attributes in Windows Server 2003. For more information, see “Maximum Database Record Size” in How the Data Store Works (/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)).
 
 ## Recommended maximum number of domain controllers in a domain
 
