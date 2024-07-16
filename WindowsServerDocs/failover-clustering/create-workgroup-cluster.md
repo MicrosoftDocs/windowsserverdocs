@@ -37,7 +37,7 @@ The following prerequisites must be met for your workgroup cluster to meet the c
 Workgroup clusters support several workloads. Workgroup clusters are recommended and supported for:
 
 - **Hyper-V VMs.** Supported cluster workload starting in Windows Server S2025.
-- **SQL Server Availability Groups.** SQL Server is a supported workload for Windows Server 2016 throuh Windows Server 2025. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1).
+- **SQL Server Availability Groups.** SQL Server is a supported workload for Windows Server 2016 through Windows Server 2025. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1).
 
 Workgroup clusters aren't supported for:
 
@@ -62,7 +62,7 @@ To get started, you need to configure your servers. This includes creating an id
 
 #### Create a consistent admin account on each node.
 
-A consistent admininstrator user account must be created on each node. The username and password of these accounts must be the same on all the nodes and the account must also be added to the local Administrators group.
+A consistent administrator user account must be created on each node. The username and password of these accounts must be the same on all the nodes and the account must also be added to the local Administrators group.
 
 ##### [Desktop](#tab/desktop)
 
