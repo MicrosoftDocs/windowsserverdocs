@@ -145,7 +145,7 @@ Set a primary DNS suffix on each server node with the following steps.
 
 [Install the Failover Clustering feature](/windows-server/failover-clustering/create-failover-cluster#install-the-failover-clustering-feature) if you haven't already. 
 
-#### [Server Manager](#tab/server-manager)
+#### [Desktop](#tab/desktop)
 
 The following steps show how to install the Failover Clustering feature in the Server Manager.
 
@@ -195,7 +195,7 @@ The following steps show how to install the Failover Clustering feature in Power
 
 Now you're ready to create a workgroup cluster with the server nodes you prepared. You may use either the [Failover Cluster Manager](/windows-server/failover-clustering/create-failover-cluster#validate-the-configuration) or [Microsoft PowerShell](/windows-server/failover-clustering/create-failover-cluster#create-a-failover-cluster-by-using-windows-powershell).
 
-#### [Failover Cluster Manager](#tab/failover-cluster-manager)
+#### [Desktop](#tab/desktop)
 
 Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft supports a cluster solution only if the complete configuration passes all validation tests and if all hardware is certified for the version of Windows Server that the cluster nodes are running.
 
