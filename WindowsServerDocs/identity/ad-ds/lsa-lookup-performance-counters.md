@@ -15,18 +15,18 @@ Applies to: Windows Server 2025 (preview)
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Excessive Account Name and Account SID lookups can contribute to Active Directory performance degradation. Active Directory performance problems can result in a wide variety of symptoms including (but not limited to) user authentication prompts, outlook/exchange problems, slow logon, LDAP application timeouts and more.
+Excessive Account Name and Account SID lookups can contribute to Active Directory performance degradation. Active Directory performance problems can result in a wide variety of symptoms including (but not limited to) user authentication prompts, outlook or Exchange problems, slow logon, LDAP application timeouts and more.
 
-The top causes of excessive LSA Name/SID lookups usually include:
+The top causes of excessive LSA Name or SID lookups usually include:
 
-- The client LSA SID/Name Lookup Cache is too small, causing many name lookups to be sent to the domain controller repeatedly.
+- The client LSA Name or SID Lookup Cache is too small, causing many name lookups to be sent to the domain controller repeatedly.
 - An application sending repeated lookup requests that don’t resolve, causing them to be sent to the domain controller repeatedly.
 - Isolated names that don't contain a domain name portion and need to be sent to a remote domain controller across every trust resulting in delays.
 - Remote lookups taking a long time when DC has to request a lookup from cross-forest, which may contribute to the domain controller running out of RPC threads or building a queue at RPC level, resulting in failures, timeouts, and problems on the client application such as Exchange outages.
 
-It's important therefore to monitor performance of LSA name/SID lookups and adjust applications and configuration accordingly.
+Therefore, it's important to monitor performance of LSA Name/SID lookups and adjust applications and configuration accordingly.
 
-Beginning with Windows Server 2025, you can use Local Security Authority (LSA) performance counters to monitor the performance of LSA lookups. The LSA Lookups performance counter set consists of counters that measure performance of LSA Account name and SID lookups. These performances counters are available for both Windows client and Windows Server. See [LsaLookupNames function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupSids function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids)for an explanation of the algorithm that's used when a name/SID needs to be translated.
+Beginning with Windows Server 2025, you can use Local Security Authority (LSA) performance counters to monitor the performance of LSA lookups. The LSA Lookups performance counter set consists of counters that measure performance of LSA Account name and SID lookups. These performances counters are available for both Windows client and Windows Server. See [LsaLookupNames function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupSids function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids) for an explanation of the algorithm that's used when a name/SID needs to be translated.
 
 LSA enforces security policies, handling user logins, authentication, and authorization processes. LSA verifies credentials when users attempt to access the system based on configured policies. LSA is also used to manage password changes and create access tokens that define permissions for available resources and operations.
 
@@ -38,9 +38,9 @@ LSA Lookups performance counters measure the performance of the LSA lookup proce
 
 There are three categories of LSA Lookups performance counters:
 
-- **Name lookups** "Name" counters can be used to measure Name translation via LsaLookupNames and equivalent.
-- **SID/Name pair Cache** Can be used to measure the efficiency and size of the sid/name pair cache. Domain controllers do not maintain a name/SID cache. These counters are valid on only a member server/workstation.
-- **SID Lookups** "SID" counters can be used to measure SID translation via `LsaLookupSids` and equivalent.
+- Name lookups, which are name counters you can use to measure Name translation using the `LsaLookupNames` cmdlet or an equivalent cmdlet.
+- The SID/Name pair Cache, which you can use to measure the efficiency and size of the name/SID pair cache. Domain controllers don't maintain a name/SID cache. These counters are valid on only a member server or workstation.
+- SID lookups, which include SID counters you can use to measure SID translation using the `LsaLookupSids` cmdlet or an equivalent.
 
 The following table shows the counters that can be added from the LSA Lookups performance counter set and their description, including whether each counter relates to DC, non-DC, or both. Non-DC signifies a member server or member workstation.
 
@@ -90,18 +90,27 @@ For troubleshooting, you can collect a LSA Lookups debug log to track the proces
 
 ### Enable
 
+To enable LSA lookup performance counters, run the following commands:
+```powershell
+
 `Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgInfoLevel -Value 0x800 -Type dword -Force`
 `Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgTraceOptions -Value 0x1 -Type dword -Force`
 
 No reboot is necessary.
+```
 
 ### Disable
 
+To disable LSA lookup performance counters, run the following commands:
+
+```powershell
 `Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgInfoLevel -Value 0x0 -Type dword -Force`
 `Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgTraceOptions -Value 0x0 -Type dword -Force`
 
+```
+
 > [!NOTE]
-> A larger log file size may be needed in a busy environment. It can be specified using the last 4 bits of the DWORD in LsapDbgTraceOptions. The value should be specified in MBs in hexadecimal. For example, to set the log file size to 50MB, set LspDbgTraceOptions to 0x00320001. Setting the file size to a very large value might make it impossible to open and read using some text editors.
+> You may need a larger log size in a busier environment. You can specify log size using the last 4 bits of the DWORD in LsapDbgTraceOptions. The value should be specified in MBs in hexadecimal. For example, to set the log file size to 50MB, set LspDbgTraceOptions to 0x00320001. Setting the file size to a very large value might make it impossible to open and read using some text editors.
 
 ## LSA Lookups caches
 
@@ -109,7 +118,7 @@ The LSA maintains several caches, two of which are discussed here: LSA Name cach
 
 ### LSA Name cache
 
-Member workstations and member servers maintain a local in-memory cache of name/sid pairs that have been successfully translated. This saves round trips to the domain controller and improves performance and efficiency.
+Member workstations and member servers maintain a local in-memory cache of successfully translated name/SID pairs. This cache reduces round trips to the domain controller and improves performance and efficiency.
 
 Domain Controllers don't maintain a cache; they store the information about domain objects locally. Domain controllers that are Global Catalogs store information about the entire forest. Domain controllers that aren't Global Catalogs forward requests to a Global Catalog if necessary. 
 
@@ -117,7 +126,7 @@ A cache entry can be in one of three states: Valid, Stale or Expired.
 
 - Default cache entry expiry time is 7 days.
 - Default cache size is 4096 entries beginning in Windows Server 2019 and 128 entries in previous versions.
-- Default values will suffice in a majority of environments. Although this cache has a very small memory footprint, changing the cache size should be done only if necessary. For example, you can use LSA Lookups performance counters to see if the cache %full is at 100, and whether there's a high Cache %hit  rate as well as many outbound requests/sec to the Domain Controller. This would indicate that the cache may be too small.
+- Default values will suffice in a majority of environments. Although this cache has a very small memory footprint, changing the cache size should be done only if necessary. For example, you can use LSA Lookups performance counters to see if the cache %full is at 100, and whether there's a high Cache %hit rate as well as many outbound requests/sec to the Domain Controller. High %full and %hit rate counts mean that the cache may be too small.
 
 The LSA name cache can be tuned using the following settings under `HKLM:\SYSTEM\CurrentControlSet\Control\Lsa`  
 
