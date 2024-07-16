@@ -25,7 +25,7 @@ Workgroup clusters offer a centralized identity and the same high security, to k
 The following prerequisites must be met for your workgroup cluster to meet the criteria for an officially supported deployment:
 
 - All servers to be used as workgroup cluster nodes are running the same version of Windows Server.
-- All workgroup cluster nodes must be in a workgroup, and can't be joined to an Active Directory domain. Any nodes what were previously in an Active Directory domain must not only moved to a workgroup, but must also be renamed to remove any Active Directory caching.
+- All workgroup cluster nodes must be in a workgroup, and can't be joined to an Active Directory domain. Any nodes that were previously in an Active Directory domain must not only moved to a workgroup, but must also be renamed to remove any Active Directory caching.
 - Your cluster must have one of the following storage technologies configured and available to all cluster nodes. To learn more about Failover Clustering storage requirements, see [Failover clustering storage requirements](/windows-server/failover-clustering/clustering-requirements#storage).
   - Storage Spaces Direct (S2D). If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
   - SAN attached storage.
@@ -70,8 +70,8 @@ A consistent administrator user account must be created on each node. The userna
 
 1. If the nonbuiltin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The following set of steps describes how to set the LocalAccountTokenFilterPolicy.
 
-> [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+    > [!IMPORTANT]
+    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly.     Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 1. Click **Start**, click **Run**, type _regedit_, and then press ENTER.
 
