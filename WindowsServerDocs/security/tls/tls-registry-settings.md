@@ -2,14 +2,14 @@
 title: Transport Layer Security (TLS) registry settings
 description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: article
-ms.date: 04/10/2023
+ms.date: 07/16/2024
 ---
 
 # Transport Layer Security (TLS) registry settings
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10, and earlier versions as noted
 
-This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS and SSL protocols.
+This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS, and SSL protocols.
 
 > [!CAUTION]
 > This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied. We recommend that you do not directly edit the registry unless there is no other alternative. Modifications to the registry are not validated by the Registry Editor or by the Windows operating system before they are applied. As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system. When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC). If you must edit the registry, use extreme caution.
@@ -27,7 +27,7 @@ There are eight logging levels for SChannel events saved to the system event log
 |4|Informational and Success events|
 |5|Error, Informational, and Success events|
 |6|Warning, Informational, and Success events|
-|7|Error, Warning, Informational and Success events|
+|7|Error, Warning, Informational, and Success events|
 
 > [!NOTE]
 > You must reboot your device after changing the SChannel logging level.
@@ -78,7 +78,7 @@ For information about default cipher suite orders that are used by the SChannel 
 
 This entry specifies client TLS session cache item lifetime in milliseconds. Beginning with Windows Server 2008 and Windows Vista the default is 10 hours. A value of **0** turns off TLS session caching on the client.
 
-The first time a client connects to a server through the SChannel SSP, a full TLS/SSL handshake is performed. When this is complete, the master secret, cipher suite, and certificates are stored in the session cache on the respective client and server.
+The first time a client connects to a server through the SChannel SSP, a full TLS/SSL handshake is performed. When complete, the master secret, cipher suite, and certificates are stored in the session cache on the respective client and server.
 
 Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
 
@@ -136,7 +136,7 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 ## KeyExchangeAlgorithm key sizes
 
-These entries listed below may not exist in the registry by default and must be manually created. Use of key exchange algorithms should be controlled by configuring the cipher suite order.
+These following entries may not exist in the registry by default and must be manually created. Use of key exchange algorithms should be controlled by configuring the cipher suite order. To learn more about TLS/SSL cipher suite cryptographic algorithms, see [Cipher Suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 # [Diffie-Hellman](#tab/diffie-hellman)
 
@@ -144,7 +144,7 @@ Added in Windows 10, version 1507 and Windows Server 2016.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
 
-To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits will be the minimum.
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
 
 To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry. After you've created the entry, change the DWORD value to the desired bit length.
 
@@ -165,11 +165,6 @@ To specify a maximum supported range of RSA key bit length for the TLS client, c
 > [!NOTE]
 > Configured elliptic curves determine the cryptographic strength of the ECDHE key exchange. For more information, see [Manage Transport Layer Security (TLS)](manage-tls.md#configuring-tls-ecc-curve-order).
 
-To learn more about TLS/SSL cipher suite cryptographic algorithms, see:
-
-- [Cipher Suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel)
-- [Demystifying SChannel](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/demystifying-schannel/ba-p/259233) (blog)
-
 ## MaximumCacheSize
 
 This entry controls the maximum number of TLS sessions to cache. Setting MaximumCacheSize to **0** disables the
@@ -184,29 +179,29 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 ## Messaging – fragment parsing
 
-This entry controls the maximum allowed size of a TLS handshake message that will be accepted. Messages larger than the allowed size won't be accepted and the TLS handshake will fail. These entries don't exist in the registry by default.
+This entry controls the maximum allowed size of a TLS handshake message that's accepted. Messages larger than the allowed size isn't accepted and the TLS handshake fails. These entries don't exist in the registry by default.
 
-When you set the value to **0x0**, fragmented messages aren't processed and will cause the TLS handshake to fail. This makes TLS clients or servers on the current machine noncompliant with the TLS RFCs.
+When you set the value to **0x0**, fragmented messages aren't processed and causes the TLS handshake to fail. This makes TLS clients or servers on the current machine noncompliant with the TLS RFCs.
 
-The maximum allowed size can be increased up to 2^16 bytes. Allowing a client or server to read and store large amounts of unverified data from the network isn't a good idea and will consume additional memory for each security context.
+The maximum allowed size can be increased up to 2^16 bytes. Allowing a client or server to read and store large amounts of unverified data from the network isn't a good idea and consumes additional memory for each security context.
 
 Added in Windows 7 and Windows Server 2008 R2: An update that enables Internet Explorer in Windows XP, in Windows Vista, or in Windows Server 2008 to parse fragmented TLS/SSL handshake messages is available.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Messaging**
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client will accept, create a **MessageLimitClient** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is **0x8000** bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client accepts, create a **MessageLimitClient** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is **0x8000** bytes.
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server will accept when there's no client authentication, create a **MessageLimitServer** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is **0x4000** bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's no client authentication, create a **MessageLimitServer** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is **0x4000** bytes.
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server will accept when there's client authentication, create a **MessageLimitServerClientAuth** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is **0x8000** bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's client authentication, create a **MessageLimitServerClientAuth** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is **0x8000** bytes.
 
 ## SendTrustedIssuerList
 
 TLS servers may send a list of the distinguished names of acceptable certificate authorities when requesting client authentication. This may help TLS clients select an appropriate TLS client certificate. SChannel-based TLS servers don't send this trusted issuer list by default because it exposes the certificate authorities trusted by the server to passive observers and also increases the amount of data exchanged in the course of the TLS handshake. Setting this value to **1** causes SChannel-based servers to send their lists of trusted issuers.
 
-Not sending a list of trusted issuers might impact what the client sends when it's asked for a client certificate. For example, when Internet Explorer receives a request for client authentication, it only displays the client certificates that chain up to one of the certification authorities that is sent by the server. If the server didn't send a list, Internet Explorer displays all of the client certificates that are installed on the client.
+Not sending a list of trusted issuers might impact what the client sends when it's asked for a client certificate. For example, when Microsoft Edge receives a request for client authentication, it only displays the client certificates that chain up to one of the certification authorities that's sent by the server. If the server didn't send a list, Microsoft Edge displays all of the client certificates that are installed on the client.
 
-This behavior might be desirable. For example, when PKI environments include cross certificates, the client and server certificates won't have the same root CA; therefore, Internet Explorer cannot choose a certificate that chains up to one of the server's CAs. TLS clients may offer any available client certificate when a server does not send the trusted issuer list. This entry doesn't exist in the registry by default.
+This behavior might be desirable. For example, when PKI environments include cross certificates, the client and server certificates won't have the same root CA. Therefore, Microsoft Edge can't choose a certificate that chains up to one of the server's CAs. TLS clients may offer any available client certificate when a server doesn't send the trusted issuer list. This entry doesn't exist in the registry by default.
 
 ### Default Send Trusted Issuer List behavior
 
@@ -268,6 +263,11 @@ The following example shows DTLS 1.2 disabled in the registry:
 
 Switching a (D)TLS or SSL protocol version to **Disabled** state may cause [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of **Enabled** (D)TLS and SSL versions may break interoperability with remote peers.
 
-Once the (D)TLS or SSL protocol version settings have been modified, they take effect on connections established using credential handles opened by subsequent [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, an application or service restart may be required.
+Once the (D)TLS or SSL protocol version settings are modified, they take effect on connections established using credential handles opened by subsequent [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, an application, or service restart may be required.
 
 These registry settings only apply to SChannel SSP and don't affect any third-party (D)TLS and SSL implementations that may be installed on the system.
+
+> [!WARNING]
+> Attempting to create or adjust any SChannel registry settings that are not explicitly detailed in this article isn't recommended due to potential risks and unintended consequences that may arise from unsupported configurations.
+
+To learn about managing the TLS cipher suite using PowerShell, see [TLS command reference](https://learn.microsoft.com/en-us/powershell/module/tls). If interested in managing TLS settings via Group Policy, see [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
