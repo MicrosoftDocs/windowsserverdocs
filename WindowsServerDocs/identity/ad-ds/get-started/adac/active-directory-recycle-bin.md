@@ -8,25 +8,25 @@ ms.topic: article
 ---
 Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Accidental deletion of Active Directory objects is a common occurrence for users of Active Directory Domain Services (AD DS). Active Directory Recycle Bin allows you to preserve and recover accidentally deleted Active Directory objects.
+Accidental deletion of Active Directory objects is a common occurrence for users of Active Directory Domain Services. Active Directory Recycle Bin allows you to preserve and recover accidentally deleted Active Directory objects.
 
-When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved and the objects are restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. 
+When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved. This means that objects can be restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. 
 
-Active Directory Recycle Bin is not enabled by default. If you plan to enable Active Directory Recycle Bin in Windows Server, consider the following:
+Active Directory Recycle Bin isn't enabled by default. If you plan to enable Active Directory Recycle Bin in Windows Server, consider the following:
 
-- The process of enabling Active Directory Recycle Bin is irreversible. After you enable Active Directory Recycle Bin in your environment, you cannot disable it.
+- The process of enabling Active Directory Recycle Bin is irreversible. After you enable Active Directory Recycle Bin in your environment, you can't disable it.
 - To manage the Recycle Bin feature through a user interface, you must install Active Directory Administrative Center.
-- You can only restore AD DS items that were deleted after Active Directory Recycle Bin is enabled. You cannot use Active Directory Recycle Bin to recover items that were deleted prior to enabling this functionality.
+- You can only restore AD DS items that were deleted after Active Directory Recycle Bin is enabled. You can't use Active Directory Recycle Bin to recover items that were deleted before enabling this functionality.
 
 ### Enable Active Directory Recycle Bin
 
-To enable Active Directory Recycle Bin, perform the following steps: 
+To enable Active Directory Recycle Bin, perform the following steps:
 
 1. Open Active Directory Administrative Center, either from the Tools menu of the Server Manager console or by running an elevated PowerShell session and typing **dsac.exe**.
 
-2. If the appropriate target domain is not selected, choose **Manage**, choose **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then click **OK**.
+2. If the appropriate target domain is not selected, choose **Manage**, choose **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
 
-3. In the **Tasks** pane, click **Enable Recycle Bin ...** in the **Tasks** pane, click **OK** on the warning message box, and then click **OK** to the refresh ADAC message.
+3. In the **Tasks** pane, choose **Enable Recycle Bin ...** in the **Tasks** pane, choose **OK** on the warning message box, and then choose **OK** to the refresh ADAC message.
 
 4. Press F5 to refresh ADAC.
 
@@ -44,9 +44,9 @@ You can use Active Directory Administrative Center to restore deleted objects. T
 
 1. Open Active Directory Administrative Center, either from the Tools menu of the Server Manager console or by running an elevated PowerShell session and typing **dsac.exe**.
 
-2. Click **Manage**, click **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then click **OK**.
+2. choose **Manage**, choose **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
 
-3. Navigate to the **Deleted Objects** container, select the users you wish to restore and then click **Restore** in the **Tasks** pane.
+3. Navigate to the **Deleted Objects** container, select the users you wish to restore and then choose **Restore** in the **Tasks** pane.
 
 4. To confirm the objects were restored to their original location, navigate to the target domain and verify the user accounts are listed.
 
