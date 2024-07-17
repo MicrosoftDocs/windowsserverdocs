@@ -206,7 +206,7 @@ By default, a Windows client device won't have access to an Active Directory dom
 > [!NOTE]
 > You cannot configure the WAC in gateway mode using TCP port 443 on a file server where you are configuring KDC Proxy. When configuring WAC on the file server, change the port to one that is not in use and is not 443. If you have already configured WAC on port 443, re-run the WAC setup MSI and choose a different port when prompted.
 
-# [Windows Admin Center](#tab/kdc-wac/windows-admin-center)
+# [Windows Admin Center](#tab/windows-admin-center/kdc-wac)
 
 1. Ensure you're using WAC version 2110 or later.
 1. Configure SMB over QUIC normally. Starting in WAC 2110, the option to configure
@@ -216,7 +216,7 @@ By default, a Windows client device won't have access to an Active Directory dom
    > [!NOTE]
    > You cannot configure an SMB over QUIC server joined to a Workgroup using WAC. You must join the server to an Active Directory domain or follow the steps in configuring the KDC proxy either in PowerShell or Group Policy.
 
-# [PowerShell](#tab/kdc-powershell/powershell)
+# [PowerShell](#tab/powershell/kdc-powershell)
 
 1. On the file server, in an elevated PowerShell prompt, run:
 
