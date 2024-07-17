@@ -25,7 +25,7 @@ Workgroup clusters offer a centralized identity and the same high security, to k
 The following prerequisites must be met for your workgroup cluster to meet the criteria for an officially supported deployment:
 
 - All servers to be used as workgroup cluster nodes are running the same version of Windows Server.
-- All workgroup cluster nodes must be in a workgroup, and can't be joined to an Active Directory domain. Any nodes that were previously in an Active Directory domain must not only moved to a workgroup, but must also be renamed to remove any Active Directory caching.
+- All workgroup cluster nodes must be in a workgroup, and can't be joined to an Active Directory domain. Any nodes that were previously in an Active Directory domain must not only be moved to a workgroup, but must also be renamed to remove any Active Directory caching.
 - Your cluster must have one of the following storage technologies configured and available to all cluster nodes. To learn more about Failover Clustering storage requirements, see [Failover clustering storage requirements](/windows-server/failover-clustering/clustering-requirements#storage).
   - Storage Spaces Direct (S2D). If you're creating a Storage Spaces Direct cluster, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
   - SAN attached storage.
@@ -60,7 +60,7 @@ In the following sections, you'll create two-node workgroup cluster with Storage
 
 To get started, you need to configure your servers. This includes creating an identical user account in each server node, adding the servers as trusted hosts, and ensuring that each server has a common primary DNS suffix. Follow these steps on each node of the cluster.
 
-#### Create a consistent admin account on each node.
+#### Create a consistent admin account on each node
 
 A consistent administrator user account must be created on each node. The username and password of these accounts must be the same on all the nodes and the account must also be added to the local Administrators group.
 
