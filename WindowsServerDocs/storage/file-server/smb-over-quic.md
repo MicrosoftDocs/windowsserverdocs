@@ -5,7 +5,7 @@ ms.topic: article
 author: NedPyle
 ms.author: wscontent
 ms.contributor: inhenkel
-ms.date: 05/28/2024
+ms.date: 07/17/2024
 ---
 
 # SMB over QUIC
@@ -23,6 +23,9 @@ SMB over QUIC introduces an alternative to the TCP network transport, providing 
 SMB over QUIC offers an "SMB VPN" for telecommuters, mobile device users, and high security organizations. The server certificate creates a TLS 1.3-encrypted tunnel over the internet-friendly UDP port 443 instead of the legacy TCP port 445. All SMB traffic, including authentication and authorization within the tunnel is never exposed to the underlying network. SMB behaves normally within the QUIC tunnel, meaning the user experience doesn't change. SMB features like multichannel, signing, compression, continuous availability, directory leasing, and so on, work normally.
 
 A file server administrator must opt in to enabling SMB over QUIC. It isn't on by default and a client can't force a file server to enable SMB over QUIC. Windows SMB clients still use TCP by default and will only attempt SMB over QUIC if the TCP attempt first fails or if intentionally requiring QUIC using `NET USE /TRANSPORT:QUIC` or `New-SmbMapping -TransportType QUIC`.
+
+> [!NOTE]
+> It's not recommended to define particular names for DFS namespaces in scenarios involving SMB and QUIC connections with external endpoints. This is because the internal DFS namespace names are going to be referenced, and these references are usually not reachable for an external client in current releases of Windows.
 
 ## Prerequisites
 
@@ -117,7 +120,7 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 > [!VIDEO https://www.youtube.com/embed/OslBSB8IkUw]
 
-### [Windows Admin Center](#tab/windows-admin-center)
+# [Windows Admin Center](#tab/windows-admin-center)
 
 1. Sign in to your file server as an administrator.
 
@@ -135,7 +138,7 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 1. Select the **Files and File Sharing** menu option. Note your existing SMB shares or create a new one.
 
-### [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell)
 
 1. Sign in to your file server as an administrator.
 
@@ -203,7 +206,7 @@ By default, a Windows client device won't have access to an Active Directory dom
 > [!NOTE]
 > You cannot configure the WAC in gateway mode using TCP port 443 on a file server where you are configuring KDC Proxy. When configuring WAC on the file server, change the port to one that is not in use and is not 443. If you have already configured WAC on port 443, re-run the WAC setup MSI and choose a different port when prompted.
 
-#### Windows Admin Center method
+# [Windows Admin Center](#tab/windows-admin-center)
 
 1. Ensure you're using WAC version 2110 or later.
 1. Configure SMB over QUIC normally. Starting in WAC 2110, the option to configure
@@ -211,7 +214,7 @@ By default, a Windows client device won't have access to an Active Directory dom
    the file servers. The default KDC proxy port is 443 and assigned automatically by WAC.
 
    > [!NOTE]
-   > You cannot configure an SMB over QUIC server joined to a Workgroup using WAC. You must join the server to an Active Directory domain or use the steps in [Manual Method](#manual-method) section.
+   > You cannot configure an SMB over QUIC server joined to a Workgroup using WAC. You must join the server to an Active Directory domain or follow the steps in configuring the KDC proxy either in PowerShell or Group Policy.
 
 1. Configure the following group policy setting to apply to the Windows client device:
 
@@ -228,7 +231,7 @@ By default, a Windows client device won't have access to an Active Directory dom
 1. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
 1. Apply the group policy and restart the Windows 11 device.  
 
-#### Manual method
+# [PowerShell](#tab/powershell)
 
 1. On the file server, in an elevated PowerShell prompt, run:
 
@@ -246,7 +249,6 @@ By default, a Windows client device won't have access to an Active Directory dom
 
    ```powershell
    $guid = [Guid]::NewGuid()
-
    Add-NetIPHttpsCertBinding -IPPort 0.0.0.0:443 -CertificateHash <thumbprint> -CertificateStoreName "My" -ApplicationId "{$guid}" -NullEncryption $false
    ```
 
@@ -264,11 +266,13 @@ By default, a Windows client device won't have access to an Active Directory dom
    Start-Service -Name kpssvc
    ```
 
+# [Group Policy](#tab/group-policy)
+
 1. Configure the following group policy to apply to the Windows client device:
 
     **Computer Configuration\Administrative Templates\System\Kerberos\Specify KDC proxy servers for Kerberos clients**
 
-    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value becomes the external name you specified for the QUIC server. For example, where the Active Directory domain is named "corp.contoso.com" and the external DNS domain is named "contoso.com":
+    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value becomes the external name you specified for the QUIC server. For example, where the Active Directory domain is named `corp.contoso.com` and the external DNS domain is named `contoso.com`:
 
     `value name: corp.contoso.com`
 
@@ -279,6 +283,8 @@ By default, a Windows client device won't have access to an Active Directory dom
 1. Create a Windows Defender Firewall rule that inbound-enables TCP port 443 for the KDC Proxy service to receive authentication requests.  
 1. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
 1. Apply the group policy and restart the Windows client device.  
+
+---
 
 > [!NOTE]
 > Automatic configuration of the KDC Proxy will come later in the SMB over QUIC and these server steps will not be necessary.
