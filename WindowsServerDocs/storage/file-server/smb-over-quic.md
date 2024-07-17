@@ -216,21 +216,6 @@ By default, a Windows client device won't have access to an Active Directory dom
    > [!NOTE]
    > You cannot configure an SMB over QUIC server joined to a Workgroup using WAC. You must join the server to an Active Directory domain or follow the steps in configuring the KDC proxy either in PowerShell or Group Policy.
 
-1. Configure the following group policy setting to apply to the Windows client device:
-
-    **Computer Configuration\Administrative Templates\System\Kerberos\Specify KDC proxy servers for Kerberos clients**
-
-    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value becomes the external name you specified for the QUIC server. For example, where the Active Directory domain is named `corp.contoso.com` and the external DNS domain is named `contoso.com`:
-
-    `value name: corp.contoso.com`
-
-    `value: <https fsedge1.contoso.com:443:kdcproxy />`
-
-    This Kerberos realm mapping means that if user *ned@corp.contoso.com* tried to connect to a file server name *fs1edge.contoso.com*, the KDC proxy knows to forward the kerberos tickets to a domain controller in the internal `corp.contoso.com` domain. The communication with the client will be over HTTPS on port 443 and user credentials aren't directly exposed on the client-file server network.
-
-1. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
-1. Apply the group policy and restart the Windows 11 device.  
-
 # [PowerShell](#tab/powershell)
 
 1. On the file server, in an elevated PowerShell prompt, run:
@@ -266,7 +251,7 @@ By default, a Windows client device won't have access to an Active Directory dom
    Start-Service -Name kpssvc
    ```
 
-# [Group Policy](#tab/group-policy)
+# [Group Policy](#tab/powershell/group-policy)
 
 1. Configure the following group policy to apply to the Windows client device:
 
