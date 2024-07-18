@@ -32,9 +32,11 @@ A delegated Managed Service Account (dMSA) is an Active Directory (AD) account t
 
 ## Create a standalone dMSA
 
-To create a new dMSA, without migrating from a traditional service account, open a PowerShell session with admin rights and run:
+The following instructions allows users to create a new dMSA, without migrating from a traditional service account.
 
-1. ```powershell
+1. Open a PowerShell session with admin rights and run:
+
+   ```powershell
    $params = @{
     Name = "ServiceAccountName"
     DNSHostName = "DNSHostName"
@@ -44,7 +46,9 @@ To create a new dMSA, without migrating from a traditional service account, open
    New-ADServiceAccount @params
    ```
 
-1. ```powershell
+1. Grant permission to the specific device to retrieve the password for the service account in AD.
+
+   ```powershell
    $params = @{
     Identity = "DMSA Name"
     PrincipalsAllowedToRetrieveManagedPassword = "Machine$"
@@ -78,7 +82,7 @@ To create a new dMSA, without migrating from a traditional service account, open
 
 To migrate a service account to a dMSA, follow these steps:
 
-1. Create a dMSA a described in [Create a standalone dMSA](delegated-managed-service-accounts#create-a-standalone-dMSA.md).
+1. Create a dMSA a described in [Create a standalone dMSA](delegated-managed-service-accounts-set-up-dmsa#create-a-standalone-dMSA.md).
 
 1. Initiate account migration to a dMSA:
 
@@ -137,6 +141,7 @@ $params = @{
  SupersededAccount = "<DN of service account>"
 }
 Undo-ADServiceAccountMigration @params
+```
 
 To revert a service account back to an inactive or unlinked state, run:
 
