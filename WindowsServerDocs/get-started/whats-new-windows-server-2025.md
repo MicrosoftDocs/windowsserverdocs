@@ -258,13 +258,13 @@ Build 26040 now sports the modern Task Manager app with mica material conforming
 
 ### Virtualization-based security (VBS) enclaves
 
-A VBS enclave is a software-based trusted execution environment (TEE) inside the address space of a host application. VBS enclaves leverage underlying [VBS technology](/windows-hardware/design/device-experiences/oem-vbs) to isolate the sensitive portion of an application in a secure partition of memory. VBS enclaves enable isolation of sensitive workloads from both the host application and the rest of the system.
+A VBS enclave is a software-based trusted execution environment (TEE) inside the address space of a host application. VBS enclaves use underlying [VBS technology](/windows-hardware/design/device-experiences/oem-vbs) to isolate the sensitive portion of an application in a secure partition of memory. VBS enclaves enable isolation of sensitive workloads from both the host application and the rest of the system.
 
-VBS enclaves enable applications to protect their secrets by removing the need to trust admins and hardening against malicious attackers. For information, read the [VBS enclaves Win32 reference](/windows/win32/trusted-execution/vbs-enclaves).
+VBS enclaves enable applications to protect their secrets by removing the need to trust admins and hardening against malicious attackers. For more information, read the [VBS enclaves Win32 reference](/windows/win32/trusted-execution/vbs-enclaves).
 
 ### Virtualization-based security (VBS) Key Protection
 
-VBS key protection enables Windows developers to secure cryptographic keys using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. When in use, VBS keys are isolated in a secure process, allowing key operations to occur without ever exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user’s machine, preventing exfiltration attacks by any admin-level attacker.
+VBS key protection enables Windows developers to secure cryptographic keys using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. When in use, VBS keys are isolated in a secure process, allowing key operations to occur without ever exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user’s machine, preventing exfiltration attacks by any admin-level attacker.
 
 ### Wi-Fi
 
