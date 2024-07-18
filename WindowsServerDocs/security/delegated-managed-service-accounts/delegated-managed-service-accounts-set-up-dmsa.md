@@ -82,7 +82,7 @@ The following instructions allow users to create a new dMSA without migrating fr
 
 To migrate a service account to a dMSA, follow these steps:
 
-1. Create a dMSA a described in [Create a standalone dMSA](delegated-managed-service-accounts-set-up-dmsa.md#create-a-standalone-dMSA).
+1. Create a dMSA a described in [Create a standalone dMSA](#create-a-standalone-dmsa).
 
 1. Initiate account migration to a dMSA:
 
