@@ -1,52 +1,113 @@
 ---
-title: Setting up delegated Managed Service Accounts (dMSA) in Windows Server Preview
+title: Setting up delegated Managed Service Accounts (dMSA) in Windows Server 2025 Preview
 description: Learn how to set up delegated Managed Service Accounts (dMSA) in Windows Server Insiders Preview to ensure device credentials isolation in Active Directory.
 ms.topic: how-to
 ms.author: alalve
 author: mariamgewida
-ms.date: 02/16/2024
+ms.date: 07/18/2024
 ---
 
 # Setting up delegated Managed Service Accounts
 
-A delegated Managed Service Account (dMSA) is an Active Directory (AD) account that enables secure management of credentials. Unlike traditional service accounts, dMSAs don't require manual management of passwords as AD automatically manages the password, ensuring that it remains secure. Additionally, dMSAs can be delegated specific permissions to access resources in the domain, providing an efficient way to manage access control. Setting up a dMSA is currently only available in Windows Server Preview.
+A delegated Managed Service Account (dMSA) is an Active Directory (AD) account that enables secure management of credentials. Unlike traditional service accounts, dMSAs don't require manual management of passwords as AD automatically manages the password, ensuring that it remains secure. Additionally, dMSAs can be delegated specific permissions to access resources in the domain, providing an efficient way to manage access control. Setting up a dMSA is currently only available on devices running Windows Server 2025 (Preview).
 
 ## Prerequisites
 
 - The **Active Directory Domain Services** role must be installed on your device or on any device if using remote management tools. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 - Once the role is installed, your device must be promoted to a Domain Controller (DC). In **Server Manager**, the flag icon displays a new notification, select **Promote this server to a domain controller**, then complete the necessary steps.
-- In Group Policy Object for client devices, **Kerberos** must be _enabled_ in the path **Computer Configuration\Administrative Templates\System\Kerberos**.
+- The **KDS root key** must be generated on the DC before a dMSA is created or migrated. Run `Get-KdsRootKey` in PowerShell to verify if the key is available. If the key is unavailable, it can be added by running `Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))`.
+
+> [!NOTE]
+> In order to use the dMSA as a standalone Managed Service Account (MSA) or to supersede a legacy service account, the following command needs to be ran on the client device:
+>
+> ```powershell
+> $params = @{
+>  Path = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters"
+>  Name = "DelegatedMSAEnabled"
+>  Value = 1
+>  Type = "DWORD"
+> }
+> Set-ItemProperty @params
+> ```
+
+## Create a standalone dMSA
+
+To create a new dMSA, without migrating from a traditional service account, open a PowerShell session with admin rights and run:
+
+1. ```powershell
+   $params = @{
+    Name = "ServiceAccountName"
+    DNSHostName = "DNSHostName"
+    CreateDelegatedServiceAccount = $true
+    KerberosEncryptionType = "AES256"
+   }
+   New-ADServiceAccount @params
+   ```
+
+1. ```powershell
+   $params = @{
+    Identity = "DMSA Name"
+    PrincipalsAllowedToRetrieveManagedPassword = "Machine$"
+   }
+   Set-ADServiceAccount @params
+   ```
+
+1. The **msDS-DelegatedMSAState** property value for the dMSA must be set to **3**. To view the current property value, run:
+
+   ```powershell
+   $params = @{
+    Identity = "dMSAsnmp"
+    Properties = "msDS-DelegatedMSAState"
+   }
+   Get-ADServiceAccount @params
+   ```  
+
+   To set this value to **3**, run:
+
+   ```powershell
+   $params = @{
+    Identity = "dMSAsnmp"
+    Properties = @{
+     "msDS-DelegatedMSAState" = 3
+    }
+   }
+   Set-ADServiceAccount @params
+   ```
 
 ## Migrate to a dMSA
 
-If the service account being migrated to a dMSA has access to multiple servers, a registry policy must first be applied to ensure it defaults to the DC. Once you sign in using the dMSA, run:
+To migrate a service account to a dMSA, follow these steps:
 
-```powershell
-New-ItemProperty
- -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters" 
- -Name "DelegatedMSAEnabled"
- -Value "1"
- -PropertyType DWORD
- -Force
-```
+1. Create a dMSA a described in [Create a standalone dMSA](delegated-managed-service-accounts#create-a-standalone-dMSA.md).
 
-After modifying the registry, you can link a service account to a dMSA by running:
+1. Initiate account migration to a dMSA:
 
-```powershell
-Start-ADServiceAccountMigration –Identity <DMSAName> –SupersededAccount <DN of service account>
-```
+   ```powershell
+   $params = @{
+    Identity = "<DMSAName>"
+    SupersededAccount = "<DN of service account>"
+   }
+   Start-ADServiceAccountMigration @params
+   ```
 
-Once the account is linked, the current running services for the account need to be restarted by running:
+1. If the service account being migrated to a dMSA has access to multiple servers, a registry policy must first be applied to ensure it defaults to the DC. Once you sign in using the dMSA, run:
 
-```powershell
-Get-Service | Where-Object {$_.Status -eq "Running"} | Restart-Service
-```
+   ```powershell
+   $params = @{
+    Path = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters"
+    Name = "DelegatedMSAEnabled"
+    Value = "1"
+    PropertyType = "DWORD"
+    Force = $true
+   }
+   New-ItemProperty @params
+   ```
 
-Then, verify that the **PrincipalsAllowedToRetrieveManagedPassword** property for the dMSA object is set:
+1. Once changes to the registry are applied and the account is linked, restart the running services for the account by running:
 
-```powershell
-Get-ADServiceAccount -Identity <DMSAName> -Properties PrincipalsAllowedToRetrieveManagedPassword
-```
+   ```powershell
+   Get-Service | Where-Object {$_.Status -eq "Running"} | Restart-Service
+   ```
 
 > [!NOTE]
 > In the case that the service account is connected to multiple devices and migration has ended, the [PrincipalsAllowedToRetrieveManagedPassword](/powershell/module/activedirectory/set-adserviceaccount?view=windowsserver2022-ps#example-3-set-the-principals-allowed-to-retrieve-the-password-for-an-msa&preserve-view=true) needs to be updated manually.
@@ -56,33 +117,36 @@ Get-ADServiceAccount -Identity <DMSAName> -Properties PrincipalsAllowedToRetriev
 > [!WARNING]
 > When finalizing the migration, **never** delete the original service account in case you need to revert back to it post migration as this causes several issues.
 
-To complete the account migration, traditional service accounts must be disabled to ensure that all services use the dMSA by running:
+To complete the account migration, traditional service accounts must be disabled to ensure that all services use the dMSA.
+
+To disable the traditional service account, run the following command:
 
 ```powershell
-Complete-ADServiceAccountMigration –Identity <DMSAName> –SupersededAccount <DN of service account>
+$params = @{
+ Identity = "<DMSAName>"
+ SupersededAccount = "<DN of service account>"
+}
+Complete-ADServiceAccountMigration @params
 ```
 
 If the wrong account is being migrated, run the following to undo all steps during migration:
 
 ```powershell
-Undo-ADServiceAccountMigration –Identity <DMSAName> –SupersededAccount <DN of service account>
-```
+$params = @{
+ Identity = "<DMSAName>"
+ SupersededAccount = "<DN of service account>"
+}
+Undo-ADServiceAccountMigration @params
 
 To revert a service account back to an inactive or unlinked state, run:
 
 ```powershell
-Reset-ADServiceAccountMigration –Identity <DMSAName> –SupersededAccount <DN of service account>
+$params = @{
+ Identity = "<DMSAName>"
+ SupersededAccount = "<DN of service account>"
+}
+Reset-ADServiceAccountMigration @params
 ```
-
-## Create a dMSA
-
-To create a new dMSA, open PowerShell as admin and run:
-
-```powershell
-New-ADServiceAccount -Name <DMSAName> -DNSHostName <host> -CreateDelegatedServiceAccount -KerberosEncryptionType AES256
-```
-
-To learn more about `New-ADServiceAccount` and related cmdlets, see [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2025-ps&preserve-view=true).
 
 ## View dMSA event logs
 
@@ -102,7 +166,8 @@ The following table describes these captured events.
 
 ## See also
 
-- [Complete-ADServiceAccountMigration](https://learn.microsoft.com/powershell/module/activedirectory/complete-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
-- [Reset-ADServiceAccountMigration](https://learn.microsoft.com/powershell/module/activedirectory/reset-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
-- [Start-ADServiceAccountMigration](https://learn.microsoft.com/powershell/module/activedirectory/start-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
-- [Undo-ADServiceAccountMigration](https://learn.microsoft.com/powershell/module/activedirectory/undo-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2025-ps&preserve-view=true)
+- [Complete-ADServiceAccountMigration](/powershell/module/activedirectory/complete-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Reset-ADServiceAccountMigration](/powershell/module/activedirectory/reset-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Start-ADServiceAccountMigration](/powershell/module/activedirectory/start-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Undo-ADServiceAccountMigration](/powershell/module/activedirectory/undo-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
