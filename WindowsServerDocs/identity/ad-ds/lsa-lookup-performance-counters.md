@@ -15,7 +15,7 @@ Applies to: Windows Server 2025 (preview)
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Excessive LSA Account Name and Account SID lookups can contribute to Active Directory performance degradation. Active Directory performance problems can result in a wide variety of symptoms including (but not limited to) user authentication prompts, outlook or Exchange problems, slow logon, LDAP application timeouts and more.
+Excessive Local Security Authority (LSA) Account Name and Account security identifiers (SID) lookups can contribute to Active Directory performance degradation. Active Directory performance problems can result in a wide variety of symptoms. Symptoms such as user authentication prompts, Outlook, or Exchange problems, slow sign in, Lightweight Directory Access Protocol (LDAP) application timeouts and more.
 
 The Local Security Authority (LSA), which resides within the Local Security Authority Security Service (LSASS) process, validates users for local and remote sign-ins and enforces local security policies. LSA performs SID and Name translation or lookups as well as the other functions such as handling user logins, authentication, and authorization processes. LSA verifies credentials when users attempt to access the system based on configured policies. LSA is also used to manage password changes and create access tokens that define permissions for available resources and operations.
 
@@ -24,11 +24,11 @@ The top causes of excessive LSA Name or SID lookups usually include:
 - The client LSA Name or SID Lookup Cache is too small, causing many name lookups to be sent to the domain controller repeatedly.
 - An application sending repeated lookup requests that don’t resolve, causing them to be sent to the domain controller repeatedly.
 - Isolated names that don't contain a domain name portion and need to be sent to a remote domain controller across every trust resulting in delays.
-- Remote lookups taking a long time when DC has to request a lookup from cross-forest, which may contribute to the domain controller running out of RPC threads or building a queue at RPC level, resulting in failures, timeouts, and problems on the client application such as Exchange outages.
+- Remote lookups taking a long time when a domain controller has to request a lookup from cross-forest. Remote lookups might contribute to the domain controller running out of RPC threads or building a queue at RPC level. Long running lookups can result in failures, timeouts, and problems in client applications such as Exchange outages.
 
 Therefore, it's important to monitor performance of LSA Name/SID lookups and adjust applications and configuration accordingly.
 
-Beginning with Windows Server 2025, you can use Local Security Authority (LSA) performance counters to monitor the performance of LSA lookups. The LSA Lookups performance counter set consists of counters that measure performance of LSA Account name and Account SID lookups. These performance counters are available for both Windows client and Windows Server. See [LsaLookupNames function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupSids function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids) for an explanation of the algorithm that's used when a name/SID needs to be translated.
+Beginning with Windows Server 2025, you can use Local Security Authority (LSA) performance counters to monitor the performance of LSA lookups. The LSA Lookups performance counter set consists of counters that measure performance of LSA Account name and Account SID lookups. These performance counters are available for both Windows client and Windows Server. For more information about the algorithm used when a name/SID needs to be translated, see [LsaLookupNames function (ntsecapi.h)](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupSids function (ntsecapi.h)](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids).
 
 This article also discusses LSA Lookup Caches, including LSA Name cache, for successfully translated names; and Negative Isolated name cache, for unresolved names.
 
@@ -40,22 +40,22 @@ LSA Lookups performance counters measure the performance of the LSA lookup proce
 
 There are three categories of LSA Lookups performance counters:
 
-- Name lookups, which are name counters you can use to measure Name translation using the LsaLookupNames and LsaLookupNames2 functions. See [LsaLookupNames function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupNames2 function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2) for more information.
+- Name lookups, which are name counters you can use to measure Name translation using the LsaLookupNames and LsaLookupNames2 functions. For more information about name translation, see [LsaLookupNames function (ntsecapi.h)](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupNames2 function (ntsecapi.h)](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2).
 - The SID/Name pair Cache, which you can use to measure the efficiency and size of the name/SID pair cache. Domain controllers don't maintain a name/SID cache. These counters are valid on only a member server or workstation.
-- SID lookups, which include SID counters you can use to measure SID translation using the LsaLookupSids and LsaLookupSids2 functions. See [LsaLookupSids function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids) and [LsaLookupSids2 function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids2) for more information.
+- SID lookups, which include SID counters you can use to measure SID translation using the LsaLookupSids and LsaLookupSids2 functions. For more information about SID lookup, see [LsaLookupSids function (ntsecapi.h)](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids) and [LsaLookupSids2 function (ntsecapi.h)](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids2).
 
-The following table shows the counters that can be added from the LSA Lookups performance counter set and their description, including whether each counter relates to DC, non-DC, or both. Non-DC signifies a member server or member workstation.
+The following table shows the counters that can be added from the LSA Lookups performance counter set and their description. The table also including whether each counter relates to domain controller (DC), non-DC, or both. Non-DC signifies a member server or member workstation.
 
 | Counter name | Description | DC | Non-DC |
 |--|--|--|--|
-| `Isolated Names Inbound Requests/sec` | The number of name lookup requests per second that are received from another remote machine that don't include the domain name. | X | X |
-| `Isolated Names Outbound Requests/sec` | The number of name lookup requests per second that are sent to another remote machine that don't include the domain name. For example, requests forwarded to the primary domain controller. | X | X |
+| `Isolated Names Inbound Requests/sec` | The number of name lookup requests per second that don't include the domain name and are received from another remote machine. | X | X |
+| `Isolated Names Outbound Requests/sec` | The number of name lookup requests per second that don't include the domain name and are sent to another remote machine. For example, requests forwarded to the primary domain controller. | X | X |
 | `Name/SID cache entries added/sec` | The number of name/SID cache entries added per second. The local LSA keeps a cache of the SID-name pair. The cache is used to speed up the lookup process and reduce the number of requests to the remote machine. Measuring the growth of the cache and the number of requests can help with understanding the performance of the LSA lookup process and if the cache needs to be resized. |  | X |
 | `Name/SID cache entries purged/sec` | The number of name/SID cache entries purged per second. The local LSA keeps a cache of the SID-name pair. The cache is used to speed up the lookup process and reduce the number of requests to the remote machine. Measuring the growth of the cache and the number of requests can help with understanding the performance of the LSA lookup process and if the cache needs to be resized. |  | X |
 | `Name/SID Cache Size (Max Entries)` | The maximum number of entries that the name/SID cache can hold. |  | X |
 | `Names/Cache % Full` | The percentage of the name cache that is full. |  | X |
 | `Names/Cache % Hit` | The percentage of name lookups that are resolved from the cache. |  | X |
-| `Names Completion Time` | Measures how long it takes to complete a name lookup request. | X | X |
+| `Names Completion Time` | Measures the average time in seconds to complete a name lookup request. | X | X |
 | `Names Errors/sec` | The number of errors per second that occur during name lookup requests. For example, if a server is busy, it might not be able to respond to a name lookup request. | X | X |
 | `Names Inbound Requests/sec` | The number of all name lookup requests per second that are received from another remote machine. Received from another remote machine or a process running on this machine. | X | X |
 | `Names Outbound Requests/sec` | The number of all name lookup requests per second that are sent to another remote machine. | X | X |
@@ -88,13 +88,9 @@ For troubleshooting, you can collect the LSP debug log to track the processes an
 
 ### Log file
 
-`%systemroot%\debug\lsp.log`
+The debug log files are `%systemroot%\debug\lsp.log` and `lsp.bak`.
 
-and
-
-`lsp.bak`
-
-The default log file size is 10MB.
+The default log file size is 10 MB.
 
 ### Enable
 
@@ -137,11 +133,11 @@ Member workstations and member servers maintain a local in-memory cache of succe
 
 Domain Controllers don't maintain a cache; they store the information about domain objects locally. Domain controllers that are Global Catalogs store information about the entire forest. Domain controllers that aren't Global Catalogs forward requests to a Global Catalog if necessary. 
 
-A cache entry can be in one of three states: Valid, Stale or Expired. 
+A cache entry can be in one of three states: Valid, Stale, or Expired.
 
 - Default cache entry expiry time is 7 days.
-- Default cache size is 4096 entries beginning in Windows Server 2019 and 128 entries in previous versions.
-- Default values will suffice in a majority of environments. Although this cache has a very small memory footprint, changing the cache size should be done only if necessary. For example, you can use LSA Lookups performance counters to see if the cache %full is at 100, and whether there's a high Cache %hit rate as well as many outbound requests/sec to the Domain Controller. High %full and %hit rate counts mean that the cache may be too small.
+- Default cache size is 4,096 entries beginning in Windows Server 2019 and 128 entries in previous versions.
+- Default values suffice in most environments. Although this cache has a very small memory footprint, changing the cache size should be done only if necessary. For example, you can use LSA Lookups performance counters to see if the cache %full is at 100, and whether there's a high Cache %hit rate and many outbound requests/sec to the Domain Controller. High %full and %hit rate counts mean that the cache might be too small.
 
 The LSA name cache can be tuned using the following settings under `HKLM:\SYSTEM\CurrentControlSet\Control\Lsa`  
 
@@ -151,12 +147,12 @@ The LSA name cache can be tuned using the following settings under `HKLM:\SYSTEM
 
 ### Negative Isolated name cache
 
-Member workstations and member servers maintain local in-memory cache of isolated names that haven't and can't be resolved. See [LsaLookupNames2 function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2) for more information about Isolated names.
+Member workstations and member servers maintain local in-memory cache of isolated names that haven't and can't be resolved. For more information about Isolated names, see [LsaLookupNames2 function (ntsecapi.h)](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2).
 
-Negative Isolated name cache is not configurable. The maximum size is 8000 entries with a maximum duration of 2 hours each. Names are automatically removed from the this cache if they're resolved. Stale entries are cleaned up by a background task.
+Negative Isolated name cache isn't configurable. The maximum size is 8,000 entries with a maximum duration of 2 hours each. Resolved names are automatically removed from the cache. A background task cleans up stale entries.
 
 ## Next steps
 
 - [Configure added LSA protection](../../security/credentials-protection-and-management/configuring-additional-lsa-protection.md)
-- [Windows Logon and Authentication Technical Overview](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169029(v=ws.10))
+- [Windows Logon and Authentication Technical Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169029(v=ws.10))
 - [Security identifiers](./identity/ad-ds/manage/understand-security-identifiers)
