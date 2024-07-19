@@ -30,7 +30,7 @@ Therefore, it's important to monitor performance of LSA Name/SID lookups and adj
 
 Beginning with Windows Server 2025, you can use Local Security Authority (LSA) performance counters to monitor the performance of LSA lookups. The LSA Lookups performance counter set consists of counters that measure performance of LSA Account name and Account SID lookups. These performance counters are available for both Windows client and Windows Server. See [LsaLookupNames function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupSids function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids) for an explanation of the algorithm that's used when a name/SID needs to be translated.
 
-This article also discusses [LSA Lookup caches](), including LSA Name cache, for successfully translated names; and Negative Isolated name cache, for unresolved names.
+This article also discusses LSA Lookup Caches, including LSA Name cache, for successfully translated names; and Negative Isolated name cache, for unresolved names.
 
 LSA Lookups performance counters are accessed using Performance Monitor (`perfmon.exe`).
 
