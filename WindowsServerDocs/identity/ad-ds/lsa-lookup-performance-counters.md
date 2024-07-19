@@ -102,9 +102,9 @@ To enable LSA lookup performance counters, run the following commands:
 
 ```powershell
 
-`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgInfoLevel -Value 0x800 -Type dword -Force`
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgInfoLevel -Value 0x800 -Type dword -Force
 
-`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgTraceOptions -Value 0x1 -Type dword -Force`
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgTraceOptions -Value 0x1 -Type dword -Force
 
 ```
 
@@ -116,9 +116,9 @@ To disable LSA lookup performance counters, run the following commands:
 
 ```powershell
 
-`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgInfoLevel -Value 0x0 -Type dword -Force`
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgInfoLevel -Value 0x0 -Type dword -Force
 
-`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgTraceOptions -Value 0x0 -Type dword -Force`
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgTraceOptions -Value 0x0 -Type dword -Force
 
 ```
 
