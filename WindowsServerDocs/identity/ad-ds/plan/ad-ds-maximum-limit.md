@@ -28,9 +28,6 @@ When you reach the DNT limit on a database, you see the following error message:
 Error: Add: Operations Error. <1> Server error: 000020EF: SvcErr: DSID-0208044C, problem 5012 (DIR_ERROR), data -1076.
 ```
 
->[!NOTE]
->If you run into an issue when you delete Domain Name Server (DNS) records and the size of your Active Directory database increases rapidly on a domain controller that hosts the DNS server role, see [KB 2548145](https://support.microsoft.com/kb/2548145). This KB article describes a hotfix that changes how the DNS Server component deals with dnsNode object deletions during the garbage collection process.
-
 You can run the following command to check the *approximateHighestInternalObjectID* attribute to see the highest DNT your domain controller currently uses:
 
 ```cmd
@@ -111,7 +108,7 @@ For more information about how a domain controller creates the data structure th
 
 ## FQDN length limitations
 
-Fully qualified domain names (FQDNs) in Active Directory can't exceed 64 characters in total length, including hyphens and periods. This limitation exists because the Win3 application programming interfaces (APIs) and Group Policy objects (GPOs) stored in the SYSVOL share define the MAX_PATH value as 260 characters. For more information, see [KB 909264](/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou).
+Fully qualified domain names (FQDNs) in Active Directory can't exceed 64 characters in total length, including hyphens and periods. This limitation exists because the Win32 application programming interfaces (APIs) and Group Policy objects (GPOs) stored in the SYSVOL share define the MAX_PATH value as 260 characters. For more information, see [KB 909264](/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou).
 
 ## Filename and path limitations
 
@@ -135,7 +132,7 @@ The schema imposes the following default limits on attribute names for Active Di
 
 - Common names can only be 64 characters long, as described in [Common-Name Attribute](/windows/win32/adschema/a-cn).
 
-- The SAM-Account-Name attribute can only be 256 characters long in the schema. However, for the purpose of backward compatibility, the Active Directory limit is 20 characters long. For more information, see [SAM-Account-Name Attribute](/windows/win32/adschema/a-samaccountname).
+- The SAM-Account-Name attribute can only be 256 characters long in the schema. However, for backward compatibility reasons, the Active Directory limit for users is 20 characters. For more information, see [SAM-Account-Name Attribute](/windows/win32/adschema/a-samaccountname).
 
 ## Name length limitations for LDAP simple bind operations
 
@@ -206,7 +203,7 @@ The 1,200 limit for Windows Server 2003 is a limitation of multivalued, nonlinke
 
 We recommend that you limit the amount of domain controllers you use per domain to 1,200. This limit ensures you can reliably recover your SYSVOL in the event of a disaster.
 
-If you expect an Active Directory domain in your network to have more than 800 domain controllers, and those domain controllers host Active Directory-integrated Domain Name System (DNS) zones, we recommend you review [KB 267855](/troubleshoot/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones) for planning purposes.
+If you expect an Active Directory domain in your network to have more than 1200 domain controllers, and those domain controllers host Active Directory-integrated Domain Name System (DNS) zones, we recommend you review [KB 267855](/troubleshoot/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones) for planning purposes.
 
 ## Recommended maximum Kerberos ticket size
 
@@ -219,7 +216,7 @@ For more information about Kerberos tickets, see [Additional resources for troub
 
 ## Maximum number of non-linked attribute values
 
-The Active Directory database stores non-linked attribute values in a linked directory that must fit on a database page. As a result of this size requirement, the maximum imit of non-link attributes for an object that carries only one attribute is 3,000.
+The Active Directory database stores non-linked attribute values in a linked directory that must fit on a database page. As a result of this size requirement, the maximum imit of non-link attributes for an object that carries only one attribute is 1,200. In Windows Server 2025 forests, you can increase the limit to up to 3,000.
 
 In real-world deployments, errors begin to appear when the object approaches the non-linked attributes limit. The status code for these types of errors is 0x00000b and maps to the string "LDAP_ADMIN_LIMIT_EXCEEDED Administration limit on the server has exceeded."
 
