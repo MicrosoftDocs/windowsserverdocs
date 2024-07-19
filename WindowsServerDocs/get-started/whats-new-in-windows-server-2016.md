@@ -34,6 +34,35 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - [Windows Container](/virtualization/windowscontainers/) support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For more information, see [Containers: Docker, Windows, and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
 
+- Hyper-V is now compatible with Connected Standby. WHen you install the Hyper-V role on a computer that uses the Always On/Always Connected (AOAC) power model, you can now configure it to use the Connected Standby power state.
+
+- Discrete device assignment lets you give a virtual machine (VM) direct and exclusive access to certain PCIe hardware devices. This feature bypasses the Hyper-V virtualization stack, which results in faster access. For more information, see  [Discrete device assignment](../virtualization/hyper-v/System-requirements-for-Hyper-V-on-Windows.md#discrete-device-assignment) and [Discrete Device Assignment — Description and background](https://blogs.technet.microsoft.com/virtualization/2015/11/19/discrete-device-assignment-description-and-background/).
+
+- Hyper-V now supports BitLocker drive encryption for operating system disks in generation 1 VMs. This protection method replaces virtual Trusted Platform Modules (TPMs), which are only available in generation 2 VMs. To decrypt the disk and start the VM, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the VM's guardians. Key storage requires a version 8 VM. For more information, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+
+- Host resource protection prevents VMs from using too many system resources by tracking excessive levels of activity. When monitoring detects an unusually high activity level in a VM, it throttles the amount of resources the VM consumes. You can enable this feature by running the [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor) cmdlet in PowerShell.
+
+- You can now use hot add or remove to add or remove network adapters while the VM is running without downtime in generation 2 VMs running either Linux or Windows operating systems. You can also adjust how much memory is assigned to a VM while it's running even if you haven't enabled Dynamic Memory on both generation 1 and 2 VMs running Windows Server 2016 and later or Windows 10 and later.
+
+- Hyper-V Manager now supports the following features:
+
+  - Alternate credentials, which let you use a different set of credentials in Hyper-V Manager when connecting to another Windows Server 2016 or WIndows 10 remote host. You can also save these credentials to make signing in easier.
+  
+  - You can now manage Hyper-V on machines running Windows Server 2012 and 2012 R2, and Windows 8 and 8.1.
+
+  - Hyper-V Manager now communicates with remote Hyper-V hosts using the WS-MAN protocol, which permits CredSSP, Kerberos, and NTLM authentication. When you use CredSSP to connect to a remote Hyper-V host, you can perform a live migration without enabling constrained delegation in Active Directory. WS-MAN also makes it easier to enable hosts for remote management. WS-MAN connects over port 80, which is open by default.
+
+- Updates to integration services for Windows guests are now distributed through Windows Update. Service providers and private cloud hosts can give tenants who own the VMs control over applying updates. Windows tenants can now upgrade their VMs with all of the latest updates through a single method. For more information about how Linux tenants can use integration services, see [Linux and FreeBSD Virtual Machines on Hyper-V](../virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).
+
+    > [!IMPORTANT]
+    > Hyper-V for Windows Server 2016 no longer includes the vmguest.iso image file because it's no longer required.
+
+- Linux operating systems running on generation 2 VMs can now boot with the Secure Boot option enabled. The OSes that support Secure Boot on Windows Server 2016 hosts include Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later. Before you boot the VM for the first time, you must configure it to use the Microsoft UEFI Certificate Authority in either Hyper-V Manager, Virtual Machine Manager, or by running the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) cmdlet in PowerShell.
+
+- Generation 2 VMs and Hyper-V hosts can now use significantly more memory and virtual processors. You can also configure hosts with more memory and virtual processors than previous versions. These changes support scenarios such as running large in-memory databases for online transaction processing (OLTP) and data warehousing (DW) for e-commerce. 
+
+- The Nested Virtualization feature lets you use a VM as a Hyper-V host and create VMs within the virtualized host. 
+
 ### Nano Server
 
 What's New in [Nano Server](getting-started-with-nano-server.md). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality and support for different Windows Server editions.

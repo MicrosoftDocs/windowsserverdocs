@@ -94,21 +94,23 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 
 ### Shielded Virtual Machines improvements
 
-- **Branch office improvements**
+We made the following improvements to Shielded Virtual Machines.
 
-    You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by using the new [fallback HGS](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
+#### Branch office improvements
 
-    Even if the HGS can't be reached, offline mode will allow you to continue to start up your shielded VMs. Offline mode will allow you to start your VMs as long as the VM has started successfully once, and the host's security configuration hasn't changed.
+You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by using the new [fallback HGS](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
 
-- **Troubleshooting improvements**
+Even if you can't reach the HGS, offline mode lets you continue to start up your shielded VMs. Offline mode also lets you start your VMs as long as the VM has started successfully once and the host's security configuration hasn't changed.
 
-    We've also made it easier to [troubleshoot your shielded virtual machines](../security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are useful if you've lost network connectivity to your VM and need to update its configuration to restore access.
+#### Troubleshooting improvements
 
-    These features don't need to be configured, and they become available automatically when a shielded VM is placed on a Hyper-V host running Windows Server version 1803 or later.
+We also made it easier to [troubleshoot your shielded virtual machines](../security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are useful when you lose network connectivity to your VM and need to update its configuration to restore access.
 
-- **Linux support**
+You don't need to configure these features because they become automatically available when you place a shielded VM on a Hyper-V host running Windows Server version 1803 or later.
 
-    If you run mixed-OS environments, Windows Server 2019 now supports running Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise Server inside shielded virtual machines.
+#### Linux support
+
+If you run mixed-OS environments, Windows Server 2019 now supports running Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise Server inside shielded virtual machines.
 
 ### HTTP/2 for a faster and safer Web
 
