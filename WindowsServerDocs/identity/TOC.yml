@@ -447,6 +447,8 @@
         href: ad-ds/enable-32K-pages-optional-feature.md
       - name: Monitoring
         items:
+        - name: LSA performance counters
+          href: ad-ds/lsa-lookup-performance-counters.md
         - name: DC Locator client performance counters
           href: ad-ds/dc-locator-performance-counters.md
         - name: LDAP client performance counters
