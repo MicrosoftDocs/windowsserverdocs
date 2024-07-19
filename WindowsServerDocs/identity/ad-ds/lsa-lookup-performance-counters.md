@@ -30,8 +30,6 @@ Therefore, it's important to monitor performance of LSA Name/SID lookups and adj
 
 Beginning with Windows Server 2025, you can use Local Security Authority (LSA) performance counters to monitor the performance of LSA lookups. The LSA Lookups performance counter set consists of counters that measure performance of LSA Account name and Account SID lookups. These performance counters are available for both Windows client and Windows Server. See [LsaLookupNames function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupSids function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids) for an explanation of the algorithm that's used when a name/SID needs to be translated.
 
-LSA enforces security policies, handling user logins, authentication, and authorization processes. LSA verifies credentials when users attempt to access the system based on configured policies. LSA is also used to manage password changes and create access tokens that define permissions for available resources and operations.
-
 This article also discusses [LSA Lookup caches](), including LSA Name cache, for successfully translated names; and Negative Isolated name cache, for unresolved names.
 
 LSA Lookups performance counters are accessed using Performance Monitor (`perfmon.exe`).
@@ -42,9 +40,9 @@ LSA Lookups performance counters measure the performance of the LSA lookup proce
 
 There are three categories of LSA Lookups performance counters:
 
-- Name lookups, which are name counters you can use to measure Name translation using the `LsaLookupNames` cmdlet or an equivalent cmdlet.
+- Name lookups, which are name counters you can use to measure Name translation using the LsaLookupNames and LsaLookupNames2 functions. See [LsaLookupNames function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames) and [LsaLookupNames2 function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupnames2) for more information.
 - The SID/Name pair Cache, which you can use to measure the efficiency and size of the name/SID pair cache. Domain controllers don't maintain a name/SID cache. These counters are valid on only a member server or workstation.
-- SID lookups, which include SID counters you can use to measure SID translation using the `LsaLookup   s` cmdlet or an equivalent.
+- SID lookups, which include SID counters you can use to measure SID translation using the LsaLookupSids and LsaLookupSids2 functions. See [LsaLookupSids function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids) and [LsaLookupSids2 function (ntsecapi.h)](https://learn.microsoft.com/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids2) for more information.
 
 The following table shows the counters that can be added from the LSA Lookups performance counter set and their description, including whether each counter relates to DC, non-DC, or both. Non-DC signifies a member server or member workstation.
 
@@ -62,27 +60,27 @@ The following table shows the counters that can be added from the LSA Lookups pe
 | `Names Inbound Requests/sec` | The number of all name lookup requests per second that are received from another remote machine. Received from another remote machine or a process running on this machine. | X | X |
 | `Names Outbound Requests/sec` | The number of all name lookup requests per second that are sent to another remote machine. | X | X |
 | `Names Primary Domain Requests/sec` | The number of name lookup requests per second that are sent to the primary domain. The primary domain is the domain your machine is a member of. This counter is a subset of the Names Outbound Requests/sec counter.|  | X |
-| `Names Primary Domain Time` | Measures the time it takes to complete a name lookup request that is sent to a domain controller in the primary domain. The primary domain is the domain your machine is a member of. |  | X |
-| `Names Remote Request Time` | Measures the time it takes to complete a name lookup request that is received from another remote machine. | X | X |
-| `Names Trusted Domain Request Time` | Measures the time it takes to complete a name lookup request that is sent to a trusted domain. This counter is a subset of the Names Remote Request time counter | X |  |
+| `Names Primary Domain Time` | Measures the average time in seconds to complete a name lookup request that is sent to a domain controller in the primary domain. The primary domain is the domain your machine is a member of. |  | X |
+| `Names Remote Request Time` | Measures the average time in seconds to complete a name lookup request that is received from another remote machine. | X | X |
+| `Names Trusted Domain Request Time` | Measures the average time in seconds to complete a name lookup request that is sent to a trusted domain. This counter is a subset of the Names Remote Request time counter | X |  |
 | `Names Trusted Domain Requests/sec` | The number of name lookup requests per second that are sent to a trusted domain. This counter is a subset of the Names Outbound Requests/sec counter| X |  |
 | `Names Unresolved/sec` | The number of unresolved name lookup requests per second. For example, when a name lookup can't be found. | X | X |
 | `Names Xforest Requests/sec` | The number of name lookup requests per second that are sent to another forest. | X |  |
-| `Names Xforest Time` | Measures the time it takes to complete a name lookup request that is sent to another forest. | X |  |
+| `Names Xforest Time` | Measures the average time in seconds to complete a name lookup request that is sent to another forest. | X |  |
 | `SIDs Cache % Full` | The percentage of the SID-name pair cache in use during a SID lookup. |  | X |
 | `SIDs Cache % Hit` | The percentage of SID lookups that are resolved from the cache. If this counter is low and the cache is full, consider increasing the cache size. |  | X |
 | `SIDs Completion Time` | Measures how long it takes to complete a SID lookup request. | X | X |
 | `SIDs Errors/sec` | The number of errors per second that occur during SID lookup requests. For example, if a server is busy, it might not be able to respond to a SID lookup request. | X | X |
 | `SIDs Inbound Requests/sec` | The number of all SID lookup requests per second that are received from another remote machine or a process running on this machine.| X | X |
-| `SIDS Outbound Requests/sec` | The number of all SID lookup requests per second that are sent to another remote machine. | X | X |
-| `SIDS Primary Domain Request Time` | Measures the time it takes to complete a SID lookup request that is sent to the primary domain. The primary domain is the domain your machine is a member of. Counter is a subset of SIDs Outbound Requests/sec |  | X |
-| `SIDS Primary Domain Requests/sec` | The number of SID lookup requests per second that are sent to the primary domain. The primary domain is the domain your machine is a member of. Counter is a subset of SIDs Outbound Requests/sec |  | X |
-| `SIDS Remote Request Time` | Measures the time it takes to complete a SID lookup request that is received from another remote machine. | X | X |
-| `SIDS Trusted Domain Request Time` | Measures the time it takes to complete a SID lookup request that is sent to a trusted domain. Counter is a subset of SIDs Outbound Requests/sec | X |  |
-| `SIDS Trusted Domain Requests/sec` | The number of SID lookup requests per second that are sent to a trusted domain. | X |  |
-| `SIDS Unresolved/sec` | The number of unresolved SID lookup requests per second. For example, when a SID lookup couldn't be found. | X | X |
-| `SIDS Xforest Request Time` | Measures the time it takes to complete a SID lookup request that is sent to another forest. | X |  |
-| `SIDS Xforest Requests/sec` | The number of SID lookup requests per second that are sent to another forest. | X |  |
+| `SIDs Outbound Requests/sec` | The number of all SID lookup requests per second that are sent to another remote machine. | X | X |
+| `SIDs Primary Domain Request Time` | Measures the average time in seconds to complete a SID lookup request that is sent to the primary domain. The primary domain is the domain your machine is a member of. Counter is a subset of SIDs Outbound Requests/sec |  | X |
+| `SIDs Primary Domain Requests/sec` | The number of SID lookup requests per second that are sent to the primary domain. The primary domain is the domain your machine is a member of. Counter is a subset of SIDs Outbound Requests/sec |  | X |
+| `SIDs Remote Request Time` | Measures the average time in seconds to complete a SID lookup request that is received from another remote machine. | X | X |
+| `SIDs Trusted Domain Request Time` | Measures the average time in seconds to complete a SID lookup request that is sent to a trusted domain. Counter is a subset of SIDs Outbound Requests/sec | X |  |
+| `SIDs Trusted Domain Requests/sec` | The number of SID lookup requests per second that are sent to a trusted domain. | X |  |
+| `SIDs Unresolved/sec` | The number of unresolved SID lookup requests per second. For example, when a SID lookup couldn't be found. | X | X |
+| `SIDs Xforest Request Time` | Measures the average time in seconds to complete a SID lookup request that is sent to another forest. | X |  |
+| `SIDs Xforest Requests/sec` | The number of SID lookup requests per second that are sent to another forest. | X |  |
 
 ## LSA Lookup debug log
 
@@ -101,24 +99,30 @@ The default log file size is 10MB.
 ### Enable
 
 To enable LSA lookup performance counters, run the following commands:
+
 ```powershell
 
-`Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgInfoLevel -Value 0x800 -Type dword -Force`
-`Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgTraceOptions -Value 0x1 -Type dword -Force`
+`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgInfoLevel -Value 0x800 -Type dword -Force`
+
+`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgTraceOptions -Value 0x1 -Type dword -Force`
+
+```
 
 No reboot is necessary.
-```
 
 ### Disable
 
 To disable LSA lookup performance counters, run the following commands:
 
 ```powershell
-`Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgInfoLevel -Value 0x0 -Type dword -Force`
-`Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LspDbgTraceOptions -Value 0x0 -Type dword -Force`
+
+`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgInfoLevel -Value 0x0 -Type dword -Force`
+
+`Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name LspDbgTraceOptions -Value 0x0 -Type dword -Force`
+
+```
 
 No reboot is necessary.
-```
 
 > [!NOTE]
 > You may need a larger log size in a busier environment. You can specify log size using the last 4 bits of the DWORD in LsapDbgTraceOptions. The value should be specified in MBs in hexadecimal. For example, to set the log file size to 50MB, set LspDbgTraceOptions to 0x00320001. Setting the file size to a very large value might make it impossible to open and read using some text editors.
