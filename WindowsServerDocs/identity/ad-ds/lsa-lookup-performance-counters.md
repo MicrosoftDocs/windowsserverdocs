@@ -155,4 +155,4 @@ Negative Isolated name cache isn't configurable. The maximum size is 8,000 entri
 
 - [Configure added LSA protection](../../security/credentials-protection-and-management/configuring-additional-lsa-protection.md)
 - [Windows Logon and Authentication Technical Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169029(v=ws.10))
-- [Security identifiers](./identity/ad-ds/manage/understand-security-identifiers)
+- [Security identifiers](manage/understand-security-identifiers.md)
