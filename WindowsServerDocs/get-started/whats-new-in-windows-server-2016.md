@@ -59,9 +59,21 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - Linux operating systems running on generation 2 VMs can now boot with the Secure Boot option enabled. The OSes that support Secure Boot on Windows Server 2016 hosts include Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later. Before you boot the VM for the first time, you must configure it to use the Microsoft UEFI Certificate Authority in either Hyper-V Manager, Virtual Machine Manager, or by running the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) cmdlet in PowerShell.
 
-- Generation 2 VMs and Hyper-V hosts can now use significantly more memory and virtual processors. You can also configure hosts with more memory and virtual processors than previous versions. These changes support scenarios such as running large in-memory databases for online transaction processing (OLTP) and data warehousing (DW) for e-commerce. 
+- Generation 2 VMs and Hyper-V hosts can now use significantly more memory and virtual processors. You can also configure hosts with more memory and virtual processors than previous versions. These changes support scenarios such as running large in-memory databases for online transaction processing (OLTP) and data warehousing (DW) for e-commerce. For more information, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). Learn more about version compatibility and supported maximum configurations at [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](./deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md) and [Plan for Hyper-V scalability in Windows Server 2016](./plan/plan-hyper-v-scalability-in-windows-server.md).
 
-- The Nested Virtualization feature lets you use a VM as a Hyper-V host and create VMs within the virtualized host. 
+- The Nested Virtualization feature lets you use a VM as a Hyper-V host and create VMs within the virtualized host. You can use this feature to build development and test environments running at least Windows Server 2016 or Windows 10 and an Intel VT-x processor. For more information, see [Run Hyper-V in a Virtual Machine with Nested Virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
+
+- You can now set up production checkpoints to comply with support policies for VMs running production workloads. These checkpoints run on backup technology inside the guest device instead of a saved state. Windows VMs use the Volume Snapshot Service (VSS), while Linux VMs flush file system buffers to create checkpoints that are consistent with the file system. You can still use checkpoints based on save states by using standard checkpoints instead. For more information, see [Choose between standard or production checkpoints in Hyper-V](manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md).
+
+  > [!IMPORTANT]
+  > New VMs use production checkpoints as the default.
+
+- You can now run rolling cluster upgrades to upgrade your Window Server 2012 R2 Hyper-V cluster to Windows Server 2016 or 2019 without any downtime. For more information, see [Cluster Operating System Rolling Upgrade](/windows-server/failover-clustering/Cluster-Operating-System-Rolling-Upgrade).
+
+  > [!NOTE]
+  > Hyper-V on Windows 10 doesn't support failover clustering.
+
+- You can now resize shared virtual hard disks (.vhdx files) for guest clustering wihtout downtime. You can also use guest clusters to protect shared virtual hard disks by using Hyper-V Replica for disaster recovery.
 
 ### Nano Server
 
