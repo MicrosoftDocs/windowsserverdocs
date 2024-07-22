@@ -131,7 +131,7 @@ Use this article to compare the operating system locks and limits across the dif
 
 # [Version Differences](#tab/version-differences)
 
-| Locks and limits | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Locks and limits | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 |--|--|--|
 | Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
 
