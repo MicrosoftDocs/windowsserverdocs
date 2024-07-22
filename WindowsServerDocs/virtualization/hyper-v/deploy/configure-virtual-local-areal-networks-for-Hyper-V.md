@@ -4,7 +4,7 @@ description: Learn how to configure a virtual local area network (VLAN) for use 
 ms.topic: article
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
 ms.author: wscontent
-author: BenjaminArmstrong
+author: robinharwood
 ms.date: 10/03/2023
 ---
 # Configure virtual local area networks for Hyper-V

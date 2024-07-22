@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 06/02/2021
+ms.date: 7/3/2024
 ---
 
 # Compare the clients: features

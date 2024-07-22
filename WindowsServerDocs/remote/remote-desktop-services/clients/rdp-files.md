@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: robinharwood
 manager: femila
 ms.author: roharwoo
-ms.date: 11/17/2022
+ms.date: 7/3/2024
 ---
 
 # Supported RDP properties with Remote Desktop Services

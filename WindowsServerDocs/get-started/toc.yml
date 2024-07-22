@@ -1,3 +1,4 @@
+items:
 - name: Get started
   expanded: true
   items:
@@ -11,8 +12,8 @@
     items:
     - name: What's new in Windows Server
       items:
-      - name: Windows Server Insiders Preview
-        href: whats-new-windows-server-insiders-preview.md  
+      - name: Windows Server 2025
+        href: whats-new-windows-server-2025.md  
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
       - name: Windows Server 2019
@@ -22,17 +23,13 @@
     - name: Servicing channels comparison
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
-      items:
-      - name: Azure Edition
-        href: azure-edition.md
-      - name: Windows Server Annual Channel for Containers
-        href: annual-channel-for-containers.md
-      - name: Windows Server 2022
-        href: editions-comparison-windows-server-2022.md
-      - name: Windows Server 2019
-        href: editions-comparison-windows-server-2019.md
-      - name: Windows Server 2016
-        href: editions-comparison-windows-server-2016.md
+      href: editions-comparison.md
+    - name: Locks and limits
+      href: locks-limits.md
+    - name: Azure Edition
+      href: azure-edition.md
+    - name: Windows Server Annual Channel for Containers
+      href: annual-channel-for-containers.md
     - name: Hardware requirements
       href: hardware-requirements.md
     - name: Features removed or no longer developed
