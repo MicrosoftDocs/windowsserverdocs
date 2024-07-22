@@ -73,7 +73,14 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
   > [!NOTE]
   > Hyper-V on Windows 10 doesn't support failover clustering.
 
-- You can now resize shared virtual hard disks (.vhdx files) for guest clustering wihtout downtime. You can also use guest clusters to protect shared virtual hard disks by using Hyper-V Replica for disaster recovery.
+- You can now resize shared virtual hard disks (.vhdx files) for guest clustering without downtime. You can also use guest clusters to protect shared virtual hard disks by using Hyper-V Replica for disaster recovery. You can only use this feature on collections in a guest cluster that you've enabled replication for using the Windows Manager Interface (WMI) UI.<!---Is this right? The phrasing in the original was a bit confusing.--> For more information, see [Msvm_CollectionReplicationService class](/previous-versions/windows/desktop/clushyperv/msvm-collectionreplicationservice) and [Virtual Hard Disk Sharing Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281956(v=ws.11)).
+
+- You can now back up single VMs by taking a screenshot using [Hyper-V WMI v2 provider](/windows/win32/hyperv_v2/windows-virtualization-portal).
+
+- You can now create shielded Hyper-V VMs that include features that prevent Hyper-V admins on the host or malware from inspecting, tampering with, or stealing data from the shielded VM state. Data and states are encrypted, so administrators can't see video output and disks. You can also restrict the VMs to only run on hosts that a Host Guardian Server has determined are healthy and trustworthy. For more information, see [Guarded Fabric and Shielded VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md).
+
+  > [!NOTE]
+  > Shielded VMs are compatible with Hyper-V Replica. To replicate a shielded virtual machine, you must authorize the host you want to replicate to run that shielded VM.
 
 ### Nano Server
 
