@@ -4,12 +4,14 @@ description: Learn how to set up delegated Managed Service Accounts (dMSA) in Wi
 ms.topic: how-to
 ms.author: alalve
 author: mariamgewida
-ms.date: 07/18/2024
+ms.date: 07/22/2024
 ---
 
 # Setting up delegated Managed Service Accounts
 
 A delegated Managed Service Account (dMSA) is an Active Directory (AD) account that enables secure management of credentials. Unlike traditional service accounts, dMSAs don't require manual management of passwords as AD automatically manages the password, ensuring that it remains secure. Additionally, dMSAs can be delegated specific permissions to access resources in the domain, providing an efficient way to manage access control. Setting up a dMSA is currently only available on devices running Windows Server 2025 (Preview).
+
+DMSA is a more secure and manageable approach to service account management than traditional service accounts. It provides unique, frequently changed passwords and more granular access control, which reduces security risks. DMSA also provides better visibility and logs of service account activity, which can help with auditing and compliance. By migrating critical services to dMSA, organizations can ensure that these services are managed in a secure and compliant manner.
 
 ## Prerequisites
 
