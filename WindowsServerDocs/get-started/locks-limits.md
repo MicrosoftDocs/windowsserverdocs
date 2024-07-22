@@ -4,7 +4,7 @@ description: In this article, you can compare the operating system locks and lim
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 02/28/2024
+ms.date: 07/22/2024
 zone_pivot_groups: windows-os-version
 ---
 
