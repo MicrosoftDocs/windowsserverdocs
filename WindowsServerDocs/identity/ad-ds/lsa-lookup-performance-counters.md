@@ -34,7 +34,7 @@ This article also discusses LSA Lookup Caches, including LSA Name cache, for suc
 
 LSA Lookups performance counters are accessed using Performance Monitor (`perfmon.exe`).
 
-## LSA Lookups performance counters
+## Performance counters
 
 LSA Lookups performance counters measure the performance of the LSA lookup process running on the client or server machine.
 
