@@ -2,7 +2,7 @@
 title: LSA Lookups performance counters in Windows and Windows Server
 description: Learn about Local Security Authority (LSA) Lookups performance counters
 ms.topic: conceptual
-author: gswashington
+author: lindakup
 ms.author: wscontent
 ms.date: 07/31/2024
 
@@ -19,7 +19,7 @@ Excessive Local Security Authority (LSA) Account Name and Account security ident
 
 The Local Security Authority (LSA), which resides within the Local Security Authority Security Service (LSASS) process, validates users for local and remote sign-ins and enforces local security policies. LSA performs SID and Name translation or lookups as well as the other functions such as handling user logins, authentication, and authorization processes. LSA verifies credentials when users attempt to access the system based on configured policies. LSA is also used to manage password changes and create access tokens that define permissions for available resources and operations.
 
-The top causes of excessive LSA Name or SID lookups usually include:
+The top causes of excessive LSA Name or SID Lookups usually include:
 
 - The client LSA Name or SID Lookup Cache is too small, causing many name lookups to be sent to the domain controller repeatedly.
 - An application sending repeated lookup requests that don’t resolve, causing them to be sent to the domain controller repeatedly.
@@ -34,7 +34,7 @@ This article also discusses LSA Lookup Caches, including LSA Name cache, for suc
 
 LSA Lookups performance counters are accessed using Performance Monitor (`perfmon.exe`).
 
-## LSA Lookups performance counters
+## Performance counters
 
 LSA Lookups performance counters measure the performance of the LSA lookup process running on the client or server machine.
 
