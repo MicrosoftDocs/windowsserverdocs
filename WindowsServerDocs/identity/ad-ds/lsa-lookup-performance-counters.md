@@ -2,7 +2,7 @@
 title: LSA Lookups performance counters in Windows and Windows Server
 description: Learn about Local Security Authority (LSA) Lookups performance counters
 ms.topic: conceptual
-author: gswashington
+author: lindakup
 ms.author: wscontent
 ms.date: 07/31/2024
 
@@ -34,7 +34,7 @@ This article also discusses LSA Lookup Caches, including LSA Name cache, for suc
 
 LSA Lookups performance counters are accessed using Performance Monitor (`perfmon.exe`).
 
-## LSA Lookups performance counters
+## Performance counters
 
 LSA Lookups performance counters measure the performance of the LSA lookup process running on the client or server machine.
 
