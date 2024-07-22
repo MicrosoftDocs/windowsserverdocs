@@ -52,7 +52,9 @@ You must install the Failover Clustering feature on every server that you want t
 
 1. Under **All connections**, select **Add**.
 
-1. In the **Add or create resources** panel, under **Choose the cluster type**, select **Windows Server**.
+1. In the **Add or create resources** panel, under **Server clusters**, select **Create new**.
+
+1. under **Choose the cluster type**, select **Windows Server**.
 
 1. Under **Select the workload type**, select **Virtual machines**.
 
@@ -62,7 +64,7 @@ You must install the Failover Clustering feature on every server that you want t
 
 1. In **Check the prerequisites**, make sure your deployment meets the requirements for servers and networks, then select **Next**.
 
-1. In **Add servers**, enter a username and password for the administrator account for connecting ot the servers.
+1. In **Add servers**, enter a username and password for the administrator account for connecting to the servers.
 
 1. Next, enter the computer name, IP address, or fully qualified domain name (FQDN) for each server you want to add, then select **Add**.
 
