@@ -19,7 +19,7 @@ Follow the steps in this article to perform your own live migration.
 
 The following prerequisites must be met in order to live migrate hosts using workgroup clusters:
 
-- A workgroup cluster with two or more nodes is up and running.
+- A [workgroup cluster](/windows-server/failover-clustering/create-workgroup-cluster) with two or more nodes is up and running.
 - A local user account exists on each server node with an identical username and password.
 
 ## Do a live migration with Hyper-V workgroup clusters
@@ -34,23 +34,6 @@ In the next sections, you'll complete the following steps:
 ### Step 1: Install the Hyper-V role
 
 The Hyper-V role must be installed on the source and destination servers and set up for live migrations. Install this role before continuing.
-
-#### 1.1 Enable Nested Virtualization on the source host.
-
-Nested Virtualization allows you to run Hyper-V inside of a Hyper-V virtual machine. [Nested Virtualization must first be enabled](/virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization) before Hyper-V can be installed on a virtual machine.
-
-To enable Nested Virtualization:
-
-1. From the Hyper-V manager on the host machine, turn off the virtual machine you wish to enable nested virtualization for.
-
-1. With the virtual machine turned off, open a PowerShell session as an administrator and run the following command.
-    ```powershell
-    Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
-    ```
-
-1. Confirm that the command was successful and repeat the same process for the other virtual machines that are part of the workgroup cluster.
-
-#### 1.2 Install the Hyper-V role
 
 Hyper-V provides the services that you can use to create and manage virtual machines. [Hyper-V may be installed in many ways](/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server). This section describes how to install the role using either PowerShell or the Server Manager.
 
@@ -93,6 +76,9 @@ Hyper-V provides the services that you can use to create and manage virtual mach
 
 ---
 
+>[!NOTE]
+>If you're unable to install the Hyper-V role, you might need to enable Nested Virtualization. See how to [enable Nested Virtualization](/virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization) to allow Hyper-V to run inside of a Hyper-V virtual machine.
+
 ### Step 2: Create a new virtual machine and add it to the workgroup cluster
 
 Add a new Hyper-V virtual machine as a role to your workgroup cluster in order to do a live migration between hosts.
@@ -131,7 +117,7 @@ Add a new Hyper-V virtual machine as a role to your workgroup cluster in order t
 
 ### Step 3: Set up the source and destination computers for live migration
 
-In this step, set up your source and host destination virtual machines to enable live migrations.
+In this step, set up your source and host destination virtual machines to enable live migrations. Here you can also specify live migration settings, such as how many migrations to allow at the same time.
 
 #### [PowerShell](#tab/powershell)
 
@@ -139,19 +125,14 @@ In this step, set up your source and host destination virtual machines to enable
 
 1. Open a PowerShell session as an Administrator.
 
-1. First, use the [Enable-VMMigration](/powershell/module/hyper-v/enable-vmmigration) cmdlet to configure live migration on the virtual machine host.
+1. First, use the [Enable-VMMigration](/powershell/module/hyper-v/enable-vmmigration) cmdlet to configure live migration on the Hyper-V virtual machine host.
     ```powershell
     Enable-VMMigration
     ```
 
-1. Next, use the [Set-VMMigrationNetwork](/powershell/module/hyper-v/set-vmmigrationnetwork) cmdlet to allow incoming migration traffic on a specific network.
+1. Use the [Set-VMHost](/powershell/module/hyper-v/set-vmhost) cmdlet to configure the local Hyper-V host. The following command will configure the virtual machine to allow 10 simultaneous live migrations and storage migrations. Change these values to the number of simultaneous live and storage migrations your setup will allow.
     ```powershell
-    Set-VMMigrationNetwork <IP_ADDRESS>
-    ```
-
-1. Finally, use the [Set-VMHost](/powershell/module/hyper-v/set-vmhost) cmdlet to configure a Hyper-V host.
-    ```powershell
-    Set-VMHost -ComputerName <HOSTNAME>
+    Set-VMHost -MaximumVirtualMachineMigrations 10 -MaximumStorageMigrations 10
     ```
 
 1. Repeat the steps for the other server node.
@@ -170,9 +151,15 @@ In this step, set up your source and host destination virtual machines to enable
 
 1. Under **Incoming live migrations**, if you want to use specific network connections to accept live migration traffic, select **Add** to type the IP address information. Otherwise, select **Use any available network for live migration**. Select **OK**.
 
-1. Review the details. Select **OK**.
+1. Review the details. Apply any changes and select **OK**.
 
-1. Repeat the steps in the Hyper-V Manager for the other server node.
+1. In the **Actions** pane, select **Hyper-V Settings...**, and then **Storage Migrations**.
+
+1. Under **Simultaneous storage migrations**, specify the number of simultaneous storage migrations you'd like to enable, if you don't want to use the default of 2.
+
+1. Apply any changes and select **OK**.
+
+1. Repeat the steps to specify the number of live and storage migrations for the other server node.
 
 ---
 
