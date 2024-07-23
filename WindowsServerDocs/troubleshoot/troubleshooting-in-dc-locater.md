@@ -8,7 +8,16 @@ ms.author: wscontent
 ---
 # Troubleshooting in DC Locater
 
-To troubleshoot the domain locator process:
+> [!IMPORTANT]
+> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
+Authentication is the first step in virtually all functional scenarios in an Active Directory enterprise environment. Authentication, in turn, can't occur unless the client can first communicate with an Active Directory domain controller.
+
+DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments. It may be necessary at times to perform troubleshooting when using Active Directory domain controller location algorithm (DC locater).
+
+## Troubleshooting steps
+
+To troubleshoot the DC Locater domain locator process:
 
 1. Check Event Viewer on both the client and the server. The event logs may contain error messages indicating that there's a problem. To view Event Viewer, select **Start**, point to **Programs** > **Administrative Tools**, and then select **Event Viewer**. Check the System log on both the client and the server. Also check the Directory Service logs on the server and DNS logs on the DNS server.
 1. Check the IP configuration by using the `ipconfig /all` command at a command prompt.
