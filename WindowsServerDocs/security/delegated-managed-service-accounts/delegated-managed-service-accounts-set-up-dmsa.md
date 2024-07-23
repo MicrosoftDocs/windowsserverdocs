@@ -9,9 +9,9 @@ ms.date: 07/22/2024
 
 # Setting up delegated Managed Service Accounts
 
-A delegated Managed Service Account (dMSA) is an Active Directory (AD) account that enables secure management of credentials. Unlike traditional service accounts, dMSAs don't require manual management of passwords as AD automatically manages the password, ensuring that it remains secure. Additionally, dMSAs can be delegated specific permissions to access resources in the domain, providing an efficient way to manage access control. Setting up a dMSA is currently only available on devices running Windows Server 2025 (Preview).
+A delegated Managed Service Account (dMSA) is an Active Directory (AD) account that provides secure and efficient management of credentials. Unlike traditional service accounts, dMSAs don't require manual password management since AD automatically takes care of it. With dMSAs, specific permissions can be delegated to access resources in the domain, which reduces security risks and provides better visibility and logs of service account activity.
 
-DMSA is a more secure and manageable approach to service account management than traditional service accounts. It provides unique, frequently changed passwords and more granular access control, which reduces security risks. DMSA also provides better visibility and logs of service account activity, which can help with auditing and compliance. By migrating critical services to dMSA, organizations can ensure that these services are managed in a secure and compliant manner.
+Setting up a dMSA is currently only available on devices running Windows Server 2025 (Preview). DMSA is a more secure and manageable approach to service account management compared to traditional service accounts. By migrating critical services to dMSA, organizations can ensure that these services are managed in a secure and compliant manner. DMSA provides a higher level of security by offering unique and frequently rotated passwords, which reduces the likelihood of unauthorized access and improves overall security.
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ The following instructions allow users to create a new dMSA without migrating fr
    New-ADServiceAccount @params
    ```
 
-1. Grant permission to the specific device to retrieve the password for the service account in AD.
+1. Grant permission to the specific device to retrieve the password for the service account in AD:
 
    ```powershell
    $params = @{
