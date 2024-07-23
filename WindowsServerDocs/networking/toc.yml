@@ -287,8 +287,6 @@
   - name: IP Address Management (IPAM)
     href: technologies/ipam/ipam-top.md
     items:
-    - name: What's new in IPAM
-      href: technologies/ipam/What-s-New-in-IPAM.md
     - name: Manage IPAM
       href: technologies/ipam/Manage-IPAM.md
       items:

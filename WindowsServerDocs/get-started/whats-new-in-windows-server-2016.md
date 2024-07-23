@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 07/10/2024
+ms.date: 07/23/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -295,15 +295,33 @@ IPAM has the following updates:
 
 - Enhanced IP address management. IPAM has improved capabilities for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.
 
-- Enhanced DNS service management. IPAM supports DNS resource record, conditional forwarder, and DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers.
+- You can now run the `Find-IpamFreeSubnet` cmdlet to find available subnets for allocation. This function doesn't allocate the subnets, only reports their availability. However, you can pipe the cmdlet output to the `Add-IpamSubnet` cmdlet to create a subnet. For more information, see [Find-IpamFreeSubnet](/powershell/module/ipamserver/Find-IpamFreeSubnet).
 
-- Integrated DNS, DHCP, and IP address (DDI) management. Several new experiences and integrated lifecycle management operations are enabled, such as visualizing all DNS resource records that pertain to an IP address, automated inventory of IP addresses based on DNS resource records, and IP address lifecycle management for both DNS and DHCP operations.
+- You can now run the `Find-IpamFreeRange` cmdlet to find available IP address ranges within an IP block, prefix length, and number of requested subnets. This cmdlet doesn't allocate the IP address range, only reports their availability. However, you can pipe the output into the `AddIpamRange` cmdlet to create the range. For more information, see [Find-IpamFreeRange](/powershell/module/ipamserver/Find-IpamFreeRange).
 
-- Multiple Active Directory Forest support. You can use IPAM to manage the DNS and DHCP servers of multiple Active Directory forests when there's a two-way trust relationship between the forest where you installed IPAM and each of the remote forests.
+- Enhanced DNS service management:
 
-- With Windows PowerShell's Role Based Access Control (RBAC) capabilities, you have the ability to define access scopes for IPAM objects through the command-line.
+  - DNS resource records collection for non-DNSSEC DNS servers.
+  
+  - Configuring properties and operations on all types of non-DNSSEC Resource Records.
+  
+  - DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers. You can manage all types of DNS zones, including Primary, Secondary, and Stub zones.
+  
+  - Trigger tasks on Secondary and STub zones regardless of whether they're forward or reverse lookup zones.
+  
+  - Role-based access control for supported DNS configurations for records and zones.
 
-For more information, see [What's New in IPAM](../networking/technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](../networking/technologies/ipam/Manage-IPAM.md).
+  - Conditional forwarders
+
+- Integrated DNS, DHCP, and IP address (DDI) management. You can now view all DNS resource records associated with an IP address in the IP Address Inventory. You can also automatically keep pointer (PTR) records of IP addresses and manage IP address lifecycles for both DNS and DHCP operations.
+
+- Multiple Active Directory Forest support. You can use IPAM to manage the DNS and DHCP servers of multiple Active Directory forests when there's a two-way trust relationship between the forest where you installed IPAM and each of the remote forests. For more information, see [Manage Resources in Multiple Active Directory Forests](../networking/technologies/ipam/Manage-Resources-in-Multiple-Active-Directory-Forests.md).
+
+- The Purge Utilization Data feature lets you reduce IPAM database size by deleting old IP utilization data. Just specify a date and IPAM deletes all database entries older than or equal to the date you entered. For more information, see [Purge Utilization Data](../networking/technologies/ipam/Purge-Utilization-Data.md).
+
+- You can now use Role Based Access Control (RBAC) to define access scopes for IPAM objects in PowerShell. For more information, see [Manage Role Based Access Control with Windows PowerShell](../networking/technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) and [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](/powershell/module/ipamserver/).
+
+For more information, see [Manage IPAM](../networking/technologies/ipam/Manage-IPAM.md).
 
 ## Security and Assurance
 
