@@ -32,7 +32,7 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - HNV implements correct L2 Ethernet headers to ensure interoperability with third-party virtual and physical appliances that depend on industry-standard protocols. Microsoft ensures that all transmitted packets have compliant values in all fields to guarantee interoperability. HNV requires support for Jumbo Frames (MTU > 1780) in the physical L2 network to account for packet overhead introduced by encapsulation protocols such as NVGRE and VXLAN. Jumbo Frame support ensures that guest Virtual Machines attached to an HNV Virtual Network maintain a 1514 MTU.
 
-- [Windows Container](/virtualization/windowscontainers/) support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For more information, see [Containers: Docker, Windows, and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
+- [Windows Container](/virtualization/windowscontainers/) support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For more information, see our [Windows Containers Documentation](/virtualization/windowscontainers/index) and [Containers: Docker, Windows, and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
 
 - Hyper-V is now compatible with Connected Standby. WHen you install the Hyper-V role on a computer that uses the Always On/Always Connected (AOAC) power model, you can now configure it to use the Connected Standby power state.
 
@@ -91,7 +91,9 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - We updated version compatibility with version 5 VMs. These VMs are compatible with both Windows Server 2012 R2 and Windows Server 2016. However, version 5 VMs that are compatible with Windows Server 2019 can only run on Windows Server 2016, not Windows Server 2012 R2. If you move or import a Windows Server 2012 R2 VM to a server running a later version of Windows Server, you must manually update the VM configuration to use features for the later versions of Windows Server. For more information about version compatibility and updated features, see see [Upgrade virtual machine version](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 
-- Virtualization-based security for generation 2 VMs
+- You can now use virtualization-based security features for generation 2 VMs, such as Device Guard and Credential Guard, to protect your OS against malware exploits. These features are available in VMs running version 8 or later. For more information, see [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](./deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
+
+- You can now run cmdlets using Windows PowerShell Direct to configure your VM from the host machine as an alternative to VMConnect or Remote PowerShell. You don't need to meet any networking or firewall requirements or have a special remote management configuration in order to start using it. For more information, see [Manage Windows virtual machines with PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md).
 
 ### Nano Server
 
