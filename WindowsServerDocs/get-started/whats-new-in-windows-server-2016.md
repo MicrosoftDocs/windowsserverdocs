@@ -82,6 +82,17 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
   > [!NOTE]
   > Shielded VMs are compatible with Hyper-V Replica. To replicate a shielded virtual machine, you must authorize the host you want to replicate to run that shielded VM.
 
+- The start order priority for clustered virtual machines feature gives you more control over which clustered VMs start or restart first. Deciding start order priority lets you start VMs that provide services before starting VMs that use those services. You can define sets, add VMs to sets, and specify dependencies usin PowerShell cmdlets such as [New-ClusterGroupSet](/powershell/module/failoverclusters/new-clustergroupset), [Get-ClusterGroupSet](/powershell/module/failoverclusters/get-clustergroupset), and [Add-ClusterGroupSetDependency](/powershell/module/failoverclusters/add-clustergroupsetdependency).
+
+- VM configuration files now use the .vmcx file extension format, while runtime state data files use the .vmrs file extension format. These new file formats are designed with more efficient reading and writing in mind. The updated formats also decrease the likelihood of data corruption if a storage failure happens.
+
+  > [!IMPORTANT]
+  > The .vmcx file name extension indicates a binary file. Hyper-V for Windows Server 2016 doesn't support editing .vmcx or .vmrs files.
+
+- We updated version compatibility with version 5 VMs. These VMs are compatible with both Windows Server 2012 R2 and Windows Server 2016. However, version 5 VMs that are compatible with Windows Server 2019 can only run on Windows Server 2016, not Windows Server 2012 R2. If you move or import a Windows Server 2012 R2 VM to a server running a later version of Windows Server, you must manually update the VM configuration to use features for the later versions of Windows Server. For more information about version compatibility and updated features, see see [Upgrade virtual machine version](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+
+- Virtualization-based security for generation 2 VMs
+
 ### Nano Server
 
 What's New in [Nano Server](getting-started-with-nano-server.md). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality and support for different Windows Server editions.
