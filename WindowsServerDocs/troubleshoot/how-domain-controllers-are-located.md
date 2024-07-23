@@ -1,5 +1,5 @@
 ---
-title: How domain controllers are located
+title: Locating domain controllers in Windows Server 
 description: Describes how domain controllers are located.
 ms.date: 07/30/2024
 ms.topic: conceptual
@@ -7,20 +7,22 @@ author: gswashington
 ms.author: wscontent
 ---
 
-# How domain controllers are located in Windows Server
-
-This article describes the mechanism used by Windows to locate a domain controller using its DNS-style name and its flat-style (NetBIOS) name. The flat-style name is used for backward compatibility. In all other cases, DNS-style names should be used as a matter of policy. See [Troubleshooting in DC Locater]() for information on troubleshooting the domain controller location process.
-
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-## How DC Locator finds a domain controller
+# Locating domain controllers in Windows Server
 
-The following sequence describes how the Locator finds a domain controller.
+This article describes the process used by Windows to locate a domain controller using its DNS-style name and its flat-style (NetBIOS) name. The flat-style name is used for backward compatibility. In all other cases, DNS-style names should be used. 
 
-- On the client (the computer that's locating the domain controller), the Locator is started as a remote procedure call (RPC) to the local Netlogon service. The Locator DsGetDcName application programming interface (API) call is implemented by the Netlogon service.
-- The client collects the information that's needed to select a domain controller. Then it passes the information to the Netlogon service by using the DsGetDcName call.
-- The Netlogon service on the client uses the collected information to look up a domain controller for the specified domain in one of two ways:
+See [Troubleshooting in DC Locater]() for information on troubleshooting the domain controller location process.
+
+DC Locator finds a domain controller using the following process, from the point of view of the client computer locating the domain controller.
+
+- DC Locator is started as a remote procedure call (RPC) to the local Netlogon service. 
+- DsGetDcName API call is implemented by the Netlogon service.
+- Client computer collects the information that's needed to select a domain controller. 
+- Client computer passes the information to the Netlogon service by using the DsGetDcName call.
+- Netlogon service on the client uses the collected information to look up a domain controller for the specified domain. The lookup happens using one of two methods:
   - For a DNS name, Netlogon queries DNS by using the IP/DNS-compatible Locator. That is, DsGetDcName calls the DnsQuery call to read the Service Resource (SRV) records and "A" records from DNS after it appends the domain name to the appropriate string that specifies the SRV records.
   - A workstation that's logging on to a Windows-based domain queries DNS for SRV records in the general form:
 
@@ -90,6 +92,9 @@ Organizations prefer DNS-based discovery over NetBIOS-based discovery, for both 
 [DsGetDcName](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew) is the primary DC location API.
 
 This description is only a brief overview. For more information about the DC location process, see [How domain controllers are located in Windows](/troubleshoot/windows-server/identity/how-domain-controllers-are-located).
+
+
+Mapping of NetBIOS domain names to DNS domain names .... Downloading and caching of administrator-configured domain name mappings ...  Deprecation of WINS and mailslots.
 
 ## Deprecation of WINS and mailslots
 
@@ -177,7 +182,7 @@ The new Active Directory Domains and Trusts management page looks like this:
 > [!IMPORTANT]
 > Configure administrator-configured forest-level domain name mappings only when you're sure that all other name mapping sources are insufficient. As a general rule, such arbitrary mappings are necessary only when no trust relationship exists between clients and the target domains, and client applications can't be migrated over to specifying DNS-style domain names.
 
-## New mapping of NetBIOS domain names to DNS domain names
+## Mapping of NetBIOS domain names to DNS domain names
 
 When an application requests a DC but specifies a short NetBIOS-style domain name, DC location always tries to map that short domain name to a DNS domain name. If DC location finds such a mapping, it then uses DNS-based discovery with the mapped DNS domain name.
 
@@ -207,4 +212,3 @@ When none of these sources can find a DNS domain name, DC location can proceed w
 - [The Beginning of the end of Remote Mailslots](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-beginning-of-the-end-of-remote-mailslots/ba-p/3762048)
 - [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top)
 - [About mailslots](/windows/win32/ipc/about-mailslots)
-
