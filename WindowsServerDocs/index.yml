@@ -73,7 +73,7 @@ conceptualContent:
           text: Securing privileged access
         - url: ./identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           itemType: how-to-guide
-          text: Getting started with group-managed service accounts  
+          text: Getting started with group managed service accounts (gMSA) 
       footerLink:
         url: ./identity/identity-and-access.yml
         text: See more
