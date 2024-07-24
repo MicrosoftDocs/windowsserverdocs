@@ -6,6 +6,9 @@ ms.topic: how-to
 author: gswashington
 ms.author: wscontent
 ---
+
+<!-- Other article in Learn refer to the DC location algorithm as "DC Locator". I have adopted this naming convention for this article even though the original version of the article did not use it. -->
+
 # Troubleshooting in DC Locater
 
 > [!IMPORTANT]
@@ -13,7 +16,7 @@ ms.author: wscontent
 
 Authentication is the first step in virtually all functional scenarios in an Active Directory enterprise environment. Authentication, in turn, can't occur unless the client can first communicate with an Active Directory domain controller.
 
-DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments. It may be necessary at times to perform troubleshooting when using Active Directory domain controller location algorithm (DC locater).
+DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments. It may be necessary at times to perform troubleshooting when using Active Directory domain controller location algorithm (DC Locator).
 
 ## Troubleshooting steps
 

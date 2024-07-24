@@ -1,20 +1,24 @@
 ---
 title: Locating domain controllers in Windows Server 
-description: Describes how domain controllers are located.
+description: Describes how domain controllers are located in Windows Server using the DC Locator algorithm.
 ms.date: 07/30/2024
 ms.topic: conceptual
 author: gswashington
 ms.author: wscontent
 ---
 
+<!-- Note that although this is a new markdown file, it is intended to replace the article that is already published in the following location: https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/how-domain-controllers-are-located. -->
+
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 # Locating domain controllers in Windows Server
 
+DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments.
+
 This article describes the process used by Windows to locate a domain controller using its DNS-style name and its flat-style (NetBIOS) name. The flat-style name is used for backward compatibility. In all other cases, DNS-style names should be used. 
 
-See [Troubleshooting in DC Locater]() for information on troubleshooting the domain controller location process.
+See [Troubleshooting in DC Locator]() for information on troubleshooting the domain controller location process.
 
 DC Locator finds a domain controller using the following process, from the point of view of the client computer locating the domain controller.
 
