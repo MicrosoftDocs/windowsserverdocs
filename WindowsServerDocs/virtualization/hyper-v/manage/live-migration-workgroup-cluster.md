@@ -23,8 +23,6 @@ The following prerequisites must be met in order to live migrate hosts using wor
   workgroup cluster, see [Create a workgroup cluster](/windows-server/failover-clustering/create-workgroup-cluster).
 - A local user account exists on each server node with an identical username and password.
 
-## Authentication considerations
-
 ## Consider options for authentication and performance
 
 When setting up live migrations for workgroup clusters, it's important to consider how authentication and performance.
@@ -142,7 +140,7 @@ In this step, set up your source and host destination virtual machines to enable
     Enable-VMMigration
     ```
 
-1. Use the [Set-VMHost](/powershell/module/hyper-v/set-vmhost) cmdlet to configure the local Hyper-V host. The following command will configure the virtual machine to allow 10 simultaneous live migrations and storage migrations. Change these values to the number of simultaneous live and storage migrations your setup will allow.
+1. Use the [Set-VMHost](/powershell/module/hyper-v/set-vmhost) cmdlet to configure the local Hyper-V host. The following command configures the virtual machine to allow 10 simultaneous live migrations and storage migrations. Change these values to the number of simultaneous live and storage migrations your setup allows. You might need to test different configurations to help you decide.
     ```powershell
     Set-VMHost -MaximumVirtualMachineMigrations 10 -MaximumStorageMigrations 10
     ```
