@@ -4,7 +4,7 @@ description: This article provides an overview of live migration functionality w
 ms.topic: article
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 04/17/2024
+ms.date: 07/24/2024
 ---
 
 # Use live migration with workgroup clusters
@@ -19,8 +19,20 @@ Follow the steps in this article to perform your own live migration.
 
 The following prerequisites must be met in order to live migrate hosts using workgroup clusters:
 
-- A [workgroup cluster](/windows-server/failover-clustering/create-workgroup-cluster) with two or more nodes is up and running.
+- A workgroup cluster with two or more nodes is up and running. To learn more about creating a
+  workgroup cluster, see [Create a workgroup cluster](/windows-server/failover-clustering/create-workgroup-cluster).
 - A local user account exists on each server node with an identical username and password.
+
+## Authentication considerations
+
+## Consider options for authentication and performance
+
+When setting up live migrations for workgroup clusters, it's important to consider how authentication and performance.
+
+- **Authentication**: Local accounts with an identical username and password on each node are used to create and configure the workgroup cluster. The cluster uses self-signing PKU2U certificates to authenticate and be able to move a virtual machine from one host node to another host node without Kerberos. The local accounts on each node are the only way to successfully authenticate workgroup clusters and allow for live migration between source and destination servers.
+
+- **Performance**: Configuring performance options can reduce network and CPU usage. Different options like simultaneous migrations can also make live migrations go faster. Consider your requirements and your infrastructure, and test different configurations to help you decide.
+
 
 ## Do a live migration with Hyper-V workgroup clusters
 
@@ -72,7 +84,7 @@ Hyper-V provides the services that you can use to create and manage virtual mach
 
 1. When the installation completes, select **Close**.
 
-1. Repeat this procedure on every server that is part of your workgroup cluster.
+1. Repeat these steps on every server that is part of your workgroup cluster.
 
 ---
 
@@ -89,7 +101,7 @@ Add a new Hyper-V virtual machine as a role to your workgroup cluster in order t
 
 1. Open a PowerShell session as an Administrator.
 
-1. Run the following command to create a new virtual machine using an existing VHDX on the server node.
+1. Run the following [New-VM](/powershell/module/hyper-v/new-vm) command to create a new virtual machine that has 10GB of memory and uses an existing VHDX image on the server node. Change the parameters and values as needed to customize your setup. 
     ```powershell
     New-VM -Name "<VM_NAME>" -MemoryStartupBytes 10GB -VHDPath <PATH_TO_VHDX_FILE>
     ```
@@ -109,7 +121,7 @@ Add a new Hyper-V virtual machine as a role to your workgroup cluster in order t
 
 1. In the Hyper-V Manager, select **New**, then  **Virtual Machine...**.
 
-1. Complete the steps in the **New Virtual Machine Wizard** to create a new virtual machine.
+1. Complete the steps in the **New Virtual Machine Wizard** to create a new virtual machine, using the appropriate settings for your setup.
 
 1. Add in the virtual machine as a **Virtual Machine** role in the workgroup cluster using the Failover Cluster Manager.
 
@@ -117,7 +129,7 @@ Add a new Hyper-V virtual machine as a role to your workgroup cluster in order t
 
 ### Step 3: Set up the source and destination computers for live migration
 
-In this step, set up your source and host destination virtual machines to enable live migrations. Here you can also specify live migration settings, such as how many migrations to allow at the same time.
+In this step, set up your source and host destination virtual machines to enable live migrations. Here, you can also specify live migration settings, such as how many live and storage migrations to allow at the same time.
 
 #### [PowerShell](#tab/powershell)
 
@@ -134,6 +146,8 @@ In this step, set up your source and host destination virtual machines to enable
     ```powershell
     Set-VMHost -MaximumVirtualMachineMigrations 10 -MaximumStorageMigrations 10
     ```
+
+    Set-VMHost also lets you specify a performance option, and other host settings. Consider using a parameter like `-VMMigrationPerformance` to choose more settings for your virtual machine.
 
 1. Repeat the steps for the other server node.
 
@@ -178,3 +192,12 @@ Finally, do a live migration to move a running virtual machine.
 1. In the **Information** column, see a status appear with the message **Live Migrating, X% completed**.
 
 1. Once complete, confirm that the Owner Node column updates with the other node in your workgroup cluster.
+
+## Next steps
+
+After completing a live migration, it's important to confirm that the migration works, and all virtual machines migrated were migrated successfully. If you notice any issues during or after a migration, it might be necessary to revisit the simultaneous migrations allowed or configure live migration performance options. 
+
+To learn more about Live Migration performance options, see
+[Virtual Machine Live Migration Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831435(v=ws.11))
+
+You can also read more about live migration performance in [Hyper-V Network I/O Performance](/windows-server/administration/performance-tuning/role/hyper-v-server/network-io-performance).
