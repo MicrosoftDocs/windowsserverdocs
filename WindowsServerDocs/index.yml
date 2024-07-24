@@ -71,7 +71,7 @@ conceptualContent:
         - url: /security/compass/overview
           itemType: concept
           text: Securing privileged access
-        - url: ./identity/ad-ds/manage/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+        - url: ./identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           itemType: how-to-guide
           text: Getting started with group-managed service accounts  
       footerLink:
