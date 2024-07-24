@@ -436,15 +436,15 @@
         - name: Setting up Delegated Managed Service Accounts
           href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
       - name: Group Managed Service Accounts
-        href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts-overview.md
+        href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
         items:
         - name: Getting started with Group Managed Service Accounts
-          href: ad-ds/manage/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           items:
           - name: Create the Key Distribution Services KDS Root Key
-            href: ad-ds/manage/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
+            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
           - name: Configuring Kerberos delegation for group Managed Service Accounts
-            href: ad-ds/manage/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
+            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
       - name: Service accounts
         href: ad-ds/manage/understand-service-accounts.md
       - name: Microsoft accounts
