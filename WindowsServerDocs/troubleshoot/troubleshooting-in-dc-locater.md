@@ -20,7 +20,7 @@ DC location refers to the algorithm the client machine uses to find a suitable d
 
 ## Troubleshooting steps
 
-To troubleshoot the DC Locator domain locator process:
+To troubleshoot the DC Locator domain controller locator process:
 
 1. Check Event Viewer on both the client and the server. The event logs may contain error messages indicating that there's a problem. To view Event Viewer, select **Start**, point to **Programs** > **Administrative Tools**, and then select **Event Viewer**. Check the System log on both the client and the server. Also check the Directory Service logs on the server and DNS logs on the DNS server.
 1. Check the IP configuration by using the `ipconfig /all` command at a command prompt.

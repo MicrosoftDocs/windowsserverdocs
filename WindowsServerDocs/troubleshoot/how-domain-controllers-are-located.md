@@ -11,7 +11,7 @@ ms.author: wscontent
 
 <!-- Other articles in Learn refer to the DC location algorithm as "DC Locator" (yes, ending in "or"). I have adopted this naming convention for this article even though the original version of this article did not use it. -->
 
-<!-- Final comment; Jay's minimal goals were to roll in content of "What's new" article into this main article. Loftier goals were to break out Troubleshooting as its own article and, beyond that, perhaps even have short articles dedicated to, say, Mapping of NetBIOS domain names to DNS domain names. I didn't go beyond breaking out Troubleshooting, as you will see.   -->
+<!-- Final comment; Jay's minimal goals were to roll in content of "What's new" article (https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/dc-locator-changes) into this main article. Loftier goals were to break out Troubleshooting as its own article and, beyond that, perhaps even have short articles dedicated to, say, Mapping of NetBIOS domain names to DNS domain names. I didn't go beyond breaking out Troubleshooting, as you will see.  -->
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
