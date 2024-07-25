@@ -9,6 +9,8 @@ ms.author: wscontent
 
 <!-- Note that although this is a new markdown file, it is intended to replace the article that is already published in the following location: https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/how-domain-controllers-are-located. -->
 
+<!-- Other article in Learn refers to the DC location algorithm as "DC Locator". I have adopted this naming convention for this article even though the original version of the article did not use it. -->
+
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 

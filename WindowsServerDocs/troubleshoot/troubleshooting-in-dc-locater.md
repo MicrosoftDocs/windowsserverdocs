@@ -1,15 +1,15 @@
 ---
-title: Troubleshooting in DC locater
-description: Learn how to troubleshoot the domain controller process
+title: Troubleshooting in DC Locator
+description: Learn how to troubleshoot the domain controller location process
 ms.date: 07/30/2024
 ms.topic: how-to
 author: gswashington
 ms.author: wscontent
 ---
 
-<!-- Other article in Learn refer to the DC location algorithm as "DC Locator". I have adopted this naming convention for this article even though the original version of the article did not use it. -->
+<!-- Other article in Learn refers to the DC location algorithm as "DC Locator". I have adopted this naming convention for this article even though the original version of the article did not use it. -->
 
-# Troubleshooting in DC Locater
+# Troubleshooting in DC Locator
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
@@ -20,7 +20,7 @@ DC location refers to the algorithm the client machine uses to find a suitable d
 
 ## Troubleshooting steps
 
-To troubleshoot the DC Locater domain locator process:
+To troubleshoot the DC Locator domain locator process:
 
 1. Check Event Viewer on both the client and the server. The event logs may contain error messages indicating that there's a problem. To view Event Viewer, select **Start**, point to **Programs** > **Administrative Tools**, and then select **Event Viewer**. Check the System log on both the client and the server. Also check the Directory Service logs on the server and DNS logs on the DNS server.
 1. Check the IP configuration by using the `ipconfig /all` command at a command prompt.
