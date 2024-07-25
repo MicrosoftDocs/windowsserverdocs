@@ -7,9 +7,11 @@ author: gswashington
 ms.author: wscontent
 ---
 
-<!-- Note that although this is a new markdown file, it is intended to replace the article that is already published in the following location: https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/how-domain-controllers-are-located. -->
+<!-- Hi Heidi, Note that although this is a new markdown file, it is intended to replace the article that is already published in the following location: https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/how-domain-controllers-are-located. I could not locate the original markdown in the repo; we can drop this in place when the time comes. -->
 
-<!-- Other article in Learn refers to the DC location algorithm as "DC Locator". I have adopted this naming convention for this article even though the original version of the article did not use it. -->
+<!-- Other articles in Learn refer to the DC location algorithm as "DC Locator" (yes, ending in "or"). I have adopted this naming convention for this article even though the original version of this article did not use it. -->
+
+<!-- Final comment; Jay's minimal goals were to roll in content of "What's new" article into this main article. Loftier goals were to break out Troubleshooting as its own article and, beyond that, perhaps even have short articles dedicated to, say, Mapping of NetBIOS domain names to DNS domain names. I didn't go beyond breaking out Troubleshooting, as you will see.   -->
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
@@ -130,8 +132,6 @@ When none of these sources can find a DNS domain name, DC location can proceed w
 ## DC locator improvements to accommodate WINS and mailslot deprecation
 
 The deprecation of WINS and mailslot messages means that those mechanisms are longer available as a fallback option when applications specify short NetBIOS-style domain names. This deprecation can therefore cause disruption in some environments.
-
-The following sections describe improvements in Windows Insider Preview Release build 25921.
 
 ### BlockNetBIOSDiscovery Netlogon policy setting
 
