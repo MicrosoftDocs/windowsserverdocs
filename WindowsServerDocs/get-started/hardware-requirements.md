@@ -4,13 +4,13 @@ description: What are the minimum hardware requirements for storage, CPU, networ
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 03/07/2024
+ms.date: 07/25/2024
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 ---
 
 # Hardware requirements for Windows Server
 
-To install Windows Server correctly, your computer must meet the minimum hardware requirements outlined in this article. If your computer falls short of these requirements, the product may not install properly. Actual requirements vary based on your system configuration, applications, and features that are installed.
+To install Windows Server correctly, your computer must meet the minimum hardware requirements outlined in this article. If your computer falls short of these requirements, the product might not install properly. Actual requirements vary based on your system configuration, applications, and features that are installed.
 
 Unless otherwise specified, these minimum hardware requirements apply to all installation options (Server Core and Server with Desktop Experience) for both Windows Server Standard and Windows Server Datacenter editions.
 
@@ -27,11 +27,16 @@ Processor performance depends not only on the clock frequency of the processor, 
 
 - 1.4 GHz 64-bit processor
 - Compatible with x64 instruction set
-- Supports NX and DEP
-- Supports CMPXCHG16b, LAHF/SAHF, and PrefetchW
-- Supports Second Level Address Translation (EPT or NPT)
+- Support for NX and DEP
+- Support for CMPXCHG16b, LAHF/SAHF, and PrefetchW instructions
+- Support for Second Level Address Translation (EPT or NPT)
 
-You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool included in Windows Sysinternals, to verify the capabilities that your CPU possesses.
+Windows Server 2025 and later requires processors that support the following features:
+
+- Support for the SSE4.2 (Streaming SIMD Extensions 4.2) instruction set
+- Support for the POPCNT instruction
+
+You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool included in Windows Sysinternals, to verify the capabilities of your CPU.
 
 # [RAM](#tab/ram)
 
@@ -96,7 +101,7 @@ The following items are only required for certain features:
 - Trusted Platform Module (TPM)
 - Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution
 - Keyboard and Microsoft mouse (or other compatible pointing device)
-- Internet access (fees may apply)
+- Internet access (fees might apply)
 
 > [!NOTE]
 > A TPM chip is required in order to use certain features such as **BitLocker Drive Encryption**. If your computer has a TPM, it must meet these requirements:
