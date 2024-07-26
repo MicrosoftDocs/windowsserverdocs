@@ -754,8 +754,6 @@
             href: ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md
           - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service'
             href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md
-          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent'
-            href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md
           - name: Create a Relying Party Trust Manually
             href: ad-fs/operations/create-a-Relying-Party-Trust.md
           - name: Create a Claims Provider Trust Manually
@@ -1028,15 +1026,15 @@
       - name: Distribute certificates using Group Policy
         href: ad-cs/distribute-certificates-group-policy.md
       - name: Export a certificate with its private key
-        href: ad-cs/export-certificate-private-key.md  
+        href: ad-cs/export-certificate-private-key.md
       - name: Manage certificate templates
-        href: ad-cs/manage-certificate-templates.md  
+        href: ad-cs/manage-certificate-templates.md
       - name: Request certificates using Web Enrollment
         href: ad-cs/request-certificate-windows-server.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
       - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
-        href: ad-cs/submit-pkcs-certificate-request.md     
+        href: ad-cs/submit-pkcs-certificate-request.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
