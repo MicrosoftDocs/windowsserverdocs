@@ -20,89 +20,81 @@ ms.author: wscontent
 
 DC location refers to the algorithm the client machine uses to find a suitable domain controller (DC). DC location is a critical baseline functionality in all enterprise environments.
 
-This article describes the process used by Windows to locate a domain controller using its DNS-style name and its flat-style (NetBIOS) name. The flat-style name is used for backward compatibility. In all other cases, DNS-style names should be used. 
+This article describes the process Windows uses to locate a domain controller using its DNS-style name and its flat-style (NetBIOS) name. Windows uses the NetBIOS name for backward compatibility. In all other cases, it should use DNS-style names. See [Troubleshooting in DC Locater]() for information on troubleshooting the domain controller location process.
 
-See [Troubleshooting in DC Locator]() for information on troubleshooting the domain controller location process.
+A client computer using DC Locator to find a domain controller uses the following process:
 
-DC Locator finds a domain controller using the following process, from the point of view of the client computer locating the domain controller.
-
-- DC Locator is started as a remote procedure call (RPC) to the local Netlogon service. 
-- DsGetDcName API call is implemented by the Netlogon service.
-- Client computer collects the information that's needed to select a domain controller. 
-- Client computer passes the information to the Netlogon service by using the DsGetDcName call.
-- Netlogon service on the client uses the collected information to look up a domain controller for the specified domain. The lookup happens using one of two methods:
-  - For a DNS name, Netlogon queries DNS by using the IP/DNS-compatible Locator. That is, DsGetDcName calls the DnsQuery call to read the Service Resource (SRV) records and "A" records from DNS after it appends the domain name to the appropriate string that specifies the SRV records.
-  - A workstation that's logging on to a Windows-based domain queries DNS for SRV records in the general form:
+- First, the user starts DC Locator as a remote procedure call (RPC) to the local Netlogon service.  
+- Next, the Netlogon service implements the DsGetDcName API call.
+- The client computer collects the information it needs to select a domain controller.  
+- The client passes the information to the Netlogon service by using the DsGetDcName call.
+- The Netlogon service on the client uses the collected information to look up a domain controller for the specified domain. The lookup process uses one of the following two methods:
+  - For a DNS name, Netlogon queries DNS by using the IP/DNS-compatible Locator. DsGetDcName calls the DnsQuery call to read the Service Resource (SRV) records and "A" records from DNS after it appends the domain name to the appropriate string that specifies the SRV records.
+  - A workstation that's signing in to a Windows-based domain queries DNS for SRV records in the general form:
 
     ```output
     _service._protocol.DnsDomainName
     ```
 
-    Active Directory servers offer the Lightweight Directory Access Protocol (LDAP) service over the TCP protocol. So clients find an LDAP server by querying DNS for a record of the form:  
+    Active Directory servers respond to the query by offering the Lightweight Directory Access Protocol (LDAP) service over the TCP protocol. The client then uses the service to find the LDAP server by querying DNS for a record of this form:
     > _ldap._tcp.DnsDomainName
 
-- For a NetBIOS name, Netlogon performs domain controller discovery by using the Microsoft Windows NT version 4.0-compatible Locator. That is, by using the transport-specific mechanism, such as WINS.
+- For a NetBIOS name, Netlogon performs domain controller discovery by using the Microsoft Windows NT version 4.0-compatible Locator, which is usually a transport-specific mechanism, such as WINS.
 
-    In Windows NT 4.0 and earlier, "discovery" is a process to locate a domain controller for authentication in either the primary domain or a trusted domain.  
+    > [Note!]
+    > In Windows NT 4.0 and earlier, "discovery" is a process to locate a domain controller for authentication in either the primary domain or a trusted domain.  
 
-- The Netlogon service sends a datagram to the computers that registered the name. For NetBIOS domain names, the datagram is implemented as a mailslot message. For DNS domain names, the datagram is implemented as an LDAP User Datagram Protocol (UDP) search. (UDP is the connectionless datagram transport protocol that is part of the TCP/IP protocol suite. TCP is a connection-oriented transport protocol.)
+- The Netlogon service sends a datagram to the computers that registered the name. For NetBIOS domain names, the datagram is implemented as a mailslot message. For DNS domain names, the datagram is implemented as an LDAP User Datagram Protocol (UDP) search. UDP is the connectionless datagram transport protocol that's part of the TCP/IP protocol suite. TCP is a connection-oriented transport protocol.
+- Each available domain controller responds to the datagram to indicate that it's currently operational, then the datagram returns the information to DsGetDcName.
+
+UDP allows a program on one computer to send a datagram to a program on another computer. It includes a protocol port number, which allows the sender to distinguish between multiple destinations or programs on the remote computer.  
+
 - Each available domain controller responds to the datagram to indicate that it's currently operational and returns the information to DsGetDcName.
+- The Netlogon service caches the domain controller information so that later requests don't need to repeat the discovery process. Caching this information encourages consistent use of the same domain controller and a consistent view of Active Directory.    
 
-UDP allows a program on one computer to send a datagram to a program on another computer. UDP includes a protocol port number, which allows the sender to distinguish among multiple destinations (programs) on the remote computer.  
-
-- Each available domain controller responds to the datagram to indicate that it's currently operational and returns the information to DsGetDcName.
-- The Netlogon service caches the domain controller information so that later requests need not repeat the discovery process. Caching this information encourages consistent use of the same domain controller and a consistent view of Active Directory.  
-
-When a client logs on or joins the network, it must be able to locate a domain controller. The client sends a DNS Lookup query to DNS to find domain controllers, preferably in the client's own subnet. So clients find a domain controller by querying DNS for a record of the form:
+When a client signs in or connects to the network, it must be able to locate a domain controller. The client sends a DNS Lookup query to DNS to find domain controllers, preferably in the client's own subnet. Clients find a domain controller by querying DNS for a record in the following format:
 
 ```output
 _LDAP._TCP.dc._msdcs.domainname
 ```
 
-After the client locates a domain controller, it establishes communication by using LDAP to gain access to Active Directory. As part of that negotiation, the domain controller identifies which site the client is in based on the IP subnet of that client.
+After the client locates a domain controller, it establishes communication by using LDAP to gain access to Active Directory. As part of that negotiation, the domain controller identifies which site the client is in based on the client's IP subnet.
 
-If the client is communicating with a domain controller that isn't in the closest (most optimal) site, the domain controller returns the name of the client's site. If the client has already tried to find domain controllers in that site, the client uses the domain controller that isn't optimal. For example, the client sends a DNS Lookup query to DNS to find domain controllers in the client's subnet.
+If the client is communicating with a domain controller that isn't in the closest, most optimal site, the domain controller returns the name of the client's site. If the client has already tried to find domain controllers in that site, the client uses a domain controller in a less optimal site instead. For example, the client sends a DNS Lookup query to DNS to find domain controllers in the client's subnet. Otherwise, the client does a site-specific DNS lookup again with the new optimal site name. The domain controller uses some of the directory service information for identifying sites and subnets.
 
-Otherwise, the client does a site-specific DNS lookup again with the new optimal site name. The domain controller uses some of the directory service information for identifying sites and subnets.
+After the client locates a domain controller, it caches the domain controller entry. If the domain controller isn't in the optimal site, the client flushes the cache after 15 minutes and discards the cache entry. It then attempts to find an optimal domain controller in the same site as the client.
 
-After the client locates a domain controller, the domain controller entry is cached. If the domain controller isn't in the optimal site, the client flushes the cache after 15 minutes and discards the cache entry. It then attempts to find an optimal domain controller in the same site as the client.
+After the client has established a communications path to the domain controller, it can establish the logon and authentication credentials. If required, the client can also set up a secure channel for Windows-based computers. The client is now ready to perform normal queries and search for information against the directory.
 
-After the client has established a communications path to the domain controller, it can establish the logon and authentication credentials. And if necessary for Windows-based computers, it can set up a secure channel. The client then is ready to perform normal queries and search for information against the directory.
-
-The client establishes an LDAP connection to a domain controller to log on. The logon process uses Security Accounts Manager. The communications path uses the LDAP interface and the client is authenticated by a domain controller. So the client account is verified and passed through Security Accounts Manager to the directory service agent, then to the database layer, and finally to the database in the Extensible Storage engine (ESE).
+The client establishes an LDAP connection to a domain controller to sign in. The sign in process uses Security Accounts Manager. The communications path uses the LDAP interface and the client is authenticated by a domain controller. After that, the client account is verified and passed through Security Accounts Manager to the directory service agent, then to the database layer, and finally to the database in the Extensible Storage engine (ESE).
 
 # Active Directory DC locator functionality in Windows Server 2025 (Preview)
 
-This section discusses latest functionality in the Active Directory domain controller (DC) location algorithm.
+This section discusses functionality updates in the Active Directory domain controller (DC) location algorithm for Windows Server 2025.
 
-Authentication is the first step in virtually all functional scenarios in an Active Directory enterprise environment. Authentication, in turn, can't occur unless the client can first communicate with an Active Directory DC.
+Authentication is the first step in almost all scenarios in an Active Directory enterprise environment. However, authentication can't happen unless the client can communicate with an Active Directory DC.
 
-*DC location* refers to the algorithm by which a client machine finds a suitable domain controller. DC location is a critical baseline functionality in all enterprise environments.
+*DC location* refers to the algorithm the client machine uses to find a suitable domain controller. DC location is a critical function in all enterprise environments.
 
 Active Directory domains always have two distinct names: the DNS fully qualified domain name (FQDN) and the NetBIOS domain name. NetBIOS domain names have legacy length and other constraints. For example, NetBIOS domains are limited to 15 characters.
 
-The NetBIOS domain name of an Active Directory domain isn't required to be related in any way to the first component of the Active Directory domain's FQDN. For example, an Active Directory domain's FQDN might be `contoso.com` with a NetBIOS domain name of `fabrikam`.
+The NetBIOS domain name of an Active Directory domain doesn't need to be the same as the Active Directory domains FQDN. For example, an Active Directory domain's FQDN might be `contoso.com` with a NetBIOS domain name of `fabrikam`.
 
 DC location in Windows can operate in two basic modes:
 
-- **DNS-based discovery**: This mode is based on domain controller advertisement via DNS.
+- DNS-based discovery, which is based on domain controller advertisement using DNS.
 
-  Domain controllers register various SRV records in DNS. Examples include records that represent key capabilities (Key Distribution Center or Global Catalog) or records that describe locality (Active Directory site records). Clients query DNS for the appropriate SRV records and then ping those servers by using UDP-based LDAP pings.
+  Domain controllers register various SRV records in DNS, such as records that represent key capabilities like Key Distribution Center or Global Catalog, and records that describe locality like Active Directory site records. Clients query DNS for the appropriate SRV records and then ping those servers by using UDP-based LDAP pings.
 
-  This mode is supported only when you use DNS domain names. This mode is supported with Windows 2000 and later domain controllers. Windows 2000 and later clients prefer this mode, but they can fall back to the other mode under some circumstances.
+  This mode is supported only when you use DNS domain names and your domain controllers are running Windows 2000 and later. Supported domain controllers run more optimally in this mode but can change to the other mode in certain scenarios.
 
-- **NetBIOS-based discovery**: This mode is based on domain controllers first registering records in [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top). Clients query WINS for the appropriate records, followed by pinging the possible target candidate DCs.
+- NetBIOS-based discovery, which involves domain controllers registering records in [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top). Clients query WINS for the appropriate records, followed by pinging the possible target candidate DCs.
 
-  A variant of this mode uses a broadcast mechanism supported by [mailslot messages](/windows/win32/ipc/about-mailslots). In this mechanism, the client broadcasts packets on its local network to look for DCs. This mode is supported with legacy Windows NT 4 and earlier domain controllers, and it works only when you use short NetBIOS domain names.
+  A variant of this mode uses a broadcast mechanism supported by [mailslot messages](/windows/win32/ipc/about-mailslots) where the client broadcasts packets on its local network to look for DCs. This mode is supported with legacy Windows NT 4 and earlier domain controllers, and it works only when you use short NetBIOS domain names.
 
-Organizations prefer DNS-based discovery over NetBIOS-based discovery, for both reliability and security reasons.
-
-[DsGetDcName](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew) is the primary DC location API.
+We recommend using DNS-based discovery instead of NetBIOS-based discovery. DNS-based discovery is more reliable and secure. [DsGetDcName](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew) is the primary DC location API.
 
 This description is only a brief overview. For more information about the DC location process, see [How domain controllers are located in Windows](/troubleshoot/windows-server/identity/how-domain-controllers-are-located).
-
-
-Mapping of NetBIOS domain names to DNS domain names .... Downloading and caching of administrator-configured domain name mappings ...  Deprecation of WINS and mailslots.
 
 ## Deprecation of WINS and mailslots
 
@@ -112,17 +104,17 @@ This deprecation affects DC location. Later sections in this article describe mi
 
 ## Mapping of NetBIOS domain names to DNS domain names
 
-When an application requests a DC but specifies a short NetBIOS-style domain name, DC location always tries to map that short domain name to a DNS domain name. If DC location finds such a mapping, it then uses DNS-based discovery with the mapped DNS domain name.
+When an application requests a DC but specifies a short NetBIOS-style domain name, DC location always tries to map that short domain name to a DNS domain name. If DC location can map the domain names successfully, it then uses DNS-based discovery with the mapped DNS domain name.
 
-NetBIOS-style domain names are historically mapped to DNS domain names via multiple sources in the following order:
+NetBIOS-style domain names are mapped to DNS domain names from multiple sources in the following order:
 
-1. Cached information from a previous lookup
+1. First, cached information from a previous lookup.
 
-1. All domains in the current forest
+1. Second, all domains in the current forest.
 
-1. Top-level names (TLNs) for all trusting forest trusts and external trusts
+1. Third, top-level names (TLNs) for all trusting forest trusts and external trusts.
 
-1. Sign-in sessions on the client machine
+1. Finally, sign-in sessions on the client machine.
 
 When none of these sources can find a DNS domain name, DC location can proceed with NetBIOS-based discovery by using the original NetBIOS-style short domain name.
 
@@ -131,7 +123,7 @@ When none of these sources can find a DNS domain name, DC location can proceed w
 
 ## DC locator improvements to accommodate WINS and mailslot deprecation
 
-The deprecation of WINS and mailslot messages means that those mechanisms are longer available as a fallback option when applications specify short NetBIOS-style domain names. This deprecation can therefore cause disruption in some environments.
+The deprecation of WINS and mailslot messages means that those mechanisms are longer available as a fallback option when applications specify short NetBIOS-style domain names. This deprecation can therefore cause disruption in some environments. This section describes ways you can mitigate these disruptions.
 
 ### BlockNetBIOSDiscovery Netlogon policy setting
 
@@ -140,16 +132,16 @@ The deprecation of WINS and mailslot messages means that those mechanisms are lo
 The following settings apply to `BlockNetBIOSDiscovery`:
 
 - `TRUE` (default): DC locator doesn't allow the use of NetBIOS-style DC location.
-- `FALSE`: DC locator allows the use of WINS/mailslot-based discovery, if all legacy constraints also allow it.
+- `FALSE`: DC locator allows the use of WINS or mailslot-based discovery if all legacy constraints also allow it.
 
 You use the `BlockNetBIOSDiscovery` setting to enforce a secure-by-default posture for DC location. We recommend that you keep it set to `TRUE`. Disable it only for temporary periods while you're pursuing other mitigations.
 
 The new policy setting looks like this:
 
-:::image type="content" source="./media/dc-locator-changes/dc-locator-changes-blocknetbiosdiscovery-policy.png" border="false" alt-text="Screenshot of the BlockNetBIOSDiscovery Group Policy setting.":::
+:::image type="content" source="./media/dc-locator-changes/dc-locator-changes-blocknetbiosdiscovery-policy.png" border="false" alt-text="Screenshot of the BlockNetBIOSDiscovery Group Policy setting with default enabled.":::
 
 > [!TIP]
-> You separately enable or disable the ability to use mailslots on a machine-wide basis by using the SMB `EnableMailslots` policy setting. For DC locator to be able to use mailslots for DC discovery, you must enable mailslots at the SMB level, and you must disable `BlockNetBIOSDiscovery`. You can query and set the `EnableMailslots` setting by using the `Get-SmbClientConfiguration` and `Set-SmbClientConfiguration` PowerShell cmdlets.
+> You can separately enable or disable the ability to use mailslots on a machine-wide basis by using the SMB `EnableMailslots` policy setting. For DC locator to be able to use mailslots for DC discovery, you must enable mailslots at the SMB level and disable `BlockNetBIOSDiscovery`. You can query and set the `EnableMailslots` setting by running the `Get-SmbClientConfiguration` and `Set-SmbClientConfiguration` PowerShell cmdlets.
 
 ### Downloading and caching of full domain information
 
@@ -163,23 +155,21 @@ The custom domain name mappings are stored in a `serviceConnectionPoint` object 
 
 `CN=DCLocatorDomainNameMappings,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com`
 
-The `msDS-Setting`s attribute of this `serviceConnectionPoint` object can contain one or more values. Each value contains the DNS domain name and the NetBIOS domain name, separated by a semicolon:
-
-`dnsdomainname.com:NetBIOSdomainname`
+The `msDS-Setting`s attribute of this `serviceConnectionPoint` object can contain one or more values. Each value contains the DNS domain name and the NetBIOS domain name, separated by a semicolon as in, dnsdomainname.com:NetBIOSdomainname.
 
 For example:
 
-`contoso.com:fabrikam`
-`tatertots.contoso.com:tots`
-`tailspintoys.com:tailspintoys`
+- `contoso.com:fabrikam`
+- `tatertots.contoso.com:tots`
+- `tailspintoys.com:tailspintoys`
 
-You can configure these mappings by using the Active Directory Domains and Trusts management snap-in as follows:
+You can configure these mappings in the Active Directory Domains and Trusts management settings by following these steps:
 
 1. Right-click the domain.
 1. Select **Properties**.
 1. Select the **DC locator mappings** tab.
 
-The Netlogon service on clients then downloads and caches the custom mappings in the `DCLocatorDomainNameMappings` object every 12 hours. This information is then automatically used when you're mapping NetBIOS-style domain names to DNS domain names.
+The Netlogon service on clients then downloads and caches the custom mappings in the `DCLocatorDomainNameMappings` object every 12 hours. The service automatically uses this information when you're mapping NetBIOS-style domain names to DNS domain names.
 
 The new Active Directory Domains and Trusts management page looks like this:
 
