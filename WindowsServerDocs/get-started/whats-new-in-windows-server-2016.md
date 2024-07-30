@@ -325,12 +325,12 @@ Windows Server Failover Clusters running Data Deduplication can have a mix of no
 
 ### SMB hardening improvements for SYSVOL and NETLOGON connections
 
-In Windows 10 and Windows Server 2016, client connections to the Active Directory Domain Services used SYSVOL and NETLOGON shares on domain controllers by default. Now these connections require SMB signing and mutual authentication using services such as Kerberos. If SMB signing and mutual authentication are unavailable, a Windows 10 or Windows Server 2016 computer won't process domain-based Group Policy and scripts. This change protects devices from man-in-the-middle attacks.
+In Windows 10 and Windows Server 2016, client connections to the Active Directory Domain Services used SYSVOL and NETLOGON shares on domain controllers by default. Now these connections require SMB signing and mutual authentication using services such as Kerberos. If SMB signing and mutual authentication are unavailable, a Windows 10 or Windows Server 2016 computer won't process domain-based Group Policy and scripts. This change protects devices from adversary-in-the-middle attacks.
 
 > [!NOTE]
 > The registry values for these settings aren't present by default, but the hardening rules still apply until you override them by editing Group Policy or other registry values.
 
-For more information on these security improvements, see Microsoft Knowledge Base article [3000483](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://msrc-blog.microsoft.com/2015/02/10/ms15-011-ms15-014-hardening-group-policy).
+For more information on these security improvements, see [MS15-011: Vulnerability in Group Policy](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://msrc-blog.microsoft.com/2015/02/10/ms15-011-ms15-014-hardening-group-policy).
 
 ### Work Folders
 
@@ -348,7 +348,7 @@ ReFS introduces the following improvements:
 
   - Increased responsiveness to drifting working sets.
 
-- Introduces block cloning to improve performance of VM operations, such as .vhdx checkpoint merge operations.
+- Introduces block cloning to improve performance of VM operations, such as `.vhdx` checkpoint merge operations.
 
 - A new ReFS scan tool that can help you recover leaked storage and salvage data from critical corruptions.
 
