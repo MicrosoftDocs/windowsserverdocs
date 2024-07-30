@@ -37,6 +37,8 @@ To troubleshoot the DC Locator domain controller locator process:
 
     For example, to verify record registration, run the following commands:
 
+    <!-- Robin, I am unclear re: whether the following code should be presented as command prompt or Powershell (I tend to think it is not Powershell.)-->
+
      ```console
         `nslookup servername. childofrootdomain. rootdomain.com`  
         `nslookup guid._msdcs. rootdomain.com`  
