@@ -68,7 +68,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
 **Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities enabling you to balance security risk and productivity requirements. Windows Defender Exploit Guard is designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks. The components are:
 
 - [Attack Surface Reduction (ASR)](/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc)
-    ASR is set of controls that enterprises can enable to prevent malware from getting on the machine by blocking suspicious malicious files. For example, Office files, scripts, lateral movement, ransomware behavior, and email-based threats.
+    is a set of controls that enterprises can enable to prevent malware from getting on the machine by blocking suspicious malicious files. For example, Office files, scripts, lateral movement, ransomware behavior, and email-based threats.
 
 - [Network protection](/windows/security/threat-protection/microsoft-defender-atp/network-protection)
     protects the endpoint against web-based threats by blocking any outbound

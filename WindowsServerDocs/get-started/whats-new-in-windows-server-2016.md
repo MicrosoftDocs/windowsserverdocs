@@ -70,8 +70,8 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - You can now resize shared virtual hard disks (`.vhdx` files) for guest clustering without downtime. You can also use guest clusters to protect shared virtual hard disks by using Hyper-V Replica for disaster recovery. You can only use this feature on collections in a guest cluster that you've enabled replication through Windows Management Instrumentation (WMI). For more information, see [Msvm_CollectionReplicationService class](/previous-versions/windows/desktop/clushyperv/msvm-collectionreplicationservice) and [Virtual Hard Disk Sharing Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281956(v=ws.11)).
 
-> [!NOTE]
-> Managing replication of a collection is not possible via PowerShell cmdlets or using the WMI interface.
+  > [!NOTE]
+  > Managing replication of a collection is not possible via PowerShell cmdlets or using the WMI interface.
 
 - When backing up a single virtual machine, we don't recommend using a VM group or snapshot collection regardless of whether the host is clustered or not. These options are intended for backing up guest clusters that use a shared vhdx. Instead, we recommend taking a snapshot using the [Hyper-V WMI provider (V2)](/windows/win32/hyperv_v2/windows-virtualization-portal).
 
@@ -95,7 +95,7 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 ### Nano Server
 
-What's New in [Nano Server](getting-started-with-nano-server.md). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality and support for different Windows Server editions.
+Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality and support for different Windows Server editions. For more information, see [Install Nano Server](/previous-versions/windows-server/it-pro/windows-server-2016/get-started/getting-started-with-nano-server).
 
 There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules and the ability to repair WinRM configuration.
 
@@ -182,7 +182,7 @@ Windows Hello for Business is a key-based authentication approach for organizati
 
 The user signs in to the device with a biometric or PIN linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), by phone, or a different notification mechanism.
 
-For more information, see, [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/).
+For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/).
 
 #### Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels
 
@@ -315,7 +315,7 @@ IPAM has the following updates:
   
   - DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers. You can manage all types of DNS zones, including Primary, Secondary, and Stub zones.
   
-  - Trigger tasks on Secondary and STub zones regardless of whether they're forward or reverse lookup zones.
+  - Trigger tasks on Secondary and Stub zones regardless of whether they're forward or reverse lookup zones.
   
   - Role-based access control for supported DNS configurations for records and zones.
 
