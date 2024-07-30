@@ -11659,6 +11659,56 @@
       "source_path": "WindowsServerDocs/networking/technologies/ipam/What-s-New-in-IPAM.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/active-directory-domain-services-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/active-directory-domain-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/group-managed-service-accounts-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
+      "redirect_url": "/windows-server/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831451(v=ws.11)",
+      "redirect_document_id": false
     }
   ]
 }
