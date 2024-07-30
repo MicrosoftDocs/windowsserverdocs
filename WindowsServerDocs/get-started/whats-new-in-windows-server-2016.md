@@ -68,17 +68,12 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
   > [!IMPORTANT]
   > New VMs use production checkpoints as the default.
 
-- You can now run rolling cluster upgrades to upgrade your Window Server 2012 R2 Hyper-V cluster to Windows Server 2016 or 2019 without any downtime. For more information, see [Cluster Operating System Rolling Upgrade](/windows-server/failover-clustering/Cluster-Operating-System-Rolling-Upgrade).
-
-  > [!NOTE]
-  > Hyper-V on Windows 10 doesn't support failover clustering.
-
 - You can now resize shared virtual hard disks (`.vhdx` files) for guest clustering without downtime. You can also use guest clusters to protect shared virtual hard disks by using Hyper-V Replica for disaster recovery. You can only use this feature on collections in a guest cluster that you've enabled replication through Windows Management Instrumentation (WMI). For more information, see [Msvm_CollectionReplicationService class](/previous-versions/windows/desktop/clushyperv/msvm-collectionreplicationservice) and [Virtual Hard Disk Sharing Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281956(v=ws.11)).
 
 > [!NOTE]
 > Managing replication of a collection is not possible via PowerShell cmdlets or using the WMI interface.
 
-- When backing up a single virtual machine, its not recommended to use a VM group or snapshot collection regardless of whether the host is clustered or not. These options are intended for backing up guest clusters that use shared a vhdx. Instead, it's recommended to take a snapshot using the [Hyper-V WMI provider (V2)](/windows/win32/hyperv_v2/windows-virtualization-portal).
+- When backing up a single virtual machine, we don't recommend using a VM group or snapshot collection regardless of whether the host is clustered or not. These options are intended for backing up guest clusters that use a shared vhdx. Instead, we recommend taking a snapshot using the [Hyper-V WMI provider (V2)](/windows/win32/hyperv_v2/windows-virtualization-portal).
 
 - You can now create shielded Hyper-V VMs that include features that prevent Hyper-V admins on the host or malware from inspecting, tampering with, or stealing data from the shielded VM state. Data and state are encrypted so that Hyper-V admins can't see video output and available disks. You can also restrict the VMs to only run on hosts that a Host Guardian Server has determined are healthy and trustworthy. For more information, see [Guarded fabric and shielded VMs overview](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md).
 
@@ -87,7 +82,7 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - The start order priority for clustered virtual machines feature gives you more control over which clustered VMs start or restart first. Deciding start order priority lets you start VMs that provide services before starting VMs that use those services. You can define sets, add VMs to sets, and specify dependencies using PowerShell cmdlets such as [New-ClusterGroupSet](/powershell/module/failoverclusters/new-clustergroupset), [Get-ClusterGroupSet](/powershell/module/failoverclusters/get-clustergroupset), and [Add-ClusterGroupSetDependency](/powershell/module/failoverclusters/add-clustergroupsetdependency).
 
-- VM configuration files now use `.vmcx` file extension format, while runtime state data files use the `.vmrs` file extension format. These new file formats are designed with more efficient reading and writing in mind. The updated formats also decrease the likelihood of data corruption if a storage failure happens.
+- VM configuration files now use the `.vmcx` file extension format, while runtime state data files use the `.vmrs` file extension format. These new file formats are designed with more efficient reading and writing in mind. The updated formats also decrease the likelihood of data corruption if a storage failure happens.
 
   > [!IMPORTANT]
   > The `.vmcx` file name extension indicates a binary file. Hyper-V for Windows Server 2016 doesn't support editing `.vmcx` or `.vmrs` files.
@@ -246,7 +241,15 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
 - Network Controller, which lets you automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).
 
-- Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+- New features for Hyper-V:
+
+  - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+
+  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
+
+  - Virtual machine multi-queues (VMMQs) improve on VMQ through put by allocating multiple hardware queues per VM. The default queue becomes a set of queues for a VM and spreads traffic between the queues.
+  
+  - Quality of service (QoS) for software-defined networks manages the default class of traffic through the virtual switch within the default class bandwidth.
 
 - Network Function Virtualization (NFV), which lets you mirror or route network functions performed by hardware appliances to virtual appliances, such as load balancers, firewalls, routers, switches, and so on. You can also deploy and manage your entire SDN stack using System Center Virtual Machine Manager. You can manage Windows Server container networking with Docker and associate SDN policies with both virtual machines and containers.
 
@@ -450,6 +453,11 @@ Starting with Windows Server 2016, Data Deduplication for Virtualized Backup App
 ### Cluster OS Rolling Upgrade support
 
 Windows Server Failover Clusters running Data Deduplication can have a mix of nodes that run the Windows Server 2012 R2 and Windows Server 2016 versions of Data Deduplication. This mixed-mode cluster feature gives full data access to all deduplicated volumes during cluster rolling upgrades. You can now gradually roll out later versions of Data Deduplications on clusters running earlier versions of Windows Server without any downtime.
+
+You can also now use rolling upgrades on Hyper-V. With Rolling Hyper-V Cluster upgrade, you can now add a node running Windows Server 2019 or Windows Server 2016 to a Hyper-V Cluster with nodes running Windows Server 2012 R2. After you add the node running the later version of Windows Server, you can upgrade the rest of the cluster without downtime. The cluster runs at a  Windows Server 2012 R2 feature level until you upgrade all nodes in the cluster and run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) in PowerShell to update the cluster functioning level. For more detailed instructions for how the rolling upgrade process works, see [Cluster Operating System Rolling Upgrade](/windows-server/failover-clustering/Cluster-Operating-System-Rolling-Upgrade).
+
+> [!NOTE]
+> Hyper-V on Windows 10 doesn't support failover clustering.
 
 ## Failover Clustering
 
