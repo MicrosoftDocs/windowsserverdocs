@@ -245,7 +245,7 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
   - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
-  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
+  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
   - Virtual machine multi-queues (VMMQs) improve on VMQ through put by allocating multiple hardware queues per VM. The default queue becomes a set of queues for a VM and spreads traffic between the queues.
   

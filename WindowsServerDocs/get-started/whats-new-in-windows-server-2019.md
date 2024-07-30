@@ -104,7 +104,7 @@ Even if you can't reach the HGS, offline mode lets you continue to start up your
 
 #### Troubleshooting improvements
 
-We also made it easier to [troubleshoot your shielded virtual machines](../security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are useful when you lose network connectivity to your VM and need to update its configuration to restore access.
+We also made it easier to troubleshoot your shielded VMs by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are useful when you lose network connectivity to your VM and need to update its configuration to restore access. To learn more, see [Guarded fabric and shielded VMs](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
 
 You don't need to configure these features because they become automatically available when you place a shielded VM on a Hyper-V host running Windows Server version 1803 or later.
 
