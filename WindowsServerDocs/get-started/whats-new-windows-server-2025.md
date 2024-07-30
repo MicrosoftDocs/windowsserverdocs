@@ -109,7 +109,7 @@ By default, the Azure Arc setup Feature-on-Demand is installed, which offers a u
 
 You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
 
-## Credential Guard
+### Credential Guard
 
 Starting with Windows Server 2025, Credential Guard is now enabled by default on devices that meet the requirements. For more information about Credential Guard, see [Configure Credential Guard](/windows/security/identity-protection/credential-guard/configure).
 
@@ -119,7 +119,7 @@ When you sign in for the first time, the desktop shell experience conforms to th
 
 ### Delegated Managed Service Account
 
-This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](../security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md).
+This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](../identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md).
 
 ### DTrace
 
