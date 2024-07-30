@@ -8,8 +8,6 @@
     items:
     - name: Technology Overview
       href: hyper-v/Hyper-V-Technology-Overview.md
-    - name: What's new in Hyper-V
-      href: hyper-v/What-s-new-in-Hyper-V-on-Windows.md
     - name: System requirements
       href: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
     - name: Supported Windows guest operating systems
