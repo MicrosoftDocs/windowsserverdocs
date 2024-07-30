@@ -109,7 +109,7 @@ By default, the Azure Arc setup Feature-on-Demand is installed, which offers a u
 
 You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
 
-## Credential Guard
+### Credential Guard
 
 Starting with Windows Server 2025, Credential Guard is now enabled by default on devices that meet the requirements. For more information about Credential Guard, see [Configure Credential Guard](/windows/security/identity-protection/credential-guard/configure).
 
@@ -119,7 +119,7 @@ When you sign in for the first time, the desktop shell experience conforms to th
 
 ### Delegated Managed Service Account
 
-This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](../security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md).
+This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](../identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md).
 
 ### DTrace
 
@@ -262,9 +262,9 @@ A VBS enclave is a software-based trusted execution environment (TEE) inside the
 
 VBS enclaves enable applications to protect their secrets by removing the need to trust admins and hardening against malicious attackers. For more information, read the [VBS enclaves Win32 reference](/windows/win32/trusted-execution/vbs-enclaves).
 
-### Virtualization-based security (VBS) Key Protection
+### Virtualization-based security (VBS) key protection
 
-VBS key protection enables Windows developers to secure cryptographic keys using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. When in use, VBS keys are isolated in a secure process, allowing key operations to occur without ever exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user’s machine, preventing exfiltration attacks by any admin-level attacker.
+VBS key protection enables Windows developers to secure cryptographic keys using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. When in use, VBS keys are isolated in a secure process, allowing key operations to occur without exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user’s machine, preventing exfiltration attacks by any admin-level attacker. VBS must be enabled to use key protection. See [Enable memory integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity) for information about how to enable VBS.
 
 ### Wi-Fi
 

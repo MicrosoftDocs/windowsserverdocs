@@ -145,7 +145,7 @@ To create a gMSA using PowerShell, follow these steps.
     New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
    ```
 
-Membership in **Domain Admins**, **Account Operators**, or ability to create `msDS-GroupManagedServiceAccount` objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Active Directory security groups](../../identity/ad-ds/manage/understand-security-groups.md).
+Membership in **Domain Admins**, **Account Operators**, or ability to create `msDS-GroupManagedServiceAccount` objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Active Directory security groups](../../../manage/understand-security-groups.md).
 
 To create a gMSA for outbound authentication only using PowerShell, follow the steps.
 
