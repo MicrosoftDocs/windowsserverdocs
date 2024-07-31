@@ -2,7 +2,7 @@
 title: Using certificates in Remote Desktop Services
 description: How to create and use authentication certificates for Remote Desktop Services.
 ms.author: helohr
-ms.date: 05/06/24
+ms.date: 07/15/2024
 ms.topic: how-to
 author: Heidilohr
 ---
@@ -32,7 +32,7 @@ The following things are required to use certificates in RDS:
 
   - Issued with an exportable private key.
 
-  - An export of the certificate with the corresponding private key in .pfx format. To learn more about exporting the private key, see [Export a certificate with its private key](../../identity/ad-cs/export-certificate-private-key.md).
+  - An export of the certificate with the corresponding private key in `.pfx` format. To learn more about exporting the private key, see [Export a certificate with its private key](../../identity/ad-cs/export-certificate-private-key.md).
 
 >[!NOTE]
 >If you're using Active Directory Certificate Services (AD CS) to issue certificates, you should also create a certificate template. To learn more about creating certificate templates, see [Create a new certificate template](../../identity/ad-cs/manage-certificate-templates.md#create-a-new-certificate-template).
@@ -68,24 +68,32 @@ To configure Remote Desktop to use specific certificates:
 
 1. Open an elevated PowerShell session.
 
-1. Enter the certificate password for the exported certificate as a secure string in PowerShell using the following command.
+1. Run the following script for the RD certificate you plan to use for your session where it will prompt you for the password and location for the exported certificate. Replace `<PathToPFXFile>` with the full file path including the `.pfx` file.
 
   ```powershell
   $password = Read-Host -AsSecureString -Prompt "Enter Password"
+  $parameters = @{
+    Role        = "RDWebAccess"
+    Password    = $password
+    ImportPath  = "PathToPFXFile"
+  }
+  Set-RDCertificate @parameters
   ```
 
-1. Set the certificate used by [the RD role](/powershell/module/rdmgmt/set-rdcertificate?view=windowsserver2022-ps#-role) you want to configure using the following command.
+To set the certificate based on a specific **-Role** type, see [Set-RDCertificate](/powershell/module/rdmgmt/set-rdcertificate).
 
-  ```powershell
-  Set-RDCertificate -Role RDWebAccess -ImportPath "<Path to PFX file>" -Password $password
-  ```
-  
+To view all of the configured RDS certificates, run the following command:
+
+```powershell
+Get-RDCertificate
+```
+
 ---
 
 You might want to use certificates for the RDS Session Host along with the certificates you configured in Server Manager. For more information about RDS Session Host certificates, see [Remote Desktop listener certificate configurations](/troubleshoot/windows-server/remote/remote-desktop-listener-certificate-configurations).
 
 ## Related content
 
-- [Secure data storage](rds-plan-secure-data-storage.md)
+- [Remote Desktop Services - Secure data storage with UPDs](rds-plan-secure-data-storage.md)
 
-- [Use multifactor authentication for RDS](rds-plan-mfa.md)
+- [Remote Desktop Services - Multi-Factor Authentication](rds-plan-mfa.md)
