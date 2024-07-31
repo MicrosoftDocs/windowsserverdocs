@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 07/23/2024
+ms.date: 07/31/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -32,11 +32,70 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - HNV implements correct L2 Ethernet headers to ensure interoperability with third-party virtual and physical appliances that depend on industry-standard protocols. Microsoft ensures that all transmitted packets have compliant values in all fields to guarantee interoperability. HNV requires support for Jumbo Frames (MTU > 1780) in the physical L2 network to account for packet overhead introduced by encapsulation protocols such as NVGRE and VXLAN. Jumbo Frame support ensures that guest Virtual Machines attached to an HNV Virtual Network maintain a 1514 MTU.
 
-- [Windows Container](/virtualization/windowscontainers/) support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For more information, see [Containers: Docker, Windows, and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
+- [Windows Container](/virtualization/windowscontainers/) support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For more information, see our [Windows Containers Documentation](/virtualization/windowscontainers/index) and [Containers: Docker, Windows, and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
+
+- Hyper-V is now compatible with Connected Standby. When you install the Hyper-V role on a computer that uses the Always On/Always Connected (AOAC) power model, you can now configure it to use the Connected Standby power state.
+
+- Discrete device assignment lets you give a virtual machine (VM) direct and exclusive access to certain PCIe hardware devices. This feature bypasses the Hyper-V virtualization stack, which results in faster access. For more information, see [Discrete device assignment](../virtualization/hyper-v/System-requirements-for-Hyper-V-on-Windows.md#discrete-device-assignment) and [Discrete Device Assignment - Description and background](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-description-and-background/ba-p/382262).
+
+- Hyper-V now supports BitLocker drive encryption for operating system disks in generation 1 VMs. This protection method replaces virtual Trusted Platform Modules (TPMs), which are only available in generation 2 VMs. To decrypt the disk and start the VM, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the VM's guardians. Key storage requires a version 8 VM. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+
+- Host resource protection prevents VMs from using too many system resources by tracking excessive levels of activity. When monitoring detects an unusually high activity level in a VM, it throttles the amount of resources the VM consumes. You can enable this feature by running the [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor) cmdlet in PowerShell.
+
+- You can now use hot add or remove to add or remove network adapters while the VM is running without downtime in generation 2 VMs running either Linux or Windows operating systems. You can also adjust how much memory is assigned to a VM while it's running even if you haven't enabled Dynamic Memory on both generation 1 and 2 VMs running Windows Server 2016 and later or Windows 10 and later.
+
+- Hyper-V Manager now supports the following features:
+
+  - Alternate credentials, which let you use a different set of credentials in Hyper-V Manager when connecting to another Windows Server 2016 or Windows 10 remote host. You can also save these credentials to make signing in easier.
+  
+  - You can now manage Hyper-V on machines running Windows Server 2012 R2, Windows Server 2012, Windows 8.1, and Windows 8.
+
+  - Hyper-V Manager now communicates with remote Hyper-V hosts using the WS-MAN protocol, which permits CredSSP, Kerberos, and NTLM authentication. When you use CredSSP to connect to a remote Hyper-V host, you can perform a live migration without enabling constrained delegation in Active Directory. WS-MAN also makes it easier to enable hosts for remote management. WS-MAN connects over port 80, which is open by default.
+
+- Updates to integration services for Windows guests are now distributed through Windows Update. Service providers and private cloud hosts can give tenants who own the VMs control over applying updates. Windows tenants can now upgrade their VMs with all of the latest updates through a single method. For more information about how Linux tenants can use integration services, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows](../virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).
+
+    > [!IMPORTANT]
+    > Hyper-V for Windows Server 2016 no longer includes the vmguest.iso image file because it's no longer required.
+
+- Linux operating systems running on generation 2 VMs can now boot with the Secure Boot option enabled. The OSes that support Secure Boot on Windows Server 2016 hosts include Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later. Before you boot the VM for the first time, you must configure it to use the Microsoft UEFI Certificate Authority in either Hyper-V Manager, Virtual Machine Manager, or by running the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) cmdlet in PowerShell.
+
+- Generation 2 VMs and Hyper-V hosts can now use significantly more memory and virtual processors. You can also configure hosts with more memory and virtual processors than previous versions. These changes support scenarios such as running large in-memory databases for online transaction processing (OLTP) and data warehousing (DW) for e-commerce. For more information, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://www.microsoft.com/windows-server/blog/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). Learn more about version compatibility and supported maximum configurations at [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md) and [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+
+- The Nested Virtualization feature lets you use a VM as a Hyper-V host and create VMs within the virtualized host. You can use this feature to build development and test environments running at least Windows Server 2016 or Windows 10 with an Intel VT-x capable processor. For more information, see [What is Nested Virtualization?](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
+
+- You can now set up production checkpoints to comply with support policies for VMs running production workloads. These checkpoints run on backup technology inside the guest device instead of a saved state. Windows VMs use the Volume Snapshot Service (VSS), while Linux VMs flush file system buffers to create checkpoints that are consistent with the file system. You can still use checkpoints based on save states by using standard checkpoints instead. For more information, see [Choose between standard or production checkpoints in Hyper-V](../virtualization/hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md).
+
+  > [!IMPORTANT]
+  > New VMs use production checkpoints as the default.
+
+- You can now resize shared virtual hard disks (`.vhdx` files) for guest clustering without downtime. You can also use guest clusters to protect shared virtual hard disks by using Hyper-V Replica for disaster recovery. You can only use this feature on collections in a guest cluster that you've enabled replication through Windows Management Instrumentation (WMI). For more information, see [Msvm_CollectionReplicationService class](/previous-versions/windows/desktop/clushyperv/msvm-collectionreplicationservice) and [Virtual Hard Disk Sharing Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281956(v=ws.11)).
+
+  > [!NOTE]
+  > Managing replication of a collection is not possible via PowerShell cmdlets or using the WMI interface.
+
+- When backing up a single virtual machine, we don't recommend using a VM group or snapshot collection regardless of whether the host is clustered or not. These options are intended for backing up guest clusters that use a shared vhdx. Instead, we recommend taking a snapshot using the [Hyper-V WMI provider (V2)](/windows/win32/hyperv_v2/windows-virtualization-portal).
+
+- You can now create shielded Hyper-V VMs that include features that prevent Hyper-V admins on the host or malware from inspecting, tampering with, or stealing data from the shielded VM state. Data and state are encrypted so that Hyper-V admins can't see video output and available disks. You can also restrict the VMs to only run on hosts that a Host Guardian Server has determined are healthy and trustworthy. For more information, see [Guarded fabric and shielded VMs overview](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md).
+
+  > [!NOTE]
+  > Shielded VMs are compatible with Hyper-V Replica. To replicate a shielded virtual machine, you must authorize the host you want to replicate to run that shielded VM.
+
+- The start order priority for clustered virtual machines feature gives you more control over which clustered VMs start or restart first. Deciding start order priority lets you start VMs that provide services before starting VMs that use those services. You can define sets, add VMs to sets, and specify dependencies using PowerShell cmdlets such as [New-ClusterGroupSet](/powershell/module/failoverclusters/new-clustergroupset), [Get-ClusterGroupSet](/powershell/module/failoverclusters/get-clustergroupset), and [Add-ClusterGroupSetDependency](/powershell/module/failoverclusters/add-clustergroupsetdependency).
+
+- VM configuration files now use the `.vmcx` file extension format, while runtime state data files use the `.vmrs` file extension format. These new file formats are designed with more efficient reading and writing in mind. The updated formats also decrease the likelihood of data corruption if a storage failure happens.
+
+  > [!IMPORTANT]
+  > The `.vmcx` file name extension indicates a binary file. Hyper-V for Windows Server 2016 doesn't support editing `.vmcx` or `.vmrs` files.
+
+- We updated version compatibility with version 5 VMs. These VMs are compatible with both Windows Server 2012 R2 and Windows Server 2016. However, version 5 VMs that are compatible with Windows Server 2019 can only run on Windows Server 2016, not Windows Server 2012 R2. If you move or import a Windows Server 2012 R2 VM to a server running a later version of Windows Server, you must manually update the VM configuration to use features for the later versions of Windows Server. For more information about version compatibility and updated features, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+
+- You can now use virtualization-based security features for generation 2 VMs, such as Device Guard and Credential Guard, to protect your OS against malware exploits. These features are available in VMs running version 8 or later. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
+
+- You can now run cmdlets using Windows PowerShell Direct to configure your VM from the host machine as an alternative to VMConnect or Remote PowerShell. You don't need to meet any networking or firewall requirements or have a special remote management configuration in order to start using it. For more information, see [Manage Windows virtual machines with PowerShell Direct](../virtualization/hyper-v/manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md).
 
 ### Nano Server
 
-What's New in [Nano Server](getting-started-with-nano-server.md). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality and support for different Windows Server editions.
+Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality and support for different Windows Server editions. For more information, see [Install Nano Server](/previous-versions/windows-server/it-pro/windows-server-2016/get-started/getting-started-with-nano-server).
 
 There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules and the ability to repair WinRM configuration.
 
@@ -123,7 +182,7 @@ Windows Hello for Business is a key-based authentication approach for organizati
 
 The user signs in to the device with a biometric or PIN linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), by phone, or a different notification mechanism.
 
-For more information, see, [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/).
+For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/).
 
 #### Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels
 
@@ -182,7 +241,15 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
 - Network Controller, which lets you automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).
 
-- Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+- New features for Hyper-V:
+
+  - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+
+  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+
+  - Virtual machine multi-queues (VMMQs) improve on VMQ through put by allocating multiple hardware queues per VM. The default queue becomes a set of queues for a VM and spreads traffic between the queues.
+  
+  - Quality of service (QoS) for software-defined networks manages the default class of traffic through the virtual switch within the default class bandwidth.
 
 - Network Function Virtualization (NFV), which lets you mirror or route network functions performed by hardware appliances to virtual appliances, such as load balancers, firewalls, routers, switches, and so on. You can also deploy and manage your entire SDN stack using System Center Virtual Machine Manager. You can manage Windows Server container networking with Docker and associate SDN policies with both virtual machines and containers.
 
@@ -248,7 +315,7 @@ IPAM has the following updates:
   
   - DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers. You can manage all types of DNS zones, including Primary, Secondary, and Stub zones.
   
-  - Trigger tasks on Secondary and STub zones regardless of whether they're forward or reverse lookup zones.
+  - Trigger tasks on Secondary and Stub zones regardless of whether they're forward or reverse lookup zones.
   
   - Role-based access control for supported DNS configurations for records and zones.
 
@@ -386,6 +453,11 @@ Starting with Windows Server 2016, Data Deduplication for Virtualized Backup App
 ### Cluster OS Rolling Upgrade support
 
 Windows Server Failover Clusters running Data Deduplication can have a mix of nodes that run the Windows Server 2012 R2 and Windows Server 2016 versions of Data Deduplication. This mixed-mode cluster feature gives full data access to all deduplicated volumes during cluster rolling upgrades. You can now gradually roll out later versions of Data Deduplications on clusters running earlier versions of Windows Server without any downtime.
+
+You can also now use rolling upgrades on Hyper-V. With Rolling Hyper-V Cluster upgrade, you can now add a node running Windows Server 2019 or Windows Server 2016 to a Hyper-V Cluster with nodes running Windows Server 2012 R2. After you add the node running the later version of Windows Server, you can upgrade the rest of the cluster without downtime. The cluster runs at a  Windows Server 2012 R2 feature level until you upgrade all nodes in the cluster and run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) in PowerShell to update the cluster functioning level. For more detailed instructions for how the rolling upgrade process works, see [Cluster Operating System Rolling Upgrade](/windows-server/failover-clustering/Cluster-Operating-System-Rolling-Upgrade).
+
+> [!NOTE]
+> Hyper-V on Windows 10 doesn't support failover clustering.
 
 ## Failover Clustering
 
