@@ -24,7 +24,13 @@ The following things are required to use certificates in RDS:
 
   - Issued for Server Authentication (EKU 1.3.6.1.5.5.7.3.1).
 
+  - Issued for Enhanced Key Usage (OID 2.5.29.37).
+
+  - Issued for Key Usage (OID 2.5.29.15).
+
   - Issued by a certificate authority trusted by the RDS server(s) and clients.
+
+  - Issued with an exportable private key.
 
   - An export of the certificate with the corresponding private key in .pfx format. To learn more about exporting the private key, see [Export a certificate with its private key](../../identity/ad-cs/export-certificate-private-key.md).
 
