@@ -11709,6 +11709,16 @@
       "source_path": "WindowsServerDocs/security/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
       "redirect_url": "/windows-server/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831451(v=ws.11)",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/whats-new-in-storage.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
     }
   ]
 }
