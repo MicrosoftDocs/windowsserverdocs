@@ -140,15 +140,7 @@ For more information, see [Encrypted networks](../networking/sdn/vnet-encryption
 
 ## Storage
 
-Here are some of the changes we've made to storage in Windows Server 2019. For details, see [What's new in Storage](../storage/whats-new-in-storage.md).
-
-### Data Deduplication
-
-- **Data Deduplication now supports ReFS**
-    You can now enable Data Deduplication wherever you can enable ReFS, increasing storage efficiency by up to 95% with ReFS.
-
-- **DataPort API for optimized ingress/egress to deduplicated volumes**
-    Developers can now take advantage of the knowledge Data Deduplication has about how to store data efficiently to move data between volumes, servers, and clusters efficiently.
+Here are some of the changes we've made to Storage in Windows Server 2019. Storage is also affected by updates to [Data deduplication](#data-deduplication), particularly its update to DataPort API for optimized ingress or egress to deduplicated volumes.
 
 ### File Server Resource Manager
 
@@ -156,11 +148,9 @@ It's now possible to prevent the File Server Resource Manager service from creat
 
 ### SMB
 
-- **SMB1 and guest authentication removal**
-    Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 isn't installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
+-  Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
 
-- **SMB2/SMB3 security and compatibility**
-    You now have the ability to disable oplocks in SMB2+ for legacy applications, and require signing or encryption on per-connection basis from a client. For more information, review the [SMBShare PowerShell module help](/powershell/module/smbshare/?view=windowsserver2019-ps&preserve-view=true).
+- You can now disable oplocks in SMB2+ for legacy applications. You can also require signing or encryption on per-connection basis from a client. For more information, see [SMBShare PowerShell module help](/powershell/module/smbshare/?view=windowsserver2019-ps&preserve-view=true).
 
 ### Storage Migration Service
 
@@ -179,27 +169,39 @@ You can also access the following post-release-to-manufacturing (RTM) features w
 
 ### Storage Spaces Direct
 
-Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Storage Spaces Direct](../storage/whats-new-in-storage.md#storage-spaces-direct). Also see [Azure Stack HCI](/azure-stack/operator/azure-stack-hci-overview) for info on acquiring validated Storage Spaces Direct systems.
+Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Stack HCI solution overview](/azure-stack/operator/azure-stack-hci-overview).
 
-- Deduplication and compression for ReFS volumes
-- Native support for persistent memory
-- Nested resiliency for two-node hyper-converged infrastructure at the edge
-- Two-server clusters using a USB flash drive as a witness
-- Windows Admin Center support
-- Performance history
-- Scale up to 4 PB per cluster
-- Mirror-accelerated parity is 2X faster
-- Drive latency outlier detection
-- Manually delimit the allocation of volumes to increase fault tolerance
+- Deduplication and compression for ReFS volumes. Variable-size chunk store with optional compression maximizes savings rates, while multi-threaded post-processing architecture minimizes performance impact. This feature supports volumes up to 64 TB and deduplicates the first 4 MB of each file.
+
+- Native support for persistent memory, which lets you manage persistent memory like any other drive in PowerShell or Windows Admin Center. This feature supports Intel Optane DC PM and NVDIMM-N persistent memory modules.
+
+- Nested resiliency for two-node hyper-converged infrastructure at the edge. With the help of a new software resiliency option based on RAID 5+1, you can now survive two hardware failures simultaneously. A two-node Storage Spaces Direct cluster provides continuously accessible storage for apps and virtual machines even if one server node goes down and another server node has a drive failure.
+
+- Two-server clusters can now use a USB flash drive as a witness. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more information, see our [Storage Spaces Direct announcement blog post](https://techcommunity.microsoft.com/t5/storage-at-microsoft/here-s-what-you-missed-8211-five-big-announcements-for-storage/ba-p/428257) and [Configure a file share witness for Failover Clustering](../failover-clustering/file-share-witness.md).
+
+- Windows Admin Center supports a dashboard that lets you manage and monitor Storage Spaces direct. You can monitor IOPS and IO latency from the overall cluster level down to individual SSDs or HDDs at no extra cost. To learn more, see [What is Windows Admin Center?](../manage/windows-admin-center/use/manage-hyper-converged.md#what-is-windows-admin-center).
+
+- Performance history is a new feature that provides effortless visibility into resource utilization and measurements. To learn more, see [Performance history for Storage Spaces Direct](../storage/storage-spaces/performance-history.md).
+
+- Scale up to 4 PB per cluster using a capacity of up to 64 volumes of up to 64 TB. You can also stitch multiple clusters together into a [cluster set](/azure-stack/hci/deploy/cluster-set) for even greater scale within a single storage namespace.
+
+- By utilizing mirror-accelerated parity, it is possible to construct Storage Spaces Direct volumes that incorporate both mirror and parity strategies, similar to a blend of RAID-1 and RAID-5/6. Mirror-accelerated parity is now two times faster than Windows Server 2016.
+
+- Drive latency outlier detection automatically identifies slow drives in PowerShell and Windows Admin Center with an "Abnormal Latency" status.
+
+- Manually delimit the allocation of volumes to increase fault tolerance. For more information, see [Delimit the allocation of volumes in Storage Spaces Direct](../storage/storage-spaces/delimit-volume-allocation.md).
 
 ### Storage Replica
 
-Here's what's new in Storage Replica. For details, see [What's new in Storage Replica](../storage/whats-new-in-storage.md#storage-replica).
+Here's what's new in Storage Replica.
 
-- Storage Replica is now available in Windows Server 2019 Standard Edition.
-- Test failover is a new feature that allows mounting of destination storage to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.yml).
-- Storage Replica log performance improvements
-- Windows Admin Center support
+- Storage Replica is now available in Windows Server 2019 Standard Edition and Windows Server 2019 Datacenter Edition. However, with the Standard Edition, you can only replicate one volume, and that volume can only go up to 2 TB in size.
+
+- Test failover is a new feature that allows you to temporarily mount a snapshot of the replicated storage on a destination server for testing or backup purposes. For more information, see [Frequently asked questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.yml).
+
+- Storage Replica log performance improvements, such as improved replication throughput and latency on all-flash storage and Storage Spaces Direct clusters that replicate between each other.
+
+- Windows Admin Center support, including graphical management of replication using Server Manager for server-to-server, cluster-to-cluster, and stretch cluster replication.
 
 ### Data deduplication
 

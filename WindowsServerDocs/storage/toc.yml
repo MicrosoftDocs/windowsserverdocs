@@ -2,8 +2,6 @@ items:
 - name: Storage
   href: storage.yml
   items:
-  - name: What's new in Storage
-    href: whats-new-in-storage.md
   - name: Data Deduplication
     href: data-deduplication/overview.md
     items:
