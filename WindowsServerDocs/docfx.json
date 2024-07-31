@@ -93,10 +93,7 @@
           "security/tls/*.md": "wscontent"
         },
         "ms.prod": {
-        },
-        "ms.technology": {
-          "upgrade/**/*.md": "upgrade"
-          }
+        }
         },
     "template": [
       "docs.html"

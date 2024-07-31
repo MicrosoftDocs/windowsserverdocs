@@ -4,7 +4,7 @@ description: Find out what is new in Windows Server 2022.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 04/02/2024
+ms.date: 07/10/2024
 ---
 
 # What's new in Windows Server 2022
@@ -260,6 +260,8 @@ Windows Server 2022 uses TCP [HyStart++](https://datatracker.ietf.org/doc/html/d
 ##### Hyper-V virtual switch improvements
 
 Virtual switches in Hyper-V have been enhanced with updated Receive Segment Coalescing (RSC). RSC allows the hypervisor network to coalesce packets and process as one larger segment. CPU cycles are reduced and segments will remain coalesced across the entire data path until processed by the intended application. RSC results in improved performance for both network traffic from an external host, received by a virtual NIC, and from a virtual NIC to another virtual NIC on the same host.
+
+In vSwitch, RSC can also coalesce multiple TCP segments into a larger segment before data traversing the vSwitch. This change also improves networking performance for virtual workloads. RSC is enabled on external virtual switches by default.
 
 #### System Insights disk anomaly detection
 

@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/27/2024
+ms.date: 07/31/2024
 ---
 
 # What's new in Windows Server 2019
@@ -49,6 +49,12 @@ With Azure AD integration you can use Conditional Access policies, Multifactor A
 
 We made several improvements to the core network stack, such as TCP Fast Open (TFO), Receive Window Autotuning, IPv6, and more. For more information, see the [Core Network Stack feature improvement](https://techcommunity.microsoft.com/t5/networking-blog/core-network-stack-features-in-the-creators-update-for-windows/ba-p/339676) post.
 
+### Dynamic vRSS and VMMQ
+
+In the past, Virtual Machine Queues and Virtual Machine Multi-Queues (VMMQs) enabled much higher throughput to individual VMs as network throughputs first reached the 10GbE mark and beyond. Unfortunately, the planning, baselining, tuning, and monitoring required for success became a much larger undertaking than IT administrators anticipated.
+
+Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as needed. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+
 ## Security
 
 ### Windows Defender Advanced Threat Protection (ATP)
@@ -62,7 +68,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
 **Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities enabling you to balance security risk and productivity requirements. Windows Defender Exploit Guard is designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks. The components are:
 
 - [Attack Surface Reduction (ASR)](/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc)
-    ASR is set of controls that enterprises can enable to prevent malware from getting on the machine by blocking suspicious malicious files. For example, Office files, scripts, lateral movement, ransomware behavior, and email-based threats.
+    is a set of controls that enterprises can enable to prevent malware from getting on the machine by blocking suspicious malicious files. For example, Office files, scripts, lateral movement, ransomware behavior, and email-based threats.
 
 - [Network protection](/windows/security/threat-protection/microsoft-defender-atp/network-protection)
     protects the endpoint against web-based threats by blocking any outbound
@@ -88,21 +94,23 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 
 ### Shielded Virtual Machines improvements
 
-- **Branch office improvements**
+We made the following improvements to Shielded Virtual Machines.
 
-    You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by using the new [fallback HGS](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
+#### Branch office improvements
 
-    Even if the HGS can't be reached, offline mode will allow you to continue to start up your shielded VMs. Offline mode will allow you to start your VMs as long as the VM has started successfully once, and the host's security configuration hasn't changed.
+You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by using the new [fallback HGS](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
 
-- **Troubleshooting improvements**
+Even if you can't reach the HGS, offline mode lets you continue to start up your shielded VMs. Offline mode also lets you start your VMs as long as the VM has started successfully once and the host's security configuration hasn't changed.
 
-    We've also made it easier to [troubleshoot your shielded virtual machines](../security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are useful if you've lost network connectivity to your VM and need to update its configuration to restore access.
+#### Troubleshooting improvements
 
-    These features don't need to be configured, and they become available automatically when a shielded VM is placed on a Hyper-V host running Windows Server version 1803 or later.
+We also made it easier to troubleshoot your shielded VMs by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are useful when you lose network connectivity to your VM and need to update its configuration to restore access. To learn more, see [Guarded fabric and shielded VMs](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
 
-- **Linux support**
+You don't need to configure these features because they become automatically available when you place a shielded VM on a Hyper-V host running Windows Server version 1803 or later.
 
-    If you run mixed-OS environments, Windows Server 2019 now supports running Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise Server inside shielded virtual machines.
+#### Linux support
+
+If you run mixed-OS environments, Windows Server 2019 now supports running Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise Server inside shielded virtual machines.
 
 ### HTTP/2 for a faster and safer Web
 

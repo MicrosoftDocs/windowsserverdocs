@@ -3,7 +3,7 @@ title: Performance Tuning Remote Desktop Virtualization Hosts
 description: Performance Tuning for Remote Desktop Virtualization Hosts
 ms.topic: article
 ms.author: hammadbu
-author: phstee
+author: robinharwood
 ms.date: 10/22/2019
 ---
 

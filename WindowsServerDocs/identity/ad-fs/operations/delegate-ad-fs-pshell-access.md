@@ -23,7 +23,7 @@ We use this example in the rest of this document. However, you can customize thi
 
 ## Create the required groups necessary to grant users permissions
 
-1. Create a [Group Managed Service Account](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md). The gMSA account is used to allow the JEA user to access network resources as other machines or web services. It provides a domain identity that can be used to authenticate against resources on any machine within the domain. The gMSA account is granted the necessary administrative rights later in the setup. For this example, we call the account **gMSAContoso**.
+1. Create a [Group Managed Service Account](../../ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md). The gMSA account is used to allow the JEA user to access network resources as other machines or web services. It provides a domain identity that can be used to authenticate against resources on any machine within the domain. The gMSA account is granted the necessary administrative rights later in the setup. For this example, we call the account **gMSAContoso**.
 1. Create an Active Directory group can be populated with users that need to be granted the rights to the delegated commands. In this example, help desk personnel are granted permissions to read, update, and reset the AD FS lockout state. We refer to this group throughout the example as **JEAContoso**.
 
 ### Install the gMSA account on the AD FS server
