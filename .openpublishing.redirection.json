@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds_vdi-recommendations-1909.md",
       "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds_vdi-recommendations-1909",
       "redirect_document_id": false
@@ -11712,6 +11717,11 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/whats-new-in-storage.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
       "redirect_document_id": false
     }
