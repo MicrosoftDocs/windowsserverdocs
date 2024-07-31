@@ -429,6 +429,22 @@
         href: ad-ds/manage/understand-special-identities-groups.md
       - name: Active Directory security groups
         href: ad-ds/manage/understand-security-groups.md
+      - name: Delegated Managed Service Accounts
+        items:
+        - name: Delegated Managed Service Accounts overview
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
+        - name: Setting up Delegated Managed Service Accounts
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
+      - name: Group Managed Service Accounts
+        href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
+        items:
+        - name: Getting started with Group Managed Service Accounts
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+          items:
+          - name: Create the Key Distribution Services KDS Root Key
+            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
+          - name: Configuring Kerberos delegation for group Managed Service Accounts
+            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
       - name: Service accounts
         href: ad-ds/manage/understand-service-accounts.md
       - name: Microsoft accounts
@@ -447,6 +463,8 @@
         href: ad-ds/enable-32K-pages-optional-feature.md
       - name: Monitoring
         items:
+        - name: LSA performance counters
+          href: ad-ds/lsa-lookup-performance-counters.md
         - name: DC Locator client performance counters
           href: ad-ds/dc-locator-performance-counters.md
         - name: LDAP client performance counters

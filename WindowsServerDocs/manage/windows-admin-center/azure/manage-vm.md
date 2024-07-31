@@ -217,7 +217,7 @@ Windows Admin Center is currently implemented in the Azure portal in the form of
 
 This extension connects to an external service that manages certificates and DNS records so that you can easily connect to your VM.
 
-Each Azure VM that uses the Windows Admin Center extension gets a public DNS record that Microsoft maintains in Azure DNS. We hash the record name with a salt to anonymize the VM's IP address when saving it in DNS - the IP addresses aren't saved in plain text in DNS. This DNS record is used to issue a certificate for Windows Admin Center on the VM, enabling encrypted communication with the VM.
+Each Azure VM that uses the Windows Admin Center extension gets a public DNS record that Microsoft maintains in Azure DNS. We hash the record name to anonymize the VM's IP address when saving it in DNS - the IP addresses aren't saved in plain text in DNS. This DNS record is used to issue a certificate for Windows Admin Center on the VM, enabling encrypted communication with the VM.
 
 Connecting an Azure VM to Windows Admin Center deploys a virtual account in the administrators group, giving you full administrator access on your VM. Access to your VM is controlled by the **Windows Admin Center Administrator Login** role in Azure. An Azure user with the **Owner** or **Contributor** roles assigned for a VM doesn't automatically have privileges to log into the VM.
 
@@ -341,9 +341,6 @@ const deploymentTemplate = {
             },
             "port": {
                 "type": "string"
-            },
-            "salt": {
-                "type": "string"
             }
         },
         "resources": [
@@ -359,7 +356,6 @@ const deploymentTemplate = {
                     "autoUpgradeMinorVersion": true,
                     "settings": {
                         "port": "[parameters('port')]",
-                        "salt": "[parameters('salt')]",
                     }
                 }
             }
@@ -372,8 +368,7 @@ const parameters = {
     extensionPublisher: "Microsoft.AdminCenter", 
     extensionType: "AdminCenter", 
     extensionVersion: "0.0", 
-    port: "6516", 
-    salt: <unique string used for hashing>
+    port: "6516"
 }
 ```
 
@@ -386,10 +381,9 @@ $resourceGroupName = <get VM's resource group name>
 $vmLocation = <get VM location>
 $vmName = <get VM name>
 $vmNsg = <get VM's primary nsg>
-$salt = <unique string used for hashing>
 
 $wacPort = "6516"
-$Settings = @{"port" = $wacPort; "salt" = $salt}
+$Settings = @{"port" = $wacPort}
 
 # Open outbound port rule for WAC service
 Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | Add-AzNetworkSecurityRuleConfig -Name "PortForWACService" -Access "Allow" -Direction "Outbound" -SourceAddressPrefix "VirtualNetwork" -SourcePortRange "*" -DestinationAddressPrefix "WindowsAdminCenter" -DestinationPortRange "443" -Priority 100 -Protocol Tcp | Set-AzNetworkSecurityGroup
