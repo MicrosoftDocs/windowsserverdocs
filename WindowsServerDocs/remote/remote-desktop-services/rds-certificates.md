@@ -1,12 +1,12 @@
 ---
-title: Using certificates in Remote Desktop Services
+title: Use certificates in Remote Desktop Services
 description: How to create and use authentication certificates for Remote Desktop Services.
 ms.author: helohr
-ms.date: 07/15/2024
+ms.date: 08/01/2024
 ms.topic: how-to
 author: Heidilohr
 ---
-# Using certificates in Remote Desktop Services
+# Use certificates in Remote Desktop Services
 
 You can use certificates to secure connections to your Remote Desktop Services (RDS) deployment and between RDS server roles. RDS uses Secure Socket Layer (SSL) or Transport Layer Security (TLS) to encrypt connections to the RDS Web, Connection Broker and Gateway role services.
 
