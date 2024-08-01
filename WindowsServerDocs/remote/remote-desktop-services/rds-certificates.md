@@ -35,7 +35,7 @@ The following things are required to use certificates in RDS:
   - An export of the certificate with the corresponding private key in `.pfx` format. To learn more about exporting the private key, see [Export a certificate with its private key](../../identity/ad-cs/export-certificate-private-key.md).
 
 >[!NOTE]
->If you're using Active Directory Certificate Services (AD CS) to issue certificates, you should also create a certificate template. To learn more about creating certificate templates, see [Create a new certificate template](../../identity/ad-cs/manage-certificate-templates.md#create-a-new-certificate-template).
+>If you're using Active Directory Certificate Services (AD CS) to issue certificates, you can also create a certificate template or duplicate the Web Server certificate template. To learn more about creating certificate templates, see [Create a new certificate template](../../identity/ad-cs/manage-certificate-templates.md#create-a-new-certificate-template).
 
 ## Configure Remote Desktop to use certificates
 
