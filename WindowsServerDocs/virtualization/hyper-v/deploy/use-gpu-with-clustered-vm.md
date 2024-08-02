@@ -64,9 +64,9 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-stack-hci"
 
-- Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
+- Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&context=/azure-stack/context/hci-context).
 
-- Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
+- Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context).
 
 >[!NOTE]
 > The Azure Stack HCI Catalog does not yet indicate GPU compatibility or certification information.
@@ -229,6 +229,6 @@ For more information on using GPUs with your clustered VMs, see:
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm)
-- [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json)
+- [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
 
 :::zone-end
