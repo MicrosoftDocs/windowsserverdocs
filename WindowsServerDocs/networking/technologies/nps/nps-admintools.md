@@ -120,7 +120,7 @@ To perform this procedure, you must be a member of the Administrators group on t
 4. To view a list of available commands, type a question mark \(?\) and press ENTER.
 
 
-For more information about Netsh NPS commands, see [Netsh Commands for Network Policy Server in Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754428(v=ws.10)), or download the entire [Netsh Technical Reference](https://gallery.technet.microsoft.com/Netsh-Technical-Reference-c46523dc?redir=0) from TechNet Gallery. This download is the full Network Shell Technical Reference for Windows Server 2008 and Windows Server 2008 R2. The format is Windows Help \(*.chm\) in a zip file. These commands are still present in Windows Server 2016 and Windows 10, so you can use netsh in these environments, although using Windows PowerShell is recommended.
+For more information about Netsh NPS commands, see [Netsh Commands for Network Policy Server in Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754758(v=ws.10)). These commands are still present in Windows Server 2016 and Windows 10, so you can use netsh in these environments, although using Windows PowerShell is recommended.
 
 ## Use Windows PowerShell to manage NPSs
 
