@@ -40,28 +40,11 @@ To validate your environment, open an elevated PowerShell session and do the fol
 
 ## Install OpenSSH for Windows
 
-:::zone target="windows-server-2025"
-
-Starting with Windows Server 2025, OpenSSH is now installed on Windows Server by default. You don't need to install OpenSSH in order to start using SSHD. However, you can enable or disable OpenSSH in Server Manager.
-
->[!NOTE]
->When enabled, SSHD is only allowed on private networks on default port 22.
-
-To enable SSHD:
-
-1. Open **Server Manager**.
-
-1. Select **Local Server**.
-
-1. Under **Remote SSH Access**, select **Disabled**.
-
-1. A PowerShell window opens. Wait for a few minutes while the cmdlet to enable SSHD automatically runs. After the window closes and a few more minutes pass, the setting should be enabled.
-
-1. If you're enabling SSHD for a specific user, add them to the **OpenSSH Users** user group.
-
+:::zone pivot="windows-server-2025"
+[!INCLUDE [windows-server-2025](../../../includes/openssh-windows-server-2025.md)]
 :::zone-end
 
-# [GUI](#tab/gui)
+### [GUI](#tab/gui)
 
 To install the OpenSSH components on Windows 10 devices:
 
@@ -117,7 +100,7 @@ To install the OpenSSH components on Windows Server devices:
 > [!NOTE]
 > Installing OpenSSH Server will create and enable a firewall rule named `OpenSSH-Server-In-TCP`. This allows inbound SSH traffic on port 22. If this rule is not enabled and this port is not open, connections will be refused or reset.
 
-# [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell)
 
 To install OpenSSH using PowerShell, run PowerShell as an Administrator.
 To make sure that OpenSSH is available, run the following cmdlet:
@@ -202,7 +185,7 @@ domain\username@SERVERNAME C:\Users\username>
 
 ## Uninstall OpenSSH for Windows
 
-# [GUI](#tab/gui)
+### [GUI](#tab/gui)
 
 To uninstall OpenSSH using Windows Settings:
 
@@ -210,7 +193,7 @@ To uninstall OpenSSH using Windows Settings:
 1. In the list, select **OpenSSH Client** or **OpenSSH Server**.
 1. Select **Uninstall**.
 
-# [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell)
 
 To uninstall the OpenSSH components using PowerShell, use the following commands:
 
