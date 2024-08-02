@@ -60,7 +60,7 @@ To enable SSHD:
 1. If you're enabling SSHD for a specific user, add them to the **OpenSSH Users** user group.
 :::zone-end
 
-::: zone pivot="windows-server-2022,windows-server-2019"
+::: zone pivot="windows-server-2022,windows-server-2019,windows-server-2016"
 ### [GUI](#tab/gui)
 
 To install the OpenSSH components on Windows 10 devices:
