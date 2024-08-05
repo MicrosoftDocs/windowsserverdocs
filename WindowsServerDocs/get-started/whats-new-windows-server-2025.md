@@ -342,9 +342,9 @@ The Windows Terminal, a powerful and efficient multishell application for comman
 
 Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
 
-### Win32-OpenSSH
+### OpenSSH
 
-In earlier versions of Windows Server, the Win32-OpenSSH server side component (SSHD) was an optional feature that the user needed to install manually. As of Windows Server 2025, Win32-OpenSSH is now installed by default. The Server Manager UI for Windows 2025 also includes an option that lets you enable or disable SSHD, no installation required. When enabled, SSHD is only allowed on private networks on default port 22. You can also add users you enable the SSHD feature for to a new group called "OpenSSH Users."
+In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Now, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-click option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Additionally, you can also add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
 
 ## See also
 
