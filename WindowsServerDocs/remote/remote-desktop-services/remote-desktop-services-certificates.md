@@ -96,4 +96,4 @@ You might want to use certificates for the RDS Session Host along with the certi
 
 - [Remote Desktop Services - Secure data storage with UPDs](rds-plan-secure-data-storage.md)
 
-- [Remote Desktop Services - Multi-Factor Authentication](rds-plan-mfa.md)
+- [Remote Desktop Services - Multifactor Authentication](rds-plan-mfa.md)

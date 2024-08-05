@@ -60,7 +60,7 @@
     - name: Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
       href: migrate-rds-cals.md
     - name: Use certificates in Remote Desktop Services
-      href: rds-certificates.md
+      href: remote-desktop-services-certificates.md
     - name: Upgrade your Remote Desktop Services deployments
       href: upgrade-to-rds.md
       items:
