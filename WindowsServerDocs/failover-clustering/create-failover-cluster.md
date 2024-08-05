@@ -40,7 +40,7 @@ Additionally, verify the following account requirements:
   - If the user does not have the **Create Computer objects** permission, ask a domain administrator to prestage a cluster computer object for the cluster. For more information, see [Prestage Cluster Computer Objects in Active Directory Domain Services](prestage-cluster-adds.md).
 
 > [!NOTE]
-> This requirement does not apply if you want to create an Active Directory-detached cluster in Windows Server 2012 R2. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
+> This requirement does not apply if you want to create an Active Directory-detached cluster. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
 ## Install the Failover Clustering feature
 
