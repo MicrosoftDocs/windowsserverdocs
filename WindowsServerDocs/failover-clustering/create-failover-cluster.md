@@ -6,6 +6,7 @@ author: JasonGerend
 ms.author: jgerend
 manager: lizross
 ms.date: 3/14/2023
+zone_pivot_groups: failover-clustering-management-tools
 ---
 # Create a failover cluster
 
@@ -46,7 +47,7 @@ Additionally, verify the following account requirements:
 
 You must install the Failover Clustering feature on every server that you want to add as a failover cluster node.
 
-### [Windows Admin Center](#tab/admin-center)
+::: zone pivot="windows-admin-center"
 
 1. Sign in to Windows Admin Center.
 
@@ -108,8 +109,9 @@ You must install the Failover Clustering feature on every server that you want t
 1. On **Create the cluster**, enter a name for your cluster, then select **Specify one or more static addresses**. Next, select the **Use network** checkbox and enter the IP address for your cluster in the **IP address** field. when you're done, select **Create cluster**.
 
 1. When the cluster creation process is done, select **Finish**.
+::: zone-end  
 
-### [PowerShell](#tab/powershell)
+::: zone pivot="powershell"
 
 > [!NOTE]
 > You must use Windows PowerShell to create an Active Directory-detached cluster in Windows Server 2012 R2. For information about the syntax, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
@@ -120,7 +122,9 @@ The following example installs the Failover Clustering feature.
 Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 ```
 
-### [Failover Cluster Manager](#tab/cluster-manager)
+::: zone-end  
+
+::: zone pivot="failover-cluster-manager"
 
 1. Start Server Manager.
 
@@ -148,16 +152,13 @@ Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 
 > [!NOTE]
 > After you install the Failover Clustering feature, we recommend that you apply the latest updates from Windows Update. Also, for a Windows Server 2012-based failover cluster, review the [Recommended hotfixes and updates for Windows Server 2012-based failover clusters](https://support.microsoft.com/help/2784261/recommended-hotfixes-and-updates-for-windows-server-2012-based-failove) Microsoft Support article and install any updates that apply.
-
----
+::: zone-end  
 
 ## Validate the configuration
 
 Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft supports a cluster solution only if the complete configuration passes all validation tests and if all hardware is certified for the version of Windows Server that the cluster nodes are running.
 
-### [Windows Admin Center](#tab/admin-center)
-
-### [PowerShell](#tab/powershell)
+::: zone pivot="powershell"
 
 The following example runs all cluster validation tests on computers that are named *Server1* and *Server2*.
 
@@ -168,7 +169,9 @@ Test-Cluster –Node Server1, Server2
 > [!NOTE]
 > The **Test-Cluster** cmdlet outputs the results to a log file in the current working directory. For example: C:\Users\<username>\AppData\Local\Temp.
 
-### [Failover Cluster Manager](#tab/cluster-manager)
+::: zone-end  
+
+::: zone pivot="failover-cluster-manager"
 
 > [!NOTE]
 > You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests do not run.
@@ -197,7 +200,7 @@ Test-Cluster –Node Server1, Server2
         > [!NOTE]
         > If you receive a warning for the Validate Storage Spaces Persistent Reservation test, see the blog post [Windows Failover Cluster validation warning indicates your disks don't support the persistent reservations for Storage Spaces](https://blogs.msdn.microsoft.com/clustering/2013/05/24/validate-storage-spaces-persistent-reservation-test-results-with-warning/) for more information.
 
----
+::: zone-end  
 
 For more information about hardware validation tests, see [Validate Hardware for a Failover Cluster](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
 
@@ -205,9 +208,7 @@ For more information about hardware validation tests, see [Validate Hardware for
 
 To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic.
 
-### [Windows Admin Center](#tab/admin-center)
-
-### [PowerShell](#tab/powershell)
+::: zone pivot="powershell"
 
 The following example creates a failover cluster that is named *MyCluster* with nodes *Server1* and *Server2*, assigns the static IP address *192.168.1.12*, and adds all eligible storage to the failover cluster.
 
@@ -227,7 +228,9 @@ The following example creates a cluster that is named *MyCluster* in the *Cluste
 New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Server2
 ```
 
-### [Failover Cluster Manager](#tab/cluster-manager)
+::: zone-end  
+
+::: zone pivot="failover-cluster-manager"
 
 1. Start Server Manager.
 
@@ -274,7 +277,7 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
     Realize that it may take some time for the cluster name to successfully replicate in DNS. After successful DNS registration and replication, if you select **All Servers** in Server Manager, the cluster name should be listed as a server with a **Manageability** status of **Online**.
 
----
+::: zone-end  
 
 After the cluster is created, you can do things such as verify cluster quorum configuration, and optionally, create Cluster Shared Volumes (CSV). For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum) and [Use Cluster Shared Volumes in a failover cluster](failover-cluster-csvs.md).
 
@@ -287,15 +290,15 @@ After you create the failover cluster, you can create clustered roles to host cl
 
 Here's how to create a clustered role:
 
-### [Windows Admin Center](#tab/admin-center)
-
-### [PowerShell](#tab/powershell)
+::: zone pivot="powershell"
 
 For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole).
 
 <!---This one's going to need some more specific directions.--->
 
-### [Failover Cluster Manager](#tab/cluster-manager)
+::: zone-end  
+
+::: zone pivot="failover-cluster-manager"
 
 1. Use Server Manager or Windows PowerShell to install the role or feature that is required for a clustered role on each failover cluster node. For example, if you want to create a clustered file server, install the File Server role on all cluster nodes.
 
@@ -324,7 +327,7 @@ For examples of how to add clustered roles, see topics such as [Add-ClusterFileS
 
 1. To verify that the clustered role was created, in the **Roles** pane, make sure that the role has a status of **Running**. The Roles pane also indicates the owner node. To test failover, right-click the role, point to **Move** and then select **Select Node**. In the **Move Clustered Role** dialog box, select the desired cluster node and then select **OK**. In the **Owner Node** column, verify that the owner node changed.
 
----
+::: zone-end  
 
 ## More information
 
