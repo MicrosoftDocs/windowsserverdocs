@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 06/15/2024
+ms.date: 08/05/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -344,7 +344,7 @@ Winget is installed by default, which is a command line Windows Package Manager 
 
 ### OpenSSH
 
-In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Now, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-click option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Additionally, you can also add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
+In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Now, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-click option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
 
 ## See also
 
