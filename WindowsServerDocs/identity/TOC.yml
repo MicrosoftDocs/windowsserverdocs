@@ -764,12 +764,9 @@
           - name: Configure Performance Monitoring
             href: ad-fs/deployment/Configure-Performance-Monitoring.md
         - name: Interoperating with AD FS 1.x
-          href: ad-fs/deployment/Interoperating-with-AD-FS-1.x.md
           items:
           - name: 'Checklist: Configuring AD FS to Consume Claims from AD FS 1.x'
             href: ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md
-          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service'
-            href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md
           - name: Create a Relying Party Trust Manually
             href: ad-fs/operations/create-a-Relying-Party-Trust.md
           - name: Create a Claims Provider Trust Manually
