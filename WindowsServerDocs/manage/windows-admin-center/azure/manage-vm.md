@@ -341,6 +341,9 @@ const deploymentTemplate = {
             },
             "port": {
                 "type": "string"
+            },
+            "salt": {
+                "type": "string"
             }
         },
         "resources": [
@@ -356,6 +359,7 @@ const deploymentTemplate = {
                     "autoUpgradeMinorVersion": true,
                     "settings": {
                         "port": "[parameters('port')]",
+                        "salt": "[parameters('salt')]",
                     }
                 }
             }
@@ -368,7 +372,8 @@ const parameters = {
     extensionPublisher: "Microsoft.AdminCenter", 
     extensionType: "AdminCenter", 
     extensionVersion: "0.0", 
-    port: "6516"
+    port: "6516",
+    salt: ""
 }
 ```
 
@@ -381,9 +386,10 @@ $resourceGroupName = <get VM's resource group name>
 $vmLocation = <get VM location>
 $vmName = <get VM name>
 $vmNsg = <get VM's primary nsg>
+$salt = ""
 
 $wacPort = "6516"
-$Settings = @{"port" = $wacPort}
+$Settings = @{"port" = $wacPort; "salt" = $salt}
 
 # Open outbound port rule for WAC service
 Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | Add-AzNetworkSecurityRuleConfig -Name "PortForWACService" -Access "Allow" -Direction "Outbound" -SourceAddressPrefix "VirtualNetwork" -SourcePortRange "*" -DestinationAddressPrefix "WindowsAdminCenter" -DestinationPortRange "443" -Priority 100 -Protocol Tcp | Set-AzNetworkSecurityGroup
