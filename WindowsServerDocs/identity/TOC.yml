@@ -429,6 +429,22 @@
         href: ad-ds/manage/understand-special-identities-groups.md
       - name: Active Directory security groups
         href: ad-ds/manage/understand-security-groups.md
+      - name: Delegated Managed Service Accounts
+        items:
+        - name: Delegated Managed Service Accounts overview
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
+        - name: Setting up Delegated Managed Service Accounts
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
+      - name: Group Managed Service Accounts
+        href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
+        items:
+        - name: Getting started with Group Managed Service Accounts
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+          items:
+          - name: Create the Key Distribution Services KDS Root Key
+            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
+          - name: Configuring Kerberos delegation for group Managed Service Accounts
+            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
       - name: Service accounts
         href: ad-ds/manage/understand-service-accounts.md
       - name: Microsoft accounts
@@ -447,6 +463,8 @@
         href: ad-ds/enable-32K-pages-optional-feature.md
       - name: Monitoring
         items:
+        - name: LSA performance counters
+          href: ad-ds/lsa-lookup-performance-counters.md
         - name: DC Locator client performance counters
           href: ad-ds/dc-locator-performance-counters.md
         - name: LDAP client performance counters
@@ -746,14 +764,9 @@
           - name: Configure Performance Monitoring
             href: ad-fs/deployment/Configure-Performance-Monitoring.md
         - name: Interoperating with AD FS 1.x
-          href: ad-fs/deployment/Interoperating-with-AD-FS-1.x.md
           items:
           - name: 'Checklist: Configuring AD FS to Consume Claims from AD FS 1.x'
             href: ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md
-          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service'
-            href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md
-          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent'
-            href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md
           - name: Create a Relying Party Trust Manually
             href: ad-fs/operations/create-a-Relying-Party-Trust.md
           - name: Create a Claims Provider Trust Manually
@@ -1026,15 +1039,15 @@
       - name: Distribute certificates using Group Policy
         href: ad-cs/distribute-certificates-group-policy.md
       - name: Export a certificate with its private key
-        href: ad-cs/export-certificate-private-key.md  
+        href: ad-cs/export-certificate-private-key.md
       - name: Manage certificate templates
-        href: ad-cs/manage-certificate-templates.md  
+        href: ad-cs/manage-certificate-templates.md
       - name: Request certificates using Web Enrollment
         href: ad-cs/request-certificate-windows-server.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
       - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
-        href: ad-cs/submit-pkcs-certificate-request.md     
+        href: ad-cs/submit-pkcs-certificate-request.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies

@@ -2,7 +2,7 @@
 title: Network guidelines
 description: Bandwidth recommendations for Remote Desktop deployments.
 ms.author: helohr
-ms.date: 12/12/2019
+ms.date: 7/3/2024
 ms.topic: article
 author: Heidilohr
 manager: femila

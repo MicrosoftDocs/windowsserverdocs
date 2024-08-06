@@ -4,7 +4,7 @@ description: Find out what is new in Windows Server 2022.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 04/02/2024
+ms.date: 07/10/2024
 ---
 
 # What's new in Windows Server 2022
@@ -261,6 +261,8 @@ Windows Server 2022 uses TCP [HyStart++](https://datatracker.ietf.org/doc/html/d
 
 Virtual switches in Hyper-V have been enhanced with updated Receive Segment Coalescing (RSC). RSC allows the hypervisor network to coalesce packets and process as one larger segment. CPU cycles are reduced and segments will remain coalesced across the entire data path until processed by the intended application. RSC results in improved performance for both network traffic from an external host, received by a virtual NIC, and from a virtual NIC to another virtual NIC on the same host.
 
+In vSwitch, RSC can also coalesce multiple TCP segments into a larger segment before data traversing the vSwitch. This change also improves networking performance for virtual workloads. RSC is enabled on external virtual switches by default.
+
 #### System Insights disk anomaly detection
 
 [System Insights](../manage/system-insights/overview.md) has another capability via Windows Admin Center, disk anomaly detection.
@@ -275,16 +277,18 @@ This functionality requires the server to be using the [Server Core installation
 
 ### Storage
 
+Windows Server 2022 includes the following Storage updates. Storage is also affected by the updates to [System Insights disk anomaly detection](#system-insights-disk-anomaly-detection) and [Windows Admin Center](#windows-admin-center).
+
 #### Storage Migration Service
 
 Enhancements to Storage Migration Service in Windows Server 2022 makes it easier to migrate storage to Windows Server or to Azure from more source locations. Here are the features that are available when running the Storage Migration Server orchestrator on Windows Server 2022:
 
-* Migrate local users and groups to the new server.
-* Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
-* Migrate storage from a Linux server that uses Samba.
-* More easily synchronize migrated shares into Azure by using Azure File Sync.
-* Migrate to new networks such as Azure.
-* Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
+- Migrate local users and groups to the new server.
+- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
+- Migrate storage from a Linux server that uses Samba.
+- More easily synchronize migrated shares into Azure by using Azure File Sync.
+- Migrate to new networks such as Azure.
+- Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
 
 #### Adjustable storage repair speed
 
@@ -323,7 +327,7 @@ Windows Server 2022 images, including Server Core, Nano Server, and [Server imag
 
 #### Virtualized time zone
 
-With Windows Server 2022, Windows containers can now maintain a virtualized time zone configuration separate from the host. All configurations the host time zone typically uses are now virtualized and instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) Powershell cmdlet. To learn more, see [Virtualized time zone](/virtualization/windowscontainers/manage-containers/virtual-time-zone).
+With Windows Server 2022, Windows containers can now maintain a virtualized time zone configuration separate from the host. All configurations the host time zone typically uses are now virtualized and instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) PowerShell cmdlet. To learn more, see [Virtualized time zone](/virtualization/windowscontainers/manage-containers/virtual-time-zone).
 
 #### Scalability improvements for overlay networking support
 
@@ -371,7 +375,7 @@ For more information, see [Windows HostProcess Containers](https://kubernetes.io
 
 #### Windows Admin Center improvements
 
-Windows Server 2022 expands on the Containers extension added to Windows Admin Center to containerize existing web applications based on ASP.Net from .NET Framework. You can use static folders or Visual Studio solutions from your developer.
+Windows Server 2022 expands on the Containers extension added to Windows Admin Center to containerize existing web applications based on ASP.NET from .NET Framework. You can use static folders or Visual Studio solutions from your developer.
 
 Windows Admin Center includes the following enhancements:
 

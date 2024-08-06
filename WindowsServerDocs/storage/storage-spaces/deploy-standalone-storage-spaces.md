@@ -235,9 +235,6 @@ Next, you must create a volume from the virtual disk. You can assign an optional
 
    1. In the **Allocation unit size** list, either leave the setting at **Default** or set the allocation unit size.
 
-        > [!NOTE]
-        > For more information about allocation unit size, see [Default cluster size for NTFS, FAT, and exFAT](https://support.microsoft.com/help/140365/default-cluster-size-for-ntfs-fat-and-exfat).
-
    1. Optionally, in the **Volume label** box, enter a volume label name, for example **HR Data**.
 
 1. On the **Confirm selections** page, verify that the settings are correct, and then select **Create**.
