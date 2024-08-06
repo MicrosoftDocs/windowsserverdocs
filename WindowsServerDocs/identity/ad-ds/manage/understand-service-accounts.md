@@ -94,8 +94,6 @@ When choosing a service account, it's important to consider factors such as the 
 
 ## See also
 
-For other resources that are related to service accounts, see:
-
 | Content type  | References  |
 |---------------|-------------|
 | Product evaluation | [What's New for Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831451(v=ws.11)) <br> [Get Started with Group Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431(v=ws.11)) |
