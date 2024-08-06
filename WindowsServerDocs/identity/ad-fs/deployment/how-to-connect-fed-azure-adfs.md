@@ -28,7 +28,7 @@ The following diagram shows the recommended basic topology for deploying AD FS i
 
 We recommend your network topology follows these general principles:
 
-- Deploy AD FS on separate servers to avoid affecting the performance your domain controllers.
+- Deploy AD FS on separate servers to avoid affecting the performance of your domain controllers.
 - You must deploy web application proxy (WAP) servers so that users can reach the AD FS when they aren't on the company network.
 - You should set up the web application proxy servers in the demilitarized zone (DMZ) and only allow TCP/443 access between the DMZ and internal subnet.
 - To ensure high availability of AD FS and web application proxy servers, we recommend using an internal load balancer for AD FS servers and Azure Load Balancer for web application proxy servers.
