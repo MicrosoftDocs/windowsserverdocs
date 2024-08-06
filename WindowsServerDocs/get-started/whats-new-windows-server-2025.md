@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 06/15/2024
+ms.date: 08/06/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -341,6 +341,10 @@ The Windows Terminal, a powerful and efficient multishell application for comman
 ### Winget
 
 Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
+
+### OpenSSH
+
+In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Now, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-click option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
 
 ## See also
 
