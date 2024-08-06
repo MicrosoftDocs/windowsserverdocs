@@ -51,17 +51,17 @@ To create a virtual network:
 
 1. In **Create virtual network**, go to the **Basics** tab and configure the following settings:
 
- - Configure the following settings under **Project details**:
+    - Configure the following settings under **Project details**:
   
-  - For **Subscription**, select the name of your subscription.
-     
-  - For **Resource group**, either select the name of an existing resource group or select **Create new** to make a new one.
+    - For **Subscription**, select the name of your subscription.
 
-- Configure the following settings for **Instance details**
+    - For **Resource group**, either select the name of an existing resource group or select **Create new** to make a new one.
 
-  - For **Virtual network name**, enter a name for your virtual network.
+    - Configure the following settings for **Instance details**
 
-  - For **Region**, select the region you want to create your virtual network in.
+      - For **Virtual network name**, enter a name for your virtual network.
+
+      - For **Region**, select the region you want to create your virtual network in.
 
 1. Select **Next**.
 
@@ -76,6 +76,7 @@ To create a virtual network:
 1. For **Network security group**, select **Create new**.
 
 1. For this example, enter the name **NSG_INT** and select **OK**, then select **Save**. You now have your first subnet.
+
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-subnet-with-int-nsg.png" alt-text="Screenshot showing how to edit a subnet and add an internal network security group.":::
 
 1. To create your second subnet, select **+ Add a subnet**.
@@ -85,6 +86,7 @@ To create a virtual network:
 1. For **Network security group**, select **Create new**.
 
 1. Enter the name **NSG_DMZ**, select **OK**, then select **Add**.
+
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-subnet-with-dmz-nsg.png" alt-text="Screenshot showing how to add a new subnet that includes a network security group.":::
 
 1. Select **Review + create**, then select **Create**.
