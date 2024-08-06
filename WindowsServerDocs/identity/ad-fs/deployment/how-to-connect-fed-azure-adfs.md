@@ -53,11 +53,11 @@ To create a virtual network:
 
     - Configure the following settings under **Project details**:
   
-    - For **Subscription**, select the name of your subscription.
+      - For **Subscription**, select the name of your subscription.
 
-    - For **Resource group**, either select the name of an existing resource group or select **Create new** to make a new one.
+      - For **Resource group**, either select the name of an existing resource group or select **Create new** to make a new one.
 
-    - Configure the following settings for **Instance details**
+    - Configure the following settings for **Instance details**:
 
       - For **Virtual network name**, enter a name for your virtual network.
 
