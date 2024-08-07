@@ -15,10 +15,10 @@ ms.author: wscontent
 
 <!-- Final comment; Jay's minimal goals were to roll in content of "What's new" article (https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/dc-locator-changes) into this main article. Loftier goals were to break out Troubleshooting as its own article and, beyond that, perhaps even have short articles dedicated to, say, Mapping of NetBIOS domain names to DNS domain names. I didn't go beyond breaking out Troubleshooting, as you will see.  -->
 
+# Locating domain controllers in Windows Server
+
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-# Locating domain controllers in Windows Server
 
 Domain controller location, also known as _DC Locator_, refers to the algorithm the client machine uses to find a suitable domain controller. Domain controller location is a critical function in all enterprise environments to allow client authentication with Active Directory.
 
