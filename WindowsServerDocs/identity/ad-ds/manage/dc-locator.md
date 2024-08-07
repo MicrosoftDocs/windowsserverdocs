@@ -1,7 +1,7 @@
 ---
 title: Locating Active Directory domain controllers in Windows and Windows Server
 description: Learn how domain controllers are located in Windows and Windows Server using the DC Locator algorithm.
-ms.date: 08/02/2024
+ms.date: 08/07/2024
 ms.topic: conceptual
 author: gswashington
 ms.author: wscontent
@@ -15,12 +15,11 @@ ms.author: wscontent
 
 <!-- Final comment; Jay's minimal goals were to roll in content of "What's new" article (https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/dc-locator-changes) into this main article. Loftier goals were to break out Troubleshooting as its own article and, beyond that, perhaps even have short articles dedicated to, say, Mapping of NetBIOS domain names to DNS domain names. I didn't go beyond breaking out Troubleshooting, as you will see.  -->
 
-# Locating domain controllers in Windows Server
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Locating domain controllers in Windows and Windows Server
 
 Domain controller location, also known as _DC Locator_, refers to the algorithm the client machine uses to find a suitable domain controller. Domain controller location is a critical function in all enterprise environments to allow client authentication with Active Directory.
+
+<!-- Add sentence, in this article learn about the locator process including discovery, closest site detection and caching of admin-configured domain name mappings -->
 
 ## Domain controller locator process
 
@@ -52,7 +51,7 @@ DC location in Windows can operate in two basic modes:
 
 When an application requests a DC but specifies a short NetBIOS-style domain name, DC location always tries to map that short domain name to a DNS domain name. If DC location can map the domain names successfully, it uses DNS-based discovery with the mapped DNS domain name.
 
-Beginning with Windows Server 2025, Netlogon downloads and caches naming information about domains and child domains in all trusting forests. This information is used when you're mapping NetBIOS-style domain names to DNS domain names.
+
 
 NetBIOS-style domain names are mapped to DNS domain names from multiple sources in the following order:
 
@@ -64,6 +63,9 @@ NetBIOS-style domain names are mapped to DNS domain names from multiple sources 
 
 1. For Windows Server 2025 and later:
 
+   > [!IMPORTANT]
+   > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
    1. Administrator-configured domain name mappings
 
    1. Domain name mappings for all forests and child domains in trusting forest trusts
@@ -72,10 +74,12 @@ NetBIOS-style domain names are mapped to DNS domain names from multiple sources 
 
 When none of these sources can find a DNS domain name, DC location can proceed with NetBIOS-based discovery by using the original NetBIOS-style short domain name
 
-> [!IMPORTANT]
-> Beginning with Windows Server 2025, DC locator doesn't allow the use of NetBIOS-style location. To learn how to configure this behavior, see the [NetBIOS discovery policy setting](#netbios-discovery-policy-setting) section.
+Beginning with Windows Server 2025, Netlogon downloads and caches naming information about domains and child domains in all trusting forests. This information is used when you're mapping NetBIOS-style domain names to DNS domain names.
 
 We recommend using DNS-based discovery instead of NetBIOS-based discovery. DNS-based discovery is more reliable and secure. [DsGetDcName](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew) is the primary DC location API.
+
+> [!IMPORTANT]
+> Beginning with Windows Server 2025, DC locator doesn't allow the use of NetBIOS-style location. To learn how to configure this behavior, see the [NetBIOS discovery policy setting](#netbios-discovery-policy-setting) section.
 
 To learn about the discovery process, select the tab that corresponds to the method you want to learn about.
 
@@ -130,7 +134,7 @@ The process that the Locator follows can be summarized as follows:
 
 ### NetBIOS discovery policy setting
 
-Beginning with Windows Server 2025, the DC locator doesn't allow the use of the NetBIOS-based discovery. `BlockNetBIOSDiscovery` is a new group policy setting for the Netlogon service that allows administrators to control this behavior. To access the policy in Group Policy Management Editor, go to **Computer Configuration** > **Administrative Templates** > **System** > **Net Logon** > **DC Locator DNS Records** > **Block NetBIOS-based discovery for domain controller location**.
+Beginning with Windows Server 2025, DC locator doesn't allow the use of the NetBIOS-based discovery. `BlockNetBIOSDiscovery` is a new group policy setting for the Netlogon service that allows administrators to control this behavior. To access the policy in Group Policy Management Editor, go to **Computer Configuration** > **Administrative Templates** > **System** > **Net Logon** > **DC Locator DNS Records** > **Block NetBIOS-based discovery for domain controller location**.
 
 The following settings apply to `BlockNetBIOSDiscovery`:
 
@@ -158,7 +162,7 @@ After the client has established a communications path to the domain controller,
 
 The client establishes an LDAP connection to a domain controller to sign in. The sign in process uses Security Accounts Manager. The communications path uses the LDAP interface and the client is authenticated by a domain controller. After that, the client account is verified and passed through Security Accounts Manager to the directory service agent, then to the database layer, and finally to the database in the Extensible Storage engine (ESE).
 
-## Downloading and caching of administrator-configured domain name mappings
+## DC Locator mapping
 
 Beginning with Windows Server 2025, forest administrators can configure custom mappings from DNS domain name to NetBIOS domain name. Administrator-configured mappings at the forest level are an optional mechanism that you should use only when all other options are insufficient. For example, if an application or environment requires other domain name mappings that other sources can't automatically provide
 
