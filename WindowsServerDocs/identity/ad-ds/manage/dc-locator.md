@@ -51,8 +51,6 @@ DC location in Windows can operate in two basic modes:
 
 When an application requests a DC but specifies a short NetBIOS-style domain name, DC location always tries to map that short domain name to a DNS domain name. If DC location can map the domain names successfully, it uses DNS-based discovery with the mapped DNS domain name.
 
-
-
 NetBIOS-style domain names are mapped to DNS domain names from multiple sources in the following order:
 
 1. Cached information from a previous lookup
@@ -60,6 +58,8 @@ NetBIOS-style domain names are mapped to DNS domain names from multiple sources 
 1. All domains in the current forest
 
 1. Top-level names (TLNs) for all trusting forest trusts and external trusts
+
+<!-- I wasn't sure about this format for the Windows Server 2025 and later please review, possible with Jay -->
 
 1. For Windows Server 2025 and later:
 
