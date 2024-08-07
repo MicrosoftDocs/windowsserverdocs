@@ -28,19 +28,19 @@ An in-place Feature Upgrade of your Windows Server installation preserves your o
 
 - For more detailed guides for how to perform Feature Upgrades for different versions of Windows Server, including information about which roles and features support in-place Feature Upgrades, see [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
 
-## Cluster Operating System rolling OS Feature Upgrade
+## Cluster operating system rolling Feature Upgrade
 
 The Cluster operating system rolling OS Feature Upgrade gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a rolling OS Feature Upgrade to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements (SLA). Cluster-Aware Updating (CAU) is a feature that automates the software updating process on clustered servers while maintaining availability. See [Cluster-Aware Updating overview](https://learn.microsoft.com/windows-server/failover-clustering/cluster-aware-updating).
 
 If you are running virtual machines on a Azure Stack hyperconverged infrastructure (HCI) solution, it's suggested that you use the the Local Configuration Manager (LCM) to perform your OS Feature Upgrade. See [Upgrade on-premises infrastructure that supports Configuration Manager](https://learn.microsoft.com/en-us/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure)for more information.
 
-## Clean install
+## Clean operating system install
 
 A clean OS install of Windows Server is installing Windows Server on a blank server or overwriting an existing operating system and is the simplest way to install Windows Server. However, before you can do a clean install, you must back up your data and plan for how to reinstall your existing applications. You should also make sure your system meets the [hardware requirements for Windows Server](hardware-requirements.md).
 
 ## Migration
 
-Migration is when you move roles or features from a source computer running Windows Server to a destination computer that's also running Windows Server. This process is gradual, moving one role or feature at a time, without upgrading them. You can migrate your system components to a new machine that's either running the same version of Windows Server as the source computer or a later version than the source computer.
+Migration is when you move roles or features from a source computer running Windows Server to a destination computer that's also running Windows Server. This process is gradual, moving one role or feature at a time, without upgrading the features. You can migrate your system components to a machine that's either running the same version of Windows Server as the source computer or to a machine that is running a later version than the source computer.
 
 ## License conversion
 
