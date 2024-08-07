@@ -79,7 +79,7 @@ We recommend using DNS-based discovery instead of NetBIOS-based discovery. DNS-b
 
 To learn about the discovery process, select the tab that corresponds to the method you want to learn about.
 
-#### DNS-based discovery (#tab/dns-based-discovery)
+#### [DNS-based discovery](#tab/dns-based-discovery)
 
 The process that the Locator follows can be summarized as follows:
 
@@ -103,7 +103,7 @@ The process that the Locator follows can be summarized as follows:
 
 1. The Net Logon service caches the domain controller information so that it is not necessary to repeat the discovery process for subsequent requests. Caching this information encourages the consistent use of the same domain controller and, thus, a consistent view of Active Directory.
 
-#### NetBIOS-based discovery (#tab/netbios-based-discovery)
+#### [NetBIOS-based discovery](#tab/netbios-based-discovery)
 
 The process that the Locator follows can be summarized as follows:
 
