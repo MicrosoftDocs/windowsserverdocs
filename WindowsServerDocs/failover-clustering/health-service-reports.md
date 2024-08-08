@@ -103,7 +103,7 @@ public void DiscoverObjects(CimSession Session)
 
 These are the same objects you get in PowerShell using cmdlets like **Get-StorageSubSystem**, **Get-StorageNode**, and **Get-Volume**.
 
-You can access all the same properties, documented at [Storage Management API Classes](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes).
+You can access all the same properties, documented at [Storage Management API Classes](/windows-hardware/drivers/storage/storage-management-api-classes).
 
 ```
 using System.Diagnostics;

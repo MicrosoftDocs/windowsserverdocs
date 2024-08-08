@@ -8,8 +8,6 @@
     items:
     - name: Technology Overview
       href: hyper-v/Hyper-V-Technology-Overview.md
-    - name: What's new in Hyper-V
-      href: hyper-v/What-s-new-in-Hyper-V-on-Windows.md
     - name: System requirements
       href: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
     - name: Supported Windows guest operating systems
@@ -132,6 +130,8 @@
           href: hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
         - name: Use live migration without Failover Clustering
           href: hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md
+        - name: Use live migration with workgroup clusters
+          href: hyper-v/manage/live-migration-workgroup-cluster.md  
     - name: Hyper-V Performance Tuning
       href: ../administration/performance-tuning/role/hyper-v-server/index.md
   - name: Hyper-V Virtual Switch

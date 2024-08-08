@@ -70,7 +70,7 @@ There are several requirements and things to consider before you begin to use GP
 
 - Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
 
-- Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
+- Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context).
 
 >[!NOTE]
 > Your system must be supported Azure Stack HCI solution with GPU support. To browse options, visit the [Azure Stack HCI Catalog](https://azurestackhcisolutions.azure.microsoft.com/#/catalog?gpuSupport=GPU_P&gpuSupport=DDA).
@@ -233,6 +233,6 @@ For more information on using GPUs with your clustered VMs, see:
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm)
-- [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json)
+- [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
 
 :::zone-end

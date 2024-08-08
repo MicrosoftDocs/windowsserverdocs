@@ -105,12 +105,8 @@ Use the performance tuning guidelines to improve performance for older versions 
 
 Here's a list of performance tuning guidelines for previous versions of Windows Server:
 
--   [Performance Tuning Guidelines for Windows Server 2016](/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf)
-
 -   [Performance Tuning Guidelines for Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=51960)
 
 -   [Performance Tuning Guidelines for Windows Server 2012](https://download.microsoft.com/download/0/0/B/00BE76AF-D340-4759-8ECD-C80BC53B6231/performance-tuning-guidelines-windows-server-2012.docx)
 
 -   [Performance Tuning Guidelines for Windows Server 2008 R2](https://download.microsoft.com/download/6/B/2/6B2EBD3A-302E-4553-AC00-9885BBF31E21/Perf-tun-srv-R2.docx)
-
--   [Performance Tuning Guidelines for Windows Server 2016](/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf)
