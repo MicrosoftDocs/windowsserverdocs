@@ -4,7 +4,7 @@ description: Learn how to use GPUs with clustered virtual machines (VMs) to prov
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 05/20/2024
+ms.date: 08/08/2024
 zone_pivot_groups: windows-os
 #customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Stack HCI.
 ---
@@ -46,7 +46,7 @@ There are several requirements and things to consider before you begin to use GP
 
 ::: zone-end
 
-- You must create a homogeneous configuration for GPUs across all the servers in your cluster. A homogeneous configuration consists of installing the same make and model of the GPU.
+- You must install the same make and model of the GPUs across all the servers in your cluster.
 
 - Review and follow the instructions from your GPU manufacturer to install the necessary drivers and software on each server in the cluster.
 
@@ -64,9 +64,9 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-stack-hci"
 
-- Follow the steps in [Plan for deploying devices by using Discrete Device Assignment](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment) to prepare GPU devices in the cluster.
+- Follow the steps in [Plan for deploying devices by using Discrete Device Assignment](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context) to prepare GPU devices in the cluster.
 
-- Make sure your device has enough MMIO space allocated within the VM. For more information, see [MMIO Space](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment#mmio-space).
+- Make sure your device has enough MMIO space allocated within the VM. For more information, see [MMIO Space](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context#mmio-space).
 
 - Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
 
