@@ -373,7 +373,7 @@ const parameters = {
     extensionType: "AdminCenter", 
     extensionVersion: "0.0", 
     port: "6516",
-    salt: ""
+    salt: "\"\""
 }
 ```
 
