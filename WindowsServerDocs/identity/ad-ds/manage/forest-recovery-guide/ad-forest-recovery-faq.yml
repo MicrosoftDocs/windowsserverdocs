@@ -7,6 +7,7 @@ metadata:
   manager: daveba
   ms.date: 07/10/2023
   ms.topic: faq
+  ms.service: windows-server
   ms.custom: ac9e5a3d-8b1e-41b7-8e02-f64b7acf1359, inhenkel
 title: AD Forest Recovery - FAQ
 summary: |
