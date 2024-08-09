@@ -2,7 +2,7 @@
   "redirections": [
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md",
-      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim",
       "redirect_document_id": false
     },
     {
