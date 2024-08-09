@@ -3,8 +3,8 @@ title: writer
 description: Reference article for the writer command, which verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure.
 ms.topic: reference
 ms.assetid: 7cf98295-411d-4705-8573-f898ff45c140
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
