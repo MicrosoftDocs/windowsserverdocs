@@ -4,7 +4,7 @@ description: Reference article for the taskkill command, which ends one or more 
 ms.topic: reference
 ms.assetid: 2b71e792-08b6-46d4-95a5-cb6336a79524
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
