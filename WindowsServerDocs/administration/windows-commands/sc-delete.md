@@ -4,7 +4,7 @@ description: Reference article for the sc.exe delete command, which deletes a se
 ms.topic: reference
 ms.assetid: 2fe94fb3-e4d1-47b5-b999-39995ecbb644
 ms.author: jgerend
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---

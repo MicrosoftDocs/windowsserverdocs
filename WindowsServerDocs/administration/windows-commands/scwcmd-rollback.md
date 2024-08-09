@@ -4,7 +4,7 @@ description: Reference article for the scwcmd rollback command, which applies th
 ms.topic: reference
 ms.assetid: 4fd9f89b-0420-420a-ad20-4a328636b1e7
 ms.author: jgerend
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---

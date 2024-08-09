@@ -4,7 +4,7 @@ description: Reference article for the scwcmd transform command, which transform
 ms.topic: reference
 ms.assetid: 640dd892-0bb9-416d-8318-60a26605bcf4
 ms.author: jgerend
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
