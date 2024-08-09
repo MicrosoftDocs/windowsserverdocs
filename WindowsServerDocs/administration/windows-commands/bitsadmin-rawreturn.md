@@ -2,8 +2,8 @@
 title: bitsadmin rawreturn
 description: Reference article for the bitsadmin rawreturn command that returns data suitable for parsing.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 04/01/2023
 ---
 
