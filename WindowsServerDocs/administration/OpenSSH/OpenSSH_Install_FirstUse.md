@@ -42,22 +42,21 @@ To validate your environment, open an elevated PowerShell session and do the fol
 ## Install OpenSSH for Windows
 
 :::zone pivot="windows-server-2025"
-Starting with Windows Server 2025, OpenSSH is now installed on Windows Server by default. You don't need to install OpenSSH in order to start using SSHD. However, you can enable or disable OpenSSH in Server Manager.
+Starting with Windows Server 2025, OpenSSH is now installed by default. You can also enable or disable the `sshd` service in Server Manager.
 
 >[!NOTE]
 >When enabled, SSHD is only allowed on private networks on default port 22.
 
 To enable SSHD:
 
-1. Open **Server Manager**.
+1. In **Server Manager**, on the navigation pane to the left, select **Local Server**.
 
-1. Select **Local Server**.
+1. In the **Properties** window, locate **Remote SSH Access**.
 
-1. Under **Remote SSH Access**, select **Disabled**.
+1. Select **Disabled** to enable the OpenSSH service.
 
-1. A PowerShell window opens. Wait for a few minutes while the cmdlet to enable SSHD automatically runs. After the window closes and a few more minutes pass, the setting should be enabled.
-
-1. If you're enabling SSHD for a specific user, add them to the **OpenSSH Users** user group.
+> [!NOTE] 
+> If you need to allow or restrict specific users or groups from using OpenSSH for remote access, add them to the **OpenSSH Users** user group.
 :::zone-end
 
 ::: zone pivot="windows-server-2022,windows-server-2019,windows-server-2016"
