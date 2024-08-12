@@ -123,7 +123,7 @@ This new type of account enables migration from a service account to a delegated
 
 ### DTrace
 
-Windows Server 2025 comes equipped with dtrace as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real-time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for additional capabilities.
+Windows Server 2025 comes equipped with `dtrace` as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real-time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for other capabilities.
 
 ### Email & accounts
 
@@ -147,6 +147,10 @@ Build 26040 has a new compression feature when compressing an item by performing
 
 Flighting is only available for the Canary Channel release beginning in early 2024 starting with build 26010, which allows users to receive Windows Server flights similar to Windows client. To enable flighting on your device, go to **Start > Settings > Windows Update > Windows Insider Program**. From there, you can choose to opt into your desired Insiders release.
 
+### OpenSSH
+
+In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Starting with build 26080, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-click option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
+
 ### Pinned apps
 
 Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26085, the default pinned apps are currently:
@@ -164,7 +168,7 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 By default new Routing and Remote Access Services (RRAS) setups don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
 
-Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
+Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
 ### Server Message Block
 
@@ -306,7 +310,7 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
   When you're creating a passphrase, the specified number of words are randomly selected from the chosen word list and concatenated. The first letter of each word is capitalized to enhance readability. This feature also fully supports backing passwords up to either Windows Server AD or Microsoft Entra ID.
 
-  The passphrase word lists used in the three new _PasswordComplexity_ passphrase settings are sourced from the Electronic Frontier Foundation's article, "[Deep Dive: EFF's New Wordlists for Random Passphrases](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases)". The [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471) is licensed under the CC-BY-3.0 Attribution license and is available for download.
+  The passphrase word lists used in the three new _PasswordComplexity_ passphrase settings are sourced from the Electronic Frontier Foundation's article, [Deep Dive: EFF's New Wordlists for Random Passphrases](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases). The [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471) is licensed under the CC-BY-3.0 Attribution license and is available for download.
 
   > [!NOTE]
   > Windows LAPS doesn't allow for customization of the built-in word lists nor the use of customer-configured word lists.
@@ -341,10 +345,6 @@ The Windows Terminal, a powerful and efficient multishell application for comman
 ### Winget
 
 Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
-
-### OpenSSH
-
-In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Now, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-click option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
 
 ## See also
 

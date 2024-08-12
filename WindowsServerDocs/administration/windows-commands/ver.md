@@ -4,7 +4,7 @@ description: Reference article for the ver command, which displays the operating
 ms.topic: reference
 ms.assetid: 5a9c6cd4-b67d-4b30-8c56-5f9798eafd2a
 ms.author: alalve
-author: JasonGerend
+author: robinharwood
 ms.date: 10/20/2022
 ---
 
