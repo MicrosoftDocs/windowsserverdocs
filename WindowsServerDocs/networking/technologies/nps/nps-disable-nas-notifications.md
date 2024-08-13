@@ -4,8 +4,8 @@ description: Learn how to disable the forwarding of start and stop messages from
 manager: brianlic
 ms.topic: article
 ms.assetid: a09bfb03-95fc-4534-bf3c-97078ef6b07e
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

@@ -4,7 +4,7 @@ description: This article is step four in a four-step process for deploying Wind
 ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 09/21/2023
 ---
