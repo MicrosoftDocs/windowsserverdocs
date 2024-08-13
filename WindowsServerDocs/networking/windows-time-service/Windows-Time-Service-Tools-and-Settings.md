@@ -264,6 +264,7 @@ Below you'll find the default values for the **Global Configuration Settings** o
 |ChainDisable|0|
 |ChainEntryTimeout|16|
 |ChainLoggingRate|30|
+|ChainMaxEntries|128|
 |ChainMaxHostEntries|4|
 |ClockAdjustmentAuditLimit|800|
 |ClockHoldoverPeriod|7800|
