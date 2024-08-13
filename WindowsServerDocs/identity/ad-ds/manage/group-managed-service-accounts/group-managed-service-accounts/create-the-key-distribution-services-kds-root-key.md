@@ -4,7 +4,7 @@ description: Learn how to create a Microsoft Key Distribution Service (kdssvc.dl
 ms.topic: article
 ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
 ms.author: jgerend
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 04/10/2023
 ---

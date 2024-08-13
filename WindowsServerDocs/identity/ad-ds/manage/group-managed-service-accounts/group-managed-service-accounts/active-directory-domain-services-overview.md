@@ -4,7 +4,7 @@ description: Learn about how Active Directory Domain Services, provides the meth
 ms.topic: article
 ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca
 ms.author: jgerend
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
 ---

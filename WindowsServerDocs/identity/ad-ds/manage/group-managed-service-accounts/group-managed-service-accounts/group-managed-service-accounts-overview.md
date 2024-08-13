@@ -4,7 +4,7 @@ description: Learn about the group Managed Service Account; specifically  practi
 ms.topic: article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
 ms.author: jgerend
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 08/04/2023
 ---
