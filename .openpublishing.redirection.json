@@ -11739,6 +11739,46 @@
       "source_path": "WindowsServerDocs/storage/whats-new-in-storage.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-Technology-Overview.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-Server-2016.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/get-started/Get-started-with-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/configure-virtual-local-areal-networks-for-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md",
+      "redirect_url":"/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/deploy/configure-virtual-local-areal-networks-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/configure-virtual-local-area-networks-for-hyper-v",
+      "redirect_document_id": false
     }
   ]
 }

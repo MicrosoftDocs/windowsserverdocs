@@ -9,7 +9,10 @@ ms.date: 11/29/2016
 ---
 # Hyper-V Technology Overview
 
->Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to:  Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+
+> [!IMPORTANT]
+> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.
 
@@ -89,6 +92,7 @@ These are some technologies from Microsoft that are often used with Hyper-V:
 - [Failover Clustering](../../failover-clustering/whats-new-in-failover-clustering.md)
 - [Remote Desktop Services](../../remote/remote-desktop-services/remote-desktop-services-overview.md)
 - [System Center Virtual Machine Manager](/system-center/vmm/overview)
+- [Client Hyper-V](/virtualization/hyper-v-on-windows/index)
 
 Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct
 

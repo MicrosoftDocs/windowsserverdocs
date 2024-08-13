@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
 ms.author: wscontent
 author: robinharwood
-ms.date: 10/03/2023
+ms.date: 08/13/2024
 ---
 # Configure virtual local area networks for Hyper-V
 
