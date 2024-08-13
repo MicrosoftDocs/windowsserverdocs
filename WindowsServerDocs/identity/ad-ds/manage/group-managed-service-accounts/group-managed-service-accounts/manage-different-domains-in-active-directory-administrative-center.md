@@ -2,7 +2,7 @@
 title: Manage Different Domains in Active Directory Administrative Center
 description: Learn how to manage different domains in Active Directory Administrative Center.
 ms.assetid: 166351c3-4076-48be-aa8f-797adf1e9d68
-ms.author: jgerend
+ms.author: wscontent
 author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
