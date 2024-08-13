@@ -4,7 +4,7 @@ description: Learn about the new capabilities for Kerberos constrained delegatio
 ms.topic: article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
 ---

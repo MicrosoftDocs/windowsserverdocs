@@ -4,7 +4,7 @@ description: Learn how to configure added protection for the Local Security Auth
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 09/26/2023
 ---

@@ -4,7 +4,7 @@ description: Learn about Kerberos authentication in Windows Server 2012 and Wind
 ms.topic: article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
 ---

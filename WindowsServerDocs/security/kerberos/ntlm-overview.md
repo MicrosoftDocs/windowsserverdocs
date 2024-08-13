@@ -4,7 +4,7 @@ description: Learn about NTLM, any changes in functionality, and find links to t
 ms.topic: article
 ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 09/21/2023
 ---

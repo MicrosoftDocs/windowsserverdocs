@@ -3,7 +3,7 @@ description: "Learn more about: How to Configure Protected Accounts"
 title: How to Configure Protected Accounts
 ms.topic: article
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
 ---

@@ -4,7 +4,7 @@ description: Learn about the Active Directory security group Protected Users fea
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: mtillman
 ms.date: 02/12/2024
 ---

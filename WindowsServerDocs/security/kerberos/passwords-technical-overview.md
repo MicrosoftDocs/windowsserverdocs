@@ -4,7 +4,7 @@ description: Explains how Windows implements passwords in versions of Windows be
 ms.topic: article
 ms.assetid: 0288c73f-8ce8-4bfd-9016-2e47139fa38d
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 manager: 
 ms.date: 3/17/2021
 ---
