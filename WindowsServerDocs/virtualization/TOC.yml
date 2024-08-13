@@ -4,10 +4,9 @@
   - name: Guarded fabric and shielded VMs
     href: ../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
   - name: Hyper-V
-    href: hyper-v/Hyper-V-on-Windows-Server.md
     items:
-    - name: Technology Overview
-      href: hyper-v/Hyper-V-Technology-Overview.md
+    - name: Hyper-V overview
+      href: hyper-v/hyper-v-overview.md
     - name: System requirements
       href: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
     - name: Supported Windows guest operating systems
@@ -36,7 +35,6 @@
     - name: Feature compatibility by generation and guest
       href: hyper-v/Hyper-V-feature-compatibility-by-generation-and-guest.md
     - name: Get started
-      href: hyper-v/get-started/Get-started-with-Hyper-V-on-Windows.md
       items:
       - name: Install Hyper-V
         href: hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md
@@ -45,12 +43,9 @@
       - name: Create a virtual machine
         href: hyper-v/get-started/create-a-virtual-machine-in-Hyper-V.md
     - name: Plan
-      href: hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md
       items:
-      - name: Compatibility
-        items:
-        - name: Guest operating system and application supportability
-          href: hyper-v/plan/guest-operating-system-application-supportability.md
+      - name: Guest operating system and application supportability
+        href: hyper-v/plan/guest-operating-system-application-supportability.md
       - name: VM Generation
         href: hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md
       - name: Networking
@@ -68,8 +63,9 @@
       - name: Virtual Fibre Channel for Hyper-V
         href: hyper-v/plan/virtual-fibre-channel-for-hyper-v.md
     - name: Deploy
-      href: hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md
       items:
+      - name: Configure virtual local area networks for Hyper-V
+        href: hyper-v/deploy/configure-virtual-local-area-networks-for-hyper-v.md
       - name: Export and import virtual machines
         href: hyper-v/deploy/Export-and-import-virtual-machines.md
       - name: Set up hosts for live migration
@@ -91,7 +87,6 @@
       - name: Use GPUs with clustered VMs
         href: hyper-v/deploy/use-gpu-with-clustered-vm.md
     - name: Manage
-      href: hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md
       items:
       - name: Configuring Persistent Memory Devices for Hyper-V VMs
         href: hyper-v/manage/persistent-memory-cmdlets.md
