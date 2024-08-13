@@ -3,7 +3,7 @@ title: NTLM Overview
 description: Learn about NTLM, any changes in functionality, and find links to technical resources to Windows Authentication and NTLM for Windows Server.
 ms.topic: article
 ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
-ms.author: jgerend
+ms.author: wscontent
 author: JasonGerend
 manager: mtillman
 ms.date: 09/21/2023

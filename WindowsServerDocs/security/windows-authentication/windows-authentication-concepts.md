@@ -3,7 +3,7 @@ title: Windows Authentication Concepts
 description: Learn about the concepts on which Windows authentication is based.
 ms.topic: article
 ms.assetid: 29d1db15-cae0-4e3d-9d8e-241ac206bb8b
-ms.author: jgerend
+ms.author: wscontent
 author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
