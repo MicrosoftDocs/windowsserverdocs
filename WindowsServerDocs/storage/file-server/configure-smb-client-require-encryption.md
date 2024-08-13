@@ -1,5 +1,5 @@
 ---
-title: Configure the SMB client to require encryption in Windows (preview)
+title: Configure the SMB client to require encryption in Windows (Preview)
 description: Learn how to configure SMB encryption mandate in Windows and Windows Server using Group Policy and PowerShell.
 ms.topic: how-to
 author: gswashington
@@ -8,12 +8,12 @@ ms.date: 03/01/2024
 
 ---
 
-# Configure the SMB client to require encryption in Windows (preview)
+# Configure the SMB client to require encryption in Windows (Preview)
 
->Applies to: Windows and Windows Server Insider builds
+>Applies to: Windows Insider builds and Windows Server 2025 (Preview)
 
 > [!IMPORTANT]
-> Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Windows Insider and Windows Server 2025 (Preview) are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Beginning with [Windows 11 Insider Preview Build 25982 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/25/announcing-windows-11-insider-preview-build-25982-canary-channel/) and [Windows Server Preview Build 25997](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25997/m-p/3983949), the SMB client supports requiring encryption of all outbound SMB connections. Administrators can require all destination servers to support encryption with SMB 3.0 or later. In this article, learn how to configure the SMB client to require encryption for all outbound connections.
 
@@ -27,7 +27,7 @@ Before you can configure the SMB client to require encryption, you need:
 
 - An SMB client running on one of the following operating systems.
   - Windows 11 Insider Preview Build 25982 or later.
-  - Windows Server Insider Preview Build 25997 or later.
+  - Windows Server 2025 (Preview).
 - Administrative privileges to the computer.
 - If you're using Group Policy on a domain, you need privileges to create or edit a Group Policy object (GPO) and link it to the appropriate organizational unit (OU).
 
