@@ -4,8 +4,8 @@ description: Learn about the planning steps required to deploy a single DirectAc
 manager: brianlic
 ms.topic: article
 ms.assetid: d12632d7-4f47-4b4e-a4ad-f18322d726e2
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Plan a Basic DirectAccess Deployment

@@ -2,8 +2,8 @@
 title: Prestage cluster computer objects in Active Directory Domain Services
 description: How to prestage cluster computer objects in Active Directory Domain Services.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 manager: lizross
 ms.date: 10/20/2021
 ---

@@ -2,8 +2,8 @@
 title: Use Robocopy to pre-seed files for DFS Replication
 description: How to use Robocopy.exe to pre-seed files for DFS Replication.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 05/18/2018
 ---
 # Use Robocopy to pre-seed files for DFS Replication
