@@ -64,7 +64,7 @@ Virtual machine multi queue (VMMQ) | 1 and 2  | Any supported guest
 Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------
 Discrete device assignment (DDA) | 1 and 2 | Windows Server 2012 and later, Windows 10 and Windows 11 <br>
-Enhanced session mode | 1 and 2 | Windows Server 2012 R2 and later , and Windows 8.1 and later, with Remote Desktop Services enabled <br>**Note**: You might need to also configure the host. For details, see [Use local resources on Hyper-V virtual machine with VMConnect](./learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md).
+Enhanced session mode | 1 and 2 | Windows Server 2012 R2 and later, and Windows 8.1 and later, with Remote Desktop Services enabled <br>**Note**: You might need to also configure the host. For details, see [Use local resources on Hyper-V virtual machine with VMConnect](./learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md).
 RemoteFx | 1 and 2 | Generation 1 on 32-bit and 64-bit Windows versions starting with Windows 8. <br> Generation 2 on 64-bit Windows 10 and Windows 11 versions
 
 ## Security
