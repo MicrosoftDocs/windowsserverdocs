@@ -4,7 +4,7 @@ description: Learn how to partition and share a GPU with multiple virtual machin
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 03/15/2024
+ms.date: 07/26/2024
 zone_pivot_groups: windows-os
 #customer intent: As a customer, I want to learn how to partition and assign GPUs to a virtual machine in Hyper-V so that I can use the GPU resources efficiently.
 ---
@@ -54,13 +54,13 @@ There are several requirements and things to consider before you begin to use th
 
 :::zone pivot="azure-stack-hci"
 
-- Install Azure Stack HCI, version 22H2 operating system on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
+- Install Azure Stack HCI on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
 
 ::: zone-end
 
 - Install the physical GPU device of the same make, model, and size on every server of the cluster. Refer to your OEM-provided documentation when installing the GPU device on your physical servers in the cluster.
 
-- Install the GPU drivers on every server of the cluster by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
+- Install the GPU drivers on every server of the cluster by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/vgpu/17.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/index.html).
 
 - Ensure that the virtualization support and SR-IOV are enabled in the BIOS of each server in the cluster. Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 
@@ -77,7 +77,7 @@ There are several requirements and things to consider before you begin to use th
 
 - Deploy a VM using a guest operating system from the [Supported guest operating systems](gpu-partitioning.md#supported-guest-operating-systems) list.
 
-- Install the GPU drivers on the VM by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
+- Install the GPU drivers on the VM by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/vgpu/17.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/index.html).
 
 ### Prerequisites for Windows Admin Center
 

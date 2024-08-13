@@ -1,9 +1,9 @@
 ---
 title: Understand and Configure Azure Monitor
 description: Detailed setup information on what Azure Monitor is and how to configure email and sms alerts for your storage spaces direct cluster in Windows Server 2016 and 2019.
-ms.author: jgerend
+ms.author: wscontent
 ms.topic: article
-author: jasongerend
+author: robinharwood
 ms.date: 01/10/2020
 ---
 # Use Azure Monitor to send emails for Health Service Faults

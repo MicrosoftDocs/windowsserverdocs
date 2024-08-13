@@ -3,8 +3,8 @@ title: wdsutil set-imagegroup
 description: Reference article for Subcommand set-ImageGroup, which changes the attributes of an image group.
 ms.topic: reference
 ms.assetid: 4d86946a-e261-4d41-8b0c-1ab0ba2e3430
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---

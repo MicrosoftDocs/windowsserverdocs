@@ -3,8 +3,8 @@ title: Manage Hyper-V on Windows Server
 description: Gives links to articles on managing Hyper-V
 ms.topic: article
 ms.assetid: 5c06b632-dd19-46ca-9f51-130c321963d8
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 01/08/2018
 ---
 # Manage Hyper-V on Windows Server

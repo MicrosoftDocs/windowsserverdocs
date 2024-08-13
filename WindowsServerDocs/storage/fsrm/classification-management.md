@@ -3,9 +3,9 @@ title: Classification Management
 description: This article describes how to categorize files based on classification properties
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 
 # Classification Management
