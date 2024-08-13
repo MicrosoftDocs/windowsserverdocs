@@ -3,9 +3,9 @@ title: iSCSI Target Server Scalability Limits
 TOCTitle: iSCSI Target Server Scalability Limits
 description: "Learn more about: iSCSI Target Server Scalability Limits"
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: dougkim
-ms.author: jgerend
+ms.author: wscontent
 ms.date: 09/11/2018
 ---
 

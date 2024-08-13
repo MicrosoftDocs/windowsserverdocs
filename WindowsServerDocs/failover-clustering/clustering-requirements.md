@@ -2,7 +2,7 @@
 title: Failover clustering hardware requirements and storage options
 description: Hardware requirements and storage options for creating a failover cluster.
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 ms.author: wscontent
 manager: lizross
 ms.date: 10/10/2023

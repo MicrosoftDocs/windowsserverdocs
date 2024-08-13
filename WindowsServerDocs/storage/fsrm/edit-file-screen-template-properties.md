@@ -3,9 +3,9 @@ title: Edit File Screen Template Properties
 description: This article describes how to edit file screen template properties
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Edit File Screen Template Properties
 
