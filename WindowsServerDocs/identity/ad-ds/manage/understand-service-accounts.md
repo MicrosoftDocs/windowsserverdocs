@@ -4,7 +4,7 @@ description: Windows Server standalone and group managed service accounts in Act
 author: robinharwood
 ms.author: roharwoo
 ms.topic: article
-ms.date: 08/06/2024
+ms.date: 08/14/2024
 ---
 
 # Service accounts
@@ -77,7 +77,7 @@ Service accounts are used to control the service's access to local and network r
 | App runs on a single server | Yes | Yes | Yes | Yes |
 | App runs on multiple servers | No | Yes | No | No |
 | App runs behind a load balancer | No | Yes | No | No |
-| App runs on Windows Server 2008 R2 up to Windows Server 2022 | Yes | No | No | Yes |
+| App runs on Windows Server 2008 R2 and later | Yes | No | No | Yes |
 | Requirement to restrict service account to single server | Yes | No | Yes | No |
 | Supports machine account linked to device identity | No | No | Yes | No |
 | Use for high-security scenarios (prevent credential harvesting) | No | No | Yes | No |
