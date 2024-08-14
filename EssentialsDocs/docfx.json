@@ -47,8 +47,6 @@
             "**/*.md": "windows-server"
          },
          "ms.prod": {
-         },
-         "ms.technology": {
          }
       },
        "template": [],

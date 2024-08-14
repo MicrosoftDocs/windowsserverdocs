@@ -2,9 +2,9 @@
 description: Learn how to migrate SYSVOL replication to DFS Replication by creating a new domain name or by upgrading an existing domain.
 title: Migrate SYSVOL replication to DFS Replication
 ms.date: 04/25/2023
-author: JasonGerend
+author: robinharwood
 manager: elizapo
-ms.author: jgerend
+ms.author: wscontent
 ms.topic: conceptual
 ---
 

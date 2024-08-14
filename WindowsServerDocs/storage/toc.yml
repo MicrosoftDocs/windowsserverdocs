@@ -2,13 +2,9 @@ items:
 - name: Storage
   href: storage.yml
   items:
-  - name: What's new in Storage
-    href: whats-new-in-storage.md
   - name: Data Deduplication
     href: data-deduplication/overview.md
     items:
-    - name: What's new in Data Deduplication
-      href: data-deduplication/whats-new.md
     - name: Understand Data Deduplication
       href: data-deduplication/understand.md
     - name: Install and enable Data Deduplication

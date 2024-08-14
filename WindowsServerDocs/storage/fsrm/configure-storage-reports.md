@@ -3,9 +3,9 @@ title: Configure Storage Reports
 description: This article describes how to configure the default parameters for storage reports
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Configure Storage Reports
 

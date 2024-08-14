@@ -138,7 +138,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Remote Desktop Services
-            url: ../remote/remote-desktop-services/welcome-to-rds.md
+            url: ../remote/remote-desktop-services/remote-desktop-services-overview.md
 
   # Card
   - title: Manage Windows Server on Azure

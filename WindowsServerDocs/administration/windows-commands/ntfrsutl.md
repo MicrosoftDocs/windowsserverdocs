@@ -3,8 +3,8 @@ title: ntfrsutl
 description: Reference article for the ntfrsutl command, which dumps the internal tables, thread, and memory information for the NT File Replication Service (NTFRS).
 ms.topic: reference
 ms.assetid: d7721a19-5a87-4ab6-b816-65d2da2c811f
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---

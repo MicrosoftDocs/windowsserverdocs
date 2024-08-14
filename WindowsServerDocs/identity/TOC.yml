@@ -58,8 +58,6 @@
     items:
     - name: Active Directory Domain Services Overview
       href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
-    - name: What's new in Active Directory Domain Services
-      href: whats-new-active-directory-domain-services.md
     - name: What's new in Active Directory Domain Services Insider Preview
       href: ../get-started/whats-new-windows-server-insiders-preview.md
     - name: AD DS Getting started
@@ -253,6 +251,8 @@
           href: ad-ds/plan/Identifying-Your-Functional-Level-Upgrade.md
         - name: Finding additional Resources for Enabling Advanced Features
           href: ad-ds/plan/finding-additional-Resources-for-Enabling-Advanced-Features.md
+        - name: Database 32k pages optional feature
+          href: ad-ds/32k-pages-optional-feature.md
       - name: Evaluating AD DS Deployment Strategy Examples
         href: ad-ds/plan/Evaluating-AD-DS-Deployment-Strategy-Examples.md
       - name: 'Appendix A: Reviewing Key AD DS Terms'
@@ -267,7 +267,7 @@
       - name: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
         href: ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md
       - name: Find the current Schema version
-        href: ad-ds\deploy\find-active-directory-schema.md
+        href: ad-ds/deploy/find-active-directory-schema.md
       - name: AD DS Simplified Administration
         href: ad-ds/manage/AD-DS-Simplified-Administration.md
         items:
@@ -387,6 +387,10 @@
           href: ad-ds/manage/powershell/Introduction-to-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-100-.md
         - name: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
           href: ad-ds/manage/powershell/Advanced-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-200-.md
+      - name: Flexible Single Master Operations roles
+        href: ad-ds/manage/understand-fsmo-roles.md
+      - name: Transfer FSMO roles
+        href: ad-ds/manage/manage-fsmo-roles.md
       - name: Managing RID issuance
         href: ad-ds/manage/Managing-RID-Issuance.md
       - name: Active Directory Domain Services component updates
@@ -425,6 +429,22 @@
         href: ad-ds/manage/understand-special-identities-groups.md
       - name: Active Directory security groups
         href: ad-ds/manage/understand-security-groups.md
+      - name: Delegated Managed Service Accounts
+        items:
+        - name: Delegated Managed Service Accounts overview
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
+        - name: Setting up Delegated Managed Service Accounts
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
+      - name: Group Managed Service Accounts
+        href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
+        items:
+        - name: Getting started with Group Managed Service Accounts
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+          items:
+          - name: Create the Key Distribution Services KDS Root Key
+            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
+          - name: Configuring Kerberos delegation for group Managed Service Accounts
+            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
       - name: Service accounts
         href: ad-ds/manage/understand-service-accounts.md
       - name: Microsoft accounts
@@ -439,6 +459,16 @@
         href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
       - name: DC locator changes
         href: ad-ds/manage/dc-locator-changes.md
+      - name: Enable Database 32k pages optional feature
+        href: ad-ds/enable-32K-pages-optional-feature.md
+      - name: Monitoring
+        items:
+        - name: LSA performance counters
+          href: ad-ds/lsa-lookup-performance-counters.md
+        - name: DC Locator client performance counters
+          href: ad-ds/dc-locator-performance-counters.md
+        - name: LDAP client performance counters
+          href: ad-ds/ldap-client-performance-counters.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
       items:
@@ -456,8 +486,6 @@
     - name: AD FS Overview
       href: ad-fs/AD-FS-Overview.md
       items:
-      - name: What's new in Active Directory Federation Services
-        href: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
       - name: AD FS 2016 Requirements
         href: ad-fs/overview/AD-FS-Requirements.md
     - name: AD FS Design
@@ -671,8 +699,6 @@
             href: ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Relying-Party-Trust.md
           - name: Create a Rule to Pass Through or filter an Incoming Claim
             href: ad-fs/operations/create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md
-          - name: Create a Rule to Send an AD FS 1.x compatible Claim
-            href: ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md
           - name: Create a Rule to Permit All Users
             href: ad-fs/operations/create-a-Rule-to-Permit-All-Users.md
           - name: Create a Rule to Permit or Deny Users Based on an Incoming Claim
@@ -736,20 +762,13 @@
           - name: Configure Performance Monitoring
             href: ad-fs/deployment/Configure-Performance-Monitoring.md
         - name: Interoperating with AD FS 1.x
-          href: ad-fs/deployment/Interoperating-with-AD-FS-1.x.md
           items:
           - name: 'Checklist: Configuring AD FS to Consume Claims from AD FS 1.x'
             href: ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md
-          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service'
-            href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md
-          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent'
-            href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md
           - name: Create a Relying Party Trust Manually
             href: ad-fs/operations/create-a-Relying-Party-Trust.md
           - name: Create a Claims Provider Trust Manually
             href: ad-fs/operations/create-a-Claims-Provider-Trust.md
-          - name: Create a Rule to Send an AD FS 1.x compatible Claim
-            href: ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md
       - name: Deploy Microsoft Entra Connect Health
         href: /azure/active-directory/hybrid/whatis-hybrid-identity
       - name: Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2
@@ -973,7 +992,7 @@
         href: ad-fs/technical-reference/device-registration-technical-reference.md
       - name: AD FS Password Attack Protection
         href: ad-fs/technical-reference/ad-fs-password-protection.md
-    - name: AD FS 2016 FAQ
+    - name: AD FS FAQ
       href: ad-fs/overview/AD-FS-FAQ.yml
     - name: AD FS Decommission
       href: ad-fs/ad-fs-decommission.md
@@ -1016,15 +1035,15 @@
       - name: Distribute certificates using Group Policy
         href: ad-cs/distribute-certificates-group-policy.md
       - name: Export a certificate with its private key
-        href: ad-cs/export-certificate-private-key.md  
+        href: ad-cs/export-certificate-private-key.md
       - name: Manage certificate templates
-        href: ad-cs/manage-certificate-templates.md  
+        href: ad-cs/manage-certificate-templates.md
       - name: Request certificates using Web Enrollment
         href: ad-cs/request-certificate-windows-server.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
       - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
-        href: ad-cs/submit-pkcs-certificate-request.md     
+        href: ad-cs/submit-pkcs-certificate-request.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies

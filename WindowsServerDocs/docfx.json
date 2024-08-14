@@ -33,9 +33,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
       "uhfHeaderId": "MSDocsHeader-WindowsServer",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
-      "feedback_product_url": "https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server",
+      "feedback_system": "Standard",
       "_op_documentIdPathDepotMapping": {
           "manage/windows-admin-center/license/": {
             "depot_name": "MSDN.WindowsServerDocs-pr",
@@ -47,42 +45,77 @@
       "fileMetadata": {
          "ms.service": {
             "failover-clustering/**/*.md": "windows-server",
+            "failover-clustering/**/*.yml": "windows-server",
             "remote/**/*.md": "windows-server",
+            "remote/**/*.yml": "windows-server",
             "EssentialsDocs/**/*.md": "windows-server",
+            "EssentialsDocs/**/*.yml": "windows-server",
             "storage/**/*.md": "windows-server",
+            "storage/**/*.yml": "windows-server",
             "troubleshoot/**/*.md": "windows-server",
+            "troubleshoot/**/*.yml": "windows-server",
             "get-started/**/*.md": "windows-server",
+            "get-started/**/*.yml": "windows-server",
             "get-started-19/**/*.md": "windows-server",
+            "get-started-19/**/*.yml": "windows-server",
             "manage/**/*.md": "windows-server",
+            "manage/**/*.yml": "windows-server",
             "identity/**/*.md": "windows-server",
+            "identity/**/*.yml": "windows-server",
             "security/**/*.md": "windows-server",
+            "security/**/*.yml": "windows-server",
             "administration/**/*.md": "windows-server",
+            "administration/**/*.yml": "windows-server",
             "virtualization/**/*.md": "windows-server",
+            "virtualization/**/*.yml": "windows-server",
             "networking/**/*.md": "windows-server",
+            "networking/**/*.yml": "windows-server",
             "upgrade/**/*.md": "windows-server",
-            "windows-server-licensing/**/*.md": "windows-server"
+            "upgrade/**/*.yml": "windows-server",
+            "windows-server-licensing/**/*.md": "windows-server",
+            "windows-server-licensing/**/*.yml": "windows-server"
          },
          "ms.subservice": {
             "storage/storage-spaces/**/*.md": "storage-spaces",
+            "storage/storage-spaces/**/*.yml": "storage-spaces",
             "failover-clustering/**/*.md": "failover-clustering",
+            "failover-clustering/**/*.yml": "failover-clustering",
             "remote/remote-desktop-services/**/*.md": "remote-desktop-services",
+            "remote/remote-desktop-services/**/*.yml": "remote-desktop-services",
             "remote/**/*.md": "remote",
+            "remote/**/*.yml": "remote",
             "identity/ad-fs/**/*.md": "ad-fs",
+            "identity/ad-fs/**/*.yml": "ad-fs",
             "EssentialsDocs/**/*.md": "essentials",
+            "EssentialsDocs/**/*.yml": "essentials",
             "storage/**/*.md": "storage",
+            "storage/**/*.yml": "storage",
             "troubleshoot/**/*.md": "troubleshoot",
+            "troubleshoot/**/*.yml": "troubleshoot",
             "get-started/**/*.md": "getting-started",
+            "get-started/**/*.yml": "getting-started",
             "get-started-19/**/*.md": "getting-started",
+            "get-started-19/**/*.yml": "getting-started",
             "manage/**/*.md": "manage",
+            "manage/**/*.yml": "manage",
             "identity/**/*.md": "security",
+            "identity/**/*.yml": "security",
             "security/**/*.md": "security",
+            "security/**/*.yml": "security",
             "administration/windows-commands/**/*.md": "windows-commands",
+            "administration/windows-commands/**/*.yml": "windows-commands",
             "administration/**/*.md": "administration",
+            "administration/**/*.yml": "administration",
             "manage/windows-admin-center/**/*.md": "windows-admin-center",
+            "manage/windows-admin-center/**/*.yml": "windows-admin-center",
             "identity/ad-ds/**/*.md": "ad-ds",
+            "identity/ad-ds/**/*.yml": "ad-ds",
             "administration/windows-server-update-services/**/*.md": "wsus",
+            "administration/windows-server-update-services/**/*.yml": "wsus",
             "virtualization/**/*.md": "hyper-v",
-            "networking/**/*.md": "networking"
+            "virtualization/**/*.yml": "hyper-v",
+            "networking/**/*.md": "networking",
+            "networking/**/*.yml": "networking"
          },
         "author": {
           "security/tls/*.md": "Andrei-Popov"
@@ -95,10 +128,7 @@
           "security/tls/*.md": "wscontent"
         },
         "ms.prod": {
-        },
-        "ms.technology": {
-          "upgrade/**/*.md": "upgrade"
-          }
+        }
         },
     "template": [
       "docs.html"
