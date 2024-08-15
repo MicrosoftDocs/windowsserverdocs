@@ -158,7 +158,7 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 
 Retrieval of Windows LAPS passwords (including DSRM passwords) normally requires that at least one Active Directory domain controller is available. Consider however a catastrophic scenario in which all the domain controllers in a domain are down. How do you recover passwords in that situation?
 
-Active Directory management best-practices advise regularly saving regular backups of all domain controllers. Windows LAPS passwords stored in a mounted backup AD database can be queried using the Get-LapsADPassword PowerShell cmdlet. The `-RecoveryMode` parameter of the `Get-LapsADPassword` PowerShell cmdlet was recently improved so that password recovery succeeds even if the cmdlet is run on a workgroup (non-domain-joined machine) with zero AD domain controllers available.
+Active Directory management best-practices advise regularly saving regular backups of all domain controllers. Windows LAPS passwords stored in a mounted backup AD database can be queried using the `Get-LapsADPassword` PowerShell cmdlet by specifying the `-Port` parameter.The `Get-LapsADPassword` cmdlet was recently improved so that when the `-Port` and `-RecoveryMode` parameters are both specified, password recovery will succeed with no need to contact a domain controller. Further, `Get-LapsADPassword` now supports being run in this mode on a workgroup (non-domain-joined machine).
 
 The following example assumes that an AD backup database is locally mounted on port 50000:
 
