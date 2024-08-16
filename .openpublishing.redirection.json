@@ -1,6 +1,106 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/prepare-migrate-ad-fs-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-fed-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-ad-fs-fed-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-fed-server-proxy-r2.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-fed-server-proxy-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/verify-ad-fs-migration.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/verify-ad-fs-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-wid-farm.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/prepare-to-migrate-a-wid-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/prepare-to-migrate-a-sql-server-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-fed-server.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-the-ad-fs-fed-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-stand-alone-server.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-ad-fs-stand-alone-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-wid-farm.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-ad-fs-wid-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-sql-farm.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-ad-fs-sql-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-web-agent.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/migrate-the-ad-fs-web-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Relying-Party-Trust.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/operations/Create-a-Relying-Party-Trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Claims-Provider-Trust.md",
+      "redirect_url": "/previous-versions/windows-server/identity/ad-fs/operations/Create-a-Claims-Provider-Trust",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md",
       "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim",
       "redirect_document_id": false
