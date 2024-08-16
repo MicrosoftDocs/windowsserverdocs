@@ -1,7 +1,7 @@
 ---
 title: Get started with OpenSSH for Windows
 description: Learn how to install and connect to remote machines using the OpenSSH Client and Server for Windows.
-ms.date: 01/09/2024
+ms.date: 08/16/2024
 ms.topic: quickstart
 ms.author: roharwoo
 author: robinharwood
@@ -55,7 +55,7 @@ To enable SSHD using Server Manager:
 
 1. Select **Disabled** to enable the OpenSSH service.
 
-> [!NOTE] 
+> [!NOTE]
 > If you need to allow or restrict specific users or groups from using OpenSSH for remote access, add them to the **OpenSSH Users** user group.
 
 ### [PowerShell](#tab/powershell)
