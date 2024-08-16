@@ -11779,6 +11779,21 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v/deploy/configure-virtual-local-areal-networks-for-Hyper-V.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/deploy/configure-virtual-local-area-networks-for-hyper-v",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-app-compare.md",
+      "redirect_url": "/azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-features.md",
+      "redirect_url": "/azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/rdp-files.md",
+      "redirect_url": "/azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
     }
   ]
 }

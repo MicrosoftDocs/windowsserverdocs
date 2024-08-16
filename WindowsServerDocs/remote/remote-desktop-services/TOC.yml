@@ -197,12 +197,10 @@
         href: clients/change-listening-port.md
     - name: Advanced information
       items:
-      - name: 'Compare the clients: features'
-        href: clients/remote-desktop-features.md
-      - name: 'Compare the clients: redirections'
-        href: clients/remote-desktop-app-compare.md
+      - name: Compare Remote Desktop app features
+        href: /azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services
       - name: Supported RDP properties
-        href: clients/rdp-files.md
+        href: /azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services
       - name: Remote Desktop URI scheme
         href: clients/remote-desktop-uri.md
       - name: Remote Desktop client FAQ
