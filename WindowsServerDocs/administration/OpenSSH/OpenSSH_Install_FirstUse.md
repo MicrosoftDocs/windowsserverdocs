@@ -62,29 +62,29 @@ To enable SSHD using Server Manager:
 
 To enable SSHD using PowerShell:
 
-1. Open PowerShell as an administrator and run teh following cmdlet to start the SSHD service:
+1. Open PowerShell as an administrator and run the following cmdlet to start the SSHD service:
 
-  ```powershell
-  # Start the sshd service
-  Start-Service sshd
-  ```
+    ```powershell
+    # Start the sshd service
+    Start-Service sshd
+    ```
 
 1. You can also run the following optional but recommended cmdlet to automatically start SSHD to make sure it stays enabled:
 
-  ```powershell
-  Set-Service -Name sshd -StartupType 'Automatic'
-  ```
+    ```powershell
+    Set-Service -Name sshd -StartupType 'Automatic'
+    ```
 
 1. Finally, run the following command to verify that the SSHD setup process automatically configured the firewall rule:
 
-  ```powershell
-  if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
-      Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
-      New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
-  } else {
-      Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
-  }
-  ```
+    ```powershell
+    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+        Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
+        New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+    } else {
+        Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
+    }
+    ```
 
 ---
 
@@ -158,55 +158,55 @@ To install OpenSSH using PowerShell:
 
 1. Run the following cmdlet to make sure that OpenSSH is available:
 
-  ```powershell
-  Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
-  ```
+    ```powershell
+    Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+    ```
 
-  The command should return the following output if neither are already installed:
+    The command should return the following output if neither are already installed:
 
-  ```powershell
-  Name  : OpenSSH.Client~~~~0.0.1.0
-  State : NotPresent
+    ```powershell
+    Name  : OpenSSH.Client~~~~0.0.1.0
+    State : NotPresent
 
-  Name  : OpenSSH.Server~~~~0.0.1.0
-  State : NotPresent
-  ```
+    Name  : OpenSSH.Server~~~~0.0.1.0
+    State : NotPresent
+    ```
 
 1. After that, run the following cmdlets to install the server or client components as needed:
 
-  ```powershell
-  # Install the OpenSSH Client
-  Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+    ```powershell
+    # Install the OpenSSH Client
+    Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
-  # Install the OpenSSH Server
-  Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
-  ```
+    # Install the OpenSSH Server
+    Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+    ```
 
   Both commands should return the following output:
 
-  ```Output
-  Path          :
-  Online        : True
-  RestartNeeded : False
-  ```
+    ```powershell
+    Path          :
+    Online        : True
+    RestartNeeded : False
+    ```
 
 1. To start and configure OpenSSH Server for initial use, open an elevated PowerShell prompt (right click, Run as an administrator), then run the following commands to start the `sshd service`:
 
-  ```powershell
-  # Start the sshd service
-  Start-Service sshd
+    ```powershell
+    # Start the sshd service
+    Start-Service sshd
 
-  # OPTIONAL but recommended:
-  Set-Service -Name sshd -StartupType 'Automatic'
+    # OPTIONAL but recommended:
+    Set-Service -Name sshd -StartupType 'Automatic'
 
-  # Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
-  if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
-      Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
-      New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
-  } else {
-      Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
-  }
-  ```
+    # Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
+    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+        Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
+        New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+    } else {
+        Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
+    }
+    ```
 
 ---
 ::: zone-end
@@ -221,7 +221,7 @@ ssh domain\username@servername
 
 Once connected, you get a message similar to the following output.
 
-```Output
+```powershell
 The authenticity of host 'servername (10.00.00.001)' can't be established.
 ECDSA key fingerprint is SHA256:(<a large string>).
 Are you sure you want to continue connecting (yes/no)?
@@ -244,7 +244,9 @@ domain\username@SERVERNAME C:\Users\username>
 To uninstall OpenSSH using Windows Settings:
 
 1. Open **Settings**, select **System**, then select **Optional Features** (also referred to as **Manage optional features**).
+
 1. In the list, select **OpenSSH Client** or **OpenSSH Server**.
+
 1. Select **Uninstall**.
 
 ### [PowerShell](#tab/powershell)
