@@ -31,9 +31,11 @@ Before you start, your computer must meet the following requirements:
 
 To validate your environment, open an elevated PowerShell session and do the following:
 
-- Type _winver.exe_ and press enter to see the version details for your Windows device.
+- Enter _winver.exe_ and press enter to see the version details for your Windows device.
+
 - Run `$PSVersionTable.PSVersion`. Verify your major version is at least 5, and your minor version at least 1. Learn more about [installing PowerShell on Windows](/powershell/scripting/install/installing-powershell-on-windows).
-- Run the command below. The output shows `True` when you're a member of the built-in Administrators group.
+
+- Run the following command. The output shows `True` when you're a member of the built-in Administrators group.
 
   ```powershell
   (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
@@ -182,7 +184,7 @@ To install OpenSSH using PowerShell:
     Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
     ```
 
-  Both commands should return the following output:
+    Both commands should return the following output:
 
     ```powershell
     Path          :
@@ -190,7 +192,7 @@ To install OpenSSH using PowerShell:
     RestartNeeded : False
     ```
 
-1. To start and configure OpenSSH Server for initial use, open an elevated PowerShell prompt (right click, Run as an administrator), then run the following commands to start the `sshd service`:
+1. To start and configure OpenSSH Server for initial use, open an elevated PowerShell prompt (right-click, then select **Run as an administrator**), then run the following commands to start the `sshd service`:
 
     ```powershell
     # Start the sshd service
@@ -229,11 +231,11 @@ Are you sure you want to continue connecting (yes/no)?
 
 Entering _yes_ adds that server to the list of known SSH hosts on your Windows client.
 
-At this point, you'll be prompted for your password. As a security precaution, your password won't be displayed as you type.
+At this point, the service prompts you for your password. As a security precaution, the characters of your password aren't displayed as you enter them.
 
-Once connected, you'll see the Windows command shell prompt:
+Once connected, you should see the following Windows command shell prompt:
 
-```Output
+```powershell
 domain\username@SERVERNAME C:\Users\username>
 ```
 
@@ -263,11 +265,12 @@ Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 
 ---
 
-You may need to restart Windows afterwards if the service was in use at the time it was uninstalled.
+If the service was in use when you uninstalled it, you should restart Windows.
 
 ## Next steps
 
-Now that you've installed OpenSSH Server for Windows, here are some articles that might help you as you use it:
+Now that you're done installing OpenSSH Server for Windows, here are some articles that can help you learn how to use it:
 
 - Learn more about using key pairs for authentication in [OpenSSH key management](OpenSSH_KeyManagement.md)
+
 - Learn more about the [OpenSSH Server configuration for Windows](OpenSSH_Server_Configuration.md)
