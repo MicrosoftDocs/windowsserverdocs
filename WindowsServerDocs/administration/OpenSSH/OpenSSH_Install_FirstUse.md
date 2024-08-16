@@ -24,7 +24,9 @@ An OpenSSH-compatible client can be used to connect to Windows Server and Window
 Before you start, your computer must meet the following requirements:
 
 - A device running at least Windows Server 2019 or Windows 10 (build 1809).
+
 - PowerShell 5.1 or later.
+
 - An account that is a member of the built-in Administrators group.
 
 ### Prerequisites check
@@ -105,6 +107,7 @@ To install the OpenSSH components on Windows 10 devices:
 1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
 
     - Find **OpenSSH Client**, then select **Install**
+    
     - Find **OpenSSH Server**, then select **Install**
 
 1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
@@ -122,6 +125,7 @@ To install the OpenSSH components on Windows 11 devices:
 1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **View Features**, then:
 
     - Search for **OpenSSH Client**, select **Next**, then select **Install**
+    
     - Search for **OpenSSH Server**, select **Next**, then select **Install**
 
 1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
@@ -139,6 +143,7 @@ To install the OpenSSH components on Windows Server devices:
 1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
 
     - Search for **OpenSSH Client**, then select **Install**
+    
     - Search for **OpenSSH Server**, then select **Install**
 
 1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
