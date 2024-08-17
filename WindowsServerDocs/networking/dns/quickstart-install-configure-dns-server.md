@@ -1,6 +1,6 @@
 ---
 title: Install and configure DNS Server on Windows Server
-description: learn how to install and configure a DNS server on Windows Server using PowerShell or Server Manager. 
+description: Learn how to install and configure a DNS server on Windows Server using PowerShell or Server Manager. 
 author: robinharwood
 ms.author: roharwoo
 ms.topic: quickstart
