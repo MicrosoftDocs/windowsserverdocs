@@ -3,6 +3,8 @@
   items:
   - name: Get started
     items:
+    - name: Create virtual machines for Remote Desktop
+      href: Create-virtual-machines-for-Remote-Desktop.md
     - name: Supported configurations for RDS
       href: rds-supported-config.md
     - name: Supported security configurations for Windows 10 VDI
@@ -50,6 +52,10 @@
         href: rds-roles.md
       - name: Azure services and considerations for desktop hosting
         href: Azure-services-and-considerations-for-desktop-hosting.md
+      - name: Understanding the desktop hosting environment
+        href: Understanding-the-desktop-hosting-environment.md    
+      - name: Tenant on-premises components
+        href: Tenant-on-premises-components.md  
   - name: Build and deploy
     href: rds-build-and-deploy.md
     items:
