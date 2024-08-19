@@ -34,17 +34,18 @@ You can configure your PC for remote access with a few easy steps.
 2. Select the **System** group followed by the [**Remote Desktop**](ms-settings:remotedesktop) item.
 3. Use the slider to enable Remote Desktop.
 4. It's also recommended to keep the PC awake and discoverable to facilitate connections. Select **Show settings** to enable.
-5. As needed, add users who can connect remotely by clicking **Select users that can remotely access this PC**.
-   - Members of the Administrators group automatically have access.
-6. Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
-
-To use Remote Desktop to connect to the remote PC you set up, type *Remote Desktop Connection* on your local PC, and then select **Remote Desktop Connection**. Enter the name of the remote PC, then select **Connect**.
-
-On your Mac, Android, or iOS device, open the Remote Desktop app (available for free from the app stores). Add the name of the remote PC, and then wait for the connection to complete.
+5. As needed, add users who can connect remotely by clicking **Select users that can remotely access this PC**. Members of the Administrators group automatically have access.
+1. Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
 
 ### Windows 7 and early version of Windows 10
 
 To configure your PC for remote access, download and run the [Microsoft Remote Desktop Assistant](https://www.microsoft.com/download/details.aspx?id=50042). This assistant updates your system settings to enable remote access, ensures your computer is awake for connections, and checks that your firewall allows Remote Desktop connections.
+
+## Connect from a client device
+
+To use Remote Desktop to connect to the remote PC you set up, type *Remote Desktop Connection* on your local PC, and then select **Remote Desktop Connection**. Enter the name of the remote PC, then select **Connect**.
+
+On your Mac, iOS, or Android device, open the Remote Desktop app (available for free from the app stores). Add the name of the remote PC, and then wait for the connection to complete.
 
 ## Should I enable Remote Desktop?
 
