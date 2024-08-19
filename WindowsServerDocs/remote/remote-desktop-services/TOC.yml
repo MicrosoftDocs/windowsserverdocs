@@ -43,6 +43,7 @@
         href: /sharepoint/sync-vdi-support?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
     - name: Desktop Hosting Reference Architecture
       href: Desktop-Hosting-Reference-Architecture.md
+      items:
       - name: Remote Desktop Services architecture
         href: Desktop-hosting-logical-architecture.md
       - name: Desktop hosting service
