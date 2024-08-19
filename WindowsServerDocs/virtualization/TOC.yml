@@ -88,6 +88,8 @@
         href: hyper-v/deploy/use-gpu-with-clustered-vm.md
     - name: Manage
       items:
+      - name: About dump encryption
+        href: hyper-v/manage/About-dump-encryption.md
       - name: Configuring Persistent Memory Devices for Hyper-V VMs
         href: hyper-v/manage/persistent-memory-cmdlets.md
       - name: Choose between standard or production checkpoints
@@ -127,6 +129,16 @@
           href: hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md
         - name: Use live migration with workgroup clusters
           href: hyper-v/manage/live-migration-workgroup-cluster.md  
+    - name: Learn more
+      items:
+      - name: Generation 1 virtual machine security settings
+        href: hyper-v/learn-more\Generation-1-virtual-machine-security-settings-for-Hyper-V.md
+      - name: Generation 2 virtual machine security settings for Hyper-V
+        href: hyper-v\learn-more\Generation-2-virtual-machine-security-settings-for-Hyper-V.md
+      - name: Hyper-V Virtual Machine Connection
+        href: hyper-v/learn-more\hyper-v-virtual-machine-connect.md
+      - name: Use local resources on Hyper-V virtual machine with VMConnect
+        href:  hyper-v/learn-more\Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md
     - name: Hyper-V Performance Tuning
       href: ../administration/performance-tuning/role/hyper-v-server/index.md
   - name: Hyper-V Virtual Switch
