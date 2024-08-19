@@ -23,8 +23,8 @@ wdsutil /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 |         Parameter         |                              Description                               |
 |---------------------------|------------------------------------------------------------------------|
 | /InfFile:`<InfFilePath>` | Specifies the full path and file name of the driver package `.inf` file. |
-| /Architecture:`x86 \| x64 \| arm \| arm64` | The architecture of the driver package. |
-| /Show:`Drivers \| Files \| All` | Indicates the package information to display. The default, if `/show` isn't specified, is to return only the driver package metadata. <br><ul><li> **Drivers** displays the list of drivers in the package. <li> **Files** displays the list of files in the package. <li> **All** displays drivers and files. </ul></li> |
+| /Architecture:`x86 | x64 | arm | arm64` | The architecture of the driver package. |
+| /Show:`Drivers | Files | All` | Indicates the package information to display. The default, if `/show` isn't specified, is to return only the driver package metadata. <br><ul><li> **Drivers** displays the list of drivers in the package. <li> **Files** displays the list of files in the package. <li> **All** displays drivers and files. </ul></li> |
 
 ## Examples
 
