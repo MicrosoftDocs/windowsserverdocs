@@ -714,10 +714,6 @@
             href: ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md
           - name: Add an attribute Store
             href: ad-fs/operations/add-an-attribute-Store.md
-          - name: Create a Claims Provider Trust Using Federation Metadata
-            href: ad-fs/operations/create-a-Claims-Provider-Trust.md
-          - name: Create a Relying Party Trust Using Federation Metadata
-            href: ad-fs/operations/create-a-Relying-Party-Trust.md
           - name: Add a Claim Description
             href: ad-fs/operations/add-a-Claim-Description.md
           - name: Configure Client computers to Trust the Account Federation Server
@@ -796,53 +792,13 @@
           - name: Configure Performance Monitoring
             href: ad-fs/deployment/Configure-Performance-Monitoring.md
         - name: Interoperating with AD FS 1.x
-          items:
-          - name: 'Checklist: Configuring AD FS to Consume Claims from AD FS 1.x'
-            href: ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md
-          - name: Create a Relying Party Trust Manually
-            href: ad-fs/operations/create-a-Relying-Party-Trust.md
-          - name: Create a Claims Provider Trust Manually
-            href: ad-fs/operations/create-a-Claims-Provider-Trust.md
       - name: Deploy Microsoft Entra Connect Health
         href: /azure/active-directory/hybrid/whatis-hybrid-identity
       - name: Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2
-        href: ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md
-        items:
-        - name: Prepare to Migrate the AD FS Federation Server
-          href: ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md
-        - name: Migrate the AD FS Federation Server
-          href: ad-fs/deployment/migrate-ad-fs-fed-server-r2.md
-        - name: Migrate the AD FS Federation Server Proxy
-          href: ad-fs/deployment/migrate-fed-server-proxy-r2.md
-        - name: Verify the AD FS Migration to Windows Server 2012 R2
-          href: ad-fs/deployment/verify-ad-fs-migration.md
       - name: Migrate Active Directory Federation Services Role Services to Windows Server 2012
-        href: ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md
         items:
         - name: Prepare to Migrate the AD FS 2.0 Federation Server
-          href: ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md
-          items:
-          - name: Prepare to Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server
-            href: ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md
-          - name: Prepare to Migrate the AD FS 2.0 WID Farm
-            href: ad-fs/deployment/prepare-to-migrate-a-wid-farm.md
-          - name: Prepare to Migrate the AD FS 2.0 SQL Farm
-            href: ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md
-        - name: Prepare to Migrate the AD FS 2.0 Federation Server Proxy
-          href: ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md
         - name: Migrate the AD FS 2.0 Federation Server
-          href: ad-fs/deployment/migrate-the-ad-fs-fed-server.md
-          items:
-          - name: Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server
-            href: ad-fs/deployment/migrate-ad-fs-stand-alone-server.md
-          - name: Migrate the AD FS 2.0 WID Farm
-            href: ad-fs/deployment/migrate-ad-fs-wid-farm.md
-          - name: Migrate the AD FS 2.0 SQL Farm
-            href: ad-fs/deployment/migrate-ad-fs-sql-farm.md
-        - name: Migrate the AD FS 2.0 Federation Server Proxy
-          href: ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md
-        - name: Migrate the AD FS 1.1 Web Agents
-          href: ad-fs/deployment/migrate-the-ad-fs-web-agent.md
     - name: AD FS Development
       items:
       - name: AD FS OpenID Connect/OAuth Concepts
@@ -923,12 +879,8 @@
         href: ad-fs/operations/Configuring-Alternate-Login-ID.md
       - name: Configure Token Signing and Decrypting certificates
         href: ad-fs/operations/configure-TS-TD-certs-ad-fs.md
-      - name: Create a Claims Provider Trust
-        href: ad-fs/operations/create-a-Claims-Provider-Trust.md
       - name: Create a Non-Claims Aware Relying Party Trust
         href: ad-fs/operations/create-a-Non-Claims-Aware-Relying-Party-Trust.md
-      - name: Create a Relying Party Trust
-        href: ad-fs/operations/create-a-Relying-Party-Trust.md
       - name: Customize HTTP security response headers with AD FS
         href: ad-fs/operations/customize-http-security-headers-ad-fs.md
       - name: Delegate AD FS PowerShell Commandlet Access to Non-Admin Users
