@@ -93,7 +93,7 @@ By default, OCSP support is enabled for IIS websites that have a simple secure (
 - Require Server Name Indication
 - Use Centralized Certificate Store
 
-In this case, the server hello response during the TLS handshake won't include an OCSP stapled status by default. This behavior improves performance: The Windows OCSP stapling implementation scales to hundreds of server certificates. However, Server Name Indication (SNI) and Central Certificate Store (CCS) enable IIS to scale to thousands of websites that potentially have thousands of server certificates, therefore enabling OCSP stapling for CCS bindings might cause performance issues.
+In this case, the server hello response during the TLS handshake doesn't include an OCSP stapled status by default. This behavior improves performance: The Windows OCSP stapling implementation scales to hundreds of server certificates. However, Server Name Indication (SNI) and Central Certificate Store (CCS) enable IIS to scale to thousands of websites that potentially have thousands of server certificates, therefore enabling OCSP stapling for CCS bindings might cause performance issues.
 
 Applicable versions: All versions beginning with Windows Server 2012 and Windows 8.
 
@@ -118,7 +118,7 @@ TLS/SSL hash algorithms should be controlled by configuring the cipher suite ord
 
 This entry controls the size of the issuer cache, and it's used with issuer mapping. The SChannel SSP attempts to map all of the issuers in the client's certificate chain, not just the direct issuer of the client certificate. When the issuers don't map to an account, which is the typical case, the server might attempt to map the same issuer name repeatedly, hundreds of times per second.
 
-To prevent this, the server has a negative cache, so if an issuer name doesn't map to an account, it's added to the cache and the SChannel SSP won't attempt to map the issuer name again until the cache entry expires. This registry entry specifies the cache size. This entry does *not* exist in the registry by default. The default value is *100*.
+To prevent this, the server has a negative cache, so if an issuer name doesn't map to an account, it's added to the cache and the SChannel SSP doesn't attempt to map the issuer name again until the cache entry expires. This registry entry specifies the cache size. This entry doesn't exist in the registry by default. The default value is *100*.
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
@@ -128,7 +128,7 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 This entry controls the length of the cache timeout interval in milliseconds. The SChannel SSP attempts to map all of the issuers in the client's certificate chain, not just the direct issuer of the client certificate. In the case where the issuers don't map to an account, which is the typical case, the server might attempt to map the same issuer name repeatedly, hundreds of times per second.
 
-To prevent this, the server has a negative cache, so if an issuer name doesn't map to an account, it's added to the cache and the SChannel SSP won't attempt to map the issuer name again until the cache entry expires. This cache is kept for performance reasons, so that the system doesn't continue trying to map the same issuers. This entry doesn't exist in the registry by default. The default value is 10 minutes.
+To prevent this, the server has a negative cache, so if an issuer name doesn't map to an account, it's added to the cache and the SChannel SSP doesn't attempt to map the issuer name again until the cache entry expires. This cache is kept for performance reasons, so that the system doesn't continue trying to map the same issuers. This entry doesn't exist in the registry by default. The default value is 10 minutes.
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
@@ -144,11 +144,11 @@ Added in Windows 10, version 1507, and Windows Server 2016.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
 
-To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a *ClientMinKeyBitLength* entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a *ClientMinKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
 
-To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a *ClientMaxKeyBitLength* entry. After you've created the entry, change the DWORD value to the desired bit length.
+To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a *ClientMaxKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length.
 
-To specify the Diffie-Hellman key bit length for the TLS server default, create a *ServerMinKeyBitLength* entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, 2048 bits is the default.
+To specify the Diffie-Hellman key bit length for the TLS server default, create a *ServerMinKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 2048 bits is the default.
 
 # [RSA](#tab/rsa)
 
@@ -156,9 +156,9 @@ Added in Windows 10, version 1507, and Windows Server 2016.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS**
 
-To specify a minimum supported range of RSA key bit length for the TLS client, create a *ClientMinKeyBitLength* entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
+To specify a minimum supported range of RSA key bit length for the TLS client, create a *ClientMinKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
 
-To specify a maximum supported range of RSA key bit length for the TLS client, create a *ClientMaxKeyBitLength* entry. After you've created the entry, change the DWORD value to the desired bit length. On the server-side, the strength of the RSA key exchange is controlled by the specified server certificate.
+To specify a maximum supported range of RSA key bit length for the TLS client, create a *ClientMaxKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length. On the server-side, the strength of the RSA key exchange is controlled by the specified server certificate.
 
 ---
 
@@ -169,7 +169,7 @@ To specify a maximum supported range of RSA key bit length for the TLS client, c
 
 This entry controls the maximum number of TLS sessions to cache. Setting MaximumCacheSize to *0* disables the
 server-side session cache to prevent session resumption. Increasing MaximumCacheSize above the
-default values causes Lsass.exe to consume additional memory. Each session-cache element typically
+default values causes Lsass.exe to consume extra memory. Each session-cache element typically
 requires 2 KB to 4 KB of memory. This entry doesn't exist in the registry by default. The default
 value is 20,000 elements.
 
@@ -183,25 +183,25 @@ This entry controls the maximum allowed size of a TLS handshake message that's a
 
 When you set the value to *0x0*, fragmented messages aren't processed and causes the TLS handshake to fail. This makes TLS clients or servers on the current machine noncompliant with the TLS RFCs.
 
-The maximum allowed size can be increased up to 2^16 bytes. Allowing a client or server to read and store large amounts of unverified data from the network isn't a good idea and consumes additional memory for each security context.
+The maximum allowed size can be increased up to 2^16 bytes. Allowing a client or server to read and store large amounts of unverified data from the network isn't a good idea and consumes extra memory for each security context.
 
 Added in Windows 7 and Windows Server 2008 R2: An update that enables Internet Explorer in Windows XP, in Windows Vista, or in Windows Server 2008 to parse fragmented TLS/SSL handshake messages is available.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Messaging**
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client accepts, create a *MessageLimitClient* entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client accepts, create a *MessageLimitClient* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's no client authentication, create a *MessageLimitServer* entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x4000* bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's no client authentication, create a *MessageLimitServer* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x4000* bytes.
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's client authentication, create a *MessageLimitServerClientAuth* entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's client authentication, create a *MessageLimitServerClientAuth* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
 
 ## SendTrustedIssuerList
 
 TLS servers might send a list of the distinguished names of acceptable certificate authorities when requesting client authentication. This can help TLS clients select an appropriate TLS client certificate. SChannel-based TLS servers don't send this trusted issuer list by default because it exposes the certificate authorities trusted by the server to passive observers and also increases the amount of data exchanged in the course of the TLS handshake. Setting this value to *1* causes SChannel-based servers to send their lists of trusted issuers.
 
-Not sending a list of trusted issuers might impact what the client sends when it's asked for a client certificate. For example, when Microsoft Edge receives a request for client authentication, it only displays the client certificates that chain up to one of the certification authorities that's sent by the server. If the server didn't send a list, Microsoft Edge displays all of the client certificates that are installed on the client.
+Not sending a list of trusted issuers might affect what the client sends when it's asked for a client certificate. For example, when Microsoft Edge receives a request for client authentication, it only displays the client certificates that chain up to one of the certification authorities that's sent by the server. If the server didn't send a list, Microsoft Edge displays all of the client certificates that are installed on the client.
 
-This behavior might be desirable. For example, when PKI environments include cross certificates, the client and server certificates won't have the same root CA. Therefore, Microsoft Edge can't choose a certificate that chains up to one of the server's CAs. TLS clients might offer any available client certificate when a server doesn't send the trusted issuer list. This entry doesn't exist in the registry by default.
+This behavior might be desirable. For example, when PKI environments include cross certificates, the client and server certificates doesn't have the same root CA. Therefore, Microsoft Edge can't choose a certificate that chains up to one of the server's CAs. TLS clients might offer any available client certificate when a server doesn't send the trusted issuer list. This entry doesn't exist in the registry by default.
 
 ### Default Send Trusted Issuer List behavior
 
@@ -230,8 +230,8 @@ SChannel SSP implements versions of the TLS, DTLS, and SSL protocols. Different 
 
 A supported (D)TLS or SSL protocol version can exist in one of the following states:
 
-- **Enabled**: Unless the SSPI caller explicitly disables this protocol version using [SCH_CREDENTIALS](/windows/win32/api/schannel/ns-schannel-sch_credentials) structure, SChannel SSP may negotiate this protocol version with a supporting peer.
-- **Disabled**: SChannel SSP won't negotiate this protocol version regardless of the settings the SSPI caller may specify.
+- **Enabled**: Unless the SSPI caller explicitly disables this protocol version using [SCH_CREDENTIALS](/windows/win32/api/schannel/ns-schannel-sch_credentials) structure, SChannel SSP might negotiate this protocol version with a supporting peer.
+- **Disabled**: SChannel SSP doesn't negotiate this protocol version regardless of the settings the SSPI caller might specify.
 
 These registry values are configured separately for the protocol client and server roles under the registry subkeys named using the following format:
 
@@ -261,11 +261,11 @@ The following example shows DTLS 1.2 disabled in the registry:
 
 :::image type="content" source="images/dtls-12-server-disabled.png" alt-text="Screenshot of Windows Server registry setting for DTLS 1.2 set to disabled by default.":::
 
-Switching a (D)TLS or SSL protocol version to *Disabled* state might cause [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of *Enabled* (D)TLS and SSL versions may break interoperability with remote peers.
+Switching a (D)TLS or SSL protocol version to *Disabled* state might cause [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of *Enabled* (D)TLS and SSL versions could break interoperability with remote peers.
 
-Once the (D)TLS or SSL protocol version settings are modified, they take effect on connections established using credential handles opened by subsequent [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, an application, or service restart may be required.
+Once the (D)TLS or SSL protocol version settings are modified, they take effect on connections established using credential handles opened by subsequent [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, an application, or service restart might be required.
 
-These registry settings only apply to SChannel SSP and don't affect any third-party (D)TLS and SSL implementations that may be installed on the system.
+These registry settings only apply to SChannel SSP and don't affect any third-party (D)TLS and SSL implementations that might be installed on the system.
 
 > [!WARNING]
 > Attempting to create or adjust any SChannel registry settings that are not explicitly detailed in this article isn't recommended due to potential risks and unintended consequences that may arise from unsupported configurations.
