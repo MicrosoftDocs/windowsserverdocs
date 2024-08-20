@@ -7,8 +7,8 @@ metadata:
   title: Windows Server Storage documentation
   description: Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. 
   ms.topic: landing-page # Required
-  author: JasonGerend
-  ms.author: jgerend
+  author: robinharwood
+  ms.author: wscontent
   ms.date: 07/15/2020 
   ms.service: windows-server
 

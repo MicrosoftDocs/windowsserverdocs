@@ -2,9 +2,9 @@
 description: "Learn more about: Volume Shadow Copy Service"
 title: Volume Shadow Copy Service
 ms.date: 12/06/2022
-author: JasonGerend
+author: robinharwood
 manager: elizapo
-ms.author: jgerend
+ms.author: wscontent
 ms.topic: article
 ---
 
