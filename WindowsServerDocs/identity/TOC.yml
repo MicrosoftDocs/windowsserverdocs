@@ -317,7 +317,7 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan.md
         - name: Steps to recover the forest
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-steps-for-restoring-the-forest.md
-        - name: Back up system state 
+        - name: Perform a system state backup 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-system-state.md
         - name: Identify the problem
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-identify-the-problem.md
@@ -329,9 +329,9 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures.md
         - name: Configure the DNS Server service 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-configure-dns.md
-        - name: Back up a full server 
+        - name: Perform a full server backup
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-a-full-server.md
-        - name: Perform full server recovery 
+        - name: Perform a full server recovery 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-full-server-recovery.md
         - name: Synchronize DFSR-replicated SYSVOL
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-authoritative-recovery-sysvol.md
@@ -339,9 +339,9 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-add-gc.md
         - name: Remove the global catalog from a domain controller 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-remove-gc.md
-        - name: Raise RID pool 
+        - name: Raise the RID pool 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-raise-rid-pool.md
-        - name: Invalidate RID pool 
+        - name: Invalidate the RID pool 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-invaildate-rid-pool.md
         - name: Perform nonauthoritative restore 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-nonauthoritative-restore.md
@@ -353,7 +353,7 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-trust.md
         - name: Seize operations master role 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-seizing-operations-master-role.md
-        - name: Verify replication 
+        - name: Verify DC replication 
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-verify-replication.md
         - name: FAQ
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
