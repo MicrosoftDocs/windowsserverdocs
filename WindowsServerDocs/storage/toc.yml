@@ -2,13 +2,9 @@ items:
 - name: Storage
   href: storage.yml
   items:
-  - name: "What's new in Storage"
-    href: whats-new-in-storage.md
   - name: Data Deduplication
     href: data-deduplication/overview.md
     items:
-    - name: "What's new in Data Deduplication"
-      href: data-deduplication/whats-new.md
     - name: Understand Data Deduplication
       href: data-deduplication/understand.md
     - name: Install and enable Data Deduplication
@@ -22,9 +18,9 @@ items:
   - name: DFS Namespaces
     href: dfs-namespaces/dfs-overview.md
     items:
-    - name: "Checklist: Deploy DFS Namespaces"
+    - name: 'Checklist: Deploy DFS Namespaces'
       href: dfs-namespaces/checklist-deploy-dfs-namespaces.md
-    - name: "Checklist: Tune a DFS Namespace"
+    - name: 'Checklist: Tune a DFS Namespace'
       href: dfs-namespaces/checklist-tune-a-dfs-namespace.md
     - name: Deploying DFS Namespaces
       href: dfs-namespaces/deploying-dfs-namespaces.md
@@ -84,16 +80,34 @@ items:
       href: file-server/smb-direct.md
     - name: SMB over QUIC
       href: file-server/smb-over-quic.md
+    - name: Configure client access control for SMB over QUIC
+      href: file-server/configure-smb-over-quic-client-access-control.md
     - name: SMB compression
       href: file-server/smb-compression.md
+    - name: Configure SMB authentication rate limiter
+      href: file-server/configure-smb-authentication-rate-limiter.md
+    - name: Configure alternative SMB ports
+      href: file-server/smb-ports.md
+    - name: Configure the SMB client to require encryption
+      href: file-server/configure-smb-client-require-encryption.md
+    - name: Enable insecure guest logons in SMB2 and SMB3
+      href: file-server/enable-insecure-guest-logons-smb2-and-smb3.md        
     - name: SMB security enhancements
       href: file-server/smb-security.md
-    - name: "SMB: File and printer sharing ports should be open"
+    - name: Manage SMB dialects
+      href: file-server/manage-smb-dialects.md
+    - name: 'SMB: File and printer sharing ports should be open'
       href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
     - name: Secure SMB traffic
       href: file-server/smb-secure-traffic.md
     - name: Protect SMB traffic from interception
       href: file-server/smb-interception-defense.md
+    - name: SMB signing
+      href: file-server/smb-signing-overview.md
+    - name: Control SMB signing behavior
+      href: file-server/smb-signing.md
+    - name: Block NTLM connections on SMB
+      href: file-server/smb-ntlm-blocking.md
     - name: Network File System overview
       href: nfs/nfs-overview.md
     - name: Deploy Network File System
@@ -111,29 +125,12 @@ items:
         href: file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
       - name: SMBv1 is not installed by default
         href: file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md
-    - name: SMB Known issues
-      href: file-server/Troubleshoot/smb-known-issues.md
-      items:
-      - name: TCP three-way handshake failure
-        href: file-server/Troubleshoot/tcp-three-way-handshake-fails.md
-      - name: Negotiate, Session Setup, and Tree Connect Failures
-        href: file-server/Troubleshoot/negotiate-session-setup-tree-connect-fails.md
-      - name: TCP connection is aborted during Validate Negotiate
-        href: file-server/Troubleshoot/abort-during-validate-negotiate.md
-      - name: Slow SMB files transfer speed
-        href: file-server/Troubleshoot/slow-file-transfer.md
-      - name: High CPU usage
-        href: file-server/Troubleshoot/high-cpu-usage-issue-on-smb-server.md
-      - name: Troubleshooting Event ID 50
-        href: file-server/Troubleshoot/troubleshoot-event-id-50-error.md
-      - name: Troubleshooting SMB Multichannel issues
-        href: file-server/Troubleshoot/smb-multichannel-troubleshooting.md
   - name: File Server Resource Manager
     href: fsrm/fsrm-overview.md
     items:
-    - name: "Checklist: Apply a Quota to a Volume or Folder"
+    - name: 'Checklist: Apply a Quota to a Volume or Folder'
       href: fsrm/checklist-apply-quota-to-volume-or-folder.md
-    - name: "Checklist: Apply a File Screen to a Volume or Folder"
+    - name: 'Checklist: Apply a File Screen to a Volume or Folder'
       href: fsrm/checklist-apply-file-screen-to-volume-or-folder.md
     - name: Setting File Server Resource Manager Options
       href: fsrm/setting-file-server-resource-manager-options.md
@@ -200,8 +197,6 @@ items:
         href: fsrm/connect-to-remote-computer.md
       - name: Command-Line Tools
         href: fsrm/command-line-tools.md
-    - name: Troubleshooting File Server Resource Manager
-      href: fsrm/troubleshooting-file-server-resource-manager.md
   - name: Folder Redirection and Roaming User Profiles
     href: folder-redirection/folder-redirection-rup-overview.md
     items:
@@ -219,8 +214,6 @@ items:
       href: folder-redirection/enable-always-offline.md
     - name: Enable optimized folder moving
       href: folder-redirection/enable-optimized-moving.md
-    - name: Troubleshoot user profiles
-      href: folder-redirection/troubleshoot-user-profiles-events.md
   - name: iSCSI
     items:
     - name: iSCSI Target Server
@@ -265,11 +258,11 @@ items:
       href: storage-replica/cluster-to-cluster-azure-cross-region.md
     - name: Cluster-to-cluster storage replication within one Azure region
       href: storage-replica/cluster-to-cluster-azure-one-region.md
-    - name: "Storage Replica: Enhanced Log"
+    - name: 'Storage Replica: Enhanced Log'
       href: storage-replica/storage-replica-enhanced-log.md
-    - name: "Storage Replica: Known Issues"
+    - name: 'Storage Replica: Known Issues'
       href: storage-replica/storage-replica-known-issues.md
-    - name: "Storage Replica: Frequently Asked Questions"
+    - name: 'Storage Replica: Frequently Asked Questions'
       href: storage-replica/storage-replica-frequently-asked-questions.yml
   - name: Storage Spaces
     href: storage-spaces/overview.md

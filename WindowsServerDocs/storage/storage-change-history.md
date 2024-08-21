@@ -2,9 +2,9 @@
 ms.assetid: 87174225-a60f-4718-b4cc-9b172f205b72
 title: Change history for storage topics
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ms.date: 1/16/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
@@ -209,8 +209,8 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic|Description|
 |---|---|
-|[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|Added info about Azure AD Application Proxy support & updated requirements.|
-|[Work Folders](work-folders/work-folders-overview.md)|Added info about Azure AD Application Proxy support & updated requirements.|
+|[Planning a Work Folders deployment](work-folders/plan-work-folders.md)|Added info about Microsoft Entra application proxy support & updated requirements.|
+|[Work Folders](work-folders/work-folders-overview.md)|Added info about Microsoft Entra application proxy support & updated requirements.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Removed Nano Server from supported installation options.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|New topic for Windows Server 2016.|
 
@@ -219,7 +219,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |                                                           New or changed topic                                                           |                                          Description                                           |
 |------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | [Data Deduplication overview](data-deduplication/overview.md) and <br>[Install Data Deduplication](data-deduplication/install-enable.md) |              Updated the system requirements to include a newer software update.               |
-|                                      [Deploying Work Folders](work-folders/deploy-work-folders.md)                                       |         Added info about Azure AD Application Proxy support & updated required steps.          |
+|                                      [Deploying Work Folders](work-folders/deploy-work-folders.md)                                       |         Added info about Microsoft Entra application proxy support & updated required steps.          |
 |                            [Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)                             | Added step 1.3 with required features and fixed an obsolete parameter in Enable-NetAdapterQos. |
 |               [Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)                |             Added info on how to choose between different replication topologies.              |
 |               [Storage Spaces Direct hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)               |                    Changed drive endurance requirements for cache devices.                     |

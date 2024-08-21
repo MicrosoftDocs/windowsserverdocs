@@ -3,8 +3,8 @@ description: "Learn more about: Branch office considerations"
 title: Branch Office Considerations
 ms.topic: article
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 12/10/2020
 ---
 

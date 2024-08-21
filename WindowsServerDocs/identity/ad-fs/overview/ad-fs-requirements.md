@@ -5,7 +5,7 @@ description: Learn about the requirements for installing Active Directory Federa
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -57,7 +57,7 @@ TLS/SSL certificates on the Web Application Proxy must meet the following requir
 
 ### Service Communication Certificate
 
-This certificate isn't required for most AD FS scenarios including Azure AD and Office 365.
+This certificate isn't required for most AD FS scenarios including Microsoft Entra ID and Office 365.
 By default, AD FS configures the TLS/SSL certificate provided upon initial configuration as the service communication certificate.
 
 #### Recommendation for Service Communication Certificate
@@ -151,9 +151,9 @@ If you're using Azure SQL for your AD FS configuration database, size the SQL Se
 
 - Any standard domain account can be used as a service account for AD FS. Group Managed Service Accounts are also supported. The permissions required at runtime are automatically added back when you configure AD FS.
 
-- The User Rights Assignment required for the AD service account is Sign-in as a Service.
+- The User Rights Assignment required for the AD service account is **Log on as a service**.
 
-- The User Rights Assignments required for the `NT Service\adfssrv` and `NT Service\drs` are Generate Security Audits and Sign-in as a Service.
+- The User Rights Assignments required for the `NT Service\adfssrv` and `NT Service\drs` are **Generate security audits** and **Log on as a service**.
 
 - Group managed service accounts require at least one domain controller running Windows Server 2012 or later. The group Managed Service Account gMSA must live under the default `CN=Managed Service Accounts` container.
 
@@ -243,10 +243,10 @@ For more information, see [Best practices for securing Active Directory Federati
 - The load balancer must not terminate TLS/SSL. AD FS supports multiple use cases with certificate authentication, which breaks when terminating TLS/SSL. Terminating TLS/SSL at the load balancer isn't supported for any use case.
 - Use a load balancer that supports SNI. In the event it doesn't, using the 0.0.0.0 fallback binding on your AD FS or Web Application Proxy server should provide a workaround.
 - Use the HTTP (not HTTPS) health probe endpoints to perform load balancer health checks for routing traffic. This requirement avoids any issues relating to SNI. The response to these probe endpoints is an HTTP 200 OK and is served locally with no dependence on back-end services. The HTTP probe can be accessed over HTTP using the path '/adfs/probe'
-  - `http://&lt;Web Application Proxy name&gt;/adfs/probe`
-  - `http://&lt;AD FS server name&gt;/adfs/probe`
-  - `http://&lt;Web Application Proxy IP address&gt;/adfs/probe`
-  - `http://&lt;AD FS IP address&gt;/adfs/probe`
+  - `http://<Web Application Proxy name>/adfs/probe`
+  - `http://<AD FS server name>/adfs/probe`
+  - `http://<Web Application Proxy IP address>/adfs/probe`
+  - `http://<AD FS IP address>/adfs/probe`
 - It's not recommended to use DNS round robin as a way to load balance. Using this type of load balancing doesn't provide an automated way to remove a node from the load balancer using health probes.
 - It's not recommended to use IP-based session affinity or sticky sessions for authentication traffic to AD FS within the load balancer. You could cause an overload of certain nodes when using legacy authentication protocol for mail clients to connect to Office 365 mail services (Exchange Online).
 

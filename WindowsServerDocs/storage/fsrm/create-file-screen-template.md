@@ -3,9 +3,9 @@ title: Create a File Screen Template
 description: This article describes how to create a file screen template
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Create a File Screen Template
 

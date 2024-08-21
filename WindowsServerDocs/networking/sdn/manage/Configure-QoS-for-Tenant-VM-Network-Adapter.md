@@ -7,7 +7,6 @@ ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 11/02/2021
-ms.custom: contperf-fy22q1
 ---
 # Configure Quality of Service (QoS) for a VM network adapter
 

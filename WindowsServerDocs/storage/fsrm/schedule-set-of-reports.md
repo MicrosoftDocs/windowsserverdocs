@@ -3,9 +3,9 @@ title: Schedule a Set of Reports
 description: This article describes how to generate a set of reports on a regular schedule
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 
 # Schedule a Set of Reports

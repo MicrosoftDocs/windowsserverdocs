@@ -141,17 +141,17 @@ You can deploy additional AD FS servers to support the AD RMS deployment. You ma
 
 **To add the 2016 AD FS server to the farm**
 
-1.  From the Azure AD Connect server, double click the **Azure AD Connect** icon to launch the Azure AD Connect wizard.
+1.  From the Microsoft Entra Connect server, double click the **Microsoft Entra Connect** icon to launch the Microsoft Entra Connect wizard.
 
 2.  In the Welcome page, click **Configure**.
 
 3.  In the Additional Tasks page, click **Deploy an additional Federation Server** and then click **Next**.
 
-4.  In the Connect to Azure AD page, enter the user name and password of an account with Global Administrative permissions and then click **Next**.
+4.  In the Connect to Microsoft Entra ID page, enter the user name and password of an account with Global Administrative permissions and then click **Next**.
 
 5.  In the Domain Administrator credentials page, enter the user name and password of an account with Domain Admin permissions and click **Next**.
 
-6.  Click **Browse** and select the certificate file used when configuring the AD FS farm using the Azure AD Connect.
+6.  Click **Browse** and select the certificate file used when configuring the AD FS farm using the Microsoft Entra Connect.
 
 7.  Click **Enter Password** to open the Certificate Password dialog box.
 

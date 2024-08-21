@@ -2,7 +2,7 @@
 description: "Learn more about: Introduction to Active Directory Administrative Center Enhancements (Level 100)"
 ms.assetid: 074e63e9-976c-49da-8cba-9ae0b3325e34
 title: Introduction to Active Directory Administrative Center Enhancements (Level 100)
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
@@ -95,6 +95,8 @@ In this step, you will enable the Recycle Bin to restore deleted objects in AD D
 ![PowerShell logo, Shows the PowerShell equivalent commands for enabling the recycle bin.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
+
+If you encounter an error, you can try moving both the schema master and the domain naming master roles to the same domain controller in the root domain. Then run the cmdlet from that domain controller.
 
 ```powershell
 Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com' -Scope ForestOrConfigurationSet -Target 'contoso.com'

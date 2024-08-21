@@ -3,9 +3,9 @@ title: Create a DFS Namespace
 description: This article describes how to create a DFS namespace.
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Create a DFS namespace
 
@@ -15,7 +15,7 @@ To create a new namespace, you can use Server Manager to create the namespace wh
 
 The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
-Alernatively, you can use the following procedure to create a namespace after installing the role service.
+Alternatively, you can use the following procedure to create a namespace after installing the role service.
 
 ## To create a namespace
 

@@ -2,7 +2,7 @@
 title: Install Active Directory Domain Services on an Azure virtual machine
 description: How to create a new Active Directory forest on a virtual machine (VM) on an Azure virtual machine.
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 6/28/2022
 ms.topic: article
@@ -25,7 +25,7 @@ AD DS can run on an Azure virtual machine (VM) in the same way it runs in many o
 * [Securing network traffic in Azure](/azure/security/azure-security-network-security-best-practices)
 * [Designing the site topology](../../plan/designing-the-site-topology.md)
 * [Planning operations master role placement](../../plan/planning-operations-master-role-placement.md)
-* [Deploying Azure AD Connect to synchronize identities to Azure AD](/azure/active-directory/hybrid/how-to-connect-install-express)
+* [Deploying Microsoft Entra Connect to synchronize identities to Microsoft Entra ID](/azure/active-directory/hybrid/how-to-connect-install-express)
 
 ## Build the test environment
 
@@ -243,7 +243,7 @@ az group delete --name ADonAzureVMs
 ## Next steps
 
 * [Safely virtualizing Active Directory Domain Services (AD DS)](../../Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)
-* [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
+* [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
 * [Backup and recovery](/azure/virtual-machines/windows/backup-recovery)
 * [Site to site VPN connectivity](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 * [Monitoring](/azure/virtual-machines/windows/monitor)

@@ -4,9 +4,9 @@ description: Provides planning worksheets to help you migrate to MultiPoint Serv
 ms.date: 07/29/2016
 ms.topic: article
 ms.assetid: 864405bb-47ed-4c83-97a2-8df4c6e6f96b
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: wscontent
 ---
 # Planning worksheet for MultiPoint Services migration
 

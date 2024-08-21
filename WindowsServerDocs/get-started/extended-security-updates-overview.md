@@ -6,10 +6,8 @@ author: dknappettmsft
 ms.author: daknappe
 manager: femila
 ms.date: 08/04/2023
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.custom: contperf-fy22q3
 ---
 
 # Extended Security Updates for Windows Server overview

@@ -2,8 +2,8 @@
 title: Windows Admin Center common troubleshooting steps
 description: Windows Admin Center common troubleshooting steps
 ms.topic: article
-author: jwwool
-ms.author: jeffrew
+author: robinharwood
+ms.author: wscontent
 ms.date: 01/15/2021
 ---
 # Troubleshoot Windows Admin Center
@@ -236,7 +236,7 @@ Send us an email at wacFeedbackAzure@microsoft.com with the following informatio
 - General issue information from the [questions listed below](#provide-feedback-on-issues).
 - Describe your issue and the steps you took to reproduce the issue.
 - Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
-- Is your Azure account associated with multiple directories/tenants? If yes, when registering the Azure AD application to Windows Admin Center, was the directory you used your default directory in Azure?
+- Is your Azure account associated with multiple directories/tenants? If yes, when registering the Microsoft Entra application to Windows Admin Center, was the directory you used your default directory in Azure?
 - Does your Azure account have access to multiple subscriptions?
 - Does the subscription you were using have billing attached?
 - Were you logged in to multiple Azure accounts when you encountered the issue?

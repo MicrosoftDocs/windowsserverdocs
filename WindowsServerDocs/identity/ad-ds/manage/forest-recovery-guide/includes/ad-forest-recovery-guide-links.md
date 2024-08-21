@@ -1,11 +1,11 @@
 ---
 title: include file
 description: include file
-author: IngridAtMicrosoft
+author: robinharwood
 ms.service: active-directory
 ms.topic: include
 ms.date: 07/11/2023
-ms.author: inhenkel
+ms.author: wscontent
 ---
 
 - [AD Forest Recovery - Prerequisites](../ad-forest-recovery-prerequisites.md)

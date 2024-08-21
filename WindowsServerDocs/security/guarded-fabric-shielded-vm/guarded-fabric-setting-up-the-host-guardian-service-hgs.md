@@ -4,8 +4,8 @@ title: Deploy the Host Guardian Service
 ms.topic: article
 ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 01/14/2020
 ---
 
