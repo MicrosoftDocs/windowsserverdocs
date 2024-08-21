@@ -3,6 +3,7 @@ title: Capacity planning for Active Directory Domain Services
 description: Provides a detailed discussion of the factors to consider during capacity planning for Active Directory Domain Services.
 ms.topic: article
 ms.author: wscontent
+ms.contributor: 
 author: teresa-motiv
 ms.date: 7/3/2019
 ---
@@ -10,8 +11,6 @@ ms.date: 7/3/2019
 # Capacity planning for Active Directory Domain Services
 
 This article provides recommendations for capacity planning for Active Directory Domain Services (AD DS).
-
-<!--Should I have deleted the author information?-->
 
 ## Goals of capacity planning
 
@@ -24,9 +23,9 @@ In capacity planning, an organization might have a baseline target of 40% proces
 
 When you continually exceed the capacity management threshold, then either adding more or faster processors to increase capacity or scaling the service across multiple servers would be a solution. Performance alert thresholds let you know when you need to take immediate action when performance issues negatively affect client experience. In contrast, a troubleshooting solution would be more concerned with addressing one-time events.
 
-Capacity management is like the preventative measures you'd take to avoid a car accident, such as defensive driving, making sure the brakes are working properly, and so on. Performance troubleshooting is more like when the police, fire department, and emergency medical professionals respond to an accident. In summary, capacity management is “defensive driving,” Active Directory-style.
+Capacity management is like the preventative measures you'd take to avoid a car accident, such as defensive driving, making sure the brakes are working properly, and so on. Performance troubleshooting is more like when the police, fire department, and emergency medical professionals respond to an accident.
 
-Over the last several years, capacity planning guidance for scale-up systems has changed dramatically. The following changes in system architectures have challenged fundamental assumptions about designing and scaling a service:
+Over the last several years, capacity planning guidance for scale-up systems has changed dramatically. The following changes in system architectures challenge fundamental assumptions about designing and scaling a service:
 
 - 64-bit server platforms
 - Virtualization
@@ -37,8 +36,6 @@ Over the last several years, capacity planning guidance for scale-up systems has
 The approach to capacity planning is also shifting from server-based planning exercises to service-based ones. Active Directory Domain Services (AD DS), a mature distributed service that many Microsoft and third-party products use as a backend, is now one the most critical products in ensuring your other applications have the necessary capacity to run.
 
 ### Important information to consider before you start planning
-
-<!--Should I have changed this title? At first I thought it was a prerequisites section, but now I'm not so sure if I'm changing the intended meaning.-->
 
 In order to get the most out of this article, you should do the following things:
 
@@ -82,7 +79,7 @@ To optimize performance, ensure the following major components are correctly sel
 - Network
 - Storage
 - Processor
-- Net Logon <!--Is "logon" the right word to use?-->
+- Netlogon
 
 Basic storage requirements for AD DS and the general behavior of compatible client software allow environments with as many as 10,000 to 20,000 users to ignore capacity planning for physical hardware, as most modern server-class systems can already handle a load that size. However, the tables in [Data collection summary tables](#data-collection-summary-tables) explain how to evaluate your existing environment to select the right hardware. The sections after that one go into more detail about baseline recommendations and environment-specific principles for hardware to help AD DS admins evaluate their infrastructure.
 
@@ -109,7 +106,7 @@ The following tables list and explain criteria for determining your hardware est
 | Storage/Database Size | 40 KB to 60 KB for each user |
 | RAM | Database Size<br />Base operating system recommendations<br />Third-party applications |
 | Network | 1 GB |
-| CPU | 1000 concurrent users for each core |
+| CPU | 1,000 concurrent users for each core |
 
 #### High-level evaluation criteria
 
@@ -122,7 +119,7 @@ The following tables list and explain criteria for determining your hardware est
 | RAM | <ul><li>Database size</li><li>Base operating system recommendations</li><li>Third-party applications</li></ul> | <ul><li>Storage is the slowest component in a computer. The more storage that can occupy RAM, the less needs to go to the disk.</li><li>Ensure enough RAM is allocated to store the operating system, Agents (antivirus, backup, monitoring), NTDS Database and growth over time.</li><li>For environments where maximizing the amount of RAM isn't cost effective (such as a satellite location) or not feasible (DIT is too large), reference the Storage section to ensure that storage is properly sized.</li></ul> |
 | Network | <ul><li>“Network Interface(\*)\Bytes Received/sec”</li><li>“Network Interface(\*)\Bytes Sent/sec” <!--Are these supposed to be code blocks or math equations?-->| <ul><li>In general, traffic sent from a DC far exceeds traffic sent to a DC.</li><li>As a switched Ethernet connection is full-duplex, inbound and outbound network traffic need to be sized independently.</li><li>Consolidating the number of DCs increases the amount of bandwidth used to send responses back to client requests for each DC, but is close enough to linear for the site as a whole.</li><li>If removing satellite location DCs, don't forget to add the bandwidth for the satellite DC into the hub DCs and use that to evaluate how much WAN traffic there is.</li></ul> |
 | CPU | <ul><li>`Logical Disk(<NTDS Database Drive\>)\Avg Disk sec/Read`</li><li>“Process(lsass)\\% Processor Time”</li></ul> | <ul><li>After eliminating storage as a bottleneck, address the amount of compute power needed.</li><li>While not perfectly linear, the number of processor cores consumed across all servers within a specific scope (such as a site) can be used to gauge how many processors are necessary to support the total client load. Add the minimum necessary to maintain the current level of service across all the systems within the scope.</li><li>Changes in processor speed, including power management related changes, affect numbers derived from the current environment. Generally, it's impossible to precisely evaluate how going from a 2.5 GHz processor to a 3 GHz processor reduces the number of CPUs needed.</li></ul> |
-| NetLogon | <ul><li>“Netlogon(*)\Semaphore Acquires”</li><li>“Netlogon(*)\Semaphore Timeouts”</li><li>“Netlogon(*)\Average Semaphore Hold Time”</li></ul> | <ul><li>Net Logon Secure Channel/MaxConcurrentAPI only affects environments with NTLM authentications and/or PAC Validation. PAC Validation is on by default in operating system versions before Windows Server 2008. This is a client setting, so the DCs are affected until you turn this off on all client systems.</li><li>Environments with significant cross trust authentication, which includes intra-forest trusts, have greater risk if not sized properly.</li><li>Server consolidations will increase concurrency of cross-trust authentication.</li><li>Surges need to be accommodated, such as cluster fail-overs, as users reauthenticate en masse to the new cluster node.</li><li>Individual client systems (such as a cluster) might need tuning too.</li></ul> |
+| NetLogon | <ul><li>“Netlogon(*)\Semaphore Acquires”</li><li>“Netlogon(*)\Semaphore Timeouts”</li><li>“Netlogon(*)\Average Semaphore Hold Time”</li></ul> | <ul><li>Net Logon Secure Channel/MaxConcurrentAPI only affects environments with NTLM authentications and/or PAC Validation. PAC Validation is on by default in operating system versions before Windows Server 2008. This setting is a client setting, so it affects the DCs until you disable it on all client systems.</li><li>Environments with significant cross trust authentication, which includes intra-forest trusts, have greater risk if not sized properly.</li><li>Server consolidations will increase concurrency of cross-trust authentication.</li><li>Surges need to be accommodated, such as cluster fail-overs, as users reauthenticate en masse to the new cluster node.</li><li>Individual client systems (such as a cluster) might need tuning too.</li></ul> |
 
 <!--Come back to these tables later and ask Alan & co. if they can help me figure out what's going on with those equations(?) in the second column.-->
 
@@ -151,11 +148,9 @@ The criteria behind recommendations can help you make more informed decisions:
 - The more you cache in RAM, the less you need to go to disk.
 - Storage is a computer's slowest component. Data access on spindle-based and SSD storage media is a million times slower than data access in RAM.
 
-<!--The content here was literally the exact same as the stuff in the intro except for formatting, so I deleted it.-->
-
 ### Virtualization considerations for RAM
 
-Your goal for optimizing RAM is to minimize the amount of time spent going to disk. You should also avoid memory over-commit at the host. In virtualization scenarios, memory over-commit is when the system allocates more RAM to guests than what exists on the physical machine itself. While over-commit isn't a problem on its own, when the total memory used by all guests exceeds the capability of the host's RAM, it causes the host to page. Paging makes performance disk-bound in cases where the DC goes to the NTS.dit or page file to get data or the host goes to disk to try to access RAM data. As a result, this process vastly decreases performance and overall user experience.
+Your goal for optimizing RAM is to minimize the amount of time spent going to disk. You should also avoid memory over-commit at the host. In virtualization scenarios, memory over-commit is when the system allocates more RAM to guests than what exists on the physical machine itself. While over-commit isn't a problem on its own, when the total memory used by all guests exceeds the capability of the host's RAM, it causes the host to page. Paging makes performance disk-bound in cases where the DC goes to the NTDS.nit or page file to get data or the host goes to disk to try to access RAM data. As a result, this process vastly decreases performance and overall user experience.
 
 ### Calculation summary example
 
@@ -308,7 +303,7 @@ The following table lists the values you'd use to estimate the space requirement
 
 ### Storage performance
 
-As the slowest component within any computer, storage can have the biggest adverse impact on client experience. For environments large enough that the RAM sizing recommendations in this article aren't feasible, the consequences of overlooking capacity planning for storage can be devastating for system performance. THe complexities and varieties of available storage technology further increase risk, as the typical recommendation to put the OS, logs, and database on separate physical disks doesn't apply universally across all scenarios.
+As the slowest component within any computer, storage can have the biggest adverse impact on client experience. For environments large enough that the RAM sizing recommendations in this article aren't feasible, the consequences of overlooking capacity planning for storage can be devastating for system performance. The complexities and varieties of available storage technology further increase risk, as the typical recommendation to put the OS, logs, and database on separate physical disks doesn't apply universally across all scenarios.
 
 The old recommendations about disks assumed that a disk was a dedicated spindle that allowed for isolated I/O. This assumption is no longer true due to the introduction of the following storage types:
 
