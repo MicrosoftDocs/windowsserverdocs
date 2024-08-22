@@ -53,7 +53,7 @@ To complete the disk conversion from the command line with the *diskpart* disk p
 
    1. At the **DISKPART** prompt, enter `list disk`. Make a note of the MBR disk number that you want to convert to GPT format.
 
-   1. At the **DISKPART** prompt, enter `select disk` _`<disk-number>`_, where *<disk-number>* is the MBR disk number to convert.
+   1. At the **DISKPART** prompt, enter `select disk` *`<disk-number>`*, where *`<disk-number>`* is the MBR disk number to convert.
 
    1. At the **DISKPART** prompt, enter `clean` to delete all partitions and volumes on the disk.
 
@@ -68,7 +68,7 @@ The following table shows a summary of the commands for the diskpart process.
 | Command | Description |
 | --- | --- |
 | `list disk` | Displays a list of disks and information about them, such as their size and the amount of available free space. The command also shows whether the disk is a basic or dynamic disk, and whether it uses the MBR or GPT partition format. In the list of results, the disk marked with an asterisk (*) has the current focus for entered commands. |
-| `select disk` _`disk-number`_ | Selects the specified disk, where *disk-number* is the disk number that you want to select. The command also gives the current focus to the specified disk. |
+| `select disk` *`<disk-number>`* | Selects the specified disk, where *`<disk-number>`* is the disk number that you want to select. The command also gives the current focus to the specified disk. |
 | `clean` | Removes all partition or volume sections from the disk that has the current focus. |
 | `convert gpt` | Converts an empty basic disk with the MBR partition format into a basic disk with the GPT partition format. |
 
