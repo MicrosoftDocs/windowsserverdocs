@@ -47,7 +47,7 @@ There are a few reasons why we recommend against disabling non-default services:
 
 - A service your admins installed after the initial setup is usually one that you need but wasn't in the original deployment. In these cases, you should tell your admins not to install the service in the first place as opposed to only disabling it after it's installed.
 - Blocking the Windows version of a service doesn't stop admins or non-admins from installing third-party equivalents that pose higher security risks.
-- Establishing a baseline that disables non-default Windows services, such as W2SVC or IIS<!--Acronyms!-->, may give auditors the impression that they're inherently insecure and should never be used.
+- Establishing a baseline that disables non-default Windows services, such as the World Wide Web Publishing Service (W2SVC) or Internet Information Services (IIS), may give auditors the impression that they're inherently insecure and should never be used.
 - If the service is never installed, disabling it adds unnecessary work to establishing the baseline and verification for your system.
 
 ## How to read this guide
@@ -58,7 +58,7 @@ This article describes each service one by one, using the following variables.
 
 - The *description* describes what each service is.
 
-- **Installation** describes which OS the service exists on.
+- *Installation* describes which OS the service exists on.
 
   - If the service is *always installed*, it comes with both Windows Server 2016 Core and Windows Server 2016 with Desktop Experience.
   - If the service is *only with Desktop Experience*, it only comes with Windows Server 2016 with Desktop Experience.
@@ -76,9 +76,7 @@ This article describes each service one by one, using the following variables.
 
 <!--Segue sentence leading into the guide proper.-->
 
-<!---Where I left off.-->
-
-## ActiveX Installer (AxInstSV)
+### ActiveX Installer (AxInstSV)
 
 | Name | Description |
 |--|--|
@@ -89,7 +87,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | OK to disable if feature not needed |
 
-## AllJoyn Router Service
+### AllJoyn Router Service
 
 | Name | Description |
 |--|--|
@@ -100,7 +98,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## App Readiness
+### App Readiness
 
 | Name | Description |
 |--|--|
@@ -111,7 +109,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | None |
 
-## Application Identity
+### Application Identity
 
 | Name | Description |
 |--|--|
@@ -122,7 +120,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Application Information
+### Application Information
 
 | Name | Description |
 |--|--|
@@ -133,7 +131,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | Supports UAC same-desktop elevation |
 
-## Application Layer Gateway Service
+### Application Layer Gateway Service
 
 | Name | Description |
 |--|--|
@@ -144,7 +142,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Application Management
+### Application Management
 
 | Name | Description |
 |--|--|
@@ -155,7 +153,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## AppX Deployment Service (AppXSVC)
+### AppX Deployment Service (AppXSVC)
 
 | Name | Description |
 |--|--|
@@ -166,7 +164,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Auto Time Zone Updater
+### Auto Time Zone Updater
 
 | Name | Description |
 |--|--|
@@ -177,7 +175,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | None |
 
-## Background Intelligent Transfer Service
+### Background Intelligent Transfer Service
 
 | Name | Description |
 |--|--|
@@ -188,7 +186,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Background Tasks Infrastructure Service
+### Background Tasks Infrastructure Service
 
 | Name | Description |
 |--|--|
@@ -199,7 +197,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Base Filtering Engine
+### Base Filtering Engine
 
 | Name | Description |
 |--|--|
@@ -210,7 +208,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Bluetooth Support Service
+### Bluetooth Support Service
 
 | Name | Description |
 |--|--|
@@ -221,7 +219,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | OK to disable if not used. Another disabling mechanism: [Disabling Bluetooth and Infrared Beaming](/previous-versions/tn-archive/dd252791(v=technet.10)) |
 
-## CDPUserSvc
+### CDPUserSvc
 
 | Name | Description |
 |--|--|
@@ -232,7 +230,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | User service template |
 
-## Certificate Propagation
+### Certificate Propagation
 
 | Name | Description |
 |--|--|
@@ -243,7 +241,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Client License Service (ClipSVC)
+### Client License Service (ClipSVC)
 
 | Name | Description |
 |--|--|
@@ -254,7 +252,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## CNG Key Isolation
+### CNG Key Isolation
 
 | Name | Description |
 |--|--|
@@ -265,7 +263,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance
 | **Comments** | None |
 
-## COM+ Event System
+### COM+ Event System
 
 | Name | Description |
 |--|--|
@@ -276,7 +274,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## COM+ System Application
+### COM+ System Application
 
 | Name | Description |
 |--|--|
@@ -287,7 +285,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Computer Browser
+### Computer Browser
 
 | Name | Description |
 |--|--|
@@ -298,7 +296,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | None |
 
-## Connected Devices Platform Service
+### Connected Devices Platform Service
 
 | Name | Description |
 |--|--|
@@ -309,7 +307,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Connected User Experiences and Telemetry
+### Connected User Experiences and Telemetry
 
 | Name | Description |
 |--|--|
@@ -320,7 +318,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Contact Data
+### Contact Data
 
 | Name | Description |
 |--|--|
@@ -331,7 +329,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | User service template |
 
-## CoreMessaging
+### CoreMessaging
 
 | Name | Description |
 |--|--|
@@ -342,7 +340,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Credential Manager
+### Credential Manager
 
 | Name | Description |
 |--|--|
@@ -353,7 +351,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Cryptographic Services
+### Cryptographic Services
 
 | Name | Description |
 |--|--|
@@ -364,7 +362,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Data Sharing Service
+### Data Sharing Service
 
 | Name | Description |
 |--|--|
@@ -375,7 +373,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## DataCollectionPublishingService
+### DataCollectionPublishingService
 
 | Name | Description |
 |--|--|
@@ -386,7 +384,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## DCOM Server Process Launcher
+### DCOM Server Process Launcher
 
 | Name | Description |
 |--|--|
@@ -397,7 +395,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Device Association Service
+### Device Association Service
 
 | Name | Description |
 |--|--|
@@ -408,7 +406,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Device Install Service
+### Device Install Service
 
 | Name | Description |
 |--|--|
@@ -419,7 +417,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Device Management Enrollment Service
+### Device Management Enrollment Service
 
 | Name | Description |
 |--|--|
@@ -430,7 +428,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Device Setup Manager
+### Device Setup Manager
 
 | Name | Description |
 |--|--|
@@ -441,7 +439,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## DevQuery Background Discovery Broker
+### DevQuery Background Discovery Broker
 
 | Name | Description |
 |--|--|
@@ -452,7 +450,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## DHCP Client
+### DHCP Client
 
 | Name | Description |
 |--|--|
@@ -463,7 +461,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Diagnostic Policy Service
+### Diagnostic Policy Service
 
 | Name | Description |
 |--|--|
@@ -474,9 +472,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-<!--Where I left off.-->
-
-## Diagnostic Service Host
+### Diagnostic Service Host
 
 | Name | Description |
 |--|--|
@@ -487,7 +483,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Diagnostic System Host
+### Diagnostic System Host
 
 | Name | Description |
 |--|--|
@@ -498,7 +494,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Distributed Link Tracking Client
+### Distributed Link Tracking Client
 
 | Name | Description |
 |--|--|
@@ -509,7 +505,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Distributed Transaction Coordinator
+### Distributed Transaction Coordinator
 
 | Name | Description |
 |--|--|
@@ -520,7 +516,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## dmwappushsvc
+### dmwappushsvc
 
 | Name | Description |
 |--|--|
@@ -531,7 +527,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Service required on client devices for Intune, Mobile Device Management (MDM),  and similar management technologies, and for Unified Write Filter. Not needed for Server. |
 
-## DNS Client
+### DNS Client
 
 | Name | Description |
 |--|--|
@@ -542,7 +538,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Downloaded Maps Manager
+### Downloaded Maps Manager
 
 | Name | Description |
 |--|--|
@@ -553,7 +549,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Disabling this service breaks apps that rely on it; OK to disable if apps not relying on it |
 
-## Embedded Mode
+### Embedded Mode
 
 | Name | Description |
 |--|--|
@@ -564,7 +560,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Encrypting File System (EFS)
+### Encrypting File System (EFS)
 
 | Name | Description |
 |--|--|
@@ -575,7 +571,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Enterprise App Management Service
+### Enterprise App Management Service
 
 | Name | Description |
 |--|--|
@@ -586,7 +582,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Extensible Authentication Protocol
+### Extensible Authentication Protocol
 
 | Name | Description |
 |--|--|
@@ -597,7 +593,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Function Discovery Provider Host
+### Function Discovery Provider Host
 
 | Name | Description |
 |--|--|
@@ -608,7 +604,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Function Discovery Resource Publication
+### Function Discovery Resource Publication
 
 | Name | Description |
 |--|--|
@@ -619,7 +615,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Geolocation Service
+### Geolocation Service
 
 | Name | Description |
 |--|--|
@@ -630,7 +626,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Disabling breaks apps that rely on the service; OK to disable if apps not relying on it |
 
-## Group Policy Client
+### Group Policy Client
 
 | Name | Description |
 |--|--|
@@ -641,7 +637,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Human Interface Device Service
+### Human Interface Device Service
 
 | Name | Description |
 |--|--|
@@ -652,7 +648,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## HV Host Service
+### HV Host Service
 
 | Name | Description |
 |--|--|
@@ -663,7 +659,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Performance enhancers for guest VMs. Not used today except for explicitly populated VMs, but Application Guard can also use it. |
 
-## Hyper-V Data Exchange Service
+### Hyper-V Data Exchange Service
 
 | Name | Description |
 |--|--|
@@ -674,7 +670,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | See HvHost |
 
-## Hyper-V Guest Service Interface
+### Hyper-V Guest Service Interface
 
 | Name | Description |
 |--|--|
@@ -685,7 +681,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | See HvHost |
 
-## Hyper-V Guest Shutdown Service
+### Hyper-V Guest Shutdown Service
 
 | Name | Description |
 |--|--|
@@ -696,7 +692,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | See HvHost |
 
-## Hyper-V Heartbeat Service
+### Hyper-V Heartbeat Service
 
 | Name | Description |
 |--|--|
@@ -707,7 +703,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | See HvHost |
 
-## Hyper-V PowerShell Direct Service
+### Hyper-V PowerShell Direct Service
 
 | Name | Description |
 |--|--|
@@ -718,7 +714,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | See HvHost |
 
-## Hyper-V Remote Desktop Virtualization Service
+### Hyper-V Remote Desktop Virtualization Service
 
 | Name | Description |
 |--|--|
@@ -729,7 +725,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | See HvHost |
 
-## Hyper-V Time Synchronization Service
+### Hyper-V Time Synchronization Service
 
 | Name | Description |
 |--|--|
@@ -740,7 +736,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | See HvHost |
 
-## Hyper-V Volume Shadow Copy Requestor
+### Hyper-V Volume Shadow Copy Requestor
 
 | Name | Description |
 |--|--|
@@ -751,7 +747,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | See HvHost |
 
-## IKE and AuthIP IPsec Keying Modules
+### IKE and AuthIP IPsec Keying Modules
 
 | Name | Description |
 |--|--|
@@ -762,7 +758,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Interactive Services Detection
+### Interactive Services Detection
 
 | Name | Description |
 |--|--|
@@ -773,7 +769,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Internet Connection Sharing (ICS)
+### Internet Connection Sharing (ICS)
 
 | Name | Description |
 |--|--|
@@ -784,7 +780,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Required for clients used as WiFi hotspots and both ends of Miracast projection. You can block ICS with the GPO setting called **Prohibit use of Internet Connection Sharing on your DNS domain network**. |
 
-## IP Helper
+### IP Helper
 
 | Name | Description |
 |--|--|
@@ -795,7 +791,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## IPsec Policy Agent
+### IPsec Policy Agent
 
 | Name | Description |
 |--|--|
@@ -806,7 +802,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## KDC Proxy Server service (KPS)
+### KDC Proxy Server service (KPS)
 
 | Name | Description |
 |--|--|
@@ -817,7 +813,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## KtmRm for Distributed Transaction Coordinator
+### KtmRm for Distributed Transaction Coordinator
 
 | Name | Description |
 |--|--|
@@ -828,7 +824,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Link-Layer Topology Discovery Mapper
+### Link-Layer Topology Discovery Mapper
 
 | Name | Description |
 |--|--|
@@ -839,7 +835,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | OK to disable if no dependencies on Network Map |
 
-## Local Session Manager
+### Local Session Manager
 
 | Name | Description |
 |--|--|
@@ -850,7 +846,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Microsoft (R) Diagnostics Hub Standard Collector
+### Microsoft (R) Diagnostics Hub Standard Collector
 
 | Name | Description |
 |--|--|
@@ -861,7 +857,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Microsoft Account Sign-in Assistant
+### Microsoft Account Sign-in Assistant
 
 | Name | Description |
 |--|--|
@@ -872,7 +868,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Microsoft Accounts are N/A on Windows Server |
 
-## Microsoft App-V Client
+### Microsoft App-V Client
 
 | Name | Description |
 |--|--|
@@ -883,7 +879,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | None |
 
-## Microsoft iSCSI Initiator Service
+### Microsoft iSCSI Initiator Service
 
 | Name | Description |
 |--|--|
@@ -894,7 +890,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Our diagnostic data indicates the system uses this service on both client and server, so there's no benefit to disabling it. |
 
-## Microsoft Passport
+### Microsoft Passport
 
 | Name | Description |
 |--|--|
@@ -905,7 +901,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Needed to sign in with PIN and Windows Hello, which Windows Server doesn't support. |
 
-## Microsoft Passport Container
+### Microsoft Passport Container
 
 | Name | Description |
 |--|--|
@@ -916,7 +912,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Microsoft Software Shadow Copy Provider
+### Microsoft Software Shadow Copy Provider
 
 | Name | Description |
 |--|--|
@@ -927,7 +923,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Microsoft Storage Spaces SMP
+### Microsoft Storage Spaces SMP
 
 | Name | Description |
 |--|--|
@@ -938,7 +934,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Storage management APIs fail without this service. For example, the `Get-WmiObject -class MSFT_Disk -Namespace Root\Microsoft\Windows\Storage` command stops working. |
 
-## Net.Tcp Port Sharing Service
+### Net.Tcp Port Sharing Service
 
 | Name | Description |
 |--|--|
@@ -949,7 +945,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | None |
 
-## Netlogon
+### Netlogon
 
 | Name | Description |
 |--|--|
@@ -960,7 +956,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Network Connection Broker
+### Network Connection Broker
 
 | Name | Description |
 |--|--|
@@ -971,7 +967,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Network Connections
+### Network Connections
 
 | Name | Description |
 |--|--|
@@ -982,7 +978,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Network Connectivity Assistant
+### Network Connectivity Assistant
 
 | Name | Description |
 |--|--|
@@ -993,7 +989,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Network List Service
+### Network List Service
 
 | Name | Description |
 |--|--|
@@ -1004,7 +1000,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Network Location Awareness
+### Network Location Awareness
 
 | Name | Description |
 |--|--|
@@ -1015,7 +1011,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Network Setup Service
+### Network Setup Service
 
 | Name | Description |
 |--|--|
@@ -1026,7 +1022,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Network Store Interface Service
+### Network Store Interface Service
 
 | Name | Description |
 |--|--|
@@ -1037,7 +1033,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Offline Files
+### Offline Files
 
 | Name | Description |
 |--|--|
@@ -1048,7 +1044,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | None |
 
-## Optimize drives
+### Optimize drives
 
 | Name | Description |
 |--|--|
@@ -1059,7 +1055,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Performance Counter DLL Host
+### Performance Counter DLL Host
 
 | Name | Description |
 |--|--|
@@ -1070,7 +1066,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Performance Logs and Alerts
+### Performance Logs and Alerts
 
 | Name | Description |
 |--|--|
@@ -1081,7 +1077,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Phone Service
+### Phone Service
 
 | Name | Description |
 |--|--|
@@ -1092,7 +1088,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Used by modern Voice over Internet Protocol (VoIP) apps. |
 
-## Plug and Play
+### Plug and Play
 
 | Name | Description |
 |--|--|
@@ -1103,7 +1099,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Portable Device Enumerator Service
+### Portable Device Enumerator Service
 
 | Name | Description |
 |--|--|
@@ -1114,7 +1110,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Power
+### Power
 
 | Name | Description |
 |--|--|
@@ -1125,7 +1121,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Print Spooler
+### Print Spooler
 
 | Name | Description |
 |--|--|
@@ -1136,7 +1132,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable if not a print server or a DC |
 | **Comments** | On a domain controller, installing the DC role adds a thread to the spooler service that's responsible for performing *print pruning*, which removes the stale print queue objects from the Active Directory. If the spooler service isn't running on at least one DC in each site, then the AD can't remove old queues that no longer exist. Learn more at ["Disabling Unnecessary Services? A Word to the Wise](https://techcommunity.microsoft.com/t5/ask-the-performance-team/disabling-unnecessary-services-a-word-to-the-wise/ba-p/373444). |
 
-## Printer Extensions and Notifications
+### Printer Extensions and Notifications
 
 | Name | Description |
 |--|--|
@@ -1147,7 +1143,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable if not a print server |
 | **Comments** | None |
 
-## Problem Reports and Solutions Control Panel Support
+### Problem Reports and Solutions Control Panel Support
 
 | Name | Description |
 |--|--|
@@ -1158,7 +1154,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Program Compatibility Assistant Service
+### Program Compatibility Assistant Service
 
 | Name | Description |
 |--|--|
@@ -1169,7 +1165,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Quality Windows Audio Video Experience
+### Quality Windows Audio Video Experience
 
 | Name | Description |
 |--|--|
@@ -1180,7 +1176,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Client-side QoS service |
 
-## Radio Management Service
+### Radio Management Service
 
 | Name | Description |
 |--|--|
@@ -1191,7 +1187,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Remote Access Auto Connection Manager
+### Remote Access Auto Connection Manager
 
 | Name | Description |
 |--|--|
@@ -1202,7 +1198,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Remote Access Connection Manager
+### Remote Access Connection Manager
 
 | Name | Description |
 |--|--|
@@ -1213,7 +1209,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Remote Desktop Configuration
+### Remote Desktop Configuration
 
 | Name | Description |
 |--|--|
@@ -1224,7 +1220,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | None |
 
-## Remote Desktop Services
+### Remote Desktop Services
 
 | Name | Description |
 |--|--|
@@ -1235,7 +1231,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | None |
 
-## Remote Desktop Services UserMode Port Redirector
+### Remote Desktop Services UserMode Port Redirector
 
 | Name | Description |
 |--|--|
@@ -1246,7 +1242,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Supports redirections on the server side of the connection. |
 
-## Remote Procedure Call (RPC)
+### Remote Procedure Call (RPC)
 
 | Name | Description |
 |--|--|
@@ -1257,7 +1253,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Remote Procedure Call (RPC) Locator
+### Remote Procedure Call (RPC) Locator
 
 | Name | Description |
 |--|--|
@@ -1268,7 +1264,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Remote Registry
+### Remote Registry
 
 | Name | Description |
 |--|--|
@@ -1279,7 +1275,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | None |
 
-## Resultant Set of Policy Provider
+### Resultant Set of Policy Provider
 
 | Name | Description |
 |--|--|
@@ -1290,7 +1286,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Routing and Remote Access
+### Routing and Remote Access
 
 | Name | Description |
 |--|--|
@@ -1301,7 +1297,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | Already disabled |
 
-## RPC Endpoint Mapper
+### RPC Endpoint Mapper
 
 | Name | Description |
 |--|--|
@@ -1312,7 +1308,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Secondary Logon
+### Secondary Logon
 
 | Name | Description |
 |--|--|
@@ -1323,7 +1319,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Secure Socket Tunneling Protocol Service
+### Secure Socket Tunneling Protocol Service
 
 | Name | Description |
 |--|--|
@@ -1334,7 +1330,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Disabling breaks RRAS |
 
-## Security Accounts Manager
+### Security Accounts Manager
 
 | Name | Description |
 |--|--|
@@ -1345,7 +1341,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | None |
 
-## Sensor Data Service
+### Sensor Data Service
 
 | Name | Description |
 |--|--|
@@ -1356,7 +1352,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Sensor Monitoring Service
+### Sensor Monitoring Service
 
 | Name | Description |
 |--|--|
@@ -1367,7 +1363,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Sensor Service
+### Sensor Service
 
 | Name | Description |
 |--|--|
@@ -1378,7 +1374,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Server
+### Server
 
 | Name | Description |
 |--|--|
@@ -1389,7 +1385,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Needed for remote management, IPC$, SMB file sharing |
 
-## Shell Hardware Detection
+### Shell Hardware Detection
 
 | Name | Description |
 |--|--|
@@ -1400,7 +1396,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Smart Card
+### Smart Card
 
 | Name | Description |
 |--|--|
@@ -1411,7 +1407,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | None |
 
-## Smart Card Device Enumeration Service
+### Smart Card Device Enumeration Service
 
 | Name | Description |
 |--|--|
@@ -1422,7 +1418,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Needed almost exclusively for WinRT apps |
 
-## Smart Card Removal Policy
+### Smart Card Removal Policy
 
 | Name | Description |
 |--|--|
@@ -1433,7 +1429,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## SNMP Trap
+### SNMP Trap
 
 | Name | Description |
 |--|--|
@@ -1444,7 +1440,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Software Protection
+### Software Protection
 
 | Name | Description |
 |--|--|
@@ -1455,7 +1451,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Special Administration Console Helper
+### Special Administration Console Helper
 
 | Name | Description |
 |--|--|
@@ -1466,7 +1462,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Spot Verifier
+### Spot Verifier
 
 | Name | Description |
 |--|--|
@@ -1477,7 +1473,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## SSDP Discovery
+### SSDP Discovery
 
 | Name | Description |
 |--|--|
@@ -1488,7 +1484,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## State Repository Service
+### State Repository Service
 
 | Name | Description |
 |--|--|
@@ -1499,7 +1495,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Still Image Acquisition Events
+### Still Image Acquisition Events
 
 | Name | Description |
 |--|--|
@@ -1510,7 +1506,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Storage Service
+### Storage Service
 
 | Name | Description |
 |--|--|
@@ -1521,7 +1517,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Storage Tiers Management
+### Storage Tiers Management
 
 | Name | Description |
 |--|--|
@@ -1532,7 +1528,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Superfetch
+### Superfetch
 
 | Name | Description |
 |--|--|
@@ -1543,7 +1539,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Sync Host
+### Sync Host
 
 | Name | Description |
 |--|--|
@@ -1554,7 +1550,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | User service template |
 
-## System Event Notification Service
+### System Event Notification Service
 
 | Name | Description |
 |--|--|
@@ -1565,7 +1561,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## System Events Broker
+### System Events Broker
 
 | Name | Description |
 |--|--|
@@ -1576,7 +1572,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Despite this service's description implying it's only for WinRT apps, it's also needed for task scheduler, broker infrastructure service, and other internal components. |
 
-## Task Scheduler
+### Task Scheduler
 
 | Name | Description |
 |--|--|
@@ -1587,7 +1583,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## TCP/IP NetBIOS Helper
+### TCP/IP NetBIOS Helper
 
 | Name | Description |
 |--|--|
@@ -1598,7 +1594,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Telephony
+### Telephony
 
 | Name | Description |
 |--|--|
@@ -1609,7 +1605,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Disabling breaks Routing and Remote Access Service (RRAS) |
 
-## Themes
+### Themes
 
 | Name | Description |
 |--|--|
@@ -1620,7 +1616,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Can't set accessibility themes when this service is disabled |
 
-## Tile Data model server
+### Tile Data model server
 
 | Name | Description |
 |--|--|
@@ -1631,7 +1627,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Start menu breaks If you disable this service |
 
-## Time Broker
+### Time Broker
 
 | Name | Description |
 |--|--|
@@ -1642,7 +1638,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Despite this service's name implying it's only for WinRT apps, it's needed for task scheduler, broker infrastructure service, and other internal components. |
 
-## Touch Keyboard and Handwriting Panel Service
+### Touch Keyboard and Handwriting Panel Service
 
 | Name | Description |
 |--|--|
@@ -1653,7 +1649,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Update Orchestrator Service for Windows Update
+### Update Orchestrator Service for Windows Update
 
 | Name | Description |
 |--|--|
@@ -1664,7 +1660,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Service description was missing in v1607; Windows Update, including Windows Server Update Services (WSUS), depends on this service. |
 
-## UPnP Device Host
+### UPnP Device Host
 
 | Name | Description |
 |--|--|
@@ -1675,7 +1671,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## User Access Logging Service
+### User Access Logging Service
 
 | Name | Description |
 |--|--|
@@ -1686,7 +1682,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## User Data Access
+### User Data Access
 
 | Name | Description |
 |--|--|
@@ -1697,7 +1693,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | User service template |
 
-## User Data Storage
+### User Data Storage
 
 | Name | Description |
 |--|--|
@@ -1708,7 +1704,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | User service template |
 
-## User Experience Virtualization Service
+### User Experience Virtualization Service
 
 | Name | Description |
 |--|--|
@@ -1719,7 +1715,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | None |
 
-## User Manager
+### User Manager
 
 | Name | Description |
 |--|--|
@@ -1730,7 +1726,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## User Profile Service
+### User Profile Service
 
 | Name | Description |
 |--|--|
@@ -1741,7 +1737,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Virtual Disk
+### Virtual Disk
 
 | Name | Description |
 |--|--|
@@ -1752,7 +1748,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Volume Shadow Copy
+### Volume Shadow Copy
 
 | Name | Description |
 |--|--|
@@ -1763,7 +1759,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## WalletService
+### WalletService
 
 | Name | Description |
 |--|--|
@@ -1774,7 +1770,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Windows Audio
+### Windows Audio
 
 | Name | Description |
 |--|--|
@@ -1785,7 +1781,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Windows Audio Endpoint Builder
+### Windows Audio Endpoint Builder
 
 | Name | Description |
 |--|--|
@@ -1796,7 +1792,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Windows Biometric Service
+### Windows Biometric Service
 
 | Name | Description |
 |--|--|
@@ -1807,7 +1803,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Camera Frame Server
+### Windows Camera Frame Server
 
 | Name | Description |
 |--|--|
@@ -1818,7 +1814,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Windows Connection Manager
+### Windows Connection Manager
 
 | Name | Description |
 |--|--|
@@ -1829,7 +1825,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Defender Network Inspection Service
+### Windows Defender Network Inspection Service
 
 | Name | Description |
 |--|--|
@@ -1840,7 +1836,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Defender Service
+### Windows Defender Service
 
 | Name | Description |
 |--|--|
@@ -1851,7 +1847,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Driver Foundation - User-mode Driver Framework
+### Windows Driver Foundation - User-mode Driver Framework
 
 | Name | Description |
 |--|--|
@@ -1862,7 +1858,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Encryption Provider Host Service
+### Windows Encryption Provider Host Service
 
 | Name | Description |
 |--|--|
@@ -1873,7 +1869,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Error Reporting Service
+### Windows Error Reporting Service
 
 | Name | Description |
 |--|--|
@@ -1884,7 +1880,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Collects and sends data when a program crashes or stops responding, which both Microsoft and third-party Independent Software Vendors (ISVs) or Independent Network Vendors (INVs) can use to diagnose crash-inducing bugs and security bugs. Also needed for Corporate Error Reporting. |
 
-## Windows Event Collector
+### Windows Event Collector
 
 | Name | Description |
 |--|--|
@@ -1895,9 +1891,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Collects ETW events, including security events, for manageability and diagnostics. Lots of features and third-party tools rely on it, including security audit tools. |
 
-<!--Where I left off.--->
-
-## Windows Event Log
+### Windows Event Log
 
 | Name | Description |
 |--|--|
@@ -1908,7 +1902,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Firewall
+### Windows Firewall
 
 | Name | Description |
 |--|--|
@@ -1919,7 +1913,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Font Cache Service
+### Windows Font Cache Service
 
 | Name | Description |
 |--|--|
@@ -1930,7 +1924,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-## Windows Image Acquisition (WIA)
+### Windows Image Acquisition (WIA)
 
 | Name | Description |
 |--|--|
@@ -1941,7 +1935,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-## Windows Insider Service
+### Windows Insider Service
 
 | Name | Description |
 |--|--|
@@ -1952,7 +1946,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Server doesn't support flighting, so it's a no-op on Server. You can also disable the feature using Group Policy. |
 
-## Windows Installer
+### Windows Installer
 
 | Name | Description |
 |--|--|
@@ -1963,9 +1957,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## Windows License Manager Service
+### Windows License Manager Service
 
 | Name | Description |
 |--|--|
@@ -1976,9 +1968,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## Windows Management Instrumentation
+### Windows Management Instrumentation
 
 | Name | Description |
 |--|--|
@@ -1989,9 +1979,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## Windows Mobile Hotspot Service
+### Windows Mobile Hotspot Service
 
 | Name | Description |
 |--|--|
@@ -2002,9 +1990,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | None |
 
-
-
-## Windows Modules Installer
+### Windows Modules Installer
 
 | Name | Description |
 |--|--|
@@ -2015,9 +2001,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## Windows Push Notifications System Service
+### Windows Push Notifications System Service
 
 | Name | Description |
 |--|--|
@@ -2028,9 +2012,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | Needed for live tiles and other features |
 
-
-
-## Windows Push Notifications User Service
+### Windows Push Notifications User Service
 
 | Name | Description |
 |--|--|
@@ -2041,9 +2023,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | OK to disable |
 | **Comments** | User service template |
 
-
-
-## Windows Remote Management (WS-Management)
+### Windows Remote Management (WS-Management)
 
 | Name | Description |
 |--|--|
@@ -2054,9 +2034,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Needed for remote management |
 
-
-
-## Windows Search
+### Windows Search
 
 | Name | Description |
 |--|--|
@@ -2067,9 +2045,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Already disabled |
 | **Comments** | None |
 
-
-
-## Windows Time
+### Windows Time
 
 | Name | Description |
 |--|--|
@@ -2080,9 +2056,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## Windows Update
+### Windows Update
 
 | Name | Description |
 |--|--|
@@ -2093,9 +2067,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## WinHTTP Web Proxy Auto-Discovery Service
+### WinHTTP Web Proxy Auto-Discovery Service
 
 | Name | Description |
 |--|--|
@@ -2106,9 +2078,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Do not disable |
 | **Comments** | Anything that uses the network stack can have a functional dependency on this service. Many organizations rely on this to configure their internal networks' HTTP proxy routing. Without it, internally-originating HTTP connections to the Internet will all fail. |
 
-
-
-## Wired AutoConfig
+### Wired AutoConfig
 
 | Name | Description |
 |--|--|
@@ -2119,9 +2089,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## WMI Performance Adapter
+### WMI Performance Adapter
 
 | Name | Description |
 |--|--|
@@ -2132,9 +2100,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## Workstation
+### Workstation
 
 | Name | Description |
 |--|--|
@@ -2145,9 +2111,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | No guidance |
 | **Comments** | None |
 
-
-
-## Xbox Live Auth Manager
+### Xbox Live Auth Manager
 
 | Name | Description |
 |--|--|
@@ -2158,9 +2122,7 @@ This article describes each service one by one, using the following variables.
 | **Recommendation** | Should be disabled |
 | **Comments** | None |
 
-
-
-## Xbox Live Game Save
+### Xbox Live Game Save
 
 | Name | Description |
 |--|--|
