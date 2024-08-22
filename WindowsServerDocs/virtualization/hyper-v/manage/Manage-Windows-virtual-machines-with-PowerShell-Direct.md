@@ -3,8 +3,8 @@ title: Manage Windows virtual machines with PowerShell Direct
 description: Gives instructions for using PowerShell Direct to manage virtual machines without relying on a network or remote connection to them.
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc09093ba2d
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/04/2016
 ---
 # Manage Windows virtual machines with PowerShell Direct
@@ -32,7 +32,7 @@ If you're managing older virtual machines, use Virtual Machine Connection (VMCon
     ```
 
     ```
-    Enter-PSSession -VMGUID <VMGUID>
+    Enter-PSSession -VMId <VM GUID>
     ```
 
 3. Type your credentials for the virtual machine.

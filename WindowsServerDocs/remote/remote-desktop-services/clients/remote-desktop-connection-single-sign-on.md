@@ -4,7 +4,7 @@ description: Learn how to connect to a remote PC using Microsoft Entra authentic
 ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
-ms.date: 10/04/2023
+ms.date: 7/3/2024
 ---
 
 # Use the Remote Desktop Connection app to connect to a remote PC using single sign-on with Microsoft Entra authentication
@@ -24,7 +24,7 @@ To connect to a remote PC using single sign-on with Microsoft Entra authenticati
 - Remote Desktop needs to be enabled in your remote PC. You can follow the steps in [Enable Remote Desktop on your PC](remote-desktop-allow-access.md) to enable Remote Desktop.
 
 - The remote PC must be Microsoft Entra joined or Microsoft Entra hybrid joined. There's no requirement for the local device to be joined to a domain or Microsoft Entra. As a result, this method allows you to connect to the remote PC from:
-   - Microsoft Entra joined or Microsoft Entra Hybrid joined devices.
+   - Microsoft Entra joined or Microsoft Entra hybrid joined devices.
    - Active Directory domain joined devices.
    - Workgroup devices.
 
@@ -51,7 +51,7 @@ Here's how to connect to a remote PC using single sign-on with Microsoft Entra a
 
 1. If prompted for credentials, your user account in Microsoft Entra ID may be automatically selected. If your account is not automatically selected, specify the user name for your account in the format `user@domain.com` (the User Principal Name (UPN)).
 
-1. Select **OK** to connect. You're prompted to allow the remote desktop connection when connecting to a new remote PC. Microsoft Entra ID remembers up to 15 hosts for 30 days before prompting again. If you see this dialogue, select **Yes** to connect.
+1. Select **OK** to connect. You're prompted to allow the remote desktop connection when connecting to a new remote PC. Microsoft Entra remembers up to 15 hosts for 30 days before prompting again. If you see this dialogue, select **Yes** to connect.
 
 ### Disconnection when the session is locked
 

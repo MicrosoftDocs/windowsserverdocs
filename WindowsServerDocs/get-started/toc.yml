@@ -1,12 +1,19 @@
 items:
 - name: Get started
+  expanded: true
   items:
   - name: Get started with Windows Server
     href: get-started-with-windows-server.md
+    items:
+    - name: Windows Server Insiders Preview
+      href: get-started-with-windows-server-insiders-preview.md
   - name: Overview
+    expanded: true
     items:
     - name: What's new in Windows Server
       items:
+      - name: Windows Server 2025
+        href: whats-new-windows-server-2025.md  
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
       - name: Windows Server 2019
@@ -16,19 +23,19 @@ items:
     - name: Servicing channels comparison
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
-      items:
-      - name: Azure Edition
-        href: azure-edition.md
-      - name: Windows Server 2022
-        href: editions-comparison-windows-server-2022.md
-      - name: Windows Server 2019
-        href: editions-comparison-windows-server-2019.md
-      - name: Windows Server 2016
-        href: editions-comparison-windows-server-2016.md
+      href: editions-comparison.md
+    - name: Locks and limits
+      href: locks-limits.md
+    - name: Azure Edition
+      href: azure-edition.md
+    - name: Windows Server Annual Channel for Containers
+      href: annual-channel-for-containers.md
     - name: Hardware requirements
       href: hardware-requirements.md
     - name: Features removed or no longer developed
       items:
+      - name: Windows Server 2025
+        href: removed-deprecated-features-windows-server-2025.md
       - name: Windows Server 2022
         href: removed-deprecated-features-windows-server-2022.md
       - name: Windows Server 2019
@@ -41,7 +48,6 @@ items:
       href: extended-security-updates-overview.md
     - name: Upgrade Windows Server
       href: upgrade-overview.md
-    expanded: true
   - name: Concepts
     items:
     - name: Install, upgrade, or migrate
@@ -83,6 +89,8 @@ items:
         href: kms-create-host.md
       - name: KMS client activation
         href: kms-client-activation-keys.md
+    - name: Connect Windows Server to Azure Arc
+      href: /azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Get Extended Security Updates
       href: extended-security-updates-deploy.md
     - name: Deliver Extended Security Updates with Azure Arc
@@ -105,8 +113,6 @@ items:
         href: activation-slmgr-vbs-options.md
       - name: Solutions to common activation issues
         items:
-        - name: Resolve Windows activation error codes
-          href: activation-error-codes.md
         - name: 'KMS activation: known issues'
           href: activation-troubleshoot-KMS-issues.md
         - name: 'MAK activation: known issues'
@@ -115,8 +121,6 @@ items:
           href: common-troubleshooting-procedures-kms-dns.md
         - name: Rebuild the Tokens.dat file
           href: activation-rebuild-tokens-dat-file.md
-        - name: 'Example: Troubleshooting ADBA clients that do not activate'
-          href: activation-troubleshoot-adba-clients.md
   - name: Resources
     items:
     - name: Windows release health
@@ -125,4 +129,3 @@ items:
       href: https://www.microsoft.com/windows-server
     - name: Windows Server license terms
       href: ../windows-server-licensing/windows-server-licensing.md
-  expanded: true

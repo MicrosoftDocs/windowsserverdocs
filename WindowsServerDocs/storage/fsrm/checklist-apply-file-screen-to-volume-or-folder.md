@@ -3,9 +3,9 @@ title: Checklist - Apply a file screen to a volume or folder
 description: This article describes how to apply a file screen to a volume or folder
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Checklist - Apply a file screen to a volume or folder
 

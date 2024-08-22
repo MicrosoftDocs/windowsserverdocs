@@ -3,8 +3,8 @@ description: "Learn more about: Configure DNS forwarding in the HGS domain and a
 title: Configure DNS forwarding and domain trust
 ms.topic: article
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 08/29/2018
 ---
 

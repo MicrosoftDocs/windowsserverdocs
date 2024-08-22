@@ -10,7 +10,7 @@ metadata:
   author: billmath 
   ms.author: billmath
   ms.date: 5/18/2020 
-  ms.prod: windows-server
+  ms.service: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -20,10 +20,6 @@ landingContent:
   # Card (optional)
   - title: About Identity and Access technologies
     linkLists:
-      - linkListType: whats-new
-        links:
-          - text: What's new?
-            url: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
       - linkListType: overview
         links:
           - text: Privileged Access Management for Active Directory Domain Services & AD DS
@@ -46,7 +42,7 @@ landingContent:
             url: /previous-versions/windows/it-pro/solutions-guidance/dn550982(v=ws.11)
           - text: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
             url: ./ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md
-          - text: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
+          - text: Manage Risk with Additional Multifactor Authentication for Sensitive Applications
             url: ./ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications.md
           - text: Manage Risk with Conditional Access Control
             url: ./ad-fs/operations/manage-risk-with-conditional-access-control.md

@@ -2,7 +2,7 @@
 description: Learn more about various site functions in AD DS
 title: Site functions
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 ms.date: 05/16/2023
 ms.topic: article
 ms.custom: inhenkel

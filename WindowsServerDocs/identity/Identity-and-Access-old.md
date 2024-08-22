@@ -5,7 +5,7 @@ title: Identity and Access
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/16/2018
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -18,10 +18,6 @@ ms.topic: article
 
  The following new features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements are covered in the following sections.
 
-
-## [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
-An overview of all of the new features available for AD FS in Windows Server 2016.
-
 ## [What's new in Active Directory Domain Services for Windows Server 2016](whats-new-active-directory-domain-services.md)
 Lists all the new features available for AD DS in Windows Server 2016.
 
@@ -29,7 +25,7 @@ Lists all the new features available for AD DS in Windows Server 2016.
 Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server 2016.
 
 ## [Windows 10 for the enterprise: Ways to use devices for work](/azure/active-directory/devices/overview)
-Windows 10 provides you the ability to leverage Azure Active Directory. Windows 10 devices can be connected to Azure AD, and users can sign in to Windows with Azure AD accounts or add their Azure ID to gain access to business apps and resources.
+Windows 10 provides you the ability to leverage Microsoft Entra ID. Windows 10 devices can be connected to Microsoft Entra ID, and users can sign in to Windows with Microsoft Entra accounts or add their Azure ID to gain access to business apps and resources.
 
 ## [Active Directory Domain Services](../identity/ad-ds/Active-Directory-Domain-Services.md)
 Detailed documentation on all of the features available for AD DS in Windows Server 2016.

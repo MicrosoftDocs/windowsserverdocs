@@ -101,7 +101,7 @@ This section provides information to help you troubleshoot common problems that 
 
 - [Software assurance support](https://support.microsoft.com/default.aspx?scid=fh;%5Bln%5D;SoftAssurance)
 
-- [Microsoft Technology Centers](https://www.microsoft.com/mtc/default.aspx)
+- [Microsoft Technology Centers](https://www.microsoft.com/mtc)
 
 - [Support for small businesses](https://smallbusiness.support.microsoft.com/contact)
 

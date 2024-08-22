@@ -2,8 +2,8 @@
 title: vssadmin list shadows
 description: A description of the vssadmin list shadows command, which lists all existing shadow copies of a specified volume.
 ms.topic: reference
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 05/18/2018
 ---
 
@@ -24,7 +24,7 @@ vssadmin list shadows [/for=<ForVolumeSpec>] [/shadow=<ShadowID>]
 | Parameter | Description |
 |--|--|
 | /for=`<ForVolumeSpec>` | Specifies which volume the shadow copies will be listed for. |
-| /shadow=`<ShadowID>` | Lists the shadow copy specified by ShadowID. To get the shadow copy ID, use the [vssadmin list shadows command](vssadmin-list-shadows.md). When you type a shadow copy ID, use the following format, where each *X* represents a hexadecimal character:<p>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX |
+| /shadow=`<ShadowID>` | Lists the shadow copy specified by ShadowID. To get the shadow copy ID, use the [vssadmin list shadows command](vssadmin-list-shadows.md). When you type a shadow copy ID, use the following format, where each *X* represents a hexadecimal character:<p>`{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}` |
 
 ## Related links
 

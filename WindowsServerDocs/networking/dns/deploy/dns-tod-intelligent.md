@@ -4,8 +4,8 @@ description: Learn how to use DNS policy for intelligent DNS responses based on 
 manager: brianlic
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
