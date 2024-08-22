@@ -35,7 +35,7 @@ This article explains how to remove Active Directory Domain Services (AD DS) usi
 | Uninstall-WindowsFeature/Remove-WindowsFeature | ***-Name***<p>***-IncludeManagementTools***<p>*-Restart*<p>-Remove<p>-Force<p>-ComputerName<p>-Credential<p>-LogPath<p>-Vhd |
 
 > [!NOTE]
-> The **-credential** argument is only required if you aren't already signed in as a member of the Enterprise Admins group (demoting last DC in a domain) or the Domain Admins group (demoting a replica DC). The **-includemanagementtools** argument is only required if you want to remove all of the AD DS management utilities.
+> The **Credential** argument is only required if you aren't already signed in as a member of the Enterprise Admins group or the Domain Admins group. The **IncludeManagementTools** argument is only required if you want to remove all of the AD DS management utilities.
 
 ## Demote
 
@@ -159,8 +159,7 @@ The **LocalAdministratorPassword** argument is special:
 For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string.
 
 ```powershell
--localadministratorpassword (read-host -prompt "Password:" -assecurestring)
-```
+Uninstall-ADDSDomainController -LocalAdministratorPassword (Read-Host -Prompt "Password:" -AsSecureString)
 
 > [!WARNING]
 > As the previous two options do not confirm the password, use extreme caution: the password is not visible.
@@ -168,8 +167,7 @@ For example, you can manually prompt for a password by using the **Read-Host** c
 You can also provide a secure string as a converted clear-text variable, although this is highly discouraged. For example:
 
 ```powershell
--localadministratorpassword (convertto-securestring "Password1" -asplaintext -force)
-```
+Uninstall-ADDSDomainController -LocalAdministratorPassword (ConvertTo-SecureString "Password1" -AsPlainText -Force)
 
 > [!WARNING]
 > Providing or storing a clear text password is not recommended. Anyone running this command in a script or looking over your shoulder knows the local administrator password of that computer. With that knowledge, they have access to all of its data and can impersonate the server itself.
