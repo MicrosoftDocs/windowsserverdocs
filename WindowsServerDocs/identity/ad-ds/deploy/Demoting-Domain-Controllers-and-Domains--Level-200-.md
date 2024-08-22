@@ -162,6 +162,7 @@ For example, you can manually prompt for a password by using the **Read-Host** c
 
 ```powershell
 Uninstall-ADDSDomainController -LocalAdministratorPassword (Read-Host -Prompt "Password:" -AsSecureString)
+```
 
 > [!WARNING]
 > As the previous two options do not confirm the password, use extreme caution: the password is not visible.
@@ -170,6 +171,7 @@ You can also provide a secure string as a converted clear-text variable, althoug
 
 ```powershell
 Uninstall-ADDSDomainController -LocalAdministratorPassword (ConvertTo-SecureString "Password1" -AsPlainText -Force)
+```
 
 > [!WARNING]
 > Providing or storing a clear text password is not recommended. Anyone running this command in a script or looking over your shoulder knows the local administrator password of that computer. With that knowledge, they have access to all of its data and can impersonate the server itself.
