@@ -2,8 +2,8 @@
 title: wscript
 description: Reference article for the wscript command; wscript provides an environment in which users can execute scripts in various languages that use various object models to perform tasks.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 04/01/2023
 ---
 

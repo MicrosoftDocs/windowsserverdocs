@@ -4,7 +4,7 @@ description: Reference article for wmic, which displays WMI information inside a
 ms.topic: reference
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
 ms.author: alalve
-author: JasonGerend
+author: robinharwood
 ms.date: 10/19/2022
 ---
 

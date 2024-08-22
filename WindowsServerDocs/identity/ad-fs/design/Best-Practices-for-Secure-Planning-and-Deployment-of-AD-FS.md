@@ -5,7 +5,7 @@ title: Best Practices for Secure Planning and Deployment of AD FS
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

@@ -4,7 +4,7 @@ description: "Learn how to design for Active Directory Federation Services (AD F
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 05/22/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.assetid: fb09e37e-5d1c-428a-a2ca-2f01a0ba2992
 ---

@@ -15,7 +15,7 @@ ms.author: daveba
 ##  <a name="BKMK_MLHeadedRecovery"></a> Create a server setup and server recovery DVD for multiple language support on locally administered servers
 
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) before you add the  Windows Server Essentials langauage pack into install.wim.
+>  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) before you add the Windows Server Essentials language pack into install.wim.
 
  There are two phases of setup: the Windows Preinstallation Environment (Windows PE) and the initial configuration. By default, the language selection page in initial configuration will not be displayed.
 

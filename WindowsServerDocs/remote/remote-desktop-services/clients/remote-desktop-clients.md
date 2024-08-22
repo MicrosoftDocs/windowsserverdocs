@@ -6,7 +6,7 @@ ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
 manager: femila
 ms.author: wscontent
-ms.date: 06/12/2023
+ms.date: 7/3/2024
 ---
 # Remote Desktop clients for Remote Desktop Services and remote PCs
 
@@ -25,7 +25,7 @@ There are many features you can use to enhance your remote experience, such as:
 Some features are only available with certain clients, so it's important to check [Compare the features of the Remote Desktop clients](remote-desktop-features.md) to understand the differences when connecting to Remote Desktop Services or remote PCs.
 
 > [!TIP]
-> You can also use most versions of the Remote Desktop client to also connect to [Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/users/connect-windows?tabs=subscribe), as well as to Remote Desktop Services in Windows Server or to a remote PC. If you want information on Azure Virtual Desktop instead, see [Remote Desktop clients for Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/users/remote-desktop-clients-overview).
+> You can also use most versions of the Remote Desktop client to also connect to [Azure Virtual Desktop](/azure/virtual-desktop/users/connect-windows?tabs=subscribe), as well as to Remote Desktop Services in Windows Server or to a remote PC. If you want information on Azure Virtual Desktop instead, see [Remote Desktop clients for Azure Virtual Desktop](/azure/virtual-desktop/users/remote-desktop-clients-overview).
 
 Here's a list of the Remote Desktop client apps and our documentation for connecting to Remote Desktop Services or remote PCs, where you can find download links, what's new, and learn how to install and use each client.
 
@@ -35,7 +35,7 @@ Here's a list of the Remote Desktop client apps and our documentation for connec
 | macOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for macOS](remote-desktop-mac.md) | [What's new](mac-whatsnew.md) |
 | iOS/iPadOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for iOS and iPadOS](remote-desktop-ios.md) | [What's new](ios-whatsnew.md) |
 | Android/Chrome OS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Android and Chrome OS](remote-desktop-android.md) | [What's new](android-whatsnew.md) |
-| Remote Desktop app for Windows | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop app for Windows](windows.md) | [What's new](windows-whatsnew.md) |
+| Windows Store Remote Desktop app | [Connect to Remote Desktop Services and remote PCs with the Windows Store Remote Desktop app for Windows](windows.md) | [What's new](windows-whatsnew.md) |
 
 ## Connecting to your remote PC
 

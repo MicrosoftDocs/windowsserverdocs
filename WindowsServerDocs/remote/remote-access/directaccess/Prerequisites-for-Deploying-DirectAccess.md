@@ -4,8 +4,8 @@ description: This topic provides prerequisites for DirectAccess deployment in Wi
 manager: brianlic
 ms.topic: article
 ms.assetid: 57c7e039-42ef-4909-867a-b5f669c9e74e
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Prerequisites for Deploying DirectAccess

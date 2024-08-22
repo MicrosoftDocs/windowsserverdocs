@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Resilient File System (ReFS) overview"
 title: Resilient File System (ReFS) overview
-ms.author: billy
+ms.author: wscontent
 manager: candyc
 ms.topic: article
 author: wbsmolen
@@ -26,7 +26,7 @@ ReFS introduces new features that can precisely detect corruptions and also fix 
 
 ### Performance
 
-In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse VDL are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
+In addition to providing resiliency improvements, ReFS introduces new features for performance-sensitive and virtualized workloads. Real-time tier optimization, block cloning, and sparse valid data length (VDL) are good examples of the evolving capabilities of ReFS, which are designed to support dynamic and diverse workloads:
 
 - **[Mirror-accelerated parity](./mirror-accelerated-parity.md)** - Mirror-accelerated parity delivers both high performance and also capacity efficient storage for your data.
 

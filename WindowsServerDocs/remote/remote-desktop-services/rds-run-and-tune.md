@@ -2,7 +2,7 @@
 title: RDS - Run and tune your Remote Desktop Services environment
 description: Provides management information for Remote Desktop Services.
 ms.author: spatnaik
-ms.date: 02/08/2017
+ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: 79909767-a4c3-4ecf-8d3f-77d37a663153
 author: spatnaik

@@ -3,7 +3,7 @@ description: Learn more about service communications certificates in AD FS
 title: Service Communications Certificates
 author: billmath
 ms.author: billmath
-ms.date: 01/27/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

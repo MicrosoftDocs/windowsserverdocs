@@ -1,21 +1,24 @@
 ---
 title: System requirements for Hyper-V on Windows Server
-description: Lists the hardware and firmware requirements for Hyper-V in Windows Server
+description: Lists the hardware and firmware requirements for Hyper-V in Windows Server.
 ms.topic: article
 ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 9/30/2016
+ms.author: wscontent
+author: robinharwood
+ms.date: 08/13/2024
 ---
 # System requirements for Hyper-V on Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022 (preview), Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
-Hyper-V has specific hardware requirements, and some Hyper-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper-V the way you plan to. Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper-V exceed the general minimum requirements for Windows Server 2016 because a virtualization environment requires more computing resources.
+> [!IMPORTANT]
+> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-If you're already using Hyper-V, it's likely that you can use your existing hardware. The general hardware requirements haven't changed significantly from  Windows Server 2012 R2 .  But, you will need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described below. Other than that, the main difference in hardware is that second-level address translation (SLAT) is now required instead of recommended.
+Hyper-V has specific hardware requirements, and some Hyper-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper-V the way you plan to. Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper-V exceed the general minimum requirements for Windows Server because a virtualization environment requires more computing resources.
 
-For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](./plan/plan-hyper-v-scalability-in-windows-server.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md).
+If you're already using Hyper-V, it's likely that you can use your existing hardware. The general hardware requirements haven't changed significantly from  Windows Server 2012 R2. But, you'll need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described below. Other than that, the main difference in hardware is that second-level address translation (SLAT) is now required instead of recommended.
+
+For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server](/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server](/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows).
 
 ## General requirements
 
@@ -45,7 +48,7 @@ Scroll to the Hyper-V Requirements section to review the report.
 
 ## Requirements for specific features
 
-Here are the requirements for discrete device assignment and shielded virtual machines. For descriptions of these features, see [What's new in Hyper-V on Windows Server](What-s-new-in-Hyper-V-on-Windows.md).
+This section lists the requirements for discrete device assignment and shielded virtual machines.
 
 ### Discrete device assignment
 

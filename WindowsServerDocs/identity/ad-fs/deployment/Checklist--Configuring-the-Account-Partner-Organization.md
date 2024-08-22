@@ -4,7 +4,7 @@ ms.assetid: 826974ea-3635-40df-aa37-77dd12a363c8
 title: Checklist - Configuring the Account Partner Organization
 author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.author: billmath
 ---

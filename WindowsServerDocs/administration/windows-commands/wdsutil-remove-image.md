@@ -3,8 +3,8 @@ title: wdsutil remove-image
 description: Reference article for wdsutil remove-image, which deletes an image from a server.
 ms.topic: reference
 ms.assetid: ce5e2384-2264-4b22-92af-74eec8c10ae0
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -48,7 +48,7 @@ To remove an install image, type:
 wdsutil /remove-Image:Windows Vista with Officemediatype:Install
 ```
 ```
-wdsutil /verbose /remove-Image:Windows Vista with Office /Server:MyWDSServemediatype:Instal ImageGroup:ImageGroup1 /Filename:install.wim
+wdsutil /verbose /remove-Image:Windows Vista with Office /Server:MyWDSServemediatype:Install ImageGroup:ImageGroup1 /Filename:install.wim
 ```
 ## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)

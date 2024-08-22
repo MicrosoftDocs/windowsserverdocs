@@ -4,7 +4,7 @@ description: This article describes typical certificate problems.
 ms.topic: article
 author: billmath
 ms.author: billmath
-ms.date: 04/01/2023
+ms.date: 02/13/2024
 ---
 
 # AD FS troubleshooting - certificates

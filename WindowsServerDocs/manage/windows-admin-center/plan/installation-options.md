@@ -28,10 +28,10 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | -----------------------------------| --------------------- |
 | Windows 11                         | Local client |
 | Windows 10                         | Local client |
-| Windows Server Semi-Annual Channel | Gateway sever, managed server, failover cluster |
-| Windows Server 2022                | Gateway sever, managed server, failover cluster |
-| Windows Server 2019                | Gateway sever, managed server, failover cluster |
-| Windows Server 2016                | Gateway sever, managed server, failover cluster |
+| Windows Server Semi-Annual Channel | Gateway server, managed server, failover cluster |
+| Windows Server 2022                | Gateway server, managed server, failover cluster |
+| Windows Server 2019                | Gateway server, managed server, failover cluster |
+| Windows Server 2016                | Gateway server, managed server, failover cluster |
 
 To operate Windows Admin Center:
 
@@ -40,6 +40,9 @@ To operate Windows Admin Center:
 
 > [!WARNING]
 > Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
+
+> [!NOTE]
+> Port usage and defaults for Windows Admin Center installations on the modernized gateway vary from what is mentioned above. [Read more about what's different in the modernized gateway.](../understand/modernized-gateway.md)
 
 ## Installation: Supported web browsers
 

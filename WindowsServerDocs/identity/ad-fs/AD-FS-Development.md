@@ -5,7 +5,7 @@ title: AD FS Development
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 02/22/2018
+ms.date: 02/13/2024
 ms.topic: article
 ---
 # AD FS Development

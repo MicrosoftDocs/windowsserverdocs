@@ -4,7 +4,7 @@ ms.assetid: d555041a-709e-42c7-920a-8dfd2c7e0488
 title: Verify That a Federation Server Proxy Is Operational
 author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.author: billmath
 ---

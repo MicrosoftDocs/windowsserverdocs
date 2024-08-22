@@ -2,7 +2,7 @@
 title: Clean up AD DS server metadata
 description: Use built-in tools to clean up metadata from removed domain controllers
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 11/14/2018
 ms.topic: article
@@ -87,3 +87,5 @@ As an alternative, you can clean up metadata by using ntdsutil.exe, a command-li
 
 * [Demoting Domain Controllers](Demoting-Domain-Controllers-and-Domains--Level-200-.md)
 * [Ntdsutil command reference](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753343(v=ws.10))
+* [Clean Up Server Metadata reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10))
+* [Ntdsutil metadata cleanup reference](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731035(v=ws.10))

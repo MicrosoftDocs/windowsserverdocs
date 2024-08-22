@@ -4,13 +4,13 @@ description: This scenario describes how to build a custom authentication method
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
 # Build a Custom Authentication Method for AD FS in Windows Server
 
-This walkthrough provides instructions for implementing a custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Additional Authentication Methods](/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
+This walkthrough provides instructions for implementing a custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Additional Authentication Methods](../operations/configure-additional-authentication-methods-for-ad-fs.md).
 
 > [!WARNING]
 > The example that you can build here is&nbsp;for educational purposes only. &nbsp;These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model.&nbsp; There is no authentication back end, error processing, or configuration data.
