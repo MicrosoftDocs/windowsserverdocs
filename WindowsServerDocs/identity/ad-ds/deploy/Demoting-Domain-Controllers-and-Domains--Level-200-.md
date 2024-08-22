@@ -5,7 +5,7 @@ title: How to demote domain controllers and domains using Server Manger or Power
 author: iainfoulds
 ms.author: justinha
 manager: daveba
-ms.date: 05/16/2023
+ms.date: 08/23/2024
 ms.topic: article
 ms.custom: inhenkel
 ---
@@ -21,18 +21,20 @@ This article explains how to remove Active Directory Domain Services (AD DS) usi
 ![AD DS removal workflow chart](media/Demoting-Domain-Controllers-and-Domains--Level-200-/adds_demotedomainforest.png)
 
 > [!CAUTION]
-> Removing the AD DS roles with Dism.exe or the Windows PowerShell DISM module after promotion to a Domain Controller is not supported and will prevent the server from booting normally.
+> Removing the AD DS roles with Dism.exe or the Windows PowerShell DISM module after promotion to a Domain Controller (DC) isn't supported and prevents the server from booting normally.
 >
 > Unlike Server Manager or the ADDSDeployment module for Windows PowerShell, DISM is a native servicing system that has no inherent knowledge of AD DS or its configuration. We don't recommend using Dism.exe or the Windows PowerShell DISM module to uninstall the AD DS role unless the server is no longer a domain controller.
 
 ## Demotion and role removal with PowerShell
 
-<!--Is there a page in a PowerShell module guide we can link to here? I think it would be easier than having this big long table.-->
-
 | ADDSDeployment and ServerManager Cmdlets | Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.) |
 |--|--|
 | Uninstall-ADDSDomainController | -SkipPreChecks<p>*-LocalAdministratorPassword*<p>-Confirm<p>***-Credential***<p>-DemoteOperationMasterRole<p>*-DNSDelegationRemovalCredential*<p>-Force<p>*-ForceRemoval*<p>*-IgnoreLastDCInDomainMismatch*<p>*-IgnoreLastDNSServerForZone*<p>*-LastDomainControllerInDomain*<p>-Norebootoncompletion<p>*-RemoveApplicationPartitions*<p>*-RemoveDNSDelegation*<p>-RetainDCMetadata |
 | Uninstall-WindowsFeature/Remove-WindowsFeature | ***-Name***<p>***-IncludeManagementTools***<p>*-Restart*<p>-Remove<p>-Force<p>-ComputerName<p>-Credential<p>-LogPath<p>-Vhd |
+
+To learn more about how to demote your DC using PowerShell, see the [Uninstall-ADDSDomainController](/powershell/module/addsdeployment/uninstall-addsdomaincontroller) and [Uninstall-WindowsFeature](/powershell/module/servermanager/uninstall-windowsfeature) PowerShell references.
+
+When using `Uninstall-ADDSDomainController` and `Uninstall-WindowsFeature`, these commands only require the minimum arguments as they each perform a single action. Pressing the **Enter** key during the confirmation phase initiates the irrevocable demotion process and restarts your device.
 
 > [!NOTE]
 > The **Credential** argument is only required if you aren't already signed in as a member of the Enterprise Admins group or the Domain Admins group. The **IncludeManagementTools** argument is only required if you want to remove all of the AD DS management utilities.
@@ -41,7 +43,7 @@ This article explains how to remove Active Directory Domain Services (AD DS) usi
 
 ### Remove roles and features
 
-Server Manager offers two interfaces to removing the Active Directory Domain Services role:
+There are two methods you can use to remove the AD DS role:
 
 - The **Manage** menu on the main dashboard, using **Remove Roles and Features**
 
@@ -79,9 +81,9 @@ Clear the **Active Directory Domain Services** check box to demote a domain cont
 
 The equivalent ADDSDeployment and ServerManager Windows PowerShell cmdlets are:
 
-```
-Uninstall-addsdomaincontroller
-Uninstall-windowsfeature
+```powershell
+Uninstall-ADDSDomainController
+Uninstall-WindowsFeature
 ```
 
 ![Remove Roles and Features Wizard - Confirmation dialog](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_RemoveFeatures.png)
@@ -108,9 +110,9 @@ You configure demotion options on the **Credentials** page. Provide the credenti
 The equivalent ADDSDeployment Windows PowerShell arguments are:
 
 ```powershell
--credential <pscredential>
--forceremoval <{ $true | false }>
--lastdomaincontrollerindomain <{ $true | false }>
+-Credential <PSCredential>
+-ForceRemoval <{ $true | $false }>
+-LastDomainControllerInDomain <{ $true | $false }>
 ```
 
 ### Warnings
@@ -136,11 +138,11 @@ Select **Change** to specify alternate DNS administrative credentials. Select **
 
 The equivalent ADDSDeployment cmdlet arguments are:
 
-```
--ignorelastdnsserverforzone <{ $true | false }>
--removeapplicationpartitions <{ $true | false }>
--removednsdelegation <{ $true | false }>
--dnsdelegationremovalcredential <pscredential>
+```PowerShell
+-IgnoreLastDnsServerForZone <{ $true | false }>
+-RemoveApplicationPartitions <{ $true | false }>
+-RemoveDNSDelegation <{ $true | false }>
+-DNSDelegationRemovalCredential <PsCredential>
 ```
 
 ### New Administrator Password
@@ -200,8 +202,6 @@ When the **Demotion** page displays, the domain controller configuration begins 
 
 - %systemroot%\debug\dcpromo.log
 - %systemroot%\debug\dcpromoui.log
-
-Since **Uninstall-ADDSDomainController** and **Uninstall-WindowsFeature** only have one action apiece, they're shown here in the Confirmation phase with the minimum required arguments. Pressing ENTER starts the irrevocable demotion process and restarts the computer.
 
 ![PowerShell Uninstall-ADDSDomainController Example](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)
 
