@@ -42,19 +42,24 @@ Here's a video to give you an overview, followed by a poster giving more details
 
 ## Contents at a glance
 
-| **Understand** | **Plan** |
+| Understand | Plan |
+|------------|------|
 | - [What is Windows Admin Center?](understand/what-is.md) <br> - [Frequently asked questions](understand/faq.yml)<br> - [Case studies](understand/case-studies.md) <br> - [Related management products](understand/related-management.md) | - [What type of installation is right for you?](plan/installation-options.md) <br> - [User access options](plan/user-access-options.md) <br> |
 
-| **Deploy** | **Configure** |
+| Deploy | Configure |
+|--------|-----------|
 | - [Prepare your environment](deploy/prepare-environment.md) <br> - [Install Windows Admin Center](deploy/install.md) <br> - [Enable high availability](deploy/high-availability.md)  <br><br> | - [Windows Admin Center settings](configure/settings.md) <br> - [User access control and permissions](configure/user-access-control.md) <br> - [Shared connections](configure/shared-connections.md) <br> - [Extensions](configure/using-extensions.md) <br> - [Automate with PowerShell](configure/use-powershell.md) |
 
-| **Use** | **Connect to Azure** |
+| Use | Connect to Azure |
+|-----|------------------|
 | - [Launch & add connections](use/get-started.md) <br> - [Manage servers](use/manage-servers.md) <br> - [Deploy hyperconverged infrastructure](use/deploy-hyperconverged-infrastructure.md) <br> - [Manage hyperconverged infrastructure](use/manage-hyper-converged.md) <br> - [Manage failover clusters](use/manage-failover-clusters.md) <br> - [Manage virtual machines](use/manage-virtual-machines.md) <br> - [Logging](use/logging.md) | - [Azure hybrid services](azure/index.md) <br> - [Connect Windows Admin Center to Azure](azure/azure-integration.md) <br> - [Deploy Windows Admin Center in Azure](azure/deploy-wac-in-azure.md) <br> - [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md) <br><br> |
 
-| **Windows Admin Center in Azure** | **Support** |
+| Windows Admin Center in Azure | Support |
+|-----------------------|-----------------|
 | - [Manage a Windows Server IaaS VMs](azure/manage-vm.md) <br> - [Manage Azure Arc-enabled Servers (preview)](azure/manage-arc-hybrid-machines.md) <br> - [Manage Azure Stack HCI clusters (preview)](azure/manage-hci-clusters.md) | - [Release history](support/release-history.md) <br> - [Support policy](support/index.md) <br> - [Common troubleshooting steps](support/troubleshooting.md) <br> - [Known issues](support/known-issues.md) |
 
-| **Extend** |
+| Extend |
+|--------|
 | - [Overview of extensions](extend/extensibility-overview.md) <br> - [Understanding extensions](extend/understand-extensions.md) <br> - [Develop an extension](extend/developing-extensions.md) <br> - [Guides](extend/publish-extensions.md) <br> - [Publishing extensions](extend/publish-extensions.md) |
 
 ## See how customers benefit from Windows Admin Center
