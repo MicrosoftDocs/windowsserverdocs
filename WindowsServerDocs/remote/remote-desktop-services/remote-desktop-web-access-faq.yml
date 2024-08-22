@@ -49,14 +49,15 @@ sections:
           2.	In the menu under **Tools**, navigate to **Internet Information Services (IIS) Manager**.
           3.	Next, locate your server and navigate to **Sites > Default Web Site > RDWeb > Pages**.
           4.	Select **Application Settings** from the menu. Then, select the setting **PasswordChangeEnabled** and change the value to true.
-            ![A screenshot of the application setting PasswordChangeEnabled.](media/password-change-enabled-setting.png)
+            
+              ![A screenshot of the application setting PasswordChangeEnabled.](media/password-change-enabled-setting.png)
 
           Now, when you open the RDWebaccess page and try to log in using an expired password, a link appears to reset your password.
           
-            ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
+              ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
           
           When you open the password reset page you’re presented with the following user interface, where you enter your current password, new password, and confirm the new password.
           
-            ![A screenshot of the link displayed to change your password.](media/change-password-form.png)
+              ![A screenshot of the link displayed to change your password.](media/change-password-form.png)
           
           Note: If the remote server is running in Azure, you need create an endpoint for public port 443 in the Azure management portal so that users can access the RD Web Access portal. 
