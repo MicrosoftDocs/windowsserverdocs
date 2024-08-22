@@ -2,7 +2,7 @@
 title: Security guidelines for system services in Windows Server 2016
 description: Provides security guidelines and recommendations for disabling services in Windows Server 2016 with Desktop Experience.
 ms.topic: article
-ms.date: 11/26/2018
+ms.date: 08/22/2024
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: nirb
 ms.author: wscontent
@@ -15,7 +15,9 @@ ms.author: wscontent
 Windows operating systems (OSes) include many important system services. Different services have different default startup policies:
 
 - Automatic, when the service starts by default
+
 - Manual, when the user activates the service
+
 - Disabled by default, which means the user must enable the service before it can run
 
 Microsoft chose these default settings carefully for each service to balance performance, functionality, and security for customers.
@@ -24,11 +26,14 @@ However, a more security-focused deployment may require changing these settings.
 
 The guidance in this article only applies to Windows Server 2016 with Desktop Experience, unless you're using it as a desktop replacement for end-users. As of Windows Server 2019, the configurations in this article are actually the default settings in the OS.
 
-As you read, you'll see each service sorted into the following categories:
+Each service is sorted into the following categories:
 
 - **Should Disable**, which means you should disable this service and not use it to make your system more secure.
+
 - **OK to Disable**, which means that while you don't have to disable this service for security reasons, you can still safely do so if you don't need it.
-- **Do Not Disable**, which means disabling this service impacts essential system functions or prevents specific roles or features from working as intended. You must keep this service enabled at all times.
+
+- **Do Not Disable**, which means disabling this service impacts essential system functions or prevents specific roles or features from working as intended. You must always keep this service enabled.
+
 - **(No guidance)**, for some services, the impact of disabling hasn’t been fully evaluated, so it’s recommended to leave them at their default configuration.
 
 You can configure your Windows devices and servers to disable selected services by using Security Templates in Group Policies or by running PowerShell cmdlets. In some cases, this guide describes specific Group Policy settings you can change to disable services directly.
@@ -37,18 +42,22 @@ We recommend you disable the following services and their related scheduled task
 
 - Xbox Live Auth Manager
   - \Microsoft\XblGameSave\XblGameSaveTask
+
 - Xbox Live Game Save
   - \Microsoft\XblGameSave\XblGameSaveTaskLogon
 
 ## Disabling non-default services
 
-We don't recommend applying policies that disable services that Microsoft hasn't installed by default.
+We don't recommend applying policies that disable services that aren't by default by Microsoft.
 
 There are a few reasons why we recommend against disabling non-default services:
 
 - A service your admins installed after the initial setup is usually one that you need but wasn't in the original deployment. In these cases, you should tell your admins not to install the service in the first place as opposed to only disabling it after it's installed.
+
 - Blocking the Windows version of a service doesn't stop admins or non-admins from installing third-party equivalents that pose higher security risks.
+
 - Establishing a baseline that disables non-default Windows services, such as the World Wide Web Publishing Service (W2SVC) or Internet Information Services (IIS), may give auditors the impression that they're inherently insecure and should never be used.
+
 - If the service is never installed, disabling it adds unnecessary work to establishing the baseline and verification for your system.
 
 ## How to read this guide
@@ -62,22 +71,26 @@ This article describes each service one by one, using the following variables.
 - *Installation* describes which OS the service exists on.
 
   - If the service is *always installed*, it's available on both Windows Server 2016 Core and Windows Server 2016 with Desktop Experience.
+  
   - If the service is *only with Desktop Experience*, it isn't available on Windows Server 2016 Core.
 
 - The *startup type* is how Windows determines when and how the service is started.
 
-- *Recommendation* lists Microsoft's recommended configuration for this service on a typical Windows Server 2016 deployment in an enterprise that's not using the server as an end-user desktop replacement. <!--Repetitive text here. Take it out of the intro.-->
+- *Recommendation* lists Microsoft's recommended configuration for this service on a typical Windows Server 2016 deployment in an enterprise that's not using the server as an end-user desktop replacement.
   
   - *Do not disable* means you should never disable this service.
+
   - *OK to disable* means you can disable this service if you don't need it.
+
   - *Already disabled* means Windows disabled this service by default.
+
   - *Should be disabled* means you should always disable this service to increase security.
 
 - The *comments* show extra explanations and notes if you need more context.
 
 ## Default local services
 
-The following tables describes the default services found in Windows Server 2016. To edit the configuration of these services, select **Start**, type **services.msc**, then select **Services**.
+The following tables describes the default services found in Windows Server 2016. To edit the configuration of these services, select **Start**, enter **services.msc**, then select **Services**.
 
 ### ActiveX Installer (AxInstSV)
 
