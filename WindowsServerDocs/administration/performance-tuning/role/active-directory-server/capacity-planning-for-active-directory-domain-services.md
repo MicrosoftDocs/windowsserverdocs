@@ -95,7 +95,7 @@ Other information you should keep in mind while planning:
 
 The following tables list and explain criteria for determining your hardware estimates.
 
-#### New environment
+#### Working environment
 
 <!--This title...doesn't really explain what's going on here. I think these need to be more specific, and maybe have in intro giving more context to the tables.-->
 
@@ -337,9 +337,9 @@ This section focuses on reads from the database, as the database is usually the 
 
 The `LogicalDisk(<NTDS>)\Avg Disk sec/Read` counter shows whether the current storage is adequately sized. If the value is roughly equal to the expected Disk Access TIme for the disk type, the `LogicalDisk(<NTDS>)\Reads/sec` counter is a valid measure. If the results are roughly equal to the Disk Access Time for the disk type, the `LogicalDisk(<NTDS>)\Reads/sec` counter is a valid measure. Although this can change depending on which manufacturer specifications your back-end storage has, but good ranges for `LogicalDisk(<NTDS>)\Avg Disk sec/Read` would roughly be:
 
-- 7200 – 9 to 12.5 milliseconds (ms)
-- 10,000 – 6 to 10 ms
-- 15,000 – 4 to 6 ms
+- 7200 rpm: 9 to 12.5 milliseconds (ms)
+- 10,000 rpm: 6 to 10 ms
+- 15,000 rpm:  4 to 6 ms
 - SSD – 1 to 3 ms
 
 <!--I need more context for what these numbers mean.-->
@@ -381,7 +381,7 @@ Determining the amount of I/O needed for a healthy system under normal operating
 
 - LogicalDisk(`<NTDS Database Drive>`) ÷ Transfers per second during the peak period 15 minute period
 - To determine the amount of I/O needed for storage where the capacity of the underlying storage is exceeded:
-  >*Needed IOPS* = (LogicalDisk(`<NTDS Database Drive>`)) ÷ Avg Disk sec/Read ÷ `<Target Avg Disk sec/Read>`) × LogicalDisk(`<NTDS Database Drive>`)\Read/sec
+  >*Needed IOPS* = (LogicalDisk(`<NTDS Database Drive>`)) ÷ Avg Disk sec/Read ÷ `<Target Avg Disk sec/Read>`) × LogicalDisk(`<NTDS Database Drive>`)\sec/Read
 
 | Counter | Value |
 |--|--|
@@ -404,7 +404,7 @@ To determine the rate at which you should warm the cache:
 
 <!--Note to self: address inconsistent use of I/O and IO-->
 
-The number you calculate is mostly accurate, but may not be exact because you haven't configured ESE <!--Acronym--> to have a fixed cache size, then AD DS will evict previously loaded pages because it uses variable cache size by default.
+The number you calculate is mostly accurate, but may not be exact because you haven't configured (Extensible Storage Engine) ESE to have a fixed cache size, then AD DS will evict previously loaded pages because it uses variable cache size by default.
 
 <!--No context given for this table-->
 
@@ -554,7 +554,7 @@ The following table...
 
 <!--I think I need more context before I can properly rewrite this.-->
 
-Be very careful with these scenarios though. As can be seen above, the math looks really nice and pretty on paper. But throughout this article, planning for an “*N* + 1” scenario is of paramount importance. The impact of one DC going offline must be calculated for every scenario. In the immediately preceding scenario where the load distribution is even, in order to ensure a 60% load during an “*N*” scenario, with the load balanced evenly across all servers, the distribution will be fine as the ratios stay consistent. Looking at the PDC emulator tuning scenario, and in general any scenario where user or application load is unbalanced, the effect is very different:
+Planning for an “*N* + 1” scenario is of paramount importance. The impact of one DC going offline must be calculated for every scenario. In the immediately preceding scenario where the load distribution is even, in order to ensure a 60% load during an “*N*” scenario, with the load balanced evenly across all servers, the distribution will be fine as the ratios stay consistent. Looking at the PDC emulator tuning scenario, and in general any scenario where user or application load is unbalanced, the effect is very different:
 
 | System | Tuned Utilization | New LdapSrvWeight | Estimated New Utilization |
 |--|--|--|--|
@@ -604,7 +604,7 @@ As with the previous scenarios, you must collect data during the peak busy perio
 
 There are a few things you should keep in mind when capacity planning for virtualizaiton:
 
-- Many applications use NTLM <!--Acronym--> authentication by default or in certain configurations.
+- Many applications use Network Level Trust Manager (NTLM) authentication by default or in certain configurations.
 - As the number of active clients increases, so does the need for application servers to have more capacity.
 - Clients sometimes keep sessions open for a limited time and instead reconnect on a regular basis for services like email pull sync.
 - Web proxy servers that require authentication for internet access can cause high NTLM load.
@@ -674,7 +674,7 @@ This appendix discusses useful terms and concepts that can help you estimate you
 
 - A *logical processor* is a processor that only has one logical computing engine from the perspective of the operating system.
 
-This includes hyper-threaded, one core on multi-core processor, or a single core processor.
+These definitions include hyper-threaded, one core on multi-core processor, or a single core processor.
 <!--What includes hyper-threaded processors? No clear subject for this sentence.-->
 
 As today's server systems have multiple processors, multiple multi-core processors, and hyper-threading, these definitions are generalized to cover both scenarios. We use the term logical processor because it represents the OS and application perspective of the available computing engines.
@@ -851,11 +851,11 @@ Once you identify the components, you can begin to get an idea of how much data 
 
 Next, let's analyze these items on a compoment-by-component basis.
 
-### The hard drive
+### Hard drive access times
 
 The average 10,000-RPM hard drive has a 7 ms seek time and a 3 ms access time. Seek time is the average amount of time it takes the read or write head to move to a location on the platter. Access time is the average amount of time it takes for the head to read or write the data to disk once it's in the correct location. Therefore, the average time for reading a unique block of data in a 10,000-RPM HD includes both seek and access times for a total of approximately 10 ms, or .010 seconds, per block of data.
 
-When every disk access requires the head move to a new location on the disk, the read or write behavior is called random. When all I/O is random, a 10,000-RPM HD can handle approximately 100 I/O per second (IOPS), based on this formula:
+When every disk access requires the head move to a new location on the disk, the read or write behavior is called random. When all I/O is random, a 10,000-RPM HD can handle approximately 100 I/O per second (IOPS).
 
 1000 ms per second ÷ 10 ms per I/O
 <!--Double check equation format in style guide-->
@@ -867,7 +867,7 @@ When all I/O occurs from adjacent sectors on the hard drive, we call it *sequent
 > [!NOTE]
 > This example doesn't reflect the disk cache where the system typically keeps the data of one cylinder. In this case, the first IO needs 10 ms <!--Of what?--> and the disk reads the whole cylinder. All other sequential I/Os are satisfied by the cache. As a result, in-disk caches might improve sequential I/O performance.
 
-So far, the transfer rate of the hard drive hasn't been relevant to our example. No matter the hard drive size, the actual amount of IOPS the 10,000-RPM HD can handle is always about 100 random or 300 sequential I/Os. As block sizes change based on which application is writing to the drive, the amount of data pulled per IO also changes. For example, if the block size is 8 KB, 100 I/O operations will read from or write to the hard drive a total of 800 KB. However, if the block size is 32 KB, 100 I/O will read or write 3,200 KB (3.2 MB) to the hard drive. If the SCSI transfer rate exceeds the total amount of transferred data, then getting a faster transfer rate doesn't change anything.
+So far, the transfer rate of the hard drive hasn't been relevant to our example. No matter the hard drive size, the actual amount of IOPS the 10,000-RPM HD can handle is always about 100 random or 300 sequential I/Os. As block sizes change based on which application is writing to the drive, the amount of data pulled per IO also changes. For example, if the block size is 8 KB, 100 I/O operations will read from or write to the hard drive a total of 800 KB. However, if the block size is 32 KB, 100 I/O will read or write 3,200 KB (3.2 MB) to the hard drive. If the SCSI transfer rate exceeds the total amount of transferred data, then getting a faster transfer rate doesn't change anything. See the following table:
 
 The following tables give a comparison between...<!--Between what and what? Original text didn't specify.-->
 
@@ -881,7 +881,7 @@ The following tables give a comparison between...<!--Between what and what? Orig
 | Random I/O | 800 KB/s |
 | Sequential I/O | 2400 KB/s |
 
-#### The SCISI backplane (bus)
+#### The SCSI backplane
 
 How the SCSI backplane, which in this example scenario is the ribbon cable, impacts throughput of the storage subsystem depends on block size. How much I/O can the bus handle if the I/O is in 8 KB blocks? In this scenario, the SCSI bus is 20 MBps, or 20480 KB/s. 20480 KB/s divided by 8 KB blocks yields a maximum of approximately 2500 IOPS supported by the SCSI bus.
 
@@ -1087,7 +1087,7 @@ In most scenarios, AD DS is predominantly read I/O with a ratio of 90% read to 1
 
 Under normal operating conditions, your storage planning goal is to minimize wait times for the system to return requests from AD DS to the disk. The number of outstanding and pending I/O operations should be less than or equal to the number of pathways in the disk. For performance monitoring scenarios, we generally recommend that the `LogicalDisk((<NTDS Database Drive>))\Avg Disk sec/Read` counter should be less than 20 ms. You should set the operating threshold much lower, as close to the speed of storage as possible, within a range of two to six milliseconds depending on the type of storage.
 
-The following line graph shows <!--program name--> measurement of the latency withing a storage system.
+The following line graph shows the disk latency measurement within a storage system.
 
 <!--Reformat this image-->
 
