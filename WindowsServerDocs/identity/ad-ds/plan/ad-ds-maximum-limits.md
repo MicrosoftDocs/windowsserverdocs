@@ -4,7 +4,7 @@ description: Recommended limits for creating objects, entries, names, and more i
 author: Heidilohr
 ms.author: helohr
 manager: helohr
-ms.date: 08/23/2024
+ms.date: 08/24/2024
 ms.topic: conceptual
 ---
 
