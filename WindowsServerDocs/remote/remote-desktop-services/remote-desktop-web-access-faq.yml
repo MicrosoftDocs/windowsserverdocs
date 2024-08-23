@@ -41,7 +41,9 @@ sections:
       - question: |
           How do I enable password reset?
         answer: |
-          Windows Server comes with an option to enable remote users to change their password from within the RD Web access interface in case it's expired. **Note**: This option isn’t helpful for users who forgot their password since the old password still needs to be entered before selecting a new password. For forgotten passwords, you must contact your Active Directory administrator. 
+          Windows Server comes with an option to enable remote users to change their password from within the RD Web access interface in case it's expired. 
+          > [!NOTE]
+          > This option isn’t helpful for users who forgot their password since the old password still needs to be entered before selecting a new password. For forgotten passwords, you must contact your Active Directory administrator. 
           
           To set up password reset password for Remote Web access:
 
@@ -60,4 +62,5 @@ sections:
           
             ![A screenshot of the link displayed to change your password.](media/change-password-form.png)
           
-          Note: If the remote server is running in Azure, you need create an endpoint for public port 443 in the Azure management portal so that users can access the RD Web Access portal. 
+          > [!NOTE]
+          > If the remote server is running in Azure, you need create an endpoint for public port 443 in the Azure management portal so that users can access the RD Web Access portal. 
