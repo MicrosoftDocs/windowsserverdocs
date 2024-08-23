@@ -111,7 +111,7 @@
         - name: AD DS Deployment Requirements
           href: ad-ds/plan/AD-DS-Deployment-Requirements.md
         - name: AD DS maximum limits
-          href: ad-ds/plan/ad-ds-maximum-limits.md
+          href: ad-ds/plan/active-directory-domain-services-maximum-limits.md
       - name: Mapping Your Requirements to an AD DS Deployment Strategy
         href: ad-ds/plan/Mapping-Your-Requirements-to-an-AD-DS-Deployment-Strategy.md
         items:
