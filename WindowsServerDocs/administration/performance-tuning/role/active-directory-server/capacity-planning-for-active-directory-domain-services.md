@@ -113,7 +113,7 @@ The following tables list and explain criteria for determining your hardware est
 | RAM | <ul><li>Database size</li><li>Base operating system recommendations</li><li>Third-party applications</li></ul> | <ul><li>Storage is the slowest component in a computer. The more storage that can occupy RAM, the less needs to go to the disk.</li><li>Ensure enough RAM is allocated to store the operating system, Agents (antivirus, backup, monitoring), NTDS Database and growth over time.</li><li>For environments where maximizing the amount of RAM isn't cost effective (such as a satellite location) or not feasible (DIT is too large), reference the Storage section to ensure that storage is properly sized.</li></ul> |
 | Network | <ul><li>“Network Interface(\*)\Bytes Received/sec”</li><li>“Network Interface(\*)\Bytes Sent/sec” | <ul><li>In general, traffic sent from a DC far exceeds traffic sent to a DC.</li><li>As a switched Ethernet connection is full-duplex, inbound and outbound network traffic need to be sized independently.</li><li>Consolidating the number of DCs increases the amount of bandwidth used to send responses back to client requests for each DC, but is close enough to linear for the site as a whole.</li><li>If removing satellite location DCs, don't forget to add the bandwidth for the satellite DC into the hub DCs and use that to evaluate how much WAN traffic there is.</li></ul> |
 | CPU | <ul><li>`Logical Disk(<NTDS Database Drive\>)\Avg Disk sec/Read`</li><li>“Process(lsass)\\% Processor Time”</li></ul> | <ul><li>After eliminating storage as a bottleneck, address the amount of compute power needed.</li><li>While not perfectly linear, the number of processor cores consumed across all servers within a specific scope (such as a site) can be used to gauge how many processors are necessary to support the total client load. Add the minimum necessary to maintain the current level of service across all the systems within the scope.</li><li>Changes in processor speed, including power management related changes, affect numbers derived from the current environment. Generally, it's impossible to precisely evaluate how going from a 2.5 GHz processor to a 3 GHz processor reduces the number of CPUs needed.</li></ul> |
-| NetLogon | <ul><li>“Netlogon(*)\Semaphore Acquires”</li><li>“Netlogon(*)\Semaphore Timeouts”</li><li>“Netlogon(*)\Average Semaphore Hold Time”</li></ul> | <ul><li>Net Logon Secure Channel/MaxConcurrentAPI only affects environments with NTLM authentications and/or PAC Validation. PAC Validation is on by default in operating system versions before Windows Server 2008. This setting is a client setting, so it affects the DCs until you disable it on all client systems.</li><li>Environments with significant cross trust authentication, which includes intra-forest trusts, have greater risk if not sized properly.</li><li>Server consolidations will increase concurrency of cross-trust authentication.</li><li>Surges need to be accommodated, such as cluster fail-overs, as users reauthenticate en masse to the new cluster node.</li><li>Individual client systems (such as a cluster) might need tuning too.</li></ul> |
+| NetLogon | <ul><li>“Netlogon(*)\Semaphore Acquires”</li><li>“Netlogon(*)\Semaphore Timeouts”</li><li>“Netlogon(*)\Average Semaphore Hold Time”</li></ul> | <ul><li>Net Logon Secure Channel/MaxConcurrentAPI only affects environments with NTLM authentications and/or PAC Validation. PAC Validation is on by default in operating system versions before Windows Server 2008. This setting is a client setting, so it affects the DCs until you disable it on all client systems.</li><li>Environments with significant cross trust authentication, which includes intra-forest trusts, have greater risk if not sized properly.</li><li>Server consolidations will increase concurrency of cross-trust authentication.</li><li>Surges need to be accommodated, such as cluster fail-overs, as users reauthenticate en masse to the new cluster node.</li><li>Individual client systems (such as a cluster) might also need tuning.</li></ul> |
 
 ## Planning
 
@@ -197,7 +197,7 @@ Now, let's take a look at what the chart in the `Network Interface(*)\Bytes Sent
 Now that we've reviewed the data, what conclusions can we draw from it?
 
 - The current environment meets the *n* + 1 level of fault tolerance at 60% target utilization. Taking one system offline will shift the bandwidth per server from about 5.5 MBps (44%) to about 7 MBps (56%).
-- Based on the previously stated goal of consolidating to one server, this both exceeds the maximum target utilization and possible utilization of a 100 MB connection.
+- Based on the previously stated goal of consolidating to one server, this change exceeds the maximum target utilization and possible utilization of a 100 MB connection.
 - With a 1 GB connection, this value represents 22% of the total capacity.
 - Under normal operating conditions in the *n* + 1 scenario, the client load is relatively evenly distributed at about 14 MBps per server or 11% of total capacity.
 - To make sure you have enough capacity while a DC is unavailable, the normal operating targets per server would be about 30% network utilization or 38 MBps per server. Failover targets would be 60% network utilization or 72 MBps per server.
@@ -252,7 +252,7 @@ Although capacity is important, it's important to not neglect performance. With 
 
 Compared to when Active Directory first arrived at a time when 4 GB and 9 GB drives were the most common drive sizes, now sizing for Active Directory isn't even a consideration for all but the largest environments. With the smallest available hard drive sizes in the 180 GB range, the entire operating system, SYSVOL, and NTDS.dit can easily fit on one drive. As a result, we recommend you avoid investing too heavily in this area.
 
-Our only recommendation is that you ensure 110% of the NTS.dit size is available in order to enable defrag. Beyond that, you should take the usual considerations in accommodating future growth.
+Our only recommendation is that you ensure 110% of the NTS.dit size is available so you can defragment your storage. Beyond that, you should take the usual considerations in accommodating future growth.
 
 If you are going to evaluate your storage, then first you must evaluate how large the NTDS.dit and SYSVOL need to be. These measurements will help you size both the fixed disk and RAM allocations. Because the components are relatively low cost, you don't need to be super precise when doing the math. For more information about storage evaluation, see [Storage Limits](/previous-versions/windows/it-pro/windows-2000-server/cc961769(v=technet.10)) and [Growth Estimates for Active Directory Users and Organizational Units](/previous-versions/windows/it-pro/windows-2000-server/cc961779(v=technet.10)).
 
@@ -261,7 +261,7 @@ If you are going to evaluate your storage, then first you must evaluate how larg
 
 As you review existing environments with multiple domains, you may notice variations in database sizes. When you spot these variations, use the smallest global catalog (GC) and non-GC sizes.
 
-Database sizes can vary between OS versions. DCs running earlier versions of OSes like Windows Server 2003 have smaller database sizes than one running a later version like Windows Server 2008 R2. The DC having features like Active Directory REcycle Bin or Credential Roaming enabled can also affect database size.
+Database sizes can vary between OS versions. DCs running earlier OS versions like Windows Server 2003 have smaller database sizes than one running a later version like Windows Server 2008 R2. The DC having features like Active Directory REcycle Bin or Credential Roaming enabled can also affect database size.
 
 > [!NOTE]
 >
@@ -300,7 +300,7 @@ The old recommendations about disks assumed that a disk was a dedicated spindle 
 
 Shared storage, such as RAID, SAN, NAS, JBOD, Storage Spaces, and VHD, are capable of being overloaded by other workloads you place on the back-end storage. These types of storage also present an extra challenge: SAN, network, or driver issues between the physical disk and the AD application can cause throttling and delays. To clarify, these aren't bad configurations, but they are more complex, which means you need to pay extra attention to make sure every component is working as intended. For more detailed explanations, see [Appendix C](#appendix-c-how-the-operating-system-interacts-with-storage) and [Appendix D](#appendix-d-storage-troubleshooting-in-environments-where-more-ram-isnt-an-option) later in this article. Also, while SSDs aren't limited by hard drives that can only process one I/O at a time, they still have I/O limitations that can be overloaded.
 
-In summary, the goal of all storage performance planning, regardless of storage architecture, is to ensure that the needed amount of I/Os is always available and that they happen within an acceptable timeframe. For scenarios with locally attached storage, see [Appendix C](#appendix-c-how-the-operating-system-interacts-with-storage) for more information about design and planning. You can apply the principles in the appendix to more complex storage scenarios, as well as conversations with vendors supporting your back-end storage solutions.
+In summary, the goal of all storage performance planning, regardless of storage architecture, is to ensure that the needed number of I/Os is always available and that they happen within an acceptable timeframe. For scenarios with locally attached storage, see [Appendix C](#appendix-c-how-the-operating-system-interacts-with-storage) for more information about design and planning. You can apply the principles in the appendix to more complex storage scenarios, as well as conversations with vendors supporting your back-end storage solutions.
 
 Due to how many storage options are available today, we recommend you consult your hardware support teams or vendors while planning to ensure the solution meets the needs of your AD DS deployment. During these conversations, you may find the following performance counters helpful, especially when your database is too large for your RAM:
 
@@ -345,7 +345,7 @@ Much like the previous sections, our goal here is to make sure the shared infras
 
 From the perspective of a guest user, having to go through a host to access any storage impacts performance, as the user must travel down additional code paths to gain access. Performance testing indicates virtualizing impacts throughput based on how much of the processor the host system utilizes. Processor utilization is also influenced by how many resources the guest user demands of the host. This demand contributes to the [Virtualization considerations for processing](#virtualization-considerations-for-processing) you should take for processing needs in virtualized scenarios. For more information, see [Appendix A](#appendix-a-cpu-sizing-criteria).
 
-Further complicating matters is the huge number of currently available storage options, each with wildly different performance impacts. These options include pass-through storage, SCSI adapters, and IDE. When migrating from a physical to a virtual environment, you should adjust for different storage options for virtualized guest users by using a multiplier of 1.10. However, you don't need to consider adjustments when transferring between different storage scenarios, as whether the storage is local, SAN, NAS, or iSCSI matters more.
+Further complicating matters is how many storage options are currently available, each with wildly different performance impacts. These options include pass-through storage, SCSI adapters, and IDE. When migrating from a physical to a virtual environment, you should adjust for different storage options for virtualized guest users by using a multiplier of 1.10. However, you don't need to consider adjustments when transferring between different storage scenarios, as whether the storage is local, SAN, NAS, or iSCSI matters more.
 
 #### Virtualization calculation example
 
@@ -396,7 +396,7 @@ For most environments, managing processing capacity is the component that deserv
 - Do the applications in your environment behave as intended within a shared services infrastructure based on the criteria outlined in [Tracking expensive and inefficient searches](/previous-versions/ms808539(v=msdn.10)#tracking-expensive-and-inefficient-searches)? In larger environments, poorly coded applications can make the CPU load become volatile, take an inordinate amount of CPU time at the expense of other applications, drive up capacity needs, and unevenly distribute load against the DCs.
 - AD DS is a distributed environment with many potential clients whose processing needs vary widely. Estimated costs for each client can vary due to usage patterns and how many applications are using AD DS. Much like in [Network](#network), you should approach estimating as an evaluation of total needed capacity in the environment instead of looking at each client one at a time.
 
-You should only make this estimate after you've completed your [storage](#storage) estimate, as you won't be able to make an accurate guess without valid data about your processor load. It's also important to make sure any bottlenecks aren't being caused by storage before troubleshooting the processor. As you remove processor wait states, CPU utilization increases because it no longer needs to wait on the data. Therefore, the performance counters you should pay the most attention to are `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read`and `Process(lsass)\ Processor Time`. If the `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read` counter is over 10 or 15 milliseconds, then the data in `Process(lsass)\ Processor Time` is artificially low and the issue is related to storage performance. We recommend you set sample intervals to 15, 30, or 60 minutes for the most accurate data possible.
+You should only make this estimate after you've completed your [storage](#storage) estimate, as you won't be able to make an accurate guess without valid data about your processor load. It's also important to make sure any bottlenecks aren't being caused by storage before troubleshooting the processor. As you remove processor wait states, CPU utilization increases because it no longer needs to wait on the data. Therefore, the performance counters you should pay the most attention to are `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read` and `Process(lsass)\ Processor Time`. If the `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read` counter is over 10 or 15 milliseconds, then the data in `Process(lsass)\ Processor Time` is artificially low and the issue is related to storage performance. We recommend you set sample intervals to 15, 30, or 60 minutes for the most accurate data possible.
 
 ### Processing overview
 
@@ -421,7 +421,7 @@ For the first example, we're making the following assumptions:
 
 Now, let's take a look at the `(Processor Information(_Total)\% Processor Utility)` chart, for each of the DCs, as shown in the following image.
 
-![CPU usage chart](media/capacity-planning-considerations-cpu-chart.png)
+:::image type="content" source="media/capacity-planning-considerations-cpu-chart.png" alt-text="A screenshot of the CPU usage chart for each domain controller.":::
 
 - The load is relatively evenly distributed, which is what we'd expect when clients use the DC locator and well-written searches.
 - In several five-minute intervals, there are spikes at 10%, sometimes even 20%. However, unless these spikes cause the CPU usage to exceed the capacity plan target, you don't need to investigate them.
@@ -438,17 +438,17 @@ In this example, we have two DCs running at 40%. One domain controller goes offl
 
 ### Calculating CPU demands
 
-The `Process\% Processor Time` performance counter tracks the total amount of time all application threads spend on the CPU, then divides that sum by the total amount of system time that's passed. A mutli-threaded application on a multi-CPU system can exceed 100% CPU time, and you'd interpret its data very differently than the `Processor Information\% Processor Utility` counter. In practice, the `Process(lsass)\% Processor Time` counter tracks how many CPUs running at 100% the system requires to support a process' demands. For example, if the counter has a value of 200%, that means the system needs two CPUs running at 100% to support the full AD DS load. Although a CPU running at 100% capacity is the most cost-efficient in terms of power and energy consumption, for reasons outlined in [Appendix A](#appendix-a-cpu-sizing-criteria), a multi-threaded system is more responsive when its system isn't running on 100%.
+The `Process\% Processor Time` performance counter tracks the total amount of time all application threads spend on the CPU, then divides that sum by the total amount of system time that's passed. A mutlithreaded application on a multi-CPU system can exceed 100% CPU time, and you'd interpret its data very differently than the `Processor Information\% Processor Utility` counter. In practice, the `Process(lsass)\% Processor Time` counter tracks how many CPUs running at 100% the system requires to support a process' demands. For example, if the counter has a value of 200%, that means the system needs two CPUs running at 100% to support the full AD DS load. Although a CPU running at 100% capacity is the most cost-efficient in terms of power and energy consumption, for reasons outlined in [Appendix A](#appendix-a-cpu-sizing-criteria), a multithreaded system is more responsive when its system isn't running on 100%.
 
 To accommodate transient spikes in client load, we recommend you target a peak period CPU between 40% and 60% of system capacity. For example, in the first example in [Target site behavior profile](#target-site-behavior-profile), you'd need between 3.33 CPUs (60% target) and 5 CPUs (40% target) to support the AD DS load. You should add extra capacity according to the demands of the OS and any other required agents, such as antivirus, backup, monitoring, and so on. Although you should evaluate the impact of agents on CPU agents on a per-environment basis, generally you can allot between 5% and 10% for agent processes on a single CPU. To revisit our example, we would need between 3.43 (60% target) and 5.1 (40% target) CPUs to support load during peak periods.
 
-Now, let's take a look at an example of calculating for a specific process. In this case, we're looking at the lsass process.
+Now, let's take a look at an example of calculating for a specific process. In this case, we're looking at the LSASS process.
 
-#### Calculating CPU usage for the lsass process
+#### Calculating CPU usage for the LSASS process
 
 In this example, the system is an *N* + 1 scenario where one server carries the AD DS load while an extra server is there for redundancy.
 
-The following chart shows the processor time for the lsass process over all processors for this example scenario. This data was gathered from the `Process(lsass)\% Processor Time` performance counter.
+The following chart shows the processor time for the LSASS process over all processors for this example scenario. This data was gathered from the `Process(lsass)\% Processor Time` performance counter.
 
 :::image type="content" source="media/capacity-planning-considerations-proc-time-chart.png" alt-text="A screenshot of the time chart for the Process LSASS Processor Time performance counter across all processors.":::
 
@@ -461,7 +461,7 @@ Here's what this chart tells us about the scenario environment:
   > All performance data is historical. The peak data point at 9:15 AM indicates the load from 9:00 AM to 9:15 AM.
 - Spikes before 7:00 AM could indicate extra load from different time zones or background infrastructure activity, such as backups. However, since this spike is lower than peak activity at 9:30 AM, it's not a cause for concern.
 
-At maximum load, the lsass process consumes around 4.85 CPUs running at 100%, which would be 485% on a single CPU. These results suggest the scenario site needs about 12/25 CPUs to handle AD DS. When you bring in the recommended 5% to 10% extra capacity for background processes, that means the server needs 12.30 to 12.25 CPUs to support its current load. Estimates anticipating future growth make this number even higher.
+At maximum load, the lsass process consumes around 4.85 CPUs running at 100%, which would be 485% on a single CPU. These results suggest the scenario site needs about 12/25 CPUs to handle AD DS. When you bring in the recommended 5% to 10% extra capacity for background processes, the server needs 12.30 to 12.25 CPUs to support its current load. Estimates anticipating future growth make this number even higher.
 
 ### When to tune LDAP weights
 
@@ -496,7 +496,7 @@ When you have servers with different CPU counts and speeds in the same site, you
 | 4-CPU DC 2 | 40 | 100 | 30% |
 | 8-CPU DC 3 | 20 | 200 | 30% |
 
-Planning for an “*N* + 1” scenario is of paramount importance. The impact of one DC going offline must be calculated for every scenario. In the immediately preceding scenario where the load distribution is even, in order to ensure a 60% load during an “*N*” scenario, with the load balanced evenly across all servers, the distribution is fine as the ratios stay consistent. Looking at the PDC emulator tuning scenario, and in general any scenario where user or application load is unbalanced, the effect is very different:
+Planning for an “*N* + 1” scenario is of paramount importance. The impact of one DC going offline must be calculated for every scenario. In the immediately preceding scenario where the load distribution is even, in order to ensure a 60% load during an “*N*” scenario, with the load balanced evenly across all servers, the distribution is fine as the ratios stay consistent. When you look at the PDC emulator tuning scenario, or any general scenario where user or application load is unbalanced, the effect is very different:
 
 | System | Tuned Utilization | New LdapSrvWeight | Estimated New Utilization |
 |--|--|--|--|
@@ -508,9 +508,9 @@ Planning for an “*N* + 1” scenario is of paramount importance. The impact of
 
 When you're capacity planning for a virtualized environment, there are two levels you need to consider: the host level and the guest level. At the host level, you must identify the peak periods of your business cycle. Because scheduling guest threads on the CPU for a virtual machine is similar to getting AD DS threads on the CPU for a physical machine, we still recommend you use 40% to 60% of the underlying host. At the guest level, because the underlying thread scheduling principles are unchanged, we also still recommend you keep CPU usage within the 40% to 60% range.
 
-In a direct-mapped scenario with one guest per host, you must bring in all capacity planning estimates you've done in the previous sections in order to make your estimate. For a shared host scenario, there's about 10% impact on the efficiency of the underlying processors, which means if a site needs 10 CPUs at a target of 40%, the recommended amount of virtual CPUs you should allocate across all *N* guests would be 11. In sites with mixed distributions of physical and virtual servers, this modifier only applies to the virtual machines (VMs). For example, in an *N* + 1 scenario, one physical or direct-mapped server with 10 CPUs is almost equal to one guest with 11 CPUs on a host with 11 more CPUs reserved for the DC.
+In a direct-mapped scenario with one guest per host, you must bring in all capacity planning estimates you've done in the previous sections in order to make your estimate. For a shared host scenario, there's about 10% impact on the efficiency of the underlying processors, which means if a site needs 10 CPUs at a target of 40%, the recommended number of virtual CPUs you should allocate across all *N* guests would be 11. In sites with mixed distributions of physical and virtual servers, this modifier only applies to the virtual machines (VMs). For example, in an *N* + 1 scenario, one physical or direct-mapped server with 10 CPUs is almost equal to one guest with 11 CPUs on a host with 11 more CPUs reserved for the DC.
 
-While you're analyzing and calculating how many CPUs you need to support AD DS load, keep in mind that if you plan to purchase physical hardware, the types of hardware available on the market may not map exactly to your estimates. With virtualization, that isn't a problem. It decreases the effort needed for you to add compute capacity to a site, as you can add as many CPUs with the exact specifications you want to a VM. However, virtualization doesn't eliminate your responsibility to accurately evaluate how much compute power you need to guarantee your underlying hardware is available when guests need more CPU. As always, remember to plan ahead for growth.
+While you're analyzing and calculating how many CPUs you need to support AD DS load, keep in mind that if you plan to purchase physical hardware, the types of hardware available on the market may not map exactly to your estimates. However, you don't have that problem when you use virtualization. Using VMs decreases the effort needed for you to add compute capacity to a site, as you can add as many CPUs with the exact specifications you want to a VM. However, virtualization doesn't eliminate your responsibility to accurately evaluate how much compute power you need to guarantee your underlying hardware is available when guests need more CPU. As always, remember to plan ahead for growth.
 
 ### Virtualization calculation summary example
 
@@ -518,8 +518,8 @@ While you're analyzing and calculating how many CPUs you need to support AD DS l
 |--|--|--|
 | DC 1 | 120% |
 | DC 2 | 147% |
-| Dc 3 | 218% |
-| Total CPU being used | 485% |
+| DC 3 | 218% |
+| Total CPU usage | 485% |
 
 | Target system(s) count | Total bandwidth (from above) |
 |--|--|
@@ -620,7 +620,7 @@ Data-level parallelism is when a service shares data across many threads for the
 
 ### CPU speed versus multiple-core considerations
 
-Generally, faster logical processors reduce the time required to process a series of instructions. More logical processors means you can run more tasks at the same time. However, these rules don't apply in scenarios that are more complex, such as fetching data from shared memory, waiting on data-level parallelism, and the overhead of managing multiple threads at once. As a result, scalability in multi-core systems isn't linear.
+Generally, faster logical processors reduce the time required to process a series of instructions. More logical processors mean you can run more tasks at the same time. However, these rules don't apply in scenarios that are more complex, such as fetching data from shared memory, waiting on data-level parallelism, and the overhead of managing multiple threads at once. As a result, scalability in multi-core systems isn't linear.
 
 To understand why this change happens, it helps to think of these scenarios like a highway. Each thread is an individual car, each lane is a core, and the speed limit is the clock speed.
 
@@ -628,7 +628,7 @@ If there's only one car on the highway, it doesn't matter if there are two or 12
 
 If the data the thread needs isn't immediately available, then the thread can't process instructions until it fetches the relevant data from memory. It's like if a segment of the highway is shut down. Even if there's only one car on the highway, the speed limit won't affect its ability to travel, because it can't go anywhere until the road is reopened.
 
-As the number of cars increases, the overhead the highway needs to manage the number of cars also increases. Drivers need to focus harder when driving on the highway during rush hour traffic as opposed to the late evening when the road is mostly empty. Also, driving on a two-lane highway where you only need to worry about one other lane requires less focus than driving on a six-lane highway where you have five other lanes of traffic to pay attention to.
+As the number of cars increases, the overhead that the highway needs to manage the number of cars also increases. Drivers need to focus harder when driving on the highway during rush hour traffic as opposed to the late evening when the road is mostly empty. Also, driving on a two-lane highway where you only need to worry about one other lane requires less focus than driving on a six-lane highway where you have five other lanes of traffic to pay attention to.
 
 In summary, questions about whether you should add more or faster processors become highly subjective and should be considered on a case-by-case basis. For AD DS in particular, its processing needs depend on environmental factors and can vary from server to server within a single environment. As a result, the earlier sections in this article didn't invest heavily on making super precise calculations. When you make budget-driven buying decisions, we recommend you first optimize processor usage at either 40% or whichever number your specific environment requires. If your system isn't optimized, then you don't benefit as much from buying additional processors.
 
@@ -651,16 +651,16 @@ Based on this estimate, we can observe that after 50% CPU load, the average wait
 
 To understand how queuing theory applies to your AD DS deployment, let's return to the highway metaphor we used in [CPU speed versus multiple-core considerations](#cpu-speed-versus-multiple-core-considerations).
 
-Busier times in the mid-afternoon would fall somewhere into the 40% to 70% capacity range. There's enough traffic that your ability to choose a lane to drive in isn't majorly restricted. While the chance of another driver getting in your way is high, it doesn't require the same level of effort you'd need to find a safe gap between other cars in the lane as during rush hour.
+Busier times in the mid-afternoon would fall somewhere into the 40% to 70% capacity range. There's enough traffic that your ability to choose a lane to drive in isn't severely restricted. While the chance of another driver getting in your way is high, it doesn't require the same level of effort you'd need to find a safe gap between other cars in the lane as during rush hour.
 
 As rush hour approaches, the road system approaches 100% capacity. Changing lanes during rush hour becomes very challenging because cars are so close together that you don't have as much room to maneuver when changing lanes.
 
-This is why estimating longterm averages for capacity at 40% allows for more headroom for abnormal load spikes, whether those spikes are transitory, such as with poorly-coded queries that take a while to run, or abnormal bursts in general load, like the spike in activity the morning after a holiday weekend.
+This is why estimating long term averages for capacity at 40% allows for more headroom for abnormal load spikes, whether those spikes are transitory, such as with poorly coded queries that take a while to run, or abnormal bursts in general load, like the spike in activity the morning after a holiday weekend.
 
 The previous statement regards the percentage of processor time calculation as being the same as the utilization law equation. This simplified version is meant to introduce the concept to new users. However, for more advanced math, you can use the following references as a guide:
 
 - Translating the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10))
-  - *B* = The number of 100-ns intervals Idle thread spends on the logical processor. The change in the *X* variable in the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10)) calculation
+  - *B* = The number of 100-ns intervals that Idle thread spends on the logical processor. The change in the *X* variable in the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10)) calculation
   - *T* = the total number of 100-ns intervals in a given time range. The change in the *Y* variable in the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10)) calculation.
   - *U* k = The utilization percentage of the logical processor by the Idle Thread or % Idle Time.
 - Working out the math:
@@ -688,7 +688,7 @@ There are also other areas in the system that are much slower than the logical p
 - Resolving disk-bound issues can mean that threads previously stuck in waiting state stop being stuck, creating more competition for CPU time. As a result, the 90% utilization will go to 100%. You need to tune both components in order to bring utilization back down to manageable levels.
   
   > [!NOTE]
-  > The `Processor Information(*)\% Processor Utility` counter can exceed 100% with systems that have a Turbo mode. Turbo mode lets the CPU exceeds the rated processor speed for short periods. If you need more information, look at the CPU manufacturers' documentation and counter descriptions.
+  > The `Processor Information(*)\% Processor Utility` counter can exceed 100% with systems that have a Turbo mode. Turbo mode lets the CPU exceed the rated processor speed for short periods. If you need more information, look at the CPU manufacturers' documentation and counter descriptions.
 
 Discussing whole-system utilization considerations also involves domain controllers as virtualized guests. [Response time and how system activity levels impact performance](#response-time-and-how-system-activity-levels-impact-performance) applies to both host and guest in a virtualized scenario. In a host with only one guest, a DC or system has almost the same performance as it would on physical hardware. Adding more guests to the hosts increases the utilization of the underlying host, also increasing wait times to get access to the processors. Therefore, you must manage logical processor utilization at both host and guest levels.
 
@@ -708,7 +708,7 @@ Based on the previous examples, you can see that there are many scenarios betwee
 In [Processing](#processing), we assumed that the processor is running at 100% clock speed while you collect data, and that any replacement systems have the same processing speed. Despite these assumptions not being accurate, especially for Windows Server 2008 R2 and later, where the default power plan is Balanced, these assumptions still work for conservative estimates. While potential errors may increase, it only increases the margin of safety as processor speeds increase.
 
 - For example, in a scenario that demands 11.25 CPUs, if the processors ran at half speed when you collected your data, the more accurate estimate of their demand would be 5.125 ÷ 2.
-- It's impossible to guarantee that doubling clock speed doubles the amount of processing that happens within the recorded time period. The amount of time processors spend waiting on RAM or other components stays roughly the same. Therefore, faster processors might spend a greater percentage of time idle while waiting for the system to fetch data. We recommend you stick with the lowest common denominator, keep your estimates conservative, and avoid assuming a linear comparison between processor speeds that could make your results inaccurate.
+- It's impossible to guarantee that doubling clock speed doubles the amount of processing that happens within the recorded time period. The amount of time that processors spend waiting on RAM or other components stays roughly the same. Therefore, faster processors might spend a greater percentage of time idle while waiting for the system to fetch data. We recommend you stick with the lowest common denominator, keep your estimates conservative, and avoid assuming a linear comparison between processor speeds that could make your results inaccurate.
 
 If processor speeds in your replacement hardware are lower than your current hardware, you should proportionally increase the estimate of how many processors you need. For example, let's look at a scenario where you calculate you need 10 processors to sustain your site's load. The current processors run at 3.3 GHz, and the processors you plan to replace them with run at 2.6 GHz. Replacing only the 10 original processors would give you a 21% decrease in speed. To increase speed, you need to get at least 12 processors instead of 10.
 
@@ -741,7 +741,7 @@ To adjust estimates for different processors, we recommend you use the SPECint_r
 
 ## Appendix C: How the operating system interacts with storage
 
-The queuing theory concepts we discussed in [Response time and how system activity levels impact performance](#response-time-and-how-system-activity-levels-impact-performance) also apply to storage. You need to be familiar with how your OS handles I/O in order to apply these concepts effectively. In Windows OSes, the OS creates a queue that holds I/O requests for each physical disk. However, a physical disk isn't necessarily a single disk. The OS can also register an aggregation of spindles on an array controller or SAN as a physical disk. Array controllers and SANs can also aggregate multiple disks into an single array set, split it into multiple partitions, then use each partition as a physical disk, as shown in the following image.
+The queuing theory concepts we discussed in [Response time and how system activity levels impact performance](#response-time-and-how-system-activity-levels-impact-performance) also apply to storage. You need to be familiar with how your OS handles I/O in order to apply these concepts effectively. In Windows OSes, the OS creates a queue that holds I/O requests for each physical disk. However, a physical disk isn't necessarily a single disk. The OS can also register an aggregation of spindles on an array controller or SAN as a physical disk. Array controllers and SANs can also aggregate multiple disks into a single array set, split it into multiple partitions, then use each partition as a physical disk, as shown in the following image.
 
 :::image type="content" source="media/capacity-planning-considerations-block-spindles.png" alt-text="A diagram showing two block spindles divided by a partition. Each block has two rectangles inside of it labeled Data 1 and Data 2 that represent the data it stores.":::
 
@@ -758,7 +758,7 @@ Now that we've clarified what defines a physical disk, you should also get famil
 
 ### Operating system architecture considerations
 
-The OS creates a First In, First Out (FIFO) I/O queue for each disk it registers. These disks can be spindles, arrays, or array partitions. When it comes to how the OS handles I/O, the more active queues, the better. When the OS serializes the FIFO queue, it must process all FIFO I/O requests issued to the storage subsystem in order of arrival. By correlating each disk with a spindle or array, the OS maintains an I/O queue for each unique set of disks, eliminating competition for scarce I/O resources across disks and isolating I/O demand to a single disk. However, Windows Server 2008 introduced an exception in the form of *I/O prioritization*. Applications designed to use low priority I/O are moved to the back of the queue no matter when the OS received them. Applications not specifically coded to use the low priority setting default to normal priority instead.
+The OS creates a First In, First Out (FIFO) I/O queue for each disk it registers. These disks can be spindles, arrays, or array partitions. When it comes to how the OS handles I/O, the more active queues, the better. When the OS serializes the FIFO queue, it must process all FIFO I/O requests issued to the storage subsystem in order of arrival. When the OS correlates each disk with a spindle or array, it maintains an I/O queue for each unique set of disks, eliminating competition for scarce I/O resources across disks and isolating I/O demand to a single disk. However, Windows Server 2008 introduced an exception in the form of *I/O prioritization*. Applications designed to use low priority I/O are moved to the back of the queue no matter when the OS received them. Applications not specifically coded to use the low priority setting default to normal priority instead.
 
 ### Introducing simple storage subsystems
 
@@ -782,7 +782,7 @@ The average 10,000-RPM hard drive has a 7 ms seek time and a 3 ms access time. S
 
 When every disk access requires the head move to a new location on the disk, the read or write behavior is called random. When all I/O is random, a 10,000-RPM HD can handle approximately 100 I/O per second (IOPS).
 
-When all I/O occurs from adjacent sectors on the hard drive, we call it *sequential I/O*. Sequential I/O has no seek time because, after the first I/O finishes, the read or write head is at the start of where the hard drive is storing the next data block. For example, a Thus a 10,000-RPM HD is capable of handling approximately 333 I/O per second, based on the following equation:
+When all I/O occurs from adjacent sectors on the hard drive, we call it *sequential I/O*. Sequential I/O has no seek time because, after the first I/O finishes, the read or write head is at the start of where the hard drive is storing the next data block. For example, a 10,000-RPM HD is capable of handling approximately 333 I/O per second, based on the following equation:
 
 1000 ms per second ÷ 3 ms per I/O
 
@@ -840,11 +840,11 @@ A 66 MHz 64-bit PCI bus can support a theoretical maximum of 528 MBps based on t
 
 64 bits ÷ 8 bits per byte × 66 Mhz = 528 MBps
 
-Adding any other device, such as a network adapter or a second SCSI controller, reduces bandwidth available to the system, as all devices share the bandwidth and can compete with each other for limited processing resources.
+When you add any other device, such as a network adapter or a second SCSI controller, it reduces bandwidth available to the system, as all devices share the bandwidth and can compete with each other for limited processing resources.
 
 #### Analyzing storage subsystems to find bottlenecks
 
-In this scenario, the spindle is the limiting factor for how much I/O you can request. As a result, this bottleneck also limits how much data the system can transmit. Because our example is an AD DS scenario, the amount of transmittable data is 100 random I/O per second in 8 KB increments, for a total of 800 KB per second when you access the Jet database. In contrast, the maximum throughput for a spindle you configure to exclusively allocate to log files would be limited to 300 sequential I/O per second in 8 KB installments, totalling at 2,400 KB or 2.4 MB per second.
+In this scenario, the spindle is the limiting factor for how much I/O you can request. As a result, this bottleneck also limits how much data the system can transmit. Because our example is an AD DS scenario, the amount of transmittable data is 100 random I/O per second in 8 KB increments, for a total of 800 KB per second when you access the Jet database. In contrast, the maximum throughput for a spindle you configure to exclusively allocate to log files would be limited to 300 sequential I/O per second in 8 KB installments, totaling at 2,400 KB or 2.4 MB per second.
 
 Now that we've analyzed the components of our example configuration, let's look at a table that demonstrates where bottlenecks can happen as we add and change components in the storage subsystem.
 
@@ -882,7 +882,7 @@ A scenario using both RAID 1 and RAID 0 behaves exactly like RAID 1 in the cost 
 
 *Maximum IOPS per spindle* × 2 spindles × [(*% Reads* + *% Writes*) ÷ (*% Reads* + 2 × *% Writes*)] = *Total I/O*
 
-in a RAID 1 set, when you stripe *N* number of RAID 1 sets, the total I/O your array can process becomes *N* × I/O per RAID 1 set:
+In a RAID 1 set, when you stripe *N* number of RAID 1 sets, the total I/O your array can process becomes *N* × I/O per RAID 1 set:
 
 *N* × {*Maximum IOPS per spindle* × 2 spindles × [(*% Reads* + *% Writes*) ÷ (*% Reads* + 2 × *% Writes*)]} = *Total IOPS*
 
@@ -924,7 +924,7 @@ Also, because your capacity planning only considers periods of peak usage, you s
 
 When you analyze the behavior of the SCSI or Fibre Channel hard drive, you should analyze it according to the principles we outlined in previous sections. Despite each protocol having their own advantages and disadvantages, the main thing that limits performance on a per-disk basis is the mechanical limitations of the hard drive.
 
-When you analyze the channel on the storage unit, you should take the same approach you did when calculating how many resources were available on the SCSI bus: divide the bandwidth by the block size. For example, if your storage unit has six channels that each support a 20 MBps maximum transfer rate, your total amount of available I/O and data transfer is 100 MBps. The reason the total is 100 MBps instead of 120 MBps is because the storage channel total throughput shouldn't exceed the amount of throughput it would use if one of the channels were to suddenly turn off, leaving it with only five functioning channels. Of course, this example also assumes that the system is evenly distributing load and fault tolerance across all channels.
+When you analyze the channel on the storage unit, you should take the same approach you did when calculating how many resources were available on the SCSI bus: divide the bandwidth by the block size. For example, if your storage unit has six channels that each support a 20 MBps maximum transfer rate, your total amount of available I/O and data transfer is 100 MBps. The reason the total is 100 MBps instead of 120 MBps is because the storage channel total throughput shouldn't exceed the amount of throughput it would use if one of the channels suddenly turned off, leaving it with only five functioning channels. Of course, this example also assumes that the system is evenly distributing load and fault tolerance across all channels.
 
 Whether you can turn the previous example into an I/O profile depends on the application behavior. For Active Directory Jet I/O, the maximum value would be approximately 12,500 I/O per second, or 100 MBps ÷ 8 KB per I/O.
 
@@ -950,7 +950,7 @@ Caches are one of the components that can significantly impact overall performan
 
 ### SSD considerations
 
-Solid state drives (SSDs) are fundamentally different than spindle-based hard disks. SSDs can handle higher volumes of I/O with lower latency. While SSDs can be expensive on a cost-per-Gigabyte basis, they're very cheap in terms of cost-per-I/O. However, capacity planning with SSDs involves asking yourself the same questions that you would about spindles: how many IOPS can it handle and and what is the latency of those IOPS?
+Solid state drives (SSDs) are fundamentally different than spindle-based hard disks. SSDs can handle higher volumes of I/O with lower latency. While SSDs can be expensive on a cost-per-Gigabyte basis, they're very cheap in terms of cost-per-I/O. However, capacity planning with SSDs involves asking yourself the same questions that you would ask about spindles: how many IOPS can they handle and and what is the latency of those IOPS?
 
 Here are some things you should consider when planning for SSDs:
 
@@ -988,9 +988,9 @@ The *cold cache* state is when you initially reboot the domain controller or res
 
 For both cache scenarios, the most important thing is how fast storage can move data from disk to memory. When you warm the cache, over time performance improves as queries reuse data, the cache hit rate increases, and the frequency of going to the disk to retrieve data decreases. As a result, adverse performance impacts from having to go to the disk also decrease. Any performance degradations are temporary and usually go away when the cache reaches its warm state and the maximum size the system allows.
 
-You can measure how quickly the system can get data from the disk by measuring the available IOPS in Active Directory. How many available IOPS there are is also subject to to how many IOPS are available in the underlying storage. From a planning perspective, because warming the cache and backup or restore states are exceptional events that usually occur off peak hours and are subject to DC load, we can't give general recommendations beyond only entering these states during off-peak hours.
+You can measure how quickly the system can get data from the disk by measuring the available IOPS in Active Directory. How many available IOPS there are is also subject to how many IOPS are available in the underlying storage. From a planning perspective, because warming the cache and backup or restore states are exceptional events that usually occur off peak hours and are subject to DC load, we can't give general recommendations beyond only entering these states during off-peak hours.
 
-In most scenarios, AD DS is predominantly read I/O with a ratio of 90% read to 10% write. Read I/O is the typical bottleneck for user experience, while write I/O is the bottleneck that degrades write performance. Caches tend to provide minimal benefit to read I/O because I/O operations for the NTDS.dit file are predominantly random. Therefore, your main priority is to make sure you configure the read I/O profile storage correctly.
+In most scenarios, AD DS is predominantly read I/O with a ratio of 90% read to 10% write. Read I/O is the typical bottleneck for user experience, while write I/O is the bottleneck that degrades write performance. Caches tend to provide minimal benefit to read I/O because I/O operations for the NTDS.dit file are predominantly random. Therefore, your main priority is to make sure you correctly configure the read I/O profile storage.
 
 Under normal operating conditions, your storage planning goal is to minimize wait times for the system to return requests from AD DS to the disk. The number of outstanding and pending I/O operations should be less than or equal to the number of pathways in the disk. For performance monitoring scenarios, we generally recommend that the `LogicalDisk((<NTDS Database Drive>))\Avg Disk sec/Read` counter should be less than 20 ms. You should set the operating threshold much lower, as close to the speed of storage as possible, within a range of two to six milliseconds depending on the type of storage.
 
