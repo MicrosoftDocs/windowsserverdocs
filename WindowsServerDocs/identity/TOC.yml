@@ -110,8 +110,6 @@
           href: ad-ds/plan/AD-DS-Design-Requirements.md
         - name: AD DS Deployment Requirements
           href: ad-ds/plan/AD-DS-Deployment-Requirements.md
-        - name: AD DS maximum limits
-          href: ad-ds/plan/active-directory-domain-services-maximum-limits.md
       - name: Mapping Your Requirements to an AD DS Deployment Strategy
         href: ad-ds/plan/Mapping-Your-Requirements-to-an-AD-DS-Deployment-Strategy.md
         items:
@@ -474,7 +472,7 @@
       - name: Group Managed Service Accounts
         href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
         items:
-        - name: Getting started with Group Managed Service Accounts
+        - name: Get started with group Managed Service Accounts
           href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           items:
           - name: Create the Key Distribution Services KDS Root Key
