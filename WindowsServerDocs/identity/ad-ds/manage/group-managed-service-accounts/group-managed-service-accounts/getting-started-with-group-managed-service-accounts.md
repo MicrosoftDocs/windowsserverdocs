@@ -297,13 +297,13 @@ The following example removes member hosts from an existing server farm `ITFarm1
 Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
 ```
 
-### Remove a gMSA from the system
+### Remove gMSA from the system
 
 Remove the cached gMSA credentials from the member host using `Uninstall-ADServiceAccount` or the `NetRemoveServiceAccount` API on the host system.
 
 Membership in *Administrators*, or equivalent, is the minimum required to complete these procedures.
 
-### Remove a gMSA using PowerShell
+### Remove gMSA using PowerShell
 
 1. On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
 
