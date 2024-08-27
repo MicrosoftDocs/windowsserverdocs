@@ -45,11 +45,10 @@ DC location in Windows can operate in two basic modes:
 
   This mode is supported only when you use DNS domain names and your domain controllers are running Windows 2000 and later. Supported domain controllers run more optimally in this mode but can change to the other mode in certain scenarios.
 
-- **NetBIOS-based discovery** involves domain controllers registering records in [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top). Clients query WINS for the appropriate records, followed by pinging the possible target candidate DCs.
+- **NetBIOS-based discovery** involves domain controllers registering records in [Windows Internet Name Service (WINS)](/windows-server/networking/technologies/wins/wins-top). Clients query WINS for the appropriate records, followed by pinging the possible target candidate DCs. A variant of this mode uses a broadcast mechanism supported by [mailslot messages](/windows/win32/ipc/about-mailslots) where the client broadcasts packets on its local network to look for DCs.
 
-  A variant of this mode uses a broadcast mechanism supported by [mailslot messages](/windows/win32/ipc/about-mailslots) where the client broadcasts packets on its local network to look for DCs. This mode is supported with legacy Windows NT 4 and earlier domain controllers, and it works only when you use short NetBIOS domain names.
-
-When an application requests a DC but specifies a short NetBIOS-style domain name, DC location always tries to map that short domain name to a DNS domain name. If DC location can map the domain names successfully, it uses DNS-based discovery with the mapped DNS domain name.
+> [!IMPORTANT]
+> When an application requests a DC but specifies a short NetBIOS-style domain name, DC location always tries to map that short domain name to a DNS domain name. If DC location can map the domain names successfully, it uses DNS-based discovery with the mapped DNS domain name.
 
 NetBIOS-style domain names are mapped to DNS domain names from multiple sources in the following order:
 
@@ -58,8 +57,6 @@ NetBIOS-style domain names are mapped to DNS domain names from multiple sources 
 1. All domains in the current forest
 
 1. Top-level names (TLNs) for all trusting forest trusts and external trusts
-
-<!-- I wasn't sure about this format for the Windows Server 2025 and later please review, possible with Jay -->
 
 1. For Windows Server 2025 and later:
 
@@ -162,7 +159,7 @@ After the client has established a communications path to the domain controller,
 
 The client establishes an LDAP connection to a domain controller to sign in. The sign in process uses Security Accounts Manager. The communications path uses the LDAP interface and the client is authenticated by a domain controller. After that, the client account is verified and passed through Security Accounts Manager to the directory service agent, then to the database layer, and finally to the database in the Extensible Storage engine (ESE).
 
-## DC Locator mapping
+## Configuring NetBIOS domain name mappings
 
 Beginning with Windows Server 2025, forest administrators can configure custom mappings from DNS domain name to NetBIOS domain name. Administrator-configured mappings at the forest level are an optional mechanism that you should use only when all other options are insufficient. For example, if an application or environment requires other domain name mappings that other sources can't automatically provide
 
