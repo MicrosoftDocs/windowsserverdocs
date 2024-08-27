@@ -14,7 +14,7 @@ When a cluster contains an even number of voting nodes, you should configure a w
 
 You might use a file share witness when:
 
-- A Cloud Witness can't be used because your cluster nodes don't a reliable internet connection or don't have internet connectivity.
+- A Cloud Witness can't be used because your cluster nodes don't have a reliable internet connection or an internet connectivity.
 
 - A disk witness can't be used because there aren't any shared drives to use for a disk witness. For example, a Storage Spaces Direct cluster, SQL Server Always On Availability Groups (AG), or Exchange Database Availability Group (DAG). None of these types of clusters use shared disks.
 
