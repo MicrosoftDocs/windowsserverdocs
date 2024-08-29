@@ -1,15 +1,15 @@
 ---
-title: Use multiple remote desktop license servers
-description: Learn how to use multiple remote desktop (RD) license servers so that they communicate with one another.
+title: Use multiple Remote Desktop license servers
+description: Learn how to use multiple Remote Desktop (RD) license servers so that they communicate with one another.
 ms.topic: article
 author: meaghanlewis
 ms.author: wscontent
 ms.date: 8/29/2024
 ---
 
-# Use multiple remote desktop license servers
+# Use multiple Remote Desktop license servers
 
-When using multiple remote desktop (RD) license servers, after applying the security update for CVE-2024-38231, ensure that the servers can properly communicate with one another. This is relevant in either of the following scenarios:
+When using multiple Remote Desktop (RD) license servers, after applying the security update for CVE-2024-38231, ensure that the servers can properly communicate with one another. This is relevant in either of the following scenarios:
 
 - A license is returned to an RD license server that didn't issue it
 - Automatic license server discovery, a mechanism that was abandoned starting with Windows Server 2008 R2, is still in use in a Remote Desktop deployment
@@ -46,17 +46,17 @@ Then, on LICSVR1, add the user and its credentials so they can be used by the _N
 
 1. Start a Command Prompt as _NT AUTHORITY\NETWORK SERVICE_. You can do this with PsExec from the Sysinternals Utilities, by running the following command as an administrator:
 
-    ```ps
+    ```bash
     psexec.exe -i -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe
     ```
 
 1. Then, add a username and password to the host computer with the following command:
 
-    ```ps
+    ```bash
     cmdkey /add:LICSVR2 /user:LICSVR2\<USERNAME> /pass
     ```
 
-   where <USERNAME> is the name of the user you decided that LICSVR1 will use to authenticate to LICSVR2.
+   where \<USERNAME> is the name of the user you decided that LICSVR1 will use to authenticate to LICSVR2.
 
 1. When prompted for the password, enter the password of that user.
 
@@ -67,7 +67,7 @@ New-LocalGroup -Name <GROUP-NAME>
 Add-LocalGroupMember -Group <GROUP-NAME> -Member "LICSVR2\<USERNAME>"
 ```
 
-Where <GROUP-NAME> is the desired name for the group and <USERNAME> is the name of the user whose credentials are registered in LICSVR1.
+Where \<GROUP-NAME> is the desired name for the group and \<USERNAME> is the name of the user whose credentials are registered in LICSVR1.
 
 To register that local group with the RD licensing service in the registry, run the following PowerShell command:
 
@@ -91,6 +91,6 @@ For domain-joined RD license servers to properly communicate with one another, t
     Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TermServLicensing\Parameters" -Name " SpecifiedLicenseServers" -Value "<LicSrv1DnsHosName>","<LicSrv2DnsHosName>" -Type MultiString
     ```
 
-Where <LicSrv1DnsHosName> and <LicSrv1DnsHosName> are the DNS host name of the other RD license servers.
+Where \<LicSrv1DnsHosName> and \<LicSrv1DnsHosName> are the DNS host name of the other RD license servers.
 
 - For historical reasons, RD licensing services that run on Active Directory domain controllers don't require extra configuration. We strongly advise against installing the RD licensing server on domain controllers. Use this approach at your own risk. Per the Active Directory security best practices, domain controllers should be treated as critical infrastructure components and should minimize the amount of unrelated software they run. See [Protecting Domain Controllers](/windows-server/identity/ad-ds/plan/security-best-practices/avenues-to-compromise#protecting-domain-controllers) for more information.
