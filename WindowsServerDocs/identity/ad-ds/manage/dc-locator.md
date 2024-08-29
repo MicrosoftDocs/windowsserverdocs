@@ -1,25 +1,17 @@
 ---
 title: Locating Active Directory domain controllers in Windows and Windows Server
 description: Learn how domain controllers are located in Windows and Windows Server using the DC Locator algorithm.
-ms.date: 08/07/2024
+ms.date: 08/29/2024
 ms.topic: conceptual
 author: gswashington
 ms.author: wscontent
 ---
 
-<!-- Robin's structural edit -->
-
-<!-- Hi Heidi, Note that although this is a new markdown file, it is intended to replace the article that is already published in the following location: https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/how-domain-controllers-are-located. I could not locate the original markdown in the repo; we can drop this in place when the time comes. -->
-
-<!-- Other articles in Learn refer to the DC location algorithm as "DC Locator" (yes, ending in "or"). I have adopted this naming convention for this article even though the original version of this article did not use it. -->
-
-<!-- Final comment; Jay's minimal goals were to roll in content of "What's new" article (https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/dc-locator-changes) into this main article. Loftier goals were to break out Troubleshooting as its own article and, beyond that, perhaps even have short articles dedicated to, say, Mapping of NetBIOS domain names to DNS domain names. I didn't go beyond breaking out Troubleshooting, as you will see.  -->
-
 # Locating domain controllers in Windows and Windows Server
 
 Domain controller location, also known as _DC Locator_, refers to the algorithm the client machine uses to find a suitable domain controller. Domain controller location is a critical function in all enterprise environments to allow client authentication with Active Directory.
 
-<!-- Add sentence, in this article learn about the locator process including discovery, closest site detection and caching of admin-configured domain name mappings -->
+In this article, learn about the domain controller locator process, including discovery, closest site detection, and configuration of NetBIOS domain name mappings.
 
 ## Domain controller locator process
 
@@ -29,7 +21,7 @@ The domain controller locator (Locator) algorithm consists of two parts:
 
 - Locator submits a query to locate a domain controller in the specified domain.
 
-After this query is resolved, an LDAP User Datagram Protocol (UDP) lookup is sent to one or more of the domain controllers listed in the response to the DNS query to ensure their availability. Finally, the Net Logon service caches the discovered domain controller to aid in resolving future requests.
+An LDAP User Datagram Protocol (UDP) lookup is then sent to one or more of the domain controllers listed in the response to ensure their availability. Finally, the _Netlogon service_ caches the discovered domain controller to aid in resolving future requests.
 
 ### Discovery process
 
@@ -84,48 +76,48 @@ To learn about the discovery process, select the tab that corresponds to the met
 
 The process that the Locator follows can be summarized as follows:
 
-1. On the client (the computer that is locating the domain controller), the Locator is initiated as a remote procedure call (RPC) to the local Net Logon service. The Locator API (DsGetDcName) is implemented by the Net Logon service.
+1. On the client (the computer that is locating the domain controller), the Locator is initiated as a remote procedure call (RPC) to the local Netlogon service. The Netlogon service implements the Locator API (`DsGetDcName`).
 
-1. The client collects the information that is needed to select a domain controller and passes the information to the Net Logon service by using the DsGetDcName API.
+1. The client collects the information that is needed to select a domain controller and passes the information to the Netlogon service by using the `DsGetDcName` API.
 
 1. The Netlogon service on the client uses the collected information to look up a domain controller for the specified domain. The lookup process uses one of the following two methods:
 
-1. Netlogon queries DNS by using the IP/DNS-compatible Locator. DsGetDcName calls the DnsQuery call to read the Service Resource (SRV) records and A records from DNS after it appends the domain name to the appropriate string that specifies the SRV records.
+1. Netlogon queries DNS by using the IP/DNS-compatible Locator. `DsGetDcName` calls the DnsQuery call to read the Service Resource (SRV) records and A records from DNS after it appends the domain name to the appropriate string that specifies the SRV records.
 
     - When a workstation signs in to a Windows-based domain, it queries DNS for SRV records in the format `_<service>._<protocol>.<DnsDomainName>`. Clients querying DNS for an LDAP server for the domain using the following format, where `DnsDomainName` is the domain name.
 
       `_ldap._tcp.DnsDomainName`
 
-1. The Net Logon service sends a datagram as an LDAP UDP search to the discovered domain controllers that register the name.
+1. The Netlogon service sends a datagram as an LDAP UDP search to the discovered domain controllers that register the name.
 
-1. Each available domain controller responds to the datagram to indicate that it is currently operational and then returns the information to DsGetDcName.
+1. Each available domain controller responds to the datagram to indicate that it's currently operational and then returns the information to `DsGetDcName`.
 
-1. The Net Logon service returns the information to the client from the domain controller that responds first.
+1. The Netlogon service returns the information to the client from the domain controller that responds first.
 
-1. The Net Logon service caches the domain controller information so that it is not necessary to repeat the discovery process for subsequent requests. Caching this information encourages the consistent use of the same domain controller and, thus, a consistent view of Active Directory.
+1. The Netlogon service caches the domain controller information so that it isn't necessary to repeat the discovery process for subsequent requests. Caching this information encourages the consistent use of the same domain controller and, thus, a consistent view of Active Directory.
 
 #### [NetBIOS-based discovery](#tab/netbios-based-discovery)
 
 The process that the Locator follows can be summarized as follows:
 
-1. On the client (the computer that is locating the domain controller), the Locator is initiated as a remote procedure call (RPC) to the local Net Logon service. The Locator API (DsGetDcName) is implemented by the Net Logon service.
+1. On the client (the computer that is locating the domain controller), the Locator is initiated as a remote procedure call (RPC) to the local Netlogon service. The Netlogon service implements the Locator API (`DsGetDcName`).
 
-1. The client collects the information that is needed to select a domain controller and passes the information to the Net Logon service by using the DsGetDcName API.
+1. The client collects the information that is needed to select a domain controller and passes the information to the Netlogon service by using the DsGetDcName API.
 
 1. The Netlogon service on the client uses the collected information to look up a domain controller for the specified domain. The lookup process uses one of the following two methods:
 
-1. For a single label name, Net Logon performs domain controller discovery by using the Windows NT 4.0–compatible Locator — that is, by using the transport-specific mechanism (for example, WINS).
+1. For a single label name, Netlogon performs domain controller discovery by using the Windows NT 4.0–compatible Locator. The Windows NT 4.0–compatible Locator uses the transport-specific mechanism (for example, WINS).
 
-1. The Net Logon service sends a datagram as a mailslot message to the discovered domain controllers that register the name.
+1. The Netlogon service sends a datagram as a mailslot message to the discovered domain controllers that register the name.
 
    > [!IMPORTANT]
    > WINS and mailslots were deprecated in Windows Server 2022 and Windows Server 2025 respectively, as these legacy technologies are no longer secure in today's environments. To learn more, see [Features removed or no longer developed starting with Windows Server 2022](../../../get-started/removed-deprecated-features-windows-server-2022.md) and [Features removed or no longer developed starting with Windows Server 2025 (preview)](../../../get-started/removed-deprecated-features-windows-server-2025.md).
 
-1. Each available domain controller responds to the datagram to indicate that it is currently operational and then returns the information to DsGetDcName.
+1. Each available domain controller responds to the datagram to indicate that it's currently operational and then returns the information to DsGetDcName.
 
-1. The Net Logon service returns the information to the client from the domain controller that responds first.
+1. The Netlogon service returns the information to the client from the domain controller that responds first.
 
-1. The Net Logon service caches the domain controller information so that it is not necessary to repeat the discovery process for subsequent requests. Caching this information encourages the consistent use of the same domain controller and, thus, a consistent view of Active Directory.
+1. The Netlogon service caches the domain controller information so that it isn't necessary to repeat the discovery process for subsequent requests. Caching this information encourages the consistent use of the same domain controller and, thus, a consistent view of Active Directory.
 
 ----
 
@@ -155,9 +147,9 @@ If the client is communicating with a domain controller that isn't in the closes
 
 The client caches the domain controller entry. If the domain controller isn't in the optimal site, the client flushes the cache after 15 minutes and discards the cache entry. It then attempts to find an optimal domain controller in the same site as the client.
 
-After the client has established a communications path to the domain controller, it can establish the logon and authentication credentials. If required, the client can also set up a secure channel for Windows-based computers. The client is now ready to perform normal queries and search for information against the directory.
+After the client establishes a communications path to the domain controller, it can establish the logon and authentication credentials. If necessary, the client can also set up a secure channel for Windows-based computers. The client is now ready to perform normal queries and search for information against the directory.
 
-The client establishes an LDAP connection to a domain controller to sign in. The sign in process uses Security Accounts Manager. The communications path uses the LDAP interface and the client is authenticated by a domain controller. After that, the client account is verified and passed through Security Accounts Manager to the directory service agent, then to the database layer, and finally to the database in the Extensible Storage engine (ESE).
+The client establishes an LDAP connection to a domain controller to sign in. The sign in process uses _Security Accounts Manager_. The communications path uses the LDAP interface and a domain controller authenticates the client. After that, the client account is verified and passed through Security Accounts Manager to the directory service agent, then to the database layer, and finally to the database in the Extensible Storage engine (ESE).
 
 ## Configuring NetBIOS domain name mappings
 
@@ -190,9 +182,7 @@ The new Active Directory Domains and Trusts management page looks like this:
 > [!IMPORTANT]
 > Configure administrator-configured forest-level domain name mappings only when you're sure that all other name mapping sources are insufficient. As a general rule, such arbitrary mappings are necessary only when no trust relationship exists between clients and the target domains, and client applications can't be migrated over to specifying DNS-style domain names.
 
-<!-- For more information, see the Windows Resource Kit, Chapter 10, "Active Directory Diagnostic, Troubleshooting, and Recovery." -->
-
-## See also
+## Related content
 
 - [DsGetDcName](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew)
 - [How domain controllers are located in Windows](/troubleshoot/windows-server/identity/how-domain-controllers-are-located)
