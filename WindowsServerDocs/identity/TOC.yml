@@ -474,7 +474,7 @@
       - name: Group Managed Service Accounts
         href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
         items:
-        - name: Getting started with Group Managed Service Accounts
+        - name: Get started with group Managed Service Accounts
           href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           items:
           - name: Create the Key Distribution Services KDS Root Key
