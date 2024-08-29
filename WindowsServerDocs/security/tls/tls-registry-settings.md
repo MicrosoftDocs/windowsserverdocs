@@ -16,7 +16,7 @@ This article explains the supported registry setting information for the Windows
 
 ## SChannel logging
 
-There are eight logging levels for SChannel events saved to the system event log and viewable using Event Viewer. This registry path is stored in **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL** under the **EventLogging** key with a DWORD value set to *1*.
+There are eight logging levels for SChannel events saved to the system event log and viewable using Event Viewer. This registry path is stored in `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL` under the **EventLogging** key with a DWORD value set to *1*.
 
 | Decimal or Hex | SChannel logging events |
 |---|---|
@@ -50,7 +50,7 @@ The SChannel provider uses four certificate mapping methods:
 1. One-to-one mapping (also known as subject/issuer mapping)
 1. Many-to-one mapping
 
-Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
 |Entry name|DWORD|Enabled by default|
 |--|--|--|
@@ -78,9 +78,9 @@ For information about default cipher suite orders that are used by the SChannel 
 
 This entry specifies client TLS session cache item lifetime in milliseconds. Beginning with Windows Server 2008 and Windows Vista the default is 10 hours. A value of *0* turns off TLS session caching on the client.
 
-The first time a client connects to a server through the SChannel SSP, a full TLS/SSL handshake is performed. When complete, the main secret, cipher suite, and certificates are stored in the session cache on the respective client and server.
+The first time a client connects to a server through the SChannel SSP, a full TLS/SSL handshake is performed. When complete, the master secret, cipher suite, and certificates are stored in the session cache on the respective client and server.
 
-Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
 ## EnableOcspStaplingForSni
 
@@ -97,7 +97,7 @@ In this case, the server hello response during the TLS handshake doesn't include
 
 Applicable versions: All versions beginning with Windows Server 2012 and Windows 8.
 
-Registry path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+Registry path: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
 Add the following key:
 
@@ -122,7 +122,7 @@ To prevent this, the server has a negative cache, so if an issuer name doesn't m
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
-Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
 ## IssuerCacheTime
 
@@ -132,7 +132,7 @@ To prevent this, the server has a negative cache, so if an issuer name doesn't m
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
-Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
 ## KeyExchangeAlgorithm key sizes
 
@@ -142,23 +142,17 @@ These following entries might not exist in the registry by default and must be m
 
 Added in Windows 10, version 1507, and Windows Server 2016.
 
-Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
+Registry path: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman`
 
-To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a *ClientMinKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
-
-To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a *ClientMaxKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length.
-
-To specify the Diffie-Hellman key bit length for the TLS server default, create a *ServerMinKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 2048 bits is the default.
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a `ClientMinKeyBitLength` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
 
 # [RSA](#tab/rsa)
 
 Added in Windows 10, version 1507, and Windows Server 2016.
 
-Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS**
+Registry path: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS`
 
-To specify a minimum supported range of RSA key bit length for the TLS client, create a *ClientMinKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
-
-To specify a maximum supported range of RSA key bit length for the TLS client, create a *ClientMaxKeyBitLength* entry. After you create the entry, change the DWORD value to the desired bit length. On the server-side, the strength of the RSA key exchange is controlled by the specified server certificate.
+To specify a minimum supported range of RSA key bit length for the TLS client, create a `ClientMinKeyBitLength` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum. On the server-side, the strength of the RSA key exchange is controlled by the specified server certificate.
 
 ---
 
@@ -175,7 +169,7 @@ value is 20,000 elements.
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
-Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
 ## Messaging – fragment parsing
 
@@ -187,13 +181,13 @@ The maximum allowed size can be increased up to 2^16 bytes. Allowing a client or
 
 Added in Windows 7 and Windows Server 2008 R2: An update that enables Internet Explorer in Windows XP, in Windows Vista, or in Windows Server 2008 to parse fragmented TLS/SSL handshake messages is available.
 
-Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Messaging**
+Registry path: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Messaging`
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client accepts, create a *MessageLimitClient* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client accepts, create a `MessageLimitClient` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's no client authentication, create a *MessageLimitServer* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x4000* bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's no client authentication, create a `MessageLimitServer` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x4000* bytes.
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's client authentication, create a *MessageLimitServerClientAuth* entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's client authentication, create a `MessageLimitServerClientAuth` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
 
 ## SendTrustedIssuerList
 
@@ -212,7 +206,7 @@ This behavior might be desirable. For example, when PKI environments include cro
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
-Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
 ## ServerCacheTime
 
@@ -220,7 +214,7 @@ This entry specifies server TLS session cache item lifetime in milliseconds. The
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
-Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
 Default server cache time: 10 hours
 
@@ -239,29 +233,29 @@ These registry values are configured separately for the protocol client and serv
 
 These version-specific subkeys can be created under the following registry path:
 
-- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols**
+- `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`
 
 For example, here are some valid registry paths with version-specific subkeys:
 
-- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client**
+- `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client`
 
-- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server**
+- `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server`
 
-- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client**
+- `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client`
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with an entry value of "**1**" under the corresponding version-specific subkey.
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the `Enabled` state, create a DWORD registry value named `Enabled` with an entry value of "**1**" under the corresponding version-specific subkey.
 
 The following example shows TLS 1.0 client set to the **Enabled** state:
 
 :::image type="content" source="images/tls-10-client-enabled.png" alt-text="Screenshot of Set TLS 1.0 client-side to enabled in Windows Server registry setting.":::
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the *Disabled* state, change the DWORD registry value of "Enabled" to *0* under the corresponding version-specific subkey.
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the `Disabled` state, change the DWORD registry value of `Enabled` to "**0**" under the corresponding version-specific subkey.
 
 The following example shows DTLS 1.2 disabled in the registry:
 
 :::image type="content" source="images/dtls-12-server-disabled.png" alt-text="Screenshot of Windows Server registry setting for DTLS 1.2 set to disabled by default.":::
 
-Switching a (D)TLS or SSL protocol version to *Disabled* state might cause [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of *Enabled* (D)TLS and SSL versions could break interoperability with remote peers.
+Switching a (D)TLS or SSL protocol version to `Disabled` state might cause [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of `Enabled` (D)TLS and SSL versions could break interoperability with remote peers.
 
 Once the (D)TLS or SSL protocol version settings are modified, they take effect on connections established using credential handles opened by subsequent [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, an application, or service restart might be required.
 
