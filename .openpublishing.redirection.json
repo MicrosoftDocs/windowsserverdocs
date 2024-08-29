@@ -10122,12 +10122,12 @@
     },
     {
       "source_path": "WindowsServerDocs/administration/OpenSSH/OpenSSH_Overview.md",
-      "redirect_url": "/windows-server/administration/OpenSSH/openssh-overview.md",
+      "redirect_url": "/windows-server/administration/OpenSSH/openssh-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/administration/OpenSSH/OpenSSH_Server_Configuration.md",
-      "redirect_url": "/windows-server/administration/OpenSSH/openssh-server-configuration.md",
+      "redirect_url": "/windows-server/administration/OpenSSH/openssh-server-configuration",
       "redirect_document_id": false
     },
     {
