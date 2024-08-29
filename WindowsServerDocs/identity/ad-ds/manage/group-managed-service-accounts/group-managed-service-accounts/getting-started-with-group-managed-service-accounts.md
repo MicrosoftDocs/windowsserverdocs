@@ -1,6 +1,6 @@
 ---
-title: Get started with group Managed Service Accounts
-description: Learn how to enable and use group Managed Service Accounts (gMSA) in Windows Server.
+title: Get started with Group Managed Service Accounts
+description: Learn how to enable and use Group Managed Service Accounts (gMSA) in Windows Server.
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
 ms.author: wscontent
@@ -8,11 +8,11 @@ author: robinharwood
 ms.date: 08/26/2024
 ---
 
-# Get started with group Managed Service Accounts
+# Get started with Group Managed Service Accounts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-In this article, learn how to enable and use group Managed Service Accounts (gMSA) in Windows Server.
+In this article, learn how to enable and use Group Managed Service Accounts (gMSA) in Windows Server.
 
 Authentication protocols supporting mutual authentication such as Kerberos can't be used unless all the instances of the services use the same principal. For example, when a client computer connects to a service that uses load balancing or another method where all the servers appear to be the same service to the client. Meaning each service has to use the same passwords or keys to prove their identity. Group Managed Service Accounts are a type of account that can be used with multiple servers. A gMSA is a domain account that can be used to run services on multiple servers without having to manage the password. The gMSA provides automatic password management and simplified service principal name (SPN) management, including delegation of management to other administrators.
 
@@ -28,7 +28,7 @@ Services can choose the principal to use. Each principal type supports different
 |Virtual Account|Limited to one server|Computer manages|
 |Windows standalone Managed Service Account|Limited to one domain joined server|Computer manages|
 |User Account|Any domain joined server|None|
-|group Managed Service Account|Any Windows Server domain-joined server|The domain controller manages, and the host retrieves|
+|Group Managed Service Account|Any Windows Server domain-joined server|The domain controller manages, and the host retrieves|
 
 A Windows computer account, a Windows standalone Managed Service Account (sMSA), or virtual accounts can't be shared across multiple systems. When you use virtual accounts, the identity is also local to the machine and not recognized by the domain. If you configure one account for services on server farms to share, you would have to choose a user account or a computer account apart from a Windows system. Either way, these accounts don't have the capability of single-point-of-control password management. Without password management, each organization needs to update keys for the service in Active Directory and distribute these keys to all instances of those services.
 
@@ -103,7 +103,7 @@ When the service administrator deploys a new server farm, they need to determine
 
 - The password change interval (default is 30 days)
 
-### Create group Managed Service Accounts
+### Create Group Managed Service Accounts
 
 You can create a gMSA only if the forest schema is Windows Server 2012 or later. You must also deploy the KDS root key for Active Directory, and have at least one Windows Server 2012 or later domain controller in the domain where you want to create a gMSA.
 
@@ -191,7 +191,7 @@ Membership in *Domain Admins*, or the ability to add members to the security gro
 
 - Method 1: Active Directory Users and Computers
 
-    To use the Windows interface, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    To use the Active Directory Users and Computers snap-in, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
 
 - Method 2: `dsmod`
 
@@ -252,7 +252,7 @@ If using security groups for managing member hosts, remove the computer account 
 
 - Method 1: Active Directory Users and Computers
 
-    To use the Windows interface, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    To use the Active Directory Users and Computers snap-in, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
 
 - Method 2: `drsm`
 
