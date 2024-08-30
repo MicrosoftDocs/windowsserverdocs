@@ -16,7 +16,10 @@ When using multiple Remote Desktop (RD) license servers, after applying the secu
 
 ## Workgroup-joined deployment
 
-Workgroup-joined Remote Desktop deployments are meant for small deployments. We don't recommend using multiple RD license servers in workgroup-joined Remote Desktop deployments. Support for multiple license servers in workgroups may be removed in a future version of Windows.
+Workgroup-joined Remote Desktop deployments are meant for small deployments. We don't recommend using multiple RD license servers in workgroup-joined Remote Desktop deployments. 
+
+> [!IMPORTANT]
+> Support for multiple license servers in workgroups may be removed in a future version of Windows.
 
 To use multiple RD license servers in the same workgroup, ensure that each license server can authenticate to one another, and that they recognize each other as being license servers.
 
@@ -93,4 +96,7 @@ For domain-joined RD license servers to properly communicate with one another, t
 
 Where \<LicSrv1DnsHosName> and \<LicSrv1DnsHosName> are the DNS host name of the other RD license servers.
 
-- For historical reasons, RD licensing services that run on Active Directory domain controllers don't require extra configuration. We strongly advise against installing the RD licensing server on domain controllers. Use this approach at your own risk. Per the Active Directory security best practices, domain controllers should be treated as critical infrastructure components and should minimize the amount of unrelated software they run. See [Protecting Domain Controllers](/windows-server/identity/ad-ds/plan/security-best-practices/avenues-to-compromise#protecting-domain-controllers) for more information.
+- For historical reasons, RD licensing services that run on Active Directory domain controllers don't require extra configuration.
+
+> [!IMPORTANT]
+> We strongly advise against installing the RD licensing server on domain controllers. Use this approach at your own risk. Per the Active Directory security best practices, domain controllers should be treated as critical infrastructure components and should minimize the amount of unrelated software they run. See [Protecting Domain Controllers](/windows-server/identity/ad-ds/plan/security-best-practices/avenues-to-compromise#protecting-domain-controllers) for more information.
