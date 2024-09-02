@@ -4,8 +4,9 @@ title: Delegation of Control Wizard
 ms.author: orthomas
 author: orin-thomas
 ms.date: 07/15/2024
-ms.topic: article
+ms.topic: how-to
 ---
+
 # Delegation of Control Wizard
 
 Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -31,17 +32,17 @@ Administrative control can be assigned to a user or group by using the Delegatio
 - Create, delete, and manage inetOrgPerson accounts
 - Reset inetOrgPerson passwords and force password change at next logon
 - Read all inetOrgPerson information
- 
+
 When you use the delegation of control wizard, you delegate not only at the domain or organizational unit level, but to all objects under that container.
 
 To use the delegation of control wizard, perform the following steps:
 
 1. In Active Directory Users and Computers, select the parent container. For example select the domain or organizational unit over which you wish to delegate control.
 
-2. From the Action menu, select Delegate control. This will start the Delegation of control wizard.
+1. From the Action menu, select Delegate control. This will start the Delegation of control wizard.
 
-3. On the Users or Groups page, select the users or groups to which you're delegating privileges.
- 
-4. On the Tasks to Delegate page, select the task that you want to delegate from a list of common tasks as explained earlier in this article. You can also choose the create a custom task to delegate option if you wish to create a custom task. Creating a custom task involves specifing the type of object that the task relates to and the permissions you want to delegate. The common tasks apply to all objects within the scope of the container on which you're performing delegation.
+1. On the Users or Groups page, select the users or groups to which you're delegating privileges.
 
-5. Choose Finish to complete the delegation process.
+1. On the Tasks to Delegate page, select the task that you want to delegate from a list of common tasks as explained earlier in this article. You can also choose the create a custom task to delegate option if you wish to create a custom task. Creating a custom task involves specifing the type of object that the task relates to and the permissions you want to delegate. The common tasks apply to all objects within the scope of the container on which you're performing delegation.
+
+1. Choose Finish to complete the delegation process.
