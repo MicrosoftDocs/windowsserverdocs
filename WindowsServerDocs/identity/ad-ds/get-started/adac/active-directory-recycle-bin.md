@@ -18,13 +18,13 @@ Active Directory Recycle Bin isn't enabled by default. The process of enabling A
 
 ## Prerequisites
 
-Before you can enable Active Directory Recycle Bin, you'll need to complete the following prerequisites.
+Before you can enable Active Directory Recycle Bin, you need to complete the following prerequisites.
 
 - The forest and domain functional level must be Windows Server 2008 R2 or higher.
 
 - You must be a member of the Domain Admins group in the domain you want to enable Active Directory Recycle Bin.
 
-- On the computer where you'll enable and use the Active Directory Recycle Bin, you must have either of the following Remote Server Administration Tools (RSAT) installed:
+- You must have either of the following Remote Server Administration Tools (RSAT) installed:
 
   - Active Directory Administrative Center (ADAC)
 
@@ -44,11 +44,11 @@ Here's how to enable Active Directory Recycle Bin using Active Directory Adminis
 
 1. Open Active Directory Administrative Center, either from the Tools menu of the Server Manager console or by running an elevated PowerShell session and typing **dsac.exe**.
 
-1. If the appropriate target domain is not selected, choose **Manage**, choose **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
+1. If the appropriate target domain isn't selected, choose **Manage**, choose **Add Navigation Nodes**, and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
 
 1. In the **Tasks** pane, choose **Enable Recycle Bin ...** in the **Tasks** pane, choose **OK** on the warning message box, and then choose **OK** to the refresh ADAC message.
 
-1. Press F5 to refresh ADAC.
+1. To refresh ADAC, press F5.
 
 #### [PowerShell](#tab/powershell)
 
@@ -67,7 +67,7 @@ If you encounter an error, you can try moving both the schema master and the dom
 > [!TIP]
 > You can only restore AD DS items that were deleted after Active Directory Recycle Bin is enabled. You can't use Active Directory Recycle Bin to recover items that were deleted before enabling this functionality.
 
-You can use Active Directory Administrative Center to restore deleted objects. To do this, perform the following steps:
+Perform perform the following steps to restore deleted objects using Active Directory Administrative Center.
 
 #### [Active Directory Administrative Center](#tab/adac)
 
@@ -75,21 +75,23 @@ Here's how to restore deleted objects using Active Directory Administrative Cent
 
 1. Open Active Directory Administrative Center, either from the Tools menu of the Server Manager console or by running an elevated PowerShell session and typing **dsac.exe**.
 
-1. choose **Manage**, choose **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
+1. choose **Manage**, choose **Add Navigation Nodes**, and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
 
-1. Navigate to the **Deleted Objects** container, select the users you wish to restore and then choose **Restore** in the **Tasks** pane.
+1. Navigate to the **Deleted Objects** container.
+
+1. Select the users you wish to restore and then choose **Restore** in the **Tasks** pane.
 
 1. To confirm the objects were restored to their original location, navigate to the target domain and verify the user accounts are listed.
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to restore deleted objects using the [Restore-ADObject](/powershell/module/activedirectory/Restore-ADObject) cmdlet.  For example, to restore all deleted objects that include the name "test", use the following command:
+Here's how to restore deleted objects using the [Restore-ADObject](/powershell/module/activedirectory/Restore-ADObject) cmdlet. For example, to restore all deleted objects that include the name "test" use the following command:
 
 ```powershell
 Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
 ```
 
-To restore deleted objects to a different location, choose**Restore To** in the **Tasks** pane and specify the location to which you wish to restore the deleted objects. You can accomplish the same goal with the Restore-ADObject cmdlet by using the TargetPath parameter. for example, to restore all objects that include the name "test" to the OU1 OU in the contoso.com domain, run the command:
+To restore deleted objects to a different location, choose**Restore To** in the **Tasks** pane and specify the location to which you wish to restore the deleted objects. You can accomplish the same goal with the Restore-ADObject cmdlet by using the TargetPath parameter. For example, to restore all objects that include the name "test" to the OU1 OU in the contoso.com domain, run the command:
 
 ```powershell
 Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject -TargetPath "OU=OU1,DC=contoso,DC=com"

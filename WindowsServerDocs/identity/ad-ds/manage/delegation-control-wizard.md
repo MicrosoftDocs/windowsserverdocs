@@ -48,7 +48,7 @@ To use the Delegation of Control Wizard, perform the following steps:
 
 1. In Active Directory Users and Computers, select the parent container. For example select the domain or organizational unit over which you wish to delegate control.
 
-1. From the Action menu, select Delegate control. This will start the Delegation of Control Wizard.
+1. From the Action menu, select **Delegate control**. This will start the Delegation of Control Wizard.
 
 1. On the Users or Groups page, select the users or groups to which you're delegating privileges.
 
