@@ -161,7 +161,7 @@ To specify a minimum supported range of RSA key bit length for the TLS client, c
 
 ## MaximumCacheSize
 
-This entry controls the maximum number of TLS sessions to cache. Setting MaximumCacheSize to *0* disables the
+This entry controls the maximum number of TLS sessions to cache. Setting MaximumCacheSize to `0` disables the
 server-side session cache to prevent session resumption. Increasing MaximumCacheSize above the
 default values causes Lsass.exe to consume extra memory. Each session-cache element typically
 requires 2 KB to 4 KB of memory. This entry doesn't exist in the registry by default. The default
@@ -175,7 +175,7 @@ Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 This entry controls the maximum allowed size of a TLS handshake message that's accepted. Messages larger than the allowed size aren't accepted and the TLS handshake fails. These entries don't exist in the registry by default.
 
-When you set the value to *0x0*, fragmented messages aren't processed and causes the TLS handshake to fail. This makes TLS clients or servers on the current machine noncompliant with the TLS RFCs.
+When you set the value to `0x0`, fragmented messages aren't processed and causes the TLS handshake to fail. This makes TLS clients or servers on the current machine noncompliant with the TLS RFCs.
 
 The maximum allowed size can be increased up to 2^16 bytes. Allowing a client or server to read and store large amounts of unverified data from the network isn't a good idea and consumes extra memory for each security context.
 
@@ -183,7 +183,7 @@ Added in Windows 7 and Windows Server 2008 R2: An update that enables Internet E
 
 Registry path: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Messaging`
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client accepts, create a `MessageLimitClient` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x8000* bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client accepts, create a `MessageLimitClient` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is `0x8000` bytes.
 
 To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server accepts when there's no client authentication, create a `MessageLimitServer` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, the default value is *0x4000* bytes.
 
