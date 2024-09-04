@@ -62,7 +62,7 @@ Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,
 
 If you encounter an error, you can try moving both the schema master and the domain naming master roles to the same domain controller in the root domain. Then run the cmdlet from that domain controller.
 
-## Use Active Directory Recycle Bin to restore deleted objects
+## Restore deleted objects
 
 > [!TIP]
 > You can only restore AD DS items that were deleted after Active Directory Recycle Bin is enabled. You can't use Active Directory Recycle Bin to recover items that were deleted before enabling this functionality.
@@ -83,18 +83,20 @@ Here's how to restore deleted objects using Active Directory Administrative Cent
 
 1. To confirm the objects were restored to their original location, navigate to the target domain and verify the user accounts are listed.
 
+To restore deleted objects to a different location, choose**Restore To** in the **Tasks** pane and specify the location to which you wish to restore the deleted objects.
+
 #### [PowerShell](#tab/powershell)
 
 Here's how to restore deleted objects using the [Restore-ADObject](/powershell/module/activedirectory/Restore-ADObject) cmdlet. For example, to restore all deleted objects that include the name "test" use the following command:
 
 ```powershell
-Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
+Get-ADObject -Filter 'Name -Like "*User*"' -IncludeDeletedObjects | Restore-ADObject
 ```
 
-To restore deleted objects to a different location, choose**Restore To** in the **Tasks** pane and specify the location to which you wish to restore the deleted objects. You can accomplish the same goal with the Restore-ADObject cmdlet by using the TargetPath parameter. For example, to restore all objects that include the name "test" to the OU1 OU in the contoso.com domain, run the command:
+To restore deleted objects to a different location using the `Restore-ADObject` cmdlet with the `-TargetPath` parameter. For example, to restore all objects that include the name "User" to the `Corp` OU in the `contoso.com` domain, run the command:
 
 ```powershell
-Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject -TargetPath "OU=OU1,DC=contoso,DC=com"
+Get-ADObject -Filter 'Name -Like "*User*"' -IncludeDeletedObjects | Restore-ADObject -TargetPath "OU=Corp,DC=contoso,DC=com"
 ```
 
 ---

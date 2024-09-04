@@ -1,6 +1,6 @@
 ---
-description: "Learn more about the Delegation of Control Wizard"
-title: Delegation of Control Wizard
+description: Learn how to delegate administrative control in Active Directory Domain Services on Windows Server.
+title: Delegation of Control in Active Directory Domain Services on Windows Server
 ms.author: orthomas
 author: orin-thomas
 ms.date: 07/15/2024
@@ -8,7 +8,7 @@ ms.topic: how-to
 #customer intent: As an Active Directory administrator, I want to delegate administrative control to users or groups so that I can assign a range of administrative tasks to the appropriate users and groups.
 ---
 
-# Delegation of Control Wizard
+# Delegation of Control in Active Directory Domain Services
 
 Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
