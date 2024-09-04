@@ -1,33 +1,33 @@
 ---
-title: Feature upgrade and conversion options for Windows Server
-description: Perform an in-place feature upgrade or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
+title: Feature update and conversion options for Windows Server
+description: Perform an in-place feature update or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
 ms.author: daknappe
 ms.date: 09/30/2024
 ms.topic: conceptual
 author: gswashington
 ---
 
-# Feature upgrade and conversion options for Windows Server
+# Feature update and conversion options for Windows Server
 
-You can perform an in-place feature upgrade or convert installations of Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed. This article helps explain what the options are to help with your planning.
+You can perform an in-place feature update or convert installations of Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed. This article helps explain what the options are to help with your planning.
 
-The process of performing a feature upgrade or converting installations of Windows Server might vary greatly depending on which version and edition you have installed, how it's licensed, and the pathway you take. We use different terms to distinguish between actions, any of which could be involved in a deployment of Windows Server: in-place feature upgrade, clean install, cluster operating system (OS) rolling upgrade, migration, and license conversion. You can learn more about these terms at [Install, upgrade, or migrate to Windows Server](install-upgrade-migrate.md).
+The process of performing a feature update or converting installations of Windows Server might vary greatly depending on which version and edition you have installed, how it's licensed, and the pathway you take. We use different terms to distinguish between actions, any of which could be involved in a deployment of Windows Server: in-place feature update, clean install, cluster operating system (OS) rolling update, migration, and license conversion. You can learn more about these terms at [Install, update, or migrate to Windows Server](install-upgrade-migrate.md).
 
-## Feature upgrade of licensed versions of Windows Server
+## Feature update of licensed versions of Windows Server
 
-The following general guidelines are for in-place feature upgrade paths where Windows Server is **already licensed**, that is, not evaluation:
+The following general guidelines are for in-place feature update paths where Windows Server is **already licensed**, that is, not evaluation:
 
-- Feature upgrades from 32-bit to 64-bit architectures aren't supported. All releases of Windows Server since Windows Server 2008 R2 are 64-bit only.
-- Feature upgrades from one language to another aren't supported.
+- Feature updates from 32-bit to 64-bit architectures aren't supported. All releases of Windows Server since Windows Server 2008 R2 are 64-bit only.
+- Feature updates from one language to another aren't supported.
 - If the server is an Active Directory domain controller, you can't convert it to a retail version. See [Upgrade Domain Controllers to Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md) for important information.
-- Feature upgrades from prerelease versions (previews) of Windows Server aren't supported. Perform a clean install of Windows Server.
-- Feature upgrades that switch from a Server Core installation to a Server with Desktop Experience installation or vice versa aren't supported.
-- Feature upgrades from a previous Windows Server installation to an evaluation copy of Windows Server aren't supported. Evaluation versions should be installed as clean installs.
-- When you feature upgrade from a previous version to a new version, the default is to retain the existing operating system edition. For example, the default is to feature upgrade from Standard (previous version) to Standard (new version), from Datacenter (previous version) to Datacenter (new version), or from Datacenter: Azure Edition (previous version) to Datacenter: Azure Edition (new version).
+- Feature updates from prerelease versions (previews) of Windows Server aren't supported. Perform a clean install of Windows Server.
+- Feature updates that switch from a Server Core installation to a Server with Desktop Experience installation or vice versa aren't supported.
+- Feature updates from a previous Windows Server installation to an evaluation copy of Windows Server aren't supported. Evaluation versions should be installed as clean installs.
+- When you feature update from a previous version to a new version, the default is to retain the existing operating system edition. For example, the default is to feature update from Standard (previous version) to Standard (new version), from Datacenter (previous version) to Datacenter (new version), or from Datacenter: Azure Edition (previous version) to Datacenter: Azure Edition (new version).
 - Alternatively, you can change to certain other editions when feature upgrading. You can change from Standard to Datacenter or to Datacenter: Azure Edition, or change from Datacenter to Datacenter: Azure Edition. You can't change from Datacenter to Standard edition or from Datacenter: Azure Edition to either Standard or Datacenter editions when feature upgrading.
 
 > [!NOTE]
-> If your server uses NIC Teaming, disable NIC Teaming prior to feature upgrade, and then re-enable it after the process is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.
+> If your server uses NIC Teaming, disable NIC Teaming prior to feature update, and then re-enable it after the process is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.
 
 ## Convert an evaluation version to a retail version
 
@@ -37,7 +37,7 @@ However, you can't convert all Windows Server evaluation versions and editions t
 
 In Windows Server versions after 2016, if you've installed Desktop Experience evaluation versions, you can't convert them to Core retail versions. If you install the Standard Core evaluation version, you can convert it only to retail Datacenter Core, not to retail Standard Core.
 
-It's important to run the `DISM /online /Get-TargetEditions` command as instructed in the following procedure to determine which retail versions you can upgrade to. If the retail version you want isn't listed as a target version, you need to do a fresh install of the retail version you want.
+It's important to run the `DISM /online /Get-TargetEditions` command as instructed in the following procedure to determine which retail versions you can update to. If the retail version you want isn't listed as a target version, you need to do a fresh install of the retail version you want.
 
 > [!NOTE]
 > To verify that your server is running an evaluation version, you can run either of the following commands at an elevated command prompt:
@@ -57,7 +57,7 @@ If your server is running an evaluation version of Windows Server Standard or Da
    DISM /online /Get-CurrentEdition
    ```
 
-1. Verify which editions the current installation can be converted to by running the following command. From the output, make a note of the edition name you want to feature upgrade to.
+1. Verify which editions the current installation can be converted to by running the following command. From the output, make a note of the edition name you want to feature update to.
 
    ```cmd
    DISM /online /Get-TargetEditions
@@ -69,7 +69,7 @@ If your server is running an evaluation version of Windows Server Standard or Da
    DISM /online /Set-Edition:<target edition> /GetEula:C:\license.rtf
    ```
 
-1. Enter the new edition name and corresponding retail product key in the following command. The feature upgrade process requires you to accept the Microsoft Software License Terms for Windows Server that you saved previously.
+1. Enter the new edition name and corresponding retail product key in the following command. The feature update process requires you to accept the Microsoft Software License Terms for Windows Server that you saved previously.
 
    ```cmd
    DISM /online /Set-Edition:<target edition> /ProductKey:<product key> /AcceptEula
