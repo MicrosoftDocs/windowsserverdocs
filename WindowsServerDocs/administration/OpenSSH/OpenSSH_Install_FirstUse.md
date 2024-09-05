@@ -5,6 +5,7 @@ ms.date: 08/16/2024
 ms.topic: quickstart
 ms.author: roharwoo
 author: robinharwood
+ms.custom: "se-defect-target"
 zone_pivot_groups: openssh-windows-version
 ---
 
