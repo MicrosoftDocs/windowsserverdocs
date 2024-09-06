@@ -102,7 +102,8 @@ Use the following sections to get DHA installed and configured on Windows Server
 In order to set up and verify a DHA on-premises service, you need:
 
 - A server running Windows Server 2016.
-- One (or more) Windows 10 client devices with a TPM (either 1.2 or 2.0) that is in a clear/ready state running Windows Server 2025 (Preview)s.
+- One (or more) Windows 10 client devices with a TPM (either 1.2 or 2.0) that is in a clear/ready state running the latest Windows Server 2025 (preview) build.
+
 - Decide if you are going to run in EKCert or AIKCert validation mode.
 - The following certificates:
   - **DHA SSL certificate**. A x.509 SSL certificate that chains to an enterprise trusted root with an exportable private key. This certificate protects DHA data communications in transit including server to server (DHA service and MDM server) and server to client (DHA service and a Windows 10 device) communications.
