@@ -10,7 +10,7 @@ ms.topic: article
 
 # Active Directory DC locator changes
 
->Applies to: Windows Server 2025 (Preview)
+>Applies to: Windows Server 2025 (preview)
 
 This article discusses changes to the Active Directory domain controller (DC) location algorithm, including deprecation announcements.
 
@@ -71,7 +71,7 @@ When none of these sources can find a DNS domain name, DC location can proceed w
 
 The deprecation of WINS and mailslot messages means that those mechanisms are longer available as a fallback option when applications specify short NetBIOS-style domain names. This deprecation can therefore cause disruption in some environments.
 
-The following sections describe improvements in Windows Server 2025 (Preview)
+The following sections describe improvements in Windows Server 2025
 
 ### BlockNetBIOSDiscovery Netlogon policy setting
 
