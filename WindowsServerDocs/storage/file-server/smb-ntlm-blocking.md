@@ -1,5 +1,5 @@
 ---
-title: Block NTLM connections on SMB in Windows Server 2025 (Preview)
+title: Block NTLM connections on SMB in Windows Server 2025 (preview)
 description: Learn how to make SMB more secure by blocking NTLM.
 ms.topic: how-to
 author: Heidilohr
@@ -9,7 +9,7 @@ ms.date: 03/07/2024
 # Block NTLM connections on SMB (preview)
 
 > [!IMPORTANT]
-> Windows Server 2025 (Preview) is in PREVIEW.
+> Windows Server 2025 is in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 The SMB client now supports blocking NTLM authentication for remote outbound connections. Blocking NTLM authentication prevents bad actors from tricking clients into sending NTLM requests to malicious servers, counteracting brute force, cracking, and pass-the-hash attacks. NTLM blocking is also required for switching an organization's authentication protocols to Kerberos, which is more secure than NTLM because it can verify server identities with its ticket system. However, organizations can also enable this layer of protection without having to disable NTLM entirely.
