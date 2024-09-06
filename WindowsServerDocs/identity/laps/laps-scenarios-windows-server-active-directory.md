@@ -182,7 +182,7 @@ AuthorizedDecryptor : S-1-5-21-2127521184-1604012920-1887927527-35197
 > When encrypted Windows LAPS passwords are retrieved from an AD backup database mounted on a workgroup machine, the AuthorizedDecryptor field will always be displayed in raw SID format since the workgroup machine is unable to translate that SID into a friendly name.
 
 > [!IMPORTANT]
-> The improved Get-LapsADPassword password retrieval capability is supported in Windows Insider build 27686 and later, for both client and server OS versions.
+> The improved Get-LapsADPassword password retrieval capability is supported in Windows Insider build 27695 and later, for both client and server OS versions.
 
 ## See also
 
