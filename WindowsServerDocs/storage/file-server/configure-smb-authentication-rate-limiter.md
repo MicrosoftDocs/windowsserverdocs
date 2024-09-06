@@ -4,7 +4,7 @@ description: Learn how SMB authentication rate limiter works and how to configur
 ms.topic: how-to
 author: gswashington
 ms.author: nedpyle
-ms.date: 02/23/2024
+ms.date: 09/13/2024
 
 ---
 
