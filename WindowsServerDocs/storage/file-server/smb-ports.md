@@ -25,7 +25,7 @@ In order to configure alternative ports, you need the following:
 
   - [Windows 11 Insider Preview Build 25992](https://blogs.windows.com/windows-insider/2023/11/08/announcing-windows-11-insider-preview-build-25992-canary-channel/) or later
 
-  - [Windows Server 2025 (Preview)](/get-started/whats-new-windows-server-2025)
+  - Windows Server 2025
 
 - Admin permissions
 
