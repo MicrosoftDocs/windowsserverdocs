@@ -68,7 +68,7 @@
           href: ad-ds/get-started/adac/Introduction-to-active-directory-Administrative-Center-Enhancements--Level-100-.md
         - name: Enable Active Directory Recycle Bin
           href: ad-ds/get-started/adac/active-directory-recycle-bin.md
-        - name: Configure Fine Grained Password Policies
+        - name: Configure fine grained password policies
           href: ad-ds/get-started/adac/fine-grained-password-policies.md
         - name: Use the Windows PowerShell History Viewer
           href: ad-ds/get-started/adac/use-active-directory-administrative-center-powershell-history.md

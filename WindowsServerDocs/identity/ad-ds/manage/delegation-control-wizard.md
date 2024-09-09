@@ -40,7 +40,7 @@ Before you can delegate control, you'll need the following prerequisites.
 
 - On the computer where you'll delegate control, you must have the AD DS Remote Server Administration Tools (RSAT) installed.
 
-## Delegate Control
+## Delegate control
 
 When you use the Delegation of Control Wizard, you delegate not only at the domain or organizational unit level, but to all objects under that container.
 
