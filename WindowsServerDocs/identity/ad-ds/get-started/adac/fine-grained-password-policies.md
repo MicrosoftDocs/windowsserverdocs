@@ -133,7 +133,7 @@ Here's how to edit a fine grained password policy using ADAC:
 
 1. If the appropriate target domain isn't selected, choose **Manage**, choose **Add Navigation Nodes**, and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
 
-1. In the ADAC **Navigation Pane**, expand **System** and then choose **Password Settings Container**.
+1. In the ADAC **Navigation Pane**, expand **System** and then expand the **Password Settings Container**.
 
 1. Select the fine grained password policy you wish to edit and choose **Properties** in the **Tasks** pane.
 
@@ -169,7 +169,7 @@ To delete a fine-grained password policy
 
 1. If the appropriate target domain isn't selected, choose **Manage**, choose **Add Navigation Nodes**, and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
 
-1. In the ADAC Navigation Pane, expand **System** and then choose **Password Settings Container**.
+1. In the ADAC Navigation Pane, expand **System** and then expand **Password Settings Container**.
 
 1. Select the fine grained password policy you wish to remove and in the **Tasks** pane choose **Properties**.
 
@@ -194,7 +194,7 @@ Here's how to use the [Remove-ADFineGrainedPasswordPolicy](/powershell/module/ac
 1. To remove the policy, run the following command. Replace `PasswordPolicy` with the desired policy name.
 
    ```powershell
-   Remove-ADFineGrainedPasswordPolicy PasswordPolicy -Confirm
+   Remove-ADFineGrainedPasswordPolicy PasswordPolicy
    ```
 
 
