@@ -52,9 +52,11 @@ To use the Delegation of Control Wizard, perform the following steps:
 
 1. On the Users or Groups page, select the users or groups to which you're delegating privileges.
 
-1. On the Tasks to Delegate page, select the task that you want to delegate from a list of common tasks as explained earlier in this article. You can also choose the create a custom task to delegate option if you wish to create a custom task. Creating a custom task involves specifying the type of object that the task relates to and the permissions you want to delegate. The common tasks apply to all objects within the scope of the container on which you're performing delegation.
+1. On the Tasks to Delegate page, select the task that you want to delegate from a list of common tasks as explained earlier in this article.
 
 1. Choose Finish to complete the delegation process.
+
+ You can also choose the create a custom task to delegate option if you wish to create a custom task. Creating a custom task involves specifying the type of object that the task relates to and the permissions you want to delegate. The common tasks apply to all objects within the scope of the container on which you're performing delegation.
 
 ## Related content
 
