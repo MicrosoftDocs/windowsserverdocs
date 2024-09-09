@@ -43,7 +43,7 @@ To ensure that LICSVR1 can authenticate to LICSVR2, you need to decide which acc
 
 1. Select **Create**.
 
-Then, on LICSVR1, add the user and its credentials so they can be used by the _NT AUTHORITY\NETWORK SERVICE_ account to authenticate to LICSVR2 with the following steps:
+Then, on LICSVR1, add the user and its credentials so that the _NT AUTHORITY\NETWORK SERVICE_ account can authenticate to LICSVR2 with the following steps:
 
 1. Connect to LICSVR1. If doing so remotely, you may need to start the Remote Desktop Connection application using the _mstsc.exe /admin_ command if the target machine can't contact an RD license server.
 
