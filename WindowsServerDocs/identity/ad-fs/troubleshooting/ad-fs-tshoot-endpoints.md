@@ -25,8 +25,7 @@ WS-MetaDataExchange is a web services protocol and is part of the WS-Federation 
 1.  Using a web browser, navigate to your AD FS Federation metadata endpoint.  For example:  https://sts.contoso.com/adfs/services/trust/mex
 2. The xml file should be displayed in the browser automatically.  It should look like the image below:
 
-![Active](media/ad-fs-tshoot-endpoints/meta3.png)
-
+:::image type="content" source="media/ad-fs-tshoot-endpoints/security-trust-file.png" alt-text="A screenshot of the AD FS Federation metadata endpoint XML file.":::
 
 ## Next Steps
 
