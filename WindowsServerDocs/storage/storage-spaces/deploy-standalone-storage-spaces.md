@@ -2,8 +2,8 @@
 title: Deploy Storage Spaces on a stand-alone server
 description: Learn the necessary prerequisites and processes for deploying Storage Spaces on a stand-alone Windows Server-based server.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 03/27/2023
 ---
 
@@ -234,9 +234,6 @@ Next, you must create a volume from the virtual disk. You can assign an optional
    1. In the **File system** list, select either **NTFS** or **ReFS**.
 
    1. In the **Allocation unit size** list, either leave the setting at **Default** or set the allocation unit size.
-
-        > [!NOTE]
-        > For more information about allocation unit size, see [Default cluster size for NTFS, FAT, and exFAT](https://support.microsoft.com/help/140365/default-cluster-size-for-ntfs-fat-and-exfat).
 
    1. Optionally, in the **Volume label** box, enter a volume label name, for example **HR Data**.
 

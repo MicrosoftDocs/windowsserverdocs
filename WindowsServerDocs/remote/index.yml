@@ -7,9 +7,8 @@ metadata:
   title: Remote # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Guidance on leveraging remote access and server administration. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: windows-server
-  ms.technology: manage-rsat
-  author: JasonGerend
-  ms.author: jgerend
+  author: robinharwood
+  ms.author: wscontent
   manager: mtillman
   ms.localizationpriority: high
   ms.topic: landing-page # Required

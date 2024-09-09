@@ -3,9 +3,9 @@ title: Manage basic volumes
 description: This article describes basic disks and the requirements to add space to existing primary partitions and logical drives.
 ms.date: 03/08/2023
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 
 # Manage basic volumes

@@ -3,9 +3,9 @@ title: Set the Ordering Method for Targets in Referrals
 description: This article describes how to set the ordering method for targets in referrals.
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Set the Ordering Method for Targets in Referrals
 

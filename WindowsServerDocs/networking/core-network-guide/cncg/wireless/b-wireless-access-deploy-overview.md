@@ -4,8 +4,8 @@ description: Learn about wireless access deployment components that are required
 manager: brianlic
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Overview

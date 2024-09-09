@@ -3,8 +3,6 @@
   items:
   - name: Windows Server supported networking scenarios
     href: windows-server-supported-networking-scenarios.md
-  - name: What's new in networking
-    href: What-s-New-in-Networking.md
   - name: Configure secure protocol options for WinHTTP
     href: configure-secure-protocol-options-winhttp.md
   - name: Core network guidance for Windows Server
@@ -289,8 +287,6 @@
   - name: IP Address Management (IPAM)
     href: technologies/ipam/ipam-top.md
     items:
-    - name: What's new in IPAM
-      href: technologies/ipam/What-s-New-in-IPAM.md
     - name: Manage IPAM
       href: technologies/ipam/Manage-IPAM.md
       items:

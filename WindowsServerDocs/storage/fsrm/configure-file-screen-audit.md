@@ -3,9 +3,9 @@ title: Configure File Screen Audit
 description: This article describes how to configure File Screen Audit to generate the File Screening Audit report
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Configure File Screen Audit
 
