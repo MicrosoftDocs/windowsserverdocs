@@ -9,7 +9,7 @@ ms.date: 9/9/2024
 
 # Use multiple Remote Desktop license servers
 
-When using multiple Remote Desktop (RD) license servers, after applying the security update for CVE-2024-38231, ensure that the servers can properly communicate with one another. This is relevant in either of the following scenarios:
+When using multiple Remote Desktop (RD) license servers, after applying the security update for CVE-2024-38231, ensure that the servers can properly communicate with one another. It's important that RD license servers can communicate with one another in either of the following scenarios:
 
 - A license is returned to an RD license server that didn't issue it
 - Automatic license server discovery, a mechanism that was abandoned starting with Windows Server 2008 R2, is still in use in a Remote Desktop deployment
@@ -59,7 +59,7 @@ Then, on LICSVR1, add the user and its credentials so they can be used by the _N
     cmdkey /add:LICSVR2 /user:LICSVR2\<USERNAME> /pass
     ```
 
-   where \<USERNAME> is the name of the user you decided that LICSVR1 will use to authenticate to LICSVR2.
+   where \<USERNAME> is the name of the user you decided that LICSVR1 uses to authenticate to LICSVR2.
 
 1. When prompted for the password, enter the password of that user.
 
@@ -80,7 +80,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TermServLicensin
 
 ## Domain-joined deployment
 
-For domain-joined RD license servers to properly communicate with one another, they need to be aware that communication is coming from another RD license server. This can be achieved using one of the three manners described in this section.
+For domain-joined RD license servers to properly communicate with one another, they need to know that communication is coming from another RD license server. This can be achieved using one of the three manners described in this section.
 
 - A domain administrator can publish each RD license server to Active Directory Domain Services (AD DS) using the [PublishLS WMI method of the Win32_TSLicenseServer class](/windows/win32/termserv/publishls-win32-tslicenseserver). This creates a site-level record in AD DS that can be used to authorize communication between RD license servers. In PowerShell as a domain administrator on a license server, run the command:
 
@@ -91,12 +91,10 @@ For domain-joined RD license servers to properly communicate with one another, t
 - Alternatively, each RD license server can be configured to authorize communication from a particular set of RD license servers by configuring the **Use the specified Remote Desktop license servers** group policy. That group policy is described in more detail in [License Remote Desktop session hosts](/windows-server/remote/remote-desktop-services/rds-license-session-hosts#configure-licensing-for-an-rds-deployment-that-includes-only-the-rd-session-host-role-and-the-rd-licensing-role). Or the following registry value can be set to specify license servers. In PowerShell as an administrator on an RD license server, run the command:
 
     ```powershell
-    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TermServLicensing\Parameters" -Name " SpecifiedLicenseServers" -Value "<LicSrv1DnsHosName>","<LicSrv2DnsHosName>" -Type MultiString
+    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TermServLicensing\Parameters" -Name " SpecifiedLicenseServers" -Value "<LicSrv1DnsHostName>","<LicSrv2DnsHostName>" -Type MultiString
     ```
-
-Where \<LicSrv1DnsHosName> and \<LicSrv1DnsHosName> are the DNS host name of the other RD license servers.
 
 - For historical reasons, RD licensing services that run on Active Directory domain controllers don't require extra configuration.
 
 > [!IMPORTANT]
-> We strongly advise against installing the RD licensing server on domain controllers. Use this approach at your own risk. Per the Active Directory security best practices, domain controllers should be treated as critical infrastructure components and should minimize the amount of unrelated software they run. See [Protecting Domain Controllers](/windows-server/identity/ad-ds/plan/security-best-practices/avenues-to-compromise#protecting-domain-controllers) for more information.
+> We strongly advise against installing the RD licensing server on domain controllers. Use this approach at your own risk. Per the Active Directory security best practices, domain controllers should be treated as critical infrastructure components and should minimize the amount of unrelated software they run. For more information, se [Protecting Domain Controllers](/windows-server/identity/ad-ds/plan/security-best-practices/avenues-to-compromise#protecting-domain-controllers).
