@@ -11629,6 +11629,11 @@
       "source_path": "WindowsServerDocs/storage/data-deduplication/whats-new.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": false
     }
   ]
 }

@@ -8,7 +8,7 @@ ms.topic: how-to
 #customer intent: As an Active Directory administrator, I want to enable Active Directory Recycle Bin so that I can recover deleted objects in Active Directory Domain Services.
 ---
 
-# Enable and use Active Directory Recycle Bin in Windows Server
+# Enable and use Active Directory Recycle Bin
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -46,17 +46,21 @@ Here's how to enable Active Directory Recycle Bin using Active Directory Adminis
 
 1. If the appropriate target domain isn't selected, choose **Manage**, choose **Add Navigation Nodes**, and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then choose **OK**.
 
-1. In the **Tasks** pane, choose **Enable Recycle Bin ...** in the **Tasks** pane, choose **OK** on the warning message box, and then choose **OK** to the refresh ADAC message.
+1. In the **Tasks** pane, choose **Enable Recycle Bin** in the **Tasks** pane, choose **OK** on the warning message box, and then choose **OK** to the refresh ADAC message.
 
-1. To refresh ADAC, press F5.
+1. To refresh ADAC, press F5 or select the refresh icon.
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to enable Active Directory Recycle Bin using the [Enable-ADOptionalFeature](/powershell/module/activedirectory/enable-adoptionalfeature) cmdlet. For example, to enable the Active Directory Recycle Bin in the `contoso.com` domain, run the following command:
+Here's how to enable Active Directory Recycle Bin using the [Enable-ADOptionalFeature](/powershell/module/activedirectory/enable-adoptionalfeature) cmdlet.
 
-```powershell
-Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com' -Scope ForestOrConfigurationSet -Target 'contoso.com'
-```
+1. Open an elevated PowerShell session, right-click on the _Start_ button, choose **Windows PowerShell (Admin)**.
+
+1. Run the following command to enable the Active Directory Recycle Bin in the `contoso.com` domain:
+
+   ```powershell
+   Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com' -Scope ForestOrConfigurationSet -Target 'contoso.com'
+   ```
 
 ---
 
@@ -64,10 +68,10 @@ If you encounter an error, you can try moving both the schema master and the dom
 
 ## Restore deleted objects
 
+Perform perform the following steps to restore deleted objects using Active Directory Administrative Center.
+
 > [!TIP]
 > You can only restore AD DS items that were deleted after Active Directory Recycle Bin is enabled. You can't use Active Directory Recycle Bin to recover items that were deleted before enabling this functionality.
-
-Perform perform the following steps to restore deleted objects using Active Directory Administrative Center.
 
 #### [Active Directory Administrative Center](#tab/adac)
 
@@ -79,24 +83,26 @@ Here's how to restore deleted objects using Active Directory Administrative Cent
 
 1. Navigate to the **Deleted Objects** container.
 
-1. Select the users you wish to restore and then choose **Restore** in the **Tasks** pane.
+1. Select the users you wish to restore and then choose either **Restore** in the **Tasks** pane, or **Restore To** in the **Tasks** pane and specify the location to which you wish to restore the deleted objects.
 
 1. To confirm the objects were restored to their original location, navigate to the target domain and verify the user accounts are listed.
 
-To restore deleted objects to a different location, choose**Restore To** in the **Tasks** pane and specify the location to which you wish to restore the deleted objects.
-
 #### [PowerShell](#tab/powershell)
 
-Here's how to restore deleted objects using the [Restore-ADObject](/powershell/module/activedirectory/Restore-ADObject) cmdlet. For example, to restore all deleted objects that include the name "test" use the following command:
+Here's how to restore deleted objects using the [Restore-ADObject](/powershell/module/activedirectory/Restore-ADObject) cmdlet.
 
-```powershell
-Get-ADObject -Filter 'Name -Like "*User*"' -IncludeDeletedObjects | Restore-ADObject
-```
+1. Open an elevated PowerShell session, right-click on the _Start_ button, choose **Windows PowerShell (Admin)**.
 
-To restore deleted objects to a different location using the `Restore-ADObject` cmdlet with the `-TargetPath` parameter. For example, to restore all objects that include the name "User" to the `Corp` OU in the `contoso.com` domain, run the command:
+1. Restore all deleted objects that include the name "test" using the following command:
 
-```powershell
-Get-ADObject -Filter 'Name -Like "*User*"' -IncludeDeletedObjects | Restore-ADObject -TargetPath "OU=Corp,DC=contoso,DC=com"
-```
+   ```powershell
+   Get-ADObject -Filter 'Name -Like "*User*"' -IncludeDeletedObjects | Restore-ADObject
+   ```
+
+1. Restore deleted objects to a different location using the `Restore-ADObject` cmdlet with the `-TargetPath` parameter. For example, to restore all objects that include the name "User" to the `Corp` OU in the `contoso.com` domain, run the command:
+
+   ```powershell
+   Get-ADObject -Filter 'Name -Like "*User*"' -IncludeDeletedObjects | Restore-ADObject -TargetPath "OU=Corp,DC=contoso,DC=com"
+   ```
 
 ---
