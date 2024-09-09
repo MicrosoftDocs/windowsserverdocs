@@ -4,7 +4,7 @@ description: Learn how to use multiple Remote Desktop (RD) license servers so th
 ms.topic: article
 author: meaghanlewis
 ms.author: wscontent
-ms.date: 8/29/2024
+ms.date: 9/9/2024
 ---
 
 # Use multiple Remote Desktop license servers
@@ -21,7 +21,7 @@ Workgroup-joined Remote Desktop deployments are meant for small deployments. We 
 > [!IMPORTANT]
 > Support for multiple license servers in workgroups may be removed in a future version of Windows.
 
-To use multiple RD license servers in the same workgroup, ensure that each license server can authenticate to one another, and that they recognize each other as being license servers.
+To use multiple RD license servers in the same workgroup, ensure that each license server can authenticate to one another, and that they recognize each other as license servers.
 
 ### Ensure license servers are authenticated
 
@@ -63,7 +63,7 @@ Then, on LICSVR1, add the user and its credentials so they can be used by the _N
 
 1. When prompted for the password, enter the password of that user.
 
-LICSVR1 should now be able to authenticate to LICSVR2. To ensure that LICSVR2 recognizes LICSVR1 as being another license server, you need to add the user to a local group on LICSV2 and register that local group with the RD licensing service. In PowerShell running as administrator on LICSVR2, this can be achieved as follows:
+LICSVR1 should now be able to authenticate to LICSVR2. For LICSVR2 to recognize LICSVR1 as another license server, you need to add the user to a local group on LICSV2 and register that local group with the RD licensing service. In PowerShell running as administrator on LICSVR2, use the following command:
 
 ```powershell
 New-LocalGroup -Name <GROUP-NAME> 
