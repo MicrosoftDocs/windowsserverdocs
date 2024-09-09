@@ -65,8 +65,6 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
   
   Utilities like Active Directory Administrative Center (ADAC), Active Directory Users and Computers (ADUC), `net computer`, and `dsmod` also honors this new behavior. Both ADAC and ADUC no longer allow creating a pre-2k Windows account.
 
-- **Kerberos AES SHA256 and SHA384** - The Kerberos protocol implementation is updated to support stronger encryption and signing mechanisms with support for [RFC 8009](https://datatracker.ietf.org/doc/rfc8009/) by adding SHA-256 and SHA-384. RC4 is deprecated and moved to the do-not-use cipher list.
-
 - **Kerberos PKINIT support for cryptographic agility** - The Kerberos Public Key Cryptography for Initial Authentication in Kerberos (PKINIT) protocol implementation is updated to allow for cryptographic agility by supporting more algorithms and removing hardcoded algorithms.
 
 - **LAN Manager GPO setting** - The GPO setting _Network security: Don't store LAN Manager hash value on next password change_ is no longer present nor applicable to new versions of Windows.
