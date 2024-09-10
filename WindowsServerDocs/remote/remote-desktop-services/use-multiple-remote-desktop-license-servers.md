@@ -9,7 +9,7 @@ ms.date: 9/9/2024
 
 # Use multiple Remote Desktop license servers
 
-When using multiple Remote Desktop (RD) license servers, after applying the security update for CVE-2024-38231, ensure that the servers can properly communicate with one another. It's important that RD license servers can communicate with one another in either of the following scenarios:
+When using multiple Remote Desktop (RD) license servers, after applying the security update for [CVE-2024-38231](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38231), ensure that the servers can properly communicate with one another. It's important that RD license servers can communicate with one another in either of the following scenarios:
 
 - A license is returned to an RD license server that didn't issue it
 - Automatic license server discovery, a mechanism that was abandoned starting with Windows Server 2008 R2, is still in use in a Remote Desktop deployment
