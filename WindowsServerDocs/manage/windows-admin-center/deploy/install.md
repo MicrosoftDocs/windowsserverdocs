@@ -27,28 +27,33 @@ Review the [installation options](../plan/installation-options.md) which include
 
 ### [Server Core](#tab/server-core)
 
+If you have a Server Core installation of Windows Server 2025, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
+
 To install Windows Admin Center on your machine running Windows Server 2025 (preview) Server Core installation:
 
-1. Open [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center).
+> [!WARNING]
+> Installing Windows Admin Center will restart the WinRM service, which will sever all remote PowerShells sessions. It is recommended that you install from a local Cmd or PowerShell. If you are installing with an automation solution that would be broken by the WinRM service restarting, you can add the parameter ```RESTART_WINRM=0``` to the install arguments, but WinRM must be restarted for Windows Admin Center to function.
 
-1. Under **Please select your Windows Admin Center download**, select **Download now**.
+Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
 
-1. Select the option that matches your preference for how much diagnostic data you want to share with Microsoft, then select **Next**.
+```
+msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
+```
 
-1. In the **Installing Windows Admin Center** window, select the port that you want the Windows Admin Center site to use 
+Run the following command to install Windows Admin Center with an existing certificate:
 
->[!NOTE]
->The default port is 6516. The **Allow Windows Admin Center to modify this machine's trusted host settings** checkbox is selected by default. We recommend leaving this check box selected, but you can also deselect the box to disable this setting if you don't want Windows Admin Center to be able to modify your machine's trusted host settings.
+```
+msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
+```
 
-1. Select **Install** to start installing Windows Admin Center. 
+> [!WARNING]
+> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
 
-1. In the One more thing window, select the correct certificate for Windows Admin Center to use. 
+## Upgrading to a new version of Windows Admin Center
 
-1. Select the option that's highlighted and then select **Finish**.
+You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing.
 
-Wait for Windows Admin Center to automatically start.
-
-After you install Windows Admin Center, you should be able to see the name, details, and connection history of the machine you installed it on in the **All connections** page. 
+Your settings are preserved when upgrading to a new version of Windows Admin Center. We don't officially support upgrading Insider Preview versions of Windows Admin Center - we think it's better to do a clean install - but we don't block it. 
 
 ### [Desktop Experience](#tab/desktop-experience)
 
@@ -101,28 +106,33 @@ You should see the name of the machine you installed Windows Admin Center On the
 
 ### [Server Core](#tab/server-core)
 
+If you have a Server Core installation of Windows Server 2022 and earlier, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
+
 To install Windows Admin Center on your Windows Server 2022 and earlier versions running Server Core installation:
 
-1. Open [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center).
+> [!WARNING]
+> Installing Windows Admin Center will restart the WinRM service, which will sever all remote PowerShells sessions. It is recommended that you install from a local Cmd or PowerShell. If you are installing with an automation solution that would be broken by the WinRM service restarting, you can add the parameter ```RESTART_WINRM=0``` to the install arguments, but WinRM must be restarted for Windows Admin Center to function.
 
-1. Under **Please select your Windows Admin Center download**, select **Download now**.
+Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
 
-1. Select the option that matches your preference for how much diagnostic data you want to share with Microsoft, then select **Next**.
+```
+msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
+```
 
-1. In the **Installing Windows Admin Center** window, select the port that you want the Windows Admin Center site to use. 
+Run the following command to install Windows Admin Center with an existing certificate:
 
->[!NOTE]
->The default port is 6516. The **Allow Windows Admin Center to modify this machine's trusted host settings** checkbox is selected by default. We recommend leaving this check box selected, but you can also deselect the box to disable this setting if you don't want Windows Admin Center to be able to modify your machine's trusted host settings.
+```
+msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
+```
 
-1. Select **Install** to start installing Windows Admin Center. 
+> [!WARNING]
+> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
 
-1. In the **One more thing** window, select the correct certificate for Windows Admin Center to use. 
+## Upgrading to a new version of Windows Admin Center
 
-1. Select the option that's highlighted, then select **Finish**.
+You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing.
 
-1. Wait for Windows Admin Center to automatically start.
-
-After you install Windows Admin Center, you should be able to see the name, details, and connection history of the machine you installed it on in the **All connections** page.
+Your settings are preserved when upgrading to a new version of Windows Admin Center. We don't officially support upgrading Insider Preview versions of Windows Admin Center - we think it's better to do a clean install - but we don't block it.
 
 ### [Desktop Experience](#tab/desktop-experience)
 
@@ -200,7 +210,7 @@ Once the install is complete, open a browser from a remote computer and navigate
 
 ## Install on Server Core
 
-If you have a Server Core installation of Windows Server, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
+If you have a Server Core installation of Windows Server with desktop experience, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
 
 > [!WARNING]
 > Installing Windows Admin Center will restart the WinRM service, which will sever all remote PowerShells sessions. It is recommended that you install from a local Cmd or PowerShell. If you are installing with an automation solution that would be broken by the WinRM service restarting, you can add the parameter ```RESTART_WINRM=0``` to the install arguments, but WinRM must be restarted for Windows Admin Center to function.
