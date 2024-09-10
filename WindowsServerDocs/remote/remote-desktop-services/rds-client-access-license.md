@@ -5,8 +5,7 @@ ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: robinharwood
 ms.author: wscontent
-ms.date: 7/3/2024
-manager: dongill
+ms.date: 09/10/2024
 ---
 # License your RDS deployment with client access licenses (CALs)
 
@@ -81,7 +80,7 @@ You must install your RDS CAL on a compatible RD license server. Any RDS license
 
 The following table shows which RDS CAL and license server versions are compatible with each other.
 
-| Session host version | RDS 2016 CAL | RDS 2019 CAL | RDS 2022 CAL |
+| License server version | RDS 2016 CAL | RDS 2019 CAL | RDS 2022 CAL |
 |---------------------------------|--------|--------|--------|
 | Windows Server 2016 license server         | Yes  | No    | No    |
 | Windows Server 2019 license server         | Yes  | Yes   | No    |
