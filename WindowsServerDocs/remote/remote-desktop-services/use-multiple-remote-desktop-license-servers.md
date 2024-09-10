@@ -94,6 +94,8 @@ For domain-joined RD license servers to properly communicate with one another, t
     Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\TermServLicensing\Parameters" -Name " SpecifiedLicenseServers" -Value "<LicSrv1DnsHostName>","<LicSrv2DnsHostName>" -Type MultiString
     ```
 
+    Where \<LicSrv1DnsHostName> and \<LicSrv1DnsHostName> are the DNS host names of the other RD license servers. 
+
 - For historical reasons, RD licensing services that run on Active Directory domain controllers don't require extra configuration.
 
 > [!IMPORTANT]
