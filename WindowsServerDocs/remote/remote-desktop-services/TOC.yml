@@ -101,6 +101,8 @@
         href: rds-license-session-hosts.md
       - name: Track the CALs used in your deployment
         href: rds-track-cals.md
+      - name: Use multiple license servers
+        href: use-multiple-remote-desktop-license-servers.md
     - name: Integrate Azure services
       href: rds-integrate-with-azure.md
       items:
