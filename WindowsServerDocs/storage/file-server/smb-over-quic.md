@@ -96,9 +96,7 @@ To use SMB over QUIC, you need the following things:
 
    :::image type="content" source="./media/smb-over-quic/select-cert.png" alt-text="An image showing the Microsoft Management Console Certificate Enrollment with SMB over QUIC selected":::
 
-   :::image type="content" source="./media/smb-over-quic/san-cert.png" alt-text="An image showing the Certificate Properties windows of the selected certificate":::
-
-   :::image type="content" source="./media/smb-over-quic/mmccert.png" alt-text="An image showing the completion process of the certificate enrollment in Microsoft Management Console":::
+   :::image type="content" source="./media/smb-over-quic/certificate-properties-subject.png" alt-text="An image showing the Certificate Properties windows of the selected certificate":::
 
 > [!NOTE]
 > Don't use IP addresses for SMB over QUIC server Subject Alternative Names.
