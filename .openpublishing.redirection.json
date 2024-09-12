@@ -11914,6 +11914,11 @@
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/dc-locator-changes.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/dc-locator",
+      "redirect_document_id": true
     }
   ]
 }
