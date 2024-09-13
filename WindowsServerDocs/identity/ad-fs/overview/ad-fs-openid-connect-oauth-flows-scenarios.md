@@ -519,7 +519,7 @@ POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
-client_id=535fb089-9ff3-47b6-9bfb-4f1264799865
+client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &client_secret=qWgdYAmab0YSkuL1qKv5bPX
 &grant_type=client_credentials
 ```
@@ -541,7 +541,7 @@ POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
-&client_id=97e0a5b7-d745-40b6-94fe-5f77d35c6e05
+&client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwt-bearer
 &client_assertion=eyJhbGciOiJSUzI1NiIsIng1dCI6Imd4OHRHeXN5amNScUtqRlBuZDdSRnd2d1pJMCJ9.eyJ{a lot of characters here}M8U3bSUKKJDEg
 &grant_type=client_credentials
@@ -589,7 +589,7 @@ POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
-client_id=6731de76-14a6-49ae-97bc-6eba6914391e
+client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &scope= openid
 &username=myusername@contoso.com
 &password=SuperS3cret
@@ -655,7 +655,7 @@ The client must first check with the authentication server for a device and user
 POST https://adfs.contoso.com/adfs/oauth2/devicecode
 Content-Type: application/x-www-form-urlencoded
 
-client_id=6731de76-14a6-49ae-97bc-6eba6914391e
+client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 scope=openid
 ```
 
@@ -688,7 +688,7 @@ POST https://adfs.contoso.com /adfs/oauth2/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type: urn:ietf:params:oauth:grant-type:device_code
-client_id: 6731de76-14a6-49ae-97bc-6eba6914391e
+client_id: 00001111-aaaa-2222-bbbb-3333cccc4444
 device_code: GMMhmHCXhWEzkobqIHGG_EnNYYsAkukHspeYUk9E8
 ```
 
