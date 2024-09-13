@@ -39,7 +39,7 @@ Password complexity setting five is equivalent to password complexity setting fo
 - Adds the symbols ':', '=', '?', and '*'
 
 > [!IMPORTANT]
-> The PasswordComplexity setting of '5' is supported in Windows Server 2025 and later client\server OS versions. It is not required to deploy any Windows Server 2025 domain controllers in order to use this new setting.
+> The PasswordComplexity setting of '5' is only supported in Windows 11 24H2, Windows Server 2025 and later releases. It is not required to deploy any Windows Server 2025 domain controllers in order to use this new setting.
 
 ## Passphrase word lists
 
@@ -60,7 +60,7 @@ Example of a passphrase created with six words taken from the "Long words" list:
 Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Random Passphrases"](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) by [Electronic Frontier Foundation](https://www.eff.org/), and are used under a CC-BY-3.0 Attribution license. The specific contents of all Windows LAPS passphrase word lists can be downloaded from [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471). Microsoft made slight modifications to the original word lists; all changes are detailed in the downloadable lists.
 
 > [!IMPORTANT]
-> Windows LAPS passphrase support is supported in Windows Server 2025 and later client\server OS versions. It is not required to deploy Windows Server 2025 domain controllers in order to use this new setting.
+> Windows LAPS passphrase support is only supported in Windows 11 24H2, Windows Server 2025 and later releases. It is not required to deploy Windows Server 2025 domain controllers in order to use this new setting.
 
 ## Entropy considerations
 
