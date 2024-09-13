@@ -1,7 +1,26 @@
 - name: Failover Clustering
   href: failover-clustering-overview.md
-- name: Understand
+- name: Overview
   items:
+  - name: Failover Clustering
+    href: failover-clustering-overview.md
+  - name: Hardware requirements
+    href: clustering-requirements.md
+- name: Quickstarts
+  items:
+  - name: Create a failover cluster
+    href: create-failover-cluster.md
+  - name: Create a workgroup cluster
+    href: create-workgroup-cluster.md  
+  - name: Deploy a two-node file server
+    href: deploy-two-node-clustered-file-server.md
+  - name: Manage quorum and witnesses
+    href: manage-cluster-quorum.md
+- name: Tutorials
+  items:
+  
+
+
   - name: Scale-Out File Server for application data
     href: sofs-overview.md
   - name: Cluster and pool quorum
@@ -18,20 +37,15 @@
     href: cluster-affinity.md
 - name: Plan
   items:
-  - name: Hardware requirements
-    href: clustering-requirements.md
   - name: Use Cluster Shared Volumes (CSVs
     href: failover-cluster-csvs.md
   - name: Using guest VM clusters
     href: ../storage/storage-spaces/storage-spaces-direct-in-vm.md
 - name: Deploy
   items:
-  - name: Create a failover cluster
-    href: create-failover-cluster.md
-  - name: Create a workgroup cluster
-    href: create-workgroup-cluster.md  
-  - name: Deploy a two-node file server
-    href: deploy-two-node-clustered-file-server.md
+
+
+
   - name: Deploy a cluster set
     href: cluster-set.md
   - name: Prestage a cluster in AD DS
@@ -39,8 +53,7 @@
     items:
     - name: Configuring cluster accounts in Active Directory
       href: configure-ad-accounts.md
-  - name: Manage quorum and witnesses
-    href: manage-cluster-quorum.md
+
   - name: Deploy a Cloud Witness
     href: deploy-cloud-witness.md
   - name: Deploy a file share witness
