@@ -177,7 +177,7 @@ From PowerShell (elevated), run:
 > [!NOTE]
 > If you are using the WSUS Console, close and restart it.
 
-## Uninstalling the WID role (not recommended)
+## Uninstall the WID feature (read notes)
 
 > [!WARNING]
 > Removing the WID role also removes a database folder (**%SystemDrive%\Program Files\Update Services\Database**) that contains scripts required by WSUSUtil.exe for post-installation tasks. If you choose to uninstall the WID role, make sure you back up the **%SystemDrive%\Program Files\Update Services\Database** folder beforehand.
@@ -189,3 +189,16 @@ Uninstall-WindowsFeature -Name 'Windows-Internal-Database'
 ```
 
 After the WID role is removed, verify that the following registry key is present: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Update Services\Server\Setup\Installed Role Services\UpdateServices-Database**
+
+
+## Install the SQL Server Connectivity Feature
+
+Using PowerShell:
+
+```powershell
+Install-WindowsFeature -Name 'UpdateServices-DB'
+ ```
+
+Upon installation of the SQL Server Connectivity feature complete the role configuration from Server Manager.
+If Server Manager requires, restart the server.
+ 
