@@ -2,8 +2,8 @@
 title: SMB security enhancements
 description: Learn about SMB security enhancements, such as encryption and the new signing algorithm, in Windows Server and Azure Stack HCI, version 21H2.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 05/18/2023
 ---
 

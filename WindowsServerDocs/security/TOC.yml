@@ -199,7 +199,7 @@
       href: tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server.md
     - name: Manage TLS
       href: tls/manage-tls.md
-    - name: TLS Registry Settings
+    - name: TLS registry settings
       href: tls/tls-registry-settings.md
     - name: Schannel Security Support Provider Technical Reference
       href: tls/schannel-security-support-provider-technical-reference.md

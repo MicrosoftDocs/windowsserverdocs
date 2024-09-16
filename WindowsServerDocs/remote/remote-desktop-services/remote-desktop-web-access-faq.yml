@@ -6,6 +6,7 @@ metadata:
   author: meaghanlewis
   ms.author: mosagie
   ms.topic: faq
+  ms.custom: se-defect-target
   ms.date: 06/12/2024
 title: Remote Desktop Web Access FAQ
 summary: |
@@ -37,3 +38,30 @@ sections:
           If you're using a work computer assigned to you and that you don't share with other people, click This is a private computer.
 
           To protect against unauthorized access, RD Web Access sessions automatically end after a period of inactivity. If your RD Web Access session ends, you need to sign in again. The amount of time before a session ends is determined by your administrator.
+
+      - question: |
+          How do I enable password reset?
+        answer: |
+          Windows Server comes with an option to enable remote users to change their password from within the RD Web access interface in case it's expired. 
+          > [!NOTE]
+          > This option isn’t helpful for users who forgot their password since the old password still needs to be entered before selecting a new password. For forgotten passwords, you must contact your Active Directory administrator. 
+          
+          To set up password reset password for Remote Web access:
+
+          1.	Open **Server Manager** on the Server running RD Web Access.
+          2.	In the menu under **Tools**, navigate to **Internet Information Services (IIS) Manager**.
+          3.	Next, locate your server and navigate to **Sites > Default Web Site > RDWeb > Pages**.
+          4.	Select **Application Settings** from the menu. Then, select the setting **PasswordChangeEnabled** and change the value to true.
+            
+            ![A screenshot of the application setting PasswordChangeEnabled.](media/password-change-enabled-setting.png)
+
+          Now, when you open the RDWebaccess page and try to log in using an expired password, a link appears to reset your password.
+          
+            ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
+          
+          When you open the password reset page you’re presented with the following user interface, where you enter your current password, new password, and confirm the new password.
+          
+            ![A screenshot of the link displayed to change your password.](media/change-password-form.png)
+          
+          > [!NOTE]
+          > If the remote server is running in Azure, you need create an endpoint for public port 443 in the Azure management portal so that users can access the RD Web Access portal. 

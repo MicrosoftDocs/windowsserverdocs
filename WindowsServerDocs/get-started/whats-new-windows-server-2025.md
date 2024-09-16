@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 08/06/2024
+ms.date: 08/14/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -65,8 +65,6 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
   
   Utilities like Active Directory Administrative Center (ADAC), Active Directory Users and Computers (ADUC), `net computer`, and `dsmod` also honors this new behavior. Both ADAC and ADUC no longer allow creating a pre-2k Windows account.
 
-- **Kerberos AES SHA256 and SHA384** - The Kerberos protocol implementation is updated to support stronger encryption and signing mechanisms with support for [RFC 8009](https://datatracker.ietf.org/doc/rfc8009/) by adding SHA-256 and SHA-384. RC4 is deprecated and moved to the do-not-use cipher list.
-
 - **Kerberos PKINIT support for cryptographic agility** - The Kerberos Public Key Cryptography for Initial Authentication in Kerberos (PKINIT) protocol implementation is updated to allow for cryptographic agility by supporting more algorithms and removing hardcoded algorithms.
 
 - **LAN Manager GPO setting** - The GPO setting _Network security: Don't store LAN Manager hash value on next password change_ is no longer present nor applicable to new versions of Windows.
@@ -105,6 +103,10 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 
 By default, the Azure Arc setup Feature-on-Demand is installed, which offers a user-friendly wizard interface and a system tray icon in the taskbar to facilitate the process of adding servers to Azure Arc. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
 
+### Block cloning support
+
+Starting with Windows 11 24H2 and Windows Server 2025, Dev Drive now supports Block cloning. As Dev Drive uses the ReFS file system format, Block cloning support provides significant performance benefits when copying files. With Block cloning, the file system can copy a range of file bytes on behalf of an application as a low-cost metadata operation, rather than performing expensive read and write operations to the underlying physical data. This results in faster completion of file copying, reduced I/O to the underlying storage, and improved storage capacity by enabling multiple files to share the same logical clusters. To learn more, see [Block cloning on ReFS](/windows-server/storage/refs/block-cloning).
+
 ### Bluetooth
 
 You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
@@ -120,6 +122,10 @@ When you sign in for the first time, the desktop shell experience conforms to th
 ### Delegated Managed Service Account
 
 This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](../identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md).
+
+### Dev Drive
+
+Dev Drive is a storage volume that aims to enhance the performance of crucial developer workloads. Dev Drive utilizes ReFS technology and incorporates specific file system optimizations to offer greater control over storage volume settings and security. This includes the ability to designate trust, configure antivirus settings, and exercise administrative control over attached filters. To learn more, see [Set up a Dev Drive on Windows 11](/windows/dev-drive).
 
 ### DTrace
 
@@ -146,6 +152,10 @@ Build 26040 has a new compression feature when compressing an item by performing
 ### Flighting
 
 Flighting is only available for the Canary Channel release beginning in early 2024 starting with build 26010, which allows users to receive Windows Server flights similar to Windows client. To enable flighting on your device, go to **Start > Settings > Windows Update > Windows Insider Program**. From there, you can choose to opt into your desired Insiders release.
+
+### Hyper-V Manager
+
+When creating a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the New Virtual Machine Wizard.
 
 ### OpenSSH
 

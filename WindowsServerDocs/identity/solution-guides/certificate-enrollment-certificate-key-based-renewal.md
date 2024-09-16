@@ -281,8 +281,6 @@ Run the following command:
 certreq -machine -q -enroll -cert <thumbprint> renew
 ```
 
-![Screenshot that shows how to run the provided command.](media/certificate-enrollment-certificate-key-based-renewal-14.png)
-
 ### Method 2
 
 Advance the time and date on the client machine into the renewal time of the certificate template.

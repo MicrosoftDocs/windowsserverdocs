@@ -5,12 +5,12 @@ ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 ms.author: wscontent
 author: robinharwood
-ms.date: 06/10/2024
+ms.date: 08/28/2024
 ---
 
 # Set up Hyper-V Replica
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016; Azure Stack HCI, versions 23H2 and 22H2
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016; Azure Stack HCI, version 23H2 (only for Hyper-V virtual machines) and Azure Stack HCI, version 22H2
 
 Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your disaster recovery strategy by replicating virtual machines from one Hyper-V host server to another to keep your workloads available. Hyper-V Replica creates a copy of a live virtual machine to a replica offline virtual machine. Note the following:
 
@@ -54,7 +54,7 @@ Here's what you should verify before you begin:
 
 ### Step 1: Set up the Hyper-V hosts
 
-You'll need at least two Hyper-V hosts with one or more virtual machines on each server. [Get started with Hyper-V](../get-started/Get-started-with-Hyper-V-on-Windows.md). The host server that you'll replicate virtual machines to will need to be set up as the replica server.
+You'll need at least two Hyper-V hosts with one or more virtual machines on each server. Get started and [Install the Hyper-V role on Windows Server](/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server). The host server that you'll replicate virtual machines to will need to be set up as the replica server.
 
 1. In the Hyper-V settings for the server you'll replicate virtual machines to, in **Replication Configuration**, select **Enable this computer as a Replica server**.
 
