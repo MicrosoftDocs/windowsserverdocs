@@ -35,7 +35,7 @@
   - name: Cluster-aware updating 
     items:
     - name: Cluster-Aware updating
-    href: cluster-aware-updating.md
+      href: cluster-aware-updating.md
     - name: Requirements and best practices
       href: cluster-aware-updating-requirements.md
     - name: Advanced options
