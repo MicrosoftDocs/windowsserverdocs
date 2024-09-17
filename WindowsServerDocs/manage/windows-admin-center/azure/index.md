@@ -20,7 +20,7 @@ Using Azure hybrid services within Windows Admin Center, you can:
 - [Extend on-premises capacity with storage and compute in Azure, and simplify network connectivity to Azure](#extend-on-premises-capacity-with-azure).
 - [Centralize monitoring, governance, configuration, and security across your applications, network, and infrastructure with the help of cloud-intelligent Azure management services](#centrally-manage-your-hybrid-environment-from-azure).
 
-While you can set up most Azure hybrid services by downloading an app and doing some manual configuration, many are integrated directly into Windows Admin Center to provide a simplified setup experience and a server-centric view of the services. Windows Admin Center also provides convenient intelligent hyperlinks to the Azure portal to see connected Azure resources as well as a centralized view of your hybrid environment.
+You can set up most Azure hybrid services by downloading an app and doing some manual configuration. Many Azure hybrid services are integrated directly into Windows Admin Center to provide a simplified setup experience and a server-centric view of the services. Windows Admin Center also provides convenient intelligent hyperlinks to the Azure portal to see connected Azure resources as well as a centralized view of your hybrid environment.
 
 ## Discover integrated services in the Azure hybrid services tool
 
@@ -28,7 +28,7 @@ The Azure hybrid services tool in [Windows Admin Center](../overview.md) consoli
 
 ![Screenshot of Windows Admin Center showing the Azure Hybrid Services tool](../media/azure-services/Azure-Hybrid-Services-Discover.png)
 
-If you connect to a server with Azure services already enabled, the Azure hybrid services tool serves as a single pane of glass to see all enabled services on that server. You can easily get to the relevant tool within Windows Admin Center, launch out to the Azure portal for deeper management of those Azure services, or read more with documentation at your fingertips.
+If you connect to a server with Azure services already enabled, the Azure hybrid services tool serves lets you see all enabled services on that server in a single glance. You can easily get to the relevant tool within Windows Admin Center, launch out to the Azure portal for deeper management of those Azure services, or learn more with documentation at your fingertips.
 
 ![Screenshot of Windows Admin Center showing Azure services that are already installed on the server](../media/azure-services/Azure-Hybrid-Services-DayN.png)
 
@@ -46,9 +46,9 @@ From the Azure hybrid services tool, you can:
 
 ## Azure hybrid service regional support
 
-The Windows Admin Center gateway can be registered in both public and private Azure clouds. Today, we support gateway registration in Azure Global, Azure China, and Azure US Government. When your gateway is registered, Windows Admin Center assumes that all other Azure operations, including the use of Azure hybrid services, will be done in that cloud. 
+You can register the Windows Admin Center gateway in both public and private Azure clouds. Today, Microsoft supports gateway registration in Azure Global, Azure China, and Azure US Government. When you register a gateway, Windows Admin Center assumes that all other Azure operations, including the use of Azure hybrid services, will be performed in that cloud.
 
-The regional support for each Azure hybrid service is different. Broadly, these are the clouds supported for each Azure hybrid service in Windows Admin Center:
+The regional support for each Azure hybrid service is different. Broadly, the following table shows the clouds supported for each Azure hybrid service in Windows Admin Center:
 
 | Azure hybrid service | Azure global | Azure China | Azure US Government |
 | ------------- | ------ | ------ | ------ |
@@ -67,7 +67,7 @@ For a more detailed regional support breakdown for each service, see [Azure prod
 ## Back up and protect your on-premises servers and VMs
 
 - **Back up your Windows servers with [Azure Backup](/azure/backup/backup-overview)**
-You can back up your Windows servers to Azure, helping to protect you from accidental or malicious deletions, corruption, and ransomware.
+You can back up your Windows servers to Azure. Backing up your Windows servers helps to protect you from accidental or malicious deletions, corruption, and ransomware.
 For more info, see [Back up your servers with Azure Backup](azure-backup.md).
 
 - **Protect your Hyper-V virtual machines with [Azure Site Recovery](/azure/site-recovery/site-recovery-overview)**
@@ -75,7 +75,7 @@ You can replicate workloads running on VMs so that your business-critical infras
 For more info, see [Protect your VMs with Azure Site Recovery and Windows Admin Center](azure-site-recovery.md).
 
 - **Use synchronous or asynchronous block-based replication to a VM in Azure using [Storage Replica](../../../storage/storage-replica/storage-replica-overview.md)**
-You can configure block-based or volume-based replication on a server-to-server level using Storage Replica to a secondary server or VM. Windows Admin Center allows you to create an Azure VM specifically for your replication target, helping you to right-size and correctly configure storage on a new Azure VM.
+You can configure block-based or volume-based replication on a server-to-server level using Storage Replica to a secondary server or VM. Windows Admin Center lets you create an Azure VM specifically for your replication target, helping you to right-size and correctly configure storage on a new Azure VM.
 For more info, see [Server-to-server replication with Storage Replica](../../../storage/storage-replica/server-to-server-storage-replication.md).
 
 ## Extend on-premises capacity with Azure
@@ -83,7 +83,7 @@ For more info, see [Server-to-server replication with Storage Replica](../../../
 ### Extend storage capacity
 
 - **Sync your file server with the cloud by using [Azure File Sync](/azure/storage/files/storage-sync-files-planning)**
-Sync files on this server with Azure file shares. Keep all your files local or use cloud tiering to free up space and cache only the most frequently used files on the server, tiering cold data to the cloud. Data in the cloud can be backed up, eliminating the need to worry about on-premises server backup. Additionally, multi-site-sync can keep a set of files in sync across multiple servers.
+Sync files on this server with Azure file shares. Keep all your files local or use cloud tiering to free up space and cache only the most frequently used files on the server, tiering cold data to the cloud. You can back up data in the cloud, eliminating the need to worry about on-premises server backup. Additionally, multi-site-sync can keep a set of files in sync across multiple servers.
 For more info, see [Sync your file server with the cloud by using Azure File Sync](azure-file-sync.md).
 
 - **Migrate storage to a VM in Azure using [Storage Migration Service](../../../storage/storage-migration-service/overview.md)**
@@ -93,7 +93,7 @@ For more info, see [Use Storage Migration Service to migrate a server](../../../
 ### Extend compute capacity
 
 - **Create a new Azure virtual machine without leaving Windows Admin Center**
-From the *All Connections* page within Windows Admin Center, go to **Add** and select **Create new** under **Azure VM**. You can even domain-join your Azure VM and configure storage from within this step-by-step creation tool.
+From the *All Connections* page within Windows Admin Center, go to **Add** and select **Create new** under **Azure VM**. You even can domain-join your Azure VM and configure storage from within this step-by-step creation tool.
 
 - **Leverage Azure to achieve quorum on your failover cluster with [Cloud Witness](../../../failover-clustering/deploy-cloud-witness.md)**
 Instead of investing in additional hardware to achieve quorum on a 2-node cluster, you can use an Azure storage account to serve as the cluster witness for your Azure Stack HCI cluster or other failover cluster.
@@ -110,11 +110,11 @@ Windows Admin Center can set up a site-to-site VPN and extend your on-premises I
 ## Centrally manage your hybrid environment from Azure
 
 - **Monitor and get email alerts for all the servers in your environment with [Azure Monitor for Virtual Machines](/azure/azure-monitor/insights/vminsights-overview)**
-You can use Azure Monitor, also known as Virtual Machines Insights, to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server. Windows Admin Center can also set up default email alerts for server health performance and cluster health events.
+You can use Azure Monitor, also known as Virtual Machines Insights, to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server. Windows Admin Center also can set up default email alerts for server health performance and cluster health events.
 For more info, see [Connect your servers to Azure Monitor and configure email notifications](azure-monitor.md).
 
 - **Centrally manage operating system updates for all your Windows Servers with [Azure Update Management](/azure/automation/update-management/overview)**
-You can manage updates and patches for multiple servers and VMs from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your servers are Azure VMs, hosted by other cloud providers, or on-premises.
+You can manage updates and patches for multiple servers and VMs from a single place, instead of on a per-server basis. With Azure Update Management, you quickly can assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your servers are Azure VMs, hosted by other cloud providers, or on-premises.
 For more info, see [Use Windows Admin Center to manage operating system updates with Azure Update Management](azure-update-management.md).
 
 - **Improve your security posture and get advanced threat protection with [Microsoft Defender for Cloud](/azure/security-center/security-center-intro)**
