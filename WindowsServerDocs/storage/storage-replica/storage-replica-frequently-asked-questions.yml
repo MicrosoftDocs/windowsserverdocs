@@ -280,7 +280,7 @@ sections:
       - question: |
           Can you configure Storage Replica between different operating system version?
         answer: |
-          Storage Replica blocks a new partnership if the replication log versions don't match or if a capability isn't supported by both servers. An example of a capability that doesn't match between OS versions is SR compression, which was first added in Windows Server 2022. Attempting to configure a partnership for with unsupported capability returns:
+          Storage Replica blocks a new partnership if the replication log versions don't match or if a capability isn't supported by both servers. Storage Replica compression is an example of a one capability that doesn't match between OS versions, as it was first added in Windows Server 2022. Attempting to configure a partnership for with unsupported capability returns:
          
           "The requested operation isn't supported."
           
