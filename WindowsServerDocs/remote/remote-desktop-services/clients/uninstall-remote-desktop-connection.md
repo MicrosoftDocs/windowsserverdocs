@@ -5,7 +5,8 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/21/2023
+ms.custom: "se-defect-target"
+ms.date: 7/3/2024
 ---
 # Uninstall and reinstall Remote Desktop Connection
 

@@ -3,8 +3,8 @@
   items:
   - name: Windows Server supported networking scenarios
     href: windows-server-supported-networking-scenarios.md
-  - name: What's new in networking
-    href: What-s-New-in-Networking.md
+  - name: Configure secure protocol options for WinHTTP
+    href: configure-secure-protocol-options-winhttp.md
   - name: Core network guidance for Windows Server
     href: core-network-guide/core-network-guide-windows-server.md
     items:
@@ -156,12 +156,6 @@
     - name: Overview
       href: dns/dns-top.md
       items:
-      - name: What's new in DNS
-        items:
-        - name: What's new in DNS server in Windows Server
-          href: dns/What-s-New-in-DNS-Server.md
-        - name: What's new in DNS client in Windows Server
-          href: dns/What-s-New-in-DNS-Client.md
       - name: Anycast DNS
         href: dns/deploy/anycast.md
       - name: DNS policies overview
@@ -228,7 +222,6 @@
       - name: Install and configure DHCP server
         href: technologies/dhcp/quickstart-install-configure-dhcp-server.md
     - name: What's new in DHCP
-      href: technologies/dhcp/What-s-New-in-DHCP.md
       items:
       - name: DHCP subnet selection options
         href: technologies/dhcp/dhcp-subnet-options.md
@@ -242,6 +235,8 @@
       items:
       - name: Deploy DHCP using Windows PowerShell
         href: technologies/dhcp/dhcp-deploy-wps.md
+      - name: Install DHCP relay agent
+        href: technologies/dhcp/dhcp-deploy-relay-agent.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
@@ -292,8 +287,6 @@
   - name: IP Address Management (IPAM)
     href: technologies/ipam/ipam-top.md
     items:
-    - name: What's new in IPAM
-      href: technologies/ipam/What-s-New-in-IPAM.md
     - name: Manage IPAM
       href: technologies/ipam/Manage-IPAM.md
       items:
@@ -512,8 +505,6 @@
           href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md
         - name: Hyper-V network virtualization technical details
           href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md
-        - name: What's new in Hyper-V Network virtualization
-          href: sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md
       - name: Internal DNS service (iDNS) for SDN
         href: sdn/technologies/Idns-for-Sdn.md
       - name: Network Controller
@@ -640,5 +631,5 @@
         href: windows-time-service/How-the-Windows-Time-Service-Works.md
       - name: Windows Time service tools and settings
         href: windows-time-service/Windows-Time-Service-Tools-and-Settings.md
-  - name: Configure secure protocol options for WinHTTP
-    href: configure-secure-protocol-options-winhttp.md
+  - name: Wireless networking 
+    href: technologies/wlan/wireless-networking.md

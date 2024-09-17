@@ -2,7 +2,7 @@
 title: Use Windows LAPS PowerShell cmdlets
 description: Learn about Windows Local Administrator Password Solution (Windows LAPS) PowerShell cmdlets and how to use them.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: conceptual
 ---
@@ -10,9 +10,6 @@ ms.topic: conceptual
 # Use Windows LAPS PowerShell cmdlets
 
 Windows Local Administrator Password Solution (Windows LAPS) includes a specific PowerShell module named LAPS. Learn how to use the cmdlets in this module and what they do.
-
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md).
 
 ## Cmdlet descriptions
 
@@ -65,5 +62,5 @@ In addition to naming-related changes, the Windows LAPS PowerShell cmdlets for W
 
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)
 - [LAPS PowerShell Module](/powershell/module/laps/)

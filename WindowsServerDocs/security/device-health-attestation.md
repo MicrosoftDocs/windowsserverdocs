@@ -26,7 +26,7 @@ Starting with Windows Server 2016, you can now run the DHA service as a server r
 You can use DHA to assess device health for:
 
 - Windows 10 and Windows 10 Mobile devices that support TPM 1.2 or 2.0.
-- On-premises devices that are managed by using Active Directory with Internet access, devices that are managed by using Active Directory without Internet access, devices managed by Azure Active Directory, or a hybrid deployment using both Active Directory and Azure Active Directory.
+- On-premises devices that are managed by using Active Directory with Internet access, devices that are managed by using Active Directory without Internet access, devices managed by Microsoft Entra ID, or a hybrid deployment using both Active Directory and Microsoft Entra ID.
 
 ### DHA service
 

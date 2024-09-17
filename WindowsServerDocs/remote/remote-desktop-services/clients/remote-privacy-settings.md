@@ -5,8 +5,7 @@ ms.topic: how-to
 author: davidbel
 manager: daveba
 ms.author: davidbel
-ms.date: 04/12/2019
-ms.custom: contperf-fy22q2
+ms.date: 7/3/2024
 ---
 # Privacy settings for managed apps and desktops
 

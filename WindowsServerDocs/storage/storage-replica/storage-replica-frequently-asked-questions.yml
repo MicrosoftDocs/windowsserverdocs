@@ -8,7 +8,7 @@ metadata:
   author: nedpyle
   ms.date: 04/15/2020
   ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
-  ms.prod: windows-server
+  ms.service: windows-server
 title: Frequently asked questions about Storage Replica
 summary: |
   >Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2019
@@ -181,7 +181,7 @@ sections:
         answer: |
           Storage Replica supports backing up and restoring the source volume. It also supports creating and restoring snapshots of the source volume. You can't back up or restore the destination volume while protected by Storage Replica, as it isn't mounted nor accessible. If you experience a disaster where the source volume is lost, you can use `Set-SRPartnership` to promote the destination as the new source volume. The newly promoted source allows you to back up or restore that volume. You can also remove replication with `Remove-SRPartnership` and `Remove-SRGroup` to remount that volume as read/writable.
           
-          To create periodic application consistent snapshots, you can use VSSADMIN.EXE on the source server to snapshot replicated data volumes. For example, where you're replicating the `F:` volume with Storage Replica:
+          To create periodic application consistent snapshots, you can use _VSSADMIN.EXE_ on the source server to snapshot replicated data volumes. For example, where you're replicating the `F:` volume with Storage Replica:
           
           ```powershell
           vssadmin create shadow /for=F:
@@ -239,6 +239,7 @@ sections:
           The cluster-to-cluster topology uses two separate clusters. This topology is ideal for administrators who want manual failover or when the second site is provisioned for disaster recovery and not everyday usage. Orchestration is manual. Unlike stretch cluster, Storage Spaces Direct can be used in this configuration (with caveats - see the Storage Replica FAQ and cluster-to-cluster documentation). You can run this topology with as few as four nodes.
           
           The server-to-server topology is ideal for customers running hardware that can't be clustered. It requires manual failover and orchestration. It's ideal for inexpensive deployments between branch offices and central data centers, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master disaster recovery scenarios.
+          The server-to-server topology is ideal for customers running hardware that can't be clustered. It requires manual failover and orchestration. It's ideal for inexpensive deployments between branch offices and central data centers, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master disaster recovery scenarios.
           
           In all cases, the topologies support both running on physical hardware and virtual machines. When in virtual machines, the underlying hypervisor doesn't require Hyper-V; it can be VMware, KVM, Xen, etc.
           
@@ -247,7 +248,7 @@ sections:
       - question: |
           Is Data Deduplication supported with Storage Replica?
         answer: |
-          Yes, Data Deduplcation is supported with Storage Replica. Enable Data Deduplication on a volume on the source server, and during replication the destination server receives a deduplicated copy of the volume.
+          Yes, Data Deduplication is supported with Storage Replica. Enable Data Deduplication on a volume on the source server, and during replication the destination server receives a deduplicated copy of the volume.
           
           While you should *install* Data Deduplication on both the source and destination servers (see [Installing and enabling Data Deduplication](../data-deduplication/install-enable.md)), it's important not to *enable* Data Deduplication on the destination server. Storage Replica allows writes only on the source server. Because Data Deduplication makes writes to the volume, it should run only on the source server.
           
@@ -261,7 +262,7 @@ sections:
       - question: |
           How do I report an issue with Storage Replica or this guide?
         answer: |
-          For technical assistance with Storage Replica, you can post at the [Microsoft forums](/answers/index.html). You can also email srfeed@microsoft.com for questions on Storage Replica.
+          For technical assistance with Storage Replica, you can post at  [Microsoft Q & A](/answers/index.html) or contact [Microsoft Business Support](https://support.microsoft.com/contactus). For issues with this documentation, see Feedback section at the bottom of this page, and select **This page**.
           
       - question: |
           Can Storage Replica be configured to replicate in both directions?

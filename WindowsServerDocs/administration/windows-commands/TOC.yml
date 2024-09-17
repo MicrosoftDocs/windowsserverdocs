@@ -16,6 +16,8 @@
         href: remote-desktop-services-terminal-services-command-reference.md
       - name: Windows Server Backup Command Reference
         href: windows-server-backup-command-reference.md
+    - name: adprep
+      href: adprep.md
     - name: append
       href: append.md
     - name: arp
@@ -389,6 +391,8 @@
       href: dcdiag.md
     - name: dcgpofix
       href: dcgpofix.md
+    - name: dcpromo
+      href: dcpromo.md
     - name: defrag
       href: defrag.md
     - name: del
@@ -408,6 +412,8 @@
         href: dfsdiag-testsites.md
     - name: dfsrmig
       href: dfsrmig.md
+    - name: dfsutil
+      href: dfsutil.md  
     - name: diantz
       href: diantz.md
     - name: dir
@@ -418,6 +424,8 @@
       href: diskcopy.md
     - name: diskpart
       href: diskpart.md
+    - name: diskpart scripts and examples
+      href: diskpart-scripts-and-examples.md 
       items:
       - name: active
         href: active.md
@@ -641,6 +649,8 @@
       href: doskey.md
     - name: driverquery
       href: driverquery.md
+    - name: dtrace
+      href: dtrace.md  
     - name: echo
       href: echo.md
     - name: edit
@@ -1311,6 +1321,8 @@
       href: services-for-network-file-system-command-reference.md
     - name: set environmental variables
       href: set_1.md
+    - name: setlocal
+      href: setlocal.md  
     - name: setx
       href: setx.md
     - name: sfc
@@ -1552,6 +1564,8 @@
         href: wdsutil-get-drivergroup.md
       - name: wdsutil get driverpackage
         href: wdsutil-get-driverpackage.md
+      - name: wdsutil get driverpackagefile
+        href: wdsutil-get-driverpackagefile.md  
       - name: wdsutil get image
         href: wdsutil-get-image.md
       - name: wdsutil get imagefile

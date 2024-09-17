@@ -2,7 +2,7 @@
 title: Get started with Windows LAPS deployment and migration scenarios
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) deployment and migration scenarios.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 05/15/2023
 ms.topic: conceptual
 ---
@@ -11,11 +11,11 @@ ms.topic: conceptual
 
 There are many possible methods of deploying Windows LAPS, or migrating from legacy LAPS to Windows LAPS. This article outlines the basic scenarios along with tips and tricks to be aware of.
 
-When you're migrating existing hybrid-joined devices from legacy LAPS to Windows LAPS, it is your choice whether to continue storing the passwords in Active Directory or to switch to storing the passwords in Azure Active Directory.
+When you're migrating existing hybrid-joined devices from legacy LAPS to Windows LAPS, it is your choice whether to continue storing the passwords in Active Directory or to switch to storing the passwords in Microsoft Entra ID.
 
 ## Directory preparation
 
-Most of the content in this guide isn't directory specific. There are however some preparatory steps required to enable your directory (either Active Directory or Azure AD) to support Windows LAPS devices. These steps should be followed first before proceeding to implement any of the other scenarios described in this article.
+Most of the content in this guide isn't directory specific. There are however some preparatory steps required to enable your directory (either Active Directory or Microsoft Entra ID) to support Windows LAPS devices. These steps should be followed first before proceeding to implement any of the other scenarios described in this article.
 
 ### Preparing Windows Server Active Directory
 
@@ -23,20 +23,22 @@ The following steps should be followed before configuring your Active Directory-
 
 1. Extend your AD schema to support Windows LAPS. See [Update the Windows Server Active Directory schema](laps-scenarios-windows-server-active-directory.md#update-the-windows-server-active-directory-schema).
 1. If you're using a GPO Central Store, manually copy the Windows LAPS Group Policy template files to the central store. See [GPO Central Store](laps-management-policy-settings.md#group-policy-object-central-store).
-1. Assign device self-write permissions. See [Grant the managed device permission to update its password](laps-scenarios-windows-server-active-directory.md#grant-the-managed-device-permission-to-update-its-password).
-1. Analyze, determine, and configure the appropriate AD permissions for password expiration and password retrieval. See [Windows Server Active Directory passwords](laps-concepts.md#windows-server-active-directory-passwords).
-1. Analyze and determine the appropriate authorized groups for decrypting passwords. See [Windows Server Active Directory passwords](laps-concepts.md#windows-server-active-directory-passwords).
+1. Assign device self-write permissions. See [Grant the managed device password update permission](laps-scenarios-windows-server-active-directory.md#grant-the-managed-device-password-update-permission).
+1. Analyze, determine, and configure the appropriate AD permissions for password expiration and password retrieval. See [Windows Server Active Directory passwords](laps-concepts-overview.md#windows-server-active-directory-passwords).
+1. Analyze and determine the appropriate authorized groups for decrypting passwords. See [Windows Server Active Directory passwords](laps-concepts-overview.md#windows-server-active-directory-passwords).
 1. Create a new Windows LAPS policy that targets the managed device(s) with the appropriate settings as determined in the previous steps.
 
 > [!TIP]
-> If you are planning to only backup passwords to Azure AD, you do not need to perform any of these steps, including extending the AD schema.
+> If you are planning to only backup passwords to Microsoft Entra ID, you do not need to perform any of these steps, including extending the AD schema.
 
-### Preparing Azure Active Directory
+<a name='preparing-azure-active-directory'></a>
 
-The following steps should be followed before configuring your Azure AD-joined or hybrid-joined devices to back up a managed account's passwords to Azure AD.
+### Preparing Microsoft Entra ID
 
-1. Review the membership of the built-in Azure AD roles that have by-default access to Windows LAPS passwords stored in Azure AD. By default these roles are highly privileged so there should be no surprises in this step.
-1. Enable your Azure AD tenant to support Windows LAPS password backup. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
+The following steps should be followed before configuring your Microsoft Entra joined or hybrid-joined devices to back up a managed account's passwords to Microsoft Entra ID.
+
+1. Review the membership of the built-in Microsoft Entra roles that have by-default access to Windows LAPS passwords stored in Microsoft Entra ID. By default these roles are highly privileged so there should be no surprises in this step.
+1. Enable your Microsoft Entra tenant to support Windows LAPS password backup. See [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
 
 ## New OS install scenario with a Windows LAPS policy
 
@@ -83,7 +85,7 @@ The first two steps should be performed simultaneously (or as nearly so as possi
 
 The easiest approach when configuring the Windows LAPS policy is to target the same account that was previously targeted in the legacy LAPS policy. If you choose to target a different account, then it's your responsibility to create the new account prior to applying the Windows LAPS policy. The first account should be removed if no longer needed.
 
-The Windows LAPS policy may also be configured with features (backup to Azure AD, or enable AD password encryption) that weren't available in the legacy LAPS software.
+The Windows LAPS policy may also be configured with features (backup to Microsoft Entra ID, or enable AD password encryption) that weren't available in the legacy LAPS software.
 
 When a Windows LAPS policy is first applied, the managed device performs an immediate rotation of the local account password. You should [monitor](laps-scenarios-deployment-migration.md#monitoring-a-successful-transition) the managed device to ensure the transition has completed successfully.
 
@@ -108,9 +110,9 @@ After confirming that Windows LAPS is working properly, you may leave the manage
 
 There are multiple approaches to monitoring for a successful outcome once you have transitioned a managed device to a Windows LAPS policy:
 
-- You can monitor the managed device's [Windows LAPS event log channel](laps-management-event-log.md) for successful password update events (for either Azure AD or AD). A centralized event log collection solution may help here.
+- You can monitor the managed device's [Windows LAPS event log channel](laps-management-event-log.md) for successful password update events (for either Microsoft Entra ID or AD). A centralized event log collection solution may help here.
 - When storing passwords in Active Directory, you can look for the appearance of a new\updated msLAPS-PasswordExpirationTime attribute on the managed device's AD computer object. The [`Get-LapsADPassword`](/powershell/module/laps/get-lapsadpassword) PowerShell cmdlet can be used to automate this analysis.
-- When storing passwords in Azure AD, you can check the Azure AD or Intune management portals to verify that the device has updated its password. The [`Get-LapsAADPassword`](/powershell/module/laps/get-lapsaadpassword) PowerShell cmdlet can be used to automate this analysis.
+- When storing passwords in Microsoft Entra ID, you can check the Microsoft Entra ID or Intune management portals to verify that the device has updated its password. The [`Get-LapsAADPassword`](/powershell/module/laps/get-lapsaadpassword) PowerShell cmdlet can be used to automate this analysis.
 
 ## Removing the legacy LAPS software from a managed device
 

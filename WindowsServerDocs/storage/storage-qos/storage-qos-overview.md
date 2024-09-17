@@ -2,7 +2,7 @@
 description: "Learn more about: Storage Quality of Service"
 title: Storage Quality of Service
 manager: dongill
-ms.author: JGerend
+ms.author: wscontent
 ms.topic: how-to
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: kumudd
@@ -218,7 +218,7 @@ InitiatorName      : BuildVM1
 InitiatorNodeName  : plang-c2.plang.nttest.microsoft.com
 Interval           : 300000
 Limit              : 500
-PolicyId           : b145e63a-3c9e-48a8-87f8-1dfc2abfe5f4
+PolicyId           : 1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
 Reservation        : 500
 Status             : Ok
 StorageNodeIOPS    : 475
@@ -338,7 +338,7 @@ C:\> $desktopVmPolicy.PolicyId
 
 Guid
 ----
-cd6e6b87-fb13-492b-9103-41c6f631f8e0
+1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
 ```
 
 On the Hyper-V server, using PowerShell, set the Storage QoS Policy using the Policy ID as shown in the following example:
@@ -452,7 +452,7 @@ PS C:\> $highPerf = New-StorageQosPolicy -Name SqlWorkload -MinimumIops 1000 -Ma
 
 Guid
 ----
-7e2f3e73-1ae4-4710-8219-0769a4aba072
+1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
 ```
 
 The following example shows how to apply the Storage QoS Policy on Hyper-V server using the policyID obtained in the preceding example:
@@ -467,7 +467,7 @@ The following example shows how to viewing effects of the Storage QoS policy fro
 PS C:\> Get-StorageQosFlow -InitiatorName WinOltp1 | format-list InitiatorName, PolicyId, MinimumIOPS, MaximumIOPS, StorageNodeIOPS, FilePath
 
 InitiatorName   : WinOltp1
-PolicyId        : 7e2f3e73-1ae4-4710-8219-0769a4aba072
+PolicyId        : 1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
 MinimumIops     : 250
 MaximumIops     : 1250
 StorageNodeIOPS : 0
@@ -475,14 +475,14 @@ FilePath        : C:\ClusterStorage\Volume2\SHARES\TWO\BASEVHD\9914.0.AMD64FRE.W
                   MAIN.141218-1718_SERVER_SERVERDATACENTER_EN-US.VHDX
 
 InitiatorName   : WinOltp1
-PolicyId        : 7e2f3e73-1ae4-4710-8219-0769a4aba072
+PolicyId        : 2bbbbbb2-3cc3-4dd4-5ee5-6ffffffffff6
 MinimumIops     : 250
 MaximumIops     : 1250
 StorageNodeIOPS : 0
 FilePath        : C:\ClusterStorage\Volume3\SHARES\THREE\WINOLTP1\BOOT.VHDX
 
 InitiatorName   : WinOltp1
-PolicyId        : 7e2f3e73-1ae4-4710-8219-0769a4aba072
+PolicyId        : 3cccccc3-4dd4-5ee5-6ff6-7aaaaaaaaaa7
 MinimumIops     : 1000
 MaximumIops     : 5000
 StorageNodeIOPS : 4550
@@ -491,7 +491,7 @@ PS C:\> Get-StorageQosFlow -InitiatorName WinOltp1 | for
 mat-list InitiatorName, PolicyId, MinimumIOPS, MaximumIOPS, StorageNodeIOPS, FilePath
 
 InitiatorName   : WinOltp1
-PolicyId        : 7e2f3e73-1ae4-4710-8219-0769a4aba072
+PolicyId        : 4dddddd4-5ee5-6ff6-7aa7-8bbbbbbbbbb8
 MinimumIops     : 250
 MaximumIops     : 1250
 StorageNodeIOPS : 0
@@ -499,14 +499,14 @@ FilePath        : C:\ClusterStorage\Volume2\SHARES\TWO\BASEVHD\9914.0.AMD64FRE.W
                   MAIN.141218-1718_SERVER_SERVERDATACENTER_EN-US.VHDX
 
 InitiatorName   : WinOltp1
-PolicyId        : 7e2f3e73-1ae4-4710-8219-0769a4aba072
+PolicyId        : 5eeeeee5-6ff6-7aa7-8bb8-9cccccccccc9
 MinimumIops     : 250
 MaximumIops     : 1250
 StorageNodeIOPS : 0
 FilePath        : C:\ClusterStorage\Volume3\SHARES\THREE\WINOLTP1\BOOT.VHDX
 
 InitiatorName   : WinOltp1
-PolicyId        : 7e2f3e73-1ae4-4710-8219-0769a4aba072
+PolicyId        : 6ffffff6-7aa7-8bb8-9cc9-0dddddddddd0
 MinimumIops     : 1000
 MaximumIops     : 5000
 StorageNodeIOPS : 4550
@@ -540,9 +540,9 @@ utoSize
 
 InitiatorName PolicyId                             MaximumIops MinimumIops StorageNodeIops
 ------------- --------                             ----------- ----------- ---------------
-WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072        1500         250               0
-WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072        1500         250               0
-WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072        6000        1000            4507
+WinOltp1      1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5        1500         250               0
+WinOltp1      2bbbbbb2-3cc3-4dd4-5ee5-6ffffffffff6        1500         250               0
+WinOltp1      3cccccc3-4dd4-5ee5-6ff6-7aaaaaaaaaa7        6000        1000            4507
 ```
 
 ## <a name="BKMK_KnownIssues"></a>How to identify and address common issues
@@ -602,9 +602,9 @@ PS C:\> Get-StorageQosFlow -Status UnknownPolicyId | ft InitiatorName, PolicyId 
 
 InitiatorName PolicyId
 ------------- --------
-WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072
-WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072
-WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072
+WinOltp1      1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
+WinOltp1      2bbbbbb2-3cc3-4dd4-5ee5-6ffffffffff6
+WinOltp1      3cccccc3-4dd4-5ee5-6ff6-7aaaaaaaaaa7
 ```
 
 Next, create a new policy using that PolicyId
@@ -733,7 +733,7 @@ InitiatorName      : WinOltp1
 InitiatorNodeName  : plang-c1.plang.nttest.microsoft.com
 Interval           : 300000
 Limit              : 20000
-PolicyId           : 5d1bf221-c8f0-4368-abcf-aa139e8a7c72
+PolicyId           : 1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
 Reservation        : 15000
 Status             : InsufficientThroughput
 StorageNodeIOPS    : 12181

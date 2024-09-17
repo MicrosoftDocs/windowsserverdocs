@@ -3,7 +3,7 @@ description: "Learn more about: Planning Global Catalog Server Placement"
 ms.assetid: 407d5e81-c04c-4275-9ae9-35f65b4a371a
 title: Planning Global Catalog Server Placement
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/16/2023
 ms.topic: article

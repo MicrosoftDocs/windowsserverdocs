@@ -5,7 +5,7 @@ title: Best Practices for securing AD FS and Web Application Proxy
 description: Best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.
 author: billmath
 ms.author: billmath
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -44,7 +44,7 @@ The following is a list of best practices and recommendations for hardening and 
 - Ensure the installed certificates are protected against theft (don’t store these on a share on the network) and set a calendar reminder to ensure they get renewed before expiring (expired certificate breaks federation auth).  Additionally, we recommend protecting signing keys/certificates in a [hardware security module (HSM)](#hardware-security-module-hsm) attached to AD FS.
 - Set logging to the highest level and send the AD FS (& security) logs to a SIEM to correlate with AD authentication as well as AzureAD (or similar).
 - Remove unnecessary protocols & Windows features.
-- Use a long (>25 characters), complex password for the AD FS service account. We recommend using a [Group Managed Service Account (gMSA)](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md) as the service account, as it removes the need for managing the service account password over time by managing it automatically.
+- Use a long (>25 characters), complex password for the AD FS service account. We recommend using a [Group Managed Service Account (gMSA)](../../ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md) as the service account, as it removes the need for managing the service account password over time by managing it automatically.
 - Update to the latest AD FS version for security and logging improvements (as always, test first).
 
 ## Ports required

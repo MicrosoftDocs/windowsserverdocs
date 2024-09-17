@@ -14,8 +14,8 @@ ms.custom: references_regions
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!IMPORTANT]
-> Updating to the latest versions (1.36 and 1.35) of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This will be fixed in the December release of the agent (1.37). This message will be updated once that has been released.
-> If you have upgraded and wish to downgrade, you can [download version 1.34](https://download.microsoft.com/download/b/3/2/b3220316-13db-4f1f-babf-b1aab33b364f/AzureConnectedMachineAgent.msi).
+> Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
+
 
 Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
@@ -175,7 +175,7 @@ After you've installed Windows Admin Center on your hybrid machine, perform the 
 2. Select **Connect**.
 
 > [!NOTE]
-> Starting August 2022, Windows Admin Center now allows you to use Azure AD-based authentication for your hybrid machine. You will no longer be prompted for the credentials of a local administrator account.
+> Starting August 2022, Windows Admin Center now allows you to use Microsoft Entra ID-based authentication for your hybrid machine. You will no longer be prompted for the credentials of a local administrator account.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
@@ -188,7 +188,7 @@ Access to Windows Admin Center is controlled by the **Windows Admin Center Admin
 > [!NOTE]
 > The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
 
-To configure role assignments for your hybrid machines using the Azure AD Portal experience:
+To configure role assignments for your hybrid machines using the Microsoft Entra admin center experience:
 
 1. Open the hybrid machine that you wish to manage using Windows Admin Center
 
@@ -264,6 +264,7 @@ $machineName = "<name_of_hybrid_machine>"
 $resourceGroup = "<resource_group>"
 $subscription = "<subscription_id>"
 $port = "6516"
+$portint = 6516
         
 #Deploy Windows Admin Center
 $Setting = @{"port" = $port; "proxy" = @{"mode" = "application"; "address" = "http://[address]:[port]";}} #proxy configuration is optional
@@ -273,7 +274,7 @@ New-AzConnectedMachineExtension -Name "AdminCenter" -ResourceGroupName $resource
 $putPayload = "{'properties': {'type': 'default'}}"
 Invoke-AzRestMethod -Method PUT -Uri "https://management.azure.com/subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2023-03-15" -Payload $putPayload
 
-$patch = @{ "properties" =  @{ "serviceName" = "WAC"; "port" = $port}} 
+$patch = @{ "properties" =  @{ "serviceName" = "WAC"; "port" = $portint}} 
 $patchPayload = ConvertTo-Json $patch 
 Invoke-AzRestMethod -Method PUT -Path /subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default/serviceconfigurations/WAC?api-version=2023-03-15 -Payload $patchPayload
 ```
@@ -283,8 +284,7 @@ Invoke-AzRestMethod -Method PUT -Path /subscriptions/${subscription}/resourceGro
 Here are some tips to try in case something isn't working. For general  Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
 
 ### Failed to connect with "404 endpoint not found"
-1. Updating to the latest versions (1.36 and 1.35) of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This will be fixed in the December release of the agent (1.37). This message will be updated once that has been released.
-2. If you have upgraded and wish to downgrade, you can [download version 1.34](https://download.microsoft.com/download/b/3/2/b3220316-13db-4f1f-babf-b1aab33b364f/AzureConnectedMachineAgent.msi).
+1. Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
 
 ### Failed to connect error
 
