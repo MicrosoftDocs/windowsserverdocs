@@ -40,7 +40,7 @@ From the Azure hybrid services tool, you can:
 - Manage operating system updates for all your Windows servers, both on-premises or in the cloud, with [Azure Update Management](azure-update-management.md)
 - Monitor servers, both on-premises or in the cloud, and configure alerts with [Azure Monitor](azure-monitor.md)
 - Apply governance policies to your on-premises servers through Azure Policy using [Azure Arc for servers](/azure/azure-arc/servers/overview)
-- Secure your servers and get advanced threat protection with [Azure Security Center](/azure/security-center/windows-admin-center-integration)
+- Secure your servers and get advanced threat protection with [Microsoft Defender for Cloud](/azure/security-center/windows-admin-center-integration)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
 - Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
@@ -58,7 +58,7 @@ The regional support for each Azure hybrid service is different. Broadly, these 
 | Azure File Sync|yes|yes|yes|
 | Azure Monitor|yes|yes|yes|
 | Azure Network Adapter|yes|yes|yes|
-| Azure Security Center|yes|yes|yes|
+| Microsoft Defender for Cloud|yes|yes|yes|
 | Azure Site Recovery |yes|yes|no|
 | Azure Update Management |yes|yes|no|
 
@@ -115,11 +115,11 @@ For more info, see [Connect your servers to Azure Monitor and configure email no
 
 - **Centrally manage operating system updates for all your Windows Servers with [Azure Update Management](/azure/automation/update-management/overview)**
 You can manage updates and patches for multiple servers and VMs from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your servers are Azure VMs, hosted by other cloud providers, or on-premises.
-For more info, see [Configure servers for Azure Update Management](azure-update-management.md).
+For more info, see [Use Windows Admin Center to manage operating system updates with Azure Update Management](azure-update-management.md).
 
-- **Improve your security posture and get advanced threat protection with [Azure Security Center](/azure/security-center/security-center-intro)**
-Azure Security Center is a unified infrastructure security management system that strengthens the security posture of your data centers, and provides advanced threat protection across your hybrid workloads in the cloud - whether they're in Azure or not - as well as on premises. With Windows Admin Center, you can easily set up and connect your servers to Azure Security Center.
-For more info, see [Integrate Azure Security Center with Windows Admin Center (Preview)](/azure/security-center/windows-admin-center-integration).
+- **Improve your security posture and get advanced threat protection with [Microsoft Defender for Cloud](/azure/security-center/security-center-intro)**
+Microsoft Defender for Cloud is a unified infrastructure security management system that strengthens the security posture of your data centers, and provides advanced threat protection across your hybrid workloads in the cloud - whether they're in Azure or not - as well as on premises. With Windows Admin Center, you can easily set up and connect your servers to Microsoft Defender for Cloud.
+For more info, see [Integrate Microsoft Defender for Cloud with Windows Admin Center (Preview)](/azure/security-center/windows-admin-center-integration).
 
 - **Apply policies and ensure compliance across your hybrid environment with [Azure Arc for servers](/azure/azure-arc/servers/overview) and [Azure Policy](/azure/governance/policy/overview)**
 Inventory, organize, and manage on-premises servers from Azure. You can govern servers using Azure policy, control access using RBAC, and enable additional management services from Azure.
@@ -130,6 +130,7 @@ Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
 - Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](/azure-stack/hci/overview?view=azs-2002&preserve-view=true), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
+<!-- Alternate link that might be more helpful than the second link in the preceding bullet for WSSD: https://learn.microsoft.com/en-us/troubleshoot/windows-server/software-defined-networking/software-defined-data-center-and-networking -->
 
 ### Services for stand-alone servers and VMs
 
@@ -141,7 +142,7 @@ This is the complete list of Azure services that provide functionality to stand-
 - Manage operating system updates for all your Windows servers, both on-premises or in the cloud, with [Azure Update Management](azure-update-management.md)
 - Monitor servers, both on-premises or in the cloud, and configure alerts with [Azure Monitor](azure-monitor.md)
 - Apply governance policies to your on-premises servers through Azure Policy using [Azure Arc for servers](/azure/azure-arc/servers/overview)
-- Secure your servers and get advanced threat protection with [Azure Security Center](/azure/security-center/windows-admin-center-integration)
+- Secure your servers and get advanced threat protection with [Microsoft Defender for Cloud](/azure/security-center/windows-admin-center-integration)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
 - Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
@@ -166,7 +167,6 @@ For more info, see [Configure Microsoft Entra authentication for Windows Admin C
 - **Manage Azure resources directly through [Azure Cloud Shell](/azure/cloud-shell/overview) embedded in Windows Admin Center**
 Leverage Azure Cloud Shell to get a Bash or PowerShell experience within Windows Admin Center to give you easy access to Azure management tasks.
 For more info, see [Overview of Azure Cloud Shell](/azure/cloud-shell/overview).
-
 
 ## Additional References
 
