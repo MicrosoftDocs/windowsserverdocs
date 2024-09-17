@@ -349,7 +349,7 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
 
 **Optionally**
 
-1.  Verify with the classroom instructor that it's ok to enable the *[AD Recycle Bin](../../get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-.md#BKMK_EnableRecycleBin)* in Active Directory Administrative Center.  If so, move on to the next step.
+1.  Verify with the classroom instructor that it's ok to enable the *[AD Recycle Bin](../../get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-.md#enabling-active-directory-recycle-bin-using-active-directory-administrative-center)* in Active Directory Administrative Center.  If so, move on to the next step.
 
 2.  Populate the UPN on a user account
 
