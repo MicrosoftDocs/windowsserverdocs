@@ -25,7 +25,11 @@ Windows Server allows you to prioritize security from the outset by deploying a 
 
 Throughout the device lifecycle, users can apply the security baseline starting from the initial deployment by using PowerShell or WAC. These tools are supported by the new security configuration platform, OSConfig. One of the standout features of this platform is the inbuilt drift control mechanism, which ensures that the system starts and remains in a known good security state. By utilizing this mechanism, users can maintain the desired security posture over time.
 
-By using this security baseline, you can closely align with the [Center for Internet Security (CIS) Benchmark](https://www.cisecurity.org/cis-benchmarks), the [Defense Information Systems Agency Security Technical Implementation Guides](https://public.cyber.mil/stigs) (DISA STIG), the [Federal Information Processing Standards (FIPS) 140-2](https://csrc.nist.gov/pubs/fips/140-2/upd2/final) requirements for the OS, and Azure Compute Security baselines.
+By using this security baseline, you can closely align with the:
+
+- [Center for Internet Security (CIS) Benchmark](https://www.cisecurity.org/cis-benchmarks).
+- [Defense Information Systems Agency Security Technical Implementation Guides](https://public.cyber.mil/stigs) (DISA STIG).
+- [Federal Information Processing Standards (FIPS) 140-2](https://csrc.nist.gov/pubs/fips/140-2/upd2/final) requirements for the OS, and Azure Compute Security baselines.
 
 > [!NOTE]
 > By default, these security baselines are enabled, making it easier for customers to meet their compliance and regulatory requirements. The security baseline settings have been thoroughly verified for compatibility and performance impact.
