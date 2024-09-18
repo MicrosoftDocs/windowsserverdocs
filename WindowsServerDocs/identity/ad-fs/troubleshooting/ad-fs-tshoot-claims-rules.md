@@ -66,7 +66,7 @@ A good sample web app is available here. This app echoes back the claims that it
 
 - Changing https://app1.contoso.com/sampapp to the URL that will be used for hosting the sample app.
 - Changing all instances of sts.contoso.com to point to your AD FS federation server.
-- Replacing the thumbprint with your thumbprint.
+- Replacing the `decryptionKey` and the `validationKey` with values that are appropriate for your scenario.
 
 ![Screenshot of Visual Studio showing the web config file.](media/ad-fs-tshoot-claims/claims3.png)
 
