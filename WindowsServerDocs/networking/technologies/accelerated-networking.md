@@ -34,13 +34,155 @@ Your deployment needs to meet the following prerequisites in order to roperly se
 
   - Non-clustered single servers and WS Standard don't support Accelerated Networking.
 
-- Your hardware must support SR-IOV and that you can enable SR-IOV on BIOS. You may need to contact your hardware vendor.
+- Your hardware must support SR-IOV, and you must enable SR-IOV on BIOS. You may need to contact your hardware vendor to see if your machine supports SR-IOV.
 
 - An SR-IOV supported NIC.
 
   - You may need to run the [Enable-NetAdapterSriov (NetAdapter)](/powershell/module/netadapter/enable-netadaptersriov?view=windowsserver2022-ps) cmdlet.
 
 - You may also need to expose the Virtual Functions from the BIOS. We recommend exposing the PUT REC function.
+
+- If you're running Azure Stack HCI, then after you enable SR-IOV, you must install and configure a valid Compute intent for a [Network Advanced Transfer Cache (ATC)](/azure-stack/hci/deploy/network-atc?tabs=22H2). You can only enable Accelerated Networking on vSwitches managed by a Network ATC Compute intent.
+
+- If you're running Azure Stack HCI, you must install a [Network HUD](/azure-stack/hci/concepts/network-hud-overview) that runs Storage Spaces Direct.
+
+## Enable Accelerated Networking on a cluster
+
+#### [PowerShell](#tab/powershell)
+
+1. Open an elevated PowerShell window as an administrator.
+
+1. Run the following cmdlet to make sure your system meets all prerequisite requirements:
+
+  ```powershell
+  Get-AccelNetManagementPreReq
+  ```
+
+1. Go to any node that's on the cluster you want to enable Acellerated Networking for.
+  
+1. Run the following cmdlet to enable Accelerated Networking:
+
+  ```powershell
+  Enable-AccelNetManagement -IntentName -NodeReservePercentage
+  ```
+
+  >[!NOTE]
+  >Intent name is a required parameter. If you leave the `NodeReservePercentage` value blank, the system defaults to 50%. This value must be an integer greater than or equal to 0 and less than or equal to 99.
+
+#### [Windows Admin Center](#tab/wac)
+
+<!--- Content here  -->
+
+---
+
+## Change Accelerated Networking settings on a cluster
+
+#### [PowerShell](#tab/powershell)
+
+On a node with Accelerated Networking enabled, run the following cmdlet with the vaues for the new intent and node reserve:
+
+```powershell
+Set-AccelNetManagement -IntentName -NodeReservePercentage
+``` 
+
+#### [Windows Admin Center](#tab/wac)
+
+<!--- Content here  -->
+
+---
+
+## Disable Accelerated Networking on a cluster
+
+#### [PowerShell](#tab/powershell)
+
+1. In a PowerShell window, go to any node in the cluster you want to disable Accelerated Networking for.
+
+1. Run the following cmdlet to disable AccelNet on the cluster:
+
+  ```powershell
+  Run Disable-AccelNetManagement 
+  ```
+
+1. After the cluster is disabled, the Network HUD no longer monitors the health of the feature.
+
+>[!NOTE]
+>Disabling AccelNet at the cluster doesn't change setting configurations on the virtual machines (VMs). VMs are no longer managed by AccelNet or tracked by the Network HUD.
+
+#### [Windows Admin Center](#tab/wac)
+
+<!--- Content here  -->
+
+---
+
+## Enable Accelerated Networking on a VM
+
+#### [PowerShell](#tab/powershell)
+
+1. Create a VM on a host in a cluster that has AccelNet enabled.
+
+1. In a PowerShell window, go to the node containing the VM you want to enable AcceNet on.
+
+1. Run the following cmdlet to enable AccelNet:
+
+  ```powershell
+  Enable-AccelNetVM -VMName -Performance
+  ```
+
+  VMName and Performance are required parameters. You can set the Performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status, as shown in the following table:
+
+  |Hyperthreading configuration| Performance setting | Minimum vCPUs required |
+  |---|---|---|
+  ||||
+  ||||
+  ||||
+  ||||
+  ||||
+  ||||
+
+1. To enable AccelNet for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
+
+  ```powershell
+  <example cmdlet>
+  ```
+  
+
+ 
+
+VMName and Performance are required parameters. Performance can be selected from the following options: Low, Medium, High 
+
+To enable on multiple, use the pipe “|” command in powershell 
+
+These performance options have a minimum vCPU requirement based on the hyperthreading status 
+
+#### [Windows Admin Center](#tab/wac)
+
+<!--- Content here  -->
+
+---
+
+## Change Accelerated Networking settings on a VM
+
+#### [PowerShell](#tab/powershell)
+
+<!--- Content here  -->
+
+#### [Windows Admin Center](#tab/wac)
+
+<!--- Content here  -->
+
+---
+
+## Disable Accelerated Networking on a VM
+
+#### [PowerShell](#tab/powershell)
+
+<!--- Content here  -->
+
+#### [Windows Admin Center](#tab/wac)
+
+<!--- Content here  -->
+
+---
 
 ## Known issues
 
