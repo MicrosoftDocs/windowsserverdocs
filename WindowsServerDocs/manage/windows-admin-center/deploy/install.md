@@ -47,13 +47,13 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 ```
 
 > [!WARNING]
-> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
+> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation, such as  `.\<WindowsAdminCenterInstallerName>.msi`. Windows Admin Center doesn't support that notation, and any attempt to use it in an installation won't work. Instead, either remove the `.\` prefix or specify the full path to the MSI.
 
 ## Upgrading to a new version of Windows Admin Center
 
-You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing.
+You can update non-preview versions of Windows Admin Center by using Microsoft Update or a manual installation.
 
-Your settings are preserved when upgrading to a new version of Windows Admin Center. We don't officially support upgrading Insider Preview versions of Windows Admin Center - we think it's better to do a clean install - but we don't block it. 
+Windows Admin Center preserves your settings when you upgrade to the latest version. We don't officially support upgrading Insider Preview versions of Windows Admin Center, and we recommend you do a "clean" installation by installing the latest version of Preview and starting over, but we don't block attempts to manually carry over settings for Preview upgrades. 
 
 ### [Desktop Experience](#tab/desktop-experience)
 
@@ -94,7 +94,7 @@ To install Windows Admin Center on your machine running the Windows Server 2025 
 
 1. Wait for Windows Admin Center to automatically start.
 
-You should see the name of the machine you installed Windows Admin Center On the All connections page at the top of the Name column, along with machine type and data on connection history.
+You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
 ---
 
@@ -111,22 +111,22 @@ If you have a Server Core installation of Windows Server 2022 and earlier, you c
 To install Windows Admin Center on your Windows Server 2022 and earlier versions running Server Core installation:
 
 > [!WARNING]
-> Installing Windows Admin Center will restart the WinRM service, which will sever all remote PowerShells sessions. It is recommended that you install from a local Cmd or PowerShell. If you are installing with an automation solution that would be broken by the WinRM service restarting, you can add the parameter ```RESTART_WINRM=0``` to the install arguments, but WinRM must be restarted for Windows Admin Center to function.
+> Installing Windows Admin Center will restart the WinRM service, which will which will end all remote PowerShell sessions. We recommend that you install from a local command prompt or PowerShell window. If you're using an automated solution that restarting the WinRM service disrupts to install WIndows Admin Center, you can add the parameter ```RESTART_WINRM=0``` to the install arguments to restart the service. However, you must restart WinRM to make sure Windows Admin Center installs correctly.
 
 Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
 
-```
+```cmd
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
 ```
 
 Run the following command to install Windows Admin Center with an existing certificate:
 
-```
+```cmd
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
 ```
 
 > [!WARNING]
-> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
+> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation, such as  `.\<WindowsAdminCenterInstallerName>.msi`. Windows Admin Center doesn't support that notation, and any attempt to use it in an installation won't work. Instead, either remove the `.\` prefix or specify the full path to the MSI.
 
 ## Upgrading to a new version of Windows Admin Center
 
@@ -157,7 +157,7 @@ To install Windows Admin Center on your Windows Server 2022 and earlier versions
 
 1. Wait for Windows Admin Center to automatically start. 
 
-You should see the name of the machine you installed Windows Admin Center n listed on the All connections page at the top of the Name column, along with machine type and data on connection history.
+You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
 ---
 ::: zone-end
@@ -187,7 +187,7 @@ To install Windows Admin Center on your Windows client machine:
 
 1. Windows Admin Center should start automatically. 
 
-You should see the name of the machine you installed Windows Admin Center n listed on the All connections page at the top of the Name column, along with machine type and data on connection history.
+You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
 >[!NOTE]
 > You must modify TrustedHosts in a workgroup environment or when you use local administrator credentials in a domain. If you choose to skip this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts) instead.
@@ -217,13 +217,13 @@ If you have a Server Core installation of Windows Server with desktop experience
 
 Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
 
-```
+```cmd
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
 ```
 
 Run the following command to install Windows Admin Center with an existing certificate:
 
-```
+```cmd
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
 ```
 
@@ -234,7 +234,7 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 
 You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing.
 
-Your settings are preserved when upgrading to a new version of Windows Admin Center. We don't officially support upgrading Insider Preview versions of Windows Admin Center - we think it's better to do a clean install - but we don't block it.
+Windows Admin Center preserves your settings when you upgrade to the latest version. We don't officially support upgrading Insider Preview versions of Windows Admin Center, and we recommend you do a "clean" installation by installing the latest version of Preview and starting over, but we don't block attempts to manually carry over settings for Preview upgrades. 
 
 ## Updating the certificate used by Windows Admin Center
 
@@ -257,26 +257,7 @@ When you have Windows Admin Center deployed as a service, you must provide a cer
 
 1. Windows Admin Center should start automatically. 
 
-You should see the name of the machine you installed Windows Admin Center n listed on the All connections page at the top of the Name column, along with machine type and data on connection history.
-
-1. Open [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center).
-
-1. Under **Please select your Windows Admin Center download**, select **Download now**.
-
-1. Select your preference for sharing diagnostic data with Microsoft, then select **Next**.
-
-1. In the **Installing Windows Admin Center** window, select the port that you want the Windows Admin Center site to use. 
-
->[!NOTE]
->The default port is 6516. The **Allow Windows Admin Center to modify this machine's trusted host settings** checkbox is selected by default. We recommend leaving this check box selected, but you can also deselect the box to disable this setting if you don't want Windows Admin Center to be able to modify your machine's trusted host settings.
-
-1. Select **Install**. Windows Admin Center installation begins. 
-
-1. In the One more thing window, select the correct certificate for Windows Admin Center to use. Select the option that's highlighted and then select **Finish**. 
-
-1. Windows Admin Center should start automatically. 
-
-You should see the name of the machine you installed Windows Admin Center n listed on the All connections page at the top of the Name column, along with machine type and data on connection history.
+You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
 ### [Desktop Experience](#tab/desktop-experience)
 
@@ -299,7 +280,7 @@ To install Windows Admin Center on your Windows Server 2022 and earlier versions
 
 1. Windows Admin Center should start automatically. 
 
-You should see the name of the machine you installed Windows Admin Center n listed on the All connections page at the top of the Name column, along with machine type and data on connection history.
+You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
 ---
 ::: zone-end
@@ -329,7 +310,7 @@ To install Windows Admin Center on your Windows client machine:
 
 1. Windows Admin Center should start automatically. 
 
-You should see the name of the machine you installed Windows Admin Center n listed on the All connections page at the top of the Name column, along with machine type and data on connection history.
+You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
 >[!NOTE]
 > You must modify TrustedHosts in a workgroup environment or when you use local administrator credentials in a domain. If you choose to skip this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts) instead.
@@ -377,7 +358,7 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 
 ## Upgrading to a new version of Windows Admin Center
 
-You can update non-preview versions of Windows Admin Center by using Microsoft Update or manual installation.
+Your settings are preserved when upgrading to a new version of Windows Admin Center. We don't officially support upgrading Insider Preview versions of Windows Admin Center - we think it's better to do a clean install - but we don't block it. 
 
 The service saves your settings when you upgrade to the latest version of Windows Admin Center. However, this feature may not work as intended when upgrading Insider Preview versions of Windows Admin Center. When upgrading preview versions, we recommend starting over with a new installation instead.
 
