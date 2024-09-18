@@ -11,7 +11,7 @@ metadata:
   ms.service: windows-server
 title: Frequently asked questions about Storage Replica
 summary: |
-  >Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2019
+  >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
   
   This article contains answers to frequently asked questions (FAQs) about Storage Replica.
   
@@ -57,7 +57,7 @@ sections:
       - question: |
           Can I specify specific network interfaces to be used for replication?
         answer: |
-          Yes, using `Set-SRNetworkConstraint`. This cmdlet operates at the interface layer and be used on both cluster and noncluster scenarios.
+          Yes, using `Set-SRNetworkConstraint`. This cmdlet operates at the interface layer, and can be used on both cluster and noncluster scenarios.
           For example, with a standalone server (on each node):
           
           ```powershell
@@ -123,7 +123,7 @@ sections:
       - question: |
           Can I configure Scale-out File Server (SOFS) in a stretch cluster?
         answer: |
-          While technically possible, this configuration isn't a recommend due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically submillisecond, this configuration typically works without issues.
+          While technically possible, this configuration isn't recommended due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically submillisecond, this configuration typically works without issues.
           
           If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.
           
@@ -159,7 +159,7 @@ sections:
         answer: |
           You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including nonclustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs. Once initial replication is initiated, the volume isn't able to shrink or be trimmed.
           
-          You can also use seeded data volumes to reduce bandwidth usage and in some instances synchronization time. By ensuring that the destination volume has some subset of data from the primary then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`. If the volume is mostly empty, using seeded sync might reduce time and bandwidth usage. There are multiple ways to seed data, with varying degrees of efficacy:
+          You can also use seeded data volumes to reduce bandwidth usage and in some instances synchronization time. Use the Seeded option in Failover Cluster Manager or `New-SRPartnership` to ensure that the destination volume has some subset of data from the primary site. If the volume is mostly empty, using seeded sync might reduce time and bandwidth usage. There are multiple ways to seed data, with varying degrees of efficacy:
           
           - Previous replication - by replicating with normal initial sync locally between nodes containing the disks and volumes, removing replication, shipping the destination disks elsewhere, then adding replication with the seeded option. This method is the most effective as Storage Replica guaranteed a block-copy mirror and the only thing to replicate is delta blocks.
           - Restored snapshot or restored snapshot-based backup - by restoring a volume-based snapshot onto the destination volume, there should be minimal differences in the block layout. This method is the next most effective as blocks are likely to match thanks to volume snapshots being mirror images.
@@ -174,7 +174,7 @@ sections:
           Grant-SRDelegation -UserName contso\tonywang
           ```
           
-          The cmdlet reminds you that the user needs to sign out and on of the server they're planning to administer in order for the change to take effect. You can use `Get-SRDelegation` and `Revoke-SRDelegation` to further control delegation.
+          The cmdlet reminds you that the user needs to sign out and then sign in to the server they're planning to administer in order for the change to take effect. You can use `Get-SRDelegation` and `Revoke-SRDelegation` to further control delegation.
           
       - question: |
           What are my backup and restore options for replicated volumes?
@@ -267,7 +267,7 @@ sections:
       - question: |
           Can Storage Replica be configured to replicate in both directions?
         answer: |
-          Storage Replica is a one-way replication technology.  It only replicates from the source to the destination on a per volume basis.  The direction can be reversed at any time, but is still only in one direction.  That doesn't mean you can't have a set of volumes (source and destination) replicated in one direction and a different set of drives (source and destination) (stretch-cluster-replication-using-shared-storage.md in the opposite direction.  For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters `L:`, `M:`, `N:`, and `O`: and you wish to replicate drive `M:` from `Server1` to `Server2` but drive `O:` replicate from `Server2` to `Server1`.  You can haver use configure as long as there are separate log drives for each of the groups. For example:
+          Storage Replica is a one-way replication technology.  It only replicates from the source to the destination on a per volume basis.  The direction can be reversed at any time, but is still only in one direction.  That doesn't mean you can't have a set of volumes (source and destination) replicated in one direction and a different set of drives (source and destination) in the opposite direction. For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters `L:`, `M:`, `N:`, and `O:`. You wish to replicate drive `M:` from `Server1` to `Server2` and replicate drive `O:` from `Server2` to `Server1`.  You can use configure as long as there are separate log drives for each of the groups. For example:
           
           - `Server1` source drive `M:` with source log drive `L:` replicating to `Server2` destination `drive M:` with destination log drive `L:`
           - `Server2` source drive `O:` with source log drive `N:` replicating to `Server1` destination `drive O:` with destination log drive `N:`
