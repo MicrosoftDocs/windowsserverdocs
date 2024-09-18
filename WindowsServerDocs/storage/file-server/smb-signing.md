@@ -10,7 +10,7 @@ ms.date: 06/05/2024
 # Control SMB signing behavior (preview)
 
 > [!IMPORTANT]
-> Windows Insider and Windows Server 2025 (Preview) are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Windows Insider and Windows Server 2025 are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ## How SMB signing works
 
@@ -20,7 +20,7 @@ SMB signing requirements can involve both outbound signing, which covers traffic
 
 - Windows 11 Insiders Enterprise, Pro, and Education require both outbound and inbound SMB signing.
 
-- Windows Server 2025 (Preview) requires outbound SMB signing only.
+- Windows Server 2025 requires outbound SMB signing only.
 
 - Windows 11 Insider Home edition doesn't require outbound or inbound SMB signing.
 
@@ -64,7 +64,7 @@ Disabling SMB signing may be necessary if you're unable to disable guest usage f
 In order to control SMB signing behavior and maximize its capabilities, your system must be running one of the following two operating systems:
 
 - Windows 11 Insider Preview Build 25905 or later
-- Windows Server Preview Build 26010 or later
+- Windows Server 2025 or later
 
 You should also follow these recommendations to ensure your SMB signatures are effective at securing your data:
 
