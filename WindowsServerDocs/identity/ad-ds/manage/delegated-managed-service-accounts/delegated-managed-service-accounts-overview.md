@@ -1,6 +1,6 @@
 ---
-title: Delegated Managed Service Accounts overview in Windows Server Insider Preview
-description: Learn about delegated Managed Service Accounts (DMSA) that authenticate specific machine identities mapped in Active Directory (AD) along with Credential Guard (CG) to ensure device credentials isolation in Windows Server Insiders Preview.
+title: Delegated Managed Service Accounts overview in Windows Server 2025 (Preview)
+description: Learn about delegated Managed Service Accounts (DMSA) that authenticate specific machine identities mapped in Active Directory (AD) along with Credential Guard (CG) to ensure device credentials isolation in Windows Server 2025 (Preview).
 ms.topic: conceptual
 ms.author: alalve
 author: mariamgewida
@@ -10,9 +10,9 @@ ms.date: 02/14/2024
 # Delegated Managed Service Accounts overview
 
 > [!IMPORTANT]
-> Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Windows Server 2025 is in Preview. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-A new account type known as delegated Managed Service Account (dMSA) is introduced in Windows Server Insiders Preview that allows migration from a traditional service account to a machine account with managed and fully randomized keys, while disabling original service account passwords. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. Using dMSA helps to prevent harvesting credentials using a compromised account (kerberoasting), which is a common issue with traditional service accounts.
+A new account type known as delegated Managed Service Account (dMSA) is introduced in Windows Server 2025 that allows migration from a traditional service account to a machine account with managed and fully randomized keys, while disabling original service account passwords. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. Using dMSA helps to prevent harvesting credentials using a compromised account (kerberoasting), which is a common issue with traditional service accounts.
 
 ## dMSA and gMSA comparison
 
@@ -76,7 +76,7 @@ Running `Complete-ADServiceAccountMigration` performs the following changes:
 - The service account is removed from _Generic Read_ to all properties on the dMSA
 - The service account is removed from _Write_ property on the **msDS-GroupMSAMembership** attribute
 - **msDS-DelegatedMSAState** is set to 2
-- The Service Principal Names (SPN) are copied over from the service account to the dMSA account
+- The Service Principal Names (SPNs) are copied over from the service account to the dMSA account
 - **msDS-AllowedToDelegateTo** is copied over if applicable
 - **msDS-AllowedToActOnBehalfOfOtherIdentity** the security descriptor is copied over if applicable
 - The assigned AuthN policy, **msDS-AssignedAuthnPolicy**, of the service account are copied over
@@ -84,7 +84,7 @@ Running `Complete-ADServiceAccountMigration` performs the following changes:
 - The trusted "Auth for Delegation" User Account Control (UAC) bit is copied over if it was set on the service account
 - **msDS-SupersededServiceAccountState** is set to 2
 - The service account is disabled via the UAC disable bit
-- The SPN are removed from the account
+- The SPNs are removed from the account
 
 ## See also
 

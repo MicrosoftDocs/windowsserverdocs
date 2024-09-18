@@ -1,6 +1,6 @@
 ---
-title: Setting up delegated Managed Service Accounts (dMSA) in Windows Server 2025 Preview
-description: Learn how to set up delegated Managed Service Accounts (dMSA) in Windows Server Insiders Preview to ensure device credentials isolation in Active Directory.
+title: Setting up delegated Managed Service Accounts (dMSA) in Windows Server 2025 (preview)
+description: Learn how to set up delegated Managed Service Accounts (dMSA) in Windows Server 2025 (preview) to ensure device credentials isolation in Active Directory.
 ms.topic: how-to
 ms.author: alalve
 author: mariamgewida
@@ -11,7 +11,7 @@ ms.date: 07/22/2024
 
 A delegated Managed Service Account (dMSA) is an Active Directory (AD) account that provides secure and efficient management of credentials. Unlike traditional service accounts, dMSAs don't require manual password management since AD automatically takes care of it. With dMSAs, specific permissions can be delegated to access resources in the domain, which reduces security risks and provides better visibility and logs of service account activity.
 
-Setting up a dMSA is currently only available on devices running Windows Server 2025 (Preview). DMSA is a more secure and manageable approach to service account management compared to traditional service accounts. By migrating critical services to dMSA, organizations can ensure that these services are managed in a secure and compliant manner. DMSA provides a higher level of security by offering unique and frequently rotated passwords, which reduces the likelihood of unauthorized access and improves overall security.
+Setting up a dMSA is currently only available on devices running Windows Server 2025. DMSA is a more secure and manageable approach to service account management compared to traditional service accounts. By migrating critical services to dMSA, organizations can ensure that these services are managed in a secure and compliant manner. DMSA provides a higher level of security by offering unique and frequently rotated passwords, which reduces the likelihood of unauthorized access and improves overall security.
 
 ## Prerequisites
 

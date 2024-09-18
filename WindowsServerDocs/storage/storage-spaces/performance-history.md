@@ -198,7 +198,7 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 
 ### The cmdlet doesn't work
 
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server 2025 (Preview), that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
 
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier.
