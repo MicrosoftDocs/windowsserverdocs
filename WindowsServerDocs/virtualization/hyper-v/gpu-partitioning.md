@@ -4,7 +4,7 @@ description: Learn about how GPU partitioning works with multiple virtual machin
 author: robinharwood
 ms.author: roharwoo
 ms.topic: conceptual
-ms.date: 03/15/2024
+ms.date: 07/26/2024
 zone_pivot_groups: windows-os
 ---
 
@@ -56,7 +56,7 @@ GPU partitioning on Azure Stack HCI supports these guest operating systems:
 - Windows 10 or later
 - Windows 10 Enterprise multi-session​ or later
 - Windows Server 2019 or later
-- Linux Ubuntu 18.04 LTS, Linux Ubuntu 20.04 LTS​
+- Linux Ubuntu 18.04 LTS, Linux Ubuntu 20.04 LTS​, Linux Ubuntu 22.04 LTS
 
 ## Supported GPUs
 
@@ -66,6 +66,7 @@ The following GPUs support GPU partitioning:
 - NVIDIA A10
 - NVIDIA A16
 - NVIDIA A40
+- NVIDIA L2
 - NVIDIA L4
 - NVIDIA L40
 - NVIDIA L40S
@@ -122,7 +123,7 @@ For more information on using GPUs with your VMs and GPU partitioning, see:
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
-- [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json)
+- [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
 - [Use GPUs with clustered VMs](/azure-stack/hci/manage/use-gpu-with-clustered-vm)
 - [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
 

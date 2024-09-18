@@ -412,6 +412,8 @@
         href: dfsdiag-testsites.md
     - name: dfsrmig
       href: dfsrmig.md
+    - name: dfsutil
+      href: dfsutil.md  
     - name: diantz
       href: diantz.md
     - name: dir
@@ -422,6 +424,8 @@
       href: diskcopy.md
     - name: diskpart
       href: diskpart.md
+    - name: diskpart scripts and examples
+      href: diskpart-scripts-and-examples.md 
       items:
       - name: active
         href: active.md
@@ -1317,6 +1321,8 @@
       href: services-for-network-file-system-command-reference.md
     - name: set environmental variables
       href: set_1.md
+    - name: setlocal
+      href: setlocal.md  
     - name: setx
       href: setx.md
     - name: sfc
@@ -1558,6 +1564,8 @@
         href: wdsutil-get-drivergroup.md
       - name: wdsutil get driverpackage
         href: wdsutil-get-driverpackage.md
+      - name: wdsutil get driverpackagefile
+        href: wdsutil-get-driverpackagefile.md  
       - name: wdsutil get image
         href: wdsutil-get-image.md
       - name: wdsutil get imagefile

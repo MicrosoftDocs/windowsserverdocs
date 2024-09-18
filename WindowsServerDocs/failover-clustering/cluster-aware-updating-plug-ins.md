@@ -4,8 +4,8 @@ title: How Cluster-Aware Updating plug-ins work
 description: How to use plug-ins to coordinate updates when using Cluster-Aware Updating in Windows Server to install updates on a cluster.
 ms.topic: article
 manager: lizross
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/21/2021
 ---
 # How Cluster-Aware Updating plug-ins work

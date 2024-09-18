@@ -3,9 +3,9 @@ title: Enable or Disable Referrals and Client Failback
 description: This article describes how to enable or disable referrals and client failback.
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Enable or Disable Referrals and Client Failback
 

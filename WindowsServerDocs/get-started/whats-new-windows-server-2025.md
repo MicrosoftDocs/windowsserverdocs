@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 08/15/2024
+ms.date: 08/14/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -65,8 +65,6 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
   
   Utilities like Active Directory Administrative Center (ADAC), Active Directory Users and Computers (ADUC), `net computer`, and `dsmod` also honors this new behavior. Both ADAC and ADUC no longer allow creating a pre-2k Windows account.
 
-- **Kerberos AES SHA256 and SHA384** - The Kerberos protocol implementation is updated to support stronger encryption and signing mechanisms with support for [RFC 8009](https://datatracker.ietf.org/doc/rfc8009/) by adding SHA-256 and SHA-384. RC4 is deprecated and moved to the do-not-use cipher list.
-
 - **Kerberos PKINIT support for cryptographic agility** - The Kerberos Public Key Cryptography for Initial Authentication in Kerberos (PKINIT) protocol implementation is updated to allow for cryptographic agility by supporting more algorithms and removing hardcoded algorithms.
 
 - **LAN Manager GPO setting** - The GPO setting _Network security: Don't store LAN Manager hash value on next password change_ is no longer present nor applicable to new versions of Windows.
@@ -105,6 +103,10 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 
 By default, the Azure Arc setup Feature-on-Demand is installed, which offers a user-friendly wizard interface and a system tray icon in the taskbar to facilitate the process of adding servers to Azure Arc. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
 
+### Block cloning support
+
+Starting with Windows 11 24H2 and Windows Server 2025, Dev Drive now supports Block cloning. As Dev Drive uses the ReFS file system format, Block cloning support provides significant performance benefits when copying files. With Block cloning, the file system can copy a range of file bytes on behalf of an application as a low-cost metadata operation, rather than performing expensive read and write operations to the underlying physical data. This results in faster completion of file copying, reduced I/O to the underlying storage, and improved storage capacity by enabling multiple files to share the same logical clusters. To learn more, see [Block cloning on ReFS](/windows-server/storage/refs/block-cloning).
+
 ### Bluetooth
 
 You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
@@ -121,9 +123,13 @@ When you sign in for the first time, the desktop shell experience conforms to th
 
 This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](../identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md).
 
+### Dev Drive
+
+Dev Drive is a storage volume that aims to enhance the performance of crucial developer workloads. Dev Drive utilizes ReFS technology and incorporates specific file system optimizations to offer greater control over storage volume settings and security. This includes the ability to designate trust, configure antivirus settings, and exercise administrative control over attached filters. To learn more, see [Set up a Dev Drive on Windows 11](/windows/dev-drive).
+
 ### DTrace
 
-Windows Server 2025 comes equipped with dtrace as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real-time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for additional capabilities.
+Windows Server 2025 comes equipped with `dtrace` as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real-time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for other capabilities.
 
 ### Email & accounts
 
@@ -143,6 +149,14 @@ Submitting feedback or reporting problems encountered while using Windows Server
 
 Build 26040 has a new compression feature when compressing an item by performing a right-click called **Compress to**. This feature supports **ZIP**, **7z**, and **TAR** compression formats with specific compression methods for each.
 
+### Hyper-V Manager
+
+When creating a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the New Virtual Machine Wizard.
+
+### OpenSSH
+
+In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Starting with build 26080, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-click option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
+
 ### Pinned apps
 
 Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26085, the default pinned apps are currently:
@@ -160,7 +174,7 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 By default new Routing and Remote Access Services (RRAS) setups don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
 
-Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
+Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
 ### Server Message Block
 
@@ -302,7 +316,7 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
   When you're creating a passphrase, the specified number of words are randomly selected from the chosen word list and concatenated. The first letter of each word is capitalized to enhance readability. This feature also fully supports backing passwords up to either Windows Server AD or Microsoft Entra ID.
 
-  The passphrase word lists used in the three new _PasswordComplexity_ passphrase settings are sourced from the Electronic Frontier Foundation's article, "[Deep Dive: EFF's New Wordlists for Random Passphrases](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases)". The [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471) is licensed under the CC-BY-3.0 Attribution license and is available for download.
+  The passphrase word lists used in the three new _PasswordComplexity_ passphrase settings are sourced from the Electronic Frontier Foundation's article, [Deep Dive: EFF's New Wordlists for Random Passphrases](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases). The [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471) is licensed under the CC-BY-3.0 Attribution license and is available for download.
 
   > [!NOTE]
   > Windows LAPS doesn't allow for customization of the built-in word lists nor the use of customer-configured word lists.

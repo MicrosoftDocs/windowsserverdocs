@@ -3,8 +3,8 @@ title: lpq
 description: Reference article for the lpq command, which displays the status of a print queue on a computer running Line printer Daemon (LPD).
 ms.topic: reference
 ms.assetid: bb6abcc4-310a-4fa4-927b-4084b62ca02e
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
