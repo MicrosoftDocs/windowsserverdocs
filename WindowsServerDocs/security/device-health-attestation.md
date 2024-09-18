@@ -85,7 +85,7 @@ EKCert validation mode is optimized for devices in organizations that are not co
 
 When DHA is running in EKCert validation mode, it relies on an enterprise managed chain of trust that needs to be updated occasionally (approximately 5 - 10 times per year).
 
-Microsoft publishes aggregated packages of trusted Roots and intermediate CA's for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
+Microsoft publishes aggregated packages of trusted Roots and intermediate CAs for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
 
 An example archive is [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925).
 
