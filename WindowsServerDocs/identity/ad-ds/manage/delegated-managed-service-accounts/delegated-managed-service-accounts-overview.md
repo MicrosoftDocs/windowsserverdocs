@@ -76,7 +76,7 @@ Running `Complete-ADServiceAccountMigration` performs the following changes:
 - The service account is removed from _Generic Read_ to all properties on the dMSA
 - The service account is removed from _Write_ property on the **msDS-GroupMSAMembership** attribute
 - **msDS-DelegatedMSAState** is set to 2
-- The Service Principal Names (SPN) are copied over from the service account to the dMSA account
+- The Service Principal Names (SPNs) are copied over from the service account to the dMSA account
 - **msDS-AllowedToDelegateTo** is copied over if applicable
 - **msDS-AllowedToActOnBehalfOfOtherIdentity** the security descriptor is copied over if applicable
 - The assigned AuthN policy, **msDS-AssignedAuthnPolicy**, of the service account are copied over
@@ -84,7 +84,7 @@ Running `Complete-ADServiceAccountMigration` performs the following changes:
 - The trusted "Auth for Delegation" User Account Control (UAC) bit is copied over if it was set on the service account
 - **msDS-SupersededServiceAccountState** is set to 2
 - The service account is disabled via the UAC disable bit
-- The SPN are removed from the account
+- The SPNs are removed from the account
 
 ## See also
 
