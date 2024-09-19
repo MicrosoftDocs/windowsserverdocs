@@ -41,7 +41,7 @@ Before you can apply the security baseline for the first time, the OSConfig modu
    Get-Module -ListAvailable -Name Microsoft.OSConfig
    ```
 
-## Configure the OSConfig security baseline
+## Manage the OSConfig security baseline
 
 To configure, verify if the baseline is applied, remove a baseline, and view detailed compliance information for OSConfig in PowerShell, follow these steps.
 
@@ -76,9 +76,6 @@ To apply the Microsoft Defender antivirus baseline for a device, run the followi
 ```powershell
 Set-OSConfigDesiredConfiguration -Scenario Defender/Antivirus
 ```
-
-> [!NOTE]
-> The **Default** parameter is used to set the specified scenario as the default configuration for new devices.
 
 # [Verify](#tab/verify)
 
@@ -196,7 +193,7 @@ To edit the default value of **AuditDetailedFileShare** from **2** to **3**, run
 Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Name AuditDetailedFileShare -Value 3 
 ```
 
-To verify that the new value of is applied, run the following command:
+To verify that the new value is applied, run the following command:
 
 ```powershell
 Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Name AuditDetailedFileShare 
