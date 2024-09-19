@@ -47,4 +47,4 @@ OSConfig is a valuable security configuration platform that applies security pay
 
 ## See Also
 
-- [How to deploy OSConfig security baseline](osconfig/osconfig-how-to-configure-security-baseline.md)
+- [How to deploy OSConfig security baseline](osconfig-how-to-configure-security-baseline.md)
