@@ -87,6 +87,15 @@ sections:
           must be configured, and you must take care to configure Windows LAPS and the legacy LAPS
           to manage different local accounts.
 
+      - question: What happens if I accidentally configure a Windows LAPS policy setting with an unsupported value?
+        answer: |
+          See [Windows LAPS default policy values](laps-management-policy-settings.md#windows-laps-default-policy-values).
+
+      - question: How can I enable passphrases, which are only available in Windows 11 24H2, since older operating systems don't support the new passphrase-related PasswordComplexity settings (6-8)?
+        answer: |
+          There are two options in this scenario. Either allow the older OSs to fall back to the default setting, or create two policies.
+          See [Windows LAPS default policy values](laps-management-policy-settings.md#windows-laps-default-policy-values).
+
   - name: Windows LAPS and Microsoft Entra ID
     questions:
       - question: Why is my Microsoft Entra joined device getting an error when attempting to post the password to Microsoft Entra ID?
@@ -99,7 +108,7 @@ sections:
 
       - question: Do I need Intune in order to use Windows LAPS?
         answer: |
-          No. It's supported to deploy and use Windows LAPS in either Active Directory or Microsoft Entra mode
+          No. You can deploy and use Windows LAPS in either Active Directory or Microsoft Entra mode
           without Intune. Intune does provide many benefits to the Windows LAPS scenario (for example,
           policy deployment at scale, monitoring, and password-reset action support).
 
