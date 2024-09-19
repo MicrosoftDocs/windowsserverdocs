@@ -82,10 +82,10 @@ In the following steps, a cluster is being moved from the Contoso.com domain to 
 3. Ensure all Cluster Network Name resources are in an offline state and run the following command to remove the Active Directory objects that the cluster might have.
 
    > [!NOTE]
-   > If you cannot delete cluster name objects using the ”-Cluster CLUSCLUS” option, either remove the -Cluster option or execute ”-Cluster \<Node Name\>”
-
-   > [!NOTE]
-   > If you cannot delete cluster name objects using the -DeleteComputerObjects option, please add full control of the CNO to the VCO in advance.
+   >
+   > - If you can't delete cluster name objects using the `-Cluster CLUSCLUS` option, either remove the `-Cluster` option or execute `-Cluster <Node Name>`
+   >
+   > - If you can't delete cluster name objects using the `-DeleteComputerObjects` option, update the CNO object permissions to give the VCO account full control of the CNO in advance.
 
    ```powershell
    Remove-ClusterNameAccount -Cluster CLUSCLUS -DeleteComputerObjects
@@ -126,10 +126,10 @@ In the following steps, a cluster is being moved from the Contoso.com domain to 
    ```
 
     >[!NOTE]
-    > If you don't have any additional groups with network names, such as a Hyper-V Cluster with only virtual machines, the `-UpgradeVCOs` parameter isn't needed.
-    
-    >[!NOTE]
-    > If the VCO is not created when running New-ClusterNameAccount, please use the "Repair" function on the Cluster Network Name resources from the Failover Cluster Manager.
+    >
+    > - If you don't have any additional groups with network names, such as a Hyper-V Cluster with only virtual machines, the `-UpgradeVCOs` parameter isn't needed.
+    >
+    > - If the VCO is not created when running [New-ClusterNameAccount](/powershell/module/failoverclusters/new-clusternameaccount), please use the _Repair_ function on the Cluster Network Name resources from the Failover Cluster Manager.
 
 9. Use **Active Directory Users and Computers** to check the new domain and ensure the associated computer objects were created. If they have, then bring the remaining resources in the groups online.
 
