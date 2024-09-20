@@ -71,7 +71,7 @@ To apply the secured-core baseline for a device, run the following command:
 Set-OSConfigDesiredConfiguration -Scenario SecuredCore
 ```
 
-To apply the Microsoft Defender antivirus baseline for a device, run the following command:
+To apply the Microsoft Defender Antivirus baseline for a device, run the following command:
 
 ```powershell
 Set-OSConfigDesiredConfiguration -Scenario Defender/Antivirus
@@ -103,7 +103,7 @@ To verify if the secured-core baseline for a device is properly applied, run the
 Get-OSConfigDesiredConfiguration -Scenario SecuredCore
 ```
 
-To verify if the Microsoft Defender antivirus baseline for a device is properly applied, run the following command:
+To verify if the Microsoft Defender Antivirus baseline for a device is properly applied, run the following command:
 
 ```powershell
 Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus
@@ -114,31 +114,31 @@ Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus
 To remove the baseline for a device that's domain-joined, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer
+Remove-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer
 ```
 
 To remove the baseline for a device that's in a workgroup, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/WorkgroupMember
+Remove-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/WorkgroupMember
 ```
 
 To remove the baseline for a device that's configured as the DC, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/DomainController
+Remove-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/DomainController
 ```
 
 To remove the secured-core baseline for a device, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecuredCore
+Remove-OSConfigDesiredConfiguration -Scenario SecuredCore
 ```
 
-To remove the Microsoft Defender antivirus baseline for a device, run the following command:
+To remove the Microsoft Defender Antivirus baseline for a device, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario Defender/Antivirus
+Remove-OSConfigDesiredConfiguration -Scenario Defender/Antivirus
 ```
 
 > [!NOTE]
@@ -175,17 +175,17 @@ To check the compliance details for the secured-core baseline, run the following
 Get-OSConfigDesiredConfiguration -Scenario SecuredCore | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap`
 ```
 
-To check the compliance details for the Microsoft Defender antivirus baseline, run the following command:
+To check the compliance details for the Microsoft Defender Antivirus baseline, run the following command:
 
 ```powershell
-Get-OSConfigDesiredConfiguration -Scenario Defender/AntiVirusState | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap 
+Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap 
 ```
 
 ---
 
 ## Customize the OSConfig security baseline
 
-After completing the security baseline configuring, you can modify the security settings while maintaining drift control. Customizing the security values allow for more control of your organization's security policies depending on your environment's specific needs. Only numerical values are accepted.
+After completing the security baseline configuration, you can modify the security settings while maintaining drift control. Customizing the security values allow for more control of your organization's security policies depending on your environment's specific needs. Only numerical values are accepted.
 
 To edit the default value of **AuditDetailedFileShare** from **2** to **3**, run the following command:
 
