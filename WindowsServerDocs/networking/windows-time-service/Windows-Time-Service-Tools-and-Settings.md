@@ -261,6 +261,13 @@ Below you'll find the default values for the **Global Configuration Settings** o
 |Group Policy setting|Default value|
 | --- | --- |
 |AnnounceFlags|10|
+|ChainDisable|0|
+|ChainEntryTimeout|16|
+|ChainLoggingRate|30|
+|ChainMaxEntries|128|
+|ChainMaxHostEntries|4|
+|ClockAdjustmentAuditLimit|800|
+|ClockHoldoverPeriod|7800|
 |EventLogFlags|2|
 |FrequencyCorrectRate|4|
 |HoldPeriod|5|
@@ -271,10 +278,12 @@ Below you'll find the default values for the **Global Configuration Settings** o
 |MaxPollInterval|10|
 |MaxPosPhaseCorrection|172,800 (48 hours)|
 |MinPollInterval|6|
-|PhaseCorrectRate|7|
+|PhaseCorrectRate|1|
 |PollAdjustFactor|5|
+|RequireSecureTimeSyncRequests|0|
 |SpikeWatchPeriod|900|
 |UpdateInterval|100 (1 second)|
+|UtilizeSslTimeData|1|
 
 ### GPO settings for NTP Client
 
