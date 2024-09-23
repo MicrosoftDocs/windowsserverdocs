@@ -114,8 +114,6 @@ However, we recommend instead using a private IP address to connect with, or at 
 
    Installing takes a few minutes. If you selected **Open this port for me** or manually created an inbound port rule in the last couple minutes, it might take another couple minutes before you can connect with Windows Admin Center.
 
-:::image type="content" source="../../media/manage-vm/install-windows-admin-center.png" alt-text="Screenshot showing the install button for Windows Admin Center on a VM." lightbox="../../media/manage-vm/install-windows-admin-center.png":::
-
 ## Using with a VM
 
 After you've installed Windows Admin Center in an Azure VM, here's how to connect to it and use it to manage Windows:
