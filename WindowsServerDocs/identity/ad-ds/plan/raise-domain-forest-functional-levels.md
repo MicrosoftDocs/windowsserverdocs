@@ -38,7 +38,7 @@ You need to complete the following things to raise the domain functional level i
 
 - Identify all your DCs hosting the Global Catalog (GC) and FSMO roles. Create and verify backups of these Active Directory Domain Services domain controllers before making changes.
 
-- You must be a member of the Enterprise Admins group or equivalent  to raise the forest functional level.
+- You must be a member of the Enterprise Admins group or equivalent to raise the forest functional level.
 
 > [!NOTE]
 > Before you can promote a machine running Windows Server 2025 to a domain controller in an existing domain, that domain must also be at least at the Windows Server 2016 functional level.
