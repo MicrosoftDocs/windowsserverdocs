@@ -32,6 +32,9 @@ This topic describes the following scenarios:
 
 -   [Biometric logon](#BKMK_BioLogon)
 
+> [!CAUTION]
+> When a user performs a local logon, their credentials are verified locally against a cached copy before being authenticated with an identity provider over the network. If the cache verification is successful, the user gains access to the desktop even if the device is offline. However, if the user changes their password in the cloud, the cached verifier is not updated, which means that they can still access their local machine using their old password.
+
 ## <a name="BKMK_InteractiveLogon"></a>Interactive logon
 The logon process begins either when a user enters credentials in the credentials entry dialog box, or when the user inserts a smart card into the smart card reader, or when the user interacts with a biometric device. Users can perform an interactive logon by using a local user account or a domain account to log on to a computer.
 
