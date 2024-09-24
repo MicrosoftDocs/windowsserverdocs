@@ -2,9 +2,9 @@
 title: How to raise Active Directory domain and forest functional levels
 description: Learn how to raise Active Directory domain and forest functional levels
 ms.topic: how-to
-ms.author: robinharwood
+ms.author: wscontent
 author: gswashington
-ms.date: 09/19/2024
+ms.date: 09/25/2024
 ---
 # How to raise Active Directory domain and forest functional levels
 
@@ -45,7 +45,7 @@ You need to complete the following things to raise the domain functional level i
 
 ## View the current functional level
 
-You can use Lightweight Directory Access Protocol (LDAP) tools such as _Ldp.exe_ and _Adsiedit.msc_ to view the current domain and forest functional level settings. The most common method to upgrade the domain and forest functional levels is to use the Active Directory Domains and Trusts console, found in the Remote Server Administration Tools (RSAT). You can either configure the functional level using the console or use PowerShell cmdlets. For more information about how to manually configure the functional level, see [View and set the functional level manually](#view-and-set-the-functional-level-manually). For more information about how to use Windows PowerShell to configure the functional level, see [Set-ADDomainMode](/powershell/module/activedirectory/set-adforestmode) and [Set-ADDomainMode](/powershell/module/activedirectory/set-addomainmode).
+You can use Lightweight Directory Access Protocol (LDAP) tools such as _Ldp.exe_ and _Adsiedit.msc_ to view the current domain and forest functional level settings. The most common method to upgrade the domain and forest functional levels is to use the Active Directory Domains and Trusts console, found in the Remote Server Administration Tools (RSAT). You can either configure the functional level using the console or use PowerShell cmdlets. For more information about how to use Windows PowerShell to configure the functional level, see [Set-ADDomainMode](/powershell/module/activedirectory/set-adforestmode) and [Set-ADDomainMode](/powershell/module/activedirectory/set-addomainmode).
 
 We recommend you upgrade Active Directory and Active Directory Lightweight Directory Services servers to the latest release.
 
