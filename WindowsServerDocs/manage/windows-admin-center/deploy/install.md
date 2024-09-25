@@ -5,7 +5,7 @@ ms.topic: article
 author: gswashington
 ms.author: robinharwood
 ms.date: 09/30/2024
-zone_pivot_groups: zone_pivot_groups: windows-os
+zone_pivot_groups: windows-os
 ---
 # Install Windows Admin Center
 
@@ -23,7 +23,7 @@ Review the [installation options](../plan/installation-options.md) which include
 
 ## Windows Server 2025
 
-:::zone pivot="windows-server 2025"
+:::zone pivot="windows-server-2025"
 
 ### [Server Core](#tab/server-core)
 
@@ -98,11 +98,9 @@ You should now be able to see the name, machine type, and connection history of 
 
 ---
 
-::: zone-end
-
 ## Windows Server 2022 and earlier
 
-:::zone pivot="windows-server 2022 and earlier"
+:::zone pivot="windows-server-2022"
 
 ### [Server Core](#tab/server-core)
 

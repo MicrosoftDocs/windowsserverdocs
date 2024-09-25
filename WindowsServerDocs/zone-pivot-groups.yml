@@ -30,3 +30,5 @@ groups:
     title: Windows Server 2022
   - id: windows-server-2019
     title: Windows Server 2019
+  - id: windows-client
+    title: Windows Client
