@@ -4,10 +4,11 @@ description: Learn how to deploy OSConfig security baseline to enforce granular 
 ms.topic: how-to
 ms.author: wscontent
 author: xelu86
-ms.date: 09/17/2024
+ms.contributor: Dona Mukherjee
+ms.date: 09/24/2024
 ---
 
-# How to deploy OSConfig security baseline
+# How to deploy OSConfig security baselines locally
 
 OSConfig is a security configuration stack that utilizes a scenario-based approach to deliver and apply desired security measures for your environment. It provides co-management support for both on-premises and Arc-connected devices. Users can use PowerShell or Windows Admin Center (WAC) to apply the security baseline throughout the device lifecycle starting from the initial deployment process.
 
@@ -50,31 +51,31 @@ To configure, verify if the baseline is applied, remove a baseline, and view det
 To apply the baseline for a device that's domain-joined, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer
+Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Default
 ```
 
 To apply the baseline for a device that's in a workgroup, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/WorkgroupMember
+Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/WorkgroupMember -Default
 ```
 
 To apply the baseline for a device that's configured as the DC, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/DomainController
+Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/DomainController -Default
 ```
 
 To apply the secured-core baseline for a device, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecuredCore
+Set-OSConfigDesiredConfiguration -Scenario SecuredCore -Default
 ```
 
 To apply the Microsoft Defender Antivirus baseline for a device, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario Defender/Antivirus
+Set-OSConfigDesiredConfiguration -Scenario Defender/Antivirus -Default
 ```
 
 # [Verify](#tab/verify)
