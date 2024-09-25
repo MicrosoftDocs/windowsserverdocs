@@ -4,7 +4,7 @@ description: "Learn about the differences between Windows Server Standard, Datac
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 07/22/2024
+ms.date: 09/25/2024
 zone_pivot_groups: windows-os-version
 ---
 
