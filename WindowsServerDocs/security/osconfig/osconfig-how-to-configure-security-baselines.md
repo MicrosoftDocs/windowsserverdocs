@@ -1,11 +1,11 @@
 ---
-title: How to configure OSConfig security baseline
-description: Learn how to deploy OSConfig security baseline to enforce granular security settings to better protect and harden your Windows Server 2025 environment.
+title: How to configure OSConfig security baselines
+description: Learn how to deploy OSConfig security baselines to enforce granular security settings to better protect and harden your Windows Server 2025 environment.
 ms.topic: how-to
 ms.author: wscontent
 author: xelu86
 ms.contributor: Dona Mukherjee
-ms.date: 09/24/2024
+ms.date: 09/25/2024
 ---
 
 # How to deploy OSConfig security baselines locally
@@ -155,25 +155,25 @@ To obtain the desired configuration details for the specified scenario, use the 
 To check the compliance details for a domain-joined device, run the following command:
 
 ```powershell
-Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap`
+Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap
 ```
 
 To check the compliance details for a workgroup device, run the following command:
 
 ```powershell
-Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/WorkgroupMember | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap`
+Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/WorkgroupMember | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap
 ```
 
 To check the compliance details for the DC baseline, run the following command:
 
 ```powershell
-Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/DomainController | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap`
+Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/DomainController | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap
 ```
 
 To check the compliance details for the secured-core baseline, run the following command:
 
 ```powershell
-Get-OSConfigDesiredConfiguration -Scenario SecuredCore | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap`
+Get-OSConfigDesiredConfiguration -Scenario SecuredCore | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap
 ```
 
 To check the compliance details for the Microsoft Defender Antivirus baseline, run the following command:
@@ -188,7 +188,7 @@ Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name
 
 After completing the security baseline configuration, you can modify the security settings while maintaining drift control. Customizing the security values allow for more control of your organization's security policies depending on your environment's specific needs. Only numerical values are accepted.
 
-To edit the default value of **AuditDetailedFileShare** from **2** to **3**, run the following command:
+To edit the default value of **AuditDetailedFileShare** from **2** to **3** for your Member Server, run the following command:
 
 ```powershell
 Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Setting AuditDetailedFileShare -Value 3 

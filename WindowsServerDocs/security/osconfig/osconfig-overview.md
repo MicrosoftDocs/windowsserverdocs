@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.author: wscontent
 author: xelu86
 ms.contributor: Dona Mukherjee
-ms.date: 09/24/2024
+ms.date: 09/25/2024
 ---
 
 # OSConfig overview
