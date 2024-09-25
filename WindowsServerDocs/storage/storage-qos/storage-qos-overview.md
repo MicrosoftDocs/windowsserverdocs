@@ -344,7 +344,7 @@ Guid
 On the Hyper-V server, using PowerShell, set the Storage QoS Policy using the Policy ID as shown in the following example:
 
 ```PowerShell
-Get-VM -Name Build* | Get-VMHardDiskDrive | Set-VMHardDiskDrive -QoSPolicyID cd6e6b87-fb13-492b-9103-41c6f631f8e0
+Get-VM -Name Build* | Get-VMHardDiskDrive | Set-VMHardDiskDrive -QoSPolicyID 1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
 ```
 
 ### Confirm that the policies are applied
@@ -379,7 +379,7 @@ Path                          : \\plang-fs.plang.nttest.microsoft.com\two\BuildW
 DiskNumber                    :
 MaximumIOPS                   : 0
 MinimumIOPS                   : 0
-QoSPolicyID                   : cd6e6b87-fb13-492b-9103-41c6f631f8e0
+QoSPolicyID                   : 1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
 SupportPersistentReservations : False
 ControllerLocation            : 0
 ControllerNumber              : 0
@@ -458,7 +458,7 @@ Guid
 The following example shows how to apply the Storage QoS Policy on Hyper-V server using the policyID obtained in the preceding example:
 
 ```PowerShell
-PS C:\> Get-VM -Name WinOltp1 | Get-VMHardDiskDrive | Set-VMHardDiskDrive -QoSPolicyID 7e2f3e73-1ae4-4710-8219-0769a4aba072
+PS C:\> Get-VM -Name WinOltp1 | Get-VMHardDiskDrive | Set-VMHardDiskDrive -QoSPolicyID 1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5
 ```
 
 The following example shows how to viewing effects of the Storage QoS policy from file server:
@@ -559,7 +559,7 @@ PS C:\> Get-StorageQosPolicy -Name SqlWorkload | Remove-StorageQosPolicy
 Confirm
 Are you sure you want to perform this action?
 Performing the operation "DeletePolicy" on target "MSFT_StorageQoSPolicy (PolicyId =
-"7e2f3e73-1ae4-4710-8219-0769a4aba072")".
+"1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5")".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] Help (default is "Y"):
 ```
 
@@ -610,7 +610,7 @@ WinOltp1      3cccccc3-4dd4-5ee5-6ff6-7aaaaaaaaaa7
 Next, create a new policy using that PolicyId
 
 ```PowerShell
-PS C:\> New-StorageQosPolicy -PolicyId 7e2f3e73-1ae4-4710-8219-0769a4aba072 -PolicyType Aggregated -Name RestoredPolicy -MinimumIops 100 -MaximumIops 2000
+PS C:\> New-StorageQosPolicy -PolicyId 1aaaaaa1-2bb2-3cc3-4dd4-5eeeeeeeeee5 -PolicyType Aggregated -Name RestoredPolicy -MinimumIops 100 -MaximumIops 2000
 
 Name                    MinimumIops            MaximumIops            Status
 ----                    -----------            -----------            ------
