@@ -4,8 +4,8 @@ title: Managing a Guarded Fabric
 ms.topic: article
 ms.assetid: aee13964-d1d9-471a-bef3-3c76280b9a15
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 12/10/2020
 ---
 # Managing a Guarded Fabric

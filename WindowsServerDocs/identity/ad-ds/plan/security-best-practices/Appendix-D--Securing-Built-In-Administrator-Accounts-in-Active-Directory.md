@@ -3,7 +3,7 @@ description: "Learn more about: Appendix D: Securing Built-In Administrator Acco
 ms.assetid: 11f36f2b-9981-4da0-9e7c-4eca78035f37
 title: Appendix D - Securing Built-In Administrator Accounts in Active Directory
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 01/20/2024
 ms.topic: article

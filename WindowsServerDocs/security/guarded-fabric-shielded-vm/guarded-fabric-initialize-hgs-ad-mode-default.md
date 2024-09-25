@@ -3,8 +3,8 @@ description: "Learn more about: Initialize the HGS cluster using AD mode in a ne
 title: Initialize the HGS cluster using AD mode in a new dedicated forest (default)
 ms.topic: article
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 08/29/2018
 ---
 

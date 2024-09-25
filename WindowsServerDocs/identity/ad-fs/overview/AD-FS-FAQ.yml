@@ -427,3 +427,32 @@ sections:
            - AD FS 2019 provides the farm max behavior level information to the primary federation server and isn't recognized by federation server version 2016. 
           
            AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value `Win2019` until it becomes stale after two months and is automatically removed from the farm. To avoid getting this event, migrate the primary federation role to the federation server with the latest version. Follow the instructions in [To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level](/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level).
+
+      - question: |
+          How do I resolve the AD FS Admin event logs error: “Received invalid Oauth request. The client <NAME> is forbidden to access the resource with scope ugs"?
+          
+        answer: |
+          To resolve the issue, follow these steps:
+          
+          1. Launch the AD FS management console.
+          1. Go to **Services** > **Scope Descriptions**.
+          1. In "**Scope Descriptions**, select **More options**, then select **Add Scope Description**.
+          1. Under **Name**, enter **ugs**, then select **Apply** > **OK**.
+          1. Launch PowerShell as Administrator.
+          1. Run the command `Get-AdfsApplicationPermission`. Look for the `ScopeNames :{openid, aza}` that has the `ClientRoleIdentifier` value. Make a note of the `ObjectIdentifier` value.
+          1. Run the command `Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'`.
+          1. Restart the AD FS service.
+          1. On the client, restart the client. You should be prompted to configure Windows Hello for Business.
+          1. If the configuration window doesn't pop up, then you need to collect trace logs and troubleshoot further.
+
+      - question: |
+          Can I pass a resource value as part of the scope value like a typical request against Azure AD?
+          
+        answer: |
+          Yes, but only in Windows Server 2019 or later. You can organize the scope parameter as a space-separated list where each entry is structured as a resource or scope, such as `<create a valid sample request>`.
+
+      - question: |
+           Does AD FS support the PKCE extension?
+          
+        answer: |
+          Yes, but only in Windows Server 2019 or later. AD FS supports Proof Key for Code Exchange (PKCE) for the OAuth Authorization Code Grant flow.

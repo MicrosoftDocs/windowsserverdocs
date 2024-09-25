@@ -2,7 +2,7 @@
 description: Learn more about assigning cost values to links
 title: Determining the Cost
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 ms.date: 05/16/2023
 ms.topic: article
 ms.custom: inhenkel

@@ -76,10 +76,10 @@ PS:\>$adminConfig = @{"DKMContainerDn"="CN=8065f653-af9d-42ff-aec8-56e02be4d5f3,
 Next, create the farm:
 Note that the local computer account and the AD FS admin account need to be granted retrieve password and delegate to account rights on the gMSA.
 ```
-PS:\>$localadminobj = get-aduser "localadmin"
-PS:\>$adfsnodecomputeracct = get-adcomputer "contoso_adfs_node"
-PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( add=$localadmin.sid.value, $computeracct.sid.value) -PrincipalsAllowedToDelegateToAccount @( add=$localadmin.sid.value, $computeracct.sid.value)
-PS:\>$localAdminCred = (get-credential)
+PS:\>$localAdminObj = Get-ADUser "localadmin"
+PS:\>$adfsNodeComputerAcct = Get-ADComputer "contoso_adfs_node"
+PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( Add=$localAdminObj.SID.Value, $adfsNodeComputerAcct.SID.Value) -PrincipalsAllowedToDelegateToAccount @( Add=$localAdminObj.SID.Value, $adfsNodeComputerAcct.SID.Value)
+PS:\>$localAdminCred = (Get-Credential)
 PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFDB65E0 -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\fsgmsaacct$" -OverwriteConfiguration -AdminConfiguration $adminConfig
 ```
 

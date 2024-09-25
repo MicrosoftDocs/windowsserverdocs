@@ -3,8 +3,8 @@ description: "Learn more about: Install trusted TPM root certificates"
 title: Install trusted TPM root certificates
 ms.topic: article
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 06/27/2019
 ---
 

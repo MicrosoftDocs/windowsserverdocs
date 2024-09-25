@@ -3,9 +3,9 @@ title: Choose a Namespace Type
 description: This article describes how to choose a namespace type.
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Choose a namespace type
 

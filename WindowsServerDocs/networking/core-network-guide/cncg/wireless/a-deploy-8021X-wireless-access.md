@@ -4,8 +4,8 @@ description: Learn how to deploy Institute of Electrical and Electronics Enginee
 manager: brianlic
 ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 02/06/2023
 ---
 

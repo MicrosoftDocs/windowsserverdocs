@@ -4,8 +4,8 @@ description: These features have both software and hardware components. The soft
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/26/2021
 ---
 

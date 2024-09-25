@@ -1,8 +1,8 @@
 ---
 title: The number of logical processors in use must not exceed the supported maximum
 description: Learn what to do when the server is configured with too many logical processors.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
 ms.date: 8/16/2016

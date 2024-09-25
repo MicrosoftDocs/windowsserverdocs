@@ -4,7 +4,7 @@ description: Reference article for the sfc command, which scans and verifies the
 ms.topic: reference
 ms.assetid: c58c25da-e028-42a6-9e10-973484a4b953
 ms.author: alalve
-author: JasonGerend
+author: robinharwood
 ms.date: 10/19/2022
 ---
 

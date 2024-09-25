@@ -965,7 +965,7 @@ The RAS and IAS Servers group applies to the Windows Server operating system in 
 
 Servers that are members in the RDS Endpoint Servers group can run virtual machines and host sessions where user RemoteApp programs and personal virtual desktops run. You must populate this group on servers running RD Connection Broker. Session Host servers and RD Virtualization Host servers used in the deployment must be in this group.
 
-For information about Remote Desktop Services (RDS), see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds).
+For information about Remote Desktop Services (RDS), see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
 
 |Attribute|Value|
 |--- |--- |
@@ -999,7 +999,7 @@ You can use servers that are members of the RDS Management Servers group to comp
 
 Servers in the RDS Remote Access Servers group provide users with access to RemoteApp programs and personal virtual desktops. In internet-facing deployments, these servers typically are deployed in an edge network. You must populate this group on servers running RD Connection Broker. RD Gateway servers and RD Web Access servers that are used in the deployment must be in this group.
 
-For more information, see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds).
+For more information, see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
 
 |Attribute|Value|
 |--- |--- |

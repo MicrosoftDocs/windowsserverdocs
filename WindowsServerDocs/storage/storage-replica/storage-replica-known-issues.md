@@ -2,9 +2,9 @@
 description: Understand troubleshooting and known issues for Storage Replica in Windows Server
 title: Known issues with Storage Replica
 manager: candyc
-ms.author: billy
+ms.author: wscontent
 ms.topic: troubleshooting
-author: wbsmolen
+author: robinharwood
 ms.date: 05/31/2023
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---

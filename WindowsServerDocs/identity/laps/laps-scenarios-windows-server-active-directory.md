@@ -2,7 +2,7 @@
 title: Get started with Windows LAPS and Windows Server Active Directory
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: conceptual
 ---
@@ -31,7 +31,7 @@ Microsoft strongly recommends customer upgrade to the latest available operating
 
 ## Update the Windows Server Active Directory schema
 
-The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. This operation can be performed on a Windows Server 2022 or Windows Server 2019 domain controller updated with Windows LAPS, but can also be performed on a non-domain-controller as long as it supports the Windows LAPS PowerShell module.
+The Windows Server Active Directory schema must be updated before using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. The `Update-LapsADSchema` cmdlet can be run locally on a Windows Server 2022 or Windows Server 2019 domain controller updated with Windows LAPS, but can also be run on a non-domain-controller as long as it supports the Windows LAPS PowerShell module.
 
 ```powershell
 PS C:\> Update-LapsADSchema
@@ -40,7 +40,7 @@ PS C:\> Update-LapsADSchema
 > [!TIP]
 > Pass the `-Verbose` parameter to see detailed info on what the `Update-LapsADSchema` cmdlet (or any other cmdlet in the LAPS PowerShell module) is doing.
 
-## Grant the managed device permission to update its password
+## Grant the managed device password update permission
 
 The managed device needs to be granted permission to update its password. This action is performed by setting inheritable permissions on the Organizational Unit (OU) the device is in. The `Set-LapsADComputerSelfPermission` is used for this purpose, for example:
 
@@ -79,7 +79,7 @@ Complete a few steps to configure the device policy.
 
 ### Choose a policy deployment mechanism
 
-The first step is to choose how to apply policy to your devices.
+The first step is to choose how to apply policy on your devices.
 
 Most environments use [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy) to deploy the required settings to their Windows Server Active Directory-domain-joined devices.
 
@@ -153,6 +153,36 @@ CN=LAPSAD2,OU=NewLAPS,DC=laps,DC=com PasswordReset
 The next time Windows LAPS wakes up to process the current policy, it sees the modified password expiration time and rotates the password. If you don't want to wait, you can run the `Invoke-LapsPolicyProcessing` cmdlet.
 
 You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotation of the password.
+
+## Retrieving passwords during AD disaster recovery scenarios
+
+Retrieval of Windows LAPS passwords (including DSRM passwords) normally requires that at least one Active Directory domain controller is available. Consider however a catastrophic scenario in which all the domain controllers in a domain are down. How do you recover passwords in that situation?
+
+Active Directory management best-practices advise regularly saving regular backups of all domain controllers. Windows LAPS passwords stored in a mounted backup AD database can be queried using the `Get-LapsADPassword` PowerShell cmdlet by specifying the `-Port` parameter.The `Get-LapsADPassword` cmdlet was recently improved so that when the `-Port` and `-RecoveryMode` parameters are both specified, password recovery will succeed with no need to contact a domain controller. Further, `Get-LapsADPassword` now supports being run in this mode on a workgroup (non-domain-joined) machine.
+
+The following example assumes that an AD backup database is locally mounted on port 50000:
+
+```powershell
+PS C:\> Get-LapsADPassword -Identity lapsDC -AsPlainText -Port 50000 -RecoveryMode
+```
+
+```output
+ComputerName        : LAPSDC
+DistinguishedName   : CN=LAPSDC,OU=Domain Controllers,DC=laps,DC=com
+Account             : Administrator
+Password            : ArrowheadArdentlyJustifyingKryptonVixen
+PasswordUpdateTime  : 8/15/2024 10:31:51 AM
+ExpirationTimestamp : 9/14/2024 10:31:51 AM
+Source              : EncryptedDSRMPassword
+DecryptionStatus    : Success
+AuthorizedDecryptor : S-1-5-21-2127521184-1604012920-1887927527-35197
+```
+
+> [!IMPORTANT]
+> When encrypted Windows LAPS passwords are retrieved from an AD backup database mounted on a workgroup machine, the AuthorizedDecryptor field will always be displayed in raw SID format since the workgroup machine is unable to translate that SID into a friendly name.
+
+> [!IMPORTANT]
+> The improved Get-LapsADPassword password retrieval capability is supported in Windows Insider build 27695 and later, for both client and server OS versions.
 
 ## See also
 

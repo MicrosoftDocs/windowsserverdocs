@@ -3,8 +3,8 @@ title: Cluster Operating System Rolling Upgrade
 description: "Learn more about: Cluster operating system rolling upgrade"
 ms.topic: how-to
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 manager: lizross
 ms.date: 03/20/2023
 ---

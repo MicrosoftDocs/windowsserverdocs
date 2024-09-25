@@ -103,7 +103,7 @@ Where *rulegroup* is one of the following, depending on which snap-in you want t
 
 ## Managing with Remote Desktop Services
 
-You can use [Remote Desktop](../../remote/remote-desktop-services/welcome-to-rds.md) to manage a Server Core server from remote computers.
+You can use [Remote Desktop](../../remote/remote-desktop-services/remote-desktop-services-overview.md) to manage a Server Core server from remote computers.
 
 Before you can access Server Core, you'll need to run the following command:
 

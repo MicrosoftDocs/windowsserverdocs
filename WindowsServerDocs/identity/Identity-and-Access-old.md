@@ -18,10 +18,6 @@ ms.topic: article
 
  The following new features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements are covered in the following sections.
 
-
-## [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
-An overview of all of the new features available for AD FS in Windows Server 2016.
-
 ## [What's new in Active Directory Domain Services for Windows Server 2016](whats-new-active-directory-domain-services.md)
 Lists all the new features available for AD DS in Windows Server 2016.
 

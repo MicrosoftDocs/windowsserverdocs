@@ -3,7 +3,7 @@ title: Performance Tuning Hyper-V Servers
 description: Performance tuning guidelines for Hyper-V
 ms.topic: article
 ms.author: wscontent
-author: phstee
+author: robinharwood
 ms.date: 03/08/2024
 ---
 

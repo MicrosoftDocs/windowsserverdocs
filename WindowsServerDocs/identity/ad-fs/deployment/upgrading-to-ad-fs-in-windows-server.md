@@ -150,7 +150,7 @@ Now that you've updated your FBL, you need to upgrade Web Application Proxy (WAP
 1. Remove old Web Application Proxy servers, keeping only the new servers configured in the previous steps by running the following PowerShell cmdlet:
 
    ```powershell
-   Set-WebApplicationProxyConfiguration -ConnectedServersName "WAPServerName1, WAPServerName2"
+   Set-WebApplicationProxyConfiguration -ConnectedServersName "WAPServerName1", "WAPServerName2"
    ```
 
 1. To upgrade the ConfigurationVersion of the WAP servers, run the following PowerShell command:

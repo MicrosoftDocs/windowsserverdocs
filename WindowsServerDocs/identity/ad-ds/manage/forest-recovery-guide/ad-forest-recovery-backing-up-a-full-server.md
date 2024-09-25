@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Backing up a full server 
 description: A Bare Metal Recovery (BMR) backup is recommended to prepare for a forest recovery because it can be restored to different hardware or a different operating system instance. Using Windows Server Backup you can perform a Bare-Metal Recovery (BMR) backup of your server. 
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.author: wscontent
+author: robinharwood
 ms.date: 06/21/2023
 ms.topic: article
 ---

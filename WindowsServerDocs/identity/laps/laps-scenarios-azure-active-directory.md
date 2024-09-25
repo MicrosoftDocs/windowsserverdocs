@@ -2,7 +2,7 @@
 title: Get started with Windows LAPS and Microsoft Entra ID
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Microsoft Entra ID.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: conceptual
 ---
@@ -122,7 +122,7 @@ You're almost there! First, sign in to Microsoft Graph. Then, use the `Get-LapsA
 To sign in to Microsoft Graph, use the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID and the application ID of the Microsoft Entra application you created earlier. Run the cmdlet once to sign in. For example:
 
 ```powershell
-PS C:\> Connect-MgGraph -Environment Global -TenantId acca2622-272f-413f-865f-a67416923a6b -ClientId 1c2e514c-2ef1-486d-adbb-8da208457957
+PS C:\> Connect-MgGraph -Environment Global -TenantId aaaabbbb-0000-cccc-1111-dddd2222eeee -ClientId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
 ```output

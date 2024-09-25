@@ -4,7 +4,7 @@ description: Get the product keys needed for setup and activation of Windows Ser
 ms.topic: conceptual
 author: xelu86
 ms.author: wscontent
-ms.date: 04/05/2024
+ms.date: 05/16/2024
 ---
 
 # Key Management Services (KMS) client activation and product keys
@@ -42,36 +42,28 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 
 ### Windows Server LTSC
 
-# [Windows Server 2025](#tab/server2025)
-
-| Operating system edition       | KMS Client Product Key        |
-|--------------------------------|-------------------------------|
-| Windows Server 2025 Standard |	TVRH6-WHNXV-R9WG3-9XRFY-MY832 |
-| Windows Server 2025 Datacenter | D764K-2NDRG-47T6Q-P8T8W-YP6DF |
-| Windows Server 2025 Azure Edition | XGN3F-F394H-FD2MY-PP6FD-8MCRC |
-
 # [Windows Server 2022](#tab/server2022)
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
-| Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
-| Windows Server 2022 Datacenter<br>Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV |
 | Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
+| Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
+| Windows Server 2022 Datacenter: Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV |
 
 # [Windows Server 2019](#tab/server2019)
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
-| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 | Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C |
+| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 | Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726 |
 
 # [Windows Server 2016](#tab/server2016)
 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
-| Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
+| Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
 | Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
 
 ---
@@ -82,8 +74,8 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
-| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
+| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 
 > [!IMPORTANT]
 > Windows Server, version 20H2 reached end of service on August 9, 2022 and is no longer receiving security updates. This includes the retirement of Windows Server Semi-Annual Channel (SAC) with no future releases.
@@ -111,22 +103,13 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 ### Windows Enterprise LTSC and LTSB
 
-# [Windows 11 LTSC 2024 <br> Windows 10 LTSC 2021, 2019](#tab/windows1110ltsc)
+# [Windows 10 LTSC 2021, 2019](#tab/windows10ltsc)
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
-| Windows 11 Enterprise LTSC 2024 <br> Windows 10 Enterprise LTSC 2021 <br> Windows 10 Enterprise LTSC 2019 | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
-| Windows 11 Enterprise N LTSC 2024 <br> Windows 10 Enterprise N LTSC 2021 <br> Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
+| Windows 10 Enterprise LTSC 2021 <br> Windows 10 Enterprise LTSC 2019 | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
+|  Windows 10 Enterprise N LTSC 2021 <br> Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 
-# [Windows IoT LTSC](#tab/winowsiot)
-
-| Operating system edition          | KMS Client Product Key        |
-|-----------------------------------|-------------------------------|
-| Windows IoT Enterprise LTSC 2024 <br> Windows IoT Enterprise LTSC 2021 | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
-
-> [!NOTE]
-> For ImageVersion: 10.0.19044.2905 or later, see [Windows IoT Enterprise LTSC in Volume License](/windows/iot/iot-enterprise/deployment/volume-license).
-  
 # [Windows 10 LTSB 2016](#tab/windows102016)
 
 | Operating system edition          | KMS Client Product Key        |
@@ -143,21 +126,30 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 ---
 
+### Windows IoT Enterprise
+
+| Operating system edition          | KMS Client Product Key        |
+|-----------------------------------|-------------------------------|
+| Windows IoT Enterprise LTSC 2021 | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
+
+> [!NOTE]
+> For ImageVersion: 10.0.19044.2905 or later, see [Windows IoT Enterprise LTSC in Volume License](/windows/iot/iot-enterprise/deployment/volume-license).
+
 ### Earlier versions of Windows Server
 
 # [Windows Server, version 1803](#tab/version1803)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
-| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 
 # [Windows Server, version 1709](#tab/version1709)
 
 | Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
-| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 
 # [Windows Server 2012 R2](#tab/2012r2)
 

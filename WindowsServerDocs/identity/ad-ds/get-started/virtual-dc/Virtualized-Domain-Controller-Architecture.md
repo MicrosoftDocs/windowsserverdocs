@@ -3,7 +3,7 @@ description: "Learn more about: Virtualized Domain Controller Architecture"
 s.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
 title: Virtualized Domain Controller Architecture
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/16/2023
 ms.topic: article

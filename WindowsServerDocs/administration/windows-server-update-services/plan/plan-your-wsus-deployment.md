@@ -3,8 +3,8 @@ title: Plan Your WSUS Deployment
 description: Windows Server Update Service (WSUS) - An overview of the deployment planning process with links to the related articles
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 manager: mtillman
 ms.date: 07/12/2023
 ---

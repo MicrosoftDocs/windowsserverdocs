@@ -2,7 +2,7 @@
 title: Get started with the web client for Remote Desktop Services
 description: Describes how to sign in to the Remote Desktop web client.
 ms.author: helohr
-ms.date: 12/16/2022
+ms.date: 7/3/2024
 ms.topic: article
 author: Heidilohr
 ---

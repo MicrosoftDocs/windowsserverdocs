@@ -45,7 +45,7 @@ You can use the following procedure to identify the primary token signing and to
 
 You can run the following Windows PowerShell command: `Get-AdfsCertificate –CertificateType token-signing` (or `Get-AdfsCertificate –CertificateType token-decrypting`). You can also examine the current certificates in the MMC: Service->Certificates.
 
-:::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts3.png" alt-text="Screenshot of the PowerShell window, highlighting the Not After date and the Is Primary properties.":::
+:::image type="content" source="media/configure-TS-TD-certs-ad-fs/certificate-powershell.png" alt-text="Screenshot of the PowerShell window, highlighting the Not After date and the Is Primary properties.":::
 
 The AD FS uses the certificate for which the `IsPrimary` value is set to `True`.
 
@@ -81,7 +81,7 @@ Then you must configure this certificate as the secondary AD FS token signing or
 1. Once you have imported the certificate. Open the **AD FS Management** console.
 1. Expand **Service** and then select **Certificates**.
 1. In the **Actions** pane, select **Add Token-Signing Certificate**.
-    :::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts4.png" alt-text="Screenshot of the AD FS dialog box, highlighting the Add Token Signing Certificate option.":::
+    :::image type="content" source="media/configure-TS-TD-certs-ad-fs/add-token-signing.png" alt-text="Screenshot of the AD FS dialog box, highlighting the Add Token Signing Certificate option.":::
 1. Select the new certificate from the list of displayed certificates, and then select **OK**.
 1. Open PowerShell and run `Set-ADFSProperties -AutoCertificateRollover $true`.
 
@@ -97,7 +97,7 @@ Federation partners consume your new certificates by pulling your federation met
 1. Select the secondary token signing certificate.
 1. In the **Actions** pane, select **Set as Primary**. Select **Yes** at the confirmation prompt.
 
-    :::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts5.png" alt-text="Screenshot of the AD FS dialog box, highlighting the Set as Primary option.":::
+    :::image type="content" source="media/configure-TS-TD-certs-ad-fs/primary-token-signing-certificate.png" alt-text="Screenshot of the AD FS dialog box, highlighting the Set as Primary option.":::
 
 ## Update federation partners
 

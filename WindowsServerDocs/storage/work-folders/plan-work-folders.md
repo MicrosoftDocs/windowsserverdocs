@@ -2,9 +2,9 @@
 ms.assetid: a7c39656-81ee-4c2b-80ef-4d017dd11b07
 title: Planning a Work Folders deployment
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: dongill
-ms.author: jgerend
+ms.author: wscontent
 ms.date: 4/5/2017
 description: How to plan a Work Folders deployment including system requirements and how to prepare your network environment.
 ---

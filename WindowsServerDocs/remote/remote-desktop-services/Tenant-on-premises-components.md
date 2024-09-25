@@ -1,11 +1,11 @@
 ---
 title: Tenant on-premises components
 description: Describes the on-premises components in your RDS deployment.
-ms.author: elizapo
-ms.date: 08/01/2016
+ms.author: wscontent
+ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: b3eebb38-a835-4fa6-9e41-1966014bf2cb
-author: lizap
+author: robinharwood
 manager: dongill
 ---
 # Tenant on-premises components

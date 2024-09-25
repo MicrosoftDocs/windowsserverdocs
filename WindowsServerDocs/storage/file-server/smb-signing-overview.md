@@ -1,11 +1,11 @@
 ---
 title: Overview of Server Message Block signing in Windows
 description: Learn how to configure SMB signing, how to determine whether SMB signing is enabled, and how to disable SMB signing.
-ms.date: 03/26/2024
+ms.date: 04/19/2024
 author: robinharwood
 ms.author: wscontent
 ms.topic: overview
-#customer intent: As a IT administrator, I want understand what SMB signing is so that I better support my customers and design secure file storage solutions.
+#customer intent: As an IT administrator, I want to understand what SMB signing is so that I can better support my customers and design secure file storage solutions.
 ---
 
 # What is Server Message Block signing?
@@ -32,7 +32,7 @@ When using SMB signing, you should consider:
 - Using Kerberos instead of NTLMv2 is recommended so that your session key starts strong.
 - Don't connect to shares by using IP addresses or CNAME records, otherwise NTLM is used instead of Kerberos. We recommend using Kerberos. To learn more about alternatives to using CNAME records, see [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064).
 
-By default, domain controllers require SMB signing of anyone connecting to them, typically for SYSVOL and NETLOGON to get group policy and logon scripts. UNC Hardening from the client also requires signing when talking to those same two shares and goes further by requiring Kerberos. SMB signing is also automatically used as part of pre-authentication integrity to prevent downgrade attacks. See [SMB 3.1.1 Pre-authentication integrity in Windows 10](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10?WT.mc_id=ITOPSTALK-blog-abartolo) for more information.
+By default, domain controllers require SMB signing of anyone connecting to them, typically for SYSVOL and NETLOGON to get group policy and logon scripts. UNC Hardening from the client also requires signing when talking to those same two shares and goes further by requiring Kerberos. SMB signing is also automatically used as part of pre-authentication integrity to prevent downgrade attacks. For more information, see [SMB 3.1.1 Pre-authentication integrity in Windows 10](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10?WT.mc_id=ITOPSTALK-blog-abartolo).
 
 ## Policy locations for SMB signing
 
@@ -66,6 +66,37 @@ In summary SMB is signed when:
 Signing isn't used when:
 
 - The SMB client and server have **RequireSecuritySignature** set to **0**.
+
+## SMB signing and encryption auditing
+
+Starting with Windows 11 Insider build 26090, administrators can enable auditing for the SMB client to detect third-party clients or servers that don't support SMB encryption or signing. If a third-party device or software claims to support SMB 3.1.1, but doesn't support SMB signing, it violates the [SMB 3.1.1 pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
+
+Adjusting the SMB signing and encryption auditing settings can be modified in Group Policy or through PowerShell. These settings for Group Policy are stored in the paths:
+
+- `Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support encryption`
+
+- `Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support signing`
+
+- `Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support encryption`
+
+- `Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support signing`
+
+For PowerShell, running the following commands enables auditing the same settings:
+
+```powershell
+Set-SmbServerConfiguration -AuditClientDoesNotSupportEncryption $true
+Set-SmbServerConfiguration -AuditClientDoesNotSupportSigning $true
+
+Set-SmbClientConfiguration -AuditServerDoesNotSupportEncryption $true
+Set-SmbClientConfiguration -AuditServerDoesNotSupportSigning $true
+```
+
+The Event Viewer captures these events under the following paths with their respective Event IDs:
+
+|Path|Event ID|
+|-|-|
+|Applications and Services Logs\Microsoft\Windows\SMBClient\Audit|31998 <br> 31999|
+|Applications and Services Logs\Microsoft\Windows\SMBServer\Audit|3021 <br> 3022|
 
 ## Related content
 

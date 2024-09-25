@@ -2,9 +2,9 @@
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a cloud witness for a failover cluster in Windows Server
 manager: lizross
-ms.author: jgerend
+ms.author: wscontent
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 ms.date: 10/10/2023
 description: How to use Microsoft Azure to host the witness for a Windows Server failover cluster in the cloud - also known as how to deploy a Cloud Witness.
 ---

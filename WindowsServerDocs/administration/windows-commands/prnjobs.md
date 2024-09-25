@@ -3,8 +3,8 @@ title: prnjobs
 description: Reference article for the prnjobs command, which pauses, resumes, cancels, and lists print jobs.
 ms.topic: reference
 ms.assetid: 5ad34199-7a5a-40c1-8053-bccd5929df43
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 manager: mtillman
 ms.date: 07/11/2018
 ---

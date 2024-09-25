@@ -2,8 +2,8 @@
 title: vssadmin delete shadows
 description: A description of the vssadmin delete shadows command, which deletes a specified volume's shadow copies.
 ms.topic: reference
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 05/18/2018
 ---
 

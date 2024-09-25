@@ -4,7 +4,7 @@ description: Describes the SMB compression features in the Windows Operating Sys
 ms.product: windows-server
 ms.topic: article
 author: NedPyle
-ms.author: inhenkel
+ms.author: wscontent
 ms.date: 03/14/2024
 ---
 
@@ -22,6 +22,9 @@ SMB compression in Windows has the following characteristics:
 - Supports SMB over QUIC
 - Supports SMB Multichannel
 - Doesn't support SMB Direct over RDMA
+
+> [!NOTE]
+> Windows 11 Insider and Windows Server 2025 (Preview) also support compression algorithm LZ4 as defined by [LZ4.org](https://lz4.org). For further information about this compression algorithm, see [LZ4 Compression Documentation](https://github.com/lz4/lz4/blob/dev/doc/lz4_Block_format.md). 
 
 For a demonstration of SMB compression, watch this video:
 

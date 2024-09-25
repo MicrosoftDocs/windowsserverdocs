@@ -3,7 +3,7 @@ description: "Learn more about: Install a New Windows Server 2012 Active Directo
 ms.assetid: b3d6fb87-c4d4-451c-b3de-a53d2402d295
 title: Install a New Windows Server 2012 Active Directory Forest (Level 200)
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

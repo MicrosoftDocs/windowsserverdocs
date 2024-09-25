@@ -3,8 +3,8 @@ description: "Learn more about: Guarded fabric and shielded VMs overview"
 title: Guarded Fabric and Shielded VMs overview
 ms.topic: article
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 02/16/2023
 ---
 

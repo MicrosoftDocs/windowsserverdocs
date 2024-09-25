@@ -1,8 +1,8 @@
 ---
 title: Windows 7 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows 7 is configured with less than the recommended amount of RAM, which is 1 GB.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: d77d648c-6e26-43fa-be0a-6eb4b28f9cb4
 ms.date: 8/16/2016

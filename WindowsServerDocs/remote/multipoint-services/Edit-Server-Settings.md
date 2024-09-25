@@ -3,9 +3,9 @@ title: Edit Server Settings
 description: Learn about MultiPoint Services settings
 ms.topic: article
 ms.assetid: afb64b94-9055-4703-b8ce-a8839b2718da
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: wscontent
 ms.date: 08/07/2020
 ---
 # Edit Server Settings

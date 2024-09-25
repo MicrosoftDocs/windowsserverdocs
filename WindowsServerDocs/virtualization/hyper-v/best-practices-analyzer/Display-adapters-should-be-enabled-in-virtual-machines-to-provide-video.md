@@ -1,8 +1,8 @@
 ---
 title: Display adapters should be enabled in virtual machines to provide video capabilities
 description: Learn what to do when the Microsoft Virtual Machine Bus Video Device may be disabled in a virtual machine.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: ac5992e6-3c0b-46c2-a48e-6ef37b679228
 ms.date: 8/16/2016

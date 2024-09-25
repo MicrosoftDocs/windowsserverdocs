@@ -2,7 +2,7 @@
 title: Windows LAPS overview
 description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS), including key scenarios and setup and management options.
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 09/06/2023
 ms.topic: overview
 ---
@@ -11,7 +11,7 @@ ms.topic: overview
 
 Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Restore Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
-## Windows LAPS supported platformss
+## Windows LAPS supported platforms
 
 Windows LAPS is now available on the following OS platforms with the specified update or later installed:
 

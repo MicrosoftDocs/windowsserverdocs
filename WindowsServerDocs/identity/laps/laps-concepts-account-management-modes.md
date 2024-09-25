@@ -2,7 +2,7 @@
 title: Windows LAPS account management modes
 description: Documents account management modes for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 12/25/2023
 ms.topic: conceptual
 ---
@@ -12,7 +12,7 @@ ms.topic: conceptual
 Learn about the different account management modes supported by Windows Local Administrator Password Solution (Windows LAPS).
 
 > [!IMPORTANT]
-> The Windows LAPS automatic account management feature is supported in Windows Server 2025 and later.
+> The Windows LAPS automatic account management feature is only supported in Windows 11 24H2, Windows Server 2025 and later releases.
 
 ## Overview
 

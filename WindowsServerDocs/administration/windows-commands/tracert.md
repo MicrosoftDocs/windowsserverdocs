@@ -4,7 +4,7 @@ description: Reference article for tracert, which determines the path taken to a
 ms.topic: reference
 ms.assetid: 9032a032-2e5e-49d4-9e86-f821600e4ba6
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 ms.date: 09/27/2023
 ---
 

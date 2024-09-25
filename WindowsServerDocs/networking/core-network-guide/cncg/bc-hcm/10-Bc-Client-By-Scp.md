@@ -4,8 +4,8 @@ description: Learn how to use Group Policy to enable and configure BranchCache h
 manager: brianlic
 ms.topic: article
 ms.assetid: ea1c34fd-5a33-4228-9437-9bb3d44230eb
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

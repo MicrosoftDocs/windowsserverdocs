@@ -2,8 +2,8 @@
 title: Network File System overview
 description: Explains what Network File System is.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 12/06/2022
 ---
 # Network File System overview

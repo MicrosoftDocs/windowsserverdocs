@@ -2,8 +2,8 @@
 title: Manage Failover Clusters with Windows Admin Center
 description: Manage Failover Clusters with Windows Admin Center
 ms.topic: article
-author: PatAltimore
-ms.author: patricka
+author: robinharwood
+ms.author: wscontent
 ms.date: 02/28/2022
 ---
 # Manage Failover Clusters with Windows Admin Center

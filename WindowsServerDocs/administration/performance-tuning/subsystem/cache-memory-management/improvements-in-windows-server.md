@@ -3,7 +3,7 @@ title: Cache and Memory Manager Improvements
 description: Cache and Memory Manager Improvements in Windows Server 2016
 ms.topic: article
 ms.author: pavel
-author: phstee
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

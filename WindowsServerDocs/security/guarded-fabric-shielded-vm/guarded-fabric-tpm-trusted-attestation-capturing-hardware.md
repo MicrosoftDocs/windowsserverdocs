@@ -4,8 +4,8 @@ description: "Learn more about: Authorize guarded hosts using TPM-based attestat
 ms.topic: article
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: wscontent
 ms.date: 1/24/2023
 ---
 

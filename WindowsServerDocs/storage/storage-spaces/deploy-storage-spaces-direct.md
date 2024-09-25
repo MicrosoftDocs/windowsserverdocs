@@ -1,7 +1,7 @@
 ---
 title: Deploy Storage Spaces Direct on Windows Server
 manager: femil
-ms.author: inhenkel
+ms.author: wscontent
 ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
@@ -154,28 +154,48 @@ The following steps are done on a management system that is the same version as 
 
 Before you enable Storage Spaces Direct, ensure your drives are empty: no old partitions or other data. Run the following script, substituting your computer names, to remove all any old partitions or other data.
 
-> [!Warning]
+> [!Important]
 > This script will permanently remove any data on any drives other than the operating system boot drive!
 
-```PowerShell
+```powershell
 # Fill in these variables with your values
 $ServerList = "Server01", "Server02", "Server03", "Server04"
 
-Invoke-Command ($ServerList) {
-    Update-StorageProviderCache
-    Get-StoragePool | ? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue
-    Get-StoragePool | ? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue
-    Get-StoragePool | ? IsPrimordial -eq $false | Remove-StoragePool -Confirm:$false -ErrorAction SilentlyContinue
-    Get-PhysicalDisk | Reset-PhysicalDisk -ErrorAction SilentlyContinue
-    Get-Disk | ? Number -ne $null | ? IsBoot -ne $true | ? IsSystem -ne $true | ? PartitionStyle -ne RAW | % {
-        $_ | Set-Disk -isoffline:$false
-        $_ | Set-Disk -isreadonly:$false
-        $_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false
-        $_ | Set-Disk -isreadonly:$true
-        $_ | Set-Disk -isoffline:$true
+foreach ($server in $serverlist) {
+    Invoke-Command ($server) {
+        # Check for the Azure Temporary Storage volume
+        $azTempVolume = Get-Volume -FriendlyName "Temporary Storage" -ErrorAction SilentlyContinue
+        If ($azTempVolume) {
+            $azTempDrive = (Get-Partition -DriveLetter $azTempVolume.DriveLetter).DiskNumber
+        }
+    
+        # Clear and reset the disks
+        $disks = Get-Disk | Where-Object { 
+            ($_.Number -ne $null -and $_.Number -ne $azTempDrive -and !$_.IsBoot -and !$_.IsSystem -and $_.PartitionStyle -ne "RAW") 
+        }
+        $disks | ft Number,FriendlyName,OperationalStatus
+        If ($disks) {
+            Write-Host "This action will permanently remove any data on any drives other than the operating system boot drive!`nReset disks? (Y/N)"
+            $response = read-host
+            if ( $response.ToLower() -ne "y" ) { exit }
+    
+            $disks | % {
+            $_ | Set-Disk -isoffline:$false
+            $_ | Set-Disk -isreadonly:$false
+            $_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false -verbose
+            $_ | Set-Disk -isreadonly:$true
+            $_ | Set-Disk -isoffline:$true
+        }
+            
+        #Get-PhysicalDisk | Reset-PhysicalDisk
+        
+        
+        }
+        Get-Disk | Where-Object {
+            ($_.Number -ne $null -and $_.Number -ne $azTempDrive -and !$_.IsBoot -and !$_.IsSystem -and $_.PartitionStyle -eq "RAW")
+        } | Group -NoElement -Property FriendlyName
     }
-    Get-Disk | Where Number -Ne $Null | Where IsBoot -Ne $True | Where IsSystem -Ne $True | Where PartitionStyle -Eq RAW | Group -NoElement -Property FriendlyName
-} | Sort -Property PsComputerName, Count
+}
 ```
 
 The output will look like this, where **Count** is the number of drives of each model in each server:
@@ -290,7 +310,7 @@ If you're deploying a converged solution, the next step is to create a Scale-Out
 
 The next step in setting up the cluster services for your file server is creating the clustered file server role, which is when you create the Scale-Out File Server instance on which your continuously available file shares are hosted.
 
-#### To create a Scale-Out File Server role by using Server Manager
+#### To create a Scale-Out File Server role by using Failover Cluster Manager
 
 1. In Failover Cluster Manager, select the cluster, go to **Roles**, and then click **Configure Role…**.<br>The High Availability Wizard appears.
 2. On the **Select Role** page, click **File Server**.

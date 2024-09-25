@@ -3,9 +3,9 @@ title: File Management Tasks
 description: This article describes the process of automating file management tasks
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 
 # File Management Tasks

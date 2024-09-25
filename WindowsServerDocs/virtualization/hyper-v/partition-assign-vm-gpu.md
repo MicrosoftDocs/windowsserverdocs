@@ -4,7 +4,7 @@ description: Learn how to partition and share a GPU with multiple virtual machin
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 03/15/2024
+ms.date: 07/26/2024
 zone_pivot_groups: windows-os
 #customer intent: As a customer, I want to learn how to partition and assign GPUs to a virtual machine in Hyper-V so that I can use the GPU resources efficiently.
 ---
@@ -13,10 +13,10 @@ zone_pivot_groups: windows-os
 
 :::zone pivot="windows-server"
 
->Applies to: Windows Server 2025 (preview)
+>Applies to: Windows Server 2025 Datacenter (preview)
 
 > [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> GPU partitioning in Windows Server 2025 Datacenter is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ::: zone-end
 
@@ -30,7 +30,7 @@ zone_pivot_groups: windows-os
 
 This article describes how to configure graphics processing unit (GPU) partitions and assign a partition to a virtual machine (VM). It provides instructions on how to configure GPU partition count, assign GPU partitions, and unassign GPU partitions via Windows Admin Center and PowerShell.
 
-To provision the GPU partitioning feature, you'll need to complete the following steps:
+To provision the GPU partitioning feature, you need to complete the following steps:
 
 - [Complete all the prerequisites](#prerequisites).
 - [Verify GPU driver installation](#verify-gpu-driver-installation).
@@ -46,19 +46,21 @@ There are several requirements and things to consider before you begin to use th
 
 :::zone pivot="windows-server"
 
-- A Windows Server with the Hyper-V role installed and configured. See [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md) to found out how to get stared.
+- You must have Datacenter edition of Windows Server 2025 or later installed on the host server.
+
+- The Hyper-V role installed and configured on your server. See [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md) to found out how to get stared.
 
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"
 
-- Install Azure Stack HCI, version 22H2 operating system on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
+- Install Azure Stack HCI on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
 
 ::: zone-end
 
 - Install the physical GPU device of the same make, model, and size on every server of the cluster. Refer to your OEM-provided documentation when installing the GPU device on your physical servers in the cluster.
 
-- Install the GPU drivers on every server of the cluster by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
+- Install the GPU drivers on every server of the cluster by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/vgpu/17.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/index.html).
 
 - Ensure that the virtualization support and SR-IOV are enabled in the BIOS of each server in the cluster. Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 
@@ -75,7 +77,7 @@ There are several requirements and things to consider before you begin to use th
 
 - Deploy a VM using a guest operating system from the [Supported guest operating systems](gpu-partitioning.md#supported-guest-operating-systems) list.
 
-- Install the GPU drivers on the VM by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
+- Install the GPU drivers on the VM by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/vgpu/17.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/index.html).
 
 ### Prerequisites for Windows Admin Center
 
@@ -93,7 +95,7 @@ For detailed information on how to use PowerShell commands for GPU partitioning,
 
 ## Verify GPU driver installation
 
-After you've completed all the [prerequisites](#prerequisites), you must verify if the GPU driver is installed and partitionable.
+After you complete all the [prerequisites](#prerequisites), you must verify if the GPU driver is installed and partitionable.
 
 ## [Windows Admin Center](#tab/windows-admin-center)
 
@@ -101,7 +103,7 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
 
 1. Launch Windows Admin Center and make sure the **GPUs** extension is already installed.
 
-1. Select **Cluster Manager** from the top dropdown menu and connect to your Azure Stack HCI cluster.
+1. Select **Cluster Manager** from the top dropdown menu and connect to your cluster.
 
 1. From the **Settings** menu, select **Extensions** > **GPUs**.
 
@@ -188,7 +190,7 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
     Get-VMHostPartitionableGpu | FL Name,ValidPartitionCounts
     ```
 
-    Note down the **Name** and **ValidPartitionCounts** values from the output of the `Get-VMHostPartitionableGpu` command. You'll use them later to configure partition count.
+    Note down the **Name** and **ValidPartitionCounts** values from the output of the `Get-VMHostPartitionableGpu` command. You use them later to configure partition count.
 
     Here's a sample output of the `Get-VMHostPartitionableGpu` command, which shows that two partitionable GPU drivers are installed on this server. The configured partition count for the first GPU is 16 and for the second GPU is 4.
 
@@ -233,9 +235,9 @@ Follow these steps to configure partition count via Windows Admin Center:
 
    :::image type="content" source="./media/partition-assign-vm-gpu/configure-partition-count.png" alt-text="Screenshot of the Configure partition count on GPUs showing the inventory of GPUs to configure the partition count." lightbox="./media/partition-assign-vm-gpu/configure-partition-count.png" :::
 
-    You may see a warning or an error depending on what selections you make:
+    You might see a warning or an error depending on what selections you make:
 
-    - **Warning.** If you deselect one or more GPUs from the homogeneous set of GPUs, Windows Admin Center gives you a warning, but doesn't stop you from proceeding further. Warning text indicates that you're not selecting all the GPUs and it may result in different partition count, which isn't recommended.
+    - **Warning.** If you deselect one or more GPUs from the homogeneous set of GPUs, Windows Admin Center gives you a warning, but doesn't stop you from proceeding further. Warning text indicates that you're not selecting all the GPUs and it might result in different partition count, which isn't recommended.
 
         :::image type="content" source="./media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" alt-text="Screenshot showing a warning when all the GPUs within a homogeneous set aren't selected." lightbox="./media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" :::
 
@@ -354,13 +356,13 @@ Follow these steps to assign GPU partition to a VM using PowerShell:
     > [!NOTE]
     > If a failure occurs, you need to shutdown the VM, drain the server, and manually fail over the VM to another server.
 
-1. Run the following command to assign the partition.
+1. To assign the partition, run the following command.
 
     ```powershell
     Add-VMGpuPartitionAdapter -VMName $VMName
     ```
 
-1. Run the following command to verify if the partition is assigned:
+1. To verify if the partition is assigned, run the following command.
 
     ```powershell
     Get-VMGpuPartitionAdapter -VMName $VMName | FL InstancePath,PartitionId,PartitionVfLuid
@@ -410,7 +412,7 @@ Follow these steps to unassign a partition from a VM:
 
 1. From **Choose the server** list, select the server that has the GPU partition that you want to unassign.
 
-1. From **Choose virtual machine to unassign partition from** list, search or select the VM to unassign the partition from.
+1. From **Choose virtual machine to unassign partition from** list, search, or select the VM to unassign the partition from.
 
 1. Select **Unassign partition**.
 

@@ -6,7 +6,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/08/2023
+ms.date: 7/3/2024
 ---
 # Get started with the Remote Desktop app for Windows
 

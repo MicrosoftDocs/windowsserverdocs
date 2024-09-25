@@ -1,8 +1,8 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows Vista and enabled for Dynamic Memory
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory required for Windows Vista.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: wscontent
+author: robinharwood
 ms.topic: article
 ms.assetid: d3de7614-6eee-4839-a939-d390bca9ba89
 ms.date: 8/16/2016

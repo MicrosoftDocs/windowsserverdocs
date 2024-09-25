@@ -3,9 +3,9 @@ title: Restart or Shut Down MultiPoint Systems
 description: Learn how to shut down or restart one or more systems
 ms.topic: article
 ms.assetid: 6293b4f7-c009-419d-a503-fc4f3ea3913c
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: wscontent
 ms.date: 08/04/2016
 ---
 # Restart or Shut Down MultiPoint Systems

@@ -1,20 +1,23 @@
 ---
 title: Install the Hyper-V role on Windows Server
-description: Gives instructions for installing Hyper-V using Server Manager or Windows PowerShell
+description: Gives instructions for installing Hyper-V using Server Manager or Windows PowerShell.
 ms.topic: how-to
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 09/19/2023
+ms.author: wscontent
+author: robinharwood
+ms.date: 08/13/2023
 ---
 # Install the Hyper-V role on Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Windows Server 2019
+
+> [!IMPORTANT]
+> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 To create and run virtual machines, install the Hyper-V role on Windows Server by using Server Manager or the **Install-WindowsFeature** cmdlet in Windows PowerShell.
-For Windows 10, see [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+For Windows 10 and Windows 11, see [Install Hyper-V on Windows](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
-To learn more about Hyper-V, see the [Hyper-V Technology Overview](../Hyper-V-Technology-Overview.md). To try out Windows Server 2019, you can download and install an evaluation copy. See the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
+To learn more about Hyper-V, see the [Hyper-V Technology Overview](../Hyper-V-Technology-Overview.md). To learn more about Hyper-V, see the [Hyper-V Overview](../Hyper-V-Technology-Overview.md). To try out Windows Server 2025, you can download and install an evaluation copy. See the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2025).
 
 Before you install Windows Server or add the Hyper-V role, make sure that:
 

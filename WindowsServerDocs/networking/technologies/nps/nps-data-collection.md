@@ -3,10 +3,10 @@ title: Network Policy Server user data collection
 description: What information is used to help authenticate users by Network Policy Server in Windows Server 2016.
 author: MicrosoftGuyJFlo
 ms.author: joflore
-ms.reviewer: richagi
+ms.reviewer: 
 ms.custom: it-pro
 ms.topic: article
-ms.date: 05/01/2018
+ms.date: 05/29/2024
 
 ---
 # Network Policy Server user data collection
