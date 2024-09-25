@@ -162,7 +162,7 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 
 5. Available as an Azure Arc-enabled service. To learn more about Azure Arc pricing, see the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/)
 
-6. When used as a guest with the vGPU guest driver installed
+6. Available with Windows Server 2025 Standard, and is designed for standalone servers. Live migrate VMs between standalone nodes for planned downtime. If clustering is required for unplanned downtime, Windows Server 2025 Datacenter must be used instead.
 
 ::: zone-end
 
