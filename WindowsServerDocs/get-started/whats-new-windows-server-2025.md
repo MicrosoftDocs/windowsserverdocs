@@ -155,7 +155,7 @@ When creating a new virtual machine through the Hyper-V Manager, **Generation 2*
 
 ### NVMe
 
-NVMe is a new standard for extremely fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performace, resulting in an increase in IOPS and decrease in CPU utilization.
+NVMe is a new standard for fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performace, resulting in an increase in IOPS and decrease in CPU utilization.
 
 ### OpenSSH
 
