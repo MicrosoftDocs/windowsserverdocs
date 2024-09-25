@@ -42,7 +42,7 @@ Before you can apply the security baseline for the first time, the OSConfig modu
    Get-Module -ListAvailable -Name Microsoft.OSConfig
    ```
 
-## Manage the OSConfig security baseline
+## Manage OSConfig security baselines
 
 To configure, verify if the baseline is applied, remove a baseline, and view detailed compliance information for OSConfig in PowerShell, follow these steps.
 
@@ -184,20 +184,20 @@ Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name
 
 ---
 
-## Customize the OSConfig security baseline
+## Customize OSConfig security baselines
 
 After completing the security baseline configuration, you can modify the security settings while maintaining drift control. Customizing the security values allow for more control of your organization's security policies depending on your environment's specific needs. Only numerical values are accepted.
 
 To edit the default value of **AuditDetailedFileShare** from **2** to **3**, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Name AuditDetailedFileShare -Value 3 
+Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Setting AuditDetailedFileShare -Value 3 
 ```
 
 To verify that the new value is applied, run the following command:
 
 ```powershell
-Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Name AuditDetailedFileShare 
+Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Setting AuditDetailedFileShare 
 ```
 
 Once customizations to the baseline are complete, a reboot is required for changes to take effect depending on which security features were modified.
