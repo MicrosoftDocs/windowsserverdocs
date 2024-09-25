@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 08/14/2024
+ms.date: 09/25/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -152,6 +152,10 @@ Build 26040 has a new compression feature when compressing an item by performing
 ### Hyper-V Manager
 
 When creating a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the New Virtual Machine Wizard.
+
+### NVMe
+
+NVMe is a new standard for extremely fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performace, resulting in an increase in IOPS and decrease in CPU utilization.
 
 ### OpenSSH
 
