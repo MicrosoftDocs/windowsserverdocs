@@ -1,12 +1,12 @@
 ---
-title: How to raise Active Directory domain and forest functional levels
-description: Learn how to raise Active Directory domain and forest functional levels
+title: Raise domain and forest functional levels in Active Directory Domain Services on Windows Server
+description: Learn how to raise Active Directory domain and forest functional levels on Windows Server
 ms.topic: how-to
 ms.author: wscontent
 author: gswashington
 ms.date: 09/25/2024
 ---
-# How to raise Active Directory domain and forest functional levels
+# Raise domain and forest functional levels in Active Directory Domain Services
 
 >Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012
 
