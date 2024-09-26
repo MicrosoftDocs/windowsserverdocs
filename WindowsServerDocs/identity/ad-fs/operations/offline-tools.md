@@ -1,6 +1,6 @@
 ---
-description: "List of tools previously available on the AD FS help site."
-ms.assetid: title: AD FS Help Offline Tools
+title: Active Directory Federation Services Help Offline Tools
+description: "List of downloadable tools that were previously made available through the AD FS Help site"
 author: billmath
 ms.author: billmath
 manager: amycolannino
