@@ -98,6 +98,8 @@ You should now be able to see the name, machine type, and connection history of 
 
 ---
 
+::: zone-end
+
 ## Windows Server 2022 and earlier
 
 :::zone pivot="windows-server-2022"
