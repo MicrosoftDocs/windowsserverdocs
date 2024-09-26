@@ -4,7 +4,7 @@ description: Learn about SMB security enhancements that help harden your Windows
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 09/25/2024
+ms.date: 09/26/2024
 ---
 
 # SMB security hardening
@@ -21,9 +21,17 @@ Users can download the following versions to preview the security features befor
 
 Understanding SMB security features can help users safeguard their sensitive data and prevent unauthorized access to shared resources. The next section provides a brief overview of these features.
 
+### SMB signing
+
+Starting with Windows 11 24H2 and Windows Server 2025, all outbound and inbound SMB connections are now required to be signed by default. Previously, SMB signing was only required by default for connections to shares named **SYSVOL** and **NETLOGON**, and for clients of AD domain controllers.
+
+SMB signing prevents data tampering and relay attacks that steal credentials. By making signing mandatory by default, administrators and users don't need to be experts in SMB network protocol security to enable this important security feature. Enabling SMB signing causes clients and servers to only accept packets that are signed, and reject any that aren't. Packets from guest users are rejected, which means that the feature allowing users to connect to a server without providing credentials (guest fallback) is disabled. This security measure helps prevent unauthorized access and data breaches by requiring users to authenticate themselves before accessing a server, which ensures that only authorized users can access the server and its resources.
+
+To learn more, see [Control SMB signing behavior](smb-signing.md).
+
 ### SMB alternative ports
 
-The SMB client can be used to establish connections with alternative ports for TCP, QUIC, and RDMA. These ports may differ from the default ports assigned by the Internet Assigned Numbers Authority (IANA) and the Internet Engineering Task Force (IETF), which are 445, 5445, and 443 for TCP, QUIC, and RDMA respectively.
+The SMB client can be used to establish connections with alternative ports for TCP, QUIC, and RDMA. These ports may differ from the default ports assigned by the Internet Assigned Numbers Authority (IANA) and the Internet Engineering Task Force (IETF), which are 445, 443, and 5445 for TCP, QUIC, and RDMA respectively.
 
 In Windows Server, it's possible to host an SMB over QUIC connection on a firewall port that is permitted, but not necessarily the default port 443. However, it's important to note that connecting to alternative ports is only possible if the SMB server is configured to listen on that specific port. Additionally, it's possible to configure the deployment to disallow the use of alternative ports or to restrict their usage to certain servers.
 
@@ -67,7 +75,7 @@ To learn more, see:
 
 ### SMB Firewall default port changes
 
-The SMB NetBIOS ports are no longer included in the built-in firewall rules. These ports were only required for SMB1 usage, which is now deprecated and removed by default. This modification aligns SMB firewall rules with the standard behavior of the Windows Server File Server role. Administrators are able to reconfigure the rules to restore the legacy ports.
+The SMB NetBIOS ports are no longer included in the built-in firewall rules. These ports were only required for SMB1 usage, which is now deprecated and removed by default. This modification aligns SMB firewall rules with the standard behavior of the *Windows Server File Server* role. Administrators are able to reconfigure the rules to restore the legacy ports.
 
 To learn more, see [Updated firewall rules](smb-secure-traffic.md#updated-firewall-rules-preview).
 
@@ -81,7 +89,7 @@ To learn more, see [How to enable insecure guest logons in SMB2 and SMB3](enable
 
 ### SMB NTLM blocking
 
-The SMB client can now prevent New Technology LAN Manager (NTLM) authentication for remote outbound connections. This modifies the previous behavior of always using negotiated authentication that could downgrade from Kerberos to NTLM. By blocking NTLM authentication, this safeguards client devices against sending NTLM requests to malicious servers, thus mitigating brute force, cracking, relay, and pass-the-hash attacks.
+The SMB client can now prevent NTLM authentication for remote outbound connections. This modifies the previous behavior of always using negotiated authentication that could downgrade from Kerberos to NTLM. By blocking NTLM authentication, this safeguards client devices against sending NTLM requests to malicious servers, thus mitigating brute force, cracking, relay, and pass-the-hash attacks.
 
 NTLM blocking is necessary for enforcing an organization's authentication to Kerberos, which is more secure because it verifies identities with its ticket system and superior cryptography. Administrators can specify exceptions to permit NTLM authentication over SMB to specific servers.
 
@@ -105,7 +113,7 @@ To learn more, see:
 
 ### SMB over QUIC in Windows Server
 
-SMB over QUIC is now available in all editions of Windows Server 2025 whereas it was only present in the Azure Edition of Windows Server 2022. SMB over QUIC is an alternative to the outdated TCP protocol and is intended for use on untrusted networks such as the Internet. TLS 1.3 and certificates are used to ensure that all SMB traffic is encrypted, enabling it to be utilized through edge firewalls by mobile and remote users without the need for a VPN.
+SMB over QUIC is now available in all editions of Windows Server 2025 whereas it was only present in the Azure Edition of Windows Server 2022. SMB over QUIC is an alternative to the outdated TCP protocol and is intended for use on untrusted networks such as the Internet. TLS 1.3 and certificates are used to ensure that all SMB traffic is encrypted, enabling it to be utilized through edge firewalls by mobile and remote users without the need for a VPN. QUIC also ensures that if NTLM is required, a user challenge-response (password data) isn't exposed on the network like it is with TCP.
 
 To learn more, see:
 
@@ -123,10 +131,6 @@ To learn more, see:
 
 - [Features removed or no longer developed starting with Windows Server 2025](/windows-server/get-started/removed-deprecated-features-windows-server-2025)
 
-### SMB signing
+## See also
 
-Starting with Windows 11 24H2 and Windows Server 2025, all outbound and inbound SMB connections are now required to be signed by default. Previously, SMB signing was only required by default for connections to shares named **SYSVOL** and **NETLOGON**, and for clients of AD domain controllers.
-
-SMB signing prevents data tampering and relay attacks that steal credentials. By making signing mandatory by default, administrators and users don't need to be experts in SMB network protocol security to enable this important security feature.
-
-To learn more, see [Control SMB signing behavior](smb-signing.md).
+- [SMB security enhancements](smb-security.md)
