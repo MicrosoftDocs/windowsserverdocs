@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.author: wscontent
 author: xelu86
 ms.contributor: Dona Mukherjee
-ms.date: 09/25/2024
+ms.date: 09/26/2024
 ---
 
 # How to deploy OSConfig security baselines locally

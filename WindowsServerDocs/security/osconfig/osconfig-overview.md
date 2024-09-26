@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.author: wscontent
 author: xelu86
 ms.contributor: Dona Mukherjee
-ms.date: 09/25/2024
+ms.date: 09/26/2024
 ---
 
 # OSConfig overview
@@ -41,6 +41,6 @@ OSConfig is a valuable security configuration platform that applies security pay
 - Enforces the desired state via configuration drift detection, reporting, and correction.
 - Provides abstraction to allow extensibility models that support different configuration providers.
 
-## See Also
+## See also
 
-- [How to deploy OSConfig security baseline](osconfig-how-to-configure-security-baseline.md)
+- [How to deploy OSConfig security baselines](osconfig-how-to-configure-security-baselines.md)
