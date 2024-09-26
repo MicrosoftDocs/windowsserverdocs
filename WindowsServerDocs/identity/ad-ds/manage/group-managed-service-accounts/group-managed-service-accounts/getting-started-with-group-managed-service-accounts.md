@@ -191,7 +191,7 @@ Membership in *Domain Admins*, or the ability to add members to the security gro
 
 - Method 1: Active Directory Users and Computers
 
-    To use the Active Directory Users and Computers snap-in, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    To use the Active Directory Users and Computers snap-in, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](../../../get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#manage-different-domains-in-active-directory-administrative-center).
 
 - Method 2: `dsmod`
 
@@ -252,7 +252,7 @@ If using security groups for managing member hosts, remove the computer account 
 
 - Method 1: Active Directory Users and Computers
 
-    To use the Active Directory Users and Computers snap-in, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    To use the Active Directory Users and Computers snap-in, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](../../../get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#manage-different-domains-in-active-directory-administrative-center).
 
 - Method 2: `drsm`
 

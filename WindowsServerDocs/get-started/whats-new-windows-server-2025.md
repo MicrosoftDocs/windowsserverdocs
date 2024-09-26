@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 08/14/2024
+ms.date: 09/25/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -149,13 +149,13 @@ Submitting feedback or reporting problems encountered while using Windows Server
 
 Build 26040 has a new compression feature when compressing an item by performing a right-click called **Compress to**. This feature supports **ZIP**, **7z**, and **TAR** compression formats with specific compression methods for each.
 
-### Flighting
-
-Flighting is only available for the Canary Channel release beginning in early 2024 starting with build 26010, which allows users to receive Windows Server flights similar to Windows client. To enable flighting on your device, go to **Start > Settings > Windows Update > Windows Insider Program**. From there, you can choose to opt into your desired Insiders release.
-
 ### Hyper-V Manager
 
 When creating a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the New Virtual Machine Wizard.
+
+### NVMe
+
+NVMe is a new standard for fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performace, resulting in an increase in IOPS and decrease in CPU utilization.
 
 ### OpenSSH
 

@@ -433,6 +433,8 @@
         href: ad-ds/manage/manage-fsmo-roles.md
       - name: Managing RID issuance
         href: ad-ds/manage/Managing-RID-Issuance.md
+      - name: Raise domain and forest functional levels
+        href: ad-ds/plan/raise-domain-forest-functional-levels.md
       - name: Active Directory Domain Services component updates
         href: ad-ds/manage/component-updates/active-directory-Domain-Services-component-Updates.md
         items:
