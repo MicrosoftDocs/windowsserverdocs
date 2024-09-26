@@ -1,38 +1,38 @@
 ---
 title: Feature update, clean install, or migrate to Windows Server
-description: Important information when performing a feature upgrade, clean install, or a migration to Windows Server.
+description: Important information when performing a feature update, clean install, or a migration to Windows Server.
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
-ms.date: 08/27/2024
+ms.date: 09/27/2024
 ---
 
 # Feature update, clean install, or migrate to Windows Server
 
-Is it time to move to a newer version of Windows Server? Depending on what you're running now, you have several options to get there. For example, you can perform an in-place operating system (OS) upgrade (feature upgrade) to a newer version of Windows Server, a clean install of a newer version Windows Server, or even migrate your existing system to Windows Server.
+Is it time to move to a newer version of Windows Server? Depending on what you're running now, you have several options to get there. For example, you can perform an in-place operating system (OS) upgrade (feature update) to a newer version of Windows Server, a clean install of a newer version Windows Server, or even migrate your existing system to Windows Server.
 
 > [!IMPORTANT]
-> We highly recommend that you always make a backup of your system and other important files before performing an in-place OS feature upgrade, a clean install, or a system migration to a later version of Windows Server.
+> We highly recommend that you always make a backup of your system and other important files before performing feature update, a clean install, or a system migration to a later version of Windows Server.
 > [!IMPORTANT]
 > Extended support for Windows Server 2008 R2 and Windows Server 2008 ended in January 2020. Extended Security Updates (ESU) are available, with one option to migrate your on-premises servers to Azure, where you can continue to run them on virtual machines. To find out more, see [Extended Security Updates overview](extended-security-updates-overview.md).
 > [!TIP]
 > You can download and try the latest version of Windows Server free of charge at [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2025).
 
-## In-place operating system feature upgrade
+## In-place operating system feature update
 
-An in-place feature upgrade of your Windows Server installation preserves your original settings, server roles, applications, and data. In-place feature upgrade lets you jump ahead multiple versions. This method is the quickest way to move to a later version of Windows Server. For more information about OS upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to). Keep in mind that some roles and features don't support in-place feature upgrades. In-place feature upgrades work best with virtual machines (VMs) that don't need specific Original Equipment Manufacturer (OEM) hardware drivers to upgrade successfully.
+An in-place OS upgrade (feature update) performs a feature update of your Windows Server installation. You can upgrade to a later version of Windows Server while keeping your original settings, server roles, features, and data. In-place feature update lets you jump ahead multiple versions. This method is the quickest way to move to a later version of Windows Server. For more information about OS upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to). Keep in mind that some roles and features don't support in-place feature upgrades. In-place feature upgrades work best with virtual machines (VMs) that don't need specific Original Equipment Manufacturer (OEM) hardware drivers to upgrade successfully.
 
-- For step-by-step instructions for how to perform an in-place feature upgrade, see [Perform an in-place upgrade](perform-in-place-upgrade.md).
+- For step-by-step instructions for how to perform an feature updates, see [Perform an in-place upgrade](perform-in-place-upgrade.md).
 
-- For more information about how feature upgrades work, see the [Windows Server upgrade overview](../get-started/upgrade-overview.md).
+- For more information about how feature updates work, see the [Windows Server upgrade overview](../get-started/upgrade-overview.md).
 
-- For a more detailed guide about how to perform Feature Upgrades for different versions of Windows Server, including which roles and features support in-place eature upgrades, see [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
+- For a more detailed guide about how to perform feature updates for different versions of Windows Server, including which roles and features support feature updates, see [Update and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
 
 ## Cluster operating system rolling feature upgrade
 
-The Cluster operating system rolling OS Feature Upgrade gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a rolling OS feature upgrade to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements (SLA). Cluster-Aware Updating (CAU) is a feature that automates the software updating process on clustered servers while maintaining availability. For more details, see [Cluster-Aware Updating overview](https://learn.microsoft.com/windows-server/failover-clustering/cluster-aware-updating).
+The Cluster operating system rolling OS upgrade (feature update) gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a feature update to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements (SLA). Cluster-Aware Updating (CAU) is a feature that automates the software updating process on clustered servers while maintaining availability. For more details, see [Cluster-Aware Updating overview](https://learn.microsoft.com/windows-server/failover-clustering/cluster-aware-updating).
 
-If you're running VMs on an Azure Stack hyperconverged infrastructure (HCI) solution, we recommend you use the Local Configuration Manager (LCM) to perform your OS feature upgrade. For more information, see [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure)for more information.
+If you're running VMs on an Azure Stack hyperconverged infrastructure (HCI) solution, we recommend you use the Local Configuration Manager (LCM) to perform your feature update. For more information, see [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure)for more information.
 
 ## Clean operating system install
 
