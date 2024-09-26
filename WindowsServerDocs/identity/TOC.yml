@@ -853,6 +853,8 @@
         href: ad-fs/operations/AD-FS-paginated-sign-in.md
       - name: AD FS 2016 Single Sign On Settings
         href: ad-fs/operations/AD-FS-Single-Sign-On-Settings.md
+      - name: AD FS Help Offline Tools
+        href: ad-fs/operations/offline-tools.md
       - name: AD FS Rapid Restore Tool
         href: ad-fs/operations/AD-FS-Rapid-Restore-Tool.md
       - name: AD FS support for alternate hostname binding for certificate authentication
