@@ -19,7 +19,6 @@ To activate the latest domain features, all domain controllers in the domain mus
 
 To activate the latest forest-wide features, all domain controllers in the forest must run the Windows Server operating system version that matches or is newer than the desired functional level. The current domain functional level must already be at the latest level. If the forest meets these requirements, the administrator can raise the forest functional level.
 
-TODO:
 The domain and forest functional levels only affect how the domain controllers operate together as a group. The clients that interact with the domain or with the forest are unaffected by the changes. Applications are also unaffected by these changes. However, applications can use new features found in later versions of Windows Server once the administrator raises the domain level. For more information about the functional levels, see [Active Directory Domain Services functional levels](/windows-server/identity/ad-ds/active-directory-functional-levels).
 
 > [!WARNING]
