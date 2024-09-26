@@ -103,7 +103,7 @@ To learn more, see:
 
 SMB over QUIC client access control enables you to limit which clients can access SMB over QUIC servers. The previous behavior allowed connection attempts from any client that trusted the QUIC server's certificate issuance chain. With client access control, an *allowlist* and *blocklist* are created for devices to connect to the file server.
 
-A client must now have its own certificate and be on an **allowlist* to establish the QUIC connection before any SMB connection can occur. Client access control provides organizations with added protection without altering the authentication used during the SMB connection, and the user experience remains unaffected. Additionally, you can disable the SMB over QUIC client entirely or only allow connections to specific servers.
+A client must now have its own certificate and be on an *allowlist* to establish the QUIC connection before any SMB connection can occur. Client access control provides organizations with added protection without altering the authentication used during the SMB connection, and the user experience remains unaffected. Additionally, you can disable the SMB over QUIC client entirely or only allow connections to specific servers.
 
 To learn more, see:
 
