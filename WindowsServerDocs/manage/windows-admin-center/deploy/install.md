@@ -126,7 +126,7 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 > [!WARNING]
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation, such as  `.\<WindowsAdminCenterInstallerName>.msi`. Windows Admin Center doesn't support that notation, and any attempt to use it in an installation won't work. Instead, either remove the `.\` prefix or specify the full path to the MSI.
 
-## Upgrading to a new version of Windows Admin Center
+## Upgrading to new version of Windows Admin Center
 
 You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing.
 
@@ -280,12 +280,7 @@ To install Windows Admin Center on your Windows Server 2022 and earlier versions
 
 You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
----
-::: zone-end
-
 ## Install Windows Admin Center on Windows 10
-
-:::zone pivot="windows-client"
 
 When you install Windows Admin Center on Windows 10, it uses port 6516 by default, but you have the option to specify a different port. You can also create a desktop shortcut and let Windows Admin Center manage your TrustedHosts.
 
