@@ -3,9 +3,9 @@ title: Edit Auto Apply Quota Properties
 description: This article describes how to edit auto apply quota properties
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Edit Auto Apply Quota Properties
 

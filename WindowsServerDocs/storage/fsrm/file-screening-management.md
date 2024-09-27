@@ -3,9 +3,9 @@ title: File Screening Management
 description: This article describes how to create file screens, generate notifications, define file screening templates, and create file screening exceptions
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 
 # File Screening Management

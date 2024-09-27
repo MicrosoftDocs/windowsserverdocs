@@ -28,6 +28,8 @@
   items:
   - name: Create a failover cluster
     href: create-failover-cluster.md
+  - name: Create a workgroup cluster
+    href: create-workgroup-cluster.md  
   - name: Deploy a two-node file server
     href: deploy-two-node-clustered-file-server.md
   - name: Deploy a cluster set

@@ -194,7 +194,8 @@ Try
 #In case there are multiple certificates with the same subject, get the latest version
 $cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match $subject} | sort $_.NotAfter -Descending | select -first 1 
 $thumbprint = $cert.Thumbprint
-$Command = "http add sslcert ipport=0.0.0.0:443 certhash=$thumbprint appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY"
+$guid = New-Guid
+$Command = "http add sslcert ipport=0.0.0.0:443 certhash=$thumbprint appid={$guid} certstorename=MY"
 $Command | netsh
 }
 Catch

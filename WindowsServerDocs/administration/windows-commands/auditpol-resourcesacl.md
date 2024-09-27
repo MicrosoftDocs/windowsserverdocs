@@ -3,8 +3,8 @@ title: auditpol resourceSACL
 description: Reference article for the auditpol resourceSACL command, which configures global resource system access control lists (SAcls).
 ms.topic: reference
 ms.assetid: 28771ba7-967a-45e9-9bf0-b2a2673070f0
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---

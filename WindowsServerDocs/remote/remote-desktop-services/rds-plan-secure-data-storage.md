@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 37b7f68e-7c3a-4190-a52f-99ae96885fae
 author: robinharwood
 ms.author: wscontent
-ms.date: 02/12/2024
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Remote Desktop Services - Secure data storage with UPDs

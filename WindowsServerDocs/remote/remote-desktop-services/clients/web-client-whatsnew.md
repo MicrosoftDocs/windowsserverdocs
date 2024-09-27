@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/21/2024
+ms.date: 7/3/2024
 ---
 # What's new in the web client
 

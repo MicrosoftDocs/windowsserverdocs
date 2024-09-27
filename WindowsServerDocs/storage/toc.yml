@@ -2,13 +2,9 @@ items:
 - name: Storage
   href: storage.yml
   items:
-  - name: What's new in Storage
-    href: whats-new-in-storage.md
   - name: Data Deduplication
     href: data-deduplication/overview.md
     items:
-    - name: What's new in Data Deduplication
-      href: data-deduplication/whats-new.md
     - name: Understand Data Deduplication
       href: data-deduplication/understand.md
     - name: Install and enable Data Deduplication
@@ -80,38 +76,40 @@ items:
   - name: File Server and SMB
     href: file-server/file-server-smb-overview.md
     items:
-    - name: SMB Direct
-      href: file-server/smb-direct.md
-    - name: SMB over QUIC
-      href: file-server/smb-over-quic.md
-    - name: Configure client access control for SMB over QUIC
-      href: file-server/configure-smb-over-quic-client-access-control.md
-    - name: SMB compression
-      href: file-server/smb-compression.md
-    - name: Configure SMB authentication rate limiter
-      href: file-server/configure-smb-authentication-rate-limiter.md
-    - name: Configure alternative SMB ports
-      href: file-server/smb-ports.md
-    - name: Configure the SMB client to require encryption
-      href: file-server/configure-smb-client-require-encryption.md
-    - name: Enable insecure guest logons in SMB2 and SMB3
-      href: file-server/enable-insecure-guest-logons-smb2-and-smb3.md        
-    - name: SMB security enhancements
-      href: file-server/smb-security.md
-    - name: Manage SMB dialects
-      href: file-server/manage-smb-dialects.md
-    - name: 'SMB: File and printer sharing ports should be open'
-      href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
-    - name: Secure SMB traffic
-      href: file-server/smb-secure-traffic.md
-    - name: Protect SMB traffic from interception
-      href: file-server/smb-interception-defense.md
+    - name: SMB security hardening
+      href: file-server/smb-security-hardening.md    
     - name: SMB signing
       href: file-server/smb-signing-overview.md
     - name: Control SMB signing behavior
       href: file-server/smb-signing.md
+    - name: Configure alternative SMB ports
+      href: file-server/smb-ports.md      
+    - name: SMB over QUIC
+      href: file-server/smb-over-quic.md
+    - name: Configure client access control for SMB over QUIC
+      href: file-server/configure-smb-over-quic-client-access-control.md
+    - name: Configure SMB authentication rate limiter
+      href: file-server/configure-smb-authentication-rate-limiter.md
+    - name: Configure the SMB client to require encryption
+      href: file-server/configure-smb-client-require-encryption.md
+    - name: Manage SMB dialects
+      href: file-server/manage-smb-dialects.md
+    - name: Secure SMB traffic
+      href: file-server/smb-secure-traffic.md
+    - name: Enable insecure guest logons in SMB2 and SMB3
+      href: file-server/enable-insecure-guest-logons-smb2-and-smb3.md
     - name: Block NTLM connections on SMB
       href: file-server/smb-ntlm-blocking.md
+    - name: SMB security enhancements
+      href: file-server/smb-security.md
+    - name: SMB compression
+      href: file-server/smb-compression.md
+    - name: SMB Direct
+      href: file-server/smb-direct.md
+    - name: Protect SMB traffic from interception
+      href: file-server/smb-interception-defense.md
+    - name: 'SMB: File and printer sharing ports should be open'
+      href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
     - name: Network File System overview
       href: nfs/nfs-overview.md
     - name: Deploy Network File System

@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: eb24ddd2-0361-41fe-bd6b-c7c63427cb71
 author: robinharwood
 ms.author: wscontent
-ms.date: 05/30/2024
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Activate the Remote Desktop Services license server

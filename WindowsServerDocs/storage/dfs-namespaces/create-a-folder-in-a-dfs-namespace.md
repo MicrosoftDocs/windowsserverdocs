@@ -3,9 +3,9 @@ title: Create a Folder in a DFS Namespace
 description: This article describes how to create a folder in a DFS namespace
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Create a folder in a DFS namespace
 

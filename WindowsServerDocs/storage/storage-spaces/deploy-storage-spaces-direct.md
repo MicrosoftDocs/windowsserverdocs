@@ -310,7 +310,7 @@ If you're deploying a converged solution, the next step is to create a Scale-Out
 
 The next step in setting up the cluster services for your file server is creating the clustered file server role, which is when you create the Scale-Out File Server instance on which your continuously available file shares are hosted.
 
-#### To create a Scale-Out File Server role by using Server Manager
+#### To create a Scale-Out File Server role by using Failover Cluster Manager
 
 1. In Failover Cluster Manager, select the cluster, go to **Roles**, and then click **Configure Role…**.<br>The High Availability Wizard appears.
 2. On the **Select Role** page, click **File Server**.

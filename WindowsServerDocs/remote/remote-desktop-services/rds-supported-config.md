@@ -2,7 +2,7 @@
 title: Supported configurations for Remote Desktop Services
 description: Provides information about supported configurations for RDS in Windows Server.
 ms.author: wscontent
-ms.date: 05/15/2024
+ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
 author: robinharwood

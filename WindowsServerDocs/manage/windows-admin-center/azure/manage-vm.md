@@ -114,8 +114,6 @@ However, we recommend instead using a private IP address to connect with, or at 
 
    Installing takes a few minutes. If you selected **Open this port for me** or manually created an inbound port rule in the last couple minutes, it might take another couple minutes before you can connect with Windows Admin Center.
 
-:::image type="content" source="../../media/manage-vm/install-windows-admin-center.png" alt-text="Screenshot showing the install button for Windows Admin Center on a VM." lightbox="../../media/manage-vm/install-windows-admin-center.png":::
-
 ## Using with a VM
 
 After you've installed Windows Admin Center in an Azure VM, here's how to connect to it and use it to manage Windows:
@@ -217,7 +215,7 @@ Windows Admin Center is currently implemented in the Azure portal in the form of
 
 This extension connects to an external service that manages certificates and DNS records so that you can easily connect to your VM.
 
-Each Azure VM that uses the Windows Admin Center extension gets a public DNS record that Microsoft maintains in Azure DNS. We hash the record name with a salt to anonymize the VM's IP address when saving it in DNS - the IP addresses aren't saved in plain text in DNS. This DNS record is used to issue a certificate for Windows Admin Center on the VM, enabling encrypted communication with the VM.
+Each Azure VM that uses the Windows Admin Center extension gets a public DNS record that Microsoft maintains in Azure DNS. We hash the record name to anonymize the VM's IP address when saving it in DNS - the IP addresses aren't saved in plain text in DNS. This DNS record is used to issue a certificate for Windows Admin Center on the VM, enabling encrypted communication with the VM.
 
 Connecting an Azure VM to Windows Admin Center deploys a virtual account in the administrators group, giving you full administrator access on your VM. Access to your VM is controlled by the **Windows Admin Center Administrator Login** role in Azure. An Azure user with the **Owner** or **Contributor** roles assigned for a VM doesn't automatically have privileges to log into the VM.
 
@@ -372,8 +370,8 @@ const parameters = {
     extensionPublisher: "Microsoft.AdminCenter", 
     extensionType: "AdminCenter", 
     extensionVersion: "0.0", 
-    port: "6516", 
-    salt: <unique string used for hashing>
+    port: "6516",
+    salt: ""
 }
 ```
 
@@ -386,7 +384,7 @@ $resourceGroupName = <get VM's resource group name>
 $vmLocation = <get VM location>
 $vmName = <get VM name>
 $vmNsg = <get VM's primary nsg>
-$salt = <unique string used for hashing>
+$salt = ""
 
 $wacPort = "6516"
 $Settings = @{"port" = $wacPort; "salt" = $salt}

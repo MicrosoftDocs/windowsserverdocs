@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 5c38fab1-3586-4b7a-8bf0-7d85a8d5361d
 author: robinharwood
 ms.author: wscontent
-ms.date: 11/03/2016
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Remote Desktop Services - Access from anywhere

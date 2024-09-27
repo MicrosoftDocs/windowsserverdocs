@@ -4,7 +4,7 @@ description: Reference article for xcopy, which copies files and directories, in
 ms.topic: reference
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 ms.author: wscontent
-author: JasonGerend
+author: robinharwood
 ms.date: 05/28/2024
 ---
 

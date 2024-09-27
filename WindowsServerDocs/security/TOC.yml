@@ -170,22 +170,6 @@
       href: credentials-protection-and-management/protected-users-security-group.md
     - name: Authentication Policies and Authentication Policy Silos
       href: credentials-protection-and-management/authentication-policies-and-authentication-policy-silos.md
-  - name: Delegated Managed Service Accounts
-    items:
-    - name: Delegated Managed Service Accounts overview
-      href: delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
-    - name: Setting up Delegated Managed Service Accounts
-      href: delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
-  - name: Group Managed Service Accounts
-    href: group-managed-service-accounts/group-managed-service-accounts-overview.md
-    items:
-    - name: Getting started with Group Managed Service Accounts
-      href: group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
-      items:
-      - name: Create the Key Distribution Services KDS Root Key
-        href: group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
-      - name: Configuring Kerberos delegation for group Managed Service Accounts
-        href: group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
   - name: Kerberos Authentication
     href: kerberos/kerberos-authentication-overview.md
     items:
@@ -215,7 +199,7 @@
       href: tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server.md
     - name: Manage TLS
       href: tls/manage-tls.md
-    - name: TLS Registry Settings
+    - name: TLS registry settings
       href: tls/tls-registry-settings.md
     - name: Schannel Security Support Provider Technical Reference
       href: tls/schannel-security-support-provider-technical-reference.md

@@ -3,9 +3,9 @@ description: "Learn more about: iSCSI Target Server overview"
 title: iSCSI Target Server Overview
 TOCTitle: iSCSI Target Server
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: dougkim
-ms.author: jgerend
+ms.author: wscontent
 ms.date: 09/11/2018
 ---
 

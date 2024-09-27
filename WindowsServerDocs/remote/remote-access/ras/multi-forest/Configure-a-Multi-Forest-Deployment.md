@@ -4,8 +4,8 @@ description: Learn how to configure a Remote Access multi-forest deployment in s
 manager: brianlic
 ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
-ms.author: jgerend
-author: JasonGerend
+ms.author: wscontent
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Configure a Multi-Forest Deployment

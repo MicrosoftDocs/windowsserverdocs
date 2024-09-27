@@ -3,9 +3,9 @@ title: Set Target Priority to Override Referral Ordering
 description: This article describes how to set the target priority to override referral ordering
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Set target priority to override referral ordering
 

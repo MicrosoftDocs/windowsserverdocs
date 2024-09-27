@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 80d82d30-3ad0-4a8c-9a9b-2773c47eee19
 author: robinharwood
 ms.author: wscontent
-ms.date: 05/11/2017
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Track your Remote Desktop Services client access licenses (RDS CALs)

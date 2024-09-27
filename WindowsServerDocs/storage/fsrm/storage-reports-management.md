@@ -3,9 +3,9 @@ title: Storage Reports Management
 description: This article describes how to generate, schedule, and monitor storage reports
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 
 # Storage Reports Management

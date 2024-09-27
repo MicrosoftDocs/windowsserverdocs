@@ -4,8 +4,8 @@ title: Failover Clustering
 description: "Learn more about: Failover Clustering in Windows Server and Azure Stack HCI"
 ms.topic: landing-page
 manager: lizross
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: wscontent
 ms.date: 10/20/2021
 ---
 # Failover Clustering in Windows Server and Azure Stack HCI

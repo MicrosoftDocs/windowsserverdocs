@@ -3,6 +3,8 @@
   items:
   - name: Get started
     items:
+    - name: Create virtual machines for Remote Desktop
+      href: Create-virtual-machines-for-Remote-Desktop.md
     - name: Supported configurations for RDS
       href: rds-supported-config.md
     - name: Supported security configurations for Windows 10 VDI
@@ -50,6 +52,10 @@
         href: rds-roles.md
       - name: Azure services and considerations for desktop hosting
         href: Azure-services-and-considerations-for-desktop-hosting.md
+      - name: Understanding the desktop hosting environment
+        href: Understanding-the-desktop-hosting-environment.md    
+      - name: Tenant on-premises components
+        href: Tenant-on-premises-components.md  
   - name: Build and deploy
     href: rds-build-and-deploy.md
     items:
@@ -59,6 +65,8 @@
       href: migrate-rds-role-services.md
     - name: Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
       href: migrate-rds-cals.md
+    - name: Use certificates in Remote Desktop Services
+      href: remote-desktop-services-certificates.md
     - name: Upgrade your Remote Desktop Services deployments
       href: upgrade-to-rds.md
       items:
@@ -93,6 +101,8 @@
         href: rds-license-session-hosts.md
       - name: Track the CALs used in your deployment
         href: rds-track-cals.md
+      - name: Use multiple license servers
+        href: use-multiple-remote-desktop-license-servers.md
     - name: Integrate Azure services
       href: rds-integrate-with-azure.md
       items:
@@ -141,6 +151,8 @@
       href: rds-work-resources.md
     - name: Diagnose app performance issues with performance counters
       href: rds-rdsh-performance-counters.md
+    - name: Optimizing Windows configuration for VDI desktops
+      href: remote-desktop-services-vdi-optimize-configuration.md 
   - name: Access your Remote Desktop resources
     items:
     - name: Available Remote Desktop clients
@@ -193,12 +205,10 @@
         href: clients/change-listening-port.md
     - name: Advanced information
       items:
-      - name: 'Compare the clients: features'
-        href: clients/remote-desktop-features.md
-      - name: 'Compare the clients: redirections'
-        href: clients/remote-desktop-app-compare.md
+      - name: Compare Remote Desktop app features
+        href: /azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services
       - name: Supported RDP properties
-        href: clients/rdp-files.md
+        href: /azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services
       - name: Remote Desktop URI scheme
         href: clients/remote-desktop-uri.md
       - name: Remote Desktop client FAQ

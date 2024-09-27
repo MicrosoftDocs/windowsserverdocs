@@ -3,20 +3,19 @@ title: Partition and share GPUs with virtual machines on Hyper-V
 description: Learn about how GPU partitioning works with multiple virtual machines on Windows Server and Azure Stack HCI.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: concept
-ms.service: windows-server, azure-stack
-ms.subservice: hyper-v, azure-stack-hci
-ms.date: 03/15/2024
+ms.topic: conceptual
+ms.subservice: core-os
+ms.date: 09/25/2024
 zone_pivot_groups: windows-os
 ---
 
 # GPU partitioning
 
 :::zone pivot="windows-server"
->Applies to: Windows Server 2025 Datacenter (preview)
+>Applies to: Windows Server 2025 (preview)
 
 > [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 Datacenter is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"
@@ -33,6 +32,8 @@ The GPU partitioning feature uses the [Single Root IO Virtualization (SR-IOV) in
 
 Windows Server introduces live migration with GPU partitioning. There are specific requirements to use GPU partitioning live migration. Aside from recommended live migration best practices, your cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs are automatically restarted where GPU resources are available.
 
+GPU partitioning is designed for standalone servers. You can live migrate VMs between standalone nodes for planned downtime; however, for customers that require clustering for unplanned downtime, you must use Windows Server 2025 Datacenter.
+
 :::zone-end
 
 ## When to use GPU partitioning
@@ -48,7 +49,7 @@ For example:
 ## Supported guest operating systems
 
 :::zone pivot="windows-server"
-GPU partitioning on Windows Server 2025 Datacenter edition and later supports these guest operating systems:
+GPU partitioning on Windows Server 2025 and later supports these guest operating systems:
 :::zone-end
 
 :::zone pivot="azure-stack-hci"
@@ -58,7 +59,7 @@ GPU partitioning on Azure Stack HCI supports these guest operating systems:
 - Windows 10 or later
 - Windows 10 Enterprise multi-session​ or later
 - Windows Server 2019 or later
-- Linux Ubuntu 18.04 LTS, Linux Ubuntu 20.04 LTS​
+- Linux Ubuntu 18.04 LTS, Linux Ubuntu 20.04 LTS​, Linux Ubuntu 22.04 LTS
 
 ## Supported GPUs
 
@@ -68,9 +69,13 @@ The following GPUs support GPU partitioning:
 - NVIDIA A10
 - NVIDIA A16
 - NVIDIA A40
+- NVIDIA L2
 - NVIDIA L4
 - NVIDIA L40
 - NVIDIA L40S
+
+> [!NOTE]
+> The NVIDIA driver doesn't currently support GPU partitioning for live migration.
 
 We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support more GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA). Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
 
@@ -124,7 +129,7 @@ For more information on using GPUs with your VMs and GPU partitioning, see:
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
-- [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json)
+- [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
 - [Use GPUs with clustered VMs](/azure-stack/hci/manage/use-gpu-with-clustered-vm)
 - [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
 

@@ -5,7 +5,7 @@ ms.topic: article
 author: robinharwood
 manager: femila
 ms.author: wscontent
-ms.date: 10/18/2021
+ms.date: 7/3/2024
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network
 

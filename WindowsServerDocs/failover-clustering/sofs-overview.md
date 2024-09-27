@@ -2,7 +2,7 @@
 title: Scale-Out File Server for application data overview
 description: Scale-Out File Server is designed to provide scale-out file shares that are continuously available for file-based server application storage. Scale-out file shares provide the ability to share the same folder from multiple nodes of the same cluster. This scenario focuses on how to plan for and deploy Scale-Out File Server.
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 ms.author: alalve
 ms.date: 10/10/2022
 ---

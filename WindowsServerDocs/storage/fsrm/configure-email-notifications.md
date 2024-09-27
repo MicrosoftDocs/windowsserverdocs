@@ -3,9 +3,9 @@ title: Configure E-Mail Notifications
 description: This article describes how to configure e-mail notifications
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: wscontent
 ---
 # Configure E-Mail Notifications
 
