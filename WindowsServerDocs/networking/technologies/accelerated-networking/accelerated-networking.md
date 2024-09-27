@@ -26,7 +26,7 @@ Accelerated Networking's high-performance data path enables single root I/O virt
 
 ## Prerequisites
 
-Your deployment needs to meet the following prerequisites in order to roperly set up and use Accelerated Networking:
+Your deployment needs to meet the following prerequisites in order to properly set up and use Accelerated Networking:
 
 - An Arc Premium subscription
 
@@ -68,9 +68,21 @@ Your deployment needs to meet the following prerequisites in order to roperly se
 
   >[!NOTE]
   >Intent name is a required parameter. If you leave the `NodeReservePercentage` value blank, the system defaults to 50%. This value must be an integer greater than or equal to 0 and less than or equal to 99.
+
 #### [Windows Admin Center](#tab/wac)
 
-<!--- Content here  -->
+1. Open Windows Admin Center and go to your cluster.
+
+1. In the cluster view menu, open the **Accelerated Networking** tab on the left side of the window.
+
+1. Select **Setup**.
+
+1. Select the name of the valid Network ATC comupte intent and enter the percentage of nodes you want to reserve in case of a failover.
+
+   >[!NOTE]
+   >We recommend you reserve 50% of your nodes.
+
+1. Select **Enable**.
 
 ---
 
@@ -78,11 +90,11 @@ Your deployment needs to meet the following prerequisites in order to roperly se
 
 #### [PowerShell](#tab/powershell)
 
-On a node with Accelerated Networking enabled, run the following cmdlet with the vaues for the new intent and node reserve:
+On a node with Accelerated Networking enabled, run the following cmdlet with the values for the new intent and node reserve:
 
 ```powershell
 Set-AccelNetManagement -IntentName -NodeReservePercentage
-``` 
+```
 
 #### [Windows Admin Center](#tab/wac)
 
@@ -106,6 +118,7 @@ Set-AccelNetManagement -IntentName -NodeReservePercentage
 
 >[!NOTE]
 >Disabling AccelNet at the cluster doesn't change setting configurations on the virtual machines (VMs). VMs are no longer managed by AccelNet or tracked by the Network HUD.
+
 #### [Windows Admin Center](#tab/wac)
 
 <!--- Content here  -->
@@ -128,14 +141,14 @@ Set-AccelNetManagement -IntentName -NodeReservePercentage
 
   VMName and Performance are required parameters. You can set the Performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status, as shown in the following table:
 
-  |Hyperthreading configuration| Performance setting | Minimum vCPUs required |
+  | Hyperthreading configuration | Performance setting | Minimum vCPUs required |
   |---|---|---|
-  ||||
-  ||||
-  ||||
-  ||||
-  ||||
-  ||||
+  | Disabled | Low | 2 |
+  | Disabled | Medium | 2 |
+  | Disabled | High | 4 |
+  | Enabled | Low | 4 |
+  | Enabled | Medium | 4 |
+  | Enabled | High | 4 |
 
 1. To enable AccelNet for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
 
@@ -162,19 +175,50 @@ These performance options have a minimum vCPU requirement based on the hyperthre
 
 #### [PowerShell](#tab/powershell)
 
-<!--- Content here  -->
+1. Go to the node that contains the VMs you want to reconfigure.
+
+1. Run the following cmdlet:
+
+   ```powershell
+   Run Set-AccelNetManagement -VMName -Performance
+   ```
 
 #### [Windows Admin Center](#tab/wac)
 
-<!--- Content here  -->
+With Windows Admin Center, you can enable or disable Accelerated Networking on either a single VM or several VMs at the same time.
 
+##### Single VM
+
+1. Go to the **Settings page** for the VM you want to enable Accelerated Networking for.
+
+1. Select **Accelerated Networking**.
+
+1. Select the **Enable** radio button and the radio button for your desired performance level.
+
+1. Select **Save Accelerated networking settings** to save your changes.
+
+##### Multiple VMs
+
+1. 
 ---
 
 ## Disable Accelerated Networking on a VM
 
 #### [PowerShell](#tab/powershell)
 
-<!--- Content here  -->
+1. Go to the node that contains the VMs you want to disable Accelerated Networking for.
+
+1. Run the following cmdlet:
+  
+   ```powershell
+   Disable-AccelNetVM -VMName 
+   ```
+
+1. To isnable AccelNet for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
+
+  ```powershell
+  <example cmdlet>
+  ```
 
 #### [Windows Admin Center](#tab/wac)
 
