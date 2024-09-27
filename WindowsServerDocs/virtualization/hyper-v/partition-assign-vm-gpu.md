@@ -4,13 +4,8 @@ description: Learn how to partition and share a GPU with multiple virtual machin
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-<<<<<<< HEAD
-ms.service: windows-server, azure-stack
-ms.subservice: hyper-v, azure-stack-hci
+ms.subservice: core-os
 ms.date: 03/15/2024
-=======
-ms.date: 09/25/2024
->>>>>>> 5f2fd3b520754ed79a39423339f96709326ebc0b
 zone_pivot_groups: windows-os
 #customer intent: As a customer, I want to learn how to partition and assign GPUs to a virtual machine in Hyper-V so that I can use the GPU resources efficiently.
 ---
