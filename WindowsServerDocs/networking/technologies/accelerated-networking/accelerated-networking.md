@@ -121,8 +121,9 @@ Set-AccelNetManagement -IntentName -NodeReservePercentage
 
 #### [Windows Admin Center](#tab/wac)
 
-<!--- Content here  -->
+1. Open the **Status** tab.
 
+1. Under **Disable accelerated networking?**, select the **Disable Accelerated Networking** button.
 ---
 
 ## Enable Accelerated Networking on a VM
@@ -156,18 +157,29 @@ Set-AccelNetManagement -IntentName -NodeReservePercentage
   <example cmdlet>
   ```
 
-
-
-
-VMName and Performance are required parameters. Performance can be selected from the following options: Low, Medium, High 
-
-To enable on multiple, use the pipe “|” command in powershell 
-
-These performance options have a minimum vCPU requirement based on the hyperthreading status 
-
 #### [Windows Admin Center](#tab/wac)
 
-<!--- Content here  -->
+With Windows Admin Center, you can enable Accelerated Networking on either a single VM or several VMs at the same time.
+
+##### Enable a single VM
+
+1. Go to the **Settings page** for the VM you want to enable Accelerated Networking for.
+
+1. Select **Accelerated Networking**.
+
+1. Select the **Enable** radio button and the radio button for your desired performance level.
+
+1. Select **Save Accelerated networking settings** to save your changes.
+
+##### Enable multiple VMs
+
+1. Go to the **Cluster Level Accelerated Networking** tab and select **Disabled VMs**.
+
+1. Select the check boxes for all the VMs you want to enable Accelerated Networking for.
+
+1. Select your desired performance level for all enabled VMs.
+
+1. Select **Enable**. The VMs should disappear from the Disabled VMs tab and reappear in the Enabled VMs tab.
 
 ---
 
@@ -185,21 +197,24 @@ These performance options have a minimum vCPU requirement based on the hyperthre
 
 #### [Windows Admin Center](#tab/wac)
 
-With Windows Admin Center, you can enable or disable Accelerated Networking on either a single VM or several VMs at the same time.
+You can configure settings on either a single VM or multiple VMs at the same time.
 
-##### Single VM
+##### Change settings on a single VM
 
-1. Go to the **Settings page** for the VM you want to enable Accelerated Networking for.
+1. Go to the VM you want to edit and select **Settings**.
 
-1. Select **Accelerated Networking**.
+1. Go to **Networking** > **Accelerated Networking**.
 
-1. Select the **Enable** radio button and the radio button for your desired performance level.
+1. Edit the settings as desired.
 
-1. Select **Save Accelerated networking settings** to save your changes.
+##### Change settings on multiple VMs
 
-##### Multiple VMs
+1. Go to the **Cluster Level Accelerated Networking** tab and select **Enabled VMs**.
 
-1. 
+1. Select the check boxes for all the VMs you want to edit settings for.
+
+1. You can edit performance settings for multiple VMs at once. Other settings aren't available at this time.
+
 ---
 
 ## Disable Accelerated Networking on a VM
@@ -214,7 +229,7 @@ With Windows Admin Center, you can enable or disable Accelerated Networking on e
    Disable-AccelNetVM -VMName 
    ```
 
-1. To isnable AccelNet for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
+1. To disable AccelNet for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
 
   ```powershell
   <example cmdlet>
@@ -222,7 +237,23 @@ With Windows Admin Center, you can enable or disable Accelerated Networking on e
 
 #### [Windows Admin Center](#tab/wac)
 
-<!--- Content here  -->
+With Windows Admin Center, you can disable Accelerated Networking on either a single VM or several VMs at the same time.
+
+##### Single VM
+
+1. Go to the **Settings page** for the VM you want to enable Accelerated Networking for.
+
+1. Select **Accelerated Networking**.
+
+1. In the **Status** tab under **Disable Aaccelerated networking?**, select **Disable Accelerated networking**.
+
+##### Multiple VMs
+
+1. Go to the **Cluster Level Accelerated Networking** tab and select **Enabled VMs**.
+
+1. Select the check boxes for all the VMs you want to enable Accelerated Networking for.
+
+1. Select **Disable**. The VMs should disappear from the Enabled VMs tab and reappear in the Disabled VMs tab.
 
 ---
 
