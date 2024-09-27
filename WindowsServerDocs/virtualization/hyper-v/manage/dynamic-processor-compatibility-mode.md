@@ -5,6 +5,7 @@ ms.topic: how-to
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 07/03/2024
+ms.subservice: core-os
 zone_pivot_groups: windows-os
 ---
 
