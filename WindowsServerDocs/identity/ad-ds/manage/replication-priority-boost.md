@@ -33,12 +33,10 @@ The Replication Priority Boost feature introduces an interface that lets you boo
 
 The boost factor is added on top of the system-calculated (built-in) priority by the system admin. The following screen shot shows the Replication Priority Boost feature user interface performing this operation on for destination DC <>.  
 
-<!-- screen shot here -->
+<!-- screen shot here and procedure here-->
 <!-- Note: ADO links to scenario and spec are 404 ... See https://dev.azure.com/msft-skilling/Content/_workitems/edit/186868-->
 
 The Replication Priority Boost feature doesn't change the size of any supported attribute values. JET database supports up to 2147483647 bytes in a single value of binary type. There are limitations on some particular attribute sizes imposed by other modules, but not in the case of JET in Active Directory. See [Active Directory Maximum Limits - Scalability](https://review.learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)?branch=main#maximum-size-of-active-directory-objects) for more information on JIT management. 
-
-<!-- [MS-ADTS]: setPriorityBoost | Microsoft Learn   >>>>> Protocol Documentation for the new feature for more information.  Note: this is not a link; what does this reference? See https://dev.azure.com/msft-skilling/Content/_workitems/edit/186868-->
 
 ## See also
 
