@@ -1,9 +1,9 @@
 ---
 title: Active Directory Directory Services Replication Priority Boost feature
 description: Learn about and how to manage Active Directory Directory Services Replication Priority Boost
-ms.author: brdpm
+ms.author: clfish
 author: gswashington
-ms.service: active-directory
+ms.service: ad-ds
 ms.topic: how-to
 ms.date: 10/02/2024
 ---
@@ -41,4 +41,4 @@ The Replication Priority Boost feature doesn't change the size of any supported 
 ## See also
 
 - [Active Directory Maximum Limits - Scalability](https://review.learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)?branch=main#maximum-size-of-active-directory-objects)
-- [Onboard Active Directory Security Group for JIT to manage](https://review.learn.microsoft.com/identity/access-management/just-in-time/security-group-elevation-support?branch=main)
+- [Onboard Active Directory Security Group for JIT to manage](./identity/access-management/just-in-time/security-group-elevation-support?branch=main)
