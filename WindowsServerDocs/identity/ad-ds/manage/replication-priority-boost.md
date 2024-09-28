@@ -18,7 +18,7 @@ Replication priority in Active Directory is hard coded and uses fixed heuristic 
 
 This built-in priority works fine in most cases. However, there are scenarios in which the built-in priority heuristics aren't the most efficient approach. For example, in some environments, sites are not designed according to proximity but according to functionality, say primary versus backup sites. Inter-site changes might be more relevant than intra-site changes. Alternately, there are times that the changes in the configuration DC aren't important. Or there are times in which you want to stick with a particular partner DC over the rest in the same group.
 
-Another scenario in which Replication Priority Boost might be useful would involve an administrator performing an over-the-wire DC promo that requires replication of a large DIT file. If the replication was interrupted due to reboots or network issues, the replication might restart using a different replication partner. Specifying a prioritization boost on the `repsFrom` attribute would let the administrator prioritize a specific replication partner (or multiple replication partners) to work around this situation.
+Another scenario in which Replication Priority Boost might be useful would involve an administrator performing an over-the-wire DC promo that requires replication of a large DIT file. If the replication was interrupted due to reboots or network issues, the replication might restart using a different replication partner. Specifying a prioritization boost on the `repsFrom` attribute would let the administrator prioritize a specific replication partner (or multiple replication partners) to work around this situation. This article includes an example of how to specify a prioritization boost in the Replication Priority Boost feature using the `repsFrom` attribute.
 
 ## System requirements
 
@@ -36,7 +36,7 @@ The boost factor is added on top of the system-calculated (built-in) priority by
 <!-- screen shot here and procedure here-->
 <!-- Note: ADO links to scenario and spec are 404 ... See https://dev.azure.com/msft-skilling/Content/_workitems/edit/186868-->
 
-The Replication Priority Boost feature doesn't change the size of any supported attribute values. JET database supports up to 2147483647 bytes in a single value of binary type. There are limitations on some particular attribute sizes imposed by other modules, but not in the case of JET in Active Directory. See [Active Directory Maximum Limits - Scalability](https://review.learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)?branch=main#maximum-size-of-active-directory-objects) for more information on JIT management. 
+The Replication Priority Boost feature doesn't change the size of any supported attribute values. JET database supports up to 2147483647 bytes in a single value of binary type. There are limitations on some particular attribute sizes imposed by other modules, but not in the case of JET in Active Directory. See [Active Directory Maximum Limits - Scalability](https://review.learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)?branch=main#maximum-size-of-active-directory-objects) for more information on JIT management.
 
 ## See also
 
