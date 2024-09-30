@@ -96,9 +96,7 @@ For example, if you have a primary domain called `corp.contoso.com` running on W
 
 To edit this group policy setting for your environment, navigate to the following path:
 
-```group policy
-Computer Configuration\Administrative Templates\System\Kerberos\Enable Delegated Managed Service Account logons 
-```
+**Computer Configuration\Administrative Templates\System\Kerberos\Enable Delegated Managed Service Account logons**
 
 ![A screenshot of the "Enable Delegated Managed Service Account logons" group policy setting set to enabled.](../media/delegated-managed-service-accounts/enable-delegated-managed-service-account-logons-gpo-setting.png)
 
