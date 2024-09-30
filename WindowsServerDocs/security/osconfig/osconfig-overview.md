@@ -2,15 +2,18 @@
 title: OSConfig overview
 description: OSConfig is a cross-platform scenario-based security tool to manage on-premises Windows Server 2025 and Arc-connected devices.
 ms.topic: conceptual
+ms.product: windows-server
 ms.author: wscontent
 author: xelu86
 ms.contributor: Dona Mukherjee
-ms.date: 09/26/2024
+ms.date: 09/30/2024
 ---
 
 # OSConfig overview
 
-OSConfig is a security configuration stack that utilizes scenarios to efficiently deliver and apply administrative intent for achieving the desired state of on-premises and Arc-connected devices. The OSConfig stack is composed of base cmdlets, native APIs, and a Scenario definition that defines the desired state configuration. The Scenario definition is a data-driven description of configurations, which describe a group of settings using name-value pairs with a predefined order and dependencies, corresponding to different subareas. OSConfig is a device configuration stack that is commonly shipped with the Windows Server Operating System (OS), providing an abstraction for local device configuration. Its object model design is data-driven, allowing for mapping to various providers in the Windows OS for device configuration.
+OSConfig is a security configuration stack that utilizes scenarios to efficiently deliver and apply administrative intent for achieving the desired state of on-premises and Arc-connected devices. The OSConfig stack is composed of base cmdlets, native APIs, and a Scenario definition that defines the desired state configuration. The Scenario definition is a data-driven description of configurations, which describe a group of settings using name-value pairs with a predefined order and dependencies, corresponding to different subareas. OSConfig is a device configuration stack that is commonly shipped with the Windows Server Operating System (OS), providing an abstraction for local device configuration. Its object model design is data-driven, allowing for mapping to various providers in the Windows OS for device configuration. The following diagram describes the OSConfig flowchart.
+
+![A flowchart of the os config powershell module.](../media/osconfig/osconfig-module-flowchart.png)
 
 Currently, OSConfig is employed to establish security baselines for various Microsoft Edge OSs such as Windows Server 2025 and Azure Stack HCI 23H2. It seamlessly integrates with Azure Policy, Microsoft Defender, Windows Admin Center, and Automanage Machine configuration to facilitate monitoring and compliance reporting. OSConfig is a potent tool that enables improved mapping or even direct conversion with other pre-existing management definitions, such as `.admx` files in Group Policy, `.mof` files within Windows Management Instrumentation (WMI), and Device Description Framework (DDF) files within the Configuration Service Provider (CSP).
 
