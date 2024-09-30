@@ -4,7 +4,7 @@ description: Get the product keys needed for setup and activation of Windows Ser
 ms.topic: conceptual
 author: xelu86
 ms.author: wscontent
-ms.date: 05/16/2024
+ms.date: 09/30/2024
 ---
 
 # Key Management Services (KMS) client activation and product keys
@@ -41,6 +41,14 @@ slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
 In the tables that follow, you'll find the GVLKs for each version and edition of Windows. LTSC is _Long-Term Servicing Channel_, while LTSB is _Long-Term Servicing Branch_.
 
 ### Windows Server LTSC
+
+# [Windows Server 2025](#tab/server2025)
+
+| Operating system edition       | KMS Client Product Key        |
+|--------------------------------|-------------------------------|
+| Windows Server 2025 Standard   | TVRH6-WHNXV-R9WG3-9XRFY-MY832 |
+| Windows Server 2025 Datacenter | D764K-2NDRG-47T6Q-P8T8W-YP6DF |
+| Windows Server 2025 Datacenter: Azure Edition | XGN3F-F394H-FD2MY-PP6FD-8MCRC |
 
 # [Windows Server 2022](#tab/server2022)
 
