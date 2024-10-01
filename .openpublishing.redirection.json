@@ -11933,7 +11933,7 @@
     {
       "source_path": "WindowsServerDocs/context/azure-stack-hci-context.yml",
       "redirect_url": "/windows-server/context/windows-server-edge-networking",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
