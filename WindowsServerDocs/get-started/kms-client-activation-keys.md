@@ -4,7 +4,7 @@ description: Get the product keys needed for setup and activation of Windows Ser
 ms.topic: conceptual
 author: xelu86
 ms.author: wscontent
-ms.date: 09/30/2024
+ms.date: 10/01/2024
 ---
 
 # Key Management Services (KMS) client activation and product keys
@@ -111,12 +111,21 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 ### Windows Enterprise LTSC and LTSB
 
-# [Windows 10 LTSC 2021, 2019](#tab/windows10ltsc)
+# [Windows 11 LTSC 2024 <br> Windows 10 LTSC 2021, 2019](#tab/windows1110ltsc)
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
-| Windows 10 Enterprise LTSC 2021 <br> Windows 10 Enterprise LTSC 2019 | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
-|  Windows 10 Enterprise N LTSC 2021 <br> Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
+| Windows 11 Enterprise LTSC 2024 <br> Windows 10 Enterprise LTSC 2021 <br> Windows 10 Enterprise LTSC 2019 | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
+| Windows 11 Enterprise N LTSC 2024 <br> Windows 10 Enterprise N LTSC 2021 <br> Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
+
+# [Windows IoT LTSC](#tab/winowsiot)
+
+| Operating system edition          | KMS Client Product Key        |
+|-----------------------------------|-------------------------------|
+| Windows IoT Enterprise LTSC 2024 <br> Windows IoT Enterprise LTSC 2021 | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
+
+> [!NOTE]
+> For ImageVersion: 10.0.19044.2905 or later, see [Windows IoT Enterprise LTSC in Volume License](/windows/iot/iot-enterprise/deployment/volume-license).
 
 # [Windows 10 LTSB 2016](#tab/windows102016)
 
@@ -133,15 +142,6 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 10 Enterprise LTSB N 2015 | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
 
 ---
-
-### Windows IoT Enterprise
-
-| Operating system edition          | KMS Client Product Key        |
-|-----------------------------------|-------------------------------|
-| Windows IoT Enterprise LTSC 2021 | KBN8V-HFGQ4-MGXVD-347P6-PDQGT |
-
-> [!NOTE]
-> For ImageVersion: 10.0.19044.2905 or later, see [Windows IoT Enterprise LTSC in Volume License](/windows/iot/iot-enterprise/deployment/volume-license).
 
 ### Earlier versions of Windows Server
 
