@@ -120,7 +120,7 @@ In the following steps, a cluster is being moved from the Contoso.com domain to 
    ```
     >[!NOTE]
     >
-    > If the subsequent [New-ClusterNameAccount](/powershell/module/failoverclusters/new-clusternameaccount) fails, bring the Cluster Name and all other cluster Network Name resources to an offline state.
+    > If the subsequent [New-ClusterNameAccount](/powershell/module/failoverclusters/new-clusternameaccount) fails, bring the Cluster Name and all other cluster Network Name resources to an offline state before retrying.
 
 8. Change the cluster to be a part of the new domain with associated active directory objects. The following command recreates the name objects in Active Directory and the network name resources must be in an online state:
 
