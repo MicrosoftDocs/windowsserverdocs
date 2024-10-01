@@ -1,5 +1,5 @@
 ---
-title: How to configure OSConfig security for Windows Server
+title: How to configure OSConfig security for Windows Server (preview)
 description: Learn how to deploy OSConfig security baselines to enforce granular security settings to better protect and harden your Windows Server 2025 environment.
 ms.topic: how-to
 ms.product: windows-server
@@ -79,9 +79,6 @@ To apply the Microsoft Defender Antivirus baseline for a device, run the followi
 Set-OSConfigDesiredConfiguration -Scenario Defender/Antivirus -Default
 ```
 
-> [!NOTE]
-> When adding a security baseline, a reboot is required for changes to take effect.
-
 # [Verify](#tab/verify)
 
 To verify if the baseline for a device that's domain-joined is properly applied, run the following command:
@@ -146,12 +143,6 @@ To remove the Microsoft Defender Antivirus baseline for a device, run the follow
 Remove-OSConfigDesiredConfiguration -Scenario Defender/Antivirus
 ```
 
-> [!NOTE]
->
-> - When removing a security baseline, a reboot is required for changes to take effect.
->
-> - During the removal process where security settings are reverted, changing these settings back to their pre-managed configuration isn't guaranteed as this depends on the specific settings within the security baseline. This aligns with the capabilities provided by the Microsoft Intune policies. To learn more, see [Manage security baseline profiles in Microsoft Intune](/mem/intune/protect/security-baselines-configure).
-
 # [Compliance Check](#tab/compliance-check)
 
 To obtain the desired configuration details for the specified scenario, use the following commands. The output is presented in a table format that includes the name of the configuration item, its compliance status, and the reason for non-compliance.
@@ -188,6 +179,14 @@ Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name
 
 ---
 
+> [!NOTE]
+>
+> - When users **configure** or **remove** a security baseline, a reboot is required for changes to take effect.
+>
+> - When users **customize** a security baseline, a reboot is required for changes to take effect depending on which security features were modified.
+>
+> - During the **removal** process where security settings are reverted, changing these settings back to their pre-managed configuration isn't guaranteed as this depends on the specific settings within the security baseline. This aligns with the capabilities provided by the Microsoft Intune policies. To learn more, see [Manage security baseline profiles in Microsoft Intune](/mem/intune/protect/security-baselines-configure).
+
 ## Customize OSConfig security baselines
 
 After completing the security baseline configuration, you can modify the security settings while maintaining drift control. Customizing the security values allow for more control of your organization's security policies depending on your environment's specific needs. Only numerical values are accepted.
@@ -213,5 +212,3 @@ Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer 
 > - RenameGuestAccount
 >
 > After providing the necessary input, press **Enter** to proceed.
-
-Even if a security baseline is configured for the first time, and a reboot is performed for changes to take effect, once customizations are made to the baseline, a secondary reboot is required for new changes to take effect depending on which security features were modified.
