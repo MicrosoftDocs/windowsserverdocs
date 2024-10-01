@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 09/30/2024
+ms.date: 10/01/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
