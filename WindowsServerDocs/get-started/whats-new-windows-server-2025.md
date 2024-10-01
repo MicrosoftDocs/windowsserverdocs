@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 09/25/2024
+ms.date: 10/01/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -155,7 +155,7 @@ When creating a new virtual machine through the Hyper-V Manager, **Generation 2*
 
 ### NVMe
 
-NVMe is a new standard for fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performace, resulting in an increase in IOPS and decrease in CPU utilization.
+NVMe is a new standard for fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performance, resulting in an increase in IOPS and decrease in CPU utilization.
 
 ### OpenSSH
 
@@ -179,6 +179,10 @@ Pinning your most used apps is now available through the **Start** menu and is c
 By default new Routing and Remote Access Services (RRAS) setups don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
 
 Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
+
+### Security Baseline
+
+Starting with build 26296, the Windows Server 2025 Security Baseline Preview is now available. By implementing a customized security baseline, you can establish security measures right from the beginning for your device or VM role based on the recommended security posture. This baseline comes equipped with over 350 preconfigured Windows security settings that enable you to apply and enforce specific security settings that align with the best practices recommended by Microsoft and industry standards. To learn more, see [OSConfig overview](../security/osconfig/osconfig-overview.md).
 
 ### Server Message Block
 
@@ -314,7 +318,7 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
 - **New passphrase feature**
 
-  IT admins can now utilize a new feature in Windows LAPS that enables the generation of less complex passphrases. An example would be a passphrase such as "EatYummyCaramelCandy", which is easier to read, remember, and type, compared to a traditional password like "V3r_b4tim#963?".
+  IT admins can now utilize a new feature in Windows LAPS that enables the generation of less complex passphrases. An example would be a passphrase such as **EatYummyCaramelCandy**, which is easier to read, remember, and type, compared to a traditional password like **V3r_b4tim#963?**.
 
   This new feature also allows the _PasswordComplexity_ policy setting to be configured to select one of three different passphrase word lists, all of which are included in Windows without requiring a separate download. A new policy setting called _PassphraseLength_ controls the number of words used in the passphrase.
 
