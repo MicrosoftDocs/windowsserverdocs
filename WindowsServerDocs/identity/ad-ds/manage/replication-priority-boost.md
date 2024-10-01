@@ -1,6 +1,6 @@
 ---
-title: Active Directory Directory Services Replication Priority Boost feature
-description: Learn about and how to manage Active Directory Directory Services Replication Priority Boost
+title: Active Directory Domain Services Replication Priority Boost feature
+description: Learn about what the Active Directory Domain Services Replication Priority Boost feature is and how to manage it.
 ms.author: clfish
 author: gswashington
 ms.service: ad-ds
@@ -8,35 +8,40 @@ ms.topic: how-to
 ms.date: 10/02/2024
 ---
 
-# Active Directory Directory Services Replication Priority Boost feature
+# Active Directory Domain Services Replication Priority Boost feature
 
 Applies to: Windows Server 2025, Windows Server 2022
 
-Active Directory is a distributed system; this means that changes applied to one domain controller are replicated to other DCs in the system automatically. Because changes can happen concurrently on multiple DCs, a priority system is necessary to manage these changes. A destination DC retrieves its changes from its replication partners. When a destination DC retrieves its replication tasks from multiple DCs, these tasks are served based on priority. 
+Active Directory is a distributed system, which means changes you apply to one domain controller replicate to other DCs in the system automatically. Because changes can happen concurrently on multiple DCs, your deployment needs a priority system to manage these changes. In a priority system, when the destination DC retrieves its replication tasks from the other DCs that are its replication partners, the system serves these tasks based on priority. 
 
-Replication priority in Active Directory is hard coded and uses fixed heuristic rules. For example, the configuration naming context (NC) has higher priority than that of the domain NC because a topology change often is of higher importance. Similarly, the an intra-site partner will have higher priority than an inter-site partner because a DC's geographic proximity often is more relevant for DCs in the same site. DCs in the same group all share the same priority.
+Replication priority in Active Directory is hardcoded to use fixed heuristic rules. For example, the configuration naming context (NC) has higher priority than that of the domain NC because topology changes are of higher importance. Similarly, the intra-site partner has higher priority than an inter-site partner because a DC's geographic proximity is more relevant for DCs in the same site. DCs in the same group all share the same priority.
 
-This built-in priority works fine in most cases. However, there are scenarios in which the built-in priority heuristics aren't the most efficient approach. For example, in some environments, sites are not designed according to proximity but according to functionality, say primary versus backup sites. Inter-site changes might be more relevant than intra-site changes. Alternately, there are times that the changes in the configuration DC aren't important. Or there are times in which you want to stick with a particular partner DC over the rest in the same group.
+The built-in priority heuristics work fine in most cases. However, there are scenarios where they aren't the most efficient approach. For example, in some environments, sites aren't designed according to proximity but functionality, such as with primary versus backup sites. In these cases, inter-site changes are more relevant than intra-site changes. There may also be scenarios when either the changes in the configuration DC aren't important or you choose to use only a specific partner DC instead of other DCs in the same group.
 
-Another scenario in which Replication Priority Boost might be useful would involve an administrator performing an over-the-wire DC promo that requires replication of a large DIT file. If the replication was interrupted due to reboots or network issues, the replication might restart using a different replication partner. Specifying a prioritization boost on the `repsFrom` attribute would let the administrator prioritize a specific replication partner (or multiple replication partners) to work around this situation. This article includes an example of how to specify a prioritization boost in the Replication Priority Boost feature using the `repsFrom` attribute.
+Replication Priority Boost is useful in scenarios that involve an administrator performing an over-the-wire DC promo that requires replication of a large DIT file. If the replication is interrupted by a reboot or network issues, the replication can restart using a different replication partner. Administrators can work around these issues by specifying a prioritization boost on the `repsFrom` attribute to prioritize a one or more specific replication partners. You can see an example of how to specify prioritization boosts in [How to configure Replication Priority Boost](#how-to-configure-replication-priority-boost).
 
-## System requirements
+## Compatibility
 
 There are no specific system requirements for enabling the Replication Priority Boost feature in Windows Server 2025. The feature is also compatible with systems running a Windows Server 2022 DC as the replication source DC if the destination DC is running Windows Server 2025 and understands the new rootDSE modify.
 
-## How it works
+## How to configure Replication Priority Boost
 
-The Replication Priority Boost feature introduces an interface that lets you boost the priority of a replication partner. the Replication Priority Boost feature lets you manage the priority to get the most efficient replication order to match their needs. The Replication Priority Boost feaure uses a root DSE modify to add a booster factor on the system to designate the priority and a root DSE attribute to read this boost factor.
+The Replication Priority Boost feature introduces an interface that lets you boost the priority of a replication partner. You can use this feature to manage priority levels to get the most efficient replication order to match your deployment's needs. The Replication Priority Boost feature uses both a root DSE modifier to add a boost factor to the system to designate priority and a root DSE attribute to read the boost factor.
+
+```Cmd
 
 `RootDSE modify: setPriorityBoost:<naming context>:<partner DC>:<boost factor>`
+
 `RootDSE attribute: msDS-PriorityBoost:<naming context>:<partner DC>`
 
-The boost factor is added on top of the system-calculated (built-in) priority by the system admin. The following screen shot shows the Replication Priority Boost feature user interface performing this operation on for destination DC <>.  
+```
+
+The system admin adds the boost factor on top of the built-in priority level. The following screenshot shows the Replication Priority Boost feature user interface performing this operation on for destination DC <>.
 
 <!-- screen shot here and procedure here-->
 <!-- Note: ADO links to scenario and spec are 404 ... See https://dev.azure.com/msft-skilling/Content/_workitems/edit/186868-->
 
-The Replication Priority Boost feature doesn't change the size of any supported attribute values. JET database supports up to 2147483647 bytes in a single value of binary type. There are limitations on some particular attribute sizes imposed by other modules, but not in the case of JET in Active Directory. See [Active Directory Maximum Limits - Scalability](https://review.learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)?branch=main#maximum-size-of-active-directory-objects) for more information on JIT management.
+The Replication Priority Boost feature doesn't change the size of any supported attribute values. The Joint Engine Technology (JET) database supports up to 2,147,483,647 bytes in a single value of binary type. There are limitations on some particular attribute sizes imposed by other modules, but not in the case of JET in Active Directory. For more information about JET management, see [Active Directory Maximum Limits - Scalability](https://review.learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)?branch=main#maximum-size-of-active-directory-objects).
 
 ## See also
 
