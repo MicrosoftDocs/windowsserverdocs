@@ -139,7 +139,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
 | Windows 10 Enterprise LTSB 2015   | WNMTR-4C88C-JK8YV-HQ7T2-76DF9 |
-| Windows 10 Enterprise LTSB N 2015 | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
+| Windows 10 Enterprise N LTSB 2015 | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
 
 ---
 
