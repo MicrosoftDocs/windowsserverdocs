@@ -79,6 +79,9 @@ To apply the Microsoft Defender Antivirus baseline for a device, run the followi
 Set-OSConfigDesiredConfiguration -Scenario Defender/Antivirus -Default
 ```
 
+> [!NOTE]
+> When adding a security baseline, a reboot is required for changes to take effect.
+
 # [Verify](#tab/verify)
 
 To verify if the baseline for a device that's domain-joined is properly applied, run the following command:
@@ -201,4 +204,14 @@ To verify that the new value is applied, run the following command:
 Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Setting AuditDetailedFileShare 
 ```
 
-Once customizations to the baseline are complete, a reboot is required for changes to take effect depending on which security features were modified.
+> [!NOTE]
+> Depending on which security settings are customized, certain user input is expected. These inputs are:
+>
+> - MessageTextUserLogon
+> - MessageTextUserLogonTitle
+> - RenameAdministratorAccount
+> - RenameGuestAccount
+>
+> After providing the necessary input, press **Enter** to proceed.
+
+Even if a security baseline is configured for the first time, and a reboot is performed for changes to take effect, once customizations are made to the baseline, a secondary reboot is required for new changes to take effect depending on which security features were modified.
