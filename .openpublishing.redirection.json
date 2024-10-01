@@ -11929,11 +11929,6 @@
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/context/azure-stack-hci-context.yml",
-      "redirect_url": "/windows-server/context/windows-server-edge-networking",
-      "redirect_document_id": false
     }
   ]
 }
