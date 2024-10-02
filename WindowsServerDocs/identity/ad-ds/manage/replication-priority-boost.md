@@ -36,7 +36,8 @@ The Replication Priority Boost feature introduces an interface that lets you boo
 
 ```
 
-The system admin adds the boost factor on top of the built-in priority level. The following screenshot shows the Replication Priority Boost feature user interface performing this operation on for destination DC <>.
+### Replication Priority Boost steps
+1. The system admin adds the boost factor on top of the built-in priority level. The following screenshot shows the Replication Priority Boost feature user interface performing this operation on for destination DC <>.
 
 <!-- screen shot here and procedure here-->
 <!-- Note: ADO links to scenario and spec are 404 ... See https://dev.azure.com/msft-skilling/Content/_workitems/edit/186868-->
