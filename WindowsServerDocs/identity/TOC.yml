@@ -479,6 +479,8 @@
           href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
         - name: Delegated Managed Service Accounts FAQ
           href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-faq.yml
+        - name: Credential Guard in machine accounts
+          href: ad-ds/manage/delegated-managed-service-accounts/credential-guard-machine-accounts.md
       - name: Group Managed Service Accounts
         href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
         items:
