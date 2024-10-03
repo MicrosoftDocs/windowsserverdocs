@@ -10,7 +10,7 @@ ms.date: 01/11/2023
 ---
 
 # CAPolicy.inf Syntax
-> Applies To: Windows Server 2016
+> Applies To:  Windows Server (All supported versions)
 
 The CAPolicy.inf is a configuration file that defines the extensions, constraints, and other configuration settings that are applied to a root CA certificate and all certificates issued by the root CA. The CAPolicy.inf file must be installed on a host server before the setup routine for the root CA begins. When the security restrictions on a root CA are to be modified, the root certificate must be renewed and an updated CAPolicy.inf file must be installed on the server before the renewal process begins.
 
@@ -20,8 +20,7 @@ The CAPolicy.inf is:
 
 - Utilized during the creation of root and subordinate CA certificates
 
-- Defined on the signing CA where you sign and issue the certificate (not the
-  CA where the request is granted)
+- Defined on the signing CA where you sign and issue the certificate (not the CA where the request is granted)
 
 Once you've created your CAPolicy.inf file, you must copy it into the **%systemroot%** folder of your server before you install ADCS or renew the CA certificate.
 
@@ -69,7 +68,7 @@ If you're going to use a URL to host the CA policy statement, then next three li
 ```Text
 [InternalPolicy]
 OID=1.1.1.1.1.1.2
-URL=https://pki.wingtiptoys.com/policies/legalpolicy.asp
+URL=https://pki.corp.contoso.com/policies/legalpolicy.asp
 ```
 
 In addition, you should note:
@@ -85,8 +84,8 @@ An example of multiple notices and URLs in a policy section would look like:
 ```Text
 [InternalPolicy]
 OID=1.1.1.1.1.1.1
-URL=https://pki.wingtiptoys.com/policies/legalpolicy.asp
-URL=ftp://ftp.wingtiptoys.com/pki/policies/legalpolicy.asp
+URL=https://pki.corp.contoso.com/policies/legalpolicy.asp
+URL=ftp://ftp.corp.contoso.com/pki/policies/legalpolicy.asp
 Notice="Legal policy statement text"
 ```
 
@@ -96,7 +95,7 @@ You can specify CRL Distribution Points (CDPs) for a root CA certificate in the 
 
 ```Text
 [CRLDistributionPoint]
-URL=http://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
+URL=http://pki.corp.contoso.com/cdp/ContosoRootCA.crl
 ```
 
 CRL Distribution Points (CDPs) support:
@@ -123,7 +122,7 @@ You can specify the authority information access points in the CAPolicy.inf for 
 
 ```Text
 [AuthorityInformationAccess]
-URL=http://pki.wingtiptoys.com/Public/myCA.crt
+URL=http://pki.corp.contoso.com/Public/myCA.crt
 ```
 
 Some more notes on the authority information access section:
