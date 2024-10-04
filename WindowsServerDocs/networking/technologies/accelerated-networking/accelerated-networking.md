@@ -58,7 +58,7 @@ Your deployment needs to meet the following prerequisites in order to properly s
   Get-AccelNetManagementPreReq
   ```
 
-1. Go to any node that's on the cluster you want to enable Acellerated Networking for.
+1. Go to any node that's on the cluster you want to enable Accelerated Networking for.
 
 1. Run the following cmdlet to enable Accelerated Networking:
 
@@ -75,9 +75,9 @@ Your deployment needs to meet the following prerequisites in order to properly s
 
 1. In the cluster view menu, open the **Accelerated Networking** tab on the left side of the window.
 
-1. Select **Setup**.
+1. Select the blue button labeled **Set up Accelerated networking**.
 
-1. Select the name of the valid Network ATC comupte intent and enter the percentage of nodes you want to reserve in case of a failover.
+1. Select the name of the valid Network ATC compute intent and enter the percentage of nodes you want to reserve in case of a failover.
 
    >[!NOTE]
    >We recommend you reserve 50% of your nodes.
@@ -98,7 +98,7 @@ Set-AccelNetManagement -IntentName -NodeReservePercentage
 
 #### [Windows Admin Center](#tab/wac)
 
-<!--- Content here  -->
+There isn't currently a method for changing Accelerated Networking settings on a cluster using Windows Admin Center. To change the settings, you need to use PowerShell.
 
 ---
 
@@ -114,16 +114,16 @@ Set-AccelNetManagement -IntentName -NodeReservePercentage
   Run Disable-AccelNetManagement 
   ```
 
-1. After the cluster is disabled, the Network HUD no longer monitors the health of the feature.
+After you disable the cluster, the Network HUD no longer monitors the health of the feature.
 
 >[!NOTE]
 >Disabling AccelNet at the cluster doesn't change setting configurations on the virtual machines (VMs). VMs are no longer managed by AccelNet or tracked by the Network HUD.
 
 #### [Windows Admin Center](#tab/wac)
 
-1. Open the **Status** tab.
+1. Open the **Accelerated Networking** tab and select the **Status** tab.
 
-1. Under **Disable accelerated networking?**, select the **Disable Accelerated Networking** button.
+1. Under **Disable accelerated networking?**, select the blue **Disable Accelerated Networking** button.
 ---
 
 ## Enable Accelerated Networking on a VM
@@ -184,6 +184,8 @@ With Windows Admin Center, you can enable Accelerated Networking on either a sin
 ---
 
 ## Change Accelerated Networking settings on a VM
+
+To change the Accelerated Networking settings on a VM:
 
 #### [PowerShell](#tab/powershell)
 
@@ -249,11 +251,13 @@ With Windows Admin Center, you can disable Accelerated Networking on either a si
 
 ##### Multiple VMs
 
-1. Go to the **Cluster Level Accelerated Networking** tab and select **Enabled VMs**.
+1. Go to the cluster you want to disable Accelerated Networking for and select **Accelerated Networking**.
 
-1. Select the check boxes for all the VMs you want to enable Accelerated Networking for.
+1. Select the **Enabled virtual machines** tab.
 
-1. Select **Disable**. The VMs should disappear from the Enabled VMs tab and reappear in the Disabled VMs tab.
+1. Select the check boxes for all the VMs you want to disable Accelerated Networking for.
+
+1. Select **Disable VM Accelerated networking**. The VMs should disappear from the Enabled VMs tab and reappear in the **Disabled virtual machines** tab.
 
 ---
 
