@@ -139,4 +139,4 @@ Consider these guidelines when you configure CDP extension URLs:
 
 To learn more about deploying AD CS, see [Implement and manage Active Directory Certificate Services](/training/modules/implement-manage-active-directory-certificate-services/).  
 
-To learn more about CNG Key Storage and Retrieval, see [Key Storage and Retrieval](https://learn.microsoft.com/en-us/windows/win32/seccng/key-storage-and-retrieval)
+To learn more about CNG Key Storage and Retrieval, see [Key Storage and Retrieval](https://learn.microsoft.com/windows/win32/seccng/key-storage-and-retrieval)
