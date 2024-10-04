@@ -10,11 +10,11 @@ ms.date: 08/09/2024
 
 On regular networking, all traffic entering and leaving a virtual machine (VM) goes between the host and the virtual switch. The virtual switch provides all policy enforcement for network traffic, including network security groups, access control lists, isolation, and other network virtualized services.
 
-Accelerated networking offloads all network policies applied by the virtual switch, instead applying them using the hardware. When the hardware applies policies, the VM network interface (NIC) can forward network traffic directly to the VM. The NIC also bypasses the host and the virtual switch while maintaining all policies applied in the host.
+Accelerated Networking offloads all network policies applied by the virtual switch, instead applying them using the hardware. When the hardware applies policies, the VM network interface (NIC) can forward network traffic directly to the VM. The NIC also bypasses the host and the virtual switch while maintaining all policies applied in the host.
 
 The following diagram illustrates how two VMs communicate with and without Accelerated Networking.
 
-<!--Image goes here-->
+:::image type="content" source="./media/accelerated-networking.png" alt-text="A diagram showing the difference between two deployments with and without Accelerated Networking. The deployment without accelerated networking has to send its network traffic through two virtual switches on physical servers, while the network with Accelerated Networking doesn't.":::
 
 Accelerated Networking's high-performance data path enables single root I/O virtualization (SR-IOV) on supported VM types, greatly improving networking performance in the following ways:
 
@@ -26,27 +26,30 @@ Accelerated Networking's high-performance data path enables single root I/O virt
 
 ## Prerequisites
 
-Your deployment needs to meet the following prerequisites in order to properly set up and use Accelerated Networking:
+Your deployment needs to meet the following prerequisites in order to be able to set up and use Accelerated Networking:
 
-- An Arc Premium subscription
+- An Arc Premium subscription.
 
-- A functioning cluster on a Windows Server 2025 Datacenter
+- A functioning cluster on a Windows Server 2025 Datacenter.
 
-  - Non-clustered single servers and WS Standard don't support Accelerated Networking.
+  >[!NOTE]
+  >Non-clustered single servers and WS Standard don't support Accelerated Networking.
 
-- Your hardware must support SR-IOV, and you must enable SR-IOV on BIOS. You may need to contact your hardware vendor to see if your machine supports SR-IOV.
+- Your hardware must support SR-IOV and you must enable SR-IOV on BIOS. You may need to contact your hardware vendor to see if your machine supports SR-IOV.
 
-- An SR-IOV supported NIC.
+- An SR-IOV supported network interface card (NIC).
 
   - You may need to run the [Enable-NetAdapterSriov (NetAdapter)](/powershell/module/netadapter/enable-netadaptersriov?view=windowsserver2022-ps) cmdlet.
 
 - You may also need to expose the Virtual Functions from the BIOS. We recommend exposing the PUT REC function.
 
-- If you're running Azure Stack HCI, then after you enable SR-IOV, you must install and configure a valid Compute intent for a [Network Advanced Transfer Cache (ATC)](/azure-stack/hci/deploy/network-atc?tabs=22H2). You can only enable Accelerated Networking on vSwitches managed by a Network ATC Compute intent.
+- If you're running Azure Stack HCI, then after you enable SR-IOV, you must install and configure a valid Compute intent for a [Network Advanced Transfer Cache (ATC)](/azure-stack/hci/deploy/network-atc?tabs=22H2). You can only enable Accelerated Networking on virtual switches managed by a Network ATC Compute intent.
 
 - If you're running Azure Stack HCI, you must install a [Network HUD](/azure-stack/hci/concepts/network-hud-overview) that runs Storage Spaces Direct.
 
 ## Enable Accelerated Networking on a cluster
+
+To enable Accelerated Networking on a cluster:
 
 #### [PowerShell](#tab/powershell)
 
@@ -67,7 +70,9 @@ Your deployment needs to meet the following prerequisites in order to properly s
   ```
 
   >[!NOTE]
-  >Intent name is a required parameter. If you leave the `NodeReservePercentage` value blank, the system defaults to 50%. This value must be an integer greater than or equal to 0 and less than or equal to 99.
+  > The `-IntentName` parameter is required.
+  >
+  >If you leave the `NodeReservePercentage` value blank, the system defaults to 50%. This value must be an integer greater than or equal to 0 and less than or equal to 99.
 
 #### [Windows Admin Center](#tab/wac)
 
@@ -88,6 +93,8 @@ Your deployment needs to meet the following prerequisites in order to properly s
 
 ## Change Accelerated Networking settings on a cluster
 
+To change Accelerated Networking settings on a cluster:
+
 #### [PowerShell](#tab/powershell)
 
 On a node with Accelerated Networking enabled, run the following cmdlet with the values for the new intent and node reserve:
@@ -104,11 +111,13 @@ There isn't currently a method for changing Accelerated Networking settings on a
 
 ## Disable Accelerated Networking on a cluster
 
+To disable Accelerated Networking on a cluster:
+
 #### [PowerShell](#tab/powershell)
 
 1. In a PowerShell window, go to any node in the cluster you want to disable Accelerated Networking for.
 
-1. Run the following cmdlet to disable AccelNet on the cluster:
+1. Run the following cmdlet to disable Accelerated Networking on the cluster:
 
   ```powershell
   Run Disable-AccelNetManagement 
@@ -117,7 +126,7 @@ There isn't currently a method for changing Accelerated Networking settings on a
 After you disable the cluster, the Network HUD no longer monitors the health of the feature.
 
 >[!NOTE]
->Disabling AccelNet at the cluster doesn't change setting configurations on the virtual machines (VMs). VMs are no longer managed by AccelNet or tracked by the Network HUD.
+>Disabling Accelerated Networking at the cluster doesn't change setting configurations on the virtual machines (VMs). VMs are no longer managed by Accelerated Networking or tracked by the Network HUD.
 
 #### [Windows Admin Center](#tab/wac)
 
@@ -128,13 +137,15 @@ After you disable the cluster, the Network HUD no longer monitors the health of 
 
 ## Enable Accelerated Networking on a VM
 
+To enable Accelerated Networking on a VM:
+
 #### [PowerShell](#tab/powershell)
 
-1. Create a VM on a host in a cluster that has AccelNet enabled.
+1. Create a VM on a host in a cluster that has Accelerated Networking enabled.
 
 1. In a PowerShell window, go to the node containing the VM you want to enable AcceNet on.
 
-1. Run the following cmdlet to enable AccelNet:
+1. Run the following cmdlet to enable Accelerated Networking:
 
   ```powershell
   Enable-AccelNetVM -VMName -Performance
@@ -151,7 +162,7 @@ After you disable the cluster, the Network HUD no longer monitors the health of 
   | Enabled | Medium | 4 |
   | Enabled | High | 4 |
 
-1. To enable AccelNet for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
+1. To enable Accelerated Networking for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
 
   ```powershell
   <example cmdlet>
@@ -221,6 +232,8 @@ You can configure settings on either a single VM or multiple VMs at the same tim
 
 ## Disable Accelerated Networking on a VM
 
+To disable Accelerated Networking on a VM:
+
 #### [PowerShell](#tab/powershell)
 
 1. Go to the node that contains the VMs you want to disable Accelerated Networking for.
@@ -231,7 +244,7 @@ You can configure settings on either a single VM or multiple VMs at the same tim
    Disable-AccelNetVM -VMName 
    ```
 
-1. To disable AccelNet for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
+1. To disable Accelerated Networking for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
 
   ```powershell
   <example cmdlet>
