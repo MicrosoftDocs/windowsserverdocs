@@ -11,7 +11,7 @@ ms.topic: article
 
 # Active Directory Replication Concepts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Before designing site topology, become familiar with some Active Directory replication concepts.
 
@@ -107,6 +107,6 @@ In general, for a fully routed network, you do not need to create any site link 
 A global catalog server is a domain controller that stores information about all objects in the forest, so that applications can search AD DS without referring to specific domain controllers that store the requested data. Like all domain controllers, a global catalog server stores full, writable replicas of the schema and configuration directory partitions and a full, writable replica of the domain directory partition for the domain that it is hosting. In addition, a global catalog server stores a partial, read-only replica of every other domain in the forest. Partial, read-only domain replicas contain every object in the domain but only a subset of the attributes (those attributes that are most commonly used for searching the object).
 
 ## <a name="BKMK_10"></a>Universal group membership caching
-Universal group membership caching allows the domain controller to cache universal group membership information for users. You can enable domain controllers that are running  Windows Server 2008 to cache universal group memberships by using the Active Directory Sites and Services snap-in.
+Universal group membership caching allows the domain controller to cache universal group membership information for users. You can enable domain controllers that are running Windows Server 2008 or newer to cache universal group memberships by using the Active Directory Sites and Services snap-in.
 
 Enabling universal group membership caching eliminates the need for a global catalog server at every site in a domain, which minimizes network bandwidth usage because a domain controller does not need to replicate all of the objects located in the forest. It also reduces logon times because the authenticating domain controllers do not always need to access a global catalog to obtain universal group membership information. For more information about when to use universal group membership caching, see [Planning Global Catalog Server Placement](../../../ad-ds/plan/Planning-Global-Catalog-Server-Placement.md).
