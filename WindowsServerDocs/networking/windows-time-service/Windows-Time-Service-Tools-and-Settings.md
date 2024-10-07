@@ -256,39 +256,54 @@ The following table lists the policies that you can configure for the Windows Ti
 
 ### GPO default settings for W32Time
 
-Below you'll find the default values for the **Global Configuration Settings** once enabled.
+<p>This policy setting allows you to specify Clock discipline and General values for the Windows Time service (W32time) for domain controllers including RODCs. If this policy setting is enabled, W32time Service on target machines use the settings provided here. Otherwise, the service on target machines use locally configured settings values. For more details on individual parameters, combinations of parameter values as well as definitions of flags, see https://go.microsoft.com/fwlink/?linkid=847809.</p>
+<p>Below you'll find the default values for the **Global Configuration Settings** once enabled.</p>
 
-|Group Policy setting|Default value|
-| --- | --- |
-|AnnounceFlags|10|
-|EventLogFlags|2|
-|FrequencyCorrectRate|4|
-|HoldPeriod|5|
-|LargePhaseOffset|50,000,000|
-|LocalClockDispersion|10|
-|MaxAllowedPhaseOffset|300|
-|MaxNegPhaseCorrection|172,800 (48 hours)|
-|MaxPollInterval|10|
-|MaxPosPhaseCorrection|172,800 (48 hours)|
-|MinPollInterval|6|
-|PhaseCorrectRate|7|
-|PollAdjustFactor|5|
-|SpikeWatchPeriod|900|
-|UpdateInterval|100 (1 second)|
+| Group Policy setting|Default value|Help|
+| --- | --- | --- |
+| **Clock Discipline Parameters** | | For more details on individual parameters, combinations of parameter values as well as definitions of flags, see https://go.microsoft.com/fwlink/?linkid=847809. |
+|FrequencyCorrectRate|4| This parameter controls the rate at which the W32time corrects the local clock's frequency. Lower values cause larger corrections; larger values cause smaller corrections. <br>Default: 4 (scalar). |
+|HoldPeriod|5| This parameter indicates how many consistent time samples the client computer must receive in a series before subsequent time samples are evaluated as potential spikes. <br>Default: 5 |
+|LargePhaseOffset|50,000,000| If a time sample differs from the client computer's local clock by more than LargePhaseOffset, the local clock is deemed to have drifted considerably, or in other words, spiked. <br>Default: 50,000,000 100-nanosecond units (ns) or 5 seconds. |
+|MaxAllowedPhaseOffset|300| If a response is received that has a time variation that is larger than this parameter value, W32time sets the client computer's local clock immediately to the time that is accepted as accurate from the Network Time Protocol (NTP) server. If the time variation is less than this value, the client computer's local clock is corrected gradually. <br>Default: 300 seconds. |
+|MaxNegPhaseCorrection| 172,800 | If a time sample is received that indicates a time in the past (as compared to the client computer's local clock) that has a time difference that is greater than the MaxNegPhaseCorrection value, the time sample is discarded. <br>Default: 172,800 seconds. (48 hours) |
+|MaxPosPhaseCorrection| 172,800 | If a time sample is received that indicates a time in the future (as compared to the client computer's local clock) that has a time difference greater than the MaxPosPhaseCorrection value, the time sample is discarded. <br>Default: 172,800 seconds. (48 hours) |
+|PhaseCorrectRate|7| This parameter controls how quickly W32time corrects the client computer's local clock difference to match time samples that are accepted as accurate from the NTP server. Lower values cause the clock to correct more quickly; larger values cause the clock to correct more slowly. <br>Default: 7 (scalar). |
+|PollAdjustFactor|5| This parameter controls how quickly W32time changes polling intervals. When responses are considered to be accurate, the polling interval lengthens automatically. When responses are considered to be inaccurate, the polling interval shortens automatically. <br>Default: 5 (scalar). |
+|SpikeWatchPeriod| 900| This parameter specifies the amount of time that samples with time offset larger than LargePhaseOffset are received before these samples are accepted as accurate. SpikeWatchPeriod is used in conjunction with HoldPeriod to help eliminate sporadic, inaccurate time samples that are returned from a peer. <br>Default: 900 seconds. |
+|UpdateInterval| 100 | This parameter specifies the amount of time that W32time waits between corrections when the clock is being corrected gradually. When it makes a gradual correction, the service adjusts the clock slightly, waits this amount of time, and then checks to see if another adjustment is needed, until the correction is finished. <br>Default: 100 1/100th second units, or 1 second. |
+| **General Parameters** | | |
+|AnnounceFlags|10| This parameter is a bitmask value that controls how time service availability is advertised through NetLogon.<br>Default: 0x0a hexadecimal |
+|EventLogFlags|2| This parameter controls special events that may be logged to the Event Viewer System log. <br>Default: 0x02 hexadecimal bitmask. |
+|LocalClockDispersion|10| This parameter indicates the maximum error in seconds that is reported by the NTP server to clients that are requesting a time sample. (Applies only when the NTP server is using the time of the local CMOS clock.) <br>Default: 10 seconds. |
+|MaxPollInterval|10| This parameter controls the maximum polling interval, which defines the maximum amount of time between polls of a peer. Default: 10 in log base-2, or 1024 seconds. (Should not be set higher than 15.) |
+|MinPollInterval|10| This parameter controls the minimum polling interval that defines the minimum amount of time between polls of a peer. Default: 6 in log base-2, or 64 seconds. |
+| ClockHoldoverPeriod | 7800 | This parameter indicates the maximum number of seconds a system clock can nominally hold its accuracy without synchronizing with a time source. If this period of time passes without W32time obtaining new samples from any of its input providers, W32time initiates a rediscovery of time sources. <br>Default: 7800 seconds. |
+| RequireSecureTimeSyncRequests | 0 | This parameter controls whether or not the DC will respond to time sync requests that use older authentication protocols. If enabled (set to 1), the DC will not respond to requests using such protocols. <br>Default: 0 Boolean. |
+| UtilizeSslTimeData | 1 | This parameter controls whether W32time will use time data computed from SSL traffic on the machine as an additional input for correcting the local clock.  <br>Default: 1 (enabled) Boolean |
+| ClockAdjustmentAuditLimit | 800 | This parameter specifies the smallest local clock adjustments that may be logged to the W32time service event log on the target machine. <br>Default: 800 Parts per million (PPM). |
+| **RODC parameters Parameters** | | |
+| ChainEntryTimeout | 16 | This parameter specifies the maximum amount of time that an entry can remain in the chaining table before the entry is considered to be expired. Expired entries may be removed when the next request or response is processed. <br>Default: 16 seconds. |
+| ChainMaxEntries | 128 | This parameter controls the maximum number of entries that are allowed in the chaining table. If the chaining table is full and no expired entries can be removed, any incoming requests are discarded. <br>Default: 128 entries. |
+| ChainMaxHostEntries | 4 | This parameter controls the maximum number of entries that are allowed in the chaining table for a particular host. <br>Default: 4 entries. |
+| ChainDisable | 0 | This parameter controls whether or not the chaining mechanism is disabled. If chaining is disabled (set to 0), the RODC can synchronize with any domain controller, but hosts that do not have their passwords cached on the RODC will not be able to synchronize with the RODC. <br>Default: 0 Boolean. |
+| ChainLoggingRate | 30 | This parameter controls the frequency at which an event that indicates the number of successful and unsuccessful chaining attempts is logged to the System log in Event Viewer. <br>Default: 30 minutes. |
 
 ### GPO settings for NTP Client
 
-These are the default Windows NTP client settings contained in **Computer Configuration\Administrative Templates\System\Windows Time Service\Time Providers\Configure Windows NTP Client**.
+<p>This policy setting specifies a set of parameters for controlling the Windows NTP Client. If you enable this policy setting, you can specify the following parameters for the Windows NTP Client. If you disable or do not configure this policy setting, the WIndows NTP Client uses the defaults of each of the following parameters.</p>
 
-|Group Policy setting|Default value|
-|------------------------|-----------------|
-|NtpServer|`time.windows.com`, 0x9|
-|Type|**NT5DS** - Used for domain-joined computers<br>**NTP** - Used for non-domain-joined computers|
-|CrossSiteSyncFlags|2|
-|ResolvePeerBackoffMinutes|15|
-|ResolvePeerBackoffMaxTimes|7|
-|SpecialPollInterval|1024|
-|EventLogFlags|0|
+<p>These are the default Windows NTP client settings contained in **Computer Configuration\Administrative Templates\System\Windows Time Service\Time Providers\Configure Windows NTP Client**.</p>
+
+|Group Policy setting|Default value|Help|
+|------------------------|-----------------|----|
+|NtpServer|`time.windows.com`, 0x9|  The Domain Name System (DNS) name or IP address of an NTP time source. This value is in the form of ""dnsName,flags"" where ""flags"" is a hexadecimal bitmask of the flags for that host. For more information, see the NTP Client Group Policy Settings Associated with Windows Time section of the Windows Time Service Group Policy Settings. <br>The default value is ""time.windows.com,0x09"". |
+|Type|NT5DS|**NT5DS** - Used for domain-joined computers<br>**NTP** - Used for non-domain-joined computers<br> This value controls the authentication that W32time uses.|
+|CrossSiteSyncFlags|2| This value controls the authentication that W32time uses. <br>The default value is NT5DS. |
+|ResolvePeerBackoffMinutes|15| This value, expressed in minutes, controls how long W32time waits before it attempts to resolve a DNS name when a previous attempt failed. <br>The default value is 15 minutes. |
+|ResolvePeerBackoffMaxTimes|7| This value controls how many times W32time attempts to resolve a DNS name before the discovery process is restarted. Each time DNS name resolution fails, the amount of time to wait before the next attempt will be twice the previous amount. The default value is seven attempts. |
+|SpecialPollInterval|1024| This NTP client value, expressed in seconds, controls how often a manually configured time source is polled when the time source is configured to use a special polling interval. If the SpecialInterval flag is enabled on the NTPServer setting, the client uses the value that is set as the SpecialPollInterval, instead of a variable interval between MinPollInterval and MaxPollInterval values, to determine how frequently to poll the time source. SpecialPollInterval must be in the range of [MinPollInterval, MaxPollInterval], else the nearest value of the range is picked. <br>Default: 1024 seconds. |
+|EventLogFlags|0| This value is a bitmask that controls events that may be logged to the System log in Event Viewer. Setting this value to 0x1 indicates that W32time will create an event whenever a time jump is detected. Setting this value to 0x2 indicates that W32time will create an event whenever a time source change is made. Because it is a bitmask value, setting 0x3 (the addition of 0x1 and 0x2) indicates that both time jumps and time source changes will be logged.
 
 > [!NOTE]
 > If you use Group Policy to set the **NtpServer** value as part of the **Configure Windows NTP Client** policy and apply it to a domain member, the Windows Time Service will not use the **NtpServer** Registry value. To view your NTP configuration, open a Command Prompt and run `w32tm /query /configuration`.
