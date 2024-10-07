@@ -26,6 +26,8 @@ To enable the **Machine Identity Isolation Configuration** setting, open **Group
 
 - **Computer Configuration\Administrative Templates\System\Device Guard\Turn On Virtualization Based Security**
 
+![A screenshot of the Turn On Virtualization Based Security group policy setting set to enabled.](../media/delegated-managed-service-accounts/turn-on-virtualization-based-security-gpo-setting.png)
+
 The available options for this specific setting are:
 
 - **Disabled**: Turns off Machine Identity Isolation. If this policy was previously set to *Enabled in audit mode*, no further action is needed. If this policy was previously set to *Enabled in enforcement mode*, the device must be unjoined and rejoined to the domain, as it's unable to authenticate otherwise.
