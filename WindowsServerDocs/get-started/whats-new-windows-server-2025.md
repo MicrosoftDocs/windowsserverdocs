@@ -180,6 +180,10 @@ By default new Routing and Remote Access Services (RRAS) setups don't accept VPN
 
 Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
+### Secure certificate management
+
+Searching or retrieving certificates on Windows now supports SHA-256 hashes, as described in the functions [CertFindCertificateInStore](/windows/win32/api/wincrypt/nf-wincrypt-certfindcertificateinstore), and [CertGetCertificateContextProperty](/windows/win32/api/wincrypt/nf-wincrypt-certgetcertificatecontextproperty). TLS server authentication is more secure across Windows, and now requires a minimum RSA key length of 2048 bits. For more information, read [TLS server authentication: Deprecation of weak RSA certificates](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/tls-server-authentication-deprecation-of-weak-rsa-certificates/ba-p/4134028). 
+
 ### Security Baseline
 
 Starting with build 26296, the Windows Server 2025 Security Baseline Preview is now available. By implementing a customized security baseline, you can establish security measures right from the beginning for your device or VM role based on the recommended security posture. This baseline comes equipped with over 350 preconfigured Windows security settings that enable you to apply and enforce specific security settings that align with the best practices recommended by Microsoft and industry standards. To learn more, see [OSConfig overview](../security/osconfig/osconfig-overview.md).
