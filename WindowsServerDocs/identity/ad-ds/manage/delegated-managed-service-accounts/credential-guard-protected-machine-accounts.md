@@ -1,13 +1,13 @@
 ---
-title: Credential Guard in machine accounts in Windows Server 2025 (Preview)
-description: Learn how to enhance machine accounts security in Windows Server 2025 (Preview) through Credential Guard and machine identity isolation group policy setting.
+title: Credential Guard protected machine accounts in Windows Server 2025 (Preview)
+description: Learn how to enhance machine accounts security in Windows Server 2025 (Preview) through Credential Guard machine protected identity isolation group policy settings.
 ms.topic: conceptual
 ms.author: alalve
 author: mariamgewida
-ms.date: 10/04/2024
+ms.date: 10/07/2024
 ---
 
-# Credential Guard in machine accounts
+# Credential Guard protected machine accounts
 
 Recent Windows features, such as the Flexible Authentication Secure Tunneling (FAST) Kerberos extension, also known as Kerberos Armoring, became increasingly dependent on machine accounts to enhance security. The machine account is used to add entropy to the client's secret key and both gMSA and dMSA service accounts now rely on machine accounts and grant them access to service accounts. However, this reliance on machine accounts created a vulnerability in service account security, as machine accounts can be easily extracted from the registry and used to access highly secured service accounts.
 
