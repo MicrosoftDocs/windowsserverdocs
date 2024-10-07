@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 10/01/2024
+ms.date: 10/07/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -151,7 +151,7 @@ Build 26040 has a new compression feature when compressing an item by performing
 
 ### Hyper-V Manager
 
-When creating a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the New Virtual Machine Wizard.
+When users create a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the **New Virtual Machine Wizard**.
 
 ### NVMe
 
@@ -182,7 +182,7 @@ Existing configurations retain their behavior. For example, if you're running Wi
 
 ### Security Baseline
 
-Starting with build 26296, the Windows Server 2025 Security Baseline Preview is now available. By implementing a customized security baseline, you can establish security measures right from the beginning for your device or VM role based on the recommended security posture. This baseline comes equipped with over 350 preconfigured Windows security settings that enable you to apply and enforce specific security settings that align with the best practices recommended by Microsoft and industry standards. To learn more, see [OSConfig overview](../security/osconfig/osconfig-overview.md).
+By implementing a customized security baseline, you can establish security measures right from the beginning for your device or VM role based on the recommended security posture. This baseline comes equipped with over 350 preconfigured Windows security settings that enable you to apply and enforce specific security settings that align with the best practices recommended by Microsoft and industry standards. To learn more, see [OSConfig overview](../security/osconfig/osconfig-overview.md).
 
 ### Server Message Block
 
