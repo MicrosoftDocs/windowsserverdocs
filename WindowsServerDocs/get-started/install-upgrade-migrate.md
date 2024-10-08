@@ -4,7 +4,7 @@ description: Important information when performing a feature update, clean insta
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
-ms.date: 09/27/2024
+ms.date: 10/16/2024
 ---
 
 # Feature update, clean install, or migrate to Windows Server
@@ -18,9 +18,9 @@ Is it time to move to a newer version of Windows Server? Depending on what you'r
 > [!TIP]
 > You can download and try the latest version of Windows Server free of charge at [Windows Server Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2025).
 
-## In-place operating system feature update
+## In-place OS Updgrade (Feature Update)
 
-An in-place OS upgrade (feature update) performs a feature update of your Windows Server installation. You can upgrade to a later version of Windows Server while keeping your original settings, server roles, features, and data. In-place feature update lets you jump ahead multiple versions. This method is the quickest way to move to a later version of Windows Server. For more information about OS upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to). Keep in mind that some roles and features don't support in-place feature upgrades. In-place feature upgrades work best with virtual machines (VMs) that don't need specific Original Equipment Manufacturer (OEM) hardware drivers to upgrade successfully.
+An In-place OS Upgrade (Feature Update) performs a feature update of your Windows Server installation. You can upgrade to a later version of Windows Server while keeping your original settings, server roles, features, and data. In-place feature update lets you jump ahead multiple versions. This method is the quickest way to move to a later version of Windows Server. For more information about OS upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to). Keep in mind that some roles and features don't support in-place feature upgrades. In-place feature upgrades work best with virtual machines (VMs) that don't need specific Original Equipment Manufacturer (OEM) hardware drivers to upgrade successfully.
 
 - For step-by-step instructions for how to perform an feature updates, see [Perform an in-place upgrade](perform-in-place-upgrade.md).
 
@@ -28,11 +28,11 @@ An in-place OS upgrade (feature update) performs a feature update of your Window
 
 - For a more detailed guide about how to perform feature updates for different versions of Windows Server, including which roles and features support feature updates, see [Update and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
 
-## Cluster operating system rolling feature upgrade
+## Cluster Operating System Rolling Upgrade (Feature Update)
 
-The Cluster operating system rolling OS upgrade (feature update) gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a feature update to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements (SLA). Cluster-Aware Updating (CAU) is a feature that automates the software updating process on clustered servers while maintaining availability. For more details, see [Cluster-Aware Updating overview](https://learn.microsoft.com/windows-server/failover-clustering/cluster-aware-updating).
+The Cluster Operating System Rolling Upgrade (Feature Update) gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a feature update to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements (SLA). Cluster-Aware Updating (CAU) is a feature that automates the software updating process on clustered servers while maintaining availability. For more details, see [Cluster-Aware Updating overview](https://learn.microsoft.com/windows-server/failover-clustering/cluster-aware-updating) and [Cluster operating system rolling upgrade](https://learn.microsoft.com//windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).
 
-If you're running VMs on an Azure Stack hyperconverged infrastructure (HCI) solution, we recommend you use the Local Configuration Manager (LCM) to perform your feature update. For more information, see [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure)for more information.
+If you're running VMs on an Azure Stack hyperconverged infrastructure (HCI) solution, we recommend you use the Life Cycle Manager (LCM) to perform your feature update. For more information, see [About Azure Stack HCI upgrades](https://learn.microsoft.com/en-us/azure-stack/hci/upgrade/about-upgrades-23h2) for more information.
 
 ## Clean operating system install
 
