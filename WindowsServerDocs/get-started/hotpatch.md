@@ -21,6 +21,9 @@ article covers information about hotpatch for supported VMs, which has the follo
 - Reduces the time exposed to security risks and change windows, and easier patch orchestration with
   Azure Update Manager.
 
+>[!IMPORTANT]
+>Hotpatch is available for a free trial period, but after the period ends, you must enter one of the following pricing plans: <!--Get links for pricing plans.--->
+
 ## Supported platforms
 
 Hotpatch is supported only on VMs and Azure Stack HCI created from images with the exact combination of publisher, offer and sku from the below OS images list. Windows Server container base images or Custom images or any other publisher, offer, sku combinations aren't supported.
@@ -31,6 +34,10 @@ Hotpatch is supported only on VMs and Azure Stack HCI created from images with t
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Core-smalldisk |
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Hotpatch |
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Hotpatch-smalldisk |
+| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-Core |
+| MicrosoftWindowsServer | WindowsServer |  |
+
+<!--What are the correct image names for Windows Server 2025?-->
 
 To get started using Hotpatch, use your preferred method to create an Azure or Azure Stack HCI VM,
 and select one of the following images that you would like to use. Hotpatch is selected by default
