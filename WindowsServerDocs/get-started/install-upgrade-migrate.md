@@ -45,7 +45,7 @@ Migration is when you move roles or features from a source computer running Wind
 
 ## License conversion
 
-License conversion converts a particular edition of a specific version of Windows Server to another edition of the same release. All you have to do is run a command and enter the appropriate license key for the edition you want to convert to. For example, if your server is running Windows Server Standard edition, you can convert it to Windows Server Datacenter edition. However, when you convert your edition from Standard to Datacenter, there's no way to reverse the process to return to Standard edition. In some releases of Windows Server, you can also freely convert between original equipment manufacturer (OEM), volume-licensed, and retail versions with the same command and the appropriate license key.
+License conversion converts a particular edition of a specific version of Windows Server to another edition of the same release. All you have to do is run a command and enter the appropriate license key for the edition you want to convert to. For example, if your server is running Windows Server Standard edition, you can convert it to Windows Server Datacenter edition. However, when you convert your edition from Standard to Datacenter, there's no way to reverse the process to return to Standard edition. In some releases of Windows Server, you also can freely convert between original equipment manufacturer (OEM), volume-licensed, and retail versions with the same command and the appropriate license key.
 
 ## Related content
 
