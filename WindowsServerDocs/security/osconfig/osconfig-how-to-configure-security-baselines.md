@@ -6,7 +6,7 @@ ms.product: windows-server
 ms.author: wscontent
 author: xelu86
 ms.contributor: Dona Mukherjee, PM
-ms.date: 09/30/2024
+ms.date: 10/09/2024
 ---
 
 # How to deploy OSConfig security baselines locally
@@ -36,6 +36,8 @@ Before you can apply the security baseline for the first time, the OSConfig modu
    ```powershell
    Install-Module -Name Microsoft.OSConfig -Scope AllUsers -Repository PSGallery -Force
    ```
+
+   You might be prompted to install or update the **NuGet** provider. Select **Yes** to proceed.
 
 1. To verify if the OSConfig module is installed, run the following command:
 
@@ -212,3 +214,7 @@ Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer 
 > - RenameGuestAccount
 >
 > After providing the necessary input, press **Enter** to proceed.
+
+## See also
+
+- [How to deploy OSConfig security baselines locally](osconfig-how-to-configure-wdac-for-business.md)
