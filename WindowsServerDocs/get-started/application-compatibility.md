@@ -10,8 +10,9 @@ zone_pivot_groups: windows-os-version
 ---
 
 # Microsoft server applications compatibility for Windows Server
+We understand that application compatibility is one of the top reasons that customers choose Windows Server. Throughout the Windows Server development cycle, Microsoft regularly tests a large suite of first-party and third-party applications to ensure our products are compatible with as many applications as possible. These tests cover a wide range of third-party enterprise applications, including development tools, graphics tools, security tools, business office suites, storage management, antivirus, backup or recovery, and utilities.
 
-This table lists Microsoft server applications that support installation and functionality on Window Server. This information is for quick reference and isn't intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
+The following table lists Microsoft server applications that support installation and functionality on Window Server. This information is for quick reference and isn't intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
 
 > [!TIP]
 > If you are a software vendor partner looking for more information on Windows Server compatibility with non-Microsoft applications, visit the [Commercial App Certification portal](https://commercialappcertification.microsoft.com/).
