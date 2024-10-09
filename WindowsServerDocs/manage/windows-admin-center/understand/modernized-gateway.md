@@ -6,7 +6,7 @@ author: davannaw-msft
 ms.author: dawhite
 ms.date: 01/02/2024
 ---
-# What is the Windows Admin Center modernized gateway (preview)?
+# What is the Windows Admin Center modernized gateway?
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
