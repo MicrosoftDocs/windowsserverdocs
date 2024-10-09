@@ -56,7 +56,7 @@ A 64-bit architecture is required to run the Windows PowerShell commands used to
 | User account's domain DCs               | RFC compliant KDC                                                      |
 | Shared service member hosts             |                                                                        |
 | Member host's domain DCs                | RFC compliant KDC                                                      |
-| gMSA account's domain DCs               | Windows Server 2012  DCs available for host to retrieve the password   |
+| gMSA account's domain DCs               | Windows Server 2012 or later DCs available for host to retrieve the password   |
 | Backend service host                    | RFC compliant Kerberos application server                              |
 | Backend service account's domain DCs    | RFC compliant KDC                                                      |
 | Windows PowerShell for Active Directory | The Active Directory Domain Services Remote Server Administrator Tools |
@@ -114,7 +114,7 @@ Membership in *Domain Admins* or the ability to create `msDS-GroupManagedService
 
 To create a gMSA using PowerShell, follow these steps.
 
-1. On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
+1. On the Windows Server 2012 or later domain controller, run Windows PowerShell from the Taskbar.
 
 1. At the command prompt for the Windows PowerShell, type the following commands, and then press ENTER. (The Active Directory module loads automatically.)
 
@@ -148,7 +148,7 @@ Membership in *Domain Admins*, *Account Operators*, or ability to create `msDS-G
 
 To create a gMSA for outbound authentication only using PowerShell, follow the steps.
 
-1. On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
+1. On the Windows Server 2012 or later domain controller, run Windows PowerShell from the Taskbar.
 
 1. At the command prompt for the Windows PowerShell Active Directory module, use the following command.
 
@@ -207,7 +207,7 @@ Membership in *Domain Admins*, *Account Operators*, or ability to manage `msDS-G
 
 ### Add member hosts using PowerShell
 
-1. On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
+1. On the Windows Server 2012 or later domain controller, run Windows PowerShell from the Taskbar.
 
 1. At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
@@ -268,7 +268,7 @@ Membership in *Domain Admins*, *Account Operators*, or ability to manage `msDS-G
 
 ### Remove member hosts using PowerShell
 
-1. On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
+1. On the Windows Server 2012 or later domain controller, run Windows PowerShell from the Taskbar.
 
 1. At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
@@ -305,7 +305,7 @@ Membership in *Administrators*, or equivalent, is the minimum required to comple
 
 ### Remove gMSA using PowerShell
 
-1. On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
+1. On the Windows Server 2012 or later domain controller, run Windows PowerShell from the Taskbar.
 
 1. At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
