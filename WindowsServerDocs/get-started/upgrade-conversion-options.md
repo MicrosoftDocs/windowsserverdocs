@@ -10,14 +10,14 @@ ms.topic: conceptual
 
 You can perform an in-place feature update or convert installations of Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed. This article helps explain what the options are to help with your planning.
 
-The process of performing a feature update or converting installations of Windows Server might vary greatly depending on which version and edition you have installed, how it's licensed, and the pathway you take. We use different terms to distinguish between actions, any of which could be involved in a deployment of Windows Server: in-place feature update, clean install, cluster operating system (OS) rolling update, migration, and license conversion. You can learn more about these terms at [Install, update, or migrate to Windows Server](install-upgrade-migrate.md).
+The process of performing an upgrade (feature update) or converting installations of Windows Server might vary greatly depending on which version and edition you have installed, how it's licensed, and the pathway you take. We use different terms to distinguish between actions, any of which could be involved in a deployment of Windows Server: in-place feature update, clean install, cluster operating system (OS) rolling update, migration, and license conversion. You can learn more about these terms at [Install, update, or migrate to Windows Server](install-upgrade-migrate.md).
 
-## Feature update of licensed versions of Windows Server
+## Upgrade of licensed versions of Windows Server
 
-The following general guidelines are for in-place feature update paths where Windows Server is **already licensed**, that is, not evaluation:
+The following general guidelines are for in-place upgrade (feature update) paths where Windows Server is **already licensed**, that is, not evaluation:
 
-- Feature updates from 32-bit to 64-bit architectures aren't supported. All releases of Windows Server since Windows Server 2008 R2 are 64-bit only.
-- Feature updates from one language to another aren't supported.
+- Upgrades from 32-bit to 64-bit architectures aren't supported. All releases of Windows Server since Windows Server 2008 R2 are 64-bit only.
+- Upgrades from one language to another aren't supported.
 - If the server is an Active Directory domain controller, you can't convert it to a retail version. See [Upgrade Domain Controllers to Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md) for important information.
 - Upgrades from prerelease versions (previews) of Windows Server aren't supported. Perform a clean install of Windows Server.
 - Upgrades that switch from a Server Core installation to a Server with Desktop Experience installation or vice versa aren't supported.
