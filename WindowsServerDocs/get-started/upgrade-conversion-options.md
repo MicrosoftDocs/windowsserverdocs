@@ -2,7 +2,7 @@
 title: Feature update and conversion options for Windows Server
 description: Perform an in-place feature update or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
 ms.author: wscontent
-ms.date: 09/30/2024
+ms.date: 10/10/2024
 ms.topic: conceptual
 ---
 
@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 You can perform an in-place upgrade (feature update) or convert installations of Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed. This article helps explain what the options are to help with your planning.
 
-The process of performing an upgrade (feature update) or converting installations of Windows Server might vary greatly depending on which version and edition you have installed, how it's licensed, and the pathway you take. We use different terms to distinguish between actions, any of which could be involved in a deployment of Windows Server: in-place feature update, clean install, cluster operating system (OS) rolling update, migration, and license conversion. You can learn more about these terms at [Install, update, or migrate to Windows Server](install-upgrade-migrate.md).
+The process of performing an upgrade (feature update) or converting installations of Windows Server might vary greatly depending on which version and edition you have installed, how it's licensed, and the pathway you take. We use different terms to distinguish between actions, any of which could be involved in a deployment of Windows Server: in-place upgrade, clean install, cluster operating system (OS) rolling update, migration, and license conversion. You can learn more about these terms at [Install, update, or migrate to Windows Server](install-upgrade-migrate.md).
 
 ## Upgrade of licensed versions of Windows Server
 
