@@ -364,6 +364,10 @@ The Windows Terminal, a powerful and efficient multishell application for comman
 
 Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
 
+### Accelerated Networking
+
+In regular networking, a connection between two VNs would have to go through virtual switches located on physical servers. With Accelerated Networking, you can now bypass those virtual switches and forward traffic directly to the VM. This bypassing lowers latency, reduces jitter, and decreases CPU utilization, making Accelerated Networking ideal for high-performance computing, real-time applications, and virtualized network functions.
+
 ## See also
 
 - [Windows Server Insiders Community discussions](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)
