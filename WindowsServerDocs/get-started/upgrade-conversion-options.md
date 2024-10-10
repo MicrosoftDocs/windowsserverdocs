@@ -68,7 +68,7 @@ If your server is running an evaluation version of Windows Server Standard or Da
    DISM /online /Set-Edition:<target edition> /GetEula:C:\license.rtf
    ```
 
-1. Enter the new edition name and corresponding retail product key in the following command. The feature update process requires you to accept the Microsoft Software License Terms for Windows Server that you saved previously.
+1. Enter the new edition name and corresponding retail product key in the following command. The set edition process requires you to accept the Microsoft Software License Terms for Windows Server that you saved previously.
 
    ```cmd
    DISM /online /Set-Edition:<target edition> /ProductKey:<product key> /AcceptEula
@@ -128,7 +128,7 @@ slmgr.vbs /ipk <product key>
 
 ## See also
 
-For more information about feature upgrading Windows Server, see the following articles:
+For more information about upgrading Windows Server, see the following articles:
 
 - [Overview of Windows Server upgrades](upgrade-overview.md)
 - [Server Core vs Server with Desktop Experience install options](install-options-server-core-desktop-experience.md)
