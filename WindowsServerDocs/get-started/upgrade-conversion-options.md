@@ -1,13 +1,13 @@
 ---
-title: Feature update and conversion options for Windows Server
-description: Perform an in-place feature update or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
+title: Upgrade and conversion options for Windows Server
+description: Perform an in-place upgrade (feature update) or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
 ms.author: wscontent
 author: robhindman
 ms.date: 10/10/2024
 ms.topic: conceptual
 ---
 
-# Feature update and conversion options for Windows Server
+# Upgrade and conversion options for Windows Server
 
 You can perform an in-place upgrade (feature update) or convert installations of Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed. This article helps explain what the options are to help with your planning.
 
@@ -23,11 +23,11 @@ The following general guidelines are for in-place upgrade (feature update) paths
 - Upgrades from prerelease versions (previews) of Windows Server aren't supported. Perform a clean install of Windows Server.
 - Upgrades that switch from a Server Core installation to a Server with Desktop Experience installation or vice versa aren't supported.
 - Upgrades from a previous Windows Server installation to an evaluation copy of Windows Server aren't supported. Evaluation versions should be installed as clean installs.
-- When you upgrade from a previous version to a new version, the default is to retain the existing operating system edition. For example, the default is to feature update from Standard (previous version) to Standard (new version), from Datacenter (previous version) to Datacenter (new version), or from Datacenter: Azure Edition (previous version) to Datacenter: Azure Edition (new version).
-- Alternatively, you can change to certain other editions when upgrading. You can change from Standard to Datacenter or to Datacenter: Azure Edition, or change from Datacenter to Datacenter: Azure Edition. You can't change from Datacenter to Standard edition or from Datacenter: Azure Edition to either Standard or Datacenter editions when feature updating.
+- When you upgrade from a previous version to a new version, the default is to retain the existing operating system edition. For example, the default is to upgrade from Standard (previous version) to Standard (new version), from Datacenter (previous version) to Datacenter (new version), or from Datacenter: Azure Edition (previous version) to Datacenter: Azure Edition (new version).
+- Alternatively, you can change to certain other editions when upgrading. You can change from Standard to Datacenter or to Datacenter: Azure Edition, or change from Datacenter to Datacenter: Azure Edition. You can't change from Datacenter to Standard edition or from Datacenter: Azure Edition to either Standard or Datacenter editions when upgrading.
 
 > [!NOTE]
-> If your server uses NIC Teaming, disable NIC Teaming prior to feature update, and then re-enable it after the upgrade is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.
+> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after the upgrade is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.
 
 ## Convert an evaluation version to a retail version
 
