@@ -2,6 +2,7 @@
 title: Feature update and conversion options for Windows Server
 description: Perform an in-place feature update or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
 ms.author: wscontent
+author: robhindman
 ms.date: 10/10/2024
 ms.topic: conceptual
 ---
