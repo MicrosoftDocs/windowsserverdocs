@@ -942,6 +942,8 @@
         href: ad-fs/troubleshooting/ad-fs-tshoot-certs.md
       - name: Claims syntax
         href: ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md
+      - name: Congestion control
+        href: ad-fs/troubleshooting/ad-fs-tshoot-congestion.md
       - name: DNS
         href: ad-fs/troubleshooting/ad-fs-tshoot-dns.md
       - name: Endpoints
