@@ -9,17 +9,12 @@ ms.author: wscontent
 
 # Hotpatch for virtual machines
 
-Hotpatching is a way to install OS security updates on supported _Windows Server Datacenter: Azure
-Edition_ virtual machines (VMs) that doesn’t require a reboot after installation. It works by
-patching the in-memory code of running processes without the need to restart the process. This
-article covers information about hotpatch for supported VMs, which has the following benefits:
+Hotpatching is a way to install OS security updates on supported Windows Server Datacenter: Azure Edition virtual machines (VMs) that doesn’t require a reboot after installation. It works by patching the in-memory code of running processes without the need to restart the process. Hotpatching also provides the following benefits:
 
-- Fewer binaries mean update install faster and consume less disk and CPU resources.
-- Lower workload impact with fewer reboots.
-- Better protection, as the hotpatch update packages are scoped to Windows security updates that
-  install faster without rebooting.
-- Reduces the time exposed to security risks and change windows, and easier patch orchestration with
-  Azure Update Manager.
+- Fewer binaries mean updates install faster and consume less disk and CPU resources.
+- Lower workload impact with less need to restart your machine.
+- Better protection, as the hotpatch update packages are scoped to Windows security updates that install faster without requiring you to restart your machine.
+- Reduces the time exposed to security risks and change windows, and easier patch orchestration with Azure Update Manager.
 
 >[!IMPORTANT]
 >Hotpatch is available for a free trial period, but after the period ends, you must enter one of the following pricing plans: <!--Get links for pricing plans.--->
@@ -28,66 +23,52 @@ article covers information about hotpatch for supported VMs, which has the follo
 
 Hotpatch is supported only on VMs and Azure Stack HCI created from images with the exact combination of publisher, offer and sku from the below OS images list. Windows Server container base images or Custom images or any other publisher, offer, sku combinations aren't supported.
 
-| Publisher               | OS Offer      |  Sku               |
+| Publisher               | OS Offer      |  SKU               |
 |-------------------------|---------------|--------------------|
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Core |
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Core-smalldisk |
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Hotpatch |
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Hotpatch-smalldisk |
 | MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-Core |
-| MicrosoftWindowsServer | WindowsServer |  |
+| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Edition |
+| MicrosoftWindowsServer | WindowsServer | 2025-Standard-Edition |
 
-<!--What are the correct image names for Windows Server 2025?-->
+The Azure portal selects Hotpatch by default when you create an Azure VM. To start using Hotpatch, create an Azure or Azure Stack HCI VM using one of the following compatible images:
 
-To get started using Hotpatch, use your preferred method to create an Azure or Azure Stack HCI VM,
-and select one of the following images that you would like to use. Hotpatch is selected by default
-when creating an Azure VM in the Azure portal.
-
+- Windows Server 2025: Azure Edition
+- Windows Server 2025 Datacenter
+- Windows Server 2025: Standard Edition
 - Windows Server 2022 Datacenter: Azure Edition Hotpatch (Desktop Experience)
 - Windows Server 2022 Datacenter: Azure Edition Core<sup>1</sup>
 
 <sup>1</sup> Hotpatch is enabled by default on Server Core images.
 
-For more information about the available images, see the
-[Windows Server 2022 Datacenter](https://aka.ms/hotpatchondesktopnewimage) Azure Marketplace
-product.
+For more information about the available images, see the [Windows Server 2022 Datacenter](https://aka.ms/hotpatchondesktopnewimage) on the Azure Marketplace.
 
 ## How Hotpatch works
 
-Hotpatch works by first establishing a baseline with the current Cumulative Update for Windows
-Server. Periodically (starting every three months), the baseline is refreshed with the latest
-Cumulative Update, then hotpatches are released for two months following. For example, if January is
-a Cumulative Update, February and March would be a hotpatch release. For the hotpatch release
-schedule, see
-[Release notes for Hotpatch in Azure Automanage for Windows Server 2022](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8).
+Hotpatch first establishes a baseline with the current Cumulative Update for Windows Server. Every three months, the baseline periodically refreshes with the latest Cumulative Update. You then receive Hotpatch releases for the next two months after the Cumulative Update. For example, if January is
+a Cumulative Update, February and March would have Hotpatch releases. For more information about the Hotpatch release schedule, see [Release notes for Hotpatch in Azure Automanage for Windows Server 2022](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8).
 
-Hotpatches contains updates that don't require a reboot. Because Hotpatch patches the in-memory code
-of running processes without the need to restart the process, your applications are unaffected by
-the patching process. This action is separate from any potential performance and functionality
-implications of the patch itself.
+The following diagram shows an example of an annual three-month schedule including hypothetical unplanned
+baselines due to zero-day fixes.
 
-The following image is an example of an annual three-month schedule (including example unplanned
-baselines due to zero-day fixes).
+:::image type="content" source="media\hotpatch\hotpatch-sample-schedule.png" alt-text="A diagram showing an example of a Hotpatch schedule.":::
 
-:::image type="content" source="media\hotpatch\hotpatch-sample-schedule.png" alt-text="A diagram showing a Hotpatch sample schedule.":::
+<!--Needs clearer alt text-->
 
 There are two types of baselines: **Planned baselines** and **Unplanned baselines**.
 
-- **Planned baselines** are released on a regular cadence, with hotpatch releases in between.
-  Planned baselines include all the updates in a comparable _Latest Cumulative Update_ for that
-  month, and require a reboot.
+- **Planned baselines** are released on a regular cadence, with hotpatch releases in between. Planned baselines include all the updates in a comparable Latest Cumulative Update for that month and require you to restart your machine.
 
-  - The sample schedule illustrates four planned baseline releases in a calendar year (five total in
-    the diagram), and eight hotpatch releases.
+  - The example schedule in the previous diagram has four planned baseline releases in a calendar year and eight hotpatch releases.
 
-- **Unplanned baselines** are released when an important update (such as a zero-day fix) is
-  released, and that particular update can't be released as a hotpatch. When unplanned baselines are
-  released, a hotpatch release is replaced with an unplanned baseline in that month. Unplanned
-  baselines also include all the updates in a comparable _Latest Cumulative Update_ for that month,
-  and also require a reboot.
+- **Unplanned baselines** are released during an unplanned important update, such as a zero-day fix, when that particular update can't be released as a hotpatch. When unplanned baselines release, a hotpatch release is replaced with an unplanned baseline for that month. Unplanned baselines also include all the updates in a comparable Latest Cumulative Update for that month, and therefore require you to reqstart your machine.
 
   - The sample schedule illustrates two unplanned baselines that would replace the hotpatch releases
     for those months (the actual number of unplanned baselines in a year isn't known in advance).
+
+Hotpatch updates don't require you to restart your machine. Because Hotpatches patch the in-memory code of running processes without needing to restart them, your applications aren't affected. This lack of restarting doesn't affect the performance or functionality implications of the patch itself.
 
 ### Supported updates
 
@@ -135,6 +116,12 @@ tools vary depending on your platform. To orchestrate Hotpatch:
 
   - A third-party patch management solution.
 
+- **Windows Server 2025 (preview):** Hotpatch updates for the preview build of Windows Server 2025 are orchestrated using:
+
+  - An Azure Arc-enabled VM created using the Windows Server 2025 Preview ISO image from the Evaluation Center.
+
+  - Configuring Windows Update client settings for the Azure Arc-enabled Windows Server 2925 Preview VM.
+
 ### Understand the patch status for your VM in Azure
 
 To view the patch status for your VM, browse to the VM Overview in the Azure portal, under
@@ -179,3 +166,4 @@ install the last known good baseline update. You'll need to reboot the VM after 
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
 - [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
 - [Azure Update Management](/azure/automation/update-management/overview)
+- [How to preview Azure Arc-connected Hotpatching for WIndows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895)
