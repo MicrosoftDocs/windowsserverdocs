@@ -144,6 +144,9 @@ Hotpatch and Baseline updates don't support automatic rollback. If you experienc
 ## Next steps
 
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
+
 - [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
+
 - [Azure Update Management](/azure/automation/update-management/overview)
+
 - [How to preview Azure Arc-connected Hotpatching for WIndows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895)
