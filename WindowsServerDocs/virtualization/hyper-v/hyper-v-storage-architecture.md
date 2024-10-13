@@ -27,7 +27,7 @@ When using this configuration:
 
 ## Disaggregated Hyper-V with SAN or NAS Storage
 
-In this configuration, you install Hyper-V is a cluster with VMs that access their storage over the network like [hyperconverged storage](#disaggregated-hyper-v-with-hyperconverged-storage), but Hyper-V uses SAN or NAS storage from a storage vendor instead.
+In this configuration, you install Hyper-V in its own cluster. The VMs on the Hyper-V hosts access their storage over the network using SAN or NAS storage from a storage vendor instead.
 
 When using this configuration:
 
@@ -35,7 +35,7 @@ When using this configuration:
 
 - SAN and NAS systems provide their own availability guarantees.
 
-In this model, the compute and storage scales independently from one another. For example, if you need more processing or memory resources to host your VMs (CPU or RAM), you can add more compute nodes or clusters without adding more storage. Each compute cluster can contain between 1 and 64 nodes.
+In this model, the compute and storage scales independently from one another. For example, if you need more processing or memory resources to host your VMs (CPU or RAM), you can add more compute nodes to the cluster or create new clusters without adding more storage. Each compute cluster can contain between 1 and 64 nodes.
 
 You can scale storage independently from the compute cluster. Storage cluster scaling is vendor-specific. Contact your vendors to understand how the storage solution they offer can scale.
 
