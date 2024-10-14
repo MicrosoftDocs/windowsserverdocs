@@ -153,6 +153,10 @@ Build 26040 has a new compression feature when compressing an item by performing
 
 When users create a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the **New Virtual Machine Wizard**.
 
+### Hypervisor-enforced paging translation
+
+Hypervisor-enforced paging translation (HVPT) is a security enhancement to enforce the integrity of linear address translations. HVPT protects critical system data from write-what-where attacks where the attacker writes an arbitrary value to an arbitrary location, often as the result of a buffer overflow. HVPT guards page tables that configure critical system data structures. HVPT includes everything already secured with hypervisor-protected code integrity (HVCI). HVPT is enabled by default where hardware support is available. HVPT isn't enabled when Windows Server runs as a guest in a virtual machine.
+
 ### NVMe
 
 NVMe is a new standard for fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performance, resulting in an increase in IOPS and decrease in CPU utilization.
