@@ -4,7 +4,7 @@ description:  Learn how to troubleshoot various aspects of  AD FS load or conges
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 02/13/2024
+ms.date: 10/14/2024
 ms.topic: article
 ---
 
