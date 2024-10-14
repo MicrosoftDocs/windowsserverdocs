@@ -4,8 +4,8 @@ description: How to install Windows Admin Center on a Windows PC or on a server 
 ms.topic: article
 author: gswashington
 ms.author: robinharwood
-ms.date: 09/30/2024
-zone_pivot_groups: windows-os
+ms.date: 10/14/2024
+zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
 
