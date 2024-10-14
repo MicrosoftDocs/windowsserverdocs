@@ -82,7 +82,7 @@ The following table describes the three group scopes and how they work as securi
 
 ### Special identity groups
 
-Special identities are referred to as groups. Special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
+Special identity group is where certain special identities are grouped together. Special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
 
 For more information, see [Special identity groups](understand-special-identities-groups.md).
 
