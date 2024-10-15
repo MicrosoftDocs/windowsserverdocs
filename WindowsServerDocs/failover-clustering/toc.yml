@@ -1,5 +1,3 @@
-- name: Failover Clustering
-  href: failover-clustering-overview.md
 - name: Overview
   items:
   - name: Failover Clustering
@@ -18,21 +16,21 @@
     href: create-workgroup-cluster.md
 - name: Tutorials
   items:
-  - name: Prestage a cluster in AD DS
+  - name: Failover clusters in AD DS
     items:
     - name: Prestage a cluster in AD DS
       href: prestage-cluster-adds.md
     - name: Configuring cluster accounts in Active Directory
       href: configure-ad-accounts.md
-  - name: Health Service 
+  - name: Health Service
     items:
     - name: Health Service reports
       href: health-service-reports.md
     - name: Health Service faults
       href: health-service-faults.md
-  - name: Cluster-aware updating 
+  - name: Cluster-Aware Updating
     items:
-    - name: Cluster-Aware updating
+    - name: Overview
       href: cluster-aware-updating.md
     - name: Requirements and best practices
       href: cluster-aware-updating-requirements.md
@@ -52,7 +50,7 @@
       href: deploy-cloud-witness.md
     - name: Deploy a file share witness
       href: file-share-witness.md
-  - name: Upgrade your failover cluster 
+  - name: Upgrade your failover cluster
     items:
     - name: Cluster operating system rolling upgrades
       href: cluster-operating-system-rolling-upgrade.md
@@ -60,7 +58,7 @@
       href: upgrade-option-same-hardware.md
   - name: Deploy a custer set
     href: /azure-stack/hci/deploy/cluster-set
-- name: Concepts 
+- name: Concepts
   items:
   - name: Cluster and pool quorum
     href: /azure-stack/hci/concepts/quorum
