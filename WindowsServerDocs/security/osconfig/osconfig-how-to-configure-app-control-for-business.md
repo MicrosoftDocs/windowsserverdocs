@@ -32,8 +32,12 @@ As a component of Windows Server 2025, the deployment of App Control policies pr
 
 ## Prerequisites
 
-- You must be running Windows Server 2025 on your device and have the OSConfig PowerShell module installed. See [Install the OSConfig PowerShell module](osconfig-how-to-configure-security-baselines.md#install-the-osconfig-powershell-module) for details.
+- You must be running a production-signed Windows Server 2025 build on your device.
+- The OSConfig PowerShell module must be installed on your server device. See [Install the OSConfig PowerShell module](osconfig-how-to-configure-security-baselines.md#install-the-osconfig-powershell-module) for details.
 - You must be running Windows 10 version 1909 or later on your client device, and have the [WDAC Policy Wizard](https://webapp-wdac-wizard.azurewebsites.net/) installed.
+
+> [!CAUTION]
+> To ensure compliance with the App Control for Business policies, we require a production-signed build of Windows Server 2025 as flight-signed binaries are not permitted. Failure to comply with this requirement results in the inability to boot your device.
 
 > [!NOTE]
 > If the client device doesn't have **.NET Desktop Runtime 8.0** or later installed, the WDAC Policy Wizard will prompt to download and install this application.
