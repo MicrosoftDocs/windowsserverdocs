@@ -97,7 +97,7 @@ Remove-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\AppBlockList\Enf
 After a policy is removed, there should be no output after running `citool -lp | findstr /I "WS2025"` for verification.
 
 > [!CAUTION]
-> Removing App Control policies manually or through citool.exe can have serious consequences as the drift control protection of OSConfig will reestablish the policies after a refresh period of 4 hours by default. It's imperative that App Control policies added by OSConfig are only removed using OSConfig to prevent any potential system failures.
+> Removing App Control policies manually or through citool.exe causes the drift control protection of OSConfig to reestablish the policies after a refresh period of 4 hours by default. Therefore, we recommend using OSConfig to remove any App Control policies that were set by OSConfig.
 
 ---
 
@@ -124,7 +124,7 @@ To view captured events after applying the App Control policy, first choose any 
 
 ### Configure supplemental policies
 
-To create supplemental WDAC policies, it's required to export the `.evtx` event log file from your server to your client device. To generate these policies, follow these steps:
+To create supplemental App Control policies, follow these steps:
 
 1. Copy the `.extv` log file from your server to your client device.
 1. On the client device, open the **WDAC Policy Wizard**.
