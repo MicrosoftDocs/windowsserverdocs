@@ -1,6 +1,6 @@
 - name: Overview
   items:
-  - name: Failover Clustering
+  - name: Failover clustering
     href: failover-clustering-overview.md
   - name: Hardware requirements
     href: clustering-requirements.md
@@ -56,7 +56,7 @@
       href: cluster-operating-system-rolling-upgrade.md
     - name: Upgrading a failover cluster on the same hardware
       href: upgrade-option-same-hardware.md
-  - name: Deploy a custer set
+  - name: Deploy a cluster set
     href: /azure-stack/hci/deploy/cluster-set
 - name: Concepts
   items:
