@@ -183,8 +183,8 @@ Output for these queries varies based on your policy configuration needs.
 
 ## See also
 
-- [CiTool technical reference](/security/application-security/application-control/app-control-for-business/operations/citool-commands)
+- [CiTool technical reference](/windows/security/application-security/application-control/app-control-for-business/operations/citool-commands)
 
 - [ConfigCI PowerShell reference](/powershell/module/configci)
 
-- [Provide App Control feedback](heseccon@microsoft.com)
+- [Provide App Control feedback](mailto:heseccon@microsoft.com)
