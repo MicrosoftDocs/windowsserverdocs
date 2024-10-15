@@ -6,11 +6,11 @@ ms.product: windows-server
 ms.author: wscontent
 author: xelu86
 ms.contributor: Dona Mukherjee, PM
-ms.date: 10/16/2024
+ms.date: 10/15/2024
 ---
 
 
-# How to configure App Control for Business
+# How to configure App Control for Business with OSConfig
 
 App Control for Business is a software-based security layer that reduces attack surface by enforcing an explicit list of software that is allowed to run. Microsoft developed a default policy for Windows Server 2025, which can be implemented on the server using PowerShell cmdlets. App Control implementation is facilitated by using the OSConfig security configuration platform and provides two main operation modes:
 
@@ -95,6 +95,9 @@ Remove-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\AppBlockList\Enf
 ```
 
 After a policy is removed, there should be no output after running `citool -lp | findstr /I "WS2025"` for verification.
+
+> [!CAUTION]
+> Removing App Control policies manually or through citool.exe can have serious consequences as the drift control protection of OSConfig will reestablish the policies after a refresh period of 4 hours by default. It's imperative that App Control policies added by OSConfig are only removed using OSConfig to prevent any potential system failures.
 
 ---
 
