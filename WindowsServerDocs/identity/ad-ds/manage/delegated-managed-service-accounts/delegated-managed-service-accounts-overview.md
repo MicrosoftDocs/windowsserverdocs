@@ -1,10 +1,10 @@
 ---
 title: Delegated Managed Service Accounts overview in Windows Server 2025 (Preview)
-description: Learn about delegated Managed Service Accounts (DMSA) that authenticate specific machine identities mapped in Active Directory (AD) along with Credential Guard (CG) to ensure device credentials isolation in Windows Server 2025 (Preview).
+description: Learn about delegated Managed Service Accounts (DMSA) that authenticate specific machine identities mapped in Active Directory along with Credential Guard to ensure device credentials isolation in Windows Server 2025 (Preview).
 ms.topic: conceptual
 ms.author: alalve
 author: mariamgewida
-ms.date: 02/14/2024
+ms.date: 09/30/2024
 ---
 
 # Delegated Managed Service Accounts overview
@@ -12,19 +12,19 @@ ms.date: 02/14/2024
 > [!IMPORTANT]
 > Windows Server 2025 is in Preview. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-A new account type known as delegated Managed Service Account (dMSA) is introduced in Windows Server 2025 that allows migration from a traditional service account to a machine account with managed and fully randomized keys, while disabling original service account passwords. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. Using dMSA helps to prevent harvesting credentials using a compromised account (kerberoasting), which is a common issue with traditional service accounts.
+A new account type known as delegated Managed Service Account (dMSA) is introduced in Windows Server 2025 that allows migration from a traditional service account to a machine account with managed and fully randomized keys, while disabling original service account passwords. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in Active Directory (AD) can access the account. Using dMSA helps to prevent harvesting credentials using a compromised account (kerberoasting), which is a common issue with traditional service accounts.
 
 ## dMSA and gMSA comparison
 
 dMSAs and gMSAs are two types of managed service accounts that are used to run services and applications in Windows Server. A dMSA is managed by an administrator and is used to run a service or application on a specific server. A gMSA is managed by AD and is used to run a service or application on multiple servers. Both offer improved security and simplified password management. dMSA differs by:
 
-- Utilizing gMSA concepts to limit scope of usage using [Credential Guard](/windows/security/identity-protection/credential-guard) (CG) to bind machine authentication.
+- Utilizing gMSA concepts to limit scope of usage using [Credential Guard](/windows/security/identity-protection/credential-guard) to bind machine authentication.
 - CG can be used to enhance security in dMSA by automatically rotating passwords and binding all service account tickets. Legacy accounts are then disabled to further improve security.
 - Although gMSAs are secured with machine generate and autorotated passwords, the passwords are still not machine bound and can be stolen.
 
 ## Functionality of dMSA
 
-dMSA allows users to create them as a standalone account, or to replace an existing standard service account. When a dMSA supersedes an existing account, authentication to that existing account using its password will be blocked. The request is redirected to the [Local Security Authority](/windows/win32/secauthn/lsa-authentication) (LSA) to authenticate using dMSA, which has access to everything the previous account could access in AD.
+dMSA allows users to create them as a standalone account, or to replace an existing standard service account. When a dMSA supersedes an existing account, authentication to that existing account using its password is blocked. The request is redirected to the [Local Security Authority](/windows/win32/secauthn/lsa-authentication) (LSA) to authenticate using dMSA, which has access to everything the previous account could access in AD.
 
 During migration, dMSA automatically learns the devices on which the service account to be used which is then used to move from all existing service accounts.
 
@@ -85,6 +85,20 @@ Running `Complete-ADServiceAccountMigration` performs the following changes:
 - **msDS-SupersededServiceAccountState** is set to 2
 - The service account is disabled via the UAC disable bit
 - The SPNs are removed from the account
+
+## dMSA realms
+
+Realms serve as logical groupings that define authentication boundaries, commonly used when integrating different versions of AD across domains or forests. They're especially important in mixed domain environments where some domains may not fully support all features of dMSA. By specifying realms, dMSA can ensure proper communication and authentication flow between domains.
+
+Administrators can use realms to specify which domains or directory components can authenticate and access the dMSA account. This ensures that even older child domains, which may not natively support dMSA features, can interact with the accounts while maintaining security boundaries. By enabling a smoother transition and coexistence of features across mixed environments, realms help ensure compatibility without compromising security.
+
+For example, if you have a primary domain called `corp.contoso.com` running on Windows Server 2025 and an older child domain called `legacy.corp.contoso.com` running Windows Server 2022, you can specify the realm as `legacy.corp.contoso.com`.
+
+To edit this group policy setting for your environment, navigate to the following path:
+
+**Computer Configuration\Administrative Templates\System\Kerberos\Enable Delegated Managed Service Account logons**
+
+![A screenshot of the "Enable Delegated Managed Service Account logons" group policy setting set to enabled.](../media/delegated-managed-service-accounts/enable-delegated-managed-service-account-logons-gpo-setting.png)
 
 ## See also
 

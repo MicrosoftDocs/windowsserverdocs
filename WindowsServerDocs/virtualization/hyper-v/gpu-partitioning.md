@@ -4,6 +4,7 @@ description: Learn about how GPU partitioning works with multiple virtual machin
 author: robinharwood
 ms.author: roharwoo
 ms.topic: conceptual
+ms.subservice: core-os
 ms.date: 09/25/2024
 zone_pivot_groups: windows-os
 ---
