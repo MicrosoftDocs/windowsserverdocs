@@ -10,14 +10,12 @@
   items:
   - name: Create a failover cluster
     href: create-failover-cluster.md
-  - name: Create a workgroup cluster
-    href: create-workgroup-cluster.md  
   - name: Deploy a two-node file server
     href: deploy-two-node-clustered-file-server.md
-  - name: Deploy a custer set
-    href: /azure-stack/hci/deploy/cluster-set
   - name: Manage quorum and witnesses
     href: manage-cluster-quorum.md
+  - name: Create a workgroup cluster
+    href: create-workgroup-cluster.md
 - name: Tutorials
   items:
   - name: Prestage a cluster in AD DS
@@ -60,6 +58,8 @@
       href: cluster-operating-system-rolling-upgrade.md
     - name: Upgrading a failover cluster on the same hardware
       href: upgrade-option-same-hardware.md
+  - name: Deploy a custer set
+    href: /azure-stack/hci/deploy/cluster-set
 - name: Concepts 
   items:
   - name: Cluster and pool quorum
