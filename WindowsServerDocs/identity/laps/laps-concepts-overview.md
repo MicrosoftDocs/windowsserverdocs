@@ -204,8 +204,7 @@ Windows LAPS solves this problem by writing a random GUID to the directory at th
 This feature is only supported when backing passwords up to Active Directory. Microsoft Entra ID isn't supported.
 
 > [!IMPORTANT]
-> The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows Server 2025 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
-
+> The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows 11 24H2, Windows Server 2025 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
 ## See also
 
 - [Windows LAPS account management modes](laps-concepts-account-management-modes.md)
