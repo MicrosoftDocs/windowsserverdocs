@@ -9,7 +9,7 @@ ms.author: wscontent
 
 # Hotpatch for virtual machines
 
-Hotpatching is a way to install OS security updates on supported Windows Server Datacenter: Azure Edition virtual machines (VMs) that doesn’t require a reboot after installation. It works by patching the in-memory code of running processes without the need to restart the process. Hotpatching also provides the following benefits:
+Hotpatching is a way to install OS security updates without requiring a reboot after installation on Windows Server. It works by patching the in-memory code of running processes without the need to restart the process. Hotpatching also provides the following benefits:
 
 - Fewer binaries mean updates install faster and consume less disk and CPU resources.
 
@@ -24,7 +24,7 @@ Hotpatching is a way to install OS security updates on supported Windows Server 
 
 ## Supported platforms
 
-Hotpatch is only supported on virtual machines (VMs) and Azure Stack HCI created from images with the exact combination of publisher, offer, and SKU from the following OS images list. Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
+Hotpatch is supported on Windows Server 2025 and later, Azure Stack HCI, and Windows Server 2022 virtual machines (VMs) created from images with the exact combination of publisher, offer, and SKU from the following OS images list. Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
 
 | Publisher               | OS Offer      |  SKU               |
 |-------------------------|---------------|--------------------|
@@ -36,7 +36,9 @@ Hotpatch is only supported on virtual machines (VMs) and Azure Stack HCI created
 | MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Edition |
 | MicrosoftWindowsServer | WindowsServer | 2025-Standard-Edition |
 
-The Azure portal selects Hotpatch by default when you create an Azure VM. To start using Hotpatch, create an Azure or Azure Stack HCI VM using one of the following compatible images:
+The Azure portal selects Hotpatch by default when you create an Azure VM.
+
+To start using Hotpatch, enable Hotpatch on your Azure Arc-enabled Windows Server 2025 machine, or create an Azure or Azure Stack HCI VM using one of the following compatible images:
 
 - Windows Server 2025: Azure Edition
 
@@ -50,7 +52,7 @@ The Azure portal selects Hotpatch by default when you create an Azure VM. To sta
 
 <sup>1</sup> Hotpatch is enabled by default on Server Core images.
 
-For more information about the available images, see the [Windows Server 2022 Datacenter](https://aka.ms/hotpatchondesktopnewimage) on the Azure Marketplace.
+For more information about the available images, see the [Windows Server](https://aka.ms/hotpatchondesktopnewimage) on the Azure Marketplace.
 
 ## How Hotpatch works
 
