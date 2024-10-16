@@ -55,42 +55,36 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 
 To install Windows Admin Center on your machine running the Windows Server 2025 (preview) Desktop Experience:
 
-1. Open the **Start** menu and enter **admin** into the search bar to search for Windows Admin Center.
+1. Open the **Start** menu and enter **Windows Admin Center Setup** into the search bar to search for Windows Admin Center.
 
-1. Select the **Windows Admin Center Setup app** from the **Best match** list.
+1. Select the **Windows Admin Center Setup** app from the **Best match** list.
 
-1. Select **Run as administrator** to open the **Get started with Windows Admin Center** window.
-
-1. Select **Next** to accept the license terms. After that, the installation app opens, and the Installer download starts automatically.
+1. On the **Get started with Windows Admin Center** window, select **Next** to accept the license terms. After that, the installation app opens, and the Installer download starts automatically.
 
 1. Once the installer has finished downloading, select **Install**.
 
-1. On the License Agreement, select **I accept the agreement**, then select **Next** to start the installation process.
+1. On the License Agreement, if you agree to the terms select **I accept the agreement**, then select **Next** to start the installation process.
 
-1. In the **Select installation mode** window, select **Express local setup**, then select **Next**.
-
->[!NOTE]
->You must select what Transport Layer Security (TLS) certificate Windows Admin Center should use. If you already have an official certificate, it must be installed in the LocalMachine\My certificate store. If you're installing Windows Admin Center for testing purposes only, the installer can generate a self-signed certificate that expires after 60 days.
+1. In the **Select installation mode** window, select **Express remote setup**, then select **Next**.
 
 1. In the **Select TLS certificate** window, select the option that matches your needs, then select **Next**.
+
+   >[!NOTE]
+   >You must select which Transport Layer Security (TLS) certificate Windows Admin Center should use. If you already have a certificate, it must be installed in the `LocalMachine\My` certificates store. If you're installing Windows Admin Center for testing purposes only, the installer can generate a self-signed certificate that expires after 60 days.
 
 1. In the **Automatic updates** window, select your preferred update option, then select **Next**.  
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
-1. Select **Shortcut and Desktop shortcut preferences**, then select **Next**.
+1. Select **Shortcut and Desktop shortcut preferences**, confirm the selection, then select **Next**.
 
 1. In the **Ready to install** window, select **Install** to start the installation process.
 
 1. After the installation process finishes, select **Start Windows Admin Center**, then select **Finish**.
 
-1. Wait for Windows Admin Center to automatically start.
+1. Sign in as Administrator and then select **Sign In**.
 
-1. Sign in as Administrator and then select **Sign In**. 
-
-1. Wait for Windows Admin Center to automatically start.
-
-You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
+You'll now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
 ---
 
@@ -134,18 +128,18 @@ To install Windows Admin Center on your Windows Server 2022 and earlier versions
 
 1. Select your preference for sharing diagnostic data with Microsoft, then select **Next**.
 
-1. In the **Installing Windows Admin Center** window, select the port that you want the Windows Admin Center site to use. . 
+1. In the **Installing Windows Admin Center** window, select the port that you want the Windows Admin Center site to use.
 
->[!NOTE]
->The default port is 6516. The **Allow Windows Admin Center to modify this machine's trusted host settings** checkbox is selected by default. We recommend leaving this check box selected, but you can also deselect the box to disable this setting if you don't want Windows Admin Center to be able to modify your machine's trusted host settings.
+ >[!NOTE]
+ >The default port is 6516. The **Allow Windows Admin Center to modify this machine's trusted host settings** checkbox is selected by default. We recommend leaving this check box selected, but you can also deselect the box to disable this setting if you don't want Windows Admin Center to be able to modify your machine's trusted host settings.
 
-1. Select **Install**. Windows Admin Center installation begins. 
+1. Select **Install**. Windows Admin Center installation begins.
 
-1. In the **One more thing** window, select the correct certificate for Windows Admin Center to use. 
+1. In the **One more thing** window, select the correct certificate for Windows Admin Center to use.
 
-1. Select the option that's highlighted and then select **Finish**. 
+1. Select the option that's highlighted and then select **Finish**.
 
-1. Wait for Windows Admin Center to automatically start. 
+1. Wait for Windows Admin Center to automatically start.
 
 You should now be able to see the name, machine type, and connection history of the machine you installed Windows Admin Center on listed on the **All connections** page at the top of the **Name** column.
 
@@ -171,7 +165,7 @@ To install Windows Admin Center on your Windows client machine:
 >[!NOTE]
 >The default port is 6516. The **Allow Windows Admin Center to modify this machine's trusted host settings** checkbox is selected by default. We recommend leaving this check box selected, but you can also deselect the box to disable this setting if you don't want Windows Admin Center to be able to modify your machine's trusted host settings.
 
-1. Select **Install**. Windows Admin Center installation begins. 
+1. Select **Install**. Windows Admin Center installation begins.
 
 1. In the One more thing window, select the correct certificate for Windows Admin Center to use. Select the option that's highlighted and then select **Finish**. 
 
@@ -185,6 +179,8 @@ You should now be able to see the name, machine type, and connection history of 
 When you start Windows Admin Center from the **Start** menu, it opens in your default browser.
 
 When you start Windows Admin Center for the first time, you should see an icon in the notification area of your desktop. Right-click this icon and select **Open** to open the tool in your default browser. To stop the background process, select **Exit**.
+
+::: zone-end
 
 ## Install on Windows Server with desktop experience
 
@@ -219,8 +215,6 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 
 > [!WARNING]
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
-
-
 
 
 ### [Desktop Experience](#tab/desktop-experience)
