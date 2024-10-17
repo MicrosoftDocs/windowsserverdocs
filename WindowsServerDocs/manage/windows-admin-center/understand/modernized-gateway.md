@@ -1,12 +1,12 @@
 ---
-title: Windows Admin Center modernized gateway (Preview)
+title: Windows Admin Center modernized gateway
 description: Windows Admin Center (Project Honolulu) modernized gateway
 ms.topic: article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 01/02/2024
 ---
-# What is the Windows Admin Center modernized gateway (preview)?
+# What is the Windows Admin Center modernized gateway?
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
