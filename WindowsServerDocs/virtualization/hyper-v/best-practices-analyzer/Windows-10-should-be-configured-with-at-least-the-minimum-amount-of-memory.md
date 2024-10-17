@@ -1,7 +1,7 @@
 ---
 title: Windows 10 should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows 10 is configured with less than the minimum amount of RAM, which is 512 MB.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: e4f5bd2f-b5be-4d43-80e0-0cf198182791

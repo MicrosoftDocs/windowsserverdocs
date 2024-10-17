@@ -2,7 +2,7 @@
 title: Manage DNS zones using DNS server in Windows Server
 description: Learn how to create DNS zones and manage them with DNS server in Windows Server using PowerShell and the DNS Manager console.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to 
 ms.date: 03/23/2023
 ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.

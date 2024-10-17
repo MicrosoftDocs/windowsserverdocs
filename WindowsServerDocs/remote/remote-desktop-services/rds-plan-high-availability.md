@@ -4,7 +4,7 @@ description: Planning information about setting up a highly available RDS deploy
 ms.topic: article
 ms.assetid: ec630ea0-ab80-4dfe-a25f-f4f601651f72
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 manager: dongill
 ---

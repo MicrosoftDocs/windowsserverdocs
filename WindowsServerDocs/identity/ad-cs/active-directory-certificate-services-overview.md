@@ -2,7 +2,7 @@
 title: What is Active Directory Certificate Services?
 description: Overview of the Active Directory Certificate Services (AD CS) server role in Windows Server, including key features and next steps.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: overview
 ms.date: 03/20/2023
 ---

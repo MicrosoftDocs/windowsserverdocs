@@ -4,7 +4,7 @@ description: Migrating from DirectAccess to Always On VPN requires proper planni
 manager: dougkim
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 05/29/2018
 ---

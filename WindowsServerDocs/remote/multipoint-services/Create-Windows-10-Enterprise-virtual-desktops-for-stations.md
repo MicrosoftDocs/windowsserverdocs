@@ -5,7 +5,7 @@ ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
 author: evaseydl
-ms.author: evas
+ms.author: roharwoo
 manager: scottman
 ---
 # Create Windows 10 Enterprise virtual desktops for stations

@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Performance history for Storage Spaces Direct"
 title: Performance history for Storage Spaces Direct
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin

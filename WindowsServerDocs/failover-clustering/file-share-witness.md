@@ -3,7 +3,7 @@ title: Configure a file share witness for Failover Clustering in Windows Server
 description: Learn how-to use a file share witness as a cluster quorum using Failover Cluster Manager and PowerShell.
 ms.topic: how-to
 author: robhind
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 04/29/2024
 #customer intent: As a cluster administrator, I want to configure a file share witness so that I can use it to determine the availability of the cluster nodes in addition to the node majority vote.
 ---

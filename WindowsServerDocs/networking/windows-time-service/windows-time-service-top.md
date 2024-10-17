@@ -3,7 +3,7 @@ description: "Learn more about: Windows Time Service (W32Time)"
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows Time Service (W32Time)
 author: dahavey
-ms.author: dahavey
+ms.author: roharwoo
 ms.date: 11/04/2021
 ms.topic: article
 ---

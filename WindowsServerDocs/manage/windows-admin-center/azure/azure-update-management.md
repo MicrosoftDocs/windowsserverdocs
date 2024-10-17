@@ -3,7 +3,7 @@ title: Use Windows Admin Center to manage operating system updates with Azure Up
 description: Use Windows Admin Center (Project Honolulu) to set up Azure Update Management to manage OS updates.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 10/18/2021
 ---
 # Use Windows Admin Center to manage operating system updates with Azure Update Management

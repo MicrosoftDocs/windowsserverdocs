@@ -4,7 +4,7 @@ description: Learn about the roles and features we removed from the Server Core 
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
+ms.author: alalve
 ms.date: 05/07/2018
 ms.topic: conceptual
 ---

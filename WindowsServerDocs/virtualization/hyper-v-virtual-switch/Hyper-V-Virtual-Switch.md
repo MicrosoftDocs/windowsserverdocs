@@ -4,7 +4,7 @@ description: This topic provides an overview of Hyper-V Virtual Switch in Window
 manager: brianlic
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 12/08/2020
 ---

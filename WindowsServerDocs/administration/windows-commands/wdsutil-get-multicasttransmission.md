@@ -3,7 +3,7 @@ title: wdsutil get-multicasttransmission
 description: Reference article for wdsutil get-multicasttransmission, which displays information about the multicast transmission for a specified image.
 ms.topic: reference
 ms.assetid: b733737b-1e81-43d4-a058-d6985a613bef
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

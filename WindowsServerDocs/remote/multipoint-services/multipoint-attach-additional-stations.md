@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: d78ebf4e-0968-4014-9a42-9f75cc50cb52
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Attach additional stations to MultiPoint Services

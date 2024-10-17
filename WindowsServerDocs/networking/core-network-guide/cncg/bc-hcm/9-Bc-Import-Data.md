@@ -4,7 +4,7 @@ description: Learn how to import data packages and preload content on your hoste
 manager: brianlic
 ms.topic: article
 ms.assetid: d6159e91-f77c-42ec-9180-14bbb230ad17
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

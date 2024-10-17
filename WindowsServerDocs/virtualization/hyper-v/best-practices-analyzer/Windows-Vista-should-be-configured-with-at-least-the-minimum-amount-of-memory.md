@@ -1,7 +1,7 @@
 ---
 title: Windows Vista should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows Vista is configured with less than the minimum amount of RAM, which is 512 MB.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2

@@ -3,7 +3,7 @@ title: What's new in Windows Server 2025
 description: This article describes some of the new features in Windows Server 2025.
 ms.topic: article
 author: xelu86
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 10/07/2024
 ---
 
@@ -152,6 +152,10 @@ Build 26040 has a new compression feature when compressing an item by performing
 ### Hyper-V Manager
 
 When users create a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the **New Virtual Machine Wizard**.
+
+### Hypervisor-enforced paging translation
+
+Hypervisor-enforced paging translation (HVPT) is a security enhancement to enforce the integrity of linear address translations. HVPT protects critical system data from write-what-where attacks where the attacker writes an arbitrary value to an arbitrary location, often as the result of a buffer overflow. HVPT guards page tables that configure critical system data structures. HVPT includes everything already secured with hypervisor-protected code integrity (HVCI). HVPT is enabled by default where hardware support is available. HVPT isn't enabled when Windows Server runs as a guest in a virtual machine.
 
 ### NVMe
 

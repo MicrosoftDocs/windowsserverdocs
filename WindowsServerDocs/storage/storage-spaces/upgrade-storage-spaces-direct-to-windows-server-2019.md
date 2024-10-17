@@ -2,7 +2,7 @@
 title: Upgrade a Storage Spaces Direct cluster to Windows Server 2019
 description: Learn how to upgrade a Storage Spaces Direct cluster to Windows Server 2019, while VMs are running or while they're stopped.
 author: robhindman
-ms.author: robhind
+ms.author: helohr
 manager: eldenc
 ms.date: 03/06/2019
 ms.topic: article

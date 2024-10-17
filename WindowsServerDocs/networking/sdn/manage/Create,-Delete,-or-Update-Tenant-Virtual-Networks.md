@@ -4,7 +4,7 @@ description: In this topic, you learn how to create, delete, and update Hyper-V 
 manager: grcusanz
 ms.topic: article
 ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/02/2021
 ---

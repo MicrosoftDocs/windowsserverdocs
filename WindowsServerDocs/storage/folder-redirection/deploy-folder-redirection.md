@@ -3,7 +3,7 @@ title: Deploy Folder Redirection with Offline Files
 description: Learn how to deploy Folder Redirection and Offline Files together, including the steps needed to control access to the redirected files.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/20/2023
 ---
 

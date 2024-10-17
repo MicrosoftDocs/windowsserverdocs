@@ -2,7 +2,7 @@
 title: Common Git Bash commands for use with GitHub
 description: A list of some of the most frequently used commands in Git Bash when working with GitHub. 
 author: eross-msft
-ms.author: lizross
+ms.author: roharwoo
 ms.date: 05/06/2019
 ---
 

@@ -4,7 +4,7 @@ description: You can use this topic to learn about Network Controller high avail
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

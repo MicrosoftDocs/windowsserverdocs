@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: dce05b6c-795e-43b2-9920-026550b873c5
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Set Up a Station

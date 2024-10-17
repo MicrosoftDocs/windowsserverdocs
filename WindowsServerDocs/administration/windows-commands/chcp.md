@@ -3,7 +3,7 @@ title: chcp
 description: Reference article for the chcp command, which changes the active console code page.
 ms.topic: reference
 ms.assetid: dc7b1c71-7b80-443d-9cf1-9bcf305aa1fd
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

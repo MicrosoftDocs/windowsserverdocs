@@ -3,7 +3,7 @@ ms.assetid: abf69b09-6528-42e0-b164-813c7c2c78e7
 title: Schema updates in Windows Server
 description: Schema changes made by Adprep.exe listed by operating system version.
 author: xelu86
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/25/2024
 ms.topic: article
 ---

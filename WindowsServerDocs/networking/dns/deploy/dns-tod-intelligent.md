@@ -4,7 +4,7 @@ description: Learn how to use DNS policy for intelligent DNS responses based on 
 manager: brianlic
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---
