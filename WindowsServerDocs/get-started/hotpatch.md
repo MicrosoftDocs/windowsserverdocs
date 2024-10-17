@@ -62,9 +62,9 @@ a Cumulative Update, February and March would have Hotpatch releases. For more i
 The following diagram shows an example of an annual three-month schedule including hypothetical unplanned
 baselines due to zero-day fixes.
 
-:::image type="content" source="media\hotpatch\hotpatch-sample-schedule.png" alt-text="A diagram showing an example of a Hotpatch schedule.":::
-
-<!--Needs clearer alt text-->
+:::image type="complex" source="media\hotpatch\hotpatch-sample-schedule.png" alt-text="A diagram showing an example of a Hotpatch release schedule.":::
+   A diagram showing an example of a Hotpatch schedule. The schedule is shown as a timeline extending from the January of the current year to the January of next year. On each month is a colored dot symbolizing what kind of release happened during that month. The top row of red dots are Hotpatch releases, the middle row of blue dots are planned baselines, and the bottom row of blue dots on a red line are unplanned baselines. In this diagram, January, April, July, and October are planned baselines. February, March, May, June, August, September, and November and December are Hotpatch releases. There were two unplanned baseline releases in March and August.
+:::image-end:::
 
 There are two types of baselines: **Planned baselines** and **Unplanned baselines**.
 
