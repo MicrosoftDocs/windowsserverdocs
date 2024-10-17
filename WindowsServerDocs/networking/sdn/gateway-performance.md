@@ -3,7 +3,7 @@ description: "Learn more about SDN gateway performance"
 title: SDN gateway performance
 manager: grcusanz
 ms.topic: how-to
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 09/18/2023
 ---

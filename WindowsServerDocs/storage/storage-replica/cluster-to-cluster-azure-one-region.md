@@ -2,7 +2,7 @@
 title: Cluster-to-cluster storage replication within the same Azure region
 description: Cluster-to-cluster storage replication within the same Azure region
 author: arduppal
-ms.author: arduppal
+ms.author: roharwoo
 ms.date: 04/26/2019
 ms.topic: article
 manager: mchad

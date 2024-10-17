@@ -4,7 +4,7 @@ description: You can use this topic to learn about high availability configurati
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

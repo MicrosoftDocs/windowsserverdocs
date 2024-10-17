@@ -4,7 +4,7 @@ description: This topic provides an overview of Hyper-V Network Virtualization i
 manager: grcusanz
 ms.topic: article
 ms.assetid: 0115b7ad-d229-4c69-9d7e-a3f5fbaa3b2f
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/27/2021
 ---

@@ -4,7 +4,7 @@ description: This article describes classification properties used to assign val
 ms.date: 7/7/2017
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Create a Classification Property
 

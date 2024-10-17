@@ -2,7 +2,7 @@
 title: What is Network Device Enrollment Service for Active Directory Certificate Services?
 description: Learn about the role of Network Device Enrollment Service and how it works with certificates based on Simple Certificate Enrollment Protocol
 author: gswashington
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: overview
 ms.date: 03/30/2023
 ---

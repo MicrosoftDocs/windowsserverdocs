@@ -4,7 +4,7 @@ description: This topic provides certificate configuration instructions for non-
 manager: grcusanz
 ms.topic: article
 ms.assetid: eea0aca9-8d89-48fb-8068-fca40c90d34b
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

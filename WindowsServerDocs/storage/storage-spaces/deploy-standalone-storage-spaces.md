@@ -3,7 +3,7 @@ title: Deploy Storage Spaces on a stand-alone server
 description: Learn the necessary prerequisites and processes for deploying Storage Spaces on a stand-alone Windows Server-based server.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/27/2023
 ---
 

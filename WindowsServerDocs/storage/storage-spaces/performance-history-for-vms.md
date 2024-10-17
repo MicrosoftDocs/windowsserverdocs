@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Performance history for virtual machines"
 title: Performance history for virtual machines
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin

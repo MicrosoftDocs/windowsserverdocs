@@ -3,10 +3,10 @@ title: How to configure App Control policies in Windows Server 2025 (preview)
 description: Learn how to configure App Control for Business using OSConfig PowerShell commands to harden security by implementing custom security policies.
 ms.topic: how-to
 ms.product: windows-server
-ms.author: wscontent
+ms.author: roharwoo
 author: xelu86
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
-ms.date: 10/15/2024
+ms.date: 10/17/2024
 ---
 
 
@@ -107,13 +107,13 @@ After a policy is removed, there should be no output after running `citool -lp |
 
 ### Monitor event logs
 
-To view captured events after applying the App Control policy, first choose any third-party application you want to run on your device. Then check to see if **Event ID 3076** was emitted for any third-party applications. The system detects attempts by the third-party application to access restricted content and takes measures to block access. To view and export these event logs, follow these steps:
+To view captured events after applying the App Control policy, first choose any third-party application you want to run on your device. If the App Control policy is set in auditing mode, check to see if **Event ID 3076** was emitted for any third-party applications. If the policy was set in enforcement mode, check if **Event ID 3077** was emitted. The system detects attempts by the third-party application to access restricted content and takes measures to block access. To view and export these event logs, follow these steps:
 
 # [View](#tab/view)
 
 1. Right-click on **Start**, select **Event Viewer**.
 1. In the left pane, navigate to **Applications and Service Logs\Microsoft\Windows\CodeIntegrity\Operational**.
-1. In the middle pane, look for **Event ID 3076**.
+1. In the middle pane, look for event IDs **3076** or **3077** for audit mode and enforcement mode respectively.
 
 # [Export](#tab/export)
 
@@ -123,6 +123,8 @@ To view captured events after applying the App Control policy, first choose any 
 1. Right-click on the **Operational** log again, then select **Save Filtered Log File As**.
 1. In the **Save As** dialog box, provide a name and location of your choice for the `.evtx` file, then select **OK**.
 1. The **Display Information** dialog box prompts you if displaying the event log information in another language is required. Choose the appropriate option based on your needs and select **OK**.
+
+This instruction set is for exporting event logs if your environment was configured for audit mode. To export logs where enforcement mode was used, in the **\<All Event IDs>** field, filter for event ID **3077** instead.
 
 ---
 
@@ -170,7 +172,7 @@ Set-CIPolicyIdInfo -FilePath $policyPath -SupplementsBasePolicyID $base
 Set-OSConfigDesiredConfiguration -Scenario AppControl -Name Policies -Value $policyPath
 ```
 
-To verify that the supplemental policies were applied, monitor **Event ID 3076** as described in [Monitor event logs](#monitor-event-logs) and verify that no new events were generated.
+To verify that the supplemental policies were applied, monitor event IDs **3076** and **3077** as described in [Monitor event logs](#monitor-event-logs) and verify that no new events were generated.
 
 ### Query policies
 

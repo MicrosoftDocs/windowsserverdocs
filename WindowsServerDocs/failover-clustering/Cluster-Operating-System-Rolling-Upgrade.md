@@ -4,7 +4,7 @@ description: "Learn more about: Cluster operating system rolling upgrade"
 ms.topic: how-to
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 manager: lizross
 ms.date: 03/20/2023
 ---

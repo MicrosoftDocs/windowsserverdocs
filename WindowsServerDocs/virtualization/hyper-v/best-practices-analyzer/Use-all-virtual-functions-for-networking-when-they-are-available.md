@@ -1,7 +1,7 @@
 ---
 title: Use all virtual functions for networking when they are available
 description: Learn what to do when some hardware acceleration capabilities are not being utilized.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: bf895484-6a0d-4aa4-9a42-9fac739e875d

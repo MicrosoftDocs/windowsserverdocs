@@ -1,7 +1,7 @@
 ---
 title: Use RAM that provides error correction
 description: Learn what to do when the RAM in use on this computer is not error-correcting (ECC) RAM.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a

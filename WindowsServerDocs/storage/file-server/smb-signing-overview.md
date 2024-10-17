@@ -3,7 +3,7 @@ title: Overview of Server Message Block signing in Windows
 description: Learn how to configure SMB signing, how to determine whether SMB signing is enabled, and how to disable SMB signing.
 ms.date: 04/19/2024
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: overview
 #customer intent: As an IT administrator, I want to understand what SMB signing is so that I can better support my customers and design secure file storage solutions.
 ---

@@ -4,7 +4,7 @@ description: Learn how to configure memory dump files for a Server Core installa
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
+ms.author: alalve
 ms.date: 10/17/2017
 ms.topic: how-to
 ---

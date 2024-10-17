@@ -2,7 +2,7 @@
 title: Obtain and configure token signing and token decryption certificates for AD FS
 description: Learn about tasks and procedures you can perform to ensure your Azure Directory Federation Services (AD FS) token signing and token decryption certificates are up to date.
 author: jenfieldmsft
-ms.author: wscontent
+ms.author: roharwoo
 manager: amycolannino
 ms.date: 06/13/2023
 ms.topic: article

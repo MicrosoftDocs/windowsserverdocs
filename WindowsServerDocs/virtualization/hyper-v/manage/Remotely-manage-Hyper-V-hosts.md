@@ -3,7 +3,7 @@ title: Remotely manage Hyper-V hosts
 description: Describes version compatibility between Hyper-V hosts and Hyper-V Manager and how to connect to remote hosts in different environments, including cross-domain and standalone.
 ms.topic: article
 ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 12/06/2016
 ---

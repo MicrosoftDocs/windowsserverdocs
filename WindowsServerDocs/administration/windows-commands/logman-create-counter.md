@@ -3,7 +3,7 @@ title: logman create counter
 description: Reference article for the logman create counter command, which creates a counter data collector.
 ms.topic: reference
 ms.assetid: 1e214c32-b704-43c1-b548-e1cf43b583c3
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

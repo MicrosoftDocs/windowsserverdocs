@@ -4,7 +4,7 @@ description: Learn how to deploy BranchCache in Windows Server 2016.
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 3830b356-36d3-44f9-a1d7-990ff3e57403
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---

@@ -4,7 +4,7 @@ description: 'Learn how hotpatch for Windows Server Datacenter: Azure Edition wo
 author: robinharwood
 ms.topic: conceptual
 ms.date: 07/27/2023
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Hotpatch for virtual machines

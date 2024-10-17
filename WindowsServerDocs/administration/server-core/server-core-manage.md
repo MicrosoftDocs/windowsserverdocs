@@ -4,7 +4,7 @@ description: Learn how to manage a Server Core installation of Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
+ms.author: alalve
 ms.date: 09/21/2023
 ms.topic: how-to
 ---

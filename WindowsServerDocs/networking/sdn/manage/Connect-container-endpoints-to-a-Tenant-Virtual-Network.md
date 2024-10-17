@@ -4,7 +4,7 @@ description: In this topic, we show you how to connect container endpoints to an
 manager: grcusanz
 ms.topic: article
 ms.assetid: f7af1eb6-d035-4f74-a25b-d4b7e4ea9329
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/02/2021
 ---
