@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2012 R2 should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows Server 2012 R2 is configured with less than the minimum amount of RAM, which is 512 MB.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 01da6f02-1a5f-4d3e-9bef-4d122a91c5c2

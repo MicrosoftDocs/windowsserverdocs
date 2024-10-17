@@ -2,7 +2,7 @@
 title: Edit existing Windows Server articles using a web browser and GitHub
 description: How to make quick edits to the existing Windows Server documentation using a web browser and GitHub, as a Microsoft employee.
 author: eross-msft
-ms.author: lizross
+ms.author: roharwoo
 ms.date: 07/02/2020
 ---
 

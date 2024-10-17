@@ -3,7 +3,7 @@ title: What's new in Windows Server 2025
 description: This article describes some of the new features in Windows Server 2025.
 ms.topic: article
 author: xelu86
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 10/07/2024
 ---
 

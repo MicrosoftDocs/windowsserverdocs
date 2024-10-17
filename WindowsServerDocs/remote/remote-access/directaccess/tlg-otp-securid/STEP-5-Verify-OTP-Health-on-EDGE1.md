@@ -4,7 +4,7 @@ description: Learn how to verify that OTP is configured and functioning correctl
 manager: brianlic
 ms.topic: article
 ms.assetid: 013df067-e2a0-4cd5-a08b-29238663ebf8
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

@@ -4,7 +4,7 @@ title: Device Health Attestation
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
 author: brianlic-msft
-ms.author: brianlic
+ms.author: roharwoo
 ms.date: 07/20/2022
 ---
 # Device Health Attestation

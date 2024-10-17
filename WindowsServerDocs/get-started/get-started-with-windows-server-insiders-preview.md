@@ -3,7 +3,7 @@ title: Get started with Windows Server Insiders Preview
 description: This article describes how users can become Windows Server Insiders members and test Windows Server Insiders Preview release builds.
 ms.topic: article
 author: xelu86
-ms.author: wscontent
+ms.author: roharwoo
 ms.contributor: stacycl
 ms.date: 04/25/2024
 ---

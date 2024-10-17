@@ -4,7 +4,7 @@ description: Learn about the Server certificate deployment components and the de
 manager: brianlic
 ms.topic: article
 ms.assetid: ca5c3e04-ae25-4590-97f3-0376a9c2a9a2
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

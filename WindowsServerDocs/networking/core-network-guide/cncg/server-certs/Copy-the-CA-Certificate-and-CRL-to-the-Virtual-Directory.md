@@ -4,7 +4,7 @@ description: Learn how to copy the Certificate Revocation List and Enterprise ro
 manager: dougkim
 ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 07/19/2018
 ---

@@ -1,7 +1,7 @@
 ---
 title: One or more network adapters should be configured as the destination for Port Mirroring
 description: Learn what to do when one or more virtual machines have a network adapter configured as a source for Port Mirroring, but there is no corresponding destination on the virtual switch.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: b83c166d-f010-47c4-a4bb-02167f2e3361

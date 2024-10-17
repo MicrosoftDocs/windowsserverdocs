@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 475cde97-d05c-4589-afa9-96db891bd271
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Use IM

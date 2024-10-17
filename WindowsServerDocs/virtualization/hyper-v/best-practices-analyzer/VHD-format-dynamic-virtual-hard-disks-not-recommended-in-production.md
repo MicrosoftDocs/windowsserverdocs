@@ -1,7 +1,7 @@
 ---
 title: VHD-format dynamic virtual hard disks are not recommended for virtual machines that run server workloads in a production environment
 description: Learn what to do when one or more virtual machines use VHD-format dynamically expanding virtual hard disks.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 324a60a0-1d15-4ef2-9f17-23cbd2eb42ce

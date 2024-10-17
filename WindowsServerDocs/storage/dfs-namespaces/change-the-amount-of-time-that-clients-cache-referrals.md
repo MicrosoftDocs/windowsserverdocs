@@ -5,7 +5,7 @@ ms.date: 6/5/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Change the amount of time that clients cache referrals
 

@@ -4,7 +4,7 @@ description: Learn how to manage Tenant Hyper-V Network Virtualization Virtual N
 manager: grcusanz
 ms.topic: article
 ms.assetid: 5905532b-626d-4b35-99a3-72a063e25809
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 08/07/2020
 ---

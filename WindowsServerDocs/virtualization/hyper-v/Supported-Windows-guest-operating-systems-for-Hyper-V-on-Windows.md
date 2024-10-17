@@ -2,7 +2,7 @@
 title: Supported Windows guest operating systems for Hyper-V on Windows Server and Azure Stack HCI
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
 ms.topic: conceptual
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/13/2024
 ---

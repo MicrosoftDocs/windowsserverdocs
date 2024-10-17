@@ -3,7 +3,7 @@ title: Windows Authentication Architecture
 description: Learn about the basic architectural scheme for Windows authentication.
 ms.topic: article
 ms.assetid: 07c9d6bb-9b03-407d-89b6-97c7551b256b
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016

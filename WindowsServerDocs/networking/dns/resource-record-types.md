@@ -2,7 +2,7 @@
 description: Learn more about DNS resource records using DNS Server on Windows Server.
 title: DNS resource records using DNS server on Windows Server
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
 ms.topic: article

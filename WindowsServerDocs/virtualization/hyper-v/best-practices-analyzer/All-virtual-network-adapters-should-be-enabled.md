@@ -1,7 +1,7 @@
 ---
 title: All virtual network adapters should be enabled
 description: Learn what to do when one or more virtual network adapters associated with a physical network adapter are disabled in the management operating system.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: b17d647d-a34a-44de-ada6-01a2bf5eeb48

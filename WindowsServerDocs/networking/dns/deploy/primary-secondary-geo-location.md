@@ -4,7 +4,7 @@ description: Learn how to create DNS policy for geo-location based traffic manag
 manager: brianlic
 ms.topic: article
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---

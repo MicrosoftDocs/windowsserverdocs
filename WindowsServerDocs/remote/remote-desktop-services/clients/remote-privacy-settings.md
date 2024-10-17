@@ -4,7 +4,7 @@ description: Information about privacy settings of the remote system when using 
 ms.topic: how-to
 author: davidbel
 manager: daveba
-ms.author: davidbel
+ms.author: roharwoo
 ms.date: 7/3/2024
 ---
 # Privacy settings for managed apps and desktops

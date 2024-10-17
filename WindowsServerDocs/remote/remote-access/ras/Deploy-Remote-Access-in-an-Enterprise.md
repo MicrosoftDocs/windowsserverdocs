@@ -4,7 +4,7 @@ description: This topic provides an introduction to the DirectAccess scenario in
 manager: brianlic
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

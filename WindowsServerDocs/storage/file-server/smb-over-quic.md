@@ -3,7 +3,7 @@ title: SMB over QUIC in Windows
 description: Describes the SMB over QUIC feature in Windows Server and Windows client.
 ms.topic: article
 author: NedPyle
-ms.author: wscontent
+ms.author: roharwoo
 ms.contributor: inhenkel
 ms.date: 07/17/2024
 ---
