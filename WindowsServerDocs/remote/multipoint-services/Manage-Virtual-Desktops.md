@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: fa9ac0ed-47cb-4811-91ff-4fcb62d7858b
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Manage Virtual Desktops

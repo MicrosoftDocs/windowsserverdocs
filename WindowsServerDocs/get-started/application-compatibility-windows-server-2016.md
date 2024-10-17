@@ -5,7 +5,7 @@ ms.date: 08/01/2018
 ms.topic: article
 ms.assetid: 2afe7c32-1fda-4441-989b-1415dabddc72
 author: jaimeo
-ms.author: jaimeo
+ms.author: roharwoo
 ---
 
 # Windows Server 2016 and Microsoft server applications compatibility

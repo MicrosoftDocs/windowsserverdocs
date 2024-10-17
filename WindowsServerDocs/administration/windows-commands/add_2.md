@@ -2,7 +2,7 @@
 title: add
 description: Reference article for the add command, which adds a disk or volume in an existing RAID configuration.
 ms.topic: reference
-ms.author: wscontent
+ms.author: roharwoo
 author: xelu86
 ms.date: 10/12/2023
 ---

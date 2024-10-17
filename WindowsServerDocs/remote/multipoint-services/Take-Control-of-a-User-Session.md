@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 99e93b4c-17be-40c2-a9fc-2b4574abf6b6
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Take Control of a User Session

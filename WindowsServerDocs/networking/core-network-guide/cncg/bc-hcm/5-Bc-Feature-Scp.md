@@ -4,7 +4,7 @@ description: Learn how to install the BranchCache feature on your hosted cache s
 manager: brianlic
 ms.topic: article
 ms.assetid: 9adf420b-5a58-4e59-9906-71bd58f757fd
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

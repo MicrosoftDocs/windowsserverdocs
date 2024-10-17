@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 426df382-07a0-4be1-a87a-12e63bd8157b
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # View User Connection Status
 Use the **Stations** tab to determine the status of a standard or other administrative user's connection to a MultiPoint Services station.

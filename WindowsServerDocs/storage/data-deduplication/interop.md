@@ -5,7 +5,7 @@ title: Data Deduplication interoperability
 ms.topic: article
 author: robinharwood
 manager: klaasl
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Data Deduplication interoperability

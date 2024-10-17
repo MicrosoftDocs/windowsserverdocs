@@ -3,7 +3,7 @@ title: How to configure App Control policies in Windows Server 2025 (preview)
 description: Learn how to configure App Control for Business using OSConfig PowerShell commands to harden security by implementing custom security policies.
 ms.topic: how-to
 ms.product: windows-server
-ms.author: wscontent
+ms.author: roharwoo
 author: xelu86
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
 ms.date: 10/15/2024

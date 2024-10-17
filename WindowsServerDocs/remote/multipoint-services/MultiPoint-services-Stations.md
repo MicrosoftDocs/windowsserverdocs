@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 
 # MultiPoint  Stations

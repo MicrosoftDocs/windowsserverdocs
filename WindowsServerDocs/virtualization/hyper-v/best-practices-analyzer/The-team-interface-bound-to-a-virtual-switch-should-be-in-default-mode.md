@@ -1,7 +1,7 @@
 ---
 title: The team interface bound to a virtual switch should be in default mode
 description: Learn what to do when some virtual switches are bound to a team interface but the team interface doesn't pass traffic on all VLANs to the virtual switches.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 8c118e1e-865f-4cff-acdc-7c35e45d5da9

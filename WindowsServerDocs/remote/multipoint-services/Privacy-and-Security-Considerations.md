@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 00eb89e5-aaf5-450e-94d8-3ef759dc5e26
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Privacy and Security Considerations

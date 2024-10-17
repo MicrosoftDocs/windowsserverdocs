@@ -4,7 +4,7 @@ description: Learn about high-performance networking and how hardware accelerati
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 10/26/2021
 ---

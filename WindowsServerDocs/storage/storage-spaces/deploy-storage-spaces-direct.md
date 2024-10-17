@@ -1,7 +1,7 @@
 ---
 title: Deploy Storage Spaces Direct on Windows Server
 manager: femil
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek

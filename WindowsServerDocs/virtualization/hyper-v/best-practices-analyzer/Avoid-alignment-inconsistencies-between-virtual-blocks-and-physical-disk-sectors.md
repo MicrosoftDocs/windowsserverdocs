@@ -1,7 +1,7 @@
 ---
 title: Avoid alignment inconsistencies between virtual blocks and physical disk sectors on dynamic virtual hard disks or differencing disks
 description: Learn what to do when alignment inconsistencies were detected for one or more virtual hard disks.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: a17c8fd2-af81-485b-bfea-bd1ef3e43923

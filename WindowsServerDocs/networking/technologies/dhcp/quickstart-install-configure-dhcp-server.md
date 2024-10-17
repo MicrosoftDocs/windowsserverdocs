@@ -3,7 +3,7 @@ title: Install and configure DHCP Server on Windows Server
 description: Get started installing a Windows Server DHCP server to automatically provide IP addresses and DHCP options to clients connected to one or more subnets on your network.
 ms.topic: quickstart
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
 ms.date: 08/11/2023

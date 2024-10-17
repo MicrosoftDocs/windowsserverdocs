@@ -3,7 +3,7 @@ title: logman create cfg
 description: Reference article for the logman create cfg command, which creates a configuration data collector.
 ms.topic: reference
 ms.assetid: bfc87093-3ff5-4e19-aa93-d185fb8e2239
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

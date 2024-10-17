@@ -1,7 +1,7 @@
 ---
 title: RDS - Plan and design your Remote Desktop Services environment
 description: Planning information to help you design your RD deployment.
-ms.author: spatnaik
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: 047b08be-7f91-4194-a641-5b6941b92515

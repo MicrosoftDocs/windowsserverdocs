@@ -1,7 +1,7 @@
 ---
 title: Cluster-to-cluster storage replication
 manager: siroy
-ms.author: nedpyle
+ms.author: alalve
 ms.topic: how-to
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle

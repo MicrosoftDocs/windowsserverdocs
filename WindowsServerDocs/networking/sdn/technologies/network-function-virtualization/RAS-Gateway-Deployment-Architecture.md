@@ -4,7 +4,7 @@ description: You can use this topic to learn about Cloud Service Provider (CSP) 
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

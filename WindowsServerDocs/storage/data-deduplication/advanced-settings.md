@@ -5,7 +5,7 @@ description: "Learn more about: Advanced Data Deduplication settings"
 ms.topic: article
 author: wmgries
 manager: klaasl
-ms.author: wgries
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Advanced Data Deduplication settings

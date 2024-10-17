@@ -4,7 +4,7 @@ description: Introduces the advanced Server Message Block (SMB) troubleshooting 
 author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/08/2023
 ---
 

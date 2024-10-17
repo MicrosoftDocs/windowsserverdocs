@@ -2,7 +2,7 @@
 title: Troubleshoot Active Directory Federation Services Idp-initiated sign-on
 description: Learn how to use the sign-in page to troubleshoot Active Directory Federation Services (AD FS) authentication.
 author: billmath
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 05/19/2023
 ms.topic: article
 ---

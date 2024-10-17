@@ -3,7 +3,7 @@ title: Pktmon command formatting
 description: Provides an overview of Pktmon command formatting with a quick start guide and provides guidance on usage.
 ms.topic: how-to
 author: khdownie
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 10/27/2021
 ---
 

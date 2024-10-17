@@ -4,7 +4,7 @@ description: Learn how to use the Software Defined Networking software load bala
 manager: grcusanz
 ms.topic: article
 ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/02/2021
 ---

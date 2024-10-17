@@ -4,7 +4,7 @@ description: Learn about your options for remotely accessing your PC from outsid
 ms.topic: article
 author: robinharwood
 manager: femila
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network

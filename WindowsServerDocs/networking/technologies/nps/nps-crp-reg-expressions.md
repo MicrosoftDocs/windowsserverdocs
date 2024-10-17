@@ -4,7 +4,7 @@ description: This topic explains the use of regular expressions for pattern matc
 manager: brianlic
 ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/16/2019
 ---

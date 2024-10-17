@@ -3,7 +3,7 @@ title: irftp
 description: Reference article for the irftp command, which sends files over an infrared link.
 ms.topic: reference
 ms.assetid: e15c60a7-546d-4e9f-9871-43aaa1b569d6
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

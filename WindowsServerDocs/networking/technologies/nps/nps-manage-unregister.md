@@ -4,7 +4,7 @@ description: Learn how to unregister an NPS from an Active Directory Domain so y
 manager: brianlic
 ms.topic: article
 ms.assetid: 68a94616-3c29-45bd-bd33-e4c578f119e1
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

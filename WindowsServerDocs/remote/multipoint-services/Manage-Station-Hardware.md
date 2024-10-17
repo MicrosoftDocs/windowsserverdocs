@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 429b8539-b17a-4e01-9576-860600466451
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Manage Station Hardware
