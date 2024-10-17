@@ -6,7 +6,7 @@ ms.product: windows-server
 ms.author: wscontent
 author: xelu86
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
-ms.date: 10/16/2024
+ms.date: 10/17/2024
 ---
 
 
@@ -172,7 +172,7 @@ Set-CIPolicyIdInfo -FilePath $policyPath -SupplementsBasePolicyID $base
 Set-OSConfigDesiredConfiguration -Scenario AppControl -Name Policies -Value $policyPath
 ```
 
-To verify that the supplemental policies were applied, monitor **Event ID 3076** as described in [Monitor event logs](#monitor-event-logs) and verify that no new events were generated.
+To verify that the supplemental policies were applied, monitor event IDs **3076** and **3077** as described in [Monitor event logs](#monitor-event-logs) and verify that no new events were generated.
 
 ### Query policies
 
