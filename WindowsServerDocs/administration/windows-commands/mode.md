@@ -3,7 +3,7 @@ title: mode
 description: Reference article for the mode command, which displays system status, changes system settings, or reconfigures ports or devices.
 ms.topic: reference
 ms.assetid: b59b04f2-b41d-42df-b5be-19c3721445b1
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

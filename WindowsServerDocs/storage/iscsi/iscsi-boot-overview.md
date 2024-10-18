@@ -5,7 +5,7 @@ description: "Learn more about: iSCSI target boot overview"
 ms.topic: article
 author: robinharwood
 manager: dougkim
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 09/11/2018
 ---
 

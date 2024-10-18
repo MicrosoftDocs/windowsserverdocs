@@ -4,7 +4,7 @@ description: What roles and features are included in the Server Core installatio
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
+ms.author: alalve
 ms.date: 02/23/2018
 ms.topic: conceptual
 ---

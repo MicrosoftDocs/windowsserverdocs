@@ -4,7 +4,7 @@ title: Branch Office Considerations
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 12/10/2020
 ---
 

@@ -4,7 +4,7 @@ title: Initialize the HGS cluster using AD mode in a new dedicated forest (defau
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

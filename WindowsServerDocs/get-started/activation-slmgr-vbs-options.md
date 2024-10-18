@@ -4,7 +4,7 @@ description: Provides a list of options available for the Slmgr.vbs script, and 
 ms.date: 09/24/2019
 ms.topic: article
 author: Teresa-Motiv
-ms.author: wscontent
+ms.author: roharwoo
 manager: dcscontentpm
 appliesto:
 - Windows Server 2012 R2

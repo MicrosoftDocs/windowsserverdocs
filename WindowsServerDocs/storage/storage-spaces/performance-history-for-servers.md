@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Performance history for servers"
 title: Performance history for servers
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin

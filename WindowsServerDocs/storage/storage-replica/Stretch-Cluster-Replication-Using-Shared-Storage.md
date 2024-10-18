@@ -2,7 +2,7 @@
 description: Stretch cluster replication using shared storage
 title: Stretch cluster replication using shared storage
 manager: eldenc
-ms.author: nedpyle
+ms.author: alalve
 ms.topic: how-to
 author: nedpyle
 ms.date: 01/19/2023

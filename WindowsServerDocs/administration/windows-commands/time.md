@@ -3,7 +3,7 @@ title: time
 description: Reference article for the time command, which displays or sets the system time.
 ms.topic: reference
 ms.assetid: 1276a257-7283-41da-ae80-fb4cfb311f9d
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

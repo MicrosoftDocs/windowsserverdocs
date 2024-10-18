@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Performance history for virtual hard disks"
 title: Performance history for virtual hard disks
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin

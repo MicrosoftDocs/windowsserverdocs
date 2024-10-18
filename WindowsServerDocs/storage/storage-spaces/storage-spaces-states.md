@@ -2,7 +2,7 @@
 title: Storage Spaces and Storage Spaces Direct health and operational states
 description: How to find and understand the different health and operational states of Storage Spaces Direct and Storage Spaces (including physical disks, pools, and virtual disks), and what to do about them.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 12/06/2019
 ms.topic: article
 manager: brianlic

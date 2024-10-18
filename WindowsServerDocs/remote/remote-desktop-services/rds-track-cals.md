@@ -4,7 +4,7 @@ description: Learn how to track CALs across your RDS deployment.
 ms.topic: article
 ms.assetid: 80d82d30-3ad0-4a8c-9a9b-2773c47eee19
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 manager: dongill
 ---

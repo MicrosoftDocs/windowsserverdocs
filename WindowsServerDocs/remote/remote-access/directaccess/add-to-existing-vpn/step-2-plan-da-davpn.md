@@ -4,7 +4,7 @@ description: Learn how to plan the settings for the Enable DirectAccesss Wizard.
 manager: brianlic
 ms.topic: article
 ms.assetid: 72b5b2af-6925-41e0-a3f9-b8809ed711d1
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

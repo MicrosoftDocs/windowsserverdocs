@@ -2,7 +2,7 @@
 title: Hyper-V processor performance
 description: Learn about the processor performance considerations to use for tuning and improving Hyper-V performance.
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 04/02/2024
 ---

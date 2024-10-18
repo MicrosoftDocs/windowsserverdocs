@@ -3,7 +3,7 @@ title: wdsutil get-transportserver
 description: Reference article for wdsutil get-transportserver, which displays information about a specified Transport Server.
 ms.topic: reference
 ms.assetid: de634123-0179-41b2-9c6f-726508130ff5
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

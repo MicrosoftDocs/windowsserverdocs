@@ -2,7 +2,7 @@
 description: "Learn more about: Securing Domain Controllers Against Attack"
 ms.assetid: ba28bd05-16e6-465f-982b-df49633cfde4
 title: Securing Domain Controllers Against Attack
-ms.author: joflore
+ms.author: roharwoo
 author: MicrosoftGuyJFlo
 ms.date: 05/30/2024
 ms.topic: article

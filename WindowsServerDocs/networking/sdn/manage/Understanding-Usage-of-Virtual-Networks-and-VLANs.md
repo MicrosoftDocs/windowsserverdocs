@@ -4,7 +4,7 @@ description: In this topic, you learn about Hyper-V network virtualization virtu
 manager: grcusanz
 ms.topic: article
 ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

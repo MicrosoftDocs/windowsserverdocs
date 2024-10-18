@@ -4,7 +4,7 @@ description: Describes the SMB compression features in the Windows Operating Sys
 ms.product: windows-server
 ms.topic: article
 author: NedPyle
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/14/2024
 ---
 

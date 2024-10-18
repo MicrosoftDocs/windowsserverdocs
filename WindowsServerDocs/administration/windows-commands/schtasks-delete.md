@@ -2,7 +2,7 @@
 title: schtasks delete
 description: Reference article for the schtasks delete command, which deletes a scheduled task from the schedule.
 ms.topic: reference
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 09/16/2020

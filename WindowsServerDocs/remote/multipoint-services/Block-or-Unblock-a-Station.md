@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 12bdbb60-03a5-4e7d-acb1-e4fdcb950c29
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Block or Unblock a Station

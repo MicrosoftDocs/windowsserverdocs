@@ -4,7 +4,7 @@ description: This topic explains how you can provide DNS services to your hosted
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

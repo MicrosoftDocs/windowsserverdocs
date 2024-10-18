@@ -3,7 +3,7 @@ title: Windows Authentication Technical Overview
 description: Find links to articles for the Windows Authentication Technical Overview.
 ms.topic: article
 ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016

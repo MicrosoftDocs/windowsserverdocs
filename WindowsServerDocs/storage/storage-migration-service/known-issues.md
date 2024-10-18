@@ -2,7 +2,7 @@
 title: Storage Migration Service known issues
 description: Known issues and troubleshooting support for Storage Migration Service, such as how to collect logs for Microsoft Support.
 author: nedpyle
-ms.author: nedpyle
+ms.author: alalve
 manager: tiaascs
 ms.date: 04/24/2023
 ms.topic: article

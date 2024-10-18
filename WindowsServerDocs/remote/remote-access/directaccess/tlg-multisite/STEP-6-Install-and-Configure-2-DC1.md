@@ -4,7 +4,7 @@ description: Learn how to install and configure 2-DC1.
 manager: brianlic
 ms.topic: article
 ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

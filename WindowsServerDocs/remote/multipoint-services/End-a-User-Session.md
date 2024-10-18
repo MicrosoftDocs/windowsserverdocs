@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 51b1076b-cce5-45a7-8cf2-ecc6aa390d14
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # End a User Session

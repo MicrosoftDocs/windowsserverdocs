@@ -4,7 +4,7 @@ title: Planning a Work Folders deployment
 ms.topic: article
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 4/5/2017
 description: How to plan a Work Folders deployment including system requirements and how to prepare your network environment.
 ---

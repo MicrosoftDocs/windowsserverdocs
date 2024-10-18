@@ -3,7 +3,7 @@ title: LSA Lookup performance counters in Windows and Windows Server
 description: Learn about Local Security Authority (LSA) Lookups performance counters
 ms.topic: conceptual
 author: lindakup
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/16/2024
 
 ---
