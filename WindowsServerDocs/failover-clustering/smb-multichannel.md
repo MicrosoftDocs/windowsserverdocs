@@ -4,7 +4,7 @@ ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.topic: article
 author: RobHindman
-ms.author: robhind
+ms.author: helohr
 ms.date: 10/20/2021
 ---
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks

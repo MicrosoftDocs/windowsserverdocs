@@ -2,7 +2,7 @@
 title: Retrieve base & delta CRLs using Web Enrollment in AD CS
 description: Learn how to retrieve the current base and delta certificate revocation lists (CRLs) using Certification Authority Web Enrollment role service in Windows Server
 author: gswashington
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 09/04/2023
 ---

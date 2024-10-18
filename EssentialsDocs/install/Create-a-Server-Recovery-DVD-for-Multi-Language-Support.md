@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 author: daveba
-ms.author: daveba
+ms.author: roharwoo
 ---
 
 # Create a Server Recovery DVD for Multi-Language Support

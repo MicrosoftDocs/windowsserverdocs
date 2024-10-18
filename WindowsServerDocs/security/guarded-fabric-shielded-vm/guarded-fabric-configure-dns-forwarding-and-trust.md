@@ -4,7 +4,7 @@ title: Configure DNS forwarding and domain trust
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

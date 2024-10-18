@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 3a5ec549-e1f9-4714-9e6d-9ea959e1da60
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # View Hardware Status

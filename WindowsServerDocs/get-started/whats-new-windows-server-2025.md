@@ -3,8 +3,8 @@ title: What's new in Windows Server 2025
 description: This article describes some of the new features in Windows Server 2025.
 ms.topic: article
 author: xelu86
-ms.author: wscontent
-ms.date: 10/01/2024
+ms.author: roharwoo
+ms.date: 10/07/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -32,7 +32,7 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 
 - **AD object repair** - AD now allows enterprise administrators to repair objects with missing core attributes **SamAccountType** and **ObjectCategory**. Enterprise administrators can reset the **LastLogonTimeStamp** attribute on an object to the current time. These operations are achieved through a new [RootDSE](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) modify operation feature on the affected object called **fixupObjectState**.
 
-- **Channel binding audit support** - Events 3074 and 3075 can now be enabled for Lightweight Directory Access Protocol (LDAP) channel binding. When the channel binding policy was modified to a more secure setting, an administrator can identify devices in the environment that don't support or fail channel binding validations. These audit events are also available in Windows Server 2022 and later via [KB4520412](https://support.microsoft.com/topic/2020-2023-and-2024-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a).
+- **Channel binding audit support** - Events 3074 and 3075 can now be enabled for Lightweight Directory Access Protocol (LDAP) channel binding. When the channel binding policy is modified to a more secure setting, an administrator can identify devices in the environment that don't support or fail channel binding. These audit events are also available in Windows Server 2022 and later via [KB4520412](https://support.microsoft.com/topic/2020-2023-and-2024-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a).
 
 - **DC-location algorithm improvements** - DC discovery algorithm provides new functionality with improvements to mapping of short NetBIOS-style domain names to DNS-style domain names. To learn more, see [Active Directory DC locator changes](../identity/ad-ds/manage/dc-locator-changes.md).
 
@@ -151,7 +151,11 @@ Build 26040 has a new compression feature when compressing an item by performing
 
 ### Hyper-V Manager
 
-When creating a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the New Virtual Machine Wizard.
+When users create a new virtual machine through the Hyper-V Manager, **Generation 2** is now set as the default option in the **New Virtual Machine Wizard**.
+
+### Hypervisor-enforced paging translation
+
+Hypervisor-enforced paging translation (HVPT) is a security enhancement to enforce the integrity of linear address translations. HVPT protects critical system data from write-what-where attacks where the attacker writes an arbitrary value to an arbitrary location, often as the result of a buffer overflow. HVPT guards page tables that configure critical system data structures. HVPT includes everything already secured with hypervisor-protected code integrity (HVCI). HVPT is enabled by default where hardware support is available. HVPT isn't enabled when Windows Server runs as a guest in a virtual machine.
 
 ### NVMe
 
@@ -180,9 +184,13 @@ By default new Routing and Remote Access Services (RRAS) setups don't accept VPN
 
 Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
+### Secure certificate management
+
+Searching or retrieving certificates on Windows now supports SHA-256 hashes, as described in the functions [CertFindCertificateInStore](/windows/win32/api/wincrypt/nf-wincrypt-certfindcertificateinstore), and [CertGetCertificateContextProperty](/windows/win32/api/wincrypt/nf-wincrypt-certgetcertificatecontextproperty). TLS server authentication is more secure across Windows, and now requires a minimum RSA key length of 2048 bits. For more information, read [TLS server authentication: Deprecation of weak RSA certificates](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/tls-server-authentication-deprecation-of-weak-rsa-certificates/ba-p/4134028). 
+
 ### Security Baseline
 
-Starting with build 26296, the Windows Server 2025 Security Baseline Preview is now available. By implementing a customized security baseline, you can establish security measures right from the beginning for your device or VM role based on the recommended security posture. This baseline comes equipped with over 350 preconfigured Windows security settings that enable you to apply and enforce specific security settings that align with the best practices recommended by Microsoft and industry standards. To learn more, see [OSConfig overview](../security/osconfig/osconfig-overview.md).
+By implementing a customized security baseline, you can establish security measures right from the beginning for your device or VM role based on the recommended security posture. This baseline comes equipped with over 350 preconfigured Windows security settings that enable you to apply and enforce specific security settings that align with the best practices recommended by Microsoft and industry standards. To learn more, see [OSConfig overview](../security/osconfig/osconfig-overview.md).
 
 ### Server Message Block
 

@@ -3,7 +3,7 @@ title: ftp dir
 description: Reference article for the ftp dir command, which displays a list of directory files and subdirectories on a remote computer.
 ms.topic: reference
 ms.assetid: a29a92a5-7b79-4e6e-95cf-2ccb38bb6fb2
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

@@ -1,7 +1,7 @@
 ---
 title: More than one network adapter should be available
 description: Learn what to do when the server is configured with one network adapter, which must be shared by the management operating system and all virtual machines that require access to a physical network.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 59940e56-e06a-490f-90ea-cf30d9f80b09

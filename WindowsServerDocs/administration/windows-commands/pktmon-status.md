@@ -3,7 +3,7 @@ title: pktmon status
 description: Reference article for the pktmon status command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 06/24/2021
 ---
 

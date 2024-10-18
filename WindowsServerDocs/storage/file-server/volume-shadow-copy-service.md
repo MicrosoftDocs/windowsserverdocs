@@ -4,7 +4,7 @@ title: Volume Shadow Copy Service (VSS)
 ms.date: 08/22/2024
 author: robinharwood
 manager: elizapo
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: article
 ---
 

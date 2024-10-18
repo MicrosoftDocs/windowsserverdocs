@@ -1,7 +1,7 @@
 ---
 title: Configure the server with a sufficient amount of dynamic MAC addresses
 description: Learn what to do when the number of available dynamic MAC addresses is low.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: a2804519-9790-4006-80b6-e990a8f505fe

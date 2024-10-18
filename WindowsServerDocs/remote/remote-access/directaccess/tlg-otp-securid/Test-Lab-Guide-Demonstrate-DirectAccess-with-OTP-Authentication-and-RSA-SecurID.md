@@ -4,7 +4,7 @@ description: Learn how to extend the Demonstrate DirectAccess Single Server Setu
 manager: brianlic
 ms.topic: article
 ms.assetid: 10c7a49c-5671-4bec-b562-13fdd67f4629
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

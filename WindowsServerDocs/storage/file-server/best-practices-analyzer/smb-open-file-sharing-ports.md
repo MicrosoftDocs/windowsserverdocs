@@ -4,7 +4,7 @@ description: Learn how to keep file and printer sharing ports open for Server Me
 ms.date: 03/20/2023
 author: robinharwood
 manager: elizapo
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: conceptual
 ---
 

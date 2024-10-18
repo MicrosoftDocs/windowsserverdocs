@@ -4,7 +4,7 @@ description: This topic provides links to content about Hyper-V Network Virtuali
 manager: grcusanz
 ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/27/2021
 ---

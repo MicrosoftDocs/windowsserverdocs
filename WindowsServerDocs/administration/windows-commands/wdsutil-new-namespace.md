@@ -3,7 +3,7 @@ title: wdsutil new-namespace
 description: Reference article for wdsutil new-namespace, which creates and configures a new namespace.
 ms.topic: reference
 ms.assetid: 6df60703-30bd-4d59-a8d9-9fe3efe96add
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 6293b4f7-c009-419d-a503-fc4f3ea3913c
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Restart or Shut Down MultiPoint Systems
