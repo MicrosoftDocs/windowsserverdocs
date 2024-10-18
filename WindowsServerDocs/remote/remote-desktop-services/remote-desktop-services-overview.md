@@ -11,7 +11,7 @@ manager: scottman
 
 # Remote Desktop Services overview in Windows Server
 
-Remote Desktop Services (RDS) is the platform of choice for building virtualization solutions for every end customer need, including delivering individual virtualized applications, providing secure mobile and remote desktop access, and providing end users the ability to run their applications and desktops from the cloud.<!--Test-->
+Remote Desktop Services (RDS) is the platform of choice for building virtualization solutions for every end customer need, including delivering individual virtualized applications, providing secure mobile and remote desktop access, and providing end users the ability to run their applications and desktops from the cloud.
 
 ![Remote Desktop Services overview](./media/rds-overview.png)
 
