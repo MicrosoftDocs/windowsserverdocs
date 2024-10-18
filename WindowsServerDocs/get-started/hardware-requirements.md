@@ -4,7 +4,7 @@ description: What are the minimum hardware requirements for storage, CPU, networ
 ms.topic: article
 author: xelu86
 ms.author: roharwoo
-ms.date: 07/25/2024
+ms.date: 10/18/2024
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 ---
 
@@ -45,7 +45,7 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 **Minimum**:
 
 - 512 MB for Server Core
-- 2 GB for Server with Desktop Experience
+- 2 GB for Server with Desktop Experience, 4 GB recommended
 - ECC (Error Correcting Code) type or similar technology for physical host deployments
 
 > [!IMPORTANT]
