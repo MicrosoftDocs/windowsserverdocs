@@ -7,6 +7,9 @@ items:
       topicHref: /windows-server/
       items:
       - name: Remote Desktop Services
+        tocHref: /windows-server/remote/remote-desktop-services/
+        topicHref: /windows-server/remote/remote-desktop-services/
+      - name: Remote Desktop Services
         tocHref: /windows-server/remote/remote-desktop-services/remote-desktop-services-overview
         topicHref: /windows-server/remote/remote-desktop-services/
       - name: Remote Desktop Services
