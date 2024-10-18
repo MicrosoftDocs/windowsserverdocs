@@ -39,8 +39,6 @@ Your deployment needs to meet the following prerequisites in order to be able to
 
 - An SR-IOV supported network interface card (NIC).
 
-  - You may need to run the [Enable-NetAdapterSriov (NetAdapter)](/powershell/module/netadapter/enable-netadaptersriov?view=windowsserver2022-ps) cmdlet.
-
 - The Virtualization feature must be enabled in your BIOS.
 
 - If you're running Azure Stack HCI, after you enable SR-IOV, you must install and configure a valid Compute intent for the [Network Advanced Transfer Cache (ATC)](/azure-stack/hci/deploy/network-atc?tabs=22H2). You can only enable Accelerated Networking on virtual switches managed by a Network ATC Compute intent. You must also install a [Network HUD](/azure-stack/hci/concepts/network-hud-overview) that is running Storage Spaces Direct.
@@ -57,6 +55,12 @@ To enable Accelerated Networking on a cluster:
 
   ```powershell
   Get-AccelNetManagementPreReq
+  ```
+
+1. Run the following cmdlet to enable SR-IOV on your NIC if you haven't already:
+
+  ```powershell
+  Enable-NetAdapterSriov
   ```
 
 1. Go to any node that's on the cluster where you want to enable Accelerated Networking.
