@@ -1,5 +1,5 @@
 - name: Remote Desktop Services
-  href: remote-desktop-services-overview.md
+  href: index.yml
   items:
   - name: Get started
     items:
