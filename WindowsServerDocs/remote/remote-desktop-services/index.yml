@@ -48,7 +48,7 @@ landingContent:
           - text: Plan and Design your Remote Desktop Services environment
             url: rds-plan-and-design.md
           - text: Connect from any device
-            url: /clients/remote-desktop-clients.md
+            url: ./clients/remote-desktop-clients.md
           - text: Choose how you pay
             url: rds-client-access-license.md
 
