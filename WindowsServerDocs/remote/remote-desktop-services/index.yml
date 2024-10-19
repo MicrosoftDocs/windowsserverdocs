@@ -72,4 +72,4 @@ landingContent:
       - linkListType: reference
         links:
           - text: Available Remote Desktop clients
-            url: remote-desktop-clients.md
+            url: ./clients/remote-desktop-clients.md
