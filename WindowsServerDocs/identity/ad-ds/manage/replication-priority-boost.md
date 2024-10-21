@@ -1,5 +1,5 @@
 ---
-title: Active Directory Domain Services Replication Priority Boost feature
+title: Active Directory Domain Services Replication Priority Boost
 description: Learn about what the Active Directory Domain Services Replication Priority Boost feature is and how to manage it.
 ms.author: clfish
 author: gswashington
@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 10/21/2024
 ---
 
-# Active Directory Domain Services Replication Priority Boost feature
+# Active Directory Domain Services Replication Priority Boost
 
 >Applies to: Windows Server 2025, Windows Server 2022
 
@@ -21,9 +21,9 @@ Replication Priority Boost is useful in scenarios that involve an administrator 
 
 ## Prerequisites
 
-- LDAP instance is set up and running
+- Active Directory Domain Services are set up and running
 
-## Compatibility
+## System requirements and compatibility
 
 There are no specific system requirements for enabling the Replication Priority Boost feature in Windows Server 2025. The feature is also compatible with systems running a Windows Server 2022 DC as the replication source DC if the destination DC is running Windows Server 2025 and understands the new rootDSE modify.
 
@@ -43,25 +43,33 @@ For more information, see the [setPriorityBoost spec](/openspecs/windows_protoco
 
 ## Set and read the priority boost
 
-The system admin adds the boost factor on top of the built-in priority level. The following steps show how to set and read the replication priority boost in the ldp tool.
+The Active Directory administrator adds the boost factor on top of the built-in priority level.
 
-1. Start the **ldp** tool.
+The following steps show how to set and read the replication priority boost using the Ldp tool.
 
-1. Enter in the Server name and Port nummber to connect. Select **OK**.
+1. Start the **Ldp** tool to manage your Active Directory namespace and perform LDAP operations.
+
+1. Enter in the Server name and Port number to connect. Select **OK**.
+
+    :::image type="content" source="./media/replication-priority-boost/ldp-connection.png" border="true" alt-text="Screenshot of the Connect dialog in the Ldp tool.":::
 
 1. Select **Browse**, then **Modify**. The Modify window opens.
 
-1. Enter the Attribute: **setPriorityBoost**.
+1. In the Attribute field, enter **setPriorityBoost**.
 
 1. Enter the Values for your destination DC in the format: **`<naming context>:<partner DC>:<boost factor>`**.
 
 1. Select **Run** to set the priority boost.
 
+    :::image type="content" source="./media/replication-priority-boost/set-priority-boost.png" border="true" alt-text="Screenshot of the Modify dialog using the rootDSE setPriorityBoost.":::
+
 1. Select **Browse**, then **Search**. The Search window opens.
 
-1. In the Attributes field, enter: **`msDS-PriorityBoost:<naming context>:<partner DC>`**, replacing the values for your naming context and partner DC.
+1. In the Attributes field, enter **`msDS-PriorityBoost:<naming context>:<partner DC>`**, replacing the values for your naming context and partner DC.
 
 1. Select **Run** to read the replication boost.
+
+    :::image type="content" source="./media/replication-priority-boost/msds-priority-boost.png" border="true" alt-text="Screenshot of the Search dialog using the rootDSE msDS-PriorityBoost.":::
 
 > [!NOTE]
 > The Replication Priority Boost feature doesn't change the size of any supported attribute values. The Joint Engine Technology (JET) database supports up to 2,147,483,647 bytes in a single value of binary type. There are limitations on some particular attribute sizes imposed by other modules, but not in the case of JET in Active Directory. For more information about JET management, see [Active Directory Maximum Limits - Scalability](/windows-server/identity/ad-ds/plan/active-directory-domain-services-maximum-limits).
