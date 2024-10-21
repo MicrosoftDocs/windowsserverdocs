@@ -3,19 +3,19 @@ title: Configure the SMB client to require encryption in Windows (preview)
 description: Learn how to configure SMB encryption mandate in Windows and Windows Server using Group Policy and PowerShell.
 ms.topic: how-to
 author: gswashington
-ms.author: nedpyle
+ms.author: alalve
 ms.date: 03/01/2024
 
 ---
 
 # Configure the SMB client to require encryption in Windows (preview)
 
->Applies to: Windows and Windows Server Insider builds
+>Applies to: Windows Insider builds and Windows Server 2025 (preview)
 
 > [!IMPORTANT]
-> Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Windows Insider and Windows Server 2025 are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Beginning with [Windows 11 Insider Preview Build 25982 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/25/announcing-windows-11-insider-preview-build-25982-canary-channel/) and [Windows Server Preview Build 25997](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25997/m-p/3983949), the SMB client supports requiring encryption of all outbound SMB connections. Administrators can require all destination servers to support encryption with SMB 3.0 or later. In this article, learn how to configure the SMB client to require encryption for all outbound connections.
+Beginning with [Windows 11 Insider Preview Build 25982 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/25/announcing-windows-11-insider-preview-build-25982-canary-channel/) and Windows Server 2025, the SMB client supports requiring encryption of all outbound SMB connections. Administrators can require all destination servers to support encryption with SMB 3.0 or later. In this article, learn how to configure the SMB client to require encryption for all outbound connections.
 
 Encryption of all outbound SMB client connections enforces the highest level of network security and brings management parity to SMB signing, which allows both client and server requirements. When enabled, the SMB client won't connect to an SMB server that doesn't support SMB 3.0 or later, or that doesn't support SMB encryption. For example, a third-party SMB server might support SMB 3.0 but not SMB encryption.
 
@@ -26,8 +26,8 @@ SMB Encryption supplies SMB data end-to-end protection from interception attacks
 Before you can configure the SMB client to require encryption, you need:
 
 - An SMB client running on one of the following operating systems.
-  - Windows 11 Insider Preview Build 25982 or later.
-  - Windows Server Insider Preview Build 25997 or later.
+  - Windows 11 Insider preview build 25982 or later.
+  - Windows Server 2025.
 - Administrative privileges to the computer.
 - If you're using Group Policy on a domain, you need privileges to create or edit a Group Policy object (GPO) and link it to the appropriate organizational unit (OU).
 

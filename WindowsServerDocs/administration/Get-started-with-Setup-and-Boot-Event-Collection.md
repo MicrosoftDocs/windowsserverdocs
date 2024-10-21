@@ -5,7 +5,7 @@ ms.date: 10/16/2017
 ms.topic: how-to
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247b3f8
 author: jaimeo
-ms.author: jaimeo
+ms.author: roharwoo
 ---
 # Get started with Setup and Boot Event Collection
 

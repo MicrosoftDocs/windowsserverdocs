@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4e40b57f-6917-43ef-92e0-030baa9d2b99
 author: nnamuhcs
-ms.author: daveba
+ms.author: roharwoo
 ---
 
 # Use the My Server App to Connect to Windows Server Essentials

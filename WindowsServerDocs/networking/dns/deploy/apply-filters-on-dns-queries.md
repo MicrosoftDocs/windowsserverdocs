@@ -4,7 +4,7 @@ description: Learn how to configure DNS policy in Windows Server 2016 to create 
 manager: brianlic
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---

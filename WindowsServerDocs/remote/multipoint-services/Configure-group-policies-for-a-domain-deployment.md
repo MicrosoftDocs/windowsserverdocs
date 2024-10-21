@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 13e5fa90-d330-4155-a6b8-78eb650cbbfa
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 # Configure group policies for a domain deployment
 To ensure that your domain deployment of MultiPoint Services works properly, apply the following group policy settings to the WMSshell user account on a MultiPoint Services system.

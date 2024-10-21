@@ -4,7 +4,7 @@ description: This topic provides a list of unsupported DirectAccess configuratio
 manager: brianlic
 ms.topic: article
 ms.assetid: 23d05e61-95c3-4e70-aa83-b9a8cae92304
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

@@ -4,7 +4,7 @@ description: In this topic, we show you how to create a tenant VM and connect it
 manager: grcusanz
 ms.topic: article
 ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/02/2021
 ---

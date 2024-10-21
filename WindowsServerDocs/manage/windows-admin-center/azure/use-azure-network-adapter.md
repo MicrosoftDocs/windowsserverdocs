@@ -3,7 +3,7 @@ title: Connect server to Azure Virtual Network - Azure Network Adapter
 description: This article provides requirements and steps on how to use Azure Network Adapter to connect a server to an Azure Virtual Network.
 ms.topic: article
 author: thomasmaurer
-ms.author: thmaure
+ms.author: roharwoo
 ms.date: 07/14/2020
 ms.custom: team=cloud_advocates
 ms.contributors: thmaure-08202021
@@ -67,8 +67,6 @@ In Windows Admin Center:
         Azure uses certificates to authenticate clients connecting to a virtual network over a Point-to-Site VPN connection. The public key information of the root certificate is uploaded to Azure. The root certificate is then considered “trusted” by Azure for a Point-to-Site connection to the virtual network. Client certificates must be generated from the trusted root certificate and installed on the client server. The client certificate is used to authenticate the client when it initiates a connection to the virtual network.
     
         To learn more, see the “Configure authentication type” section of [Configure a Point-to-Site VPN connection to a VNet using native Azure certificate authentication: Azure portal](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal).
-
-    :::image type="content" source="../media/azure-network-adapter/add-azure-network-adapter.png" alt-text="The Add Azure Network Adapter pane in Windows Admin Center.":::
 
 > [!NOTE]
 > Network appliances, such as VPN Gateway and Application Gateway that run inside a virtual network, come with additional cost. To learn more, see [Virtual Network pricing](https://azure.microsoft.com/pricing/details/virtual-network/).

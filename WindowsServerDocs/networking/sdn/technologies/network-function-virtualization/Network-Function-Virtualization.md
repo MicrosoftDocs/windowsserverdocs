@@ -4,7 +4,7 @@ description: You can use this topic to learn about Network Function Virtualizati
 manager: grcusanz
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

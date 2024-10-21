@@ -4,7 +4,7 @@ title: Change history for storage topics
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 1/16/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---

@@ -5,7 +5,7 @@ ms.date: 03/20/2023
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Change a dynamic disk back to a basic disk

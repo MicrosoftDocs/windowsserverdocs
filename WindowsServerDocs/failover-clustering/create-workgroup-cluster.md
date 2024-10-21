@@ -2,7 +2,7 @@
 title: Create a workgroup cluster in Windows Server
 description: Learn how-to create Failover Clusters without Active Directory using the Failover Cluster Manager or PowerShell.
 ms.topic: how-to
-ms.author: wscontent
+ms.author: roharwoo
 author: meaghanlewis
 ms.date: 07/16/2024
 ---

@@ -1,30 +1,30 @@
 ---
-title: Manage SMB dialects in Windows (preview)
+title: Manage SMB dialects in Windows and Windows Server 2025 (preview)
 description: Learn how to manage SMB2 and SMB3 dialects using Group Policy and Windows PowerShell in Windows Server and Windows client.
 ms.topic: how-to
 author: gswashington
-ms.author: nedpyle
+ms.author: alalve
 ms.date: 02/29/2024
 
 ---
 
-# Manage SMB dialects in Windows (preview)
+# Manage SMB dialects in Windows and Windows Server 2025 (preview)
 
->Applies to: Windows and Windows Server Insider Builds
+>Applies to: Windows Insider builds and Windows Server 2025
 
 > [!IMPORTANT]
-> Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Windows Insider builds and Windows Server 2025 are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Administrators have the ability to manage SMB2 and SMB3 dialects in Windows Server and Windows client. In this article, learn how to configure a minimum and maximum SMB dialect for the SMB server and client using Group Policy and Windows PowerShell.
 
-By default SMB Server and client automatically negotiates the highest matched dialect from SMB 2.0.2 to 3.1.1. Beginning with [Windows 11 Insider Preview Build 25951](https://blogs.windows.com/windows-insider/2023/09/13/announcing-windows-11-insider-preview-build-25951-canary-channel/) and [Windows Server Preview Build 25951](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25951/m-p/3926636), you can specify the SMB protocols used, blocking older, less secure, versions from connecting to the server. For example, you can specify connection to only use SMB 3.1.1, the most secure dialect of the protocol.
+By default SMB Server and client automatically negotiates the highest matched dialect from SMB 2.0.2 to 3.1.1. Beginning with [Windows 11 Insider  Build 25951](https://blogs.windows.com/windows-insider/2023/09/13/announcing-windows-11-insider-preview-build-25951-canary-channel/) and [Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025), you can specify the SMB protocols used, blocking older, less secure, versions from connecting to the server. For example, you can specify connection to only use SMB 3.1.1, the most secure dialect of the protocol.
 
 ## Prerequisites
 
 Before you can configure SMB dialects you need:
 
 - An SMB server running on one of the following operating systems.
-  - Windows Server Insiders build 25951 or later.
+  - Windows Server 2025.
   - Windows 11 Insiders build 25951 or later.
 - Administrative privileges to the computer.
 - If you're using Group Policy on a domain, you need privileges to create or edit a Group Policy object (GPO) and link it to the appropriate organizational unit (OU).

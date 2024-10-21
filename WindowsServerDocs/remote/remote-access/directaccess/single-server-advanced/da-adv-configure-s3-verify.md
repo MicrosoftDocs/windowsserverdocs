@@ -4,7 +4,7 @@ description: Learn how to verify that you have correctly configured your advance
 manager: brianlic
 ms.topic: article
 ms.assetid: ae8bbff0-c981-4bc6-8df1-861621d0627f
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

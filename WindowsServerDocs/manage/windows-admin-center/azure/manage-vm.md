@@ -3,7 +3,7 @@ title: Manage a Windows VMs using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Windows Server and Client Azure VMs
 ms.topic: overview
 author: prasidharora
-ms.author: praror
+ms.author: roharwoo
 ms.date: 07/26/2022
 ---
 # Manage a Windows VM using Windows Admin Center in Azure
@@ -113,8 +113,6 @@ However, we recommend instead using a private IP address to connect with, or at 
 1. Select **Install**.
 
    Installing takes a few minutes. If you selected **Open this port for me** or manually created an inbound port rule in the last couple minutes, it might take another couple minutes before you can connect with Windows Admin Center.
-
-:::image type="content" source="../../media/manage-vm/install-windows-admin-center.png" alt-text="Screenshot showing the install button for Windows Admin Center on a VM." lightbox="../../media/manage-vm/install-windows-admin-center.png":::
 
 ## Using with a VM
 

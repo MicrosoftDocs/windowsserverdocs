@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: e74961a2-bd38-48ae-b1c0-4b3eff761b4a
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 
 # Selecting Hardware for Your MultiPoint Services System

@@ -270,7 +270,7 @@ If not specified, this setting defaults to *3*.
 > From a security perspective, a malicious user who acquires administrative privileges on a device using a valid Windows LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
 
 > [!IMPORTANT]
-> `PostAuthenticationActions` value 11 is supported in Windows Server 2025 and later.
+> `PostAuthenticationActions` value 11 is only supported in Windows 11 24H2, Windows Server 2025 and later releases.
 
 ### AutomaticAccountManagementEnabled
 
@@ -330,6 +330,36 @@ Windows local account names have a maximum length of 20 characters, which means 
 This setting defaults to *0*.
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
+
+## Windows LAPS default policy values
+
+All Windows LAPS policy settings have a default value. The default value is applied whenever an administrator doesn't configure a particular setting. The default value is also applied whenever an administrator configures a particular setting with an unsupported value.
+
+|Setting name|Default value|
+|---|---|
+|BackupDirectory|Disabled|
+|AdministratorAccountName|Null\empty|
+|PasswordAgeDays|30|
+|PasswordLength|14|
+|PassphraseLength|6|
+|PasswordComplexity|4|
+|PostAuthenticationResetDelay|24|
+|PostAuthenticationActions|3 (Reset password and sign out)|
+|ADPasswordEncryptionEnabled|True|
+|ADPasswordEncryptionPrincipal|Domain Admins|
+|ADEncryptedPasswordHistorySize|0|
+|ADBackupDSRMPassword|False|
+|PasswordExpirationProtectionEnabled|True|
+|AutomaticAccountManagementEnabled|False|
+|AutomaticAccountManagementTarget|Yes|
+|AutomaticAccountManagementNameOrPrefix|Yes|
+|AutomaticAccountManagementEnableAccount|False|
+|AutomaticAccountManagementRandomizeName|False|
+
+> [!IMPORTANT]
+> ADPasswordEncryptionPrincipal is an exception to the misconfigured setting rule. This setting defaults to 'Domain Admins' only when the setting is not configured. In the case where an invalid user or group name is specified, this will cause a policy processing failure and the managed account's password will not be backed up.
+
+Keep these defaults in mind when configuring new Windows LAPS features, for example passphrase support. If you configure a policy with a PasswordComplexity value of 6 (long word passphrases), then apply that policy to an older OS which doesn't support that value, the target OS uses the default value of 4. To avoid this outcome, create two different policies: one for the older OS and one for the newer OS.
 
 ## Related content
 

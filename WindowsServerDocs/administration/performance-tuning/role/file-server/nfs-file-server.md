@@ -3,7 +3,7 @@ title: Performance Tuning for NFS File Servers
 description: Performance Tuning for NFS File Servers
 ms.topic: article
 author: robinharwood
-ms.author: roopeshb
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 # Performance Tuning NFS File Servers

@@ -3,7 +3,7 @@ title: detail disk
 description: Reference article for the detail disk command, which displays the properties of the selected disk and the volumes on that disk.
 ms.topic: reference
 ms.assetid: 6b09cf40-8d93-452b-b449-5242e62a4102
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

@@ -3,8 +3,8 @@ title: Automatic Virtual Machine Activation in Windows Server
 description: Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purchase mechanism, helping to ensure that Windows products are used in accordance with the Product Use Rights and Microsoft Software License Terms.
 ms.topic: conceptual
 author: xelu86
-ms.author: wscontent
-ms.date: 04/29/2024
+ms.author: roharwoo
+ms.date: 09/30/2024
 ---
 
 # Automatic Virtual Machine Activation in Windows Server
@@ -34,12 +34,13 @@ For a virtualization server host to run guest VMs, you must activate it. To do s
 
 AVMA requires a Windows Server Datacenter edition with the Hyper-V server host role installed. The Windows Server version of the host determines which versions it can activate in a guest VM. The following table lists the guest VM versions that each host version is able to activate. A host version can access all the editions (Datacenter, Standard, or Essentials) of its eligible guest VM versions.
 
-| Server host version | Windows Server 2022 guest VM | Windows Server 2019 guest VM | Windows Server 2016 guest VM | Windows Server 2012 R2 guest VM |
-|--|:--:|:--:|:--:|:--:|
-| Windows Server 2022 | X | X | X | X |
-| Windows Server 2019 | | X | X | X |
-| Windows Server 2016 | | | X | X |
-| Windows Server 2012 R2 | | | | X |
+| Server host version | Windows Server 2025 guest VM | Windows Server 2022 guest VM | Windows Server 2019 guest VM | Windows Server 2016 guest VM | Windows Server 2012 R2 guest VM |
+|--|:--:|:--:|:--:|:--:|:--:|
+| Windows Server 2025 | X | X | X | X | X |
+| Windows Server 2022 | | X | X | X | X |
+| Windows Server 2019 | | | X | X | X |
+| Windows Server 2016 | | | | X | X |
+| Windows Server 2012 R2 | | | | | X |
 
 > [!NOTE]
 > AVMA does not work with other server virtualization technologies.
@@ -67,6 +68,14 @@ The VM automatically activates, providing that the virtualization host itself is
 > You can also add the AVMA keys in any [Unattend setup file](/windows-hardware/manufacture/desktop/update-windows-settings-and-scripts-create-your-own-answer-file-sxs).
 
 ## AVMA keys
+
+# [Windows Server 2025](#tab/server2025)
+
+| Edition | Key |
+|--|--|
+| Datacenter | YQB4H-NKHHJ-Q6K4R-4VMY6-VCH67 |
+| Datacenter:<br/>Azure Edition | 6NMQ9-T38WF-6MFGM-QYGYM-88J4F |
+| Standard | WWVGQ-PNHV9-B89P4-8GGM9-9HPQ4 |
 
 # [Windows Server 2022](#tab/server2022)
 

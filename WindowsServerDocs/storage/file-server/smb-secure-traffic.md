@@ -3,7 +3,7 @@ title: Secure SMB Traffic in Windows Server
 description: How to secure SMB Traffic in Windows
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/06/2024
 # Intent: As a network administrator I want to configure ports to secure SMB Traffic in Windows
 ---

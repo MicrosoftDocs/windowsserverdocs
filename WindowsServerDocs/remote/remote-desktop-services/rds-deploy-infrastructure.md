@@ -1,7 +1,7 @@
 ---
 title: Deploy your Remote Desktop environment
 description: Basic steps to deploy a Remote Desktop environment.
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: article
 author: robinharwood

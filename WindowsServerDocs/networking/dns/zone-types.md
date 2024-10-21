@@ -2,7 +2,7 @@
 title: DNS zones in DNS Server on Windows Server
 description: Learn about the different DNS zone types and how they're stored with DNS server in Windows Server.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: conceptual
 ms.date: 04/26/2023
 ms.custom: template-concept, team=cloud_advocates

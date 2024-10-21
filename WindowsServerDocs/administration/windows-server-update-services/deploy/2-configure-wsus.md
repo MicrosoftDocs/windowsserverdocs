@@ -3,7 +3,7 @@ title: Step 2 - Configure WSUS
 description: Windows Server Update Services (WSUS) topic - Configure WSUS is step two in a four-step process for deploying WSUS.
 ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 9/18/2020

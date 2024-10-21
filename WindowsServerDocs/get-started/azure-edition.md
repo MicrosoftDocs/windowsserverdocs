@@ -4,7 +4,7 @@ description: Overview of Azure Edition for Windows Server, including key feature
 author: robinharwood
 ms.topic: overview
 ms.date: 05/16/2023
-ms.author: wscontent 
+ms.author: roharwoo 
 ---
 
 # What is Azure Edition for Windows Server?

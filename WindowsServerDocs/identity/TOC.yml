@@ -433,6 +433,8 @@
         href: ad-ds/manage/manage-fsmo-roles.md
       - name: Managing RID issuance
         href: ad-ds/manage/Managing-RID-Issuance.md
+      - name: Raise domain and forest functional levels
+        href: ad-ds/plan/raise-domain-forest-functional-levels.md
       - name: Active Directory Domain Services component updates
         href: ad-ds/manage/component-updates/active-directory-Domain-Services-component-Updates.md
         items:
@@ -477,6 +479,8 @@
           href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
         - name: Delegated Managed Service Accounts FAQ
           href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-faq.yml
+        - name: Credential Guard protected machine accounts
+          href: ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts.md
       - name: Group Managed Service Accounts
         href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
         items:

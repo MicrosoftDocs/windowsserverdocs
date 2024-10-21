@@ -3,7 +3,7 @@ title: Configuring user access control and permissions
 description: Learn how to configure user access control and permissions using Active Directory or Microsoft Entra ID (Project Honolulu)
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 10/18/2021
 ---
 # Configure User Access Control and Permissions

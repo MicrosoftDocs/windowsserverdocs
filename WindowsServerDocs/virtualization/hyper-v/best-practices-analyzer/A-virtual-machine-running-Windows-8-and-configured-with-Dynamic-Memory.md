@@ -1,7 +1,7 @@
 ---
 title: A virtual machine running Windows 8 and configured with Dynamic Memory should use recommended values for memory settings
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows 8.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: a17d774e-62bb-40a7-9ddb-80d07596d51c

@@ -4,7 +4,7 @@ description: Learn how to configure the Certificate Revocation List (CRL) Distri
 manager: dougkim
 ms.topic: article
 ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 07/26/2018
 ---

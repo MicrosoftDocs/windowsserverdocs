@@ -3,7 +3,7 @@ title: Software Restriction Policies Technical Overview
 description: Learn about software restriction policies, when and how to use the feature, and what changes have been implemented in past releases.
 ms.topic: article
 ms.assetid: dc7013b0-0efd-40fd-bd6d-75128adbd0b8
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016

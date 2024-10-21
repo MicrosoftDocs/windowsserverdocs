@@ -4,7 +4,7 @@ description: Learn how to manually refresh Group Policy on the local computer.
 manager: brianlic
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

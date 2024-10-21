@@ -3,7 +3,7 @@ title: delete disk
 description: Reference article for the delete disk command, which deletes a missing dynamic disk from the list of disks.
 ms.topic: reference
 ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

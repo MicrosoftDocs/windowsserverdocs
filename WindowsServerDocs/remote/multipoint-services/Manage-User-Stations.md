@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: b418578d-3a4c-49b0-90db-8389b320b2f6
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Manage User Stations

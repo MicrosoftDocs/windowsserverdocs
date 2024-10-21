@@ -4,7 +4,7 @@ description: Learn how domain controllers are located in Windows and Windows Ser
 ms.date: 08/29/2024
 ms.topic: conceptual
 author: gswashington
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Locating domain controllers in Windows and Windows Server

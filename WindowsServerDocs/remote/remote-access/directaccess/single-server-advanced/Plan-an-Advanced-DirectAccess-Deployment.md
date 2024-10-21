@@ -4,7 +4,7 @@ description: Learn about the planning steps that are required to deploy a single
 manager: brianlic
 ms.topic: article
 ms.assetid: d486735e-71fe-4443-9878-4b784cd588a7
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

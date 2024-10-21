@@ -4,7 +4,7 @@ description: In this topic, you learn how to deploy network virtual appliances o
 manager: grcusanz
 ms.topic: article
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/02/2021
 ---
