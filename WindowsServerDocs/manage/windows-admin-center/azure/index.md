@@ -26,13 +26,13 @@ You can set up most Azure hybrid services by downloading an app and doing some m
 
 The Azure hybrid services tool in [Windows Admin Center](../overview.md) consolidates all the integrated Azure services into a centralized hub where you can easily discover all the available Azure services that bring value to your on-premises or hybrid environment.
 
-![Screenshot of Windows Admin Center showing the Azure Hybrid Services tool](../media/azure-services/Azure-Hybrid-Services-Discover.png)
+![Screenshot of Windows Admin Center showing the Azure Hybrid Services tool](../media/azure-services/azure-hybrid-services.png)
 
-If you connect to a server with Azure services already enabled, the Azure hybrid services tool serves lets you see all enabled services on that server in a single glance. You can easily get to the relevant tool within Windows Admin Center, launch out to the Azure portal for deeper management of those Azure services, or learn more with documentation at your fingertips.
+If you connect to a server with Azure services already enabled, the Azure hybrid services tool lets you see all enabled services on that server in a single glance. You can easily get to the relevant tool within Windows Admin Center, launch out to the Azure portal for deeper management of those Azure services, or learn more with documentation at your fingertips.
 
 From the Azure hybrid services tool, you can:
 
-- Backup your Windows Server from Windows Admin Center with [Azure Backup](azure-backup.md)
+- Back up your Windows Server from Windows Admin Center with [Azure Backup](azure-backup.md)
 - Protect your Hyper-V Virtual Machines from Windows Admin Center with [Azure Site Recovery](azure-site-recovery.md)
 - Sync your file server with the cloud, using [Azure File Sync](azure-file-sync.md)
 - Manage operating system updates for all your Windows servers, both on-premises or in the cloud, with [Azure Update Management](azure-update-management.md)
