@@ -158,6 +158,7 @@ To enable Accelerated Networking on a VM:
 
   ```powershell
   Enable-AccelNetVM -VMName "MyVM" -Performance High
+  ```
 
   **VMName** and **Performance** are required parameters. You can set the performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status, as shown in the following table:
 
@@ -174,6 +175,7 @@ To enable Accelerated Networking on a VM:
 
   ```powershell
   Get-VM -VMName "MyVM01, MyVM02" | Enable-AccelNetVM -Performance Low
+  ```
 
 #### [Windows Admin Center](#tab/wac)
 
@@ -213,6 +215,7 @@ To change the Accelerated Networking settings on a VM:
 
    ```powershell
    Set-AccelNetManagement -VMName "MyVM" -Performance Medium
+   ```
 
 #### [Windows Admin Center](#tab/wac)
 
@@ -254,6 +257,7 @@ To disable Accelerated Networking on a VM:
 
   ```powershell
   Get-VM -VMName "MyVM01, MyVM02" | Disable-AccelNetVM
+  ```
 
 #### [Windows Admin Center](#tab/wac)
 
