@@ -3,15 +3,15 @@ title: Install Windows Admin Center
 description: How to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 ms.topic: article
 author: gswashington
-ms.author: robinharwood
-ms.date: 10/14/2024
+ms.author: roharwoo
+ms.date: 10/21/2024
 zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
 
 >Applies to: Windows Admin Center, Windows Admin Center (preview)
 
-This topic describes how to install Windows Admin Center on a Windows client machine or on a remote server so that multiple users can access Windows Admin Center using a web browser.
+This article describes how to install Windows Admin Center on a Windows client machine or on a remote server so that multiple users can access Windows Admin Center using a web browser. Select the button that corresponds to the operating system you plan to install Windows Admin Center on.
 
 > [!TIP]
 > New to Windows Admin Center?
@@ -19,19 +19,29 @@ This topic describes how to install Windows Admin Center on a Windows client mac
 
 ## Determine your installation type
 
-Review the [installation options](../plan/installation-options.md) which includes the [supported operating systems](../plan/installation-options.md#installation-supported-operating-systems). To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+Review the [installation options](../plan/installation-options.md) which includes the [supported operating systems](../plan/installation-options.md#installation-supported-operating-systems). To install Windows Admin Center on a virtual machine in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
 ## Prerequisites
 
+To install Windows Admin Center, you need the following prerequisites:
 
-1. Open [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center).
+- A Windows PC or server to install Windows Admin Center on.
 
-1. Under **Please select your Windows Admin Center download**, select **Download now**.
+- Administrative privileges or equivalent permissions on the machine you're installing Windows Admin Center on.
 
+- Optional: An SSL certificate. You can use a self-signed certificate for testing, but you should always use a certificate from a trusted certificate authority for production environments. If you don't have a certificate, you can use the Windows Admin Center installer to generate a self-signed certificate. The certificate is valid for 60 days.
 
-Optional, but recommended, generate an SSL certificate for Windows Admin Center. You can use a self-signed certificate for testing, but you must use a certificate from a trusted certificate authority for production environments. If you don't have a certificate, you can use the Windows Admin Center installer to generate a self-signed certificate. The certificate is valid for 60 days.
+:::zone pivot="windows-server-2022,windows-client"
 
-## Install
+<br/><br/>
+
+- Download the Windows Admin Center installer from the [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) to a location on the machine you want to install Windows Admin Center on.
+
+::: zone-end
+
+## Installing Windows Admin Center
+
+To install Windows Admin Center, perform the following steps:
 
 :::zone pivot="windows-server-2025"
 
@@ -61,7 +71,7 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 
 ### [Desktop Experience](#tab/desktop-experience)
 
-To install Windows Admin Center on your machine running the Windows Server 2025 (preview) Desktop Experience:
+To install Windows Admin Center on your machine running the Windows Server Desktop Experience, follow these steps:
 
 1. Open the **Start** menu and enter **Windows Admin Center Setup** into the search bar to search for Windows Admin Center.
 
@@ -69,7 +79,7 @@ To install Windows Admin Center on your machine running the Windows Server 2025 
 
 1. On the **Get started with Windows Admin Center** window, select **Next** to accept the license terms. After that, the installation app opens, and the Installer download starts automatically.
 
-1. Once the installer has finished downloading, select **Install**.
+1. Once the installer finishes downloading, select **Install**.
 
 1. On the License Agreement, if you agree to the terms select **I accept the agreement**, then select **Next** to start the installation process.
 
@@ -100,8 +110,6 @@ You've now installed Windows Admin Center on your machine.
 
 :::zone pivot="windows-server-2022"
 
-## Windows Server 2022 and earlier
-
 ### [Server Core](#tab/server-core)
 
 If you have a Server Core installation of Windows Server 2022 and earlier, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
@@ -128,7 +136,7 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 
 ### [Desktop Experience](#tab/desktop-experience)
 
-To install Windows Admin Center on your Windows Server 2022 and earlier versions running Desktop Experience installation:
+To install Windows Admin Center on your machine running the Windows Server Desktop Experience, follow these steps:
 
 1. Sign in to the machine you want to install Windows Admin Center on.
 
@@ -162,11 +170,7 @@ You've now installed Windows Admin Center on your machine.
 
 :::zone pivot="windows-client"
 
-## Install Windows Admin Center on Windows client
-
-When you install Windows Admin Center on Windows client, it uses port 6516 by default, but you have the option to specify a different port. You can also create a desktop shortcut and let Windows Admin Center manage your TrustedHosts.
-
-To install Windows Admin Center on your Windows client machine:
+To install Windows Admin Center on your Windows client machine, follow the steps.
 
 1. Sign in to the machine you want to install Windows Admin Center on.
 
@@ -190,7 +194,7 @@ To install Windows Admin Center on your Windows client machine:
 
 1. On the **One more thing** screen, check **Open Windows Admin Center**, then select **Finish**.
 
-1. Wait for Windows Admin Center to launch, in the **Select a cerficiate for authenitcation** select the **Windows Admin Center Client**, then select **OK**.
+1. Wait for Windows Admin Center to launch, in the **Select a certificate for authentication** select the **Windows Admin Center Client**, then select **OK**.
 
 You've now installed Windows Admin Center on your Windows client machine.
 
@@ -200,11 +204,11 @@ You've now installed Windows Admin Center on your Windows client machine.
 
 You can update non-preview versions of Windows Admin Center by using Microsoft Update or a manual installation.
 
-Windows Admin Center preserves your settings when you upgrade to the latest version. We don't officially support upgrading Insider Preview versions of Windows Admin Center, and we recommend you do a "clean" installation by installing the latest version of Preview and starting over, but we don't block attempts to manually carry over settings for Preview upgrades.
+Windows Admin Center preserves your settings when you upgrade to the latest version. Upgrading Insider Preview versions of Windows Admin Center isn't supported, we recommend you do a new installation by installing the latest version of Preview and starting over.
 
-## Updating the certificate used by Windows Admin Center
+## Update the certificate used by Windows Admin Center
 
-When you have Windows Admin Center deployed as a service, you must provide a certificate for HTTPS. To update this certificate use the following these steps.
+When you have Windows Admin Center deployed as a service, you must provide a certificate for HTTPS. To update this certificate, use the following these steps.
 
 > [!IMPORTANT]
 > When changing your certificate, the Windows Admin Center service will restart for the changes to take effect.
