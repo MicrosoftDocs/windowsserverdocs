@@ -4,7 +4,7 @@ description: How to set up and validate Accelerated Networking on your VMs.
 ms.topic: article
 ms.author: helohr
 author: Heidilohr
-ms.date: 08/09/2024
+ms.date: 10/21/2024
 ---
 # Accelerated Networking
 
@@ -28,7 +28,7 @@ Accelerated Networking's high-performance data path enables single root I/O virt
 
 Your deployment needs to meet the following prerequisites in order to be able to set up and use Accelerated Networking:
 
-- An [Azure Arc Premium subscription](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+- A [Windows Server Azure Arc Managements services](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). <!--Follow up w/ PMs about exact link for subscription.-->
 
 - Your device must be running Windows Server 2025 Datacenter edition with a functioning cluster.
 
@@ -313,25 +313,25 @@ To resolve this issue, create or update an intent with the Compute state.
 
 ### Sriov_support_[KEY]
 
-Unknown 
+#### Unknown
 
 Adapter {0} cannot be enabled for Accelerated Networking because it is not advertising SR-IOV Support.
 
 To resolve this issue, make sure the computer hardware can support SR-IOV and that you enabled I/O virtualization in the BIOS.
 
-### MissingAcs
+#### MissingAcs
 
 Adapter {0} cannot be enabled for Accelerated Networking because it is in a PCIe slot that does not support Access Control Services (ACS).
 
 To resolve this issue, either try moving the device to another PCIe slot or contact your hardware vendor.
 
-### MissingPfDriver
+#### MissingPfDriver
 
 Adapter {0} cannot be enabled for Accelerated Networking because the device driver does not support SR-IOV.
 
 To resolve this issue, update the driver.
 
-### NoBusResources
+#### NoBusResources
 
 Adapter {0} cannot be enabled for Accelerated Networking because there are not enough PCI Express bus numbers available.
 
