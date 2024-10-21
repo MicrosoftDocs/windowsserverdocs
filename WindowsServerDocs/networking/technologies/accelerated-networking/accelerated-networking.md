@@ -65,7 +65,7 @@ To enable Accelerated Networking on a cluster:
 
 1. Go to any node that's on the cluster where you want to enable Accelerated Networking.
 
-1. Run the following cmdlet to enable Accelerated Networking:
+1. Run the following command to enable Accelerated Networking:
 
   ```powershell
   Enable-AccelNetManagement -IntentName "MyIntent" -NodeReservePercentage
@@ -99,7 +99,7 @@ To change Accelerated Networking settings on a cluster:
 
 #### [PowerShell](#tab/powershell)
 
-On a node with Accelerated Networking enabled, run the following cmdlet with the values for the new intent and node reserve:
+On a node with Accelerated Networking enabled, run the following command with the values for the new intent and node reserve:
 
 ```powershell
 Set-AccelNetManagement -IntentName "MyIntent" -NodeReservePercentage
@@ -134,7 +134,7 @@ To disable Accelerated Networking on a cluster:
 After you disable the cluster, the Network HUD no longer monitors the health of the feature.
 
 >[!NOTE]
->Disabling Accelerated Networking at the cluster doesn't change setting configurations on the virtual machines (VMs). VMs are no longer managed by Accelerated Networking or tracked by the Network HUD.
+>Disabling Accelerated Networking at the cluster doesn't change setting configurations on the VMs. VMs are no longer managed by Accelerated Networking or tracked by the Network HUD.
 
 #### [Windows Admin Center](#tab/wac)
 
@@ -154,13 +154,12 @@ To enable Accelerated Networking on a VM:
 
 1. In a PowerShell window, go to the node containing the VM you want to enable Accelerated Networking.
 
-1. Run the following cmdlet to enable Accelerated Networking:
+1. Run the following command to enable Accelerated Networking with high performance:
 
   ```powershell
-  Enable-AccelNetVM -VMName "MyVM" -Performance
-  ```
+  Enable-AccelNetVM -VMName "MyVM" -Performance High
 
-  VMName and Performance are required parameters. You can set the Performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status, as shown in the following table:
+  **VMName** and **Performance** are required parameters. You can set the performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status, as shown in the following table:
 
   | Hyperthreading configuration | Performance setting | Minimum vCPUs required |
   |---|---|---|
@@ -171,11 +170,10 @@ To enable Accelerated Networking on a VM:
   | Enabled | Medium | 4 |
   | Enabled | High | 4 |
 
-1. To enable Accelerated Networking for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
+1. To enable Accelerated Networking for multiple VMs to run in low performance, run the following command:
 
   ```powershell
-  <example cmdlet>
-  ```
+  Get-VM -VMName "MyVM01, MyVM02" | Enable-AccelNetVM -Performance Low
 
 #### [Windows Admin Center](#tab/wac)
 
@@ -211,11 +209,10 @@ To change the Accelerated Networking settings on a VM:
 
 1. Go to the node that contains the VMs you want to reconfigure.
 
-1. Run the following cmdlet:
+1. Run the following command to set your VM to run in medium performance:
 
    ```powershell
-   Set-AccelNetManagement -VMName "MyVM" -Performance
-   ```
+   Set-AccelNetManagement -VMName "MyVM" -Performance Medium
 
 #### [Windows Admin Center](#tab/wac)
 
@@ -247,17 +244,16 @@ To disable Accelerated Networking on a VM:
 
 1. Go to the node that contains the VMs you want to disable Accelerated Networking for.
 
-1. Run the following cmdlet:
+1. Run the following command:
   
    ```powershell
    Disable-AccelNetVM -VMName "MyVM"
    ```
 
-1. To disable Accelerated Networking for multiple VMs, divide each -VMName and -Performance value for each VM with the pipe symbol, as shown in the following example:
+1. To disable Accelerated Networking for multiple VMs, run the following command:
 
   ```powershell
-  <example cmdlet>
-  ```
+  Get-VM -VMName "MyVM01, MyVM02" | Disable-AccelNetVM
 
 #### [Windows Admin Center](#tab/wac)
 
