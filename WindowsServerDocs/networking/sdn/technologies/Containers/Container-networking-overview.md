@@ -4,7 +4,7 @@ description: This topic is an overview of the networking stack for Windows Conta
 manager: grcusanz
 ms.topic: article
 ms.assetid: 318659e5-e4a5-4e46-99d6-211dfc46f6b8
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

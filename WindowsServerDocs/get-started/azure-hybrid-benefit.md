@@ -4,7 +4,7 @@ description: Azure Hybrid Benefit for Windows Server lets you reduce costs by us
 ms.date: 08/01/2024
 ms.topic: conceptual
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Azure Hybrid Benefit for Windows Server

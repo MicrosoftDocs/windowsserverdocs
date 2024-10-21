@@ -4,7 +4,7 @@ description: Learn about the Server Core installation option in Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
+ms.author: alalve
 ms.date: 02/20/2018
 ms.topic: conceptual
 ---

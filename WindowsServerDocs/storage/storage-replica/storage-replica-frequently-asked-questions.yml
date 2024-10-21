@@ -3,7 +3,7 @@ metadata:
   description: "Learn more about"
   title: Frequently asked questions about Storage Replica
   manager: siroy
-  ms.author: nedpyle
+  ms.author: alalve
   ms.topic: faq
   author: nedpyle
   ms.date: 04/15/2020
@@ -11,9 +11,9 @@ metadata:
   ms.service: windows-server
 title: Frequently asked questions about Storage Replica
 summary: |
-  >Applies to: Windows Server 2019, Windows Server 2016
+  >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
   
-  This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
+  This article contains answers to frequently asked questions (FAQs) about Storage Replica.
   
 
 sections:
@@ -35,16 +35,16 @@ sections:
           Important notes:
           
           - There are Azure Resource Manager templates for Storage Spaces Direct-based Storage Replica clustering at [Create a Storage Spaces Direct SOFS Clusters with Storage Replica for Disaster Recovery across Azure Regions](https://aka.ms/azure-storage-replica-cluster).
-          - Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. You must allow TCP port 135 and the dynamic range above TCP port 49152. Reference [Building Windows Server Failover Cluster on Azure IAAS VM – Part 2 Network and Creation](/archive/blogs/askcore/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation).
-          - It's possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by Storage Replica. But this will likely have poor performance and should be used only for limited workloads or testing.
+          - Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. You must allow TCP port 135 and the dynamic range higher than TCP port 49152. Reference [Building Windows Server Failover Cluster on Azure IAAS VM – Part 2 Network and Creation](/archive/blogs/askcore/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation).
+          - It's possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by Storage Replica. But this configuration might perform poorly and should be used only for limited workloads or testing.
           
       - question: |
           How do I see the progress of replication during initial sync?
         answer: |
 
-          The Event 1237 messages shown in the Storage Replica Admin even log on the destination server show number of bytes copied and bytes remaining every 10 seconds. You can also use the Storage Replica performance counter on the destination showing **\Storage Replica Statistics\Total Bytes Received** for one or more replicated volumes. You can also query the replication group using Windows PowerShell. For instance,  this sample command gets the name of the groups on the destination  then queries one group named **Replication 2** every 10 seconds to show progress:
+          Event ID 1237 messages in the Storage Replica Admin event log on the destination server show the number of bytes copied and bytes remaining every 10 seconds. You can also use the Storage Replica performance counter on the destination showing **\Storage Replica Statistics\Total Bytes Received** for one or more replicated volumes. You can also query the replication group using Windows PowerShell. For instance,  this sample command gets the name of the groups on the destination  then queries one group named **Replication 2** every 10 seconds to show progress:
           
-          ```
+          ```powershell
           Get-SRGroup
           
           do{
@@ -53,22 +53,21 @@ sections:
               Start-Sleep 10
           }until($r.ReplicationStatus -eq 'ContinuouslyReplicating')
           Write-Output "Replica Status: "$r.replicationstatus
-          
           ```
       - question: |
           Can I specify specific network interfaces to be used for replication?
         answer: |
-          Yes, using `Set-SRNetworkConstraint`. This cmdlet operates at the interface layer and be used on both cluster and non-cluster scenarios.
+          Yes, using `Set-SRNetworkConstraint`. This cmdlet operates at the interface layer, and can be used on both cluster and noncluster scenarios.
           For example, with a standalone server (on each node):
           
-          ```
+          ```powershell
           Get-SRPartnership
           
           Get-NetIPConfiguration
           ```
           Note the gateway and interface information (on both servers) and the partnership directions. Then run:
           
-          ```
+          ```powershell
           Set-SRNetworkConstraint -SourceComputerName sr-srv06 -SourceRGName rg02 -
           SourceNWInterface 2 -DestinationComputerName sr-srv05 -DestinationNWInterface 3 -DestinationRGName rg01
           
@@ -80,14 +79,14 @@ sections:
           
           For configuring network constraints on a stretch cluster:
           
-          ```
+          ```powershell
           Set-SRNetworkConstraint -SourceComputerName sr-cluster01 -SourceRGName group1 -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-cluster02 -DestinationRGName group2 -DestinationNWInterface "Cluster Network 1","Cluster Network 2"
           ```
           
       - question: |
           Can I configure one-to-many replication or transitive (A to B to C) replication?
         answer: |
-          No, Storage Replica supports only one to one replication of a server, cluster, or stretch cluster node. This might change in a later release. You can configure replication between various servers of a specific volume pair, in either direction. For instance, Server 1 can replicate its D volume to server 2, and its E volume from Server 3.
+          No, Storage Replica supports only one-to-one replication of a server, cluster, or stretch cluster node. You can configure replication between various servers of a specific volume pair, in either direction. For instance, Server 1 can replicate its D volume to server 2, and its E volume from Server 3.
 
       - question: |
           Can I grow or shrink replicated volumes replicated by Storage Replica?
@@ -103,24 +102,28 @@ sections:
         answer: |
           Not in Windows Server 2016. Storage Replica dismounts the destination volume when replication begins.
           
-          However, in Windows Server 2019 and Windows Server Semi-Annual Channel starting with version, 1709, the option to mount the destination storage is now possible - this feature is called "Test Failover". To do this, you must have an unused, NTFS or ReFS formatted volume that isn't currently replicating on the destination. Then you can mount a snapshot of the replicated storage temporarily for testing or backup purposes.
+          However, in Windows Server 2019, the option to mount the destination storage is now possible - this feature is called _Test Failover_. To perform a Test Failover, you must have an unused, NTFS or ReFS formatted volume that isn't currently replicating on the destination. Then you can mount a snapshot of the replicated storage temporarily for testing or backup purposes.
           
-          For example, to create a test failover where you're replicating a volume "D:" in the Replication Group "RG2" on the destination server "SRV2" and have a "T:" drive on SRV2 that isn't being replicated:
+          To create a test failover for the Replication Group `RG2` on the destination server `SRV2`, using `T:` as a temporary drive that isn't being replicated, run the following command.
           
-           `Mount-SRDestination -Name RG2 -Computername SRV2 -TemporaryPath T:\`
+           ```powershell
+           Mount-SRDestination -Name RG2 -Computername SRV2 -TemporaryPath T:\
+           ```
           
-          The replicated volume D: is now accessible on SRV2. You can read and write to it normally, copy files off it, or run an online backup that you save elsewhere for safekeeping, under the D: path. The T: volume will only contain log data.
+          The replicated volume is now accessible on `SRV2`. You can read and write to it normally, copy files off it, or run an online backup that you save elsewhere for safekeeping. The `T:` volume contains log data.
           
           To remove the test failover snapshot and discard its changes:
           
-           `Dismount-SRDestination -Name RG2 -Computername SRV2`
+           ```powershell
+           Dismount-SRDestination -Name RG2 -Computername SRV2
+           ```
           
           You should only use the test failover feature for short-term temporary operations. It isn't intended for long term usage. When in use, replication continues to the real destination volume.
           
       - question: |
           Can I configure Scale-out File Server (SOFS) in a stretch cluster?
         answer: |
-          While technically possible, this isn't a recommended configuration due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration typically works without issues.
+          While technically possible, this configuration isn't recommended due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically submillisecond, this configuration typically works without issues.
           
           If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.
           
@@ -134,7 +137,7 @@ sections:
       - question: |
           Can I configure Storage Spaces Direct in a stretch cluster with Storage Replica?
         answer: |
-          This isn't a supported configuration in Windows Server. This might change in a later release. If configuring cluster-to-cluster replication, Storage Replica fully supports Scale Out File Servers and Hyper-V Servers, including the use of Storage Spaces Direct.
+          This configuration isn't supported in Windows Server. If configuring cluster-to-cluster replication, Storage Replica fully supports Scale Out File Servers and Hyper-V Servers, including the use of Storage Spaces Direct.
 
       - question: |
           How do I configure asynchronous replication?
@@ -144,7 +147,7 @@ sections:
       - question: |
           How do I prevent automatic failover of a stretch cluster?
         answer: |
-          To prevent automatic failover, you can use PowerShell to configure `Get-ClusterNode -Name "NodeName").NodeWeight=0`. This removes the vote on each node in the disaster recovery site. Then you can use `Start-ClusterNode -PreventQuorum` on nodes in the primary site and `Start-ClusterNode -ForceQuorum` on nodes in the disaster site to force failover. There's no graphical option for preventing automatic failover, and preventing automatic failover isn't recommended.
+          To prevent automatic failover, you can use PowerShell to configure `Get-ClusterNode -Name "NodeName").NodeWeight=0`. This command removes the vote on each node in the disaster recovery site. Then you can use `Start-ClusterNode -PreventQuorum` on nodes in the primary site and `Start-ClusterNode -ForceQuorum` on nodes in the disaster site to force failover. There's no graphical option for preventing automatic failover, and preventing automatic failover isn't recommended.
 
       - question: |
           How do I disable virtual machine resiliency?
@@ -154,51 +157,51 @@ sections:
       - question: |
           How can I reduce time for initial synchronization?
         answer: |
-          You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including non-clustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs. Once initial replication is initiated, the volume won't be able to shrink or trim.
+          You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including nonclustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs. Once initial replication is initiated, the volume isn't able to shrink or be trimmed.
           
-          You can also use seeded data volumes to reduce bandwidth usage and sometimes time, by ensuring that the destination volume has some subset of data from the primary then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`. If the volume is mostly empty, using seeded sync might reduce time and bandwidth usage. There are multiple ways to seed data, with varying degrees of efficacy:
+          You can also use seeded data volumes to reduce bandwidth usage and in some instances synchronization time. Use the Seeded option in Failover Cluster Manager or `New-SRPartnership` to ensure that the destination volume has some subset of data from the primary site. If the volume is mostly empty, using seeded sync might reduce time and bandwidth usage. There are multiple ways to seed data, with varying degrees of efficacy:
           
-          - Previous replication - by replicating with normal initial sync locally between nodes containing the disks and volumes, removing replication, shipping the destination disks elsewhere, then adding replication with the seeded option. This is the most effective method as Storage Replica guaranteed a block-copy mirror and the only thing to replicate is delta blocks.
-          - Restored snapshot or restored snapshot-based backup - by restoring a volume-based snapshot onto the destination volume, there should be minimal differences in the block layout. This is the next most effective method as blocks are likely to match thanks to volume snapshots being mirror images.
-          - Copied files - by creating a new volume on the destination that has never been used before and performing a full robocopy /MIR tree copy of the data, there are likely to be block matches. Using Windows File Explorer or copying some portion of the tree won't create many block matches. Copying files manually is the least effective method of seeding.
+          - Previous replication - by replicating with normal initial sync locally between nodes containing the disks and volumes, removing replication, shipping the destination disks elsewhere, then adding replication with the seeded option. This method is the most effective as Storage Replica guaranteed a block-copy mirror and the only thing to replicate is delta blocks.
+          - Restored snapshot or restored snapshot-based backup - by restoring a volume-based snapshot onto the destination volume, there should be minimal differences in the block layout. This method is the next most effective as blocks are likely to match thanks to volume snapshots being mirror images.
+          - Copied files - creating a new volume on the destination that wasn't used and performing a full robocopy /MIR tree copy of the data, there are likely to be block matches. Using Windows File Explorer or copying some portion of the tree doesn't create many block matches. Copying files manually is the least effective method of seeding.
           
       - question: |
           Can I delegate users to administer replication?
         answer: |
-          You can use the `Grant-SRDelegation` cmdlet. This allows you to set specific users in server to server, cluster to cluster, and stretch cluster replication scenarios as having the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:
+          You can use the `Grant-SRDelegation` cmdlet. This command allows you to set specific users in server-to-server, cluster-to-cluster, and stretch cluster replication scenarios. The command delegates the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:
           
-          ```
+          ```powershell
           Grant-SRDelegation -UserName contso\tonywang
           ```
           
-          The cmdlet will remind you that the user needs to log off and on of the server they're planning to administer in order for the change to take effect. You can use `Get-SRDelegation` and `Revoke-SRDelegation` to further control this.
+          The cmdlet reminds you that the user needs to sign out and then sign in to the server they're planning to administer in order for the change to take effect. You can use `Get-SRDelegation` and `Revoke-SRDelegation` to further control delegation.
           
       - question: |
           What are my backup and restore options for replicated volumes?
         answer: |
-          Storage Replica supports backing up and restoring the source volume. It also supports creating and restoring snapshots of the source volume. You can't back up or restore the destination volume while protected by Storage Replica, as it isn't mounted nor accessible. If you experience a disaster where the source volume is lost, using `Set-SRPartnership` to promote the previous destination volume to now be a read/writable source will allow you to back up or restore that volume. You can also remove replication with `Remove-SRPartnership` and `Remove-SRGroup` to remount that volume as read/writable.
+          Storage Replica supports backing up and restoring the source volume. It also supports creating and restoring snapshots of the source volume. You can't back up or restore the destination volume while protected by Storage Replica, as it isn't mounted nor accessible. If you experience a disaster where the source volume is lost, you can use `Set-SRPartnership` to promote the destination as the new source volume. The newly promoted source allows you to back up or restore that volume. You can also remove replication with `Remove-SRPartnership` and `Remove-SRGroup` to remount that volume as read/writable.
           
-          To create periodic application consistent snapshots, you can use VSSADMIN.EXE on the source server to snapshot replicated data volumes. For example, where you're replicating the F: volume with Storage Replica:
+          To create periodic application consistent snapshots, you can use _VSSADMIN.EXE_ on the source server to snapshot replicated data volumes. For example, where you're replicating the `F:` volume with Storage Replica:
           
-          ```
+          ```powershell
           vssadmin create shadow /for=F:
           ```
           
-          Then, after you switch replication direction, remove replication, or are still on the same source volume, you can restore any snapshot to its point in time. For example, still using F:
+          Then, after you switch replication direction, remove replication, or are simply still on the same source volume, you can restore any snapshot to its point in time. For example, still using `F:`
           
-          ```
+          ```powershell
           vssadmin list shadows
           vssadmin revert shadow /shadow={shadown copy ID GUID listed previously}
           ```
           
-          You can also schedule this tool to run periodically using a scheduled task. For more information on using VSS, review [Vssadmin](../../administration/windows-commands/vssadmin.md). There's no need or value in backing up the log volumes. Attempting to do so will be ignored by VSS.
+          You can also schedule this tool to run periodically using a scheduled task. For more information on using VSS, review [Vssadmin](../../administration/windows-commands/vssadmin.md). There's no need or value in backing up the log volumes as VSS ignores it.
           
-          Use of Windows Server Backup, Microsoft Azure Backup, Microsoft DPM, or other snapshot, VSS, virtual machine, or file-based technologies are supported by Storage Replica as long as they operate within the volume layer. Storage Replica doesn't support block-based backup and restore.
+          Storage Replica supports file-based backups. Storage Replica doesn't support block-based backup and restore.
           
       - question: |
           What network ports does Storage Replica require?
         answer: |
-          Storage Replica relies on SMB and WSMAN for its replication and management. This means the following ports are required:
+          Storage Replica relies on SMB and WSMAN for its replication and management, meaning the following ports are required:
           
           - 445 (SMB - replication transport protocol, cluster RPC management protocol)
           - 5445 (iWARP SMB - only needed when using iWARP RDMA networking)
@@ -210,18 +213,19 @@ sections:
       - question: |
           What are the log volume best practices?
         answer: |
-          The optimal size of the log varies widely per environment and workload, and is determined by how much write IO your workload performs.
+          The optimal size of the log varies widely per environment, workload, and how much write IO your workload performs.
           
           - A larger or smaller log doesn't make you any faster or slower
           - A larger or smaller log doesn't have any bearing on a 10GB data volume versus a 10TB data volume, for instance
           
-          A larger log collects and retains more write IOs before they're wrapped out. This allows an interruption in service between the source and destination computer – such as a network outage or the destination being offline - to go longer. If the log can hold 10 hours of writes, and the network goes down for 2 hours, when the network returns the source can play the delta of unsynced changes back to the destination quickly and you're protected again. If the log holds 10 hours and the outage is 2 days, the source now has to play back from a different log called the bitmap – and will likely be slower to get back into sync. Once in sync it returns to using the log.
+          A larger log simply collects and retains more write IOs before they're wrapped out. A larger log allows an interruption in service between the source and destination computer – such as a network outage or the destination being offline - to go longer. For example, your log is configured to hold up to 10 hours of writes and the network goes down for 2 hours. When the network returns, the source can play back only the delta of unsynced changes back to the destination. If the log holds 10 hours and the outage is two days, the source now has to play back from a different log called the bitmap – and is typically slower to get back into sync. Once in sync it returns to using the log.
           
-          Storage Replica relies on the log for all write performance. Log performance critical to replication performance. You must ensure that the log volume performs better than the data volume, as the log will serialize and sequentialize all write IO. You should always use flash media like SSD on log volumes. You must never allow any other workloads to run on the log volume, the same way you would never allow other workloads to run on SQL database log volumes.
+          Storage Replica relies on the log for all write performance. Log performance critical to replication performance. You must ensure that the log volume performs better than the data volume, as the log serializes and sequentializes all write IO. You should always use flash media like SSD on log volumes. You must never allow any other workloads to run on the log volume, the same way you would never allow other workloads to run on SQL database log volumes.
           
-          Again: Microsoft strongly recommends that the log storage be faster than the data storage and that log volumes must never be used for other workloads.
+          > [!IMPORTANT]
+          > Microsoft recommends that the log storage is faster than the data storage and that log volumes must never be used for other workloads.
           
-          You can get log sizing recommendations by running the Test-SRTopology tool. Alternatively, you can use performance counters on existing servers to make a log size judgment. The formula is simple:  monitor the data disk throughput (Avg Write Bytes/Sec) under the workload and use it to calculate the amount of time it will take to fill up the log of different sizes. For example, data disk throughput of 50 MB/s will cause the log of 120GB to wrap in 120GB/50MB seconds or 2400 seconds or 40 minutes. So the amount of time that the destination server could be unreachable before the log wrapped is 40 minutes. If the log wraps but the destination becomes reachable again, the source would replay blocks via the bit map log instead of the main log. The size of the log doesn't have an effect on performance.
+          You can get log sizing recommendations by running the Test-SRTopology tool. Alternatively, you can use performance counters on existing servers to make a log size judgment. The formula is simple:  monitor the data disk throughput (Avg Write Bytes/Sec) under the workload and use it to calculate the amount of time it takes to fill up the log of different sizes. For example, data disk throughput of 50 MB/s causes the log of 120GB to wrap in 120GB/50MB seconds or 2400 seconds or 40 minutes. So the amount of time that the destination server could be unreachable before the log wrapped is 40 minutes. If the log wraps but the destination becomes reachable again, the source would replay blocks via the bit map log instead of the main log. The size of the log doesn't have an effect on performance.
           
           ONLY the Data disk from the Source cluster should be backed-up. The Storage Replica Log disks should NOT be backed-up since a backup can conflict with Storage Replica operations.
           
@@ -230,13 +234,14 @@ sections:
         answer: |
           Storage Replica comes in three main configurations: stretch cluster, cluster-to-cluster, and server-to-server. There are different advantages to each.
           
-          The stretch cluster topology is ideal for workloads requiring automatic failover with orchestration, such as Hyper-V private cloud clusters and SQL Server FCI. It also has a built-in graphical interface using Failover Cluster Manager. It utilizes the classic asymmetric cluster shared storage architecture of Storage Spaces, SAN, iSCSI, and RAID via persistent reservation. You can run this with as few as 2 nodes.
+          The stretch cluster topology is ideal for workloads requiring automatic failover with orchestration, such as Hyper-V private cloud clusters and SQL Server FCI. It also has a built-in graphical interface using Failover Cluster Manager. It utilizes the classic asymmetric cluster shared storage architecture of Storage Spaces, SAN, iSCSI, and RAID via persistent reservation. You can run this topology with as few as two nodes.
           
-          The cluster-to-cluster topology uses two separate clusters and is ideal for administrators who want manual failover, especially when the second site is provisioned for disaster recovery and not everyday usage. Orchestration is manual. Unlike stretch cluster, Storage Spaces Direct can be used in this configuration (with caveats - see the Storage Replica FAQ and cluster-to-cluster documentation). You can run this with as few as four nodes.
+          The cluster-to-cluster topology uses two separate clusters. This topology is ideal for administrators who want manual failover or when the second site is provisioned for disaster recovery and not everyday usage. Orchestration is manual. Unlike stretch cluster, Storage Spaces Direct can be used in this configuration (with caveats - see the Storage Replica FAQ and cluster-to-cluster documentation). You can run this topology with as few as four nodes.
           
           The server-to-server topology is ideal for customers running hardware that can't be clustered. It requires manual failover and orchestration. It's ideal for inexpensive deployments between branch offices and central data centers, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master disaster recovery scenarios.
+          The server-to-server topology is ideal for customers running hardware that can't be clustered. It requires manual failover and orchestration. It's ideal for inexpensive deployments between branch offices and central data centers, especially when using asynchronous replication. This configuration can often replace instances of DFSR-protected File Servers used for single-master disaster recovery scenarios.
           
-          In all cases, the topologies support both running on physical hardware as well as virtual machines. When in virtual machines, the underlying hypervisor doesn't require Hyper-V; it can be VMware, KVM, Xen, etc.
+          In all cases, the topologies support both running on physical hardware and virtual machines. When in virtual machines, the underlying hypervisor doesn't require Hyper-V; it can be VMware, KVM, Xen, etc.
           
           Storage Replica also has a server-to-self mode, where you point replication to two different volumes on the same computer.
           
@@ -250,9 +255,9 @@ sections:
       - question: |
           Can I replicate between Windows Server 2019 and Windows Server 2016?
         answer: |
-          Unfortunately, we don't support creating a *new* partnership between Windows Server 2019 and Windows Server 2016. You can safely upgrade a server or cluster running Windows Server 2016 to Windows Server 2019 and any *existing* partnerships will continue to work.
+          Unfortunately, we don't support creating a *new* partnership between Windows Server 2019 and Windows Server 2016. You can safely upgrade a server or cluster running Windows Server 2016 to Windows Server 2019 and any *existing* partnerships continue to work.
           
-          However, to get the improved replication performance of Windows Server 2019, all members of the partnership must run Windows Server 2019 and you must delete existing partnerships and associated replication groups and then recreate them with seeded data (either when creating the partnership in Windows Admin Center or with the New-SRPartnership cmdlet).
+          To get the improved replication performance of Windows Server 2019, all members of the partnership must run Windows Server 2019. You must also delete existing partnerships and associated replication groups, then recreate them with seeded data (either when creating the partnership in Windows Admin Center or with the `New-SRPartnership` cmdlet).
           
       - question: |
           How do I report an issue with Storage Replica or this guide?
@@ -262,18 +267,33 @@ sections:
       - question: |
           Can Storage Replica be configured to replicate in both directions?
         answer: |
-          Storage Replica is a one-way replication technology.  It will only replicate from the source to the destination on a per volume basis.  This direction can be reversed at any time, but is still only in one direction.  However, that doesn't mean you can't have a set of volumes (source and destination) replicate in one direction and a different set of drives (source and destination) replicate in the opposite direction.  For example, you have want to have server to server replication configured. Server1 and Server2 each have drive letters L:, M:, N:, and O: and you wish to replicate drive M: from Server1 to Server2 but drive O: replicate from Server2 to Server1.  This can be done as long as there are separate log drives for each of the groups. I.E.
+          Storage Replica is a one-way replication technology.  It only replicates from the source to the destination on a per volume basis.  The direction can be reversed at any time, but is still only in one direction.  That doesn't mean you can't have a set of volumes (source and destination) replicated in one direction and a different set of drives (source and destination) in the opposite direction. For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters `L:`, `M:`, `N:`, and `O:`. You wish to replicate drive `M:` from `Server1` to `Server2` and replicate drive `O:` from `Server2` to `Server1`.  You can use configure as long as there are separate log drives for each of the groups. For example:
           
-          - Server1 source drive M: with source log drive L: replicating to Server2 destination drive M: with destination log drive L:
-          - Server2 source drive O: with source log drive N: replicating to Server1 destination drive O: with destination log drive N:
+          - `Server1` source drive `M:` with source log drive `L:` replicating to `Server2` destination `drive M:` with destination log drive `L:`
+          - `Server2` source drive `O:` with source log drive `N:` replicating to `Server1` destination `drive O:` with destination log drive `N:`
 
       - question: |
           Can you place cluster disks in maintenance mode?
         answer: |
-          Storage Replica will block any cluster disks from entering maintenance mode. For tasks such as enabling or disabling BitLocker, the disks must be in maintenance mode.  To perform tasks that require the disks to be in maintenance mode, the partnership would need to be broken first and created again once it's complete.
+          Storage Replica blocks any cluster disks from entering maintenance mode.  For tasks such as enabling or disabling BitLocker, the disks must be in maintenance mode.  For tasks that require the disks to be in maintenance mode, the partnership would need to be broken first and created again once it's complete.
 
       - question: |
-          Related topics
+          Can you configure Storage Replica between different operating system version?
+        answer: |
+          Storage Replica blocks a new partnership if the replication log versions don't match or if a capability isn't supported by both servers. Storage Replica compression is an example of a one capability that doesn't match between OS versions, as it was first added in Windows Server 2022. Attempting to configure a partnership for with unsupported capability returns:
+         
+          "The requested operation isn't supported."
+          
+          The current log version interoperability matrix is:
+
+          | Replication from / to | Windows   Server 2016                                                     | Windows   Server 2019                                                                | Windows   Server 2022                                                                 |
+          |-----------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+          | Windows   Server 2016 | :::image type="icon" source="../../media/yes.svg" border="false"::: | :::image type="icon" source="../../media/no.svg" border="false":::             | :::image type="icon" source="../../media/no.svg" border="false":::              |
+          | Windows   Server 2019 | :::image type="icon" source="../../media/no.svg" border="false":::  | :::image type="icon" source="../../media/yes.svg" border="false":::            | :::image type="icon" source="../../media/yes.svg" border="false":::             |
+          | Windows   Server 2022 | :::image type="icon" source="../../media/no.svg" border="false":::  | :::image type="icon" source="../../media/yes.svg" border="false":::             | :::image type="icon" source="../../media/yes.svg" border="false":::             |
+
+      - question: |
+          Related articles
         answer: |
           - [Storage Replica Overview](storage-replica-overview.md)
           - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)

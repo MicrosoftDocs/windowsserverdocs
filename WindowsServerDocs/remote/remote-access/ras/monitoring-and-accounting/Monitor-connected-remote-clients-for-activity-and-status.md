@@ -4,7 +4,7 @@ description: Learn how to use the management console on the Remote Access server
 manager: brianlic
 ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

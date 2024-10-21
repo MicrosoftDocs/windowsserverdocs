@@ -4,7 +4,7 @@ description: Learn how to leverage traffic management capabilities of DNS polici
 manager: brianlic
 ms.topic: article
 ms.assetid: f9533204-ad7e-4e49-81c1-559324a16aeb
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---

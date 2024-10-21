@@ -4,7 +4,7 @@ description: This topic provides links to Network Shell and Windows PowerShell c
 manager: brianlic
 ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 12/08/2020
 ---

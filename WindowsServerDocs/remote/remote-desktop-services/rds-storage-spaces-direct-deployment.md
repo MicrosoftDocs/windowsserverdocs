@@ -4,7 +4,7 @@ description: Learn how to use Storage Spaces Direct with RDS.
 ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 manager: scottman
 ---

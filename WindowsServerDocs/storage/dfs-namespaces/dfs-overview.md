@@ -1,6 +1,6 @@
 ---
 title: DFS Namespaces overview
-ms.author: wscontent
+ms.author: roharwoo
 manager: daveba
 ms.topic: article
 author: robinharwood

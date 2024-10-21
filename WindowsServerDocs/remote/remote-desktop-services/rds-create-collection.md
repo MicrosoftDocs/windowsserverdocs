@@ -1,7 +1,7 @@
 ---
 title: Create a Remote Desktop Services collection
 description: Learn how to create a Remote Desktop Services session collection.
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: ae9767e3-864a-4eb2-96c0-626759ce6d60

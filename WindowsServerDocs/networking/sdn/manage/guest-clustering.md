@@ -4,7 +4,7 @@ description: Virtual machines connected to a virtual network are only permitted 
 manager: grcusanz
 ms.topic: article
 ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
-ms.author: grcusanz
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/20/2021
 ---

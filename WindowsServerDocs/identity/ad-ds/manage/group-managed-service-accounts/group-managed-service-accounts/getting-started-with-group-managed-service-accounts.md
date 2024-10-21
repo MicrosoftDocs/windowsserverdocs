@@ -1,22 +1,23 @@
 ---
-title: Getting Started with Group Managed Service Accounts in Windows Server
-description: Learn how to enable and use group Managed Service Accounts in Windows Server.
+title: Get started with Group Managed Service Accounts
+description: Learn how to enable and use Group Managed Service Accounts (gMSA) in Windows Server.
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
-ms.date: 05/28/2024
+ms.date: 08/26/2024
 ---
-# Getting Started with Group Managed Service Accounts
+
+# Get started with Group Managed Service Accounts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-In this article, learn how to enable and use group Managed Service Accounts in Windows Server.
+In this article, learn how to enable and use Group Managed Service Accounts (gMSA) in Windows Server.
 
-Authentication protocols supporting mutual authentication such as Kerberos can't be used unless all the instances of the services use the same principal. For example, when a client computer connects to a service that uses load balancing or another method where all the servers appear to be the same service to the client. Meaning each service has to use the same passwords or keys to prove their identity. Group Managed Service Accounts (gMSA) are a type of account that can be used with multiple servers. A gMSA is a domain account that can be used to run services on multiple servers without having to manage the password. The gMSA provides automatic password management and simplified service principal name (SPN) management, including delegation of management to other administrators.
+Authentication protocols supporting mutual authentication such as Kerberos can't be used unless all the instances of the services use the same principal. For example, when a client computer connects to a service that uses load balancing or another method where all the servers appear to be the same service to the client. Meaning each service has to use the same passwords or keys to prove their identity. Group Managed Service Accounts are a type of account that can be used with multiple servers. A gMSA is a domain account that can be used to run services on multiple servers without having to manage the password. The gMSA provides automatic password management and simplified service principal name (SPN) management, including delegation of management to other administrators.
 
 > [!NOTE]
-> Failover clusters do not support gMSAs. However, services that run on top of the Cluster service can use a gMSA or a sMSA if they are a Windows service, an App pool, a scheduled task, or natively support gMSA or sMSA.
+> Failover clusters don't support gMSAs. However, services that run on top of the Cluster service can use a gMSA or a sMSA if they are a Windows service, an App pool, a scheduled task, or natively support gMSA or sMSA.
 
 Services can choose the principal to use. Each principal type supports different services and has different limitations.
 
@@ -31,7 +32,7 @@ Services can choose the principal to use. Each principal type supports different
 
 A Windows computer account, a Windows standalone Managed Service Account (sMSA), or virtual accounts can't be shared across multiple systems. When you use virtual accounts, the identity is also local to the machine and not recognized by the domain. If you configure one account for services on server farms to share, you would have to choose a user account or a computer account apart from a Windows system. Either way, these accounts don't have the capability of single-point-of-control password management. Without password management, each organization needs to update keys for the service in Active Directory and distribute these keys to all instances of those services.
 
-With Windows Server, services and service administrators don't need to manage password synchronization between service instances when using group Managed Service Accounts (gMSA). You create the gMSA in AD and then configure the service that supports Managed Service Accounts. Use of the gMSA is scoped to any machine that is able to use LDAP to retrieve the gMSA's credentials. You can create a gMSA using the `New-ADServiceAccount` cmdlets that are part of the Active Directory module. The following services support the service identity configuration on the host.
+With Windows Server, services and service administrators don't need to manage password synchronization between service instances when using gMSA. You create the gMSA in Active Directory and then configure the service that supports Managed Service Accounts. Use of the gMSA is scoped to any machine that is able to use LDAP to retrieve the gMSA's credentials. You can create a gMSA using the `New-ADServiceAccount` cmdlets that are part of the Active Directory module. The following services support the service identity configuration on the host.
 
 - Same APIs as sMSA, so products that support sMSA support gMSA
 
@@ -45,7 +46,7 @@ With Windows Server, services and service administrators don't need to manage pa
 
 The following table lists the operating system requirements for Kerberos authentication to work with services using gMSA. The Active Directory requirements are listed after the table.
 
-A 64-bit architecture is required to run the Windows PowerShell commands used to administer group Managed Service Accounts.
+A 64-bit architecture is required to run the Windows PowerShell commands used to administer gMSA.
 
 ### Operating system
 
@@ -64,17 +65,15 @@ A 64-bit architecture is required to run the Windows PowerShell commands used to
 
 Group Managed Service Accounts have the following requirements in Active Directory Domain Services (AD DS).
 
-- The Active Directory domain and forest functional level must be Windows Server 2012 or later. To learn more about updating the schema, see [Raising the Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
+- The Active Directory domain and forest functional level must be Windows Server 2012 or later. To learn more about updating the schema, see [How to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
 
 - If you're managing the service host permission to use gMSA by group, then new or existing security group.
 
 - If managing service access control by group, then new or existing security group.
 
-- The Key Distribution Services (KDS) Root Key for Active Directory must be created in the domain. The result of its creation can be verified in the KdsSvc Operational log, `Event ID 4004`. To learn more about creating the KDS root key, see [Create the Key Distribution Services KDS Root Key](create-the-key-distribution-services-kds-root-key.md).
+- The Key Distribution Services (KDS) root key for Active Directory must be created in the domain. The result of its creation can be verified in the KdsSvc Operational log, `Event ID 4004`. To learn more about creating the KDS (*kdssvc.dll*) root key, see [Create the Key Distribution Services KDS Root Key](create-the-key-distribution-services-kds-root-key.md).
 
-For instructions how to create the key, see [Create the Key Distribution Services KDS Root Key](create-the-key-distribution-services-kds-root-key.md). Microsoft Key Distribution Service (kdssvc.dll) the root key for AD.
-
-## Deploying a new server farm
+## Deploy a new server farm
 
 The process of creating and managing a server farm using the gMSA feature typically involves the following tasks.
 
@@ -104,14 +103,14 @@ When the service administrator deploys a new server farm, they need to determine
 
 - The password change interval (default is 30 days)
 
-### Create group Managed Service Accounts
+### Create Group Managed Service Accounts
 
-You can create a gMSA only if the forest schema is Windows Server 2012 or later. You must also deploy the KDS Root Key for Active Directory, and have at least one Windows Server 2012 or later domain controller in the domain where you want to create a gMSA.
+You can create a gMSA only if the forest schema is Windows Server 2012 or later. You must also deploy the KDS root key for Active Directory, and have at least one Windows Server 2012 or later domain controller in the domain where you want to create a gMSA.
 
 > [!IMPORTANT]
 > gMSA account names must be unique within a forest level and not just a domain. Attempting to create a gMSA account with a duplicate name will fail, even in different domains.
 
-Membership in **Domain Admins** or the  ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
+Membership in *Domain Admins* or the ability to create `msDS-GroupManagedServiceAccount` objects, is the minimum required to complete the following procedures.
 
 To create a gMSA using PowerShell, follow these steps.
 
@@ -137,7 +136,7 @@ To create a gMSA using PowerShell, follow these steps.
    > [!IMPORTANT]
    > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
 
-   For example, to create a new gMSA called `ITFarm1` for the group  use the following command. The gMSA allows the service to use the Kerberos encryption types RC4, AES128, and AES256. The service is allowed to use the SPNs `http/ITFarm1.contoso.com/contoso.com`, `http/ITFarm1.contoso.com/contoso`, `http/ITFarm1/contoso.com`, and `http/ITFarm1/contoso`.
+   For example, use the following command to create a new gMSA called `ITFarm1` for the group. The gMSA allows the service to use the Kerberos encryption types RC4, AES128, and AES256. The service is allowed to use the SPNs `http/ITFarm1.contoso.com/contoso.com`, `http/ITFarm1.contoso.com/contoso`, `http/ITFarm1/contoso.com`, and `http/ITFarm1/contoso`.
 
    Enter the command on a single line, even though they might appear word-wrapped across several lines here because of formatting constraints.
 
@@ -145,7 +144,7 @@ To create a gMSA using PowerShell, follow these steps.
     New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
    ```
 
-Membership in **Domain Admins**, **Account Operators**, or ability to create `msDS-GroupManagedServiceAccount` objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Active Directory security groups](../../../manage/understand-security-groups.md).
+Membership in *Domain Admins*, *Account Operators*, or ability to create `msDS-GroupManagedServiceAccount` objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Active Directory security groups](../../../manage/understand-security-groups.md).
 
 To create a gMSA for outbound authentication only using PowerShell, follow the steps.
 
@@ -155,7 +154,7 @@ To create a gMSA for outbound authentication only using PowerShell, follow the s
 
    `New-ADServiceAccount [-Name] <string> -RestrictToOutboundAuthenticationOnly [-ManagedPasswordIntervalInDays <Nullable[Int32]>] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>]`
 
-   The following example creates a gMSA using the parameters in the table.
+   The example creates a gMSA using the parameters in the following table.
 
    |Parameter|String|Example|
    |-------|-----|------|
@@ -166,7 +165,7 @@ To create a gMSA for outbound authentication only using PowerShell, follow the s
    > [!IMPORTANT]
    > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
 
-   The example command using these parameters as follows.
+   The example command uses these parameters as follows.
 
    ```PowerShell
    New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$
@@ -174,19 +173,13 @@ To create a gMSA for outbound authentication only using PowerShell, follow the s
 
 ## Configure service identity application service
 
-To configure the services in  Windows Server, see the following articles:
+To configure the services in Windows Server, see the following articles:
 
-- IIS application pool
+- [Application Pool Identities](/iis/manage/configuring-security/application-pool-identities)
 
-    For more information, see [Specify an Identity for an Application Pool (IIS 7)](/iis/manage/configuring-security/application-pool-identities).
+- [Windows Services](/windows/win32/services/services)
 
-- Windows Services
-
-    For more information, see [Services](/windows/win32/services/services).
-
-- Tasks
-
-    For more information, see the [Task Scheduler Overview](/windows/win32/taskschd/task-scheduler-start-page).
+- [Task Scheduler for developers](/windows/win32/taskschd/task-scheduler-start-page)
 
 Other services could support gMSA. See the appropriate product documentation for details on how to configure those services.
 
@@ -194,23 +187,23 @@ Other services could support gMSA. See the appropriate product documentation for
 
 If using security groups for managing member hosts, add the computer account for the new member host to the security group (that the gMSA's member hosts are a member of) using one of the following methods.
 
-Membership in **Domain Admins**, or the ability to add members to the security group object, is the minimum required to complete these procedures.
+Membership in *Domain Admins*, or the ability to add members to the security group object, is the minimum required to complete these procedures.
 
 - Method 1: Active Directory Users and Computers
 
-    For procedures how to use this method, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    To use the Active Directory Users and Computers snap-in, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](../../../get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#manage-different-domains-in-active-directory-administrative-center).
 
-- Method 2: dsmod
+- Method 2: `dsmod`
 
-    For procedures how to use this method, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) using the command line.
+    To use the command line, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)).
 
-- Method 3: Windows PowerShell Active Directory cmdlet Add-ADPrincipalGroupMembership
+- Method 3: Windows PowerShell Active Directory cmdlet `Add-ADPrincipalGroupMembership`
 
-    For procedures how to use this method, see [Add-ADPrincipalGroupMembership](/powershell/module/activedirectory/add-adprincipalgroupmembership).
+    To use PowerShell, see [Add-ADPrincipalGroupMembership](/powershell/module/activedirectory/add-adprincipalgroupmembership).
 
 If using computer accounts, find the existing accounts and then add the new computer account.
 
-Membership in **Domain Admins**, **Account Operators**, or ability to manage msDS-GroupManagedServiceAccount objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see Local and Domain Default Groups.
+Membership in *Domain Admins*, *Account Operators*, or ability to manage `msDS-GroupManagedServiceAccount` objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see Local and Domain Default Groups.
 
 ### Add member hosts using PowerShell
 
@@ -243,35 +236,35 @@ The following example adds member hosts to an existing server farm `ITFarm1`.
 Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
 ```
 
-## Update the group Managed Service Account properties
+## Update the gMSA properties
 
-Membership in **Domain Admins**, **Account Operators**, or the ability to write to msDS-GroupManagedServiceAccount objects, is the minimum required to complete these procedures.
+Membership in *Domain Admins*, *Account Operators*, or the ability to write to msDS-GroupManagedServiceAccount objects, is the minimum required to complete these procedures.
 
 Open the Active Directory Module for Windows PowerShell, and set any property by using the `Set-ADServiceAccount` cmdlet.
 
 For detailed information how to set these properties, see [Set-ADServiceAccount](/powershell/module/activedirectory/set-adserviceaccount) in the TechNet Library or by typing `Get-Help Set-ADServiceAccount` at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
 
-## Remove a member hosts from an existing server farm
+## Remove member hosts from an existing server farm
 
-Membership in **Domain Admins**, or ability to remove members from the security group object, is the minimum required to complete these procedures.
+Membership in *Domain Admins*, or ability to remove members from the security group object, is the minimum required to complete these procedures.
 
-If using security groups for managing member hosts, remove the computer account for the decommissioned member host from the security group that the gMSA's member hosts are a member of using either of the following methods.
+If using security groups for managing member hosts, remove the computer account for the decommissioned member host from the security group that the gMSA's member hosts are a member of by using either of the following methods.
 
 - Method 1: Active Directory Users and Computers
 
-    For procedures how to use this method, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    To use the Active Directory Users and Computers snap-in, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) and [Manage Different Domains in Active Directory Administrative Center](../../../get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#manage-different-domains-in-active-directory-administrative-center).
 
 - Method 2: `drsm`
 
-    For procedures how to use this method, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) using the command line.
+    To use the command line, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)).
 
-- Method 3: Windows PowerShell Active Directory cmdlet Remove-ADPrincipalGroupMembership
+- Method 3: Windows PowerShell Active Directory cmdlet `Remove-ADPrincipalGroupMembership`
 
-    For detailed information how to remove a member from the group managed service account, see  [Remove-ADPrincipalGroupMembership](/powershell/module/activedirectory/remove-adprincipalgroupmembership) in the TechNet Library or by typing **Get-Help Remove-ADPrincipalGroupMembership** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
+    To use PowerShell, see  [Remove-ADPrincipalGroupMembership](/powershell/module/activedirectory/remove-adprincipalgroupmembership) in the TechNet Library, or type `Get-Help Remove-ADPrincipalGroupMembership` in the Active Directory module for Windows PowerShell command prompt and press ENTER.
 
 If listing computer accounts, retrieve the existing accounts and then add all but the removed computer account.
 
-Membership in **Domain Admins**, **Account Operators**, or ability to manage msDS-GroupManagedServiceAccount objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see Local and Domain Default Groups.
+Membership in *Domain Admins*, *Account Operators*, or ability to manage `msDS-GroupManagedServiceAccount` objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see Local and Domain Default Groups.
 
 ### Remove member hosts using PowerShell
 
@@ -285,7 +278,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
    `Set-ADServiceAccount [-Identity] <string> -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>`
 
-The following example removes a member to a server farm using the parameters in the table.
+The example removes a member to a server farm using the parameters in the following table.
 
 |Parameter|String|Example|
 |-------|-----|------|
@@ -304,13 +297,13 @@ The following example removes member hosts from an existing server farm `ITFarm1
 Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
 ```
 
-### Remove a group Managed Service Account from the system
+### Remove gMSA from the system
 
-Remove the cached gMSA credentials from the member host using Uninstall-ADServiceAccount or the NetRemoveServiceAccount API on the host system.
+Remove the cached gMSA credentials from the member host using `Uninstall-ADServiceAccount` or the `NetRemoveServiceAccount` API on the host system.
 
-Membership in **Administrators**, or equivalent, is the minimum required to complete these procedures.
+Membership in *Administrators*, or equivalent, is the minimum required to complete these procedures.
 
-### Remove a gMSA using PowerShell
+### Remove gMSA using PowerShell
 
 1. On the Windows Server 2012 domain controller, run Windows PowerShell from the Taskbar.
 
@@ -324,7 +317,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
    Uninstall-ADServiceAccount ITFarm1
    ```
 
-For more information about the Uninstall-ADServiceAccount cmdlet, at the Active Directory module for Windows PowerShell command prompt, type **Get-Help Uninstall-ADServiceAccount**, and then press ENTER, or see the information on the TechNet web at [Uninstall-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617202(v=technet.10)).
+For more information about the `Uninstall-ADServiceAccount` cmdlet, at the Active Directory module for Windows PowerShell command prompt, type `Get-Help Uninstall-ADServiceAccount`, and then press ENTER, or see the information on the TechNet web at [Uninstall-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617202(v=technet.10)).
 
 ## Related content
 

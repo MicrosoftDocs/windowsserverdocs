@@ -2,7 +2,7 @@
 title: Cluster-to-cluster storage replication cross-region in Azure
 description: Cluster-to-cluster storage replication cross-region in Azure
 author: arduppal
-ms.author: arduppal
+ms.author: roharwoo
 ms.date: 12/19/2018
 ms.topic: article
 manager: mchad

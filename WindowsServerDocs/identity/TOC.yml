@@ -66,6 +66,12 @@
         items:
         - name: AD Recycle Bin, Fine-Grained Password Policy, and PowerShell History
           href: ad-ds/get-started/adac/Introduction-to-active-directory-Administrative-Center-Enhancements--Level-100-.md
+        - name: Enable Active Directory Recycle Bin
+          href: ad-ds/get-started/adac/active-directory-recycle-bin.md
+        - name: Configure fine grained password policies
+          href: ad-ds/get-started/adac/fine-grained-password-policies.md
+        - name: Use the Windows PowerShell History Viewer
+          href: ad-ds/get-started/adac/use-active-directory-administrative-center-powershell-history.md
         - name: Advanced AD DS Management Using Active Directory Administrative Center
           href: ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-active-directory-Administrative-Center--Level-200-.md
       - name: Active Directory Domain Services Virtualization
@@ -427,6 +433,8 @@
         href: ad-ds/manage/manage-fsmo-roles.md
       - name: Managing RID issuance
         href: ad-ds/manage/Managing-RID-Issuance.md
+      - name: Raise domain and forest functional levels
+        href: ad-ds/plan/raise-domain-forest-functional-levels.md
       - name: Active Directory Domain Services component updates
         href: ad-ds/manage/component-updates/active-directory-Domain-Services-component-Updates.md
         items:
@@ -471,10 +479,12 @@
           href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
         - name: Delegated Managed Service Accounts FAQ
           href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-faq.yml
+        - name: Credential Guard protected machine accounts
+          href: ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts.md
       - name: Group Managed Service Accounts
         href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
         items:
-        - name: Getting started with Group Managed Service Accounts
+        - name: Get started with group Managed Service Accounts
           href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           items:
           - name: Create the Key Distribution Services KDS Root Key
@@ -489,12 +499,14 @@
         href: ad-ds/manage/understand-security-principals.md
       - name: Security identifiers
         href: ad-ds/manage/understand-security-identifiers.md
+      - name: Delegation of Control in Active Directory Domain Services
+        href: ad-ds/manage/delegation-control-wizard.md
       - name: Configure protected accounts
         href: ad-ds/manage/how-to-configure-protected-accounts.md
       - name: How LDAP server cookies are handled
         href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
-      - name: DC locator changes
-        href: ad-ds/manage/dc-locator-changes.md
+      - name: DC locator
+        href: ad-ds/manage/dc-locator.md
       - name: Enable Database 32k pages optional feature
         href: ad-ds/enable-32K-pages-optional-feature.md
       - name: Monitoring
@@ -680,7 +692,7 @@
         - name: Deploying a Federation Server Farm
           href: ad-fs/deployment/Deploying-a-Federation-Server-Farm.md
           items:
-          - name: Join a computer to a Domain
+          - name: Join a computer to a domain
             href: ad-fs/deployment/Join-a-computer-to-a-Domain.md
           - name: Enroll an SSL Certificate for AD FS
             href: ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md

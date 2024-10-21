@@ -4,7 +4,7 @@ description: Learn about the Server Core installation option in Windows Server 2
 ms.date: 11/01/2017
 ms.topic: article
 author: pronichkin
-ms.author: artemp
+ms.author: alalve
 ---
 # What is Server Core 2008?
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2008

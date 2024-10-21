@@ -2,7 +2,7 @@
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a cloud witness for a failover cluster in Windows Server
 manager: lizross
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: article
 author: robinharwood
 ms.date: 10/10/2023

@@ -4,7 +4,7 @@ description: Learn how to use Windows PowerShell cmdlets and scripts to provide 
 manager: grcusanz
 ms.topic: article
 ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 03/28/2023
 ---

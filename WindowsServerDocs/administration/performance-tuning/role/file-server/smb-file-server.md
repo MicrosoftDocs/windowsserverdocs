@@ -3,7 +3,7 @@ title: Performance Tuning for SMB File Servers
 description: Performance Tuning for SMB File Servers
 ms.topic: article
 author: robinharwood
-ms.author: nedpyle
+ms.author: alalve
 ms.date: 11/27/2023
 ---
 # Performance tuning for SMB file servers

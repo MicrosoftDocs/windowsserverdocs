@@ -4,7 +4,7 @@ description: Learn how to plan the settings that the Remote Access Setup Wizard 
 manager: brianlic
 ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

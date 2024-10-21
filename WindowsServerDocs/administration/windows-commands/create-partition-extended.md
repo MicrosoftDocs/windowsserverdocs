@@ -3,7 +3,7 @@ title: create partition extended
 description: Reference article for the create partition extended command, which creates an extended partition on the disk with focus.
 ms.topic: reference
 ms.assetid: 4ad7cb66-9c66-4153-b94e-1030a7225070
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

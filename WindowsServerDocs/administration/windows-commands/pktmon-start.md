@@ -3,7 +3,7 @@ title: pktmon start
 description: Reference article for the pktmon start command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 06/24/2021
 ---
 

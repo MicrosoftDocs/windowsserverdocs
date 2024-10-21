@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 2c0d0faf-ba5b-406d-bd89-b685ddf81e93
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Project a Station to Other Stations

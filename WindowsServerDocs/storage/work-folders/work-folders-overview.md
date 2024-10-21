@@ -4,7 +4,7 @@ title: Work Folders overview
 ms.topic: conceptual
 author: robinharwood
 manager: femila
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/22/2023
 description: Learn how Work Folders provides a consistent way for users to access work files from PCs and devices in Windows.
 ---

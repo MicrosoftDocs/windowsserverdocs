@@ -6,7 +6,7 @@ ms.topic: conceptual
 author: robinharwood
 manager: brianlic
 ms.date: 03/21/2023
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Deploy roaming user profiles

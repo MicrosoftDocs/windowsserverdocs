@@ -5,7 +5,7 @@ ms.date: 03/24/2023
 ms.topic: conceptual
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Mount a drive in a folder
 

@@ -4,7 +4,7 @@ description: Describes common issues that may occur during the KMS activation pr
 ms.topic: troubleshooting
 ms.date: 10/3/2019
 author: Teresa-Motiv
-ms.author: wscontent
+ms.author: roharwoo
 manager: dcscontentpm
 ---
 

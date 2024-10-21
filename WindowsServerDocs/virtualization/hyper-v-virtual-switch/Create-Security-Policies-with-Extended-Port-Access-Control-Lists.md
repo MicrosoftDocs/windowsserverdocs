@@ -4,7 +4,7 @@ description: This topic provides information about extended port Access Control 
 manager: brianlic
 ms.topic: article
 ms.assetid: a92e61c3-f7d4-4e42-8575-79d75d05a218
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

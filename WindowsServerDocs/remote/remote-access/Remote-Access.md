@@ -4,7 +4,7 @@ description: This topic provides an overview of the Remote Access services in Wi
 manager: eliotgra
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 09/28/2022
 ---

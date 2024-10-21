@@ -7,6 +7,14 @@
     href: secured-core-server.md
   - name: Configure Secured-core Server
     href: configure-secured-core-server.md
+  - name: OSConfig
+    items:
+    - name: OSConfig overview
+      href: osconfig/osconfig-overview.md
+    - name: 'OSConfig: How to configure security baselines'
+      href: osconfig/osconfig-how-to-configure-security-baselines.md
+    - name: 'OSConfig: How to configure App Control for Business'
+      href: osconfig/osconfig-how-to-configure-app-control-for-business.md
   - name: Set up HGS for a guarded fabric and shielded VMs
     href: guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
     items:
@@ -199,7 +207,7 @@
       href: tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server.md
     - name: Manage TLS
       href: tls/manage-tls.md
-    - name: TLS Registry Settings
+    - name: TLS registry settings
       href: tls/tls-registry-settings.md
     - name: Schannel Security Support Provider Technical Reference
       href: tls/schannel-security-support-provider-technical-reference.md

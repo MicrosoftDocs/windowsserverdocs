@@ -3,7 +3,7 @@ title: bootcfg
 description: Reference article for the bootcfg command, which configures, queries, or changes Boot.ini file settings.
 ms.topic: reference
 ms.assetid: 3deb354c-5717-4066-bc79-b9323d559e44
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

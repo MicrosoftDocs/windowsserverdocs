@@ -4,7 +4,7 @@ description: Learn how to deploy a BranchCache hosted cache server in a branch o
 manager: brianlic
 ms.topic: article
 ms.assetid: 55686a9c-60dd-47f4-9f1f-fe72c2873a44
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

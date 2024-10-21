@@ -5,7 +5,7 @@ ms.date: 7/7/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Create an Automatic Classification Rule
 

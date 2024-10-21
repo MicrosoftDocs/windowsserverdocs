@@ -88,11 +88,11 @@ items:
         - name: Manage Windows with OpenSSH
           items: 
             - name: What is OpenSSH for Windows?
-              href: OpenSSH/OpenSSH_Overview.md
+              href: OpenSSH/openssh-overview.md
             - name: Get started with OpenSSH for Windows
               href: OpenSSH/OpenSSH_Install_FirstUse.md
             - name: Server configuration options
-              href: OpenSSH/OpenSSH_Server_Configuration.md
+              href: OpenSSH/openssh-server-configuration.md
             - name: Key-based authentication
               href: OpenSSH/OpenSSH_KeyManagement.md
             - name: Manage OpenSSH with Group Policy

@@ -5,7 +5,7 @@ ms.date: 09/11/2023
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Shrink a basic volume

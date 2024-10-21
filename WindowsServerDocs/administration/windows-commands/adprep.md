@@ -1,9 +1,9 @@
-﻿---
+---
 title: Adprep
 description: Learn about adprep command line tool to prepare a forest and domain for a domain controller for Windows Server.
 ms.topic: reference
 author: gswashington
-ms.author: wscontent 
+ms.author: roharwoo 
 ms.date: 04/22/2024
 
 ---

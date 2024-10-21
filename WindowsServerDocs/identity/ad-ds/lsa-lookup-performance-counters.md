@@ -3,7 +3,7 @@ title: LSA Lookup performance counters in Windows and Windows Server
 description: Learn about Local Security Authority (LSA) Lookups performance counters
 ms.topic: conceptual
 author: lindakup
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/16/2024
 
 ---
@@ -94,7 +94,7 @@ The default log file size is 10 MB.
 
 ### Enable
 
-To enable LSA lookup performance counters, run the following commands:
+To enable the LSA Lookup debug log, run the following commands:
 
 ```powershell
 
@@ -108,7 +108,7 @@ No reboot is necessary.
 
 ### Disable
 
-To disable LSA lookup performance counters, run the following commands:
+To disable LSA Lookup debug log, run the following commands:
 
 ```powershell
 

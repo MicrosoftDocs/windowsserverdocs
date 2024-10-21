@@ -3,7 +3,7 @@ title: Install DHCP relay agent for Windows Server
 description: Learn how to install a DHCP relay agent on a computer running the Windows Server operating system.
 ms.topic: quickstart
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
 ms.date: 01/12/2024

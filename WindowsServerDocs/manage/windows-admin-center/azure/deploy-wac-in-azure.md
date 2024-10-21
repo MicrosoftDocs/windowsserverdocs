@@ -3,7 +3,7 @@ title: Deploy a Windows Admin Center gateway in Azure
 description: How to deploy a Windows Admin Center gateway in Azure
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 02/18/2021
 ---
 # Manually deploy Windows Admin Center in Azure for managing multiple servers
