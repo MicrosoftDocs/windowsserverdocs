@@ -107,7 +107,13 @@ Set-AccelNetManagement -IntentName "MyIntent" -NodeReservePercentage
 
 #### [Windows Admin Center](#tab/wac)
 
-There isn't currently a method for changing Accelerated Networking settings on a cluster using Windows Admin Center. To change the settings, you need to use PowerShell.
+1. Open Windows Admin Center and go to your cluster.
+
+1. In the cluster view menu, open the **Accelerated Networking** tab on the left side of the window.
+
+1. On the **Cluster overview** tab, select **Settings**.
+
+1. On this page, you can select new intents and change the node reserve. When finished reconfiguring the settings, select **Save** to save your changes.
 
 ---
 
@@ -122,7 +128,7 @@ To disable Accelerated Networking on a cluster:
 1. Run the following cmdlet to disable Accelerated Networking on the cluster:
 
   ```powershell
-Disable-AccelNetManagement 
+  Disable-AccelNetManagement 
   ```
 
 After you disable the cluster, the Network HUD no longer monitors the health of the feature.
@@ -135,6 +141,7 @@ After you disable the cluster, the Network HUD no longer monitors the health of 
 1. Open the **Accelerated Networking** tab and select the **Status** tab.
 
 1. Under **Disable accelerated networking?**, select the blue **Disable Accelerated Networking** button.
+
 ---
 
 ## Enable Accelerated Networking on a VM
@@ -276,92 +283,8 @@ With Windows Admin Center, you can disable Accelerated Networking on either a si
 
 ---
 
-## Known issues
+## Next steps
 
-The following error messages are possible issues you may encounter while using this feature.
+- For more information about virtualized networking, see [Hyper-V overview](../../../virtualization/hyper-v/hyper-v-overview.md).
 
-### Accel_net_not_supported
-
-Node {0} does not support Accelerated Networking. Windows Server 2025/Azure Stack HCI 24H2 or later is required.
-
-To resolve this issue, update your OS to the latest version of Windows Server.
-
-### Hyperthreading_check_failed
-
-Hyperthreading validation: Failed. There is an inconsistency across the cluster. Either disable or enable hyperthreading on all nodes.
-
-To resolve this issue, make sure the hyperthreading configuration is consistent for every node in your cluster.
-
-### Intent_not_found
-
-Intent validation: Failed. Intent {0} not found.  
-
-To resolve this issue, make sure the intent name you entered is correct, then try again.
-
-### Intent_type_check_failed
-
-The selected intent {0} does not have Compute capabilities.
-
-To resolve this issue, create or update an intent with the Compute state.
-
-### Sriov_support_[KEY]
-
-Unknown 
-
-Adapter {0} cannot be enabled for Accelerated Networking because it is not advertising SR-IOV Support.
-
-To resolve this issue, make sure the computer hardware can support SR-IOV and that you enabled I/O virtualization in the BIOS.
-
-### MissingAcs
-
-Adapter {0} cannot be enabled for Accelerated Networking because it is in a PCIe slot that does not support Access Control Services (ACS).
-
-To resolve this issue, either try moving the device to another PCIe slot or contact your hardware vendor.
-
-### MissingPfDriver
-
-Adapter {0} cannot be enabled for Accelerated Networking because the device driver does not support SR-IOV.
-
-To resolve this issue, update the driver.
-
-### NoBusResources
-
-Adapter {0} cannot be enabled for Accelerated Networking because there are not enough PCI Express bus numbers available.
-
-There are no known solutions for this issue at this time.
-
-### Get_network_adapter_failed
-
-Failed to get network adapters for VM {0}.  
-
-To resolve this issue, make sure the VM has at least one network adapter.
-
-### ht_enabled_min_processor_counter
-
-The minimum required processor count for requested performance with hyperthreading enabled/disabled is {0}.
-
-To resolve this issue, add more vCPUs to the VM in order to meet the requirements.
-
-### cannot_provision_performance
-
-Cannot provision {0} on this system.
-
-To resolve this issue, select a different Performance option or update your network adapters.
-
-### enable_accel_net_failed
-
-Failed to enable Accelerated Networking on the cluster {0}.  
-
-To resolve this issue, make sure you're using a valid PayGo subscription license.
-
-### vm_not_enough_vcpus
-
-VM {0} does not have enough vCPUs to enable Accelerated Networking with the specified performance. 
-
-There is no known way to resolve this issue at this time.
-
-### cluster_not_enough_resources
-
-The cluster does not have enough SRIOV resources to enable VM {0}.  
-
-To resolve this issue, either lower the NodeReservePercentage value, select a different Performance option, or increase the number of SRIOV resources in your cluster.
+- For more information about high-performance networking (HPN), see [High-performance networking (HPN)](../hpn/hpn-top.md).
