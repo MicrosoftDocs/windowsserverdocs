@@ -30,8 +30,6 @@ The Azure hybrid services tool in [Windows Admin Center](../overview.md) consoli
 
 If you connect to a server with Azure services already enabled, the Azure hybrid services tool serves lets you see all enabled services on that server in a single glance. You can easily get to the relevant tool within Windows Admin Center, launch out to the Azure portal for deeper management of those Azure services, or learn more with documentation at your fingertips.
 
-![Screenshot of Windows Admin Center showing Azure services that are already installed on the server](../media/azure-services/Azure-Hybrid-Services-DayN.png)
-
 From the Azure hybrid services tool, you can:
 
 - Backup your Windows Server from Windows Admin Center with [Azure Backup](azure-backup.md)
