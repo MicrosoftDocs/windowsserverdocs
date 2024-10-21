@@ -134,7 +134,7 @@ Azure hybrid services work with Windows Servers in the following configurations:
 
 This is the complete list of Azure services that provide functionality to stand-alone servers and VMs:
 
-- Backup your Windows Server from Windows Admin Center with [Azure Backup](azure-backup.md)
+- Back up your Windows Server from Windows Admin Center with [Azure Backup](azure-backup.md)
 - Protect your Hyper-V Virtual Machines from Windows Admin Center with [Azure Site Recovery](azure-site-recovery.md)
 - Sync your file server with the cloud, using [Azure File Sync](azure-file-sync.md)
 - Manage operating system updates for all your Windows servers, both on-premises or in the cloud, with [Azure Update Management](azure-update-management.md)
