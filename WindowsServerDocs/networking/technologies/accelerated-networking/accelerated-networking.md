@@ -28,7 +28,7 @@ Accelerated Networking's high-performance data path enables single root I/O virt
 
 Your deployment needs to meet the following prerequisites in order to be able to set up and use Accelerated Networking:
 
-- An Arc Premium subscription.
+- An [Azure Arc Premium subscription](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 - Your device must be running Windows Server 2025 Datacenter edition with a functioning cluster.
 
@@ -286,5 +286,7 @@ With Windows Admin Center, you can disable Accelerated Networking on either a si
 ## Next steps
 
 - For more information about virtualized networking, see [Hyper-V overview](../../../virtualization/hyper-v/hyper-v-overview.md).
+
+- For more information about Azure Arc-enabled servers, see [What are Azure Arc-enabled servers?](/azure/azure-arc/servers/overview)
 
 - For more information about high-performance networking (HPN), see [High-performance networking (HPN)](../hpn/hpn-top.md).
