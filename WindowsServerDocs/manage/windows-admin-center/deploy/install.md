@@ -33,8 +33,6 @@ To install Windows Admin Center, you need the following prerequisites:
 
 :::zone pivot="windows-server-2022,windows-client"
 
-<br/><br/>
-
 - Download the Windows Admin Center installer from the [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) to a location on the machine you want to install Windows Admin Center on.
 
 ::: zone-end
