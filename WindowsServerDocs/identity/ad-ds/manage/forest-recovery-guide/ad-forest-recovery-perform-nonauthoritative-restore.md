@@ -10,7 +10,7 @@ ms.topic: article
 
 # Active Directory Forest Recovery - Perform a nonauthoritative restore of Active Directory Domain Services
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 To perform a nonauthoritative restore, complete the following procedure.
 
