@@ -6,6 +6,7 @@ author: xelu86
 ms.author: roharwoo
 ms.date: 10/18/2024
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
+zone_pivot_groups: windows-os-version
 ---
 
 # Hardware requirements for Windows Server
@@ -31,10 +32,12 @@ Processor performance depends not only on the clock frequency of the processor, 
 - Support for CMPXCHG16b, LAHF/SAHF, and PrefetchW instructions
 - Support for Second Level Address Translation (EPT or NPT)
 
-Windows Server 2025 and later requires processors that support the following features:
+:::zone pivot="windows-server-2025"
 
 - Support for the SSE4.2 (Streaming SIMD Extensions 4.2) instruction set
 - Support for the POPCNT instruction
+
+::: zone-end
 
 You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool included in Windows Sysinternals, to verify the capabilities of your CPU.
 
@@ -45,7 +48,19 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 **Minimum**:
 
 - 512 MB for Server Core
+
+:::zone pivot="windows-server-2025"
+
 - 2 GB for Server with Desktop Experience, 4 GB recommended
+
+::: zone-end
+
+:::zone pivot="windows-server-2022,windows-server-2019,windows-server-2016"
+
+- 2 GB for Server with Desktop Experience
+
+::: zone-end
+
 - ECC (Error Correcting Code) type or similar technology for physical host deployments
 
 > [!IMPORTANT]
