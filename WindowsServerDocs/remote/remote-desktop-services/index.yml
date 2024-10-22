@@ -63,6 +63,8 @@ landingContent:
         links:
           - text: Build and deploy your Remote Desktop Services deployment
             url: rds-build-and-deploy.md
+      - linkListType: how-to-guide
+        links:
           - text: Deploy your Remote Desktop environment
             url: rds-deploy-infrastructure.md
           - text: Create a Remote Desktop Services collection
@@ -77,6 +79,8 @@ landingContent:
         links:
           - text: Run and tune your Remote Desktop Services environment
             url: rds-run-and-tune.md
+      - linkListType: how-to-guide
+        links:
           - text: Manage your personal desktop session collections
             url: rds-manage-personal-collection.md
           - text: Manage users in your RDS collection
@@ -89,7 +93,7 @@ landingContent:
   # Card (Optional; Remove if not applicable.)
   - title: Access your Remote Desktop resources
     linkLists:
-      - linkListType: reference
+      - linkListType: how-to-guide
         links:
           - text: Get started with the Remote Desktop Connection app
             url: ./clients/remote-desktop-connection-single-sign-on.md
@@ -99,5 +103,7 @@ landingContent:
             url: ./clients/remote-desktop-allow-outside-access.md
           - text: Uninstall and reinstall the Remote Desktop Connection app
             url: ./clients/uninstall-remote-desktop-connection.md
+      - linkListType: reference
+        links:
           - text: Available Remote Desktop clients
             url: ./clients/remote-desktop-clients.md
