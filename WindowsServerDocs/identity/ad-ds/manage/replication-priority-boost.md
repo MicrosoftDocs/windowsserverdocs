@@ -21,12 +21,6 @@ Replication Priority Boost is useful in scenarios that involve an administrator 
 
 In this article, you learn how to use Replication Priority Boost.
 
-## Prerequisites
-
-- Active Directory Domain Services is set up and running
-/troubleshoot/windows-server/active-directory/diagnose-replication-failures
-
-
 ## System requirements and compatibility
 
 There are no specific system requirements for enabling the Replication Priority Boost feature in Windows Server 2025. The feature is also compatible with systems running a Windows Server 2022 DC as the replication source DC if the destination DC is running Windows Server 2025 and understands the new rootDSE modify.
