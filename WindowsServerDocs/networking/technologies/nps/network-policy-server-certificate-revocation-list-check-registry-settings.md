@@ -11,7 +11,7 @@ ms.contributor: alalve
 
 # Configure Network Policy Server Certificate Revocation List check registry settings
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 When using a Network Policy Server (NPS) to enforce certificate-based authentication for network access, it's important to configure Certificate Revocation Lists (CRLs) to ensure that only valid certificates are accepted. CRLs are used to check whether a digital certificate has been revoked by the Certificate Authority (CA) before its scheduled expiration date. In an NPS, CRLs can be configured to be checked during the authentication process to ensure that only valid certificates are used for network access. Configuring NPS CRLs is an important step in implementing a secure network access infrastructure.
 
