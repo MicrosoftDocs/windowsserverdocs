@@ -23,7 +23,7 @@ In this article, you learn how to use Replication Priority Boost.
 
 ## System requirements and compatibility
 
-There are no specific system requirements for enabling the Replication Priority Boost feature in Windows Server 2025. The feature is also compatible with systems running a Windows Server 2022 DC as the replication source DC if the destination DC is running Windows Server 2025 and understands the new rootDSE modify.
+There are no specific system requirements for enabling the Replication Priority Boost feature in Windows Server 2025. The feature is also compatible with systems running a Windows Server 2022 DC as the replication source DC if the destination DC is running Windows Server 2025.
 
 ## Configure the priority boost
 
@@ -88,7 +88,7 @@ To read the priority boost, and confirm the priority boost is set, you need to s
 1. In the Attributes field, enter **`msDS-PriorityBoost;parameter=<naming context>:<partner DC>`**, replacing the values for your naming context and partner DC. For example:
 
     ```Cmd
-    msDS-PriorityBoost;parameter=CN=app1:ae732425-2e31-4246-98a5-60ce2e1c8101:5
+    msDS-PriorityBoost;parameter=CN=app1:ae732425-2e31-4246-98a5-60ce2e1c8101
     ```
 
 1. Select **Run** to run the search and read the priority boost.
@@ -96,11 +96,3 @@ To read the priority boost, and confirm the priority boost is set, you need to s
     :::image type="content" source="./media/replication-priority-boost/msds-priority-boost.png" border="true" alt-text="Screenshot of how to read the priority using the rootDSE msDS-PriorityBoost.":::
 
 1. If successful, the Ldp output window returns the priority boost, including the partner DC and priority boost factor.
-
-> [!NOTE]
-> The Replication Priority Boost feature doesn't change the size of any supported attribute values. The Joint Engine Technology (JET) database supports up to 2,147,483,647 bytes in a single value of binary type. There are limitations on some particular attribute sizes imposed by other modules, but not in the case of JET in Active Directory. For more information about JET management, see [Active Directory Maximum Limits - Scalability](/windows-server/identity/ad-ds/plan/active-directory-domain-services-maximum-limits).
-
-## Related content
-
-- [Active Directory Maximum Limits - Scalability](/windows-server/identity/ad-ds/plan/active-directory-domain-services-maximum-limits#maximum-number-of-objects)
-- [Active Directory security groups](/windows-server/identity/ad-ds/manage/understand-security-groups)
