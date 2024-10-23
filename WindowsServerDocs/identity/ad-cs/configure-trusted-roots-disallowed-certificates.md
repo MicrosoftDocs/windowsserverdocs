@@ -9,7 +9,7 @@ ms.date: 08/22/2023
 
 # Configure trusted roots and disallowed certificates in Windows
 
-> Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
+> 
 
 Redirect the Microsoft Automatic Update URL to a file or web server hosting Certificate Trust Lists
 (CTLs), untrusted CTLs, or a subset of the trusted CTL files in a disconnected environment.
