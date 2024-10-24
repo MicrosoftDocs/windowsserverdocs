@@ -11,7 +11,7 @@ ms.date: 7/3/2024
 
 # Get started with the iOS client
 
->Applies to: Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
+>
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 

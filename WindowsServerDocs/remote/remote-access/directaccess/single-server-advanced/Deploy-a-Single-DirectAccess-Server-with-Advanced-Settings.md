@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 
 >[!IMPORTANT]
