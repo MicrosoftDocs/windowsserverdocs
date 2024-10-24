@@ -11,7 +11,7 @@ ms.date: 10/09/2024
 
 # Deploy OSConfig security baselines locally
 
-OSConfig is a security configuration stack that uses a scenario-based approach to deliver and apply desired security measures for your environment. It provides co-management support for both on-premises and Azure Arc-connected devices. You can use PowerShell or Windows Admin Center to apply the security baselines throughout the device life cycle, starting from the initial deployment process.
+OSConfig is a security configuration stack that uses a scenario-based approach to deliver and apply desired security measures for your environment. It provides co-management support for both on-premises and Azure Arc-connected devices. You can use Windows PowerShell or Windows Admin Center to apply the security baselines throughout the device life cycle, starting from the initial deployment process.
 
 ## Prerequisites
 

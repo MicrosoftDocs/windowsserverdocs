@@ -31,15 +31,15 @@ When you turn off the feature, the refresh task is also disabled. Users can then
 
 To address multiple authorities, an orchestrator ensures deterministic configuration in an environment where multiple authorities use various IT admin tools. Under this model, each authority is assigned a precedence order. This precedence order doesn't just apply from a configuration perspective. It also ensures that drift control is allowed per authority and even per scenario document.
 
-For users of cloud or Azure Arc-enabled resources, the precedence order is (highest to lowest):
+For users of cloud or Azure Arc-enabled resources, the precedence order is:
 
 1. Cloud authority (Azure Policy)
-1. Local authority (Windows Admin Center and PowerShell)
+1. Local authority (Windows Admin Center and Windows PowerShell)
 1. Any other deployment tool
 
 ## OSConfig security baselines
 
-With Windows Server, you can prioritize security from the outset by deploying a recommended security posture to your devices and virtual machines. Throughout the device lifecycle, you can apply these security baselines by using PowerShell or Windows Admin Center.
+With Windows Server, you can prioritize security from the outset by deploying a recommended security posture to your devices and virtual machines. Throughout the device life cycle, you can apply these security baselines by using PowerShell or Windows Admin Center.
 
 Applying the OSConfig security baselines in your environment:
 

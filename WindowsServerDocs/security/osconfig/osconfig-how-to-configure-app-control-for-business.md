@@ -12,7 +12,7 @@ ms.date: 10/17/2024
 
 # Configure App Control for Business by using OSConfig
 
-App Control for Business is a software-based security layer that reduces attack surface by enforcing an explicit list of software that's allowed to run. Microsoft developed a default policy for Windows Server 2025, which you can implement on the server by using PowerShell cmdlets. App Control implementation is facilitated through the OSConfig security configuration platform and provides two main operation modes:
+App Control for Business is a software-based security layer that reduces attack surface by enforcing an explicit list of software that's allowed to run. Microsoft developed a default policy for Windows Server 2025, which you can implement on the server by using Windows PowerShell cmdlets. App Control implementation is facilitated through the OSConfig security configuration platform and provides two main operation modes:
 
 - **Audit mode**: Allows untrusted code to run while events are recorded.
 - **Enforcement mode**: Disallows untrusted code from running while events are recorded.
@@ -126,7 +126,7 @@ The system detects attempts by the third-party application to access restricted 
 1. In the **Save As** dialog, provide a name and location of your choice for the `.evtx` file, and then select **OK**.
 1. The **Display Information** dialog asks if you need the event log information displayed in another language. Choose the appropriate option based on your needs, and then select **OK**.
 
-This instruction set is for exporting event logs if you configured your environment for audit mode. To export logs where you used enforcement mode, in the **\<All Event IDs>** field, filter for event ID **3077** instead.
+This instruction set is for exporting event logs if you configured your environment for audit mode. To export logs where you used enforcement mode, in the **\<All Event IDs>** box, filter for event ID **3077** instead.
 
 ---
 
@@ -134,7 +134,7 @@ This instruction set is for exporting event logs if you configured your environm
 
 To create supplemental App Control policies, follow these steps:
 
-1. Copy the `.extv` log file from your server to your client device.
+1. Copy the `.evtx` log file from your server to your client device.
 1. On the client device, open the **App Control for Business Policy Wizard**.
 1. On the **Home** screen, select **Policy Editor**.
 1. On the **Policy Editor** screen, select **Convert Event Log to a WDAC Policy**. Then, under **Parse Event Log evtx Files to Policy**, select **Parse Log File(s)**.
