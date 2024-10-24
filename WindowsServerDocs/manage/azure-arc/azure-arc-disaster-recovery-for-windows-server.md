@@ -43,7 +43,7 @@ The key benefits of using the disaster recovery tool are:
 
 To deploy disaster recovery, the Azure Site Recovery agent needs to be installed on your device. This involves creating or using a vault, a Hyper-V site, and a replication policy to prepare the infrastructure. Once these items are in place, the Azure Site Recovery agent is installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
 
-1. Navigate to [aka.ms/drpreview](aka.ms/drpreview) as this takes you to the landing page of the Azure portal with this feature flag set to enabled.
+1. Navigate to [aka.ms/drpreview](https://aka.ms/drpreview) as this takes you to the landing page of the Azure portal with this feature flag set to enabled.
   
    > [!NOTE]
    > During the public preview phase, be aware that this functionality can only be accessed in the public cloud.
@@ -105,7 +105,7 @@ To report app feedback for disaster recovery or if other issues are encountered,
    azcmagent logs -o "C:\ArcDisasterRecovery\azcmagent-logs.zip"
    ```
 
-1. Open the [Feedback Hub](aka.ms/feedbackhub) on your device.
+1. Open the [Feedback Hub](https://aka.ms/feedbackhub) on your device.
 
 1. Under **Summerize your feedback**, type **Azure Arc disaster recovery (preview)**.
 
