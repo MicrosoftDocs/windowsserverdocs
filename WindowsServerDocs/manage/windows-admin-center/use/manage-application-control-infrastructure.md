@@ -8,7 +8,7 @@ ms.date: 08/18/2022
 ---
 # Managing Windows Defender Application Control (WDAC) enforced infrastructure
 
->Applies to: Windows Admin Center Preview
+>
 
 Windows Defender application control (WDAC) can help mitigate many security threats by restricting the applications that users are allowed to run and the code that runs in the System Core (kernel). Application control policies can also block unsigned scripts and MSIs, and restrict Windows PowerShell to run in [Constrained Language Mode](/powershell/module/microsoft.powershell.core/about/about_language_modes). Learn more about [Application Control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
 
