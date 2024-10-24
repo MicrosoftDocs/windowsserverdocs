@@ -44,6 +44,7 @@ Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentic
 |Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (AD FS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |One Identity| Defender AD FS|[Defender AD FS Adapter](https://www.oneidentity.com/products/defender/)|
 |Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://documentation.pingidentity.com/pingid/pingidAdminGuide/index.shtml#pid_c_PingIDforADFSSSO.html)|
+|RCDevs Security|OpenOTP ADFS plugin|[ADFS & OpenOTP](https://docs.rcdevs.com/adfs/)|
 |RSA|RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services|[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](https://community.rsa.com/t5/securid-authentication-agent-for/tkb-p/auth-agent-ad-fs-documentation)|
 |SecureMFA|SecureMFA OTP Provider| [AD FS multifactor authentication Providers](https://www.securemfa.com/)|
 |Swisscom|Mobile ID Authentication Service and Signature Services|[Mobile ID Authentication Service](http://swisscom.ch/mid)|
