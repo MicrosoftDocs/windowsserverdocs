@@ -1,6 +1,6 @@
 ---
 title: How to configure disaster recovery for Arc-enabled Windows Servers (preview)
-description: Learn how to deploy the disaster recovery tool to manage and orchestrate replication, failover, and failback for on-premises Arc-enabled Windows Servers and Azure VMs.
+description: Learn how to deploy the disaster recovery tool to manage and orchestrate replication, failover, and failback for both on-premises Arc-enabled Windows Servers and Azure VMs.
 ms.topic: how-to
 ms.author: alalve
 author: trungtran
@@ -9,23 +9,23 @@ ms.date: 10/26/2024
 
 # How to configure disaster recovery for Arc-enabled Windows Servers (preview)
 
-The disaster recovery tool is designed to manage and coordinate the replication, failover, and failback processes for on-premises and Azure virtual machines (VMs) running on Arc-enabled Windows Server operating system (OS). During this public preview, the tool is only compatible with Hyper-V enabled machines. This ensures that your on-premises workloads remain operational during outages by replicating them to Azure as a secondary location.
+The disaster recovery tool is designed to manage and coordinate the replication, failover, and failback processes for on-premises and Azure virtual machines (VM) running on Arc-enabled Windows Server operating system (OS). During this public preview, the tool is only compatible with Hyper-V enabled machines. This ensures that your on-premises workloads remain operational during outages by replicating them to Azure as a secondary location.
 
-With this feature, you won't need to manually install the agent or link it to the Recovery Service Vault, Hyper-V site, or replication policy as this tool takes care of these tasks.
+With this feature, you don't need to manually install the Azure Site Recovery agent or link it to the Recovery Service Vault, Hyper-V site, or replication policy as this tool takes care of these tasks.
 
 > [!NOTE]
 > This experience does not include an Azure storage account by default. You're required to either create a new Azure storage account or use an existing one under your Azure subscription.
 
 The key benefits of using the disaster recovery tool are:
 
-- Currently, there is no cost associated with using disaster recovery while in preview.
+- Currently, there's no cost associated with using disaster recovery while in preview.
 
 - Handles security by running all checks locally on your server. The results are only uploaded to your designated Azure storage account, ensuring that everything happens within the context of your account.
 
 > [!NOTE]
 >
 > - The disaster recovery tool has to be installed on every server you desire to use it on.
-> - Installing the Azure Site Recovery (ASR) agent extension on an Arc server via PowerShell isn't currently supported.
+> - Installing the Azure Site Recovery agent extension on an Arc server via PowerShell isn't currently supported.
 
 ## Prerequisites
 
@@ -41,9 +41,9 @@ The key benefits of using the disaster recovery tool are:
 
 ### Deploy disaster recovery (preview)
 
-To deploy disaster recovery, the ASR agent needs to be installed on your device. This involves creating or using a vault, a Hyper-V site, and a replication policy to prepare the infrastructure. Once these items are in place, the ASR agent will be installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
+To deploy disaster recovery, the Azure Site Recovery agent needs to be installed on your device. This involves creating or using a vault, a Hyper-V site, and a replication policy to prepare the infrastructure. Once these items are in place, the Azure Site Recovery agent is installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
 
-1. Navigate to [aka.ms/drpreview](aka.ms/drpreview) as this will take you to the landing page of the Azure Portal with this feature flag set to enabled.
+1. Navigate to [aka.ms/drpreview](aka.ms/drpreview) as this takes you to the landing page of the Azure portal with this feature flag set to enabled.
   
    > [!NOTE]
    > During the public preview phase, be aware that this functionality can only be accessed in the public cloud.
@@ -56,7 +56,7 @@ To deploy disaster recovery, the ASR agent needs to be installed on your device.
    1. A vault for the infrastructure.
    1. A Hyper-V site.
    1. A replication policy.
-1. Once infrastructure preparations are complete, and the ASR extension is successfully installed on the node, you'll see the **Status: Infrastructure prepared successfully** pop up notification.
+1. Once infrastructure preparations are complete, and the Azure Site Recovery extension is successfully installed on the node, the **Status: Infrastructure prepared successfully** pop-up notification is displayed.
 1. Lastly, select **Enable replication**.
 
 > [!NOTE]
@@ -64,7 +64,7 @@ To deploy disaster recovery, the ASR agent needs to be installed on your device.
 
 ## Known issues
 
-As disaster recovery is in preview, users may experience technical issues during the deployment process. To mitigate certain issue's, perform the following:
+As disaster recovery is in preview, users may experience technical issues during the deployment process. To mitigate certain issue's, perform the following actions:
 
 - **Issue**: You encounter the error:
 
@@ -75,7 +75,7 @@ As disaster recovery is in preview, users may experience technical issues during
   undefined: undefined
   ```
 
-- **Solution**: This is a transient error. Navigate to **Windows management > Disaster recovery (preview) > Protect VM workloads** and check the status of your infrastructure under **Step 1: Prepare infrastructure**.
+- **Solution**: No action needed as this is a transient error. Navigate to **Windows management > Disaster recovery (preview) > Protect VM workloads** and check the status of your infrastructure under **Step 1: Prepare infrastructure**.
 
 - **Issue**: You encounter the following PowerShell error:
 
@@ -95,7 +95,7 @@ As disaster recovery is in preview, users may experience technical issues during
   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
   ```
 
-## Submit additional feedback
+## Submit tooling feedback
 
 To report app feedback for disaster recovery or if other issues are encountered, let us know via the Feedback Hub by performing the following actions:
 
@@ -117,7 +117,7 @@ To report app feedback for disaster recovery or if other issues are encountered,
 
 1. Under **Choose a category**, select **Problem**, select **Windows Server** from the drop-down list, select **Management** from the secondary drop-down list, then select **OK**.
 
-1. Under **Find similar feedback**, see if other users have submitted a similar issue. Then select **Next**.
+1. Under **Find similar feedback**, see if other users submitted a similar issue. Then select **Next**.
 
 1. Under **Add more details** and **Which of the following best describes your problem?**, select the most appropriate option per your case.
 
@@ -127,4 +127,4 @@ To report app feedback for disaster recovery or if other issues are encountered,
 
    1. Attach the **azcmagent-logs.zip** file.
 
-1. Lastly, select **Submit** and we'll review your feedback.
+1. Lastly, select **Submit** to submit your feedback for review.
