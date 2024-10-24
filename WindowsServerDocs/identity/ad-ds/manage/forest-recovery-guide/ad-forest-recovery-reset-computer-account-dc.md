@@ -23,7 +23,7 @@ ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
    Reset-ComputerMachinePassword
    ```
 
-2. Run the same command again to ensure other Domain Controllers from before the Forest Recovery can not replicate from it
+2. Run the same command again to ensure other Domain Controllers from before the Forest Recovery can't replicate from it.
 
 > [!WARNING]
 > This should only be carried out on the sole recovered DC during a forest recovery exercise.
