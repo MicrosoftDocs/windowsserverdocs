@@ -11,7 +11,7 @@ ms.topic: article
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
-Metadata cleanup is a required procedure after a forced removal of Active Directory Domain Services (AD DS). You perform metadata cleanup on a domain controller in the domain of the domain controller that you forcibly removed. Metadata cleanup removes data from AD DS that identifies a domain controller to the replication system. Metadata cleanup also removes File Replication Service (FRS) and Distributed File System (DFS) Replication connections and attempts to transfer or seize any operations master (also known as flexible single master operations or FSMO) roles that the retired domain controller holds.
+Metadata cleanup is a required procedure after a forced removal of Active Directory Domain Services (AD DS). You perform metadata cleanup on a Domain Controller (DC) in the domain of the domain controller that you forcibly removed. Metadata cleanup removes data from AD DS that identifies a domain controller to the replication system. Metadata cleanup also removes File Replication Service (FRS) and Distributed File System (DFS) Replication connections and attempts to transfer or seize any operations master (also known as Flexible Single Master Operations or FSMO) roles that the retired DC holds.
 
 There are two options to clean up server metadata:
 
@@ -59,25 +59,79 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 As an alternative, you can clean up metadata by using ntdsutil.exe, a command-line tool that is installed automatically on all domain controllers and servers that have Active Directory Lightweight Directory Services (AD LDS) installed. ntdsutil.exe is also available on computers that have RSAT installed. To clean up server metadata by using ntdsutil do the following:
 
 1. Open a command prompt as an administrator: On the **Start** menu, right-click **Command Prompt**, and then click **Run as administrator**. If the **User Account Control** dialog box appears, provide credentials of an Enterprise Administrator if required, and then click **Continue**.
+
 2. At the command prompt, type the following command, and then press **Enter**:
 
    `ntdsutil`
 
 3. At the `ntdsutil:` prompt, type the following command, and then press **Enter**:
 
+   `activate instance ntds`
+
+4. At the `ntdsutil:` prompt, type the following command, and then press **Enter**:
+
    `metadata cleanup`
 
-4. At the `metadata cleanup:` prompt, type the following command, and then press **Enter**:
+5. At the `metadata cleanup:` prompt, type the following command, and then press **Enter**:
 
-   `remove selected server <ServerName>`
+   `select operation target`
 
-5. In **Server Remove Configuration Dialog**, review the information and warning, and then click **Yes** to remove the server object and metadata.
+6. At the `select operation target:` prompt, type the following command, and then press **Enter**:
+
+   `connections`
+
+7. At the `server connections:` prompt, type the following command, and then press **Enter**:
+
+   `connect to server localhost`
+
+8. At the `server connections:` prompt, type the following command, and then press **Enter**:
+
+   `quit`
+
+9. At the `select operation target:` prompt, type the following command, and then press **Enter**:
+
+   `list domains`
+
+10. At the `select operation target:` prompt, type the following command, and then press **Enter**:
+
+   `select domain #` <br>
+   _where # is the index number of the domain the decommissioned DC belongs to._
+
+11. At the `select operation target:` prompt, type the following command, and then press **Enter**:
+
+   `list sites`
+   
+12. At the `select operation target:` prompt, type the following command, and then press **Enter**:
+
+   `select site #` <br>
+   _where # is the index number of the AD site the decommissioned DC resides in._
+
+13. At the `select operation target:` prompt, type the following command, and then press **Enter**:
+
+   `list servers for domain in site`
+
+14. At the `select operation target:` prompt, type the following command, and then press **Enter**:
+
+   `select server #` <br>
+   _where # is the decommissioned DC you wish to clean up the metadata for._
+
+15. Review the output and verify that it has selected the appropriate DC.
+
+16. At the `select operation target:` prompt, type the following command, and then press **Enter**:
+
+   `quit`
+
+17. At the `metadata cleanup:` prompt, type the following command, and then press **Enter**:
+
+   `remove selected server`
+
+18. In **Server Remove Configuration Dialog**, review the information and warning, and then click **Yes** to remove the server object and metadata.
 
    At this point, Ntdsutil confirms that the domain controller was removed successfully. If you receive an error message that indicates that the object cannot be found, the domain controller might have been removed earlier.
 
-6. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press **Enter**.
+19. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press **Enter**.
 
-7. To confirm removal of the domain controller:
+20. To confirm removal of the domain controller:
 
    Open Active Directory Users and Computers. In the domain of the removed domain controller, click **Domain Controllers**. In the details pane, an object for the domain controller that you removed should not appear.
 
