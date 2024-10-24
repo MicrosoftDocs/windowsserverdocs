@@ -23,29 +23,30 @@ In this article, you learn how to use Replication Priority Boost.
 
 ## System requirements and compatibility
 
-There are no specific system requirements for enabling the Replication Priority Boost feature in Windows Server 2025. The feature is also compatible with systems running a Windows Server 2022 DC as the replication source DC if the destination DC is running Windows Server 2025.
+There are no specific system requirements for enabling Replication Priority Boost in Windows Server 2025. The feature is also compatible with systems running a Windows Server 2022 DC as the replication source DC if the destination DC is running Windows Server 2025.
 
-## Configure the priority boost
+## Configure the boost factor
 
-The Replication Priority Boost feature introduces an interface for you to boost the priority of a replication partner. Use this feature to manage priority levels to get the most efficient replication order to match your deployment's needs. Replication Priority Boost uses both a root directory system agent-specific entry (rootDSE) modifier to add a boost factor to the system to designate priority, and a rootDSE attribute to read the boost factor.
+Use Replication Priority Boost to manage priority levels to get the most efficient replication order to match your deployment's needs. Replication Priority Boost uses both a root directory system agent-specific entry (rootDSE) modifier to add a boost factor to the system to designate priority, and a rootDSE attribute to read the boost factor.
 
-To _add_ a boost factor:
+The rootDSE modifier to add a boost factor is called [**setPriorityBoost**](/openspecs/windows_protocols/ms-adts/ee15e25a-a5b1-4229-904b-6f48cee9b793), and the rootDSE attribute to read the boost factor is called [**msDS-PriorityBoost**](/openspecs/windows_protocols/ms-adts/b04b3102-2fd6-426c-9549-4f941b2d6233). The following sections share how to use these priority boost entries.
 
-- Use the rootDSE modifier: **setPriorityBoost**
-- `setPriorityBoost:<naming context>:<partner DC>:<boost factor>`
-- For more information, see the [setPriorityBoost spec](/openspecs/windows_protocols/ms-adts/ee15e25a-a5b1-4229-904b-6f48cee9b793).
+## Recommended boost values
 
-To _read_ the boost factor:
+The following list recommends a boost value to set depending on your configuration:
 
-- Use the rootDSE attribute: **msDS-PriorityBoost**
-- `msDS-PriorityBoost:<naming context>:<partner DC>`
-- For more information, see the [msDS-PriorityBoost spec](/openspecs/windows_protocols/ms-adts/b04b3102-2fd6-426c-9549-4f941b2d6233)
+|Scenario|Boost value|
+|--------|-----------|
+| Boost an intra-site replication partner higher priority than its peer intra-site replication partners. | 2 |
+| Boost a domain NC higher priority than the configuration NC. | 10 |
+| Boost an inter-site DC higher priority than an intra-site DC, if the inter-site source DC does not have [DRS_NEVER_NOTIFY](/openspecs/windows_protocols/ms-drsr/ac9c8a11-cd46-4080-acbf-9faa86344030) bit set with the destination DC | 2 |
+| Boost an inter-site DC higher priority than an intra-site DC, if the inter-site source DC has [DRS_NEVER_NOTIFY](/openspecs/windows_protocols/ms-drsr/ac9c8a11-cd46-4080-acbf-9faa86344030) bit set with the destination DC | 18 |
 
 ## Set and read the priority boost
 
 The Active Directory administrator adds, or sets the boost factor on top of the built-in priority level. To add the priority boost, the administrator must change the value specified in the Lightweight Directory Access Protocol (LDAP) modify operation.
 
-The following steps show how to set and read the Replication Priority Boost.
+The following steps show how to set and read the replication priority boost.
 
 ### Set the priority boost
 
@@ -85,10 +86,10 @@ To read the priority boost, and confirm the priority boost is set, you need to s
 
 1. Leave **Base DN** as-is, and the **Filter** set to: **(objectClass=*)**. The **Scope** is **Base**.
 
-1. In the Attributes field, enter **`msDS-PriorityBoost;parameter=<naming context>:<partner DC>`**, replacing the values for your naming context and partner DC. For example:
+1. In the Attributes field, enter **`"msDS-PriorityBoost;parameter=CN=<naming context>:<partner DC>"`**, replacing the values for your naming context and partner DC. Ensure that the whole value is within quotes. For example:
 
     ```Cmd
-    msDS-PriorityBoost;parameter=CN=app1:ae732425-2e31-4246-98a5-60ce2e1c8101
+    "msDS-PriorityBoost;parameter=CN=app1:ae732425-2e31-4246-98a5-60ce2e1c8101"
     ```
 
 1. Select **Run** to run the search and read the priority boost.
