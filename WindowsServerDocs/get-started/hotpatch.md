@@ -20,7 +20,7 @@ Hotpatching is a way to install OS security updates without requiring a reboot a
 - Reduces the time exposed to security risks and change windows, and easier patch orchestration with Azure Update Manager.
 
 >[!IMPORTANT]
->Hotpatch is available for a free trial period, but after the period ends, you must enter one of the following pricing plans: <!--Get links for pricing plans.--->
+>Hotpatch for Azure-Arc enabled servers is available for a free trial period, but after the period ends, you must enter one of the following pricing plans: <!--Get links for pricing plans.--->
 
 ## Supported platforms
 
