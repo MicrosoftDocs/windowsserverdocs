@@ -42,7 +42,7 @@ Because App Control is a component of Windows Server 2025, deployment of its pol
 > [!NOTE]
 > If the client device doesn't have .NET Desktop Runtime 8.0 or later installed, the App Control for Business Policy Wizard will prompt you to download and install this application.
 
-### Manage default policies
+## Manage default policies
 
 # [Configure](#tab/configure)
 
@@ -105,7 +105,7 @@ After you remove a policy, there should be no output when you run `citool -lp | 
 
 ---
 
-### Monitor event logs
+## Monitor event logs
 
 To view captured events after you apply the App Control policy, choose any third-party application that you want to run on your device. If you set the App Control policy in audit mode, check if the operating system emitted event ID **3076** for any third-party applications. If you set the policy in enforcement mode, check if the operating system emitted event ID **3077**.
 
@@ -130,7 +130,7 @@ This instruction set is for exporting event logs if you configured your environm
 
 ---
 
-### Configure supplemental policies
+## Configure supplemental policies
 
 To create supplemental App Control policies, follow these steps:
 
@@ -176,7 +176,7 @@ Set-OSConfigDesiredConfiguration -Scenario AppControl -Name Policies -Value $pol
 
 To verify that the supplemental policies were applied, monitor event IDs **3076** and **3077** as described earlier in [Monitor event logs](#monitor-event-logs). Verify that the operating system didn't generate any new events.
 
-### Query policies
+## Query policies
 
 To view the policies that are currently in effect in your environment, run the following command:
 
