@@ -11,7 +11,7 @@ ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 
 # Known Issues with Storage Replica
 
->Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This article describes some of the known issues with Storage Replica in Windows Server.
 

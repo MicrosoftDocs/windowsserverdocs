@@ -10,7 +10,7 @@ ms.author: roharwoo
 
 # Manage Virtual Hard Disks (VHD)
 
-> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 With Disk Management you can create, attach, and detach virtual hard disks. Virtual hard disks (VHDs) are disk image file formats that have similar functionalities to a physical hard drive and are designed primarily for use with Hyper-V virtual machines.
 

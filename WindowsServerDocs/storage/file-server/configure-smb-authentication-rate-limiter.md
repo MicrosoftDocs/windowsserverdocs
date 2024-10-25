@@ -10,7 +10,7 @@ ms.date: 09/13/2024
 
 # Configure SMB authentication rate limiter for Windows (preview)
 
->Applies to: Windows Server 2025 (preview), Windows 11 Insiders Builds
+>
 
 > [!IMPORTANT]
 > Windows Insider and Windows Server 2025 (preview) builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
