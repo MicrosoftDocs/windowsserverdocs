@@ -53,7 +53,7 @@ Periodic hardware upgrades can also cause domain controllers to be out of servic
 
 ### Firewall configuration
 
-By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=22578).
+By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](/troubleshoot/windows-server/active-directory/restrict-ad-rpc-traffic-to-specific-port).
 
 For information about the ports that Active Directory replication uses, see [Active Directory Replication Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc739941(v=ws.10)).
 
