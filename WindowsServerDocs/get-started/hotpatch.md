@@ -9,7 +9,7 @@ ms.author: wscontent
 
 # Hotpatch for virtual machines
 
-Hotpatching is a way to install OS security updates without requiring a reboot after installation on Windows Server. It works by patching the in-memory code of running processes without the need to restart the process. Hotpatching also provides the following benefits:
+Hotpatching is a way to install OS security updates on Windows Server without having to restart your machine. Hotpatching patches the in-memory code of running processes without the need to restart the process. Hotpatching also provides the following benefits:
 
 - Fewer binaries mean updates install faster and consume less disk and CPU resources.
 
@@ -26,7 +26,10 @@ Hotpatching is a way to install OS security updates without requiring a reboot a
 
 ### Azure and Azure Stack HCI virtual machines
 
-Hotpatch is supported on Windows Server 2025 and later, Azure Stack HCI, and Windows Server 2022 virtual machines (VMs) created from images with the exact combination of publisher, offer, and SKU from the following OS images list. Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
+The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2022. Guest virtual machines (VMs) created on Azure Stack HCI using these combinations are also supported.
+
+>[!NOTE]
+>Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
 
 | Publisher               | OS Offer      |  SKU               |
 |-------------------------|---------------|--------------------|
@@ -63,6 +66,14 @@ For more information about the available images, see the [Windows Server](https:
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 <!-- Add some verbage here, as per GH comment -->
+
+The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2025.
+
+| Publisher               | OS Offer      |  SKU               |
+|-------------------------|---------------|--------------------|
+| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-Core |
+| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Edition |
+| MicrosoftWindowsServer | WindowsServer | 2025-Standard-Edition |
 
 To start using Azure Arc-enabled Hotpatch, connect your Windows Server 2025 machine to Azure Arc using one of the following editions:
 
@@ -140,14 +151,18 @@ Azure Stack HCI can orchestrate Hotpatch updates for VMs using the following too
 
 ### Azure Arc-connected machines
 
-Azure Arc-connected machines can consume Hotpatch updates using the following tools: 
+Azure Arc-connected machines can consume Hotpatch updates using the following tools:
 
 - Azure Update Manager
+
 - Group Policy configures Windows Update client settings.
+
 - SCONFIG configures Windows Update client settings for Server Core.
+
 - Third-party patch management solutions.
 
 You can orchestrate Hotpatching on a Windows Server 2025 VM using Azure Arc. For more information, see [How to preview: Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895).
+<!---Check with Vishal about how to phrase this and if AUM link is ready.--->
 
 ### Understand the patch status for your VM in Azure
 
@@ -164,7 +179,7 @@ You can also view installed patches by running the [Get-HotFix](/powershell/modu
 
 ## Rollback support for Hotpatching
 
-Hotpatch and Baseline updates don't support automatic rollback. If you experience an issue during or after an update, you must uninstall the latest update and install the last functional baseline update. This process requires that you restart the VM.
+Hotpatch updates don't support automatic rollback. If you experience an issue during or after an update, you must uninstall the latest update and install the last functional baseline update. This process requires that you restart the VM.
 
 ## Next steps
 
