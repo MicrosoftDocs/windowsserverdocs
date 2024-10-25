@@ -10,7 +10,7 @@ ms.date: 03/20/2023
 ---
 # Cluster operating system rolling upgrade
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of cluster nodes Hyper-V or Scale-Out File Server workloads without stopping them. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
 

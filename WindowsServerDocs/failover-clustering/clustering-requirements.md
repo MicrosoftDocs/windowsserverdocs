@@ -9,7 +9,7 @@ ms.date: 10/10/2023
 ---
 # Failover clustering hardware requirements and storage options
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
+
 
 In order to create a failover cluster, your system must meet the following requirements:
 

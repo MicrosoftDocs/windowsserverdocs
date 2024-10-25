@@ -11,7 +11,7 @@ description: How to use Microsoft Azure to host the witness for a Windows Server
 
 # Deploy Cloud Witness for a failover cluster
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 Cloud Witness is a type of failover cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This article contains an overview of the Cloud Witness feature, which scenarios it supports, and instructions for how to configure a cloud witness for a failover cluster. For more information, see [Set up a cluster witness](/azure-stack/hci/manage/witness).
 

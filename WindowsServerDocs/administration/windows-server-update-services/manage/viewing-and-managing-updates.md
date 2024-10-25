@@ -10,7 +10,7 @@ ms.date: 08/11/2023
 ---
 # Viewing and Managing Updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 You can use the WSUS console to view and manage updates.
 

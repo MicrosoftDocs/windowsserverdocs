@@ -10,7 +10,7 @@ ms.date: 03/07/2023
 ---
 # WSUS Messages and Troubleshooting Tips
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 This article contains information about the following WSUS messages:
 
