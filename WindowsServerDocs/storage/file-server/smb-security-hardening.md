@@ -77,7 +77,7 @@ To learn more, see:
 
 The SMB NetBIOS ports are no longer included in the built-in firewall rules. These ports were only required for SMB1 usage, which is now deprecated and removed by default. This modification aligns SMB firewall rules with the standard behavior of the *Windows Server File Server* role. Administrators are able to reconfigure the rules to restore the legacy ports.
 
-To learn more, see [Updated firewall rules](smb-secure-traffic.md#updated-firewall-rules-preview).
+To learn more, see [Updated firewall rules](smb-secure-traffic.md#updated-firewall-rules).
 
 ### SMB insecure guest authentication
 
