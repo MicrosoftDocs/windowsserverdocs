@@ -4,13 +4,10 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: roharwoo
-ms.date: 10/07/2024
+ms.date: 10/25/2024
 ---
 
-# What's new in Windows Server 2025 (preview)
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# What's new in Windows Server 2025
 
 This article describes some of the newest developments in Windows Server 2025, which boasts advanced features that improve security, performance, and flexibility. With faster storage options and the ability to integrate with hybrid cloud environments, managing your infrastructure is now more streamlined. Windows Server 2025 builds on the strong foundation of its predecessor while introducing a range of innovative enhancements to adapt to your needs.
 

@@ -4,7 +4,7 @@ description: Learn about SMB security enhancements that help harden your Windows
 ms.topic: article
 author: xelu86
 ms.author: roharwoo
-ms.date: 09/26/2024
+ms.date: 10/25/2024
 ---
 
 # SMB security hardening
@@ -13,9 +13,9 @@ The latest SMB (Server Message Block) features introduced in Windows 11 24H2 and
 
 Users can download the following versions to preview the security features before our major Operating System (OS) release:
 
-- [Windows 11 Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewiso)
+- Windows 11, version 24H2 or later
 
-- [Windows Server 2025 Evaluation Preview](https://www.microsoft.com/evalcenter/download-windows-server-2025)
+- Windows Server 2025 or later
 
 ## SMB security features
 

@@ -5,7 +5,7 @@ ms.product: windows-server
 ms.topic: article
 author: NedPyle
 ms.author: roharwoo
-ms.date: 03/14/2024
+ms.date: 10/25/2024
 ---
 
 # SMB compression
@@ -24,7 +24,7 @@ SMB compression in Windows has the following characteristics:
 - Doesn't support SMB Direct over RDMA
 
 > [!NOTE]
-> Windows 11 Insider and Windows Server 2025 (Preview) also support compression algorithm LZ4 as defined by [LZ4.org](https://lz4.org). For further information about this compression algorithm, see [LZ4 Compression Documentation](https://github.com/lz4/lz4/blob/dev/doc/lz4_Block_format.md). 
+> Windows 11 and Windows Server 2025 also support compression algorithm LZ4 as defined by [LZ4.org](https://lz4.org). For further information about this compression algorithm, see [LZ4 Compression Documentation](https://github.com/lz4/lz4/blob/dev/doc/lz4_Block_format.md).
 
 For a demonstration of SMB compression, watch this video:
 
@@ -40,7 +40,7 @@ To use SMB compression in a traditional client-file server workload, you need th
 
 ## Configuring SMB compression
 
-You can configure SMB compression from both a client and server perspective. Client and server don't refer to a particular edition like Windows Server 2022 or Windows 11 Insider Preview but instead to the architecture of a file transfer between two computers. Both Windows Server 2022 and Windows 11 support being a client or server of SMB compression.
+You can configure SMB compression from both a client and server perspective. Client and server don't refer to a particular edition like Windows Server 2022 or Windows 11, version 24H2, but instead to the architecture of a file transfer between two computers. Both Windows Server 2022 and Windows 11 support being a client or server of SMB compression.
 
 ### Requesting SMB compression on file shares
 

@@ -1,17 +1,14 @@
 ---
-title: Features removed or no longer developed starting with Windows Server 2025 (preview)
+title: Features removed or no longer developed starting with Windows Server 2025
 description: Learn about the features and functionalities removed or no longer developed starting with Windows Server 2025.
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 10/17/2024
+ms.date: 10/25/2024
 ms.service: windows-server
 ---
 
-# Features removed or no longer developed starting with Windows Server 2025 (preview)
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Features removed or no longer developed starting with Windows Server 2025
 
 Each release of Windows Server adds new features and functionality; we also occasionally remove features and functionality, usually because we've added a better option. Here are the details about the features and functionalities that we removed in Windows Server 2025.
 
