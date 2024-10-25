@@ -24,6 +24,8 @@ Hotpatching is a way to install OS security updates without requiring a reboot a
 
 ## Supported platforms
 
+### Azure and Azure Stack HCI virtual machines
+
 Hotpatch is supported on Windows Server 2025 and later, Azure Stack HCI, and Windows Server 2022 virtual machines (VMs) created from images with the exact combination of publisher, offer, and SKU from the following OS images list. Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
 
 | Publisher               | OS Offer      |  SKU               |
@@ -53,6 +55,20 @@ To start using Hotpatch, enable Hotpatch on your Azure Arc-enabled Windows Serve
 <sup>1</sup> Hotpatch is enabled by default on Server Core images.
 
 For more information about the available images, see the [Windows Server](https://aka.ms/hotpatchondesktopnewimage) on the Azure Marketplace.
+
+### Azure Arc-connected machines (preview)
+
+> [!IMPORTANT]
+> Azure Arc-enabled Hotpatch is currently in PREVIEW.
+> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
+<!-- Add some verbage here, as per GH comment -->
+
+To start using Azure Arc-enabled Hotpatch, connect your Windows Server 2025 machine to Azure Arc using one of the following editions:
+
+- Windows Server 2025 Datacenter
+
+- Windows Server 2025 Standard
 
 ## How Hotpatch works
 
@@ -122,7 +138,14 @@ Azure Stack HCI can orchestrate Hotpatch updates for VMs using the following too
 
 - Third-party patch management solutions.
 
-### Windows Server 2025 (preview)
+### Azure Arc-connected machines
+
+Azure Arc-connected machines can consume Hotpatch updates using the following tools: 
+
+- Azure Update Manager
+- Group Policy configures Windows Update client settings.
+- SCONFIG configures Windows Update client settings for Server Core.
+- Third-party patch management solutions.
 
 You can orchestrate Hotpatching on a Windows Server 2025 VM using Azure Arc. For more information, see [How to preview: Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895).
 
