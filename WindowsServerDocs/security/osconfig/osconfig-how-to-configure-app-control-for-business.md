@@ -26,7 +26,7 @@ Because App Control is a component of Windows Server 2025, deployment of its pol
 >
 > - Collecting and sending Windows event logs for App Control for Business to your Log Analytics workspace.
 > - Identifying file and policy event activities by using various dashboards, charts, filters, and export capabilities. These features help you analyze and troubleshoot the effects and the status of your App Control policies.
-> - Refining your App Control policies by exporting the workbook data and ingesting it in the App Control for Business Policy Wizard.
+> - Refining your App Control policies by exporting the workbook data and ingesting it in the WDAC Wizard.
 >
 > To begin using the Azure Monitor workbook for App Control for Business, see [How to get insights into App Control for Business (WDAC) events](https://github.com/microsoft/AzureMonitorCommunity/tree/master/Scenarios/How%20to%20get%20insights%20into%20App%20Control%20(WDAC)%20events#how-to-get-insights-into-app-control-for-business-wdac-events).
 
@@ -37,23 +37,23 @@ Because App Control is a component of Windows Server 2025, deployment of its pol
   > [!CAUTION]
   > Flight-signed binaries are not permitted. Failure to comply with this requirement results in the inability to start your device.
 - The OSConfig PowerShell module must be installed on your server device. See [Install the OSConfig PowerShell module](osconfig-how-to-configure-security-baselines.md#install-the-osconfig-powershell-module) for details.
-- You must be running Windows 10 version 1909 or later on your client device, and have the [App Control for Business Policy Wizard](https://webapp-wdac-wizard.azurewebsites.net/) installed.
+- You must be running Windows 10 version 1909 or later on your client device, and have the [WDAC Wizard](https://webapp-wdac-wizard.azurewebsites.net/) installed.
 
 > [!NOTE]
-> If the client device doesn't have .NET Desktop Runtime 8.0 or later installed, the App Control for Business Policy Wizard will prompt you to download and install this application.
+> If the client device doesn't have .NET Desktop Runtime 8.0 or later installed, the WDAC Wizard will prompt you to download and install this application.
 
 ## Manage default policies
 
 # [Configure](#tab/configure)
 
-To configure the default App Control policies in audit mode, open PowerShell as an admin and run the following command:
+To configure the default App Control policies in audit mode, open PowerShell as admin and run the following command:
 
 ```powershell
 Set-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\DefaultPolicy\Audit -Default
 Set-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\AppBlockList\Audit -Default
 ```
 
-To configure the default App Control policies in enforcement mode, open PowerShell as an admin and run the following command:
+To configure the default App Control policies in enforcement mode, open PowerShell as admin and run the following command:
 
 ```powershell
 Set-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\DefaultPolicy\Enforce -Default
@@ -84,14 +84,14 @@ Friendly Name: AllowMicrosoft_WS2025_Enforce
 
 # [Remove](#tab/remove)
 
-To remove the default App Control policies from audit mode, open PowerShell as an admin and run the following command:
+To remove the default App Control policies from audit mode, open PowerShell as admin and run the following command:
 
 ```powershell
 Remove-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\DefaultPolicy\Audit
 Remove-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\AppBlockList\Audit
 ```
 
-To remove the default App Control policies from enforcement mode, open PowerShell as an admin and run the following command:
+To remove the default App Control policies from enforcement mode, open PowerShell as admin and run the following command:
 
 ```powershell
 Remove-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\DefaultPolicy\Enforce
@@ -135,7 +135,7 @@ This instruction set is for exporting event logs if you configured your environm
 To create supplemental App Control policies, follow these steps:
 
 1. Copy the `.evtx` log file from your server to your client device.
-1. On the client device, open the **App Control for Business Policy Wizard**.
+1. On the client device, open the **WDAC Wizard**.
 1. On the **Home** screen, select **Policy Editor**.
 1. On the **Policy Editor** screen, select **Convert Event Log to a WDAC Policy**. Then, under **Parse Event Log evtx Files to Policy**, select **Parse Log File(s)**.
 1. In the **Choose event logs to convert to policy** dialog, locate your `.evtx` file, and then select **Open**. Select **OK** in the prompt, and then select **Next**.

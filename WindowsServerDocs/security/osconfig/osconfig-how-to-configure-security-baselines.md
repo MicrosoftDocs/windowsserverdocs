@@ -50,7 +50,7 @@ Apply the appropriate security baselines, based on the Windows Server role of yo
 
 To apply a baseline, verify that the baseline is applied, remove a baseline, or view detailed compliance information for OSConfig in PowerShell, use the commands on the following tabs.
 
-# [Apply](#tab/configure)
+# [Configure](#tab/configure)
 
 To apply the baseline for a domain-joined device, run the following command:
 
