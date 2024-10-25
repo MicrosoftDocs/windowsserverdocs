@@ -4,8 +4,9 @@ description: What are the minimum hardware requirements for storage, CPU, networ
 ms.topic: article
 author: xelu86
 ms.author: roharwoo
-ms.date: 07/25/2024
+ms.date: 10/22/2024
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
+zone_pivot_groups: windows-os-version
 ---
 
 # Hardware requirements for Windows Server
@@ -26,15 +27,22 @@ Processor performance depends not only on the clock frequency of the processor, 
 **Minimum**:
 
 - 1.4 GHz 64-bit processor
+
 - Compatible with x64 instruction set
+
 - Support for NX and DEP
+
 - Support for CMPXCHG16b, LAHF/SAHF, and PrefetchW instructions
+
 - Support for Second Level Address Translation (EPT or NPT)
 
-Windows Server 2025 and later requires processors that support the following features:
+:::zone pivot="windows-server-2025"
 
 - Support for the SSE4.2 (Streaming SIMD Extensions 4.2) instruction set
+
 - Support for the POPCNT instruction
+
+::: zone-end
 
 You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool included in Windows Sysinternals, to verify the capabilities of your CPU.
 
@@ -45,7 +53,19 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 **Minimum**:
 
 - 512 MB for Server Core
+
+:::zone pivot="windows-server-2025"
+
+- 2 GB for Server with Desktop Experience, 4 GB recommended
+
+::: zone-end
+
+:::zone pivot="windows-server-2022,windows-server-2019,windows-server-2016"
+
 - 2 GB for Server with Desktop Experience
+
+::: zone-end
+
 - ECC (Error Correcting Code) type or similar technology for physical host deployments
 
 > [!IMPORTANT]
@@ -81,6 +101,7 @@ Network adapters used should include these features.
 **Minimum**:
 
 - An Ethernet adapter that can achieve a throughput of at least 1 gigabit per second
+
 - Compliant with the PCI Express architecture specification
 
 A network adapter that supports network debugging (KDNet) is useful, but not a minimum requirement.
@@ -98,9 +119,13 @@ There are other hardware requirements to consider depending on your scenario:
 The following items are only required for certain features:
 
 - UEFI 2.3.1c-based system and firmware that supports secure boot
+
 - Trusted Platform Module (TPM)
+
 - Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution
+
 - Keyboard and Microsoft mouse (or other compatible pointing device)
+
 - Internet access (fees might apply)
 
 > [!NOTE]
