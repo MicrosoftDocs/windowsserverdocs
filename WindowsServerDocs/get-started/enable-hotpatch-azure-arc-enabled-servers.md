@@ -1,5 +1,5 @@
 ---
-title: Enable Hotpatch for Azure Arc-enabled servers
+title: Enable Hotpatch for Azure Arc-enabled servers (preview)
 description: Learn how to enable Hotpatch for Windows Server 2025 deployments on Azure Arc-enabled servers.
 author: Heidilohr
 ms.author: helohr
@@ -7,7 +7,11 @@ ms.topic: how-to
 ms.date: 10/25/2024
 ---
 
-# Enable Hotpatch for Azure Arc-enabled servers
+# Enable Hotpatch for Azure Arc-enabled servers (preview)
+
+> [!IMPORTANT]
+> Azure Arc-enabled Hotpatch is currently in PREVIEW.
+> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 Hotpatch allows you to update your Windows Server deployment without requiring your users to restart their virtual machines (VMs) after installation. This feature minimizes downtime spent on updates and keeps your users running their VM sessions uninterrupted. For more information about how Hotpatch works, see [Hotpatch for virtual machines](hotpatch.md).
 
