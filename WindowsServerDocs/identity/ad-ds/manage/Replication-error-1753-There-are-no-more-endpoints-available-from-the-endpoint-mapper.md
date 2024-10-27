@@ -11,7 +11,7 @@ ms.custom: inhenkel
 ---
 # Replication error 1753 There are no more endpoints available from the endpoint mapper
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes symptoms, cause and resolution steps for Active Directory operations that fail with Win32 error 1753: "There are no more endpoints available from the endpoint mapper."
 
@@ -142,7 +142,7 @@ Error 1753 is NOT caused by:
 Verify that the service registering its service with the endpoint mapper has started
 
 * For Windows 2000 and Windows Server 2003 DCs: Ensure that the source DC is booted into normal mode.
-* For Windows Server 2008 or Windows Server 2008 R2: From the console of the source DC, start Services Manager (services.msc) and verify that the Active Directory Domain Services service is running.
+* For Windows Server 2008 or later: From the console of the source DC, start Services Manager (services.msc) and verify that the Active Directory Domain Services service is running.
 
 Verify that RPC client (destination DC) connected to the intended RPC Server (source DC)
 
@@ -204,7 +204,7 @@ If the tests above or a network trace doesn't show a name query returning an inv
 
 Well-known ports are NOT registered with the endpoint mapper.
 
-Active Directory and other applications also register services that receive dynamically assigned ports in the RPC ephemeral port range. Such RPC server applications are dynamically assigned TCP ports between 1024 and 5000 on Windows 2000 and Windows Server 2003 computers and ports between 49152 and 65535 range on Windows Server 2008 and Windows Server 2008 R2 computers. The RPC port used by replication can be hard-coded in the registry using the steps documented in [KB article 224196](https://support.microsoft.com/kb/224196). Active Directory continues to register with the EPM when configured to use a hard coded port.
+Active Directory and other applications also register services that receive dynamically assigned ports in the RPC ephemeral port range. Such RPC server applications are dynamically assigned TCP ports between 1024 and 5000 on Windows 2000 and Windows Server 2003 computers and ports between 49152 and 65535 range on Windows Server 2008 and later. The RPC port used by replication can be hard-coded in the registry using the steps documented in [KB article 224196](https://support.microsoft.com/kb/224196). Active Directory continues to register with the EPM when configured to use a hard coded port.
 
 Verify that the RPC Server application of interest has registered itself with the RPC endpoint mapper on the RPC Server (the source DC in the case of AD replication).
 
