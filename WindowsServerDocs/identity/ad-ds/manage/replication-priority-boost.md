@@ -27,7 +27,7 @@ There are no specific system requirements for enabling Replication Priority Boos
 
 ## Configure the boost factor
 
-Use Replication Priority Boost to manage priority levels to get the most efficient replication order to match your deployment's needs. Replication Priority Boost uses a root directory system agent-specific entry (rootDSE) modifier, called [**setPriorityBoost**](/openspecs/windows_protocols/ms-adts/ee15e25a-a5b1-4229-904b-6f48cee9b793), to add a boost factor to the system to designate priority. To read the boost factor after it's been set, there's a rootDSE attribute called [**msDS-PriorityBoost**](/openspecs/windows_protocols/ms-adts/b04b3102-2fd6-426c-9549-4f941b2d6233).
+Use Replication Priority Boost to manage priority levels to get the most efficient replication order to match your deployment's needs. Replication Priority Boost uses a root directory system agent-specific entry (rootDSE) modifier, called [**setPriorityBoost**](/openspecs/windows_protocols/ms-adts/ee15e25a-a5b1-4229-904b-6f48cee9b793), to add a boost factor to the system to designate priority. To read the boost factor after it's set, there's a rootDSE attribute called [**msDS-PriorityBoost**](/openspecs/windows_protocols/ms-adts/b04b3102-2fd6-426c-9549-4f941b2d6233).
 
 ### Recommended boost values
 
@@ -70,7 +70,7 @@ The following steps show how to set the replication priority boost.
 
 1. Confirm that the Operation is **Add**.
 
-1. Select **Enter**. This updates the **Entry List**.
+1. Select **Enter** to update the **Entry List**.
 
 1. Select **Run** to set the priority boost.
 
