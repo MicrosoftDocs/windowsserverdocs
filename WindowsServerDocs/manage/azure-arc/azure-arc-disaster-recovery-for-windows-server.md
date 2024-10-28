@@ -1,30 +1,28 @@
 ---
-title: How to configure disaster recovery for Arc-enabled Windows Servers (preview)
+title: How to configure disaster recovery for Arc-enabled Windows servers (preview)
 description: Learn how to deploy the disaster recovery tool to manage and orchestrate replication, failover, and failback for both on-premises Arc-enabled Windows Servers and Azure VMs.
 ms.topic: how-to
 ms.author: alalve
 author: trungtran
-ms.date: 10/26/2024
+ms.date: 10/29/2024
 ---
 
-# How to configure disaster recovery for Arc-enabled Windows Servers (preview)
+# Configure disaster recovery for Arc-enabled Windows servers
 
 The disaster recovery tool is designed to manage and coordinate the replication, failover, and failback processes for on-premises and Azure virtual machines (VM) running on Arc-enabled Windows Server operating system (OS). During this public preview, the tool is only compatible with Hyper-V enabled machines. This ensures that your on-premises workloads remain operational during outages by replicating them to Azure as a secondary location.
 
 With this feature, you don't need to manually install the Azure Site Recovery agent or link it to the Recovery Service Vault, Hyper-V site, or replication policy as this tool takes care of these tasks.
 
-> [!NOTE]
-> This experience does not include an Azure storage account by default. You're required to either create a new Azure storage account or use an existing one under your Azure subscription.
-
-The key benefits of using the disaster recovery tool are:
-
-- Currently, there's no cost associated with using disaster recovery while in preview.
-
-- Handles security by running all checks locally on your server. The results are only uploaded to your designated Azure storage account, ensuring that everything happens within the context of your account.
+This experience does not include an Azure storage account by default. You're required to either create a new Azure storage account or use an existing one under your Azure subscription.
 
 > [!NOTE]
 >
-> - The disaster recovery tool has to be installed on every server you desire to use it on.
+> - Currently, there's no cost associated with using disaster recovery while in preview.
+>
+> - The disaster recovery tool handles security by running all checks locally on your server. The results are only uploaded to your designated Azure storage account, ensuring that everything happens within the context of your account.
+>
+> - The disaster recovery tool has to be installed on every server you desire to run it on.
+>
 > - Installing the Azure Site Recovery agent extension on an Arc server via PowerShell isn't currently supported.
 
 ## Prerequisites
@@ -43,7 +41,7 @@ The key benefits of using the disaster recovery tool are:
 
 To deploy disaster recovery, the Azure Site Recovery agent needs to be installed on your device. This involves creating or using a vault, a Hyper-V site, and a replication policy to prepare the infrastructure. Once these items are in place, the Azure Site Recovery agent is installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
 
-1. Navigate to [aka.ms/drpreview](https://aka.ms/drpreview) as this takes you to the landing page of the Azure portal with this feature flag set to enabled.
+1. Navigate to [aka.ms/drpreview](https://aka.ms/drpreview) as this takes you to the landing page of the Azure portal with this feature flag enabled.
   
    > [!NOTE]
    > During the public preview phase, be aware that this functionality can only be accessed in the public cloud.
