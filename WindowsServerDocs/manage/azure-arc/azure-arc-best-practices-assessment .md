@@ -7,9 +7,9 @@ author: trungtran
 ms.date: 10/29/2024
 ---
 
-# Configure disaster recovery for Arc-enabled Windows servers
+# Configure best practices assessment for Arc-enabled Windows servers
 
-The best practices assessment continually scans your Windows Server to evaluate its configurations against Windows best practices. These assessments can be scheduled to run automatically or initiated manually as needed. The assessment evaluates several aspects of the Server environment, including server baselines, server security, Hyper-V, failover clusters, and Internet Information Services (IIS). It also collects and analyzes server data to generate a list of issues that require remediation guidance and best practices for improving the performance of your server infrastructure, including deploying applications, software updates, and operating systems.
+The Best Practices Assessment (preview) tool continually scans your Windows Server to evaluate its configurations against Windows best practices. These assessments can be scheduled to run automatically or initiated manually as needed. The assessment evaluates several aspects of the Server environment, including server baselines, server security, Hyper-V, failover clusters, and Internet Information Services (IIS). It also collects and analyzes server data to generate a list of issues that require remediation guidance and best practices for improving the performance of your server infrastructure, including deploying applications, software updates, and operating systems.
 
 The Best Practices Assessment (preview) tool installs the following three extensions on your device:
 
