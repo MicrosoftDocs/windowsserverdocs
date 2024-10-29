@@ -52,7 +52,7 @@ The following steps show how to set the replication priority boost.
 
 1. Select the **Connection** menu and select **Connect**. Enter in the Server name and Port number for your DC. Select **OK**.
 
-    :::image type="content" source="./media/replication-priority-boost/ldp-connection.png" border="true" alt-text="Screenshot showing the connection dialog including the server name and port number.":::
+    :::image type="content" source="./media/replication-priority-boost/connect-to-server.png" border="true" alt-text="Screenshot showing the connection dialog including the server name and port number.":::
 
 1. Select the **Browse** menu, then select **Modify**.
 
@@ -76,6 +76,16 @@ The following steps show how to set the replication priority boost.
 
     :::image type="content" source="./media/replication-priority-boost/set-priority-boost.png" border="true" alt-text="Screenshot showing how to modify the rootDSE using setPriorityBoost.":::
 
+1. The Ldp output window shows that the modify call was successful.
+
+    ```cmd
+    ----------
+    ***Call Modify...
+    ldap_modify_s(Id, '(null)',[1] attrs);
+    Modified "".
+    ----------
+    ```
+
 ### Read the priority boost
 
 To read the priority boost, and confirm the priority boost is set, you need to search using the _msDS-PriorityBoost_ attribute.
@@ -92,6 +102,15 @@ To read the priority boost, and confirm the priority boost is set, you need to s
 
 1. Select **Run** to run the search and read the priority boost.
 
-    :::image type="content" source="./media/replication-priority-boost/msds-priority-boost.png" border="true" alt-text="Screenshot of how to read the priority using the rootDSE msDS-PriorityBoost.":::
+    :::image type="content" source="./media/replication-priority-boost/search-priority-boost.png" border="true" alt-text="Screenshot of how to read the priority using the rootDSE msDS-PriorityBoost.":::
 
 1. If successful, the Ldp output window returns the priority boost, including the partner DC and priority boost factor.
+
+    ```cmd
+    ----------
+    ***Searching...
+    ldap_search_s(Id, "(null)", 0, "(objectclass=*)", attrList, 0, &msg)
+    Getting 1 entries:
+    Dn: (RootDSE)
+        msDS-PriorityBoost;parameter=CN=app1:ae732425-2e31-4246-98a5-60ce2e1c8101: 5;
+    ```
