@@ -4,7 +4,7 @@ description: Learn how to create an RDS deployment that uses multiple data cente
 ms.topic: article
 ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 manager: femila
 ---

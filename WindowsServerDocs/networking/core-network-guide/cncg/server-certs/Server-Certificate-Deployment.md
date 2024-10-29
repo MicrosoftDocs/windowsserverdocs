@@ -4,7 +4,7 @@ description: Learn about the steps you have to carry out to install an enterpris
 manager: brianlic
 ms.topic: article
 ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

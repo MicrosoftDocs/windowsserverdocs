@@ -2,7 +2,7 @@
 description: Upgrade your domain and forest functional level in Active Director Domain Services for Windows Server
 title: Learn about upgrading your domain and forest functional levels in Active Directory Domain Services.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 07/15/2024
 ms.topic: conceptual
 ---

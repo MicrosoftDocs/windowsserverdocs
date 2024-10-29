@@ -5,7 +5,7 @@ ms.date: 10/12/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Move disks to another computer

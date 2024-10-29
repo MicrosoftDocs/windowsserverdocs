@@ -13,6 +13,8 @@
       href: osconfig/osconfig-overview.md
     - name: 'OSConfig: How to configure security baselines'
       href: osconfig/osconfig-how-to-configure-security-baselines.md
+    - name: 'OSConfig: How to configure App Control for Business'
+      href: osconfig/osconfig-how-to-configure-app-control-for-business.md
   - name: Set up HGS for a guarded fabric and shielded VMs
     href: guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
     items:

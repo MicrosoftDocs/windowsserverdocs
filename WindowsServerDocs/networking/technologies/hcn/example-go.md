@@ -1,7 +1,7 @@
 ---
 title: Example of generated Go code for the top level IPAM & Subnet object
 description: Example of generated Go code for the top level IPAM & Subnet object.
-ms.author: daschott
+ms.author: roharwoo
 author: daschott
 ms.date: 11/05/2018
 ms.topic: article

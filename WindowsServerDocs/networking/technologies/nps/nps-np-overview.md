@@ -4,7 +4,7 @@ description: This topic provides an overview of network policies for Network Pol
 manager: brianlic
 ms.topic: article
 ms.assetid: e4a9b134-6d1d-40d7-a49c-5f46d5fdb419
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

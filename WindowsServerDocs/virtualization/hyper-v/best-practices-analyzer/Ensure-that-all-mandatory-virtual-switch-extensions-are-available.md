@@ -1,7 +1,7 @@
 ---
 title: Ensure that all mandatory virtual switch extensions are available
 description: Learn what to do when one or more virtual network adapters are connected to a virtual switch with mandatory extensions that are disabled or not installed.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 2f2f2698-f5ec-4cad-aa64-d6987e8142a1

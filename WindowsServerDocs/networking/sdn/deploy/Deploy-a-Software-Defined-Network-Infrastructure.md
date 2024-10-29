@@ -4,7 +4,7 @@ description: This topic provides links to topics on how to deploy a Microsoft So
 ms.topic: how-to
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
 ms.date: 10/28/2021
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: grcusanz
 ---

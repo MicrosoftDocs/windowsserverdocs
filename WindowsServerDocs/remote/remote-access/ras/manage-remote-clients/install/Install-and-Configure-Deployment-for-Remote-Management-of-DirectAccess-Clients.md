@@ -4,7 +4,7 @@ description: Learn about the configuration steps that are required to deploy a s
 manager: brianlic
 ms.topic: article
 ms.assetid: 4adce101-1e30-439e-b78b-65b26479f33e
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

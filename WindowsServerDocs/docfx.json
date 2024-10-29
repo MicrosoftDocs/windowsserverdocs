@@ -125,7 +125,7 @@
           "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
         },
         "ms.author": {
-          "security/tls/*.md": "wscontent"
+          "security/tls/*.md": "roharwoo"
         },
         "ms.prod": {
         }

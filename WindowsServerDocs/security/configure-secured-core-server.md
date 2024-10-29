@@ -2,7 +2,7 @@
 title: Configure Secured-core server for Windows Server
 description: Learn how to configure Secured-core server in Windows Server using the Windows Security app, Group Policy and Windows Admin Center.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 05/26/2023
 ms.custom: template-how-to-pattern

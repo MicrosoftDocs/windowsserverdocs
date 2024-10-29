@@ -3,7 +3,7 @@ title: pktmon
 description: Reference article for the pktmon network diagnostics tool for Windows that can be used for packet capture, packet drop detection, packet filtering, and counting.
 ms.topic: reference
 author: khdownie
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 06/24/2021
 ---
 

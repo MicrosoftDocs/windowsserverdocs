@@ -4,7 +4,7 @@ description: Learn how to verify that you have correctly configured your basic D
 manager: brianlic
 ms.topic: article
 ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

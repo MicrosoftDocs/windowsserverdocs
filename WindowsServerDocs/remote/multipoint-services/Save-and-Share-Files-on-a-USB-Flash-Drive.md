@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 51f6564e-a07f-4b13-8567-a5f080cc2e0d
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Save and Share Files on a USB Flash Drive

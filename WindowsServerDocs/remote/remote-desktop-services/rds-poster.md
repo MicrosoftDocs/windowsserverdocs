@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Services - planning poster
 description: Provides an overview of planning, deploying, and running Remote Desktop Services
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: dongill
 ms.date: 7/3/2024

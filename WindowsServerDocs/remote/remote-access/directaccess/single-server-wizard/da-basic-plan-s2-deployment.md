@@ -4,7 +4,7 @@ description: Learn how to plan the settings for the Getting Started Wizard.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

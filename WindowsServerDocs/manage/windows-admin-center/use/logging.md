@@ -3,7 +3,7 @@ title: Event logging
 description: Event logging from Windows Admin Center (Project Honolulu)
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 06/18/2018
 ---
 

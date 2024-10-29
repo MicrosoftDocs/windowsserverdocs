@@ -3,7 +3,7 @@ title: tftp
 description: Reference article for the tftp command, which transfers files to and from a remote computer.
 ms.topic: reference
 ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

@@ -2,7 +2,7 @@
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
 description: Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs.
 ms.topic: conceptual
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 06/20/2024
 ---

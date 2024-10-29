@@ -2,7 +2,7 @@
 title: fsutil transaction
 description: Reference article for the fsutil transaction command, which manages NTFS transactions.
 manager: dmoss
-ms.author: toklima
+ms.author: roharwoo
 author: toklima
 ms.assetid: f2eefaaf-2817-4ac7-abac-d2b65fa971dc
 ms.topic: reference

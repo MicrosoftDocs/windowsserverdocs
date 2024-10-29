@@ -4,7 +4,7 @@ description: This topic provides an overview of RADIUS Clients for Network Polic
 manager: brianlic
 ms.topic: article
 ms.assetid: d3a09ac9-75f8-4f57-aab4-b0fdfe110118
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

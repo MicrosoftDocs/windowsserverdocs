@@ -3,7 +3,7 @@ title: wdsutil set-device
 description: Reference article for wdsutil set-device, which changes the attributes of a prestaged computer.
 ms.topic: reference
 ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

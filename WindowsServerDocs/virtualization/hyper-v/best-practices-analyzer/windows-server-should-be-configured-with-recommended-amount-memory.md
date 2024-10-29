@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2016 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows Server 2016 is configured with less than the recommended amount of RAM, which is 1 GB.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 7860e609-d278-42a3-85a4-ca92c8b6b2ad

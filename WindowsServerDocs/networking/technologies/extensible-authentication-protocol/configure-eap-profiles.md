@@ -2,7 +2,7 @@
 title: Configure EAP profiles and settings in Windows
 description: This article presents information about different ways to configure Extensible Authentication Protocol (EAP) settings.
 author: samyun
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: conceptual
 ms.date: 06/19/2023
 ---

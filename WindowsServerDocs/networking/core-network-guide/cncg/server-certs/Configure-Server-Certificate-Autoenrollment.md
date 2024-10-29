@@ -4,7 +4,7 @@ description: Learn how to configure server certificate auto-enrollment and user 
 manager: brianlic
 ms.topic: article
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

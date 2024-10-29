@@ -4,7 +4,7 @@ description: Learn about client licensing in Remote Desktop Services, the RDS CA
 ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 09/10/2024
 ---
 # License your RDS deployment with client access licenses (CALs)

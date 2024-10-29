@@ -5,7 +5,7 @@ description: New and updated topics in the Failover Clustering documentation for
 ms.topic: article
 author: robinharwood
 manager: lizross
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 01/07/2020
 ---
 # Change history for Failover Clustering topics

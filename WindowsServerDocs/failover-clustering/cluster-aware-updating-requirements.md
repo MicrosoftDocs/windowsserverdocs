@@ -4,7 +4,7 @@ title: Cluster-Aware Updating requirements and best practices
 ms.topic: article
 manager: lizross
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 10/21/2021
 description: Requirements for using Cluster-Aware Updating to install updates on clusters running Windows Server.
 ---
