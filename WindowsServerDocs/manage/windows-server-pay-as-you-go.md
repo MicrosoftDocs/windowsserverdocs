@@ -4,7 +4,7 @@ description: Configure Windows Server Pay-as-you-go to license your devices with
 ms.topic: how-to
 author: artemp
 ms.author: alalve
-ms.date: 10/30/2024
+ms.date: 10/29/2024
 ---
 
 # Configure Windows Server Pay-as-you-go with Azure Arc
@@ -17,17 +17,17 @@ Azure Arc's Pay-as-you-go subscription licensing option is a recently introduced
 >
 > - Windows Server Pay-as-you-go is an Azure service and the detailed usage rights are provided in the [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/welcome/welcomepage).
 
-Windows Server Pay-as-you-go shares the same pricing and model as Windows Server licensing on Microsoft Azure, but is designed for devices that are deployed outside of Microsoft Azure. Windows Server Pay-as-you-go with Azure Arc isn't supported on Microsoft Azure, as there are other ways to license Windows Server with Pay-as-you-go with that service. As a result, Pay-as-you-go regulations differ from traditional perpetual licensing. For instance, in Pay-as-you-go, the cost is the same for both Standard and Datacenter editions, and there are no client access licenses (CALs) required for standard functionality. However, Remote Desktop Services (RDS) CALs are still required.
+Windows Server Pay-as-you-go shares the same pricing and model as Windows Server licensing on Microsoft Azure, but is designed for devices that are deployed outside of Microsoft Azure. Windows Server Pay-as-you-go with Azure Arc isn't supported on Microsoft Azure, as there are other ways to license Windows Server with Pay-as-you-go with that service.
+
+Pay-as-you-go regulations differ from traditional perpetual licensing. For instance, in Pay-as-you-go, the cost is the same for both Standard and Datacenter editions, and there are no client access licenses (CALs) required for standard functionality. However, Remote Desktop Services (RDS) CALs are still required.
 
 The Pay-as-you-go license only applies to the exact device where the feature is enabled on Microsoft Azure. Unlike traditional perpetual licenses, it doesn't provide additional rights for virtual machines (VM) running on the same server. Thus, the Automatic Virtual Machine Activation (AVMA) feature isn't available. Each VM requires its own separate license, regardless of the host server. The host and VMs can run different versions of the operating system (OS) and mix different license types.
 
 ## Prerequisites
 
-- Your device must be running any edition of Windows Server 2025.
-- Your device must meet the minimum hardware requirements. To learn more, see [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements?tabs=cpu&pivots=windows-server-2025).
+- Your device must be running Windows Server 2025 Standard or Datacenter edition.
 - Your device must be Azure Arc-enabled and be running Microsoft Azure connected machine agent version 1.47 or later.
 - Your device isn't currently licensed (activated) with another license type, such as OEM, Retail, or Volume License (VL).
-
 - An active internet connection is required.
 
 ### Set up Windows Server Pay-as-you-go
@@ -75,8 +75,6 @@ As the Azure Arc installation wizard isn't supported with this set up, an altern
 
 ---
 
-After the installation is complete and you sign in for the first time, you'll need to enable Azure Arc on your Windows Server as Pay-as-you-go is powered by Azure Arc, which requires the installation of the Azure Arc agent.
-
 ### Manage Windows Server Pay-as-you-go
 
 Managing Pay-as-you-go for Windows Server is possible using the Azure portal, PowerShell, or API. Even if you didn't choose to enable Pay-as-you-go during the initial installation of the OS is also an option, as long as the necessary prerequisites are met.
@@ -87,10 +85,10 @@ To enable Windows Server Pay-as-you-go, follow these steps:
 
 1. Navigate to your [Azure portal](https://portal.azure.com), then search for and select **Machines - Azure Arc**.
 1. Select the machine you want to enable Windows Server Pay-as-you-go.
-1. Select the **Pay-as-you-go (preview)** tile.
+1. Select the **Pay-as-you-go** tile.
 1. Check the box next to **Pay-as-you-go with Azure**, and then select **Confirm**.
 
-*Alternatively*, in the left pane menu by expanding **Licenses**, selecting **Windows Server (preview)**, and follow step 4.
+*Alternatively*, in the left pane menu by expanding **Licenses**, selecting **Windows Server**, and follow step 4.
 
 # [Azure PowerShell](#tab/azurepowershell)
 
@@ -125,10 +123,10 @@ To disable Windows Server Pay-as-you-go, follow these steps:
 
 1. Navigate to your [Azure portal](https://portal.azure.com), then search for and select **Machines - Azure Arc**.
 1. Select the machine you want to disable Windows Server Pay-as-you-go.
-1. Select the **Pay-as-you-go (preview)** tile.
+1. Select the **Pay-as-you-go** tile.
 1. Uncheck the box next to **Pay-as-you-go with Azure**, and then select **Confirm**.
 
-*Alternatively*, in the left pane menu by expanding **Licenses**, selecting **Windows Server (preview)**, and follow step 4.
+*Alternatively*, in the left pane menu by expanding **Licenses**, selecting **Windows Server**, and follow step 4.
 
 # [Azure PowerShell](#tab/azurepowershell)
 
