@@ -89,7 +89,7 @@ The following diagram shows an example of an annual three-month schedule includi
 baselines due to zero-day fixes.
 
 :::image type="complex" source="media\hotpatch\hotpatch-sample-schedule.png" alt-text="A diagram showing an example of a Hotpatch release schedule.":::
-   A diagram showing an example of a Hotpatch schedule. The schedule is shown as a timeline extending from the January of the current year to the January of next year. On each month is a colored dot symbolizing what kind of release happened during that month. The top row of red dots are Hotpatch releases, the middle row of blue dots are planned baselines, and the bottom row of blue dots on a red line are unplanned baselines. In this diagram, January, April, July, October, and January of the next year are planned baselines. February, March, May, June, August, September, and November and December are Hotpatch releases. There were two unplanned baseline releases in March and August.
+   A diagram showing an example of a Hotpatch schedule. The schedule is shown as a timeline extending from the January of the current year to the January of next year. On each month is a colored dot representing what kind of release happened during that month. The top row of red dots represents Hotpatch releases, the middle row of blue dots represents planned baselines, and the bottom row of blue dots on a red line represents unplanned baselines. In this diagram, January, April, July, October, and January of the next year are planned baselines. February, March, May, June, August, September, and November and December are Hotpatch releases. There were two unplanned baseline releases in March and August.
 :::image-end:::
 
 There are two types of baselines: **Planned baselines** and **Unplanned baselines**.
@@ -100,7 +100,7 @@ There are two types of baselines: **Planned baselines** and **Unplanned baseline
 
 - **Unplanned baselines** are released during an unplanned important update, such as a zero-day fix, when that particular update can't be released as a hotpatch. When unplanned baselines release, a hotpatch release is replaced with an unplanned baseline for that month. Unplanned baselines also include all the updates in a comparable Latest Cumulative Update for that month, and therefore require you to restart your machine.
 
-  - The example schedule in the previous diagram shows two unplanned baselines that replaced hotpatch releases for those months. Because these events are unplanned, in a real life scenario developers can't predict unplanned baselines in advance.
+  - The example schedule in the previous diagram shows two unplanned baselines that replaced hotpatch releases for those months. Because these events are unplanned, in a real-life scenario, developers can't predict unplanned baselines in advance.
 
 Hotpatch updates don't require you to restart your machine. Because Hotpatches patch the in-memory code of running processes without needing to restart them, your applications aren't affected. This lack of restarting doesn't affect the performance or functionality implications of the patch itself.
 
