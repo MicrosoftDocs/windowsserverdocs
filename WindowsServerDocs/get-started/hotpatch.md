@@ -19,14 +19,11 @@ Hotpatching is a way to install OS security updates on Windows Server without ha
 
 - Reduces the time exposed to security risks and change windows, and easier patch orchestration with Azure Update Manager.
 
->[!IMPORTANT]
->Hotpatch for Azure-Arc enabled servers is available for a free trial period, but after the period ends, you must enter one of the following pricing plans: <!--Get links for pricing plans.--->
-
 ## Supported platforms
 
 ### Azure and Azure Stack HCI virtual machines
 
-The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2022 and WIndwos Server 2025 on Azure. Guest virtual machines (VMs) you create on Azure Stack HCI using these combinations also support Hotpatching.
+The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2022 and Windows Server 2025 on Azure. Virtual machines (VMs) you create on Azure Stack HCI using these combinations also support Hotpatching.
 
 >[!NOTE]
 >Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
@@ -42,22 +39,7 @@ The following table lists the exact combinations of publisher, OS offer, and SKU
 | MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-Core |
 | MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-Core-smalldisk |
 
-The Azure portal selects Hotpatch by default when you create an Azure VM.
-
-Hotpatching is available for Azure Arc-enabled machines running Windows Server 2025. The following images are compatible with Hotpatching:
-
-- Windows Server 2025 Datacenter
-
-- Windows Server 2025: Standard Edition
-
-- Windows Server 2022 Datacenter Core
-
-- Windows Server 2022 Standard Core
-
->[!NOTE]
->Hotpatch is enabled by default on Server Core images.
-
-For more information about the available images, see the [Windows Server](https://aka.ms/hotpatchondesktopnewimage) on the Azure Marketplace.
+For more information about the available images, see [Windows Server](https://aka.ms/hotpatchondesktopnewimage) on the Azure Marketplace.
 
 ### Azure Arc-connected machines (preview)
 
@@ -65,20 +47,11 @@ For more information about the available images, see the [Windows Server](https:
 > Azure Arc-enabled Hotpatch is currently in PREVIEW.
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-<!-- Add some verbage here, as per GH comment -->
+Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you enable the feature on Azure Arc Portal. To start using Azure Arc-enabled Hotpatch, connect Azure Arc to machines using one of the following editions:
 
-The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2025.
+- Windows Server 2025 Datacenter Edition
 
-| Publisher               | OS Offer      |  SKU               |
-|-------------------------|---------------|--------------------|
-| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Edition |
-| MicrosoftWindowsServer | WindowsServer | 2025-Standard-Edition |
-
-To start using Azure Arc-enabled Hotpatch, connect your Windows Server 2025 machine to Azure Arc using one of the following editions:
-
-- Windows Server 2025 Datacenter
-
-- Windows Server 2025 Standard
+- Windows Server 2025 Standard Edition
 
 ## How Hotpatch works
 
@@ -120,7 +93,7 @@ The following patches currently aren't included in the Hotpatch program and requ
 
 ## Patch orchestration process
 
-Hotpatch is an extension of Windows Update and typical orchestration processes. However, the kinds of tools Hotpatch uses for patch orchestration
+Hotpatch is an extension of Windows Update and typical management processes. However, the kinds of tools Hotpatch uses for patch management
 vary depending on which platform you're using.
 
 ### Azure
@@ -131,7 +104,7 @@ vary depending on which platform you're using.
 
 - Hotpatch applies patches during off-peak hours in the VM time zone.
 
-- Azure manages patch orchestration, applying patches according to [availability-first principles](/azure/virtual-machines/automatic-vm-guest-patching#availability-first-updates).
+- Azure manages patches for you, applying patches according to [availability-first principles](/azure/virtual-machines/automatic-vm-guest-patching#availability-first-updates).
 
 - Azure monitors VM health through platform health signals to detect patching failures.
 
@@ -160,14 +133,15 @@ Azure Arc-connected machines can consume Hotpatch updates using the following to
 
 - Third-party patch management solutions.
 
-You can orchestrate Hotpatching on a Windows Server 2025 VM using Azure Arc. For more information, see [How to preview: Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895).
-<!---Check with Vishal about how to phrase this and if AUM link is ready.--->
+For more information about which tools Hotpatch uses, see [How to preview: Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895).
+<!---Check with Vishal about whether AUM link is ready.--->
 
 ### Understand the patch status for your VM in Azure
 
 To view the patch status for your VM, open the Overview page for your VM in the Azure portal. From there, under **Operations**, select **Updates**. You should see the patch status and most recently installed patches under **Recommended updates**.
 
-In the **Recommended updates** page, you can see the Hotpatch status of your VM and if there are any available patches for your VM. As we stated in [How Hotpatch works](#how-hotpatch-works), [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching) automatically installs all Critical and Security patches on your VM. 
+In the **Recommended updates** page, you can see the Hotpatch status of your VM and if there are any available patches for your VM. As we stated in [How Hotpatch works](#how-hotpatch-works), [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching) automatically installs all Critical and Security patches on your VM.
+
 Patches outside of those two categories aren't automatically installed, and are instead displayed in the **Update compliance** tab as a list of available patches. You can also check the **Update history** tab to view patch installation details for update deployments on your VM from the past 30 days.
 
 :::image type="content" source="media\hotpatch\hotpatch-management-ui.png" alt-text="A screenshot showing Hotpatch management from the Azure portal.":::
