@@ -366,7 +366,7 @@ Winget is installed by default, which is a command line Windows Package Manager 
 
 ### Accelerated Networking
 
-In regular networking, a connection between two VNs would have to go through virtual switches located on physical servers. With Accelerated Networking, you can now bypass those virtual switches and forward traffic directly to the VM. This bypassing lowers latency, reduces jitter, and decreases CPU utilization, making Accelerated Networking ideal for high-performance computing, real-time applications, and virtualized network functions.
+In synthetic networking, a connection between two VMs would have to go through virtual switches located on physical servers. With Accelerated Networking, you can now bypass those virtual switches and forward traffic directly to the VM. This bypassing lowers latency, reduces jitter, and decreases host CPU utilization, making Accelerated Networking ideal for high-performance computing, real-time applications, and virtualized network functions.
 
 ## See also
 
