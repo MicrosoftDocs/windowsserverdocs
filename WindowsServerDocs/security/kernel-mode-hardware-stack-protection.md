@@ -99,5 +99,5 @@ Certain apps use drivers that are incompatible with Kernel-mode Hardware-enforce
 
 - [Understanding Hardware-enforced Stack Protection](https://techcommunity.microsoft.com/t5/windows-os-platform-blog/understanding-hardware-enforced-stack-protection/ba-p/1247815)
 - [Developer Guidance for Hardware-enforced Stack Protection](https://techcommunity.microsoft.com/t5/windows-os-platform-blog/developer-guidance-for-hardware-enforced-stack-protection/ba-p/2163340)
-- [Enable virtualization-based protection of code integrity](s/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)
+- [Enable virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)
 - [Memory integrity and VBS enablement](/windows-hardware/design/device-experiences/oem-hvci-enablement)
