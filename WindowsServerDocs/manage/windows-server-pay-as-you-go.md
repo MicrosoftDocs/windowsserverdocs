@@ -2,7 +2,7 @@
 title: Configure Windows Server Pay-as-you-go with Azure Arc
 description: Configure Windows Server Pay-as-you-go to license your devices with usage-based charges available through Azure Arc service and billed via Azure subscription.
 ms.topic: how-to
-author: Artem Pronichkin
+author: artemp
 ms.author: alalve
 ms.date: 10/30/2024
 ---
@@ -26,7 +26,7 @@ The Pay-as-you-go license only applies to the exact device where the feature is 
 - Your device must be running any edition of Windows Server 2025.
 - Your device must meet the minimum hardware requirements. To learn more, see [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements?tabs=cpu&pivots=windows-server-2025).
 - Your device must be Azure Arc-enabled and be running Microsoft Azure connected machine agent version 1.47 or later.
-- Your device isn't currently licensed (activated) with another license type, such as OEM, Retail or Volume License (VL).
+- Your device isn't currently licensed (activated) with another license type, such as OEM, Retail, or Volume License (VL).
 
 - An active internet connection is required.
 
@@ -49,10 +49,10 @@ Once you're at the **Choose a licensing method** screen, follow these steps:
 1. Under **Select location to install Windows Server**, choose your disk and partition per your needs. Then select **Next**.
 1. On the **Ready to install** screen, select **Install**
 
-The install process automatically reboots your device as needed. You'll be prompted to create a password in order to proceed with the installation. Once complete and you've signed in, the **Azure Arc Setup** wizard is displayed. Follow these steps to continue setting up Pay-as-you-go:
+The install process automatically reboots your device as needed. You're prompted to create a password in order to proceed with the installation. Once complete and you're signed in, the **Azure Arc Setup** wizard is displayed. Follow these steps to continue setting up Pay-as-you-go:
 
 1. On the Get **Started with Azure Arc** screen, select **Next**.
-1. On the **Installing  Azure Arc** screen, your device will go through several checks to install the Azure Connected Machine (AzCM) agent. Then select **Configure**.
+1. On the **Installing  Azure Arc** screen, your device goes through several checks to install the Azure Connected Machine (AzCM) agent. Then select **Configure**.
 1. On the **Configure Azure Arc** screen, select **Next**.
 1. On the **Sign in to Azure** screen, select your Azure cloud, sign in, then select **Next**.
 1. On the **Resource details** screen, continue filling in the required information, then select **Next**.
@@ -71,7 +71,7 @@ This option is for the Windows Server Core installation. Once you're at the **Ch
 1. Select **Pay-as-you-go** and then select **Next**.
 1. Select your edition of Windows without Desktop Experience and then select **Next**.
 
-As the Azure Arc installation wizard is not supported with this set up, you'll need to use an alternative method to Arc-enable Windows Server Core. See, [Connect hybrid machines to Azure by using PowerShell](/azure/azure-arc/servers/onboard-powershell#prerequisites) to proceed with the command line installation method.
+As the Azure Arc installation wizard isn't supported with this set up, an alternative method to Arc-enable Windows Server Core must be used. See, [Connect hybrid machines to Azure by using PowerShell](/azure/azure-arc/servers/onboard-powershell#prerequisites) to proceed with the command line installation method.
 
 ---
 
@@ -79,7 +79,7 @@ After the installation is complete and you sign in for the first time, you'll ne
 
 ### Manage Windows Server Pay-as-you-go
 
-Managing Pay-as-you-go for Windows Server is possible using the Azure portal, Azure command line, or API. It's important to note that even if you didn't choose to enable Pay-as-you-go during the initial installation of the OS, you're able to do so if you met the necessary prerequisites.
+Managing Pay-as-you-go for Windows Server is possible using the Azure portal, PowerShell, or API. Even if you didn't choose to enable Pay-as-you-go during the initial installation of the OS is also an option, as long as the necessary prerequisites are met.
 
 To enable Windows Server Pay-as-you-go, follow these steps:
 
@@ -90,7 +90,7 @@ To enable Windows Server Pay-as-you-go, follow these steps:
 1. Select the **Pay-as-you-go (preview)** tile.
 1. Check the box next to **Pay-as-you-go with Azure**, and then select **Confirm**.
 
-*Alternatively*, this can be performed in the left pane menu by expanding **Licenses**, selecting **Windows Server (preview)**, and follow step 4.
+*Alternatively*, in the left pane menu by expanding **Licenses**, selecting **Windows Server (preview)**, and follow step 4.
 
 # [Azure PowerShell](#tab/azurepowershell)
 
@@ -128,7 +128,7 @@ To disable Windows Server Pay-as-you-go, follow these steps:
 1. Select the **Pay-as-you-go (preview)** tile.
 1. Uncheck the box next to **Pay-as-you-go with Azure**, and then select **Confirm**.
 
-*Alternatively*, this can be performed in the left pane menu by expanding **Licenses**, selecting **Windows Server (preview)**, and follow step 4.
+*Alternatively*, in the left pane menu by expanding **Licenses**, selecting **Windows Server (preview)**, and follow step 4.
 
 # [Azure PowerShell](#tab/azurepowershell)
 
