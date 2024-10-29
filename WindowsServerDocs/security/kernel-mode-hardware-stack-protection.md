@@ -37,7 +37,7 @@ For more information, see the blog post on [Understanding Hardware-enforced Stac
 
 ## Enable Kernel-mode Hardware-enforced Stack Protection in Windows Security
 
-Virtualization-Based Security (VBS) and Hypervisor-enforced Code Integrity (HVCI) are prerequisites for Kernel-mode Hardware-enforced Stack Protection, you must first ensure that these features are enabled before continuing. They are are autoenabled on Windows systems that [meet minimum hardware requirements](/windows-hardware/design/device-experiences/oem-hvci-enablement).
+Virtualization-Based Security (VBS) and Hypervisor-enforced Code Integrity (HVCI) are prerequisites for Kernel-mode Hardware-enforced Stack Protection, you must first ensure that these features are enabled before continuing. They are autoenabled on Windows systems that [meet minimum hardware requirements](/windows-hardware/design/device-experiences/oem-hvci-enablement).
 
 Enable VBS and HVCI with the following steps:
 
