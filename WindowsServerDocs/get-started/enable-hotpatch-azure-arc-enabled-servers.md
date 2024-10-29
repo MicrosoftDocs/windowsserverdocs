@@ -42,7 +42,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 ## Install Hotpatch preview version for Windows Server 2025
 
-To install the preview version of the Hotpatch for Windows Server 2025 Standard and Azure editions:
+To install the preview version of the Hotpatch for Windows Server 2025 Standard and Azure Editions:
 
 1. Run the following command in an elevated command prompt:
 
