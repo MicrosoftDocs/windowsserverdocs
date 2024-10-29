@@ -26,7 +26,7 @@ Hotpatching is a way to install OS security updates on Windows Server without ha
 
 ### Azure and Azure Stack HCI virtual machines
 
-The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2022. Guest virtual machines (VMs) created on Azure Stack HCI using these combinations are also supported.
+The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2022 and WIndwos Server 2025 on Azure. Guest virtual machines (VMs) you create on Azure Stack HCI using these combinations also support Hotpatching.
 
 >[!NOTE]
 >Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
@@ -37,25 +37,25 @@ The following table lists the exact combinations of publisher, OS offer, and SKU
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Core-smalldisk |
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Hotpatch |
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Hotpatch-smalldisk |
+| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition |
+| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-smalldisk |
 | MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-Core |
-| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Edition |
-| MicrosoftWindowsServer | WindowsServer | 2025-Standard-Edition |
+| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-Core-smalldisk |
 
 The Azure portal selects Hotpatch by default when you create an Azure VM.
 
-To start using Hotpatch, enable Hotpatch on your Azure Arc-enabled Windows Server 2025 machine, or create an Azure or Azure Stack HCI VM using one of the following compatible images:
-
-- Windows Server 2025: Azure Edition
+Hotpatching is available for Azure Arc-enabled machines running Windows Server 2025. The following images are compatible with Hotpatching:
 
 - Windows Server 2025 Datacenter
 
 - Windows Server 2025: Standard Edition
 
-- Windows Server 2022 Datacenter: Azure Edition Hotpatch (Desktop Experience)
+- Windows Server 2022 Datacenter Core
 
-- Windows Server 2022 Datacenter: Azure Edition Core<sup>1</sup>
+- Windows Server 2022 Standard Core
 
-<sup>1</sup> Hotpatch is enabled by default on Server Core images.
+>[!NOTE]
+>Hotpatch is enabled by default on Server Core images.
 
 For more information about the available images, see the [Windows Server](https://aka.ms/hotpatchondesktopnewimage) on the Azure Marketplace.
 
@@ -71,7 +71,6 @@ The following table lists the exact combinations of publisher, OS offer, and SKU
 
 | Publisher               | OS Offer      |  SKU               |
 |-------------------------|---------------|--------------------|
-| MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Azure-Edition-Core |
 | MicrosoftWindowsServer | WindowsServer | 2025-Datacenter-Edition |
 | MicrosoftWindowsServer | WindowsServer | 2025-Standard-Edition |
 
