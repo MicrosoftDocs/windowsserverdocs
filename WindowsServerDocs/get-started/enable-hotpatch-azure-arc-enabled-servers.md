@@ -15,7 +15,7 @@ ms.date: 10/25/2024
 
 Hotpatch allows you to update your Windows Server deployment without requiring your users to restart their virtual machines (VMs) after installation. This feature minimizes downtime spent on updates and keeps your users running their VM sessions uninterrupted. For more information about how Hotpatch works, see [Hotpatch for virtual machines](hotpatch.md).
 
-Windows Server 2025 (preview) features the ability to enable Hotpatch for Azure Arc-enabled servers. In order to use Hotpatch on Azure Arc-enabled servers, all you have to do is deploy the Connected Machine agent and enable Windows Server Hotpatch. This article will walk you through this process.
+Windows Server 2025 (preview) features the ability to enable Hotpatch for Azure Arc-enabled servers. In order to use Hotpatch on Azure Arc-enabled servers, all you have to do is deploy the Connected Machine agent and enable Windows Server Hotpatch. This article describes how to enable Hotpatching.
 
 >[!IMPORTANT]
 >Azure Arc-enabled Hotpatching is in public preview, but will be a billed as an Azure service at GA. For more information, see the pricing page. <!--Get pricing information once page URLs are available.--->
@@ -52,7 +52,7 @@ To install the preview version of the Hotpatch for Windows Server 2025 Standard 
 
 1. Restart your computer.
 
-1. After you've enabled Azure Arc, sign in to the Azure Arc portal and go to **Azure Arc** > **Machines**.
+1. After you enable Azure Arc, sign in to the Azure Arc portal and go to **Azure Arc** > **Machines**.
 
 1. Select the name of your VM.
 
@@ -70,7 +70,7 @@ To install the preview version of the Hotpatch for Windows Server 2025 Standard 
 
 ## Next steps
 
-Now you've set up your computer for Hotpatch, here are some articles that might help you with updating your computer:
+Now that you have Hotpatch enabled, here are some articles that might help you with updating your computer:
 
 - [Patch a Server Core installation](../administration/server-core/server-core-servicing.md)
 
