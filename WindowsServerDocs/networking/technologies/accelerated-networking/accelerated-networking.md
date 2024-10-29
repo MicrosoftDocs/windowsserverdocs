@@ -9,7 +9,7 @@ ms.date: 10/21/2024
 # Accelerated Networking (preview)
 
 > [!IMPORTANT]
-> Acclerated Networking is currently in PREVIEW.
+> Accelerated Networking is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 On synthetic networking, all traffic entering and leaving a virtual machine (VM) goes between the host and the virtual switch. The virtual switch provides all policy enforcement for network traffic, including network security groups, access control lists, isolation, and other network virtualized services.
