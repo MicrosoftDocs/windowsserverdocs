@@ -125,6 +125,7 @@ To disable Windows Server Pay-as-you-go, follow these steps:
 1. Select the machine you want to disable Windows Server Pay-as-you-go.
 1. Select the **Pay-as-you-go** tile.
 1. Uncheck the box next to **Pay-as-you-go with Azure**, and then select **Confirm**.
+1. The **Deactivate Pay-as-you-go** notification appears asking if you'd like to deactivate. Select **Deactivate**.
 
 *Alternatively*, in the left pane menu by expanding **Licenses**, selecting **Windows Server**, and follow step 4.
 
