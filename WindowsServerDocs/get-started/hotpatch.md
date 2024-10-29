@@ -1,6 +1,6 @@
 ---
 title: Hotpatch for Windows Server Azure Edition
-description: 'Learn how hotpatch for Windows Server Datacenter: Azure Edition works and how to enable it'
+description: 'Learn how Hotpatch for Windows Server Datacenter: Azure Edition works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
 ms.date: 10/14/2024
@@ -94,13 +94,13 @@ baselines due to zero-day fixes.
 
 There are two types of baselines: **Planned baselines** and **Unplanned baselines**.
 
-- **Planned baselines** are released on a regular cadence, with hotpatch releases in between. Planned baselines include all the updates in a comparable Latest Cumulative Update for that month and require you to restart your machine.
+- **Planned baselines** are released on a regular cadence, with Hotpatch releases in between. Planned baselines include all the updates in a comparable Latest Cumulative Update for that month and require you to restart your machine.
 
-  - The example schedule in the previous diagram has four planned baseline releases in a calendar year and eight hotpatch releases.
+  - The example schedule in the previous diagram has four planned baseline releases in a calendar year and eight Hotpatch releases.
 
-- **Unplanned baselines** are released during an unplanned important update, such as a zero-day fix, when that particular update can't be released as a hotpatch. When unplanned baselines release, a hotpatch release is replaced with an unplanned baseline for that month. Unplanned baselines also include all the updates in a comparable Latest Cumulative Update for that month, and therefore require you to restart your machine.
+- **Unplanned baselines** are released during an unplanned important update, such as a zero-day fix, when that particular update can't be released as a Hotpatch. When unplanned baselines release, a Hotpatch release is replaced with an unplanned baseline for that month. Unplanned baselines also include all the updates in a comparable Latest Cumulative Update for that month, and therefore require you to restart your machine.
 
-  - The example schedule in the previous diagram shows two unplanned baselines that replaced hotpatch releases for those months. Because these events are unplanned, in a real-life scenario, developers can't predict unplanned baselines in advance.
+  - The example schedule in the previous diagram shows two unplanned baselines that replaced Hotpatch releases for those months. Because these events are unplanned, in a real-life scenario, developers can't predict unplanned baselines in advance.
 
 Hotpatch updates don't require you to restart your machine. Because Hotpatches patch the in-memory code of running processes without needing to restart them, your applications aren't affected. This lack of restarting doesn't affect the performance or functionality implications of the patch itself.
 
