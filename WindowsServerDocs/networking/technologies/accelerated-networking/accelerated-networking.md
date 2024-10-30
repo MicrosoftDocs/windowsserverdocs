@@ -1,12 +1,12 @@
 ---
-title: Accelerated Networking (preview)
+title: Accelerated Networking at the Edge (preview)
 description: How to set up and validate Accelerated Networking on your VMs.
 ms.topic: article
 ms.author: helohr
 author: Heidilohr
-ms.date: 10/21/2024
+ms.date: 11/01/2024
 ---
-# Accelerated Networking (preview)
+# Accelerated Networking at the Edge (preview)
 
 > [!IMPORTANT]
 > Accelerated Networking is currently in PREVIEW.
@@ -20,11 +20,11 @@ The following diagram illustrates how two VMs communicate with and without Accel
 
 Accelerated Networking's high-performance data path enables single root I/O virtualization (SR-IOV) on supported VM types, greatly improving networking performance in the following ways:
 
-- Lower latency and higher packets per second (pps). Removing the virtual switch from the data path eliminates the wait time that packets need to spend in the host for policy processing. Higher pps increases the number of packets that the VM can process.
+- Lower latency and higher packets per second (pps)
 
-- Reduced jitter. Processing time for virtual switches depends on how many policies the host needs to apply and the workload of the CPU that does the processing. Offloading policy enforcement to the hardware removes that variability by delivering packets directly to the VM. Offloading also removes the host-to-VM communication, all software interrupts, and all context switches.
+- Reduced jitter
 
-- Decreased CPU utilization. Bypassing the virtual switch in the host leads to less CPU utilization for processing network traffic.
+- Decreased CPU utilization
 
 Accelerated Networking also adds an extra management layer with the following features:
 
@@ -45,9 +45,11 @@ Your deployment needs to meet the following prerequisites in order to be able to
   >[!NOTE]
   >Non-clustered single servers and Windows Server Standard edition don't support Accelerated Networking.
 
-- Your hardware must support SR-IOV and be enabled in the BIOS. You may need to contact your hardware vendor to see if your machine supports SR-IOV.
+- Your hardware must support SR-IOV and you must enable SR-IOV in the BIOS. You may need to contact your hardware vendor to see if your machine supports SR-IOV.
 
-- An SR-IOV supported network interface card (NIC).
+- You must [install Network ATC](/azure-stack/hci/deploy/network-atc?context=%2Fwindows-server%2Fcontext%2Fwindows-server-edge-networking&pivots=windows-server&branch=main&tabs=22H2) and configure a valid Compute intent before you enable Accelerated Networking.
+
+- You must have a network interface card (NIC) that supports SR-IOV, then use Network ATC to make sure you enable SR-IOV on the NIC.
 
   - Run the following cmdlet to enable SR-IOV on your NIC if you haven't already:
 
@@ -55,7 +57,7 @@ Your deployment needs to meet the following prerequisites in order to be able to
     Enable-NetAdapterSriov
     ```
 
-- The Virtualization feature must be enabled in your BIOS.
+- You must enable the Virtualization feature in your BIOS.
 
 >[!NOTE]
 >The public preview version of Accelerated Networking currently doesn't support the following scenarios:
@@ -64,7 +66,7 @@ Your deployment needs to meet the following prerequisites in order to be able to
 >
 >- Network HUD support
 >
->- Windows Admin Center UI
+>- Windows Admin Center management of Accelerated Networking
 
 ## Enable Accelerated Networking on a cluster
 
@@ -113,7 +115,7 @@ To disable Accelerated Networking on a cluster:
   Disable-AccelNetManagement 
   ```
 
-After you disable the cluster, the Network HUD no longer monitors the health of the feature.
+After you disable Accelerated Networkiong on the cluster, the Network HUD no longer monitors the health of the feature.
 
 >[!NOTE]
 >Disabling Accelerated Networking at the cluster doesn't change setting configurations on the VMs. VMs are no longer managed by Accelerated Networking or tracked by the Network HUD.
@@ -185,7 +187,7 @@ The following error messages are possible issues you may encounter while using t
 
 ### Accel_net_not_supported
 
-Node {0} does not support Accelerated Networking. Windows Server 2025 24H2 or later is required.
+Node {0} does not support Accelerated Networking. Windows Server 2025 or later is required.
 
 To resolve this issue, update your OS to the latest version of Windows Server.
 
