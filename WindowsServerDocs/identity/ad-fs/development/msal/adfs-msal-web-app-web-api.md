@@ -75,7 +75,7 @@ This section shows how to register the Web App as a confidential client and Web 
 
 This section shows how to configure a ASP.NET Web App to sign-in user and retrieve token to call the Web API
 
-  1. Download the sample from [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapp-to-webapi)
+  1. Download the sample from [here](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/)
 
   2. Open the sample using Visual Studio
 
