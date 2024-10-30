@@ -4,7 +4,7 @@ description: Learn how to deploy the best practices assessment tool to  evaluate
 ms.topic: how-to
 ms.author: alalve
 author: trungtran
-ms.date: 10/29/2024
+ms.date: 10/30/2024
 ---
 
 # Configure best practices assessment for Arc-enabled Windows servers

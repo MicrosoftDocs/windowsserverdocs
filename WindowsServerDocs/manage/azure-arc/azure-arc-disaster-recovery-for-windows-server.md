@@ -4,7 +4,7 @@ description: Learn how to deploy the disaster recovery tool to manage and orches
 ms.topic: how-to
 ms.author: alalve
 author: trungtran
-ms.date: 10/29/2024
+ms.date: 10/30/2024
 ---
 
 # Configure disaster recovery for Arc-enabled Windows servers
@@ -48,12 +48,23 @@ To deploy disaster recovery, the Azure Site Recovery agent needs to be installed
 
 1. Navigate to a Windows Server 2016 or later Arc-enabled Windows Server resource. This VM should be the Hyper-V host.
 1. In the left pane, navigate to **Windows management**, then select **Disaster recovery (preview)**.
+
+   ![The Azure portal with the Disaster recovery tool selected under the Windows management node](../media/azure-arc/azure-arc-disaster-recovery-tool.png)
+
 1. Select **Protect VM workloads** to access the **Replicate VMs to Azure** page.
 1. Under **Step 1: Prepare infrastructure**, select **Prepare infrastructure**.
+
+   ![The disaster recovery tool where the option "prepare infrastructure" was selected on the replicate virtual machines to azure screen.](../media/azure-arc/azure-arc-disaster-recovery-tool-replicate-vms-to-azure.png)
+
 1. On the **Prepare infrastructure** page, the following needs to created unless they already exist:
    1. A vault for the infrastructure.
    1. A Hyper-V site.
    1. A replication policy.
+
+   If they already exist, select **Prepare infrastructure**. If they don't exist, create each one and select **Review + create**. Once all three are generated, select **Prepare infrastructure**.
+
+   ![The disaster recovery tool preparing the infrastructure and installing the Azure Site Recovery extension.](../media/azure-arc/azure-arc-disaster-recovery-tool-prepare-infrastructure.png)
+   
 1. Once infrastructure preparations are complete, and the Azure Site Recovery extension is successfully installed on the node, the **Status: Infrastructure prepared successfully** pop-up notification is displayed.
 1. Lastly, select **Enable replication**.
 
@@ -66,12 +77,7 @@ As disaster recovery is in preview, users may experience technical issues during
 
 - **Issue**: You encounter the error:
 
-  ```error
-  Installing ASR extension...
-
-  Could not complete the operation.
-  undefined: undefined
-  ```
+  ![A transient error is displayed when installing the Azure Site Recovery agent extension in the Azure portal](../media/azure-arc/azure-arc-disaster-recovery-tool-asr-error.png)
 
 - **Solution**: No action needed as this is a transient error. Navigate to **Windows management > Disaster recovery (preview) > Protect VM workloads** and check the status of your infrastructure under **Step 1: Prepare infrastructure**.
 
@@ -100,7 +106,7 @@ To report app feedback for disaster recovery or if other issues are encountered,
 1. Run the following PowerShell command as admin on your device to collect error logs in `.zip` format:
 
    ```powershell
-   azcmagent logs -o "C:\ArcDisasterRecovery\azcmagent-logs.zip"
+   azcmagent logs -o "C:\AzureArc\azcmagent-logs.zip"
    ```
 
 1. Open the [Feedback Hub](https://aka.ms/feedbackhub) on your device.
