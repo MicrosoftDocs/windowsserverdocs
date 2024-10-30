@@ -27,7 +27,7 @@ This experience doesn't include an Azure storage account by default. You're requ
 
 ## Prerequisites
 
-- Your device must be running Windows Server 2016 or later with a minimum of 4 GB of memory.
+- Your device must be running an Arc-enabled on-premises Windows Server 2016 or later operating system with a minimum of 4 GB of memory.
 - Azure Arc must be installed and configured on your device.
 - The Windows Server **Hyper-V** role must be installed. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
