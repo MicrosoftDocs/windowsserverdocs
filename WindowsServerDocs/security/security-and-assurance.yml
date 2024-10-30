@@ -22,6 +22,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: Windows Server 2025 Security Book
+            url: https://aka.ms/ws2025securitybook
           - text: Windows Server Security Blog Post
             url: https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/
           - text: Datacenter and Private Cloud Security Blog

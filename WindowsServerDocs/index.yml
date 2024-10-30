@@ -143,6 +143,9 @@ conceptualContent:
 
     - title: Security and assurance
       links:
+        - url: https://aka.ms/ws2025securitybook
+          itemType: overview
+          text: Windows Server 2025 Security Book  
         - url: ./security/windows-authentication/windows-authentication-overview.md
           itemType: overview
           text: Windows Authentication overview
