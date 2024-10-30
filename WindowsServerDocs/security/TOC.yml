@@ -7,6 +7,8 @@
     href: secured-core-server.md
   - name: Configure Secured-core Server
     href: configure-secured-core-server.md
+  - name: Kernel Mode Hardware-enforced Stack Protection
+    href: kernel-mode-hardware-stack-protection.md  
   - name: OSConfig
     items:
     - name: OSConfig overview
