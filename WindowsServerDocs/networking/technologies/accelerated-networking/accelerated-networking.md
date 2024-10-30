@@ -12,9 +12,7 @@ ms.date: 10/21/2024
 > Accelerated Networking is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-On synthetic networking, all traffic entering and leaving a virtual machine (VM) goes between the host and the virtual switch. The virtual switch provides all policy enforcement for network traffic, including network security groups, access control lists, isolation, and other network virtualized services.
-
-Accelerated Networking offloads all network policies applied by the virtual switch, instead applying them using the hardware. When the hardware applies policies, the VM network interface (NIC) can forward network traffic directly to the VM. The NIC also bypasses the host and the virtual switch while maintaining all policies applied in the host.
+Accelerated Networking enables single root input-output (IO) virtualization (SR-IOV) on supported virtual machine (VM) types, greatly improving networking performance. Accelerated Networking lets network traffic bypass the software switch layer of Hyper-V virtualization stacks. Because Accelerated Networking assigns the virtual function (VF) to a child partition, the network traffic flows directly between the VF and child partition. As a result, the IO overhead in the software emulation layer shrinks until network performance becomes almost the same as physical, on-premises environments.
 
 The following diagram illustrates how two VMs communicate with and without Accelerated Networking.
 
@@ -28,11 +26,15 @@ Accelerated Networking's high-performance data path enables single root I/O virt
 
 - Decreased CPU utilization. Bypassing the virtual switch in the host leads to less CPU utilization for processing network traffic.
 
+Accelerated Networking also adds an extra management layer with the following features:
+
 - Built-in prerequisite checks that let you know if your deployment's compatible with Accelerated Networking by checking SR-IOV support, OS version, hyperthreading status, and so on.
 
 - Host configuration ensures SR-IOV is enabled on the correct vSwitch hosting VM workloads, and also allows you to configure reserve nodes for failover scenarios and avoiding resource oversubscription.
 
 - Simplified VM performance settings that show overall performance as Low, Medium, and High to make configuration easier.
+
+These features make Accelerated Networking useful for environments that require high-peformance computing (HPC) for intensive computational tasks, real-time applications like financial trading platforms, or deployments that use Network Function Virtualization (NFV) to work around limits on network throughput.
 
 ## Prerequisites
 
@@ -54,6 +56,15 @@ Your deployment needs to meet the following prerequisites in order to be able to
     ```
 
 - The Virtualization feature must be enabled in your BIOS.
+
+>[!NOTE]
+>The public preview version of Accelerated Networking currently doesn't support the following scenarios:
+>
+>- Switch Embedded Teaming (SET) NICs. You can only use one NIC at a time.
+>
+>- Network HUD support
+>
+>- Windows Admin Center UI
 
 ## Enable Accelerated Networking on a cluster
 
@@ -170,19 +181,11 @@ To disable Accelerated Networking on a VM:
 
 ## Known issues
 
-The public preview version of Accelerated Networking currently doesn't support the following scenarios:
-
-- Switch Embedded Teaming (SET) NICs. You can only use one NIC at a time.
-
-- Network HUD support
-
-- Windows Admin Center UI
-
 The following error messages are possible issues you may encounter while using this feature.
 
 ### Accel_net_not_supported
 
-Node {0} does not support Accelerated Networking. Windows Server 2025/Azure Stack HCI 24H2 or later is required.
+Node {0} does not support Accelerated Networking. Windows Server 2025 24H2 or later is required.
 
 To resolve this issue, update your OS to the latest version of Windows Server.
 
