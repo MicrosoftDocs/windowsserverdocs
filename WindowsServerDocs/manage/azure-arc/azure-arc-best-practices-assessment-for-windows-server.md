@@ -7,7 +7,7 @@ author: trungtran
 ms.date: 10/30/2024
 ---
 
-# Configure best practices assessment for Arc-enabled Windows servers
+# Configure Best Practices Assessment for Arc-enabled Windows servers
 
 The Best Practices Assessment (preview) tool continually scans your Windows Server to evaluate its configurations against Windows best practices. These assessments can be scheduled to run automatically or initiated manually as needed. The assessment evaluates several aspects of the Server environment, including server baselines, server security, Hyper-V, failover clusters, and Internet Information Services (IIS). It also collects and analyzes server data to generate a list of issues that require remediation guidance and best practices for improving the performance of your server infrastructure, including deploying applications, software updates, and operating systems.
 
@@ -32,28 +32,35 @@ The Best Practices Assessment (preview) tool installs the following three extens
 ## Prerequisites
 
 - Your device must be running an Arc-enabled on-premises Windows Server 2016 or later operating system with a minimum of 4 GB of memory.
-- If you’re new to Azure Arc, see [Quickstart: Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) to onboard your device.
+- If you’re new to Azure Arc, your device must be onboarded. To learn more, see [Quickstart: Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 ### Deploy Best Practices Assessment (preview)
 
-To deploy disaster recovery, the Azure Site Recovery agent needs to be installed on your device. This involves creating or using a vault, a Hyper-V site, and a replication policy to prepare the infrastructure. Once these items are in place, the Azure Site Recovery agent is installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
+To deploy the Best Practices Assessment tool, perform the following steps:
 
-1. Navigate to [aka.ms/bpademo](https://aka.ms/bpademo) as this takes you to the landing page of the Azure portal with this feature flag enabled.
+1. Navigate to [aka.ms/bpademo](https://aka.ms/bpademo) to lead you to the landing page of the Azure portal with this feature flag enabled.
   
    > [!NOTE]
    > During the public preview phase, be aware that this functionality can only be accessed in the public cloud.
 
 1. Navigate to a Windows Server 2016 or later Arc-enabled Windows Server resource. This virtual machine (VM) should be the Hyper-V host.
 1. In the left pane, navigate to **Windows management**, then select **Best Practices Assessment (preview)**.
+
+   ![The Azure portal with the Best Practices Assessment tool selected under the Windows management node](../media/azure-arc/azure-arc-best-practices-assessment-tool.png)
+
 1. Select **Get Started** to access the **Best practices assessment configuration**.
 1. Provide the **Resource group** and **Log Analytics Workspace** where results of the assessment are saved and then select **Set up**. Reminder that charges apply for the data that is stored in your log analytics workspace.
+
+   ![The Best Practices Assessment tool configuration screen.](../media/azure-arc/azure-arc-best-practices-assessment-configuration.png)
 
    > [!NOTE]
    > Installation times vary and might take up to 15 minutes. You can refresh the status by selecting the **Refresh** button on this page.
 
-1. Once deployment is complete, select **Go to resource** and then select **Best Practices Assessment (preview)**.
+1. Once deployment is complete, select **Go to resource**, select **Best Practices Assessment (preview)**, and then select **Run assessment** at the top of the page.
 
-Setting up Best Practices Assessment (preview) for the first time takes upward to 4 hours for the assessment to run and provide results.
+Running the assessment for the first time takes upward to 4 hours for the assessment to run and provide results.
+
+   ![The Best Practices Assessment tool completing an assessment and recommending improvements.](../media/azure-arc/azure-arc-best-practices-assessment-recommendation.png)
 
 Throughout the duration of the public preview, we're providing updates to enhance the experience. To update **Best Practices Assessment (preview)**, follow these steps:
 
@@ -64,9 +71,15 @@ Throughout the duration of the public preview, we're providing updates to enhanc
    1. `assessmentplatform`
    1. `windowsserverassessment`
 
+   ![The Best Practices Assessment tool extensions node listing the available extensions that can be updated.](../media/azure-arc/azure-arc-best-practices-assessment-update-extensions.png)
+
 ## Troubleshoot deployment
 
-In the event where your deployment fails, **Your deployment failed** is displayed. If this error occurs, your extension needs to be reenabled. To correct this issue, follow these troubleshooting steps:
+In the event where your deployment fails, the **Your deployment failed** notification is displayed.
+
+![The Best Practices Assessment tool deployment failing with the error notification stating "Your deployment failed".](../media/azure-arc/azure-arc-best-practices-assessment-error.png)
+
+If this error occurs, your extension needs to be reenabled. To correct this issue, follow these troubleshooting steps:
 
 1. Navigate to your resource.
 1. In the left pane, expand **Settings** and select **Extensions**.
@@ -79,7 +92,11 @@ In the event where your deployment fails, **Your deployment failed** is displaye
    scripts\\RunPs1.cmd Enable-Assessment
    ```
 
-1. Once the script is complete, go to your Azure portal. Open your resource, select ***Best Practices Assessment (preview)**, and then select **Run assessment**.
+   Users should expect the following output when running this script:
+
+   ![An output of a PowerShell script running to reenable the required extension for the Best Practices Assessment tool.](../media/azure-arc/azure-arc-best-practices-assessment-powershell-script.png)
+
+1. Once the script is complete, go to your Azure portal. Open your resource, select **Best Practices Assessment (preview)**, and then select **Run assessment**.
 
 ## Submit tooling feedback
 
