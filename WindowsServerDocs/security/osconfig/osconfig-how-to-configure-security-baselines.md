@@ -48,7 +48,7 @@ Apply the appropriate security baselines, based on the Windows Server role of yo
 - Workgroup member
 
 > [!NOTE]
-> For Azure Arc-connected devices, you can apply the security baselines before or after connecting.
+> For Azure Arc-connected devices, you can apply the security baselines before or after connecting. But if the role of your server changes after the connection, you must delete and reapply the assignment to make sure that the machine configuration platform can detect the role change. For more information about deleting an assignment, see [Deletion of guest assignments from Azure Policy](/azure/governance/machine-configuration/concepts/assignments#deletion-of-guest-assignments-from-azure-policy).
 
 To apply a baseline, verify that the baseline is applied, remove a baseline, or view detailed compliance information for OSConfig in PowerShell, use the commands on the following tabs.
 
