@@ -13,6 +13,8 @@ ms.date: 10/09/2024
 
 OSConfig is a security configuration stack that uses a scenario-based approach to deliver and apply desired security measures for your environment. It provides co-management support for both on-premises and Azure Arc-connected devices. You can use Windows PowerShell or Windows Admin Center to apply the security baselines throughout the device life cycle, starting from the initial deployment process.
 
+You can get the full list of the settings for the security baselines on [GitHub](https://github.com/microsoft/osconfig/tree/main/security).
+
 ## Prerequisites
 
 Make sure that your device is running Windows Server 2025. OSConfig doesn't support earlier versions of Windows Server.
