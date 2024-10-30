@@ -49,7 +49,7 @@ Your deployment needs to meet the following prerequisites in order to be able to
 
 - You must [install Network ATC](/azure-stack/hci/deploy/network-atc?context=%2Fwindows-server%2Fcontext%2Fwindows-server-edge-networking&pivots=windows-server&branch=main&tabs=22H2) and configure a valid Compute intent before you enable Accelerated Networking.
 
-- You must have a network interface card (NIC) that supports SR-IOV, then use Network ATC to make sure you enable SR-IOV on the NIC.
+- You must have a network interface card (NIC) that supports SR-IOV.
 
   - Run the following cmdlet to enable SR-IOV on your NIC if you haven't already:
 
@@ -57,7 +57,7 @@ Your deployment needs to meet the following prerequisites in order to be able to
     Enable-NetAdapterSriov
     ```
 
-- You must enable the Virtualization feature in your BIOS.
+  - You may also need to expose the Virtual Functions in the BIOS.
 
 >[!NOTE]
 >The public preview version of Accelerated Networking currently doesn't support the following scenarios:
