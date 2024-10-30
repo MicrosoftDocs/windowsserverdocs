@@ -1,5 +1,5 @@
 ---
-title: Configure OSConfig security for Windows Server 2025 (preview)
+title: Configure OSConfig security for Windows Server 2025
 description: Learn how to deploy OSConfig security baselines to enforce granular security settings to better protect and harden your Windows Server 2025 environment.
 ms.topic: how-to
 ms.product: windows-server
