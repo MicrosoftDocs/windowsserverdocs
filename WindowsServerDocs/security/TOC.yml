@@ -1,6 +1,8 @@
 - name: Security and Assurance
   href: security-and-assurance.yml
   items:
+  - name: Windows Server 2025 Security Book
+    href: https://aka.ms/ws2025securitybook
   - name: Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
     href: gdpr/gdpr-winserver-whitepaper.md
   - name: Secured-core server
