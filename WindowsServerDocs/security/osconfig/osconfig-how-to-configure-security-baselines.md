@@ -194,7 +194,7 @@ Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name
 
 ## Customize OSConfig security baselines
 
-After you complete the security baseline configuration, you can modify the security settings while maintaining drift control. Customizing the security values allows for more control of your organization's security policies, depending on your environment's specific needs. OSConfig accepts only numerical values.
+After you complete the security baseline configuration, you can modify the security settings while maintaining drift control. Customizing the security values allows for more control of your organization's security policies, depending on your environment's specific needs.
 
 To edit the default value of `AuditDetailedFileShare` from `2` to `3` for your member server, run the following command:
 
