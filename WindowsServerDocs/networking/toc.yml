@@ -374,7 +374,7 @@ items:
       - name: Gateway bandwidth allocation
         href: sdn/gateway-allocation.md
     - name: Accelerated Networking
-      href: accelerated-networking.md
+      href: accelerated-networking/accelerated-networking.md
   - name: Extensible Authentication Protocol (EAP)
     href: technologies/extensible-authentication-protocol/network-access.md
     items:

@@ -115,7 +115,7 @@ To disable Accelerated Networking on a cluster:
   Disable-AccelNetManagement 
   ```
 
-After you disable Accelerated Networkiong on the cluster, the Network HUD no longer monitors the health of the feature.
+After you disable Accelerated Networking on the cluster, the Network HUD no longer monitors the health of the feature.
 
 >[!NOTE]
 >Disabling Accelerated Networking at the cluster doesn't change setting configurations on the VMs. VMs are no longer managed by Accelerated Networking or tracked by the Network HUD.
