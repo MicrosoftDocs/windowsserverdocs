@@ -370,7 +370,7 @@ Winget is installed by default, which is a command line Windows Package Manager 
 
 ### Accelerated Networking
 
-In synthetic networking, a connection between two VMs would have to go through virtual switches located on physical servers. With Accelerated Networking, you can now bypass those virtual switches and forward traffic directly to the VM. This bypassing lowers latency, reduces jitter, and decreases host CPU utilization, making Accelerated Networking ideal for high-performance computing, real-time applications, and virtualized network functions.
+Accelerated Networking simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. Accelerated Networking also adds a management layer that handles prerequisite checking, host configuration, and VM performance settings.
 
 ## See also
 
