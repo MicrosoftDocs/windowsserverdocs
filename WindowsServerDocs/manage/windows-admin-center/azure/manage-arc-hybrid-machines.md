@@ -1,8 +1,8 @@
 ---
-title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure preview
+title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Arc-enabled Windows Server
 ms.topic: overview
-author: prasidharora
+author: davannaw-msft
 ms.author: roharwoo
 ms.date: 10/30/2024
 ms.custom: references_regions
@@ -191,7 +191,7 @@ Access to Windows Admin Center is controlled by the **Windows Admin Center Admin
 
 To configure role assignments for your hybrid machines using the Microsoft Entra admin center experience:
 
-1. Open the hybrid machine that you wish to manage in the Windows Admin Center.
+1. Open the hybrid machine that you wish to manage using Windows Admin Center.
 
 1. Select **Access control (IAM)**.
 
