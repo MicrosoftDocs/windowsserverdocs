@@ -3,7 +3,7 @@ title: Hotpatch for Windows Server Azure Edition
 description: 'Learn how Hotpatch for Windows Server Datacenter: Azure Edition works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
-ms.date: 10/14/2024
+ms.date: 11/01/2024
 ms.author: wscontent
 ---
 
@@ -133,8 +133,7 @@ Azure Arc-connected machines can consume Hotpatch updates using the following to
 
 - Third-party patch management solutions.
 
-For more information about which tools Hotpatch uses, see [How to preview: Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895).
-<!---Check with Vishal about whether AUM link is ready.--->
+For more information about which tools Hotpatch uses, check out our [Azure Update Manager](https://aka.ms/HotpatchAUM) documentation.
 
 ### Understand the patch status for your VM in Azure
 
