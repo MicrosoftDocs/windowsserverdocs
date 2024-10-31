@@ -1,6 +1,6 @@
 ---
-title: How to configure App Control policies in Windows Server 2025 (preview)
-description: Learn how to configure App Control for Business using OSConfig PowerShell commands to harden security by implementing custom security policies.
+title: Configure App Control policies in Windows Server 2025
+description: Learn how to configure App Control for Business through OSConfig PowerShell commands to harden security by implementing custom security policies.
 ms.topic: how-to
 ms.product: windows-server
 ms.author: roharwoo
@@ -10,39 +10,39 @@ ms.date: 10/17/2024
 ---
 
 
-# How to configure App Control for Business with OSConfig
+# Configure App Control for Business by using OSConfig
 
-App Control for Business is a software-based security layer that reduces attack surface by enforcing an explicit list of software that is allowed to run. Microsoft developed a default policy for Windows Server 2025, which can be implemented on the server using PowerShell cmdlets. App Control implementation is facilitated by using the OSConfig security configuration platform and provides two main operation modes:
+App Control for Business is a software-based security layer that reduces attack surface by enforcing an explicit list of software that's allowed to run. Microsoft developed a default policy for Windows Server 2025, which you can implement on the server by using Windows PowerShell cmdlets. App Control implementation is facilitated through the OSConfig security configuration platform and provides two main operation modes:
 
 - **Audit mode**: Allows untrusted code to run while events are recorded.
 - **Enforcement mode**: Disallows untrusted code from running while events are recorded.
 
 To learn more about these security event logs, see [Understanding App Control events](/windows/security/application-security/application-control/app-control-for-business/operations/event-id-explanations) and [Understanding App Control event tags](/windows/security/application-security/application-control/app-control-for-business/operations/event-tag-explanations).
 
-As a component of Windows Server 2025, the deployment of App Control policies provides easier access to audit mode and enforcement mode through PowerShell. By default, there aren't policies set in audit mode in Windows Server 2025. Instead, businesses can utilize the OSConfig tool to add these policies. OSConfig includes base policies (unsigned) that can be customized with supplemental policies to meet specific business needs. To learn more about this security enhancement, see [Application Control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol).
+Because App Control is a component of Windows Server 2025, deployment of its policies provides easier access to audit mode and enforcement mode through PowerShell. By default, audit-mode App Control policies aren't set in Window Server 2025. Instead, organizations can use businesses can use the OSConfig tool to add these policies. OSConfig includes base policies (unsigned) that can be customized with supplemental policies to meet specific business needs. To learn more about this security enhancement, see [Application Control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol).
 
 > [!NOTE]
-> The Azure Monitor workbook was created to simplify the process of reviewing audit or block events that are emitted by the Operating System when App Control is activated. This workbook provides insights on file audit and block activity, as well as the following:
+> An Azure Monitor workbook simplifies the process of reviewing audit or block events that the operating system emits when App Control is activated. This workbook provides insights on file audit and block activity, along with:
 >
-> - Collecting and sending Windows Event logs for App Control for Business to your Log Analytics workspace.
-> - Identifing file and policy event activities using various dashboards, charts, filters, and export capabilities. These features help you analyze and troubleshoot the effects and the status of your App Control policies.
-> - Refine your App Control policies by exporting the workbook data and ingesting it into the WDAC Policy Wizard.
+> - Collecting and sending Windows event logs for App Control for Business to your Log Analytics workspace.
+> - Identifying file and policy event activities by using various dashboards, charts, filters, and export capabilities. These features help you analyze and troubleshoot the effects and the status of your App Control policies.
+> - Refining your App Control policies by exporting the workbook data and ingesting it in the WDAC Wizard.
 >
-> To begin using the Azure Monitor workbook for Application Control for Business (Preview), see [How to get insights into App Control for Business (WDAC) events](https://github.com/microsoft/AzureMonitorCommunity/tree/master/Scenarios/How%20to%20get%20insights%20into%20App%20Control%20(WDAC)%20events#how-to-get-insights-into-app-control-for-business-wdac-events).
+> To begin using the Azure Monitor workbook for App Control for Business, see [How to get insights into App Control for Business (WDAC) events](https://github.com/microsoft/AzureMonitorCommunity/tree/master/Scenarios/How%20to%20get%20insights%20into%20App%20Control%20(WDAC)%20events#how-to-get-insights-into-app-control-for-business-wdac-events).
 
 ## Prerequisites
 
-- You must be running a production-signed Windows Server 2025 build on your device.
-- The OSConfig PowerShell module must be installed on your server device. See [Install the OSConfig PowerShell module](osconfig-how-to-configure-security-baselines.md#install-the-osconfig-powershell-module) for details.
-- You must be running Windows 10 version 1909 or later on your client device, and have the [WDAC Policy Wizard](https://webapp-wdac-wizard.azurewebsites.net/) installed.
+- You must be running a production-signed Windows Server 2025 build on your device. This requirement ensures compliance with the App Control for Business policies.
 
-> [!CAUTION]
-> To ensure compliance with the App Control for Business policies, we require a production-signed build of Windows Server 2025 as flight-signed binaries are not permitted. Failure to comply with this requirement results in the inability to boot your device.
+  > [!CAUTION]
+  > Flight-signed binaries are not permitted. Failure to comply with this requirement results in the inability to start your device.
+- The OSConfig PowerShell module must be installed on your server device. See [Install the OSConfig PowerShell module](osconfig-how-to-configure-security-baselines.md#install-the-osconfig-powershell-module) for details.
+- You must be running Windows 10 version 1909 or later on your client device, and have the [WDAC Wizard](https://webapp-wdac-wizard.azurewebsites.net/) installed.
 
 > [!NOTE]
-> If the client device doesn't have **.NET Desktop Runtime 8.0** or later installed, the WDAC Policy Wizard will prompt to download and install this application.
+> If the client device doesn't have .NET Desktop Runtime 8.0 or later installed, the WDAC Wizard will prompt you to download and install this application.
 
-### Manage default policies
+## Manage default policies
 
 # [Configure](#tab/configure)
 
@@ -62,20 +62,20 @@ Set-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\AppBlockList\Enforc
 
 # [Verify](#tab/verify)
 
-To verify that the App Control policy was applied, run the following command and hit <kbd>Enter</kbd> twice:
+To verify that the App Control policy was applied, run the following command and select the <kbd>Enter</kbd> key twice:
 
 ```powershell
 citool -lp | findstr /I "WS2025"
 ```
 
-If policies were configured in audit mode, users should expect the following output:
+If you configured policies in audit mode, you should expect the following output:
 
 ```output
 Friendly Name: BlockUMCI_Microsoft_WS2025_Audit
 Friendly Name: AllowMicrosoft_WS2025_Audit
 ```
 
-If policies were configured in enforcement mode, users should expect the following output:
+If you configured policies in enforcement mode, you should expect the following output:
 
 ```output
 Friendly Name: BlockUMCI_Microsoft_WS2025_Enforce
@@ -98,68 +98,70 @@ Remove-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\DefaultPolicy\En
 Remove-OSConfigDesiredConfiguration -Scenario AppControl\WS2025\AppBlockList\Enforce
 ```
 
-After a policy is removed, there should be no output after running `citool -lp | findstr /I "WS2025"` for verification.
+After you remove a policy, there should be no output when you run `citool -lp | findstr /I "WS2025"` for verification.
 
 > [!CAUTION]
-> Removing App Control policies manually or through citool.exe causes the drift control protection of OSConfig to reestablish the policies after a refresh period of 4 hours by default. Therefore, we recommend using OSConfig to remove any App Control policies that were set by OSConfig.
+> Removing App Control policies manually or through `citool.exe` causes the drift control protection of OSConfig to reestablish the policies after a refresh period of four hours by default. We recommend that you use OSConfig to remove any App Control policies that you set by using OSConfig.
 
 ---
 
-### Monitor event logs
+## Monitor event logs
 
-To view captured events after applying the App Control policy, first choose any third-party application you want to run on your device. If the App Control policy is set in auditing mode, check to see if **Event ID 3076** was emitted for any third-party applications. If the policy was set in enforcement mode, check if **Event ID 3077** was emitted. The system detects attempts by the third-party application to access restricted content and takes measures to block access. To view and export these event logs, follow these steps:
+To view captured events after you apply the App Control policy, choose any third-party application that you want to run on your device. If you set the App Control policy in audit mode, check if the operating system emitted event ID **3076** for any third-party applications. If you set the policy in enforcement mode, check if the operating system emitted event ID **3077**.
+
+The system detects attempts by the third-party application to access restricted content and takes measures to block access. To view and export these event logs, follow these steps:
 
 # [View](#tab/view)
 
-1. Right-click on **Start**, select **Event Viewer**.
-1. In the left pane, navigate to **Applications and Service Logs\Microsoft\Windows\CodeIntegrity\Operational**.
-1. In the middle pane, look for event IDs **3076** or **3077** for audit mode and enforcement mode respectively.
+1. Right-click **Start**, and then select **Event Viewer**.
+1. On the left pane, go to **Applications and Service Logs\Microsoft\Windows\CodeIntegrity\Operational**.
+1. On the middle pane, look for event ID **3076** for audit mode or **3077** for enforcement mode.
 
 # [Export](#tab/export)
 
-1. In the left pane, navigate to **Applications and Service Logs\Microsoft\Windows\CodeIntegrity**.
-1. Right-click on the **Operational** log, then select **Filter Current Log**.
-1. In the **Filter Current Log** dialog box, select **Clear**, type **3076** in the **\<All Event IDs>** field, then select **OK**.
-1. Right-click on the **Operational** log again, then select **Save Filtered Log File As**.
-1. In the **Save As** dialog box, provide a name and location of your choice for the `.evtx` file, then select **OK**.
-1. The **Display Information** dialog box prompts you if displaying the event log information in another language is required. Choose the appropriate option based on your needs and select **OK**.
+1. On the left pane, go to **Applications and Service Logs\Microsoft\Windows\CodeIntegrity**.
+1. Right-click the **Operational** log, and then select **Filter Current Log**.
+1. In the **Filter Current Log** dialog, select **Clear**, enter **3076** in the **\<All Event IDs>** box, and then select **OK**.
+1. Right-click the **Operational** log again, and then select **Save Filtered Log File As**.
+1. In the **Save As** dialog, provide a name and location of your choice for the `.evtx` file, and then select **OK**.
+1. The **Display Information** dialog asks if you need the event log information displayed in another language. Choose the appropriate option based on your needs, and then select **OK**.
 
-This instruction set is for exporting event logs if your environment was configured for audit mode. To export logs where enforcement mode was used, in the **\<All Event IDs>** field, filter for event ID **3077** instead.
+This instruction set is for exporting event logs if you configured your environment for audit mode. To export logs where you used enforcement mode, in the **\<All Event IDs>** box, filter for event ID **3077** instead.
 
 ---
 
-### Configure supplemental policies
+## Configure supplemental policies
 
 To create supplemental App Control policies, follow these steps:
 
-1. Copy the `.extv` log file from your server to your client device.
-1. On the client device, open the **WDAC Policy Wizard**.
+1. Copy the `.evtx` log file from your server to your client device.
+1. On the client device, open the **WDAC Wizard**.
 1. On the **Home** screen, select **Policy Editor**.
-1. On the **Policy Editor** screen, select **Convert Event Log to a WDAC Policy**, then under **Parse Event Log evtx Files to Policy**, select **Parse Log File(s)**.
-1. In the **Choose event logs to convert to policy** dialog box, locate your `.evtx` file, select **Open**, select **OK** on the following prompt, then select **Next**.
-1. On the **File Rules** screen, under **Filename**, select the file you want to add to into the policy.
-1. Under **Rule Type**, select **Path**, then select **+ Add Allow**.
-1. Repeat step 7 for all items you want to add into the policy, then select **Next**.
+1. On the **Policy Editor** screen, select **Convert Event Log to a WDAC Policy**. Then, under **Parse Event Log evtx Files to Policy**, select **Parse Log File(s)**.
+1. In the **Choose event logs to convert to policy** dialog, locate your `.evtx` file, and then select **Open**. Select **OK** in the prompt, and then select **Next**.
+1. On the **File Rules** screen, under **Filename**, select the file that you want to add to the policy.
+1. Under **Rule Type**, select **Path**, and then select **+ Add Allow**.
+1. Repeat step 7 for all items that you want to add to the policy, and then select **Next**.
 
 > [!NOTE]
 > By default, supplemental policies are stored in **C:\Users\Username\Documents** in XML format.
 
-Once the supplemental policy is generated, copy the XML file to your server and run the following script:
+After the supplemental policy is generated, copy the XML file to your server and run the following script:
 
 ```powershell
 $policyPath = "<Path to the XML policy file>" 
 
-# Reset GUID (Best practice)  
+# Reset GUID (best practice)  
 
 Set-CIPolicyIdInfo -FilePath $policyPath -ResetPolicyID 
 
-# Set Policy Version (VersionEx in the XML file)  
+# Set policy version (VersionEx in the XML file)  
 
 $policyVersion = "1.0.0.1" 
 
 Set-CIPolicyVersion -FilePath $policyPath -Version $policyVersion 
 
-# Set Policy Info (PolicyName and PolicyID in the XML file)  
+# Set policy info (PolicyName and PolicyID in the XML file)  
 
 Set-CIPolicyIdInfo -FilePath $policyPath -PolicyID "<App name>-Policy_$policyVersion" -PolicyName "<App name>-Policy" # E.g. Set-CIPolicyIdInfo -FilePath $policyPath -PolicyID "Chrome-Policy_$policyVersion" -PolicyName "Chrome-Policy" 
 
@@ -172,11 +174,11 @@ Set-CIPolicyIdInfo -FilePath $policyPath -SupplementsBasePolicyID $base
 Set-OSConfigDesiredConfiguration -Scenario AppControl -Name Policies -Value $policyPath
 ```
 
-To verify that the supplemental policies were applied, monitor event IDs **3076** and **3077** as described in [Monitor event logs](#monitor-event-logs) and verify that no new events were generated.
+To verify that the supplemental policies were applied, monitor event IDs **3076** and **3077** as described earlier in [Monitor event logs](#monitor-event-logs). Verify that the operating system didn't generate any new events.
 
-### Query policies
+## Query policies
 
-To view what policies are currently in effect in your environment, run the following command:
+To view the policies that are currently in effect in your environment, run the following command:
 
 ```powershell
 (Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PolicyInfo | Where-Object { $_.IsEffective -eq $true }
@@ -190,10 +192,7 @@ To view policies that are currently inactive in your environment, run the follow
 
 Output for these queries varies based on your policy configuration needs.
 
-## See also
+## Related content
 
 - [CiTool technical reference](/windows/security/application-security/application-control/app-control-for-business/operations/citool-commands)
-
 - [ConfigCI PowerShell reference](/powershell/module/configci)
-
-- [Provide App Control feedback](mailto:heseccon@microsoft.com)
