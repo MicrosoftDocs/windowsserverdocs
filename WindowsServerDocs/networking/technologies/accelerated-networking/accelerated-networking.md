@@ -12,7 +12,7 @@ ms.date: 11/01/2024
 > Accelerated Networking is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Accelerated Networking enables single root input-output (IO) virtualization (SR-IOV) on supported virtual machine (VM) types, greatly improving networking performance. Accelerated Networking lets network traffic bypass the software switch layer of Hyper-V virtualization stacks. Because Accelerated Networking assigns the virtual function (VF) to a child partition, the network traffic flows directly between the VF and child partition. As a result, the IO overhead in the software emulation layer shrinks until network performance becomes almost the same as physical, on-premises environments.
+Accelerated Networking enables single root input-output (I/O) virtualization (SR-IOV) on supported virtual machine (VM) types, greatly improving networking performance. Accelerated Networking lets network traffic bypass the software switch layer of Hyper-V virtualization stacks. Because Accelerated Networking assigns the virtual function (VF) to a child partition, the network traffic flows directly between the VF and child partition. As a result, the I/O overhead in the software emulation layer shrinks until network performance becomes almost the same as physical, on-premises environments.
 
 The following diagram illustrates how two VMs communicate with and without Accelerated Networking.
 
@@ -261,7 +261,7 @@ To resolve this issue, make sure you're using a valid PayGo subscription license
 
 ### vm_not_enough_vcpus
 
-VM {0} does not have enough vCPUs to enable Accelerated Networking with the specified performance. 
+VM {0} does not have enough vCPUs to enable Accelerated Networking with the specified performance.
 
 There is no known way to resolve this issue at this time.
 
