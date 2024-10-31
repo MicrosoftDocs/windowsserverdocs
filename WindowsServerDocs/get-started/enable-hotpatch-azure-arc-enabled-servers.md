@@ -2,7 +2,6 @@
 title: Enable Hotpatch for Azure Arc-enabled servers (preview)
 description: Learn how to enable Hotpatch for Windows Server 2025 deployments on Azure Arc-enabled servers.
 author: Heidilohr
-ms.author: helohr
 ms.topic: how-to
 ms.date: 11/01/2024
 ---
