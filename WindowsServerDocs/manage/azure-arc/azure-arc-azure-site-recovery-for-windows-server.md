@@ -13,19 +13,19 @@ The Azure Site Recovery configuration tool is designed to manage and coordinate 
 
 With this feature, you don't need to manually install the Azure Site Recovery agent or link it to the Recovery Service Vault, Hyper-V site, or replication policy as this tool takes care of these tasks.
 
-This experience doesn't include an Azure storage account by default. You're required to either create a new Azure storage account or use an existing one under your Azure subscription. All of which will incur an additional cost.
+By default, an Azure storage account isn't included in this experience. To proceed, you must either create a new Azure storage account or use an existing one from your Azure subscription. Both options result in additional costs.
 
 > [!NOTE]
 >
-> - The disaster recovery tool handles security by running all checks locally on your server. The results are only uploaded to your designated Azure storage account, ensuring that everything happens within the context of your account.
+> - The Azure Site Recovery configuration tool handles security by running all checks locally on your server. The results are only uploaded to your designated Azure storage account, ensuring that everything happens within the context of your account.
 >
-> - The disaster recovery tool has to be installed on every server you desire to run it on.
+> - The Azure Site Recovery configuration tool has to be installed on every server you desire to run it on.
 
 ## Prerequisites
 
 - Your device must be running an Arc-enabled on-premises Windows Server 2016 or later operating system with a minimum of 4 GB of memory.
 - Azure Arc must be installed and configured on your device.
-- You must use Windows Server Pay-as-you-go or Software Assurance license types, follow this documentation to do so [LINK TO LICENSE DOC]. 
+- You must use Windows Server Pay-as-you-go or Software Assurance license types. To learn more, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
 - The Windows Server **Hyper-V** role must be installed. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
   *Alternatively*, users can run the following command in an elevated PowerShell window:
@@ -36,7 +36,7 @@ This experience doesn't include an Azure storage account by default. You're requ
 
 ### Configure Azure Site Recovery
 
-To configure Azure Site Recovery (ASR), the ASR agent needs to be installed on your device. To prepare the infrastructure, creating or using a vault, a Hyper-V site, and a replication policy is required. Once these items are in place, the ASR agent is installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
+To configure Azure Site Recovery, the Azure Site Recovery agent needs to be installed on your device. To prepare the infrastructure, creating or using a vault, a Hyper-V site, and a replication policy is required. Once these items are in place, the Azure Site Recovery agent is installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
 
 1. Navigate to the [Azure portal](https://portal.azure.com/), then select your Windows server Arc-enabled device.
   

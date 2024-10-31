@@ -1,17 +1,17 @@
 ---
-title: How to configure best practices assessment for Arc-enabled Windows servers (preview)
-description: Learn how to deploy the best practices assessment tool to  evaluate your servers by identifying and providing guidance on areas for improvement for Arc-enabled Windows Servers and Azure VMs.
+title: How to configure best practices assessment for Arc-enabled Windows servers
+description: Learn how to deploy the best Practices Assessment tool to evaluate your servers by identifying and providing guidance on areas for improvement for Arc-enabled Windows servers and Azure VMs.
 ms.topic: how-to
 ms.author: alalve
 author: trungtran
-ms.date: 10/30/2024
+ms.date: 10/31/2024
 ---
 
 # Configure Best Practices Assessment for Arc-enabled Windows servers
 
-The Best Practices Assessment (preview) tool continually scans your Windows Server to evaluate its configurations against Windows best practices. These assessments can be scheduled to run automatically or initiated manually as needed. The assessment evaluates several aspects of the Server environment, including server baselines, server security, Hyper-V, failover clusters, and Internet Information Services (IIS). It also collects and analyzes server data to generate a list of issues that require remediation guidance and best practices for improving the performance of your server infrastructure, including deploying applications, software updates, and operating systems.
+The Best Practices Assessment tool continually scans your Windows Server to evaluate its configurations against Windows best practices. These assessments can be scheduled to run automatically or initiated manually as needed. The assessment evaluates several aspects of the Server environment, including server baselines, server security, Hyper-V, failover clusters, and Internet Information Services (IIS). It also collects and analyzes server data to generate a list of issues that require remediation guidance and best practices for improving the performance of your server infrastructure, including deploying applications, software updates, and operating systems.
 
-The Best Practices Assessment (preview) tool installs the following three extensions on your device:
+The Best Practices Assessment tool installs the following three extensions on your device:
 
 1. **Assessment Platform** - Deploys the Best Practices Assessment platform onto your machine. This extension serves as the platform for future development as new best practices assessment scenarios are introduced.
 
@@ -20,8 +20,6 @@ The Best Practices Assessment (preview) tool installs the following three extens
 1. **Azure Monitor Agent (AMA)** - Collects and uploads the log file to your log analytics workspace in the cloud, providing you with all the information in the Azure portal. Workbooks are used to visualize the results and provide you with an easier reading experience.
 
 > [!NOTE]
->
-> - Currently, there's no cost associated with using disaster recovery while in preview.
 >
 > - Best Practices Assessment tool handles security by running all checks locally on your server. The results are only uploaded to your designated Azure storage account, ensuring that everything happens within the context of your account.
 >
@@ -33,12 +31,13 @@ The Best Practices Assessment (preview) tool installs the following three extens
 
 - Your device must be running an Arc-enabled on-premises Windows Server 2016 or later operating system with a minimum of 4 GB of memory.
 - If you’re new to Azure Arc, your device must be onboarded. To learn more, see [Quickstart: Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+- You must use Windows Server Pay-as-you-go or Software Assurance license types. To learn more, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
 
-### Deploy Best Practices Assessment (preview)
+### Deploy Best Practices Assessment
 
-To deploy the Best Practices Assessment tool, perform the following steps:
+To deploy Best Practices Assessment, perform the following steps:
 
-1. Navigate to [aka.ms/bpademo](https://aka.ms/bpademo) to lead you to the landing page of the Azure portal with this feature flag enabled.
+1. Navigate to the [Azure portal](https://portal.azure.com/), then select your Windows server Arc-enabled device.
   
    > [!NOTE]
    > During the public preview phase, be aware that this functionality can only be accessed in the public cloud.
