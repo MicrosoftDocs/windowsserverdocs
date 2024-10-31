@@ -4,7 +4,7 @@ description: Configure Windows Server Pay-as-you-go to license your devices with
 ms.topic: how-to
 author: artemp
 ms.author: alalve
-ms.date: 10/30/2024
+ms.date: 10/31/2024
 ---
 
 # Configure Windows Server Pay-as-you-go with Azure Arc
@@ -13,7 +13,7 @@ Azure Arc's Pay-as-you-go subscription licensing option is an alternative to the
 
 > [!NOTE]
 >
-> - If you shut down or deprovision your device, without disabling Pay-as-you-go, billing will continue. To avoid unexpected charges, it's recommended to disable Pay-as-you-go using the Azure Portal, PowerShell, API, or remove the device from Azure Arc.
+> - If you shut down or deprovision your device, without disabling Pay-as-you-go, billing will continue. To avoid unexpected charges, it's recommended to disable Pay-as-you-go using the Azure portal, PowerShell, API, or remove the device from Azure Arc.
 >
 > - Windows Server Pay-as-you-go is an Azure service and the detailed usage rights are provided in the [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/welcome/welcomepage).
 
@@ -64,7 +64,7 @@ The install process automatically reboots your device as needed. You're prompted
 > [!NOTE]
 > If you select **Use a product key** on the **Choose a licensing method for Windows Server** screen, and continue with the installation wizard, Pay-as-you-go won't be activated even if you had previously opted in during the OS installation.
 >
-> If you decide to opt out of using Pay-as-you-go, you will need to manually enter a product key using any supported method. However, if you still wish to use Pay-as-you-go, even though it has not been enabled through the Azure Arc configuration wizard, you can activate it through the Azure Portal.
+> If you decide to opt out of using Pay-as-you-go, you will need to manually enter a product key using any supported method. However, if you still wish to use Pay-as-you-go, even though it has not been enabled through the Azure Arc configuration wizard, you can activate it through the Azure portal.
 
 # [CLI](#tab/cli)
 
@@ -79,13 +79,13 @@ As the Azure Arc installation wizard isn't supported with this set up, an altern
 
 ### Manage Windows Server Pay-as-you-go
 
-Managing Pay-as-you-go for Windows Server is possible using the Azure Portal, PowerShell, or API. Even if you didn't choose to enable Pay-as-you-go during the initial installation of the OS is also an option, as long as the necessary prerequisites are met.
+Managing Pay-as-you-go for Windows Server is possible using the Azure portal, PowerShell, or API. Even if you didn't choose to enable Pay-as-you-go during the initial installation of the OS is also an option, as long as the necessary prerequisites are met.
 
 To enable Windows Server Pay-as-you-go, follow these steps:
 
-# [Azure Portal](#tab/azureportal)
+# [Azure portal](#tab/azureportal)
 
-1. Navigate to your [Azure Portal](https://portal.azure.com), then search for and select **Machines - Azure Arc**.
+1. Navigate to your [Azure portal](https://portal.azure.com), then search for and select **Machines - Azure Arc**.
 1. Select the machine you want to enable Windows Server Pay-as-you-go.
 1. Select the **Pay-as-you-go** tile.
 1. Check the box next to **Pay-as-you-go with Azure**, and then select **Confirm**.
@@ -121,9 +121,9 @@ To enable Windows Server Pay-as-you-go, follow these steps:
 
 To disable Windows Server Pay-as-you-go, follow these steps:
 
-# [Azure Portal](#tab/azureportal)
+# [Azure portal](#tab/azureportal)
 
-1. Navigate to your [Azure Portal](https://portal.azure.com), then search for and select **Machines - Azure Arc**.
+1. Navigate to your [Azure portal](https://portal.azure.com), then search for and select **Machines - Azure Arc**.
 1. Select the machine you want to disable Windows Server Pay-as-you-go.
 1. Select the **Pay-as-you-go** tile.
 1. Uncheck the box next to **Pay-as-you-go with Azure**, and then select **Confirm**.
