@@ -1,34 +1,31 @@
 ---
-title: How to configure disaster recovery for Arc-enabled Windows servers (preview)
-description: Learn how to deploy the disaster recovery tool to manage and orchestrate replication, failover, and failback for both on-premises Arc-enabled Windows Servers and Azure VMs.
+title: How to configure Azure Site Recovery for Arc-enabled Windows servers
+description: Learn how to deploy Azure Site Recovery to manage and orchestrate replication, failover, and failback for both on-premises Arc-enabled Windows servers and Azure VMs.
 ms.topic: how-to
 ms.author: alalve
 author: trungtran
-ms.date: 10/30/2024
+ms.date: 10/31/2024
 ---
 
-# Configure disaster recovery for Arc-enabled Windows servers
+# Configure Azure Site Recovery for Arc-enabled Windows servers
 
-The disaster recovery tool is designed to manage and coordinate the replication, failover, and failback processes for on-premises and Azure virtual machines (VM) running on Arc-enabled Windows Server operating system (OS). During this public preview, the tool is only compatible with Hyper-V enabled machines, ensuring that your on-premises workloads remain operational during outages by replicating them to Azure as a secondary location.
+The Azure Site Recovery configuration tool is designed to manage and coordinate the replication, failover, and failback processes for on-premises and Azure virtual machines (VM) running on Arc-enabled Windows Server operating system (OS). During this public preview, the tool is only compatible with Hyper-V enabled machines, ensuring that your on-premises workloads remain operational during outages by replicating them to Azure as a secondary location.
 
 With this feature, you don't need to manually install the Azure Site Recovery agent or link it to the Recovery Service Vault, Hyper-V site, or replication policy as this tool takes care of these tasks.
 
-This experience doesn't include an Azure storage account by default. You're required to either create a new Azure storage account or use an existing one under your Azure subscription.
+This experience doesn't include an Azure storage account by default. You're required to either create a new Azure storage account or use an existing one under your Azure subscription. All of which will incur an additional cost.
 
 > [!NOTE]
->
-> - Currently, there's no cost associated with using disaster recovery while in preview.
 >
 > - The disaster recovery tool handles security by running all checks locally on your server. The results are only uploaded to your designated Azure storage account, ensuring that everything happens within the context of your account.
 >
 > - The disaster recovery tool has to be installed on every server you desire to run it on.
->
-> - Installing the Azure Site Recovery agent extension on an Arc server via PowerShell isn't currently supported.
 
 ## Prerequisites
 
 - Your device must be running an Arc-enabled on-premises Windows Server 2016 or later operating system with a minimum of 4 GB of memory.
 - Azure Arc must be installed and configured on your device.
+- You must use Windows Server Pay-as-you-go or Software Assurance license types, follow this documentation to do so [LINK TO LICENSE DOC]. 
 - The Windows Server **Hyper-V** role must be installed. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
   *Alternatively*, users can run the following command in an elevated PowerShell window:
@@ -37,24 +34,24 @@ This experience doesn't include an Azure storage account by default. You're requ
   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
   ```
 
-### Deploy disaster recovery (preview)
+### Configure Azure Site Recovery
 
-To deploy disaster recovery, the Azure Site Recovery agent needs to be installed on your device. To prepare the infrastructure, creating or using a vault, a Hyper-V site, and a replication policy is required. Once these items are in place, the Azure Site Recovery agent is installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
+To configure Azure Site Recovery (ASR), the ASR agent needs to be installed on your device. To prepare the infrastructure, creating or using a vault, a Hyper-V site, and a replication policy is required. Once these items are in place, the ASR agent is installed and associates the replication policy with the cluster node. To set disaster recovery in your environment, perform the following steps:
 
-1. Navigate to [aka.ms/drpreview](https://aka.ms/drpreview) as this takes you to the landing page of the Azure portal with this feature flag enabled.
+1. Navigate to the [Azure portal](https://portal.azure.com/), then select your Windows server Arc-enabled device.
   
    > [!NOTE]
    > During the public preview phase, be aware that this functionality can only be accessed in the public cloud.
 
 1. Navigate to a Windows Server 2016 or later Arc-enabled Windows Server resource. This VM should be the Hyper-V host.
-1. In the left pane, navigate to **Windows management**, then select **Disaster recovery (preview)**.
+1. In the left pane, navigate to **Windows management**, then select **Azure Site Recovery configuration (preview)**.
 
-   ![The Azure portal with the Disaster recovery tool selected under the Windows management node](../media/azure-arc/azure-arc-disaster-recovery-tool.png)
+   ![The Azure portal with the Azure Site Recovery configuration tool selected under the Windows management node.](../media/azure-arc/azure-arc-disaster-recovery-tool.png)
 
 1. Select **Protect VM workloads** to access the **Replicate VMs to Azure** page.
 1. Under **Step 1: Prepare infrastructure**, select **Prepare infrastructure**.
 
-   ![The disaster recovery tool where the option "prepare infrastructure" was selected on the replicate virtual machines to azure screen.](../media/azure-arc/azure-arc-disaster-recovery-tool-replicate-vms-to-azure.png)
+   ![The Azure Site Recovery configuration tool where the option "prepare infrastructure" was selected on the replicate virtual machines to azure screen.](../media/azure-arc/azure-arc-disaster-recovery-tool-replicate-vms-to-azure.png)
 
 1. On the **Prepare infrastructure** page, the following needs to created unless they already exist:
    1. A vault for the infrastructure.
@@ -63,7 +60,7 @@ To deploy disaster recovery, the Azure Site Recovery agent needs to be installed
 
    If they already exist, select **Prepare infrastructure**. If they don't exist, create each one and select **Review + create**. Once all three are generated, select **Prepare infrastructure**.
 
-   ![The disaster recovery tool preparing the infrastructure and installing the Azure Site Recovery extension.](../media/azure-arc/azure-arc-disaster-recovery-tool-prepare-infrastructure.png)
+   ![The Azure Site Recovery configuration tool preparing the infrastructure and installing the Azure Site Recovery extension.](../media/azure-arc/azure-arc-disaster-recovery-tool-prepare-infrastructure.png)
 
 1. Once infrastructure preparations are complete, and the Azure Site Recovery extension is successfully installed on the node, the **Status: Infrastructure prepared successfully** pop-up notification is displayed.
 1. Lastly, select **Enable replication**.
@@ -73,13 +70,13 @@ To deploy disaster recovery, the Azure Site Recovery agent needs to be installed
 
 ## Known issues
 
-As disaster recovery is in preview, users might experience technical issues during the deployment process. To mitigate certain issue's, perform the following actions:
+As the Azure Site Recovery configuration tool is in preview, users might experience technical issues during the deployment process. To mitigate certain issue's, perform the following actions:
 
 - **Issue**: You encounter the error:
 
   ![A transient error is displayed when installing the Azure Site Recovery agent extension in the Azure portal](../media/azure-arc/azure-arc-disaster-recovery-tool-asr-error.png)
 
-- **Solution**: No action needed as this error is transient. Navigate to **Windows management > Disaster recovery (preview) > Protect VM workloads** and check the status of your infrastructure under **Step 1: Prepare infrastructure**.
+- **Solution**: No action needed as this error is transient. Navigate to **Windows management > Azure Site Recovery configuration (preview) > Protect VM workloads** and check the status of your infrastructure under **Step 1: Prepare infrastructure**.
 
 - **Issue**: You encounter the following PowerShell error:
 
