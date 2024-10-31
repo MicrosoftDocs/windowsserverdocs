@@ -33,7 +33,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 - You have Windows Server machine connected to Azure Arc. To learn more about onboarding your machine to Azure Arc, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json).
 
-- The VM you intend to enable Hotpatch on must be a Generation 2 VM running [the Windows Server 2025 ISO](https://www.microsoft.com/evalcenter/download-windows-server-2025?msockid=110e69cfccac69d1320d7d42cd16685d).
+- The virtual machine (VM) you intend to enable Hotpatch on must be a Generation 2 VM running [the Windows Server 2025 ISO](https://www.microsoft.com/evalcenter/download-windows-server-2025?msockid=110e69cfccac69d1320d7d42cd16685d).
 
 ## Install Hotpatch preview version for Windows Server 2025
 
