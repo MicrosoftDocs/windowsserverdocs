@@ -4,7 +4,7 @@ description: Learn how to enable Hotpatch for Windows Server 2025 deployments on
 author: Heidilohr
 ms.author: helohr
 ms.topic: how-to
-ms.date: 10/25/2024
+ms.date: 11/01/2024
 ---
 
 # Enable Hotpatch for Azure Arc-enabled servers (preview)
@@ -16,9 +16,6 @@ ms.date: 10/25/2024
 Hotpatch allows you to update your Windows Server deployment without requiring your users to restart their virtual machines (VMs) after installation. This feature minimizes downtime spent on updates and keeps your users running their VM sessions uninterrupted. For more information about how Hotpatch works, see [Hotpatch for virtual machines](hotpatch.md).
 
 Windows Server 2025 (preview) features the ability to enable Hotpatch for Azure Arc-enabled servers. In order to use Hotpatch on Azure Arc-enabled servers, all you have to do is deploy the Connected Machine agent and enable Windows Server Hotpatch. This article describes how to enable Hotpatching.
-
->[!IMPORTANT]
->Azure Arc-enabled Hotpatching is in public preview, but will be a billed as an Azure service at GA. For more information, see the pricing page. <!--Get pricing information once page URLs are available.--->
 
 ## Prerequisites
 
@@ -60,11 +57,11 @@ To install the preview version of the Hotpatch for Windows Server 2025 Standard 
 
 1. Wait about 10 minutes for the changes to apply. If the update stays stuck on the Pending status, run the following cmdlet in PowerShell:
 
-  ```powershell
-  [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072;
-  Invoke-WebRequest -UseBasicParsing -Uri "https://aka.ms/azcmagent-windows" -TimeoutSec 30 -OutFile "$env:TEMP\install_windows_azcmagent.ps1";
-  & "$env:TEMP\install_windows_azcmagent.ps1";
-  ```
+   ```powershell
+   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072;
+   Invoke-WebRequest -UseBasicParsing -Uri "https://aka.ms/azcmagent-windows" -TimeoutSec 30 -OutFile "$env:TEMP\install_windows_azcmagent.ps1";
+   & "$env:TEMP\install_windows_azcmagent.ps1";
+   ```
 
 1. You should now be prompted to install a Hotpatch update when a Hotpatch is available from Windows Update.
 
