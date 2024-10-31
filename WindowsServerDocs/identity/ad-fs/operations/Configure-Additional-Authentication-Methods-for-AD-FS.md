@@ -40,7 +40,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |Green Rocket Security|GreenRADIUS MFA Adapter for AD FS|[GreenRADIUS MFA for AD FS](https://www.greenrocketsecurity.com/2fa-for-adfs/)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Microsoft Corp.|Microsoft Azure MFA|[Configure Azure MFA as authentication provider with AD FS](configure-ad-fs-and-azure-mfa.md)|
-Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://www.mideye.com/support/administrators/documentation/integration/microsoft-adfs/)|
+Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://docs.mideye.com/6.4/integrations/microsoft-adfs/)|
 |Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (AD FS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |One Identity| Defender AD FS|[Defender AD FS Adapter](https://www.oneidentity.com/products/defender/)|
 |Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://documentation.pingidentity.com/pingid/pingidAdminGuide/index.shtml#pid_c_PingIDforADFSSSO.html)|
