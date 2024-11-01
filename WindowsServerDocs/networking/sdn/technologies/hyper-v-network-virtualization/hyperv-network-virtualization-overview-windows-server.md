@@ -10,7 +10,7 @@ ms.date: 10/27/2021
 ---
 # Hyper-V Network Virtualization Overview in Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 In Windows Server and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:
 

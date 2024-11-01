@@ -9,7 +9,7 @@ ms.date: 7/3/2024
 ---
 # Privacy settings for managed apps and desktops
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
+>
 
 When accessing managed resources (apps or desktops) provided by your IT administrator, the privacy settings for the remote system have been preconfigured by your IT administrator. These settings may be different than the privacy settings on your local system. If you have questions, contact your IT administrator.
 

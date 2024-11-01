@@ -10,7 +10,7 @@ manager: scottman
 ---
 # Upgrade Remote Desktop Services deployments
 
-> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server 2016
+> 
 
 In this article, learn about which Remote Desktop Services (RDS) versions can be upgraded and the order to upgrade your Remote Desktop (RD) role services.
 

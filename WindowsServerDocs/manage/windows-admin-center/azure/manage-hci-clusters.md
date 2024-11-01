@@ -8,7 +8,7 @@ ms.date: 05/06/2022
 ---
 # Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2
+> 
 
 > [!IMPORTANT]
 > Windows Admin Center in the Azure portal is currently in preview.

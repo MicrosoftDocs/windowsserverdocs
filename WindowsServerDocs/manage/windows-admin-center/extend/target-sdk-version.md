@@ -9,7 +9,7 @@ ms.date: 09/18/2018
 
 # Target a different version of the Windows Admin Center SDK
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 Keeping your extension up to date with SDK changes and platform changes is easy.  We use [NuGet Package Manager tags](https://www.npmjs.com/package/@microsoft/windows-admin-center-sdk?activeTab=versions) to organize the release of new features into SDK versions.
 

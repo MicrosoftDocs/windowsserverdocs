@@ -9,7 +9,7 @@ ms.date: 05/09/2023
 
 # Security identifiers
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 This article describes how security identifiers (SIDs) work with accounts and groups in the Windows Server operating system.
 

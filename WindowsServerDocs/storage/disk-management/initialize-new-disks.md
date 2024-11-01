@@ -10,7 +10,7 @@ ms.author: roharwoo
 
 # Initialize new disks
 
-> **Applies to:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 If you add a brand new disk to your PC, and it doesn't show up in File Explorer, you might need to [assign a drive letter](change-a-drive-letter.md) for the disk. You might also need to initialize the disk before you use it.
 

@@ -8,7 +8,7 @@ ms.date: 09/26/2024
 ---
 # Raise domain and forest functional levels in Active Directory Domain Services
 
->Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.

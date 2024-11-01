@@ -10,7 +10,7 @@ ms.date: 08/28/2024
 
 # Set up Hyper-V Replica
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016; Azure Stack HCI, version 23H2 (only for Hyper-V virtual machines) and Azure Stack HCI, version 22H2
+> 
 
 Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your disaster recovery strategy by replicating virtual machines from one Hyper-V host server to another to keep your workloads available. Hyper-V Replica creates a copy of a live virtual machine to a replica offline virtual machine. Note the following:
 

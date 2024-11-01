@@ -9,7 +9,7 @@ ms.topic: article
 
 # Active Directory Forest Recovery - Perform an authoritative synchronization of DFSR-replicated SYSVOL
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 There are different ways to perform an authoritative restore of SYSVOL. You can
 either edit the **msDFSR-Options** attribute or perform a system state restore

@@ -10,7 +10,7 @@ ms.date: 10/02/2023
 
 # Netsh command syntax, contexts, and formatting
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 You can use this article to learn how to enter netsh contexts and subcontexts, understand netsh syntax and command formatting, and how to run netsh commands on local and remote computers.
 

@@ -9,7 +9,7 @@ ms.date: 07/24/2023
 ---
 # Storage Spaces Direct hardware requirements
 
->Applies to: Azure Stack Hub, Azure Stack HCI version 21H2, Azure Stack HCI version 20H2, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This article describes minimum hardware requirements for Storage Spaces Direct. For hardware requirements on Azure Stack HCI, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Stack HCI: Determine hardware requirements](/azure-stack/hci/deploy/before-you-start#determine-hardware-requirements).
 

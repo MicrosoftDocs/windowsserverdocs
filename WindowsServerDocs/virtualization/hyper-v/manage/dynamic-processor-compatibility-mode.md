@@ -12,7 +12,7 @@ zone_pivot_groups: windows-os
 # Dynamic processor compatibility mode
 
 :::zone pivot="windows-server"
-> Applies to: Windows Server 2025
+> 
 
 ::: zone-end
 

@@ -12,7 +12,7 @@ ms.custom: inhenkel
 
 # Autonomy vs. Isolation
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 You can design your Active Directory logical structure to achieve either of the following:
 
