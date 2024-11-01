@@ -10,7 +10,7 @@ ms.date: 04/01/2023
 
 # RPC context handles for HCN
 
-Applies to: Windows Server 2022, Windows Server 2019
+
 
 ## HCN_Network
 

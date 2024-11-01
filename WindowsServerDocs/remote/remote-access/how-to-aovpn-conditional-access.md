@@ -9,7 +9,7 @@ author: robinharwood
 
 # Conditional access for VPN connectivity using Microsoft Entra ID
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
+>
 
 In this how-to guide, you'll learn how to grant VPN users access your resources using [Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Microsoft Entra Conditional Access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Microsoft Entra connected application.
 

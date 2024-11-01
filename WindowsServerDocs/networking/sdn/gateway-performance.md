@@ -10,7 +10,7 @@ ms.date: 09/18/2023
 
 # SDN gateway performance
 
->Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 22H2 and 21H2
+>
 
 In Windows Server 2016, one of the customer concerns was the inability of SDN gateway to meet the throughput requirements of modern networks. The network throughput of IPsec and GRE tunnels had limitations with the single connection throughput for IPsec connectivity being about 300 Mbps and for GRE connectivity being about 2.5 Gbps.
 

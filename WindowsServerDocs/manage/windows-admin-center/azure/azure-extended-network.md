@@ -9,7 +9,7 @@ ms.date: 12/17/2019
 
 # Extend your on-premises subnets into Azure using extended network for Azure
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 ## Overview
 

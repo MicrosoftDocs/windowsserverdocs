@@ -10,7 +10,7 @@ ms.custom: template-tutorial #Required; leave this attribute/value as-is.
 
 # Tutorial: Enable storage bus cache with Storage Spaces on standalone servers
 
-> Applies to: Windows Server 2022
+> 
 
 The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. This feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. For more information, see [Understanding the storage pool cache](/azure-stack/hci/concepts/cache). By default, only a portion of the faster media tier is reserved for the cache.
 

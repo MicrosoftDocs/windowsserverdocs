@@ -9,7 +9,7 @@ ms.date: 11/29/2016
 ---
 # Hyper-V Technology Overview
 
->Applies to:  Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.

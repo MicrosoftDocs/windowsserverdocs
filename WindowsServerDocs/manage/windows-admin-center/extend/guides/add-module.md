@@ -9,7 +9,7 @@ ms.date: 04/01/2023
 
 # Add a module to a tool extension
 
-Applies to: Windows Admin Center, Windows Admin Center Preview
+
 
 In this article, add an empty module to a tool extension we've created with the Windows Admin Center CLI.
 

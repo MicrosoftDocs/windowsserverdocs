@@ -10,7 +10,7 @@ ms.topic: article
 
 # Windows Time service tools and settings
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 11, Windows 10, Azure Stack HCI versions 21H2 and 20H2
+> 
 
 The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). This article covers the different tools and settings used to manage the Windows Time service.
 

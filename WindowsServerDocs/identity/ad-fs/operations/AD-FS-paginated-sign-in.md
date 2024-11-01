@@ -8,7 +8,7 @@ ms.topic: article
 ---
 # AD FS paginated sign-in
 
-Applies to: Windows Server 2019
+
 
 The user interface for sign-in is updated in Windows Server 2019 to feature a look and feel identical to Microsoft Entra ID. This update provides users with a more consistent sign-in experience that incorporates a centered and paginated user flow.
 

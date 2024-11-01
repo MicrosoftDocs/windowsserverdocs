@@ -10,7 +10,7 @@ author: robinharwood
 
 # Virtual Private Networking (VPN)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
+>
 
 ## RAS Gateway as a Single Tenant VPN Server
 

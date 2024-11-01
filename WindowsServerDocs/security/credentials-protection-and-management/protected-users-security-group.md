@@ -10,7 +10,7 @@ ms.date: 02/12/2024
 ---
 # Protected Users Security Group
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Protected Users is a global security group for Active Directory (AD) designed to protect against credential theft attacks. The group triggers non-configurable protection on devices and host computers to prevent credentials from being cached when group members sign-in.
 

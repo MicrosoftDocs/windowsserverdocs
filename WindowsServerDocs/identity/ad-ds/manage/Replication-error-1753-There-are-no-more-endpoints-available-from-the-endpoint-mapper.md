@@ -11,7 +11,7 @@ ms.custom: inhenkel
 ---
 # Replication error 1753 There are no more endpoints available from the endpoint mapper
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
+>
 
 This article describes symptoms, cause and resolution steps for Active Directory operations that fail with Win32 error 1753: "There are no more endpoints available from the endpoint mapper."
 

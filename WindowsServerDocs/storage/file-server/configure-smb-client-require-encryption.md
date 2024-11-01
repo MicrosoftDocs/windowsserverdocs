@@ -10,7 +10,7 @@ ms.date: 03/01/2024
 
 # Configure the SMB client to require encryption in Windows (preview)
 
->Applies to: Windows Insider builds and Windows Server 2025 (preview)
+>
 
 > [!IMPORTANT]
 > Windows Insider and Windows Server 2025 are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.

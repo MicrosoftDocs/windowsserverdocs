@@ -10,7 +10,7 @@ manager: femila
 
 # License Remote Desktop session hosts
 
->Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use the information in this article to configure licensing for session hosts on your Remote Desktop Services (RDS) deployments. The process is slightly different depending on which roles you assigned to the session host you're licensing.
 

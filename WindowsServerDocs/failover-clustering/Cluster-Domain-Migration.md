@@ -8,7 +8,7 @@ ms.date: 11/02/2023
 ---
 # Failover Cluster domain migration
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 This article provides an overview for moving Windows Server failover clusters from one domain to another.
 
