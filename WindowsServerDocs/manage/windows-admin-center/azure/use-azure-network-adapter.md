@@ -11,7 +11,7 @@ ms.contributors: thmaure-08202021
 
 # Use Azure Network Adapter to connect a server to an Azure Virtual Network
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>
 
 A lot of workloads running on-premises and in multi-cloud environments require
 connections to virtual machines (VMs) running in Microsoft Azure. To connect a

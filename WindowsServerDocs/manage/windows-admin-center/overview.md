@@ -9,7 +9,7 @@ ms.date: 08/22/2024
 
 # Windows Admin Center overview
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 Windows Admin Center is a remote management tool for Windows Server running anywhere&mdash;physical, virtual, on-premises, in Azure, or in a hosted environment&mdash;at no extra cost.
 

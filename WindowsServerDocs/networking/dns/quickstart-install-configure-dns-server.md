@@ -11,7 +11,7 @@ ms.contributors: orthomas
 
 # Quickstart: Install and configure DNS Server on Windows Server
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 This quickstart shows you how to install and configure a DNS Server on Windows Server. You'll
 install the DNS Server role to host DNS zone data, forward DNS queries to DNS root hint name servers, or optionally to an upstream name server.

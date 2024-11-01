@@ -9,7 +9,7 @@ ms.date: 07/24/2024
 
 # Use live migration with workgroup clusters
 
->Applies to: Windows Server 2025
+>
 
 This article describes how to move a virtual machine by doing a live migration between hosts using workgroup clusters. Workgroup clusters are a type of Failover Cluster that doesn't use an on-premises domain controller or Active Directory forest. Instead, workgroup clusters are joined by workgroup. Workgroup clusters were introduced in Windows Server 2016. However, live migration for workgroup clusters wasn't supported until now, in Windows Server 2025. Benefit from the flexibility of live migration combined with the high availability of workgroup clusters.
 

@@ -12,7 +12,7 @@ ms.custom: inhenkel
 
 # Virtualized Domain Controller Troubleshooting
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 This article provides detailed methodology on troubleshooting the virtualized domain controller feature.
 

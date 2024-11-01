@@ -11,7 +11,7 @@ ms.date: 10/27/2021
 
 # Performance Tools for Network Workloads
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 You can use this topic to learn about performance tools.
 

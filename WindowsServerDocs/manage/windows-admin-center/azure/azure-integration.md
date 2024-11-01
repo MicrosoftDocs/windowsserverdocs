@@ -9,7 +9,7 @@ ms.date: 10/18/2021
 
 # Configuring Azure integration
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 Windows Admin Center supports several optional features that integrate with Azure services. [Learn about the Azure integration options available with Windows Admin Center.](./index.md)
 

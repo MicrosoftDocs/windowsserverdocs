@@ -10,7 +10,7 @@ ms.date: 08/16/2024
 
 # LSA Lookup performance counters
 
-Applies to: Windows Server 2025 (preview)
+
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.

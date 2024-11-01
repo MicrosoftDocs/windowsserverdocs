@@ -10,7 +10,7 @@ manager: dongill
 ---
 # Supported configurations for Remote Desktop Services
 
->Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you may have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to a later version of Windows Server to take advantage of the new features. The question then becomes, which RDS components can work with different versions and which need to be the same?
 

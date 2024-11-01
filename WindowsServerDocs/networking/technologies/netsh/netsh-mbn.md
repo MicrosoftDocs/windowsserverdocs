@@ -9,7 +9,7 @@ ms.date: 04/01/2023
 
 # Netsh Mobile Broadband Network commands
 
-Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+
 
 You can use `netsh mbn` to query and configure Mobile Broadband Network (MBN) settings and parameters.
 

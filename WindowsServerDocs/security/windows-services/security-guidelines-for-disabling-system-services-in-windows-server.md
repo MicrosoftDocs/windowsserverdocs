@@ -10,7 +10,7 @@ ms.author: roharwoo
 
 # Guidance on disabling system services on Windows Server 2016 with Desktop Experience
 
->Applies to: Windows Server 2016 only, when used in Desktop Experience installation option
+>
 
 Windows operating systems (OSes) include many important system services. Different services have different default startup policies:
 

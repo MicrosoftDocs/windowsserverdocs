@@ -10,7 +10,7 @@ ms.date: 11/02/2021
 ---
 # Use network virtual appliances on a virtual network
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 In this topic, you learn how to deploy network virtual appliances on tenant virtual networks. You can add network virtual appliances to networks that perform user-defined routing and port mirroring functions.
 

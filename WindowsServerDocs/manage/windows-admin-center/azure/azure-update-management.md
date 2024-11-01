@@ -8,7 +8,7 @@ ms.date: 10/18/2021
 ---
 # Use Windows Admin Center to manage operating system updates with Azure Update Management
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 [Learn more about Azure integration with Windows Admin Center.](./index.md)
 
