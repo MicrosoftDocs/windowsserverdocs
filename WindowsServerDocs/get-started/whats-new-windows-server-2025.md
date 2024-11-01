@@ -284,7 +284,9 @@ Starting with build 26090, another set of SMB protocol changes are introduced fo
 
 ### Software Defined Networking (SDN)
 
-In Windows Server 2025, the Network Controller, which is the control plane for SDN, is now hosted directly as Failover Cluster services on the physical host machines. This eliminates the need to deploy VMs, simplifying deployment and management while conserving resources. SDN also provides the following benefits:
+SDN is an approach to networking that allows network administrators to manage network services through abstraction of lower-level functionality. SDN enables the separation of the network control plane, which is responsible for managing the network, from the data plane, which handles the actual traffic. This separation allows for increased flexibility and programmability in network management. SDN provides the following benefits in Windows Server 2025:
+
+- The Network Controller, which is the control plane for SDN, is now hosted directly as Failover Cluster services on the physical host machines. This eliminates the need to deploy VMs, simplifying deployment and management while conserving resources.
 
 - Tag-based segmentation allows administrators to use custom service tags to associate Network Security Groups (NSGs) and VMs for access control. Instead of specifying IP ranges, administrators can now use simple, self-explanatory labels to tag workload VMs, and apply security policies based on these tags. This simplifies the process of managing network security and eliminates the need to remember and retype IP ranges. To learn more, see [Configure network security groups with tags in Windows Admin Center](/azure-stack/hci/manage/configure-network-security-groups-with-tags?pivots=windows-server).
 
