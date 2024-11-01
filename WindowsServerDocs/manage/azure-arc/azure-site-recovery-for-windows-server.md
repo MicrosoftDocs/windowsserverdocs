@@ -46,21 +46,22 @@ To configure Azure Site Recovery, the Azure Site Recovery agent needs to be inst
 1. Navigate to a Windows Server 2016 or later Arc-enabled Windows Server resource. This VM should be the Hyper-V host.
 1. In the left pane, navigate to **Windows management**, then select **Azure Site Recovery configuration (preview)**.
 
-   ![The Azure portal with the Azure Site Recovery configuration tool selected under the Windows management node.](../media/azure-arc/azure-arc-disaster-recovery-tool.png)
+   [ ![An image of the Azure portal with the Azure Site Recovery configuration tool selected under the Windows management node.](../media/azure-arc/azure-arc-azure-site-recovery-tool.png)](../media/azure-arc/azure-arc-azure-site-recovery-tool.png#lightbox)
 
 1. Select **Protect VM workloads** to access the **Replicate VMs to Azure** page.
 1. Under **Step 1: Prepare infrastructure**, select **Prepare infrastructure**.
 
-   ![The Azure Site Recovery configuration tool where the option "prepare infrastructure" was selected on the replicate virtual machines to azure screen.](../media/azure-arc/azure-arc-disaster-recovery-tool-replicate-vms-to-azure.png)
+   [ ![An image of the Azure Site Recovery configuration tool where the option "prepare infrastructure" was selected on the replicate virtual machines to azure screen.](../media/azure-arc/azure-arc-azure-site-recovery-tool-replicate-vms-to-azure.png)](../media/azure-arc/azure-arc-azure-site-recovery-tool-replicate-vms-to-azure.png#lightbox)
 
 1. On the **Prepare infrastructure** page, the following needs to created unless they already exist:
-   1. A vault for the infrastructure.
-   1. A Hyper-V site.
-   1. A replication policy.
+
+   - A vault for the infrastructure.
+   - A Hyper-V site.
+   - A replication policy.
 
    If they already exist, select **Prepare infrastructure**. If they don't exist, create each one and select **Review + create**. Once all three are generated, select **Prepare infrastructure**.
 
-   ![The Azure Site Recovery configuration tool preparing the infrastructure and installing the Azure Site Recovery extension.](../media/azure-arc/azure-arc-disaster-recovery-tool-prepare-infrastructure.png)
+   [ ![An image of the Azure Site Recovery configuration tool preparing the infrastructure and installing the Azure Site Recovery extension.](../media/azure-arc/azure-arc-azure-site-recovery-tool-prepare-infrastructure.png)](../media/azure-arc/azure-arc-azure-site-recovery-tool-prepare-infrastructure.png#lightbox)
 
 1. Once infrastructure preparations are complete, and the Azure Site Recovery extension is successfully installed on the node, the **Status: Infrastructure prepared successfully** pop-up notification is displayed.
 1. Lastly, select **Enable replication**.
@@ -74,7 +75,7 @@ As the Azure Site Recovery configuration tool is in preview, users might experie
 
 - **Issue**: You encounter the error:
 
-  ![A transient error is displayed when installing the Azure Site Recovery agent extension in the Azure portal](../media/azure-arc/azure-arc-disaster-recovery-tool-asr-error.png)
+  [ ![An image of a transient error displayed when installing the Azure Site Recovery agent extension in the Azure portal.](../media/azure-arc/azure-arc-azure-site-recovery-tool-asr-error.png)](../media/azure-arc/azure-arc-azure-site-recovery-tool-asr-error.png#lightbox)
 
 - **Solution**: No action needed as this error is transient. Navigate to **Windows management > Azure Site Recovery configuration (preview) > Protect VM workloads** and check the status of your infrastructure under **Step 1: Prepare infrastructure**.
 

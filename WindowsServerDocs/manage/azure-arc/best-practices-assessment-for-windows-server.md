@@ -13,17 +13,17 @@ The Best Practices Assessment tool continually scans your Windows Server to eval
 
 The Best Practices Assessment tool installs the following three extensions on your device:
 
-1. **Assessment Platform** - Deploys the Best Practices Assessment platform onto your machine. This extension serves as the platform for future development as new best practices assessment scenarios are introduced.
+- **Assessment Platform** - Deploys the Best Practices Assessment platform onto your machine. This extension serves as the platform for future development as new best practices assessment scenarios are introduced.
 
-1. **Windows Server Assessment** - Contains all the necessary information about the validation checks that need to be run on your device to provide you with the recommendations you see in the Azure portal. Once the assessment is complete, the results are saved to a local log file.
+- **Windows Server Assessment** - Contains all the necessary information about the validation checks that need to be run on your device to provide you with the recommendations you see in the Azure portal. Once the assessment is complete, the results are saved to a local log file.
 
-1. **Azure Monitor Agent (AMA)** - Collects and uploads the log file to your log analytics workspace in the cloud, providing you with all the information in the Azure portal. Workbooks are used to visualize the results and provide you with an easier reading experience.
+- **Azure Monitor Agent (AMA)** - Collects and uploads the log file to your log analytics workspace in the cloud, providing you with all the information in the Azure portal. Workbooks are used to visualize the results and provide you with an easier reading experience.
 
 > [!NOTE]
 >
 > - Best Practices Assessment tool handles security by running all checks locally on your server. The results are only uploaded to your designated Azure storage account, ensuring that everything happens within the context of your account.
 >
-> - The best practices assessment tool has to be installed on every server you desire to run it on.
+> - The Best Practices Assessment tool has to be installed on every server you desire to run it on.
 >
 > - Installing the required extensions on an Arc server via PowerShell isn't currently supported.
 
@@ -45,12 +45,12 @@ To deploy Best Practices Assessment, perform the following steps:
 1. Navigate to a Windows Server 2016 or later Arc-enabled Windows Server resource. This virtual machine (VM) should be the Hyper-V host.
 1. In the left pane, navigate to **Windows management**, then select **Best Practices Assessment (preview)**.
 
-   ![The Azure portal with the Best Practices Assessment tool selected under the Windows management node](../media/azure-arc/azure-arc-best-practices-assessment-tool.png)
+   [ ![An image of the Azure portal with the Best Practices Assessment tool selected under the Windows management node.](../media/azure-arc/azure-arc-best-practices-assessment-tool.png)](../media/azure-arc/azure-arc-best-practices-assessment-tool.png#lightbox)
 
 1. Select **Get Started** to access the **Best practices assessment configuration**.
 1. Provide the **Resource group** and **Log Analytics Workspace** where results of the assessment are saved and then select **Set up**. Reminder that charges apply for the data that is stored in your log analytics workspace.
 
-   ![The Best Practices Assessment tool configuration screen.](../media/azure-arc/azure-arc-best-practices-assessment-configuration.png)
+   [ ![An image of the Best Practices Assessment tool configuration screen.](../media/azure-arc/azure-arc-best-practices-assessment-configuration.png)](../media/azure-arc/azure-arc-best-practices-assessment-configuration.png#lightbox)
 
    > [!NOTE]
    > Installation times vary and might take up to 15 minutes. You can refresh the status by selecting the **Refresh** button on this page.
@@ -59,24 +59,25 @@ To deploy Best Practices Assessment, perform the following steps:
 
 Running the assessment for the first time takes upward to 4 hours for the assessment to run and provide results.
 
-   ![The Best Practices Assessment tool completing an assessment and recommending improvements.](../media/azure-arc/azure-arc-best-practices-assessment-recommendation.png)
+   [ ![An image of the Best Practices Assessment tool completing an assessment and recommending improvements.](../media/azure-arc/azure-arc-best-practices-assessment-recommendation.png)](../media/azure-arc/azure-arc-best-practices-assessment-recommendation.png#lightbox)
 
 Throughout the duration of the public preview, we're providing updates to enhance the experience. To update **Best Practices Assessment (preview)**, follow these steps:
 
 1. Navigate to your resource.
 1. In the left pane, expand **Settings** and select **Extensions**.
 1. Select the **Update** button for any of the three available extensions:
-   1. `AzureMonitorWindowsAgent`
-   1. `assessmentplatform`
-   1. `windowsserverassessment`
 
-   ![The Best Practices Assessment tool extensions node listing the available extensions that can be updated.](../media/azure-arc/azure-arc-best-practices-assessment-update-extensions.png)
+   - `AzureMonitorWindowsAgent`
+   - `assessmentplatform`
+   - `windowsserverassessment`
+
+   [ ![An image of the Best Practices Assessment tool extensions node listing the available extensions that can be updated.](../media/azure-arc/azure-arc-best-practices-assessment-update-extensions.png)](../media/azure-arc/azure-arc-best-practices-assessment-update-extensions.png#lightbox)
 
 ## Troubleshoot deployment
 
 In the event where your deployment fails, the **Your deployment failed** notification is displayed.
 
-![The Best Practices Assessment tool deployment failing with the error notification stating "Your deployment failed".](../media/azure-arc/azure-arc-best-practices-assessment-error.png)
+[ ![An image of the Best Practices Assessment tool deployment failing with the error notification stating "Your deployment failed".](../media/azure-arc/azure-arc-best-practices-assessment-error.png)](../media/azure-arc/azure-arc-best-practices-assessment-error.png#lightbox)
 
 If this error occurs, your extension needs to be reenabled. To correct this issue, follow these troubleshooting steps:
 
@@ -93,10 +94,10 @@ If this error occurs, your extension needs to be reenabled. To correct this issu
 
    Users should expect the following output when running this script:
 
-   ![An output of a PowerShell script running to reenable the required extension for the Best Practices Assessment tool.](../media/azure-arc/azure-arc-best-practices-assessment-powershell-script.png)
+   [ ![An image of a PowerShell script output running to reenable the required extension for the Best Practices Assessment tool.](../media/azure-arc/azure-arc-best-practices-assessment-powershell-script.png)](../media/azure-arc/azure-arc-best-practices-assessment-powershell-script.png#lightbox)
 
 1. Once the script is complete, go to your Azure portal. Open your resource, select **Best Practices Assessment (preview)**, and then select **Run assessment**.
 
 ## Submit tooling feedback
 
-To report app feedback for the best practices assessment tool or if other issues are encountered, let us know via the Feedback Hub. To learn more, see [Submit tooling feedback](azure-arc-azure-site-recovery-for-windows-server.md#submit-tooling-feedback). Under **Summerize your feedback**, type **Azure Arc BPA (preview)** and proceed with the remaining steps.
+To report app feedback for the best practices assessment tool or if other issues are encountered, let us know via the Feedback Hub. To learn more, see [Submit tooling feedback](azure-arc-azure-site-recovery-for-windows-server.md#submit-tooling-feedback). Under **Summarize your feedback**, type **Azure Arc BPA (preview)** and proceed with the remaining steps.
