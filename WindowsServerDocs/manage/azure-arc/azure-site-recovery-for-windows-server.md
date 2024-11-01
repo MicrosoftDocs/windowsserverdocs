@@ -130,3 +130,7 @@ To report app feedback for disaster recovery or if other issues are encountered,
    1. Attach the **azcmagent-logs.zip** file.
 
 1. Lastly, select **Submit** to submit your feedback for review.
+
+## See also
+
+- [Configure Best Practices Assessment for Arc-enabled Windows servers](best-practices-assessment-for-windows-server.md)

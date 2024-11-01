@@ -100,4 +100,4 @@ If this error occurs, your extension needs to be reenabled. To correct this issu
 
 ## Submit tooling feedback
 
-To report app feedback for the best practices assessment tool or if other issues are encountered, let us know via the Feedback Hub. To learn more, see [Submit tooling feedback](azure-arc-azure-site-recovery-for-windows-server.md#submit-tooling-feedback). Under **Summarize your feedback**, type **Azure Arc BPA (preview)** and proceed with the remaining steps.
+To report app feedback for the best practices assessment tool or if other issues are encountered, let us know via the Feedback Hub. To learn more, see [Submit tooling feedback](azure-site-recovery-for-windows-server.md#submit-tooling-feedback). Under **Summarize your feedback**, type **Azure Arc BPA (preview)** and proceed with the remaining steps.
