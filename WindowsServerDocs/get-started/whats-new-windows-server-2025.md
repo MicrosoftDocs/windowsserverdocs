@@ -159,7 +159,7 @@ Hypervisor-enforced paging translation (HVPT) is a security enhancement to enfor
 
 ### Network ATC
 
-Network ATC streamlines the deployment and management of network configurations for Windows Server 2025 clusters. It utilizes an intent-based approach, where users specify their desired intents, such as management, compute, or storage for a network adapter, and the deployment is automated based on the intended configuration. This approach reduces the time, complexity, and errors associated with host networking deployment, ensures configuration consistency across the cluster, and eliminates configuration drift.
+Network ATC streamlines the deployment and management of network configurations for Windows Server 2025 clusters. It utilizes an intent-based approach, where users specify their desired intents, such as management, compute, or storage for a network adapter, and the deployment is automated based on the intended configuration. This approach reduces the time, complexity, and errors associated with host networking deployment, ensures configuration consistency across the cluster, and eliminates configuration drift. To learn more, see [Deploy host networking with Network ATC](/azure-stack/hci/deploy/network-atc?tabs=22H2&pivots=windows-server).
 
 In addition, Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for VMs hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings.
 
