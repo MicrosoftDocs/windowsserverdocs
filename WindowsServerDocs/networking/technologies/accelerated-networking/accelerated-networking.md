@@ -76,22 +76,22 @@ To enable Accelerated Networking on a cluster:
 
 1. Run the following cmdlet to make sure your system meets all prerequisite requirements:
 
-  ```powershell
-  Get-AccelNetManagementPreReq
-  ```
+   ```powershell
+   Get-AccelNetManagementPreReq
+   ```
 
 1. Go to any node that's on the cluster where you want to enable Accelerated Networking.
 
 1. Run the following command to enable Accelerated Networking:
 
-  ```powershell
-  Enable-AccelNetManagement -IntentName "MyIntent" -NodeReservePercentage
-  ```
+   ```powershell
+   Enable-AccelNetManagement -IntentName "MyIntent" -NodeReservePercentage
+   ```
 
-  >[!NOTE]
-  > The `-IntentName` parameter is required.
-  >
-  >If you leave the `NodeReservePercentage` value blank, the system defaults to 50%. This value must be an integer greater than or equal to 0 and less than or equal to 99.
+   >[!NOTE]
+   > The `-IntentName` parameter is required.
+   >
+   >If you leave the `NodeReservePercentage` value blank, the system defaults to 50%. This value must be an integer greater than or equal to 0 and less than or equal to 99.
 
 ## Change Accelerated Networking settings on a cluster
 
@@ -111,9 +111,9 @@ To disable Accelerated Networking on a cluster:
 
 1. Run the following cmdlet to disable Accelerated Networking on the cluster:
 
-  ```powershell
-  Disable-AccelNetManagement 
-  ```
+   ```powershell
+   Disable-AccelNetManagement 
+   ```
 
 After you disable Accelerated Networking on the cluster, the Network HUD no longer monitors the health of the feature.
 
@@ -130,26 +130,26 @@ To enable Accelerated Networking on a VM:
 
 1. Run the following command to enable Accelerated Networking with high performance:
 
-  ```powershell
-  Enable-AccelNetVM -VMName "MyVM" -Performance High
-  ```
+   ```powershell
+   Enable-AccelNetVM -VMName "MyVM" -Performance High
+   ```
 
-  **VMName** and **Performance** are required parameters. You can set the performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status, as shown in the following table:
+   **VMName** and **Performance** are required parameters. You can set the performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status, as shown in the following table:
 
-  | Hyperthreading configuration | Performance setting | Minimum vCPUs required |
-  |---|---|---|
-  | Disabled | Low | 2 |
-  | Disabled | Medium | 2 |
-  | Disabled | High | 4 |
-  | Enabled | Low | 4 |
-  | Enabled | Medium | 4 |
-  | Enabled | High | 4 |
+   | Hyperthreading configuration | Performance setting | Minimum vCPUs required |
+   |---|---|---|
+   | Disabled | Low | 2 |
+   | Disabled | Medium | 2 |
+   | Disabled | High | 4 |
+   | Enabled | Low | 4 |
+   | Enabled | Medium | 4 |
+   | Enabled | High | 4 |
 
 1. To enable Accelerated Networking for multiple VMs to run in low performance, run the following command:
 
-  ```powershell
-  Get-VM -VMName "MyVM01, MyVM02" | Enable-AccelNetVM -Performance Low
-  ```
+   ```powershell
+   Get-VM -VMName "MyVM01, MyVM02" | Enable-AccelNetVM -Performance Low
+   ```
 
 ## Change Accelerated Networking settings on a VM
 
@@ -177,9 +177,9 @@ To disable Accelerated Networking on a VM:
 
 1. To disable Accelerated Networking for multiple VMs, run the following command:
 
-  ```powershell
-  Get-VM -VMName "MyVM01, MyVM02" | Disable-AccelNetVM
-  ```
+   ```powershell
+   Get-VM -VMName "MyVM01, MyVM02" | Disable-AccelNetVM
+   ```
 
 ## Known issues
 
