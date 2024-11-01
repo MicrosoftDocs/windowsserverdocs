@@ -9,7 +9,7 @@ ms.date: 08/02/2022
 
 # Special identity groups
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 Learn about Windows Server special identity groups (sometimes called *security groups*) that are used for Windows access control.
 

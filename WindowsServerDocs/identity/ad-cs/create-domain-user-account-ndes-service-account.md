@@ -9,7 +9,7 @@ ms.date: 04/03/2023
 
 # Configure Network Device Enrollment Service to use a domain user account
 
-Applies To: Windows Server (All supported versions)
+
 
 It's recommended that you configure NDES to specify a user account, which requires extra steps. If
 you select the built-in application pool identity, no other configuration is required.

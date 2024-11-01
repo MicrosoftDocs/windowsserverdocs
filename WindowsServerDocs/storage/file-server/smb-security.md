@@ -9,7 +9,7 @@ ms.date: 05/18/2023
 
 # SMB security enhancements
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI version 21H2, Windows 11, Windows 10
+> 
 
 This article explains the SMB security enhancements in Windows Server and Windows.
 

@@ -10,7 +10,7 @@ description: Learn about File Server Resource Manager (FSRM), which is a tool th
 
 # File Server Resource Manager (FSRM) overview
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> 
 
 File Server Resource Manager (FSRM) is a role service in Windows Server that enables you to manage and classify data stored on file servers. You can use FSRM to automatically classify files, perform tasks based on these classifications, set quotas on folders, and create reports monitoring storage usage. In Windows Server version 1803, FSRM adds the ability to [prevent the creation of change journals](#whats-new).
 

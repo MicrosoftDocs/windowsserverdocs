@@ -9,7 +9,7 @@ ms.topic: reference
 ---
 # Additional Resources
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
+>
 
 For detailed information about using Repadmin.exe to manage Active Directory replication, see the following resource:
 

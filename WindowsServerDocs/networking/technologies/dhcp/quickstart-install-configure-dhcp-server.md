@@ -11,7 +11,7 @@ ms.date: 08/11/2023
 
 # Quickstart: Install and configure DHCP Server
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 This quickstart shows you how to install a Dynamic Host Configuration Protocol (DHCP) server on
 Windows Server. You'll install the DHCP Server role, authorize the server in your Active Directory

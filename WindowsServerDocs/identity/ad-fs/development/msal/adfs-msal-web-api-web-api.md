@@ -9,7 +9,7 @@ ms.topic: how-to
 ---
 
 # Scenario: Web API calling Web API (On Behalf Of Scenario)
->Applies to: Windows Server 2022, Windows Server 2019, AD FS 2019 and later
+>
 
 Learn how to build a Web API calling another Web API On Behalf Of the user.
 

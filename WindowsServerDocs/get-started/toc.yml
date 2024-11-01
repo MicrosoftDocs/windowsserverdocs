@@ -12,6 +12,8 @@ items:
     items:
     - name: What's new in Windows Server
       items:
+      - name: Windows Server Pay-as-you-go
+        href: windows-server-pay-as-you-go.md
       - name: Windows Server 2025
         href: whats-new-windows-server-2025.md  
       - name: Windows Server 2022

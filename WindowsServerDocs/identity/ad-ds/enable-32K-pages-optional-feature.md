@@ -10,7 +10,7 @@ ms.topic: how-to
 
 # Enable Database 32k pages optional feature in Active Directory Domain Services (preview)
 
-Applies to: Windows Server 2025 (preview)
+
 
 > [!IMPORTANT]
 > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.

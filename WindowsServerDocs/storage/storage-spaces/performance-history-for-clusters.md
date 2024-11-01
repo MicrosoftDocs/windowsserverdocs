@@ -10,7 +10,7 @@ ms.date: 02/02/2018
 
 # Performance history for clusters
 
->Applies to: Windows Server 2022, Windows Server 2019
+>
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes the performance history collected for clusters.
 

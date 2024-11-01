@@ -10,7 +10,7 @@ ms.date: 7/3/2024
 ---
 # Get started with the Remote Desktop app for Windows
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 11, and Windows 10
+>
 
 You can use the Remote Desktop app for Windows to work with Windows apps and PCs remotely from a different Windows device.
 

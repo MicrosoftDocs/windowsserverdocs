@@ -10,7 +10,7 @@ ms.date: 10/28/2021
 ---
 # RAS Gateway Deployment Architecture
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.
 

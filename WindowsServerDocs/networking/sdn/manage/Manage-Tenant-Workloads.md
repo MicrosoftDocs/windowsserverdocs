@@ -10,7 +10,7 @@ ms.date: 11/02/2021
 ---
 # Manage tenant workloads
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 This topic contains links to documentation that allows you to manage tenant workloads by adding tenant virtual machines (VMs), using network virtual appliances, configuring software load balancing, and more.
 
