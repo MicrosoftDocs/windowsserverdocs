@@ -12,7 +12,7 @@ ms.custom: inhenkel
 
 # SPN and UPN uniqueness
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 

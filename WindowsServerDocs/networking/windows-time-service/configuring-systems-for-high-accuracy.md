@@ -10,7 +10,7 @@ ms.topic: article
 
 # Configuring systems for high accuracy
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10 version 1607 and later, Azure Stack HCI versions 21H2 and 20H2
+> 
 
 Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved. Under reasonable operating conditions, systems can be configured to maintain 1 ms (millisecond) accuracy or better (with respect to UTC).
 

@@ -10,7 +10,7 @@ ms.author: roharwoo
 
 # Manage basic volumes
 
-> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 A basic disk is a physical disk that contains primary partitions, extended partitions, or logical drives. Partitions and logical drives on basic disks are called basic volumes. You can only create basic volumes on basic disks.
 

@@ -8,7 +8,7 @@ ms.date: 03/27/2024
 ---
 # Configure secure protocol options for WinHTTP
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
+>
 
 This how-to guide shows you how to use the `DefaultSecureProtocols` registry entry to choose which protocols for the Windows HTTP Services (WinHTTP).
 

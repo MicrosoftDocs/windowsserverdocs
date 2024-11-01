@@ -11,7 +11,7 @@ ms.date: 06/30/2022
 
 # dfsdiag testdfsconfig
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Checks the configuration of a Distributed File System (DFS) namespace by performing the following actions:
 

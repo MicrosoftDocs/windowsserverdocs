@@ -10,7 +10,7 @@ ms.date: 10/27/2021
 ---
 # SDN Technologies
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server.
 

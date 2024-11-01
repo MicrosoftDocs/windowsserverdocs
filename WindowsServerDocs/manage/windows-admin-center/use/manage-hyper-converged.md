@@ -8,7 +8,7 @@ ms.date: 03/15/2023
 ---
 # Manage Azure Stack HCI
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 ## What is Hyper-Converged Infrastructure
 

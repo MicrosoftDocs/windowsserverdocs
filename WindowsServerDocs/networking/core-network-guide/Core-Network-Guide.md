@@ -10,7 +10,7 @@ ms.date: 02/06/2023
 ---
 # Core network components
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 

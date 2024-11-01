@@ -9,7 +9,7 @@ ms.date: 04/28/2023
 
 # About Always On VPN
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10+
+>
 
 Always On VPN allows you to:
 

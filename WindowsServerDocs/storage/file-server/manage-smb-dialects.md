@@ -10,7 +10,7 @@ ms.date: 02/29/2024
 
 # Manage SMB dialects in Windows and Windows Server 2025 (preview)
 
->Applies to: Windows Insider builds and Windows Server 2025
+>
 
 > [!IMPORTANT]
 > Windows Insider builds and Windows Server 2025 are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.

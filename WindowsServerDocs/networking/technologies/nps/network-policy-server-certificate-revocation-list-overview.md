@@ -11,7 +11,7 @@ ms.contributor: alalve
 
 # Network Policy Server Certificate Revocation List overview  
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 A CRL (Certificate Revocation List) is a list of digital certificates that have been revoked by the CA (Certificate Authority) before their scheduled expiration date. A digital certificate is used to verify the identity of a user, computer, or other entity in a networked environment.
 

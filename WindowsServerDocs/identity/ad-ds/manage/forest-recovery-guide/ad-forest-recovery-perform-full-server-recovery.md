@@ -9,7 +9,7 @@ ms.topic: article
 
 # Active Directory Forest Recovery -  Perform a full server recovery
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 ## Active Directory Full Server Recovery
 
