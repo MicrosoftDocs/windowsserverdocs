@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 ms.author: roharwoo
 author: robinharwood
-ms.date: 6/18/2024
+ms.date: 10/25/2024
 ---
 # Set up hosts for live migration without Failover Clustering
 
@@ -41,12 +41,9 @@ Consider how you want to set up the following:
 
 - **Network preference**: Will you allow live migration traffic through any available network, or isolate the traffic to specific networks? As a security best practice, we recommend that you isolate the traffic onto trusted, private networks because live migration traffic is not encrypted when it is sent over the network. Network isolation can be achieved through a physically isolated network or through another trusted networking technology such as VLANs.
 
-### Upgrading to Windows Server 2025 (preview)
+### Upgrading to Windows Server 2025
 
->[!IMPORTANT]
->Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-Starting with Windows Server 2025 (preview), [Credential Guard is enabled by default](/windows/security/identity-protection/credential-guard/#default-enablement-on-windows-server) on all domain-joined servers that aren't Domain Controllers. As a result you might not be able to use CredSSP-based Live Migration with Hyper-V after upgrading to Windows Server 2025. CredSSP-based delegation is the default for Windows Server 2022 and earlier for live migration. Instead use Kerberos constrained Delegation, as described in the following section. For more information, see [Live migration with Hyper-V breaks when upgrading to Windows Server 2025](/windows/security/identity-protection/credential-guard/considerations-known-issues#live-migration-with-hyper-v-breaks-when-upgrading-to-windows-server-2025-preview).
+Starting with Windows Server 2025, [Credential Guard is enabled by default](/windows/security/identity-protection/credential-guard/#default-enablement-on-windows-server) on all domain-joined servers that aren't Domain Controllers. As a result you might not be able to use CredSSP-based Live Migration with Hyper-V after upgrading to Windows Server 2025. CredSSP-based delegation is the default for Windows Server 2022 and earlier for live migration. Instead use Kerberos constrained Delegation, as described in the following section. For more information, see [Live migration with Hyper-V breaks when upgrading to Windows Server 2025](/windows/security/identity-protection/credential-guard/considerations-known-issues#live-migration-with-hyper-v-breaks-when-upgrading-to-windows-server-2025-preview).
 
 ## <a name="BKMK_Step1"></a>Step 1: Configure constrained delegation (optional)
 If you have decided to use Kerberos to authenticate live migration traffic, configure constrained delegation using an account that is a member of the Domain Administrators group.

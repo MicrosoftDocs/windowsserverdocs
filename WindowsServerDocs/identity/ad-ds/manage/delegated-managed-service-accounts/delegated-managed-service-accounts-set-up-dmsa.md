@@ -1,10 +1,10 @@
 ---
-title: Setting up delegated Managed Service Accounts (dMSA) in Windows Server 2025 (preview)
-description: Learn how to set up delegated Managed Service Accounts (dMSA) in Windows Server 2025 (preview) to ensure device credentials isolation in Active Directory.
+title: Setting up delegated Managed Service Accounts (dMSA) in Windows Server 2025
+description: Learn how to set up delegated Managed Service Accounts (dMSA) in Windows Server 2025 to ensure device credentials isolation in Active Directory.
 ms.topic: how-to
 ms.author: alalve
 author: mariamgewida
-ms.date: 07/22/2024
+ms.date: 10/25/2024
 ---
 
 # Setting up delegated Managed Service Accounts

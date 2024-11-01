@@ -7,10 +7,7 @@ ms.author: alalve
 ms.date: 11/01/2024
 ---
 
-# What's new in Windows Server 2025 (preview)
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# What's new in Windows Server 2025
 
 This article describes some of the newest developments in Windows Server 2025, which boasts advanced features that improve security, performance, and flexibility. With faster storage options and the ability to integrate with hybrid cloud environments, managing your infrastructure is now more streamlined. Windows Server 2025 builds on the strong foundation of its predecessor while introducing a range of innovative enhancements to adapt to your needs.
 
@@ -266,7 +263,7 @@ Starting with build 26090, another set of SMB protocol changes are introduced fo
 
   Another feature that's introduced to SMB over QUIC is client access control, which is an alternative to TCP and RDMA that supplies secure connectivity to edge file servers over untrusted networks. To learn more, see [How client access control works](../storage/file-server/configure-smb-over-quic-client-access-control.md#how-client-access-control-works).
 
-- Previously, when a share was created, the SMB firewall rules would be automatically configured to enable the "File and Printer Sharing" group for the relevant firewall profiles. Now, the creation of an SMB share in Windows results in the automatic configuration of the new "File and Printer Sharing (Restrictive)" group, which no longer permits inbound NetBIOS ports 137-139. To learn more, see [Updated firewall rules](../storage/file-server/smb-secure-traffic.md#updated-firewall-rules-preview).
+- Previously, when a share was created, the SMB firewall rules would be automatically configured to enable the "File and Printer Sharing" group for the relevant firewall profiles. Now, the creation of an SMB share in Windows results in the automatic configuration of the new "File and Printer Sharing (Restrictive)" group, which no longer permits inbound NetBIOS ports 137-139. To learn more, see [Updated firewall rules](../storage/file-server/smb-secure-traffic.md#updated-firewall-rules).
 
 - Starting with build 25997, an update is made to [enforce SMB encryption](../storage/file-server/smb-security.md#smb-encryption) for all outbound SMB client connections. With this update, administrators can set a mandate that all destination servers support SMB 3.x and encryption. If a server lacks these capabilities, the client is unable to establish a connection.
 
