@@ -11,7 +11,7 @@ description: Learn how Work Folders provides a consistent way for users to acces
 
 # Work Folders overview
 
->**Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>**
 
 Work Folders is a Windows Server role service for file servers. Work Folders provides a consistent way for users to access their work files from their PCs and devices. For older versions, see [Other versions of Work Folders](#other-versions-of-work-folders).
 

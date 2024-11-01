@@ -8,7 +8,7 @@ ms.date: 04/01/2023
 ---
 # Publishing Extensions
 
-Applies to: Windows Admin Center, Windows Admin Center Preview
+
 
 After you've developed your extension, you'll want to publish it and make it available to others to test or use. In this article, we introduce a few publishing options along with the steps and requirements depending on your audience and purpose of publishing.
 

@@ -10,7 +10,7 @@ ms.date: 05/15/2018
 
 # Scripting with PowerShell and Storage Spaces Direct performance history
 
->Applies to: Windows Server 2022, Windows Server 2019
+>
 
 In Windows Server 2019, [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. Performance history is easy to query and process in PowerShell so you can quickly go from *raw data* to *actual answers* to questions like:
 

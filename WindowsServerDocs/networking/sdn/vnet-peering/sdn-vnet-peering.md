@@ -10,7 +10,7 @@ ms.date: 11/04/2021
 
 # Virtual network peering
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 Virtual network peering lets you connect two virtual networks seamlessly. Once peered, for connectivity purposes, the virtual networks appear as one.
 

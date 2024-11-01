@@ -11,7 +11,7 @@ ms.date: 05/23/2018
 
 # RAS Gateway
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 With RAS Gateway, Cloud Service Providers (CSPs) and Enterprises can enable datacenter and cloud network traffic routing between both virtual and physical networks, including the Internet. 
 

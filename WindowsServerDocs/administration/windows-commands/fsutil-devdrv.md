@@ -11,7 +11,7 @@ ms.date: 08/29/2023
 
 # fsutil devdrv
 
->Applies to: Windows 11
+
 
 Dev drive or a developer volume is a volume that is tuned for performance of developer scenarios. The command also lets an administrator of the device control the file system minifilters that are attached to the volume.
 

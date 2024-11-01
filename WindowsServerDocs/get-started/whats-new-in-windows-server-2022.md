@@ -9,7 +9,7 @@ ms.date: 07/10/2024
 
 # What's new in Windows Server 2022
 
->Applies to: Windows Server 2022
+
 
 This article describes some of the new features in Windows Server 2022. Windows Server 2022 is built
 on the strong foundation of Windows Server 2019 and brings many innovations on three key themes:

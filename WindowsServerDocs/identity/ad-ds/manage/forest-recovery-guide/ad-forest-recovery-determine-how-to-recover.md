@@ -9,7 +9,7 @@ ms.topic: article
 
 # Active Directory Forest Recovery - Determine how to recover the forest
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 Recovering an entire Active Directory forest involves restoring at least one
 Domain Controller (DC) in every domain from an available backup. Recovering the

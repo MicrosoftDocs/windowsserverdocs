@@ -10,7 +10,7 @@ ms.date: 10/04/2016
 
 # Hyper-V Virtual Machine Connection
 
-> **Applies to:** Windows Server 2019, Windows Server 2016, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 8
+> **
 
 Virtual Machine Connection \(VMConnect\) is a tool you can use to connect to a virtual machine to install or interact with the guest operating system in a virtual machine. Some of the tasks you can perform by using VMConnect include the following:
 

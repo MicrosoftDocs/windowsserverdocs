@@ -10,7 +10,7 @@ description: How to add servers or drives to a Storage Spaces Direct cluster
 ---
 # Adding servers or drives to Storage Spaces Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic describes how to add servers or drives to Storage Spaces Direct.
 

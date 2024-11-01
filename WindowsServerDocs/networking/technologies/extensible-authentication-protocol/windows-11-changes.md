@@ -9,7 +9,7 @@ ms.date: 06/27/2024
 
 # EAP - What's changed in Windows 11
 
-> Applies to: Windows 11, Windows 10
+> 
 
 Windows 11 supports WPA3-Enterprise, a Wi-Fi security standard that defines a set of requirements around server certificate validation for EAP authentication. Windows 11 also supports TLS 1.3 by default. This article details the changes in EAP behavior in Windows 11 due to these features.
 

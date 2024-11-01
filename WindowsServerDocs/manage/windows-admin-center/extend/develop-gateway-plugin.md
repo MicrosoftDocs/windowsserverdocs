@@ -9,7 +9,7 @@ ms.date: 09/18/2018
 
 # Develop a gateway plugin
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 A Windows Admin Center gateway plugin enables API communication from the UI of your tool or solution to a target node.  Windows Admin Center hosts a gateway service that relays commands and scripts from gateway plugins to be executed on target nodes. The gateway service can be extended to include custom gateway plugins that support protocols other than the default ones.
 

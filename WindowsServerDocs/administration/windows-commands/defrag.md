@@ -9,7 +9,7 @@ ms.date: 09/28/2023
 ---
 # defrag
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 11, Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 
