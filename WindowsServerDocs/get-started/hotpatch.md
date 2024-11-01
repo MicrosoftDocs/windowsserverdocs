@@ -61,7 +61,7 @@ a Cumulative Update, February and March would have Hotpatch releases. For more i
 The following diagram shows an example of an annual three-month schedule including hypothetical unplanned
 baselines due to zero-day fixes.
 
-:::image type="complex" source="media\hotpatch\hotpatch-sample-schedule.png" alt-text="A diagram showing an example of a Hotpatch release schedule.":::
+:::image type="complex" source="media\hotpatch\hotpatch-sample-schedule.png" lightbox="media\hotpatch\hotpatch-sample-schedule.png" alt-text="A diagram showing an example of a Hotpatch release schedule.":::
    A diagram showing an example of a Hotpatch schedule. The schedule is shown as a timeline extending from the January of the current year to the January of next year. On each month is a colored dot representing what kind of release happened during that month. The top row of red dots represents Hotpatch releases, the middle row of blue dots represents planned baselines, and the bottom row of blue dots on a red line represents unplanned baselines. In this diagram, January, April, July, October, and January of the next year are planned baselines. February, March, May, June, August, September, and November and December are Hotpatch releases. There were two unplanned baseline releases in March and August.
 :::image-end:::
 
@@ -143,7 +143,7 @@ In the **Recommended updates** page, you can see the Hotpatch status of your VM 
 
 Patches outside of those two categories aren't automatically installed, and are instead displayed in the **Update compliance** tab as a list of available patches. You can also check the **Update history** tab to view patch installation details for update deployments on your VM from the past 30 days.
 
-:::image type="content" source="media\hotpatch\hotpatch-management-ui.png" alt-text="A screenshot showing Hotpatch management from the Azure portal.":::
+:::image type="content" source="media\hotpatch\hotpatch-management-ui.png" alt-text="A screenshot showing Hotpatch management from the Azure portal." lightbox="media\hotpatch\hotpatch-management-ui.png":::
 
 Automatic VM Guest Patching regularly runs assessments of available patches, which you can view in the **Updates** tab. You can manually start an assessment by selecting the **Assess Now** button. You can also install patches on-demand by selecting the **Install updates now** button. This option lets you choose whether to install all updates under specific patch classifications or select individual updates to include or exclude by providing a list of knowledge base articles. However, keep in mind that patches you install manually don't follow availability-first principles and might require you to restart your VM.
 
