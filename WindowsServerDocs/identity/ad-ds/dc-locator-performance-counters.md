@@ -10,7 +10,7 @@ ms.date: 10/25/2024
 
 # DC Locator performance counters
 
-Applies to: Windows Server 2025 (preview), Windows Server 2022
+
 
 Beginning with Windows Server 2025, you can use Active Directory Domain Service Domain Controller (DC) Locator performance counters to monitor the performance of DC locator clients. These counters provide insights into the performance of DC locator requests per second by type, average success and failure latency, and other metrics.
 

@@ -8,7 +8,7 @@ ms.date: 11/21/2019
 ---
 # Manage Servers with Windows Admin Center
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 > [!Tip]
 > New to Windows Admin Center?

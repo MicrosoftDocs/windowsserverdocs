@@ -10,7 +10,7 @@ ms.date: 10/25/2024
 
 # Active Directory LDAP client performance counters
 
-Applies to: Windows Server 2025 (preview)
+
 
 Beginning with Windows Server 2025, you can use Active Directory Lightweight Directory Access Protocol (LDAP) client performance counters to monitor the performance of LDAP clients. These counters provide valuable insights into the performance of LDAP clients, including the number of binds, connections, and operations that are being processed.
 

@@ -14,7 +14,7 @@ zone_pivot_groups: windows-os
 
 :::zone pivot="windows-server"
 
->Applies to: Windows Server 2025 (preview)
+>
 
 ::: zone-end
 

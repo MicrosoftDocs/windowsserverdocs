@@ -10,7 +10,7 @@ ms.date: 10/25/2024
 
 # Create a virtual machine in Hyper-V
 
->Applies to:  Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019, Windows 11, Windows 10
+>
 
 Learn how to create a virtual machine by using Hyper-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper-V Manager.
 

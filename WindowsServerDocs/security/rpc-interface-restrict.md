@@ -9,7 +9,7 @@ ms.date: 05/12/2023
 
 # RPC Interface Restriction
 
-> Applies To: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
+> 
 
 The Remote Procedure Call (RPC) service makes RPC interfaces secure by default to reduce attacks. The `RestrictRemoteClients` registry key enables you to modify the behavior of all RPC interfaces on the system and can be used to eliminate remote anonymous access to RPC interfaces on the system, with some exceptions. You can apply other interface controls using the `EnableAuthEpResolution` registry key covered in this article. RPC Interface Restrictions can be configured by both RPC application developers and System Administrators.
 

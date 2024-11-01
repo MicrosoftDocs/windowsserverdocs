@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Identifying your functional level upgrade
 
->Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 In this article learn about the process for upgrading your domain and forest functional levels in Active Directory Domain Services.
 

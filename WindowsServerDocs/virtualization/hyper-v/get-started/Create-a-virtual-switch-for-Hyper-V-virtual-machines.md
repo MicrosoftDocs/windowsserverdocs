@@ -10,7 +10,7 @@ ms.date: 10/25/2024
 
 # Create and configure a virtual switch with Hyper-V
 
-> Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016,
+> 
 > Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article shows you how to create and configure your virtual switch using Hyper-V Manager or

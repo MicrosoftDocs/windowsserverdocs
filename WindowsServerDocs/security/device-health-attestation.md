@@ -9,7 +9,7 @@ ms.date: 10/25/2024
 ---
 # Device Health Attestation
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included the following:
 

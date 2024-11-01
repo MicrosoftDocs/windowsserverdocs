@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Active Directory Domain Services maximum limits and scalability
 
->Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Windows Server 2012 R2
+>
 
 This article describes the maximum limits for certain aspects of your Active Directory environment that can affect scalability. We recommend you keep these limits in mind while planning for your Active Directory deployment.
 

@@ -10,7 +10,7 @@ ms.date: 02/28/2019
 
 # Upgrading Failover Clusters on the same hardware
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers (called nodes) are connected by physical cables and by software. If one of the cluster nodes fails, another node begins to provide service (a process known as failover). Users experience a minimum of disruptions in service.
 

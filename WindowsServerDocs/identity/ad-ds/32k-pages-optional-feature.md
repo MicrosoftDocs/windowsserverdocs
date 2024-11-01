@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Database 32k pages for Active Directory
 
-Applies to: Windows Server 2025 (preview)
+
 
 
 Active Directory Domain Services (AD DS) and Lightweight Directory Services (LDS) uses an [Extensible Storage Engine (ESE) database](/windows/win32/extensible-storage-engine/extensible-storage-engine-files). Since its introduction in Windows 2000, ESE used an 8k page database size, this architecture limited the scale of forest and domain objects. A 32k page database format offers an improvement in scalability using 64-bit [Long Value IDs](/windows/win32/extensible-storage-engine/long-value-columns) (LIDs). Multi-valued attributes are now able to hold approximately 3,200 values. For more information about Active Directory's scalability, see [Active Directory Maximum Limits - Scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101%28v=ws.10%29).

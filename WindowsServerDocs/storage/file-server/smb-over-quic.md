@@ -10,7 +10,7 @@ ms.date: 10/25/2024
 
 # SMB over QUIC
 
-> Applies to: Windows Server 2025, Windows Server 2022 Datacenter: Azure Edition, Windows 11 or later
+> 
 
 SMB over QUIC introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP:
 

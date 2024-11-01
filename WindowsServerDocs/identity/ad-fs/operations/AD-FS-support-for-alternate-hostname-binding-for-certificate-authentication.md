@@ -10,7 +10,7 @@ ms.topic: article
 
 # Alternate hostname binding for certificate authentication in AD FS on Windows Server
 
-Applies to: Windows Server 2016 and later
+
 
 On many networks, the local firewall policies might not allow traffic through nonstandard ports like 49443. Nonstandard ports can create issues during certificate authentication with AD FS on Windows Server for earlier versions of Windows. Different bindings for device authentication and user certificate authentication on the same host aren't possible. 
 

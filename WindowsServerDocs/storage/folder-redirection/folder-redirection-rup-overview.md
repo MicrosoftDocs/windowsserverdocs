@@ -9,7 +9,7 @@ ms.date: 03/20/2023
 
 # Folder Redirection, Offline Files, and Roaming User Profiles overview
 
-> Applies to: Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what's new and where to find more information.
 

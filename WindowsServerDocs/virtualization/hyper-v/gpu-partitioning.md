@@ -11,11 +11,6 @@ zone_pivot_groups: windows-os
 
 # GPU partitioning
 
-:::zone pivot="windows-server"
->Applies to: Windows Server 2025
-
-::: zone-end
-
 :::zone pivot="azure-stack-hci"
 
 [!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]

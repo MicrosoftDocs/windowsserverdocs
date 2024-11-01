@@ -8,7 +8,7 @@ ms.date: 10/25/2024
 ---
 # Raise domain and forest functional levels in Active Directory Domain Services
 
->Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. Functional levels also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. Level changes happen when you use later versions of your domain controller operating system, the domain, or your forest functional level. This article describes how to raise Active Directory domain and forest functional levels. We recommend you upgrade Active Directory Domain Service servers to the latest release.
 

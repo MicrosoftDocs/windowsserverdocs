@@ -8,7 +8,7 @@ ms.date: 06/27/2023
 ---
 # Extension support for the management of Windows Defender Application Control (WDAC) enforced infrastructure
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 Windows Admin Center supports the management of Windows Defender Application Control (WDAC) enforced infrastructure at the platform level. Learn more about [managing WDAC enforced infrastructure in Windows Admin Center](../../use/manage-application-control-infrastructure.md).
 

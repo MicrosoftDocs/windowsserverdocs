@@ -9,7 +9,7 @@ ms.date: 06/19/2023
 
 # Configure EAP profiles and settings in Windows
 
-> Applies to: Windows Server 2022, Windows 11, Windows 10
+> 
 
 This article presents information about commonly used different ways to configure Extensible Authentication Protocol (EAP) settings. Specifically, it describes configuring EAP profiles using XML and command line tools. It also shows how to configure EAP settings and profiles using various UI in Windows.
 

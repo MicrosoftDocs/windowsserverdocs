@@ -12,7 +12,7 @@ zone_pivot_groups: windows-os
 # Use GPUs with clustered VMs
 
 :::zone pivot="windows-server"
->Applies to: Windows Server 2025 (preview)
+>
 
 ::: zone-end
 

@@ -10,7 +10,7 @@ ms.date: 10/25/2024
 
 # Manage SMB dialects in Windows and Windows Server 2025
 
->Applies to: Windows Insider builds and Windows Server 2025
+>
 
 Administrators have the ability to manage SMB2 and SMB3 dialects in Windows Server and Windows client. In this article, learn how to configure a minimum and maximum SMB dialect for the SMB server and client using Group Policy and Windows PowerShell.
 

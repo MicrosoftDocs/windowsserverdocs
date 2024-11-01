@@ -11,7 +11,7 @@ ms.author: roharwoo
 
 # Deploy roaming user profiles
 
->**Applies To:** Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 11, Windows 10, Windows 8.1, Windows 8, Windows 7
+>**
 
 This article describes how to use Windows Server to deploy [roaming user profiles](folder-redirection-rup-overview.md) to Windows client computers. A roaming user profile redirects user profiles to a *file share* so that users receive the same operating system and application settings on multiple computers.
 
