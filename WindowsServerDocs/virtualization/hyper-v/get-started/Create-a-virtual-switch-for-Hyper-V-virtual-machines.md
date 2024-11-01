@@ -5,16 +5,13 @@ ms.topic: how-to
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 ms.author: roharwoo
 author: robinharwood
-ms.date: 08/13/2024
+ms.date: 10/25/2024
 ---
 
 # Create and configure a virtual switch with Hyper-V
 
 > 
 > Windows Server 2019, Microsoft Hyper-V Server 2019
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 This article shows you how to create and configure your virtual switch using Hyper-V Manager or
 PowerShell. A virtual switch allows virtual machines created on Hyper-V hosts to communicate

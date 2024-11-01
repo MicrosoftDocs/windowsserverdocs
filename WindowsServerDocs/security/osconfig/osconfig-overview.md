@@ -1,12 +1,12 @@
 ---
 title: OSConfig overview for Windows Server
-description: OSConfig is a cross-platform scenario-based security tool to manage on-premises Windows Server 2025 and Azure Arc-connected devices.
+description: OSConfig is a cross-platform scenario-based security tool to manage on-premises Windows Server and Azure Arc-connected devices.
 ms.topic: conceptual
 ms.product: windows-server
 ms.author: roharwoo
 author: xelu86
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
-ms.date: 09/30/2024
+ms.date: 10/31/2024
 ---
 
 # OSConfig overview

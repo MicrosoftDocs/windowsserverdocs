@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.subservice: core-os
-ms.date: 03/15/2024
+ms.date: 10/25/2024
 zone_pivot_groups: windows-os
 #customer intent: As a customer, I want to learn how to partition and assign GPUs to a virtual machine in Hyper-V so that I can use the GPU resources efficiently.
 ---
@@ -15,9 +15,6 @@ zone_pivot_groups: windows-os
 :::zone pivot="windows-server"
 
 >
-
-> [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ::: zone-end
 

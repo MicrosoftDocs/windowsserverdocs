@@ -3,7 +3,7 @@ title: What is Azure Edition for Windows Server?
 description: Overview of Azure Edition for Windows Server, including key features and next steps.
 author: robinharwood
 ms.topic: overview
-ms.date: 05/16/2023
+ms.date: 10/25/2024
 ms.author: roharwoo 
 ---
 
@@ -130,6 +130,6 @@ and
 
 - [Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022](editions-comparison-windows-server-2022.md)
 - [Hotpatch for new virtual machines](hotpatch.md)
-- [Enable Hotpatch for Azure Edition virtual machines built from ISO (preview)](enable-hotpatch-azure-edition.md)
+- [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
 - [SMB over QUIC](../storage/file-server/smb-over-quic.md)
 - [Extend your on-premises subnets into Azure using extended network for Azure](../manage/windows-admin-center/azure/azure-extended-network.md)
