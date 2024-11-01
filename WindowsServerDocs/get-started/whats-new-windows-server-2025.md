@@ -56,7 +56,7 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 
 - **Improved algorithms for Name/Sid Lookups** - Local Security Authority (LSA) Name and Sid lookup forwarding between machine accounts no longer uses the legacy Netlogon secure channel. Kerberos authentication and DC Locator algorithm are used instead. To maintain compatibility with legacy operating systems, it's still possible to use the Netlogon secure channel as a fallback option.
 
-- **Improved security for confidential attributes** - DCs and AD LDS instances only allow LDAP add, search, and modify operations involving confidential attributes when the connection is encrypted.
+- **Improved security for confidential attributes** - DCs and AD LDS instances only allow LDAP to add, search, and modify operations involving confidential attributes when the connection is encrypted.
 
 - **Improved security for default machine account passwords** - AD now uses random generated default computer account passwords. Windows 2025 DCs block setting computer account passwords to the default password of the computer account name.
 
@@ -279,6 +279,18 @@ Starting with build 26090, another set of SMB protocol changes are introduced fo
 - The Remote Mailslot protocol is disabled by default starting in build 25314 and may be removed in a later release. To learn more, see [Features we're no longer developing](../get-started/removed-deprecated-features-windows-server-2025.md#features-were-no-longer-developing).
 
 - SMB compression adds support for industry standard LZ4 compression algorithm, in addition to its existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
+
+### Software Defined Networking (SDN)
+
+In Windows Server 2025, the Network Controller, which is the control plane for SDN, is now hosted directly as Failover Cluster services on the physical host machines. This eliminates the need to deploy VMs, simplifying deployment and management while conserving resources.
+
+Tag-based segmentation allows administrators to use custom service tags to associate Network Security Groups (NSGs) and VMs for access control. Instead of specifying IP ranges, administrators can now use simple, self-explanatory labels to tag workload VMs, and apply security policies based on these tags. This simplifies the process of managing network security and eliminates the need to remember and retype IP ranges.
+
+Default network policies in Windows Server 2025 bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. This ensures workload VMs are secured from the point of creation.
+
+SDN Multisite provides native Layer 2 and Layer 3 connectivity between applications across two locations without any extra components. This feature allows for seamless movement of applications without the need to reconfigure the application or networks. It also offers unified network policy management for workloads, ensuring that policies don't need to be updated when a workload VM moves from one location to another.
+
+The performance of SDN Layer 3 gateways has been enhanced, achieving higher throughput, and reduced CPU cycles. These improvements are enabled by default. Users will automatically experience better performance when an SDN gateway Layer 3 connection is configured through PowerShell or Windows Admin Center.
 
 ### Storage Replica Enhanced Log
 
