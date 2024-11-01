@@ -2,9 +2,9 @@
 title: What's new in Windows Server 2025
 description: This article describes some of the new features in Windows Server 2025.
 ms.topic: article
-author: xelu86
-ms.author: roharwoo
-ms.date: 10/07/2024
+author: alalve
+ms.author: alalve
+ms.date: 11/01/2024
 ---
 
 # What's new in Windows Server 2025 (preview)
@@ -156,6 +156,12 @@ When users create a new virtual machine through the Hyper-V Manager, **Generatio
 ### Hypervisor-enforced paging translation
 
 Hypervisor-enforced paging translation (HVPT) is a security enhancement to enforce the integrity of linear address translations. HVPT protects critical system data from write-what-where attacks where the attacker writes an arbitrary value to an arbitrary location, often as the result of a buffer overflow. HVPT guards page tables that configure critical system data structures. HVPT includes everything already secured with hypervisor-protected code integrity (HVCI). HVPT is enabled by default where hardware support is available. HVPT isn't enabled when Windows Server runs as a guest in a virtual machine.
+
+### Network ATC
+
+Network ATC streamlines the deployment and management of network configurations for Windows Server 2025 clusters. It utilizes an intent-based approach, where users specify their desired intents, such as management, compute, or storage for a network adapter, and the deployment is automated based on the intended configuration. This approach reduces the time, complexity, and errors associated with host networking deployment, ensures configuration consistency across the cluster, and eliminates configuration drift.
+
+In addition, Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for VMs hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings.
 
 ### NVMe
 
