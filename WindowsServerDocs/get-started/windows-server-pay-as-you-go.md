@@ -30,7 +30,7 @@ The Pay-as-you-go license only applies to the exact device where the feature is 
 - Your device isn't currently licensed (activated) with another license type, such as OEM, Retail, or Volume License (VL).
 - An active internet connection is required.
 
-### Set up Windows Server Pay-as-you-go
+## Set up Windows Server Pay-as-you-go
 
 During the installation of the Windows Server 2025 OS, you can choose to set up Pay-as-you-go. This option is available on the **Choose a licensing method** screen where you would normally enter a product key. Once Pay-as-you-go is selected, providing a product key isn't required.
 
@@ -77,7 +77,7 @@ As the Azure Arc installation wizard isn't supported with this set up, an altern
 
 ---
 
-### Manage Windows Server Pay-as-you-go
+## Manage Windows Server Pay-as-you-go
 
 Managing Pay-as-you-go for Windows Server is possible using the Azure portal, PowerShell, or API. Even if you didn't choose to enable Pay-as-you-go during the initial installation of the OS is also an option, as long as the necessary prerequisites are met.
 
