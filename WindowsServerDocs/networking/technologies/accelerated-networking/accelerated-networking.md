@@ -34,7 +34,7 @@ Accelerated Networking also adds an extra management layer with the following fe
 
 - Simplified VM performance settings that show overall performance as Low, Medium, and High to make configuration easier.
 
-These features make Accelerated Networking useful for environments that require high-peformance computing (HPC) for intensive computational tasks, real-time applications like financial trading platforms, or deployments that use Network Function Virtualization (NFV) to work around limits on network throughput.
+These features make Accelerated Networking useful for environments that require high-performance computing (HPC) for intensive computational tasks, real-time applications like financial trading platforms, or deployments that use Network Function Virtualization (NFV) to work around limits on network throughput.
 
 ## Prerequisites
 

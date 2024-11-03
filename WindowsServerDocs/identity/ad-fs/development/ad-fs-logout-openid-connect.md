@@ -69,7 +69,7 @@ Set-ADFSProperties -EnableOAuthLogout $true
 > `EnableOAuthLogout` parameter will be marked as obsolete after installing [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801). `EnableOAUthLogout` will always be true and will have no impact on the logout functionality.
 
 >[!NOTE]
->frontchannel_logout is supported **only** after installtion of [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)
+>frontchannel_logout is supported **only** after installation of [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)
 
 ## Client configuration
 Client needs to implement a url which 'logs off' the logged in user. Administrator can configure the LogoutUri in the client configuration using the following PowerShell cmdlets.

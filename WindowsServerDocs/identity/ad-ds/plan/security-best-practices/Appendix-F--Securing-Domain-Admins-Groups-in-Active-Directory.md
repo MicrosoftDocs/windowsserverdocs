@@ -171,7 +171,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 6.  The following screenshot shows the error message that should appear.
 
-    ![Screenshot that shows the error message that should appear while you're attempting to accsss the member server.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
+    ![Screenshot that shows the error message that should appear while you're attempting to access the member server.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
 
 ##### Verify "Deny log on as a batch job" GPO Settings
 

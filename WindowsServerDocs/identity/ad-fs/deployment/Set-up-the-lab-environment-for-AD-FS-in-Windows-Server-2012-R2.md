@@ -299,7 +299,7 @@ You must complete the following steps to set up a web server with this sample cl
 
     1.  Run FedUtil.exe, which is located in **C:\Program Files (x86)\Windows Identity Foundation SDK\v3.5**.
 
-    2.  Set the application configuration location to **C:\inetput\claimapp\web.config** and set the application URI to the URL for your site, **https://webserv1.contoso.com /claimapp/**. Click **Next**.
+    2.  Set the application configuration location to **C:\inetpub\claimapp\web.config** and set the application URI to the URL for your site, **https://webserv1.contoso.com /claimapp/**. Click **Next**.
 
     3.  Select **Use an existing STS** and browse to your AD FS server's metadata URL **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml**. Click **Next**.
 

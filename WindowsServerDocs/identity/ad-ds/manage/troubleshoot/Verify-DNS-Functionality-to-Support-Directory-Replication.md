@@ -53,7 +53,7 @@ To validate the configuration changes, rerun the Dcdiag /test:DNS /v command wit
 
 ## Verifying resource record registration
 
-The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)or, if that fails, NetBIOS namesthe presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.
+The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)or, if that fails, NetBIOS names the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.
 
 You can use the following procedure to verify resource record registration, including alias (CNAME) resource record registration.
 
