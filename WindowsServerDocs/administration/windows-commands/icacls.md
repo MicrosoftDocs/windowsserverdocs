@@ -16,12 +16,25 @@ Displays or modifies discretionary access control lists (DACLs) on specified fil
 > [!NOTE]
 > This command replaces the deprecated [cacls command](cacls.md).
 
+> [!TIP]
+> If you're using owershell you will get the error  `"OI : The term 'OI' is not recognized as the name of a cmdlet, function, script file, or operable program."` You'll need to wrap the arguments in parenthesis.
+> ```
+> icacls C:\Myfolder\Myotherfolder\ /grant John:(OI)(CI)F /T /C /L /Q
+> ```
+> Would need to be written as:
+> ```
+> icacls "C:\Myfolder\Myotherfolder\" /grant "John:(OI)(CI)F" /T /C /L /Q
+> ```
+
+
 ## Syntax
 
 ```
 icacls <filename> [/grant[:r] <sid>:<perm>[...]] [/deny <sid>:<perm>[...]] [/remove[:g|:d]] <sid>[...]] [/t] [/c] [/l] [/q] [/setintegritylevel <Level>:<policy>[...]]
 icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c] [/l] [/q]]
 ```
+
+###
 
 ### Parameters
 
