@@ -34,8 +34,6 @@ icacls <filename> [/grant[:r] <sid>:<perm>[...]] [/deny <sid>:<perm>[...]] [/rem
 icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c] [/l] [/q]]
 ```
 
-###
-
 ### Parameters
 
 | Parameter | Description |
