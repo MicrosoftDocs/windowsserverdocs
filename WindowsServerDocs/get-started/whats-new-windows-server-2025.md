@@ -387,10 +387,6 @@ The Windows Terminal, a powerful and efficient multishell application for comman
 
 Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
 
-### Accelerated Networking
-
-Accelerated Networking simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. Accelerated Networking also adds a management layer that handles prerequisite checking, host configuration, and VM performance settings.
-
 ## See also
 
 - [Windows Server Insiders Community discussions](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)
