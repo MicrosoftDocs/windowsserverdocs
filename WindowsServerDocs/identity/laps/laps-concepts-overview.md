@@ -199,12 +199,16 @@ When a live OS image is reverted to an earlier version, the result is often a â€
 
 Once the problem occurs, the IT admin is unable to sign into the device using the persisted Windows LAPS password. The problem isn't resolved until Windows LAPS rotates the password - but that might not occur for days or weeks depending on the current password expiration date.
 
-Windows LAPS solves this problem by writing a random GUID to the directory at the same time a new password is being persisted, followed by saving a local copy. The GUID is stored in the msLAPS-CurrentPasswordVersion attribute. During every processing cycle, the msLAPS-CurrentPasswordVersion guid is queried and compared to the local copy. If the two GUIDs are different, the password is immediately rotated.
+Windows LAPS mitigates this problem by writing a random GUID to the directory at the same time a new password is being persisted, followed by saving a local copy. The GUID is stored in the msLAPS-CurrentPasswordVersion attribute. During every processing cycle, the msLAPS-CurrentPasswordVersion guid is queried and compared to the local copy. If the two GUIDs are different, the password is immediately rotated.
 
 This feature is only supported when backing passwords up to Active Directory. Microsoft Entra ID isn't supported.
 
 > [!IMPORTANT]
+> Windows LAPS rollback detection and mitigation can only work if if the machine still has a valid computer account password and is capable of authenticating to Active Directory. That condition may or may not be true depending on the mismatched state caused by the rollback. If the machine is no longer capable of authenticating, other recovery steps will be required such as resetting the machine account password. The Windows LAPS account on the reverted machine may still be useful if the Windows LAPS password history feature has been enabled.
+
+> [!IMPORTANT]
 > The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows 11 24H2, Windows Server 2025 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
+
 ## See also
 
 - [Windows LAPS account management modes](laps-concepts-account-management-modes.md)
