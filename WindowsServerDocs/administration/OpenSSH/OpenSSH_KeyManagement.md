@@ -57,7 +57,7 @@ Since there's no user associated with the sshd service, the host keys are stored
 
 ## User key generation
 
-To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified. If no algorithm is specified, RSA is used. A strong algorithm and key length should be used, such as ECDSA in this example.
+To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified. If no algorithm is specified, Ed25519 is used. A strong algorithm and key length should be used, such as ECDSA in this example.
 
 To generate key files using the ECDSA algorithm, run the following command from a PowerShell or cmd prompt on your client:
 
