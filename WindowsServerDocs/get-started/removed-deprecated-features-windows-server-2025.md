@@ -27,7 +27,6 @@ We're removing the following features and functionalities from the installed pro
 | IIS 6 Management Console (Web-Lgcy-Mgmt-Console) | The console has been removed after being no longer developed in Windows Server 2019. You should also start migration from IIS 6.0 or earlier versions, and move to the latest version of IIS, which is always available in the most recent release of Windows Server. |
 | Wordpad | WordPad has been removed from Windows Server 2025. We recommend Microsoft Word for rich text documents like `.doc` and `.rtf` and Windows Notepad for plain text documents like `.txt`. |
 | SMTP Server | The SMTP Server features has been removed from Windows Server 2025. There's no replacement within the operating systems. Consider using Exchange Server or a non-Microsoft SMTP server as an alternative. To learn more about enabling SMTP connection in Exchange Server, see [Receive connectors in Exchange Server](/exchange/mail-flow/connectors/receive-connectors). |
-| Windows PowerShell 2.0 Engine | The Windows PowerShell 2.0 Engine has been removed, applications, and components should be migrated to PowerShell 5.0+. |
 
 ## Features we're no longer developing
 
