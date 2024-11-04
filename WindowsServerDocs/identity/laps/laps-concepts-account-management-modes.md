@@ -28,7 +28,14 @@ Automatic account management mode is an optional mode. In automatic mode, Window
 
 Manual mode is the default mode. The IT admin has the choice of whether to target the built-in Administrator account, or a custom new account. This choice is configured via the AdministratorAccountName policy setting. If the AdministratorAccountName setting is empty, the built-in Administrator account is managed, otherwise AdministratorAccountName specifies the name of a custom local account.
 
-When a custom local account is specified, the IT admin is responsible for creating that account prior to enabling Windows LAPS - Windows LAPS doesn't create the account in this mode. Possible ways to do this include the Local Users and Groups GPO, the Accounts CSP, the Restricted Users and Groups CSP, custom custom policy-driven management scripts, or by including the target account into a base OS image. (These mechanisms do add extra complexity which can be avoided by using Automatic account management mode.)
+When a custom local account is specified, the IT admin is responsible for creating that account before enabling Windows LAPS - Windows LAPS doesn't create the account in this mode. There are many ways to create a local account:
+
+- Configuring the Local Users and Groups GPO
+- Configuring the Accounts CSP
+- Deploying custom policy-driven management scripts
+- Adding the target account to a base OS image.
+
+These mechanisms do add extra complexity which can be avoided by using Automatic account management mode.
 
 In this mode, the target account's *password* is protected against accidental or careless tampering. All other account configuration changes are allowed.
 
@@ -52,13 +59,13 @@ When automatic mode is enabled, the managed account is configured as follows:
 
 ### Automatic account management security improvements and considerations
 
-Like any user account, Windows local accounts represent a potential vulnerability vector for attackers. This threat is present for Windows LAPS-managed accounts as well, although mitigated to a huge extent by the highly complex passwords generated (and regularly rotated) by Windows LAPS. Automatic account management offers two improvements which can further mitigate threats when additional assurance is desired for high-threat environments.
+Like any user account, Windows local accounts represent a potential vulnerability vector for attackers. This threat is present for Windows LAPS-managed accounts as well, although mitigated to a huge extent by the highly complex passwords generated (and regularly rotated) by Windows LAPS. Automatic account management offers two improvements which can further mitigate threats when more assurance is desired for high-threat environments.
 
 - First, maintaining the managed account in a disabled state completely eliminates any chance that the account can be the target of a password spray or similar attack. Keeping the managed account in a disabled state does however introduce friction: the managed account must be enabled (via GPO or MDM policy manipulation) before the account can be used.
 
-- Second, maintaining a unique managed account name per device (via account name randomization) makes an attacker's job harder. Instead of knowing in advance which account to attack on all devices, the attacker must somehow find out the name of the account on a given target device. There is additional friction here as well since IT staff must be trained to not rely on knowing a common, organization-wide managed account name.
+- Second, maintaining a unique managed account name per device (via account name randomization) makes an attacker's job harder. Instead of knowing in advance which account to attack on all devices, the attacker must somehow find out the name of the account on a given target device. There's more friction here as well since IT staff must be trained to not rely on knowing a common, organization-wide managed account name.
 
-IT admins deploying Windows LAPS in security critical environment may consider these features. Whether the additional friction introduced by adopting these features is acceptable will depend on how often the Windows LAPS-managed account(s) need to be used, plus the security requirements of a given IT environment.
+IT admins deploying Windows LAPS in security critical environment should consider these features. Whether the friction introduced by adopting these features is acceptable depends on how often the Windows LAPS-managed accounts need to be used, plus the security requirements of a given IT environment.
 
 ### Integration with local account management policies
 
