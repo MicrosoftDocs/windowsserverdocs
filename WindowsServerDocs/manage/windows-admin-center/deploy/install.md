@@ -4,14 +4,14 @@ description: How to install Windows Admin Center on a Windows PC or on a server 
 ms.topic: article
 author: gswashington
 ms.author: robinharwood
-ms.date: 09/30/2024
+ms.date: 11/11/2024
 zone_pivot_groups: windows-os
 ---
 # Install Windows Admin Center
 
->Applies to: Windows Admin Center, Windows Admin Center (preview)
+>Applies to: Windows Admin Center, Windows Admin Center (preview), Windows Server 2025
 
-This topic describes how to install Windows Admin Center on a Windows client machine or on a remote server so that multiple users can access Windows Admin Center using a web browser.
+This topic describes how to install Windows Admin Center on a Windows client machine or on a Windows Server 2025 remote server so that multiple users can access Windows Admin Center using a web browser.
 
 > [!Tip]
 > New to Windows Admin Center?
@@ -65,7 +65,7 @@ To install Windows Admin Center on your machine running the Windows Server 2025 
 
 1. Select **Run as administrator** to open the **Get started with Windows Admin Center** window.
 
-1. Select **Next** to accept the license terms. After that, the installation app opens, and the Installer download starts automatically.
+1. Select **Next** to accept the license terms. The Installer download starts automatically and is saved to the Downloads folder. Windows Admin Center Setup then closes and starts the Installer.
 
 1. Once the installer has finished downloading, select **Install**.
 
