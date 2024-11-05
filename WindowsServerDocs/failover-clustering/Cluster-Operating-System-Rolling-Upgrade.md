@@ -1,21 +1,21 @@
 ---
-title: Cluster operating system rolling upgrade
-description: Learn about the Cluster operating system rolling upgrade process
+title: Cluster Operating System Rolling Upgrade
+description: Learn about the Cluster Operating System Rolling Upgrade process
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 10/31/2024
+ms.date: 11/11/2024
 ---
-# Cluster operating system rolling upgrade
+# Cluster Operating System Rolling Upgrade
 
 >Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of cluster nodes Hyper-V or Scale-Out File Server workloads without stopping them. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
 
-Cluster operating system rolling upgrade provides the following benefits:
+Cluster Operating System Rolling Upgrade provides the following benefits:
 
 - Failover clusters running Hyper-V virtual machine and Scale-out File Server (SOFS) workloads can be upgraded from a version of Windows Server, starting with Windows Server 2012 R2, to a newer version of Windows Server. For example you can upgrade Windows Server 2016 (running on all cluster nodes of the cluster) to Windows Server 2019 (running on all nodes in the cluster) without downtime.
-- It doesn't require any additional hardware. In small clusters, you can add additional cluster nodes temporarily to improve availability of the cluster during the Cluster operating system rolling upgrade process.
+- It doesn't require any additional hardware. In small clusters, you can add additional cluster nodes temporarily to improve availability of the cluster during the Cluster Operating System Rolling Upgrade process.
 - The cluster doesn't need to be stopped or restarted.
 - A new cluster is not required. The existing cluster is upgraded. In addition, existing cluster objects stored in Active Directory are used.
 - The upgrade process is reversible until the final step, when all cluster nodes are running the newer version of Windows Server and the `Update-ClusterFunctionalLevel` PowerShell cmdlet is run.
@@ -35,33 +35,33 @@ Cluster operating system rolling upgrade provides the following benefits:
     | 9 | Windows Server 2016 |
     | 10 | Windows Server 2019 |
 
-This article describes the various stages of the cluster operating system rolling upgrade process, installation steps, feature limitations, and frequently asked questions (FAQs), and is applicable to the following cluster operating system rolling Upgrade scenarios in Windows Server:
+This article describes the various stages of the Cluster Operating System Rolling Upgrade process, installation steps, feature limitations, and frequently asked questions (FAQs), and is applicable to the following Cluster Operating System Rolling Upgrade scenarios in Windows Server:
 
 - Hyper-V clusters
 - Scale-Out File Server clusters
 
 The following scenario is not supported:
 
-- Cluster operating system rolling upgrade of guest clusters using virtual hard disk (.vhdx file) as shared storage.
+- Cluster Operating System Rolling Upgrade of guest clusters using virtual hard disk (.vhdx file) as shared storage.
 
-Cluster operating system rolling upgrade is fully supported by System Center Virtual Machine Manager (SCVMM). If you are using SCVMM, see [Perform a rolling upgrade of a Hyper-V host cluster to Windows Server 2016 in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true) for guidance on upgrading the clusters and automating the steps that are described in this document.
+Cluster Operating System Rolling Upgrade is fully supported by System Center Virtual Machine Manager (SCVMM). If you are using SCVMM, see [Perform a rolling upgrade of a Hyper-V host cluster to Windows Server 2016 in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true) for guidance on upgrading the clusters and automating the steps that are described in this document.
 
 ## Requirements
 
-Complete the following requirements before you begin the cluster operating system rolling upgrade process:
+Complete the following requirements before you begin the Cluster Operating System Rolling Upgrade process:
 
 - Start with a Failover Cluster running Windows Server 2012 R2 or newer. You can upgrade to the next version, for example from Windows Server 2016 to Windows Server 2019.
 - Verify that the Hyper-V nodes have CPUs that support Second-Level Addressing Table (SLAT) using one of the following methods;
         - Review the [Are you SLAT Compatible? WP8 SDK Tip 01](/archive/blogs/devfish/are-you-slat-compatible-wp8-sdk-tip-01) article that describes two methods to check if a CPU supports SLATs
         - Download the [Coreinfo v3.31](/sysinternals/downloads/coreinfo) tool to determine if a CPU supports SLAT.
 
-## Cluster transition states during cluster operating system rolling upgrade
+## Cluster transition states during Cluster Operating System Rolling Upgrade
 
-This section describes the various transition states of the Windows Server cluster that is being upgraded to the next version of Windows Server using Cluster operating system rolling upgrade.
+This section describes the various transition states of the Windows Server cluster that is being upgraded to the next version of Windows Server using Cluster Operating System Rolling Upgrade.
 
-In order to keep the cluster workloads running during the Cluster operating system rolling upgrade process, moving a cluster workload from a node running an older version of Windows Server to a node running a newer version of Windows Server works by using a compatibility mode. This compatibility mode makes the nodes running the newer version of Windows Server appear as if they are running the the same older version of Windows Server. For example, when upgrading a Windows Server 2016 cluster to Windows Server 2019, Windows Server 2019 nodes operate in a Windows Server 2016 compatibility mode as a temporary measure. A new conceptual cluster mode, called *mixed-OS mode*, allows nodes of different versions to exist in the same cluster (see Figure 1).
+In order to keep the cluster workloads running during the Cluster Operating System Rolling Upgrade process, moving a cluster workload from a node running an older version of Windows Server to a node running a newer version of Windows Server works by using a compatibility mode. This compatibility mode makes the nodes running the newer version of Windows Server appear as if they are running the the same older version of Windows Server. For example, when upgrading a Windows Server 2016 cluster to Windows Server 2019, Windows Server 2019 nodes operate in a Windows Server 2016 compatibility mode as a temporary measure. A new conceptual cluster mode, called *mixed-OS mode*, allows nodes of different versions to exist in the same cluster (see Figure 1).
 
-![Illustration showing the three stages of a Cluster operating system rolling upgrade: all nodes Windows Server 2012 R2, mixed-OS mode, and all nodes Windows Server 2016](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Overview.png)
+![Illustration showing the three stages of a Cluster Operating System Rolling Upgrade: all nodes Windows Server 2012 R2, mixed-OS mode, and all nodes Windows Server 2016](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Overview.png)
 **Figure 1: Cluster operating system state transitions**
 
 A Windows Server cluster enters mixed-OS mode when a node running a newer version of Windows Server is added to the cluster. The process is fully reversible at this point - newer Windows Server nodes can be removed from the cluster and nodes running the existing version of Windows Server can be added to the cluster in this mode. The process is not reversible once the `Update-ClusterFunctionalLevel` PowerShell cmdlet is run on the cluster. In order for this cmdlet to succeed, all nodes must be running the newer version of Windows Server, and all nodes must be online.
@@ -93,17 +93,17 @@ After the `Update-ClusterFunctionalLevel` cmdlet is run, the cluster enters "Sta
 ![Illustration showing that the cluster rolling OS upgrade has been successfully completed; all nodes have been upgraded to Windows Server 2016, and the cluster is running at the Windows Server 2016 cluster functional level](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage4.png)
 **Figure 5: Final State: Windows Server 2016 Failover Cluster (Stage 4)**
 
-## The Cluster operating system rolling upgrade
+## Workflow
 
-This section describes the workflow for performing a Cluster operating system rolling upgrade.
+This section describes the workflow for performing a Cluster Operating System Rolling Upgrade.
 
 ![Illustration showing the workflow for upgrading a cluster](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png)
-**Figure 6: Cluster operating system rolling upgrade workflow**
+**Figure 6: Cluster Operating System Rolling Upgrade workflow**
 
-Cluster operating system rolling upgrade includes the steps below for upgrading from Windows Server 2012 R2 to Windows Server 2016, however the process is the same for later versions of Window Server.
+Cluster Operating System Rolling Upgrade includes the steps below for upgrading from Windows Server 2012 R2 to Windows Server 2016, however the process is the same for later versions of Window Server.
 
 1. Prepare the cluster for the operating system upgrade as follows:
-    1. Cluster operating system rolling upgrade requires removing one node at a time from the cluster. Check if you have sufficient capacity on the cluster to maintain HA SLAs when one of the cluster nodes is removed from the cluster for an operating system upgrade. In other words, do you require the capability to failover workloads to another node when one node is removed from the cluster during  the process of Cluster operating system rolling upgrade? Does the cluster have the capacity to run the required workloads when one node is removed from the cluster for Cluster operating system rolling upgrade?
+    1. Cluster Operating System Rolling Upgrade requires removing one node at a time from the cluster. Check if you have sufficient capacity on the cluster to maintain HA SLAs when one of the cluster nodes is removed from the cluster for an operating system upgrade. In other words, do you require the capability to failover workloads to another node when one node is removed from the cluster during  the process of Cluster Operating System Rolling Upgrade? Does the cluster have the capacity to run the required workloads when one node is removed from the cluster for Cluster Operating System Rolling Upgrade?
     2. For Hyper-V workloads, check that all Windows Server Hyper-V hosts have CPU support for Second-Level Address Table (SLAT). Only SLAT-capable machines can use the Hyper-V role in Windows Server 2016 and newer.
     3. Check that any workload backups have completed, and consider backing-up the cluster. Stop backup operations while adding nodes to the cluster.
     4. Check that all cluster nodes are online /running/up using the [`Get-ClusterNode`](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet (see Figure 7).
@@ -111,7 +111,7 @@ Cluster operating system rolling upgrade includes the steps below for upgrading 
         ![Screencap showing the results of running the Get-ClusterNode cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterNode.png)
         **Figure 7: Determining node status using Get-ClusterNode cmdlet**
 
-    5. If you are running Cluster Aware Updates (CAU), verify if CAU is currently running by using the **Cluster-Aware Updating** UI, or the [`Get-CauRun`](/powershell/module/clusterawareupdating/Get-CauRun) cmdlet (see Figure 8). Stop CAU using the [`Disable-CauClusterRole`](/powershell/module/clusterawareupdating/Disable-CauClusterRole) cmdlet (see Figure 9) to prevent any nodes from being paused and drained by CAU during the Cluster operating system rolling upgrade process.
+    5. If you are running Cluster Aware Updates (CAU), verify if CAU is currently running by using the **Cluster-Aware Updating** UI, or the [`Get-CauRun`](/powershell/module/clusterawareupdating/Get-CauRun) cmdlet (see Figure 8). Stop CAU using the [`Disable-CauClusterRole`](/powershell/module/clusterawareupdating/Disable-CauClusterRole) cmdlet (see Figure 9) to prevent any nodes from being paused and drained by CAU during the Cluster Operating System Rolling Upgrade process.
 
         ![Screencap showing the output of the Get-CauRun cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetCAU.png)
         **Figure 8: Using the [`Get-CauRun`](/powershell/module/clusterawareupdating/Get-CauRun) cmdlet to determine if Cluster Aware Updates is running on the cluster**
@@ -133,7 +133,7 @@ Cluster operating system rolling upgrade includes the steps below for upgrading 
         ![Screencap showing the output of the Remove-ClusterNode cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_RemoveNode.png)
         **Figure 12: Remove a node from the cluster using [`Remove-ClusterNode`](/powershell/module/failoverclusters/Remove-ClusterNode) cmdlet**
 
-    3. Reformat the system drive and perform a "clean operating system install" of Windows Server 2016 on the node using the **Custom: Install Windows only (advanced)** installation (see Figure 13) option in setup.exe. Avoid selecting the **Upgrade: Install Windows and keep files, settings, and applications** option because the Cluster operating system rolling upgrade doesn't encourage in-place operating system (OS) upgrade (feature update).
+    3. Reformat the system drive and perform a "clean operating system install" of Windows Server 2016 on the node using the **Custom: Install Windows only (advanced)** installation (see Figure 13) option in setup.exe. Avoid selecting the **Upgrade: Install Windows and keep files, settings, and applications** option because the Cluster Operating System Rolling Upgrade doesn't encourage in-place operating system (OS) upgrade (feature update).
 
         ![Screencap of the Windows Server 2016 installation wizard showing the custom install option selected](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_InstallOption.png)
         **Figure 13: Available installation options for Windows Server 2016**
@@ -235,7 +235,7 @@ Cluster operating system rolling upgrade includes the steps below for upgrading 
 
 6. Storage pools can be upgraded using the [Update-StoragePool](/powershell/module/storage/Update-StoragePool) PowerShell cmdlet - this is an online operation.
 
-Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scale-out File Server clusters, which can be upgraded without downtime, the Cluster operating system rolling upgrade process can be used for any cluster role.
+Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scale-out File Server clusters, which can be upgraded without downtime, the Cluster Operating System Rolling Upgrade process can be used for any cluster role.
 
 ## Restrictions / Limitations
 
@@ -252,22 +252,22 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
     We encourage customers to complete the upgrade within four weeks. We have successfully upgraded Hyper-V and Scale-out File Server clusters with zero downtime in less than four hours total.
 
 **Will you port this feature back to Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008?**
-    We do not have any plans to port this feature back to previous versions. The Cluster operating system rolling upgrade is envisioned as the solution for upgrading Windows Server clusters.
+    We do not have any plans to port this feature back to previous versions. The Cluster Operating System Rolling Upgrade is envisioned as the solution for upgrading Windows Server clusters.
 
-**Do the nodes running the older Windows Server version need to have all the software updates installed before starting the Cluster operating system rolling upgrade process?**
-    Yes, before starting the Cluster operating system rolling upgrade process, verify that all cluster nodes are updated with the latest software updates.
+**Do the nodes running the older Windows Server version need to have all the software updates installed before starting the Cluster Operating System Rolling Upgrade process?**
+    Yes, before starting the Cluster Operating System Rolling Upgrade process, verify that all cluster nodes are updated with the latest software updates.
 
 **Can I run the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet while nodes are Off or Paused?**
     No. All cluster nodes must be on and in active membership for the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet to work.
 
-**Does the Cluster operating system rolling upgrade work for any cluster workload? Does it work for SQL Server?**
-    Yes, the Cluster operating system rolling upgrade works for any cluster workload. However, it is only zero-downtime for Hyper-V and Scale-out File Server clusters. Most other workloads incur some downtime (typically a couple of minutes) when they failover, and failover is required at least once during the Cluster operating system rolling upgrade process.
+**Does the Cluster Operating System Rolling Upgrade work for any cluster workload? Does it work for SQL Server?**
+    Yes, the Cluster Operating System Rolling Upgrade works for any cluster workload. However, it is only zero-downtime for Hyper-V and Scale-out File Server clusters. Most other workloads incur some downtime (typically a couple of minutes) when they failover, and failover is required at least once during the Cluster Operating System Rolling Upgrade process.
 
 **Can I automate this process using PowerShell?**
-    Yes, we have designed the Cluster operating system rolling upgradeto be automated using PowerShell.
+    Yes, we have designed the Cluster Operating System Rolling Upgrade to be automated using PowerShell.
 
 **For a large cluster that has extra failover capacity, can I upgrade multiple nodes simultaneously?**
-    Yes. When one node is removed from the cluster to upgrade the OS, the cluster will have one less node for failover, hence will have a reduced failover capacity. For large clusters with enough workload and failover capacity, multiple nodes can be upgraded simultaneously. You can temporarily add cluster nodes to the cluster to provide improved workload and failover capacity during the Cluster operating system rolling upgrade process.
+    Yes. When one node is removed from the cluster to upgrade the OS, the cluster will have one less node for failover, hence will have a reduced failover capacity. For large clusters with enough workload and failover capacity, multiple nodes can be upgraded simultaneously. You can temporarily add cluster nodes to the cluster to provide improved workload and failover capacity during the Cluster Operating System Rolling Upgrade process.
 
 **What if I discover an issue in my cluster after [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) has been run successfully?**
     If you have backed-up the cluster database with a System State backup before running [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel), you should be able to perform an Authoritative restore on a node running the previous version of Windows Server and restore the original cluster database and configuration.
@@ -275,8 +275,8 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
 **Can I use in-place upgrade for each node instead of using clean-OS install by reformatting the system drive?**
     We do not encourage the use of in-place upgrade of Windows Server, but we are aware that it works in some cases where default drivers are used. Please carefully read all warning messages displayed during in-place upgrade of a cluster node.
 
-**If I am using Hyper-V replication for a Hyper-V VM on my Hyper-V cluster, will replication remain intact during and after the Cluster operating system rolling upgrade process?**
-    Yes, Hyper-V replica remains intact during and after the Cluster operating system rolling upgrade process.
+**If I am using Hyper-V replication for a Hyper-V VM on my Hyper-V cluster, will replication remain intact during and after the Cluster Operating System Rolling Upgrade process?**
+    Yes, Hyper-V replica remains intact during and after the Cluster Operating System Rolling Upgrade process.
 
-**Can I use System Center Virtual Machine Manager (SCVMM) to automate the Cluster operating system rolling upgrade process?**
-    Yes, you can automate the Cluster operating system rolling upgrade process using VMM in System Center.
+**Can I use System Center Virtual Machine Manager (SCVMM) to automate the Cluster Operating System Rolling Upgrade process?**
+    Yes, you can automate the Cluster Operating System Rolling Upgrade process using VMM in System Center.
