@@ -241,7 +241,8 @@ The well-known SIDs are listed in the following table:
 |S-1-5-32-577|Builtin\RDS Management Servers|A built-in local group. Servers in this group can perform routine administrative actions on servers running Remote Desktop Services. This group needs to be populated on all servers in a Remote Desktop Services deployment. The servers running the RDS Central Management service must be included in this group.|
 |S-1-5-32-578|Builtin\Hyper-V Administrators|A built-in local group. Members of this group have complete and unrestricted access to all features of Hyper-V.|
 |S-1-5-32-579|Builtin\Access Control Assistance Operators|A built-in local group. Members of this group can remotely query authorization attributes and permissions for resources on this computer.|
-|S-1-5-32-580|Builtin\Remote Management Users|A built-in local group. Members of this group can access Windows Management Instrumentation (WMI)  resources over management protocols (such as WS-Management via the Windows Remote Management service). This applies only to WMI namespaces that grant access to the user.|
+|S-1-5-32-580|Builtin\Remote Management Users|A built-in local group. Members of this group can access Windows Management Instrumentation (WMI) resources over management protocols (such as WS-Management via the Windows Remote Management service). This applies only to WMI namespaces that grant access to the user.|
+|S-1-5-32-581|Builtin\System Managed Accounts Group|Members of this group are managed by the system.|
 |S-1-5-32-582|Builtin\Storage Replica Administrators|Members of this group have complete and unrestricted access to all features of Storage Replica.|
 |S-1-5-32-583|Builtin\Device Owners|Members of this group can change system-wide settings.|
 |S-1-5-32-585|Builtin\OpenSSH Users|Members of this group may connect to this computer using SSH.|
