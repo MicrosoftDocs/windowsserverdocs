@@ -4,7 +4,7 @@ title: Guarded Fabric and Shielded VMs overview
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 02/16/2023
 ---
 

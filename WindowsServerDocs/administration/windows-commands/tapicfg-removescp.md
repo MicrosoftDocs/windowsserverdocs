@@ -2,7 +2,7 @@
 title: tapicfg removescp
 description: Reference article for the tapicfg removescp command, which removes a service connection point for a TAPI application directory partition.
 ms.topic: reference
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 09/29/2020

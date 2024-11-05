@@ -3,7 +3,7 @@ title: secedit commands
 description: Reference article for the secedit commands, which compare your current security configurations against specified security templates.
 ms.topic: reference
 ms.assetid: 58ed57ed-08e3-403d-a363-0620b358637a
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

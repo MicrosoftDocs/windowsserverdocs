@@ -5,7 +5,7 @@ ms.date: 7/7/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Define File Groups for Screening
 

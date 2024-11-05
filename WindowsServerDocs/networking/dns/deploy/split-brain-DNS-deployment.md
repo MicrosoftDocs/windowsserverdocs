@@ -4,7 +4,7 @@ description: Learn how to configure DNS policy in Windows Server 2016 for split-
 manager: brianlic
 ms.topic: article
 ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---

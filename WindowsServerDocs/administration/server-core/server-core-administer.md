@@ -4,7 +4,7 @@ description: Learn how to administer a Server Core installation of Windows Serve
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
+ms.author: alalve
 ms.date: 12/18/2018
 ms.topic: how-to
 ---

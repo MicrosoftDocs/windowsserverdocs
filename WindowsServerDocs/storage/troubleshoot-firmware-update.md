@@ -1,7 +1,7 @@
 ---
 description: Learn more about troubleshooting drive firmware updates
 title: Troubleshooting drive firmware updates
-ms.author: toklima
+ms.author: roharwoo
 ms.topic: article
 author: toklima
 ms.date: 04/01/2023

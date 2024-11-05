@@ -4,7 +4,7 @@ description: Learn how to create an organizational unit (OU) in Active Directory
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 2cda192f-6b45-4e6c-88d9-70ca179ddb94
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---

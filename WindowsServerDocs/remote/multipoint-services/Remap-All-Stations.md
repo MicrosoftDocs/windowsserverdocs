@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 5460bced-9a3b-4660-9d20-3b14df509dfc
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Remap All Stations

@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 288a6504-418c-4489-acc6-930410c47cdb
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # View Options for Session Thumbnails in MultiPoint Dashboard

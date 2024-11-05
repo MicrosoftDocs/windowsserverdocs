@@ -2,7 +2,7 @@
 title: tapicfg remove
 description: Reference article for the tapicfg remove command, which removes a TAPI application directory partition.
 ms.topic: reference
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 09/29/2020

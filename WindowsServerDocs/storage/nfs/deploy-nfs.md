@@ -3,7 +3,7 @@ title: Deploy Network File System
 description: Learn how to deploy Network File System (NFS), which lets your organization transfer files between Windows and UNIX systems.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/27/2023
 ---
 

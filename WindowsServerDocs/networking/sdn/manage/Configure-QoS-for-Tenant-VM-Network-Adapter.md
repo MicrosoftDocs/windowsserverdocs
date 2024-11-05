@@ -4,7 +4,7 @@ description: You can configure SDN QoS for a VM network adapter to limit bandwid
 manager: grcusanz
 ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/02/2021
 ---

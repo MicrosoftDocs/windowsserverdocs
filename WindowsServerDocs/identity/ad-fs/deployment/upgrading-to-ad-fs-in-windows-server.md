@@ -6,7 +6,7 @@ author: billmath
 manager: amycolannino
 ms.date: 06/21/2023
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Upgrade an existing AD FS farm by using Windows Internal Database

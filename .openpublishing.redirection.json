@@ -10221,6 +10221,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/OpenSSH/OpenSSH_Overview.md",
+      "redirect_url": "/windows-server/administration/OpenSSH/openssh-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/OpenSSH/OpenSSH_Server_Configuration.md",
+      "redirect_url": "/windows-server/administration/OpenSSH/openssh-server-configuration",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/networking/technologies/vpn-stub.md",
       "redirect_url": "/windows-server/remote/remote-access/vpn/vpn-top",
       "redirect_document_id": false
@@ -11894,6 +11904,31 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/rdp-files.md",
       "redirect_url": "/azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/dc-locator-changes.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/dc-locator",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": true
     }
   ]
 }

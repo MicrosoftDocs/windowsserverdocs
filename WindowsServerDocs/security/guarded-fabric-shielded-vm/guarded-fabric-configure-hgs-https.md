@@ -4,7 +4,7 @@ title: Configure HGS for HTTPS communications
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

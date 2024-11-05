@@ -4,7 +4,7 @@ description: This topic provides links to overview topics for Quality of Service
 ms.topic: article
 ms.assetid: a37398a4-fe46-464f-8a33-829ef3c6db55
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

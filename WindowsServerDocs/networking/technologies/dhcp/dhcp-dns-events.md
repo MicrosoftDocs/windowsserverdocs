@@ -4,7 +4,7 @@ description: This topic provides information about DHCP server logging events in
 manager: brianlic
 ms.topic: how-to
 ms.assetid: beb8c188-6fcf-4520-8825-d17f8ee9fb04
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

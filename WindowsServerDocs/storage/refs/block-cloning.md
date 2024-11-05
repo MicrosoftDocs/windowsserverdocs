@@ -2,14 +2,14 @@
 description: "Learn more about: Block cloning on ReFS"
 ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
 title: Block cloning on ReFS
-author: gawatu
-ms.author: daknappe
-ms.date: 06/12/2024
+author: xelu86
+ms.author: roharwoo
+ms.date: 09/23/2024
 ms.topic: article
 ---
 # Block cloning on ReFS
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11 24H2
 
 Block cloning instructs the file system to copy a range of file bytes on behalf of an application, where the destination file may be the same as, or different from, the source file. Traditional copy operations, unfortunately, are expensive since they trigger expensive read and writes to the underlying physical data.
 
@@ -52,8 +52,8 @@ After the modifying write, region B is still shared by both files. If region A w
 - The source and destination files must have the same [Integrity Streams](/windows/win32/fileio/file-attribute-constants) setting.
 - If the source file is sparse, the destination file must also be sparse.
 - The block clone operation breaks Shared Opportunistic Locks (also know as [Level 2 Opportunistic Locks](/windows/win32/fileio/types-of-opportunistic-locks)).
-- The ReFS volume must have been formatted with Windows Server 2016, and if Failover Clustering is in use, the Clustering Functional Level must have been Windows Server 2016 or later at format time.
-- Beginning with the Windows 11 Moment 5 update (KB5034848) and later releases of Windows client and Windows Server builds, block cloning occurs natively in supported Windows copy operations.
+- The ReFS volume must have been formatted with Windows Server 2016, and if Failover Clustering is in use, the Clustering Functional Level must be Windows Server 2016 or later at format time.
+- Starting with Windows 11 24H2 and Windows Server 2025 builds, block cloning occurs natively in supported Windows copy operations.
 
 ## See also
 

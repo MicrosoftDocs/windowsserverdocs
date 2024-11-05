@@ -82,7 +82,7 @@ The following table describes the three group scopes and how they work as securi
 
 ### Special identity groups
 
-Special identities are referred to as groups. Special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
+Special identity group is where certain special identities are grouped together. Special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
 
 For more information, see [Special identity groups](understand-special-identities-groups.md).
 
@@ -302,7 +302,7 @@ The Cert Publishers group applies to the Windows Server operating system in [Def
 
 Members of the Cloneable Domain Controllers group that are domain controllers may be cloned. In Windows Server 2012 R2 and Windows Server 2012, you can deploy domain controllers by copying an existing virtual domain controller. In a virtual environment, you no longer have to repeatedly deploy a server image that's prepared by using *Sysprep.exe*, promoting the server to a domain controller, and then complete more configuration requirements for deploying each domain controller (including adding the virtual domain controller to this security group).
 
-For more information, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100).
+For more information, see [Safely virtualizing Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100)
 
 |Attribute|Value|
 |--- |--- |
@@ -605,7 +605,7 @@ Members of this group are RODCs in the enterprise. Except for account passwords,
 
 RODCs address some of the issues that are commonly found in branch offices. These locations might not have a domain controller, or they might have a writable domain controller but not the physical security, network bandwidth, or local expertise to support it.
 
-For more information, see [What is a read-only domain controller?](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771030(v=ws.10))
+For more information, see [What Is an RODC?](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771030(v=ws.10)) 
 
 The Enterprise Read-only Domain Controllers group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -727,7 +727,7 @@ To make this determination, the Windows security system computes a trust path be
 
 This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
-For more information, see [How domain and forest trusts work: Domain and forest trusts](/previous-versions/windows/it-pro/windows-server-2003/cc773178(v=ws.10)).
+For more information, see [How Domain and Forest Trusts Work](/previous-versions/windows/it-pro/windows-server-2003/cc773178(v=ws.10)).
 
 The Incoming Forest Trust Builders group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -965,7 +965,7 @@ The RAS and IAS Servers group applies to the Windows Server operating system in 
 
 Servers that are members in the RDS Endpoint Servers group can run virtual machines and host sessions where user RemoteApp programs and personal virtual desktops run. You must populate this group on servers running RD Connection Broker. Session Host servers and RD Virtualization Host servers used in the deployment must be in this group.
 
-For information about Remote Desktop Services (RDS), see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
+For information about Remote Desktop Services (RDS), see [Remote Desktop Services overview in Windows Server](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
 
 |Attribute|Value|
 |--- |--- |
@@ -999,7 +999,7 @@ You can use servers that are members of the RDS Management Servers group to comp
 
 Servers in the RDS Remote Access Servers group provide users with access to RemoteApp programs and personal virtual desktops. In internet-facing deployments, these servers typically are deployed in an edge network. You must populate this group on servers running RD Connection Broker. RD Gateway servers and RD Web Access servers that are used in the deployment must be in this group.
 
-For more information, see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
+For more information, see [Remote Desktop Services overview in Windows Server](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
 
 |Attribute|Value|
 |--- |--- |
@@ -1029,7 +1029,7 @@ Because you can delegate administration of an RODC to a domain user or security 
 
 - Contains read-only Domain Name System (DNS)
 
-For more information, see [Understand planning and deployment for read-only domain controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754719(v=ws.10)).
+For more information, see [Understanding Planning and Deployment for Read-Only Domain Controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754719(v=ws.10)).
 
 |Attribute|Value|
 |--- |--- |

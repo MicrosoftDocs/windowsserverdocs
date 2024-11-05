@@ -2,7 +2,7 @@
 title: winnt
 description: Reference article for winnt command that is deprecated and might not be supported in future releases of Windows.
 ms.topic: reference
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 04/01/2023
 ---

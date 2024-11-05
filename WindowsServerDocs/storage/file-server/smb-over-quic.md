@@ -3,7 +3,7 @@ title: SMB over QUIC in Windows
 description: Describes the SMB over QUIC feature in Windows Server and Windows client.
 ms.topic: article
 author: NedPyle
-ms.author: wscontent
+ms.author: roharwoo
 ms.contributor: inhenkel
 ms.date: 07/17/2024
 ---
@@ -69,11 +69,11 @@ To use SMB over QUIC, you need the following things:
    - Subject: *(CN= anything, but must exist)*
    - Private key included: yes
 
-   :::image type="content" source="./media/smb-over-quic/cert1.png" alt-text="certificate settings showing Signature algorithm with a value of sha256RSA, signature hash algorithm value of sha256, and Subject value of ws2022-quic":::
+   :::image type="content" source="./media/smb-over-quic/cert1.png" alt-text="Screenshot of certificate settings showing Signature algorithm with a value of sha256RSA, signature hash algorithm value of sha256, and Subject value of ws2022-quic.":::
 
-   :::image type="content" source="./media/smb-over-quic/cert2.png" alt-text="Certificate settings under the Detail tab showing Public key value of ECC (256 bits), public key parameters ECDSA-P256 and Application policies 1 application Certificate Policy ":::
+   :::image type="content" source="./media/smb-over-quic/cert2.png" alt-text="Screenshot of certificate settings under the Detail tab showing Public key value of ECC (256 bits), public key parameters ECDSA-P256 and Application policies 1 application Certificate Policy. ":::
 
-   :::image type="content" source="./media/smb-over-quic/cert3.png" alt-text="Certificate details showing subject alternative name value as DNS Name equals ws2022-quic.corp, and Key Usage value as Digital Signature, Non-Repudiated":::
+   :::image type="content" source="./media/smb-over-quic/certificate-details.png" alt-text="Screenshot of certificate details showing subject alternative name value as DNS Name equals contoso.com, and Key Usage value as Digital Signature, Non-Repudiated.":::
 
    If using a Microsoft Enterprise Certificate Authority, you can create a certificate template and allow the file server administrator to supply the DNS names when requesting it. For more information on creating a certificate template, review [Designing and Implementing a PKI: Part III Certificate Templates](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/designing-and-implementing-a-pki-part-iii-certificate-templates/ba-p/397860). For a demonstration of creating a certificate for SMB over QUIC using a Microsoft Enterprise Certificate Authority, watch this video:
 
@@ -94,11 +94,9 @@ To use SMB over QUIC, you need the following things:
    1. So users can use to locate the file server, fill in the value **Subject** with a common name and **Subject Alternative Name** with one or more DNS names.
    1. Select **Ok** and then select **Enroll**.
 
-   :::image type="content" source="./media/smb-over-quic/select-cert.png" alt-text="An image showing the Microsoft Management Console Certificate Enrollment with SMB over QUIC selected":::
+   :::image type="content" source="./media/smb-over-quic/select-cert.png" alt-text="An image showing the Microsoft Management Console Certificate Enrollment with SMB over QUIC selected.":::
 
-   :::image type="content" source="./media/smb-over-quic/san-cert.png" alt-text="An image showing the Certificate Properties windows of the selected certificate":::
-
-   :::image type="content" source="./media/smb-over-quic/mmccert.png" alt-text="An image showing the completion process of the certificate enrollment in Microsoft Management Console":::
+   :::image type="content" source="./media/smb-over-quic/certificate-properties-subject.png" alt-text="An image showing the Certificate Properties windows of the selected certificate.":::
 
 > [!NOTE]
 > Don't use IP addresses for SMB over QUIC server Subject Alternative Names.
@@ -130,11 +128,11 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 1. Select a certificate under **Select a computer certificate for this file server**, select the server addresses clients can connect to or select **Select all**, and select **Enable**.
 
-    :::image type="content" source="./media/smb-over-quic/wac1.png" alt-text="An image showing the configuration screen for SMB over QUIC in Windows Admin Center":::
+    :::image type="content" source="./media/smb-over-quic/wac1.png" alt-text="An image showing the configuration screen for SMB over QUIC in Windows Admin Center.":::
 
 1. Ensure that the certificate and SMB over QUIC report are healthy.
 
-    :::image type="content" source="./media/smb-over-quic/wac2.png" alt-text="An image showing all of the certificates available for the configured SMB over QUIC setting in Windows Admin Center":::
+    :::image type="content" source="./media/smb-over-quic/windows-admin-center-certificates.png" alt-text="An image showing all of the certificates available for the configured SMB over QUIC setting in Windows Admin Center.":::
 
 1. Select the **Files and File Sharing** menu option. Note your existing SMB shares or create a new one.
 

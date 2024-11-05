@@ -3,7 +3,7 @@ title: ftp
 description: Reference article for the ftp command, which transfers files to and from a computer running a File Transfer Protocol (ftp) server service.
 ms.topic: reference
 ms.assetid: 758335e1-fd8d-448c-a654-993126239dd9
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

@@ -3,7 +3,7 @@ title: more
 description: Reference article for the more command, which displays one screen of output at a time.
 ms.topic: reference
 ms.assetid: ded14f6a-d82f-4aeb-a2d8-7ec1c94dfb8f
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 07/26/2019

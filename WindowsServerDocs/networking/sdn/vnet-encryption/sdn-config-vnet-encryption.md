@@ -4,7 +4,7 @@ description: Learn how to create the encryption certificate, create the certific
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/02/2021
 ---

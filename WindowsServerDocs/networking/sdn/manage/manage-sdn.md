@@ -4,7 +4,7 @@ description: Learn how to manage Software Defined Networking, including tenant w
 manager: grcusanz
 ms.topic: article
 ms.assetid: 7e2b4540-de56-4d5f-bb8e-9f81ca0ea4eb
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---

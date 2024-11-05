@@ -5,7 +5,7 @@ ms.date: 6/5/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Migrate a domain-based namespace to Windows Server 2008 Mode
 

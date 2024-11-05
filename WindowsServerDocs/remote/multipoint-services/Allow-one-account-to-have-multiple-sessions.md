@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: f14cf1bd-f176-4de4-b27d-f3d8e6334158
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Allow one account to have multiple sessions
