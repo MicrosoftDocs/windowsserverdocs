@@ -15,7 +15,7 @@ Once remote support is activated, Microsoft Support gains temporary access to yo
 
 To streamline setup and improve support issue resolution, the remote support Arc extension can preinstall the remote support agent on all cluster nodes and configure scheduled tasks for Just Enough Administration (JEA). The JEA workflow is as follows:
 
-[ ![A screenshot of the Just Enough Administrator remote support workflow.](../media/azure-arc/azure-arc-remote-support-just-enough-administration.png)](../media/azure-arc/azure-arc-remote-support-just-enough-administration.png#lightbox)
+[ ![A screenshot of the Just Enough Administrator remote support workflow.](../media/azure-arc/azure-arc-remote-support-just-enough-administration.png)
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ If remote support access is no longer needed, users can elect to revoke access a
 
 The following terms and conditions outline how data is handled during remote support sessions. Read them carefully before granting access.
 
-```Terms_and_Conditions
+```
 By approving this request, the Microsoft support organization or the Azure engineering team
 supporting this feature ("Microsoft Support Engineer") will be given direct access to your device
 for troubleshooting purposes and/or resolving the technical issue described in the Microsoft
