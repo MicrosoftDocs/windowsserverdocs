@@ -134,6 +134,10 @@ To use Windows Admin Center in the Azure portal, the Windows Admin Center agent 
 - Windows Server 2016 or later
 - 3 GB of RAM or more
 - Azure Arc agent version 1.13.21320.014 or later
+- You must use Windows Server Pay-as-you-go or Software Assurance license types
+
+> [!IMPORTANT]
+> As of November 1st, 2024, Windows Admin Center for Azure Arc requires your hybrid machine to have a Pay-as-you-go or Software Assurance license type to use. All new installations of the Windows Admin Center agent must adhere to this requirement. Machines with Windows Admin Center for Azure Arc installed prior to November 1st, 2024, may continue to use Windows Admin Center for Azure Arc for up to 12 months without updates until November 1st, 2025. 
 
 ### Networking requirements
 
@@ -373,6 +377,8 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't yet available.
+- As of November 1st, 2024, some existing customers are unable to use Windows Admin Center for Azure Arc.
+- As of November 1st, 2024, some customers are unable to install or use Windows Admin Center for Azure Arc, even with proper license attestation.
 
 ## Frequently asked questions
 
