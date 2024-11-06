@@ -39,7 +39,7 @@ To configure remote support, perform the following steps:
    [ ![A screenshot of the remote support tool's remote support sessions page.](../media/azure-arc/azure-arc-remote-support-sessions.png)](../media/azure-arc/azure-arc-remote-support-sessions.png#lightnox)
 
 1. To grant access for a remote support session, select **+ Grant access** at the top of the page.
-1. Specify the **Access level** and **Access period** for your session
+1. Specify the **Access level** and **Access period** for your session.
 
    [ ![A screenshot of the remote support tool's grant remote support access level and access period screen.](../media/azure-arc/azure-arc-remote-support-grant-remote-support-access.png)](../media/azure-arc/azure-arc-remote-support-grant-remote-support-access.png#lightbox)
 
