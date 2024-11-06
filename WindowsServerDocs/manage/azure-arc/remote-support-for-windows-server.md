@@ -68,7 +68,7 @@ If remote support access is no longer needed, users can elect to revoke access a
 
 The following terms and conditions outline how data is handled during remote support sessions. Read them carefully before granting access.
 
-```Terms and Conditions
+```Terms_and_Conditions
 By approving this request, the Microsoft support organization or the Azure engineering team
 supporting this feature ("Microsoft Support Engineer") will be given direct access to your device
 for troubleshooting purposes and/or resolving the technical issue described in the Microsoft
