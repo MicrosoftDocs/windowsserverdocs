@@ -9,11 +9,11 @@ ms.date: 11/06/2024
 
 # Configure Remote Support for Arc-enabled Windows servers
 
-By enabling Remote Support (preview), you allow a Microsoft Support professional to resolve your issue faster by accessing your device remotely for troubleshooting. You have complete control over the level of access that Microsoft support professionals have, the duration of access, and your consent is required to access your device. Microsoft support can only access your device after you have submitted a support request. To learn how to create a request, see [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+By enabling Remote Support (preview), you allow a Microsoft Support professional to resolve your issue faster by accessing your device remotely for troubleshooting. You have complete control over the level of access that Microsoft support professionals have, the duration of access, and your consent is required to access your device. Microsoft support can only access your device after you submitted a support request. To learn how to create a request, see [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
 Once remote support is activated, Microsoft Support gains temporary access to your device. Access is made through a secure, audited, and compliant channel that uses HTTPS over port 443 with TLS 1.2 encrypted traffic. The actions Microsoft support professionals can perform are limited to what you allow, using [Just Enough Administration](/powershell/scripting/security/remoting/jea/overview) (JEA). This process involves authenticated access between you and Microsoft support for diagnostics, troubleshooting, and remediation actions.
 
-To streamline setup and improve support issue resolution, the remote support arc extension can pre-install the remote support agent on all cluster nodes and support the configuration of scheduled tasks for JEA. The JEA workflow is as follows:
+To streamline setup and improve support issue resolution, the remote support Arc extension can preinstall the remote support agent on all cluster nodes and configure scheduled tasks for Just Enough Administration (JEA). The JEA workflow is as follows:
 
 [ ![A screenshot of the Just Enough Administrator remote support workflow.](../media/azure-arc/azure-arc-remote-support-just-enough-administration.png)](../media/azure-arc/azure-arc-remote-support-just-enough-administration.png#lightbox)
 
@@ -33,7 +33,7 @@ To configure remote support, perform the following steps:
 
    [ ![A screenshot of the Azure portal with the remote support tool selected under the Windows management node.](../media/azure-arc/azure-arc-remote-support.png)](../media/azure-arc/azure-arc-remote-support.png#lightbox)
 
-1. Once the setup completes, you'll be taken to the **Remote Support Sessions** screen.
+1. Once the setup completes, the **Remote Support Sessions** screen is displayed.
 
    [ ![A screenshot of the remote support tool's remote support sessions page.](../media/azure-arc/azure-arc-remote-support-sessions.png)](../media/azure-arc/azure-arc-remote-support-sessions.png#lightnox)
 
@@ -66,19 +66,30 @@ If remote support access is no longer needed, users can elect to revoke access a
 
 ## Remote support terms and conditions
 
-The following terms and conditions outline how data will be handled during remote support sessions. Read them carefully before granting access.
+The following terms and conditions outline how data is handled during remote support sessions. Read them carefully before granting access.
 
-The following are the data handling terms and conditions for remote access. Carefully read them before granting access.
+```Terms and Conditions
+By approving this request, the Microsoft support organization or the Azure engineering team
+supporting this feature ("Microsoft Support Engineer") will be given direct access to your device
+for troubleshooting purposes and/or resolving the technical issue described in the Microsoft
+support case.
 
-- By approving this request, the Microsoft support organization or the Azure engineering team supporting this feature ("Microsoft Support Engineer") will be given direct access to your device for troubleshooting purposes and/or resolving the technical issue described in the Microsoft support case.
+During a remote support session, a Microsoft Support Engineer may need to collect logs. By enabling
+remote support, you have agreed to a diagnostics log collection by a Microsoft Support Engineer to
+address a support case. You also acknowledge and consent to the upload and retention of those logs
+in an Azure storage account managed and controlled by Microsoft. These logs may be accessed by
+Microsoft in the context of a support case and to improve the health of Windows Server.
 
-- During a remote support session, a Microsoft Support Engineer may need to collect logs. By enabling remote support, you have agreed to a diagnostics log collection by a Microsoft Support Engineer to address a support case. You also acknowledge and consent to the upload and retention of those logs in an Azure storage account managed and controlled by Microsoft. These logs may be accessed by Microsoft in the context of a support case and to improve the health of Windows Server.
+The data will be used only to troubleshoot failures that are subject to a support ticket, and will
+not be used for marketing, advertising, or any other commercial purposes without your consent. The
+data may be retained for up to ninety (90) days and will be handled following our standard privacy
+practices.
 
-- The data will be used only to troubleshoot failures that are subject to a support ticket, and will not be used for marketing, advertising, or any other commercial purposes without your consent. The data may be retained for up to ninety (90) days and will be handled following our standard privacy practices.
+Any data previously collected with your consent will not be affected by the revocation of your
+permission.
+```
 
-- Any data previously collected with your consent will not be affected by the revocation of your permission.
-
-For more information about how Microsoft processes personal data, including what data is processed and for what purposes, please refer to the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement).
+For more information about how Microsoft processes personal data, including what data is processed and for what purposes, see the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement).
 
 ## See also
 
