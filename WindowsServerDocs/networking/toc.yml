@@ -272,7 +272,9 @@ items:
         - name: Network Controller
           href: /azure-stack/hci/concepts/network-controller-overview
           items:
-          - name: Network Controller high availability
+          - name: Network Controller with Failover Clustering
+            href: sdn/technologies/network-controller-failover-clustering.md
+          - name: Network Controller with Service Fabric
             href: sdn/technologies/network-controller/network-controller-high-availability.md
           - name: Install the Network Controller server role using Server Manager
             href: sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md
