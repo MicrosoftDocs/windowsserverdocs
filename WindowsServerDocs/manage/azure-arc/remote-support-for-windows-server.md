@@ -4,7 +4,7 @@ description: Learn how to configure, grant, and revoke remote support assistance
 ms.topic: how-to
 ms.author: alalve
 author: trungtran
-ms.date: 11/06/2024
+ms.date: 11/07/2024
 ---
 
 # Configure Remote Support for Arc-enabled Windows servers
@@ -13,7 +13,7 @@ By enabling Remote Support (preview), you allow a Microsoft Support professional
 
 Once remote support is activated, Microsoft Support gains temporary access to your device. Access is made through a secure, audited, and compliant channel that uses HTTPS over port 443 with TLS 1.2 encrypted traffic. The actions Microsoft support professionals can perform are limited to what you allow, using [Just Enough Administration](/powershell/scripting/security/remoting/jea/overview) (JEA). This process involves authenticated access between you and Microsoft support for diagnostics, troubleshooting, and remediation actions.
 
-To streamline setup and improve support issue resolution, the remote support Arc extension can preinstall the remote support agent on all cluster nodes and configure scheduled tasks for Just Enough Administration (JEA). The JEA workflow is as follows:
+To streamline setup and improve support issue resolution, the remote support Arc extension can preinstall the remote support agent on all cluster nodes and configure scheduled tasks for JEA. The JEA workflow is as follows:
 
 <p align="center">
 <img src="../media/azure-arc/azure-arc-remote-support-just-enough-administration.png" alt="A screenshot of the Just Enough Administrator remote support workflow."></p>
