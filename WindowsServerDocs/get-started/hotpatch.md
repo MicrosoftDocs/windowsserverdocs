@@ -7,7 +7,7 @@ ms.date: 11/01/2024
 ms.author: wscontent
 ---
 
-# Hotpatch for virtual machines
+# Hotpatch for Windows Server
 
 Hotpatching is a way to install OS security updates on Windows Server without having to restart your machine. Hotpatching patches the in-memory code of running processes without the need to restart the process. Hotpatching also provides the following benefits:
 
@@ -116,7 +116,7 @@ Azure Stack HCI can orchestrate Hotpatch updates for VMs using the following too
 
 ### Azure Arc-connected machines
 
-Azure Arc-connected machines can consume Hotpatch updates using the following tools:
+Azure Arc-connected machines can install and manage Hotpatch updates using the following tools:
 
 - Azure Update Manager
 
