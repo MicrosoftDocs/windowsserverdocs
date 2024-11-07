@@ -292,6 +292,8 @@ items:
               href: sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md
           - name: Software Load Balancing (SLB) for SDN
             href: /azure-stack/hci/concepts/software-load-balancer
+        - name: SDN Multisite overview
+          href: /azure-stack/hci/concepts/sdn-multisite-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Container networking
           href: sdn/technologies/Containers/Container-networking-overview.md
       - name: Plan for SDN
@@ -314,6 +316,8 @@ items:
       - name: Manage SDN
         href: sdn/manage/manage-sdn.md
         items:
+        - name: Manage SDN Multisite
+          href: /azure-stack/hci/manage/manage-sdn-multisite?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Configure network security groups with tags
           href: /azure-stack/hci/manage/configure-network-security-groups-with-tags?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Use default network access policies
