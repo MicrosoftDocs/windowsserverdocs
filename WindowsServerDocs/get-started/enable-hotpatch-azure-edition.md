@@ -20,7 +20,7 @@ Hotpatch for Windows Server 2022 Datacenter: Azure Edition virtual machines (VMs
 When using Hotpatch for your ISO deployed machine on Azure Stack HCI, there are a few important
 differences with the Hotpatch experience compared with using Hotpatch as part of Azure Automanage for Azure VMs.
 
- The differences include:
+The differences include:
 
 - Hotpatch configuration isn't available via Azure Update Manager.
 - Hotpatch can't be disabled.
