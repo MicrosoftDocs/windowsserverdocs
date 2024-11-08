@@ -3,7 +3,7 @@ description: "Learn more about: Appendix G: Securing Administrators Groups in Ac
 ms.assetid: 4baefbd3-038f-44c0-85ba-f24e9722b757
 title: Appendix G - Securing Administrators Groups in Active Directory
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -11,7 +11,7 @@ ms.topic: article
 
 # Appendix G: Securing Administrators Groups in Active Directory
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 
 ## Appendix G: Securing Administrators Groups in Active Directory

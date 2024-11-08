@@ -1,7 +1,7 @@
 ---
 title: Removing servers in Storage Spaces Direct
 ms.assetid: 9d8499a7-1307-473d-9f00-8a051164fad2
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
@@ -11,7 +11,7 @@ ms.date: 2/5/2017
 
 # Removing servers in Storage Spaces Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic describes how to remove servers in [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) using PowerShell.
 

@@ -6,12 +6,12 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/03/2022
+ms.date: 7/3/2024
 ---
 
 # Get started with the Android client
 
->Applies to: Windows Server 2022, Windows Server 2019, Android 9.0 and later
+>
 
 You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device or a Chromebook that supports the Google Play Store.
 

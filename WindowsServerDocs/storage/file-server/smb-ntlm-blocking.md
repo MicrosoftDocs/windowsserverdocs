@@ -1,16 +1,12 @@
 ---
-title: Block NTLM connections on SMB (preview)
+title: Block NTLM connections on SMB in Windows Server 2025
 description: Learn how to make SMB more secure by blocking NTLM.
 ms.topic: how-to
 author: Heidilohr
 ms.author: helohr
-ms.date: 03/07/2024
+ms.date: 10/25/2024
 ---
-# Block NTLM connections on SMB (preview)
-
-> [!IMPORTANT]
-> Windows Server Insider builds are in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Block NTLM connections on SMB
 
 The SMB client now supports blocking NTLM authentication for remote outbound connections. Blocking NTLM authentication prevents bad actors from tricking clients into sending NTLM requests to malicious servers, counteracting brute force, cracking, and pass-the-hash attacks. NTLM blocking is also required for switching an organization's authentication protocols to Kerberos, which is more secure than NTLM because it can verify server identities with its ticket system. However, organizations can also enable this layer of protection without having to disable NTLM entirely.
 
@@ -19,8 +15,8 @@ The SMB client now supports blocking NTLM authentication for remote outbound con
 NTLM blocking for the SMB client requires the following prerequisites:
 
 - An SMB client running on one of the following operating systems.
-  - [Windows Server Insiders build 25951](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25951/m-p/3926636) or later.
-  - [Windows 11 Insiders build 25951](https://blogs.windows.com/windows-insider/2023/09/13/announcing-windows-11-insider-preview-build-25951-canary-channel/) or later.
+  - Windows Server 2025 or later.
+  - Windows 11, version 24H2 or later.
 - An SMB server that allows using Kerberos.
 
 > [!TIP]
@@ -28,7 +24,7 @@ NTLM blocking for the SMB client requires the following prerequisites:
 
 ## Configure SMB client NTLM blocking
 
-Starting with Windows Server Insiders build 25951 and Windows 11 Insiders build 25951, you have the option to configure SMB to block NTLM. To improve the security of deployments running earlier versions of Windows, you must disable NTLM manually, either by editing the relevant Group Policy or running a specific command in PowerShell.
+Starting with Windows Server 2025 and Windows 11, version 24H2, you have the option to configure SMB to block NTLM. To improve the security of deployments running earlier versions of Windows, you must disable NTLM manually, either by editing the relevant Group Policy or running a specific command in PowerShell.
 
 To configure NTLM blocking:
 

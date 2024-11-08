@@ -2,13 +2,13 @@
 description: Learn more about Forest-Wide Updates
 title: Active Directory Forest-Wide Updates
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 ms.topic: article
 ms.date: 04/01/2023
 ---
 # Forest-Wide Updates
 
-Applies to: Windows Server: (All supported versions)
+
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed when running `adprep /forestprep` on Windows Server.
 

@@ -3,14 +3,14 @@ title: Viewing and Managing Updates
 description: Windows Server Update Service (WSUS) article - How to view and manage updates in the WSUS console
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: femila
 ms.date: 08/11/2023
 ---
 # Viewing and Managing Updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 You can use the WSUS console to view and manage updates.
 

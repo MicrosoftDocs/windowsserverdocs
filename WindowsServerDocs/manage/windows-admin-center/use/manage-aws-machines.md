@@ -1,8 +1,8 @@
 ---
 title: Manage Windows Server in Amazon EC2 using Windows Admin Center
 description: Learn how to use Windows Admin Center to connect and manage Windows Server on Amazon EC2
-author: t-denizgu
-ms.author: t-denizgu
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to 
 ms.date: 07/05/2023
 

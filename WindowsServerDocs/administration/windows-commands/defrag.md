@@ -3,13 +3,13 @@ title: defrag
 description: Reference article for the defrag command, which locates and consolidates fragmented files on local volumes to improve system performance.
 ms.topic: reference
 ms.assetid: aaf1d1ac-996a-4282-9b4d-1e8245ff162c
-ms.author: wscontent
+ms.author: roharwoo
 author: xelu86
 ms.date: 09/28/2023
 ---
 # defrag
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 11, Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 

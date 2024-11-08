@@ -2,7 +2,7 @@
 title: Windows LAPS passwords and passphrases
 description: Documents password and passphrase details for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
-ms.author: jsimmons
+ms.author: justinha
 ms.date: 12/25/2023
 ms.topic: conceptual
 ---
@@ -17,15 +17,15 @@ The primary purpose of Windows LAPS is regularly rotate the password of a local 
 
 ## Password character sets
 
-Windows LAPS supports five different complexity settings that can be used to generate random passwords. The PasswordComplexity policy setting is used to choose which character sets are used when creating a password:
+Windows LAPS supports five different complexity settings that can be used to generate random passwords. The PasswordComplexity policy setting is used to choose which character sets are used when creating a password.
 
-|PasswordComplexity setting|Character sets|
-|---|---|
-|1|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"|
-|2|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"|
-|3|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"|
-|4|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"<br/><br/>",.-+;!#&@{}[]$/()%"|
-|5|"ABCDEFGHJKLMNPRSTUVWXYZ"<br/><br/>"abcdefghijkmnpqrstuvwxyz"<br/><br/>"23456789"<br/><br/>"!#%+@:=?*"|
+|PasswordComplexity setting|Description|Character sets|
+|---|---|---|
+|1|Large letters|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"|
+|2|Large letters + small letters|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"|
+|3|Large letters + small letters + numbers|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"|
+|4|Large letters + small letters + numbers + specials|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"<br/><br/>",.-+;!#&@{}[]$/()%"|
+|5|Large letters + small letters + numbers (improved readability)|"ABCDEFGHJKLMNPRSTUVWXYZ"<br/><br/>"abcdefghijkmnpqrstuvwxyz"<br/><br/>"23456789"<br/><br/>"!#%+@:=?*"|
 
 When a complexity setting with multiple character sets is chosen, Windows LAPS ensures that the resultant password contains at least one character randomly chosen from each character set.
 
@@ -39,7 +39,7 @@ Password complexity setting five is equivalent to password complexity setting fo
 - Adds the symbols ':', '=', '?', and '*'
 
 > [!IMPORTANT]
-> The PasswordComplexity setting of '5' is supported in Windows 11 Insider Preview Build 26040 and later.
+> The PasswordComplexity setting of '5' is only supported in Windows 11 24H2, Windows Server 2025 and later releases. It is not required to deploy any Windows Server 2025 domain controllers in order to use this new setting.
 
 ## Passphrase word lists
 
@@ -60,7 +60,7 @@ Example of a passphrase created with six words taken from the "Long words" list:
 Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Random Passphrases"](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) by [Electronic Frontier Foundation](https://www.eff.org/), and are used under a CC-BY-3.0 Attribution license. The specific contents of all Windows LAPS passphrase word lists can be downloaded from [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471). Microsoft made slight modifications to the original word lists; all changes are detailed in the downloadable lists.
 
 > [!IMPORTANT]
-> Windows LAPS passphrase support is supported in Windows 11 Insider Preview Build 26040 and later.
+> Windows LAPS passphrase support is only supported in Windows 11 24H2, Windows Server 2025 and later releases. It is not required to deploy Windows Server 2025 domain controllers in order to use this new setting.
 
 ## Entropy considerations
 

@@ -1,15 +1,15 @@
 ---
 title: Understanding the desktop hosting environment
 description: Overview of an RDS deployment using Azure IaaS.
-ms.author: elizapo
-ms.date: 08/01/2016
+ms.author: roharwoo
+ms.date: 7/3/2024
 ms.topic: article
-author: lizap
+author: robinharwood
 manager: dongill
 ---
 # Understanding the desktop hosting environment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 The following information describes the components of the desktop hosting service.
 

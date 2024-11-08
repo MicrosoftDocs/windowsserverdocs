@@ -3,14 +3,14 @@ title: Manage disks
 description: Learn how to manage disks in a computer using Disk Management and discover whether a disk is online or offline and how to bring it online.
 ms.date: 03/08/2023
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 
 # Manage disks
 
-> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 This article and the related topics show you how to use Disk Management to manage the disks in a computer. It includes information about how Windows manages the online status of new disks.
 

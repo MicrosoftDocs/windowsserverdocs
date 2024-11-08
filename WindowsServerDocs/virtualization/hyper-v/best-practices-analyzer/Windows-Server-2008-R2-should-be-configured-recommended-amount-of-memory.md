@@ -1,15 +1,15 @@
 ---
 title: Windows Server 2008 R2 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows Server 2008 R2 is configured with less than the recommended amount of RAM, which is 2 GB.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.topic: article
 ms.assetid: 26872519-ccf0-4757-827f-8df2a7a2b9f9
 ms.date: 8/16/2016
 ---
 # Windows Server 2008 R2 should be configured with the recommended amount of memory
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

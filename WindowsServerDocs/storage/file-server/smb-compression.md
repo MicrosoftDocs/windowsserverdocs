@@ -4,13 +4,13 @@ description: Describes the SMB compression features in the Windows Operating Sys
 ms.product: windows-server
 ms.topic: article
 author: NedPyle
-ms.author: inhenkel
-ms.date: 03/14/2024
+ms.author: roharwoo
+ms.date: 10/25/2024
 ---
 
 # SMB compression
 
->Applies to: Windows Server 2022, Windows 11
+>
 
 SMB compression allows an administrator, user, or application to request compression of files as they transfer over the network. This removes the need to first manually deflate a file with an application, copy it, then inflate on the destination computer. Compressed files consume less network bandwidth and take less time to transfer, at the cost of slightly increased CPU usage during transfers. SMB compression is most effective on networks with less bandwidth, such as a client's 1 Gbps ethernet or Wi-Fi network; a file transfer over an uncongested 100 Gbps ethernet network between two servers with flash storage may be as fast without SMB compression in practice, but will still create less congestion for other applications.
 
@@ -22,6 +22,9 @@ SMB compression in Windows has the following characteristics:
 - Supports SMB over QUIC
 - Supports SMB Multichannel
 - Doesn't support SMB Direct over RDMA
+
+> [!NOTE]
+> Windows 11 and Windows Server 2025 also support compression algorithm LZ4 as defined by [LZ4.org](https://lz4.org). For further information about this compression algorithm, see [LZ4 Compression Documentation](https://github.com/lz4/lz4/blob/dev/doc/lz4_Block_format.md).
 
 For a demonstration of SMB compression, watch this video:
 
@@ -37,7 +40,7 @@ To use SMB compression in a traditional client-file server workload, you need th
 
 ## Configuring SMB compression
 
-You can configure SMB compression from both a client and server perspective. Client and server don't refer to a particular edition like Windows Server 2022 or Windows 11 Insider Preview but instead to the architecture of a file transfer between two computers. Both Windows Server 2022 and Windows 11 support being a client or server of SMB compression.
+You can configure SMB compression from both a client and server perspective. Client and server don't refer to a particular edition like Windows Server 2022 or Windows 11, version 24H2, but instead to the architecture of a file transfer between two computers. Both Windows Server 2022 and Windows 11 support being a client or server of SMB compression.
 
 ### Requesting SMB compression on file shares
 

@@ -2,14 +2,14 @@
 title: Configure and manage the quorum in a failover cluster
 description: Detailed info on how to manage the cluster quorum in a Windows Server failover cluster.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 manager: lizross
 ms.date: 02/28/2022
 ---
 # Configure and manage quorum
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
+
 
 This article provides background and steps to configure and manage the quorum in a failover cluster.
 

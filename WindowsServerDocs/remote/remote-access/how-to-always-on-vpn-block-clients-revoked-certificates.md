@@ -3,12 +3,12 @@ title: Block VPN clients that use revoked certificates on Windows Server
 description: This article shows you how to configure RRAS server to block VPN clients that use a revoked IKEv2 certificate for authentication after installing any Windows update.
 ms.topic: article
 ms.date: 05/04/2023
-ms.author: wscontent
-author: anaharris-ms
+ms.author: roharwoo
+author: robinharwood
 ---
 # Block VPN clients that use revoked certificates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10+
+>
 
 This article shows you how to configure RRAS server to block VPN clients that use a revoked IKEv2 certificate for authentication after installing any Windows update.
 

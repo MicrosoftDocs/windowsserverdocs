@@ -2,7 +2,7 @@
 description: "Learn more about: Implementing Least-Privilege Administrative Models"
 ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: Implementing Least-Privilege Administrative Models
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -10,7 +10,7 @@ ms.topic: article
 ---
 # Implementing Least-Privilege Administrative Models
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 The following excerpt is from [The Administrator Accounts Security Planning Guide](/previous-versions/tn-archive/cc162797(v=technet.10)), first published on April 1, 1999:
 

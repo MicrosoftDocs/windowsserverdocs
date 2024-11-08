@@ -36,7 +36,7 @@ For information about installing, configuring, managing, using, and troubleshoot
 
 - [Windows Server Essentials evaluation](https://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7)
 
-- [Windows Server Essentials Health Report](https://www.microsoft.com/download/details.aspx?id=35565)
+- [Windows Server Essentials Health Report](/windows-server/failover-clustering/health-service-reports)
 
 - **Updates:** see [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
 

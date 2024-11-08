@@ -3,7 +3,7 @@ title: What's new with the Windows Admin Center Azure extension
 description: This article has release notes for the Windows Admin Center agent for Windows Admin Center in Azure.
 ms.topic: overview
 author: prasidharora
-ms.author: praror
+ms.author: roharwoo
 ms.date: 01/23/2023
 ---
 
@@ -19,6 +19,33 @@ This page is updated monthly, so revisit it regularly.
 
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
+
+## Version 0.31.0.0 - June 2024
+
+### New features
+- Support for Windows 10/11 machines
+
+### Fixed
+- Fixed an issue where connection to Azure Stack HCI clusters fails
+
+## Version 0.24.0.0 - April 2024
+
+### New features
+- Updated the build of Windows Admin Center to our [**new** modernized gateway](https://aka.ms/WACModernizedGatewayDoc)
+- Significant agent upgrade from .NET 4.6.2 to .NET Core
+- Switch to a multi-process, micro-service based architecture, allowing Admin Center to be more flexible, scalable, and resilient
+- Shift from Kantana to Kestrel HTTP web server
+
+### Fixed
+- Fixed an issue where updating between versions fails because certificates don't get imported
+- Fixed an issue where installation would fail on WDAC-enforced devices
+- Fixed an issue where connection would fail due to a new Chromium policy impacting 1% of Edge/Chrome users
+
+## Version 0.0.0.340 - March 2024
+
+### Fixed
+- Fixed an issue where the Remote Desktop tool was not working or resizing it would make it unusable
+- Fixed an issue where the text in some languages was garbled
 
 ## Version 0.0.0.332 - December 2023
 

@@ -1,7 +1,7 @@
 ---
 title: Configure AD FS and Microsoft Entra multifactor authentication
 description: Learn more about configuring Microsoft Entra multifactor authentication as authentication provider using AD FS.
-ms.author: wscontent
+ms.author: roharwoo
 author: billmath
 manager: amycolannino
 ms.date: 03/13/2024
@@ -81,6 +81,8 @@ The following prerequisites are required when you use Microsoft Entra multifacto
 - Global administrator permissions on your instance of Microsoft Entra ID to configure it by using Azure AD PowerShell.
 - Enterprise administrator credentials to configure the AD FS farm for Microsoft Entra multifactor authentication.
 
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../WindowsServerDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+
 ## Configure the AD FS Servers
 
 In order to complete configuration for Microsoft Entra multifactor authentication for AD FS, you need to configure each AD FS server by using the steps described here.
@@ -156,7 +158,7 @@ Open PowerShell, and enter your own *tenantId* with the `Set-AdfsAzureMfaTenant`
 Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 
-:::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png" alt-text="Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.":::
+:::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ad-fs-azure-mfa-5.png" alt-text="Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.":::
 
 Windows Server without the latest service pack doesn't support the `-Environment` parameter for the `Set-AdfsAzureMfaTenant` cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlet correctly registered your tenant information or if you aren't in the Azure Government cloud:
 

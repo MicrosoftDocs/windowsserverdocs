@@ -3,13 +3,13 @@ title: Choosing a BranchCache Design
 description: Learn how to learn about BranchCache modes and to select the best modes for your deployment.
 ms.topic: how-to
 ms.assetid: 86c1ccad-2aa4-40fe-84c1-f77c49eb1216
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Choosing a BranchCache Design
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to learn about BranchCache modes and to select the best modes for your deployment.
 

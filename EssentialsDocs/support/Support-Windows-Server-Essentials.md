@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
-ms.author: wscontent
+ms.author: roharwoo
 manager: mtillman
 ---
 
@@ -101,7 +101,7 @@ This section provides information to help you troubleshoot common problems that 
 
 - [Software assurance support](https://support.microsoft.com/default.aspx?scid=fh;%5Bln%5D;SoftAssurance)
 
-- [Microsoft Technology Centers](https://www.microsoft.com/mtc/default.aspx)
+- [Microsoft Technology Centers](https://www.microsoft.com/mtc)
 
 - [Support for small businesses](https://smallbusiness.support.microsoft.com/contact)
 

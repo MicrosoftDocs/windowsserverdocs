@@ -2,7 +2,7 @@
 description: Learn more about various site functions in AD DS
 title: Site functions
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 ms.date: 05/16/2023
 ms.topic: article
 ms.custom: inhenkel
@@ -10,7 +10,7 @@ ms.custom: inhenkel
 
 # Site functions
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
  Windows Server 2008  uses site information for many purposes, including routing replication, client affinity, system volume (SYSVOL) replication, Distributed File System Namespaces (DFSN), and service location.
 

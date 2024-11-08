@@ -2,14 +2,14 @@
 title: Event logging
 description: Event logging from Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: IngridAtMicrosoft
-ms.author: wscontent
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/18/2018
 ---
 
 # Use event logging in Windows Admin Center to gain insight into management activities and track gateway usage
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 Windows Admin Center writes event logs to let you see the management activities being performed on the servers in your environment, as well as to help you troubleshoot any Windows Admin Center issues.
 

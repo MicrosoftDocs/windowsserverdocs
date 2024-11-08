@@ -2,8 +2,8 @@
 title: Windows Server 2022 Performance Tuning Guidelines
 description: Performance tuning guidelines for Windows Server 2022
 ms.topic: landing-page
-ms.author: phstee
-author: phstee
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

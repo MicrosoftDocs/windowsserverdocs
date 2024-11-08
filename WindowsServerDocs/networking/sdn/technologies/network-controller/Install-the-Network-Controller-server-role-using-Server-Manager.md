@@ -4,13 +4,13 @@ description: This topic provides instructions on how to install the Network Cont
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
-ms.author: v-mandhiman
-author: ManikaDhiman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Install the Network Controller Server Role Using Server Manager
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.
 

@@ -2,7 +2,7 @@
 title: Time accuracy improvements for Windows Server 2016
 description: Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.
 author: dahavey
-ms.author: dahavey
+ms.author: roharwoo
 ms.date: 10/17/2018
 ms.topic: article
 ---

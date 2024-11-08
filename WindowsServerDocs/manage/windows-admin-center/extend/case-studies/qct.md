@@ -3,7 +3,7 @@ title: Windows Admin Center SDK Case Study - QCT
 description: Windows Admin Center SDK Case Study - QCT
 ms.topic: article
 author: daniellee-msft
-ms.author: jol
+ms.author: roharwoo
 ms.date: 06/14/2019
 ---
 # QCT Management Suite Extension

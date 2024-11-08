@@ -4,12 +4,12 @@ description: Lists the versions of Linux integration services for supported Cent
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: kkkashan        
-ms.author: kkashanjat
+ms.author: roharwoo
 ms.date: 09/27/2023
 ---
 # Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 
-> Applies To: Azure Stack HCI, Windows Server 2022, Windows Server Windows Server 2019, Hyper-V Server Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 11, Windows 10, Windows 8.1
+> 
 
 The following feature distribution maps indicate the features that are present
 in built-in and downloadable versions of Linux Integration Services. The known

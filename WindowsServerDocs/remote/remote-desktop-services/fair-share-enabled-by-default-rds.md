@@ -1,7 +1,7 @@
 ---
 title: Fair Share technologies are enabled by default in Remote Desktop Services
 description: Describes how an RDSH server uses Fair Share technology to balance CPU, disk, and network bandwidth resources among multiple Remote Desktop sessions. 
-ms.date: 04/21/2022
+ms.date: 7/3/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -15,7 +15,7 @@ ms.custom: sap:administration, csstroubleshoot
 
 This article describes how a Remote Desktop Session Host (RDSH) server, Windows 10 Enterprise multi-session, Windows 11 Enterprise multi-session, and Windows Server use Fair Share technologies to balance CPU, disk, and network bandwidth resources among multiple Remote Desktop sessions.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows 10 Enterprise multi-session, Windows 11 Enterprise multi-session  
+_
 _Original KB number:_ &nbsp; 4494631
 
 ## Introduction

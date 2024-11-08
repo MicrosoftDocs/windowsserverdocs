@@ -3,9 +3,9 @@ title: Create a MultiPoint Dashboard User Account
 description: Create an account to use with the dashboard
 ms.topic: article
 ms.assetid: eb9d7da1-eb5e-42c0-8d59-bb6d7b007ea9
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Create a MultiPoint Dashboard User Account

@@ -2,7 +2,7 @@
 description: Learn more about How LDAP Server Cookies Are Handled
 title: How LDAP server cookies are handled
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 ms.date: 04/01/2023
 ms.topic: article
 ms.custom: inhenkel
@@ -10,7 +10,7 @@ ms.custom: inhenkel
 
 # How LDAP server cookies are handled
 
-Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In LDAP, some queries result in a large result set. Such queries pose certain challenges to Windows Server.
 

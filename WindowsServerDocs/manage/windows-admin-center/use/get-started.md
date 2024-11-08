@@ -9,7 +9,7 @@ ms.date: 09/21/2022
 
 # Get Started with Windows Admin Center
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview
+> 
 
 This article describes how to get started with Windows Admin Center after you've downloaded it and installed it on a Windows PC. [Download Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center). To read about installing, see [Install Windows Admin Center on a PC or server](../../windows-admin-center/deploy/install.md). To learn more about Windows Admin Center, see [Windows Admin Center overview](../overview.md).
 
@@ -29,8 +29,6 @@ Follow these steps to open Windows Admin Center on a Windows PC:
    > [!NOTE]
    > In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), instead of being prompted for a certificate, you will be asked to log into the Windows Admin Center gateway. Step two does not apply.
 1. Select the certificate labeled **Windows Admin Center Client**, then select **OK**. You can also select the **Certificate information** link to see more details about the certificate.
-
-   :::image type="content" source="../media/launch/select-certificate.png" alt-text="Screenshot of the prompt showing options to select a certificate.":::
 
    > [!IMPORTANT]
    > Make sure to select the **Windows Admin Center Client** certificate when prompted, and not any other certificate. If you select any other certificate, the following error message appears:

@@ -3,13 +3,13 @@ title: Create a DFS Namespace
 description: This article describes how to create a DFS namespace.
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 # Create a DFS namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>
 
 To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](/powershell/module/dfsn/new-dfsnroot) from a Windows PowerShell session.
 

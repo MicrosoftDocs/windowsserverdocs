@@ -1,23 +1,23 @@
 ---
-description: "Learn more about: Join a Computer to a Domain"
+description: Learn how to configure a computer that functions as a federation server to join it to a domain.
 ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
-title: Join a Computer to a Domain
+title: Join a computer to a domain
 author: billmath
 manager: amycolannino
-ms.date: 09/12/2022
+ms.date: 08/19/2024
 ms.topic: article
 ms.author: alalve
 ---
 
-# Join a Computer to a Domain
+# Join a computer to a domain
 
-For Active Directory Federation Services \(AD FS\) to function, each computer that functions as a federation server must be joined to a domain. Federation server proxies may be joined to a domain, but this is not a requirement.
+For Active Directory Federation Services (AD FS) to function, each computer that functions as a federation server must be joined to a domain. Federation server proxies can be joined to a domain, but this is not a requirement.
 
-You do not have to join a Web server to a domain if the Web server is hosting claims\-aware applications only.
+You don't have to join a Web server to a domain if the Web server is hosting claims-aware applications only.
 
 Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
-### To join a computer to a domain
+## To join a computer to a domain
 
 1. On the Desktop, click the **Start** button, type **Control Panel**, and then press ENTER.
 
@@ -31,7 +31,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 1. Click **OK** in the Computer Name/Domain Changes dialog box, and then restart the computer.
 
-### To join a server to a domain
+## To join a server to a domain
 
 1. On the Desktop, click the **Start** button, type **Control Panel**, and then press ENTER.
 
@@ -45,8 +45,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 1. Click **OK** in the Computer Name/Domain Changes dialog box, and then restart the server.
 
-## Additional references
+## Related content
 
-[Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)
-
-[Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)
+- [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)
+- [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)

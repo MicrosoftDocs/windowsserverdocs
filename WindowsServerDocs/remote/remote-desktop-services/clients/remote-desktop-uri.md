@@ -6,11 +6,11 @@ ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 06/01/2020
+ms.date: 7/3/2024
 ---
 # Remote Desktop URI scheme
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
+>
 
 This document defines the format of Uniform Resource Identifiers (URIs) for Remote Desktop. These URI schemes allow for Remote Desktop clients to be invoked with various commands.
 

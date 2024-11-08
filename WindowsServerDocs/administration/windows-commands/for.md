@@ -3,7 +3,7 @@ title: for
 description: Reference article for the for command, which runs a specified command for each file, within a set of files.
 ms.topic: reference
 ms.assetid: e275726c-035f-4a74-8062-013c37f5ded1
-ms.author: wscontent
+ms.author: roharwoo
 author: xelu86
 ms.date: 10/04/2023
 ---
@@ -60,19 +60,19 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
   - **Directories only:** If *set* contains wildcard characters (**&#42;** or **?**), the specified *command* executes for each directory (instead of a set of files in a specified directory) that matches *set*. The syntax is:
 
     ```
-    for /d {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
+    for /d {%%|%}<variable> in (<set>) do <command> [<commandlineoptions>]
     ```
 
   - **Recursive:** Walks the directory tree that is rooted at *drive*:*path* and executes the **for** statement in each directory of the tree. If no directory is specified after **/r**, the current directory is used as the root directory. If *set* is just a single period (.), it only enumerates the directory tree. The syntax is:
 
     ```
-    for /r [[<drive>:]<path>] {%%|%}<variable> in (<set>) do <command> [<commandlinepptions>]
+    for /r [[<drive>:]<path>] {%%|%}<variable> in (<set>) do <command> [<commandlineoptions>]
     ```
 
   - **Iterating a range of values:** Use an iterative variable to set the starting value (*start*#) and then step through a set range of values until the value exceeds the set ending value (*end*#). **/l** executes the iterative by comparing *start*# with *end*#. If *start*# is less than *end*# the command executes. When the iterative variable exceeds *end*#, the command shell exits the loop. You can also use a negative *step*# to step through a range in decreasing values. For example, (1,1,5) generates the sequence 1 2 3 4 5 and (5,-1,1) generates the sequence 5 4 3 2 1. The syntax is:
 
     ```
-    for /l {%%|%}<variable> in (<start#>,<step#>,<end#>) do <command> [<commandlinepptions>]
+    for /l {%%|%}<variable> in (<start#>,<step#>,<end#>) do <command> [<commandlineoptions>]
     ```
 
   - **Iterating and file parsing:** Use file parsing to process command output, strings, and file content. Use iterative variables to define the content or strings that you want to examine, and use the various *parsingkeywords* options to further modify the parsing.  Use the *parsingkeywords* token option to specify which tokens should be passed as iterative variables. When used without the token option, **/f** will only examine the first token.
@@ -82,9 +82,9 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
     The syntaxes are:
 
     ```
-    for /f [<parsingkeywords>] {%%|%}<variable> in (<set>) do <command> [<commandlinepptions>]
-    for /f [<parsingkeywords>] {%%|%}<variable> in (<literalstring>) do <command> [<commandlinepptions>]
-    for /f [<parsingkeywords>] {%%|%}<variable> in ('<command>') do <command> [<commandlinepptions>]
+    for /f [<parsingkeywords>] {%%|%}<variable> in (<set>) do <command> [<commandlineoptions>]
+    for /f [<parsingkeywords>] {%%|%}<variable> in (<literalstring>) do <command> [<commandlineoptions>]
+    for /f [<parsingkeywords>] {%%|%}<variable> in ('<command>') do <command> [<commandlineoptions>]
     ```
 
     The *set* argument specifies one or more file names. Each file is opened, read, and processed before moving to the next file in *set*. To override the default parsing behavior, specify *parsingkeywords*. This is a quoted string that contains one or more keywords to specify different parsing options.
@@ -92,9 +92,9 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
     If you use the **usebackq** option, use one of the following syntaxes:
 
     ```
-    for /f [usebackq <parsingkeywords>] {%%|%}<variable> in (<Set>) do <command> [<commandlinepptions>]
-    for /f [usebackq <parsingkeywords>] {%%|%}<variable> in ('<LiteralString>') do <command> [<commandlinepptions>]
-    for /f [usebackq <parsingkeywords>] {%%|%}<variable> in (`<command>`) do <command> [<commandlinepptions>]
+    for /f [usebackq <parsingkeywords>] {%%|%}<variable> in (<set>) do <command> [<commandlineoptions>]
+    for /f [usebackq <parsingkeywords>] {%%|%}<variable> in ('<literalstring>') do <command> [<commandlineoptions>]
+    for /f [usebackq <parsingkeywords>] {%%|%}<variable> in (`<command>`) do <command> [<commandlineoptions>]
     ```
 
     The following table lists the parsing keywords that you can use for *parsingkeywords*.

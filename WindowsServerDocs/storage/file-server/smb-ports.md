@@ -1,17 +1,13 @@
 ---
-title: Configure alternative SMB ports for Windows Server (preview)
-description: How to configure alternative SMB ports on Windows Server.
+title: Configure alternative SMB ports for Windows Server 2025
+description: How to configure alternative SMB ports on Windows Server 2025
 ms.topic: how-to
 author: Heidilohr
 ms.author: helohr
-ms.date: 02/21/2024
+ms.date: 10/25/2024
 ---
 
-# Configure alternative SMB ports (preview)
-
-> [!IMPORTANT]
-> Windows Server Insider builds are in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Configure alternative SMB ports
 
 You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports. However, you can only connect to alternative ports if the SMB server is configured to support listening on that port.
 
@@ -23,9 +19,9 @@ In order to configure alternative ports, you need the following:
 
 - Your system must be running one of the following two operating systems:
 
-  - [Windows 11 Insider Preview Build 25992](https://blogs.windows.com/windows-insider/2023/11/08/announcing-windows-11-insider-preview-build-25992-canary-channel/) or later
+  - Windows 11, version 24H2 or later
 
-  - [Windows Server Preview Build 25997](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25997/m-p/3983949) or later
+  - Windows Server 2025 or later
 
 - Admin permissions
 

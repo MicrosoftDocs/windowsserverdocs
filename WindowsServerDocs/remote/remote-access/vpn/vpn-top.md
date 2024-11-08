@@ -4,13 +4,13 @@ description: Learn how you can use RAS Gateway as a single-tenant VPN server.
 ms.topic: article
 ms.assetid: cd4908f0-0d6f-4c02-8f98-4dc88c3dcb65
 ms.date: 11/05/2018
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ---
 
 # Virtual Private Networking (VPN)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
+>
 
 ## RAS Gateway as a Single Tenant VPN Server
 

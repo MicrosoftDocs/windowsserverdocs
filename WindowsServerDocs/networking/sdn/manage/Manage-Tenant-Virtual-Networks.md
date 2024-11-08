@@ -4,13 +4,13 @@ description: Learn how to manage Tenant Hyper-V Network Virtualization Virtual N
 manager: grcusanz
 ms.topic: article
 ms.assetid: 5905532b-626d-4b35-99a3-72a063e25809
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 08/07/2020
 ---
 # Manage Tenant Virtual Networks
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use the topics in this section to manage Tenant Hyper-V Network Virtualization Virtual Networks after you have deployed Software Defined Networking by using the topic [Deploy a Software Defined Network infrastructure using scripts](../../sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
 

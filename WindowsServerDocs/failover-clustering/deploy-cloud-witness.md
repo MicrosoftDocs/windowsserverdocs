@@ -2,16 +2,16 @@
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a cloud witness for a failover cluster in Windows Server
 manager: lizross
-ms.author: jgerend
+ms.author: roharwoo
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 ms.date: 10/10/2023
 description: How to use Microsoft Azure to host the witness for a Windows Server failover cluster in the cloud - also known as how to deploy a Cloud Witness.
 ---
 
 # Deploy Cloud Witness for a failover cluster
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 Cloud Witness is a type of failover cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This article contains an overview of the Cloud Witness feature, which scenarios it supports, and instructions for how to configure a cloud witness for a failover cluster. For more information, see [Set up a cluster witness](/azure-stack/hci/manage/witness).
 
@@ -124,7 +124,7 @@ To use the Quorum Configuration setup workflow to configure Cloud Witness:
 
 To configure Cloud Witness using PowerShell:
 
-1. Run the `Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format to set up Cloud Witness.
+1. Run the [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format to set up Cloud Witness.
 
    ```powershell
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
@@ -136,7 +136,7 @@ To configure Cloud Witness using PowerShell:
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
    ```
 
-1. To verify that the setup process was successful, run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
+1. To verify that the setup process was successful, run the [`Get-ClusterQuorum`](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
 
    ```powershell
    Get-ClusterQuorum

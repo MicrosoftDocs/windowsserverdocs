@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: AD Forest Recovery - Redeploy remaining DCs"
 title: AD Forest Recovery - Redeploy remaining DCs
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 07/10/2023
@@ -11,7 +11,7 @@ ms.custom: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 
 # Active Directory Forest Recovery - Redeploy remaining DCs
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>
 
 The steps up to this point apply to all forests: find a valid backup for each domain, recover the domains in isolation, reconnect them, reset the global catalog, and clean up. In this next step, you'll redeploy the forest. The way to do this will greatly depend on your forest design, your service level agreements, site structure, available bandwidth, and numerous other factors. You'll need to design your own redeployment plan based on the principles and suggestions in this section, in a way that is best suited to your business requirements.
 

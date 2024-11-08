@@ -2,8 +2,8 @@
 title: Features removed or no longer developed starting with Windows Server 2016
 description: Learn about the features and functionalities removed or no longer developed starting with Windows Server 2016.
 ms.topic: conceptual
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 manager: femila
 ms.date: 8/16/2021
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437

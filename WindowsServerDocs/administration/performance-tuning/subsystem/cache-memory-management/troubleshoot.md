@@ -2,8 +2,8 @@
 title: Troubleshoot Cache and Memory Manager Performance Issues
 description: Troubleshoot Cache and Memory Manager Performance Issues on Windows Server 2016
 ms.topic: article
-ms.author: pavel
-author: phstee
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/07/2023
 ---
 

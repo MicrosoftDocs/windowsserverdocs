@@ -4,13 +4,13 @@ description: This topic provides links to topics on how to deploy a Microsoft So
 ms.topic: how-to
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
 ms.date: 10/28/2021
-ms.author: v-mandhiman
-author: ManikaDhiman
+ms.author: roharwoo
+author: robinharwood
 manager: grcusanz
 ---
 # Deploy a Software Defined Network infrastructure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 Deploy Microsoft's Software Defined Networking (SDN) infrastructure.
 

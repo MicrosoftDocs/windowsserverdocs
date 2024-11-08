@@ -17,9 +17,6 @@ Active Directory Federation Service (AD FS) enables Federated Identity and Acces
 
 This document contains a list of all of the documentation overviews for AD FS for Windows Server. This includes the following:
 
-
-* [What's New in AD FS for Windows Server 2019](../ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
-
 * [AD FS OpenID Connect/OAuth flows and Application Scenarios](../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
 
 * [AD FS Requirements](./overview/ad-fs-requirements.md)

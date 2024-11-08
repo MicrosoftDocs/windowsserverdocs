@@ -3,14 +3,14 @@ description: "Learn more about: Troubleshooting Active Directory Replication Pro
 ms.assetid: b11f7a65-ec7b-4c11-8dc4-d7cabb54cd94
 title: Troubleshooting Active Directory Replication Problems
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 03/07/2024
 ms.topic: article
 ---
 # Troubleshooting Active Directory Replication Problems
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=adrepl" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Active Directory replication issues.</span>
 
@@ -53,7 +53,7 @@ Periodic hardware upgrades can also cause domain controllers to be out of servic
 
 ### Firewall configuration
 
-By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=22578).
+By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](/troubleshoot/windows-server/active-directory/restrict-ad-rpc-traffic-to-specific-port).
 
 For information about the ports that Active Directory replication uses, see [Active Directory Replication Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc739941(v=ws.10)).
 

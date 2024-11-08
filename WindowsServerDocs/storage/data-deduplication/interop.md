@@ -3,14 +3,14 @@ description: "Learn more about: Data Deduplication interoperability"
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
 title: Data Deduplication interoperability
 ms.topic: article
-author: IngridAtMicrosoft
+author: robinharwood
 manager: klaasl
-ms.author: inhenkel
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Data Deduplication interoperability
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 ## Supported
 

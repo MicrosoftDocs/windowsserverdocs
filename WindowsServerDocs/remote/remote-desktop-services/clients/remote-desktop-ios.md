@@ -6,12 +6,12 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/03/2022
+ms.date: 7/3/2024
 ---
 
 # Get started with the iOS client
 
->Applies to: Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
+>
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
@@ -36,6 +36,13 @@ To download the client:
 
 1. Download the Microsoft Remote Desktop client from the [iOS App Store](https://aka.ms/rdios) or [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.yml#how-do-i-set-up-a-pc-for-remote-desktop-).
+
+## Beta client
+
+If you want to help us test new builds before they're released, you should download our beta client. Organizations can use the beta client to validate new versions for their users before they're generally available. You can download the beta client for iOS and iPadOS from TestFlight. The beta client shouldn't be used in production. To get started, see [Microsoft Remote Desktop for iOS](https://testflight.apple.com/join/vkLIflUJ).
+
+> [!IMPORTANT]
+> The Remote Desktop app is changing to Windows App. To ensure you can validate the upcoming Windows App update before it's released into the store, the Windows App preview is now available in the Remote Desktop Beta channels where you can test the experience of updating from Remote Desktop to Windows App. To learn more about Windows App, see [Get started with Windows App to connect to devices and apps](/windows-app/get-started-connect-devices-desktops-apps).
 
 ### Add a PC
 

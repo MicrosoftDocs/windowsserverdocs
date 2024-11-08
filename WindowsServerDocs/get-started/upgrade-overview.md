@@ -3,8 +3,8 @@ title: Overview of Windows Server upgrades | Microsoft Docs
 description: General Windows Server upgrade information, along with what to think through before you do the actual upgrade.
 ms.topic: how-to
 author: RobHindman
-ms.author: robhind
-ms.date: 05/24/2022
+ms.author: helohr
+ms.date: 10/25/2024
 ---
 
 # Overview of Windows Server upgrades
@@ -48,21 +48,25 @@ Windows Server allows you to use the latest features – including the latest se
 delivers the best performance.
 
 > [!TIP]
-> You can upgrade to a newer version of Windows Server by up to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019 or Windows Server
-> 2022. If you are using the
+>
+> - Beginning with Windows Server 2025, you can upgrade from an older version of Windows Server from Windows Server 2012 R2 and later.
+>
+> - With Windows Server 2022 and earlier, you can upgrade to a newer version of Windows Server by up
+> to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019
+> or Windows Server 2022. If you are using the
 > [Cluster OS Rolling Upgrade feature](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
 > you can only one version at at time.
 
 In this table you can see the supported upgrade paths, based on the version you're currently on.
 
-| Upgrade from / to | Windows   Server 2008 R2 | Windows   Server 2012 | Windows   Server 2012 R2 | Windows   Server 2016 | Windows   Server 2019 | Windows   Server 2022 |
-|--|--|--|--|--|--|--|
-| Windows   Server 2008 | Yes | Yes | - | - | - | - |
-| Windows   Server 2008 R2 | - | Yes | Yes | - | - | - |
-| Windows   Server 2012 | - | - | Yes | Yes | - | - |
-| Windows   Server 2012 R2 | - | - | - | Yes | Yes | - |
-| Windows   Server 2016 | - | - | - | - | Yes | Yes |
-| Windows   Server 2019 | - | - | - | - | - | Yes |
+| Upgrade from / to | Windows   Server 2012 R2 | Windows   Server 2016 | Windows   Server 2019 | Windows   Server 2022 | Windows   Server 2025|
+|--|--|--|--|--|--|
+| Windows   Server 2012 | Yes | Yes | - | - | - |
+| Windows   Server 2012 R2 | - | Yes | Yes | - | Yes |
+| Windows   Server 2016 | - | - | Yes | Yes | Yes |
+| Windows   Server 2019 | - | - | - | Yes | Yes |
+| Windows   Server 2022 | - | - | - | - | Yes |
+| Windows   Server 2025 | - | - | - | - | Yes |
 
 You can also upgrade from an evaluation version of the operating system to a retail version, from an
 older retail version to a newer version, or, in some cases, from a volume-licensed edition of the
@@ -70,7 +74,7 @@ operating system to an ordinary retail edition. For more information about upgra
 than in-place upgrade, see
 [Upgrade and conversion options for Windows Server](../get-started/upgrade-conversion-options.md).
 
-> [!NOTE]
+> [!IMPORTANT]
 > Support for [Windows Server 2008](/lifecycle/products/windows-server-2008) and
 > [Windows Server 2008 R2](/lifecycle/products/windows-server-2008-r2) has ended. We recommend you
 > update your version of Windows Server to a more recent version as soon as possible. Learn more

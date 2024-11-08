@@ -1,8 +1,8 @@
 ---
 title: Manage Hyper-V hypervisor scheduler types
 description: Learn about new modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
-ms.author: wscontent
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/04/2023
 ms.topic: article
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
@@ -10,7 +10,7 @@ ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 
 # Manage Hyper-V hypervisor scheduler types
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server version 1803, Windows Server version 1709, Windows 10
+>
 
 This article describes new modes of virtual processor scheduling logic introduced in Windows Server 2016. These modes, or *scheduler types*, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can:
 
@@ -46,7 +46,7 @@ For the purposes of this article, the descriptions of SMT and how it's used by H
 
 ### Understand how Hyper-V virtualizes processors
 
-Before considering hypervisor scheduler types, you should understand Hyper-V architecture. You can find a more detailed summary of how this architecture works in the [Hyper-V technology overview](../hyper-v-technology-overview.md), but for now, you should keep the following concepts in mind:
+Before considering hypervisor scheduler types, you should understand Hyper-V architecture. You can find a more detailed summary of how this architecture works in the [Hyper-V overview](../hyper-v-overview.md), but for now, you should keep the following concepts in mind:
 
 - Hyper-V creates and manages VM partitions, allocating and sharing compute resources across them, under control of the hypervisor. Partitions provide strong isolation boundaries between all guest VMs and between guest VMs and the root partition.
 

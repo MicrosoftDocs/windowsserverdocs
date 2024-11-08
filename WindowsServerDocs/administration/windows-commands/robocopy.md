@@ -4,8 +4,8 @@ description: Reference article for the robocopy command, which copies file data 
 ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: xelu86
-ms.author: wscontent
-ms.date: 02/12/2024
+ms.author: roharwoo
+ms.date: 05/28/2024
 ---
 
 # robocopy
@@ -75,7 +75,8 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /nodcopy | Copies no directory info (the default **/dcopy:DA** is done). |
 | /nooffload | Copies files without using the Windows Copy Offload mechanism. |
 | /compress | Requests network compression during file transfer, if applicable. |
-| /sparse | Enables retaining the sparse state of files during copy. |
+| /sparse:`<y|n>` | Enables or disables retaining the sparse state of files during copy process. If no option is selected, it defaults to **yes** (enabled). |
+| /noclone | Doesn't attempt block cloning as an optimization. |
 
 > [!IMPORTANT]
 > When using the **/secfix** copy option, specify the type of security information you want to copy, using one of these additional copy options:

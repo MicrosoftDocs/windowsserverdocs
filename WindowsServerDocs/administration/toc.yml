@@ -18,6 +18,12 @@ items:
           href:  /azure/azure-arc/servers/agent-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
         - name: Plan for deployment
           href:  /azure/azure-arc/servers/plan-at-scale-deployment?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Windows Server Azure Arc Management
+      items:
+        - name: Azure Site Recovery
+          href: ../manage/azure-arc/azure-site-recovery-for-windows-server.md
+        - name: Best Practices Assessment
+          href: ../manage/azure-arc/best-practices-assessment-for-windows-server.md          
     - name: Windows Admin Center 
       items:
         - name: Windows Admin Center Overview
@@ -88,11 +94,11 @@ items:
         - name: Manage Windows with OpenSSH
           items: 
             - name: What is OpenSSH for Windows?
-              href: OpenSSH/OpenSSH_Overview.md
+              href: OpenSSH/openssh-overview.md
             - name: Get started with OpenSSH for Windows
               href: OpenSSH/OpenSSH_Install_FirstUse.md
             - name: Server configuration options
-              href: OpenSSH/OpenSSH_Server_Configuration.md
+              href: OpenSSH/openssh-server-configuration.md
             - name: Key-based authentication
               href: OpenSSH/OpenSSH_KeyManagement.md
             - name: Manage OpenSSH with Group Policy

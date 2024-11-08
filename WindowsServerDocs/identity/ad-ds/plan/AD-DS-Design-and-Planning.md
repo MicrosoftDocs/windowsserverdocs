@@ -2,7 +2,7 @@
 description: "Learn more about: AD DS Design and Planning"
 ms.assetid: a91339ef-6ad4-445f-8ecc-a95fbcc04296
 title: AD DS Design and Planning
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 05/18/2023
@@ -12,7 +12,7 @@ ms.custom: inhenkel
 
 # AD DS Design and Planning
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 By deploying Windows Server Active Directory Domain Services (AD DS) in your environment, you can take advantage of the centralized, delegated administrative model and single sign-on (SSO) capability that AD DS provides. After you identify the deployment tasks and current environment for your organization, you can create the AD DS deployment strategy that meets your organization's needs.
 

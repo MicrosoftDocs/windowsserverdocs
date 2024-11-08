@@ -3,7 +3,7 @@ title: Network Policy Server Certificate Revocation List overview in Windows Ser
 description: This article provides information about Certificate Revocation handling by the NPS (Network Policy Server) in a Windows Server environment.
 ms.topic: concept-article
 ms.assetid: 13468d55-0acf-4160-a858-4f4c137e2993
-ms.author: wscontent
+ms.author: roharwoo
 author: marcussa
 ms.date: 10/31/2023
 ms.contributor: alalve
@@ -11,7 +11,7 @@ ms.contributor: alalve
 
 # Network Policy Server Certificate Revocation List overview  
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 A CRL (Certificate Revocation List) is a list of digital certificates that have been revoked by the CA (Certificate Authority) before their scheduled expiration date. A digital certificate is used to verify the identity of a user, computer, or other entity in a networked environment.
 

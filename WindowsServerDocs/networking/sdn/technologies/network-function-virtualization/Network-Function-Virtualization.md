@@ -4,13 +4,13 @@ description: You can use this topic to learn about Network Function Virtualizati
 manager: grcusanz
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 10/28/2021
 ---
 # Network Function Virtualization
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances such as Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing \(SLB\) multiplexer \(MUX\).
 
@@ -96,7 +96,7 @@ The following virtual appliances are provided with Windows Server 2016:
 
 **Software load balancer**
 
-A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](/previous-versions/windows/server/mt632286(v=ws.12)). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](https://azure.microsoft.com/blog/2014/04/08/microsoft-azure-load-balancing-services/).
+A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](/previous-versions/windows/server/mt632286(v=ws.12)). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](https://azure.microsoft.com/blog/microsoft-azure-load-balancing-services/).
 
 **Gateway**. RAS Gateway provides all combinations of the following gateway functions.
 

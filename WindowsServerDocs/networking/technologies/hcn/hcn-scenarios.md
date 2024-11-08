@@ -1,7 +1,7 @@
 ---
 title: Host Compute Network (HCN) scenarios
 description: Sample showing how to use Host Compute Network Service API to create a Host Compute Network on the host that can be used to connect Virtual NICS to Virtual Machines or Containers.
-ms.author: daschott
+ms.author: roharwoo
 author: daschott
 ms.date: 6/28/2022
 ms.topic: article
@@ -9,7 +9,7 @@ ms.topic: article
 
 # Common scenarios
 
->Applies to: Windows Server 2022, Windows Server 2019
+>
 
 ## Scenario: HCN
 

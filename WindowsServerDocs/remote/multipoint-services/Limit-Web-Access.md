@@ -4,9 +4,9 @@ description: Learn how to limit user access to the Internet in MultiPoint Servic
 ms.date: 07/08/2016
 ms.topic: article
 ms.assetid: 044f2fd5-5b87-42bb-ba0d-c06516ac48c8
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: roharwoo
 ---
 # Limit Web Access
 In addition to monitoring user activities on individual desktops, you, as an administrative user, can limit user access to specified websites by indicating permissible websites and websites to which you want to block user access.

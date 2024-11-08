@@ -1,7 +1,7 @@
 ---
 title: Add folder targets in Windows Server
 description: This article describes how to add folder targets (UNC paths) in the Windows Server environment.
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to
 author: xelu86
 ms.date: 05/11/2023
@@ -9,7 +9,7 @@ ms.date: 05/11/2023
 
 # Add folder targets
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> 
 
 A folder target is the Universal Naming Convention (UNC) path of a shared folder or another namespace that is associated with a folder in a namespace. Adding multiple folder targets increases the availability of the folder in the namespace.
 

@@ -4,14 +4,14 @@ description: Learn how to configure DNS policy to load balance an application wi
 manager: brianlic
 ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 
 # Use DNS Policy for Application Load Balancing With Geo-Location Awareness
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to learn how to configure DNS policy to load balance an application with geo-location awareness.
 

@@ -3,14 +3,14 @@ title: Remote Desktop Services - Multi-Factor Authentication
 description: Planning information for using MFA with RDS.
 ms.topic: article
 ms.assetid: 09ea784e-5644-417a-a3d9-bdbcebc313f9
-author: lizap
-ms.author: elizapo
-ms.date: 09/25/2023
+author: robinharwood
+ms.author: roharwoo
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Remote Desktop Services - Multi-Factor Authentication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Leverage the power of Active Directory with Multi-Factor Authentication to enforce high security protection of your business resources.
 

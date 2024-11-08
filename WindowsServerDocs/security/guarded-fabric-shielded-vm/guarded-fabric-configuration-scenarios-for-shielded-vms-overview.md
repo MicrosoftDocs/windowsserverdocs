@@ -4,15 +4,15 @@ title: Deploy shielded VMs
 ms.topic: article
 ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
 # Deploy shielded VMs
 
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 The following topics describe how a tenant can work with shielded VMs.
 

@@ -1,3 +1,4 @@
+items:
 - name: Get started
   expanded: true
   items:
@@ -11,8 +12,10 @@
     items:
     - name: What's new in Windows Server
       items:
-      - name: Windows Server Insiders Preview
-        href: whats-new-windows-server-insiders-preview.md  
+      - name: Windows Server Pay-as-you-go
+        href: windows-server-pay-as-you-go.md
+      - name: Windows Server 2025
+        href: whats-new-windows-server-2025.md  
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
       - name: Windows Server 2019
@@ -22,17 +25,13 @@
     - name: Servicing channels comparison
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
-      items:
-      - name: Azure Edition
-        href: azure-edition.md
-      - name: Windows Server Annual Channel for Containers
-        href: annual-channel-for-containers.md
-      - name: Windows Server 2022
-        href: editions-comparison-windows-server-2022.md
-      - name: Windows Server 2019
-        href: editions-comparison-windows-server-2019.md
-      - name: Windows Server 2016
-        href: editions-comparison-windows-server-2016.md
+      href: editions-comparison.md
+    - name: Locks and limits
+      href: locks-limits.md
+    - name: Azure Edition
+      href: azure-edition.md
+    - name: Windows Server Annual Channel for Containers
+      href: annual-channel-for-containers.md
     - name: Hardware requirements
       href: hardware-requirements.md
     - name: Features removed or no longer developed
@@ -100,6 +99,8 @@
       href: /azure/azure-arc/servers/deliver-extended-security-updates?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Enable Azure Edition Hotpatch from ISO
       href: enable-hotpatch-azure-edition.md
+    - name: Enable Hotpatch for Azure Arc-enabled servers (preview)
+      href: enable-hotpatch-azure-arc-enabled-servers.md
     - name: Perform an in-place upgrade
       href: perform-in-place-upgrade.md
     - name: Configure Secured-core Server
