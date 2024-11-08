@@ -290,7 +290,7 @@ The following features are supported in Network:
 - Browse and search existing network adapters
 - View details of a network adapter
 - Edit properties of a network adapter
-- Create an [Azure Network Adapter (Preview feature)](https://blogs.technet.microsoft.com/networking/2018/09/05/azurenetworkadapter/)
+- Create an [Azure Network Adapter (Preview feature)](https://techcommunity.microsoft.com/t5/networking-blog/top-10-networking-features-in-windows-server-2019-3-azure/ba-p/339780)
 
 ## PowerShell
 
