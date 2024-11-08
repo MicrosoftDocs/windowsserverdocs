@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 10/31/2023
 ---
 
-# Enable Hotpatch for Windows Server 2022 Datacenter: Azure Edition VMs on Azure Stack HCI
+# Enable Hotpatch for Azure Edition virtual machines on Azure Stack HCI
 
 Hotpatch for Windows Server 2022 Datacenter: Azure Edition virtual machines (VMs) hosted on Azure Stack HCI allows you to install security updates on an ISO-deployed machine on Azure Stack HCI without requiring a reboot after installation. You can use Hotpatch with both Desktop Experience and Server Core. This article will teach you how to configure Hotpatch after installing or upgrading the operating system using an ISO.
 
