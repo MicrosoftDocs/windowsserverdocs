@@ -66,7 +66,6 @@ In this table you can see the supported upgrade paths, based on the version you'
 | Windows   Server 2016 | - | - | Yes | Yes | Yes |
 | Windows   Server 2019 | - | - | - | Yes | Yes |
 | Windows   Server 2022 | - | - | - | - | Yes |
-| Windows   Server 2025 | - | - | - | - | Yes |
 
 You can also upgrade from an evaluation version of the operating system to a retail version, from an
 older retail version to a newer version, or, in some cases, from a volume-licensed edition of the
