@@ -34,7 +34,7 @@ If you're applying Group Policy from an Active Directory Domain Services domain,
 - You have a machine with the Active Directory Remote Server Administration Tools (RSAT) installed.
 
 > [!IMPORTANT]
-> In some cases Windows Updates can be installed by non-administrative users. To learn more about blocking users from scanning and applying Windows Updates, see [How to block user access to Windows Update on Windows Server](/troubleshoot/windows-server/installing-updates-features-roles/block-user-access-windows-update).
+> In some cases Windows Updates can be installed by non-administrative users. To learn more about blocking users from scanning and applying Windows Updates, see [Allow non-administrators to receive update notifications](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-non-administrators-to-receive-update-notifications).
 
 ## Disable the Windows Server 2025 Feature Update
 
