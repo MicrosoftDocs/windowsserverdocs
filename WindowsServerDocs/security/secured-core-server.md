@@ -2,7 +2,7 @@
 title: What is Secured-core server for Windows Server
 description: Learn how Secured-core server by Windows Server hardware OEMs offers advanced protection of your operating system environment.
 author: roysasabe
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: conceptual 
 ms.date: 04/06/2023
 ms.custom: template-overview, team=cloud_advocates, kr2b-contr-experiment
@@ -11,7 +11,7 @@ ms.contributors: socuff-01282022
 
 # What is Secured-core server?
 
->Applies to: Windows Server 2022, Azure Stack HCI version 21H2 and later
+>
 
 Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and
 operating system security features. The protection provided by Secured-core systems begins before

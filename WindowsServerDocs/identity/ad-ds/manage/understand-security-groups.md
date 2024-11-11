@@ -9,7 +9,7 @@ ms.date: 09/08/2023
 
 # Active Directory security groups
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 Learn about default Active Directory security groups, group scope, and group functions.
 

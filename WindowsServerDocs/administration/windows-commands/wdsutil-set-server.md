@@ -3,14 +3,14 @@ title: wdsutil set-server
 description: Reference article for Subcommand set-Server, which configured the settings for a Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: da55c29d-a94a-4d73-877b-af480f906ca0
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil set-server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Configures the settings for a Windows Deployment Services server.
 

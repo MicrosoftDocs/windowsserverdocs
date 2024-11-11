@@ -1,7 +1,7 @@
 ---
 title: Deploy Storage Spaces Direct on Windows Server
 manager: femil
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
@@ -10,7 +10,7 @@ description: Step-by-step instructions to deploy software-defined storage with S
 ---
 # Deploy Storage Spaces Direct on Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 

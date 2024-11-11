@@ -3,13 +3,13 @@ title: Create a failover cluster
 description: How to create a failover cluster for Windows Server 2012 R2, Windows Server 2012, Windows Server 2016, and Windows Server 2019.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 manager: lizross
 ms.date: 3/14/2023
 ---
 # Create a failover cluster
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 This article shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The article covers a typical deployment in which computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster instead, see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md). For information about using a failover cluster in Azure Stack HCI, see [Create an Azure Stack HCI](/azure-stack/hci/deploy/create-cluster).
 

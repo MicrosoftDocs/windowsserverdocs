@@ -3,13 +3,13 @@ title: Beginning your General Data Protection Regulation (GDPR) journey for Wind
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
 ms.topic: article
 ms.date: 09/25/2017
-ms.author: wscontent
+ms.author: roharwoo
 author: nirb-ms
 ---
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This article provides info about the GDPR, including what it is, and the products Microsoft provides to help you to become compliant.
 

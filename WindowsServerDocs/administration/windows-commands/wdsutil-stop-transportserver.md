@@ -3,14 +3,14 @@ title: wdsutil stop-transportserver
 description: Reference article for stop-TransportServer
 ms.topic: reference
 ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil stop-transportserver
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Stops all services on a Transport Server.
 ## Syntax

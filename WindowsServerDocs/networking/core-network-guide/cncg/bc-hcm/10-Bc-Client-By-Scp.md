@@ -4,14 +4,14 @@ description: Learn how to use Group Policy to enable and configure BranchCache h
 manager: brianlic
 ms.topic: article
 ms.assetid: ea1c34fd-5a33-4228-9437-9bb3d44230eb
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 #  Configure Client Automatic Hosted Cache Discovery by Service Connection Point
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 With this procedure you can use Group Policy to enable and configure BranchCache hosted cache mode on domain\-joined computers that are running the following BranchCache\-capable Windows operating systems.
 

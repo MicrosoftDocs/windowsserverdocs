@@ -3,14 +3,14 @@ title: Get started with Group Managed Service Accounts
 description: Learn how to enable and use Group Managed Service Accounts (gMSA) in Windows Server.
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/26/2024
 ---
 
 # Get started with Group Managed Service Accounts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 In this article, learn how to enable and use Group Managed Service Accounts (gMSA) in Windows Server.
 

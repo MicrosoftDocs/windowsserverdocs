@@ -4,13 +4,13 @@ description: Learn how to configure DirectAccess on the EDGE1 server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 84457351-1ca7-4e7c-8e2c-53d55b1fcdc0
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 2 Configure EDGE1
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 The following procedure is performed on the DirectAccess server:
 

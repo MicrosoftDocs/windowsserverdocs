@@ -3,13 +3,13 @@ title: vssadmin resize shadowstorage
 description: A description of the vssadmin resize shadowstorage command, which resizes the maximum amount of storage space that can be used for shadow copy storage.
 ms.topic: reference
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/05/2020
 ---
 
 # vssadmin resize shadowstorage
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+
 
 Resizes the maximum amount of storage space that can be used for shadow copy storage.
 

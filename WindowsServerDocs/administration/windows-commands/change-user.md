@@ -3,14 +3,14 @@ title: change user
 description: Reference article for the change user command, which changes the install mode for the Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: 6202f024-8cf5-411e-89b1-ee37ff46499d
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # change user
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the install mode for the Remote Desktop Session Host server.
 

@@ -3,16 +3,13 @@ title: Hyper-V Technology Overview
 description: Describes what Hyper-V is, how to get it, key features, and common uses.
 ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
-ms.date: 11/29/2016
+ms.date: 10/25/2024
 ---
 # Hyper-V Technology Overview
 
->Applies to:  Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
 
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.
 

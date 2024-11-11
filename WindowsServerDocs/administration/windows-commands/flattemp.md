@@ -3,7 +3,7 @@ title: flattemp
 description: Reference article for the flattemp command, which enables or disables flat temporary folders.
 ms.topic: reference
 ms.assetid: 059a0960-1fd9-4382-87fe-a85d5dccdaea
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # flattemp
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables or disables flat temporary folders. You must have administrative credentials to run this command.
 

@@ -3,7 +3,7 @@ title: ftp delete
 description: Reference article for the ftp delete command, which deletes files on remote computers.
 ms.topic: reference
 ms.assetid: 067c45f3-e4e8-4450-b8b6-836994f6adfe
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # ftp delete
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes files on remote computers.
 

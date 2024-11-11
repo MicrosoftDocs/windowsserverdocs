@@ -5,11 +5,11 @@ ms.date: 6/5/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Deploying DFS Namespaces
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>
 
 To deploy DFS Namespaces, refer to the following topics:
 

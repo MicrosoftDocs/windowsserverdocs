@@ -3,7 +3,7 @@ title: secedit configure
 description: Reference article for the secedit configure command, which allows you to configure the current system settings using security settings stored in a database.
 ms.topic: reference
 ms.assetid: a92e68ca-003c-4219-8655-0e7734f5fab3
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

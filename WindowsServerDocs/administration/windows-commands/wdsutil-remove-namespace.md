@@ -3,7 +3,7 @@ title: wdsutil remove-namespace
 description: Reference article for wdsutil remove-namespace, which removes a custom namespace.
 ms.topic: reference
 ms.assetid: 4eb758b6-8519-4e26-9fe0-2e19bb0e8702
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil remove-namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes a custom namespace.
 

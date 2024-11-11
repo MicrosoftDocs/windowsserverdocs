@@ -4,14 +4,14 @@ description: This topic, which is intended for Information Technology (IT) profe
 manager: brianlic
 ms.topic: article
 ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # RAS Gateway GRE Tunnel Throughput and Performance
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server \(Semi-Annual Channel\)
+>
 
 You can use this topic to learn about Remote Access Server \(RAS\) Gateway Generic Routing Encapsulation \(GRE\) Tunnel performance on Windows Server, version 1709, in a non-Software Defined Networking \(SDN\) based test environment.
 

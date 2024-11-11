@@ -3,7 +3,7 @@ title: logoff
 description: Reference article for the logoff command, which logs off a user from a session on a Remote Desktop Session Host server and deletes the session.
 ms.topic: reference
 ms.assetid: 939f09cc-de8c-436c-a05d-aca5f2a06371
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # logoff
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Logs off a user from a session on a Remote Desktop Session Host server and deletes the session.
 

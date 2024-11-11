@@ -4,14 +4,14 @@ description: Learn how to deploy Institute of Electrical and Electronics Enginee
 manager: brianlic
 ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 02/06/2023
 ---
 
 # Deploy Password\-Based 802.1X Authenticated Wireless Access
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This is a companion guide to the Windows Server&reg; 2016 Core Network Guide. The Core Network Guide provides instructions for planning and deploying the components required for a fully functioning network and a new Active Directory® domain in a new forest.
 

@@ -3,14 +3,14 @@ title: Configure remote Management in Server Manager
 description: Learn how to add the server to the Server Manager server pool to perform management tasks on remote servers.
 ms.topic: article
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Configure remote Management in Server Manager
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In Windows Server, you can use Server Manager to perform management tasks on remote servers. Remote management is enabled by default on servers that are running Windows Server 2016. To manage a server remotely by using Server Manager, you add the server to the Server Manager server pool.
 

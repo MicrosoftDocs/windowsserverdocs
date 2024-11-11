@@ -2,7 +2,7 @@
 title: Troubleshoot AD FS
 description: Learn about the strategies and tools you can use to diagnose and troubleshoot various aspects of AD FS.
 author: billmath
-ms.author: wscontent
+ms.author: roharwoo
 manager: amycolannino
 ms.date: 05/19/2023
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Hyper-V architecture
 description: Learn about the Hyper-V architecture considerations to tune and improve performance and lower costs.
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 05/18/2023
 ---

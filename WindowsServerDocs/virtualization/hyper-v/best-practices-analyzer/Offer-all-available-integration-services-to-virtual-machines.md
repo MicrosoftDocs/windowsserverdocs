@@ -1,7 +1,7 @@
 ---
 title: Offer all available integration services to virtual machines
 description: Learn what to do when one or more available integration services are not enabled on virtual machines.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Offer all available integration services to virtual machines
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

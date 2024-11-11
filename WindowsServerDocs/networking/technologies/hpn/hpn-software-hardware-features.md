@@ -4,14 +4,14 @@ description: These features have both software and hardware components. The soft
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 10/26/2021
 ---
 
 # Software and hardware (SH) integrated features and technologies
 
->Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 

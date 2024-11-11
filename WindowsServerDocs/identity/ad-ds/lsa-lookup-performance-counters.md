@@ -3,17 +3,14 @@ title: LSA Lookup performance counters in Windows and Windows Server
 description: Learn about Local Security Authority (LSA) Lookups performance counters
 ms.topic: conceptual
 author: lindakup
-ms.author: wscontent
-ms.date: 08/16/2024
+ms.author: roharwoo
+ms.date: 10/25/2024
 
 ---
 
 # LSA Lookup performance counters
 
-Applies to: Windows Server 2025 (preview)
 
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Excessive Local Security Authority (LSA) Account Name and Account security identifiers (SID) lookups can contribute to Active Directory performance degradation. Active Directory performance problems can result in a wide variety of symptoms. Symptoms such as user authentication prompts, Outlook, or Exchange problems, slow sign in, Lightweight Directory Access Protocol (LDAP) application timeouts and more.
 

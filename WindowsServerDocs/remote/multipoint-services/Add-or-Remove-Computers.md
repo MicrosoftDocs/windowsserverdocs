@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 1c37739d-7ab0-4b80-8d05-0330e79fd631
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 07/13/2017
 ---
 # Add or Remove Computers

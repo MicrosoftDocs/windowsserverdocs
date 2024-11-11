@@ -2,7 +2,7 @@
 title: tapicfg removescp
 description: Reference article for the tapicfg removescp command, which removes a service connection point for a TAPI application directory partition.
 ms.topic: reference
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 09/29/2020
@@ -10,7 +10,7 @@ ms.date: 09/29/2020
 
 # tapicfg removescp
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes a service connection point for a TAPI application directory partition.
 

@@ -3,16 +3,13 @@ title: Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Serve
 description: Lists the Linux and FreeBSD integration services and features included in each version.
 ms.topic: article
 ms.assetid: 990ff94a-30fb-434b-b4a2-3804a5245ba6
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
-ms.date: 08/13/2024
+ms.date: 10/25/2024
 ---
 # Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows
 
-> Applies to: Azure Stack HCI, Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> 
 
 Hyper-V supports both emulated and Hyper-V-specific devices for Linux and FreeBSD virtual machines. When running with emulated devices, no additional software is required to be installed. However emulated devices do not provide high performance and cannot leverage the rich virtual machine management infrastructure that the Hyper-V technology offers. In order to make full use of all benefits that Hyper-V provides, it is best to use Hyper-V-specific devices for Linux and FreeBSD. The collection of drivers that are required to run Hyper-V-specific devices are known as Linux Integration Services (LIS) or FreeBSD Integration Services (BIS).
 

@@ -5,12 +5,12 @@ ms.date: 08/22/2024
 ms.topic: conceptual
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Overview of Disk Management
 
-> **Applies to:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 Disk Management is a system utility in Windows for advanced storage operations. Here are some tasks you can complete with Disk Management:
 

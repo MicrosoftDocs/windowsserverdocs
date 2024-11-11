@@ -1,7 +1,7 @@
 ---
 title: Add an RD Connection Broker server to configure high availability in RDS
 description: Learn how to add an RD Connection Broker to an RDS deployment for high availability.
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: article
 author: robinharwood
@@ -10,7 +10,7 @@ manager: dongill
 
 # Add the RD Connection Broker server to the deployment and configure high availability
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of your Remote Desktop Services infrastructure.
 

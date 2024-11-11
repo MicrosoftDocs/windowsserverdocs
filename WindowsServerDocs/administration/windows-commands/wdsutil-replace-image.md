@@ -3,7 +3,7 @@ title: wdsutil replace-image
 description: Reference article for wdsutil replace-image, which replaces an existing image with a new version of that image.
 ms.topic: reference
 ms.assetid: 68ded3df-e309-420f-9f5d-caeb609385a5
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil replace-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Replaces an existing image with a new version of that image.
 ## Syntax

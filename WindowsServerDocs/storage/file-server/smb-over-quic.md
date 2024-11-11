@@ -3,14 +3,14 @@ title: SMB over QUIC in Windows
 description: Describes the SMB over QUIC feature in Windows Server and Windows client.
 ms.topic: article
 author: NedPyle
-ms.author: wscontent
+ms.author: roharwoo
 ms.contributor: inhenkel
-ms.date: 07/17/2024
+ms.date: 10/25/2024
 ---
 
 # SMB over QUIC
 
-> Applies to: Windows Server 2025, Windows Server 2022 Datacenter: Azure Edition, Windows 11 or later
+> 
 
 SMB over QUIC introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP:
 
@@ -35,10 +35,7 @@ To use SMB over QUIC, you need the following things:
 
   - Windows Server 2022 Datacenter: Azure Edition ([Microsoft Server Operating Systems](https://aka.ms/ws2022ae-ga)) or later
 
-  - Any edition of Windows Server 2025 (preview) or later
-
-  > [!IMPORTANT]
-  > SMB over QUIC for Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+  - Any edition of Windows Server 2025 or later
 
 - A Windows 11 device ([Windows for business](https://www.microsoft.com/windows/business))
 
@@ -191,7 +188,7 @@ If you want to apply control to SMB over client, you can use Client Access Contr
 
 ### SMB over QUIC client auditing
 
-Auditing is used to track client connections for SMB over QUIC, with events being written to an event log. The Event Viewer captures this information for the QUIC transport protocol. This feature is available to SMB Client starting with Windows 11 Insider build 26090. To view these logs, follow these steps:
+Auditing is used to track client connections for SMB over QUIC, with events being written to an event log. The Event Viewer captures this information for the QUIC transport protocol. This feature is available to SMB Client starting with Windows 11, version 24H2 To view these logs, follow these steps:
 
 1. Open the **Event Viewer**.
 1. Navigate to **Applications and Services Logs\Microsoft\Windows\SMBClient\Connectivity**.

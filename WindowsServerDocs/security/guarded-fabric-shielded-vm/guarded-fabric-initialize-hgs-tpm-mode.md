@@ -4,13 +4,13 @@ title: Initialize HGS using TPM-trusted attestation
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
 # Initialize HGS using TPM-trusted attestation
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 These steps vary depending on whether you are initializing HGS in a new forest or an existing bastion forest:
 

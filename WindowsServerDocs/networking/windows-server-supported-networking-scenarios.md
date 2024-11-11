@@ -5,12 +5,12 @@ manager: brianlic
 ms.topic: article
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
 author: dcuomo
-ms.author: dacuo
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # Windows Server supported networking scenarios
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server \(Semi-Annual Channel\), Windows Server 2016
+>
 
 This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of Windows Server 2016.
 >[!IMPORTANT]

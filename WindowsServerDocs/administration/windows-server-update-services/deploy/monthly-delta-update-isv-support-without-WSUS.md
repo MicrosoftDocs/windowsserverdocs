@@ -2,14 +2,14 @@
 title: Monthly Delta update ISV support without WSUS
 description: Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can temporarily use Monthly Delta update instead of WSUS Express update delivery to reduce package size
 ms.topic: how-to
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Monthly Delta update ISV support without WSUS
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
+
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.
 

@@ -4,14 +4,14 @@ description: This topic provides best practices for deploying and managing Netwo
 manager: brianlic
 ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 12/08/2020
 ---
 
 # Network Policy Server Best Practices
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to learn about best practices for deploying and managing Network Policy Server \(NPS\).
 

@@ -3,7 +3,7 @@ title: irftp
 description: Reference article for the irftp command, which sends files over an infrared link.
 ms.topic: reference
 ms.assetid: e15c60a7-546d-4e9f-9871-43aaa1b569d6
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # irftp
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sends files over an infrared link.
 

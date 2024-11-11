@@ -1,7 +1,7 @@
 ---
 title: Configure SCSI controllers only when supported by the guest operating system
 description: Learn what to do when a virtual machine is configured with a SCSI controller that cannot be used because the guest operating system does not support SCSI controllers.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 861f194f-467e-4b07-a1c5-55b35f6327c4
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Configure SCSI controllers only when supported by the guest operating system
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 
 

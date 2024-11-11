@@ -5,11 +5,11 @@ ms.date: 6/5/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Delegate management permissions for DFS Namespaces
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>
 
 The following table describes the groups that can perform basic namespace tasks by default, and the method for delegating the ability to perform these tasks:
 

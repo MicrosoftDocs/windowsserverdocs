@@ -1,7 +1,7 @@
 ---
 title: Certificate-based authentication is recommended for replication
 description: Learn what to do when one or more virtual machines selected for replication are configured for Kerberos authentication.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: d931cc57-414f-4bdf-9ebd-08fd5e22b19d
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Certificate-based authentication is recommended for replication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

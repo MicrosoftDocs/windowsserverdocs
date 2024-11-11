@@ -4,13 +4,13 @@ description: Learn how to configure third party firewall products and to manuall
 manager: brianlic
 ms.topic: how-to
 ms.assetid: da956be0-c92d-46ea-99eb-85e2bd67bf07
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---
 # Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use the information in this topic to configure third party firewall products and to manually configure a client computer with firewall rules that allow BranchCache to run in distributed cache mode.
 

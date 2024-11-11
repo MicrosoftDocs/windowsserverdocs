@@ -5,13 +5,13 @@ description: "Learn more about: iSCSI Target Server Scalability Limits"
 ms.topic: article
 author: robinharwood
 manager: dougkim
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 09/11/2018
 ---
 
 # iSCSI Target Server Scalability Limits
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 This topic provides the supported and tested Microsoft iSCSI Target Server limits on Windows Server. The following tables display the tested support limits and, where applicable, whether the limits are enforced.
 

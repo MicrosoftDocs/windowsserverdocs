@@ -1,7 +1,7 @@
 ---
 title: VHD-format dynamic virtual hard disks are not recommended for virtual machines that run server workloads in a production environment
 description: Learn what to do when one or more virtual machines use VHD-format dynamically expanding virtual hard disks.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 324a60a0-1d15-4ef2-9f17-23cbd2eb42ce
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # VHD-format dynamic virtual hard disks are not recommended for virtual machines that run server workloads in a production environment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

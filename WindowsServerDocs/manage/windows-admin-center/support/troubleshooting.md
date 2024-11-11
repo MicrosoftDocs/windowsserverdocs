@@ -3,12 +3,12 @@ title: Windows Admin Center common troubleshooting steps
 description: Windows Admin Center common troubleshooting steps
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 01/15/2021
 ---
 # Troubleshoot Windows Admin Center
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, versions 21H2 and 20H2
+> 
 
 This article describes how to diagnose and resolve issues in Windows Admin Center. If you're having an issue with a specific tool, check to see if you're experiencing a [known issue](./known-issues.md).
 

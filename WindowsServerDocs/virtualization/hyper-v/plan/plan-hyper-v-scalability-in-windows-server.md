@@ -2,20 +2,13 @@
 title: Plan for Hyper-V scalability in Windows Server
 description: Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory, and how many virtual processors, in Windows Server.
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
-ms.date: 04/10/2024
+ms.date: 10/25/2024
 zone_pivot_groups: windows-os-version
 ---
 
 # Plan for Hyper-V scalability in Windows Server
-
-:::zone pivot="windows-server-2025"
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-::: zone-end
 
 This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine, and those that apply to the Hyper-V host. Maximums continue to grow in Windows Server versions, in response to requests to support newer scenarios such as machine learning and data analytics.
 

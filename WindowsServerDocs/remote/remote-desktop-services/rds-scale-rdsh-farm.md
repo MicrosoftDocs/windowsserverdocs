@@ -1,14 +1,14 @@
 ---
 title: Scale out your RDS deployment by adding an RD Session Host farm
 description: Add a second RD Session Host to your RDS environment.
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: article
 author: xelu86
 ---
 # Scale out your Remote Desktop Services deployment by adding an RD Session Host farm
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can improve the availability and scale of your RDS deployment by adding a Remote Desktop Session Host (RDSH) farm.
 

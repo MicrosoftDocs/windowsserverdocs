@@ -4,13 +4,13 @@ title: Change history for storage topics
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 1/16/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic lists new and updated topics in the [Storage](storage.yml) documentation for Windows Server.
 

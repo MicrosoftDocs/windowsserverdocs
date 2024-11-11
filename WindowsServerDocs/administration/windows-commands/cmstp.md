@@ -3,7 +3,7 @@ title: cmstp
 description: Reference article for cmstp, which installs or removes a Connection Manager service profile.
 ms.topic: reference
 ms.assetid: 34aad544-11c3-4e85-8bbf-5bc5a971da93
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # cmstp
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Installs or removes a Connection Manager service profile. Used without optional parameters, **cmstp** installs a service profile with default settings appropriate to the operating system and to the user's permissions.
 

@@ -5,11 +5,11 @@ ms.date: 03/24/2023
 ms.topic: conceptual
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Mount a drive in a folder
 
-> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 You can use Disk Management to mount (make a drive accessible) in a folder rather than a drive letter. It looks like just another folder. You can mount drives only in empty folders on basic or dynamic NTFS volumes.
 

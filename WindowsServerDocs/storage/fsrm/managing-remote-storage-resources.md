@@ -5,12 +5,12 @@ ms.date: 7/7/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Managing Remote Storage Resources
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>
 
 To manage storage resources on a remote computer, you have two options:
 

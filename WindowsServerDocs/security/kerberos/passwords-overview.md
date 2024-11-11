@@ -3,14 +3,14 @@ title: Passwords Overview
 description: Learn about passwords as they are used in the Windows operating systems, and find links to documentation and discussions about the use of passwords in a credential management strategy.
 ms.topic: article
 ms.assetid: f608960e-2039-4c91-9c8c-9b81053c675e
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Passwords Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic for the IT professional describes passwords as used in the Windows operating systems, and links to documentation and discussions about the use of passwords in a credential management strategy.
 

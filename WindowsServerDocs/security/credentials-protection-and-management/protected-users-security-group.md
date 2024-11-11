@@ -3,14 +3,14 @@ title: Protected Users Security Group
 description: Learn about the Active Directory security group Protected Users feature, and how it works.
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 02/12/2024
 ---
 # Protected Users Security Group
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Protected Users is a global security group for Active Directory (AD) designed to protect against credential theft attacks. The group triggers non-configurable protection on devices and host computers to prevent credentials from being cached when group members sign-in.
 

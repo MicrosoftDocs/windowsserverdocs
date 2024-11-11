@@ -3,14 +3,14 @@ ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time service tools and settings
 author: xelu86
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure these settings in the registry or Group Policy Object Editor (GPO).
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 05/30/2023
 ms.topic: article
 ---
 
 # Windows Time service tools and settings
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 11, Windows 10, Azure Stack HCI versions 21H2 and 20H2
+> 
 
 The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). This article covers the different tools and settings used to manage the Windows Time service.
 

@@ -3,14 +3,14 @@ title: wdsutil set-image
 description: Reference article for wdsutil set-image, which changes the attributes of an image.
 ms.topic: reference
 ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil set-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the attributes of an image.
 

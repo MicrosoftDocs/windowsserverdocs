@@ -4,13 +4,13 @@ description: Learn how to install the File Services server role and the BranchCa
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---
 # Install a New File Server as a Content Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this procedure to install the File Services server role and the **BranchCache for Network Files** role service on a computer running  Windows Server 2016.
 

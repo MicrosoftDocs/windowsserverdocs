@@ -10,7 +10,7 @@ metadata:
   manager: femila
   ms.service: windows-server
   ms.topic: hub-page
-  ms.date: 07/23/2024
+  ms.date: 10/30/2024
   ms.author: roharwoo
 
 highlightedContent:
@@ -56,6 +56,9 @@ conceptualContent:
         - url: ./get-started/perform-in-place-upgrade.md
           itemType: how-to-guide
           text: Perform an in-place upgrade
+        - url: ./get-started/windows-server-pay-as-you-go.md
+          itemType: how-to-guide
+          text: Windows Server Pay-as-you-go
       footerLink:
         url: ./get-started/upgrade-overview.md
         text: See more
@@ -143,6 +146,9 @@ conceptualContent:
 
     - title: Security and assurance
       links:
+        - url: https://aka.ms/ws2025securitybook
+          itemType: overview
+          text: Windows Server 2025 Security Book  
         - url: ./security/windows-authentication/windows-authentication-overview.md
           itemType: overview
           text: Windows Authentication overview

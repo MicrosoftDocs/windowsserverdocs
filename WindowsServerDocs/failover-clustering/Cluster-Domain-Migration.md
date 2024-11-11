@@ -2,13 +2,13 @@
 title: Cross Domain Cluster Migration in Windows Server 2016/2019
 description: This article describes moving a Windows Server 2019 cluster from one domain to another
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 11/02/2023
 ---
 # Failover Cluster domain migration
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 This article provides an overview for moving Windows Server failover clusters from one domain to another.
 

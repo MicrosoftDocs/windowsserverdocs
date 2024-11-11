@@ -1,7 +1,7 @@
 ---
 title: Cluster-to-cluster storage replication
 manager: siroy
-ms.author: nedpyle
+ms.author: alalve
 ms.topic: how-to
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
@@ -10,7 +10,7 @@ description: How to use Storage Replica to replicate volumes in one cluster to a
 ---
 # Cluster to Cluster Storage Replication
 
->Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Storage Replica can replicate volumes between clusters, including the replication of clusters using Storage Spaces Direct. The management and configuration is similar to server-to-server replication.
 

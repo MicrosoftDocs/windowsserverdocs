@@ -4,7 +4,7 @@ description: "Learn about the differences between Windows Server Standard, Datac
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 10/04/2024
+ms.date: 10/25/2024
 zone_pivot_groups: windows-os-version
 ---
 
@@ -18,9 +18,6 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 ## Available roles and features
 
 :::zone pivot="windows-server-2025"
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 > [!div class="mx-tableFixed"]
 > | Feature                                          | Sub-feature                                                    | Standard edition                                                                                                    | Datacenter edition                                                                                               | Datacenter: Azure Edition                                                                                        |

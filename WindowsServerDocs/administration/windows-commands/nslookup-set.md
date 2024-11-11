@@ -3,7 +3,7 @@ title: nslookup set
 description: Reference article for the nslookup set command, which changes configuration settings affecting how lookups behave.
 ms.topic: reference
 ms.assetid: 1fe5b36d-e93e-468b-abca-43b0204b32d1
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # nslookup set
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes configuration settings that affect how lookups function.
 

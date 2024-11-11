@@ -1,7 +1,7 @@
 ---
 title: Hyper-V should be the only enabled role
 description: Learn what to do when roles other than Hyper-V are enabled on your server.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Hyper-V should be the only enabled role
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

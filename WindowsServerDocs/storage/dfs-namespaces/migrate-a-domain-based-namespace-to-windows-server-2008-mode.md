@@ -5,11 +5,11 @@ ms.date: 6/5/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Migrate a domain-based namespace to Windows Server 2008 Mode
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>
 
 The Windows Server 2008 mode for domain-based namespaces includes support for access-based enumeration and increased scalability.
 

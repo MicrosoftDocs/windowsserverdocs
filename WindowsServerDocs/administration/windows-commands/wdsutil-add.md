@@ -3,7 +3,7 @@ title: wdsutil add
 description: Reference article for the wdsutil add commands.
 ms.topic: reference
 ms.assetid: 6fcdd154-baaf-4288-a355-2a95a3028bce
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil add commands
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 ## Parameters
 

@@ -7,14 +7,14 @@ audience: Admin
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
 manager: dcscontentpm
-ms.author: wscontent
+ms.author: roharwoo
 author: Teresa-Motiv
 ms.date: 10/27/2021
 ---
 
 # Performance Tuning Network Adapters
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 Use the information in this topic to tune the performance network adapters for computers that are running Windows Server 2016 and later versions. If your network adapters provide tuning options, you can use these options to optimize network throughput and resource usage.
 

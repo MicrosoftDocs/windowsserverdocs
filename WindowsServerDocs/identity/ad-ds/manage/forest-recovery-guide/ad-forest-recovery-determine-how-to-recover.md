@@ -1,7 +1,7 @@
 ---
 title: Active Directory Forest Recovery - Determine how to recover the forest 
 description: Recovering an entire Active Directory forest involves restoring at least one Domain Controller (DC) in every domain from available backup. Recovering the forest restores each domain in the forest to its state at the time of the last trusted backup. Consequently, the restore operation will result in the loss of at least the following Active Directory data...
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 07/10/2023
 ms.topic: article
@@ -9,7 +9,7 @@ ms.topic: article
 
 # Active Directory Forest Recovery - Determine how to recover the forest
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 Recovering an entire Active Directory forest involves restoring at least one
 Domain Controller (DC) in every domain from an available backup. Recovering the

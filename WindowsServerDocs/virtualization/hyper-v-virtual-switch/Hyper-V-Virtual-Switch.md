@@ -4,13 +4,13 @@ description: This topic provides an overview of Hyper-V Virtual Switch in Window
 manager: brianlic
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 12/08/2020
 ---
 # Hyper-V Virtual Switch
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic provides an overview of Hyper-V Virtual Switch, which provides you with the ability to connect virtual machines \(VMs\) to networks that are external to the Hyper\-V host, including your organization's intranet and the Internet.
 

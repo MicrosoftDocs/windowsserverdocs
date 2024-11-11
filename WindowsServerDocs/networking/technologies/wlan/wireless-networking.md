@@ -2,9 +2,9 @@
 title: Wireless LAN overview in Windows Server
 description: The WLAN service allows for wireless configuration, discovery, and connectivity using a wireless adapter in Windows devices.
 ms.topic: how-to
-ms.author: wscontent
+ms.author: roharwoo
 author: xelu86
-ms.date: 01/23/2024
+ms.date: 10/25/2024
 
 ---
 
@@ -35,7 +35,7 @@ Install-WindowsFeature -Name Wireless-Networking
 ```
 
 > [!NOTE]
-> In Windows Server 2025 (preview), the WLAN feature is installed by default and you're required to enable this service to utilize wireless capabilities.
+> In Windows Server 2025, the WLAN feature is installed by default and you're required to enable this service to utilize wireless capabilities.
 
 ### Enable WLAN service
 

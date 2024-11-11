@@ -509,6 +509,8 @@
         href: ad-ds/manage/dc-locator.md
       - name: Enable Database 32k pages optional feature
         href: ad-ds/enable-32K-pages-optional-feature.md
+      - name: Replication Priority Boost
+        href: ad-ds/manage/replication-priority-boost.md  
       - name: Monitoring
         items:
         - name: LSA performance counters

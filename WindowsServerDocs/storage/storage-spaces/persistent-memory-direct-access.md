@@ -2,14 +2,14 @@
 title: Understand Direct Access (DAX) and create DAX volumes with persistent memory devices
 description: This article provides information on DAX and how to configure it with persistent memory modules.
 author: khdownie
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 05/14/2021
 ---
 
 # Understand and configure DAX
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
+>
 
 **Direct access (DAX)** treats persistent memory devices as byte-addressable memory to get the lowest latency, providing direct access to byte-addressable memory rather than following normal file system block I/O conventions. The app directly modifies the persistent memory, bypassing the software overhead of the I/O stack. When used properly by DAX-aware code (that is, by memory mapping data), this can provide significant performance benefits. However, DAX has a number of issues, and it won’t provide significant benefits without DAX-aware code.
 
