@@ -15,7 +15,7 @@ appliesto: "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started
 
 Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. The feature update allows organizations to easily perform an in-place upgrade to Windows Server 2025 using Windows Update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices.
 
-In some cases, you might wish to delay this optional update until you've evaluate Windows Server 2025 in your test environment. In this article, you learn how to disable the Windows Server 2025 optional feature update using the Targeted Release Vehicle (TRV) settings in Group Policy. To learn more about configuring Group Policy for updates, see [Configure Windows Update for Business via Group Policy](/windows/deployment/update/waas-wufb-group-policy) and [Update Policy CSP](windows/client-management/mdm/policy-csp-update#targetreleaseversion).
+In some cases, you might wish to delay this optional update until you evaluate Windows Server 2025 in your test environment. In this article, you learn how to disable the Windows Server 2025 optional feature update using the Targeted Release Vehicle (TRV) settings in Group Policy. To learn more about configuring Group Policy for updates, see [Configure Windows Update for Business via Group Policy](/windows/deployment/update/waas-wufb-group-policy) and [Update Policy CSP](windows/client-management/mdm/policy-csp-update#targetreleaseversion).
 
 ## Prerequisites
 
