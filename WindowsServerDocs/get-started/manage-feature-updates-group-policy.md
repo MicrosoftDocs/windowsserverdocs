@@ -44,7 +44,7 @@ To disable the Windows Server 2025 feature update, follow these steps:
 
 1. Open the Group Policy Management Console (GPMC). If you're applying this policy directly to your target device, select **Start**, then type `gpedit.msc`.
 
-1. In the console tree, navigate to **Computer Configuration > Administrative Templates > Windows Components > Windows Updates > Manage updates offered from Windows Update**.
+1. In the console tree, navigate to **Computer Configuration > Administrative Templates > Windows Components > Windows Updates > Manage updates offered from Windows Update**. If you're applying this policy in an Active Directory environment, the path is **Computer Configuration > Policies > Administrative Templates > Windows Components > Windows Updates > Manage updates offered from Windows Update**.
 
 1. For the policy setting, right-click **Select the target Feature Update version** and select **Edit**. To learn more about the _Select the target Feature Update version_ policy setting, see [GPS: Select the target Feature Update version](https://gpsearch.azurewebsites.net/Default.aspx?PolicyID=15143).
 
@@ -66,7 +66,7 @@ Once you're ready to start rolling out Windows Server 2025, configure policy as 
 
 1. Open the Group Policy Management Console (GPMC). If you're applying this policy directly on your target device, select **Start**, then type `gpedit.msc`.
 
-1. In the console tree, navigate to **Computer Configuration > Administrative Templates > Windows Components > Windows Updates > Manage updates offered from Windows Update**.
+1. In the console tree, navigate to **Computer Configuration > Administrative Templates > Windows Components > Windows Updates > Manage updates offered from Windows Update**. If you're applying this policy in an Active Directory environment, the path is **Computer Configuration > Policies > Administrative Templates > Windows Components > Windows Updates > Manage updates offered from Windows Update**.
 
 1. For the policy setting, right-click **Select the target Feature Update version** and select **Edit**. To learn more about the _Select the target Feature Update version_ policy setting, see [GPS: Select the target Feature Update version](https://gpsearch.azurewebsites.net/Default.aspx?PolicyID=15143).
 
