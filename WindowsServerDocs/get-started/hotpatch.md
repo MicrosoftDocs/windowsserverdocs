@@ -1,5 +1,5 @@
 ---
-title: Hotpatch for Windows Server Datacenter Azure Edition
+title: Hotpatch for Windows Server Azure Edition
 description: 'Learn how Hotpatch for Windows Server Datacenter: Azure Edition works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
@@ -7,7 +7,7 @@ ms.date: 11/11/2024
 ms.author: wscontent
 ---
 
-# Hotpatch for Windows Server Datacenter: Azure Edition
+# Hotpatch for Windows Server
 
 Hotpatching is a way to install OS security updates on Windows Server without having to restart your machine. Hotpatching patches the in-memory code of running processes without the need to restart the process. Hotpatching also provides the following benefits:
 
