@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 11/11/2024
-appliesto: "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>,✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>"
+appliesto: "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>, ✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>"
 #CustomerIntent: As a Windows Server administrator, I want to manage feature updates with Group Policy so that I can control when Windows Server 2025 is offered to my devices.
 ---
 
