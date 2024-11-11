@@ -39,7 +39,7 @@ On the primary AD FS server, get the thumbprint of the SSL certificate by runnin
 Repeat step 2 and 3 for all AD FS and WAP servers.
 
 ## Update SSL certificate settings if needed
-Use Azure AD Connect to update the SSL certificate on the impacted AD FS and WAP servers. Follow the instruction at [Update the SSL certificate for an Active Directory Federation Services (AD FS) farm](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update)
+Use Azure AD Connect to update the SSL certificate on the impacted AD FS and WAP servers. Follow the instruction at [Update the SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update)
 
 ## Check trusted root certificate store
 Run the following PowerShell command on all ADFS and WAP servers to make sure that there are no non-self-signed certificates in the trusted root cert store>
@@ -57,7 +57,7 @@ Check for any AD FS Replication Errors.
  2. Fix any sync issues
 
 ## Service principal name
-For proper WAP - AD FS communication, ensure that the correct service principal name (SPN) is configured on the AD FS service account. Run setspn -f -q host/<federation service name> and run setspn -f -q http/<federation service name> and correct any issues.
+For proper WAP - AD FS communication, ensure that the correct service principal name (SPN) is configured on the AD FS service account. Run setspn -f -q host/&lt;federation service name&gt; and run setspn -f -q http/&lt;federation service name&gt; and correct any issues.
 
  1. HOST should resolve to the ADFS service account.
  2. HTTP call should resolve to one of the AD FS servers. If SPN lookup resolves to an unrelated computer account, the authentication between the servers will fail.

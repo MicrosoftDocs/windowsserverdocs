@@ -971,7 +971,7 @@
       - name: SQL
         href: ad-fs/troubleshooting/ad-fs-tshoot-sql.md
       - name: WAP trust
-        href: ad-fs/troubleshooting/ad-fs-wap-trust.md
+        href: ad-fs/troubleshooting/ad-fs-tshoot-wap-trust.md
     - name: AD FS Technical Reference
       href: ad-fs/AD-FS-Technical-Reference.md
       items:

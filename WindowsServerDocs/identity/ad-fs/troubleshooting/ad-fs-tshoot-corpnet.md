@@ -46,7 +46,7 @@ In addition, if client user certificate authentication (clientTLS authentication
 
 
 ## Check the SSL certificate for corpnet access
-If you have Azure AD Connect, you should use it for managing the SSL certificates on your AD FS and WAP farm. Refer to https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update
+If you have Azure AD Connect, you should use it for managing the SSL certificates on your AD FS and WAP farm. Refer to [Update the TLS/SSL certificate for an Active Directory Federation Services](/entra/identity/hybrid/connect/how-to-connect-fed-ssl-update)
 
 ### Is the certificate from a trusted authority?
 

@@ -26,7 +26,7 @@ In order to verify AD FS service using IdpinitiatedSignOn follow these steps:
 
  1. Log into the WAP machine you want to test
  2. Open a private browser session
- 3. Go to https://<federation service fqdn>/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
+ 3. Go to https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
  4. Enter the credentials of a valid user on the login page
 
 A successful sign-in is indicated by the message "You are signed in".
@@ -267,7 +267,7 @@ Negotiate Client Certificate : Disabled
 
 If the user has Azure AD Connect installed, use AAD Connect to update the SSL certificate bindings on all servers. If there is no AAD Connect server in the environment, use the following PowerShell cmdlet to regenerate the ADFS Certificate bindings on the AD FS server:
 
-Set-AdfsSslCertificate -Thumbprint <thumbprint>
+Set-AdfsSslCertificate -Thumbprint &lt;thumbprint&gt;
 
 #### Is CA issued certificate in ADFSTrustedDevices store?
 
