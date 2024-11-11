@@ -46,7 +46,7 @@ These counters include:
 
 The counters which apply to your AD FS farm configuration should be reviewed for errors and unexpected high latencies. If either of these conditions are found, the issues should be addressed.
 
-For more information see [Scenario guide: Troubleshoot performance problems in Windows](~/performance/troubleshoot-performance-problems-in-windows.md)
+For more information see [Scenario guide: Troubleshoot performance problems in Windows](/troubleshoot/windows-server/performance/troubleshoot-performance-problems-in-windows)
 
 ### Determine if the federation server is overloaded
 A federation server has a limit as to how much traffic it can handle before the request latency exceeds a reasonable limit. If the AD FS servers in your farm do not have sufficient hardware or your farm is receiving excessive traffic, this increased latency can trigger congestion control on the Web Application Proxy.
