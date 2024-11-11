@@ -9,14 +9,14 @@ ms.topic: article
 ---
 
 # Users can't login using AD FS from an external network
-This document helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this document if users are not able to authenticate using AD FS from outside corpnet. This would usually include authentications occurring via the Web Application Proxy (WAP).
+This document helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this document if users aren't able to authenticate using AD FS from outside corpnet. This would usually include authentications occurring via the Web Application Proxy (WAP).
 
 ## Check extranet access
-We will now check extranet access. Let's first make sure that we are able to authenticate to the AD FS servers from WAP
+We'll now check extranet access. Let's first make sure that we're able to authenticate to the AD FS servers from WAP
 
 IdpInitiatedSignOn can quickly verify if the AD FS service is up and running, and authentication is working correctly.
 
-If you are running AD FS on Windows Server 2016, you must enable IdpInitiatedSignOn manually:
+If your running AD FS on Windows Server 2016, you must enable IdpInitiatedSignOn manually:
 
  1. Log into the primary AD FS server
  2. Open PowerShell
@@ -29,7 +29,7 @@ In order to verify AD FS service using IdpinitiatedSignOn follow these steps:
  3. Go to https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
  4. Enter the credentials of a valid user on the login page
 
-A successful sign-in is indicated by the message "You are signed in".
+A successful sign-in is indicated by the message "Your signed in".
 
 ## Check Network Settings
 Check DNS and any load balancer settings.
@@ -39,13 +39,13 @@ Check DNS and any load balancer settings.
 If you have Web Application Proxy (WAP) servers
 
 - Ping the federation service name e.g. fs.contoso.com and confirm if the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
-- In the DNS server hosting the service name externally, check that there is an A record for the federation service (e.g. fs.contoso.com) pointing to the WAP server or load balancer in front of the WAP servers
+- In the DNS server hosting the service name externally, check that there's an A record for the federation service (e.g. fs.contoso.com) pointing to the WAP server or load balancer in front of the WAP servers
 
 ### Load Balancer
 
-- Check that the firewall is not blocking traffic between AD FS and the load balancer, and between WAP and the load balancer
+- Check that the firewall isn't blocking traffic between AD FS and the load balancer, and between WAP and the load balancer
 - If probe is enabled
-- If you are running Windows Server 2012 R2, confirm that the August 2014 Windows Server 2012 R2 Update rollup (KB.2975719) is installed
+- If your running Windows Server 2012 R2, confirm that the August 2014 Windows Server 2012 R2 Update rollup (KB.2975719) is installed
 - Check if port 80 is enabled in the firewall on the WAP and AD FS servers
 - Ensure that probe is set for port 80 and endpoint /adfs/probe
 
@@ -53,7 +53,7 @@ If you have Web Application Proxy (WAP) servers
 
 Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.
 
-In addition, if client user certificate authentication (clientTLS authentication using X509 user certificates) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers.
+In addition, if client user certificate authentication (clientTLS authentication using X509 user certificates) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This isn't required on the firewall between the Web Application Proxy and the federation servers.
 
 ## Check if endpoint is enabled
 AD FS provides various endpoints for different functionalities and scenarios. Not all endpoints are enabled by default. To check if a particular endpoint is enabled or disabled:
@@ -94,7 +94,7 @@ while($i -lt $httpsslcertoutput.count)
             $ipbindingparsed = $httpsslcertoutput[$i].split(":")
             if ( ( $ipbindingparsed[2].trim() -ne "0.0.0.0" ) -and ( $ipbindingparsed[3].trim() -eq "443") )
             {
-                $warning = "There is an IP specific binding on IP " + $ipbindingparsed[2].trim() + " which may conflict with the AD FS port 443 cert binding." | Write-Warning
+                $warning = "There's an IP specific binding on IP " + $ipbindingparsed[2].trim() + " which may conflict with the AD FS port 443 cert binding." | Write-Warning
                 $certbindingissuedetected = $TRUE
             }
            
@@ -108,7 +108,7 @@ while($i -lt $httpsslcertoutput.count)
             $ipbindingparsed = $httpsslcertoutput[$i].split(":")
             if ( ( $ipbindingparsed[2].trim() -eq $adfsservicefqdn ) -and ( $ipbindingparsed[3].trim() -eq "443") -and ( $httpsslcertoutput[$i+10].split(":")[1].trim() -ne "AdfsTrustedDevices" ) )
             {
-                Write-Warning "ADFS Service binding does not have CTL Store Name set to AdfsTrustedDevices"
+                Write-Warning "ADFS Service binding doesn't have CTL Store Name set to AdfsTrustedDevices"
                 $certbindingissuedetected = $TRUE
             }
         $i = $i + 14
@@ -168,7 +168,7 @@ function checkproxytrustcerts
          if ($ctlMatch -eq $null)
          {
        $atLeastOneMismatch = $TRUE
-          Write-Warning "This cert is NOT in the CTL: $certThumbprint – $certSubject"
+          Write-Warning "This cert isn't in the CTL: $certThumbprint – $certSubject"
    
        if ($repair -eq $TRUE)
        {
@@ -198,7 +198,7 @@ Write-Host; Write-Host("All checks completed.")
 ```      
 
 ## Perform a detailed WAP check
-We will need to do some detailed checks. We will now check if the trust between WAP and AD FS is working as expected.
+We'll need to do some detailed checks. We'll now check if the trust between WAP and AD FS is working as expected.
 
 The proxy trust relationship between a Web Application Proxy server and the AD FS 2012 R2 server is client certificate based. When the Web Application Proxy post-install wizard is run, a self-signed Client Certificate is generated and inserted into the AD FS configuration store using the credentials specified in the wizard. AD FS also propagates this to the AdfsTrustedDevices certificate store on the AD FS server.
 
@@ -216,7 +216,7 @@ As mentioned above, the IP:Port mapping is of the highest precedence. Therefore,
 
 #### Remove the specific IP:port binding
 
-Be sure to check that the binding does not come back. If there is an application configured with such a binding, it may re-create this automatically or on next service start-up.
+Be sure to check that the binding doesn't come back. If there's an application configured with such a binding, it may re-create this automatically or on next service start-up.
 
 #### Use an additional IP address for AD FS traffic
 
@@ -265,7 +265,7 @@ Negotiate Client Certificate : Disabled
 
 #### Is CTL store name AdfsTrustedDevices?
 
-If the user has Azure AD Connect installed, use AAD Connect to update the SSL certificate bindings on all servers. If there is no AAD Connect server in the environment, use the following PowerShell cmdlet to regenerate the ADFS Certificate bindings on the AD FS server:
+If the user has Azure AD Connect installed, use AAD Connect to update the SSL certificate bindings on all servers. If there's no AAD Connect server in the environment, use the following PowerShell cmdlet to regenerate the ADFS Certificate bindings on the AD FS server:
 
 Set-AdfsSslCertificate -Thumbprint &lt;thumbprint&gt;
 
@@ -277,7 +277,7 @@ Delete the non-self signed SSL server certificate from the AdfsTrustedDevices st
 
 #### Is there a time skew between AD FS and WAP servers?
 
-Ensure that there is no time skew between the AD FS and WAP Servers
+Ensure that there's no time skew between the AD FS and WAP Servers
 
 #### SSL Termination between AD FS and WAP?
 
