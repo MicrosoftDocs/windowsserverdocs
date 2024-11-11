@@ -316,8 +316,6 @@ items:
       - name: Manage SDN
         href: sdn/manage/manage-sdn.md
         items:
-        - name: Manage SDN Multisite
-          href: /azure-stack/hci/manage/manage-sdn-multisite?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Configure network security groups with tags
           href: /azure-stack/hci/manage/configure-network-security-groups-with-tags?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Use default network access policies
@@ -354,6 +352,8 @@ items:
             href: sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md
           - name: Guest clustering in a virtual network
             href: sdn/manage/guest-clustering.md
+        - name: Manage SDN Multisite
+          href: /azure-stack/hci/manage/manage-sdn-multisite?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Update, backup, and restore an SDN infrastructure
           href: sdn/manage/Update-Backup-Restore.md
       - name: Security for SDN
