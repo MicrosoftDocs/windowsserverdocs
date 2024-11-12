@@ -27,8 +27,11 @@ Windows Admin Center supports multiple feeds and you can view and manage package
 
 1. Click the **Settings** button in the top-right > In the left pane, click **Extensions**.
 2. On the right pane, click the **Feeds** tab.
-3. Click the **Add** button to add another feed. For a NuGet feed, enter the NuGet V2 feed URL. The NuGet feed provider or administrator should be able to provide the URL information. For a file share, enter the full path of the file share in which the extension package files (.nupkg) are stored.
-4. Click **Add**. If the gateway must run in elevated mode to make this change, you will be presented with a UAC elevation prompt. This prompt will only be presented if you are running Windows Admin Center in desktop mode.
+3. Click the **Add** button to add another feed. For a NuGet feed, enter the NuGet V2 feed URL. The NuGet feed provider or administrator should be able to provide the URL information. For a file share, enter the full path of the file share in which the extension package files (.nupkg) are stored. If adding a file share as a feed, it must meet the following criteria:
+   a. Access to the file must be granted to NTAuthority\Network Service
+   b. The file path cannot include the C:\Users folder
+   c. The packages on the file share must be signed, unless [your operation mode is set to "Development"](/windows-server/manage/windows-admin-center/extend/prepare-development-environment#install-prerequisites)
+5. Click **Add**. If the gateway must run in elevated mode to make this change, you will be presented with a UAC elevation prompt. This prompt will only be presented if you are running Windows Admin Center in desktop mode.
 
 The **Available Extensions** list will show extensions from all registered feeds. You can check which feed each extension is from using the **Package Feed** column.
 
