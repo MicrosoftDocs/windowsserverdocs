@@ -55,8 +55,28 @@ If you wish to configure a Microsoft Entra app manually, rather than using the M
 > [!NOTE]
 > If you have Microsoft Defender Application Guard enabled for your browser, you won't be able to register Windows Admin Center with Azure or sign into Azure.
 
-## Troubleshooting Single-Page Application error on Azure sign-in
+## Troubleshooting Azure sign-in errors
 
+### The redirect URI does not match the URIs configured for this application
+If you've recently migrated your data from an older version of Windows Admin Center to version 2410 and did not complete the Azure Registration step in the migration wizard, your redirect URIs are likely not configured properly. This is because Windows Admin Center changed the way we perform authentication based on [general Microsoft guidance](/entra/identity-platform/v2-oauth2-implicit-grant-flow#prefer-the-auth-code-flow). Where we previously used the implicit grant flow, we're now using the authorization code flow. 
+
+There are two redirect URIs that must be added to the Single-Page Application (SPA) platform. An example of these redirect URIs would be: 
+```
+https://myMachineName.domain.com:6600
+https://myMachineName.domain.com:6600/signin-oidc
+```
+
+In the example above, the numerical value refers to the port referenced in your Windows Admin Center installation. 
+
+All redirect URIs for Windows Admin Center must contain: 
+- The FQDN or hostname of your gateway machine, no mention of localhost
+- The HTTPS prefix, not HTTP
+
+[Learn how to reconfigure your redirect URIs](/troubleshoot/entra/entra-id/app-integration/error-code-AADSTS50011-redirect-uri-mismatch). 
+
+After adding the proper redirect URIs, it's good practice to clean up old, unused redirect URIs.
+
+### Cross-origin token redemption permitted only for Single-page application
 If you've recently updated your Windows Admin Center instance to a newer version, and your gateway was previously registered with Azure, you might encounter an error stating "cross-origin token redemption is permitted only for the 'Single-Page Application' client type" upon signing into Azure. This is because Windows Admin Center has changed the way we perform authentication based on [general Microsoft guidance](/entra/identity-platform/v2-oauth2-implicit-grant-flow#prefer-the-auth-code-flow). Where we previously used the implicit grant flow, we're now using the authorization code flow. 
 
 If you'd like to continue using your existing app registration for your Windows Admin Center application, use [Microsoft Entra admin center](https://entra.microsoft.com/) to update the registration's redirect URIs to the Single-Page Application (SPA) platform. Doing so enables the authorization code flow with Proof Key for Code Exchange (PKCE) and cross-origin resource sharing (CORS) support for applications that use that registration.
