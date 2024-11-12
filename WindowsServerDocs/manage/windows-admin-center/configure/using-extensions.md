@@ -2,7 +2,7 @@
 title: Install and Manage Extensions
 description: Install and Manage Extensions in Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: daniellee-msft
+author: davannaw-msft
 ms.author: roharwoo
 ms.date: 01/14/2021
 ---
