@@ -43,7 +43,7 @@ You can uninstall any extensions you have previously installed, or even uninstal
 2. Select the **Installed Extensions** tab to view all installed extensions.
 3. Choose an extension to uninstall, then select **Uninstall**.
 
-After uninstall is complete, your browser automatically refreshes and Windows Admin Center reloads with the extension removed. If you uninstalled a tool that was preinstalled as part of Windows Admin Center, the tool is be available for reinstallation in the **Available Extensions** tab.
+After uninstall is complete, your browser automatically refreshes and Windows Admin Center reloads with the extension removed. If you uninstalled a tool that was preinstalled as part of Windows Admin Center, the tool is available for reinstallation in the **Available Extensions** tab.
 
 ## Installing extensions on a computer without internet connectivity
 
@@ -81,4 +81,4 @@ Windows Admin Center Preview includes a PowerShell module to manage your gateway
 
 [!INCLUDE [ps-extensions](../includes/ps-extensions.md)]
 
-### [Learn more about building an extension with the Windows Admin Center SDK](../extend/extensibility-overview.md).
+[Learn more about building an extension with the Windows Admin Center SDK](../extend/extensibility-overview.md).
