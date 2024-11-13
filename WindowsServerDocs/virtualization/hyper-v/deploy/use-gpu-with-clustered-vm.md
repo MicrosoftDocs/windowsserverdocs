@@ -4,7 +4,7 @@ description: Learn how to use GPUs with clustered virtual machines (VMs) to prov
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 08/08/2024
+ms.date: 10/25/2024
 zone_pivot_groups: windows-os
 #customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Stack HCI.
 ---
@@ -12,10 +12,8 @@ zone_pivot_groups: windows-os
 # Use GPUs with clustered VMs
 
 :::zone pivot="windows-server"
->Applies to: Windows Server 2025 (preview)
+>
 
-> [!IMPORTANT]
-> GPU with clustered VMs in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"

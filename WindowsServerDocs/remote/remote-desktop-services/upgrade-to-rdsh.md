@@ -10,7 +10,7 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Session Host
 
-> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server 2016
+> 
 
 > [!IMPORTANT]
 > All applications must be uninstalled before the upgrade and reinstalled after the upgrade to avoid any app compatibility issues that may rise because of the upgrade.

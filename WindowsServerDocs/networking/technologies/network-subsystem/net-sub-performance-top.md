@@ -11,7 +11,7 @@ ms.date: 10/27/2021
 
 # Network Subsystem Performance Tuning
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 You can use this topic for an overview of the network subsystem and for links to other topics in this guide.
 

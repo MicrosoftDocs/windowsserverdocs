@@ -10,7 +10,7 @@ ms.date: 12/20/2021
 
 # Prepare your development environment
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 Let's get started developing extensions with the Windows Admin Center SDK!  In this document, we'll cover the process to get your environment up and running to build and test an extension for Windows Admin Center.
 
