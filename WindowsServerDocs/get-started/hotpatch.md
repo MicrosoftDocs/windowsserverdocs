@@ -1,9 +1,9 @@
 ---
-title: Hotpatch for Windows Server Azure Edition
-description: 'Learn how Hotpatch for Windows Server Datacenter: Azure Edition works and how to enable it'
+title: Hotpatch for Windows Server
+description: 'Learn how Hotpatch for Windows Server works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
-ms.date: 11/11/2024
+ms.date: 11/13/2024
 ms.author: wscontent
 ---
 
