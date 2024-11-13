@@ -48,7 +48,7 @@ Windows Server allows you to use the latest features – including the latest se
 delivers the best performance.
 
 Beginning with Windows Server 2025, you can upgrade up to four versions at a time. Meaning you can
-upgrade to Windows Server 2025 from Windows Server 2012 R2 and later.
+upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later.
 
 With Windows Server 2022 and earlier, you can upgrade to a newer version of Windows Server by up to
 two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019 or
