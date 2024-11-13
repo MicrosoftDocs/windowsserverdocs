@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: alalve
-ms.date: 11/01/2024
+ms.date: 11/12/2024
 ---
 
 # What's new in Windows Server 2025
@@ -19,7 +19,7 @@ The following new features are specific to Windows Server with Desktop Experienc
 
 ### Accelerated Networking
 
-Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines (VM) hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings.
+Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines (VM) hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings. To learn more, see [Accelerated Networking at the Edge (preview)](/windows-server/networking/technologies/accelerated-networking/accelerated-networking).
 
 ### Active Directory Domain Services
 
@@ -386,10 +386,6 @@ The Windows Terminal, a powerful and efficient multishell application for comman
 ### Winget
 
 Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
-
-### Accelerated Networking
-
-Accelerated Networking simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. Accelerated Networking also adds a management layer that handles prerequisite checking, host configuration, and VM performance settings.
 
 ## See also
 
