@@ -4,7 +4,7 @@ description: General Windows Server upgrade information, along with what to thin
 ms.topic: how-to
 author: RobHindman
 ms.author: helohr
-ms.date: 10/25/2024
+ms.date: 11/13/2024
 ---
 
 # Overview of Windows Server upgrades
@@ -47,15 +47,14 @@ We recommend upgrading to the latest version of Windows Server. Running the late
 Windows Server allows you to use the latest features – including the latest security features – and
 delivers the best performance.
 
-> [!TIP]
->
-> - Beginning with Windows Server 2025, you can upgrade from an older version of Windows Server from Windows Server 2012 R2 and later.
->
-> - With Windows Server 2022 and earlier, you can upgrade to a newer version of Windows Server by up
-> to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019
-> or Windows Server 2022. If you are using the
-> [Cluster OS Rolling Upgrade feature](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
-> you can only one version at at time.
+Beginning with Windows Server 2025, you can upgrade up to four versions at a time. Meaning you can
+upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later.
+
+With Windows Server 2022 and earlier, you can upgrade to a newer version of Windows Server by up to
+two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019 or
+Windows Server 2022. If you are using the
+[Cluster OS Rolling Upgrade feature](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
+you can only one version at at time.
 
 In this table you can see the supported upgrade paths, based on the version you're currently on.
 
