@@ -24,6 +24,7 @@ Before any upgrade of your failover cluster, please consult the [Windows Server 
 
 > [!NOTE]
 > While Windows Server has the ability to upgrade two versions forward (ex: from 2012 R2 to 2019), the Failover Clustering feature only supports upgrading to one version higher (ex: from 2012 R2 to 2016).
+<br>
 
 ![In-place Upgrade Diagram](media/In-Place-Upgrade/In-Place-Upgrade-1.png)
 
