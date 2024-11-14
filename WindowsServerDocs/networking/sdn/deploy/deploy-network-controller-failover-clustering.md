@@ -143,7 +143,7 @@ The PowerShell `MultiNodeSampleConfig.psd1` configuration data file (located in 
 
 You're now ready to deploy Network Controller with Failover Clustering.
 
-## Deploy Network Controller with Failover Clustering
+## Deploy Network Controller with Failover Clustering using SDN Express
 
 To deploy Network Controller with Failover Clustering, follow these steps:
 
