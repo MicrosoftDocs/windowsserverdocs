@@ -4,7 +4,7 @@ description: Learn about Network Controller high availability using Failover Clu
 author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article 
-ms.date: 11/07/2024
+ms.date: 11/14/2024
 zone_pivot_groups: windows-os
 #Customer intent: As a network administrator, I want to understand how Network Controller works with Failover Clustering so that I can deploy and manage my tenant network configurations.
 
@@ -18,17 +18,15 @@ Beginning with Windows Server 2025 and Azure Stack HCI, version 24H2, Software D
 
 Network Controller is the brain of the SDN ecosystem. It allows you to deploy and manage your tenant network configurations, including virtual networking, logical networking, and network security. Network Controller a key infrastructural component, and it had to be hosted inside a VM in previous versions. VM-based resource deployment is a long and resource-intensive. VMs took up more CPU and Memory, resources that could be spent on your core application workloads. Beginning with Windows Server 2025 and Azure Stack HCI, version 24H2, the NC footprint is when used with Failover Clustering on the host, freeing up resources for your other workloads. The following illustration provides an overview of the key differences between NC on Service Fabric and NC on Failover Clustering.
 
-Figure 1: Network Controller on Service Fabric vs Network Controller on Failover Clustering
+:::image type="content" source="../../../media/network-controller-failover-cluster/failover-cluster-service-fabric-comparison.png" alt-text="A diagram comparing the differences between Network Controller with Failover Clustering and Network Controller with Service Fabric" lightbox="../../../media/network-controller-failover-cluster/failover-cluster-service-fabric-comparison.png":::
 
 ## Architecture
 
 With Network Controller on Failover Clustering, all the Network Controller microservices are now contained in a failover cluster resource group. SDN microservices use a single database and single partition, rather than three databases duplicated across 3 VMs when using Service Fabric. With each SDN microservice as a Failover Clustering resource group, there’s a significant reduction in CPU utilization and storage.
 
-¬¬Figure 2: Network Controller on Failover Clustering
+Network Controller and all its services are set as a Failover Cluster group set across the servers in your Software Defined Networking cluster. For example, your network topology includes four servers clustered together with a single Top-of-Rack (ToR) Switch, and the Network Controller component as a _Failover Clustering Generic Resource_. Instead of the three VMs in previous versions, each Network Controller microservice is highly available as a Failover Cluster Resource Group. The following diagram shows a 4-node deployment with Network Controller on Failover Clustering.
 
-The diagram shows an overview of the Network Controller architecture and how it relates to the different logical layers such as data, control, and management planes. Network Controller and all its services are set as a Failover Cluster group set across the servers in your Software Defined Networking cluster. For example, your network topology includes four servers clustered together with a single Top-of-Rack (ToR) Switch, and the Network Controller component as a _Failover Clustering Generic Resource_. Instead of the three VMs in previous versions, each Network Controller microservice is highly available as a Failover Cluster Resource Group. The following diagram shows a 4-node deployment with Network Controller on Failover Clustering.
-
-Figure 3: Network Controller on Failover Clustering on a 4-node deployment
+:::image type="content" source="../../../media/network-controller-failover-cluster/concept.png" alt-text="A diagram showing a 4-node deployment with Network Controller on Failover Clustering" lightbox="../../../media/network-controller-failover-cluster/concept.png":::
 
 The resource group has the same provisioning requirements as NC VMs. The API Microservice requires a floating IP address in your management network and DNS registration is still supported.
 
@@ -64,9 +62,7 @@ For additional information regarding Software Defined Networking, check out some
 
 :::zone pivot="windows-server"
 
-- YouTube Series
-
-- LINK TECH BLOG
+- [Deploy Network Controller with Failover Clustering](../../deploy/deploy-network-controller-failover-clustering.md)
 
 - [Plan a SDN Deployment](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
 
@@ -74,9 +70,7 @@ For additional information regarding Software Defined Networking, check out some
 
 :::zone pivot="azure-stack-hci"
 
-- YouTube Series
-
-- <LINK TECH BLOG>
+- [Deploy Network Controller with Failover Clustering](../../deploy/deploy-network-controller-failover-clustering.md)
 
 - [Plan a SDN Deployment](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure?context=/azure-stack/context/hci-context)
 
