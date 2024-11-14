@@ -36,15 +36,15 @@ With Network Controller on Failover Clustering, resource ownership is associated
 
 :::zone pivot="windows-server"
 
-- [Failover Clustering in Windows Server and Azure Stack HCI](../../../failover-clustering/failover-clustering-overview.md)
-- [Storage Replica Overview](../../../storage/storage-replica/storage-replica-overview.md)
+- [Failover Clustering in Windows Server and Azure Stack HCI](../../../../failover-clustering/failover-clustering-overview.md)
+- [Storage Replica Overview](../../../../storage/storage-replica/storage-replica-overview.md)
 
 :::zone-end
 
 :::zone pivot="azure-stack-hci"
 
-- [Failover Clustering in Windows Server and Azure Stack HCI](../../../failover-clustering/failover-clustering-overview.md?context=/azure-stack/context/hci-context)
-- [Storage Replica Overview](../../../storage/storage-replica/storage-replica-overview.md?context=/azure-stack/context/hci-context)
+- [Failover Clustering in Windows Server and Azure Stack HCI](../../../../failover-clustering/failover-clustering-overview.md)
+- [Storage Replica Overview](../../../../storage/storage-replica/storage-replica-overview.md?context=/azure-stack/context/hci-context)
 
 :::zone-end
 

@@ -273,9 +273,9 @@ items:
           href: /azure-stack/hci/concepts/network-controller-overview
           items:
           - name: Network Controller with Failover Clustering
-            href: sdn/technologies/network-controller-failover-clustering.md
+            href: sdn/technologies/network-controller/network-controller-failover-clustering.md
           - name: Network Controller with Service Fabric
-            href: sdn/technologies/network-controller/network-controller-high-availability.md
+            href: sdn/technologies/network-controller/network-controller-service-fabric.md
           - name: Install the Network Controller server role using Server Manager
             href: sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md
           - name: Post-deployment steps for Network Controller
@@ -314,7 +314,7 @@ items:
           - name: Deploy Network Controller using Windows PowerShell
             href: sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md
           - name: Network Controller with Failover Clustering
-            href: sdn/technologies/network-controller-failover-clustering.md
+            href: sdn/technologies/network-controller/network-controller-failover-clustering.md
       - name: Manage SDN
         href: sdn/manage/manage-sdn.md
         items:

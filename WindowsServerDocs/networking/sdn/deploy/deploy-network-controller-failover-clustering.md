@@ -1,6 +1,6 @@
 ---
 title: Deploy Network Controller with Failover Clustering on Windows Server and Azure Stack HCI
-description: #Required; Keep the description within 100- and 165-characters including spaces.
+description: Learn how to deploy Network Controller with Failover Clustering using SDN Express on Windows Server and Azure Stack HCI.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
