@@ -225,11 +225,13 @@
   - name: Remote Server Administration Tools
     href: remote-server-administration-tools.md
   - name: Remote Desktop Services
-    href: remote-desktop-services/remote-desktop-services-overview.md
+    href: remote-desktop-services/index.yml
   - name: Remote Access
     items:
     - name: Overview
       items:
+      - name: Remote Desktop Services
+        href: remote-desktop-services/remote-desktop-services-overview.md
       - name: About Remote Access
         href: remote-access/remote-Access.md
       - name: About Always On VPN
