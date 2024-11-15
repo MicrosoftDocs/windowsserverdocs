@@ -3,9 +3,8 @@ metadata:
   title: Storage Migration Service frequently asked questions (FAQ)
   description: Frequently asked questions about Storage Migration Service, such as what files are excluded from transfers when migrating from one server to another.
   author: nedpyle
-  ms.author: nedpyle
-  manager: siroy
-  ms.date: 06/25/2024
+  ms.author: alalve
+  ms.date: 08/14/2024
   ms.topic: faq
   ms.service: windows-server
 title: Storage Migration Service frequently asked questions (FAQ)
@@ -196,13 +195,15 @@ sections:
 
       - question: What are my options to give feedback, file bugs, or get support?
         answer: |
+          For technical assistance with the Storage Migration Service, you can post at [Microsoft Q & A](https://learn.microsoft.com/en-us/answers/index.html) or contact [Microsoft Business Support](https://support.microsoft.com/contactus).
+
           To give feedback on the Storage Migration Service:
           
-          - Use the Feedback Hub tool included in Windows Server 2025 and Windows 11, select **Suggest a Feature**, and specifying the category of **Windows Server** and subcategory of **Storage Migration**
+          - Use the Feedback Hub tool included in Windows Server 2025 and Windows 11, select **Suggest a Feature**, select the **Windows Server** category, and subcategory of **Storage Migration**
           
           To file bugs:
           
-          - Use the Feedback Hub tool included in Windows Server 2025 and Windows 11, select **Report a Problem**, and specifying the category of **Windows Server** and subcategory of **Storage Migration**
+          - Use the Feedback Hub tool included in Windows Server 2025 and Windows 11, select **Report a Problem**, select the **Windows Server** category, and subcategory of **Storage Migration**
           - Open a support case via [Microsoft Support](https://support.microsoft.com)
           
           To get support:
@@ -213,4 +214,5 @@ sections:
 additionalContent: |
 
   ## Additional references
+  
     - [Storage Migration Service overview](overview.md)

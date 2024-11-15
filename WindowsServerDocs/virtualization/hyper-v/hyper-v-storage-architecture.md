@@ -15,7 +15,7 @@ Windows Server Hyper-V is a mature hypervisor platform that supports a wide rang
 
 ## Standalone Hyper-V with local disks
 
-Hyper-V supports several nonclustered, or standalone, configurations where you install Hyper-V on a standalone server and use local storage, network-attached storage (NAS), or storage area network (SAN) storage.
+Hyper-V supports several nonclustered, or standalone, configurations where you install Hyper-V on a standalone server and use local storage.
 
 When using this configuration:
 

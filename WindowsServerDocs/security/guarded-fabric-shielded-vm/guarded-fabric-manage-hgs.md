@@ -5,13 +5,13 @@ ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 12/10/2020
 ---
 
 # Managing the Host Guardian Service
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 The Host Guardian Service (HGS) is the centerpiece of the guarded fabric solution.
 It is responsible for ensuring that Hyper-V hosts in the fabric are known to the hoster or enterprise and running trusted software and for managing the keys used to start up shielded VMs.

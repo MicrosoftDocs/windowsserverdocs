@@ -1,49 +1,50 @@
 ---
 title: Create a virtual machine in Hyper-V
-description: Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell
+description: Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell.
 ms.topic: how-to
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
 ms.author: alalve
 author: alanalves
-ms.date: 02/22/2023
+ms.date: 10/25/2024
 ---
+
 # Create a virtual machine in Hyper-V
 
->Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019, Windows 11, Windows 10
+>
 
 Learn how to create a virtual machine by using Hyper-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper-V Manager.
 
 ## Create a virtual machine
 
-#### [Hyper-V Manager](#tab/hyper-v-manager)
+### [Hyper-V Manager](#tab/hyper-v-manager)
 
 1.  Open **Hyper-V Manager**.
 
-2.  From the **Action** pane, click **New**, and then click **Virtual Machine**.
+1.  From the **Action** pane, click **New**, and then click **Virtual Machine**.
 
-3.  From the **New Virtual Machine Wizard**, click **Next**.
+1.  From the **New Virtual Machine Wizard**, click **Next**.
 
-4.  Make the appropriate choices for your virtual machine on each of the pages. For more information, see [New virtual machine options and defaults in Hyper-V Manager](#options-in-hyper-v-manager-new-virtual-machine-wizard).
+1.  Make the appropriate choices for your virtual machine on each of the pages. For more information, see [New virtual machine options and defaults in Hyper-V Manager](#options-in-hyper-v-manager-new-virtual-machine-wizard).
 
-5.  After verifying your choices in the **Summary** page, click **Finish**.
+1.  After verifying your choices in the **Summary** page, click **Finish**.
 
-6.  In Hyper-V Manager, right-click the virtual machine and select **connect**.
+1.  In Hyper-V Manager, right-click the virtual machine and select **connect**.
 
-7.  In the Virtual Machine Connection window, select **Action** > **Start**.
+1.  In the Virtual Machine Connection window, select **Action** > **Start**.
 
-#### [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell)
 
 1. On the Windows desktop, click the Start button and type **Windows PowerShell**.
 
-2. Right-click on **Windows PowerShell** and select **Run as administrator**.
+1. Right-click on **Windows PowerShell** and select **Run as administrator**.
 
-3. Get the name of the virtual switch that you want the virtual machine to use by using the [Get-VMSwitch](/powershell/module/hyper-v/get-vmswitch) cmdlet:
+1. Get the name of the virtual switch that you want the virtual machine to use by using the [Get-VMSwitch](/powershell/module/hyper-v/get-vmswitch) cmdlet:
 
    ```powershell
    Get-VMSwitch * | Format-Table Name
    ```
 
-4. Use the [New-VM](/powershell/module/hyper-v/new-vm) cmdlet to create the  virtual machine. See the following examples below:
+1. Use the [New-VM](/powershell/module/hyper-v/new-vm) cmdlet to create the  virtual machine. See the following examples below:
 
    > [!NOTE]
    > If you move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the **-Version** parameter with **[New-VM](/powershell/module/hyper-v/new-vm)** to set the virtual machine configuration version to 5. The default virtual machine configuration version for Windows Server 2016 isn't supported by  Windows Server 2012 R2 or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions).
@@ -75,9 +76,9 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
      New-VM -Name TestVM -MemoryStartupBytes 4GB -BootDevice VHD -NewVHDPath .\VMs\Test.vhdx -Path .\VMData -NewVHDSizeBytes 20GB -Generation 2 -Switch ExternalSwitch
      ```
 
-   - **New virtual hard disk that boots to operating system image** - To create a virtual machine with a new virtual disk that boots to an operating system image, see the PowerShell example in [Create virtual machine walkthrough for Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine).
+   - **New virtual hard disk that boots to operating system image** - To create a virtual machine with a new virtual disk that boots to an operating system image, see the PowerShell example in [Create virtual machine walkthrough for Hyper-V on Windows](/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine).
 
-5. Start the virtual machine by using the [Start-VM](/powershell/module/hyper-v/start-vm) cmdlet. Run the following cmdlet where Name is the name of the  virtual machine you created:
+1. Start the virtual machine by using the [Start-VM](/powershell/module/hyper-v/start-vm) cmdlet. Run the following cmdlet where Name is the name of the  virtual machine you created:
 
    ```powershell
    Start-VM -Name <Name>
@@ -89,7 +90,7 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
    Start-VM -Name TestVM
    ```
 
-6. Connect to the virtual machine by using Virtual Machine Connection (VMConnect):
+1. Connect to the virtual machine by using Virtual Machine Connection (VMConnect):
 
    ```powershell
    VMConnect.exe <ServerName> <VMName>

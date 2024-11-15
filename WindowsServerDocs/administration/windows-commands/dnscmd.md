@@ -3,14 +3,14 @@ title: Dnscmd
 description: Reference article for the dnscmd command, which is a command-line interface for managing DNS servers.
 ms.topic: reference
 ms.assetid: e7f31cb5-a426-4e25-b714-88712b8defd5
-ms.author: wscontent
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/21/2024
 ---
 
 # Dnscmd
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 A command-line interface for managing DNS servers. This utility is useful in scripting batch files to help automate routine DNS management tasks, or to perform simple unattended setup and configuration of new DNS servers on your network.
 

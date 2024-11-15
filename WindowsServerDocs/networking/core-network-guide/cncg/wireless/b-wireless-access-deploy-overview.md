@@ -4,13 +4,13 @@ description: Learn about wireless access deployment components that are required
 manager: brianlic
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 The following illustration shows the components that are required to deploy 802.1X authenticated wireless access with PEAP\-MS\-CHAP v2.
 

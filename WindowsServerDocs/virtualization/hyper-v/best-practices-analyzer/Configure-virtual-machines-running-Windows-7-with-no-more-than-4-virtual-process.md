@@ -1,7 +1,7 @@
 ---
 title: Configure virtual machines running Windows 7 with no more than 4 virtual processors
 description: Learn what to do when a virtual machine running Windows 7 is configured with more than 4 virtual processors.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 8fcf0868-b543-4f94-aee7-35324346da55
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Configure virtual machines running Windows 7 with no more than 4 virtual processors
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

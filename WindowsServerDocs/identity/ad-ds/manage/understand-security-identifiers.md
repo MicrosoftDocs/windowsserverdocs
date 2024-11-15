@@ -2,14 +2,14 @@
 title: Security identifiers
 description: This article discusses security identifiers (SIDs) for Windows Server accounts and groups and unique identifiers.
 author: dansimp
-ms.author: dansimp
+ms.author: roharwoo
 ms.topic: article
 ms.date: 05/09/2023
 ---
 
 # Security identifiers
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 This article describes how security identifiers (SIDs) work with accounts and groups in the Windows Server operating system.
 

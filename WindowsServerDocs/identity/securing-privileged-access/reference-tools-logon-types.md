@@ -5,7 +5,7 @@ description: Identify the risk of credential exposure associated with different 
 ms.topic: reference
 ms.date: 05/30/2024
 
-ms.author: joflore
+ms.author: roharwoo
 author: MicrosoftGuyJFlo
 ms.reviewer: mas
 ---

@@ -3,13 +3,13 @@ title: Create a Quota Template
 description: This article describes how to create a quota template to define a storage space limit
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 # Create a Quota Template
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>
 
 A *quota template* defines a space limit, the type of quota (hard or soft) and optionally, a set of notifications that will be generated automatically when quota usage reaches defined threshold levels.
 

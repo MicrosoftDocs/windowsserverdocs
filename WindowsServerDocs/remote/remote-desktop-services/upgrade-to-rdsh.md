@@ -1,8 +1,8 @@
 ---
 title: Upgrading your Remote Desktop Session Host
 description: Learn how to upgrade your existing Remote Desktop Session Host.
-ms.author: spatnaik
-ms.date: 05/21/2024
+ms.author: roharwoo
+ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: 5c9b98b8-4eca-4a39-b10b-2bac729f7f44
 author: spatnaik
@@ -10,7 +10,7 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Session Host
 
-> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server 2016
+> 
 
 > [!IMPORTANT]
 > All applications must be uninstalled before the upgrade and reinstalled after the upgrade to avoid any app compatibility issues that may rise because of the upgrade.

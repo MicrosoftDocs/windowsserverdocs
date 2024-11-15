@@ -1,10 +1,9 @@
+items:
 - name: Networking documentation
   href: index.yml
   items:
   - name: Windows Server supported networking scenarios
     href: windows-server-supported-networking-scenarios.md
-  - name: What's new in networking
-    href: What-s-New-in-Networking.md
   - name: Configure secure protocol options for WinHTTP
     href: configure-secure-protocol-options-winhttp.md
   - name: Core network guidance for Windows Server
@@ -246,6 +245,140 @@
         href: ../troubleshoot/dynamic-host-configuration-protocol-basics.md
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
+  - name: Edge networking
+    items:
+    - name: Network ATC
+      href: /azure-stack/hci/concepts/network-atc-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+      items:
+      - name: Deploy host networking with Network ATC
+        href: /azure-stack/hci/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+      - name: Manage Network ATC
+        href: /azure-stack/hci/manage/manage-network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+    - name: Software Defined Networking (SDN)
+      href: sdn/index.yml
+      items:
+      - name: SDN technologies
+        href: sdn/technologies/Software-Defined-Networking-Technologies.md
+        items:
+        - name: Hyper-V network virtualization
+          href: sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md
+          items:
+          - name: Hyper-V network virtualization overview
+            href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md
+          - name: Hyper-V network virtualization technical details
+            href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md
+        - name: Internal DNS service (iDNS) for SDN
+          href: sdn/technologies/Idns-for-Sdn.md
+        - name: Network Controller
+          href: /azure-stack/hci/concepts/network-controller-overview
+          items:
+          - name: Network Controller high availability
+            href: sdn/technologies/network-controller/network-controller-high-availability.md
+          - name: Install the Network Controller server role using Server Manager
+            href: sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md
+          - name: Post-deployment steps for Network Controller
+            href: sdn/technologies/network-controller/post-deploy-steps-nc.md
+        - name: Network function virtualization
+          href: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
+          items:
+          - name: Datacenter firewall overview
+            href: /azure-stack/hci/concepts/datacenter-firewall-overview
+          - name: RAS Gateway for SDN
+            href: /azure-stack/hci/concepts/gateway-overview
+            items:
+            - name: RAS Gateway deployment architecture
+              href: sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md
+            - name: RAS Gateway high availability
+              href: sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md
+          - name: Software Load Balancing (SLB) for SDN
+            href: /azure-stack/hci/concepts/software-load-balancer
+        - name: SDN Multisite overview
+          href: /azure-stack/hci/concepts/sdn-multisite-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        - name: Container networking
+          href: sdn/technologies/Containers/Container-networking-overview.md
+      - name: Plan for SDN
+        href: /azure-stack/hci/concepts/plan-software-defined-networking-infrastructure
+        items:
+        - name: Installation and preparation requirements for deploying Network Controller
+          href: /azure-stack/hci/concepts/network-controller
+      - name: Deploy SDN
+        items:
+        - name: Deploy an SDN Infrastructure
+          href: sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md
+          items:
+          - name: Deploy an SDN infrastructure using scripts
+            href: sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md
+        - name: Deploy SDN technologies using Windows PowerShell
+          href: sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md
+          items:
+          - name: Deploy Network Controller using Windows PowerShell
+            href: sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md
+      - name: Manage SDN
+        href: sdn/manage/manage-sdn.md
+        items:
+        - name: Configure network security groups with tags
+          href: /azure-stack/hci/manage/configure-network-security-groups-with-tags?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        - name: Use default network access policies
+          href: /azure-stack/hci/manage/manage-default-network-access-policies-virtual-machines-23h2?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        - name: Manage tenant virtual networks
+          href: sdn/manage/Manage-Tenant-Virtual-Networks.md
+          items:
+          - name: Understanding usage of virtual networks and VLANs
+            href: sdn/manage/Understanding-Usage-of-Virtual-Networks-and-VLANs.md
+          - name: Use Access Control lists (ACLs) to manage datacenter network traffic flow
+            href: /azure-stack/hci/manage/use-datacenter-firewall-powershell
+          - name: Create, delete, or update tenant virtual networks
+            href: sdn/manage/create,-delete,-or-Update-Tenant-Virtual-Networks.md
+          - name: Add a virtual gateway to a tenant virtual network
+            href: sdn/manage/add-a-Virtual-Gateway-to-a-Tenant-Virtual-Network.md
+          - name: Connect container endpoints to a tenant virtual network
+            href: sdn/manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md
+          - name: Configure encryption for a virtual subnet
+            href: sdn/vnet-encryption/sdn-config-vnet-encryption.md
+          - name: Egress metering in a virtual network
+            href: sdn/manage/sdn-egress.md
+        - name: Manage tenant workloads
+          href: sdn/manage/Manage-Tenant-Workloads.md
+          items:
+          - name: Create a VM and connect to a tenant virtual network or VLAN
+            href: sdn/manage/create-a-Tenant-VM.md
+          - name: Configure QoS for a tenant VM network adapter
+            href: sdn/manage/Configure-QoS-for-Tenant-VM-Network-Adapter.md
+          - name: Configure datacenter firewall ACLs
+            href: /azure-stack/hci/manage/use-datacenter-firewall-powershell
+          - name: Configure the Software Load Balancer for load balancing and Network address Translation (NAT)
+            href: sdn/manage/Configure-SLB-and-Nat.md
+          - name: Use network virtual appliances on a virtual network
+            href: sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md
+          - name: Guest clustering in a virtual network
+            href: sdn/manage/guest-clustering.md
+        - name: Manage SDN Multisite
+          href: /azure-stack/hci/manage/manage-sdn-multisite?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        - name: Update, backup, and restore an SDN infrastructure
+          href: sdn/manage/Update-Backup-Restore.md
+      - name: Security for SDN
+        items:
+        - name: Secure the Network Controller
+          href: /azure-stack/hci/manage/nc-security?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Manage certificates for SDN
+          href: /azure-stack/hci/manage/sdn-manage-certs?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Update Network Controller certificates
+          href: /azure-stack/hci/manage/update-network-controller-certificates?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Kerberos with Service Principal Name (SPN)
+          href: /azure-stack/hci/manage/kerberos-with-spn?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: SDN firewall auditing
+          href: /azure-stack/hci/manage/use-datacenter-firewall-powershell?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Virtual network peering
+        href: sdn/vnet-peering/sdn-vnet-peering.md
+        items:
+        - name: Configure virtual network peering
+          href: sdn/vnet-peering/sdn-configure-vnet-peering.md
+      - name: SDN gateway performance
+        href: sdn/gateway-performance.md
+      - name: Gateway bandwidth allocation
+        href: sdn/gateway-allocation.md
+    - name: Accelerated Networking
+      href: technologies/accelerated-networking/accelerated-networking.md
   - name: Extensible Authentication Protocol (EAP)
     href: technologies/extensible-authentication-protocol/network-access.md
     items:
@@ -289,8 +422,6 @@
   - name: IP Address Management (IPAM)
     href: technologies/ipam/ipam-top.md
     items:
-    - name: What's new in IPAM
-      href: technologies/ipam/What-s-New-in-IPAM.md
     - name: Manage IPAM
       href: technologies/ipam/Manage-IPAM.md
       items:
@@ -496,121 +627,6 @@
         href: technologies/qos/qos-policy-errors.md
     - name: QoS policy FAQ
       href: technologies/qos/qos-policy-faq.yml
-  - name: Software Defined Networking (SDN)
-    href: sdn/index.yml
-    items:
-    - name: SDN technologies
-      href: sdn/technologies/Software-Defined-Networking-Technologies.md
-      items:
-      - name: Hyper-V network virtualization
-        href: sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md
-        items:
-        - name: Hyper-V network virtualization overview
-          href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md
-        - name: Hyper-V network virtualization technical details
-          href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md
-      - name: Internal DNS service (iDNS) for SDN
-        href: sdn/technologies/Idns-for-Sdn.md
-      - name: Network Controller
-        href: /azure-stack/hci/concepts/network-controller-overview
-        items:
-        - name: Network Controller high availability
-          href: sdn/technologies/network-controller/network-controller-high-availability.md
-        - name: Install the Network Controller server role using Server Manager
-          href: sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md
-        - name: Post-deployment steps for Network Controller
-          href: sdn/technologies/network-controller/post-deploy-steps-nc.md
-      - name: Network function virtualization
-        href: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
-        items:
-        - name: Datacenter firewall overview
-          href: /azure-stack/hci/concepts/datacenter-firewall-overview
-        - name: RAS Gateway for SDN
-          href: /azure-stack/hci/concepts/gateway-overview
-          items:
-          - name: RAS Gateway deployment architecture
-            href: sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md
-          - name: RAS Gateway high availability
-            href: sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md
-        - name: Software Load Balancing (SLB) for SDN
-          href: /azure-stack/hci/concepts/software-load-balancer
-      - name: Container networking
-        href: sdn/technologies/Containers/Container-networking-overview.md
-    - name: Plan for SDN
-      href: /azure-stack/hci/concepts/plan-software-defined-networking-infrastructure
-      items:
-      - name: Installation and preparation requirements for deploying Network Controller
-        href: /azure-stack/hci/concepts/network-controller
-    - name: Deploy SDN
-      items:
-      - name: Deploy an SDN Infrastructure
-        href: sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md
-        items:
-        - name: Deploy an SDN infrastructure using scripts
-          href: sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md
-      - name: Deploy SDN technologies using Windows PowerShell
-        href: sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md
-        items:
-        - name: Deploy Network Controller using Windows PowerShell
-          href: sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md
-    - name: Manage SDN
-      href: sdn/manage/manage-sdn.md
-      items:
-      - name: Manage tenant virtual networks
-        href: sdn/manage/Manage-Tenant-Virtual-Networks.md
-        items:
-        - name: Understanding usage of virtual networks and VLANs
-          href: sdn/manage/Understanding-Usage-of-Virtual-Networks-and-VLANs.md
-        - name: Use Access Control lists (ACLs) to manage datacenter network traffic flow
-          href: /azure-stack/hci/manage/use-datacenter-firewall-powershell
-        - name: Create, delete, or update tenant virtual networks
-          href: sdn/manage/create,-delete,-or-Update-Tenant-Virtual-Networks.md
-        - name: Add a virtual gateway to a tenant virtual network
-          href: sdn/manage/add-a-Virtual-Gateway-to-a-Tenant-Virtual-Network.md
-        - name: Connect container endpoints to a tenant virtual network
-          href: sdn/manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md
-        - name: Configure encryption for a virtual subnet
-          href: sdn/vnet-encryption/sdn-config-vnet-encryption.md
-        - name: Egress metering in a virtual network
-          href: sdn/manage/sdn-egress.md
-      - name: Manage tenant workloads
-        href: sdn/manage/Manage-Tenant-Workloads.md
-        items:
-        - name: Create a VM and connect to a tenant virtual network or VLAN
-          href: sdn/manage/create-a-Tenant-VM.md
-        - name: Configure QoS for a tenant VM network adapter
-          href: sdn/manage/Configure-QoS-for-Tenant-VM-Network-Adapter.md
-        - name: Configure datacenter firewall ACLs
-          href: /azure-stack/hci/manage/use-datacenter-firewall-powershell
-        - name: Configure the Software Load Balancer for load balancing and Network address Translation (NAT)
-          href: sdn/manage/Configure-SLB-and-Nat.md
-        - name: Use network virtual appliances on a virtual network
-          href: sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md
-        - name: Guest clustering in a virtual network
-          href: sdn/manage/guest-clustering.md
-      - name: Update, backup, and restore an SDN infrastructure
-        href: sdn/manage/Update-Backup-Restore.md
-    - name: Security for SDN
-      items:
-      - name: Secure the Network Controller
-        href: /azure-stack/hci/manage/nc-security?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
-      - name: Manage certificates for SDN
-        href: /azure-stack/hci/manage/sdn-manage-certs?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
-      - name: Update Network Controller certificates
-        href: /azure-stack/hci/manage/update-network-controller-certificates?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
-      - name: Kerberos with Service Principal Name (SPN)
-        href: /azure-stack/hci/manage/kerberos-with-spn?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
-      - name: SDN firewall auditing
-        href: /azure-stack/hci/manage/use-datacenter-firewall-powershell?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
-    - name: Virtual network peering
-      href: sdn/vnet-peering/sdn-vnet-peering.md
-      items:
-      - name: Configure virtual network peering
-        href: sdn/vnet-peering/sdn-configure-vnet-peering.md
-    - name: SDN gateway performance
-      href: sdn/gateway-performance.md
-    - name: Gateway bandwidth allocation
-      href: sdn/gateway-allocation.md
   - name: Switch Embedded Teaming (SET)
     href: /azure-stack/hci/concepts/host-network-requirements
   - name: Virtual Private Networking (VPN)

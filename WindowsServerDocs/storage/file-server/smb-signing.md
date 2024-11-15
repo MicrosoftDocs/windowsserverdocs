@@ -1,16 +1,13 @@
 ---
-title: Control SMB signing behavior (preview)
+title: Control SMB signing behavior
 description: How to disable SMB signing on third-party servers in Windows 11 and Windows Server.
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
-ms.date: 06/05/2024
+ms.date: 10/25/2024
 ---
 
-# Control SMB signing behavior (preview)
-
-> [!IMPORTANT]
-> Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Control SMB signing behavior
 
 ## How SMB signing works
 
@@ -18,11 +15,11 @@ Server Message Block (SMB) signing is a security feature that uses the session k
 
 SMB signing requirements can involve both outbound signing, which covers traffic from the SMB client, and inbound signing, which covers traffic to the server. Windows and Windows Server can require outbound signing only, inbound signing only, both, or neither. For example:
 
-- Windows 11 Insiders Enterprise, Pro, and Education require both outbound and inbound SMB signing.
+- Windows 11, version 24H2 Enterprise, Pro, and Education require both outbound and inbound SMB signing.
 
-- Windows Server Insiders requires outbound SMB signing only.
+- Windows Server 2025 requires outbound SMB signing only.
 
-- Windows 11 Insider Home edition doesn't require outbound or inbound SMB signing.
+- Windows 11, version 24H2 Home edition doesn't require outbound or inbound SMB signing.
 
 ## SMB signing behavior
 
@@ -63,8 +60,8 @@ Disabling SMB signing may be necessary if you're unable to disable guest usage f
 
 In order to control SMB signing behavior and maximize its capabilities, your system must be running one of the following two operating systems:
 
-- Windows 11 Insider Preview Build 25905 or later
-- Windows Server Preview Build 26010 or later
+- Windows 11, version 24H2 or later
+- Windows Server 2025 or later
 
 You should also follow these recommendations to ensure your SMB signatures are effective at securing your data:
 
@@ -74,7 +71,7 @@ You should also follow these recommendations to ensure your SMB signatures are e
 
 ## Disable SMB signing
 
-SMB signing is required by default on the latest Insider Preview builds of Windows 11 and Windows Server. All Windows environments support SMB signing. However, if your environment uses third-party servers and the third-party server doesn't support SMB signing, you can't connect to the remote share.
+SMB signing is required by default on the latest Insider Preview builds of Windows 11 and Windows Server 2025. All Windows environments support SMB signing. However, if your environment uses third-party servers and the third-party server doesn't support SMB signing, you can't connect to the remote share.
 
 Requiring SMB signing also disables guest access to shares. In these cases, you must disable SMB signing manually to restore access for guest accounts. You can manually disable SMB signing through Group Policy, PowerShell, and Windows Admin Center.
 

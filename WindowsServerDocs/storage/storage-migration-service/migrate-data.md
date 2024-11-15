@@ -1,8 +1,8 @@
 ---
 title: Migrate a file server by using Storage Migration Service
 description: Learn how to install Storage Migration Service, and use the service and Windows Admin Center to migrate to a Windows server or Windows Failover Cluster.
-author: jasongerend
-ms.author: wscontent
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/25/2024
 ms.topic: conceptual
 ---

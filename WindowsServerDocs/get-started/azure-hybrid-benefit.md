@@ -1,10 +1,10 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
-ms.date: 01/23/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Azure Hybrid Benefit for Windows Server
@@ -71,7 +71,7 @@ You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. F
 
 - **Windows Server Standard edition:** Licenses must be used either on-premises or in Azure, but not at the same time. The only exception is on a one-time basis, for up to 180 days, to allow you to migrate the same workloads to Azure.  
 
-- **Windows Server Datacenter edition:** Licenses allow simultaneous usage on-premises and in Azure. Dual Use Rights don't apply for licenses allocated for [Unlimited Virtualization Rights](#unlimited-virtualization).
+- **Windows Server Datacenter edition:** For VM Licensing, licenses allow simultaneous usage on-premises and in Azure indefinitely. For Dedicated Host Licensing, licenses allow simultaneous usage on-premises and in Azure for a period of 180 days from when the licenses are allocated to Azure.
 
 #### Unlimited virtualization
 

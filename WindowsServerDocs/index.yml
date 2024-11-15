@@ -10,7 +10,7 @@ metadata:
   manager: femila
   ms.service: windows-server
   ms.topic: hub-page
-  ms.date: 12/01/2023
+  ms.date: 10/30/2024
   ms.author: roharwoo
 
 highlightedContent:
@@ -56,6 +56,9 @@ conceptualContent:
         - url: ./get-started/perform-in-place-upgrade.md
           itemType: how-to-guide
           text: Perform an in-place upgrade
+        - url: ./get-started/windows-server-pay-as-you-go.md
+          itemType: how-to-guide
+          text: Windows Server Pay-as-you-go
       footerLink:
         url: ./get-started/upgrade-overview.md
         text: See more
@@ -71,6 +74,9 @@ conceptualContent:
         - url: /security/compass/overview
           itemType: concept
           text: Securing privileged access
+        - url: ./identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+          itemType: how-to-guide
+          text: Getting started with group managed service accounts (gMSA) 
       footerLink:
         url: ./identity/identity-and-access.yml
         text: See more
@@ -140,15 +146,15 @@ conceptualContent:
 
     - title: Security and assurance
       links:
+        - url: https://aka.ms/ws2025securitybook
+          itemType: overview
+          text: Windows Server 2025 Security Book  
         - url: ./security/windows-authentication/windows-authentication-overview.md
           itemType: overview
           text: Windows Authentication overview
         - url: ./security/secured-core-server.md
           itemType: overview
           text: Secured-core server
-        - url: ./security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
-          itemType: how-to-guide
-          text: Getting started with group-managed service accounts
         - url: ./security/windows-authentication/credentials-processes-in-windows-authentication.md
           itemType: overview
           text: Credentials processes in Windows Authentication

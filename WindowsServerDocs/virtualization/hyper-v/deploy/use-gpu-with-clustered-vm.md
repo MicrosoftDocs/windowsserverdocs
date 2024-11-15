@@ -4,7 +4,7 @@ description: Learn how to use GPUs with clustered virtual machines (VMs) to prov
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 05/20/2024
+ms.date: 10/25/2024
 zone_pivot_groups: windows-os
 #customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Stack HCI.
 ---
@@ -12,10 +12,8 @@ zone_pivot_groups: windows-os
 # Use GPUs with clustered VMs
 
 :::zone pivot="windows-server"
->Applies to: Windows Server 2025 (preview)
+>
 
-> [!IMPORTANT]
-> GPU with clustered VMs in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"
@@ -26,9 +24,9 @@ zone_pivot_groups: windows-os
 
 ::: zone-end
 
-You can include GPUs in your clusters to provide GPU acceleration to workloads running in clustered VMs. GPU acceleration is provided via Discrete Device Assignment (DDA), which allows you to dedicate one or more physical GPUs to a VM. Clustered VMs can take advantage of GPU acceleration, and clustering capabilities such as high availability via failover. Live migration of virtual machines (VMs) isn't currently supported, but VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
+You can include GPUs in your clusters to provide GPU acceleration to workloads running in clustered VMs. GPU acceleration can be provided via Discrete Device Assignment (DDA), which allows you to dedicate one or more physical GPUs to a VM, or through GPU Partitioning. Clustered VMs can take advantage of GPU acceleration, and clustering capabilities such as high availability via failover. Live migration of virtual machines (VMs) isn't currently supported, but VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
 
-In this article, learn how to use graphics processing units (GPUs) with clustered VMs to provide GPU acceleration to workloads in the clustered VMs. This article guides you through preparing the cluster, assigning a GPU to a cluster VM, and failing over that VM using Windows Admin Center and PowerShell.
+In this article, you will learn how to use graphics processing units (GPUs) with clustered VMs to provide GPU acceleration to workloads using Discrete Device Assignment. This article guides you through preparing the cluster, assigning a GPU to a cluster VM, and failing over that VM using Windows Admin Center and PowerShell.
 
 ## Prerequisites
 
@@ -36,7 +34,7 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-stack-hci"
 
-- You need an Azure Stack HCI cluster running Azure Stack HCI, version 21H2 or later.
+- You need an Azure Stack HCI cluster running Azure Stack HCI, version 22H2 or later.
 
 ::: zone-end
 
@@ -46,7 +44,7 @@ There are several requirements and things to consider before you begin to use GP
 
 ::: zone-end
 
-- You also need GPUs installed in every server of the cluster.
+- You must install the same make and model of the GPUs across all the servers in your cluster.
 
 - Review and follow the instructions from your GPU manufacturer to install the necessary drivers and software on each server in the cluster.
 
@@ -64,12 +62,16 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-stack-hci"
 
+- Follow the steps in [Plan for deploying devices by using Discrete Device Assignment](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context) to prepare GPU devices in the cluster.
+
+- Make sure your device has enough MMIO space allocated within the VM. For more information, see [MMIO Space](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context#mmio-space).
+
 - Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
 
-- Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
+- Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context).
 
 >[!NOTE]
-> The Azure Stack HCI Catalog does not yet indicate GPU compatibility or certification information.
+> Your system must be supported Azure Stack HCI solution with GPU support. To browse options, visit the [Azure Stack HCI Catalog](https://azurestackhcisolutions.azure.microsoft.com/#/catalog?gpuSupport=GPU_P&gpuSupport=DDA).
 
 ::: zone-end
 
@@ -182,7 +184,7 @@ Follow these steps to assign an existing VM to a GPU resource pool using PowerSh
 
 1. Assign the resource pool that you created earlier to the VM. Assigning the resource pool declares to the cluster that the VM requires an assigned device from the `GpuChildPool` pool when it's started or moved.
 
-    In PowerShell, run the following cmdlet:
+   In PowerShell, run the following cmdlet:
 
    ```PowerShell
     Get-ClusterResource -name <vmname> | Add-VMAssignableDevice -ResourcePoolName "GpuChildPool"
@@ -191,12 +193,12 @@ Follow these steps to assign an existing VM to a GPU resource pool using PowerSh
    >[!NOTE]
    > If you want to add more than one GPU to the VM, first verify that the resource pool has more than one assignable GPU available, and then run the previous command again.
 
-You can also remove an assigned GPU from a VM. To do so, in PowerShell, run the following command. Make sure to replace `<vmname>` with the name of the VM that you want to assign to the GPU resource pool.
+   You can also remove an assigned GPU from a VM. To do so, in PowerShell, run the following command. Make sure to replace `<vmname>` with the name of the VM that you want to assign to the GPU resource pool.
 
    ```PowerShell
-   $vm = Get-VMAssignableDevice -VMName <vmname> | Where-Object { $_.ResourcePoolName -eq "GpuChildPool" }
+    Add-VMAssignableDevice -VMName $vm -ResourcePoolName "GpuChildPool"
 
-   $vm | Remove-VMAssignableDevice
+    $vm | Remove-VMAssignableDevice
    ```
 
 ---
@@ -229,6 +231,6 @@ For more information on using GPUs with your clustered VMs, see:
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm)
-- [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json)
+- [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
 
 :::zone-end

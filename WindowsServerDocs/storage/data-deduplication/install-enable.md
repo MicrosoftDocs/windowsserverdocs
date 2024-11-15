@@ -4,13 +4,13 @@ title: Installing and enabling Data Deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl
-ms.author: wgries
+ms.author: roharwoo
 ms.date: 02/18/2022
 description: How to install Data Deduplication on Windows Server, determine whether a workload is a good candidate for deduplication, and enable deduplication on volumes.
 ---
 
 # Install and enable Data Deduplication
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 This topic explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on specific volumes.
 

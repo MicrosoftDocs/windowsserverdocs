@@ -4,8 +4,8 @@ description: Learn about your disaster recovery options for Remote Desktop Servi
 ms.topic: article
 ms.assetid: 9ff6a3b0-ea14-424e-9524-209252e9f1a8
 author: robinharwood
-ms.author: wscontent
-ms.date: 06/12/2017
+ms.author: roharwoo
+ms.date: 7/3/2024
 ---
 # Configure disaster recovery for Remote Desktop Services
 

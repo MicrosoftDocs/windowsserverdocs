@@ -3,8 +3,8 @@ title: Reactivate or deactivate the Remote Desktop Services license server
 description: Reactivate or deactivate the Remote Desktop Services license server.
 ms.topic: article
 author: meaghanlewis
-ms.author: wscontent
-ms.date: 05/30/2024
+ms.author: roharwoo
+ms.date: 7/3/2024
 manager: femila
 ---
 

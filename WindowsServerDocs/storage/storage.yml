@@ -1,14 +1,13 @@
 ### YamlMime:Landing
 
 title: Windows Server Storage documentation
-summary: 'Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. Applies to: Windows Server 2019, Windows Server 2016.'
-
+summary: 'Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.'
 metadata:
   title: Windows Server Storage documentation
   description: Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. 
   ms.topic: landing-page # Required
-  author: JasonGerend
-  ms.author: jgerend
+  author: robinharwood
+  ms.author: roharwoo
   ms.date: 07/15/2020 
   ms.service: windows-server
 

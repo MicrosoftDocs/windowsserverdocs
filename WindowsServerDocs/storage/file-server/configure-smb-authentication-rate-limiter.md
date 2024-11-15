@@ -1,21 +1,16 @@
 ---
-title: Configure SMB authentication rate limiter for Windows (preview)
+title: Configure SMB authentication rate limiter for Windows
 description: Learn how SMB authentication rate limiter works and how to configure it for Windows Server and Windows client.
 ms.topic: how-to
 author: gswashington
-ms.author: nedpyle
-ms.date: 02/23/2024
+ms.author: alalve
+ms.date: 10/25/2024
 
 ---
 
-# Configure SMB authentication rate limiter for Windows (preview)
+# Configure SMB authentication rate limiter for Windows
 
->Applies to: Windows Server Insiders Builds, Windows 11 Insiders Builds
-
-> [!IMPORTANT]
-> Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-SMB authentication rate limiter is a feature of SMB server for Windows Server and Windows client designed to address brute force authentication attacks. Bruce force authentication attacks bombard the SMB server with multiple username and password-guess attempts per second. Beginning with [Windows Server Insider build 25075](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25075/m-p/3259165) and [Windows 11 Insider build 25375](https://blogs.windows.com/windows-insider/2023/05/25/announcing-windows-11-insider-preview-build-25375/), SMB authentication rate limiter is enabled by default. The default delay between each failed NTLM or PKU2U-based authentication attempt is 2 seconds and can be configured. In this article. Learn how SMB authentication rate limiter works and how to configure it.
+SMB authentication rate limiter is a feature of SMB server for Windows Server and Windows client designed to address brute force authentication attacks. Bruce force authentication attacks bombard the SMB server with multiple username and password-guess attempts per second. Beginning with Windows Server 2025 and Windows 11, version 24H2, SMB authentication rate limiter is enabled by default. The default delay between each failed NTLM or PKU2U-based authentication attempt is 2 seconds and can be configured. In this article. Learn how SMB authentication rate limiter works and how to configure it.
 
 If an administrator allows access to the SMB server service through the Windows Firewall in order to open or copy remote files, a bad actor can use SMB access as a way to attempt authentication. Knowing a username, an attacker can send local or Active Directory based NTLM logons to a machine using several methods. Password guess frequency can range from dozens to thousands of sign-in attempts per second. To learn more about NTLM, see [NTLM Overview](../../security/kerberos/ntlm-overview.md).
 
@@ -30,8 +25,8 @@ The SMB server service uses the authentication rate limiter to implement a 2-sec
 Before you can configure SMB authentication rate limiter, you need:
 
 - An SMB server running on one of the following operating systems.
-  - Windows Server Insiders build 25075 or later.
-  - Windows 11 Insiders build 25375 or later.
+  - Windows Server 2025.
+  - Windows 11, version 24H2, or later.
 - Administrative privileges to the computer.
 - If you're using Group Policy on a domain, you need privileges to create or edit a Group Policy object (GPO) and link it to the appropriate organizational unit (OU).
 

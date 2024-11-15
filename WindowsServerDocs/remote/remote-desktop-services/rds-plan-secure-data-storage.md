@@ -4,13 +4,13 @@ description: Planning information for securely storing data by using user profil
 ms.topic: article
 ms.assetid: 37b7f68e-7c3a-4190-a52f-99ae96885fae
 author: robinharwood
-ms.author: wscontent
-ms.date: 02/12/2024
+ms.author: roharwoo
+ms.date: 7/3/2024
 manager: dongill
 ---
 # Remote Desktop Services - Secure data storage with UPDs
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Store business resources, user personalization data, and settings securely on-premises or in Azure. RD Session Hosts use AD authentication and empower users with the resources they need in a personalized environment, securely.
 

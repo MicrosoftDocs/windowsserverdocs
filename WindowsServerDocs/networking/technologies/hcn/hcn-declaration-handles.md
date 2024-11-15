@@ -2,7 +2,7 @@
 title: RPC context handles for HCN
 description: Information about HCN Network entities, represented using HCN_NETWORK RPC context handles.
 ms.topic: article
-ms.author: daschott
+ms.author: roharwoo
 author: daschott
 ms.date: 04/01/2023
 
@@ -10,7 +10,7 @@ ms.date: 04/01/2023
 
 # RPC context handles for HCN
 
-Applies to: Windows Server 2022, Windows Server 2019
+
 
 ## HCN_Network
 

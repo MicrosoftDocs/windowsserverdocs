@@ -8,7 +8,7 @@ ms.date: 01/18/2024
 
 # TLS/SSL overview (Schannel SSP)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
+>
 
 This article is to introduce IT professionals to TLS and SSL implementations in Windows using the Schannel Security Service Provider (SSP) by describing practical applications, changes in Microsoft's implementation, software requirements, and other resources for Windows Server and client devices.
 

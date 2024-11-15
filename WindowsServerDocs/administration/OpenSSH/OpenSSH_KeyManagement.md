@@ -3,7 +3,7 @@ title: Key-based authentication in OpenSSH for Windows
 description: Learn about OpenSSH Server key-based authentication, generation and deployment for Windows using built-in Windows tools or PowerShell.
 ms.date: 02/14/2024
 ms.topic: conceptual
-ms.author: damaerte
+ms.author: roharwoo
 author: maertendmsft
 ---
 
@@ -57,19 +57,19 @@ Since there's no user associated with the sshd service, the host keys are stored
 
 ## User key generation
 
-To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified. If no algorithm is specified, RSA is used. A strong algorithm and key length should be used, such as Ed25519 in this example.
+To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified. If no algorithm is specified, RSA is used. A strong algorithm and key length should be used, such as ECDSA in this example.
 
-To generate key files using the Ed25519 algorithm, run the following command from a PowerShell or cmd prompt on your client:
+To generate key files using the ECDSA algorithm, run the following command from a PowerShell or cmd prompt on your client:
 
 ```powershell
-ssh-keygen -t ed25519
+ssh-keygen -t ecdsa
 ```
 
 The output from the command should display the following output (where "username" is replaced by your username):
 
 ```Output
-Generating public/private ed25519 key pair.
-Enter file in which to save the key (C:\Users\username/.ssh/id_ed25519):
+Generating public/private ecdsa key pair.
+Enter file in which to save the key (C:\Users\username/.ssh/id_ecdsa):
 ```
 
 You can press Enter to accept the default, or specify a path and/or filename where you would like your keys to be generated.
@@ -79,13 +79,13 @@ The passphrase works with the key file to provide two-factor authentication. For
 ```Output
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in C:\Users\username/.ssh/id_ed25519.
-Your public key has been saved in C:\Users\username/.ssh/id_ed25519.pub.
+Your identification has been saved in C:\Users\username/.ssh/id_ecdsa.
+Your public key has been saved in C:\Users\username/.ssh/id_ecdsa.pub.
 The key fingerprint is:
 SHA256:OIzc1yE7joL2Bzy8!gS0j8eGK7bYaH1FmF3sDuMeSj8 username@LOCAL-HOSTNAME
 
 The key's randomart image is:
-+--[ED25519 256]--+
++--[ECDSA 256]--+
 |        .        |
 |         o       |
 |    . + + .      |
@@ -98,13 +98,13 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Now you have a public/private ed25519 key pair in the location specified. The .pub files are public keys, and files without an extension are private keys:
+Now you have a public/private ECDSA key pair in the location specified. The .pub files are public keys, and files without an extension are private keys:
 
 ```Output
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
--a----         6/3/2021   2:55 PM            464 id_ed25519
--a----         6/3/2021   2:55 PM            103 id_ed25519.pub
+-a----         6/3/2021   2:55 PM            464 id_ecdsa
+-a----         6/3/2021   2:55 PM            103 id_ecdsa.pub
 ```
 
 Remember that private key files are the equivalent of a password should be protected the same way you protect your password.
@@ -122,7 +122,7 @@ Start-Service ssh-agent
 Get-Service ssh-agent
 
 # Now load your key files into ssh-agent
-ssh-add $env:USERPROFILE\.ssh\id_ed25519
+ssh-add $env:USERPROFILE\.ssh\id_ecdsa
 ```
 
 Once you've added the key to the ssh-agent on your client, the ssh-agent will automatically retrieve the local private key and pass it to your SSH client.
@@ -130,23 +130,23 @@ Once you've added the key to the ssh-agent on your client, the ssh-agent will au
 > [!IMPORTANT]
 > It is strongly recommended that you back up your private key to a secure location, then delete it
 > from the local system, _after_ adding it to ssh-agent. The private key cannot be retrieved from
-> the agent providing a strong algorithm has been used, such as Ed25519 in this example. If you lose
+> the agent providing a strong algorithm has been used, such as ECDSA in this example. If you lose
 > access to the private key, you will have to create a new key pair and update the public key on all
 > systems you interact with.
 
 ## Deploying the public key
 
-To use the user key that was created above, the contents of your public key (_\\.ssh\id\_ed25519.pub_) needs to be placed on the server into a text file. The name and location of the file depends on whether the user account is a member of the local administrators group or a standard user account. The following sections cover both standard and administrative users.
+To use the user key that was created above, the contents of your public key (_\\.ssh\id\_ecdsa.pub_) needs to be placed on the server into a text file. The name and location of the file depends on whether the user account is a member of the local administrators group or a standard user account. The following sections cover both standard and administrative users.
 
 ### Standard user
 
-The contents of your public key (_\\.ssh\id\_ed25519.pub_) needs to be placed on the server into a text file called `authorized_keys` in _C:\Users\username\\.ssh\\_. You can copy your public key using the OpenSSH scp secure file-transfer utility, or using a PowerShell to write the key to the file.
+The contents of your public key (_\\.ssh\id\_ecdsa.pub_) needs to be placed on the server into a text file called `authorized_keys` in _C:\Users\username\\.ssh\\_. You can copy your public key using the OpenSSH scp secure file-transfer utility, or using a PowerShell to write the key to the file.
 
 The example below copies the public key to the server (where "username" is replaced by your username). You'll need to use the password for the user account for the server initially.
 
 ```powershell
 # Get the public key file generated previously on your client
-$authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\id_ed25519.pub
+$authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\id_ecdsa.pub
 
 # Generate the PowerShell to be run remote that will copy the public key file generated previously on your client to the authorized_keys file on your server
 $remotePowershell = "powershell New-Item -Force -ItemType Directory -Path $env:USERPROFILE\.ssh; Add-Content -Force -Path $env:USERPROFILE\.ssh\authorized_keys -Value '$authorizedKey'"
@@ -157,7 +157,7 @@ ssh username@domain1@contoso.com $remotePowershell
 
 ### Administrative user
 
-The contents of your public key (_\\.ssh\id\_ed25519.pub_) needs to be placed on the server into a text file called `administrators_authorized_keys` in _C:\ProgramData\ssh\\_. You can copy your public key using the OpenSSH scp secure file-transfer utility, or using a PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and System.
+The contents of your public key (_\\.ssh\id\_ecdsa.pub_) needs to be placed on the server into a text file called `administrators_authorized_keys` in _C:\ProgramData\ssh\\_. You can copy your public key using the OpenSSH scp secure file-transfer utility, or using a PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and System.
 
 The example below copies the public key to the server and configures the ACL (where "username" is
 replaced by your user name). You'll need to use the password for the user account for the server
@@ -170,7 +170,7 @@ initially.
 
 ```powershell
 # Get the public key file generated previously on your client
-$authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\id_ed25519.pub
+$authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\id_ecdsa.pub
 
 # Generate the PowerShell to be run remote that will copy the public key file generated previously on your client to the authorized_keys file on your server
 $remotePowershell = "powershell Add-Content -Force -Path $env:ProgramData\ssh\administrators_authorized_keys -Value '''$authorizedKey''';icacls.exe ""$env:ProgramData\ssh\administrators_authorized_keys"" /inheritance:r /grant ""Administrators:F"" /grant ""SYSTEM:F"""

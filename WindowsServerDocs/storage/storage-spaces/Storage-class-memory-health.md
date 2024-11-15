@@ -2,15 +2,15 @@
 ms.assetid: 2bab6bf6-90e7-46a7-b917-14a7a8f55366
 title: Storage-class Memory (NVDIMM-N) Health Management in Windows
 description: "Learn more about: Storage-class Memory (NVDIMM-N) Health Management in Windows"
-ms.author: jgerend
+ms.author: roharwoo
 manager: dongill
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 ms.date: 06/25/2019
 ---
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
+>
 
 This article provides system administrators and IT Pros with information about error handling and health management specific to storage-class memory (NVDIMM-N) devices in Windows, highlighting the differences between storage-class memory and traditional storage devices.
 

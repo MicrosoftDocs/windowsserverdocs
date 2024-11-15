@@ -2,8 +2,8 @@
 title: cleanmgr
 description: Configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files.
 ms.reviewer: cosmosdarwin
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
 ms.date: 01/18/2024
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.topic: reference
 
 # cleanmgr
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2008 R2, Windows 11, Windows 10
+
 
 Clears unnecessary files from your computer's hard disk. You can use command-line options to specify that **Cleanmgr** cleans up Temp files, Internet files, downloaded files, and Recycle Bin files. You can then schedule the task to run at a specific time by using the **Scheduled Tasks** tool.
 

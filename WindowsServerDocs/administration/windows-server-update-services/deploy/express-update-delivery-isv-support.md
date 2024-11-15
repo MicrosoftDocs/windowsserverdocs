@@ -3,13 +3,13 @@ title: Express update delivery ISV support
 description: Windows Server Update Service (WSUS) article - How Independent Software Vendors (ISV) can configure Express update delivery using WSUS
 ms.topic: how-to
 author: brentfor
-ms.author: brentf
+ms.author: roharwoo
 manager: mtillman
 ms.date: 01/11/2023
 ---
 # Express update delivery ISV support
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows Server 2016
+
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.
 

@@ -4,13 +4,13 @@ title: Branch Office Considerations
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: wscontent
-ms.date: 12/10/2020
+ms.author: roharwoo
+ms.date: 10/25/2024
 ---
 
 # Branch office considerations
 
->Applies to: Windows Server 2022, Windows Server 2019
+>
 
 This article describes best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.
 
@@ -47,7 +47,7 @@ The key protector is encrypted to the current security configuration of the host
 If your host is unable to communicate with HGS and its security configuration has not changed, it will be able to use the cached key protector to start up the shielded VM.
 When security settings change on the system, such as a new code integrity policy being applied or Secure Boot being disabled, the cached key protectors will be invalidated and the host will have to attest with an HGS before any shielded VMs can be started offline again.
 
-Offline mode requires Windows Server Insider Preview build 17609 or newer for both the Host Guardian Service cluster and Hyper-V host.
+Offline mode requires Insider Preview build 17609 or newer for both the Host Guardian Service cluster and Hyper-V host.
 It is controlled by a policy on HGS, which is disabled by default.
 To enable support for offline mode, run the following command on an HGS node:
 

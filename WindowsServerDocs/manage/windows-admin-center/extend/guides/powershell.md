@@ -9,7 +9,7 @@ ms.date: 05/09/2019
 
 # Using PowerShell in your extension #
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 Let's go more in-depth into the Windows Admin Center Extensions SDK - let's talk about adding PowerShell commands to your extension.
 

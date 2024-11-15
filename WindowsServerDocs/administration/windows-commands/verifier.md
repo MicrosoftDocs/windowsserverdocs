@@ -4,13 +4,13 @@ description: Reference article for the verifier command, which runs the Driver V
 ms.topic: reference
 ms.assetid: 782173d6-f196-4bc4-a547-76109829453c
 ms.author: alalve
-author: JasonGerend
+author: robinharwood
 ms.date: 10/20/2022
 ---
 
 # verifier
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Driver Verifier monitors Windows kernel-mode drivers and graphics drivers to detect illegal function calls or actions that might corrupt the system. Driver Verifier can subject Windows drivers to a variety of stresses and tests to find improper behavior. You can configure which tests to run, which allows you to put a driver through heavy stress loads or through more streamlined testing. You can also run Driver Verifier on multiple drivers simultaneously, or on one driver at a time.
 

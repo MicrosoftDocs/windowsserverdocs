@@ -4,14 +4,14 @@ description: In this topic, you learn how to update, backup and restore an SDN i
 manager: grcusanz
 ms.topic: article
 ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/02/2021
 ---
 
 # Upgrade, backup, and restore SDN infrastructure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 In this topic, you learn how to update, backup and restore an SDN infrastructure.
 

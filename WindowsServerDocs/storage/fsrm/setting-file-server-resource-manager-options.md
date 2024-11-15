@@ -3,14 +3,14 @@ title: Setting File Server Resource Manager Options
 description: This article describes how to set file server resource manager options
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 
 # Setting File Server Resource Manager Options
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>
 
 The general File Server Resource Manager options can be set in the **File Server Resource Manager Options** dialog box. These settings are used throughout the nodes, and some of them can be modified when you work with quotas, screen files, or generate storage reports.
 

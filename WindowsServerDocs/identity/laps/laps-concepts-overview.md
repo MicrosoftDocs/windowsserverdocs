@@ -171,7 +171,7 @@ Backing up DSRM passwords to Microsoft Entra ID isn't supported.
 > [!IMPORTANT]
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
 >
-> But consider a catastrophic scenario in which all the domain controllers in a domain are down. In this scenario, no DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
+> Consider a catastrophic scenario in which all the domain controllers in a domain are down. In that situation, as long as you have been maintaining regular backups per Active Directory best practices, you can still recover DSRM passwords from backups using the procedure outlined in [Retrieving passwords during AD disaster recovery scenarios](laps-scenarios-windows-server-active-directory.md#retrieving-passwords-during-ad-disaster-recovery-scenarios).
 
 ## Password reset after authentication
 
@@ -199,12 +199,15 @@ When a live OS image is reverted to an earlier version, the result is often a â€
 
 Once the problem occurs, the IT admin is unable to sign into the device using the persisted Windows LAPS password. The problem isn't resolved until Windows LAPS rotates the password - but that might not occur for days or weeks depending on the current password expiration date.
 
-Windows LAPS solves this problem by writing a random GUID to the directory at the same time a new password is being persisted, followed by saving a local copy. The GUID is stored in the msLAPS-CurrentPasswordVersion attribute. During every processing cycle, the msLAPS-CurrentPasswordVersion guid is queried and compared to the local copy. If the two GUIDs are different, the password is immediately rotated.
+Windows LAPS mitigates this problem by writing a random GUID to the directory at the same time a new password is being persisted, followed by saving a local copy. The GUID is stored in the msLAPS-CurrentPasswordVersion attribute. During every processing cycle, the msLAPS-CurrentPasswordVersion guid is queried and compared to the local copy. If the two GUIDs are different, the password is immediately rotated.
 
 This feature is only supported when backing passwords up to Active Directory. Microsoft Entra ID isn't supported.
 
 > [!IMPORTANT]
-> The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows Server 2025 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
+> Windows LAPS rollback detection and mitigation can only work if if the machine still has a valid computer account password and is capable of authenticating to Active Directory. That condition may or may not be true depending on the mismatched state caused by the rollback. If the machine is no longer capable of authenticating, other recovery steps will be required such as resetting the machine account password. The Windows LAPS account on the reverted machine may still be useful if the Windows LAPS password history feature has been enabled.
+
+> [!IMPORTANT]
+> The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows 11 24H2, Windows Server 2025 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
 
 ## See also
 

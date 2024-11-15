@@ -2,14 +2,14 @@
 title: Strings and localization in Windows Admin Center
 description: Learn about getting your strings ready for localization in Windows Admin Center SDK (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/18/2018
 ---
 
 # Strings and localization in Windows Admin Center #
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 Let's go more in-depth into the Windows Admin Center Extensions SDK and talk about strings and localization.
 

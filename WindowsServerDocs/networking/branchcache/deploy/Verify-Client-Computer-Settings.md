@@ -4,13 +4,13 @@ description: Learn how to verify that the client computer is correctly configure
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Verify Client Computer Settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this procedure to verify that the client computer is correctly configured for BranchCache.
 

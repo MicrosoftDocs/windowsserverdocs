@@ -13,7 +13,7 @@ groups:
   prompt: "Choose your product version:"
   pivots:
   - id: windows-server-2025
-    title: Windows Server 2025 (preview)
+    title: Windows Server 2025
   - id: windows-server-2022
     title: Windows Server 2022
   - id: windows-server-2019
@@ -30,3 +30,13 @@ groups:
     title: PowerShell 
   - id: failover-cluster-manager
     title: Failover Cluster Manager
+- id: openssh-windows-version
+  title: Version
+  prompt: "Choose your product version:"
+  pivots:
+  - id: windows-server-2025
+    title: Windows Server 2025
+  - id: windows-server-2022
+    title: Windows Server 2022
+  - id: windows-server-2019
+    title: Windows Server 2019

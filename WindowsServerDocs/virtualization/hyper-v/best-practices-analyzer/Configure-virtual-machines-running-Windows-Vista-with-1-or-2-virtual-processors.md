@@ -1,7 +1,7 @@
 ---
 title: Configure virtual machines running Windows Vista with 1 or 2 virtual processors
 description: Learn what to do when a virtual machine running Windows Vista is configured with more than 2 virtual processors.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: e562bce3-fd68-42c9-821c-12022ae4746c
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Configure virtual machines running Windows Vista with 1 or 2 virtual processors
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

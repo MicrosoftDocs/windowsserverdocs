@@ -3,7 +3,7 @@ title: Request certificates using Web Enrollment in AD CS
 description: Learn how to request a certificate using the Certification Authority Web Enrollment Role Service in Windows Server.
 author: gswashington
 ms.topic: how-to
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 09/04/2023
 ---
 

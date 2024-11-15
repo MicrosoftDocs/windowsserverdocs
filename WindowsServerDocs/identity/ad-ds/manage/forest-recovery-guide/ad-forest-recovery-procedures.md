@@ -1,7 +1,7 @@
 ---
 title: Active Directory Forest Recovery - Procedures
 description: This section contains procedures related to the forest recovery process. The following is a list of procedures that are used in backing up and restoring domain controllers and Active Directory.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 06/21/2023
 ms.topic: article
@@ -9,7 +9,7 @@ ms.topic: article
 
 # Active Directory Forest Recovery - Procedures
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 This section contains procedures related to the forest recovery process.
 

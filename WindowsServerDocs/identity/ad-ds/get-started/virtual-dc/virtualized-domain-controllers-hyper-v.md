@@ -2,7 +2,7 @@
 title: Virtualizing domain controllers with Hyper-V
 description: Learn about considerations for virtualizing Windows Server Active Directory domain controllers (DCs) in Hyper-V.
 author: daveba
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/07/2024
 ms.topic: article
 ms.custom: inhenkel
@@ -10,7 +10,7 @@ ms.custom: inhenkel
 
 # Virtualizing domain controllers with Hyper-V
 
-> Applies to: Windows Server 2022, Microsoft Hyper-V Server 2019, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 
 
 Windows Server 2012 and later support virtualized domain controllers (DCs) with safeguards to prevent update sequence number (USN) rollback on virtual DCs and the ability to clone virtual DCs. Virtualization consolidates different server roles onto a single physical machine. For more information, see [Safely virtualizing Active Directory Domain Services (AD DS)](../../introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md).
 

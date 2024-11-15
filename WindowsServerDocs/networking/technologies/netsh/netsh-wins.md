@@ -4,14 +4,14 @@ description: You can use this topic to learn how to create a batch file that per
 ms.topic: article
 ms.assetid: c94e37a4-3637-4613-9eb5-ed604e831eca
 manager: brianlic
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/27/2021
 ---
 
 # Network Shell (Netsh) Example Batch File
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 You can use this topic to learn how to create a batch file that performs multiple tasks by using Netsh in Windows Server. In this example batch file, the **netsh wins** context is used.
 

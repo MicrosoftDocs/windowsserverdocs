@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Performance history for servers"
 title: Performance history for servers
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
@@ -9,7 +9,7 @@ ms.date: 02/05/2018
 ---
 # Performance history for servers
 
->Applies to: Windows Server 2022, Windows Server 2019
+>
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for servers. Performance history is available for every server in the cluster.
 

@@ -4,12 +4,12 @@ description: Learn about Windows Defender Antivirus and how its malware protecti
 ms.topic: article
 ms.assetid: 751efb33-a08e-4e90-9208-6f2bc319e029
 ms.author: alalve
-author: JasonGerend
+author: robinharwood
 ms.date: 10/10/2022
 ---
 # Windows Defender Antivirus for Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Windows Server 2016 now includes Windows Defender Antivirus. Windows Defender AV is malware protection that immediately and actively protects Windows Server 2016 against known malware and can regularly update antimalware definitions through Windows Update.
 
