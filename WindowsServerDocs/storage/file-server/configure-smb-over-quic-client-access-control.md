@@ -1,35 +1,47 @@
 ---
-title: "Configure SMB over QUIC client access control in Windows Server"
+title: Configure SMB over QUIC client access control in Windows Server
 description: Learn how to configure SMB over QUIC client access control using PowerShell in Windows and Windows Server.
 ms.topic: how-to
 author: gswashington
 ms.author: alalve
-ms.date: 10/25/2024
+ms.date: 11/15/2024
 #customer intent: As an administrator, I want to configure SMB over QUIC client access control in Windows Server so that I can restrict which clients can access SMB over QUIC servers.
 ---
 
-# Configure SMB over QUIC client access control in Windows Server 2022 Azure Edition and Windows Server 2025
+# Configure SMB over QUIC client access control
 
-SMB over QUIC client access control enables you to restrict which clients can access SMB over QUIC servers. Client access control creates allow and blocklists for devices to connect to the file server. Client access control gives organizations more protection without changing the authentication used when making the SMB connection, nor does it alter the end user experience.
-
-The article explains how to use PowerShell to configure client access control for SMB over QUIC on Windows 11 and Windows Server 2022 Datacenter: Azure Edition. To proceed with the instructions, you must have either the March Update KB5035853 or KB5035857 installed, be running a recent Windows 11, version 24H2, or Windows Server 2025.
-
-To learn more about configuring SMB over QUIC, see [SMB over QUIC](smb-over-quic.md).
+SMB over QUIC client access control enables you to restrict which clients can access SMB over QUIC servers. Client access control creates allowlists and blocklists for devices to connect to the file server. Client access control gives organizations more protection without changing the authentication used when making the SMB connection, nor does it alter the end user experience.
 
 ## How client access control works
 
-Client access control checks clients connecting to a server are using a known client certificate or have a certificate issued by a shared root certificate. The admin issues this certificate to the client and adds the hash to an allowlist maintained by the server. When the client tries to connect to the server, the server compares the client certificate against the allowlist. If the certificate is valid, the server certificate creates a TLS 1.3-encrypted tunnel over UDP port 443 and grants the client access to the share. Client access control also supports certificates with subject alternative names.
+Client access control checks clients connecting to a server are using a known client certificate or have a certificate issued by a shared root certificate. The admin issues this certificate to the client and adds the hash to an allowlist maintained by the server. When the client tries to connect to the server, the server compares the client certificate against the allowlist.
 
-You can also configure SMB over QUIC to block access by revoking certificates or explicitly denying certain devices access.
+If the certificate is valid, the server certificate creates a TLS 1.3-encrypted tunnel over UDP port 443 and grants the client access to the share. Client access control also supports certificates with subject alternative names. You can also configure SMB over QUIC to block access by revoking certificates or explicitly denying certain devices access.
 
 > [!NOTE]
 > We recommend using SMB over QUIC with Active Directory domains, however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM.
+
+To identify a certificate, you can use either its SHA256 hash or its issuer name. If you need to obtain the SHA256 hash, you can use the [Certutil](/windows-server/administration/windows-commands/certutil) command. Leaf certificates have an SHA256 hash, while intermediate certificates have an SHA256 hash or the issuer of their immediate child certificates. Root certificate SHA256 entries aren't supported, so you must use the issuer of their child certificates to identify them.
+
+The administrator creates access control entries and checks the SHA256 hashes and issuer names of the certificates in the client certificate chain against them. If none of the certificates are denied access and at least one is allowed access, the client is granted access.
+
+Since the root certificate is already present in the server trusted roots, the client doesn't send it to the server. Instead, the server identifies the root certificate using the top-level certificate in the client certificate chain.
+
+## Client access control hierarchy
+
+The client access control hierarchy for certificates for SMB over QUIC is based on a chain of trust. Every certificate in the chain is issued by a trusted higher-level certificate authority that can verify the identity of the entity requesting access.
+
+- At the top of the chain is the Root Certificate Authority (CA), which is the most trusted authority. It issues certificates to intermediate CAs owned by organizations that require a high level of security.
+- Intermediate CAs issue certificates to end entities, which are the entities requesting access to the SMB server.
+- End entities must present a valid certificate that's issued by an intermediate CA in order to be granted access. The certificate contains information about the identity of the end entity and is used to verify that the entity is who they say they are.
+
+Specifying deny entries and enabling certificate entries to refer to certificates below the given certificate in the chain of trust is advantageous. It minimizes the number of entries that require specification. For example, if a common intermediate certificate grants access to all leaf certificates except for a few, the administrator can specify an allow entry for the intermediate certificate and deny entries for the few leaf certificates. This eliminates the need to specify the allowed entries for each leaf certificate that has access.
 
 ## Prerequisites
 
 Before you can configure client access control, you need an *SMB server* with the following prerequisites.
 
-- An SMB server running Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or Windows Server 2025 or later. To unlock the preview feature you must also install [Windows Server 2022 KB5035857 240302_030531 Feature Preview](https://download.microsoft.com/download/d/c/b/dcb54178-7997-4a5a-84bf-6269cfa3bb68/Windows%20Server%202022%20KB5035857%20240302_030531%20Feature%20Preview.msi).
+- An SMB server running Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c) or Windows Server 2025 or later. To unlock the preview feature, you must also install [Windows Server 2022 KB5035857 240302_030531 Feature Preview](https://download.microsoft.com/download/d/c/b/dcb54178-7997-4a5a-84bf-6269cfa3bb68/Windows%20Server%202022%20KB5035857%20240302_030531%20Feature%20Preview.msi).
 - SMB over QUIC enabled and configured on the server. To learn how to configure SMB over QUIC, see [SMB over QUIC](smb-over-quic.md).
 - If you're using client certificates issued by a different certificate authority (CA), you need to ensure that the CA is trusted by the server.
 - Administrative privileges for the SMB server you're configuring.
@@ -44,8 +56,8 @@ Before you can configure client access control, you need an *SMB server* with th
 You also need an *SMB client* with the following prerequisites.
 
 - An SMB client running on one of the following operating systems:
-  - Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c). To unlock the preview feature you must also install [Windows Server 2022 KB5035857 240302_030531 Feature Preview](https://download.microsoft.com/download/d/c/b/dcb54178-7997-4a5a-84bf-6269cfa3bb68/Windows%20Server%202022%20KB5035857%20240302_030531%20Feature%20Preview.msi).
-  - Windows 11 with the [March 12, 2024—KB5035853 Update](https://support.microsoft.com/topic/march-12-2024-kb5035853-os-builds-22621-3296-and-22631-3296-a69ac07f-e893-4d16-bbe1-554b7d9dd39b). To unlock the preview feature you must also install [Windows 11 (original release) KB5035854 240302_030535 Feature Preview](https://download.microsoft.com/download/9/7/e/97ecf574-855e-441c-9141-bfb61ec2074e/Windows%2011%20(original%20release)%20KB5035854%20240302_030535%20Feature%20Preview.msi).
+  - Windows Server 2022 Datacenter: Azure Edition with the [March 12, 2024—KB5035857 Update](https://support.microsoft.com/topic/march-12-2024-kb5035857-os-build-20348-2340-a7953024-bae2-4b1a-8fc1-74a17c68203c). To unlock the preview feature, you must also install [Windows Server 2022 KB5035857 240302_030531 Feature Preview](https://download.microsoft.com/download/d/c/b/dcb54178-7997-4a5a-84bf-6269cfa3bb68/Windows%20Server%202022%20KB5035857%20240302_030531%20Feature%20Preview.msi).
+  - Windows 11 with the [March 12, 2024—KB5035853 Update](https://support.microsoft.com/topic/march-12-2024-kb5035853-os-builds-22621-3296-and-22631-3296-a69ac07f-e893-4d16-bbe1-554b7d9dd39b). To unlock the preview feature, you must also install [Windows 11 (original release) KB5035854 240302_030535 Feature Preview](https://download.microsoft.com/download/9/7/e/97ecf574-855e-441c-9141-bfb61ec2074e/Windows%2011%20(original%20release)%20KB5035854%20240302_030535%20Feature%20Preview.msi).
   - Windows Server 2025 or later.
   - Windows 11, version 24H2 or later.
 - A client certificate that is:
@@ -62,6 +74,19 @@ You also need an *SMB client* with the following prerequisites.
 > 1. Open the **KB5035854 240302_030535 Feature Preview** policy and select **Enabled**.
 
 ## Configure the SMB client
+
+Before managing the settings for the SMB client, the SMB server must be configured to authenticate the client before accessing the SMB share as a layer of security. To allow client devices access to the SMB share, run the following command:
+
+```powershell
+Set-SmbServerCertificateMapping -RequireClientAuthentication $true
+```
+
+When **RequireClientAuthentication** is set to `$true`, the server mandates that the client provides a valid and trusted certificate chain. Without requiring client authentication, anyone who has access to the network could potentially access the SMB share and view or modify sensitive data. By requiring client authentication, you can help to prevent unauthorized access to the SMB share and protect your data.
+
+> [!NOTE]
+> If both **RequireClientAuthentication** and **SkipClientCertificateAccessCheck** are set to `$true`, the server verifies the validity and trustworthiness of the client certificate chain but does not perform access control checks.
+
+To learn more about the SMB share PowerShell cmdlets, see the [SmbShare](/powershell/module/smbshare) module reference.
 
 ### Gather the SMB client certificate information
 
@@ -120,7 +145,7 @@ Follow the steps to grant a specific client access to the SMB server using clien
    Grant-SmbClientAccessToServer -Name <name> -IdentifierType SHA256 -Identifier <hash>
    ```
 
-You've now granted access to the client certificate. You can verify the client certificate access by running the `Get-SmbClientAccessToServer` command.
+You've now granted access to the client certificate. You can verify the client certificate access by running the `Get-SmbClientAccessToServer` cmdlet.
 
 ### Grant specific certification authorities
 
@@ -136,19 +161,7 @@ Follow the steps to grant clients from a specific certification authority, also 
    Grant-SmbClientAccessToServer -Name <name> -IdentifierType ISSUER -Identifier "<subject name>"
    ```
 
-### Disable SMB over QUIC
-
-Starting with Windows 11, version 24H2, admins can now disable SMB over QUIC for client by running the following command:
-
-```powershell
-Set-SmbClientConfiguration -EnableSMBQUIC $false
-```
-
-Similarly, this operation can be performed in Group Policy by disabling the **Enable SMB over QUIC** policy in the following path:
-
-- **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
-
-## Connect to the SMB server
+### Connect to the SMB server
 
 When you're finished, test whether you can connect to the server by running one of the following commands:
 
@@ -163,6 +176,35 @@ New-SmbMapping -RemotePath \\<server DNS name>\<share name> -TransportType QUIC
 ```
 
 If you can connect to the server, you've successfully configured SMB over QUIC using client access control.
+
+## Disable SMB over QUIC
+
+Starting with Windows 11, version 24H2, admins can now disable SMB over QUIC for client by running the following command:
+
+```powershell
+Set-SmbClientConfiguration -EnableSMBQUIC $false
+```
+
+Similarly, this operation can be performed in Group Policy by disabling the **Enable SMB over QUIC** policy in the following path:
+
+- **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
+
+## Audit event logs
+
+When auditing event logs for SMB client access control, it's important to focus on the access denied and allowed events. These events display several properties for the client certificates in the chain (excluding the root certificate), such as the subject, issuer, serial number, SHA1 and SHA256 hash. These events also display the identifier type, identifier, and description (if present) of the allow and deny entries that apply to the certificate chain.
+
+Auditing these events are disabled by default and can be enabled by running the following command:
+
+```powershell
+Set-SmbServerConfiguration -AuditClientCertificateAccess $true
+```
+
+Once enabled, these events are captured in the **Event Viewer** in the following paths:
+
+| Path | Event ID |
+|-|:-:|
+| Applications and Services Logs\Microsoft\Windows\SMBServer\Audit | 30831 |
+| Applications and Services Logs\Microsoft\Windows\SMBClient\Audit | 3007 <br> 3008 <br> 3009 |
 
 ## Related content
 
