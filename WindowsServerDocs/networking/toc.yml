@@ -291,7 +291,9 @@ items:
             - name: RAS Gateway high availability
               href: sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md
           - name: Software Load Balancing (SLB) for SDN
-            href: /azure/azure-local/concepts/software-load-balancer?context=/windows-server/context/windows-server-edge-networking
+            href: /azure-stack/hci/concepts/software-load-balancer?context=/windows-server/context/windows-server-edge-networking
+        - name: SDN Multisite overview
+          href: /azure-stack/hci/concepts/sdn-multisite-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Container networking
           href: sdn/technologies/Containers/Container-networking-overview.md
       - name: Plan for SDN
@@ -350,6 +352,8 @@ items:
             href: sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md
           - name: Guest clustering in a virtual network
             href: sdn/manage/guest-clustering.md
+        - name: Manage SDN Multisite
+          href: /azure-stack/hci/manage/manage-sdn-multisite?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Update, backup, and restore an SDN infrastructure
           href: sdn/manage/Update-Backup-Restore.md
       - name: Security for SDN
