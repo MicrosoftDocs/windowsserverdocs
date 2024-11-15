@@ -52,7 +52,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     nonauthoritative restore of AD DS and an authoritative restore of SYSVOL.
     The restore operation must be completed by using an Active Directory-aware
     backup and restore application, such as Windows Server Backup (recommended).
-    If Hyper-Vistor Generation ID is supported on the host, then you can also do
+    If Hypervisor Generation ID is supported on the host, then you can also do
     the nonauthoritative restore using a VM snapshot.
 
     - An authoritative restore of SYSVOL is required on the first recovered
