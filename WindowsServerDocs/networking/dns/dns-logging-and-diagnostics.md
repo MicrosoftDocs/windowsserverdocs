@@ -38,7 +38,7 @@ eventvwr.msc
 1. Right-select **Analytical** and then select **Properties**.
 1. Under When maximum event log size is reached, select **Do not overwrite events (Clear logs manually)**, select the **Enable logging** checkbox, and then select **OK** when asked whether you want to enable this log.
 
-![Enable logging window](./media/enable-logging.png)
+![Enable logging window](./media/dns-logging-and-diagnostics/enable-logging.png)
 
 1. Select **OK** to enable the DNS Server Analytic event log.
 
@@ -75,7 +75,7 @@ tracelog –stop Dns
 
 After stopping the trace, you can view the .etl file in Event Viewer by selecting **Action** and then selecting **Open Saved Log**.
 
-![Enable logging window](./media/event-viewer.png)
+![Enable logging window](./media/dns-logging-and-diagnostics/event-viewer.png)
 
 The following example enables only the analytical channel and matches only the keywords to 0x7FFFF:
 
