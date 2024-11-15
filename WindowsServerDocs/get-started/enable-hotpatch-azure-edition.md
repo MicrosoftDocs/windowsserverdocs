@@ -4,7 +4,7 @@ description:  'Learn how to enable Hotpatch for Windows Server Datacenter: Azure
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 10/31/2023
+ms.date: 11/15/2024
 ---
 
 # Enable Hotpatch for Azure Edition virtual machines on Azure Stack HCI
