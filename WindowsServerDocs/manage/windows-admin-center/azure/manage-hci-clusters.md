@@ -101,7 +101,7 @@ Connecting to Windows Admin center requires you to have **Reader** and **Windows
 
 ### Azure region availability
 
-Windows Admin Center is supported in [all public regions Azure Stack HCI](/azure-stack/hci/deploy/register-with-azure#region-availability) is supported.
+Windows Admin Center is supported in [all public regions Azure Stack HCI](/azure/azure-local/deploy/register-with-azure#region-availability) is supported.
 
 > [!NOTE]
 > Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
@@ -112,7 +112,7 @@ To use Windows Admin Center in the Azure portal, the Windows Admin Center agent 
 
 - Azure Stack HCI, version 21H2 or later
 - 3 GB of memory or more
-- The Azure Stack HCI cluster must be [connected to Azure using Azure Arc](/azure-stack/hci/deploy/register-with-azure)
+- The Azure Stack HCI cluster must be [connected to Azure using Azure Arc](/azure/azure-local/deploy/register-with-azure)
 - Azure Arc agent version 1.13.21320.014 or later
 
 ### Networking requirements
@@ -374,5 +374,5 @@ Yes. You can follow the same steps outlined in this document.
 
 - Learn about [Windows Admin Center](../overview.md)
 - Learn about [managing servers with Windows Admin Center](../use/manage-servers.md)
-- Learn about [Azure Stack HCI](/azure-stack/hci/overview)
-- Learn about [connecting Azure Stack HCI to Azure](/azure-stack/hci/deploy/register-with-azure)
+- Learn about [Azure Stack HCI](/azure/azure-local/overview)
+- Learn about [connecting Azure Stack HCI to Azure](/azure/azure-local/deploy/register-with-azure)

@@ -248,12 +248,12 @@ items:
   - name: Edge networking
     items:
     - name: Network ATC
-      href: /azure-stack/hci/concepts/network-atc-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+      href: /azure/azure-local/concepts/network-atc-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
       items:
       - name: Deploy host networking with Network ATC
-        href: /azure-stack/hci/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        href: /azure/azure-local/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
       - name: Manage Network ATC
-        href: /azure-stack/hci/manage/manage-network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        href: /azure/azure-local/manage/manage-network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
     - name: Software Defined Networking (SDN)
       href: sdn/index.yml
       items:
@@ -270,7 +270,7 @@ items:
         - name: Internal DNS service (iDNS) for SDN
           href: sdn/technologies/Idns-for-Sdn.md
         - name: Network Controller
-          href: /azure-stack/hci/concepts/network-controller-overview
+          href: /azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking
           items:
           - name: Network Controller high availability
             href: sdn/technologies/network-controller/network-controller-high-availability.md
@@ -282,23 +282,23 @@ items:
           href: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
           items:
           - name: Datacenter firewall overview
-            href: /azure-stack/hci/concepts/datacenter-firewall-overview
+            href: /azure/azure-local/concepts/datacenter-firewall-overview?context=/windows-server/context/windows-server-edge-networking
           - name: RAS Gateway for SDN
-            href: /azure-stack/hci/concepts/gateway-overview
+            href: /azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-edge-networking
             items:
             - name: RAS Gateway deployment architecture
               href: sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md
             - name: RAS Gateway high availability
               href: sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md
           - name: Software Load Balancing (SLB) for SDN
-            href: /azure-stack/hci/concepts/software-load-balancer
+            href: /azure/azure-local/concepts/software-load-balancer?context=/windows-server/context/windows-server-edge-networking
         - name: Container networking
           href: sdn/technologies/Containers/Container-networking-overview.md
       - name: Plan for SDN
-        href: /azure-stack/hci/concepts/plan-software-defined-networking-infrastructure
+        href: /azure/azure-local/concepts/plan-software-defined-networking-infrastructure?context=/windows-server/context/windows-server-edge-networking
         items:
         - name: Installation and preparation requirements for deploying Network Controller
-          href: /azure-stack/hci/concepts/network-controller
+          href: /azure/azure-local/concepts/network-controller?context=/windows-server/context/windows-server-edge-networking
       - name: Deploy SDN
         items:
         - name: Deploy an SDN Infrastructure
@@ -315,16 +315,16 @@ items:
         href: sdn/manage/manage-sdn.md
         items:
         - name: Configure network security groups with tags
-          href: /azure-stack/hci/manage/configure-network-security-groups-with-tags?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+          href: /azure/azure-local/manage/configure-network-security-groups-with-tags?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Use default network access policies
-          href: /azure-stack/hci/manage/manage-default-network-access-policies-virtual-machines-23h2?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+          href: /azure/azure-local/manage/manage-default-network-access-policies-virtual-machines-23h2?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
         - name: Manage tenant virtual networks
           href: sdn/manage/Manage-Tenant-Virtual-Networks.md
           items:
           - name: Understanding usage of virtual networks and VLANs
             href: sdn/manage/Understanding-Usage-of-Virtual-Networks-and-VLANs.md
           - name: Use Access Control lists (ACLs) to manage datacenter network traffic flow
-            href: /azure-stack/hci/manage/use-datacenter-firewall-powershell
+            href: /azure/azure-local/manage/use-datacenter-firewall-powershell?context=/windows-server/context/windows-server-edge-networking
           - name: Create, delete, or update tenant virtual networks
             href: sdn/manage/create,-delete,-or-Update-Tenant-Virtual-Networks.md
           - name: Add a virtual gateway to a tenant virtual network
@@ -343,7 +343,7 @@ items:
           - name: Configure QoS for a tenant VM network adapter
             href: sdn/manage/Configure-QoS-for-Tenant-VM-Network-Adapter.md
           - name: Configure datacenter firewall ACLs
-            href: /azure-stack/hci/manage/use-datacenter-firewall-powershell
+            href: /azure/azure-local/manage/use-datacenter-firewall-powershell?context=/windows-server/context/windows-server-edge-networking
           - name: Configure the Software Load Balancer for load balancing and Network address Translation (NAT)
             href: sdn/manage/Configure-SLB-and-Nat.md
           - name: Use network virtual appliances on a virtual network
@@ -355,15 +355,15 @@ items:
       - name: Security for SDN
         items:
         - name: Secure the Network Controller
-          href: /azure-stack/hci/manage/nc-security?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          href: /azure/azure-local/manage/nc-security?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
         - name: Manage certificates for SDN
-          href: /azure-stack/hci/manage/sdn-manage-certs?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          href: /azure/azure-local/manage/sdn-manage-certs?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
         - name: Update Network Controller certificates
-          href: /azure-stack/hci/manage/update-network-controller-certificates?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          href: /azure/azure-local/manage/update-network-controller-certificates?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
         - name: Kerberos with Service Principal Name (SPN)
-          href: /azure-stack/hci/manage/kerberos-with-spn?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          href: /azure/azure-local/manage/kerberos-with-spn?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
         - name: SDN firewall auditing
-          href: /azure-stack/hci/manage/use-datacenter-firewall-powershell?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          href: /azure/azure-local/manage/use-datacenter-firewall-powershell?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Virtual network peering
         href: sdn/vnet-peering/sdn-vnet-peering.md
         items:
@@ -624,7 +624,7 @@ items:
     - name: QoS policy FAQ
       href: technologies/qos/qos-policy-faq.yml
   - name: Switch Embedded Teaming (SET)
-    href: /azure-stack/hci/concepts/host-network-requirements
+    href: /azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking
   - name: Virtual Private Networking (VPN)
     href: ../remote/remote-access/vpn/vpn-top.md
   - name: Windows Internet Name Service (WINS)

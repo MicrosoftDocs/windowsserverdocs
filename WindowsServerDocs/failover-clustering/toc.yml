@@ -57,11 +57,11 @@
     - name: Upgrading a failover cluster on the same hardware
       href: upgrade-option-same-hardware.md
   - name: Deploy a cluster set
-    href: /azure-stack/hci/deploy/cluster-set
+    href: /azure/azure-local/deploy/cluster-set?context=/windows-server/context/windows-server-failover-clustering
 - name: Concepts
   items:
   - name: Cluster and pool quorum
-    href: /azure-stack/hci/concepts/quorum
+    href: /azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering
   - name: Scale-Out File Server for application data
     href: sofs-overview.md
   - name: Fault domain awareness
@@ -69,7 +69,7 @@
   - name: Simplified SMB Multichannel and multi-NIC cluster networks
     href: smb-multichannel.md
   - name: VM load balancing
-    href: /azure-stack/hci/manage/vm-load-balancing
+    href: /azure/azure-local/manage/vm-load-balancing?context=/windows-server/context/windows-server-failover-clustering
   - name: Cluster affinity
     href: cluster-affinity.md
   - name: Use Cluster Shared Volumes (CSVs)

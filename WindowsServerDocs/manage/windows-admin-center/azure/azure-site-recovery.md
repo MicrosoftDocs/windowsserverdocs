@@ -7,4 +7,4 @@ ms.author: roharwoo
 ms.date: 10/27/2021
 ---
 
-[!INCLUDE[Protect your Hyper-V Virtual Machines with Azure Site Recovery and Windows Admin Center](~/../_azurestack/azure-stack/hci/manage/azure-site-recovery.md)]
+[!INCLUDE[Protect your Hyper-V Virtual Machines with Azure Site Recovery and Windows Admin Center](~/../_azurestack/azure/azure-local/manage/azure-site-recovery.md)]

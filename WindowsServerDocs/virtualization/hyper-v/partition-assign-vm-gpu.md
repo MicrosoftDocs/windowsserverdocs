@@ -52,7 +52,7 @@ There are several requirements and things to consider before you begin to use th
 
 :::zone pivot="azure-stack-hci"
 
-- Install Azure Stack HCI on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
+- Install Azure Stack HCI on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure/azure-local/deploy/operating-system?context=/windows-server/context/windows-server-virtualization).
 
 ::: zone-end
 

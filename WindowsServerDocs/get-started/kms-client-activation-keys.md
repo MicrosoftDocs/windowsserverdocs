@@ -88,7 +88,7 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 > [!IMPORTANT]
 > Windows Server, version 20H2 reached end of service on August 9, 2022 and is no longer receiving security updates. This includes the retirement of Windows Server Semi-Annual Channel (SAC) with no future releases.
 >
-> Customers using Windows Server SAC should move to **[Azure Stack HCI](/azure-stack/hci/)**. Alternatively, customers may use the Long-Term Servicing Channel of Windows Server.
+> Customers using Windows Server SAC should move to **[Azure Stack HCI](/azure/azure-local/)**. Alternatively, customers may use the Long-Term Servicing Channel of Windows Server.
 
 ### Windows 11 and Windows 10 Semi-Annual Channel
 

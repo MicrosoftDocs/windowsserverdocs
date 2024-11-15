@@ -24,7 +24,7 @@ Data Deduplication is supported starting with Windows Server 2019.
 * [Manually started Data Deduplication jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
 * Scheduled Data Deduplication jobs are stored in the cluster task scheduled so that if a deduplicated volume is taken over by another node, the scheduled job will be applied on the next scheduled interval.
 * Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
-* Data Deduplication is fully supported on [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) with ReFS or NTFS-formatted volumes (mirror or parity). ReFS-formatted volumes are supported starting with Windows Server 2019. Deduplication is not supported on volumes with multiple tiers.  
+* Data Deduplication is fully supported on [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) with ReFS or NTFS-formatted volumes (mirror or parity). ReFS-formatted volumes are supported starting with Windows Server 2019. Deduplication is not supported on volumes with multiple tiers.  
 
 ### Storage Replica
 [Storage Replica](../storage-replica/storage-replica-overview.md) is fully supported. Data Deduplication should be configured to not run on the secondary copy.
