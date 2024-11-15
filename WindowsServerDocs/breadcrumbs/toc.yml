@@ -10,9 +10,6 @@ items:
         tocHref: /windows-server/remote/remote-desktop-services/
         topicHref: /windows-server/remote/remote-desktop-services/index
       - name: Remote Desktop Services
-        tocHref: /windows-server/remote/remote-desktop-services/remote-desktop-services-overview
-        topicHref: /windows-server/remote/remote-desktop-services/remote-desktop-services-overview
-      - name: Remote Desktop Services
         tocHref: /azure/virtual-desktop/
         topicHref: /windows-server/remote/remote-desktop-services/
       - name: Hyper-V
