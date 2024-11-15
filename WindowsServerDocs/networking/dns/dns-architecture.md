@@ -44,7 +44,7 @@ DNS clients and servers use queries as the fundamental method of resolving names
 
 For examaple, Microsoft is assigned authority by the Internet root servers for its own part of the DNS domain namespace tree on the Internet, that is, microsoft.com.
 
-![Registration Authority and Registrant (Microsoft)](./media/registration-authority.png)
+![Registration Authority and Registrant (Microsoft)](./media/dns-architecture/registration-authority.png)
 
 ## How the DNS domain namespace is organized
 
@@ -106,7 +106,7 @@ The name server (NS) RRs facilitate delegation by identifying DNS servers for ea
 
 The following image shows how management of the microsoft.com. domain is delegated across two zones -- microsoft.com. and mydomain.microsoft.com.
 
-![DNS Delegation](./media/dns-delegation.png)
+![DNS Delegation](./media/dns-architecture/dns-delegation.png)
 
 > [!NOTE]
 > If multiple NS records exist for a delegated zone identifying multiple DNS servers available for querying, the Windows Server DNS Server service will be able to select the closest DNS server based on the roundtrip intervals measured over time for every DNS server.
@@ -161,7 +161,7 @@ An iterative query is one in which the DNS server is expected to respond with th
 
 The following figure shows an example of both types of queries.
 
-![DNS Query Types](./media/dns-query-types.png)
+![DNS Query Types](./media/dns-architecture/dns-query-types.png)
 
 The figure shows a number of queries were used to determine the IP address for www.whitehouse.gov. The query sequence is described as follows:
 
@@ -196,10 +196,10 @@ The following diagrams illustrate how the DNS Client and Server services work an
 
 The following diagram illustrates the DNS Client service architecture in its name resolution and update operations. Name resolution architecture is demonstrated using a Web browser and Microsoft Outlook and updates are represented by the DHCP client.
 
-![DNS Client Service Architecture](./media/dns-client-service-architecture.png)
+![DNS Client Service Architecture](./media/dns-architecture/dns-client-service-architecture.png)
 
 The following diagram illustrates the DNS Server service architecture with its administration tools and the Windows Management Instrumentation (WMI) interface.
 
-![DNS Server Service Architecture](./media/dns-server-service-architecture.png)
+![DNS Server Service Architecture](./media/dns-architecture/dns-server-service-architecture.png)
 
 ## See also
