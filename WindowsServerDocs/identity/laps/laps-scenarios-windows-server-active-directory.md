@@ -158,7 +158,10 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 
 Retrieval of Windows LAPS passwords (including DSRM passwords) normally requires that at least one Active Directory domain controller is available. Consider however a catastrophic scenario in which all the domain controllers in a domain are down. How do you recover passwords in that situation?
 
-Active Directory management best-practices advise regularly saving regular backups of all domain controllers. Windows LAPS passwords stored in a mounted backup AD database can be queried using the `Get-LapsADPassword` PowerShell cmdlet by specifying the `-Port` parameter.The `Get-LapsADPassword` cmdlet was recently improved so that when the `-Port` and `-RecoveryMode` parameters are both specified, password recovery will succeed with no need to contact a domain controller. Further, `Get-LapsADPassword` now supports being run in this mode on a workgroup (non-domain-joined) machine.
+Active Directory management best-practices advise regularly saving regular backups of all domain controllers. Windows LAPS passwords stored in a mounted backup AD database can be queried using the `Get-LapsADPassword` PowerShell cmdlet by specifying the `-Port` parameter. The `Get-LapsADPassword` cmdlet was recently improved so that when the `-Port` and `-RecoveryMode` parameters are both specified, password recovery succeeds with no need to contact a domain controller. Further, `Get-LapsADPassword` now supports being run in this mode on a workgroup (non-domain-joined) machine.
+
+> [!TIP]
+> The dsamain.exe utility is used to mount an AD backup media and query it over LDAP. Dsamain.exe is not installed by default so it has to be added. One way to do this is using the `Enable-WindowsOptionalFeature` cmdlet. On Windows Client machines you can run `Enable-WindowsOptionalFeature -Online -FeatureName DirectoryServices-ADAM-Client`. On a Windows Server machine you can run `Enable-WindowsOptionalFeature -Online -FeatureName DirectoryServices-ADAM`
 
 The following example assumes that an AD backup database is locally mounted on port 50000:
 

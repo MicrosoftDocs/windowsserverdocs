@@ -362,7 +362,7 @@ Existing configurations retain their behavior. For example, if you're running Wi
 
 ### Accelerated Networking
 
-Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines (VM) hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings.
+Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines (VM) hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings. To learn more, see [Accelerated Networking at the Edge (preview)](/windows-server/networking/technologies/accelerated-networking/accelerated-networking).
 
 ### Hyper-V Manager
 
