@@ -17,11 +17,15 @@ If you're interested in trying out the latest features of Windows Server 2025 be
 
 ### Upgrade using Windows Update
 
-You can perform an in-place upgrade in one of two ways, from media or using Windows Update from the Settings dialog. Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices. When you upgrade using Windows Update from the Settings dialog, you can perform the install directly from Windows Update within the desktop or using SConfig for Server Core. Your organization might prefer to implement upgrades incrementally and want to control the availability of this optional upgrade using Group Policy. To learn more about how to manage the offer of Feature Updates, see [Manage Feature Updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
+You can perform an in-place upgrade in one of two ways: from source media or Windows Update. Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices.
+
+When you upgrade using Windows Update from the Settings dialog, you can perform the install directly from Windows Update within the desktop or using *SConfig* for Server Core. Your organization might prefer to implement upgrades incrementally and want to control the availability of this optional upgrade using Group Policy.
+
+To learn more about how to manage the offer of Feature Updates, see [Manage Feature Updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
 
 ### In-place upgrade from Windows Server 2012 R2
 
-Beginning with Windows Server 2025, you can upgrade up to four versions at a time. Meaning you can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later.
+With Windows Server 2025, you can upgrade up to four versions at a time. You can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later.
 
 ### Desktop shell
 
@@ -35,9 +39,9 @@ You can now connect mice, keyboards, headsets, audio devices, and more via bluet
 
 Windows Server 2025 comes equipped with `dtrace` as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real-time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for other capabilities.
 
-### Email & accounts
+### Email and accounts
 
-You can now add the following accounts in **Settings > Accounts > Email & accounts** for Windows Server 2025:
+You can now add the following types of accounts in Windows Settings in **Accounts > Email & accounts** for Windows Server 2025:
 
 - Microsoft Entra ID
 - Microsoft account
@@ -57,7 +61,7 @@ Build 26040 has a new compression feature when compressing an item by performing
 
 ### Pinned apps
 
-Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. The default pinned apps are currently:
+Pinning your most used apps is now available through the **Start menu** and is customizable to suit your needs. The default pinned apps are currently:
 
 - Azure Arc Setup
 - Feedback Hub
@@ -74,13 +78,13 @@ Windows Server 2025 uses the modern Task Manager app with mica material conformi
 
 ### Wi-Fi
 
-It's now easier to enable wireless capabilities as the Wireless LAN Service feature is now installed by default. The wireless startup service is set to manual and can be enabled by running `net start wlansvc` in the Command Prompt, Windows Terminal, or PowerShell.
+It's now easier to enable wireless capabilities as the Wireless LAN Service feature is now installed by default. The wireless startup service is set to manual and can be enabled by running `net start wlansvc` in Command Prompt, Windows Terminal, or PowerShell.
 
 ### Windows Terminal
 
 The Windows Terminal, a powerful and efficient multishell application for command-line users, is available in this build. Search for "Terminal" in the search bar.
 
-### Winget
+### WinGet
 
 Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
 
@@ -238,7 +242,7 @@ To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/id
 
 ### OpenSSH
 
-In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. The OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-step option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
+In earlier versions of Windows Server, the OpenSSH connectivity tool required manual installation before use. The OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-step option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
 
 ### Security Baseline
 
@@ -252,7 +256,7 @@ VBS enclaves enable applications to protect their secrets by removing the need t
 
 ### Virtualization-based security (VBS) key protection
 
-VBS key protection enables Windows developers to secure cryptographic keys using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. When in use, VBS keys are isolated in a secure process, allowing key operations to occur without exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user’s machine. VBS key protection helps prevente exfiltration attacks by any admin-level attacker. VBS must be enabled to use key protection. See [Enable memory integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity) for information about how to enable VBS.
+VBS key protection enables Windows developers to secure cryptographic keys using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. When in use, VBS keys are isolated in a secure process, allowing key operations to occur without exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user's machine. VBS key protection helps prevent exfiltration attacks by any admin-level attacker. VBS must be enabled to use key protection. See [Enable memory integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity) for information about how to enable VBS.
 
 ### Secured connectivity
 
@@ -266,7 +270,7 @@ The [SMB over QUIC](../storage/file-server/smb-over-quic.md) server feature, whi
 
 ##### SMB over QUIC enablement policy
 
-Administrators can disable SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC using Group Policy, set the **Enable SMB over QUIC** policy in these paths to **Disabled**.
+Administrators can disable SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC using Group Policy, set the **Enable SMB over QUIC** policy in the following paths to **Disabled**:
 
 - **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
 
@@ -328,7 +332,7 @@ You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports i
 
 #### SMB Firewall Rule Hardening
 
-Previously, when a share was created, the SMB firewall rules would be automatically configured to enable the "File and Printer Sharing" group for the relevant firewall profiles. Now, the creation of an SMB share in Windows results in the automatic configuration of the new "File and Printer Sharing (Restrictive)" group, which no longer permits inbound NetBIOS ports 137-139. To learn more, see [Updated firewall rules](../storage/file-server/smb-secure-traffic.md#updated-firewall-rules).
+Previously, when a share was created, the SMB firewall rules would be automatically configured to enable the **File and Printer Sharing** group for the relevant firewall profiles. Now, the creation of an SMB share in Windows results in the automatic configuration of the new **File and Printer Sharing (Restrictive)** group, which no longer permits inbound NetBIOS ports 137-139. To learn more, see [Updated firewall rules](../storage/file-server/smb-secure-traffic.md#updated-firewall-rules).
 
 - [Enforce SMB encryption](../storage/file-server/smb-security.md#smb-encryption) is enabled for all outbound SMB client connections. With this update, administrators can set a mandate that all destination servers support SMB 3.x and encryption. If a server lacks these capabilities, the client is unable to establish a connection.
 
@@ -338,7 +342,7 @@ SMB authentication rate limiter is designed to limit the number of authenticatio
 
 #### Disable SMB NTLM
 
-Beginning with Windows Server 2025 SMB client supports NTLM blocking for remote outbound connections. Previously, the Windows Simple and Protected GSSAPI Negotiation Mechanism ([SPNEGO](/openspecs/windows_protocols/ms-spng/b16309d8-4a93-4fa6-9ee2-7d84b2451c84)) would negotiate Kerberos, NTLM, and other mechanisms with the destination server to determine a supported security package. To learn more, see [Block NTLM connections on SMB](../storage/file-server/smb-ntlm-blocking.md)
+Beginning with Windows Server 2025, the SMB client supports NTLM blocking for remote outbound connections. Previously, the Windows Simple and Protected GSSAPI Negotiation Mechanism ([SPNEGO](/openspecs/windows_protocols/ms-spng/b16309d8-4a93-4fa6-9ee2-7d84b2451c84)) negotiates Kerberos, NTLM, and other mechanisms with the destination server to determine a supported security package. To learn more, see [Block NTLM connections on SMB](../storage/file-server/smb-ntlm-blocking.md)
 
 #### SMB Dialect Control
 
@@ -354,9 +358,9 @@ The Remote Mailslot protocol is disabled by default for SMB and for DC locator p
 
 #### Routing and Remote Access Services (RRAS) hardening
 
-By default new Routing and Remote Access Services (RRAS) setups don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
+By default new Routing and Remote Access Services (RRAS) installations don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
 
-Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, after updating to Windows Server 2025 using an in-place update, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
+Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 using an in-place upgrade, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
 ## Hyper-V, AI, and performance
 
@@ -366,7 +370,7 @@ Accelerated Networking (AccelNet) simplifies the management of single root I/O v
 
 ### Hyper-V Manager
 
-When users create a new VM through the Hyper-V Manager, **Generation 2** is now set as the default option in the **New Virtual Machine Wizard**.
+When you create a new VM through the Hyper-V Manager, **Generation 2** is now set as the default option in the **New Virtual Machine Wizard**.
 
 ### Hypervisor-enforced paging translation
 
@@ -391,13 +395,15 @@ Network ATC streamlines the deployment and management of network configurations 
 
 ### Scalability
 
-With Windows Server 2025, Hyper-V now supports up to 4 Petabytes of memory and 2,048 logical processors per host. This increase allows for greater scalability and performance for virtualized workloads. Windows Server 2025 also supports up to 240 TB of memory and 2,048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+With Windows Server 2025, Hyper-V now supports up to 4 petabytes of memory and 2,048 logical processors per host. This increase allows for greater scalability and performance for virtualized workloads.
+
+Windows Server 2025 also supports up to 240 TB of memory and 2,048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
 
 ## Storage
 
 ### Block cloning support
 
-Starting with Windows 11 24H2 and Windows Server 2025, Dev Drive now supports Block cloning. As Dev Drive uses the ReFS file system format, Block cloning support provides significant performance benefits when copying files. With Block cloning, the file system can copy a range of file bytes on behalf of an application as a low-cost metadata operation, rather than performing expensive read and write operations to the underlying physical data. This results in faster completion of file copying, reduced I/O to the underlying storage, and improved storage capacity by enabling multiple files to share the same logical clusters. To learn more, see [Block cloning on ReFS](/windows-server/storage/refs/block-cloning).
+Starting with Windows 11 24H2 and Windows Server 2025, Dev Drive now supports block cloning. As Dev Drive uses the ReFS file system format, block cloning support provides significant performance benefits when copying files. With block cloning, the file system can copy a range of file bytes on behalf of an application as a low-cost metadata operation, rather than performing expensive read and write operations to the underlying physical data. This results in faster completion of file copying, reduced I/O to the underlying storage, and improved storage capacity by enabling multiple files to share the same logical clusters. To learn more, see [Block cloning on ReFS](/windows-server/storage/refs/block-cloning).
 
 ### Dev Drive
 
@@ -405,7 +411,7 @@ Dev Drive is a storage volume that aims to enhance the performance of crucial de
 
 ### NVMe
 
-NVMe is a new standard for fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performance, resulting in an increase in IOPS and decrease in CPU utilization.
+NVMe is a new standard for fast solid-state drives (SSDs). NVMe storage performance has been optimized in Windows Server 2025 with improved performance, resulting in an increase in IOPS and decrease in CPU utilization.
 
 ### Storage Replica Compression
 
@@ -415,23 +421,23 @@ Storage Replica Compression. Storage Replica Compression reduces the amount of d
 
 Enhanced Logs help the Storage Replica log implementation to eliminate the performance costs associated with file system abstractions, leading to improved block replication performance. To learn more, see [Storage Replica Enhanced Log](../storage/storage-replica/storage-replica-enhanced-log.md).
 
-### ReFS Native Storage deduplication & compression
+### ReFS native storage deduplication and compression
 
-ReFS Native storage deduplication and compression are techniques used to optimize storage efficiency for both static and active workloads such as file servers or virtual desktops. To learn more about ReFS deduplication and compression, see [Optimize storage with ReFS deduplication and compression in Azure Stack HCI](/azure-stack/hci/manage/refs-deduplication-and-compression).
+ReFS native storage deduplication and compression are techniques used to optimize storage efficiency for both static and active workloads such as file servers or virtual desktops. To learn more about ReFS deduplication and compression, see [Optimize storage with ReFS deduplication and compression in Azure Stack HCI](/azure-stack/hci/manage/refs-deduplication-and-compression).
 
-### Thinly Provisioned volumes
+### Thin provisioned volumes
 
 Thin provisioned volumes with Storage Spaces Direct are a way to allocate storage resources more efficiently and avoid costly overallocation by allocating from the pool only when needed in a cluster. You can also convert fixed to thin provisioned volumes. Converting from fixed to thin provisioned volumes returns any unused storage back to the pool for other volumes to use. To learn more about thinly provisioned volumes, see [Storage thin provisioning](/azure-stack/hci/manage/manage-thin-provisioning-23h2).
 
 ## Azure Arc and hybrid
 
-### Simplified Azure Arc Setup
+### Simplified Azure Arc setup
 
 By default, the Azure Arc setup Feature-on-Demand is installed, which offers a user-friendly wizard interface and a system tray icon in the taskbar to facilitate the process of adding servers to Azure Arc. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These environments include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
 
 ### Pay-as-you-go licensing
 
-Azure Arc's Pay-as-you-go subscription licensing option is an alternative to the conventional perpetual licensing for Windows Server 2025. With Pay-as-you-go, you can deploy a Windows Server device, license it, and only pay for as much as you use. This feature is facilitated through Azure Arc and billed via your Azure subscription. Learn more about [Azure Arc Pay-as-you-go licensing](windows-server-pay-as-you-go.md).
+Azure Arc's pay-as-you-go subscription licensing option is an alternative to the conventional perpetual licensing for Windows Server 2025. With pay-as-you-go, you can deploy a Windows Server device, license it, and only pay for as much as you use. This feature is facilitated through Azure Arc and billed via your Azure subscription. Learn more about [Azure Arc pay-as-you-go licensing](windows-server-pay-as-you-go.md).
 
 ### Windows Server Management enabled by Azure Arc
 
@@ -457,9 +463,9 @@ SDN is an approach to networking that allows network administrators to manage ne
 
 - Default network policies in Windows Server 2025 bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. Default network polices ensures workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Stack HCI, version 23H2](/azure-stack/hci/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
 
-- SDN Multisite provides native Layer 2 and Layer 3 connectivity between applications across two locations without any extra components. This feature allows for seamless movement of applications without the need to reconfigure the application or networks. It also offers unified network policy management for workloads, ensuring that policies don't need to be updated when a workload VM moves from one location to another. To learn more, see [What is SDN Multisite?](/azure-stack/hci/concepts/sdn-multisite-overview?pivots=windows-server).
+- SDN Multisite provides native layer 2 and layer 3 connectivity between applications across two locations without any extra components. This feature allows for seamless movement of applications without the need to reconfigure the application or networks. It also offers unified network policy management for workloads, ensuring that policies don't need to be updated when a workload VM moves from one location to another. To learn more, see [What is SDN Multisite?](/azure-stack/hci/concepts/sdn-multisite-overview?pivots=windows-server).
 
-- The performance of SDN Layer 3 gateways is enhanced, achieving higher throughput, and reduced CPU cycles. These improvements are enabled by default. Users automatically experience better performance when an SDN gateway Layer 3 connection is configured through PowerShell or Windows Admin Center.
+- The performance of SDN layer 3 gateways is enhanced, achieving higher throughput, and reduced CPU cycles. These improvements are enabled by default. Users automatically experience better performance when an SDN gateway layer 3 connection is configured through PowerShell or Windows Admin Center.
 
 ### Server Message Block
 
