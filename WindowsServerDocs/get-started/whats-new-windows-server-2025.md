@@ -1,6 +1,6 @@
 ---
 title: What's new in Windows Server 2025
-description: This article describes some of the new features in Windows Server 2025.
+description: Learn about the features and enhancements in Windows Server 2025 that help to improve security, performance, and flexibility.
 ms.topic: article
 author: xelu86
 ms.author: alalve
@@ -17,7 +17,7 @@ If you're interested in trying out the latest features of Windows Server 2025 be
 
 ### Upgrade using Windows Update
 
-You can perform an in-place upgrade in one of two ways, from media or using Windows Update from the Settings dialog. Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices. When you upgrade using Windows Update from the Settings dialog, you can perform the install directly from Windows Update within the desktop or using SConfig for Server Core. Your organization may prefer to implement upgrades incrementally and want to control the availability of this optional upgrade using Group Policy. To learn more about how to manage the offer of Feature Updates, see [Manage Feature Updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
+You can perform an in-place upgrade in one of two ways, from media or using Windows Update from the Settings dialog. Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices. When you upgrade using Windows Update from the Settings dialog, you can perform the install directly from Windows Update within the desktop or using SConfig for Server Core. Your organization might prefer to implement upgrades incrementally and want to control the availability of this optional upgrade using Group Policy. To learn more about how to manage the offer of Feature Updates, see [Manage Feature Updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
 
 ### In-place upgrade from Windows Server 2012 R2
 
@@ -182,7 +182,7 @@ This new type of account enables migration from a service account to a delegated
 
 ### Windows Local Administrator Password Solution (LAPS)
 
-Windows LAPS helps organizations manage local administrator passwords on their domain-joined computers. It automatically generates unique passwords for each computer's local administrator account, stores them securely in AD, and updates them regularly. This helps to improve security by reducing the risk of attackers gaining access to sensitive systems using compromised or easily guessable passwords.
+Windows LAPS helps organizations manage local administrator passwords on their domain-joined computers. It automatically generates unique passwords for each computer's local administrator account, stores them securely in AD, and updates them regularly. Automatically generated passwords help to improve security by reducing the risk of attackers gaining access to sensitive systems using compromised or easily guessable passwords.
 
 Several features are introduced to Microsoft LAPS that bring the following improvements:
 
@@ -192,7 +192,7 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
 - **New image rollback detection feature**
   
-  Windows LAPS now detects when an image rollback occurs. If a rollback does happen, the password stored in AD may no longer match the password stored locally on the device. Rollbacks can result in a "torn state" where the IT admin is unable to sign into the device using the persisted Windows LAPS password.
+  Windows LAPS now detects when an image rollback occurs. If a rollback does happen, the password stored in AD might no longer match the password stored locally on the device. Rollbacks can result in a "torn state" where the IT admin is unable to sign into the device using the persisted Windows LAPS password.
 
   To address this issue, a new feature was added that includes an AD attribute called **msLAPS-CurrentPasswordVersion**. This attribute contains a random GUID written by Windows LAPS every time a new password is persisted in AD and saved locally. During every processing cycle, the GUID stored in **msLAPS-CurrentPasswordVersion** is queried and compared to the locally persisted copy. If they're different, the password is immediately rotated.
 
@@ -238,7 +238,7 @@ To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/id
 
 ### OpenSSH
 
-In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Starting with build 26080, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-click option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
+In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Starting with build 26080, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-step option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
 
 ### Security Baseline
 
@@ -252,13 +252,13 @@ VBS enclaves enable applications to protect their secrets by removing the need t
 
 ### Virtualization-based security (VBS) key protection
 
-VBS key protection enables Windows developers to secure cryptographic keys using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. When in use, VBS keys are isolated in a secure process, allowing key operations to occur without exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user’s machine, preventing exfiltration attacks by any admin-level attacker. VBS must be enabled to use key protection. See [Enable memory integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity) for information about how to enable VBS.
+VBS key protection enables Windows developers to secure cryptographic keys using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. When in use, VBS keys are isolated in a secure process, allowing key operations to occur without exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user’s machine. VBS key protection helps prevente exfiltration attacks by any admin-level attacker. VBS must be enabled to use key protection. See [Enable memory integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity) for information about how to enable VBS.
 
 ### Secured connectivity
 
 #### Secure certificate management
 
-Searching or retrieving certificates on Windows now supports SHA-256 hashes, as described in the functions [CertFindCertificateInStore](/windows/win32/api/wincrypt/nf-wincrypt-certfindcertificateinstore), and [CertGetCertificateContextProperty](/windows/win32/api/wincrypt/nf-wincrypt-certgetcertificatecontextproperty). TLS server authentication is more secure across Windows, and now requires a minimum RSA key length of 2048 bits. For more information, read [TLS server authentication: Deprecation of weak RSA certificates](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/tls-server-authentication-deprecation-of-weak-rsa-certificates/ba-p/4134028).
+Searching or retrieving certificates on Windows now supports SHA-256 hashes, as described in the functions [CertFindCertificateInStore](/windows/win32/api/wincrypt/nf-wincrypt-certfindcertificateinstore), and [CertGetCertificateContextProperty](/windows/win32/api/wincrypt/nf-wincrypt-certgetcertificatecontextproperty). TLS server authentication is more secure across Windows, and now requires a minimum RSA key length of 2,048 bits. For more information, read [TLS server authentication: Deprecation of weak RSA certificates](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/tls-server-authentication-deprecation-of-weak-rsa-certificates/ba-p/4134028).
 
 #### SMB over QUIC
 
@@ -280,7 +280,7 @@ Set-SmbClientConfiguration -EnableSMBQUIC $false
 
 ##### SMB signing and encryption auditing
 
-Administrators can enable auditing of the SMB server and client for support of SMB signing and encryption. If a third-party client or server lacks support for SMB encryption or signing, it can be detected. When your third-party device or software states it supports SMB 3.1.1, but fails to support SMB signing, it violates the [SMB 3.1.1 Pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
+Administrators can enable auditing of the SMB server and client for support of SMB signing and encryption. If a non-Microsoft client or server lacks support for SMB encryption or signing, it can be detected. When a non-Microsoft device or software states it supports SMB 3.1.1, but fails to support SMB signing, it violates the [SMB 3.1.1 Pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
 
 You can configure SMB signing and encryption auditing settings using Group Policy or PowerShell. These policies can be changed in the following Group Policy paths:
   
@@ -320,29 +320,29 @@ SMB over QUIC client connection auditing captures events that are written to an 
 
 ##### SMB over QUIC client access control
 
-Another feature that's introduced to SMB over QUIC is client access control, which is an alternative to TCP and RDMA that supplies secure connectivity to edge file servers over untrusted networks. To learn more, see [How client access control works](../storage/file-server/configure-smb-over-quic-client-access-control.md#how-client-access-control-works).
+Windows Server 2025 includes SMB over QUIC client access control. SMB over QUIC is an alternative to TCP and RDMA that supplies secure connectivity to edge file servers over untrusted networks. Client access control introduces more controls to restrict access to your data using certificates. To learn more, see [How client access control works](../storage/file-server/configure-smb-over-quic-client-access-control.md#how-client-access-control-works).
 
 #### SMB Alternative Ports
 
-You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports than their IANA/IETF defaults of 445, 5445, and 443. This can be configured via Group Policy or PowerShell. Previously, SMB server in Windows mandated inbound connections to use the IANA-registered port TCP/445 while the SMB TCP client only allowed outbound connections to that same TCP port. Now, SMB over QUIC allows for SMB alternative ports where QUIC-mandated UDP/443 ports are available for both server and client devices. To learn more, see [Configure alternative SMB ports](../storage/file-server/smb-ports.md).
+You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports instead of their IANA/IETF defaults of 445, 5445, and 443. Alternative ports can be configured via Group Policy or PowerShell. Previously, SMB server in Windows mandated inbound connections to use the IANA-registered port TCP/445 while the SMB TCP client only allowed outbound connections to that same TCP port. Now, SMB over QUIC allows for SMB alternative ports where QUIC-mandated UDP/443 ports are available for both server and client devices. To learn more, see [Configure alternative SMB ports](../storage/file-server/smb-ports.md).
 
 #### SMB Firewall Rule Hardening
 
 Previously, when a share was created, the SMB firewall rules would be automatically configured to enable the "File and Printer Sharing" group for the relevant firewall profiles. Now, the creation of an SMB share in Windows results in the automatic configuration of the new "File and Printer Sharing (Restrictive)" group, which no longer permits inbound NetBIOS ports 137-139. To learn more, see [Updated firewall rules](../storage/file-server/smb-secure-traffic.md#updated-firewall-rules).
 
-- Starting with build 25997, an update is made to [enforce SMB encryption](../storage/file-server/smb-security.md#smb-encryption) for all outbound SMB client connections. With this update, administrators can set a mandate that all destination servers support SMB 3.x and encryption. If a server lacks these capabilities, the client is unable to establish a connection.
+- [Enforce SMB encryption](../storage/file-server/smb-security.md#smb-encryption) is enabled for all outbound SMB client connections. With this update, administrators can set a mandate that all destination servers support SMB 3.x and encryption. If a server lacks these capabilities, the client is unable to establish a connection.
 
 #### SMB Authentication Rate Limiter
 
 SMB authentication rate limiter is designed to limit the number of authentication attempts that can be made within a certain time period. SMB authentication rate limiter helps combat brute force authentication attacks. The SMB server service uses the authentication rate limiter to implement a delay between each failed NTLM or PKU2U-based authentication attempt and is enabled by default. To learn more, see [How SMB authentication rate limiter works](../storage/file-server/configure-smb-authentication-rate-limiter.md#how-smb-authentication-rate-limiter-works)
 
-#### SMB NTLM Disable
+#### Disable SMB NTLM
 
-Starting with build 25951, the SMB client supports NTLM blocking for remote outbound connections. Previously, the Windows Simple and Protected GSSAPI Negotiation Mechanism ([SPNEGO](/openspecs/windows_protocols/ms-spng/b16309d8-4a93-4fa6-9ee2-7d84b2451c84)) would negotiate Kerberos, NTLM, and other mechanisms with the destination server to determine a supported security package. To learn more, see [Block NTLM connections on SMB](../storage/file-server/smb-ntlm-blocking.md)
+Beginning with Windows Server 2025 SMB client supports NTLM blocking for remote outbound connections. Previously, the Windows Simple and Protected GSSAPI Negotiation Mechanism ([SPNEGO](/openspecs/windows_protocols/ms-spng/b16309d8-4a93-4fa6-9ee2-7d84b2451c84)) would negotiate Kerberos, NTLM, and other mechanisms with the destination server to determine a supported security package. To learn more, see [Block NTLM connections on SMB](../storage/file-server/smb-ntlm-blocking.md)
 
 #### SMB Dialect Control
 
-You can now [manage SMB dialects in Windows](../storage/file-server/manage-smb-dialects.md). When configured the SMB server will determine which SMB 2 and SMB 3 dialects it negotiates compared to the previous behavior matching only the highest dialect.
+You can now [manage SMB dialects in Windows](../storage/file-server/manage-smb-dialects.md). When configured the SMB server determines which SMB 2 and SMB 3 dialects it negotiates compared to the previous behavior matching only the highest dialect.
 
 #### SMB signing
 
@@ -350,7 +350,7 @@ SMB signing is now required by default for all SMB outbound connections where pr
 
 #### Remote Mailslots
 
-The Remote Mailslot protocol is disabled by default for SMB and for DC locator protocol usage with Active Directory. Remote Mailslot may be removed in a later release. To learn more, see [Features we're no longer developing](../get-started/removed-deprecated-features-windows-server-2025.md#features-were-no-longer-developing).
+The Remote Mailslot protocol is disabled by default for SMB and for DC locator protocol usage with Active Directory. Remote Mailslot might be removed in a later release. To learn more, see [Features we're no longer developing](../get-started/removed-deprecated-features-windows-server-2025.md#features-were-no-longer-developing).
 
 #### Routing and Remote Access Services (RRAS) hardening
 
@@ -374,24 +374,24 @@ Hypervisor-enforced paging translation (HVPT) is a security enhancement to enfor
 
 ### GPU Partitioning (GPU-P)
 
-GPU partitioning allows you to share a physical GPU device with multiple virtual machines (VMs). Instead of allocating the entire GPU to a single VM, GPU partitioning assigns dedicated fractions of the GPU to each VM. With Hyper-V GPU-P High Availability a GPU-P VM is automatically enabled on another cluster node in the case of unplanned downtime, and GPU-P Live Migration provides a solution to move a VM (for planned downtime or load balancing) with GPU-P to another node whether it is standalone or clustered. To learn more about GPU partitioning, see [GPU partitioning](../virtualization/hyper-v/gpu-partitioning.md).
+GPU partitioning allows you to share a physical GPU device with multiple virtual machines (VMs). Instead of allocating the entire GPU to a single VM, GPU partitioning assigns dedicated fractions of the GPU to each VM. With Hyper-V GPU-P High Availability a GPU-P VM is automatically enabled on another cluster node in the case of unplanned downtime. GPU-P Live Migration provides a solution to move a VM (for planned downtime or load balancing) with GPU-P to another node whether it's standalone or clustered. To learn more about GPU partitioning, see [GPU partitioning](../virtualization/hyper-v/gpu-partitioning.md).
 
 ### Dynamic Processor Compatibility
 
-Dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic Processor Compatibility is a feature that allows you to move a running virtual machine (VM) or save its state between virtualization hosts that use different generations of processors while delivering the maximum performance. Processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation (SLAT). To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
+Dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic Processor Compatibility use the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility. Dynamic processor compatibility also allows you to save its state between virtualization hosts that use different generations of processors. Processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation (SLAT). To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
 
 ### Workgroup clusters
 
-Hyper-V Workgroup Clusters. Hyper-V Workgroup clusters are a special type of Windows Server failover cluster where the Hyper-V cluster nodes are not members of an Active Directory domain.
+Hyper-V Workgroup Clusters. Hyper-V Workgroup clusters are a special type of Windows Server failover cluster where the Hyper-V cluster nodes aren't members of an Active Directory domain.
 Hyper-V Workgroup Cluster Live Migration. The ability to live migrate VMs in a Workgroup Cluster.
 
 ### Network ATC
 
-Network ATC streamlines the deployment and management of network configurations for Windows Server 2025 clusters. It utilizes an intent-based approach, where users specify their desired intents, such as management, compute, or storage for a network adapter, and the deployment is automated based on the intended configuration. This approach reduces the time, complexity, and errors associated with host networking deployment, ensures configuration consistency across the cluster, and eliminates configuration drift. To learn more, see [Deploy host networking with Network ATC](/azure-stack/hci/deploy/network-atc?tabs=22H2&pivots=windows-server).
+Network ATC streamlines the deployment and management of network configurations for Windows Server 2025 clusters. Network ATC utilizes an intent-based approach, where users specify their desired intents, such as management, compute, or storage for a network adapter, and the deployment is automated based on the intended configuration. This approach reduces the time, complexity, and errors associated with host networking deployment, ensures configuration consistency across the cluster, and eliminates configuration drift. To learn more, see [Deploy host networking with Network ATC](/azure-stack/hci/deploy/network-atc?tabs=22H2&pivots=windows-server).
 
 ### Scalability
 
-With Windows Server 2025, Hyper-V now supports up to 4 Petabytes of memory and 2048 logical processors per host. This allows for greater scalability and performance for virtualized workloads. Windows Server 2025 also supports up to 240 TB of memory and 2048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+With Windows Server 2025, Hyper-V now supports up to 4 Petabytes of memory and 2,048 logical processors per host. This increase allows for greater scalability and performance for virtualized workloads. Windows Server 2025 also supports up to 240 TB of memory and 2,048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
 
 ## Storage
 
@@ -407,7 +407,7 @@ Dev Drive is a storage volume that aims to enhance the performance of crucial de
 
 NVMe is a new standard for fast solid-state drives (SSDs). Experience NVMe optimization in Windows Server 2025 with improved performance, resulting in an increase in IOPS and decrease in CPU utilization.
 
-### Storage Replica Compress
+### Storage Replica Compression
 
 Storage Replica Compression. Storage Replica Compression reduces the amount of data transferred over the network during replication.
 
@@ -421,13 +421,13 @@ ReFS Native storage deduplication and compression are techniques used to optimiz
 
 ### Thinly Provisioned volumes
 
-Thinly Provisioned Storage Spaces Direct are a way to allocate storage resources more efficiently and avoid costly overallocation by allocating from the pool only when needed in a cluster. You can also convert fixed to thin provisioned volumes. Converting from fixed to thin provisioned volumes returns any unused storage back to the pool for other volumes to leverage. To learn more about thinly provisioned volumes, see [Storage thin provisioning](/azure-stack/hci/manage/manage-thin-provisioning-23h2).
+Thin provisioned volumes with Storage Spaces Direct are a way to allocate storage resources more efficiently and avoid costly overallocation by allocating from the pool only when needed in a cluster. You can also convert fixed to thin provisioned volumes. Converting from fixed to thin provisioned volumes returns any unused storage back to the pool for other volumes to use. To learn more about thinly provisioned volumes, see [Storage thin provisioning](/azure-stack/hci/manage/manage-thin-provisioning-23h2).
 
 ## Azure Arc and hybrid
 
 ### Simplified Azure Arc Setup
 
-By default, the Azure Arc setup Feature-on-Demand is installed, which offers a user-friendly wizard interface and a system tray icon in the taskbar to facilitate the process of adding servers to Azure Arc. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
+By default, the Azure Arc setup Feature-on-Demand is installed, which offers a user-friendly wizard interface and a system tray icon in the taskbar to facilitate the process of adding servers to Azure Arc. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These environments include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
 
 ### Pay-as-you-go licensing
 
@@ -437,7 +437,7 @@ Azure Arc's Pay-as-you-go subscription licensing option is an alternative to the
 
 Windows Server Management enabled by Azure Arc offers new benefits to customers with Windows Server licenses that have active Software Assurances or Windows Server licenses that are active subscription licenses. Windows Server 2025 has the following key benefits:
 
-- Windows Admin Center in Azure Arc: Windows Admin Center is now integrated with Azure Arc, allowing you to manage your Windows Server instances from the Azure Arc portal. This integration provides a unified management experience for your Windows Server instances, whether they are running on-premises, in the cloud, or at the edge.
+- Windows Admin Center in Azure Arc: Windows Admin Center is now integrated with Azure Arc, allowing you to manage your Windows Server instances from the Azure Arc portal. This integration provides a unified management experience for your Windows Server instances, whether they're running on-premises, in the cloud, or at the edge.
 
 - Remote Support: Offers customers with professional support the ability to grant JIT access with detailed execution transcripts and revocation rights.
 
@@ -451,21 +451,19 @@ To learn more about Windows Server Management enabled by Azure Arc and the avail
 
 SDN is an approach to networking that allows network administrators to manage network services through abstraction of lower-level functionality. SDN enables the separation of the network control plane, which is responsible for managing the network, from the data plane, which handles the actual traffic. This separation allows for increased flexibility and programmability in network management. SDN provides the following benefits in Windows Server 2025:
 
-- The Network Controller, which is the control plane for SDN, is now hosted directly as Failover Cluster services on the physical host machines. This eliminates the need to deploy VMs, simplifying deployment and management while conserving resources.
+- The Network Controller, which is the control plane for SDN, is now hosted directly as Failover Cluster services on the physical host machines. Using a cluster role eliminates the need to deploy VMs, simplifying deployment and management while conserving resources.
 
-- Tag-based segmentation allows administrators to use custom service tags to associate Network Security Groups (NSGs) and VMs for access control. Instead of specifying IP ranges, administrators can now use simple, self-explanatory labels to tag workload VMs, and apply security policies based on these tags. This simplifies the process of managing network security and eliminates the need to remember and retype IP ranges. To learn more, see [Configure network security groups with tags in Windows Admin Center](/azure-stack/hci/manage/configure-network-security-groups-with-tags?pivots=windows-server).
+- Tag-based segmentation allows administrators to use custom service tags to associate Network Security Groups (NSGs) and VMs for access control. Instead of specifying IP ranges, administrators can now use simple, self-explanatory labels to tag workload VMs, and apply security policies based on these tags. Tags simplify the process of managing network security and eliminates the need to remember and retype IP ranges. To learn more, see [Configure network security groups with tags in Windows Admin Center](/azure-stack/hci/manage/configure-network-security-groups-with-tags?pivots=windows-server).
 
-- Default network policies in Windows Server 2025 bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. This ensures workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Stack HCI, version 23H2](/azure-stack/hci/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
+- Default network policies in Windows Server 2025 bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. Default network polices ensures workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Stack HCI, version 23H2](/azure-stack/hci/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
 
 - SDN Multisite provides native Layer 2 and Layer 3 connectivity between applications across two locations without any extra components. This feature allows for seamless movement of applications without the need to reconfigure the application or networks. It also offers unified network policy management for workloads, ensuring that policies don't need to be updated when a workload VM moves from one location to another. To learn more, see [What is SDN Multisite?](/azure-stack/hci/concepts/sdn-multisite-overview?pivots=windows-server).
 
-- The performance of SDN Layer 3 gateways has been enhanced, achieving higher throughput, and reduced CPU cycles. These improvements are enabled by default. Users will automatically experience better performance when an SDN gateway Layer 3 connection is configured through PowerShell or Windows Admin Center.
+- The performance of SDN Layer 3 gateways is enhanced, achieving higher throughput, and reduced CPU cycles. These improvements are enabled by default. Users automatically experience better performance when an SDN gateway Layer 3 connection is configured through PowerShell or Windows Admin Center.
 
 ### Server Message Block
 
-Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server 2025 brings the following SMB capabilities.
-
-- SMB compression adds support for industry standard LZ4 compression algorithm, in addition to its existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
+Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server 2025 includes SMB compression support for the industry standard LZ4 compression algorithm. LZ4 is in addition to SMBs existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
 
 ## Windows Containers portability
 
