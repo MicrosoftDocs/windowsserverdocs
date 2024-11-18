@@ -221,10 +221,10 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
   When _PasswordComplexity_ is configured to 5, the following changes are made to the default password dictionary character set:
 
-  1. Don’t use these letters: '**I**', '**O**', '**Q**', '**l**', '**o**'
-  1. Don’t use these numbers: '**0**', '**1**'
-  1. Don’t use these "special" characters: '**,**', '**.**', '**&**', '**{**', '**}**', '**[**', '**]**', '**(**', '**)**', '**;**'
-  1. Start using these "special" characters: '**:**', '**=**', '**?**', '**\***'
+  - Don’t use these letters: '**I**', '**O**', '**Q**', '**l**', '**o**'
+  - Don’t use these numbers: '**0**', '**1**'
+  - Don’t use these "special" characters: '**,**', '**.**', '**&**', '**{**', '**}**', '**[**', '**]**', '**(**', '**)**', '**;**'
+  - Start using these "special" characters: '**:**', '**=**', '**?**', '**\***'
 
   The Active Directory Users and Computers snap-in (via Microsoft Management Console) now features an improved Windows LAPS tab. The Windows LAPS password is now displayed in a new font that enhances its readability when shown in plain text.
 
@@ -332,15 +332,17 @@ You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports i
 
 Previously, when a share was created, the SMB firewall rules would be automatically configured to enable the **File and Printer Sharing** group for the relevant firewall profiles. Now, the creation of an SMB share in Windows results in the automatic configuration of the new **File and Printer Sharing (Restrictive)** group, which no longer permits inbound NetBIOS ports 137-139. To learn more, see [Updated firewall rules](../storage/file-server/smb-secure-traffic.md#updated-firewall-rules).
 
-- [Enforce SMB encryption](../storage/file-server/smb-security.md#smb-encryption) is enabled for all outbound SMB client connections. With this update, administrators can set a mandate that all destination servers support SMB 3.x and encryption. If a server lacks these capabilities, the client is unable to establish a connection.
+#### SMB Encryption
+
+[Enforce SMB encryption](../storage/file-server/smb-security.md#smb-encryption) is enabled for all outbound SMB client connections. With this update, administrators can set a mandate that all destination servers support SMB 3.x and encryption. If a server lacks these capabilities, the client is unable to establish a connection.
 
 #### SMB Authentication Rate Limiter
 
-SMB authentication rate limiter is designed to limit the number of authentication attempts that can be made within a certain time period. SMB authentication rate limiter helps combat brute force authentication attacks. The SMB server service uses the authentication rate limiter to implement a delay between each failed NTLM or PKU2U-based authentication attempt and is enabled by default. To learn more, see [How SMB authentication rate limiter works](../storage/file-server/configure-smb-authentication-rate-limiter.md#how-smb-authentication-rate-limiter-works)
+SMB authentication rate limiter is designed to limit the number of authentication attempts that can be made within a certain time period. SMB authentication rate limiter helps combat brute force authentication attacks. The SMB server service uses the authentication rate limiter to implement a delay between each failed NTLM or PKU2U-based authentication attempt and is enabled by default. To learn more, see [How SMB authentication rate limiter works](../storage/file-server/configure-smb-authentication-rate-limiter.md#how-smb-authentication-rate-limiter-works).
 
 #### Disable SMB NTLM
 
-Beginning with Windows Server 2025, the SMB client supports NTLM blocking for remote outbound connections. Previously, the Windows Simple and Protected GSSAPI Negotiation Mechanism ([SPNEGO](/openspecs/windows_protocols/ms-spng/b16309d8-4a93-4fa6-9ee2-7d84b2451c84)) negotiates Kerberos, NTLM, and other mechanisms with the destination server to determine a supported security package. To learn more, see [Block NTLM connections on SMB](../storage/file-server/smb-ntlm-blocking.md)
+Beginning with Windows Server 2025, the SMB client supports NTLM blocking for remote outbound connections. Previously, the Windows Simple and Protected GSSAPI Negotiation Mechanism ([SPNEGO](/openspecs/windows_protocols/ms-spng/b16309d8-4a93-4fa6-9ee2-7d84b2451c84)) negotiated Kerberos, NTLM, and other mechanisms with the destination server to determine a supported security package. To learn more, see [Block NTLM connections on SMB](../storage/file-server/smb-ntlm-blocking.md).
 
 #### SMB Dialect Control
 
@@ -358,7 +360,7 @@ The Remote Mailslot protocol is disabled by default for SMB and for DC locator p
 
 By default new Routing and Remote Access Services (RRAS) installations don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols if necessary. SSTP and IKEv2 based VPN connections are still accepted without any change.
 
-Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 using an in-place upgrade, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how-to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
+Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 using an in-place upgrade, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how to re-enable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
 ## Hyper-V, AI, and performance
 
@@ -380,7 +382,7 @@ GPU partitioning allows you to share a physical GPU device with multiple virtual
 
 ### Dynamic Processor Compatibility
 
-Dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic Processor Compatibility use the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility. Dynamic processor compatibility also allows you to save its state between virtualization hosts that use different generations of processors. Processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation (SLAT). To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
+Dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic Processor Compatibility uses the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility. Dynamic processor compatibility also allows you to save its state between virtualization hosts that use different generations of processors. Processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation (SLAT). To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
 
 ### Workgroup clusters
 
@@ -460,9 +462,9 @@ SDN is an approach to networking that allows network administrators to manage ne
 
 - The Network Controller, which is the control plane for SDN, is now hosted directly as Failover Cluster services on the physical host machines. Using a cluster role eliminates the need to deploy VMs, simplifying deployment and management while conserving resources.
 
-- Tag-based segmentation allows administrators to use custom service tags to associate Network Security Groups (NSGs) and VMs for access control. Instead of specifying IP ranges, administrators can now use simple, self-explanatory labels to tag workload VMs, and apply security policies based on these tags. Tags simplify the process of managing network security and eliminates the need to remember and retype IP ranges. To learn more, see [Configure network security groups with tags in Windows Admin Center](/azure-stack/hci/manage/configure-network-security-groups-with-tags?pivots=windows-server).
+- Tag-based segmentation allows administrators to use custom service tags to associate Network Security Groups (NSGs) and VMs for access control. Instead of specifying IP ranges, administrators can now use simple, self-explanatory labels to tag workload VMs, and apply security policies based on these tags. Tags simplify the process of managing network security and eliminate the need to remember and retype IP ranges. To learn more, see [Configure network security groups with tags in Windows Admin Center](/azure-stack/hci/manage/configure-network-security-groups-with-tags?pivots=windows-server).
 
-- Default network policies in Windows Server 2025 bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. Default network polices ensures workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Stack HCI, version 23H2](/azure-stack/hci/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
+- Default network policies in Windows Server 2025 bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. Default network policies ensure workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Stack HCI, version 23H2](/azure-stack/hci/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
 
 - SDN Multisite provides native layer 2 and layer 3 connectivity between applications across two locations without any extra components. This feature allows for seamless movement of applications without the need to reconfigure the application or networks. It also offers unified network policy management for workloads, ensuring that policies don't need to be updated when a workload VM moves from one location to another. To learn more, see [What is SDN Multisite?](/azure-stack/hci/concepts/sdn-multisite-overview?pivots=windows-server).
 
