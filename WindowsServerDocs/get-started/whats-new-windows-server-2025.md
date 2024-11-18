@@ -13,7 +13,7 @@ This article describes some of the newest developments in Windows Server 2025, w
 
 If you're interested in trying out the latest features of Windows Server 2025 before official release, see [Get started with Windows Server Insiders Preview](get-started-with-windows-server-insiders-preview.md).
 
-## Windows Server desktop experience and upgrade
+## Desktop experience and upgrade
 
 ### Upgrade using Windows Update
 
@@ -53,11 +53,9 @@ It's important to keep in mind that domain join is still required for most situa
 
 Submitting feedback or reporting problems encountered while using Windows Server 2025 can now be done using the Windows Feedback Hub. You can include screenshots or recordings of the process that caused the issue to help us understand your situation and share suggestions to enhance your Windows experience. To learn more, see [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app).
 
-### Flighting
-
 ### File Compression
 
-Build 26040 has a new compression feature when compressing an item by performing a right-click called **Compress to**. This feature supports **ZIP**, **7z**, and **TAR** compression formats with specific compression methods for each.
+Windows Server 2025 has a new compression feature when compressing an item by performing a right-click called **Compress to**. This feature supports **ZIP**, **7z**, and **TAR** compression formats with specific compression methods for each.
 
 ### Pinned apps
 
@@ -74,7 +72,7 @@ Pinning your most used apps is now available through the **Start menu** and is c
 
 ### Task Manager
 
-Windows Server 2025 uses the modern Task Manager app with mica material conforming to the style of Windows 11.
+Windows Server 2025 uses the modern Task Manager app with [Mica material](/windows/apps/design/style/mica) conforming to the style of Windows 11.
 
 ### Wi-Fi
 
@@ -82,7 +80,7 @@ It's now easier to enable wireless capabilities as the Wireless LAN Service feat
 
 ### Windows Terminal
 
-The Windows Terminal, a powerful and efficient multishell application for command-line users, is available in this build. Search for "Terminal" in the search bar.
+The Windows Terminal, a powerful and efficient multishell application for command-line users, is available in Windows Server 2025. Search for **Terminal** in the search bar.
 
 ### WinGet
 
@@ -272,9 +270,9 @@ The [SMB over QUIC](../storage/file-server/smb-over-quic.md) server feature, whi
 
 Administrators can disable SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC using Group Policy, set the **Enable SMB over QUIC** policy in the following paths to **Disabled**:
 
-- **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
+- `Computer Configuration\Administrative Templates\Network\Lanman Workstation`
 
-- **Computer Configuration\Administrative Templates\Network\Lanman Server**
+- `Computer Configuration\Administrative Templates\Network\Lanman Server`
 
 To disable SMB over QUIC using PowerShell, run this command in an elevated PowerShell prompt:
 
@@ -386,8 +384,7 @@ Dynamic processor compatibility mode is updated to take advantage of new process
 
 ### Workgroup clusters
 
-Hyper-V Workgroup Clusters. Hyper-V Workgroup clusters are a special type of Windows Server failover cluster where the Hyper-V cluster nodes aren't members of an Active Directory domain.
-Hyper-V Workgroup Cluster Live Migration. The ability to live migrate VMs in a Workgroup Cluster.
+Hyper-V Workgroup clusters are a special type of Windows Server failover cluster where the Hyper-V cluster nodes aren't members of an Active Directory domain with the ability to live migrate VMs in a Workgroup Cluster.
 
 ### Network ATC
 
@@ -415,7 +412,7 @@ NVMe is a new standard for fast solid-state drives (SSDs). NVMe storage performa
 
 ### Storage Replica Compression
 
-Storage Replica Compression. Storage Replica Compression reduces the amount of data transferred over the network during replication.
+Storage Replica Compression reduces the amount of data transferred over the network during replication. To learn more about compression in Storage Replica, see [Storage Replica Overview](../storage/storage-replica/storage-replica-overview.md).
 
 ### Storage Replica Enhanced Log
 
@@ -427,7 +424,11 @@ ReFS native storage deduplication and compression are techniques used to optimiz
 
 ### Thin provisioned volumes
 
-Thin provisioned volumes with Storage Spaces Direct are a way to allocate storage resources more efficiently and avoid costly overallocation by allocating from the pool only when needed in a cluster. You can also convert fixed to thin provisioned volumes. Converting from fixed to thin provisioned volumes returns any unused storage back to the pool for other volumes to use. To learn more about thinly provisioned volumes, see [Storage thin provisioning](/azure-stack/hci/manage/manage-thin-provisioning-23h2).
+Thin provisioned volumes with Storage Spaces Direct are a way to allocate storage resources more efficiently and avoid costly overallocation by allocating from the pool only when needed in a cluster. You can also convert fixed to thin provisioned volumes. Converting from fixed to thin provisioned volumes returns any unused storage back to the pool for other volumes to use. To learn more about thin provisioned volumes, see [Storage thin provisioning](/azure-stack/hci/manage/manage-thin-provisioning-23h2).
+
+### Server Message Block
+
+Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server 2025 includes SMB compression support for the industry standard LZ4 compression algorithm. LZ4 is in addition to SMBs existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
 
 ## Azure Arc and hybrid
 
@@ -445,7 +446,7 @@ Windows Server Management enabled by Azure Arc offers new benefits to customers 
 
 - Windows Admin Center in Azure Arc: Windows Admin Center is now integrated with Azure Arc, allowing you to manage your Windows Server instances from the Azure Arc portal. This integration provides a unified management experience for your Windows Server instances, whether they're running on-premises, in the cloud, or at the edge.
 
-- Remote Support: Offers customers with professional support the ability to grant JIT access with detailed execution transcripts and revocation rights.
+- Remote Support: Offers customers with professional support the ability to grant just-in-time (JIT) access with detailed execution transcripts and revocation rights.
 
 - Best Practices Assessment: Collection and analysis of server data to generate issues and remediation guidance and performance improvements.
 
@@ -453,7 +454,7 @@ Windows Server Management enabled by Azure Arc offers new benefits to customers 
 
 To learn more about Windows Server Management enabled by Azure Arc and the available benefits, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
 
-### Software Defined Networking (SDN)
+## Software Defined Networking (SDN)
 
 SDN is an approach to networking that allows network administrators to manage network services through abstraction of lower-level functionality. SDN enables the separation of the network control plane, which is responsible for managing the network, from the data plane, which handles the actual traffic. This separation allows for increased flexibility and programmability in network management. SDN provides the following benefits in Windows Server 2025:
 
@@ -467,17 +468,13 @@ SDN is an approach to networking that allows network administrators to manage ne
 
 - The performance of SDN layer 3 gateways is enhanced, achieving higher throughput, and reduced CPU cycles. These improvements are enabled by default. Users automatically experience better performance when an SDN gateway layer 3 connection is configured through PowerShell or Windows Admin Center.
 
-### Server Message Block
-
-Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server 2025 includes SMB compression support for the industry standard LZ4 compression algorithm. LZ4 is in addition to SMBs existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
-
 ## Windows Containers portability
 
-Portability is a crucial aspect of container management and has the ability to simplify upgrades by applying enhanced flexibility and compatibility of containers in Windows. Portability is a feature of Windows Server Annual Channel for container hosts that allows users to move container images, and their associated data, between different hosts or environments without requiring any modifications. Users can create a container image on one host and then deploy it on another host without having to worry about compatibility issues. To learn more, see [Portability for containers](/virtualization/windowscontainers/deploy-containers/portability).
+Portability is a crucial aspect of container management and has the ability to simplify upgrades by applying enhanced flexibility and compatibility of containers in Windows. Portability is a feature of Windows Server that allows users to move container images, and their associated data, between different hosts or environments without requiring any modifications. Users can create a container image on one host and then deploy it on another host without having to worry about compatibility issues. To learn more, see [Portability for containers](/virtualization/windowscontainers/deploy-containers/portability).
 
-## Windows Insider Program
+## Windows Server Insider Program
 
-The [Windows Insider Program](/windows-insider/get-started) provides early access to the latest Windows OS releases for a community of enthusiasts. As a member, you can be among the first to try out new ideas and concepts that Microsoft is developing. After registering as a member, you can opt to participate in different release channels by going to go to **Start > Settings > Windows Update > Windows Insider Program**.
+The [Windows Server Insider Program](get-started-with-windows-server-insiders-preview.md) provides early access to the latest Windows OS releases for a community of enthusiasts. As a member, you can be among the first to try out new ideas and concepts that Microsoft is developing. After registering as a member, you can opt to participate in different release channels by going to go the **Windows Insider Program** from **Windows Update**.
 
 ## See also
 
