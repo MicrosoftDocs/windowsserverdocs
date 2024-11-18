@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: xelu86
 ms.author: alalve
-ms.date: 11/01/2024
+ms.date: 11/18/2024
 ---
 
 # What's new in Windows Server 2025
@@ -13,11 +13,85 @@ This article describes some of the newest developments in Windows Server 2025, w
 
 If you're interested in trying out the latest features of Windows Server 2025 before official release, see [Get started with Windows Server Insiders Preview](get-started-with-windows-server-insiders-preview.md).
 
+## Windows Server desktop experience and upgrade
+
+### Upgrade using Windows Update
+
+You can perform an in-place upgrade in one of two ways, from media or using Windows Update from the Settings dialog. Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices. When you upgrade using Windows Update from the Settings dialog, you can perform the install directly from Windows Update within the desktop or using SConfig for Server Core. Your organization may prefer to implement upgrades incrementally and want to control the availability of this optional upgrade using Group Policy. To learn more about how to manage the offer of Feature Updates, see [Manage Feature Updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
+
+### In-place upgrade from Windows Server 2012 R2
+
+Beginning with Windows Server 2025, you can upgrade up to four versions at a time. Meaning you can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later.
+
+### Desktop shell
+
+When you sign in for the first time, the desktop shell experience conforms to the style and appearance of Windows 11.
+
+### Bluetooth
+
+You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
+
+### DTrace
+
+Windows Server 2025 comes equipped with `dtrace` as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real-time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for other capabilities.
+
+### Email & accounts
+
+You can now add the following accounts in **Settings > Accounts > Email & accounts** for Windows Server 2025:
+
+- Microsoft Entra ID
+- Microsoft account
+- Work or school account
+
+It's important to keep in mind that domain join is still required for most situations.
+
+### Feedback Hub
+
+Submitting feedback or reporting problems encountered while using Windows Server 2025 can now be done using the Windows Feedback Hub. You can include screenshots or recordings of the process that caused the issue to help us understand your situation and share suggestions to enhance your Windows experience. To learn more, see [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app).
+
+### Flighting
+
+### File Compression
+
+Build 26040 has a new compression feature when compressing an item by performing a right-click called **Compress to**. This feature supports **ZIP**, **7z**, and **TAR** compression formats with specific compression methods for each.
+
+### Pinned apps
+
+Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26085, the default pinned apps are currently:
+
+- Azure Arc Setup
+- Feedback Hub
+- File Explorer
+- Microsoft Edge
+- Server Manager
+- Settings
+- Terminal
+- Windows PowerShell
+
+### Task Manager
+
+Build 26040 now sports the modern Task Manager app with mica material conforming to the style of Windows 11.
+
+### Wi-Fi
+
+It's now easier to enable wireless capabilities as the Wireless LAN Service feature is now installed by default. The wireless startup service is set to manual and can be enabled by running `net start wlansvc` in the Command Prompt, Windows Terminal, or PowerShell.
+
+### Windows Terminal
+
+The Windows Terminal, a powerful and efficient multishell application for command-line users, is available in this build. Search for "Terminal" in the search bar.
+
+### Winget
+
+Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
+
 ## Advanced multi-layer security
 
-### Hotpatch
+### Hotpatch (Preview)
 
-TODO:
+Hotpatch is now available to Azure Arc connected Windows Server 2025 machines when enabled in the Azure Arc portal. Hotpatch allows you to apply OS security updates without needing to restart your machine. To learn more, see [Hotpatch](hotpatch.md).
+
+> [!IMPORTANT]
+> Azure Arc-enabled Hotpatch is currently in PREVIEW. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 ### Credential Guard
 
@@ -300,24 +374,11 @@ Hypervisor-enforced paging translation (HVPT) is a security enhancement to enfor
 
 ### GPU Partitioning (GPU-P)
 
-TODO:
-
-GPU partitioning allows you to share a physical GPU device with multiple virtual machines (VMs). Instead of allocating the entire GPU to a single VM, GPU partitioning assigns dedicated fractions of the GPU to each VM.
-
-Hyper-V GPU-P High Availability. GPU-P with HA ensures that in the case of unplanned downtime, a VM with GPU-P is automatically enabled on another cluster node.
-Hyper-V GPU-P Live Migration. GPU-P Live Migration provides a solution to move a VM (for planned downtime or load balancing) with GPU-P to another node whether it is standalone or clustered.
-
-### Discrete Device Assignment (DDA)
-
-TODO:
-
-DDA Pools. A way to manage and allocate GPU resources in a Hyper-V HA cluster.
+GPU partitioning allows you to share a physical GPU device with multiple virtual machines (VMs). Instead of allocating the entire GPU to a single VM, GPU partitioning assigns dedicated fractions of the GPU to each VM. With Hyper-V GPU-P High Availability a GPU-P VM is automatically enabled on another cluster node in the case of unplanned downtime, and GPU-P Live Migration provides a solution to move a VM (for planned downtime or load balancing) with GPU-P to another node whether it is standalone or clustered. To learn more about GPU partitioning, see [GPU partitioning](../virtualization/hyper-v/gpu-partitioning.md).
 
 ### Dynamic Processor Compatibility
 
-TODO:
-
-A feature that allows you to move a running virtual machine (VM) or save its state between virtualization hosts that use different generations of processors while delivering the maximum performance.
+Dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic Processor Compatibility is a feature that allows you to move a running virtual machine (VM) or save its state between virtualization hosts that use different generations of processors while delivering the maximum performance. Processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation (SLAT). To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
 
 ### Workgroup clusters
 
@@ -330,9 +391,7 @@ Network ATC streamlines the deployment and management of network configurations 
 
 ### Scalability
 
-TODO:
-
-Industry leading scalability. Up to 4 Petabytes of memory and 2048 logical processors per host. Up to 256 TB of memory and 2048 virtual processors per VM.
+With Windows Server 2025, Hyper-V now supports up to 4 Petabytes of memory and 2048 logical processors per host. This allows for greater scalability and performance for virtualized workloads. Windows Server 2025 also supports up to 240 TB of memory and 2048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
 
 ## Storage
 
@@ -358,23 +417,35 @@ Enhanced Logs help the Storage Replica log implementation to eliminate the perfo
 
 ### ReFS Native Storage deduplication & compression
 
-TODO:
-
-ReFS Native storage deduplication and compression are techniques used to optimize storage efficiency for both static and active workloads such as file servers or virtual desktops.
+ReFS Native storage deduplication and compression are techniques used to optimize storage efficiency for both static and active workloads such as file servers or virtual desktops. To learn more about ReFS deduplication and compression, see [Optimize storage with ReFS deduplication and compression in Azure Stack HCI](/azure-stack/hci/manage/refs-deduplication-and-compression).
 
 ### Thinly Provisioned volumes
 
-TODO:
-
-Thinly Provisioned Storage Spaces Direct are a way to allocate storage resources more efficiently and avoid costly overallocation by allocating from the pool only when needed in a cluster.
-
-Convert fixed to thin provisioned volumes. Converting from fixed to thin provisioned volumes returns any unused storage back to the pool for other volumes to leverage.
+Thinly Provisioned Storage Spaces Direct are a way to allocate storage resources more efficiently and avoid costly overallocation by allocating from the pool only when needed in a cluster. You can also convert fixed to thin provisioned volumes. Converting from fixed to thin provisioned volumes returns any unused storage back to the pool for other volumes to leverage. To learn more about thinly provisioned volumes, see [Storage thin provisioning](/azure-stack/hci/manage/manage-thin-provisioning-23h2).
 
 ## Azure Arc and hybrid
 
 ### Simplified Azure Arc Setup
 
 By default, the Azure Arc setup Feature-on-Demand is installed, which offers a user-friendly wizard interface and a system tray icon in the taskbar to facilitate the process of adding servers to Azure Arc. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
+
+### Pay-as-you-go licensing
+
+Azure Arc's Pay-as-you-go subscription licensing option is an alternative to the conventional perpetual licensing for Windows Server 2025. With Pay-as-you-go, you can deploy a Windows Server device, license it, and only pay for as much as you use. This feature is facilitated through Azure Arc and billed via your Azure subscription. Learn more about [Azure Arc Pay-as-you-go licensing](windows-server-pay-as-you-go.md).
+
+### Windows Server Management enabled by Azure Arc
+
+Windows Server Management enabled by Azure Arc offers new benefits to customers with Windows Server licenses that have active Software Assurances or Windows Server licenses that are active subscription licenses. Windows Server 2025 has the following key benefits:
+
+- Windows Admin Center in Azure Arc: Windows Admin Center is now integrated with Azure Arc, allowing you to manage your Windows Server instances from the Azure Arc portal. This integration provides a unified management experience for your Windows Server instances, whether they are running on-premises, in the cloud, or at the edge.
+
+- Remote Support: Offers customers with professional support the ability to grant JIT access with detailed execution transcripts and revocation rights.
+
+- Best Practices Assessment: Collection and analysis of server data to generate issues and remediation guidance and performance improvements.
+
+- Azure Site Recovery configuration: Configuration of Azure Site Recovery to ensure business continuity, provides replication and data resilience for critical workloads.
+
+To learn more about Windows Server Management enabled by Azure Arc and the available benefits, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
 
 ### Software Defined Networking (SDN)
 
@@ -395,75 +466,6 @@ SDN is an approach to networking that allows network administrators to manage ne
 Server Message Block (SMB) is one of the most widely used protocols in networking by providing a reliable way to share files and other resources between devices on your network. Windows Server 2025 brings the following SMB capabilities.
 
 - SMB compression adds support for industry standard LZ4 compression algorithm, in addition to its existing support for XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, and PATTERN_V1.
-
-## Windows Server desktop experience and upgrade
-
-### Upgrade
-
-- Windows Server Upgrade supports N-4 upgrades where “N” is a major version. (For example, upgrading from Windows Server 2012R2 to Windows Server 2025).
-
-- In Place Upgrade via Windows Update. Perform upgrades via Windows Update to newer versions.
-
-### Desktop shell
-
-When you sign in for the first time, the desktop shell experience conforms to the style and appearance of Windows 11.
-
-### Bluetooth
-
-You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server 2025.
-
-### DTrace
-
-Windows Server 2025 comes equipped with `dtrace` as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real-time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for other capabilities.
-
-### Email & accounts
-
-You can now add the following accounts in **Settings > Accounts > Email & accounts** for Windows Server 2025:
-
-- Microsoft Entra ID
-- Microsoft account
-- Work or school account
-
-It's important to keep in mind that domain join is still required for most situations.
-
-### Feedback Hub
-
-Submitting feedback or reporting problems encountered while using Windows Server 2025 can now be done using the Windows Feedback Hub. You can include screenshots or recordings of the process that caused the issue to help us understand your situation and share suggestions to enhance your Windows experience. To learn more, see [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app).
-
-### Flighting
-
-### File Compression
-
-Build 26040 has a new compression feature when compressing an item by performing a right-click called **Compress to**. This feature supports **ZIP**, **7z**, and **TAR** compression formats with specific compression methods for each.
-
-### Pinned apps
-
-Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26085, the default pinned apps are currently:
-
-- Azure Arc Setup
-- Feedback Hub
-- File Explorer
-- Microsoft Edge
-- Server Manager
-- Settings
-- Terminal
-- Windows PowerShell
-
-### Task Manager
-
-Build 26040 now sports the modern Task Manager app with mica material conforming to the style of Windows 11.
-
-### Wi-Fi
-
-It's now easier to enable wireless capabilities as the Wireless LAN Service feature is now installed by default. The wireless startup service is set to manual and can be enabled by running `net start wlansvc` in the Command Prompt, Windows Terminal, or PowerShell.
-
-### Windows Terminal
-
-The Windows Terminal, a powerful and efficient multishell application for command-line users, is available in this build. Search for "Terminal" in the search bar.
-
-### Winget
-
-Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
 
 ## Windows Containers portability
 
