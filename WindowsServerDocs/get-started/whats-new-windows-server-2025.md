@@ -57,7 +57,7 @@ Build 26040 has a new compression feature when compressing an item by performing
 
 ### Pinned apps
 
-Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26085, the default pinned apps are currently:
+Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. The default pinned apps are currently:
 
 - Azure Arc Setup
 - Feedback Hub
@@ -70,7 +70,7 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 ### Task Manager
 
-Build 26040 now sports the modern Task Manager app with mica material conforming to the style of Windows 11.
+Windows Server 2025 uses the modern Task Manager app with mica material conforming to the style of Windows 11.
 
 ### Wi-Fi
 
@@ -238,7 +238,7 @@ To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/id
 
 ### OpenSSH
 
-In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. Starting with build 26080, the OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-step option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
+In earlier versions of Windows Server, the OpenSSH connectivity tool required a manual install before use. The OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-step option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
 
 ### Security Baseline
 
