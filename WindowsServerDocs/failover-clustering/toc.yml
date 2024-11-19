@@ -57,7 +57,7 @@
     - name: Upgrading a failover cluster on the same hardware
       href: upgrade-option-same-hardware.md
   - name: Deploy a cluster set
-    href: /azure/azure-local/deploy/cluster-set?context=/windows-server/context/windows-server-failover-clustering
+    href: cluster-set.md
 - name: Concepts
   items:
   - name: Cluster and pool quorum

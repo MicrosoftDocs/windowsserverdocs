@@ -134,7 +134,7 @@ You can choose to search for updates from the following categories:
 > [!NOTE]
 > The [terminology for update types](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) (but not necessarily release cadence and schedule) is unified with Windows 10 and Windows 11. Hence, *Feature updates* is another name for what used to be known as operating system upgrades. Regular monthly updates, including security updates, are referred to as *Quality updates*.
 >
-> [Feature updates from Microsoft Update](/azure/azure-local/manage/preview-channel) are currently only available for Azure Stack HCI. If you want to [upgrade Windows Server](/windows-server/upgrade/upgrade-overview) to a newer version, you need to use traditional installation media (such as an ISO). From there, you either [run Setup.exe](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) directly or leverage an automation solution such as mentioned earlier. SConfig does not specifically facilitate these scenarios.
+> [Feature updates from Microsoft Update](/azure/azure-local/deploy/download-23h2-software) are currently only available for Azure Stack HCI. If you want to [upgrade Windows Server](/windows-server/upgrade/upgrade-overview) to a newer version, you need to use traditional installation media (such as an ISO). From there, you either [run Setup.exe](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) directly or leverage an automation solution such as mentioned earlier. SConfig does not specifically facilitate these scenarios.
 
 The search returns any available updates within the category. You will be presented with the option of installing all available updates, a specific update, or none of the available updates.
 
@@ -199,7 +199,7 @@ This option lets you configure whether anonymized statistical information about 
 This option lets you display current license and activation status, install a product key, and activate Windows Server
 
 > [!NOTE]
-> Activation is only needed for Windows Server. This menu item is not available on Azure Stack HCI as [Azure Stack HCI registration](/azure/azure-local/manage/manage-azure-registration#unregister-azure-stack-hci-by-using-powershell) is a different process.
+> Activation is only needed for Windows Server. This menu item is not available on Azure Stack HCI as [Azure Stack HCI registration](/azure/azure-local/deploy/register-with-azure) is a different process.
 
 1. From the SConfig main menu, type `11` and press `Enter` to enter the **Windows activation** settings page.
 2. Choose one of the following options:

@@ -58,7 +58,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[Cluster sets](/azure/azure-local/deploy/cluster-set?context=/windows-server/context/windows-server-failover-clustering)| New topic|
+|[Cluster sets](cluster-set.md)| New topic|
 
 ## May 2018
 
