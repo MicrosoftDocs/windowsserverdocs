@@ -47,7 +47,7 @@ Your deployment needs to meet the following prerequisites in order to be able to
 
 - Your hardware must support SR-IOV and you must enable SR-IOV in the BIOS. You may need to contact your hardware vendor to see if your machine supports SR-IOV.
 
-- You must [install Network ATC](/azure-stack/hci/deploy/network-atc?context=%2Fwindows-server%2Fcontext%2Fwindows-server-edge-networking&pivots=windows-server&branch=main&tabs=22H2) and configure a valid Compute intent before you enable Accelerated Networking.
+- You must [install Network ATC](/azure/azure-local/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server&tabs=22H2) and configure a valid Compute intent before you enable Accelerated Networking.
 
 - You must have a network interface card (NIC) that supports SR-IOV.
 

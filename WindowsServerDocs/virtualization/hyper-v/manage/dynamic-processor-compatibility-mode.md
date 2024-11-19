@@ -16,9 +16,9 @@ zone_pivot_groups: windows-os
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-22h2.md)]
+[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-22h2.md)]
 
 ::: zone-end
 
@@ -31,7 +31,7 @@ Processor compatibility mode allows you to move a live VM (live migrating) or mo
 > [!IMPORTANT]
 > Only Hyper-V VMs with the latest configuration version (10.0) benefit from the dynamic configuration. VMs with older versions don't benefit from the dynamic configuration and won't continue to use [fixed processor capabilities](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn859550(v=ws.11)) from the previous version.
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 We recommend enabling processor compatibility mode for VMs running on Azure Stack HCI. This provides the highest level of capabilities, and when it's time to migrate to new hardware, moving the VMs doesn't require downtime.
 
@@ -97,7 +97,7 @@ If you're concerned about the performance impact of processor compatibility mode
 
 ## Configure a VM to use processor compatibility mode
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 This section explains how to configure a VM to use processor compatibility mode. It's possible to run VMs with and without compatibility mode in the same cluster.
 

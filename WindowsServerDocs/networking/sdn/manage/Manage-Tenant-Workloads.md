@@ -18,7 +18,7 @@ This section includes the following topics.
 
 - [Create a VM and Connect to a Tenant Virtual Network or VLAN](Create-a-Tenant-VM.md)
 - [Configure Quality of Service (QoS) for a Tenant VM Network Adapter](Configure-QoS-for-Tenant-VM-Network-Adapter.md)
-- [Configure Datacenter Firewall Access Control Lists (ACLs)](/azure-stack/hci/manage/use-datacenter-firewall-powershell)
+- [Configure Datacenter Firewall Access Control Lists (ACLs)](/azure/azure-local/manage/use-datacenter-firewall-powershell?context=/windows-server/context/windows-server-edge-networking)
 - [Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)](Configure-SLB-and-NAT.md)
 - [Use Network Virtual Appliances on a Virtual Network](Use-Network-Virtual-Appliances-on-a-VN.md)
 - [Guest Clustering in a Virtual Network](guest-clustering.md)

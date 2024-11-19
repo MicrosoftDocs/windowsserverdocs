@@ -22,7 +22,7 @@ sections:
       - question: |
           Does CAU support updating Storage Spaces Direct clusters?
         answer: |
-          Yes. CAU supports updating [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) clusters regardless of the deployment type: hyper-converged or converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
+          Yes. CAU supports updating [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) clusters regardless of the deployment type: hyper-converged or converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
           
       - question: |
           Does CAU work with Windows Server 2008 R2 or Windows 7?
