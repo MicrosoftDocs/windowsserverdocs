@@ -261,6 +261,9 @@
           "/identity/ad-ds/ldap-client-performance-counters.md": [
             "✅ Windows Server 2012","✅ Windows Server 2012 R2"
           ],
+          "identity/ad-ds/manage/delegated-managed-service-accounts/**/*.*": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
+          ],
           "identity/laps/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
