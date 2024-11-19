@@ -13,7 +13,7 @@ ms.date: 10/26/2021
 
 > 
 
-High-performance networks (HPNs) play a role in real-time data processing requirements. For example, activities such as datacenter replication, datacenter disaster recovery, and high-performance distributed computing require high volume data transfer and low network latency. HPNs with dynamic connection capabilities make high-performance network resources more accessible and manageable. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+High-performance networks (HPNs) play a role in real-time data processing requirements. For example, activities such as datacenter replication, datacenter disaster recovery, and high-performance distributed computing require high volume data transfer and low network latency. HPNs with dynamic connection capabilities make high-performance network resources more accessible and manageable. To learn more, see [Host network requirements for Azure Stack HCI](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 The high-performance networking topics include:
 

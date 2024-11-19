@@ -80,4 +80,4 @@ To deploy Network Controller using scripts, see [Deploy a Software Defined Netwo
 
 To deploy Network Controller using Windows PowerShell, see [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 
-For more information about Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
+For more information about Network Controller, see [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking).

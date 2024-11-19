@@ -31,7 +31,7 @@ For step-by-step instructions for how to perform an in-place upgrade, see [Perfo
 
 The Cluster operating system rolling upgrade (feature update) gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a feature update to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements (SLA). Cluster-Aware Updating (CAU) is a feature that automates the software updating process on clustered servers while maintaining availability. For more information about updating your clusters, see [Cluster-Aware Updating overview](../failover-clustering/cluster-aware-updating.md) and [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 
-If you're running VMs on an Azure Stack hyperconverged infrastructure (HCI) solution, we recommend you use the Life Cycle Manager (LCM) to perform your feature update. For more information, see [About Azure Stack HCI upgrades](/azure-stack/hci/upgrade/about-upgrades-23h2) for more information.
+If you're running VMs on an Azure Stack hyperconverged infrastructure (HCI) solution, we recommend you use the Life Cycle Manager (LCM) to perform your feature update. For more information, see [About Azure Stack HCI upgrades](/azure/azure-local/upgrade/about-upgrades-23h2) for more information.
 
 ## Clean operating system install
 

@@ -90,7 +90,7 @@ command.
 
 For more advanced PowerShell scripts that cover improved or new virtual switch features in
 Windows Server, see
-[Remote Direct Memory Access and Switch Embedded Teaming](/azure-stack/hci/concepts/host-network-requirements).
+[Remote Direct Memory Access and Switch Embedded Teaming](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization).
 
 ---
 
@@ -206,7 +206,7 @@ command. Learn more about
 
 Now you've created and configured your virtual switch, here are other articles to help you continue with Hyper-V.
 
-- Learn about [Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements#switch-embedded-teaming-set).
+- Learn about [Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements#switch-embedded-teaming-set?context=/windows-server/context/windows-server-virtualization).
 - Learn how to [create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md).
 - Learn about other configuration options in the
   [Set-VMSwitch](/powershell/module/hyper-v/set-vmswitch) and
