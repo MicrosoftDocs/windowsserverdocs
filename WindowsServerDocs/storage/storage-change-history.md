@@ -115,7 +115,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Server-to-server storage replication](storage-replica/server-to-server-storage-replication.md)|Added info on using Azure VMs, including ExpressRoute.|
-|[Cluster sets](/azure/azure-local/deploy/cluster-set)| New topic|
+|[Cluster sets](/windows-server/failover-clustering/cluster-set)| New topic|
 
 ## May 2018
 

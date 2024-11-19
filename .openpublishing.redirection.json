@@ -10262,7 +10262,7 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/cluster-sets.md",
-      "redirect_url": "/azure/azure-local/deploy/cluster-set",
+      "redirect_url": "/windows-server/failover-clustering/cluster-set",
       "redirect_document_id": false
     },
     {

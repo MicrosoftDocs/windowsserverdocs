@@ -291,7 +291,7 @@ items:
       - name: Cluster and pool quorum
         href: /azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering?context=/windows-server/context/windows-server-storage
       - name: Cluster sets
-        href: /azure/azure-local/deploy/cluster-set?context=/windows-server/context/windows-server-storage
+        href: /windows-server/failover-clustering/cluster-set
     - name: Plan
       items:
       - name: Hardware requirements

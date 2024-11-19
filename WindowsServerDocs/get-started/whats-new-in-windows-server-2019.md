@@ -183,7 +183,7 @@ Here's what's new in Storage Spaces Direct. For more information about how to ac
 
 - Performance history is a new feature that provides effortless visibility into resource utilization and measurements. To learn more, see [Performance history for Storage Spaces Direct](../storage/storage-spaces/performance-history.md).
 
-- Scale up to 4 PB per cluster using a capacity of up to 64 volumes of up to 64 TB. You can also stitch multiple clusters together into a [cluster set](/azure/azure-local/deploy/cluster-set) for even greater scale within a single storage namespace.
+- Scale up to 4 PB per cluster using a capacity of up to 64 volumes of up to 64 TB. You can also stitch multiple clusters together into a [cluster set](/windows-server/failover-clustering/cluster-set) for even greater scale within a single storage namespace.
 
 - By utilizing mirror-accelerated parity, it is possible to construct Storage Spaces Direct volumes that incorporate both mirror and parity strategies, similar to a blend of RAID-1 and RAID-5/6. Mirror-accelerated parity is now two times faster than Windows Server 2016.
 
