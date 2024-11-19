@@ -90,4 +90,4 @@ PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 
 -   [ReFS overview](refs-overview.md)
 -   [ReFS block cloning](block-cloning.md)
--   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+-   [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

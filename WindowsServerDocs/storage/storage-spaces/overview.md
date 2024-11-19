@@ -16,5 +16,5 @@ There are four main ways to use Storage Spaces:
 
 - **On a Windows PC**. For more information, see [Storage Spaces in Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10).
 - **On a stand-alone server with all storage in a single server**. For more information, see [Deploy Storage Spaces on a stand-alone server](deploy-standalone-storage-spaces.md).
-- **On a clustered server using Storage Spaces Direct with local, direct-attached storage in each cluster node**. For more information, see [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview).
+- **On a clustered server using Storage Spaces Direct with local, direct-attached storage in each cluster node**. For more information, see [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage).
 - **On a clustered server with one or more shared SAS storage enclosures holding all drives**. For more information, see [Storage Spaces on a cluster with shared SAS overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11)).

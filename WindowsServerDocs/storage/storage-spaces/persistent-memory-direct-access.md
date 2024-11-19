@@ -89,4 +89,4 @@ Type                 : Basic
 
 For related information, see also:
 
-- [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory)
+- [Understand and deploy persistent memory](/azure/azure-local/concepts/deploy-persistent-memory?context=/windows-server/context/windows-server-storage)

@@ -134,7 +134,7 @@ You can choose to search for updates from the following categories:
 > [!NOTE]
 > The [terminology for update types](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) (but not necessarily release cadence and schedule) is unified with Windows 10 and Windows 11. Hence, *Feature updates* is another name for what used to be known as operating system upgrades. Regular monthly updates, including security updates, are referred to as *Quality updates*.
 >
-> [Feature updates from Microsoft Update](/azure-stack/hci/manage/preview-channel) are currently only available for Azure Stack HCI. If you want to [upgrade Windows Server](/windows-server/upgrade/upgrade-overview) to a newer version, you need to use traditional installation media (such as an ISO). From there, you either [run Setup.exe](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) directly or leverage an automation solution such as mentioned earlier. SConfig does not specifically facilitate these scenarios.
+> [Feature updates from Microsoft Update](/azure/azure-local/deploy/download-23h2-software) are currently only available for Azure Stack HCI. If you want to [upgrade Windows Server](/windows-server/upgrade/upgrade-overview) to a newer version, you need to use traditional installation media (such as an ISO). From there, you either [run Setup.exe](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) directly or leverage an automation solution such as mentioned earlier. SConfig does not specifically facilitate these scenarios.
 
 The search returns any available updates within the category. You will be presented with the option of installing all available updates, a specific update, or none of the available updates.
 
@@ -192,14 +192,14 @@ This option lets you configure whether anonymized statistical information about 
 1. To change the telemetry setting, type `Y` for Yes or `N` for No and press `Enter`.
 
 > [!NOTE]
-> Windows Server and Azure Stack HCI have different default configuration regarding to telemetry. For information specific to Windows Server, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings). For Azure Stack HCI, see [Azure Stack HCI data collection](/azure-stack/hci/concepts/data-collection). Please note that you cannot configure Azure Stack HCI data collection in SConfig. To learn more about Microsoft's approach to privacy, see [Privacy at Microsoft](https://go.microsoft.com/fwlink/?LinkID=811315).
+> Windows Server and Azure Stack HCI have different default configuration regarding to telemetry. For information specific to Windows Server, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings). For Azure Stack HCI, see [Azure Stack HCI data collection](/azure/azure-local/concepts/data-collection). Please note that you cannot configure Azure Stack HCI data collection in SConfig. To learn more about Microsoft's approach to privacy, see [Privacy at Microsoft](https://go.microsoft.com/fwlink/?LinkID=811315).
 
 ## Windows activation
 
 This option lets you display current license and activation status, install a product key, and activate Windows Server
 
 > [!NOTE]
-> Activation is only needed for Windows Server. This menu item is not available on Azure Stack HCI as [Azure Stack HCI registration](/azure-stack/hci/manage/manage-azure-registration#unregister-azure-stack-hci-by-using-powershell) is a different process.
+> Activation is only needed for Windows Server. This menu item is not available on Azure Stack HCI as [Azure Stack HCI registration](/azure/azure-local/deploy/register-with-azure) is a different process.
 
 1. From the SConfig main menu, type `11` and press `Enter` to enter the **Windows activation** settings page.
 2. Choose one of the following options:

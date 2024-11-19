@@ -33,7 +33,7 @@ The following table summarizes the key differences:
 | Product updates | With new release | Yearly, with two major updates in the first 3 years |
 | Support | 5 years of mainstream support, plus 5 years of extended support | 5 years of mainstream support, plus 5 years of extended support |
 | Servicing channels | Long-Term Servicing Channel | Long-Term Servicing Channel |
-| Who can use it? | All customers through all channels | Software Assurance, [Windows Server subscription](/azure-stack/hci/manage/vm-activate) and cloud customers only |
+| Who can use it? | All customers through all channels | Software Assurance, [Windows Server subscription](/azure/azure-local/manage/vm-activate) and cloud customers only |
 | Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience only. Windows Server containers aren't supported. |
 | Operating system environments (OSE) | Physical or virtual | Virtual only |
 | Associated virtualization rights | 2 virtual OSEs for Standard, Unlimited virtual OSEs for Datacenter | None |
@@ -124,7 +124,7 @@ VM, and select the _Windows Server Datacenter: Azure Edition_ image that you wou
 To learn more about creating virtual machine using Azure or Azure Stack HCI, see
 [Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal)
 and
-[Deploy Windows Server Azure Edition VMs in Azure Stack HCI](/azure-stack/hci/manage/windows-server-azure-edition?tabs=hci).
+[Deploy Windows Server Azure Edition VMs in Azure Stack HCI](/azure/azure-local/manage/windows-server-azure-edition?tabs=hci).
 
 ## Next steps
 

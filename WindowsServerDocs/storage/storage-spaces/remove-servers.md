@@ -13,7 +13,7 @@ ms.date: 2/5/2017
 
 >
 
-This topic describes how to remove servers in [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) using PowerShell.
+This topic describes how to remove servers in [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) using PowerShell.
 
 ## Remove a server but leave its drives
 
@@ -73,4 +73,4 @@ This table shows the minimum number of fault domains required for each resilienc
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
