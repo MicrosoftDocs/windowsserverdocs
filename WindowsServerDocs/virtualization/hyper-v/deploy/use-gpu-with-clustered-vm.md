@@ -16,11 +16,11 @@ zone_pivot_groups: windows-os
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
+[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-23h2-22h2.md)]
 
-[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-stack/includes/hci-arc-vm.md)]
+[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-local//includes/hci-arc-vm.md)]
 
 ::: zone-end
 
@@ -32,7 +32,7 @@ In this article, you will learn how to use graphics processing units (GPUs) with
 
 There are several requirements and things to consider before you begin to use GPUs with clustered VMs:
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 - You need an Azure Stack HCI cluster running Azure Stack HCI, version 22H2 or later.
 
@@ -60,7 +60,7 @@ There are several requirements and things to consider before you begin to use GP
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 - Follow the steps in [Plan for deploying devices by using Discrete Device Assignment](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context) to prepare GPU devices in the cluster.
 
@@ -211,7 +211,7 @@ When you start the VM, the cluster ensures that the VM is placed on a server wit
 To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-virtualization). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-failover-clustering). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
@@ -226,7 +226,7 @@ For more information on using GPUs with your clustered VMs, see:
 
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
