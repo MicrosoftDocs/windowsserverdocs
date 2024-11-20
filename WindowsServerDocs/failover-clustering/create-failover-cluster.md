@@ -126,9 +126,7 @@ Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 
 ::: zone pivot="failover-cluster-manager"
 
-1. Start Server Manager.
-
-1. On the **Manage** menu, select **Add Roles and Features**.
+1. Under **Configure this local server**, select **Add Roles and Features**.
 
 1. On the **Before you begin** page, select **Next**.
 
@@ -138,9 +136,9 @@ Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 
 1. On the **Select server roles** page, select **Next**.
 
-1. On the **Select features** page, select the **Failover Clustering** check box.
+1. On the **Features** page, select the **Failover Clustering** check box.
 
-1. To install the failover cluster management tools, select **Add Features** and then select **Next**.
+1. To install the failover cluster management tools, select **Add features** and then select **Next**.
 
 1. On the **Confirm installation selections** page, select **Install**.
 
@@ -180,7 +178,7 @@ Test-Cluster –Node Server1, Server2
 
 1. On a computer that has the Failover Cluster Management Tools installed from the Remote Server Administration Tools or on a server where you installed the Failover Clustering feature, start Failover Cluster Manager. To do this on a server, start Server Manager and then on the **Tools** menu, select **Failover Cluster Manager**.
 
-1. In the **Failover Cluster Manager** pane under **Management**, select **Validate Configuration**.
+1. In the failover cluster mangment pane, under the **Management** node, go to the **Actions** pane on the right side of the window and selet **Validate Configuration**>
 
 1. On the **Before You Begin** page, select **Next**.
 
@@ -288,11 +286,9 @@ After you create the failover cluster, you can create clustered roles to host cl
 >[!NOTE]
 >For clustered roles that require a client access point, a virtual computer object (VCO) is created in AD DS. By default, all VCOs for the cluster are created in the same container or OU as the CNO. Realize that after you create a cluster, you can move the CNO to any OU.
 
-Here's how to create a clustered role:
-
 ::: zone pivot="powershell"
 
-For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole).
+For examples of how to add clustered roles using Powershell, see [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole).
 
 <!---This one's going to need some more specific directions.--->
 
@@ -300,32 +296,34 @@ For examples of how to add clustered roles, see topics such as [Add-ClusterFileS
 
 ::: zone pivot="failover-cluster-manager"
 
-1. Use Server Manager or Windows PowerShell to install the role or feature that is required for a clustered role on each failover cluster node. For example, if you want to create a clustered file server, install the File Server role on all cluster nodes.
+Use Server Manager or Windows PowerShell to install the role or feature that is required for a clustered role on each failover cluster node. For example, if you want to create a clustered file server, install the File Server role on all cluster nodes.
 
-    The following table shows the clustered roles that you can configure in the High Availability Wizard and the associated server role or feature that you must install as a prerequisite.
+The following table shows the clustered roles that you can configure in the High Availability Wizard and the associated server role or feature that you must install as a prerequisite.
 
-   | Clustered Role  | Role or Feature Prerequisite  |
-   | ---------       | ---------                    |
-   | Namespace Server     |   Namespaces (part of File Server role)       |
-   | DFS Namespace Server     |  DHCP Server role       |
-   | Distributed Transaction Coordinator (DTC)     | None        |
-   | File Server     |  File Server role       |
-   | Generic Application     |  Not applicable       |
-   | Generic Script     |   Not applicable      |
-   | Generic Service     |   Not applicable      |
-   | Hyper-V Replica Broker     |   Hyper-V role      |
-   | iSCSI Target Server     |    iSCSI Target Server (part of File Server role)     |
-   | iSNS Server     |  iSNS Server Service feature       |
-   | Message Queuing     |  Message Queuing Services feature       |
-   | Other Server     |  None       |
-   | Virtual Machine     |  Hyper-V role       |
-   | WINS Server     |   WINS Server feature      |
+| Clustered role  | Role or feature prerequisite  |
+| ---------       | ---------                    |
+| Namespace Server     |   Namespaces (part of File Server role)       |
+| DFS Namespace Server     |  DHCP Server role       |
+| Distributed Transaction Coordinator (DTC)     | None        |
+| File Server     |  File Server role       |
+| Generic Application     |  Not applicable       |
+| Generic Script     |   Not applicable      |
+| Generic Service     |   Not applicable      |
+| Hyper-V Replica Broker     |   Hyper-V role      |
+| iSCSI Target Server     |    iSCSI Target Server (part of File Server role)     |
+| iSNS Server     |  iSNS Server Service feature       |
+| Message Queuing     |  Message Queuing Services feature       |
+| Other Server     |  None       |
+| Virtual Machine     |  Hyper-V role       |
+| WINS Server     |   WINS Server feature      |
 
-1. In Failover Cluster Manager, expand the cluster name, right-click **Roles** and then select **Configure Role**.
+To create a clustered role:
 
-1. Follow the steps in the High Availability Wizard to create the clustered role.
+1. In the pane on the left side of the window, expand the accordion menu next to the name of your cluster, then select **Roles**.
 
-1. To verify that the clustered role was created, in the **Roles** pane, make sure that the role has a status of **Running**. The Roles pane also indicates the owner node. To test failover, right-click the role, point to **Move** and then select **Select Node**. In the **Move Clustered Role** dialog box, select the desired cluster node and then select **OK**. In the **Owner Node** column, verify that the owner node changed.
+1. Select the name of the role you want to add, then follow any instructions you see until you finish.
+
+1. To verify that you successfully created the clustered role, in the **Roles** pane, make sure that the role has a status of **Running**. The Roles pane also indicates the owner node. To test failover, right-click the role, point to **Move** and then select **Select Node**. In the **Move Clustered Role** dialog box, select the desired cluster node and then select **OK**. In the **Owner Node** column, verify that the owner node changed.
 
 ::: zone-end  
 
