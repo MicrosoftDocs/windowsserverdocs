@@ -6,14 +6,45 @@ ms.product: windows-server
 ms.author: alalve
 author: xelu86
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
-ms.date: 10/31/2024
+ms.date: 11/19/2024
 ---
 
 # Deploy OSConfig security baselines locally
 
 OSConfig is a security configuration stack that uses a scenario-based approach to deliver and apply desired security measures for your environment. It provides co-management support for both on-premises and Azure Arc-connected devices. You can use Windows PowerShell or Windows Admin Center to apply the security baselines throughout the device life cycle, starting from the initial deployment process.
 
+Some of the highlights of the security baselines provide the following enforcements:
+
+- Secured-Core: UEFI MAT, Secure Boot, Signed Boot Chain​
+- Protocols: TLS Enforced 1.2+, SMB 3.0+, Kerberos AES
+- Credential protection: LSASS/PPL
+- Account and password policies​
+- Security policies and security options ​
+
 You can get the full list of the settings for the security baselines on [GitHub](https://github.com/microsoft/osconfig/tree/main/security).
+
+## Evaluation guidance
+
+For at-scale operations, use Azure Policy and Azure Automanage Machine Configuration to monitor and see your compliance score.
+
+> [!IMPORTANT]
+> After applying the security baseline, your system's security setting will change along with default behaviors. Test carefully before applying these changes in production environments.
+>
+> You'll be asked to change your local administrator password after applying the security baseline for Member server and Workroup member scenarios.
+
+Below you can find a list of more noticeable changes after the baselines are applied:
+
+- The local administrator password must be changed. The new password policy must meet the complexity requirements and minimum length of 14-characters. This only applies to local user accounts; when signing in with a domain account, domain requirements prevail for domain accounts.
+- TLS connections are subject to a minimum of TLS/DTLS 1.2 or higher, which may prevent connections to older systems.
+- The ability to copy and paste files from RDP sessions is disabled. If you need to use this function, run the following command and then reboot your device:
+
+  ```powershell
+  Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/<ServerRoleBeingApplied> -Name RemoteDesktopServicesDoNotAllowDriveRedirection -Value 0
+  ```
+
+- Connections are subject to SMB 3.0 minimum or higher. Connecting to non-windows systems, such as Linux SAMBA, must support SMB 3.0, or adjustments to the baseline are needed.
+- If you're currently configuring the same settings with two different methods, one being OSConfig, conflicts are expected. Especially with drift control involved as you must remove one of the sources if the parameters are different to prevent the settings from constantly changing between sources.
+- You might run into SID translation errors in specific domain configurations. It doesn't impact the rest of the security baseline definition and can be ignored.
 
 ## Prerequisites
 
@@ -46,6 +77,8 @@ Apply the appropriate security baselines, based on the Windows Server role of yo
 - Domain controller (DC)
 - Member server
 - Workgroup member
+
+The baseline experience is powered by OSConfig. Once applied, your security baseline settings are protected from any drift automatically, which is one of the key features of its security platform.
 
 > [!NOTE]
 > For Azure Arc-connected devices, you can apply the security baselines before or after connecting. But if the role of your server changes after the connection, you must delete and reapply the assignment to make sure that the machine configuration platform can detect the role change. For more information about deleting an assignment, see [Deletion of guest assignments from Azure Policy](/azure/governance/machine-configuration/concepts/assignments#deletion-of-guest-assignments-from-azure-policy).
@@ -216,7 +249,13 @@ Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer 
 > - `RenameAdministratorAccount`
 > - `RenameGuestAccount`
 >
-> After you provide the necessary input, select the Enter key to proceed.
+> After you provide the necessary input, select the **Enter** key to proceed.
+
+## Provide feedback for OSConfig
+
+If you're blocked or experiencing a work disruption after applying the security baseline, file a bug using the [Feedback Hub](https://aka.ms/feedbackhub). To learn more about submitting feedback, see [Deeper look at feedback](/windows-insider/feedback).
+
+Provide us **OSConfig security baseline** as the feedback title. Under **Choose a category**, select **Windows Server** from the drop-down list, then select **Management** from the secondary drop-down list and proceed with submitting your feedback.
 
 ## Related content
 
