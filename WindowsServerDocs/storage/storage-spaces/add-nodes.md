@@ -172,7 +172,7 @@ To scale up, connect the drives and verify that Windows discovers them. They sho
 Get-PhysicalDisk | Select SerialNumber, CanPool, CannotPoolReason
 ```
 
-Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959). At this point, you're finished and ready to [extend your volumes](/azure/azure-local/manage/extend-volumes?context=/windows-server/context/windows-server-storage) or [create new ones](/azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage).
+Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959). At this point, you're finished and ready to [extend your volumes](/azure/azure-local/manage/manage-volumes?context=/windows-server/context/windows-server-storage) or [create new ones](/azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage).
 
 If the drives don't appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management** or with the **Reset-PhysicalDisk** cmdlet.
 
