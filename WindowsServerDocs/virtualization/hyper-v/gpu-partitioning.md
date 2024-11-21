@@ -113,7 +113,7 @@ Consider the following limitations when using the GPU partitioning feature:
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md)
-- [Use GPUs with clustered VMs](/azure/azure-local/manage/use-gpu-with-clustered-vm?context=/windows-server/context/windows-server-virtualization)
+- [Use GPUs with clustered VMs](deploy/use-gpu-with-clustered-vm.md)
 - [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
 
 :::zone-end
@@ -123,7 +123,7 @@ For more information on using GPUs with your VMs and GPU partitioning, see:
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
-- [Use GPUs with clustered VMs](/azure/azure-local/manage/use-gpu-with-clustered-vm?context=/windows-server/context/windows-server-virtualization)
+- [Use GPUs with clustered VMs](deploy/use-gpu-with-clustered-vm.md?context=/azure/azure-local/context/context)
 - [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
 
 :::zone-end

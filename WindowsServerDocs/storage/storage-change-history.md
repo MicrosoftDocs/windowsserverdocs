@@ -48,9 +48,9 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Delete volumes](/azure/azure-local/manage/delete-volumes?context=/windows-server/context/windows-server-storage)| New        |
+|[Delete volumes](/azure/azure-local/manage/manage-volumes?context=/windows-server/context/windows-server-storage)| New        |
 |[Create volumes](/azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage)| Added steps and videos for creating a volume in Windows Admin Center.|
-|[Extend volumes](/azure/azure-local/manage/extend-volumes?context=/windows-server/context/windows-server-storage)| Added steps and video for resizing a volume in Windows Admin Center.|
+|[Extend volumes](/azure/azure-local/manage/manage-volumes?context=/windows-server/context/windows-server-storage)| Added steps and video for resizing a volume in Windows Admin Center.|
 
 ## March 2019
 
@@ -256,7 +256,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |---|---|
 |[Planning volumes](/azure/azure-local/concepts/plan-volumes)|New topic.|
 |[Creating volumes](/azure/azure-local/manage/create-volumes)|New topic.|
-|[Extending volumes in Storage Spaces Direct](/azure/azure-local/manage/extend-volumes)|New topic.|
+|[Extending volumes in Storage Spaces Direct](/azure/azure-local/manage/manage-volumes)|New topic.|
 |[ReFS Overview](refs/refs-overview.md)|New topic.|
 |[Understanding Storage Spaces Direct](/azure/azure-local/concepts/cache)|New list of links.|
 |[Planning Storage Spaces Direct](./storage-spaces/storage-spaces-direct-hardware-requirements.md)|New list of links.|

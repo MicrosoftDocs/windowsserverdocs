@@ -136,7 +136,7 @@ Resize-StorageTier -FriendlyName "Performance" -Size 20GB
 Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName "Performance") -Size 20GB
 ```
 >[!TIP]
->Make sure to resize the **Partition** and **Volume** after you resize the **StorageTier**. For more information and examples, see [Extend volumes](/azure/azure-local/manage/extend-volumes?context=/windows-server/context/windows-server-storage).
+>Make sure to resize the **Partition** and **Volume** after you resize the **StorageTier**. For more information and examples, see [Extend a basic volume](../disk-management/extend-a-basic-volume.md).
 
 ## Creating a mirror-accelerated parity volume
 
