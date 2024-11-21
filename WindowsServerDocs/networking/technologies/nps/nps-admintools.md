@@ -71,7 +71,7 @@ To complete this procedure, you must be a member of the Administrators group.
 
 You can use this procedure to manage a remote NPS by using Remote Desktop Connection.
 
-By using Remote Desktop Connection, you can remotely manage your NPS Servers. You can also remotely manage NPSs from any current Windows Client OS.
+By using Remote Desktop Connection, you can remotely manage your NPS Servers. You can also remotely manage NPSs from any current Windows client OS.
 
 You can use Remote Desktop connection to manage multiple NPSs by using one of two methods.
 
@@ -106,7 +106,7 @@ You can use commands in the Netsh NPS context to show and set the configuration 
 - Export the configuration of one NPS (the source server), including registry keys and the NPS configuration store, as a Netsh script.
 - Import the configuration to another NPS by using a Netsh script and the exported configuration file from the source NPS.
 
-You can run these commands from the Windows Server 2016 (and later) Command Prompt or from Windows PowerShell. You can also run netsh nps commands in scripts and batch files.
+You can run these commands from Command Prompt or from Windows PowerShell. You can also run netsh nps commands in scripts and batch files.
 
 **Administrative Credentials**
 
@@ -120,7 +120,7 @@ To perform this procedure, you must be a member of the Administrators group on t
 4. To view a list of available commands, type a question mark \(?\) and press ENTER.
 
 
-For more information about Netsh NPS commands, see [Netsh Commands for Network Policy Server in Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754758(v=ws.10)). These commands are still present in Windows Server 2022 and Windows 11, so you can use netsh in these environments, although using Windows PowerShell is recommended.
+For more information about Netsh NPS commands, see [Netsh Commands for Network Policy Server in Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754758(v=ws.10)). These commands are still present in the latest releases of Windows Server and Windows 11, so you can use netsh in these environments, although using Windows PowerShell is recommended.
 
 ## Use Windows PowerShell to manage NPSs
 
