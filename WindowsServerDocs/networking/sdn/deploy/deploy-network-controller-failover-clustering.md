@@ -1,17 +1,17 @@
 ---
-title: Deploy Network Controller with Failover Clustering on Windows Server and Azure Stack HCI
-description: Learn how to deploy Network Controller with Failover Clustering using SDN Express on Windows Server and Azure Stack HCI.
+title: Deploy Network Controller with Failover Clustering on Windows Server and Azure Local
+description: Learn how to deploy Network Controller with Failover Clustering using SDN Express on Windows Server and Azure Local.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 11/14/2024
+ms.date: 11/21/2024
 zone_pivot_groups: windows-os
 #CustomerIntent: As a network administrator, I want to deploy Network Controller works with Failover Clustering so that I can create my tenant network configurations.
 ---
 
 # Deploy Network Controller with Failover Clustering
 
-Beginning with Windows Server 2025 and Azure Stack HCI, version 24H2, Network Controller (NC) can now be deployed directly as a Failover Clustering service. In this article you learn about the prerequisites required, installing the SDN Express PowerShell module, and how to deploy Network Controller with Failover Clustering. To learn more about how it works with Software Load Balancer and Gateways, and how it differs from Network Controller on Service Fabric, see [Network Controller with Failover Clustering](../technologies/network-controller/network-controller-failover-clustering.md).
+Beginning with Windows Server 2025 and Azure Local, version 23H2, Network Controller (NC) can now be deployed directly as a Failover Clustering service. In this article you learn about the prerequisites required, installing the SDN Express PowerShell module, and how to deploy Network Controller with Failover Clustering. To learn more about how it works with Software Load Balancer and Gateways, and how it differs from Network Controller on Service Fabric, see [Network Controller with Failover Clustering](../technologies/network-controller/network-controller-failover-clustering.md).
 
 ## Prerequisites
 
@@ -26,11 +26,11 @@ Before you can deploy Network Controller with Failover Clustering, you must comp
 
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-- You have a failover cluster with at least two nodes running Azure Stack HCI, version 24H2 or later.
+- You have a failover cluster with at least two nodes running Azure Local, version 23H2 or later.
 
-- If you intend to deploy the Software Load Balancer and Gateway Services as VMs using Failover Cluster, download the Azure Stack HCI VHDX image for use later in this article. To learn more about downloading the VHDX, see [/azure-stack/hci/deploy/download-azure-stack-hci-23h2-software](Download Azure Stack HCI, version 23H2 software).
+- If you intend to deploy the Software Load Balancer and Gateway Services as VMs using Failover Cluster, download the Azure Local VHDX image for use later in this article. To learn more about downloading the VHDX, see [/azure-stack/hci/deploy/download-azure-local-23h2-software](Download Azure Local, version 23H2 software).
 
 :::zone-end
 
@@ -44,7 +44,7 @@ Before you can deploy Network Controller with Failover Clustering, you must comp
 
 - The physical network must be configured for the subnets and VLANs that you intend to use and must be consistent across all cluster nodes.
 
-- You must have a location to store the VHDX and configuration files for the Network Controller. The location must be reachable from the node on which the SDN Express script is run.
+- (Optional) If you intend to deploy the Software Load Balancer and Gateway Services as VMs using Failover Cluster, you must have a location to store the VHDX and configuration files. The location must be reachable from the node on which the SDN Express script is run.
 
 ## Install SDN Express
 
@@ -73,8 +73,6 @@ You're now ready to begin configuring your configuration files.
 ## Prepare SDN Express configuration files
 
 The SDN Express script requires a configuration file to deploy Network Controller with Failover Clustering. The configuration file is a PSD1 file that contains the variables for your Network Controller deployment. To create the configuration file, follow these steps:
-
-TODO: I don't see to get the MultiNodeConfig_FC or SF files. Is there a specific SDN Express version that I need to install?
 
 The PowerShell `MultiNodeSampleConfig.psd1` configuration data file (located in the previously mentioned install path) contains all the parameters and settings that are needed for the SDN Express script as input for the various parameters and configuration settings. This file has specific information about what needs to be filled out. The information required depends on whether you're deploying only the network controller component, or the software load balancer and gateway components as well. For detailed information, see [Plan a Software Defined Network infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure).
 
@@ -127,19 +125,7 @@ The PowerShell `MultiNodeSampleConfig.psd1` configuration data file (located in 
    | **UseFCNC**      | Set to `1` to enable Failover Clustering Network Controller (FCNC)                                        |
    | **FCNCBin**      | Path to the FCNC binary used by SDN to deploy the SDN NC Service                                          |
    | **FCNCDBs**      | File path to the FCNC database. This file path can be any SMB share, but it's recommended to use either CSV or S2D |
-
-1. Complete the Network Controller parameters in the following table as a guide.
-
-   A minimum of three Network Controller VMs are recommended for SDN.
-
-   The `NCs = @()` section is used for the Network Controller VMs. Make sure that the MAC address of each NC VM is outside the `SDNMACPool` range listed in the general settings.
-
-   | Parameter name   | Description                                                                                               |
-   |------------------|-----------------------------------------------------------------------------------------------------------|
-   | **HostName**     | Host name of server where the NC VM is located                                                            |
-   | **ComputerName** | Name of NC VM                                                                                             |
-   | **MACAddress**   | MAC address for the NC VM                                                                                 |
-   | **ManagementIP** | Management network IP address for the NC VM                                                               |
+   | **UseCertBySubject** | Set to `1` to use a certificate by subject name. Set to `0` to use a certificate by thumbprint. TODO: check description|
 
 You're now ready to deploy Network Controller with Failover Clustering.
 
