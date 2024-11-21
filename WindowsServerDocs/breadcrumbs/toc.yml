@@ -7,8 +7,8 @@ items:
       topicHref: /windows-server/
       items:
       - name: Remote Desktop Services
-        tocHref: /windows-server/remote/remote-desktop-services/
-        topicHref: /windows-server/remote/remote-desktop-services/
+        tocHref: /windows-server/remote/remote-desktop-services/remote-desktop-services-overview
+        topicHref: /windows-server/remote/remote-desktop-services/remote-desktop-services-overview
       - name: Remote Desktop Services
         tocHref: /azure/virtual-desktop/
         topicHref: /windows-server/remote/remote-desktop-services/
@@ -21,7 +21,7 @@ items:
 
 ### For linking to HCI topics and keeping the context in Windows Server TOC
 - name: Windows Server
-  tocHref: /azure-stack/hci/
+  tocHref: /azure/azure-local/
   topicHref: /windows-server/index
 
 ### For linking to system center topics and keeping the context in Windows Server TOC

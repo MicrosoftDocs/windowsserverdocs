@@ -4,7 +4,7 @@ description: Important information when performing a feature update, clean insta
 ms.topic: conceptual
 author: robhindman
 ms.author: roharwoo
-ms.date: 10/11/2024
+ms.date: 11/13/2024
 ---
 
 # Feature update, clean install, or migrate to Windows Server
@@ -23,13 +23,15 @@ You can download and try the latest version of Windows Server free of charge at 
 
 An in-place OS upgrade (feature update) performs a feature update of your Windows Server installation. You can upgrade to a later version of Windows Server while keeping your original settings, server roles, features, and data. In-place feature update lets you jump ahead multiple versions. This method is the quickest way to move to a later version of Windows Server. For more information about OS upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to). Keep in mind that some roles and features don't support in-place feature upgrades. In-place feature upgrades work best with virtual machines (VMs) that don't need specific Original Equipment Manufacturer (OEM) hardware drivers to upgrade successfully.
 
-You can perform an in-place upgrade in one of two ways, from media or using Windows Update from the Settings dialog. Upgrading your installation using media involves downloading and preparing media such as an ISO, USB, or DVD disk. When you upgrade using Windows Update from the Settings dialog, you can perform the install directly from Windows Update within the desktop or using SConfig for Server Core. For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md).
+You can perform an in-place upgrade in one of two ways, from media or using Windows Update from the Settings dialog. Upgrading your installation using media involves downloading and preparing media such as an ISO, USB, or DVD disk. Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. When you upgrade using Windows Update from the Settings dialog, you can perform the install directly from Windows Update within the desktop or using SConfig for Server Core. Your organization may prefer to implement upgrades incrementally and want to control the availability of this optional upgrade using Group Policy. To learn more about how to manage the offer of Feature Updates, see [Manage Feature Updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
+
+For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md).
 
 ## Cluster operating system rolling upgrade (feature update)
 
 The Cluster operating system rolling upgrade (feature update) gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a feature update to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements (SLA). Cluster-Aware Updating (CAU) is a feature that automates the software updating process on clustered servers while maintaining availability. For more information about updating your clusters, see [Cluster-Aware Updating overview](../failover-clustering/cluster-aware-updating.md) and [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 
-If you're running VMs on an Azure Stack hyperconverged infrastructure (HCI) solution, we recommend you use the Life Cycle Manager (LCM) to perform your feature update. For more information, see [About Azure Stack HCI upgrades](/azure-stack/hci/upgrade/about-upgrades-23h2) for more information.
+If you're running VMs on an Azure Stack hyperconverged infrastructure (HCI) solution, we recommend you use the Life Cycle Manager (LCM) to perform your feature update. For more information, see [About Azure Stack HCI upgrades](/azure/azure-local/upgrade/about-upgrades-23h2) for more information.
 
 ## Clean operating system install
 

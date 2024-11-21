@@ -16,11 +16,11 @@ zone_pivot_groups: windows-os
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
+[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-23h2-22h2.md)]
 
-[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-stack/includes/hci-arc-vm.md)]
+[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-local//includes/hci-arc-vm.md)]
 
 ::: zone-end
 
@@ -32,7 +32,7 @@ In this article, you will learn how to use graphics processing units (GPUs) with
 
 There are several requirements and things to consider before you begin to use GPUs with clustered VMs:
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 - You need an Azure Stack HCI cluster running Azure Stack HCI, version 22H2 or later.
 
@@ -60,13 +60,13 @@ There are several requirements and things to consider before you begin to use GP
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 - Follow the steps in [Plan for deploying devices by using Discrete Device Assignment](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context) to prepare GPU devices in the cluster.
 
 - Make sure your device has enough MMIO space allocated within the VM. For more information, see [MMIO Space](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context#mmio-space).
 
-- Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
+- Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&context=/windows-server/context/windows-server-virtualization).
 
 - Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context).
 
@@ -208,11 +208,11 @@ When you start the VM, the cluster ensures that the VM is placed on a server wit
 ## Fail over a VM with an assigned GPU
 
 :::zone pivot="windows-server"
-To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure-stack/hci/manage/maintain-servers?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-virtualization). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
-To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure-stack/hci/manage/maintain-servers). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+:::zone pivot="azure-local"
+To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-failover-clustering). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
 ## Related content
@@ -221,16 +221,16 @@ To test the cluster’s ability to keep your GPU workload available, perform a d
 
 For more information on using GPUs with your clustered VMs, see:
 
-- [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json)
+- [Manage VMs with Windows Admin Center](/azure/azure-local/manage/vm?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json)
 - [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)
 
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
-- [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm)
+- [Manage VMs with Windows Admin Center](/azure/azure-local/manage/vm)
 - [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
 
 :::zone-end

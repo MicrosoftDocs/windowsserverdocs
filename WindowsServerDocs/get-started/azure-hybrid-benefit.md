@@ -142,7 +142,7 @@ Licenses must be used either on-premises or on Azure Stack HCI, but not on both.
 
 ### How to apply Azure Hybrid Benefit for Azure Stack HCI
 
-You need to activate Azure Hybrid Benefit for your Azure Stack HCI cluster. You can learn how to activate Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure-stack/hci/concepts/azure-hybrid-benefit).
+You need to activate Azure Hybrid Benefit for your Azure Stack HCI cluster. You can learn how to activate Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure/azure-local/concepts/azure-hybrid-benefit).
 
 # [AKS](#tab/aks)
 
@@ -204,4 +204,4 @@ You can purchase Software Assurance through Volume Licensing. Your Software Assu
 
 - [Azure Hybrid Benefit product page](https://azure.microsoft.com/pricing/hybrid-benefit)
 - [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
-- [Azure Hybrid Benefit for Azure Stack HCI](/azure-stack/hci/concepts/azure-hybrid-benefit-hci)
+- [Azure Hybrid Benefit for Azure Stack HCI](/azure/azure-local/concepts/azure-hybrid-benefit-hci)
