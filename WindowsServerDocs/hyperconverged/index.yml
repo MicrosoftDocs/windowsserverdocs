@@ -28,7 +28,7 @@ productDirectory:
     - title: Storage Spaces Direct
       imageSrc: /windows-server/media/i-store.svg
       links:
-        - url: /azure/azure-local/concepts/storage-spaces-direct-overviewcontext=/windows-server/context/windows-server-edge-networking
+        - url: /azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-edge-networking
           text: Virtualizes storage hardware, enabling you to create volumes on top of a virtualized pool of drives spread across servers in a hyper-converged cluster.
     # Card
     - title: Failover Clustering

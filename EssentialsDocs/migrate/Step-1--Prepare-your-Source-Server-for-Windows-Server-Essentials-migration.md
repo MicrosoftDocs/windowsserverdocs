@@ -96,8 +96,8 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 
    |             If your Source Server is running             |                                                     you can get the BPA tools from                                                      |
    |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-   |                     Windows SBS 2003                     | [Microsoft Windows Small Business Server 2003 Best Practices Analyzer website](https://www.microsoft.com/windows-server/blog/tag/best-practices-analyzer/) |
-   |                     Windows SBS 2008                     | [Microsoft Windows Small Business Server 2008 Best Practices Analyzer website](https://www.microsoft.com/windows-server/blog/tag/best-practices-analyzer/) |
+   |                     Windows SBS 2003                     | [Microsoft Windows Small Business Server 2003 Best Practices Analyzer website](/windows-server/administration/server-manager/run-best-practices-analyzer-scans-and-manage-scan-results) |
+   |                     Windows SBS 2008                     | [Microsoft Windows Small Business Server 2008 Best Practices Analyzer website](/windows-server/administration/server-manager/run-best-practices-analyzer-scans-and-manage-scan-results) |
    |     Windows Server Essentials or Windows Server 2012     |                                                          The server dashboard                                                           |
 
 

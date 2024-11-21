@@ -10,9 +10,7 @@ description: Step-by-step instructions to deploy software-defined storage with S
 ---
 # Deploy Storage Spaces Direct on Windows Server
 
->
-
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure/azure-local/deploy/deployment-overview?context=/windows-server/context/windows-server-storage)
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) on Windows Server. To deploy Storage Spaces Direct as part of Azure Local, see [About Azure Local](/azure/azure-local/deploy/deployment-introduction?context=/windows-server/context/windows-server-storage)
 
 > [!Tip]
 > Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://aka.ms/azurestackhcicatalog).
