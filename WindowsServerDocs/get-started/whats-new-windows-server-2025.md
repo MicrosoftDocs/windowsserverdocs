@@ -39,7 +39,7 @@ You can now connect mice, keyboards, headsets, audio devices, and more via Bluet
 
 ### DTrace
 
-Windows Server 2025 comes equipped with `dtrace` as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real time. DTrace allows users to dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command-line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for other capabilities.
+Windows Server 2025 comes equipped with `dtrace` as a native tool. DTrace is a command-line utility that enables users to monitor and troubleshoot their system's performance in real time. With DTrace, you can dynamically instrument both the kernel and user-space code without any need to modify the code itself. This versatile tool supports a range of data collection and analysis techniques, such as aggregations, histograms, and tracing of user-level events. To learn more, see [DTrace](/windows-server/administration/windows-commands/dtrace) for command-line help and [DTrace on Windows](/windows-hardware/drivers/devtest/dtrace) for other capabilities.
 
 ### Email and accounts
 
@@ -53,11 +53,11 @@ Domain join is still required for most situations.
 
 ### Feedback Hub
 
-To submit feedback or report problems you encounter while you use Windows Server 2025, use the Windows Feedback Hub. Include screenshots or recordings of the process that caused the issue to help us understand your situation and share suggestions to enhance your Windows experience. To learn more, see [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app).
+To submit feedback or report problems that you encounter when you use Windows Server 2025, use the Windows Feedback Hub. Include screenshots or recordings of the process that caused the issue to help us understand your situation and share suggestions to enhance your Windows experience. To learn more, see [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app).
 
 ### File compression
 
-Windows Server 2025 has a new compression feature. To compress an item, you can right-click and select **Compress to**. This feature supports **ZIP**, **7z**, and **TAR** compression formats with specific compression methods for each one.
+Windows Server 2025 has a new compression feature. To compress an item, right-click and select **Compress to**. This feature supports **ZIP**, **7z**, and **TAR** compression formats with specific compression methods for each one.
 
 ### Pinned apps
 
@@ -88,7 +88,7 @@ The Windows Terminal, a powerful and efficient multishell application for comman
 
 WinGet is installed by default, which is a command-line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the WinGet tool to install and manage applications](/windows/package-manager/winget).
 
-## Advanced multi-layer security
+## Advanced multilayer security
 
 Learn about security in Windows 2025.
 
@@ -107,50 +107,50 @@ Starting with Windows Server 2025, Credential Guard is now enabled by default on
 
 The latest enhancements to Active Directory Domain Services (AD DS) and Active Directory Lightweight Domain Services (AD LDS) introduce a range of new functionalities and capabilities aimed at optimizing your domain management experience:
 
-- **32k database page size optional feature**: Active Directory uses an Extensible Storage Engine (ESE) database since its introduction in Windows 2000 that uses an 8k database page size. The 8k architectural design decision resulted in limitations throughout Active Directory that are documented in [AD Maximum Limits Scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)). An example of this limitation is a single record AD object, which can't exceed 8k bytes in size. Moving to a 32k database page format offers a huge improvement in areas affected by legacy restrictions, including multi-valued attributes are now able to hold up to ~3,200 values, which is an increase by a factor of 2.6.
+- **32,000 database page size optional feature**: Active Directory uses an Extensible Storage Engine (ESE) database since its introduction in Windows 2000 that uses an 8,000 database page size. The 8,000 architectural design decision resulted in limitations throughout Active Directory that are documented in [AD Maximum Limits Scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)). An example of this limitation is a single record AD object, which can't exceed 8-000 bytes in size. Moving to a 32,000 database page format offers a huge improvement in areas affected by legacy restrictions, including multi-valued attributes are now able to hold up to ~3,200 values, which is an increase by a factor of 2.6.
 
-  You can install new DCs with a 32k page database that uses 64-bit Long Value IDs (LIDs) and runs in an "8k page mode" for compatibility with previous versions. An upgraded DC continues to use its current database format and 8k pages. Moving to 32k database pages is done on a forest-wide basis and requires that all DCs in the forest have a 32k page capable database.
+  You can install new domain controllers (DCs) with a 32,000-page database that uses 64-bit Long Value IDs (LIDs) and runs in an "8,000-page mode" for compatibility with previous versions. An upgraded DC continues to use its current database format and 8,000 pages. Moving to 32,000 database pages is done on a forest-wide basis and requires that all DCs in the forest have a 32,000-page capable database.
 
 - **AD schema updates**: Three new Log Database Files (LDF) are introduced that extend the AD schema, `sch89.ldf`, `sch90.ldf`, and `sch91.ldf`. The AD LDS equivalent schema updates are in `MS-ADAM-Upgrade3.ldf`. For learn more about previous schema updates, see [Windows Server AD schema updates](../identity/ad-ds/deploy/Schema-Updates.md)
 
-- **AD object repair**: AD now allows enterprise administrators to repair objects with missing core attributes **SamAccountType** and **ObjectCategory**. Enterprise administrators can reset the **LastLogonTimeStamp** attribute on an object to the current time. These operations are achieved through a new [RootDSE](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) modify operation feature on the affected object called **fixupObjectState**.
+- **AD object repair**: Enterprise administrators can now repair objects with the missing core attributes **SamAccountType** and **ObjectCategory**. Enterprise administrators can reset the **LastLogonTimeStamp** attribute on an object to the current time. These operations are achieved through a new [RootDSE](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) modify operation feature on the affected object called **fixupObjectState**.
 
-- **Channel binding audit support**: Events 3074 and 3075 can now be enabled for Lightweight Directory Access Protocol (LDAP) channel binding. When the channel binding policy is modified to a more secure setting, an administrator can identify devices in the environment that don't support or fail channel binding. These audit events are also available in Windows Server 2022 and later via [KB4520412](https://support.microsoft.com/topic/2020-2023-and-2024-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a).
+- **Channel binding audit support**: You can now enable Events 3074 and 3075 for Lightweight Directory Access Protocol (LDAP) channel binding. When the channel binding policy is modified to a more secure setting, an administrator can identify devices in the environment that don't support or fail channel binding. These audit events are also available in Windows Server 2022 and later via [KB4520412](https://support.microsoft.com/topic/2020-2023-and-2024-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a).
 
 - **DC-location algorithm improvements**: DC discovery algorithm provides new functionality with improvements to mapping of short NetBIOS-style domain names to DNS-style domain names. To learn more, see [Active Directory DC locator changes](../identity/ad-ds/manage/dc-locator-changes.md).
 
   > [!NOTE]
-  > Windows doesn't use mailslots during DC discovery operations because Microsoft has announced  the [deprecation of WINS and mailslots](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-beginning-of-the-end-of-remote-mailslots-as-part-of-windows/ba-p/3762048) for these legacy technologies.
+  > Windows doesn't use mailslots during DC discovery operations because Microsoft has announced the [deprecation of WINS and mailslots](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-beginning-of-the-end-of-remote-mailslots-as-part-of-windows/ba-p/3762048) for these legacy technologies.
 
-- **Forest and Domain Functional Levels**: The new functional level is used for general supportability and is required for the new 32K database page size feature. The new functional level maps to the value of `DomainLevel 10` and `ForestLevel 10` for unattended installs. Microsoft has no plans to retrofit functional levels for Windows Server 2019 and Windows Server 2022. To perform an unattended promotion and demotion of a Domain Controller (DC), see [DCPROMO answer file syntax for unattended promotion and demotion of domain controllers](/troubleshoot/windows-server/identity/syntax-build-answer-files-unattended-installation-ad-ds).
+- **Forest and domain functional levels**: The new functional level is used for general supportability and is required for the new 32K database page size feature. The new functional level maps to the value of `DomainLevel 10` and `ForestLevel 10` for unattended installs. Microsoft has no plans to retrofit functional levels for Windows Server 2019 and Windows Server 2022. To perform an unattended promotion and demotion of a DC, see [DCPROMO answer file syntax for unattended promotion and demotion of domain controllers](/troubleshoot/windows-server/identity/syntax-build-answer-files-unattended-installation-ad-ds).
 
   The [DsGetDcName](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew) Application Programming Interface (API) also supports a new flag `DS_DIRECTORY_SERVICE_13_REQUIRED` that enables location of DCs running Windows Server 2025. You can learn more about functional levels in the following articles:
 
-  - [Forest and Domain Functional Levels](../identity/ad-ds/active-directory-functional-levels.md)
-  - [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11))
-  - [Raise the Forest Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985(v=ws.11))
+  - [Forest and domain functional levels](../identity/ad-ds/active-directory-functional-levels.md)
+  - [Raise the domain functional level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11))
+  - [Raise the forest functional level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985(v=ws.11))
 
   > [!NOTE]
   > New AD forests or AD LDS configuration sets are required to have a functional level of Windows Server 2016 or greater. Promotion of an AD or AD LDS replica requires that the existing domain or config set is already running with a functional level of Windows Server 2016 or greater.
   >
   > Microsoft recommends that all customers begin planning now to upgrade their AD and AD LDS servers to Windows Server 2022 in preparation for the next release.
 
-- **Improved algorithms for Name/Sid Lookups**: Local Security Authority (LSA) Name and Sid lookup forwarding between machine accounts no longer uses the legacy Netlogon secure channel. Kerberos authentication and DC Locator algorithm are used instead. To maintain compatibility with legacy operating systems, it's still possible to use the Netlogon secure channel as a fallback option.
+- **Improved algorithms for Name/SID lookups**: Local security authority (LSA) Name and SID lookup forwarding between machine accounts no longer uses the legacy Netlogon secure channel. Kerberos authentication and DC Locator algorithm are used instead. To maintain compatibility with legacy operating systems, it's still possible to use the Netlogon secure channel as a fallback option.
 
 - **Improved security for confidential attributes**: DCs and AD LDS instances only allow LDAP to add, search, and modify operations involving confidential attributes when the connection is encrypted.
 
-- **Improved security for default machine account passwords**: AD now uses random generated default computer account passwords. Windows 2025 DCs block setting computer account passwords to the default password of the computer account name.
+- **Improved security for default machine account passwords**: AD now uses default computer account passwords that are randomly generated. Windows 2025 DCs block setting computer account passwords to the default password of the computer account name.
 
-  To control this behavior, enable the GPO setting _Domain controller: Refuse setting default machine account password_ located in 
+  To control this behavior, enable the Group Policy Object (GPO) setting _Domain controller: Refuse setting default machine account password_ located in 
   *Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options*
   
-  Utilities like Active Directory Administrative Center (ADAC), Active Directory Users and Computers (ADUC), `net computer`, and `dsmod` also honor this new behavior. Both ADAC and ADUC no longer allow creating a pre-2k Windows account.
+  Utilities like Active Directory Administrative Center (ADAC), Active Directory Users and Computers (ADUC), `net computer`, and `dsmod` also honor this new behavior. Both ADAC and ADUC no longer allow creating a pre-2,000 Windows account.
 
 - **Kerberos PKINIT support for cryptographic agility**: The Kerberos Public Key Cryptography for Initial Authentication in Kerberos (PKINIT) protocol implementation is updated to allow for cryptographic agility by supporting more algorithms and removing hardcoded algorithms.
 
 - **LAN Manager GPO setting**: The GPO setting _Network security: Don't store LAN Manager hash value on next password change_ is no longer present and doesn't apply to new versions of Windows.
 
-- **LDAP encryption by default**: All LDAP client communication after a Simple Authentication and Security Layer (SASL) bind utilizes LDAP sealing by default. To learn more about SASL, see [SASL Authentication](/openspecs/windows_protocols/ms-adts/989e0748-0953-455d-9d37-d08dfbf3998b).
+- **LDAP encryption by default**: All LDAP client communication after a Simple Authentication and Security Layer (SASL) bind uses LDAP sealing by default. To learn more about SASL, see [SASL Authentication](/openspecs/windows_protocols/ms-adts/989e0748-0953-455d-9d37-d08dfbf3998b).
 
 - **LDAP support for TLS 1.3**: LDAP uses the latest SCHANNEL implementation and supports TLS 1.3 for LDAP over TLS connections. Using TLS 1.3 eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. To learn more, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and [TLS Cipher Suites in Windows Server 2022](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
 
@@ -162,7 +162,7 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 
   For domain users that are members of the [Protected Users](/windows-server/security/credentials-protection-and-management/protected-users-security-group#BKMK_Requirements) group and for local accounts on domain member computers, all remote password changes through the legacy SAM RPC interface are blocked by default including `SamrUnicodeChangePasswordUser4`.
 
-  To control this behavior, use the following Group Policy Object (GPO) setting:
+  To control this behavior, use the following GPO setting:
 
   **Computer Configuration** > **Administrative Templates** > **System** > **Security Account Manager** > **Configure SAM change password RPC methods policy**
 
@@ -172,25 +172,25 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 
   - _DC Locator_: Client- and DC-specific counters are available.
   
-  - _LSA Lookups_: **Name** and **SID** lookups through the **LsaLookupNames**, **LsaLookupSids**, and equivalent APIs. These counters are available on both Client and Server SKUs.
+  - _LSA Lookups_: **Name** and **SID** lookups through the **LsaLookupNames**, **LsaLookupSids**, and equivalent APIs. These counters are available on both client and server versions.
   
   - _LDAP Client_: Available in Windows Server 2022 and later via [KB 5029250](https://support.microsoft.com/topic/august-8-2023-kb5029250-os-build-20348-1906-2db4a1ac-8e18-443e-b4d6-ee17435cf94c) update.
 
-- **Replication priority order**: AD now allows administrators to increase the system calculated replication priority with a particular replication partner for a particular naming context. This feature allows more flexibility in configuring the replication order to address specific scenarios.
+- **Replication priority order**: Administrators can now increase the system calculated replication priority with a particular replication partner for a particular naming context. This feature allows more flexibility in configuring the replication order to address specific scenarios.
 
 #### Delegated Managed Service Account
 
 This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](../identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md).
 
-### Windows Local Administrator Password Solution (LAPS)
+### Windows Local Administrator Password Solution
 
 Windows Local Administrator Password Solution (LAPS) helps organizations manage local administrator passwords on their domain-joined computers. It automatically generates unique passwords for each computer's local administrator account, stores them securely in AD, and updates them regularly. Automatically generated passwords help to improve security by reducing the risk of attackers gaining access to sensitive systems by using compromised or easily guessable passwords.
 
 Several features are introduced to Microsoft LAPS that bring the following improvements:
 
-- **New automatic account management**: The latest update allows IT admins to create a managed local account with ease. With this feature, you can customize the account name, enable or disable the account, and even randomize the account name for enhanced security. The update also includes improved integration with Microsoft's existing local account management policies. To learn more about this feature, see [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes).
+- **New automatic account management**: IT admins can now create a managed local account with ease. With this feature, you can customize the account name, enable or disable the account, and even randomize the account name for enhanced security. The update also includes improved integration with Microsoft's existing local account management policies. To learn more about this feature, see [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes).
 
-- **New image rollback detection**: Windows LAPS now detects when an image rollback occurs. If a rollback does happen, the password stored in AD might no longer match the password stored locally on the device. Rollbacks can result in a "torn state" where the IT admin is unable to sign into the device by using the persisted Windows LAPS password.
+- **New image rollback detection**: Windows LAPS now detects when an image rollback occurs. If a rollback does happen, the password stored in AD might no longer match the password stored locally on the device. Rollbacks can result in a "torn state" where the IT admin is unable to sign in to the device by using the persisted Windows LAPS password.
 
   To address this issue, a new feature was added that includes an AD attribute called `msLAPS-CurrentPasswordVersion`. This attribute contains a random GUID written by Windows LAPS every time a new password is persisted in AD and saved locally. During every processing cycle, the GUID stored in `msLAPS-CurrentPasswordVersion` is queried and compared to the locally persisted copy. If they're different, the password is immediately rotated.
 
@@ -198,16 +198,16 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
   No policy settings are used to enable or configure this feature. The feature is always enabled after the new schema attribute is added.
 
-- **New passphrase**: IT admins can now use a new feature in Windows LAPS that enables the generation of less-complex passphrases. An example is a passphrase such as **EatYummyCaramelCandy**, which is easier to read, remember, and type, compared to a traditional password like **V3r_b4tim#963?**.
+- **New pass phrase**: IT admins can now use a new feature in Windows LAPS that enables the generation of less-complex pass phrases. An example is a pass phrase such as **EatYummyCaramelCandy**, which is easier to read, remember, and type compared to a traditional password like **V3r_b4tim#963?**.
 
-  This new feature also allows the _PasswordComplexity_ policy setting to be configured to select one of three different passphrase word lists, all of which are included in Windows without requiring a separate download. A new policy setting called _PassphraseLength_ controls the number of words used in the passphrase.
+  With this new feature, you can configure the _PasswordComplexity_ policy setting to select one of three different word lists for pass phrases. All of the lists are included in Windows and don't require a separate download. A new policy setting called _PassphraseLength_ controls the number of words used in the pass phrase.
 
-  When you create a passphrase, the specified number of words are randomly selected from the chosen word list and concatenated. The first letter of each word is capitalized to enhance readability. This feature also fully supports backing passwords up to either Windows Server AD or Microsoft Entra ID.
+  When you create a pass phrase, the specified number of words are randomly selected from the chosen word list and concatenated. The first letter of each word is capitalized to enhance readability. This feature also fully supports backing up passwords to either Windows Server AD or Microsoft Entra ID.
 
-  The passphrase word lists used in the three new _PasswordComplexity_ passphrase settings are sourced from the Electronic Frontier Foundation article [Deep Dive: EFF's New Wordlists for Random Passphrases](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases). The [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471) is licensed under the CC-BY-3.0 Attribution license and is available for download.
+  The pass-phrase word lists used in the three new _PasswordComplexity_ pass phrase settings are sourced from the Electronic Frontier Foundation article [Deep Dive: EFF's New Wordlists for Random Passphrases](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases). The [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471) is licensed under the CC-BY-3.0 Attribution license and is available for download.
 
   > [!NOTE]
-  > Windows LAPS doesn't allow for customization of the built-in word lists nor the use of customer-configured word lists.
+  > Windows LAPS doesn't allow for customization of the built-in word lists or the use of customer-configured word lists.
 
 - **Improved readability password dictionary**: Windows LAPS introduces a new _PasswordComplexity_ setting that enables IT admins to create less complex passwords. You can use this feature to customize LAPS to use all four character categories (uppercase letters, lowercase letters, numbers, and special characters) like the existing complexity setting of 4. With the new setting of 5, the more complex characters are excluded to enhance password readability and minimize confusion. For example, the numeral 1 and the letter I are never used with the new setting.
 
@@ -220,9 +220,9 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
   The Active Directory Users and Computers snap-in (via Microsoft Management Console) now features an improved Windows LAPS tab. The Windows LAPS password now appears in a new font that enhances its readability when shown in plain text.
 
-- **PostAuthenticationAction support for terminating individual processes**: A new option is added to the PostAuthenticationActions (PAA) Group Policy setting, "_Reset the password, sign out the managed account, and terminate any remaining processes_" located in **Computer Configuration** > **Administrative Templates** > **System** > **LAPS** > **Post-authentication actions**.
+- **PostAuthenticationAction support for terminating individual processes**: A new option is added to the PostAuthenticationActions (PAA) Group Policy setting, _Reset the password, sign out the managed account, and terminate any remaining processes_ located in **Computer Configuration** > **Administrative Templates** > **System** > **LAPS** > **Post-authentication actions**.
 
-  This new option is an extension of the previous "_Reset the password and sign out the managed account_" option. After configuration, the PAA notifies and then terminates any interactive sign-in sessions. It enumerates and terminates any remaining processes that are still running under the Windows LAPS-managed local account identity. It's important to note that no notification precedes this termination.
+  This new option is an extension of the previous _Reset the password and sign out the managed account_ option. After configuration, the PAA notifies and then terminates any interactive sign-in sessions. It enumerates and terminates any remaining processes that are still running under the Windows LAPS-managed local account identity. It's important to note that no notification precedes this termination.
   
   The expansion of logging events during post-authentication-action execution provides deeper insights into the operation.
 
@@ -232,23 +232,23 @@ To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/id
 
 In earlier versions of Windows Server, the OpenSSH connectivity tool required manual installation before use. The OpenSSH server-side component is installed by default in Windows Server 2025. The Server Manager UI also includes a one-step option under **Remote SSH Access** that enables or disables the `sshd.exe` service. Also, you can add users to the **OpenSSH Users** group to allow or restrict access to your devices. To learn more, see [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview).
 
-### Security Baseline
+### Security baseline
 
-By implementing a customized security baseline, you can establish security measures right from the beginning for your device or VM role based on the recommended security posture. This baseline comes equipped with over 350 preconfigured Windows security settings that enable you to apply and enforce specific security settings that align with the best practices recommended by Microsoft and industry standards. To learn more, see [OSConfig overview](../security/osconfig/osconfig-overview.md).
+By implementing a customized security baseline, you can establish security measures right from the beginning for your device or VM role based on the recommended security posture. This baseline comes equipped with more than 350 preconfigured Windows security settings. You can use the settings to apply and enforce specific security settings that align with the best practices recommended by Microsoft and industry standards. To learn more, see [OSConfig overview](../security/osconfig/osconfig-overview.md).
 
-### Virtualization-based security (VBS) enclaves
+### Virtualization-based security enclaves
 
-A VBS enclave is a software-based trusted execution environment (TEE) inside the address space of a host application. VBS enclaves use underlying [VBS technology](/windows-hardware/design/device-experiences/oem-vbs) to isolate the sensitive portion of an application in a secure partition of memory. VBS enclaves enable isolation of sensitive workloads from both the host application and the rest of the system.
+A virtualization-based security (VBS) enclave is a software-based trusted execution environment (TEE) inside the address space of a host application. VBS enclaves use underlying [VBS technology](/windows-hardware/design/device-experiences/oem-vbs) to isolate the sensitive portion of an application in a secure partition of memory. VBS enclaves enable isolation of sensitive workloads from both the host application and the rest of the system.
 
 VBS enclaves enable applications to protect their secrets by removing the need to trust admins and hardening against malicious attackers. For more information, read the [VBS enclaves Win32 reference](/windows/win32/trusted-execution/vbs-enclaves).
 
 ### Virtualization-based security key protection
 
-VBS key protection enables Windows developers to secure cryptographic keys by using virtualization-based security (VBS). VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS. 
+VBS key protection enables Windows developers to secure cryptographic keys by using VBS. VBS uses the virtualization extension capability of the CPU to create an isolated runtime outside of the normal OS.
 
-When in use, VBS keys are isolated in a secure process, which allows key operations to occur without exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user's machine. 
+When in use, VBS keys are isolated in a secure process. Key operations can occur without exposing the private key material outside of this space. At rest, private key material is encrypted by a TPM key, which binds VBS keys to the device. Keys protected in this way can't be dumped from process memory or exported in plain text from a user's machine.
 
-VBS key protection helps prevent exfiltration attacks by any admin-level attacker. VBS must be enabled to use key protection. See [Enable memory integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity) for information about how to enable VBS.
+VBS key protection helps prevent exfiltration attacks by any admin-level attacker. VBS must be enabled to use key protection. For information about how to enable VBS, see [Enable memory integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity).
 
 ### Secured connectivity
 
@@ -265,7 +265,6 @@ The [SMB over QUIC](../storage/file-server/smb-over-quic.md) server feature, whi
 Administrators can disable SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC by using Group Policy, set the **Enable SMB over QUIC** policy in the following paths to **Disabled**:
 
 - *Computer Configuration\Administrative Templates\Network\Lanman Workstation*
-
 - *Computer Configuration\Administrative Templates\Network\Lanman Server*
 
 To disable SMB over QUIC by using PowerShell, run this command in an elevated PowerShell prompt:
@@ -282,7 +281,7 @@ You can configure SMB signing and encryption auditing settings by using Group Po
   
 - *Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support encryption*
 - *Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support signing*
-- *Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support encryption* 
+- *Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support encryption*
 - *Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support signing*
   
 To perform these changes by using PowerShell, run these commands in an elevated prompt where `$true` enables and `$false` disables these settings:
@@ -295,7 +294,7 @@ Set-SmbClientConfiguration -AuditServerDoesNotSupportEncryption $true
 Set-SmbClientConfiguration -AuditServerDoesNotSupportSigning $true
 ```
 
-Event logs for these changes are stored in the following Event Viewer paths with their given Event ID.
+Event logs for these changes are stored in the following Event Viewer paths with their specific Event ID.
 
 |Path|Event ID|
 |-|-|
@@ -304,7 +303,7 @@ Event logs for these changes are stored in the following Event Viewer paths with
 
 ##### SMB over QUIC auditing
 
-SMB over QUIC client connection auditing captures events that are written to an event log to include the QUIC transport in the Event Viewer. These logs are stored in the following paths with their given Event ID.
+SMB over QUIC client connection auditing captures events that are written to an event log to include the QUIC transport in the Event Viewer. These logs are stored in the following paths with their specific Event ID.
 
 |Path|Event ID|
 |-|-|
@@ -329,7 +328,7 @@ Previously, when a share was created, the SMB firewall rules were automatically 
 
 #### SMB authentication rate limiter
 
-SMB authentication rate limiter limits the number of authentication attempts that can be made within a certain time period. SMB authentication rate limiter helps combat brute force authentication attacks. The SMB server service uses the authentication rate limiter to implement a delay between each failed NTLM or PKU2U-based authentication attempt and is enabled by default. To learn more, see [How SMB authentication rate limiter works](../storage/file-server/configure-smb-authentication-rate-limiter.md#how-smb-authentication-rate-limiter-works).
+The SMB authentication rate limiter limits the number of authentication attempts within a certain time period. SMB authentication rate limiter helps combat brute force authentication attacks. The SMB server service uses the authentication rate limiter to implement a delay between each failed NTLM or PKU2U-based authentication attempt and is enabled by default. To learn more, see [How SMB authentication rate limiter works](../storage/file-server/configure-smb-authentication-rate-limiter.md#how-smb-authentication-rate-limiter-works).
 
 #### Disable SMB NTLM
 
@@ -341,7 +340,7 @@ You can now [manage SMB dialects in Windows](../storage/file-server/manage-smb-d
 
 #### SMB signing
 
-SMB signing is now required by default for all SMB outbound connections where previously it was required only when connecting to shares named **SYSVOL** and **NETLOGON** on AD domain controllers. To learn more, see [How signing works](../storage/file-server/smb-signing-overview.md#how-signing-works).
+SMB signing is now required by default for all SMB outbound connections. Previously, it was required only when you connected to shares named **SYSVOL** and **NETLOGON** on AD domain controllers. To learn more, see [How signing works](../storage/file-server/smb-signing-overview.md#how-signing-works).
 
 #### Remote Mailslots
 
@@ -351,7 +350,7 @@ The Remote Mailslot protocol is disabled by default for SMB and for DC locator p
 
 By default new Routing and Remote Access Services (RRAS) installations don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols, if necessary. SSTP- and IKEv2-based VPN connections are still accepted without any change.
 
-Existing configurations retain their behavior. For example, if you're running Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 by using an in-place upgrade, L2TP and PPTP based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
+Existing configurations retain their behavior. For example, if you run Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 by using an in-place upgrade, L2TP- and PPTP-based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
 ## Hyper-V, AI, and performance
 
@@ -367,9 +366,9 @@ When you create a new VM through the Hyper-V Manager, **Generation 2** is now se
 
 Hypervisor-enforced paging translation (HVPT) is a security enhancement to enforce the integrity of linear address translations. HVPT protects critical system data from write-what-where attacks where the attacker writes an arbitrary value to an arbitrary location, often as the result of a buffer overflow. HVPT guards page tables that configure critical system data structures. HVPT includes everything already secured with hypervisor-protected code integrity (HVCI). HVPT is enabled by default where hardware support is available. HVPT isn't enabled when Windows Server runs as a guest in a VM.
 
-### GPU Partitioning
+### GPU partitioning
 
-GPU partitioning allows you to share a physical GPU device with multiple virtual machines (VMs). Instead of allocating the entire GPU to a single VM, GPU partitioning (GPU-P) assigns dedicated fractions of the GPU to each VM. With Hyper-V GPU-P high availability, a GPU-P VM is automatically enabled on another cluster node in the case of unplanned downtime. 
+ You can share a physical GPU device with multiple virtual machines (VMs) by using GPU partitioning. Instead of allocating the entire GPU to a single VM, GPU partitioning (GPU-P) assigns dedicated fractions of the GPU to each VM. With Hyper-V GPU-P high availability, a GPU-P VM is automatically enabled on another cluster node in the case of unplanned downtime.
 
 GPU-P Live Migration provides a solution to move a VM (for planned downtime or load balancing) with GPU-P to another node whether it's standalone or clustered. To learn more about GPU partitioning, see [GPU partitioning](../virtualization/hyper-v/gpu-partitioning.md).
 
@@ -413,7 +412,7 @@ NVMe is a new standard for fast solid-state drives (SSDs). NVMe storage performa
 
 ### Storage Replica Compression
 
-Storage Replica Compression reduces the amount of data transferred over the network during replication. To learn more about compression in Storage Replica, see [Storage Replica Overview](../storage/storage-replica/storage-replica-overview.md).
+Storage Replica Compression reduces the amount of data transferred over the network during replication. To learn more about compression in Storage Replica, see [Storage Replica overview](../storage/storage-replica/storage-replica-overview.md).
 
 ### Storage Replica Enhanced Log
 
@@ -435,7 +434,7 @@ Server Message Block (SMB) is one of the most widely used protocols in networkin
 
 ### Simplified Azure Arc Setup
 
-By default, the Azure Arc Setup Feature-on-Demand is installed, which offers a user-friendly wizard interface and a system tray icon in the taskbar to facilitate the process of adding servers to Azure Arc. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These environments include datacenters, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
+By default, the Azure Arc Setup Feature-on-Demand is installed, which offers a user-friendly wizard interface and a system tray icon in the taskbar to facilitate the process of adding servers to Azure Arc. Azure Arc extends the capabilities of the Azure platform so that you can create applications and services that can operate in diverse environments. These environments include datacenters, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
 
 ### Pay-as-you-go licensing
 
