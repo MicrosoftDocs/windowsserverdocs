@@ -99,8 +99,6 @@ This section provides information to help you troubleshoot common problems that 
 
 - [Microsoft product support lifecycle](https://support.microsoft.com/lifecycle/)
 
-- [Software assurance support](https://support.microsoft.com/?scid=fh%3B%5Bln%5D%3BSoftAssurance)
-
 - [Microsoft Technology Centers](https://www.microsoft.com/mtc)
 
 - [Support for small businesses](https://support.microsoft.com/contactus)
