@@ -99,11 +99,11 @@ This section provides information to help you troubleshoot common problems that 
 
 - [Microsoft product support lifecycle](https://support.microsoft.com/lifecycle/)
 
-- [Software assurance support](https://support.microsoft.com/default.aspx?scid=fh;%5Bln%5D;SoftAssurance)
+- [Software assurance support](https://support.microsoft.com/?scid=fh%3B%5Bln%5D%3BSoftAssurance)
 
 - [Microsoft Technology Centers](https://www.microsoft.com/mtc)
 
-- [Support for small businesses](https://smallbusiness.support.microsoft.com/contact)
+- [Support for small businesses](https://support.microsoft.com/contactus)
 
 - [Windows Server Essentials and Small Business Server Blog](/archive/blogs/sbs/)
 
