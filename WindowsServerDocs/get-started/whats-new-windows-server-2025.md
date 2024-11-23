@@ -207,9 +207,9 @@ Several features are introduced to Microsoft LAPS that bring the following impro
 
   The ADUC snap-in (via Microsoft Management Console) now features an improved Windows LAPS tab. The Windows LAPS password now appears in a new font that enhances its readability when it appears in plain text.
 
-- **PostAuthenticationAction support for terminating individual processes**: A new option is added to the `PostAuthenticationActions` (PAA) Group Policy setting, `Reset the password, sign out the managed account, and terminate any remaining processes` located in **Computer Configuration** > **Administrative Templates** > **System** > **LAPS** > **Post-authentication actions**.
+- **PostAuthenticationAction support for terminating individual processes**: A new option is added to the `PostAuthenticationActions` (PAA) Group Policy setting, `Reset the password, sign out the managed account, and terminate any remaining processes`, which is located in **Computer Configuration** > **Administrative Templates** > **System** > **LAPS** > **Post-authentication actions**.
 
-  This new option is an extension of the previous `Reset the password and sign out the managed account` option. After configuration, the PAA notifies and then terminates any interactive sign-in sessions. It enumerates and terminates any remaining processes that are still running under the Windows LAPS-managed local account identity. No notification precedes this termination.
+  This new option is an extension of the previous option, `Reset the password and sign out the managed account`. After configuration, the PAA notifies and then terminates any interactive sign-in sessions. It enumerates and terminates any remaining processes that are still running under the Windows LAPS-managed local account identity. No notification precedes this termination.
   
   The expansion of logging events during the execution of post-authentication action provides deeper insights into the operation.
 
@@ -225,7 +225,7 @@ By implementing a customized security baseline, you can establish security measu
 
 ### Virtualization-based security enclaves
 
-A virtualization-based security (VBS) enclave is a software-based trusted execution environment (TEE) inside the address space of a host application. VBS enclaves use underlying [VBS technology](/windows-hardware/design/device-experiences/oem-vbs) to isolate the sensitive portion of an application in a secure partition of memory. VBS enclaves enable isolation of sensitive workloads from both the host application and the rest of the system.
+A virtualization-based security (VBS) enclave is a software-based trusted execution environment inside the address space of a host application. VBS enclaves use underlying [VBS technology](/windows-hardware/design/device-experiences/oem-vbs) to isolate the sensitive portion of an application in a secure partition of memory. VBS enclaves enable isolation of sensitive workloads from both the host application and the rest of the system.
 
 VBS enclaves enable applications to protect their secrets by removing the need to trust admins and hardening against malicious attackers. For more information, read the [VBS enclaves Win32 reference](/windows/win32/trusted-execution/vbs-enclaves).
 
@@ -239,9 +239,11 @@ VBS key protection helps prevent exfiltration attacks by any admin-level attacke
 
 ### Secured connectivity
 
+The following sections discuss security for connections.
+
 #### Secure certificate management
 
-Searching or retrieving certificates on Windows now supports SHA-256 hashes, as described in the functions [CertFindCertificateInStore](/windows/win32/api/wincrypt/nf-wincrypt-certfindcertificateinstore), and [CertGetCertificateContextProperty](/windows/win32/api/wincrypt/nf-wincrypt-certgetcertificatecontextproperty). TLS server authentication is more secure across Windows, and now requires a minimum RSA key length of 2,048 bits. For more information, read [TLS server authentication: Deprecation of weak RSA certificates](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/tls-server-authentication-deprecation-of-weak-rsa-certificates/ba-p/4134028).
+Searching or retrieving certificates on Windows now supports SHA-256 hashes, as described in the functions [CertFindCertificateInStore](/windows/win32/api/wincrypt/nf-wincrypt-certfindcertificateinstore), and [CertGetCertificateContextProperty](/windows/win32/api/wincrypt/nf-wincrypt-certgetcertificatecontextproperty). TLS server authentication is more secure across Windows and now requires a minimum RSA key length of 2,048 bits. For more information, read [TLS server authentication: Deprecation of weak RSA certificates](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/tls-server-authentication-deprecation-of-weak-rsa-certificates/ba-p/4134028).
 
 #### SMB over QUIC
 
@@ -249,7 +251,7 @@ The [SMB over QUIC](../storage/file-server/smb-over-quic.md) server feature, whi
 
 ##### SMB over QUIC enablement policy
 
-Administrators can disable SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC by using Group Policy, set the **Enable SMB over QUIC** policy in the following paths to **Disabled**:
+Administrators can disable the SMB over QUIC client through Group Policy and PowerShell. To disable SMB over QUIC by using Group Policy, set the **Enable SMB over QUIC** policy in the following paths to **Disabled**:
 
 - *Computer Configuration\Administrative Templates\Network\Lanman Workstation*
 - *Computer Configuration\Administrative Templates\Network\Lanman Server*
@@ -264,7 +266,7 @@ Set-SmbClientConfiguration -EnableSMBQUIC $false
 
 Administrators can enable auditing of the SMB server and client for support of SMB signing and encryption. If a non-Microsoft client or server lacks support for SMB encryption or signing, it can be detected. When a non-Microsoft device or software states it supports SMB 3.1.1, but fails to support SMB signing, it violates the [SMB 3.1.1 Pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
 
-You can configure SMB signing and encryption auditing settings by using Group Policy or PowerShell. These policies can be changed in the following Group Policy paths:
+You can configure SMB signing and encryption auditing settings by using Group Policy or PowerShell. You can change these policies in the following Group Policy paths:
   
 - *Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support encryption*
 - *Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support signing*
@@ -299,11 +301,11 @@ SMB over QUIC client connection auditing captures events that are written to an 
 
 ##### SMB over QUIC client access control
 
-Windows Server 2025 includes SMB over QUIC client access control. SMB over QUIC is an alternative to TCP and RDMA that supplies secure connectivity to edge file servers over untrusted networks. Client access control introduces more controls to restrict access to your data by using certificates. To learn more, see [How client access control works](../storage/file-server/configure-smb-over-quic-client-access-control.md#how-client-access-control-works).
+Windows Server 2025 includes client access control for SMB over QUIC. SMB over QUIC is an alternative to TCP and RDMA that supplies secure connectivity to edge file servers over untrusted networks. Client access control introduces more controls to restrict access to your data by using certificates. To learn more, see [How client access control works](../storage/file-server/configure-smb-over-quic-client-access-control.md#how-client-access-control-works).
 
 #### SMB alternative ports
 
-You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports instead of their IANA/IETF defaults of 445, 5445, and 443. You can configure alternative ports via Group Policy or PowerShell. Previously, SMB server in Windows mandated inbound connections to use the IANA-registered port TCP/445 while the SMB TCP client allowed only outbound connections to that same TCP port. Now, SMB over QUIC allows for SMB alternative ports where QUIC-mandated UDP/443 ports are available for both server and client devices. To learn more, see [Configure alternative SMB ports](../storage/file-server/smb-ports.md).
+You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports instead of their IANA/IETF defaults of 445, 5445, and 443. You can configure alternative ports via Group Policy or PowerShell. Previously, the SMB server in Windows mandated inbound connections to use the IANA-registered port TCP/445 while the SMB TCP client allowed only outbound connections to that same TCP port. Now, SMB over QUIC allows for SMB alternative ports where QUIC-mandated UDP/443 ports are available for both server and client devices. To learn more, see [Configure alternative SMB ports](../storage/file-server/smb-ports.md).
 
 #### SMB firewall rule hardening
 
@@ -315,7 +317,7 @@ Previously, when a share was created, the SMB firewall rules were automatically 
 
 #### SMB authentication rate limiter
 
-The SMB authentication rate limiter limits the number of authentication attempts within a certain time period. SMB authentication rate limiter helps combat brute force authentication attacks. The SMB server service uses the authentication rate limiter to implement a delay between each failed NTLM or PKU2U-based authentication attempt and is enabled by default. To learn more, see [How SMB authentication rate limiter works](../storage/file-server/configure-smb-authentication-rate-limiter.md#how-smb-authentication-rate-limiter-works).
+The SMB authentication rate limiter limits the number of authentication attempts within a certain time period. The SMB authentication rate limiter helps combat brute-force authentication attacks. The service for the SMB server uses the authentication rate limiter to implement a delay between each failed New Technology LAN Manager (NTLM) or PKU2U-based authentication attempt. The service is enabled by default. To learn more, see [How SMB authentication rate limiter works](../storage/file-server/configure-smb-authentication-rate-limiter.md#how-smb-authentication-rate-limiter-works).
 
 #### Disable SMB NTLM
 
@@ -323,7 +325,7 @@ Beginning with Windows Server 2025, the SMB client supports NTLM blocking for re
 
 #### SMB dialect control
 
-You can now [manage SMB dialects in Windows](../storage/file-server/manage-smb-dialects.md). When configured, the SMB server determines which SMB 2 and SMB 3 dialects it negotiates compared to the previous behavior matching only the highest dialect.
+You can now [manage SMB dialects in Windows](../storage/file-server/manage-smb-dialects.md). When configured, the SMB server determines which SMB 2 and SMB 3 dialects it negotiates compared to the previous behavior and matches only the highest dialect.
 
 #### SMB signing
 
@@ -331,15 +333,17 @@ SMB signing is now required by default for all SMB outbound connections. Previou
 
 #### Remote Mailslots
 
-The Remote Mailslot protocol is disabled by default for SMB and for DC locator protocol use with Active Directory. Remote Mailslot might be removed in a later release. To learn more, see [Features we're no longer developing](../get-started/removed-deprecated-features-windows-server-2025.md#features-were-no-longer-developing).
+The Remote Mailslot protocol is disabled by default for SMB and for DC Locator protocol use with Active Directory. Remote Mailslot might be removed in a later release. To learn more, see [Features we're no longer developing](../get-started/removed-deprecated-features-windows-server-2025.md#features-were-no-longer-developing).
 
 #### Routing and Remote Access Services hardening
 
-By default new Routing and Remote Access Services (RRAS) installations don't accept VPN connections based on PPTP and L2TP protocols. You can still enable these protocols, if necessary. SSTP- and IKEv2-based VPN connections are still accepted without any change.
+By default, new Routing and Remote Access Services (RRAS) installations don't accept VPN connections based on the Point-to-Point Tunneling Protocol (PPTP) and the Layer 2 Tunneling Protocol (L2TP). You can still enable these protocols, if necessary. VPN connections based on the Secure Socket Tunneling Protocol (SSTP) and the Internet Key Exchange Version 2 Protocol (IKEv2) are still accepted without any change.
 
-Existing configurations retain their behavior. For example, if you run Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 by using an in-place upgrade, L2TP- and PPTP-based connections are still accepted. This change doesn't affect Windows clients operating systems. To learn more about how to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
+Existing configurations retain their behavior. For example, if you run Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 by using an in-place upgrade, connections based on L2TP and PPTP are still accepted. This change doesn't affect Windows client operating systems. To learn more about how to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
 ## Hyper-V, AI, and performance
+
+The following sections discuss Hyper-V, AI, and performance.
 
 ### Accelerated Networking
 
@@ -347,23 +351,23 @@ Accelerated Networking (AccelNet) simplifies the management of single root I/O v
 
 ### Hyper-V Manager
 
-When you create a new VM through the Hyper-V Manager, **Generation 2** is now set as the default option in the **New Virtual Machine Wizard**.
+When you create a new VM through the Hyper-V Manager, **Generation 2** is now set as the default option in the **New Virtual Machine** wizard.
 
 ### Hypervisor-enforced paging translation
 
-Hypervisor-enforced paging translation (HVPT) is a security enhancement to enforce the integrity of linear address translations. HVPT protects critical system data from write-what-where attacks where the attacker writes an arbitrary value to an arbitrary location, often as the result of a buffer overflow. HVPT guards page tables that configure critical system data structures. HVPT includes everything already secured with hypervisor-protected code integrity (HVCI). HVPT is enabled by default where hardware support is available. HVPT isn't enabled when Windows Server runs as a guest in a VM.
+Hypervisor-enforced paging translation (HVPT) is a security enhancement to enforce the integrity of linear address translations. HVPT protects critical system data from write-what-where attacks, where the attacker writes an arbitrary value to an arbitrary location, often as the result of a buffer overflow. HVPT guards page tables that configure critical system data structures. HVPT includes everything already secured with hypervisor-protected code integrity (HVCI). HVPT is enabled by default, where hardware support is available. HVPT isn't enabled when Windows Server runs as a guest in a VM.
 
 ### GPU partitioning
 
- You can share a physical GPU device with multiple virtual machines (VMs) by using GPU partitioning. Instead of allocating the entire GPU to a single VM, GPU partitioning (GPU-P) assigns dedicated fractions of the GPU to each VM. With Hyper-V GPU-P high availability, a GPU-P VM is automatically enabled on another cluster node in the case of unplanned downtime.
+ You can share a physical graphics processing unit (GPU) device with multiple virtual machines (VMs) by using GPU partitioning. Instead of allocating the entire GPU to a single VM, GPU partitioning (GPU-P) assigns dedicated fractions of the GPU to each VM. With Hyper-V GPU-P high availability, a GPU-P VM is automatically enabled on another cluster node in the case of unplanned downtime.
 
 GPU-P Live Migration provides a solution to move a VM (for planned downtime or load balancing) with GPU-P to another node whether it's standalone or clustered. To learn more about GPU partitioning, see [GPU partitioning](../virtualization/hyper-v/gpu-partitioning.md).
 
 ### Dynamic processor compatibility
 
-Dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic processor compatibility uses the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility.
+The dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic processor compatibility uses the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility.
 
-You can also use dynamic processor compatibility also to save its state between virtualization hosts that use different generations of processors. Processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation (SLAT). To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
+You can also use dynamic processor compatibility to save its state between virtualization hosts that use different generations of processors. The processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation. To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
 
 ### Workgroup clusters
 
@@ -383,9 +387,11 @@ Windows Server 2025 also supports up to 240 TB of memory and 2,048 virtual proce
 
 ## Storage
 
+The following sections describe storage updates.
+
 ### Block cloning support
 
-Starting with Windows 11 24H2 and Windows Server 2025, Dev Drive now supports block cloning. As Dev Drive uses the ReFS file system format, block cloning support provides significant performance benefits when copying files. With block cloning, the file system can copy a range of file bytes on behalf of an application as a low-cost metadata operation instead of performing expensive read and write operations to the underlying physical data. 
+Starting with Windows 11 24H2 and Windows Server 2025, Dev Drive now supports block cloning. Because Dev Drive uses the Resilient File System (ReFS) format, block cloning support provides significant performance benefits when you copy files. With block cloning, the file system can copy a range of file bytes on behalf of an application as a low-cost metadata operation instead of performing expensive read-and-write operations to the underlying physical data.
 
 The result is faster completion of file copying, reduced I/O to the underlying storage, and improved storage capacity by enabling multiple files to share the same logical clusters. To learn more, see [Block cloning on ReFS](/windows-server/storage/refs/block-cloning).
 
@@ -395,19 +401,19 @@ Dev Drive is a storage volume that aims to enhance the performance of crucial de
 
 ### NVMe
 
-NVMe is a new standard for fast solid-state drives (SSDs). NVMe storage performance has been optimized in Windows Server 2025 with improved performance, resulting in an increase in IOPS and decrease in CPU utilization.
+NVM Express (NVMe) is a new standard for fast solid-state drives (SSDs). NVMe storage performance is optimized in Windows Server 2025. The result is improved performance with an increase in IOPS and a decrease in CPU utilization.
 
-### Storage Replica Compression
+### Storage Replica compression
 
-Storage Replica Compression reduces the amount of data transferred over the network during replication. To learn more about compression in Storage Replica, see [Storage Replica overview](../storage/storage-replica/storage-replica-overview.md).
+Storage Replica compression reduces the amount of data transferred over the network during replication. To learn more about compression in Storage Replica, see [Storage Replica overview](../storage/storage-replica/storage-replica-overview.md).
 
 ### Storage Replica Enhanced Log
 
-Enhanced Logs help the Storage Replica log implementation to eliminate the performance costs associated with file system abstractions, leading to improved block replication performance. To learn more, see [Storage Replica Enhanced Log](../storage/storage-replica/storage-replica-enhanced-log.md).
+Storage Replica Enhanced Log helps with log implementation to eliminate the performance costs associated with file system abstractions. Block replication performance is improved. To learn more, see [Storage Replica Enhanced Log](../storage/storage-replica/storage-replica-enhanced-log.md).
 
 ### ReFS native storage deduplication and compression
 
-ReFS native storage deduplication and compression are techniques used to optimize storage efficiency for both static and active workloads such as file servers or virtual desktops. To learn more about ReFS deduplication and compression, see [Optimize storage with ReFS deduplication and compression in Azure Stack HCI](/azure/azure-local/manage/refs-deduplication-and-compression).
+ReFS native storage deduplication and compression are techniques used to optimize storage efficiency for both static and active workloads, such as file servers or virtual desktops. To learn more about ReFS deduplication and compression, see [Optimize storage with ReFS deduplication and compression in Azure Stack HCI](/azure/azure-local/manage/refs-deduplication-and-compression).
 
 ### Thin provisioned volumes
 
