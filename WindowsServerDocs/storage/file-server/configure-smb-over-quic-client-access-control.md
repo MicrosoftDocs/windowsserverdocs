@@ -4,7 +4,7 @@ description: Learn how to configure SMB over QUIC client access control using Po
 ms.topic: how-to
 author: gswashington
 ms.author: alalve
-ms.date: 11/15/2024
+ms.date: 11/25/2024
 #customer intent: As an administrator, I want to configure SMB over QUIC client access control in Windows Server so that I can restrict which clients can access SMB over QUIC servers.
 ---
 
@@ -14,28 +14,22 @@ SMB over QUIC client access control enables you to restrict which clients can ac
 
 ## How client access control works
 
-Client access control checks clients connecting to a server are using a known client certificate or have a certificate issued by a shared root certificate. The admin issues this certificate to the client and adds the hash to an allowlist maintained by the server. When the client tries to connect to the server, the server compares the client certificate against the allowlist.
+Client access control involves the server checking an access control list of certificates to determine whether a client is permitted to establish a QUIC connection with the server. The server validates the client certificate chain and ensures that it's trusted before proceeding with the access control checks. To configure client access control, an admin issues a certificate to the client and can add a hash of the certificate to an access control list maintained by the server.
 
-If the certificate is valid, the server certificate creates a TLS 1.3-encrypted tunnel over UDP port 443 and grants the client access to the share. Client access control also supports certificates with subject alternative names. You can also configure SMB over QUIC to block access by revoking certificates or explicitly denying certain devices access.
+If the client is permitted to connect to the server over QUIC, a TLS 1.3-encrypted tunnel over UDP port 443 is created. Client access control also supports certificates with subject alternative names. You can also configure SMB over QUIC to block access by revoking certificates or explicitly denying certain devices access. A server admin is able to prevent a client from accessing the server by revoking the client certificate, instead of relying solely on client access control.
 
 > [!NOTE]
 > We recommend using SMB over QUIC with Active Directory domains, however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM.
 
-To identify a certificate, you can use either its SHA256 hash or its issuer name. If you need to obtain the SHA256 hash, you can use the [Certutil](/windows-server/administration/windows-commands/certutil) command. Leaf certificates have an SHA256 hash, while intermediate certificates have an SHA256 hash or the issuer of their immediate child certificates. Root certificate SHA256 entries aren't supported, so you must use the issuer of their child certificates to identify them.
+Allow access control entries can be added and removed using the `Grant-SmbClientAccessToServer` and `Revoke-SmbClientAccessToServer` cmdlets respectively. Deny access control entries can be added and removed using the `Block-SmbClientAccessToServer` and `Unblock-SmbClientAccessToServer` cmdlets respectively. The entries in the access control list can be displayed using the `Get-SmbClientAccessToServer` cmdlet.
 
-The administrator creates access control entries and checks the SHA256 hashes and issuer names of the certificates in the client certificate chain against them. If none of the certificates are denied access and at least one is allowed access, the client is granted access.
+A leaf certificate can be granted or denied access by adding an access control entry that identifies the certificate by its SHA256 hash. A group of leaf certificates with a common issuer can all be granted or denied access by adding an issuer access control entry for the common issuer. An issuer entry can be added for intermediate CA certificates and root CA certificates. Using issuer entries can be useful since they help reduce the total number of entries that need to be added. If none of the certificates in the client's certificate chain are denied access and at least one is allowed access, the client is granted access. For example:
 
-Since the root certificate is already present in the server trusted roots, the client doesn't send it to the server. Instead, the server identifies the root certificate using the top-level certificate in the client certificate chain.
+- If an allow entry is added for a CA certificate and a deny entry is added for one of the leaf certificates, all certificates issued by the CA are granted access except for the certificate for which the deny entry is added.
 
-## Client access control hierarchy
+- If a deny entry is added for a CA certificate and an allow entry is added for one of the lead certificates, all certificates issued by the CA are denied access. The certificate, for which an allow entry was added, is denied access because any deny entry in the certificate chain takes priority over allow entries.
 
-The client access control hierarchy for certificates for SMB over QUIC is based on a chain of trust. Every certificate in the chain is issued by a trusted higher-level certificate authority that can verify the identity of the entity requesting access.
-
-- At the top of the chain is the Root Certificate Authority (CA), which is the most trusted authority. It issues certificates to intermediate CAs owned by organizations that require a high level of security.
-- Intermediate CAs issue certificates to end entities, which are the entities requesting access to the SMB server.
-- End entities must present a valid certificate that's issued by an intermediate CA in order to be granted access. The certificate contains information about the identity of the end entity and is used to verify that the entity is who they say they are.
-
-Specifying deny entries and enabling certificate entries to refer to certificates below the given certificate in the chain of trust is advantageous. It minimizes the number of entries that require specification. For example, if a common intermediate certificate grants access to all leaf certificates except for a few, the administrator can specify an allow entry for the intermediate certificate and deny entries for the few leaf certificates. This eliminates the need to specify the allowed entries for each leaf certificate that has access.
+- Suppose a Root CA has two intermediate CAs called intermediate CA 1 and intermediate CA 2. If an allow entry is added for the root CA and a deny entry is added for intermediate CA 2 then certificates issued by intermediate CA 1 are granted access and certificates issued by intermediate CA 2 are denied access.
 
 ## Prerequisites
 
@@ -75,18 +69,14 @@ You also need an *SMB client* with the following prerequisites.
 
 ## Configure the SMB client
 
-Before managing the settings for the SMB client, the SMB server must be configured to authenticate the client before accessing the SMB share as a layer of security. To allow client devices access to the SMB share, run the following command:
+To manage the settings for the SMB client, it's necessary to first configure the SMB server to mandate that the client sends a valid and reliable certificate chain for conducting access control checks. To perform this action, run the following command:
 
 ```powershell
 Set-SmbServerCertificateMapping -RequireClientAuthentication $true
 ```
 
-When **RequireClientAuthentication** is set to `$true`, the server mandates that the client provides a valid and trusted certificate chain. Without requiring client authentication, anyone who has access to the network could potentially access the SMB share and view or modify sensitive data. By requiring client authentication, you can help to prevent unauthorized access to the SMB share and protect your data.
-
 > [!NOTE]
 > If both **RequireClientAuthentication** and **SkipClientCertificateAccessCheck** are set to `$true`, the server verifies the validity and trustworthiness of the client certificate chain but does not perform access control checks.
-
-To learn more about the SMB share PowerShell cmdlets, see the [SmbShare](/powershell/module/smbshare) module reference.
 
 ### Gather the SMB client certificate information
 
@@ -161,9 +151,9 @@ Follow the steps to grant clients from a specific certification authority, also 
    Grant-SmbClientAccessToServer -Name <name> -IdentifierType ISSUER -Identifier "<subject name>"
    ```
 
-### Connect to the SMB server
+### Test client access control connectivity
 
-When you're finished, test whether you can connect to the server by running one of the following commands:
+After following the previous steps, run a connectivity test by mapping to a share for your server or client device. To perform this, run one of the following commands:
 
 ```cmd
 NET USE \\<server DNS name>\<share name> /TRANSPORT:QUIC
@@ -175,23 +165,35 @@ Or
 New-SmbMapping -RemotePath \\<server DNS name>\<share name> -TransportType QUIC
 ```
 
-If you can connect to the server, you've successfully configured SMB over QUIC using client access control.
+If you can connect to a share, you've successfully configured SMB over QUIC using client access control.
 
-## Disable SMB over QUIC
+## Manage SMB over QUIC
 
-Starting with Windows 11, version 24H2, admins can now disable SMB over QUIC for client by running the following command:
+Users can specify a list of servers that the client can connect to when SMB over QUIC is disabled on the client. This list is similar to the Block NTLM exception list. To learn more, see [Enable exceptions to NTLM blocking](/windows-server/storage/file-server/smb-ntlm-blocking?tabs=group-policy#enable-exceptions-to-ntlm-blocking). Furthermore, there's a new option available to disable SMB over QUIC on the server.
+
+Admins can now specify an SMB over QUIC server exception list on the client. A client can connect to a server when SMB over QUIC is disabled on the client as long as the server IP address, NetBIOS name or FQDN is in the exception list. A server exception list can be created by running the following command:
 
 ```powershell
-Set-SmbClientConfiguration -EnableSMBQUIC $false
+Set-SmbClientConfiguration -DisabledSMBQUICServerExceptionList "<Server01>, <Server02>, <Server03>"
 ```
 
-Similarly, this operation can be performed in Group Policy by disabling the **Enable SMB over QUIC** policy in the following path:
+This operation can also be performed in Group Policy by enabling the **Disabled SMB over QUIC Server Exception List** policy in the following path:
 
 - **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
 
+Admins can also disable SMB over QUIC for a server by running the following command:
+
+```powershell
+Set-SmbServerConfiguration -EnableSMBQUIC $false
+```
+
+This operation can be performed in Group Policy by disabling the **Enable SMB over QUIC** policy in the following path:
+
+- **Computer Configuration\Administrative Templates\Network\Lanman Server**
+
 ## Audit event logs
 
-When auditing event logs for SMB client access control, it's important to focus on the access denied and allowed events. These events display several properties for the client certificates in the chain (excluding the root certificate), such as the subject, issuer, serial number, SHA1 and SHA256 hash. These events also display the identifier type, identifier, and description (if present) of the allow and deny entries that apply to the certificate chain.
+Certain events, such as access allowed and access denied, are captured for troubleshooting purposes. These events provide information about the client certificates (excluding the root certificate) such as the subject, issuer, serial number, SHA1 and SHA256 hash, and the access control entries that apply to these certificates. These events display a connection ID. This ID is displayed in certain client connectivity events, which allows the administrator to easily match the server with the client that attempted to establish the connection.
 
 Auditing these events are disabled by default and can be enabled by running the following command:
 
@@ -203,13 +205,14 @@ Once enabled, these events are captured in the **Event Viewer** in the following
 
 | Path | Event ID |
 |-|:-:|
-| Applications and Services Logs\Microsoft\Windows\SMBServer\Audit | 30831 |
-| Applications and Services Logs\Microsoft\Windows\SMBClient\Audit | 3007 <br> 3008 <br> 3009 |
+| Applications and Services Logs\Microsoft\Windows\SMBServer\Audit | 3007 <br> 3008 <br> 3009 |
+| Applications and Services Logs\Microsoft\Windows\SMBClient\Connectivity | 30831 |
 
 ## Related content
 
 - [SMB over QUIC](smb-over-quic.md)
 - [Storage at Microsoft blog](https://aka.ms/FileCab)
+- [SmbShare module reference](/powershell/module/smbshare)
 - [QUIC Working Group homepage](https://quicwg.org/)
 - [Microsoft MsQuic GitHub homepage](https://github.com/microsoft/msquic)
 - [QUIC Wikipedia](https://en.wikipedia.org/wiki/QUIC)
