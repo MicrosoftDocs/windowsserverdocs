@@ -87,7 +87,7 @@ To check the Windows version:
 
 WinRM doesn't allow credential delegation by default. To allow delegation, the computer needs to have Credential Security Support Provider (CredSSP) enabled temporarily.
 
-If you're receiving WinRM error messages, try using the verification steps in the [Manual troubleshooting](/azure-stack/hci/manage/troubleshoot-credssp#manual-troubleshooting) section of [Troubleshoot CredSSP](/azure-stack/hci/manage/troubleshoot-credssp) to resolve them.
+If you're receiving WinRM error messages, try using the verification steps in the [Manual troubleshooting](/azure/azure-local/manage/troubleshoot-credssp#manual-troubleshooting) section of [Troubleshoot CredSSP](/azure/azure-local/manage/troubleshoot-credssp) to resolve them.
 
 ### Did you upgrade your server from 2016 to 2019?
 

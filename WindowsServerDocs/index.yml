@@ -122,7 +122,7 @@ conceptualContent:
         - url: ./networking/sdn/index.yml
           itemType: overview
           text: Software-defined Networking (SDN) overview
-        - url: /azure-stack/hci/concepts/network-controller-overview
+        - url: /azure/azure-local/concepts/network-controller-overview
           itemType: overview
           text: Network controller
       footerLink:
@@ -170,7 +170,7 @@ conceptualContent:
         - url: ./storage/disk-management/overview-of-disk-management.md
           itemType: overview
           text: Disk management overview
-        - url: /azure-stack/hci/concepts/quorum
+        - url: /azure/azure-local/concepts/quorum
           itemType: overview
           text: Understanding cluster and pool quorum
       footerLink:

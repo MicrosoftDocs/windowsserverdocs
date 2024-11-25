@@ -56,7 +56,6 @@ For a domain deployment of MultiPoint Services, you should update the following 
     where '\<SIDofWMSshell>' is the security identifier (SID) for the WMSshell account. To identify the user, run the following PowerShell command.
 
     `Get-ADObject -Filter "objectSid -eq '<SID>'"`
-    Learn more about [Get-ADObject](https://github.com/powershell/module/activedirectory/get-adobject).
 
 3.  In the list on the right, update the following subkeys.
 

@@ -3,7 +3,7 @@ title: Hotpatch for Windows Server
 description: 'Learn how Hotpatch for Windows Server works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
-ms.date: 11/13/2024
+ms.date: 11/19/2024
 ms.author: wscontent
 ---
 
@@ -27,6 +27,8 @@ The following table lists the exact combinations of publisher, OS offer, and SKU
 
 >[!NOTE]
 >Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
+>
+>Not all regions currently support Windows Server 2025: Azure Edition images. If you try to use this feature in a region that doesn't currently support Windows Server 2025: Azure Edition, you might see an HTTP 400 client error. To work around this issue, use a different region that does currently support this feature, such as UK South, East Asia, or West Central US.
 
 | Publisher               | OS Offer      |  SKU               |
 |-------------------------|---------------|--------------------|

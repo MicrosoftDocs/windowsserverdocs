@@ -21,7 +21,7 @@ items:
 
 ### For linking to HCI topics and keeping the context in Windows Server TOC
 - name: Windows Server
-  tocHref: /azure-stack/hci/
+  tocHref: /azure/azure-local/
   topicHref: /windows-server/index
 
 ### For linking to system center topics and keeping the context in Windows Server TOC
