@@ -60,7 +60,7 @@ The following features aren't supported when using Storage Spaces Direct in a vi
 
 - Host level virtual disk size change
 
-    The virtual disks exposed through the VM must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the VMs, and then adding them to the pool. We recommend to use virtual disks of the same size and characteristics as the current virtual disks.
+    The virtual disks exposed through the VM must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the VMs, and then adding them to the pool. We recommend using virtual disks of the same size and characteristics as the current virtual disks.
 
 ## Azure IaaS VM guest clusters
 
@@ -68,7 +68,7 @@ The following features aren't supported when using Storage Spaces Direct in a vi
 
 Consider using Azure Shared Disks for guest virtual machines as an alternative, see [Azure Shared Disks](/azure/virtual-machines/windows/disks-shared).
 
-![Storage Spaces Direct diagram](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
+![Diagram showing Storage Spaces Direct.](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
 
 ## Next steps
 
