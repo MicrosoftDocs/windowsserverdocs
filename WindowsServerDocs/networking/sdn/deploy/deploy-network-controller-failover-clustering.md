@@ -4,7 +4,7 @@ description: Learn how to deploy Network Controller with Failover Clustering usi
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 11/21/2024
+ms.date: 11/26/2024
 zone_pivot_groups: windows-os
 #CustomerIntent: As a network administrator, I want to deploy Network Controller works with Failover Clustering so that I can create my tenant network configurations.
 ---
@@ -16,7 +16,6 @@ Beginning with Windows Server 2025 and Azure Local, version 23H2, Network Contro
 ## Prerequisites
 
 Before you can deploy Network Controller with Failover Clustering, you must complete the following prerequisites.
-
 
 :::zone pivot="windows-server"
 
@@ -30,11 +29,11 @@ Before you can deploy Network Controller with Failover Clustering, you must comp
 
 - You have a failover cluster with at least two nodes running Azure Local, version 23H2 or later.
 
-- If you intend to deploy the Software Load Balancer and Gateway Services as VMs using Failover Cluster, download the Azure Local VHDX image for use later in this article. To learn more about downloading the VHDX, see [/azure-stack/hci/deploy/download-azure-local-23h2-software](Download Azure Local, version 23H2 software).
+- (Optional) If you intend to deploy the Software Load Balancer and Gateway Services as VMs using Failover Cluster, download the Azure Local VHDX image for use later in this article. To learn more about downloading the VHDX, see [/azure-stack/hci/deploy/download-azure-local-23h2-software](Download Azure Local, version 23H2 software).
 
 :::zone-end
 
-- You have shared storage available for the failover cluster using Cluster Storage Space or S2D. TODO: What about other storage options? For example, [Physical storage architectures for Hyper-V](../../../virtualization/hyper-v/hyper-v-storage-architecture.md). TODO: will this be note be supported Note: Cluster Storage Space and S2D are the recommended locations to store your FCNC binaries. However, you can also use any external share between cluster nodes if necessary.
+- You have shared storage available for the failover cluster. We recommend using Cluster Storage Space or S2D. To learn more about the available storage architectures, see [Physical storage architectures for Hyper-V](../../../virtualization/hyper-v/hyper-v-storage-architecture.md).
 
 - All cluster nodes must have Hyper-V enabled.
 
@@ -44,11 +43,53 @@ Before you can deploy Network Controller with Failover Clustering, you must comp
 
 - The physical network must be configured for the subnets and VLANs that you intend to use and must be consistent across all cluster nodes.
 
+- If you're planning to use Windows Admin Center to deploy Network Controller with Failover Clustering, you must have Windows Admin Center version 2410 or later. You also need to the Windows Admin Center SDN extension installed and updated to 3.6.0 or later.
+
 - (Optional) If you intend to deploy the Software Load Balancer and Gateway Services as VMs using Failover Cluster, you must have a location to store the VHDX and configuration files. The location must be reachable from the node on which the SDN Express script is run.
 
-## Install SDN Express
+## Deployment
 
-To deploy Network Controller with Failover Clustering, you must first install the SDN Express script. The SDN Express script is a PowerShell script that automates the deployment of the Software Defined Networking (SDN) infrastructure. To install SDN express, follow these steps:
+To deploy Network Controller with Failover Clustering, select your preferred deployment method.
+
+### [Windows Admin Center](#tab/windows-admin-center)
+
+To deploy Network Controller with Failover Clustering using Windows Admin Center, follow these steps:
+
+1. Sign into Windows Admin Center as an administrator.
+
+1. In Windows Admin Center, under **All connections** select the cluster that you want to manage, then select **Connect**.
+
+1. In the **Cluster Manager** view, from the **Tools** pane on the left, select **SDN Infrastructure**.
+
+1. Select **Get started** to begin the deployment process.
+
+1. On the **Infrastructure type** tab, Select **Native SDN**, then select **Next: Cluster settings**.
+
+1. On the **Cluster settings** tab, provide the following information, then select **Next: Deploy**:
+
+   | Parameter name | Value |
+   |--|--|
+   | **Host** | |
+   | Network Controller REST Name | DNS name used by management clients (such as Windows Admin Center) to communicate with NC |
+   | Network Controller REST IP Address/subnet | Static IP address for your REST API, which is allocated from your management network. It can be used for DNS resolution or REST IP-based deployments. The IP address must use the IP CIDR notation as a way to represent the IP address and it's network prefix. For example, The IP address `10.10.10.10` with a subnet mask of `255.255.255.0` would be write as `10.10.10.10/25`. |
+   | VLAN ID | VLAN ID for the management network |
+   | **Credentials** | |
+   | Username | Administrator username. The username should be in the following format: `domainname\username`. For example, if the domain is `contoso.com`, enter the username as `contoso\<username>`. Don't use formats like `contoso.com\<username>` or `username@contoso.com` |
+   | Password | Password for administrator account |
+   | **Advanced** | |
+   | Database path | File path to the FCNC database. This file path can be any SMB share, but we recommend to use either CSV or S2D |
+   | MAC address pool start | Beginning MAC pool address for client workload VMs |
+   | MAC address pool end | End MAC pool address for client workload VMs |
+
+1. Once you enter configuration details, you are taken to the deployment page. Review the progress of the deployment, when complete, select **Finish**.
+
+You can now begin to deploy and manage your tenant networks.
+
+### [PowerShell](#tab/powershell)
+
+### Install SDN Express
+
+To deploy Network Controller with Failover Clustering using PowerShell, you must first install the SDN Express script. The SDN Express script is a PowerShell script that automates the deployment of the Software Defined Networking (SDN) infrastructure. To install SDN express, follow these steps:
 
 1. Sign on to the first cluster node as an administrator.
 
@@ -70,7 +111,7 @@ To deploy Network Controller with Failover Clustering, you must first install th
 
 You're now ready to begin configuring your configuration files.
 
-## Prepare SDN Express configuration files
+### Prepare SDN Express configuration files
 
 The SDN Express script requires a configuration file to deploy Network Controller with Failover Clustering. The configuration file is a PSD1 file that contains the variables for your Network Controller deployment. To create the configuration file, follow these steps:
 
@@ -97,7 +138,7 @@ The PowerShell `MultiNodeSampleConfig.psd1` configuration data file (located in 
    | **DomainJoinUsername** | Administrator username. The username should be in the following format: `domainname\username`. For example, if the domain is `contoso.com`, enter the username as `contoso\<username>`. Don't use formats like `contoso.com\<username>` or `username@contoso.com` |
    | **LocalAdminDomainUser** | Local administrator username. The username should be in the following format: `domainname\username`. For example, if the domain is `contoso.com`, enter the username as `contoso\<username>`. Don't use formats like `contoso.com\<username>` or `username@contoso.com` |
    | **RestName**           | DNS name used by management clients (such as Windows Admin Center) to communicate with NC                                                                                                                     |
-   | **RestIpAddress**      | Static IP address for your REST API, which is allocated from your management network. It can be used for DNS resolution or REST IP-based deployments                                                          |
+   | **RestIpAddress**      | Static IP address for your REST API, which is allocated from your management network. It can be used for DNS resolution or REST IP-based deployments. The IP address must be allocated from your management network.                                                          |
    | **HyperVHosts**        | Host servers to be managed with Network Controller                                                                                                                                                             |
    | **NCUsername**         | Network Controller account username                                                                                                                                                                          |
    | **ProductKey**         | Product key for SDN infrastructure VMs                                                                                                                                                                       |
@@ -123,13 +164,13 @@ The PowerShell `MultiNodeSampleConfig.psd1` configuration data file (located in 
    | Parameter name   | Value                                                                                                     |
    |------------------|-----------------------------------------------------------------------------------------------------------|
    | **UseFCNC**      | Set to `1` to enable Failover Clustering Network Controller (FCNC)                                        |
-   | **FCNCBin**      | Path to the FCNC binary used by SDN to deploy the SDN NC Service                                          |
-   | **FCNCDBs**      | File path to the FCNC database. This file path can be any SMB share, but it's recommended to use either CSV or S2D |
-   | **UseCertBySubject** | Set to `1` to use a certificate by subject name. Set to `0` to use a certificate by thumbprint. TODO: check description|
+   | **FCNCBin**      | Path to the FCNC binary used by SDN to deploy the SDN NC Service. We recommend storing your FCNC binaries on a Cluster Storage Space and S2D location. However, you can also use any external share between cluster nodes if necessary.                                          |
+   | **FCNCDBs**      | File path to the FCNC database. This file path can be any SMB share, but we recommend using either CSV or S2D. |
+   | **UseCertBySubject** | Leave this value set to `1` to use a certificate by subject name. |
 
 You're now ready to deploy Network Controller with Failover Clustering.
 
-## Deploy Network Controller with Failover Clustering using SDN Express
+### Deploy Network Controller with Failover Clustering using SDN Express
 
 To deploy Network Controller with Failover Clustering, follow these steps:
 
@@ -142,6 +183,10 @@ To deploy Network Controller with Failover Clustering, follow these steps:
 
     .\SDNExpress.ps1 -ConfigurationDataFile <pathtoconfigfile> -verbose
     ```
+
+You can now begin to deploy and manage your tenant networks.
+
+---
 
 ## Related content
 
