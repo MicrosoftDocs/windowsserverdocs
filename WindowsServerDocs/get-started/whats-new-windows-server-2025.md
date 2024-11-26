@@ -101,13 +101,13 @@ Hotpatch is now available for Windows Server 2025 machines connected to Azure Ar
 
 ### Credential Guard
 
-Credential Guard is now enabled by default on devices that meet the requirements, starting with Windows Server 2025. For more information about Credential Guard, see [Configure Credential Guard](/windows/security/identity-protection/credential-guard/configure).
+Starting with Windows Server 2025, Credential Guard is now enabled by default on devices that meet the requirements. For more information about Credential Guard, see [Configure Credential Guard](/windows/security/identity-protection/credential-guard/configure).
 
 ### Active Directory Domain Services
 
 The latest enhancements to Active Directory Domain Services (AD DS) and Active Directory Lightweight Domain Services (AD LDS) introduce a range of new functionalities and capabilities aimed at optimizing your domain management experience:
 
-- **32,000 database page size optional feature**: Windows Server Active Directory (Windows Server AD) uses an Extensible Storage Engine database since its introduction in Windows 2000 that uses a size of 8,000 database pages. The architectural design decision for 8,000 pages resulted in limitations throughout Windows Server AD that are documented in [Windows Server AD maximum limits and scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)). An example of this limitation is a single record Windows Server AD object, which can't exceed 8,000 bytes in size. A format of 32,000 database pages offers a huge improvement in areas affected by legacy restrictions. Multivalued attributes can now hold up to ~3,200 values, which is an increase by a factor of 2.6.
+- **Size of 32,000 database pages (optional feature)**: Windows Server Active Directory (Windows Server AD) uses an Extensible Storage Engine database since its introduction in Windows 2000 that uses a size of 8,000 database pages. The architectural design decision for 8,000 pages resulted in limitations throughout Windows Server AD that are documented in [Windows Server AD maximum limits and scalability](/previous-versions/windows/it-pro/windows-server-2003/cc756101(v=ws.10)). An example of this limitation is a single record Windows Server AD object, which can't exceed 8,000 bytes in size. A format of 32,000 database pages offers a huge improvement in areas affected by legacy restrictions. Multivalued attributes can now hold up to ~3,200 values, which is an increase by a factor of 2.6.
 
   You can install new domain controllers (DCs) with a 32,000-page database that uses 64-bit Long Value IDs and runs in an 8,000-page mode for compatibility with previous versions. An upgraded DC continues to use its current database format and 8,000 pages. Moving to 32,000 database pages is done on a forestwide basis and requires that all DCs in the forest have a database that's capable of handling 32,000 pages.
 
