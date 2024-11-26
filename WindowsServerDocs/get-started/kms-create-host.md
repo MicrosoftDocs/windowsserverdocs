@@ -2,8 +2,8 @@
 title: How to create a Key Management Services (KMS) activation host in Windows Server
 description: Learn how to create a Key Management Services (KMS) activation host to activate Windows Server and Windows KMS clients.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: wscontent
 manager: femila
 ms.date: 9/13/2021
 ---
