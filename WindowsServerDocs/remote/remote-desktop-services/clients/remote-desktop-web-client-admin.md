@@ -67,7 +67,7 @@ To install the web client for the first time, follow these steps:
 4. Install the Remote Desktop web client management PowerShell module from the PowerShell gallery with this cmdlet:
 
     ```PowerShell
-    Install-Module -Name RDWebClientManagement
+    Install-Module -Name RDWebClientManagement -AcceptLicense
     ```
 
 5. After that, run the following cmdlet to download the latest version of the Remote Desktop web client:
