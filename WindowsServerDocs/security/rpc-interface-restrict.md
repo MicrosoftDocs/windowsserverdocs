@@ -3,7 +3,7 @@ title: RPC Interface Restriction for Windows Server
 description: RPC Interface Restriction helps to prevent unauthorized access to system resources and data when enabled in group policy object editor or in the registry.
 ms.topic: how-to
 author: xelu86 
-ms.author: roharwoo
+ms.author: alalve
 ms.date: 05/12/2023
 ---
 

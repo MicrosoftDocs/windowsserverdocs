@@ -3,7 +3,7 @@ ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time service tools and settings
 author: xelu86
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure these settings in the registry or Group Policy Object Editor (GPO).
-ms.author: roharwoo
+ms.author: alalve
 ms.date: 05/30/2023
 ms.topic: article
 ---

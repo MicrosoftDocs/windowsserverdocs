@@ -3,7 +3,7 @@ title: Key Management Services (KMS) client activation and product keys for Wind
 description: Get the product keys needed for setup and activation of Windows Server and other Windows products from a KMS host server.
 ms.topic: conceptual
 author: xelu86
-ms.author: roharwoo
+ms.author: alalve
 ms.date: 10/01/2024
 ---
 
