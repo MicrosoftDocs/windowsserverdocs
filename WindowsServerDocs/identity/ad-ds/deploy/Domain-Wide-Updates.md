@@ -10,7 +10,7 @@ ms.topic: article
 ms.custom: inhenkel
 
 ---
-# Domain-wide schema updates
+# Domain-wide updates
 
 >
 
