@@ -37,11 +37,6 @@ $AntiAffinity.Add("DC")
 (Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
 (Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
 
-$AntiAffinity = New-Object System.Collections.Specialized.StringCollection
-$AntiAffinity.Add("DC")
-(Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
-(Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
-
 Get-ClusterGroup "Group1" | fl AntiAffinityClassNames
     AntiAffinityClassNames : {DC}
 
