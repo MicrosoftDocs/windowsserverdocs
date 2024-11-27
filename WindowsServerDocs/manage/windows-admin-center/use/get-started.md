@@ -192,6 +192,9 @@ After tags are added to one or more connections, you can view the tags on the co
 
 [!INCLUDE [ps-connections](../includes/ps-connections.md)]
 
+> [!NOTE]
+> File content cannot contain invalid characters: backslash (\), slash mark (/), asterisk (*), question mark (?), single quotation mark ('), less than sign (<), or greater than sign (>).
+
 ## View PowerShell scripts used in Windows Admin Center
 
 Once you've connected to a server, cluster, or PC, you can look at the PowerShell scripts that power the UI actions available in Windows Admin Center. From within a tool, click the PowerShell icon in the top application bar. Select a command of interest from the dropdown to navigate to the corresponding PowerShell script.
