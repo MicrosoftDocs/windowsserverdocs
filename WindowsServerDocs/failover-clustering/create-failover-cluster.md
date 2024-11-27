@@ -10,8 +10,6 @@ zone_pivot_groups: failover-clustering-management-tools
 ---
 # Create a failover cluster
 
-
-
 This article shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The article covers a typical deployment in which computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster instead, see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md). For information about using a failover cluster in Azure Stack HCI, see [Create an Azure Stack HCI](/azure-stack/hci/deploy/create-cluster).
 
 You can also deploy an Active Directory-detached cluster. This deployment method enables you to create a failover cluster without permissions to create computer objects in AD DS or the need to request that computer objects are prestaged in AD DS. This option is only available through Windows PowerShell and is only recommended for specific scenarios. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
@@ -30,7 +28,7 @@ Before you begin, verify the following prerequisites:
 
 - (Optional) Create an organizational unit (OU) and move the computer accounts for the servers that you want to add as cluster nodes into the OU. As a best practice, we recommend that you place failover clusters in their own OU in AD DS. This can help you better control which Group Policy settings or security template settings affect the cluster nodes. By isolating clusters in their own OU, it also helps prevent against accidental deletion of cluster computer objects.
 
-Additionally, verify the following account requirements:
+Also, make sure that you verify the following account requirements:
 
 - Make sure that the account you want to use to create the cluster is a domain user who has administrator rights on all servers that you want to add as cluster nodes.
 
@@ -128,21 +126,7 @@ Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 
 1. Under **Configure this local server**, select **Add Roles and Features**.
 
-1. On the **Before you begin** page, select **Next**.
-
-1. On the **Select installation type** page, select **Role-based or feature-based installation** and then select **Next**.
-
-1. On the **Select destination server** page, select the server where you want to install the feature and then select **Next**.
-
-1. On the **Select server roles** page, select **Next**.
-
-1. On the **Features** page, select the **Failover Clustering** check box.
-
-1. To install the failover cluster management tools, select **Add features** and then select **Next**.
-
-1. On the **Confirm installation selections** page, select **Install**.
-
-   A server restart is not required for the Failover Clustering feature.
+1. Follow the directions in [Install roles, role services, and features by using the add Roles and Features Wizard](../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) to install the **Failover Clustering** feature.
 
 1. When the installation is completed, select **Close**.
 
@@ -204,7 +188,7 @@ For more information about hardware validation tests, see [Validate Hardware for
 
 ## Create the failover cluster
 
-To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic.
+To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic. <!--There's no WAC version here. Ask if lab left off before we could write these steps.--->
 
 ::: zone pivot="powershell"
 
@@ -265,6 +249,7 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 1. On the **Confirmation** page, review the settings. By default, the **Add all eligible storage to the cluster** check box is selected. Clear this check box if you want to do either of the following:
 
       - You want to configure storage later.
+
       - You plan to create clustered storage spaces through Failover Cluster Manager or through the Failover Clustering Windows PowerShell cmdlets and have not yet created storage spaces in File and Storage Services. For more information, see [Deploy Clustered Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>).
 
 1. Select **Next** to create the failover cluster.
@@ -273,11 +258,11 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
 1. To confirm that the cluster was created, verify that the cluster name is listed under **Failover Cluster Manager** in the navigation tree. You can expand the cluster name and then select items under **Nodes**, **Storage** or **Networks** to view the associated resources.
 
-    Realize that it may take some time for the cluster name to successfully replicate in DNS. After successful DNS registration and replication, if you select **All Servers** in Server Manager, the cluster name should be listed as a server with a **Manageability** status of **Online**.
+    It may take some time for the cluster name to successfully replicate in DNS. After successful DNS registration and replication, if you select **All Servers** in Server Manager, the cluster name should be listed as a server with a **Manageability** status of **Online**.
 
 ::: zone-end  
 
-After the cluster is created, you can do things such as verify cluster quorum configuration, and optionally, create Cluster Shared Volumes (CSV). For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum) and [Use Cluster Shared Volumes in a failover cluster](failover-cluster-csvs.md).
+After you create the cluster, you can verify cluster quorum configuration and create Cluster Shared Volumes (CSV). For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum) and [Use Cluster Shared Volumes in a failover cluster](failover-cluster-csvs.md).
 
 ## Create clustered roles
 
