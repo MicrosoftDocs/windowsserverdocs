@@ -151,7 +151,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DisableLargeMtu
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 11, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2
 
     The default is 0 for Windows 8 only. In Windows 8, the SMB redirector transfers payloads as large as 1 MB per request, which can improve file transfer speed. Setting this registry value to 1 limits the request size to 64 KB. You should evaluate the impact of this setting before applying it.
 
