@@ -49,9 +49,9 @@ You can add your own End User License Agreement (EULA) to Initial Configuration 
 
    |Oobe.xml Location|Condition for determining location|
    |-----------------------|----------------------------------------|
-   |%windir%\system32\oobe\info\|The server is shipping in a single country/region and a single language system.|
-   |%windir%\system32\oobe\info\default\\<language\>|The server is shipping in a single country/region and multiple languages system.|
-   |%windir%\system32\oobe\info\\<country/region>\ and %windir%\system32\oobe\info\\<country/region>\\<language\>\|The server is shipping to more than one country/region and the settings require customizations on a per-country/region basis, each with a single language. Where <country/region> is the decimal version of the geographical location identifier (GeoID) of the country or region where the server is being deployed, and <language\> is the decimal version of the locale identifier (LCID).|
+   |%windir%\system32\oobe\info\ | The server is shipping in a single country/region and a single language system. |
+   |%windir%\system32\oobe\info\default\\<language\> | The server is shipping in a single country/region and multiple languages system. |
+   |%windir%\system32\oobe\info\\<country/region>\ and %windir%\system32\oobe\info\\<country/region>\\<language\>\ | The server is shipping to more than one country/region and the settings require customizations on a per-country/region basis, each with a single language. Where <country/region> is the decimal version of the geographical location identifier (GeoID) of the country or region where the server is being deployed, and <language\> is the decimal version of the locale identifier (LCID). |
 
    If you have an alternative company logo with white text, it may display better in the setup flow due to the blue background.  You can optionally specify this logo by setting a registry key and value.
 
