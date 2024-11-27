@@ -188,7 +188,7 @@ For more information about hardware validation tests, see [Validate Hardware for
 
 ## Create the failover cluster
 
-To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic. <!--There's no WAC version here. Ask if lab left off before we could write these steps.--->
+To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic. <!---There's no WAC version here. Ask if lab left off before we could write these steps.--->
 
 ::: zone pivot="powershell"
 
