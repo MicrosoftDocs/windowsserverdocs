@@ -4,7 +4,7 @@ description: Gives instructions for creating a virtual machine using Hyper-V Man
 ms.topic: how-to
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
 ms.author: alalve
-author: alanalves
+author: xelu86
 ms.date: 10/25/2024
 ---
 
