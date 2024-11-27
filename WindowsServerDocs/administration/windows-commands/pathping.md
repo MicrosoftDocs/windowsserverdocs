@@ -18,7 +18,7 @@ Provides information about network latency and network loss at intermediate hops
 > [!NOTE]
 > This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 >
-> Additionally, this command identifies which routers are on the path, same as using the [tracert command](tracert.md). Howevever, this command also sends pings periodically to all of the routers over a specified time period and computes statistics based on the number returned from each.
+> Additionally, this command identifies which routers are on the path, same as using the [tracert command](tracert.md). However, this command also sends pings periodically to all of the routers over a specified time period and computes statistics based on the number returned from each.
 
 ## Syntax
 
