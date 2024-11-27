@@ -57,7 +57,7 @@ This topic contains the following sections:
 -   [Certificates in Windows authentication](#BKMK_CertificatesInWindowsAuthentication)
 
 ## <a name="BKMK_CrentialInputForUserLogon"></a>Credential input for user logon
-In  Windows Server 2008  and Windows Vista, the Graphical Identification and Authentication (GINA) architecture was replaced with a credential provider model, which made it possible to enumerate different logon types through the use of logon tiles. Both models are described below.
+Starting in  Windows Server 2008  and Windows Vista, the Graphical Identification and Authentication (GINA) architecture was replaced with a credential provider model, which made it possible to enumerate different logon types through the use of logon tiles. Both models are described below.
 
 **Graphical Identification and Authentication architecture**
 
@@ -296,7 +296,7 @@ Similarly, the remote host or local computer must determine if the certificate p
 To produce a certificate, authentication data passes through hash algorithms, such as Secure Hash Algorithm 1 (SHA1), to produce a message digest. The message digest is then digitally signed by using the sender's private key to prove that the message digest was produced by the sender.
 
 > [!NOTE]
-> SHA1 is the default in  Windows 7  and Windows Vista, but was changed to SHA2 in Windows 8.
+> SHA1 is the default in  Windows 7  and Windows Vista, but was changed to SHA2 starting in Windows 8.
 
 **Smart card authentication**
 
