@@ -3,7 +3,7 @@ title: Using Disk Cleanup on Windows Server
 description: Learn how to use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clear certain files.
 ms.reviewer: cosmosdarwin
 author: xelu86
-ms.author: roharwoo
+ms.author: alalve
 ms.topic: article
 ms.date: 09/28/2023
 ---

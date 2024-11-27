@@ -4,7 +4,7 @@ description: Learn about certutil, a command-line program that displays CA confi
 ms.service: windows-server
 ms.topic: reference
 author: xelu86
-ms.author: roharwoo
+ms.author: alalve
 ms.date: 10/19/2023
 ---
 

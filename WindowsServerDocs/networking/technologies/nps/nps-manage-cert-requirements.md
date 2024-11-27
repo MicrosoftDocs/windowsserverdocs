@@ -3,7 +3,7 @@ title: Configure Certificate Templates for PEAP and EAP Requirements
 description: This topic provides information about using certificates with Network Policy Server and Remote Access in Windows Server 2016.
 ms.topic: article
 ms.assetid: 2af0a1df-5c44-496b-ab11-5bc340dc96f0
-ms.author: roharwoo
+ms.author: alalve
 author: xelu86
 ms.date: 06/15/2023
 ms.contributor: samyun
