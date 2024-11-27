@@ -82,7 +82,7 @@ machine instances running on Azure Stack HCI. For more information, see your pro
 [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS).
 
 Learn more about the latest Azure Stack HCI features in our
-[What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new) article.
+[What's new in Azure Stack HCI, version 22H2](/azure/azure-local/whats-new) article.
 
 #### Deploy from Azure Marketplace on Arc-enabled Azure Stack HCI (preview)
 
@@ -91,7 +91,7 @@ Arc-enabled Azure Stack HCI, making it easy to try, buy, and deploy using Azure 
 
 Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Stack HCI features in
 our
-[What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new#azure-arc-vm-changes-and-azure-marketplace)
+[What's new in Azure Stack HCI, version 22H2](/azure/azure-local/whats-new#azure-arc-vm-changes-and-azure-marketplace)
 article.
 
 ### Azure Edition (initial release)
@@ -292,7 +292,7 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 
 #### Adjustable storage repair speed
 
-[User adjustable storage repair speed](/azure-stack/hci/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process.  Adjustable storage repair speed enables you to allocate resources to either repair data copies (resiliency) or to run active workloads (performance). Controlling the repair speed helps improve availability and allows you to service your clusters more flexibly and efficiently.
+[User adjustable storage repair speed](/azure/azure-local/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process.  Adjustable storage repair speed enables you to allocate resources to either repair data copies (resiliency) or to run active workloads (performance). Controlling the repair speed helps improve availability and allows you to service your clusters more flexibly and efficiently.
 
 #### Faster repair and resynchronization
 

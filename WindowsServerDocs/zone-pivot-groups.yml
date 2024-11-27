@@ -6,8 +6,8 @@ groups:
   pivots:
   - id: windows-server
     title: Windows Server
-  - id: azure-stack-hci
-    title: Azure Stack HCI
+  - id: azure-local
+    title: Azure Local
 - id: windows-os-version
   title: Version
   prompt: "Choose your product version:"

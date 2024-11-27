@@ -3,7 +3,7 @@ description: "Learn more about: Block cloning on ReFS"
 ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
 title: Block cloning on ReFS
 author: xelu86
-ms.author: roharwoo
+ms.author: wscontent
 ms.date: 09/23/2024
 ms.topic: article
 ---
@@ -59,6 +59,6 @@ After the modifying write, region B is still shared by both files. If region A w
 
 - [ReFS overview](refs-overview.md)
 - [ReFS integrity streams](integrity-streams.md)
-- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
 - [DUPLICATE_EXTENTS_DATA](/windows/win32/api/winioctl/ns-winioctl-duplicate_extents_data)
 - [FSCTL_DUPLICATE_EXTENTS_TO_FILE](/windows/win32/api/winioctl/ni-winioctl-fsctl_duplicate_extents_to_file)

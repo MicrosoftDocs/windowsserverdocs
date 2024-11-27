@@ -18,7 +18,7 @@ In this evaluation example, you will configure these computers and their storage
 > In this evaluation, servers in different sites must be able to communicate with the other servers via a network, but not have any physical connectivity to the other site's shared storage. This scenario does not make use of Storage Spaces Direct.
 
 > [!NOTE]
-> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters).
+> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage).
 
 ## Terms
 This walkthrough uses the following environment as an example:
@@ -399,7 +399,7 @@ For more information, review the Microsoft Ignite session Stretching Failover Cl
     >[!NOTE]
     > Windows Server now includes an option for cloud witness using Azure. You can choose this quorum option instead of the file share witness.
 
-   For more information about quorum configuration, see the [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
+   For more information about quorum configuration, see the [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 4.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
@@ -800,5 +800,5 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
-- [Stretched Clusters in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters)
+- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Stretched Clusters in Azure Stack HCI](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage)
