@@ -26,20 +26,20 @@ Before you begin, verify the following prerequisites:
 
 - Make sure that all servers that you want to add as cluster nodes are joined to the same Active Directory domain.
 
-- (Optional) Create an organizational unit (OU) and move the computer accounts for the servers that you want to add as cluster nodes into the OU. As a best practice, we recommend that you place failover clusters in their own OU in AD DS. This can help you better control which Group Policy settings or security template settings affect the cluster nodes. By isolating clusters in their own OU, it also helps prevent against accidental deletion of cluster computer objects.
+- (Optional) Create an organizational unit (OU) and move the computer accounts for the servers that you want to add as cluster nodes into the OU. We recommend that you place failover clusters in their own OU in AD DS. Creating an OU gives you more control over which Group Policy settings or security template settings affect the cluster nodes. Isolating clusters in their own OU also helps prevent accidental deletion of cluster computer objects.
 
 Also, make sure that you verify the following account requirements:
 
-- Make sure that the account you want to use to create the cluster is a domain user who has administrator rights on all servers that you want to add as cluster nodes.
+- Make sure that the account you use to create the cluster is a domain user with administrator rights on all servers that you want to turn into cluster nodes.
 
-- Make sure that either of the following is true:
+- Make sure that the user account that creates the clusters meets one of the following criteria:
 
-  - The user who creates the cluster has the **Create Computer objects** permission to the OU or the container where the servers that will form the cluster reside.
+  - The user who creates the cluster has the **Create Computer objects** permission to the OU or container where the servers that make up the cluster are located.
 
-  - If the user does not have the **Create Computer objects** permission, ask a domain administrator to prestage a cluster computer object for the cluster. For more information, see [Prestage Cluster Computer Objects in Active Directory Domain Services](prestage-cluster-adds.md).
+  - If the user doesn't have the **Create Computer objects** permission, ask a domain administrator to prestage a cluster computer object for the cluster. For more information, see [Prestage Cluster Computer Objects in Active Directory Domain Services](prestage-cluster-adds.md).
 
 > [!NOTE]
-> This requirement does not apply if you want to create an Active Directory-detached cluster. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
+> This requirement doesn't apply if you want to create an Active Directory-detached cluster. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
 ## Install the Failover Clustering feature
 
@@ -81,9 +81,9 @@ You must install the Failover Clustering feature on every server that you want t
 
 1. Select **Next: Networking**.
 
-1. Under **Networking**, a popup window will appear asking you if you want to remove existing virtual switches. If you want to remove them, select **Yes**. If not, select **No**.
+1. Under **Networking**, a popup window should appear and ask you if you want to remove existing virtual switches. If you want to remove them, select **Yes**. If not, select **No**.
 
-1. The wizard will check the network adapters. To enable a network adapter, select the name of the adapter, then select **Enable**. To disable an adapter, select the name of the adapter, then select **Disable**.
+1. The wizard then checks the network adapters. To enable a network adapter, select the name of the adapter, then select **Enable**. To disable an adapter, select the name of the adapter, then select **Disable**.
 
   >[!NOTE]
   >If the wizard can't find the servers, select **Back**, then select **Next** to refresh the page. If you still see an error message, try using a server that isn't on a VLAN instead.
@@ -96,7 +96,7 @@ You must install the Failover Clustering feature on every server that you want t
 
 1. On **Optionally configure RDMA**, select **Next**.
 
-1. On **Define networks**, enter the name, IP address, Subnet mask, and VLAN ID of the adapters you want to use for storage and compute traffic for VMS within the cluster. When you're done, select **Apply and test** to validate the adapters.
+1. On **Define networks**, enter the name, IP address, Subnet mask, and VLAN ID of the adapters you want to use for storage and compute traffic for VMs within the cluster. When you're done, select **Apply and test** to validate the adapters.
 
 1. When the validation process is finished, select **Next: Clustering**.
 
@@ -111,9 +111,6 @@ You must install the Failover Clustering feature on every server that you want t
 
 ::: zone pivot="powershell"
 
-> [!NOTE]
-> You must use Windows PowerShell to create an Active Directory-detached cluster in Windows Server 2012 R2. For information about the syntax, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
-
 The following example installs the Failover Clustering feature.
 
 ```PowerShell
@@ -126,7 +123,7 @@ Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 
 1. Under **Configure this local server**, select **Add Roles and Features**.
 
-1. Follow the directions in [Install roles, role services, and features by using the add Roles and Features Wizard](../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) to install the **Failover Clustering** feature.
+1. Follow the directions in [Install roles, role services, and features by using the Add Roles and Features Wizard](../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) to install the **Failover Clustering** feature.
 
 1. When the installation is completed, select **Close**.
 
@@ -138,7 +135,7 @@ Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 
 ## Validate the configuration
 
-Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft supports a cluster solution only if the complete configuration passes all validation tests and if all hardware is certified for the version of Windows Server that the cluster nodes are running.
+Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft only supports cluster solutions if the complete configuration passes all validation tests and has only certified hardware compatible with whichever version of Windows Server your cluster nodes use.
 
 ::: zone pivot="powershell"
 
@@ -160,13 +157,13 @@ Test-Cluster –Node Server1, Server2
 
 ### Run cluster validation tests
 
-1. On a computer that has the Failover Cluster Management Tools installed from the Remote Server Administration Tools or on a server where you installed the Failover Clustering feature, start Failover Cluster Manager. To do this on a server, start Server Manager and then on the **Tools** menu, select **Failover Cluster Manager**.
+1. On a computer that has the Failover Cluster Management Tools installed from the Remote Server Administration Tools or on a server where you installed the Failover Clustering feature, start Failover Cluster Manager. If you're on a server, start Server Manager and then on the **Tools** menu, select **Failover Cluster Manager**.
 
-1. In the failover cluster mangment pane, under the **Management** node, go to the **Actions** pane on the right side of the window and selet **Validate Configuration**>
+1. In the failover cluster management pane, under the **Management** node, go to the **Actions** pane on the right side of the window and select **Validate Configuration**>
 
 1. On the **Before You Begin** page, select **Next**.
 
-1. On the **Select Servers or a Cluster** page in the **Enter name** box, enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node and then select **Add**. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or by a semicolon. For example, enter the names in the format `server1.contoso.com, server2.contoso.com`. When you are finished, select **Next**.
+1. On the **Select Servers or a Cluster** page in the **Enter name** box, enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node and then select **Add**. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or by a semicolon. For example, enter the names in the format `server1.contoso.com, server2.contoso.com`. When you're finished, select **Next**.
 
 1. On the **Testing Options** page, select **Run all tests (recommended)** and then select **Next**.
 
@@ -177,7 +174,8 @@ Test-Cluster –Node Server1, Server2
 1. On the **Summary** page, do either of the following:
 
       - If the results indicate that the tests completed successfully and the configuration is suited for clustering and you want to create the cluster immediately, make sure that the **Create the cluster now using the validated nodes** check box is selected and then select **Finish**. Then, continue to step 4 of the [Create the failover cluster](#create-the-failover-cluster) procedure.
-      - If the results indicate that there were warnings or failures, select **View Report** to view the details and determine which issues must be corrected. Realize that a warning for a particular validation test indicates that this aspect of the failover cluster can be supported but might not meet the recommended best practices.
+
+      - If the results indicate that there were warnings or failures, select **View Report** to view the details and determine which issues must be corrected. A warning for a particular validation test indicates that this aspect of the failover cluster can still function, but might not meet recommended configuration standards.
 
         > [!NOTE]
         > If you receive a warning for the Validate Storage Spaces Persistent Reservation test, see the blog post [Windows Failover Cluster validation warning indicates your disks don't support the persistent reservations for Storage Spaces](https://blogs.msdn.microsoft.com/clustering/2013/05/24/validate-storage-spaces-persistent-reservation-test-results-with-warning/) for more information.
@@ -192,13 +190,13 @@ To complete this step, make sure that the user account that you log on as meets 
 
 ::: zone pivot="powershell"
 
-The following example creates a failover cluster that is named *MyCluster* with nodes *Server1* and *Server2*, assigns the static IP address *192.168.1.12*, and adds all eligible storage to the failover cluster.
+The following example creates a failover cluster named *MyCluster* with nodes *Server1* and *Server2*, assigns the static IP address *192.168.1.12*, and adds all eligible storage to the failover cluster.
 
 ```PowerShell
 New-Cluster –Name MyCluster –Node Server1, Server2 –StaticAddress 192.168.1.12
 ```
 
-The following example creates the same failover cluster as in the previous example, but it does not add eligible storage to the failover cluster.
+The following example creates the same failover cluster as in the previous example, but it doesn't add eligible storage to the failover cluster.
 
 ```PowerShell
 New-Cluster –Name MyCluster –Node Server1, Server2 –StaticAddress 192.168.1.12 -NoStorage
@@ -224,7 +222,7 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
 1. On the **Before You Begin** page, select **Next**.
 
-1. If the **Select Servers** page appears, in the **Enter name** box enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node and then select **Add**. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or a semicolon. For example, enter the names in the format *server1.contoso.com; server2.contoso.com*. When you are finished, select **Next**.
+1. If the **Select Servers** page appears, in the **Enter name** box enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node, then select **Add**. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or a semicolon. For example, enter the names in the format *server1.contoso.com; server2.contoso.com*. When you're finished, select **Next**.
 
     > [!NOTE]
     > If you chose to create the cluster immediately after running validation in the [configuration validating procedure](#validate-the-configuration), you will not see the **Select Servers** page. The nodes that were validated are automatically added to the Create Cluster Wizard so that you do not have to enter them again.
@@ -235,22 +233,24 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
     1. In the **Cluster Name** box, enter the name that you want to use to administer the cluster. Before you do, review the following information:
 
-          - During cluster creation, this name is registered as the cluster computer object (also known as the *cluster name object* or *CNO*) in AD DS. If you specify a NetBIOS name for the cluster, the CNO is created in the same location where the computer objects for the cluster nodes reside. This can be either the default Computers container or an OU.
-          - To specify a different location for the CNO, you can enter the distinguished name of an OU in the **Cluster Name** box. For example: *CN=ClusterName, OU=Clusters, DC=Contoso, DC=com*.
-          - If a domain administrator has prestaged the CNO in a different OU than where the cluster nodes reside, specify the distinguished name that the domain administrator provides.
+          - During cluster creation, this name is registered as the cluster computer object,lso known as the *cluster name object (CNO)*, in AD DS. If you specify a NetBIOS name for the cluster, the CNO is created in the same location where the computer objects for the cluster nodes reside. This can be either the default Computers container or an OU.
 
-    1. If the server does not have a network adapter that is configured to use DHCP, you must configure one or more static IP addresses for the failover cluster. Select the check box next to each network that you want to use for cluster management. Select the **Address** field next to a selected network and then enter the IP address that you want to assign to the cluster. This IP address (or addresses) will be associated with the cluster name in Domain Name System (DNS).
+          - To specify a different location for the CNO, you can enter the distinguished name of an OU in the **Cluster Name** box. For example: *CN=ClusterName, OU=Clusters, DC=Contoso, DC=com*.
+
+          - If a domain administrator prestaged the CNO in a different OU than where the cluster nodes reside, specify the distinguished name that the domain administrator provides.
+
+    1. If the server doesn't have a network adapter that is configured to use Dynamic Host Configuration Protocol (DHCP), you must configure one or more static IP addresses for the failover cluster. Select the check box next to each network that you want to use for cluster management. Select the **Address** field next to a selected network and then enter the IP address that you want to assign to the cluster. This IP address (or addresses) is associated with the cluster name in Domain Name System (DNS).
 
       >[!NOTE]
       > If you're using Windows Server 2019, you have the option to use a distributed network name for the cluster. A distributed network name uses the IP addresses of the member servers instead of requiring a dedicated IP address for the cluster. By default, Windows uses a distributed network name if it detects that you're creating the cluster in Azure (so you don't have to create an internal load balancer for the cluster) or a normal static or IP address if you're running on-premises. For more info, see [Distributed Network Name](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/#W0YAxO8BfwBRbkzG.97).
 
-    1. When you are finished, select **Next**.
+    1. When you're finished, select **Next**.
 
-1. On the **Confirmation** page, review the settings. By default, the **Add all eligible storage to the cluster** check box is selected. Clear this check box if you want to do either of the following:
+1. On the **Confirmation** page, review the settings. By default, the **Add all eligible storage to the cluster** check box is selected. Clear this check box if you want to do either of the following things:
 
       - You want to configure storage later.
 
-      - You plan to create clustered storage spaces through Failover Cluster Manager or through the Failover Clustering Windows PowerShell cmdlets and have not yet created storage spaces in File and Storage Services. For more information, see [Deploy Clustered Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>).
+      - You plan to create clustered storage spaces through Failover Cluster Manager or through the Failover Clustering Windows PowerShell cmdlets and haven't created storage spaces in File and Storage Services yet. For more information, see [Deploy Clustered Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>).
 
 1. Select **Next** to create the failover cluster.
 
@@ -288,7 +288,7 @@ The following table shows the clustered roles that you can configure in the High
 | Clustered role  | Role or feature prerequisite  |
 | ---------       | ---------                    |
 | Namespace Server     |   Namespaces (part of File Server role)       |
-| DFS Namespace Server     |  DHCP Server role       |
+| Distributed File System (DFS) Namespace Server     |  DHCP Server role       |
 | Distributed Transaction Coordinator (DTC)     | None        |
 | File Server     |  File Server role       |
 | Generic Application     |  Not applicable       |
@@ -308,7 +308,7 @@ To create a clustered role:
 
 1. Select the name of the role you want to add, then follow any instructions you see until you finish.
 
-1. To verify that you successfully created the clustered role, in the **Roles** pane, make sure that the role has a status of **Running**. The Roles pane also indicates the owner node. To test failover, right-click the role, point to **Move** and then select **Select Node**. In the **Move Clustered Role** dialog box, select the desired cluster node and then select **OK**. In the **Owner Node** column, verify that the owner node changed.
+1. To verify that you successfully created the clustered role, in the **Roles** pane, make sure that the role has a status of **Running**. The Roles pane also indicates the owner node. To test failover, right-click the role, point to **Move** and then select **Select Node**. In the **Move Clustered Role** dialog box, select the desired cluster node, then select **OK**. In the **Owner Node** column, verify that the owner node changed.
 
 ::: zone-end  
 
