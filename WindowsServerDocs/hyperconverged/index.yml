@@ -11,7 +11,7 @@ metadata:
   ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   author: robinharwood  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: wscontent #Required; microsoft alias of author; optional team alias.
+  ms.author: roharwoo #Required; microsoft alias of author; optional team alias.
   ms.date: 06/10/2020 #Required; mm/dd/yyyy format.
 
 # productDirectory section (optional)

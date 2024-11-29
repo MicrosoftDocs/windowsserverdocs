@@ -5,7 +5,7 @@ ms.date: 05/12/2021
 ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 manager: femila
 ---
 # Changes to the Windows Console in Windows Server
