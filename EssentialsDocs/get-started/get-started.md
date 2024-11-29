@@ -4,7 +4,7 @@ description: Learn about Windows Server Essentials edition, which is a cloud-con
 ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 manager: femila
 ms.date: 9/3/2021
 ---
