@@ -83,7 +83,7 @@ The following table lists the VM configuration versions for hosts running a long
 The following table lists the VM configuration versions for hosts running a Semi-Annual Channel version of Windows. To get more information on Semi-Annual Channel versions of Windows, visit the following pages for [Windows Server](../../../get-started/servicing-channels-comparison.md) and [Windows](/windows/deployment/update/waas-overview#servicing-channels).
 
 > [!IMPORTANT]
-> Essential information required for user success
+> Windows Server Semi-Annual Channel releases have been retired. For more information current releases, see [Windows Server release information](/windows/release-health/windows-server-release-info).
 
 | Hyper-V host Windows version                   | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 |------------------------------------------------|------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
@@ -117,13 +117,13 @@ The virtual machine configuration version represents the compatibility of the vi
 
 The following table lists descriptions file name extensions, and default locations for each type of file that's used for new or upgraded virtual machines.
 
- |                   | Virtual machine file types                                                                                                                                                                           | Description                                                                                                                                                                                                                               |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Configuration     | Virtual machine configuration information that is stored in binary file format. <br /> File name extension: .vmcx <br /> Default location: `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines` |
-|                   | Runtime state                                                                                                                                                                                        | Virtual machine runtime state information that is stored in binary file format. <br />File name extension: `.vmrs` and `.vmgs` <br />Default location: `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines`                              |
-| Virtual hard disk | Stores virtual hard disks for the virtual machine. <br /> File name extension: `.vhd` or `.vhdx` <br />Default location: `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Hard Disks`                     |
-|                   | Automatic virtual hard disk                                                                                                                                                                          | Differencing disk files used for virtual machine checkpoints. <br /> File name extension: `.avhdx` <br /> Default location: `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Hard Disks`                                                     |
-|                   | Checkpoint                                                                                                                                                                                           | Checkpoints are stored in multiple checkpoint files. Each checkpoint creates a configuration file and runtime state file. <br /> File name extensions: `.vmrs` and `.vmcx` <br />Default location: `C:\ProgramData\Microsoft\Windows\Snapshots` |
+| Virtual machine file types | Description |
+|--|--|
+| Configuration | Virtual machine configuration information that is stored in binary file format. <br /> File name extension: .vmcx <br /> Default location: `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines` |
+| Runtime state | Virtual machine runtime state information that is stored in binary file format. <br />File name extension: `.vmrs` and `.vmgs` <br />Default location: `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines` |
+| Virtual hard disk | Stores virtual hard disks for the virtual machine. <br /> File name extension: `.vhd` or `.vhdx` <br />Default location: `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Hard Disks` |
+| Automatic virtual hard disk | Differencing disk files used for virtual machine checkpoints. <br /> File name extension: `.avhdx` <br /> Default location: `C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Hard Disks` |
+| Checkpoint | Checkpoints are stored in multiple checkpoint files. Each checkpoint creates a configuration file and runtime state file. <br /> File name extensions: `.vmrs` and `.vmcx` <br />Default location: `C:\ProgramData\Microsoft\Windows\Snapshots` |
 
 ## What happens if I don't upgrade the virtual machine configuration version?
 
