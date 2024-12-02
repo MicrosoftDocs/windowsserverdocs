@@ -15,19 +15,19 @@ Windows Server Hyper-V is a mature hypervisor platform that supports a wide rang
 
 ## Standalone Hyper-V with local disks
 
-Hyper-V supports several nonclustered, or standalone, configurations where you install Hyper-V on a standalone server and use local storage.
+Hyper-V supports several nonclustered or standalone configurations where you install Hyper-V on a standalone server and use local storage.
 
 When using this configuration:
 
-- Standalone Hyper-V with local disks doesn't support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute (VM processing and memory) systems being nonclustered. For example, if the physical host loses power, the VMs running on it restart when you power the physical host back on. You can also live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
+- Standalone Hyper-V with local disks do not support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute (VM processing and memory) systems being nonclustered. For example, if the physical host loses power, the VMs running on it restart when you power the physical host back on. You can also live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
 
 - You can optionally configure local disk resiliency for local drives using hardware or software RAID solutions. If you need more information, we recommend you contact your storage vendor.
 
 :::image type="content" source="media/hyper-v-storage-architecture/standalone-hyper-v-local.png" alt-text="A diagram showing an example of a basic deployment of a standalone Hyper-V with local disks.":::
 
-## Disaggregated Hyper-V with SAN or NAS Storage
+## Hyper-V with SAN or NAS Storage
 
-In this configuration, you install Hyper-V is a cluster with VMs that access their storage over the network like [hyperconverged storage](#disaggregated-hyper-v-with-hyperconverged-storage), but Hyper-V uses SAN or NAS storage from a storage vendor instead.
+In this disaggregated configuration, you install Hyper-V in a cluster with VMs that access their storage over the network from a SAN or NAS storage vendor.
 
 When using this configuration:
 
@@ -53,7 +53,7 @@ When using this configuration:
 
 :::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-hyper-v-storage.png" alt-text="A diagram showing a basic example of a deployment of a hyperconverged Hyper-V and Storage Spaces Direct." lightbox="media/hyper-v-storage-architecture/hyperconverged-hyper-v-storage.png":::
 
-## Disaggregated Hyper-V with hyperconverged storage
+## Hyper-V with disaggregated Storage Spaces Direct
 
 In this configuration, you install Hyper-V and Storage Spaces Direct in separate clusters and access the VMs' configuration and storage over the network.
 
@@ -83,9 +83,9 @@ When you add more storage resources for hosting data without adding more compute
 
 ## Mixed architecture support
 
-Hyper-V can support the combining the following types of architectures in the same compute cluster:
+Hyper-V supports combining the following architectures in the same compute cluster:
 
-- Disaggregated Hyper-V with hyperconverged storage
+- Hyper-V with Disaggregated Storage Spaces Direct
 
 - Disaggregated Hyper-V with SAN
 
