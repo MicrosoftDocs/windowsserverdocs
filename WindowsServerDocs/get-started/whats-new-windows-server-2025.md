@@ -132,7 +132,7 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
   >
   > Microsoft recommends that all customers begin planning now to upgrade their AD and AD LDS servers to Windows Server 2022 in preparation for the next release.
 
-- **Improved algorithms for name/SID lookups**: Local security authority (LSA) name and SID lookup forwarding between machine accounts no longer uses the legacy Netlogon secure channel. Kerberos authentication and the DC Locator algorithm are used instead. To maintain compatibility with legacy operating systems, it's still possible to use the Netlogon secure channel as a fallback option.
+- **Improved algorithms for Name/SID Lookups**: Local security authority (LSA) Name and SID Lookup forwarding between machine accounts no longer uses the legacy Netlogon secure channel. Kerberos authentication and the DC Locator algorithm are used instead. To maintain compatibility with legacy operating systems, it's still possible to use the Netlogon secure channel as a fallback option.
 - **Improved security for confidential attributes**: DCs and AD LDS instances only allow LDAP to add, search, and modify operations that involve confidential attributes when the connection is encrypted.
 - **Improved security for default machine account passwords**: AD now uses default computer account passwords that are randomly generated. Windows 2025 DCs block setting computer account passwords to the default password of the computer account name.
 
@@ -161,7 +161,7 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 - **Performance counters**: Monitoring and troubleshooting the performance of the following counters are now available:
 
   - **DC Locator**: Counters specific to clients and DCs are available.
-  - **LSA Lookups**: **Name** and **SID** lookups through the `LsaLookupNames`, `LsaLookupSids`, and equivalent APIs. These counters are available on both client and server versions.
+  - **LSA Lookups**: Name and SID Lookups through the `LsaLookupNames`, `LsaLookupSids`, and equivalent APIs. These counters are available on both client and server versions.
   - **LDAP client**: Available in Windows Server 2022 and later via the [KB 5029250](https://support.microsoft.com/topic/august-8-2023-kb5029250-os-build-20348-1906-2db4a1ac-8e18-443e-b4d6-ee17435cf94c) update.
 
 - **Replication priority order**: Administrators can now increase the system-calculated replication priority with a particular replication partner for a particular naming context. This feature allows more flexibility in configuring the replication order to address specific scenarios.
