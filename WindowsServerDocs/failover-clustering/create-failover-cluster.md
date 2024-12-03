@@ -107,6 +107,7 @@ You must install the Failover Clustering feature on every server that you want t
 1. On **Create the cluster**, enter a name for your cluster, then select **Specify one or more static addresses**. Next, select the **Use network** checkbox and enter the IP address for your cluster in the **IP address** field. when you're done, select **Create cluster**.
 
 1. When the cluster creation process is done, select **Finish**.
+
 ::: zone-end  
 
 ::: zone pivot="powershell"
