@@ -53,7 +53,7 @@ You must install the Failover Clustering feature on every server that you want t
 
 1. In the **Add or create resources** panel, under **Server clusters**, select **Create new**.
 
-1. under **Choose the cluster type**, select **Windows Server**.
+1. Under **Choose the cluster type**, select **Windows Server**.
 
 1. Under **Select the workload type**, select **Virtual machines**.
 
@@ -223,9 +223,11 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. Specify the server you want to add, then select **Add**. When you're finished, select **Next**.
 
-1. Under **Install required features**, select any features you need to install on your cluster, then select **Install features**. When you're finished, select **Next**.
+1. On the **Install required features** page, select any features you need to install on your cluster, then select **Install features**. When you're finished, select **Next**.
 
-1. Under **Restart servers**, restart the servers if the new features you installed require a restart. When you're finished, select **Next: Networking**.
+1. On the **Optionally install operating system updates** page, you can install the latest version of the operating system or any security updates your cluster nodes need. When you're finished, select **Next**.
+
+1. On the **Restart servers** page, restart the servers if the new features you installed require a restart. When you're finished, select **Next: Networking**.
 
 ### Networking
 
@@ -233,7 +235,7 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. To enable any adapters that you want to use, select the name of the adapter, then select **Enable**. Select **Disable** for any adapters you don't want to use. When you're finished, select **Next**.
 
-1. On the **Select the adapters to use for management** page, select the adapter format that best suits your deployment, make sure the correct servers are selected, then select **Apply and test**.
+1. On the **Select the adapters to use for management** page, select the adapter format that best suits your deployment, then select the servers you want to use, and finally select **Apply and test**.
 
 1. On the **Virtual switch** page, select the virtual switch infrastructure that you want to use or select the **Skip virtual switch creation** checkbox if you want to skip this step, then select **Next**.
 
