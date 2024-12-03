@@ -3,7 +3,7 @@ title: delete
 description: Reference article for the delete command, which deletes a partition or a volume.
 ms.topic: reference
 ms.assetid: 021799a3-11a2-4e7f-8fdc-fba24ca2ba21
-ms.author: roharwoo
+ms.author: alalve
 author: xelu86
 ms.date: 10/12/2023
 ---

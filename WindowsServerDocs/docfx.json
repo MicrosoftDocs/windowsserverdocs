@@ -142,14 +142,14 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "failover-clustering/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "get-started/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -177,11 +177,14 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>"
           ],
           "get-started/enable-hotpatch-azure-edition.md": [
-            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022 Datacenter: Azure Edition</a>"
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022 Datacenter: Azure Edition hosted on Azure Stack HCI</a>"
           ],
           "get-started/hotpatch.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>"
+          ],
+          "get-started/enable-hotpatch-azure-arc-enabled-servers.md": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/enable-hotpatch-azure-arc-enabled-servers\" target=\"_blank\">Windows Server 2025</a>"
           ],
           "get-started/annual-channel-for-containers.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server, version 23H2 and later</a>"
@@ -226,7 +229,7 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "identity/ad-cs/configure-trusted-roots-disallowed-certificates.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -235,7 +238,7 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "identity/ad-fs/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -257,6 +260,9 @@
           ],
           "/identity/ad-ds/ldap-client-performance-counters.md": [
             "✅ Windows Server 2012","✅ Windows Server 2012 R2"
+          ],
+          "identity/ad-ds/manage/delegated-managed-service-accounts/**/*.*": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
           ],
           "identity/laps/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -283,7 +289,7 @@
             "✅ Windows Admin Center Preview"
           ],
           "manage/windows-admin-center/azure/manage-hci-clusters.md": [
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "networking/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -296,14 +302,17 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "networking/technologies/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
+          ],
+          "networking/technologies/accelerated-networking/accelerated-networking.md": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
           ],
           "networking/technologies/extensible-authentication-protocol/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -324,7 +333,7 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "networking/windows-time-service/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -333,7 +342,7 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "networking/configure-secure-protocol-options-winhttp.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -432,12 +441,21 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>"
           ],
+          "security/osconfig/osconfig-how-to-configure-app-control-for-business.md": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
+          ],
+          "security/osconfig/osconfig-how-to-configure-security-baselines.md": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"  
+          ],
+          "security/osconfig/osconfig-overview.md": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"  
+          ],           
           "security/secured-core-server.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "security/rpc-interface-restrict.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -484,7 +502,7 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "security/storage/file-server/configure-smb-authentication-rate-limiter.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -523,25 +541,25 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "security/storage/storage-replica/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "security/storage/storage-replica/storage-replica-enhanced-log.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2</a>"
           ],
           "security/storage/storage-spaces-direct/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "security/storage/work-folders/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -558,15 +576,15 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/gpu-partitioning.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/partition-assign-vm-gpu.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -575,119 +593,119 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 10</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/deploy/set-up-hosts-for-live-migration-without-failover-clustering.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/plan/virtual-fibre-channel-for-hyper-v.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/deploy/deploying-storage-devices-using-dda.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/hyper-v-storage-architecture.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/deploy/use-gpu-with-clustered-vm.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/manage/persistent-memory-cmdlets.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/plan/manage/manage-hyper-v-cpugroups.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/manage/manage-hyper-v-scheduler-types.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/manage/set-up-hyper-v-replica.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v/manage/*live-migration*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ],
           "virtualization/hyper-v-virtual-switch/create-security-policies-with-extended-port-access-control-lists.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 23H2 and 22H2</a>"
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
           ]
         },
         "feedback_product_url": {

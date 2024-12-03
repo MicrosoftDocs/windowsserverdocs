@@ -57,11 +57,11 @@ Which device controllers or other compatible adapters you should use for storage
 
 ### Storage
 
-You must use [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) or shared storage that's compatible with Windows Server 2012 R2, Windows Server 2012, and later. You can use attached shared storage or use SMB 3.0 file shares as shared storage for servers running Hyper-V that you've configured in a failover cluster. For more information, see [Deploy Hyper-V over SMB](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)).
+You must use [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) or shared storage that's compatible with Windows Server 2012 R2, Windows Server 2012, and later. You can use attached shared storage or use SMB 3.0 file shares as shared storage for servers running Hyper-V that you've configured in a failover cluster. For more information, see [Deploy Hyper-V over SMB](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)).
 
 In most cases, attached storage should contain multiple, separate disks configured at the hardware level. These disks are also known as logical unit numbers (LUNs). 
 
-Some clusters have a disk that functions as the *disk witness*, which is a disk in cluster storage that holds the cluster configuration database. Failover clusters only have disk witnesses if the disk witness is supposed to be part of the specified quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum). The other disks contain required files for clustered roles.
+Some clusters have a disk that functions as the *disk witness*, which is a disk in cluster storage that holds the cluster configuration database. Failover clusters only have disk witnesses if the disk witness is supposed to be part of the specified quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-storage). The other disks contain required files for clustered roles.
 
 You should also consider these additional storage requirements:
 

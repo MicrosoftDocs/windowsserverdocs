@@ -2,8 +2,8 @@
 title: Guest operating system and application supportability on Hyper-V
 description: Understand which versions of Windows Server or Azure Stack HCI are compatible products for a guest operating system or application that has been validated for Hyper-V.
 ms.topic: conceptual
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 manager: femila
 ms.date: 01/11/2022
 ---

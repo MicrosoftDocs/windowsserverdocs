@@ -11,7 +11,7 @@ metadata:
   ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   author: robinharwood  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: wscontent #Required; microsoft alias of author; optional team alias.
+  ms.author: roharwoo #Required; microsoft alias of author; optional team alias.
   ms.date: 06/10/2020 #Required; mm/dd/yyyy format.
 
 # productDirectory section (optional)
@@ -28,7 +28,7 @@ productDirectory:
     - title: Storage Spaces Direct
       imageSrc: /windows-server/media/i-store.svg
       links:
-        - url: /azure-stack/hci/concepts/storage-spaces-direct-overview
+        - url: /azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-edge-networking
           text: Virtualizes storage hardware, enabling you to create volumes on top of a virtualized pool of drives spread across servers in a hyper-converged cluster.
     # Card
     - title: Failover Clustering

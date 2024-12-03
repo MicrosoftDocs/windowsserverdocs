@@ -11,7 +11,7 @@ ms.date: 07/24/2023
 
 >
 
-This article describes minimum hardware requirements for Storage Spaces Direct. For hardware requirements on Azure Stack HCI, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Stack HCI: Determine hardware requirements](/azure-stack/hci/deploy/before-you-start#determine-hardware-requirements).
+This article describes minimum hardware requirements for Storage Spaces Direct. For hardware requirements on Azure Stack HCI, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Stack HCI: Determine hardware requirements](/azure/azure-local/concepts/system-requirements-23h2).
 
 For production, Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For hardware solutions, visit the [Azure Stack HCI solutions website](https://azurestackhcisolutions.azure.microsoft.com/).
 
@@ -74,12 +74,12 @@ Switched or switchless node interconnects
 
 ## Drives
 
-Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](/azure-stack/hci/concepts/choose-drives) and [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) articles.
+Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](/azure/azure-local/concepts/choose-drives?context=/windows-server/context/windows-server-storage) and [Understand and deploy persistent memory](/azure/azure-local/concepts/deploy-persistent-memory?context=/windows-server/context/windows-server-storage) articles.
 
 - SATA, SAS, persistent memory, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
 - 512n, 512e, and 4K native drives are all supported
 - Solid-state drives must provide [power-loss protection](https://techcommunity.microsoft.com/t5/storage-at-microsoft/don-t-do-it-consumer-grade-solid-state-drives-ssd-in-storage/ba-p/425914)
-- Same number and types of drives in every server – see [Drive symmetry considerations](/azure-stack/hci/concepts/drive-symmetry-considerations)
+- Same number and types of drives in every server – see [Drive symmetry considerations](/azure/azure-local/concepts/drive-symmetry-considerations?context=/windows-server/context/windows-server-storage)
 - Cache devices must be 32 GB or larger
 - Persistent memory devices are used in block storage mode
 - When using persistent memory devices as cache devices, you must use NVMe or SSD capacity devices (you can't use HDDs)
@@ -89,7 +89,7 @@ Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent 
 - Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024)
 
 > [!NOTE]
-> When using all flash drives for storage capacity, the benefits of storage pool caching will be limited. Learn more about the [storage pool cache](/azure-stack/hci/concepts/cache).
+> When using all flash drives for storage capacity, the benefits of storage pool caching will be limited. Learn more about the [storage pool cache](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage).
 
 Here's how drives can be connected for Storage Spaces Direct:
 
@@ -149,7 +149,7 @@ This table shows the minimum number of drives by type for virtual deployments su
 | Virtual Hard Disk                  | 2                       |
 
 > [!TIP]
-> To boost the performance for guest VMs when running on Azure Stack HCI or Windows Server, consider using the [CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache) to cache unbuffered read operations.
+> To boost the performance for guest VMs when running on Azure Stack HCI or Windows Server, consider using the [CSV in-memory read cache](/azure/azure-local/manage/use-csv-cache?context=/windows-server/context/windows-server-storage?context=/windows-server/context/windows-server-storage) to cache unbuffered read operations.
 
 If you're using Storage Spaces Direct in a virtual environment, you must consider:
 

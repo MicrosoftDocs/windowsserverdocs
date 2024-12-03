@@ -2,7 +2,7 @@
 title: Wireless LAN overview in Windows Server
 description: The WLAN service allows for wireless configuration, discovery, and connectivity using a wireless adapter in Windows devices.
 ms.topic: how-to
-ms.author: roharwoo
+ms.author: alalve
 author: xelu86
 ms.date: 10/25/2024
 

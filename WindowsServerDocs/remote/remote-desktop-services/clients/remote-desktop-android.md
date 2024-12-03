@@ -22,7 +22,7 @@ This article will show you how to get started using the client. If you have any 
 
 > [!NOTE]
 > - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md).
-> - The Android client supports devices running Android 9 and later, as well as Chromebooks with ChromeOS 53 and later. Learn more about Android applications on Chrome at [Chrome OS Systems Supporting Android Apps](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
+> - The Android client supports devices running Android 9 and later, as well as Chromebooks with ChromeOS 53 and later. Learn more about Android applications on Chrome at [Chrome OS Systems Supporting Android Apps](https://www.chromium.org/chromium-os/chrome-os-systems-supporting-android-apps/).
 
 ## Download the Remote Desktop client
 
