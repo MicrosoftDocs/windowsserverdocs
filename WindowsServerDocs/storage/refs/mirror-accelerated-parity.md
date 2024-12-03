@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Mirror-accelerated parity"
 title: Mirror-accelerated parity
-ms.author: wscontent
+ms.author: roharwoo
 manager: masriniv
 ms.topic: article
 author: gawatu
