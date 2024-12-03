@@ -186,7 +186,76 @@ For more information about hardware validation tests, see [Validate Hardware for
 
 ## Create the failover cluster
 
-To complete this step, make sure that the user account that you log on as meets the requirements that are outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic. <!---There's no WAC version here. Ask if lab left off before we could write these steps.--->
+To complete this step, make sure that the user account that you sign in with meets the requirements outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic. <!---There's no WAC version here. Ask if lab left off before we could write these steps.--->
+
+::: zone pivot="windows-admin-center"
+
+The process for creating a cluster in Windows Admin Center is a bit more complicated than the other two methods.
+
+### Start the Create Cluster wizard
+
+To start the Create Cluster wizard in Windows Admin Center:
+
+1. Sign in to Windows Admin Center.
+
+1. Under **All connections**, select **Add**.
+
+1. In the **Add or create resources** panel, under **Server clusters**, select **Create new**.
+
+1. Under **Choose the cluster type**, select **Windows Server**.
+
+1. Under **Select the workload type**, select either **Cluster-aware roles and apps** or **Virtual machines**, depending on your needs.
+
+1. Under **Select server locations**, select one the following:
+
+- All servers in one site
+
+- Servers in two sites (for stretched cluster)
+
+1. When you're finished, select **Create**. The Create Cluster wizard should open.
+
+### Deploy a Windows Server cluster
+
+1. On the **Check the prerequisites** page, make sure your server and network meet all prerequisites, then select **Next**.
+
+1. On the **Add servers** page, enter a username and password for the administrator account you want to use to contact the servers.
+
+1. Specify the server you want to add, then select **Add**. When you're finished, select **Next**.
+
+1. Under **Install required features**, select any features you need to install on your cluster, then select **Install features**. When you're finished, select **Next**.
+
+1. Under **Restart servers**, restart the servers if the new features you installed require a restart. When you're finished, select **Next: Networking**.
+
+### Networking
+
+1. On the **Check the network adapters** page, a popup window may appear that asks if you want to remove existing virtual switches. Select **Yes**.
+
+1. To enable any adapters that you want to use, select the name of the adapter, then select **Enable**. Select **Disable** for any adapters you don't want to use. When you're finished, select **Next**.
+
+1. On the **Select the adapters to use for management** page, select the adapter format that best suits your deployment, make sure the correct servers are selected, then select **Apply and test**.
+
+1. On the **Virtual switch** page, select the virtual switch infrastructure that you want to use or select the **Skip virtual switch creation** checkbox if you want to skip this step, then select **Next**.
+
+1. On the **Optionally configure RDMA** page, select the **Configure RDMA (Recommended)** checkbox if you want to configure RDMA. Select **Next**.
+
+1. On the **Define Networks** page, specify the name, IP address, subnet mask, and default gateway for each server node you plan to add to your cluster.
+
+1. Select **Apply and test** to verify the configuration for your nodes. If everything looks okay, select **Next: Clustering**.
+
+### Clustering
+
+1. On the **Validate this cluster** page, select **Validate**.
+
+1. Wait for the validation to finish. Review any warnings that appear. If the servers are ready for clustering, select **Next**.
+
+1. On the **Create the cluster** page, enter a name for your cluster and specify the IP address for the cluster. When you're finished, select **Create cluster**.
+
+1. After that, the process should finish. You can select the **Got o connections list** to view your cluster.
+
+   >[!NOTE]
+   >It might take a few minutes for the cluster you created to become accessible by name. If you don't see your cluster on the connections list, wait a few minutes and then refresh.
+
+::: zone-end  
 
 ::: zone pivot="powershell"
 
