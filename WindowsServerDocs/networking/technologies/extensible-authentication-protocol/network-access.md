@@ -2,7 +2,7 @@
 title: Extensible Authentication Protocol (EAP) for network access in Windows
 description: This article presents information about the Extensible Authentication Protocol (EAP) settings and configuration in Windows-based computers.
 author: xelu86
-ms.author: roharwoo
+ms.author: alalve
 ms.topic: conceptual
 ms.date: 06/28/2024
 ms.contributor: samyun
@@ -11,7 +11,7 @@ ms.reviewer: samyun
 
 # Extensible Authentication Protocol (EAP) for network access
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 11, Windows 10, Windows 8.1
+> 
 
 The Extensible Authentication Protocol (EAP) is an authentication framework that allows for the use of different authentication methods for secure network access technologies. Examples of these technologies include wireless access using IEEE 802.1X, wired access using IEEE 802.1X, and Point-to-Point Protocol (PPP) connections like Virtual Private Networking (VPN). EAP isn't a specific authentication method like MS-CHAP v2, but rather a framework that enables networking vendors to develop and install new authentication methods, known as EAP methods, on the access client and authentication server. The EAP framework is originally defined by [RFC 3748](https://www.ietf.org/rfc/rfc3748.txt) and extended by various other RFCs and standards.
 

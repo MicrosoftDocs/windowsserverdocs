@@ -4,12 +4,12 @@ description: Learn about the different Hyper-V technologies for GPU acceleration
 author: robinharwood
 ms.author: roharwoo
 ms.topic: article
-ms.date: 05/16/2024
+ms.date: 10/25/2024
 ---
 
 # Plan for GPU acceleration in Windows Server
 
->Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>
 
 This article introduces the graphics virtualization capabilities available in Windows Server.
 
@@ -44,9 +44,6 @@ For more information, see these articles:
 - [Deploy graphics devices using Discrete Device Assignment](../deploy/Deploying-graphics-devices-using-dda.md)
 
 ## GPU Partitioning (GPU-P)
-
-> [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Beginning with Windows Server 2025, GPU partitioning allows you to share a physical GPU device with multiple virtual machines (VMs). With GPU partitioning or GPU virtualization, each VM gets a dedicated fraction of the GPU instead of the entire GPU.
 

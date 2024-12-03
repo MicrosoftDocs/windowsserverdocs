@@ -10,7 +10,7 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Virtualization Host
 
-> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, and Windows Server 2016
+> 
 
 ## RD Virtualization Host servers in the deployment where VMs are stored locally
 

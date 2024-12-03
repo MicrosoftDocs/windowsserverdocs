@@ -5,22 +5,15 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: conceptual
 ms.subservice: core-os
-ms.date: 09/25/2024
+ms.date: 10/25/2024
 zone_pivot_groups: windows-os
 ---
 
 # GPU partitioning
 
-:::zone pivot="windows-server"
->Applies to: Windows Server 2025 (preview)
+:::zone pivot="azure-local"
 
-> [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-::: zone-end
-
-:::zone pivot="azure-stack-hci"
-
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
+[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-23h2-22h2.md)]
 
 ::: zone-end
 
@@ -52,7 +45,7 @@ For example:
 GPU partitioning on Windows Server 2025 and later supports these guest operating systems:
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 GPU partitioning on Azure Stack HCI supports these guest operating systems:
 :::zone-end
 
@@ -97,7 +90,7 @@ Consider the following limitations when using the GPU partitioning feature:
 
 - Partitions are autoassigned to the VMs. You can't choose a specific partition for a specific VM.
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 - Currently, GPU partitioning on Azure Stack HCI doesn't support live migration of VMs. But VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
 
@@ -120,17 +113,17 @@ Consider the following limitations when using the GPU partitioning feature:
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md)
-- [Use GPUs with clustered VMs](/azure-stack/hci/manage/use-gpu-with-clustered-vm?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json)
+- [Use GPUs with clustered VMs](deploy/use-gpu-with-clustered-vm.md)
 - [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
 
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
-- [Use GPUs with clustered VMs](/azure-stack/hci/manage/use-gpu-with-clustered-vm)
+- [Use GPUs with clustered VMs](deploy/use-gpu-with-clustered-vm.md?context=/azure/azure-local/context/context)
 - [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
 
 :::zone-end

@@ -11,7 +11,7 @@ ms.date: 10/28/2021
 
 # Network Controller High Availability
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 You can use this topic to learn about Network Controller high availability and scalability configuration for Software Defined Networking \(SDN\).
 
@@ -80,4 +80,4 @@ To deploy Network Controller using scripts, see [Deploy a Software Defined Netwo
 
 To deploy Network Controller using Windows PowerShell, see [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 
-For more information about Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
+For more information about Network Controller, see [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking).

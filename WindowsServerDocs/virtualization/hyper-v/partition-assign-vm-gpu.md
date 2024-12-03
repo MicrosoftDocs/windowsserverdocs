@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.subservice: core-os
-ms.date: 03/15/2024
+ms.date: 10/25/2024
 zone_pivot_groups: windows-os
 #customer intent: As a customer, I want to learn how to partition and assign GPUs to a virtual machine in Hyper-V so that I can use the GPU resources efficiently.
 ---
@@ -14,18 +14,15 @@ zone_pivot_groups: windows-os
 
 :::zone pivot="windows-server"
 
->Applies to: Windows Server 2025 (preview)
-
-> [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
+[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-23h2-22h2.md)]
 
-[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-stack/includes/hci-arc-vm.md)]
+[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-local//includes/hci-arc-vm.md)]
 
 ::: zone-end
 
@@ -53,9 +50,9 @@ There are several requirements and things to consider before you begin to use th
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-- Install Azure Stack HCI on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
+- Install Azure Stack HCI on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure/azure-local/deploy/operating-system?context=/windows-server/context/windows-server-virtualization).
 
 ::: zone-end
 

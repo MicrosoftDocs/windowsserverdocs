@@ -9,7 +9,7 @@ ms.date: 09/18/2018
 
 # Install extension payload on a managed node
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 ## Setup
 

@@ -9,7 +9,7 @@ ms.date: 05/17/2023
 
 # Active Directory accounts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization.
 

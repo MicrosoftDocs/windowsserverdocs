@@ -9,7 +9,7 @@ ms.date: 09/24/2024
 ---
 # Windows Logon Scenarios
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This reference topic for the IT professional summarizes common Windows logon and sign-in scenarios.
 

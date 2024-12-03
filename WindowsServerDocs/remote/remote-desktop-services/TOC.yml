@@ -1,8 +1,10 @@
 - name: Remote Desktop Services
-  href: remote-desktop-services-overview.md
+  href: index.yml
   items:
   - name: Get started
     items:
+    - name: Remote Desktop Services overview
+      href: remote-desktop-services-overview.md
     - name: Create virtual machines for Remote Desktop
       href: Create-virtual-machines-for-Remote-Desktop.md
     - name: Supported configurations for RDS

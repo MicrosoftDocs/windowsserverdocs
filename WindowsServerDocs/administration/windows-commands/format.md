@@ -1,7 +1,7 @@
 ---
 title: format
 description: Reference article for the format command that formats a drive to accept Windows files.
-ms.author: roharwoo
+ms.author: alalve
 ms.topic: reference
 author: xelu86
 ms.date: 09/28/2023
@@ -9,7 +9,7 @@ ms.date: 09/28/2023
 
 # Format
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 11, Windows 10
+
 
 The **format** command formats a drive to accept Windows files. You must be a member of the Administrators group to format a hard drive.
 

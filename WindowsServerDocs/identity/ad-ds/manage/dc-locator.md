@@ -1,7 +1,7 @@
 ---
 title: Locating Active Directory domain controllers in Windows and Windows Server
 description: Learn how domain controllers are located in Windows and Windows Server using the DC Locator algorithm.
-ms.date: 08/29/2024
+ms.date: 10/25/2024
 ms.topic: conceptual
 author: gswashington
 ms.author: roharwoo
@@ -51,9 +51,6 @@ NetBIOS-style domain names are mapped to DNS domain names from multiple sources 
 1. Top-level names (TLNs) for all trusting forest trusts and external trusts
 
 1. For Windows Server 2025 and later:
-
-   > [!IMPORTANT]
-   > Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
    1. Administrator-configured domain name mappings
 
@@ -111,7 +108,7 @@ The process that the Locator follows can be summarized as follows:
 1. The Netlogon service sends a datagram as a mailslot message to the discovered domain controllers that register the name.
 
    > [!IMPORTANT]
-   > WINS and mailslots were deprecated in Windows Server 2022 and Windows Server 2025 respectively, as these legacy technologies are no longer secure in today's environments. To learn more, see [Features removed or no longer developed starting with Windows Server 2022](../../../get-started/removed-deprecated-features-windows-server-2022.md) and [Features removed or no longer developed starting with Windows Server 2025 (preview)](../../../get-started/removed-deprecated-features-windows-server-2025.md).
+   > WINS and mailslots were deprecated in Windows Server 2022 and Windows Server 2025 respectively, as these legacy technologies are no longer secure in today's environments. To learn more, see [Features removed or no longer developed starting with Windows Server 2022](../../../get-started/removed-deprecated-features-windows-server-2022.md) and [Features removed or no longer developed starting with Windows Server 2025](../../../get-started/removed-deprecated-features-windows-server-2025.md).
 
 1. Each available domain controller responds to the datagram to indicate that it's currently operational and then returns the information to DsGetDcName.
 

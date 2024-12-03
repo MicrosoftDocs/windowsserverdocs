@@ -10,7 +10,7 @@ ms.date: 10/28/2021
 ---
 # Install the Network Controller Server Role Using Server Manager
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.
 
@@ -56,4 +56,4 @@ After you install Network Controller, you must use Windows PowerShell commands f
     ![Server Manager](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)
 
 ## See Also
-[Network Controller](/azure-stack/hci/concepts/network-controller-overview)
+[Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking)

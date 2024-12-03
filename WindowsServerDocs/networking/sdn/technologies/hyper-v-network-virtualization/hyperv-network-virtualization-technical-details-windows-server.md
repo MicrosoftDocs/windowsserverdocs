@@ -10,7 +10,7 @@ ms.date: 10/27/2021
 ---
 # Hyper-V Network Virtualization Technical Details in Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 Server virtualization enables multiple server instances to run concurrently on a single physical host; yet server instances are isolated from each other. Each virtual machine essentially operates as if it is the only server running on the physical computer.
 

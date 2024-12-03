@@ -10,7 +10,7 @@ ms.date: 10/28/2021
 ---
 # RAS Gateway High Availability
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking (SDN).
 

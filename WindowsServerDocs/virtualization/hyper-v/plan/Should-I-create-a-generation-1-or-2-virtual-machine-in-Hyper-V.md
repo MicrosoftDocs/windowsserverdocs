@@ -8,7 +8,7 @@ ms.date: 06/20/2024
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
->Applies to: Windows 10, Windows 11, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019, Windows Server 2022, Azure Stack HCI
+>
 
 Creating a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend you create a generation 2 virtual machines to take advantage of features like Secure Boot unless one of the following statements is true:
 

@@ -11,7 +11,7 @@ manager: dongill
 
 # Supported Windows security configurations for Remote Desktop Services VDI
 
->Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Windows and Windows Server have new layers of protection built into the operating system to:
 

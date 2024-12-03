@@ -10,7 +10,7 @@ manager: grcusanz
 ---
 # Deploy a Software Defined Network infrastructure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 Deploy Microsoft's Software Defined Networking (SDN) infrastructure.
 
@@ -46,7 +46,7 @@ These deployments include all the technologies you need for a fully functional i
 ## Related topics
 - [Software Defined Networking (SDN)](../software-defined-networking.md)
 - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
-- [Plan SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
+- [Plan SDN](/azure/azure-local/concepts/plan-software-defined-networking-infrastructure?context=/windows-server/context/windows-server-edge-networking)
 - [Manage SDN](../manage/manage-sdn.md)
-- [Security for SDN](/azure-stack/hci/manage/nc-security)
+- [Security for SDN](/azure/azure-local/manage/nc-security?context=/windows-server/context/windows-server-edge-networking)
 - [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)

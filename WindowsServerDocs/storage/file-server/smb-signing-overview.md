@@ -1,7 +1,7 @@
 ---
 title: Overview of Server Message Block signing in Windows
 description: Learn how to configure SMB signing, how to determine whether SMB signing is enabled, and how to disable SMB signing.
-ms.date: 04/19/2024
+ms.date: 10/25/2024
 author: robinharwood
 ms.author: roharwoo
 ms.topic: overview
@@ -69,7 +69,7 @@ Signing isn't used when:
 
 ## SMB signing and encryption auditing
 
-Starting with Windows 11 Insider build 26090, administrators can enable auditing for the SMB client to detect third-party clients or servers that don't support SMB encryption or signing. If a third-party device or software claims to support SMB 3.1.1, but doesn't support SMB signing, it violates the [SMB 3.1.1 pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
+Starting with Windows 11, version 24H2, administrators can enable auditing for the SMB client to detect third-party clients or servers that don't support SMB encryption or signing. If a third-party device or software claims to support SMB 3.1.1, but doesn't support SMB signing, it violates the [SMB 3.1.1 pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
 
 Adjusting the SMB signing and encryption auditing settings can be modified in Group Policy or through PowerShell. These settings for Group Policy are stored in the paths:
 
