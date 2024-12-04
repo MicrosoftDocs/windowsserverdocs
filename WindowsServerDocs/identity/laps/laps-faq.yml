@@ -138,16 +138,19 @@ sections:
           to Windows LAPS passwords, and is always enabled in addition to the default Microsoft Entra data protection
           mechanisms - see [Microsoft Entra Data Security Considerations](https://azure.microsoft.com/resources/azure-active-directory-data-security-considerations).
 
-      - question: I see a 20000 warning event in the event log during a Windows Autopilot provisioning workflow - how do I fix this issue?
+      - question: I see a 20000 warning event in the event log during a Windows Autopilot pre-provisioning workflow - how do I fix this issue?
         answer: |
           The Windows LAPS CSP rejects MDM configuration directives when the device doesn't appear to be joined.
           The CSP logs an event ID 20000 in the Windows LAPS operational event log when this condition occurs.
-          You might see one or more of these events during the technician flow phase of Autopilot provisioning,
-          when Autopilot unjoins the device from Microsoft Entra.
+          You might see one or more of these events during the technician flow phase of an Autopilot pre-provisioning
+          workflow, when Autopilot unjoins the device from Microsoft Entra.
 
           This situation gets resolved during the later user flow phase of Autopilot provisioning when the device
           is rejoined to Microsoft Entra. At that point Windows LAPS is fully functional and starts backing up
-          passwords to Microsoft Entra. The CSP warning events should otherwise be ignored.
+          passwords to Microsoft Entra.
+          
+          This issue does not impact other Autopilot scenarios aside from pre-provisioning. The CSP warning events
+          should be ignored.
 
           See [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune](https://learn.microsoft.com/autopilot/tutorial/pre-provisioning/azure-ad-join-workflow).
 
