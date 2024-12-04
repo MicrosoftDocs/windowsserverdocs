@@ -4,13 +4,13 @@ description: Learn how to configure SMB over QUIC client access control using Po
 ms.topic: how-to
 author: gswashington
 ms.author: alalve
-ms.date: 11/25/2024
+ms.date: 12/05/2024
 #customer intent: As an administrator, I want to configure SMB over QUIC client access control in Windows Server so that I can restrict which clients can access SMB over QUIC servers.
 ---
 
 # Configure SMB over QUIC client access control
 
-SMB over QUIC client access control enables you to restrict which clients can access SMB over QUIC servers. Client access control creates allowlists and blocklists for devices to connect to the file server. Client access control gives organizations more protection without changing the authentication used when making the SMB connection, nor does it alter the end user experience.
+SMB over QUIC client access control enables you to restrict which clients can access SMB over QUIC servers. Client access control allows you to create allowlists and blocklists for devices to connect to the file server. Client access control gives organizations more protection without changing the authentication used when making the SMB connection, nor does it alter the end user experience.
 
 ## How client access control works
 
@@ -166,30 +166,6 @@ New-SmbMapping -RemotePath \\<server DNS name>\<share name> -TransportType QUIC
 ```
 
 If you can connect to a share, you've successfully configured SMB over QUIC using client access control.
-
-## Manage SMB over QUIC
-
-Users can specify a list of servers that the client can connect to when SMB over QUIC is disabled on the client. This list is similar to the Block NTLM exception list. To learn more, see [Enable exceptions to NTLM blocking](/windows-server/storage/file-server/smb-ntlm-blocking?tabs=group-policy#enable-exceptions-to-ntlm-blocking). Furthermore, there's a new option available to disable SMB over QUIC on the server.
-
-Admins can now specify an SMB over QUIC server exception list on the client. A client can connect to a server when SMB over QUIC is disabled on the client as long as the server IP address, NetBIOS name or FQDN is in the exception list. A server exception list can be created by running the following command:
-
-```powershell
-Set-SmbClientConfiguration -DisabledSMBQUICServerExceptionList "<Server01>, <Server02>, <Server03>"
-```
-
-This operation can also be performed in Group Policy by enabling the **Disabled SMB over QUIC Server Exception List** policy in the following path:
-
-- **Computer Configuration\Administrative Templates\Network\Lanman Workstation**
-
-Admins can also disable SMB over QUIC for a server by running the following command:
-
-```powershell
-Set-SmbServerConfiguration -EnableSMBQUIC $false
-```
-
-This operation can be performed in Group Policy by disabling the **Enable SMB over QUIC** policy in the following path:
-
-- **Computer Configuration\Administrative Templates\Network\Lanman Server**
 
 ## Audit event logs
 
