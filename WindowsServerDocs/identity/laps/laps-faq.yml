@@ -149,8 +149,8 @@ sections:
           is rejoined to Microsoft Entra. At that point Windows LAPS is fully functional and starts backing up
           passwords to Microsoft Entra.
           
-          This issue does not impact other Autopilot scenarios aside from pre-provisioning. The CSP warning events
-          should be ignored.
+          This issue doesn't affect other Autopilot scenarios aside from pre-provisioning. The CSP warning events
+          should be ignored when seen in an Autopilot pre-provisioning workflow as described earlier.
 
           See [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune](https://learn.microsoft.com/autopilot/tutorial/pre-provisioning/azure-ad-join-workflow).
 
