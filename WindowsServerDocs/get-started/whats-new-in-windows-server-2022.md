@@ -70,9 +70,7 @@ on Azure Local version 22H2. With Azure Edition running on Azure Local, you'll b
 all the existing features including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
 [SMB over QUIC](#smb-over-quic) at your datacenter and edge locations.
 
-Begin deploying Windows Server 2022 Datacenter: Azure Edition using the
-[Azure Marketplace on Arc-enabled Azure Local](#deploy-from-azure-marketplace-on-arc-enabled-azure-stack-hci-preview)
-or using an ISO. You can download the ISO from here:
+Begin deploying Windows Server 2022 Datacenter: Azure Edition using the [Deploy from Azure Marketplace on Arc-enabled Azure Local (preview)](#deploy-from-azure-marketplace-on-arc-enabled-azure-local-preview) or using an ISO. You can download the ISO from here:
 
 - [Windows Server 2022 Datacenter: Azure Edition (EN-US) ISO](https://aka.ms/AAi4r31)
 - [Windows Server 2022 Datacenter: Azure Edition (ZH-CN) ISO](https://aka.ms/AAi4bii)

@@ -8,8 +8,6 @@ ms.date: 05/06/2022
 ---
 # Manage Azure Local clusters using Windows Admin Center in Azure (preview)
 
-> 
-
 > [!IMPORTANT]
 > Windows Admin Center in the Azure portal is currently in preview.
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
@@ -68,7 +66,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 - [Azure account with an active subscription](#azure-account-with-an-active-subscription)
 - [Azure permissions](#azure-permissions)
 - [Azure region availability](#azure-region-availability)
-- [Azure Local requirements](#azure-stack-hci-requirements)
+- [Azure Local requirements](#azure-local-requirements)
 - [Networking requirements](#networking-requirements)
 
 ### Azure account with an active subscription
