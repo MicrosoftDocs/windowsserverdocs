@@ -422,7 +422,7 @@ Enhanced Logs help the Storage Replica log implementation to eliminate the perfo
 
 ### ReFS native storage deduplication and compression
 
-ReFS native storage deduplication and compression are techniques used to optimize storage efficiency for both static and active workloads such as file servers or virtual desktops. To learn more about ReFS deduplication and compression, see [Optimize storage with ReFS deduplication and compression in Azure Stack HCI](/azure/azure-local/manage/refs-deduplication-and-compression).
+ReFS native storage deduplication and compression are techniques used to optimize storage efficiency for both static and active workloads such as file servers or virtual desktops. To learn more about ReFS deduplication and compression, see [Optimize storage with ReFS deduplication and compression in Azure Local](/azure/azure-local/manage/refs-deduplication-and-compression).
 
 ### Thin provisioned volumes
 
@@ -464,7 +464,7 @@ SDN is an approach to networking that allows network administrators to manage ne
 
 - Tag-based segmentation allows administrators to use custom service tags to associate Network Security Groups (NSGs) and VMs for access control. Instead of specifying IP ranges, administrators can now use simple, self-explanatory labels to tag workload VMs, and apply security policies based on these tags. Tags simplify the process of managing network security and eliminate the need to remember and retype IP ranges. To learn more, see [Configure network security groups with tags in Windows Admin Center](/azure/azure-local/manage/configure-network-security-groups-with-tags?pivots=windows-server).
 
-- Default network policies in Windows Server 2025 bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. Default network policies ensure workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Stack HCI, version 23H2](/azure/azure-local/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
+- Default network policies in Windows Server 2025 bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. Default network policies ensure workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Local, version 23H2](/azure/azure-local/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
 
 - SDN Multisite provides native layer 2 and layer 3 connectivity between applications across two locations without any extra components. This feature allows for seamless movement of applications without the need to reconfigure the application or networks. It also offers unified network policy management for workloads, ensuring that policies don't need to be updated when a workload VM moves from one location to another. To learn more, see [What is SDN Multisite?](/azure/azure-local/concepts/sdn-multisite-overview?pivots=windows-server).
 

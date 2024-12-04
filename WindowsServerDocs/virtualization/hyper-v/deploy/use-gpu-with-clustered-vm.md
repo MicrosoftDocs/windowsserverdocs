@@ -1,12 +1,12 @@
 ---
 title: Use GPUs with clustered VMs on Hyper-V
-description: Learn how to use GPUs with clustered virtual machines (VMs) to provide GPU acceleration to workloads in the clustered VMs on Windows Server and Azure Stack HCI.
+description: Learn how to use GPUs with clustered virtual machines (VMs) to provide GPU acceleration to workloads in the clustered VMs on Windows Server and Azure Local.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 10/25/2024
 zone_pivot_groups: windows-os
-#customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Stack HCI.
+#customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Local.
 ---
 
 # Use GPUs with clustered VMs
@@ -34,7 +34,7 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-local"
 
-- You need an Azure Stack HCI cluster running Azure Stack HCI, version 22H2 or later.
+- You need an Azure Local cluster running Azure Local, version 22H2 or later.
 
 ::: zone-end
 
@@ -71,7 +71,7 @@ There are several requirements and things to consider before you begin to use GP
 - Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context).
 
 >[!NOTE]
-> Your system must be supported Azure Stack HCI solution with GPU support. To browse options, visit the [Azure Stack HCI Catalog](https://azurestackhcisolutions.azure.microsoft.com/#/catalog?gpuSupport=GPU_P&gpuSupport=DDA).
+> Your system must be supported Azure Local solution with GPU support. To browse options, visit the [Azure Local Catalog](https://azurestackhcisolutions.azure.microsoft.com/#/catalog?gpuSupport=GPU_P&gpuSupport=DDA).
 
 ::: zone-end
 

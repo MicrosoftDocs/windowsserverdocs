@@ -1,12 +1,12 @@
 ---
-title: Manage Azure Stack HCI
+title: Manage Azure Local
 description: Manage Hyper-Converged Infrastructure with Windows Admin Center (Project Honolulu)
 ms.topic: article
 author: daniellee-msft
 ms.author: roharwoo
 ms.date: 03/15/2023
 ---
-# Manage Azure Stack HCI
+# Manage Azure Local
 
 >
 

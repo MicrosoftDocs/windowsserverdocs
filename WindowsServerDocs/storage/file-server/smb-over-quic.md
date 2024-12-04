@@ -275,7 +275,7 @@ An expired SMB over QUIC certificate that you replace with a new certificate fro
 
 ## Notes
 
-- For customers not using Azure public cloud, Windows Server 2022 Datacenter: Azure Edition is available on Azure Stack HCI beginning with version 22H2.
+- For customers not using Azure public cloud, Windows Server 2022 Datacenter: Azure Edition is available on Azure Local beginning with version 22H2.
 - We recommended using SMB over QUIC with Active Directory domains but isn't a requirement. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM, or Azure IaaS with Microsoft Entra joined Windows Servers. Microsoft Entra joined Windows Servers for non-Azure IaaS based machines isn't supported. Microsoft Entra joined Windows Servers don't support credentials for remote Windows security operations because Microsoft Entra ID doesn't contain user or group SIDs. Microsoft Entra joined Windows Servers must use either a domain-based or local user account to access the SMB over QUIC share.
 - You can't configure SMB over QUIC using WAC when the SMB server is in a workgroup (that is, not AD domain joined). Per this scenario, you must use the [New-SMBServerCertificateMapping](/powershell/module/smbshare/new-smbservercertificatemapping) cmdlet.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.

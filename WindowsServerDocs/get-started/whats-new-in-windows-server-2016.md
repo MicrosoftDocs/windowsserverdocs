@@ -245,7 +245,7 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
   - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
-  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Host network requirements for Azure Stack HCI](/azure/azure-local/concepts/host-network-requirements).
+  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
   - Virtual machine multi-queues (VMMQs) improve on VMQ through put by allocating multiple hardware queues per VM. The default queue becomes a set of queues for a VM and spreads traffic between the queues.
   
@@ -271,7 +271,7 @@ Windows Server 2016 includes the following cloud scale fundamentals:
 
 - Packet Direct provides a high network traffic throughput and low-latency packet processing infrastructure.
 
-- Switch Embedded Teaming (SET) is a NIC Teaming solution integrated into the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICs into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to using Server Message Block (SMB) and RDMA. You can also use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Host network requirements for Azure Stack HCI](/azure/azure-local/concepts/host-network-requirements).
+- Switch Embedded Teaming (SET) is a NIC Teaming solution integrated into the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICs into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to using Server Message Block (SMB) and RDMA. You can also use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
 ### TCP performance improvements
 

@@ -1,6 +1,6 @@
 ---
 title: Partition and assign GPUs to a virtual machine in Hyper-V
-description: Learn how to partition and share a GPU with multiple virtual machines on Windows Server and Azure Stack HCI.
+description: Learn how to partition and share a GPU with multiple virtual machines on Windows Server and Azure Local.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
@@ -52,7 +52,7 @@ There are several requirements and things to consider before you begin to use th
 
 :::zone pivot="azure-local"
 
-- Install Azure Stack HCI on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure/azure-local/deploy/operating-system?context=/windows-server/context/windows-server-virtualization).
+- Install Azure Local on all the servers in your cluster. See [Deploy the Azure Local operating system](/azure/azure-local/deploy/operating-system?context=/windows-server/context/windows-server-virtualization).
 
 ::: zone-end
 
