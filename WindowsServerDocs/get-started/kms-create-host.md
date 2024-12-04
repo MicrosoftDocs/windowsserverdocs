@@ -28,7 +28,11 @@ You will need:
 
 - The user account you use must be a member of the Administrators group on the KMS host.
 
+- Check this article to see which KMS and client versions work together and which Windows versions can run the KMS - [Key Management Services (KMS) activation planning](https://learn.microsoft.com/en-us/windows-server/get-started/kms-activation-planning?tabs=server25).
+
 - A KMS host key for your organization. You can get this key from the Product Keys section of the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
+
+- Access to the internet for activating the KMS host or perform a phone activation. 
 
 ## Install and configure a KMS host
 
