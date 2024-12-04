@@ -26,7 +26,7 @@ These steps explain how to perform an authoritative restore of SYSVOL at the
 same time.
 
 - [Configure the DNS Server service](ad-forest-recovery-configure-dns.md)
-- [Removethe global catalog](ad-forest-recovery-remove-gc.md)
+- [Remove the global catalog](ad-forest-recovery-remove-gc.md)
 - [Raise the value of available RID pools](ad-forest-recovery-raise-rid-pool.md)
 - [Invalidate the current RID pool](ad-forest-recovery-invaildate-rid-pool.md)
 - [Seize an operations master role](ad-forest-recovery-seizing-operations-master-role.md)
