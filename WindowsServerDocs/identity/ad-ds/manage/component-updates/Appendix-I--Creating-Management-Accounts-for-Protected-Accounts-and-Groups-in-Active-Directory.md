@@ -12,7 +12,7 @@ ms.topic: article
 
 >
 
-One of the challenges in implementing an Active Directory model that does not rely on permanent membership in highly privileged groups is that there must be a mechanism to populate these groups when temporary membership in the groups is required. Some privileged identity management solutions require that the software's service accounts are granted permanent membership in groups such as DA or Administrators in each domain in the forest. However, it is technically not necessary for Privileged Identity Management (PIM) solutions to run their services in such highly privileged contexts.
+One of the challenges in implementing an Active Directory model that does not rely on permanent membership in highly privileged groups is that there must be a mechanism to populate these groups when temporary membership in the groups is required. Some privileged identity management solutions require that the software's service accounts are granted permanent membership in groups such as Domain Admins (DA) or Administrators in each domain in the forest. However, it is technically not necessary for Privileged Identity Management (PIM) solutions to run their services in such highly privileged contexts.
 
 This appendix provides information that you can use for natively implemented or third-party PIM solutions to create accounts that have limited privileges and can be stringently controlled, but can be used to populate privileged groups in Active Directory when temporary elevation is required. If you are implementing PIM as a native solution, these accounts may be used by administrative staff to perform the temporary group population, and if you're implementing PIM via third-party software, you might be able to adapt these accounts to function as service accounts.
 
@@ -101,7 +101,7 @@ To create a group to enable and disable management accounts, perform the followi
 You should create at least one account that will be used to manage the membership of privileged groups in your Active Directory installation, and preferably a second account to serve as a backup. Whether you choose to create the management accounts in a single domain in the forest and grant them management capabilities for all domains' protected groups, or whether you choose to implement management accounts in each domain in the forest, the procedures are effectively the same.
 
 > [!NOTE]
-> The steps in this document assume that you have not yet implemented role-based access controls and privileged identity management for Active Directory. Therefore, some procedures must be performed by a user whose account is a member of the Domain Admins group for the domain in question.
+> The steps in this document assume that you have not yet implemented role-based access controls and privileged identity management for Active Directory. Therefore, some procedures must be performed by a user whose account is a member of the Domain Admins (DA) group for the domain in question.
 >
 > When you are using an account with DA privileges, you can log on to a domain controller to perform the configuration activities. Steps that do not require DA privileges can be performed by less-privileged accounts that are logged on to administrative workstations. Screen shots that show dialog boxes bordered in the lighter blue color represent activities that can be performed on a domain controller. Screen shots that show dialog boxes in the darker blue color represent activities that can be performed on administrative workstations with accounts that have limited privileges.
 
@@ -138,7 +138,7 @@ To create the management accounts, perform the following steps:
    >
    > For more information about configuring encryption types on systems and accounts, see [Windows Configurations for Kerberos Supported Encryption Type](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type).
    >
-   > These settings are supported only on computers running Windows Server 2012, Windows Server 2008 R2, Windows 8, or Windows 7.
+   > These settings are supported only on computers running at minimum Windows Server 2008 R2 and Windows 7.
 
 10. On the **Object** tab, select **Protect object from accidental deletion**. This will not only prevent the object from being deleted (even by authorized users), but will prevent it from being moved to a different OU in your AD DS hierarchy, unless the check box is first cleared by a user with permission to change the attribute.
 
@@ -245,20 +245,21 @@ In this case, you will be granting the newly created management accounts to allo
 
 1. Log on to a domain controller, preferably the domain controller holding the PDC Emulator (PDCE) role, with the credentials of a user account that has been made a member of the DA group in the domain.
 
-   ![Screenshot that shows where to enter the credentials for the user account.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_136.png)
+     ![Screenshot that shows where to enter the credentials for the user account.](https://github.com/user-attachments/assets/fbc7de1a-d592-467a-9fcd-0aaad031483b)
 
-2. Open an elevated command prompt by right-clicking **Command Prompt** and click **Run as administrator**.
+
+3. Open an elevated command prompt by right-clicking **Command Prompt** and click **Run as administrator**.
 
    ![Screenshot that shows the Run as administrator menu option.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_137.gif)
 
-3. When prompted to approve the elevation, click **Yes**.
+4. When prompted to approve the elevation, click **Yes**.
 
    ![Screenshot that shows where to select Yes to approve the elevation.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_138.gif)
 
    > [!NOTE]
    > For more information about elevation and user account control (UAC) in Windows, see [UAC Processes and Interactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd835561(v=ws.10)) on the TechNet website.
 
-4. At the Command Prompt, type (substituting your domain-specific information) **Dsacls [distinguished name of the AdminSDHolder object in your domain] /G [management account UPN]:RPWP;member**.
+5. At the Command Prompt, type (substituting your domain-specific information) **Dsacls [distinguished name of the AdminSDHolder object in your domain] /G [management account UPN]:RPWP;member**.
 
    ![Screenshot that shows the command prompt.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_139.gif)
 
@@ -282,19 +283,19 @@ In this case, you will be granting the newly created management accounts to allo
 
    When SDProp has run, you can verify that the changes you made to the AdminSDHolder object have been applied to protected groups in the domain. You cannot verify this by viewing the ACL on the AdminSDHolder object for the reasons previously described, but you can verify that the permissions have been applied by viewing the ACLs on protected groups.
 
-5. In **Active Directory Users and Computers**, verify that you have enabled **Advanced Features**. To do so, click **View**, locate the **Domain Admins** group, right-click the group and click **Properties**.
+6. In **Active Directory Users and Computers**, verify that you have enabled **Advanced Features**. To do so, click **View**, locate the **Domain Admins** group, right-click the group and click **Properties**.
 
-6. Click the **Security** tab and click **Advanced** to open the **Advanced Security Settings for Domain Admins** dialog box.
+7. Click the **Security** tab and click **Advanced** to open the **Advanced Security Settings for Domain Admins** dialog box.
 
    ![Screenshot that shows how to open the Advanced Security Settings for Domain Admins dialog box.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_140.gif)
 
-7. Select **Allow ACE for the management account** and click **Edit**. Verify that the account has been granted only **Read Members** and **Write Members** permissions on the DA group, and click **OK**.
+8. Select **Allow ACE for the management account** and click **Edit**. Verify that the account has been granted only **Read Members** and **Write Members** permissions on the DA group, and click **OK**.
 
-8. Click **OK** in the **Advanced Security Settings** dialog box, and click **OK** again to close the property dialog box for the DA group.
+9. Click **OK** in the **Advanced Security Settings** dialog box, and click **OK** again to close the property dialog box for the DA group.
 
    ![Screenshot that shows how to close the property dialog box.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_141.gif)
 
-9. You can repeat the previous steps for other protected groups in the domain; the permissions should be the same for all protected groups. You have now completed creation and configuration of the management accounts for the protected groups in this domain.
+10. You can repeat the previous steps for other protected groups in the domain; the permissions should be the same for all protected groups. You have now completed creation and configuration of the management accounts for the protected groups in this domain.
 
     > [!NOTE]
     > Any account that has permission to write membership of a group in Active Directory can also add itself to the group. This behavior is by design and cannot be disabled. For this reason, you should always keep management accounts disabled when not in use, and should closely monitor the accounts when they're disabled and when they're in use.
@@ -311,43 +312,44 @@ Now that you have created and configured management accounts that can modify the
 
 1.  To test enabling a management account and resetting its password, log on to a secure administrative workstation with an account that is a member of the group you created in [Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md).
 
-    ![Screenshot that shows how to log in to the account that is a member of the group you created.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_142.gif)
+   ![Screenshot that shows how to log in to the account that is a member of the group you created.](https://github.com/user-attachments/assets/dc89d49a-20d7-4e72-b581-fb1b5c9081fb)
 
-2.  Open **Active Directory Users and Computers**, right-click the management account, and click **Enable Account**.
+
+3.  Open **Active Directory Users and Computers**, right-click the management account, and click **Enable Account**.
 
     ![Screenshot that highlights the Enable Account menu option.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_143.gif)
 
-3.  A dialog box should display, confirming that the account has been enabled.
+4.  A dialog box should display, confirming that the account has been enabled.
 
     ![Screenshot that shows that the account has been enabled.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_144.gif)
 
-4.  Next, reset the password on the management account. To do so, right-click the account again and click **Reset Password**.
+5.  Next, reset the password on the management account. To do so, right-click the account again and click **Reset Password**.
 
     ![Screenshot that highlights the Reset Password menu option.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_145.gif)
 
-5.  Type a new password for the account in the **New password** and **Confirm password** fields, and click **OK**.
+6.  Type a new password for the account in the **New password** and **Confirm password** fields, and click **OK**.
 
     ![Screenshot that shows where to type the new password.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_146.gif)
 
-6.  A dialog box should appear, confirming that the password for the account has been reset.
+7.  A dialog box should appear, confirming that the password for the account has been reset.
 
     ![Screenshot that shows the message confirming that the password for the account has been reset.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_147.gif)
 
-7.  Now attempt to modify additional properties of the management account. Right-click the account and click **Properties**, and click the **Remote control** tab.
+8.  Now attempt to modify additional properties of the management account. Right-click the account and click **Properties**, and click the **Remote control** tab.
 
-8.  Select **Enable remote control** and click **Apply**. The operation should fail and an **Access Denied** error message should display.
+9.  Select **Enable remote control** and click **Apply**. The operation should fail and an **Access Denied** error message should display.
 
     ![Screenshot that shows the Access Denied error.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_148.gif)
 
-9. Click the **Account** tab for the account and attempt to change the account's name, logon hours, or logon workstations. All should fail, and account options that are not controlled by the **userAccountControl** attribute should be grayed out and unavailable for modification.
+10. Click the **Account** tab for the account and attempt to change the account's name, logon hours, or logon workstations. All should fail, and account options that are not controlled by the **userAccountControl** attribute should be grayed out and unavailable for modification.
 
     ![Screenshot that shows the Account tab.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_149.gif)
 
-10. Attempt to add the management group to a protected group such as the DA group. When you click **OK**, a message should appear, informing you that you do not have permissions to modify the group.
+11. Attempt to add the management group to a protected group such as the DA group. When you click **OK**, a message should appear, informing you that you do not have permissions to modify the group.
 
     ![Screenshot that shows the message informing you that you do not have permission to modify the group.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_150.gif)
 
-11. Perform additional tests as required to verify that you cannot configure anything on the management account except **userAccountControl** settings and password resets.
+12. Perform additional tests as required to verify that you cannot configure anything on the management account except **userAccountControl** settings and password resets.
 
     > [!NOTE]
     > The **userAccountControl** attribute controls multiple account configuration options. You cannot grant permission to change only some of the configuration options when you grant write permission to the attribute.
@@ -358,28 +360,29 @@ Now that you have enabled one or more accounts that can change the membership of
 
 1.  Log on to a secure administrative host as the first management account.
 
-    ![Screenshot that shows how to log in to a secure administrative host.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_151.gif)
+     ![Screenshot that shows how to log in to a secure administrative host.](https://github.com/user-attachments/assets/ed2378df-2c2d-41f5-9df4-ebd210134dab)
 
-2.  Launch **Active Directory Users and Computers** and locate the **Domain Admins group**.
 
-3.  Right-click the **Domain Admins** group and click **Properties**.
+3.  Launch **Active Directory Users and Computers** and locate the **Domain Admins group**.
+
+4.  Right-click the **Domain Admins** group and click **Properties**.
 
     ![Screenshot that highlights the Properties menu option.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_152.gif)
 
-4.  In the **Domain Admins Properties**, click the **Members** tab and **click** Add. Enter the name of an account that will be given temporary Domain Admins privileges and click **Check Names**. When the name of the account is underlined, click **OK** to return to the **Members** tab.
+5.  In the **Domain Admins Properties**, click the **Members** tab and **click** Add. Enter the name of an account that will be given temporary Domain Admins privileges and click **Check Names**. When the name of the account is underlined, click **OK** to return to the **Members** tab.
 
     ![Screenshot that shows where to add the name of the account that will be given temporary Domain Admins privileges.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_153.gif)
 
-5.  On the **Members** tab for the **Domain Admins Properties** dialog box, click **Apply**. After clicking **Apply**, the account should stay a member of the DA group and you should receive no error messages.
+6.  On the **Members** tab for the **Domain Admins Properties** dialog box, click **Apply**. After clicking **Apply**, the account should stay a member of the DA group and you should receive no error messages.
 
     ![Screenshot that shows the Members tab in the Domain Admins Properties dialog box.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_154.gif)
 
-6.  Click the **Managed By** tab in the **Domain Admins Properties** dialog box and verify that you cannot enter text in any fields and all buttons are grayed out.
+7.  Click the **Managed By** tab in the **Domain Admins Properties** dialog box and verify that you cannot enter text in any fields and all buttons are grayed out.
 
     ![Screenshot that shows the Managed By tab.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_155.gif)
 
-7.  Click the **General** tab in the **Domain Admins Properties** dialog box and verify that you cannot modify any of the information about that tab.
+8.  Click the **General** tab in the **Domain Admins Properties** dialog box and verify that you cannot modify any of the information about that tab.
 
     ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_156.gif)
 
-8.  Repeat these steps for additional protected groups as needed. When you have finished, log on to a secure administrative host with an account that is a member of the group you created to enable and disable the management accounts. Then reset the password on the management account you just tested and disable the account. You have completed setup of the management accounts and the group that will be responsible for enabling and disabling the accounts.
+9.  Repeat these steps for additional protected groups as needed. When you have finished, log on to a secure administrative host with an account that is a member of the group you created to enable and disable the management accounts. Then reset the password on the management account you just tested and disable the account. You have completed setup of the management accounts and the group that will be responsible for enabling and disabling the accounts.
