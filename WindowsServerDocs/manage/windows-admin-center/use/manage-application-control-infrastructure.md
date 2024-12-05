@@ -93,7 +93,7 @@ When you connect to a WDAC enforced cluster for the first time, it may take a fe
 > If you change the WDAC enforcement status of your managed nodes, do not use Windows Admin Center for at least 30 seconds for this change to be reflected.
 
 ## Known issues
-- Currently, deploying Azure Kubernetes Service on Azure Stack HCI and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Stack HCI isn't currently supported.
+- Currently, deploying Azure Kubernetes Service on Azure Local and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Local isn't currently supported.
 
 - Using RBAC on a single server is currently not supported.
 

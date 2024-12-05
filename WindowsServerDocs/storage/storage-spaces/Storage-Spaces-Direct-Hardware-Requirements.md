@@ -11,9 +11,9 @@ ms.date: 07/24/2023
 
 >
 
-This article describes minimum hardware requirements for Storage Spaces Direct. For hardware requirements on Azure Stack HCI, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Stack HCI: Determine hardware requirements](/azure/azure-local/concepts/system-requirements-23h2).
+This article describes minimum hardware requirements for Storage Spaces Direct. For hardware requirements on Azure Local, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Local: Determine hardware requirements](/azure/azure-local/concepts/system-requirements-23h2).
 
-For production, Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For hardware solutions, visit the [Azure Stack HCI solutions website](https://azurestackhcisolutions.azure.microsoft.com/).
+For production, Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For hardware solutions, visit the [Azure Local solutions website](https://azurestackhcisolutions.azure.microsoft.com/).
 
    > [!TIP]
    > Want to evaluate Storage Spaces Direct but don't have hardware? Use Hyper-V or Azure virtual machines as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
@@ -120,15 +120,15 @@ The following sections describe the minimum drive requirements for physical and 
 
 #### Physical deployments
 
-This table shows the minimum number of capacity drives by type for hardware deployments such as Azure Stack HCI version 21H2 or later, and Windows Server.
+This table shows the minimum number of capacity drives by type for hardware deployments such as Azure Local version 21H2 or later, and Windows Server.
 
-| Drive type present (capacity only) | Minimum drives required (Windows Server) | Minimum drives required (Azure Stack HCI) |
+| Drive type present (capacity only) | Minimum drives required (Windows Server) | Minimum drives required (Azure Local) |
 |------------------------------------|------------------------------------------|-------------------------------------------|
 | All persistent memory (same model) | 4 persistent memory                      | 2 persistent memory                       |
 | All NVMe (same model)              | 4 NVMe                                   | 2 NVMe                                    |
 | All SSD (same model)               | 4 SSD                                    | 2 SSD                                     |
 
-If you're using the storage pool cache, there must be at least 2 more drives configured for the cache. The table shows the minimum numbers of drives required for both Windows Server and Azure Stack HCI deployments using 2 or more nodes.
+If you're using the storage pool cache, there must be at least 2 more drives configured for the cache. The table shows the minimum numbers of drives required for both Windows Server and Azure Local deployments using 2 or more nodes.
 
 | Drive type present              | Minimum drives required             |
 |---------------------------------|-------------------------------------|
@@ -138,7 +138,7 @@ If you're using the storage pool cache, there must be at least 2 more drives con
 | SSD + HDD                       | 2 SSD + 4 HDD                       |
 
 > [!IMPORTANT]
-> The storage pool cache cannot be used with Azure Stack HCI in a single node deployment.
+> The storage pool cache cannot be used with Azure Local in a single node deployment.
 
 #### Virtual deployment
 
@@ -149,7 +149,7 @@ This table shows the minimum number of drives by type for virtual deployments su
 | Virtual Hard Disk                  | 2                       |
 
 > [!TIP]
-> To boost the performance for guest VMs when running on Azure Stack HCI or Windows Server, consider using the [CSV in-memory read cache](/azure/azure-local/manage/use-csv-cache?context=/windows-server/context/windows-server-storage?context=/windows-server/context/windows-server-storage) to cache unbuffered read operations.
+> To boost the performance for guest VMs when running on Azure Local or Windows Server, consider using the [CSV in-memory read cache](/azure/azure-local/manage/use-csv-cache?context=/windows-server/context/windows-server-storage?context=/windows-server/context/windows-server-storage) to cache unbuffered read operations.
 
 If you're using Storage Spaces Direct in a virtual environment, you must consider:
 

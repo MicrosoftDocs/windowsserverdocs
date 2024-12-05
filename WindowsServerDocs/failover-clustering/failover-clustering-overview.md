@@ -1,14 +1,14 @@
 ---
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 title: Failover Clustering
-description: "Learn more about: Failover Clustering in Windows Server and Azure Stack HCI"
+description: "Learn more about: Failover Clustering in Windows Server and Azure Local"
 ms.topic: landing-page
 manager: lizross
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/20/2021
 ---
-# Failover Clustering in Windows Server and Azure Stack HCI
+# Failover Clustering in Windows Server and Azure Local
 
 
 
@@ -21,7 +21,7 @@ Failover Clustering has many practical applications, including:
 * Highly available or continuously available file share storage for applications such as Microsoft SQL Server and Hyper-V virtual machines
 * Highly available clustered roles that run on physical servers or on virtual machines that are installed on servers running Hyper-V
 
-To learn more about failover clustering in Azure Stack HCI, see [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering).
+To learn more about failover clustering in Azure Local, see [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering).
 
 | **Understand**                                                               |  **Planning**                          |  **Deployment**       |
 | -------------                                                                |  --------------                        | --------------------- |

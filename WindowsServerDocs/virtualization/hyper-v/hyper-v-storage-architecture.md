@@ -47,7 +47,7 @@ When using this configuration:
 
 - You can move VMs to any node in the cluster using Live Migrate or automatically restart after a failure (failover).
 
-- Data gets replicated to other nodes in the cluster to increase storage resilience. Storage Spaces Direct supports several storage resiliency models. For more information, see [Fault tolerance and storage efficiency on Azure Stack HCI and Windows Server clusters](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-virtualization).
+- Data gets replicated to other nodes in the cluster to increase storage resilience. Storage Spaces Direct supports several storage resiliency models. For more information, see [Fault tolerance and storage efficiency on Azure Local and Windows Server clusters](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-virtualization).
 
 - In this model, each physical host contains storage and compute resources. As a result, those physical resources scale symmetrically. Every new host automatically adds both compute and storage resources. Each cluster can contain between 1 and 16 nodes.
 
@@ -61,7 +61,7 @@ When using this configuration:
 
 - VMs are highly available to any node in the same compute cluster.
 
-- Data gets replicated to other nodes in the storage cluster to increase storage resilience. Storage Spaces Direct supports several storage resiliency models. For more information, see [Fault tolerance and storage efficiency on Azure Stack HCI and Windows Server clusters](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-virtualization).
+- Data gets replicated to other nodes in the storage cluster to increase storage resilience. Storage Spaces Direct supports several storage resiliency models. For more information, see [Fault tolerance and storage efficiency on Azure Local and Windows Server clusters](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-virtualization).
 
 In this model, compute and storage scale independently from each other. This architecture is ideal for scenarios where your storage and compute requirements grow at different rates. For example, if you need more CPU or memory resources to host VMs, you can add extra cluster nodes without also adding more storage. If you have VMs that consume a lot of storage but don't consume many CPU resources, you can add another storage node or cluster without adding more compute resources.
 
