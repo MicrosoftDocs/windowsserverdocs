@@ -7,9 +7,9 @@ ms.topic: how-to
 ms.date: 11/15/2024
 ---
 
-# Enable Hotpatch for Azure Edition virtual machines on Azure Stack HCI
+# Enable Hotpatch for Azure Edition virtual machines on Azure Local
 
-Hotpatch for Windows Server 2022 Datacenter: Azure Edition virtual machines (VMs) hosted on Azure Stack HCI allows you to install security updates on an ISO-deployed machine on Azure Stack HCI without requiring a reboot after installation. You can use Hotpatch with both Desktop Experience and Server Core. This article will teach you how to configure Hotpatch after installing or upgrading the operating system using an ISO.
+Hotpatch for Windows Server 2022 Datacenter: Azure Edition virtual machines (VMs) hosted on Azure Local allows you to install security updates on an ISO-deployed machine on Azure Local without requiring a reboot after installation. You can use Hotpatch with both Desktop Experience and Server Core. This article will teach you how to configure Hotpatch after installing or upgrading the operating system using an ISO.
 
 > [!NOTE]
 > If you're using the Azure marketplace, don't follow the steps in this article. Instead, use the following images from Azure Marketplace that are ready for Hotpatching:
@@ -17,7 +17,7 @@ Hotpatch for Windows Server 2022 Datacenter: Azure Edition virtual machines (VMs
 > - Windows Server 2022 Datacenter: Azure Edition Hotpatch - Gen2
 > - Windows Server 2022 Datacenter: Azure Edition Core - Gen2
 
-When using Hotpatch for your ISO deployed machine on Azure Stack HCI, there are a few important
+When using Hotpatch for your ISO deployed machine on Azure Local, there are a few important
 differences with the Hotpatch experience compared with using Hotpatch as part of Azure Automanage for Azure VMs.
 
 The differences include:
@@ -32,8 +32,8 @@ The differences include:
 To enable Hotpatch, you must have the following prerequisites ready before you start:
 
 - Windows Server 2022 Datacenter: Azure Edition hosted on a supported platform, such as
-  Azure or Azure Stack HCI with Azure benefits enabled.
-  - Azure Stack HCI must be version 21H2 or later.
+  Azure or Azure Local with Azure benefits enabled.
+  - Azure Local must be version 21H2 or later.
 - Review the [How hotpatch works](/azure/automanage/automanage-hotpatch#how-hotpatch-works) section
   of the Hotpatch for new virtual machines article.
 - Outbound network access or an outbound port rule allowing HTTPS (TCP/443) traffic to the following

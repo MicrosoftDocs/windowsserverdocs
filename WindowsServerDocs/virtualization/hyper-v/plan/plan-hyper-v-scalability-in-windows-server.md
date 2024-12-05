@@ -41,7 +41,7 @@ These maximums apply to each virtual machine when the host is run the selected p
 :::zone pivot="windows-server-2022"
 
 > [!TIP]
-> This tables also applies to Azure Stack HCI version 21H2, 22H2, and 23H2.
+> This tables also applies to Azure Local version 21H2, 22H2, and 23H2.
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|

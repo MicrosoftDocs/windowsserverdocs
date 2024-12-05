@@ -394,7 +394,7 @@ You can install the Hyper-V role using the Roles and Features extension. Once in
 
 ### What servers can I manage using this extension?
 
-You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Stack HCI](manage-hci-clusters.md).
+You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Local](manage-hci-clusters.md).
 
 ### How does Windows Admin Center handle security?
 
