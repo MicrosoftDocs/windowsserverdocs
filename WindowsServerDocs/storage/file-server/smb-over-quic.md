@@ -5,12 +5,10 @@ ms.topic: article
 author: NedPyle
 ms.author: roharwoo
 ms.contributor: inhenkel
-ms.date: 10/25/2024
+ms.date: 12/04/2024
 ---
 
 # SMB over QUIC
-
-> 
 
 SMB over QUIC introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP:
 
@@ -185,6 +183,56 @@ If you want to apply control to SMB over client, you can use Client Access Contr
    #Tries only QUIC
    New-SmbMapping -LocalPath 'Z:' -RemotePath '\\fsedge1.contoso.com\sales' -TransportType QUIC
    ```
+
+## Manage SMB over QUIC
+
+# [PowerShell](#tab/powershell2)
+
+Admins can disable SMB over QUIC for a server by running the following command:
+
+```powershell
+Set-SmbServerConfiguration -EnableSMBQUIC $false
+```
+
+To disable SMB over QUIC for a client device, run the following command:
+
+```powershell
+Set-SmbClientConfiguration -EnableSMBQUIC $false
+```
+
+SMB over QUIC can be enabled on either the server or client by setting `$false` to `$true`.
+
+> [!NOTE]
+> If a client attempts to connect to a server over QUIC and SMB over QUIC is disabled, the client attempts to connect to the server over TCP. This is assuming the server is not in the exception list.
+
+Admins can now specify an SMB over QUIC server exception list on the client. A client can connect to a server when SMB over QUIC is disabled on the client as long as the server IP address, NetBIOS name or FQDN is in the exception list. To learn more, see [Enable exceptions to NTLM blocking](/windows-server/storage/file-server/smb-ntlm-blocking?tabs=group-policy#enable-exceptions-to-ntlm-blocking). A server exception list can be created by running the following command:
+
+```powershell
+Set-SmbClientConfiguration -DisabledSMBQUICServerExceptionList "<Server01>, <Server02>, <Server03>"
+```
+
+# [Group Policy](#tab/grouppolicy)
+
+To disable SMB over QUIC for the server, perform the following:
+
+1. Select **Start**, type **gpedit.msc** and select **Enter**.
+1. In the **Group Policy** UI, navigate to **Computer Configuration\Administrative Templates\Network\Lanman Server**, select **Enable SMB over QUIC**, and then select **Disabled**.
+
+To enable SMB over QUIC, set this policy to **Enabled**.
+
+To disable SMB over QUIC for a client device, perform the following:
+
+1. In the **Group Policy** UI, navigate to **Computer Configuration\Administrative Templates\Network\Lanman Workstation**, select **Enable SMB over QUIC**, and then select **Disabled**.
+
+To enable SMB over QUIC, set this policy to **Enabled**.
+
+To enable a server exception list for SMB over QUIC, perform the following:
+
+1. In the **Group Policy** UI, navigate to **Computer Configuration\Administrative Templates\Network\Lanman Workstation**, select **Disabled SMB over QUIC Server Exception List**, and then select **Enabled**.
+1. In the **Disabled SMB over QUIC Server Exception List** options box, add the server *IP address*, *NetBIOS name* or *FQDN*. Use a comma to add multiple values.
+1. Once the exception list is populated, select **OK**.
+
+---
 
 ### SMB over QUIC client auditing
 
