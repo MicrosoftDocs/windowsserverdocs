@@ -223,7 +223,7 @@ Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name
 >
 > - When you *customize* a security baseline, a restart is required for changes to take effect, depending on which security features you modified.
 >
-> - During the *removal* process, when security settings are reverted, changing these settings back to their premanaged configuration isn't guaranteed. It depends on the specific settings within the security baseline. This behavior aligns with the capabilities that the Microsoft Intune policies provide. To learn more, see [Remove a security baseline assignment](/en-us/mem/intune/protect/security-baselines-configure#remove-a-security-baseline-assignment).
+> - During the *removal* process, when security settings are reverted, changing these settings back to their premanaged configuration isn't guaranteed. It depends on the specific settings within the security baseline. This behavior aligns with the capabilities that the Microsoft Intune policies provide. To learn more, see [Remove a security baseline assignment](/mem/intune/protect/security-baselines-configure#remove-a-security-baseline-assignment).
 
 ## Customize OSConfig security baselines
 
