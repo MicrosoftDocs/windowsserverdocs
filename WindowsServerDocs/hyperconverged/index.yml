@@ -55,9 +55,9 @@ productDirectory:
         - url: /windows-server/azure-hybrid-services
           text: Connects your cluster to Azure hybrid services for site recovery, monitoring, and more.
     # Card
-    - title: Azure Stack HCI
+    - title: Azure Local
       imageSrc: /windows-server/media/i-azure-stack.svg
       links:
-        - url: /windows-server/azure-stack-hci
-          text: Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service.
+        - url: /azure/azure-local/overview
+          text: Azure Local is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service.
  

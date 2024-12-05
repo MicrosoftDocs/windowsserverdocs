@@ -18,7 +18,7 @@ In this evaluation example, you will configure these computers and their storage
 > In this evaluation, servers in different sites must be able to communicate with the other servers via a network, but not have any physical connectivity to the other site's shared storage. This scenario does not make use of Storage Spaces Direct.
 
 > [!NOTE]
-> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage).
+> You may also want to consider using an Azure Local solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Local](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage).
 
 ## Terms
 This walkthrough uses the following environment as an example:
@@ -801,4 +801,4 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
-- [Stretched Clusters in Azure Stack HCI](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage)
+- [Stretched Clusters in Azure Local](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage)

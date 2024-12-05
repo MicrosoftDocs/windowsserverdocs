@@ -68,7 +68,7 @@ You can use Windows Admin Center for the following situations:
 
 - You want to manage your servers and clusters with modernized versions of familiar tools, such as Server Manager.
 - You want to integrate your system with Azure to connect your on-premises servers with relevant cloud services with Azure Arc.
-- You want to streamline management of Azure Stack HCI or Windows Server hyperconverged clusters.
+- You want to streamline management of Azure Local or Windows Server hyperconverged clusters.
 - You want to use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking, and so on.
 
 ### More resources for Windows Admin Center

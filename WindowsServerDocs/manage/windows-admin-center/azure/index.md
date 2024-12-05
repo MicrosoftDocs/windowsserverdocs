@@ -94,7 +94,7 @@ For more info, see [Use Storage Migration Service to migrate a server](../../../
 From the *All Connections* page within Windows Admin Center, go to **Add** and select **Create new** under **Azure VM**. You even can domain-join your Azure VM and configure storage from within this step-by-step creation tool.
 
 - **Leverage Azure to achieve quorum on your failover cluster with [Cloud Witness](../../../failover-clustering/deploy-cloud-witness.md)**
-Instead of investing in additional hardware to achieve quorum on a 2-node cluster, you can use an Azure storage account to serve as the cluster witness for your Azure Stack HCI cluster or other failover cluster.
+Instead of investing in additional hardware to achieve quorum on a 2-node cluster, you can use an Azure storage account to serve as the cluster witness for your Azure Local cluster or other failover cluster.
 For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../../failover-clustering/deploy-cloud-witness.md).
 
 ### Simplify network connectivity between your on-premises and Azure networks
@@ -127,7 +127,7 @@ Inventory, organize, and manage on-premises servers from Azure. You can govern s
 Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
-- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](/azure/azure-local/overview), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
+- Clusters, including hyper-converged clusters certified by the [Azure Local](/azure/azure-local/overview), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
 <!-- Alternate link that might be more helpful than the second link in the preceding bullet for WSSD: https://learn.microsoft.com/en-us/troubleshoot/windows-server/software-defined-networking/software-defined-data-center-and-networking -->
 
 ### Services for stand-alone servers and VMs

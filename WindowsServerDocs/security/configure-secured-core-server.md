@@ -39,8 +39,8 @@ installed and enabled in the BIOS:
 > sure to check your hardware manufacturer's Secured-core server enablement guide.
 
 You can find hardware certified for Secured-core server from the 
-[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Stack HCI servers in the
-[Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
+[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Local servers in the
+[Azure Local Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
 
 ## Enable security features
 

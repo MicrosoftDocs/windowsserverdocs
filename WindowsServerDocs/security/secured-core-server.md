@@ -119,7 +119,7 @@ To learn more about VBS and hardware requirements, see
 ## Simplified management
 
 You can view and configure the OS security features of Secured-core systems using Windows PowerShell
-or the security extension in Windows Admin Center. With Azure Stack HCI Integrated Systems,
+or the security extension in Windows Admin Center. With Azure Local Integrated Systems,
 manufacturing partners have further simplified the configuration experience for customers so that
 Microsoft’s best server security is available right out of the box.
 
@@ -138,8 +138,8 @@ monitoring by IT and SecOps teams.
 ## Begin your Secured-core journey
 
 You can find hardware certified for Secured-core server from the
-[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Stack HCI servers in the
-[Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
+[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Local servers in the
+[Azure Local Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
 These certified servers come fully equipped with industry-leading security mitigations built into the
 hardware, firmware, and the operating system to help thwart some of the most advanced attack
 vectors.
