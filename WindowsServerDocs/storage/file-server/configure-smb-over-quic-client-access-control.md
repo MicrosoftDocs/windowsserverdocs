@@ -67,7 +67,7 @@ You also need an *SMB client* with the following prerequisites.
 > 1. Navigate to **Computer Configuration\Administrative Templates\KB5035854 240302_030535 Feature Preview\Windows 11 (original release)**.
 > 1. Open the **KB5035854 240302_030535 Feature Preview** policy and select **Enabled**.
 
-## Configure the SMB client
+## Configure the SMB server
 
 To manage the settings for the SMB client, it's necessary to first configure the SMB server to mandate that the client sends a valid and trusted certificate chain and to perform the access control checks based on the client certificate chain. To perform this action, run the following command:
 
@@ -77,6 +77,8 @@ Set-SmbServerCertificateMapping -RequireClientAuthentication $true
 
 > [!NOTE]
 > If both **RequireClientAuthentication** and **SkipClientCertificateAccessCheck** are set to `$true`, the server verifies the validity and trustworthiness of the client certificate chain but does not perform access control checks.
+
+## Configure the SMB client
 
 ### Gather the SMB client certificate information
 
@@ -119,6 +121,22 @@ To map the client certificate to the SMB client:
 
 Once complete, the client certificated is used by the SMB client to authenticate to the SMB server matching the FQDN.
 
+### Test mapping connectivity
+
+Run a connectivity test by mapping to a share for your server or client device. To perform this, run one of the following commands:
+
+```cmd
+NET USE \\<server DNS name>\<share name> /TRANSPORT:QUIC
+```
+
+Or
+
+```powershell
+New-SmbMapping -RemotePath \\<server DNS name>\<share name> -TransportType QUIC
+```
+
+If you receive an error message indicating that access was denied by the server, then you're ready to proceed to the next step as this verifies the server certificate mapping and client certificate mapping are configured.
+
 ## Configure client access control
 
 ### Grant individual clients
@@ -151,21 +169,7 @@ Follow the steps to grant clients from a specific certification authority, also 
    Grant-SmbClientAccessToServer -Name <name> -IdentifierType ISSUER -Identifier "<subject name>"
    ```
 
-### Test client access control connectivity
-
-After following the previous steps, run a connectivity test by mapping to a share for your server or client device. To perform this, run one of the following commands:
-
-```cmd
-NET USE \\<server DNS name>\<share name> /TRANSPORT:QUIC
-```
-
-Or
-
-```powershell
-New-SmbMapping -RemotePath \\<server DNS name>\<share name> -TransportType QUIC
-```
-
-If you can connect to a share, you've successfully configured SMB over QUIC using client access control.
+Once this step is complete, run the `New-SmbMapping` cmdlet as mentioned in [Test mapping connectivity](configure-smb-over-quic-client-access-control.md#test-mapping-connectivity), as a second run is recommended to verify that client access control has been correctly configured.
 
 ## Audit event logs
 
