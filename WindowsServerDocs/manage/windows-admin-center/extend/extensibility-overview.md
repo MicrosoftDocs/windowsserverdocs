@@ -73,6 +73,6 @@ Pure Storage provides enterprise, all-flash data storage solutions that deliver 
 
 ### QCT
 
-The QCT Management Suite extension complements Windows Admin Center by providing physical server monitoring and management for QCT Azure Stack HCI certified systems. The QCT Management Suite extension displays server hardware information, and provides an intuitive wizard UI to help replace physical disks efficiently, hardware event log tools, and S.M.A.R.T. based predictive disk management. [Learn more about the QCT Management Suite extension](case-studies/qct.md).
+The QCT Management Suite extension complements Windows Admin Center by providing physical server monitoring and management for QCT Azure Local certified systems. The QCT Management Suite extension displays server hardware information, and provides an intuitive wizard UI to help replace physical disks efficiently, hardware event log tools, and S.M.A.R.T. based predictive disk management. [Learn more about the QCT Management Suite extension](case-studies/qct.md).
 
 ![QCT extension](../media/extensibility-overview/qct-extension.png)

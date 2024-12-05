@@ -16,7 +16,7 @@ ms.date: 05/14/2021
 In Windows Server 2019 and later, you can only create a DAX volume on a Storage Spaces or Storage Spaces Direct configuration that uses a single persistent memory disk, with no parity and no redundancy. You can't use DAX across more than one persistent memory disk, and you can only use DAX with NTFS.
 
 > [!NOTE]
-> DAX isn't supported on Azure Stack HCI environments.
+> DAX isn't supported on Azure Local environments.
 
 ## DAX and block translation table (BTT)
 

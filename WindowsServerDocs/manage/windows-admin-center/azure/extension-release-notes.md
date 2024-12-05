@@ -26,7 +26,7 @@ This page is updated monthly, so revisit it regularly.
 - Support for Windows 10/11 machines
 
 ### Fixed
-- Fixed an issue where connection to Azure Stack HCI clusters fails
+- Fixed an issue where connection to Azure Local clusters fails
 
 ## Version 0.24.0.0 - April 2024
 
@@ -78,15 +78,15 @@ This page is updated monthly, so revisit it regularly.
 ### New features
 - Introduced support for proxies. You can now configure a proxy to monitor/filter all outbound traffic from the AdminCenter extension.
 - Updated the build of Windows Admin Center to v2306. For a full summary of new features, visit [our blog post](https://aka.ms/wac2306)
-- Introduced new management capabilities for Azure Stack HCI - Remote Support and Diagnostics
+- Introduced new management capabilities for Azure Local - Remote Support and Diagnostics
 
 ## Version 0.0.0.313 - April 2023
 
 ### New features
-- Introduced Microsoft Entra authentication for Azure Stack HCI. Note that this functionality is in preview. Please create a support ticket for all issues.
+- Introduced Microsoft Entra authentication for Azure Local. Note that this functionality is in preview. Please create a support ticket for all issues.
 - Introduced a **Network** tool
 - Introduced Virtual Machine Live Storage Migration
-- Introduced new security experiences for Azure Stack HCI clusters with the supplemental package
+- Introduced new security experiences for Azure Local clusters with the supplemental package
 
 ### Fixed
 - If a prior installation of Windows Admin Center exists on your machine, the extension will first uninstall it before installing Windows Admin Center in Azure
@@ -99,7 +99,7 @@ This page is updated monthly, so revisit it regularly.
     - Support for WDAC-enforced infrastructure
     - Support for 400% zoom
     - Search settings with smart keywords
-    - Azure Stack HCI management improvements
+    - Azure Local management improvements
 
 ## Version 0.0.0.224 - December 2022
 
@@ -111,5 +111,5 @@ This page is updated monthly, so revisit it regularly.
 
 ### New features
 
-- Introduced Microsoft Entra authentication for Windows Server Azure Virtual Machines and Arc-enabled Servers. Azure Stack HCI doesn't support Microsoft Entra authentication yet.
-- Windows Admin Center for Azure Virtual Machines is now generally available. Windows Admin Center for Arc-enabled servers and Azure Stack HCI remains in Public Preview.
+- Introduced Microsoft Entra authentication for Windows Server Azure Virtual Machines and Arc-enabled Servers. Azure Local doesn't support Microsoft Entra authentication yet.
+- Windows Admin Center for Azure Virtual Machines is now generally available. Windows Admin Center for Arc-enabled servers and Azure Local remains in Public Preview.
