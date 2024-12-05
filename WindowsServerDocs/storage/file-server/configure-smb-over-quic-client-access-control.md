@@ -4,7 +4,7 @@ description: Learn how to configure SMB over QUIC client access control using Po
 ms.topic: how-to
 author: gswashington
 ms.author: alalve
-ms.date: 12/05/2024
+ms.date: 12/04/2024
 #customer intent: As an administrator, I want to configure SMB over QUIC client access control in Windows Server so that I can restrict which clients can access SMB over QUIC servers.
 ---
 
@@ -69,7 +69,7 @@ You also need an *SMB client* with the following prerequisites.
 
 ## Configure the SMB client
 
-To manage the settings for the SMB client, it's necessary to first configure the SMB server to mandate that the client sends a valid and reliable certificate chain for conducting access control checks. To perform this action, run the following command:
+To manage the settings for the SMB client, it's necessary to first configure the SMB server to mandate that the client sends a valid and trusted certificate chain and to perform the access control checks based on the client certificate chain. To perform this action, run the following command:
 
 ```powershell
 Set-SmbServerCertificateMapping -RequireClientAuthentication $true
