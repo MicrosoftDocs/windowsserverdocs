@@ -204,4 +204,4 @@ You can purchase Software Assurance through Volume Licensing. Your Software Assu
 
 - [Azure Hybrid Benefit product page](https://azure.microsoft.com/pricing/hybrid-benefit)
 - [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
-- [Azure Hybrid Benefit for Azure Stack HCI](/azure/azure-local/concepts/azure-hybrid-benefit-hci)
+- [Azure Hybrid Benefit for Azure Stack HCI](/azure/azure-local/concepts/azure-hybrid-benefit)
