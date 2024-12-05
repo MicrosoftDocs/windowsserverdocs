@@ -102,7 +102,7 @@ To defragment all volumes with normal priority and provide verbose output, type:
 defrag /c /h /v
 ```
 
-To defragment all volumes with normal priority and provide verbose output, type:
+To optimize storage tiers (/g) on the volume, returning a Post Defragmentation Report and a Storage Tier Optimization Report. Include /h to process the job at normal priority instead of low priority (the default), type:
 
 ```
 defrag <driveletter>: /g /h /#
