@@ -45,6 +45,7 @@ defrag <volume> [<parameters>]
 | /u | Prints the progress of the operation on the screen. |
 | /v | Prints verbose output containing the fragmentation statistics. |
 | /x | Performs free space consolidation on the specified volumes. |
+| /# | When used in conjunction with '/g', returns a Post Defragmentation Report and a Storage Tier Optimization Report |
 | /? | Displays the help information. |
 
 #### Remarks
@@ -100,6 +101,13 @@ To defragment all volumes with normal priority and provide verbose output, type:
 ```
 defrag /c /h /v
 ```
+
+To defragment all volumes with normal priority and provide verbose output, type:
+
+```
+defrag <driveletter>: /g /h /#
+```
+Reference:  https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789160%28v=ws.11%29#to-optimize-storage-tiers-using-defragexe
 
 ## Scheduled task
 
