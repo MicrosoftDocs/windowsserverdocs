@@ -185,7 +185,7 @@ To deploy Network Controller with Failover Clustering, follow these steps:
     ```
 
     > [!TIP]
-    > If you want to use specific credentials for the domain join, Network Controller, or local administrator, you'll need to store the credentials in separate variables and pass them to the relevant parameters in the SDNExpress.ps1 script.
+    > If you want to use specific credentials for the domain join, Network Controller, or local administrator, you'll need to store the credentials in separate variables and pass them to the relevant parameters in the **Sample - Virtualized Networks Native SDN.psd1** script.
 
 You can now begin to deploy and manage your tenant networks.
 
