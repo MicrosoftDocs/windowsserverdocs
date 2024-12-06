@@ -218,7 +218,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
    CN=ENTCA,CN=Enrollment Services,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com
 
-3. Right click and edit the CA Object. Change the **msPKI-Enrollment-Servers** attribute by using the custom port with your CEP and CES server URIs that were found in the application settings. For example:
+3. Right click and edit the CA Object. Change the **msPKI-Enrollment-Servers** attribute by using the custom port with your CES server URIs that were found in the application settings. For example:
 
    ```
    140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0
@@ -240,7 +240,12 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
 
 4. Enable **Certificate Services Client - Certificate Enrollment Policy**.
 
-   a. Click **Add** to add enrollment policy and enter the CEP URI with **UsernamePassword** that we edited in ADSI.
+   a. Click **Add** to add enrollment policy and enter the CEP URI with **UsernamePassword** that we obtained from the IIS management console Web Application ADPolicyProvider_CEP_UsernamePassword application settings , with the friendly name "CEP UsernamePassword for initial enrollment". 
+In this example add the custom port **:49999** to the CEP URI.
+
+```
+https://cepces.contoso.com:49999/ADPolicyProvider_CEP_UsernamePassword/service.svc/CEP
+```
 
    b. For **Authentication type**, select **Username/password**.
 
@@ -249,16 +254,33 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
 
    > [!NOTE]
    > Make sure that the port number is added to the URI and is allowed on the firewall.
+   > Make sure the Root CA certificate for the CEPCES Server is in the client machine Trusted Root Certification Authorities Store.
 
 5. Enroll the first certificate for the computer through certlm.msc.
    ![Screenshot that shows where to select the certificate enrollment policy.](media/certificate-enrollment-certificate-key-based-renewal-11.png)
 
+   > [!NOTE]
+   > Whenever prompted for credentials, the user must type valid credentials domain credentials.
+
    Select the KBR template and enroll the certificate.
    ![Screenshot that shows where to select the K B R template.](media/certificate-enrollment-certificate-key-based-renewal-12.png)
 
+   > [!NOTE]
+   > The CA administrator needs to approve the certificate request.
+   > On the CA management console under Pending Requests, right-click the pending Request ID , select All Tasks, click on Issue, to issue the certificate.
+   > On the client machine open the certificates management console right-click All Tasks and select Automatically Enroll and Retrieve Certificates.
+   > Select the certificate with Status Enrollment pending and click Enroll.
+
+
+
 6. Open **gpedit.msc** again. Edit the **Certificate Services Client – Certificate Enrollment Policy**, and then add the key-based renewal enrollment policy:
 
-   a. Click **Add**, enter the CEP URI with **Certificate** that we edited in ADSI.
+   a. Click **Add**, enter the CEP URI with **Certificate** that we obtained from the CEPCES server IIS management console Web Application KeyBasedRenewal_ADPolicyProvider_CEP_Certificate/service.svc/CEP application settings , with the friendly name "CEP Certificate Renewal Only".
+Add the custom port to the server name. In this example add the custom port **:49999** to the CEP URI.
+
+```
+https://cepces.contoso.com:49999/KeyBasedRenewal_ADPolicyProvider_CEP_Certificate/service.svc/CEP
+```
 
    b. Set a priority of **1**, and then validate the policy server. You will be prompted to authenticate and choose the certificate we enrolled initially.
 
@@ -266,6 +288,18 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
 
 > [!NOTE]
 > Make sure that the priority value of the key-based renewal enrollment policy is lower than the priority of the Username Password enrollment policy priority. The first preference is given to the lowest priority.
+
+
+7. Export the certificate issued from the CA and copy it to a management workstation with RSAT tools installed. Using Active Directory Users and Computers management console (DSA.MSC) right click on the computer object created and select Name Mappings. Click on Add and import the certificate into the computer object Security Identity Mapping attribute.
+
+
+> [!NOTE]
+For environments with Windows clients and servers that use certificate-based authentication from a Microsoft CA, the manual mapping with issuer and serial number can be used to leverage the KB5014754 protections. For More Information please review https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16#bkmk_fullenforcemode
+
+
+8. Grant the CEPCES service account Read permissions on the CA as described in https://technet.microsoft.com/en-us/library/jj590165(v=ws.11).aspx .
+
+
 
 ## Testing the setup
 
