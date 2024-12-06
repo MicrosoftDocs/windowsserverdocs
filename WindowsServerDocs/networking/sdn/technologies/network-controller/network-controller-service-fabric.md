@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
 ms.author: roharwoo
 author: AnirbanPaul
-ms.date: 11/21/2024
+ms.date: 12/06/2024
 ---
 
 # Network Controller with Service Fabric

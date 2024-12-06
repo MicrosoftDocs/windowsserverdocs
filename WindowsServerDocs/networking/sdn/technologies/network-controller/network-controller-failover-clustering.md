@@ -4,7 +4,7 @@ description: Learn about Network Controller high availability using Failover Clu
 author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article 
-ms.date: 11/21/2024
+ms.date: 12/06/2024
 zone_pivot_groups: windows-os
 #Customer intent: As a network administrator, I want to understand how Network Controller works with Failover Clustering so that I can deploy and manage my tenant network configurations.
 
