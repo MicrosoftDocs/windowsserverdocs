@@ -12,7 +12,17 @@ zone_pivot_groups: windows-os
 
 # Network Controller with Failover Clustering
 
-Beginning with Windows Server 2025 and Azure Local, version 23H2, Software Defined Networking infrastructure uses a smaller footprint for the Network Controller (NC), one of the core infrastructural components. NC can now be deployed directly on the host as a Failover Clustering service. Service Fabric based infrastructure continues to be supported. This article provides an overview of Network Controller high availability using Failover Clustering, how it works with Software Load Balancer and Gateways, and how it differs from Network Controller on Service Fabric.
+:::zone pivot="windows-server"
+
+Beginning with Windows Server 2025 Software Defined Networking infrastructure uses a smaller footprint for the Network Controller (NC), one of the core infrastructural components. NC can now be deployed directly on the host as a Failover Clustering service. Service Fabric based infrastructure continues to be supported. This article provides an overview of Network Controller high availability using Failover Clustering, how it works with Software Load Balancer and Gateways, and how it differs from Network Controller on Service Fabric.
+
+:::zone-end
+
+:::zone pivot="azure-local"
+
+Beginning with Azure Local, version 23H2, Software Defined Networking infrastructure uses a smaller footprint for the Network Controller (NC), one of the core infrastructural components. NC can now be deployed directly on the host as a Failover Clustering service. Service Fabric based infrastructure continues to be supported. This article provides an overview of Network Controller high availability using Failover Clustering, how it works with Software Load Balancer and Gateways, and how it differs from Network Controller on Service Fabric.
+
+:::zone-end
 
 ## Network Controller as a role
 
@@ -43,8 +53,8 @@ With Network Controller on Failover Clustering, resource ownership is associated
 
 :::zone pivot="azure-local"
 
-- [Failover Clustering in Windows Server and Azure Local](../../../../failover-clustering/failover-clustering-overview.md)
-- [Storage Replica Overview](../../../../storage/storage-replica/storage-replica-overview.md?context=/azure-stack/context/hci-context)
+- [Failover Clustering in Windows Server and Azure Local](../../../../failover-clustering/failover-clustering-overview.md?context=/azure-local/context/context)
+- [Storage Replica Overview](../../../../storage/storage-replica/storage-replica-overview.md?context=/azure-local/context/context)
 
 :::zone-end
 
@@ -52,26 +62,24 @@ With Network Controller on Failover Clustering, resource ownership is associated
 
 This transition from Service Fabric to Failover Clustering only affects our Network Controlling services. Other network function virtualization roles, such as the Software Load Balancer and Gateway are still hosted on Virtual Machines. Network Controller on Failover Clustering doesn't affect the behavior  or operation of other network function virtualization roles. For more details on Software Load Balancing and Gateways, visit the following links:
 
-- [What is Software Load Balancer (SLB) for SDN?](/azure-stack/hci/concepts/software-load-balancer)
+- [What is Software Load Balancer (SLB) for SDN?](/azure/azure-local/concepts/software-load-balancer)
 
-- [What is Remote Access Service (RAS) Gateway for Software Defined Networking?](/azure-stack/hci/concepts/gateway-overview)
+- [What is Remote Access Service (RAS) Gateway for Software Defined Networking?](/azure/azure-local/concepts/gateway-overview)
 
 ## Next steps
 
-For additional information regarding Software Defined Networking, check out some of our other resources available to you:
-
 :::zone pivot="windows-server"
 
-- [Deploy Network Controller with Failover Clustering](../../deploy/deploy-network-controller-failover-clustering.md)
+Start deploying Network Controller with Failover Clustering in your Software Defined Networking environment, see [Deploy Network Controller with Failover Clustering](../../deploy/deploy-network-controller-failover-clustering.md).
 
-- [Plan a SDN Deployment](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
+To learn more about the requirements and configuration options, see [Plan a SDN Deployment](/azure/azure-local/concepts/plan-software-defined-networking-infrastructure).
 
 :::zone-end
 
 :::zone pivot="azure-local"
 
-- [Deploy Network Controller with Failover Clustering](../../deploy/deploy-network-controller-failover-clustering.md)
+Start deploying Network Controller with Failover Clustering in your Software Defined Networking environment, see [Deploy Network Controller with Failover Clustering](../../deploy/deploy-network-controller-failover-clustering.md?context=/azure-local/context/context).
 
-- [Plan a SDN Deployment](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure?context=/azure-stack/context/hci-context)
+To learn more about the requirements and configuration options, see [Plan a SDN Deployment](/azure/azure-local/concepts/plan-software-defined-networking-infrastructure?context=/azure-local/context/context).
 
 :::zone-end
