@@ -28,7 +28,7 @@ Beginning with Azure Local, version 23H2, Software Defined Networking infrastruc
 
 Network Controller is a key component of the SDN ecosystem. It allows you to deploy and manage your tenant network configurations, including virtual networking, logical networking, and network security. In previous versions of Windows Server and Azure Local, Network Controller had to be hosted inside a VM. VM-based resource deployment is a long and resource-intensive. VMs took up more CPU and Memory, resources that could be spent on your core application workloads. Beginning with Windows Server 2025 and Azure Local, version 23H2, the NC service will be natively integrated with the host machine using Failover Clustering, freeing up resources for your other workloads. The following illustration provides an overview of the key differences between NC on Service Fabric and NC on Failover Clustering.
 
-:::image type="content" source="../../../media/network-controller-failover-cluster/failover-cluster-service-fabric-comparison.png" alt-text="A diagram comparing the differences between Network Controller with Failover Clustering and Network Controller with Service Fabric" lightbox="../../../media/network-controller-failover-cluster/failover-cluster-service-fabric-comparison.png":::
+:::image type="content" source="../../../media/network-controller-failover-cluster/failover-cluster-service-fabric-comparison.png" alt-text="A diagram comparing the differences between Network Controller with Failover Clustering and Network Controller with Service Fabric." lightbox="../../../media/network-controller-failover-cluster/failover-cluster-service-fabric-comparison.png":::
 
 ## Architecture
 

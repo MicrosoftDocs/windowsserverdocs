@@ -82,7 +82,7 @@ To deploy Network Controller with Failover Clustering using Windows Admin Center
    | Username | Administrator username. The username should be in the following format: `domainname\username`. For example, if the domain is `contoso.com`, enter the username as `contoso\<username>`. Don't use formats like `contoso.com\<username>` or `username@contoso.com` |
    | Password | Password for administrator account |
    | **Advanced** | |
-   | Database path | File path to the FCNC database. This file path can be any SMB share, but we recommend to use either CSV or S2D |
+   | Database path | File path to the FCNC database. This file path can be any SMB share, but we recommend using either CSV or S2D |
    | MAC address pool start | Beginning MAC pool address for client workload VMs |
    | MAC address pool end | End MAC pool address for client workload VMs |
 
