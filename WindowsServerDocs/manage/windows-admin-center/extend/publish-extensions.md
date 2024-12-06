@@ -121,10 +121,15 @@ Using the `.nuspec` file you created, you now need to create the NuGet package `
 
 Any `.dll` files included in your extension are required to be signed with a certificate from a trusted Certificate Authority (CA). By default, unsigned `.dll` files are blocked from being executed when Windows Admin Center is running in Production Mode.
 
-We recommend that you sign the extension NuGet package to ensure the integrity of the package.
+The extension NuGet package must also be signed to ensure the integrity of the package. When you publish an extension to Microsoft's Windows Admin Center extension feed, Microsoft will sign the package on top of your signature. 
 
-> [!NOTE]
-> If you plan on your extension supporting [Windows Defender Application Control](../extend/guides/application-control-infrastructure-extensions.md), your package and all files within must be signed. [Learn more about signing with Windows Defender Application Control.](/windows/security/application-security/application-control/windows-defender-application-control/deployment/use-code-signing-for-better-control-and-protection) 
+We recommend that you sign all Javescript files included in your extension.
+
+> [!TIP]
+> To verify that your package is signed properly, you can use the following command:
+> ```cmd
+> nuget.exe verify -All <packageName>.nuget
+> ```
 
 ### Test your extension NuGet package
 

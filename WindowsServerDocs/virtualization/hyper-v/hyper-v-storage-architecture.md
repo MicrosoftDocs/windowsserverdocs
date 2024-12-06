@@ -1,14 +1,15 @@
 ---
 title: Physical storage architectures for Hyper-V in Windows Server
-description: An overview of the types of physical storage architectures you can configure for your Hyper-V deployment.
+description: Learn about Windows Server Hyper-V with SAN, NAS, fiber channel, iSCSI, SMB storage. Also learn about Hyper-V with hyperconverged and disaggregated storage.
+keywords: Hyper-V, Windows Server, storage, SAN, NAS, fiber channel, iSCSI, SMB, hyperconverged, disaggregated
 ms.topic: conceptual
 ms.author: helohr
 author: Heidilohr
-ms.date: 06/24/2024
+ms.date: 12/06/2024
 ---
 # Physical storage architectures for Hyper-V
 
-Windows Server Hyper-V is a mature hypervisor platform that supports a wide range of physical storage architectures, from standalone systems with no resiliency to clustered systems with complex resiliency requirements. This article is an overview of some of the most widely used configuration options.
+Windows Server Hyper-V is a mature hypervisor platform that supports a wide range of physical storage architectures, from standalone systems with no resiliency to clustered systems with complex resiliency requirements. In this article, learn about how you can use Windows Server Hyper-V with SAN, NAS, fiber channel, iSCSI, SMB storage. You'll also learn about common configurations using hyperconverged and disaggregated storage architectures.
 
 >[!NOTE]
 >This article doesn't describe every possible storage architecture configuration. It also doesn't describe less common types of configuration or edge cases.
@@ -19,7 +20,7 @@ Hyper-V supports several nonclustered or standalone configurations where you ins
 
 When using this configuration:
 
-- Standalone Hyper-V with local disks do not support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute (VM processing and memory) systems being nonclustered. For example, if the physical host loses power, the VMs running on it restart when you power the physical host back on. You can also live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
+- Standalone Hyper-V with local disks does not support automatic failover of virtual machine (VM) workloads due to the lack of shared storage and the compute (VM processing and memory) systems being nonclustered. For example, if the physical host loses power, the VMs running on it restart when you power the physical host back on. You can also live migrate VMs to other nodes or clusters using [shared-nothing](../hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) migration.
 
 - You can optionally configure local disk resiliency for local drives using hardware or software RAID solutions. If you need more information, we recommend you contact your storage vendor.
 
