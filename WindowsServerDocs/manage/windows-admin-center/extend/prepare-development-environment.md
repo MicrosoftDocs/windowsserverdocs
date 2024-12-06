@@ -29,7 +29,7 @@ To begin developing with the SDK, download and install the following prerequisit
 * [Node Package Manager](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (6.14.5 or later)
 * [NuGet](https://www.nuget.org/downloads) (for publishing extensions)
 
-To bypass signature validation which occurs during extension installation in Windows Admin Center versions 2410 and newer, you should also switch your Windows Admin Center operation mode to "Development." To configure development mode, you must:
+To bypass signature validation which occurs during extension installation in Windows Admin Center versions running with .NET 8, you should also switch your Windows Admin Center operation mode to "Development." To configure development mode, you must:
 - Open your Windows Admin Center instance's ```appsettings.json``` file. This can be found by default at ```C:\Program Files\WindowsAdminCenter\service\appsettings.json```.
 - Modify the ```OperationMode``` field under the ```WindowsAdminCenter/System``` section to read "Development" instead of "Production."
 
