@@ -2,7 +2,7 @@
 title: Physical storage architectures for Hyper-V in Windows Server
 description: Learn about Windows Server Hyper-V with SAN, NAS, fiber channel, iSCSI, SMB storage. Also learn about Hyper-V with hyperconverged and disaggregated storage.
 keywords: Hyper-V, Windows Server, storage, SAN, NAS, fiber channel, iSCSI, SMB, hyperconverged, disaggregated
-ms.topic: concept
+ms.topic: conceptual
 ms.author: helohr
 author: Heidilohr
 ms.date: 12/06/2024
