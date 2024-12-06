@@ -4,7 +4,7 @@ description: Learn how to deploy Network Controller with Failover Clustering usi
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 11/26/2024
+ms.date: 12/06/2024
 zone_pivot_groups: windows-os
 #CustomerIntent: As a network administrator, I want to deploy Network Controller works with Failover Clustering so that I can create my tenant network configurations.
 ---
@@ -36,6 +36,11 @@ Before you can deploy Network Controller with Failover Clustering, you must comp
 - You have shared storage available for the failover cluster. We recommend using Cluster Storage Space or S2D. To learn more about the available storage architectures, see [Physical storage architectures for Hyper-V](../../../virtualization/hyper-v/hyper-v-storage-architecture.md).
 
 - All cluster nodes must have Hyper-V enabled.
+
+- All cluster nodes must have the Network Controller server role installed. This must include the Remote Server Administration Tools (RSAT).
+
+    > [!IMPORTANT]
+    > You must restart each node after installing the Network Controller server role before you can proceed with the deployment.
 
 - All cluster nodes must be joined to Active Directory.
 
@@ -115,9 +120,9 @@ You're now ready to begin configuring your configuration files.
 
 The SDN Express script requires a configuration file to deploy Network Controller with Failover Clustering. The configuration file is a PSD1 file that contains the variables for your Network Controller deployment. To create the configuration file, follow these steps:
 
-The PowerShell `MultiNodeSampleConfig.psd1` configuration data file (located in the previously mentioned install path) contains all the parameters and settings that are needed for the SDN Express script as input for the various parameters and configuration settings. This file has specific information about what needs to be filled out. The information required depends on whether you're deploying only the network controller component, or the software load balancer and gateway components as well. For detailed information, see [Plan a Software Defined Network infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure).
+The PowerShell `Sample - Virtualized Networks Native SDN.psd1` configuration data file (located in the previously mentioned install path) contains all the parameters and settings that are needed for the SDN Express script as input for the various parameters and configuration settings. This file has specific information about what needs to be filled out. The information required depends on whether you're deploying only the network controller component, or the software load balancer and gateway components as well. For detailed information, see [Plan a Software Defined Network infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure).
 
-1. Navigate to the **C:\Program Files\WindowsPowerShell\Modules\SdnExpress** folder and open the **MultiNodeSampleConfig.psd1** file in a text editor.
+1. Navigate to the **C:\Program Files\WindowsPowerShell\Modules\SdnExpress** folder and open the **Sample - Virtualized Networks Native SDN.psd1** file in a text editor.
 
 1. Change specific general parameter values to fit your infrastructure and deployment, as described in the following table.
 
@@ -148,17 +153,6 @@ The PowerShell `MultiNodeSampleConfig.psd1` configuration data file (located in 
    | **Locale**             | If not specified, locale of deployment computer is used                                                                                                                                                      |
    | **TimeZone**           | If not specified, local time zone of deployment computer is used                                                                                                                                             |
 
-   Passwords can be optionally included if stored encrypted as text-encoded secure strings. Passwords are only used if SDN Express scripts are run on the same computer where passwords were encrypted, otherwise it prompts for these passwords:
-
-   | Parameter name              | Value                                                                        |
-   |-----------------------------|------------------------------------------------------------------------------|
-   | **DomainJoinSecurePassword** | Secure password for domain account                                          |
-   | **LocalAdminSecurePassword** | Secure password for local administrator account                             |
-   | **NCSecurePassword**         | Secure password for Network Controller account                              |
-
-   > [!CAUTION]
-   > It is not recommended to store passwords in the configuration file. Use the prompts to avoid leaving secure information at rest on the file system. If you choose to store passwords in the configuration file, you must encrypt them using the `ConvertTo-SecureString` cmdlet.
-
 1. Fill the Network Controller on Failover Cluster parameters using the following table as a guide.
 
    | Parameter name   | Value                                                                                                     |
@@ -176,13 +170,22 @@ To deploy Network Controller with Failover Clustering, follow these steps:
 
 1. Open an elevated PowerShell session from the first cluster node.
 
+1. Prepare a variable to store your credentials by running the following command.
+
+    ```powershell
+    $credential = Get-Credential
+    ```
+
 1. Deploy SDN using the configuration file by running the following commands. Replace the `<version>` placeholder with the version number of the SDN Express module and the `<pathtoconfigfile>` placeholder with the path to the configuration file.
 
     ```powershell
     cd $env:PROGRAMFILES\WindowsPowerShell\Modules\SdnExpress\<version>
 
-    .\SDNExpress.ps1 -ConfigurationDataFile <pathtoconfigfile> -verbose
+    .\SDNExpress.ps1 -ConfigurationDataFile <pathtoconfigfile> -DomainJoinCredential $credential -NCCredential $credential -LocalAdminCredential $credential -verbose
     ```
+
+    > [!TIP]
+    > If you want to use specific credentials for the domain join, Network Controller, or local administrator, you'll need to store the credentials in separate variables and pass them to the relevant parameters in the SDNExpress.ps1 script.
 
 You can now begin to deploy and manage your tenant networks.
 
