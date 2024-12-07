@@ -86,7 +86,7 @@ You must install the Failover Clustering feature on every server that you want t
 1. The wizard then checks the network adapters. To enable a network adapter, select the name of the adapter, then select **Enable**. To disable an adapter, select the name of the adapter, then select **Disable**.
 
   >[!NOTE]
-  >If the wizard can't find the servers, select **Back**, then select **Next** to refresh the page. If you still see an error message, try using a server that isn't on a VLAN instead.
+  >If the wizard can't find the servers, select **Back**, then select **Next** to refresh the page. If you still see an error message, check that the adapters are on the right VLANs and that a DNS server is listening on these VLANs.
 
 1. Select **Next**.
 
@@ -94,7 +94,7 @@ You must install the Failover Clustering feature on every server that you want t
 
 1. On **Virtual switch**, select **Create one virtual switch for compute and storage together**, then select **Next**.
 
-1. On **Optionally configure RDMA**, select **Next**.
+1. On **Optionally configure RDMA**, set up RDMA as appropriate for the servers, and then select **Next**.
 
 1. On **Define networks**, enter the name, IP address, Subnet mask, and VLAN ID of the adapters you want to use for storage and compute traffic for VMs within the cluster. When you're done, select **Apply and test** to validate the adapters.
 
@@ -253,7 +253,7 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. On the **Create the cluster** page, enter a name for your cluster and specify the IP address for the cluster. When you're finished, select **Create cluster**.
 
-1. After that, the process should finish. You can select the **Got o connections list** to view your cluster.
+1. After that, the process should finish. You can select the **Go to connections list** to view your cluster.
 
    >[!NOTE]
    >It might take a few minutes for the cluster you created to become accessible by name. If you don't see your cluster on the connections list, wait a few minutes and then refresh.
