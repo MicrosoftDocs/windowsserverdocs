@@ -180,7 +180,7 @@ The Access Control Assistance Operators group applies to the Windows Server oper
 
 The Account Operators group grants limited account creation privileges to a user. Members of this group can create and modify most types of accounts, including accounts for users, Local groups, and Global groups. Group members can log in locally to domain controllers.
 
-Members of the Account Operators group can't manage the Administrator user account, the user accounts of administrators, or the [Administrators](#administrators), [Server Operators](#server-operators), [Account Operators](#account-operators), [Backup Operators](#backup-operators), or [Print Operators](#print-operators) groups. Members of this group can't modify user rights.
+Members of the Account Operators group can't manage the Administrator user account, the user accounts of administrators, or the [Administrators](#administrators), [Account Operators](#account-operators), [Backup Operators](#backup-operators), or [Print Operators](#print-operators) groups. Members of this group can't modify user rights.
 
 The Account Operators group applies to the Windows Server operating system in the [Default Active Directory security groups](#default-active-directory-security-groups) list.
 
