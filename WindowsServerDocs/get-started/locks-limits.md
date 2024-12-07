@@ -36,7 +36,7 @@ Use this article to compare the operating system locks and limits across the dif
 
 # [Version Differences](#tab/version-differences)
 
-| Locks and limits | Windows Server 2022 Standard | Windows Server 2022 Datacenter | Windows Server 2022 Datacenter: Azure Edition |
+| Locks and limits | Windows Server 2025 Standard | Windows Server 2025 Datacenter | Windows Server 2025 Datacenter: Azure Edition |
 |--|--|--|--|
 | Maximum number of cores | Unlimited | Unlimited | 2,048 logical processors |
 | Maximum RAM | <ul><li>4 PB for hosts that support 5-level paging</li><li>256 TB for hosts that support 4-level paging</li></ul> | <ul><li>4 PB for hosts that support 5-level paging</li><li>256 TB for hosts that support 4-level paging</li></ul> | <ul><li>240 TB for a generation 2 virtual machine</li><li>1 TB for a generation 1 virtual machine</li></ul> |
