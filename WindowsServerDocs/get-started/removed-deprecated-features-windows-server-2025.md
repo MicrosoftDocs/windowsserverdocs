@@ -28,7 +28,6 @@ We're removing the following features and functionalities from the installed pro
 | NTLMv1 | NTLMv1 has been removed. Calls to NTLM should be replaced by calls to [Negotiate](/windows/win32/secauthn/microsoft-negotiate), which will try to authenticate with Kerberos and only fall back to NTLM when necessary. For more information, see [The evolution of Windows authentication](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-evolution-of-windows-authentication/ba-p/3926848). |
 | Wordpad | WordPad has been removed from Windows Server 2025. We recommend Microsoft Word for rich text documents like `.doc` and `.rtf` and Windows Notepad for plain text documents like `.txt`. |
 | SMTP Server | The SMTP Server features has been removed from Windows Server 2025. There's no replacement within the operating systems. Consider using Exchange Server or a non-Microsoft SMTP server as an alternative. To learn more about enabling SMTP connection in Exchange Server, see [Receive connectors in Exchange Server](/exchange/mail-flow/connectors/receive-connectors). |
-| Windows PowerShell 2.0 Engine | The Windows PowerShell 2.0 Engine has been removed, applications, and components should be migrated to PowerShell 5.0+. |
 
 ## Features we're no longer developing
 
