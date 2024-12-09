@@ -13,7 +13,7 @@ ms.date: 02/28/2022
 
 This article provides background and steps to configure and manage the quorum in a failover cluster.
 
-For information about cluster and storage pool quorums in Storage Spaces Direct on Azure Stack HCI and Windows Server clusters, see [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering).
+For information about cluster and storage pool quorums in Storage Spaces Direct on Azure Local and Windows Server clusters, see [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering).
 
 ## Understanding quorum
 

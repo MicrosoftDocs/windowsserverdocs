@@ -74,7 +74,7 @@ You can configure the physical NIC to use QoS Offload. If your adapter supports 
 QoS Offload is automatically enabled on all adapters with the `Compute` intent type. For more information, see [Simplify host networking with Network ATC](/azure/azure-local/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking).
 
 >[!NOTE]
->This option is only available to Azure Stack HCI subscribers.
+>This option is only available to Azure Local subscribers.
 
 ### Use manual enablement
 

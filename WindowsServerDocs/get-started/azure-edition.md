@@ -110,7 +110,7 @@ on-premises private IP addresses when migrating to Azure. To learn more, see
 
 ## Get started with Windows Server Datacenter: Azure Edition
 
-To get started using Azure Edition, use your preferred method to create an Azure or Azure Stack HCI
+To get started using Azure Edition, use your preferred method to create an Azure or Azure Local
 VM, and select the _Windows Server Datacenter: Azure Edition_ image that you would like to use.  
 
 > [!IMPORTANT]
@@ -121,10 +121,10 @@ VM, and select the _Windows Server Datacenter: Azure Edition_ image that you wou
 > [!CAUTION]
 > Once Windows Server Datacenter: Azure Edition is installed, it isn't possible to switch the OS back to a non-Azure Edition OS. If this occurs, reinstalling the previous OS is required.
 
-To learn more about creating virtual machine using Azure or Azure Stack HCI, see
+To learn more about creating virtual machine using Azure or Azure Local, see
 [Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal)
 and
-[Deploy Windows Server Azure Edition VMs in Azure Stack HCI](/azure/azure-local/manage/windows-server-azure-edition?tabs=hci).
+[Deploy Windows Server Azure Edition VMs in Azure Local](/azure/azure-local/manage/windows-server-azure-edition?tabs=hci).
 
 ## Next steps
 

@@ -177,7 +177,7 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>"
           ],
           "get-started/enable-hotpatch-azure-edition.md": [
-            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022 Datacenter: Azure Edition hosted on Azure Stack HCI</a>"
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022 Datacenter: Azure Edition hosted on Azure Local</a>"
           ],
           "get-started/hotpatch.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -303,6 +303,14 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local, versions 23H2 and 22H2</a>"
+          ],
+          "networking/sdn/technologies/network-controller/network-controller-service-fabric.md": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 24H2</a>"
+          ],
+          "networking/sdn/technologies/network-controller/network-controller-service-fabric.md": [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+            "✅ <a href=\"https://learn.microsoft.com/azure-stack/hci/release-information-23h2\" target=\"_blank\">Azure Stack HCI, versions 24H2</a>"
           ],
           "networking/technologies/**/*.md": [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
