@@ -4,7 +4,7 @@ description: Learn how to use GPUs with clustered virtual machines (VMs) to prov
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 10/25/2024
+ms.date: 12/09/2024
 zone_pivot_groups: windows-os
 #customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Local.
 ---
@@ -19,8 +19,6 @@ zone_pivot_groups: windows-os
 :::zone pivot="azure-local"
 
 [!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-22h2.md)]
-
-[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-local//includes/hci-arc-vm.md)]
 
 ::: zone-end
 
