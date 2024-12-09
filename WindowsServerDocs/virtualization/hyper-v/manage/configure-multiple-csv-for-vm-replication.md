@@ -26,7 +26,7 @@ The following are required on your device before proceeding:
 
 When copying VMs through a replication process, it's possible to use multiple storage volumes to store the replicated data. There are two methods to accomplish replication through the Hyper-V Manager UI or via PowerShell.
 
-# [Hyper-V](tab#/hyperv)
+# [Hyper-V](#tab/hyperv)
 
 1. Open the **Hyper-V Manager**, under **Actions**, select **Hyper-V Settings**.
 1. Under **Authorization and storage**, select **Allow replication from any authenticated server**, then select **Browse**.
@@ -34,16 +34,18 @@ When copying VMs through a replication process, it's possible to use multiple st
 
 When changes are made to the "default location" where replication is enabled for a VM, the new target volume is used for any subsequent replication. However, VMs that were already being replicated continues to use the original target volume that was set up when replication was first enabled.
 
-# [PowerShell](tab#/powershell)
+# [PowerShell](#tab/powershell)
 
 Open an elevated PowerShell window and run the following command:
 
 ```powershell
 $VM = "MyVM"
-$Destination = "E:\MyVM_Path1"
+$Destination = "E:\MyVM_NewPath"
 Move-VMStorage $VM -DestinationStoragePath $Destination
 ```
 
 This command moves the VM storage to the specified destination path, allowing for configuration of multiple CSV for VM replication.
 
 This approach is effective in different situations, including prereplication, post-replication, and during delta transfers of a replicated VM. During a VM storage move operation, delta replication is temporarily paused and automatically resumes once the move is complete. However, in some situations, such as when there's low disk space or storage movement latency, it might be necessary to manually resume the replication process.
+
+---
