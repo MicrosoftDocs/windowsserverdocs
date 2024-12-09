@@ -10,7 +10,7 @@ zone_pivot_groups: failover-clustering-management-tools
 ---
 # Create a failover cluster
 
-This article shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The article covers a typical deployment in which computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster instead, see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md). For information about using a failover cluster in Azure Stack HCI, see [Create an Azure Stack HCI](/azure-stack/hci/deploy/create-cluster).
+This article shows how to create a failover cluster by using Windows Admin Center, the Failover Cluster Manager snap-in, or Windows PowerShell. The example scenario we use in this article covers a typical deployment in which computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster instead, see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md). For information about using a failover cluster in Azure Stack HCI, see [Create an Azure Stack HCI](/azure-stack/hci/deploy/create-cluster).
 
 You can also deploy an Active Directory-detached cluster. This deployment method enables you to create a failover cluster without permissions to create computer objects in AD DS or the need to request that computer objects are prestaged in AD DS. This option is only available through Windows PowerShell and is only recommended for specific scenarios. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
@@ -41,76 +41,11 @@ Also, make sure that you verify the following account requirements:
 > [!NOTE]
 > This requirement doesn't apply if you want to create an Active Directory-detached cluster. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
-## Install the Failover Clustering feature
+::: zone pivot="powershell"
+
+## Install the Failover Clustering feature using PowerShell
 
 You must install the Failover Clustering feature on every server that you want to add as a failover cluster node.
-
-::: zone pivot="windows-admin-center"
-
-1. Sign in to Windows Admin Center.
-
-1. Under **All connections**, select **Add**.
-
-1. In the **Add or create resources** panel, under **Server clusters**, select **Create new**.
-
-1. Under **Choose the cluster type**, select **Windows Server**.
-
-1. Under **Select the workload type**, select **Virtual machines**.
-
-1. Under **Select Server locations**, select **All servers in one site**.
-
-1. Select **Create**.
-
-1. In **Check the prerequisites**, make sure your deployment meets the requirements for servers and networks, then select **Next**.
-
-1. In **Add servers**, enter a username and password for the administrator account for connecting to the servers.
-
-1. Next, enter the computer name, IP address, or fully qualified domain name (FQDN) for each server you want to add, then select **Add**.
-
-1. Join a domain. <!--Screenshot missing--->
-
-1. Install any required features by selecting **Install features**.
-
-1. Select **Next**,
-
-1. Optionally, you can install any operating system updates by selecting **Install updates**.
-
-1. Select **Next**,
-
-1. Select **Restart servers** to restart the servers and apply changes.
-
-1. Select **Next: Networking**.
-
-1. Under **Networking**, a popup window should appear and ask you if you want to remove existing virtual switches. If you want to remove them, select **Yes**. If not, select **No**.
-
-1. The wizard then checks the network adapters. To enable a network adapter, select the name of the adapter, then select **Enable**. To disable an adapter, select the name of the adapter, then select **Disable**.
-
-  >[!NOTE]
-  >If the wizard can't find the servers, select **Back**, then select **Next** to refresh the page. If you still see an error message, check that the adapters are on the right VLANs and that a DNS server is listening on these VLANs.
-
-1. Select **Next**.
-
-1. On **Select the adapters to use for management**, select **One physical network adapter for management**, then select **Next**.
-
-1. On **Virtual switch**, select **Create one virtual switch for compute and storage together**, then select **Next**.
-
-1. On **Optionally configure RDMA**, set up RDMA as appropriate for the servers, and then select **Next**.
-
-1. On **Define networks**, enter the name, IP address, Subnet mask, and VLAN ID of the adapters you want to use for storage and compute traffic for VMs within the cluster. When you're done, select **Apply and test** to validate the adapters.
-
-1. When the validation process is finished, select **Next: Clustering**.
-
-1. On **Validate the cluster**, select **Validate**.
-
-1. When the validation process finishes, review any warning messages that appear and resolve them if you can. Once you're finished, select **Next**.
-
-1. On **Create the cluster**, enter a name for your cluster, then select **Specify one or more static addresses**. Next, select the **Use network** checkbox and enter the IP address for your cluster in the **IP address** field. when you're done, select **Create cluster**.
-
-1. When the cluster creation process is done, select **Finish**.
-
-::: zone-end  
-
-::: zone pivot="powershell"
 
 The following example installs the Failover Clustering feature.
 
@@ -121,6 +56,12 @@ Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 ::: zone-end  
 
 ::: zone pivot="failover-cluster-manager"
+
+## Install the Failover Clustering feature using Failover Cluster Manager
+
+You must install the Failover Clustering feature on every server that you want to add as a failover cluster node.
+
+To install the Failover Clustering feature:
 
 1. Under **Configure this local server**, select **Add Roles and Features**.
 
@@ -134,11 +75,11 @@ Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
 > After you install the Failover Clustering feature, we recommend that you apply the latest updates from Windows Update. Also, for a Windows Server 2012-based failover cluster, review the [Recommended hotfixes and updates for Windows Server 2012-based failover clusters](https://support.microsoft.com/help/2784261/recommended-hotfixes-and-updates-for-windows-server-2012-based-failove) Microsoft Support article and install any updates that apply.
 ::: zone-end  
 
-## Validate the configuration
+::: zone pivot="powershell"
+
+## Validate the configuration using PowerShell
 
 Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft only supports cluster solutions if the complete configuration passes all validation tests and has only certified hardware compatible with whichever version of Windows Server your cluster nodes use.
-
-::: zone pivot="powershell"
 
 The following example runs all cluster validation tests on computers that are named *Server1* and *Server2*.
 
@@ -153,14 +94,20 @@ Test-Cluster –Node Server1, Server2
 
 ::: zone pivot="failover-cluster-manager"
 
+## Validate the configuration using Failover Cluster Manager
+
+Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft only supports cluster solutions if the complete configuration passes all validation tests and has only certified hardware compatible with whichever version of Windows Server your cluster nodes use.
+
 > [!NOTE]
 > You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests do not run.
 
 ### Run cluster validation tests
 
+To run cluster validation tests in Failover Cluster Manager:
+
 1. On a computer that has the Failover Cluster Management Tools installed from the Remote Server Administration Tools or on a server where you installed the Failover Clustering feature, start Failover Cluster Manager. If you're on a server, start Server Manager and then on the **Tools** menu, select **Failover Cluster Manager**.
 
-1. In the failover cluster management pane, under the **Management** node, go to the **Actions** pane on the right side of the window and select **Validate Configuration**>
+1. In the failover cluster management pane, under the **Management** node, go to the **Actions** pane on the right side of the window and select **Validate Configuration**.
 
 1. On the **Before You Begin** page, select **Next**.
 
@@ -239,7 +186,7 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. On the **Virtual switch** page, select the virtual switch infrastructure that you want to use or select the **Skip virtual switch creation** checkbox if you want to skip this step, then select **Next**.
 
-1. On the **Optionally configure RDMA** page, select the **Configure RDMA (Recommended)** checkbox if you want to configure RDMA. Select **Next**.
+1. On the **Optionally configure RDMA** page, select the **Configure RDMA (Recommended)** checkbox if you want to configure remote direct memory access (RDMA). Select **Next**.
 
 1. On the **Define Networks** page, specify the name, IP address, subnet mask, and default gateway for each server node you plan to add to your cluster.
 
