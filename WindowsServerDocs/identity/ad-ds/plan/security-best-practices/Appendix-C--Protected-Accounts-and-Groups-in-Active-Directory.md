@@ -31,6 +31,8 @@ The following security accounts and groups are protected in Active Directory Dom
 - Domain Admins
 - Domain Controllers
 - Enterprise Admins
+- Enterprise Key Admins
+- Key Admins
 - Krbtgt
 - Print Operators
 - Read-only Domain Controllers
