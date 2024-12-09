@@ -18,7 +18,7 @@ zone_pivot_groups: windows-os
 
 :::zone pivot="azure-local"
 
-[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-23h2-22h2.md)]
+[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-22h2.md)]
 
 [!INCLUDE [hci-arc-vm](~/../_azurestack/azure-local//includes/hci-arc-vm.md)]
 
@@ -34,7 +34,7 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-local"
 
-- You need an Azure Local cluster running Azure Local, version 22H2 or later.
+- You need an Azure Local cluster running Azure Local, version 22H2.
 
 ::: zone-end
 
