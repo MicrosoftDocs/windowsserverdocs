@@ -134,7 +134,7 @@ For more information about hardware validation tests, see [Validate Hardware for
 
 ## Create the failover cluster
 
-To complete this step, make sure that the user account that you sign in with meets the requirements outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic. <!---There's no WAC version here. Ask if lab left off before we could write these steps.--->
+To complete this step, make sure that the user account that you sign in with meets the requirements outlined in the [Verify the prerequisites](#verify-the-prerequisites) section of this topic.
 
 ::: zone pivot="windows-admin-center"
 
@@ -283,14 +283,14 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
 After you create the cluster, you can verify cluster quorum configuration and create Cluster Shared Volumes (CSV). For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum) and [Use Cluster Shared Volumes in a failover cluster](failover-cluster-csvs.md).
 
-## Create clustered roles
+::: zone pivot="powershell"
+
+## Create clustered roles in PowerShell
 
 After you create the failover cluster, you can create clustered roles to host cluster workloads.
 
 >[!NOTE]
 >For clustered roles that require a client access point, a virtual computer object (VCO) is created in AD DS. By default, all VCOs for the cluster are created in the same container or OU as the CNO. Realize that after you create a cluster, you can move the CNO to any OU.
-
-::: zone pivot="powershell"
 
 For examples of how to add clustered roles using Powershell, see [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole).
 
@@ -300,7 +300,14 @@ For examples of how to add clustered roles using Powershell, see [Add-ClusterFil
 
 ::: zone pivot="failover-cluster-manager"
 
-Use Server Manager or Windows PowerShell to install the role or feature that is required for a clustered role on each failover cluster node. For example, if you want to create a clustered file server, install the File Server role on all cluster nodes.
+## Create clustered roles in Failover Cluster Manager
+
+After you create the failover cluster, you can create clustered roles to host cluster workloads.
+
+>[!NOTE]
+>For clustered roles that require a client access point, a virtual computer object (VCO) is created in AD DS. By default, all VCOs for the cluster are created in the same container or OU as the CNO. Realize that after you create a cluster, you can move the CNO to any OU.
+
+Use Server Manager to install the role or feature that is required for a clustered role on each failover cluster node. For example, if you want to create a clustered file server, install the File Server role on all cluster nodes.
 
 The following table shows the clustered roles that you can configure in the High Availability Wizard and the associated server role or feature that you must install as a prerequisite.
 
