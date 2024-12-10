@@ -166,9 +166,9 @@ The Create Cluster Wizard opens.
 ![create cluster and select servers](media/ad-fs-always-on/createClusterServers.png)
 
 > [!NOTE]
-> If you chose to create the cluster immediately after running validation in the [configuration validating procedure](../../../failover-clustering/create-failover-cluster.md#validate-the-configuration), you will not see the Select Servers page. The nodes that were validated are automatically added to the Create Cluster Wizard so that you do not have to enter them again.
+> If you chose to create the cluster immediately after running validation in the [configuration validating procedure](../../../failover-clustering/create-failover-cluster.md#run-cluster-validation-tests), you will not see the Select Servers page. The nodes that were validated are automatically added to the Create Cluster Wizard so that you do not have to enter them again.
 
-6.	If you skipped validation earlier, the Validation Warning page appears. We strongly recommend that you run cluster validation. Only clusters that pass all validation tests are supported by Microsoft. To run the validation tests, select Yes, and then select Next. Complete the Validate a Configuration Wizard as described in [Validate the configuration](../../../failover-clustering/create-failover-cluster.md#validate-the-configuration).
+6.	If you skipped validation earlier, the Validation Warning page appears. We strongly recommend that you run cluster validation. Only clusters that pass all validation tests are supported by Microsoft. To run the validation tests, select Yes, and then select Next. Complete the Validate a Configuration Wizard as described in [Validate the configuration](../../../failover-clustering/create-failover-cluster.md#run-cluster-validation-tests).
 7.	On the Access Point for Administering the Cluster page, do the following:
 -	In the Cluster Name box, enter the name that you want to use to administer the cluster. Before you do, review the following information:
  -	During cluster creation, this name is registered as the cluster computer object (also known as the cluster name object or CNO) in AD DS. If you specify a NetBIOS name for the cluster, the CNO is created in the same location where the computer objects for the cluster nodes reside. This can be either the default Computers container or an OU.
