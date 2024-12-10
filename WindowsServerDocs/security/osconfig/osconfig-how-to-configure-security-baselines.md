@@ -1,6 +1,6 @@
 ---
-title: Configure OSConfig security for Windows Server
-description: Learn how to deploy OSConfig security baselines to enforce granular security settings to better protect and harden your Windows Server environment.
+title: Configure security Baseline for Windows Server
+description: Learn how to deploy security baselines using OsConfig to enforce granular security settings to better protect and harden your Windows Server environment.
 ms.topic: how-to
 ms.product: windows-server
 ms.author: alalve
@@ -9,7 +9,7 @@ ms.contributor: Dona Mukherjee, Carlos Mayol Berral
 ms.date: 12/05/2024
 ---
 
-# Deploy OSConfig security baselines locally
+# Deploy Windows Server security baselines locally with OsConfig
 
 OSConfig is a security configuration stack that uses a scenario-based approach to deliver and apply desired security measures for your environment. It provides co-management support for both on-premises and Azure Arc-connected devices. You can use Windows PowerShell or Windows Admin Center to apply the security baselines throughout the device life cycle, starting from the initial deployment process.
 
