@@ -3,8 +3,8 @@ title: AD FS Troubleshooting - DNS Resolution
 description:  This document describes how to troubleshoot DNS aspects of AD FS
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 01/03/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -22,8 +22,8 @@ Verifies IP-level connectivity to another TCP/IP computer by sending Internet Co
 
 ### To use a PING test
 1.  Open a command prompt
-2. Enter PING <name of adfs server>
-    a. Example:  PING sts.contoso.com
+2. Enter ```ping <name of AD FS server>```
+    a. Example:  ping sts.contoso.com
 3. You should see a reply from the server
 
 ![Ping](media/ad-fs-tshoot-dns/dns1.png)
@@ -33,7 +33,7 @@ Displays information that you can use to diagnose Domain Name System (DNS) infra
 
 ### To use a NSLookup
 1.  Open a command prompt
-2. Enter PING <name of adfs server>
+2. Enter ```nslookup <name of AD FS server>```
     a. Example:  nslookup sts.contoso.com
 3. You should see the dns information for the server
 ![NSLookup](media/ad-fs-tshoot-dns/dns2.png)
@@ -44,7 +44,7 @@ Determines the path taken to a destination by sending Internet Control Message P
 
 ### To use Tracert
 1.  Open a command prompt
-2. Enter tracert <name of adfs server>
+2. Enter ```tracert <name of AD FS server>```
     a. Example:  tracert sts.contoso.com
 3. You should see the destination path used to reach the server
 ![Tracert](media/ad-fs-tshoot-dns/dns3.png)

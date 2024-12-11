@@ -3,8 +3,8 @@ title: reg export
 description: Reference article for the reg export command, which copies the specified subkeys, entries, and values of the local computer into a file for transfer to other servers.
 ms.topic: reference
 ms.assetid: 0ad9526f-1e29-4fa5-9d2d-feaa92f12d7c
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -45,6 +45,6 @@ To export the contents of all subkeys and values of the key MyApp to the file Ap
 reg export HKLM\Software\MyCo\MyApp AppBkUp.reg
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

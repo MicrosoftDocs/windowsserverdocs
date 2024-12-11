@@ -4,13 +4,13 @@ description: Learn how to use the management console in the Remote Access server
 manager: brianlic
 ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Monitor the operations status of the Remote Access server and its components
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 

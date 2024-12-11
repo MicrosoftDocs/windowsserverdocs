@@ -1,7 +1,7 @@
 ---
 title: Host Compute Network (HCN) service API for VMs and containers
 description: Host Compute Network (HCN) service API is a public-facing Win32 API that provides platform-level access to manage the virtual networks, virtual network endpoints, and associated policies. Together this provides connectivity and security for virtual machines (VMs) and containers running on a Windows host.
-ms.author: daschott
+ms.author: roharwoo
 author: daschott
 ms.date: 11/05/2018
 ms.topic: article
@@ -9,7 +9,7 @@ ms.topic: article
 
 # Host Compute Network (HCN) service API for VMs and containers
 
->Applies to: Windows Server 2022, Windows Server 2019
+>
 
 Host Compute Network (HCN) service API is a public-facing Win32 API that provides platform-level access to manage the virtual networks, virtual network endpoints, and associated policies. Together this provides connectivity and security for virtual machines (VMs) and containers running on a Windows host.
 
@@ -214,9 +214,7 @@ You can use tools, such as [Swagger](https://swagger.io/), to generate language-
 
 In addition to code generation and validation, you can use tools to simplify the work with JSON documents—that is, [Visual Studio Code](https://code.visualstudio.com/Docs/languages/json).
 
-### Top-level objects defined in the HCN.Schemas.mars file
-As mentioned above, you can find the document schema for documents used by the HCN APIs in a set of .mars files under:
-onecore/vm/dv/net/hns/schema/mars/Schema
+### Top-level objects defined in the HCN schema
 
 The top-level objects are:
 - [HostComputeNetwork](hcn-scenarios.md#scenario-hcn)

@@ -2,14 +2,13 @@
 title: Change the listening port in Remote Desktop
 description: Learn how to change the listening port for Remote Desktop client.
 ms.topic: article
-author: lizap
-ms.author: elizapo
-ms.date: 07/19/2018
-ms.localizationpriority: medium
+author: robinharwood
+ms.author: roharwoo
+ms.date: 7/3/2024
 ---
 # Change the listening port for Remote Desktop on your computer
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2
+>
 
 When you connect to a computer (either a Windows client or Windows Server) through the Remote Desktop client, the Remote Desktop feature on your computer "hears" the connection request through a defined listening port (3389 by default). You can change that listening port on Windows computers by modifying the registry.
 
@@ -47,6 +46,10 @@ You can also change the RDP port by running the following PowerShell command. In
 To add a new RDP Port to the registry:
 
 ```powershell
-Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber" -Value 3390
-New-NetFirewallRule -DisplayName 'RDPPORTLatest' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort 3390
+$portvalue = 3390
+
+Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber" -Value $portvalue 
+
+New-NetFirewallRule -DisplayName 'RDPPORTLatest-TCP-In' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort $portvalue 
+New-NetFirewallRule -DisplayName 'RDPPORTLatest-UDP-In' -Profile 'Public' -Direction Inbound -Action Allow -Protocol UDP -LocalPort $portvalue 
 ```

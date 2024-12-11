@@ -1,108 +1,137 @@
 ---
-description: "Learn more about: DFS Replication overview"
 title: DFS Replication overview
-ms.date: 03/08/2019
-author: JasonGerend
+description: Learn how to use the Distributed File System (DFS) Replication role service in Windows Server to replicate folders across multiple servers and sites.
+ms.date: 03/24/2023
+author: robinharwood
 manager: elizapo
-ms.author: jgerend
-ms.topic: article
+ms.author: roharwoo
+ms.topic: conceptual
 ---
 
 # DFS Replication overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> **Applies To**: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-DFS Replication is a role service in Windows Server that enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication
-is an efficient, multiple-master replication engine that you can use to keep folders synchronized between servers across limited bandwidth network connections. It replaces the File Replication Service (FRS) as the replication engine for DFS Namespaces, as well as for replicating the Active Directory Domain Services (AD DS) SYSVOL folder in domains that use the Windows Server 2008 or later domain functional level.
+Distributed File System Replication, or DFS Replication, is a role service in Windows Server that enables you to efficiently replicate folders across multiple servers and sites. You can replicate all types of folders, including folders referred to by a DFS namespace path.
 
-DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file and enables DFS Replication to replicate only the changed file blocks instead of the entire file.
+DFS Replication is an efficient, multiple-master replication engine that you can use to keep folders synchronized between servers across limited bandwidth network connections. The service replaces the File Replication Service (FRS) as the replication engine for DFS namespaces.
 
-For more information about replicating SYSVOL using DFS Replication, see [Migrate the SYSVOL replication to DFS Replication](migrate-sysvol-to-dfsr.md).
+> [!TIP]
+> Consider using [Azure File Sync](/azure/storage/file-sync/file-sync-introduction) to reduce your on-premises storage footprint. Azure File Sync can keep multiple Windows file servers in sync. Each server needs to only keep a cache on-premises while the full copy of the data is in the cloud. Azure File Sync also provides the benefit of cloud backups with integrated snapshots. For more information, see [Planning for an Azure File Sync deployment](/azure/storage/file-sync/file-sync-planning).
 
-To use DFS Replication, you must create replication groups and add replicated folders to the groups. Replication groups, replicated folders, and members are illustrated in the following figure.
+DFS Replication uses a compression algorithm known as _remote differential compression_, or RDC. RDC detects changes to the data in a file and enables DFS Replication to replicate only the changed file blocks instead of the entire file.
 
-![A replication group containing a connection between two members, each having a couple replicated folders](media/dfsr-overview.gif)
+Active Directory Domain Services (AD DS) uses DFS Replication to replicate the sysvol folder in domains that use the Windows Server 2008 or later domain functional level. For more information about replicating the sysvol folder by using DFS Replication, see [Migrate the sysvol folder replication to DFS Replication](migrate-sysvol-to-dfsr.md).
 
-This figure shows that a replication group is a set of servers, known as members, which participates in the replication of one or more replicated folders. A replicated folder is a folder that stays synchronized on each member. In the figure, there are two replicated folders: Projects and Proposals. As the data changes in each replicated folder, the changes are replicated across connections between the members of the replication group. The connections between all members form the replication topology.
-Creating multiple replicated folders in a single replication group simplifies the process of deploying replicated folders because the topology, schedule, and bandwidth throttling for the replication group are applied to each replicated folder. To deploy additional replicated folders, you can use Dfsradmin.exe or a follow the instructions in a wizard to define the local path and permissions for the new replicated folder.
+## Understand replication groups
 
-Each replicated folder has unique settings, such as file and subfolder filters, so that you can filter out different files and subfolders for each replicated folder.
+To use DFS Replication, you create _replication groups_ and add replicated folders to the groups. Replicated folders are stored on servers in the group, which are referred to as _members_. DFS Replication establishes connections between the members of a group.
 
-The replicated folders stored on each member can be located on different volumes in the member, and the replicated folders do not need to be shared folders or part of a namespace. However, the DFS Management snap-in makes it easy to share replicated folders and optionally publish them in an existing namespace.
+The following figure illustrates the relationship between a replication group, the members in the group, and the replicated folders. 
 
-You can administer DFS Replication by using DFS Management, the DfsrAdmin and Dfsrdiag commands, or scripts that call WMI.
+:::image type="content" source="./media/dfsr-overview.gif" alt-text="Image that shows a replication group with a connection between two members that each have replicated folders." border="false":::
 
-## Requirements
+A _replicated folder_ stays synchronized on each member in a group. In the figure, there are two replicated folders: Projects and Proposals. As the data changes in each replicated folder, the changes are replicated across connections between the members of the replication group. The connections between all members form the replication topology.
+
+Creating multiple replicated folders in a single replication group simplifies the process of deploying replicated folders. The topology, schedule, and bandwidth throttling for the replication group are applied to each replicated folder. To deploy more replicated folders, you can run the Dfsradmin.exe tool or use a wizard to define the local path and permissions for the new replicated folder.
+
+Each replicated folder has unique settings, such as file and subfolder filters. The settings let you filter out different files and subfolders for each replicated folder.
+
+The replicated folders stored on each member can be located on different volumes in the member, and the replicated folders don't need to be shared folders or part of a namespace. However, the DFS Management snap-in simplifies sharing replicated folders and optionally publishing them in an existing namespace.
+
+## Deploy and manage DFS Replication
+
+DFS Replication is a part of the File and Storage Services role for Windows Server. The management tools for DFS (DFS Management, the DFS Replication module for Windows PowerShell, and command-line tools) are installed separately as part of the Remote Server Administration Tools (RSAT).
+
+You can install DFS Replication by using Server Manager, Windows PowerShell, or [Windows Admin Center](../../manage/windows-admin-center/overview.md).
+
+You can administer DFS Replication by using DFS Management, the `dfsradmin` and `dfsrdiag` commands, or scripts that call WMI.
+
+### Deployment requirements
 
 Before you can deploy DFS Replication, you must configure your servers as follows:
 
-- Update the Active Directory Domain Services (AD DS) schema to include Windows Server 2003 R2 or later schema additions. You cannot use read-only replicated folders with the Windows Server 2003 R2 or older schema additions.
-- Ensure that all servers in a replication group are located in the same forest. You cannot enable replication across servers in different forests.
-- Install DFS Replication on all servers that will act as members of a replication group.
-- Contact your antivirus software vendor to check that your antivirus software is compatible with DFS Replication.
-- Locate any folders that you want to replicate on volumes formatted with the NTFS file system. DFS Replication does not support the Resilient File System (ReFS) or the FAT file system. DFS Replication also does not support replicating content stored on Cluster Shared Volumes.
+- **Confirm file system and volume format**. Determine the folders that you want to replicate, and identify any folders located on volumes that are formatted with the NTFS file system. DFS Replication doesn't support the Resilient File System (ReFS) or the FAT file system. DFS Replication also doesn't support replicating content stored on Cluster Shared Volumes.
 
-## Interoperability with Azure virtual machines
+- **Verify antivirus compatibility**. Contact your antivirus software vendor to confirm your antivirus software is compatible with DFS Replication.
 
-Using DFS Replication on a virtual machine in Azure has been tested with Windows Server; however, there are some limitations and requirements that you must follow.
+- **Update AD DS schema**. Update the AD DS schema to include Windows Server 2003 R2 or later schema additions. You can't use read-only replicated folders with the Windows Server 2003 R2 or later schema additions.
 
-- Using snapshots or saved states to restore a server running DFS Replication for replication of anything other than the SYSVOL folder causes DFS Replication to fail, which requires special database recovery steps. Similarly, don't export, clone, or copy the virtual machines. For more information, see article [2517913](https://support.microsoft.com/kb/2517913) in the Microsoft Knowledge Base, as well as [Safely Virtualizing DFSR](https://techcommunity.microsoft.com/t5/storage-at-microsoft/safely-virtualizing-dfsr/ba-p/424671).
-- When backing up data in a replicated folder housed in a virtual machine, you must use backup software from within the guest virtual machine.
-- DFS Replication requires access to physical or virtualized domain controllers – it can't communicate directly with Azure AD.
-- DFS Replication requires a VPN connection between your on premises replication group members and any members hosted in Azure VMs. You also need to configure the on premises router (such as Forefront Threat Management Gateway) to allow the RPC Endpoint Mapper (port 135) and a randomly assigned port between 49152 and 65535 to pass over the VPN connection. You can use the Set-DfsrMachineConfiguration cmdlet or the Dfsrdiag command line tool to specify a static port instead of the random port. For more information about how to specify a static port for DFS Replication, see [Set-DfsrServiceConfiguration](/powershell/module/dfsr/set-dfsrserviceconfiguration). For information about related ports to open for managing Windows Server, see article [832017](https://support.microsoft.com/kb/832017) in the Microsoft Knowledge Base.
+- **Prepare replication group servers**. Install DFS Replication on all servers that you plan to use as members of a replication group.
 
-To learn about how to get started with Azure virtual machines, visit the [Microsoft Azure web site](/azure/virtual-machines/).
+- **Check forest location**. Ensure all servers in a replication group are located in the same forest. You can't enable replication across servers in different forests.
 
-## Installing DFS Replication
+### Interoperability with Azure virtual machines
 
-DFS Replication is a part of the File and Storage Services role. The management tools for DFS (DFS Management, the DFS Replication module for Windows PowerShell, and command-line tools) are installed separately as part of the Remote Server Administration Tools.
+DFS Replication on an Azure virtual machine is a verified scenario for Windows Server. However, there are some limitations and requirements for this implementation.
 
-Install DFS Replication by using [Windows Admin Center](../../manage/windows-admin-center/overview.md), Server Manager, or PowerShell, as described in the next sections.
+- **Snapshots and saved states**. To restore a server that's running DFS Replication, don't use snapshots or saved states to replicate anything other than the sysvol folder. If you attempt this type of restore, DFS Replication fails. This restoration requires special database recovery steps. Also, don't export, clone, or copy the virtual machines. For more information, see [DFSR no longer replicates files after restoring a virtualized server's snapshot](/support/windows-server/networking/distributed-file-system-replication-not-replicate-files) and [Safely virtualizing DFSR](https://techcommunity.microsoft.com/t5/storage-at-microsoft/safely-virtualizing-dfsr/ba-p/424671).
 
-### To install DFS by using Server Manager
+- **DFS Replication backups**. To back up data in a replicated folder that's stored in a virtual machine, use backup software that's located on the guest virtual machine. Don't back up or restore a virtualized DFS Replication server from the host virtual machine.
 
-1. Open Server Manager, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard appears.
+- **Domain controller access**. DFS Replication requires access to physical or virtualized domain controllers. The DFS Replication service can't communicate directly with Microsoft Entra ID.
 
-2. On the **Server Selection** page, select the server or virtual hard disk (VHD) of an offline virtual machine on which you want to install DFS.
+- **VPN connection**. DFS Replication requires a VPN connection between your on-premises replication group members and any members hosted in Azure virtual machines. You also need to configure the on-premises router (such as Forefront Threat Management Gateway) to allow the RPC Endpoint Mapper (port 135) and a randomly assigned port between 49152 and 65535 to pass over the VPN connection. You can use the `Set-DfsrMachineConfiguration` cmdlet or the `dfsrdiag` command-line tool to specify a static port instead of the random port. For more information about how to specify a static port for DFS Replication, see [`Set-DfsrServiceConfiguration`](/powershell/module/dfsr/set-dfsrserviceconfiguration). For information about related ports to open for managing Windows Server, see [Service overview and network port requirements for Windows](/support/windows-server/networking/service-overview-and-network-port-requirements).
 
-3. Select the role services and features that you want to install.
+To learn how to get started with Azure virtual machines, visit the [Microsoft Azure website](/azure/virtual-machines/).
 
-    - To install the DFS Replication service, on the **Server Roles** page, select **DFS Replication**.
+## Install DFS Replication from Server Manager
 
-    - To install only the DFS Management Tools, on the **Features** page, expand **Remote Server Administration Tools**, **Role Administration Tools**, expand **File Services Tools**, and then select **DFS Management Tools**.
+To install DFS Replication by using Server Manager, follow these steps:
 
-         **DFS Management Tools** installs the DFS Management snap-in, the DFS Replication and DFS Namespaces modules for Windows PowerShell, and command-line tools, but it does not install any DFS services on the server.
+1. Open Server Manager.
 
-### To install DFS Replication by using Windows PowerShell
+1. Select **Manage**, and then select **Add Roles and Features**. The **Add Roles and Features** wizard opens.
 
-Open a Windows PowerShell session with elevated user rights, and then type the following command, where <name\> is the role service or feature that you want to install (see the following table for a list of relevant role service or feature names):
+1. Under **Server Selection**, select the server or virtual hard disk (VHD) where you want to install DFS Replication. The server or VHD should be an offline virtual machine.
 
-```PowerShell
-Install-WindowsFeature <name>
-```
+1. To install the DFS Replication service, go to **Server Roles**.
 
-|Role service or feature|Name|
-|---|---|
-|DFS Replication|`FS-DFS-Replication`|
-|DFS Management Tools|`RSAT-DFS-Mgmt-Con`|
+1. Expand **File and Storage Services** > **File and iSCSI Services**, and then select **DFS Replication**.
+   
+1. To install the DFS Management Tools, go to **Features**.
 
-For example, to install the Distributed File System Tools portion of the Remote Server Administration Tools feature, type:
+   1. Expand **Remote Server Administration Tools**, **Role Administration Tools**, and then expand **File Services Tools**.
+   
+   1. Select **DFS Management Tools**.
+   
+   The **DFS Management Tools** option installs the DFS Management snap-in, the DFS Replication and DFS Namespaces modules for Windows PowerShell, and command-line tools. The option doesn't install any DFS services on the server.
 
-```PowerShell
-Install-WindowsFeature "RSAT-DFS-Mgmt-Con"
-```
+## Install DFS Replication from PowerShell
 
-To install the DFS Replication, and the Distributed File System Tools portions of the Remote Server Administration Tools feature, type:
+To install the DFS Replication by using Windows PowerShell, follow these steps:
 
-```PowerShell
-Install-WindowsFeature "FS-DFS-Replication", "RSAT-DFS-Mgmt-Con"
-```
+1. Open a Windows PowerShell session with elevated user rights.
 
-## Additional References
+1. Enter the following command to install the desired RSAT role services or features to support DFS replication.
+
+   For the `<name\>` parameter, enter of the names of the RSAT role services or features that you want to install. You can install one or multiple services and features in a single command. The table lists the names of the relevant RSAT role services and features.
+
+   ```powershell
+   Install-WindowsFeature <name>
+   ```
+
+   | RSAT role service/feature | Value for `<name>` parameter |
+   | --- | --- |
+   | DFS Replication | `FS-DFS-Replication` |
+   | DFS Management Tools | `RSAT-DFS-Mgmt-Con` |
+
+   - To install the DFS Replication service only, enter the following command:
+
+      ```powershell
+      Install-WindowsFeature "RSAT-DFS-Mgmt-Con"
+      ```
+      
+   - To install both the DFS Replication service and the DFS Management Tools, enter the following command:
+
+      ```powershell
+      Install-WindowsFeature "FS-DFS-Replication", "RSAT-DFS-Mgmt-Con"
+      ```
+
+## Related links
 
 - [DFS Namespaces and DFS Replication overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127250(v%3dws.11))
 - [Checklist: Deploy DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772201(v%3dws.11))
 - [Checklist: Manage DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755035(v%3dws.11))
 - [Deploying DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770925(v%3dws.11))
-- [Managing DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770925(v%3dws.11))
 - [Troubleshooting DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732802(v%3dws.11))

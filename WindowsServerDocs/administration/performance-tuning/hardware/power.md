@@ -2,8 +2,8 @@
 title: Windows Server hardware power considerations
 description: Considerations about Windows Server hardware power.
 ms.topic: conceptual
-ms.author: qizha
-author: phstee
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -66,8 +66,6 @@ The processor terminology used throughout this topic reflects the hierarchy of c
 
 - [Server Hardware Performance Considerations](index.md)
 
-- [Power and Performance Tuning](power/power-performance-tuning.md)
+- [Overview about power and performance tuning for the Windows Server](power/power-performance-tuning.md)
 
-- [Processor Power Management Tuning](power/processor-power-management-tuning.md)
-
-- [Recommended Balanced Plan Parameters](power/recommended-balanced-plan-parameters.md)
+- [Processor Power Management (PPM) tuning for the Windows Server balanced power plan](power/processor-power-management-tuning.md)

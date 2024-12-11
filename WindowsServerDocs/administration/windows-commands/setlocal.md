@@ -3,8 +3,8 @@ title: setlocal
 description: Reference article for the setlocal command, which starts localization of environment variables in a batch file.
 ms.topic: reference
 ms.assetid: e4e4b6d3-3f1a-4851-a782-25ee2470e16e
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -40,8 +40,8 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
 - The **setlocal** command sets the ERRORLEVEL variable. If you pass {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**}, the ERRORLEVEL variable is set to **0** (zero). Otherwise, it's set to **1**. You can use this information in batch scripts to determine whether the extensions are available, as shown in the following example:
 
     ```
-    setlocal enableextensions
     verify other 2>nul
+    setlocal enableextensions
     if errorlevel 1 echo Unable to enable extensions
     ```
 
@@ -65,6 +65,6 @@ endlocal
 start notepad c:\superapp.out
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

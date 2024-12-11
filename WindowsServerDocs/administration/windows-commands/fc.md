@@ -3,8 +3,8 @@ title: fc
 description: Reference article for the fc command, which compares two files or sets of files and displays the differences between them.
 ms.topic: reference
 ms.assetid: 485fc3d8-b7c5-496d-87be-0011112f27d5
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -41,7 +41,7 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 
 #### Remarks
 
-- This command is implemeted by c:\WINDOWS\fc.exe. You can use this command within PowerShell, but be sure to spell out the full executable (fc.exe) since 'fc' is also an alias for Format-Custom.
+- This command is implemented by c:\WINDOWS\fc.exe. You can use this command within PowerShell, but be sure to spell out the full executable (fc.exe) since 'fc' is also an alias for Format-Custom.
 
 - When you use **fc** for an ASCII comparison, **fc** displays the differences between two files in the following order:
 
@@ -120,6 +120,6 @@ To compare each batch file in the root directory on drive C to the file with the
 fc c:*.bat d:*.bat
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

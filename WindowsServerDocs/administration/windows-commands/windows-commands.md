@@ -3,58 +3,50 @@ title: Windows commands
 description: Reference
 ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
-author: jasongerend
-ms.author: jgerend
-manager: dongill
-ms.date: 06/29/2020
+author: robinharwood
+ms.author: roharwoo
+manager: femila
+ms.date: 04/25/2023
 ---
 
-# Windows commands
+# Windows Commands
 
-All supported versions of Windows (server and client) have a set of Win32 console commands built in.
+All supported versions of Windows and Windows Server have a set of Win32 console commands built in. This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
 
-This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
+## Command-line shells
 
-## Prerequisites
+Windows has two command-line shells: the Command shell and [PowerShell](/powershell/scripting/overview). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
 
-The information that is contained in this topic applies to:
+The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host, you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
 
-- Windows Server 2019
-- Windows Server (Semi-Annual Channel)
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
-- Windows Server 2008 R2
-- Windows Server 2008
-- Windows 10
-- Windows 8.1
-
-### Command shell overview
-
-The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all Commands that are available at the command line.
-
-Windows has two command shells: The Command shell and [PowerShell](/powershell/scripting/overview). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
-
-PowerShell was designed to extend the capabilities of the Command shell to run PowerShell commands called cmdlets. Cmdlets are similar to Windows Commands but provide a more extensible scripting language. You can run Windows Commands and PowerShell cmdlets in Powershell, but the Command shell can only run Windows Commands and not PowerShell cmdlets.
+PowerShell was designed to extend the capabilities of the Command shell to run PowerShell commands called cmdlets. Cmdlets are similar to Windows Commands but provide a more extensible scripting language. You can run both Windows Commands and PowerShell cmdlets in PowerShell, but the Command shell can only run Windows Commands and not PowerShell cmdlets.
 
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
+A reference of exit and error codes for Windows Commands can be found in the [Debug system error codes](/windows/win32/debug/system-error-codes) articles that may be helpful to understanding errors produced. Windows Commands also include command redirection operators. To learn more of their use, see [Using command redirection operators](/previous-versions/windows/it-pro/windows-xp/bb490982(v=technet.10)).
+
 > [!NOTE]
->You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6&preserve-view=true), the open source version of PowerShell.
+> You can also download and install [PowerShell Core](/powershell/scripting/install/installing-powershell), the open source version of PowerShell.
+
+## Command shell file and directory name automatic completion
+
+You can configure the Command shell to automatically complete file and directory names on a computer or user session when a specified control character is pressed. By default this control character is configured to be the **tab** key for both file and directory names, although they can be different. To change this control character, run `regedit.exe` and navigate to either of the following registry keys and entries, depending on whether you wish to change the value for the current user only, or for all users of the computer.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
 
-> [!NOTE]
-> To enable or disable file and directory name completion in the Command shell on a computer or user logon session, run **regedit.exe** and set the following **reg_DWOrd value**:
->
-> HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\completionChar\reg_DWOrd
->
-> To set the **reg_DWOrd** value, use the hexadecimal value of a control character for a particular function (for example, **0 9** is Tab and **0 08** is Backspace). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+```registry
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\CompletionChar
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
+```
+
+Set these values to that of the control character you wish to use. See [virtual key codes](/windows/win32/inputdev/virtual-key-codes) for a complete list. To disable a particular completion character in the registry, use the value for **space** (0x20) as it isn't a valid control character. The type of value for this registry entry is [REG_DWORD](/windows/win32/sysinfo/registry-value-types), and can also be specified by hexadecimal or decimal value.
+
+You can also enable or disable file and directory name completion per instance of a Command shell by running `cmd.exe` with the parameter and switch `/F:ON` or `/F:OFF`. If name completion is enabled with the `/F:ON` parameter and switch, the two control characters used are `Ctrl-D` for directory name completion and `Ctrl-F` for file name completion. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
 ## Command-line reference A-Z
 
-To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
+To find information about a specific command, in the following A-Z menu, select the letter that the command starts with, and then select the command name.
 
 [A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [X](#x) | Y | Z
 
@@ -64,6 +56,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [add](add.md)
 - [add alias](add-alias.md)
 - [add volume](add-volume.md)
+- [adprep](adprep.md)
 - [append](append.md)
 - [arp](arp.md)
 - [assign](assign.md)
@@ -263,10 +256,9 @@ To find information about a specific command, in the following A-Z menu, click t
   - [convert gpt](convert-gpt.md)
   - [convert mbr](convert-mbr.md)
 - [copy](copy.md)
-- [cprofile](cprofile.md)
 - [create](create.md)
   - [create partition efi](create-partition-efi.md)
-  - [create [partition extended](create-partition-extended.md)
+  - [create partition extended](create-partition-extended.md)
   - [create partition logical](create-partition-logical.md)
   - [create partition msr](create-partition-msr.md)
   - [create partition primary](create-partition-primary.md)
@@ -279,7 +271,9 @@ To find information about a specific command, in the following A-Z menu, click t
 ### D
 
 - [date](date.md)
+- [dcdiag](dcdiag.md)
 - [dcgpofix](dcgpofix.md)
+- [dcpromo](dcpromo.md)
 - [defrag](defrag.md)
 - [del](del.md)
 - [delete](delete.md)
@@ -312,6 +306,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [dnscmd](dnscmd.md)
 - [doskey](doskey.md)
 - [driverquery](driverquery.md)
+- [dtrace](dtrace.md)
 
 ### E
 
@@ -321,8 +316,6 @@ To find information about a specific command, in the following A-Z menu, click t
 - [end restore](end-restore.md)
 - [erase](erase.md)
 - [eventcreate](eventcreate.md)
-- [eventquery](eventquery.md)
-- [eventtriggers](eventtriggers.md)
 - [Evntcmd](evntcmd.md)
 - [exec](exec.md)
 - [exit](./exit.md)
@@ -348,6 +341,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [fsutil](fsutil.md)
   - [fsutil 8dot3name](fsutil-8dot3name.md)
   - [fsutil behavior](fsutil-behavior.md)
+  - [fsutil devdrv](fsutil-devdrv.md)
   - [fsutil dirty](fsutil-dirty.md)
   - [fsutil file](fsutil-file.md)
   - [fsutil fsinfo](fsutil-fsinfo.md)
@@ -430,7 +424,6 @@ To find information about a specific command, in the following A-Z menu, click t
 - [import (shadowdisk)](import.md)
 - [import (diskpart)](import_1.md)
 - [inactive](inactive.md)
-- [inuse](inuse.md)
 - [ipconfig](ipconfig.md)
 - [ipxroute](ipxroute.md)
 - [irftp](irftp.md)
@@ -545,6 +538,7 @@ To find information about a specific command, in the following A-Z menu, click t
 
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
+- [netdom](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772217(v=ws.11))
 - [net print](net-print.md)
 - [netsh](netsh.md)
 - [netstat](netstat.md)
@@ -552,6 +546,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [nfsshare](nfsshare.md)
 - [nfsstat](nfsstat.md)
 - [nlbmgr](nlbmgr.md)
+- [nltest](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11))
 - [nslookup](nslookup.md)
   - [nslookup exit Command](nslookup-exit-command.md)
   - [nslookup finger Command](nslookup-finger-command.md)
@@ -601,6 +596,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [pentnt](pentnt.md)
 - [perfmon](perfmon.md)
 - [ping](ping.md)
+- [pktmon](pktmon.md)
 - [pnpunattend](pnpunattend.md)
 - [pnputil](pnputil.md)
 - [popd](popd.md)
@@ -618,6 +614,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [pushd](pushd.md)
 - [pushprinterconnections](pushprinterconnections.md)
 - [pwlauncher](pwlauncher.md)
+- [pwsh](/powershell/module/microsoft.powershell.core/about/about_pwsh)
 
 ### Q
 
@@ -633,7 +630,6 @@ To find information about a specific command, in the following A-Z menu, click t
 
 ### R
 
-- [rcp](rcp.md)
 - [rd](rd.md)
 - [rdpsign](rdpsign.md)
 - [recover](recover.md)
@@ -658,6 +654,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [remove](remove.md)
 - [ren](ren.md)
 - [rename](rename.md)
+- [repadmin](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770963(v=ws.11))
 - [repair](repair.md)
   - [repair bde](repair-bde.md)
 - [replace](replace.md)
@@ -745,7 +742,6 @@ To find information about a specific command, in the following A-Z menu, click t
 - [sysocmgr](sysocmgr.md)
 - [systeminfo](systeminfo.md)
 
-
 ### T
 
 - [takeown](takeown.md)
@@ -825,7 +821,6 @@ To find information about a specific command, in the following A-Z menu, click t
 - [whoami](whoami.md)
 - [winnt](winnt.md)
 - [winnt32](winnt32.md)
-- [winpop](winpop.md)
 - [winrs](winrs.md)
 - [winsat mem](winsat-mem.md)
 - [winsat mfmedia](winsat-mfmedia.md)

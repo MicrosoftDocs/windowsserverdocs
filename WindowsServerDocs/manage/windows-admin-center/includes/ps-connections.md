@@ -21,9 +21,7 @@ The format of the CSV file starts with the four headings ```"name","type","tags"
 | Connection type | Connection string |
 |------|-------------------------------|
 | Windows Server | msft.sme.connection-type.server |
-| Windows 10 PC | msft.sme.connection-type.windows-client |
 | Failover Cluster | msft.sme.connection-type.cluster |
-| Hyper-Converged Cluster | msft.sme.connection-type.hyper-converged-cluster |
 
 **tags** are pipe-separated.
 
@@ -37,12 +35,14 @@ The format of the CSV file starts with the four headings ```"name","type","tags"
 ```
 "name","type","tags","groupId"
 "myServer.contoso.com","msft.sme.connection-type.server","hyperv"
-"myDesktop.contoso.com","msft.sme.connection-type.windows-client","hyperv"
+"myDesktop.contoso.com","msft.sme.connection-type.windows-server","hyperv"
 "teamcluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016","global"
-"myHCIcluster.contoso.com,"msft.sme.connection-type.hyper-converged-cluster","myHCIcluster|hyperv|JIT|WS2019"
+"myHCIcluster.contoso.com,"msft.sme.connection-type.cluster","myHCIcluster|hyperv|JIT|WS2019"
 "teamclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016","global"
 "myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
 ```
+> [!NOTE]
+> The CSV file is case-sensitive.
 
 ## Import RDCman connections
 

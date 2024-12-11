@@ -3,8 +3,8 @@ title: dir
 description: Reference article for the dir command, which displays a list of a directory's files and subdirectories.
 ms.topic: reference
 ms.assetid: edcbf69b-eaa4-466e-b210-3dd8892f4d93
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -39,7 +39,7 @@ dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>
 | /l | Displays unsorted directory names and file names, using lowercase. |
 | /n | Displays a long list format with file names on the far right of the screen. |
 | /x | Displays the short names generated for non-8dot3 file names. The display is the same as the display for **/n**, but the short name is inserted before the long name. |
-| /c | Displays the thousand separator in file sizes. This is the default behavior. Use **/c** to hide separators. |
+| /c | Displays the thousand separator in file sizes. This is the default behavior. Use **/-c** to hide separators. |
 | /4 | Displays years in four-digit format. |
 | /r | Display alternate data streams of the file. |
 | /? | Displays help at the command prompt. |
@@ -127,6 +127,6 @@ dir c:\*.txt /w/o/s/p
 
 The **dir** command displays, in wide format, an alphabetized list of the matching file names in each directory, and it pauses each time the screen fills until you press any key to continue.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

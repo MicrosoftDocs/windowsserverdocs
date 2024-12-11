@@ -2,7 +2,7 @@
 ms.assetid: fd3bc84a-48eb-4f00-9dc2-846bf2c2668b
 title: AD DS Troubleshooting
 description: Overview of the troubleshooting section for AD DS
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: dcscontentpm
 ms.date: 11/22/2019
@@ -11,7 +11,7 @@ ms.topic: article
 
 # AD DS Troubleshooting
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>
 
 This section includes troubleshooting recommendations and procedures for diagnosing and fixing problems that may occur during Active Directory replication. It focuses on how to respond to Directory Service event log entries and how to interpret messages that tools such as Repadmin.exe and Dcdiag.exe might report.
 

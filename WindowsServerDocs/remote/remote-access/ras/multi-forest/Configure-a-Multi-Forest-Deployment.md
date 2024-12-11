@@ -4,13 +4,13 @@ description: Learn how to configure a Remote Access multi-forest deployment in s
 manager: brianlic
 ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Configure a Multi-Forest Deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic describes how to configure a Remote Access multi-forest deployment in several possible scenarios. All of the scenarios assume that DirectAccess is currently deployed on a single forest called Forest1, and that you are configuring DirectAccess to work with a new forest called Forest2.
 
@@ -89,7 +89,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
     certutil -config <Computer-Name>\<Root-CA-Name> -ca.cert <root-ca-cert-filename.cer>
     ```
 
-    (If you run the command on the root CA you can omit the connection information, -config <Computer-Name>\\<Root-CA-Name>)
+    (If you run the command on the root CA you can omit the connection information, -config \<Computer-Name>&#92;\<Root-CA-Name>)
 
     1.  Import the Root CA certificate from the previous step on the Account Forest CA by running the following command from an elevated command prompt:
 
@@ -97,7 +97,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
         certutil -dspublish -f <root-ca-cert-filename.cer> RootCA
         ```
 
-    2.  Grant Resource Forest certificate templates Read/Write permissions to the \<Account Forest\>\\<Administrator account\>.
+    2.  Grant Resource Forest certificate templates Read/Write permissions to the \<Account Forest\>&#92;\<Administrator account\>.
 
     3.  Extract all resource forest enterprise CA certificates by running the following command from an elevated command prompt:
 
@@ -105,7 +105,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
         certutil -config <Computer-Name>\<Enterprise-CA-Name> -ca.cert <enterprise-ca-cert-filename.cer>
         ```
 
-        (If you run the command on the root CA you can omit the connection information, -config <Computer-Name>\\<Root-CA-Name>)
+        (If you run the command on the root CA you can omit the connection information, -config \<Computer-Name>&#92;\<Root-CA-Name>)
 
     4.  Import the Enterprise CA certificates from the previous step on the Account Forest CA by running the following commands from an elevated command prompt:
 

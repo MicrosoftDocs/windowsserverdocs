@@ -3,8 +3,8 @@ title: Step 1 Plan the Basic DirectAccess Infrastructure
 description: Learn how to perform planning for the infrastructure required for the basic DirectAccess deployment.
 manager: brianlic
 ms.topic: article
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 
 ms.date: 08/07/2020
 ---
@@ -242,7 +242,7 @@ Note that if the correct permissions for linking GPOs do not exist, a warning is
 #### Recovering from a deleted GPO
 If a DirectAccess server, client, or application server GPO has been deleted by accident and there is no backup available, you must remove the configuration settings and re-configure again. If a backup is available, you can restore the GPO from the backup.
 
-**DirectAccess Management** will display the following error message: **GPO <GPO name> cannot be found**. To remove the configuration settings, take the following steps:
+**DirectAccess Management** will display the following error message: **GPO \<GPO name> cannot be found**. To remove the configuration settings, take the following steps:
 
 1.  Run the PowerShell cmdlet **Uninstall-remoteaccess**.
 

@@ -3,8 +3,8 @@ title: offline volume
 description: Reference article for the offline volume command, which takes the online volume with focus to the offline state.
 ms.topic: reference
 ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -36,6 +36,6 @@ To take the disk with focus offline, type:
 offline volume
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

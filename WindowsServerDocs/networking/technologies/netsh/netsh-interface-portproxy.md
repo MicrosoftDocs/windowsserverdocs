@@ -3,14 +3,14 @@ title: Netsh commands for interface portproxy
 description: Use the netsh interface portproxy commands to act as proxies between IPv4 and IPv6 networks and applications.
 ms.topic: article
 manager: dougkim
-ms.author: jgerend
-author: JasonGerend
-ms.date: 07/16/2021
+ms.author: roharwoo
+author: robinharwood
+ms.date: 10/27/2021
 ---
 
 # Netsh interface portproxy commands
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>
 
 Use the **netsh interface portproxy** commands to act as proxies between IPv4 and IPv6 networks and applications. You can use these commands to establish proxy service in the following ways:
 
@@ -44,7 +44,9 @@ The available netsh interface portproxy commands are:
 
 -   [delete v6tov6](#delete-v6tov6)
 
--   [reset](#reset)
+-   [reset ipv4](#reset-ipv4)
+
+-   [reset ipv6](#reset-ipv6)
 
 -   [set v4tov4](#set-v4tov4)
 
@@ -218,13 +220,25 @@ delete v6tov6 listenport= {Integer | ServiceName} [[listenaddress=] {IPv6Address
 | **listenaddress** | Specifies the IPv6 address to delete. If an address isn't specified, the default is the local computer. |
 |   **protocol**    |                                      Specifies the protocol to use.                                      |
 
-## reset
+## reset-ipv4
+
+Resets the IPv4 configuration state.
+
+### Syntax
+
+```PowerShell
+netsh int ipv4 reset
+```
+
+## reset-ipv6
 
 Resets the IPv6 configuration state.
 
 ### Syntax
 
-`reset`
+```PowerShell
+netsh int ipv6 reset
+```
 
 ## set v4tov4
 

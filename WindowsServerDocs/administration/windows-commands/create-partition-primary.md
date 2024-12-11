@@ -3,14 +3,14 @@ title: create partition primary
 description: Reference article for the create partition primary command, which creates a primary partition on the basic disk with focus.
 ms.topic: reference
 ms.assetid: 6d652d8e-3935-4a91-8ced-b17c0e7937be
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # create partition primary
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a primary partition on the basic disk with focus. After the partition has been created, the focus automatically shifts to the new partition.
 
@@ -41,7 +41,7 @@ To create a primary partition of 1000 megabytes in size, type:
 create partition primary size=1000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

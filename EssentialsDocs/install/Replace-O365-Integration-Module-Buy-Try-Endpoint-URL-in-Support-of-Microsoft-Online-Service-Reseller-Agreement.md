@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
 author: nnamuhcs
-ms.author: geschuma
+ms.author: roharwoo
 manager: mtillman
 ---
 
@@ -18,7 +18,7 @@ manager: mtillman
 
  The integration module uses the following four endpoint URLs:
 
-1.  An Microsoft 365 Enterprise subscription purchase endpoint.
+1.  A Microsoft 365 Enterprise subscription purchase endpoint.
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -26,9 +26,9 @@ manager: mtillman
 
     -   Key name = MOSRASTDBUY
 
-    -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/enterprisebuy.html
+    -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = `http://syndicatepartner.office365.com/enterprisebuy.html`
 
-2.  An Microsoft 365 Enterprise subscription trial endpoint.
+2.  A Microsoft 365 Enterprise subscription trial endpoint.
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -36,9 +36,9 @@ manager: mtillman
 
     -   Key name = MOSRASTDTRY
 
-    -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/enterprisetry.html
+    -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = `http://syndicatepartner.office365.com/enterprisetry.html`
 
-3.  An  Microsoft 365 Small Business Premium subscription purchase endpoint.
+3.  A  Microsoft 365 Small Business Premium subscription purchase endpoint.
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -46,9 +46,9 @@ manager: mtillman
 
     -   Key name = MOSRALITEBUY
 
-    -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/smallbizbuy.html
+    -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = `http://syndicatepartner.office365.com/smallbizbuy.html`
 
-4.  An  Microsoft 365 Small Business Premium subscription trial endpoint.
+4.  A  Microsoft 365 Small Business Premium subscription trial endpoint.
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -56,7 +56,7 @@ manager: mtillman
 
     -   Key name = MOSRALITETRY
 
-    -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/smallbiztry.html
+    -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = `http://syndicatepartner.office365.com/smallbiztry.html`
 
 #### To add an endpoint URL key to the registry
 

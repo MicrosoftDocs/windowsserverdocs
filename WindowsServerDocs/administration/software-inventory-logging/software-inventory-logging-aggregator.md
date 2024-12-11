@@ -4,14 +4,14 @@ description: Describes how to install and manage Software Inventory Logging Aggr
 ms.topic: article
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: brentfor
-ms.author: brentf
+ms.author: roharwoo
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # Software Inventory Logging Aggregator
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2
+
 
 ## What is Software Inventory Logging Aggregator?
 
@@ -289,9 +289,9 @@ Run the following cmdlets in the PowerShell console as an administrator on each 
 
 You will need a valid client SSL certificate in .pfx format to use these steps.  The thumbprint of this certificate will need to be added to your SIL Aggregator using the `Set-SILAggregator –AddCertificateThumbprint` cmdlet. This client certificate does not need to match the name of your SIL Aggregator.
 
--   `$secpasswd = ConvertTo-SecureString "`**<password for the account with permissions to the network location holding your client pfx file>**`" -AsPlainText –Force`
+-   `$secpasswd = ConvertTo-SecureString "<password for the account with permissions to the network location holding your client pfx file>" -AsPlainText –Force`
 
--   `$mycreds = New-Object System.Management.Automation.PSCredential ("`**<user account with permissions to the network location holding your client  pfx file>**`", $secpasswd)`
+-   `$mycreds = New-Object System.Management.Automation.PSCredential ("<user account with permissions to the network location holding your client  pfx file>", $secpasswd)`
 
 -   `$driveLetters = ([int][char]'C')..([int][char]'Z') | % {[char]$_}`
 
@@ -301,20 +301,20 @@ You will need a valid client SSL certificate in .pfx format to use these steps. 
 
 -   `$firstAvailableDriveLetter = $availableDriveLetters[0]`
 
--   `New-PSDrive -Name $firstAvailableDriveLetter -PSProvider filesystem -root` **<\\server\path to share which holds your pfx certificate file>** `-credential $mycreds`
+-   `New-PSDrive -Name $firstAvailableDriveLetter -PSProvider filesystem -root <\\server\path to share which holds your pfx certificate file> -credential $mycreds`
 
--   `Copy-Item ${firstAvailableDriveLetter}:\`**<certificatename.pfx file in directory of new drive> c:\<location of your choice>**
+-   `Copy-Item ${firstAvailableDriveLetter}:\<certificatename.pfx file in directory of new drive> c:\<location of your choice>`
 
 -   `Remove-PSDrive –Name $firstAvailableDriveLetter`
 
--   `$mypwd = ConvertTo-SecureString -String "`**<password for the certificate pfx file>**`" -Force –AsPlainText`
+-   `$mypwd = ConvertTo-SecureString -String "<password for the certificate pfx file>" -Force –AsPlainText`
 
--   `Import-PfxCertificate -FilePath c:\`**<location\\certificatename.pfx>** `cert:\localMachine\my -Password $mypwd`
+-   `Import-PfxCertificate -FilePath c:\<location\\certificatename.pfx> cert:\localMachine\my -Password $mypwd`
 
--   `Set-sillogging –targeturi "https://`**<machinename of your SIL Aggregator>** `–certificatethumbprint`
+-   `Set-sillogging –targeturi "https://<machinename of your SIL Aggregator>" –certificatethumbprint`
 
-> [!NOTE]
-> Use the Certificate thumbprint from your client pfx file and added to your SIL Aggregator using the **Set-SilAggregator `-AddCertificateThumbprint** cmdlet.
+    > [!NOTE]
+    > Use the Certificate thumbprint from your client pfx file and added to your SIL Aggregator using the **Set-SilAggregator `-AddCertificateThumbprint** cmdlet.
 
 -   `Start-sillogging`
 
@@ -587,6 +587,6 @@ When you want to start inventorying servers in your environment with a different
 ## See Also
 [Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/download/details.aspx?id=49046)<br>
 [SIL Aggregator PowerShell cmdlets](/previous-versions/windows/powershell-scripting/mt548455(v=wps.640))<br>
-[SIL PowerShell cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)<br>
+[SIL PowerShell cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)<br>
 [An Overview of SIL](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268301(v=ws.11))<br>
 [Managing SIL](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383584(v=ws.11))

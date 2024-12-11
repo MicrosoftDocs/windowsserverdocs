@@ -3,8 +3,8 @@ title: manage-bde -pause
 description: Reference article for the manage-bde -pause command, which pauses BitLocker encryption or decryption.
 ms.topic: reference
 ms.assetid: efda0e08-b9ff-4e71-83d8-bb666b3032bd
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -37,7 +37,7 @@ To pause BitLocker encryption on drive C, type:
 manage-bde -pause C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

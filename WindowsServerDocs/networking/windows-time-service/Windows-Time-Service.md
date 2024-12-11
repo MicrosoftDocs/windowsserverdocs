@@ -3,14 +3,14 @@ description: "Learn more about: Windows Time Service"
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows Time Service
 author: dahavey
-ms.author: dahavey
+ms.author: roharwoo
 ms.date: 05/08/2018
 ms.topic: article
 ---
 
 # Windows Time Service
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
+>
 
 **In this guide**
 
@@ -71,4 +71,4 @@ The Windows Time service uses NTP to help synchronize time across a network. NTP
 ## See Also
 [How the Windows Time Service Works](How-the-Windows-Time-Service-Works.md)
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
-[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)
+[Microsoft Knowledge Base article 902229](/windows-server/networking/windows-time-service/windows-time-service-top)

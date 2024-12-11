@@ -1,15 +1,15 @@
 ---
 title: pktmon start
-description: Reference article for the pktmon start command.
+description: Reference article for the pktmon start command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: roharwoo
 ms.date: 06/24/2021
 ---
 
 # pktmon start
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Starts packet capture and event collection.
 
@@ -30,8 +30,8 @@ Use **-c** or **--capture** to enable packet capture and packet counters, along 
 | **-o, --counters-only** | Collect packet counters only. No packet logging. |
 | **--comp** | Select components to capture packets on. Can be all components (all), NICs only (nics), or a list of component IDs. Defaults to all. |
 | **--type** | Select which packets to capture. Can be all, flow, or drop. Default is all. |
-| **--pkt-size <bytes>** | Number of bytes to log from each packet. To always log the entire packet, set this to 0. Default is 128 bytes. |
-| **--flags <mask>** | Hexadecimal bitmask that controls information logged during packet capture. Default is 0x012. Packet capture flags, below. |
+| **--pkt-size \<bytes\>** | Number of bytes to log from each packet. To always log the entire packet, set this to 0. Default is 128 bytes. |
+| **--flags \<mask\>** | Hexadecimal bitmask that controls information logged during packet capture. Default is 0x012. Packet capture flags, below. |
 
 #### Packet capture flags
 
@@ -51,9 +51,9 @@ Use **-t** or **--trace** to enable event collection, along with the following o
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| **-p, --provider <name>** | Event provider name or GUID. For multiple providers, use this parameter more than once. |
-| **-k, --keywords <k>** | Hexadecimal bitmask that controls which events are logged for the corresponding provider. Default is 0xFFFFFFFF. |
-| **-l, --level <n>** | Logging level for the corresponding provider. Default is 4 (info level). |
+| **-p, --provider \<name\>** | Event provider name or GUID. For multiple providers, use this parameter more than once. |
+| **-k, --keywords \<k\>** | Hexadecimal bitmask that controls which events are logged for the corresponding provider. Default is 0xFFFFFFFF. |
+| **-l, --level \<n\>** | Logging level for the corresponding provider. Default is 4 (info level). |
 
 ### Logging parameters
 
@@ -61,8 +61,8 @@ Use the following parameters for logging:
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| **-f, --file-name <name>** | Log file name. Default is PktMon.etl. |
-| **-s, --file-size <size>** | Maximum log file size in megabytes. Default is 512 MB. |
+| **-f, --file-name \<name\>** | Log file name. Default is PktMon.etl. |
+| **-s, --file-size \<size\>** | Maximum log file size in megabytes. Default is 512 MB. |
 | **-m, --log-mode** | Sets the logging mode (see below). Default is circular. |
 
 #### Logging modes
@@ -102,7 +102,7 @@ C:\Test> pktmon start --trace -p Microsoft-Windows-TCPIP -p Microsoft-Windows-ND
 C:\Test> pktmon start --capture --trace -p Microsoft-Windows-TCPIP -k 0xFF -l 4
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

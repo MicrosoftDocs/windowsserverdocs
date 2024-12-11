@@ -3,8 +3,8 @@ title: dfsdiag
 description: Reference article for the dfsdiag command, which provides diagnostic information for DFS Namespaces.
 ms.topic: reference
 ms.assetid: c0891e67-0187-4f18-923d-5623e6127f90
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -34,6 +34,6 @@ dfsdiag /testreferral /DFSpath:<DFS path to get referrals> [/full]
 | [dfsdiag testreferral](dfsdiag-testreferral.md) | Checks referral responses. |
 | /? | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

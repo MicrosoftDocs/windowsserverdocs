@@ -3,24 +3,24 @@ title: Run Best Practices Analyzer Scans and Manage Scan Results_1
 description: Learn how to run Best Practices Analyzer (BPA) scans either from Server Manager, by using the BPA GUI, or by using cmdlets in Windows PowerShell and learn how to manage the scan results.
 ms.topic: article
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/25/2023
 ---
 # Run Best Practices Analyzer Scans and Manage Scan Results
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 In Windows management, *best practices* are guidelines that are considered the ideal way, under typical circumstances, to configure a server as defined by experts. For example, it is considered a best practice for most server applications to keep open only those ports required for the applications to communicate with other networked computers, and block unused ports. Although best practice violations, even crucial ones, are not necessarily problematic, they indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.
 
-Best Practices Analyzer (BPA) is a server management tool that is available in Windows Server 2012 R2,  Windows Server 2012, and  Windows Server 2008 R2. BPA can help administrators reduce best practice violations by scanning roles that are installed on managed servers that are running  Windows Server 2012  or  Windows Server 2008 R2, and reporting best practice violations to the administrator.
+Best Practices Analyzer (BPA) is a server management tool that is available in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2,  Windows Server 2012, and  Windows Server 2008 R2. BPA can help administrators reduce best practice violations by scanning roles that are installed on managed servers that are running a supported version, and reporting best practice violations to the administrator.
 
-You can run Best Practices Analyzer (BPA) scans either from Server Manager, by using the BPA GUI, or by using cmdlets in Windows PowerShell. starting with  Windows Server 2012, you can scan one role or multiple roles at one time, on multiple servers, whether you use the Best Practices Analyzer tile in the Server Manager console or Windows PowerShell cmdlets to run scans. You can also instruct BPA to exclude or ignore scan results that you do not want to see.
+You can run Best Practices Analyzer (BPA) scans either from Server Manager, by using the BPA GUI, or by using cmdlets in Windows PowerShell. Starting with Windows Server 2012, you can scan one role or multiple roles at one time, on multiple servers, whether you use the Best Practices Analyzer tile in the Server Manager console or Windows PowerShell cmdlets to run scans. You can also instruct BPA to exclude or ignore scan results that you do not want to see.
 
 This topic contains the following sections.
 
--   [find BPA](#BKMK_find)
+-   [Find BPA](#BKMK_find)
 
 -   [How BPA works](#BKMK_how)
 
@@ -28,8 +28,8 @@ This topic contains the following sections.
 
 -   [Manage scan results](#BKMK_manage)
 
-## <a name=BKMK_find></a>find BPA
-You can find the Best Practices Analyzer tile on role and server group pages of Server Manager in  Windows Server 2012 R2  and  Windows Server 2012, or you can open a Windows PowerShell session with elevated user rights to run Best Practices Analyzer cmdlets.
+## <a name=BKMK_find></a>Find BPA
+You can find the Best Practices Analyzer tile on role and server group pages of Server Manager in Windows Server, or you can open a Windows PowerShell session with elevated user rights to run Best Practices Analyzer cmdlets.
 
 ## <a name=BKMK_how></a>How BPA works
 BPA works by measuring a role's compliance with best practice rules in eight different categories of effectiveness, trustworthiness, and reliability. Results of measurements can be any of the three severity levels described in the following table.
@@ -57,9 +57,9 @@ The following table describes the best practice rules categories against which r
 ## <a name=BKMK_BPAscan></a>Performing Best Practices Analyzer scans on roles
 You can perform BPA scans on roles by using either the BPA GUI in Server Manager, or by using Windows PowerShell cmdlets.
 
-In  Windows Server 2012 R2  and  Windows Server 2012 , some roles prompt you to specify additional parameters, such as the names of specific servers or shares that are running parts of the role, or the IDs of submodels, before starting a BPA scan. For BPA scans on models that require you to specify additional parameters, use the BPA cmdlets; the BPA GUI cannot accept additional parameters such as submodel IDs. For example, the submodel ID **FSRM** represents the File Services BPA submodel for File Server Resource Manager, a role service of File and Storage Services. To run a scan only on the File Server Resource Manager role service, run a BPA scan by using Windows PowerShell cmdlets, and add the parameter `SubmodelId` to your cmdlet.
+In Windows Server, some roles prompt you to specify additional parameters, such as the names of specific servers or shares that are running parts of the role, or the IDs of submodels, before starting a BPA scan. For BPA scans on models that require you to specify additional parameters, use the BPA cmdlets; the BPA GUI cannot accept additional parameters such as submodel IDs. For example, the submodel ID **FSRM** represents the File Services BPA submodel for File Server Resource Manager, a role service of File and Storage Services. To run a scan only on the File Server Resource Manager role service, run a BPA scan by using Windows PowerShell cmdlets, and add the parameter `SubmodelId` to your cmdlet.
 
-Although you cannot pass additional parameters to a scan that you start in the BPA GUI, the BPA tile in Server Manager displays results for the most recent BPA scan, regardless of how the scan was started.
+Although you cannot pass additional parameters to a scan that you start in the BPA GUI, the BPA tile in Server Manager displays results for the most recent BPA scan, regardless of how you started the scan.
 
 -   [Scanning roles by using the BPA GUI](#BKMK_GUIscan)
 
@@ -189,7 +189,7 @@ You can exclude scan results by using the `Set-BPAResult` cmdlet with the `Exclu
 
 2.  Exclude specific results from a model scan by running the following command.
 
-    `Get-BPAResult -modelId <model ID> | Where { $_.<Field Name> -eq Value} | Set-BPAResult -Exclude $true`
+    `Get-BPAResult -modelId <model ID> | Where { $_.<Field Name> -eq "Value"} | Set-BPAResult -Exclude $true`
 
     The preceding command retrieves BPA scan result items for the model ID that is represented by *model ID*.
 
@@ -197,7 +197,7 @@ You can exclude scan results by using the `Set-BPAResult` cmdlet with the `Exclu
 
     The final section of the command, following the second pipe character, excludes the results that are filtered by the previous section of the cmdlet.
 
-    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq Information} | Set-BPAResult -Exclude $true`
+    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq "Information"} | Set-BPAResult -Exclude $true`
 
 #### Include scan results
 When you want to view scan results that were excluded, you can include those scan results. The **Include** setting is persistent; included results remain included in future scans of the same model on the same computer.
@@ -216,7 +216,7 @@ When you want to view scan results that were excluded, you can include those sca
 
 2.  Include specific results from a model scan by typing the following command, and then pressing **Enter**.
 
-    `Get-BPAResult -modelId <model Id> | Where { $_.<Field Name> -eq Value } | Set-BPAResult -Exclude $false`
+    `Get-BPAResult -modelId <model Id> | Where { $_.<Field Name> -eq "Value" } | Set-BPAResult -Exclude $false`
 
     The preceding command retrieves BPA scan result items for the model represented by *model Id*.
 
@@ -224,7 +224,7 @@ When you want to view scan results that were excluded, you can include those sca
 
     The final part of the command, after the second pipe character, includes results that are filtered by the second part of the cmdlet, by setting the value of the **-Exclude** parameter to **false**.
 
-    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq Information} | Set-BPAResult -Exclude $false`
+    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq "Information"} | Set-BPAResult -Exclude $false`
 
 ### View and export BPA scan results in Windows PowerShell
 To view and manage scan results by using Windows PowerShell cmdlets, see the following procedures. Before you can use any of the following procedures, run at least one BPA scan on at least one model or submodel.

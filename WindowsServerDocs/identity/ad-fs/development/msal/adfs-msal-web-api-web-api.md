@@ -3,13 +3,13 @@ title: AD FS MSAL Web API calling Web API (On Behalf of Scenario)
 description: Learn how to build a Web API calling another Web API.
 author: billmath
 ms.author: billmath
-manager: daveba
-ms.date: 08/09/2019
-ms.topic: article
+manager: amycolannino
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Scenario: Web API calling Web API (On Behalf Of Scenario)
->Applies to: Windows Server 2022, Windows Server 2019, AD FS 2019 and later
+>
 
 Learn how to build a Web API calling another Web API On Behalf Of the user.
 
@@ -19,12 +19,12 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
 
 
 - A client (Web App) - not represented on the diagram below - calls a protected Web API and provides a JWT bearer token in its "Authorization" Http header.
-- The protected Web API validates the token and uses the MSAL [AcquireTokenOnBehalfOf](/dotnet/api/microsoft.identitymodel.clients.activedirectory.authenticationcontext.acquiretokenasync#Microsoft_IdentityModel_Clients_ActiveDirectory_AuthenticationContext_AcquireTokenAsync_System_String_Microsoft_IdentityModel_Clients_ActiveDirectory_ClientCredential_Microsoft_IdentityModel_Clients_ActiveDirectory_UserAssertion_) method to request (from AD FS) another token so that it can, itself, call a second web API (named the downstream web API) on behalf of the user.
+- The protected Web API validates the token and uses the MSAL AcquireTokenOnBehalfOf method to request (from AD FS) another token so that it can, itself, call a second web API (named the downstream web API) on behalf of the user.
 - The protected web API uses this token to call a downstream API. It can also call AcquireTokenSilentlater to request tokens for other downstream APIs (but still on behalf of the same user). AcquireTokenSilent refreshes the token when needed.
 
      ![overview](media/adfs-msal-web-api-web-api/webapi1.png)
 
-To better understand how to configure on behalf of auth scenario in ADFS, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapi-to-webapi-onbehalfof) and walkthrough the app registration and code configuration steps.
+To better understand how to configure on behalf of auth scenario in AD FS, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapi-to-webapi-onbehalfof) and walkthrough the app registration and code configuration steps.
 
 ## Pre-requisites
 

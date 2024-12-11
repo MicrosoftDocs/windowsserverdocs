@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 35d1d434-79b2-4e0a-835f-d94ed8ee6b21
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 # Set up a split-screen station
 You can set up a split-screen station so two users can simultaneously use the system.

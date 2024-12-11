@@ -3,14 +3,13 @@ title: Backup your Windows Servers from Windows Admin Center with Azure Backup
 description: Use Windows Admin Center (Project Honolulu) to Backup Windows Servers with Azure Backup
 ms.topic: article
 author: saurabhsensharma
-ms.author: saurse
+ms.author: roharwoo
 ms.date: 03/25/2019
-ms.localizationpriority: low
 ---
 
 # Backup your Windows Servers from Windows Admin Center with Azure Backup
 
->Applies to: Windows Admin Center Preview, Windows Admin Center
+>
 
 [Learn more about Azure integration with Windows Admin Center.](./index.md)
 

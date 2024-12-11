@@ -3,8 +3,8 @@ title: Device Authentication controls in AD FS
 description:  This document describes how to enable device authentication in AD FS for Windows Server 2016 and 2012 R2
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 11/09/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -49,7 +49,7 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ```
 
 >[!NOTE]
-> In ADFS 2019, `DeviceAuthenticationMethod` can be used with the `Set-AdfsRelyingPartyTrust` command.
+> In AD FS 2019, `DeviceAuthenticationMethod` can be used with the `Set-AdfsRelyingPartyTrust` command.
 
 ``` powershell
 PS:\>Set-AdfsRelyingPartyTrust -DeviceAuthenticationMethod ClientTLS

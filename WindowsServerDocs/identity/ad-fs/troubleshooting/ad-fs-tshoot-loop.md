@@ -3,8 +3,8 @@ title: AD FS Troubleshooting - Loop Detection
 description:  This document describes how to troubleshoot loop detection
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 02/21/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -19,7 +19,7 @@ If a passive client visits the Federation Service for a token five (5) times wit
 
 **MSIS7042: The same client browser session has made '{0}' requests in the last '{1}' seconds. Contact your administrator for details.**
 
-Entering into infinite loops is often caused by a misbehaving relying party application that is not successfully consuming the token issued by AD FS, and the application is sending the passive client back to AD FS, repeatedly, for a new token.  AD FS is will issue the passive client a new token each time, as long as they do not exceed 5 requests within 20 seconds.
+Entering into infinite loops is often caused by a misbehaving relying party application that is not successfully consuming the token issued by AD FS, and the application is sending the passive client back to AD FS, repeatedly, for a new token.  AD FS will issue the passive client a new token each time, as long as they do not exceed 5 requests within 20 seconds.
 
 ## Adjusting the loop detection cookie
 You can use PowerShell to change the number of tokens issued value and the timespan value.

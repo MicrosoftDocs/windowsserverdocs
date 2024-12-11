@@ -1,16 +1,15 @@
 ---
 title: Disaster Recovery Scenarios for Hyper-Converged Infrastructure
-manager: eldenc
+manager: femila
 ms.topic: article
-author: johnmarlin-msft
-ms.author: johnmar
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/29/2018
 description: This article describes the scenarios available today for disaster recovery of Microsoft HCI (Storage Spaces Direct)
-ms.localizationpriority: medium
 ---
 # Disaster recovery with Storage Spaces Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic provides scenarios on how hyper-converged infrastructure (HCI) can be configured for disaster recovery.
 

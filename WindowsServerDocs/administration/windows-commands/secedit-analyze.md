@@ -3,8 +3,8 @@ title: secedit analyze
 description: Reference article for the secedit analyze command, which allows you to analyze current systems settings against baseline settings that are stored in a database.
 ms.topic: reference
 ms.assetid: 3430cf9d-1411-48b1-b5a9-2e47701dc87f
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -43,7 +43,7 @@ To incorporate changes required by the analysis process on the *SecContoso.inf* 
 secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /overwrite /log C:\Security\FY11\SecAnalysisContosoFY11.xml /quiet
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

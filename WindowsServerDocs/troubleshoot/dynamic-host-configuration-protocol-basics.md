@@ -16,7 +16,9 @@ Dynamic Host Configuration Protocol (DHCP) is a standard protocol defined by RFC
 
 - Subnet Mask
 
-- Default GatewayOther information can be provided as well, such as Domain Name Service (DNS) server addresses and Windows Internet Name Service (WINS) server addresses. The system administrator configures the DHCP server with the options that are parsed out to the client.
+- Default Gateway
+
+Other information can be provided as well, such as Domain Name Service (DNS) server addresses and Windows Internet Name Service (WINS) server addresses. The system administrator configures the DHCP server with the options that are parsed out to the client.
 
 ## More Information
 
@@ -385,7 +387,7 @@ DHCP: NACK (xid=74A005CE)
 
 ```
 
-The client will then begin the discover process, but the DHCPDISCOVER packet will still attempt to lease the same address. In many instances, tth client will get the same address but may not.
+The client will then begin the discover process, but the DHCPDISCOVER packet will still attempt to lease the same address. In many instances, the client will get the same address but may not.
 
 ```
 

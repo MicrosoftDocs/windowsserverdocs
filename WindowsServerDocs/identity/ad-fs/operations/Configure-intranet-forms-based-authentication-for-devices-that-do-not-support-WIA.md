@@ -1,24 +1,24 @@
 ---
-description: "Learn more about: Configuring intranet forms-based authentication for devices that do not support WIA"
+description: "Learn more about: Configuring intranet forms-based authentication for devices that do not support Windows Integrated Authentication (WIA)"
 ms.assetid: d562ef46-f240-48be-bbd4-fd88fc6bbbdc
-title: Configuring intranet forms-based authentication for devices that do not support WIA
+title: How to configure intranet forms-based authentication for devices that do not support Windows Integrated Authentication (WIA)
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
-# Configuring intranet forms-based authentication for devices that do not support WIA
+# Configuring intranet forms-based authentication for devices that do not support Windows Integrated Authentication (WIA)
 
-By default, Windows Integrated Authentication (WIA) is enabled in Active Directory Federation Services (AD FS) in Windows Server 2012 R2 for authentication requests that occur within the organization's internal network (intranet) for any application that uses a browser for its authentication. For example, these can be browser-based applications that use WS-Federation or SAML protocols and rich applications that use the OAuth protocol. WIA provides end users with seamless logon to the applications without having to manually entering their credentials. However, some devices and browsers are not capable of supporting WIA and as a result authentication requests from these devices fail. Also, the experience on certain browsers that negotiate to NTLM is not desirable. The recommended approach is to fallback to forms-based authentication for such devices and browsers.
+By default, Windows Integrated Authentication (WIA) is enabled in Active Directory Federation Services (AD FS) in Windows Server for authentication requests that occur within the organization's internal network (intranet) for any application that uses a browser for its authentication. For example, applications can be browser-based that use WS-Federation or SAML protocols and rich applications that use the OAuth protocol. WIA provides end users with seamless logon to the applications without having to manually entering their credentials. However, some devices and browsers are not capable of supporting WIA and as a result authentication requests from these devices fail. Also, the experience on certain browsers that negotiate to NTLM is not desirable. The recommended approach is to fall back to forms-based authentication for such devices and browsers.
 
 AD FS in Windows Server 2016 and Windows Server 2012 R2 provides the administrators with the ability to configure the list of user agents that support the fallback to forms-based authentication. The fallback is made possible by two configurations:
 
 - The **WIASupportedUserAgentStrings** property of the `Set-ADFSProperties` commandlet
 - The **WindowsIntegratedFallbackEnabled** property of the `Set-AdfsGlobalAuthenticationPolicy` commandlet
 
-The **WIASupportedUserAgentStrings** defines the user agents which support WIA. AD FS analyzes the user agent string when performing logins in a browser or browser control. If the component of the user agent string does not match any of the components of the user agent strings that are configured in **WIASupportedUserAgentStrings** property, AD FS will fall back to providing forms-based authentication, provided that the **WindowsIntegratedFallbackEnabled** flag is set to True.
+The **WIASupportedUserAgentStrings** defines the user agents that support WIA. AD FS analyzes the user agent string when performing logins in a browser or browser control. If the component of the user agent string does not match any of the components of the user agent strings that are configured in **WIASupportedUserAgentStrings** property, AD FS will fall back to providing forms-based authentication, provided that the **WindowsIntegratedFallbackEnabled** flag is set to True.
 
 By default, a new AD FS installation has a set of user agent string matches created. However, these may be out of date based on changes to browsers and devices. Particularly, Windows devices have similar user agent strings with minor variations in the tokens. The following Windows PowerShell example provides the best guidance for the current set of devices that are on the market today that support seamless WIA:
 
@@ -41,13 +41,13 @@ Windows NT 6.1; Trident/7.0</br></br>Windows NT 6.1; Win64; x64; Trident/7.0</br
 MSIPC| Microsoft Information Protection and Control Client|
 Windows Rights Management Client|Windows Rights Management Client|
 
-In order to enable fallback to form based authentication for user agents other than those mentioned in the WIASupportedUserAgents string, set the WindowsIntegratedFallbackEnabled flag to true
+In order to enable fall back to form based authentication for user agents other than those mentioned in the WIASupportedUserAgents string, set the WindowsIntegratedFallbackEnabled flag to true
 
 ```powershell
 Set-AdfsGlobalAuthenticationPolicy -WindowsIntegratedFallbackEnabled $true
 ```
 
-Also ensure that the forms based authentication is enabled for intranet.
+Also ensure that the forms-based authentication is enabled for intranet.
 
 ## Configuring WIA for Chrome
 You can add Chrome or other user agents to the AD FS configuration that supports WIA. This enables seamless logon to applications without having to manually enter credentials when you access resources protected by AD FS. Follow the steps below to enable WIA on Chrome:
@@ -55,13 +55,13 @@ You can add Chrome or other user agents to the AD FS configuration that supports
 In AD FS configuration, add a user agent string for Chrome on Windows-based platforms:
 
 ```powershell
-Set-AdfsProperties -WIASupportedUserAgents ((Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Windows NT)")
+Set-AdfsProperties -WIASupportedUserAgents (Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Windows NT)"
 ```
 
 And similarly for Chrome on Apple macOS, add the following user agent string to the AD FS configuration:
 
 ```powershell
-Set-AdfsProperties -WIASupportedUserAgents ((Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Macintosh; Intel Mac OS X)")
+Set-AdfsProperties -WIASupportedUserAgents (Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Macintosh; Intel Mac OS X)"
 ```
 
 Confirm that the user agent string for Chrome is now set in the AD FS properties:
@@ -70,7 +70,6 @@ Confirm that the user agent string for Chrome is now set in the AD FS properties
 Get-AdfsProperties | Select -ExpandProperty WIASupportedUserAgents
 ```
 
-(You would need a new screen shot here)
 ![configure auth](media/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA/chrome1.png)
 
 >[!NOTE]

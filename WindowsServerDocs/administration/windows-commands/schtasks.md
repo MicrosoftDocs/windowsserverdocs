@@ -2,10 +2,10 @@
 title: schtasks commands
 description: Reference article for the schtasks commands, which schedules commands and programs to run periodically or at a specific time, adds and removes tasks from the schedule, starts and stops tasks on demand, and displays and changes scheduled tasks.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
+ms.author: alalve
+author: robinharwood
 manager: mtillman
-ms.date: 09/16/2020
+ms.date: 02/01/2023
 ---
 
 # schtasks commands
@@ -23,17 +23,17 @@ Schedules commands and programs to run periodically or at a specific time, adds 
 
 - You can use the **/u** parameter in a **/create** or **/change** operation if the local and remote computers are in the same domain, or if the local computer is in a domain that the remote computer domain trusts. Otherwise, the remote computer can't authenticate the user account specified, and it can't verify that the account is a member of the Administrators group.
 
-- The task you plan to run must have the appropriate permission; these permissions vary by task. By default, tasks run with the permissions of the current user of the local computer, or with the permissions of the user specified by the **/u** parameter, if one is included. o run a task with permissions of a different user account or with system permissions, use the **/ru** parameter.
+- The task you plan to run must have the appropriate permission; these permissions vary by task. By default, tasks run with the permissions of the current user of the local computer, or with the permissions of the user specified by the **/u** parameter, if one is included. To run a task with permissions of a different user account or with system permissions, use the **/ru** parameter.
 
 ## Syntax
 
 ```
-schtasks change
-schtasks create
-schtasks delete
-schtasks end
-schtasks query
-schtasks run
+schtasks /change
+schtasks /create
+schtasks /delete
+schtasks /end
+schtasks /query
+schtasks /run
 ```
 
 ### Parameters
@@ -47,6 +47,6 @@ schtasks run
 | [schtasks query](schtasks-query.md) | Displays tasks scheduled to run on the computer. |
 | [schtasks run](schtasks-run.md) | Starts a scheduled task immediately. The **run** operation ignores the schedule, but uses the program file location, user account, and password saved in the task to run the task immediately. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

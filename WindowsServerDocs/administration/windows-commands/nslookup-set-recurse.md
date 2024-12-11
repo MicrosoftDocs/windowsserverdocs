@@ -6,8 +6,8 @@ description: Reference article for the nslookup set recurse command, which tells
 
 ms.topic: reference
 ms.assetid: d1b7a93f-dfb0-4ccd-b230-e0953057fada
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -31,6 +31,6 @@ set [no]recurse
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

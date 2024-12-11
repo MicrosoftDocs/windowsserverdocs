@@ -2,7 +2,7 @@
 description: "Learn more about: Health Service faults"
 title: Health Service faults
 manager: eldenc
-ms.author: cosdar
+ms.author: roharwoo
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
@@ -10,7 +10,7 @@ ms.date: 10/05/2017
 
 # Health Service faults
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2016
 
 ## What are faults
 
@@ -129,7 +129,7 @@ public void DiscoverObjects(CimSession Session)
 
 These are the same objects you get in PowerShell using cmdlets like **Get-StorageSubSystem**, **Get-StorageNode**, and **Get-Volume**.
 
-You can access all the same properties, documented at [Storage Management API Classes](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes).
+You can access all the same properties, documented at [Storage Management API Classes](/windows-hardware/drivers/storage/storage-management-api-classes).
 
 ```
 using System.Diagnostics;

@@ -4,15 +4,15 @@ title: Creating an AD FS farm without Domain Administrator privileges
 description: Using the Install-AdfsFarm cmdlet and script to create an AD FS farm using delegated admin credentials
 author: billmath
 ms.author: billmath
-manager: daveba
-ms.date: 04/01/2020
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 
 ---
 
 # Creating an AD FS Farm without domain admin privileges
 
->Applies to: Windows Server 2022, Windows Server 2019 and 2016
+>
 
 ## Overview
 Starting with AD FS in Windows Server 2016, you can run the cmdlet Install-AdfsFarm as a local administrator on your federation server, provided your Domain Administrator has prepared Active Directory.  The script below in this article can be used to prepare AD.  The steps are as follows:
@@ -74,12 +74,12 @@ PS:\>$adminConfig = @{"DKMContainerDn"="CN=8065f653-af9d-42ff-aec8-56e02be4d5f3,
 ```
 
 Next, create the farm:
-Note that the local computer account and the ADFS admin account need to be granted retrieve password and delegate to account rights on the gMSA.
+Note that the local computer account and the AD FS admin account need to be granted retrieve password and delegate to account rights on the gMSA.
 ```
-PS:\>$localadminobj = get-aduser "localadmin"
-PS:\>$adfsnodecomputeracct = get-adcomputer "contoso_adfs_node"
-PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( add=$localadmin.sid.value, $computeracct.sid.value) -PrincipalsAllowedToDelegateToAccount @( add=$localadmin.sid.value, $computeracct.sid.value)
-PS:\>$localAdminCred = (get-credential)
+PS:\>$localAdminObj = Get-ADUser "localadmin"
+PS:\>$adfsNodeComputerAcct = Get-ADComputer "contoso_adfs_node"
+PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( Add=$localAdminObj.SID.Value, $adfsNodeComputerAcct.SID.Value) -PrincipalsAllowedToDelegateToAccount @( Add=$localAdminObj.SID.Value, $adfsNodeComputerAcct.SID.Value)
+PS:\>$localAdminCred = (Get-Credential)
 PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFDB65E0 -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\fsgmsaacct$" -OverwriteConfiguration -AdminConfiguration $adminConfig
 ```
 
@@ -145,22 +145,22 @@ $ouPath = "CN=ADFS," + $initialPath
 $ou = "CN=" + $ouName + "," + $ouPath
 
 #######################################
-## Create DKM container and assign default ACE which allows adfs admin read access
+## Create DKM container and assign default ACE which allows AD FS admin read access
 #######################################
 
-if ($pscmdlet.ShouldProcess("$ou", "Creating DKM container and assinging access"))
+if ($pscmdlet.ShouldProcess("$ou", "Creating DKM container and assigning access"))
 {
     Write-Verbose ("Creating organizational unit with DN: " + $ou)
 
     if ($AdfsAdministratorAccount.EndsWith("$"))
     {
-        write-verbose "ADFS administrator account passed with $ suffix indicating a computer account"
+        write-verbose "AD FS administrator account passed with $ suffix indicating a computer account"
         $userNameSplit = $AdfsAdministratorAccount.Split("\");
         $strSID = (Get-ADServiceAccount -Identity $userNameSplit[1]).SID
     }
     else
     {
-        write-verbose "ADFS administrator account is a standard AD user"
+        write-verbose "AD FS administrator account is a standard AD user"
         $objUser = New-Object System.Security.Principal.NTAccount($AdfsAdministratorAccount)
         $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
     }
@@ -240,13 +240,13 @@ if ($pscmdlet.ShouldProcess("$strSID", "Granting GenericRead, CreateChild, Write
 
 if ($AdfsAdministratorAccount.EndsWith("$"))
 {
-    write-verbose "ADFS administrator account passed with $ suffix indicating a gMSA"
+    write-verbose "AD FS administrator account passed with $ suffix indicating a gMSA"
     $userNameSplit = $AdfsAdministratorAccount.Split("\");
     $strSID = (Get-ADServiceAccount -Identity $userNameSplit[1]).SID
 }
 else
 {
-    write-verbose "ADFS administrator account is a standard AD user"
+    write-verbose "AD FS administrator account is a standard AD user"
     $objUser = New-Object System.Security.Principal.NTAccount($AdfsAdministratorAccount)
     $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
 }

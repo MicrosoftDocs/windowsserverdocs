@@ -3,8 +3,8 @@ title: manage-bde keypackage
 description: Reference article for the manage-bde keypackage command, which generates a key package for a drive.
 ms.topic: reference
 ms.assetid: c631ef10-2a2f-4541-8578-292f2d4e9e80
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -39,7 +39,7 @@ To create a key package for drive C, based on the key protector identified by th
 manage-bde -keypackage C: -id {84E151C1...7A62067A512} -path f:\Folder
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

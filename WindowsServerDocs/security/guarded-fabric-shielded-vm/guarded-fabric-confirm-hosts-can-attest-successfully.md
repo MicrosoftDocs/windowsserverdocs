@@ -4,14 +4,14 @@ description: "Learn more about: Confirm guarded hosts can attest"
 ms.topic: article
 ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/25/2019
 ---
 
 # Confirm guarded hosts can attest
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 A fabric administrator needs to confirm that Hyper-V hosts can run as guarded hosts. Complete the following steps on at least one guarded host:
 
@@ -49,7 +49,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     Get-HgsClientConfiguration
     ```
 
-    The output of the command indicates whether the host passed attestation and is now guarded. If `IsHostGuarded` does not return **True**, you can run the HGS diagnostics tool, [Get-HgsTrace](https://technet.microsoft.com/library/mt718831.aspx), to investigate. To run diagnostics, enter the following command in an elevated Windows PowerShell prompt on the host:
+    The output of the command indicates whether the host passed attestation and is now guarded. If `IsHostGuarded` does not return **True**, you can run the HGS diagnostics tool, [Get-HgsTrace](/powershell/module/hgsdiagnostics/get-hgstrace), to investigate. To run diagnostics, enter the following command in an elevated Windows PowerShell prompt on the host:
 
     ```powershell
     Get-HgsTrace -RunDiagnostics -Detailed

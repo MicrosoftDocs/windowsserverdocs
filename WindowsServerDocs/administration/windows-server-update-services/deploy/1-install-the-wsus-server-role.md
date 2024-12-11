@@ -3,19 +3,16 @@ title: Step 1 - Install the WSUS Server Role
 description: Windows Server Update Service (WSUS) topic - Describes how to install the server role using Server Manager
 ms.topic: article
 ms.assetid: fabc8619-350e-403b-96f8-116424931300
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 09/27/2023
 ---
 # Step 1: Install the WSUS Server Role
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The next step in the deployment of your WSUS server is to install the WSUS server role. The following procedure describes how to install the WSUS server role by using Server Manager.
-
-> [!IMPORTANT]
-> This installation procedure only covers how to install WSUS using Windows Internal Database (WID). The procedures to install WSUS using Microsoft SQL Server are documented in [the WSUS forum](/answers/topics/windows-server-update-services.html).
 
 ### To install the WSUS server role
 
@@ -31,7 +28,7 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 
 6.  On the **select server roles** page, select **Windows Server Update Services**.  **Add features that are required for Windows Server Update Services** opens. Click **Add Features**, and then click **Next**.
 
-7.  On the **select features**page. retain the default selections, and then click **Next**.
+7.  On the **select features** page, retain the default selections, and then click **Next**.
 
     > [!IMPORTANT]
     > WSUS only requires the default Web Server role configuration. If you are prompted for additional Web Server role configuration while setting up WSUS you can safely accept the default values and continue setting up WSUS.

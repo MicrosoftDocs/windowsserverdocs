@@ -3,13 +3,13 @@ title: System Insights overview
 description: System Insights is a new predictive analytics feature in Windows Server 2019. The System Insights predictive capabilities - each backed by a machine-learning model - locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your servers and helping you reduce the operational expenses associated with reactively managing issues in your deployments.
 ms.topic: article
 author: gawatu
-ms.author: daknappe
+ms.author: roharwoo
 manager: mallikarjun.chadalapaka
 ms.date: 5/23/2018
 ---
 # System Insights overview
 
->Applies to: Windows Server 2022, Windows Server 2019
+>
 
 System Insights is a new predictive analytics feature in Windows Server 2019. The System Insights predictive capabilities - each backed by a machine-learning model - locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your servers and helping you reduce the operational expenses associated with reactively managing issues in your deployments.
 
@@ -26,7 +26,7 @@ Your system data is stored on your machine, and this data is analyzed by predict
 
 ## Get started
 
-<iframe src=https://www.youtube-nocookie.com/embed/AJxQkx5WSaA width=560 height=315 allowfullscreen></iframe>
+> [!VIDEO https://www.youtube-nocookie.com/embed/AJxQkx5WSaA]
 
 >[!TIP]
 >Watch these short videos to learn the information you need to get started and confidently manage System Insights: [Getting started with System Insights in 10 minutes](https://blogs.technet.microsoft.com/filecab/2018/07/24/getting-started-with-system-insights-in-10-minutes/)
@@ -54,8 +54,8 @@ We'd love to hear your feedback to help us improve this feature. You can use the
 - **Feedback Hub**: Use the Feedback Hub tool in Windows 10 to file a bug or feedback. When doing so, please specify:
     - **Category**: Server
     - **Subcategory**: System Insights
-- **UserVoice**: Submit feature requests through our [UserVoice page](https://windowsserver.uservoice.com/forums/295071-management-tools). Share with your colleagues to upvote items that are important to you.
-- **Email**: If you'd like to submit your feedback privately to the feature team, send an email to system-insights-feed@microsoft.com. Please keep in mind that we still may request you to use Feedback Hub or UserVoice.
+- **Windows Server Community**: Submit feature requests through our [Windows Server Community page](https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server).
+- **Email**: If you'd like to submit your feedback privately to the feature team, send an email to system-insights-feed@microsoft.com. Please keep in mind that we still may request you to use Feedback Hub or the Windows Server Community.
 
 ## Additional References
 To learn more about System Insights, use the following resources:

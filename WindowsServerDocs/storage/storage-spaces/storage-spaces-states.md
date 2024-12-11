@@ -1,17 +1,17 @@
 ---
 title: Storage Spaces and Storage Spaces Direct health and operational states
 description: How to find and understand the different health and operational states of Storage Spaces Direct and Storage Spaces (including physical disks, pools, and virtual disks), and what to do about them.
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 12/06/2019
 ms.topic: article
 manager: brianlic
 ---
 # Troubleshoot Storage Spaces and Storage Spaces Direct health and operational states
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
+>
 
-This topic describes the health and operational states of storage pools, virtual disks (which sit underneath volumes in Storage Spaces), and drives in [Storage Spaces Direct](storage-spaces-direct-overview.md) and [Storage Spaces](overview.md). These states can be invaluable when trying to troubleshoot various issues such as why you can't delete a virtual disk because of a read-only configuration. It also discusses why a drive can't be added to a pool (the CannotPoolReason).
+This topic describes the health and operational states of storage pools, virtual disks (which sit underneath volumes in Storage Spaces), and drives in [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) and [Storage Spaces](overview.md). These states can be invaluable when trying to troubleshoot various issues such as why you can't delete a virtual disk because of a read-only configuration. It also discusses why a drive can't be added to a pool (the CannotPoolReason).
 
 Storage Spaces has three primary objects - *physical disks* (hard drives, SSDs, etc.) that are added to a *storage pool*, virtualizing the storage so that you can create *virtual disks* from free space in the pool, as shown here. Pool metadata is written to each drive in the pool. Volumes are created on top of the virtual disks and store your files, but we're not going to talk about volumes here.
 
@@ -61,8 +61,8 @@ When a storage pool is in the **Unknown** or **Unhealthy** health state, it mean
 
 |Operational state    |Read-only reason |Description|
 |---------            |---------       |--------   |
-|Read-only|Incomplete|This can occur if the storage pool loses its [quorum](understand-quorum.md), which means that most drives in the pool have failed or are offline for some reason. When a pool loses its quorum, Storage Spaces automatically sets the pool configuration to read-only until enough drives become available again.<br><br>**Action:** <br>1. Reconnect any missing drives, and if you're using Storage Spaces Direct, bring all servers online. <br>2. Set the pool back to read-write by opening a PowerShell session with administrative permissions and then typing:<br><br> <code>Get-StoragePool <PoolName> -IsPrimordial $False \| Set-StoragePool -IsReadOnly $false</code>|
-||Policy|An administrator set the storage pool to read-only.<br><br>**Action:** To set a clustered storage pool to read-write access in Failover Cluster Manager, go to **Pools**, right-click the pool and then select **Bring Online**.<br><br>For other servers and PCs, open a PowerShell session with administrative permissions and then type:<br><br><code>Get-StoragePool <PoolName> \| Set-StoragePool -IsReadOnly $false</code><br><br> |
+|Read-only|Incomplete|This can occur if the storage pool loses its [quorum](understand-quorum.md), which means that most drives in the pool have failed or are offline for some reason. When a pool loses its quorum, Storage Spaces automatically sets the pool configuration to read-only until enough drives become available again.<br><br>**Action:** <br>1. Reconnect any missing drives, and if you're using Storage Spaces Direct, bring all servers online. <br>2. Set the pool back to read-write by opening a PowerShell session with administrative permissions and then typing:<br><br> <code>Get-StoragePool \<PoolName> -IsPrimordial $False \| Set-StoragePool -IsReadOnly $false</code>|
+||Policy|An administrator set the storage pool to read-only.<br><br>**Action:** To set a clustered storage pool to read-write access in Failover Cluster Manager, go to **Pools**, right-click the pool and then select **Bring Online**.<br><br>For other servers and PCs, open a PowerShell session with administrative permissions and then type:<br><br><code>Get-StoragePool \<PoolName> \| Set-StoragePool -IsReadOnly $false</code><br><br> |
 ||Starting|Storage Spaces is starting or waiting for drives to be connected in the pool. This should be a temporary state. Once completely started, the pool should transition to a different operational state.<br><br>**Action:** If the pool stays in the *Starting* state, make sure that all drives in the pool are connected properly.|
 
 See also, the [Windows Server storage forum](/answers/topics/windows-server-storage.html).
@@ -201,6 +201,6 @@ The following table gives a little more detail on each of the reasons.
 
 ## Additional References
 
-- [Storage Spaces Direct](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)
 - [Understanding cluster and pool quorum](understand-quorum.md)

@@ -4,14 +4,14 @@ description: Learn how to learn some of the features of network adapters that mi
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
 manager: dcscontentpm
-ms.author: v-tea
+ms.author: roharwoo
 author: Teresa-Motiv
-ms.date: 07/23/2021
+ms.date: 10/27/2021
 ---
 
 # Choosing a Network Adapter
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to learn some of the features of network adapters that might affect your purchasing choices.
 
@@ -210,7 +210,7 @@ Configuring network adapter resources is simplified by the use of the following 
 
 - [Set-NetAdapterAdvancedProperty](/powershell/module/netadapter/Set-NetAdapterAdvancedProperty)
 
-- [Enable-NetAdapter](/powershell/module/netadapter/Enable-NetAdapte)
+- [Enable-NetAdapter](/powershell/module/netadapter/enable-netadapterrss)
 
 - [Enable-NetAdapterBinding](/powershell/module/netadapter/Enable-NetAdapterBinding)
 

@@ -3,8 +3,8 @@ title: wbadmin start systemstatebackup
 description: Reference article for the wbadmin start systemstatebackup command, which creates a system state backup of the local computer and stores it on the location specified.
 ms.topic: reference
 ms.assetid: 998366c1-0a64-45e6-9ed3-4c3f5b8406f0
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -39,10 +39,10 @@ To create a system state backup and store it on volume f, type:
 wbadmin start systemstatebackup -backupTarget:f:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [wbadmin command](wbadmin.md)
 
-- [Start-WBBackup](/powershell/module/windowserverbackup/Start-WBBackup)
+- [Start-WBBackup](/powershell/module/windowsserverbackup/start-wbbackup)

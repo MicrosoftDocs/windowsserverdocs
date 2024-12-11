@@ -4,8 +4,8 @@ ms.assetid: 626e33fc-4ac2-4d38-9ac9-addaa4c8d9bb
 title: Home Realm Discovery Customization
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

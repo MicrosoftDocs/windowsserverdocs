@@ -2,9 +2,8 @@
 title: What type of installation is right for you
 description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins.
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
-ms.localizationpriority: medium
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 12/11/2019
 ---
 # What type of installation is right for you?
@@ -27,10 +26,12 @@ You can **install** Windows Admin Center on the following Windows operating syst
 
 | **Platform**                       | **Installation mode** |
 | -----------------------------------| --------------------- |
+| Windows 11                         | Local client |
 | Windows 10                         | Local client |
-| Windows Server Semi-Annual Channel | Gateway sever, managed server, failover cluster |
-| Windows Server 2016                | Gateway sever, managed server, failover cluster |
-| Windows Server 2019                | Gateway sever, managed server, failover cluster |
+| Windows Server Semi-Annual Channel | Gateway server, managed server, failover cluster |
+| Windows Server 2022                | Gateway server, managed server, failover cluster |
+| Windows Server 2019                | Gateway server, managed server, failover cluster |
+| Windows Server 2016                | Gateway server, managed server, failover cluster |
 
 To operate Windows Admin Center:
 
@@ -40,9 +41,12 @@ To operate Windows Admin Center:
 > [!WARNING]
 > Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
 
+> [!NOTE]
+> Port usage and defaults for Windows Admin Center installations on the modernized gateway vary from what is mentioned above. [Read more about what's different in the modernized gateway.](../understand/modernized-gateway.md)
+
 ## Installation: Supported web browsers
 
-Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10. Other web browsers—including Internet Explorer and Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has it’s own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
+Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10. Other web browsers—including Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has its own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
 
 ## Management target: Supported operating systems
 
@@ -50,14 +54,17 @@ You can **manage** the following Windows operating systems using Windows Admin C
 
 | Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
 | ------------------------- |--------------- | ----- |
+| Windows 11 | Yes (via Computer Management) | N/A |
 | Windows 10 | Yes (via Computer Management) | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes |
+| Windows Server 2022 | Yes | Yes |
 | Windows Server 2019 | Yes | Yes |
 | Windows Server 2016 | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Microsoft Hyper-V Server 2016 | Yes | Yes |
 | Windows Server 2012 R2 | Yes | Yes |
 | Microsoft Hyper-V Server 2012 R2 | Yes | Yes |
 | Windows Server 2012 | Yes | Yes |
+| Azure Local 21H2 and higher | Yes | Yes |
 
 > [!NOTE]
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
@@ -69,7 +76,7 @@ You can **manage** the following Windows operating systems using Windows Admin C
 
 ## High availability
 
-You can enable high availability of the gateway service by deploying Windows Admin Center in a active-passive model on a failover cluster. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly.
+You can enable high availability of the gateway service by deploying Windows Admin Center in an active-passive model on a failover cluster. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly.
 
 [Learn how to deploy Windows Admin Center with high availability.](../deploy/high-availability.md)
 

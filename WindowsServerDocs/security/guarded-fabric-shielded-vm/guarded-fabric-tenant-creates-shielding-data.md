@@ -4,15 +4,15 @@ description: "Learn more about: Shielded VMs for tenants - Creating shielding da
 ms.topic: article
 ms.assetid: 49f4e84d-c1f7-45e5-9143-e7ebbb2ef052
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/25/2019
 ---
 
 
 # Shielded VMs for tenants - Creating shielding data to define a shielded VM
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 A shielding data file (also called a provisioning data file or PDK file) is an encrypted file that a tenant or VM owner creates to protect important VM configuration information, such as the administrator password, RDP and other identity-related certificates, domain-join credentials, and so on. This topic provides information about how to create a shielding data file. Before you can create the file, you must either obtain a template disk from your hosting service provider, or create a template disk as described in [Shielded VMs for tenants - Creating a template disk (optional)](guarded-fabric-tenant-creates-template-disk.md).
 
@@ -99,7 +99,7 @@ When using substitution strings, it is important to ensure that the strings will
 
 Also, note that the networking-related substitution strings towards the end of the table are only used if you are leveraging VMM Static IP Address Pools. Your hosting service provider should be able to tell you if these substitution strings are required. For more information about static IP addresses in VMM templates, see the following in the VMM documentation:
 
-- [Guidelines for IP address pools](https://technet.microsoft.com/system-center-docs/vmm/plan/plan-network#guidelines-for-ip-address-pools)
+- [Guidelines for IP address pools](/system-center/vmm/network-pool)
 - [Set up static IP address pools in the VMM fabric](/system-center/vmm/network-pool)
 
 Finally, it is important to note that the shielded VM deployment process will only encrypt the OS drive. If you deploy a shielded VM with one or more data drives, it is strongly recommended that you add an unattend command or Group Policy setting in the tenant domain to automatically encrypt the data drives.

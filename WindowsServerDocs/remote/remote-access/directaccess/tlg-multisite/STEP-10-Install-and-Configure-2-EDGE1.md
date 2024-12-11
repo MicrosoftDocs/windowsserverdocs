@@ -4,13 +4,13 @@ description: Learn how to install and configure 2-EDGE1.
 manager: brianlic
 ms.topic: article
 ms.assetid: d98d6f7a-a2e6-45b1-9c63-08e2986a5c03
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 10 Install and Configure 2-EDGE1
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 2-EDGE1 configuration consists of the following:
 

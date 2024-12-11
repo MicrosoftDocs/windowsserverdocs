@@ -4,13 +4,13 @@ description: Learn how to configure load-balancing on the single server, configu
 manager: brianlic
 ms.topic: article
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 3 Configure a Load-Balanced Cluster
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 After preparing servers for the cluster, configure load-balancing on the single server, configure the required certificates, and deploy the cluster.
 

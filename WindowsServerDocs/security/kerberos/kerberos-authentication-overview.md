@@ -3,14 +3,14 @@ title: Kerberos Authentication Overview
 description: Learn about Kerberos authentication in Windows Server 2012 and Windows 8.
 ms.topic: article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Kerberos Authentication Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Kerberos is an authentication protocol that is used to verify the identity of a user or host. This topic contains information about Kerberos authentication in Windows Server 2012 and Windows 8.
 

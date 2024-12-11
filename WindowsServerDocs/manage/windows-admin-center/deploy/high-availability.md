@@ -2,15 +2,14 @@
 title: Deploy Windows Admin Center with High Availability
 description: Deploy Windows Admin Center with High Availability (Project Honolulu)
 ms.topic: article
-author: jwwool
-ms.author: jeffrew
-ms.localizationpriority: medium
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 08/07/2020
 ---
 
 # Deploy Windows Admin Center with high availability
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 You can deploy Windows Admin Center in a failover cluster to provide high availability for your Windows Admin Center gateway service. The solution provided is an active-passive solution, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly.
 
@@ -18,7 +17,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 
 ## Prerequisites
 
-- A failover cluster of 2 or more nodes on Windows Server 2016 or 2019. [Learn more about deploying a Failover Cluster](../../../failover-clustering/failover-clustering-overview.md).
+- A failover cluster of 2 or more nodes on Windows Server 2016, 2019, or 2022. [Learn more about deploying a Failover Cluster](../../../failover-clustering/failover-clustering-overview.md).
 - A cluster shared volume (CSV) for Windows Admin Center to store persistent data that can be accessed by all the nodes in the cluster. 10 GB will be sufficient for your CSV.
 - High-availability deployment script from [Windows Admin Center HA Script zip file](https://aka.ms/WACHAScript). Download the .zip file containing the script to your local machine and then copy the script as needed based on the guidance below.
 - Recommended, but optional: a signed certificate .pfx & password. You don't need to have already installed the certificate on the cluster nodes - the script will do that for you. If you don't supply one, the installation script generates a self-signed certificate, which expires after 60 days.
@@ -51,7 +50,7 @@ $certPassword = Read-Host -AsSecureString
 #### Install with a self-signed certificate:
 
 ```powershell
-.\Install-WindowsAdminCenterHA.ps1 -clusterStorage "C:\ClusterStorage\Volume1" -clientAccessPoint "contoso-ha-gateway" -msiPath ".\WindowsAdminCenter.msi" -generateSslCert -Verbose
+.\Install-WindowsAdminCenterHA.ps1 -clusterStorage "C:\ClusterStorage\Volume1" -clientAccessPoint "contoso-ha-gateway" -msiPath ".\WindowsAdminCenter.msi" -StaticAddress (local ip address) -generateSslCert -Verbose
 ```
 
 ## Update an existing high availability installation

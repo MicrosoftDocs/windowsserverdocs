@@ -1,15 +1,15 @@
 ---
 title: The number of logical processors in use must not exceed the supported maximum
 description: Learn what to do when the server is configured with too many logical processors.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.topic: article
 ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
 ms.date: 8/16/2016
 ---
 # The number of logical processors in use must not exceed the supported maximum
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

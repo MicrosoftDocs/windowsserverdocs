@@ -3,8 +3,8 @@ title: manage-bde resume
 description: Reference article for the manage-bde resume command, which resumes BitLocker encryption or decryption after it has been paused.
 ms.topic: reference
 ms.assetid: ca3cd1ca-6f2c-4190-b68f-27816635facb
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -37,7 +37,7 @@ To resume BitLocker encryption on drive C, type:
 manage-bde –resume C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

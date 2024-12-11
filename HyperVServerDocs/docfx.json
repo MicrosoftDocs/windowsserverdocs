@@ -32,7 +32,9 @@
             "./": {
               "depot_name": "WS.HyperVServerDocs"
             }
-        }
+        },
+      "uhfHeaderId": "MSDocsHeader-WindowsServer",
+       "recommendations": true
     },
     "fileMetadata": {},
     "template": [

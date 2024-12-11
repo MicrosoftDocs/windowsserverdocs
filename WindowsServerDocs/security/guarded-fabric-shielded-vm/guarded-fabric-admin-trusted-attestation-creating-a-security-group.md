@@ -4,14 +4,14 @@ title: Create a security group for guarded hosts and register the group with HGS
 ms.topic: article
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
 # Create a security group for guarded hosts and register the group with HGS
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 > [!IMPORTANT]
 > AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up.
@@ -42,7 +42,7 @@ This topic describes the intermediate steps to prepare Hyper-V hosts to become g
    Add-HgsAttestationHostGroup -Name "<GuardedHostGroup>" -Identifier "<SID>"
    ```
 
-2. To verify the group was added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx).
+2. To verify the group was added, run [Get-HgsAttestationHostGroup](/powershell/module/hgsattestation/get-hgsattestationhostgroup).
 
 ## Next step
 
