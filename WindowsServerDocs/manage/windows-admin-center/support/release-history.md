@@ -10,7 +10,8 @@ ms.date: 01/06/2020
 
 Here's a listing of our latest released features:
 
-- Version [2311](https://aka.ms/wac2311) is the most recently available (GA) release - it includes Angular 15 upgrade, improvements to the Import VM experience, Azure Arc at-scale onboarding, and a new Azure Migrate assessment experience.
+- Version [2410](https://aka.ms/wac2410) is the most recently available (GA) release - it includes an upgrade of the backend from .NET 4.6.2 to .NET 8, improvements to the virtual machines and security tools, and many improvements and bugfixes.
+- Version [2311](https://aka.ms/wac2311) includes an Angular 15 upgrade, improvements to the Import VM experience, Azure Arc at-scale onboarding, and a new Azure Migrate assessment experience.
 - Version [2306](https://aka.ms/wac2306) includes the WDAC-enabled infra GA, new Hyper-V features and improvements, the long awaited cluster-aware event viewer, as well as a plethora of bug fixes and improvements.
 - Version [2211](https://aka.ms/wac2211) includes support for 400% zoom and WDAC-enabled infrastructure, improvements to Azure Local management features, as well as bug fixes and updates in several extensions.
 - Version [2110.2](https://aka.ms/wac2110.2) includes major bug fixes to Role-based Access Control (RBAC), the connections page’s search feature, as well as bug fixes in several extensions.
