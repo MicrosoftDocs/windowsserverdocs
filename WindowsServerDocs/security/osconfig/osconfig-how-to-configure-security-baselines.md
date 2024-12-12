@@ -70,9 +70,9 @@ Before you can apply a security baseline for the first time, you need to install
    Get-Module -ListAvailable -Name Microsoft.OSConfig
    ```
 
-## Manage OSConfig security baselines
+## Manage Windows Server 2025 security baselines
 
-Apply the appropriate security baselines, based on the Windows Server role of your device:
+Apply the appropriate security baselines based on the Windows Server role of your device:
 
 - Domain controller (DC)
 - Member server (domain-joined)
@@ -225,7 +225,7 @@ Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name
 >
 > - During the *removal* process, when security settings are reverted, changing these settings back to their premanaged configuration isn't guaranteed. It depends on the specific settings within the security baseline. This behavior aligns with the capabilities that the Microsoft Intune policies provide. To learn more, see [Remove a security baseline assignment](/mem/intune/protect/security-baselines-configure#remove-a-security-baseline-assignment).
 
-## Customize OSConfig security baselines
+## Customize Windows Server 2025 security baselines
 
 After you complete the security baseline configuration, you can modify the security settings while maintaining drift control. Customizing the security values allows for more control of your organization's security policies, depending on your environment's specific needs.
 
