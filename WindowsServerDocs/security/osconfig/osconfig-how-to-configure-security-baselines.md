@@ -30,7 +30,7 @@ For at-scale operations, use Azure Policy and Azure Automanage Machine Configura
 > [!IMPORTANT]
 > After applying the security baseline, your system's security setting will change along with default behaviors. Test carefully before applying these changes in production environments.
 >
-> You'll be asked to change your local administrator password after applying the security baseline for Member server and Workroup member scenarios.
+> You'll be asked to change your local administrator password after applying the security baseline for Member server and Workgroup member scenarios.
 
 Below you can find a list of more noticeable changes after the baselines are applied:
 
