@@ -9,7 +9,7 @@ ms.contributor: Dona Mukherjee, Carlos Mayol Berral
 ms.date: 12/12/2024
 ---
 
-# Deploy Windows Server security baselines locally with OSConfig
+# Deploy Windows Server 2025 security baselines locally with OSConfig
 
 Deploying the Windows Server 2025 security baseline to your environment ensures that desired security measures are in place, providing a comprehensive and standardized security framework. The Windows Server 2025 baseline includes over 300 security settings to ensure that it meets industry-standard security requirements. It also provides co-management support for both on-premises and Azure Arc-connected devices. The security baselines can be configured through PowerShell, Windows Admin Center, and Azure Policy. The OSConfig tool is a security configuration stack that uses a scenario-based approach to deliver and apply the desired security measures for your environment. The security baselines throughout the device life cycle can be applied using OSConfig starting from the initial deployment process.
 
