@@ -4,7 +4,7 @@ description: Learn about DNS processes and interactions in Windows Server
 ms.topic: conceptual
 author: gswashington
 ms.author: nedpyle
-ms.date: 02/14/2024
+ms.date: 01/15/2025
 
 ---
 
@@ -783,5 +783,5 @@ Because WINS does not provide reverse lookup capability, the DNS service instead
 
 ## See also
 
-- [DNS name resolution troubleshooting guide for DNS client service]()
-- [DNS name resolution for forwarding issues on the DNS server]()
+- [DNS name resolution troubleshooting guide for DNS client service](https://learn.microsoft.com/en-us/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client)
+- [DNS name resolution for forwarding issues on the DNS server](https://learn.microsoft.com/en-us/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
