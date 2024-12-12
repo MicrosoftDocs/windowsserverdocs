@@ -4,7 +4,7 @@ description: Configure multiple CSV for VM replication using Hyper-V Replica to 
 ms.topic: how-to
 ms.author: alalve
 author: xelu86
-ms.date: 12/10/2024
+ms.date: 12/12/2024
 ---
 
 # Configure multiple CSV for VM replication
@@ -22,17 +22,17 @@ The following are required on your device before proceeding:
 > [!NOTE]
 > During the replication process, be aware that the hardware and network you use affects the services that rely on them. Depending on the amount of data replicated between the source and target systems, this process consumes a large amount of system resources. Your device performance is impacted until this process completes.
 
-## Configure CSV location
+## Configure multiple CSV location
 
 When copying VMs through a replication process, it's possible to use multiple storage volumes to store the replicated data. There are two methods to configure new replication locations, through the Hyper-V Manager UI or via PowerShell.
 
 # [Hyper-V](#tab/hyperv)
 
 1. Open the **Hyper-V Manager**, under **Actions**, select **Hyper-V Settings**.
-1. Under **Authorization and storage**, select **Allow replication from any authenticated server**, then select **Browse**.
+1. Under **Authorization and storage**, select either **Allow replication from any authenticated server** or **Allow replication from the specified servers**, then select **Browse**.
 1. In the **Select Folder** window, choose a new default location, then select **Select Folder**.
 
-When changes are made to the "default location" where replication is enabled for a VM, the new target volume is used for any subsequent replication. However, VMs that were already being replicated continues to use the original target volume that was set up when replication was first enabled.
+When changes are made to the "default location" where replication is enabled for a VM, the new target volume is used for any new subsequent replication enablement. However, VMs that were already being replicated continues to use the original target volume that was set up when replication was first enabled.
 
 # [PowerShell](#tab/powershell)
 

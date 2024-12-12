@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 ms.author: roharwoo
 author: robinharwood
-ms.date: 08/28/2024
+ms.date: 12/12/2024
 ---
 
 # Set up Hyper-V Replica
@@ -122,3 +122,7 @@ After completing these deployment steps your replicated environment is up and ru
 **Planned failover**: To run a planned failover, right-click the primary virtual machine and select **Replication** > **Planned Failover**. Planned failover performs prerequisites checks to ensure zero data loss. It checks that the primary virtual machine is shut down before beginning the failover. After the virtual machine is failed over, it starts replicating the changes back to the primary site when it's available. Note that for this to work, the primary server should be configured to receive replication from the secondary server, or from the Hyper-V Replica Broker in the case of a primary cluster. Planned failover sends the last set of tracked changes. For more information, see [Planned failover in Hyper-V Replica](https://techcommunity.microsoft.com/t5/virtualization/types-of-failover-operations-in-hyper-v-replica-8211-part-ii/ba-p/381910).
 
 **Unplanned failover**: To run an unplanned failover, right-click on the replica virtual machine and select **Replication** > **Unplanned Failover** from Hyper-V Manager or Failover Clustering Manager. You can recover from the latest recovery point or from previous recovery points if this option is enabled. After failover, check that everything is working as expected on the failed over virtual machine, then click **Complete** on the replica virtual machine. [Read more](https://techcommunity.microsoft.com/t5/virtualization/types-of-failover-operations-in-hyper-v-replica-8211-part-iii/ba-p/381908).
+
+## Related content
+
+- [Configure multiple CSV for VM replication](configure-multiple-csv-for-vm-replication.md)
