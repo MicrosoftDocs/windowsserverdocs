@@ -1,6 +1,6 @@
 ---
-title: Configure security baselines for Windows Server
-description: Learn how to deploy security baselines using OSConfig to enforce granular security settings to better protect and harden your Windows Server environment.
+title: Configure security baselines for Windows Server 2025
+description: Learn how to deploy security baselines using OSConfig to enforce granular security settings to better protect and harden your Windows Server 2025 environment.
 ms.topic: how-to
 ms.product: windows-server
 ms.author: alalve
@@ -75,8 +75,8 @@ Before you can apply a security baseline for the first time, you need to install
 Apply the appropriate security baselines, based on the Windows Server role of your device:
 
 - Domain controller (DC)
-- Member server (domain joined)
-- Workgroup member server (non-domain joined)
+- Member server (domain-joined)
+- Workgroup member server (non domain-joined)
 
 The baseline experience is powered by OSConfig. Once applied, your security baseline settings are protected from any drift automatically, which is one of the key features of its security platform.
 
