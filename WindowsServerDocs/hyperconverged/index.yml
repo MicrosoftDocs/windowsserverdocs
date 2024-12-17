@@ -8,10 +8,10 @@ brand: windows
 metadata:
   title: Hyper-converged infrastructure documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Consolidate software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: multiple #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   author: robinharwood  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: wscontent #Required; microsoft alias of author; optional team alias.
+  ms.author: roharwoo #Required; microsoft alias of author; optional team alias.
   ms.date: 06/10/2020 #Required; mm/dd/yyyy format.
 
 # productDirectory section (optional)
@@ -28,7 +28,7 @@ productDirectory:
     - title: Storage Spaces Direct
       imageSrc: /windows-server/media/i-store.svg
       links:
-        - url: /azure-stack/hci/concepts/storage-spaces-direct-overview
+        - url: /azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-edge-networking
           text: Virtualizes storage hardware, enabling you to create volumes on top of a virtualized pool of drives spread across servers in a hyper-converged cluster.
     # Card
     - title: Failover Clustering
@@ -55,9 +55,9 @@ productDirectory:
         - url: /windows-server/azure-hybrid-services
           text: Connects your cluster to Azure hybrid services for site recovery, monitoring, and more.
     # Card
-    - title: Azure Stack HCI
+    - title: Azure Local
       imageSrc: /windows-server/media/i-azure-stack.svg
       links:
-        - url: /windows-server/azure-stack-hci
-          text: Azure Stack HCI is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service.
+        - url: /azure/azure-local/overview
+          text: Azure Local is a new hyperconverged infrastructure (HCI) operating system delivered as an Azure service.
  

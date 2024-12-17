@@ -7,7 +7,7 @@ ms.date: 08/19/2024
 
 # Transport Layer Security (TLS) registry settings
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10, and earlier versions as noted
+> 
 
 This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS and SSL protocols.
 

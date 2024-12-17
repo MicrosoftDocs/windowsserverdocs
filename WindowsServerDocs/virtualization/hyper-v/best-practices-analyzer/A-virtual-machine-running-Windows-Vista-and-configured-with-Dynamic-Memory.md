@@ -1,7 +1,7 @@
 ---
 title: A virtual machine running Windows Vista and configured with Dynamic Memory should use recommended values for memory settings
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows Vista.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: c35f08b2-e624-4811-a159-c1e5bb6d5281
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # A virtual machine running Windows Vista and configured with Dynamic Memory should use recommended values for memory settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

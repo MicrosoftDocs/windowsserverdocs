@@ -4,13 +4,13 @@ description: Learn about the DirectAccess Cluster-NLB test lab Scenario and the 
 manager: brianlic
 ms.topic: article
 ms.assetid: cd1e9efd-19e9-49e7-8432-881f661c9792
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Overview of the DirectAccess Cluster-NLB Test Lab Scenario
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 In this test lab scenario, DirectAccess is deployed with:
 

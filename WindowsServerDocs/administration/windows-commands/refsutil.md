@@ -2,14 +2,14 @@
 title: ReFSUtil
 description: Reference article for the ReFSUtil tool, which attempts to diagnose heavily damaged ReFS volumes, identify remaining files, and copy those files to another volume.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 2/14/2023
 ms.topic: reference
 ---
 
 # ReFSUtil
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10
+
 
 ReFSUtil is a tool included in Windows and Windows Server that attempts to diagnose heavily damaged ReFS volumes, identify remaining files, and copy those files to another volume. This tool comes in the `%SystemRoot%\System32` folder.
 

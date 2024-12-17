@@ -3,14 +3,14 @@ title: Configure virtual network peering
 description: Configuring the virtual network peering involves creating two virtual networks that get peered.
 manager: grcusanz
 ms.topic: how-to
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
 ms.date: 11/04/2021
 ---
 
 # Configure virtual network peering
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 In this procedure, you use Windows PowerShell to create two virtual networks, each with one subnet. Then, you configure peering between the two virtual networks to enable connectivity between them.
 

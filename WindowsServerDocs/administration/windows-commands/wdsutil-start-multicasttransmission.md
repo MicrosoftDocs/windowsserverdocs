@@ -3,14 +3,14 @@ title: wdsutil start-multicasttransmission
 description: Reference article for Subcommand start-MulticastTransmission, which starts a Scheduled-Cast transmission of an image.
 ms.topic: reference
 ms.assetid: a1b2d459-1ece-49d4-997c-9d206c463b61
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil start-multicasttransmission
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts a Scheduled-Cast transmission of an image.
 

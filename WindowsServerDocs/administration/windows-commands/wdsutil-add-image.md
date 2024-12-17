@@ -3,7 +3,7 @@ title: wdsutil add-image
 description: Reference article for the wdsutil add-image command, which adds images to a Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: d5b6f4da-90ba-4b0e-9423-66c8ef5172e2
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 06/30/2022
@@ -11,7 +11,7 @@ ms.date: 06/30/2022
 
 # wdsutil add-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds images to a Windows Deployment Services server.
 

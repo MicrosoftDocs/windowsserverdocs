@@ -3,7 +3,7 @@ title: What's new in Windows Server 2016
 description: This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 07/31/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
@@ -245,7 +245,7 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
   - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
-  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
   - Virtual machine multi-queues (VMMQs) improve on VMQ through put by allocating multiple hardware queues per VM. The default queue becomes a set of queues for a VM and spreads traffic between the queues.
   
@@ -253,15 +253,15 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
 - Network Function Virtualization (NFV), which lets you mirror or route network functions performed by hardware appliances to virtual appliances, such as load balancers, firewalls, routers, switches, and so on. You can also deploy and manage your entire SDN stack using System Center Virtual Machine Manager. You can manage Windows Server container networking with Docker and associate SDN policies with both virtual machines and containers.
 
-- A Datacenter Firewall that provides granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. To learn more, see [What is Datacenter Firewall?](/azure-stack/hci/concepts/datacenter-firewall-overview).
+- A Datacenter Firewall that provides granular access control lists (ACLs), enabling you to apply firewall policies at the VM interface level or the subnet level. To learn more, see [What is Datacenter Firewall?](/azure/azure-local/concepts/datacenter-firewall-overview).
 
-- RAS Gateway, which lets you route traffic between virtual networks and physical networks, including site-to-site VPN connections from your cloud datacenter to your tenants' remote sites. Border Gateway Protocol (BGP) lets you deploy and provide dynamic routing between networks for all gateway scenarios, including Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networks (VPNs), Layer 3 (L3) VPNs, and Generic Routing Encapsulation (GRE) gateways. Gateways now also support gateway pools and M+N redundancy. To learn more, see [What is Remote Access Service (RAS) Gateway for Software Defined Networking?](/azure-stack/hci/concepts/gateway-overview).
+- RAS Gateway, which lets you route traffic between virtual networks and physical networks, including site-to-site VPN connections from your cloud datacenter to your tenants' remote sites. Border Gateway Protocol (BGP) lets you deploy and provide dynamic routing between networks for all gateway scenarios, including Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networks (VPNs), Layer 3 (L3) VPNs, and Generic Routing Encapsulation (GRE) gateways. Gateways now also support gateway pools and M+N redundancy. To learn more, see [What is Remote Access Service (RAS) Gateway for Software Defined Networking?](/azure/azure-local/concepts/gateway-overview).
 
-- Software Load Balancer (SLB) and Network Address Translation (NAT) enhances throughput by supporting Direct Server Return. This allows the return network traffic to bypass the Load Balancing multiplexer, and can be achieved using a north-south and east-west layer 4 load balancer and NAT. To learn more, see [What is Software Load Balancer (SLB) for SDN?](/azure-stack/hci/concepts/software-load-balancer) and [Network Function Virtualization](../networking/sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).
+- Software Load Balancer (SLB) and Network Address Translation (NAT) enhances throughput by supporting Direct Server Return. This allows the return network traffic to bypass the Load Balancing multiplexer, and can be achieved using a north-south and east-west layer 4 load balancer and NAT. To learn more, see [What is Software Load Balancer (SLB) for SDN?](/azure/azure-local/concepts/software-load-balancer) and [Network Function Virtualization](../networking/sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).
 
 - Flexible encapsulation technologies that operate at the data plane and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE).
 
-For more information, see [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure).
+For more information, see [Plan a Software Defined Network Infrastructure](/azure/azure-local/concepts/plan-software-defined-networking-infrastructure).
 
 ### Cloud scale fundamentals
 
@@ -271,7 +271,7 @@ Windows Server 2016 includes the following cloud scale fundamentals:
 
 - Packet Direct provides a high network traffic throughput and low-latency packet processing infrastructure.
 
-- Switch Embedded Teaming (SET) is a NIC Teaming solution integrated into the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICs into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to using Server Message Block (SMB) and RDMA. You can also use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+- Switch Embedded Teaming (SET) is a NIC Teaming solution integrated into the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICs into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to using Server Message Block (SMB) and RDMA. You can also use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
 ### TCP performance improvements
 
@@ -412,7 +412,7 @@ Control Flow Guard (CFG) is a platform security feature that was created to comb
 
 Storage Spaces Direct enables building highly available and scalable storage using servers with local storage. It simplifies deploying and managing software-defined storage systems and lets you use new classes of disk devices, such as SATA SSDs and NVMe disk devices, that previously weren't available with clustered Storage Spaces with shared disks.
 
-For more details, see [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview).
+For more details, see [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview).
 
 ### Storage Replica
 

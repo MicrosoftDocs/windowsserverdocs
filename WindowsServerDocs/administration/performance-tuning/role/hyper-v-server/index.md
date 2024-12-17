@@ -2,14 +2,14 @@
 title: Performance Tuning Hyper-V Servers
 description: Performance tuning guidelines for Hyper-V
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 03/08/2024
 ---
 
 # Performance Tuning Hyper-V Servers
 
-Hyper-V is the virtualization server role in Windows Server and Azure Stack HCI. Virtualization servers can host multiple virtual machines that are isolated from each other but share the underlying hardware resources by virtualizing the processors, memory, and I/O devices. By consolidating servers onto a single machine, virtualization can improve resource usage and energy efficiency and reduce the operational and maintenance costs of servers. In addition, virtual machines and the management APIs offer more flexibility for managing resources, balancing load, and provisioning systems.
+Hyper-V is the virtualization server role in Windows Server and Azure Local. Virtualization servers can host multiple virtual machines that are isolated from each other but share the underlying hardware resources by virtualizing the processors, memory, and I/O devices. By consolidating servers onto a single machine, virtualization can improve resource usage and energy efficiency and reduce the operational and maintenance costs of servers. In addition, virtual machines and the management APIs offer more flexibility for managing resources, balancing load, and provisioning systems.
 
 ## Additional References
 

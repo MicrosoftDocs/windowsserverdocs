@@ -2,7 +2,7 @@
 title: Troubleshoot Cache and Memory Manager Performance Issues
 description: Troubleshoot Cache and Memory Manager Performance Issues on Windows Server 2016
 ms.topic: article
-ms.author: pavel
+ms.author: roharwoo
 author: robinharwood
 ms.date: 02/07/2023
 ---
@@ -33,7 +33,7 @@ The problem used to be mitigated by *DynCache* tool. In Windows Server 2012+, t
 
 This problem is indicated by a high number of active Mapped file pages in RAMMAP output. This usually indicates that some application on the server is opening numerous large files using [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) API with `FILE_FLAG_RANDOM_ACCESS` flag set.
 
-This issue is described in detail in KB article [2549369](https://support.microsoft.com/default.aspx?scid=kb;en-US;2549369). `FILE_FLAG_RANDOM_ACCESS` flag is a hint for Cache Manager to keep mapped views of the file in memory as long as possible (until Memory Manager doesn't signal low memory condition). At the same time, this flag instructs Cache Manager to disable prefetching of file data.
+`FILE_FLAG_RANDOM_ACCESS` flag is a hint for Cache Manager to keep mapped views of the file in memory as long as possible (until Memory Manager doesn't signal low memory condition). At the same time, this flag instructs Cache Manager to disable prefetching of file data.
 
 This situation has been mitigated to some extent by working set trimming improvements in Windows Server 2012+, but the issue itself needs to be primarily addressed by the application vendor by not using `FILE_FLAG_RANDOM_ACCESS`. An alternative solution for the app vendor might be to use low memory priority when accessing the files. This can be achieved using the [SetThreadInformation](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadinformation) API. Pages that are accessed at low memory priority are removed from the working set more aggressively.
 

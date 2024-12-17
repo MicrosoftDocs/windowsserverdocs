@@ -1,7 +1,7 @@
 ---
 title: VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch
 description: Learn what to do when the following network adapters are capable of virtual machine queue (VMQ) but the capability is disabled.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 93d1b155-bf44-46b0-bb69-d34d5b30e574
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

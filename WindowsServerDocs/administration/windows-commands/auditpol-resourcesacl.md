@@ -3,7 +3,7 @@ title: auditpol resourceSACL
 description: Reference article for the auditpol resourceSACL command, which configures global resource system access control lists (SAcls).
 ms.topic: reference
 ms.assetid: 28771ba7-967a-45e9-9bf0-b2a2673070f0
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # auditpol resourceSACL
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 7 and Windows Server 2008 R2
+
 
 Configures global resource system access control lists (SACLs).
 

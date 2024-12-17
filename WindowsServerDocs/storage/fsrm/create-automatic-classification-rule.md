@@ -5,11 +5,11 @@ ms.date: 7/7/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Create an Automatic Classification Rule
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>
 
 The following procedure guides you through the process of creating a classification rule. Each rule sets the value for a single property. By default, a rule is run only once and ignores files that already have a property value assigned. However, you can configure a rule to evaluate files regardless of whether a value is already assigned to the property.
 

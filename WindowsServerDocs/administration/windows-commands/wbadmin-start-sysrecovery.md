@@ -3,7 +3,7 @@ title: wbadmin start sysrecovery
 description: Reference article for the wbadmin start sysrecovery command, which performs a system recovery (bare metal recovery) using your specified parameters.
 ms.topic: reference
 ms.assetid: 95b8232f-7c42-452b-838e-15b0cf6faebe
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

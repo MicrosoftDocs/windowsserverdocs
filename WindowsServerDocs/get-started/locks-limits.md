@@ -4,7 +4,7 @@ description: In this article, you can compare the operating system locks and lim
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 07/22/2024
+ms.date: 10/25/2024
 zone_pivot_groups: windows-os-version
 ---
 
@@ -15,9 +15,6 @@ Use this article to compare the operating system locks and limits across the dif
 ## Locks and limits
 
 :::zone pivot="windows-server-2025"
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 # [Full Comparison](#tab/full-comparison)
 

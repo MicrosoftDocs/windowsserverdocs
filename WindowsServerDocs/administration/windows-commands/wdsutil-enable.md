@@ -3,7 +3,7 @@ title: wdsutil enable
 description: Reference article for the wdsutil enable commands, which enables all services for Windows Deployment Services.
 ms.topic: reference
 ms.assetid: aafebfb2-fff0-41c9-a095-8884acf49f50
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil enable commands
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables all services for Windows Deployment Services.
 

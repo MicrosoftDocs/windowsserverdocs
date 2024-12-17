@@ -7,7 +7,6 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, davean
 ms.custom: sap:administration, csstroubleshoot
 ---
@@ -15,7 +14,7 @@ ms.custom: sap:administration, csstroubleshoot
 
 This article describes how a Remote Desktop Session Host (RDSH) server, Windows 10 Enterprise multi-session, Windows 11 Enterprise multi-session, and Windows Server use Fair Share technologies to balance CPU, disk, and network bandwidth resources among multiple Remote Desktop sessions.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows 10 Enterprise multi-session, Windows 11 Enterprise multi-session  
+_
 _Original KB number:_ &nbsp; 4494631
 
 ## Introduction

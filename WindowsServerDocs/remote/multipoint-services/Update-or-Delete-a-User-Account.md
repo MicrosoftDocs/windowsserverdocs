@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: f7f55a35-c932-482c-97d4-ef3c1f390cbf
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Update or Delete a User Account
 If you are logged on as an administrative user on the MultiPoint Services system, you can modify any user account, including changing the level of access for an account, changing a full name and password, or deleting an account.

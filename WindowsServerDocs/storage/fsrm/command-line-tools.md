@@ -5,11 +5,11 @@ ms.date: 7/7/2017
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # File Server Resource Manager command-line tools
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>
 
 File Server Resource Manager installs the [FileServerResourceManager](/powershell/module/fileserverresourcemanager/)
 PowerShell cmdlets as well as the following command-line tools:

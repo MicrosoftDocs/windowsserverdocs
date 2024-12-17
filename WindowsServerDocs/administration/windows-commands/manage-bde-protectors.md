@@ -3,7 +3,7 @@ title: manage-bde protectors
 description: Reference article for the manage-bde protectors command, which manages the protection methods used for the BitLocker encryption key.
 ms.topic: reference
 ms.assetid: 1f9b22c5-cc93-45df-9165-bedee94998da
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 08/06/2018
@@ -11,7 +11,7 @@ ms.date: 08/06/2018
 
 # manage-bde protectors
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 Manages the protection methods used for the BitLocker encryption key.
 

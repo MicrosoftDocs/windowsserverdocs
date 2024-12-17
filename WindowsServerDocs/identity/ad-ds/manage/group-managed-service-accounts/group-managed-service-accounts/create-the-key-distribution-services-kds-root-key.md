@@ -3,14 +3,14 @@ title: Create the Key Distribution Services KDS Root Key
 description: Learn how to create a Microsoft Key Distribution Service (kdssvc.dll) root key on the domain controller using Windows PowerShell to generate group Managed Service Account passwords in Windows Server 2012 or later.
 ms.topic: article
 ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 04/10/2023
 ---
 # Create the Key Distribution Services KDS Root Key
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This article for the IT professional describes how to create a Microsoft Key Distribution Service (kdssvc.dll) root key on the domain controller using Windows PowerShell to generate group Managed Service Account passwords in Windows Server 2012 or later.
 

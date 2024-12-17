@@ -4,13 +4,13 @@ description: Learn how to create an access policy in the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Create an Access Policy
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to create an access policy in the IPAM client console.
 

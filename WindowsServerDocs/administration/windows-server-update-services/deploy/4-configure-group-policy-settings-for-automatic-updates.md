@@ -3,7 +3,7 @@ title: Step 4 - Configure Group Policy settings for automatic updates
 description: This article is step four in a four-step process for deploying Windows Server Update Services (WSUS).
 ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 09/21/2023
@@ -11,7 +11,7 @@ ms.date: 09/21/2023
 
 # Step 4: Configure Group Policy settings for automatic updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In an Active Directory environment, you can use Group Policy to define how computers and users can interact with Windows Update to obtain automatic updates from Windows Server Update Services (WSUS). This article refers to these computers and users as *WSUS clients*.
 

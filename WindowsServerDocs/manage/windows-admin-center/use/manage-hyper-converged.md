@@ -1,18 +1,18 @@
 ---
-title: Manage Azure Stack HCI
+title: Manage Azure Local
 description: Manage Hyper-Converged Infrastructure with Windows Admin Center (Project Honolulu)
 ms.topic: article
 author: daniellee-msft
-ms.author: jol
+ms.author: roharwoo
 ms.date: 03/15/2023
 ---
-# Manage Azure Stack HCI
+# Manage Azure Local
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 ## What is Hyper-Converged Infrastructure
 
-Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview), [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
+Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview), [Software Defined Networking](/azure/azure-local/concepts/software-defined-networking) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
 
 > [!Tip]
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
@@ -280,6 +280,6 @@ It's all about your feedback! The most important benefit of frequent updates is 
 ### Additional References
 
 - [Windows Admin Center](../overview.md)
-- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview)
 - [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md)
-- [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking)
+- [Software Defined Networking](/azure/azure-local/concepts/software-defined-networking)

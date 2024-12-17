@@ -4,13 +4,13 @@ description: Learn how to test DirectAccess connectivity from the internet and t
 manager: brianlic
 ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 CLIENT1 is now ready for DirectAccess testing.
 

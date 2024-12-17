@@ -145,7 +145,7 @@
     href: hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
     items:
     - name: Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)
-      href: /azure-stack/hci/concepts/host-network-requirements
+      href: /azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization
     - name: Manage Hyper-V Virtual Switch
       href: hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md
       items:

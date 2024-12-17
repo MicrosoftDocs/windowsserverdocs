@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 7a326085-7438-41de-9874-59aca393fa4a
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Set up a Station for Automatic Logon

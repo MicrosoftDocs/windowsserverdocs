@@ -3,15 +3,15 @@ title: Create a failover cluster
 description: How to create a failover cluster for Windows Server 2012 R2, Windows Server 2012, Windows Server 2016, and Windows Server 2019.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 manager: lizross
 ms.date: 3/14/2023
 ---
 # Create a failover cluster
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This article shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The article covers a typical deployment in which computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster instead, see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md). For information about using a failover cluster in Azure Stack HCI, see [Create an Azure Stack HCI](/azure-stack/hci/deploy/create-cluster).
+
+This article shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The article covers a typical deployment in which computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster instead, see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md). For information about using a failover cluster in Azure Local, see [Create an Azure Local](/azure/azure-local/deploy/create-cluster?context=/windows-server/context/windows-server-failover-clustering).
 
 You can also deploy an Active Directory-detached cluster. This deployment method enables you to create a failover cluster without permissions to create computer objects in AD DS or the need to request that computer objects are prestaged in AD DS. This option is only available through Windows PowerShell and is only recommended for specific scenarios. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
@@ -133,7 +133,7 @@ To complete this step, make sure that the user account that you log on as meets 
 
     Realize that it may take some time for the cluster name to successfully replicate in DNS. After successful DNS registration and replication, if you select **All Servers** in Server Manager, the cluster name should be listed as a server with a **Manageability** status of **Online**.
 
-After the cluster is created, you can do things such as verify cluster quorum configuration, and optionally, create Cluster Shared Volumes (CSV). For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum) and [Use Cluster Shared Volumes in a failover cluster](failover-cluster-csvs.md).
+After the cluster is created, you can do things such as verify cluster quorum configuration, and optionally, create Cluster Shared Volumes (CSV). For more information, see [Understanding Quorum in Storage Spaces Direct](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-storage) and [Use Cluster Shared Volumes in a failover cluster](failover-cluster-csvs.md).
 
 ## Create clustered roles
 

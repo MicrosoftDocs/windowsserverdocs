@@ -2,14 +2,14 @@
 title: Cluster-to-cluster storage replication cross-region in Azure
 description: Cluster-to-cluster storage replication cross-region in Azure
 author: arduppal
-ms.author: arduppal
+ms.author: roharwoo
 ms.date: 12/19/2018
 ms.topic: article
 manager: mchad
 ---
 # Cluster to Cluster Storage Replication Cross-Region in Azure
 
->Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can configure Cluster to Cluster Storage Replicas for cross-region applications in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
 

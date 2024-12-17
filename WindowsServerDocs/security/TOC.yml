@@ -1,18 +1,24 @@
 - name: Security and Assurance
   href: security-and-assurance.yml
   items:
+  - name: Windows Server 2025 Security Book
+    href: https://aka.ms/ws2025securitybook
   - name: Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
     href: gdpr/gdpr-winserver-whitepaper.md
   - name: Secured-core server
     href: secured-core-server.md
   - name: Configure Secured-core Server
     href: configure-secured-core-server.md
+  - name: Kernel Mode Hardware-enforced Stack Protection
+    href: kernel-mode-hardware-stack-protection.md  
   - name: OSConfig
     items:
     - name: OSConfig overview
       href: osconfig/osconfig-overview.md
     - name: 'OSConfig: How to configure security baselines'
       href: osconfig/osconfig-how-to-configure-security-baselines.md
+    - name: 'OSConfig: How to configure App Control for Business'
+      href: osconfig/osconfig-how-to-configure-app-control-for-business.md
   - name: Set up HGS for a guarded fabric and shielded VMs
     href: guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
     items:

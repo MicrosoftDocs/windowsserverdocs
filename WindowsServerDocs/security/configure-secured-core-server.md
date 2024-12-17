@@ -2,7 +2,7 @@
 title: Configure Secured-core server for Windows Server
 description: Learn how to configure Secured-core server in Windows Server using the Windows Security app, Group Policy and Windows Admin Center.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 05/26/2023
 ms.custom: template-how-to-pattern
@@ -39,8 +39,8 @@ installed and enabled in the BIOS:
 > sure to check your hardware manufacturer's Secured-core server enablement guide.
 
 You can find hardware certified for Secured-core server from the 
-[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Stack HCI servers in the
-[Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
+[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Local servers in the
+[Azure Local Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
 
 ## Enable security features
 

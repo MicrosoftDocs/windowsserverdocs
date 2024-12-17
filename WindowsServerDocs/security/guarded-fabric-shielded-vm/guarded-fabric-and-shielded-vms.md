@@ -4,13 +4,13 @@ title: Guarded Fabric and Shielded VMs overview
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 02/16/2023
 ---
 
 # Guarded fabric and shielded VMs overview
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 Virtualization security is a major investment area in Hyper-V. In addition to protecting hosts or other virtual machines from a virtual machine running malicious software, we also need to protect virtual machines from a compromised host. This is a fundamental danger for every virtualization platform today, whether it's Hyper-V, VMware or any other. If a virtual machine gets out of an organization (either maliciously or accidentally), that virtual machine can be run on any other system. Protecting high value assets in your organization, such as domain controllers, sensitive file servers, and HR systems, is a top priority.
 

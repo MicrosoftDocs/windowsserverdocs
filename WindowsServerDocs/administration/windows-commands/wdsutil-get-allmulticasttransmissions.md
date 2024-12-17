@@ -3,7 +3,7 @@ title: wdsutil get-allmulticasttransmissions
 description: Reference article for wdsutil get-allmulticasttransmissions, which displays information about all multicast transmissions on a server.
 ms.topic: reference
 ms.assetid: 95b8fb79-7a8a-4f0c-88f4-92bc1111c67f
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil get-allmulticasttransmissions
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about all multicast transmissions on a server.
 

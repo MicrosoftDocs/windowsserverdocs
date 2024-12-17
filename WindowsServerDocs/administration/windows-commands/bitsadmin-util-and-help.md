@@ -2,7 +2,7 @@
 title: bitsadmin util and help
 description: Reference article for the bitsadmin util and help command that displays the command-line usage for the /util switches.
 ms.topic: reference
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 04/01/2023
 ---

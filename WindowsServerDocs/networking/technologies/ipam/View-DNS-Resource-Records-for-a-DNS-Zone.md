@@ -4,13 +4,13 @@ description: Learn how to view DNS resource records for a DNS zone in the IPAM c
 manager: brianlic
 ms.topic: article
 ms.assetid: 375feefc-949e-47c3-9e61-35b79e021966
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # View DNS Resource Records for a DNS Zone
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to view DNS resource records for a DNS zone in the IPAM client console.
 

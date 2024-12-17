@@ -3,7 +3,7 @@ title: wdsutil get-allnamespaces
 description: Reference article for wdsutil get-allnamespaces, which displays information about all namespaces on a server.
 ms.topic: reference
 ms.assetid: e8fe896d-a69a-4180-923b-9f18185f5941
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil get-allnamespaces
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about all namespaces on a server.
 

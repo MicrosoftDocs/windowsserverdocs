@@ -4,7 +4,7 @@ description: Reference article for the robocopy command, which copies file data 
 ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: xelu86
-ms.author: wscontent
+ms.author: alalve
 ms.date: 05/28/2024
 ---
 

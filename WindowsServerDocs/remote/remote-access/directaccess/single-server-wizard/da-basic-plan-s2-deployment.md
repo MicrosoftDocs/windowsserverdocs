@@ -4,13 +4,13 @@ description: Learn how to plan the settings for the Getting Started Wizard.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Plan the Basic DirectAccess Deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 After planning the DirectAccess infrastructure, the next step in deploying DirectAccess on a single server with basic settings is to plan the settings for the Getting Started Wizard.
 

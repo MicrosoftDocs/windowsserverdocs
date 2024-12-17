@@ -4,13 +4,13 @@ description: This topic provides an overview of BranchCache in Windows Server 20
 manager: brianlic
 ms.topic: article
 ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # BranchCache
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic, which is intended for Information Technology (IT) professionals, provides overview information about BranchCache, including BranchCache modes, features, capabilities, and the BranchCache functionality that is available in different operating systems.
 
@@ -139,7 +139,7 @@ Because BranchCache does not require new hardware or network topology changes, i
 > Because some Web proxies cannot process non-standard Content-Encoding headers, it is recommended that you use BranchCache with Hyper Text Transfer Protocol Secure (HTTPS) and not HTTP.
 
 =======
-For more information about cloud technologies in Windows Server 2016, see [Software Defined Networking &#40;SDN&#41;](/azure-stack/hci/concepts/software-defined-networking).
+For more information about cloud technologies in Windows Server 2016, see [Software Defined Networking &#40;SDN&#41;](/azure/azure-local/concepts/software-defined-networking?context=/windows-server/context/windows-server-edge-networking).
 
 ## <a name="bkmk_version"></a>Content information versions
 

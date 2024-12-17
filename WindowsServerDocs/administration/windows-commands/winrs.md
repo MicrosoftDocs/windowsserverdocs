@@ -2,13 +2,13 @@
 title: winrs
 description: Reference article for the winrs command that allows you to manage and execute programs remotely.
 ms.topic: reference
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 04/01/2023
 ---
 # winrs
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Windows remote Management using the winrs command enables you to manage and execute programs remotely.
 

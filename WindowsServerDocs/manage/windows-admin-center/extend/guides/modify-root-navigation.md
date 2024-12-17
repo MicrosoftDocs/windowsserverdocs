@@ -3,13 +3,13 @@ title: Modify root navigation behavior
 description: Develop a solution extension Windows Admin Center SDK - modify root navigation behavior
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 04/01/2023
 ---
 
 # Modify root navigation behavior for a solution extension
 
-Applies to: Windows Admin Center, Windows Admin Center Preview
+
 
 This article provides guidance on how to modify the root navigation behavior for your solution to have different connection list behavior. You'll also learn how to hide or show the tools list.
 

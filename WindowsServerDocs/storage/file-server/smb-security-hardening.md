@@ -3,8 +3,8 @@ title: SMB security hardening in Windows Server and Windows Client
 description: Learn about SMB security enhancements that help harden your Windows Server 2025 environment and Windows 11 client devices.
 ms.topic: article
 author: xelu86
-ms.author: wscontent
-ms.date: 09/26/2024
+ms.author: alalve
+ms.date: 10/25/2024
 ---
 
 # SMB security hardening
@@ -13,9 +13,9 @@ The latest SMB (Server Message Block) features introduced in Windows 11 24H2 and
 
 Users can download the following versions to preview the security features before our major Operating System (OS) release:
 
-- [Windows 11 Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewiso)
+- Windows 11, version 24H2 or later
 
-- [Windows Server 2025 Evaluation Preview](https://www.microsoft.com/evalcenter/download-windows-server-2025)
+- Windows Server 2025 or later
 
 ## SMB security features
 
@@ -77,7 +77,7 @@ To learn more, see:
 
 The SMB NetBIOS ports are no longer included in the built-in firewall rules. These ports were only required for SMB1 usage, which is now deprecated and removed by default. This modification aligns SMB firewall rules with the standard behavior of the *Windows Server File Server* role. Administrators are able to reconfigure the rules to restore the legacy ports.
 
-To learn more, see [Updated firewall rules](smb-secure-traffic.md#updated-firewall-rules-preview).
+To learn more, see [Updated firewall rules](smb-secure-traffic.md#updated-firewall-rules).
 
 ### SMB insecure guest authentication
 

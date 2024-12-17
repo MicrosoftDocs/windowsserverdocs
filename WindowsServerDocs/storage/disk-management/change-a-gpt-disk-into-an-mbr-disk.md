@@ -5,12 +5,12 @@ ms.date: 08/22/2024
 ms.topic: conceptual
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Convert a GPT disk into an MBR disk
 
-> **Applies to:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 Master Boot Record (MBR) disks use the standard BIOS partition table. GUID partition table (GPT) disks use the Unified Extensible Firmware Interface (UEFI). MBR disks don't support more than four partitions on each disk. The MBR partition method isn't recommended for disks larger than 2 terabytes (TB).
 

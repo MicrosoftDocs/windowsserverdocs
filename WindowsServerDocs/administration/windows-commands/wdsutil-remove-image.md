@@ -3,7 +3,7 @@ title: wdsutil remove-image
 description: Reference article for wdsutil remove-image, which deletes an image from a server.
 ms.topic: reference
 ms.assetid: ce5e2384-2264-4b22-92af-74eec8c10ae0
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil remove-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes an image from a server.
 

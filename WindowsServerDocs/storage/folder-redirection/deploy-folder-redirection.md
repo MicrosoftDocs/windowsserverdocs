@@ -3,13 +3,13 @@ title: Deploy Folder Redirection with Offline Files
 description: Learn how to deploy Folder Redirection and Offline Files together, including the steps needed to control access to the redirected files.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 03/20/2023
 ---
 
 # Deploy Folder Redirection with Offline Files
 
-> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 This article describes the requirements for deploying Folder Redirection and Offline Files together, including the steps that you need to follow to control access to the redirected files.
 

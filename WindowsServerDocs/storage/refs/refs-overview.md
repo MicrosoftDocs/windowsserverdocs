@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Resilient File System (ReFS) overview"
 title: Resilient File System (ReFS) overview
-ms.author: wscontent
+ms.author: roharwoo
 manager: candyc
 ms.topic: article
 author: wbsmolen
@@ -9,7 +9,7 @@ ms.date: 10/28/2022
 ---
 # Resilient File System (ReFS) overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity with resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations.
 
@@ -41,10 +41,10 @@ In addition to providing resiliency improvements, ReFS introduces new features f
   Once these tiers are configured, ReFS uses them to deliver fast storage for hot data and capacity-efficient storage for cold data:
   
   - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real time.
-  - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
+  - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
 
   > [!NOTE]
-  > For Windows Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
+  > For Windows Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
 
 - **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
   - [Block cloning](./block-cloning.md) - block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations.
@@ -68,9 +68,9 @@ Microsoft has developed NTFS specifically for general-purpose use with a wide ra
 
 ### Storage Spaces Direct
 
-Deploying ReFS on [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) is recommended for virtualized workloads or network-attached storage:
+Deploying ReFS on [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) is recommended for virtualized workloads or network-attached storage:
 
-- Mirror-accelerated parity and [the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache) deliver high performance and capacity-efficient storage.
+- Mirror-accelerated parity and [the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage) deliver high performance and capacity-efficient storage.
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Integrity-streams, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly detect and correct storage controller and storage media corruptions within both metadata and data.
 - ReFS provides the functionality to scale and support large data sets.
@@ -177,7 +177,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 ## Additional References
 
 - [Cluster size recommendations for ReFS and NTFS](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
-- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
 - [ReFS block cloning](block-cloning.md)
 - [ReFS integrity streams](integrity-streams.md)
 - [Troubleshoot ReFS with ReFSUtil](../../administration/windows-commands/refsutil.md)

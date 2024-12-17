@@ -3,13 +3,13 @@ title: Add a module to a tool extension
 description: Develop a tool extension in Windows Admin Center SDK (Project Honolulu) - Add a module to a tool extension.
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 04/01/2023
 ---
 
 # Add a module to a tool extension
 
-Applies to: Windows Admin Center, Windows Admin Center Preview
+
 
 In this article, add an empty module to a tool extension we've created with the Windows Admin Center CLI.
 

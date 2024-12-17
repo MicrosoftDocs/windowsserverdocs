@@ -1,7 +1,7 @@
 ---
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment by confirming the make and model of your SSD, inspecting for faulty drives, and more.
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: article
 author: robinharwood
 ms.date: 06/06/2023
@@ -9,7 +9,7 @@ ms.date: 06/06/2023
 
 # Troubleshoot Storage Spaces Direct
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 Use the information in this article to troubleshoot your Storage Spaces Direct deployment.
 

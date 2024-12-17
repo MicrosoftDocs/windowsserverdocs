@@ -1,6 +1,6 @@
 ---
 title: Dynamic Processor compatibility mode
-description: Describes how to use dynamic processor compatibility mode to move a live virtual machine or move a saved virtual machine on Windows Server and Azure Stack HCI.
+description: Describes how to use dynamic processor compatibility mode to move a live virtual machine or move a saved virtual machine on Windows Server and Azure Local.
 ms.topic: how-to
 author: meaghanlewis
 ms.author: mosagie
@@ -12,13 +12,13 @@ zone_pivot_groups: windows-os
 # Dynamic processor compatibility mode
 
 :::zone pivot="windows-server"
-> Applies to: Windows Server 2025
+> 
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-22h2.md)]
+[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-22h2.md)]
 
 ::: zone-end
 
@@ -31,9 +31,9 @@ Processor compatibility mode allows you to move a live VM (live migrating) or mo
 > [!IMPORTANT]
 > Only Hyper-V VMs with the latest configuration version (10.0) benefit from the dynamic configuration. VMs with older versions don't benefit from the dynamic configuration and won't continue to use [fixed processor capabilities](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn859550(v=ws.11)) from the previous version.
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-We recommend enabling processor compatibility mode for VMs running on Azure Stack HCI. This provides the highest level of capabilities, and when it's time to migrate to new hardware, moving the VMs doesn't require downtime.
+We recommend enabling processor compatibility mode for VMs running on Azure Local. This provides the highest level of capabilities, and when it's time to migrate to new hardware, moving the VMs doesn't require downtime.
 
 :::zone-end
 
@@ -97,7 +97,7 @@ If you're concerned about the performance impact of processor compatibility mode
 
 ## Configure a VM to use processor compatibility mode
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 This section explains how to configure a VM to use processor compatibility mode. It's possible to run VMs with and without compatibility mode in the same cluster.
 
@@ -116,12 +116,12 @@ To enable processor compatibility mode using Windows Admin Center:
 
 :::image type="content" source="media/dynamic-processor-compatibility-mode/processor-compatibility.png" alt-text="Screenshot of the checkbox to enable processor compatibility." lightbox="media/dynamic-processor-compatibility-mode/processor-compatibility.png":::
 
-1. If you want to set the VM's CPU features to the maximum level supported by all servers in a cluster, select **Compatible across the cluster (Recommended)**. This maximizes VM performance while preserving the ability to move the running VM to other servers in the cluster. We recommend enabling this for all VMs running on Azure Stack HCI 21H2 clusters. If disabled, the VM must be restarted to move to a host with a different level of supported CPU instructions, common with different generations of CPUs. 
+1. If you want to set the VM's CPU features to the maximum level supported by all servers in a cluster, select **Compatible across the cluster (Recommended)**. This maximizes VM performance while preserving the ability to move the running VM to other servers in the cluster. We recommend enabling this for all VMs running on Azure Local 21H2 clusters. If disabled, the VM must be restarted to move to a host with a different level of supported CPU instructions, common with different generations of CPUs. 
 
    Alternatively, if you want to set the VM's CPU features to minimum to ensure that you can move the running VM to other Hyper-V hosts outside the cluster as long as they have the same CPU manufacturer, select **Compatible across other hosts with the same CPU manufacturer**.
 
    > [!NOTE]
-   > Like dynamic processor compatibility mode, **Compatible across the cluster** is exclusive to Azure Stack HCI 21H2 and is not supported for any other operating systems.
+   > Like dynamic processor compatibility mode, **Compatible across the cluster** is exclusive to Azure Local 21H2 and is not supported for any other operating systems.
 
 1. Select **Save processor settings** and restart the VM.
 

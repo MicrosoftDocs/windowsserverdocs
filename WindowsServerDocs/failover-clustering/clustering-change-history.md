@@ -5,12 +5,12 @@ description: New and updated topics in the Failover Clustering documentation for
 ms.topic: article
 author: robinharwood
 manager: lizross
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 01/07/2020
 ---
 # Change history for Failover Clustering topics
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server.
 
@@ -58,7 +58,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[Cluster sets](/azure-stack/hci/deploy/cluster-set)| New topic|
+|[Cluster sets](cluster-set.md)| New topic|
 
 ## May 2018
 

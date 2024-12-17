@@ -4,12 +4,12 @@ ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.topic: article
 author: RobHindman
-ms.author: robhind
+ms.author: helohr
 ms.date: 10/20/2021
 ---
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+
 
 Simplified SMB Multichannel and Multi-Network Interface Card (NIC) Cluster Networks is a feature that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Multichannel.
 

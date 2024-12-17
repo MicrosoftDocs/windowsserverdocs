@@ -2,22 +2,19 @@
 title: Active Directory Domain Services functional levels
 description: Learn more about the different Active Directory Domain and Forest functional levels in Windows Server
 ms.topic: conceptual
-ms.author: wscontent
+ms.author: roharwoo
 author: gswashington
-ms.date: 07/26/2024
+ms.date: 10/25/2024
 ---
 # Active Directory Domain Services functional levels
 
->Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012
+>
 
 Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels don't affect which operating systems you can run on workstations and member servers joined to the domain or forest. This article describes which functioning levels are compatible with which versions of Windows Server.
 
 When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support in order to use as many AD DS features as possible. When you deploy a new forest, you need to set both the forest and domain functional levels. You can set the domain functional level to a value that's higher than the forest functional level, but you can't set the domain functional level to a value lower than the forest functional level.
 
-## Windows Server 2025 (preview) functional levels
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+## Windows Server 2025 functional levels
 
 You can use the following operating systems as domain controllers (DCs) with the Windows Server 2025 forest and domain function level.
 
@@ -38,7 +35,7 @@ To learn more about these new features, see [What's new in Windows Server 2025](
 
 You can use the following operating systems as domain controllers (DCs) with the Windows Server 2016 forest and domain function level.
 
-- Windows Server 2025 (preview)
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
@@ -64,7 +61,6 @@ All default Active Directory features in earlier domain functional levels plus t
 
 You can use the following operating systems as domain controllers (DCs) with the Windows Server 2012 R2 forest and domain function level.
 
-- Windows Server 2025 (preview)
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016

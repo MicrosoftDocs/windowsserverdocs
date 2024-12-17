@@ -1,7 +1,7 @@
 ---
 title: Windows 7 should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows 7 is configured with less than the minimum amount of RAM, which is 512 MB.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 1b81ec0b-ceca-4fba-83ea-90d5f1d9bda8
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Windows 7 should be configured with at least the minimum amount of memory
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

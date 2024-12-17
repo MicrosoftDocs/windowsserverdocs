@@ -5,13 +5,13 @@ description: "Learn more about: iSCSI target boot overview"
 ms.topic: article
 author: robinharwood
 manager: dougkim
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 09/11/2018
 ---
 
 # iSCSI target boot overview
 
-> **Applies to:** Windows Server 2016
+> **
 
 iSCSI Target Server in Windows Server can boot hundreds of computers from a single operating system image that is stored in a centralized location. This improves efficiency, manageability, availability, and security.
 

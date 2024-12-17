@@ -5,12 +5,12 @@ title: Running Data Deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl
-ms.author: wgries
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Running Data Deduplication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 ## <a id="running-dedup-jobs-manually"></a>Running Data Deduplication jobs manually
 

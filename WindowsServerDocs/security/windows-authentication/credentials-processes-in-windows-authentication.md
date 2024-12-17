@@ -3,13 +3,13 @@ title: Credentials Processes in Windows Authentication
 description: Learn about how Windows authentication processes credentials.
 ms.topic: article
 ms.assetid: 48c60816-fb8b-447c-9c8e-800c2e05b14f
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 09/13/2023
 ---
 # Credentials Processes in Windows Authentication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This reference topic for the IT professional describes how Windows authentication processes credentials.
 

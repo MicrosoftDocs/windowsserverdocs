@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 63f99c10-0289-4e79-b596-7c19160b3ad0
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Block or Unblock USB Storage

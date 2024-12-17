@@ -4,12 +4,12 @@ description: Learn about client licensing in Remote Desktop Services, the RDS CA
 ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 09/10/2024
 ---
 # License your RDS deployment with client access licenses (CALs)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Each user and device that connects to a Remote Desktop Session host needs a client access license (CAL). You use RD Licensing to install, issue, and track RDS CALs.
 

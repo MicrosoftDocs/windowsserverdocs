@@ -3,7 +3,7 @@ title: schtasks create
 description: Reference article for the schtasks create command to automate tasks.
 ms.topic: reference
 author: xelu86
-ms.author: wscontent
+ms.author: alalve
 ms.date: 10/10/2023
 ---
 

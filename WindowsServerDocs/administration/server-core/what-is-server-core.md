@@ -4,14 +4,14 @@ description: Learn about the Server Core installation option in Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
+ms.author: alalve
 ms.date: 02/20/2018
 ms.topic: conceptual
 ---
 
 # What is the Server Core installation option in Windows Server?
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 The Server Core option is a minimal installation option that is available when you are deploying the Standard or Datacenter edition of Windows Server. Server Core includes most but not all server roles. Server Core has a smaller disk footprint, and therefore a smaller attack surface due to a smaller code base.
 

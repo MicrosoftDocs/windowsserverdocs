@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: 3060c531-98a2-4957-a02c-be273f25f493
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Prepare to migrate to MultiPoint Services in Windows Server 2016
 
->Applies to: Windows Server 2016
+>
 
 Use the following information to gather the information you need to migrate the MultiPoint Services role service from a source server running an earlier release of Windows Server 2016 to a destination server running Windows Server 2016 RTM.
 

@@ -2,14 +2,14 @@
 description: Upgrade your domain and forest functional level in Active Director Domain Services for Windows Server
 title: Learn about upgrading your domain and forest functional levels in Active Directory Domain Services.
 author: robinharwood
-ms.author: wscontent
-ms.date: 07/15/2024
+ms.author: roharwoo
+ms.date: 10/25/2024
 ms.topic: conceptual
 ---
 
 # Identifying your functional level upgrade
 
->Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 In this article learn about the process for upgrading your domain and forest functional levels in Active Directory Domain Services.
 
@@ -35,7 +35,7 @@ Consider the following items when assessing your current environment:
 
 - Check for any incompatible software or applications that might prevent you from upgrading to a newer version of Windows Server.
 
-- Check for removed features to make sure that none are being used. To learn more about removed features, see [Features removed or no longer developed starting with Windows Server 2025 (preview)](../../../get-started/removed-deprecated-features-windows-server-2025.md).
+- Check for removed features to make sure that none are being used. To learn more about removed features, see [Features removed or no longer developed starting with Windows Server 2025](../../../get-started/removed-deprecated-features-windows-server-2025.md).
 
 Documenting this information can help you identify the steps to take to ensure that you have a fully functional Windows Server environment.
 
@@ -43,12 +43,9 @@ After you assess your current environment, identify the target functional level 
 
 This article discusses the following upgrade options:
 
-- Upgrade to a Windows Server 2025 (preview) forest
+- Upgrade to a Windows Server 2025 forest
 
 - Upgrade to a Windows Server 2016 forest
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ## Upgrade functional levels to Windows Server 2025
 

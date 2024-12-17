@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: 864405bb-47ed-4c83-97a2-8df4c6e6f96b
 author: robinharwood
 manager: dongill
-ms.author: wscontent
+ms.author: roharwoo
 ---
 # Planning worksheet for MultiPoint Services migration
 
->Applies to: Windows Server 2016
+>
 
 Use the following lists and tables to gather the settings you need during MultiPoint Services migration.
 

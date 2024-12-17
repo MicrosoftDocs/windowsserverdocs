@@ -1,7 +1,7 @@
 ---
 title: Windows 8.1 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows 8.1 is configured with less than the recommended amount of RAM, which is 1 GB.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 4972101a-c266-4045-bdd6-4e75a9cd750e
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Windows 8.1 should be configured with the recommended amount of memory
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

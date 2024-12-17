@@ -3,7 +3,7 @@ title: change logon
 description: Reference article for the change logon command, which enables or disables logons from client sessions, or displays current logon status.
 ms.topic: reference
 ms.assetid: 41466260-aee9-4333-bcb6-178112c22afd
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # change logon
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables or disables logons from client sessions, or displays current logon status. This utility is useful for system maintenance. You must be an administrator to run this command.
 

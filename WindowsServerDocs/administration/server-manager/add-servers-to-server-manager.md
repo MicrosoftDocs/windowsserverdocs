@@ -3,7 +3,7 @@ title: Add Servers to Server Manager
 description: Learn how to add servers to the Server Manager server pool.
 ms.topic: article
 ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 02/01/2018
@@ -11,7 +11,7 @@ ms.date: 02/01/2018
 
 # Add Servers to Server Manager
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In Windows Server you can manage multiple remote servers by using a single Server Manager console. Servers that you want to manage by using Server Manager can be running Windows Server 2016,  Windows Server 2012 R2,  Windows Server 2012,  Windows Server 2008 R2, or  Windows Server 2008. Note that you cannot manage a newer release of Windows Server with an older release of Server Manager.
 

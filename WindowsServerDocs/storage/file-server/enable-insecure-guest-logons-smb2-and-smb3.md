@@ -2,9 +2,9 @@
 title: Enable insecure guest logons in SMB2 and SMB3 for Windows client and Windows Server
 description: This article describes how to enable guest logons policy in SMB2 and SMB3 for Windows client and Windows Server devices using Group Policy and PowerShell.
 ms.topic: how-to
-ms.author: wscontent
+ms.author: alalve
 author: xelu86
-ms.date: 06/05/2024
+ms.date: 10/25/2024
 ---
 
 # How to enable insecure guest logons in SMB2 and SMB3
@@ -30,7 +30,7 @@ SMB2 and SMB3 have the following behavior for different versions of Windows:
 
 - In Windows 11 Pro Insider Preview build 25267, and all subsequent builds, guest credentials can't be used to connect to a remote share by default, even if requested by the remote server.
 
-- SMB signing is required by default for Windows 11 Insiders, Windows Server 2025 (preview), and later builds which results in compatibility issues with guest authentication if signing doesn't succeed.
+- SMB signing is required by default for Windows 11, version 24H2, Windows Server 2025, and later builds which results in compatibility issues with guest authentication if signing doesn't succeed.
 
 > [!NOTE]
 > This behavior is present in various versions of Windows 10, including 1709, 1803, 1903, 1909, 2004, 20H2, and 21H1, as long as [KB5003173](https://support.microsoft.com/topic/may-11-2021-kb5003173-os-builds-19041-985-19042-985-and-19043-985-2824ace2-eabe-4c3c-8a49-06e249f52527) is installed.
@@ -61,7 +61,7 @@ Before you can begin modifying insecure guest logons for the SMB client, you nee
 
 If you're planning on to enable auditing for insecure guest logons, the SMB client must be running on one of the following operating systems.
 
-- Windows 11 Insider Preview Build 25267 or later.
+- Windows 11, version 24H2 or later.
 - Windows Server 2025.
 
 ## Enable insecure guest logons

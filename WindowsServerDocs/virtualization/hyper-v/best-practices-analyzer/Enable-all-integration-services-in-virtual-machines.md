@@ -1,7 +1,7 @@
 ---
 title: Enable all integration services in virtual machines
 description: Learn what to do when one or more integration services are disabled or not working in a virtual machine.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.topic: article
 ms.assetid: 16e202ad-3795-40c9-8176-7ca319e56d26
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Enable all integration services in virtual machines
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

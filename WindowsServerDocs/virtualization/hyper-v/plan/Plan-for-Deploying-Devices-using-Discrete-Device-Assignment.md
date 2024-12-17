@@ -2,14 +2,14 @@
 title: Plan for deploying devices by using Discrete Device Assignment
 description: Learn how Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 06/08/2023
 ---
 
 # Plan for deploying devices by using Discrete Device Assignment
 
-> Applies to: Windows Server 2022, Microsoft Hyper-V Server 2019, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
+> 
 
 Discrete Device Assignment allows physical Peripheral Component Interconnect Express (PCIe) hardware to be directly accessible from within a virtual machine (VM). This article discusses the type of devices that can be used, host system requirements, limitations imposed on the VMs, and security implications.
 
@@ -120,6 +120,6 @@ Before you use the script, ensure you have the Hyper-V role installed and you ru
 
 If the system is incorrectly configured to support Discrete Device Assignment, the tool displays an error message with details about the issue. If the system is correctly configured, the tool enumerates all devices located on the PCIe Bus.
 
-For each device it finds, the tool displays whether it's able to be used with Discrete Device Assignment. If a device is identified as being compatible with Discrete Device Assignment, the script provides a reason. When a device is successfully identified as being compatible, the device's Location Path is displayed. Additionally, if that device requires [MMIO space](#mmio-space), it's displayed as well.
+For each device it finds, the tool displays whether it's able to be used with Discrete Device Assignment. If a device is identified as being incompatible with Discrete Device Assignment, the script provides a reason. When a device is successfully identified as being compatible, the device's Location Path is displayed. Additionally, if that device requires [MMIO space](#mmio-space), it's displayed as well.
 
 :::image type="content" source="./images/hyper-v-surveydda-ps1.png" alt-text="Screenshot of the requirements displayed in SurveyDDA.ps1.":::

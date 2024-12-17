@@ -4,7 +4,7 @@ description: Azure Hybrid Benefit for Windows Server lets you reduce costs by us
 ms.date: 08/01/2024
 ms.topic: conceptual
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Azure Hybrid Benefit for Windows Server
@@ -42,7 +42,7 @@ To evaluate your potential cost savings, you can use these resources:
 
 - **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/) to estimate cost savings, or compare Windows VM pricing with and without Azure Hybrid Benefit.
 
-- **Azure Stack HCI:** [Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/hci).  
+- **Azure Stack HCI:** [Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-local/).  
 
 - **Azure Kubernetes Service (AKS):** [AKS on Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
 
@@ -142,7 +142,7 @@ Licenses must be used either on-premises or on Azure Stack HCI, but not on both.
 
 ### How to apply Azure Hybrid Benefit for Azure Stack HCI
 
-You need to activate Azure Hybrid Benefit for your Azure Stack HCI cluster. You can learn how to activate Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure-stack/hci/concepts/azure-hybrid-benefit).
+You need to activate Azure Hybrid Benefit for your Azure Stack HCI cluster. You can learn how to activate Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure/azure-local/concepts/azure-hybrid-benefit).
 
 # [AKS](#tab/aks)
 
@@ -204,4 +204,4 @@ You can purchase Software Assurance through Volume Licensing. Your Software Assu
 
 - [Azure Hybrid Benefit product page](https://azure.microsoft.com/pricing/hybrid-benefit)
 - [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
-- [Azure Hybrid Benefit for Azure Stack HCI](/azure-stack/hci/concepts/azure-hybrid-benefit-hci)
+- [Azure Hybrid Benefit for Azure Stack HCI](/azure/azure-local/concepts/azure-hybrid-benefit-hci)

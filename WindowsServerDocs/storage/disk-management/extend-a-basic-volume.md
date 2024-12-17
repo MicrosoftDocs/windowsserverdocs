@@ -5,12 +5,12 @@ ms.date: 08/21/2024
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Extend a basic volume
 
-> **Applies to:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 You can add space to an existing volume by extending the volume into available unallocated (empty) space on a disk drive. To extend a volume, the configuration of the volume and free space must satisfy the following conditions:
 

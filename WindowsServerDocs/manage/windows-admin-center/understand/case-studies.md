@@ -3,13 +3,13 @@ title: Windows Admin Center Case Studies
 description: Windows Admin Center Case Studies (Project Honolulu)
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 06/18/2018
 ---
 
 # Windows Admin Center Case Studies
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 ## Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 

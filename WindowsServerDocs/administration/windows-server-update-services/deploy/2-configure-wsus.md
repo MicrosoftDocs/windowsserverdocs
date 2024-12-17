@@ -3,7 +3,7 @@ title: Step 2 - Configure WSUS
 description: Windows Server Update Services (WSUS) topic - Configure WSUS is step two in a four-step process for deploying WSUS.
 ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 9/18/2020
@@ -11,7 +11,7 @@ ms.date: 9/18/2020
 
 # Step 2: Configure WSUS
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 After you install the Windows Server Update Services (WSUS) server role on your server, you need to properly configure it. You also need to configure your client computers to receive their updates from the WSUS server.
 

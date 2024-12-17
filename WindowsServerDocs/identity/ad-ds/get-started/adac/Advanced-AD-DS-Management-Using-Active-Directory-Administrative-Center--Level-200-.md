@@ -2,14 +2,14 @@
 description: "Learn more about: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)"
 ms.assetid: 4d21d27d-5523-4993-ad4f-fbaa43df7576
 title: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
-ms.author: wscontent
+ms.author: roharwoo
 author: iainfoulds
 ms.date: 09/16/2024
 ms.topic: article
 ---
 # Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 This article covers the updated Active Directory Administrative Center with its new Active Directory Recycle Bin, Fine-grained Password policy, and Windows PowerShell History Viewer in more detail, including architecture, examples for common tasks, and troubleshooting information. For an introduction, see [Introduction to Active Directory Administrative Center Enhancements &#40;Level 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).
 
