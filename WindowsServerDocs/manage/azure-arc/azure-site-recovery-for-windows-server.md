@@ -109,7 +109,7 @@ To report app feedback for disaster recovery or if other issues are encountered,
 
 1. Open the [Feedback Hub](https://aka.ms/feedbackhub) on your device.
 
-1. Under **Summerize your feedback**, type **Azure Arc disaster recovery (preview)**.
+1. Under **Summarize your feedback**, type **Azure Arc disaster recovery (preview)**.
 
 1. Under **Explain in more detail (optional)**, provide us:
 

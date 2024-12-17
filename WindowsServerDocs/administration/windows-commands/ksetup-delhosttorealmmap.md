@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 Removes a service principal name (SPN) mapping between the stated host and the realm. This command also removes any mapping between a host to realm (or multiple hosts to realm).
 
-The mapping is stored in the registry, under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Control\Lsa\Kerberos\HostToRealm`. After running this command, we recommend making sure the mapping appears in the registry.
+The mapping is stored in the registry, under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\HostToRealm`. After running this command, we recommend making sure the mapping appears in the registry.
 
 ## Syntax
 

@@ -315,7 +315,7 @@ When installing a new forest root domain, the Server Manager Active Directory Do
 
 The **Prerequisites Check** also surfaces relevant information such as security changes that affect older operating systems.
 
-For more information on the specific prerequisite checks, see [Prerequisite Checking](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking).
+For more information on the specific prerequisite checks, see [Prerequisite Checking](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrerequisiteChecking).
 
 #### Installation
 ![Screenshot that shows the Installation page in the Active Directory Domain Services Configuration Wizard.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ForestInstallation.png)

@@ -75,7 +75,7 @@ Protected accounts have the following deployment requirements:
 > [!NOTE]
 > The builtin domain Administrator (`S-1-5-<domain>-500`) is always exempt from Authentication Policies, even when they are assigned to an Authentication Policy Silo.
 
-### <a name="BKMK_TrubleshootingEvents"></a>Troubleshoot events related to Protected Users
+### <a name="BKMK_TroubleshootingEvents"></a>Troubleshoot events related to Protected Users
 This section covers new logs to help troubleshoot events that are related to Protected Users and how Protected Users can impact changes to troubleshoot either ticket-granting tickets (TGT) expiration or delegation issues.
 
 #### New logs for Protected Users
@@ -461,7 +461,7 @@ This command revokes access to the authentication policy silo named *Silo* for t
 PS C:\>Revoke-ADAuthenticationPolicySiloAccess -Identity Silo -Account User01 -Confirm:$False
 ```
 
-This example first uses the **Get-ADComputer** cmdlet to get all computer accounts that match the filter that the **Filter** parameter specifies. The output of this command is passed to **Set-ADAccountAuthenticatinPolicySilo** to assign the authentication policy silo named *Silo* and the authentication policy named *AuthenticationPolicy02* to them.
+This example first uses the **Get-ADComputer** cmdlet to get all computer accounts that match the filter that the **Filter** parameter specifies. The output of this command is passed to **Set-ADAccountAuthenticationPolicySilo** to assign the authentication policy silo named *Silo* and the authentication policy named *AuthenticationPolicy02* to them.
 
 ```
 PS C:\>Get-ADComputer -Filter 'Name -like "newComputer*"' | Set-ADAccountAuthenticationPolicySilo -AuthenticationPolicySilo Silo -AuthenticationPolicy AuthenticationPolicy02

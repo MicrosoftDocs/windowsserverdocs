@@ -250,7 +250,7 @@ When installing a new forest root domain, the Server Manager Active Directory Do
 
 The **Prerequisites Check** also surfaces relevant information such as security changes that affect older operating systems.
 
-For more information on the specific prerequisite checks, see [Prerequisite Checking](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking).
+For more information on the specific prerequisite checks, see [Prerequisite Checking](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrerequisiteChecking).
 
 You cannot bypass the **Prerequisite Check** when using Server Manager, but you can skip the process when using the AD DS Deployment cmdlet using the following argument:
 
