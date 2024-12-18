@@ -5,7 +5,7 @@ ms.topic: article
 ms.author: roharwoo
 author: robinharwood
 manager: femila
-ms.date: 12/17/2024
+ms.date: 12/18/2024
 zone_pivot_groups: windows-os-version
 ---
 
@@ -36,6 +36,7 @@ The following table lists Microsoft server applications that support installatio
 > | System Center Data Protection Manager  | ✅&sup1;     | ✅ | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/prepare-environment-for-dpm)                                                                                  |
 > | System Center Operations Manager       | ✅&sup1;     | ✅ | [System requirements for System Center Operations Manager](/system-center/scom/system-requirements)                                                                                                     |
 > | System Center Virtual Machine Manager  | ✅&sup1;     | ✅ | [System requirements for System Center Virtual Machine Manager](/system-center/vmm/system-requirements)                                                                                                 |
+> | Visual Studio 2022                     | ✅&sup1;     | ✅ | [Visual Studio 2022 Product Family System Requirements](/visualstudio/releases/2022/system-requirements)                                                                                                 |
 
 1. May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
 For more information, see specific product or Feature on Demand documentation.
