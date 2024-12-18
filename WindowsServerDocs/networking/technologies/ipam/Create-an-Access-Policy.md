@@ -25,7 +25,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 2.  In the navigation pane, click **ACCESS CONTROL**. In the lower navigation pane, right-click **Access Policies**, and then click **Add Access Policy**.
 
-    ![Screenshot of Server Manager showing the Access Policies optoin highlighted and the Add Access Policy option available for selection.](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)
+    ![Screenshot of Server Manager showing the Access Policies option highlighted and the Add Access Policy option available for selection.](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)
 
 3.  The **Add Access Policy** dialog box opens. In **User Settings**, click **Add**.
 

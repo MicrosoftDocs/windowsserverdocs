@@ -24,9 +24,6 @@ highlightedContent:
     - title: Windows Admin Center
       itemType: overview
       url: ./manage/windows-admin-center/overview.md
-    - title: Hyper-converged infrastructure
-      itemType: overview
-      url: ./hyperconverged/index.yml
     - title: Connect to Azure hybrid services
       itemType: how-to-guide
       url: ./manage/windows-admin-center/azure/index.md

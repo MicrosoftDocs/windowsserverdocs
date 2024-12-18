@@ -119,9 +119,11 @@ The following example shows how to upgrade the Contoso forest from a previous ve
 
    ![Screenshot of the Post-deployment Configuration progress dialog box with the Promote the server to a domain controller option called out.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
 
-1. On the **Deployment Configuration** screen, select **Add a new domain to an existing forest** and select **Next**.
 
-   ![Screenshot of the Deployment Configuration page of the Active Directory Domain Services Configuration Wizard showing the Add a new domain to an existing forest option selected.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
+1. On the **Deployment Configuration** screen, select **Add a domain controller to an existing domain** and click next.
+
+   ![Screenshot of the Deployment Configuration page of the Active Directory Domain Services Configuration Wizard showing the Add a domain controller to an existing domain option selected.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
+
 
 1. On the **Domain Controller options** screen, enter the **Directory Services Restore Mode (DSRM)** password and select **Next**.
 1. For the rest of the screens, select **Next**.
