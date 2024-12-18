@@ -11934,6 +11934,11 @@
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller-high-availability.md",
       "redirect_url": "/windows-server/networking/sdn/technologies/network-controller/network-controller-service-fabric",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/hyperconverged/index.yml",
+      "redirect_url": "/windows-server",
+      "redirect_document_id": true
     }
   ]
 }
