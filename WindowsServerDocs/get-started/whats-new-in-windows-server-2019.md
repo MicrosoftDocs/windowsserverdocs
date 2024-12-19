@@ -169,7 +169,7 @@ You can also access the following post-release-to-manufacturing (RTM) features w
 
 ### Storage Spaces Direct
 
-Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Local solution overview](/azure-stack/operator/azure-stack-hci-overview).
+Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Local solution overview](/azure/azure-local/overview).
 
 - Deduplication and compression for ReFS volumes. Variable-size chunk store with optional compression maximizes savings rates, while multi-threaded post-processing architecture minimizes performance impact. This feature supports volumes up to 64 TB and deduplicates the first 4 MB of each file.
 

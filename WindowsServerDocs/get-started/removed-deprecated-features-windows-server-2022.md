@@ -22,7 +22,7 @@ Each release of Windows Server adds new features and functionality; we also occa
 
 As part of our customer-centric approach, we’ll move to the Long-Term Servicing Channel (LTSC) as our primary release channel. Current Semi-Annual Channel (SAC) releases will continue through their mainstream support end dates, which are May 10, 2022 for Windows Server version 20H2 and December 14, 2021 for Windows Server version 2004
 
-The focus on container and microservice innovation previously released in the Semi-Annual Channel will now continue with [Azure Kubernetes Service (AKS)](/azure/aks/), [AKS on Azure Local](/azure-stack/aks-hci/), and other platform improvements made in collaboration with the Kubernetes community. And with the Long-Term Servicing Channel, a major new version of Windows Server will be released every 2-3 years, so customers can expect both container host and container images to align with that cadence.
+The focus on container and microservice innovation previously released in the Semi-Annual Channel will now continue with [Azure Kubernetes Service (AKS)](/azure/aks/), [AKS on Azure Local](/azure/aks/aksarc/overview), and other platform improvements made in collaboration with the Kubernetes community. And with the Long-Term Servicing Channel, a major new version of Windows Server will be released every 2-3 years, so customers can expect both container host and container images to align with that cadence.
 
 ## Features we've removed in this release
 
