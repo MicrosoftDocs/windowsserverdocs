@@ -52,7 +52,7 @@ There are several requirements and things to consider before you begin to use th
 
 :::zone pivot="azure-local"
 
-- Install Azure Stack HCI operating system on your Azure Local machines. See [Deploy the Azure Local operating system](/azure/azure-local/deploy/deployment-install-os?context=/windows-server/context/windows-server-virtualization).
+- Install Azure Stack HCI operating system on your Azure Local machines. See [Install the Azure Stack HCI operating system, version 23H2](/azure/azure-local/deploy/deployment-install-os?context=/windows-server/context/windows-server-virtualization).
 
 ::: zone-end
 

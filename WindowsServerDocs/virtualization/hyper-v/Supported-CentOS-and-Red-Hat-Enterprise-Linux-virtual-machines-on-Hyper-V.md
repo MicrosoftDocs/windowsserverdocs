@@ -64,7 +64,7 @@ In this section:
 | **Feature** | **Host OS** | **9.x** |
 |--|--|--|
 | LIS Availability |  | Built in |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2<br/> Azure Stack HCI | ✔ |
 | Windows Server 2016 Accurate Time | Windows Server 2022, 2019, 2016<br/> Azure Stack HCI | ✔ |
 | \>256 vCPUs |  | ✔ |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |
