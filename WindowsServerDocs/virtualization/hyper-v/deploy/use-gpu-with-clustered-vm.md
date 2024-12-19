@@ -34,7 +34,7 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-local"
 
-- You need an Azure Local cluster running Azure Local, version 22H2.
+- You need an Azure Local instance running Azure Stack HCI operating system, version 22H2 or later..
 
 ::: zone-end
 

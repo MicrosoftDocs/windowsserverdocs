@@ -119,7 +119,7 @@ To learn more about VBS and hardware requirements, see
 ## Simplified management
 
 You can view and configure the OS security features of Secured-core systems using Windows PowerShell
-or the security extension in Windows Admin Center. With Azure Local Integrated Systems,
+or the security extension in Windows Admin Center. With Azure Local integrated systems,
 manufacturing partners have further simplified the configuration experience for customers so that
 Microsoft’s best server security is available right out of the box.
 
