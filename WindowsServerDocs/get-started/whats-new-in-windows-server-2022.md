@@ -66,7 +66,7 @@ information about Storage Replica, see the
 #### Support for Azure Local
 
 With this release you can run Windows Server 2022 Datacenter: Azure Edition as a supported guest VM
-on Azure Local version 22H2. With Azure Edition running on Azure Local, you'll be able to use
+on Azure Local, version 22H2. With Azure Edition running on Azure Local, you'll be able to use
 all the existing features including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
 [SMB over QUIC](#smb-over-quic) at your datacenter and edge locations.
 

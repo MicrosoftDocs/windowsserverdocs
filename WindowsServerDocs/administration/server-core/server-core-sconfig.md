@@ -192,14 +192,14 @@ This option lets you configure whether anonymized statistical information about 
 1. To change the telemetry setting, type `Y` for Yes or `N` for No and press `Enter`.
 
 > [!NOTE]
-> Windows Server and Azure Local have different default configuration regarding to telemetry. For information specific to Windows Server, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings). For Azure Local, see [Azure Local data collection](/azure/azure-local/concepts/data-collection). Please note that you cannot configure Azure Local data collection in SConfig. To learn more about Microsoft's approach to privacy, see [Privacy at Microsoft](https://go.microsoft.com/fwlink/?LinkID=811315).
+> Windows Server and Azure Local have different default configuration regarding to telemetry. For information specific to Windows Server, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings). For Azure Local, see [Azure Local telemetry and diagnostics extension](/azure/azure-local/concepts/telemetry-and-diagnostics-overview). Please note that you cannot configure Azure Local data collection in SConfig. To learn more about Microsoft's approach to privacy, see [Privacy at Microsoft](https://go.microsoft.com/fwlink/?LinkID=811315).
 
 ## Windows activation
 
-This option lets you display current license and activation status, install a product key, and activate Windows Server
+This option lets you display current license and activation status, install a product key, and activate Windows Server.
 
 > [!NOTE]
-> Activation is only needed for Windows Server. This menu item is not available on Azure Local as [Azure Local registration](/azure/azure-local/deploy/register-with-azure) is a different process.
+> Activation is only needed for Windows Server. This menu item is not available on Azure Local as [Azure Local deployment](/azure/azure-local/deploy/deployment-introduction) is a different process.
 
 1. From the SConfig main menu, type `11` and press `Enter` to enter the **Windows activation** settings page.
 2. Choose one of the following options:
