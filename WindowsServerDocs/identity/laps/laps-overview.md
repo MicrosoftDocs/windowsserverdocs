@@ -13,13 +13,15 @@ Windows Local Administrator Password Solution (Windows LAPS) is a Windows featur
 
 ## Windows LAPS supported platforms
 
-Windows LAPS is now available on the following OS platforms with the specified update or later installed:
+Windows LAPS is available on the following OS platforms:
 
-- [Windows 11 22H2 - April 11 2023 Update](https://support.microsoft.com/help/5025239)
-- [Windows 11 21H2 - April 11 2023 Update](https://support.microsoft.com/help/5025224)
-- [Windows 10 - April 11 2023 Update](https://support.microsoft.com/help/5025221)
-- [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230)
-- [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229)
+- Windows 11 23H2 (and later Windows Client releases)
+- Windows Server 23H2 (and later Windows Server releases)
+- [Windows 11 22H2 - April 11 2023 Update](https://support.microsoft.com/help/5025239) (and later)
+- [Windows 11 21H2 - April 11 2023 Update](https://support.microsoft.com/help/5025224) (and later)
+- [Windows 10 - April 11 2023 Update](https://support.microsoft.com/help/5025221) (and later)
+- [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230) (and later)
+- [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229) (and later)
 
 All supported editions of the above platforms have been updated with Windows LAPS, including LTSC editions. The introduction of the Windows LAPS feature doesn't modify in any way whatsoever the standard Microsoft product lifecycle policies.
 
