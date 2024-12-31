@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: conceptual
 ms.subservice: core-os
-ms.date: 10/25/2024
+ms.date: 12/31/2024
 ---
 
 # GPU partitioning
@@ -85,4 +85,3 @@ For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md)
 - [Use GPUs with clustered VMs](deploy/use-gpu-with-clustered-vm.md)
-- [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Local solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
