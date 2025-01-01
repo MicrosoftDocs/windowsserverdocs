@@ -3,8 +3,8 @@ title: list providers
 description: Reference article for the list providers command, which lists shadow copy providers that are currently registered on the system.
 ms.topic: reference
 ms.assetid: 844b4036-c0b9-449d-8347-7d58ef9bf16d
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -38,6 +38,6 @@ Output that is similar to the following displays:
 1 provider registered.
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

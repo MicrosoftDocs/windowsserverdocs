@@ -3,8 +3,8 @@ title: Setting up an AD FS Deployment with AlwaysOn Availability Groups
 description: "Learn more about: Setting up an AD FS Deployment with AlwaysOn Availability Groups"
 author: billmath
 ms.author: billmath
-manager: daveba
-ms.date: 01/20/2020
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -79,7 +79,7 @@ This guide will walk through the following
 ## Deploy AD FS
 
 > [!NOTE]
-> If machines are running on Azure, the Virtual Machines must be configured in a specific way to allow for the listener to communicate with the Always On Availabililty group. For information on configuration, view [Configure a load balancer for an availability group on Azure SQL Server VMs](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener)
+> If machines are running on Azure, the Virtual Machines must be configured in a specific way to allow for the listener to communicate with the Always On Availability group. For information on configuration, view [Configure a load balancer for an availability group on Azure SQL Server VMs](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener)
 
 
 This deployment guide will show a two node farm with two SQL servers as an example.

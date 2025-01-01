@@ -3,8 +3,8 @@ title: manage-bde upgrade
 description: Reference article for the manage-bde upgrade command, which upgrades the BitLocker version.
 ms.topic: reference
 ms.assetid: 23bfa824-6ff0-44cc-9b8b-b199a769fb8d
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -37,7 +37,7 @@ To upgrade BitLocker encryption on drive C, type:
 manage-bde –upgrade C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

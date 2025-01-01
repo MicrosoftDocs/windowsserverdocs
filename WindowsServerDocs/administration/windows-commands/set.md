@@ -3,8 +3,8 @@ title: set commands
 description: Reference article for the set commands, which sets the context, options, verbose mode, and metadata file for shadow copy creation.
 ms.topic: reference
 ms.assetid: acf24663-1a50-4321-b48d-1717655e9476
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -33,6 +33,6 @@ set metadata
 | [set verbose](set-verbose.md) | Turns the verbose output mode on or off. |
 | /? | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

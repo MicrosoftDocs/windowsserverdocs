@@ -3,8 +3,8 @@ title: add-DriverPackage
 description: Reference article for the add-DriverPackage command, which adds a driver package to the server.
 ms.topic: reference
 ms.assetid: 3ac9e8d5-63ec-4ce8-86fc-85d28011050b
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -41,7 +41,7 @@ wdsutil /verbose /Add-DriverPackage /InfFile:C:\Temp\Display.inf
 wdsutil /Add-DriverPackage /Server:MyWDSServer /InfFile:C:\Temp\Display.inf /Architecture:x86 /DriverGroup:x86Drivers /Name:Display Driver
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

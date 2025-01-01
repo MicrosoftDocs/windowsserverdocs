@@ -4,14 +4,13 @@ description: Learn how to administer a Server Core installation of Windows Serve
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
-ms.localizationpriority: medium
+ms.author: alalve
 ms.date: 12/18/2018
 ms.topic: how-to
 ---
 # Administer a Server Core server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Windows Admin Center](../../manage/windows-admin-center/overview.md), a unified management portal currently in public preview, to administer your installation.
 

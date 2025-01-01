@@ -1,31 +1,34 @@
 ---
-title: Get started with the Microsoft Store Client
-description: Basic setup instructions for the Remote Desktop client for Windows Store.
+title: Get started with the Remote Desktop app for Windows
+description: Basic setup instructions for the Remote Desktop app for Windows.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 09/17/2020
-ms.localizationpriority: medium
+author: Heidilohr
+manager: femila
+ms.author: helohr
+ms.date: 7/3/2024
 ---
-# Get started with the Microsoft Store Client
+# Get started with the Remote Desktop app for Windows
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10
+>
 
-You can use the Remote Desktop client for Windows to work with Windows apps and PCs remotely from a different Windows device.
+You can use the Remote Desktop app for Windows to work with Windows apps and PCs remotely from a different Windows device.
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
-> [!NOTE]
-> - Curious about the new releases for the Microsoft Store Client? Check out [What's new in the Microsoft Store Client](windows-whatsnew.md)
-> - You can run the client on any supported version of Windows 10.
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop app for Windows](/azure/virtual-desktop/users/connect-microsoft-store).
 
-## Get the RD client and start using it
+> [!IMPORTANT]
+> We're no longer updating the Remote Desktop app for Windows with new features and support for Azure Virtual Desktop will be removed in the future.
+>
+> For the best Azure Virtual Desktop experience that includes the latest features and updates, we recommend you download the [Windows Desktop client](/azure/virtual-desktop/users/connect-windows) instead.
+
+## Get the Remote Desktop app and start using it
 
 Follow these steps to get started with Remote Desktop on your Windows 10 device:
 
-1. Download the Remote Desktop client from [Microsoft Store](https://www.microsoft.com/store/p/microsoft-remote-desktop/9wzdncrfj3ps).
+1. Download the Remote Desktop app from the [Microsoft Store](https://www.microsoft.com/store/p/microsoft-remote-desktop/9wzdncrfj3ps).
 2. [Set up your PC to accept remote connections](remote-desktop-allow-access.md).
 3. Add a Remote PC connection or a workspace. You use a connection to connect directly to a Windows PC and a workspace to use a RemoteApp program, session-based desktop, or virtual desktop published by your admin.
 4. Pin items so you can get to Remote Desktop quickly.
@@ -81,12 +84,12 @@ Now you can start the PC connection directly from your Start menu by tapping it.
 
 ## Connect to an RD Gateway to access internal assets
 
-A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your gateways using the Remote Desktop client.
+A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your connections to gateways using the Remote Desktop app.
 
-To set up a new gateway:
+To set up a new Remote Desktop Gateway:
 
 1. In the Connection Center, tap **Settings**.
-2. Next to Gateway, tap **+** to add a new gateway.
+2. Next to Gateway, tap **+** to add a new Gateway.
 
       >[!NOTE]
       >You can also add a gateway when you add a new connection.
@@ -204,4 +207,4 @@ You can also give us feedback by selecting the ellipsis button (**...**) in the 
 > ![A screenshot showing the ellipsis button highlighted in red. A drop-down menu has opened beneath the button, and the "Feedback" option is also highlighted in red.](../media/ellipsis-icon.png)
 
 >[!NOTE]
->To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback#add-new-feedback).
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/feedback).

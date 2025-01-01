@@ -4,13 +4,13 @@ description: Learn how to install and configure RSA and EDGE1.
 manager: brianlic
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 4 Install and Configure RSA and EDGE1
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 RSA is the RADIUS and OTP server, and is installed prior to configuring RADIUS and OTP.
 
@@ -296,7 +296,7 @@ Use this procedure to configure EDGE1 to perform RSA authentication.
 
 5. Open an elevated command prompt and navigate to C:\Windows\SysWOW64.
 
-6. Type **agent_nsload.exe -f nodesecret.rec -p <password>** where <password> is the strong password that you created during the initial RSA configuration. Press Enter.
+6. Type **agent_nsload.exe -f nodesecret.rec -p \<password>** where \<password> is the strong password that you created during the initial RSA configuration. Press Enter.
 
 7. Copy C:\Windows\SysWOW64\securid to C:\Windows\System32.
 

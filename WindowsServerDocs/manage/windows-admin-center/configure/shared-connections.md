@@ -2,15 +2,14 @@
 title: Configure shared connections for all users of the Windows Admin Center gateway
 description: Learn how administrators can configure their Windows Admin Center (Project Honolulu) gateway once to let all users share a single list of connections.
 ms.topic: article
-author: haley-rowland
-ms.author: harowl
-ms.date: 03/28/2019
-ms.localizationpriority: medium
+author: robinharwood
+ms.author: roharwoo
+ms.date: 10/18/2021
 ---
 
 # Configure shared connections for all users of the Windows Admin Center gateway
 
->Applies to: Windows Admin Center Preview, Windows Admin Center
+>
 
 With the ability to configure shared connections, gateway administrators can configure the connections list once for all users of a given Windows Admin Center gateway. This feature is only available on Windows Admin Center service mode.
 

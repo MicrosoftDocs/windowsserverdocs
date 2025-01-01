@@ -4,14 +4,14 @@ description: This topic provides an overview of Network Policy Server in Windows
 manager: dougkim
 ms.topic: article
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/20/2018
 ---
 
 # Network Policy Server (NPS)
 
->Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
+>
 
 You can use this topic for an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019. NPS is installed when you install the Network Policy and Access Services (NPAS) feature in Windows Server 2016 and Server 2019.
 
@@ -105,6 +105,10 @@ You can use NPS as a RADIUS proxy when:
 - You want to perform authentication and authorization by using a database that is not a Windows account database. In this case, connection requests that match a specified realm name are forwarded to a RADIUS server, which has access to a different database of user accounts and authorization data. Examples of other user databases include Novell Directory Services (NDS) and Structured Query Language (SQL) databases.
 - You want to process a large number of connection requests. In this case, instead of configuring your RADIUS clients to attempt to balance their connection and accounting requests across multiple RADIUS servers, you can configure them to send their connection and accounting requests to an NPS RADIUS proxy. The NPS RADIUS proxy dynamically balances the load of connection and accounting requests across multiple RADIUS servers and increases the processing of large numbers of RADIUS clients and authentications per second.
 - You want to provide RADIUS authentication and authorization for outsourced service providers and minimize intranet firewall configuration. An intranet firewall is between your perimeter network (the network between your intranet and the Internet) and intranet. By placing an NPS on your perimeter network, the firewall between your perimeter network and intranet must allow traffic to flow between the NPS and multiple domain controllers. By replacing the NPS with an NPS proxy, the firewall must allow only RADIUS traffic to flow between the NPS proxy and one or multiple NPSs within your intranet.
+
+> [!IMPORTANT]
+> NPS supports authentication across forests without a RADIUS proxy when the forest functional level is Windows Server 2003 or higher and there is a two-way trust relationship between forests. But, if you use EAP-TLS or PEAP-TLS with certificates as your authentication method, you MUST use a RADIUS proxy for authentication across forests.
+
 
 The following illustration shows NPS as a RADIUS proxy between RADIUS clients and RADIUS servers.
 

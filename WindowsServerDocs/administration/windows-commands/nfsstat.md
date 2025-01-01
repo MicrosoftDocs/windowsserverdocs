@@ -3,8 +3,8 @@ title: nfsstat
 description: Reference article for the nfsstat command, which displays statistical info about the Network File System (NFS) and Remote Procedure Call (RPC) calls.
 ms.topic: reference
 ms.assetid: da7a9768-44bd-404b-97ee-c388d00dc395
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -62,7 +62,7 @@ To reset all call-related information to zero on the client and server, type:
 nfsstat -z
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

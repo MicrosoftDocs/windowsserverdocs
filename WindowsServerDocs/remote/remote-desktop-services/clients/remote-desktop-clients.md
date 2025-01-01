@@ -1,49 +1,42 @@
 ---
-title: Remote Desktop clients
-description: Learn about the different Remote Desktop clients available for all your devices
-ms.topic: article
+title: Remote Desktop clients for Remote Desktop Services and remote PCs - Windows Server
+description: Overview of the Remote Desktop clients you can use to connect to Remote Desktop Services.
+ms.topic: overview
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
 manager: femila
-ms.author: helohr
-ms.date: 09/29/2021
-ms.localizationpriority: medium
+ms.author: roharwoo
+ms.date: 7/3/2024
 ---
-# Remote Desktop clients
+# Remote Desktop clients for Remote Desktop Services and remote PCs
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+With Microsoft Remote Desktop clients, you can connect to Remote Desktop Services from Windows Server and remote PCs, and use and control desktops and apps that your admin has made available to you. There are clients available for many different types of devices on different platforms and form factors, such as desktops and laptops, tablets, smartphones, and through a web browser. Using your web browser on desktops and laptops, you can connect without having to download and install any software.
 
-Microsoft Remote Desktop clients let you use and control a remote PC. With a Remote Desktop client, you can do all the things with a remote PC that you can do with a physical PC, such as:
+There are many features you can use to enhance your remote experience, such as:
 
+- Multiple monitor support.
+- Custom display resolutions.
+- Dynamic display resolutions and scaling.
+- Device redirection, such as webcams, storage devices, and printers.
 - Use apps installed on the remote PC.
 - Access files and network resources on the remote PC.
 - Leave the apps open when you turn off the client.
 
-You can also use a Remote Desktop client to access your remote PC from almost any device. There are even clients for mobile smartphones! Here's a list of the latest versions of the client apps and where you can download them:
+Some features are only available with certain clients, so it's important to check [Compare the features of the Remote Desktop clients](remote-desktop-features.md) to understand the differences when connecting to Remote Desktop Services or remote PCs.
 
-| Client | Get the app | Documentation | Latest version |
-|-----------------|-------------|------|---|
-| Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client) | [Get started](windowsdesktop.md), [What's new](windowsdesktop-whatsnew.md) | 1.2.2459  |
-| Microsoft Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709) | [Get started](windows.md), [What's new](windows-whatsnew.md)  | 1.2.1810  |
-| Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.11 |
-| iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.3.1 |
-| macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.6.7 |
+> [!TIP]
+> You can also use most versions of the Remote Desktop client to also connect to [Azure Virtual Desktop](/azure/virtual-desktop/users/connect-windows?tabs=subscribe), as well as to Remote Desktop Services in Windows Server or to a remote PC. If you want information on Azure Virtual Desktop instead, see [Remote Desktop clients for Azure Virtual Desktop](/azure/virtual-desktop/users/remote-desktop-clients-overview).
 
-Before you start using the client of your choice, there are a few things you'll need to do first.
+Here's a list of the Remote Desktop client apps and our documentation for connecting to Remote Desktop Services or remote PCs, where you can find download links, what's new, and learn how to install and use each client.
 
-## Configure your remote PC
+| Remote Desktop client | Documentation and download links | Version information |
+|--|--|--|
+| Web | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Web](remote-desktop-web-client.md) | [What's new](web-client-whatsnew.md) |
+| macOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for macOS](remote-desktop-mac.md) | [What's new](mac-whatsnew.md) |
+| iOS/iPadOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for iOS and iPadOS](remote-desktop-ios.md) | [What's new](ios-whatsnew.md) |
+| Android/Chrome OS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Android and Chrome OS](remote-desktop-android.md) | [What's new](android-whatsnew.md) |
+| Windows Store Remote Desktop app | [Connect to Remote Desktop Services and remote PCs with the Windows Store Remote Desktop app for Windows](windows.md) | [What's new](windows-whatsnew.md) |
 
-Just as you would with a local computer, you'll need to configure your remote computer before you start accessing it with the client.
+## Connecting to your remote PC
 
-To configure your remote PC:
-
-1. Check the [supported configuration](remote-desktop-supported-config.md) article to make sure your local PC is compatible with the Remote Desktop client.
-2. Follow the instructions in [Allow access to your PC](remote-desktop-allow-access.md) to set up your remote PC and give you the necessary permissions to access the remote PC with the client.
-
-## Remote Desktop client Uniform Resource Identifier (URI) scheme
-
-You can also use features of Remote Desktop clients across platforms by enabling a Uniform Resource Identifier (URI) scheme. The [Supported URI attributes](remote-desktop-uri.md) article will tell you about URIs you can use with the iOS, Mac, and Android clients.
-
-## Other resources
-
-If you have any other questions that this article didn't answer, check out the [Remote Desktop client FAQ](remote-desktop-client-faq.yml).
+Before you can connect to your remote PC, you'll need to enable Remote Desktop on it. For more information, see [Enable Remote Desktop on your PC](remote-desktop-allow-access.md).

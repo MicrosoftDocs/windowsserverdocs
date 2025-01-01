@@ -1,17 +1,17 @@
 ---
-description: "Learn more about: Guarded Fabric and Shielded VM Planning Guide for Tenants"
+description: Provides a guide to guarded fabric and shielded VM planning for VM owners who need to protect their virtual machines.
 title: Guarded Fabric and Shielded VM Planning Guide for Tenants
 ms.topic: article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
 author: nirb-ms
-ms.author: nirb
+ms.author: roharwoo
 ms.date: 12/10/2020
 ---
 
 # Guarded Fabric and Shielded VM Planning Guide for Tenants
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic focuses on VM owners who would like to protect their virtual machines (VMs) for compliance and security purposes. Regardless of whether the VMs run on a hosting provider's guarded fabric or a private guarded fabric, VM owners need to control the security level of their shielded VMs, which includes maintaining the ability to decrypt them if needed.
 

@@ -3,8 +3,8 @@ title: wbadmin start recovery
 description: Reference article for the wbadmin start recovery command, which runs a recovery operation based on the parameters that you specify.
 ms.topic: reference
 ms.assetid: 52381316-a0fa-459f-b6a6-01e31fb21612
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -76,16 +76,16 @@ To run a recovery of the backup from April 30, 2020, taken at 9:00 A.M., of the 
 wbadmin start recovery -version:04/30/2020-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [wbadmin command](wbadmin.md)
 
-- [Start-WBFileRecovery](/powershell/module/windowserverbackup/Start-WBFileRecovery)
+- [Start-WBFileRecovery](/powershell/module/windowsserverbackup/start-wbfilerecovery)
 
-- [Start-WBHyperVRecovery](/powershell/module/windowserverbackup/Start-WBHyperVRecovery)
+- [Start-WBHyperVRecovery](/powershell/module/windowsserverbackup/start-wbhypervrecovery)
 
-- [Start-WBSystemStateRecovery](/powershell/module/windowserverbackup/Start-WBSystemStateRecovery)
+- [Start-WBSystemStateRecovery](/powershell/module/windowsserverbackup/start-wbsystemstaterecovery)
 
-- [Start-WBVolumeRecovery](/powershell/module/windowserverbackup/Start-WBVolumeRecovery)
+- [Start-WBVolumeRecovery](/powershell/module/windowsserverbackup/start-wbvolumerecovery)

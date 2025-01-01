@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 87ea20e4-46cf-49e9-86bf-70be9098c8db
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 # Predeployment Checklist
 Use the following checklist to help you plan your MultiPoint Services deployment.

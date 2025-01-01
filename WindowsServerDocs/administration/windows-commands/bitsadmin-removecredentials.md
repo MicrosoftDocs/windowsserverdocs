@@ -3,8 +3,8 @@ title: bitsadmin removecredentials
 description: Reference article for the bitsadmin removecredentials command, which removes credentials from a job.
 ms.topic: reference
 ms.assetid: 4a78ce9a-1feb-4811-a000-cce81287b22b
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -38,7 +38,7 @@ To remove credentials from the job named *myDownloadJob*:
 bitsadmin /removecredentials myDownloadJob SERVER BASIC
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

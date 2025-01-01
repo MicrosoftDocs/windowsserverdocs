@@ -4,13 +4,13 @@ description: Learn how to configure server certificate auto-enrollment and user 
 manager: brianlic
 ms.topic: article
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Configure certificate auto-enrollment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 > [!NOTE]
 > Before you perform this procedure, you must configure a server certificate template by using the Certificate Templates Microsoft Management Console snap-in on a CA that is running AD CS.

@@ -4,13 +4,13 @@ description: Learn how to use Windows PowerShell cmdlets and scripts to provide 
 manager: grcusanz
 ms.topic: article
 ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
-ms.date: 06/25/2021
+ms.date: 03/28/2023
 ---
 # Add a virtual gateway to a tenant virtual network
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+> 
 
 Learn how to use Windows PowerShell cmdlets and scripts to provide site-to-site connectivity for your tenant's virtual networks. In this topic, you add tenant virtual gateways to instances of RAS gateway that are members of gateways pools, using Network Controller. RAS gateway supports up to one hundred tenants, depending on the bandwidth used by each tenant. Network Controller automatically determines the best RAS Gateway to use when you deploy a new virtual gateway for your tenants.
 
@@ -19,8 +19,8 @@ Each virtual gateway corresponds to a particular tenant and consists of one or m
 **When you deploy a Tenant Virtual Gateway, you have the following configuration options:**
 
 
-|                                                        Network connection options                                                         |                                              BGP configuration options                                               |
-|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| Network connection options | BGP configuration options |
+|---|---|
 | <ul><li>IPSec site-to-site virtual private network (VPN)</li><li>Generic Routing Encapsulation (GRE)</li><li>Layer 3 forwarding</li></ul> | <ul><li>BGP router configuration</li><li>BGP peer configuration</li><li>BGP routing policies configuration</li></ul> |
 
 ---
@@ -92,6 +92,9 @@ The Windows PowerShell example scripts and commands in this topic demonstrate ho
    >[!TIP]
    >Optionally, you can combine all the previous steps and configure a tenant virtual gateway with all three connection options.  For more details, see [Configure a gateway with all three connection types (IPsec, GRE, L3) and BGP](#optional-step-configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp).
 
+   > [!NOTE]
+   > `PerfectForwardSecrecy` must match for the local and remote sites.
+
    **IPsec VPN site-to-site network connection**
 
    ```PowerShell
@@ -114,14 +117,14 @@ The Windows PowerShell example scripts and commands in this topic demonstrate ho
    $nwConnectionProperties.IpSecConfiguration.QuickMode.CipherTransformationConstant = "DES3"
    $nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeSeconds = 1233
    $nwConnectionProperties.IpSecConfiguration.QuickMode.IdleDisconnectSeconds = 500
-   $nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 2000
+   $nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 1048576
 
    $nwConnectionProperties.IpSecConfiguration.MainMode = New-Object Microsoft.Windows.NetworkController.MainMode
    $nwConnectionProperties.IpSecConfiguration.MainMode.DiffieHellmanGroup = "Group2"
    $nwConnectionProperties.IpSecConfiguration.MainMode.IntegrityAlgorithm = "SHA256"
    $nwConnectionProperties.IpSecConfiguration.MainMode.EncryptionAlgorithm = "AES256"
    $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeSeconds = 1234
-   $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 2000
+   $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 1048576
 
    # L3 specific configuration (leave blank for IPSec)
    $nwConnectionProperties.IPAddresses = @()
@@ -252,9 +255,7 @@ The Windows PowerShell example scripts and commands in this topic demonstrate ho
 
       # Update the BGP Router properties
       $bgpRouterproperties.ExtAsNumber = "0.64512"
-      $bgpRouterproperties.RouterId = "192.168.0.2"
-      $bgpRouterproperties.RouterIP = @("192.168.0.2")
-
+      
       # Add the new BGP Router for the tenant
       $bgpRouter = New-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_BgpRouter1" -Properties $bgpRouterProperties -Force
 
@@ -277,7 +278,11 @@ The Windows PowerShell example scripts and commands in this topic demonstrate ho
       ```
 
 ## (Optional step) Configure a gateway with all three connection types (IPsec, GRE, L3) and BGP
+
 Optionally, you can combine all previous steps and configure a tenant virtual gateway with all three connection options:
+
+   > [!NOTE]
+   > `PerfectForwardSecrecy` must match for the local and remote sites.
 
 ```PowerShell
 # Create a new Virtual Gateway Properties type object
@@ -317,7 +322,7 @@ $ipSecConnection.Properties.IpSecConfiguration.QuickMode.AuthenticationTransform
 $ipSecConnection.Properties.IpSecConfiguration.QuickMode.CipherTransformationConstant = "DES3"
 $ipSecConnection.Properties.IpSecConfiguration.QuickMode.SALifeTimeSeconds = 1233
 $ipSecConnection.Properties.IpSecConfiguration.QuickMode.IdleDisconnectSeconds = 500
-$ipSecConnection.Properties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 2000
+$ipSecConnection.Properties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 1048576
 
 $ipSecConnection.Properties.IpSecConfiguration.MainMode = New-Object Microsoft.Windows.NetworkController.MainMode
 
@@ -325,7 +330,7 @@ $ipSecConnection.Properties.IpSecConfiguration.MainMode.DiffieHellmanGroup = "Gr
 $ipSecConnection.Properties.IpSecConfiguration.MainMode.IntegrityAlgorithm = "SHA256"
 $ipSecConnection.Properties.IpSecConfiguration.MainMode.EncryptionAlgorithm = "AES256"
 $ipSecConnection.Properties.IpSecConfiguration.MainMode.SALifeTimeSeconds = 1234
-$ipSecConnection.Properties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 2000
+$ipSecConnection.Properties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 1048576
 
 $ipSecConnection.Properties.IPAddresses = @()
 $ipSecConnection.Properties.PeerIPAddresses = @()
@@ -400,9 +405,6 @@ $bgpRouter.ResourceId = "Contoso_BgpRouter1"
 $bgpRouter.Properties = New-Object Microsoft.Windows.NetworkController.VGwBgpRouterProperties
 
 $bgpRouter.Properties.ExtAsNumber = "0.64512"
-$bgpRouter.Properties.RouterId = "192.168.0.2"
-$bgpRouter.Properties.RouterIP = @("192.168.0.2")
-
 $bgpRouter.Properties.BgpPeers = @()
 
 # Create BGP Peer Object(s)

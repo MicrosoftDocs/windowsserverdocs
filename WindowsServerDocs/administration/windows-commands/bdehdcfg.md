@@ -3,8 +3,8 @@ title: bdehdcfg
 description: Reference article for the bdehdcfg command, which prepares a hard drive with the partitions necessary for BitLocker Drive Encryption.
 ms.topic: reference
 ms.assetid: 4c92cd74-188e-4fec-b7c4-fe4e8903e032
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -44,6 +44,6 @@ bdehdcfg [–driveinfo <drive_letter>] [-target {default|unallocated|<drive_lett
 | [bdehdcfg: restart](bdehdcfg-restart.md) | Directs the computer to restart after the drive preparation has finished. |
 | /? | Displays Help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

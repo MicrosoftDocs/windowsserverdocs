@@ -4,13 +4,13 @@ description: Learn about the configuration steps required to deploy a single Win
 manager: brianlic
 ms.topic: article
 ms.assetid: cb84920e-7cf5-4266-b071-d09e3d5e1f10
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Configure a Multisite Deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
  Windows Server 2016 combines DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 or Windows Server 2012 Remote Access multisite deployment.
 

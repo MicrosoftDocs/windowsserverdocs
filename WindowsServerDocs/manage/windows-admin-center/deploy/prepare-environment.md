@@ -2,15 +2,14 @@
 title: Prepare your environment for Windows Admin Center
 description: Prepare your environment for Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/07/2019
-ms.localizationpriority: medium
 ---
 
 # Prepare your environment for Windows Admin Center
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 There are some Server versions that need additional preparation before they are ready to manage with Windows Admin Center:
 

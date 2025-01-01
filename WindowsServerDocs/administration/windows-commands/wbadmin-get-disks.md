@@ -3,8 +3,8 @@ title: wbadmin get disks
 description: Reference article for the wbadmin get disks command, which lists the internal and external disks that are currently online for the local computer.
 ms.topic: reference
 ms.assetid: 320edef1-df11-446b-a183-9f81811ef938
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -21,10 +21,10 @@ To list the online disks using this command, you must be a member of the **Backu
 wbadmin get disks
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [wbadmin command](wbadmin.md)
 
-- [Get-WBDisk](/powershell/module/windowserverbackup/Get-WBDisk)
+- [Get-WBDisk](/powershell/module/windowsserverbackup/get-wbdisk)

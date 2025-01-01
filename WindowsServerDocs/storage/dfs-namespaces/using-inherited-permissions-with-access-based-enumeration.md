@@ -3,13 +3,13 @@ title: Using Inherited Permissions with Access-based Enumeration
 description: This article describes how to use inherited permissions with access-based enumeration
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 # Using inherited permissions with Access-based Enumeration
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>
 
 By default, the permissions used for a DFS folder are inherited from the local file system of the namespace server. The permissions are inherited from the root directory of the system drive and grant the DOMAIN\\Users group Read permissions. As a result, even after enabling access-based enumeration, all folders in the namespace remain visible to all domain users.
 

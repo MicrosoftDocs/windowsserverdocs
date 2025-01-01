@@ -3,8 +3,8 @@ title: bitsadmin setnoprogresstimeout
 description: Reference article for the bitsadmin setnoprogresstimeout command, which sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
 ms.topic: reference
 ms.assetid: 7fac50d9-cc6b-46a4-a96f-fab751ee1756
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -42,7 +42,7 @@ To set the "no progress" timeout value to 20 seconds, for the job named *myDownl
 bitsadmin /setnoprogresstimeout myDownloadJob 20
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

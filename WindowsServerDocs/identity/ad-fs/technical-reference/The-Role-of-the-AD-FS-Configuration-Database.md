@@ -4,8 +4,8 @@ ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: The Role of the AD FS Configuration Database
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 08/26/2021
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -62,7 +62,7 @@ The WID synchronization process also supports incremental transfers for more eff
 > [!NOTE]
 > The migration of an AD FS configuration database from WID to an instance of SQL Server is supported. For more information about how to do this, see [AD FS: Migrate Your AD FS Configuration Database to SQL Server](https://go.microsoft.com/fwlink/?LinkId=192232) on the TechNet Wiki site.
 
-### How to managed the AD FS synchronization properties
+### How to manage the AD FS synchronization properties
 This Section describes how to view and edit the AD FS configuration database synchronization properties.
 .
 
@@ -77,7 +77,7 @@ The **Set-ADFSSyncProperties** cmdlet modifies the frequency of synchronization 
 The cmdlet also specifies which federation server is the primary server in the federation server farm. 
 
 > [!NOTE]
-> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. If nominate a new primary server the remain servers must be modified to reflect the new primary server. Having 2 primaries with a WID farm will impact the stableness of the farm and has the passibility of losing data.
+> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. If you nominate a new primary server the remaining servers must be modified to reflect the new primary server. Having 2 primaries with a WID farm will impact the stableness of the farm and has the possibility of losing data.
 
 #### Modify the poll duration for a farm
 ```
@@ -99,10 +99,10 @@ This command changes an AD FS server in a WID farm from secondary to primary.
 PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<FQDN of primary server>"
 ```
 
-This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary so server. Not doing so may not all the secondary AD FS server to sync properly. 
+This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary server. Not doing so may result in not all the secondary AD FS servers syncing properly. 
 Note: The primary server must be accessible via HTTP on port 80 from the secondary server.
 
-For more information see: [Set-AdfsSyncProperties](/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+For more information see: [Set-AdfsSyncProperties](/powershell/module/adfs/set-adfssyncproperties)
 
 
 ## Using SQL Server to store the AD FS configuration database
@@ -126,7 +126,7 @@ You can achieve high availability by using the network load\-balancing and failo
 Security Assertion Markup Language \(SAML\) artifact resolution is an endpoint based on the part of the SAML 2.0 protocol that describes how a relying party can retrieve a token directly from a claims provider. In the first stage of the resolution process, a browser client contacts a resource federation server and provides it with an artifact. In the second stage, resource federation servers send the artifact to a SAML artifact endpoint URL that is hosted somewhere in an account partner organization in order to resolve the artifact message. In the final stage, the account federation server issues the token to the federation server on behalf of the browser client.
 
 > [!NOTE]
-> If you are an administrator in an account partner organization, make sure to assign or bind an SSL certificate, which chains to a root certificate of a member of the Windows Root Certificate Program, to the federation passive Web site in IIS \(<ComputerName>\\Sites\\Default Web Site\\adfs\\ls\) on all the account federation servers in the farm. This is important to prevent resource federation servers from having to manually add the SSL certificate to the Local Computers Trusted People certificate store or from being unable to resolve the artifact that is published in your organization.
+> If you are an administrator in an account partner organization, make sure to assign or bind an SSL certificate, which chains to a root certificate of a member of the Windows Root Certificate Program, to the federation passive Web site in IIS \(\<ComputerName>\\Sites\\Default Web Site\\adfs\\ls\) on all the account federation servers in the farm. This is important to prevent resource federation servers from having to manually add the SSL certificate to the Local Computers Trusted People certificate store or from being unable to resolve the artifact that is published in your organization.
 
 ### SAML/WS - Federation token replay detection
 The term *token replay* refers to the act by which a browser client in an account partner organization attempts to send the same token it received from an account federation server multiple times to authenticate to a resource federation server.  This act occurs when a user clicks the **Back** button of their browser in an effort to resubmit the authentication page.

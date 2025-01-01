@@ -4,14 +4,14 @@ description: Learn about the architecture of QoS Policy.
 ms.topic: article
 ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
 manager: brianlic
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # QoS Policy Architecture
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to learn about the architecture of QoS Policy.
 

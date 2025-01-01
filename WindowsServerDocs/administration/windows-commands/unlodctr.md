@@ -3,15 +3,15 @@ title: unlodctr
 description: Reference article for the unlodctr command, which removes Performance counter names and Explain text for a service or device driver from the system registry.
 ms.topic: reference
 ms.assetid: fc8aa6f0-c1d9-47ea-937a-28152148e774
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # unlodctr
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes **Performance counter names** and **Explain text** for a service or device driver from the system registry.
 
@@ -39,6 +39,6 @@ To remove the current **Performance counter names** and **Explain text** for the
 unlodctr SMTPSVC
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

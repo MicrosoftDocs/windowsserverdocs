@@ -3,13 +3,13 @@ title: Best Practices for running Linux on Hyper-V
 description: Provides recommendations for running Linux on a virtual machine
 ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/08/2021
 ---
 # Best Practices for running Linux on Hyper-V
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>
 
 This topic contains a list of recommendations for running Linux virtual machine on Hyper-V.
 
@@ -40,7 +40,7 @@ Because of legacy hardware being removed from emulation in Generation 2 virtual 
 
 Because the PIT timer is not present in Generation 2 Virtual Machines, network connections to the PxE TFTP server can be prematurely terminated and prevent the bootloader from reading Grub configuration and loading a kernel from the server.
 
-On RHEL 6.x, the legacy grub v0.97 EFI bootloader can be used instead of grub2 as described here: [https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html)
+On RHEL 6.x, the legacy grub v0.97 EFI bootloader can be used instead of grub2 as described here: [https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s1-netboot-pxe-config-efi)
 
 On Linux distributions other than RHEL 6.x, similar steps can be followed to configure grub v0.97 to load Linux kernels from a PxE server.
 

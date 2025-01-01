@@ -3,14 +3,14 @@ title: Credentials Protection and Management
 description: Learn about features and methods introduced in Windows Server 2012 R2 and Windows 8.1 for credential protection and domain authentication controls to reduce credential theft.
 ms.topic: article
 ms.assetid: e457229c-0126-40fe-948c-101c943e1b57
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Credentials Protection and Management
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This topic for the IT professional discusses features and methods introduced in  Windows Server 2012 R2  and Windows 8.1 for credential protection and domain authentication controls to reduce credential theft.
 

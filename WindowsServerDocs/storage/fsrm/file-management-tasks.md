@@ -3,14 +3,14 @@ title: File Management Tasks
 description: This article describes the process of automating file management tasks
 ms.date: 7/7/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 
 # File Management Tasks
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>
 
 File management tasks automate the process of finding subsets of files on a server and applying simple commands. These tasks can be scheduled to occur periodically to reduce repetitive costs. Files that will be processed by a file management task can be defined through any of the following properties:
 

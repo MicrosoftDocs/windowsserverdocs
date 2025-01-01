@@ -3,14 +3,14 @@ title: auditpol set
 description: Reference article for the auditpol set command, which sets the per-user audit policy, system audit policy, or auditing options.
 ms.topic: reference
 ms.assetid: f4947486-87bd-48cb-ba81-7230c8e70895
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # auditpol set
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets the per-user audit policy, system audit policy, or auditing options.
 
@@ -84,7 +84,7 @@ To set the auditing options to the enabled state for the CrashOnAuditFail option
 auditpol /set /option:CrashOnAuditFail /value:enable
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

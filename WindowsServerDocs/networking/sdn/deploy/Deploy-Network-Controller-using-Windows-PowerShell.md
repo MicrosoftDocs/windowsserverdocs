@@ -3,19 +3,19 @@ title: Deploy Network Controller using Windows PowerShell
 description: This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2019 or 2016.
 ms.topic: how-to
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: roharwoo
+author: robinharwood
 manager: grcusanz
-ms.date: 06/25/2021
+ms.date: 10/28/2021
 ---
 # Deploy Network Controller using Windows PowerShell
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>
 
 This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more virtual machines (VMs) that are running Windows Server 2019 or 2016.
 
 >[!IMPORTANT]
->Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller using the Windows PowerShell command **New-NetworkControllerServer**. By doing so, you are enabling the SDN Software Load Balancer to function. For more information, see [New-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver).
+>Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller using the Windows PowerShell command **New-NetworkControllerServer**. By doing so, you are enabling the SDN Software Load Balancer to function. For more information, see [New-NetworkControllerServer](/powershell/module/networkcontroller/new-networkcontrollerserver).
 
 This topic contains the following sections.
 
@@ -200,7 +200,7 @@ The following table provides the syntax for Windows PowerShell commands that you
 |Remove a Network Controller node from a cluster|Remove-NetworkControllerNode|`Remove-NetworkControllerNode [-CertificateThumbprint <String> ] [-ComputerName <String> ] [-Credential <PSCredential> ] [-Force] [-Name <String> ] [-PassThru] [-UseSsl]`
 
 >[!NOTE]
->Windows PowerShell commands for Network Controller are in the TechNet Library at [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx).
+>Windows PowerShell commands for Network Controller are in the TechNet Library at [Network Controller Cmdlets](/powershell/module/networkcontroller/get-networkcontrollerdiscovery).
 
 ## Sample Network Controller configuration script
 

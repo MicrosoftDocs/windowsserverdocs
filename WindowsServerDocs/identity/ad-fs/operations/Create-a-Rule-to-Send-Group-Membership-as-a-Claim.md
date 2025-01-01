@@ -4,8 +4,8 @@ ms.assetid: 475e34f9-9399-43f4-a840-9dd77258e11a
 title: Create a Rule to Send Group Membership as a Claim
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 # Create a Rule to Send Group Membership as a Claim

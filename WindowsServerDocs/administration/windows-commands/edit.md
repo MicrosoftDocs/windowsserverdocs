@@ -3,8 +3,8 @@ title: edit
 description: Reference article for the edit command, which starts the MS-DOS Editor, so you can create and change ASCII text files.
 ms.topic: reference
 ms.assetid: 4e0ff2e8-3518-47c1-8c69-5e93f895fa0e
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -51,6 +51,6 @@ To create and edit a file named *newtextfile.txt* in the current directory, type
 edit newtextfile.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

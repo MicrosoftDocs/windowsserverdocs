@@ -3,8 +3,8 @@ title: remove-DriverGroupFilter
 description: Reference article for remove-DriverGroupFilter, which removes a filter rule from a driver group on a server.
 ms.topic: reference
 ms.assetid: 837bd5d4-c79d-4714-942d-9875bd8e61dc
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -39,6 +39,6 @@ wdsutil /Remove-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufa
 wdsutil /Remove-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer /FilterType:OSLanguage
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

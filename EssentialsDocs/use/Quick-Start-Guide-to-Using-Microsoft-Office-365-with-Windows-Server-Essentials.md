@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 51a7f1f1-088b-4487-b2c6-4f97aad3004d
 author: nnamuhcs
-ms.author: geschuma
+ms.author: roharwoo
 manager: mtillman
 ---
 
@@ -15,16 +15,16 @@ manager: mtillman
 
  Microsoft 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. These tools include Microsoft Office Web Apps, which are web versions of the Microsoft Office desktop applications that you are already familiar with, such as Microsoft Word, Microsoft Excel, and Microsoft PowerPoint. With Office Web Apps, you can create and edit documents on any computer with a web browser.
 
- For a quick introduction to  Microsoft 365, view the [Microsoft 365: A tour for users](https://onlinehelp.microsoft.com/office365-smallbusinesses/hh534379.aspx) videos at the  Microsoft 365 website.
+ For a quick introduction to Microsoft 365, view the [Microsoft 365: A tour for users](https://onlinehelp.microsoft.com/office365-smallbusinesses/hh534379.aspx) videos at the Microsoft 365 website.
 
- If your organization uses  Microsoft 365 web apps, you can open the apps in  Microsoft 365 using familiar tools like the  Windows Server Essentials Launchpad and My Server 2012 R2. (You can also, of course, [sign in to Microsoft 365 directly](https://login.microsoftonline.com/login.srf?wa=wsignin1.0&rpsnv=2&ct=1384059583&rver=6.1.6206.0&wp=MBI_KEY&wreply=https:%2F%2Fwww.outlook.com%2Fowa%2F&id=260563&whr=students.tamuk.edu&CBCXT=out) using your organizational online ID and your network password.)
+ If your organization uses Microsoft 365 web apps, you can open the apps in Microsoft 365 using familiar tools like the  Windows Server Essentials Launchpad and My Server 2012 R2. (You can also, of course, [sign in to Microsoft 365 directly](https://login.microsoftonline.com/login.srf?wa=wsignin1.0&rpsnv=2&ct=1384059583&rver=6.1.6206.0&wp=MBI_KEY&wreply=https:%2F%2Fwww.outlook.com%2Fowa%2F&id=260563&whr=students.tamuk.edu&CBCXT=out) using your organizational online ID and your network password.)
 
 > [!IMPORTANT]
 >  If you lose a mobile device that you use to connect to Exchange Online, contact your administrator so they can remove sensitive data from the device the next time it's turned on.
 
 ### Before you begin
 
-1.  You must have a Microsoft Online Services account (in  Windows Server Essentials, it's called an *Microsoft 365 account*) assigned to your user account. If you don't already have an online account for  Microsoft 365, ask the person who maintains your computer network to create one for you.
+1.  You must have a Microsoft Online Services account (in Windows Server Essentials, it's called a *Microsoft 365 account*) assigned to your user account. If you don't already have an online account for Microsoft 365, ask the person who maintains your computer network to create one for you.
 
 2.  After you get your online account, sign in on the network and reset your Windows password. You will now use the same password to sign in to  Microsoft 365 that you use on your network.
 
@@ -53,7 +53,7 @@ manager: mtillman
     |Device type|Download from|
     |-----------------|-------------------|
     |Windows-based laptop, PC, or Surface device|[My Server 2012 R2 (Apps for Windows)](https://apps.microsoft.com/windows/app/my-server-2012-r2/67e86695-bda3-4f32-96c4-2e20e56f1cf3)|
-    | Windows 8 phone or  Windows 8.1 phone|[My Server 2012 R2 (Windows Phone store)](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)|
+    | Windows 8 phone or  Windows 8.1 phone|[My Server 2012 R2 (Windows Phone store)](https://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)|
 
 #### To work with documents in SharePoint Online libraries from My Server 2012 R2
 

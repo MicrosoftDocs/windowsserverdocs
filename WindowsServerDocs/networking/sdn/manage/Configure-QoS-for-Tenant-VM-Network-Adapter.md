@@ -4,18 +4,17 @@ description: You can configure SDN QoS for a VM network adapter to limit bandwid
 manager: grcusanz
 ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
-ms.author: anpaul
+ms.author: roharwoo
 author: AnirbanPaul
-ms.date: 08/19/2021
-ms.custom: contperf-fy22q1
+ms.date: 11/02/2021
 ---
 # Configure Quality of Service (QoS) for a VM network adapter
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>
 
 You can configure Software Defined Networking (SDN) Quality of Service (QoS) for a virtual machine (VM) network adapter to limit bandwidth on a virtual interface to prevent a high-traffic VM from contending with other VM network traffic. You can also configure SDN QoS to reserve a specific amount of bandwidth for a VM to ensure that the VM can send traffic regardless of other traffic on the network. This can be applied to VMs attached to traditional VLAN networks as well as VMs attached to SDN overlay networks.
 
-You can also configure ***QoS Offload*** to enforce QoS rules at the physical network adapter rather than at the virtual switch, resulting in lower CPU utilization and improved enforcement. QoS Offload is an optional capability found in Windows Server 2022 certified NICs that have achieved the Windows Server Software-Defined Data Center (SDDC) Premium Additional Qualification (AQ). For more information, see [Select a network adapter](/azure-stack/hci/concepts/host-network-requirements#select-a-network-adapter).
+You can also configure ***QoS Offload*** to enforce QoS rules at the physical network adapter rather than at the virtual switch, resulting in lower CPU utilization and improved enforcement. QoS Offload is an optional capability found in Windows Server 2022 certified NICs that have achieved the Windows Server Software-Defined Data Center (SDDC) Premium Additional Qualification (AQ). For more information, see [Select a network adapter](/azure/azure-local/concepts/host-network-requirements#select-a-network-adapter?context=/windows-server/context/windows-server-edge-networking).
 
 ## SDN QoS bandwidth limits
 
@@ -31,7 +30,7 @@ The settings that can be configured through SDN QoS are:
 
 ## SDN QoS policies
 
-Once Network Controller for SDN is setup, you can go ahead and deploy your QoS policies. Today, you can do this using [Network Controller](/powershell/module/networkcontroller/?view=windowsserver2019-ps) PowerShell cmdlets.
+Once Network Controller for SDN is setup, you can go ahead and deploy your QoS policies. Today, you can do this using [Network Controller](/powershell/module/networkcontroller/?view=windowsserver2019-ps&preserve-view=true) PowerShell cmdlets.
 
 For all example scripts used below, `-ConnectionUri` is the REST URI of the Network Controller. For example: https://nc.contoso.com.
 
@@ -72,10 +71,10 @@ You can configure the physical NIC to use QoS Offload. If your adapter supports 
 
 ### Use Network ATC
 
-QoS Offload is automatically enabled on all adapters with the `Compute` intent type. For more information, see [Simplify host networking with Network ATC](/azure-stack/hci/deploy/network-atc).
+QoS Offload is automatically enabled on all adapters with the `Compute` intent type. For more information, see [Simplify host networking with Network ATC](/azure/azure-local/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking).
 
 >[!NOTE]
->This option is only available to Azure Stack HCI subscribers.
+>This option is only available to Azure Local subscribers.
 
 ### Use manual enablement
 

@@ -3,8 +3,8 @@ title: ksetup
 description: Reference article for the ksetup command, which performs tasks related to setting up and maintaining Kerberos protocol and the Key Distribution Center (KDC) to support Kerberos realms.
 ms.topic: reference
 ms.assetid: 4e046f8a-811b-48dc-9a69-18d8e097f353
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -74,6 +74,6 @@ ksetup
 | [ksetup delenctypeattr](ksetup-delenctypeattr.md) | Deletes the encryption types trust attribute for the domain. |
 | /? | Displays Help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -2,8 +2,8 @@
 title: Hyper-V Network I/O Performance
 description: Network i/o performance considerations in Hyper-V performance tuning
 ms.topic: article
-ms.author: asmahi
-author: phstee
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

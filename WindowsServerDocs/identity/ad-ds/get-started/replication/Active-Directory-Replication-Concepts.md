@@ -3,7 +3,7 @@ description: "Learn more about: Active Directory Replication Concepts"
 ms.assetid: 4cc9c16c-1928-4dce-a3a8-6229be28eb65
 title: Active Directory Replication Concepts
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -11,7 +11,7 @@ ms.topic: article
 
 # Active Directory Replication Concepts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 Before designing site topology, become familiar with some Active Directory replication concepts.
 
@@ -40,7 +40,7 @@ A connection object is an Active Directory object that represents a replication 
 
 The connection object is a child of the NTDS Settings object on the destination server. For replication to occur between two domain controllers, the server object of one must have a connection object that represents inbound replication from the other. All replication connections for a domain controller are stored as connection objects under the NTDS Settings object. The connection object identifies the replication source server, contains a replication schedule, and specifies a replication transport.
 
-The Knowledge Consistency Checker (KCC) creates connection objects automatically, but they can also be created manually. Connection objects created by the KCC appear in the Active Directory Sites and Services snap-in as **<automatically generated>** and are considered adequate under normal operating conditions. Connection objects created by an administrator are manually created connection objects. A manually created connection object is identified by the name assigned by the administrator when it was created. When you modify a **<automatically generated>** connection object, you convert it into an administratively modified connection object and the object appears in the form of a GUID. The KCC does not make changes to manual or modified connection objects.
+The Knowledge Consistency Checker (KCC) creates connection objects automatically, but they can also be created manually. Connection objects created by the KCC appear in the Active Directory Sites and Services snap-in as **\<automatically generated>** and are considered adequate under normal operating conditions. Connection objects created by an administrator are manually created connection objects. A manually created connection object is identified by the name assigned by the administrator when it was created. When you modify a **\<automatically generated>** connection object, you convert it into an administratively modified connection object and the object appears in the form of a GUID. The KCC does not make changes to manual or modified connection objects.
 
 ## <a name="BKMK_2"></a>KCC
 The KCC is a built-in process that runs on all domain controllers and generates replication topology for the Active Directory forest. The KCC creates separate replication topologies depending on whether replication is occurring within a site (intrasite) or between sites (intersite). The KCC also dynamically adjusts the topology to accommodate the addition of new domain controllers, the removal of existing domain controllers, the movement of domain controllers to and from sites, changing costs and schedules, and domain controllers that are temporarily unavailable or in an error state.

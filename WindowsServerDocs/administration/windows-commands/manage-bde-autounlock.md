@@ -3,8 +3,8 @@ title: manage-bde autounlock
 description: Reference article for the manage-bde autounlock command, which manages the automatic unlocking of BitLocker-protected data drives.
 ms.topic: reference
 ms.assetid: 063528bf-d235-4b44-887a-52a7d983e01a
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -40,7 +40,7 @@ To enable automatic unlocking of data drive E, type:
 manage-bde –autounlock -enable E:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

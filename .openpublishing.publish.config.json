@@ -11,7 +11,8 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "ZonePivotGroups": "Toc"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
@@ -35,13 +36,18 @@
     }
   ],
   "notification_subscribers": [],
+  "sync_notification_subscribers": [
+    "wscontent@microsoft.com"
+  ],
   "branches_to_filter": [
     ""
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windowsserverdocs",
-  "git_repository_branch_open_to_public_contributors": "master",
+  "git_repository_branch_open_to_public_contributors": "main",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
+  "resolve_user_profile_using_github": true,
+  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes.pdf",
@@ -60,6 +66,24 @@
       "url": "https://github.com/MicrosoftDocs/windows-release-pr",
       "branch": "live",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_azurestack",
+      "url": "https://github.com/MicrosoftDocs/azure-stack-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_azuredocs",
+      "url": "https://github.com/MicrosoftDocs/azure-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "WindowsServerDocs/reusable-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
@@ -73,8 +97,7 @@
     ]
   },
   "need_generate_pdf_url_template": true,
-  "resolve_user_profile_using_github": true,
-  "Targets": {
+  "targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"
     }

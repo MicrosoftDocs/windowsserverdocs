@@ -4,13 +4,13 @@ description: Learn how to configure the infrastructure that is required for an a
 manager: brianlic
 ms.topic: article
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 1 Configure the Remote Access Infrastructure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 

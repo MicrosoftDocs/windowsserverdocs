@@ -3,14 +3,14 @@ title: bitsadmin util
 description: Reference article for the bitsadmin util command, which lists the Util switches.
 ms.topic: reference
 ms.assetid: e8278a28-1ecc-42be-92e2-c93dee59751d
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin util
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists the **/util** switches.
 
@@ -36,7 +36,7 @@ bitsadmin /util /version
 | [bitsadmin util and setieproxy](bitsadmin-util-and-setieproxy.md) | Specifies proxy settings to use when transferring files using a service account. |
 | [bitsadmin util and version](bitsadmin-util-and-version.md) | Displays the version of the BITS service. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

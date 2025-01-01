@@ -3,8 +3,8 @@ title: compact
 description: Reference article for the compact command, which displays or alters the compression of files or directories on NTFS partitions.
 ms.topic: reference
 ms.assetid: 429b3752-df0a-43a4-a210-df2f3ad03c3b
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -83,6 +83,6 @@ To remove the compressed attribute from the directory c:\tmp, without changing t
 compact /u c:\tmp
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

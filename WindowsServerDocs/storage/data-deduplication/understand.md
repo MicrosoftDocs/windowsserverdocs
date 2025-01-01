@@ -5,12 +5,12 @@ title: Understanding Data Deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl
-ms.author: wgries
-ms.date: 09/15/2016
+ms.author: roharwoo
+ms.date: 02/18/2022
 ---
 # Understanding Data Deduplication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 This document describes how [Data Deduplication](overview.md) works.
 

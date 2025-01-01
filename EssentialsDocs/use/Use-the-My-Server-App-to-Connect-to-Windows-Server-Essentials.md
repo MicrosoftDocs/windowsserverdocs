@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4e40b57f-6917-43ef-92e0-030baa9d2b99
 author: nnamuhcs
-ms.author: daveba
+ms.author: roharwoo
 ---
 
 # Use the My Server App to Connect to Windows Server Essentials
@@ -65,7 +65,7 @@ The My Server apps for  Windows Server Essentials let you connect to resources a
 
 1.  Open a web browser on your computer, and download the default certificate, CAROOT.cer, from the server. To do this, type the following, substituting the name of your server (for example, **marketing.contoso.com**) for <*servername*>:
 
-     **http://<servername\>/connect/default.aspx?get=caroot.cer**
+     **https://<servername\>/connect/default.aspx?get=caroot.cer**
 
 2.  Install the certificate:
 
@@ -120,7 +120,7 @@ The My Server apps for  Windows Server Essentials let you connect to resources a
 
 1.  On your Windows Phone that is running Windows 8 or Windows 8.1, open Internet Explorer.
 
-2.  In the address bar, type **http://<yourservername\>/connect/default.aspx?get=caroot.cer**, and then press Enter.
+2.  In the address bar, type **https://<yourservername\>/connect/default.aspx?get=caroot.cer**, and then press Enter.
 
 3.  When you are prompted to install the caroot.cer certificate, click **Install**.
 
@@ -133,7 +133,7 @@ The My Server apps for  Windows Server Essentials let you connect to resources a
 
 1.  On a computer that is running Windows 8 or Windows 8.1, open Internet Explorer.
 
-2.  In the address bar, type **http://<yourservername\>/connect/default.aspx?get=caroot.cer**, and then press Enter.
+2.  In the address bar, type **https://<yourservername\>/connect/default.aspx?get=caroot.cer**, and then press Enter.
 
 3.  When you are prompted to install the caroot.cer certificate, click **Open**.
 

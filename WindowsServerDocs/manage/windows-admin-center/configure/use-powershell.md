@@ -2,10 +2,9 @@
 title: Use PowerShell to manage Windows Admin Center settings
 description: Learn how to use PowerShell to Manage Windows Admin Center Settings and Configuration
 ms.topic: article
-author: jwwool
-ms.author: jeffrew
+author: robinharwood
+ms.author: roharwoo
 ms.date: 11/21/2019
-ms.localizationpriority: medium
 ---
 
 # Use PowerShell to manage Windows Admin Center settings

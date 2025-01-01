@@ -3,8 +3,8 @@ title: retain
 description: Reference article for the retain command, which prepares an existing dynamic volume for use as a boot or system volume.
 ms.topic: reference
 ms.assetid: eeab0aef-2ba5-441a-a10d-bbef6f0d7e3e
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -19,6 +19,6 @@ Prepares an existing simple dynamic volume for use as a boot or system volume. I
 retain
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

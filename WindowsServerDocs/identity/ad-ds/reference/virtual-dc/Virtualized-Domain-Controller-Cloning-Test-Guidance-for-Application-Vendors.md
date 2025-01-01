@@ -3,7 +3,7 @@ description: "Learn more about: Virtualized Domain Controller Cloning Test Guida
 ms.assetid: fde99b44-cb9f-49bf-b888-edaeabe6b88d
 title: Virtualized Domain Controller Cloning Test Guidance for Application Vendors
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -11,7 +11,7 @@ ms.topic: article
 
 # Virtualized Domain Controller Cloning Test Guidance for Application Vendors
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 This topic explains what application vendors should consider to help ensure their application continues to work as expected after the virtualized domain controller (DC) cloning process completes. It covers those aspects of the cloning process that interest application vendors and scenarios that may warrant additional testing. Application vendors who have validated that their application works on virtualized domain controllers that have been cloned are encouraged to list the name of the application in the Community Content at the bottom of this topic, along with a link to your organization's web site where users can learn more about the validation.
 
@@ -45,7 +45,7 @@ A domain controller that runs your application or service cannot be cloned until
 
 -   Removed from the domain controller
 
-The first time the user runs the Get-ADDCCloningExcludedApplicationList cmdlet, it returns a list of services and applications that are running on the domain controller but are not in the default list of services and applications that are supported for cloning. By default, your service or application will not be listed. To add your service or application to the list of applications and services that can be safely cloned, the user runs Get-ADDCCloningExcludedApplicationList cmdlet again with the -GenerateXML option in order to add it to the CustomDCCloneAllowList.xml file. For more information, see [Step 2: Run Get-ADDCCloningExcludedApplicationList cmdlet](/powershell/module/addsadministration/get-addccloningexcludedapplicationlist).
+The first time the user runs the Get-ADDCCloningExcludedApplicationList cmdlet, it returns a list of services and applications that are running on the domain controller but are not in the default list of services and applications that are supported for cloning. By default, your service or application will not be listed. To add your service or application to the list of applications and services that can be safely cloned, the user runs Get-ADDCCloningExcludedApplicationList cmdlet again with the -GenerateXML option in order to add it to the CustomDCCloneAllowList.xml file. For more information, see [Step 2: Run Get-ADDCCloningExcludedApplicationList cmdlet](/powershell/module/activedirectory/get-addccloningexcludedapplicationlist).
 
 ### Distributed System Interactions
 Usually services isolated to the local computer either pass or fail when participating in cloning. Distributed services have to be concerned about having two instances of the host computer on the network simultaneously for a brief period of time. This may manifest as a service instance trying to pull information from a partner system where the clone has registered as the new vendor of the identity. Or both instances of the service may push information into the AD DS database at the same time with different results. For example, it is not deterministic which computer will be communicated with when two computers that have Windows Testing Technologies (WTT) service are on the network with the domain controller.

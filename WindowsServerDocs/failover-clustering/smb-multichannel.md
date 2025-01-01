@@ -4,14 +4,14 @@ ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.topic: article
 author: RobHindman
-ms.author: robhind
-ms.date: 05/28/2021
+ms.author: helohr
+ms.date: 10/20/2021
 ---
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-Simplified SMB Multichannel and Multi-<abbr title="Network Interface Card">NIC</abbr> Cluster Networks is a feature that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Multichannel.
+
+Simplified SMB Multichannel and Multi-Network Interface Card (NIC) Cluster Networks is a feature that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Multichannel.
 
 Simplified SMB Multichannel and Multi-NIC Cluster Networks provides the following benefits:
 - Failover Clustering automatically recognizes all NICs on nodes that are using the same switch / same subnet - no additional configuration needed.
@@ -40,7 +40,7 @@ Maximum benefit of the simplified SMB multichannel is achieved when multiple NIC
 **Figure 2: To achieve maximum network throughput, use multiple NICs on both the Scale-out File Server cluster and the Hyper-V or SQL Server Failover Cluster Instance cluster - which share the North-South subnet**
 
 ![Screencap of two clusters using multiple NICs in the same subnet to leverage SMB multichannel](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig3.png)
-**Figure 3: Two clusters (Scale-out File Server for storage, SQL Server <abbr title="Failover Clustering Instance">FCI</abbr> for workload) both use multiple NICs in the same subnet to leverage SMB Multichannel and achieve better network throughput.**
+**Figure 3: Two clusters (Scale-out File Server for storage, SQL Server Failover Clustering Instance (FCI) for workload) both use multiple NICs in the same subnet to leverage SMB Multichannel and achieve better network throughput.**
 
 ## Automatic recognition of IPv6 Link Local private networks
 When private (cluster only) networks with multiple NICs are detected, the cluster will automatically recognize IPv6 Link Local (fe80) IP addresses for each NIC on each subnet. This saves administrators time since they no longer have to manually configure IPv6 Link Local (fe80) IP Address resources.

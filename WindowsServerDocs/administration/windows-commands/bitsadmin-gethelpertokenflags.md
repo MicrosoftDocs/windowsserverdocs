@@ -2,8 +2,8 @@
 title: bitsadmin gethelpertokenflags
 description: Reference article for the bitsadmin gethelpertokenflags command, which returns the usage flags for a helper token that is associated with a BITS transfer job.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 03/01/2019
 ---
@@ -43,7 +43,7 @@ To retrieve the usage flags for a helper token associated with a BITS transfer 
 bitsadmin /gethelpertokenflags myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

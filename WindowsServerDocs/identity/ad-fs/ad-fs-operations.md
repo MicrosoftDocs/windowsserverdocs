@@ -4,13 +4,14 @@ ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: AD FS Operations
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 # AD FS Operations
 
 
+[!INCLUDE [Migrate to Azure AD](../../../includes/adfs-to-azure-ad-upgrade.md)]
 
 This document contains a list of all of the documentation operations for AD FS.
 
@@ -23,6 +24,7 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
 - [Fine tune SQL and address latency](../ad-fs/operations/adfs-sql-latency.md)
 - [AlwaysOn Availability Groups](../ad-fs/operations/ad-fs-always-on.md)
+- [What is KDFv2?](../ad-fs/operations/what-is-kdfv2.md)
 
 
 ## Authentication Configuration
@@ -39,7 +41,7 @@ This document contains a list of all of the documentation operations for AD FS.
 ### Policy Configuration
 - [Configure Authentication Policies](../ad-fs/operations/Configure-Authentication-Policies.md)
 - [Configuring Alternate Login ID](../ad-fs/operations/Configuring-Alternate-Login-ID.md)
-- [Configure Azure AD Prompt login behavior to work with AD FS policy](../ad-fs/operations/AD-FS-Prompt-Login.md)
+- [Configure Microsoft Entra prompt login behavior to work with AD FS policy](../ad-fs/operations/AD-FS-Prompt-Login.md)
 
 ### Kerberos & Certificate authentication
 - [Enable AD DS claims & kerberos compound authentication in AD FS](../ad-fs/operations/AD-FS-Compound-Authentication-and-AD-DS-claims.md)
@@ -79,5 +81,3 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Walkthrough Guide: Manage Risk with Conditional Access Control](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 - [Walkthrough: Workplace Join with a Windows Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 - [Walkthrough: Workplace Join with an iOS Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
-
-

@@ -3,8 +3,8 @@ title: revert
 description: Reference article for the revert command, which reverts a volume back to a specified shadow copy.
 ms.topic: reference
 ms.assetid: 75ad40e4-502a-401e-b11e-8b31e00424b5
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -25,6 +25,6 @@ revert <shadowcopyID>
 |--|--|
 | `<shadowcopyID>` | Specifies the shadow copy ID to revert the volume to. If you don't use this parameter, the command displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

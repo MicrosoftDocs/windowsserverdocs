@@ -3,16 +3,13 @@ description: "Learn more about: Walkthrough Guide: Manage Risk with Conditional 
 ms.assetid: 3a840b63-78b7-4e62-af7b-497026bfdb93
 title: Walkthrough Guide - Manage Risk with Conditional Access Control
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+ms.author: roharwoo
+manager: amycolannino
+ms.date: 10/22/2021
 ms.topic: article
 ---
 
 # Walkthrough Guide: Manage Risk with Conditional Access Control
-
-
-
 
 ## About This Guide
 This walkthrough provides instructions for managing risk with one of the factors (user data) available through the conditional access control mechanism in Active Directory Federation Services (AD FS) in Windows Server 2012 R2. For more information about conditional access control and authorization mechanisms in AD FS in Windows Server 2012 R2, see [Manage Risk with Conditional Access Control](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md).
@@ -90,18 +87,18 @@ You can complete this task using either AD FS Management Console or via Windows 
 1.  On your federation server, open the Windows PowerShell command window and run the following command:
 
 
-~~~
-`$rp = Get-AdfsRelyingPartyTrust -Name claimapp`
-~~~
+```powershell
+$rp = Get-AdfsRelyingPartyTrust -Name claimapp
+```
 
 
 2. In the same Windows PowerShell command window, run the following command:
 
 
-~~~
-`$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
-Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule`
-~~~
+```powershell
+$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
+Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule
+```
 
 > [!NOTE]
 > Make sure to replace <group_SID> with the value of the SID of your AD **Finance** group.

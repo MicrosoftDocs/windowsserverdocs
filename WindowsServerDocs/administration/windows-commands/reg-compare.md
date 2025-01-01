@@ -3,8 +3,8 @@ title: reg compare
 description: Reference article for the reg compare command, which compares specified registry subkeys or entries.
 ms.topic: reference
 ms.assetid: 177dc6a3-034e-4846-a394-330d03c14e0b
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -72,6 +72,6 @@ To compare all subkeys and values under HKLM\Software\MyCo on the computer named
 reg compare \\ZODIAC\HKLM\Software\MyCo \\. /s
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
