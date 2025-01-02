@@ -3,13 +3,13 @@ title: Add Namespace Servers to a Domain-based DFS Namespace
 description: This article describes how to specify additional namespace servers to host a namespace using DFS management.
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 # Add namespace servers to a domain-based DFS namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>
 
 You can increase the availability of a domain-based namespace by specifying additional namespace servers to host the namespace.
 

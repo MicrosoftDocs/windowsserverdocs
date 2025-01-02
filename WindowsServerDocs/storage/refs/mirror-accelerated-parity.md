@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Mirror-accelerated parity"
 title: Mirror-accelerated parity
-ms.author: daknappe
+ms.author: roharwoo
 manager: masriniv
 ms.topic: article
 author: gawatu
@@ -10,9 +10,9 @@ ms.assetid:
 ---
 # Mirror-accelerated parity
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
-Storage Spaces can provide fault tolerance for data using two fundamental techniques: mirror and parity. In [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md), ReFS introduces mirror-accelerated parity, which enables you to create volumes that use both mirror and parity resiliencies. Mirror-accelerated parity offers inexpensive, space-efficient storage without sacrificing performance.
+Storage Spaces can provide fault tolerance for data using two fundamental techniques: mirror and parity. In [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage), ReFS introduces mirror-accelerated parity, which enables you to create volumes that use both mirror and parity resiliencies. Mirror-accelerated parity offers inexpensive, space-efficient storage without sacrificing performance.
 
 ![Diagram depicting the mirror accelerated parity volume.](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume.png)
 
@@ -20,7 +20,7 @@ Storage Spaces can provide fault tolerance for data using two fundamental techni
 
 Mirror and parity resiliency schemes have fundamentally different storage and performance characteristics:
 - Mirror resiliency allows users to attain fast write performance, but replicating the data for each copy isn't space efficient.
-- Parity, on the other hand, must re-compute parity for every write, causing random write performance to suffer. Parity does, however, allow users to store their data with greater space efficiency. For more info, see [Storage Spaces fault tolerance](../storage-spaces/Storage-Spaces-Fault-Tolerance.md).
+- Parity, on the other hand, must re-compute parity for every write, causing random write performance to suffer. Parity does, however, allow users to store their data with greater space efficiency. For more info, see [Storage Spaces fault tolerance](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage).
 
 Thus, mirror is predisposed to deliver performance-sensitive storage while parity offers improved storage capacity utilization. In mirror-accelerated parity, ReFS leverages the benefits of each resiliency type to deliver both capacity-efficient and performance-sensitive storage by combining both resiliency schemes within a single volume.
 
@@ -73,11 +73,11 @@ When data is moved from mirror to parity, the data is read, parity encodings are
 
 **Reads:** There is no meaningful, negative performance impact when reading from parity:
 - If mirror and parity are constructed with the same media type, read performance will be equivalent.
-- If mirror and parity are constructed with different media types—Mirrored SSDs, Parity HDDs, for example—[the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) will help cache hot data to accelerate any reads from parity.
+- If mirror and parity are constructed with different media types—Mirrored SSDs, Parity HDDs, for example—[the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage) will help cache hot data to accelerate any reads from parity.
 
 ## ReFS compaction
 
-In this Fall's semi-annual release, ReFS introduces compaction, which substantially improves performance for mirror-accelerated parity volumes that are 90+% full.
+Compaction for ReFS is available with Windows Server 2019 and later versions, which substantially improves performance for mirror-accelerated parity volumes that are 90+% full.
 
 **Background:** Previously, as mirror-accelerated parity volumes became full, the performance of these volumes could degrade. The performance degrades because hot and cold data become mixed throughout the volume overtime. This means less hot data can be stored in mirror since cold data occupies space in mirror that could otherwise be used by hot data. Storing hot data in mirror is critical to maintaining high performance because writes directly to mirror are much faster than reallocated writes and orders of magnitude faster than writes directly to parity. Thus, having cold data in mirror is bad for performance, as it reduces the likelihood that ReFS can make writes directly to mirror.
 
@@ -132,18 +132,18 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Policies -Name DataDestage
 
 Increasing the size of the mirrored tier enables ReFS to retain a larger portion of the working set in mirror. This improves the likelihood that ReFS can write directly to mirror, which will help achieve better performance. The PowerShell cmdlets below demonstrate how to increase the size of the mirrored tier:
 ```PowerShell
-Resize-StorageTier -FriendlyName “Performance” -Size 20GB
-Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName “Performance”) -Size 20GB
+Resize-StorageTier -FriendlyName "Performance" -Size 20GB
+Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName "Performance") -Size 20GB
 ```
 >[!TIP]
->Make sure to resize the **Partition** and **Volume** after you resize the **StorageTier**. For more information and examples, see [Resize-Volumes](../storage-spaces/resize-volumes.md).
+>Make sure to resize the **Partition** and **Volume** after you resize the **StorageTier**. For more information and examples, see [Extend a basic volume](../disk-management/extend-a-basic-volume.md).
 
 ## Creating a mirror-accelerated parity volume
 
-The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information and examples, see [Creating volumes in Storage Spaces Direct](../storage-spaces/Create-volumes.md).
+The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information and examples, see [Creating volumes in Storage Spaces Direct](/azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage).
 
 ```PowerShell
-New-Volume – FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePoolFriendlyName “StoragePoolName” -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
+New-Volume -FriendlyName "TestVolume" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName "StoragePoolName" -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
 ```
 
 ## Additional References
@@ -151,4 +151,4 @@ New-Volume – FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePool
 -   [ReFS overview](refs-overview.md)
 -   [ReFS block cloning](block-cloning.md)
 -   [ReFS integrity streams](integrity-streams.md)
--   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

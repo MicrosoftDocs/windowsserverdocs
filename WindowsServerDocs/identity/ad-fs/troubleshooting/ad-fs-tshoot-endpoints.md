@@ -3,8 +3,8 @@ title: AD FS Troubleshooting - AD FS endpoints
 description:  This document describes how to troubleshoot AD FS endpoints
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 01/03/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -17,7 +17,7 @@ Passive federation refers to scenarios where your browser is re-directed to the 
 
 1.  Using a web browser, navigate to your AD FS Federation metadata endpoint.  For example:  https://sts.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml
 2. The xml file should download locally to your machine.
-3. Open it and verify that it contains information similar to the infomration below:
+3. Open it and verify that it contains information similar to the information below:
 ![Passive](media/ad-fs-tshoot-endpoints/meta2.png)
 
 ## WS-MEX test (Active test)
@@ -25,9 +25,8 @@ WS-MetaDataExchange is a web services protocol and is part of the WS-Federation 
 1.  Using a web browser, navigate to your AD FS Federation metadata endpoint.  For example:  https://sts.contoso.com/adfs/services/trust/mex
 2. The xml file should be displayed in the browser automatically.  It should look like the image below:
 
-![Active](media/ad-fs-tshoot-endpoints/meta3.png)
+:::image type="content" source="media/ad-fs-tshoot-endpoints/security-trust-file.png" alt-text="A screenshot of the AD FS Federation metadata endpoint XML file.":::
 
-
-## Next Steps
+## Next steps
 
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)

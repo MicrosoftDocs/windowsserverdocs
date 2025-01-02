@@ -3,8 +3,8 @@ title: pwlauncher
 description: Reference article for the pwlauncher command, which enables or disables the Windows To Go Startup Options (pwlauncher).
 ms.topic: reference
 ms.assetid: 0917bb7b-408a-40f7-a1c5-20e94c10d38b
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -37,6 +37,6 @@ To enable boot from USB:
 pwlauncher /enable
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

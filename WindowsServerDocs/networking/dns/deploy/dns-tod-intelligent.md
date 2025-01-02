@@ -4,13 +4,13 @@ description: Learn how to use DNS policy for intelligent DNS responses based on 
 manager: brianlic
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.
 
@@ -105,7 +105,7 @@ For example, in **SeattleZoneScope**, the record <strong>www.contosogiftservices
 You can use the following Windows PowerShell commands to add records to the zone scopes.
 
 ```PowerShell
-Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "SeattleZoneScope
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "SeattleZoneScope"
 
 Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "141.1.0.3" -ZoneScope "DublinZoneScope"
 ```
@@ -140,7 +140,7 @@ Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ClientSu
 
 Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "DublinZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 4
 
-Add-DnsServerQueryResolutionPolicy -Name "RestOfWorldPolicy" -Action ALLOW --ZoneScope "DublinZoneScope,1;SeattleZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 5
+Add-DnsServerQueryResolutionPolicy -Name "RestOfWorldPolicy" -Action ALLOW -ZoneScope "DublinZoneScope,1;SeattleZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 5
 ```
 
 For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).

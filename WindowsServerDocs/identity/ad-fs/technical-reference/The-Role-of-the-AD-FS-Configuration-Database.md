@@ -4,8 +4,8 @@ ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: The Role of the AD FS Configuration Database
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 08/26/2021
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -62,7 +62,7 @@ The WID synchronization process also supports incremental transfers for more eff
 > [!NOTE]
 > The migration of an AD FS configuration database from WID to an instance of SQL Server is supported. For more information about how to do this, see [AD FS: Migrate Your AD FS Configuration Database to SQL Server](https://go.microsoft.com/fwlink/?LinkId=192232) on the TechNet Wiki site.
 
-### How to managed the AD FS synchronization properties
+### How to manage the AD FS synchronization properties
 This Section describes how to view and edit the AD FS configuration database synchronization properties.
 .
 
@@ -77,7 +77,7 @@ The **Set-ADFSSyncProperties** cmdlet modifies the frequency of synchronization 
 The cmdlet also specifies which federation server is the primary server in the federation server farm. 
 
 > [!NOTE]
-> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. If nominate a new primary server the remain servers must be modified to reflect the new primary server. Having 2 primaries with a WID farm will impact the stableness of the farm and has the passibility of losing data.
+> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. If you nominate a new primary server the remaining servers must be modified to reflect the new primary server. Having 2 primaries with a WID farm will impact the stableness of the farm and has the possibility of losing data.
 
 #### Modify the poll duration for a farm
 ```
@@ -99,10 +99,10 @@ This command changes an AD FS server in a WID farm from secondary to primary.
 PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<FQDN of primary server>"
 ```
 
-This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary so server. Not doing so may not all the secondary AD FS server to sync properly. 
+This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary server. Not doing so may result in not all the secondary AD FS servers syncing properly. 
 Note: The primary server must be accessible via HTTP on port 80 from the secondary server.
 
-For more information see: [Set-AdfsSyncProperties](/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+For more information see: [Set-AdfsSyncProperties](/powershell/module/adfs/set-adfssyncproperties)
 
 
 ## Using SQL Server to store the AD FS configuration database

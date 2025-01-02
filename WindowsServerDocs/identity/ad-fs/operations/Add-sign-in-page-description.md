@@ -4,8 +4,8 @@ ms.assetid: 330c7b61-dde0-432f-9b74-d250ad9cc808
 title: Add sign-in page description
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 # Add sign\-in page description

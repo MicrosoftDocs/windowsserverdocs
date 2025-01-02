@@ -5,13 +5,13 @@ title: Deploy Claims Across Forests (Demonstration Steps)
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
 # Deploy Claims Across Forests (Demonstration Steps)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 In this topic, we'll cover a basic scenario that explains how to configure claims transformations between trusting and trusted forests. You will learn how claims transformation policy objects can be created and linked to the trust on the trusting forest and the trusted forest. You will then validate the scenario.
 
@@ -170,9 +170,9 @@ Following is a list of additional common cases in claims transformation.
 
 ## <a name="BKMK_Links"></a>See also
 
--   For a list of all Windows PowerShell cmdlets that are available for claims transformation, see [Active Directory PowerShell Cmdlet Reference](https://go.microsoft.com/fwlink/?LinkId=243150).
+-   For a list of all Windows PowerShell cmdlets that are available for claims transformation, see [Active Directory PowerShell Cmdlet Reference](/powershell/module/activedirectory).
 
--   For advanced tasks that involve export and import of DAC configuration information between two forests, use the [Dynamic Access Control PowerShell Reference](https://go.microsoft.com/fwlink/?LinkId=243150)
+-   For advanced tasks that involve export and import of DAC configuration information between two forests, use the [Dynamic Access Control PowerShell Reference](/powershell/module/activedirectory)
 
 -   [Deploy Claims Across Forests](Deploy-Claims-Across-Forests.md)
 

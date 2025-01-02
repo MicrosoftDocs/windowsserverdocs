@@ -3,8 +3,8 @@ title: bitsadmin cache and deleteURL
 description: Reference article for the bitsadmin cache and deleteURL command, which deletes all cache entries for the given URL.
 ms.topic: reference
 ms.assetid: e108b76b-fae9-4c16-bf4c-d74c9f025953
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -33,7 +33,7 @@ To delete all cache entries for `https://www.contoso.com/en/us/default.aspx`:
 bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

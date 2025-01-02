@@ -4,8 +4,8 @@ ms.assetid: 935ea7c2-4678-4033-b50f-2036a0359c5d
 title: Where to Place a Federation Server
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

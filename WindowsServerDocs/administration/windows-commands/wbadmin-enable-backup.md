@@ -3,8 +3,8 @@ title: wbadmin enable backup
 description: Reference article for the wbadmin enable backup command, which creates and enables a daily backup schedule or modifies an existing backup schedule.
 ms.topic: reference
 ms.assetid: c0e57f8a-70fa-4c60-9754-e762e8ad8772
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -64,7 +64,7 @@ To schedule daily backups of volume T: and the D:\documents folder at 1:00 AM to
 wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

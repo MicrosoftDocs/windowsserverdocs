@@ -4,8 +4,8 @@ ms.assetid: 6b38480e-5b1c-49f0-9d46-8cf22f70f0d2
 title: Set up the lab environment for AD FS in Windows Server 2012 R2
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -70,7 +70,7 @@ The group Managed Service Account (GMSA) account is required during the Active D
 ## <a name="BKMK_4"></a>Step 2: Configure the federation server (ADFS1) by using Device Registration Service
 To set up another virtual machine, install  Windows Server 2012 R2  and connect it to the domain **contoso.com**. Set up the computer after you have joined it to the domain, and then proceed to install and configure the AD FS role.
 
-For a video, see [Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
+For a video, see Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm.
 
 ### Install a server SSL certificate
 You must install a server Secure Socket Layer (SSL) certificate on the ADFS1 server in the local computer store. The certificate MUST have the following attributes:
@@ -83,7 +83,7 @@ You must install a server Secure Socket Layer (SSL) certificate on the ADFS1 ser
 
 For more information about setting up SSL certificates, see [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)).
 
-[Active Directory Federation Services How-To Video Series: Updating Certificates](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
+Active Directory Federation Services How-To Video Series: Updating Certificates.
 
 ### Install the AD FS server role
 
@@ -141,7 +141,7 @@ The next step is to configure the federation server.
 9. On the **Results** page, review the results, check whether the configuration has completed successfully, and then click **Next steps required for completing your federation service deployment**.
 
 ### Configure Device Registration Service
-The next step is to configure Device Registration Service on the ADFS1 server. For a video, see [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](https://channel9.msdn.com/).
+The next step is to configure Device Registration Service on the ADFS1 server. For a video, see [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](/teamblog/channel9joinedmicrosoftlearn).
 
 ##### To configure Device Registration Service for Windows Server 2012 RTM
 
@@ -200,8 +200,6 @@ Set up a virtual machine (WebServ1) by installing the  Windows Server 2012 R2  o
 
 To complete the walkthroughs that were referenced earlier in this topic, you must have a sample application that is secured by your federation server (ADFS1).
 
-You can download Windows Identity Foundation SDK ([https://www.microsoft.com/download/details.aspx?id=4451](https://www.microsoft.com/download/details.aspx?id=4451), which includes a sample claims-based application.
-
 You must complete the following steps to set up a web server with this sample claims-based application.
 
 > [!NOTE]
@@ -242,7 +240,7 @@ You must complete the following steps to set up a web server with this sample cl
 
 ### <a name="BKMK_13"></a>Install Windows Identity Foundation SDK
 
-1.  Run WindowsIdentityFoundation-SDK-3.5.msi to install Windows Identity Foundation SDK 3.5 (https://www.microsoft.com/download/details.aspx?id=4451). Choose all of the default options.
+1.  Run WindowsIdentityFoundation-SDK-3.5.msi to install Windows Identity Foundation SDK 3.5. Choose all of the default options.
 
 ### <a name="BKMK_9"></a>Configure the simple claims app in IIS
 
@@ -301,7 +299,7 @@ You must complete the following steps to set up a web server with this sample cl
 
     1.  Run FedUtil.exe, which is located in **C:\Program Files (x86)\Windows Identity Foundation SDK\v3.5**.
 
-    2.  Set the application configuration location to **C:\inetput\claimapp\web.config** and set the application URI to the URL for your site, **https://webserv1.contoso.com /claimapp/**. Click **Next**.
+    2.  Set the application configuration location to **C:\inetpub\claimapp\web.config** and set the application URI to the URL for your site, **https://webserv1.contoso.com /claimapp/**. Click **Next**.
 
     3.  Select **Use an existing STS** and browse to your AD FS server's metadata URL **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml**. Click **Next**.
 
@@ -313,7 +311,7 @@ You must complete the following steps to set up a web server with this sample cl
 
     7.  Your sample application is now configured. If you test the application URL **https://webserv1.contoso.com/claimapp**, it should redirect you to your federation server. The federation server should display an error page because you have not yet configured the relying party trust. In other words, you have not secured this test application by AD FS.
 
-You must now secure your sample application that runs on your web server with AD FS. You can do this by adding a relying party trust on your federation server (ADFS1). For a video, see [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
+You must now secure your sample application that runs on your web server with AD FS. You can do this by adding a relying party trust on your federation server (ADFS1). For a video, see Active Directory Federation Services How-To Video Series: Add a Relying Party Trust.
 
 ### <a name="BKMK_11"></a>Create a relying party trust on your federation server
 
@@ -354,8 +352,8 @@ You also must set up and use a Microsoft account to log on to Client1.
 ## See Also
 
 
-- [Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
-- [Active Directory Federation Services How-To Video Series: Updating Certificates](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
-- [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
-- [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](https://channel9.msdn.com/)
-- [Active Directory Federation Services How-To Video Series: Installing the Web Application Proxy](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
+- Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm
+- Active Directory Federation Services How-To Video Series: Updating Certificates
+- Active Directory Federation Services How-To Video Series: Add a Relying Party Trust
+- [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](/teamblog/channel9joinedmicrosoftlearn)
+- Active Directory Federation Services How-To Video Series: Installing the Web Application Proxy

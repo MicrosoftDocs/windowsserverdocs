@@ -2,15 +2,14 @@
 title: Windows Admin Center Case Studies
 description: Windows Admin Center Case Studies (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/18/2018
-ms.localizationpriority: medium
 ---
 
 # Windows Admin Center Case Studies
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>
 
 ## Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 
@@ -45,7 +44,7 @@ Ava6's customers have been impressed with Windows Admin Center, and prefer its m
 
 [Comparex](https://www.comparex-group.com) is an IT service provider and software license management company that has developed services to support management, leverage software products, and enable productivity optimization.
 
-Comparex uses Windows Server 2012R2, Windows Server 2016, Windows 10, Hyper-V, Failover Clusters, Storage Spaces Direct, PowerShell, RDP over HTML, Azure AD and Application Proxy, File Servers, and Azure Site Recovery.
+Comparex uses Windows Server 2012R2, Windows Server 2016, Windows 10, Hyper-V, Failover Clusters, Storage Spaces Direct, PowerShell, RDP over HTML, Microsoft Entra ID and Application Proxy, File Servers, and Azure Site Recovery.
 
 ### **The Challenge**
 

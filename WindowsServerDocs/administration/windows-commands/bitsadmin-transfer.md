@@ -3,8 +3,8 @@ title: bitsadmin transfer
 description: Reference article for the bitsadmin transfer command, which transfers one or more files.
 ms.topic: reference
 ms.assetid: fe302141-b33a-4a05-835e-dc4fc4db7d5a
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -44,7 +44,7 @@ To start a transfer job named *myDownloadJob*:
 bitsadmin /transfer myDownloadJob http://prodserver/audio.wma c:\downloads\audio.wma
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

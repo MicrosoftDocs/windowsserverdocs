@@ -3,8 +3,8 @@ title: wbadmin get versions
 description: Reference article for the wbadmin get versions command, which lists details about the available backups that are stored on the local computer or another computer.
 ms.topic: reference
 ms.assetid: b986acc4-d083-4d32-9434-862314ed5e97
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -44,7 +44,7 @@ To see a list of available backups that are stored in the remote shared folder `
 wbadmin get versions -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
@@ -52,4 +52,4 @@ wbadmin get versions -backupTarget:\\servername\share -machine:server01
 
 - [wbadmin get items command](wbadmin-get-items.md)
 
-- [Get-WBBackupTarget](/powershell/module/windowserverbackup/Get-WBBackupTarget)
+- [Get-WBBackupTarget](/powershell/module/windowsserverbackup/get-wbbackuptarget)

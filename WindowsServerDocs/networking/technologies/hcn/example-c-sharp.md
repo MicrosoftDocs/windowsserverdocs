@@ -1,7 +1,7 @@
 ---
 title: Example of generated C# code for the top level IPAM & Subnet object
 description: Example of generated C# code for the top level IPAM & Subnet object.
-ms.author: daschott
+ms.author: roharwoo
 author: daschott
 ms.date: 11/05/2018
 ms.topic: article
@@ -9,7 +9,7 @@ ms.topic: article
 
 # Example of C# generated code
 
->Applies to: Windows Server 2022, Windows Server 2019
+>
 
 ```C#
 /*

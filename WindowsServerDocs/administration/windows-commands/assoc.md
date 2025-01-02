@@ -3,8 +3,8 @@ title: assoc
 description: Reference article for the assoc command, which displays or modifies file name extension associations.
 ms.topic: reference
 ms.assetid: 237bedda-b24c-4fec-a39c-9b7eacf96417
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -72,19 +72,19 @@ To send the output of **assoc** to the file assoc.txt, type:
 assoc>assoc.txt
 ```
 
-Associatie **.log** to text files:
+Associate **.log** to text files:
 
 ```
 assoc .log=txtfile
 ```
 
-Associatie files with no extension to text files:
+Associate files with no extension to text files:
 
 ```
 assoc .=txtfile
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -4,14 +4,14 @@ description: Learn how to plan your deployment of BranchCache in Hosted Cache mo
 manager: brianlic
 ms.topic: article
 ms.assetid: bc44a7db-f7a5-4e95-9d95-ab8d334e885f
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # BranchCache Hosted Cache Mode Deployment Planning
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 You can use this topic to plan your deployment of BranchCache in Hosted Cache mode.
 

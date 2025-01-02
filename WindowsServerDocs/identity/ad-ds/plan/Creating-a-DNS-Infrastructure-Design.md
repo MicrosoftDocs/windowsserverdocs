@@ -2,7 +2,7 @@
 description: "Learn more about: Creating a DNS Infrastructure Design"
 ms.assetid: cd70b0aa-0a67-4966-a041-4dd3f302c98b
 title: Creating a DNS Infrastructure Design
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
@@ -11,7 +11,7 @@ ms.topic: article
 
 # Creating a DNS Infrastructure Design
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 After you create your Active Directory forest and domain designs, you must design a Domain Name System (DNS) infrastructure to support your Active Directory logical structure. DNS enables users to use friendly names that are easy to remember to connect to computers and other resources on IP networks. Active Directory Domain Services (AD DS) in  Windows Server 2008  requires DNS.
 
@@ -31,5 +31,5 @@ Before you design your DNS infrastructure to support AD DS, it can be helpful to
 
 - [Reviewing DNS Concepts](../../ad-ds/plan/Reviewing-DNS-Concepts.md)
 - [DNS and AD DS](../../ad-ds/plan/DNS-and-AD-DS.md)
-- [Assigning the DNS for AD DS Owner Role](../../ad-ds/deploy/Assigning-the-DNS-for-AD-DS-Owner-Role.md)
+- [DNS for AD DS Owner Role](../../ad-ds/deploy/Assigning-the-DNS-for-AD-DS-Owner-Role.md)
 - [Integrating AD DS into an Existing DNS Infrastructure](../../ad-ds/plan/../../ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md)

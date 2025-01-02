@@ -2,8 +2,8 @@
 title: Hyper-V Configuration
 description: Hyper-V configuration considerations for performance tuning
 ms.topic: article
-ms.author: asmahi
-author: phstee
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -3,14 +3,14 @@ title: Netsh Commands for Hypertext Transfer Protocol (HTTP)
 description: Use netsh http to query and configure HTTP.sys settings and parameters.
 ms.topic: article
 manager: dougkim
-ms.author: jgerend
-author: JasonGerend
-ms.date: 07/16/2021
+ms.author: roharwoo
+author: robinharwood
+ms.date: 10/27/2021
 ---
 
 # Netsh http commands
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>
 
 Use **netsh http** to query and configure HTTP.sys settings and parameters.
 

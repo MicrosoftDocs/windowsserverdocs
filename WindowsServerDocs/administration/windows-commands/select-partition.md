@@ -3,15 +3,15 @@ title: select partition
 description: Reference article for the select partition command, which selects the specified partition and shifts the focus to it.
 ms.topic: reference
 ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # select partition
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Selects the specified partition and shifts the focus to it. This command can also be used to display the partition that currently has the focus in the selected disk.
 
@@ -51,7 +51,7 @@ To display the partition that currently has the focus in the selected disk, type
 select partition
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

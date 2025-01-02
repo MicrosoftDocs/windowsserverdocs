@@ -1,19 +1,54 @@
 ---
 title: What's new in the web client
-description: Learn about recent changes to the Remote Desktop web client
+description: Learn about recent changes to the Remote Desktop web client.
 ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/26/2021
-ms.localizationpriority: medium
+ms.date: 7/3/2024
 ---
 # What's new in the web client
 
-We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Here's where you can find the latest updates.
 
 > [!NOTE]
 > We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Azure Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+
+## Updates for version 2.1.0.0
+
+*Date published: March 21, 2024*
+
+- New client now generally available.
+- UX improvements added.
+- New key features added to this client version.
+- Now available for on-prem download.
+
+## Updates for version 1.0.28.0
+
+*Date published: December 19, 2022*
+
+- You can now redirect cameras.
+- Updated third-party libraries.
+- Accessibility improvements.
+- Bug fixes.
+
+## Updates for version 1.0.27.0
+
+*Date published: March 24, 2022*
+
+- Added Web client keyboard shortcuts for switching between programs. For more information, see [Keyboard shortcuts](remote-desktop-web-client.md#web-client-keyboard-shortcuts).
+- The client now supports native resolution on high-DPI devices. For more information, see [Enable native display resolution in remote sessions](remote-desktop-web-client.md#enable-native-display-resolution-in-remote-sessions).
+- Updated full screen mode icon behavior to disable the icon when you press the F11 key to enter full screen mode.  
+- Removed support for Internet Explorer and other deprecated browsers.  
+- Fixed an issue where some keys weren’t working correctly on the Japanese keyboard layout.
+- Bug fixes and security improvements for file transfer.
+
+## Updates for version 1.0.26.0
+
+*Date published: December 12, 2021*
+
+- Bug fixes.
+- Version 1.0.26.0 is the final version of the client that supports Internet Explorer 11 and WinXP.
 
 ## Updates for version 1.0.25.0
 
@@ -44,14 +79,14 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Azure Virtual Desktop with the web client](/azure/virtual-desktop/connect-web).
 - Changed the **All Resources** page UI.
 - Fixed several connection sequence failures where web client returned a *General Protocol Error*.
-- Fixed keyboard input issues where specific key sequences were not handled appropriately.
+- Fixed keyboard input issues where specific key sequences weren't handled appropriately.
 - Accessibility improvements.
 
 ## Updates for version 1.0.21.0
 *Date published: 11/15/2019*
 
 - Added support for using an Input Method Editor (IME) in the remote session to input complex characters.
-- Fixed a regression where users could not copy and paste into the remote session on macOS devices.
+- Fixed a regression where users couldn't copy and paste into the remote session on macOS devices.
 - Fixed a regression where local Windows Key was sent to the remote session on Firefox.
 - Added link to RDWeb password change when enabled by your administrator.
 
@@ -107,7 +142,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - InPrivate mode is now supported.
 - Improved support for non-English keyboards.
 - Fixed an issue where tooltips with non-English characters showed incorrectly.
-- Fixed graphics rendering issue which affected Chrome users.
+- Fixed graphics rendering issue that affected Chrome users.
 - Updated time zone redirection with full DST support.
 - Improved the error message for out-of-memory error.
 - Various bug fixes.
@@ -124,7 +159,6 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 - New sign in experience within the web client.
 - No longer prompted for credentials when launching a desktop or app connection (Single sign on).
-- Moved the web client to a new URL: <https://server_FQDN/RDWeb/webclient/index.html>
 - Added time zone redirection.
 - Various bug fixes.
 
@@ -133,7 +167,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 - Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
 - Fixed connection failures for some languages when printing is enabled.
-- Improved error message when a gateway is not part of the deployment.
+- Improved error message when a gateway isn't part of the deployment.
 - **Help** and **Feedback** options were added.
 
 ## Updates for version 0.8.0

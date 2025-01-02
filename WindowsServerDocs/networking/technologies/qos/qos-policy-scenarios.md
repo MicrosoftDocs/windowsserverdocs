@@ -4,14 +4,14 @@ description: This topic provides Quality of Service (QoS) Policy scenarios, whic
 ms.topic: article
 ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # QoS Policy Scenarios
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to review hypothetical scenarios that demonstrate how, when, and why to use QoS Policy.
 
@@ -139,7 +139,7 @@ All the following URLs are valid and can be specified in QoS Policy and applied 
 
 - https://video
 
-- https://training.hr.mycompany.com
+- `https://training.hr.mycompany.com`
 
 - https://10.1.10.249:8080/tech
 

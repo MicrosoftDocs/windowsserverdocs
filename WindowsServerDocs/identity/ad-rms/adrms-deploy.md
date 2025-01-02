@@ -3,7 +3,7 @@ description: "Learn more about: Upgrading AD RMS to Windows Server 2016"
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Upgrading AD RMS to Windows Server 2016
 author: msmbaldwin
-ms.author: esaggese
+ms.author: roharwoo
 ms.date: 05/30/2019
 ms.topic: article
 ---
@@ -141,17 +141,17 @@ You can deploy additional AD FS servers to support the AD RMS deployment. You ma
 
 **To add the 2016 AD FS server to the farm**
 
-1.  From the Azure AD Connect server, double click the **Azure AD Connect** icon to launch the Azure AD Connect wizard.
+1.  From the Microsoft Entra Connect server, double click the **Microsoft Entra Connect** icon to launch the Microsoft Entra Connect wizard.
 
 2.  In the Welcome page, click **Configure**.
 
 3.  In the Additional Tasks page, click **Deploy an additional Federation Server** and then click **Next**.
 
-4.  In the Connect to Azure AD page, enter the user name and password of an account with Global Administrative permissions and then click **Next**.
+4.  In the Connect to Microsoft Entra ID page, enter the user name and password of an account with Global Administrative permissions and then click **Next**.
 
 5.  In the Domain Administrator credentials page, enter the user name and password of an account with Domain Admin permissions and click **Next**.
 
-6.  Click **Browse** and select the certificate file used when configuring the AD FS farm using the Azure AD Connect.
+6.  Click **Browse** and select the certificate file used when configuring the AD FS farm using the Microsoft Entra Connect.
 
 7.  Click **Enter Password** to open the Certificate Password dialog box.
 
@@ -223,7 +223,7 @@ This guide doesn't cover the steps required to alter the load balancing mechanis
 
 #### Adding a 2016 AD RMS Server
 
-If your AD RMS cluster is using a Hardware Security Module instead of a Centrally Managed key for its Server Licensor Certificate, you will need to install the software and other HSM artifacts (e.g. key and configuragtion files) on the server before installing AD RMS. You will also need to connect the HSM to the server, either physically or through the relevant network configurations. Follow your HSM guidance for these steps.
+If your AD RMS cluster is using a Hardware Security Module instead of a Centrally Managed key for its Server Licensor Certificate, you will need to install the software and other HSM artifacts (e.g. key and configuration files) on the server before installing AD RMS. You will also need to connect the HSM to the server, either physically or through the relevant network configurations. Follow your HSM guidance for these steps.
 
 **To add a 2016 AD RMS Server**
 

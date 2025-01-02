@@ -1,20 +1,19 @@
 ---
 title: Removing servers in Storage Spaces Direct
 ms.assetid: 9d8499a7-1307-473d-9f00-8a051164fad2
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 description: How to remove servers from a Storage Spaces Direct cluster in Windows Server.
 ms.date: 2/5/2017
-ms.localizationpriority: medium
 ---
 
 # Removing servers in Storage Spaces Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
-This topic describes how to remove servers in [Storage Spaces Direct](storage-spaces-direct-overview.md) using PowerShell.
+This topic describes how to remove servers in [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) using PowerShell.
 
 ## Remove a server but leave its drives
 
@@ -74,4 +73,4 @@ This table shows the minimum number of fault domains required for each resilienc
 
 ## Additional References
 
-- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

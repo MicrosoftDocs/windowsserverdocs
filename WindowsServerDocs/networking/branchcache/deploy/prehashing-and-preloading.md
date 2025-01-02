@@ -4,13 +4,13 @@ description: Learn how to force the creation of content information - also calle
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Prehashing and Preloading Content on Hosted Cache Servers (Optional)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this procedure to force the creation of content information - also called hashes - on BranchCache-enabled Web and file servers. You can also gather the data on file and web servers into packages that can be transferred to remote hosted cache servers.  This provides you with the ability to preload content on remote hosted cache servers so that data is available for the first client access.
 

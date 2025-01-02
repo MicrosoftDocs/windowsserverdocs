@@ -1,33 +1,35 @@
 ---
 title: Folder Redirection, Offline Files, and Roaming User Profiles overview
-description: An overview of Folder Redirection, Offline Files, and Roaming User Profiles technologies.
+description: In this overview, learn about Folder Redirection, Offline Files, and Roaming User Profiles technologies, previously known as Intellimirror.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
-ms.date: 04/05/2018
-ms.localizationpriority: medium
+author: robinharwood
+ms.author: roharwoo
+ms.date: 03/20/2023
 ---
+
 # Folder Redirection, Offline Files, and Roaming User Profiles overview
 
->Applies to: Windows Server 2022, Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
+> 
 
-This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what's new and where to find additional information.
+This topic discusses the Folder Redirection, Offline Files (client-side caching or CSC), and Roaming User Profiles (sometimes known as RUP) technologies, including what's new and where to find more information.
 
 ## Technology description
 
-Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability. Roaming User Profiles is used to redirect a user profile to a network location. These features used to be referred to as Intellimirror.
+Folder Redirection and Offline Files are used together to redirect the path of local folders, such as the Documents folder, to a network location, while caching the contents locally for increased speed and availability. Roaming User Profiles is used to redirect a user profile to a network location. These features used to be referred to as Intellimirror.
 
 - **Folder Redirection** enables users and administrators to redirect the path of a known folder to a new location, manually or by using Group Policy. The new location can be a folder on the local computer or a directory on a file share. Users interact with files in the redirected folder as if it still existed on the local drive. For example, you can redirect the Documents folder, which is usually stored on a local drive, to a network location. The files in the folder are then available to the user from any computer on the network.
-- **Offline Files** makes network files available to a user, even if the network connection to the server is unavailable or slow. When working online, file access performance is at the speed of the network and server. When working offline, files are retrieved from the Offline Files folder at local access speeds. A computer switches to Offline Mode when:
-  - **Always Offline** mode has been enabled
-  - The server is unavailable
-  - The network connection is slower than a configurable threshold
-  - The user manually switches to Offline Mode by using the **Work offline** button in Windows Explorer
-- **Roaming User Profiles** redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers. When a user signs in to a computer by using an account that is set up with a file share as the profile path, the user's profile is downloaded to the local computer and merged with the local profile (if present). When the user signs out of the computer, the local copy of their profile, including any changes, is merged with the server copy of the profile. Typically, a network administrator enables Roaming User Profiles on domain accounts.
+- **Offline Files** makes network files available to a user, even if the network connection to the server is unavailable or slow. When working online, file access performance is at the speed of the network and server. When working offline, files are retrieved from the Offline Files folder at local access speeds. A computer switches to Offline mode in the following situations:
+
+  - **Always Offline** mode has been enabled.
+  - The server is unavailable.
+  - The network connection is slower than a configurable threshold.
+  - The user manually switches to Offline mode by using the **Work offline** button in Windows Explorer.
+
+- **Roaming User Profiles** redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers. When a user signs in to a computer by using an account that's set up with a file share as the profile path, the user's profile loads to the local computer and merges with the local profile, if present. When the user signs out of the computer, the local copy of their profile, including any changes, merges with the server copy of the profile. Typically, a network administrator enables Roaming User Profiles on domain accounts.
 
 ## Practical applications
 
-Administrators can use Folder Redirection, Offline Files, and Roaming User Profiles to centralize storage for user data and settings and to provide users with the ability to access their data while offline or in the event of a network or server outage. Some specific applications include:
+Administrators can use Folder Redirection, Offline Files, and Roaming User Profiles to centralize storage for user data and settings. These features let users access their data while offline or in the event of a network or server outage. These features can also accomplish these specific applications:
 
 - Centralize data from client computers for administrative tasks, such as using a server-based backup tool to back up user folders and settings.
 - Enable users to continue accessing network files, even if there is a network or server outage.
@@ -61,7 +63,7 @@ Prior to Windows 8, Windows Server 2012, users would transition between the Onli
 
 With Always Offline mode, computers never transition to Online mode when the **Configure slow-link mode** Group Policy setting is configured and the **Latency** threshold parameter is set to 1 millisecond. Changes are synced in the background every 120 minutes, by default, but synchronization is configurable by using the **Configure Background Sync** Group Policy setting.
 
-For more information, see [Enable the Always Offline Mode to Provide Faster Access to Files](enable-always-offline.md).
+For more information, see [Enable Always Offline mode for faster access to files](enable-always-offline.md).
 
 ## Cost-aware synchronization
 
@@ -80,7 +82,7 @@ Prior to Windows 8 and Windows Server 2012, users who wanted to minimize fees wh
 
 With cost-aware sync, Windows automatically tracks roaming and bandwidth usage limits while on metered connections. When the user is roaming, near their bandwidth limit, or over their limit, Windows switches to Offline mode and prevents all synchronization. Users can still manually initiate synchronization, and administrators can override cost-aware synchronization for specific users, such as executives.
 
-For more information, see [Enable Background File Synchronization on Metered Networks](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127408(v%3dws.11)).
+For more information, see [Enable Background File Synchronization on metered networks](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127408(v%3dws.11)).
 
 ## Primary computers for Folder Redirection and Roaming User Profiles
 
@@ -100,11 +102,12 @@ There are four major benefits to designating primary computers for users:
 To limit downloading private user data to primary computers, the Folder Redirection and Roaming User Profiles technologies perform the following logic checks when a user signs in to a computer:
 
 1. The Windows operating system checks the new Group Policy settings (**Download roaming profiles on primary computers only** and **Redirect folders on primary computers only**) to determine if the **msDS-Primary-Computer** attribute in Active Directory Domain Services (AD DS) should influence the decision to roam the user's profile or apply Folder Redirection.
-2. If the policy setting enables primary computer support, Windows verifies that the AD DS schema supports the **msDS-Primary-Computer** attribute. If it does, Windows determines if the computer that the user is logging on to is designated as a primary computer for the user as follows:
-    1. If the computer is one of the user's primary computers, Windows applies the Roaming User Profiles and Folder Redirection settings.
-    2. If the computer is not one of the user's primary computers, Windows loads the user's cached local profile, if present, or it creates a new local profile. Windows also removes any existing redirected folders according to the removal action that was specified by the previously applied Group Policy setting, which is retained in the local Folder Redirection configuration.
+1. If the policy setting enables primary computer support, Windows verifies that the AD DS schema supports the **msDS-Primary-Computer** attribute. If it does, Windows determines if the computer that the user is logging on to is designated as a primary computer for the user as follows:
 
-For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
+   1. If the computer is one of the user's primary computers, Windows applies the Roaming User Profiles and Folder Redirection settings.
+   1. If the computer isn't one of the user's primary computers, Windows loads the user's cached local profile, if present, or it creates a new local profile. Windows also removes any existing redirected folders according to the removal action that was specified by the previously applied Group Policy setting, which is retained in the local Folder Redirection configuration.
+
+For more information, see [Deploy primary computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 
 ## Hardware requirements
 
@@ -114,17 +117,15 @@ Folder Redirection, Offline Files, and Roaming User Profiles require an x64-base
 
 To designate primary computers, your environment must meet the following requirements:
 
-- The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema and conditions (installing a Windows Server 2012 or later domain controller automatically updates the schema). For more information about upgrading the AD DS schema, see [Upgrade Domain Controllers to Windows Server 2016](../../identity/ad-ds/deploy/upgrade-domain-controllers.md).
-- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 and be joined to the Active Directory domain that you are managing.
+- The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema and conditions. Installing a Windows Server 2012 or later domain controller automatically updates the schema. For more information about upgrading the AD DS schema, see [Upgrade domain controllers to a newer version of Windows Server](../../identity/ad-ds/deploy/upgrade-domain-controllers.md).
+- Client computers must run Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, or Windows Server 2016 and be joined to the Active Directory domain that you're managing.
 
-## More information
+## Related links
 
-For additional related information, see the following resources.
-
-| Content type | References |
-| --- | --- |
-| Product evaluation | [Supporting Information Workers with Reliable File Services and Storage](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[What's New in Offline Files](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 and Windows Server 2008 R2)<br>[What's New in Offline Files for Windows Vista](</previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Changes to Offline Files in Windows Vista](/previous-versions/technet-magazine/cc137753(v=msdn.10)) (TechNet Magazine) |
-| Deployment | [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](deploy-folder-redirection.md)<br>[Implementing an End-User Data Centralization Solution: Folder Redirection and Offline Files Technology Validation and Deployment](https://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[Managing Roaming User Data Deployment Guide](</previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Configuring New Offline Files Features for Windows 7 Computers Step-by-Step Guide](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[Using Folder Redirection](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[Implementing Folder Redirection](</previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003) |
-| Tools and settings | [Offline files on MSDN](/previous-versions/windows/desktop/offlinefiles/offline-files-portal)<br>[Offline Files Group Policy Reference](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000) |
-| Community resources | [File Services and Storage Forum](/answers/topics/windows-server-storage.html)<br>[Hey, Scripting Guy! How Can I Work with the Offline Files Feature in Windows?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Hey, Scripting Guy! How Can I Enable and Disable Offline Files?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>) |
-| Related technologies|[Identity and Access in Windows Server](../../identity/identity-and-access.yml)<br>[Storage in Windows Server](../storage.yml)<br>[Remote access and server management](../../remote/index.yml) |
+- [Deploy Folder Redirection with offline files](deploy-folder-redirection.md)
+- [Deploy Roaming User Profiles](deploy-roaming-user-profiles.md)
+- [Deploy primary computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
+- [Disable Offline Files on individual redirected folders](disable-offline-files-on-folders.md)
+- [Enable Always Offline mode for faster access to files](enable-always-offline.md)
+- [Enable optimized moves of redirected folders](enable-optimized-moving.md)
+- [Windows Server Storage Forum](/answers/topics/windows-server-storage.html)

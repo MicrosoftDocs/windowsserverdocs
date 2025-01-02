@@ -3,8 +3,8 @@ title: wdsutil disconnect-client
 description: Reference article for the wdsutil disconnect-client command, which disconnects a client from a multicast transmission or namespace.
 ms.topic: reference
 ms.assetid: 876bbe6c-76ab-4de5-879b-d2066e700326
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -41,7 +41,7 @@ To disconnect a client and force the installation to fail, type:
 wdsutil /Disconnect-Client /Server:MyWDSServer /ClientId:1 /Force
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

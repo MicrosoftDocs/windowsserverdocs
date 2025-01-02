@@ -3,13 +3,13 @@ title: Manage Windows virtual machines with PowerShell Direct
 description: Gives instructions for using PowerShell Direct to manage virtual machines without relying on a network or remote connection to them.
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc09093ba2d
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/04/2016
 ---
 # Manage Windows virtual machines with PowerShell Direct
 
->Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Windows Server 2019
+>
 
 You can use PowerShell Direct to remotely manage a Windows 10, Windows Server 2016, or Windows Server 2019 virtual machine from a Windows 10, Windows Server 2016, or Windows Server 2019 Hyper-V host. PowerShell Direct allows Windows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper-V host or the virtual machine. This makes it easier for Hyper-V Administrators to automate and script virtual machine management and configuration.
 
@@ -32,7 +32,7 @@ If you're managing older virtual machines, use Virtual Machine Connection (VMCon
     ```
 
     ```
-    Enter-PSSession -VMGUID <VMGUID>
+    Enter-PSSession -VMId <VM GUID>
     ```
 
 3. Type your credentials for the virtual machine.

@@ -4,15 +4,14 @@ description: Learn about the Server Core installation option in Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
-ms.author: artemp
-ms.localizationpriority: medium
+ms.author: alalve
 ms.date: 02/20/2018
 ms.topic: conceptual
 ---
 
 # What is the Server Core installation option in Windows Server?
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 The Server Core option is a minimal installation option that is available when you are deploying the Standard or Datacenter edition of Windows Server. Server Core includes most but not all server roles. Server Core has a smaller disk footprint, and therefore a smaller attack surface due to a smaller code base.
 
@@ -54,7 +53,7 @@ You'll need a Microsoft Work or School Account enrolled to VLSC or Business Cent
 Alternatively, you might have access to a [Visual Studio Subscription](https://my.visualstudio.com/).
 You'll need a Microsoft Home, Work or School account, enrolled to an active Visual Studio subscription, to access the FoD download.
 
-Latest Server Insider FoD. This is downloadable at the [Server Insider webpage](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver). 
+Latest Server Insider FoD. This is downloadable at the [Server Insider webpage](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver).
 You'll need a Microsoft Home, Work or School account, enrolled to the Insider Program, to access the FoD download.
 
 ### Feature on Demand - available features in Feature on Demand Package 1809

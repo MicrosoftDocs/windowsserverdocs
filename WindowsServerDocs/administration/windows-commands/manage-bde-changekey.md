@@ -3,8 +3,8 @@ title: manage-bde changekey
 description: Reference article for the manage-bde changekey command, which modifies the startup key for an operating system drive.
 ms.topic: reference
 ms.assetid: 69463db9-7e03-47ff-b233-a95d5055725f
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -37,7 +37,7 @@ To create a new startup key on drive E, to use with BitLocker encryption on driv
 manage-bde -changekey C: E:\
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

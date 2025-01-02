@@ -1,14 +1,14 @@
 ---
 title: Understand and Configure Azure Monitor
 description: Detailed setup information on what Azure Monitor is and how to configure email and sms alerts for your storage spaces direct cluster in Windows Server 2016 and 2019.
-ms.author: adagashe
+ms.author: roharwoo
 ms.topic: article
-author: adagashe
+author: robinharwood
 ms.date: 01/10/2020
 ---
 # Use Azure Monitor to send emails for Health Service Faults
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 Azure Monitor maximizes the availability and performance of your applications by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It helps you understand how your applications are performing and proactively identifies issues affecting them and the resources they depend on.
 
@@ -80,7 +80,7 @@ Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft
 
 #### Create a workspace
 
-For more details on the steps listed below, see the [Azure Monitor documentation](/azure/azure-monitor/learn/quick-collect-windows-computer).
+For more details on the steps listed below, see the [Azure Monitor documentation](/azure/azure-monitor/logs/log-analytics-tutorial).
 
 1. In the Azure portal, click **All services**. In the list of resources, type **Log Analytics**. As you begin typing, the list filters based on your input. Select **Log Analytics**.<br><br>
 
@@ -242,6 +242,6 @@ Below is an example of the email that you will be send by Azure Monitor:
 
 ## Additional References
 
-- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
 - For more detailed information, read the [Azure Monitor documentation](/azure/azure-monitor/learn/tutorial-viewdata).
 - Read this for an overview on how to [connect to other Azure hybrid services](../../manage/windows-admin-center/azure/index.md).

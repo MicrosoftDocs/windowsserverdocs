@@ -4,13 +4,13 @@ description: Learn how to configure the DNS servers on EDGE1 and configure routi
 manager: brianlic
 ms.topic: article
 ms.assetid: f6e8d85b-de65-43b3-bf3e-ec84471a1fcc
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 9 Configure EDGE1
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 The following procedures are performed on the EDGE1 server:
 

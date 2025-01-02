@@ -3,8 +3,8 @@ title: manage-bde on
 description: Reference article for the manage-bde on command, which encrypts the drive and turns on BitLocker.
 ms.topic: reference
 ms.assetid: f6a12814-df74-416c-a04a-62ea8512263e
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -86,7 +86,7 @@ To turn on BitLocker for operating system drive C, and to use hardware-based enc
 manage-bde –on C: -fet hardware
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -3,7 +3,7 @@ description: "Learn more about: Event ID 2088: DNS lookup failure occurred with 
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: Event ID 2088 - DNS lookup failure occurred with replication success
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -11,7 +11,7 @@ ms.topic: article
 
 # Event ID 2088: DNS lookup failure occurred with replication success
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 When a destination domain controller running Windows Server 2003 with Service Pack 1 (SP1) receives Event ID 2088 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record to an IP address for the source domain controller failed. However, the destination domain controller tried other means to resolve the name and succeeded by using either the fully qualified domain name (FQDN) or the NetBIOS name of the source domain controller. Although replication was successful, the Domain Name System (DNS) problem should be diagnosed and resolved.
 

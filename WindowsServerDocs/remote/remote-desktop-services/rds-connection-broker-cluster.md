@@ -1,16 +1,16 @@
 ---
 title: Add an RD Connection Broker server to configure high availability in RDS
 description: Learn how to add an RD Connection Broker to an RDS deployment for high availability.
-ms.author: elizapo
-ms.date: 04/10/2017
+ms.author: roharwoo
+ms.date: 7/3/2024
 ms.topic: article
-author: lizap
+author: robinharwood
 manager: dongill
 ---
 
 # Add the RD Connection Broker server to the deployment and configure high availability
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of your Remote Desktop Services infrastructure.
 
@@ -29,7 +29,7 @@ Set up a database for the Connection Broker. You can use [Azure SQL Database](/a
     4. Copy the connection string for **ODBC (includes Node.js)**, which should look like this:
 
         ```
-        Driver={ODBC Driver 13 for SQL Server};Server=tcp:cb-sqls1.database.windows.net,1433;Database=CB-DB1;Uid=sqladmin@contoso;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
+        Driver={ODBC Driver 13 for SQL Server};Server=tcp:<YourHost>,<HostPort>;Database=<DatabaseName>;Uid=<UserID>;Pwd=<Password>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
         ```
 
     5. Replace "your_password_here" with the actual password. You'll use this entire string, with your included password, when connecting to the database.

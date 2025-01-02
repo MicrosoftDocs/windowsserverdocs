@@ -3,8 +3,8 @@ title: bitsadmin addfilewithranges
 description: Reference article for the bitsadmin addfilewithranges command, which adds a file to the specified job. BITS downloads the specified ranges from the remote file.
 ms.topic: reference
 ms.assetid: df0ce0bf-dff1-4a48-a16f-fd2f4d5f7189
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -48,7 +48,7 @@ To transfer 100 bytes from offset 0, 100 bytes from offset 2000, and the remaini
 bitsadmin /addfilewithranges http://downloadsrv/10mb.zip c:\10mb.zip 0:100,2000:100,5000:eof
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

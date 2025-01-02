@@ -2,13 +2,13 @@
 title: Plan for Hyper-V networking in Windows Server
 description: Describes what's needed for basic networking in Hyper-V and gives links to instructions
 ms.topic: article
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 10/04/2016
+ms.author: roharwoo
+author: robinharwood
+ms.date: 12/02/2022
 ---
 # Plan for Hyper-V networking in Windows Server
 
->Applies to: Windows Server 2022, Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
+>
 
 A basic understanding of networking in Hyper-V helps you plan networking for virtual machines. This article also covers some networking considerations when using live migration and when using Hyper-V with other server features and roles.
 
@@ -34,6 +34,13 @@ Virtual switch types are:
 
 -   **Private virtual switch** - Connects to a network that can be used only by the virtual machines running on the host that has the virtual switch, but doesn't provide networking between the host and the virtual machines.
 
+Virtual switch options:
+
+| Setting name | Description |
+|---|---|
+| Allow management operating system to share this network adapter | Allow the Hyper-V host to share the use of the virtual switch and NIC or NIC team with the virtual machine. With this enabled, the host can use any of the settings that you configure for the virtual switch, such as Quality of Service (QoS) settings, security settings, or other features of the Hyper-V virtual switch. |
+| Enable single-root I/O virtualization (SR-IOV) | Allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. SR-IOV is only available for virtual machines running Windows Server. For more information, see [Single-Root I/O Virtualization](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn641211(v=ws.11)#Sec4) in the Poster Companion Reference: Hyper-V Networking. |
+
 Virtual network adapter types are:
 
 -   **Hyper-V specific network adapter** - Available for both generation 1 and generation 2 virtual machines. It's designed specifically for Hyper-V and requires a driver that's included in Hyper-V integration services. This type of network adapter  faster and is the recommended choice unless you need to boot to the network or are running an unsupported guest operating system. The required driver is provided only for supported guest operating systems. Note that in Hyper-V Manager and the networking cmdlets, this type is just referred to as a network adapter.
@@ -41,7 +48,7 @@ Virtual network adapter types are:
 -   **Legacy network adapter** - Available only in generation 1 virtual machines. Emulates an Intel 21140-based PCI Fast Ethernet Adapter and can be used to boot to a network so you can install an operating system from a service such as Windows Deployment Services.
 
 ## Hyper-V networking and related technologies
-Recent Windows Server releases introduced improvements that give you more options for configuring networking for Hyper-V. For example,  Windows Server 2012 introduced support for converged networking. This lets you route network traffic through one external virtual switch. Windows Server 2016 builds on this by allowing Remote Direct Memory Access (RDMA) on network adapters bound to a Hyper-V virtual switch. You can use this configuration either with or without Switch Embedded Teaming (SET). For details, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure-stack/hci/concepts/host-network-requirements)
+Recent Windows Server releases introduced improvements that give you more options for configuring networking for Hyper-V. For example,  Windows Server 2012 introduced support for converged networking. This lets you route network traffic through one external virtual switch. Windows Server 2016 builds on this by allowing Remote Direct Memory Access (RDMA) on network adapters bound to a Hyper-V virtual switch. You can use this configuration either with or without Switch Embedded Teaming (SET). For details, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization)
 
 Some features rely on specific networking configurations or do better under certain configurations. Consider these when planning or updating your network infrastructure.
 
@@ -49,4 +56,4 @@ Some features rely on specific networking configurations or do better under cert
 
 **Live migration** - Use performance options to reduce network and CPU usage and the time it takes to complete a live migration. For instructions, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).
 
-**Storage Spaces Direct** - This feature relies on the SMB3.0 network protocol and RDMA. For details, see [Storage Spaces Direct in Windows Server 2016](../../../storage/storage-spaces/storage-spaces-direct-overview.md).
+**Storage Spaces Direct** - This feature relies on the SMB3.0 network protocol and RDMA. For details, see [Storage Spaces Direct in Windows Server 2016](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage).

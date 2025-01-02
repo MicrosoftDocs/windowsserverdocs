@@ -3,19 +3,19 @@ description: "Learn more about: Data Deduplication interoperability"
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
 title: Data Deduplication interoperability
 ms.topic: article
-author: wmgries
+author: robinharwood
 manager: klaasl
-ms.author: wgries
-ms.date: 09/16/2016
+ms.author: roharwoo
+ms.date: 02/18/2022
 ---
 # Data Deduplication interoperability
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 ## Supported
 
 ### ReFS
-Data Deduplication is supported as of Windows Server 2019.
+Data Deduplication is supported starting with Windows Server 2019.
 
 ### Failover Clustering
 
@@ -24,7 +24,7 @@ Data Deduplication is supported as of Windows Server 2019.
 * [Manually started Data Deduplication jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
 * Scheduled Data Deduplication jobs are stored in the cluster task scheduled so that if a deduplicated volume is taken over by another node, the scheduled job will be applied on the next scheduled interval.
 * Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
-* Data Deduplication is fully supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md) NTFS-formatted volumes (mirror or parity). Deduplication is not supported on volumes with multiple tiers. See [Data Deduplication on ReFS](#unsupported) for more information.
+* Data Deduplication is fully supported on [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) with ReFS or NTFS-formatted volumes (mirror or parity). ReFS-formatted volumes are supported starting with Windows Server 2019. Deduplication is not supported on volumes with multiple tiers.  
 
 ### Storage Replica
 [Storage Replica](../storage-replica/storage-replica-overview.md) is fully supported. Data Deduplication should be configured to not run on the secondary copy.
@@ -74,10 +74,10 @@ Windows Server Backup can back up an optimized volume as-is (that is, without re
 ## Unsupported
 
 ### Windows 10 (client OS)
-Data Deduplication is not supported on Windows 10. There are several popular blog posts in the Windows community describing how to remove the binaries from Windows Server 2016 and install on Windows 10, but this scenario has not been validated as part of the development of Data Deduplication. [Vote for this item for Windows 10 vNext on the Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/9011008-add-deduplication-support-to-client-os).
+Data Deduplication is not supported on Windows 10. There are several popular blog posts in the Windows community describing how to remove the binaries from Windows Server 2016 and install on Windows 10, but this scenario has not been validated as part of the development of Data Deduplication. 
 
 ### Windows Search
-Windows Search doesn't support Data Deduplication. Data Deduplication uses reparse points, which Windows Search can't index, so Windows Search skips all deduplicated files, excluding them from the index. As a result, search results might be incomplete for deduplicated volumes. [Vote for this item for Windows Server vNext on the Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/17888647-make-windows-search-service-work-with-data-dedupli).
+Windows Search doesn't support Data Deduplication. Data Deduplication uses reparse points, which Windows Search can't index, so Windows Search skips all deduplicated files, excluding them from the index. As a result, search results might be incomplete for deduplicated volumes.
 
 ### Robocopy
 Running Robocopy with Data Deduplication is not recommended because certain Robocopy commands can corrupt the Chunk Store. The Chunk Store is stored in the System Volume Information folder for a volume. If the folder is deleted, the optimized files (reparse points) that are copied from the source volume become corrupted because the data chunks are not copied to the destination volume.

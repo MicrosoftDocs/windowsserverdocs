@@ -3,7 +3,7 @@ description: "Learn more about: Delegating Administration of Account OUs and Res
 ms.assetid: 19feca0e-a6d0-4d27-93b0-cb44f8c26484
 title: Delegating Administration of Account OUs and Resource OUs
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -11,7 +11,7 @@ ms.topic: article
 
 # Delegating Administration of Account OUs and Resource OUs
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>
 
 Account organizational units (OUs) contain user, group, and computer objects. Resource OUs contain resources and the accounts that are responsible for managing those resources. The forest owner is responsible for creating an OU structure to manage these objects and resources and for delegating control of that structure to the OU owner.
 

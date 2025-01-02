@@ -4,8 +4,7 @@ title: Guidelines for troubleshooting DNS-related activation issues
 ms.topic: troubleshooting
 ms.date: 09/10/2019
 author: Teresa-Motiv
-ms.author: v-tea
-ms.localizationpriority: medium
+ms.author: roharwoo
 ---
 
 # Guidelines for troubleshooting DNS-related activation issues
@@ -85,7 +84,7 @@ Check the registry of the KMS host server to determine whether it is registering
 
 To check this setting, follow these steps:
 1. Start Registry Editor. To do this, right-click **Start**, select **Run**, type **regedit**, and then press Enter.
-1. Locate the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** subkey, and check the value of the **DisableDnsPublishing** entry. This entry has the following possible values:
+1. Locate the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform** subkey (previously **SL** instead of **SoftwareProtectionPlatform** in Windows Server 2008 and Windows Vista), and check the value of the **DisableDnsPublishing** entry. This entry has the following possible values:
    - **0** or undefined (default): The KMS host server registers a SRV record once every 24 hours.
    - **1**: The KMS host server does not automatically register SRV records. If your implementation does not support dynamic updates, see [Manually create a KMS SRV record](#manually-create-a-kms-srv-record).
 1. If the **DisableDnsPublishing** entry is missing, create it (the type is DWORD). If dynamic registration is acceptable, leave the value undefined or set it to **0**.
@@ -183,8 +182,6 @@ To manually create an SRV record for a KMS host that uses a BIND 9.x-compliant D
 - Port: **1688**
 - Hostname: **&lt;*FQDN or A-Name of the KMS host*&gt;**
 
-> [!NOTE]
-> KMS does not use the **Priority** or **Weight** values. However, the record must include them.
 
 To configure a BIND 9.x-compatible DNS server to support KMS auto-publishing, configure the DNS server to enable resource record updates from KMS hosts. For example, add the following line to the zone definition in Named.conf or in Named.conf.local:
 
@@ -241,14 +238,14 @@ By default, a KMS host registers its SRV records in the DNS zone that correspond
 If the KMS host and KMS clients use different DNS zones, you must configure the KMS host to automatically publish its SRV records in multiple DNS domains. To do this, follow these steps:
 
 1. On the KMS host, start Registry Editor.
-1. Locate and then select the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** subkey.
+1. Locate and then select the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform** subkey (previously **SL** instead of **SoftwareProtectionPlatform** in Windows Server 2008 and Windows Vista).
 1. In the **Details** pane, right-click a blank area, select **New**, and then select **Multi-String Value**.
 1. For the name of the new entry, enter **DnsDomainPublishList**.
 1. Right-click the new **DnsDomainPublishList** entry, and then select **Modify**.
 1. In the **Edit Multi-String** dialog box, type each DNS domain suffix that KMS publishes on a separate line, and then select **OK**.
    > [!NOTE]
    > For Windows Server 2008 R2, the format for **DnsDomainPublishList** differs. For more information, see the Volume Activation Technical Reference Guide.
-1. Use the Services administrative tool to restart the Software Licensing service. This operation creates the SRV records.
+1. Use the Services administrative tool to restart the Software Protection service (previously the Software Licensing service in Windows Server 2008 and Windows Vista). This operation creates the SRV records.
 1. Verify that by using a typical method, the KMS client can contact the KMS host that you configured. Verify that the KMS client correctly identifies the KMS host both by name and by IP address. If either of these verifications fails, investigate this DNS client resolver issue.
 1. To clear any previously cached KMS host names on the KMS client, open an elevated Command Prompt window on the KMS client, and then run the following command:
    ```cmd

@@ -3,8 +3,8 @@ title: subst
 description: Reference article for the subst command, which associates a path with a drive letter.
 ms.topic: reference
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -61,6 +61,6 @@ Instead of typing the full path, you can reach this directory by typing the lett
 z:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

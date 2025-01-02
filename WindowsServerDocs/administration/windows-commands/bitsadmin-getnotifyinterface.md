@@ -3,8 +3,8 @@ title: bitsadmin getnotifyinterface
 description: Reference article for the bitsadmin getnotifyinterface command, which determines if another program has registered a COM callback interface for the specified job.
 ms.topic: reference
 ms.assetid: 40bf9dd8-b167-406a-80a6-a5a6f1b8cf7f
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -40,7 +40,7 @@ To retrieve the notify interface for the job named *myDownloadJob*:
 bitsadmin /getnotifyinterface myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -3,8 +3,8 @@ title: takeown
 description: Reference article for the takeown command, which enables an administrator to recover access to a file that was previously denied.
 ms.topic: reference
 ms.assetid: 0683cd65-a6db-4cab-962b-45a0ff61f43c
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -46,6 +46,6 @@ To take ownership of a file named *Lostfile*, type:
 takeown /f lostfile
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

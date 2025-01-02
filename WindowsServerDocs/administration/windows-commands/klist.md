@@ -3,8 +3,8 @@ title: klist
 description: Reference article for the klist command, which displays a list of currently cached Kerberos tickets.
 ms.topic: reference
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -188,6 +188,6 @@ To rediscover domain controllers, or to flush the cache before creating new doma
 klist purge_bind
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

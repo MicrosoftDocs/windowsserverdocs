@@ -4,13 +4,13 @@ description: Learn how to configure DNS policy in Windows Server 2016 to create 
 manager: brianlic
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Use DNS Policy for Applying Filters on DNS Queries
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>
 
 You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 to create query filters that are based on criteria that you supply.
 

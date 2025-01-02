@@ -5,12 +5,12 @@ manager: brianlic
 ms.topic: article
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
 author: dcuomo
-ms.author: dacuo
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # Windows Server supported networking scenarios
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server \(Semi-Annual Channel\), Windows Server 2016
+>
 
 This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of Windows Server 2016.
 >[!IMPORTANT]
@@ -51,7 +51,7 @@ The Network Controller scenarios allow you to:
 
 -   Use Network Controller to create and manage virtual networks with Hyper-V Network Virtualization - using NVGRE or VXLAN encapsulation.
 
-For more information, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
+For more information, see [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking).
 
 #### <a name="bkmk_netf"></a>Network Function Virtualization (NFV) scenarios
 The NFV scenarios allow you to:
@@ -159,13 +159,11 @@ The NIC Teaming scenarios allow you to:
 > [!NOTE]
 > In Windows Server 2016, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`
 
-For more information, see [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md).
-
 ### <a name="bkmk_set"></a>Switch Embedded Teaming \(SET\) scenarios
 
 SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.
 
-For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements)
+For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking)
 
 
 

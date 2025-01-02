@@ -3,8 +3,8 @@ title: type
 description: Reference article for the type command, which displays the contents of a text file.
 ms.topic: reference
 ms.assetid: c44fe905-a865-4c97-8cc5-fb95fec7d4d5
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2020
 ---
@@ -46,6 +46,6 @@ To display the contents of a lengthy file named *holiday.mar* one screen at a ti
 type holiday.mar | more
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -3,13 +3,13 @@ title: Generation 2 virtual machine security settings for Hyper-V
 description: Describes the security settings available in Hyper-V Manager for generation 2 virtual machines
 ms.topic: article
 ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/04/2016
 ---
 # Generation 2 virtual machine security settings for Hyper-V
 
->Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>
 
 Use the virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine. You can protect virtual machines from inspection, theft, and tampering from both malware that may run on the host, and datacenter administrators. The level of security you get depends on the host hardware you run, the virtual machine generation, and whether you set up the service, called the Host Guardian Service, that authorizes hosts to start shielded virtual machines.
 
@@ -44,7 +44,7 @@ For more information, see the following topics.
 
 You can help protect the data and state of the virtual machine by selecting the following encryption support options.
 
-- **Enable Trusted Platform Module** - This setting makes a virtualized Trusted Platform Module (TPM) chip available to your virtual machine. This allows the guest to encrypt the virtual machine disk by using BitLocker.
+- **Enable Trusted Platform Module** - This setting makes a virtualized Trusted Platform Module (TPM) chip available to your virtual machine. This allows the guest to encrypt the virtual machine disk by using BitLocker. You can enable this by opening the VM settings, click on **Security**, then in the *Encryption Support* section, tick the box to **Enable Trusted Platform Module**. You can also use the [Enable-VMTPM](/powershell/module/hyper-v/enable-vmtpm?view=windowsserver2019-ps&preserve-view=true) PowerShell cmdlet.
   - If your Hyper-V host is running Windows 10 1511, you have to enable Isolated User Mode.
 - **Encrypt State and VM migration traffic** - Encrypts the virtual machine saved state and live migration traffic.
 
@@ -60,11 +60,10 @@ To enable Isolated User Mode on the Hyper-V host that run earlier versions of Wi
 
 2.  Run the following commands:
 
-    ```
+    ```powershell
     Enable-WindowsOptionalFeature -Feature IsolatedUserMode -Online
     New-Item -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Force
     New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name EnableVirtualizationBasedSecurity -Value 1 -PropertyType DWord -Force
-
     ```
 
 You can migrate a virtual machine with virtual TPM enabled to any host that runs Windows Server 2016, Windows 10 build 10586 or higher versions. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) and [System requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md).

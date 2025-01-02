@@ -12,24 +12,15 @@ This article is a quick reference guide on how to calculate the minimum staging 
 
 Keep in mind these are *minimums only*. When considering staging area size, the bigger the staging area the better, up to the size of the Replicated Folder. See the section "How to determine if you have a staging area problem" and the blog posts linked at the end of this article for more details on why it is important to have a properly sized staging area.
 
-> [!Note]
-> We also have a hotfix to help you with calculating staging sizes. [Update for the DFS Replication (DFSR) Management interface is available](https://support.microsoft.com/kb/2607047)
+## General guidance
 
-## Rules of thumb
+The staging area quota must be as large as the 32 largest files in the Replicated Folder.
 
-**Windows Server 2003 R2** – The staging area quota must be as large as the 9 largest files in the Replicated Folder
-
-**Windows Server 2008 and 2008 R2** – The staging area quota must be as large as the 32 largest files in the Replicated Folder
-
-Initial Replication will make much more use of the staging area than day-to-day replication. Setting the staging area higher than the minimum during initial replication is strongly encouraged if you have the drive space available
-
-## Where do I get PowerShell?
-
-PowerShell is included on Windows 2008 and higher. You must install PowerShell on Windows Server 2003. You can download PowerShell for Windows 2003 [here](https://support.microsoft.com/kb/968930).
+Initial Replication will make much more use of the staging area than day-to-day replication. Setting the staging area higher than the minimum during initial replication is strongly encouraged if you have the drive space available.
 
 ## How do you find these X largest files?
 
-Use a PowerShell script to find the 32 or 9 largest files and determine how many gigabytes they add up to (thanks to Ned Pyle for the PowerShell commands). I am actually going to present you with three PowerShell scripts. Each is useful on its own; however, number 3 is the most useful.
+Use a PowerShell script to find the 32 or 9 largest files and determine how many gigabytes they add up to. Before beginning, enable maximum path length support, first added in Windows Server 2016 using [Maximum Path Length Limitation](/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd)
 
 1. Run the following command:
    ```Powershell
@@ -39,13 +30,13 @@ Use a PowerShell script to find the 32 or 9 largest files and determine how many
    This command will return the file names and the size of the files in bytes. Useful if you want to know what 32 files are the largest in the Replicated Folder so you can “visit” their owners.
 
 2. Run the following command:
-   ```Poswershell
+   ```Powershell
    Get-ChildItem c:\\temp -recurse | Sort-Object length -descending | select-object -first 32 | measure-object -property length –sum
    ```
    This command will return the total number of bytes of the 32 largest files in the folder without listing the file names.
 
 3. Run the following command:
-   ```Poswershell
+   ```Powershell
    $big32 = Get-ChildItem c:\\temp -recurse | Sort-Object length -descending | select-object -first 32 | measure-object -property length –sum
 
    $big32.sum /1gb
@@ -54,10 +45,7 @@ Use a PowerShell script to find the 32 or 9 largest files and determine how many
 
 ## Manual Walkthrough
 
-To demonstrate the process and hopefully increase understanding of what we are doing, I am going to manually step through each part.
-
-Running command 1 will return results similar to the output below. This example only uses 16 files for brevity. Always use 32 for Windows 2008 and later operating systems and 9 for Windows 2003 R2
-
+Running command 1 will return results similar to the output below. This example only uses 16 files for brevity. Always use 32 for Windows 2008 and later operating systems.
 ### Example Data returned by PowerShell
 
 <table>
@@ -139,31 +127,34 @@ Running command 1 will return results similar to the output below. This example 
   - Length = bytes
   - One Gigabyte = 1073741824 Bytes
 
-First, you need to sum the total number of bytes. Next divide the total by 1073741824. I suggest using Excel or your spreadsheet of choice to do the math.
+First, sum the total number of bytes. Next divide the total by 1073741824. Microsoft Excel is an easy way to do this. 
 
 ### Example
 
-From the example above the total number of bytes = 75241684992. To get the minimum staging area quota needed I need to divide 75241684992 by 1073741824.
+From the example above the total number of bytes = 75241684992. To get the minimum staging area quota needed you need to divide 75241684992 by 1073741824.
 
 > 75241684992 / 1073741824 = 70.07 GB
 
-Based on this data I would set my staging area to 71 GB if I round up to the nearest whole number.
+Based on this data you would set my staging area to 71 GB if you round up to the nearest whole number.
 
 ### Real World Scenario:
 
 While a manual walkthrough is interesting it is likely not the best use of your time to do the math yourself. To automate the process, use command 3 from the examples above. The results will look like this
 
-> [![image](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/58/02/metablogapi/8204.image_thumb_02CB3914.png "image")](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/58/02/metablogapi/0876.image_03A39EFE.png)
+<!--
+> TODO
+> @Delan, these images (one thumbnail, one expanded) were pointing to non-existent blog sites. I was able to locate the full sized image from Wayback Machine and it is here - \\redmond\scratchfs\Teams\has\nedpyle\Delan\0876.image_03A39EFE.png .Can you add it to this article? ///
+-->
 
-Using the example command 3 without any extra effort except for rounding to the nearest whole number, I can determine that I need a 6 GB staging area quota for d:\\docs.
+Using the example command 3 without any extra effort except for rounding to the nearest whole number, you can determine that you need a 6 GB staging area quota for d:\\docs.
 
-## Do I Need to Reboot or Restart the Service for the Changes to be Picked Up?
+## Do you need to reboot or restart the DFSR service for the changes to be picked Up?
 
 Changes to the staging area quota do not require a reboot or restart of the service to take effect. You will need to wait on AD replication and DFSR’s AD polling cycle for the changes to be applied.
 
 ## How to determine if you have a staging area problem
 
-You detect staging area problems by monitoring for specific events IDs on your DFSR servers. The list of events is 4202, 4204, 4206, 4208 and 4212. The texts of these events are listed below. It is important to distinguish between 4202 and 4204 and the other events. It is possible to log a high number of 4202 and 4204 events under normal operating conditions. Think of 4202 and 4204 events as being analogous to taking your pulse whereas 4206, 4208 and 4212 are like chest pains. I explain below how to interpret your 4202 and 4204 events below.
+You detect staging area problems by monitoring for specific events IDs on your DFSR servers. The list of events is 4202, 4204, 4206, 4208 and 4212. The texts of these events are listed below. It is important to distinguish between 4202 and 4204 and the other events. It is possible to log a high number of 4202 and 4204 events under normal operating conditions. 
 
 ### Staging Area Events
 
@@ -204,13 +195,13 @@ There is no single answer to this question. Unlike 4206, 4208 or 4212 events, wh
 2.  Simply checking the total number of 4202 events is not sufficient. You have to know how many were logged per RF. If you log twenty 4202 events for one RF in a 24 hour period that is high. However if you have 20 Replicated Folders and there is one event per folder, you are doing well.
 3.  You should examine several days of data to establish trends.
 
-I usually counsel customers to allow no more than one 4202 event per Replicated Folder per day under normal operating conditions. “Normal” meaning no Initial Replication is occurring. I base this on the reasoning that:
+We usually counsel customers to allow no more than one 4202 event per Replicated Folder per day under normal operating conditions. “Normal” meaning no Initial Replication is occurring. We base this on the reasoning that:
 
 1.  Time spent cleaning up the staging area is time spent not replicating files. Replication is paused while the staging area is cleared.
 2.  DFSR benefits from a full staging area using it for RDC and cross-file RDC or replicating the same files to other members
 3.  The more 4202 and 4204 events you log the greater the odds you will run into the condition where DFSR cannot clean up the staging area or will have to prematurely purge files from the staging area.
 4.  4206, 4208 and 4212 events are, in my experience, always preceded and followed by a high number of 4202 and 4204 events.
 
-While allowing for only one 4202 event per RF per day is conservative it greatly decreases your odds of running into staging area problems and better utilizes your DFSR server’s resources for the intended purpose of replicating files.
+While allowing for only one 4202 event per RF per day is conservative, it greatly decreases your odds of running into staging area problems and better utilizes your DFSR server’s resources for the intended purpose of replicating files.
 
 

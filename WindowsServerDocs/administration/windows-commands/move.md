@@ -3,8 +3,8 @@ title: move
 description: Reference article for the move command, which moves one or more files from one directory to another directory.
 ms.topic: reference
 ms.assetid: fde290a8-d385-450f-8987-ee837fed667d
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -40,6 +40,6 @@ To move all files with the .xls extension from the *\Data* directory to the *\Se
 move \data\*.xls \second_q\reports\
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

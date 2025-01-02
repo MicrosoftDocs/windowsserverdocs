@@ -3,14 +3,11 @@ title:  TLS - SSL (Schannel SSP) Overview
 description: Learn about the changes in functionality in the Schannel Security Support Provider (SSP).
 ms.topic: article
 ms.assetid: c8836345-16bb-4dcc-8d2b-2b9b687456a3
-author: justinha
-ms.author: justinha
-manager: brianlic
 ms.date: 05/16/2018
 ---
 # Overview of TLS - SSL (Schannel SSP)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
+>
 
 This topic for the IT professional describes the changes in functionality in the Schannel Security Support Provider (SSP), which includes the Transport Layer Security (TLS), the Secure Sockets Layer (SSL), and the Datagram Transport Layer Security (DTLS) authentication protocols, for  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1, and Windows 8.
 
