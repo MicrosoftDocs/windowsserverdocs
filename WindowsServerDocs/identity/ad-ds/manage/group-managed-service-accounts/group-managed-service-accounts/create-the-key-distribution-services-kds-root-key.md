@@ -17,7 +17,7 @@ This article for the IT professional describes how to create a Microsoft Key Dis
 Domain Controllers (DC) require a root key to begin generating gMSA passwords. The domain controllers will wait up to 10 hours from time of creation to allow all domain controllers to converge their AD replication before allowing the creation of a gMSA. Waiting up to 10 hours is a safety measure to prevent password generation from occurring before all DCs in the environment are capable of answering gMSA requests.  Trying to use a gMSA too soon might fail when the gMSA host attempts to retrieve the password, as the key may not have been replicated to all domain controllers. gMSA password retrieval failures can also occur when using DCs with limited replication schedules or if there's a replication issue.
 
 > [!NOTE]
-> Deleting and recreating the root key may lead to issues where the old key continues to be used after deletion due to caching of the key. The Key Distribution Service (KDC) should be restarted on all domain controllers if the root key is recreated.
+> Deleting and recreating the root key may lead to issues where the old key continues to be used after deletion due to caching of the key. The Microsoft **K**ey **D**istribution **S**ervice (KdsSvc) should be restarted on all domain controllers if the root key is recreated.
 
 Membership in the **Domain Admins** or **Enterprise Admins** groups, or equivalent, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
