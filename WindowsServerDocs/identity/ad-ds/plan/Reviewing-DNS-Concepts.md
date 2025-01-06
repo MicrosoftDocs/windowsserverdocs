@@ -11,8 +11,6 @@ ms.topic: article
 
 # Reviewing DNS Concepts
 
->
-
 Domain Name System (DNS) is a distributed database that represents a namespace. The namespace contains all of the information needed for any client to look up any name. Any DNS server can answer queries about any name within its namespace. A DNS server answers queries in one of the following ways:
 
 - If the answer is in its cache, it answers the query from the cache.

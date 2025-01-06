@@ -9,8 +9,6 @@ ms.date: 05/22/2019
 ---
 # Upgrade virtual machine version in Hyper-V on Windows or Windows Server
 
->
-
 Make the latest Hyper-V features available on your virtual machines by upgrading the configuration version. Don't do this until:
 
 - You upgrade your Hyper-V hosts to the latest version of Windows or Windows Server.

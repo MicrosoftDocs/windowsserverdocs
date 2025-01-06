@@ -11,8 +11,6 @@ ms.topic: article
 
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
 
->
-
 You can find the following documentation about Active Directory Domain Services (AD DS) on the Windows Server 2003 and  Windows Server 2008  TechCenter websites:
 
 - For more information about the process of locating a domain controller, see [Active Directory Collection](/previous-versions/windows/it-pro/windows-server-2003/cc780036(v=ws.10)).

@@ -8,8 +8,6 @@ ms.date: 01/18/2024
 
 # TLS/SSL overview (Schannel SSP)
 
->
-
 This article is to introduce IT professionals to TLS and SSL implementations in Windows using the Schannel Security Service Provider (SSP) by describing practical applications, changes in Microsoft's implementation, software requirements, and other resources for Windows Server and client devices.
 
 ## Description

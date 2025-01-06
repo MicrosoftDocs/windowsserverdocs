@@ -10,8 +10,6 @@ ms.date: 10/02/2023
 
 # Netsh command syntax, contexts, and formatting
 
->
-
 You can use this article to learn how to enter netsh contexts and subcontexts, understand netsh syntax and command formatting, and how to run netsh commands on local and remote computers.
 
 Netsh is a command-line scripting utility that allows you to display or modify the network configuration of a computer that is currently running. Netsh commands can be run by typing commands at the netsh shell and be used in batch files or scripts. Remote computers and the local computer can be configured by using netsh commands.

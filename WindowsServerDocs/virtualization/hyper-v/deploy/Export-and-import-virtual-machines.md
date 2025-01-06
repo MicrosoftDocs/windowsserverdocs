@@ -10,8 +10,6 @@ ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
 
 # Export and Import virtual machines
 
->
-
 This article shows you how to export and import a virtual machine, which is a quick way to move or copy them. This article also discusses some of the choices to make when doing an export or import.
 
 ## Export a Virtual Machine

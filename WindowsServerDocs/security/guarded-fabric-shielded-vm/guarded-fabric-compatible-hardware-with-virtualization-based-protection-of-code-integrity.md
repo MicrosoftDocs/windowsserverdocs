@@ -11,8 +11,6 @@ ms.date: 08/29/2018
 
 # Compatible hardware with Windows Server Virtualization-based protection of Code Integrity
 
->
-
 Windows Server 2016 introduced a new Virtualization-based code protection to help protect physical and virtual machines from attacks that modify system code.
 To achieve this high protection level, Microsoft works in tandem with the computer hardware manufactures (Original Equipment Manufacturers, or OEMs) to prevent malicious writes into system execution code.
 This protection can be applied to any system and is being used as one of the building blocks for implementing the Hyper-V host health for shielded virtual machines (VMs).

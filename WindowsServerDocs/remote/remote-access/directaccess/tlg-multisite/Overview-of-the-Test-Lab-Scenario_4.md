@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario
 
->
-
 In this test lab scenario, DirectAccess is deployed with:
 
 -   **DC1**-A server that is configured as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain.

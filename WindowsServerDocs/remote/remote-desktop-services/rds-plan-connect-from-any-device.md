@@ -10,8 +10,6 @@ manager: scottman
 ---
 # Remote Desktop Services - Connect from any device
 
->
-
 Access corporate resources from any Windows, Apple, or Android computer, tablet, or phone. Enable users to easily see their available desktops and applications from any device through RD Web Feed.
 
 Learn more about [Microsoft Remote Desktop clients](clients/remote-desktop-clients.md).

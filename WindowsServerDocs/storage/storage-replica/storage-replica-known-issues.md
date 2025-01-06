@@ -11,8 +11,6 @@ ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 
 # Known Issues with Storage Replica
 
->
-
 This article describes some of the known issues with Storage Replica in Windows Server.
 
 ## Disks offline after removing replication and you can't configure replication

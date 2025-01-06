@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # QoS Policy Scenarios
 
->
-
 You can use this topic to review hypothetical scenarios that demonstrate how, when, and why to use QoS Policy.
 
 The two scenarios in this topic are:

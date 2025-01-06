@@ -9,8 +9,6 @@ ms.date: 09/27/2023
 ---
 # Supported Oracle Linux virtual machines on Hyper-V
 
->
-
 The following feature distribution map indicates the features that are present in each version. The known issues and workarounds for each distribution are listed after the table.
 
 In this section:

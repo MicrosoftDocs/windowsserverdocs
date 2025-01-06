@@ -9,8 +9,6 @@ ms.assetid: 5fe163d4-2595-43b0-ba2f-7fad6e4ae069
 ---
 # About Hyper-V hypervisor scheduler type selection
 
->
-
 This document describes important changes to Hyper-V's default and recommended use of hypervisor scheduler types. These changes impact both system security and virtualization performance. Virtualization host administrators should review and understand the changes and implications described in this document, and carefully evaluate the impacts, suggested deployment guidance and risk factors involved to best understand how to deploy and manage Hyper-V hosts in the face of the rapidly changing security landscape.
 
 >[!IMPORTANT]

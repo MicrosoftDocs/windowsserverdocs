@@ -9,8 +9,6 @@ ms.topic: article
 ---
 # Upgrade domain controllers to a newer version of Windows Server
 
->
-
 This article provides background information about Active Directory Domain Services in Windows Server and explains the process for upgrading domain controllers (DCs) from an earlier version of Windows Server.
 
 ## Prerequisites

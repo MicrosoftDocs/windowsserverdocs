@@ -11,8 +11,6 @@ ms.date: 01/05/2021
 
 # Use DNS Policy for Application Load Balancing With Geo-Location Awareness
 
->
-
 You can use this topic to learn how to configure DNS policy to load balance an application with geo-location awareness.
 
 The previous topic in this guide, [Use DNS Policy for Application Load Balancing](./app-lb.md), uses an example of a fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named contosogiftservices.com. Contoso Gift Services load balances their online Web application between servers in North American datacenters located in Seattle, WA, Chicago, IL, and Dallas, TX.

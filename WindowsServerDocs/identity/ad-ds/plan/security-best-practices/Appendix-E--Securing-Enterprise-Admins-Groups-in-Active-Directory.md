@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix E: Securing Enterprise Admins Groups in Active Directory
 
->
-
 
 ## Appendix E: Securing Enterprise Admins Groups in Active Directory
 The Enterprise Admins (EA) group, which is housed in the forest root domain, should contain no users on a day-to-day basis, with the possible exception of the root domain's Administrator account, provided it is secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).

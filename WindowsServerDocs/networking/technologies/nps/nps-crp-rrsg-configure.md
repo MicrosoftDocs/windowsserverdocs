@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Configure Remote RADIUS Server Groups
 
->
-
 You can use this topic to configure remote RADIUS server groups when you want to configure NPS to act as a proxy server and forward connection requests to other NPSs for processing.
 
 ## Add a Remote RADIUS Server Group

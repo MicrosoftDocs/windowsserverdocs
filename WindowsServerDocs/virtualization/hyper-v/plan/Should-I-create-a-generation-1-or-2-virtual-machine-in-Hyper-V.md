@@ -8,8 +8,6 @@ ms.date: 06/20/2024
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
->
-
 Creating a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend you create a generation 2 virtual machines to take advantage of features like Secure Boot unless one of the following statements is true:
 
 - You're using an existing, prebuilt virtual hard drive (VHD or VHDX files), which isn't [compatible with UEFI](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).

@@ -11,8 +11,6 @@ ms.topic: article
 
 # AD DS Operations
 
->
-
 This section provides links to How To's and functions related to day-to-day administration, management and automation tasks for Active Directory Domain Services.
 
 * [Best Practices for Securing Active Directory](../../../ad-ds/plan/security-best-practices/Best-Practices-for-Securing-Active-Directory.md)

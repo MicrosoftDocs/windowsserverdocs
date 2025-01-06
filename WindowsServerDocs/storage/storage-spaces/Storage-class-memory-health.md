@@ -10,8 +10,6 @@ ms.date: 06/25/2019
 ---
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 
->
-
 This article provides system administrators and IT Pros with information about error handling and health management specific to storage-class memory (NVDIMM-N) devices in Windows, highlighting the differences between storage-class memory and traditional storage devices.
 
 If you aren't familiar with Windows' support for storage-class memory devices, these short videos provide an overview:

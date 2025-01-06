@@ -11,8 +11,6 @@ ms.date: 11/02/2021
 
 # Upgrade, backup, and restore SDN infrastructure
 
->
-
 In this topic, you learn how to update, backup and restore an SDN infrastructure.
 
 ## Upgrade the SDN infrastructure

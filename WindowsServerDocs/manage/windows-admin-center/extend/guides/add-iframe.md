@@ -9,8 +9,6 @@ ms.date: 09/18/2018
 
 # Add an iFrame to a tool extension
 
->
-
 In this article, we will add an iFrame to a new, empty tool extension we have created with the Windows Admin Center CLI.
 
 ## Prepare your environment ##

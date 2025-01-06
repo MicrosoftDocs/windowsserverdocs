@@ -11,8 +11,6 @@ ms.topic: article
 
 # Best Practices for Securing Active Directory
 
->
-
 Attacks against computing infrastructure have increased over the last decade in all parts of the world. We live in an age of cyber-warfare, cybercrime, and hacktivism. As a result, organizations of all sizes all over the world have had to deal with information leaks, theft of intellectual property (IP), denial-of-service (DDoS) attacks, or even destroyed infrastructure.
 
 However, as the threat landscape has changed over the years, the security landscape has also adapted to counter these threats. While no organization with an information technology (IT) infrastructure is ever perfectly immune to attack, the ultimate goal of security isn't preventing attack attempts altogether, but protecting the IT infrastructure from attacks. With the right policies, processes, and controls, you can protect key parts of your IT infrastructure from compromise.

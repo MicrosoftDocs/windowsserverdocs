@@ -9,8 +9,6 @@ ms.date: 10/25/2024
 ---
 # Performance history for Storage Spaces Direct
 
->
-
 Performance history is a new feature that gives [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
    > [!IMPORTANT]

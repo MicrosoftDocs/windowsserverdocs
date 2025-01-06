@@ -10,8 +10,6 @@ description: How to plan a Work Folders deployment including system requirements
 ---
 # Planning a Work Folders deployment
 
->
-
 This topic explains the design process for a Work Folders implementation, and assumes that you have the following background:
 
 - Have a basic understanding of Work Folders (as described in [Work Folders](work-folders-overview.md))

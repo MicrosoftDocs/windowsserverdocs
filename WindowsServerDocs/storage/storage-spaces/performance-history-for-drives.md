@@ -10,8 +10,6 @@ ms.date: 02/02/2018
 
 # Performance history for drives
 
->
-
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for drives. Performance history is available for every drive in the cluster storage subsystem, regardless of bus or media type. However, it is not available for OS boot drives.
 
    > [!NOTE]

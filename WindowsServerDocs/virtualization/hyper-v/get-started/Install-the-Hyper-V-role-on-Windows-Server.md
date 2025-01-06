@@ -9,8 +9,6 @@ ms.date: 10/25/2024
 ---
 # Install the Hyper-V role on Windows Server
 
->
-
 To create and run virtual machines, install the Hyper-V role on Windows Server by using Server Manager or the **Install-WindowsFeature** cmdlet in Windows PowerShell.
 For Windows 10 and Windows 11, see [Install Hyper-V on Windows](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 

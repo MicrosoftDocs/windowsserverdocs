@@ -9,8 +9,6 @@ ms.date: 6/05/2018
 ---
 # Understanding capabilities
 
->
-
 This topic defines the concept of capabilities in System Insights and introduces the default capabilities available in Windows Server 2019.
 
 This topic also describes the data sources, prediction timelines, and prediction statuses used for the default capabilities.

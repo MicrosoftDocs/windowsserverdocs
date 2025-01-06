@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Manage Hyper-V Virtual Switch
 
->
-
 You can use this topic to access Hyper-V Virtual Switch management content.
 
 This section contains the following topics.

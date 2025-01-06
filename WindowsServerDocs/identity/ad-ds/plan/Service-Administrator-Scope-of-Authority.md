@@ -11,8 +11,6 @@ ms.topic: article
 
 # Service Administrator Scope of Authority
 
->
-
 If you choose to participate in an Active Directory forest, you must trust the forest owner and the service administrators. The forest owners are responsible for selecting and managing the service administrators; therefore, when you trust a forest owner, you also trust the service administrators that the forest owner manages. These service administrators have access to all of the resources in the forest. Before making the decision to participate in a forest, it is important to understand that the forest owner and the service administrators will have full access to your data. You cannot prevent this access.
 
 All service administrators in a forest have full control over all data and services on all computers in the forest. Service administrators have the capability to do the following:

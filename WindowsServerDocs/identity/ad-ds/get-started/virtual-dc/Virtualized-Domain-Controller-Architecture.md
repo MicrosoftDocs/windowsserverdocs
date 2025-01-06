@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Virtualized Domain Controller Architecture
 
->
-
 This article covers the architecture of virtualized domain controller cloning and safe restore. It shows the processes cloning and safe restore with flowcharts and then provides a detailed explanation of each step in the process.
 
 -   [Virtualized domain controller cloning architecture](#BKMK_CloneArch)

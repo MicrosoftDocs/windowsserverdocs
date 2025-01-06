@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 3 Plan the Multisite Deployment
 
->
-
 After planning the multisite infrastructure, plan any additional certificate requirements, how client computers select entry points, and IPv6 addresses assigned in your deployment.
 
 The following sections provide detailed planning information.

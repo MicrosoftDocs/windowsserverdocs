@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Process
 
->
-
 The process that you use to deploy wireless access occurs in these stages:
 
 ## Stage 1 – AP Deployment

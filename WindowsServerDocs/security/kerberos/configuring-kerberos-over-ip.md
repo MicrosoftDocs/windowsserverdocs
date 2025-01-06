@@ -9,8 +9,6 @@ ms.topic: article
 
 # Kerberos clients allow IPv4 and IPv6 address hostnames in Service Principal Names (SPNs)
 
->
-
 Beginning with Windows 10 version 1507 and Windows Server 2016, Kerberos clients can be configured to support IPv4 and IPv6 hostnames in SPNs.
 
 By default Windows will not attempt Kerberos authentication for a host if the hostname is an IP address. It will fall back to other enabled authentication protocols like NTLM. However, applications are sometimes hardcoded to use IP addresses which means the application will fall back to NTLM and not use Kerberos. This can cause compatibility issues as environments move to disable NTLM.

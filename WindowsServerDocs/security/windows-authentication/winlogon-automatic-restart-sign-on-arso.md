@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Winlogon Automatic Restart Sign-On (ARSO)
 
->
-
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
 > [!NOTE]

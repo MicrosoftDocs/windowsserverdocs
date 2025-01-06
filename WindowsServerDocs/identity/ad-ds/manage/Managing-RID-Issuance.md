@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Managing RID Issuance
 
->
-
 This article explains the change to the RID master FSMO role, including the new issuance and monitoring functionality in the RID master and how to analyze and troubleshoot RID issuance.
 
 - [Managing RID Issuance](#BKMK_Manage)

@@ -10,8 +10,6 @@ ms.topic: article
 
 # How the Windows Time Service Works
 
->
-
 **In this section**
 
 -   [Windows Time Service Architecture](#windows-time-service-architecture)

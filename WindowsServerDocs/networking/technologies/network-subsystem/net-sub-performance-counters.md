@@ -11,8 +11,6 @@ ms.date: 10/27/2021
 
 # Network-Related Performance Counters
 
->
-
 This topic lists the counters that are relevant to managing network performance, and contains the following sections.
 
 -   [Resource Utilization](#bkmk_ru)

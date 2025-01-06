@@ -11,8 +11,6 @@ ms.topic: article
 
 # AD DS Design Requirements
 
->
-
 
 ## Designing the Active Directory logical structure
 Before you deploy  Windows Server 2008  Active Directory Domain Services (AD DS), you must plan for and design the AD DS logical structure for your environment. The AD DS logical structure determines how your directory objects are organized, and it provides an effective method for managing your network accounts and shared resources. When you design your AD DS logical structure, you define a significant part of the network infrastructure of your organization.

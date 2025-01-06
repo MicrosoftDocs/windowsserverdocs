@@ -8,8 +8,6 @@ ms.date: 05/16/2018
 
 # TLS (Schannel SSP) changes in Windows 10 and Windows Server 2016
 
->
-
 ## Cipher Suite Changes
 
 Windows 10, version 1511 and Windows Server 2016 add support for configuration of cipher suite order using Mobile Device Management (MDM).
