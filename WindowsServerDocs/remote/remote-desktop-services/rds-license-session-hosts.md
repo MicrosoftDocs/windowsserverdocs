@@ -98,7 +98,7 @@ Then, on each RD Session Host server that needs to connect to the RD licensing s
    psexec.exe -I -u "NT AUTHORITY\NETWORK SERVICE" cmd.exe
    ``` 
 
-1. Then, add a username and password to the host computer with the following command:
+1. Then, add the hostname or IP address of your licensing server, and a username and password to the licensing server with the following command:
 
    ```cmd
    cmdkey /add:<NAME-OF-THE-LICENSING-SERVER> /user:<NAME-OF-THE-LICENSING-SERVER>\<USERNAME> /pass

@@ -97,7 +97,7 @@ The following sections provide detailed configuration instructions.
 
 You can create the secondary copy of the zone you want to replicate to SecondaryServer1 and SecondaryServer2 (assuming the cmdlets are being executed remotely from a single management client).
 
-For example, you can create the secondary copy of www.woodgrove.com on SecondaryServer1 and SecondarySesrver2.
+For example, you can create the secondary copy of www.woodgrove.com on SecondaryServer1 and SecondaryServer2.
 
 You can use the following Windows PowerShell commands to create the secondary zones.
 
