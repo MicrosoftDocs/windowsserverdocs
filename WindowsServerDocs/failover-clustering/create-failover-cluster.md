@@ -5,12 +5,12 @@ ms.topic: article
 author: robinharwood
 ms.author: roharwoo
 manager: lizross
-ms.date: 3/14/2023
+ms.date: 1/06/2025
 zone_pivot_groups: failover-clustering-management-tools
 ---
 # Create a failover cluster
 
-This article shows how to create a failover cluster by using Windows Admin Center, the Failover Cluster Manager snap-in, or Windows PowerShell. The article covers a typical deployment in which computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster instead, see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md). For information about using a failover cluster in Azure Stack HCI, see [Create an Azure Stack HCI](/azure-stack/hci/deploy/create-cluster). For information about using a failover cluster in Azure Local, see [Create an Azure Local](/azure/azure-local/deploy/create-cluster?context=/windows-server/context/windows-server-failover-clustering).
+This article shows how to create a failover cluster by using Windows Admin Center, the Failover Cluster Manager snap-in, or Windows PowerShell. The article covers a typical deployment in which computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a failover cluster that uses Storage Spaces Direct (S2D) instead, see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md#step-35-enable-storage-spaces-direct). For information about using a failover cluster in Azure Local, see [Create an Azure Local](/azure/azure-local/deploy/create-cluster?context=/windows-server/context/windows-server-failover-clustering).
 
 You can also deploy an Active Directory-detached cluster. This deployment method enables you to create a failover cluster without permissions to create computer objects in AD DS or the need to request that computer objects are prestaged in AD DS. This option is only available through Windows PowerShell and is only recommended for specific scenarios. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
