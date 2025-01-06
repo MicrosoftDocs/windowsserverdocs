@@ -4,7 +4,7 @@ description: Describes how to use dynamic processor compatibility mode to move a
 ms.topic: how-to
 author: meaghanlewis
 ms.author: mosagie
-ms.date: 12/31/2024
+ms.date: 01/06/2025
 ms.subservice: core-os
 ---
 
@@ -53,7 +53,7 @@ There are important concepts to understand when using processor compatibility mo
   - Anytime a VM is restarted, the guest operating system enumerates the processor features that are available on the new host computer.
 
    > [!NOTE]
-   > In Windows Server, Microsoft recommends turning on processor compatibility mode only before VM migration scenarios, and then turning it off when the migration is complete.
+   > Microsoft recommends turning on processor compatibility mode only before VM migration scenarios, and then turning it off when the migration is complete.
 
 ## Migrating running VMs between clusters
 
