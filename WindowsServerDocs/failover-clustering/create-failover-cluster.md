@@ -79,7 +79,7 @@ To install the Failover Clustering feature:
 
 ## Validate the configuration using PowerShell
 
-Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft only supports cluster solutions if the complete configuration passes all validation tests and has only certified hardware compatible with whichever version of Windows Server your cluster nodes use.
+Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft only supports cluster solutions if the complete configuration passes all validation tests and only has certified hardware compatible with whichever version of Windows Server your cluster nodes use.
 
 The following example runs all cluster validation tests on computers that are named *Server1* and *Server2*.
 
@@ -96,7 +96,7 @@ Test-Cluster –Node Server1, Server2
 
 ## Validate the configuration using Failover Cluster Manager
 
-Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft only supports cluster solutions if the complete configuration passes all validation tests and has only certified hardware compatible with whichever version of Windows Server your cluster nodes use.
+Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft only supports cluster solutions if the complete configuration passes all validation tests and only has certified hardware compatible with whichever version of Windows Server your cluster nodes use.
 
 > [!NOTE]
 > You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests don't run.
@@ -246,13 +246,13 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
     > [!NOTE]
     > If you chose to create the cluster immediately after running validation in the [configuration validating procedure](#clustering), you won't see the **Select Servers** page. The nodes you validated are automatically added to the Create Cluster Wizard so that you don't have to enter them again.
 
-1. If you skipped validation earlier, the **Validation Warning** page appears. We strongly recommend that you run cluster validation. Only clusters that pass all validation tests are supported by Microsoft. To run the validation tests, select **Yes**, and then select **Next**. Complete the Validate a Configuration Wizard as described in [Clustering](#clustering).
+1. If you skipped validation earlier, the **Validation Warning** page appears. We strongly recommend that you run cluster validation. Microsoft only supports clusters that pass all validation tests. To run the validation tests, select **Yes**, and then select **Next**. Complete the Validate a Configuration Wizard as described in [Clustering](#clustering).
 
 1. On the **Access Point for Administering the Cluster** page, do the following:
 
     1. In the **Cluster Name** box, enter the name that you want to use to administer the cluster. Before you do, review the following information:
 
-          - During cluster creation, this name is registered as the cluster computer object,lso known as the *cluster name object (CNO)*, in AD DS. If you specify a NetBIOS name for the cluster, the CNO is created in the same location where the computer objects for the cluster nodes reside. This location can be either the default Computers container or an OU.
+          - During cluster creation, this name is registered as the cluster computer object, also known as the *cluster name object (CNO)*, in AD DS. If you specify a NetBIOS name for the cluster, the CNO is created in the same location where the computer objects for the cluster nodes reside. This location can be either the default Computers container or an OU.
 
           - To specify a different location for the CNO, you can enter the distinguished name of an OU in the **Cluster Name** box. For example: *CN=ClusterName, OU=Clusters, DC=Contoso, DC=com*.
 
@@ -292,9 +292,7 @@ After you create the failover cluster, you can create clustered roles to host cl
 >[!NOTE]
 >For clustered roles that require a client access point, a virtual computer object (VCO) is created in AD DS. By default, all VCOs for the cluster are created in the same container or OU as the CNO. Realize that after you create a cluster, you can move the CNO to any OU.
 
-For examples of how to add clustered roles using Powershell, see [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole).
-
-<!---This one's going to need some more specific directions.--->
+For examples of how to add clustered roles using PowerShell, see [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole).
 
 ::: zone-end  
 
