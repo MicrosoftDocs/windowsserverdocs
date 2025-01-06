@@ -4,7 +4,7 @@ description: Configure multiple CSV for VM replication using Hyper-V Replica to 
 ms.topic: how-to
 ms.author: alalve
 author: xelu86
-ms.date: 12/12/2024
+ms.date: 01/06/2024
 ---
 
 # Configure multiple CSV for VM replication
