@@ -11,8 +11,6 @@ manager: dongill
 ---
 # Remote Desktop Services - Build anywhere
 
->
-
 Deploy on-premises, in the cloud, or a hybrid of the two. Modify your deployment as your business needs change.
 
 Regardless of where you are, the underlying [architecture](desktop-hosting-logical-architecture.md) of the Remote Desktop Services environment remains the same:

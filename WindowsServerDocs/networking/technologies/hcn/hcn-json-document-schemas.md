@@ -9,8 +9,6 @@ ms.topic: article
 
 # HCN JSON document schemas
 
->
-
 ## HCN schema
 
 ```json

@@ -11,8 +11,6 @@ ms.topic: article
 
 # Creating a Site Design
 
->
-
 Creating a site design involves deciding which locations will become sites, creating site objects, creating subnet objects, and associating the subnets with sites.
 
 ## Deciding which locations will become sites

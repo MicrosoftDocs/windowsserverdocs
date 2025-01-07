@@ -8,8 +8,6 @@ ms.date: 12/02/2022
 ---
 # Plan for Hyper-V networking in Windows Server
 
->
-
 A basic understanding of networking in Hyper-V helps you plan networking for virtual machines. This article also covers some networking considerations when using live migration and when using Hyper-V with other server features and roles.
 
 ## Hyper-V networking basics

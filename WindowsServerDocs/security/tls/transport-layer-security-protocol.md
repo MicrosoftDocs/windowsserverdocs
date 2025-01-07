@@ -7,8 +7,6 @@ ms.date: 07/31/2023
 ---
 # Transport Layer Security protocol
 
->
-
 This topic for the IT professional describes how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
 
 > [!Note]

@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Demoting domain controllers and domains
 
->
-
 This article explains how to remove Active Directory Domain Services (AD DS) using Server Manager or Windows PowerShell.
 
 ## AD DS removal workflow

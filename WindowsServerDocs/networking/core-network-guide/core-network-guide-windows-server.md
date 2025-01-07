@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Core network guidance for Windows Server
 
->
-
 This topic provides an overview of the Core network guidance for Windows Server&reg; 2016, and contains the following sections.
 
 -   [Introduction to the Windows Server Core Network](#bkmk_intro)

@@ -10,8 +10,6 @@ ms.date: 11/02/2021
 ---
 # Use network virtual appliances on a virtual network
 
->
-
 In this topic, you learn how to deploy network virtual appliances on tenant virtual networks. You can add network virtual appliances to networks that perform user-defined routing and port mirroring functions.
 
 ## Types of network virtual appliances

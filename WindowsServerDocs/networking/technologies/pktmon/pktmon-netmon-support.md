@@ -9,8 +9,6 @@ ms.date: 10/27/2021
 
 # Pktmon support for Microsoft Network Monitor (Netmon)
 
->
-
 Packet Monitor (Pktmon) generates logs in ETL format. These logs can be analyzed using Microsoft Network Monitor (Netmon) by using special parsers. This topic explains how to analyze Packet Monitor-generated ETL files within Netmon.
 
 ## Network Monitor setup and configuration

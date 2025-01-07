@@ -9,8 +9,6 @@ ms.date: 8/16/2016
 ---
 # Configure SCSI controllers only when supported by the guest operating system
 
->
-
 
 
 |Property|Details|

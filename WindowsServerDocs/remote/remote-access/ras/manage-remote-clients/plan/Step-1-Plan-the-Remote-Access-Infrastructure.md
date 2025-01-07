@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 1 Plan the Remote Access Infrastructure
 
->
-
 > [!NOTE]
 > Windows Server 2016 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 

@@ -10,8 +10,6 @@ ms.date: 08/03/2018
 
 # Plan for Hyper-V security in Windows Server
 
->
-
 Secure the Hyper-V host operating system, the virtual machines, configuration files, and virtual machine data. Use the following list of recommended practices as a checklist to help you secure your Hyper-V environment.
 
 ## Secure the Hyper-V host

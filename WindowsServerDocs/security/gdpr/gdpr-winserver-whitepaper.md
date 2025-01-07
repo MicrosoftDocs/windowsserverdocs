@@ -9,8 +9,6 @@ author: nirb-ms
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
 
->
-
 This article provides info about the GDPR, including what it is, and the products Microsoft provides to help you to become compliant.
 
 ## Introduction

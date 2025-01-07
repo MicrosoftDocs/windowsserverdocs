@@ -10,8 +10,6 @@ ms.date: 10/25/2024
 
 # Create a virtual machine in Hyper-V
 
->
-
 Learn how to create a virtual machine by using Hyper-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper-V Manager.
 
 ## Create a virtual machine

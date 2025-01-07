@@ -11,8 +11,6 @@ ms.date: 2/5/2017
 
 # Removing servers in Storage Spaces Direct
 
->
-
 This topic describes how to remove servers in [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) using PowerShell.
 
 ## Remove a server but leave its drives

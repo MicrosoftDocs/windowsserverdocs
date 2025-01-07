@@ -12,8 +12,6 @@ ms.date:  03/14/2023
 
 - [**Next:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
->
-
 In this tutorial, you'll learn how to deploy Always On VPN connections for remote domain-joined Windows client computers. You'll create a sample infrastructure that shows you how to implement an Always On VPN connection process. The process is composed of the following steps:
 
 1. The Windows VPN client uses a public DNS server to perform a name resolution query for the IP address of the VPN gateway.

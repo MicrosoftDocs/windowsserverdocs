@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Passwords Overview
 
->
-
 This topic for the IT professional describes passwords as used in the Windows operating systems, and links to documentation and discussions about the use of passwords in a credential management strategy.
 
 ## <a name="BKMK_OVER"></a>Feature description

@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix H: Securing Local Administrator Accounts and Groups
 
->
-
 
 ## Appendix H: Securing Local Administrator Accounts and Groups
 

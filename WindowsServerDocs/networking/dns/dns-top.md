@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Domain Name System (DNS)
 
->
-
 Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.
 
 > [!NOTE]

@@ -11,8 +11,6 @@ ms.custom: 3bd6c1d0-d316-4b03-b7b4-557d4537635c, inhenkel
 
 # Active Directory Forest Recovery - Reset the krbtgt password
 
->
-
 Use the following procedure to reset the krbtgt password for the domain. The following procedure applies writeable DCs, but not read-only domain controllers (RODCs).
 
 > [!IMPORTANT]

@@ -10,8 +10,6 @@ manager: dongill
 
 # Add the RD Connection Broker server to the deployment and configure high availability
 
->
-
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of your Remote Desktop Services infrastructure.
 
 ## Pre-requisites

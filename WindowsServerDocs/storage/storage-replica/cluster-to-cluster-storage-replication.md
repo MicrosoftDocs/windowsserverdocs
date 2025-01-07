@@ -10,8 +10,6 @@ description: How to use Storage Replica to replicate volumes in one cluster to a
 ---
 # Cluster to Cluster Storage Replication
 
->
-
 Storage Replica can replicate volumes between clusters, including the replication of clusters using Storage Spaces Direct. The management and configuration is similar to server-to-server replication.
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.

@@ -11,8 +11,6 @@ ms.assetid: 60087a62-11e6-4750-a70e-510f35315688
 
 # Active Directory Forest Recovery - Remove the global catalog
 
->
-
  Use the following procedure to remove the global catalog from a DC.
 
  Restoring a global catalog server from backup could result in the global catalog holding newer data for one of its partial replicas than the corresponding domain that is authoritative for that partial replica. In such a case, the newer data won't be removed from the global catalog and might even replicate to other global catalog servers. As a result, even if you did restore a DC that was a global catalog server, either inadvertently or because that was the solitary backup you trusted, you should remove the global catalog soon after the restore operation is complete. When the global catalog is removed, the computer removes all its partial replicas.

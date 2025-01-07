@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Manage Network Policy Server (NPS)
 
->
-
 You can use the topics in this section to manage Network Policy Server.
 
 >[!NOTE]

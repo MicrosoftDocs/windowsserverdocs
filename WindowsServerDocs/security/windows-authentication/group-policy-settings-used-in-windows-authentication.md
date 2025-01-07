@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Group Policy Settings Used in Windows Authentication
 
->
-
 This reference topic for the IT professional describes the use and impact of Group Policy settings in the authentication process.
 
 You can manage authentication in Windows operating systems by adding user, computer, and service accounts to groups, and then by applying authentication policies to those groups. These policies are defined as local security policies and as administrative templates, also known as Group Policy settings. Both sets can be configured and distributed throughout your organization by using Group Policy.

@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 2 Plan the Multisite Infrastructure
 
->
-
 The next step in deploying Remote Access in a multisite topology is to complete the multisite infrastructure planning; including, Active Directory, security groups, and Group Policy Objects.
 ## <a name="bkmk_2_1_AD"></a>2.1 Plan Active Directory
 A Remote Access multisite deployment can be configured in a number of topologies:

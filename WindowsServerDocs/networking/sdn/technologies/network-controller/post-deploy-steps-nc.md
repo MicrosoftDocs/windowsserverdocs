@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Post-Deployment Steps for Network Controller
 
->
-
 When you install Network Controller, you can choose Kerberos or non-Kerberos deployments.
 
 For non\-Kerberos deployments, you must configure certificates.

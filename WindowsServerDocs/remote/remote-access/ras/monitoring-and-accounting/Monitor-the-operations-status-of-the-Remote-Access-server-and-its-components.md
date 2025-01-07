@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Monitor the operations status of the Remote Access server and its components
 
->
-
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 
 The management console in the Remote Access server can be used to monitor its operations status.

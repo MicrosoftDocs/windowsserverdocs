@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Manage NPSs
 
->
-
 You can use the topics in this section to manage NPSs.
 
 >[!NOTE]

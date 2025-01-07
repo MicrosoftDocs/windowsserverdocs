@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 1 Plan DirectAccess Infrastructure
 
->
-
 The first step of planning for a basic Remote Access deployment on a single server is to perform planning for the infrastructure required for the deployment. This topic describes the infrastructure planning steps:
 
 |Task|Description|

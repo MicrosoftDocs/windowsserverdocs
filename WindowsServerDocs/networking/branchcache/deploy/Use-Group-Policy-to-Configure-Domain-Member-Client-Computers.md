@@ -10,8 +10,6 @@ ms.date: 06/02/2018
 ---
 # Use Group Policy to Configure Domain Member Client Computers
 
->
-
 In this section, you create a Group Policy Object for all of the computers in your organization, configure domain member client computers with distributed cache mode or hosted cache mode, and configure Windows Firewall with Advanced Security to allow BranchCache traffic.
 
 This section contains the following procedures.

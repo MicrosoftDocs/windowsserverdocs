@@ -11,8 +11,6 @@ ms.topic: article
 
 # Reviewing the Domain Models
 
->
-
 The following factors impact the domain design model that you select:
 
 - Amount of available capacity on your network that you are willing to allocate to Active Directory Domain Services (AD DS). The goal is to select a model that provides efficient replication of information with minimal impact on available network bandwidth.

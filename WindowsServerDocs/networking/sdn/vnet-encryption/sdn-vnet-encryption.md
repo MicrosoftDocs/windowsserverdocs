@@ -10,8 +10,6 @@ ms.date: 08/08/2018
 ---
 # Virtual Network Encryption
 
->
-
 Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.' It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
 Virtual network encryption requires:

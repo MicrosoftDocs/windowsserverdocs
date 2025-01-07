@@ -11,8 +11,6 @@ ms.topic: article
 
 # Using the Organizational Domain Forest Model
 
->
-
 In the organizational domain forest model, several autonomous groups each own a domain within a forest. Each group controls domain-level service administration, which enables them to manage certain aspects of service management autonomously while the forest owner controls forest-level service management.
 
 The following illustration shows an organizational domain forest model.

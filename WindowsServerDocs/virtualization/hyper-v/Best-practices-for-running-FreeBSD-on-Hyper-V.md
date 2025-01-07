@@ -9,8 +9,6 @@ ms.date: 01/08/2021
 ---
 # Best practices for running FreeBSD on Hyper-V
 
->
-
 This topic contains a list of recommendations for running FreeBSD as a guest operating system on a Hyper-V virtual machine.
 
 ## Enable CARP in FreeBSD 10.2 on Hyper-V

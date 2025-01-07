@@ -10,8 +10,6 @@ manager: femila
 
 # License Remote Desktop session hosts
 
->
-
 You can use the information in this article to configure licensing for session hosts on your Remote Desktop Services (RDS) deployments. The process is slightly different depending on which roles you assigned to the session host you're licensing.
 
 ## Prerequisites

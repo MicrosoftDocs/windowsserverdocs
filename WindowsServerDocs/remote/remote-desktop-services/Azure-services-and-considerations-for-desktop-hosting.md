@@ -10,8 +10,6 @@ manager: femila
 ---
 # Azure services and considerations for desktop hosting
 
->
-
 The following sections describe Azure Infrastructure Services.
 
 ## Azure portal

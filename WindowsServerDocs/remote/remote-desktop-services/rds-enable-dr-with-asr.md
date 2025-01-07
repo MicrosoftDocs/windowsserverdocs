@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Enable disaster recovery of RDS using Azure Site Recovery
 
->
-
 To ensure that your RDS deployment is adequately configured for disaster recovery, you need to protect all of the components that make up your RDS deployment:
 
 - Active Directory

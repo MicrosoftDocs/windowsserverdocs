@@ -10,8 +10,6 @@ ms.date: 09/21/2023
 ---
 # NTLM Overview
 
->
-
 This topic for the IT professional describes NTLM, any changes in functionality, and provides links to technical resources to Windows Authentication and NTLM for Windows Server.
 
 ## <a name="BKMK_OVER"></a>Feature description

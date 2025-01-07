@@ -11,8 +11,6 @@ ms.date: 08/19/2024
 
 # Enable Remote Desktop on your PC
 
->
-
 You can use Remote Desktop to connect to and control your PC from a remote device by using a [Microsoft Remote Desktop client](remote-desktop-clients.md) (available for Windows, iOS, macOS, and Android). When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.
 
 > [!NOTE]

@@ -10,8 +10,6 @@ ms.date: 12/06/2016
 
 # Remotely manage Hyper-V hosts with Hyper-V Manager
 
->
-
 This article lists the supported combinations of Hyper-V hosts and Hyper-V Manager versions and describes how to connect to remote and local Hyper-V hosts so you can manage them.
 
 Hyper-V Manager lets you manage a small number of Hyper-V hosts, both remote and local. It's installed when you install the Hyper-V Management Tools, which you can do either through a full Hyper-V installation or a tools-only installation. Doing a tools-only installation means you can use the tools on computers that don't meet the hardware requirements to host Hyper-V. For details about hardware for Hyper-V hosts, see [System requirements](../System-requirements-for-Hyper-V-on-Windows.md).

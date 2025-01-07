@@ -11,8 +11,6 @@ ms.topic: article
 
 # Active Directory Replication and Topology Management Using Windows PowerShell
 
->
-
 Windows PowerShell for Active Directory now includes support for replication and topology management. The following topics provide an introduction and additional details:
 
 -   [Introduction to Active Directory Replication and Topology Management Using Windows PowerShell &#40;Level 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)

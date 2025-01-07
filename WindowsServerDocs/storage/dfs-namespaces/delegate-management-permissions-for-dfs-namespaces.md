@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Delegate management permissions for DFS Namespaces
 
->
-
 The following table describes the groups that can perform basic namespace tasks by default, and the method for delegating the ability to perform these tasks:
 
 |Task | Groups that Can Perform this Task by Default | Delegation Method |

@@ -10,8 +10,6 @@ ms.custom: inhenkel
 
 # Site functions
 
->
-
  Windows Server 2008  uses site information for many purposes, including routing replication, client affinity, system volume (SYSVOL) replication, Distributed File System Namespaces (DFSN), and service location.
 
 ## Routing replication

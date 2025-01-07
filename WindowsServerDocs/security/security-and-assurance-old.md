@@ -10,8 +10,6 @@ manager: mtillman
 ---
 # Security and Assurance in Windows Server
 
->
-
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/). You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 

@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Kerberos Constrained Delegation Overview
 
->
-
 This overview topic for the IT professional describes new capabilities for Kerberos constrained delegation in  Windows Server 2012 R2  and  Windows Server 2012.
 
 **Feature description**

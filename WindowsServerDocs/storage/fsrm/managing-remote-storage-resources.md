@@ -10,8 +10,6 @@ ms.author: roharwoo
 
 # Managing Remote Storage Resources
 
->
-
 To manage storage resources on a remote computer, you have two options:
 
 -   Connect to the remote computer from the File Server Resource Manager Microsoft<sup>®</sup> Management Console (MMC) snap-in (which you can then use to manage the remote resources).

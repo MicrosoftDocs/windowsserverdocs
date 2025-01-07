@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Deploy Network Policy Server
 
->
-
 You can use this topic for information about deploying Network Policy Server.
 
 >[!NOTE]

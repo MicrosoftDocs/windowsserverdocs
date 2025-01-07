@@ -11,8 +11,6 @@ ms.topic: article
 
 # Scenario: Access-Denied Assistance
 
->
-
 Users will get an access-denied message when they try to access shared files and folders on a file server for which they do not have permissions. Administrators often do not have the appropriate context to troubleshoot the access issue, which makes it hard to resolve the issue.
 
 ## Scenario description
