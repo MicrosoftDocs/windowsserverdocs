@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Integrating AD DS into an Existing DNS Infrastructure
 
->
-
 If your organization already has an existing Domain Name System (DNS) Server service, the DNS for Active Directory Domain Services (AD DS) owner must work with the DNS owner for your organization to integrate AD DS into the existing infrastructure. This involves creating a DNS server and DNS client configuration.
 
 ## Creating a DNS server configuration

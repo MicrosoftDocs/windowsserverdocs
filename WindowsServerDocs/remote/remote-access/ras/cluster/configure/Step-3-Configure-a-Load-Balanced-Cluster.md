@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 3 Configure a Load-Balanced Cluster
 
->
-
 After preparing servers for the cluster, configure load-balancing on the single server, configure the required certificates, and deploy the cluster.
 
 |Task|Description|

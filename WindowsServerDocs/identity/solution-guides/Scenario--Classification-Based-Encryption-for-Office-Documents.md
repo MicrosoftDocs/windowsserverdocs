@@ -11,8 +11,6 @@ ms.topic: article
 
 # Scenario: Classification-Based Encryption for Office Documents
 
->
-
 Protection of sensitive information is mainly about mitigating risk for the organization. Various compliance regulations, such as the Health Insurance Portability and Accountability Act (HIPAA) and Payment Card Industry Data Security Standard (PCI-DSS), dictate encryption of information, and there are numerous business reasons to encrypt sensitive business information. However, encrypting information is expensive, and it might impair business productivity. Thus, organizations tend to have different approaches and priorities for encrypting their information.
 
 ## <a name="BKMK_OVER"></a>Scenario description

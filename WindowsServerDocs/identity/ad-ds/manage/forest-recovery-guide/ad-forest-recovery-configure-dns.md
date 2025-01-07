@@ -10,8 +10,6 @@ ms.custom: inhenkel
 ---
 # Active Directory Forest Recovery - Configure the DNS Server service
 
->
-
 If the DNS server role isn't installed on the DC that you restore from backup, you must install and configure the DNS server.
 
 ## Install and configure the DNS Server service

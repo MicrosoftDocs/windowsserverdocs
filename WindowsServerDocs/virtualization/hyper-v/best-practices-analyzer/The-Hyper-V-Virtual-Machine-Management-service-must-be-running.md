@@ -9,8 +9,6 @@ ms.date: 06/29/2022
 ---
 # The Hyper-V Virtual Machine Management service must be running
 
->
-
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|

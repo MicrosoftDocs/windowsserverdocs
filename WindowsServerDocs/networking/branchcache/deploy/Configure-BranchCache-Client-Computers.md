@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Configure BranchCache Client Computers
 
->
-
 You can use the following topics to configure domain member and non-domain member client computers as BranchCache distributed cache or hosted cache mode clients.
 
 -   [Use Group Policy to Configure Domain Member Client Computers](../../branchcache/deploy/Use-Group-Policy-to-Configure-Domain-Member-Client-Computers.md)

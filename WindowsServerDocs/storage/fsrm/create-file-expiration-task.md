@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Create a File Expiration Task
 
->
-
 The following procedure guides you through the process of creating a file management task for expiring files. File expiration tasks are used to automatically move all files that match certain criteria to a specified expiration directory, where an administrator can then back those files up and delete them.
 
 When a file expiration task is run, a new directory is created within the expiration directory, grouped by the server name on which the task was run.

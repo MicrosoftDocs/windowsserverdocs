@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Software Restriction Policies Technical Overview
 
->
-
 This topic describes software restriction policies, when and how to use the feature, what changes have been implemented in past releases, and provides links to additional resources to help you create and deploy software restriction policies beginning with Windows Server 2008 and Windows Vista.
 
 ## Introduction

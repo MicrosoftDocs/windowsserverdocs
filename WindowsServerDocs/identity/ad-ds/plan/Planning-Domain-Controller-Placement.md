@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Planning Domain Controller Placement
 
->
-
 After you have gathered all of the network information that will be used to design your site topology, plan where you want to place domain controllers, including forest root domain controllers, regional domain controllers, operations master role holders, and global catalog servers.
 
 In  Windows Server 2008 , you can also take advantage of read-only domain controllers (RODCs). An RODC is a new type of domain controller that hosts read-only partitions of the Active Directory database. Except for account passwords, an RODC holds all the Active Directory objects and attributes that a writable domain controller holds. However, changes can't be made to the database that is stored on the RODC. Changes must be made on a writable domain controller and then replicated back to the RODC.

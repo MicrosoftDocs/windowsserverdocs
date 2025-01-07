@@ -11,8 +11,6 @@ ms.topic: article
 
 # AD DS Installation and Removal Wizard Page Descriptions
 
->
-
 This topic provides descriptions for the controls on the following wizard pages that comprise the AD DS server role installation and removal in Server Manager.
 
 -   [Deployment Configuration](#BKMK_DepConfigPage)

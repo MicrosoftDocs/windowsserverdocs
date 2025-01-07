@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # QoS Policy Error and Event Messages
 
->
-
 Following are the error and event messages that are associated with QoS Policy.
 
 ## Informational Messages

@@ -10,8 +10,6 @@ ms.date: 12/08/2020
 ---
 # Network Policy Server Management with Administration Tools
 
->
-
 You can use this topic to learn about the tools that you can use to manage your NPSs.
 
 After you install NPS, you can administer NPSs:

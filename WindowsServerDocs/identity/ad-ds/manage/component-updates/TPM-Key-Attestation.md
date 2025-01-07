@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # TPM Key Attestation
 
->
-
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
 > [!NOTE]

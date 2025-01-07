@@ -11,8 +11,6 @@ ms.date: 10/26/2021
 
 # Hardware Only (HO) features and technologies
 
->
-
 These hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature. Examples of these include Interrupt Moderation, Flow Control, and Receive-side IPv4 Checksum Offload. To learn more, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 >[!TIP]

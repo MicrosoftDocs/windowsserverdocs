@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic
 
->
-
 You can use the information in this topic to configure third party firewall products and to manually configure a client computer with firewall rules that allow BranchCache to run in distributed cache mode.
 
 > [!NOTE]

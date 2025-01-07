@@ -11,8 +11,6 @@ ms.date: 12/08/2020
 
 # Network Policy Server Best Practices
 
->
-
 You can use this topic to learn about best practices for deploying and managing Network Policy Server \(NPS\).
 
 The following sections provide best practices for different aspects of your NPS deployment.

@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Verify Configuration After NPS Changes
 
->
-
 You can use this topic to verify NPS configuration after an IP address or name change to the server.
 
 ## Verify Configuration After an NPS IP Address Change

@@ -10,8 +10,6 @@ ms.topic: article
 
 # Volume Shadow Copy Service (VSS)
 
->
-
 Backing up and restoring critical business data can be very complex due to the following issues:
 
   - The data usually needs to be backed up while the applications that produce the data are still running. This means that some of the data files might be open or they might be in an inconsistent state.

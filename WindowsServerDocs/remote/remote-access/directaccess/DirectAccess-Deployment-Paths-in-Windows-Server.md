@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # DirectAccess Deployment Paths in Windows Server
 
->
-
 This topic provides a listing of the documentation for the two main Remote Access deployment paths: **Basic** and **Advanced**.
 
 You can use the section below to gain an understanding of the differences between the DirectAccess Basic and Advanced deployment paths, and you can use the documentation links to locate the deployment guide that is best suited to your goals.

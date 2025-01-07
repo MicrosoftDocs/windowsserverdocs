@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Deploy Network Controller using Windows PowerShell
 
->
-
 This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more virtual machines (VMs) that are running Windows Server 2019 or 2016.
 
 >[!IMPORTANT]

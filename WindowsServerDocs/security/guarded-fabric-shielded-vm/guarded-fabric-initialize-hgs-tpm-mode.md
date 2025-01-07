@@ -10,8 +10,6 @@ ms.date: 08/29/2018
 
 # Initialize HGS using TPM-trusted attestation
 
->
-
 These steps vary depending on whether you are initializing HGS in a new forest or an existing bastion forest:
 
 1. [Initialize the HGS cluster in a new forest (default)](guarded-fabric-initialize-hgs-tpm-mode-default.md)

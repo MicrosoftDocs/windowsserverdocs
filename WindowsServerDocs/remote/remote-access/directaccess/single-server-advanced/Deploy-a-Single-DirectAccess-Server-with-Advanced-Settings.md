@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
 
->
-
 
 >[!IMPORTANT]
 >Microsoft highly recommends that you use Always On VPN instead of DirectAccess for new deployments. For more information, see [Always on VPN](../../overview-always-on-vpn.md).

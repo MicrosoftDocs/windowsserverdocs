@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Checklist: Deploy DFS Namespaces
 
->
-
 Distributed File System (DFS) Namespaces and DFS Replication can be used to publish documents, software, and line-of-business data to users throughout an organization. Although DFS Replication alone is sufficient to distribute data, you can use DFS Namespaces to configure the namespace so that a folder is hosted by multiple servers, each of which holds an updated copy of the folder. This increases data availability and distributes the client load across servers.
 
 When browsing a folder in the namespace, users are not aware that the folder is hosted by multiple servers. When a user opens the folder, the client computer is automatically referred to a server on its site. If no same-site servers are available, you can configure the namespace to refer the client to a server that has the lowest connection cost as defined in Active Directory Directory Services (AD DS).

@@ -11,8 +11,6 @@ ms.date: 10/27/2021
 
 # Network Shell (Netsh) Example Batch File
 
->
-
 You can use this topic to learn how to create a batch file that performs multiple tasks by using Netsh in Windows Server. In this example batch file, the **netsh wins** context is used.
 
 ## Example Batch File Overview

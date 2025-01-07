@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 2 Configure EDGE1
 
->
-
 The following procedure is performed on the DirectAccess server:
 
 ## To configure DirectAccess on EDGE1

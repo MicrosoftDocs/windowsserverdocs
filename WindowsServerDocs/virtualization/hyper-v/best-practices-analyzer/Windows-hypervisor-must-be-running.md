@@ -9,8 +9,6 @@ ms.date: 10/03/2016
 ---
 # Windows hypervisor must be running
 
->
-
 |Property|Details|
 |-|-|
 |**Operating System**|Windows Server 2016|

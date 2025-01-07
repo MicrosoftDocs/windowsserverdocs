@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Configure NPS UDP Port Information
 
->
-
 You can use the following procedure to configure the ports that Network Policy Server (NPS) uses for Remote Authentication Dial-In User Service \(RADIUS\) authentication and accounting traffic.
 
 By default, NPS listens for RADIUS traffic on ports 1812, 1813, 1645, and 1646 for both Internet Protocol version 6 \(IPv6\) and IPv4 for all installed network adapters.

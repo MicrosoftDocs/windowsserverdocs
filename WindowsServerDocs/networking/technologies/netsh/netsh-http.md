@@ -10,8 +10,6 @@ ms.date: 10/27/2021
 
 # Netsh http commands
 
->
-
 Use **netsh http** to query and configure HTTP.sys settings and parameters.
 
 >[!TIP]

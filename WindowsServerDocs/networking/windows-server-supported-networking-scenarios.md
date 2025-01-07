@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Windows Server supported networking scenarios
 
->
-
 This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of Windows Server 2016.
 >[!IMPORTANT]
 >For all production scenarios, use the latest signed hardware drivers from your original equipment manufacturer \(OEM\) or independent hardware vendor \(IHV\).

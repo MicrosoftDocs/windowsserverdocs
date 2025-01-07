@@ -10,8 +10,6 @@ ms.date: 09/09/2020
 ---
 # Remote Server Administration Tools
 
->
-
 This topic supports Remote Server Administration Tools for Windows 10.
 
 > [!IMPORTANT]

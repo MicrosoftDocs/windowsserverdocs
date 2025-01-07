@@ -9,8 +9,6 @@ ms.date: 10/27/2021
 
 # Packet Monitoring Extension in Windows Admin Center
 
->
-
 The Packet Monitoring extension allows you to operate and consume Packet Monitor through Windows Admin Center. The extension helps you diagnose your network by capturing and displaying network traffic through the networking stack in a log that is easy to follow and manipulate.
 
 ## What is Packet Monitor (Pktmon)?

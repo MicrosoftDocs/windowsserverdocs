@@ -11,8 +11,6 @@ ms.topic: article
 
 # Planning Operations Master Role Placement
 
->
-
 Active Directory Domain Services (AD DS) supports multimaster replication of directory data, which means any domain controller can accept directory changes and replicate the changes to all other domain controllers. However, certain changes, such as schema modifications, are impractical to perform in a multimaster fashion. For this reason certain domain controllers, known as operations masters, hold roles responsible for accepting requests for certain specific changes.
 
 > [!NOTE]

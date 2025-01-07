@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Deploy BranchCache
 
->
-
 The following sections provide information about deploying BranchCache in distributed and hosted cache modes.
 
 -   [Install and Configure Content Servers](Install-and-Configure-Content-Servers.md)

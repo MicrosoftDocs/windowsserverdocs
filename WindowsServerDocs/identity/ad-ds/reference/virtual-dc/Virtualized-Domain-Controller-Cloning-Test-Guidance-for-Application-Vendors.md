@@ -11,8 +11,6 @@ ms.topic: article
 
 # Virtualized Domain Controller Cloning Test Guidance for Application Vendors
 
->
-
 This topic explains what application vendors should consider to help ensure their application continues to work as expected after the virtualized domain controller (DC) cloning process completes. It covers those aspects of the cloning process that interest application vendors and scenarios that may warrant additional testing. Application vendors who have validated that their application works on virtualized domain controllers that have been cloned are encouraged to list the name of the application in the Community Content at the bottom of this topic, along with a link to your organization's web site where users can learn more about the validation.
 
 ## Overview of virtualized DC cloning

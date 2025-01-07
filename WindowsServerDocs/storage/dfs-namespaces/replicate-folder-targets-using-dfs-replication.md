@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Replicate folder targets using DFS Replication
 
->
-
 You can use DFS Replication to keep the contents of folder targets in sync so that users see the same files regardless of which folder target the client computer is referred to.
 
 ## To replicate folder targets using DFS Replication

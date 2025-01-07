@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Create an Automatic Classification Rule
 
->
-
 The following procedure guides you through the process of creating a classification rule. Each rule sets the value for a single property. By default, a rule is run only once and ignores files that already have a property value assigned. However, you can configure a rule to evaluate files regardless of whether a value is already assigned to the property.
 
 ## To create a Classification Rule

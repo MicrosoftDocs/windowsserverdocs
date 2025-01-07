@@ -10,8 +10,6 @@ ms.date: 3/17/2021
 ---
 # Passwords technical overview
 
->
-
 This topic for the IT professional explains how Windows implements passwords in versions of Windows beginning with Windows Server 2012 and Windows 8.1. It also discusses strong passwords, passphrases, and password policies.
 
 ## How passwords are stored in Windows

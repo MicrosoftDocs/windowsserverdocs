@@ -10,8 +10,6 @@ ms.date: 02/18/2022
 ---
 # Data Deduplication interoperability
 
->
-
 ## Supported
 
 ### ReFS

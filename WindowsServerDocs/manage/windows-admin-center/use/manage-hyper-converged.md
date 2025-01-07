@@ -8,8 +8,6 @@ ms.date: 03/15/2023
 ---
 # Manage Azure Local
 
->
-
 ## What is Hyper-Converged Infrastructure
 
 Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview), [Software Defined Networking](/azure/azure-local/concepts/software-defined-networking) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).

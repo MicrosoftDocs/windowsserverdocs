@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # DNS Resource Record Management
 
->
-
 This topic provides information about managing DNS resource records by using IPAM.
 
 > [!NOTE]

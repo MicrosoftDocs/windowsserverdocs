@@ -11,8 +11,6 @@ ms.topic: article
 
 # Virtualized Domain Controller Technical Reference Appendix
 
->
-
 This topic covers:
 
 -   [Terminology](#BKMK_Terms)

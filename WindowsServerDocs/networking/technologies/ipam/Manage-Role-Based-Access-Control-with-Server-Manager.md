@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Manage Role Based Access Control with Server Manager
 
->
-
 You can use the following topics to manage role based access control by using Server Manager, which has a graphical user interface.
 
 -   [Create a User Role for Access Control](../../technologies/ipam/Create-a-User-Role-for-Access-Control.md)

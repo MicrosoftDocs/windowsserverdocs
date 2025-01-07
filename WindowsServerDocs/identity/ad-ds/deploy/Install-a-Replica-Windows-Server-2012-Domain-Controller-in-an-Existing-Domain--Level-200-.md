@@ -11,8 +11,6 @@ ms.topic: article
 
 # Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)
 
->
-
 This topic covers the steps necessary to upgrade an existing forest or domain to Windows Server 2012, using either Server Manager or Windows PowerShell. It covers how to add domain controllers that run Windows Server 2012 to an existing domain.
 
 -   [Upgrade and Replica Workflow](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_Workflow)

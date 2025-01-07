@@ -10,8 +10,6 @@ ms.date: 10/25/2024
 
 # Manage SMB dialects in Windows and Windows Server 2025
 
->
-
 Administrators have the ability to manage SMB2 and SMB3 dialects in Windows Server and Windows client. In this article, learn how to configure a minimum and maximum SMB dialect for the SMB server and client using Group Policy and Windows PowerShell.
 
 By default SMB Server and client automatically negotiates the highest matched dialect from SMB 2.0.2 to 3.1.1. Beginning with Windows 11, version 24H2, and [Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025), you can specify the SMB protocols used, blocking older, less secure, versions from connecting to the server. For example, you can specify connection to only use SMB 3.1.1, the most secure dialect of the protocol.

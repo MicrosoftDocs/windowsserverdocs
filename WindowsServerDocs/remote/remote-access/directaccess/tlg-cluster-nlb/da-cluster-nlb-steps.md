@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Steps for Configuring the DirectAccess Cluster-NLB Test Lab
 
->
-
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access servers and clients, and test DirectAccess connectivity from the Internet and Homenet subnets.
 
 In this test lab guide you will build a Network Load Balancing (NLB) enabled Remote Access cluster by performing the following steps:

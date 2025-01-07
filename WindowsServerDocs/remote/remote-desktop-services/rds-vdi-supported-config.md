@@ -11,8 +11,6 @@ manager: dongill
 
 # Supported Windows security configurations for Remote Desktop Services VDI
 
->
-
 Windows and Windows Server have new layers of protection built into the operating system to:
 
 - Safeguard against security breaches

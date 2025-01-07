@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Create a DNS Zone
 
->
-
 You can use this topic to create a DNS zone by using the IPAM client console.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.

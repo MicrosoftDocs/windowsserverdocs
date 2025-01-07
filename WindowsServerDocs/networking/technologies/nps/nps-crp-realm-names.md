@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Realm Names
 
->
-
 You can use this topic for an overview of using realm names in Network Policy Server connection request processing.
 
 The User-Name RADIUS attribute is a character string that typically contains a user account location and a user account name. The user account location is also called the realm or realm name, and is synonymous with the concept of domain, including DNS domains, Active Directory® domains, and Windows NT 4.0 domains. For example, if a user account is located in the user accounts database for a domain named example.com, then example.com is the realm name.

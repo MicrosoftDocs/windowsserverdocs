@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Wireless Access Deployment
 
->
-
 Follow these steps to deploy wireless access:
 
 - [Deploy and Configure Wireless APs](#bkmk_aps)

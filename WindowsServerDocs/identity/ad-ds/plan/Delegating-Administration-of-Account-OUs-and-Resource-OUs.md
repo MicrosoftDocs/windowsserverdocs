@@ -11,8 +11,6 @@ ms.topic: article
 
 # Delegating Administration of Account OUs and Resource OUs
 
->
-
 Account organizational units (OUs) contain user, group, and computer objects. Resource OUs contain resources and the accounts that are responsible for managing those resources. The forest owner is responsible for creating an OU structure to manage these objects and resources and for delegating control of that structure to the OU owner.
 
 ## Delegating administration of account OUs

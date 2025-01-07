@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Create a Remote Desktop Services collection for desktops and apps to run
 
->
-
 Use the following steps to create a Remote Desktop Services session collection. A session collection holds the apps and desktops you want to make available to users. After you create the collection, publish it so users can access it.
 
 Before you create a collection, you need to decide what kind of collection you need: pooled desktop sessions or personal desktop sessions.

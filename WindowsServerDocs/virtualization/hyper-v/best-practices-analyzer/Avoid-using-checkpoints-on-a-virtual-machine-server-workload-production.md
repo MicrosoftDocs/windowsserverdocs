@@ -9,8 +9,6 @@ ms.date: 8/16/2016
 ---
 # Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
 
->
-
 
 
 *For more information about best practices and scans, see* [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
