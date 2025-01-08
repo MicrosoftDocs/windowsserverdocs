@@ -10,8 +10,6 @@ ms.date: 11/10/2023
 
 # Upgrading Failover Clusters on the same hardware
 
-
-
 A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers, also called *nodes*, are connected by physical cables and by software. If one of the cluster nodes fails, a process called *failover* happens where another node begins to provide service. As a result, users experience minimum service disruptions during outages.
 
 It's important to keep your failover clusters as up to date as possible, particularly when your organization upgrades to a later version of Windows Server. However, upgrading Windows Server doesn't require upgrading your hardware. This article tells you how to upgrade your existing cluster nodes without changing your hardware.
@@ -51,7 +49,7 @@ Before you start upgrading, you should do the following things:
 
 - Update all drivers and firmware to the certified levels required for the Windows Server version you're upgrading to.
 
-- Install [the Copy Cluster Roles wizard](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn530781(v=ws.11)), which requires shared storage to work as intended.
+- Install [the Copy Cluster Roles wizard](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn530781(v=ws.11)), which requires shared storage to work as intended.
 
 You should also keep the following considerations and limitations in mind when planning your upgrade:
 
@@ -171,7 +169,6 @@ To upgrade the second node:
    Remove-Cluster <OldClusterName>
    Clear-ClusterNode <OldClusterNodeName>
    ```
-   <!----Is this syntax correct?--->
 
 1. Next, run the following command to rename the cluster group:
 
