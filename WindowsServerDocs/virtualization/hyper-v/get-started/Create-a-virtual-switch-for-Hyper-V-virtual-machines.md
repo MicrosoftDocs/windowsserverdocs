@@ -1,26 +1,24 @@
 ---
 title: Create and configure a virtual switch with Hyper-V
-description: Learn how to create and configure a virtual switch for use by the Hyper-V host and guest virtual machines. You can use Hyper-V Manager or PowerShell to create and configure your virtual switch.
+description: Learn how to create and configure a virtual switch for use by the Hyper-V host and guest virtual machines.
 ms.topic: how-to
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 ms.author: roharwoo
 author: robinharwood
-ms.date: 12/02/2022
+ms.date: 10/25/2024
 ---
 
 # Create and configure a virtual switch with Hyper-V
 
-> Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016,
+> 
 > Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article shows you how to create and configure your virtual switch using Hyper-V Manager or
 PowerShell. A virtual switch allows virtual machines created on Hyper-V hosts to communicate
-with other computers. When you first install the Hyper-V role on Windows Server, you can optionally
-create a virtual switch at the same time. To learn more about virtual switches, see
+with other computers. When you first install the Hyper-V role on Windows Server, you can optionally create a virtual switch at the same time. To learn more about virtual switches, see
 [Hyper-V Virtual Switch](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
-For more information about how you can set up your networking infrastructure with Windows Server,
-review the [Networking](../../../networking/index.yml) documentation.
+For more information about how you can set up your networking infrastructure with Windows Server, review the [Networking](../../../networking/index.yml) documentation.
 
 ## Prerequisites
 
@@ -92,7 +90,7 @@ command.
 
 For more advanced PowerShell scripts that cover improved or new virtual switch features in
 Windows Server, see
-[Remote Direct Memory Access and Switch Embedded Teaming](/azure-stack/hci/concepts/host-network-requirements).
+[Remote Direct Memory Access and Switch Embedded Teaming](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization).
 
 ---
 
@@ -206,10 +204,9 @@ command. Learn more about
 
 ## Next step
 
-Now you've created and configured your virtual switch, here are other articles to help you continue
-with Hyper-V.
+Now you've created and configured your virtual switch, here are other articles to help you continue with Hyper-V.
 
-- Learn about [Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements#switch-embedded-teaming-set).
+- Learn about [Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements#switch-embedded-teaming-set?context=/windows-server/context/windows-server-virtualization).
 - Learn how to [create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md).
 - Learn about other configuration options in the
   [Set-VMSwitch](/powershell/module/hyper-v/set-vmswitch) and

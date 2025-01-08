@@ -1,13 +1,13 @@
 ---
-title: Remote Desktop IP virtualization in Windows Server 2019 and Windows Server 2022
-description: How to virtualize a Remote Desktop IP in Windows Server 2019 and Windows Server 2022.
+title: Remote Desktop IP virtualization in Windows Server
+description: How to use IP address virtualization for Winsock applications using Remote Desktop in Windows Server 2019 and later.
 ms.author: helohr
-ms.date: 01/18/2024
+ms.date: 7/3/2024
 ms.topic: article
 author: Heidilohr
 manager: femila
 ---
-# Remote Desktop IP Virtualization in Windows Server 2019 and Windows Server 2022
+# Remote Desktop IP Virtualization in Windows Server
 
 As of Windows Server 2008 R2, Remote Desktop session hosts support per-session and per-program Remote Desktop IP Virtualization for Winsock applications. Remote Desktop assigns individual IP addresses to user sessions to avoid application compatibility issues that can happen when all Remote Desktop users in the same location share the same IP address. This article gives instructions for how to virtualize IP addresses for your organization's Remote Desktop users.
 
@@ -18,7 +18,7 @@ As of Windows Server 2008 R2, Remote Desktop session hosts support per-session a
 
 In order to use IP Virtualization, your system must meet the following requirements:
 
-- Your deployment must run Windows Server 2019 or 2022.
+- Your deployment must run Windows Server 2019 or later.
 
 - You must assign the RD Session Host server role to the machine you use to make the changes.
 

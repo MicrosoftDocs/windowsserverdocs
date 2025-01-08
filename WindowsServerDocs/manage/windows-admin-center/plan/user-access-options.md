@@ -2,14 +2,12 @@
 title: User access options with Windows Admin Center
 description: User access options and identity providers with Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: IngridAtMicrosoft
-ms.author: wscontent
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/07/2019
 ---
 
 # User access options with Windows Admin Center
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 When deployed on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
 

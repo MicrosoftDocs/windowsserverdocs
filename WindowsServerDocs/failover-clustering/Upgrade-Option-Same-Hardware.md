@@ -3,14 +3,14 @@ title: Upgrading Failover Clusters Using the Same Hardware
 description: This article describes upgrading a 2-node Failover Cluster using the same hardware
 manager: femila
 ms.topic: article
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 11/10/2023
 ---
 
 # Upgrading Failover Clusters on the same hardware
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers, also called *nodes*, are connected by physical cables and by software. If one of the cluster nodes fails, a process called *failover* happens where another node begins to provide service. As a result, users experience minimum service disruptions during outages.
 

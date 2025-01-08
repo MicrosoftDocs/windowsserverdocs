@@ -97,7 +97,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Issuance Authorization Rules**
 
     -   **Delegation Authorization Rules**
-![Sceenshot thats shows the Add Rule button.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+![Screenshot thats shows the Add Rule button.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Pass Through or Filter an Incoming Claim** from the list, and then click **Next**.
 ![Screenshot that shows the the Choose Rule Type screen.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)

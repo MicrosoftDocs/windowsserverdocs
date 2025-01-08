@@ -3,18 +3,18 @@ title: Server Manager
 description: Learn about the management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (rdP) connections to each server.
 ms.topic: conceptual
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Server Manager
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (rdP) connections to each server. Although Server Manager is available in  Windows Server 2008 R2  and  Windows Server 2008, Server Manager was updated in  Windows Server 2012  to support remote, multi-server management, and help increase the number of servers an administrator can manage.
 
-In our tests, Server Manager in Windows Server 2016,  Windows Server 2012 R2, and  Windows Server 2012  can be used to manage up to 100 servers, depending on the workloads that the servers are running. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](https://go.microsoft.com/fwlink/p/?LinkId=239437).
+In our tests, Server Manager in Windows Server 2016,  Windows Server 2012 R2, and  Windows Server 2012  can be used to manage up to 100 servers, depending on the workloads that the servers are running. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](https://www.microsoft.com/system-center).
 
 This topic and its subtopics provide information about how to use features in the Server Manager console. This topic contains the following sections.
 
@@ -68,7 +68,7 @@ The Server Manager console is included with [Remote Server Administration Tools]
 
 3.  if neither the **Administrative Tools** nor the **Server Manager** tiles are displayed on the **start** screen after installing Remote Server Administration Tools, and searching for Server Manager on the **start** screen does not display results, verify that the **Show administrative tools** setting is turned on. To view this setting, hover the mouse cursor over the upper right corner of the **start** screen, and then click **Settings**. If **Show administrative tools** is turned off, turn the setting on to display tools that you have installed as part of Remote Server Administration Tools.
 
-for more information about running Remote Server Administration Tools for Windows 10 to manage remote servers, see [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=221055) on the TechNet Wiki.
+for more information about running Remote Server Administration Tools for Windows 10 to manage remote servers, see [Remote Server Administration Tools](/troubleshoot/windows-server/system-management-components/remote-server-administration-tools) on the TechNet Wiki.
 
 #### Configure remote management on servers that you want to manage
 

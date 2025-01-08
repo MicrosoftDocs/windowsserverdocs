@@ -4,15 +4,15 @@ metadata:
   description: Frequently asked questions about the Remote Desktop clients
   ms.topic: faq
   ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
-  author: lizap
+  author: robinharwood
   manager: dongill
-  ms.author: elizapo
+  ms.author: roharwoo
   ms.date: 02/07/2022
   ms.localizationpriority: medium
   ms.service: windows-server
 title: Frequently asked questions about the Remote Desktop clients
 summary: |
-  >Applies to: Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016.
+  >
   
   Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients.
   
@@ -67,7 +67,7 @@ sections:
       - question: |
           Why can't I connect using Remote Desktop?
         answer: |
-          Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don't work, you can find more help on the [Microsoft Community website](https://go.microsoft.com/fwlink/p/?LinkId=242079).
+          Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don't work, you can find more help on the [Microsoft Community website](https://answers.microsoft.com).
           
           - **The remote PC can't be found.** Make sure you have the right PC name, and then check to see if you entered that name correctly. If you still can't connect, try using the IP address of the remote PC instead of the PC name.
           - **There's a problem with the network.** Make sure you have internet connection.

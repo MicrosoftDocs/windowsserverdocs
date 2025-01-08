@@ -3,13 +3,11 @@ title: Beginning your General Data Protection Regulation (GDPR) journey for Wind
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
 ms.topic: article
 ms.date: 09/25/2017
-ms.author: wscontent
+ms.author: roharwoo
 author: nirb-ms
 ---
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article provides info about the GDPR, including what it is, and the products Microsoft provides to help you to become compliant.
 
@@ -20,7 +18,7 @@ The General Data Protection Regulation, or GDPR, is fundamentally about protecti
 
 Microsoft and our customers are now on a journey to achieve the privacy goals of the GDPR. At Microsoft, we believe privacy is a fundamental right, and we believe that the GDPR is an important step forward for clarifying and enabling individual privacy rights. But we also recognize that the GDPR will require significant changes by organizations all over the world.
 
-We have outlined our commitment to the GDPR and how we are supporting our customers within the [Get GDPR compliant with the Microsoft Cloud](https://blogs.microsoft.com/on-the-issues/2017/02/15/get-gdpr-compliant-with-the-microsoft-cloud/#hv52B68OZTwhUj2c.99) blog post by our Chief Privacy Officer [Brendon Lynch](https://blogs.microsoft.com/on-the-issues/author/brendonlynch/) and the [Earning your trust with contractual commitments to the General Data Protection Regulation](https://blogs.microsoft.com/on-the-issues/2017/04/17/earning-trust-contractual-commitments-general-data-protection-regulation/#6QbqoGWXCLavGM63.99)” blog post by [Rich Sauer](https://blogs.microsoft.com/on-the-issues/author/rsauer/) - Microsoft Corporate Vice President & Deputy General Counsel.
+We have outlined our commitment to the GDPR and how we are supporting our customers within the [Get GDPR compliant with the Microsoft Cloud](https://blogs.microsoft.com/on-the-issues/2017/02/15/get-gdpr-compliant-with-the-microsoft-cloud/#hv52B68OZTwhUj2c.99) blog post by our Chief Privacy Officer Brendon Lynch and the [Earning your trust with contractual commitments to the General Data Protection Regulation](https://blogs.microsoft.com/on-the-issues/2017/04/17/earning-trust-contractual-commitments-general-data-protection-regulation/#6QbqoGWXCLavGM63.99)” blog post by Rich Sauer - Microsoft Corporate Vice President & Deputy General Counsel.
 
 Although your journey to GDPR-compliance may seem challenging, we're here to help you. For specific information about the GDPR, our commitments and how to begin your journey, please visit the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trustcenter/privacy/gdpr).
 

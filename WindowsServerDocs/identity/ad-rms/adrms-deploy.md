@@ -3,7 +3,7 @@ description: "Learn more about: Upgrading AD RMS to Windows Server 2016"
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Upgrading AD RMS to Windows Server 2016
 author: msmbaldwin
-ms.author: esaggese
+ms.author: roharwoo
 ms.date: 05/30/2019
 ms.topic: article
 ---
@@ -223,7 +223,7 @@ This guide doesn't cover the steps required to alter the load balancing mechanis
 
 #### Adding a 2016 AD RMS Server
 
-If your AD RMS cluster is using a Hardware Security Module instead of a Centrally Managed key for its Server Licensor Certificate, you will need to install the software and other HSM artifacts (e.g. key and configuragtion files) on the server before installing AD RMS. You will also need to connect the HSM to the server, either physically or through the relevant network configurations. Follow your HSM guidance for these steps.
+If your AD RMS cluster is using a Hardware Security Module instead of a Centrally Managed key for its Server Licensor Certificate, you will need to install the software and other HSM artifacts (e.g. key and configuration files) on the server before installing AD RMS. You will also need to connect the HSM to the server, either physically or through the relevant network configurations. Follow your HSM guidance for these steps.
 
 **To add a 2016 AD RMS Server**
 

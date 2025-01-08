@@ -1,15 +1,13 @@
 ---
 title: SMB security enhancements
-description: Learn about SMB security enhancements, such as encryption and the new signing algorithm, in Windows Server and Azure Stack HCI, version 21H2.
+description: Learn about SMB security enhancements, such as encryption and the new signing algorithm, in Windows Server and Azure Local.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/18/2023
 ---
 
 # SMB security enhancements
-
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI version 21H2, Windows 11, Windows 10
 
 This article explains the SMB security enhancements in Windows Server and Windows.
 

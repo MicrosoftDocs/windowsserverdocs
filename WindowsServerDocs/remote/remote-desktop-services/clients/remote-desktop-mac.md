@@ -6,11 +6,9 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/03/2022
+ms.date: 7/3/2024
 ---
 # Get started with the macOS client
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows 11, Windows 10, Windows Server 2016
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
 
@@ -32,9 +30,12 @@ Follow these steps to get started with Remote Desktop on your Mac:
 
 ## What about the Mac beta client?
 
-We're testing new features on our preview channel on AppCenter. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://aka.ms/rdmacbeta) and select **Download**. You don't need to create an account or sign into AppCenter to download the beta client.
+We're testing new features on our preview channel on AppCenter. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://aka.ms/rdmacbeta) and select **Download**. You don't need to create an account or sign into AppCenter to download the beta client. The beta client shouldn't be used in production.
 
 If you already have the client, you can check for updates to ensure you have the latest version. In the beta client, select **Microsoft Remote Desktop Beta** at the top, and then select **Check for updates**.
+
+> [!IMPORTANT]
+> The Remote Desktop app is changing to Windows App. To ensure you can validate the upcoming Windows App update before it's released into the store, the Windows App preview is now available in the Remote Desktop Beta channels where you can test the experience of updating from Remote Desktop to Windows App. To learn more about Windows App, see [Get started with Windows App to connect to devices and apps](/windows-app/get-started-connect-devices-desktops-apps).
 
 ## Add a workspace
 

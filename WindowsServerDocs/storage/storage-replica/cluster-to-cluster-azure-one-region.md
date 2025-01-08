@@ -2,14 +2,12 @@
 title: Cluster-to-cluster storage replication within the same Azure region
 description: Cluster-to-cluster storage replication within the same Azure region
 author: arduppal
-ms.author: arduppal
+ms.author: roharwoo
 ms.date: 04/26/2019
 ms.topic: article
 manager: mchad
 ---
 # Cluster to Cluster Storage Replication Within the same Azure Region
-
->Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can configure cluster to cluster storage replication within the same Azure Region. In the examples below, we use a two-node cluster, but cluster to cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
 

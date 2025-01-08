@@ -3,15 +3,13 @@ ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: AD DS Installation and Removal Wizard Page Descriptions
 description: Provides descriptions for the controls on the following wizard pages that comprise the AD DS server role installation and removal in Server Manager.
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
 
 # AD DS Installation and Removal Wizard Page Descriptions
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides descriptions for the controls on the following wizard pages that comprise the AD DS server role installation and removal in Server Manager.
 

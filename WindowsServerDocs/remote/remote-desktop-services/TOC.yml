@@ -1,19 +1,18 @@
 - name: Remote Desktop Services
-  href: welcome-to-rds.md
+  href: index.yml
   items:
   - name: Get started
-    href: rds-get-started.md
     items:
-    - name: What's new in RDS?
-      href: rds-whats-new.md
+    - name: Remote Desktop Services overview
+      href: remote-desktop-services-overview.md
+    - name: Create virtual machines for Remote Desktop
+      href: Create-virtual-machines-for-Remote-Desktop.md
     - name: Supported configurations for RDS
       href: rds-supported-config.md
     - name: Supported security configurations for Windows 10 VDI
       href: rds-vdi-supported-config.md
     - name: Planning poster for Remote Desktop Services
       href: rds-poster.md
-    - name: Remote Desktop Services hosting partners
-      href: rds-hosting-partners.md
   - name: Plan and design
     href: rds-plan-and-design.md
     items:
@@ -55,16 +54,22 @@
         href: rds-roles.md
       - name: Azure services and considerations for desktop hosting
         href: Azure-services-and-considerations-for-desktop-hosting.md
+      - name: Understanding the desktop hosting environment
+        href: Understanding-the-desktop-hosting-environment.md    
+      - name: Tenant on-premises components
+        href: Tenant-on-premises-components.md  
   - name: Build and deploy
     href: rds-build-and-deploy.md
     items:
     - name: Deploy a proof-of-concept RDS environment with ARM and Azure Marketplace
       href: rds-in-azure.md
-    - name: Migrate your Remote Desktop Services deployments to Windows Server 2016
+    - name: Migrate your Remote Desktop Services deployments
       href: migrate-rds-role-services.md
     - name: Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
       href: migrate-rds-cals.md
-    - name: Upgrade your Remote Desktop Services deployments to Windows Server 2016
+    - name: Use certificates in Remote Desktop Services
+      href: remote-desktop-services-certificates.md
+    - name: Upgrade your Remote Desktop Services deployments
       href: upgrade-to-rds.md
       items:
       - name: Upgrade Remote Desktop Session Host servers
@@ -90,12 +95,16 @@
       items:
       - name: Activate the license server
         href: rds-activate-license-server.md
+      - name: Reactivate or Deactivate the license server
+        href: remote-desktop-services-reactivate-deactivate-license-server.md
       - name: Install RDS CALs on the license server
         href: rds-install-cals.md
       - name: License RDS session hosts
         href: rds-license-session-hosts.md
       - name: Track the CALs used in your deployment
         href: rds-track-cals.md
+      - name: Use multiple license servers
+        href: use-multiple-remote-desktop-license-servers.md
     - name: Integrate Azure services
       href: rds-integrate-with-azure.md
       items:
@@ -138,20 +147,14 @@
       href: rds-manage-personal-collection.md
     - name: Remote Desktop IP Virtualization
       href: internet-protocol-virtualization.md
-    - name: Recommended configuration for VDI desktops
-      href: rds-vdi-recommendations.md
-    - name: Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
-      href: rds-vdi-recommendations-2004.md
-    - name: Optimizing Windows 10, version 1909, for a Virtual Desktop Infrastructure (VDI) role
-      href: rds_vdi-recommendations-1909.md
-    - name: Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
-      href: rds-vdi-recommendations-1803.md
     - name: Manage users in your RDS collection
       href: rds-user-management.md
     - name: Customize the RDS title "Work Resources" using PowerShell on Windows Server
       href: rds-work-resources.md
     - name: Diagnose app performance issues with performance counters
       href: rds-rdsh-performance-counters.md
+    - name: Optimizing Windows configuration for VDI desktops
+      href: remote-desktop-services-vdi-optimize-configuration.md 
   - name: Access your Remote Desktop resources
     items:
     - name: Available Remote Desktop clients
@@ -204,18 +207,18 @@
         href: clients/change-listening-port.md
     - name: Advanced information
       items:
-      - name: 'Compare the clients: features'
-        href: clients/remote-desktop-features.md
-      - name: 'Compare the clients: redirections'
-        href: clients/remote-desktop-app-compare.md
+      - name: Compare Remote Desktop app features
+        href: /azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services
       - name: Supported RDP properties
-        href: clients/rdp-files.md
+        href: /azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services
       - name: Remote Desktop URI scheme
         href: clients/remote-desktop-uri.md
       - name: Remote Desktop client FAQ
         href: clients/remote-desktop-client-faq.yml
       - name: Privacy settings for managed apps and desktops
         href: clients/remote-privacy-settings.md
+      - name: Remote Desktop Web Access FAQ
+        href: remote-desktop-web-access-faq.yml 
     - name: Known issues
       items:
       - name: Clients can't connect and see "No licenses available" error

@@ -3,13 +3,11 @@ title: Generation 2 virtual machine security settings for Hyper-V
 description: Describes the security settings available in Hyper-V Manager for generation 2 virtual machines
 ms.topic: article
 ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/04/2016
 ---
 # Generation 2 virtual machine security settings for Hyper-V
-
->Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Use the virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine. You can protect virtual machines from inspection, theft, and tampering from both malware that may run on the host, and datacenter administrators. The level of security you get depends on the host hardware you run, the virtual machine generation, and whether you set up the service, called the Host Guardian Service, that authorizes hosts to start shielded virtual machines.
 

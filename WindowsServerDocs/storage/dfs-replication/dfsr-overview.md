@@ -2,9 +2,9 @@
 title: DFS Replication overview
 description: Learn how to use the Distributed File System (DFS) Replication role service in Windows Server to replicate folders across multiple servers and sites.
 ms.date: 03/24/2023
-author: JasonGerend
+author: robinharwood
 manager: elizapo
-ms.author: jgerend
+ms.author: roharwoo
 ms.topic: conceptual
 ---
 

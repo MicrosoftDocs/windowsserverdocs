@@ -1,7 +1,7 @@
 ---
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 description: Learn more about upgrading domain controllers to Windows Server 2012 R2 and Windows Server 2012
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 ms.date: 05/16/2023
 ms.topic: article
@@ -9,8 +9,6 @@ ms.custom: inhenke
 ---
 
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.
 

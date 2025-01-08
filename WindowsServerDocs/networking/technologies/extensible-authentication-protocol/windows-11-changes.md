@@ -2,14 +2,14 @@
 title: EAP - What's changed in Windows 11
 description: This article presents information about the changes in Windows 11 for Extensible Authentication Protocol (EAP) settings.
 author: samyun
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: conceptual
-ms.date: 06/15/2023
+ms.date: 06/27/2024
 ---
 
 # EAP - What's changed in Windows 11
 
-> Applies to: Windows 11, Windows 10
+> 
 
 Windows 11 supports WPA3-Enterprise, a Wi-Fi security standard that defines a set of requirements around server certificate validation for EAP authentication. Windows 11 also supports TLS 1.3 by default. This article details the changes in EAP behavior in Windows 11 due to these features.
 
@@ -24,7 +24,7 @@ Windows will trust the server certificate if one of the following conditions is 
   > If the user is connecting without a preconfigured profile or if user prompts for server validation are enabled in the profile, the thumbprint will automatically be added to the profile if the user accepts the server through the UI prompt.
 - All of the following conditions are met:
   1. The server certificate chain is trusted by the machine or user.
-      - This trust is based on the root certificate being present in the machine or user trusted root store, depending on the OneX [authMode](/windows/win32/nativewifi/onexschema-authmode-onex-element).
+      - This trust is based on the root certificate being present in the machine or user trusted root store, depending on the OneX [authMode](/windows/win32/nativewifi/onexschema-onex-element).
   1. The trusted root certificate thumbprint has been added to the profile.
   1. If server name validation is enabled (recommended), the name matches what is specified in the profile.
       - For more information, see [Server validation](network-access.md#server-validation) for more information about configuring server name validation in the profile.
@@ -36,6 +36,13 @@ In Windows 10, under certain circumstances, PEAP and EAP-TLS authentications cou
 In most cases, specifying the trusted root certificate thumbprint in the profile is enough to address the issue, assuming the root certificate is already present in the trusted root store.
 
 Another thing to note is that server name matching is case sensitive in Windows 11 version 21H2 (build number 22000). The server name matching was adjusted back to be case insensitive in Windows 11 version 22H2 (build number 22621). If you're using server name validation, ensure that the name specified in the profile matches the server name exactly or upgrade to Windows 11 version 22H2 or later.
+
+### Wildcard certificates
+
+In Windows 11, Windows will no longer immediately reject server certificates that contain a wildcard (`*`) in the certificate Common Name (CN). However, it's recommended that DNS name in the Subject Alternate Name (SubjectAltName/SAN) extension field is used, as Windows will ignore the CN components when checking for a DNS match if the SAN contains a DNS name choice. The SubjectAltName DNS name supports a wildcard in Windows 11, as it has on prior versions of Windows.
+  > [!NOTE]
+  > All of the conditions described above for trusting the server certificate still apply for wildcard certificates.
+
 
 ## WPA3-Enterprise Trust Override Disable (TOD) policies
 

@@ -2,22 +2,22 @@
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a cloud witness for a failover cluster in Windows Server
 manager: lizross
-ms.author: jgerend
+ms.author: roharwoo
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 ms.date: 10/10/2023
 description: How to use Microsoft Azure to host the witness for a Windows Server failover cluster in the cloud - also known as how to deploy a Cloud Witness.
 ---
 
 # Deploy Cloud Witness for a failover cluster
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Cloud Witness is a type of failover cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This article contains an overview of the Cloud Witness feature, which scenarios it supports, and instructions for how to configure a cloud witness for a failover cluster. For more information, see [Set up a cluster witness](/azure-stack/hci/manage/witness).
+
+Cloud Witness is a type of failover cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This article contains an overview of the Cloud Witness feature, which scenarios it supports, and instructions for how to configure a cloud witness for a failover cluster. For more information, see [Set up a cluster witness](/azure/azure-local/manage/witness?context=/windows-server/context/windows-server-failover-clustering).
 
 ## What is Cloud Witness?
 
-Before we begin, you should refresh your memory about what cluster quorums and quorum witnesses are by reading [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum).
+Before we begin, you should refresh your memory about what cluster quorums and quorum witnesses are by reading [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering).
 
 Now, let's start by looking at an example configuration of a multi-site stretched failover cluster quorum for Windows Server, shown in the following diagram.
 
@@ -124,7 +124,7 @@ To use the Quorum Configuration setup workflow to configure Cloud Witness:
 
 To configure Cloud Witness using PowerShell:
 
-1. Run the `Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format to set up Cloud Witness.
+1. Run the [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format to set up Cloud Witness.
 
    ```powershell
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
@@ -136,7 +136,7 @@ To configure Cloud Witness using PowerShell:
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
    ```
 
-1. To verify that the setup process was successful, run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
+1. To verify that the setup process was successful, run the [`Get-ClusterQuorum`](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
 
    ```powershell
    Get-ClusterQuorum
@@ -166,6 +166,30 @@ To set up Cloud Witness in the Windows Admin Center:
 1. Verify your configuration was successful by checking the witness resource status. If the status is online, that means the Cloud Witness is configured and ready to use.
 
 ---
+
+## Proxy considerations with Cloud Witness
+
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses **.core.windows.net** as the endpoint. You need to ensure that this endpoint is included in any firewall allow lists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
+
+To use the Netsh command to configure a default proxy server, follow these steps: 
+
+> [!NOTE]
+>
+> - This will change the default proxy configuration for WinHTTP. Any application, including Windows services, that use WinHTTP may be affected. </br>
+
+1. Open an elevated command line:
+   1. Go to **Start** and type **cmd**.
+   1. Right-click **Command prompt** and select **Run as administrator**.
+
+2. Enter the following command and press **Enter**:
+
+   ```cmd
+   netsh winhttp set proxy proxy-server="<ProxyServerName>:<port>" bypass-list="<HostsList>"
+   ```
+
+   For example: `netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; *.contoso.com"`
+
+See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts) to learn more.
 
 ## Related content
 

@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix A: Dynamic Access Control Glossary
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Following are the list of terms and definitions that are included in the Dynamic Access Control scenario.
 
 |Term|Definition|

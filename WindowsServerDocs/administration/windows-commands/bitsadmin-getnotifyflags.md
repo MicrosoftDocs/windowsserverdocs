@@ -3,8 +3,8 @@ title: bitsadmin getnotifyflags
 description: Reference article for the bitsadmin getnotifyflags command, which retrieves the notification flags for the specified job.
 ms.topic: reference
 ms.assetid: d4657e6c-8959-4db7-a4af-e73d3f80ecf8
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---

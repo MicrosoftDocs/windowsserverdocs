@@ -3,13 +3,13 @@ title: Supported Debian virtual machines on Hyper-V
 description: Learn about the Debian and Linux integration services and features included in each version and known issues and workarounds for each distribution.
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
-ms.author: wscontent
+ms.author: roharwoo
 author: kkkashan
 ms.date: 09/26/2023
 ---
 # Supported Debian virtual machines on Hyper-V
 
-> Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+> 
 
 This article outlines the support offered for Debian virtual machines (VMs) on Hyper-V.
 

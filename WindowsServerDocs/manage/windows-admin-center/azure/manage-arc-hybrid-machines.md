@@ -1,23 +1,19 @@
 ---
-title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure preview
+title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Arc-enabled Windows Server
 ms.topic: overview
-author: prasidharora
-ms.author: praror
-ms.date: 04/09/2022
+author: davannaw-msft
+ms.author: roharwoo
+ms.date: 10/30/2024
 ms.custom: references_regions
 ---
-# Manage Azure Arc-enabled Servers using Windows Admin Center in Azure (preview)
+
+# Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
 
 > [!IMPORTANT]
-> Windows Admin Center in the Azure portal is currently in preview.
-> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) The current version can be [downloaded here](https://aka.ms/AzureConnectedMachineAgent).
 
-> [!IMPORTANT]
-> Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
-
-
-Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
+Using Windows Admin Center in the Azure portal allows you to manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine. To learn more about Arc-enables servers, see [What is Azure Arc-enabled servers?](/azure/azure-arc/servers/overview).
 
 With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Arc-enabled servers in the Azure portal. Windows Server infrastructure and workload management  no longer requires you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Server Manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
 
@@ -70,7 +66,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 
 You'll need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 
-During the deployment of Windows Admin Center, we will attempt to register the *Microsoft.HybridConnectivity* resource provider for your subscription.
+During the deployment of Windows Admin Center, we'll attempt to register the *Microsoft.HybridConnectivity* resource provider for your subscription.
 
 > [!IMPORTANT]
 > You must have permission to register a resource provider, which requires the `*/register/action` operation. This is included if you are assigned the [contributor or owner role](/azure/role-based-access-control/built-in-roles) on your subscription.
@@ -133,11 +129,15 @@ Windows Admin Center is supported in the following Azure regions:
 
 ### Hybrid machine requirements
 
-To use Windows Admin Center in the Azure portal, the Windows Admin Center agent must be installed on each hybrid machine you wish to manage via an Azure VM extension. The hybrid machine should meet the following requirements:
+To use Windows Admin Center in the Azure portal, the Windows Admin Center agent must be installed on each hybrid machine you wish to manage via an Azure VM extension. Ensure your machine is connected to Azure Arc before proceeding. To learn more about onboarding your machine to Azure Arc, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json). The hybrid machine should meet the following requirements:
 
 - Windows Server 2016 or later
 - 3 GB of RAM or more
 - Azure Arc agent version 1.13.21320.014 or later
+- You must use Windows Server Pay-as-you-go or Software Assurance license types
+
+> [!IMPORTANT]
+> As of November 1st, 2024, Windows Admin Center for Azure Arc requires your hybrid machine to have a Pay-as-you-go or Software Assurance license type to use. All new installations of the Windows Admin Center agent must adhere to this requirement. Machines with Windows Admin Center for Azure Arc installed prior to November 1st, 2024, may continue to use Windows Admin Center for Azure Arc for up to 12 months without updates until November 1st, 2025. 
 
 ### Networking requirements
 
@@ -152,7 +152,8 @@ The hybrid machine must meet the following networking requirements:
 > [!NOTE]
 > No inbound ports are required in order to use Windows Admin Center.
 
-The management machine where the Azure Portal is running must meet the following networking requirements:
+The management machine where the Azure portal is running must meet the following networking requirements:
+
 - Outbound internet access over port `443`
 
 Make sure you review the [supported devices and recommended browsers](/azure/azure-portal/azure-portal-supported-browsers-devices) before accessing the Azure portal from the management machine or system.
@@ -162,8 +163,8 @@ Make sure you review the [supported devices and recommended browsers](/azure/azu
 Before you can use Windows Admin Center in the Azure portal, you must deploy the Windows Admin Center VM extension using the following steps:
 
 1. Open the Azure portal and navigate to your Arc-enabled server.
-2. Under the **Settings** group, select **Windows Admin Center**.
-3. Specify the port on which you wish to install Windows Admin Center, and then select **Install**.
+1. Under the **Settings** group, select **Windows Admin Center**.
+1. Specify the port on which you wish to install Windows Admin Center, and then select **Install**.
 
 :::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-arc-install.png" alt-text="Screenshot showing the install button for Windows Admin Center on an Arc-enabled server." lightbox="../../media/manage-vm/windows-admin-center-in-azure-arc-install.png":::
 
@@ -172,7 +173,7 @@ Before you can use Windows Admin Center in the Azure portal, you must deploy the
 After you've installed Windows Admin Center on your hybrid machine, perform the following steps to connect to it and use it to manage Windows Server:
 
 1. Open the Azure portal and navigate to your Arc-enabled server, and then under the **Settings** group, select **Windows Admin Center (preview)**.
-2. Select **Connect**.
+1. Select **Connect**.
 
 > [!NOTE]
 > Starting August 2022, Windows Admin Center now allows you to use Microsoft Entra ID-based authentication for your hybrid machine. You will no longer be prompted for the credentials of a local administrator account.
@@ -181,7 +182,7 @@ Windows Admin Center opens in the portal, giving you access to the same tools yo
 
 :::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-arc-connect.png" alt-text="Screenshot showing the Connect button for Windows Admin Center on an Arc-enabled server." lightbox="../../media/manage-vm/windows-admin-center-in-azure-arc-connect.png":::
 
-## Configuring role assignments 
+## Configuring role assignments
 
 Access to Windows Admin Center is controlled by the **Windows Admin Center Administrator Login** Azure role.
 
@@ -190,7 +191,7 @@ Access to Windows Admin Center is controlled by the **Windows Admin Center Admin
 
 To configure role assignments for your hybrid machines using the Microsoft Entra admin center experience:
 
-1. Open the hybrid machine that you wish to manage using Windows Admin Center
+1. Open the hybrid machine that you wish to manage using Windows Admin Center.
 
 1. Select **Access control (IAM)**.
 
@@ -211,9 +212,10 @@ For more information on how to use Azure RBAC to manage access to your Azure sub
 - [Assign Azure roles using Azure PowerShell](/azure/role-based-access-control/role-assignments-powershell).
 
 ## Proxy configuration
+
 If the machine connects through a proxy server to communicate over the internet, review the following requirements to understand the network configuration required.
 
-The Windows Admin Center extension can communicate through a proxy server by using the HTTPS protocol. Use the extensions settings for configuration as described in the following steps. Authenticated proxies are not supported.
+The Windows Admin Center extension can communicate through a proxy server by using the HTTPS protocol. Use the extensions settings for configuration as described in the following steps. Authenticated proxies aren't supported.
 
 > [!NOTE]
 > Proxy configuration is only supported for extension versions greater than 0.0.0.321.
@@ -264,6 +266,7 @@ $machineName = "<name_of_hybrid_machine>"
 $resourceGroup = "<resource_group>"
 $subscription = "<subscription_id>"
 $port = "6516"
+$portint = 6516
         
 #Deploy Windows Admin Center
 $Setting = @{"port" = $port; "proxy" = @{"mode" = "application"; "address" = "http://[address]:[port]";}} #proxy configuration is optional
@@ -273,7 +276,7 @@ New-AzConnectedMachineExtension -Name "AdminCenter" -ResourceGroupName $resource
 $putPayload = "{'properties': {'type': 'default'}}"
 Invoke-AzRestMethod -Method PUT -Uri "https://management.azure.com/subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2023-03-15" -Payload $putPayload
 
-$patch = @{ "properties" =  @{ "serviceName" = "WAC"; "port" = $port}} 
+$patch = @{ "properties" =  @{ "serviceName" = "WAC"; "port" = $portint}} 
 $patchPayload = ConvertTo-Json $patch 
 Invoke-AzRestMethod -Method PUT -Path /subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default/serviceconfigurations/WAC?api-version=2023-03-15 -Payload $patchPayload
 ```
@@ -283,6 +286,7 @@ Invoke-AzRestMethod -Method PUT -Path /subscriptions/${subscription}/resourceGro
 Here are some tips to try in case something isn't working. For general  Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
 
 ### Failed to connect with "404 endpoint not found"
+
 1. Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
 
 ### Failed to connect error
@@ -294,7 +298,7 @@ Here are some tips to try in case something isn't working. For general  Windows 
         ```powershell
         Restart-Service -Name himds
         ```
-        
+
 1. Check that your Extension version is 0.0.0.169 or higher.
     1. Navigate to "Extensions"
     1. Check that the "AdminCenter" extension version is 0.0.0.169 or higher
@@ -351,10 +355,9 @@ Here are some tips to try in case something isn't working. For general  Windows 
         Invoke-RestMethod -Method GET -Uri https://<your_region>.service.waconazure.com
         ```
 
-        ```Expected output
+        ```output
         Microsoft Certificate and DNS service for Windows Admin Center in the Azure Portal
         ```
-
 
 1. If you've allowed all outbound traffic and are getting an error from the command above, check that there are no firewall rules blocking the connection.
 
@@ -374,6 +377,8 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't yet available.
+- As of November 1st, 2024, some existing customers are unable to use Windows Admin Center for Azure Arc.
+- As of November 1st, 2024, some customers are unable to install or use Windows Admin Center for Azure Arc, even with proper license attestation.
 
 ## Frequently asked questions
 
@@ -385,11 +390,11 @@ There's no associated cost using the Windows Admin Center in the Azure portal.
 
 ### Can I use Windows Admin Center to manage the virtual machines running on my server?
 
-You can install the Hyper-V role using the Roles and Features extension. Once installed, refresh your browser, and Windows Admin Center will show the Virtual Machine and Switch extensions.
+You can install the Hyper-V role using the Roles and Features extension. Once installed, refresh your browser, and Windows Admin Center displays the Virtual Machine and Switch extensions.
 
 ### What servers can I manage using this extension?
 
-You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Stack HCI](manage-hci-clusters.md).
+You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Local](manage-hci-clusters.md).
 
 ### How does Windows Admin Center handle security?
 

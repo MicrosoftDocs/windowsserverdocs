@@ -4,12 +4,12 @@ description: Find out what is new in Windows Server 2022.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 10/19/2023
+ms.date: 07/10/2024
 ---
 
 # What's new in Windows Server 2022
 
->Applies to: Windows Server 2022
+
 
 This article describes some of the new features in Windows Server 2022. Windows Server 2022 is built
 on the strong foundation of Windows Server 2019 and brings many innovations on three key themes:
@@ -39,7 +39,7 @@ article.
 #### Hotpatching
 
 Windows Server 2022 Datacenter: Azure Edition Hotpatching is now public preview for the Desktop
-Experience both in Azure and as a supported guest VM on Azure Stack HCI version 22H2.
+Experience both in Azure and as a supported guest VM on Azure Local version 22H2.
 
 ### September 2022
 
@@ -63,35 +63,33 @@ PowerShell StorageReplica reference](/powershell/module/storagereplica/) to lear
 information about Storage Replica, see the
 [Storage Replica overview](../storage/storage-replica/storage-replica-overview.md).
 
-#### Support for Azure Stack HCI
+#### Support for Azure Local
 
 With this release you can run Windows Server 2022 Datacenter: Azure Edition as a supported guest VM
-on Azure Stack HCI version 22H2. With Azure Edition running on Azure Stack HCI, you'll be able to use
+on Azure Local, version 22H2. With Azure Edition running on Azure Local, you'll be able to use
 all the existing features including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
 [SMB over QUIC](#smb-over-quic) at your datacenter and edge locations.
 
-Begin deploying Windows Server 2022 Datacenter: Azure Edition using the
-[Azure Marketplace on Arc-enabled Azure Stack HCI](#deploy-from-azure-marketplace-on-arc-enabled-azure-stack-hci-preview)
-or using an ISO. You can download the ISO from here:
+Begin deploying Windows Server 2022 Datacenter: Azure Edition using the [Deploy from Azure Marketplace on Arc-enabled Azure Local (preview)](#deploy-from-azure-marketplace-on-arc-enabled-azure-local-preview) or using an ISO. You can download the ISO from here:
 
 - [Windows Server 2022 Datacenter: Azure Edition (EN-US) ISO](https://aka.ms/AAi4r31)
 - [Windows Server 2022 Datacenter: Azure Edition (ZH-CN) ISO](https://aka.ms/AAi4bii)
 
 Your Azure subscription permits you to use Windows Server Datacenter: Azure Edition on any virtual
-machine instances running on Azure Stack HCI. For more information, see your product terms
+machine instances running on Azure Local. For more information, see your product terms
 [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS).
 
-Learn more about the latest Azure Stack HCI features in our
-[What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new) article.
+Learn more about the latest Azure Local features in our
+[What's new in Azure Local, version 22H2](/azure/azure-local/whats-new) article.
 
-#### Deploy from Azure Marketplace on Arc-enabled Azure Stack HCI (preview)
+#### Deploy from Azure Marketplace on Arc-enabled Azure Local (preview)
 
 Windows Server 2022 Datacenter: Azure Edition images will be available in the Azure Marketplace for
-Arc-enabled Azure Stack HCI, making it easy to try, buy, and deploy using Azure certified images.
+Arc-enabled Azure Local, making it easy to try, buy, and deploy using Azure certified images.
 
-Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Stack HCI features in
+Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Local features in
 our
-[What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new#azure-arc-vm-changes-and-azure-marketplace)
+[What's new in Azure Local, version 22H2](/azure/azure-local/whats-new#azure-arc-vm-changes-and-azure-marketplace)
 article.
 
 ### Azure Edition (initial release)
@@ -261,6 +259,8 @@ Windows Server 2022 uses TCP [HyStart++](https://datatracker.ietf.org/doc/html/d
 
 Virtual switches in Hyper-V have been enhanced with updated Receive Segment Coalescing (RSC). RSC allows the hypervisor network to coalesce packets and process as one larger segment. CPU cycles are reduced and segments will remain coalesced across the entire data path until processed by the intended application. RSC results in improved performance for both network traffic from an external host, received by a virtual NIC, and from a virtual NIC to another virtual NIC on the same host.
 
+In vSwitch, RSC can also coalesce multiple TCP segments into a larger segment before data traversing the vSwitch. This change also improves networking performance for virtual workloads. RSC is enabled on external virtual switches by default.
+
 #### System Insights disk anomaly detection
 
 [System Insights](../manage/system-insights/overview.md) has another capability via Windows Admin Center, disk anomaly detection.
@@ -275,20 +275,22 @@ This functionality requires the server to be using the [Server Core installation
 
 ### Storage
 
+Windows Server 2022 includes the following Storage updates. Storage is also affected by the updates to [System Insights disk anomaly detection](#system-insights-disk-anomaly-detection) and [Windows Admin Center](#windows-admin-center).
+
 #### Storage Migration Service
 
 Enhancements to Storage Migration Service in Windows Server 2022 makes it easier to migrate storage to Windows Server or to Azure from more source locations. Here are the features that are available when running the Storage Migration Server orchestrator on Windows Server 2022:
 
-* Migrate local users and groups to the new server.
-* Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
-* Migrate storage from a Linux server that uses Samba.
-* More easily synchronize migrated shares into Azure by using Azure File Sync.
-* Migrate to new networks such as Azure.
-* Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
+- Migrate local users and groups to the new server.
+- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
+- Migrate storage from a Linux server that uses Samba.
+- More easily synchronize migrated shares into Azure by using Azure File Sync.
+- Migrate to new networks such as Azure.
+- Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
 
 #### Adjustable storage repair speed
 
-[User adjustable storage repair speed](/azure-stack/hci/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process.  Adjustable storage repair speed enables you to allocate resources to either repair data copies (resiliency) or to run active workloads (performance). Controlling the repair speed helps improve availability and allows you to service your clusters more flexibly and efficiently.
+[User adjustable storage repair speed](/azure/azure-local/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process.  Adjustable storage repair speed enables you to allocate resources to either repair data copies (resiliency) or to run active workloads (performance). Controlling the repair speed helps improve availability and allows you to service your clusters more flexibly and efficiently.
 
 #### Faster repair and resynchronization
 
@@ -305,3 +307,82 @@ Microsoft's Resilient File System (ReFS) now includes the ability to snapshot fi
 #### SMB compression
 
 Enhancement to SMB in Windows Server 2022 and Windows 11 allows a user or application to compress files as they transfer over the network. Users no longer have to manually zip files in order to transfer much faster on slower or more congested networks. For details, see [SMB Compression](../storage/file-server/smb-compression.md).
+
+### Containers
+
+Windows Server 2022 includes the following changes to Windows containers.
+
+#### Server Core image size reduction
+
+We've reduced the size of Server Core images. This smaller image size allows you to deploy containerized applications faster. In Windows Server 2022, the Server Core container image release to manufacturing (RTM) layer at the time of GA clocks in at 2.76 GB uncompressed on disk. Compared to the Windows Server 2019 RTM layer at the time of GA, which clocks in at 3.47 GB uncompressed on disk, that's a 33% reduction in on-disk footprint for that layer. While you shouldn't expect the total image size to be reduced by 33%, a smaller RTM layer size generally means the overall image size will be smaller.
+
+> [!NOTE]
+> Windows container base images ship as two layers: and RTM layer and a patch layer that contains the latest security fixes for OS libraries and binaries that's overlaid on the RTM layer. The patch layer's size changes over the life of the container image support cycle depending on how many changes are in the binaries. When you pull a container base image onto a new host, you need to pull both layers.
+
+#### Longer support cycle for all Windows container images
+
+Windows Server 2022 images, including Server Core, Nano Server, and [Server image](https://techcommunity.microsoft.com/t5/containers/announcing-a-new-windows-server-container-image-preview/ba-p/2304897), have five years of mainstream support and five years of extended support. This longer support cycle ensures you have time to implement, use, and upgrade or migrate when appropriate for your organization. For more information, see [Windows containers base image lifecycles](/virtualization/windowscontainers/deploy-containers/base-image-lifecycle) and [Windows Server 2022 lifecycles](/lifecycle/products/windows-server-2022).
+
+#### Virtualized time zone
+
+With Windows Server 2022, Windows containers can now maintain a virtualized time zone configuration separate from the host. All configurations the host time zone typically uses are now virtualized and instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) PowerShell cmdlet. To learn more, see [Virtualized time zone](/virtualization/windowscontainers/manage-containers/virtual-time-zone).
+
+#### Scalability improvements for overlay networking support
+
+Windows Server 2022 aggregates several performance and scale improvements that were already in four earlier Semi-Annual Channel (SAC) releases of Windows Server that hadn't been backported into Windows Server 2019:
+
+- Fixed the issue that caused port exhaustion when using hundreds of Kubernetes services and pods on the same node.
+- Improved packet forwarding performance in the Hyper-V virtual switch (vSwitch).
+- Increased reliability across Container Networking Interface (CNI) restarts in Kubernetes.
+- Improvements in the Host Networking Service (HNS) control plane and in the data plane used by Windows Server containers and Kubernetes networking.
+
+To learn more about the performance and scalability improvements for overlay networking support, see [Kubernetes Overlay Networking for Windows](https://techcommunity.microsoft.com/t5/networking-blog/introducing-kubernetes-overlay-networking-for-windows/ba-p/363082).
+
+#### Direct Server Return routing for overlay and l2bridge networks
+
+Direct Server Return (DSR) is an asymmetric network load distribution in load balanced systems that makes request and response traffic use different network paths. Using different network paths helps avoid extra hops and reduces latency, speeding up response time between the client and service and removing extra load from the load balancer. DSR transparently achieves increased network performance for applications with little to no infrastructure changes.
+
+To learn more, see [DSR in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#load-balancing-and-services).
+
+#### gMSA improvements
+
+You can use Group Managed Service Accounts (gMSA) with Windows containers to facilitate Active Directory (AD) authentication. When introduced in Windows Server 2019, gMSA required joining the container host to a domain to retrieve the gMSA credentials from Active Directory. In Windows Server 2022, gMSA for containers with a non-domain joined host uses a portable user identity instead of a host identity to retrieve gMSA credentials. Therefore, manually joining Windows worker nodes to a domain is no longer necessary. After authentication, Kubernetes saves the user identity as a secret. gMSA for containers with a non-domain joined host provides the flexibility of creating containers with gMSA without joining the host node to the domain.
+
+To learn more about the gMSA improvements, see [Create gMSAs for Windows containers](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts).
+
+#### IPv6 support
+
+Kubernetes in Windows now supports the IPv6 dual stack in L2bridge-based networks in Windows Server. IPv6 is dependent on the CNI that Kubernetes uses, and also requires Kubernetes version 1.20 or later to enable end-to-end IPv6 support. For more information, see [IPv4/IPv6 in Introduction to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#ipv4-ipv6-dual-stack).
+
+#### Multi-subnet support for Windows worker nodes with Calico for Windows
+
+The Host Network Service (HNS) now allows you to use more restrictive subnets, such as subnets with a longer prefix length, and also multiple subnets for each Windows worker node. Previously, HNS restricted Kubernetes container endpoint configurations to only use the prefix length of the underlying subnet. The first CNI that makes use of this functionality is [Calico for Windows](https://techcommunity.microsoft.com/t5/networking-blog/calico-for-windows-goes-open-source/ba-p/1620297). For more information, see [Multiple subnet support in Host Networking Service](/virtualization/windowscontainers/container-networking/multi-subnet).
+
+#### HostProcess containers for node management
+
+HostProcess containers are a new container type that runs directly on the host and extends the Windows container model to enable a wider range of Kubernetes cluster management scenarios. With HostProcess containers, users can package and distribute management operations that require host access while retaining versioning and deployment methods provided by containers. You can use Windows containers for a variety of device plug-in, storage, and networking management scenarios in Kubernetes.
+
+HostProcess containers have the following benefits:
+
+- Cluster users no longer need to sign in and individually configure each Windows node for administrative tasks and management of Windows services.
+- Users can utilize the container model to deploy management logic to as many clusters as needed.
+- Users can build HostProcess containers on top of existing Windows Server 2019 or later base images, manage them using Windows container runtime, and run as any user available in the domain of the host machine.
+- HostProcess containers provide the best way to manage Windows nodes in Kubernetes.
+
+For more information, see [Windows HostProcess Containers](https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/).
+
+#### Windows Admin Center improvements
+
+Windows Server 2022 expands on the Containers extension added to Windows Admin Center to containerize existing web applications based on ASP.NET from .NET Framework. You can use static folders or Visual Studio solutions from your developer.
+
+Windows Admin Center includes the following enhancements:
+
+- The Containers extension now supports Web Deploy files, which lets you extract the app and its configuration from a running server and then containerize the application.
+- You can validate the image locally and then push that image to Azure Container Registry.
+- Azure Container Registry and Azure Container Instance now have basic management functionality. You can now use the Windows Admin Center UI to create and delete registries, manage images, and start and stop new container instances.
+
+#### Azure Migrate App Containerization tooling
+
+Azure Migrate App Containerization is an end-to-end solution that containerizes and moves existing web applications to the Azure Kubernetes Service. You can assess existing web servers, create a container image, push the image to the Azure Container Registry, create a Kubernetes deployment, and finally deploy it to the Azure Kubernetes Service.
+
+For more information about the Azure Migrate App Containerization tool, see [ASP.NET app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) and [Java web app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-java-kubernetes).

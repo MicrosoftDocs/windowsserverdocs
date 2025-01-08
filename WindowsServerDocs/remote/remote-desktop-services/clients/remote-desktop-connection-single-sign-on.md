@@ -2,9 +2,9 @@
 title: Use the Remote Desktop Connection app to connect to a remote PC using single sign-on with Microsoft Entra authentication
 description: Learn how to connect to a remote PC using Microsoft Entra authentication for single sign-on with the Remote Desktop Connection client (MSTSC)
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
-ms.date: 10/04/2023
+author: robinharwood
+ms.author: roharwoo
+ms.date: 7/3/2024
 ---
 
 # Use the Remote Desktop Connection app to connect to a remote PC using single sign-on with Microsoft Entra authentication

@@ -4,12 +4,12 @@ description: Lists the versions of Linux integration services for supported Cent
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: kkkashan        
-ms.author: kkashanjat
+ms.author: roharwoo
 ms.date: 09/27/2023
 ---
 # Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 
-> Applies To: Azure Stack HCI, Windows Server 2022, Windows Server Windows Server 2019, Hyper-V Server Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 11, Windows 10, Windows 8.1
+> 
 
 The following feature distribution maps indicate the features that are present
 in built-in and downloadable versions of Linux Integration Services. The known
@@ -64,7 +64,7 @@ In this section:
 | **Feature** | **Host OS** | **9.x** |
 |--|--|--|
 | LIS Availability |  | Built in |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2022, 2019, 2016, 2012 R2<br/> Azure Stack HCI | ✔ |
 | Windows Server 2016 Accurate Time | Windows Server 2022, 2019, 2016<br/> Azure Stack HCI | ✔ |
 | \>256 vCPUs |  | ✔ |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |
@@ -333,7 +333,7 @@ Notes
 
 16. For RHEL 7.6, support for >256 vcpus is available in kernel 3.10.0-957.38.1 or later and kernel 3.10.0-1062.4.1 or later is required for RHEL 7.7.
 
-17. RHEL 8.5 requires Windows Server 2019 or newer, or Azure Stack HCI 20H2 or newer.
+17. RHEL 8.5 requires Windows Server 2019 or newer, or Azure Local 20H2 or newer.
 
 See Also
 

@@ -1,10 +1,10 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
-ms.date: 01/23/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Azure Hybrid Benefit for Windows Server
@@ -42,7 +42,7 @@ To evaluate your potential cost savings, you can use these resources:
 
 - **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/) to estimate cost savings, or compare Windows VM pricing with and without Azure Hybrid Benefit.
 
-- **Azure Stack HCI:** [Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/hci).  
+- **Azure Stack HCI:** [Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-local/).  
 
 - **Azure Kubernetes Service (AKS):** [AKS on Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
 
@@ -65,13 +65,13 @@ To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the 
 
 #### Number of licenses
 
-You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. For example, 8 core licenses are still required if you run a 4-core instance. You may also run instances larger than 8 cores by allocating licenses equal to the core size of the instance. For example, 12 core licenses are required for a 12-core instance. For customers with processor licenses, each 2-core processor license is equivalent to 16 core licenses.
+You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. For example, 8 core licenses are still required if you run a 4-core instance. You may also run instances larger than 8 cores by allocating licenses equal to the core size of the instance. For example, 12 core licenses are required for a 12-core instance. For customers with processor licenses, each processor license is equivalent to 16 core licenses.
 
 #### Use rights
 
 - **Windows Server Standard edition:** Licenses must be used either on-premises or in Azure, but not at the same time. The only exception is on a one-time basis, for up to 180 days, to allow you to migrate the same workloads to Azure.  
 
-- **Windows Server Datacenter edition:** Licenses allow simultaneous usage on-premises and in Azure. Dual Use Rights don't apply for licenses allocated for [Unlimited Virtualization Rights](#unlimited-virtualization).
+- **Windows Server Datacenter edition:** For VM Licensing, licenses allow simultaneous usage on-premises and in Azure indefinitely. For Dedicated Host Licensing, licenses allow simultaneous usage on-premises and in Azure for a period of 180 days from when the licenses are allocated to Azure.
 
 #### Unlimited virtualization
 
@@ -130,19 +130,19 @@ To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the follo
 
 #### Number of licenses
 
-- Each Windows Server core license entitles use on one physical core of Azure Stack HCI. You need to allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
+Each Windows Server core license entitles use on one physical core of Azure Stack HCI. You need to allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
 
 #### Unlimited virtualization
 
-- You can use any number of Windows Server VMs on the Azure Stack HCI cluster if you allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
+You can use any number of Windows Server VMs on the Azure Stack HCI cluster if you allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
 
 #### Use rights
 
-- Licenses must be used either on-premises or on Azure Stack HCI, but not on both. You have 180 days of concurrent licensing to migrate your servers.
+Licenses must be used either on-premises or on Azure Stack HCI, but not on both. You have 180 days of concurrent licensing to migrate your servers.
 
 ### How to apply Azure Hybrid Benefit for Azure Stack HCI
 
-You need to activate Azure Hybrid Benefit for your Azure Stack HCI cluster. You can learn how to activate Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure-stack/hci/concepts/azure-hybrid-benefit).
+You need to activate Azure Hybrid Benefit for your Azure Stack HCI cluster. You can learn how to activate Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure/azure-local/concepts/azure-hybrid-benefit).
 
 # [AKS](#tab/aks)
 
@@ -164,11 +164,11 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 #### Number of licenses
 
-- Each Windows Server core license entitles use on one virtual core of AKS.
+Each Windows Server core license entitles use on one virtual core of AKS.
 
 #### Use rights
 
-- Azure Hybrid Benefit for AKS is additive. Core licenses used for Azure Hybrid Benefit for AKS can be used at the same time with on-premises Windows Server licensing, as well as Azure Hybrid Benefit for other workloads in this article.
+Azure Hybrid Benefit for AKS is additive. Core licenses used for Azure Hybrid Benefit for AKS can be used at the same time with on-premises Windows Server licensing, as well as Azure Hybrid Benefit for other workloads in this article.
 
 ### How to apply Azure Hybrid Benefit for AKS
 
@@ -204,4 +204,4 @@ You can purchase Software Assurance through Volume Licensing. Your Software Assu
 
 - [Azure Hybrid Benefit product page](https://azure.microsoft.com/pricing/hybrid-benefit)
 - [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
-- [Azure Hybrid Benefit for Azure Stack HCI](/azure-stack/hci/concepts/azure-hybrid-benefit-hci)
+- [Azure Hybrid Benefit for Azure Stack HCI](/azure/azure-local/concepts/azure-hybrid-benefit-hci)

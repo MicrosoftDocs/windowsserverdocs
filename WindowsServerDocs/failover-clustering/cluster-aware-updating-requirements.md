@@ -3,14 +3,14 @@ ms.assetid: 75cc1d24-fa2f-45bd-8f3b-1bbd4a1aead0
 title: Cluster-Aware Updating requirements and best practices
 ms.topic: article
 manager: lizross
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/21/2021
 description: Requirements for using Cluster-Aware Updating to install updates on clusters running Windows Server.
 ---
 # Cluster-Aware Updating requirements and best practices
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
+
 
 This section describes the requirements and dependencies that are needed to use [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) to apply updates to a failover cluster running Windows Server.
 

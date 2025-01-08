@@ -1,15 +1,13 @@
 ---
 title: Upgrade domain controllers to a newer version of Windows Server
 description: This article describes how to upgrade from an earlier version of Windows Server to a later version.
-ms.author: daveba
-author: PatAltimore
+ms.author: justinha
+author: robinharwood
 manager: daveba
 ms.date: 12/16/2021
 ms.topic: article
 ---
 # Upgrade domain controllers to a newer version of Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article provides background information about Active Directory Domain Services in Windows Server and explains the process for upgrading domain controllers (DCs) from an earlier version of Windows Server.
 
@@ -119,9 +117,11 @@ The following example shows how to upgrade the Contoso forest from a previous ve
 
    ![Screenshot of the Post-deployment Configuration progress dialog box with the Promote the server to a domain controller option called out.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
 
-1. On the **Deployment Configuration** screen, select **Add a new domain to an existing forest** and select **Next**.
 
-   ![Screenshot of the Deployment Configuration page of the Active Directory Domain Services Configuration Wizard showing the Add a new domain to an existing forest option selected.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
+1. On the **Deployment Configuration** screen, select **Add a domain controller to an existing domain** and click next.
+
+   ![Screenshot of the Deployment Configuration page of the Active Directory Domain Services Configuration Wizard showing the Add a domain controller to an existing domain option selected.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
+
 
 1. On the **Domain Controller options** screen, enter the **Directory Services Restore Mode (DSRM)** password and select **Next**.
 1. For the rest of the screens, select **Next**.

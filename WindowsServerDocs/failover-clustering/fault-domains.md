@@ -2,7 +2,7 @@
 description: "Learn more about: Fault domain awareness"
 ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
 title: Fault domain awareness
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
@@ -10,7 +10,7 @@ ms.date: 02/16/2023
 ---
 # Fault domain awareness
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+
 
 Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduced chassis, rack, and site fault tolerance as well.
 
@@ -41,7 +41,7 @@ To disable fault domain awareness in Windows 2019, go to the Windows Registry an
 - **Storage Spaces, including Storage Spaces Direct, uses fault domains to maximize data safety.**
     Resiliency in Storage Spaces is conceptually like distributed, software-defined RAID. Multiple copies of all data are kept in sync, and if hardware fails and one copy is lost, others are recopied to restore resiliency. To achieve the best possible resiliency, copies should be kept in separate fault domains.
 
-- **The [Health Service](/azure-stack/hci/manage/health-service-overview) uses fault domains to provide more helpful alerts.**
+- **The [Health Service](/azure/azure-local/manage/health-service-overview) uses fault domains to provide more helpful alerts.**
     Each fault domain can be associated with location metadata, which will automatically be included in any subsequent alerts. These descriptors can assist operations or maintenance personnel and reduce errors by disambiguating hardware.
 
 - **Stretch clustering uses fault domains for storage affinity.** Stretch clustering allows faraway servers to join a common cluster. For the best performance, applications or virtual machines should be run on servers that are nearby to those providing their storage. Fault domain awareness enables this storage affinity.

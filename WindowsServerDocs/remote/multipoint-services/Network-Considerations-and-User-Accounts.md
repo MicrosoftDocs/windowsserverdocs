@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: ef4859fc-b7ae-4827-ab9c-b1dc07ab6c16
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 # Network Considerations and User Accounts
 MultiPoint Services can be deployed in a variety of network environments, and it can support local user accounts and domain user accounts. Generally, MultiPoint Services user accounts will be managed in one of the following network environments:

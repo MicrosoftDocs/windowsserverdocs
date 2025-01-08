@@ -11,8 +11,6 @@ ms.topic: article
 
 # Deploy Automatic File Classification (Demonstration Steps)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This topic explains how to enable resource properties in Active Directory, create classification rules on the file server, and then assign values to the resource properties for files on the file server. For this example, the following classification rules are created:
 
 -   A content classification rule that searches a set of files for the string 'Contoso Confidential.' If the string is found in a file, the Impact resource property is set to High on the file.

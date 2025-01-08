@@ -109,7 +109,7 @@ To fix this problem, work with your network engineer to ensure that the load bal
 1. Open an elevated Command Prompt window on the primary AD FS server.
 1. Enter `Netsh http show sslcert`.
 1. Copy the application GUID and certificate hash of the federation service.
-1. Enter `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}`.
+1. Enter `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicationGUID}`.
 
 ### Check if the client device has been provisioned with the certificate correctly
 

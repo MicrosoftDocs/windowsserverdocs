@@ -6,7 +6,7 @@ ms.author: billmath
 manager: amycolannino
 ms.date: 02/13/2024
 ms.topic: article
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # AD FS Troubleshooting - Microsoft Entra ID
@@ -32,9 +32,9 @@ If redirection is not occurring there are a few things you want to check
 
 3. Finally, you want to check [DNS](ad-fs-tshoot-dns.md) and make sure that your AD FS servers or WAP servers are resolving from the internet.  Verify that this resolves and that you are able to navigate to it.
 
-4. You can also use the PowerShell cmdlet `Get-AzureADDomain` to get this information also.
+4. You can also use the PowerShell cmdlet `Get-MgDomain` to get this information also.
 
-   ![Screenshot of the PowerShell window showing the results of the Get-AzureADDomain command.](media/ad-fs-tshoot-azure/azure6.png)
+   ![Screenshot of the PowerShell window showing the results of the Get-MgDomain command.](media/ad-fs-tshoot-azure/azure6.png)
 
 ### You are receiving an Unknown Auth method error
 You may encounter an "Unknown Auth method” error stating that AuthnContext is not supported at the AD FS or STS level when you are redirected from Azure.
@@ -131,11 +131,11 @@ For more information, see [Use a SAML 2.0 identity provider to implement single 
 
 <a name='token-signing-certificate-mismatch-between-ad-fs-and-azure-ad'></a>
 
-### Token-signing certificate mismatch between AD FS and Microsoft Entra ID.
+### Token-signing certificate mismatch between AD FS and Microsoft Entra ID
 
 AD FS uses the token-signing certificate to sign the token that's sent to the user or application. The trust between the AD FS and Microsoft Entra ID is a federated trust that's based on this token-signing certificate.
 
-However, if the token-signing certificate on the AD FS side is changed because of Auto Certificate Rollover or by some intervention, the details of the new certificate must be updated on the Microsoft Entra ID side for the federated domain. When the Primary token-signing certificate on the AD FS is different from Azure ADs, the token that's issued by AD FS is not trusted by Microsoft Entra ID. Therefore, the federated user is not allowed to log on.
+However, if the token-signing certificate on the AD FS side is changed because of Auto Certificate Rollover or by some intervention, the details of the new certificate must be updated on the Microsoft Entra ID side for the federated domain. When the Primary token-signing certificate on the AD FS is different from Microsoft Entra ID, the token that's issued by AD FS is not trusted by Microsoft Entra ID. Therefore, the federated user is not allowed to log on.
 
 To fix this you can use the steps outline in [Renew federation certificates for Office 365 and Microsoft Entra ID](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
 

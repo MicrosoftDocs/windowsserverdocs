@@ -10,7 +10,7 @@ ms.topic: article
 
 
 # Scenario: Web App (Server App) calling Web API
->Applies to: Windows Server 2022, Windows Server 2019, AD FS 2019 and later
+>
 
 Learn how to build a web app signing-in users authenticated by AD FS 2019 and acquiring tokens using [MSAL library](/entra/msal/dotnet/) to call web APIs.
 
@@ -75,7 +75,7 @@ This section shows how to register the Web App as a confidential client and Web 
 
 This section shows how to configure a ASP.NET Web App to sign-in user and retrieve token to call the Web API
 
-  1. Download the sample from [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapp-to-webapi)
+  1. Download the sample from [here](https://github.com/Azure-Samples/active-directory-dotnet-native-aspnetcore-v2/)
 
   2. Open the sample using Visual Studio
 

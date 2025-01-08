@@ -3,14 +3,12 @@ title: Using Disk Cleanup on Windows Server
 description: Learn how to use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clear certain files.
 ms.reviewer: cosmosdarwin
 author: xelu86
-ms.author: wscontent
+ms.author: alalve
 ms.topic: article
 ms.date: 09/28/2023
 ---
 
 # Use Disk Cleanup on Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 The Disk Cleanup tool clears unnecessary files in a Windows Server environment. This tool is available by default on Windows Server 2019 and Windows Server 2016, but you might have to take a few manual steps to enable it on earlier versions of Windows Server.
 

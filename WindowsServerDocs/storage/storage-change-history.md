@@ -2,15 +2,13 @@
 ms.assetid: 87174225-a60f-4718-b4cc-9b172f205b72
 title: Change history for storage topics
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ms.date: 1/16/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic lists new and updated topics in the [Storage](storage.yml) documentation for Windows Server.
 
@@ -20,7 +18,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 | New or changed topic | Description |
 | --- | --- |
-|[Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) | Added known hardware issue. |
+|[Understand and deploy persistent memory](/azure/azure-local/concepts/deploy-persistent-memory?context=/windows-server/context/windows-server-storage) | Added known hardware issue. |
 
 ## December 2019
 
@@ -48,16 +46,16 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Delete volumes](/azure-stack/hci/manage/delete-volumes)| New        |
-|[Create volumes](/azure-stack/hci/manage/create-volumes)| Added steps and videos for creating a volume in Windows Admin Center.|
-|[Extend volumes](/azure-stack/hci/manage/extend-volumes)| Added steps and video for resizing a volume in Windows Admin Center.|
+|[Delete volumes](/azure/azure-local/manage/manage-volumes?context=/windows-server/context/windows-server-storage)| New        |
+|[Create volumes](/azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage)| Added steps and videos for creating a volume in Windows Admin Center.|
+|[Extend volumes](/azure/azure-local/manage/manage-volumes?context=/windows-server/context/windows-server-storage)| Added steps and video for resizing a volume in Windows Admin Center.|
 
 ## March 2019
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
 | [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md) | New |
-| [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) | New |
+| [Understand and deploy persistent memory](/azure/azure-local/concepts/deploy-persistent-memory) | New |
 | [Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
 | [DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770278(v%3dws.11)) library|
 
@@ -71,7 +69,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Understand and monitor storage resync](/azure-stack/hci/concepts/understand-storage-resync)|New topic|
+|[Understand and monitor storage resync](/azure/azure-local/concepts/understand-storage-resync)|New topic|
 
 ## December 2018
 
@@ -86,7 +84,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Nested resiliency](/azure-stack/hci/concepts/nested-resiliency)    | New topic    |
+|[Nested resiliency](/azure/azure-local/concepts/nested-resiliency)    | New topic    |
 |[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | New topic    |
 |[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.yml)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2003/) library|
 |[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/) library|
@@ -115,7 +113,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Server-to-server storage replication](storage-replica/server-to-server-storage-replication.md)|Added info on using Azure VMs, including ExpressRoute.|
-|[Cluster sets](/azure-stack/hci/deploy/cluster-set)| New topic|
+|[Cluster sets](/windows-server/failover-clustering/cluster-set)| New topic|
 
 ## May 2018
 
@@ -147,7 +145,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Disaster recovery with Storage Spaces Direct](storage-spaces/storage-spaces-direct-disaster-recovery.md)| New topic.|
-|[Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum)| New topic.|
+|[Understanding Quorum in Storage Spaces Direct](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering)| New topic.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)| Heavily revised to include both converged and hyper-converged scenarios.|
 |[Deploying Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md)|Moved from Previous Versions library and updated.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Added [Is CSV required to replicate in a stretch cluster or between clusters?](storage-replica/storage-replica-frequently-asked-questions.yml).|
@@ -157,13 +155,13 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Storage Spaces health and operational states](storage-spaces/storage-spaces-states.md)| New topic.|
-|[Using Storage Spaces Direct with the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache)| New topic. |
+|[Using Storage Spaces Direct with the CSV in-memory read cache](/azure/azure-local/manage/use-csv-cache)| New topic. |
 
 ## January 2018
 
 |New or changed topic|Description|
 |---|---|
-|[Drive symmetry considerations in Storage Spaces Direct](/azure-stack/hci/concepts/drive-symmetry-considerations)| New topic.|
+|[Drive symmetry considerations in Storage Spaces Direct](/azure/azure-local/concepts/drive-symmetry-considerations)| New topic.|
 |[Using Storage Replica with Project Honolulu](./storage-replica/server-to-server-storage-replication.md)|New topic.|
 
 ## December 2017
@@ -173,7 +171,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |[Change a drive letter](disk-management/change-a-drive-letter.md)|New topic.|
 |[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) section to add extensive troubleshooting steps, based on customer requests.|
 |[Initialize new disks](disk-management/initialize-new-disks.md)|Rewrote to attempt to make it easier to understand and address customer questions.|
-|[Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
+|[Planning volumes in Storage Spaces Direct](/azure/azure-local/concepts/plan-volumes)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
 |[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
 |[Mirror-accelerated parity](refs/mirror-accelerated-parity.md)|Clarified recommendation to place write-heavy files in separate directories.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
@@ -202,7 +200,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |---|---|
 |[DFS Namespaces](dfs-namespaces/dfs-overview.md)|Published 20 new topics for Windows Server 2016.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
-|[Understanding the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)|Added a Storage Spaces Direct design considerations video.|
+|[Understanding the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache)|Added a Storage Spaces Direct design considerations video.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Added more best practices around log volumes.|
 
 ## June 2017
@@ -254,15 +252,15 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic|Description|
 |---|---|
-|[Planning volumes](/azure-stack/hci/concepts/plan-volumes)|New topic.|
-|[Creating volumes](/azure-stack/hci/manage/create-volumes)|New topic.|
-|[Extending volumes in Storage Spaces Direct](/azure-stack/hci/manage/extend-volumes)|New topic.|
+|[Planning volumes](/azure/azure-local/concepts/plan-volumes)|New topic.|
+|[Creating volumes](/azure/azure-local/manage/create-volumes)|New topic.|
+|[Extending volumes in Storage Spaces Direct](/azure/azure-local/manage/manage-volumes)|New topic.|
 |[ReFS Overview](refs/refs-overview.md)|New topic.|
-|[Understanding Storage Spaces Direct](/azure-stack/hci/concepts/cache)|New list of links.|
+|[Understanding Storage Spaces Direct](/azure/azure-local/concepts/cache)|New list of links.|
 |[Planning Storage Spaces Direct](./storage-spaces/storage-spaces-direct-hardware-requirements.md)|New list of links.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|New list of links.|
-|[Managing Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)|New topic.|
+|[Managing Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview)|New topic.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Updated port requirements and clarified how extending replicated volumes works.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added info about a fix in the December 9, 2016 Cumulative Update and added info about how to resolve an error when extending a replicated volume.|
-|[Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)|Added visually oriented Understand/Plan/Deploy/Manage section to serve as a learning map for our topics.|
+|[Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview)|Added visually oriented Understand/Plan/Deploy/Manage section to serve as a learning map for our topics.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Removed some obsolete content and added new links.|

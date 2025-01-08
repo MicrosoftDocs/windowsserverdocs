@@ -2,14 +2,14 @@
 title: Hyper-V processor performance
 description: Learn about the processor performance considerations to use for tuning and improving Hyper-V performance.
 ms.topic: article
-ms.author: wscontent
-author: phstee
-ms.date: 05/22/2023
+ms.author: roharwoo
+author: robinharwood
+ms.date: 04/02/2024
 ---
 
 # Hyper-V processor performance
 
-Virtualization servers host multiple virtual machines (VMs) that are isolated from each other but share underlying hardware resources. The processors, memory, and I/O devices are virtualized. When you consolidate servers onto a single machine, virtualization improves resource usage, improves energy efficiency, and reduces the servers' operational and maintenance costs.  This article helps you understand the processor performance considerations for fine-tuning and improving Hyper-V performance.
+Virtualization servers host multiple virtual machines (VMs) that are isolated from each other but share underlying hardware resources. The processors, memory, and I/O devices are virtualized. When you consolidate servers onto a single machine, virtualization improves resource usage, improves energy efficiency, and reduces the servers' operational and maintenance costs. This article helps you understand the processor performance considerations for fine-tuning and improving Hyper-V performance.
 
 ## Virtual machine integration services
 
@@ -17,7 +17,7 @@ The virtual machine (VM) integration services include enlightened drivers for th
 
 ## Virtual processors
 
-Hyper-V in Windows Server 2016 supports a maximum of 240 virtual processors per VM. Configure the VMs that have non-CPU-intensive loads to use one virtual processor. This configuration is necessary because of the extra overhead that's associated with multiple virtual processors, such as other synchronization costs in the guest operating system.
+You should configure VMs that have non-CPU-intensive loads to use only one virtual processor. This configuration is necessary because of the extra overhead associated with multiple virtual processors, such as other synchronization costs in the guest operating system. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
 
 Increase the number of virtual processors if the VM requires more than one CPU of processing under peak load.
 
@@ -51,9 +51,9 @@ The following are best practices for configuring a *client version* of Windows i
 
 ## Virtual NUMA
 
-Hyper-V in Windows Server 2016 expanded VM scale limits to enable virtualizing large scale-up workloads. You can assign a single VM with up to 240 virtual processors and 12 TB of memory. When you create such large VMs, memory from multiple NUMA nodes on the host system are typically used. In that type of VM configuration, if you don't allocate virtual processors and memory from the same NUMA node, workloads might have poor performance. Performance is negatively affected because workloads can't take advantage of the NUMA optimizations.
+Hyper-V in Windows Server expands VM scale limits to enable virtualizing large scale-up workloads. When you create large VMs, memory from multiple NUMA nodes on the host system are typically used. In that type of VM configuration, if you don't allocate virtual processors and memory from the same NUMA node, workloads might have poor performance. Performance is negatively affected because workloads can't take advantage of the NUMA optimizations. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
 
-In Windows Server 2016, Hyper-V presents a Virtual NUMA topology to VMs. By default, this Virtual NUMA topology is optimized to match the NUMA topology of the underlying host computer. Exposing a Virtual NUMA topology into a VM lets the guest operating system, and any NUMA-aware applications running within it, take advantage of the NUMA performance optimizations, just as they would when running on a physical computer.
+In Windows Server, Hyper-V presents a Virtual NUMA topology to VMs. By default, this Virtual NUMA topology is optimized to match the NUMA topology of the underlying host computer. Exposing a Virtual NUMA topology into a VM lets the guest operating system, and any NUMA-aware applications running within it, take advantage of the NUMA performance optimizations, just as they would when running on a physical computer.
 
 There's no distinction between a virtual and a physical NUMA from the workload's perspective. Inside a VM, when a workload allocates local memory for data, and accesses that data in the same NUMA node, fast local memory access results on the underlying physical system. Performance penalties due to remote memory access are successfully avoided. Only NUMA-aware applications can benefit from vNUMA.
 
@@ -65,7 +65,9 @@ For more info on Virtual NUMA, see [Hyper-V Virtual NUMA overview](/previous-ver
 
 ## Related links
 
-- [Hyper-V terminology](terminology.md)
+Here are some articles to help you learn more about Hyper-V.
+
+- [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md)
 
 - [Hyper-V architecture](architecture.md)
 

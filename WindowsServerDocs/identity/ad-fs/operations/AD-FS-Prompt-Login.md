@@ -6,7 +6,7 @@ ms.author: billmath
 manager: amycolannino
 ms.date: 02/13/2024
 ms.topic: article
-ms.custom: it-pro, has-azure-ad-ps-ref
+ms.custom: it-pro, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # Active Directory Federation Services prompt=login parameter support
@@ -39,30 +39,27 @@ The following is a list of AD FS versions that support the `prompt=login` parame
 
 ## How to configure a federated domain to send prompt=login to AD FS
 
-Use the Azure AD PowerShell module to configure the setting.
+Use the [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) module to configure the setting.
 
-> [!NOTE]
-> The `prompt=login` capability (enabled by the `PromptLoginBehavior` property) is currently available only in the [version 1.0 of the Azure AD PowerShell module](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0' of the Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”. This is a per domain setting. If you have multiple domains federated with one single federation, it is required to apply the changes for each of the domains desired.
+1. First obtain the current values of `FederatedIdpMfaBehavior`, `PreferredAuthenticationProtocol`, and `PromptLoginBehavior` for the federated domain by running the following PowerShell command:
 
-1. First obtain the current values of `PreferredAuthenticationProtocol`, `SupportsMfa`, and `PromptLoginBehavior` for the federated domain by running the following PowerShell command:
+   ```powershell
+   Get-MgDomainFederationConfiguration -DomainId <your_domain_name> | Format-List *
+   ```
 
-```powershell
-    Get-MsolDomainFederationSettings -DomainName <your_domain_name> | Format-List *
-```
+   > [!NOTE]
+   > The output of `Get-MgDomainFederationConfiguration` by default does not display certain properties in the console. To view all the properties you should pipe (`|`) its output to `Format-List *` to force the output of all the properties of the object.
 
-> [!NOTE]
-> The output of `Get-MsolDomainFederationSettings` by default does not display certain properties in the console. To view all the properties you should pipe (`|`) its output to `Format-List *` to force the output of all the properties of the object.
-
-![Get-MsolDomainFederationSettings](media/AD-FS-Prompt-Login/GetMsol.png)
-
-> [!NOTE]
-> If the value of the property `PromptLoginBehavior` is empty (`$null`) the behavior of `TranslateToFreshPasswordAuth` is used.
+   If the value of the property `PromptLoginBehavior` is empty (`$null`) the behavior of `TranslateToFreshPasswordAuth` is used.
 
 2. Configure the desired value of `PromptLoginBehavior` by running the following command:
 
-```powershell
-    Set-MsolDomainFederationSettings –DomainName <your_domain_name> -PreferredAuthenticationProtocol <current_value_from_step1> -SupportsMfa <current_value_from_step1> -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled>
-```
+   ```powershell
+   New-MgDomainFederationConfiguration -DomainId <your_domain_name> `
+      -FederatedIdpMfaBehavior <current_value_from_step1> `
+      -PreferredAuthenticationProtocol <current_value_from_step1> `
+      -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled>
+   ```
 
 Following are the possible values of `PromptLoginBehavior` parameter and their meaning:
 

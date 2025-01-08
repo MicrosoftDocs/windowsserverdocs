@@ -1,15 +1,13 @@
 ---
 title: Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
 description: Learn what to do when a virtual machine with one or more checkpoints has been found.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.topic: article
 ms.assetid: 1be75890-d316-495a-b9b7-be75fc1aac10
 ms.date: 8/16/2016
 ---
 # Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 

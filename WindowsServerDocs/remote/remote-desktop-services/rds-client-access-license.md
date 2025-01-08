@@ -3,14 +3,11 @@ title: License your RDS deployment with client access licenses (CALs)
 description: Learn about client licensing in Remote Desktop Services, the RDS CAL model, and RDS CAL version compatibility.
 ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
-author: lizap
-ms.author: elizapo
-ms.date: 10/20/2023
-manager: dongill
+author: robinharwood
+ms.author: roharwoo
+ms.date: 09/10/2024
 ---
 # License your RDS deployment with client access licenses (CALs)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Each user and device that connects to a Remote Desktop Session host needs a client access license (CAL). You use RD Licensing to install, issue, and track RDS CALs.
 
@@ -71,18 +68,20 @@ The RDS CAL for your users or devices must be compatible with the version of Win
 
 The following table shows which RDS CAL and RD session host versions are compatible with each other.
 
-| Session host version | RDS 2016 CAL | RDS 2019 CAL | RDS 2022 CAL |
-|---------------------------------|--------|--------|--------|
-| Windows Server 2016 session host           | Yes    | Yes    | Yes     |
-| Windows Server 2019 session host           | No     | Yes    | Yes     |
-| Windows Server 2022 session host           | No     | No     | Yes     |
+| Session host version | RDS 2016 CAL | RDS 2019 CAL | RDS 2022 CAL | RDS 2025 CAL |
+|---------------------------------|--------|--------|--------|--------|
+| Windows Server 2016 session host           | Yes    | Yes    | Yes     | Yes     |
+| Windows Server 2019 session host           | No     | Yes    | Yes     | Yes     |
+| Windows Server 2022 session host           | No     | No     | Yes     | Yes     |
+| Windows Server 2025 session host           | No     | No     | No      | Yes     |
 
 You must install your RDS CAL on a compatible RD license server. Any RDS license server can host licenses from all previous versions of Remote Desktop Services and the current version of Remote Desktop Services. For example, a Windows Server 2022 RDS license server can host licenses from all previous versions of RDS, while a Windows Server 2016 RDS license server can only host licenses up to Windows Server 2016.
 
 The following table shows which RDS CAL and license server versions are compatible with each other.
 
-| Session host version | RDS 2016 CAL | RDS 2019 CAL | RDS 2022 CAL |
-|---------------------------------|--------|--------|--------|
-| Windows Server 2016 license server         | Yes  | No    | No    |
-| Windows Server 2019 license server         | Yes  | Yes   | No    |
-| Windows Server 2022 license server         | Yes  | Yes   | Yes   |
+| License server version | RDS 2016 CAL | RDS 2019 CAL | RDS 2022 CAL | RDS 2025 CAL |
+|---------------------------------|--------|--------|--------|--------|
+| Windows Server 2016 license server         | Yes  | No    | No    | No    |
+| Windows Server 2019 license server         | Yes  | Yes   | No    | No    |
+| Windows Server 2022 license server         | Yes  | Yes   | Yes   | No    |
+| Windows Server 2025 license server         | Yes  | Yes   | Yes   | Yes   |

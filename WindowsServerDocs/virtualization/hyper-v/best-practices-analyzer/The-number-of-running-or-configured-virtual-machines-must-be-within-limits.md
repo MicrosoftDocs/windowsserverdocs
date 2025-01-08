@@ -1,15 +1,13 @@
 ---
 title: The number of running or configured virtual machines must be within supported limits
 description: Learn what to do when more virtual machines are running or configured than are supported.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.topic: article
 ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
 ms.date: 8/16/2016
 ---
 # The number of running or configured virtual machines must be within supported limits
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

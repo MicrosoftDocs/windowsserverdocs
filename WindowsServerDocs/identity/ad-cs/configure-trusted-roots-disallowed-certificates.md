@@ -3,13 +3,13 @@ title: Configure trusted roots and disallowed certificates in Windows
 description: Guidance on how to configure individual software updates for automatic daily Root Certificate Updates, including certificate trust lists (CTLs)
 ms.topic: how-to 
 author: gswashington
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/22/2023
 ---
 
 # Configure trusted roots and disallowed certificates in Windows
 
-> Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
+> 
 
 Redirect the Microsoft Automatic Update URL to a file or web server hosting Certificate Trust Lists
 (CTLs), untrusted CTLs, or a subset of the trusted CTL files in a disconnected environment.
@@ -176,7 +176,7 @@ The configuration in this section requires that you already completed the steps 
     - Ensure that the file name extension is `.adm` and not `.txt`.
 
     - If you haven't already enabled file name extension viewing, see
-      [How To: View File Name Extensions](https://social.technet.microsoft.com/wiki/contents/articles/1784.how-to-view-file-name-extensions.aspx).
+      [How To: View File Name Extensions](https://answers.microsoft.com/en-us/windows/forum/all/how-can-i-get-the-extension-to-display-along-with/ec523f53-357b-41eb-a6c7-9b6b95a91235).
 
     - If you save the file to the `%windir%\inf` folder, it's easier to locate in the following
       steps.
@@ -483,7 +483,5 @@ certutil -verifyctl Disallowed | findstr /i "lastsynctime"
 - [List of Participants - Microsoft Trusted Root Program](/security/trusted-root/participants-list)
 
 - [certutil](../../administration/windows-commands/certutil.md) Windows command reference
-  
-- [Windows Root certificate Certificate Program - Members List (All CAs)](https://go.microsoft.com/fwlink/?linkid=269988)
 
 - [Controlling the Update Root certificate Certificates Feature to Prevent the Flow of Information to and from the Internet](https://technet.microsoft.com/library/cc749331.aspx)

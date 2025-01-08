@@ -3,15 +3,15 @@ title: Step 4 - Configure Group Policy settings for automatic updates
 description: This article is step four in a four-step process for deploying Windows Server Update Services (WSUS).
 ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
-ms.author: wscontent
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 09/21/2023
 ---
 
 # Step 4: Configure Group Policy settings for automatic updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In an Active Directory environment, you can use Group Policy to define how computers and users can interact with Windows Update to obtain automatic updates from Windows Server Update Services (WSUS). This article refers to these computers and users as *WSUS clients*.
 
@@ -174,7 +174,7 @@ Specifies whether automatic updates are enabled on this computer.
 |---------|-------|
 |Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
-Configure automatic updates under **Computer Configuration\Administrative Templates\Windows Components\Windows Update\Configure Automatic Updates**.
+Configure automatic updates under **Computer Configuration\Administrative Templates\Windows Components\Windows Update\Manage end user experience\Configure Automatic Updates**.
 
 - If this setting is set to **Not Configured**, the use of automatic updates isn't specified at the Group Policy level. An administrator can still configure automatic updates through the Settings app, under **Settings** > **Update & security** > **Windows Update** > **Advanced options**.
 
@@ -194,6 +194,8 @@ Configure automatic updates under **Computer Configuration\Administrative Templa
   |**5 - Allow local admin to choose setting**|This option specifies whether local administrators are allowed to use the automatic updates control panel to choose configuration options. For example, a local administrator could choose a scheduled installation time. Local administrators aren't allowed to set the configuration for automatic updates to **Disabled**. |
   |**7 - Auto Download, Notify to install, Notify to Restart**|*This option is available only in Windows Server SKU, versions 2016 and later.* With this option, local administrators can use Windows Update to proceed with installations or reboots manually. Windows downloads applicable updates to the device, and notifies users that updates are ready to be installed. Once updates are installed, users are notified to restart the device.|
 
+> [!NOTE]
+> Microsoft ships the Windows Server OS with the Automatic Update Options policy configured to **3** in the registry. This isn't reflected in the GPO editor. If an admin configures the Automatic Update Options policy to a different setting, the new setting will take affect. Setting the Automatic Update Options policy to "Not Configured" will result in the behavior of automatically downloading and installing updates. 
 #### Delay restart for scheduled installations
 
 Specifies the amount of time automatic updates wait before proceeding with a scheduled restart.
@@ -565,7 +567,7 @@ This setting enables you to remove WSUS client access to Windows Update.
 |Policy setting state|Behavior|
 |-|-|
 |**Not Configured**|Users can connect to the Windows Update website.|
-|**Enabled**|All Windows Update features are removed. This includes blocking access to the [Windows Update website](https://windowsupdate.microsoft.com) from the Windows Update hyperlink on the **Start** menu or startup screen, and on the **Tools** menu in Internet Explorer. <p>Windows automatic updates are also disabled. The user is neither notified about nor receives critical updates from Windows Update. This setting also prevents Device Manager from automatically installing driver updates from the Windows Update website.<p>You can configure one of the following notification options:<p>**0 - Do not show any notifications**<br />    This setting removes all access to Windows Update features, and no notifications are shown.<p>**1 - Show restart required notifications**<br />    This setting shows notifications about restarts that are required to complete an installation. On computers running Windows 8 and Windows RT, only notifications related to restarts and the inability to detect updates are shown. The notification options aren't supported. Notifications on the sign-in screen are always displayed.|
+|**Enabled**|All Windows Update features are removed. This includes blocking access to the Windows Update website `http://windowsupdate.microsoft.com` from the Windows Update hyperlink on the **Start** menu or startup screen, and on the **Tools** menu in Internet Explorer. <p>Windows automatic updates are also disabled. The user is neither notified about nor receives critical updates from Windows Update. This setting also prevents Device Manager from automatically installing driver updates from the Windows Update website.<p>You can configure one of the following notification options:<p>**0 - Do not show any notifications**<br />    This setting removes all access to Windows Update features, and no notifications are shown.<p>**1 - Show restart required notifications**<br />    This setting shows notifications about restarts that are required to complete an installation. On computers running Windows 8 and Windows RT, only notifications related to restarts and the inability to detect updates are shown. The notification options aren't supported. Notifications on the sign-in screen are always displayed.|
 |**Disabled**|Users can connect to the Windows Update website.|
 
 **Options:** See **Enabled** in the table for this setting.

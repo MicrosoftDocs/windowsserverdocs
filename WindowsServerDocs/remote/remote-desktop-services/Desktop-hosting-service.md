@@ -2,14 +2,12 @@
 title: Desktop hosting service 
 description: Learn about the desktop hosting service's components in Windows Server.
 ms.author: helohr
-ms.date: 07/06/2018
+ms.date: 7/3/2024
 ms.topic: article
 author: heidilohr
 manager: femila
 ---
 # Desktop hosting service
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article will tell you more about the desktop hosting service's components.
 

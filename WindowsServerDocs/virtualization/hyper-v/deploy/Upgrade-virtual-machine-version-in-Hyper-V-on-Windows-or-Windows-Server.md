@@ -3,13 +3,11 @@ title: Upgrade virtual machine version in Hyper-V on Windows or Windows Server
 description: Gives instructions and considerations for upgrading the version of a virtual machine
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/22/2019
 ---
 # Upgrade virtual machine version in Hyper-V on Windows or Windows Server
-
->Applies to: Windows Server 2022, Windows 10, Windows Server 2019, Windows Server 2016
 
 Make the latest Hyper-V features available on your virtual machines by upgrading the configuration version. Don't do this until:
 

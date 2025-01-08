@@ -4,7 +4,7 @@ description: Provides a list of steps for how to rebuild the Tokens.dat file whe
 ms.topic: troubleshooting
 ms.date: 06/22/2021
 author: Teresa-Motiv
-ms.author: wscontent
+ms.author: roharwoo
 manager: dcscontentpm
 ---
 

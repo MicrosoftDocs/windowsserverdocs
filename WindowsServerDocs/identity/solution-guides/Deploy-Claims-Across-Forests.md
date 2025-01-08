@@ -11,8 +11,6 @@ ms.topic: article
 
 # Deploy Claims Across Forests
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 In  Windows Server 2012 , a claim type is an assertion about the object with which it's associated. Claim types are defined per forest in Active Directory. There are many scenarios where a security principal may need to traverse a trust boundary to access resources in a trusted forest. Cross-forest claims transformation in  Windows Server 2012  enables you to transform egress and ingress claims that traverse forests so that the claims are recognized and accepted in the trusting and trusted forests. Some of the real-world scenarios for transformation of claims are:
 
 -   Trusting forests can use claim transformation as a guard against elevation of privilege by filtering the incoming claims with specific values.

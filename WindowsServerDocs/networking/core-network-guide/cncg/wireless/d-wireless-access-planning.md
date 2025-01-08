@@ -4,13 +4,11 @@ description: Learn how to plan wireless AP installations and plan wireless clien
 manager: brianlic
 ms.topic: article
 ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Planning
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Before you deploy wireless access, you must plan the following items:
 

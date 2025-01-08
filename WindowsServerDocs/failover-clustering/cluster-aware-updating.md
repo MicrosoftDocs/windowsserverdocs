@@ -3,19 +3,19 @@ title: Cluster-Aware Updating overview
 description: Cluster-Aware Updating (CAU) automates software update installation on clusters running Windows Server.
 ms.topic: article
 manager: lizross
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/21/2021
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
 ---
 # Cluster-Aware Updating overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
+
 
 This topic provides an overview of Cluster\-Aware Updating \(CAU\), a feature that automates the software updating process on clustered servers while maintaining availability.
 
 > [!NOTE]
-> When updating [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) clusters, we recommend using Cluster-Aware Updating.
+> When updating [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) clusters, we recommend using Cluster-Aware Updating.
 
 ## <a name="BKMK_OVER"></a>Feature description
 Cluster-Aware Updating is an automated feature that enables you to update servers in a [failover cluster](failover-clustering-overview.md) with little or no loss in availability during the update process. During an Updating Run, Cluster-Aware Updating transparently performs the following tasks:

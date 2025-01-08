@@ -8,7 +8,7 @@ ms.date: 04/01/2023
 ---
 # Publishing Extensions
 
-Applies to: Windows Admin Center, Windows Admin Center Preview
+
 
 After you've developed your extension, you'll want to publish it and make it available to others to test or use. In this article, we introduce a few publishing options along with the steps and requirements depending on your audience and purpose of publishing.
 
@@ -99,7 +99,6 @@ Here's an example `.nuspec` file and the list of required or recommended propert
 
 | Property Name | Required / Recommended | Description |
 | ---- | ---- | ---- |
-| packageType | Required | Use `WindowsAdminCenterExtension`, which is the NuGet package type defined for Windows Admin Center extensions. |
 | ID | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
 | title | Required for publishing to the Windows Admin Center feed | Friendly name for the package that's displayed in Windows Admin Center Extension Manager. |
 | version | Required | Extension version. Using [Semantic Versioning (SemVer convention)](http://semver.org/spec/v1.0.0.html) is recommended but not required. |
@@ -109,6 +108,9 @@ Here's an example `.nuspec` file and the list of required or recommended propert
 | projectUrl | Required for publishing to the Windows Admin Center feed | URL to your extension's website. If you don't have a separate website, use the URL for the package webpage on the NuGet feed. |
 | licenseUrl | Required for publishing to the Windows Admin Center feed | URL to your extension's end user license agreement. |
 | files | Required | These two settings set up the folder structure that Windows Admin Center expects for UI extensions and Gateway plugins. |
+
+> [!NOTE]
+> As of Windows Admin Center 2410, the `packageType` field has been deprecated and should not be used. Continued use of this field may result in improper reading of the NuGet file. 
 
 ### Build the extension NuGet package
 
@@ -121,10 +123,17 @@ Using the `.nuspec` file you created, you now need to create the NuGet package `
 
 Any `.dll` files included in your extension are required to be signed with a certificate from a trusted Certificate Authority (CA). By default, unsigned `.dll` files are blocked from being executed when Windows Admin Center is running in Production Mode.
 
-We recommend that you sign the extension NuGet package to ensure the integrity of the package.
+Any Javascript files included in your extension are required to be signed with a certificate from a trusted Certificate Authority (CA).
 
-> [!NOTE]
-> If you plan on your extension supporting [Windows Defender Application Control](../extend/guides/application-control-infrastructure-extensions.md), your package and all files within must be signed. [Learn more about signing with Windows Defender Application Control.](/windows/security/application-security/application-control/windows-defender-application-control/deployment/use-code-signing-for-better-control-and-protection) 
+The extension NuGet package must also be signed to ensure the integrity of the package. Windows Admin Center uses a Kestrel server which loads TLS/SSL certificates by the subject name of certificate. Make sure only one certificate is installed with a unique subject name and that the certificate is valid.  
+
+When you publish an extension to Microsoft's Windows Admin Center extension feed, Microsoft will sign the package on top of your signature. 
+
+> [!TIP]
+> To verify that your package is signed properly, you can use the following command:
+> ```cmd
+> nuget.exe verify -All <packageName>.nuget
+> ```
 
 ### Test your extension NuGet package
 

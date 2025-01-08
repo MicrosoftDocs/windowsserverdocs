@@ -3,15 +3,13 @@ description: "Learn more about: Appendix G: Securing Administrators Groups in Ac
 ms.assetid: 4baefbd3-038f-44c0-85ba-f24e9722b757
 title: Appendix G - Securing Administrators Groups in Active Directory
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
 
 # Appendix G: Securing Administrators Groups in Active Directory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix G: Securing Administrators Groups in Active Directory
@@ -20,7 +18,7 @@ As is the case with the Enterprise Admins (EA) and Domain Admins (DA) groups, me
 Administrators are, by default, the owners of most of the AD DS objects in their respective domains. Membership in this group may be required in build or disaster recovery scenarios in which ownership or the ability to take ownership of objects is required. Additionally, DAs and EAs inherit a number of their rights and permissions by virtue of their default membership in the Administrators group. Default group nesting for privileged groups in Active Directory should not be modified, and each domain's Administrators group should be secured as described in the step-by-step instructions that follow.
 
 > !CAUTION
-> The steps described in this document should be tested thouroughly in a non-production environment before executing in production.
+> The steps described in this document should be tested thoroughly in a non-production environment before executing in production.
 
 For the Administrators group in each domain in the forest:
 

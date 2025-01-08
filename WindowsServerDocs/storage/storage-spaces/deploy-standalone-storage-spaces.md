@@ -2,14 +2,12 @@
 title: Deploy Storage Spaces on a stand-alone server
 description: Learn the necessary prerequisites and processes for deploying Storage Spaces on a stand-alone Windows Server-based server.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/27/2023
 ---
 
 # Deploy Storage Spaces on a stand-alone server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article describes how to deploy Storage Spaces on a stand-alone server. For information about how to create a clustered storage space, see [Deploy a Storage Spaces cluster on Windows Server 2012 R2](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt270997(v%3dws.11)>).
 
@@ -234,9 +232,6 @@ Next, you must create a volume from the virtual disk. You can assign an optional
    1. In the **File system** list, select either **NTFS** or **ReFS**.
 
    1. In the **Allocation unit size** list, either leave the setting at **Default** or set the allocation unit size.
-
-        > [!NOTE]
-        > For more information about allocation unit size, see [Default cluster size for NTFS, FAT, and exFAT](https://support.microsoft.com/help/140365/default-cluster-size-for-ntfs-fat-and-exfat).
 
    1. Optionally, in the **Volume label** box, enter a volume label name, for example **HR Data**.
 
