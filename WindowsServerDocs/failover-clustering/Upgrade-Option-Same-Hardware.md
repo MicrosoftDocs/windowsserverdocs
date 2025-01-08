@@ -5,7 +5,7 @@ manager: femila
 ms.topic: article
 ms.author: roharwoo
 author: robinharwood
-ms.date: 11/10/2023
+ms.date: 1/08/2025
 ---
 
 # Upgrading Failover Clusters on the same hardware
