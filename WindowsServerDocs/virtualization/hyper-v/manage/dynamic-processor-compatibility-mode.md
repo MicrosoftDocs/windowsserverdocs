@@ -4,7 +4,7 @@ description: Describes how to use dynamic processor compatibility mode to move a
 ms.topic: how-to
 author: meaghanlewis
 ms.author: mosagie
-ms.date: 01/06/2025
+ms.date: 01/09/2025
 ms.subservice: core-os
 ---
 
@@ -75,12 +75,14 @@ If you're concerned about the performance impact of processor compatibility mode
 
 ## Configure a VM to use processor compatibility mode
 
-This section explains how to configure a VM to use processor compatibility mode using either Hyper-V manager or PowerShell. It's possible to run VMs with and without compatibility mode in the same cluster.
+This section explains how to configure a VM to use processor compatibility mode using Hyper-V manager, PowerShell, or Windows Admin Center. It's possible to run VMs with and without compatibility mode in the same cluster.
 
 > [!IMPORTANT]
 > You must shut down the VM before you can enable or disable processor compatibility mode.
 
-### Enable processor compatibility mode using Hyper-V Manager
+### Enable processor compatibility mode
+
+### [Hyper-V manager](#tab/hyper-v-manager)
 
 To enable processor compatibility mode for a VM using Hyper-V Manager:
 
@@ -88,39 +90,19 @@ To enable processor compatibility mode for a VM using Hyper-V Manager:
 
 1. Select **Start**, point to **Administrative Tools**, and then select **Hyper-V Manager**.
 
-1.  Select the server running Hyper-V and the desired VM.
+1. Select the server running Hyper-V and the desired VM.
 
-1.  If the VM is running, you must shut down the VM to enable the processor compatibility mode setting.
+1. If the VM is running, you must shut down the VM to enable the processor compatibility mode setting.
 
-1.  In the Action pane, select **Settings**, and then select **Processor**.
+1. In the Action pane, select **Settings**, and then select **Processor**.
 
-1.  Expand **Processor**, and select **Compatibility**.
+1. Expand **Processor**, and select **Compatibility**.
 
-1.  Select **Migrate to a physical computer with a different processor**, and then select **OK**.
-
-1. Restart the VM.
-
-### Disable processor compatibility mode using Hyper-V Manager
-
-To disable processor compatibility mode for a VM using Hyper-V Manager:
-
-1. Shut down the VM.  
-
-1. Select **Start**, point to **Administrative Tools**, and then select **Hyper-V Manager**.
-
-1.  Select the server running Hyper-V and the desired VM.
-
-1.  If the VM is running, you must shut down the VM to disable the processor compatibility mode setting.
-
-1.  In the Action pane, select **Settings**, and then select **Processor**.
-
-1.  Expand **Processor**, and select **Compatibility**.
-
-1.  De-select the **Migrate to a physical computer with a different processor** checkbox, and then select **OK**.
+1. Select **Migrate to a physical computer with a different processor**, and then select **OK**.
 
 1. Restart the VM.
 
-### Enable processor compatibility mode using PowerShell
+### [PowerShell](#tab/powershell)
 
 To enable processor compatibility mode, run the following cmdlet:
 
@@ -144,7 +126,49 @@ To enable the VM to use the default minimum features to migrate across clusters,
 get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcessor -CompatibilityForMigrationEnabled $true -CompatibilityForMigrationMode MinimumFeatureSet
 ```
 
-### Disable processor compatibility mode using PowerShell
+### [Windows Admin Center](#tab/windows-admin-center)
+
+To enable processor compatibility mode using Windows Admin Center:
+
+1. Connect to your cluster, and then in the **Tools** pane, select **Virtual machines**.
+
+1. Under **Inventory**, select the VM on which you want to enable processor compatibility mode, expand the **Power** menu, then select **Shut down**.
+
+1. Select **Settings**, then **Processors**, and check the box for **Processor compatibility**.
+
+    :::image type="content" source="media/dynamic-processor-compatibility-mode/processor-compatibility.png" alt-text="Screenshot of the checkbox to enable processor compatibility." lightbox="media/dynamic-processor-compatibility-mode/processor-compatibility.png":::
+
+1. If you want to set the VM's CPU features to the maximum level supported by all servers in a cluster, select **Compatible across the cluster (Recommended)**. This maximizes VM performance while preserving the ability to move the running VM to other servers in the cluster. We recommend enabling this for all VMs running on Azure Local 21H2 clusters. If disabled, the VM must be restarted to move to a host with a different level of supported CPU instructions, common with different generations of CPUs.
+
+   Alternatively, if you want to set the VM's CPU features to minimum to ensure that you can move the running VM to other Hyper-V hosts outside the cluster as long as they have the same CPU manufacturer, select **Compatible across other hosts with the same CPU manufacturer**.
+
+1. Select **Save processor settings** and restart the VM.
+
+---
+
+### Disable processor compatibility mode
+
+### [Hyper-V manager](#tab/hyper-v-manager)
+
+To disable processor compatibility mode for a VM using Hyper-V Manager:
+
+1. Shut down the VM.  
+
+1. Select **Start**, point to **Administrative Tools**, and then select **Hyper-V Manager**.
+
+1.  Select the server running Hyper-V and the desired VM.
+
+1.  If the VM is running, you must shut down the VM to disable the processor compatibility mode setting.
+
+1.  In the Action pane, select **Settings**, and then select **Processor**.
+
+1.  Expand **Processor**, and select **Compatibility**.
+
+1.  De-select the **Migrate to a physical computer with a different processor** checkbox, and then select **OK**.
+
+1. Restart the VM.
+
+### [PowerShell](#tab/powershell)
 
 To disable processor compatibility mode for a VM using PowerShell, shut down the VM and run the `Set-VMProcessor` cmdlet, setting `CompatibilityForMigrationEnabled` to **$false**:
 
@@ -153,3 +177,15 @@ get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcess
 ```
 
 Then restart the VM.
+
+### [Windows Admin Center](#tab/windows-admin-center)
+
+To disable processor compatibility mode using Windows Admin Center:
+
+1. Connect to your cluster, and then in the **Tools** pane, select **Virtual machines**.
+
+1. Under **Inventory**, select the VM on which you want to enable processor compatibility mode, expand the **Power** menu, then select **Shut down**.
+
+1. Select **Settings**, then **Processors**, and deselect the box for **Processor compatibility**.
+
+1. Select **Save processor settings** and restart the VM.
