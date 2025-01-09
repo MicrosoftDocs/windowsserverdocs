@@ -138,8 +138,6 @@ To complete this step, make sure that the user account that you sign in with mee
 
 ::: zone pivot="windows-admin-center"
 
-The process for creating a cluster in Windows Admin Center is a bit more complicated than the other two methods.
-
 ### Start the Create Cluster wizard
 
 To start the Create Cluster wizard in Windows Admin Center:
@@ -156,9 +154,9 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. Under **Select server locations**, select one the following:
 
-- All servers in one site
+   - All servers in one site
 
-- Servers in two sites (for stretched cluster)
+   - Servers in two sites (for stretched cluster)
 
 1. When you're finished, select **Create**. The Create Cluster wizard should open.
 
@@ -168,17 +166,17 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. On the **Add servers** page, enter a username and password for the administrator account you want to use to contact the servers.
 
-1. Specify the server you want to add, then select **Add**. When you're finished, select **Next**.
+1. Specify the first server you want to use in the cluster, and then select **Add**. When you're finished adding servers, select **Next**.
 
-1. On the **Install required features** page, select any features you need to install on your cluster, then select **Install features**. When you're finished, select **Next**.
+1. On the **Install required features** page, optionally review the features that you can install on each of the servers and then select **Install features**. When you're finished, select **Next**.
 
-1. On the **Optionally install operating system updates** page, you can install the latest version of the operating system or any security updates your cluster nodes need. When you're finished, select **Next**.
+1. On the **Optionally install operating system updates** page, review the available OS updates, and then select **Install updates** to install them. When you're finished, select **Next**.
 
 1. On the **Restart servers** page, restart the servers if the new features you installed require a restart. When you're finished, select **Next: Networking**.
 
 ### Networking
 
-1. On the **Check the network adapters** page, a popup window may appear that asks if you want to remove existing virtual switches. Select **Yes**.
+1. On the **Check the network adapters** page, a popup window might ask if you want to remove existing virtual switches. Select **Yes** to delete any older virtual switches and let Windows Admin Center create the appropriate switches, unless you intentionally created them and want to preserve the switches.
 
 1. To enable any adapters that you want to use, select the name of the adapter, then select **Enable**. Select **Disable** for any adapters you don't want to use. When you're finished, select **Next**.
 
@@ -188,15 +186,15 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. On the **Optionally configure RDMA** page, select the **Configure RDMA (Recommended)** checkbox if you want to configure remote direct memory access (RDMA). Select **Next**.
 
-1. On the **Define Networks** page, specify the name, IP address, subnet mask, and default gateway for each server node you plan to add to your cluster.
+1. On the **Define Networks** page, review and edit the Name, IP address, Subnet mask, VLAN ID, and Default gateway fields for each listed adapter.
 
 1. Select **Apply and test** to verify the configuration for your nodes. If everything looks okay, select **Next: Clustering**.
 
 ### Clustering
 
-1. On the **Validate this cluster** page, select **Validate**.
+1. On the **Validate this cluster** page, select **Validate**. Validation can take several minutes. The in-wizard validation is different from the post-cluster creation validation step, which performs additional checks to catch any hardware or configuration problems before the cluster goes into production. 
 
-1. Wait for the validation to finish. Review any warnings that appear. If the servers are ready for clustering, select **Next**.
+1. Wait for the validation to finish, review all warnings, make changes as appropriate, and select **Validate again** as needed. When you're ready to proceed, select **Next**.
 
 1. On the **Create the cluster** page, enter a name for your cluster and specify the IP address for the cluster. When you're finished, select **Create cluster**.
 
