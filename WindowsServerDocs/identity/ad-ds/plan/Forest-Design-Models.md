@@ -11,8 +11,6 @@ ms.topic: article
 
 # Forest Design Models
 
->
-
 You can apply one of the following three forest design models in your Active Directory environment:
 
 -   Organizational forest model

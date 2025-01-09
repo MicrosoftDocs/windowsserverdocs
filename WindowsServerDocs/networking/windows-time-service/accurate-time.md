@@ -10,8 +10,6 @@ ms.topic: article
 
 # Accurate Time for Windows Server 2016
 
->
-
 The Windows Time service is a component that uses a plug-in model for client and server time synchronization providers. There are two built-in client providers on Windows, and there are third-party plug-ins available. One provider uses [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305) or [MS-NTP](/openspecs/windows_protocols/ms-sntp/8106cb73-ab3a-4542-8bc8-784dd32031cc) to synchronize the local system time to an NTP and/or MS-NTP compliant reference server. The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host. When multiple providers exist, Windows will pick the best provider using stratum level first, followed by root delay, root dispersion, and finally time offset.
 
 > [!NOTE]

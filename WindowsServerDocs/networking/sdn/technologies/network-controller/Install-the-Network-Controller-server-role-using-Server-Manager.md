@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Install the Network Controller Server Role Using Server Manager
 
->
-
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.
 
 > [!IMPORTANT]

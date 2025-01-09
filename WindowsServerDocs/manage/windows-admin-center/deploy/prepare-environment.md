@@ -9,8 +9,6 @@ ms.date: 06/07/2019
 
 # Prepare your environment for Windows Admin Center
 
->
-
 There are some Server versions that need additional preparation before they are ready to manage with Windows Admin Center:
 
 - [Windows Server 2012 and 2012 R2](#prepare-windows-server-2012-and-2012-r2)

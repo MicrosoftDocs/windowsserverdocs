@@ -11,8 +11,6 @@ ms.date: 06/07/2018
 
 # Migrate to Always On VPN and decommission DirectAccess
 
->
-
 &#171; [**Previous:** Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)<br>
 
 Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order. At a high level, the migration process consists of these four primary steps:

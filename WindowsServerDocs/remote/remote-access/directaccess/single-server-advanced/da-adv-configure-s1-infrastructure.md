@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 1 Configure Advanced DirectAccess Infrastructure
 
->
-
 This topic describes how to configure the infrastructure that is required for an advanced Remote Access deployment that uses a single DirectAccess server in a mixed IPv4 and IPv6 environment. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Plan an Advanced DirectAccess Deployment](../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).
 
 | Task | Description |

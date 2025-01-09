@@ -11,8 +11,6 @@ ms.topic: article
 
 # Dynamic Access Control: Scenario Overview
 
->
-
 In  Windows Server 2012 , you can apply data governance across your file servers to control who can access information and to audit who has accessed information. Dynamic Access Control lets you:
 
 -   Identify data by using automatic and manual classification of files. For example, you could tag data in file servers across the organization.

@@ -10,8 +10,6 @@ ms.date: 08/29/2018
 
 # Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
 
->
-
 
 The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs.
 The default installation will set up a new forest dedicated for HGS and configure other dependencies.

@@ -9,8 +9,6 @@ ms.topic: article
 
 # Host Compute Network (HCN) service API for VMs and containers
 
->
-
 Host Compute Network (HCN) service API is a public-facing Win32 API that provides platform-level access to manage the virtual networks, virtual network endpoints, and associated policies. Together this provides connectivity and security for virtual machines (VMs) and containers running on a Windows host.
 
 Developers use the HCN service API to manage networking for VMs and containers in their application workflows. The HCN API has been designed to provide the best experience for developers. End-users do not interact with these APIs directly.

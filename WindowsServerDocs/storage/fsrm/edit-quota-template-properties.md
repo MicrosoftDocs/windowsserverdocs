@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Edit Quota Template Properties
 
->
-
 When you make changes to a quota template, you have the option of extending those changes to quotas that were created from the original quota template. You can choose to modify only those quotas that still match the original template or all quotas that were derived from the original template, regardless of any modifications that were made to the quotas since they were created. This feature simplifies the process of updating the properties of your quotas by providing one central point where you can make all the changes.
 
 > [!Note]

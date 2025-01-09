@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix G: Securing Administrators Groups in Active Directory
 
->
-
 
 ## Appendix G: Securing Administrators Groups in Active Directory
 As is the case with the Enterprise Admins (EA) and Domain Admins (DA) groups, membership in the built-in Administrators (BA) group should be required only in build or disaster recovery scenarios. There should be no day-to-day user accounts in the Administrators group with the exception of the Built-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).

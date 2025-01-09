@@ -10,8 +10,6 @@ ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
 
 # Virtual Machine Resource Controls
 
->
-
 This article describes Hyper-V resource and isolation controls for virtual machines.  These capabilities, which we'll refer to as Virtual Machine CPU Groups, or just "CPU groups", were introduced in Windows Server 2016.  CPU groups allow Hyper-V administrators to better manage and allocate the host's CPU resources across guest virtual machines.  Using CPU groups, Hyper-V administrators can:
 
 * Create groups of virtual machines, with each group having different allocations of the virtualization host's total CPU resources, shared across the entire group. This allows the host administrator to implement classes of service for different types of VMs.

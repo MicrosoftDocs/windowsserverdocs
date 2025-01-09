@@ -11,8 +11,6 @@ ms.topic: article
 
 # Active Directory Replication Concepts
 
->
-
 Before designing site topology, become familiar with some Active Directory replication concepts.
 
 -   [Connection object](#BKMK_1)

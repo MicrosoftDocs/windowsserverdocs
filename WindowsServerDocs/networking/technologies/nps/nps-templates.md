@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # NPS Templates
 
->
-
 Network Policy Server \(NPS\) templates allow you to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS and export for use on other NPSs.
 
 NPS templates are designed to reduce the amount of time and cost that it takes to configure NPS on one or more servers. The following NPS template types are available for configuration in Templates Management:

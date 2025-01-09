@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Work with Software Restriction Policies Rules
 
->
-
 This topic describes procedures working with certificate, path, internet zone and hash rules using Software Restriction Policies.
 
 ## Introduction

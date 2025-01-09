@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Enable or Disable Referrals and Client Failback
 
->
-
 A referral is an ordered list of servers that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or DFS folder with targets. After the computer receives the referral, the computer attempts to access the first server in the list. If the server is not available, the client computer attempts to access the next server. If a server becomes unavailable, you can configure clients to fail back to the preferred server after it becomes available.
 
 The following sections provide information about how to enable or disable referrals or enable client failback:

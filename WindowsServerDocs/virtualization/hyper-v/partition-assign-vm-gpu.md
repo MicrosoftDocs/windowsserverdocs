@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.subservice: core-os
-ms.date: 12/31/2024
+ms.date: 01/09/2025
 #customer intent: As a customer, I want to learn how to partition and assign GPUs to a virtual machine in Hyper-V so that I can use the GPU resources efficiently.
 ---
 

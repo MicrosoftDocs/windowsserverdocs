@@ -11,8 +11,6 @@ ms.topic: article
 
 # Reducing the Active Directory Attack Surface
 
->
-
 This section focuses on technical controls to implement to reduce the attack surface of the Active Directory installation. The section contains the following information:
 
 - [Implementing Least-Privilege Administrative Models](./Implementing-Least-Privilege-Administrative-Models.md) focuses on identifying the risk that the use of highly privileged accounts for day-to-day administration presents, in addition to providing recommendations to implement to reduce the risk that privileged accounts present.

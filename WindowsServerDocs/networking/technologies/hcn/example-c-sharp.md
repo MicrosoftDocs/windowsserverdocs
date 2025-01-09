@@ -9,8 +9,6 @@ ms.topic: article
 
 # Example of C# generated code
 
->
-
 ```C#
 /*
  * HCN API

@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 4 Configure APP1
 
->
-
 Configure static IPv6 addressing and gateway settings to enable APP1 access to the 2-Corpnet subnet.
 
 - To configure the default gateway and DNS server. The multisite configuration uses the ROUTER1 computer as a default gateway. Configure the default gateway on APP1.

@@ -10,8 +10,6 @@ ms.date: 12/10/2020
 ---
 # Managing a Guarded Fabric
 
->
-
 The following topics describe how to manage a guarded fabric.
 
 - [Manage the Host Guardian Service](guarded-fabric-manage-hgs.md)

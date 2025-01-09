@@ -10,8 +10,6 @@ ms.topic: article
 ---
 # AD DS Simplified Administration
 
->
-
 This topic explains the capabilities and benefits of Windows Server 2012 domain controller deployment and administration, and the differences between previous operating system DC deployment and the new Windows Server 2012 implementation.
 
 Windows Server 2012 introduced the next generation of Active Directory Domain Services Simplified Administration, and was the most radical domain re-envisioning since Windows 2000 Server. AD DS Simplified Administration takes lessons learned from twelve years of Active Directory and makes a more supportable, more flexible, more intuitive administrative experience for architects and administrators. This meant creating new versions of existing technologies as well as extending the capabilities of components released in Windows Server 2008 R2.

@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # RAS Gateway Deployment Architecture
 
->
-
 You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.
 
 The following sections provide brief overviews of some of the RAS Gateway new features so that you can understand how to use these features in the design of your gateway deployment.

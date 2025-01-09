@@ -10,8 +10,6 @@ ms.date: 02/18/2022
 ---
 # Running Data Deduplication
 
->
-
 ## <a id="running-dedup-jobs-manually"></a>Running Data Deduplication jobs manually
 
 You can run every scheduled Data Deduplication job manually by using the following PowerShell cmdlets:

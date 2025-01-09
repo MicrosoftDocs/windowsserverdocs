@@ -10,8 +10,6 @@ ms.author: roharwoo
 
 # Classification Management
 
->
-
 Classification properties are used to categorize files and can be used to select files for scheduled file management tasks.
 
 There are many ways to classify a file. One way is to create a classification property that assigns a value to all files within a specified directory. Another way is to create rules to decide what value to set for a given property.

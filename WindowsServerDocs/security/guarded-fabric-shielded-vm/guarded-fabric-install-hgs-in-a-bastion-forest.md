@@ -10,8 +10,6 @@ ms.date: 08/29/2018
 
 # Install HGS in an existing bastion forest
 
->
-
 
 ## Join the HGS server to the root domain
 

@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Configure NPS on a Multihomed Computer
 
->
-
 You can use this topic to configure an NPS with multiple network adapters.
 
 When you use multiple network adapters in a server running Network Policy Server (NPS), you can configure the following:

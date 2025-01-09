@@ -9,8 +9,6 @@ ms.date: 10/25/2024
 
 # Plan for GPU acceleration in Windows Server
 
->
-
 This article introduces the graphics virtualization capabilities available in Windows Server.
 
 ## When to use GPU acceleration

@@ -10,8 +10,6 @@ ms.topic: conceptual
 
 # Active Directory Domain Services maximum limits and scalability
 
->
-
 This article describes the maximum limits for certain aspects of your Active Directory environment that can affect scalability. We recommend you keep these limits in mind while planning for your Active Directory deployment.
 
 ## Maximum number of objects

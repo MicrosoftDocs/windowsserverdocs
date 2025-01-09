@@ -10,8 +10,6 @@ ms.date: 08/18/2017
 
 # Domain-joined Device Public Key Authentication
 
->
-
 Kerberos added support for domain-joined devices to sign-in using a certificate beginning with Windows Server 2012 and Windows 8. This change allows 3rd party vendors to create solutions to provision and initialize certificates for domain-joined devices to use for domain authentication.
 
 ## Automatic public key provisioning

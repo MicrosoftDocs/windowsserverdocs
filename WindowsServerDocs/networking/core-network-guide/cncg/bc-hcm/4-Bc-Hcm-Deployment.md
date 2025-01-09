@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # BranchCache Hosted Cache Mode Deployment
 
->
-
 You can use this topic for links to detailed procedural topics that guide you through the BranchCache hosted cache mode deployment process.
 
 Follow these steps to deploy BranchCache hosted cache mode.

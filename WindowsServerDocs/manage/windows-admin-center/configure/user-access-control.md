@@ -8,8 +8,6 @@ ms.date: 10/18/2021
 ---
 # Configure User Access Control and Permissions
 
->
-
 If you haven't already, familiarize yourself with the [user access control options in Windows Admin Center.](../plan/user-access-options.md)
 
 > [!NOTE]

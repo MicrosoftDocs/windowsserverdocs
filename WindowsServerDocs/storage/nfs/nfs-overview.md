@@ -8,8 +8,6 @@ ms.date: 12/06/2022
 ---
 # Network File System overview
 
->
-
 This article describes the Network File System role service and features included with the File and Storage Services server role in Windows Server. Network File System (NFS) provides a file sharing solution for enterprises that have heterogeneous environments that include both Windows and non-Windows computers.
 
 ## Feature description

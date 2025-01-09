@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Create a File Screen Exception
 
->
-
 Occasionally, you need to allow exceptions to file screening. For example, you might want to block video files from a file server, but you need to allow your training group to save the video files for their computer-based training. To allow files that other file screens are blocking, create a *file screen exception*.
 
 A file screen exception is a special type of file screen that over-rides any file screening that would otherwise apply to a folder and all its subfolders in a designated exception path. That is, it creates an exception to any rules derived from a parent folder.

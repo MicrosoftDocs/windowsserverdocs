@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Windows Authentication Overview
 
->
-
 This navigation topic for the IT professional lists documentation resources for Windows authentication and logon technologies that include product evaluation, getting started guides, procedures, design and deployment guides, technical references, and command references.
 
 ## Feature description

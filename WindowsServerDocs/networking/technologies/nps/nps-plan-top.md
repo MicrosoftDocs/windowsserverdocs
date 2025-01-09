@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Plan Network Policy Server
 
->
-
 This topic provides links to information about planning NPS and proxy deployments.
 
 >[!NOTE]
