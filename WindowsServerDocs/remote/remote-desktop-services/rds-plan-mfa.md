@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Remote Desktop Services - Multi-Factor Authentication
 
->
-
 Leverage the power of Active Directory with Multi-Factor Authentication to enforce high security protection of your business resources.
 
 For your end-users connecting to their desktops and applications, the experience is similar to what they already face as they perform a second authentication measure to connect to the desired resource:

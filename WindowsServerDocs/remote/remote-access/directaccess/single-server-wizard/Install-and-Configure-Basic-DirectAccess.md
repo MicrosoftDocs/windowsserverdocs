@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Install and Configure Basic DirectAccess
 
->
-
 This overview provides an introduction to the configuration steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with basic settings.
 
 -   [Step 1: Configure the Basic DirectAccess Infrastructure](da-basic-configure-s1-infrastructure.md). This step includes configuring network and server settings, DNS settings and Active Directory settings.

@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # DNS Zone Management
 
->
-
 This topic provides information about managing DNS zones by using the IPAM client console.
 
 > [!NOTE]

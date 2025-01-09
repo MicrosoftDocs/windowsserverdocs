@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Selecting the Forest Root Domain
 
->
-
 The first domain that you deploy in an Active Directory forest is called the forest root domain. This domain remains the forest root domain for the life cycle of the AD DS deployment.
 
 The forest root domain contains the Enterprise Admins and Schema Admins groups. These service administrator groups are used to manage forest-level operations such as the addition and removal of domains and the implementation of changes to the schema.

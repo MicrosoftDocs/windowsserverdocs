@@ -10,8 +10,6 @@ ms.date: 12/08/2020
 ---
 # Hyper-V Virtual Switch
 
->
-
 This topic provides an overview of Hyper-V Virtual Switch, which provides you with the ability to connect virtual machines \(VMs\) to networks that are external to the Hyper\-V host, including your organization's intranet and the Internet.
 
 You can also connect to virtual networks on the server that is running Hyper\-V when you deploy Software Defined Networking \(SDN\).

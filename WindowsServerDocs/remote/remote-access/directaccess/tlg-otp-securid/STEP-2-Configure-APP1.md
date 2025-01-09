@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 2 Configure APP1
 
->
-
 Use the following steps to prepare APP1 for OTP support:
 
 1. To create and deploy a certificate template used to sign OTP certificate requests. Configure a certificate template used to sign OTP certificate requests.

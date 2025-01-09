@@ -9,8 +9,6 @@ ms.date: 02/13/2023
 ---
 # Anycast DNS overview
 
->
-
 This topic provides information about how Anycast DNS works.
 
 ## What is Anycast?

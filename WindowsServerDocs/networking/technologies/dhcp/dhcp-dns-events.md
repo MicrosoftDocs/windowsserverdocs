@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # DHCP Logging Events for DNS Registrations
 
->
-
 DHCP server event logs now provide detailed information about DNS registration failures.
 
 >[!NOTE]

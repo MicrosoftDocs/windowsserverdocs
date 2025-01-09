@@ -11,8 +11,6 @@ ms.date: 05/30/2023
 
 # Plan NPS as a RADIUS server
 
->
-
 When you deploy Network Policy Server \(NPS\) as a Remote Authentication Dial-In User Service (RADIUS) server, NPS performs authentication, authorization, and accounting for connection requests for the local domain and for domains that trust the local domain. You can use these planning guidelines to simplify your RADIUS deployment.
 
 These planning guidelines do not include circumstances in which you want to deploy NPS as a RADIUS proxy. When you deploy NPS as a RADIUS proxy, NPS forwards connection requests to a server running NPS or other RADIUS servers in remote domains, untrusted domains, or both.

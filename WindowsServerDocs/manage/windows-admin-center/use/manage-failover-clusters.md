@@ -8,8 +8,6 @@ ms.date: 02/28/2022
 ---
 # Manage Failover Clusters with Windows Admin Center
 
->
-
 > [!Tip]
 > New to Windows Admin Center?
 > [Download or learn more about Windows Admin Center](../overview.md).

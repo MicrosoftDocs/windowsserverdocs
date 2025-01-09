@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # STEP 8: Configure INET1
 
->
-
 To enable client computers to connect to Remote Access servers over the Internet, you must configure a DNS entry for 2-EDGE1 on INET1.
 
 ### To create the 2-EDGE1 DNS entry

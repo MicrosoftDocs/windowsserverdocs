@@ -9,8 +9,6 @@ ms.date: 02/16/2023
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
 
->
-
 Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how to configure the host and then give the virtual machine access to a local resource.
 
 Enhanced session mode and Type clipboard text are available only for virtual machines that run recent Windows operating systems. See [Requirements for using local resources](#requirements-for-using-local-resources).

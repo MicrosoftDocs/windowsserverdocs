@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendices
 
->
-
 Appendices are included in this document to augment the information contained in the body of the document. The list of appendices and a brief description of each in included the following table.
 
 

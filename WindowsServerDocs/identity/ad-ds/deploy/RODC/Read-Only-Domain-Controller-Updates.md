@@ -11,6 +11,4 @@ ms.topic: article
 
 # Read-Only Domain Controller Updates
 
->
-
 There are no changes to adprep /rodcprep in Windows Server 2012 R2 or in Windows Server 2012.

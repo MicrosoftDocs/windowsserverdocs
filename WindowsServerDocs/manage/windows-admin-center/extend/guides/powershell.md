@@ -9,8 +9,6 @@ ms.date: 05/09/2019
 
 # Using PowerShell in your extension #
 
->
-
 Let's go more in-depth into the Windows Admin Center Extensions SDK - let's talk about adding PowerShell commands to your extension.
 
 ## PowerShell in TypeScript ##

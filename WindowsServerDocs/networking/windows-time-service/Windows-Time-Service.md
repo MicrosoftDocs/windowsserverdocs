@@ -10,8 +10,6 @@ ms.topic: article
 
 # Windows Time Service
 
->
-
 **In this guide**
 
 * Where to find Windows Time Service Configuration Information

@@ -8,8 +8,6 @@ ms.date: 07/17/2019
 ---
 # Install Windows Admin Center
 
->
-
 This topic describes how to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 
 > [!Tip]

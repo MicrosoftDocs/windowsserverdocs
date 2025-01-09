@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix M: Document Links and Recommended Reading
 
->
-
 ## Appendix M: Document Links and Recommended Reading
 
 ### Document Links

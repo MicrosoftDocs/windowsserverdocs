@@ -10,8 +10,6 @@ ms.date: 11/04/2021
 
 # Virtual network peering
 
->
-
 Virtual network peering lets you connect two virtual networks seamlessly. Once peered, for connectivity purposes, the virtual networks appear as one.
 
 The benefits of using virtual network peering include:

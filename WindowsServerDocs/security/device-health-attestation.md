@@ -9,8 +9,6 @@ ms.date: 10/25/2024
 ---
 # Device Health Attestation
 
->
-
 Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included the following:
 
 - Integrates with Windows 10 Mobile Device Management (MDM) framework in alignment with  [Open Mobile Alliance (OMA) standards](http://openmobilealliance.org/).

@@ -14,8 +14,6 @@ zone_pivot_groups: windows-os
 
 :::zone pivot="windows-server"
 
->
-
 ::: zone-end
 
 :::zone pivot="azure-local"

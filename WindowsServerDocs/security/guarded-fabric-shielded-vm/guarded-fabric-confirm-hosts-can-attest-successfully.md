@@ -11,8 +11,6 @@ ms.date: 09/25/2019
 
 # Confirm guarded hosts can attest
 
->
-
 A fabric administrator needs to confirm that Hyper-V hosts can run as guarded hosts. Complete the following steps on at least one guarded host:
 
 1. If you have not already installed the Hyper-V role and Host Guardian Hyper-V Support feature, install them with the following command:

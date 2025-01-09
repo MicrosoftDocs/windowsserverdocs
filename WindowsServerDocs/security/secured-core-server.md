@@ -11,8 +11,6 @@ ms.contributors: socuff-01282022
 
 # What is Secured-core server?
 
->
-
 Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and
 operating system security features. The protection provided by Secured-core systems begins before
 the operating system boots and continues whilst running. Secured-core server is designed to deliver

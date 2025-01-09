@@ -9,8 +9,6 @@ ms.date: 10/04/2016
 ---
 # Enable or disable checkpoints in Hyper-V
 
->
-
 You can choose to enable or disable checkpoints for each virtual machine.
 
 1.  In **Hyper-V Manager**, right-click the virtual machine and click **Settings**.

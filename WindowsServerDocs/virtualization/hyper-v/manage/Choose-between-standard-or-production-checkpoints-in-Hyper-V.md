@@ -9,8 +9,6 @@ ms.date: 10/04/2016
 ---
 # Choose between standard or production checkpoints in Hyper-V
 
->
-
 
 Starting with Windows Server 2016 and Windows 10, you can choose between standard and production checkpoints for each virtual machine. Production checkpoints are the default for new virtual machines.
 

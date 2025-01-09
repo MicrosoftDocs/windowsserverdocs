@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 10 Install and Configure 2-EDGE1
 
->
-
 2-EDGE1 configuration consists of the following:
 
 - Install the operating system on 2-EDGE1. Install  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012 on 2-EDGE1.

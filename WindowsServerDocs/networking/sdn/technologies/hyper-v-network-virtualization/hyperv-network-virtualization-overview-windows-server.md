@@ -10,8 +10,6 @@ ms.date: 10/27/2021
 ---
 # Hyper-V Network Virtualization Overview in Windows Server
 
->
-
 In Windows Server and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:
 
 -   **Windows Azure Pack for Windows Server** provides a tenant facing portal to create virtual networks, and an administrative portal to manage virtual networks.

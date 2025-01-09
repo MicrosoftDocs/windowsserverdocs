@@ -9,8 +9,6 @@ ms.date: 01/08/2021
 ---
 # Best Practices for running Linux on Hyper-V
 
->
-
 This topic contains a list of recommendations for running Linux virtual machine on Hyper-V.
 
 ## Tuning Linux File Systems on Dynamic VHDX Files

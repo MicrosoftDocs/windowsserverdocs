@@ -9,8 +9,6 @@ ms.date: 8/16/2016
 ---
 # All virtual network adapters should be enabled
 
->
-
 
 
 |Property|Details|

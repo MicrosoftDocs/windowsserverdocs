@@ -9,8 +9,6 @@ author: robinharwood
 ---
 # Configure VPN device tunnels in Windows client
 
->
-
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels:
 
 - _Device tunnel_ connects to specified VPN servers before users log on to the device. Pre-login connectivity scenarios and device management purposes use device tunnel.

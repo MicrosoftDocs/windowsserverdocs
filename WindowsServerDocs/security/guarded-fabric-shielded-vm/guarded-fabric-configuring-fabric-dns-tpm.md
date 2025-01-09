@@ -11,8 +11,6 @@ ms.date: 08/29/2018
 
 # Next step
 
->
-
 [!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)]
 
 > [!div class="nextstepaction"]

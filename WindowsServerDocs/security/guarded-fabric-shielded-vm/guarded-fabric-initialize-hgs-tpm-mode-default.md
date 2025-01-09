@@ -10,8 +10,6 @@ ms.date: 08/29/2018
 
 # Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
 
->
-
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]

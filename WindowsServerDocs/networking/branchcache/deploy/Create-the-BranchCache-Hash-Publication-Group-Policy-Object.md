@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Create the BranchCache Hash Publication Group Policy Object
 
->
-
 You can use this procedure to create the BranchCache hash publication Group Policy Object (GPO).
 
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.

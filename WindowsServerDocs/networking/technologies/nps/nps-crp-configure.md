@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Configure Connection Request Policies
 
->
-
 You can use this topic to create and configure connection request policies that designate whether the local NPS processes connection requests or forwards them to remote RADIUS server for processing.
 
 Connection request policies are sets of conditions and settings that allow network administrators to designate which Remote Authentication Dial-In User Service (RADIUS) servers perform the authentication and authorization of connection requests that the server running Network Policy Server \(NPS\) receives from RADIUS clients.

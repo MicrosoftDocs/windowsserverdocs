@@ -8,8 +8,6 @@ ms.date: 09/10/2018
 ---
 # Enable Always Offline mode for faster access to files
 
->
-
 This document describes how to use the Always Offline mode of Offline Files to provide faster access to cached files and redirected folders. Always Offline also provides lower bandwidth usage because users are always working offline, even when they are connected through a high-speed network connection.
 
 ## Prerequisites

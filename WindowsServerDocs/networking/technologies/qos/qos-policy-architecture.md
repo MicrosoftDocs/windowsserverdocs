@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # QoS Policy Architecture
 
->
-
 You can use this topic to learn about the architecture of QoS Policy.
 
 The following figure shows the architecture of Policy-based QoS.

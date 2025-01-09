@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Steps for Configuring the Test Lab with OTP Authentication and RSA SecurID
 
->
-
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access server and client, and test DirectAccess connectivity from the Homenet and Internet subnets.
 
 In this test lab guide you will build a Remote Access with OTP environment by performing the following steps:

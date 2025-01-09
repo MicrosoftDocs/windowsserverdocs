@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Avenues to Compromise
 
->
-
 *Law Number Seven: The most secure network is a well-administered one.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 In organizations that have experienced catastrophic compromise events, assessments usually reveal that the organizations have limited visibility into the actual state of their IT infrastructures, which may differ significantly from their "as documented" states. These variances introduce vulnerabilities that expose the environment to compromise, often with little risk of discovery until the compromise has progressed to the point at which the attackers effectively "own" the environment.

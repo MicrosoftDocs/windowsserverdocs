@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Configure a Multisite Deployment
 
->
-
  Windows Server 2016 combines DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 or Windows Server 2012 Remote Access multisite deployment.
 
 -   Step 1: [Deploy a Single DirectAccess Server with Advanced Settings](../../../directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings.md). Install and configure a single Remote Access server. The multisite deployment requires you to install a single server before configuring a multisite deployment.

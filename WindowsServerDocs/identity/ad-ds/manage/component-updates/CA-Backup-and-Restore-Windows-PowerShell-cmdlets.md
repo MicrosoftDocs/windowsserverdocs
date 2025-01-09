@@ -10,8 +10,6 @@ ms.custom: inhenkel
 ---
 
 # CA Backup and Restore Windows PowerShell cmdlets
-
->
 >
 > **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 >

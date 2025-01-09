@@ -10,8 +10,6 @@ manager: grcusanz
 ---
 # Deploy a Software Defined Network infrastructure
 
->
-
 Deploy Microsoft's Software Defined Networking (SDN) infrastructure.
 
 These deployments include all the technologies you need for a fully functional infrastructure, including Hyper-V Network Virtualization (HNV), network controllers, software load balancers (SLB/MUX), and gateways.

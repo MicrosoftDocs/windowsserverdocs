@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Remote Desktop Services architecture
 
->
-
 Below are various configurations for deploying Remote Desktop Services to host Windows apps and desktops for end-users.
 
 >[!NOTE]

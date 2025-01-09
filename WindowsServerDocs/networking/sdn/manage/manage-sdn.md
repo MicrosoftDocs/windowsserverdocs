@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Manage SDN
 
->
-
 You can use the topics in this section to manage Software Defined Networking, including tenant workloads and virtual networks.
 
 >[!NOTE]

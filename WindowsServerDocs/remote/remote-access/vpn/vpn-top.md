@@ -10,8 +10,6 @@ author: robinharwood
 
 # Virtual Private Networking (VPN)
 
->
-
 ## RAS Gateway as a Single Tenant VPN Server
 
 In Windows Server 2016, the Remote Access server role is a logical grouping of the following related network access technologies.

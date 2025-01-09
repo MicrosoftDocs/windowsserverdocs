@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Change the amount of time that clients cache referrals
 
->
-
 A referral is an ordered list of targets that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or folder with targets in the namespace. You can adjust how long clients cache a referral before requesting a new one.
 
 ## To change the amount of time that clients cache namespace root referrals

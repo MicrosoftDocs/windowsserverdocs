@@ -9,8 +9,6 @@ ms.date: 8/16/2016
 ---
 # All networks for live migration traffic should have a link speed of at least 1 Gbps
 
->
-
 |Property|Details|
 |-|-|
 |**Operating System**|Windows Server 2016|
