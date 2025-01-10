@@ -22,8 +22,6 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 >
 > For the best Azure Virtual Desktop experience that includes the latest features and updates, we recommend you download Windows App instead. For more information, see [What is Windows App](/windows-app/overview).
 
-> [!IMPORTANT]
-> To ensure a seamless experience, users are encouraged to download Windows App. Windows App is the gateway to securely connect to any devices or apps across Azure Virtual Desktop, Windows 365, and Microsoft Dev Box. For more information, see [What is Windows App](/windows-app/overview).
 
 ## Get the Remote Desktop app and start using it
 
