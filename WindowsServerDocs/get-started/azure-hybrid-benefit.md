@@ -1,6 +1,6 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
-description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Local and Windows Server at no extra cost.
+description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Local and Azure Kubernetes Service (AKS) on Azure Local and Windows Server at no extra cost.
 ms.date: 01/09/2025
 ms.topic: conceptual
 author: robinharwood
@@ -44,7 +44,7 @@ To evaluate your potential cost savings, you can use these resources:
 
 - **Azure Local:** [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/).  
 
-- **Azure Kubernetes Service (AKS):** [AKS on Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
+- **Azure Kubernetes Service (AKS):** [AKS on Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
 
 ## Getting Azure Hybrid Benefit
 
