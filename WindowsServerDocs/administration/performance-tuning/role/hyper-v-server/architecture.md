@@ -4,7 +4,7 @@ description: Learn about the Hyper-V architecture considerations to tune and imp
 ms.topic: article
 ms.author: roharwoo
 author: robinharwood
-ms.date: 05/18/2023
+ms.date: 01/10/2025
 ---
 
 # Hyper-V architecture
