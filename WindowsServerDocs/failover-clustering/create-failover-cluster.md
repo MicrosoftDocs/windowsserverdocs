@@ -180,11 +180,44 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. To enable any adapters that you want to use, select the name of the adapter, then select **Enable**. Select **Disable** for any adapters you don't want to use. When you're finished, select **Next**.
 
-1. On the **Select the adapters to use for management** page, select the adapter format that best suits your deployment, then select the servers you want to use, and finally select **Apply and test**.
+1. On the **Select the adapters to use for management** page, select one or two management adapters to use for each server. You must select at least one of the adapters for management purposes, as the wizard requires at least one dedicated physical NIC for cluster management. Once you designate an adapter for management, the wizard excludes it from the rest of the wizard workflow.
 
-1. On the **Virtual switch** page, select the virtual switch infrastructure that you want to use or select the **Skip virtual switch creation** checkbox if you want to skip this step, then select **Next**.
+    Management adapters have two configuration options:
 
-1. On the **Optionally configure RDMA** page, select the **Configure RDMA (Recommended)** checkbox if you want to configure remote direct memory access (RDMA). Select **Next**.
+    - **One physical network adapter for management**. This option supports both DHCP or static IP address assignment.
+
+    - **Two physical network adapters teamed for management**. When you team a pair of physical adapters, they only support static IP address assignment. If the one or both of the adapters use DHCP addressing, the DHCP IP addresses are converted to static IP addresses before you create the virtual switch.
+
+    By using teamed adapters, you have a single connection to multiple switches but only use a single IP address. Load-balancing becomes available and fault-tolerance is instant instead of waiting for DNS records to update.
+
+    After you select the adapters for management, do the following for each server:
+
+    - Select the **Description** checkbox. Selecting this checkbox also selects all adapters and might cause the wizard to offer you a recommendation.
+
+    - Unselect the checkboxes for the adapters you don't want to use for cluster management.
+
+    > [!NOTE]
+    > You can use 1 Gb adapters as management adapters, but we recommend using 10 Gb or faster adapters for carrying storage and workload VM traffic.
+
+1. Under the **Virtual switch** page, select one of the following options as applicable. Depending on how many network adapters there are, not all options may be available:
+
+    - Choose **Skip virtual switch creation** if you want set up virtual switches later.
+
+    - Choose **Create one virtual switch for compute and storage together** if you want to use the same virtual switch for your VMs and Storage Spaces Direct. This is the "converged" option.
+
+    - Choose **Create one virtual switch for compute only** if you want to use a virtual switch for your VMs only.
+
+    - Choose **Create two virtual switches** if you want a dedicated virtual switch each for VMs and for Storage Spaces Direct.
+
+    The following table shows which virtual switch configurations are supported and enabled for various network adapter configurations:
+
+    | Option | 1-2 adapters | 3+ adapters | Teamed adapters |
+    | :------------- | :--------- |:--------| :---------|
+    | single switch (compute + storage) | enabled | enabled  | not supported |
+    | single switch (compute only) | not supported| enabled | enabled |
+    | two switches | not supported | enabled | enabled |
+
+1. The **Optionally configure RDMA** page is optional. If you want to configure remote direct memory access (RDMA), select the **Configure RDMA (Recommended)**. When you're done, select **Apply changes**, and then select **Next**.
 
 1. On the **Define Networks** page, review and edit the Name, IP address, Subnet mask, VLAN ID, and Default gateway fields for each listed adapter.
 
@@ -192,13 +225,20 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 ### Clustering
 
-1. On the **Validate this cluster** page, select **Validate**. Validation can take several minutes. The in-wizard validation is different from the post-cluster creation validation step, which performs additional checks to catch any hardware or configuration problems before the cluster goes into production. 
+1. On the **Validate thiscluster** page, select **Validate**. Validation can take several minutes. The in-wizard validation is different from the post-cluster creation validation step, which performs additional checks to catch any hardware or configuration problems before the cluster goes into production. 
 
 1. Wait for the validation to finish, review all warnings, make changes as appropriate, and select **Validate again** as needed. When you're ready to proceed, select **Next**.
 
-1. On the **Create the cluster** page, enter a name for your cluster and specify the IP address for the cluster. When you're finished, select **Create cluster**.
+1. On the **Create the cluster** page, enter a name for your cluster and specify the IP address for the cluster. When you're finished, select **Create cluster**. The creation process can take a while to complete.
 
-1. After that, the process should finish. You can select the **Go to connections list** to view your cluster.
+    If you get the error "Failed to reach cluster through DNS," select the **Retry connectivity checks** button. You might have to wait several hours before it succeeds on larger networks due to DNS propagation delays.
+
+    > [!IMPORTANT]
+    > If the cluster creation process fails, don't select the **Back** button. Instead, select the **Retry connectivity checks button**. If you select **Back**, the Cluster Creation wizard exits prematurely, which can potentially reset the entire process.
+
+    If you encounter issues with deployment after you create the cluster and you want to restart the Cluster Creation wizard, you must remove the cluster by running the `Remove-Cluster` PowerShell cmdlet.
+
+1. Once the cluster creation process is finished, you can select the **Go to connections list** to view your cluster.
 
    >[!NOTE]
    >It might take a few minutes for the cluster you created to become accessible by name. If you don't see your cluster on the connections list, wait a few minutes and then refresh.
@@ -207,7 +247,7 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 ::: zone pivot="powershell"
 
-The following example creates a failover cluster named *MyCluster* with nodes *Server1* and *Server2*, assigns the static IP address *192.168.1.12*, and adds all eligible storage to the failover cluster.
+The following example  creates a failover cluster named *MyCluster* with nodes *Server1* and *Server2*, assigns the static IP address *192.168.1.12*, and adds all eligible storage to the failover cluster.
 
 ```PowerShell
 New-Cluster –Name MyCluster –Node Server1, Server2 –StaticAddress 192.168.1.12
