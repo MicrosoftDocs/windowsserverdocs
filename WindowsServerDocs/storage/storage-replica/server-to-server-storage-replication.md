@@ -15,6 +15,7 @@ You can use Storage Replica to configure two servers to sync data so that each h
 To manage Storage Replica you can use [Windows Admin Center](../../manage/windows-admin-center/overview.md) or PowerShell.
 
 Here's an overview video of using Storage Replica in Windows Admin Center.
+
 > [!video 310d4531-23a6-4140-8892-fecc4a65c2a1]
 
 
