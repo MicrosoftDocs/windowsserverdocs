@@ -4,41 +4,36 @@ description: Learn about the compatibility of Microsoft server applications on W
 ms.topic: article
 ms.author: roharwoo
 author: robinharwood
-manager: femila
-ms.date: 01/10/2025
+ms.date: 01/13/2025
 zone_pivot_groups: windows-os-version
 ---
 
 # Microsoft server applications compatibility for Windows Server
-We understand that application compatibility is one of the top reasons that customers choose Windows Server. Throughout the Windows Server development cycle, Microsoft regularly tests a large suite of first-party and third-party applications to ensure our products are compatible with as many applications as possible. These tests cover a wide range of third-party enterprise applications, including development tools, graphics tools, security tools, business office suites, storage management, antivirus, backup or recovery, and utilities.
+
+We understand that application compatibility is one of the top reasons that customers choose Windows Server. Throughout the Windows Server development cycle, Microsoft regularly tests a large suite of Microsoft and non-Microsoft applications to ensure our products are compatible with as many applications as possible. These tests cover a wide range of non-Microsoft enterprise applications, including development tools, graphics tools, security tools, business office suites, storage management, antivirus, backup or recovery, and utilities.
 
 The following table lists Microsoft server applications that support installation and functionality on Window Server. This information is for quick reference and isn't intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
 
 > [!TIP]
-> If you are a software vendor partner looking for more information on Windows Server compatibility with non-Microsoft applications, visit the [Commercial App Certification portal](https://commercialappcertification.microsoft.com/).
+> If you're a software vendor partner looking for more information on Windows Server compatibility with non-Microsoft applications, visit the [Commercial App Certification portal](https://commercialappcertification.microsoft.com/).
 
 :::zone pivot="windows-server-2025"
 
 > [!div class="mx-tableFixed"]
 > | Product                                | Supported on Server Core | Supported on Server with Desktop Experience | Product Web Link                                                                                                                                                                                       |
 > |----------------------------------------|--------------------------|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-> | Azure DevOps Server 2022.2             | ✅&sup1;                  | ✅                                          | [Azure DevOps Server 2022 Update 2 Release Notes](/azure/devops/server/release-notes/azuredevops2022u2)                                                                                                 |
 > | Configuration Manager (version 2409)   | ✅&sup2;                  | ✅                                          | [Support for Windows Server 2025](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2409#operating-system-support-added-for-windows-11-24h2-and-windows-server-2025)                         |
 > | Exchange Server                        | ✅                        | ✅                                          | [Exchange Server supportability matrix](/exchange/plan-and-deploy/supportability-matrix)                                                                                                                |
-> | Host Integration Server 2020           | ✅                        | ✅                                          | [HIS 2020 - What's New, Release Notes, System Requirements, and Installation](/host-integration-server/install-and-config-guides/system-requirements-2020)                                              |
 > | Microsoft 365 Apps                     | ❌                        | ✅                                          | [Windows and Office configuration support matrix](https://aka.ms/windows-office-support-matrix)                                                                                                         |
-> | Office Online Server                   | ❌                        | ✅                                          | [Plan Office Online Server](/officeonlineserver/plan-office-online-server)                                                                                                                              |
 > | Project Server Subscription Edition    | ✅                        | ✅                                          | [Software requirements for Project Server Subscription Edition](/project/software-requirements-project-server-subscription-edition)                                                                     |
 > | SharePoint Server Subscription Edition | ✅                        | ✅                                          | [System requirements for SharePoint Server Subscription edition](/sharepoint/install/system-requirements-for-sharepoint-subscription-edition)                                                           |
-> | SQL Server 2017                        | ✅&sup1;                  | ✅                                          | [Hardware and Software Requirements for Installing SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017&preserve-view=true)       |
 > | SQL Server 2019                        | ✅&sup1;                  | ✅                                          | [Hardware and Software Requirements for Installing SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver15&preserve-view=true) |
 > | SQL Server 2022                        | ✅&sup1;                  | ✅                                          | [Hardware and Software Requirements for Installing SQL Server 2022](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022?view=sql-server-ver16&preserve-view=true) |
 > | System Center Data Protection Manager  | ✅&sup1;                  | ✅                                          | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/prepare-environment-for-dpm)                                                                                  |
 > | System Center Operations Manager       | ✅&sup1;                  | ✅                                          | [System requirements for System Center Operations Manager](/system-center/scom/system-requirements)                                                                                                     |
 > | System Center Virtual Machine Manager  | ✅&sup1;                  | ✅                                          | [System requirements for System Center Virtual Machine Manager](/system-center/vmm/system-requirements)                                                                                                 |
-> | Visual Studio 2022                     | ✅&sup1;                  | ✅                                          | [Visual Studio 2022 Product Family System Requirements](/visualstudio/releases/2022/system-requirements)                                                                                                |
 
-1. May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
+1. Might have limitations or require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
 For more information, see specific product or Feature on Demand documentation.
 
 2. Yes, as a managed client and distribution point but not as a site server.
@@ -69,12 +64,12 @@ For more information, see specific product or Feature on Demand documentation.
 > | System Center Operations Manager 2022      | ✅&sup1;                  | ✅                                           | [System requirements for System Center Operations Manager](/system-center/scom/system-requirements?view=sc-om-2022&preserve-view=true)                                                                   |
 > | System Center Virtual Machine Manager 2022 | ✅&sup1;                  | ✅                                           | [System requirements for System Center Virtual Machine Manager](/system-center/vmm/system-requirements?view=sc-vmm-2022&preserve-view=true)                                                              |
 
-1. May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
+1. Might have limitations or require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
 For more information, see specific product or Feature on Demand documentation.
 
 2. Yes, as a managed client and distribution point but not as a site server.
 
-3. Yes as a backup workload but not as a DPM server.
+3. Yes as a backup workload but not as a Data Protection Manager server.
 
 4. Yes as an agent but not as a Management Server.
 
@@ -107,7 +102,7 @@ For more information, see specific product or Feature on Demand documentation.
 > | System Center Operations Manager 2019      | ✅&sup1;                  | ✅                                           | [System requirements for System Center Operations Manager](/system-center/scom/plan-system-requirements)                                                                                                                 |
 > | System Center Virtual Machine Manager 2019 | ✅&sup1;                  | ✅                                           | [System requirements for System Center Virtual Machine Manager](/system-center/vmm/system-requirements)                                                                                                                  |
 
-1. May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
+1. Might have limitations or require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
 For more information, see specific product or Feature on Demand documentation.
 
 2. Yes, as a managed client and distribution point but not as a site server.
