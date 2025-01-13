@@ -11939,6 +11939,11 @@
       "source_path": "WindowsServerDocs/hyperconverged/index.yml",
       "redirect_url": "/windows-server/",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/hyper-v-storage-architecture.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/storage-architecture",
+      "redirect_document_id": true
     }
   ]
 }
