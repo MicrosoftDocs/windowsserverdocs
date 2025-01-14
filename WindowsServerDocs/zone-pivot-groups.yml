@@ -37,4 +37,4 @@ groups:
   - id: windows-server
     title: Windows Server
   - id: windows
-    title: Windows      
+    title: Windows
