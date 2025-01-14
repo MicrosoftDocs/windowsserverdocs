@@ -70,13 +70,7 @@ items:
     - name: Server Core App Compatibility Feature on Demand
       href: server-core-app-compatibility-feature-on-demand.md
     - name: Microsoft server applications compatibility
-      items:
-      - name: Windows Server 2022
-        href: application-compatibility-windows-server-2022.md
-      - name: Windows Server 2019
-        href: application-compatibility-windows-server-2019.md
-      - name: Windows Server 2016
-        href: application-compatibility-windows-server-2016.md
+      href: application-compatibility.md
     - name: Azure Hybrid Benefit for Windows Server
       href: azure-hybrid-benefit.md
     - name: What is Hotpatch?
