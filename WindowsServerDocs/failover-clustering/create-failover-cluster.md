@@ -5,7 +5,7 @@ ms.topic: article
 author: robinharwood
 ms.author: roharwoo
 manager: lizross
-ms.date: 1/06/2025
+ms.date: 1/15/2025
 zone_pivot_groups: failover-clustering-management-tools
 ---
 # Create a failover cluster
@@ -25,16 +25,20 @@ Before you begin, verify the following prerequisites:
 - To add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
 
 - Make sure that all servers that you want to add as cluster nodes are joined to the same Active Directory domain and in the same time zone as your local domain controller.
+
 - Ensure that the domain controller isn't hosted on any of the machines in the cluster.
 
 - (Optional) Create an organizational unit (OU) and move the computer accounts for the servers that you want to add as cluster nodes into the OU. We recommend that you place failover clusters in their own OU in AD DS. Creating an OU gives you more control over which Group Policy settings or security template settings affect the cluster nodes. Isolating clusters in their own OU also helps prevent accidental deletion of cluster computer objects.
+
 If you're using Windows Admin Center to create the cluster:
 
 - Install the latest version of Windows Admin Center on a PC or server for management. See [Install Windows Admin Center](../manage/windows-admin-center/deploy/install).
-- Ensure that Windows Admin Center and your domain controller aren't installed on the same system. 
-- If you're running Windows Admin Center on a server (instead of a local PC), use an account that's a member of the Gateway Administrators group, or the local Administrators group on the Windows Admin Center server.
-- Verify that your Windows Admin Center management computer is joined to the same Active Directory domain in which you create the cluster or joined to a fully trusted domain. The servers that you cluster don't need to belong to the domain yet; they can be added to the domain during cluster creation.
 
+- Ensure that Windows Admin Center and your domain controller aren't installed on the same system. 
+
+- If you're running Windows Admin Center on a server (instead of a local PC), use an account that's a member of the Gateway Administrators group, or the local Administrators group on the Windows Admin Center server.
+
+- Verify that your Windows Admin Center management computer is joined to the same Active Directory domain in which you create the cluster or joined to a fully trusted domain. The servers that you cluster don't need to belong to the domain yet; they can be added to the domain during cluster creation.
 
 Also, make sure that you verify the following account requirements:
 
@@ -46,8 +50,8 @@ Also, make sure that you verify the following account requirements:
 
   - If the user doesn't have the **Create Computer objects** permission, ask a domain administrator to prestage a cluster computer object for the cluster. For more information, see [Prestage Cluster Computer Objects in Active Directory Domain Services](prestage-cluster-adds.md).
 
-> [!NOTE]
-> This requirement doesn't apply if you want to create an Active Directory-detached cluster. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
+  > [!NOTE]
+  > This requirement doesn't apply if you want to create an Active Directory-detached cluster. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
 ::: zone pivot="powershell"
 
@@ -167,14 +171,16 @@ To start the Create Cluster wizard in Windows Admin Center:
    - Servers in two sites (for stretched cluster)
 
 1. When you're finished, select **Create**. The Create Cluster wizard should open.
-Proceed to the next step in the cluster creation workflow, Step 1: Get started.
+
+Proceed to the next step in the cluster creation workflow, [Step 1: Get started](#step-1-get-started).
+
 ### Step 1: Get started
 
 Step 1 of the wizard walks you through making sure all prerequisites are met, adding the server nodes, installing needed features, and then restarting each server if needed.
 
 1. On the **Check the prerequisites** page, make sure your server and network meet all prerequisites, then select **Next**.
 
-1. On the **Add servers** page, enter your account username using the format domain\username. Enter your password, then click Next. This account must be a member of the local Administrators group on each server.
+1. On the **Add servers** page, enter your account username using the format domain\username. Enter your password, then select **Next**. This account must be a member of the local Administrators group on each server.
 
 1. Specify the first server you want to use in the cluster, and then select **Add**. When you're finished adding servers, select **Next**.
 
@@ -186,7 +192,7 @@ Step 1 of the wizard walks you through making sure all prerequisites are met, ad
 
 ### Step 2: Networking
 
-Step 2 of the wizard walks you through configuring the host networking elements for your cluster. 
+Step 2 of the wizard walks you through configuring the host networking elements for your cluster.
 
 1. On the **Check the network adapters** page, a popup window might ask if you want to remove existing virtual switches. Select **Yes** to delete any older virtual switches and let Windows Admin Center create the appropriate switches, unless you intentionally created them and want to preserve the switches.
 
@@ -239,7 +245,7 @@ Step 2 of the wizard walks you through configuring the host networking elements 
 
 Step 3 of the wizard makes sure everything is set up correctly so far and then creates the cluster. 
 
-1. On the **Validate thiscluster** page, select **Validate**. Validation can take several minutes. The in-wizard validation is different from the post-cluster creation validation step, which performs additional checks to catch any hardware or configuration problems before the cluster goes into production. 
+1. On the **Validate this cluster** page, select **Validate**. Validation can take several minutes. The in-wizard validation is different from the post-cluster creation validation step, which performs additional checks to catch any hardware or configuration problems before the cluster goes into production. 
 
 1. Wait for the validation to finish, review all warnings, make changes as appropriate, and select **Validate again** as needed. When you're ready to proceed, select **Next**.
 
