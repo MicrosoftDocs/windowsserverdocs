@@ -32,9 +32,9 @@ Before you begin, verify the following prerequisites:
 
 If you're using Windows Admin Center to create the cluster:
 
-- Install the latest version of Windows Admin Center on a PC or server for management. See [Install Windows Admin Center](../manage/windows-admin-center/deploy/install).
+- Install the latest version of Windows Admin Center on a PC or server for management. See [Install Windows Admin Center](../manage/windows-admin-center/deploy/install.md).
 
-- Ensure that Windows Admin Center and your domain controller aren't installed on the same system. 
+- Ensure that Windows Admin Center and your domain controller aren't installed on the same system.
 
 - If you're running Windows Admin Center on a server (instead of a local PC), use an account that's a member of the Gateway Administrators group, or the local Administrators group on the Windows Admin Center server.
 
@@ -302,9 +302,9 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 1. If the **Select Servers** page appears, in the **Enter name** box enter the NetBIOS name or the fully qualified domain name of a server that you plan to add as a failover cluster node, then select **Add**. Repeat this step for each server that you want to add. To add multiple servers at the same time, separate the names by a comma or a semicolon. For example, enter the names in the format *server1.contoso.com; server2.contoso.com*. When you're finished, select **Next**.
 
     > [!NOTE]
-    > If you chose to create the cluster immediately after running validation in the [configuration validating procedure](#clustering), you won't see the **Select Servers** page. The nodes you validated are automatically added to the Create Cluster Wizard so that you don't have to enter them again.
+    > If you chose to create the cluster immediately after running validation in the [configuration validating procedure](#step-3-clustering), you won't see the **Select Servers** page. The nodes you validated are automatically added to the Create Cluster Wizard so that you don't have to enter them again.
 
-1. If you skipped validation earlier, the **Validation Warning** page appears. We strongly recommend that you run cluster validation. Microsoft only supports clusters that pass all validation tests. To run the validation tests, select **Yes**, and then select **Next**. Complete the Validate a Configuration Wizard as described in [Clustering](#clustering).
+1. If you skipped validation earlier, the **Validation Warning** page appears. We strongly recommend that you run cluster validation. Microsoft only supports clusters that pass all validation tests. To run the validation tests, select **Yes**, and then select **Next**. Complete the Validate a Configuration Wizard as described in [Step 3: Clustering](#step-3-clustering).
 
 1. On the **Access Point for Administering the Cluster** page, do the following:
 
