@@ -71,7 +71,7 @@ You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. F
 
 - **Windows Server Standard edition:** Licenses must be used either on-premises or in Azure, but not at the same time. The only exception is on a one-time basis, for up to 180 days, to allow you to migrate the same workloads to Azure.  
 
-- **Windows Server Datacenter edition:** For VM Licensing, licenses allow simultaneous usage on-premises and in Azure indefinitely. For Dedicated Host Licensing, licenses allow simultaneous usage on-premises and in Azure for a period of 180 days from when the licenses are allocated to Azure.
+- **Windows Server Datacenter edition:** For VM Licensing, when migrating workloads to Azure, licenses allow simultaneous usage on-premises and in Azure indefinitely. For Dedicated Host Licensing, licenses allow simultaneous usage on-premises and in Azure for a period of 180 days from when the licenses are allocated to Azure.
 
 #### Unlimited virtualization
 
