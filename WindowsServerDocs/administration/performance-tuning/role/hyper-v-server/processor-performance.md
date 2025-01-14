@@ -19,6 +19,8 @@ The virtual machine (VM) integration services include enlightened drivers for th
 
 Assess your workload to determine the processor requirements to avoid under or over provisioning. Use the results of your assessment to configure number of virtual processors required. Increase the number of virtual processors if the VM requires more processing resources under peak load. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
 
+When using Simultaneous multithreading (SMT) it's recommended to use virtual processors in multiples of two. To learn more about SMT, see [Manage Hyper-V hypervisor scheduler types](../../../../virtualization/hyper-v/manage/manage-hyper-v-scheduler-types.md).
+
 ## Background activity
 
 Minimizing the background activity in idle VMs releases CPU cycles that other VMs use. Windows guests typically use less than one percent of a CPU when they're idle. The following are best practices to minimize background CPU usage of a VM:
