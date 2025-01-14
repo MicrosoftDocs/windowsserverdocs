@@ -11921,6 +11921,21 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2016.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2019.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
       "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
       "redirect_document_id": true
