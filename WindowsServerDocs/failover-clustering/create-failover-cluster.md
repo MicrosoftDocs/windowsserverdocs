@@ -24,9 +24,17 @@ Before you begin, verify the following prerequisites:
 
 - To add clustered storage during cluster creation, make sure that all servers can access the storage. (You can also add clustered storage after you create the cluster.)
 
-- Make sure that all servers that you want to add as cluster nodes are joined to the same Active Directory domain.
+- Make sure that all servers that you want to add as cluster nodes are joined to the same Active Directory domain and in the same time zone as your local domain controller.
+- Ensure that the domain controller isn't hosted on any of the machines in the cluster.
 
 - (Optional) Create an organizational unit (OU) and move the computer accounts for the servers that you want to add as cluster nodes into the OU. We recommend that you place failover clusters in their own OU in AD DS. Creating an OU gives you more control over which Group Policy settings or security template settings affect the cluster nodes. Isolating clusters in their own OU also helps prevent accidental deletion of cluster computer objects.
+If you're using Windows Admin Center to create the cluster:
+
+- Install the latest version of Windows Admin Center on a PC or server for management. See [Install Windows Admin Center](../manage/windows-admin-center/deploy/install).
+- Ensure that Windows Admin Center and your domain controller aren't installed on the same system. 
+- If you're running Windows Admin Center on a server (instead of a local PC), use an account that's a member of the Gateway Administrators group, or the local Administrators group on the Windows Admin Center server.
+- Verify that your Windows Admin Center management computer is joined to the same Active Directory domain in which you create the cluster or joined to a fully trusted domain. The servers that you cluster don't need to belong to the domain yet; they can be added to the domain during cluster creation.
+
 
 Also, make sure that you verify the following account requirements:
 
@@ -159,12 +167,14 @@ To start the Create Cluster wizard in Windows Admin Center:
    - Servers in two sites (for stretched cluster)
 
 1. When you're finished, select **Create**. The Create Cluster wizard should open.
+Proceed to the next step in the cluster creation workflow, Step 1: Get started.
+### Step 1: Get started
 
-### Deploy a Windows Server cluster
+Step 1 of the wizard walks you through making sure all prerequisites are met, adding the server nodes, installing needed features, and then restarting each server if needed.
 
 1. On the **Check the prerequisites** page, make sure your server and network meet all prerequisites, then select **Next**.
 
-1. On the **Add servers** page, enter a username and password for the administrator account you want to use to contact the servers.
+1. On the **Add servers** page, enter your account username using the format domain\username. Enter your password, then click Next. This account must be a member of the local Administrators group on each server.
 
 1. Specify the first server you want to use in the cluster, and then select **Add**. When you're finished adding servers, select **Next**.
 
@@ -174,7 +184,9 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. On the **Restart servers** page, restart the servers if the new features you installed require a restart. When you're finished, select **Next: Networking**.
 
-### Networking
+### Step 2: Networking
+
+Step 2 of the wizard walks you through configuring the host networking elements for your cluster. 
 
 1. On the **Check the network adapters** page, a popup window might ask if you want to remove existing virtual switches. Select **Yes** to delete any older virtual switches and let Windows Admin Center create the appropriate switches, unless you intentionally created them and want to preserve the switches.
 
@@ -194,7 +206,7 @@ To start the Create Cluster wizard in Windows Admin Center:
 
     - Select the **Description** checkbox. Selecting this checkbox also selects all adapters and might cause the wizard to offer you a recommendation.
 
-    - Unselect the checkboxes for the adapters you don't want to use for cluster management.
+    - Clear the checkboxes for the adapters you don't want to use for cluster management.
 
     > [!NOTE]
     > You can use 1 Gb adapters as management adapters, but we recommend using 10 Gb or faster adapters for carrying storage and workload VM traffic.
@@ -223,13 +235,15 @@ To start the Create Cluster wizard in Windows Admin Center:
 
 1. Select **Apply and test** to verify the configuration for your nodes. If everything looks okay, select **Next: Clustering**.
 
-### Clustering
+### Step 3: Clustering
+
+Step 3 of the wizard makes sure everything is set up correctly so far and then creates the cluster. 
 
 1. On the **Validate thiscluster** page, select **Validate**. Validation can take several minutes. The in-wizard validation is different from the post-cluster creation validation step, which performs additional checks to catch any hardware or configuration problems before the cluster goes into production. 
 
 1. Wait for the validation to finish, review all warnings, make changes as appropriate, and select **Validate again** as needed. When you're ready to proceed, select **Next**.
 
-1. On the **Create the cluster** page, enter a name for your cluster and specify the IP address for the cluster. When you're finished, select **Create cluster**. The creation process can take a while to complete.
+1. On the **Create the cluster** page, enter a unique name for your cluster and specify the IP address for the cluster. When you're finished, select **Create cluster**. The creation process can take a while to complete.
 
     If you get the error "Failed to reach cluster through DNS," select the **Retry connectivity checks** button. You might have to wait several hours before it succeeds on larger networks due to DNS propagation delays.
 
