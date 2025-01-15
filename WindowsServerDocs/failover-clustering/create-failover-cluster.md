@@ -219,7 +219,7 @@ Step 2 of the wizard walks you through configuring the host networking elements 
 
 1. Under the **Virtual switch** page, select one of the following options as applicable. Depending on how many network adapters there are, not all options may be available:
 
-    - Choose **Skip virtual switch creation** if you want set up virtual switches later.
+    - Choose **Skip virtual switch creation** if you want to set up virtual switches later.
 
     - Choose **Create one virtual switch for compute and storage together** if you want to use the same virtual switch for your VMs and Storage Spaces Direct. This is the "converged" option.
 
