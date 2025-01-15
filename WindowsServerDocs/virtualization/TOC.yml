@@ -83,7 +83,7 @@
       - name: Enable Nested Virtualization
         href: /virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Hyper-V storage architectures
-        href: hyper-v/hyper-v-storage-architecture.md
+        href: hyper-v/storage-architecture.md
       - name: Use GPUs with clustered VMs
         href: hyper-v/deploy/use-gpu-with-clustered-vm.md
     - name: Manage
@@ -114,6 +114,8 @@
         href: hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md
       - name: Set up Hyper-V Replica
         href: hyper-v/manage/Set-up-Hyper-V-Replica.md
+      - name: Configure multiple CSV for VM replication
+        href: hyper-v/manage/configure-multiple-csv-for-vm-replication.md  
       - name: Enable Intel Performance Monitoring Hardware
         href: hyper-v/manage/Performance-Monitoring-Hardware.md
       - name: Enable processor compatibility mode
