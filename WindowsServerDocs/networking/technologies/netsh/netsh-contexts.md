@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 ms.author: alalve
 author: xelu86
-ms.date: 10/02/2023
+ms.date: 01/15/2025
 ---
 
 # Netsh command syntax, contexts, and formatting
