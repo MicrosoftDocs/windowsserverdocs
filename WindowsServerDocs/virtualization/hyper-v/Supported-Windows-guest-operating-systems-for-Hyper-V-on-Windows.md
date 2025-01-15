@@ -4,7 +4,7 @@ description: Lists the Windows operating systems supported for use as a guest in
 ms.topic: conceptual
 ms.author: roharwoo
 author: robinharwood
-ms.date: 01/14/2025
+ms.date: 01/15/2025
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server and Azure Local
 
@@ -20,7 +20,7 @@ Following are the versions of Windows Server that are supported as guest operati
 
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|
 |-------------------------------------|----------------------------------------|------------------------|---------|
-|Windows Server 2025 |2,048 for generation 2;<br>64 for generation 1;<br>2,048 available to the host OS (root partition)|Built-in| Maximum number of virtual processors depends on the host OS. For example, Windows Server 2025 can provide up to 2,048 virtual processors.<br>Hosted on Azure Local, version 22H3 and later. |
+|Windows Server 2025 |2,048 for generation 2;<br>64 for generation 1;<br>2,048 available to the host OS (root partition)|Built-in| Maximum number of virtual processors depends on the host OS. For example, Windows Server 2025 can provide up to 2,048 virtual processors.<br>Hosted on Azure Local, version 23H2 and later with Windows Server subscription. |
 |Windows Server 2022 |1,024 for generation 2;<br>64 for generation 1;<br>1,024 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2019 and later, Azure Local, version 22H2 and later.|
 |Windows Server 2019 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
 |Windows Server 2016 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
