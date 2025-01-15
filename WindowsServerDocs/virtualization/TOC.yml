@@ -114,6 +114,8 @@
         href: hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md
       - name: Set up Hyper-V Replica
         href: hyper-v/manage/Set-up-Hyper-V-Replica.md
+      - name: Configure multiple CSV for VM replication
+        href: hyper-v/manage/configure-multiple-csv-for-vm-replication.md  
       - name: Enable Intel Performance Monitoring Hardware
         href: hyper-v/manage/Performance-Monitoring-Hardware.md
       - name: Enable processor compatibility mode
