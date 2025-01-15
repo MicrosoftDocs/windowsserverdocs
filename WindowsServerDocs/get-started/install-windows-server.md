@@ -17,8 +17,8 @@ The following are required before installing Windows Server:
 
 - Your device must meet the minimum hardware requirements. To learn more, see [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements).
 - A minimum of an 8 GB USB flash drive.
-- An optical drive capable of burning a DVD+/-RW dual-layer disk
-- A dual-layer 8.5 GB DVD
+- An optical drive capable of burning a DVD+/-RW dual-layer disk.
+- A dual-layer 8.5 GB DVD.
 
 > [!NOTE]
 > For users who desire to install Windows Server in a virtual environment through Windows Hyper-V, the minimum RAM requirements differ. To learn more, see the [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements?tabs=ram&pivots=windows-server-2025#components) components tab.
@@ -28,6 +28,7 @@ The following are required before installing Windows Server:
 An alternative to manually preparing your USB drive, users can run the following script to make the USB drive bootable. The Windows Server installation ISO file must be mounted before running this script. To mount the ISO file, perform the following steps:
 
 1. Locate your Windows Server installation ISO file.
+
 1. Right-click on your ISO file and select **Mount**.
 
 Mounting the ISO file creates a virtual optical drive, with its own drive letter, where users can migrate the ISO contents to their USB drive.
@@ -113,7 +114,7 @@ Start-Sleep -Seconds 2
 > [!TIP]
 > This step is optional, but recommended to ensure that data integrity is verified against any errors or discrepancies between the burned disk and the original ISO image. Select the **Verify disc after burning** checkbox to detect any differences.
 
-## Install Windows Server via media
+## Install Windows Server
 
 Before you can install Windows Server via USB or DVD, the computer's boot order in the BIOS must be changed to ensure that the system boots from either the USB or DVD. Accessing the BIOS can vary depending on your hardware. In most cases, you can access the BIOS by pressing a specific key while your device boots. Typically, the key is either **F2**, **F10**, **F12**, or **Delete**. Refer to the user manual for your device. Repeatedly press one of these keys as soon as you turn on your device.
 
@@ -131,6 +132,7 @@ Once modifications are made to the boot order, follow these steps to install Win
 1. Under **Choose a licensing method**, select the option that best serves your environment, then select **Next**:
   
    1. **Use a product key** - This option is for users who have an OEM, Retail, or Volume License (VL) key. If this license type is selected, proceed with the next steps.
+
    1. **Pay-as-you-go** - This option is for users who desire to use their Azure subscription license. This option is only available for Windows Server 2025 and has its own set of [prerequisites](/windows-server/get-started/windows-server-pay-as-you-go?tabs=gui%2Cazureportal#prerequisites). If this license type is selected, see [Set up Windows Server Pay-as-you-go](/windows-server/get-started/windows-server-pay-as-you-go?tabs=gui%2Cazureportal#set-up-windows-server-pay-as-you-go) to continue the installation process.
   
 1. Under **Select image**, select your Windows Server version, then select **Next**.
@@ -151,6 +153,7 @@ Once modifications are made to the boot order, follow these steps to install Win
 1. Under **Choose a licensing method**, select the option that best serves your environment, then select **Next**:
   
    1. **Use a product key** - This option is for users who have an OEM, Retail, or Volume License (VL) key. If this license type is selected, proceed with the next steps.
+
    1. **Pay-as-you-go** - This option is for users who desire to use their Azure subscription license. This option is only available for Windows Server 2025 and has its own set of [prerequisites](/windows-server/get-started/windows-server-pay-as-you-go?tabs=gui%2Cazureportal#prerequisites). If this license type is selected, see [Set up Windows Server Pay-as-you-go](/windows-server/get-started/windows-server-pay-as-you-go?tabs=gui%2Cazureportal#set-up-windows-server-pay-as-you-go) to continue the installation process.
   
 1. Under **Select image**, select your Windows Server version, then select **Next**.
@@ -164,6 +167,7 @@ Once modifications are made to the boot order, follow these steps to install Win
 1. Review the **Send Diagnostic data to Microsoft** information. Select one of the two options for how much diagnostic data is shared, then hit the **Enter** button:
 
    1. Required
+
    1. Required plus Optional
 
 To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (SConfig). To learn more, see [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig) and [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer).
