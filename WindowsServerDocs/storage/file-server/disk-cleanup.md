@@ -5,7 +5,7 @@ ms.reviewer: cosmosdarwin
 author: xelu86
 ms.author: alalve
 ms.topic: article
-ms.date: 09/28/2023
+ms.date: 01/15/2025
 ---
 
 # Use Disk Cleanup on Windows Server
@@ -21,7 +21,7 @@ You can also run Disk Cleanup by using the [cleanmgr Windows command](../../admi
 
 ## Enable Disk Cleanup on previous versions of Windows Server
 
-The Disk Cleanup tool (cleanmgr.exe) isn't present by default prior to versions of Windows Server 2016 unless you have the Desktop Experience feature installed. Follow these steps to use the Add Roles and Features Wizard to install the Desktop Experience:
+The Disk Cleanup tool (cleanmgr.exe) isn't present by default before versions of Windows Server 2016 unless you have the Desktop Experience feature installed. Follow these steps to use the Add Roles and Features Wizard to install the Desktop Experience:
 
 1. If Server Manager is already open, go to the next step. If Server Manager isn't open yet, launch it by doing one of the following options.
 
@@ -35,7 +35,7 @@ The Disk Cleanup tool (cleanmgr.exe) isn't present by default prior to versions 
 
 1. On the **Select installation type** page, select **Role-based or feature-based installation** to install all parts features on a single server. Select **Next**.
 
-1. On the **Select destination server** page, select a server from the server pool, or select an offline VHD. Select **Next**.
+1. On the **Select destination server** page, select a server from the server pool, or select an offline `.VHD` file. Select **Next**.
 
 1. On the **Select server roles** page, select **Next**.
 
@@ -55,7 +55,7 @@ To use cleanmgr.exe, install the Desktop Experience as described earlier, or cop
 
 | Operating System  | Architecture  | File Location  |
 | ----------------- | -------------- | --------------- |
-| Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da\cleanmgr.exe
+| Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da\cleanmgr.exe |
 | Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr.resources_31bf3856ad364e35_6.1.7600.16385_en-us_b9cb6194b257cc63\cleanmgr.exe.mui |
 
 Locate cleanmgr.exe and move the file to **%systemroot%\System32**.
