@@ -20,9 +20,9 @@ The following are required on your device before proceeding:
 - Sufficient disk space for successful storage migration.
 
 > [!NOTE]
-> During the replication process, be aware that the hardware and network you use affects the services that rely on them. Depending on the amount of data replicated between the source and target systems, this process consumes a large amount of system resources. Your device performance is impacted until this process completes.
+> During the replication process, the hardware and network you use affects the services that rely on them. Depending on the amount of data replicated between the source and target systems, this process consumes a large amount of system resources. Your device performance is impacted until this process completes.
 
-## Configure multiple CSV location
+## Configure multiple CSV locations
 
 When copying VMs through a replication process, it's possible to use multiple storage volumes to store the replicated data. There are two methods to configure new replication locations, through the Hyper-V Manager UI or via PowerShell.
 
