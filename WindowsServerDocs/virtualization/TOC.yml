@@ -83,7 +83,7 @@
       - name: Enable Nested Virtualization
         href: /virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Hyper-V storage architectures
-        href: hyper-v/hyper-v-storage-architecture.md
+        href: hyper-v/storage-architecture.md
       - name: Use GPUs with clustered VMs
         href: hyper-v/deploy/use-gpu-with-clustered-vm.md
     - name: Manage
