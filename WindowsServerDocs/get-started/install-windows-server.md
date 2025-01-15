@@ -3,8 +3,8 @@ title: Create installation media for deploying Windows Server
 description: Learn how to create a bootable USB flash drive or DVD media to deploy Windows Server on physical and virtual hardware.
 ms.date: 01/15/2025
 ms.topic: how-to
-author: alalve
-ms.author: xelu86
+author: xelu86
+ms.author: alalve
 ---
 
 # How to install Windows Server from installation media
