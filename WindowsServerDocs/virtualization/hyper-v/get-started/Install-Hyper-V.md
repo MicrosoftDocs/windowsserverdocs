@@ -5,9 +5,10 @@ ms.topic: how-to
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/25/2024
+ms.date: 01/15/2025
 zone_pivot_groups: windows
 ---
+
 # Install Hyper-V
 
 :::zone pivot="windows-server"

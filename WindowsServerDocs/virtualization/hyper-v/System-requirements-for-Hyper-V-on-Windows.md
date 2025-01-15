@@ -5,19 +5,19 @@ ms.topic: article
 ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/25/2024
+ms.date: 01/15/2025
 zone_pivot_groups: windows
 ---
 
 # System requirements for Hyper-V on Windows and Windows Server
 
-Hyper-V has specific hardware requirements, and some Hyper-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper-V the way you plan to.
+Hyper-V has specific hardware requirements, and some Hyper-V features have other requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper-V the way you plan to.
 
 :::zone pivot="windows-server"
 
 Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper-V exceed the general minimum requirements for Windows Server because a virtualization environment requires more computing resources.
 
-If you're already using Hyper-V, it's likely that you can use your existing hardware. The general hardware requirements haven't changed significantly from  Windows Server 2012 R2. But, you need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described below. Other than that, the main difference in hardware is that second-level address translation (SLAT) is now required instead of recommended.
+If you're already using Hyper-V, it's likely that you can use your existing hardware. The general hardware requirements have changed minimally from  Windows Server 2012 R2. But, you need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described below. Other than that, the main difference in hardware is that second-level address translation (SLAT) is now required instead of recommended.
 
 For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server](../hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md).
 
@@ -80,9 +80,9 @@ This section lists the requirements for discrete device assignment and shielded 
 
   - Access control services (ACS) on PCI Express root ports.
 
-- The firmware tables must expose the I/O MMU to the Windows hypervisor. Note that this feature might be turned off in the UEFI or BIOS. For instructions, see the hardware documentation or contact your hardware manufacturer.
+- The firmware tables must expose the I/O MMU to the Windows hypervisor. This feature might be turned off in the UEFI or BIOS. For instructions, see the hardware documentation or contact your hardware manufacturer.
 
-**Devices** need GPU or nonvolatile memory express (NVMe). For GPU, only certain devices support discrete device assignment. To verify, see the hardware documentation or contact your hardware manufacturer. For details about this feature, including how to use it and considerations, see [Discrete Device Assignment -- Description and background](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-description-and-background/ba-p/382262) in the Virtualization blog.
+**Devices** need GPU or nonvolatile memory express (NVMe). For GPU, only certain devices support discrete device assignment. To verify, see the hardware documentation or contact your hardware manufacturer. For details about this feature, including how to use it and considerations, see [Discrete Device Assignment--Description and background](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-description-and-background/ba-p/382262) in the Virtualization blog.
 
 :::zone pivot="windows-server"
 
@@ -110,7 +110,7 @@ These virtual machines rely on virtualization-based security and are available s
 
 ## Final Check
 
-If all OS, hardware and compatibility requirements are met then you will see **Hyper-V** in **Control Panel: Turn Windows features on or off** and it will have 2 options.
+If all OS, hardware and compatibility requirements are met then you see **Hyper-V** in **Control Panel: Turn Windows features on or off** and it has 2 options.
 
 1. Hyper-V platform
 1. Hyper-V Management Tools

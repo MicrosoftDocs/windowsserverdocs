@@ -5,23 +5,16 @@ ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 ms.author: roharwoo
 author: robinharwood
-ms.date: 01/08/2025
+ms.date: 01/15/2025
 ms.subservice: core-os
 zone_pivot_groups: windows
 ---
+
 # Hyper-V Technology Overview
-
-:::zone pivot="windows-server"
-
-::: zone-end
-
-:::zone pivot="windows"
-
-::: zone-end
 
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.
 
-Hyper-V runs each virtual machine in its own isolated space, which means you can run more than one virtual machine on the same hardware at the same time. You might want to do this to avoid problems such as a crash affecting the other workloads, or to give different people, groups or services access to different systems.
+Hyper-V runs each virtual machine in its own isolated space, which means you can run more than one virtual machine on the same hardware at the same time. You might want to do this to avoid problems such as a crash affecting the other workloads, or to give different people, groups, or services access to different systems.
 
 ## Some ways Hyper-V can help you
 
@@ -29,7 +22,7 @@ Hyper-V can help you:
 
 - **Establish or expand a private cloud environment.** Provide more flexible, on-demand IT services by moving to or expanding your use of shared resources and adjust utilization as demand changes.
 
-- **Use your hardware more effectively.** Consolidate servers and workloads onto fewer, more powerful physical computers to use less power and physical space.
+- **Use your hardware more effectively.** Consolidate servers and workloads onto fewer, more powerful physical computers to use less power, and physical space.
 
 - **Improve business continuity.** Minimize the impact of both scheduled and unscheduled downtime of your workloads.
 
@@ -39,9 +32,9 @@ Hyper-V can help you:
 
 ## Hyper-V and other virtualization products
 
-Hyper-V in Windows and Windows Server replaces older hardware virtualization products, such as Microsoft Virtual PC, Microsoft Virtual Server, and Windows Virtual PC. Hyper-V offers networking, performance, storage and security features not available in these older products.
+Hyper-V in Windows and Windows Server replaces older hardware virtualization products, such as Microsoft Virtual PC, Microsoft Virtual Server, and Windows Virtual PC. Hyper-V offers networking, performance, storage, and security features not available in these older products.
 
-Hyper-V and most third-party virtualization applications that require the same processor features aren't compatible. That's because the processor features, known as hardware virtualization extensions, are designed to not be shared. For details, see [Virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard](https://support.microsoft.com/kb/3204980).
+Hyper-V and most third-party virtualization applications that require the same processor features aren't compatible. That's because the processor features, known as hardware virtualization extensions, are designed to not be shared. For details, see [Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard](https://support.microsoft.com/kb/3204980).
 
 ## What features does Hyper-V have?
 
@@ -77,7 +70,7 @@ On Windows, Hyper-V available as feature in some 64-bit versions of Windows. It'
 
 ## Supported operating systems
 
-Many operating systems will run on virtual machines. In general, an operating system that uses an x86 architecture will run on a Hyper-V virtual machine. Not all operating systems that can be run are tested and supported by Microsoft, however. For lists of what's supported, see:
+Many operating systems run on virtual machines. In general, an operating system that uses an x86 architecture runs on a Hyper-V virtual machine. Not all operating systems that can be run are tested and supported by Microsoft, however. For lists of what Microsoft supports, see:
 
 :::zone pivot="windows-server"
 
@@ -101,7 +94,7 @@ In most cases, the hypervisor manages the interactions between the hardware and 
 
 ## What does Hyper-V consist of?
 
-Hyper-V has required parts that work together so you can create and run virtual machines. Together, these parts are called the virtualization platform. They're installed as a set when you install the Hyper-V role. The required parts include Windows hypervisor, Hyper-V Virtual Machine Management Service, the virtualization WMI provider, the virtual machine bus (VMbus), virtualization service provider (VSP) and virtual infrastructure driver (VID).
+Hyper-V has required parts that work together so you can create and run virtual machines. Together, these parts are called the virtualization platform. They're installed as a set when you install the Hyper-V role. The required parts include Windows hypervisor, Hyper-V Virtual Machine Management Service, the virtualization WMI provider, the virtual machine bus (VMbus), virtualization service provider (VSP), and virtual infrastructure driver (VID).
 
 Hyper-V also has tools for management and connectivity. You can install these on the same computer that Hyper-V role is installed on, and on computers without the Hyper-V role installed. These tools are:
 
@@ -137,7 +130,7 @@ Hyper-V requires:
 
 > Upgrade to Windows Pro by opening **Settings** > **Update and Security** > **Activation**. Here you can visit the store and purchase an upgrade.
 
-Most computers run Hyper-V, however each virtual machine runs a completely separate operating system.  You can generally run one or more virtual machines on a computer with 4GB of RAM, though you'll need more resources for additional virtual machines or to install and run resource intense software like games, video editing, or engineering design software.
+Most computers run Hyper-V, however each virtual machine runs a separate operating system. You can generally run one or more virtual machines on a computer with 4 GB of RAM, though you need more resources for more virtual machines or to install and run resource intense software like games, video editing, or engineering design software.
 
 For more information about Hyper-V's system requirements and how to verify that Hyper-V runs on your machine, see the [Hyper-V Requirements Reference](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
 
@@ -145,7 +138,7 @@ For more information about Hyper-V's system requirements and how to verify that 
 
 Hyper-V on Windows supports many different operating systems in a virtual machine including various releases of Linux, FreeBSD, and Windows.
 
-As a reminder, you'll need to have a valid license for any operating systems you use in the VMs.
+As a reminder, you need to have a valid license for any operating systems you use in the VMs.
 
 For information about which operating systems are supported as guests in Hyper-V on Windows, see [Supported Windows Guest Operating Systems](/virtualization/hyper-v-on-windows/about/supported-guest-os) and [Supported Linux Guest Operating Systems](/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows).
 
@@ -172,6 +165,6 @@ The memory management model is different for Hyper-V on Windows. On a server, Hy
 
 ## Limitations
 
-Programs that depend on specific hardware won't work well in a virtual machine. For example, games or applications that require processing with GPUs might not work well. Also, applications relying on sub-10ms timers such as live music mixing applications or high precision times could have issues running in a virtual machine.
+Programs that depend on specific hardware don't work well in a virtual machine. For example, games or applications that require processing with GPUs might not work well. Also, applications relying on sub-10ms timers such as live music mixing applications or high precision times could have issues running in a virtual machine.
 
-In addition, if you have Hyper-V enabled, those latency-sensitive, high-precision applications may also have issues running in the host.  This is because with virtualization enabled, the host OS also runs on top of the Hyper-V virtualization layer, just as guest operating systems do. However, unlike guests, the host OS is special in that it has direct access to all the hardware, which means that applications with special hardware requirements can still run without issues in the host OS.
+In addition, if you have Hyper-V enabled, those latency-sensitive, high-precision applications may also have issues running in the host. This is because with virtualization enabled, the host OS also runs on top of the Hyper-V virtualization layer, just as guest operating systems do. However, unlike guests, the host OS is special in that it has direct access to all the hardware, which means that applications with special hardware requirements can still run without issues in the host OS.

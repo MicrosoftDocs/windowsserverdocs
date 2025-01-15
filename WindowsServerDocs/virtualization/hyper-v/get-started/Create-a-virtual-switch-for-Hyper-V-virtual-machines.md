@@ -39,14 +39,14 @@ Before you can create and configure your virtual switch, your computer must meet
 :::zone-end
 
 - Virtual switch types are: external, internal. and private. Determine [what type of virtual switch you need to create](../plan/plan-hyper-v-networking-in-windows-server.md).
-- Identify which network you'll connect your computer to. Review the
+- Identify which network you connect your computer to. Review the
   [Core network planning](../../../networking/core-network-guide/Core-Network-Guide.md#BKMK_planning)
   article for more information.
 - Have administrative rights.
 
 ## Create a virtual switch
 
-Once you've completed the prerequisites, you'll be ready to create your virtual switch. In this section, we'll create a basic virtual switch by following these steps.
+Once you complete the prerequisites, you're ready to create your virtual switch. In this section, we create a basic virtual switch by following these steps.
 
 #### [Hyper-V Manager](#tab/hyper-v-manager)
 
@@ -63,7 +63,7 @@ Here's how to create a virtual switch using Hyper-V Manager.
     1. If you selected _external_, choose the network adapter (NIC) that you want to use, then
        select **OK**.
 
-       You'll be prompted with a warning that the change may disrupt your network connectivity;
+       You're prompted with a warning that the change may disrupt your network connectivity;
        select **Yes** if you're happy to continue.
 
     1. If you selected _internal_ or _private_, select **OK**.
@@ -143,9 +143,9 @@ command.
 
 ## Virtual LAN (VLAN) identification
 
-You can specify the VLAN identification (ID) used by virtual machines network adapters and virtual switches. For virtual switches connected to either an external or internal network you can specify the (VLAN) ID. The VLAN ID number is used by the management operating system and virtual machines communicating through this virtual switch.
+You can specify the VLAN identification (ID) used by virtual machines network adapters and virtual switches. For virtual switches connected to either an external or internal network, you can specify the (VLAN) ID. The VLAN ID number is used by the management operating system and virtual machines communicating through this virtual switch.
 
-You can also configure your virtual switch with other VLAN options, such port mode and the native VLAN ID. For these options, you'll need to use PowerShell and ensure the configuration is compatible with your networks configuration.
+You can also configure your virtual switch with other VLAN options, such port mode and the native VLAN ID. For these options, you need to use PowerShell and ensure the configuration is compatible with your networks configuration.
 
 To configure the VLAN identification for the switch, follow these steps.
 
@@ -162,7 +162,7 @@ Here's how to specify the VLAN ID using the Hyper-V Manager.
 
     1. You can enter any VLAN ID number or leave the default, then select **OK**.
 
-       You'll be prompted to warn you that the change may disrupt your network connectivity, select
+       You're prompted to warn you that the change may disrupt your network connectivity, select
        **Yes** if you're happy to continue.
 
 VLAN identifiers should be consistent with your network to ensure compatibility between your computer, virtual machines, and other network devices.
@@ -200,7 +200,7 @@ Here's how to set a VLAN identification using the
    Set-VMNetworkAdapterVlan @parameters
    ```
 
-This example above uses splatting to pass parameter values from the `$parameters` variable to the command. Learn more about
+This example uses splatting to pass parameter values from the `$parameters` variable to the command. Learn more about
 [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ---
@@ -223,7 +223,7 @@ To set up a NAT network and connect it to a virtual machine, follow the [NAT net
 
 ## Next step
 
-Now you've created and configured your virtual switch, here are other articles to help you continue with Hyper-V.
+Now that you setup a virtual switch, here are other articles to help you continue with Hyper-V.
 
 - Learn about [Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements#switch-embedded-teaming-set?context=/windows-server/context/windows-server-virtualization).
 - Learn how to [create a virtual machine in Hyper-V](/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v).
