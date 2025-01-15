@@ -21,7 +21,6 @@ Use the following procedure to add the global catalog to a DC.
 1. Right-click **NTDS Settings**, and then select **Properties**.
 1. Select the **Global Catalog** check box.
 
-:::image type="content" source="media/adsi1.png" alt-text="Add GC":::
 
 ## Add the global catalog using repadmin
 
