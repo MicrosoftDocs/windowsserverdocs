@@ -1,8 +1,8 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows 7 and enabled for Dynamic Memory
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory required for Windows 7.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 119965bf-6154-414d-b3a1-aa5b30eac5f6
 ms.date: 8/16/2016

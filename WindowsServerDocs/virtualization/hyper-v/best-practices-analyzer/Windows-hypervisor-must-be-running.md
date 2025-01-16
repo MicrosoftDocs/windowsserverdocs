@@ -1,8 +1,8 @@
 ---
 title: Windows hypervisor must be running
 description: Learn what to do when Windows hypervisor is not running.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 501a9beb-c464-46c0-88c5-e3e7e3e70101
 ms.date: 10/03/2016

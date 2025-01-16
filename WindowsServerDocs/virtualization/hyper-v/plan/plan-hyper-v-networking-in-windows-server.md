@@ -2,8 +2,8 @@
 title: Plan for Hyper-V networking in Windows Server
 description: Describes what's needed for basic networking in Hyper-V and gives links to instructions
 ms.topic: article
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 12/02/2022
 ---
 # Plan for Hyper-V networking in Windows Server

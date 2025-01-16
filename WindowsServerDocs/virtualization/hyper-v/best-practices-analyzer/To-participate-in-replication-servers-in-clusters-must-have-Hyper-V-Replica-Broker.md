@@ -1,8 +1,8 @@
 ---
 title: To participate in replication, servers in failover clusters must have a Hyper-V Replica Broker configured
 description: Learn what to do when for failover clusters, Hyper-V Replica requires the use of a Hyper-V Replica Broker name instead of an individual server name.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 5ec88ce5-a8b2-4ece-9062-366523c8b17f
 ms.date: 8/16/2016
