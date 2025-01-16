@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 ms.author: roharwoo
 author: robinharwood
-ms.date: 01/15/2025
+ms.date: 01/16/2025
 ---
 
 # Set up Hyper-V Replica
@@ -111,7 +111,7 @@ Do the following on each VM you want to replicate:
 
 10. If you want to configure extended (chained) replication, open the replica server, and right-click the VM you want to replicate. Click **Replication** > **Extend Replication** and specify the replication settings.
 
-Once VM replication is configured, there's an option to configure multiple Cluster Shared Volumes (CSV) for VM replication. To learn more, see [Configure multiple CSV for VM replication](configure-multiple-csv-for-vm-replication.md).
+By default, Hyper-V replica points to a single default volume for VM replication. If you want to use a different CSV for VM replication, see [Configure multiple CSV for VM replication](configure-multiple-csv-for-vm-replication.md).
 
 ## Run a failover
 
