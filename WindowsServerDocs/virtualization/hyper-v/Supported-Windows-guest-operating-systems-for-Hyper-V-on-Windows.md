@@ -2,8 +2,8 @@
 title: Supported Windows guest operating systems for Hyper-V on Windows, Windows Server, and Azure Local
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
 ms.topic: conceptual
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 01/15/2025
 ---
 

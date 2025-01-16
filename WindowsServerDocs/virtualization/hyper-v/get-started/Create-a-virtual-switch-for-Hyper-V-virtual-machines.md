@@ -3,9 +3,9 @@ title: Create and configure a virtual switch with Hyper-V
 description: Learn how to create and configure a virtual switch for use by the Hyper-V host and guest virtual machines.
 ms.topic: how-to
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
-ms.author: roharwoo
-author: robinharwood
-ms.date: 01/14/2024
+ms.author: mosagie
+author: meaghanlewis
+ms.date: 01/14/2025
 zone_pivot_groups: windows
 ---
 
@@ -223,7 +223,7 @@ To set up a NAT network and connect it to a virtual machine, follow the [NAT net
 
 ## Next step
 
-Now that you setup a virtual switch, here are other articles to help you continue with Hyper-V.
+Now that you set up a virtual switch, here are other articles to help you continue with Hyper-V.
 
 - Learn about [Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements#switch-embedded-teaming-set?context=/windows-server/context/windows-server-virtualization).
 - Learn how to [create a virtual machine in Hyper-V](/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v).

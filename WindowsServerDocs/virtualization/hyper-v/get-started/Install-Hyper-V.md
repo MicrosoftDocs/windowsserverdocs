@@ -3,8 +3,8 @@ title: Install Hyper-V
 description: Gives instructions for installing the Hyper-V role using Server Manager or Windows PowerShell. And gives instructions for enablings Hyper-V on Windows.
 ms.topic: how-to
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 01/15/2025
 zone_pivot_groups: windows
 ---
@@ -125,7 +125,7 @@ To enable the Hyper-V role using DISM:
   DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
   ```
 
-  ![Console window showing Hyper-V being enabled.](media/dism_upd.png)
+  ![Console window showing Hyper-V being enabled.](media/dism-upd.png)
 
 For more information about DISM, see the [DISM Technical Reference](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
