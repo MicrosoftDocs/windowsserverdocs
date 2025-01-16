@@ -37,7 +37,7 @@
     - name: Get started
       items:
       - name: Install Hyper-V
-        href: hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md
+        href: hyper-v/get-started/Install-Hyper-V.md
       - name: Create and configure a virtual switch
         href: hyper-v/get-started/create-a-virtual-switch-for-Hyper-V-virtual-machines.md
       - name: Create a virtual machine

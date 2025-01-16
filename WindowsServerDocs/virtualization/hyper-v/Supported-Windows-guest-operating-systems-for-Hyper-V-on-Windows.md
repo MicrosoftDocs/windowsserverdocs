@@ -1,12 +1,13 @@
 ---
-title: Supported Windows guest operating systems for Hyper-V on Windows Server and Azure Local
+title: Supported Windows guest operating systems for Hyper-V on Windows, Windows Server, and Azure Local
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
 ms.topic: conceptual
-ms.author: roharwoo
-author: robinharwood
-ms.date: 12/10/2024
+ms.author: mosagie
+author: meaghanlewis
+ms.date: 01/15/2025
 ---
-# Supported Windows guest operating systems for Hyper-V on Windows Server and Azure Local
+
+# Supported Windows guest operating systems for Hyper-V on Windows, Windows Server, and Azure Local
 
 Hyper-V supports several versions of Windows Server, Windows, and Linux distributions to run in virtual machines, as guest operating systems. This article covers supported Windows Server and Windows guest operating systems. For Linux and FreeBSD distributions, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).
 
@@ -35,9 +36,9 @@ Following are the versions of Windows client that are supported as guest operati
 
 | Guest operating system (client) | Maximum number of virtual processors | Integration Services | Notes |
 |--|--|--|--|
-| Windows 11 | 32 | Built-in | Generation 2 virtual machine hosted on Windows Server 2019 or above <br/> Azure Local, version 22H2 and later. |
-| Windows 10 | 32 | Built-in |  |
-| Windows 8.1 | 32 | Built-in |  |
+| Windows 11 | 32 | Built in | Generation 2 virtual machine hosted on Windows Server 2019 or above <br/> Azure Local, version 22H2 and later. |
+| Windows 10 | 32 | Built in |  |
+| Windows 8.1 | 32 | Built in |  |
 | Windows 7 with Service Pack 1 (SP1) | 4 | Upgrade the integration services after you set up the guest operating system. | Ultimate, Enterprise, and Professional editions (32-bit and 64-bit). |
 
 ## Guest operating system support on other versions of Windows
@@ -51,6 +52,17 @@ The following table gives links to information about guest operating systems sup
 |Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|
 |Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|
 
+## Supported Linux and FreeBSD
+
+| Guest operating system |
+|:-----|
+| [CentOS and Red Hat Enterprise Linux](/windows-server/virtualization/hyper-v/Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V) |
+| [Debian virtual machines on Hyper-V](/windows-server/virtualization/hyper-v/Supported-Debian-virtual-machines-on-Hyper-V) |
+| [SUSE](/windows-server/virtualization/hyper-v/Supported-SUSE-virtual-machines-on-Hyper-V) |
+| [Oracle Linux](/windows-server/virtualization/hyper-v/Supported-Oracle-Linux-virtual-machines-on-Hyper-V)  |
+| [Ubuntu](/windows-server/virtualization/hyper-v/Supported-Ubuntu-virtual-machines-on-Hyper-V) |
+| [FreeBSD](/windows-server/virtualization/hyper-v/Supported-FreeBSD-virtual-machines-on-Hyper-V) |
+
 ## How Microsoft provides support for guest operating systems
 
 Microsoft provides support for guest operating systems in the following manner:
@@ -61,8 +73,4 @@ Microsoft provides support for guest operating systems in the following manner:
 
 - For issues found in other operating systems, Microsoft submits the issue to the multi-vendor support community, [TSANet](https://www.tsanet.org/).
 
-## Related links
-
-- [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
-
-- [Supported Guest Operating Systems for Client Hyper-V in Windows](/virtualization/hyper-v-on-windows/about/supported-guest-os)
+In order to be supported, all operating systems (guest and host) must be up-to-date. Check Windows Update for critical updates.

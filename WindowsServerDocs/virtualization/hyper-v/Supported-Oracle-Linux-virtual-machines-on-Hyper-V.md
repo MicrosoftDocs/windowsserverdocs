@@ -3,8 +3,8 @@ title: Supported Oracle Linux virtual machines on Hyper-V
 description: Lists the Oracle Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
-ms.author: roharwoo
-author: kkkashan
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 09/27/2023
 ---
 # Supported Oracle Linux virtual machines on Hyper-V

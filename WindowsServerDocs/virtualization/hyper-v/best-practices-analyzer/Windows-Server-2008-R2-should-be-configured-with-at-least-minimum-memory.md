@@ -1,8 +1,8 @@
 ---
 title: Windows Server 2008 R2 should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows Server 2008 R2 is configured with less than the minimum amount of RAM, which is 512 MB.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 12418668-52d3-4e70-b56f-85dcb144a8c0
 ms.date: 8/16/2016

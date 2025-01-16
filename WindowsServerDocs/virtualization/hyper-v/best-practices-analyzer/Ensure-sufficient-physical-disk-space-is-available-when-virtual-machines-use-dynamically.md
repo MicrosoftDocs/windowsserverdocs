@@ -1,8 +1,8 @@
 ---
 title: Ensure sufficient physical disk space is available when virtual machines use dynamically expanding virtual hard disks
 description: Learn what to do when one or more virtual machines are using dynamically expanding virtual hard disks.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 9e3e3e64-4b3a-4b9d-acf1-e4df61a04f1e
 ms.date: 8/16/2016

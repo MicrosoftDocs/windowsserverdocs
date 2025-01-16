@@ -1,8 +1,8 @@
 ---
 title: About Hyper-V hypervisor scheduler type selection
 description: Learn about important changes to Hyper-V's default and recommended use of hypervisor scheduler types.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 08/14/2018
 ms.topic: article
 ms.assetid: 5fe163d4-2595-43b0-ba2f-7fad6e4ae069

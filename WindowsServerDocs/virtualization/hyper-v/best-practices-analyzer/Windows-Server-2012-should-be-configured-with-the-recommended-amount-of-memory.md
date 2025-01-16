@@ -1,8 +1,8 @@
 ---
 title: Windows Server 2012 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows Server 2012 is configured with less than the recommended amount of RAM, which is 2 GB.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 12d0b473-cf6a-4746-b03d-2ceeb701c5d0
 ms.date: 8/16/2016

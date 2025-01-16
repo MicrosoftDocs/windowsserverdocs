@@ -1,8 +1,8 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows Server 2012 R2 and enabled for Dynamic Memory
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory required for Windows Server 2012 R2.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: a0e69661-6a1d-4b31-b727-f2429f3977d0
 ms.date: 8/16/2016

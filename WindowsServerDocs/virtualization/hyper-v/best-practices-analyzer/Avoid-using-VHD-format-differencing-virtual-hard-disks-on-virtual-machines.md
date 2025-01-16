@@ -1,8 +1,8 @@
 ---
 title: Avoid using VHD-format differencing virtual hard disks on virtual machines that run server workloads in a production environment
 description: Learn what to do when one or more virtual machines use VHD-format differencing virtual hard disks.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 272de33d-2708-4679-8564-ee28848a2839
 ms.date: 8/16/2016
