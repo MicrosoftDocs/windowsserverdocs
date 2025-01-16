@@ -1,8 +1,8 @@
 ---
 title: Partition and assign GPUs to a virtual machine in Hyper-V
 description: Learn how to partition and share a GPU with multiple virtual machines on Windows Server.
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.topic: how-to
 ms.subservice: core-os
 ms.date: 01/09/2025

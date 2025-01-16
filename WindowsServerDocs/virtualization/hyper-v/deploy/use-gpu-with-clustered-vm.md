@@ -1,8 +1,8 @@
 ---
 title: Use GPUs with clustered VMs on Hyper-V
 description: Learn how to use GPUs with clustered virtual machines (VMs) to provide GPU acceleration to workloads in the clustered VMs on Windows Server and Azure Local.
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.topic: how-to
 ms.date: 12/09/2024
 zone_pivot_groups: windows-os

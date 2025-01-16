@@ -1,8 +1,8 @@
 ---
 title: Windows 10 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows 10 is configured with less than the recommended amount of RAM, which is 1 GB.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 0c810b82-b06a-4382-b598-5c642e8534be
 ms.date: 8/16/2016

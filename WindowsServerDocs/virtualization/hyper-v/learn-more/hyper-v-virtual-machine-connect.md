@@ -3,8 +3,8 @@ title: Hyper-V Virtual Machine Connection
 description: Describes Virtual Machine Connection, which provides remote access to a virtual machine. Includes details on how to do common tasks, such as send Ctrl-Alt-Delete to the virtual machine.
 ms.topic: article
 ms.assetid: deae35b9-7647-42b8-b6bf-45645a44c9c4
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 10/04/2016
 ---
 
