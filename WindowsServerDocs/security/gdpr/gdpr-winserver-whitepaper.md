@@ -179,7 +179,7 @@ Imagine this scenario if the DNS admin's credentials were stolen. First, since t
 
 In addition, many organizations use the free [Local Administrator Password Solution (LAPS)](https://aka.ms/laps) as a simple yet powerful JIT administration mechanism for their server and client systems. The LAPS capability provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by and Access Control List (ACL) so only eligible users can read it or request its reset.
 
-As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/confirmation.aspx?id=54095),
+As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/details.aspx?id=54095),
 
 > “_the tools and techniques criminals use to carry out credential theft and reuse attacks improve, malicious attackers are finding it easier to achieve their goals. Credential theft often relies on operational practices or user credential exposure, so effective mitigations require a holistic approach that addresses people, processes, and technology. In addition, these attacks rely on the attacker stealing credentials after compromising a system to expand or persist access, so organizations must contain breaches rapidly by implementing strategies that prevent attackers from moving freely and undetected in a compromised network._”
 
@@ -333,7 +333,7 @@ ATA is an on-premises product that helps detect identity compromise in an organi
 
 |Attack type |Description |
 |---------|---------|
-|Malicious attacks |These attacks are detected by looking for attacks from a known list of attack types, including:<ul><li>Pass-the-Ticket (PtT)</li><li>Pass-the-Hash (PtH)</li><li>Overpass-the-Hash</li><li>Forged PAC (MS14-068)</li><li>Golden Ticket</li><li>Malicious replications</li><li>Reconnaissance</li><li>Brute force</li><li>Remote execution</li></ul>For a complete list of malicious attacks that can be detected and their description, see [What Suspicious Activities Can ATA detect?](/advanced-threat-analytics/understand-explore/ata-threats).|
+|Malicious attacks |These attacks are detected by looking for attacks from a known list of attack types, including:<ul><li>Pass-the-Ticket (PtT)</li><li>Pass-the-Hash (PtH)</li><li>Overpass-the-Hash</li><li>Forged PAC (MS14-068)</li><li>Golden Ticket</li><li>Malicious replications</li><li>Reconnaissance</li><li>Brute force</li><li>Remote execution</li></ul>For a complete list of malicious attacks that can be detected and their description, see [What threats does ATA look for?](/advanced-threat-analytics/ata-threats).|
 |Abnormal behavior |These attacks are detected by using behavioral analysis and use machine learning to identify questionable activities, including:<ul><li>Anomalous logins</li><li>Unknown threats</li><li>Password sharing</li><li>Lateral movement</li></ul>|
 |Security issues and risks |These attacks are detected by looking at current network and system configuration, including:<ul><li>Broken trust</li><li>Weak protocols</li><li>Known protocol vulnerabilities</li></ul>|
 
