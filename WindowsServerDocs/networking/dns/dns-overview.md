@@ -1,14 +1,14 @@
 ---
 title: Domain Name System (DNS) in Windows and Windows Server
 description: Learn about the DNS protocol, essential for Windows networks and Active Directory operations for mapping computer names to IP addresses.
-ms.topic: article
+ms.topic: overview
 ms.author: roharwoo
 author: robinharwood
-ms.date: 08/07/2020
+ms.date: 01/20/2025
+#customer intent: As a network administrator, I want to learn about how DNS is used in Windows networks and Active Directory operations, so that I can understand how to configure and manage DNS in my organization.
 ---
-# Domain Name System (DNS)
 
->
+# What is Domain Name System (DNS) in Windows and Windows Server?
 
 Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users. Domain Name System (DNS) is the default name resolution service used in Windows networks. DNS is part of the TCP/IP protocol suite and all TCP/IP network connections are by default configured with the IP address of at least one DNS server in order to perform name resolution on the network.
 
