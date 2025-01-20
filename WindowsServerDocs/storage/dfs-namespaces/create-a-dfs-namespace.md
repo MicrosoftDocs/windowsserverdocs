@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Create a DFS namespace
 
->
-
 To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](/powershell/module/dfsn/new-dfsnroot) from a Windows PowerShell session.
 
 The DFSN Windows PowerShell module was introduced in Windows Server 2012.

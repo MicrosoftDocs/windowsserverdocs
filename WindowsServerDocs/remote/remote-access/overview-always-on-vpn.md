@@ -9,8 +9,6 @@ ms.date: 04/28/2023
 
 # About Always On VPN
 
->
-
 Always On VPN allows you to:
 
 - **Create advanced scenarios** by integrating Windows operating systems and third-party solutions. For a list of supported integrations, see [Supported integrations](#supported-integrations).

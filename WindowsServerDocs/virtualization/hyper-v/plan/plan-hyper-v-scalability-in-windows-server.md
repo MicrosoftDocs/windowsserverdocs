@@ -2,8 +2,8 @@
 title: Plan for Hyper-V scalability in Windows Server
 description: Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory, and how many virtual processors, in Windows Server.
 ms.topic: article
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 10/25/2024
 zone_pivot_groups: windows-os-version
 ---
@@ -41,7 +41,7 @@ These maximums apply to each virtual machine when the host is run the selected p
 :::zone pivot="windows-server-2022"
 
 > [!TIP]
-> This tables also applies to Azure Stack HCI version 21H2, 22H2, and 23H2.
+> This tables also applies to Azure Local.
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|

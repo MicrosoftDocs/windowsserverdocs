@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Create a File Screen Template
 
->
-
 A *file screen template* defines a set of file groups to screen, the type of screening to perform (active or passive), and optionally, a set of notifications that will be generated automatically when a user saves, or attempts to save, an unauthorized file.
 
 File Server Resource Manager can send e-mail messages to administrators or specific users, log an event, execute a command or a script, or generate reports. You can configure more than one type of notification for a file screen event.

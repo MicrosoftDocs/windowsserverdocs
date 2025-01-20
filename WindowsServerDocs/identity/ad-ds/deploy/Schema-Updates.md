@@ -9,8 +9,6 @@ ms.topic: article
 ---
 # Windows Server Active Directory schema updates
 
->
-
 This article lists the LDF (Log Database File) files that include the changes that Adprep.exe makes.
 
 ## Schema Updates in Windows Server 2025

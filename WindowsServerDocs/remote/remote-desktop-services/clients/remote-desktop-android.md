@@ -11,8 +11,6 @@ ms.date: 7/3/2024
 
 # Get started with the Android client
 
->
-
 You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device or a Chromebook that supports the Google Play Store.
 
 This article will show you how to get started using the client. If you have any additional questions, make sure to check our [FAQ](remote-desktop-client-faq.yml).

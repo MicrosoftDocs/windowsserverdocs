@@ -1,17 +1,17 @@
 ---
-title: Configure OSConfig security for Windows Server
-description: Learn how to deploy OSConfig security baselines to enforce granular security settings to better protect and harden your Windows Server environment.
+title: Configure security baselines for Windows Server 2025
+description: Learn how to deploy security baselines using OSConfig to enforce granular security settings to better protect and harden your Windows Server 2025 environment.
 ms.topic: how-to
 ms.product: windows-server
 ms.author: alalve
 author: xelu86
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
-ms.date: 11/19/2024
+ms.date: 12/12/2024
 ---
 
-# Deploy OSConfig security baselines locally
+# Deploy Windows Server 2025 security baselines locally with OSConfig
 
-OSConfig is a security configuration stack that uses a scenario-based approach to deliver and apply desired security measures for your environment. It provides co-management support for both on-premises and Azure Arc-connected devices. You can use Windows PowerShell or Windows Admin Center to apply the security baselines throughout the device life cycle, starting from the initial deployment process.
+Deploying the Windows Server 2025 security baseline to your environment ensures that desired security measures are in place, providing a comprehensive and standardized security framework. The Windows Server 2025 baseline includes over 300 security settings to ensure that it meets industry-standard security requirements. It also provides co-management support for both on-premises and Azure Arc-connected devices. The security baselines can be configured through PowerShell, Windows Admin Center, and Azure Policy. The OSConfig tool is a security configuration stack that uses a scenario-based approach to deliver and apply the desired security measures for your environment. The security baselines throughout the device life cycle can be applied using OSConfig starting from the initial deployment process.
 
 Some of the highlights of the security baselines provide the following enforcements:
 
@@ -30,11 +30,11 @@ For at-scale operations, use Azure Policy and Azure Automanage Machine Configura
 > [!IMPORTANT]
 > After applying the security baseline, your system's security setting will change along with default behaviors. Test carefully before applying these changes in production environments.
 >
-> You'll be asked to change your local administrator password after applying the security baseline for Member server and Workroup member scenarios.
+> You'll be asked to change your local administrator password after applying the security baseline for Member server and Workgroup member scenarios.
 
 Below you can find a list of more noticeable changes after the baselines are applied:
 
-- The local administrator password must be changed. The new password policy must meet the complexity requirements and minimum length of 14-characters. This only applies to local user accounts; when signing in with a domain account, domain requirements prevail for domain accounts.
+- The local administrator password must be changed. The new password policy must meet the complexity requirements and minimum length of 14-characters. This rule only applies to local user accounts; when signing in with a domain account, domain requirements prevail for domain accounts.
 - TLS connections are subject to a minimum of TLS/DTLS 1.2 or higher, which may prevent connections to older systems.
 - The ability to copy and paste files from RDP sessions is disabled. If you need to use this function, run the following command and then reboot your device:
 
@@ -42,13 +42,13 @@ Below you can find a list of more noticeable changes after the baselines are app
   Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/<ServerRoleBeingApplied> -Name RemoteDesktopServicesDoNotAllowDriveRedirection -Value 0
   ```
 
-- Connections are subject to SMB 3.0 minimum or higher. Connecting to non-windows systems, such as Linux SAMBA, must support SMB 3.0, or adjustments to the baseline are needed.
+- Connections are subject to SMB 3.0 minimum or higher as connecting to non-windows systems, such as Linux SAMBA, must support SMB 3.0, or adjustments to the baseline are needed.
 - If you're currently configuring the same settings with two different methods, one being OSConfig, conflicts are expected. Especially with drift control involved as you must remove one of the sources if the parameters are different to prevent the settings from constantly changing between sources.
 - You might run into SID translation errors in specific domain configurations. It doesn't impact the rest of the security baseline definition and can be ignored.
 
 ## Prerequisites
 
-Make sure that your device is running Windows Server 2025. OSConfig doesn't support earlier versions of Windows Server.
+Your device must be running Windows Server 2025. OSConfig doesn't support earlier versions of Windows Server.
 
 ## Install the OSConfig PowerShell module
 
@@ -70,13 +70,13 @@ Before you can apply a security baseline for the first time, you need to install
    Get-Module -ListAvailable -Name Microsoft.OSConfig
    ```
 
-## Manage OSConfig security baselines
+## Manage Windows Server 2025 security baselines
 
-Apply the appropriate security baselines, based on the Windows Server role of your device:
+Apply the appropriate security baselines based on the Windows Server role of your device:
 
 - Domain controller (DC)
-- Member server
-- Workgroup member
+- Member server (domain-joined)
+- Workgroup member server (non domain-joined)
 
 The baseline experience is powered by OSConfig. Once applied, your security baseline settings are protected from any drift automatically, which is one of the key features of its security platform.
 
@@ -223,9 +223,9 @@ Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name
 >
 > - When you *customize* a security baseline, a restart is required for changes to take effect, depending on which security features you modified.
 >
-> - During the *removal* process, when security settings are reverted, changing these settings back to their premanaged configuration isn't guaranteed. It depends on the specific settings within the security baseline. This behavior aligns with the capabilities that the Microsoft Intune policies provide. To learn more, see [Manage security baseline profiles in Microsoft Intune](/mem/intune/protect/security-baselines-configure).
+> - During the *removal* process, when security settings are reverted, changing these settings back to their premanaged configuration isn't guaranteed. It depends on the specific settings within the security baseline. This behavior aligns with the capabilities that the Microsoft Intune policies provide. To learn more, see [Remove a security baseline assignment](/mem/intune/protect/security-baselines-configure#remove-a-security-baseline-assignment).
 
-## Customize OSConfig security baselines
+## Customize Windows Server 2025 security baselines
 
 After you complete the security baseline configuration, you can modify the security settings while maintaining drift control. Customizing the security values allows for more control of your organization's security policies, depending on your environment's specific needs.
 

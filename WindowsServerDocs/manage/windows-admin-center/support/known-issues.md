@@ -8,8 +8,6 @@ ms.date: 06/05/2024
 ---
 # Windows Admin Center known issues
 
->
-
 If you encounter an issue not described on this page, let us know at the [Windows Admin Center feedback page](https://aka.ms/WACfeedback).
 
 ## Installer
@@ -254,11 +252,11 @@ Windows Admin Center doesn't currently support scenarios with mixed work group m
 
 ### Enabling Hyper-V on VMs
 
-You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying to enable Hyper-V on VMs without Azure Stack HCI generates an error message that says "A prerequisite check for the Hyper-V feature failed," as shown in the following screenshot.
+You can only install and enable Hyper-V on VMs running Azure Local. Trying to enable Hyper-V on VMs without Azure Local generates an error message that says "A prerequisite check for the Hyper-V feature failed," as shown in the following screenshot.
 
 :::image type="content" source="../media/cluster-create-install-hyperv.png" alt-text="A screenshot of the Windows Admin Center Server Manager Roles and Features page displaying the enabling Hyper-V error message.":::
 
-To install Hyper-V on VMs running Azure Stack HCI, open an elevated PowerShell prompt and run the following command:
+To install Hyper-V on VMs running Azure Local, open an elevated PowerShell prompt and run the following command:
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
@@ -395,7 +393,7 @@ To resolve this issue:
 
 ### Nested virtualization
 
-When you're validating Azure Stack HCI cluster deployments on VMs, you must enable nested virtualization before you enable roles or features by running the following command in PowerShell:
+When you're validating Azure Local cluster deployments on VMs, you must enable nested virtualization before you enable roles or features by running the following command in PowerShell:
 
 ```powershell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true

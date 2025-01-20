@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Container Networking Overview
 
->
-
 In this topic, we give you an overview of the networking stack for Windows containers and we include links to additional guidance about creating, configuring, and managing container networks.
 
 Windows Server Containers are a lightweight operating system virtualization method separating applications or services from other services that run on the same container host. Windows containers function similarly to virtual machines. When enabled, each container has a separate view of the operating system, processes, file system, registry, and IP addresses, which you can connect to virtual networks.

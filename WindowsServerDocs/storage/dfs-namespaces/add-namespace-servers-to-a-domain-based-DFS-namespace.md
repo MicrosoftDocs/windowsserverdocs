@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Add namespace servers to a domain-based DFS namespace
 
->
-
 You can increase the availability of a domain-based namespace by specifying additional namespace servers to host the namespace.
 
 ## To add a namespace server to a domain-based namespace

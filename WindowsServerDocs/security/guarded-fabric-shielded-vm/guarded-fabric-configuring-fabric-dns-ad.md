@@ -11,8 +11,6 @@ ms.date: 08/29/2018
 
 # Configure the fabric DNS for guarded hosts (AD)
 
->
-
 
 >[!IMPORTANT]
 >AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up.

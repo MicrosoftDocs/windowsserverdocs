@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Create a Custom File Management Task
 
->
-
 Expiration is not always a desired action to be performed on files. File management tasks allow you to run custom commands as well.
 
 > [!Note]

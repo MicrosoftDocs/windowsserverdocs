@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Create Content Server Data Packages for Web and File Content (Optional)
 
->
-
 You can use this procedure to prehash content on Web and file servers, and then create data packages to import on your hosted cache server.
 
 This procedure is optional because you are not required to prehash and preload content on your hosted cache servers. If you do not preload content, data is added to the hosted cache automatically as clients download it over the WAN connection.

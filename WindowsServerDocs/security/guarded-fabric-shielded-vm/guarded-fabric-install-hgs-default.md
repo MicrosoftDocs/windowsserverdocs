@@ -10,8 +10,6 @@ ms.date: 08/29/2018
 
 # Install HGS in a new forest
 
->
-
 ## Add the HGS server role
 
 Run the following commands in an elevated PowerShell session to add the HGS server role and install HGS.

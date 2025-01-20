@@ -14,8 +14,6 @@ ms.date: 10/27/2021
 
 # Performance Tuning Network Adapters
 
->
-
 Use the information in this topic to tune the performance network adapters for computers that are running Windows Server 2016 and later versions. If your network adapters provide tuning options, you can use these options to optimize network throughput and resource usage.
 
 The correct tuning settings for your network adapters depend on the following variables:

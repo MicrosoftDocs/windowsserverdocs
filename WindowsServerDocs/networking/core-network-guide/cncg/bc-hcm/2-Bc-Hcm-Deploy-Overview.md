@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # BranchCache Hosted Cache Mode Deployment Overview
 
->
-
 You can use this guide to deploy a BranchCache hosted cache server in a branch office where computers are joined to a domain. You can use this topic to gain an overview of the BranchCache Hosted Cache Mode deployment process.
 
 This overview includes the BranchCache infrastructure that you need, as well as a simple step-by-step overview of deployment.

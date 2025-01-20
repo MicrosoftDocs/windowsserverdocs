@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Monitor connected remote clients for activity and status
 
->
-
 **Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role.
 
 You can use the management console on the Remote Access server to monitor remote client activity and status.

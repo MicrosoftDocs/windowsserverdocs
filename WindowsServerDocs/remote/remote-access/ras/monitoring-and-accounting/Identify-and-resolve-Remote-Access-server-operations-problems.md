@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Identify and resolve Remote Access server operations problems
 
->
-
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 
 You can using the following procedures to identify Remote Access server operations issues, their root causes, and the resolution required to fix the issues.

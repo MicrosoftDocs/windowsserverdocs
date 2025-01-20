@@ -9,8 +9,6 @@ manager: femila
 ---
 # Remote Desktop Services roles
 
->
-
 This article describes the roles within a Remote Desktop Services environment.
 
 ## Remote Desktop Session Host

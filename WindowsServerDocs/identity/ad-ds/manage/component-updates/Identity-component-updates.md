@@ -11,8 +11,6 @@ ms.topic: article
 
 # Identity component updates
 
->
-
 
 ## Lesson 1: Identity component updates
 This lesson explains the Identity component updates in Windows Server 2012 R2.

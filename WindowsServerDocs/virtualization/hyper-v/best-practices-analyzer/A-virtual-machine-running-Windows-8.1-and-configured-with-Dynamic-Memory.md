@@ -1,15 +1,13 @@
 ---
 title: A virtual machine running Windows 8.1 and configured with Dynamic Memory should use recommended values for memory settings
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows 8.1.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: b9a14f85-326f-4916-9278-2c8d39a32848
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows 8.1 and configured with Dynamic Memory should use recommended values for memory settings
-
->
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
@@ -29,7 +27,6 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 The guest operating system on the following virtual machines might not run or might run unreliably:
 
 \<list of virtual machines>
-
 
 ## **Resolution**
 *Use Hyper-V Manager to increase the minimum memory to at least 256 MB, startup memory to at least 512 MB and maximum memory to at least 1 GB for this virtual machine.*

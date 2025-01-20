@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Purge Utilization Data
 
->
-
 You can use this topic to learn how to delete utilization data from the IPAM database.
 
 You must be a member of **IPAM Administrators**, the local computer **Administrators** group, or equivalent, to perform this procedure.

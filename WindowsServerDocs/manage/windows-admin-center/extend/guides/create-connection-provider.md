@@ -8,8 +8,6 @@ ms.date: 06/06/2019
 ---
 # Create a connection provider for a solution extension
 
->
-
 Connection Providers play an important role in how Windows Admin Center defines and communicates with connectable objects, or targets. Primarily, a Connection Provider performs actions while a connection is being made, such as ensuring that the target is online and available, and also ensuring that the connecting user has permission to access the target.
 
 By default, Windows Admin Center ships with the following Connection Providers:

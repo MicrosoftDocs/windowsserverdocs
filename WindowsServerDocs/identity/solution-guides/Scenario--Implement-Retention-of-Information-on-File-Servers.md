@@ -10,8 +10,6 @@ ms.topic: conceptual
 
 # Scenario: Implement Retention of Information on File Servers
 
->
-
 A retention period is the amount of time that a document should be kept before it's expired. Depending on the organization, the retention period can be different. You can classify files in a folder as having a short, medium, or long-term retention period, and then assign a time frame for each period. You may want to keep a file indefinitely by putting it on legal hold.
 
 ## Scenario description

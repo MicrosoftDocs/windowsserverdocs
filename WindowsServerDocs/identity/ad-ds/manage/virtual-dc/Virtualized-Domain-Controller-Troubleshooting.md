@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Virtualized Domain Controller Troubleshooting
 
->
-
 This article provides detailed methodology on troubleshooting the virtualized domain controller feature.
 
 - [Troubleshooting virtualized domain controller cloning](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_TshootVDCCloning)

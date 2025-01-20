@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Network Policies
 
->
-
 You can use this topic for an overview of network policies in NPS.
 
 >[!NOTE]

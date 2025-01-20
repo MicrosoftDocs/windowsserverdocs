@@ -9,8 +9,6 @@ ms.topic: article
 
 # Example of Go generated code
 
->
-
 ```Go
 /*
  * HCN API

@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Network Function Virtualization
 
->
-
 You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances such as Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing \(SLB\) multiplexer \(MUX\).
 
 >[!NOTE]

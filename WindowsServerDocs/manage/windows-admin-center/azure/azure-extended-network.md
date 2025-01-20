@@ -9,8 +9,6 @@ ms.date: 12/17/2019
 
 # Extend your on-premises subnets into Azure using extended network for Azure
 
->
-
 ## Overview
 
 Extended network for Azure enables you to stretch an on-premises subnet into Azure to let on-premises virtual machines keep their original on-premises private IP addresses when migrating to Azure.

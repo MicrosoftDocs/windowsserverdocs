@@ -10,15 +10,10 @@ ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 # Stretch Cluster Replication Using Shared Storage
 
->
-
 In this evaluation example, you will configure these computers and their storage in a single stretch cluster, where two nodes share one set of storage and two nodes share another set of storage, then replication keeps both sets of storage mirrored in the cluster to allow immediate failover. These nodes and their storage should be located in separate physical sites, although it is not required. There are separate steps for creating Hyper-V and File Server clusters as sample scenarios.
 
 > [!IMPORTANT]
 > In this evaluation, servers in different sites must be able to communicate with the other servers via a network, but not have any physical connectivity to the other site's shared storage. This scenario does not make use of Storage Spaces Direct.
-
-> [!NOTE]
-> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage).
 
 ## Terms
 This walkthrough uses the following environment as an example:
@@ -801,4 +796,4 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
-- [Stretched Clusters in Azure Stack HCI](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage)
+- [Stretched Clusters in Azure Local](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage)

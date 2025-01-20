@@ -9,8 +9,6 @@ ms.date: 10/27/2021
 
 # Packet Monitor \(Pktmon\)
 
->
-
 Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. It is available in-box via the pktmon.exe command and via Windows Admin Center extensions.
 
 ## Overview

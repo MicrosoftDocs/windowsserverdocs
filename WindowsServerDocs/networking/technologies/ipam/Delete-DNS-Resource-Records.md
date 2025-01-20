@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Delete DNS Resource Records
 
->
-
 You can use this topic to delete one or more DNS resource records by using the IPAM client console.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.

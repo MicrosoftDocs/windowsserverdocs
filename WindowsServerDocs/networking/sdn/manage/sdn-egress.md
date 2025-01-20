@@ -10,8 +10,6 @@ ms.date: 10/02/2018
 
 # Egress metering in a virtual network
 
->
-
 A fundamental aspect of cloud networking monetization is being able to bill by network bandwidth utilization. Outbound data is charged based on the total amount of data moving out of the data center via the Internet in a given billing cycle.
 
 Egress metering for SDN network traffic in Windows Server 2019 enables the ability to offer usage meters for outbound data transfers. Network traffic that leaves each virtual network but remains within the data center can be tracked separately so it can be excluded from billing calculations. Packets bound for destination IP addresses that are not included in one of the unbilled address ranges are tracked as billed outbound data transfers.

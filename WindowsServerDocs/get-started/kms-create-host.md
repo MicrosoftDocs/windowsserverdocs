@@ -3,9 +3,9 @@ title: How to create a Key Management Services (KMS) activation host in Windows 
 description: Learn how to create a Key Management Services (KMS) activation host to activate Windows Server and Windows KMS clients.
 ms.topic: how-to
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 manager: femila
-ms.date: 9/13/2021
+ms.date: 12/19/2024
 ---
 
 # How to create a Key Management Services (KMS) activation host
@@ -28,7 +28,11 @@ You will need:
 
 - The user account you use must be a member of the Administrators group on the KMS host.
 
+- Check this article to see which KMS and client versions work together and which Windows versions can run the KMS - [Key Management Services (KMS) activation planning](kms-activation-planning.md?tabs=server25).
+
 - A KMS host key for your organization. You can get this key from the Product Keys section of the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
+
+- Access to the internet for activating the KMS host or perform a phone activation.
 
 ## Install and configure a KMS host
 

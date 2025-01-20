@@ -11,8 +11,6 @@ ms.topic: article
 
 # Virtualized Domain Controller Deployment and Configuration
 
->
-
 This topic covers:
 
 - [Installation Considerations](#BKMK_InstallConsiderations)

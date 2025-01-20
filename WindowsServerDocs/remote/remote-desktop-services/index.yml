@@ -6,8 +6,6 @@ summary: Remote Desktop Services let you deliver virtualized applications and pr
 metadata:
   title: Remote Desktop Services # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: This topic provides an overview of Remote Desktop Services and its assorted features in Windows Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: service #Required; use either service or product per approved list. 
-  ms.subservice: remote
   ms.topic: landing-page # Required
   author: Heidilohr
   ms.author: helohr

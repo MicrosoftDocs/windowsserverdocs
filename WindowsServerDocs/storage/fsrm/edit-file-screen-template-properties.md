@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Edit File Screen Template Properties
 
->
-
 When you make changes to a file screen template, you have the option of extending those changes to file screens that were created with the original file screen template. You can choose to modify only those file screens that match the original template or all file screens that derive from the original template, regardless of any modifications that you made to the file screens since they were created. This feature simplifies the process of updating the properties of file screens by providing one central point where you make all the changes.
 
 > [!Note]

@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Optimize Namespace Polling
 
->
-
 To maintain a consistent domain-based namespace across namespace servers, it is necessary for namespace servers to periodically poll Active Directory Domain Services (AD DS) to obtain the most current namespace data.
 
 ## To optimize namespace polling

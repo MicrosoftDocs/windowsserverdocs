@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Manage Remote Access
 
->
-
 The DirectAccess Remote Client Management deployment scenario uses DirectAccess to maintain clients over the Internet. This section explains the scenario, including its phases, roles, features, and links to additional resources.
 
 Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role.

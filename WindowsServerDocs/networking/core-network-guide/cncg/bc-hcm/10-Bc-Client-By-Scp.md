@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 #  Configure Client Automatic Hosted Cache Discovery by Service Connection Point
 
->
-
 With this procedure you can use Group Policy to enable and configure BranchCache hosted cache mode on domain\-joined computers that are running the following BranchCache\-capable Windows operating systems.
 
 - Windows 10 Enterprise

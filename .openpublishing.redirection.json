@@ -11921,6 +11921,21 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2016.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2019.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
       "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
       "redirect_document_id": true
@@ -11928,6 +11943,26 @@
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller-high-availability.md",
+      "redirect_url": "/windows-server/networking/sdn/technologies/network-controller/network-controller-service-fabric",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/hyperconverged/index.yml",
+      "redirect_url": "/windows-server/",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/hyper-v-storage-architecture.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/storage-architecture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-Hyper-V",
       "redirect_document_id": true
     }
   ]

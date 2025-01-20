@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Install the Certification Authority
 
->
-
 You can use this procedure to install Active Directory Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.
 
 > [!IMPORTANT]

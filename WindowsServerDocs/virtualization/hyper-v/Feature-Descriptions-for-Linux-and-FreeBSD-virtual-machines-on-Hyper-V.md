@@ -3,13 +3,11 @@ title: Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
 description: Describes features that affect core components such as networking, storage, memory when using Linux and FreeBSD on a virtual machine
 ms.topic: article
 ms.assetid: a9ee931d-91fc-40cf-9a15-ed6fa6965cb6
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 09/27/2023
 ---
 # Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
-
->
 
 This article describes features available in components such as core, networking, storage, and memory when using Linux and FreeBSD on a virtual machine.
 

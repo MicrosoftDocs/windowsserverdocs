@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Server Certificate Deployment Overview
 
->
-
 This topic contains the following sections.
 
 -   [Server certificate deployment components](#bkmk_components)

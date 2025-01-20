@@ -11,8 +11,6 @@ ms.topic: article
 
 # Virtualized Domain Controller Technical Reference (Level 300)
 
->
-
 The virtualized domain controller (VDC) technical reference consists of the following topics:
 
 -   [Virtualized Domain Controller Architecture](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md)

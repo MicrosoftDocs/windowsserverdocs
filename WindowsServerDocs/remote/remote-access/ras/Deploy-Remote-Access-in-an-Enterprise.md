@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Deploy Remote Access in an Enterprise
 
->
-
 This topic provides an introduction to the DirectAccess scenario for the Enterprise.
 
 

@@ -11,8 +11,6 @@ ms.date: 05/30/2023
 
 # Plan NPS as a RADIUS server
 
->
-
 When you deploy Network Policy Server \(NPS\) as a Remote Authentication Dial-In User Service (RADIUS) server, NPS performs authentication, authorization, and accounting for connection requests for the local domain and for domains that trust the local domain. You can use these planning guidelines to simplify your RADIUS deployment.
 
 These planning guidelines do not include circumstances in which you want to deploy NPS as a RADIUS proxy. When you deploy NPS as a RADIUS proxy, NPS forwards connection requests to a server running NPS or other RADIUS servers in remote domains, untrusted domains, or both.
@@ -47,7 +45,7 @@ During the planning for NPS configuration, you can use the following steps.
 
 - Determine whether you are deploying more than one NPS. To provide fault tolerance for RADIUS-based authentication and accounting, use at least two NPSs. One NPS is used as the primary RADIUS server and the other is used as a backup. Each RADIUS client is then configured on both NPSs. If the primary NPS becomes unavailable, RADIUS clients then send Access-Request messages to the alternate NPS.
 
-- Plan the script used to copy one NPS configuration to other NPSs to save on administrative overhead and to prevent the incorrect cofiguration of a server. NPS provides the Netsh commands that allow you to copy all or part of an NPS configuration for import onto another NPS. You can run the commands manually at the Netsh prompt. However, if you save your command sequence as a script, you can run the script at a later date if you decide to change your server configurations.
+- Plan the script used to copy one NPS configuration to other NPSs to save on administrative overhead and to prevent the incorrect configuration of a server. NPS provides the Netsh commands that allow you to copy all or part of an NPS configuration for import onto another NPS. You can run the commands manually at the Netsh prompt. However, if you save your command sequence as a script, you can run the script at a later date if you decide to change your server configurations.
 
 ## Plan RADIUS clients
 
