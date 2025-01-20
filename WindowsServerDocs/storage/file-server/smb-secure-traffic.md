@@ -26,7 +26,7 @@ SMB traffic protects devices inside your network by preventing access from the i
 If you want users to access their files inbound at the edge of your network, you can use SMB over
 QUIC. This uses UDP port 443 by default and provides a TLS 1.3-encrypted security tunnel like a VPN
 for SMB traffic. The solution requires Windows 11 and Windows Server 2022 Datacenter: Azure
-Edition file servers running on Azure Stack HCI. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
+Edition file servers running on Azure Local. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## Block outbound SMB access
 

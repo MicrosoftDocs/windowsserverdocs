@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 2 Configure the Multisite Infrastructure
 
->
-
 To configure a multisite deployment, there are a number of steps required to modify network infrastructure settings including: configuring additional Active Directory sites and domain controllers, configuring additional security groups, and configuring Group Policy Objects (GPOs) if you are not using automatically configured GPOs.
 
 |Task|Description|

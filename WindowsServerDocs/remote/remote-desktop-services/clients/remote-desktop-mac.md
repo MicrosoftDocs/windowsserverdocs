@@ -10,8 +10,6 @@ ms.date: 7/3/2024
 ---
 # Get started with the macOS client
 
->
-
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
 
 > [!TIP]

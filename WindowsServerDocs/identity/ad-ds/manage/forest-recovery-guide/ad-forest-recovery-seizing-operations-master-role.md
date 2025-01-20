@@ -11,8 +11,6 @@ ms.custom: 7e6bb370-f840-4416-b5e2-86b0ba715f4f, inhenkel
 
 # Active Directory Forest Recovery - Seize an operations master role
 
->
-
 Use the following procedure to seize an operations master role (also known as a flexible single master operations (FSMO) role). You can use Ntdsutil.exe, a command-line tool that is installed automatically on all DCs.
 
 ## Seize an operations master role

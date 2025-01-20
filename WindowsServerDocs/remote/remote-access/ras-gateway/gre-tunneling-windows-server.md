@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # GRE Tunneling in Windows Server 2016
 
->
-
 Windows Server 2016 provides updates to Generic Routing Encapsulation \(GRE\) tunnel capability for the RAS Gateway.
 
 GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point-to-point links over an Internet Protocol internetwork. The Microsoft GRE implementation can encapsulate IPv4 and IPv6.

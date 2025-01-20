@@ -11,8 +11,6 @@ ms.date: 06/21/2019
 
 # Add host information for TPM-trusted attestation
 
->
-
 For TPM mode, the fabric administrator captures three kinds of host information, each of which needs to be added to the HGS configuration:
 
 - A TPM identifier (EKpub) for each Hyper-V host

@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Maintaining a More Secure Environment
 
->
-
 *Law Number Ten: Technology isn't a panacea.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 When you have created a manageable, secure environment for your critical business assets, your focus should shift to ensuring that it's maintained securely. Although you've been given specific technical controls to increase the security of your AD DS installations, technology alone won't protect an environment in which IT doesn't work in partnership with the business to maintain a secure, usable infrastructure. The high level recommendations in this section are meant to be used as guidelines that you can use to develop not only effective security, but effective lifecycle management.

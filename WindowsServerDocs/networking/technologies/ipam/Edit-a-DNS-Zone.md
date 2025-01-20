@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Edit a DNS Zone
 
->
-
 You can use this topic to edit a DNS zone in the IPAM client console.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.

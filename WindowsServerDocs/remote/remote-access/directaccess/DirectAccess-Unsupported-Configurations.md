@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # DirectAccess Unsupported Configurations
 
->
-
 Review the following list of unsupported DirectAccess configurations before you start your deployment to avoid having to start your deployment again.
 
 ## <a name="bkmk_frs"></a>File Replication Service (FRS) distribution of Group Policy objects (SYSVOL replications)

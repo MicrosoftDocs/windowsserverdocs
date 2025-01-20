@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Plan to Enable DirectAccess
 
->
-
 **Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role. This section describes the planning steps that are required to deploy a single Remote Access server running  Windows Server 2016 with basic features.
 
 The planning phase includes the following steps:

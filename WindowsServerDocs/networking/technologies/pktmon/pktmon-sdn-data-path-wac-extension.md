@@ -9,8 +9,6 @@ ms.date: 10/27/2021
 
 # SDN Data Path Diagnostics Extension in Windows Admin Center
 
->
-
 SDN Data Path Diagnostics is a tool within the SDN monitoring extension of Windows Admin Center that automates Packet Monitor-based packet captures according to various SDN scenarios, and presents the output in a single view that is easy to follow and manipulate.​
 
 ## What is Packet Monitor (Pktmon)?

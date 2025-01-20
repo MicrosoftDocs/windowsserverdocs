@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 3 Verify Deployments
 
->
-
 This topic describes how to verify that you have correctly configured your basic DirectAccess deployment.
 
 ### To verify access to internal resources through DirectAccess

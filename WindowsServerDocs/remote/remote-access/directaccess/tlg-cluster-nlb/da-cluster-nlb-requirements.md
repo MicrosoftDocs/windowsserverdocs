@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # DirectAccess Cluster-NLB Test Lab Configuration Requirements
 
->
-
 The following components are required for configuring DirectAccess in the test lab:
 
 -   The product disc or files for  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012.

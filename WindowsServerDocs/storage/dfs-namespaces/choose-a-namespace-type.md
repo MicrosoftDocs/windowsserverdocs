@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Choose a namespace type
 
->
-
 When creating a namespace, you must choose one of two namespace types: a stand-alone namespace or a domain-based namespace. In addition, if you choose a domain-based namespace, you must choose a namespace mode: Windows 2000 Server mode or Windows Server 2008 mode.
 
 ## Choosing a namespace type

@@ -10,8 +10,6 @@ ms.topic: article
 ---
 # Creating a Site Link Design
 
->
-
 Create a site link design to connect your sites with site links. Site links reflect the intersite connectivity and method used to transfer replication traffic. You must connect sites with site links so that domain controllers at each site can replicate Active Directory changes.
 
 ## Connecting sites with site links

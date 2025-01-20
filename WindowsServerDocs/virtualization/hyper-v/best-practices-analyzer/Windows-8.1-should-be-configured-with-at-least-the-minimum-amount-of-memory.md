@@ -1,15 +1,13 @@
 ---
 title: Windows 8.1 should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows 8.1 is configured with less than the minimum amount of RAM, which is 512 MB.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 84d7edab-610e-4265-87d0-9869f64b0039
 ms.date: 8/16/2016
 ---
 # Windows 8.1 should be configured with at least the minimum amount of memory
-
->
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

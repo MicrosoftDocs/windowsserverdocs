@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Migrate a domain-based namespace to Windows Server 2008 Mode
 
->
-
 The Windows Server 2008 mode for domain-based namespaces includes support for access-based enumeration and increased scalability.
 
 ## To migrate a domain-based namespace to Windows Server 2008 mode

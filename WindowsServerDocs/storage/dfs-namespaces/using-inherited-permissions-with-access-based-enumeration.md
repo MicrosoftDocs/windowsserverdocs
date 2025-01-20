@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Using inherited permissions with Access-based Enumeration
 
->
-
 By default, the permissions used for a DFS folder are inherited from the local file system of the namespace server. The permissions are inherited from the root directory of the system drive and grant the DOMAIN\\Users group Read permissions. As a result, even after enabling access-based enumeration, all folders in the namespace remain visible to all domain users.
 
 ## Advantages and limitations of inherited permissions

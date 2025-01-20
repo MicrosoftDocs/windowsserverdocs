@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Understanding the desktop hosting environment
 
->
-
 The following information describes the components of the desktop hosting service.
 
 ## Tenant environment

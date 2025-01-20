@@ -10,8 +10,6 @@ ms.date: 02/18/2022
 ---
 # Advanced Data Deduplication settings
 
->
-
 This document describes how to modify advanced [Data Deduplication](overview.md) settings. For [recommended workloads](install-enable.md#enable-dedup-candidate-workloads), the default settings should be sufficient. The main reason to modify these settings is to improve Data Deduplication's performance with other kinds of workloads.
 
 ## <a id="modifying-job-schedules"></a>Modifying Data Deduplication job schedules

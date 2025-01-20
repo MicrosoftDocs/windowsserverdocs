@@ -8,8 +8,6 @@ ms.date: 01/10/2020
 ---
 # Use Azure Monitor to send emails for Health Service Faults
 
->
-
 Azure Monitor maximizes the availability and performance of your applications by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It helps you understand how your applications are performing and proactively identifies issues affecting them and the resources they depend on.
 
 This is particularly helpful for your on-premises hyper-converged cluster. With Azure Monitor integrated, you will be able to configure email, text (SMS), and other alerts to ping you when something is wrong with your cluster (or when you want to flag some other activity based on the data collected). Below, we will briefly explain how Azure Monitor works, how to install Azure Monitor, and how to configure it to send you notifications.
@@ -242,6 +240,6 @@ Below is an example of the email that you will be send by Azure Monitor:
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
 - For more detailed information, read the [Azure Monitor documentation](/azure/azure-monitor/learn/tutorial-viewdata).
 - Read this for an overview on how to [connect to other Azure hybrid services](../../manage/windows-admin-center/azure/index.md).

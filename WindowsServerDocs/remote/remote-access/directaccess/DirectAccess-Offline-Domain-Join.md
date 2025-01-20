@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # DirectAccess Offline Domain Join
 
->
-
 This guide explains the steps to perform an offline domain join with DirectAccess. During an offline domain join, a computer is configured to join a domain without physical or VPN connection.
 
 This guide includes the following sections:

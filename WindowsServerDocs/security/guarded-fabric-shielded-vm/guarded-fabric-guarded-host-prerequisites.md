@@ -10,8 +10,6 @@ ms.date: 08/29/2018
 
 # Prerequisites for guarded hosts
 
->
-
 Review the host prerequisites for the mode of attestation you've chosen, then click the next step to add guarded hosts.
 
 ## TPM-trusted attestation

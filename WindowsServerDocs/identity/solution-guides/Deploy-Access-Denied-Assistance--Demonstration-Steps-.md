@@ -11,8 +11,6 @@ ms.topic: article
 
 # Deploy Access-Denied Assistance (Demonstration Steps)
 
->
-
 This topic explains how to configure access-denied assistance, and verify that it is working properly.
 
 **In this document**

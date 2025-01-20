@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Prehash and Preload Content on the Hosted Cache Server \(Optional\)
 
->
-
 You can use the procedures in this section to prehash content on your content servers, add the content to data packages, and then preload the content on your hosted cache servers.
 
 These procedures are optional because you are not required to prehash and preload content on your hosted cache servers.

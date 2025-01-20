@@ -11,8 +11,6 @@ ms.topic: article
 
 # Deploying AD DS in a New Organization
 
->
-
 Thoroughly preparing your Active Directory Domain Services (AD DS) design is essential to a cost-effective deployment. If your network environment is currently operating without a directory service, complete a comprehensive design of your AD DS logical structure before you deploy AD DS. Then, you can deploy a new forest root domain and deploy the rest of your domain structure according to your design.
 
 The following illustration shows the steps for deploying  Windows Server 2008  AD DS in a network environment that is currently operating without a directory service.

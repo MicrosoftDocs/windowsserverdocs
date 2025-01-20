@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Supported configurations for Remote Desktop Services
 
->
-
 When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you may have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to a later version of Windows Server to take advantage of the new features. The question then becomes, which RDS components can work with different versions and which need to be the same?
 
 So with that in mind, here are basic guidelines for supported configurations of Remote Desktop Services in Windows Server.

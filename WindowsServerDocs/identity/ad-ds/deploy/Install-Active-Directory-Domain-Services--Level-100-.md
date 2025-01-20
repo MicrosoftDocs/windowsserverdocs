@@ -11,8 +11,6 @@ ms.topic: article
 
 # Install Active Directory Domain Services (Level 100)
 
->
-
 This topic explains how to install AD DS in  Windows Server 2012 by using any of the following methods:
 
 -   [Credential requirements to run Adprep.exe and install Active Directory Domain Services](#BKMK_Creds)
@@ -278,7 +276,7 @@ Install-ADDSDomainController -Credential (Get-Credential CONTOSO\EnterpriseAdmin
 The command syntax to create an RODC account is as follows. Optional arguments appear within square brackets.
 
 ```
-Add-ADDSReadOnlyDomainControllerAccount [-SkipPreChecks] -DomainControllerAccuntName <string> -DomainName <string> -SiteName <string> [-AllowPasswordReplicationAccountName <string []>] [-NoGlobalCatalog] [-Credential <PS Credential>] [-DelegatedAdministratorAccountName <string>] [-DenyPasswordReplicationAccountName <string []>] [-InstallDNS] [-ReplicationSourceDC <string>] [-Force] [-WhatIf] [-Confirm] [<Common Parameters>]
+Add-ADDSReadOnlyDomainControllerAccount [-SkipPreChecks] -DomainControllerAccountName <string> -DomainName <string> -SiteName <string> [-AllowPasswordReplicationAccountName <string []>] [-NoGlobalCatalog] [-Credential <PS Credential>] [-DelegatedAdministratorAccountName <string>] [-DenyPasswordReplicationAccountName <string []>] [-InstallDNS] [-ReplicationSourceDC <string>] [-Force] [-WhatIf] [-Confirm] [<Common Parameters>]
 ```
 
 The command syntax to attach a server to an RODC account is as follows. Optional arguments appear within square brackets.

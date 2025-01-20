@@ -8,8 +8,6 @@ ms.date: 11/21/2019
 ---
 # Manage Servers with Windows Admin Center
 
->
-
 > [!Tip]
 > New to Windows Admin Center?
 > [Download or learn more about Windows Admin Center](../overview.md).

@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Enable BranchCache on a File Share (Optional)
 
->
-
 You can use this procedure to enable BranchCache on a file share.
 
 > [!IMPORTANT]

@@ -11,8 +11,6 @@ ms.topic: article
 
 # Reviewing OU Design Concepts
 
->
-
 The organizational unit (OU) structure for a domain includes the following:
 
 -   A diagram of the OU hierarchy

@@ -127,7 +127,7 @@ The destination server must run one of the following operating systems:
 - Windows Server 2016
 - Windows Server 2012 R2
 
-The destination servers can be standalone servers or a Windows failover cluster. Be aware that the clusters themselves are not migrated, solely the file server cluster resources. They can't run Azure Stack HCI or use a non-Microsoft clustering add-on. While the Storage Migration Service doesn't support Azure Files as a destination, it fully supports servers running the Azure File Sync agent with cloud tiering.
+The destination servers can be standalone servers or a Windows failover cluster. Be aware that the clusters themselves are not migrated, solely the file server cluster resources. They can't run Azure Local or use a non-Microsoft clustering add-on. While the Storage Migration Service doesn't support Azure Files as a destination, it fully supports servers running the Azure File Sync agent with cloud tiering.
 
 > [!TIP]
 > Destination servers running Windows Server 2019 or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service.

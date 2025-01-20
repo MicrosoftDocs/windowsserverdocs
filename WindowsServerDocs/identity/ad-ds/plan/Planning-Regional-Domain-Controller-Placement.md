@@ -13,8 +13,6 @@ ms.custom: inhenkel
 
 # Planning Regional Domain Controller Placement
 
->
-
 To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" (DSSTOPO_1.doc) worksheet used in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) to determine whether a location is a hub.
 
 Plan to place regional domain controllers for each domain that is represented in each hub location. After you place regional domain controllers in all hub locations, evaluate the need for placing regional domain controllers at satellite locations. Eliminating unnecessary regional domain controllers from satellite locations reduces the support costs required to maintain a remote server infrastructure.

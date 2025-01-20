@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 7 Test DirectAccess Connectivity from the Internet
 
->
-
 The DirectAccess one-time password (OTP) deployment has been tested from the Homenet subnet, and can now be tested from the Internet.
 
 ### To test OTP functionality from the Internet on CLIENT1

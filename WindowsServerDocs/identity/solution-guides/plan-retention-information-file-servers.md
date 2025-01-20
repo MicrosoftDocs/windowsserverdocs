@@ -10,8 +10,6 @@ ms.date: 04/01/2022
 
 # Plan for retention of information on file servers
 
->
-
 A data retention policy is important for any organization. You can use the following information to plan how you retain information in your organization.
 
 ## Determine the retention schedule

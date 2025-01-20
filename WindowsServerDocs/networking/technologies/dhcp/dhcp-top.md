@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Dynamic Host Configuration Protocol (DHCP)
 
->
-
 You can use this topic for a brief overview of DHCP in Windows Server 2016.
 
 > [!NOTE]

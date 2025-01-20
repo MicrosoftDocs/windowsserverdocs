@@ -4,8 +4,8 @@ description: Learn about certutil, a command-line program that displays CA confi
 ms.service: windows-server
 ms.topic: reference
 author: xelu86
-ms.author: roharwoo
-ms.date: 10/19/2023
+ms.author: alalve
+ms.date: 01/15/2025
 ---
 
 # certutil
@@ -622,7 +622,7 @@ Options:
 - To delete CRLs that expired by January 22, 2001, type: `1/22/2001 crl`
 
 >[!NOTE]
->**Date** expects the format `mm/dd/yyyy` rather then `dd/mm/yyyy`, for example `1/22/2001` rather than `22/1/2001` for January 22, 2001. If your server isn't configured with US regional settings, using the **Date** argument might produce unexpected results.
+>**Date** expects the format `mm/dd/yyyy` rather than `dd/mm/yyyy`, for example `1/22/2001` rather than `22/1/2001` for January 22, 2001. If your server isn't configured with US regional settings, using the **Date** argument might produce unexpected results.
 
 ### -backup
 
@@ -899,7 +899,7 @@ For example:
 > 1. When the number of certificates in the store exceeds 10.
 > 1. When a **CertId** is specified, it's used to match all the listed types for every certificate. For example, if a **serial number** is provided, it will also attempt to match all other listed types.
 >
-> If you are concerned about performance issues, PowerShell commands are recommended where it will only match the specified certificate type.
+> If you're concerned about performance issues, PowerShell commands are recommended where it will only match the specified certificate type.
 
 ### -enumstore
 
@@ -1043,7 +1043,7 @@ Where:
 
   - Serial number
   - SHA-1 certificate
-  - CRL, CTL or public key hash
+  - CRL, CTL, or public key hash
   - Numeric cert index (0, 1, and so on)
   - Numeric CRL index (.0, .1, and so on)
   - Numeric CTL index (..0, ..1, and so on)
@@ -1103,7 +1103,7 @@ Where:
 
   - Serial number
   - SHA-1 certificate
-  - CRL, CTL or public key hash
+  - CRL, CTL, or public key hash
   - Numeric cert index (0, 1, and so on)
   - Numeric CRL index (.0, .1, and so on)
   - Numeric CTL index (..0, ..1, and so on)
@@ -1116,7 +1116,8 @@ Where:
   - Template name or ObjectId
   - EKU or Application Policies ObjectId
   - CRL issuer Common Name.
-Many of these may result in multiple matches.
+
+Many of these might result in multiple matches.
 
 - **OutputFile** is the file used to save the matching certificates.
 
@@ -1636,12 +1637,12 @@ Options:
 > [!TIP]
 > The ability to specify an Active Directory Domain Services (AD DS) domain **[Domain]** and to specify a domain controller (**-dc**) was added in Windows Server 2012. To successfully run the command, you must use an account that is a member of **Domain Admins** or **Enterprise Admins**. The behavior modifications of this command are as follows:
 >
-> - If a domain is not specified and a specific domain controller is not specified, this option returns a list of domain controllers to process from the default domain controller.
-> - If a domain is not specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.
-> - If a domain is specified, but a domain controller is not specified, a list of domain controllers is generated along with reports on the certificates for each domain controller in the list.
+> - If a domain isn't specified and a specific domain controller isn't specified, this option returns a list of domain controllers to process from the default domain controller.
+> - If a domain isn't specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.
+> - If a domain is specified, but a domain controller isn't specified, a list of domain controllers is generated along with reports on the certificates for each domain controller in the list.
 > - If the domain and domain controller are specified, a list of domain controllers is generated from the targeted domain controller. A report of the certificates for each domain controller in the list is also generated.
 >
-> For example, assume there is a domain named CPANDL with a domain controller named CPANDL-DC1. You can run the following command to a retrieve a list of domain controllers and their certificates from CPANDL-DC1: `certutil -dc cpandl-dc1 -DCInfo cpandl`.
+> For example, assume there's a domain named CPANDL with a domain controller named CPANDL-DC1. You can run the following command to a retrieve a list of domain controllers and their certificates from CPANDL-DC1: `certutil -dc cpandl-dc1 -DCInfo cpandl`.
 
 ### -EntInfo
 
@@ -1933,7 +1934,7 @@ Where:
 
 - **XMLFile** is the input XML file to be parsed.
 - **CTLFile** is the output CTL file to be generated.
-- **SSTFile** is the optional *.sst* file to be created that contains all of the certificates used for pinning.
+- **SSTFile** is the optional `.sst` file to be created that contains all of the certificates used for pinning.
 - **QueryFilesPrefix** are optional *Domains.csv* and *Keys.csv* files to be created for database query.
   - The **QueryFilesPrefix** string is prepended to each created file.
   - The **Domains.csv** file contains rule name, domain rows.
@@ -2357,7 +2358,7 @@ Where:
 - **PolicyServers** uses the Policy Servers registry key.
 - **ProgId** uses the policy or exit module's ProgID (registry subkey name).
 - **RegistryValueName** uses the registry value name (use `Name*` to prefix match).
-- **value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
+- **value** uses the new numeric, string, or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
 Options:
 
@@ -2410,7 +2411,7 @@ Where:
 - **PolicyServers** uses the Policy Servers registry key.
 - **ProgId** uses the policy or exit module's ProgID (registry subkey name).
 - **RegistryValueName** uses the registry value name (use `Name*` to prefix match).
-- **Value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
+- **Value** uses the new numeric, string, or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
 Options:
 
@@ -2597,35 +2598,6 @@ Options:
 
 ```cmd
 [-f] [-user] [-split] [-p password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
-```
-
-#### Remarks
-
-- The password specified on the command line must be a comma-separated password list.
-- If more than one password is specified, the last password is used for the output file. If only one password is provided or if the last password is `*`, the user is prompted for the output file password.
-
-### -convertEPF
-
-Converts a PFX file into an EPF file.
-
-```cmd
-certutil [options] -ConvertEPF PFXInFileList EPFOutFile [cast | cast-] [V3CACertId][,Salt]
-```
-
-Where:
-
-- **PFXInFileList** is a comma-separated list of PFX input files.
-- **EPFOutFile** is the name of the PFX output file.
-- **EPF** is the name of the EPF output file.
-- **cast** uses CAST 64 encryption.
-- **cast-** uses CAST 64 encryption (export).
-- **V3CACertId** is the V3 CA certificate match token. For more information, see the `-store` parameter in this article.
-- **Salt** is the EPF output file salt string.
-
-Options:
-
-```cmd
-[-f] [-Silent] [-split] [-dc DCName] [-p Password] [-csp Provider]
 ```
 
 #### Remarks

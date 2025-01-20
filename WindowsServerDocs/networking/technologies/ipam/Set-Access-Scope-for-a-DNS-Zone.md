@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Set Access Scope for a DNS Zone
 
->
-
 You can use this topic to set the access scope for a DNS zone by using the IPAM client console.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.

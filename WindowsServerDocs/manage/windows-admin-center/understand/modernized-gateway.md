@@ -8,8 +8,6 @@ ms.date: 01/02/2024
 ---
 # What is the Windows Admin Center modernized gateway (preview)?
 
->
-
 In December 2023, the Windows Admin Center modernized gateway was released to public preview through the [Windows Server Insider program](/windows-insider/business/server-get-started). This release is in addition to the latest generally available release of Windows Admin Center, version 2311. 
 
 The modernized gateway is a significant backend upgrade of the Windows Admin Center product. The Windows Admin Center backend hosts the authorization structure, PowerShell services, and gateway plug-ins and plays a critical role in every Windows Admin Center experience. 

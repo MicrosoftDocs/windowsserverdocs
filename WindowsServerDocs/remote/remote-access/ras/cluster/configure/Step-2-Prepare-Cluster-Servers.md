@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 2 Prepare Cluster Servers
 
->
-
 Before you can configure a cluster deployment, you prepare additional servers to add to the cluster.
 
 |Task|Description|

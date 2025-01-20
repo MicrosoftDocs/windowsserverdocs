@@ -10,8 +10,6 @@ ms.date: 7/3/2024
 ---
 # Remote Desktop URI scheme
 
->
-
 This document defines the format of Uniform Resource Identifiers (URIs) for Remote Desktop. These URI schemes allow for Remote Desktop clients to be invoked with various commands.
 
 ## ms-rd URI scheme

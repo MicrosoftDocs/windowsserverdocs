@@ -2,8 +2,8 @@
 title: Deploy graphics devices by using Discrete Device Assignment
 description: Learn how to use DDA to deploy graphics devices in Windows Server and how to mount a GPU to a virtual machine.
 ms.topic: how-to
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 04/04/2024
 ---
 # Deploy graphics devices by using Discrete Device Assignment

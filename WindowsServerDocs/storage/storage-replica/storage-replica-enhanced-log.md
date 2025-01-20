@@ -10,10 +10,10 @@ ms.date: 10/25/2024
 
 # Storage Replica Enhanced Log
 
-Storage Replica leverages a general-purpose logging service for replicating IO to the secondary volume in any replication group. Starting with Azure Stack HCI 23H2, users can opt in to a more performant logging service, **Enhanced Log**. To differentiate this redesigned logging service, we refer to the original logging service as **Traditional Log**.
+Storage Replica leverages a general-purpose logging service for replicating IO to the secondary volume in any replication group. Starting with Azure Local 23H2, users can opt in to a more performant logging service, **Enhanced Log**. To differentiate this redesigned logging service, we refer to the original logging service as **Traditional Log**.
 
 > [!NOTE]
-> Enhanced Log is generally available with Azure Stack HCI 23H2 and available in Windows Server 2025.
+> Enhanced Log is generally available with Azure Local 23H2 and available in Windows Server 2025.
 
 ## Enhanced vs. Traditional Log
 
@@ -84,5 +84,5 @@ You may use `-LogType FileBased` to deploy the Storage Replica Partnership using
 * [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica: Known Issues](storage-replica-known-issues.md)
 * [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-* [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+* [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

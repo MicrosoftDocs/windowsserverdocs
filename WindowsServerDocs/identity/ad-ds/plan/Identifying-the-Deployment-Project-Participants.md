@@ -11,8 +11,6 @@ ms.topic: article
 
 # Identifying the Deployment Project Participants
 
->
-
 The first step in establishing a deployment project for Active Directory Domain Service (AD DS) is to establish the design and deployment project teams that will be responsible for managing the design phase and deployment phase of the Active Directory project cycle. In addition, you must identify the individuals and groups who will be responsible for owning and maintaining the directory after the deployment is completed.
 
 - [Defining project-specific roles](#BKMK_1)

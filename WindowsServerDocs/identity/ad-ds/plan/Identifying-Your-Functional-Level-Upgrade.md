@@ -9,8 +9,6 @@ ms.topic: conceptual
 
 # Identifying your functional level upgrade
 
->
-
 In this article learn about the process for upgrading your domain and forest functional levels in Active Directory Domain Services.
 
 Before you can raise domain and forest functional levels, evaluate your current environment and identify your target functional level. Assess your current environment by identifying:

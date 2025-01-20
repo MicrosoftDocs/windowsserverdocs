@@ -11,8 +11,6 @@ ms.topic: article
 
 # Plan for File Access Auditing
 
->
-
 The information in this topic explains the security auditing enhancements that are introduced in  Windows Server 2012  and new audit settings that you should consider as you deploy Dynamic Access Control in your enterprise. The actual audit policy settings that you deploy will depend on your goals, which can include regulatory compliance, monitoring, forensic analysis, and troubleshooting.
 
 > [!NOTE]

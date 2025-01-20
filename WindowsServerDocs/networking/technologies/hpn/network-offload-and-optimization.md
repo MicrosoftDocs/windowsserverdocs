@@ -11,9 +11,7 @@ ms.date: 10/26/2021
 
 # Network offload and optimization technologies
 
->
-
-In this topic, we give you an overview of the different network offload and optimization features available in Windows Server 2016 and discuss how they help make networking more efficient. These technologies include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+In this topic, we give you an overview of the different network offload and optimization features available in Windows Server 2016 and discuss how they help make networking more efficient. These technologies include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies. To learn more, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 The three categories of networking features available in Windows Server 2016 are:
 

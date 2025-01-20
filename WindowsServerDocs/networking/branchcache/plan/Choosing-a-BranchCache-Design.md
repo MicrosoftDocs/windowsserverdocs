@@ -9,8 +9,6 @@ ms.date: 01/05/2021
 ---
 # Choosing a BranchCache Design
 
->
-
 You can use this topic to learn about BranchCache modes and to select the best modes for your deployment.
 
 You can use this guide to deploy BranchCache in the following modes and mode combinations.

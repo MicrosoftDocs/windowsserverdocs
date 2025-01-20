@@ -9,8 +9,6 @@ ms.date: 06/18/2018
 
 # Windows Admin Center Case Studies
 
->
-
 ## Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 
 - [Ava6](#ava6)

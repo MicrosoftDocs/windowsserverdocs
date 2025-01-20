@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 3 Configure the Multisite Deployment
 
->
-
 After configuring the multisite infrastructure follow these steps to set up the  Remote Access multisite deployment.
 
 |Task|Description|

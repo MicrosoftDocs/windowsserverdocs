@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Add DirectAccess to an Existing Remote Access (VPN) Deployment
 
->
-
 >[!IMPORTANT]
 >Microsoft highly recommends that you use Always On VPN instead of DirectAccess for new deployments. For more information, see [Always on VPN](../../overview-always-on-vpn.md).
 

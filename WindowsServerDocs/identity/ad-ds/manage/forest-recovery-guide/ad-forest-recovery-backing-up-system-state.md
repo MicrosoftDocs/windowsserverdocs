@@ -11,8 +11,6 @@ ms.custom: 9238cb27-0020-42f7-90d6-fcebf7e3c0bc, inhenkel
 
 # Active Directory Forest Recovery - Back up the System State data
 
->
-
 Use the following procedure to perform a system state backup on a Domain Controller (DC) by using Windows Server Backup or wbadmin.exe.
 
 ## Perform a system state backup using Windows Server Backup
