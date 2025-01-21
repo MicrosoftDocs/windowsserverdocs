@@ -1,31 +1,38 @@
 ---
-title: Create installation media for deploying Windows Server
+title: Install Windows Server from installation media
 description: Learn how to create a bootable USB flash drive or DVD media to deploy Windows Server on physical and virtual hardware.
-ms.date: 01/15/2025
+ms.date: 01/21/2025
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
 ---
 
-# How to install Windows Server from installation media
+# Install Windows Server from installation media
 
 Follow the steps in this article to create a bootable USB drive or DVD that can be used to install Windows Server on your devices. Creating a Windows Server installation media is a crucial step in setting up a new server or upgrade from an existing one. This article aims to guide users on how to create a Windows Server installation media.
 
 ## Prerequisites
 
-The following are required before installing Windows Server:
+You'll need to have the setup media for the version of Windows Server that you want to install. Setup media for the target version of Windows Server can be obtained from Original Equipment Manufacturer (OEM), Retail, Visual Studio subscription, and the Volume Licensing Service Center (VLSC) channels. Your device must also not be running in Azure. If you want to install Windows Server in Azure, see [Quickstart: Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal). The following are required before installing Windows Server:
 
-- Your device must meet the minimum hardware requirements. To learn more, see [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements).
-- A minimum of an 8 GB USB flash drive.
-- An optical drive capable of burning a DVD+/-RW dual-layer disk.
-- A dual-layer 8.5 GB DVD.
+- **Hardware**
+
+  - Your device must meet or exceed the minimum hardware requirements. To learn more, see [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements).
+  - A minimum of an 8 GB USB flash drive.
+  - An optical drive capable of burning a DVD+/-RW dual-layer disk.
+  - A dual-layer 8.5 GB DVD.
+
+- **Software**
+
+  - Determine which version of Windows Server is appropriate for your environment. To learn more, see [Comparison of Windows Server editions](/windows-server/get-started/editions-comparison).
+  - Make sure you have a valid product key or subscription license for your product. Product keys and activation methods may vary depending on the distribution channel you received Windows Server media from, such as a Commercial Licensing program, Retail, or OEM.
 
 > [!NOTE]
 > For users who desire to install Windows Server in a virtual environment through Windows Hyper-V, the minimum RAM requirements differ. To learn more, see the [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements?tabs=ram&pivots=windows-server-2025#components) components tab.
 
 ## Create a bootable USB flash drive
 
-An alternative to manually preparing your USB drive, users can run the following script to make the USB drive bootable. The Windows Server installation ISO file must be mounted before running this script. To mount the ISO file, perform the following steps:
+Generally, creating a bootable USB drive can be performed using the [diskpart.exe](/windows-server/administration/windows-commands/diskpart) utility. An alternative to manually preparing your USB drive, users can run the following PowerShell script to make the USB drive bootable. The Windows Server installation ISO file must be mounted before running this script. To mount the ISO file, perform the following steps:
 
 1. Locate your Windows Server installation ISO file.
 
@@ -173,3 +180,15 @@ Once modifications are made to the boot order, follow these steps to install Win
 To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (SConfig). To learn more, see [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig) and [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer).
 
 ---
+
+## See also
+
+- [Get started with Windows Server](/windows-server/get-started/get-started-with-windows-server)
+
+- [What's new in Windows Server 2025](/windows-server/get-started/get-started-with-windows-server)
+
+- [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features)
+
+- [Hyper-V Technology Overview](/windows-server/virtualization/hyper-v/hyper-v-overview)
+
+- [Overview of file sharing using the SMB 3 protocol in Windows Server](/windows-server/storage/file-server/file-server-smb-overview)
