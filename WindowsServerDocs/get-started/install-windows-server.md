@@ -17,18 +17,18 @@ You'll need to have the setup media for the version of Windows Server that you w
 
 - **Hardware**
 
-  - Your device must meet or exceed the minimum hardware requirements. To learn more, see [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements).
+  - Your device must meet or exceed the minimum hardware requirements. To learn more, see [Hardware requirements for Windows Server](hardware-requirements.md).
   - A minimum of an 8 GB USB flash drive.
   - An optical drive capable of burning a DVD+/-RW dual-layer disk.
   - A dual-layer 8.5 GB DVD.
 
 - **Software**
 
-  - Determine which version of Windows Server is appropriate for your environment. To learn more, see [Comparison of Windows Server editions](/windows-server/get-started/editions-comparison).
+  - Determine which version of Windows Server is appropriate for your environment. To learn more, see [Comparison of Windows Server editions](editions-comparison.md).
   - Make sure you have a valid product key or subscription license for your product. Product keys and activation methods may vary depending on the distribution channel you received Windows Server media from, such as a Commercial Licensing program, Retail, or OEM.
 
 > [!NOTE]
-> For users who desire to install Windows Server in a virtual environment through Windows Hyper-V, the minimum RAM requirements differ. To learn more, see the [Hardware requirements for Windows Server](/windows-server/get-started/hardware-requirements?tabs=ram&pivots=windows-server-2025#components) components tab.
+> For users who desire to install Windows Server in a virtual environment through Windows Hyper-V, the minimum RAM requirements differ. To learn more, see the [Hardware requirements for Windows Server](hardware-requirements.md?tabs=ram&pivots=windows-server-2025#components) components tab.
 
 ## Create a bootable USB flash drive
 
@@ -140,7 +140,7 @@ Once modifications are made to the boot order, follow these steps to install Win
   
    1. **Use a product key** - This option is for users who have an OEM, Retail, or Volume License (VL) key. If this license type is selected, proceed with the next steps.
 
-   1. **Pay-as-you-go** - This option is for users who desire to use their Azure subscription license. This option is only available for Windows Server 2025 and has its own set of [prerequisites](/windows-server/get-started/windows-server-pay-as-you-go?tabs=gui%2Cazureportal#prerequisites). If this license type is selected, see [Set up Windows Server Pay-as-you-go](/windows-server/get-started/windows-server-pay-as-you-go?tabs=gui%2Cazureportal#set-up-windows-server-pay-as-you-go) to continue the installation process.
+   1. **Pay-as-you-go** - This option is for users who desire to use their Azure subscription license. This option is only available for Windows Server 2025 and has its own set of [prerequisites](windows-server-pay-as-you-go.md?tabs=gui%2Cazureportal#prerequisites). If this license type is selected, see [Set up Windows Server Pay-as-you-go](windows-server-pay-as-you-go.md?tabs=gui%2Cazureportal#set-up-windows-server-pay-as-you-go) to continue the installation process.
   
 1. Under **Select image**, select your Windows Server version, then select **Next**.
 1. Under **Applicable notices and license terms**, review the software terms, then select **Accept**.
@@ -161,7 +161,7 @@ Once modifications are made to the boot order, follow these steps to install Win
   
    1. **Use a product key** - This option is for users who have an OEM, Retail, or Volume License (VL) key. If this license type is selected, proceed with the next steps.
 
-   1. **Pay-as-you-go** - This option is for users who desire to use their Azure subscription license. This option is only available for Windows Server 2025 and has its own set of [prerequisites](/windows-server/get-started/windows-server-pay-as-you-go?tabs=gui%2Cazureportal#prerequisites). If this license type is selected, see [Set up Windows Server Pay-as-you-go](/windows-server/get-started/windows-server-pay-as-you-go?tabs=gui%2Cazureportal#set-up-windows-server-pay-as-you-go) to continue the installation process.
+   1. **Pay-as-you-go** - This option is for users who desire to use their Azure subscription license. This option is only available for Windows Server 2025 and has its own set of [prerequisites](windows-server-pay-as-you-go.md?tabs=gui%2Cazureportal#prerequisites). If this license type is selected, see [Set up Windows Server Pay-as-you-go](windows-server-pay-as-you-go.md?tabs=gui%2Cazureportal#set-up-windows-server-pay-as-you-go) to continue the installation process.
   
 1. Under **Select image**, select your Windows Server version, then select **Next**.
 1. Under **Applicable notices and license terms**, review the software terms, then select **Accept**.

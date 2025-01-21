@@ -20,6 +20,8 @@ items:
         href: whats-new-in-windows-server-2019.md
       - name: Windows Server 2016
         href: whats-new-in-windows-server-2016.md
+    - name: Install Windows Server from installation media
+      href: install-windows-server.md 
     - name: Servicing channels comparison
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
