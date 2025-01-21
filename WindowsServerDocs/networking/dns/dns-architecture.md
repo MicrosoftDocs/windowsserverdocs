@@ -18,9 +18,9 @@ DNS is a hierarchical distributed database and an associated set of protocols th
 
 - A schema of the database
 
-With DNS host names reside in a database that can be distributed among multiple servers, decreasing the load on any one server, and providing the ability to administer this naming system on a per-partition basis. DNS supports hierarchical names and allows registration of various data types in addition to host name-to-IP address mapping used in HOSTS files. The DNS database is distributed, allowing it to both scale up and scale out meaning performance isn't degraded when more servers are added.
+DNS host names reside in a database that can be distributed among multiple servers, decreasing the load on any one server, and provide the ability to administer this naming system on a per-partition basis. DNS supports hierarchical names and allows registration of various data types in addition to host name-to-IP address mapping used in HOSTS files. The DNS database is distributed, allowing it to both scale up and scale out meaning performance isn't degraded when more servers are added.
 
-The original DNS was based on [Request for Comment (RFC) 1035 (Domain Names–Implementation and Specification)](https://datatracker.ietf.org/doc/rfc1035/). Additional RFCs that describe DNS security, implementation, and administrative issues later augmented the original design specifications.
+The original DNS was based on [Request for Comment (RFC) 1035 (Domain Names–Implementation and Specification)](https://datatracker.ietf.org/doc/rfc1035/). Other RFCs that describe DNS security, implementation, and administrative issues later augmented the original design specifications.
 
 The RFCs used in the Windows Server operating systems are [1034](https://datatracker.ietf.org/doc/rfc1034/), [1035](https://datatracker.ietf.org/doc/rfc1035/), [1886](https://datatracker.ietf.org/doc/rfc1886/), [1996](https://datatracker.ietf.org/doc/rfc1996/), [1995](https://datatracker.ietf.org/doc/rfc1995/), [2136](https://datatracker.ietf.org/doc/rfc2136/), [2308](https://datatracker.ietf.org/doc/rfc2308/), [4034](https://datatracker.ietf.org/doc/rfc4034/), [4035](https://datatracker.ietf.org/doc/rfc4035/), [4036](https://datatracker.ietf.org/doc/rfc4036/) for DNSSEC, and [2052](https://datatracker.ietf.org/doc/rfc2052/).
 
@@ -28,7 +28,7 @@ The RFCs used in the Windows Server operating systems are [1034](https://datatra
 
 DNS is implemented as a hierarchical and distributed database containing various types of data, including host names and domain names. The names in a DNS database form a hierarchical tree structure called the domain namespace. Domain names consist of individual labels separated by dots, for example: `mydomain.contoso.com`.
 
-A fully qualified domain name (FQDN) uniquely identifies the host’s position within the DNS hierarchical tree by specifying a list of names separated by dots in the path from the referenced host to the root. The following figure shows an example of a DNS tree with a host called mydomain within the `contoso.com`. domain. The FQDN for the host would be `mydomain.contoso.com`.
+A fully qualified domain name (FQDN) uniquely identifies the host’s position within the DNS hierarchical tree. The FQDN specifies a list of names separated by dots in the path from the referenced host to the root. The following figure shows an example of a DNS tree with a host called `mydomain` within the `contoso.com` domain. The FQDN for the host would be `mydomain.contoso.com`.
 
 :::image type="content" source="../media/dns-architecture/registration-authority.png" alt-text="alt text":::
 
@@ -42,36 +42,36 @@ The DNS domain namespace, as shown in the preceding figure, is based on the conc
 
 DNS clients and servers use queries as the method of resolving names in the tree to specific types of resource information. This information is provided by DNS servers in query responses to DNS clients that then extract the information and pass it to a requesting program for resolving the queried name. In the process of resolving a name, DNS servers often function as DNS clients, querying other servers in order to fully resolve a queried name.
 
-For example, Contonso is assigned authority by the Internet root servers for its own part of the DNS domain namespace tree on the Internet, that is, `contoso.com`. To resolve a name outside of the `contoso.com` namespace would require Contoso DNS servers to query other DNS servers, such as the root servers, to resolve the name.
+For example, Contoso is assigned authority by the Internet root servers for its own part of the DNS domain namespace tree on the Internet, that is, `contoso.com`. To resolve a name outside of the `contoso.com` namespace would require Contoso DNS servers to query other DNS servers, such as the root servers, to resolve the name.
 
 ## How the DNS domain namespace is organized
 
-Any DNS domain name used in the tree is technically a domain. However most DNS discussions identify names in one of five ways, based on the level and the way a name is commonly used. For example, the DNS domain name registered to Contoso (`contoso.com`) is known as a second-level domain. This is because the name has two parts (known as labels) that indicate it's located two levels below the root or top of the tree. Most DNS domain names have two or more labels, each of which indicates a new level in the tree. Periods are used in names to separate labels.
+Any DNS domain name used in the tree is technically a domain. However most DNS discussions identify names in one of five ways, based on the level and the way a name is commonly used. For example, the DNS domain name registered to Contoso (`contoso.com`) is known as a second-level domain. The name has two parts (known as labels) that indicate it's located two levels below the root or top of the tree. Most DNS domain names have two or more labels, each of which indicates a new level in the tree. Periods are used in names to separate labels.
 
 The five categories used to describe DNS domain names by their function in the namespace are described in the following table, along with an example of each name type.
 
 | Name type | Description | Example |
 | --------- | ---------- | ---------- |
-| Root domain | The top of the tree, representing an unnamed level; it is sometimes shown as two empty quotation marks (""), indicating a null value. When used in a DNS domain name, it is stated by a trailing period (.) to designate that the name is located at the root or highest level of the domain hierarchy. In this instance, the DNS domain name is considered to be complete and points to an exact location in the tree of names. Names stated this way are FQDNs. A single period (.) or a period used at the end of a name, such as `example.contoso.com.` | A single period (.) or a period used at the end of a name, such as `example.contoso.com.` | 
-| Top-level Domain (TLD) | A name used to indicate a country/region or the type of organization using a name. | `.com`, which indicates a name registered to a business for commercial use on the Internet. |
+| Root domain | The top of the tree, representing an unnamed level; it's sometimes shown as two empty quotation marks (""), indicating a null value. When used in a DNS domain name, it's stated by a trailing period (.) to designate that the name is located at the root or highest level of the domain hierarchy. In this instance, the DNS domain name is considered to be complete and points to an exact location in the tree of names. Names stated this way are FQDNs. A single period (.) or a period used at the end of a name, such as `example.contoso.com.` | A single period (.) or a period used at the end of a name, such as `example.contoso.com.` |
+| Top-level Domain (TLD) | A name used to indicate a country or region or the type of organization using a name. | `.com`, which indicates a name registered to a business for commercial use on the Internet. |
 | Second-level domain | Variable-length names registered to an individual or organization for use on the Internet. These names are always based on an appropriate top-level domain, depending on the type of organization or geographic location where a name is used. | `contoso.com.` is the second-level domain name registered to Contoso by the Internet DNS domain name registrar. |
-| Subdomain | Additional names that an organization can create that are derived from the registered second-level domain name. These include names added to grow the DNS tree of names in an organization and divide it into departments or geographic locations. |  `example.contoso.com.` is a subdomain assigned by Contoso for use in documentation example names. |
+| Subdomain | Other names that an organization can create that are derived from the registered second-level domain name. Subdomains include names added to grow the DNS tree of names in an organization and divide it into departments or geographic locations. |  `example.contoso.com.` is a subdomain assigned by Contoso for use in documentation example names. |
 | Host or resource name | Names that represent a leaf in the DNS tree of names and identify a specific resource. Typically, the left-most label of a DNS domain name identifies a specific computer on the network. For example, if a name at this level is used in a host (A) resource record, it's used to look up the IP address of computer based on its host name. | `host-a.example.contoso.com.` The first label (host-a) is the DNS host name for a specific computer on the network. |
 
 ## DNS and Internet domains
 
-The Internet Domain Name System is managed by a Name Registration Authority on the Internet, responsible for maintaining top-level domains assigned by organization and by country/region. These domain names follow the International Standard for country codes (ISO 3166). There are hundreds of top-level-domain names available for use by the public. See the following table for some common TLDs, reserved for use by organizations, as well as two-letter and three-letter abbreviations used for countries and regions.
+The Internet Domain Name System is managed by a Name Registration Authority on the Internet, responsible for maintaining top-level domains assigned by organization and by country/region. These domain names follow the International Standard for country codes (ISO 3166). There are hundreds of top-level-domain names available for use by the public. The following table shows a few common TLDs, as well example two-letter abbreviations used for countries and regions.
 
 | DNS Domain Name | Type of Organization |
 | ---------- | ---------- |
 | .com | Commercial organizations |
 | .edu | Educational institutions |
 | .org | Non-profit organizations |
-| .net | Networks (the backbobe of the Internet) |
-| .gov | Non-military government organizations |
+| .net | Networks (the backbone of the Internet) |
+| .gov | Nonmilitary government organizations |
 | .mil | Military government organizations |
 | .arpa | Reverse DNS |
-| .xx | Two-letter country codes (for example, .us, .au, .ca., .fr) |
+| .xx | Two-letter country codes (for example, `.us`, `.au`, `.ca`., `.fr`) |
 
 ## DNS resource records
 
@@ -92,14 +92,14 @@ dynamic update.
 Common resource records include:
 
 | Resource record type | Description |
-| -- | -- |
+| -- |--|
 | Host (A, AAAA) records | Maps a hostname to an IP address. |
 | Alias (CNAME) records | Forward an alias domain name or subdomain to another primary or canonical name. Alias (CNAME) resource records are also termed canonical name resource records. With these records, you can use more than one DNS name to point to a single host. |
 | Mail exchanger (MX) records | Specifies the name of a computer that exchanges or forwards mail. E-mail applications use the mail exchanger (MX) resource record to locate a mail server based on a DNS domain name in the destination address for the e-mail recipient of a message. If multiple mail exchanger (MX) resource records exist, the DNS Client service attempts to contact mail servers in the order of preference from lowest value (highest priority) to highest value (lowest priority). |
 | Pointer (PTR) records | Used by reverse DNS lookups to map an IP address to domain. Pointer (PTR) resource records support the reverse lookup process, based on zones that are created and rooted in the `in-addr.arpa` domain. You need to have the appropriate reverse lookup zone present on your DNS server to create a PTR record that maps an IP address to a specific hostname. |
-| Service location (SRV) records | Specifies the host, port and protocol for a service. Service location (SRV) resource records are required when clients use DNS to locate location services such as Active Directory domain controllers. |
+| Service location (SRV) records | Specifies the host, port, and protocol for a service. Service location (SRV) resource records are required when clients use DNS to locate location services such as Active Directory domain controllers. |
 | Name server (NS) records | Specifies the authoritative name servers for a domain. |
-| Text (TXT) record | Enables the publication of text in a DNS record. Text records let you add text information that can be returned by querying DNS. TXT records are often used to authenticate ownership of DNS zones. |
+| Text (TXT) record | Enables the publication of text in a DNS record. Text records let you add text information that are returned by querying DNS. TXT records are often used to authenticate ownership of DNS zones. |
 | Delegation name (DNAME) record | Provides an alias for a domain, like a CNAME record, but includes all subdomains. |
 | Start of authority (SOA) record | Provides authoritative information about a DNS zone. The SOA record includes primary name server, contact of DNZ zone administrator, refresh information, and other information. |
 
@@ -107,11 +107,11 @@ Common resource records include:
 
 The Time-to-Live (TTL) value in a resource record indicates a length of time used by other DNS servers to determine how long to cache information for a record before expiring and discarding it. For example, most resource records created by the DNS Server service inherit the minimum (default) TTL of one hour from the start of authority (SOA) resource record, which prevents extended caching by other DNS servers.
 
-A DNS client resolver caches the responses it receives when it resolves DNS queries. These cached responses can then be used to answer later queries for the same information. The cached data, however, has a limited lifetime specified in the TTL parameter returned with the response data. TTL ensures that the DNS server does not keep information for so long that it becomes out of date. TTL for the cache can be set on the DNS database (for each individual resource record, by specifying the TTL field of the record and per zone through the minimum TTL field of the SOA record) as well as on the DNS client resolver side by specifying the maximum TTL the resolver allows to cache the resource records.
+A DNS client resolver caches the responses it receives when it resolves DNS queries. These cached responses can then be used to answer later queries for the same information. The cached data, however, has a limited lifetime specified in the TTL parameter returned with the response data. TTL ensures that the DNS server doesn't keep information for so long that it becomes out of date. TTL for the cache can be set on the DNS database (for each individual resource record, by specifying the TTL field of the record and per zone through the minimum TTL field of the SOA record) and on the DNS client resolver side by specifying the maximum TTL the resolver allows to cache the resource records.
 
-There are two competing factors to consider when setting the TTL. The first is the accuracy of the cached information, and the second is the utilization of the DNS servers and the amount of network traffic. If the TTL is short, then the likelihood of having old information is reduced considerably, but it increases utilization of DNS servers and network traffic, because the DNS client must query DNS servers for the expired data the next time it is requested. If the TTL is long, the cached responses could become outdated, meaning the resolver could give false answers to queries. At the same time, a long TTL decreases utilization of DNS servers and reduces network traffic because the DNS client answers queries using its cached data.
+There are two competing factors to consider when setting the TTL. The first is the accuracy of the cached information, and the second is the utilization of the DNS servers and the amount of network traffic. If the TTL is short, then the likelihood of having old information is reduced considerably, but it increases utilization of DNS servers and network traffic, because the DNS client must query DNS servers for the expired data the next time it's requested. If the TTL is long, the cached responses could become outdated, meaning the resolver could give false answers to queries. At the same time, a long TTL decreases utilization of DNS servers and reduces network traffic because the DNS client answers queries using its cached data.
 
-If a query is answered with an entry from cache, the TTL of the entry is also passed with the response. This way the resolvers that receive the response know how long the entry is valid. The resolvers honor the TTL from the responding server; they do not reset it based on their own TTL. Consequently, entries truly expire rather than live in perpetuity as they move from DNS server to DNS server with an updated TTL.
+If a query is answered with an entry from cache, the TTL of the entry is also passed with the response. This way the resolvers that receive the response know how long the entry is valid. The resolvers honor the TTL from the responding server; they don't reset it based on their own TTL. Consequently, entries truly expire rather than live in perpetuity as they move from DNS server to DNS server with an updated TTL.
 
 > [!NOTE]
 > In general, never configure the TTL to zero. The difference between a setting of 0 or 60 is minimal to the accuracy of the record, but when the TTL is set to 0, there's a significant impact on DNS server performance because the DNS server is constantly querying for the expired data.
@@ -128,14 +128,14 @@ To learn more about the types and replication of DNS zones, see [DNS zones](zone
 
 Reasons to delegate a DNS namespace include:
 
-- A need to delegate management of a DNS domain to a number of organizations or departments within an organization.
+- A need to delegate management of a DNS domain to many organizations or departments within an organization.
 
-- A need to distribute the load of maintaining one large DNS database among multiple DNS servers to improve the name resolution performance as well as create a DNS fault-tolerant environment.
+- A need to distribute the load of maintaining one large DNS database among multiple DNS servers to improve the name resolution performance and create a DNS fault-tolerant environment.
 
 - A need to allow for a host’s organizational affiliation by including the host in appropriate domains.
-The name server (NS) resource records facilitate delegation by identifying DNS servers for each zone and the NS resource records appear in all zones. Whenever a DNS server needs to cross a delegation in order to resolve a name, it'll refer to the NS resource records for DNS servers in the target zone.
+The name server (NS) resource records facilitate delegation by identifying DNS servers for each zone and the NS resource records appear in all zones. Whenever a DNS server needs to cross a delegation in order to resolve a name, it refers to the NS resource records for DNS servers in the target zone.
 
-The following image shows how management of the `contoso.com`. domain is delegated across two zones -- `contoso.com`. and `mydomain.contoso.com`.
+The following image shows how management of the `contoso.com` domain is delegated across two zones, `contoso.com`. and `mydomain.contoso.com`.
 
 :::image type="content" source="../media/dns-architecture/dns-delegation.png" alt-text="alt":::
 
@@ -156,13 +156,13 @@ There are two types of DNS queries that can be sent to a DNS server:
 
   When a DNS server processes a recursive query and the query can't be resolved from local data (local zone files or cache of previous queries), the recursive query must be escalated to a root DNS server. Each standards-based implementation of DNS includes a cache file (or root server hints) that contains entries for the root DNS servers of the Internet domains. (If the DNS server is configured with a forwarder, the forwarder is used before a root server is used.)
 
-- **Iterative**: An iterative query is one in which the DNS server is expected to respond with the best local information it has, based on what the DNS server knows from local zone files or from caching. This response is also known as a referral if the DNS server isn't authoritative for the name. If a DNS server does not have any local information that can answer the query, it simply sends a negative response. A DNS server makes this type of query as it tries to find names outside of its local domain (or domains) (when it isn't configured with a forwarder). It might have to query a number of outside DNS servers in an attempt to resolve the name.
+- **Iterative**: An iterative query is one in which the DNS server is expected to respond with the best local information it has, based on what the DNS server knows from local zone files or from caching. This response is also known as a referral if the DNS server isn't authoritative for the name. If a DNS server doesn't have any local information that can answer the query, it simply sends a negative response. A DNS server makes this type of query as it tries to find names outside of its local domain (or domains) (when it isn't configured with a forwarder). It might have to query outside DNS servers in an attempt to resolve the name.
 
 The following figure shows an example of both types of queries.
 
 :::image type="content" source="../media/dns-architecture/dns-query-types.png" alt-text="Alt text":::
 
-The figure shows a number of queries were used to determine the IP address for www.whitehouse.gov. The query sequence is described as follows:
+The figure shows multiple queries were used to determine the IP address for www.whitehouse.gov. The query sequence is described as follows:
 
 1. Recursive query for www.whitehouse.gov (A resource record)
 1. Iterative query for www.whitehouse.gov (A resource record)
