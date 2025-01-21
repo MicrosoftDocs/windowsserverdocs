@@ -13,7 +13,7 @@ Follow the steps in this article to create a bootable USB drive or DVD that can 
 
 ## Prerequisites
 
-You'll need to have the setup media for the version of Windows Server that you want to install. Setup media for the target version of Windows Server can be obtained from Original Equipment Manufacturer (OEM), Retail, Visual Studio subscription, and the Volume Licensing Service Center (VLSC) channels. Your device must also not be running in Azure. If you want to install Windows Server in Azure, see [Quickstart: Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal). The following are required before installing Windows Server:
+Setup media for the target version of Windows Server can be obtained from Original Equipment Manufacturer (OEM), Retail, Visual Studio subscription, and the Volume Licensing Service Center (VLSC) channels. Your device must also not be running in Azure. If you want to install Windows Server in Azure, see [Quickstart: Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal). The following are required before installing Windows Server:
 
 - **Hardware**
 
@@ -25,7 +25,7 @@ You'll need to have the setup media for the version of Windows Server that you w
 - **Software**
 
   - Determine which version of Windows Server is appropriate for your environment. To learn more, see [Comparison of Windows Server editions](editions-comparison.md).
-  - Make sure you have a valid product key or subscription license for your product. Product keys and activation methods may vary depending on the distribution channel you received Windows Server media from, such as a Commercial Licensing program, Retail, or OEM.
+  - Make sure you have a valid product key or subscription license for your product. Product keys and activation methods might vary depending on the distribution channel you received Windows Server media from, such as a Commercial Licensing program, Retail, or OEM.
 
 > [!NOTE]
 > For users who desire to install Windows Server in a virtual environment through Windows Hyper-V, the minimum RAM requirements differ. To learn more, see the [Hardware requirements for Windows Server](hardware-requirements.md?tabs=ram&pivots=windows-server-2025#components) components tab.
@@ -183,9 +183,9 @@ To manage and configure your Windows Server Core environment, you have the optio
 
 ## See also
 
-- [Get started with Windows Server](/windows-server/get-started/get-started-with-windows-server)
+- [Get started with Windows Server](get-started-with-windows-server.md)
 
-- [What's new in Windows Server 2025](/windows-server/get-started/get-started-with-windows-server)
+- [What's new in Windows Server 2025](whats-new-windows-server-2025.md)
 
 - [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features)
 
