@@ -11951,6 +11951,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "EssentialsDocs/install/Create-a-Bootable-USB-Flash-Drive.md",
+      "redirect_url": "/windows-server/get-started/install-windows-server",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/hyperconverged/index.yml",
       "redirect_url": "/windows-server/",
       "redirect_document_id": true
