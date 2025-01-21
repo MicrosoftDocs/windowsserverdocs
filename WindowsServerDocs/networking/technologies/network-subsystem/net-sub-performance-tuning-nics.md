@@ -117,14 +117,15 @@ For a TCP receive window that has a particular size, you can use the following e
 
 For example, for a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using autotuning to adjust the receive window, the connection can achieve the full line rate of a 1-Gbps connection.
 
-Some applications define the size of the TCP receive window. If the application does not define the receive window size, the link speed determines the size as follows:
+Some applications define the size of the TCP receive window using the SO_RCVBUF socket option. If the application does not define the receive window size, the link speed determines the starting value of the receive window as follows:
 
-- Less than 1 megabit per second (Mbps): 8 kilobytes (KB)
-- 1 Mbps to 100 Mbps: 17 KB
-- 100 Mbps to 10 gigabits per second (Gbps): 64 KB
-- 10 Gbps or faster: 128 KB
+- Lower than 100 Mbps: 64 KB
+- 100 Mbps to lower than 1 Gbps: 132 KB
+- 1 Gbps to lower than 40 Gbps: 262 KB
+- 40 Gbps to lower than 100 Gbps: 524 KB
+- 100 Gbps or faster: 1572 KB
 
-For example, on a computer that has a 1-Gbps network adapter installed, the window size should be 64 KB.
+For example, on a computer that has a 1-Gbps network adapter installed, the window size will be initialized to 262 KB. As the connection progresses, the receive window autotuning algorithm will grow the window size as long as sending and receiving application can sustain increasing throughput.
 
 This feature also makes full use of other features to improve network performance. These features include the rest of the TCP options that are defined in [RFC 1323](https://tools.ietf.org/html/rfc1323). By using these features, Windows-based computers can negotiate TCP receive window sizes that are smaller but are scaled at a defined value, depending on the configuration. This behavior the sizes easier to handle for networking devices.
 
