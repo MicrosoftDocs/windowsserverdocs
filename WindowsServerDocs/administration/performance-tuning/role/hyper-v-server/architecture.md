@@ -4,7 +4,7 @@ description: Learn about the Hyper-V architecture considerations to tune and imp
 ms.topic: article
 ms.author: roharwoo
 author: robinharwood
-ms.date: 05/18/2023
+ms.date: 01/10/2025
 ---
 
 # Hyper-V architecture
@@ -17,13 +17,7 @@ The root partition owns and has direct access to the physical I/O devices. The v
 
 The Hyper-V-specific I/O architecture consists of virtualization service providers (VSPs) in the root partition and virtualization service clients (VSCs) in the child partition. Each service is exposed as a device over VM Bus, which acts as an I/O bus and enables high-performance communication between VMs that use mechanisms such as shared memory. The guest operating system's Plug and Play manager enumerates these devices, including VM Bus, and loads the appropriate device drivers, virtual service clients. Services other than I/O are also exposed through this architecture.
 
-## Windows Server 2008 operating system features
-
-With Windows Server 2008, the operating system has features to optimize its behavior when it's running in VMs. The benefits include reducing the cost of memory virtualization, improving multicore scalability, and decreasing the background CPU usage of the guest operating system.
-
 The following links suggest best practices that increase performance on servers running Hyper-V role.
-
-## Related links
 
 - [Hyper-V terminology](terminology.md)
 

@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # BranchCache Hosted Cache Mode Deployment Planning
 
->
-
 You can use this topic to plan your deployment of BranchCache in Hosted Cache mode.
 
 >[!IMPORTANT]

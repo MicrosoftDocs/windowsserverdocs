@@ -12,7 +12,7 @@ ms.date: 10/20/2021
 
 
 
-Cluster Shared Volumes (CSV) enable multiple nodes in a Windows Server failover cluster or Azure Stack HCI to simultaneously have read-write access to the same LUN (disk) that is provisioned as an NTFS volume. The disk can be provisioned as Resilient File System (ReFS); however, the CSV drive will be in redirected mode meaning write access will be sent to the coordinator node. For more information, see [About I/O synchronization and I/O redirection in CSV communication](#about-io-synchronization-and-io-redirection-in-csv-communication) later in this document. With CSV, clustered roles can fail over quickly from one node to another node without requiring a change in drive ownership, or dismounting and remounting a volume. CSV also help simplify the management of a potentially large number of LUNs in a failover cluster.
+Cluster Shared Volumes (CSV) enable multiple nodes in a Windows Server failover cluster or Azure Local to simultaneously have read-write access to the same LUN (disk) that is provisioned as an NTFS volume. The disk can be provisioned as Resilient File System (ReFS); however, the CSV drive will be in redirected mode meaning write access will be sent to the coordinator node. For more information, see [About I/O synchronization and I/O redirection in CSV communication](#about-io-synchronization-and-io-redirection-in-csv-communication) later in this document. With CSV, clustered roles can fail over quickly from one node to another node without requiring a change in drive ownership, or dismounting and remounting a volume. CSV also help simplify the management of a potentially large number of LUNs in a failover cluster.
 
 CSV provides a general-purpose, clustered file system which is layered above NTFS or ReFS. CSV applications include:
 
@@ -93,13 +93,13 @@ In Windows Server 2012 R2 and higher, you can view the state of a CSV volume on 
 
 To use CSV, your storage and disks must meet the following requirements:
 
-- **File system format**. In Windows Server 2012, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS. In Windows Server 2012 R2, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS or ReFS. In Windows Server 2016 or higher and Azure Stack HCI, a disk or storage space for a CSV volume must be either a basic disk or GUID Partition Table (GPT) disk that is partitioned with NTFS or ReFS.
+- **File system format**. In Windows Server 2012, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS. In Windows Server 2012 R2, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS or ReFS. In Windows Server 2016 or higher and Azure Local, a disk or storage space for a CSV volume must be either a basic disk or GUID Partition Table (GPT) disk that is partitioned with NTFS or ReFS.
 
   A CSV has the following additional requirements:
 
   - In Windows Server 2012, you cannot use a disk for a CSV that is formatted with FAT, FAT32, or ReFS.
   - In Windows Server 2012 R2 and higher, you cannot use a disk for a CSV that is formatted with FAT or FAT32.
-  - A CSV cannot be used as a quorum witness disk. For more information about the cluster quorum, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum).
+  - A CSV cannot be used as a quorum witness disk. For more information about the cluster quorum, see [Understanding Quorum in Storage Spaces Direct](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering).
   - After you add a disk as a CSV, it is designated in the CSVFS format (for CSV File System). This allows the cluster and other software to differentiate the CSV storage from other NTFS or ReFS storage. Generally, CSVFS supports the same functionality as NTFS or ReFS. However, certain features are not supported. For example, in Windows Server 2012 R2, you cannot enable compression on CSV. In Windows Server 2012, you cannot enable data deduplication or compression on CSV.
 - **Resource type in the cluster**. For a CSV volume, you must use the Physical Disk resource type. By default, a disk or storage space that is added to cluster storage is automatically configured in this way.
 - **Choice of CSV disks or other disks in cluster storage**. When choosing one or more disks for a clustered virtual machine, consider how each disk will be used. If a disk will be used to store files that are created by Hyper-V, such as VHD/VHDX files or configuration files, you can choose from the CSV disks or the other available disks in cluster storage. If a disk will be a physical disk that is directly attached to the virtual machine (also called a pass-through disk), you cannot choose a CSV disk, and you must choose from the other available disks in cluster storage.
@@ -112,7 +112,7 @@ For storage requirements for CSV, review the guidelines that are provided by you
 To use CSV, your nodes must meet the following requirements:
 
 - **Drive letter of system disk**. On all nodes, the drive letter for the system disk must be the same.
-- **Authentication protocol**. The NTLM protocol must be enabled on all nodes. This is enabled by default. Starting in Windows Server 2019 and Azure Stack HCI, NTLM dependencies have been removed as it uses certificates for authentication.
+- **Authentication protocol**. The NTLM protocol must be enabled on all nodes. This is enabled by default. Starting in Windows Server 2019 and Azure Local, NTLM dependencies have been removed as it uses certificates for authentication.
 
 ## Plan to use CSV in a failover cluster
 

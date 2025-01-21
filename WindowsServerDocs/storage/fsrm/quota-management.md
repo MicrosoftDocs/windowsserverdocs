@@ -10,8 +10,6 @@ ms.author: roharwoo
 
 # Quota Management
 
->
-
 On the **Quota Management** node of the File Server Resource Manager Microsoft<sup>®</sup> Management Console (MMC) snap-in, you can perform the following tasks:
 
 -   Create quotas to limit the space allowed for a volume or folder, and generate notifications when the quota limits are approached or exceeded.

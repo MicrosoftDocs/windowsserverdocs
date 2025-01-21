@@ -9,8 +9,6 @@ description: How to deploy Work Folders, including installing the server role, c
 ---
 # Deploying Work Folders
 
->
-
 This article discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).
 
  To deploy Work Folders, a process that can involve multiple servers and technologies use the following steps.

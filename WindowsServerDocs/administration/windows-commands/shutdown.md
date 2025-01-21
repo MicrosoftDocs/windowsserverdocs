@@ -4,7 +4,7 @@ description: Reference article for the shutdown command, which enables you to sh
 ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
 author: xelu86
-ms.author: roharwoo
+ms.author: alalve
 ms.date: 10/04/2023
 ---
 

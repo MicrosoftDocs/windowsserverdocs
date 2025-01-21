@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 3 Verify the Remote Access (VPN) Deployment
 
->
-
 This topic describes how to verify that you have correctly configured your DirectAccess deployment.
 
 ### To verify access to internal resources through DirectAccess

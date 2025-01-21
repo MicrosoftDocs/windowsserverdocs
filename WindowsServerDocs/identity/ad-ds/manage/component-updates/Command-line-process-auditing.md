@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Command line process auditing
 
->
-
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
 > [!NOTE]

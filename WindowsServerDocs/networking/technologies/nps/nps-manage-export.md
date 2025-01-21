@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Export an NPS Configuration for Import on Another Server
 
->
-
 You can export the entire NPS configuration — including RADIUS clients and servers, network policy, connection request policy, registry, and logging configuration — from one NPS for import on another NPS.
 
 Use one of the following tools to export the NPS configuration:

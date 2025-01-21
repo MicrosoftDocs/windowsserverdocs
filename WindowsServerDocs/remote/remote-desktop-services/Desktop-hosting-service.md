@@ -9,8 +9,6 @@ manager: femila
 ---
 # Desktop hosting service
 
->
-
 This article will tell you more about the desktop hosting service's components.
 
 ## Tenant environment

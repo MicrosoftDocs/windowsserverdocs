@@ -11,8 +11,6 @@ ms.custom: inhenkel
 ---
 # Safely virtualizing Active Directory Domain Services (AD DS)
 
->
-
 Beginning with Windows Server 2012, AD DS provides greater support for virtualizing domain controllers by introducing virtualization-safe capabilities. This article explains the role of USNs and InvocationIDs in Domain Controller replication and discusses some potential issues that can occur.
 
 ## Update sequence number and InvocationID

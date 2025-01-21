@@ -1,19 +1,16 @@
 ---
-title: Network Controller High Availability
-description: You can use this topic to learn about Network Controller high availability for Software Defined Networking (SDN) in Windows Server 2019 and 2016.
-manager: grcusanz
+title: Network Controller with Service Fabric on Windows Server and Azure Local
+description: You can use this topic to learn about Network Controller high availability for Software Defined Networking (SDN) in Windows Server.
 ms.topic: how-to
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
 ms.author: roharwoo
 author: AnirbanPaul
-ms.date: 10/28/2021
+ms.date: 12/06/2024
 ---
 
-# Network Controller High Availability
+# Network Controller with Service Fabric
 
->
-
-You can use this topic to learn about Network Controller high availability and scalability configuration for Software Defined Networking \(SDN\).
+You can use this topic to learn about Network Controller high availability and scalability configuration for Software Defined Networking \(SDN\) using Service Fabric.
 
 When you deploy SDN in your datacenter, you can use Network Controller to centrally deploy, monitor, and manage many network elements, including RAS Gateways, Software Load Balancers, virtual networking policies for tenant communication, Datacenter Firewall policies, Quality of Service \(QoS\) for SDN policies, hybrid networking policies, and more.
 
@@ -26,7 +23,7 @@ Although you can deploy Network Controller as a single machine cluster, for high
 
 ## Network Controller as a Service Fabric Application
 
-To achieve high availability and scalability, Network Controller relies on Service Fabric. Service Fabric provides a distributed systems platform to build scalable, reliable, and easily-managed applications.
+To achieve high availability and scalability, Network Controller relies on Service Fabric. Service Fabric provides a distributed systems platform to build scalable, reliable, and easily managed applications.
 
 As a platform, Service Fabric provides functionality that is required for building a scalable distributed system. It provides service hosting on multiple operating system instances, synchronizing state information between instances, electing a leader, failure detection, load balancing, and more.
 
@@ -80,4 +77,4 @@ To deploy Network Controller using scripts, see [Deploy a Software Defined Netwo
 
 To deploy Network Controller using Windows PowerShell, see [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 
-For more information about Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
+For more information about Network Controller, see [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking).

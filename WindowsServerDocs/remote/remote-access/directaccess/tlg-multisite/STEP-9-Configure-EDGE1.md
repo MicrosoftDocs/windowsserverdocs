@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 9 Configure EDGE1
 
->
-
 The following procedures are performed on the EDGE1 server:
 
 1. Configure the DNS servers on EDGE1. It is necessary to configure the DNS server from the corp2.corp.contoso.com domain on EDGE1.

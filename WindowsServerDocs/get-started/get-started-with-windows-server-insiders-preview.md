@@ -3,9 +3,9 @@ title: Get started with Windows Server Insiders Preview
 description: This article describes how users can become Windows Server Insiders members and test Windows Server Insiders Preview release builds.
 ms.topic: article
 author: xelu86
-ms.author: roharwoo
+ms.author: alalve
 ms.contributor: stacycl
-ms.date: 04/25/2024
+ms.date: 11/22/2024
 ---
 
 # Get started with Windows Server Insiders Preview
@@ -16,7 +16,7 @@ Join the Windows Insider Program for Windows Server and gain exclusive access to
 
 If you're a registered Insider, you can access the [Windows Insider Preview Downloads](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) page directly to view available Window Server Preview builds. If you'd like to participate as an Insider, you can refer to the [Getting started with the Windows Insider Program for Windows Server](https://www.microsoft.com/windowsinsider/for-business-getting-started-server).
 
-The following keys are valid only for preview builds and expire on September 15, 2024:
+The following keys are valid only for preview builds:
 
 |Windows Server Version|Key|
 |-|-|

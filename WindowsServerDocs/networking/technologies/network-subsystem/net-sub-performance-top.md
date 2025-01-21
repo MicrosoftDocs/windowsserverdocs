@@ -11,8 +11,6 @@ ms.date: 10/27/2021
 
 # Network Subsystem Performance Tuning
 
->
-
 You can use this topic for an overview of the network subsystem and for links to other topics in this guide.
 
 >[!NOTE]

@@ -10,8 +10,6 @@ ms.author: roharwoo
 
 # Storage Reports Management
 
->
-
 On the **Storage Reports Management** node of the File Server Resource Manager Microsoft<sup>®</sup> Management Console (MMC) snap-in, you can perform the following tasks:
 
 -   Schedule periodic storage reports that allow you to identify trends in disk usage.

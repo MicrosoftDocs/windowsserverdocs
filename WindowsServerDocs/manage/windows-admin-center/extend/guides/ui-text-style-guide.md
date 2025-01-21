@@ -9,8 +9,6 @@ ms.date: 05/12/2021
 
 # Windows Admin Center UI text and design style guide
 
->
-
 This topic describes the general approach to writing user interface (UI) text for the Windows Admin Center, as well as some specific conventions and approaches we're taking.
 
 Windows Admin Center and any extensions should follow [Microsoft's voice principles](/style-guide/brand-voice-above-all-simple-human) so that the experience is easy to use and friendly. This style guide builds on these voice principles as well as the [Microsoft Writing Style Guide](/style-guide/welcome/), so make sure to check out both of those resources for info on such things as [accessibility](/style-guide/accessibility/accessibility-guidelines-requirements), [acronyms](/style-guide/acronyms), and [word choice](/style-guide/word-choice/) such as [please](/style-guide/a-z-word-list-term-collections/p/please), and [sorry](/style-guide/a-z-word-list-term-collections/s/sorry).

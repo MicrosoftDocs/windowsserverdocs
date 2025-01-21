@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix F: Securing Domain Admins Groups in Active Directory
 
->
-
 
 ## Appendix F: Securing Domain Admins Groups in Active Directory
 As is the case with the Enterprise Admins (EA) group, membership in the Domain Admins (DA) group should be required only in build or disaster recovery scenarios. There should be no day-to-day user accounts in the DA group with the exception of the built-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
@@ -171,7 +169,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 6.  The following screenshot shows the error message that should appear.
 
-    ![Screenshot that shows the error message that should appear while you're attempting to accsss the member server.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
+    ![Screenshot that shows the error message that should appear while you're attempting to access the member server.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
 
 ##### Verify "Deny log on as a batch job" GPO Settings
 

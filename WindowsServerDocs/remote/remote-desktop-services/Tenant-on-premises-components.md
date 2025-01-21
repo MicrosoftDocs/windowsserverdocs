@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Tenant on-premises components
 
->
-
 The following information describes the on-premises components that make up the desktop hosting deployment.
 
 ## Clients

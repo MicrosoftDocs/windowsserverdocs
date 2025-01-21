@@ -10,8 +10,6 @@ ms.date: 07/26/2018
 ---
 # Configure the CDP and AIA Extensions on CA1
 
->
-
 You can use this procedure to configure the Certificate Revocation List (CRL) Distribution Point (CDP) and the Authority Information Access (AIA) settings on CA1.
 
 To perform this procedure, you must be a member of Domain Admins.

@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Checklist - Apply a file screen to a volume or folder
 
->
-
 To apply a file screen to a volume or folder, use the following list:
 1. Configure e-mail settings if you plan to send file screening notifications or storage reports by e-mail by following the instructions in [Configure E-Mail Notifications](configure-email-notifications.md).
 

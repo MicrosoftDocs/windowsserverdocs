@@ -9,8 +9,6 @@ ms.date: 05/17/2023
 
 # Active Directory accounts
 
->
-
 Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization.
 
 This reference article describes the Windows Server default local accounts that are stored locally on the domain controller and used in Active Directory. It doesn't describe default local user accounts for a member, standalone server, or Windows client. For more information, see [Local accounts](/windows/security/identity-protection/access-control/local-accounts).

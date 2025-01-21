@@ -6,8 +6,8 @@ groups:
   pivots:
   - id: windows-server
     title: Windows Server
-  - id: azure-stack-hci
-    title: Azure Stack HCI
+  - id: azure-local
+    title: Azure Local
 - id: windows-os-version
   title: Version
   prompt: "Choose your product version:"
@@ -20,6 +20,16 @@ groups:
     title: Windows Server 2019
   - id: windows-server-2016
     title: Windows Server 2016
+- id: failover-clustering-management-tools
+  title: Failover Clustering Management Tools
+  prompt: "Choose your failover clustering management tool:"
+  pivots:
+  - id: windows-admin-center
+    title: Windows Admin Center
+  - id: powershell
+    title: PowerShell 
+  - id: failover-cluster-manager
+    title: Failover Cluster Manager
 - id: openssh-windows-version
   title: Version
   prompt: "Choose your product version:"
@@ -30,3 +40,11 @@ groups:
     title: Windows Server 2022
   - id: windows-server-2019
     title: Windows Server 2019
+- id: windows
+  title: Products
+  prompt: "Choose your product:"
+  pivots:
+  - id: windows-server
+    title: Windows Server
+  - id: windows
+    title: Windows

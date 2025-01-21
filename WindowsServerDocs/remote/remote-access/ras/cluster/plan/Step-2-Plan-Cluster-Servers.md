@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 2 Plan Cluster Servers
 
->
-
 After deploying a single Remote Access server, plan to add additional servers to the cluster.
 
 |Task|Description|

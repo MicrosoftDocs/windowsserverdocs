@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 2 Plan the Basic DirectAccess Deployment
 
->
-
 After planning the DirectAccess infrastructure, the next step in deploying DirectAccess on a single server with basic settings is to plan the settings for the Getting Started Wizard.
 
 |Task|Description|

@@ -10,8 +10,6 @@ description: How to use Storage Replica to replicate volumes in one cluster to a
 ---
 # Cluster to Cluster Storage Replication
 
->
-
 Storage Replica can replicate volumes between clusters, including the replication of clusters using Storage Spaces Direct. The management and configuration is similar to server-to-server replication.
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.
@@ -19,7 +17,7 @@ You will configure these computers and storage in a cluster-to-cluster configura
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 8 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.
 >
-> This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview).
+> This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage).
 
 This walkthrough uses the following environment as an example:
 
@@ -141,7 +139,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
    ```
 
      > [!IMPORTANT]
-     > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](/azure-stack/hci/manage/diskspd-overview) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:
+     > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](/azure/azure-local/manage/diskspd-overview?context=/windows-server/context/windows-server-storage) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:
      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`
 
 4. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.
@@ -386,4 +384,4 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)
 -   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
--   [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+-   [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

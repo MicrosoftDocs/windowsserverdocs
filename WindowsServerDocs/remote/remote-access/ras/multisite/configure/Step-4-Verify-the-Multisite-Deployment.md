@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 4 Verify the Multisite Deployment
 
->
-
 This topic describes how to verify that you have correctly configured your Remote Access multisite deployment.
 
 ### To verify access to internal resources through the multisite deployment

@@ -11,8 +11,6 @@ ms.date: 05/29/2018
 
 # Plan the DirectAccess to Always On VPN migration
 
->
-
 &#171; [**Previous:** Overview of the DirectAccess to Always On VPN migration](da-always-on-migration-overview.md)<br>
 &#187; [**Next:** Migrate to Always On VPN and decommission DirectAccess](da-always-on-migration-deploy.md)
 

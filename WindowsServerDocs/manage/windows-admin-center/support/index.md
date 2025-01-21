@@ -8,6 +8,4 @@ ms.date: 04/12/2019
 ---
 # Windows Admin Center support policy
 
->
-
 [!INCLUDE [support-policy](../includes/support-policy.md)]

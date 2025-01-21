@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Planning
 
->
-
 Before you deploy wireless access, you must plan the following items:
 
 - Installation of wireless access points \(APs\) on your network

@@ -9,8 +9,6 @@ ms.date: 02/05/2018
 ---
 # Performance history for servers
 
->
-
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for servers. Performance history is available for every server in the cluster.
 
    > [!NOTE]

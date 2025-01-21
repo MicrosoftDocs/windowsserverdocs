@@ -58,7 +58,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[Cluster sets](/azure-stack/hci/deploy/cluster-set)| New topic|
+|[Cluster sets](cluster-set.md)| New topic|
 
 ## May 2018
 

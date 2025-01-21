@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix B: Privileged Accounts and Groups in Active Directory
 
->
-
 
 ## Appendix B: Privileged Accounts and Groups in Active Directory
 "Privileged" accounts and groups in Active Directory are those to which powerful rights, privileges, and permissions are granted that allow them to perform nearly any action in Active Directory and on domain-joined systems. This appendix begins by discussing rights, privileges, and permissions, followed by information about the "highest privilege" accounts and groups in Active Directory,that is, the most powerful accounts and groups.

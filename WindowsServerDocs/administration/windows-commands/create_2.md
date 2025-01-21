@@ -2,7 +2,7 @@
 title: create (diskshadow)
 description: Reference article for the create command, which creates a shadow copy (snapshot) of a volume or alias.
 ms.topic: reference
-ms.author: roharwoo
+ms.author: alalve
 author: xelu86
 ms.date: 10/12/2023
 ---

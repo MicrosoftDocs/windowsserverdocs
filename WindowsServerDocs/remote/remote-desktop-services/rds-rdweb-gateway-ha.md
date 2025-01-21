@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Add high availability to the RD Web and Gateway web front
 
->
-
 
 You can deploy a Remote Desktop Web Access (RD Web Access) and Remote Desktop Gateway (RD Gateway) farm to improve the availability and scale of a Windows Server Remote Desktop Services (RDS) deployment
 

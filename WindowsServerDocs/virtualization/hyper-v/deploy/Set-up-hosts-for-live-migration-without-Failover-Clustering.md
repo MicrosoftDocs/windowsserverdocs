@@ -3,13 +3,11 @@ title: Set up hosts for live migration without Failover Clustering
 description: Gives instructions for setting up live migration in a non-clustered environment
 ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 10/25/2024
 ---
 # Set up hosts for live migration without Failover Clustering
-
->
 
 This article shows you how to set up hosts that aren't clustered so you can do live migrations between them. Use these instructions if you didn't set up live migration when you installed Hyper-V, or if you want to change the settings. To set up clustered hosts, use tools for Failover Clustering.
 

@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Plan a Basic DirectAccess Deployment
 
->
-
 This topic describes the planning steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with basic features:
 
 1.  [Step 1: Plan the Basic DirectAccess Infrastructure](da-basic-plan-s1-infrastructure.md)-Plan network and server topology, firewall settings, certificate requirements, DNS and Active Directory.

@@ -39,7 +39,7 @@ article.
 #### Hotpatching
 
 Windows Server 2022 Datacenter: Azure Edition Hotpatching is now public preview for the Desktop
-Experience both in Azure and as a supported guest VM on Azure Stack HCI version 22H2.
+Experience both in Azure and as a supported guest VM on Azure Local version 22H2.
 
 ### September 2022
 
@@ -63,35 +63,33 @@ PowerShell StorageReplica reference](/powershell/module/storagereplica/) to lear
 information about Storage Replica, see the
 [Storage Replica overview](../storage/storage-replica/storage-replica-overview.md).
 
-#### Support for Azure Stack HCI
+#### Support for Azure Local
 
 With this release you can run Windows Server 2022 Datacenter: Azure Edition as a supported guest VM
-on Azure Stack HCI version 22H2. With Azure Edition running on Azure Stack HCI, you'll be able to use
+on Azure Local, version 22H2. With Azure Edition running on Azure Local, you'll be able to use
 all the existing features including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
 [SMB over QUIC](#smb-over-quic) at your datacenter and edge locations.
 
-Begin deploying Windows Server 2022 Datacenter: Azure Edition using the
-[Azure Marketplace on Arc-enabled Azure Stack HCI](#deploy-from-azure-marketplace-on-arc-enabled-azure-stack-hci-preview)
-or using an ISO. You can download the ISO from here:
+Begin deploying Windows Server 2022 Datacenter: Azure Edition using the [Deploy from Azure Marketplace on Arc-enabled Azure Local (preview)](#deploy-from-azure-marketplace-on-arc-enabled-azure-local-preview) or using an ISO. You can download the ISO from here:
 
 - [Windows Server 2022 Datacenter: Azure Edition (EN-US) ISO](https://aka.ms/AAi4r31)
 - [Windows Server 2022 Datacenter: Azure Edition (ZH-CN) ISO](https://aka.ms/AAi4bii)
 
 Your Azure subscription permits you to use Windows Server Datacenter: Azure Edition on any virtual
-machine instances running on Azure Stack HCI. For more information, see your product terms
+machine instances running on Azure Local. For more information, see your product terms
 [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS).
 
-Learn more about the latest Azure Stack HCI features in our
-[What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new) article.
+Learn more about the latest Azure Local features in our
+[What's new in Azure Local, version 22H2](/azure/azure-local/whats-new) article.
 
-#### Deploy from Azure Marketplace on Arc-enabled Azure Stack HCI (preview)
+#### Deploy from Azure Marketplace on Arc-enabled Azure Local (preview)
 
 Windows Server 2022 Datacenter: Azure Edition images will be available in the Azure Marketplace for
-Arc-enabled Azure Stack HCI, making it easy to try, buy, and deploy using Azure certified images.
+Arc-enabled Azure Local, making it easy to try, buy, and deploy using Azure certified images.
 
-Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Stack HCI features in
+Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Local features in
 our
-[What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new#azure-arc-vm-changes-and-azure-marketplace)
+[What's new in Azure Local, version 22H2](/azure/azure-local/whats-new#azure-arc-vm-changes-and-azure-marketplace)
 article.
 
 ### Azure Edition (initial release)
@@ -292,7 +290,7 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 
 #### Adjustable storage repair speed
 
-[User adjustable storage repair speed](/azure-stack/hci/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process.  Adjustable storage repair speed enables you to allocate resources to either repair data copies (resiliency) or to run active workloads (performance). Controlling the repair speed helps improve availability and allows you to service your clusters more flexibly and efficiently.
+[User adjustable storage repair speed](/azure/azure-local/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process.  Adjustable storage repair speed enables you to allocate resources to either repair data copies (resiliency) or to run active workloads (performance). Controlling the repair speed helps improve availability and allows you to service your clusters more flexibly and efficiently.
 
 #### Faster repair and resynchronization
 
