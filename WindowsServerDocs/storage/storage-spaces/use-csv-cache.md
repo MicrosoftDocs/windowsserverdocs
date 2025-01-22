@@ -81,4 +81,4 @@ Get-ClusterSharedVolume | ForEach {
 For related information, see also:
 
 - [Understand the storage pool cache](./cache.md)
-- [Use Cluster Shared Volumes in a failover cluster](../../failover-clustering/failover-cluster-csvs#enable-the-csv-cache-for-read-intensive-workloads-optional)
+- [Use Cluster Shared Volumes in a failover cluster](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional)

@@ -10711,11 +10711,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/create-volumes.md",
-      "redirect_url": "/azure/azure-local/manage/create-volumes",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/storage/storage-spaces/resize-volumes.md",
       "redirect_url": "/azure/azure-local/manage/extend-volumes",
       "redirect_document_id": false
@@ -10788,16 +10783,6 @@
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-faq.yml",
       "redirect_url": "/windows-server/storage/storage-spaces/storage-spaces-direct-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-overview.md",
-      "redirect_url": "/azure/azure-local/concepts/storage-spaces-direct-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/nested-resiliency.md",
-      "redirect_url": "/azure/azure-local/concepts/nested-resiliency",
       "redirect_document_id": false
     },
     {

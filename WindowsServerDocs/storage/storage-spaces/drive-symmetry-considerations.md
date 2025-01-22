@@ -4,15 +4,12 @@ description: This article explains drive symmetry constraints in Storage Spaces 
 author: jasongerend
 ms.author: jgerend
 ms.topic: conceptual
-ms.service: azure-local
 ms.date: 02/22/2024
 ---
 
 # Drive symmetry considerations for Azure Stack HCI and Windows Server clusters
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
-
-[!INCLUDE [azure-local-banner-22h2](../includes/azure-local-banner-22h2.md)]
 
 Azure Stack HCI and Windows Server clusters work best when every server has exactly the same drives.
 
@@ -182,5 +179,4 @@ To recap, every server in the cluster should have the same types of drives and t
 
 For related information, see also:
 
-- [System requirements](system-requirements.md)
 - [Choose drives](choose-drives.md)
