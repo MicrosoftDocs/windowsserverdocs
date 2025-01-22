@@ -18,7 +18,7 @@ DNS is a hierarchical distributed database and an associated set of protocols th
 
 - A schema of the database
 
-DNS host names reside in a database that can be distributed among multiple servers, decreasing the load on any one server, and provide the ability to administer this naming system on a per-partition basis. DNS supports hierarchical names and allows registration of various data types in addition to host name-to-IP address mapping used in HOSTS files. The DNS database is distributed, allowing it to both scale up and scale out meaning performance isn't degraded when more servers are added.
+DNS host names reside in a database that can be distributed among multiple servers, decreasing the load on any one server, and provide the ability to administer this naming system on a per-partition basis. DNS supports hierarchical names and allows registration of various data types in addition to host name-to-IP address mapping used in HOSTS files. The DNS database is distributed, allowing it to both scale up and scale out, meaning performance isn't degraded when more servers are added.
 
 The original DNS was based on [Request for Comment (RFC) 1035 (Domain Names–Implementation and Specification)](https://datatracker.ietf.org/doc/rfc1035/). Other RFCs that describe DNS security, implementation, and administrative issues later augmented the original design specifications.
 
@@ -30,9 +30,7 @@ DNS is implemented as a hierarchical and distributed database containing various
 
 A fully qualified domain name (FQDN) uniquely identifies the host’s position within the DNS hierarchical tree. The FQDN specifies a list of names separated by dots in the path from the referenced host to the root. The following figure shows an example of a DNS tree with a host called `mydomain` within the `contoso.com` domain. The FQDN for the host would be `mydomain.contoso.com`.
 
-:::image type="content" source="../media/dns-architecture/registration-authority.png" alt-text="alt text":::
-
-![Registration Authority and Registrant (Microsoft)](./media/dns-architecture/registration-authority.png)
+:::image type="content" source="../media/dns-architecture/registration-authority.png" alt-text="The diagram shows hierarchical structure of DNS architecture and how DNS zones are managed by different authorities.":::
 
 ## Understanding the DNS domain namespace
 
@@ -46,7 +44,7 @@ For example, Contoso is assigned authority by the Internet root servers for its 
 
 ## How the DNS domain namespace is organized
 
-Any DNS domain name used in the tree is technically a domain. However most DNS discussions identify names in one of five ways, based on the level and the way a name is commonly used. For example, the DNS domain name registered to Contoso (`contoso.com`) is known as a second-level domain. The name has two parts (known as labels) that indicate it's located two levels below the root or top of the tree. Most DNS domain names have two or more labels, each of which indicates a new level in the tree. Periods are used in names to separate labels.
+Any DNS domain name used in the tree is technically a domain. However most DNS discussions identify names in one of five ways, based on the level and the way a name is commonly used. For example, the DNS domain name registered to Contoso (`contoso.com`) is known as a second-level domain. The name has two parts (known as labels) that indicate its located two levels below the root or top of the tree. Most DNS domain names have two or more labels, each of which indicates a new level in the tree. Periods are used in names to separate labels.
 
 The five categories used to describe DNS domain names by their function in the namespace are described in the following table, along with an example of each name type.
 
@@ -60,7 +58,7 @@ The five categories used to describe DNS domain names by their function in the n
 
 ## DNS and Internet domains
 
-The Internet Domain Name System is managed by a Name Registration Authority on the Internet, responsible for maintaining top-level domains assigned by organization and by country/region. These domain names follow the International Standard for country codes (ISO 3166). There are hundreds of top-level-domain names available for use by the public. The following table shows a few common TLDs, as well example two-letter abbreviations used for countries and regions.
+Name registration authorities on the Internet manage the Internet Domain Name System. The registration authorities are responsible for maintaining top-level domains assigned by organization and by country/region. These domain names follow the International Standard for country codes (ISO 3166). There are hundreds of top-level-domain names available for use by the public. The following table shows a few common TLDs, as well example two-letter abbreviations used for countries and regions.
 
 | DNS Domain Name | Type of Organization |
 | ---------- | ---------- |
@@ -81,7 +79,7 @@ hosts) that the zone contains. A typical resource record consists of the:
 - Name (host) of the resource record.
 - Information about how long the resource record can remain in the cache.
 - Resource record type, such as a host (A) resource record.
-- Data that's specific to the record type, such as the host's IPv4 address.
+- Data that's specific to the record type, such as the hosts IPv4 address.
 
 You can add resource records directly, or they can be added automatically when Windows-based,
 Dynamic Host Configuration Protocol (DHCP) enabled clients join a network using
@@ -92,14 +90,14 @@ dynamic update.
 Common resource records include:
 
 | Resource record type | Description |
-| -- |--|
+|--|--|
 | Host (A, AAAA) records | Maps a hostname to an IP address. |
 | Alias (CNAME) records | Forward an alias domain name or subdomain to another primary or canonical name. Alias (CNAME) resource records are also termed canonical name resource records. With these records, you can use more than one DNS name to point to a single host. |
 | Mail exchanger (MX) records | Specifies the name of a computer that exchanges or forwards mail. E-mail applications use the mail exchanger (MX) resource record to locate a mail server based on a DNS domain name in the destination address for the e-mail recipient of a message. If multiple mail exchanger (MX) resource records exist, the DNS Client service attempts to contact mail servers in the order of preference from lowest value (highest priority) to highest value (lowest priority). |
 | Pointer (PTR) records | Used by reverse DNS lookups to map an IP address to domain. Pointer (PTR) resource records support the reverse lookup process, based on zones that are created and rooted in the `in-addr.arpa` domain. You need to have the appropriate reverse lookup zone present on your DNS server to create a PTR record that maps an IP address to a specific hostname. |
 | Service location (SRV) records | Specifies the host, port, and protocol for a service. Service location (SRV) resource records are required when clients use DNS to locate location services such as Active Directory domain controllers. |
 | Name server (NS) records | Specifies the authoritative name servers for a domain. |
-| Text (TXT) record | Enables the publication of text in a DNS record. Text records let you add text information that are returned by querying DNS. TXT records are often used to authenticate ownership of DNS zones. |
+| Text (TXT) record | Enables the publication of text in a DNS record. Text records let you add text information that is returned by querying DNS. TXT records are often used to authenticate ownership of DNS zones. |
 | Delegation name (DNAME) record | Provides an alias for a domain, like a CNAME record, but includes all subdomains. |
 | Start of authority (SOA) record | Provides authoritative information about a DNS zone. The SOA record includes primary name server, contact of DNZ zone administrator, refresh information, and other information. |
 
@@ -111,7 +109,7 @@ A DNS client resolver caches the responses it receives when it resolves DNS quer
 
 There are two competing factors to consider when setting the TTL. The first is the accuracy of the cached information, and the second is the utilization of the DNS servers and the amount of network traffic. If the TTL is short, then the likelihood of having old information is reduced considerably, but it increases utilization of DNS servers and network traffic, because the DNS client must query DNS servers for the expired data the next time it's requested. If the TTL is long, the cached responses could become outdated, meaning the resolver could give false answers to queries. At the same time, a long TTL decreases utilization of DNS servers and reduces network traffic because the DNS client answers queries using its cached data.
 
-If a query is answered with an entry from cache, the TTL of the entry is also passed with the response. This way the resolvers that receive the response know how long the entry is valid. The resolvers honor the TTL from the responding server; they don't reset it based on their own TTL. Consequently, entries truly expire rather than live in perpetuity as they move from DNS server to DNS server with an updated TTL.
+If a query is answered with an entry from cache, the TTL of the entry is also passed with the response. This way the resolvers that receive the response know how long the entry is valid. The resolvers honor the TTL from the responding server; they don't reset it based on their own TTL. So, entries truly expire rather than live in perpetuity as they move from DNS server to DNS server with an updated TTL.
 
 > [!NOTE]
 > In general, never configure the TTL to zero. The difference between a setting of 0 or 60 is minimal to the accuracy of the record, but when the TTL is set to 0, there's a significant impact on DNS server performance because the DNS server is constantly querying for the expired data.
@@ -135,11 +133,9 @@ Reasons to delegate a DNS namespace include:
 - A need to allow for a host’s organizational affiliation by including the host in appropriate domains.
 The name server (NS) resource records facilitate delegation by identifying DNS servers for each zone and the NS resource records appear in all zones. Whenever a DNS server needs to cross a delegation in order to resolve a name, it refers to the NS resource records for DNS servers in the target zone.
 
-The following image shows how management of the `contoso.com` domain is delegated across two zones, `contoso.com`. and `mydomain.contoso.com`.
+The following image shows how management of the `contoso.com` domain is delegated across two zones, `contoso.com` and `mydomain.contoso.com`.
 
-:::image type="content" source="../media/dns-architecture/dns-delegation.png" alt-text="alt":::
-
-![DNS Delegation](./media/dns-architecture/dns-delegation.png)
+:::image type="content" source="../media/dns-architecture/dns-delegation.png" alt-text="The diagram illustrates the hierarchical structure of DNS zone delegation, further delegating to contoso.com and mydomain.contoso.com.":::
 
 > [!NOTE]
 > If multiple NS records exist for a delegated zone identifying multiple DNS servers available for querying, the Windows Server DNS Server service will be able to select the closest DNS server based on the roundtrip intervals measured over time for every DNS server.
@@ -160,37 +156,39 @@ There are two types of DNS queries that can be sent to a DNS server:
 
 The following figure shows an example of both types of queries.
 
-:::image type="content" source="../media/dns-architecture/dns-query-types.png" alt-text="Alt text":::
+:::image type="content" source="../media/dns-architecture/dns-query-types.png" alt-text="The diagram shows how multiple queries were used to determine the IP address for www.contoso.com.":::
 
-The figure shows multiple queries were used to determine the IP address for www.whitehouse.gov. The query sequence is described as follows:
+The diagram shows how multiple queries were used to determine the IP address for `www.contoso.com`. The query sequence is described as follows:
 
-1. Recursive query for www.whitehouse.gov (A resource record)
-1. Iterative query for www.whitehouse.gov (A resource record)
-1. Referral to the .gov name server (NS resource records, for .gov); for simplicity, iterative A queries by the DNS server (on the left) to resolve the IP addresses of the Host names of the name server’s returned by other DNS servers have been omitted.
-1. Iterative query for www.whitehouse.gov (A resource record)
-1. Referral to the whitehouse.gov name server (NS resource record, for whitehouse.gov)
-1. Iterative query for www.whitehouse.gov (A resource record)
-1. Answer to the iterative query from whitehouse.gov server (www.whitehouse.gov’s IP address)
-1. Answer to the original recursive query from local DNS server to resolver (www.whitehouse.gov’s IP address)
+1. Recursive query for `www.contoso.com` (A resource record)
+
+1. Iterative query for `www.contoso.com` (A resource record)
+
+1. Referral to the `.com` name server (NS resource records, for `.com`); for simplicity, iterative A queries by the DNS server to resolve the IP addresses of the Host names of the name server’s returned by other DNS servers have been omitted.
+
+1. Iterative query for `www.contoso.com` (A resource record)
+
+1. Referral to the `contoso.com` name server (NS resource record, for `contoso.com`)
+
+1. Iterative query for `www.contoso.com` (A resource record)
+
+1. Answer to the iterative query from contoso.com server (The `www.contoso.com` IP address)
+
+1. Answer to the original recursive query from local DNS server to resolver (The `www.contoso.com` IP address)
+
+## DNS service architecture
+
+The following diagram illustrates the DNS Client service architecture in its name resolution and update operations in the Windows client and Windows Server. Name resolution architecture is demonstrated using a Web browser and Microsoft Outlook and updates are represented by the DHCP client.
+
+![DNS Client Service Architecture](../media/dns-architecture/dns-client-service-architecture.png)
+
+The following diagram illustrates the DNS Server service architecture with its administration tools and the Windows Management Instrumentation (WMI) interface in Windows Server.
+
+![DNS Server Service Architecture](../media/dns-architecture/dns-server-service-architecture.png)
 
 ## Update DNS
 
-Because the resource records in the zone files are subject to change, they must be updated. The implementation of DNS in Windows Server supports both static and dynamic updates of the DNS database. The details of the dynamic update are discussed in [DNS Processes and Interactions]() and [DNS Physical Structure](/)
+Resource records often change as computers, servers, and devices are added to or removed from the network. The implementation of DNS in Windows Server supports both static and dynamic updates of the DNS database. The details of the dynamic update are discussed in [DNS Processes and Interactions]() and [DNS Physical Structure](/)
 
-The following diagrams illustrate how the DNS Client and Server services work and provide additional information about name resolution, update, and administration operations.
-
-The following diagram illustrates the DNS Client service architecture in its name resolution and update operations. Name resolution architecture is demonstrated using a Web browser and Microsoft Outlook and updates are represented by the DHCP client.
-
-![DNS Client Service Architecture](./media/dns-architecture/dns-client-service-architecture.png)
-
-The following diagram illustrates the DNS Server service architecture with its administration tools and the Windows Management Instrumentation (WMI) interface.
-
-![DNS Server Service Architecture](./media/dns-architecture/dns-server-service-architecture.png)
-
-Resource records can be added to an existing zone using the
-[Add-DNSServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord) PowerShell
-command. Some common resource record types have other PowerShell commands where you don't need to
-specify the resource record type. You can also add resource records using the DNS Manager console.
-See [Managing DNS resource records](manage-resource-records.md) for guidance on
-working with resource records, including creating and modifying existing resource records of all
+Resource records can be added to an existing zone using the [Add-DNSServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord) PowerShell command. Some common resource record types have other PowerShell commands where you don't need to specify the resource record type. You can also add resource records using the DNS Manager console. See [Managing DNS resource records](manage-resource-records.md) for guidance on working with resource records, including creating and modifying existing resource records of all
 types.
