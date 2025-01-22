@@ -12,8 +12,6 @@ ms.date: 07/10/2024
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-[!INCLUDE [azure-local-banner-22h2](../includes/azure-local-banner-22h2.md)]
-
 This article describes how to expand, move, or delete volumes in Azure Stack HCI and Windows Server by using either Windows Admin Center or PowerShell.
 
 ## Prerequisites
@@ -25,7 +23,7 @@ Before you begin to manage volumes, make sure that:
 
 Here are a few other prerequisites for moving volumes:
 
-   - Make sure the volume is in a healthy state before you move it. To find out about the health state of a volume, see [Monitor volumes](monitor-cluster.md#monitor-volumes) for Windows Admin Center and [Virtual disk state](/windows-server/storage/storage-spaces/storage-spaces-states#virtual-disk-states) for PowerShell.
+   - Make sure the volume is in a healthy state before you move it. To find out about the health state of a volume, see [Monitor volumes](/azure-local/manage/monitor-cluster#monitor-volumes) for Windows Admin Center and [Virtual disk state](/windows-server/storage/storage-spaces/storage-spaces-states#virtual-disk-states) for PowerShell.
    - If using PowerShell to move volumes, make sure you have the Remote Server Administration Tools (RSAT) cmdlets and PowerShell modules for Hyper-V and Failover Clustering. If these aren't already available in your PowerShell session on your management computer, add them using the following command: `Add-WindowsFeature RSAT-Clustering-PowerShell`.
 
 ## Expand volumes
@@ -241,7 +239,7 @@ This section describes how to delete volumes by using Windows Admin Center or Po
 Before you delete a volume, consider the following requirements:
 
 - Ensure the volume you're deleting isn't actively used by Arc Kubernetes clusters or VMs to prevent data loss or system issues.
-- Remove the associated workload and then delete the storage paths. For more information, see [Delete a storage path](./create-storage-path.md#delete-a-storage-path).
+- Remove the associated workload and then delete the storage paths. For more information, see [Delete a storage path](/azure-local/manage/create-storage-path?tabs=azurecli#delete-a-storage-path).
 
 ### [Windows Admin Center](#tab/windows-admin-center)
 
@@ -281,6 +279,6 @@ You're asked to confirm that you want to perform the action and erase all the da
 
 For step-by-step instructions on other essential storage management tasks, see also:
 
-- [Plan volumes](../concepts/plan-volumes.md)
+- [Plan volumes](./plan-volumes.md)
 - [Create volumes](create-volumes.md)
 - [Protect volumes](volume-encryption-deduplication.md)

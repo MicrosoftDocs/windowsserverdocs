@@ -11,8 +11,6 @@ ms.date: 04/17/2023
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
 
-[!INCLUDE [azure-local-banner-22h2](../includes/azure-local-banner-22h2.md)]
-
 This article explains the resiliency options available and outlines the scale requirements, storage efficiency, and general advantages and tradeoffs of each.
 
 ## Overview
@@ -197,7 +195,7 @@ Over its lifetime, Storage Spaces can tolerate any number of failures, because i
 
 ## Usage
 
-Check out [Create volumes](../manage/create-volumes.md).
+Check out [Create volumes](./create-volumes.md).
 
 ## Next steps
 

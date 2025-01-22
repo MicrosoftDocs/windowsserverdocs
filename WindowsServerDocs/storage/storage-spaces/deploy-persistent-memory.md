@@ -12,8 +12,6 @@ ms.date: 04/17/2023
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
-[!INCLUDE [azure-local-banner-22h2](../includes/azure-local-banner-22h2.md)]
-
 Persistent memory (or PMem) is a new type of memory technology that retains its content through power cycles and can be used as top-tier storage, which is why you may hear people refer to PMem as "storage-class memory" or SCM. This article provides background on persistent memory and explains how to deploy it as the top storage tier in Azure Stack HCI and Windows Server.
 
 ## What is persistent memory?

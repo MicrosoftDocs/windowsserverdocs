@@ -10696,11 +10696,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/drive-symmetry-considerations.md",
-      "redirect_url": "/azure/azure-local/concepts/drive-symmetry-considerations",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/storage/storage-spaces/understand-quorum.md",
       "redirect_url": "/azure/azure-local/concepts/quorum",
       "redirect_document_id": false
@@ -10713,11 +10708,6 @@
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/csv-cache.md",
       "redirect_url": "/azure/azure-local/manage/use-csv-cache",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/plan-volumes.md",
-      "redirect_url": "/azure/azure-local/concepts/plan-volumes",
       "redirect_document_id": false
     },
     {
@@ -10793,11 +10783,6 @@
     {
       "source_path": "WindowsServerDocs/networking/Networking-old.md",
       "redirect_url": "/windows-server/networking",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-storage-resync.md",
-      "redirect_url": "/azure/azure-local/concepts/understand-storage-resync",
       "redirect_document_id": false
     },
     {

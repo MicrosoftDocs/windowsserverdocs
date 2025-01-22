@@ -12,15 +12,13 @@ ms.date: 04/19/2023
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-[!INCLUDE [azure-local-banner-22h2](../includes/azure-local-banner-22h2.md)]
-
 This topic describes how to use system memory to boost the performance of Azure Stack HCI and Windows Server by caching frequent reads. Writes cannot be cached in memory.
 
 Azure Stack HCI and Windows Server are compatible with the Cluster Shared Volume (CSV) in-memory read cache. Using system memory to cache reads can improve performance for applications like Hyper-V, which uses unbuffered I/O to access VHD or VHDX files. (Unbuffered I/Os are any operations that are not cached by the Windows Cache Manager.)
 
 Because the in-memory cache is server-local, it improves data locality. Recent reads are cached in memory on the same host where the virtual machine (VM) is running, reducing how often reads go over the network. This results in lower latency and better storage performance.
 
-Note that the CSV in-memory read cache is different from the [storage pool cache](../concepts/cache.md).
+Note that the CSV in-memory read cache is different from the [storage pool cache](./cache.md).
 
 ## Planning considerations
 
@@ -82,5 +80,5 @@ Get-ClusterSharedVolume | ForEach {
 
 For related information, see also:
 
-- [Understand the storage pool cache](../concepts/cache.md)
-- [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs#enable-the-csv-cache-for-read-intensive-workloads-optional)
+- [Understand the storage pool cache](./cache.md)
+- [Use Cluster Shared Volumes in a failover cluster](../../failover-clustering/failover-cluster-csvs#enable-the-csv-cache-for-read-intensive-workloads-optional)

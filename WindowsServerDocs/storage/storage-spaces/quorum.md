@@ -12,8 +12,6 @@ ms.contributor: alalve
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server
 
-[!INCLUDE [azure-local-banner-22h2](../includes/azure-local-banner-22h2.md)]
-
 [Windows Server Failover Clustering](/windows-server/failover-clustering/failover-clustering-overview) provides high availability for workloads running on Azure Stack HCI and Windows Server clusters. These resources are considered highly available if the nodes that host resources are up; however, the cluster generally requires more than half the nodes to be running, which is known as having *quorum*.
 
 Quorum is designed to prevent *split-brain* scenarios that can happen when there's a partition in the network and subsets of nodes can't communicate with each other. This can cause both subsets of nodes to try to own the workload and write to the same disk, which can lead to numerous problems. However, this is prevented with Failover Clustering's concept of quorum, which forces only one of these groups of nodes to continue running, so only one of these groups stays online.
@@ -44,7 +42,7 @@ The table below gives an overview of the cluster quorum outcomes per scenario:
 - If you have two nodes, a witness is **required**.
 - If you have three or four nodes, witness is **strongly recommended**.
 - If you have five nodes or more, a witness isn't needed and doesn't provide additional resiliency.
-- If you have internet access, use a **[cloud witness](../manage/witness.md)**.
+- If you have internet access, use a **[cloud witness](/azure/azure-local/manage/witness)**.
 - If you're in an IT environment with other machines and file shares, use a file share witness.
 
 ## How cluster quorum works
@@ -225,4 +223,4 @@ Each of the 16 drives has one vote and node 2 also has one vote (since it's the 
 ## Next steps
 
 - [Configure and manage quorum](/windows-server/failover-clustering/manage-cluster-quorum)
-- [Set up a cluster witness](../manage/witness.md)
+- [Set up a cluster witness](/azure/azure-local/manage/witness)
