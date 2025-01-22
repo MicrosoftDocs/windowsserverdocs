@@ -5,6 +5,7 @@ ms.date: 01/21/2025
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
+zone_pivot_groups: windows-os-version
 ---
 
 # Install Windows Server from installation media
@@ -129,7 +130,7 @@ Once you're in the BIOS settings, navigate through the menus until you see the *
 
 Once modifications are made to the boot order, follow these steps to install Windows Server.
 
-### Windows Server 2025
+:::zone pivot="windows-server-2025"
 
 # [Desktop Experience](#tab/desktop-experience)
 
@@ -181,7 +182,9 @@ Once modifications are made to the boot order, follow these steps to install Win
 
 ---
 
-### Windows Server 2022 and previous versions
+::: zone-end
+
+:::zone pivot="windows-server-2022,windows-server-2019,windows-server-2016"
 
 # [Desktop Experience](#tab/desktop-experience)
 
@@ -213,6 +216,8 @@ Once modifications are made to the boot order, follow these steps to install Win
 1. You're notified that the password was changed. Hit the **Enter** button.
 
 ---
+
+::: zone-end
 
 > [!NOTE]
 > To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (**SConfig**). To learn more, see [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer) and [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig).
