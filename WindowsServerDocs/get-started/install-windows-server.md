@@ -129,7 +129,7 @@ Once you're in the BIOS settings, navigate through the menus until you see the *
 
 Once modifications are made to the boot order, follow these steps to install Windows Server:
 
-# [Desktop Experience](#tab/desktop-experience)
+# [Desktop Experience <br> Windows Server 2025](#tab/desktop-experience25)
 
 1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
 1. Once your device boots, you're prompted to press any key to boot from your installation media.
@@ -150,7 +150,7 @@ Once modifications are made to the boot order, follow these steps to install Win
 1. Under **Customize settings**, provide a complex password for the Administrator account, then select **Finish**.
 1. Once you log into the Administrator account, review the **Send diagnostic data to Microsoft** information, then select **Accept**.
 
-# [Server Core](#tab/server-core)
+# [Server Core <br> Windows Server 2025](#tab/server-core)
 
 1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
 1. Once your device boots, you're prompted to press any key to boot from your installation media.
@@ -176,6 +176,37 @@ Once modifications are made to the boot order, follow these steps to install Win
    1. Required
 
    1. Required plus Optional
+
+To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (SConfig). To learn more, see [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig) and [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer).
+
+# [Desktop Experience <br> Windows Server 2022 and previous versions](#tab/desktop-experience1622)
+
+1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
+1. Once your device boots, you're prompted to press any key to boot from your installation media.
+1. Under **Microsoft Server Operating System Setup**, select your language, time and currency format, keyboard language, then select **Next**.
+1. On the next screen, select **Install now**.
+1. Under **Activate Microsoft Server Operating System Setup**, enter your product key, then select **Next**.
+1. Under **Select the operating system you want to install**, choose the appropriate version per your license, then select **Next**.
+1. Under **Applicable notices and license terms**, review the terms, tick the checkbox to accept the terms, then select **Next**.
+1. Under **Which type of installation do you want?**, select **Custom: Install Microsoft Server Operating System only (advanced)**.
+1. Under **Where do you want to install Windows?**, select an empty drive, then select **Next**.
+1. Once your device reboots, under **Customize settings**, provide a complex password for the Administrator account, then select **Finish**.
+
+# [Server Core <br> Windows Server 2022 and previous versions](#tab/server-core1622)
+
+1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
+1. Once your device boots, you're prompted to press any key to boot from your installation media.
+1. Under **Microsoft Server Operating System Setup**, select your language, time and currency format, keyboard language, then select **Next**.
+1. On the next screen, select **Install now**.
+1. Under **Activate Microsoft Server Operating System Setup**, enter your product key, then select **Next**.
+1. Under **Select the operating system you want to install**, choose the appropriate version per your license, then select **Next**.
+1. Under **Applicable notices and license terms**, review the terms, tick the checkbox to accept the terms, then select **Next**.
+1. Under **Which type of installation do you want?**, select **Custom: Install Microsoft Server Operating System only (advanced)**.
+1. Under **Where do you want to install Windows?**, select an empty drive, then select **Next**.
+1. Once your device reboots, you're prompted to change the Administrator password. Hit the **Enter** button.
+1. Provide a complex password for the Administrator account, then hit the **Tab** button.
+1. Type your password again to confirm, then hit the **Enter** button.
+1. You're notified that the password was changed. Hit the **Enter** button.
 
 To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (SConfig). To learn more, see [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig) and [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer).
 
