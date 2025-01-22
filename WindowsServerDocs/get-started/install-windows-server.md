@@ -179,8 +179,6 @@ Once modifications are made to the boot order, follow these steps to install Win
 
    1. Required plus Optional
 
-To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (SConfig). To learn more, see [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig) and [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer).
-
 ---
 
 ### Windows Server 2022 and previous versions
@@ -214,9 +212,10 @@ To manage and configure your Windows Server Core environment, you have the optio
 1. Type your password again to confirm, then hit the **Enter** button.
 1. You're notified that the password was changed. Hit the **Enter** button.
 
-To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (SConfig). To learn more, see [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig) and [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer).
-
 ---
+
+> [!NOTE]
+> To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (**SConfig**). To learn more, see [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer) and [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig).
 
 ## See also
 
