@@ -140,6 +140,18 @@ The following image shows how management of the `contoso.com` domain is delegate
 > [!NOTE]
 > If multiple NS records exist for a delegated zone identifying multiple DNS servers available for querying, the Windows Server DNS Server service will be able to select the closest DNS server based on the roundtrip intervals measured over time for every DNS server.
 
+## DNS service architecture
+
+The following diagram illustrates the DNS Client service architecture in its name resolution and update operations in the Windows client and Windows Server. Name resolution architecture is demonstrated using a client application and updates are represented by the DHCP client.
+
+:::image type="content" source="../media/dns-architecture/dns-client-service-architecture.png" alt-text="A diagram illustrating the DNS Client service architecture in its name resolution and update operations in the Windows client and Windows Server. ":::
+
+The following diagram illustrates the DNS Server service architecture with its administration tools and the Windows Management Instrumentation (WMI) interface in Windows Server.
+
+:::image type="content" source="../media/dns-architecture/dns-server-service-architecture.png" alt-text="A diagram illustrating the DNS Server service architecture in Windows Server.":::
+
+The following sections describe the DNS query process and how DNS updates are handled.
+
 ## DNS queries
 
 DNS queries can be sent from a DNS client (resolver) to a DNS server, or between two DNS servers.
@@ -175,16 +187,6 @@ The diagram shows how multiple queries were used to determine the IP address for
 1. Answer to the iterative query from contoso.com server (The `www.contoso.com` IP address)
 
 1. Answer to the original recursive query from local DNS server to resolver (The `www.contoso.com` IP address)
-
-## DNS service architecture
-
-The following diagram illustrates the DNS Client service architecture in its name resolution and update operations in the Windows client and Windows Server. Name resolution architecture is demonstrated using a Web browser and Microsoft Outlook and updates are represented by the DHCP client.
-
-![DNS Client Service Architecture](../media/dns-architecture/dns-client-service-architecture.png)
-
-The following diagram illustrates the DNS Server service architecture with its administration tools and the Windows Management Instrumentation (WMI) interface in Windows Server.
-
-![DNS Server Service Architecture](../media/dns-architecture/dns-server-service-architecture.png)
 
 ## Update DNS
 
