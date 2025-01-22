@@ -131,7 +131,7 @@ Once modifications are made to the boot order, follow these steps to install Win
 
 ### Windows Server 2025
 
-# [Desktop Experience](#tab/desktop-experience25)
+# [Desktop Experience](#tab/desktop-experience)
 
 1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
 1. Once your device boots, you're prompted to press any key to boot from your installation media.
@@ -152,7 +152,7 @@ Once modifications are made to the boot order, follow these steps to install Win
 1. Under **Customize settings**, provide a complex password for the Administrator account, then select **Finish**.
 1. Once you log into the Administrator account, review the **Send diagnostic data to Microsoft** information, then select **Accept**.
 
-# [Server Core -<br> Windows Server 2025](#tab/server-core)
+# [Server Core](#tab/server-core)
 
 1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
 1. Once your device boots, you're prompted to press any key to boot from your installation media.
