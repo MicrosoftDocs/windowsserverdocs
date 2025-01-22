@@ -127,9 +127,11 @@ Before you can install Windows Server via USB or DVD, the computer's boot order 
 
 Once you're in the BIOS settings, navigate through the menus until you see the **Boot Order** or **Boot Sequence** option. Refer to the user manual for your device to locate this setting. Once you select the boot order setting, you can edit the boot order priority based in top-down order. Move booting from the USB or optical drive to the top of the list depending on which media installation method you're using. Once appropriate changes are made, save and exit from the BIOS. Your device reboots automatically in applying these changes.
 
-Once modifications are made to the boot order, follow these steps to install Windows Server:
+Once modifications are made to the boot order, follow these steps to install Windows Server.
 
-# [Desktop Experience <br> Windows Server 2025](#tab/desktop-experience25)
+### Windows Server 2025
+
+# [Desktop Experience](#tab/desktop-experience25)
 
 1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
 1. Once your device boots, you're prompted to press any key to boot from your installation media.
@@ -150,7 +152,7 @@ Once modifications are made to the boot order, follow these steps to install Win
 1. Under **Customize settings**, provide a complex password for the Administrator account, then select **Finish**.
 1. Once you log into the Administrator account, review the **Send diagnostic data to Microsoft** information, then select **Accept**.
 
-# [Server Core <br> Windows Server 2025](#tab/server-core)
+# [Server Core -<br> Windows Server 2025](#tab/server-core)
 
 1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
 1. Once your device boots, you're prompted to press any key to boot from your installation media.
@@ -179,7 +181,11 @@ Once modifications are made to the boot order, follow these steps to install Win
 
 To manage and configure your Windows Server Core environment, you have the option of using the Server Configuration tool (SConfig). To learn more, see [Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)](/windows-server/administration/server-core/server-core-sconfig) and [Administer a Server Core server](/windows-server/administration/server-core/server-core-administer).
 
-# [Desktop Experience <br> Windows Server 2022 and previous versions](#tab/desktop-experience1622)
+---
+
+### Windows Server 2022 and previous versions
+
+# [Desktop Experience](#tab/desktop-experience)
 
 1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
 1. Once your device boots, you're prompted to press any key to boot from your installation media.
@@ -192,7 +198,7 @@ To manage and configure your Windows Server Core environment, you have the optio
 1. Under **Where do you want to install Windows?**, select an empty drive, then select **Next**.
 1. Once your device reboots, under **Customize settings**, provide a complex password for the Administrator account, then select **Finish**.
 
-# [Server Core <br> Windows Server 2022 and previous versions](#tab/server-core1622)
+# [Server Core](#tab/server-core)
 
 1. Plug in your USB drive or DVD into your optical drive, then reboot your device.
 1. Once your device boots, you're prompted to press any key to boot from your installation media.
