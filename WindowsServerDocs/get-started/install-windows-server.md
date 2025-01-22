@@ -187,7 +187,7 @@ To manage and configure your Windows Server Core environment, you have the optio
 1. On the next screen, select **Install now**.
 1. Under **Activate Microsoft Server Operating System Setup**, enter your product key, then select **Next**.
 1. Under **Select the operating system you want to install**, choose the appropriate version per your license, then select **Next**.
-1. Under **Applicable notices and license terms**, review the terms, tick the checkbox to accept the terms, then select **Next**.
+1. Under **Applicable notices and license terms**, review the terms. Tick the checkbox to accept the terms, then select **Next**.
 1. Under **Which type of installation do you want?**, select **Custom: Install Microsoft Server Operating System only (advanced)**.
 1. Under **Where do you want to install Windows?**, select an empty drive, then select **Next**.
 1. Once your device reboots, under **Customize settings**, provide a complex password for the Administrator account, then select **Finish**.
@@ -200,7 +200,7 @@ To manage and configure your Windows Server Core environment, you have the optio
 1. On the next screen, select **Install now**.
 1. Under **Activate Microsoft Server Operating System Setup**, enter your product key, then select **Next**.
 1. Under **Select the operating system you want to install**, choose the appropriate version per your license, then select **Next**.
-1. Under **Applicable notices and license terms**, review the terms, tick the checkbox to accept the terms, then select **Next**.
+1. Under **Applicable notices and license terms**, review the terms. Tick the checkbox to accept the terms, then select **Next**.
 1. Under **Which type of installation do you want?**, select **Custom: Install Microsoft Server Operating System only (advanced)**.
 1. Under **Where do you want to install Windows?**, select an empty drive, then select **Next**.
 1. Once your device reboots, you're prompted to change the Administrator password. Hit the **Enter** button.
