@@ -2,7 +2,7 @@
 author: ManikaDhiman
 ms.author: v-mandhiman
 ms.topic: include
-ms.date: 04/05/2024
+ms.date: 01/23/2025
 ---
 
 You can use familiar storage cmdlets in PowerShell to create volumes with nested resiliency, as described in the following section.
