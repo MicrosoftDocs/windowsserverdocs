@@ -14,7 +14,7 @@ This document resolves sign-in issues with Active Directory Federation Services 
 
 
 ## Check AD FS Servers
-This is not a good situation, let's fix this quickly. First, ensure that all AD FS servers are working as expected. We'll use the AD FS diagnostic script to automatically check the health of the AD FS servers in your farm.
+First, ensure that all AD FS servers are working as expected. We'll use the AD FS diagnostic script to automatically check the health of the AD FS servers in your farm.
 
  1. Go to [Offline tools](../operations/offline-tools.md) and download the diagnostic script from Downloadable Tools.
  2. Execute the script on each AD FS server in the farm
@@ -27,12 +27,12 @@ Check DNS and any load balancer settings.
 
 If you have Web Application Proxy (WAP) servers
 
-- Ping the federation service name e.g. fs.contoso.com and confirm if the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
-- In the DNS server hosting the service name externally, check that there's an A record for the federation service (e.g. fs.contoso.com) pointing to the WAP server or load balancer in front of the WAP servers
+- Ping the federation service name, for example, fs.contoso.com and confirm if the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
+- In the DNS server hosting the service name externally, check that there's an A record for the federation service (for example, fs.contoso.com) pointing to the WAP server or load balancer in front of the WAP servers
 
 ### Load Balancer
 
-- Check that the firewall is not blocking traffic between AD FS and the load balancer, and between WAP and the load balancer
+- Check that the firewall isn't blocking traffic between AD FS and the load balancer, and between WAP and the load balancer
 - If probe is enabled
 - If you're running Windows Server 2012 R2, confirm that the August 2014 Windows Server 2012 R2 Update rollup (KB.2975719) is installed
 - Check if port 80 is enabled in the firewall on the WAP and AD FS servers
@@ -42,7 +42,7 @@ If you have Web Application Proxy (WAP) servers
 
 Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.
 
-In addition, if client user certificate authentication (clientTLS authentication using X509 user certificates) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers.
+In addition, if client user certificate authentication (clientTLS authentication using X509 user certificates) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This isn't required on the firewall between the Web Application Proxy and the federation servers.
 
 
 ## Check the SSL certificate for corpnet access
@@ -50,7 +50,7 @@ If you have Azure AD Connect, you should use it for managing the SSL certificate
 
 ### Is the certificate from a trusted authority?
 
-AD FS requires that the SSL certificate be issued from a trusted root certificate authority. If AD FS is going to be accessed from non-domain joined machines, then it's suggested to get a certificate from a trusted third party root certificate authority like DigiCert, VeriSign, etc. If the certificate is not from a trusted root certificate authority, then SSL communication can break.
+AD FS requires that the SSL certificate is issued from a trusted root certificate authority. If AD FS is going to be accessed from non-domain joined machines, then it's suggested to get a certificate from a trusted third party root certificate authority like DigiCert, VeriSign, etc. If the certificate isn't from a trusted root certificate authority, then SSL communication can break.
 
 ### Is the certificate subject name valid?
 
@@ -78,7 +78,7 @@ If the thumbprint of the SSL certificate already configured doesn't match the ex
 
 ### Ensure the certificate is set as the Service Communication certificate
 
-The SSL certificate also needs to be the service communication certificate in your AD FS farm. This doesn't happen automatically. You can do this via the MMC -> Certificates -> Set Service Communications Certificate. If the Service Communication certificate is not set properly, use the MMC to set the correct certificate and follow the below steps to set correct permissions on the new certificate:
+The SSL certificate also needs to be the service communication certificate in your AD FS farm. This doesn't happen automatically. You can do this via the MMC -> Certificates -> Set Service Communications Certificate. If the Service Communication certificate isn't set properly, use the MMC to set the correct certificate and follow the below steps to set correct permissions on the new certificate:
 
  1. Add the Certificates snap-in to MMC, select Computer account and click Next, then select Local computer and click Finish.
  2. Expand Certificates (Local Computer), expand Personal, and select Certificates.

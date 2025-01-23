@@ -8,9 +8,6 @@ ms.date: 10/14/2024
 ms.topic: article
 ---
 
-
-
-
 # Proxy trust between Web Application Proxy (WAP) and Active Directory Federation Service (AD FS) server is broken
 This document helps to resolve issues with proxy trust configuration with AD FS. Use this document if you're seeing problems with your Web Application Proxy (WAP) trust configuration.
 

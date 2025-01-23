@@ -18,13 +18,13 @@ IdpInitiatedSignOn can quickly verify if the AD FS service is up and running, an
 
 If your running AD FS on Windows Server 2016, you must enable IdpInitiatedSignOn manually:
 
- 1. Log into the primary AD FS server
+ 1. Log in to the primary AD FS server
  2. Open PowerShell
  3. Run Set-AdfsProperties -EnableIdPInitiatedSignonPage $true
 
 In order to verify AD FS service using IdpinitiatedSignOn follow these steps:
 
- 1. Log into the WAP machine you want to test
+ 1. Log in to the WAP machine you want to test
  2. Open a private browser session
  3. Go to https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
  4. Enter the credentials of a valid user on the log in page
@@ -121,15 +121,15 @@ if ( $certbindingissuedetected -eq $FALSE ) { Write-Host "Check Passed: No certi
 
 function checkadfstrusteddevicesstore()
 {
-# check for CA issued (non-self signed) certs in the AdfsTrustedDevices cert store
-Write-Host; Write-Host "2 Checking AdfsTrustedDevices cert store for non-self signed certificates"
+# check for CA issued (nonself signed) certs in the AdfsTrustedDevices cert store
+Write-Host; Write-Host "2 Checking AdfsTrustedDevices cert store for nonself signed certificates"
 $certlist = Get-Childitem cert:\LocalMachine\AdfsTrustedDevices -recurse | Where-Object {$_.Issuer -ne $_.Subject}
 if ( $certlist.count -gt 0 )
 {
-    Write-Warning "The following non-self signed certificates are present in the AdfsTrustedDevices store and should be removed"
+    Write-Warning "The following nonself signed certificates are present in the AdfsTrustedDevices store and should be removed"
     $certlist | Format-List Subject
 }
-else { Write-Host "Check Passed: No non-self signed certs present in AdfsTrustedDevices cert store" }
+else { Write-Host "Check Passed: No nonself signed certs present in AdfsTrustedDevices cert store" }
 }
 
 function checkproxytrustcerts
@@ -220,7 +220,7 @@ Be sure to check that the binding doesn't come back. If there's an application c
 
 #### Use an additional IP address for AD FS traffic
 
-If the IP:Port binding is expected and required, then using a 2nd IP such as 1.2.3.5 for ADFS and resolving the ADFS service FQDN to this IP address would mean that the Hostname:port bindings would then be used.
+If the IP:Port binding is expected and required, then using a second IP such as 1.2.3.5 for ADFS and resolving the ADFS service FQDN to this IP address would mean that the Hostname:port bindings would then be used.
 
 #### Configure the AdfsTrustedDevices store as the Ctl Store for the specific IP:port binding
 
@@ -265,7 +265,7 @@ Negotiate Client Certificate: Disabled
 
 #### Is CTL store name AdfsTrustedDevices?
 
-If the user has Microsoft Entra Connect Sync installed, use AAD Connect to update the SSL certificate bindings on all servers. If there's no Microsoft Entra Connect Sync server in the environment, use the following PowerShell cmdlet to regenerate the ADFS Certificate bindings on the AD FS server:
+If the user has Microsoft Entra Connect Sync installed, use Microsoft Entra Connect Sync server to update the SSL certificate bindings on all servers. If there's no Microsoft Entra Connect Sync server in the environment, use the following PowerShell cmdlet to regenerate the AD FS Certificate bindings on the AD FS server:
 
 Set-AdfsSslCertificate -Thumbprint &lt;thumbprint&gt;
 
@@ -273,7 +273,7 @@ Set-AdfsSslCertificate -Thumbprint &lt;thumbprint&gt;
 
 The AdfsTrustedDevices store should only contain the MS-Organization-Access certificate which is the self-signed cert used for issuing Workplace Join certificates, and the Proxy Trust certificates for each of the Web Application Proxy servers. Having a CA Issued certificate in a store where only Self-Signed certs would normally exist affects the CTL generated from this store and the CTL will then only contain the CA Issued certificate.
 
-Delete the non-self signed SSL server certificate from the AdfsTrustedDevices store
+Delete the nonself signed SSL server certificate from the AdfsTrustedDevices store
 
 #### Is there a time skew between AD FS and WAP servers?
 
