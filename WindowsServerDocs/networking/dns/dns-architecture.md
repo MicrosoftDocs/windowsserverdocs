@@ -20,9 +20,20 @@ DNS is a hierarchical distributed database and an associated set of protocols th
 
 DNS host names reside in a database that can be distributed among multiple servers, decreasing the load on any one server, and provide the ability to administer this naming system on a per-partition basis. DNS supports hierarchical names and allows registration of various data types in addition to host name-to-IP address mapping used in HOSTS files. The DNS database is distributed, allowing it to both scale up and scale out, meaning performance isn't degraded when more servers are added.
 
-The original DNS was based on [Request for Comment (RFC) 1035 (Domain Names–Implementation and Specification)](https://datatracker.ietf.org/doc/rfc1035/). Other RFCs that describe DNS security, implementation, and administrative issues later augmented the original design specifications.
+The original DNS was based on [Request for Comment (RFC) 1035 (Domain Names–Implementation and Specification)](https://datatracker.ietf.org/doc/rfc1035/). Other RFCs describe DNS security, implementation, and administrative issues later augmented the original design specifications.
 
-The RFCs used in the Windows Server operating systems are [1034](https://datatracker.ietf.org/doc/rfc1034/), [1035](https://datatracker.ietf.org/doc/rfc1035/), [1886](https://datatracker.ietf.org/doc/rfc1886/), [1996](https://datatracker.ietf.org/doc/rfc1996/), [1995](https://datatracker.ietf.org/doc/rfc1995/), [2136](https://datatracker.ietf.org/doc/rfc2136/), [2308](https://datatracker.ietf.org/doc/rfc2308/), [4034](https://datatracker.ietf.org/doc/rfc4034/), [4035](https://datatracker.ietf.org/doc/rfc4035/), [4036](https://datatracker.ietf.org/doc/rfc4036/) for DNSSEC, and [2052](https://datatracker.ietf.org/doc/rfc2052/).
+The RFCs used in the Windows Server operating systems are:
+
+- Domain names - concepts and facilities [RFC 1034](https://datatracker.ietf.org/doc/rfc1034/)
+- Domain names - implementation and specification [RFC 1035](https://datatracker.ietf.org/doc/rfc1035/)
+- DNS Extensions to support IP version 6 [RFC 1886](https://datatracker.ietf.org/doc/rfc1886/)
+- A Mechanism for Prompt Notification of Zone Changes (DNS NOTIFY) [RFC 1996](https://datatracker.ietf.org/doc/rfc1996/)
+- Incremental Zone Transfer in DNS [RFC 1995](https://datatracker.ietf.org/doc/rfc1995/)
+- Dynamic Updates in the Domain Name System (DNS UPDATE)[RFC 2136](https://datatracker.ietf.org/doc/rfc2136/)
+- Negative Caching of DNS Queries (DNS NCACHE) [RFC 2308](https://datatracker.ietf.org/doc/rfc2308/)
+- Resource Records for the DNS Security Extensions [RFC 4034](https://datatracker.ietf.org/doc/rfc4034/)
+- Protocol Modifications for the DNS Security Extensions [RFC 4035](https://datatracker.ietf.org/doc/rfc4035/)
+- A DNS RR for specifying the location of services (DNS SRV) [RFC 2052](https://datatracker.ietf.org/doc/rfc2052/)
 
 ## DNS domain names
 
@@ -34,19 +45,19 @@ A fully qualified domain name (FQDN) uniquely identifies the host’s position w
 
 ## Understanding the DNS domain namespace
 
-The DNS domain namespace, as shown in the preceding figure, is based on the concept of a tree of named domains. Each level of the tree can represent either a branch or a leaf of the tree. A branch is a level where more than one name is used to identify a collection of named resources. A leaf represents a single name used once at that level to indicate a specific resource.
+The DNS domain namespace, as shown in the preceding figure, is based on the concept of a tree of named domains. Each level of the tree can represent a branch or a leaf. A branch is a level where more than one name is used to identify a collection of named resources. A leaf represents a single name used once at that level to indicate a specific resource.
 
 ## DNS Domain Name Hierarchy
 
 DNS clients and servers use queries as the method of resolving names in the tree to specific types of resource information. This information is provided by DNS servers in query responses to DNS clients that then extract the information and pass it to a requesting program for resolving the queried name. In the process of resolving a name, DNS servers often function as DNS clients, querying other servers in order to fully resolve a queried name.
 
-For example, Contoso is assigned authority by the Internet root servers for its own part of the DNS domain namespace tree on the Internet, that is, `contoso.com`. To resolve a name outside of the `contoso.com` namespace would require Contoso DNS servers to query other DNS servers, such as the root servers, to resolve the name.
+For example, Contoso is assigned authority by the Internet root servers for its own part of the DNS domain namespace tree on the Internet, that is, `contoso.com`. Resolving a name outside of the `contoso.com` namespace requires Contoso DNS servers to query other DNS servers, such as the root servers.
 
 ## How the DNS domain namespace is organized
 
-Any DNS domain name used in the tree is technically a domain. However most DNS discussions identify names in one of five ways, based on the level and the way a name is commonly used. For example, the DNS domain name registered to Contoso (`contoso.com`) is known as a second-level domain. The name has two parts (known as labels) that indicate its located two levels below the root or top of the tree. Most DNS domain names have two or more labels, each of which indicates a new level in the tree. Periods are used in names to separate labels.
+Any DNS domain name used in the tree is technically a domain. However most DNS discussions identify names in one of five ways, based on the level and the way a name is commonly used. For example, the DNS domain name registered to Contoso (`contoso.com`) is known as a second-level domain. The name has two parts (known as labels) that indicate it's located two levels below the root or top of the tree. Most DNS domain names have two or more labels, each of which indicates a new level in the tree. Periods are used in names to separate labels.
 
-The five categories used to describe DNS domain names by their function in the namespace are described in the following table, along with an example of each name type.
+The following table describes the five categories of DNS domain names by their function in the namespace, along with an example of each name type.
 
 | Name type | Description | Example |
 | --------- | ---------- | ---------- |
@@ -58,7 +69,7 @@ The five categories used to describe DNS domain names by their function in the n
 
 ## DNS and Internet domains
 
-Name registration authorities on the Internet manage the Internet Domain Name System. The registration authorities are responsible for maintaining top-level domains assigned by organization and by country/region. These domain names follow the International Standard for country codes (ISO 3166). There are hundreds of top-level-domain names available for use by the public. The following table shows a few common TLDs, as well example two-letter abbreviations used for countries and regions.
+Internet registration authorities manage the Domain Name System. The registration authorities are responsible for maintaining top-level domains assigned by organization and by country/region. These domain names follow the International Standard for country codes (ISO 3166). There are hundreds of top-level-domain names available for use by the public. The following table shows a few common TLDs, as well example two-letter abbreviations used for countries and regions.
 
 | DNS Domain Name | Type of Organization |
 | ---------- | ---------- |
@@ -116,9 +127,9 @@ If a query is answered with an entry from cache, the TTL of the entry is also pa
 
 ## Zones and delegation
 
-A DNS database can be partitioned into multiple zones. A zone is a portion of the DNS database that contains the resource records with the owner names that belong to the contiguous portion of the DNS namespace. Zone files are maintained on DNS servers. A single DNS server can be configured to host zero, one, or multiple zones.
+A DNS database can be partitioned into multiple zones. A zone is a portion of the DNS database that contains the resource records with the owner names belonging to the contiguous portion of the DNS namespace. Zone files are maintained on DNS servers. A single DNS server can be configured to host zero, one, or multiple zones.
 
-Each zone is anchored at a specific domain name referred to as the zone’s root domain. A zone contains information about all names that end with the zone’s root domain name. A DNS server is considered authoritative for a name if it loads the zone containing that name. The first record in any zone file is a Start of Authority (SOA) resource record. The SOA resource record identifies a primary DNS name server for the zone as the best source of information for the data within that zone and as an entity processing the updates for the zone.
+Each zone is anchored at a specific domain name referred to as the zone’s root domain. A zone contains information about all names that end with the zone’s root domain name. A DNS server is considered authoritative for a name if it loads the zone containing that name. The first record in any zone file is a Start of Authority (SOA) resource record. The SOA resource record identifies a primary DNS name server for the zone as the best source of information for the data within that zone. The SOA also acts as an entity processing the updates for the zone.
 
 A name within a zone can also be delegated to a different zone that's hosted on a different DNS server. Delegation is a process of assigning responsibility for a portion of a DNS namespace to a DNS server owned by a separate entity. This separate entity can be another organization, department, or workgroup within your company. Such delegation is represented by the NS resource record that specifies the delegated zone and the DNS name of the server authoritative for that zone. Delegating across multiple zones was part of the original design goal of DNS.
 
@@ -172,21 +183,21 @@ The following figure shows an example of both types of queries.
 
 The diagram shows how multiple queries were used to determine the IP address for `www.contoso.com`. The query sequence is described as follows:
 
-1. Recursive query for `www.contoso.com` (A resource record)
+1. Recursive query for `www.contoso.com` (A resource record).
 
-1. Iterative query for `www.contoso.com` (A resource record)
+1. Iterative query for `www.contoso.com` (A resource record).
 
 1. Referral to the `.com` name server (NS resource records, for `.com`); for simplicity, iterative A queries by the DNS server to resolve the IP addresses of the Host names of the name server’s returned by other DNS servers have been omitted.
 
-1. Iterative query for `www.contoso.com` (A resource record)
+1. Iterative query for `www.contoso.com` (A resource record).
 
-1. Referral to the `contoso.com` name server (NS resource record, for `contoso.com`)
+1. Referral to the `contoso.com` name server (NS resource record, for `contoso.com`).
 
-1. Iterative query for `www.contoso.com` (A resource record)
+1. Iterative query for `www.contoso.com` (A resource record).
 
-1. Answer to the iterative query from contoso.com server (The `www.contoso.com` IP address)
+1. Answer to the iterative query from contoso.com server (The `www.contoso.com` IP address).
 
-1. Answer to the original recursive query from local DNS server to resolver (The `www.contoso.com` IP address)
+1. Answer to the original recursive query from local DNS server to resolver (The `www.contoso.com` IP address).
 
 ## Update DNS
 
