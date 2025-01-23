@@ -196,7 +196,7 @@ The following tables summarize the storage tiers that are/can be created in Azur
 
 Nested resiliency only applies to two-server clusters running Azure Stack HCI or Windows Server 2022 or Windows Server 2019; you can't use nested resiliency if your cluster has three or more servers, or if your cluster runs Windows Server 2016. Nested resiliency enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, allowing users, apps, and virtual machines to continue to run without disruption. For more information, see [Nested Resiliency for Storage Spaces Direct](./nested-resiliency.md) and [Plan volumes: choosing the resiliency type](./plan-volumes.md#choosing-the-resiliency-type).
 
-[!INCLUDE [Create nested resiliency volumes](../../../includes/create-volumes-with-nested-resiliency.md)
+[!INCLUDE [Create nested resiliency volumes](../../../includes/create-volumes-with-nested-resiliency.md)]
 
 ## Next steps
 

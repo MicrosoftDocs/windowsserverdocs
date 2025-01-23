@@ -1,7 +1,6 @@
 ---
 author: ManikaDhiman
 ms.author: v-mandhiman
-ms.service: azure-local
 ms.topic: include
 ms.date: 04/05/2024
 ---

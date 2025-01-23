@@ -4,7 +4,6 @@ description: This article provides information about error handling and health m
 author: jasongerend
 ms.author: jgerend
 ms.topic: how-to
-ms.service: azure-local
 ms.date: 04/17/2023
 ---
 
