@@ -29,7 +29,6 @@ In order to verify AD FS service using IdpinitiatedSignOn follow these steps:
  3. Go to https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
  4. Enter the credentials of a valid user on the log in page
 
-A successful sign-in is indicated by the message "You're signed in".
 
 ## Check Network Settings
 Check DNS and any load balancer settings.
@@ -38,7 +37,7 @@ Check DNS and any load balancer settings.
 
 If you have Web Application Proxy (WAP) servers
 
-- Ping the federation service name and confirm if the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
+- Ping the federation service name. Confirm the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
 - In the DNS server hosting the service name externally, check that there's an A record for the federation service pointing to the WAP server or load balancer in front of the WAP servers.
 
 ### Load Balancer
@@ -66,7 +65,7 @@ AD FS provides various endpoints for different functionalities and scenarios. No
 ## Check for WAP trust issues
 Go to each WAP server and run the diagnostic PowerShell script that you downloaded from AD FS Help Downloadable Tools. Fix any errors reported.
 
-Then log in to the primary AD FS server to see if there are any issues with bindings or trust certificates. Run the script given below on the primary AD FS server.
+Log in to the primary AD FS server to see if there are any issues with bindings or trust certificates. Run the script given below on the primary AD FS server.
 
 ```powershell
 param
@@ -194,7 +193,7 @@ checkhttpsyscertbindings
 checkadfstrusteddevicesstore
 checkproxytrustcerts($syncproxytrustcerts)
 Write-Host; Write-Host("All checks completed.")
-```   
+```  
 
 ## Perform a detailed WAP check
 
@@ -210,11 +209,11 @@ During any SSL communication, HTTP.sys uses the following priority order for its
 
 ### Is there a specific IPAddress:Port mapping?
 
-As mentioned above, the IP:Port mapping is of the highest precedence. Therefore, if there exists an IP:Port binding, then that is the certificate that is used by HTTP.sys all the time for SSL communication.
+The IP:Port mapping is of the highest precedence. Therefore, if there exists an IP:Port binding, then that is the certificate that is used by HTTP.sys all the time for SSL communication.
 
 #### Remove the specific IP:port binding
 
-Be sure to check that the binding doesn't come back. If there's an application configured with such a binding, it may re-create this automatically or on next service start-up.
+Check that the binding doesn't come back. If there's an application configured with such a binding, it may re-create this automatically or on next service start-up.
 
 #### Use an additional IP address for AD FS traffic
 
