@@ -205,7 +205,7 @@ During any SSL communication, HTTP.sys uses the following priority order for its
  2. SNI (Exact hostname match)
  3. CCS (Invoke Central Certificate Store)
  4. IPV6 Wildcard (IPv6 wildcard match connection must be IPv6
- 5. IP Wildcard IP wildcard match (connection can be IPv4 or IPv6)
+ 5. IP Wildcard match (connection can be IPv4 or IPv6)
 
 ### Is there a specific IPAddress:Port mapping?
 
