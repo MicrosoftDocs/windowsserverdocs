@@ -230,35 +230,36 @@ Open PowerShell
 Run netsh http show sslcert
 C:\Users\administrator.CONTOSO> netsh http show sslcert
 
-SSL Certificate bindings:
+```  
+ SSL Certificate bindings:
 
-————————-
 
-Hostname:port: adfs.contoso.com:443
+ Hostname:port: adfs.contoso.com:443
 
-Certificate Hash: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ Certificate Hash: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Application ID: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
+ Application ID: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
 
-Certificate Store Name: MY
+ Certificate Store Name: MY
 
-Verify Client Certificate Revocation: Enabled
+ Verify Client Certificate Revocation: Enabled
 
-Verify Revocation Using Cached Client Certificate Only: Disabled
+ Verify Revocation Using Cached Client Certificate Only: Disabled
 
-Usage Check: Enabled
+ Usage Check: Enabled
 
-Revocation Freshness Time: 0
+ Revocation Freshness Time: 0
 
-URL Retrieval Timeout: 0
+ URL Retrieval Timeout: 0
 
-Ctl Identifier: (null)
+ Ctl Identifier: (null)
 
-Ctl Store Name: AdfsTrustedDevices
+ Ctl Store Name: AdfsTrustedDevices
 
-DS Mapper Usage: Disabled
+ DS Mapper Usage: Disabled
 
-Negotiate Client Certificate: Disabled
+ Negotiate Client Certificate: Disabled
+```  
 
 #### Is CTL store name AdfsTrustedDevices?
 
