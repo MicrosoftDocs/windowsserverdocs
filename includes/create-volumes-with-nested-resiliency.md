@@ -9,7 +9,7 @@ You can use familiar storage cmdlets in PowerShell to create volumes with nested
 
 ### Step 1: Create storage tier templates (Windows Server 2019 only)
 
-Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these templates. 
+Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these templates.
 
 > [!NOTE]
 > If you're running Windows Server 2022, Azure Stack HCI 21H2, or Azure Stack HCI 20H2, you can skip this step.
@@ -60,7 +60,7 @@ Create new volumes using the `New-Volume` cmdlet.
 
 Volumes that use nested resiliency appear in [Windows Admin Center](/windows-server/manage/windows-admin-center/overview) with clear labeling, as in the following screenshot. Once they're created, you can manage and monitor them using Windows Admin Center just like any other volume in Storage Spaces Direct.
 
-:::image type="content" source="../includes/media/create-volumes-with-nested-resiliency/windows-admin-center.png" alt-text="Volume management in Windows Admin Center." lightbox="../includes/media/create-volumes-with-nested-resiliency/windows-admin-center.png":::
+![Volume management in Windows Admin Center.](media/create-volumes-with-nested-resiliency/windows-admin-center.png)
 
 ### Optional: Extend to cache drives
 
@@ -79,8 +79,8 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.N
 
 Once set to **True**, the cache behavior is:
 
-| Situation                       | Cache behavior                           | Can tolerate cache drive loss? |
-|---------------------------------|------------------------------------------|--------------------------------|
-| Both servers up                 | Cache reads and writes, full performance | Yes                            |
-| Server down, first 30 minutes   | Cache reads and writes, full performance | No (temporarily)               |
-| After first 30 minutes          | Cache reads only, performance impacted   | Yes (after the cache is written to capacity drives)                           |
+| Situation | Cache behavior | Can tolerate cache drive loss? |
+|--|--|--|
+| Both servers up | Cache reads and writes, full performance | Yes |
+| Server down, first 30 minutes | Cache reads and writes, full performance | No (temporarily) |
+| After first 30 minutes | Cache reads only, performance impacted | Yes (after the cache is written to capacity drives) |                       |
