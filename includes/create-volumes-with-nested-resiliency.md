@@ -1,6 +1,6 @@
 ---
 author: ManikaDhiman
-ms.author: v-mandhiman
+ms.author: v-manidhiman
 ms.topic: include
 ms.date: 01/23/2025
 ---
@@ -60,7 +60,7 @@ Create new volumes using the `New-Volume` cmdlet.
 
 Volumes that use nested resiliency appear in [Windows Admin Center](/windows-server/manage/windows-admin-center/overview) with clear labeling, as in the following screenshot. Once they're created, you can manage and monitor them using Windows Admin Center just like any other volume in Storage Spaces Direct.
 
-![Volume management in Windows Admin Center.](media/create-volumes-with-nested-resiliency/windows-admin-center.png)
+![Volume management in Windows Admin Center.](../WindowsServerDocs/storage/storage-spaces/media/create-volumes-with-nested-resiliency/windows-admin-center.png)
 
 ### Optional: Extend to cache drives
 
@@ -83,4 +83,4 @@ Once set to **True**, the cache behavior is:
 |--|--|--|
 | Both servers up | Cache reads and writes, full performance | Yes |
 | Server down, first 30 minutes | Cache reads and writes, full performance | No (temporarily) |
-| After first 30 minutes | Cache reads only, performance impacted | Yes (after the cache is written to capacity drives) |                       |
+| After first 30 minutes | Cache reads only, performance impacted | Yes (after the cache is written to capacity drives) |
