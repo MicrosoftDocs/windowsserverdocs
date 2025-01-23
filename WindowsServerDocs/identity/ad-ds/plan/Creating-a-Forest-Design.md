@@ -11,8 +11,6 @@ ms.topic: article
 
 # Creating a Forest Design
 
->
-
 Creating a forest design involves first identifying the groups within your organization that have the resources available to host an Active Directory forest and then defining your forest design requirements. Finally, you need to determine the number of forests that you require to meet the needs of your organization.
 
 After you map all your design requirements to forest models and select the forest model that meets the needs of your organization, document the proposed forest design. Include in your documentation the name of the group for which the forest is designed, the contact information for the forest owner, the type of forest for each forest that you include, and the requirements that each forest is designed to meet. This documentation will help the design team both to ensure that all the appropriate people are involved in the design process and to clarify the scope of the deployment project.

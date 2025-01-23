@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Autonomy vs. Isolation
 
->
-
 You can design your Active Directory logical structure to achieve either of the following:
 
 -   **Autonomy**. Involves independent but not exclusive control of a resource. When you achieve autonomy, administrators have the authority to manage resources independently; however, administrators with greater authority exist who also have control over those resources and can take control away if necessary. You can design your Active Directory logical structure to achieve the following types of autonomy:

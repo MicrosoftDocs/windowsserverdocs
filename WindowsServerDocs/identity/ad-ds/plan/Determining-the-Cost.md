@@ -11,8 +11,6 @@ ms.custom: inhenkel
 
 # Determining the Cost
 
->
-
 You assign cost values to site links to favor inexpensive connections over expensive connections. Certain applications and services, such as Domain Controller Locator (DCLocator) and Distributed File System Namespaces (DFSN), also use cost information to locate the nearest resources. Site link cost can be used to determine which domain controller is contacted by clients in one site if the domain controller for the specified domain doesn't exist at that site. The client contacts the domain controller by using the site link that has the lowest cost assigned to it.
 
 We recommend that the cost value be defined on a site-wide basis. Cost is usually based not only on the total bandwidth of the link but also on the availability, latency, and monetary cost of the link.

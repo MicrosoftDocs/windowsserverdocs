@@ -10,8 +10,6 @@ ms.date: 08/29/2018
 
 # Initialize the HGS cluster using TPM mode in an existing bastion forest
 
->
-
 To initialize the HGS cluster using TPM mode in an existing bastion forest, follow the steps below. Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]

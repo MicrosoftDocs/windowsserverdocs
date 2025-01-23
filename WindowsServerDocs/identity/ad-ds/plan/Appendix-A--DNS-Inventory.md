@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix A: DNS Inventory
 
->
-
 You can use the following tables to assist you in documenting the recursive name resolution method of your current Domain Name System (DNS) structure as part of the logical structure design for Windows Server Active Directory Domain Services (AD DS).
 
 ## Root hints

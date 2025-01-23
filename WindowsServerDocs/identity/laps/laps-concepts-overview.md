@@ -171,7 +171,7 @@ Backing up DSRM passwords to Microsoft Entra ID isn't supported.
 > [!IMPORTANT]
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
 >
-> But consider a catastrophic scenario in which all the domain controllers in a domain are down. In this scenario, no DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
+> Consider a catastrophic scenario in which all the domain controllers in a domain are down. In that situation, as long as you have been maintaining regular backups per Active Directory best practices, you can still recover DSRM passwords from backups using the procedure outlined in [Retrieving passwords during AD disaster recovery scenarios](laps-scenarios-windows-server-active-directory.md#retrieving-passwords-during-ad-disaster-recovery-scenarios).
 
 ## Password reset after authentication
 

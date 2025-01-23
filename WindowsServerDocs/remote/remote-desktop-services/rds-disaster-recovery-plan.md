@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Create your disaster recovery plan for RDS
 
->
-
 You can create a disaster recovery plan in Azure Site Recovery to automate the failover process. Add all RDS component VMs to the recovery plan.
 
 Use the following steps in Azure to create your recovery plan:

@@ -10,8 +10,6 @@ ms.date: 02/06/2023
 ---
 # Core network components
 
->
-
 This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 
 This guide contains the following sections:

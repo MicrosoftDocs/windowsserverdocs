@@ -11,8 +11,6 @@ ms.topic: article
 
 # Delegating Administration of Default Containers and OUs
 
->
-
 Every Active Directory domain contains a standard set of containers and organizational units (OUs) that are created during the installation of Active Directory Domain Services (AD DS). These include the following:
 
 -   Domain container, which serves as the root container to the hierarchy

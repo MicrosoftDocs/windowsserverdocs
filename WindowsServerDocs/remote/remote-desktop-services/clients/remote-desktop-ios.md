@@ -11,8 +11,6 @@ ms.date: 7/3/2024
 
 # Get started with the iOS client
 
->
-
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.

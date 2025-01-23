@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Import Data Packages on the Hosted Cache Server \(Optional\)
 
->
-
 You can use this procedure to import data packages and preload content on your hosted cache servers.
 
 This procedure is optional because you are not required to prehash and preload content on your hosted cache servers.

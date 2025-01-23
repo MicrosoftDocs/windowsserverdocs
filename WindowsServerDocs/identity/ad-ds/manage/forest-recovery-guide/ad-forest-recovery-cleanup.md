@@ -11,8 +11,6 @@ ms.custom: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 
 # Active Directory Forest Recovery - Cleanup
 
->
-
 Perform the following post recovery steps as needed:
 
 ## Revert to the original DNS configuration

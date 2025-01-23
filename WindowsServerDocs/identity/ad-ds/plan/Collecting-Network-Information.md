@@ -11,8 +11,6 @@ ms.topic: article
 
 # Collecting Network Information
 
->
-
 The first step in designing an effective site topology in Active Directory Domain Services (AD DS) is to consult your organization's networking group to collect information and communicate with them regularly about your physical network topology.
 
 ## Creating a location map

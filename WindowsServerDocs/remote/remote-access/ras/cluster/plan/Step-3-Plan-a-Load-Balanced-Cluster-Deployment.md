@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 3 Plan a Load-Balanced Cluster Deployment
 
->
-
 The next step is to plan the load-balancing configuration and cluster deployment.
 
 |Task|Description|

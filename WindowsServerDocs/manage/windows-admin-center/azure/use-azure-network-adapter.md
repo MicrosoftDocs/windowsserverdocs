@@ -11,8 +11,6 @@ ms.contributors: thmaure-08202021
 
 # Use Azure Network Adapter to connect a server to an Azure Virtual Network
 
->
-
 A lot of workloads running on-premises and in multi-cloud environments require
 connections to virtual machines (VMs) running in Microsoft Azure. To connect a
 server to an Azure Virtual Network, you have several options, including

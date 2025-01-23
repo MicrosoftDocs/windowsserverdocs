@@ -11,8 +11,6 @@ ms.topic: article
 
 # Deploy Claims Across Forests (Demonstration Steps)
 
->
-
 In this topic, we'll cover a basic scenario that explains how to configure claims transformations between trusting and trusted forests. You will learn how claims transformation policy objects can be created and linked to the trust on the trusting forest and the trusted forest. You will then validate the scenario.
 
 ## Scenario overview

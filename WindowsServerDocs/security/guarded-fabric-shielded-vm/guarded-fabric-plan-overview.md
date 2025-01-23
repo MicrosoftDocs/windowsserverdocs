@@ -11,8 +11,6 @@ ms.date: 12/10/2020
 
 # Planning a Guarded Fabric
 
->
-
 The following topics cover planning for the deployment of a guarded fabric and shielded virtual machines (VMs):
 
 - [Guarded Fabric and Shielded VM Planning Guide for Hosters](guarded-fabric-planning-for-hosters.md)

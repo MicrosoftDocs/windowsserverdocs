@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # View Roles and Role Permissions
 
->
-
 You can use this topic to view Access Control user roles in the IPAM client console.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.

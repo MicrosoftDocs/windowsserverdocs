@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Install the Network Controller Server Role Using Server Manager
 
->
-
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.
 
 > [!IMPORTANT]
@@ -56,4 +54,4 @@ After you install Network Controller, you must use Windows PowerShell commands f
     ![Server Manager](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)
 
 ## See Also
-[Network Controller](/azure-stack/hci/concepts/network-controller-overview)
+[Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking)

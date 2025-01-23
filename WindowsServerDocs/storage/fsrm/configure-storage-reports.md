@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Configure Storage Reports
 
->
-
 You can configure the default parameters for storage reports. These default parameters are used for the incident reports that are generated when a quota or file screening event occurs. They are also used for scheduled and on-demand reports, and you can override the default parameters when you define the specific properties of these reports.
 
 > [!Important]

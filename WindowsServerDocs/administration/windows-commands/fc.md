@@ -39,6 +39,16 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 | `[<drive2>:][<path2>]<filename2>` | Specifies the location and name of the second file or set of files to compare. *filename2* is required. |
 | /? | Displays help at the command prompt. |
 
+### Exit codes
+
+The following table lists each `fc.exe` exit code and a description.
+
+|Exit code|Description|
+|---------|-----------|
+|0|Files are identical.|
+|1|Files are different.|
+|2|An error occurred during comparison.|
+
 #### Remarks
 
 - This command is implemented by c:\WINDOWS\fc.exe. You can use this command within PowerShell, but be sure to spell out the full executable (fc.exe) since 'fc' is also an alias for Format-Custom.

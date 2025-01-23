@@ -10,8 +10,6 @@ ms.date: 11/09/2016
 
 # Introducing Token Binding
 
->
-
 The Token Binding protocol allows applications and services to cryptographically bind their security tokens to the TLS layer to mitigate token theft and replay attacks.
 The long-lived, uniquely identifiable TLS [RFC5246] bindings can span multiple TLS sessions and connections.
 

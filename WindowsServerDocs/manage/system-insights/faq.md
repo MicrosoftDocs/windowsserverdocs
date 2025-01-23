@@ -3,13 +3,11 @@ title: System Insights FAQ
 description: System Insights FAQ
 ms.topic: article
 author: gawatu
-ms.author: daknappe
+ms.author: roharwoo
 manager: mallikarjun.chadalapaka
 ms.date: 5/23/2018
 ---
 # System Insights FAQ
-
->
 
 ## How can you use System Insights with Azure Monitor or System Center Operations Manager?
 

@@ -1,13 +1,13 @@
 ---
-title: Hotpatch for Windows Server Azure Edition
-description: 'Learn how Hotpatch for Windows Server Datacenter: Azure Edition works and how to enable it'
+title: Hotpatch for Windows Server
+description: 'Learn how Hotpatch for Windows Server works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
-ms.date: 11/01/2024
-ms.author: wscontent
+ms.date: 11/19/2024
+ms.author: roharwoo
 ---
 
-# Hotpatch for virtual machines
+# Hotpatch for Windows Server
 
 Hotpatching is a way to install OS security updates on Windows Server without having to restart your machine. Hotpatching patches the in-memory code of running processes without the need to restart the process. Hotpatching also provides the following benefits:
 
@@ -21,12 +21,14 @@ Hotpatching is a way to install OS security updates on Windows Server without ha
 
 ## Supported platforms
 
-### Azure and Azure Stack HCI virtual machines
+### Azure and Azure Local virtual machines
 
-The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2022 and Windows Server 2025 on Azure. Virtual machines (VMs) you create on Azure Stack HCI using these combinations also support Hotpatching.
+The following table lists the exact combinations of publisher, OS offer, and SKU that support Hotpatching for Windows Server 2022 and Windows Server 2025 on Azure. Virtual machines (VMs) you create on Azure Local using these combinations also support Hotpatching.
 
 >[!NOTE]
 >Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
+>
+>Not all regions currently support Windows Server 2025: Azure Edition images. If you try to use this feature in a region that doesn't currently support Windows Server 2025: Azure Edition, you might see an HTTP 400 client error. To work around this issue, use a different region that does currently support this feature, such as UK South, East Asia, or West Central US.
 
 | Publisher               | OS Offer      |  SKU               |
 |-------------------------|---------------|--------------------|
@@ -104,9 +106,9 @@ vary depending on which platform you're using.
 > [!NOTE]
 > You can't create VM scale sets (VMSS) with Uniform orchestration on Azure Edition images with Hotpatch. To learn more about which features are supported by Uniform orchestration for scale sets, see [A comparison of Flexible, Uniform, and availability sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes).
 
-### Azure Stack HCI
+### Azure Local
 
-Azure Stack HCI can orchestrate Hotpatch updates for VMs using the following tools:
+Azure Local can orchestrate Hotpatch updates for VMs using the following tools:
 
 - Group Policy configures Windows Update client settings.
 
@@ -116,7 +118,7 @@ Azure Stack HCI can orchestrate Hotpatch updates for VMs using the following too
 
 ### Azure Arc-connected machines
 
-Azure Arc-connected machines can consume Hotpatch updates using the following tools:
+Azure Arc-connected machines can install and manage Hotpatch updates using the following tools:
 
 - Azure Update Manager
 

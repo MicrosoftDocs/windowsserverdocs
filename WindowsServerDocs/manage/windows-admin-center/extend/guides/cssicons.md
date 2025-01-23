@@ -9,8 +9,6 @@ ms.date: 06/18/2018
 
 # Current list of icons in Windows Admin Center
 
->
-
 ```
 .icon-win-globalNavButton:before { content: "\E700"; }
 .icon-win-connect:before { content: "\E703"; }

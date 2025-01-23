@@ -11,8 +11,6 @@ ms.date: 01/25/2023
 
 # Network shell \(netsh\)
 
->
-
 Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server.
 
 Some client technologies, such as Dynamic Host Configuration Protocol \(DHCP\) client and BranchCache, also provide netsh commands that allow you to configure client computers that are running Windows 10.

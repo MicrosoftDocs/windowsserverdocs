@@ -10,8 +10,6 @@ ms.reviewer: rickys
 ---
 # Securing Domain Controllers Against Attack
 
->
-
 *Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](/security/zero-trust/ten-laws-of-security#immutable-laws-of-security-v2).
 
 Domain controllers provide the physical storage for the Active Directory Domain Services (AD DS) database, in addition to providing the services and data that allow enterprises to effectively manage their servers, workstations, users, and applications. If privileged access to a domain controller is obtained, a malicious user can modify, corrupt, or destroy the AD DS database and, by extension, all of the systems and accounts managed by Active Directory.

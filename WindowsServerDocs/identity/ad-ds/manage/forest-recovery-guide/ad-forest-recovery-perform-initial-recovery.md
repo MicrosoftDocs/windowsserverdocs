@@ -52,7 +52,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     nonauthoritative restore of AD DS and an authoritative restore of SYSVOL.
     The restore operation must be completed by using an Active Directory-aware
     backup and restore application, such as Windows Server Backup (recommended).
-    If Hyper-Vistor Generation ID is supported on the host, then you can also do
+    If Hyper-Visor Generation ID is supported on the host, then you can also do
     the nonauthoritative restore using a VM snapshot.
 
     - An authoritative restore of SYSVOL is required on the first recovered
@@ -234,7 +234,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     Another problem is that a user account that no longer exists may still
     appear in the global address list.
 
-    Addtionally, a universal group that no longer exists might still appear in a user's access token.
+    Additionally, a universal group that no longer exists might still appear in a user's access token.
 
     If you did restore a DC that was a global catalog—either inadvertently or
     because that was the solitary backup that you trusted—we recommend that you

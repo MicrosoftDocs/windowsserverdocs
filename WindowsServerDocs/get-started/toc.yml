@@ -12,8 +12,6 @@ items:
     items:
     - name: What's new in Windows Server
       items:
-      - name: Windows Server Pay-as-you-go
-        href: windows-server-pay-as-you-go.md
       - name: Windows Server 2025
         href: whats-new-windows-server-2025.md  
       - name: Windows Server 2022
@@ -30,6 +28,8 @@ items:
       href: locks-limits.md
     - name: Azure Edition
       href: azure-edition.md
+    - name: Windows Server Pay-as-you-go
+      href: windows-server-pay-as-you-go.md
     - name: Windows Server Annual Channel for Containers
       href: annual-channel-for-containers.md
     - name: Hardware requirements
@@ -70,13 +70,7 @@ items:
     - name: Server Core App Compatibility Feature on Demand
       href: server-core-app-compatibility-feature-on-demand.md
     - name: Microsoft server applications compatibility
-      items:
-      - name: Windows Server 2022
-        href: application-compatibility-windows-server-2022.md
-      - name: Windows Server 2019
-        href: application-compatibility-windows-server-2019.md
-      - name: Windows Server 2016
-        href: application-compatibility-windows-server-2016.md
+      href: application-compatibility.md
     - name: Azure Hybrid Benefit for Windows Server
       href: azure-hybrid-benefit.md
     - name: What is Hotpatch?
@@ -103,6 +97,8 @@ items:
       href: enable-hotpatch-azure-arc-enabled-servers.md
     - name: Perform an in-place upgrade
       href: perform-in-place-upgrade.md
+    - name: Manage Feature Updates with Group Policy
+      href: manage-feature-updates-group-policy.md
     - name: Configure Secured-core Server
       href: ../security/configure-secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
   - name: Troubleshooting

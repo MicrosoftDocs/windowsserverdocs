@@ -3,8 +3,8 @@ title: Key Management Services (KMS) activation planning for Windows Server
 description: Learn how to plan for Key Management Services (KMS) activation in Windows Server.
 ms.topic: conceptual
 author: xelu86
-ms.author: roharwoo
-ms.date: 09/30/2024
+ms.author: alalve
+ms.date: 11/12/2024
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 ---
 
@@ -53,7 +53,7 @@ The following table summarizes KMS host and client versions for networks that in
 
 | CSVLK group | CSVLK can <br> be hosted on | Windows editions <br> activated by this KMS host |
 |--|--|--|
-| Volume License for Windows Server 2025 | <ul><li>Windows Server 2025</li><li>Windows Server 2022</li><li>Windows Server 2019</li></ul> | <ul><li>Windows Server 2025 (all editions)</li><li>Windows Server 2022 (all editions)</li><li>Windows Server Semi-Annual Channel</li><li>Windows Server 2019 (all editions)</li><li>Windows Server 2016 (all editions)</li><li>Windows Server 2012 R2 (all editions)</li><li>Windows Server 2012 (all editions)</li><li>Windows Server 2008 R2 (all editions)</li><li>Windows Server 2008 (all editions)</li> <br> <li>Windows 11 LTSC</li><li>Windows 11 Enterprise/Enterprise N</li><li>Windows 11 Professional/Professional N</li><li>Windows 11 Professional for Workstations/Professional N for Workstations</li><li>Windows 11 for Education/Education N</li><li>Windows 10 Enterprise LTSC/LTSC N/LTSB</li><li>Windows 10 Enterprise/Enterprise N</li><li>Windows 10 Professional/Professional N</li><li>Windows 10 Professional for Workstations/Professional N for Workstations</li><li>Windows 10 for Education/Education N</li><li>Windows 8.1 Enterprise</li><li>Windows 8.1 Professional</li><li>Windows 7 Enterprise</li><li>Windows 7 Professional</li></ul> |
+| Volume License for Windows Server 2025 | <ul><li>Windows Server 2025</li><li>Windows Server 2022</li><li>Windows Server 2019</li></ul> | <ul><li>Windows Server 2025 (all editions)</li><li>Windows Server 2022 (all editions)</li><li>Windows Server Semi-Annual Channel</li><li>Windows Server 2019 (all editions)</li><li>Windows Server 2016 (all editions)</li><li>Windows Server 2012 R2 (all editions)</li><li>Windows Server 2012 (all editions)</li><li>Windows Server 2008 R2 (all editions)</li><li>Windows Server 2008 (all editions)</li> <br> <li>Windows 11 Enterprise LTSC 2024</li><li>Windows 11 Enterprise/Enterprise N</li><li>Windows 11 Professional/Professional N</li><li>Windows 11 Professional for Workstations/Professional N for Workstations</li><li>Windows 11 for Education/Education N</li><li>Windows 10 Enterprise LTSC/LTSC N/LTSB</li><li>Windows 10 Enterprise/Enterprise N</li><li>Windows 10 Professional/Professional N</li><li>Windows 10 Professional for Workstations/Professional N for Workstations</li><li>Windows 10 for Education/Education N</li><li>Windows 8.1 Enterprise</li><li>Windows 8.1 Professional</li><li>Windows 7 Enterprise</li><li>Windows 7 Professional</li></ul> |
 
 # [Windows Server 2022](#tab/server22)
 

@@ -9822,47 +9822,47 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/manage/Use-Access-Control-Lists--ACLs--to-Manage-Datacenter-Network-Traffic-Flow.md",
-      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/manage/use-acls-for-traffic-flow.md",
-      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/manage/configure-datacenter-firewall-acls.md",
-      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/sdn-firewall-auditing.md",
-      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/plan/plan-a-software-defined-network-infrastructure.md",
-      "redirect_url": "/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure",
+      "redirect_url": "/azure/azure-local/concepts/plan-software-defined-networking-infrastructure",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller.md",
-      "redirect_url": "/azure-stack/hci/concepts/network-controller-overview",
+      "redirect_url": "/azure/azure-local/concepts/network-controller-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/plan/installation-and-preparation-requirements-for-deploying-network-controller.md",
-      "redirect_url": "/azure-stack/hci/concepts/network-controller",
+      "redirect_url": "/azure/azure-local/concepts/network-controller",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/ras-gateway-for-sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/gateway-overview",
+      "redirect_url": "/azure/azure-local/concepts/gateway-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/what-s-new-in-ras-gateway.md",
-      "redirect_url": "/azure-stack/hci/concepts/gateway-overview",
+      "redirect_url": "/azure/azure-local/concepts/gateway-overview",
       "redirect_document_id": false
     },
     {
@@ -9872,17 +9872,17 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-load-balancer",
+      "redirect_url": "/azure/azure-local/concepts/software-load-balancer",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-load-balancer",
+      "redirect_url": "/azure/azure-local/concepts/software-load-balancer",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview.md",
-      "redirect_url": "/azure-stack/hci/concepts/datacenter-firewall-overview",
+      "redirect_url": "/azure/azure-local/concepts/datacenter-firewall-overview",
       "redirect_document_id": false
     },
     {
@@ -10252,27 +10252,27 @@
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-overview.md",
-      "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
+      "redirect_url": "/azure/azure-local/manage/vm-load-balancing",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-deep-dive.md",
-      "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
+      "redirect_url": "/azure/azure-local/manage/vm-load-balancing",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/cluster-sets.md",
-      "redirect_url": "/azure-stack/hci/deploy/cluster-set",
+      "redirect_url": "/windows-server/failover-clustering/cluster-set",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/deploy-pmem.md",
-      "redirect_url": "/azure-stack/hci/concepts/deploy-persistent-memory",
+      "redirect_url": "/azure/azure-local/concepts/deploy-persistent-memory",
       "redirect_document_id": false
     },
     {
@@ -10287,17 +10287,17 @@
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-overview.md",
-      "redirect_url": "/azure-stack/hci/manage/health-service-overview",
+      "redirect_url": "/azure/azure-local/manage/health-service-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-actions.md",
-      "redirect_url": "/azure-stack/hci/manage/health-service-actions",
+      "redirect_url": "/azure/azure-local/manage/health-service-actions",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-settings.md",
-      "redirect_url": "/azure-stack/hci/manage/health-service-settings",
+      "redirect_url": "/azure/azure-local/manage/health-service-settings",
       "redirect_document_id": false
     },
     {
@@ -10322,7 +10322,7 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/data-collection.md",
-      "redirect_url": "/azure-stack/hci/manage/collect-diagnostic-data",
+      "redirect_url": "/azure/azure-local/manage/collect-diagnostic-data",
       "redirect_document_id": false
     },
     {
@@ -10617,7 +10617,7 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/maintain-servers.md",
-      "redirect_url": "/azure-stack/hci/manage/maintain-servers/",
+      "redirect_url": "/azure/azure-local/manage/maintain-servers/",
       "redirect_document_id": false
     },
     {
@@ -10627,12 +10627,12 @@
     },
     {
       "source_path": "WindowsServerDocs/sddc.md",
-      "redirect_url": "/azure-stack/hci/overview/",
+      "redirect_url": "/azure/azure-local/overview/",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/set-for-sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements#set/",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements#set/",
       "redirect_document_id": false
     },
     {
@@ -10687,107 +10687,107 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/understand-the-cache.md",
-      "redirect_url": "/azure-stack/hci/concepts/cache",
+      "redirect_url": "/azure/azure-local/concepts/cache",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-fault-tolerance.md",
-      "redirect_url": "/azure-stack/hci/concepts/fault-tolerance",
+      "redirect_url": "/azure/azure-local/concepts/fault-tolerance",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/drive-symmetry-considerations.md",
-      "redirect_url": "/azure-stack/hci/concepts/drive-symmetry-considerations",
+      "redirect_url": "/azure/azure-local/concepts/drive-symmetry-considerations",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/understand-quorum.md",
-      "redirect_url": "/azure-stack/hci/concepts/quorum",
+      "redirect_url": "/azure/azure-local/concepts/quorum",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/choosing-drives.md",
-      "redirect_url": "/azure-stack/hci/concepts/choose-drives",
+      "redirect_url": "/azure/azure-local/concepts/choose-drives",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/csv-cache.md",
-      "redirect_url": "/azure-stack/hci/manage/use-csv-cache",
+      "redirect_url": "/azure/azure-local/manage/use-csv-cache",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/plan-volumes.md",
-      "redirect_url": "/azure-stack/hci/concepts/plan-volumes",
+      "redirect_url": "/azure/azure-local/concepts/plan-volumes",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/create-volumes.md",
-      "redirect_url": "/azure-stack/hci/manage/create-volumes",
+      "redirect_url": "/azure/azure-local/manage/create-volumes",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/resize-volumes.md",
-      "redirect_url": "/azure-stack/hci/manage/extend-volumes",
+      "redirect_url": "/azure/azure-local/manage/extend-volumes",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/delete-volumes.md",
-      "redirect_url": "/azure-stack/hci/manage/delete-volumes",
+      "redirect_url": "/azure/azure-local/manage/delete-volumes",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-adjustable-repair-speed.md",
-      "redirect_url": "/azure-stack/hci/manage/storage-repair-speed",
+      "redirect_url": "/azure/azure-local/manage/storage-repair-speed",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/software-defined-networking.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/contact-sdn-team.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/Azure_and_Sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/Sc-Tech-for-Sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-mac-address-use-and-management.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/create-a-new-nic-team-on-a-host.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/troubleshooting-nic-teaming.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-settings.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
@@ -10797,7 +10797,7 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/understand-storage-resync.md",
-      "redirect_url": "/azure-stack/hci/concepts/understand-storage-resync",
+      "redirect_url": "/azure/azure-local/concepts/understand-storage-resync",
       "redirect_document_id": false
     },
     {
@@ -10807,12 +10807,12 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-overview.md",
-      "redirect_url": "/azure-stack/hci/concepts/storage-spaces-direct-overview",
+      "redirect_url": "/azure/azure-local/concepts/storage-spaces-direct-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/nested-resiliency.md",
-      "redirect_url": "/azure-stack/hci/concepts/nested-resiliency",
+      "redirect_url": "/azure/azure-local/concepts/nested-resiliency",
       "redirect_document_id": false
     },
     {
@@ -10867,22 +10867,22 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/sdn-security-top.md",
-      "redirect_url": "/azure-stack/hci/manage/nc-security",
+      "redirect_url": "/azure/azure-local/manage/nc-security",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/sdn-manage-certs.md",
-      "redirect_url": "/azure-stack/hci/manage/sdn-manage-certs",
+      "redirect_url": "/azure/azure-local/manage/sdn-manage-certs",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/nc-security.md",
-      "redirect_url": "/azure-stack/hci/manage/nc-security",
+      "redirect_url": "/azure/azure-local/manage/nc-security",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/kerberos-with-spn.md",
-      "redirect_url": "/azure-stack/hci/manage/kerberos-with-spn",
+      "redirect_url": "/azure/azure-local/manage/kerberos-with-spn",
       "redirect_document_id": false
     },
     {
@@ -11921,6 +11921,21 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2016.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2019.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
       "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
       "redirect_document_id": true
@@ -11928,6 +11943,31 @@
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/dns-top.md",
+      "redirect_url": "/windows-server/networking/dns/dns-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller-high-availability.md",
+      "redirect_url": "/windows-server/networking/sdn/technologies/network-controller/network-controller-service-fabric",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/hyperconverged/index.yml",
+      "redirect_url": "/windows-server/",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/hyper-v-storage-architecture.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/storage-architecture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-Hyper-V",
       "redirect_document_id": true
     }
   ]
