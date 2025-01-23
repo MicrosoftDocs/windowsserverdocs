@@ -7,7 +7,7 @@ metadata:
   ms.author: mosagie
   ms.topic: faq
   ms.custom: se-defect-target
-  ms.date: 06/12/2024
+  ms.date: 01/23/2025
 title: Remote Desktop Web Access FAQ
 summary: |
     This article provides answers to some of the most common questions about Remote Desktop Web Access (RD Web Access). The RD Web Access website enables you to use a Web browser to access RemoteApp and Desktop Connections.
@@ -15,6 +15,53 @@ summary: |
 sections:
   - name: Help topics
     questions:
+      - question: |
+          How do I change my password?
+        answer: |
+          To change your password, click the **Change your password** link on the RD Web Access website. You can change your password only if your network administrator has enabled this feature. If you can't change your password, contact your network administrator.    
+          Desktop. Manage account. Sign in options. change password. "To change your domain password, press Ctrl+Alt+Del and select Change a password."
+      - question: |
+          What are the password requirements?
+        answer: |
+          The password requirements are set by your network administrator. If you don't know the password requirements, contact your network administrator.
+
+      - question: |
+          What do I do if I forget my password?
+        answer: |
+          If you forget your password, contact your network administrator. Your network administrator can reset your password for you. Check to see if your account is locked. A network admin can do this for you.
+      
+      - question: |
+          How do I reset my expired password?
+        answer: |
+          If an admin has enabled password reset, you'll see that your username and password aren't valid. If password reset is enabled, you'll see a link to reset.
+      
+      - question: |
+          How do I enable password reset?
+        answer: |
+          Windows Server comes with an option to enable remote users to change their password from within the RD Web access interface in case it's expired. 
+          > [!NOTE]
+          > This option isn't helpful for users who forgot their password since the old password still needs to be entered before selecting a new password. For forgotten passwords, you must contact your Active Directory administrator. 
+          
+          To set up password reset password for Remote Web access:
+
+          1.	Open **Server Manager** on the Server running RD Web Access.
+          2.	In the menu under **Tools**, navigate to **Internet Information Services (IIS) Manager**.
+          3.	Next, locate your server and navigate to **Sites > Default Web Site > RDWeb > Pages**.
+          4.	Select **Application Settings** from the menu. Then, select the setting **PasswordChangeEnabled** and change the value to true.
+            
+            ![A screenshot of the application setting PasswordChangeEnabled.](media/password-change-enabled-setting.png)
+
+          Now, when you open the RDWebaccess page and try to log in using an expired password, a link appears to reset your password.
+          
+            ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
+          
+          When you open the password reset page you’re presented with the following user interface, where you enter your current password, new password, and confirm the new password.
+          
+            ![A screenshot of the link displayed to change your password.](media/change-password-form.png)
+          
+          > [!NOTE]
+          > If the remote server is running in Azure, you need create an endpoint for public port 443 in the Azure management portal so that users can access the RD Web Access portal. 
+      
       - question: |
           What is RemoteApp and Desktop Connections?
         answer: |
@@ -38,30 +85,3 @@ sections:
           If you're using a work computer assigned to you and that you don't share with other people, click This is a private computer.
 
           To protect against unauthorized access, RD Web Access sessions automatically end after a period of inactivity. If your RD Web Access session ends, you need to sign in again. The amount of time before a session ends is determined by your administrator.
-
-      - question: |
-          How do I enable password reset?
-        answer: |
-          Windows Server comes with an option to enable remote users to change their password from within the RD Web access interface in case it's expired. 
-          > [!NOTE]
-          > This option isn’t helpful for users who forgot their password since the old password still needs to be entered before selecting a new password. For forgotten passwords, you must contact your Active Directory administrator. 
-          
-          To set up password reset password for Remote Web access:
-
-          1.	Open **Server Manager** on the Server running RD Web Access.
-          2.	In the menu under **Tools**, navigate to **Internet Information Services (IIS) Manager**.
-          3.	Next, locate your server and navigate to **Sites > Default Web Site > RDWeb > Pages**.
-          4.	Select **Application Settings** from the menu. Then, select the setting **PasswordChangeEnabled** and change the value to true.
-            
-            ![A screenshot of the application setting PasswordChangeEnabled.](media/password-change-enabled-setting.png)
-
-          Now, when you open the RDWebaccess page and try to log in using an expired password, a link appears to reset your password.
-          
-            ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
-          
-          When you open the password reset page you’re presented with the following user interface, where you enter your current password, new password, and confirm the new password.
-          
-            ![A screenshot of the link displayed to change your password.](media/change-password-form.png)
-          
-          > [!NOTE]
-          > If the remote server is running in Azure, you need create an endpoint for public port 443 in the Azure management portal so that users can access the RD Web Access portal. 
