@@ -4,7 +4,7 @@ description:  Learn how to troubleshoot various aspects of  AD FS login from ins
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 10/14/2024
+ms.date: 01/23/2025
 ms.topic: article
 ---
 
