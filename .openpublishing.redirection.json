@@ -11946,6 +11946,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/networking/dns/dns-top.md",
+      "redirect_url": "/windows-server/networking/dns/dns-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller-high-availability.md",
       "redirect_url": "/windows-server/networking/sdn/technologies/network-controller/network-controller-service-fabric",
       "redirect_document_id": true

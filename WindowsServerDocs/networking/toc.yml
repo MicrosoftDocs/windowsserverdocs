@@ -152,10 +152,10 @@ items:
   - name: DirectAccess
     href: ../remote/remote-access/directaccess/directaccess.md
   - name: Domain Name System (DNS)
-    href: dns/dns-top.md
+    href: dns/dns-overview.md
     items:
     - name: Overview
-      href: dns/dns-top.md
+      href: dns/dns-overview.md
       items:
       - name: Anycast DNS
         href: dns/deploy/anycast.md
