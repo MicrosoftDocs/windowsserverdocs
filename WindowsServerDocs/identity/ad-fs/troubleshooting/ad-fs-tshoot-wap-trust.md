@@ -54,7 +54,7 @@ Check for any AD FS Replication Errors.
  2. Fix any sync issues
 
 ## Service principal name
-For proper WAP - AD FS communication, ensure that the correct service principal name (SPN) is configured on the AD FS service account. Run setspn -f -q host/&lt;federation service name&gt; and run setspn -f -q http/&lt;federation service name&gt; and correct any issues.
+For proper WAP and AD FS communication, ensure that the correct service principal name (SPN) is configured on the AD FS service account. Run `setspn -f -q host/ <federation service name>` and run `setspn -f -q http/ <federation service name>` and correct any issues. 
 
  1. HOST should resolve to the ADFS service account.
  2. HTTP call should resolve to one of the AD FS servers. If SPN lookup resolves to an unrelated computer account, the authentication between the servers fails.
@@ -62,7 +62,7 @@ For proper WAP - AD FS communication, ensure that the correct service principal 
 ## Reset WAP trust
 If all else fails, reset the WAP trust using the Install-WebApplicationProxy PowerShell cmdlet
 
-Example: If the thumbprint of the SSL cert is 3638de9b03a488341dfe32fc3ae5c480ee687793 and the federation service name is fs.contoso.com
+Example: If the thumbprint of the SSL cert is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and the federation service name is fs.contoso.com
 
 Run, `Install-WebApplicationProxy -FederationServiceName fs.contoso.com -CertificateThumbprint "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"`
 
