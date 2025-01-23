@@ -29,7 +29,7 @@ In order to verify AD FS service using IdpinitiatedSignOn follow these steps:
  3. Go to https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
  4. Enter the credentials of a valid user on the log in page
 
-A successful sign-in is indicated by the message "Your signed in".
+A successful sign-in is indicated by the message "You are signed in".
 
 ## Check Network Settings
 Check DNS and any load balancer settings.
@@ -58,16 +58,16 @@ In addition, if client user certificate authentication (clientTLS authentication
 ## Check if endpoint is enabled
 AD FS provides various endpoints for different functionalities and scenarios. Not all endpoints are enabled by default. To check if a particular endpoint is enabled or disabled:
 
- 1. Log into the AD FS server
+ 1. Log in to the AD FS server
  2. Open AD FS Management
  3. In the left navigation pane, select Service > Endpoints
  4. In the right pane, scroll to the endpoint that needs to be checked (usually /adfs/ls and /adfs/oauth2)
- 5. Verify that the endpoint is enabled. For example, if oAuth log ins are failing, check if /adfs/oauth endpoint is marked as "Yes" under ProxyEnabled
+ 5. Verify that the endpoint is enabled. For example, if oAuth logins are failing, check if /adfs/oauth endpoint is marked as "Yes" under ProxyEnabled
 
 ## Check for WAP trust issues
 Go to each WAP server and run the diagnostic PowerShell script that you downloaded from AD FS Help Downloadable Tools. Fix any errors reported.
 
-Then log into the primary AD FS server to see if there are any issues with bindings or trust certificates. Run the script given below on the primary AD FS server.
+Then log in to the primary AD FS server to see if there are any issues with bindings or trust certificates. Run the script given below on the primary AD FS server.
 
 ```powershell
 param
@@ -212,7 +212,7 @@ During any SSL communication, HTTP.sys uses the following priority order for its
 
 ### Is there a specific IPAddress:Port mapping?
 
-As mentioned above, the IP:Port mapping is of the highest precedence. Therefore, if there exists an IP:Port binding, then that is the certificate that will be used by HTTP.sys all the time for SSL communication.
+As mentioned above, the IP:Port mapping is of the highest precedence. Therefore, if there exists an IP:Port binding, then that is the certificate that is used by HTTP.sys all the time for SSL communication.
 
 #### Remove the specific IP:port binding
 
@@ -224,11 +224,11 @@ If the IP:Port binding is expected and required, then using a second IP such as 
 
 #### Configure the AdfsTrustedDevices store as the Ctl Store for the specific IP:port binding
 
-This will again have some dependence on why the specific IP:port binding is there and if this relies on the default CTL Store for client certificate authentication. But an option would be to set the Ctl Store on the IP:port binding to be the AdfsTrustedDevices store.
+This has some dependence on why the specific IP:port binding is there and if this relies on the default CTL Store for client certificate authentication. But an option would be to set the Ctl Store on the IP:port binding to be the AdfsTrustedDevices store.
 
 How to check current SSL certificate bindings
 
-Log into AD FS server
+Log in to AD FS server
 Open PowerShell
 Run netsh http show sslcert
 C:\Users\administrator.CONTOSO> netsh http show sslcert
@@ -281,7 +281,7 @@ Ensure that there's no time skew between the AD FS and WAP Servers
 
 #### SSL Termination between AD FS and WAP?
 
-If SSL termination is happening on a network device between AD FS servers and WAP, then the communication between AD FS and WAP will break because the WAP and AD FS communication is based on client certificates.
+If SSL termination is happening on a network device between AD FS servers and WAP, then the communication between AD FS and WAP breaks because the WAP and AD FS communication is based on client certificates.
 
 Disable SSL termination on the network device in between the AD FS and WAP servers
 
