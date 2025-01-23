@@ -1,6 +1,6 @@
 ---
-title: AD FS Troubleshooting - Users can't login using AD FS from an external network
-description:  Learn how to troubleshoot various aspects of  AD FS login from an extranet.
+title: AD FS Troubleshooting - Users can't log in using AD FS from an external network
+description: Learn how to troubleshoot various aspects of AD FS log in from an extranet.
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -8,7 +8,7 @@ ms.date: 10/14/2024
 ms.topic: article
 ---
 
-# Users can't login using AD FS from an external network
+# Users can't log in using AD FS from an external network
 This document helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this document if users aren't able to authenticate using AD FS from outside corpnet. This would usually include authentications occurring via the Web Application Proxy (WAP).
 
 ## Check extranet access
@@ -27,7 +27,7 @@ In order to verify AD FS service using IdpinitiatedSignOn follow these steps:
  1. Log into the WAP machine you want to test
  2. Open a private browser session
  3. Go to https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
- 4. Enter the credentials of a valid user on the login page
+ 4. Enter the credentials of a valid user on the log in page
 
 A successful sign-in is indicated by the message "Your signed in".
 
@@ -62,7 +62,7 @@ AD FS provides various endpoints for different functionalities and scenarios. No
  2. Open AD FS Management
  3. In the left navigation pane, select Service > Endpoints
  4. In the right pane, scroll to the endpoint that needs to be checked (usually /adfs/ls and /adfs/oauth2)
- 5. Verify that the endpoint is enabled. For example, if oAuth logins are failing, check if /adfs/oauth endpoint is marked as "Yes" under ProxyEnabled
+ 5. Verify that the endpoint is enabled. For example, if oAuth log ins are failing, check if /adfs/oauth endpoint is marked as "Yes" under ProxyEnabled
 
 ## Check for WAP trust issues
 Go to each WAP server and run the diagnostic PowerShell script that you downloaded from AD FS Help Downloadable Tools. Fix any errors reported.
@@ -195,7 +195,7 @@ checkhttpsyscertbindings
 checkadfstrusteddevicesstore
 checkproxytrustcerts($syncproxytrustcerts)
 Write-Host; Write-Host("All checks completed.")
-```      
+```   
 
 ## Perform a detailed WAP check
 We'll need to do some detailed checks. We'll now check if the trust between WAP and AD FS is working as expected.
@@ -237,35 +237,35 @@ SSL Certificate bindings:
 
 ————————-
 
-Hostname:port : adfs.contoso.com:443
+Hostname:port: adfs.contoso.com:443
 
-Certificate Hash : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Certificate Hash: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-Application ID : {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
+Application ID: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
 
-Certificate Store Name : MY
+Certificate Store Name: MY
 
-Verify Client Certificate Revocation : Enabled
+Verify Client Certificate Revocation: Enabled
 
-Verify Revocation Using Cached Client Certificate Only : Disabled
+Verify Revocation Using Cached Client Certificate Only: Disabled
 
-Usage Check : Enabled
+Usage Check: Enabled
 
-Revocation Freshness Time : 0
+Revocation Freshness Time: 0
 
-URL Retrieval Timeout : 0
+URL Retrieval Timeout: 0
 
-Ctl Identifier : (null)
+Ctl Identifier: (null)
 
-Ctl Store Name : AdfsTrustedDevices
+Ctl Store Name: AdfsTrustedDevices
 
-DS Mapper Usage : Disabled
+DS Mapper Usage: Disabled
 
-Negotiate Client Certificate : Disabled
+Negotiate Client Certificate: Disabled
 
 #### Is CTL store name AdfsTrustedDevices?
 
-If the user has Azure AD Connect installed, use AAD Connect to update the SSL certificate bindings on all servers. If there's no AAD Connect server in the environment, use the following PowerShell cmdlet to regenerate the ADFS Certificate bindings on the AD FS server:
+If the user has Microsoft Entra Connect Sync installed, use AAD Connect to update the SSL certificate bindings on all servers. If there's no Microsoft Entra Connect Sync server in the environment, use the following PowerShell cmdlet to regenerate the ADFS Certificate bindings on the AD FS server:
 
 Set-AdfsSslCertificate -Thumbprint &lt;thumbprint&gt;
 
