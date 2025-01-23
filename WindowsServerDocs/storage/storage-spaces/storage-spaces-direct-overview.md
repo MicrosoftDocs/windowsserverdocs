@@ -12,13 +12,11 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server a
 
 >Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-[!INCLUDE [azure-local-banner-22h2](../includes/azure-local-banner-22h2.md)]
-
 Storage Spaces Direct is a feature of Azure Stack HCI and Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 
 This article provides an overview of Storage Spaces Direct, how it works, when to use it, and its key benefits. You can also explore videos and real-world customer stories in this article to learn more about Storage Spaces Direct.
 
-To get started, try [Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) in Microsoft Azure, or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602). To know the minimum hardware requirements for Storage Spaces Direct on Windows Server and Azure Stack HCI, see [System requirements for Windows Server](/windows-server/storage/storage-spaces/storage-spaces-direct-hardware-requirements) and [System requirements for Azure Stack HCI](system-requirements.md), respectively. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
+To get started, try [Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) in Microsoft Azure, or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602). To know the minimum hardware requirements for Storage Spaces Direct on Windows Server and Azure Stack HCI, see [System requirements for Windows Server](/windows-server/storage/storage-spaces/storage-spaces-direct-hardware-requirements) and [System requirements for Azure Stack HCI](/azure/azure-local/concepts/system-requirements?tabs=azure-public), respectively. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [Deploy the Azure Stack HCI operating system](/azure/azure-local/deploy/operating-system).
 
 ## What is Storage Spaces Direct?
 

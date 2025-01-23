@@ -111,5 +111,5 @@ This view is more granular because the storage jobs are listed per volume. You c
 
 ## Additional References
 
-- [Taking a server offline for maintenance](../manage/maintain-servers.md)
+- [Taking a server offline for maintenance](/azure/azure-local/manage/maintain-servers)
 - [Storage Spaces Direct overview](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
