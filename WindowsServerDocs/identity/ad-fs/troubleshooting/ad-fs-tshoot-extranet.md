@@ -29,7 +29,7 @@ In order to verify AD FS service using IdpinitiatedSignOn follow these steps:
  3. Go to https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
  4. Enter the credentials of a valid user on the log in page
 
-A successful sign-in is indicated by the message "You are signed in".
+A successful sign-in is indicated by the message "You're signed in".
 
 ## Check Network Settings
 Check DNS and any load balancer settings.
@@ -38,8 +38,8 @@ Check DNS and any load balancer settings.
 
 If you have Web Application Proxy (WAP) servers
 
-- Ping the federation service name e.g. fs.contoso.com and confirm if the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
-- In the DNS server hosting the service name externally, check that there's an A record for the federation service (e.g. fs.contoso.com) pointing to the WAP server or load balancer in front of the WAP servers
+- Ping the federation service name, for example, fs.contoso.com and confirm if the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
+- In the DNS server hosting the service name externally, check that there's an A record for the federation service (for example, fs.contoso.com) pointing to the WAP server or load balancer in front of the WAP servers
 
 ### Load Balancer
 
@@ -53,7 +53,6 @@ If you have Web Application Proxy (WAP) servers
 
 Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.
 
-In addition, if client user certificate authentication (clientTLS authentication using X509 user certificates) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This isn't required on the firewall between the Web Application Proxy and the federation servers.
 
 ## Check if endpoint is enabled
 AD FS provides various endpoints for different functionalities and scenarios. Not all endpoints are enabled by default. To check if a particular endpoint is enabled or disabled:
@@ -198,7 +197,6 @@ Write-Host; Write-Host("All checks completed.")
 ```   
 
 ## Perform a detailed WAP check
-We'll need to do some detailed checks. We'll now check if the trust between WAP and AD FS is working as expected.
 
 The proxy trust relationship between a Web Application Proxy server and the AD FS 2012 R2 server is client certificate based. When the Web Application Proxy post-install wizard is run, a self-signed Client Certificate is generated and inserted into the AD FS configuration store using the credentials specified in the wizard. AD FS also propagates this to the AdfsTrustedDevices certificate store on the AD FS server.
 
