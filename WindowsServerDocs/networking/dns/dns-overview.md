@@ -4,13 +4,15 @@ description: Learn about the DNS protocol, essential for Windows networks and Ac
 ms.topic: overview
 ms.author: roharwoo
 author: robinharwood
-ms.date: 01/20/2025
+ms.date: 01/23/2025
 #customer intent: As a network administrator, I want to learn about how DNS is used in Windows networks and Active Directory operations, so that I can understand how to configure and manage DNS in my organization.
 ---
 
-# What is Domain Name System (DNS) in Windows and Windows Server?
+# What is Domain Name System (DNS)?
 
-Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users. Domain Name System (DNS) is the default name resolution service used in Windows networks. DNS is part of the TCP/IP protocol suite and all TCP/IP network connections are by default configured with the IP address of at least one DNS server in order to perform name resolution on the network.
+Domain Name System (DNS) is an industry-standard protocol providing computer name-to-IP address mapping name and resolution services to computers and users. Domain Name System (DNS) is the default name resolution service used in Windows networks. DNS is part of the TCP/IP protocol suite and all TCP/IP network connections are by default configured with the IP address of at least one DNS server in order to perform name resolution on the network.
+
+## Using DNS in Windows and Windows Server?
 
 In Windows Server, DNS is a server role that you can install by using Server Manager or Windows PowerShell commands. If you are installing a new Active Directory forest and domain, DNS is automatically installed with Active Directory as the Global Catalogue server for the forest and domain.
 
@@ -22,4 +24,8 @@ The DNS Client service is included in all client and server versions of the Wind
 
 The Windows Server DNS Server and DNS Client services use the DNS protocol that is included in the TCP/IP protocol suite. DNS is part of the application layer of the TCP/IP reference model, as shown in the following illustration.
 
-![DNS in TCP/IP](../media/Domain-Name-System--DNS-/dns_in_tcpip.jpg)
+:::image type="content" source="../media/dns-overview/dns_in_tcpip.jpg" alt-text="Diagram illustrating DNS within the TCP/IP model, showing how DNS fits into different layers and protocols of TCP/IP.":::
+
+## Get started
+
+Get started with DNS in Windows Server using the [Quickstart: Install and configure DNS Server on Windows Server](quickstart-install-configure-dns-server.md).
