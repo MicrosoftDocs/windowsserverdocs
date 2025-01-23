@@ -9,10 +9,10 @@ ms.topic: article
 ---
 
 # Users can't log in using AD FS from an external network
-This document helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this document if users aren't able to authenticate using AD FS from outside corpnet. This would usually include authentications occurring via the Web Application Proxy (WAP).
+This document helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this document if users aren't able to authenticate using AD FS from outside corpnet. 
 
 ## Check extranet access
-We'll now check extranet access. Let's first make sure that we're able to authenticate to the AD FS servers from WAP
+Check to see if you can authenticate to the AD FS servers from WAP.
 
 IdpInitiatedSignOn can quickly verify if the AD FS service is up and running, and authentication is working correctly.
 
@@ -38,8 +38,8 @@ Check DNS and any load balancer settings.
 
 If you have Web Application Proxy (WAP) servers
 
-- Ping the federation service name, for example, fs.contoso.com and confirm if the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
-- In the DNS server hosting the service name externally, check that there's an A record for the federation service (for example, fs.contoso.com) pointing to the WAP server or load balancer in front of the WAP servers
+- Ping the federation service name and confirm if the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
+- In the DNS server hosting the service name externally, check that there's an A record for the federation service pointing to the WAP server or load balancer in front of the WAP servers.
 
 ### Load Balancer
 
