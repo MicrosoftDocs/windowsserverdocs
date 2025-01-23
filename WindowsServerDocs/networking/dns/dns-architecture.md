@@ -4,7 +4,7 @@ description: Learn about DNS architecture in Windows Server
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 01/21/2025
+ms.date: 01/23/2025
 
 ---
 
@@ -30,7 +30,7 @@ DNS is implemented as a hierarchical and distributed database containing various
 
 A fully qualified domain name (FQDN) uniquely identifies the host’s position within the DNS hierarchical tree. The FQDN specifies a list of names separated by dots in the path from the referenced host to the root. The following figure shows an example of a DNS tree with a host called `mydomain` within the `contoso.com` domain. The FQDN for the host would be `mydomain.contoso.com`.
 
-:::image type="content" source="../media/dns-architecture/registration-authority.png" alt-text="The diagram shows hierarchical structure of DNS architecture and how DNS zones are managed by different authorities.":::
+:::image type="content" source="../media/dns-architecture/registration-authority.png" alt-text="The diagram shows hierarchical structure of DNS architecture and how DNS zones are managed by different authorities." lightbox="../media/dns-architecture/registration-authority.png":::
 
 ## Understanding the DNS domain namespace
 
@@ -135,7 +135,7 @@ The name server (NS) resource records facilitate delegation by identifying DNS s
 
 The following image shows how management of the `contoso.com` domain is delegated across two zones, `contoso.com` and `mydomain.contoso.com`.
 
-:::image type="content" source="../media/dns-architecture/dns-delegation.png" alt-text="The diagram illustrates the hierarchical structure of DNS zone delegation, further delegating to contoso.com and mydomain.contoso.com.":::
+:::image type="content" source="../media/dns-architecture/dns-delegation.png" alt-text="The diagram illustrates the hierarchical structure of DNS zone delegation, further delegating to contoso.com and mydomain.contoso.com." lightbox="../media/dns-architecture/dns-delegation.png":::
 
 > [!NOTE]
 > If multiple NS records exist for a delegated zone identifying multiple DNS servers available for querying, the Windows Server DNS Server service will be able to select the closest DNS server based on the roundtrip intervals measured over time for every DNS server.
@@ -144,11 +144,11 @@ The following image shows how management of the `contoso.com` domain is delegate
 
 The following diagram illustrates the DNS Client service architecture in its name resolution and update operations in the Windows client and Windows Server. Name resolution architecture is demonstrated using a client application and updates are represented by the DHCP client.
 
-:::image type="content" source="../media/dns-architecture/dns-client-service-architecture.png" alt-text="A diagram illustrating the DNS Client service architecture in its name resolution and update operations in the Windows client and Windows Server. ":::
+:::image type="content" source="../media/dns-architecture/dns-client-service-architecture.png" alt-text="A diagram illustrating the DNS Client service architecture in its name resolution and update operations in the Windows client and Windows Server. " lightbox="../media/dns-architecture/dns-client-service-architecture.png":::
 
 The following diagram illustrates the DNS Server service architecture with its administration tools and the Windows Management Instrumentation (WMI) interface in Windows Server.
 
-:::image type="content" source="../media/dns-architecture/dns-server-service-architecture.png" alt-text="A diagram illustrating the DNS Server service architecture in Windows Server.":::
+:::image type="content" source="../media/dns-architecture/dns-server-service-architecture.png" alt-text="A diagram illustrating the DNS Server service architecture in Windows Server." lightbox="../media/dns-architecture/dns-server-service-architecture.png":::
 
 The following sections describe the DNS query process and how DNS updates are handled.
 
@@ -168,7 +168,7 @@ There are two types of DNS queries that can be sent to a DNS server:
 
 The following figure shows an example of both types of queries.
 
-:::image type="content" source="../media/dns-architecture/dns-query-types.png" alt-text="The diagram shows how multiple queries were used to determine the IP address for www.contoso.com.":::
+:::image type="content" source="../media/dns-architecture/dns-query-types.png" alt-text="The diagram shows how multiple queries were used to determine the IP address for www.contoso.com." lightbox="../media/dns-architecture/dns-query-types.png":::
 
 The diagram shows how multiple queries were used to determine the IP address for `www.contoso.com`. The query sequence is described as follows:
 
