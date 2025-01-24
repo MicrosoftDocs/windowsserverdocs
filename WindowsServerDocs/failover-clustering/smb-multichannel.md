@@ -4,30 +4,33 @@ ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.topic: article
 author: RobHindman
-ms.author: helohr
-ms.date: 10/20/2021
+ms.author: mosagie
+ms.date: 01/24/2025
 ---
+
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks
-
-
 
 Simplified SMB Multichannel and Multi-Network Interface Card (NIC) Cluster Networks is a feature that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Multichannel.
 
 Simplified SMB Multichannel and Multi-NIC Cluster Networks provides the following benefits:
+
 - Failover Clustering automatically recognizes all NICs on nodes that are using the same switch / same subnet - no additional configuration needed.
 - SMB Multichannel is enabled automatically.
 - Networks that only have IPv6 Link Local (fe80) IP Addresses resources are recognized on cluster-only (private) networks.
 - A single IP Address resource is configured on each Cluster Access Point (CAP) Network Name (NN) by default.
 - Cluster validation no longer issues warning messages when multiple NICs are found on the same subnet.
 
-## Requirements
+## Prerequisites
+
 -   Multiple NICs per server, using the same switch / subnet.
 
 ## How to take advantage of multi-NIC clusters networks and simplified SMB multichannel
+
 This section describes how to take advantage of the new multi-NIC clusters networks and simplified SMB multichannel features.
 
 ### Use at least two networks for Failover Clustering
-Although it is rare, network switches can fail - it is still best practice to use at least two networks for Failover Clustering. All networks that are found are used for cluster heartbeats. Avoid using a single network for your Failover Cluster in order to avoid a single point of failure. Ideally, there should be multiple physical communication paths between the nodes in the cluster, and no single point of failure.
+
+Although it's rare, network switches can fail - it's still best practice to use at least two networks for Failover Clustering. All networks that are found are used for cluster heartbeats. Avoid using a single network for your Failover Cluster in order to avoid a single point of failure. Ideally, there are multiple physical communication paths between the nodes in the cluster, and no single point of failure.
 
 ![Illustration of two networks for Failover Clustering](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig1.png)
 **Figure 1: Use at least two networks for Failover Clustering**
@@ -43,7 +46,8 @@ Maximum benefit of the simplified SMB multichannel is achieved when multiple NIC
 **Figure 3: Two clusters (Scale-out File Server for storage, SQL Server Failover Clustering Instance (FCI) for workload) both use multiple NICs in the same subnet to leverage SMB Multichannel and achieve better network throughput.**
 
 ## Automatic recognition of IPv6 Link Local private networks
-When private (cluster only) networks with multiple NICs are detected, the cluster will automatically recognize IPv6 Link Local (fe80) IP addresses for each NIC on each subnet. This saves administrators time since they no longer have to manually configure IPv6 Link Local (fe80) IP Address resources.
+
+When private (cluster only) networks with multiple NICs are detected, the cluster automatically recognizes IPv6 Link Local (fe80) IP addresses for each NIC on each subnet. This saves administrators time since they no longer have to manually configure IPv6 Link Local (fe80) IP Address resources.
 
 When using more than one private (cluster only) network, check the IPv6 routing configuration to ensure that routing is not configured to cross subnets, since this will reduce network performance.
 
@@ -51,12 +55,14 @@ When using more than one private (cluster only) network, check the IPv6 routing 
 **Figure 4: Automatic IPv6 Link Local (fe80) Address resource configuration**
 
 ## Throughput and Fault Tolerance
-Windows Server 2019 and Windows Server 2016 automatically detect NIC capabilities and will attempt to use each NIC in the fastest possible configuration. NICs that are teamed, NICs using RSS, and NICs with RDMA capability can all be used. The table below summarizes the trade-offs when using these technologies. Maximum throughput is achieved when using multiple RDMA capable NICs. For more information, see [The basics of SMB multichannel](/archive/blogs/josebda/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0).
+
+Windows Server 2016 and later automatically detect NIC capabilities and attempt to use each NIC in the fastest possible configuration. NICs that are teamed, NICs using RSS, and NICs with RDMA capability can all be used. The table below summarizes the trade-offs when using these technologies. Maximum throughput is achieved when using multiple RDMA capable NICs. For more information, see [The basics of SMB multichannel](/archive/blogs/josebda/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0).
 
 ![An illustration of throughput and fault tolerance for various NIC configurations](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig5.png)
 **Figure 5: Throughput and fault tolerance for various NIC configurations**
 
 ## Frequently asked questions
+
 **Are all NICs in a multi-NIC network used for cluster heart beating?**
     Yes.
 
@@ -72,5 +78,6 @@ Windows Server 2019 and Windows Server 2016 automatically detect NIC capabilitie
 **Is the cluster common property PlumbAllCrossSubnetRoutes respected on a multi-NIC network?**
      Yes.
 
-## Additional References
+## Additional references
+
 - [What's New in Failover Clustering in Windows Server](whats-new-in-failover-clustering.md)
