@@ -1,16 +1,14 @@
 ---
-title: DNS processes and interactions
-description: Learn about DNS processes and interactions in Windows Server 
+title: DNS processes and interactions in Windows and Windows Server
+description: Learn about DNS processes, including client-server communications for query resolution, dynamic updates, and zone administration in Windows and Windows Server.
 ms.topic: conceptual
-author: gswashington
-ms.author: nedpyle
-ms.date: 01/15/2025
+author: robinharwood
+ms.author: roharwoo
+ms.date: 01/24/2025
 
 ---
 
 # DNS processes and interactions
-
->Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 DNS processes and interactions involve the communications between DNS clients and DNS servers during the resolution of DNS queries and dynamic update, and between DNS servers during name resolution and zone administration. Secondary processes and interactions depend on the support for technologies such as Unicode and WINS.
 
