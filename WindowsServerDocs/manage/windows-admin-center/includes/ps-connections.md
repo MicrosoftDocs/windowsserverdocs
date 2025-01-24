@@ -7,28 +7,29 @@ Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\Connect
 Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 # Import connections (including tags) from a .csv file
 Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-# Import connections (including tags) from .csv files, and remove any connections that are not explicitly in the imported file using the -prune switch parameter 
+# Import connections (including tags) from .csv files, and remove any connections that are not explicitly in the imported file by using the -prune switch parameter 
 Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv" -prune
 ```
+
 ### CSV file format for importing connections
 
-The format of the CSV file starts with the four headings ```"name","type","tags","groupId"```, followed by each connection on a new line.
+The format of the CSV file starts with the following four headings, followed by each connection on a new line.
 
-**name** is the FQDN of the connection
+- `name`: The FQDN of the connection.
 
-**type** is the connection type. For the default connections included with Windows Admin Center, you will use one of the following:
+- `type`: The connection type. For the default connections included with Windows Admin Center, use one of the following strings:
 
-| Connection type | Connection string |
-|------|-------------------------------|
-| Windows Server | msft.sme.connection-type.server |
-| Failover Cluster | msft.sme.connection-type.cluster |
+  | Connection type | Connection string |
+  |------|-------------------------------|
+  | Windows Server | `msft.sme.connection-type.server` |
+  | Failover cluster | `msft.sme.connection-type.cluster` |
 
-**tags** are pipe-separated.
+- `tags`: Pipe-separated tags.
 
-**groupId** is used for shared connections. Use the value ```global``` in this column to make this a shared connection.
+- `groupId`: The column for shared connections. Use the value `global` in this column to make a shared connection.
 
 > [!NOTE]
-> Modifying the shared connections is limited to gateway administrators - any user can use PowerShell to modify their personal connection list.
+> Modifying the shared connections is limited to gateway administrators. Any user can use PowerShell to modify their personal connection list.
 
 ### Example CSV file for importing connections
 
@@ -41,14 +42,15 @@ The format of the CSV file starts with the four headings ```"name","type","tags"
 "teamclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016","global"
 "myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
 ```
+
 > [!NOTE]
 > The CSV file is case-sensitive.
 
-## Import RDCman connections
+## Import RDCMan connections
 
-Use the script below to export saved connections in [RDCman](https://blogs.technet.microsoft.com/rmilne/2014/11/19/remote-desktop-connection-manager-download-rdcman-2-7/) to a file. You can then import the file into Windows Admin Center, maintaining your RDCMan grouping hierarchy using tags. Try it out!
+Use the following script to export saved connections in [RDCMan](https://blogs.technet.microsoft.com/rmilne/2014/11/19/remote-desktop-connection-manager-download-rdcman-2-7/) to a file. You can then import the file into Windows Admin Center and maintain your RDCMan grouping hierarchy by using tags.
 
-1. Copy and paste the code below into your PowerShell session:
+1. Copy and paste the following code into your PowerShell session:
 
    ```powershell
    #Helper function for RdgToWacCsv
@@ -79,7 +81,7 @@ Use the script below to export saved connections in [RDCman](https://blogs.techn
         }
     } 
     else {
-        # Node type isn't relevant to tagging or adding connections in WAC
+        # Node type isn't relevant to tagging or adding connections in Windows Admin Center
     }
     return
    }
@@ -123,10 +125,10 @@ Use the script below to export saved connections in [RDCman](https://blogs.techn
    }
    ```
 
-2. To create a .CSV file, run the following command:
+2. To create a CSV file, run the following command:
 
    ```powershell
    RdgToWacCsv -RDGfilepath "path\to\myRDCManfile.rdg"
    ```
 
-3. Import the resulting .CSV file in to Windows Admin Center, and all your RDCMan grouping hierarchy will be represented by tags in the connection list. For details, see [Use PowerShell to import or export your connections (with tags)](#use-powershell-to-import-or-export-your-connections-with-tags).
+3. Import the resulting CSV file into Windows Admin Center. Your RDCMan grouping hierarchy is then represented by tags in the connection list.
