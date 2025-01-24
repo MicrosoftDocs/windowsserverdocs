@@ -12,9 +12,9 @@ ms.date: 01/24/2025
 
 Simplified SMB Multichannel and Multi-Network Interface Card (NIC) Cluster Networks is a feature that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Multichannel.
 
-Simplified SMB Multichannel and Multi-NIC Cluster Networks provides the following benefits:
+Simplified SMB Multichannel and Multi-NIC Cluster Networks provide the following benefits:
 
-- Failover Clustering automatically recognizes all NICs on nodes that are using the same switch / same subnet - no additional configuration needed.
+- Failover Clustering automatically recognizes all NICs on nodes that are using the same switch / same subnet - no extra configuration needed.
 - SMB Multichannel is enabled automatically.
 - Networks that only have IPv6 Link Local (fe80) IP Addresses resources are recognized on cluster-only (private) networks.
 - A single IP Address resource is configured on each Cluster Access Point (CAP) Network Name (NN) by default.
@@ -49,7 +49,7 @@ Maximum benefit of the simplified SMB multichannel is achieved when multiple NIC
 
 When private (cluster only) networks with multiple NICs are detected, the cluster automatically recognizes IPv6 Link Local (fe80) IP addresses for each NIC on each subnet. This saves administrators time since they no longer have to manually configure IPv6 Link Local (fe80) IP Address resources.
 
-When using more than one private (cluster only) network, check the IPv6 routing configuration to ensure that routing is not configured to cross subnets, since this will reduce network performance.
+When using more than one private (cluster only) network, check the IPv6 routing configuration to ensure that routing isn't configured to cross subnets, since this reduces network performance.
 
 ![Screencap of automatic network configuration in the Failover Cluster Manager UI](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig4.png)
 **Figure 4: Automatic IPv6 Link Local (fe80) Address resource configuration**
@@ -67,10 +67,10 @@ Windows Server 2016 and later automatically detect NIC capabilities and attempt 
     Yes.
 
 **Can a multi-NIC network be used for cluster communication only? Or can it only be used for client and cluster communication?**
-    Either configuration will work - all cluster network roles will work on a multi-NIC network.
+    Either configuration works - all cluster network roles work on a multi-NIC network.
 
 **Is SMB Multichannel also used for CSV and cluster traffic?**
-    Yes, by default all cluster and CSV traffic will use available multi-NIC networks. Administrators can use the Failover Clustering PowerShell cmdlets or Failover Cluster Manager UI to change the network role.
+    Yes, by default all cluster and CSV traffic use available multi-NIC networks. Administrators can use the Failover Clustering PowerShell cmdlets or Failover Cluster Manager UI to change the network role.
 
 **How can I see the SMB Multichannel settings?**
     Use the **Get-SMBServerConfiguration** cmdlet, look for the value of the **EnableMultiChannel** property.
@@ -78,6 +78,6 @@ Windows Server 2016 and later automatically detect NIC capabilities and attempt 
 **Is the cluster common property PlumbAllCrossSubnetRoutes respected on a multi-NIC network?**
      Yes.
 
-## Additional references
+## Related content
 
 - [What's New in Failover Clustering in Windows Server](whats-new-in-failover-clustering.md)
