@@ -31,16 +31,16 @@ The following table describes common DNS query types and corresponding IDs.
 | SOA | 6 |
 | SRV | 33 |
 
-DNS queries resolve in a number of different ways. A client can sometimes answer a query locally using cached information obtained from a previous query. The DNS server can use its own cache of resource record information to answer a query. A DNS server can also query or contact other DNS servers on behalf of the requesting client to fully resolve the name, and then send an answer back to the client. This process is known as recursion.
+DNS queries resolve in many different ways. A client can sometimes answer a query locally using cached information obtained from a previous query. The DNS server can use its own cache of resource record information to answer a query. A DNS server can also query or contact other DNS servers on behalf of the requesting client to fully resolve the name, and then send an answer back to the client. This process is known as recursion.
 
-In addition, the client itself can attempt to contact additional DNS servers to resolve a name. When a client does so, it uses separate and additional queries based on referral answers from servers. This process is known as iteration. .( 
+In addition, the client itself can attempt to contact other DNS servers to resolve a name. When a client does so, it uses separate and more queries based on referral answers from servers. This process is known as iteration.
 
 In general, the DNS query process occurs in two parts:
 
 - A name query begins at a client computer and is passed to a resolver, the DNS Client service, for resolution.
 - When the query can't be resolved locally, DNS servers can be queried as needed to resolve the name.
 
-Each of these processes are explained in more detail in the following sections.
+Each process is explained in more detail in the following sections.
 
 ### DNS Client service resolver
 
@@ -53,7 +53,7 @@ As shown in the initial steps of the query process, a DNS domain name is used in
 The local resolver cache can include name information obtained from two possible sources:
 
 - If a Hosts file is configured locally, any host name-to-address mappings from that file are loaded into the cache when the DNS Client service is started.
-- Resource records obtained in answered responses from previous DNS queries are added to the cache and kept for a period of time.
+- Resource records obtained in answered responses from previous DNS queries are added to the cache and kept for a time determined by the time-to-live (TTL).
 
 If the query doesn't match an entry in the cache, the resolution process continues with the client querying a DNS server to resolve the name.
 
@@ -65,7 +65,7 @@ When the DNS server receives a query, it first checks to see if it can answer th
 
 If no zone information exists for the queried name, the server then checks to see if it can resolve the name using locally cached information from previous queries. If a match is found here, the server answers with this information. Again, if the preferred server can answer with a positive matched response from its cache to the requesting client, the query is completed.
 
-If the queried name doesn't find a matched answer at its preferred server — either from its cache or zone information — the query process can continue, using recursion to fully resolve the name. This involves assistance from other DNS servers to help resolve the name. By default, the DNS Client service asks the server to use a process of recursion to fully resolve names on behalf of the client before returning an answer.
+If the queried name doesn't find a matched answer at its preferred server, either from its cache or zone information, the query process can continue, using recursion to fully resolve the name. This involves assistance from other DNS servers to help resolve the name. By default, the DNS Client service asks the server to use a process of recursion to fully resolve names on behalf of the client before returning an answer.
 
 In order for the DNS server to do recursion properly, it first needs some helpful contact information about other DNS servers in the DNS domain namespace. This information is provided in the form of root hints, a list of preliminary RRs that can be used by the DNS service to locate other DNS servers that are authoritative for the root of the DNS domain namespace tree. Root servers are authoritative for the domain root and top-level domains in the DNS domain namespace tree.
 
@@ -77,7 +77,7 @@ First, the preferred server parses the full name and determines that it needs th
 
 Finally, the “example.microsoft.com.” server is contacted. Because this server contains the queried name as part of its configured zones, it responds authoritatively back to the original server that initiated recursion. When the original server receives the response indicating that an authoritative answer was obtained to the requested query, it forwards this answer back to the requesting client and the recursive query process is completed.
 
-Although the recursive query process can be resource-intensive when performed as described above, it has some performance advantages for the DNS server. For example, during the recursion process, the DNS server performing the recursive lookup obtains information about the DNS domain namespace. This information is cached by the server and can be used again to help speed the answering of subsequent queries that use or match it. Over time, this cached information can grow to occupy a significant portion of server memory resources, although it's cleared whenever the DNS service is cycled on and off.
+Although the recursive query process can be resource-intensive when performed as described, it has some performance advantages for the DNS server. For example, during the recursion process, the DNS server performing the recursive lookup obtains information about the DNS domain namespace. The server caches the information, which can be used again to help speed the answering of subsequent queries that use or match it. Over time, this cached information can grow to occupy a significant portion of server memory resources, although it's cleared whenever the DNS service is cycled on and off.
 
 The following three figures illustrate the process by which the DNS client queries the servers on each adapter.
  
@@ -90,17 +90,17 @@ The following three figures illustrate the process by which the DNS client queri
 :::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-4.png" alt-text="Diagram showing overview of complete DNS query process.":::
 **Querying the DNS Server - Part 3**
 
-Configuring DNS clients with more than one DNS Server IP adds additional fault tolerance to your DNS infrastructure. Adding multiple DNS Servers IPs allows DNS names to continue to be resolved if failures of the only configured DNS Server, of the underlying network link, or the supporting network infrastructure that connects a given client to a DNS Server. 
+Configuring DNS clients with more than one DNS Server IP adds fault tolerance to your DNS infrastructure. Adding multiple DNS Servers IPs allows DNS names to continue to be resolved if failures of the only configured DNS Server, of the underlying network link, or the supporting network infrastructure that connects a given client to a DNS Server.
 
-Name failures may cause application or component hangs, resource outages waiting for dependent timeout expirations that directly or indirectly cause operational failures. See [DNS client resolution timeouts](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/dns-client-resolution-timeouts) for more detailed discussion on all possible scenarios.
+Name failures might cause application or component hangs, resource outages waiting for dependent time-out expirations that directly or indirectly cause operational failures. See [DNS client resolution time-outs](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/dns-client-resolution-timeouts) for more detailed discussion on all possible scenarios.
 
 For these reasons, it's recommended to configure any Windows client with more than one DNS server, but it's important to be aware of the Windows client resolution process, as it's different based on how many DNS servers we've configured.
 
-The DNS query adaptive timeout feature enables the timeout for DNS queries to adapt based on the time required for previous queries, reducing the timeout for most queries. Timeouts can also be increased for high-latency links, such as satellite links. Configuration of DNS timeouts is enabled on a per network interface basis, and can be optimized by Windows Store apps.
+The DNS query adaptive time-out feature enables the time-out for DNS queries to adapt based on the time required for previous queries, reducing the time out for most queries. Time-outs can also be increased for high-latency links, such as satellite links. Configuration of DNS time-outs is enabled on a per network interface basis, and can be optimized by Windows Store apps.
 
-Instead of waiting for 1000ms before timing out a DNS query, the first timeout is adjusted to be between 25ms and 1000ms, based on past performance of the network.
+Instead of waiting for 1000ms before timing out a DNS query, the first time out is adjusted to be between 25ms and 1000ms, based on past performance of the network.
 
-### DNS server non-responsive cache
+### DNS server nonresponsive cache
 
 Nonresponsive DNS servers are cached and periodically retried. This enables the DNS client to use the best available server consistently, and to spend less time waiting for unresponsive DNS servers.
 
@@ -114,7 +114,7 @@ The DNS Client service queries the DNS servers in the following sequence:
 
 If the DNS Client service receives a positive response, it stops querying for the name, adds the response to the cache and returns the response to the client.
 
-If the DNS Client service has not received a response from any server within eight seconds, the DNS Client service responds with a timeout. Also, if it has not received a response from any DNS server on a specified adapter, then for the next 30 seconds, the DNS Client service responds to all queries destined for servers on that adapter with a timeout and doesn't query those servers.
+If the DNS Client service hasn't received a response from any server within eight seconds, the DNS Client service responds with a time out. Also, if it hasn't received a response from any DNS server on a specified adapter, then for the next 30 seconds, the DNS Client service responds to all queries destined for servers on that adapter with a time out and doesn't query those servers.
 
 If at any point the DNS Client service receives a negative response from a server, it removes every server on that adapter from consideration during this search. For example, if in step 2, the first server on Alternate Adapter A gave a negative response, the DNS Client service wouldn't send the query to any other server on the list for Alternate Adapter A.
 
@@ -136,9 +136,9 @@ The preceding description of DNS queries assumes that the process ends with a po
 
 An authoritative answer is a positive answer returned to the client and delivered with the authority bit set in the DNS message to indicate the answer was obtained from a server with direct authority for the queried name.
 
-A positive response can consist of the queried RR or a list of RRs (also known as an RRset) that fits the queried DNS domain name and record type specified in the query message.
+A positive response can consist of the queried RR or a list of RRs (also known as a RRset) that fits the queried DNS domain name and record type specified in the query message.
 
-A referral answer contains additional RRs not specified by name or type in the query. This type of answer is returned to the client if the recursion process is not supported. The records are meant to act as helpful reference answers that the client can use to continue the query using iteration. A referral answer contains additional data such as RRs that are other than the type queried. For example, if the queried host name was “www” and no A RRs for this name were found in this zone but a CNAME RR for “www” was found instead, the DNS server can include that information when responding to the client. If the client is able to use iteration, it can make additional queries using the referral information in an attempt to fully resolve the name for itself.
+A referral answer contains other RRs not specified by name or type in the query. This type of answer is returned to the client if the recursion process isn't supported. The records are meant to act as helpful reference answers that the client can use to continue the query using iteration. A referral answer contains more data such as RRs that are other than the type queried. For example, if the queried host name was “www” and no A RRs for this name were found in this zone but a CNAME RR for “www” was found instead, the DNS server can include that information when responding to the client. If the client is able to use iteration, it can make more queries using the referral information in an attempt to fully resolve the name for itself.
 
 A negative response from the server can indicate that one of two possible results was encountered while the server attempted to process and recursively resolve the query fully and authoritatively. 
 
@@ -149,14 +149,14 @@ The resolver passes the results of the query, in the form of either a positive o
 
 If the resultant answer to a query is too long to be sent and resolved in a single UDP message packet, the DNS server can initiate a failover response over TCP port 53 to answer the client fully in a TCP connected session.
 
-Disabling the use of recursion on a DNS server is generally done when DNS clients are being limited to resolving names to a specific DNS server, such as one located on your intranet. Recursion might also be disabled when the DNS server is incapable of resolving external DNS names, and clients are expected to fail over to another DNS server for resolution of these names. If you disable recursion on the DNS server, you will not be able to use forwarders on the same server.
+Disabling the use of recursion on a DNS server is done when DNS clients are being limited to resolving names to a specific DNS server, such as one located on your intranet. Recursion might also be disabled when the DNS server is incapable of resolving external DNS names, and clients are expected to fail over to another DNS server for resolution of these names. If you disable recursion on the DNS server, you won't be able to use forwarders on the same server.
 
 By default, DNS servers use several default timings when performing a recursive query and contacting other DNS servers. These defaults include:
 
 - A recursion retries interval of 3 seconds. This is the length of time the DNS service waits before retrying a query made during a recursive lookup.
-- A recursion timeout interval of 8 seconds. This is the length of time the DNS service waits before failing a recursive lookup that has been retried.
+- A recursion time-out interval of 8 seconds. This is the length of time the DNS service waits before failing a recursive lookup that has been retried.
 
-Under most circumstances, these parameters do not need adjustment. However, if you are using recursive lookups over a slow-speed wide area network (WAN) link, you might be able to improve server performance and query completion by making slight adjustments to the settings.
+Under most circumstances, these parameters don't need adjustment. However, if you're using recursive lookups over a slow-speed wide area network (WAN) link, you might be able to improve server performance and query completion by making slight adjustments to the settings.
 
 ## How iteration works
 
@@ -167,9 +167,9 @@ Iteration is the type of name resolution used between DNS clients and servers wh
 
 An iterative request from a client tells the DNS server that the client expects the best answer the DNS server can provide immediately, without contacting other DNS servers.
 
-When iteration is used, a DNS server answers a client based on its own specific knowledge about the namespace with regard to the names data being queried. For example, if a DNS server on your intranet receives a query from a local client for “www.microsoft.com”, it might return an answer from its names cache. If the queried name is not currently stored in the names cache of the server, the server might respond by providing a referral — that is, a list of NS and A RRs for other DNS servers that are closer to the name queried by the client.
+When iteration is used, a DNS server answers a client based on its own specific knowledge about the namespace regarding the names data being queried. For example, if a DNS server on your intranet receives a query from a local client for “www.microsoft.com”, it might return an answer from its names cache. If the queried name isn't currently stored in the names cache of the server, the server might respond by providing a referral. A referral is a list of NS and A RRs for other DNS servers that are closer to the name queried by the client.
 
-When iteration is used, a DNS server can further assist in a name query resolution beyond giving its own best answer back to the client. For most iterative queries, a client uses its locally configured list of DNS servers to contact other name servers throughout the DNS namespace if its primary DNS server can't resolve the query.
+When iteration is used, a DNS server can further help a name query resolution beyond giving its own best answer back to the client. For most iterative queries, a client uses its locally configured list of DNS servers to contact other name servers throughout the DNS namespace if its primary DNS server can't resolve the query.
 
 The Windows Server 2008 DNS Client service doesn't perform recursion.
 
@@ -192,24 +192,24 @@ In most DNS lookups, clients typically perform a forward lookup, which is a sear
 
 DNS also provides a reverse lookup process, enabling clients to use a known IP address during a name query and to look up a computer name based on its address. A reverse lookup takes the form of a question, such as “Can you tell me the DNS name of the computer that uses the IP address 192.168.1.20?”
 
-DNS was not originally designed to support this type of query. One problem for supporting the reverse query process is the difference in how the DNS namespace organizes and indexes names and how IP addresses are assigned. If the only method available to answer the previous question was to search all domains in the DNS namespace, a reverse query would take too long and require too much processing to be useful.
+DNS wasn't originally designed to support this type of query. One problem for supporting the reverse query process is the difference in how the DNS namespace organizes and indexes names and how IP addresses are assigned. If the only method available to answer the previous question was to search all domains in the DNS namespace, a reverse query would take too long and require too much processing to be useful.
 
 To solve this problem, a special domain called the in-addr.arpa domain was defined in the DNS standards and reserved in the Internet DNS namespace to provide a practical and reliable way to perform reverse queries. To create the reverse namespace, subdomains within the in-addr.arpa domain are formed using the reverse ordering of the numbers in the dotted-decimal notation of IP addresses.
 
-This reversed ordering of the domains for each octet value is needed because, unlike DNS names, when IP addresses are read from left to right, they are interpreted in the opposite manner. When an IP address is read from left to right, it's viewed from its most generalized information (an IP network address) in the first part of the address to the more specific information (an IP host address) contained in the last octets.
+This reversed ordering of the domains for each octet value is needed because, unlike DNS names, when IP addresses are read from left to right, they're interpreted in the opposite manner. When an IP address is read from left to right, it's viewed from its most generalized information (an IP network address) in the first part of the address to the more specific information (an IP host address) contained in the last octets.
 
-For this reason, the order of IP address octets must be reversed when building the in-addr.arpa domain tree. The IP addresses of the DNS in-addr.arpa tree can be delegated to companies as they are assigned a specific or limited set of IP addresses within the Internet-defined address classes.
+For this reason, the order of IP address octets must be reversed when building the in-addr.arpa domain tree. The IP addresses of the DNS in-addr.arpa tree can be delegated to companies as they're assigned a specific or limited set of IP addresses within the Internet-defined address classes.
 
-Finally, the in-addr.arpa domain tree, as built into DNS, requires that an additional RR type — the pointer (PTR) RR — be defined. This RR is used to create a mapping in the reverse lookup zone that typically corresponds to a host (A) named RR for the DNS computer name of a host in its forward lookup zone.
+Finally, the in-addr.arpa domain tree, as built into DNS, requires that another RR type, the pointer (PTR) RR, be defined. This RR is used to create a mapping in the reverse lookup zone that typically corresponds to a host (A) named RR for the DNS computer name of a host in its forward lookup zone.
 
-The in-addr.arpa domain applies for use in all TCP/IP networks that are based on Internet Protocol version 4 (IPv4) addressing. The New Zone Wizard automatically assumes that you are using this domain when creating a new reverse lookup zone.
+The in-addr.arpa domain applies for use in all TCP/IP networks that are based on Internet Protocol version 4 (IPv4) addressing. The New Zone Wizard automatically assumes that you're using this domain when creating a new reverse lookup zone.
 
-If you are installing DNS and configuring reverse lookup zones for an Internet Protocol version 6 (IPv6) network, you can specify an exact name in the New Zone Wizard. This will permit you to create reverse lookup zones in the DNS console that can be used to support IPv6 networks, which use a different special domain name, the ip6.arpa domain.
+If you're installing DNS and configuring reverse lookup zones for an Internet Protocol version 6 (IPv6) network, you can specify an exact name in the New Zone Wizard. This permits you to create reverse lookup zones in the DNS console that can be used to support IPv6 networks, which use a different special domain name, the ip6.arpa domain.
 
 For information about IPv6 and DNS, including examples of how to create and use ip6.arpa domain names as described in RFC 1886 (“DNS Extensions to support IP version 6”), see [DNS Reference Information](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197499\(v=ws.10\)).
 
 > [!NOTE]
-> Information the user should notice even if skimmingThe configuration of PTR RRs and reverse lookup zones for identifying hosts by reverse query is strictly an optional part of the DNS standard implementation. You aren't required to use reverse lookup zones, although for some networked applications, they are used to perform security checks.
+> Information the user should notice even if skimmingThe configuration of PTR RRs and reverse lookup zones for identifying hosts by reverse query is strictly an optional part of the DNS standard implementation. You aren't required to use reverse lookup zones, although for some networked applications, they're used to perform security checks.
 
 ### Example: Reverse query in IPv4 networks
 
@@ -227,7 +227,7 @@ Because the query is for PTR records, the resolver reverses the address and appe
 
 1. After it has been located, the authoritative DNS server for “20.1.168.192.in-addr.arpa” can respond with the PTR record information. This includes the DNS domain name for “host-a”, completing the reverse lookup.
 
-Keep in mind that if the queried reverse name is not answerable from the DNS server, normal DNS resolution (either recursion or iteration) can be used to locate a DNS server that is authoritative for the reverse lookup zone and that contains the queried name. In this sense, the name resolution process used in a reverse lookup is identical to that of a forward lookup.
+Keep in mind that if the queried reverse name isn't answerable from the DNS server, normal DNS resolution (either recursion or iteration) can be used to locate a DNS server that is authoritative for the reverse lookup zone and that contains the queried name. In this sense, the name resolution process used in a reverse lookup is identical to that of a forward lookup.
 
 > [!NOTE]
 > Information the user should notice even if skimmingThe DNS console provides a means for you to configure a subnetted reverse lookup “classless” zone when the **Advanced** view is selected. This allows you to configure a zone in the in-addr.arpa domain for a limited set of assigned IP addresses where a nondefault IP subnet mask is used with those addresses. Checked that on win2022 and it's not there so it needs to be removed or rephrased
@@ -243,25 +243,25 @@ The following figure illustrates how external name queries are directed using fo
 :::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-7.png" alt-text="Diagram showing overview of complete DNS query process.":::
 **External Name Queries Directed Using Forwarders**
 
-Without having a specific DNS server designated as a forwarder, all DNS servers can send queries outside of a network using their root hints. As a result, a lot of internal, and possibly critical, DNS information can be exposed on the Internet. In addition to this security and privacy issue, this method of resolution can result in a large volume of external traffic that is costly and inefficient for a network with a slow Internet connection or a company with high Internet service costs.
+Without having a specific DNS server designated as a forwarder, all DNS servers can send queries outside of a network using their root hints. As a result, internal, and possibly critical, DNS information can be exposed on the Internet. In addition to this security and privacy issue, this method of resolution can result in a large volume of external traffic that is costly and inefficient for a network with a slow Internet connection or a company with high Internet service costs.
 
-When you designate a DNS server as a forwarder, you make that forwarder responsible for handling external traffic, thereby limiting DNS server exposure to the Internet. A forwarder will build up a large cache of external DNS information because all of the external DNS queries in the network are resolved through it. In a short amount of time, a forwarder will resolve a good portion of external DNS queries using this cached data and thereby decrease the Internet traffic over the network and the response time for DNS clients.
+When you designate a DNS server as a forwarder, you make that forwarder responsible for handling external traffic, thereby limiting DNS server exposure to the Internet. A forwarder builds up a large cache of external DNS information because all of the external DNS queries in the network are resolved through it. In a short amount of time, a forwarder will resolve a good portion of external DNS queries using this cached data and thereby decrease the Internet traffic over the network and the response time for DNS clients.
 
 #### Behavior of a DNS server configured to use forwarding
 
-A DNS server configured to use a forwarder will behave differently from a DNS server that is not configured to use a forwarder. A DNS server configured to use a forwarder behaves as follows:
+A DNS server configured to use a forwarder behaves differently from a DNS server that isn't configured to use a forwarder. A DNS server configured to use a forwarder behaves as follows:
 
 1. When the DNS server receives a query, it attempts to resolve this query using the primary and secondary zones that it hosts and its cache.
-1. If the query can't be resolved using this local data, then it will forward the query to the DNS server designated as a forwarder.
-1. The DNS server will wait briefly for an answer from the forwarder before attempting to contact the DNS servers specified in its root hints.
+1. If the query can't be resolved using this local data, then it forwards the query to the DNS server designated as a forwarder.
+1. The DNS server waits briefly for an answer from the forwarder before attempting to contact the DNS servers specified in its root hints.
 
-When a DNS server forwards a query to a forwarder it sends a recursive query to the forwarder. This is different from the iterative query that a DNS server will send to another DNS server during standard name resolution (name resolution that doesn't involve a forwarder).
+When a DNS server forwards a query to a forwarder, it sends a recursive query to the forwarder. This is different from the iterative query that a DNS server sends to another DNS server during standard name resolution (name resolution that doesn't involve a forwarder).
 
 #### Forwarding sequence
 
-The sequence in which the forwarders configured on a DNS server are used is determined by the order in which the IP addresses are listed on the DNS server. After the DNS server forwards the query to the forwarder with the first IP address, it waits a short period for an answer from that forwarder (according to the DNS server’s timeout setting) before resuming the forwarding operation with the next IP address. It continues this process until it receives an affirmative answer from a forwarder.
+The sequence in which the forwarders configured on a DNS server are used is determined by the order in which the IP addresses are listed on the DNS server. After the DNS server forwards the query to the forwarder with the first IP address, it waits a short period for an answer from that forwarder (according to the DNS server’s time-out setting) before resuming the forwarding operation with the next IP address. It continues this process until it receives an affirmative answer from a forwarder.
 
-The highlighted behavior below in RED has changed as follow and needs to be updated:
+The following behavior in RED has changed and needs to be updated:
 
 Which forwarder a Microsoft DNS Server uses depends on the server’s configuration.  By default, ‘Dynamic Forwarder Reordering’ is enabled, so if the default is kept, then this is how the algorithm works:
 
@@ -269,23 +269,23 @@ EXISTING REORDERING ALGORITHM
 
 1. The DNS Server allows admin to create forwarders in a preferred order.
 
-1. A dynamic list of forwarders is maintained. This gets re-ordered based on the response times. But this also gets reset to the configured order every 15 minutes (approximately as this is called by a thread which is overloaded to perform other works as well.).
+1. A dynamic list of forwarders is maintained. This gets reordered based on the response times. But this also gets reset to the configured order every 15 minutes (approximately as this is called by a thread which is overloaded to perform other works as well.).
 
 1. For a given query, the forwarders are picked as they appear in the dynamic list.
 
-1. If the response time is > 1 second then it's considered a slow response. Each forwarder is allowed 2 consecutive slow responses, on the 3rd it's put to the end of the dynamic list.
+1. If the response time is > 1 second, then it's considered a slow response. Each forwarder is allowed two consecutive slow responses, on the third it's put to the end of the dynamic list.
 
-1. If all the servers in the list go dead then DNS has no way to know if the server is dead or slow. This monitoring has to be done outside the system.
+1. If all the servers in the list go dead, then DNS has no way to know if the server is dead or slow. This monitoring has to be done outside the system.
 
 Unlike conventional resolution, where a roundtrip time (RTT) is associated with each server, the IP addresses in the forwarders list aren't ordered according to roundtrip time and must be reordered manually to change preference.
 
 ### Forwarders and delegation
 
-A DNS server configured with a forwarder and hosting a parent zone will use its delegation information before forwarding queries. If no delegation record exists for the DNS name in the query, then the DNS server will use its forwarders to resolve the query.
+A DNS server configured with a forwarder and hosting a parent zone will use its delegation information before forwarding queries. If no delegation record exists for the DNS name in the query, then the DNS server uses its forwarders to resolve the query.
 
 ### Forwarders and root servers
 
-A common error when configuring forwarding is to attempt to configure forwarding on the root servers of a private DNS namespace. The goal of attempting to configure forwarding on root servers for a private DNS namespace is to forward all offsite queries to Internet DNS servers. Root servers can't be configured with standard forwarding. If a root server is queried about any domain name, then it will refer to a DNS server that can answer the question (from its local zones, cache), or it will respond with a failure (NXDOMAIN), but it can't be configured to forward to specific servers.
+A common error when configuring forwarding is to attempt to configure forwarding on the root servers of a private DNS namespace. The goal of attempting to configure forwarding on root servers for a private DNS namespace is to forward all offsite queries to Internet DNS servers. Root servers can't be configured with standard forwarding. If a root server is queried about any domain name, then it refers to a DNS server that can answer the question (from its local zones, cache), or it responds with a failure (NXDOMAIN), but it can't be configured to forward to specific servers.
 
 > [!NOTE]
 > Information the user should notice even if skimmingA root server can be configured with a conditional forwarder. Conditional forwarding can be used to forward queries between root servers in separate DNS namespaces, although the DNS servers for the top-level domains in the namespace are better suited for this method of resolution.
@@ -298,21 +298,21 @@ A conditional forwarder is a DNS server on a network that is used to forward DNS
 
 A conditional forwarder can be used to improve name resolution for domains within your intranet. Intranet name resolution can be improved by configuring DNS servers with forwarders for specific internal domain names. For example, all DNS servers in the domain widgets.example.com could be configured to forward queries for names that end with test.example.com to the authoritative DNS servers for merged.widgets.example.com, thereby removing the step of querying the root servers of example.com, or removing the step of configuring DNS servers in the widgets.example.com zone with secondary zones for test.example.com.
 
-DNS servers can use conditional forwarders to resolve queries between the DNS domain names of companies that share information. For example, two companies, Widgets Toys and Tailspin Toys, want to improve how the DNS clients of Widgets Toys resolve the names of the DNS clients of Tailspin Toys. The administrators from Tailspin Toys inform the administrators of Widgets Toys about the set of DNS servers in the Tailspin Toys network where Widgets can send queries for the domain dolls.tailspintoys.com. The DNS servers within the Widgets Toys network are configured to forward all queries for names ending with dolls.tailspintoys.com to the designated DNS servers in the network for Tailspin Toys. Consequently, the DNS servers in the Widgets Toys network do not need to query their internal root servers, or the Internet root servers, to resolve queries for names ending with dolls.tailspintoys.com.
+DNS servers can use conditional forwarders to resolve queries between the DNS domain names of companies that share information. For example, two companies, Widgets Toys and Tailspin Toys, want to improve how the DNS clients of Widgets Toys resolve the names of the DNS clients of Tailspin Toys. The administrators from Tailspin Toys inform the administrators of Widgets Toys about the set of DNS servers in the Tailspin Toys network where Widgets can send queries for the domain dolls.tailspintoys.com. The DNS servers within the Widgets Toys network are configured to forward all queries for names ending with dolls.tailspintoys.com to the designated DNS servers in the network for Tailspin Toys. So, the DNS servers in the Widgets Toys network don't need to query their internal root servers, or the Internet root servers, to resolve queries for names ending with dolls.tailspintoys.com.
 
 ### Dynamic update
 
 Dynamic update enables DNS client computers to register and dynamically update their RRs with a DNS server whenever changes occur. This reduces the need for manual administration of zone records, especially for clients that frequently move or change locations and use DHCP to obtain an IP address.
 
-The DNS Client and Server services support the use of dynamic updates, as described in RFC 2136, “Dynamic Updates in the Domain Name System.” The DNS Server service allows dynamic update to be enabled or disabled on a per-zone basis at each server configured to load either a standard primary or directory-integrated zone. By default, the Windows Server 2008 DNS Client service will dynamically update host (A) RRs in DNS when configured for TCP/IP. The Windows Server 2008 DNS Server service is configured, by default, to allow only secure dynamic update. You must change this configuration if you will be using dynamic update only.
+The DNS Client and Server services support the use of dynamic updates, as described in RFC 2136, “Dynamic Updates in the Domain Name System.” The DNS Server service allows dynamic update to be enabled or disabled on a per-zone basis at each server configured to load either a standard primary or directory-integrated zone. By default, the Windows Server 2008 DNS Client service will dynamically update host (A) RRs in DNS when configured for TCP/IP. The Windows Server 2008 DNS Server service is configured, by default, to allow only secure dynamic update. You must change this configuration if you'll be using dynamic update only.
 
 ### Protocol description
 
-RFC 2136 introduces a new opcode or message format called UPDATE. The update message can add and delete RRs from a specified zone as well as test for prerequisite conditions. Update is atomic, that is, all prerequisites must be satisfied, or no update operation will take place.
+RFC 2136 introduces a new opcode or message format called UPDATE. The update message can add and delete RRs from a specified zone and test for prerequisite conditions. Update is atomic, that is, all prerequisites must be satisfied, or no update operation will take place.
 
-As in any conventional DNS implementation, the zone update must be committed on a primary DNS server for that zone. If an update is received by a secondary DNS server, it will be forwarded up the replication topology until it reaches the primary DNS server. In the case of an Active Directory-integrated zone, an update for a resource record in a zone can be sent to any DNS server running on an Active Directory domain controller whose data store contains the zone.
+As in any conventional DNS implementation, the zone update must be committed on a primary DNS server for that zone. If an update is received by a secondary DNS server, it is forwarded up the replication topology until it reaches the primary DNS server. In the case of an Active Directory-integrated zone, an update for a resource record in a zone can be sent to any DNS server running on an Active Directory domain controller whose data store contains the zone.
 
-A zone transfer process will always lock a zone so that a secondary DNS server receives a consistent zone view while transferring the zone data. When the zone is locked, it can no longer accept dynamic updates. If the zone is large and is locked very often for zone transfer purposes, it will starve dynamic update clients, and the system can become unstable. The Windows Server DNS Server service queues the update requests that arrived during the zone transfer and processes them after the zone transfer is completed.
+A zone transfer process will always lock a zone so that a secondary DNS server receives a consistent zone view while transferring the zone data. When the zone is locked, it can no longer accept dynamic updates. If the zone is large and is locked often for zone transfer purposes, it starves dynamic update clients, and the system can become unstable. The Windows Server DNS Server service queues the update requests that arrived during the zone transfer and processes them after the zone transfer is completed.
 
 ### How client and server computers update their DNS names
 
@@ -320,7 +320,7 @@ By default, computers that are statically configured for TCP/IP attempt to dynam
 
 The following defaults also apply to how computers update their DNS names:
 
-- The DNS client on Windows XP doesn't attempt dynamic update over a remote access or virtual private network (VPN) connection. To modify this configuration, you can modify the advanced TCP/IP settings of the particular network connection or modify the registry. Not needed as it's Win XP so suggest to remove
+- The DNS client on Windows XP doesn't attempt dynamic update over a remote access or virtual private network (VPN) connection. To modify this configuration, you can modify the advanced TCP/IP settings of the particular network connection or modify the registry. Not needed as its Win XP so suggest removing
 - The DNS client doesn't attempt dynamic update of top-level domain (TLD) zones. Any zone named with a single-label name is considered a TLD zone, for example, com, edu, blank, my-company.
 
 Also by default, the primary DNS suffix portion of a computer’s FQDN is the same as the name of the Active Directory domain to which the computer is joined. To allow different primary DNS suffixes, a domain administrator can create a restricted list of allowed suffixes by modifying the **msDS-AllowedDNSSuffixes** attribute in the domain object container. This attribute is managed by the domain administrator using Active Directory Service Interfaces (ADSI) or the Lightweight Directory Access Protocol (LDAP). Dynamic updates can be sent for any of the following reasons or events:
@@ -332,15 +332,15 @@ Also by default, the primary DNS suffix portion of a computer’s FQDN is the sa
 - The `ipconfig /registerdns` command is used to manually force a refresh of the client name registration in DNS.
 
 > [!IMPORTANT]
-> On DHCP client computers running Windows Vista® or later, if you type `ipconfig /registerdns` at a command prompt, the DNS client service will attempt to directly register its DNS record., bypassing the DHCP server. This occurs even if the DHCP server is configured to **Always dynamically update DNS A and PTR records**.  
+> On DHCP client computers running Windows Vista® or later, if you type `ipconfig /registerdns` at a command prompt, the DNS client service attempts to directly register its DNS record, bypassing the DHCP server. This occurs even if the DHCP server is configured to **Always dynamically update DNS A and PTR records**.  
 If the client doesn't have permission to update its resource record, the registration will silently fail. If the DNS client has this permission, the resource record will be updated and permissions can be reset such that the DHCP server is no longer able to perform future updates on the resource record.  
-> The recommended method to update DNS registration for DHCP clients running Windows Vista or later is to use `ipconfig /renew`. Do not use `ipconfig /registerdns`.
+> The recommended method to update DNS registration for DHCP clients running Windows Vista or later is to use `ipconfig /renew`. Don't use `ipconfig /registerdns`.
 
 When one of the previous events triggers a dynamic update, the DNS Client service (not the DHCP Client service as occurred in previous operating systems) sends updates. This is designed so that if a change to the IP address information occurs, corresponding updates in DNS are performed to synchronize name-to-address mappings for the computer. The DNS Client service performs this function for all network connections used on the system, including connections not configured to use DHCP.
 
-This update process assumes that installation defaults are in effect for servers running Windows Server 2008. Specific names and update behavior is tunable where advanced TCP/IP properties are configured to use non-default DNS settings.
+This update process assumes that installation defaults are in effect for servers running Windows Server 2008. Specific names and update behavior is tunable where advanced TCP/IP properties are configured to use nondefault DNS settings.
 
-In addition to the full computer name (or primary name) of the computer, additional connection-specific DNS names can be configured and optionally registered or updated in DNS.
+In addition to the full computer name (or primary name) of the computer, connection-specific DNS names can be configured and optionally registered or updated in DNS.
 
 #### Example: How dynamic update works
 
@@ -362,7 +362,7 @@ Expand table
 | DNS domain name of computer | example.microsoft.com |
 | Full computer name | newhost.example.microsoft.com |
 
-After the name change is applied in System properties, you are prompted to restart the computer. When the computer restarts Windows, the DNS Client service performs the following sequence to update DNS:
+After the name change is applied in System properties, you're prompted to restart the computer. When the computer restarts Windows, the DNS Client service performs the following sequence to update DNS:
 
 1. The DNS Client service sends an SOA type query using the DNS domain name of the computer.
 
@@ -390,23 +390,23 @@ After the SOA query is resolved, the client sends a dynamic update to the server
 
 The contents of the update request include instructions to add A (and possibly PTR) RRs for “newhost.example.microsoft.com” and remove these same record types for “oldhost.example.microsoft.com”, the name that was previously registered.
 
-The DNS server also checks to ensure that updates are permitted for the client request. For standard primary zones, dynamic updates aren't secured, so any client attempt to update succeeds. For Active Directory–integrated zones, updates are secured and performed using directory-based security settings. For more information, see “Secure dynamic update” later in this topic.
+The DNS server also checks to ensure that updates are permitted for the client request. For standard primary zones, dynamic updates aren't secured, so any client attempt to update succeeds. For Active Directory–integrated zones, updates are secured and performed using directory-based security settings. For more information, see “Secure dynamic update” later in this article.
 
 Dynamic updates are sent or refreshed periodically. By default, computers send a refresh once every seven days. If the update results in no changes to zone data, the zone remains at its current version and no changes are written. Updates result in actual zone changes or increased zone transfer only if names or addresses actually change.
 
-Note that names aren't removed from DNS zones if they become inactive or aren't updated within the refresh interval (seven days). DNS doesn't use a mechanism to release or tombstone names, although DNS clients do attempt to delete or update old name records when a new name or address change is applied.
+Names aren't removed from DNS zones if they become inactive or aren't updated within the refresh interval (seven days). DNS doesn't use a mechanism to release or tombstone names, although DNS clients do attempt to delete or update old name records when a new name or address change is applied.
 
-When the DNS Client service registers A and PTR RRs for a computer, it uses a default caching Time To Live (TTL) of 15 minutes for host records. This determines how long other DNS servers and clients cache a computer’s records when they are included in a query response.
+When the DNS Client service registers A and PTR RRs for a computer, it uses a default caching Time To Live (TTL) of 15 minutes for host records. This determines how long other DNS servers and clients cache a computer’s records when they're included in a query response.
 
 ### DNS and DHCP clients and servers
 
 Windows DNS clients are dynamic update-aware and can initiate the dynamic update process. A DNS client negotiates the process of dynamic update with the DHCP server when the client leases an IP address or renews the lease, determining which computer updates the A and PTR RRs of the client. Depending on the negotiation process, the DNS client, the DHCP server, or both, update the records by sending the dynamic update requests to the primary DNS servers that are authoritative for the names that are to be updated.
 
-Clients and servers that are running versions of Windows earlier than Windows 2000 do not support dynamic update. The Windows Server 2008 DHCP Server service can perform dynamic updates on behalf of clients that do not support the DHCP Client service FQDN option (which is described in the following section). For example, clients that are running Microsoft Windows® 95, Windows 98, and Windows NT do not support the FQDN option. However, this functionality can be enabled in the **DNS** tab of the server properties for the DHCP console. The DHCP server first obtains the name of legacy clients from the DHCP REQUEST packet. It then appends the domain name given for that scope and registers the A and PTR RRs.
+Clients and servers that are running versions of Windows earlier than Windows 2000 don't support dynamic update. The Windows Server 2008 DHCP Server service can perform dynamic updates on behalf of clients that don't support the DHCP Client service FQDN option (which is described in the following section). For example, clients that are running Microsoft Windows® 95, Windows 98, and Windows NT don't support the FQDN option. However, this functionality can be enabled in the **DNS** tab of the server properties for the DHCP console. The DHCP server first obtains the name of legacy clients from the DHCP REQUEST packet. It then appends the domain name given for that scope and registers the A and PTR RRs.
 
-In some cases, stale PTR or A RRs can appear on DNS servers when the lease of a DHCP client expires. For example, when a DNS client running Windows Vista® or Windows Server 2008 tries to negotiate a dynamic update procedure with a DHCP server running Windows NT 4.0, the DNS client must register both A and PTR RRs itself. Later, if the client running Windows 2000 is improperly removed from the network, the client can't deregister its A and PTR RRs and they become stale.
+In some cases, stale PTR, or A RRs can appear on DNS servers when the lease of a DHCP client expires. For example, when a DNS client running Windows Vista® or Windows Server 2008 tries to negotiate a dynamic update procedure with a DHCP server running Windows NT 4.0, the DNS client must register both A and PTR RRs itself. Later, if the client running Windows 2000 is improperly removed from the network, the client can't deregister its A and PTR RRs and they become stale.
 
-If a stale A RR appears in a zone that allows only secure dynamic updates, no computer is able to register any other RR for the name in that A RR. To prevent problems with stale PTR and A RRs, you can enable the aging and scavenging feature. For more information about the aging and scavenging feature, see “Understanding aging and scavenging” in this topic.
+If a stale A RR appears in a zone that allows only secure dynamic updates, no computer is able to register any other RR for the name in that A RR. To prevent problems with stale PTR and A RRs, you can enable the aging and scavenging feature. For more information about the aging and scavenging feature, see “Understanding aging and scavenging” in this article.
 
 To provide fault tolerance for dynamic updates, consider Active Directory integration for those zones that accept dynamic updates from Windows Server 2008 network-based clients. To speed up the discovery of authoritative DNS servers, you can configure each client with a list of preferred and alternate DNS servers that are primary for that directory-integrated zone. If a client fails to update the zone with its preferred DNS server because the DNS server is unavailable, the client can try an alternate server. When the preferred DNS server becomes available, it loads the updated, directory-integrated zone that includes the update from the client.
 
@@ -428,15 +428,15 @@ The conditions under which DHCP clients send the FQDN option and the actions tak
 
 The client requests a dynamic update depending on whether it's running Windows Server 2008 or earlier. It also depends on the client configuration. Clients can take any of the following actions:
 
-- By default, the Windows Server 2008 DHCP Client service sends the FQDN option with the Flags field set to 0 to request that the client update the A RR, and the DHCP Server service updates the PTR RR. After the client sends the FQDN option, it waits for a response from the DHCP server. Unless the DHCP server sets the Flags field to 3, the DNS client then initiates an update for the A RR. If the DHCP server doesn't support or is not configured to perform registration of the DNS record, then no FQDN is included in the DHCP server’s response and the DNS client attempts registration of the A and PTR RRs.
+- By default, the Windows Server 2008 DHCP Client service sends the FQDN option with the Flags field set to 0 to request that the client update the A RR, and the DHCP Server service updates the PTR RR. After the client sends the FQDN option, it waits for a response from the DHCP server. Unless the DHCP server sets the Flags field to 3, the DNS client then initiates an update for the A RR. If the DHCP server doesn't support or isn't configured to perform registration of the DNS record, then no FQDN is included in the DHCP server’s response and the DNS client attempts registration of the A and PTR RRs.
 - If the DHCP client is running a Windows operating system earlier than Windows 2000, or if the client is Windows 2000 and it's configured not to register DNS resource records, then the client doesn't send the FQDN option. In this case, the client doesn't update either record.
 
-Depending on what the DHCP client requests, the DHCP server can take different actions. If the DHCP client sends a DHCPREQUEST message without the FQDN option, behavior depends on the type of DHCP server and how it's configured. The DHCP server can update both records if it's configured to update records on behalf of DHCP clients that do not support the FQDN option.
+Depending on what the DHCP client requests, the DHCP server can take different actions. If the DHCP client sends a DHCPREQUEST message without the FQDN option, behavior depends on the type of DHCP server and how it's configured. The DHCP server can update both records if it's configured to update records on behalf of DHCP clients that don't support the FQDN option.
 
 In the following cases, the DHCP server doesn't perform any action:
 
 - The DHCP server (for example, a server running Windows NT 4.0) doesn't support dynamic update.
-- The DHCP server is running Windows Server 2008 and is configured not to do dynamic updates for clients that do not support the FQDN option.
+- The DHCP server is running Windows Server 2008 and is configured not to do dynamic updates for clients that don't support the FQDN option.
 - The DHCP server is running Windows Server 2008 and is configured not to register DNS resource records.
 
 If the Windows network–based DHCP client requests that the server updates the PTR RR but not the A RR, behavior depends on the type of DHCP server and how it's configured. The server can perform any of the following actions:
@@ -448,7 +448,7 @@ If the DHCP server is running Windows Server and is configured to always update
 
 ### Dynamic update process for statically configured and remote access clients
 
-Statically configured clients and remote access clients do not rely on the DHCP server for DNS registration. Statically configured clients dynamically update their A and PTR RRs every time they start and then every 24 hours in case the records become corrupted or need to be refreshed in the DNS database.
+Statically configured clients and remote access clients don't rely on the DHCP server for DNS registration. Statically configured clients dynamically update their A and PTR RRs every time they start and then every 24 hours in case the records become corrupted or need to be refreshed in the DNS database.
 
 Remote access clients can dynamically update A and PTR RRs when a dial-up connection is made. They can also attempt to withdraw, or deregister, the A and PTR RRs when the user closes down the connection explicitly. Computers running Windows Server with a remote access network connection attempt the dynamic registration of the A and PTR records corresponding to the IP address of this connection. By default, the DNS Client service on Windows XP doesn't attempt dynamic update over a remote access or VPN connection. To modify this configuration, you can modify the advanced TCP/IP settings of the particular network connection or modify the registry.
 
@@ -456,11 +456,11 @@ In all operating systems, if a remote access client doesn't receive a successful
 
 If the remote access client fails to deregister a DNS resource record, it adds a message to the event log, which you can view by using Event Viewer. The remote access client never deletes stale records, but the remote access server attempts to deregister the PTR RR when the client is disconnected.
 
-By default, Windows Server DNS Client service dial-up networking clients do not attempt to update A and PTR records automatically. Due to the nature of their business, it's common that ISPs do not enable dynamic updating of DNS information by their customers. If you use an ISP that doesn't support dynamic update, configure the connection properties to prevent the computer from performing dynamic updates.
+By default, Windows Server DNS Client service dial-up networking clients don't attempt to update A and PTR records automatically. Due to the nature of their business, it's common that ISPs don't enable dynamic updating of DNS information by their customers. If you use an ISP that doesn't support dynamic update, configure the connection properties to prevent the computer from performing dynamic updates.
 
 ### Dynamic update process for multihomed clients
 
-If a dynamic update client is multihomed (has more than one network connection and associated IP address), it registers all IP addresses for each network connection. If you do not want it to register these IP addresses, you can configure the network connection to not register IP addresses.
+If a dynamic update client is multihomed (has more than one network connection and associated IP address), it registers all IP addresses for each network connection. If you don't want it to register these IP addresses, you can configure the network connection to not register IP addresses.
 
 > [!IMPORTANT]
 > This behavior was changed in Windows Server 2008. Previously, a multihomed client would register only the first IP address for each network connection by default. For more information, see Microsoft Knowledge Base article 975808.
@@ -479,19 +479,19 @@ You can change the default setting so that the DNS Client service ends the regis
 
 ### Secure dynamic update
 
-DNS update security is available only for zones that are integrated into Active Directory. When you integrate a zone into Active Directory, access control list (ACL) editing features are available in the DNS console so you can add or remove users or groups from the ACL for a specified zone or resource record. ACLs are for DNS administration access control only, and do not influence DNS query resolution.
+DNS update security is available only for zones that are integrated into Active Directory. When you integrate a zone into Active Directory, access control list (ACL) editing features are available in the DNS console so you can add or remove users or groups from the ACL for a specified zone or resource record. ACLs are for DNS administration access control only, and don't influence DNS query resolution.
 
 By default, dynamic update security for DNS servers and clients are handled as follows:
 
 - DNS clients attempt to use unsecured dynamic update first. If an unsecured update is refused, clients try to use secure update.
 
-Also, clients use a default update policy that permits them to attempt to overwrite a previously registered resource record, unless they are specifically blocked by update security.
+Also, clients use a default update policy that permits them to attempt to overwrite a previously registered resource record, unless they're specifically blocked by update security.
 
 - After a zone becomes Active Directory–integrated, DNS servers running Windows Server 2008 default to allowing only secure dynamic updates.
 
-When using standard zone storage, the default for the DNS Server service is to not allow dynamic updates on its zones. For zones that are either directory-integrated or use standard file-based storage, you can change the zone to allow all dynamic updates, which permits all updates to be accepted.
+When using standard zone storage, the default for the DNS Server service is to not allow dynamic updates on its zones. For zones that are either directory-integrated or use standard file-based storage, you can change the zone to allow all dynamic updates, which permit all updates to be accepted.
 
-Dynamic update is a recent additional DNS standard specification, defined in RFC 2136. See [DNS Reference Information](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197499\(v=ws.10\)) for more information about RFCs.
+Dynamic update is an addition to the DNS standard specification, defined in RFC 2136. See [DNS Reference Information](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197499\(v=ws.10\)) for more information about RFCs.
 
 The dynamic registration of DNS resource records can be restricted with the use of registry entries.
 
@@ -508,29 +508,29 @@ The secure dynamic update process is described as follows:
 The secure dynamic update process is described as follows:
 
 1. The DNS client queries the preferred DNS server to determine which DNS server is authoritative for the domain name it's attempting to update. The preferred DNS server responds with the name of the zone and the primary DNS server that is authoritative for the zone.
-1. The DNS client attempts a standard dynamic update, and if the zone is configured to allow only secure dynamic updates (the default configuration for Active Directory-integrated zones), the DNS server refuses the non-secure update. Had the zone been configured for standard dynamic update rather than secure dynamic update, the DNS server would have accepted the DNS client’s attempt to add, delete, or modify resource records in that zone.
+1. The DNS client attempts a standard dynamic update, and if the zone is configured to allow only secure dynamic updates (the default configuration for Active Directory-integrated zones), the DNS server refuses the nonsecure update. Had the zone been configured for standard dynamic update rather than secure dynamic update, the DNS server would have accepted the DNS client’s attempt to add, delete, or modify resource records in that zone.
 1. The DNS client and DNS server begin TKEY negotiation.
-1. First, the DNS client and DNS server negotiate an underlying security mechanism. Windows dynamic update clients and DNS servers can only use the Kerberos protocol.
-1. Next, by using the security mechanism, the DNS client and DNS server verify their respective identities and establish the security context.
+1. First, the DNS client, and DNS server negotiate an underlying security mechanism. Windows dynamic update clients and DNS servers can only use the Kerberos protocol.
+1. Next, by using the security mechanism, the DNS client, and DNS server verify their respective identities and establish the security context.
 1. The DNS client sends the dynamic update request to the DNS server, signed using the established security context. The signature is included in the signature field of the TSIG RR that is included in the dynamic update request packet. The DNS server verifies the origin of the dynamic update packet by using the security context and the TSIG signature.
-1. The DNS server attempts to add, delete, or modify resource records in Active Directory. Whether or not it can make the update depends on whether the DNS client has the proper permissions to make the update and whether the prerequisites have been satisfied.
+1. The DNS server attempts to add, delete, or modify resource records in Active Directory. Whether or not it can make the update depend on whether the DNS client has the proper permissions to make the update and whether the prerequisites have been satisfied.
 1. The DNS server sends a reply to the DNS client stating whether it was able to make the update, signed using the established security context. The signature is included in the signature field of the TSIG RR that is included in the dynamic update response packet. If the DNS client receives a spoofed reply, it ignores it and waits for a signed response.
 
-### Security for DHCP clients that do not support the FQDN option
+### Security for DHCP clients that don't support the FQDN option
 
-Windows DHCP clients that do not support the FQDN option (option 81) aren't capable of dynamic updates. If you want the A and PTR RRs for these clients dynamically registered in DNS, you must configure the DHCP server to perform dynamic updates on their behalf.
+Windows DHCP clients that don't support the FQDN option (option 81) aren't capable of dynamic updates. If you want the A and PTR RRs for these clients dynamically registered in DNS, you must configure the DHCP server to perform dynamic updates on their behalf.
 
-However, having the DHCP server to perform secure dynamic updates on behalf of DHCP clients that do not support the FQDN option is undesirable because when a DHCP server performs a secure dynamic update on a name, that DHCP server becomes the owner of that name, and only that DHCP server can update any record for that name. This can cause problems in some circumstances.
+However, having the DHCP server to perform secure dynamic updates on behalf of DHCP clients that don't support the FQDN option is undesirable because when a DHCP server performs a secure dynamic update on a name, that DHCP server becomes the owner of that name, and only that DHCP server can update any record for that name. This can cause problems in some circumstances.
 
-For example, suppose that the DHCP server DHCP1 created an object for the name nt4host1.example.com and then stopped responding, and that later the backup DHCP server, DHCP2, tried to update a record for the same name, nt4host1.example.com. In this situation, DHCP2 is not able to update the name because it doesn't own the name. In another example, suppose DHCP1 added an object for the name nt4host1.example.com, and then the administrator upgraded nt4host1.example.com to a Windows 2000-based computer. Because the Windows 2000-based computer did not own the name, it wouldn't be able to update DNS records for the name.
+For example, suppose that the DHCP server DHCP1 created an object for the name nt4host1.example.com and then stopped responding, and that later the backup DHCP server, DHCP2, tried to update a record for the same name, nt4host1.example.com. In this situation, DHCP2 isn't able to update the name because it doesn't own the name. In another example, suppose DHCP1 added an object for the name nt4host1.example.com, and then the administrator upgraded nt4host1.example.com to a Windows 2000-based computer. Because the Windows 2000-based computer didn't own the name, it wouldn't be able to update DNS records for the name.
 
-To solve this problem, the built-in security group called DnsUpdateProxy is provided. If all DHCP servers are added as members of the DnsUpdateProxy group, one server’s records can be updated by another server if the first server fails. Also, because all objects created by the members of the DnsUpdateProxy group aren't secured, the first user (that is not a member of the DnsUpdateProxy group) to modify the set of records associated with a DNS name becomes its owner. When legacy clients are upgraded, they can therefore take ownership of their name records at the DNS server. If every DHCP server registering resource records for older clients is a member of the DnsUpdateProxy group, the problems discussed earlier are eliminated.
+To solve this problem, the built-in security group called DnsUpdateProxy is provided. If all DHCP servers are added as members of the DnsUpdateProxy group, one server’s records can be updated by another server if the first server fails. Also, because all objects created by the members of the DnsUpdateProxy group aren't secured, the first user (that isn't a member of the DnsUpdateProxy group) to modify the set of records associated with a DNS name becomes its owner. When legacy clients are upgraded, they can therefore take ownership of their name records at the DNS server. If every DHCP server registering resource records for older clients is a member of the DnsUpdateProxy group, the problems discussed earlier are eliminated.
 
 #### Securing records when using the DnsUpdateProxy group
 
-DNS domain names that are registered by the DHCP server aren't secure when the DHCP server is a member of the DnsUpdateProxy group. As a result, do not use this group in an Active Directory integrated-zone that allows only secure dynamic updates without taking additional steps to allow records created by members of the group to be secured.
+DNS domain names that are registered by the DHCP server aren't secure when the DHCP server is a member of the DnsUpdateProxy group. As a result, don't use this group in an Active Directory integrated-zone that allows only secure dynamic updates without taking more steps to allow records created by members of the group to be secured.
 
-To protect against unsecured records, or to allow members of the DnsUpdateProxy group to register records in zones that allow only secured dynamic updates, Windows Server 2008 DHCP and DNS allow you to create a dedicated user account and configure DHCP servers to perform DNS dynamic updates with the user account credentials (user name, password, and domain). The credentials of one dedicated user account can be used by multiple DHCP servers.
+To protect against unsecured records, or to allow members of the DnsUpdateProxy group to register records in zones that allow only secured dynamic updates, Windows Server 2008 DHCP, and DNS allow you to create a dedicated user account and configure DHCP servers to perform DNS dynamic updates with the user account credentials (user name, password, and domain). The credentials of one dedicated user account can be used by multiple DHCP servers.
 
 The dedicated user account is a standard user account used only to supply DHCP servers with credentials for DNS dynamic update registration. Each DHCP server supplies these credentials when registering names on behalf of DHCP clients using DNS dynamic update. The dedicated user account is created in the same forest where the primary DNS server for the zone to be updated resides. The dedicated user account can also be located in another forest as long as the forest it resides in has a forest trust established with the forest containing the primary DNS server for the zone to be updated.
 
@@ -556,7 +556,7 @@ Access to the DNS zones and resource records stored in Active Directory is contr
 
 By default, the DNSAdmins group has full control of all zones and records in the Windows Server 2008 domain in which it's specified. In order for a user to be able to enumerate zones in a specific Windows Server 2008 domain, the user (or a group the user belongs to) must be enlisted in the DNSAdmin group.
 
-it's possible that a domain administrator might not want to grant full control to all users listed in the DNSAdmins group. Typically, this would be the result if a domain administrator wanted to grant full control for a specific zone and read-only control for other zones in the domain to a set of users. To accomplish this, the domain administrator can create a separate group for each of the zones, and add specific users to each group. Then the ACL for each zone will contain a group with full control for that zone only. At the same time, all of the groups will be included in the DNSAdmins group, which can be configured to have read permissions only. As a result of the fact that a zone’s ACL always contains the DNSAdmins group, all users enlisted in the zone-specific groups will have read permission for all the zones in the domain.
+It's possible that a domain administrator might not want to grant full control to all users listed in the DNSAdmins group. Typically, this would be the result if a domain administrator wanted to grant full control for a specific zone and read-only control for other zones in the domain to a set of users. To accomplish this, the domain administrator can create a separate group for each of the zones, and add specific users to each group. Then the ACL for each zone contains a group with full control for that zone only. At the same time, all of the groups will be included in the DNSAdmins group, which can be configured to have read permissions only. As a result of the fact that a zone’s ACL always contains the DNSAdmins group, all users enlisted in the zone-specific groups will have read permission for all the zones in the domain.
 
 #### Reserving names
 
@@ -570,7 +570,7 @@ With dynamic update, RRs are automatically added to zones when computers start o
 
 If left unmanaged, the presence of stale RRs in zone data might cause some problems. The following are examples:
 
-- If a large number of stale RRs remain in server zones, they can eventually take up server disk space and cause unnecessarily long zone transfers.
+- If a large number of stale RRs remains in server zones, they can eventually take up server disk space and cause long zone transfers.
 - DNS servers loading zones with stale RRs might use outdated information to answer client queries, potentially causing the clients to experience name resolution problems on the network.
 - The accumulation of stale RRs at the DNS server can degrade its performance and responsiveness.
 - In some cases, the presence of a stale RR in a zone could prevent a DNS domain name from being used by another computer or host device.
@@ -599,9 +599,9 @@ By default, aging and scavenging of resource records is disabled.
 
 Typically, only those resource records added dynamically using the DNS dynamic update protocol are subject to aging and scavenging.
 
-You can, however, enable scavenging for other resource records added through non-dynamic means. For records added to zones in this way, either by loading a text-based zone file from another DNS server or by manually adding them to a zone, a time stamp of zero is set. This makes these records ineligible for use in aging and scavenging operations.
+You can, however, enable scavenging for other resource records added through nondynamic means. For records added to zones in this way, either by loading a text-based zone file from another DNS server or by manually adding them to a zone, a time stamp of zero is set. This makes these records ineligible for use in aging and scavenging operations.
 
-In order to change this default, you can administer these records individually, to reset and permit them to use a current (non-zero) time stamp value. This enables these records to become aged and scavenged.
+In order to change this default, you can administer these records individually, to reset and permit them to use a current (nonzero) time stamp value. This enables these records to become aged and scavenged.
 
 > [!NOTE]
 > Information the user should notice even if skimmingIn the case of changing a zone from standard primary to Active Directory–integrated, you might want to enable scavenging of all existing resource records in the zone. To enable aging for all existing resource records in a zone, you can use the **AgeAllRecords command**, which is available through the dnscmd command-line tool.
@@ -642,7 +642,7 @@ This value should be large enough to allow all clients to refresh their records.
 
 - **Scavenging period** When automatic scavenging is enabled at the server, this period represents the time between repetitions of the automated scavenging process. The default value for this is seven days. To prevent deterioration of DNS server performance, the minimum allowed value for this is one hour.
 
-- **Scavenging servers** An optional advanced zone parameter that enables you to specify a restricted list of IP addresses for DNS servers that are enabled to perform scavenging of the zone. By default, if this parameter is not specified, all DNS servers that load a directory-integrated zone (also enabled for scavenging) attempt to perform scavenging of the zone. In some cases, this parameter can be useful if it's preferable that scavenging only be performed at some servers loading the directory-integrated zone. To set this parameter, you must specify the list of IP addresses for the servers enabled to scavenge the zone in the ScavengingServers parameter for the zone. This can be done using the dnscmd command, a command-line based tool for administering Windows DNS servers.
+- **Scavenging servers** An optional advanced zone parameter that enables you to specify a restricted list of IP addresses for DNS servers that are enabled to perform scavenging of the zone. By default, if this parameter isn't specified, all DNS servers that load a directory-integrated zone (also enabled for scavenging) attempt to perform scavenging of the zone. In some cases, this parameter can be useful if it's preferable that scavenging only be performed at some servers loading the directory-integrated zone. To set this parameter, you must specify the list of IP addresses for the servers enabled to scavenge the zone in the ScavengingServers parameter for the zone. This can be done using the dnscmd command, a command-line based tool for administering Windows DNS servers.
 
 - **Start scavenging time** A specific time, expressed as a number. This time is used by the server to determine when a zone becomes available for scavenging.
 
@@ -670,7 +670,7 @@ To understand the process of aging and scavenging at the server, consider the li
 1. A sample DNS host, “host-a.example.microsoft.com”, registers its host (A) RR at the DNS server for a zone where aging/scavenging is enabled for use.
 1. When registering the record, the DNS server places a time stamp on this record based on current server time.
 
-After the record time stamp is written, the DNS server doesn't accept refreshes for this record for the duration of the zone no-refresh interval. It can, however, accept updates prior to that time. For example, if the IP address for “host-a.example.microsoft.com” changes, the DNS server can accept the update. In this case, the server also updates (resets) the record time stamp.
+After the record time stamp is written, the DNS server doesn't accept refreshes for this record during the zone no-refresh interval. It can, however, accept updates prior to that time. For example, if the IP address for “host-a.example.microsoft.com” changes, the DNS server can accept the update. In this case, the server also updates (resets) the record time stamp.
 
 1. Upon expiration of the no-refresh period, the server begins to accept attempts to refresh this record.
 
@@ -680,9 +680,9 @@ After the initial no-refresh period ends, the refresh period immediately begins 
 
 This resets the time stamp for the record based on the method described in step 2.
 
-1. When subsequent scavenging is performed by the server for the “example.microsoft.com” zone, the record (and all other zone records) are examined by the server.
+1. When subsequent scavenging is performed by the server for the “example.microsoft.com” zone, the records (and all other zone records) are examined by the server.
 
-Each record is compared to current server time on the basis of the following sum to determine whether the record should be removed:
+Each record is compared to current server time based on the following sum to determine whether the record should be removed:
 
 Record time stamp + **No-refresh interval** for zone + **Refresh interval** for zone
 
@@ -691,7 +691,7 @@ Record time stamp + **No-refresh interval** for zone + **Refresh interval** 
 
 ### Unicode character support
 
-Originally, Internet host names were restricted to the character set specified in RFCs 952 and 1123. These restrictions include limiting names to using uppercase and lowercase letters (A\-“Z”, a-z), numbers (0-9) and hyphens (-). In addition, the first character of the DNS name can be a number and names must be encoded and represented using US-ASCII-based characters.
+Originally, Internet host names were restricted to the character set specified in RFCs 952 and 1123. These restrictions include limiting names to using uppercase and lowercase letters (A\-“Z”, a-z), numbers (0-9), and hyphens (-). In addition, the first character of the DNS name can be a number and names must be encoded and represented using US-ASCII-based characters.
 
 These requirements were maintained when DNS was introduced as part of RFC 1035, one of the core DNS standards specifications. For use of DNS in international settings, this requirement has significant limitations where extended character sets are used for local naming standards.
 
@@ -708,7 +708,7 @@ Computers running Windows Server 2008 are UTF-8 aware. This means that when UTF
 To provide standards compatibility and interoperability with other DNS implementations, the DNS service uses uniform downcasing of any received character data. In this process, the DNS service converts all uppercase characters used in standard US-ASCII data to lowercase equivalent data for the following reasons:
 
 - To maintain compatibility with current and existing DNS standards.
-- To provide interoperability with DNS server implementations that do not recognize or support UTF-8 encoding.
+- To provide interoperability with DNS server implementations that don't recognize or support UTF-8 encoding.
 
 To understand why uniform downcasing was chosen, several related points must first be considered from the current revised Internet standards for DNS. Several key points in the standards pertain directly to how character data is to be handled between DNS servers and other servers and clients. These include the following:
 
@@ -720,17 +720,17 @@ Because case insensitivity is a required part of the core DNS standard and case 
 
 ### Considerations for interoperability with UTF-8
 
-The DNS Server service can be configured to allow or disallow the use of UTF-8 characters on a per-server basis. Although other DNS server implementations that aren't UTF-8 aware might be able to accept the transfer of a zone containing UTF-8 encoded names, these servers might not be able to write back those names to a zone file or reload those names from a zone file. Administrators should exercise caution when transferring a zone containing UTF-8 names to a DNS server that is not UTF-8-aware.
+The DNS Server service can be configured to allow or disallow the use of UTF-8 characters on a per-server basis. Although other DNS server implementations that aren't UTF-8 aware might be able to accept the transfer of a zone containing UTF-8 encoded names, these servers might not be able to write back those names to a zone file or reload those names from a zone file. Administrators should exercise caution when transferring a zone containing UTF-8 names to a DNS server that isn't UTF-8-aware.
 
 Some protocols place restrictions on the characters allowed in a name. In addition, names that are intended to be globally visible (RFC 1958) should contain ASCII-only characters, as recommended in RFC 1123.
 
-The use of UTF-8 for transformation of Unicode characters is not noticeable for general users, but UTF-8-encoded characters can be observed when Network Monitor or another similar tool is used to analyze DNS-related traffic over the physical network.
+The use of UTF-8 for transformation of Unicode characters isn't noticeable for general users, but UTF-8-encoded characters can be observed when Network Monitor or another similar tool is used to analyze DNS-related traffic over the physical network.
 
 In addition to DNS server support for the UTF-8 encoding format, the client resolver defaults to using the UTF-8 character encoding format.
 
 Names encoded in UTF-8 format must not exceed the size limits clarified in RFC 2181, which specifies a maximum of 63 octets per label and 255 octets per name. Character count is insufficient to determine size because some UTF-8 characters exceed one octet in length.
 
-The UTF-8 encoding protocol adapts to use with existing DNS protocol implementations that expect US-ASCII characters because representation of US-ASCII characters in UTF-8 is identical, byte for byte, to the US-ASCII representation. DNS client or server implementations that do not recognize UTF-8 characters always encode names in the US-ASCII format. Those names are correctly interpreted by the DNS Server service.
+The UTF-8 encoding protocol adapts to use with existing DNS protocol implementations that expect US-ASCII characters because representation of US-ASCII characters in UTF-8 is identical, byte for byte, to the US-ASCII representation. DNS client or server implementations that don't recognize UTF-8 characters always encode names in the US-ASCII format. Those names are correctly interpreted by the DNS Server service.
 
 The DNS service provides the ability to configure name checking to allow or restrict the use of UTF-8 characters in DNS data.
 
@@ -738,18 +738,18 @@ By default, multibyte UTF-8 name checking is used, allowing the greatest toleran
 
 ## WINS lookup integration
 
-Support for using Windows Internet Name Service (WINS) is provided to look up DNS names that can't be resolved by querying the DNS domain namespace. To accomplish WINS lookup, two specific resource record types are used and can be enabled for any zones loaded by the DNS service:
+Support for using Windows Internet Name Service (WINS) is provided to look up DNS names that can't be resolved by querying the DNS domain namespace. To accomplish WINS lookup, two specific resource record types are used to and can be enabled for any zones loaded by the DNS service:
 
 - The WINS RR, which can be enabled to integrate WINS lookup into forward lookup zones
 - The WINS-R RR, which can be enabled to integrate node adapter status request for reverse lookup zones
 
 ### WINS resource record
 
-The WINS and DNS services are used to provide name resolution for the NetBIOS namespace and the DNS domain namespace, respectively. Although both DNS and WINS can provide a separate and useful name service to clients, WINS is mainly needed to provide support for older clients and programs that require support for NetBIOS naming.
+The WINS and DNS services are used to provide name resolution for the NetBIOS namespace and the DNS domain namespace, respectively. Although both DNS and WINS can provide a separate and useful name service to clients, WINS is needed to provide support for older clients and programs that require support for NetBIOS naming.
 
 However, the DNS service can work with WINS to provide combined name searches in both namespaces when resolving a DNS domain name not found in zone information. To provide this interoperability, a new record (the WINS record) was defined as part of the zone database file.
 
-The presence of a WINS RR can instruct the DNS service to use WINS to look up any forward queries for host names or names that aren't found in the zone database. This functionality is particularly useful for name resolution required by clients that aren't WINS-aware (for example, UNIX) for the names of computers not registered with DNS, such as Windows 95 or Windows 98 computers.
+The presence of a WINS RR can instruct the DNS service to use WINS to look up any forward queries for host names or names that aren't found in the zone database. This functionality is useful for name resolution required by clients that aren't WINS-aware (for example, UNIX) for the names of computers not registered with DNS, such as Windows 95 or Windows 98 computers.
 
 ### How WINS lookup works
 
@@ -772,7 +772,7 @@ The host part of the name is the first label in the queried DNS domain name befo
 
 ### How WINS reverse lookup works
 
-There is also a WINS-R record or WINS reverse lookup entry that can be enabled and added to reverse lookup zones. However, because the WINS database is not indexed by IP address, the DNS service can't send a reverse name lookup to WINS to get the name of a computer given its IP address.
+There is also a WINS-R record or WINS reverse lookup entry that can be enabled and added to reverse lookup zones. However, because the WINS database isn't indexed by IP address, the DNS service can't send a reverse name lookup to WINS to get the name of a computer given its IP address.
 
 Because WINS doesn't provide reverse lookup capability, the DNS service instead sends a node adapter status request directly to the IP address implied in the DNS reverse query. When the DNS server gets the NetBIOS name from the node status response, it appends the DNS domain name back onto the NetBIOS name provided in the node status response and forwards the result to the requesting client.
 
