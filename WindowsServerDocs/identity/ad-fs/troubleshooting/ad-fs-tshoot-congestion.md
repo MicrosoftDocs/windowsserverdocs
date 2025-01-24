@@ -27,7 +27,7 @@ On each proxy node, verify your congestion control settings match the recommende
  3. Verify that latencyThresholdInMSec is set to 8000 and minCongestionWindowSize is set to 64
  4. Restart the adfssrv service if the configuration was modified
 
-### BReview errors and latency in dependent services
+### Review errors and latency in dependent services
 AD FS depends on a number of external services to process token requests. These dependencies can vary based on deployment options but will usually include the enterprise Active Directory. In addition, one or more of the following dependencies can be present.
  - Remote SQL server
  - Custom attribute stores
