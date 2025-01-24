@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix M: Document Links and Recommended Reading
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 ## Appendix M: Document Links and Recommended Reading
 
 ### Document Links

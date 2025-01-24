@@ -10,8 +10,6 @@ ms.date: 7/3/2024
 ---
 # Remote Desktop URI scheme
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
-
 This document defines the format of Uniform Resource Identifiers (URIs) for Remote Desktop. These URI schemes allow for Remote Desktop clients to be invoked with various commands.
 
 ## ms-rd URI scheme

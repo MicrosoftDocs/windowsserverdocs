@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Deploy Network Controller using Windows PowerShell
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more virtual machines (VMs) that are running Windows Server 2019 or 2016.
 
 >[!IMPORTANT]

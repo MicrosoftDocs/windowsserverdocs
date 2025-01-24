@@ -10,8 +10,6 @@ ms.date: 11/04/2021
 
 # Configure virtual network peering
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 In this procedure, you use Windows PowerShell to create two virtual networks, each with one subnet. Then, you configure peering between the two virtual networks to enable connectivity between them.
 
 - [Step 1. Create the first virtual network](#step-1-create-the-first-virtual-network)

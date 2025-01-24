@@ -9,8 +9,6 @@ ms.date: 09/17/2024
 ---
 # Group Managed Service Accounts Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This article for IT professionals introduces the group Managed Service Account (gMSA) by describing practical applications, changes in Microsoft's implementation, and hardware and software requirements.
 
 ## Feature description

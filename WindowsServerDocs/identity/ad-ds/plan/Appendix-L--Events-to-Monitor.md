@@ -9,8 +9,6 @@ ms.topic: article
 ---
 # Appendix L: Events to Monitor
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
-
 The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the "Current Windows Event ID" column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.
 
 The "Legacy Windows Event ID" column lists the corresponding event ID in legacy versions of Windows such as client computers running Windows XP or earlier and servers running Windows Server 2003 or earlier. The "Potential Criticality" column identifies whether the event should be considered of low, medium, or high criticality in detecting attacks, and the "Event Summary" column provides a brief description of the event.

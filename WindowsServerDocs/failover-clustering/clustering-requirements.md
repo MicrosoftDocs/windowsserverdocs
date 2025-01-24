@@ -9,7 +9,7 @@ ms.date: 10/10/2023
 ---
 # Failover clustering hardware requirements and storage options
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
+
 
 In order to create a failover cluster, your system must meet the following requirements:
 
@@ -28,7 +28,7 @@ The following sections describe hardware requirements and recommendations for fa
 We recommend that you use a set of matching computers that contain the same or similar components.
 
 > [!NOTE]
-> If you've purchased Azure Stack HCI Integrated System solution hardware from the [Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net) through your preferred Microsoft hardware partner, the Azure Stack HCI operating system should be pre-installed.
+> If you've purchased Azure Local Integrated System solution hardware from the [Azure Local Catalog](https://azurestackhcisolutions.azure.microsoft.com/) through your preferred Microsoft hardware partner, the Azure Stack HCI operating system should be pre-installed.
 
 ### Network adapters and cables
 
@@ -57,11 +57,11 @@ Which device controllers or other compatible adapters you should use for storage
 
 ### Storage
 
-You must use [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) or shared storage that's compatible with Windows Server 2012 R2, Windows Server 2012, and later. You can use attached shared storage or use SMB 3.0 file shares as shared storage for servers running Hyper-V that you've configured in a failover cluster. For more information, see [Deploy Hyper-V over SMB](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)).
+You must use [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) or shared storage that's compatible with Windows Server 2012 R2, Windows Server 2012, and later. You can use attached shared storage or use SMB 3.0 file shares as shared storage for servers running Hyper-V that you've configured in a failover cluster. For more information, see [Deploy Hyper-V over SMB](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)).
 
 In most cases, attached storage should contain multiple, separate disks configured at the hardware level. These disks are also known as logical unit numbers (LUNs). 
 
-Some clusters have a disk that functions as the *disk witness*, which is a disk in cluster storage that holds the cluster configuration database. Failover clusters only have disk witnesses if the disk witness is supposed to be part of the specified quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum). The other disks contain required files for clustered roles.
+Some clusters have a disk that functions as the *disk witness*, which is a disk in cluster storage that holds the cluster configuration database. Failover clusters only have disk witnesses if the disk witness is supposed to be part of the specified quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-storage). The other disks contain required files for clustered roles.
 
 You should also consider these additional storage requirements:
 

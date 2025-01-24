@@ -11,8 +11,6 @@ ms.topic: article
 
 # Collecting Network Information
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 The first step in designing an effective site topology in Active Directory Domain Services (AD DS) is to consult your organization's networking group to collect information and communicate with them regularly about your physical network topology.
 
 ## Creating a location map

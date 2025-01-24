@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Increase Concurrent Authentications Processed by NPS
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use this topic for instructions on configuring Network Policy Server concurrent authentications.
 
 If you installed Network Policy Server \(NPS\) on a computer other than a domain controller and the NPS is receiving a large number of authentication requests per second, you can improve NPS performance by increasing the number of concurrent authentications allowed between the NPS and the domain controller.

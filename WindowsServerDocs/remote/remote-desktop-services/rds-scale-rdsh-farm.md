@@ -8,8 +8,6 @@ author: xelu86
 ---
 # Scale out your Remote Desktop Services deployment by adding an RD Session Host farm
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can improve the availability and scale of your RDS deployment by adding a Remote Desktop Session Host (RDSH) farm.
 
 Use the following steps to add another RD Session Host to your deployment:

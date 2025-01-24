@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Tenant on-premises components
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 The following information describes the on-premises components that make up the desktop hosting deployment.
 
 ## Clients

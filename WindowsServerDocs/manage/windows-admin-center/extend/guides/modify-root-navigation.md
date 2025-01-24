@@ -9,7 +9,7 @@ ms.date: 04/01/2023
 
 # Modify root navigation behavior for a solution extension
 
-Applies to: Windows Admin Center, Windows Admin Center Preview
+
 
 This article provides guidance on how to modify the root navigation behavior for your solution to have different connection list behavior. You'll also learn how to hide or show the tools list.
 

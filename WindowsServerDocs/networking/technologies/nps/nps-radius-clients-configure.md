@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Configure RADIUS Clients
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use this topic to configure network access servers as RADIUS Clients in NPS.
 
 When you add a new network access server \(VPN server, wireless access point, authenticating switch, or dial-up server\) to your network, you must add the server as a RADIUS client in NPS, and then configure the RADIUS client to communicate with the NPS.

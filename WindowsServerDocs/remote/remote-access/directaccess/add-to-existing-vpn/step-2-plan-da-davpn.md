@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 2 Plan the DirectAccess Deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 After planning the Remote Access infrastructure, the next step in enabling DirectAccess is to plan the settings for the Enable DirectAccesss Wizard.
 
 |Task|Description|

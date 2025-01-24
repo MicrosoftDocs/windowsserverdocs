@@ -10,8 +10,6 @@ ms.author: roharwoo
 
 # Classification Management
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
-
 Classification properties are used to categorize files and can be used to select files for scheduled file management tasks.
 
 There are many ways to classify a file. One way is to create a classification property that assigns a value to all files within a specified directory. Another way is to create rules to decide what value to set for a given property.

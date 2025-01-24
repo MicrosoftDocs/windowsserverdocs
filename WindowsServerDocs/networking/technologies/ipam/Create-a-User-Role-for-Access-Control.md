@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Create a User Role for Access Control
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use this topic to create a new Access Control user role in the IPAM client console.
 
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.

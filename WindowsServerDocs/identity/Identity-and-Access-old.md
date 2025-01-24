@@ -11,8 +11,6 @@ ms.topic: article
 
 # Identity and Access in Windows Server 2016
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/). You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 

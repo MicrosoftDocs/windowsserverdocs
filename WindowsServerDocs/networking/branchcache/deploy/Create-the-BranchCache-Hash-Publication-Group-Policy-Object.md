@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Create the BranchCache Hash Publication Group Policy Object
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use this procedure to create the BranchCache hash publication Group Policy Object (GPO).
 
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.

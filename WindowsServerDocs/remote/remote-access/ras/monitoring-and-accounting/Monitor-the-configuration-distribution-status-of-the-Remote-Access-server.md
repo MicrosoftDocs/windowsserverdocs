@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Monitor the configuration distribution status of the Remote Access server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 **Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role.
 
 The Remote Access Management Console compares the configuration versions from all the monitored servers to verify that they match and are using the latest configuration version. This shows whether the latest configuration version (which is specified in the Group Policy Objects or GPOs) was distributed to all of the servers and whether it was successfully applied on the servers.

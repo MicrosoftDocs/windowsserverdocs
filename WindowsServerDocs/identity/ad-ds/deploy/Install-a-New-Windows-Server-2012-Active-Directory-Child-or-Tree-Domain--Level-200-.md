@@ -11,8 +11,6 @@ ms.topic: article
 
 # Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This topic explains how to add child and tree domains to an existing Windows Server 2012 forest, using Server Manager or Windows PowerShell.
 
 -   [Child and Tree Domain Workflow](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md#BKMK_Workflow)
@@ -250,7 +248,7 @@ When installing a new forest root domain, the Server Manager Active Directory Do
 
 The **Prerequisites Check** also surfaces relevant information such as security changes that affect older operating systems.
 
-For more information on the specific prerequisite checks, see [Prerequisite Checking](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking).
+For more information on the specific prerequisite checks, see [Prerequisite Checking](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrerequisiteChecking).
 
 You cannot bypass the **Prerequisite Check** when using Server Manager, but you can skip the process when using the AD DS Deployment cmdlet using the following argument:
 

@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Server Certificate Deployment Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This topic contains the following sections.
 
 -   [Server certificate deployment components](#bkmk_components)

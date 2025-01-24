@@ -8,8 +8,6 @@ ms.date: 06/18/2018
 ---
 # Understanding Windows Admin Center Extensions
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
-
 In case you're not yet familiar with how Windows Admin Center works, let's start with the high-level architecture. Windows Admin Center is composed of two main components:
 
 - Lightweight **web service** that serves Windows Admin Center UI web pages to web browser requests.

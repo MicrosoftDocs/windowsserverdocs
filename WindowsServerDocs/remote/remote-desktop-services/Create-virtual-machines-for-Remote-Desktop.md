@@ -11,8 +11,6 @@ manager: dongill
 
 # Create virtual machines for Remote Desktop
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 Use the following steps to create the virtual machines in the tenant's environment that will be used to run the Windows Server 2016 roles, services, and features required for a desktop hosting deployment.
 
 For this example of a basic deployment, the minimum of 3 virtual machines will be created. One virtual machine will host the Remote Desktop (RD) Connection Broker and License Server role services and a file share for the deployment. A second virtual machine will host the RD Gateway and Web Access role services.  A third virtual machine host the RD Session Host role service. For very small deployments, you can reduce VM costs by using Microsoft Entra App Proxy to eliminate all public endpoints from the deployment and combining all the role services onto a single VM. For larger deployments, you can install the various role services on individual virtual machines to allow better scaling.

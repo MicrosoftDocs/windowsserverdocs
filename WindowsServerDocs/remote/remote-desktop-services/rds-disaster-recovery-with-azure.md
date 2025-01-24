@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Set up disaster recovery for RDS using Azure Site Recovery
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use Azure Site Recovery to create a disaster recovery solution for your Remote Desktop Services deployment.
 
 [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) is an Azure-based service that provides disaster recovery capabilities by orchestrating replication, failover, and recovery of virtual machines. Azure Site Recovery supports a number of replication technologies to consistently replicate, protect, and seamlessly failover virtual machines and applications to private/public or hoster's clouds.

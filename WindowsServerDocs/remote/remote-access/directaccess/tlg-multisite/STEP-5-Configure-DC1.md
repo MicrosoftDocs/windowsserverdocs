@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 5 Configure DC1
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain.
 
 To configure Remote Access to use a multisite topology, it is necessary to add an additional Active Directory Domain Services (AD DS) site for the second domain controller 2-DC1, and to configure routing between the subnets.

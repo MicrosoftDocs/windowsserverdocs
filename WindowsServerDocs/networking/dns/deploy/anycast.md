@@ -9,8 +9,6 @@ ms.date: 02/13/2023
 ---
 # Anycast DNS overview
 
->Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
-
 This topic provides information about how Anycast DNS works.
 
 ## What is Anycast?

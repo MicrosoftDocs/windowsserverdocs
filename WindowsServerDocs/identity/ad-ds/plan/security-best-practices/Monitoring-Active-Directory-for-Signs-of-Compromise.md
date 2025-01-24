@@ -8,8 +8,6 @@ ms.topic: article
 ---
 # Monitoring Active Directory for Signs of Compromise
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 *Law Number Five: Eternal vigilance is the price of security.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 A solid event log monitoring system is a crucial part of any secure Active Directory design. Many computer security compromises could be discovered early in the event if the targets enacted appropriate event log monitoring and alerting. Independent reports have long supported this conclusion. For example, the [2009 Verizon Data Breach Report](http://www.verizonbusiness.com/resources/security/reports/2009_databreach_rp.pdf) states:

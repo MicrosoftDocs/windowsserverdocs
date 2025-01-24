@@ -10,12 +10,10 @@ description: Step-by-step instructions to deploy software-defined storage with S
 ---
 # Deploy Storage Spaces Direct on Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) on Windows Server. To deploy Storage Spaces Direct as part of Azure Local, see [About Azure Local](/azure/azure-local/deploy/deployment-introduction?context=/windows-server/context/windows-server-storage)
 
 > [!Tip]
-> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://aka.ms/azurestackhcicatalog).
+> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Local solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Local, see the [Azure Local Catalog](https://aka.ms/azurestackhcicatalog).
 
 > [!Tip]
 > You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server rapid lab deployment scripts](https://aka.ms/wslab), which we use for training purposes.
@@ -26,7 +24,7 @@ Review the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-H
 
 Gather the following information:
 
-- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](/azure-stack/hci/concepts/storage-spaces-direct-overview#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
+- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](/azure/azure-local/concepts/storage-spaces-direct-overview#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
 
 - **Server names.** Get familiar with your organization's naming policies for computers, files, paths, and other resources. You'll need to provision several servers, each with unique names.
 
@@ -271,7 +269,7 @@ When this command is finished, which may take several minutes, the system will b
 
 We recommend using the `New-Volume` cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
-For more information, check out [Creating volumes in Storage Spaces Direct](/azure-stack/hci/manage/create-volumes).
+For more information, check out [Creating volumes in Storage Spaces Direct](/azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage).
 
 ### Step 3.7: Optionally enable the CSV cache
 
@@ -292,7 +290,7 @@ $CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
 Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 ```
 
-For more info, see [Using the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache).
+For more info, see [Using the CSV in-memory read cache](/azure/azure-local/manage/use-csv-cache?context=/windows-server/context/windows-server-storage).
 
 ### Step 3.8: Deploy virtual machines for hyper-converged deployments
 
@@ -394,9 +392,9 @@ CD $ScriptFolder
 
 ## Additional References
 
--   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
--   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
--   [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
--   [Storage Spaces Fault Tolerance](/azure-stack/hci/concepts/fault-tolerance)
+-   [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+-   [Understand the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage)
+-   [Planning volumes in Storage Spaces Direct](/azure/azure-local/concepts/plan-volumes?context=/windows-server/context/windows-server-storage)
+-   [Storage Spaces Fault Tolerance](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
 -   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

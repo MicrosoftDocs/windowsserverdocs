@@ -11,8 +11,6 @@ ms.topic: article
 
 # Active Directory Domain Services Virtualization
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This topic lists resources that are available for using virtualized domain controllers.
 
 -   [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)

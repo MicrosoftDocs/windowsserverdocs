@@ -9,8 +9,6 @@ zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
 
->Applies to: Windows Admin Center, Windows Admin Center (preview), Windows Server 2025
-
 This topic describes how to install Windows Admin Center on a Windows client machine or on a Windows Server 2025 remote server so that multiple users can access Windows Admin Center using a web browser.
 
 > [!TIP]

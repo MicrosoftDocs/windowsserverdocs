@@ -9,8 +9,6 @@ ms.topic: article
 
 # HCN JSON document schemas
 
->Applies to: Windows Server 2022, Windows Server 2019
-
 ## HCN schema
 
 ```json

@@ -11,8 +11,6 @@ ms.custom: inhenkel, orthomas
 ---
 # Appendix C: Protected Accounts and Groups in Active Directory
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 ## Appendix C: Protected Accounts and Groups in Active Directory
 
 Within Active Directory, a default set of highly privileged accounts and groups are considered protected accounts and groups. With most objects in Active Directory, users delegated permissions to manage Active Directory objects can change permissions on the objects, including altering permissions to allow themselves to modify membership of special groups.
@@ -31,6 +29,8 @@ The following security accounts and groups are protected in Active Directory Dom
 - Domain Admins
 - Domain Controllers
 - Enterprise Admins
+- Enterprise Key Admins
+- Key Admins
 - Krbtgt
 - Print Operators
 - Read-only Domain Controllers

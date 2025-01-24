@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Remote Desktop Services - Access from anywhere
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 End users can connect to internal network resources securely from outside the corporate firewall through RD Gateway.
 
 Regardless of how you configure the desktops for your end-users, you can easily plug the RD Gateway into the connection flow for a fast, secure connection. For end-users connecting through published feeds, you can configure the RD Gateway property as you configure the overall deployment properties. For end-users connecting through to their desktops without a feed, they can easily add the name of the organization's RD Gateway as a connection property no matter which Remote Desktop client application they use.

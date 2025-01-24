@@ -11,8 +11,6 @@ ms.topic: article
 
 # Web Application Proxy in Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/azure/active-directory/manage-apps/application-proxy).**
 
 The content in this section describes what's new and changed in the Web Application Proxy for Windows Server. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.

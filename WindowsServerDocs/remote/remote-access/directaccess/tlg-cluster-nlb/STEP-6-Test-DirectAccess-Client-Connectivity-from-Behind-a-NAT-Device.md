@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 6 Test DirectAccess Client Connectivity from Behind a NAT Device
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 When a DirectAccess client is connected to the Internet from behind a NAT device or a web proxy server, the DirectAccess client uses either Teredo or IP-HTTPS to connect to the Remote Access server.
 
 If the NAT device enables outbound UDP port 3544 to the Remote Access server's public IP address, then Teredo is used. If Teredo access is not available, the DirectAccess client falls back to IP-HTTPS over outbound TCP port 443, which enables access through firewalls or web proxy servers over the traditional SSL port.

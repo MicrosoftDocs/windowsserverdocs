@@ -11,8 +11,6 @@ ms.topic: article
 
 # Determining Whether to Upgrade Existing Domains or Deploy New Domains
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Each domain in your design will either be a new domain or an existing upgraded domain. Users from existing domains that you do not upgrade must be moved into new domains.
 
 Moving accounts between domains can impact end users. Before deciding whether to move users into a new domain or to upgrade existing domains, evaluate the long-term administrative benefits of a new AD DS domain against the cost of moving users into the domain.

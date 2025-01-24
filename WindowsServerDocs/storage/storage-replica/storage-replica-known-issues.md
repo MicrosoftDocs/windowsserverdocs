@@ -11,8 +11,6 @@ ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 
 # Known Issues with Storage Replica
 
->Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This article describes some of the known issues with Storage Replica in Windows Server.
 
 ## Disks offline after removing replication and you can't configure replication
@@ -495,4 +493,4 @@ Now you understand some of the known issues with Storage Replica in Windows Serv
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

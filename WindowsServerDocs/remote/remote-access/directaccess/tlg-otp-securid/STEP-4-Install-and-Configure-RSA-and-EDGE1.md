@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 4 Install and Configure RSA and EDGE1
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 RSA is the RADIUS and OTP server, and is installed prior to configuring RADIUS and OTP.
 
 You will perform the following steps to configure the RSA deployment:

@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Configure E-Mail Notifications
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
-
 When you create quotas and file screens, you have the option of sending e-mail notifications to users when their quota limit is approaching or after they have attempted to save files that have been blocked. When you generate storage reports, you have the option of sending the reports to specific recipients by e-mail. If you want to routinely notify certain administrators about quota and file screening events, or send storage reports, you can configure one or more default recipients.
 
 To send these notifications and storage reports, you must specify the SMTP server to be used for forwarding the e-mail messages.

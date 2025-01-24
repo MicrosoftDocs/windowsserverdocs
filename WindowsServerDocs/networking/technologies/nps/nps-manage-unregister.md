@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Unregister an NPS from an Active Directory Domain
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 In the process of managing your NPS deployment, you might find it useful to move an NPS to another domain, to replace an NPS, or to retire an NPS.
 
 When you move or decommission an NPS, you can unregister the NPS in the Active Directory domains where the NPS has permission to read the properties of user accounts in Active Directory.

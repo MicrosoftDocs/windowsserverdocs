@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # DNS Resource Record Management
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This topic provides information about managing DNS resource records by using IPAM.
 
 > [!NOTE]

@@ -1,15 +1,13 @@
 ---
 title: Avoid mapping one storage path to multiple resource pools
 description: Learn what to do when a storage file path is mapped to multiple resource pools.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 24992453-762b-4892-9a50-55d237b9b7f2
 ms.date: 8/16/2016
 ---
 # Avoid mapping one storage path to multiple resource pools
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

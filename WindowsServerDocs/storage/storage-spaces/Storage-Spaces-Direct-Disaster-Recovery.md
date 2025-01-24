@@ -9,8 +9,6 @@ description: This article describes the scenarios available today for disaster r
 ---
 # Disaster recovery with Storage Spaces Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This topic provides scenarios on how hyper-converged infrastructure (HCI) can be configured for disaster recovery.
 
 Numerous companies are running hyper-converged solutions and planning for a disaster gives the ability to remain in or get back to production quickly if a disaster were to occur. There are several ways to configure HCI for disaster recovery and this document explains the options that are available to you today.

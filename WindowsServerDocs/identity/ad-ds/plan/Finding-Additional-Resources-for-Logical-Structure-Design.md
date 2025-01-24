@@ -11,8 +11,6 @@ ms.topic: article
 
 # Finding Additional Resources for Logical Structure Design
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 You can find Additional Resources for Logical Structure Design in the following documentation about Active Directory Domain Services (AD DS):
 
 - For more information about designing the site topology, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology.md).

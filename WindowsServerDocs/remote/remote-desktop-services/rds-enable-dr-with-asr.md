@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Enable disaster recovery of RDS using Azure Site Recovery
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 To ensure that your RDS deployment is adequately configured for disaster recovery, you need to protect all of the components that make up your RDS deployment:
 
 - Active Directory

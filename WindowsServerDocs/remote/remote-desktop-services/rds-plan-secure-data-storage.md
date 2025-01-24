@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Remote Desktop Services - Secure data storage with UPDs
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 Store business resources, user personalization data, and settings securely on-premises or in Azure. RD Session Hosts use AD authentication and empower users with the resources they need in a personalized environment, securely.
 
 Ensuring users have a consistent experience, regardless of the endpoint from which they access their remote resources, is an important aspect of managing an RDS deployment. User Profile Disks (UPDs) allow user data, customizations, and application settings to follow a user within a single collection. A UPD is a per-user, per-collection VHD file saved in a central share that is mounted to a user's session when they sign in - the UPD is treated as a local drive for the duration of that session.

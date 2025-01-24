@@ -9,8 +9,6 @@ ms.date: 03/25/2019
 
 # Backup your Windows Servers from Windows Admin Center with Azure Backup
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 [Learn more about Azure integration with Windows Admin Center.](./index.md)
 
 Windows Admin Center streamlines the process of backing up your Windows Servers to Azure and protecting you from accidental or malicious deletions, corruption and even ransomware. To automate setup, you can connect the Windows Admin Center gateway to Azure.

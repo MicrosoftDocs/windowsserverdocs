@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 In this test lab scenario, DirectAccess is deployed with:
 
 -   **DC1**-A server that is configured as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain.

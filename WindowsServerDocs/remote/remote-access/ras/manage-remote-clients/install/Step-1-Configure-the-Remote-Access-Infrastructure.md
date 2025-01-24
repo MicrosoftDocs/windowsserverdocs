@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 1 Configure the Remote Access Infrastructure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 
 This topic describes how to configure the infrastructure that is required for an advanced Remote Access deployment using a single Remote Access server in a mixed IPv4 and IPv6 environment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan the Remote Access Infrastructure](../plan/Step-1-Plan-the-Remote-Access-Infrastructure.md).

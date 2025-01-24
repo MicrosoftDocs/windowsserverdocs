@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Install File Services Content Servers
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 To deploy content servers that are running the File Services server role, you must install the BranchCache for network files role service of the File Services server role. In addition, you must enable BranchCache on file shares according to your requirements.
 
 During the configuration of the content server, you can allow BranchCache publication of content for all file shares or you can select a subset of file shares to publish.

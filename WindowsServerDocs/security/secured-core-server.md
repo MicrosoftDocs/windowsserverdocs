@@ -11,8 +11,6 @@ ms.contributors: socuff-01282022
 
 # What is Secured-core server?
 
->Applies to: Windows Server 2022, Azure Stack HCI version 21H2 and later
-
 Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and
 operating system security features. The protection provided by Secured-core systems begins before
 the operating system boots and continues whilst running. Secured-core server is designed to deliver
@@ -119,7 +117,7 @@ To learn more about VBS and hardware requirements, see
 ## Simplified management
 
 You can view and configure the OS security features of Secured-core systems using Windows PowerShell
-or the security extension in Windows Admin Center. With Azure Stack HCI Integrated Systems,
+or the security extension in Windows Admin Center. With Azure Local integrated systems,
 manufacturing partners have further simplified the configuration experience for customers so that
 Microsoft’s best server security is available right out of the box.
 
@@ -138,8 +136,8 @@ monitoring by IT and SecOps teams.
 ## Begin your Secured-core journey
 
 You can find hardware certified for Secured-core server from the
-[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Stack HCI servers in the
-[Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
+[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Local servers in the
+[Azure Local Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
 These certified servers come fully equipped with industry-leading security mitigations built into the
 hardware, firmware, and the operating system to help thwart some of the most advanced attack
 vectors.

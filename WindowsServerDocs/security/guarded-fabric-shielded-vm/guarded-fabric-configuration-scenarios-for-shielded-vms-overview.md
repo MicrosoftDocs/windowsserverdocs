@@ -12,8 +12,6 @@ ms.date: 08/29/2018
 # Deploy shielded VMs
 
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 The following topics describe how a tenant can work with shielded VMs.
 
 1. (Optional) [Create a Windows template disk](guarded-fabric-create-a-shielded-vm-template.md) or [create a Linux template disk](guarded-fabric-create-a-linux-shielded-vm-template.md). The template disk can be created by either the tenant or the hosting service provider.

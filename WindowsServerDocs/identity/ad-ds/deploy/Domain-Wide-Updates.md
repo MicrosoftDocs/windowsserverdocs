@@ -12,8 +12,6 @@ ms.custom: inhenkel
 ---
 # Domain-wide schema updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
-
 You can review the following set of changes to help understand and prepare for the schema updates performed by adprep /domainprep in Windows Server.
 
 Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).

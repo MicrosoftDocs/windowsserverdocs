@@ -9,8 +9,6 @@ ms.topic: article
 
 # Example of C# generated code
 
->Applies to: Windows Server 2022, Windows Server 2019
-
 ```C#
 /*
  * HCN API

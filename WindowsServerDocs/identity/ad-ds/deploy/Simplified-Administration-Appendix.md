@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Simplified Administration Appendix
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 -   [Server Manager Add Servers Dialog (Active Directory)](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_AddServers)
 
 -   [Server Manager Remote Server Status](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_ServerMgrStatus)

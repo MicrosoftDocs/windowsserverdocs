@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Configure the Server Certificate Template
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use this procedure to configure the certificate template that Active Directory&reg; Certificate Services (AD CS) uses as the basis for server certificates that are enrolled to servers on your network.
 
 While configuring this template, you can specify the servers by Active Directory group that should automatically receive a server certificate from AD CS.

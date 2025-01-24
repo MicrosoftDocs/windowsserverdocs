@@ -9,8 +9,6 @@ ms.topic: article
 
 # Example of Go generated code
 
->Applies to: Windows Server 2022, Windows Server 2019
-
 ```Go
 /*
  * HCN API

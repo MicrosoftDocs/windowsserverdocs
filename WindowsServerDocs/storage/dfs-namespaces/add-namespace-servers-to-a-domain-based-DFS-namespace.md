@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Add namespace servers to a domain-based DFS namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
-
 You can increase the availability of a domain-based namespace by specifying additional namespace servers to host the namespace.
 
 ## To add a namespace server to a domain-based namespace

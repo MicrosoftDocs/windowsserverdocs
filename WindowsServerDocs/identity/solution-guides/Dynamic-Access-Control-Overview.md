@@ -11,8 +11,6 @@ ms.topic: article
 
 # Dynamic Access Control Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2, Windows Server 2012
-
 This overview topic for the IT professional describes Dynamic Access Control and its associated elements, which were introduced in  Windows Server 2012  and Windows 8.
 
 Domain-based Dynamic Access Control enables administrators to apply access-control permissions and restrictions based on well-defined rules that can include the sensitivity of the resources, the job or role of the user, and the configuration of the device that is used to access these resources.

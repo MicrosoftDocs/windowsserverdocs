@@ -11,8 +11,6 @@ ms.date: 10/27/2021
 
 # Network-Related Performance Counters
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 This topic lists the counters that are relevant to managing network performance, and contains the following sections.
 
 -   [Resource Utilization](#bkmk_ru)

@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # How User Account Control Works
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 User Account Control (UAC) helps prevent malicious programs (also called malware) from damaging a computer and helps organizations deploy a better-managed desktop. With UAC, applications and tasks always run in the security context of a non-administrator account, unless an administrator specifically authorizes administrator-level access to the system. UAC can block the automatic installation of unauthorized applications and prevent inadvertent changes to system settings.
 
 ## UAC Process and Interactions
@@ -151,7 +149,7 @@ All UAC-compliant applications should have a requested execution level added to 
 ### Installer Detection Technology
 Installation programs are applications designed to deploy software. Most installation programs write to system directories and registry keys. These protected system locations are typically writeable only by an administrator in Installer detection technology, which means that standard users do not have sufficient access to install programs. Windows Server 2012 heuristically detects installation programs and requests administrator credentials or approval from the administrator user in order to run with access privileges. Windows Server 2012 also heuristically detects updates and programs that uninstall applications. One of the design goals of UAC is to prevent installations from being run without the user's knowledge and consent because installation programs write to protected areas of the file system and registry.
 
-Installer detection only applies to:
+Installer detection only 
 
 -   32-bit executable files.
 

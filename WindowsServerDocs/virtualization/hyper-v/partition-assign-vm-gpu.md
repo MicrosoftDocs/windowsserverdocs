@@ -1,33 +1,15 @@
 ---
 title: Partition and assign GPUs to a virtual machine in Hyper-V
-description: Learn how to partition and share a GPU with multiple virtual machines on Windows Server and Azure Stack HCI.
-author: robinharwood
-ms.author: roharwoo
+description: Learn how to partition and share a GPU with multiple virtual machines on Windows Server.
+author: meaghanlewis
+ms.author: mosagie
 ms.topic: how-to
 ms.subservice: core-os
-ms.date: 03/15/2024
-zone_pivot_groups: windows-os
+ms.date: 01/09/2025
 #customer intent: As a customer, I want to learn how to partition and assign GPUs to a virtual machine in Hyper-V so that I can use the GPU resources efficiently.
 ---
 
 # Partition and assign GPUs to a virtual machine
-
-:::zone pivot="windows-server"
-
->Applies to: Windows Server 2025 (preview)
-
-> [!IMPORTANT]
-> GPU partitioning in Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-::: zone-end
-
-:::zone pivot="azure-stack-hci"
-
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
-
-[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-stack/includes/hci-arc-vm.md)]
-
-::: zone-end
 
 This article describes how to configure graphics processing unit (GPU) partitions and assign a partition to a virtual machine (VM). It provides instructions on how to configure GPU partition count, assign GPU partitions, and unassign GPU partitions via Windows Admin Center and PowerShell.
 
@@ -45,19 +27,9 @@ There are several requirements and things to consider before you begin to use th
 
 ### Prerequisites for the host server
 
-:::zone pivot="windows-server"
-
 - You must have Windows Server 2025 installed on the host server. If clustering is required when live migrating a virtual machine host, Windows Server 2025 Datacenter must be installed.
 
 - The Hyper-V role installed and configured on your server. See [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md) to found out how to get stared.
-
-::: zone-end
-
-:::zone pivot="azure-stack-hci"
-
-- Install Azure Stack HCI on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
-
-::: zone-end
 
 - Install the physical GPU device of the same make, model, and size on every server of the cluster. Refer to your OEM-provided documentation when installing the GPU device on your physical servers in the cluster.
 
@@ -65,14 +37,10 @@ There are several requirements and things to consider before you begin to use th
 
 - Ensure that the virtualization support and SR-IOV are enabled in the BIOS of each server in the cluster. Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 
-:::zone pivot="windows-server"
-
 - Cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi.
 
 > [!NOTE]
 > When live migrating a virtual machine with a GPU partition assigned, Hyper-V live migration will automatically fall back to using TCP/IP with compression. This has the potential effect of increasing the CPU utilization of a host. In addition, live migrations could take longer than with virtual machines without GPU partitions attached.
-
-::: zone-end
 
 ### Prerequisites for the VMs
 

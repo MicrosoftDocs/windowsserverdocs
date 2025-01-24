@@ -11,8 +11,6 @@ ms.date: 10/10/2016
 
 # Storage Quality of Service
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 Storage Quality of Service (QoS) in Windows Server 2016 provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy-based minimum and maximum performance goals to be configured in units of normalized IOPS.
 
 You can use Storage QoS in Windows Server 2016 to accomplish the following:
@@ -911,4 +909,4 @@ IOPSNormalizationSize
 
 - [Windows Server 2016](../../index.yml)
 - [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)
-- [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct in Windows Server 2016](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

@@ -8,7 +8,7 @@ ms.date: 07/16/2024
 ---
 # Create a workgroup cluster
 
->Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 In this article, learn about and create a workgroup cluster. First, understand what workgroup clusters are and how they differ from traditional failover clusters. Then, create a workgroup cluster either using the Failover Cluster Manager or Windows PowerShell.
 
@@ -253,7 +253,7 @@ The nodes that were validated are automatically added to the Create Cluster Wiza
 
 1. To confirm that the cluster was created, verify that the cluster name is listed under **Failover Cluster Manager** in the navigation tree. You can expand the cluster name and then select items under **Nodes**, **Storage**, or **Networks** to view the associated resources.
 
-After the cluster is created, you can do things such as verify cluster [quorum configuration](/azure-stack/hci/concepts/quorum), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
+After the cluster is created, you can do things such as verify cluster [quorum configuration](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
 
 
 #### [PowerShell](#tab/powershell)
@@ -270,7 +270,7 @@ If you prefer to create a workgroup cluster using PowerShell, follow these steps
     New-Cluster –Name MyCluster -Node server1, server2 -AdministrativeAccessPoint DNS
     ```
 
-1. After the cluster is successfully created, you can do things such as verify cluster [quorum configuration](/azure-stack/hci/concepts/quorum), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
+1. After the cluster is successfully created, you can do things such as verify cluster [quorum configuration](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
 
 ---
 

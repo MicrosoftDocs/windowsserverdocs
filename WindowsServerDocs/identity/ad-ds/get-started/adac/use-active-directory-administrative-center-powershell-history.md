@@ -10,7 +10,7 @@ ms.topic: how-to
 
 # Use the Active Directory Administrative Center Windows PowerShell History Viewer
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 
 
 Active Directory Administrative Center now provides a complete history of all the Windows PowerShell cmdlets it runs and their arguments and values. You can copy the cmdlet history elsewhere for learning, modification, and re-use. You can create task notes to assist with understanding what your Active Directory Administrative Center commands resulted in Windows PowerShell. You can also filter the history to find points of interest.
 

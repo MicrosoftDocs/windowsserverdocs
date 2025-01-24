@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 2 Install and Configure ROUTER1
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 In this multisite test lab guide, the router computer provides an IPv4 and IPv6 bridge between the Corpnet and 2-Corpnet subnets, and acts as a router for IP-HTTPS and Teredo traffic.
 
 - Install the operating system on ROUTER1

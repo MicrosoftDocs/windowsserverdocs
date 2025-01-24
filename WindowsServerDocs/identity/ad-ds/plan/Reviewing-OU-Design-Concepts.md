@@ -11,8 +11,6 @@ ms.topic: article
 
 # Reviewing OU Design Concepts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 The organizational unit (OU) structure for a domain includes the following:
 
 -   A diagram of the OU hierarchy

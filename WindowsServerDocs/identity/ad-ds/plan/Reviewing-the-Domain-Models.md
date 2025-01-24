@@ -11,8 +11,6 @@ ms.topic: article
 
 # Reviewing the Domain Models
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 The following factors impact the domain design model that you select:
 
 - Amount of available capacity on your network that you are willing to allocate to Active Directory Domain Services (AD DS). The goal is to select a model that provides efficient replication of information with minimal impact on available network bandwidth.

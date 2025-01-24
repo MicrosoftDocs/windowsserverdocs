@@ -9,8 +9,6 @@ description: How to deploy Work Folders, including installing the server role, c
 ---
 # Deploying Work Folders
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
-
 This article discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).
 
  To deploy Work Folders, a process that can involve multiple servers and technologies use the following steps.

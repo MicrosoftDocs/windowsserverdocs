@@ -9,17 +9,15 @@ manager: mchad
 ---
 # Cluster to Cluster Storage Replication Within the same Azure Region
 
->Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can configure cluster to cluster storage replication within the same Azure Region. In the examples below, we use a two-node cluster, but cluster to cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
 
 Watch the videos below for a complete walk-through of the process.
 
 Part one
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE26f2Y]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=f95b2b39-1000-4b43-ae2b-534b70cc0667]
 
 Part two
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE269Pq]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=65d7d183-938e-48fc-bc46-df5cb8216393]
 
 ![The architecture diagram showcasing Cluster-to-cluster Storage Replica in Azure within same region.](media/Cluster-to-cluster-azure-one-region/architecture.png)
 > [!IMPORTANT]
@@ -123,7 +121,7 @@ Part two
     - Copy the storage account name and key from "access keys"
     - Create the cloud witness from "failover cluster manager" and use the above account name and key to create it.
 
-16. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step.
+16. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#run-cluster-validation-tests) before moving on to the next step.
 
 17. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long-running performance evaluation mode.
 

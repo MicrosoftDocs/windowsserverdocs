@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix B: Privileged Accounts and Groups in Active Directory
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 
 ## Appendix B: Privileged Accounts and Groups in Active Directory
 "Privileged" accounts and groups in Active Directory are those to which powerful rights, privileges, and permissions are granted that allow them to perform nearly any action in Active Directory and on domain-joined systems. This appendix begins by discussing rights, privileges, and permissions, followed by information about the "highest privilege" accounts and groups in Active Directory,that is, the most powerful accounts and groups.

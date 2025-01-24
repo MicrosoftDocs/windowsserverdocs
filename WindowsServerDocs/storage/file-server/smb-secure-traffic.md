@@ -4,7 +4,7 @@ description: How to secure SMB Traffic in Windows
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 03/06/2024
+ms.date: 10/25/2024
 # Intent: As a network administrator I want to configure ports to secure SMB Traffic in Windows
 ---
 # Secure SMB Traffic in Windows Server
@@ -26,7 +26,7 @@ SMB traffic protects devices inside your network by preventing access from the i
 If you want users to access their files inbound at the edge of your network, you can use SMB over
 QUIC. This uses UDP port 443 by default and provides a TLS 1.3-encrypted security tunnel like a VPN
 for SMB traffic. The solution requires Windows 11 and Windows Server 2022 Datacenter: Azure
-Edition file servers running on Azure Stack HCI. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
+Edition file servers running on Azure Local. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## Block outbound SMB access
 
@@ -46,7 +46,7 @@ information about Azure Cloud and Office 365 IP address ranges, see:
   - [public cloud](https://www.microsoft.com/download/details.aspx?id=56519)
   - [US government cloud](https://www.microsoft.com/download/details.aspx?id=57063)
   - [Germany cloud](https://www.microsoft.com/download/details.aspx?id=57064)
-  - [China cloud](https://www.microsoft.com/download/details.aspx?id=57064).
+  - [China cloud](https://www.microsoft.com/download/details.aspx?id=57062).
   
   The JSON files are updated weekly and include versioning both for the full file and each
   individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US
@@ -155,13 +155,9 @@ allows for more secure options like IPSEC.
 
 For more information about configuring the firewall, see [Windows Defender Firewall with Advanced Security deployment overview](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide).
 
-### Updated firewall rules (preview)
+### Updated firewall rules
 
-> [!IMPORTANT]
-> Windows Server Insiders Edition is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-Beginning with [Windows 11 Insider preview Build 25992 (Canary)](https://blogs.windows.com/windows-insider/2023/11/08/announcing-windows-11-insider-preview-build-25992-canary-channel/) and [Windows Server Preview Build 25997](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25997/m-p/3983949), the built-in firewall rules doesn't contain the SMB NetBIOS ports anymore. In earlier versions of Windows Server, when you created a share, the firewall automatically enabled certain rules in the File and Printer Sharing group. In particular, the built-in firewall automatically used inbound NetBIOS ports 137 through 139. Shares made with SMB2 or later don't use NetBIOS ports 137-139. If you need to use an SMB1 server for legacy compatibility reasons, you must manually reconfigure the firewall to open those ports
+Beginning with Windows 11, version 24H2 and Windows Server 2025, the built-in firewall rules doesn't contain the SMB NetBIOS ports anymore. In earlier versions of Windows Server, when you created a share, the firewall automatically enabled certain rules in the File and Printer Sharing group. In particular, the built-in firewall automatically used inbound NetBIOS ports 137 through 139. Shares made with SMB2 or later don't use NetBIOS ports 137-139. If you need to use an SMB1 server for legacy compatibility reasons, you must manually reconfigure the firewall to open those ports
 
 We made this change to improve network security. This change brings SMB firewall rules more in line with the standard behavior for the Windows Server *File Server* role. By default, the firewall rule only open the minimum number of ports required for sharing data. Administrators can reconfigure the rules to restore the legacy ports.
 

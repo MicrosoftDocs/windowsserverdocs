@@ -11,8 +11,6 @@ ms.topic: article
 
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 You can find the following documentation about Active Directory Domain Services (AD DS) on the Windows Server 2003 and  Windows Server 2008  TechCenter websites:
 
 - For more information about the process of locating a domain controller, see [Active Directory Collection](/previous-versions/windows/it-pro/windows-server-2003/cc780036(v=ws.10)).

@@ -9,8 +9,6 @@ ms.date: 09/18/2018
 
 # Use a custom gateway plugin in your tool extension
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
-
 In this article, we will use a custom gateway plugin in a new, empty tool extension we have created with the Windows Admin Center CLI.
 
 ## Prepare your environment ##

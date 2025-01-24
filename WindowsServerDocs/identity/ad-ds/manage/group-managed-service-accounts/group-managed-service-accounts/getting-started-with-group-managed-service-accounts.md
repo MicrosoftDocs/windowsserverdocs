@@ -10,8 +10,6 @@ ms.date: 08/26/2024
 
 # Get started with Group Managed Service Accounts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 In this article, learn how to enable and use Group Managed Service Accounts (gMSA) in Windows Server.
 
 Authentication protocols supporting mutual authentication such as Kerberos can't be used unless all the instances of the services use the same principal. For example, when a client computer connects to a service that uses load balancing or another method where all the servers appear to be the same service to the client. Meaning each service has to use the same passwords or keys to prove their identity. Group Managed Service Accounts are a type of account that can be used with multiple servers. A gMSA is a domain account that can be used to run services on multiple servers without having to manage the password. The gMSA provides automatic password management and simplified service principal name (SPN) management, including delegation of management to other administrators.

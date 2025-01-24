@@ -10,14 +10,13 @@ ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server to Server Storage Replication
 
->Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use Storage Replica to configure two servers to sync data so that each has an identical copy of the same volume. This topic provides some background of this server-to-server replication configuration, as well as how to set it up and manage the environment.
 
 To manage Storage Replica you can use [Windows Admin Center](../../manage/windows-admin-center/overview.md) or PowerShell.
 
 Here's an overview video of using Storage Replica in Windows Admin Center.
-> [!video https://www.microsoft.com/videoplayer/embed/3aa09fd4-867b-45e9-953e-064008468c4b?autoplay=false]
+
+> [!video 310d4531-23a6-4140-8892-fecc4a65c2a1]
 
 
 ## Prerequisites
@@ -175,7 +174,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     ```
 
     > [!IMPORTANT]
-      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](/azure-stack/hci/manage/diskspd-overview) to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:
+      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](/azure/azure-local/manage/diskspd-overview?context=/windows-server/context/windows-server-storage) to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:
       >
       > `Diskspd.exe -c1g -d600 -W5 -C5 -b8k -t2 -o2 -r -w5 -i100 -j100 d:\test`
 
@@ -456,4 +455,4 @@ The process is, at a high level:
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

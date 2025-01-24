@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Install the BranchCache Feature and Configure the Hosted Cache Server by Service Connection Point
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 You can use this procedure to install the BranchCache feature on your hosted cache server, HCS1, and to configure the server to register a Service Connection Point \(SCP\) in Active Directory Domain Services \(AD DS\).
 
 When you register hosted cache servers with an SCP in AD DS, the SCP allows client computers that are configured correctly to automatically discover hosted cache servers by querying AD DS for the SCP. Instructions on how to configure client computers to perform this action are provided later in this guide.

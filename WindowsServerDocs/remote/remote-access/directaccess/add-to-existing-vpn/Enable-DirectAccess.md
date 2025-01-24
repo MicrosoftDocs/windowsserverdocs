@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Enable DirectAccess
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and  Remote Access Service (RAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single  Windows Server 2016 or Windows Server 2012  Remote Access server with basic settings.
 
 -   [Step 1: Configure the DirectAccess infrastructure](step-1-configure-da-inf-davpn.md). This step includes configuring network and server settings, DNS settings and Active Directory settings.

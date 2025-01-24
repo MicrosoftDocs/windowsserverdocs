@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # DNS Policy Scenario Guide
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This guide is intended for use by DNS, network, and systems administrators.
 
 DNS Policy is a new feature for DNS in Windows Server&reg; 2016. You can use this guide to learn how to use DNS policy to control how a DNS server processes name resolution queries based on different parameters that you define in policies.

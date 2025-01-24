@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Manage NPSs
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use the topics in this section to manage NPSs.
 
 >[!NOTE]

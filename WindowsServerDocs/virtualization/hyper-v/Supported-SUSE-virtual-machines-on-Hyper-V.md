@@ -3,13 +3,13 @@ title: Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
 description: Lists the SUSE Linux Enterprise Server (SLES)/Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-ms.author: roharwoo
-author: kkkashan
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 09/27/2023
 ---
 # Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
 
-> Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+> 
 
 The following is a feature distribution map that indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.
 

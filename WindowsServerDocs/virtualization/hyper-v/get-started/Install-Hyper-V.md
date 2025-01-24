@@ -1,23 +1,23 @@
 ---
-title: Install the Hyper-V role on Windows Server
-description: Gives instructions for installing Hyper-V using Server Manager or Windows PowerShell.
+title: Install Hyper-V
+description: Gives instructions for installing the Hyper-V role using Server Manager or Windows PowerShell. And gives instructions for enablings Hyper-V on Windows.
 ms.topic: how-to
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-ms.author: roharwoo
-author: robinharwood
-ms.date: 08/13/2023
+ms.author: mosagie
+author: meaghanlewis
+ms.date: 01/15/2025
+zone_pivot_groups: windows
 ---
-# Install the Hyper-V role on Windows Server
 
->Applies to: Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Windows Server 2019
+# Install Hyper-V
 
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+:::zone pivot="windows-server"
 
 To create and run virtual machines, install the Hyper-V role on Windows Server by using Server Manager or the **Install-WindowsFeature** cmdlet in Windows PowerShell.
-For Windows 10 and Windows 11, see [Install Hyper-V on Windows](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 To learn more about Hyper-V, see the [Hyper-V Technology Overview](../Hyper-V-Technology-Overview.md). To learn more about Hyper-V, see the [Hyper-V Overview](../Hyper-V-Technology-Overview.md). To try out Windows Server 2025, you can download and install an evaluation copy. See the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2025).
+
+## Check requirements for Windows Server
 
 Before you install Windows Server or add the Hyper-V role, make sure that:
 
@@ -72,6 +72,75 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 > [!NOTE]
 > If you install this role on a server that runs the Server Core installation option of Windows Server 2016 and use the parameter `-IncludeManagementTools`, only the Hyper-V Module for Windows PowerShell is installed. You can use the GUI management tool, Hyper-V Manager, on another computer to remotely manage a Hyper-V host that runs on a Server Core installation. For instructions on connecting remotely, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
 
-## Additional References
+## Additional references
 
 - [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-ps&preserve-view=true)
+
+::: zone-end
+
+:::zone pivot="windows"
+
+Enable Hyper-V to create virtual machines on Windows. Hyper-V can be enabled in many ways including using the Windows control panel, PowerShell or using the Deployment Imaging Servicing and Management tool (DISM). This document walks through each option.
+
+>[!NOTE]
+> Hyper-V is built into Windows as an optional feature -- there's no Hyper-V download.
+
+## Check requirements for Windows
+
+- Windows 10 (Pro or Enterprise), or Windows 11 (Pro or Enterprise)
+- 64-bit Processor with Second Level Address Translation (SLAT).
+- CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
+- Minimum of 4 GB memory.
+
+>[!NOTE]
+> The Hyper-V role **can't** be installed on Windows 10 Home or Windows 11 Home.
+
+For more information and troubleshooting, see [Windows Hyper-V System Requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
+
+## Enable Hyper-V using PowerShell
+
+1. Open a PowerShell console as Administrator.
+
+1. Run the following command:
+
+  ```powershell
+  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+  ```
+
+  If the command isn't found, make sure you're running PowerShell as Administrator.
+
+1. When the installation completes, reboot.
+
+## Enable Hyper-V with CMD and DISM
+
+The Deployment Image Servicing and Management tool (DISM) helps configure Windows and Windows images. Among its many applications, DISM can enable Windows features while the operating system is running.
+
+To enable the Hyper-V role using DISM:
+
+1. Open up a PowerShell or CMD session as Administrator.
+
+1. Type the following command:
+
+  ```powershell
+  DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+  ```
+
+  ![Console window showing Hyper-V being enabled.](media/dism-upd.png)
+
+For more information about DISM, see the [DISM Technical Reference](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+
+## Enable the Hyper-V role through Settings
+
+1. Navigate to the Control Panel.
+
+1. Select **Programs**, then **Programs and Features**.
+
+1. Select **Turn Windows Features on or off**.
+
+1. Select **Hyper-V** and then select **OK**.
+
+![Windows programs and features dialogue box](media/enable-hyper-v.png)
+
+When the installation completes you're prompted to restart your computer.
+
+::: zone-end

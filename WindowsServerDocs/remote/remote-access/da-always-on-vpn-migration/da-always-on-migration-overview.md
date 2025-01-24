@@ -11,8 +11,6 @@ ms.date: 05/29/2018
 
 # Overview of the DirectAccess to Always On VPN migration
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
-
 &#187; [**Next:** Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)
 
 In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess, such as automatic connections initiated before users sign in. Always On VPN, however, has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess. Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess.

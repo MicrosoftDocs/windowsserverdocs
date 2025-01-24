@@ -8,7 +8,7 @@ ms.date: 04/01/2023
 ---
 # Install MultiPoint Services
 
-Applies to: Windows Server 2016 and later
+
 
 Follow these instructions to install MultiPoint Services when you're installing a new server.
 

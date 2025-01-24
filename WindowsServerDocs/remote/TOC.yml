@@ -225,11 +225,13 @@
   - name: Remote Server Administration Tools
     href: remote-server-administration-tools.md
   - name: Remote Desktop Services
-    href: remote-desktop-services/remote-desktop-services-overview.md
+    href: remote-desktop-services/index.yml
   - name: Remote Access
     items:
     - name: Overview
       items:
+      - name: Remote Desktop Services
+        href: remote-desktop-services/remote-desktop-services-overview.md
       - name: About Remote Access
         href: remote-access/remote-Access.md
       - name: About Always On VPN
@@ -459,7 +461,7 @@
         - name: RAS Gateway GRE Tunnel Throughput and Performance
           href: remote-access/ras-gateway/RAS-Gateway-GRE-Perf.md
         - name: RAS Gateway for Software Defined Networking
-          href: /azure-stack/hci/concepts/gateway-overview
+          href: /azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-remote
       - name: Routing
         items:
         - name: Network Address Translation (NAT) routers

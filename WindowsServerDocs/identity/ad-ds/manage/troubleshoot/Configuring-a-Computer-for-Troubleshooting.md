@@ -10,8 +10,6 @@ ms.topic: article
 ---
 # Configuring a Computer for Troubleshooting
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Before you use advanced troubleshooting techniques to identify and fix Active Directory problems, configure your computers for troubleshooting. You should also have a basic understanding of troubleshooting concepts, procedures, and tools.
 
 For information about monitoring tools for Windows Server, see the Step-by-Step Guide for [Performance and Reliability Monitoring in Windows Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771692(v=ws.10))

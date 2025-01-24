@@ -11,8 +11,6 @@ ms.topic: article
 
 # Delegating Administration by Using OU Objects
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 You can use organizational units (OUs) to delegate the administration of objects, such as users or computers, within the OU to a designated individual or group. To delegate administration by using an OU, place the individual or group to which you are delegating administrative rights into a group, place the set of objects to be controlled into an OU, and then delegate administrative tasks for the OU to that group.
 
 Active Directory Domain Services (AD DS) enables you to control the administrative tasks that can be delegated at a very detailed level. For example, you can assign one group to have full control of all objects in an OU; assign another group the rights only to create, delete, and manage user accounts in the OU; and then assign a third group the right only to reset user account passwords. You can make these permissions inheritable so that they apply to any OUs that are placed in subtrees of the original OU.

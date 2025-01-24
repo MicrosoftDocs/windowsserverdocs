@@ -10,8 +10,6 @@ ms.author: roharwoo
 
 # Managing Remote Storage Resources
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
-
 To manage storage resources on a remote computer, you have two options:
 
 -   Connect to the remote computer from the File Server Resource Manager Microsoft<sup>®</sup> Management Console (MMC) snap-in (which you can then use to manage the remote resources).

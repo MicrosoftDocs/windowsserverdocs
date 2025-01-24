@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Generate a usage report for remote clients using historical data
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 
 The management console on the Remote Access server can be used to generate a usage report for the remote clients that are accessing the server. To generate a usage report for remote clients, you first enable accounting on the Remote Access server. After you generate the report, you can use the monitoring dashboard that is available in the management console on the Remote Access server to view the load statistics on the server.

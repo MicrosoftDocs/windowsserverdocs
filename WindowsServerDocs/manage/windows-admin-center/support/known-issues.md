@@ -8,8 +8,6 @@ ms.date: 06/05/2024
 ---
 # Windows Admin Center known issues
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
-
 If you encounter an issue not described on this page, let us know at the [Windows Admin Center feedback page](https://aka.ms/WACfeedback).
 
 ## Installer
@@ -47,6 +45,8 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 - Some APIs used by Windows Admin Center, including the DeploymentShare API, require the user to be a local administrator. Network share creation operations cannot be performed by a standard Windows user by default. Windows Admin Center cannot elevate a standard user account to administrator. Adding the user to the "Gateway administrators" group in Settings only changes the permissions the user has within the gateway, not on the system.
    - You may not run into this issue on modernized gateway builds of Windows Admin Center. By default, modernized gateway builds utilize a form login to access the gateway, which does not have the local administrator restriction. Existing versions of Windows Admin Center utilize NTLM/Kerberos, which obtains a token limited to the localhost environment. NTLM/Kerberos login is also available on modernized gateway builds.
+
+- Windows Admin Center does not support authenticating guest users of Microsoft Entra ID tenants. As a result, guest users of Microsoft Entra ID tenants will no longer be able to connect their Windows Admin Center instance to Azure or use Azure services like Azure Arc, Azure Site Recovery, Azure File Sync, etc. 
 
 ### Extension Manager
 
@@ -252,11 +252,11 @@ Windows Admin Center doesn't currently support scenarios with mixed work group m
 
 ### Enabling Hyper-V on VMs
 
-You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying to enable Hyper-V on VMs without Azure Stack HCI generates an error message that says "A prerequisite check for the Hyper-V feature failed," as shown in the following screenshot.
+You can only install and enable Hyper-V on VMs running Azure Local. Trying to enable Hyper-V on VMs without Azure Local generates an error message that says "A prerequisite check for the Hyper-V feature failed," as shown in the following screenshot.
 
 :::image type="content" source="../media/cluster-create-install-hyperv.png" alt-text="A screenshot of the Windows Admin Center Server Manager Roles and Features page displaying the enabling Hyper-V error message.":::
 
-To install Hyper-V on VMs running Azure Stack HCI, open an elevated PowerShell prompt and run the following command:
+To install Hyper-V on VMs running Azure Local, open an elevated PowerShell prompt and run the following command:
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
@@ -393,7 +393,7 @@ To resolve this issue:
 
 ### Nested virtualization
 
-When you're validating Azure Stack HCI cluster deployments on VMs, you must enable nested virtualization before you enable roles or features by running the following command in PowerShell:
+When you're validating Azure Local cluster deployments on VMs, you must enable nested virtualization before you enable roles or features by running the following command in PowerShell:
 
 ```powershell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true

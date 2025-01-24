@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Manage NPS Templates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use Network Policy Server \(NPS\) templates to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS and export for use on other NPSs.
 
 Templates Management provides a node in the NPS console where you can create, modify, delete, duplicate, and view the use of NPS templates. NPS templates are designed to reduce the amount of time and cost that it takes to configure NPS on one or more servers.

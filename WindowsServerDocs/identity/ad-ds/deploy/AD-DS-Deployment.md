@@ -11,8 +11,6 @@ ms.topic: article
 
 # AD DS Deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This guide covers how to install and remove Active Directory Domain Services (AD DS) in  Windows Server 2012 , and important issues to be aware of when you add new domain controllers to an existing Active Directory environment.
 
 - [What's New in Active Directory Domain Services Installation and Removal](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)

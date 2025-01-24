@@ -9,8 +9,6 @@ ms.date: 09/13/2023
 ---
 # Credentials Processes in Windows Authentication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This reference topic for the IT professional describes how Windows authentication processes credentials.
 
 Windows credentials management is the process by which the operating system receives the credentials from the service or user and secures that information for future presentation to the authenticating target. In the case of a domain-joined computer, the authenticating target is the domain controller. The credentials used in authentication are digital documents that associate the user's identity to some form of proof of authenticity, such as a certificate, a password, or a PIN.

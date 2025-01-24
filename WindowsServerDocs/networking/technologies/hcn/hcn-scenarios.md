@@ -9,8 +9,6 @@ ms.topic: article
 
 # Common scenarios
 
->Applies to: Windows Server 2022, Windows Server 2019
-
 ## Scenario: HCN
 
 ### Create a HCN

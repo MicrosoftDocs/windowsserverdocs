@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Access Permission
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 Access permission is configured on the **Overview** tab of each network policy in Network Policy Server (NPS).
 
 This setting allows you to configure the policy to either grant or deny access to users if the conditions and constraints of the network policy are matched by the connection request.

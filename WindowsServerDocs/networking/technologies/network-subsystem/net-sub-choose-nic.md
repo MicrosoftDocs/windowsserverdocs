@@ -11,8 +11,6 @@ ms.date: 10/27/2021
 
 # Choosing a Network Adapter
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 You can use this topic to learn some of the features of network adapters that might affect your purchasing choices.
 
 Network-intensive applications require high-performance network adapters. This section explores some considerations for choosing network adapters, as well as how to configure different network adapter settings to achieve the best network performance.

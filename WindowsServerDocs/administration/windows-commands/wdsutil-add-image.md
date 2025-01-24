@@ -11,7 +11,7 @@ ms.date: 06/30/2022
 
 # wdsutil add-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds images to a Windows Deployment Services server.
 

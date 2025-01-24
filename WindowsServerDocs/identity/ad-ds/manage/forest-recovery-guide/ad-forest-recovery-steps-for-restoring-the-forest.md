@@ -9,7 +9,7 @@ ms.topic: article
 
 # Active Directory Forest Recovery - Steps to restore the forest
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 This section provides an overview of the recommended path for recovering a forest. The forest recovery steps are described in detail later.
 

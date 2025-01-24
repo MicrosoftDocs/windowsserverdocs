@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Demoting domain controllers and domains
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
-
 This article explains how to remove Active Directory Domain Services (AD DS) using Server Manager or Windows PowerShell.
 
 ## AD DS removal workflow

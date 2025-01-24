@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Deploy your Remote Desktop environment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 Use the following steps to deploy the Remote Desktop servers in your environment. You can install the server roles on physical machines or virtual machines, depending on whether you are creating an on-premises, cloud-based, or hybrid environment.
 
 If you are using virtual machines for any of the Remote Desktop Services servers, make sure you have [prepared those virtual machines](rds-prepare-vms.md).

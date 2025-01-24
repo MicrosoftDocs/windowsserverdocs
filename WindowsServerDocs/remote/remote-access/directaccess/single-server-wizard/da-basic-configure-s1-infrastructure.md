@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 1 Configure the Basic DirectAccess Infrastructure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This topic describes how to configure the infrastructure required for a basic DirectAccess deployment using a single DirectAccess server in a mixed IPv4 and IPv6 environment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](../../../remote-access/directaccess/single-server-wizard/Plan-a-Basic-DirectAccess-Deployment.md).
 
 |Task|Description|

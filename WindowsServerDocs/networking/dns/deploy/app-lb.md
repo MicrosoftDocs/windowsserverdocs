@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Use DNS Policy for Application Load Balancing
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use this topic to learn how to configure DNS policy to perform application load balancing.
 
 Previous versions of Windows Server DNS only provided load balancing by using round robin responses; but with DNS in Windows Server 2016, you can configure DNS policy for application load balancing.

@@ -9,8 +9,6 @@ ms.date: 08/22/2024
 
 # Windows Admin Center overview
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
-
 Windows Admin Center is a remote management tool for Windows Server running anywhere&mdash;physical, virtual, on-premises, in Azure, or in a hosted environment&mdash;at no extra cost.
 
 To find out what's new, see [Release history](support/release-history.md).
@@ -31,7 +29,7 @@ Here are a few things you can use Windows Admin Center for:
 
 - **Work with hybrid solutions**: Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services. For details, see [Azure hybrid services](azure/index.md).
 
-- **Streamline hyperconverged management**: Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more. For details, see [Manage HCI](use/manage-hyper-converged.md).
+- **Streamline hyperconverged management**: Streamline management of Azure Local or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more. For details, see [Manage HCI](use/manage-hyper-converged.md).
 
 Here's a video to give you an overview, followed by a poster giving more details:
 > [!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
@@ -56,7 +54,7 @@ Here's a video to give you an overview, followed by a poster giving more details
 
 | Windows Admin Center in Azure | Support |
 |-----------------------|-----------------|
-| - [Manage a Windows Server IaaS VMs](azure/manage-vm.md) <br> - [Manage Azure Arc-enabled Servers (preview)](azure/manage-arc-hybrid-machines.md) <br> - [Manage Azure Stack HCI clusters (preview)](azure/manage-hci-clusters.md) | - [Release history](support/release-history.md) <br> - [Support policy](support/index.md) <br> - [Common troubleshooting steps](support/troubleshooting.md) <br> - [Known issues](support/known-issues.md) |
+| - [Manage a Windows Server IaaS VMs](azure/manage-vm.md) <br> - [Manage Azure Arc-enabled Servers (preview)](azure/manage-arc-hybrid-machines.md) <br> - [Manage Azure Local clusters (preview)](azure/manage-hci-clusters.md) | - [Release history](support/release-history.md) <br> - [Support policy](support/index.md) <br> - [Common troubleshooting steps](support/troubleshooting.md) <br> - [Known issues](support/known-issues.md) |
 
 | Extend |
 |--------|

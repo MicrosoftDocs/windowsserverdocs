@@ -9,8 +9,6 @@ ms.date: 01/12/2023
 
 # Windows Admin Center network requirements
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
-
 This article describes the networking requirements for using Windows Admin center to manage your servers and clusters.
 
 ## Networking configuration

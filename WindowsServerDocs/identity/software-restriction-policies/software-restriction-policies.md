@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Software Restriction Policies
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This topic for the IT professional describes Software Restriction Policies (SRP) in Windows Server 2012 and 2016 and Windows 8, and provides links to technical information about SRP beginning with Windows Server 2003.
 
 > [!IMPORTANT]

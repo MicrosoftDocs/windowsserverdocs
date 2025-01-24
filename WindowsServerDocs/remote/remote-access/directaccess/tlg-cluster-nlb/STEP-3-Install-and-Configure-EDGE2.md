@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 3 Install and Configure EDGE2
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 EDGE2 is the second member of a Remote Access cluster. EDGE2 is installed and configured before enabling the cluster configuration.
 
 Perform the following steps to configure EDGE2:

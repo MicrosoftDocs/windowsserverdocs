@@ -9,8 +9,6 @@ ms.date: 09/24/2024
 ---
 # Windows Logon Scenarios
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This reference topic for the IT professional summarizes common Windows logon and sign-in scenarios.
 
 The Windows operating systems require all users to log on to the computer with a valid account to access local and network resources. Windows-based computers secure resources by implementing the logon process, in which users are authenticated. After a user is authenticated, authorization and access control technologies implement the second phase of protecting resources: determining if the authenticated user is authorized to access a resource.

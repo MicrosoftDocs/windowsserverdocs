@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Virtualized Domain Controller Architecture
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This article covers the architecture of virtualized domain controller cloning and safe restore. It shows the processes cloning and safe restore with flowcharts and then provides a detailed explanation of each step in the process.
 
 -   [Virtualized domain controller cloning architecture](#BKMK_CloneArch)

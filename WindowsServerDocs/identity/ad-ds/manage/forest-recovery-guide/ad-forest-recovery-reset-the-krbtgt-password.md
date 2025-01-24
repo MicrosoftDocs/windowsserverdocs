@@ -11,8 +11,6 @@ ms.custom: 3bd6c1d0-d316-4b03-b7b4-557d4537635c, inhenkel
 
 # Active Directory Forest Recovery - Reset the krbtgt password
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
-
 Use the following procedure to reset the krbtgt password for the domain. The following procedure applies writeable DCs, but not read-only domain controllers (RODCs).
 
 > [!IMPORTANT]

@@ -10,8 +10,6 @@ manager: dongill
 ---
 # Track your Remote Desktop Services client access licenses (RDS CALs)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use the Remote Desktop Licensing Manager tool to create reports to track the RDS Per User CALs that have been issued by a Remote Desktop license server.
 
 > [!NOTE]

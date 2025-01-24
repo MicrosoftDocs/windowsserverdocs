@@ -9,8 +9,6 @@ ms.date: 09/17/2018
 
 # Guides
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
-
 ## Guides
 Here are some guides for developing with the Windows Admin Center SDK:
 

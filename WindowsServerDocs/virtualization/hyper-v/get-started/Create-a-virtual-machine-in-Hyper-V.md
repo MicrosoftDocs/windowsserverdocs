@@ -4,16 +4,11 @@ description: Gives instructions for creating a virtual machine using Hyper-V Man
 ms.topic: how-to
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
 ms.author: alalve
-author: alanalves
-ms.date: 08/13/2024
+author: xelu86
+ms.date: 10/25/2024
 ---
 
 # Create a virtual machine in Hyper-V
-
->Applies to:  Windows Server 2025 (preview), Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019, Windows 11, Windows 10
-
-> [!IMPORTANT]
-> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Learn how to create a virtual machine by using Hyper-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper-V Manager.
 

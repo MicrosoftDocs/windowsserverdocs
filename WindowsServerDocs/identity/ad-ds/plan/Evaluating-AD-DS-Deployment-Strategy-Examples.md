@@ -11,8 +11,6 @@ ms.topic: article
 
 # Evaluating AD DS Deployment Strategy Examples
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Consider the following example of a fictitious company, Contoso Pharmaceuticals, which is deploying Active Directory Domain Services (AD DS) in its environment. The Contoso environment consists of four domains. The forest functional level is Windows Server 2003. The following illustration shows the current domain structure for the Contoso organization.
 
 ![Illustration that shows the current domain structure for the Contoso organization.](media/Evaluating-AD-DS-Deployment-Strategy-Examples/3dd79e00-48f8-4927-989c-c55a79caf1be.gif)

@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Windows Authentication Architecture
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This overview topic for the IT professional explains the basic architectural scheme for Windows authentication.
 
 Authentication is the process by which the system validates a user's logon or sign-in information. A user's name and password are compared against an authorized list, and if the system detects a match, access is granted to the extent specified in the permission list for that user.

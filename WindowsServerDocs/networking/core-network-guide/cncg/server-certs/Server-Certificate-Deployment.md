@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Server Certificate Deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 Follow these steps to install an enterprise root certification authority (CA) and to deploy server certificates for use with PEAP and EAP.
 
 > [!IMPORTANT]

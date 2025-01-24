@@ -10,8 +10,6 @@ ms.date: 04/01/2022
 
 # Plan for retention of information on file servers
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 A data retention policy is important for any organization. You can use the following information to plan how you retain information in your organization.
 
 ## Determine the retention schedule

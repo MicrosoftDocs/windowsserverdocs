@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Plan a Remote Access Cluster Deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. This overview provides an introduction to the planning steps required in order to deploy a cluster of  Windows Server 2016 or Windows Server 2012 Remote Access servers.
 
 -   [Plan an Advanced DirectAccess Deployment](../../../directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md). This step includes planning for the infrastructure required to deploy a single server. It includes planning for network and server settings, certificate requirements, DNS settings, network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy Objects (GPOs).

@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Configure certificate auto-enrollment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 > [!NOTE]
 > Before you perform this procedure, you must configure a server certificate template by using the Certificate Templates Microsoft Management Console snap-in on a CA that is running AD CS.
 Membership in both the **Enterprise Admins** and the root domain's **Domain Admins** group is the minimum required to complete this procedure.

@@ -11,8 +11,6 @@ ms.topic: article
 
 # Designing the Logical Structure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 Active Directory Domain Services (AD DS) enables organizations to create a scalable, secure, and manageable infrastructure for user and resource management. It also enables them to support directory-enabled applications.
 
 A well-designed Active Directory logical structure provides the following benefits:

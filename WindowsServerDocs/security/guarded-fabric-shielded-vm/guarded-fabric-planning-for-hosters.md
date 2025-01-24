@@ -11,8 +11,6 @@ ms.date: 08/29/2018
 
 # Guarded Fabric and Shielded VM Planning Guide for Hosters
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This topic covers planning decisions that will need to be made to enable shielded virtual machines to run on your fabric. Whether you upgrade an existing Hyper-V fabric or create a new fabric, running shielded VMs consists of two main components:
 
 - The Host Guardian Service (HGS) provides attestation and key protection so that you can make sure that shielded VMs will run only on approved and healthy Hyper-V hosts. 

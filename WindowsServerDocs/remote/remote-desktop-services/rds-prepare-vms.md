@@ -11,8 +11,6 @@ manager: dongill
 
 # Prepare your virtual machines for Remote Desktop
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can install Remote Desktop Services components on physical servers or on virtual machines.
 
 The first step is to [create Windows Server virtual machines in Azure](/azure/virtual-machines/windows/quick-create-portal). You'll want to create three VMs: one for the RD Session Host, one for the Connection Broker, and one for the RD Web and RD Gateway. To ensure the availability of your RDS deployment, create an availability set (under **High availablility** in the VM creation process) and group multiple VMs in that availability set.

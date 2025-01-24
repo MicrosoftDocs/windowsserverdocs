@@ -9,8 +9,6 @@ ms.date: 09/24/2024
 ---
 # Windows Authentication Concepts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This reference overview topic describes the concepts on which Windows authentication is based.
 
 Authentication is a process for verifying the identity of an object or person. When you authenticate an object, the goal is to verify that the object is genuine. When you authenticate a person, the goal is to verify that the person is not an imposter.

@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Move File Servers to the BranchCache File Servers Organizational Unit
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can use this procedure to add BranchCache file servers to an organizational unit (OU) in Active Directory Domain Services (AD DS).
 
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.

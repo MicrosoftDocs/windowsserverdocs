@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # QoS Policy Error and Event Messages
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 Following are the error and event messages that are associated with QoS Policy.
 
 ## Informational Messages

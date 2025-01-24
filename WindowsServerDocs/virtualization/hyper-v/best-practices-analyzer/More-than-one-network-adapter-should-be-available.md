@@ -1,15 +1,13 @@
 ---
 title: More than one network adapter should be available
 description: Learn what to do when the server is configured with one network adapter, which must be shared by the management operating system and all virtual machines that require access to a physical network.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 59940e56-e06a-490f-90ea-cf30d9f80b09
 ms.date: 8/16/2016
 ---
 # More than one network adapter should be available
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

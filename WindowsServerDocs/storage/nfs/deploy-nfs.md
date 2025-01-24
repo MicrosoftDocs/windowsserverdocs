@@ -9,8 +9,6 @@ ms.date: 03/27/2023
 
 # Deploy Network File System
 
->Applies to: Windows Server 2022, Windows Server 2019, and Windows Server 2016.
-
 Network File System (NFS) provides a file sharing solution that lets you transfer files between computers running Windows Server and UNIX operating systems by using the NFS protocol. This article describes the steps you should follow to deploy NFS.
 
 ## What's new in Network File System

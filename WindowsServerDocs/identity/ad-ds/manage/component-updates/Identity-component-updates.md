@@ -11,8 +11,6 @@ ms.topic: article
 
 # Identity component updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 
 ## Lesson 1: Identity component updates
 This lesson explains the Identity component updates in Windows Server 2012 R2.

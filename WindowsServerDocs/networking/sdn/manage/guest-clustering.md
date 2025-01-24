@@ -11,8 +11,6 @@ ms.date: 11/20/2021
 
 # Guest clustering in a virtual network
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network. Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
 
 The method for making the floating IP reachable is to use a Software Load Balancer \(SLB\) virtual IP \(VIP\).  The software load balancer must be configured with a health probe on a port on that IP so that SLB directs traffic to the machine that currently has that IP.

@@ -10,8 +10,6 @@ ms.topic: article
 
 # How the Windows Time Service Works
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later, Azure Stack HCI, versions 21H2 and 20H2
-
 **In this section**
 
 -   [Windows Time Service Architecture](#windows-time-service-architecture)

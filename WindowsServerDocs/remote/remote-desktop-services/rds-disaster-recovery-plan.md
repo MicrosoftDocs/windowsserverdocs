@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Create your disaster recovery plan for RDS
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 You can create a disaster recovery plan in Azure Site Recovery to automate the failover process. Add all RDS component VMs to the recovery plan.
 
 Use the following steps in Azure to create your recovery plan:

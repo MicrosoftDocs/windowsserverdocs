@@ -11,8 +11,6 @@ ms.date: 01/25/2023
 
 # Network shell \(netsh\)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they are installed on computers running Windows Server.
 
 Some client technologies, such as Dynamic Host Configuration Protocol \(DHCP\) client and BranchCache, also provide netsh commands that allow you to configure client computers that are running Windows 10.

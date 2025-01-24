@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Authentication Policies and Authentication Policy Silos
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This topic for the IT professional describes authentication policy silos and the policies that can restrict accounts to those silos. It also explains how authentication policies can be used to restrict the scope of accounts.
 
 Authentication policy silos and the accompanying policies provide a way to contain high-privilege credentials to systems that are only pertinent to selected users, computers, or services. Silos can be defined and managed in Active Directory Domain Services (AD DS) by using the Active Directory Administrative Center and the Active Directory Windows PowerShell cmdlets.
@@ -218,7 +216,7 @@ The following table describes the events that are associated with Protected User
 
 The events are recorded in the Applications and Services Logs at **Microsoft\Windows\Authentication**.
 
-For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies) and [Troubleshoot events related to Protected Users](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_TrubleshootingEvents).
+For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies) and [Troubleshoot events related to Protected Users](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_TroubleshootingEvents).
 
 |Event ID and Log|Description|
 |----------|--------|

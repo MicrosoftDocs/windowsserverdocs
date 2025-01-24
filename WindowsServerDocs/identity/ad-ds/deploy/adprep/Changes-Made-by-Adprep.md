@@ -11,8 +11,6 @@ ms.topic: article
 
 # Changes Made by Adprep.exe
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 This topic describes the changes that Adprep.exe makes in Windows Server 2012 R2 and Windows Server 2012.
 
 - [Forest-Wide Updates](../../../ad-ds/deploy/RODC/Forest-Wide-Updates.md)

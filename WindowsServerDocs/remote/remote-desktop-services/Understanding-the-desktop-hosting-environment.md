@@ -9,8 +9,6 @@ manager: dongill
 ---
 # Understanding the desktop hosting environment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 The following information describes the components of the desktop hosting service.
 
 ## Tenant environment

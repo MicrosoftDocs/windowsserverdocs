@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Checklist: Apply a Quota to a volume or folder
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
-
 1. Configure e-mail settings if you plan to send threshold notifications or storage reports by e-mail. [Configure E-Mail Notifications](configure-email-notifications.md)
 
 2. Assess storage requirements on the volume or folder. You can use reports on the **Storage Reports Management** node to provide data. (For example, run a Files by Owner report on demand to identify users who use large amounts of disk space.) [Generate Reports on Demand](generate-reports-on-demand.md)

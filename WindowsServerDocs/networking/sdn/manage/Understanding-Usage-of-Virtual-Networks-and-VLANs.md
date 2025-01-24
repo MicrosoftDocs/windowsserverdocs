@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # Understand the usage of virtual networks and VLANs
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 In this topic, you learn about Hyper-V network virtualization virtual networks and how they differ from virtual local area networks (VLANs). With Hyper-V network virtualization, you create overlay virtual networks, also called virtual networks.
 
 Software Defined Networking (SDN) in  Windows Server 2016 is based on programming policy for overlay virtual networks within a Hyper-V Virtual Switch. You can create overlay virtual networks, also called Virtual Networks, with Hyper-V Network Virtualization.

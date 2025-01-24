@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Monitor the existing load on the Remote Access server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 
 The term **Load** refers to the statistics that relate to the number of connections on the Remote Access server. Following are the steps required to track the load on the Remote Access server.

@@ -53,7 +53,7 @@ We made several improvements to the core network stack, such as TCP Fast Open (T
 
 In the past, Virtual Machine Queues and Virtual Machine Multi-Queues (VMMQs) enabled much higher throughput to individual VMs as network throughputs first reached the 10GbE mark and beyond. Unfortunately, the planning, baselining, tuning, and monitoring required for success became a much larger undertaking than IT administrators anticipated.
 
-Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as needed. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as needed. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
 ## Security
 
@@ -86,7 +86,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
 
 ### Security with Software Defined Networking (SDN)
 
-[Security with SDN](/azure-stack/hci/manage/nc-security) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud.
+[Security with SDN](/azure/azure-local/manage/nc-security) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud.
 
 These security enhancements are integrated into the comprehensive SDN platform introduced in Windows Server 2016.
 
@@ -128,7 +128,7 @@ For more information, see [Encrypted networks](../networking/sdn/vnet-encryption
 
 ### Firewall auditing
 
-[Firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules and access control lists (ACLs) that have logging enabled.
+[Firewall auditing](/azure/azure-local/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules and access control lists (ACLs) that have logging enabled.
 
 ### Virtual network peering
 
@@ -169,7 +169,7 @@ You can also access the following post-release-to-manufacturing (RTM) features w
 
 ### Storage Spaces Direct
 
-Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Stack HCI solution overview](/azure-stack/operator/azure-stack-hci-overview).
+Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Local solution overview](/azure/azure-local/overview).
 
 - Deduplication and compression for ReFS volumes. Variable-size chunk store with optional compression maximizes savings rates, while multi-threaded post-processing architecture minimizes performance impact. This feature supports volumes up to 64 TB and deduplicates the first 4 MB of each file.
 
@@ -183,7 +183,7 @@ Here's what's new in Storage Spaces Direct. For more information about how to ac
 
 - Performance history is a new feature that provides effortless visibility into resource utilization and measurements. To learn more, see [Performance history for Storage Spaces Direct](../storage/storage-spaces/performance-history.md).
 
-- Scale up to 4 PB per cluster using a capacity of up to 64 volumes of up to 64 TB. You can also stitch multiple clusters together into a [cluster set](/azure-stack/hci/deploy/cluster-set) for even greater scale within a single storage namespace.
+- Scale up to 4 PB per cluster using a capacity of up to 64 volumes of up to 64 TB. You can also stitch multiple clusters together into a [cluster set](/windows-server/failover-clustering/cluster-set) for even greater scale within a single storage namespace.
 
 - By utilizing mirror-accelerated parity, it is possible to construct Storage Spaces Direct volumes that incorporate both mirror and parity strategies, similar to a blend of RAID-1 and RAID-5/6. Mirror-accelerated parity is now two times faster than Windows Server 2016.
 

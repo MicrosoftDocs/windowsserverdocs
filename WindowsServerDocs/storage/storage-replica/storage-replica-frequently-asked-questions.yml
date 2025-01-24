@@ -11,7 +11,7 @@ metadata:
   ms.service: windows-server
 title: Frequently asked questions about Storage Replica
 summary: |
-  >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+  >
   
   This article contains answers to frequently asked questions (FAQs) about Storage Replica.
   
@@ -305,4 +305,4 @@ sections:
           See also
         answer: |
           - [Storage Overview](../storage.yml)
-          - [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+          - [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

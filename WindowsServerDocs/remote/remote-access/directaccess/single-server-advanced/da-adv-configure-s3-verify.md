@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Step 3 Verify the Advanced DirectAccess Deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This topic describes how to verify that you have correctly configured your DirectAccess deployment.
 
 ### To verify access to internal resources through DirectAccess

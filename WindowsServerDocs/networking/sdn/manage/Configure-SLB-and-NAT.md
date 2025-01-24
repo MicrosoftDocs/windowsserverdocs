@@ -10,8 +10,6 @@ ms.date: 11/02/2021
 ---
 # Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 You can use this topic to learn how to use the Software Defined Networking \(SDN\)  software load balancer \(SLB\) to provide outbound network address translation \(NAT\), inbound NAT, or load balancing between multiple instances of an application.
 
 ## Software Load Balancer overview

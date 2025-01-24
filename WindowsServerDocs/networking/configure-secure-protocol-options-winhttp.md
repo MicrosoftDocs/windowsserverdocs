@@ -8,8 +8,6 @@ ms.date: 03/27/2024
 ---
 # Configure secure protocol options for WinHTTP
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
-
 This how-to guide shows you how to use the `DefaultSecureProtocols` registry entry to choose which protocols for the Windows HTTP Services (WinHTTP).
 
 The `DefaultSecureProtocols` registry entry allows you to specify which SSL protocols should be used when the `WINHTTP_OPTION_SECURE_PROTOCOLS` flag is used. The setting allows applications that were built to use the WinHTTP default flag to be able to use the newer TLS protocols or prevent older SSL based natively without any need for updates to the application.

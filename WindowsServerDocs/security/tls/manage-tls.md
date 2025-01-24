@@ -10,8 +10,6 @@ ms.date: 06/15/2023
 
 # Manage Transport Layer Security (TLS)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
-
 ## Configuring TLS Cipher Suite Order
 
 Different Windows versions support different TLS cipher suites and priority order. See [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel) for the default order supported by the Microsoft Schannel Provider in different Windows versions.

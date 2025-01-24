@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Security Support Provider Interface Architecture
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This reference topic for the IT professional describes the Windows authentication protocols that are used within the Security Support Provider Interface (SSPI) architecture.
 
 The Microsoft Security Support Provider Interface (SSPI) is the foundation for Windows authentication. Applications and infrastructure services that require authentication use SSPI to provide it.
