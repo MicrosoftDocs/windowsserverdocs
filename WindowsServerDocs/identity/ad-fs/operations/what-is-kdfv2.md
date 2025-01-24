@@ -95,5 +95,5 @@ Depending on the OS version that AD FS servers are running when patched to suppo
 
 ## Next
 
-- [Use AD FS Help troubleshooting guides](https://aka.ms/adfshelp/troubleshooting )
+
 - [AD FS Troubleshooting](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)

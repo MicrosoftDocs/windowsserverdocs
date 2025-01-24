@@ -195,7 +195,7 @@ That's it, the dll is now registered with AD FS and ready for use!
 
 4. Initiate authentication request from the server with the same IP you added in **authconfig.csv**.
 
-   For this demonstration, I will be using [AD FS Help Claims X-Ray tool](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) to initiate a request. If you would like to use the X-Ray tool, please follow the instructions
+
 
    Enter federation server instance and hit **Test Authentication** button.</br>
 
