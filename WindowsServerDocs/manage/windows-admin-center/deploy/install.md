@@ -2,9 +2,9 @@
 title: Install Windows Admin Center
 description: How to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 ms.topic: article
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
-ms.date: 10/21/2024
+ms.date: 01/24/2025
 zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
@@ -73,13 +73,15 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 1. Select the **Windows Admin Center Setup** app from the **Best match** list.
 
-1. On the **Get started with Windows Admin Center** window, select **Next** to accept the license terms. After that, the installation app opens, and the Installer download starts automatically.
+1. On the **Get started with Windows Admin Center** window, if you agree to the license terms, select **Next** to continue.
 
-1. Select **Next** to accept the license terms. The Installer download starts automatically and is saved to the Downloads folder. Windows Admin Center Setup then closes and starts the Installer.
+1. The latest installer download starts automatically and is saved to the _Downloads_ folder, when complete, select **Install**. Selecting **Install** launches the installer from the Downloads folder.
 
-1. On the License Agreement, if you agree to the terms select **I accept the agreement**, then select **Next** to start the installation process.
+1. On the **Welcome to the windows Admin Center setup wizard** window, select **Next** to continue.
 
-1. In the **Select installation mode** window, select **Express remote setup**, then select **Next**.
+1. On the **License Terms and Privacy Statement** window, if you agree to the terms select **I accept these terms and understand the privacy statement**, then select **Next** to start the installation process.
+
+1. In the **Select installation mode** window, select **Express setup**, then select **Next**.
 
 1. In the **Select TLS certificate** window, select the option that matches your needs, then select **Next**.
 
@@ -90,13 +92,11 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
-1. Select **Shortcut and Desktop shortcut preferences**, confirm the selection, then select **Next**.
-
 1. In the **Ready to install** window, select **Install** to start the installation process.
 
 1. After the installation process finishes, select **Start Windows Admin Center**, then select **Finish**.
 
-1. Sign in as Administrator and then select **Sign In**.
+1. Sign in as an administrator to start using Windows Admin Center.
 
 You've now installed Windows Admin Center on your machine.
 
