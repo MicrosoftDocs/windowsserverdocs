@@ -1,11 +1,12 @@
 ---
 title: Restore a virtualized domain controller in Windows Server
 description: Learn about how to restore a virtualized Active Directory Domain Services Domain Controller (DC) in Windows Server.
-author: HeidiLohr
-ms.author: helohr
-ms.date: 03/07/2024
+author: meaghanlewis
+ms.author: mosagie
+ms.date: 01/24/2025
 ms.topic: article
 ---
+
 # Restore a virtual domain controller
 
 You must regularly back up your system state in order to restore a physical or virtual domain controller (DC) during a disaster recovery scenario. The system state includes Active Directory data and log files, the registry, the system volume, and various elements of the operating system. Active Directory-compatible backup applications ensure consistent local and replicated Active Directory databases after a restore process, including notifying replication partners of invocation ID resets. Virtual hosting environments and disk or OS imaging applications let administrators bypass standard checks and validations that occur during DC system state restore.
