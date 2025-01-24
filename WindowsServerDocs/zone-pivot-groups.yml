@@ -40,7 +40,6 @@ groups:
     title: Windows Server 2022
   - id: windows-server-2019
     title: Windows Server 2019
-<<<<<<< HEAD
 - id : windows-admin-center-os
   title: Version
   prompt: "Choose your product version:"
@@ -51,7 +50,6 @@ groups:
     title: Windows Server 2022 and earlier
   - id: windows-client
     title: Windows Client
-=======
 - id: windows
   title: Products
   prompt: "Choose your product:"
@@ -60,4 +58,3 @@ groups:
     title: Windows Server
   - id: windows
     title: Windows
->>>>>>> d9a348eb47c9ff6eaf6c7d52c8f14cf8607e8be8
