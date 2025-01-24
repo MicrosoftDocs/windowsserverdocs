@@ -857,6 +857,8 @@
         href: ad-fs/operations/AD-FS-paginated-sign-in.md
       - name: AD FS 2016 Single Sign On Settings
         href: ad-fs/operations/AD-FS-Single-Sign-On-Settings.md
+      - name: AD FS Help Offline Tools
+        href: ad-fs/operations/offline-tools.md
       - name: AD FS Rapid Restore Tool
         href: ad-fs/operations/AD-FS-Rapid-Restore-Tool.md
       - name: AD FS support for alternate hostname binding for certificate authentication
@@ -942,10 +944,16 @@
         href: ad-fs/troubleshooting/ad-fs-tshoot-certs.md
       - name: Claims syntax
         href: ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md
+      - name: Congestion control
+        href: ad-fs/troubleshooting/ad-fs-tshoot-congestion.md
+      - name: Corpnet login
+        href: ad-fs/troubleshooting/ad-fs-tshoot-corpnet.md
       - name: DNS
         href: ad-fs/troubleshooting/ad-fs-tshoot-dns.md
       - name: Endpoints
         href: ad-fs/troubleshooting/ad-fs-tshoot-endpoints.md
+      - name: Extranet login
+        href: ad-fs/troubleshooting/ad-fs-tshoot-extranet.md
       - name: Fiddler trace(WS-Fed)
         href: ad-fs/troubleshooting/ad-fs-tshoot-fiddler-ws-fed.md
       - name: Fiddler
@@ -958,8 +966,12 @@
         href: ad-fs/troubleshooting/ad-fs-tshoot-logging.md
       - name: Loops
         href: ad-fs/troubleshooting/ad-fs-tshoot-loop.md
+      - name: Microsoft Entra Connect Health
+        href: ad-fs/troubleshooting/ad-fs-tshoot-connect-health.md
       - name: SQL
         href: ad-fs/troubleshooting/ad-fs-tshoot-sql.md
+      - name: WAP trust
+        href: ad-fs/troubleshooting/ad-fs-tshoot-wap-trust.md
     - name: AD FS Technical Reference
       href: ad-fs/AD-FS-Technical-Reference.md
       items:
