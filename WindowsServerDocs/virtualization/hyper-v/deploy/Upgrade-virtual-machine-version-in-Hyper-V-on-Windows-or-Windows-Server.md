@@ -138,22 +138,7 @@ The following table shows the minimum virtual machine configuration version requ
 
 |Feature|Minimum VM configuration version|
 |---|---|
-|OpenHCL support including GPU acceleration, Accelerated networking via SR-IOV, and NVMe Direct VMs for storage| 12.0 |
-|Trusted Launch VMs|11.1|
-|Extended I/O APIC RTEs | 10.0 |
-|Hot-change processor feature set | 10.0 |
-|Socket topology (DM) | 10.0 |
-|L3 and cluster mapping | 10.0 |
-|Nested virtualization (AMD) | 9.3 |
-|Virtual SLIT table | 9.3 |
-|SHA384 PCR hashing (UEFI) | 9.3 |
-|APIC mode configuration| 9.2 |
-|vNUMA topology array| 9.2 |
-|Invariant TSC| 9.2 |
-|ACOUNT and MCOUNT CPU frequency information| 9.2 |
-|Virtualized IPT | 9.1 |
-|Synthetic machine check (AMD) | 9.1 |
-|Extension support for non-SMT VMs (AMD) | 9.1 |
+|GPU partitioning|12.0|
 |Allow additional processor features for Perfmon|9.0|
 |Automatically expose [simultaneous multithreading](../manage/manage-hyper-v-scheduler-types.md#background) configuration for VMs running on hosts using the [Core Scheduler](../manage/manage-hyper-v-scheduler-types.md#windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler)|9.0|
 |Hibernation support|9.0|
