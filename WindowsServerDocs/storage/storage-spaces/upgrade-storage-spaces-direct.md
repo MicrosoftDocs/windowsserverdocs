@@ -25,7 +25,7 @@ To read more about an upgrade option, select a link:
 
 Before you proceed with an upgrade:
 
-- Storage Spaces Direct is enabled
+- Storage Spaces Direct is enabled.
 
 - Check that you have usable backups in case any issues occur during the upgrade process.
 
@@ -50,7 +50,7 @@ Because of the known issues described here, some customers might consider buildi
 This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual servers are restarted sequentially during the upgrade process, the remaining servers in the cluster and all VMs remain running.
 
 1. Check that all servers in the cluster have installed the latest Windows Update.
-   
+
 1. If you're using Software Defined Networking with SET switches, open an elevated PowerShell session and run the following command to disable VM live migration verification checks on all VMs on the cluster:
 
     ```powershell
@@ -84,8 +84,7 @@ This option incurs no VM downtime, but you must wait for storage jobs (mirror re
 
    5. Perform an upgrade installation of Windows Server on the server by running *setup.exe* and using the **Keep personal files and apps** option. When installation is finished, the server remains in the cluster and the cluster service starts automatically.
 
-   6. Check that the newly upgraded server has the latest Windows Server updates. For more information, see [Windows 10 and Windows Server 2019 update
-   history](https://support.microsoft.com/help/4464619/windows-10-update-history).
+   6. Check that the newly upgraded server has the latest Windows Server updates.
 
    7. Remove the server from storage maintenance mode:
 
