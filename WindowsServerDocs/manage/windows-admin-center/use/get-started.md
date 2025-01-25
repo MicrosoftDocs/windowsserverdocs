@@ -55,7 +55,7 @@ The types of resources that you can add from the **All connections** page are se
 
 To add connections to Windows Admin Center:
 
-1. Under **All connections**, select **+ Add** .
+1. Under **All connections**, select **+ Add**.
 
    :::image type="content" source="../media/launch/use-get-started-4.png" alt-text="Screenshot of the page that lists all connections.":::
 
