@@ -4,7 +4,7 @@ description: Learn about the architecture of DNS in Windows Server, including na
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 01/23/2025
+ms.date: 01/27/2025
 
 ---
 
@@ -201,7 +201,7 @@ The diagram shows how multiple queries were used to determine the IP address for
 
 ## Update DNS
 
-Resource records often change as computers, servers, and devices are added to or removed from the network. The implementation of DNS in Windows Server supports both static and dynamic updates of the DNS database. The details of the dynamic update are discussed in [DNS Processes and Interactions]() and [DNS Physical Structure](/)
+Resource records often change as computers, servers, and devices are added to or removed from the network. The implementation of DNS in Windows Server supports both static and dynamic updates of the DNS database.
 
 Resource records can be added to an existing zone using the [Add-DNSServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord) PowerShell command. Some common resource record types have other PowerShell commands where you don't need to specify the resource record type. You can also add resource records using the DNS Manager console. See [Managing DNS resource records](manage-resource-records.md) for guidance on working with resource records, including creating and modifying existing resource records of all
 types.
