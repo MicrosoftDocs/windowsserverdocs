@@ -11,7 +11,7 @@ ms.contributors: orthomas
 
 # DNS zones
 
-A DNS zone is the specific portion of a DNS namespace that's hosted on a DNS server. A DNS zone
+A DNS zone is the specific portion of a DNS namespace hosted on a DNS server. A DNS zone
 contains resource records, and the DNS server responds to queries for records in that namespace. For
 example, the DNS server that's authoritative for resolving `www.contoso.com` to an IP address would
 host the `contoso.com` zone.
@@ -46,7 +46,7 @@ You can store a standard primary zone in a local file, or you can store zone dat
 store zone data in AD DS other features are available, such as secure dynamic updates and the
 ability for each domain controller that hosts the zone to function as a primary and be able to process 
 updates to the zone. When the zone is stored in a file, by default the primary zone file is named 
-`zone_name.dns`, and it's located in the `%windir%\System32\Dns` folder on the server.
+`zone_name.dns`, and is located in the `%windir%\System32\Dns` folder on the server.
 
 When you deploy Active Directory, a DNS zone that is associated with your organization’s AD DS domain name
 is automatically created. By default the AD DS DNS zone replicates to any other domain controller
@@ -90,14 +90,14 @@ You can use stub zones to:
 There are two lists of DNS servers involved in the loading and maintenance of a stub zone:
 
 - The list of name servers from which the DNS server loads and updates a stub zone. A name server
-  may be a primary or secondary DNS server for the zone. In both cases, it has a complete list of
+  might be a primary or secondary DNS server for the zone. In both cases, it has a complete list of
   the DNS servers for the zone.
 - The list of the authoritative DNS servers for a zone. This list is contained in the stub zone
   using name server (NS) resource records.
 
 When a DNS server loads a stub zone, such as `widgets.tailspintoys.com`, it queries the name
 servers, which can be in different locations, for the necessary resource records of the
-authoritative servers for the zone `widgets.tailspintoys.com`. The list of name servers may contain
+authoritative servers for the zone `widgets.tailspintoys.com`. The list of name servers might contain
 a single server or multiple servers, and it can be changed anytime.
 
 A stub zone is a copy of a zone that contains only those resource records that are necessary to
@@ -147,18 +147,18 @@ Primary is a zone to which all updates for the records that belong to that zone 
 Because a DNS server can host multiple zones, it can therefore host both a primary zone (that has the writeable copy of a zone file) and a separate secondary zone (that obtains a read-only copy of a zone file). A DNS server hosting a primary zone is said to be the primary DNS server for that zone, and a DNS server hosting a secondary zone is said to be the secondary DNS server for that zone.
 
 > [!NOTE]
-> A secondary or stub zone cannot be hosted on a DNS server that hosts a primary zone for the same domain name.
+> A secondary or stub zone can't be hosted on a DNS server that hosts a primary zone for the same domain name.
 
 ## Zone transfer
 
 The process of replicating a zone file to multiple DNS servers is called zone transfer. Zone transfer is achieved by copying the zone file from one DNS server to a second DNS server. Zone transfers can be made from both primary and secondary DNS servers.
 
-A master DNS server is the source of the zone information during a transfer. The master DNS server can be a primary or secondary DNS server. If the master DNS server is a primary DNS server, then the zone transfer comes directly from the DNS server hosting the primary zone. If the master server is a secondary DNS server, then the zone file received from the master DNS server by means of a zone transfer is a copy of the read-only secondary zone file.
+A primary DNS server is any authoritative server configured to be the source of the zone transfer. If the DNS server is a primary DNS server, then the zone transfer comes directly from the DNS server hosting the primary zone. If the primary server is hosting a secondary DNS zone, then the zone file received from the primary DNS server with a zone transfer is a copy of the read-only secondary zone file.
 
 The zone transfer is initiated in one of the following ways:
 
-- The master DNS server sends a notification (RFC 1996) to one or more secondary DNS servers of a change in the zone file.
-- When the DNS Server service on the secondary DNS server starts, or the refresh interval of the zone has expired (by default it's set to 15 minutes in the SOA RR of the zone), the secondary DNS server will query the master DNS server for the changes.
+- The primary DNS server sends a notification (RFC 1996) to one or more secondary DNS servers of a change in the zone file.
+- When the DNS Server service on the secondary DNS server starts, or the refresh interval of the zone expires, the secondary DNS server will query the primary DNS server for the changes. By default the refresh interval is set to 15 minutes in the SOA RR of the zone.
 
 ## Zone transfer settings
 
@@ -172,9 +172,7 @@ information to be transferred to any host that can contact your DNS server.
 
 There are two types of zone file replication. The first, a full zone transfer (AXFR), replicates the entire zone file. The second, an incremental zone transfer (IXFR), replicates only records that have been modified.
 
-<!-- Heidi in the following paragraph, there are specific references to earlier versions of Windows and Windows Server that may need to be updated (or left alone). I'm looking into it. It's possible we can just state "Windows" and "Windows Server" generically. I will find out. Thanks! -->
-
-BIND 4.9.3 and earlier DNS server software, as well as Windows NT 4.0 DNS, support full zone transfer (AXFR) only. There are two types of the AXFR: one requires a single record per packet, the other allows multiple records per packet. The DNS Server service in Windows 2000 and Windows Server 2003 supports both types of zone transfer, but by default uses multiple records per packet. It can be configured differently for compatibility with servers that do not allow multiple records per packet, such as BIND servers versions 4.9.4 and earlier.
+BIND 4.9.3 and earlier DNS server software, as well as Windows NT 4.0 DNS, support full zone transfer (AXFR) only. There are two types of the AXFR: one requires a single record per packet, the other allows multiple records per packet. The DNS Server service in Windows 2000 and Windows Server 2003 supports both types of zone transfer, but by default uses multiple records per packet. It can be configured differently for compatibility with servers that don't allow multiple records per packet, such as BIND servers versions 4.9.4 and earlier.
 
 ## Zone delegation
 
