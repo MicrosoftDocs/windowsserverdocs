@@ -11966,6 +11966,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance.md",
+      "redirect_url": "/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-Hyper-V",
       "redirect_document_id": true
