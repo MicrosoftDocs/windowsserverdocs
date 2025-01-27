@@ -134,7 +134,7 @@ The order of IP address octets must be reversed when the `in-addr.arpa` domain t
 addresses of the DNS `in-addr.arpa` tree can be delegated to organizations as they're assigned a
 specific or limited set of IP addresses within the Internet-defined address classes.
 
-## Replicating the DNS database
+## Replicate the DNS database
 
 There can be multiple zones representing the same portion of the namespace. Among these zones there are three types:
 
