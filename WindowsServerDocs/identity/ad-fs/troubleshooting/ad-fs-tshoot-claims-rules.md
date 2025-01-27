@@ -12,8 +12,7 @@ ms.topic: article
 
 A claim is a statement that one subject makes about itself or another subject. Claims are issued by a relying party, and they're given one or more values and then packaged in security tokens that are issued by the AD FS server. This article deals with the claims syntax and creation. For information on claims issuance see [AD FS Troubleshooting - Claims Issuance](ad-fs-tshoot-claims-issuance.md).
 
-> [!NOTE]
-> You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [AD FS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.
+
 
 ## How claim rules are processed
 

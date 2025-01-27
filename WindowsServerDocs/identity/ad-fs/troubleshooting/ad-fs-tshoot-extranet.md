@@ -63,7 +63,7 @@ AD FS provides various endpoints for different functionalities and scenarios. No
  5. Verify that the endpoint is enabled. For example, if oAuth logins are failing, check if /adfs/oauth endpoint is marked as "Yes" under ProxyEnabled
 
 ## Check for WAP trust issues
-Go to each WAP server and run the diagnostic PowerShell script that you downloaded from AD FS Help Downloadable Tools. Fix any errors reported.
+Go to each WAP server and run the diagnostic PowerShell script that you downloaded from the [AD FS Offline tools](../operations/offline-tools.md)
 
 Log in to the primary AD FS server to see if there are any issues with bindings or trust certificates. Run the script given below on the primary AD FS server.
 
@@ -297,3 +297,4 @@ Use the script at the end of the section to manually sync the WAP certificates f
 ## Related links
 
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
+- [AD FS Offline tools](../operations/offline-tools.md)
