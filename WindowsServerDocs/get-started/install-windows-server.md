@@ -1,7 +1,7 @@
 ---
 title: Install Windows Server from installation media
 description: Learn how to create a bootable USB flash drive or DVD media to deploy Windows Server on physical and virtual hardware.
-ms.date: 01/21/2025
+ms.date: 01/27/2025
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
@@ -10,7 +10,7 @@ zone_pivot_groups: windows-os-version
 
 # Install Windows Server from installation media
 
-Follow the steps in this article to create a bootable USB drive or DVD that can be used to install Windows Server on your devices. Creating a Windows Server installation media is a crucial step in setting up a new server or upgrade from an existing one. This article aims to guide users on how to create a Windows Server installation media.
+Learn how to create a bootable USB drive or DVD that can be used to install Windows Server on your devices. Creating a Windows Server installation media is a crucial step in setting up a new server or upgrade from an existing one. This article aims to guide you on how to create installation media and install Windows Server using either the Server Core or Desktop Experience install options.
 
 ## Prerequisites
 
@@ -118,17 +118,17 @@ Start-Sleep -Seconds 2
 1. Right-click on your ISO file and select **Burn disc image**.
 1. The **Windows Disc Image Burner** wizard prompts you to select which **Disc burner** drive you'd like to use.
 1. Select the appropriate drive and then select the **Burn** button.
+1. This step is optional, but recommended to ensure that data integrity is verified against any errors or discrepancies between the burned disk and the original ISO image. Select the **Verify disc after burning** checkbox to detect any differences.
 
-> [!TIP]
-> This step is optional, but recommended to ensure that data integrity is verified against any errors or discrepancies between the burned disk and the original ISO image. Select the **Verify disc after burning** checkbox to detect any differences.
+## Configure BIOS settings
 
-## Install Windows Server
-
-Before you can install Windows Server via USB or DVD, the computer's boot order in the BIOS must be changed to ensure that the system boots from either the USB or DVD. Accessing the BIOS can vary depending on your hardware. In most cases, you can access the BIOS by pressing a specific key while your device boots. Typically, the key is either **F2**, **F10**, **F12**, or **Delete**. Refer to the user manual for your device. Repeatedly press one of these keys as soon as you turn on your device.
+Before you can install Windows Server via USB or DVD, the computer's boot order in the BIOS must be changed to ensure that the system boots from either the USB or DVD. Accessing the BIOS can vary depending on your hardware. In most cases, you can access the BIOS by pressing a specific key while your device boots. Typically, the key is either **F2**, **F10**, **F12**, or **Delete**. Refer to the user manual for your device. On certain hardware, once the POST completes, there's a short window allowed for accessing the BIOS. You might need to repeatedly press one of the keys as soon as POST completes.
 
 Once you're in the BIOS settings, navigate through the menus until you see the **Boot Order** or **Boot Sequence** option. Refer to the user manual for your device to locate this setting. Once you select the boot order setting, you can edit the boot order priority based in top-down order. Move booting from the USB or optical drive to the top of the list depending on which media installation method you're using. Once appropriate changes are made, save and exit from the BIOS. Your device reboots automatically in applying these changes.
 
-Once modifications are made to the boot order, follow these steps to install Windows Server.
+## Install Windows Server
+
+Once modifications are made to the boot order and you select to boot from either the USB or DVD drive, follow these steps to install Windows Server.
 
 :::zone pivot="windows-server-2025"
 
@@ -176,9 +176,9 @@ Once modifications are made to the boot order, follow these steps to install Win
 1. You're notified that the password was changed. Hit the **Enter** button.
 1. Review the **Send Diagnostic data to Microsoft** information. Select one of the two options for how much diagnostic data is shared, then hit the **Enter** button:
 
-   1. Required
+   1. 1\) Required
 
-   1. Required plus Optional
+   1. 2\) Required plus Optional
 
 ---
 
