@@ -1,6 +1,6 @@
 ---
-description: Storage Replica overview
-title: Overview of the Windows Storage Replica feature
+description: Storage Replica Overview
+title: Overview of the Storage Replica in Windows Storage Replica
 manager: siroy
 ms.author: roharwoo
 ms.topic: how-to
@@ -8,30 +8,36 @@ author: robinharwood
 ms.date: 10/04/2022
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
-# Storage Replica Overview
+# Storage Replica overview
 
-Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync.
+You can use Storage Replica in Windows Server to replicate volumes between servers or clusters for disaster recovery. You can also use it to create stretch failover clusters that span two sites, and all nodes stay in sync.
 
 Storage Replica supports synchronous and asynchronous replication:
 
-* **Synchronous replication** mirrors data within a low-latency network site with crash-consistent volumes to ensure zero data loss at the file-system level during a failure.
-* **Asynchronous replication** mirrors data across sites beyond metropolitan ranges over network links with higher latencies, but without a guarantee that both sites have identical copies of the data at the time of a failure.
+* **Synchronous replication** mirrors data within a low-latency network site with crash-consistent volumes to ensure zero data loss at the file system level during a failure.
+* **Asynchronous replication** mirrors data across sites beyond metropolitan ranges over network links with higher latencies, but without a guarantee that both sites have identical copies of the data at the time of a potential failure.
 
 ## Why use Storage Replica?
 
-Storage Replica offers disaster recovery and preparedness capabilities in Windows Server. Windows Server offers the peace of mind of zero data loss, with the ability to synchronously protect data on different racks, floors, buildings, campuses, counties, and cities. After a disaster strikes, all data exists elsewhere without any possibility of loss. The same applies *before* a disaster strikes; Storage Replica offers you the ability to switch workloads to safe locations prior to catastrophes when granted a few moments warning - again, with no data loss.
+Storage Replica offers disaster recovery and preparedness capabilities in Windows Server. Storage Replica in Windows Server offers the peace of mind of zero data loss, with the ability to synchronously protect data on different racks, floors, buildings, campuses, counties, and cities. After a disaster strikes, all data exists elsewhere without any possibility of loss. The same applies *before* a disaster. Storage Replica can help you switch workloads to safe locations with no data loss before a catastrophe when you have a few moments warning.
 
-Storage Replica allows more efficient use of multiple datacenters. By stretching clusters or replicating clusters, workloads can be run in multiple datacenters for quicker data access by local proximity users and applications, as well as better load distribution and use of compute resources. If a disaster takes one datacenter offline, you can move its typical workloads to the other site temporarily.
+Storage Replica allows more efficient use of multiple datacenters. By stretching clusters or replicating clusters, workloads can be run in multiple datacenters for quicker data access by close-proximity users and applications, and you get better load distribution and use of compute resources. If a disaster takes one datacenter offline, you can temporarily move its typical workloads to the other site.
 
-Storage Replica may allow you to decommission existing file replication systems such as DFS Replication that were pressed into duty as low-end disaster recovery solutions. While DFS Replication works well over low bandwidth networks, its latency is high - often measured in hours or days. This is caused by its requirement for files to close and its artificial throttles meant to prevent network congestion. With those design characteristics, the newest and hottest files in a DFS Replication replica are the least likely to replicate. Storage Replica operates below the file level and has none of these restrictions.
+When you implement Storage Replica, you might be able to decommission existing file replication systems such as DFS Replication that were pressed into duty as low-end disaster recovery solutions. Although DFS Replication works well over low-bandwidth networks, its latency is high. Latency in that scenario often is measured in hours or days. The high latency is caused by its requirement for files to close and its artificial throttles, which are meant to prevent network congestion. With those design characteristics, the newest and hottest files in a DFS Replication replica are the least likely to replicate.
 
-Storage Replica also supports asynchronous replication for longer ranges and higher latency networks. Because it isn't checkpoint-based, and instead continuously replicates, the delta of changes tends to be far lower than snapshot-based products. Storage Replica operates at the partition layer and therefore replicates all VSS snapshots created by Windows Server or backup software. By using VSS snapshots it allows use of application-consistent data snapshots for point in time recovery, especially unstructured user data replicated asynchronously.
+Storage Replica operates below the file level and has none of these restrictions.
+
+Storage Replica also supports asynchronous replication for longer ranges and higher-latency networks. Because it isn't checkpoint-based, and instead, it continuously replicates, the delta of changes tends to be far lower than snapshot-based products.
+
+Storage Replica operates at the partition layer and therefore replicates all Volume Shadow Copy Service (VSS) snapshots that Windows Server or backup software creates. By using VSS snapshots, you can get application-consistent data snapshots for point-in-time recovery, especially for unstructured user data that's replicated asynchronously.
 
 ## Supported configurations
 
-You can deploy Storage Replica in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3).
+You can deploy Storage Replica in a stretch cluster, from cluster to cluster, and in a server-to-server configurations.
 
-**Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It's managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.
+**Stretch cluster**: Use to configure computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another. Then, they synchronously or asynchronously replicate with site awareness.
+
+This scenario can utilize Storage Spaces with shared SAS storage, SAN and iSCSI-attached LUNs. It's managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.
 
 ![Diagram showing two cluster nodes in New York using Storage Replica to replicate its storage with two nodes in New Jersey](./media/Storage-Replica-Overview/Storage_SR_StretchCluster.png)
 
