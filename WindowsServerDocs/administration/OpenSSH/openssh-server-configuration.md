@@ -9,8 +9,6 @@ author: maertendmsft
 
 # OpenSSH Server configuration for Windows Server and Windows
 
->Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
-
 This article covers the Windows-specific configuration for OpenSSH Server (sshd).
 
 OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which isn't duplicated in this documentation set.

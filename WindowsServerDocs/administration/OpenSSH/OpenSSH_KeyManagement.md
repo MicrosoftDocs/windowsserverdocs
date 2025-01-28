@@ -9,8 +9,6 @@ author: maertendmsft
 
 # Key-based authentication in OpenSSH for Windows
 
->Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
-
 Most authentication in Windows environments is done with a username-password pair, which works well for systems that share a common domain. When working across domains, such as between on-premises and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
 
 By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication that doesn't require the use of guessable passwords. OpenSSH includes tools to help support key based authentication, specifically:
