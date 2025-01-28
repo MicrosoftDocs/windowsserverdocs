@@ -171,8 +171,6 @@ items:
         href: dns/zone-types.md
       - name: DNS architecture
         href: dns/dns-architecture.md
-      - name: DNS resource records
-        href: dns/resource-record-types.md
       - name: Network Ports
         href: dns/network-ports.md
       - name: DNSSEC
