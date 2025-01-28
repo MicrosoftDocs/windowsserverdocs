@@ -1,6 +1,6 @@
 ---
 title: Enable DNS Logging and Diagnostics in Windows Server
-description: Learn about enhanced DNS logging, auditing, and analytic events for the DNS Server role in Windows Server.
+description: Learn how to enable enhanced DNS logging, auditing, and analytic events for the DNS Server role in Windows Server.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
@@ -10,7 +10,7 @@ ms.date: 01/28/2025
 
 # Enable DNS Logging and Diagnostics
 
-Learn about enhanced DNS logging, auditing, and analytic events for the DNS Server role in Windows Server.
+Learn how to enable enhanced DNS logging, auditing, and analytic events for the DNS Server role in Windows Server. DNS logging and diagnostics provide detailed information about DNS server operations, including zone changes, dynamic updates, and DNSSEC operations. DNS logging and diagnostics can help you monitor DNS server performance, troubleshoot DNS issues, and track DNS server activity.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Before you enable DNS logging and diagnostics, ensure that you have:
 
 ## View DNS server logs
 
-DNS server logs are available in the Event Viewer. To view DNS server logs:
+DNS audit logs are enabled by default, and don't significantly affect DNS server performance. DNS server audit events enable change tracking on the DNS server. An audit event is logged each time server, zone, or resource record settings are changed. Audit events include operational events such as dynamic updates, zone transfers, and DNSSEC zone signing and unsigning.  To view DNS server logs:
 
 1. Select the **Start** button, type **Event viewer**, open **Event viewer** from the best match list.
 
@@ -33,8 +33,6 @@ DNS server logs are available in the Event Viewer. To view DNS server logs:
 1. Select **Audit** from the navigation pane to view DNS audit logs.
 
 ## Audit events
-
-DNS audit logs are enabled by default, and don't significantly affect DNS server performance. DNS server audit events enable change tracking on the DNS server. An audit event is logged each time server, zone, or resource record settings are changed. Audit events include operational events such as dynamic updates, zone transfers, and DNSSEC zone signing and unsigning. 
 
 The following table summarizes DNS server audit events.
 
