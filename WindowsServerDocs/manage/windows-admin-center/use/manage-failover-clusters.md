@@ -1,18 +1,17 @@
 ---
 title: Manage Failover Clusters with Windows Admin Center
-description: Manage Failover Clusters with Windows Admin Center
+description: Learn how to manage failover clusters by using Windows Admin Center.
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/28/2022
 ---
-# Manage Failover Clusters with Windows Admin Center
+# Manage failover clusters by using Windows Admin Center
 
 > [!Tip]
 > New to Windows Admin Center?
 > [Download or learn more about Windows Admin Center](../overview.md).
 
-## Managing failover clusters
 [Failover clustering](../../../failover-clustering/failover-clustering-overview.md) is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster to increase availability and scalability of applications and services such as Scale-Out File Server, Hyper-V and Microsoft SQL Server.
 
 While you can manage failover cluster nodes as individual servers by adding them with [Server Manager](manage-servers.md) in Windows Admin Center, you can also add them as Failover clusters to view and manage cluster resources, storage, network, nodes, roles, virtual machines and virtual switches.
@@ -20,6 +19,7 @@ While you can manage failover cluster nodes as individual servers by adding them
 ![Failover cluster Overview screen](../media/manage-failover-clusters/fcm-overview.png)
 
 ## Adding a failover cluster to Windows Admin Center
+
 To add a cluster to Windows Admin Center:
 
 1. Click **+ Add** under All Connections.
