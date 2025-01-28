@@ -17,7 +17,13 @@ To enable the latest forest-wide features, all domain controllers in the forest 
 The domain and forest functional levels only affect how the domain controllers operate together as a group. The clients that interact with the domain or with the forest are unaffected by the changes. Applications are also unaffected by these changes. However, applications can use new features found in later versions of Windows Server once the administrator raises the domain level. For more information about the functional levels, see [Active Directory Domain Services functional levels](/windows-server/identity/ad-ds/active-directory-functional-levels).
 
 > [!WARNING]
-> Changes to the domain and forest functional levels are irreversible. In order to undo the change, you must perform a forest recovery to revert to an earlier point in time.
+> Often changes to the domain and forest functional levels are irreversible. In such a case to undo the change, you must perform a forest recovery to revert to an earlier point in time.
+> 
+> You can undo some Domain or Forest functional level changes using Powershell when you have not enabled features that depend on a certain functional level. For details see:
+> [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012).
+> Powershell cmdlets to raise or lower the functional levels:
+> [Set-ADForestMode](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617220(v=technet.10))
+> [Set-ADDomainMode](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ee617230(v=technet.10))
 
 ## Prerequisites
 
