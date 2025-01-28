@@ -9,11 +9,18 @@ ms.topic: overview
 
 # OpenSSH for Windows overview
 
->Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
+>Applies to Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
 
 OpenSSH is the open-source version of the Secure Shell (SSH) tools used by administrators of Linux and other non-Windows for cross-platform management of remote systems. Beginning with Windows 10 build 1809 and Windows Server 2019, OpenSSH is available as a feature on demand.
 
 SSH is based on a client-server architecture where the system the user is working on is the client and the remote system being managed is the server. OpenSSH includes a range of components and tools designed to provide a secure and straightforward approach to remote system administration.
+
+| Windows Version | SSH Client | SSH Server |
+|----------|----------|----------|
+|Windows Server 2019|          |Feature on Demand|
+|Windows Server 2022|          |Feature on Demand|
+|Windows Server 2025|          |Installed but not enabled|
+|Windows 10 build 1809 +|          |Feature on Demand|
 
 OpenSSH for Windows has the following commands built in.
 
