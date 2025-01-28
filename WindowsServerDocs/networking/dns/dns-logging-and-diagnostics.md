@@ -5,7 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 01/28/2025
-
+#customer intent: As a network administrator, I want to enable DNS logging and diagnostics in Windows Server so that I can monitor DNS server operations and troubleshoot DNS issues.
 ---
 
 # Enable DNS Logging and Diagnostics
