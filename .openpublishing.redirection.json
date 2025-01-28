@@ -11946,6 +11946,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/networking/dns/resource-record-types.md",
+      "redirect_url": "/windows-server/networking/dns/dns-architecture",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/networking/dns/dns-top.md",
       "redirect_url": "/windows-server/networking/dns/dns-overview",
       "redirect_document_id": true
