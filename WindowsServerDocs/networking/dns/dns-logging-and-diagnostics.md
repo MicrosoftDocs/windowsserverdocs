@@ -132,7 +132,7 @@ Analytic logs are by default written to the file `%SystemRoot%\System32\Winevt\L
 DNS server analytic events enable activity tracking on the DNS server. An analytic event is logged each time the server sends or receives DNS information. The following table summarizes DNS server analytic events.
 
 | Event ID | Type | Category | Level | Event text |
-|----------------|----------------|----------------|----------------|
+|----------------|----------------|----------------|----------------|----------------|
 | 257 | `Response success` | Lookup | Informational | `RESPONSE_SUCCESS: TCP=%1; InterfaceIP=%2; Destination=%3; AA=%4; AD=%5; QNAME=%6; QTYPE=%7; XID=%8; DNSSEC=%9; RCODE=%10; Port=%11; Flags=%12; Scope=%13; Zone=%14; PolicyName=%15; PacketData=%17` |
 | 258 | `Response failure` | Lookup | Error | `RESPONSE_FAILURE: TCP=%1; InterfaceIP=%2; Reason=%3; Destination=%4; QNAME=%5; QTYPE=%6; XID=%7; RCODE=%8; Port=%9; Flags=%10; Zone=%11; PolicyName=%12; PacketData=%14` |
 | 259 | `Ignored query` | Lookup | Error | `IGNORED_QUERY: TCP=%1; InterfaceIP=%2; Reason=%3; QNAME=%4; QTYPE=%5; XID=%6; Zone=%7; PolicyName=%8` |
