@@ -182,3 +182,5 @@ Sign into the device that has the Failover Cluster Management Remote Server Admi
     ```
 
 After you configure the cluster quorum, we recommend that you validate the quorum configuration settings by running the `Test-Cluster` cmdlet.
+
+---
