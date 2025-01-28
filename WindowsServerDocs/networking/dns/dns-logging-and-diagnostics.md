@@ -51,9 +51,9 @@ The following table summarizes DNS server audit events.
 | 521 | `Record scavenge` | Aging | Informational | `A resource record of type %1, name %2, TTL %3 and RDATA %5 was scavenged from scope %7 of zone %6.` |
 | 522 | `Zone scope create` | Zone operations | Informational | `The scope %1 was created in zone %2.` |
 | 523 | `Zone scope delete` | Zone operations | Informational | `The scope %1 was created in zone %2.` |
-| 525 | `Zone sign` | Online signing | Informational | `The zone %1 was signed with following properties: DenialOfExistence=%2; DistributeTrustAnchor=%3; DnsKeyRecordSetTtl=%4; DSRecordGenerationAlgorithm=%5; DSRecordSetTtl=%6; EnableRfc5011KeyRollover=%7; IsKeyMasterServer=%8; KeyMasterServer=%9; NSec3HashAlgorithm=%10; NSec3Iterations=%11; NSec3OptOut=%12; NSec3RandomSaltLength=%13; NSec3UserSalt=%14; ParentHasSecureDelegation=%15; PropagationTime=%16; SecureDelegationPollingPeriod=%17; SignatureInceptionOffset=%18.` |
+| 525 | `Zone sign` | Online signing | Informational | `The zone %1 was signed with following properties...` |
 | 526 | `Zone unsign` | Online signing | Informational | `The zone %1 was unsigned.` |
-| 527 | `Zone re-sign` | Online signing | Informational | `The zone %1 was re-signed with following properties: DenialOfExistence=%2; DistributeTrustAnchor=%3; DnsKeyRecordSetTtl=%4; DSRecordGenerationAlgorithm=%5; DSRecordSetTtl=%6; EnableRfc5011KeyRollover=%7; IsKeyMasterServer=%8; KeyMasterServer=%9; NSec3HashAlgorithm=%10; NSec3Iterations=%11; NSec3OptOut=%12; NSec3RandomSaltLength=%13; NSec3UserSalt=%14; ParentHasSecureDelegation=%15; PropagationTime=%16; SecureDelegationPollingPeriod=%17; SignatureInceptionOffset=%18.` |
+| 527 | `Zone re-sign` | Online signing | Informational | `The zone %1 was re-signed with following properties...` |
 | 528 | `Key rollover start` | DNSSEC operations | Informational | `Rollover was started on the type %1 with GUID %2 of zone %3.` |
 | 529 | `Key rollover end` | DNSSEC operations | Informational | `Rollover was completed on the type %1 with GUID %2 of zone %3.` |
 | 530 | `Key retire` | DNSSEC operations | Informational | `The type %1 with GUID %2 of zone %3 was marked for retiral. The key will be removed after the rollover completion.` |
@@ -85,13 +85,13 @@ The following table summarizes DNS server audit events.
 | 559 | `Pause zone` | Server operations | Informational | `The zone %1 is paused.` |
 | 560 | `Resume zone` | Server operations | Informational | `The zone %1 is resumed.` |
 | 561 | `Reload zone` | DNSSEC operations | Informational | `The data for zone %1 has been reloaded from %2.` |
-| 562 | `Refresh zone` | Zone operations | Informational | `The data for zone %1 has been refreshed from the master server %2.` |
-| 563 | `Expire zone` | Zone operations | Informational | `The secondary zone %1 has been expired and new data has been requested from the master server %2.` |
+| 562 | `Refresh zone` | Zone operations | Informational | `The data for zone %1 has been refreshed from the primary server %2.` |
+| 563 | `Expire zone` | Zone operations | Informational | `The secondary zone %1 has been expired and new data has been requested from the primary server %2.` |
 | 564 | `Update from DS` | Zone operations | Informational | `The zone %1 has been reloaded from the Active Directory.` |
 | 565 | `Write and notify` | Zone operations | Informational | `The content of the zone %1 has been written to the disk and the notification has been sent to all the notify servers.` |
 | 566 | `Force aging` | Zone operations | Informational | `All DNS records at the node %1 in the zone %2 will have their aging time stamp set to the current time.%3` |
 | 567 | `Scavenge servers` | Zone operations | Informational | `The Active Directory-integrated zone %1 has been updated. Only %2 can run scavenging.` |
-| 568 | `Transfer key master` | Zone operations | Informational | `The key master role for zone %1 has been %2.%3` |
+| 568 | `Transfer primary key server` | Zone operations | Informational | `The key management role for zone %1 has been %2.%3` |
 | 569 | `Add SKD` | Zone operations | Informational | `A %1 singing key (%2) descriptor has been added on the zone %3 with following properties: KeyId=%4; KeyType=%5; CurrentState=%6; KeyStorageProvider=%7; StoreKeysInAD=%8; CryptoAlgorithm=%9; KeyLength=%10; DnsKeySignatureValidityPeriod=%11; DSSignatureValidityPeriod=%12; ZoneSignatureValidityPeriod=%13; InitialRolloverOffset=%14; RolloverPeriod=%15; RolloverType=%16; NextRolloverAction=%17; LastRolloverTime=%18; NextRolloverTime=%19; CurrentRolloverStatus=%20; ActiveKey=%21; StandbyKey=%22; NextKey=%23. The zone will be resigned with the %2 generated with these properties.` |
 | 570 | `Modify SKD` | Zone operations | Informational | `A %1 singing key (%2) descriptor with GUID %3 has been updated on the zone %4. The properties of this %2 descriptor have been set to: KeyId=%5; KeyType=%6; CurrentState=%7; KeyStorageProvider=%8; StoreKeysInAD=%9; CryptoAlgorithm=%10; KeyLength=%11; DnsKeySignatureValidityPeriod=%12; DSSignatureValidityPeriod=%13; ZoneSignatureValidityPeriod=%14; InitialRolloverOffset=%15; RolloverPeriod=%16; RolloverType=%17; NextRolloverAction=%18; LastRolloverTime=%19; NextRolloverTime=%20; CurrentRolloverStatus=%21; ActiveKey=%22; StandbyKey=%23; NextKey=%24. The zone will be resigned with the %2 generated with these properties.` |
 | 571 | `Delete SKD` | DNSSEC operations | Informational | `A %1 singing key (%2) descriptor %4 has been removed from the zone %3.` |
