@@ -16,88 +16,27 @@ Learn about enhanced DNS logging, auditing, and analytic events for the DNS Serv
 
 Before you enable DNS logging and diagnostics, ensure that you have:
 
-- A Windows Server with the DNS Server role installed.
+- A Windows Server with the DNS Server role installed, including the DNS Remote Server Administration Tools (RSAT).
 
 - Administrative privileges on the server.
 
 - A basic understanding of DNS server operations.
 
-## Enable analytical event logging
+## View DNS server logs
 
-Enhanced DNS logging and diagnostics in Windows Server includes DNS Audit events and DNS Analytic events. DNS audit logs are enabled by default, and don't significantly affect DNS server performance.
-
-DNS analytical logs aren't enabled by default and typically will only affect DNS server performance at high DNS query rates. For example, a DNS server running on modern hardware that's receiving 100,000 queries per second (QPS) can experience a performance degradation of 5% when analytic logs are enabled. There's no apparent performance impact for query rates of 50,000 QPS and lower. However, we recommend you monitor DNS server performance whenever logging is enabled.
-
-To enable DNS diagnostic logging:
+DNS server logs are available in the Event Viewer. To view DNS server logs:
 
 1. Select the **Start** button, type **Event viewer**, open **Event viewer** from the best match list.
 
 1. In Event Viewer, navigate to **Applications and Services > Logs > Microsoft > Windows > DNS-Server**.
 
-1. Right-select DNS-Server, select **View**, then select **Show Analytic and Debug Logs**. The Analytical log is displayed.
-
-1. Right-click **Analytical** and then select **Properties**.
-
-1. In **Properties** under **When maximum event log size is reached**, select **Do not overwrite events (Clear logs manually)**, select the **Enable logging** checkbox, and then select **OK** when asked whether you want to enable this log.
-
-1. Select **OK** to enable the DNS Server Analytic event log.
-
-   :::image type="content" source="../media/dns-logging-and-diagnostics/enable-logging.png" alt-text="A screenshot showing log Properties window for DNS Server Analytical log with a warning message about potential loss of events when enabling the log.":::
-
-Analytic logs are by default written to the file `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-DNSServer%4Analytical.etl`. Events displayed in the DNS server audit and analytic event logs are treated in the next section.
-
-## Use audit and analytic events
-
-DNS logs are compatible with Event Tracing for Windows (ETW) consumer applications such as logman, tracelog, and message analyzer. For more information about using event tracing, see [About Event Tracing](/windows/win32/etw/about-event-tracing).
-
-You can use ETW consumers such as `tracelog.exe` with DNS server audit and analytic events by specifying a GUID of `{EB79061A-A566-4698-9119-3ED2807060E7}`.
-
-You can get `tracelog.exe` by downloading and installing the Windows Driver Kit (WDK). `Tracelog.exe` is included when you install the WDK, Visual Studio, and the Windows SDK for desktop apps. For information about downloading the kits, see Windows Hardware Downloads. For example, when you download and install Windows Driver Kit (WDK) and accept the default installation path, `tracelog.exe` is available at: `C:\Program Files (x86)\WindowsKits\10\bin\10.0.26100.0\x64\tracelog.exe`.
-
-For more information about using `tracelog.exe`, see [Tracelog Command Syntax](/windows-hardware/drivers/devtest/tracelog-command-syntax).
-
-The following examples demonstrate how to use `tracelog.exe` with DNS audit and analytic event logs:
-
-The following command enables both analytical and audit logging:
-
-```powershell
-
-tracelog.exe -start Dns -guid #{EB79061A-A566-4698-9119-3ED2807060E7} -level 5 -matchanykw 0xFFFFFFFF -f C:\analytic_audit.etl
-
-```
-
-While the trace is active, all analytical and audit events are recorded in the **C:\analytic_audit.etl** file that was specified on the command line. You can stop tracing by issuing a stop command:
-
-```cmd
-
-tracelog –stop Dns
-
-```
-
-After stopping the trace, you can view the .etl file in Event Viewer by selecting **Action** and then selecting **Open Saved Log**.
-
-:::image type="content" source="../media/dns-logging-and-diagnostics/event-viewer.png" alt-text="A screenshot showing Event Viewer DNS server logs with details on zone delegation, including event IDs, task categories, and specific DNS query information.":::
-
-The following example enables only the analytical channel and matches only the keywords to `0x7FFFF`:
-
-```cmd
-tracelog.exe -start Dns -guid #{EB79061A-A566-4698-9119-3ED2807060E7} -level 5 -matchanykw 0x7FFFF -f C:\analytic.etl
-```
-
-A logging level of 5 is used in the previous examples. The following table shows the available logging levels.
-
-| Logging level | Description |
-|----------------|----------------|
-| 0 (None) | Logging OFF |
-| 1 (Critical) | Only critical events are logged, for example process exit or termination. If no logging level is given, level 1 is used by default. |
-| 2 (Error) | Only severe error events are logged, for example failures to complete a required task. |
-| 3 (Warning) | Errors that can cause a service issue, but are acceptable or recoverable. For example, the first attempt to contact a forwarder fails. |
-| 4 (Informational) | High-level events are recorded in the event log. These events might include one message for each major task performed by the service. Use this setting to begin an investigation when the location of the problem is in doubt. For example, a scavenger thread was started. |
-| 5 (Verbose) | All events are logged. Level 5 provides a complete log of the operation of the service. Use this level when the problem is traced to a particular category or a small set of categories. |
+1. Select **Audit** from the navigation pane to view DNS audit logs.
 
 ## Audit events
 
-DNS server audit events enable change tracking on the DNS server. An audit event is logged each time server, zone, or resource record settings are changed. Audit events include operational events such as dynamic updates, zone transfers, and DNSSEC zone signing and unsigning. The following table summarizes DNS server audit events.
+DNS audit logs are enabled by default, and don't significantly affect DNS server performance. DNS server audit events enable change tracking on the DNS server. An audit event is logged each time server, zone, or resource record settings are changed. Audit events include operational events such as dynamic updates, zone transfers, and DNSSEC zone signing and unsigning. 
+
+The following table summarizes DNS server audit events.
 
 | Event ID | Type | Category | Level | Event text |
 |----------------|----------------|----------------| ----------------|----------------|
@@ -168,7 +107,27 @@ DNS server audit events enable change tracking on the DNS server. An audit event
 | 581 | `Delete zone level policy` | Policy operations | Informational | `The zone level policy %1 has been deleted from zone %3 on server %2.` |
 | 582 | `Delete forwarding policy` | Policy operations | Informational | `The forwarding policy %1 has been deleted from server %2.` |
 
-## Analytic events
+## Enable analytical event logging
+
+Enhanced DNS logging and diagnostics in Windows Server includes DNS Audit events and DNS Analytic events. DNS audit logs are enabled by default, and don't significantly affect DNS server performance.
+
+DNS analytical logs aren't enabled by default and typically will only affect DNS server performance at high DNS query rates. For example, a DNS server running on modern hardware that's receiving 100,000 queries per second (QPS) can experience a performance degradation of 5% when analytic logs are enabled. There's no apparent performance impact for query rates of 50,000 QPS and lower. However, we recommend you monitor DNS server performance whenever logging is enabled.
+
+To enable DNS diagnostic logging:
+
+1. From the **Applications and Services > Logs > Microsoft > Windows > DNS-Server** node, right-select DNS-Server, select **View**, then select **Show Analytic and Debug Logs**. The Analytical log is displayed.
+
+1. Right-click **Analytical** and then select **Properties**.
+
+1. In **Properties** under **When maximum event log size is reached**, select **Do not overwrite events (Clear logs manually)**, select the **Enable logging** checkbox, and then select **OK** when asked whether you want to enable this log.
+
+1. Select **OK** to enable the DNS Server Analytic event log.
+
+   :::image type="content" source="../media/dns-logging-and-diagnostics/enable-logging.png" alt-text="A screenshot showing log Properties window for DNS Server Analytical log with a warning message about potential loss of events when enabling the log.":::
+
+Analytic logs are by default written to the file `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-DNSServer%4Analytical.etl`. Events displayed in the DNS server audit and analytic event logs are treated in the next section.
+
+### Analytic events
 
 DNS server analytic events enable activity tracking on the DNS server. An analytic event is logged each time the server sends or receives DNS information. The following table summarizes DNS server analytic events.
 
@@ -199,6 +158,55 @@ DNS server analytic events enable activity tracking on the DNS server. An analyt
 | 279 | `Internal lookup CNAME` | Lookup | Informational | `INTERNAL_LOOKUP_CNAME: TCP=%1; InterfaceIP=%2; Source=%3; RD=%4; QNAME=%5; QTYPE=%6; Port=%7; Flags=%8; XID=%9; PacketData=%11` |
 | 280 | `Internal lookup` | Lookup | Informational | `INTERNAL_LOOKUP_ADDITIONAL: TCP=%1; InterfaceIP=%2; Source=%3; RD=%4; QNAME=%5; QTYPE=%6; Port=%7; Flags=%8; XID=%9; PacketData=%11` |
 
+## Event Tracing
+
+DNS logs are compatible with Event Tracing for Windows (ETW) consumer applications such as logman, tracelog, and message analyzer. For more information about using event tracing, see [About Event Tracing](/windows/win32/etw/about-event-tracing).
+
+You can use ETW consumers such as `tracelog.exe` with DNS server audit and analytic events by specifying a GUID of `{EB79061A-A566-4698-9119-3ED2807060E7}`.
+
+You can get `tracelog.exe` by downloading and installing the Windows Driver Kit (WDK). `Tracelog.exe` is included when you install the WDK, Visual Studio, and the Windows SDK for desktop apps. For information about downloading the kits, see Windows Hardware Downloads. For example, when you download and install Windows Driver Kit (WDK) and accept the default installation path, `tracelog.exe` is available at: `C:\Program Files (x86)\WindowsKits\10\bin\10.0.26100.0\x64\tracelog.exe`.
+
+For more information about using `tracelog.exe`, see [Tracelog Command Syntax](/windows-hardware/drivers/devtest/tracelog-command-syntax).
+
+The following examples demonstrate how to use `tracelog.exe` with DNS audit and analytic event logs:
+
+The following command enables both analytical and audit logging:
+
+```powershell
+
+tracelog.exe -start Dns -guid #{EB79061A-A566-4698-9119-3ED2807060E7} -level 5 -matchanykw 0xFFFFFFFF -f C:\analytic_audit.etl
+
+```
+
+While the trace is active, all analytical and audit events are recorded in the **C:\analytic_audit.etl** file that was specified on the command line. You can stop tracing by issuing a stop command:
+
+```cmd
+
+tracelog –stop Dns
+
+```
+
+After stopping the trace, you can view the .etl file in Event Viewer by selecting **Action** and then selecting **Open Saved Log**.
+
+:::image type="content" source="../media/dns-logging-and-diagnostics/event-viewer.png" alt-text="A screenshot showing Event Viewer DNS server logs with details on zone delegation, including event IDs, task categories, and specific DNS query information.":::
+
+The following example enables only the analytical channel and matches only the keywords to `0x7FFFF`:
+
+```cmd
+tracelog.exe -start Dns -guid #{EB79061A-A566-4698-9119-3ED2807060E7} -level 5 -matchanykw 0x7FFFF -f C:\analytic.etl
+```
+
+A logging level of 5 is used in the previous examples. The following table shows the available logging levels.
+
+| Logging level | Description |
+|----------------|----------------|
+| 0 (None) | Logging OFF |
+| 1 (Critical) | Only critical events are logged, for example process exit or termination. If no logging level is given, level 1 is used by default. |
+| 2 (Error) | Only severe error events are logged, for example failures to complete a required task. |
+| 3 (Warning) | Errors that can cause a service issue, but are acceptable or recoverable. For example, the first attempt to contact a forwarder fails. |
+| 4 (Informational) | High-level events are recorded in the event log. These events might include one message for each major task performed by the service. Use this setting to begin an investigation when the location of the problem is in doubt. For example, a scavenger thread was started. |
+| 5 (Verbose) | All events are logged. Level 5 provides a complete log of the operation of the service. Use this level when the problem is traced to a particular category or a small set of categories. |
+
 ## Performance considerations
 
 DNS server performance can be affected when logging is enabled, however the enhanced DNS logging and diagnostics feature in Windows Server is designed to lower the impact on performance. This article discusses DNS server performance considerations when logging is enabled.
@@ -208,6 +216,16 @@ DNS server performance can be affected when logging is enabled, however the enha
 Before the introduction of DNS analytic logs, DNS debug logging was an available method to monitor DNS transactions. DNS debug logging isn't the same as the enhanced DNS logging and diagnostics feature discussed in this article. Debug logging is a tool that also can be used for DNS logging and diagnostics. The DNS debug log provides detailed data about all DNS information sent and received by the DNS server. The information gathered is similar to the data that can be gathered using packet capture tools such as network monitor.
 
 Debug logging can affect overall server performance and also consumes disk space. We recommended you enable debug logging temporarily only when detailed DNS transaction information is needed.
+
+To select and enable debug logging options on the DNS server, follow these steps:
+
+1. Select **Start**, type **DNS Manager**, and then select **DNS Manager** from the best match list.
+
+1. In the console tree, right-click the applicable DNS server, then select **Properties**.
+
+1. Select the **Debug Logging** tab.
+
+1. From the **Properties** dialog box, check the **Log packets for debugging** box, and then select the events that you want the DNS server to record for debug logging.
 
 The following DNS debug logging options are available:
 
