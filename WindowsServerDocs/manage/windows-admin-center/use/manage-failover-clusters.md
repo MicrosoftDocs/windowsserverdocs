@@ -48,5 +48,5 @@ The following areas of Windows Admin Center represent tools that are available f
 | **Nodes** | View and manage cluster nodes. |
 | **Roles** | Manage cluster roles or create an empty role. |
 | **Updates** | Manage Cluster-Aware Updating (requires [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-)). |
-| **Virtual Machines** | View and manage [virtual machines]((manage-virtual-machines.md)). |
+| **Virtual Machines** | View and manage [virtual machines](manage-virtual-machines.md). |
 | **Virtual Switches** | View and manage virtual switches. |

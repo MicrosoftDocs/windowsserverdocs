@@ -36,13 +36,13 @@ We're actively developing Windows Admin Center for hyper-converged infrastructur
 To manage your cluster as a hyper-converged infrastructure in Windows Admin Center, it needs to be running Windows Server 2016 or Windows Server 2019 and have Hyper-V and Storage Spaces Direct enabled. Optionally, it can also have Software Defined Networking enabled and managed through Windows Admin Center.
 
 > [!TIP]
-> Windows Admin Center also offers a general-purpose management experience for any cluster that supports any workload. It's available for Windows Server 2012 and later. If option this sounds like a better fit, when you add your cluster to Windows Admin Center, select [Failover Cluster](manage-failover-clusters.md) instead of **Hyper-Converged Cluster**.
+> Windows Admin Center also offers a general-purpose management experience for any cluster that supports any workload. It's available for Windows Server 2012 and later. If this option sounds like a better fit, when you add your cluster to Windows Admin Center, select [Failover Cluster](manage-failover-clusters.md) instead of **Hyper-Converged Cluster**.
 
 ### Prepare your Windows Server 2016 cluster for Windows Admin Center
 
 Windows Admin Center for hyper-converged infrastructures depends on management APIs added after Windows Server 2016 was released. Before you can manage your Windows Server 2016 cluster by using Windows Admin Center, you need to perform these two steps:
 
-1. Verify that every server in the cluster has installed the [2018-05 Cumulative Update for Windows Server 2016 (KB4103723)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723) or later. To download and install this update, go to **Settings** > **Update & Security** > **Windows Update** and select **Check online for updates from Microsoft Update**.
+1. Verify that every server in the cluster installed the [2018-05 Cumulative Update for Windows Server 2016 (KB4103723)](https://support.microsoft.com/help/4103723/windows-10-update-kb4103723) or later. To download and install this update, go to **Settings** > **Update & Security** > **Windows Update** and select **Check online for updates from Microsoft Update**.
 
 2. Run the following PowerShell cmdlet as administrator on the cluster:
 
@@ -65,7 +65,7 @@ You can configure your hyper-converged infrastructure running Windows Server 201
 
 2. Download all the folders and files under SDN Express from [GitHub](https://github.com/Microsoft/SDN/tree/master/SDNExpress).
 
-3. Prepare a different VM by using the deployment console. This VM should be able to access the SDN hosts. Also, the VM should be have the Remote Server Administration Tools (RSAT) Hyper-V package installed.
+3. Prepare a different VM by using the deployment console. This VM should be able to access the SDN hosts. Also, the VM should have the Remote Server Administration Tools (RSAT) Hyper-V package installed.
 
 4. Copy everything that you downloaded for SDN Express to the deployment console VM, and share this **SDNExpress** folder. Make sure every host can access the **SDNExpress** shared folder, as defined in line 8 of the configuration file:
 
@@ -288,7 +288,7 @@ You can also configure the virtual network when creating a virtual machine.
 
 1. On the left pane, select **SDN Monitoring**.
 
-2. View detailed information about the health of you network controller, software load balancer, and virtual gateway. You can also monitor your virtual gateway pool, public and private IP pool usage, and SDN host status.
+2. View detailed information about the health of your network controller, software load balancer, and virtual gateway. You can also monitor your virtual gateway pool, public and private IP pool usage, and SDN host status.
 
 ![Screenshot of the pane for monitoring an SDN infrastructure.](../media/manage-hyper-converged/sdn-monitoring.png)
 

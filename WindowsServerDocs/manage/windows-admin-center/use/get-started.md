@@ -138,11 +138,11 @@ If you installed Windows Admin Center on Windows Server, additional configuratio
 
    :::image type="content" source="../media/launch/use-get-started-9.png" alt-text="Screenshot of the page for all connections with the command for using credentials for management.":::
 
-1. If Windows Admin Center is running in service mode on Windows Server, but you don't have Kerberos delegation configured, you must re-enter your Windows credentials.
+1. If Windows Admin Center is running in service mode on Windows Server, but you don't have Kerberos delegation configured, you must reenter your Windows credentials.
 
    :::image type="content" source="../media/launch/use-get-started-10.png" alt-text="Screenshot of the page for specifying credentials.":::
 
-You can apply the credentials to all connections, which will cache them for that specific browser session. If you reload your browser, you must re-enter your **Manage as** credentials.
+You can apply the credentials to all connections, which will cache them for that specific browser session. If you reload your browser, you must reenter your **Manage as** credentials.
 
 ### Authenticate by Local Administrator Password Solution
 

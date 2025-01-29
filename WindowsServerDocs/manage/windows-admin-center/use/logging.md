@@ -13,7 +13,9 @@ Windows Admin Center writes event logs that show the management activities being
 
 ## Management activities
 
-Windows Admin Center provides insight into the management activities performed on the servers in your environment by logging actions to the **Microsoft-ServerManagementExperience** event channel in the event log of the managed server. `EventID` is `4000`, and `Source` is `SMEGateway`. Windows Admin Center logs only actions on the managed server, so you won't see events logged if a user accesses a server for read-only purposes.
+Windows Admin Center provides insight into the management activities performed on the servers in your environment by logging actions to the **Microsoft-ServerManagementExperience** event channel in the event log of the managed server. `EventID` is `4000`, and `Source` is `SMEGateway`.
+
+Windows Admin Center logs only actions on the managed server. Events aren't logged if a user accesses a server for read-only purposes.
 
 Logged events include the following information:
 
