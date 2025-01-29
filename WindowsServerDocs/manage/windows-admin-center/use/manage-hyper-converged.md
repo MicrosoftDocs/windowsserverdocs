@@ -203,7 +203,7 @@ If you're just getting started, here are some quick videos to help you learn how
 
 1. On the left pane, select **Virtual Machines**.
 
-2. At the top of the **Virtual Machines** pane, select the **Inventory** tab, and then select **New** to create a new virtual machine.
+2. At the top of the **Virtual Machines** pane, select the **Inventory** tab, and then select **New**.
 
 3. Enter the virtual machine name, and choose between generation 1 and generation 2 virtual machines.
 
