@@ -187,6 +187,8 @@ items:
         href: dns/manage-resource-records.md
       - name: Secure DNS Client over HTTPS (DoH)
         href: dns/doh-client-support.md
+      - name: Enable DNS Logging and Diagnostics
+        href: dns/dns-logging-and-diagnostics.md 
     - name: Tutorials
       items:
       - name: DNS policy
