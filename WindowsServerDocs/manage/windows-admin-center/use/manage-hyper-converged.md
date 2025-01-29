@@ -51,7 +51,7 @@ Windows Admin Center for hyper-converged infrastructures depends on management A
    ```
 
 > [!TIP]
-> You need to run the cmdlet only once, on any server in the cluster. You can run it locally in Windows PowerShell or use Credential Security Service Provider (CredSSP) to run it remotely. Depending on your configuration, you might not be able to run this cmdlet from within Windows Admin Center.
+> You need to run the cmdlet only once, on any server in the cluster. You can run it locally in Windows PowerShell or use CredSSP to run it remotely. Depending on your configuration, you might not be able to run this cmdlet from within Windows Admin Center.
 
 ### Prepare your Windows Server 2019 cluster for Windows Admin Center
 
@@ -205,11 +205,11 @@ If you're just getting started, here are some quick videos to help you learn how
 
 2. At the top of the **Virtual Machines** pane, select the **Inventory** tab, and then select **New**.
 
-3. Enter the virtual machine name, and choose between generation 1 and generation 2 virtual machines.
+3. Enter the virtual machine name, and choose between generation 1 and generation 2.
 
 4. Choose a host for the virtual machine, or use the recommended host.
 
-5. Choose a path for the virtual machine files. Choose a volume from the dropdown list, or select **Browse** to choose a folder. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\[virtual machine name]` path of the selected volume or path.
+5. Choose a path for the virtual machine files. Select a volume from the dropdown list, or select **Browse** to choose a folder. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\[virtual machine name]` path of the selected volume or path.
 
 6. Choose the number of virtual processors and whether you want nested virtualization enabled. Configure memory settings, network adapters, and virtual hard disks. Choose whether you want to install an operating system from an .iso image file or from the network.
 
@@ -217,7 +217,7 @@ If you're just getting started, here are some quick videos to help you learn how
 
 8. After the virtual machine is created and appears in the list of virtual machines, start it.
 
-9. Connect to the virtual machine's console via Virtual Machine Connection (VMConnect) to install the operating system. Select the virtual machine from the list, and then select **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Because you're connecting to the virtual machine's console, you need to enter the Hyper-V host's admin credentials.
+9. Connect to the virtual machine's console via VMConnect to install the operating system. Select the virtual machine from the list, and then select **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Because you're connecting to the virtual machine's console, you need to enter the Hyper-V host's admin credentials.
 
 [Learn more about virtual machine management with Windows Admin Center](manage-virtual-machines.md).
 

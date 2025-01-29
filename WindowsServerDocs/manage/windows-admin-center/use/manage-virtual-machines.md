@@ -13,11 +13,11 @@ The Virtual Machines tool in Windows Admin Center is available in [server](manag
 
 Highlights of the Virtual Machines tool in Windows Admin Center include:
 
-- **High-level Hyper-V host resource monitoring**. View overall CPU and memory usage, I/O performance metrics, virtual machine (VM) health alerts and events for the Hyper-V host server or entire cluster in a single dashboard.
-- **Unified experience bringing Hyper-V Manager and Failover Cluster Manager capabilities together**. View all the virtual machines across a cluster and drill down into a single virtual machine for advanced management and troubleshooting.
+- **High-level Hyper-V host resource monitoring**. View overall CPU and memory usage, I/O performance metrics, and virtual machine (VM) health alerts and events for the Hyper-V host server or the entire cluster in a single dashboard.
+- **Unified experience that brings together Hyper-V Manager and Failover Cluster Manager capabilities**. View all the virtual machines across a cluster and drill down into a single virtual machine for advanced management and troubleshooting.
 - **Simplified, yet powerful workflows for virtual machine management**. Use UI experiences that are tailored to IT administration scenarios to create, manage, and replicate virtual machines.
 
-The following sections describe some of the Hyper-V tasks that you can do in Windows Admin Center.
+This article describes some of the Hyper-V tasks that you can do in Windows Admin Center.
 
 ## Monitor Hyper-V host resources and performance
 
@@ -29,7 +29,7 @@ The following sections describe some of the Hyper-V tasks that you can do in Win
 
     - The number of VMs grouped by state: **Running**, **Off**, **Paused**, and **Saved**.
     - Recent health alerts or Hyper-V event log events. Alerts are available only for hyper-converged clusters running Windows Server 2016 or later.
-    - CPU and memory usage with a breakdown of hosts versus guests.
+    - CPU and memory usage, with a breakdown of hosts versus guests.
     - VMs that consume the most CPU and memory resources.
     - Line charts for input/output per second (IOPS) and I/O throughput, for both live and historical data.
 
@@ -44,21 +44,21 @@ The following sections describe some of the Hyper-V tasks that you can do in Win
 2. Select the **Inventory** tab. This tab lists the virtual machines available on the current server or the entire cluster, and it provides commands to manage individual virtual machines. You can:
 
     - View a list of the virtual machines running on the current server or cluster.
-    - View a virtual machine's state and host server if you're viewing virtual machines for a cluster. Also vew CPU and memory usage from the host perspective, including memory pressure, memory demand, and assigned memory
+    - View a virtual machine's state and host server if you're viewing virtual machines for a cluster. Also view CPU and memory usage from the host perspective, including memory pressure, memory demand, and assigned memory.
     - View a virtual machine's uptime, heartbeat status, and protection status using by Azure Site Recovery.
-    - [Create a new virtual machine](#create-a-new-virtual-machine).
+    - [Create a virtual machine](#create-a-virtual-machine).
     - Delete, start, turn off, shut down, pause, resume, reset, or rename a virtual machine. Also save the virtual machine, delete a saved state, or create a checkpoint.
     - [Change settings for a virtual machine](#change-virtual-machine-settings).
-    - Connect to a virtual machine console by using Virtual Machine Connection (VMConnect) via the Hyper-V host.
-    - [Replicate a virtual machine by using Azure Site Recovery](#protect-virtual-machines-with-azure-site-recovery).
-    - For operations that can be run on multiple VMs, such as Start, Shut down, Save, Pause, Delete, and Reset, you can select multiple VMs and run the operation on all of them at once.
+    - Connect to a virtual machine console by using VMConnect via the Hyper-V host.
+    - [Replicate a virtual machine by using Azure Site Recovery](#replicate-virtual-machines-by-using-azure-site-recovery).
+    - For operations that can be run on multiple VMs (such as start, shut down, save, pause, delete, and reset), you can select multiple VMs and run the operation on all of them at once.
 
 > [!NOTE]
 > If you're connected to a cluster, the Virtual Machine tool displays only clustered virtual machines.
 
-## Create a new virtual machine
+## Create a virtual machine
 
-![Screenshot that shows the pane for creating a new virtual machine.](../media/manage-virtual-machines/new-vm.png)
+![Screenshot that shows the pane for creating a virtual machine.](../media/manage-virtual-machines/new-vm.png)
 
 1. On the left pane, select **Virtual Machines**.
 
@@ -66,11 +66,11 @@ The following sections describe some of the Hyper-V tasks that you can do in Win
 
 3. Select **Add** > **New**.
 
-4. Enter the virtual machine name, and choose between generation 1 and generation 2 virtual machines.
+4. Enter the virtual machine name, and choose between generation 1 and generation 2.
 
 5. If you're creating a virtual machine on a cluster, you can choose a host for the virtual machine. If you're running Windows Server 2016 or later, the tool provides a host recommendation for you.
 
-6. Choose a path for the virtual machine files. Choose a volume from the dropdown list, or select **Browse** to choose a folder. The virtual machine configuration files and the virtual hard disk file will be saved in a single folder under the `\Hyper-V\\[virtual machine name]` path of the selected volume or path.
+6. Choose a path for the virtual machine files. Select a volume from the dropdown list, or select **Browse** to choose a folder. The virtual machine configuration files and the virtual hard disk file will be saved in a single folder under the `\Hyper-V\\[virtual machine name]` path of the selected volume or path.
 
    > [!TIP]
    > You can browse to any available Server Message Block (SMB) share on the network by entering the path in the **Folder name** field as `\\server\share`. Using a network share for VM storage requires [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-).
@@ -99,7 +99,7 @@ The following sections describe some of the Hyper-V tasks that you can do in Win
 
 ## Live migrate a virtual machine to another cluster node
 
-If you're connected to a cluster, you can live migrate a virtual machine to another cluster node.
+If you're connected to a cluster, you can live migrate a virtual machine to another cluster node:
 
 1. Go to a failover cluster or hyper-converged cluster connection. On the left pane, select **Virtual Machines**.
 
@@ -121,7 +121,7 @@ You can view detailed information and performance charts for a single virtual ma
 
 2. Select the **Inventory** tab.
 
-3. Choose a virtual machine from the list. In the view that opens, you can:
+3. Choose a virtual machine from the list. In the pane that opens, you can:
 
     - View detailed information for the virtual machine.
     - View line charts for IOPS and I/O throughput, for both live and historical data. Historical data is available only for hyper-converged clusters running Windows Server 2019 or later.
@@ -130,11 +130,11 @@ You can view detailed information and performance charts for a single virtual ma
     - Delete, start, turn off, shut down, pause, resume, reset, or rename the virtual machine. Also save the virtual machine, delete a saved state, or create a checkpoint.
     - [Change settings for the virtual machine](#change-virtual-machine-settings).
     - Connect to the virtual machine console by using VMConnect via the Hyper-V host.
-    - [Replicate the virtual machine by using Azure Site Recovery](#protect-virtual-machines-with-azure-site-recovery).
+    - [Replicate the virtual machine by using Azure Site Recovery](#replicate-virtual-machines-by-using-azure-site-recovery).
 
 ## Manage a virtual machine through the Hyper-V host (VMConnect)
 
-![Screenshot of the pane that shows VM Connect in web browser.](../media/manage-virtual-machines/vm-connect.png)
+![Screenshot of the pane that shows VM Connect in a web browser.](../media/manage-virtual-machines/vm-connect.png)
 
 1. On the left pane, select **Virtual Machines**.
 
@@ -142,7 +142,7 @@ You can view detailed information and performance charts for a single virtual ma
 
 3. Choose a virtual machine from the list, and then select one of these options:
 
-   - **Connect**. Interact with the guest VM through the Remote Desktop web console, integrated into Windows Admin Center.
+   - **Connect**. Interact with the guest VM through the Remote Desktop web console that's integrated into Windows Admin Center.
    - **Download RDP file**. Download an RDP file that you can open with the Remote Desktop Connection application (mstsc.exe).
 
    Both options use VMConnect to connect to the guest VM through the Hyper-V host. They both require you to enter administrator credentials for the Hyper-V host server.
@@ -153,25 +153,30 @@ You can view detailed information and performance charts for a single virtual ma
 
 1. On a server, hyper-converged cluster, or failover cluster connection, select **Settings** at the bottom of the left pane.
 
-2. On a Hyper-V host server or cluster, the **Hyper-V Host Settings** group has the following sections:
+2. On a Hyper-V host server or cluster, the **Hyper-V Host Settings** group has the following sections. Make the necessary changes.
 
-    - **General**: Change virtual hard disks, virtual machine file path, and hypervisor schedule type (if supported).
+    - **General**. Change virtual hard disks, virtual machine file path, and hypervisor schedule type (if it's supported).
     - **Enhanced Session Mode**
     - **NUMA Spanning**
     - **Live Migration**
     - **Storage Migration**
-3. If you make any Hyper-V host setting changes in a Hyper-converged Cluster or Failover Cluster connection, the change will be applied to all cluster nodes.
+
+If you make any Hyper-V host setting changes in a hyper-converged cluster or failover cluster connection, the change will be applied to all cluster nodes.
 
 ## View Hyper-V event logs
 
-You can view Hyper-V event logs directly from the Virtual Machines tool.
+You can view Hyper-V event logs directly from the Virtual Machines tool:
 
 1. On the left pane, select **Virtual Machines**.
 
-2. At the top of the Virtual Machines tool, choose the **Summary** tab. In the top-right Events section, select **View all events**.
+2. Select the **Summary** tab.
 
-3. The Event Viewer tool will show the Hyper-V event channels in the left pane. Choose a channel to view the events in the right pane. If you're managing a failover cluster or hyper-converged cluster, the event logs will display events for all cluster nodes, displaying the host server in the Machine column.
+3. In the **Events** section, select **View all events**.
 
-## Protect virtual machines with Azure Site Recovery
+4. The Event Viewer tool shows the Hyper-V event channels on the left pane. Choose a channel to view the events in the right pane.
+
+   If you're managing a failover cluster or hyper-converged cluster, the event logs display events for all cluster nodes. They display the host server in the **Machine** column.
+
+## Replicate virtual machines by using Azure Site Recovery
 
 You can use Windows Admin Center to configure Azure Site Recovery and replicate your on-premises virtual machines to Azure. [Learn more](../azure/azure-site-recovery.md).
