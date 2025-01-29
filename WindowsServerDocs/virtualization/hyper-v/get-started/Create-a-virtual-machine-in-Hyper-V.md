@@ -3,8 +3,8 @@ title: Create a virtual machine in Hyper-V
 description: Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell.
 ms.topic: how-to
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
-ms.author: alalve
-author: xelu86
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 01/29/2025
 ---
 
@@ -116,7 +116,7 @@ The following table lists the options you can pick when you create a virtual mac
 |**Configure Networking**|Not connected|You can select a network connection for the virtual machine to use from a list of existing virtual switches. See [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md).|
 |**Connect Virtual Hard Disk**|Create a virtual hard disk<p>Name: <*vmname*>.vhdx<p>**Location**: **C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\\**<p>**Size**: 127 GB|You can also choose to use an existing virtual hard disk or wait and attach a virtual hard disk later.|
 |**Installation Options**|Install an operating system later|These options change the boot order of the virtual machine so that you can install from an .iso file, bootable floppy disk or a network installation service, like Windows Deployment Services (WDS).|
-|**Summary**|Displays the options that you chose, so that you can verify they are correct.<p>-   Name<br />-   Generation<br />-   Memory<br />-   Network<br />-   Hard Disk<br />-   Operating System|**Tip:** You can copy the summary from the page and paste it into e-mail or somewhere else to help you keep track of your virtual machines.|
+|**Summary**|Displays the options that you chose, so that you can verify they're correct.<p>-   Name<br />-   Generation<br />-   Memory<br />-   Network<br />-   Hard Disk<br />-   Operating System|**Tip:** You can copy the summary from the page and paste it into e-mail or somewhere else to help you keep track of your virtual machines.|
 
 ## Related content
 
