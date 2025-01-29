@@ -4,7 +4,7 @@ description: Learn how-to create Failover Clusters without Active Directory usin
 ms.topic: how-to
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 07/16/2024
+ms.date: 01/29/2024
 ---
 # Create a workgroup cluster
 
@@ -197,7 +197,7 @@ Now you're ready to create a workgroup cluster with the server nodes you prepare
 Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft supports a cluster solution only if the complete configuration passes all validation tests and if all hardware is certified for the version of Windows Server that the cluster nodes are running.
 
 > [!NOTE]
-> You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests do not run.
+> You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests don't run.
 
 #### Run cluster validation tests
 
