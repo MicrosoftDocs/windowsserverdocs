@@ -9,8 +9,6 @@ author: maertendmsft
 
 # Key-based authentication in OpenSSH for Windows
 
->Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
-
 Most authentication in Windows environments is done with a username-password pair, which works well for systems that share a common domain. When working across domains, such as between on-premises and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
 
 By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication that doesn't require the use of guessable passwords. OpenSSH includes tools to help support key based authentication, specifically:
@@ -57,7 +55,7 @@ Since there's no user associated with the sshd service, the host keys are stored
 
 ## User key generation
 
-To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified. If no algorithm is specified, RSA is used. A strong algorithm and key length should be used, such as ECDSA in this example.
+To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified. If no algorithm is specified, Ed25519 is used. A strong algorithm and key length should be used, such as ECDSA in this example.
 
 To generate key files using the ECDSA algorithm, run the following command from a PowerShell or cmd prompt on your client:
 
