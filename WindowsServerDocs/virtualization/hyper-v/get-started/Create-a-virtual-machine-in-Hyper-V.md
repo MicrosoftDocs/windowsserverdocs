@@ -20,13 +20,13 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
 
 1.  In the left pane, under **Hyper-V Manager**, select your server.
 
-1.  From the **Actions** pane, click **New**, and then click **Virtual Machine**.
+1.  From the **Actions** pane, select **New**, and then select **Virtual Machine**.
 
-1.  From the **New Virtual Machine Wizard**, click **Next**.
+1.  From the **New Virtual Machine Wizard**, select **Next**.
 
 1.  Make the appropriate choices for your virtual machine on each of the pages. For more information, see [New virtual machine options and defaults in Hyper-V Manager](#options-in-hyper-v-manager-new-virtual-machine-wizard).
 
-1.  After verifying your choices in the **Summary** page, click **Finish**.
+1.  After verifying your choices in the **Summary** page, select **Finish**.
 
 1.  In Hyper-V Manager, right-click the virtual machine and select **Connect...**.
 
@@ -34,7 +34,7 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
 
 ### [PowerShell](#tab/powershell)
 
-1. On the Windows desktop, click the Start button and type **Windows PowerShell**.
+1. On the Windows desktop, select the Start button and type **Windows PowerShell**.
 
 1. Right-click on **Windows PowerShell** and select **Run as administrator**.
 
