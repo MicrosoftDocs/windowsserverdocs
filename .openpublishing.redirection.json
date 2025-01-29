@@ -11936,6 +11936,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "EssentialsDocs/install/Create-a-Bootable-USB-Flash-Drive.md",
+      "redirect_url": "/windows-server/get-started/install-windows-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
       "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
       "redirect_document_id": true

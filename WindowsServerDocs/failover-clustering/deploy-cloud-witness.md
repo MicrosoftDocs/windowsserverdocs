@@ -102,12 +102,12 @@ You can configure Cloud Witness using the Quorum Configuration setup workflow bu
 
    - The access key associated with your storage account.
 
-       - If you're creating a cloud witness for the first time, use your primary access key.
+     - If you're creating a cloud witness for the first time, use your primary access key.
 
-       - If you're rotating your primary access key, then use the secondary access key instead.
+     - If you're rotating your primary access key, then use the secondary access key instead.
 
-         > [!NOTE]
-         > Instead of storing access keys directly, your failover cluster generates a Shared Access Signature (SAS) token for secure storage. The token remains valid only as long as the associated access key is valid. When you rotate the primary access key, update the cloud witnesses on all clusters using that storage account with the secondary key before regenerating the primary key.
+     > [!NOTE]
+     > Instead of storing access keys directly, your failover cluster generates a Shared Access Signature (SAS) token for secure storage. The token remains valid only as long as the associated access key is valid. When you rotate the primary access key, update the cloud witnesses on all clusters using that storage account with the secondary key before regenerating the primary key.
 
    - The Azure service endpoint
 
