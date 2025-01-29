@@ -31,7 +31,7 @@ Devices that connect TLS to servers frequently need to reconnect due to session 
 > [!NOTE]
 > The client-side implementation of RFC 5077 was added in Windows 8.
 
-For information about stateless TLS session resumption, see the IETF document [RFC 5077.](http://www.ietf.org/rfc/rfc5077)
+For information about stateless TLS session resumption, see the IETF document [RFC 5077](https://datatracker.ietf.org/doc/rfc5077/).
 
 ### Application protocol negotiation
  Windows Server 2012 R2  and Windows 8.1 support client-side TLS application protocol negotiation so applications can leverage protocols as part of the HTTP 2.0 standard development and users can access online services such as Google and Twitter using apps running the SPDY protocol.

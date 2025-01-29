@@ -1,8 +1,8 @@
 ---
 title: Avoid using virtual hard disks with a sector size less than the sector size of the physical storage that stores the virtual hard disk file
 description: Learn what to do when one or more virtual hard disks have a physical sector size that is smaller than the physical sector size of the storage on which the virtual hard disk file is located.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: b7cf994e-bf4b-4b1b-bad6-ecf7d46d105e
 ms.date: 8/16/2016
