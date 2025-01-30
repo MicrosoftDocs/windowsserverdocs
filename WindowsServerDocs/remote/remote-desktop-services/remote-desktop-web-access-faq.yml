@@ -21,14 +21,14 @@ sections:
           If you enter an incorrect user name or password, you see a message to try typing the information again. If your account is locked because of too many incorrect sign in attemps, you
           ll continue to see the same message. Contact your administrator to unlock your account and reset your password.
 
-            ![A screenshot of the link displayed to change your password.](media/incorrect-or-account-locked-out.jpeg)
+            ![A screenshot of the link displayed to change your password.](media/incorrect-or-account-locked-out.png)
 
       - question: |
           How do I reset my expired password?
         answer: |
           If an administrator hasn't enabled password reset, you'll see that your password is expired. Contact your administrator to reset your password.
           
-            ![A screenshot of the link displayed to change your password.](media/expired-password-no-iis-change.jpeg)
+            ![A screenshot of the link displayed to change your password.](media/expired-password-no-iis-change.png)
 
           If an administrator has enabled password reset, you can reset your password by following the link to reset your password. You'll need to enter your old password, then your new password, and confirm the new password.
 
