@@ -27,14 +27,14 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 1. A prompt for selecting a certificate for authentication appears.
 
    > [!NOTE]
-   > In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), instead of being prompted for a certificate, you're asked to sign in to the Windows Admin Center gateway. This step does not apply.
+   > In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), you're asked to sign in to the Windows Admin Center gateway instead of selecting a certificate. This step does not apply.
 
    Select the certificate labeled **Windows Admin Center Client**, and then select **OK**. You can also select the **Certificate information** link to see more details about the certificate.
 
    > [!IMPORTANT]
    > Be sure to select **Windows Admin Center Client** and not any other certificate. If you select any other certificate, the following error message appears:
    >
-   > *You are not authorized to view this page. If you recently updated Windows Admin Center, you may need to restart your browser, and then refresh the page.*
+   > "You are not authorized to view this page. If you recently updated Windows Admin Center, you may need to restart your browser, and then refresh the page."
    >
    > If you continue to get the same error even after restarting your browser and refreshing the page, try clearing the browser cache or switching to another browser. If none of these troubleshooting steps resolve the issue, you might need to uninstall and reinstall Windows Admin Center, and then restart it.
 
@@ -46,7 +46,7 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 
 ## Add connections to Windows Admin Center
 
-You can add connections as managed nodes to Windows Admin Center from the **All connections** page. **All connections** is the default page that appears when you open Windows Admin Center. On this page, you can either add existing resources as connections or create new resources. The resources that you add appear under the list of connections on the page.
+You can add connections as managed nodes to Windows Admin Center from the **All connections** page. **All connections** is the default page that appears when you open Windows Admin Center. On this page, you can either add existing resources as connections or create new resources. The resources that you add appear in the connection list.
 
 The types of resources that you can add from the **All connections** page are servers, Windows PCs, clusters, and Azure VMs. The resources that you can create are clusters and Azure VMs.
 
@@ -69,7 +69,7 @@ To add connections to Windows Admin Center:
    - Add multiple resources by bulk importing.
    - Add resources by searching Active Directory.
 
-   Select the tab based on how you want to add resources. The label for each tab can differ based on the resource type you're adding.
+   Select the tab based on how you want to add resources. The label for each tab can differ based on the resource type that you're adding.
 
    ### [Add one](#tab/add-one)
 
@@ -81,7 +81,7 @@ To add connections to Windows Admin Center:
 
       :::image type="content" source="../media/launch/use-get-started-6.png" alt-text="Screenshot of the page for adding resources when the tab for adding one resource is selected." lightbox="../media/launch/use-get-started-6.png":::
 
-      As you begin entering text, Windows Admin Center starts searching for a resource based on your input text string. If a match is found, you can add the name exactly as you entered it or use the default resource name. If no match is found, you can still add this resource to appear in your list of connections.
+      As you begin entering text, Windows Admin Center starts searching for a resource based on your text string. If a match is found, you can add the name exactly as you entered it or use the default resource name. If no match is found, you can still add this resource to appear in your list of connections.
 
    ### [Import a list](#tab/import-a-list)
 
@@ -112,7 +112,7 @@ To add connections to Windows Admin Center:
 
 5. When you finish adding resources, select **Add**.
 
-   The selected resources are displayed in the connection list on the **All connections** page.
+   The selected resources appear in the connection list on the **All connections** page.
 
 ## Authenticate with the managed nodes
 
@@ -154,11 +154,11 @@ You can use tags to identify and filter related resources in your connection lis
 
 ### Edit tags
 
-You can add tags to a connection while you're adding a new connection. Or you can add or edit them later for one or more connections from the **All connections** page.
+You can add tags to a connection while you're adding a new connection. Or you can add or edit them later for one or more connections on the **All connections** page.
 
 To add or edit a tag:
 
-1. Select one or more connections from the list of connections.
+1. In the list of connections, select one or more connections.
 
 1. Select **Edit Tags**.
 
@@ -166,7 +166,7 @@ To add or edit a tag:
 
 1. On the **Available tags** pane, you can take any of these actions:
 
-   - To add a new tag to your selected connections, select **Add tag** and enter a desired tag name.
+   - To add a new tag to your selected connections, select **Add tags** and enter a desired tag name.
 
    - To tag the selected connections with an existing tag name, select the checkbox next to the tag name that you want to apply.
 

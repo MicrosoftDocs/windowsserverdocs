@@ -11,7 +11,7 @@ ms.date: 03/15/2023
 
 A hyper-converged infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview), [Software Defined Networking (SDN)](/azure/azure-local/concepts/software-defined-networking), and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
 
-You can use Windows Admin Center to manage and monitor a hyper-converged infrastructure that's running Windows Server 2016 or Windows Server 2019. Windows Admin Center is the next-generation management tool for Windows Server, the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an internet connection.
+You can use Windows Admin Center to manage and monitor a hyper-converged infrastructure that's running Windows Server 2016 or Windows Server 2019. Windows Admin Center is the next-generation management tool for Windows Server. It's the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an internet connection.
 
 ![Screenshot of a hyper-converged cluster dashboard in Windows Admin Center.](../media/manage-hyper-converged/hci-dashboard-v1809.png)
 
@@ -33,7 +33,7 @@ We're actively developing Windows Admin Center for hyper-converged infrastructur
 
 ## Before you start
 
-To manage your cluster as a hyper-converged infrastructure in Windows Admin Center, it needs to be running Windows Server 2016 or Windows Server 2019 and have Hyper-V and Storage Spaces Direct enabled. Optionally, it can also have Software Defined Networking enabled and managed through Windows Admin Center.
+To manage your cluster as a hyper-converged infrastructure in Windows Admin Center, make sure that the cluster is running Windows Server 2016 or Windows Server 2019. Also make sure that you enabled Hyper-V and Storage Spaces Direct for it. Optionally, the cluster can also have Software Defined Networking enabled and managed through Windows Admin Center.
 
 > [!TIP]
 > Windows Admin Center also offers a general-purpose management experience for any cluster that supports any workload. It's available for Windows Server 2012 and later. If this option sounds like a better fit, when you add your cluster to Windows Admin Center, select [Failover Cluster](manage-failover-clusters.md) instead of **Hyper-Converged Cluster**.
@@ -61,7 +61,7 @@ If your cluster runs Windows Server 2019, the preceding steps are not necessary.
 
 You can configure your hyper-converged infrastructure running Windows Server 2016 or 2019 to use Software Defined Networking by following these steps:
 
-1. Prepare the VHD of the OS, which is the same OS that you installed on the hyper-converged infrastructure hosts. This VHD will be used for all NC-series, Software Load Balancer (SLB), and gateway VMs.
+1. Prepare the virtual hard disk (VHD) of the operating system, which is the same operating system that you installed on the hyper-converged infrastructure hosts. This VHD will be used for all NC-series, Software Load Balancer (SLB), and gateway VMs.
 
 2. Download all the folders and files under SDN Express from [GitHub](https://github.com/Microsoft/SDN/tree/master/SDNExpress).
 
@@ -72,7 +72,7 @@ You can configure your hyper-converged infrastructure running Windows Server 201
    ```
     \\$env:Computername\SDNExpress
    ```
-5. Copy the VHD of the OS to the **images** folder under the **SDNExpress** folder on the deployment console VM.
+5. Copy the VHD of the operating system to the **images** folder under the **SDNExpress** folder on the deployment console VM.
 
 6. Modify the SDN Express configuration based on your environment setup.
 
@@ -199,7 +199,7 @@ If you're just getting started, here are some quick videos to help you learn how
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo]
 
-### Create a new virtual machine
+### Create a virtual machine
 
 1. On the left pane, select **Virtual Machines**.
 
@@ -223,7 +223,7 @@ If you're just getting started, here are some quick videos to help you learn how
 
 ### Pause and safely restart a server
 
-1. On the dashboard, select **Servers** from the left pane. Or, on the tile in the lower-right corner of the dashboard, select the **VIEW SERVERS >** link.
+1. On the left pane of the dashboard, select **Servers**. Or, on the tile in the lower-right corner of the dashboard, select the **VIEW SERVERS >** link.
 
 2. Switch from the **Summary** tab to the **Inventory** tab.
 
@@ -241,7 +241,7 @@ If you're just getting started, here are some quick videos to help you learn how
 
 ### Replace a failed drive
 
-1. When a drive fails, an alert appears in the upper-left **Alerts** area of the dashboard.
+1. When a drive fails, an alert appears in the **Alerts** area of the dashboard.
 
    Or to browse through drives and see their status for yourself, you can either:
 
@@ -266,11 +266,11 @@ If you're just getting started, here are some quick videos to help you learn how
 
 1. On the left pane, select **Virtual Networks**.
 
-2. Select **New** to create a new virtual network and subnets. Or choose an existing virtual network and then select **Settings** to modify its configuration.
+   ![Screenshot of the Virtual Networks pane.](../media/manage-hyper-converged/manage-virtual-networks.png)
 
-3. Select an existing virtual network to view VM connections to the virtual network subnets and access control lists applied to virtual network subnets.
+2. On the **Inventory** tab, select **New** to create a new virtual network and subnets. Or choose an existing virtual network and then select **Settings** to modify its configuration.
 
-![Screenshot of the Virtual Networks pane.](../media/manage-hyper-converged/manage-virtual-networks.png)
+3. Select an existing virtual network to view VM connections to virtual network subnets and access control lists applied to virtual network subnets.
 
 ### Connect a virtual machine to a virtual network (SDN-enabled HCI clusters via Windows Admin Center Preview)
 
@@ -282,7 +282,7 @@ If you're just getting started, here are some quick videos to help you learn how
 
 ![Screenshot of selections for connecting a virtual machine to a virtual network.](../media/manage-hyper-converged/connect-vm-to-virtual-network.png)
 
-You can also configure the virtual network when creating a virtual machine.
+You can also configure the virtual network when you're creating a virtual machine.
 
 ### Monitor Software Defined Networking infrastructure (SDN-enabled HCI clusters via Windows Admin Center Preview)
 

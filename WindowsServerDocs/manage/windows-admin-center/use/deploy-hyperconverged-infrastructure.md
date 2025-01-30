@@ -1,21 +1,21 @@
 ---
 title: Deploy Hyperconverged Infrastructure with Windows Admin Center
-description: Learn how to deploy hyperconverged infrastructure by using Windows Admin Center.
+description: Learn how to deploy a hyperconverged infrastructure by using Windows Admin Center.
 ms.topic: article
 author: cosmosdarwin
 ms.author: roharwoo
 ms.date: 11/04/2019
 ---
 
-# Deploy hyperconverged infrastructure by using Windows Admin Center
+# Deploy a hyperconverged infrastructure by using Windows Admin Center
 
-You can use Windows Admin Center [version 1910](../overview.md) or later to deploy hyperconverged infrastructure by using two or more suitable Windows servers. This feature takes the form of a multistage workflow that guides you through installing features, configuring networking, creating the cluster, and deploying Storage Spaces Direct and/or software-defined networking.
+You can use Windows Admin Center [version 1910](../overview.md) or later to deploy a hyperconverged infrastructure by using two or more suitable Windows servers. This feature takes the form of a multistage workflow that guides you through installing features, configuring networking, creating the cluster, and deploying Storage Spaces Direct and/or software-defined networking.
 
-As of Windows Admin Center version 2007, Windows Admin Center supports the Azure Stack HCI OS. To read about how to deploy a cluster in Windows Admin Center, see the [Azure Local documentation](/azure/azure-local/deploy/create-cluster). Although that documentation is focused on Azure Local, most of the instructions are applicable to Windows Server deployments.
+As of Windows Admin Center version 2007, Windows Admin Center supports the Azure Stack HCI operating system. To read about how to deploy a cluster in Windows Admin Center, see the [Azure Local documentation](/azure/azure-local/deploy/create-cluster). Although that documentation is focused on Azure Local, most of the instructions are applicable to Windows Server deployments.
 
 ## Undo and start over
 
-Use the following Windows PowerShell cmdlets to undo changes made by the workflow and start over.
+Use the following Windows PowerShell cmdlets to undo changes that the workflow made and start over.
 
 ### Remove virtual machines or other clustered resources
 

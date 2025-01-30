@@ -97,7 +97,7 @@ Use the following script to export saved connections in [RDCMan](https://blogs.t
     The path of the .rdg file to be converted. This file will not be modified, only read.
 
     .PARAMETER CSVdirectory
-    Optional. The directory you wish to export the new .csv file. If not provided, the new file is created in the same directory as the .rdg file.
+    Optional. The directory you want to export the new .csv file. If it's not provided, the new file is created in the same directory as the .rdg file.
 
     .EXAMPLE
     C:\PS> RdgToWacCsv -RDGfilepath "rdcmangroup.rdg"
@@ -131,4 +131,4 @@ Use the following script to export saved connections in [RDCMan](https://blogs.t
    RdgToWacCsv -RDGfilepath "path\to\myRDCManfile.rdg"
    ```
 
-3. Import the resulting CSV file into Windows Admin Center. Your RDCMan grouping hierarchy is then represented by tags in the connection list.
+3. Import the resulting CSV file into Windows Admin Center. Tags in the connection list then represent your RDCMan grouping hierarchy.

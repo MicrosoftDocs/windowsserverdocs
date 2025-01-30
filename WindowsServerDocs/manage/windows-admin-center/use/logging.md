@@ -9,7 +9,7 @@ ms.date: 06/18/2018
 
 # Event logging in Windows Admin Center
 
-Windows Admin Center writes event logs that show the management activities being performed on the servers in your environment. Event logs can also help you troubleshoot any Windows Admin Center problems.
+Windows Admin Center writes event logs that show the management activities performed on the servers in your environment. Event logs can also help you troubleshoot any Windows Admin Center problems.
 
 ## Management activities
 
@@ -21,15 +21,15 @@ Logged events include the following information:
 
 | Key           | Value                                                                                              |
 |---------------|----------------------------------------------------------------------------------------------------|
-| `PowerShell`    | PowerShell script name that was run on the server, if the action ran a PowerShell script |
-| `CIM `          | CIM call that was run on the server, if the action ran a CIM call                        |
-| `Module`        | Tool (or module) where the action was run                                                     |
-| `Gateway`       | Name of the Windows Admin Center gateway machine where the action was run                     |
-| `UserOnGateway` | User name used to access the Windows Admin Center gateway and execute the action                    |
-| `UserOnTarget`  | User name used to access the target managed server, if different from `UserOnGateway` (that is, the user accessed the server by using **Manage as** credentials) |
-| `Delegation`    | Boolean, if the target managed server trusts the gateway and credentials are delegated from the user's client machine             |
-| `LAPS`          | Boolean, if the user accessed the server by using [LAPS](/previous-versions/mt227395(v=msdn.10)) credentials                          |
-| `File`          | Name of the uploaded file, if the action was a file upload                                |
+| `PowerShell`    | PowerShell script name that was run on the server, if the action ran a PowerShell script. |
+| `CIM `          | CIM call that was run on the server, if the action ran a CIM call.                        |
+| `Module`        | Tool (or module) where the action was run.                                                     |
+| `Gateway`       | Name of the Windows Admin Center gateway machine where the action was run.                     |
+| `UserOnGateway` | Username that's used to access the Windows Admin Center gateway and execute the action.                    |
+| `UserOnTarget`  | Username that's used to access the target managed server, if it's different from `UserOnGateway`. That is, the user accessed the server by using **Manage as** credentials. |
+| `Delegation`    | Boolean, if the target managed server trusts the gateway and credentials are delegated from the user's client machine.             |
+| `LAPS`          | Boolean, if the user accessed the server by using [LAPS](/previous-versions/mt227395(v=msdn.10)) credentials.                          |
+| `File`          | Name of the uploaded file, if the action was a file upload.                                |
 
 ## Gateway usage
 

@@ -8,7 +8,7 @@ ms.date: 08/18/2022
 ---
 # Manage Windows Defender Application Control (WDAC)-enforced infrastructure
 
-Windows Defender Application Control (WDAC) can help mitigate many security threats by restricting the applications that users are allowed to run and the code that runs in the system core (kernel). Application control policies can also block unsigned scripts and MSI files, and restrict Windows PowerShell to running in [`ConstrainedLanguage` mode](/powershell/module/microsoft.powershell.core/about/about_language_modes). Learn more about [Application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
+Windows Defender Application Control (WDAC) can help mitigate many security threats by restricting the applications that users are allowed to run and the code that runs in the system core (kernel). Application control policies can also block unsigned scripts and MSI files, and restrict Windows PowerShell to running in [`ConstrainedLanguage` mode](/powershell/module/microsoft.powershell.core/about/about_language_modes). [Learn more about application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
 
 Extra configuration is required for Windows Admin Center to install on and manage WDAC-enforced environments. This article covers these requirements and known issues in managing a WDAC-enforced environment.
 
@@ -18,7 +18,7 @@ The following sections provide the requirements for using Windows Admin Center t
 
 ### Policy requirements
 
-Depending on your use case, you need to allowlist one or more certificates as part of your base or supplemental policies. Learn more about [deploying a base or supplemental policy](/windows/security/threat-protection/windows-defender-application-control/types-of-devices).
+Depending on your use case, you need to allowlist one or more certificates as part of your base or supplemental policies. [Learn more about deploying a base or supplemental policy](/windows/security/threat-protection/windows-defender-application-control/types-of-devices).
 
 - **Case 1**: Only your managed nodes have WDAC enforced.
 - **Case 2**: Both your managed node and the machine on which you deploy Windows Admin Center have WDAC enforced.
@@ -72,7 +72,7 @@ The policy creation tool/script should automatically generate `Signer ID` and `A
 
 ### Network requirements
 
-By default, Windows Admin Center communicates with your servers via WinRM over HTTP (port 5985) or HTTPS (port 5986). For WDAC-enforced infrastructure, Windows Admin Center additionally needs SMB access to the nodes that are being managed (TCP port 445).
+By default, Windows Admin Center communicates with your servers via WinRM over HTTP (port 5985) or HTTPS (port 5986). For WDAC-enforced infrastructure, Windows Admin Center additionally needs SMB access to the managed nodes (TCP port 445).
 
 ### Permissions
 
@@ -111,7 +111,7 @@ If you get a "Module not found" or "failed to connect" error:
 
   If the modules don't exist, reconnect to your server or cluster from Windows Admin Center.
 
-- Ensure that the machine that has Windows Admin Center installed has access to TCP port 445 on the managed node.
+- Ensure that the machine where Windows Admin Center is installed has access to TCP port 445 on the managed node.
 
 ## Related content
 

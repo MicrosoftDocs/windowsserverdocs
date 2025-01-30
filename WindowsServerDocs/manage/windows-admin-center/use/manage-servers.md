@@ -22,7 +22,7 @@ You can add individual servers running Windows Server 2012 or later to Windows A
 3. Enter the name of the server. If you're prompted, enter the credentials to use.
 4. Select **Add** to finish.
 
-The server is added to your connection list on the **All connections** page. Select it to connect to the server.
+The server is added to your list of connections on the **All connections** page. Select it to connect to the server.
 
 > [!NOTE]
 > You can also add [failover clusters](manage-failover-clusters.md) or [hyper-converged clusters](manage-hyper-converged.md) as a separate connection in Windows Admin Center.
@@ -102,7 +102,7 @@ The following Active Directory management features are available:
 - Reset user passwords.
 - Configure basic properties and group memberships for user objects.
 - Configure delegation to a single machine for computer objects.
-- Manage membership for group objects (add or remove one user at a time).
+- Manage membership for group objects. (Add or remove one user at a time.)
 
 ## Azure Backup
 
@@ -206,7 +206,7 @@ The following features are available:
 
 - Browse through files and folders.
 - Search for a file or folder.
-- Create a new folder.
+- Create a folder.
 - Delete a file or folder.
 - Download a file or folder.
 - Upload a file or folder.
@@ -229,7 +229,7 @@ The following features are available:
 - View outgoing firewall rules.
 - Search for firewall rules.
 - View firewall rule details.
-- Create a new firewall rule.
+- Create a firewall rule.
 - Enable or disable a firewall rule.
 - Delete a firewall rule.
 - Edit the properties of a firewall rule.
@@ -245,7 +245,7 @@ Use **Local users & groups** to manage security groups and users that exist loca
 The following features are available:
 
 - View and search for users and groups.
-- Create a new user or group.
+- Create a user or group.
 - Manage a user's group membership.
 - Delete a user or group.
 - Change a user's password.
@@ -379,7 +379,7 @@ The following features are available:
 - View disk details.
 - Create a volume.
 - Initialize a disk.
-- Create, attach, and detach a virtual hard disk (VHD).
+- Create, attach, and detach a virtual hard disk.
 - Take a disk offline.
 - Format a volume.
 - Resize a volume.
@@ -422,7 +422,7 @@ The following features are available:
 
 ## Virtual machines
 
-See [Managing virtual machines with Windows Admin Center](manage-virtual-machines.md).
+See [Manage virtual machines by using Windows Admin Center](manage-virtual-machines.md).
 
 ## Virtual switches
 
@@ -431,7 +431,7 @@ Use **Virtual switches** to manage Hyper-V virtual switches on a computer or ser
 The following features are available:
 
 - Browse through and search for virtual switches on a server.
-- Create a new virtual switch.
+- Create a virtual switch.
 - Rename a virtual switch.
-- Delete an existing virtual switch.
+- Delete a virtual switch.
 - Edit the properties of a virtual switch.

@@ -41,17 +41,17 @@ This article describes some of the Hyper-V tasks that you can do in Windows Admi
 
 1. On the left pane, select **Virtual Machines**.
 
-2. Select the **Inventory** tab. This tab lists the virtual machines available on the current server or the entire cluster, and it provides commands to manage individual virtual machines. You can:
+2. Select the **Inventory** tab. On this tab, you can:
 
     - View a list of the virtual machines running on the current server or cluster.
     - View a virtual machine's state and host server if you're viewing virtual machines for a cluster. Also view CPU and memory usage from the host perspective, including memory pressure, memory demand, and assigned memory.
-    - View a virtual machine's uptime, heartbeat status, and protection status using by Azure Site Recovery.
+    - View a virtual machine's uptime, heartbeat status, and protection status by using Azure Site Recovery.
     - [Create a virtual machine](#create-a-virtual-machine).
     - Delete, start, turn off, shut down, pause, resume, reset, or rename a virtual machine. Also save the virtual machine, delete a saved state, or create a checkpoint.
     - [Change settings for a virtual machine](#change-virtual-machine-settings).
     - Connect to a virtual machine console by using VMConnect via the Hyper-V host.
     - [Replicate a virtual machine by using Azure Site Recovery](#replicate-virtual-machines-by-using-azure-site-recovery).
-    - For operations that can be run on multiple VMs (such as start, shut down, save, pause, delete, and reset), you can select multiple VMs and run the operation on all of them at once.
+    - Select multiple VMs and run an operation on all of them at once. This ability applies to operations that you can run on multiple VMs, such as start, shut down, save, pause, delete, and reset.
 
 > [!NOTE]
 > If you're connected to a cluster, the Virtual Machine tool displays only clustered virtual machines.
@@ -70,7 +70,7 @@ This article describes some of the Hyper-V tasks that you can do in Windows Admi
 
 5. If you're creating a virtual machine on a cluster, you can choose a host for the virtual machine. If you're running Windows Server 2016 or later, the tool provides a host recommendation for you.
 
-6. Choose a path for the virtual machine files. Select a volume from the dropdown list, or select **Browse** to choose a folder. The virtual machine configuration files and the virtual hard disk file will be saved in a single folder under the `\Hyper-V\\[virtual machine name]` path of the selected volume or path.
+6. Choose a path for the virtual machine files. Select a volume from the dropdown list, or select **Browse** to choose a folder. The virtual machine configuration files and the virtual hard disk (.vhd) file will be saved in a single folder under the `\Hyper-V\\[virtual machine name]` path of the selected volume or path.
 
    > [!TIP]
    > You can browse to any available Server Message Block (SMB) share on the network by entering the path in the **Folder name** field as `\\server\share`. Using a network share for VM storage requires [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-).
@@ -109,9 +109,9 @@ If you're connected to a cluster, you can live migrate a virtual machine to anot
 
 4. Choose a server from the list of available cluster nodes, and then select **Move**.
 
-5. Notifications for the move progress appear in the upper-right corner of Windows Admin Center. If the move is successful, the host server name changes in the virtual machine list.
+5. Notifications for the move progress appear in the upper-right corner of Windows Admin Center. If the move is successful, the host server name changes in the list of virtual machines.
 
-## Advanced management and troubleshooting for a single virtual machine
+## Conduct advanced management and troubleshooting for a single virtual machine
 
 ![Screenshot of the pane that shows details about a single virtual machine.](../media/manage-virtual-machines/vm-details.png)
 
@@ -126,7 +126,7 @@ You can view detailed information and performance charts for a single virtual ma
     - View detailed information for the virtual machine.
     - View line charts for IOPS and I/O throughput, for both live and historical data. Historical data is available only for hyper-converged clusters running Windows Server 2019 or later.
     - View, create, apply, rename, and delete checkpoints.
-    - View details for the virtual machine's virtual hard disk (.vhd) files, network adapters, and host server.
+    - View details for the virtual machine's .vhd files, network adapters, and host server.
     - Delete, start, turn off, shut down, pause, resume, reset, or rename the virtual machine. Also save the virtual machine, delete a saved state, or create a checkpoint.
     - [Change settings for the virtual machine](#change-virtual-machine-settings).
     - Connect to the virtual machine console by using VMConnect via the Hyper-V host.
@@ -173,7 +173,7 @@ You can view Hyper-V event logs directly from the Virtual Machines tool:
 
 3. In the **Events** section, select **View all events**.
 
-4. The Event Viewer tool shows the Hyper-V event channels on the left pane. Choose a channel to view the events in the right pane.
+4. The Event Viewer tool shows the Hyper-V event channels on the left pane. Choose a channel to view the events on the right pane.
 
    If you're managing a failover cluster or hyper-converged cluster, the event logs display events for all cluster nodes. They display the host server in the **Machine** column.
 
