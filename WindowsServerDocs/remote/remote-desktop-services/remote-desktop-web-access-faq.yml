@@ -18,28 +18,27 @@ sections:
       - question: |
           What should I do if I can't sign in?
         answer: |
-          If you enter an invalid user name or password, you see a message saying: "The user name or password that you entered is not valid. Try typing it again". If your account is locked because of too many incorrect sign in attemps, you
-          continue to see the same message.
+          If you enter an invalid user name or password, you see a message saying: "The user name or password that you entered is not valid. Try typing it again." If your account is locked because of too many incorrect sign in attemps, you see the same message.
           
-          Contact your administrator to reset your password, and if needed, unlock your account.
+          Contact your Active Directory administrator to reset your password, and if needed, unlock your account.
 
-            [ ![A screenshot of the link displayed to change your password.](media/incorrect-or-account-locked-out.png) ](media/incorrect-or-account-locked-out.png#lightbox)
+            ![A screenshot of the link displayed to change your password.](media/incorrect-or-account-locked-out.png)
 
       - question: |
           How do I reset my expired password?
         answer: |
           If an administrator didn't enable password reset, you see a message saying: "Your password is expired. Please contact your administrator for assistance." You need to contact your Active Directory administrator to reset your password.
           
-            [ ![A screenshot of the link displayed to change your password.](media/expired-password-no-iis-change.png) ](media/expired-password-no-iis-change.png#lightbox)
+            ![A screenshot of the link displayed to change your password.](media/expired-password-no-iis-change.png)
 
           If an administrator enabled password reset, follow the link to change your expired password. You need to enter your old password, then your new password, and confirm the new password.
 
-            [ ![A screenshot of the link displayed to change your password.](media/change-password-link.png) ](media/change-password-link.png#lightbox)
+            ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
       
       - question: |
-          How do I enable password reset?
+          How does an administrator enable password reset?
         answer: |
-          **Administrators** can enable remote users to change their own password from within the RD Web access interface if it's expired. 
+          Administrators can enable remote users to change their own password from within the RD Web access interface if it's expired. 
           > [!IMPORTANT]
           > This option isn't helpful for users who forgot their password since the old password still needs to be entered before selecting a new password. For forgotten passwords, you must contact your Active Directory administrator. 
           
@@ -50,15 +49,15 @@ sections:
           3.	Next, locate your server and navigate to **Sites > Default Web Site > RDWeb > Pages**.
           4.	Select **Application Settings** from the menu. Then, select the setting **PasswordChangeEnabled** and change the value to true.
             
-            [ ![A screenshot of the application setting PasswordChangeEnabled.](media/password-change-enabled-setting.png) ](media/password-change-enabled-setting.png#lightbox)
+            ![A screenshot of the application setting PasswordChangeEnabled.](media/password-change-enabled-setting.png)
 
           Now, when users open the RD Web Access page and try to sign in using an expired password, a link appears to reset your password.
           
-            [ ![A screenshot of the link displayed to change your password.](media/change-password-link.png) ](media/change-password-link.png#lightbox)
+            ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
           
           When you open the password reset page there's a user interface where you enter your current password, new password, and confirm the new password.
           
-            [ ![A screenshot of the form to change your password.](media/change-password-form.png) ](media/change-password-form.png#lightbox)
+            ![A screenshot of the form to change your password.](media/change-password-form.png)
           
           > [!NOTE]
           > If the remote server is running in Azure, you need create an endpoint for public port 443 in the Azure management portal so that users can access the RD Web Access portal. 
@@ -72,9 +71,7 @@ sections:
           2. Select **Change a password**.
           3. Enter in the old password, then the new password, and confirm the new password.
           
-          If you can't change your password, contact your network administrator.    
-          
-          If you don't know the password requirements, contact your network administrator.
+          Contact your administrator if you can't change your password, don't know the password requirements, or you can't sign in.
       
       - question: |
           What is RemoteApp and Desktop Connections?
