@@ -18,7 +18,7 @@ sections:
       - question: |
           What should I do if I can't sign in?
         answer: |
-          If you enter an invalid user name or password, you see a message saying: "The user name or password that you entered is not valid. Try typing it again." If your account is locked because of too many incorrect sign in attemps, you see the same message.
+          If you enter an invalid user name or password, you see a message saying: "The user name or password that you entered is not valid. Try typing it again." If your account is locked because of too many incorrect sign in attempts, you see the same message.
           
           Contact your Active Directory administrator to reset your password, and if needed, unlock your account.
 
