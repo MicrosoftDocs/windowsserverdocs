@@ -169,8 +169,10 @@ items:
       items:
       - name: DNS zones
         href: dns/zone-types.md
-      - name: DNS resource records
-        href: dns/resource-record-types.md
+      - name: DNS architecture
+        href: dns/dns-architecture.md
+      - name: Network Ports
+        href: dns/network-ports.md
       - name: DNSSEC
         items:
         - name: What is DNSSEC?
@@ -185,6 +187,8 @@ items:
         href: dns/manage-resource-records.md
       - name: Secure DNS Client over HTTPS (DoH)
         href: dns/doh-client-support.md
+      - name: Enable DNS Logging and Diagnostics
+        href: dns/dns-logging-and-diagnostics.md 
     - name: Tutorials
       items:
       - name: DNS policy
