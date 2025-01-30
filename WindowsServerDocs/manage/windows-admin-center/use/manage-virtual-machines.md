@@ -21,8 +21,6 @@ This article describes some of the Hyper-V tasks that you can do in Windows Admi
 
 ## Monitor Hyper-V host resources and performance
 
-![Screenshot of the Summary tab on the page for virtual machines in Windows Admin Center.](../media/manage-virtual-machines/virtual-machines-summary.png)
-
 1. On the left pane, select **Virtual Machines**.
 
 2. Use the **Summary** tab to get a holistic view of Hyper-V host resources and performance for the current server or the entire cluster. The information includes:
@@ -35,9 +33,9 @@ This article describes some of the Hyper-V tasks that you can do in Windows Admi
 
       Line charts for storage performance are available only for hyper-converged clusters running Windows Server 2016 or later. Historical data is available only for hyper-converged clusters running Windows Server 2019.
 
-## View virtual machine inventory
+![Screenshot of the Summary tab on the page for virtual machines in Windows Admin Center.](../media/manage-virtual-machines/virtual-machines-summary.png)
 
-![Screenshot of the Inventory tab on the page for virtual machines in Windows Admin Center.](../media/manage-virtual-machines/virtual-machines-inventory.png)
+## View virtual machine inventory
 
 1. On the left pane, select **Virtual Machines**.
 
@@ -53,12 +51,12 @@ This article describes some of the Hyper-V tasks that you can do in Windows Admi
     - [Replicate a virtual machine by using Azure Site Recovery](#replicate-virtual-machines-by-using-azure-site-recovery).
     - Select multiple VMs and run an operation on all of them at once. This ability applies to operations that you can run on multiple VMs, such as start, shut down, save, pause, delete, and reset.
 
+![Screenshot of the Inventory tab on the page for virtual machines in Windows Admin Center.](../media/manage-virtual-machines/virtual-machines-inventory.png)
+
 > [!NOTE]
 > If you're connected to a cluster, the Virtual Machine tool displays only clustered virtual machines.
 
 ## Create a virtual machine
-
-![Screenshot that shows the pane for creating a virtual machine.](../media/manage-virtual-machines/new-vm.png)
 
 1. On the left pane, select **Virtual Machines**.
 
@@ -77,6 +75,8 @@ This article describes some of the Hyper-V tasks that you can do in Windows Admi
 
 7. Choose the number of virtual processors and whether you want nested virtualization enabled. Configure memory settings, network adapters, and virtual hard disks. Choose whether you want to install an operating system from an .iso image file or from the network.
 
+   ![Screenshot that shows the pane for creating a virtual machine.](../media/manage-virtual-machines/new-vm.png)
+
 8. Select **Create**.
 
 9. After the virtual machine is created and appears in the list of virtual machines, start it.
@@ -85,17 +85,17 @@ This article describes some of the Hyper-V tasks that you can do in Windows Admi
 
 ## Change virtual machine settings
 
-![Screenshot that shows the pane for changing virtual machine settings.](../media/manage-virtual-machines/vm-settings.png)
-
 1. On the left pane, select **Virtual Machines**.
 
 2. Select the **Inventory** tab.
 
 3. Choose a virtual machine from the list, and then select **Settings**.
 
-4. For each of the **General**, **Memory**, **Processors**, **Disks**, **Networks**, **Boot order**, and **Checkpoints** tabs, configure the necessary settings, and then select **Save** to save the current tab's settings.
+4. For each of the **General**, **Memory**, **Processors**, **Disks**, **Networks**, **Boot order**, and **Checkpoints** tabs, configure the necessary settings, and then select the button that saves the current tab's settings.
 
-  The available settings vary, depending on the virtual machine's generation. Also, some settings can't be changed for running virtual machines. For those settings, you need to stop the virtual machine first.
+   ![Screenshot that shows the pane for changing virtual machine settings.](../media/manage-virtual-machines/vm-settings.png)
+
+   The available settings vary, depending on the virtual machine's generation. Also, some settings can't be changed for running virtual machines. For those settings, you need to stop the virtual machine first.
 
 ## Live migrate a virtual machine to another cluster node
 
@@ -112,8 +112,6 @@ If you're connected to a cluster, you can live migrate a virtual machine to anot
 5. Notifications for the move progress appear in the upper-right corner of Windows Admin Center. If the move is successful, the host server name changes in the list of virtual machines.
 
 ## Conduct advanced management and troubleshooting for a single virtual machine
-
-![Screenshot of the pane that shows details about a single virtual machine.](../media/manage-virtual-machines/vm-details.png)
 
 You can view detailed information and performance charts for a single virtual machine.
 
@@ -132,9 +130,9 @@ You can view detailed information and performance charts for a single virtual ma
     - Connect to the virtual machine console by using VMConnect via the Hyper-V host.
     - [Replicate the virtual machine by using Azure Site Recovery](#replicate-virtual-machines-by-using-azure-site-recovery).
 
-## Manage a virtual machine through the Hyper-V host (VMConnect)
+    ![Screenshot of the pane that shows details about a single virtual machine.](../media/manage-virtual-machines/vm-details.png)
 
-![Screenshot of the pane that shows VM Connect in a web browser.](../media/manage-virtual-machines/vm-connect.png)
+## Manage a virtual machine through the Hyper-V host (VMConnect)
 
 1. On the left pane, select **Virtual Machines**.
 
@@ -143,13 +141,14 @@ You can view detailed information and performance charts for a single virtual ma
 3. Choose a virtual machine from the list, and then select one of these options:
 
    - **Connect**. Interact with the guest VM through the Remote Desktop web console that's integrated into Windows Admin Center.
+
+     ![Screenshot of the pane that shows VM Connect in a web browser.](../media/manage-virtual-machines/vm-connect.png)
+
    - **Download RDP file**. Download an RDP file that you can open with the Remote Desktop Connection application (mstsc.exe).
 
    Both options use VMConnect to connect to the guest VM through the Hyper-V host. They both require you to enter administrator credentials for the Hyper-V host server.
 
 ## Change Hyper-V host settings
-
-![Screenshot of the pane for changing Hyper-V host settings.](../media/manage-virtual-machines/host-settings.png)
 
 1. On a server, hyper-converged cluster, or failover cluster connection, select **Settings** at the bottom of the left pane.
 
@@ -160,6 +159,8 @@ You can view detailed information and performance charts for a single virtual ma
     - **NUMA Spanning**
     - **Live Migration**
     - **Storage Migration**
+
+![Screenshot of the pane for changing Hyper-V host settings.](../media/manage-virtual-machines/host-settings.png)
 
 If you make any Hyper-V host setting changes in a hyper-converged cluster or failover cluster connection, the change will be applied to all cluster nodes.
 
