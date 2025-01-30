@@ -1,6 +1,6 @@
 ---
-title: Deploy a cloud witness for a failover cluster in Windows Server
-description: How to use Microsoft Azure to host the witness for a Windows Server failover cluster in the cloud - also known as how to deploy a Cloud Witness.
+title: Deploy a Cloud Witness for a failover cluster in Windows Server
+description: How to deploy a cluster quorum Cloud Witness in Windows Server using Failover Cluster Manager, PowerShell, and Windows Admin Center.
 ms.author: alalve
 author: xelu86
 ms.topic: how-to
@@ -20,9 +20,9 @@ Now, let's start by looking at an example configuration of a multi-site stretche
 
 :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png" alt-text="A diagram depicting a cluster quorum with a site labeled file share witness connected to site one and site two.":::
 
-This example is a simplified configuration with two nodes in two on-site datacenters. In typical clusters, each node has one vote, a *file share witness* gives one extra vote to the quorum witness. This extra vote lets the cluster keep running even if one of the datacenters turns off. In the example, the cluster quorum has five possible votes, and only needs three votes to continue running.
+This example is a simplified configuration with two nodes in two on-site datacenters. In typical clusters, each node has one vote, a *file share witness*, that gives one extra vote to the quorum witness. This extra vote lets the cluster keep running even if one of the datacenters turns off. In the example, the cluster quorum has five possible votes, and only needs three votes to continue running.
 
-However, you might notice that, in addition to the two datacenters, there's also a third datacenter called a *file share witness*. This datacenter is kept separate from the other two sites and hosts a file server that backs up the system file share. The file share witness functions as the quorum witness in this cluster quorum configuration, making sure the system still runs even if one of the datacenters unexpectedly shuts down.
+However, you might notice that in addition to the two datacenters, there's also a third datacenter that acts as the *file share witness*. This datacenter is kept separate from the other two sites and hosts a file server that backs up the system file share. The file share witness functions as the quorum witness in this cluster quorum configuration, making sure the system still runs even if one of the datacenters unexpectedly shuts down.
 
 Having a file share witness provides enough redundancy to keep your file server highly available. However, you should remember that hosting the file share witness on another server in a separate site requires setup, regular maintenance, and independent connectivity to the other sites.
 
@@ -48,11 +48,11 @@ Along with redundancy, there are some other benefits to using the Cloud Witness 
 
 You must have an [Azure account](/azure/storage/common/storage-account-create?tabs=azure-portal) with an active subscription and a valid Azure general-purpose storage account in order to configure Cloud Witness. This storage account is where Cloud Witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration.
 
->[!NOTE]
->Cloud Witness isn't compatible with the following types of Azure storage accounts:
+> [!NOTE]
+> Cloud Witness isn't compatible with the following types of Azure storage accounts:
 >
->- Blob storage
->- Azure Premium Storage
+> - Blob storage
+> - Azure Premium Storage
 
 You can also use this account and the `msft-cloud-witness` container that Cloud Witness automatically creates to configure Cloud Witness across multiple different clusters. Each cluster has its own blob file that it stores in the container.
 
@@ -82,69 +82,66 @@ When you create an Azure Storage account, Azure associates it with automatically
 
 You can configure Cloud Witness using the Quorum Configuration setup workflow built into the Failover Cluster Manager application or by using PowerShell.
 
-#### [Windows](#tab/windows)
+# [Failover Cluster Manager](#tab/failovercluster)
 
-To use the Quorum Configuration setup workflow to configure Cloud Witness:
+1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
 
-1. Open **Failover Cluster Manager**.
+1. On the left pane, under **Failover Cluster Manager**, select the cluster that you want to configure.
 
-1. Right-click the name of your cluster.
+1. On the right pane, under **Actions**, select **More Actions**, and then select **Configure Cluster Quorum Settings**.
 
-1. Go to **More Actions** > **Configure Cluster Quorum Settings**, as shown in the following screenshot to launch the Configure Cluster Quorum workflow.
+1. Under the **Configure Cluster Quorum Wizard**, select **Next**.
 
-    :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png" alt-text="A screenshot of the drop-down menu in the Failover Cluster Manager UI that takes you to Configure Cluster Quorum Settings.":::
+1. Under **Select Quorum Configuration Option**, select **Select the quorum witness**, then select **Next**.
 
-1. On the **Select Quorum Configurations** page, select **Select the quorum witness**.
+1. Under **Select Quorum Witness**, select **Configure a file cloud witness**, then select **Next**.
 
-1. On the **Select Quorum Witness** page, select **Configure a cloud witness**.
-
-1. On the **Configure Cloud Witness** page, enter the following information:
+1. Under **Configure cloud witness**, enter the following information, then select **Next**:
 
    - Your Azure Storage account name.
 
    - The access key associated with your storage account.
 
-       - If you're creating a cloud witness for the first time, use your primary access key.
+     - If you're creating a cloud witness for the first time, use your primary access key.
 
-       - If you're rotating your primary access key, then use the secondary access key instead.
+     - If you're rotating your primary access key, then use the secondary access key instead.
 
-         > [!NOTE]
-         > Instead of storing access keys directly, your failover cluster generates a Shared Access Security (SAS) token to securely store instead. The token is only valid as long as the access key it's associated with remains valid. When you rotate the primary access key, you must update the cloud witnesses on all clusters using that storage account with the secondary key before you can regenerate the primary key.
+     > [!NOTE]
+     > Instead of storing access keys directly, your failover cluster generates a Shared Access Signature (SAS) token for secure storage. The token remains valid only as long as the associated access key is valid. When you rotate the primary access key, update the cloud witnesses on all clusters using that storage account with the secondary key before regenerating the primary key.
 
-   - Optionally, you can enter the name of another existing server into the **Endpoint server name** field if you plan to use a different Azure service endpoint for your cloud witness, such as Azure China.
+   - The Azure service endpoint
 
-1. If configuration is successful, you should be able to see your new Cloud Witness in the Failover Cluster Manager accordion menu, as shown in the following screenshot.
+     You can enter the name of another existing server into the **Azure service endpoint** field if you plan to use a different Azure service endpoint for your cloud witness, such as Azure China.
 
-    :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_11.png" alt-text="A screenshot of the Cluster Core Resources window in the Failover Cluster Manager application that shows the newly configured cloud witness highlighted with a red border.":::
+1. Under **Confirmation**, review your quorum settings, then select **Next**.
 
-#### [PowerShell](#tab/powershell)
+1. Under **Summary**, review your witness configuration, then select **Finish**.
 
-To configure Cloud Witness using PowerShell:
+   You can select **View Report** for further configuration details.
 
-1. Run the [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format to set up Cloud Witness.
+Once the Cloud Witness is created, navigate to the middle pane of the Failover Cluster Manager and it can be seen under **Cluster Core Resources**.
+
+# [PowerShell](#tab/powershell)
+
+1. Run the following command to set up Cloud Witness:
 
    ```powershell
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
    ```
 
-   If you need to change the endpoint, you can add the *-Endpoint* parameter to the end, as shown in the following example:
+   If you need to change the endpoint, run the following command:
 
    ```PowerShell
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
    ```
 
-1. To verify that the setup process was successful, run the [`Get-ClusterQuorum`](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
+1. Run the following command to verify that the setup process was successful:
 
    ```powershell
    Get-ClusterQuorum
-    [[-Cluster] <String>]
-    [-InputObject <PSObject>]
-    [<CommonParameters>]
    ```
 
-#### [Windows Admin Center](#tab/windowsadmin)
-
-To set up Cloud Witness in the Windows Admin Center:
+# [Windows Admin Center](#tab/wac)
 
 1. Open Windows Admin Center and go to **Cluster Manager**.
 
@@ -166,27 +163,25 @@ To set up Cloud Witness in the Windows Admin Center:
 
 ## Proxy considerations with Cloud Witness
 
-Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses **.core.windows.net** as the endpoint. You need to ensure that this endpoint is included in any firewall allow lists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses `.core.windows.net` as the endpoint. You need to ensure that this endpoint is included in any firewall allowlists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
 
-To use the Netsh command to configure a default proxy server, follow these steps:
+You can use the `netsh` command to configure a default proxy server by opening an elevated PowerShell window and running the following command:
 
 > [!NOTE]
-> This changes the default proxy configuration for WinHTTP. Any application, including Windows services, that use WinHTTP might be affected. </br>
+> Running this command changes the default proxy configuration for WinHTTP. Any application, including Windows services that use WinHTTP might be affected.
 
-1. Open an elevated command line:
-   1. Go to **Start** and type **cmd**.
-   1. Right-click **Command prompt** and select **Run as administrator**.
+```powershell
+netsh winhttp set proxy proxy-server="<ProxyServerName>:<port>" bypass-list="<HostsList>"
+```
 
-2. Enter the following command and press **Enter**:
+For example:
 
-   ```cmd
-   netsh winhttp set proxy proxy-server="<ProxyServerName>:<port>" bypass-list="<HostsList>"
-   ```
+```powershell
+netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; *.contoso.com"
+```
 
-   For example: `netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; *.contoso.com"`
-
-See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts) to learn more.
-
-## Related content
+## See also
 
 - [What's New in failover clustering in Windows Server](whats-new-in-failover-clustering.md)
+
+- [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts)
