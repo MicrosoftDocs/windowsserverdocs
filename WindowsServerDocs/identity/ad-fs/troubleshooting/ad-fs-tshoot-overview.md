@@ -12,8 +12,7 @@ ms.topic: article
 
 Active Directory Federation Services (AD FS) has many moving pieces, touches many different things and has many different dependencies. Naturally, this complexity can give rise to various issues. This article is designed to get you started on troubleshooting these issues. It introduces you to the common areas that you should focus on, how to enable features for additional information, and various tools to track down problems.
 
-> [!NOTE]
-> For more information, see [AD FS help](https://adfshelp.microsoft.com), which provides effective tools in one place that make it easier for users and administrators to resolve authentication issues at a quicker pace.
+
 
 ## What to check first
 
@@ -37,4 +36,4 @@ Before you dive into in-depth troubleshooting, there are a few things that you s
 |[Claim rules syntax](ad-fs-tshoot-claims-rules.md)|Information on troubleshooting claim rules and their syntax.|
 |[Integrated Windows authentication](ad-fs-tshoot-iwa.md)|Information on troubleshooting integrated authentication.|
 |[Microsoft Entra ID](ad-fs-tshoot-azure.md)|Information on troubleshooting AD FS interaction with Microsoft Entra ID.|
-|[AD FS Diagnostics Analyzer](ad-fs-diagnostics-analyzer.md)|AD FS Help Diagnostics Analyzer performs basic AD FS checks by using the diagnostics PowerShell module.|
+
