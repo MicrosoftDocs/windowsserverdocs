@@ -161,7 +161,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Various bug fixes.
 
 ## Updates for version 0.9.0
-*Date published: 07/05/2018*
+*Date published: July 5, 2018*
 
 - New sign in experience within the web client.
 - No longer prompted for credentials when launching a desktop or app connection (Single sign on).
@@ -169,7 +169,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Various bug fixes.
 
 ## Updates for version 0.8.1
-*Date published: 05/17/2018*
+*Date published: May 17, 2018*
 
 - Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
 - Fixed connection failures for some languages when printing is enabled.
@@ -177,7 +177,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - **Help** and **Feedback** options were added.
 
 ## Updates for version 0.8.0
-*Date published: 03/28/2018*
+*Date published: March 28, 2018*
 
 - Initial public preview release of the web client.
 - Copy/paste text through the clipboard with **CTRL+C** and **CTRL+V**.
