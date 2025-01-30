@@ -7,7 +7,7 @@ metadata:
   ms.author: mosagie
   ms.topic: faq
   ms.custom: se-defect-target
-  ms.date: 01/23/2025
+  ms.date: 01/30/2025
 title: Remote Desktop Web Access FAQ
 summary: |
     This article provides answers to some of the most common questions about Remote Desktop Web Access (RD Web Access). The RD Web Access website enables you to use a Web browser to access RemoteApp and Desktop Connections.
@@ -16,21 +16,21 @@ sections:
   - name: Help topics
     questions:
       - question: |
-          What do I do if I forget my password?
+          What should I do if I can't sign in?
         answer: |
-          If you enter an incorrect user name or password, you see a message to try typing the information again. If your account is locked because of too many incorrect sign in attemps, you
-          ll continue to see the same message. Contact your administrator to unlock your account and reset your password.
+          If you enter an invalid user name or password, you see a message saying: "The user name or password that you entered is not valid. Try typing it again". If your account is locked because of too many incorrect sign in attemps, you
+          continue to see the same message. Contact your administrator to unlock your account and reset your password.
 
             ![A screenshot of the link displayed to change your password.](media/incorrect-or-account-locked-out.png)
 
       - question: |
           How do I reset my expired password?
         answer: |
-          If an administrator hasn't enabled password reset, you'll see that your password is expired. Contact your administrator to reset your password.
+          If an administrator hasn't enabled password reset, you see a message saying" Your password is expired. Please contact your administrator for assistance".
           
             ![A screenshot of the link displayed to change your password.](media/expired-password-no-iis-change.png)
 
-          If an administrator has enabled password reset, you can reset your password by following the link to reset your password. You'll need to enter your old password, then your new password, and confirm the new password.
+          If an administrator has enabled password reset, you can reset your password by following the link to reset your password. You need to enter your old password, then your new password, and confirm the new password.
 
             ![A screenshot of the link displayed to change your password.](media/change-password-form.png)
       
@@ -68,7 +68,7 @@ sections:
         answer: |
           First, connect to the RD Web Access Server. To change your password, enter Ctrl+Alt+Del and select **Change a password**. Enter in the old password, then the new password, and confirm the new password.
           
-          You can change your password only if your network administrator has enabled this feature. If you can't change your password, contact your network administrator.    
+          You can change your password only if your network administrator enabled password change. If you can't change your password, contact your network administrator.    
           
           If you don't know the password requirements, contact your network administrator.
       
