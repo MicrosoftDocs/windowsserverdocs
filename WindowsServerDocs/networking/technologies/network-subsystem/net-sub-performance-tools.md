@@ -11,8 +11,6 @@ ms.date: 10/27/2021
 
 # Performance Tools for Network Workloads
 
->
-
 You can use this topic to learn about performance tools.
 
 This topic contains sections about the Client to Server Traffic tool and TCP/IP Window Size.

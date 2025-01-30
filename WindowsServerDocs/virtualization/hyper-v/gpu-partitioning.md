@@ -1,33 +1,22 @@
 ---
 title: Partition and share GPUs with virtual machines on Hyper-V
-description: Learn about how GPU partitioning works with multiple virtual machines on Windows Server and Azure Local.
-author: robinharwood
-ms.author: roharwoo
+description: Learn about how GPU partitioning works with multiple virtual machines on Windows Server.
+author: meaghanlewis
+ms.author: mosagie
 ms.topic: conceptual
 ms.subservice: core-os
-ms.date: 10/25/2024
-zone_pivot_groups: windows-os
+ms.date: 12/31/2024
 ---
 
 # GPU partitioning
-
-:::zone pivot="azure-local"
-
-[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-23h2-22h2.md)]
-
-::: zone-end
 
 GPU partitioning allows you to share a physical GPU device with multiple virtual machines (VMs). With GPU partitioning or GPU virtualization, each VM gets a dedicated fraction of the GPU instead of the entire GPU.
 
 The GPU partitioning feature uses the [Single Root IO Virtualization (SR-IOV) interface](/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-), which provides a hardware-backed security boundary with predictable performance for each VM. Each VM can access only the GPU resources dedicated to them and the secure hardware partitioning prevents unauthorized access by other VMs.
 
-:::zone pivot="windows-server"
-
 Windows Server introduces live migration with GPU partitioning. There are specific requirements to use GPU partitioning live migration. Aside from recommended live migration best practices, your cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs are automatically restarted where GPU resources are available.
 
 GPU partitioning is designed for standalone servers. You can live migrate VMs between standalone nodes for planned downtime; however, for customers that require clustering for unplanned downtime, you must use Windows Server 2025 Datacenter.
-
-:::zone-end
 
 ## When to use GPU partitioning
 
@@ -41,13 +30,7 @@ For example:
 
 ## Supported guest operating systems
 
-:::zone pivot="windows-server"
 GPU partitioning on Windows Server 2025 and later supports these guest operating systems:
-:::zone-end
-
-:::zone pivot="azure-local"
-GPU partitioning on Azure Local supports these guest operating systems:
-:::zone-end
 
 - Windows 10 or later
 - Windows 10 Enterprise multi-session​ or later
@@ -90,40 +73,15 @@ Consider the following limitations when using the GPU partitioning feature:
 
 - Partitions are autoassigned to the VMs. You can't choose a specific partition for a specific VM.
 
-:::zone pivot="azure-local"
-
-- Currently, GPU partitioning on Azure Local doesn't support live migration of VMs. But VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
-
-:::zone-end
-
 - You can partition your GPU using Windows Admin Center or using PowerShell. We recommend that you use Windows Admin Center to configure and assign GPU partitions. Windows Admin Center automatically validates for a homogeneous configuration of the GPUs across all the servers in your cluster. It provides appropriate warnings and errors to take any corrective action needed.
 
 - If using PowerShell to provision GPU partitioning, you must perform the provisioning steps on each server in the cluster. You must manually ensure that the homogeneous configuration is maintained for GPUs across all the servers in your cluster.
 
-:::zone pivot="windows-server"
-
 - When live migrating a virtual machine with a GPU partition assigned, Hyper-V live migration automatically falls back to using TCP/IP with compression. Migrating a virtual machine has the potential effect of increasing the CPU utilization of a host. In addition, live migrations could take longer than with virtual machines without GPU partitions attached.
 
-:::zone-end
-
 ## Related content
-
-:::zone pivot="windows-server"
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md)
 - [Use GPUs with clustered VMs](deploy/use-gpu-with-clustered-vm.md)
-- [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Local solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
-
-:::zone-end
-
-:::zone pivot="azure-local"
-
-For more information on using GPUs with your VMs and GPU partitioning, see:
-
-- [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
-- [Use GPUs with clustered VMs](deploy/use-gpu-with-clustered-vm.md?context=/azure/azure-local/context/context)
-- [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Local solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
-
-:::zone-end

@@ -10,8 +10,6 @@ description: How to add servers or drives to a Storage Spaces Direct cluster
 ---
 # Adding servers or drives to Storage Spaces Direct
 
->
-
 This topic describes how to add servers or drives to Storage Spaces Direct.
 
 ## <a name="adding-servers"></a> Adding servers

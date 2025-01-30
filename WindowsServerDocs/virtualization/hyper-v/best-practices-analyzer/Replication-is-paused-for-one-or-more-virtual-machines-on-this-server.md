@@ -1,15 +1,13 @@
 ---
 title: Replication is paused for one or more virtual machines on this server
 description: Learn what to do when replication is paused for one or more of the virtual machines. While the primary virtual machine is paused, any changes that occur will be accumulated and will be sent to the Replica virtual machine once replication is resumed.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: e1119a40-eda3-4058-8648-7df81cbc6c29
 ms.date: 8/16/2016
 ---
 # Replication is paused for one or more virtual machines on this server
-
->
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

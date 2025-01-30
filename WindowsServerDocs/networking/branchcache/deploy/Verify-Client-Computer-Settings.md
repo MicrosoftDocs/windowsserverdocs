@@ -10,8 +10,6 @@ ms.date: 01/05/2021
 ---
 # Verify Client Computer Settings
 
->
-
 You can use this procedure to verify that the client computer is correctly configured for BranchCache.
 
 > [!NOTE]

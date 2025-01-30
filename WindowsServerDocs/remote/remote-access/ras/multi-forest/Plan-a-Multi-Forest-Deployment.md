@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Plan a Multi-Forest Deployment
 
->
-
 This topic describes the planning steps required when configuring Remote Access in a multi-forest deployment.
 
 ## Prerequisites

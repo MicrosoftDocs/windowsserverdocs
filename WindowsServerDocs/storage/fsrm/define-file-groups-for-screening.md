@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Define File Groups for Screening
 
->
-
 A *file group* is used to define a namespace for a file screen, file screen exception, or **Files by File Group** storage report. It consists of a set of file name patterns, which are grouped by the following:
 
 -   **Files to include**: files that belong in the group

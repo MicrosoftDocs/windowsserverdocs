@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix A: Dynamic Access Control Glossary
 
->
-
 Following are the list of terms and definitions that are included in the Dynamic Access Control scenario.
 
 |Term|Definition|

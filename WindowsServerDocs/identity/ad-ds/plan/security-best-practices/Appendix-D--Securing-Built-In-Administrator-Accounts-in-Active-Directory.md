@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix D: Securing Built-in Administrator Accounts in Active Directory
 
->
-
 
 ## Appendix D: Securing Built-in Administrator Accounts in Active Directory
 

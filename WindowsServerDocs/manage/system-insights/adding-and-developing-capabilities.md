@@ -10,8 +10,6 @@ ms.date: 7/31/2018
 
 # Adding and developing new capabilities
 
->
-
 System Insights enables you to add new predictive capabilities to System Insights, without requiring any OS updates. This enables developers, including Microsoft and third parties, to create and deliver new capabilities mid-release to address the scenarios you care about.
 
 Any new capability can integrate with and extend the existing System Insights infrastructure:

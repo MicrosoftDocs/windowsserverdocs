@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Configure Notification Limits
 
->
-
 To reduce the number of notifications that accumulate for repeatedly exceeding a quota threshold or attempting to save an unauthorized file, File Server Resource Manager applies time limits to the following notification types:
 
 -   E-mail

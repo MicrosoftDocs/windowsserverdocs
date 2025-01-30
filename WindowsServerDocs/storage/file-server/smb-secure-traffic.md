@@ -46,7 +46,7 @@ information about Azure Cloud and Office 365 IP address ranges, see:
   - [public cloud](https://www.microsoft.com/download/details.aspx?id=56519)
   - [US government cloud](https://www.microsoft.com/download/details.aspx?id=57063)
   - [Germany cloud](https://www.microsoft.com/download/details.aspx?id=57064)
-  - [China cloud](https://www.microsoft.com/download/details.aspx?id=57064).
+  - [China cloud](https://www.microsoft.com/download/details.aspx?id=57062).
   
   The JSON files are updated weekly and include versioning both for the full file and each
   individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US

@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Overview of the DirectAccess Cluster-NLB Test Lab Scenario
 
->
-
 In this test lab scenario, DirectAccess is deployed with:
 
 -   **DC1**-A server that is configured as a domain controller, Domain Name System (DNS) server, and Dynamic Host Configuration Protocol (DHCP) server.

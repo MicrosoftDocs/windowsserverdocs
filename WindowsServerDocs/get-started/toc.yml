@@ -20,6 +20,8 @@ items:
         href: whats-new-in-windows-server-2019.md
       - name: Windows Server 2016
         href: whats-new-in-windows-server-2016.md
+    - name: Install Windows Server from installation media
+      href: install-windows-server.md 
     - name: Servicing channels comparison
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
@@ -70,13 +72,7 @@ items:
     - name: Server Core App Compatibility Feature on Demand
       href: server-core-app-compatibility-feature-on-demand.md
     - name: Microsoft server applications compatibility
-      items:
-      - name: Windows Server 2022
-        href: application-compatibility-windows-server-2022.md
-      - name: Windows Server 2019
-        href: application-compatibility-windows-server-2019.md
-      - name: Windows Server 2016
-        href: application-compatibility-windows-server-2016.md
+      href: application-compatibility.md
     - name: Azure Hybrid Benefit for Windows Server
       href: azure-hybrid-benefit.md
     - name: What is Hotpatch?

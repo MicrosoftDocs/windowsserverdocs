@@ -10,8 +10,6 @@ ms.date: 11/02/2021
 ---
 # Create a VM and connect to a tenant virtual network or VLAN
 
->
-
 In this topic, you create a tenant VM and connect it to either a virtual network that you created with Hyper-V Network Virtualization or to a virtual Local Area Network (VLAN). You can use Windows PowerShell Network Controller cmdlets to connect to a virtual network or NetworkControllerRESTWrappers to connect to a VLAN.
 
 Use the processes described in this topic to deploy virtual appliances. With a few additional steps, you can configure appliances to process or inspect data packets that flow to or from other VMs on the Virtual Network.

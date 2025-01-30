@@ -11,8 +11,6 @@ ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 
 # Active Directory Domain Services Component Updates
 
->
-
 This module introduces the components that received minor updates in the Directory Services and Identity spaces.
 
 

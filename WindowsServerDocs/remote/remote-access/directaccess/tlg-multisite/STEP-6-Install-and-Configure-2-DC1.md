@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 6 Install and Configure 2-DC1
 
->
-
 2-DC1 provides the following services:
 
 -   A domain controller for the corp2.corp.contoso.com Active Directory Domain Services (AD DS) domain.

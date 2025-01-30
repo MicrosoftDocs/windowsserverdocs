@@ -8,8 +8,6 @@ ms.date: 06/05/2024
 ---
 # Windows Admin Center known issues
 
->
-
 If you encounter an issue not described on this page, let us know at the [Windows Admin Center feedback page](https://aka.ms/WACfeedback).
 
 ## Installer
@@ -407,7 +405,7 @@ If you're using virtual switch teaming in a VM environment, you also need to run
 Get-VM | %{ Set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming On }
 ```
 
-If you're deploying a cluster using the Azure Local OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To preinstall these features, run the following command before creating the VMs:
+If you're deploying a cluster using the Azure Stack HCI OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To preinstall these features, run the following command before creating the VMs:
 
 ```powershell
 Install-WindowsFeature –VHD <Path to the VHD> -Name Hyper-V, RSAT-Hyper-V-Tools, Hyper-V-PowerShell

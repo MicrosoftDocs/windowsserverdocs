@@ -10,8 +10,6 @@ ms.date: 10/27/2021
 ---
 # SDN Technologies
 
->
-
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server.
 
 ## [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking)

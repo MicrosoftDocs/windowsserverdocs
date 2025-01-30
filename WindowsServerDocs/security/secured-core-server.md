@@ -11,8 +11,6 @@ ms.contributors: socuff-01282022
 
 # What is Secured-core server?
 
->
-
 Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and
 operating system security features. The protection provided by Secured-core systems begins before
 the operating system boots and continues whilst running. Secured-core server is designed to deliver
@@ -119,7 +117,7 @@ To learn more about VBS and hardware requirements, see
 ## Simplified management
 
 You can view and configure the OS security features of Secured-core systems using Windows PowerShell
-or the security extension in Windows Admin Center. With Azure Local Integrated Systems,
+or the security extension in Windows Admin Center. With Azure Local integrated systems,
 manufacturing partners have further simplified the configuration experience for customers so that
 Microsoft’s best server security is available right out of the box.
 

@@ -11,8 +11,6 @@ ms.date: 08/29/2018
 
 # Review prerequisites for the Host Guardian Service
 
->
-
 
 This topic covers HGS prerequisites and initial steps to prepare for the HGS deployment.
 

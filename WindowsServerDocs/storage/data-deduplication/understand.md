@@ -10,8 +10,6 @@ ms.date: 02/18/2022
 ---
 # Understanding Data Deduplication
 
->
-
 This document describes how [Data Deduplication](overview.md) works.
 
 ## <a name="how-does-dedup-work"></a>How does Data Deduplication work?

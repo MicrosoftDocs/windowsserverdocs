@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Configure Network Policies
 
->
-
 You can use this topic to configure network policies in NPS.
 
 ## Add a Network Policy

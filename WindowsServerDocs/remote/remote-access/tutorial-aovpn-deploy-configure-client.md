@@ -12,8 +12,6 @@ author: robinharwood
 - [**Previous:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
 
->
-
 In this last part of the tutorial, you'll learn how to use a ProfileXML PowerShell configuration script to configure Always On VPN settings and create a user tunnel for client connections.
 
 For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).

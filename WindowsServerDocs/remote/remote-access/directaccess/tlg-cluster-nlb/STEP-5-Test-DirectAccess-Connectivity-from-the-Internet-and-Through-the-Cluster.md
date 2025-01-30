@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
 
->
-
 CLIENT1 is now ready for DirectAccess testing.
 
 - Test DirectAccess connectivity from the Internet. Connect CLIENT1 to the simulated Internet. When connected to the simulated Internet, the client is assigned public IPv4 addresses. When a DirectAccess client is assigned a public IPv4 address, it tries to establish a connection to the Remote Access server using an IPv6 transition technology.

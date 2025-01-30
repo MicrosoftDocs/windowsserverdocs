@@ -11,8 +11,6 @@ ms.date: 01/14/2020
 
 # Deploy the Host Guardian Service (HGS)
 
->
-
 
 To deploy the HGS, complete the following tasks:
 

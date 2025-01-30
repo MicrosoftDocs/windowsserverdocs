@@ -10,8 +10,6 @@ ms.date: 11/04/2021
 
 # Configure virtual network peering
 
->
-
 In this procedure, you use Windows PowerShell to create two virtual networks, each with one subnet. Then, you configure peering between the two virtual networks to enable connectivity between them.
 
 - [Step 1. Create the first virtual network](#step-1-create-the-first-virtual-network)

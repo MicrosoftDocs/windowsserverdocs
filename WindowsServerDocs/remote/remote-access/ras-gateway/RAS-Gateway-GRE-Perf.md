@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # RAS Gateway GRE Tunnel Throughput and Performance
 
->
-
 You can use this topic to learn about Remote Access Server \(RAS\) Gateway Generic Routing Encapsulation \(GRE\) Tunnel performance on Windows Server, version 1709, in a non-Software Defined Networking \(SDN\) based test environment.
 
 RAS Gateway is a software router and gateway that you can use in either single tenant mode or multitenant mode. This topic discusses a single tenant mode, high availability configuration with Failover Clustering. The GRE tunnel performance statistics that are presented in this topic are valid for RAS Gateway in both single tenant and multitenant modes.

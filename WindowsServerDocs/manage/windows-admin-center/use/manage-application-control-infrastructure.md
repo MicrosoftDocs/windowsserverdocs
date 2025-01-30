@@ -8,8 +8,6 @@ ms.date: 08/18/2022
 ---
 # Managing Windows Defender Application Control (WDAC) enforced infrastructure
 
->
-
 Windows Defender application control (WDAC) can help mitigate many security threats by restricting the applications that users are allowed to run and the code that runs in the System Core (kernel). Application control policies can also block unsigned scripts and MSIs, and restrict Windows PowerShell to run in [Constrained Language Mode](/powershell/module/microsoft.powershell.core/about/about_language_modes). Learn more about [Application Control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
 
 Extra configuration is required for Windows Admin Center to install on and manage WDAC enforced environments. This document covers these requirements and known issues when managing a WDAC enforced environment.
@@ -98,7 +96,7 @@ When you connect to a WDAC enforced cluster for the first time, it may take a fe
 > If you change the WDAC enforcement status of your managed nodes, do not use Windows Admin Center for at least 30 seconds for this change to be reflected.
 
 ## Known issues
-- Currently, deploying Azure Kubernetes Service on Azure Local and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Local isn't currently supported.
+- Currently, deploying Azure Kubernetes Service on Azure Local and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment.
 
 - Using RBAC on a single server is currently not supported.
 

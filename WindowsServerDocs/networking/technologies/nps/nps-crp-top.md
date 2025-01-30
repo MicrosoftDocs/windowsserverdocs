@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Connection Request Processing
 
->
-
 You can use this topic to learn about connection request processing in Network Policy Server in Windows Server 2016.
 
 >[!NOTE]

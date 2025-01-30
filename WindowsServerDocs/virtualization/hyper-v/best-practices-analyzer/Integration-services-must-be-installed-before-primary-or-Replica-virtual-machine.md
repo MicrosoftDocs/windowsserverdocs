@@ -1,15 +1,13 @@
 ---
 title: Integration services must be installed before primary or Replica virtual machines can use an alternate IP address after a failover
 description: Online version of the text for this Best Practices Analyzer rule, with links to more information.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: a7fdd185-d6c8-4f58-9b58-2df5827bb056
 ms.date: 8/16/2016
 ---
 # Integration services must be installed before primary or Replica virtual machines can use an alternate IP address after a failover
-
->
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

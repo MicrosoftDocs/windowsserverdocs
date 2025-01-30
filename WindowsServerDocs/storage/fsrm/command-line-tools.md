@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # File Server Resource Manager command-line tools
 
->
-
 File Server Resource Manager installs the [FileServerResourceManager](/powershell/module/fileserverresourcemanager/)
 PowerShell cmdlets as well as the following command-line tools:
 

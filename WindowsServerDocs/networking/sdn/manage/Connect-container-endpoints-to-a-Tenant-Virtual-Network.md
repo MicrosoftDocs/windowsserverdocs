@@ -11,8 +11,6 @@ ms.date: 11/02/2021
 
 # Connect container endpoints to a tenant virtual network
 
->
-
 In this topic, we show you how to connect container endpoints to an existing tenant virtual network created through SDN. You use the *l2bridge* (and optionally *l2tunnel*) network driver available with the Windows libnetwork plugin for Docker to create a container network on the tenant VM.
 
 In the [Container network drivers](/virtualization/windowscontainers/container-networking/network-drivers-topologies) topic, we discussed the multiple network drivers are available through Docker on Windows. For SDN, use the *l2bridge* and *l2tunnel* drivers. For both drivers, each container endpoint is in the same virtual subnet as the container host (tenant) virtual machine.

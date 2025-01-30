@@ -9,8 +9,6 @@ ms.date: 07/24/2023
 ---
 # Storage Spaces Direct hardware requirements
 
->
-
 This article describes minimum hardware requirements for Storage Spaces Direct. For hardware requirements on Azure Local, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Local: Determine hardware requirements](/azure/azure-local/concepts/system-requirements-23h2).
 
 For production, Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For hardware solutions, visit the [Azure Local solutions website](https://azurestackhcisolutions.azure.microsoft.com/).

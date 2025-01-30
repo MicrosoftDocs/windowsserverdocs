@@ -10,8 +10,6 @@ ms.date: 10/28/2021
 ---
 # RAS Gateway High Availability
 
->
-
 You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking (SDN).
 
 This topic contains the following sections.

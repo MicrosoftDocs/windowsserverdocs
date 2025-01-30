@@ -4,7 +4,7 @@ description: Learn about the processor performance considerations to use for tun
 ms.topic: article
 ms.author: roharwoo
 author: robinharwood
-ms.date: 04/02/2024
+ms.date: 01/17/2025
 ---
 
 # Hyper-V processor performance
@@ -17,9 +17,9 @@ The virtual machine (VM) integration services include enlightened drivers for th
 
 ## Virtual processors
 
-You should configure VMs that have non-CPU-intensive loads to use only one virtual processor. This configuration is necessary because of the extra overhead associated with multiple virtual processors, such as other synchronization costs in the guest operating system. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+Assess your workload to determine the processor requirements to avoid under or over provisioning. Use the results of your assessment to configure number of virtual processors required. Increase the number of virtual processors if the VM requires more processing resources under peak load. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
 
-Increase the number of virtual processors if the VM requires more than one CPU of processing under peak load.
+When using Simultaneous multithreading (SMT), we recommended using virtual processors in multiples of two. Most modern AMD and Intel based systems have SMT enabled, where enabled we recommended configuring virtual machines to have an even number of virtual processors. To learn more about SMT, see [Manage Hyper-V hypervisor scheduler types](../../../../virtualization/hyper-v/manage/manage-hyper-v-scheduler-types.md).
 
 ## Background activity
 

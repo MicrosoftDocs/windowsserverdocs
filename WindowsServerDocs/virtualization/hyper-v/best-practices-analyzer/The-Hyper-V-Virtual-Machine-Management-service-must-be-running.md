@@ -1,15 +1,13 @@
 ---
 title: The Hyper-V Virtual Machine Management service must be running
 description: Learn what to do when the service required to manage virtual machines is not running.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
 ms.date: 06/29/2022
 ---
 # The Hyper-V Virtual Machine Management service must be running
-
->
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Server Certificate Deployment
 
->
-
 Follow these steps to install an enterprise root certification authority (CA) and to deploy server certificates for use with PEAP and EAP.
 
 > [!IMPORTANT]

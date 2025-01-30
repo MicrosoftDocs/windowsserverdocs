@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Deploying DFS Namespaces
 
->
-
 To deploy DFS Namespaces, refer to the following topics:
 
 -   [Choose a Namespaces Type](choose-a-namespace-type.md)

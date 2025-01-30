@@ -11,8 +11,6 @@ ms.topic: article
 
 # Solutions and Scenario Guides
 
->
-
 
 With Microsoft's access and information protection solutions, you can deploy and configure access to corporate resources across your on-premises environment and cloud applications. And you can do it while protecting corporate information.
 

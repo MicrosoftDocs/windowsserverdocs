@@ -11,8 +11,6 @@ ms.topic: article
 
 # Virtualized Domain Controller Additional Resources
 
->
-
 
 -   AD DS Virtualization (Cloning and Virtualization safe improvements) <!--(/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj574191(v=ws.11))-->
 

@@ -9,8 +9,6 @@ ms.date: 09/18/2018
 
 # Develop a solution extension
 
->
-
 Solutions primarily define a unique type of object you wish to manage through Windows Admin Center.  These solutions/connection types are included with Windows Admin Center by default:
 
 * Windows Server connections

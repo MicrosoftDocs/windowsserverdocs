@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Getting Started with Network Policy Server
 
->
-
 You can use the topics in this section to learn about Network Policy Server features and capabilities.
 
 >[!NOTE]

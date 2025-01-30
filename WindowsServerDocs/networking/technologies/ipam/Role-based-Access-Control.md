@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Role-based Access Control
 
->
-
 This topic provides information about using role-based access control in IPAM.
 
 > [!NOTE]
