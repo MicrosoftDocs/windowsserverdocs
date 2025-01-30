@@ -15,7 +15,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 ## Updates for version 2.1.62.1
  
-*Date published: February 14, 2025*
+*Date published: January 30, 2025*
 
 - Endpoint that delivers client packages changed to `*.cdn.office.net`.
 - Bug fixes and security updates.
