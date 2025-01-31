@@ -13,7 +13,7 @@ ms.date: 11/21/2019
 > New to Windows Admin Center?
 > [Download or learn more about Windows Admin Center](../overview.md).
 
-You can add individual servers running Windows Server 2012 or later to Windows Admin Center so that you can manage them by using a comprehensive set of tools.
+You can add individual servers running Windows Server to Windows Admin Center so that you can manage them by using a comprehensive set of tools.
 
 ## Procedure for adding a server to Windows Admin Center
 
