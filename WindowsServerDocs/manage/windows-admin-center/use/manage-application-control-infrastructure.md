@@ -32,7 +32,7 @@ For Case 1, only the following signer rule needs to be allowlisted in the WDAC p
 </Signer> 
 ```
 
-For Case 2, the preceding signer rule must be allowlisted on *both* your managed node and the machine on which you deploy Windows Admin Center. Additionally, the following signer rules must be allowlisted *only* on the machine on which you deploy Windows Admin Center:
+For Case 2, the preceding signer rule must be added to the allowlist on *both* your managed node and the machine on which you deploy Windows Admin Center. Additionally, the following signer rules must be added to the allowlist *only* on the machine on which you deploy Windows Admin Center:
 
 ```xml
 <Signer ID="ID_SIGNER_S_XXXXX" Name="Microsoft Code Signing PCA 2011"> 
