@@ -11,8 +11,6 @@ zone_pivot_groups: openssh-windows-version
 
 # Get started with OpenSSH for Windows
 
-
-
 OpenSSH is a connectivity tool for remote sign-in that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
 
 An OpenSSH-compatible client can be used to connect to Windows Server and Windows client devices.
