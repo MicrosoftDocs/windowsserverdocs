@@ -136,7 +136,7 @@ If you installed Windows Admin Center on Windows Server, additional configuratio
 1. In **All connections**, select a resource from the list.
 1. Select **Manage as** to specify the credentials that you'll use to authenticate to the managed node.
 
-   :::image type="content" source="../media/launch/use-get-started-9.png" alt-text="Screenshot of the page for all connections with the command for using credentials for management.":::
+   :::image type="content" source="../media/launch/use-get-started-9.png" alt-text="Screenshot of the page for all connections with the command for using specific credentials for management.":::
 
 1. If Windows Admin Center is running in service mode on Windows Server, but you don't have Kerberos delegation configured, you must reenter your Windows credentials.
 
