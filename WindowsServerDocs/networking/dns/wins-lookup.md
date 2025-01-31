@@ -4,7 +4,7 @@ description: Learn about DNS processes, including client-server communications f
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 01/29/2025
+ms.date: 01/31/2025
 
 ---
 
