@@ -6,7 +6,6 @@ summary: Learn about the features, technology, and deployment of Software Define
 metadata:
   title: Software Defined Networking (SDN) # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about the features, technology, and deployment of Software Defined Networking (SDN). # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: AnirbanPaul #Required; your GitHub user alias, with correct capitalization.
   ms.author: anpaul #Required; microsoft alias of author; optional team alias.

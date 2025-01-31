@@ -1,8 +1,8 @@
 ---
 title: Hyper-V should be the only enabled role
 description: Learn what to do when roles other than Hyper-V are enabled on your server.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
 ms.date: 8/16/2016
