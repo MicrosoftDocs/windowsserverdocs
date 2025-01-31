@@ -339,6 +339,18 @@ By default, new Routing and Remote Access Services (RRAS) installations don't ac
 
 Existing configurations retain their behavior. For example, if you run Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 by using an in-place upgrade, connections based on L2TP and PPTP are still accepted. This change doesn't affect Windows client operating systems. To learn more about how to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
+### IPsec default keying protocol changed
+
+The default keying modules have been changed to IKEv1 and IKEv2 for IPsec connections authenticated with machine certificates. For other authentication methods, the default remains AuthIP and IKEv1. To revert to the previous behavior, add the following registry key with a value of 1 on systems using the new default keying protocol sequence. This applies to both Windows Server 2025 and Windows 11 24H2 clients.
+```
+Path:    HKLM\SYSTEM\CurrentControlSet\Services\MpsSvc\Parameters  
+Name:    IpsecRestoreLegacyKeyMod  
+Type:    REG_DWORD  
+Values:  0 (default – new sequence, IKEv2 and IKEv1) | 1 (previous sequence used, AuthIP & IKEv1)  
+```
+A reboot is required to make this registry key effective.  
+
+
 ## Hyper-V, AI, and performance
 
 The following sections discuss Hyper-V, AI, and performance.
