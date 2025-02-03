@@ -4,7 +4,7 @@ description: How to install Windows Admin Center on a Windows PC or on a server 
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 01/24/2025
+ms.date: 02/03/2025
 zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
@@ -41,30 +41,6 @@ To install Windows Admin Center, perform the following steps:
 
 :::zone pivot="windows-server-2025"
 
-### [Server Core](#tab/server-core)
-
-If you have a Server Core installation of Windows Server 2025, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
-
-To install Windows Admin Center on your machine running Windows Server 2025 (preview) Server Core installation:
-
-> [!WARNING]
-> Installing Windows Admin Center will restart the WinRM service, which will sever all remote PowerShells sessions. It is recommended that you install from a local Cmd or PowerShell. If you are installing with an automation solution that would be broken by the WinRM service restarting, you can add the parameter ```RESTART_WINRM=0``` to the install arguments, but WinRM must be restarted for Windows Admin Center to function.
-
-Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
-
-```cli
-msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
-```
-
-Run the following command to install Windows Admin Center with an existing certificate:
-
-```cli
-msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
-```
-
-> [!WARNING]
-> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation, such as  `.\<WindowsAdminCenterInstallerName>.msi`. Windows Admin Center doesn't support that notation, and any attempt to use it in an installation won't work. Instead, either remove the `.\` prefix or specify the full path to the MSI.
-
 ### [Desktop Experience](#tab/desktop-experience)
 
 To install Windows Admin Center on your machine running the Windows Server Desktop Experience, follow these steps:
@@ -75,9 +51,9 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 1. On the **Get started with Windows Admin Center** window, if you agree to the license terms, select **Next** to continue.
 
-1. The latest installer download starts automatically and is saved to the _Downloads_ folder, when complete, select **Install**. Selecting **Install** launches the installer from the Downloads folder.
+1. The latest installer download starts automatically and is saved to the _Downloads_ folder, when complete, select **Install**. Selecting **Install** initiates the installer from the Downloads folder.
 
-1. On the **Welcome to the windows Admin Center setup wizard** window, select **Next** to continue.
+1. On the **Welcome to the Windows Admin Center setup wizard** window, select **Next** to continue.
 
 1. On the **License Terms and Privacy Statement** window, if you agree to the terms select **I accept these terms and understand the privacy statement**, then select **Next** to start the installation process.
 
@@ -100,35 +76,35 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 You've now installed Windows Admin Center on your machine.
 
----
-
-::: zone-end
-
-:::zone pivot="windows-server-2022"
-
 ### [Server Core](#tab/server-core)
 
-If you have a Server Core installation of Windows Server 2022 and earlier, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
+If you have a Server Core installation of Windows Server 2025, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
 
-To install Windows Admin Center on your Windows Server 2022 and earlier versions running Server Core installation:
+To install Windows Admin Center on your machine running Windows Server 2025 (preview) Server Core installation:
 
 > [!WARNING]
-> Installing Windows Admin Center will restart the WinRM service, which will which will end all remote PowerShell sessions. We recommend that you install from a local command prompt or PowerShell window. If you're using an automated solution that restarting the WinRM service disrupts to install WIndows Admin Center, you can add the parameter ```RESTART_WINRM=0``` to the install arguments to restart the service. However, you must restart WinRM to make sure Windows Admin Center installs correctly.
+> Installing Windows Admin Center will restart the WinRM service, which will sever all remote PowerShells sessions. It is recommended that you install from a local Cmd or PowerShell. If you are installing with an automation solution that would be broken by the WinRM service restarting, you can add the parameter `RESTART_WINRM=0` to the install arguments, but WinRM must be restarted for Windows Admin Center to function.
 
 Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
 
-```cmd
+```cli
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
 ```
 
 Run the following command to install Windows Admin Center with an existing certificate:
 
-```cmd
+```cli
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
 ```
 
 > [!WARNING]
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation, such as  `.\<WindowsAdminCenterInstallerName>.msi`. Windows Admin Center doesn't support that notation, and any attempt to use it in an installation won't work. Instead, either remove the `.\` prefix or specify the full path to the MSI.
+
+---
+
+::: zone-end
+
+:::zone pivot="windows-server-2022"
 
 ### [Desktop Experience](#tab/desktop-experience)
 
@@ -159,6 +135,30 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 1. Select the URL to open Windows Admin Center in a browser, then Select **Finish**.
 
 You've now installed Windows Admin Center on your machine.
+
+### [Server Core](#tab/server-core)
+
+If you have a Server Core installation of Windows Server 2022 and earlier, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
+
+To install Windows Admin Center on your Windows Server 2022 and earlier versions running Server Core installation:
+
+> [!WARNING]
+> Installing Windows Admin Center will restart the WinRM service, which will which will end all remote PowerShell sessions. We recommend that you install from a local command prompt or PowerShell window. If you're using an automated solution that restarting the WinRM service disrupts to install WIndows Admin Center, you can add the parameter ```RESTART_WINRM=0``` to the install arguments to restart the service. However, you must restart WinRM to make sure Windows Admin Center installs correctly.
+
+Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
+
+```cmd
+msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
+```
+
+Run the following command to install Windows Admin Center with an existing certificate:
+
+```cmd
+msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
+```
+
+> [!WARNING]
+> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation, such as  `.\<WindowsAdminCenterInstallerName>.msi`. Windows Admin Center doesn't support that notation, and any attempt to use it in an installation won't work. Instead, either remove the `.\` prefix or specify the full path to the MSI.
 
 ---
 
