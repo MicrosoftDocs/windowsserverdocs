@@ -39,15 +39,25 @@ To install Windows Admin Center, you need the following prerequisites:
 
 To install Windows Admin Center, perform the following steps:
 
-:::zone pivot="windows-server-2025"
-
 ### [Desktop Experience](#tab/desktop-experience)
 
 To install Windows Admin Center on your machine running the Windows Server Desktop Experience, follow these steps:
 
+:::zone pivot="windows-server-2022"
+
 1. Open the **Start** menu and enter **Windows Admin Center Setup** into the search bar to search for Windows Admin Center.
 
 1. Select the **Windows Admin Center Setup** app from the **Best match** list.
+
+::: zone-end
+
+:::zone pivot="windows-server-2022"
+
+1. Sign in to the machine you want to install Windows Admin Center on.
+
+1. Run the Windows Admin Center installer you previously downloaded.
+
+::: zone-end
 
 1. On the **Get started with Windows Admin Center** window, if you agree to the license terms, select **Next** to continue.
 
@@ -101,8 +111,6 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation, such as  `.\<WindowsAdminCenterInstallerName>.msi`. Windows Admin Center doesn't support that notation, and any attempt to use it in an installation won't work. Instead, either remove the `.\` prefix or specify the full path to the MSI.
 
 ---
-
-::: zone-end
 
 :::zone pivot="windows-server-2022"
 
