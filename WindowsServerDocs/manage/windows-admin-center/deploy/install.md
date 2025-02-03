@@ -43,7 +43,7 @@ To install Windows Admin Center, perform the following steps:
 
 To install Windows Admin Center on your machine running the Windows Server Desktop Experience, follow these steps:
 
-:::zone pivot="windows-server-2025"
+:::zone pivot="windows-server-2022"
 
 1. Open the **Start** menu and enter **Windows Admin Center Setup** into the search bar to search for Windows Admin Center.
 
