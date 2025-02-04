@@ -18,7 +18,7 @@ The following sections provide the requirements for using Windows Admin Center t
 
 ### Policy requirements
 
-Depending on your use case, you need to allowlist one or more certificates as part of your base or supplemental policies. [Learn more about deploying a base or supplemental policy](/windows/security/threat-protection/windows-defender-application-control/types-of-devices).
+Depending on your use case, you need to add one or more certificates to your allowlist as part of your base or supplemental policies. [Learn more about deploying a base or supplemental policy](/windows/security/threat-protection/windows-defender-application-control/types-of-devices).
 
 - **Case 1**: Only your managed nodes have WDAC enforced.
 - **Case 2**: Both your managed node and the machine on which you deploy Windows Admin Center have WDAC enforced.
@@ -32,7 +32,7 @@ For Case 1, only the following signer rule needs to be allowlisted in the WDAC p
 </Signer> 
 ```
 
-For Case 2, the preceding signer rule must be allowlisted on *both* your managed node and the machine on which you deploy Windows Admin Center. Additionally, the following signer rules must be allowlisted *only* on the machine on which you deploy Windows Admin Center:
+For Case 2, the preceding signer rule must be added to the allowlist on *both* your managed node and the machine on which you deploy Windows Admin Center. Additionally, the following signer rules must be added to the allowlist *only* on the machine on which you deploy Windows Admin Center:
 
 ```xml
 <Signer ID="ID_SIGNER_S_XXXXX" Name="Microsoft Code Signing PCA 2011"> 

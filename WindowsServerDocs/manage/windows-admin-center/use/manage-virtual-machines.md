@@ -9,7 +9,7 @@ ms.date: 01/28/2022
 
 # Manage virtual machines by using Windows Admin Center
 
-The Virtual Machines tool in Windows Admin Center is available in [server](manage-servers.md), [failover cluster](manage-failover-clusters.md), or [hyper-converged cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server 2012 or later, either installed with Desktop Experience or installed as Server Core. Hyper-V Server 2012, 2016, 2019, and 2022 are also supported.
+The Virtual Machines tool in Windows Admin Center is available in [server](manage-servers.md), [failover cluster](manage-failover-clusters.md), or [hyper-converged cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server, either installed with Desktop Experience or installed as Server Core. Hyper-V Server 2016 and 2019 are also supported.
 
 Highlights of the Virtual Machines tool in Windows Admin Center include:
 
