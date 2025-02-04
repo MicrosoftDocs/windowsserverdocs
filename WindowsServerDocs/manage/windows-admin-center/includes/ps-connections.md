@@ -131,4 +131,4 @@ Use the following script to export saved connections in [RDCMan](https://blogs.t
    RdgToWacCsv -RDGfilepath "path\to\myRDCManfile.rdg"
    ```
 
-3. Import the resulting CSV file into Windows Admin Center. Tags in the connection list then represent your RDCMan grouping hierarchy.
+3. Import the resulting CSV file into Windows Admin Center. Tags in the connection list represent your RDCMan grouping hierarchy.

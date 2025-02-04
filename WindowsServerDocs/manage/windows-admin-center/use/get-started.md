@@ -9,7 +9,7 @@ ms.date: 09/21/2022
 
 # Get started with Windows Admin Center
 
-This article describes how to get started with Windows Admin Center after you [download](https://www.microsoft.com/evalcenter/download-windows-admin-center) and [install](https://www.microsoft.com/evalcenter/download-windows-admin-center) it on a Windows PC. To learn more about Windows Admin Center, see [Windows Admin Center overview](../overview.md).
+This article describes how to get started with Windows Admin Center after you [download](https://www.microsoft.com/evalcenter/download-windows-admin-center) and [install](../../windows-admin-center/deploy/install.md) it on a Windows PC. To learn more about Windows Admin Center, see [Windows Admin Center overview](../overview.md).
 
 ## Open Windows Admin Center on a Windows PC
 

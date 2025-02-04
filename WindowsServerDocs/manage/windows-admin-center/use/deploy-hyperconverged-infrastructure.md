@@ -2,14 +2,14 @@
 title: Deploy Hyperconverged Infrastructure with Windows Admin Center
 description: Learn how to deploy a hyperconverged infrastructure by using Windows Admin Center.
 ms.topic: article
-author: cosmosdarwin
-ms.author: roharwoo
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 11/04/2019
 ---
 
 # Deploy a hyperconverged infrastructure by using Windows Admin Center
 
-You can use Windows Admin Center [version 1910](../overview.md) or later to deploy a hyperconverged infrastructure by using two or more suitable Windows servers. This feature takes the form of a multistage workflow that guides you through installing features, configuring networking, creating the cluster, and deploying Storage Spaces Direct and/or software-defined networking.
+You can use Windows Admin Center [version 1910](../overview.md) or later to deploy a hyperconverged infrastructure by using two or more suitable Windows servers. This feature takes the form of a multistage workflow that guides you through installing features, configuring networking, creating the cluster, and deploying Storage Spaces Direct and/or software-defined networking (SDN).
 
 As of Windows Admin Center version 2007, Windows Admin Center supports the Azure Stack HCI operating system. To read about how to deploy a cluster in Windows Admin Center, see the [Azure Local documentation](/azure/azure-local/deploy/create-cluster). Although that documentation is focused on Azure Local, most of the instructions are applicable to Windows Server deployments.
 
@@ -19,7 +19,7 @@ Use the following Windows PowerShell cmdlets to undo changes that the workflow m
 
 ### Remove virtual machines or other clustered resources
 
-If you created any virtual machines or other clustered resources, such as the network controllers for software-defined networking, remove them first.
+If you created any virtual machines or other clustered resources, such as the network controllers for SDN, remove them first.
 
 For example, to remove resources by name, use this cmdlet:
 
