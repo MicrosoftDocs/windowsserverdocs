@@ -1,38 +1,32 @@
 ---
-title: Deploy a Cloud Witness for a failover cluster in Windows Server
-description: How to deploy a cluster quorum Cloud Witness in Windows Server using Failover Cluster Manager, PowerShell, and Windows Admin Center.
+title: Deploy a cloud witness for a failover cluster in Windows Server
+description: How to deploy a cluster quorum cloud witness in Windows Server using Failover Cluster Manager, PowerShell, and Windows Admin Center.
 ms.author: alalve
 author: xelu86
 ms.topic: how-to
-ms.date: 01/29/2025
+ms.date: 02/03/2025
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 ---
 
-# Deploy Cloud Witness for a failover cluster
+# Deploy cloud witness for a failover cluster
 
-Cloud Witness is a type of failover cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This article contains an overview of the Cloud Witness feature, which scenarios it supports, and instructions for how to configure a cloud witness for a failover cluster. For more information, see [Set up a cluster witness](/azure/azure-local/manage/witness?context=/windows-server/context/windows-server-failover-clustering).
+Cloud witness is a type of failover cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This article contains an overview of the cloud witness feature, which scenarios it supports, and instructions for how to configure a cloud witness for a failover cluster. For more information, see [Set up a cluster witness](/azure/azure-local/manage/witness?context=/windows-server/context/windows-server-failover-clustering).
 
-## What is Cloud Witness?
+## What is a cloud witness?
 
 Before we begin, you should refresh your memory about what cluster quorums and quorum witnesses are by reading [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering).
 
-Now, let's start by looking at an example configuration of a multi-site stretched failover cluster quorum for Windows Server, shown in the following diagram.
+In typical clusters, each node has one vote, a *file share witness*, that gives one extra vote to the quorum witness. This extra vote lets the cluster keep running even if one of the datacenters turns off. In the example, the cluster quorum has five possible votes, and only needs three votes to continue running.
 
-:::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png" alt-text="A diagram depicting a cluster quorum with a site labeled file share witness connected to site one and site two.":::
-
-This example is a simplified configuration with two nodes in two on-site datacenters. In typical clusters, each node has one vote, a *file share witness*, that gives one extra vote to the quorum witness. This extra vote lets the cluster keep running even if one of the datacenters turns off. In the example, the cluster quorum has five possible votes, and only needs three votes to continue running.
-
-However, you might notice that in addition to the two datacenters, there's also a third datacenter that acts as the *file share witness*. This datacenter is kept separate from the other two sites and hosts a file server that backs up the system file share. The file share witness functions as the quorum witness in this cluster quorum configuration, making sure the system still runs even if one of the datacenters unexpectedly shuts down.
+However, you might notice that in addition to the two datacenters, there's a third datacenter that acts as the *file share witness*. This datacenter is kept separate from the other two sites and hosts a file server that backs up the system file share. The file share witness functions as the quorum witness in this cluster quorum configuration, making sure the system still runs even if one of the datacenters unexpectedly shuts down.
 
 Having a file share witness provides enough redundancy to keep your file server highly available. However, you should remember that hosting the file share witness on another server in a separate site requires setup, regular maintenance, and independent connectivity to the other sites.
 
-Cloud Witness is different from traditional cluster quorum witness configurations because it uses an Azure Virtual Machine (VM) in the cloud as the quorum witness instead of a physical datacenter. Cloud Witness uses Azure Blob Storage to read and write a blob file that the system uses as the deciding vote to achieve quorum. The following diagram shows an example configuration that uses Cloud Witness.
+Cloud witness is different from traditional cluster quorum witness configurations because it uses an Azure Virtual Machine (VM) in the cloud as the quorum witness instead of a physical datacenter. Cloud witness uses Azure Blob Storage to read and write a blob file that the system uses as the deciding vote to achieve quorum.
 
-:::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_2.png" alt-text="A diagram depicting a failover cluster with Cloud Witness connected to site one and site two.":::
+As you can see, cloud witness configurations don't require a third separate datacenter. Cloud witness, like any other quorum witness, gets an extra vote and helps prevent total shutdowns if one of the other datacenters turns off. However, it doesn't need an extra site for storing the quorum witness. A cloud witness also doesn't need the regular physical maintenance required for an on-site datacenter.
 
-As you can see, Cloud Witness configurations don't require a third separate datacenter. Cloud Witness, like any other quorum witness, gets an extra vote and helps prevent total shutdowns if one of the other datacenters turns off. However, it doesn't need an extra site for storing the quorum witness. Cloud Witness also doesn't need the regular physical maintenance required for an on-site datacenter.
-
-Along with redundancy, there are some other benefits to using the Cloud Witness feature:
+Along with redundancy, there are some other benefits to using the cloud witness feature:
 
 - You don't need to use a separate extra datacenter to achieve quorum.
 
@@ -42,25 +36,25 @@ Along with redundancy, there are some other benefits to using the Cloud Witness 
 
 - Lower ongoing costs to your storage account because the blob file doesn't need much data and updates only when the cluster node state changes.
 
-- Azure comes with a built-in Cloud Witness resource type.
+- Azure comes with a built-in cloud witness resource type.
 
 ## Prerequisites
 
-You must have an [Azure account](/azure/storage/common/storage-account-create?tabs=azure-portal) with an active subscription and a valid Azure general-purpose storage account in order to configure Cloud Witness. This storage account is where Cloud Witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration.
+You must have an [Azure account](/azure/storage/common/storage-account-create?tabs=azure-portal) with an active subscription and a valid Azure general-purpose storage account in order to configure a cloud witness. This storage account is where cloud witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration.
 
 > [!NOTE]
-> Cloud Witness isn't compatible with the following types of Azure storage accounts:
+> Cloud witness isn't compatible with the following types of Azure storage accounts:
 >
 > - Blob storage
 > - Azure Premium Storage
 
-You can also use this account and the `msft-cloud-witness` container that Cloud Witness automatically creates to configure Cloud Witness across multiple different clusters. Each cluster has its own blob file that it stores in the container.
+You can also use this account and the `msft-cloud-witness` container that the cloud witness automatically creates to configure a cloud witness across multiple different clusters. Each cluster has its own blob file that it stores in the container.
 
-When creating your Azure Storage account, if the cluster you're configuring Cloud Witness for is on-premises or in Azure within the same Azure region and availability zones, select **Locally-redundant storage (LRS)** when configuring the **Replication** field. If your cluster is in the same Azure region but in different availability zones, select **Zone-redundant storage (ZRS)** instead.
+When creating your Azure Storage account, if the cluster you're configuring the cloud witness for is on-premises or in Azure within the same Azure region and availability zones, select **Locally-redundant storage (LRS)** when configuring the **Replication** field. If your cluster is in the same Azure region but in different availability zones, select **Zone-redundant storage (ZRS)** instead.
 
 You must use one of the following supported scenarios:
 
-- Disaster recovery for stretched multi-site clusters, as shown in [What is Cloud Witness](#what-is-cloud-witness).
+- Disaster recovery for stretched multi-site clusters.
 
 - Failover clusters without shared storage, such as SQL Always On.
 
@@ -74,13 +68,13 @@ You must use one of the following supported scenarios:
 
 We recommend you always configure a witness if you're using Windows Server 2012 R2 and later. Clusters in later versions of Windows Server automatically manage the witness vote and their nodes vote with Dynamic Quorum.
 
-You also must make sure all firewalls between the failover cluster and Azure Storage account service allow traffic from port 443, also known as the HTTPS port. Cloud Witness uses the HTTPS REST interface for the Azure Storage service. Therefore, you must have port 443 open on all nodes in your failover cluster for Cloud Witness to work as intended.
+You also must make sure all firewalls between the failover cluster and Azure Storage account service allow traffic from port 443, also known as the HTTPS port. A cloud witness uses the HTTPS REST interface for the Azure Storage service. Therefore, you must have port 443 open on all nodes in your failover cluster for a cloud witness to work as intended.
 
-When you create an Azure Storage account, Azure associates it with automatically generated primary and secondary access keys. When you set up Cloud Witness for the first time, we recommend you use the primary access key. After that, you can use either the primary or secondary access key.
+When you create an Azure Storage account, Azure associates it with automatically generated primary and secondary access keys. When you set up a cloud witness for the first time, we recommend you use the primary access key. After that, you can use either the primary or secondary access key.
 
-## Configure Cloud Witness as a quorum witness for your cluster
+## Configure cloud witness as a quorum witness for your cluster
 
-You can configure Cloud Witness using the Quorum Configuration setup workflow built into the Failover Cluster Manager application or by using PowerShell.
+You can configure a cloud witness using the Quorum Configuration setup workflow built into the Failover Cluster Manager application or by using PowerShell.
 
 # [Failover Cluster Manager](#tab/failovercluster)
 
@@ -123,7 +117,7 @@ Once the Cloud Witness is created, navigate to the middle pane of the Failover C
 
 # [PowerShell](#tab/powershell)
 
-1. Run the following command to set up Cloud Witness:
+1. Run the following command to set up a cloud witness:
 
    ```powershell
    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
@@ -161,9 +155,9 @@ Once the Cloud Witness is created, navigate to the middle pane of the Failover C
 
 ---
 
-## Proxy considerations with Cloud Witness
+## Proxy considerations with a cloud witness
 
-Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses `.core.windows.net` as the endpoint. You need to ensure that this endpoint is included in any firewall allowlists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
+Cloud witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses `.core.windows.net` as the endpoint. You need to ensure that this endpoint is included in any firewall allowlists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
 
 You can use the `netsh` command to configure a default proxy server by opening an elevated PowerShell window and running the following command:
 
