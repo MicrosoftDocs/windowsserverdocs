@@ -2,8 +2,8 @@
 title: Accelerated Networking at the Edge (preview)
 description: How to set up and validate Accelerated Networking on your VMs.
 ms.topic: article
-ms.author: helohr
-author: Heidilohr
+author: xelu86
+ms.author: alalve
 ms.date: 11/01/2024
 ---
 # Accelerated Networking at the Edge (preview)
