@@ -2,8 +2,8 @@
 title: What's new in the Remote Desktop client for Android and Chrome OS - Remote Desktop Services
 description: Learn about recent changes to the Remote Desktop client for Android and Chrome OS
 ms.topic: conceptual
-author: heidilohr
-ms.author: helohr
+ms.author: alalve
+author: xelu86
 ms.date: 7/3/2024
 ---
 
