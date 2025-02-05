@@ -23,26 +23,6 @@ In order to configure a cloud witness, the following are required:
 
 - The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
-::: zone-end
-
-::: zone pivot="disk-witness"
-
-In order to configure a disk witness, the following are required:
-
-- The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
-
-::: zone-end
-
-::: zone pivot="file-share-witness"
-
-In order to configure a file share witness, the following are required:
-
-- The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
-
-::: zone-end
-
-::: zone pivot="cloud-witness"
-
 - You must have an [Azure account](/azure/storage/common/storage-account-create?tabs=azure-portal) with an active subscription and a valid Azure general-purpose storage account. This storage account is where a cloud witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration. You can use this account and the `msft-cloud-witness` container that the cloud witness automatically creates to configure a cloud witness across multiple different clusters. Each cluster has its own blob file that it stores in the container.
 
 - When creating your Azure Storage account, if the cluster you're configuring the cloud witness for is on-premises or in Azure within the same Azure region and availability zones, select **Locally-redundant storage (LRS)** when configuring the **Replication** field. If your cluster is in the same Azure region but in different availability zones, select **Zone-redundant storage (ZRS)** instead.
@@ -75,6 +55,10 @@ You must also use one of the following supported scenarios:
 
 ::: zone pivot="disk-witness"
 
+In order to configure a disk witness, the following are required:
+
+- The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+
 - **Shared Storage**: The disk used for the witness must be a shared disk that is accessible by all nodes in the cluster, typically provided by a Storage Area Network (SAN) or other shared storage technology.
 
 - **Disk Configuration**:
@@ -86,6 +70,10 @@ You must also use one of the following supported scenarios:
 ::: zone-end
 
 ::: zone pivot="file-share-witness"
+
+In order to configure a file share witness, the following are required:
+
+- The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
 - You have the **Full Control** permission on the Failover Cluster.
 
@@ -102,7 +90,7 @@ You must also use one of the following supported scenarios:
 
 ::: zone-end
 
-::: zone pivot="cloud-witness, disk-witness, file-share-witness"
+::: zone pivot="cloud-witness"
 
 ## Configure a cloud witness
 
@@ -122,14 +110,6 @@ You can configure a cloud witness using the Failover Cluster Manager, PowerShell
 
 1. Under **Select Quorum Witness**, select **Configure a cloud witness**, then select **Next**.
 
-::: zone pivot="disk-witness"
-
-1. Under **Select Quorum Witness**, select **Configure a disk witness**, then select **Next**.
-
-1. Under **Configure Storage Witness**, select the disk you want to designate as the disk witness, then select **Next**.
-
-::: zone pivot="cloud-witness"
-
 1. Under **Configure cloud witness**, enter the following information, then select **Next**:
 
    - Your Azure Storage account name.
@@ -147,8 +127,6 @@ You can configure a cloud witness using the Failover Cluster Manager, PowerShell
 
      You can enter the name of another existing server into the **Azure service endpoint** field if you plan to use a different Azure service endpoint for your cloud witness, such as Azure China.
 
-::: zone pivot="cloud-witness, disk-witness, file-share-witness"
-
 1. Under **Confirmation**, review your quorum settings, then select **Next**.
 
 1. Under **Summary**, review your witness configuration, then select **Finish**.
@@ -156,6 +134,38 @@ You can configure a cloud witness using the Failover Cluster Manager, PowerShell
    You can select **View Report** for further configuration details.
 
 Once the cloud witness is created, it can be located by navigating to the middle pane of the Failover Cluster Manager under **Cluster Core Resources**.
+
+::: zone-end
+::: zone pivot="disk-witness"
+
+## Configure a disk witness
+
+1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
+
+1. On the left pane, under **Failover Cluster Manager**, select the cluster that you want to configure.
+
+1. On the right pane, under **Actions**, select **More Actions**, and then select **Configure Cluster Quorum Settings**.
+
+1. Under the **Configure Cluster Quorum Wizard**, select **Next**.
+
+1. Under **Select Quorum Configuration Option**, select **Select the quorum witness**, then select **Next**.
+
+1. Under **Select Quorum Witness**, select **Configure a disk witness**, then select **Next**.
+
+1. Under **Configure Storage Witness**, select the disk you want to designate as the disk witness, then select **Next**.
+
+1. Under **Confirmation**, review your quorum settings, then select **Next**.
+
+1. Under **Summary**, review your witness configuration, then select **Finish**.
+
+::: zone-end
+::: zone pivot="file-share-witness"
+
+## Configure a file share witness
+
+1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
+
+::: zone-end
 
 # [PowerShell](#tab/powershell)
 
@@ -227,9 +237,9 @@ Open an elevated PowerShell window and perform the following steps:
    Test-Cluster
    ```
 
-::: zone-end
-
 ---
+
+::: zone-end
 
 ::: zone pivot="cloud-witness"
 
@@ -269,18 +279,6 @@ netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; 
 
 > [!NOTE]
 > Running this command changes the default proxy configuration for WinHTTP. Any application, including Windows services that use WinHTTP might be affected.
-
-::: zone-end
-
-::: zone pivot="disk-witness"
-
-## Configure a disk witness
-
-::: zone-end
-
-::: zone pivot="file-share-witness"
-
-## Configure a file share witness
 
 ::: zone-end
 
