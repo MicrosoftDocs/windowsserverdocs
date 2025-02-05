@@ -2,8 +2,8 @@
 title: Configure alternative SMB ports for Windows Server 2025
 description: How to configure alternative SMB ports on Windows Server 2025
 ms.topic: how-to
-author: Heidilohr
-ms.author: helohr
+ms.author: alalve
+author: xelu86
 ms.date: 10/25/2024
 ---
 
