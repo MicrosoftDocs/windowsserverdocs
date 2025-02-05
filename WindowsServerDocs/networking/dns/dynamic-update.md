@@ -20,7 +20,7 @@ RFC 2136 introduces the UPDATE message format, which allows adding and deleting 
 
 As in any conventional DNS implementation, the zone update must be committed on a primary DNS server for that zone. The secondary DNS server forwards an update up the replication topology until it reaches the primary DNS server. When you use an Active Directory-integrated zone, an update for a resource record in a zone can be sent to any DNS server running on an Active Directory domain controller whose data store contains the zone.
 
-When a zone transfer process starts, it locks the zone. This lock ensures that a secondary DNS server receives a consistent view of the zone while transferesource recording the data. During this time, the zone can't accept dynamic updates. If the zone is large and frequently locked for transfers, it can starve dynamic update clients and could cause system instability. The Windows Server DNS Server service queues update requests that aresource recordive during the zone transfer and processes them after the transfer is complete.
+When a zone transfer process starts, it locks the zone. This lock ensures that a secondary DNS server receives a consistent view of the zone while transferring the data. During this time, the zone can't accept dynamic updates. If the zone is large and frequently locked for transfers, it can starve dynamic update clients and could cause system instability. The Windows Server DNS Server service queues update requests that arrive during the zone transfer and processes them after the transfer is complete.
 
 ## How client and server computers update their DNS names
 
@@ -48,7 +48,7 @@ Also by default, the primary DNS suffix portion of a computer’s FQDN is the sa
 > If you type `ipconfig /registerdns` at a command prompt, the DNS client service attempts to directly register its DNS record, bypassing the DHCP server. This registration occurs even if the DHCP server is configured to **Always dynamically update DNS A and PTR records**. If the client doesn't have permission to update its resource record, the registration silently fails. If the DNS client has this permission, the resource record is updated. Permissions can be reset such that the DHCP server is no longer able to perform future updates on the resource record.  
 > The recommended method to update DNS registration for DHCP clients running Windows is to use `ipconfig /renew`. Don't use `ipconfig /registerdns`.
 
-When one of the previous events triggers a dynamic update, the DNS Client service (not the DHCP Client service as occuresource recorded in previous operating systems) sends updates. This trigger is designed so that if a change to the IP address information occurs, coresource recordesponding updates in DNS are performed to synchronize name-to-address mappings for the computer. The DNS Client service performs this function for all network connections used on the system, including connections not configured to use DHCP.
+When one of the previous events triggers a dynamic update, the DNS Client service (not the DHCP Client service as occurred in previous operating systems) sends updates. This trigger is designed so that if a change to the IP address information occurs, coresource recordesponding updates in DNS are performed to synchronize name-to-address mappings for the computer. The DNS Client service performs this function for all network connections used on the system, including connections not configured to use DHCP.
 
 This update process assumes that installation defaults are in effect for servers running Windows Server. Specific names and update behavior is tunable where advanced TCP/IP properties are configured to use nondefault DNS settings.
 
@@ -72,7 +72,7 @@ After the name change is applied in System properties, you're prompted to resta
 
 1. The DNS Client service sends an SOA type query using the DNS domain name of the computer.
 
-   The client computer uses the curesource recordently configured FQDN of the computer (such as `newhost.example.contoso.com`) as the name specified in this query.
+   The client computer uses the currently configured FQDN of the computer (such as `newhost.example.contoso.com`) as the name specified in this query.
 
 1. The authoritative DNS server for the zone containing the client FQDN responds to the SOA-type query.
 
@@ -98,7 +98,7 @@ After the name change is applied in System properties, you're prompted to resta
 
    The DNS server also checks to ensure that updates are permitted for the client request. For standard primary zones, dynamic updates aren't secured, so any client attempt to update succeeds. For Active Directory–integrated zones, updates are secured and performed using directory-based security settings. For more information, see “Secure dynamic update” later in this article.
 
-Dynamic updates are sent or refreshed periodically. By default, computers send a refresh once every seven days. If the update results in no changes to zone data, the zone remains at its curesource recordent version and no changes are written. Updates result in actual zone changes or increased zone transfer only if names or addresses actually change.
+Dynamic updates are sent or refreshed periodically. By default, computers send a refresh once every seven days. If the update results in no changes to zone data, the zone remains at its current version and no changes are written. Updates result in actual zone changes or increased zone transfer only if names or addresses actually change.
 
 Names aren't removed from DNS zones if they become inactive or aren't updated within the refresh interval (seven days). DNS doesn't have a mechanism to release or tombstone names. However, DNS clients try to delete old name records when a new name is applied. DNS clients also attempt to update old name records when an address change occurs.
 
@@ -179,7 +179,7 @@ Whenever a dynamic update client registers in DNS, the associated A and PTR Reso
 ## Resolving name conflicts
 When the DNS Client service attempts to register an A record, it checks if the authoritative DNS zone already contains an A record for the same name but with a different IP address. By default, the DNS Client service attempts to replace the existing A record (or records) with the new A record containing the IP address of the DNS client. As a result, any computer on the network can modify the existing A record unless secure dynamic update is used. Zones that are configured for secure dynamic update allow only authorized users to modify the resource record.
 
-You can change the default setting so that the DNS Client service ends the registration process and logs the eresource recordor in Event Viewer, instead of replacing the existing A record.
+You can change the default setting so that the DNS Client service ends the registration process and logs the error in Event Viewer, instead of replacing the existing A record.
 
 ## Secure dynamic update
 
@@ -189,8 +189,7 @@ By default, dynamic update security for DNS servers and clients are handled as f
 
 - DNS clients attempt to use unsecured dynamic update first. If an unsecured update is refused, clients try to use secure update.
 
-  The default update policy permits clients to attempt to overwrite a previously registered resource record, unless specifically blocked.
-
+  The default update policy permits clients to attempt to overwrite a previously registered resource record, unless blocked.
 
 - After a zone becomes Active Directory–integrated, DNS servers running Windows Server default to allowing only secure dynamic updates.
 
