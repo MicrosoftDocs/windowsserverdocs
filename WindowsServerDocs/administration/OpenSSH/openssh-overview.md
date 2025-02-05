@@ -15,10 +15,10 @@ SSH is based on a client-server architecture where the system the user is workin
 
 | Windows Version | SSH Server |
 |----------|----------|
-|Windows Server 2019|Feature on Demand|
-|Windows Server 2022|Feature on Demand|
+|Windows Server 2019|Manual Install|
+|Windows Server 2022|Manual Install|
 |Windows Server 2025|Installed but not enabled|
-|Windows 10 build 1809 +|Feature on Demand|
+|Windows 10 build 1809 +|Manual Install|
 
 OpenSSH for Windows has the following commands built in.
 
