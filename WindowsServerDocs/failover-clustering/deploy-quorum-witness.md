@@ -135,7 +135,32 @@ You can configure a cloud witness using the Failover Cluster Manager, PowerShell
 
 Once the cloud witness is created, it can be located by navigating to the middle pane of the Failover Cluster Manager under **Cluster Core Resources**.
 
+# [PowerShell](#tab/powershell)
+
+Open an elevated PowerShell window and perform the following steps:
+
+1. Run the following command to set up a cloud witness:
+
+   ```powershell
+   Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
+   ```
+
+   If you need to change the endpoint, run the following command:
+
+   ```PowerShell
+   Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
+   ```
+
+1. Run the following command to verify that the setup process was successful:
+
+   ```powershell
+   Get-ClusterQuorum
+   ```
+
+---
+
 ::: zone-end
+
 ::: zone pivot="disk-witness"
 
 ## Configure a disk witness
@@ -162,45 +187,6 @@ You can configure a disk witness using the Failover Cluster Manager and PowerShe
 
 1. Under **Summary**, review your witness configuration, then select **Finish**.
 
-::: zone-end
-::: zone pivot="file-share-witness"
-
-## Configure a file share witness
-
-# [Failover Cluster Manager](#tab/failovercluster)
-
-You can configure a disk witness using the Failover Cluster Manager and PowerShell.
-
-1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
-
-::: zone-end
-::: zone pivot="cloud-witness"
-
-# [PowerShell](#tab/powershell)
-
-Open an elevated PowerShell window and perform the following steps:
-
-1. Run the following command to set up a cloud witness:
-
-   ```powershell
-   Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
-   ```
-
-   If you need to change the endpoint, run the following command:
-
-   ```PowerShell
-   Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
-   ```
-
-1. Run the following command to verify that the setup process was successful:
-
-   ```powershell
-   Get-ClusterQuorum
-   ```
-
-::: zone-end
-::: zone pivot="disk-witness"
-
 # [PowerShell](#tab/powershell)
 
 Open an elevated PowerShell window and perform the following steps:
@@ -223,8 +209,38 @@ Open an elevated PowerShell window and perform the following steps:
    Set-ClusterQuorum -DiskWitness Cluster Disk 1
    ```
 
+---
+
 ::: zone-end
+
 ::: zone pivot="file-share-witness"
+
+## Configure a file share witness
+
+# [Failover Cluster Manager](#tab/failovercluster)
+
+You can configure a disk witness using the Failover Cluster Manager and PowerShell.
+
+1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
+
+1. On the left pane, under **Failover Cluster Manager**, select the cluster that you want to configure.
+
+1. On the right pane, under **Actions**, select **More Actions**, and then select **Configure Cluster Quorum Settings**.
+
+1. Under the **Configure Cluster Quorum Wizard**, select **Next**.
+
+1. Under **Select Quorum Configuration Option**, select **Select the quorum witness**, then select **Next**.
+
+1. Under **Select Quorum Witness**, select **Configure a file share witness**, then select **Next**.
+
+1. Under **Configure File Share Witness**, type the file path location or select **Browse**, select **Browse** again and locate the file share to use as the witness resource. Then select **Next**.
+
+1. Under **Confirmation**, review your configuration and select **Next**.
+
+1. After the wizard runs, the **Summary** page appears. If you want to view a report of the tasks that the wizard performed, select **View Report**. Select **Finish** to complete your configuration.
+
+> [!NOTE]
+> After you configure the cluster quorum, we recommend that you run the **Validate Quorum Configuration** test to verify the updated quorum settings.
 
 # [PowerShell](#tab/powershell)
 
@@ -248,9 +264,9 @@ Open an elevated PowerShell window and perform the following steps:
    Test-Cluster
    ```
 
-::: zone-end
-
 ---
+
+::: zone-end
 
 ::: zone pivot="cloud-witness"
 
