@@ -48,3 +48,14 @@ groups:
     title: Windows Server
   - id: windows
     title: Windows
+- id: quorum-witness
+  title: Quorum witness type
+  prompt: "Choose your quorum witness type:"
+  pivots:
+  - id: cloud-witness
+    title: Cloud witness
+  - id: disk-witness
+    title: Disk witness
+  - id: file-share-witness
+    title: File share witness
+    
