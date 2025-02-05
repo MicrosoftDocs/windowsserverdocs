@@ -73,8 +73,6 @@ You must also use one of the following supported scenarios:
 
 In order to configure a disk witness, the following are required:
 
-- The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
-
 - **Shared Storage**: The disk used for the witness must be a shared disk that is accessible by all nodes in the cluster, typically provided by a Storage Area Network (SAN) or other shared storage technology.
 
 - **Disk Configuration**:
@@ -88,8 +86,6 @@ In order to configure a disk witness, the following are required:
 ::: zone pivot="file-share-witness"
 
 In order to configure a file share witness, the following are required:
-
-- The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
 - You have the **Full Control** permission on the Failover Cluster.
 
@@ -124,7 +120,17 @@ You can configure a cloud witness using the Failover Cluster Manager, PowerShell
 
 1. Under **Select Quorum Configuration Option**, select **Select the quorum witness**, then select **Next**.
 
-1. Under **Select Quorum Witness**, select **Configure a file cloud witness**, then select **Next**.
+::: zone-end
+::: zone pivot="disk-witness"
+
+1. Under **Select Quorum Witness**, select **Configure a disk witness**, then select **Next**.
+
+1. Under **Configure Storage Witness**, select the disk you want to designate as the disk witness, then select **Next**.
+
+::: zone-end
+::: zone pivot="cloud-witness"
+
+1. Under **Select Quorum Witness**, select **Configure a cloud witness**, then select **Next**.
 
 1. Under **Configure cloud witness**, enter the following information, then select **Next**:
 
@@ -142,6 +148,8 @@ You can configure a cloud witness using the Failover Cluster Manager, PowerShell
    - The Azure service endpoint
 
      You can enter the name of another existing server into the **Azure service endpoint** field if you plan to use a different Azure service endpoint for your cloud witness, such as Azure China.
+
+::: zone-end
 
 1. Under **Confirmation**, review your quorum settings, then select **Next**.
 
