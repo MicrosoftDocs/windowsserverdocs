@@ -135,6 +135,7 @@ You can configure a cloud witness using the Failover Cluster Manager, PowerShell
 
 Once the cloud witness is created, it can be located by navigating to the middle pane of the Failover Cluster Manager under **Cluster Core Resources**.
 
+::: zone-end
 ::: zone pivot="disk-witness"
 
 ## Configure a disk witness
@@ -161,6 +162,7 @@ You can configure a disk witness using the Failover Cluster Manager and PowerShe
 
 1. Under **Summary**, review your witness configuration, then select **Finish**.
 
+::: zone-end
 ::: zone pivot="file-share-witness"
 
 ## Configure a file share witness
@@ -171,6 +173,7 @@ You can configure a disk witness using the Failover Cluster Manager and PowerShe
 
 1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
 
+::: zone-end
 ::: zone pivot="cloud-witness"
 
 # [PowerShell](#tab/powershell)
@@ -195,6 +198,7 @@ Open an elevated PowerShell window and perform the following steps:
    Get-ClusterQuorum
    ```
 
+::: zone-end
 ::: zone pivot="disk-witness"
 
 # [PowerShell](#tab/powershell)
@@ -219,6 +223,7 @@ Open an elevated PowerShell window and perform the following steps:
    Set-ClusterQuorum -DiskWitness Cluster Disk 1
    ```
 
+::: zone-end
 ::: zone pivot="file-share-witness"
 
 # [PowerShell](#tab/powershell)
@@ -243,9 +248,9 @@ Open an elevated PowerShell window and perform the following steps:
    Test-Cluster
    ```
 
----
-
 ::: zone-end
+
+---
 
 ::: zone pivot="cloud-witness"
 
