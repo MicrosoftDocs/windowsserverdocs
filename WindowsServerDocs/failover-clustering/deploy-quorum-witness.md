@@ -21,15 +21,22 @@ Each quorum witness type comes with its own set of requirements and consideratio
 
 In order to configure a cloud witness, the following are required:
 
+- The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+
 ::: zone-end
 
-::: zone pivot="cloud-witness"
 ::: zone pivot="disk-witness"
+
+- The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+
+::: zone-end
+
 ::: zone pivot="file-share-witness"
 
 - The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
 ::: zone-end
+
 ::: zone pivot="cloud-witness"
 
 - You must have an [Azure account](/azure/storage/common/storage-account-create?tabs=azure-portal) with an active subscription and a valid Azure general-purpose storage account. This storage account is where a cloud witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration. You can use this account and the `msft-cloud-witness` container that the cloud witness automatically creates to configure a cloud witness across multiple different clusters. Each cluster has its own blob file that it stores in the container.
