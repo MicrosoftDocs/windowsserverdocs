@@ -1,11 +1,11 @@
 ---
 title: DNS Architecture in Windows Server
-description: Learn about the architecture of DNS in Windows Server, including namespaces, the domain name hierarchy, resource records, zones, and DNS service architecture.
+description: Learn about 
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
 ms.date: 01/31/2025
-
+ai-usage: ai-assisted # Used for image alt text
 ---
 
 # DNS Architecture in Windows Server
@@ -208,17 +208,13 @@ types.
 
 ## Unicode character support
 
-Originally, Internet host names were restricted to the character set specified in RFCs 952 and 1123. These restrictions include limiting names to using uppercase and lowercase letters (A\-“Z”, a-z), numbers (0-9), and hyphens (-). In addition, the first character of the DNS name can be a number and names must be encoded and represented using US-ASCII-based characters.
-
-These requirements were maintained when DNS was introduced as part of RFC 1035, one of the core DNS standards specifications. For use of DNS in international settings, this requirement has significant limitations where extended character sets are used for local naming standards.
-
-To remove these limitations, Microsoft expands DNS character support beyond the RFC 1035 specification. The DNS service now provides enhanced default support for UTF-8, a Unicode transformation format.
+When DNS was introduced as part of RFC 1035, names were limited to using uppercase and lowercase letters (A-Z, a-z), numbers (0-9), and hyphens (-). In addition, the first character of the DNS name can be a number and names must be encoded and represented using US-ASCII-based characters. For use of DNS in international settings, this requirement creates significant limitations where extended character sets are used for local naming standards. The Windows Server DNS service provides enhanced support, beyond the [RFC 1035 specification](https://datatracker.ietf.org/doc/rfc1035/), for UTF-8 characters.
 
 ## What is UTF-8?
 
 UTF-8 is the recommended character set for protocols evolving beyond the use of ASCII. The UTF-8 protocol provides for support of extended ASCII characters and translation of UCS-2, a 16-bit Unicode character set that encompasses most of the world’s writing systems. UTF-8 enables a far greater range of names than can be achieved using ASCII or extended ASCII encoding for character data.
 
-Computers running Windows Server 2008 are UTF-8 aware. This means that when UTF-8-encoded characters are received or used as data by the server, the server can load and store this data in its zones. Although Windows-based DNS servers are UTF-8 aware, they remain compatible with other DNS servers that use traditional US-ASCII data encoding and current DNS standards.
+Computers running Windows Server 2008 are UTF-8 aware. Meaning that when UTF-8-encoded characters are received or used as data by the server, the server can load and store this data in its zones. Although Windows-based DNS servers are UTF-8 aware, they remain compatible with other DNS servers that use traditional US-ASCII data encoding and current DNS standards.
 
 ### How the DNS service implements UTF-8
 
@@ -227,28 +223,28 @@ To provide standards compatibility and interoperability with other DNS implement
 - To maintain compatibility with current and existing DNS standards.
 - To provide interoperability with DNS server implementations that don't recognize or support UTF-8 encoding.
 
-To understand why uniform downcasing was chosen, several related points must first be considered from the current revised Internet standards for DNS. Several key points in the standards pertain directly to how character data is to be handled between DNS servers and other servers and clients. These include the following:
+To understand why uniform downcasing was chosen, several related points must first be considered from the current revised Internet standards for DNS. Several key points in the standards pertain directly to how character data is to be handled between DNS servers and other servers and clients. Key points include:
 
-- Any binary string can be used in a DNS name. (RFC 2181)
-- DNS servers must be able to compare names in a case-insensitive way. (RFC 1035)
-- The original case for character data should be preserved whenever possible as the data is entered into the system. (RFC 1035)
+- Any binary string can be used in a DNS name. ([RFC 2181](https://datatracker.ietf.org/doc/rfc2181/))
+- DNS servers must be able to compare names in a case-insensitive way. ([RFC 1035](https://datatracker.ietf.org/doc/rfc1035/))
+- The original case for character data should be preserved whenever possible as the data is entered into the system. ([RFC 1035](https://datatracker.ietf.org/doc/rfc1035/))
 
 Because case insensitivity is a required part of the core DNS standard and case preservation is an optional recommendation, uniform downcasing was chosen to provide an effective standards-compliant solution. By downcasing UTF-8 encoded names before transmission, other DNS servers (which aren't UTF-8 aware) are able to receive and perform successful binary comparisons of the data and obtain the desired results.
 
 ### Considerations for interoperability with UTF-8
 
-The DNS Server service can be configured to allow or disallow the use of UTF-8 characters on a per-server basis. Although other DNS server implementations that aren't UTF-8 aware might be able to accept the transfer of a zone containing UTF-8 encoded names, these servers might not be able to write back those names to a zone file or reload those names from a zone file. Administrators should exercise caution when transferring a zone containing UTF-8 names to a DNS server that isn't UTF-8-aware.
+The DNS Server service can be set to allow or block the use of UTF-8 characters for each server. Some DNS servers that don't support UTF-8 might accept zones with UTF-8 names but could have trouble saving or reloading those names. Be careful when transferring zones with UTF-8 names to servers that don't support UTF-8.
 
 Some protocols place restrictions on the characters allowed in a name. In addition, names that are intended to be globally visible (RFC 1958) should contain ASCII-only characters, as recommended in RFC 1123.
 
-The use of UTF-8 for transformation of Unicode characters isn't noticeable for general users, but UTF-8-encoded characters can be observed when Network Monitor or another similar tool is used to analyze DNS-related traffic over the physical network.
+Using UTF-8 to transform Unicode characters is invisible to users. However, you can see UTF-8-encoded characters if you use Network Monitor or a similar tool to analyze DNS traffic.
 
 In addition to DNS server support for the UTF-8 encoding format, the client resolver defaults to using the UTF-8 character encoding format.
 
 Names encoded in UTF-8 format must not exceed the size limits clarified in RFC 2181, which specifies a maximum of 63 octets per label and 255 octets per name. Character count is insufficient to determine size because some UTF-8 characters exceed one octet in length.
 
-The UTF-8 encoding protocol adapts to use with existing DNS protocol implementations that expect US-ASCII characters because representation of US-ASCII characters in UTF-8 is identical, byte for byte, to the US-ASCII representation. DNS client or server implementations that don't recognize UTF-8 characters always encode names in the US-ASCII format. Those names are correctly interpreted by the DNS Server service.
+The UTF-8 encoding protocol adapts to use with existing DNS protocol implementations that expect US-ASCII characters because representation of US-ASCII characters in UTF-8 is identical, byte for byte, to the US-ASCII representation. DNS client or server implementations that don't recognize UTF-8 characters always encode names in the US-ASCII format. The DNS Server service is able to correctly interpret those names.
 
-The DNS service provides the ability to configure name checking to allow or restrict the use of UTF-8 characters in DNS data.
+The DNS service can configure name checking to allow or restrict the use of UTF-8 characters in DNS data.
 
-By default, multibyte UTF-8 name checking is used, allowing the greatest tolerance when the DNS service processes characters. This is the preferred name-checking method for most privately operated DNS servers that aren't providing name service for Internet hosts.
+By default, multibyte UTF-8 name checking is used, allowing the greatest tolerance when the DNS service processes characters. Multibyte UTF-8 name checking is the preferred name-checking method for most privately operated DNS servers that aren't providing name service for Internet hosts.
