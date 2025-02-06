@@ -1,6 +1,6 @@
 ---
-title: AD FS Troubleshooting - Users can't log in using AD FS from an external network
-description: Learn how to troubleshoot various aspects of AD FS log in from an extranet.
+title: AD FS troubleshooting - users can't sign in using AD FS from an external network
+description: Learn how to troubleshoot various aspects of Active Directory Federation Services (AD FS) sign-in from an extranet.
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -8,64 +8,67 @@ ms.date: 10/14/2024
 ms.topic: article
 ---
 
-# Users can't log in using AD FS from an external network
-This document helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this document if users aren't able to authenticate using AD FS from outside corpnet. 
+# Users can't sign in using AD FS from an external network
+
+This article helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this article if users can't authenticate by using AD FS from an outside corpnet.
 
 ## Check extranet access
-Check to see if you can authenticate to the AD FS servers from WAP.
 
-IdpInitiatedSignOn can quickly verify if the AD FS service is up and running, and authentication is working correctly.
+Check to see if you can authenticate to the AD FS servers from the Web Application Proxy (WAP).
 
-If your running AD FS on Windows Server 2016, you must enable IdpInitiatedSignOn manually:
+The `IdpInitiatedSignOn` parameter can quickly verify if AD FS is up and running, and if authentication is working correctly.
 
- 1. Log in to the primary AD FS server
- 2. Open PowerShell
- 3. Run Set-AdfsProperties -EnableIdPInitiatedSignonPage $true
+If you're running AD FS on Windows Server 2016, you must enable `IdpInitiatedSignOn` manually:
 
-In order to verify AD FS service using IdpinitiatedSignOn follow these steps:
+ 1. Sign in to the primary AD FS server.
+ 1. Open PowerShell.
+ 1. Run `Set-AdfsProperties -EnableIdPInitiatedSignonPage $true`.
 
- 1. Log in to the WAP machine you want to test
- 2. Open a private browser session
- 3. Go to https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp For example, https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx
- 4. Enter the credentials of a valid user on the log in page
+To verify that AD FS is using `IdpinitiatedSignOn`, follow these steps:
 
+ 1. Sign in to the WAP machine you want to test.
+ 1. Open a private browser session.
+ 1. Go to `https://&lt;federation service fqdn&gt;/adfs/ls/idpinitiatedsignon.asp`. An example is `https://fs.contoso.com/adfs/ls/idpinitiatedsignon.aspx`.
+ 1. Enter the credentials of a valid user on the sign-in page.
 
-## Check Network Settings
-Check DNS and any load balancer settings.
+## Check network settings
+
+Check Domain Name System (DNS) and any load balancer settings.
 
 ### DNS and network checks for external access
 
-If you have Web Application Proxy (WAP) servers
+If you have WAP servers:
 
-- Ping the federation service name. Confirm the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
-- In the DNS server hosting the service name externally, check that there's an A record for the federation service pointing to the WAP server or load balancer in front of the WAP servers.
+- Ping the federation service name. Confirm that the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
+- In the DNS server is hosting the service name externally, check that there's an A record for the federation service pointing to the WAP server or load balancer in front of the WAP servers.
 
-### Load Balancer
+### Load balancer
 
-- Check that the firewall isn't blocking traffic between AD FS and the load balancer, and between WAP and the load balancer
-- If probe is enabled
-- If your running Windows Server 2012 R2, confirm that the August 2014 Windows Server 2012 R2 Update rollup (KB.2975719) is installed
-- Check if port 80 is enabled in the firewall on the WAP and AD FS servers
-- Ensure that probe is set for port 80 and endpoint /adfs/probe
+- Check that the firewall isn't blocking traffic between AD FS and the load balancer, and between the WAP and the load balancer.
+- Check if the probe is enabled.
+- Check if you're running Windows Server 2012 R2. Confirm that the August 2014 Windows Server 2012 R2 Update rollup (KB.2975719) is installed.
+- Check if port 80 is enabled in the firewall on the WAP and AD FS servers.
+- Ensure that the probe is set for port 80 and the endpoint `/adfs/probe`.
 
 ### Firewall
 
-Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.
+Both the firewall located between the WAP and the federation server farm and the firewall between the clients and the WAP must have TCP port 443 enabled inbound.
 
+## Check if the endpoint is enabled
 
-## Check if endpoint is enabled
 AD FS provides various endpoints for different functionalities and scenarios. Not all endpoints are enabled by default. To check if a particular endpoint is enabled or disabled:
 
- 1. Log in to the AD FS server
- 2. Open AD FS Management
- 3. In the left navigation pane, select Service > Endpoints
- 4. In the right pane, scroll to the endpoint that needs to be checked (usually /adfs/ls and /adfs/oauth2)
- 5. Verify that the endpoint is enabled. For example, if oAuth logins are failing, check if /adfs/oauth endpoint is marked as "Yes" under ProxyEnabled
+ 1. Sign in to the AD FS server.
+ 1. Open **AD FS Management**.
+ 1. On the left pane, select **Service** > **Endpoints**.
+ 1. On the right pane, scroll to the endpoint that needs to be checked (usually `/adfs/ls` and `/adfs/oauth2`).
+ 1. Verify that the endpoint is enabled. For example, if oAuth sign-ins are failing, check if the `/adfs/oauth` endpoint is marked as `Yes` under `ProxyEnabled`.
 
 ## Check for WAP trust issues
-Go to each WAP server and run the diagnostic PowerShell script that you downloaded from the [AD FS Offline tools](../operations/offline-tools.md)
 
-Log in to the primary AD FS server to see if there are any issues with bindings or trust certificates. Run the script given below on the primary AD FS server.
+Go to each WAP server and run the diagnostic PowerShell script that you downloaded from the [AD FS Offline tools](../operations/offline-tools.md).
+
+Sign in to the primary AD FS server to see if there are any issues with bindings or trust certificates. Run the following script on the primary AD FS server:
 
 ```powershell
 param
@@ -119,7 +122,7 @@ if ( $certbindingissuedetected -eq $FALSE ) { Write-Host "Check Passed: No certi
 
 function checkadfstrusteddevicesstore()
 {
-# check for CA issued (nonself signed) certs in the AdfsTrustedDevices cert store
+# check for CA-issued (nonself-signed) certs in the AdfsTrustedDevices cert store
 Write-Host; Write-Host "2 Checking AdfsTrustedDevices cert store for nonself signed certificates"
 $certlist = Get-Childitem cert:\LocalMachine\AdfsTrustedDevices -recurse | Where-Object {$_.Issuer -ne $_.Subject}
 if ( $certlist.count -gt 0 )
@@ -197,38 +200,37 @@ Write-Host; Write-Host("All checks completed.")
 
 ## Perform a detailed WAP check
 
-The proxy trust relationship between a Web Application Proxy server and the AD FS 2012 R2 server is client certificate based. When the Web Application Proxy post-install wizard is run, a self-signed Client Certificate is generated and inserted into the AD FS configuration store using the credentials specified in the wizard. AD FS also propagates this to the AdfsTrustedDevices certificate store on the AD FS server.
+The proxy trust relationship between a WAP server and the AD FS 2012 R2 server is based on client certificates. When you run the WAP post-install wizard, a self-signed client certificate is generated and inserted into the AD FS configuration store by using the credentials specified in the wizard. AD FS also propagates this certificate to the AdfsTrustedDevices certificate store on the AD FS server.
 
-During any SSL communication, HTTP.sys uses the following priority order for its SSL bindings
+During any Transport Layer Security/Secure Sockets Layer (TLS/SSL) communication, `HTTP.sys` uses the following priority order for its TLS/SSL bindings:
 
- 1. IP, Port binding (Exact IP and port match)
- 2. SNI (Exact hostname match)
- 3. CCS (Invoke Central Certificate Store)
- 4. IPV6 Wildcard (IPv6 wildcard match connection must be IPv6
- 5. IP Wildcard match (connection can be IPv4 or IPv6)
+ - **IP Port binding**: Exact IP and port match.
+ - **SNI**: Exact hostname match.
+ - **CCS**: Invoke Central Certificate Store.
+ - **IPV6 wildcard**: IPv6 wildcard match connection must be IPv6.
+ - **IP wildcard match**: Connection can be IPv4 or IPv6.
 
 ### Is there a specific IPAddress:Port mapping?
 
-The IP:Port mapping is of the highest precedence. Therefore, if there exists an IP:Port binding, then that is the certificate that is used by HTTP.sys all the time for SSL communication.
+The `IP:Port mapping` is of the highest precedence. If an `IP:Port` binding exists, that's the certificate that's used by `HTTP.sys` all the time for TLS/SSL communication.
 
 #### Remove the specific IP:port binding
 
-Check that the binding doesn't come back. If there's an application configured with such a binding, it may re-create this automatically or on next service start-up.
+Check that the binding doesn't come back. If an application is configured with such a binding, it might re-create this issue automatically or on the next service start-up.
 
-#### Use an additional IP address for AD FS traffic
+#### Use an added IP address for AD FS traffic
 
-If the IP:Port binding is expected and required, then using a second IP such as 1.2.3.5 for ADFS and resolving the ADFS service FQDN to this IP address would mean that the Hostname:port bindings would then be used.
+If the `IP:Port` binding is expected and required, then using a second IP such as 1.2.3.5 for AD FS and resolving the AD FS service FQDN to this IP address means that the `Hostname:port` bindings are used.
 
 #### Configure the AdfsTrustedDevices store as the Ctl Store for the specific IP:port binding
 
-This has some dependence on why the specific IP:port binding is there and if this relies on the default CTL Store for client certificate authentication. But an option would be to set the Ctl Store on the IP:port binding to be the AdfsTrustedDevices store.
+This step has some dependence on why the specific `IP:port` binding is there and if this step relies on the default Ctl Store for client certificate authentication. An option is to set the Ctl Store on the `IP:port` binding to be the AdfsTrustedDevices store.
 
-How to check current SSL certificate bindings
+How to check current TLS/SSL certificate bindings:
 
-Log in to AD FS server
-Open PowerShell
-Run netsh http show sslcert
-C:\Users\administrator.CONTOSO> netsh http show sslcert
+1. Sign in to the AD FS server.
+1. Open PowerShell.
+1. Run `netsh http show sslcert`. See `C:\Users\administrator.CONTOSO> netsh http show sslcert`.
 
 ```  
  SSL Certificate bindings:
@@ -261,40 +263,33 @@ C:\Users\administrator.CONTOSO> netsh http show sslcert
  Negotiate Client Certificate: Disabled
 ```  
 
-#### Is CTL store name AdfsTrustedDevices?
+#### Is the CTL store name AdfsTrustedDevices?
 
-If the user has Microsoft Entra Connect Sync installed, use Microsoft Entra Connect Sync server to update the SSL certificate bindings on all servers. If there's no Microsoft Entra Connect Sync server in the environment, use the following PowerShell cmdlet to regenerate the AD FS Certificate bindings on the AD FS server:
+If the user has Microsoft Entra Connect Sync installed, use the Microsoft Entra Connect Sync server to update the TLS/SSL certificate bindings on all servers. If no Microsoft Entra Connect Sync server is in the environment, use the following PowerShell cmdlet to regenerate the AD FS certificate bindings on the AD FS server:
 
 Set-AdfsSslCertificate -Thumbprint &lt;thumbprint&gt;
 
-#### Is CA issued certificate in ADFSTrustedDevices store?
+#### Is a CA-issued certificate in the AdfsTrustedDevices store?
 
-The AdfsTrustedDevices store should only contain the MS-Organization-Access certificate which is the self-signed cert used for issuing Workplace Join certificates, and the Proxy Trust certificates for each of the Web Application Proxy servers. Having a CA Issued certificate in a store where only Self-Signed certs would normally exist affects the CTL generated from this store and the CTL will then only contain the CA Issued certificate.
+The AdfsTrustedDevices store should contain only the MS-Organization-Access certificate, which is the self-signed certificate used for issuing Workplace Join certificates, and the Proxy Trust certificates for each of the WAP servers. Having a Certificate Authority (CA)-issued certificate in a store where only self-signed certificates normally exist affects the CTL generated from this store. The CTL then contains only the CA-issued certificate.
 
-Delete the nonself signed SSL server certificate from the AdfsTrustedDevices store
+Delete the nonself-signed TLS/SSL server certificate from the AdfsTrustedDevices store.
 
-#### Is there a time skew between AD FS and WAP servers?
+#### Is there a time skew between the AD FS and WAP servers?
 
-Ensure that there's no time skew between the AD FS and WAP Servers
+Ensure that there's no time skew between the AD FS and WAP servers.
 
-#### SSL Termination between AD FS and WAP?
+#### Is there a TLS/SSL termination between the AD FS and WAP servers?
 
-If SSL termination is happening on a network device between AD FS servers and WAP, then the communication between AD FS and WAP breaks because the WAP and AD FS communication is based on client certificates.
+If TLS/SSL termination is happening on a network device between AD FS servers and WAP, the communication between AD FS and WAP breaks because the WAP and AD FS communication is based on client certificates.
 
-Disable SSL termination on the network device in between the AD FS and WAP servers
+Disable TLS/SSL termination on the network device in between the AD FS and WAP servers.
 
-#### Manually sync proxy trust certificates from config to ADFSTrustedDevices
+#### Manually sync proxy trust certificates from config to AdfsTrustedDevices
 
-Use the script at the end of the section to manually sync the WAP certificates from AD FS configuration to ADFSTrustedDevices store. Execute the following
+Use the script at the end of the section to manually sync the WAP certificates from AD FS configuration to the AdfsTrustedDevices store.
 
+## Related content
 
-
-
-
-
-
-
-## Related links
-
-- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
-- [AD FS Offline tools](../operations/offline-tools.md)
+- [AD FS troubleshooting](ad-fs-tshoot-overview.md)
+- [AD FS offline tools](../operations/offline-tools.md)

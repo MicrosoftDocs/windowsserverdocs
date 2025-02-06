@@ -1,5 +1,5 @@
 ---
-title: AD FS troubleshooting - Congestion control
+title: AD FS troubleshooting - congestion control
 description: Learn how to troubleshoot various aspects of Active Directory Federation Services load or congestion issues.
 author: billmath
 ms.author: billmath
@@ -14,13 +14,13 @@ This article assists you with troubleshooting Active Directory Federation Servic
 
 ## Determine if you're experiencing AD FS congestion
 
-Congestion control provides a throttling mechanism that's designed to protect the internal AD FS servers from excessive external traffic. The Web Application Proxy monitors the average round-trip latency of federation requests. When the latency exceeds the configured congestion control setting, the proxy starts limiting the number of requests that are sent to the federation servers. When the latency returns to normal, the number of requests is increased. The proxy uses a sliding window algorithm, similar to Transmission Control Protocol (TCP) congestion control, to throttle the request pool.
+Congestion control provides a throttling mechanism that's designed to protect the internal AD FS servers from excessive external traffic. The Web Application Proxy (WAP) monitors the average round-trip latency of federation requests. When the latency exceeds the configured congestion control setting, the proxy starts limiting the number of requests that are sent to the federation servers. When the latency returns to normal, the number of requests is increased. The proxy uses a sliding window algorithm, similar to Transmission Control Protocol (TCP) congestion control, to throttle the request pool.
 
 Each time a request is rejected because of a congestion condition, the proxy writes an **event ID 230** to the AD FS admin event log. The presence of these events signifies that your AD FS farm is currently or was recently operating in congestion mode and rejecting requests.
 
 ### Verify load balancer configuration
 
-If you use a hardware network load balancer between the Web Application Proxy and the AD FS servers, ensure that stickiness and/or cookie tracking is disabled and that the load-balancing algorithm is set to round robin or least busy server. These options allow your farm to adjust to changing traffic patterns and are a Microsoft best practice.
+If you use a hardware network load balancer between the WAP and the AD FS servers, ensure that stickiness and/or cookie tracking is disabled and that the load-balancing algorithm is set to round robin or least busy server. These options allow your farm to adjust to changing traffic patterns and are a Microsoft best practice.
 
 ### Verify congestion control settings
 
@@ -58,7 +58,7 @@ For more information, see [Scenario guide: Troubleshoot performance problems in 
 
 ### Determine if the federation server is overloaded
 
-A federation server has a limit as to how much traffic it can handle before the request latency exceeds a reasonable limit. If the AD FS servers in your farm don't have sufficient hardware or your farm is receiving excessive traffic, this increased latency can trigger congestion control on the Web Application Proxy.
+A federation server has a limit as to how much traffic it can handle before the request latency exceeds a reasonable limit. If the AD FS servers in your farm don't have sufficient hardware or your farm is receiving excessive traffic, this increased latency can trigger congestion control on the WAP.
 
 You can use the system performance counters to review the load on each AD FS server in the farm:
 
@@ -68,9 +68,9 @@ You can use the system performance counters to review the load on each AD FS ser
 
 The **Average values for Token requests/sec** values should be within the expected range for your hardware. The **% Processor Time** value should be less than 90%. If these values are exceeded, the farm is likely receiving more traffic than the hardware can handle. You might need to increase the farm capacity by adding more AD FS servers to the farm. You can also remove the unnecessary traffic.
 
-### Determine if the Web Application Proxy is experiencing network issues
+### Determine if the WAP is experiencing network issues
 
-Network issues between the Web Application Proxy servers and the AD FS servers can cause retransmits, which in turn increases the latency and can trigger congestion control. Review the network performance counters such as `TCP v4\Segments Retransmitted` to look for network reliability issues.
+Network issues between the WAP servers and the AD FS servers can cause retransmits, which in turn increases the latency and can trigger congestion control. Review the network performance counters such as `TCP v4\Segments Retransmitted` to look for network reliability issues.
 
 ### Disable congestion control
 
