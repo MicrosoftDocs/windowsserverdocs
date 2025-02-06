@@ -1042,10 +1042,6 @@
         href: ad-cs/certificate-trust.md
       - name: Certificate template concepts
         href: ad-cs/certificate-template-concepts.md
-      - name: Network Device Enrollment Service
-        href: ad-cs/network-device-enrollment-service-overview.md
-      - name: PKI design considerations
-        href: ad-cs/pki-design-considerations.md
     - name: How-to guides
       items:
       - name: Configure Network Device Enrollment Service to use a domain user account
