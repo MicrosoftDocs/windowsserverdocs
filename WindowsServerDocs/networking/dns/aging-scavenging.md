@@ -68,7 +68,7 @@ This value is needed to decrease the number of write operations to the Active Di
 
   - When a computer restarts on the network, it checks if its name and IP address are the same as before it was shut down. If the name and IP address are consistent, the computer sends a refresh to renew its associated resource records.
   - The computer sends a periodic refresh while it's running.
-  - The Windows and Windows Server DNS Client service renews DNS registration of client resource records every 24 hours. If the dynamic update request doesn't cause modification to the DNS database, it's consider a refresh and not a resource record update.
+  - The Windows and Windows Server DNS Client service renews DNS registration of client resource records every 24 hours. If the dynamic update request doesn't cause modification to the DNS database, it performs a refresh and not a resource record update.
   - Other network services make refresh attempts. For example:
     - DHCP servers renew client address leases.
     - Cluster servers register and update records for a cluster.

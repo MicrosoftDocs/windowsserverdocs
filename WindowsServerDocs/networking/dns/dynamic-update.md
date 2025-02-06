@@ -147,9 +147,9 @@ If the Windows network-based DHCP client requests that the server updates the PT
 
  The server can perform any of the following actions:
 
-- If the DHCP server is running Windows Server and is configured not to perform dynamic updates, it doesn't include the FQDN option in its response. It also doesn't update either resource record. In this case, the DNS client attempts to update both the A and PTR resource records if it's capable.
+- If the Windows DHCP server is configured not to perform dynamic updates, it doesn't include the FQDN option in its response. It also doesn't update either resource record. In this case, the DNS client attempts to update both the A and PTR resource records if it's capable.
 
-- If the DHCP server is running Windows Server and is configured to update according to the request of the DHCP client, the server attempts to update the PTR resource record. The DHCP server sends a `DHCPACK` message to the DHCP client. This message contains the FQDN option with the Flags field set to `0`. The `DHCPACK` message confirms that the DHCP server updates the PTR record. The DNS client then attempts to update the A resource record, if it's capable.
+- If the Windows DHCP server  is configured to update according to the request of the DHCP client, the server attempts to update the PTR resource record. The DHCP server sends a `DHCPACK` message to the DHCP client. This message contains the FQDN option with the Flags field set to `0`. The `DHCPACK` message confirms that the DHCP server updates the PTR record. The DNS client then attempts to update the A resource record, if it's capable.
 
 If the DHCP server is running Windows Server and is configured to always update A and PTR both records, the DHCP server attempts to update both resource records. The DHCP server `DHCPACK` message to the DHCP client contains the FQDN option with the Flags field set to `3`, notifying the DHCP client that the DHCP server updates A and PTR records. In this case, the DNS client doesn't attempt to update either resource record.
 
