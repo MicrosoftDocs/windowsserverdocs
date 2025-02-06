@@ -4,9 +4,10 @@ description: How to deploy a cluster quorum witness in Windows Server using Fail
 ms.author: alalve
 author: xelu86
 ms.topic: how-to
-ms.date: 02/05/2025
+ms.date: 02/06/2025
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 zone_pivot_groups: quorum-witness
+#customer intent: As a cluster admin, I want to configure a quorum witness to determine cluster nodes availability and node majority vote.
 ---
 
 # Deploy a quorum witness
@@ -63,7 +64,7 @@ In order to configure a disk witness, the following are required:
 
 - **Disk Configuration**:
   - The disk witness shouldn't be assigned a drive letter or used for any other purposes, such as hosting user data or applications.
-  - Configured as a basic disk, not a dynamic disk.
+  - Is configured as a basic disk, not a dynamic disk.
   - Formatted as NTFS or ReFS for Windows Server 2012 and later.
   - Minimum disk size must be greater than 512MB.
 
@@ -83,10 +84,86 @@ In order to configure a file share witness, the following are required:
 
 - If you're using a non-domain joined device for the file share, your cluster must be running Windows Server 2019 or later.
 
+- The file share must be dedicated to a single cluster and not used to store user or application data.
+
 - The device hosting the file share witness must have a minimum of 5 MB of free space.
 
+- The file share should be physically separate from the cluster nodes or cluster sites. For instance, consider separating network, power, rack, and rooms if necessary. This separation increases the chances of cluster nodes or sites remain operational if network communication between them is disrupted.
+
 > [!WARNING]
-> The use of Distributed File System (DFS) or replicated storage technologies isn't supported with failover clustering. DFS can cause a partition-in-space or partition-in-time, where the cluster nodes are running independently of each other and could cause data loss.
+> The use of Distributed File System (DFS) or replicated storage technologies isn't supported with Failover Clustering. DFS can cause a partition-in-space or partition-in-time, where the cluster nodes are running independently of each other and could cause data loss.
+
+::: zone-end
+
+::: zone pivot="file-share-witness"
+
+## Create a file share
+
+The file share witness can be hosted on either a domain-joined Windows device or a non-domain joined device, such as NAS devices, Windows devices joined to a workgroup, or routers with local USB storage. You can also use a separate Failover Cluster to ensure high availability of the file share. A single file server can be configured with multiple file shares to serve as witnesses for multiple clusters.
+
+Before you can configure a file share witness, a file share must first be created. The following steps allow you to configure a file share for both domain-joined Windows devices and non-domain joined devices. Select the relevant tab for your scenario.
+
+# [Domain-joined Windows device](#tab/domain-joined-witness)
+
+To configure the file share witness on a domain-joined Windows device, follow these steps:
+
+> [!IMPORTANT]
+> The SMB file share must be hosted on a Windows server joined to the same Active Directory forest as the cluster.
+
+1. Right-click **Start**, select **Computer Management**.
+
+1. In the **Computer Management** console, expand **System Tools > Shared Folders**.
+
+1. Right-click **Shares**, select **New Share**.
+
+1. On the **Create A Shared Folder Wizard**, select **Next** to begin.
+
+1. Enter the path to the folder that you want to share or select **Browse** to locate a folder, then select **Next**.
+
+1. Enter a name for the **Share name**, then select **Change** to configure the offline settings. Adding a description for the share is optional.
+
+1. Select **No files or programs from the shared folder are available offline**. Select **OK**, then select **Next**.
+
+1. Under **Shared Folder Permissions**, select **Customize permissions**, then select **Custom**.
+
+1. Select **Everyone**, then select **Remove**.
+
+1. Select **Add**, enter the name, or locate the Cluster Name Object (CNO) for the cluster or suitable Active Directory group containing the CNO. Then select **OK**.
+
+1. Select both **Change** and **Read** permissions.
+
+1. Select the **Security** tab, then select **Advanced**.
+
+1. In the **Advanced Security Settings** screen, under the **Permissions** tab, select **Add**.
+
+1. Under **Basic permissions**, select **Modify**, **Read & execute**, **List folder contents**, and **Read**. Then select **OK**.
+
+1. Confirm and configure any other folder permissions to meet your organization's requirements. Select **OK** for each dialog until you return to the **Shared Folder Permissions** screen.
+
+1. Select **Finish** to create the share.
+
+# [Non-domain joined device](#tab/nondomain-joined-witness)
+
+To configure the file share witness on a non-domain joined device, follow these steps:
+
+> [!IMPORTANT]
+> If you're using a non-Windows device, consult your vendor documentation for how to create local accounts and configuring an SMB share on your device. These steps are generalized.
+
+1. Sign into your device as an administrator.
+
+1. Create a local account on the device for the cluster to use to authenticate the file share. Store the credentials in a secure location.
+
+1. Create an SMB file share on the device that uses the SMB 2 or later protocol.
+
+1. Update the share permissions to remove all users and groups except the new local account and any permissions required to meet your organization's requirements. The new local account should have the **Change** and **Read** permissions.
+
+1. If necessary, modify your file system permissions. Grant the new local account **Modify**, **Read & execute**, **List folder contents**, and **Read** permissions as applicable to your file system. The local account must have write access.
+
+1. Confirm and configure any other folder permissions to meet your organization's requirements.
+
+1. Complete any further steps to create the file share.
+
+Now you have a file share on a non-domain joined Windows device with the necessary permissions per your organization. Proceed to the next step to configure the cluster quorum settings.
 
 ::: zone-end
 
@@ -157,6 +234,24 @@ Open an elevated PowerShell window and perform the following steps:
    Get-ClusterQuorum
    ```
 
+# [Windows Admin Center](#tab/wac)
+
+1. In **Windows Admin Center**, navigate to **Cluster Manager**.
+
+1. Select the name of the cluster you want to create a cloud witness for.
+
+1. Go to **Configuration** > **Settings** > **Cluster** > **Witness**.
+
+1. Select **Cloud Witness** from the witness type drop-down menu.
+
+1. Enter your Azure storage account name and account key into the relevant fields.
+
+   Optionally, you can change your endpoint from the default by entering the name of an existing server into the **Endpoint** field.
+
+1. Select **Save**.
+
+1. Verify your configuration was successful by checking the witness resource status. If the status is online, that means the cloud witness is configured and ready to use.
+
 ---
 
 ::: zone-end
@@ -219,7 +314,7 @@ Open an elevated PowerShell window and perform the following steps:
 
 # [Failover Cluster Manager](#tab/failovercluster)
 
-You can configure a disk witness using the Failover Cluster Manager and PowerShell.
+You can configure a file share witness on a domain joined Windows device using the Failover Cluster Manager by performing the following steps:
 
 1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
 
@@ -244,7 +339,7 @@ You can configure a disk witness using the Failover Cluster Manager and PowerShe
 
 # [PowerShell](#tab/powershell)
 
-Open an elevated PowerShell window and perform the following steps:
+A non-domain joined file share witness can only be configured from PowerShell. Open an elevated PowerShell window and perform the following steps:
 
 1. Run the following command to configure the cluster quorum to use a file share witness. You're prompted to enter the local credential for the file share witness. Replace `<ClusterName>` with the name of your cluster and `\\FileShareWitnessServer\WitnessShare` with the path to the file share witness.
 
@@ -270,25 +365,7 @@ Open an elevated PowerShell window and perform the following steps:
 
 ::: zone pivot="cloud-witness"
 
-## Configure a cloud witness in Windows Admin Center
-
-1. In **Windows Admin Center**, navigate to **Cluster Manager**.
-
-1. Select the name of the cluster you want to create a cloud witness for.
-
-1. Go to **Configuration** > **Settings** > **Cluster** > **Witness**.
-
-1. Select **Cloud Witness** from the witness type drop-down menu.
-
-1. Enter your Azure storage account name and account key into the relevant fields.
-
-   Optionally, you can change your endpoint from the default by entering the name of an existing server into the **Endpoint** field.
-
-1. Select **Save**.
-
-1. Verify your configuration was successful by checking the witness resource status. If the status is online, that means the cloud witness is configured and ready to use.
-
-### Proxy considerations with a cloud witness
+## Proxy considerations with a cloud witness
 
 Cloud witness uses HTTPS, default port 443, to establish outbound communication with the Azure blob service. Azure uses `.core.windows.net` as the endpoint. You need to ensure that this endpoint is included in any firewall allowlists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
 
@@ -314,3 +391,5 @@ netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; 
 - [What's New in failover clustering in Windows Server](whats-new-in-failover-clustering.md)
 
 - [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts)
+
+- [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs)
