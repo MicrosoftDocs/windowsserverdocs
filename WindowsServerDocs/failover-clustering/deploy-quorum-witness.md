@@ -99,7 +99,7 @@ In order to configure a file share witness, the following are required:
 
 ## Create a file share
 
-The file share witness can be hosted on either a domain-joined Windows device or a non-domain joined device, such as NAS devices, Windows devices joined to a workgroup, or routers with local USB storage. You can also use a separate Failover Cluster to ensure high availability of the file share. A single file server can be configured with multiple file shares to serve as witnesses for multiple clusters.
+The file share witness can be hosted on either a domain-joined Windows device or a non-domain joined device, such as Network Attached Storage (NAS) devices, Windows devices joined to a workgroup, or routers with local USB storage. You can also use a separate Failover Cluster to ensure high availability of the file share. A single file server can be configured with multiple file shares to serve as witnesses for multiple clusters.
 
 Before you can configure a file share witness, a file share must first be created. The following steps allow you to configure a file share for both domain-joined Windows devices and non-domain joined devices. Select the relevant tab for your scenario.
 
@@ -162,8 +162,6 @@ To configure the file share witness on a non-domain joined device, follow these 
 1. Confirm and configure any other folder permissions to meet your organization's requirements.
 
 1. Complete any further steps to create the file share.
-
-Now you have a file share on a non-domain joined Windows device with the necessary permissions per your organization. Proceed to the next step to configure the cluster quorum settings.
 
 ::: zone-end
 
@@ -260,9 +258,9 @@ Open an elevated PowerShell window and perform the following steps:
 
 ## Configure a disk witness
 
-# [Failover Cluster Manager](#tab/failovercluster)
+# [Failover Cluster Manager](#tab/failovercluster1)
 
-You can configure a disk witness using the Failover Cluster Manager and PowerShell.
+You can configure a disk witness using the Failover Cluster Manager by performing the following steps:
 
 1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
 
@@ -282,7 +280,7 @@ You can configure a disk witness using the Failover Cluster Manager and PowerShe
 
 1. Under **Summary**, review your witness configuration, then select **Finish**.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell1)
 
 Open an elevated PowerShell window and perform the following steps:
 
@@ -312,7 +310,7 @@ Open an elevated PowerShell window and perform the following steps:
 
 ## Configure a file share witness
 
-# [Failover Cluster Manager](#tab/failovercluster)
+# [Failover Cluster Manager](#tab/failovercluster1)
 
 You can configure a file share witness on a domain joined Windows device using the Failover Cluster Manager by performing the following steps:
 
@@ -337,7 +335,7 @@ You can configure a file share witness on a domain joined Windows device using t
 > [!NOTE]
 > After you configure the cluster quorum, we recommend that you run the **Validate Quorum Configuration** test to verify the updated quorum settings.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell1)
 
 A non-domain joined file share witness can only be configured from PowerShell. Open an elevated PowerShell window and perform the following steps:
 
