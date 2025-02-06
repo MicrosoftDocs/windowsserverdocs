@@ -40,19 +40,19 @@ Check Domain Name System (DNS) and any load balancer settings.
 If you have WAP servers:
 
 - Ping the federation service name. Confirm that the IP address that it resolves to is one of the WAP servers or the load balancer in front of the WAP servers.
-- In the DNS server is hosting the service name externally, check that there's an A record for the federation service pointing to the WAP server or load balancer in front of the WAP servers.
+- If the DNS server is hosting the service name externally, check that there's an A record for the federation service pointing to the WAP server or load balancer in front of the WAP servers.
 
 ### Load balancer
 
 - Check that the firewall isn't blocking traffic between AD FS and the load balancer, and between the WAP and the load balancer.
 - Check if the probe is enabled.
 - Check if you're running Windows Server 2012 R2. Confirm that the August 2014 Windows Server 2012 R2 Update rollup (KB.2975719) is installed.
-- Check if port 80 is enabled in the firewall on the WAP and AD FS servers.
-- Ensure that the probe is set for port 80 and the endpoint `/adfs/probe`.
+- Check if port `80` is enabled in the firewall on the WAP and AD FS servers.
+- Ensure that the probe is set for port `80` and the endpoint `/adfs/probe`.
 
 ### Firewall
 
-Both the firewall located between the WAP and the federation server farm and the firewall between the clients and the WAP must have TCP port 443 enabled inbound.
+Both the firewall located between the WAP and the federation server farm and the firewall between the clients and the WAP must have TCP port `443` enabled inbound.
 
 ## Check if the endpoint is enabled
 
@@ -200,7 +200,7 @@ Write-Host; Write-Host("All checks completed.")
 
 ## Perform a detailed WAP check
 
-The proxy trust relationship between a WAP server and the AD FS 2012 R2 server is based on client certificates. When you run the WAP post-install wizard, a self-signed client certificate is generated and inserted into the AD FS configuration store by using the credentials specified in the wizard. AD FS also propagates this certificate to the AdfsTrustedDevices certificate store on the AD FS server.
+The proxy trust relationship between a WAP server and the AD FS 2012 R2 server is based on client certificates. When you run the WAP post-install wizard, a self-signed client certificate is generated and inserted into the AD FS configuration store by using the credentials specified in the wizard. AD FS also propagates this certificate to the `AdfsTrustedDevices` certificate store on the AD FS server.
 
 During any Transport Layer Security/Secure Sockets Layer (TLS/SSL) communication, `HTTP.sys` uses the following priority order for its TLS/SSL bindings:
 
@@ -222,9 +222,9 @@ Check that the binding doesn't come back. If an application is configured with s
 
 If the `IP:Port` binding is expected and required, then using a second IP such as 1.2.3.5 for AD FS and resolving the AD FS service FQDN to this IP address means that the `Hostname:port` bindings are used.
 
-#### Configure the AdfsTrustedDevices store as the Ctl Store for the specific IP:port binding
+#### Configure the AdfsTrustedDevices store as the CTL store for the specific IP:port binding
 
-This step has some dependence on why the specific `IP:port` binding is there and if this step relies on the default Ctl Store for client certificate authentication. An option is to set the Ctl Store on the `IP:port` binding to be the AdfsTrustedDevices store.
+This step has some dependence on why the specific `IP:port` binding is there and if this step relies on the default Certificate Trust List (CTL) store for client certificate authentication. An option is to set the CTL store on the `IP:port` binding to be the `AdfsTrustedDevices` store.
 
 How to check current TLS/SSL certificate bindings:
 
@@ -267,13 +267,13 @@ How to check current TLS/SSL certificate bindings:
 
 If the user has Microsoft Entra Connect Sync installed, use the Microsoft Entra Connect Sync server to update the TLS/SSL certificate bindings on all servers. If no Microsoft Entra Connect Sync server is in the environment, use the following PowerShell cmdlet to regenerate the AD FS certificate bindings on the AD FS server:
 
-Set-AdfsSslCertificate -Thumbprint &lt;thumbprint&gt;
+`Set-AdfsSslCertificate -Thumbprint &lt;thumbprint&gt;`
 
 #### Is a CA-issued certificate in the AdfsTrustedDevices store?
 
-The AdfsTrustedDevices store should contain only the MS-Organization-Access certificate, which is the self-signed certificate used for issuing Workplace Join certificates, and the Proxy Trust certificates for each of the WAP servers. Having a Certificate Authority (CA)-issued certificate in a store where only self-signed certificates normally exist affects the CTL generated from this store. The CTL then contains only the CA-issued certificate.
+The `AdfsTrustedDevices` store should contain only the MS-Organization-Access certificate, which is the self-signed certificate used for issuing Workplace Join certificates, and the Proxy Trust certificates for each of the WAP servers. Having a certificate issued by a Certificate Authority (CA) in a store where only self-signed certificates normally exist affects the CTL generated from this store. The CTL then contains only the CA-issued certificate.
 
-Delete the nonself-signed TLS/SSL server certificate from the AdfsTrustedDevices store.
+Delete the nonself-signed TLS/SSL server certificate from the `AdfsTrustedDevices` store.
 
 #### Is there a time skew between the AD FS and WAP servers?
 
@@ -287,7 +287,7 @@ Disable TLS/SSL termination on the network device in between the AD FS and WAP s
 
 #### Manually sync proxy trust certificates from config to AdfsTrustedDevices
 
-Use the script at the end of the section to manually sync the WAP certificates from AD FS configuration to the AdfsTrustedDevices store.
+Use the script at the end of the section to manually sync the WAP certificates from AD FS configuration to the `AdfsTrustedDevices` store.
 
 ## Related content
 
