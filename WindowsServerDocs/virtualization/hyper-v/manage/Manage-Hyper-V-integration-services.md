@@ -1,8 +1,8 @@
 ---
 title: Manage Hyper-V Integration Services
 description: Describes how to turn integration services on and off and install them if needed
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 01/18/2022
 ms.topic: article
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
@@ -10,14 +10,12 @@ ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 
 # Manage Hyper-V Integration Services
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11. Windows 10
-
 Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as *integration components*. You can control whether or not individual convenience services operate for any given virtual machine. The driver components are not intended to be serviced manually.
 
 For details about each integration service, see [Hyper-V Integration Services](/virtualization/hyper-v-on-windows/reference/integration-services).
 
 > [!IMPORTANT]
-> Each service you want to use must be enabled in both the host and guest in order to function. All integration services except *Hyper-V Guest Service Interface* are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
+> Each service you want to use must be enabled in both the host and guest in order to function. When you enable a service in the host, it automatically starts running in the guest. All integration services except *Hyper-V Guest Service Interface* are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
 
 ## Turn an integration service on or off using Hyper-V Manager
 

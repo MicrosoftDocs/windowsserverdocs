@@ -2,14 +2,14 @@
 title: Security identifiers
 description: This article discusses security identifiers (SIDs) for Windows Server accounts and groups and unique identifiers.
 author: dansimp
-ms.author: dansimp
+ms.author: roharwoo
 ms.topic: article
 ms.date: 05/09/2023
 ---
 
 # Security identifiers
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 This article describes how security identifiers (SIDs) work with accounts and groups in the Windows Server operating system.
 
@@ -296,10 +296,15 @@ All capability SIDs that the operating system is aware of are stored in the Wind
 You might see the following registry keys under AllCachedCapabilities:
 
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock_Internal
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Enterprise
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_General
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Restricted
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Windows
 
 All capability SIDs are prefixed by *S-1-15-3*.
@@ -311,9 +316,13 @@ You might see the following registry keys under AllCachedCapabilities:
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock
 
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock_Internal
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Enterprise
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_General
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Restricted
+
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Windows
 
 All capability SIDs are prefixed by *S-1-15-3*.

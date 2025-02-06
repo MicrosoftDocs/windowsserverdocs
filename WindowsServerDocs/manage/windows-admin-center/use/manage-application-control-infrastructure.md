@@ -2,13 +2,11 @@
 title: Managing Windows Defender application control (WDAC) enforced infrastructure with Windows Admin Center
 description: Managing WDAC-enforced servers and clusters with Windows Admin Center
 ms.topic: article
-author: prasidharora
-ms.author: praror
+author: davannaw-msft
+ms.author: roharwoo
 ms.date: 08/18/2022
 ---
 # Managing Windows Defender Application Control (WDAC) enforced infrastructure
-
->Applies to: Windows Admin Center Preview
 
 Windows Defender application control (WDAC) can help mitigate many security threats by restricting the applications that users are allowed to run and the code that runs in the System Core (kernel). Application control policies can also block unsigned scripts and MSIs, and restrict Windows PowerShell to run in [Constrained Language Mode](/powershell/module/microsoft.powershell.core/about/about_language_modes). Learn more about [Application Control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
 
@@ -20,6 +18,7 @@ This section provides the requirements for using Windows Admin Center to manage 
 - [Policy requirements](#policy-requirements)
 - [Networking requirements](#networking-requirements)
 - [Permissions](#permissions)
+- [PowerShell execution policy](#powershell-execution-policy)
 
 ### Policy requirements
 Depending on your use case, you'll need to allowlist one or more certificates as part of your base or supplemental policies. Learn more about [deploying a base or supplemental policy](/windows/security/threat-protection/windows-defender-application-control/types-of-devices).
@@ -38,14 +37,19 @@ For case **[1]**, only the following signer rule is required to be allowlisted i
 
 For case **[2]**:
 - The signer rule above is required to be allowlisted on **both** your managed node and the machine on which you deploy Windows Admin Center.
-- Additionally, the following signer and file/hash rules are required to be allowlist **only** on the machine on which you deploy Windows Admin Center: 
->Signer rule:
+- Additionally, the following signer rules are required to be allowlist **only** on the machine on which you deploy Windows Admin Center: 
+>Signer rules:
 ```xml
 <Signer ID="ID_SIGNER_S_XXXXX" Name="Microsoft Code Signing PCA 2011"> 
   <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" /> 
   <CertPublisher Value="Microsoft 3rd Party Application Component" /> 
-</Signer> 
+</Signer>
+<Signer ID="ID_SIGNER_S_XXXXX" Name="Microsoft Code Signing PCA 2011">
+  <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
+  <CertPublisher Value=".NET" />
+</Signer>
 ```
+The sign rule with the CertPublisher Value ".NET" is not required if using a version of Windows admin Center version older than 2410. However, these older versions require the following file/hash rules are required to be allowlist **only** on the machine on which you deploy Windows Admin Center:
 >File/Hash rule:
 ```xml
 <FileRules>
@@ -68,13 +72,16 @@ For case **[2]**:
 > Signer and Allow ID (i.e., Signer ID="ID_SIGNER_S_XXXXX") should be generated automatically by the policy creation tool/script. For more info, refer to the [WDAC documentation](/windows/security/threat-protection/windows-defender-application-control/types-of-devices)
 
 >[!TIP]
-> The [WDAC Wizard tool](/windows/security/threat-protection/windows-defender-application-control/wdac-wizard) can be very helpful for creating/editing WDAC Policies. Remember that when creating a new policy, whether by the Wizard or the PowerShell commands, use the “Publisher” rule on binaries to generate rules. For example, when using the wizard, you can generate the WDAC policy for case **[1]** based off the Windows Admin Center .msi. For case **[2]**, you can still use the wizard, but you will need to manually edit your WDAC policy to include the listed signer and hash rule.
+> The [App Control for Business Wizard](/windows/security/application-security/application-control/app-control-for-business/design/appcontrol-wizard) can be very helpful for creating/editing WDAC Policies. Remember that when creating a new policy, whether by the Wizard or the PowerShell commands, use the “Publisher” rule on binaries to generate rules. For example, when using the wizard, you can generate the WDAC policy for case **[1]** based off the Windows Admin Center .msi. For case **[2]**, you can still use the wizard, but you will need to manually edit your WDAC policy to include the listed signer and hash rule.
 
 ### Networking requirements
 By default, Windows Admin Center communicates with your servers over WinRM over HTTP (port 5985) or HTTPS (port 5986). For WDAC enforced infrastructure, Windows Admin Center additionally needs SMB access to the nodes that are being managed (TCP port 445).
 
 ### Permissions
 File transfer based on UNC paths over SMB port 445 is critical for Windows Admin Center to manage these environments. Make sure you're an administrator on the managed server or cluster and file transfers aren't blocked by any security policies.
+
+### PowerShell execution policy
+The default PowerShell [ExecutionPolicy](/powershell/module/microsoft.powershell.core/about/about_execution_policies) is sufficient for Windows Admin Center to manage a Windows Defender Application Control enforced machine. However, if the default ExecutionPolicy has changed on the machine, you need to ensure the ```LocalMachine```'s scope is set to ```RemoteSigned``` to allow signed scripts to be loaded and executed. This is a PowerShell security feature and changes should be done only when appropriate and necessary.
 
 ## Installing and connecting
 ### Installing
@@ -89,9 +96,11 @@ When you connect to a WDAC enforced cluster for the first time, it may take a fe
 > If you change the WDAC enforcement status of your managed nodes, do not use Windows Admin Center for at least 30 seconds for this change to be reflected.
 
 ## Known issues
-- Currently, deploying Azure Kubernetes Service on Azure Stack HCI and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Stack HCI isn't currently supported.
+- Currently, deploying Azure Kubernetes Service on Azure Local and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment.
 
 - Using RBAC on a single server is currently not supported.
+
+- Certain operations in the Certificates tool are currently not supported.
 
 ## Troubleshooting
 - "Module not found" or "failed to connect" error

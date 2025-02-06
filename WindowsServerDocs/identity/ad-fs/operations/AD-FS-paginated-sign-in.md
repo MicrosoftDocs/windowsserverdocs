@@ -3,14 +3,14 @@ title: AD FS paginated sign-in
 description: This article describes new sign-in experience for AD FS.
 author: billmath
 ms.author: billmath
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 # AD FS paginated sign-in
 
-Applies to: Windows Server 2019
 
-The user interface for sign-in is updated in Windows Server 2019 to feature a look and feel identical to Azure Active Directory. This update provides users with a more consistent sign-in experience that incorporates a centered and paginated user flow.
+
+The user interface for sign-in is updated in Windows Server 2019 to feature a look and feel identical to Microsoft Entra ID. This update provides users with a more consistent sign-in experience that incorporates a centered and paginated user flow.
 
 ## What's new
 
@@ -57,5 +57,5 @@ Options for customization still work in AD FS 2019.
 
 ## Related links
 
-- If you don't plan to upgrade your servers to AD FS 2019, but still want to enjoy the new sign-in design: [Using an Azure AD UX Web Theme in Active Directory Federation Services](azure-ux-web-theme-in-ad-fs.md)
+- If you don't plan to upgrade your servers to AD FS 2019, but still want to enjoy the new sign-in design: [Using a Microsoft Entra UX Web Theme in Active Directory Federation Services](azure-ux-web-theme-in-ad-fs.md)
 - Customization guidance: [AD FS user sign-in customization](ad-fs-user-sign-in-customization.md)

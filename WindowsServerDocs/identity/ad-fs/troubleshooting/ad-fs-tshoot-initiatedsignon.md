@@ -2,7 +2,7 @@
 title: Troubleshoot Active Directory Federation Services Idp-initiated sign-on
 description: Learn how to use the sign-in page to troubleshoot Active Directory Federation Services (AD FS) authentication.
 author: billmath
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 05/19/2023
 ms.topic: article
 ---
@@ -63,7 +63,7 @@ You can test the seamless sign-in experience by making sure the URL for your AD 
 
 ## Known Issues
 
-The AD FS sign-on page can't be used to initiate a sign in with a claims provider trust that's configured with a WS-Federation passive endpoint only. Register a relying party such as [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) to verify that a WS-Federation claims provider trust works as intended.
+The AD FS sign-on page can't be used to initiate a sign in with a claims provider trust that's configured with a WS-Federation passive endpoint only. 
 
 ## Next Steps
 

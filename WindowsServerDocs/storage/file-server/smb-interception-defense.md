@@ -203,8 +203,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" -Name "MaxSMB2Dialect" -Value 0x000000311
 ```
 
-To learn more about how to set the minimum SMB dialect used, see
-[Controlling SMB dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024?WT.mc_id=ITOPSTALK-blog-abartolo).
+To learn more about how to set the minimum and maximum SMB dialect used in Windows Server and Windows , see [Manage SMB dialects in Windows](manage-smb-dialects.md).
 
 ### Use UNC hardening to require signing, encryption, and mutual authentication
 
@@ -282,14 +281,14 @@ and ticket passing attacks. Use the following items as a guide when enhancing Ke
 1. **Enforce long passwords and phrases** - We encourage using longer password lengths such as 15
    characters or more to reduce your resistance to brute force attacks. You should also avoid common
    words or phrases to make your password even stronger.
-1. **Deploy Azure AD Password Protection for Active Directory Domain Services** - Use Azure AD
+1. **Deploy Microsoft Entra Password Protection for Active Directory Domain Services** - Use Microsoft Entra ID
    Password Protect to block known weak passwords and terms that are specific to your organization.
    To learn more, review
-   [Enforce on-premises Azure AD Password Protection for Active Directory Domain Services](/azure/active-directory/authentication/concept-password-ban-bad-on-premises).
+   [Enforce on-premises Microsoft Entra Password Protection for Active Directory Domain Services](/azure/active-directory/authentication/concept-password-ban-bad-on-premises).
 1. **Use group Managed Service Accounts (gMSA)** - gMSA enabled services with their 127 random
    character construction, makes brute force and dictionary attacks to crack passwords incredibly
    time consuming. Read about what gMSAs are in the article
-   [Group Managed Service Accounts Overview](../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md).
+   [Group Managed Service Accounts Overview](../../identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md).
 1. **Kerberos Armoring, known as Flexible Authentication Secure Tunneling (FAST)** - FAST prevents
    [Kerberoasting](https://www.microsoft.com/security/blog/2020/08/27/stopping-active-directory-attacks-and-other-post-exploitation-behavior-with-amsi-and-machine-learning/) because the user’s pre-authentication data is protected and no longer subject to
    offline brute force or dictionary attacks. It also prevents downgrade attacks from spoofed KDCs,

@@ -3,7 +3,7 @@ description: "Learn more about: SPN and UPN uniqueness"
 ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN and UPN uniqueness
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/18/2023
 ms.topic: article
@@ -11,8 +11,6 @@ ms.custom: inhenkel
 ---
 
 # SPN and UPN uniqueness
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
@@ -33,7 +31,7 @@ Duplicate UPN values break synchronization between on-premises AD and Office 365
 
 |Feature|Comment|
 |-----------|-----------|
-|UPN uniqueness|Duplicate UPNs break synchronization of on-premises AD accounts with Microsoft Azure AD-based services such as Office 365.|
+|UPN uniqueness|Duplicate UPNs break synchronization of on-premises AD accounts with Microsoft Entra ID-based services such as Office 365.|
 |SPN uniqueness|Kerberos requires SPNs for mutual authentication.  Duplicate SPNs result in authentication failures.|
 
 For more information about uniqueness requirements for UPNs and SPNs, see [Uniqueness Constraints](/openspecs/windows_protocols/ms-adts/3c154285-454c-4353-9a99-fb586e806944).
@@ -349,7 +347,7 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
 
 **Optionally**
 
-1.  Verify with the classroom instructor that it's ok to enable the *[AD Recycle Bin](../../get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-.md#BKMK_EnableRecycleBin)* in Active Directory Administrative Center.  If so, move on to the next step.
+1.  Verify with the classroom instructor that it's ok to enable the *[AD Recycle Bin](../../get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-.md#enabling-active-directory-recycle-bin-using-active-directory-administrative-center)* in Active Directory Administrative Center.  If so, move on to the next step.
 
 2.  Populate the UPN on a user account
 
@@ -360,4 +358,3 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
 5.  Attempt to use the Recycle Bin GUI to restore the account
 
 6.  Imagine you have been presented with the error you see in the previous step.  (and don't have a history of the steps you just performed) Your goal is to complete the restore of the account.  See the workbook, for example,  steps.
-

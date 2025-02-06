@@ -3,15 +3,15 @@ title: wdsutil get-drivergroup
 description: Reference article for wdsutil get-drivergroup, which displays information about the driver groups on a server.
 ms.topic: reference
 ms.assetid: 7cfe10c3-a63f-48e7-bef9-f6b474b4ddbe
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-drivergroup
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about the driver groups on a server.
 

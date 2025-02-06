@@ -3,7 +3,7 @@ title: Additional authentication methods with AD FS in Windows Server
 description: This article describes new authentication methods available with AD FS in Windows Server.
 author: billmath
 ms.author: billmath
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -13,7 +13,7 @@ Organizations are experiencing attacks that attempt to brute force, compromise, 
 
 However, these mitigations are reactive.  To provide a proactive way, to reduce the severity of these attacks,  AD FS has the ability to prompt for other factors prior to collecting the password.
 
-For example, AD FS 2016 introduced Azure AD Multi-Factor Authentication as primary authentication so that OTP codes from the Authenticator App could be used as the first factor. Beginning with AD FS 2019 you can configure external authentication providers as primary authentication factors.
+For example, AD FS 2016 introduced Microsoft Entra multifactor authentication as primary authentication so that OTP codes from the Authenticator App could be used as the first factor. Beginning with AD FS 2019 you can configure external authentication providers as primary authentication factors.
 
 There are two key scenarios this enables:
 
@@ -23,21 +23,21 @@ Protect password-based sign in from brute-force attacks and lockouts by promptin
 
 This scenario consists of two components:
 
-- Prompting for Azure AD Multi-Factor Authentication (available in AD FS 2016 onwards) or an external authentication factor as primary authentication
+- Prompting for Microsoft Entra multifactor authentication (available in AD FS 2016 onwards) or an external authentication factor as primary authentication
 - Username and password as additional authentication in AD FS
 
 ## Scenario 2: password-free
 
-Eliminate passwords entirely but completing a strong, multi-factor authentication using entirely non password based methods in AD FS
+Eliminate passwords entirely but completing a strong, multifactor authentication using entirely non password based methods in AD FS
 
-- Azure AD Multi-Factor Authentication with Authenticator app
+- Microsoft Entra multifactor authentication with Authenticator app
 - Windows 10 Hello for Business
 - Certificate authentication
 - External authentication providers
 
 ## Concepts
 
-What **primary authentication** really means is that it's the method the user is prompted for first, prior to additional factors.  Previously the only primary methods available in AD FS were built in methods for Active Directory or Azure AD Multi-Factor Authentication, or other LDAP authentication stores.  External methods could be configured as “additional” authentication, which takes place after primary authentication has successfully completed.
+What **primary authentication** really means is that it's the method the user is prompted for first, prior to additional factors.  Previously the only primary methods available in AD FS were built in methods for Active Directory or Microsoft Entra multifactor authentication, or other LDAP authentication stores.  External methods could be configured as “additional” authentication, which takes place after primary authentication has successfully completed.
 
 In AD FS 2019, the external authentication as primary capability means that any external authentication providers registered on the AD FS farm (using Register-AdfsAuthenticationProvider) become available for primary authentication and “additional” authentication. They can be enabled the same way as the built-in providers such as Forms Authentication and Certificate Authentication, for intranet and/or extranet use.
 

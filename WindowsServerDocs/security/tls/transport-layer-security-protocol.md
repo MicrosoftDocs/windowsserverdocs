@@ -7,8 +7,6 @@ ms.date: 07/31/2023
 ---
 # Transport Layer Security protocol
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
-
 This topic for the IT professional describes how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
 
 > [!Note]
@@ -61,7 +59,7 @@ Devices that connect TLS to servers frequently need to reconnect. TLS session re
 
 -   Reduced time spent for the TLS handshake due to resumptions of the connection
 
-For information about stateless TLS session resumption, see the IETF document [RFC 5077.](http://www.ietf.org/rfc/rfc5077)
+For information about stateless TLS session resumption, see the IETF document [RFC 5077](https://datatracker.ietf.org/doc/rfc5077/).
 
 ## <a name="BKMK_AppProtocolNego"></a>Application protocol negotiation
  Windows Server 2012 R2  and Windows 8.1 introduced support that allows client-side TLS application protocol negotiation. Applications can leverage protocols as part of the HTTP 2.0 standard development, and users can access online services such as Google and Twitter by using apps running the SPDY protocol.

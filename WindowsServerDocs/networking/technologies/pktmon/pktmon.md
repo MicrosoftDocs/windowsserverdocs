@@ -3,13 +3,11 @@ title: Packet Monitor (Pktmon)
 description: This topic provides an overview of the Packet Monitor (Pktmon) network diagnostics tool and its uses.
 ms.topic: overview
 author: khdownie
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 10/27/2021
 ---
 
 # Packet Monitor \(Pktmon\)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack Hub, Azure, Azure Stack HCI, versions 21H2 and 20H2
 
 Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. It is available in-box via the pktmon.exe command and via Windows Admin Center extensions.
 

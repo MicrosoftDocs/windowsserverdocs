@@ -4,12 +4,10 @@ title: Device Health Attestation
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
 author: brianlic-msft
-ms.author: brianlic
-ms.date: 07/20/2022
+ms.author: roharwoo
+ms.date: 10/25/2024
 ---
 # Device Health Attestation
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included the following:
 
@@ -26,7 +24,7 @@ Starting with Windows Server 2016, you can now run the DHA service as a server r
 You can use DHA to assess device health for:
 
 - Windows 10 and Windows 10 Mobile devices that support TPM 1.2 or 2.0.
-- On-premises devices that are managed by using Active Directory with Internet access, devices that are managed by using Active Directory without Internet access, devices managed by Azure Active Directory, or a hybrid deployment using both Active Directory and Azure Active Directory.
+- On-premises devices that are managed by using Active Directory with Internet access, devices that are managed by using Active Directory without Internet access, devices managed by Microsoft Entra ID, or a hybrid deployment using both Active Directory and Microsoft Entra ID.
 
 ### DHA service
 
@@ -85,7 +83,7 @@ EKCert validation mode is optimized for devices in organizations that are not co
 
 When DHA is running in EKCert validation mode, it relies on an enterprise managed chain of trust that needs to be updated occasionally (approximately 5 - 10 times per year).
 
-Microsoft publishes aggregated packages of trusted Roots and intermediate CA's for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
+Microsoft publishes aggregated packages of trusted Roots and intermediate CAs for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
 
 An example archive is [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925).
 
@@ -102,7 +100,8 @@ Use the following sections to get DHA installed and configured on Windows Server
 In order to set up and verify a DHA on-premises service, you need:
 
 - A server running Windows Server 2016.
-- One (or more) Windows 10 client devices with a TPM (either 1.2 or 2.0) that is in a clear/ready state running the latest Windows Insider build.
+- One (or more) Windows 10 client devices with a TPM (either 1.2 or 2.0) that is in a clear/ready state running the latest Windows Server 2025 build.
+
 - Decide if you are going to run in EKCert or AIKCert validation mode.
 - The following certificates:
   - **DHA SSL certificate**. A x.509 SSL certificate that chains to an enterprise trusted root with an exportable private key. This certificate protects DHA data communications in transit including server to server (DHA service and MDM server) and server to client (DHA service and a Windows 10 device) communications.

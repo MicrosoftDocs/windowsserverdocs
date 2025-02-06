@@ -3,15 +3,13 @@ description: "Learn more about: Appendix E: Securing Enterprise Admins Groups in
 ms.assetid: f643099e-f9c6-476f-9378-5a9228c39b33
 title: Appendix E - Securing Enterprise Admins Groups in Active Directory
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 01/28/2024
 ms.topic: article
 ---
 
 # Appendix E: Securing Enterprise Admins Groups in Active Directory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix E: Securing Enterprise Admins Groups in Active Directory

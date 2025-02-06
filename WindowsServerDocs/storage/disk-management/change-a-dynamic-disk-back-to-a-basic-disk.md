@@ -3,14 +3,14 @@ title: Change a dynamic disk back to a basic disk
 description: Learn how to convert a dynamic disk back to a basic disk by using Windows Disk Management or the command line.
 ms.date: 03/20/2023
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 
 # Change a dynamic disk back to a basic disk
 
-> **Applies to:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **
 
 This article describes how to delete everything on a dynamic disk and then convert it back to a basic disk. Dynamic disks have been deprecated from Windows and are no longer recommended. Instead, use basic disks or the newer [Storage Spaces](../storage-spaces/overview.md) technology when you want to pool disks together into larger volumes. If you want to mirror the volume from which Windows boots, you might want to use a hardware RAID controller, such as the one included on many motherboards.
 

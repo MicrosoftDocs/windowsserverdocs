@@ -1,15 +1,13 @@
 ---
 title: Reserve one or more external virtual networks for exclusive use by virtual machines
 description: Learn what to do when all external virtual networks are configured for use by both the management operating system and virtual machines.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: f7732258-93f1-44e8-835b-5ad2d1c45cd9
 ms.date: 8/16/2016
 ---
 # Reserve one or more external virtual networks for exclusive use by virtual machines
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

@@ -1,15 +1,15 @@
 ---
 title: Security principals
 description: This article discusses security principals for Windows Server accounts and security groups and how they work in Active Directory.
-author: dansimp
-ms.author: dansimp
+author: robinharwood
+ms.author: roharwoo
 ms.topic: article
 ms.date: 07/21/2022
 ---
 
 # Security principals
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 This reference article describes security principals for Windows accounts and security groups, in addition to security technologies that are related to security principals.
 

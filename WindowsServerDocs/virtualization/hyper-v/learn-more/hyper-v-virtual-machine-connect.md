@@ -3,14 +3,14 @@ title: Hyper-V Virtual Machine Connection
 description: Describes Virtual Machine Connection, which provides remote access to a virtual machine. Includes details on how to do common tasks, such as send Ctrl-Alt-Delete to the virtual machine.
 ms.topic: article
 ms.assetid: deae35b9-7647-42b8-b6bf-45645a44c9c4
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 10/04/2016
 ---
 
 # Hyper-V Virtual Machine Connection
 
-> **Applies to:** Windows Server 2019, Windows Server 2016, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 8
+> **
 
 Virtual Machine Connection \(VMConnect\) is a tool you can use to connect to a virtual machine to install or interact with the guest operating system in a virtual machine. Some of the tasks you can perform by using VMConnect include the following:
 

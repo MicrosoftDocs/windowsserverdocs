@@ -1,8 +1,8 @@
-﻿---
+---
 title: Certification Authority Web Enrollment Role Service in Windows Server
 description: Use this article to understand the Active Directory Certification Authority Web Enrollment Role Service.
 author: gswashington
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: overview
 ms.date: 08/31/2023
 
@@ -57,7 +57,7 @@ If you install the CA Web Enrollment pages on a computer that's not the target C
 - [How to configure the Windows Server 2008 CA Web Enrollment Proxy](/archive/blogs/askds/how-to-configure-the-windows-server-2008-ca-web-enrollment-proxy)
 
 > [!TIP]
-> If the CA Web Enrollment pages don't install successfully on a migrated CA, it's possible the setup status in the registry isn't configured properly. For more information, see [Certification Authority Web Enrollment Configuration Failed 0x80070057 (WIN32: 87)](https://social.technet.microsoft.com/wiki/contents/articles/12035.certification-authority-web-enrollment-configuration-failed-0x80070057-win32-87-en-us.aspx)
+> If the CA Web Enrollment pages don't install successfully on a migrated CA, it's possible the setup status in the registry isn't configured properly. For more information, see [Certification Authority Web Enrollment Configuration Failed 0x80070057 (WIN32: 87)](/answers/questions/183368/the-error-was-received-in-the-certificate-authorit)
 
 ## Use the CA Web Enrollment pages
 
@@ -69,7 +69,7 @@ If you've been granted access permissions, you can perform the following tasks f
 
   - In **Cryptographic service provider (CSP) options**, you can configure the name of the cryptographic service provider, the key size (1024, 2048, and so on), the hash algorithm (such as SHA/RSA, SHA/DSA, MD2, or MD5) and the key specification (exchange or signature).
 
-  - **Key generation options** lest you create a new key set or use an existing key set, mark the keys as exportable, enable strong key protection, and use the local computer store to generate the key.
+  - **Key generation options** lets you create a new key set or use an existing key set, mark the keys as exportable, enable strong key protection, and use the local computer store to generate the key.
 
   - **Additional options**. Save the request to a PKCS #10 file or add specific attributes to the certificate.
 
@@ -92,8 +92,6 @@ If you've been granted access permissions, you can perform the following tasks f
 For more information about Web Enrollment and troubleshooting common issues, see the following articles:
 
 - [AD CS: Web Enrollment](https://technet.microsoft.com/library/cc732517.aspx)
-
-- [You cannot download CA certificate from web enrollment pages](https://social.technet.microsoft.com/wiki/contents/articles/you-cannot-download-ca-certificate-from-web-enrollment-pages.aspx)
 
 - [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
 
