@@ -4,7 +4,7 @@ description: How read and write caching works to accelerate performance in Stora
 author: jasongerend
 ms.author: jgerend
 ms.topic: conceptual
-ms.date: 02/21/2024
+ms.date: 02/06/2025
 ---
 
 # Understanding the storage pool cache
