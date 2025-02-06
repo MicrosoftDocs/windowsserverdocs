@@ -9,7 +9,7 @@ ms.date: 02/06/2025
 
 # DNS queries and lookups
 
-DNS processes and interactions involve the communications between DNS clients and DNS servers during the resolution of DNS queries and dynamic update, and between DNS servers during name resolution and zone administration. Secondary processes and interactions depend on the support for technologies such as Unicode and WINS. In this article learn about DNS processes, including client-server communications for query resolution, dynamic updates, and zone administration in Windows and Windows Server.
+ This article provides an overview of the Domain Name System (DNS) query process and how DNS servers resolve queries. It also explains how DNS servers use recursion and iteration to resolve queries, and how DNS caching works. Finally, it describes how reverse lookups work in DNS.
 
 ## How DNS queries work
 
@@ -17,9 +17,9 @@ When a DNS client needs to look up a name used in a program, it queries DNS serv
 
 - A specified DNS domain name, stated as a fully qualified domain name (FQDN).
 - A specified query type, which can either specify a resource record (RR) by type or a specialized type of query operation.
-- A specified class for the DNS domain name. For DNS servers running the Windows operating system, this should always be specified as the Internet (IN) class.
+- A specified class for the DNS domain name. For DNS servers running the Windows operating system, this class should always be specified as the Internet (IN) class.
 
-For example, the name specified could be the FQDN for a computer, such as 'host-a.example.contoso.com.', and the query type specified to look for an address (A) RR by that name. Think of a DNS query as a client asking a server a two-part question, such as “Do you have any A resource records for a computer named 'hostname.example.contoso.com.'?” When the client receives an answer from the server, it reads and interprets the answered A RR, learning the IP address for the computer it asked for by name.
+For example, the name specified could be the FQDN for a computer, such as `host-a.example.contoso.com.`, and the query type specified to look for an address (A) RR by that name. Think of a DNS query as a client asking a server a two-part question, such as "Do you have any A resource records for a computer named `hostname.example.contoso.com.`?" When the client receives an answer from the server, it reads and interprets the answered A RR, learning the IP address for the computer it asked for by name.
 
 The following table describes common DNS query types and corresponding IDs.
 
@@ -30,7 +30,7 @@ The following table describes common DNS query types and corresponding IDs.
 | SOA | 6 |
 | SRV | 33 |
 
-DNS queries resolve in many different ways. A client can sometimes answer a query locally using cached information obtained from a previous query. The DNS server can use its own cache of resource record information to answer a query. A DNS server can also query or contact other DNS servers on behalf of the requesting client to fully resolve the name, and then send an answer back to the client. This process is known as recursion.
+DNS queries resolve in many different ways. A client can sometimes answer a query locally using cached information obtained from a previous query. The DNS server can use its own cache of resource record information to answer a query. A DNS server can also query other DNS servers on behalf of the client. This process is known as recursion. The server resolves the name and then sends an answer back to the client.
 
 In addition, the client itself can attempt to contact other DNS servers to resolve a name. When a client does so, it uses separate and more queries based on referral answers from servers. This process is known as iteration.
 
@@ -58,15 +58,16 @@ If the query doesn't match an entry in the cache, the resolution process continu
 
 ### Querying a DNS server
 
-As shown in the preceding figure, the client queries a preferred DNS server. The server used during the initial client/server query is selected from a global list.
+As shown in the preceding figure, the client queries a preferred DNS server. The server used during the initial client/server query is selected from a global list. When the DNS server receives a query, it first checks if it can answer the query authoritatively. The DNS server does this by using resource record information that is contained in a locally configured zone on the server.
 
-When the DNS server receives a query, it first checks to see if it can answer the query authoritatively based on resource record information contained in a locally configured zone on the server. If the queried name matches a corresponding RR in local zone information, the server answers authoritatively, using this information to resolve the queried name.
+
+If the queried name matches a corresponding RR in local zone information, the server answers authoritatively, using this information to resolve the queried name.
 
 If no zone information exists for the queried name, the server then checks to see if it can resolve the name using locally cached information from previous queries. If a match is found here, the server answers with this information. Again, if the preferred server can answer with a positive matched response from its cache to the requesting client, the query is completed.
 
-If the queried name doesn't find a matched answer at its preferred server, either from its cache or zone information, the query process can continue, using recursion to fully resolve the name. This involves assistance from other DNS servers to help resolve the name. By default, the DNS Client service asks the server to use a process of recursion to fully resolve names on behalf of the client before returning an answer.
+If the queried name doesn't find a matched answer at its preferred server, either from its cache or zone information, the query process can continue, using recursion to fully resolve the name. This process involves assistance from other DNS servers to help resolve the name. By default, the DNS Client service asks the server to use a process of recursion to fully resolve names on behalf of the client before returning an answer.
 
-In order for the DNS server to do recursion properly, it first needs some helpful contact information about other DNS servers in the DNS domain namespace. This information is provided in the form of root hints, a list of preliminary RRs that can be used by the DNS service to locate other DNS servers that are authoritative for the root of the DNS domain namespace tree. Root servers are authoritative for the domain root and top-level domains in the DNS domain namespace tree.
+In order for the DNS server to do recursion properly, it first needs some helpful contact information about other DNS servers in the DNS domain namespace. This information is provided as root hints. Root hints are a list of preliminary resource records (RRs). The DNS service uses these records to locate other DNS servers that are authoritative for the root of the DNS domain namespace tree. Root servers are authoritative for the domain root and top-level domains in the DNS domain namespace tree.
 
 By using root hints to find root servers, a DNS server is able to complete the use of recursion. In theory, this process enables any DNS server to locate the servers that are authoritative for any other DNS domain name used at any level in the namespace tree.
 
@@ -74,9 +75,9 @@ For example, consider the use of the recursion process to locate the name `host-
 
 First, the preferred server parses the full name and determines that it needs the location of the server that is authoritative for the top-level domain, `com`. It then uses an iterative query to the “com” DNS server to obtain a referral to the `microsoft.com` server. Next, a referral answer comes from the “microsoft.com” server to the DNS server for `example.contoso.com`.
 
-Finally, the `example.contoso.com.` server is contacted. Because this server contains the queried name as part of its configured zones, it responds authoritatively back to the original server that initiated recursion. When the original server receives the response indicating that an authoritative answer was obtained to the requested query, it forwards this answer back to the requesting client and the recursive query process is completed.
+Finally, the `example.contoso.com.` server is contacted. Because this server contains the queried name as part of its configured zones, it responds authoritatively back to the original server that initiated recursion. When the original server receives the response, it checks if the answer is authoritative. If it is, the server forwards this answer back to the requesting client. This completes the recursive query process.
 
-Although the recursive query process can be resource-intensive when performed as described, it has some performance advantages for the DNS server. For example, during the recursion process, the DNS server performing the recursive lookup obtains information about the DNS domain namespace. The server caches the information, which can be used again to help speed the answering of subsequent queries that use or match it. Over time, this cached information can grow to occupy a significant portion of server memory resources, although it's cleared whenever the DNS service is cycled on and off.
+Although the recursive query process can be resource-intensive when performed as described, it has some performance advantages for the DNS server. For example, during the recursion process, the DNS server performing the recursive lookup obtains information about the DNS domain namespace. The server caches the information, which can be used again to help speed the answering of subsequent queries that use or match it. Over time, this cached information can grow to occupy a significant portion of server memory resources. The cache is cleared whenever the DNS service is restarted.
 
 The following three figures illustrate the process by which the DNS client queries the servers on each adapter.
  
@@ -89,31 +90,35 @@ The following three figures illustrate the process by which the DNS client queri
 :::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-4.png" alt-text="Diagram showing overview of complete DNS query process.":::
 **Querying the DNS Server - Part 3**
 
-Configuring DNS clients with more than one DNS Server IP adds fault tolerance to your DNS infrastructure. Adding multiple DNS Servers IPs allows DNS names to continue to be resolved if failures of the only configured DNS Server, of the underlying network link, or the supporting network infrastructure that connects a given client to a DNS Server.
+Configuring DNS clients with more than one DNS Server IP adds fault tolerance to your DNS infrastructure. Adding multiple DNS server IPs ensures DNS names can still be resolved if the primary DNS server, the network link, or the supporting infrastructure fails.
 
 Name failures might cause application or component hangs, resource outages waiting for dependent time-out expirations that directly or indirectly cause operational failures. See [DNS client resolution time-outs](https://learn.contoso.com/en-us/troubleshoot/windows-server/networking/dns-client-resolution-timeouts) for more detailed discussion on all possible scenarios.
 
-For these reasons, it's recommended to configure any Windows client with more than one DNS server, but it's important to be aware of the Windows client resolution process, as it's different based on how many DNS servers we've configured.
+For these reasons, we recommended you configure any Windows client with more than one DNS server. However, be aware that the Windows client resolution process varies depending on the number of DNS servers configured.
 
-The DNS query adaptive time-out feature enables the time-out for DNS queries to adapt based on the time required for previous queries, reducing the time out for most queries. Time-outs can also be increased for high-latency links, such as satellite links. Configuration of DNS time-outs is enabled on a per network interface basis, and can be optimized by Windows Store apps.
+The DNS query adaptive time-out feature enables the time-out for DNS queries to adapt based on the time required for previous queries, reducing the time out for most queries. Time-outs can also be increased for high-latency links, such as satellite links. Windows Store apps can optimize the configuration of DNS time-outs on a per network interface basis.
 
-Instead of waiting for 1000ms before timing out a DNS query, the first time out is adjusted to be between 25ms and 1000ms, based on past performance of the network.
+Instead of waiting for 1000 ms before timing out a DNS query, the first time out is adjusted to be between 25 ms and 1000 ms, based on past performance of the network.
 
 ### DNS server nonresponsive cache
 
-Nonresponsive DNS servers are cached and periodically retried. This enables the DNS client to use the best available server consistently, and to spend less time waiting for unresponsive DNS servers.
+Nonresponsive DNS servers are cached and periodically retried. This retirement enables the DNS client to use the best available server consistently, and to spend less time waiting for unresponsive DNS servers.
 
 The DNS Client service queries the DNS servers in the following sequence:
 
 1. The DNS Client service sends the name query to the first DNS server on the preferred adapter’s list of DNS servers and waits one second for a response.
+
 1. If the DNS Client service doesn't receive a response from the first DNS server within one second, it sends the name query to the first DNS servers on all adapters that are still under consideration and waits two seconds for a response.
+
 1. If the DNS Client service doesn't receive a response from any DNS server within two seconds, the DNS Client service sends the query to all DNS servers on all adapters that are still under consideration and waits another two seconds for a response.
+
 1. If the DNS Client service still doesn't receive a response from any DNS server, it sends the name query to all DNS servers on all adapters that are still under consideration and waits four seconds for a response.
-1. If it the DNS Client service doesn't receive a response from any DNS server, the DNS client sends the query to all DNS servers on all adapters that are still under consideration and waits eight seconds for a response.
 
-If the DNS Client service receives a positive response, it stops querying for the name, adds the response to the cache and returns the response to the client.
+1. If the DNS Client service doesn't receive a response from any DNS server, the DNS client sends the query to all DNS servers on all adapters that are still under consideration and waits eight seconds for a response.
 
-If the DNS Client service hasn't received a response from any server within eight seconds, the DNS Client service responds with a time out. Also, if it hasn't received a response from any DNS server on a specified adapter, then for the next 30 seconds, the DNS Client service responds to all queries destined for servers on that adapter with a time out and doesn't query those servers.
+If the DNS Client service receives a positive response, it stops querying for the name, adds the response to the cache, and returns the response to the client.
+
+If the DNS Client service doesn't receive a response from any server within eight seconds, the DNS Client service responds with a time out. If the DNS Client service doesn't receive a response from any DNS server on specific adapter, it will time out all queries to those servers for the next 30 seconds on that adapter.
 
 If at any point the DNS Client service receives a negative response from a server, it removes every server on that adapter from consideration during this search. For example, if in step 2, the first server on Alternate Adapter A gave a negative response, the DNS Client service wouldn't send the query to any other server on the list for Alternate Adapter A.
 
@@ -166,7 +171,7 @@ Iteration is the type of name resolution used between DNS clients and servers wh
 
 An iterative request from a client tells the DNS server that the client expects the best answer the DNS server can provide immediately, without contacting other DNS servers.
 
-When iteration is used, a DNS server answers a client based on its own specific knowledge about the namespace regarding the names data being queried. For example, if a DNS server on your intranet receives a query from a local client for “www.contoso.com”, it might return an answer from its names cache. If the queried name isn't currently stored in the names cache of the server, the server might respond by providing a referral. A referral is a list of NS and A RRs for other DNS servers that are closer to the name queried by the client.
+When iteration is used, a DNS server answers a client based on its own specific knowledge about the namespace regarding the names data being queried. For example, if a DNS server on your intranet receives a query from a local client for `www.contoso.com`, it might return an answer from its names cache. If the queried name isn't currently stored in the names cache of the server, the server might respond by providing a referral. A referral is a list of NS and A RRs for other DNS servers that are closer to the name queried by the client.
 
 When iteration is used, a DNS server can further help a name query resolution beyond giving its own best answer back to the client. For most iterative queries, a client uses its locally configured list of DNS servers to contact other name servers throughout the DNS namespace if its primary DNS server can't resolve the query.
 
@@ -183,7 +188,7 @@ As DNS servers make recursive queries on behalf of clients, they temporarily cac
 When information is cached, a Time-To-Live (TTL) value applies to all cached RRs. As long as the TTL for a cached RR doesn't expire, a DNS server can continue to cache and use the RR again when answering queries by its clients that match these RRs. Caching TTL values used by RRs in most zone configurations are assigned the minimum (default) TTL which is set in the zone’s Start of Authority (SOA) RR. By default, the minimum TTL is 3,600 seconds (one hour) but can be adjusted or, if needed, individual caching TTLs can be set at each RR.
 
 > [!NOTE]
-> Information the user should notice even if skimmingBy default, the DNS Server service uses a root hints file, cache.dns, that is stored in the systemroot\\System32\\Dns folder on the server computer. This file contains the NS and A RRs for the root servers of the DNS namespace (the Internet root servers or intranet root servers). When the DNS Server service is started, the root server list is queried for a current list of all the root servers. The results of the query are used to update the root hints file. This operation is also performed periodically while the service is running. When changes are made to the root hints by an administrator, these changes are written back to the root hints file.
+> Information the user should notice even if skimmingBy default, the DNS Server service uses a root hints file, cache.dns, that is stored in the `<systemroot>\System32\Dns` folder on the server computer. This file contains the NS and A RRs for the root servers of the DNS namespace (the Internet root servers or intranet root servers). When the DNS Server service is started, the root server list is queried for a current list of all the root servers. The results of the query are used to update the root hints file. This operation is also performed periodically while the service is running. When changes are made to the root hints by an administrator, these changes are written back to the root hints file.
 
 ## Reverse lookup
 
