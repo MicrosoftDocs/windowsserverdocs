@@ -1,17 +1,17 @@
 ---
 title: ReFSUtil
 description: Reference article for the ReFSUtil tool, which attempts to diagnose heavily damaged ReFS volumes, identify remaining files, and copy those files to another volume.
-author: wbsmolen
-ms.author: billy
+author: robinharwood
+ms.author: roharwoo
 ms.date: 2/14/2023
 ms.topic: reference
 ---
 
 # ReFSUtil
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10
 
-ReFSUtil is a tool included in Windows and Windows Server that attempts to diagnose heavily damaged ReFS volumes, identify remaining files, and copy those files to another volume. This tool comes in the `%SystemRoot%\Windows\System32` folder.
+
+ReFSUtil is a tool included in Windows and Windows Server that attempts to diagnose heavily damaged ReFS volumes, identify remaining files, and copy those files to another volume. This tool comes in the `%SystemRoot%\System32` folder.
 
 ReFS salvage is the primary function of ReFSUtil, and is useful for recovering data from volumes that show as RAW in Disk Management. ReFS Salvage has two phases: Scan Phase and a Copy Phase. In automatic mode, the Scan Phase and Copy Phase will run sequentially. In manual
 mode, each phase can be run separately. Progress and logs are saved in a working directory to allow phases to be run separately as well as Scan Phase to be paused and resumed. You shouldn't need to use the ReFSutil tool unless the volume is RAW. If read-only, then data is still accessible.

@@ -3,9 +3,9 @@ title: View Hardware Status
 description: Learn how to view hardware information in MultiPoint Services
 ms.topic: article
 ms.assetid: 3a5ec549-e1f9-4714-9e6d-9ea959e1da60
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # View Hardware Status

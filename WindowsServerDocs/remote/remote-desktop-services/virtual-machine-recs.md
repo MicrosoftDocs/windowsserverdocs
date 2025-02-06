@@ -1,10 +1,10 @@
 ---
 title: Session host virtual machine sizing guidelines for Azure Virtual Desktop and Remote Desktop Services
 description: Learn about sizing for session host virtual machines based on different workload types when used with Azure Virtual Desktop or Remote Desktop Services.
-ms.author: helohr
-ms.date: 08/10/2023
+author: xelu86
+ms.date: 7/3/2024
 ms.topic: article
-author: Heidilohr
+ms.author: alalve
 manager: femila
 ---
 # Session host virtual machine sizing guidelines

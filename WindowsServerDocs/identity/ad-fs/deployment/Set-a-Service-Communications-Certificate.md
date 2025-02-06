@@ -4,7 +4,7 @@ ms.assetid: 638c89bd-87e6-484b-9d2e-8ae2a74227e5
 title: Set a Service Communications Certificate
 author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.author: billmath
 ---

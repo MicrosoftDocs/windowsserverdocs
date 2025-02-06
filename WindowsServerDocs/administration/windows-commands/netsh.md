@@ -3,15 +3,15 @@ title: netsh
 description: Reference article for the netsh command, which is a command-line scripting utility that allows you to, either locally or remotely, display or modify the network configuration of a currently running computer.
 ms.topic: reference
 ms.assetid: 96fc069d-53c0-4d0a-9f7f-f9f3d49a02bd carmonmills
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # netsh
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 The Network Shell command-line scripting utility that allows you to, either locally or remotely, display or modify the network configuration of a currently running computer. You can start this utility at the command prompt or in Windows PowerShell.
 

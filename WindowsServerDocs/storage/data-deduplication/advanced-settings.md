@@ -5,12 +5,10 @@ description: "Learn more about: Advanced Data Deduplication settings"
 ms.topic: article
 author: wmgries
 manager: klaasl
-ms.author: wgries
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Advanced Data Deduplication settings
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 This document describes how to modify advanced [Data Deduplication](overview.md) settings. For [recommended workloads](install-enable.md#enable-dedup-candidate-workloads), the default settings should be sufficient. The main reason to modify these settings is to improve Data Deduplication's performance with other kinds of workloads.
 
@@ -86,7 +84,7 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 			<td>
 				<ul>
 					<li>High</li>
-					<li>Medium</li>
+					<li>Normal</li>
 					<li>Low</li>
 				</ul>
 			</td>

@@ -3,23 +3,25 @@ title: AD FS Help Diagnostics Analyzer
 description:  This article describes AD FS Help Diagnostics Analyzer and how it can perform the basic checks using AD FS diagnostics PowerShell module.
 author: billmath
 ms.author: billmath
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
 # AD FS Help Diagnostics Analyzer
 
-AD FS includes numerous settings that support the wide variety of functionality it provides for authentication and application development. During troubleshooting, it's recommended to ensure that all of the AD FS settings are correctly configured. Doing a manual check of these settings can sometimes be time consuming. AD FS Help Diagnostics Analyzer can help perform the basic checks using the ADFSToolbox PowerShell module. After performing the checks, AD FS Help provides the [Diagnostics Analyzer](https://aka.ms/adfsdiagnosticsanalyzer) to help you easily visualize the results and offer remediation steps.
+>[!IMPORTANT]
+>The AD FS Help site has been retired. The [Diagnostic Analyzer](https://github.com/Microsoft/adfsToolbox/tree/master/diagnosticsModule) is now located in github and is part of the [AD FS Offline tools](../operations/offline-tools.md).
 
+AD FS includes numerous settings that support the wide variety of functionality it provides for authentication and application development. During troubleshooting, it's recommended to ensure that all of the AD FS settings are correctly configured. Doing a manual check of these settings can sometimes be time consuming.  
 The diagnostics operation can be divided into three simple steps:
 
 - Step 1 - Set up the ADFSToolbox module on the primary AD FS server or WAP server
 - Step 2 - Execute the diagnostics and upload the file to AD FS Help
 - Step 3 - View diagnostics analysis and resolve any issues
 
-Go to [AD FS Help Diagnostics Analyzer (https://aka.ms/adfsdiagnosticsanalyzer)](https://aka.ms/adfsdiagnosticsanalyzer) to start troubleshooting.
+Go to the Diagnostic Analyzer under [AD FS Offline tools](../operations/offline-tools.md) to start troubleshooting.
 
-![AD FS diagnostics analyzer tool on AD FS Help](media/ad-fs-diagonostics-analyzer/home.png)
+
 
 ## Step 1: Set up the ADFSToolbox module on AD FS server
 
@@ -109,5 +111,5 @@ Each test result is displayed with details that describe the test and the resolu
 
 ## Related links
 
-- [Use AD FS Help troublehshooting guides](https://aka.ms/adfshelp/troubleshooting )
+
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)

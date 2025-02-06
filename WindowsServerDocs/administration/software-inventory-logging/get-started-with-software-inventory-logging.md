@@ -4,13 +4,13 @@ description: Describes how to install and start using Software Inventory Logging
 ms.topic: article
 ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
 author: brentfor
-ms.author: brentf
+ms.author: roharwoo
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Get Started with Software Inventory Logging
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
  Software Inventory Logging collects Microsoft software inventory data on a per server basis. Before using Software Inventory Logging with Windows Server 2012 R2, make sure that Windows Update [KB 3000850](https://support.microsoft.com/kb/3000850) and [KB 3060681](https://support.microsoft.com/kb/3060681) are installed on each system that will be inventoried. No Windows Update is required for Windows Server 2016. Also, if you want to use SIL's capability to forward data to an aggregation server, be sure you have SSL certificates valid for your network.
 

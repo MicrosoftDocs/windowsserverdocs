@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 9aefaf1b-3ba2-4f41-9068-9629a28157ad
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Common Usage Scenarios

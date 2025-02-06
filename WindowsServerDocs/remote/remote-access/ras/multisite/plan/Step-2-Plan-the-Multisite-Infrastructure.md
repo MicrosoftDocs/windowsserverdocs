@@ -4,13 +4,11 @@ description: Learn how to complete the multisite infrastructure planning; includ
 manager: brianlic
 ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Plan the Multisite Infrastructure
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The next step in deploying Remote Access in a multisite topology is to complete the multisite infrastructure planning; including, Active Directory, security groups, and Group Policy Objects.
 ## <a name="bkmk_2_1_AD"></a>2.1 Plan Active Directory

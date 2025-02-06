@@ -1,47 +1,51 @@
 ---
-title: Configure AD FS and Azure AD Multi-Factor Authentication
-description: Learn more about configuring Azure AD Multi-Factor Authentication as authentication provider using AD FS.
-ms.author: wscontent
+title: Configure AD FS and Microsoft Entra multifactor authentication
+description: Learn more about configuring Microsoft Entra multifactor authentication as authentication provider using AD FS.
+ms.author: roharwoo
 author: billmath
 manager: amycolannino
-ms.date: 06/15/2023
+ms.date: 03/13/2024
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref
 ---
 
-# Configure Azure AD Multi-Factor Authentication as authentication provider using AD FS
+# Configure Microsoft Entra multifactor authentication as authentication provider using AD FS
 
 The information in this article applies to Windows 2016 and later.
 
-If your organization is federated with Azure AD, you can use Azure AD Multi-Factor Authentication to secure Active Directory Federation Services (AD FS) resources, both on-premises and in the cloud. Azure AD Multi-Factor Authentication enables you to eliminate passwords and provide a more secure way to authenticate. With AD FS, you can configure Azure AD Multi-Factor Authentication for primary authentication or use it as an extra authentication provider.
+If your organization is federated with Microsoft Entra ID, you can use Microsoft Entra multifactor authentication to secure Active Directory Federation Services (AD FS) resources, both on-premises and in the cloud. Microsoft Entra multifactor authentication enables you to eliminate passwords and provide a more secure way to authenticate. With AD FS, you can configure Microsoft Entra multifactor authentication for primary authentication or use it as an extra authentication provider.
 
-Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure AD Multi-Factor Authentication adapter integrates directly with Azure AD and doesn't require an on premises Azure AD Multi-Factor Authentication server. The Azure AD Multi-Factor Authentication adapter is built into Windows Server 2016. No other installation is required.
+Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Microsoft Entra multifactor authentication adapter integrates directly with Microsoft Entra ID and doesn't require an on premises Azure Multi-Factor Authentication Server. The Microsoft Entra multifactor authentication adapter is built into Windows Server 2016. No other installation is required.
 
-## Register users for Azure AD Multi-Factor Authentication by using AD FS
+<a name='register-users-for-azure-ad-multi-factor-authentication-by-using-ad-fs'></a>
 
-AD FS doesn't support inline "proofup" registration of Azure AD Multi-Factor Authentication security verification information, such as on a phone number or mobile app. Without support for inline proof, users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) before they use Azure AD Multi-Factor Authentication to authenticate to AD FS applications.
-When a user that hasn't yet proofed up in Azure AD tries to authenticate with Azure AD Multi-Factor Authentication at AD FS, they get an AD FS error. As an AD FS administrator, you can customize this error experience to guide the user to the proofup page instead. You can create this message by using onload.js customization to detect the error message string within the AD FS page. Then you can show a new message to direct the user to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) so that they can reattempt authentication. For more information, see [Customize the AD FS web page to guide users to register MFA verification methods](#customize-the-ad-fs-web-page-to-guide-users-to-register-mfa-verification-methods).
+## Register users for Microsoft Entra multifactor authentication by using AD FS
+
+AD FS doesn't support inline "proofup" registration of Microsoft Entra multifactor authentication security verification information, such as on a phone number or mobile app. Without support for inline proof, users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) before they use Microsoft Entra multifactor authentication to authenticate to AD FS applications.
+When a user that hasn't yet proofed up in Microsoft Entra ID tries to authenticate with Microsoft Entra multifactor authentication at AD FS, they get an AD FS error. As an AD FS administrator, you can customize this error experience to guide the user to the proofup page instead. You can create this message by using onload.js customization to detect the error message string within the AD FS page. Then you can show a new message to direct the user to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) so that they can reattempt authentication. For more information, see [Customize the AD FS web page to guide users to register MFA verification methods](#customize-the-ad-fs-web-page-to-guide-users-to-register-mfa-verification-methods).
 
 > [!NOTE]
-> Prior to this update, users had to authenticate by using Azure AD Multi-Factor Authentication for registration by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx). With this update, an AD FS user who hasn't yet registered Azure AD Multi-Factor Authentication verification information can access the Azure proofup page by using the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) with only primary authentication, such as Windows Integrated Authentication or username and password at the AD FS web pages. If the user has no verification methods configured, Azure AD performs inline registration. The user sees the message, "Your admin has required that you set up this account for additional security verification." Then the user selects **Set it up now.**
-> Users who already have at least one verification method configured will still be prompted to provide multi-factor authentication (MFA) when visiting the proofup page.
+> Prior to this update, users had to authenticate by using Microsoft Entra multifactor authentication for registration by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx). With this update, an AD FS user who hasn't yet registered Microsoft Entra multifactor authentication verification information can access the Azure proofup page by using the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) with only primary authentication, such as Windows Integrated Authentication or username and password at the AD FS web pages. If the user has no verification methods configured, Microsoft Entra ID performs inline registration. The user sees the message, "Your admin has required that you set up this account for additional security verification." Then the user selects **Set it up now.**
+> Users who already have at least one verification method configured will still be prompted to provide multifactor authentication (MFA) when visiting the proofup page.
 
 ## Recommended deployment topologies
 
-This section covers using Azure AD Multi-Factor Authentication as the primary authentication method with AD FS and Azure AD Multi-Factor Authentication for Office 365.
+This section covers using Microsoft Entra multifactor authentication as the primary authentication method with AD FS and Microsoft Entra multifactor authentication for Office 365.
 
-### Azure AD Multi-Factor Authentication as primary authentication
+<a name='azure-ad-multi-factor-authentication-as-primary-authentication'></a>
 
-There are a couple of great reasons to use Azure AD Multi-Factor Authentication as Primary Authentication with AD FS:
+### Microsoft Entra multifactor authentication as primary authentication
 
-- It avoids passwords for sign-in to Azure AD, Office 365, and other AD FS apps.
+There are a couple of great reasons to use Microsoft Entra multifactor authentication as Primary Authentication with AD FS:
+
+- It avoids passwords for sign-in to Microsoft Entra ID, Office 365, and other AD FS apps.
 - It protects password based sign-in by requiring another factor, such as verification code prior to the password.
 
-You also might want to use Azure AD Multi-Factor Authentication as the primary authentication method and Azure AD conditional access, including true MFA by prompting for extra factors. To use Azure AD MFA on premises, you can configure the Azure AD domain setting by setting `SupportsMfa` to `$true`. In this configuration, Azure AD can prompt AD FS to perform extra authentication or &#34;true MFA&#34; for conditional access scenarios that require it.
+You also might want to use Microsoft Entra multifactor authentication as the primary authentication method and Microsoft Entra Conditional Access, including true MFA by prompting for extra factors. To use Microsoft Entra multifactor authentication on premises, you can configure the Microsoft Entra domain setting by setting `SupportsMfa` to `$true`. In this configuration, Microsoft Entra ID can prompt AD FS to perform extra authentication or &#34;true MFA&#34; for conditional access scenarios that require it.
 
 Any AD FS user who isn't registered (hasn't yet configured MFA verification information), should be prompted to configure verification information. To prompt unregistered users, you can use a customized AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and configure verification information. After configuration, the user can reattempt their AD FS sign-in.
 
-Azure AD Multi-Factor Authentication as primary authentication is considered a single factor. After initial configuration users need to provide another factor to manage or update their verification information in Azure AD, or to access other resources that require MFA.
+Microsoft Entra multifactor authentication as primary authentication is considered a single factor. After initial configuration users need to provide another factor to manage or update their verification information in Microsoft Entra ID, or to access other resources that require MFA.
 
 > [!NOTE]
 > With AD FS 2019, you're required to make a modification to the anchor claim type for the Active Directory Claims Provider trust and modify this from the `windowsaccountname` to User Principal Name (UPN). Run the following PowerShell cmdlet. This has no effect on the internal functioning of the AD FS farm. It's possible a few users might be re-prompted for credentials after this change is made. After logging in again, end users will see no difference.
@@ -50,45 +54,51 @@ Azure AD Multi-Factor Authentication as primary authentication is considered a s
 Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -TargetName "Active Directory"
 ```
 
-### Azure AD Multi-Factor Authentication as extra authentication to Office 365
+<a name='azure-ad-multi-factor-authentication-as-extra-authentication-to-office-365'></a>
 
-Azure AD Multi-Factor Authentication adapter for AD FS enables your users to do MFA on AD FS. To secure your Azure AD resource, you should require MFA through a [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). You must also set the domain setting `SupportsMfa` to `$true` and [emit the multipleauthn claim](/azure/active-directory/authentication/howto-mfa-adfs#secure-azure-ad-resources-using-ad-fs) when a user performs two-step verification successfully.
+### Microsoft Entra multifactor authentication as extra authentication to Office 365
+
+Microsoft Entra multifactor authentication adapter for AD FS enables your users to do MFA on AD FS. To secure your Microsoft Entra resource, you should require MFA through a [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). You must also set the domain setting `SupportsMfa` to `$true` and [emit the multipleauthn claim](/azure/active-directory/authentication/howto-mfa-adfs#secure-azure-ad-resources-using-ad-fs) when a user performs two-step verification successfully.
 
 As described previously, any AD FS user who isn't registered (hasn't yet configured MFA verification information) should be prompted to configure verification information. To prompt unregistered users, you can use a customized AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and configure verification information. After configuration, the user can reattempt their AD FS sign-in.
 
 ## Prerequisites
 
-The following prerequisites are required when you use Azure AD Multi-Factor Authentication for authentication with AD FS:
+The following prerequisites are required when you use Microsoft Entra multifactor authentication for authentication with AD FS:
 
-- [An Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).
-- [Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
+- [An Azure subscription with Microsoft Entra ID](https://azure.microsoft.com/pricing/free-trial/).
+- [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
 
 > [!NOTE]
-> Azure AD and Azure AD Multi-Factor Authentication are included in Azure AD Premium and the Enterprise Mobility Suite (EMS). You don't need individual subscriptions if you have either of these applications installed.
+> Microsoft Entra ID and Microsoft Entra multifactor authentication are included in Microsoft Entra ID P1 or P2 and the Enterprise Mobility Suite (EMS). You don't need individual subscriptions if you have either of these applications installed.
 
 - A Windows Server 2016 AD FS on-premises environment.
   - The server needs to be able to communicate with the following URLs over port 443.
     - `https://adnotifications.windowsazure.com`
       - `https://login.microsoftonline.com`
-- Your on-premises environment must be [federated with Azure AD](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs).
-- [Microsoft Azure Active Directory Module for Windows PowerShell](/powershell/module/azuread/).
-- Global administrator permissions on your instance of Azure AD to configure it by using Azure AD PowerShell.
-- Enterprise administrator credentials to configure the AD FS farm for Azure AD Multi-Factor Authentication.
+- Your on-premises environment must be [federated with Microsoft Entra ID](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs).
+- [Microsoft Azure Active Directory module for Windows PowerShell](/powershell/module/azuread/).
+- Global administrator permissions on your instance of Microsoft Entra ID to configure it by using Azure AD PowerShell.
+- Enterprise administrator credentials to configure the AD FS farm for Microsoft Entra multifactor authentication.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../WindowsServerDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Configure the AD FS Servers
 
-In order to complete configuration for Azure AD Multi-Factor Authentication for AD FS, you need to configure each AD FS server by using the steps described here.
+In order to complete configuration for Microsoft Entra multifactor authentication for AD FS, you need to configure each AD FS server by using the steps described here.
 
 > [!NOTE]
 > Ensure that these steps are performed on all AD FS servers in your farm. If you've multiple AD FS servers in your farm, you can perform the necessary configuration remotely by using Azure AD PowerShell.
 
-### Step 1: Generate a certificate for Azure AD Multi-Factor Authentication on each AD FS server
+<a name='step-1-generate-a-certificate-for-azure-ad-multi-factor-authentication-on-each-ad-fs-server'></a>
 
-The first thing you need to do is to use the `New-AdfsAzureMfaTenantCertificate` PowerShell command to generate a certificate for Azure AD Multi-Factor Authentication to use. After you generate the certificate, find it in the local machines certificate store. The certificate is marked with a subject name containing the TenantID for your Azure AD directory.
+### Step 1: Generate a certificate for Microsoft Entra multifactor authentication on each AD FS server
+
+The first thing you need to do is to use the `New-AdfsAzureMfaTenantCertificate` PowerShell command to generate a certificate for Microsoft Entra multifactor authentication to use. After you generate the certificate, find it in the local machines certificate store. The certificate is marked with a subject name containing the TenantID for your Microsoft Entra directory.
 
 :::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png" alt-text="Screenshot of the certificate store of a local machine showing the generated certificate.":::
 
-The TenantID is the name of your directory in Azure AD. Use the following PowerShell cmdlet to generate the new certificate:
+The TenantID is the name of your directory in Microsoft Entra ID. Use the following PowerShell cmdlet to generate the new certificate:
 
 ```powershell
 $certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <tenantID>
@@ -96,24 +106,44 @@ $certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <tenantID>
 
 :::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG" alt-text="Screenshot of the PowerShell window showing the output from New-AdfsAzureMfaTenantCertificate.":::
 
-### Step 2: Add the new credentials to the Azure Multi-Factor Auth Client Service Principal
+<a name='step-2-add-the-new-credentials-to-the-azure-multi-factor-auth-client-service-principal'></a>
 
-In order to enable the AD FS servers to communicate with the Azure Multi-Factor Auth Client, you need to add the credentials to the Service Principal for the Azure Multi-Factor Auth Client. The certificates generated by using the New-AdfsAzureMFaTenantCertificate cmdlet serve as these credentials. Open PowerShell, and perform the following steps to add the new credentials to the Azure Multi-Factor Auth Client Service Principal.
+### Step 2: Add the new credentials to the Azure multifactor authentication Client Service Principal
+
+In order to enable the AD FS servers to communicate with the Azure multifactor authentication Client, you need to add the credentials to the Service Principal for the Azure multifactor authentication Client. The certificates generated by using the New-AdfsAzureMFaTenantCertificate cmdlet serve as these credentials. Open PowerShell, and perform the following steps to add the new credentials to the Azure multifactor authentication Client Service Principal.
+
+<a name='step-3-set-the-certificate-as-the-new-credential-against-the-azure-multi-factor-auth-client'></a>
+
+### Step 3: Set the certificate as the new credential against the Azure multifactor authentication Client
 
 > [!NOTE]
-> In order to complete this step you need to connect to your instance of Azure AD with PowerShell by using `Connect-MsolService`. These steps assume you've already connected via PowerShell. For information, see [Connect-MsolService](/previous-versions/azure/dn194123(v=azure.100)).
-
-### Step 3: Set the certificate as the new credential against the Azure Multi-Factor Auth Client
+> In order to complete this step you need to connect to your instance of Microsoft Entra ID with Microsoft Graph PowerShell by using `Connect-MgGraph`. These steps assume you've already connected via PowerShell. 
 
 ```powershell
-New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64
+Connect-MgGraph -Scopes 'Application.ReadWrite.All'
+$servicePrincipalId = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").Id
+$keyCredentials = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").KeyCredentials
+$certX509 = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($certBase64))
+$newKey = @(@{
+    CustomKeyIdentifier = $null
+    DisplayName = $certX509.Subject
+    EndDateTime = $null
+    Key = $certX509.GetRawCertData()
+    KeyId = [guid]::NewGuid()
+    StartDateTime = $null
+    Type = "AsymmetricX509Cert"
+    Usage = "Verify"
+    AdditionalProperties = $null
+})
+$keyCredentials += $newKey
+Update-MgServicePrincipal -ServicePrincipalId $servicePrincipalId -KeyCredentials $keyCredentials
 ```
 
 > [!IMPORTANT]
-> This command needs to be run on all of the AD FS servers in your farm. Azure AD MFA will fail on servers that haven't had the certificate set as the new credential against the Azure Multi-Factor Auth Client.
+> This command needs to be run on all of the AD FS servers in your farm. Microsoft Entra multifactor authentication will fail on servers that haven't had the certificate set as the new credential against the Azure multifactor authentication Client.
 
 > [!NOTE]
-> 981f26a1-7f43-403b-a875-f8b09b8cd720 is the GUID for Azure Multi-Factor Auth Client.
+> 981f26a1-7f43-403b-a875-f8b09b8cd720 is the GUID for Azure multifactor authentication Client.
 
 ## Configure the AD FS Farm
 
@@ -128,7 +158,7 @@ Open PowerShell, and enter your own *tenantId* with the `Set-AdfsAzureMfaTenant`
 Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 
-:::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png" alt-text="Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.":::
+:::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ad-fs-azure-mfa-5.png" alt-text="Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.":::
 
 Windows Server without the latest service pack doesn't support the `-Environment` parameter for the `Set-AdfsAzureMfaTenant` cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlet correctly registered your tenant information or if you aren't in the Azure Government cloud:
 
@@ -143,25 +173,27 @@ Windows Server without the latest service pack doesn't support the `-Environment
 
 1. Restart the AD FS service on each server in the farm before these changes take effect. To reduce the effect on your systems, take each AD FS server out of the NLB rotation one at a time and wait for all connections to drain.
 
-After this step, you'll see that Azure AD Multi-Factor Authentication is available as a primary authentication method for intranet and extranet use.
+After this step, you'll see that Microsoft Entra multifactor authentication is available as a primary authentication method for intranet and extranet use.
 
-:::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png" alt-text="Screenshot of the Edit Authentication Methods dialog box showing the Azure AD Multi-Factor Authentication option highlighted in both the Extranet and Intranet sections.":::
+:::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png" alt-text="Screenshot of the Edit Authentication Methods dialog box showing the Microsoft Entra multifactor authentication option highlighted in both the Extranet and Intranet sections.":::
 
-If you want to use Azure AD Multi-Factor Authentication as a secondary authentication method, on the **Edit Authentication Methods** box, select the **Multi-factor** tab (the Additional tab in AD FS 2019) and ensure that it's enabled. Otherwise you might receive error messages, such as, "No valid strong authentication method found. Contact your administrator to configure and enable an appropriate strong authentication provider."
+If you want to use Microsoft Entra multifactor authentication as a secondary authentication method, on the **Edit Authentication Methods** box, select the **multifactor** tab (the Additional tab in AD FS 2019) and ensure that it's enabled. Otherwise you might receive error messages, such as, "No valid strong authentication method found. Contact your administrator to configure and enable an appropriate strong authentication provider."
 
-## Renew and Manage AD FS Azure AD Multi-Factor Authentication Certificates
+<a name='renew-and-manage-ad-fs-azure-ad-multi-factor-authentication-certificates'></a>
 
-The following guidance is designed to help you manage the Azure AD Multi-Factor Authentication certificates on your AD FS servers.
+## Renew and Manage AD FS Microsoft Entra multifactor authentication Certificates
 
-By default, when you configure AD FS with Azure AD Multi-Factor Authentication, the certificates generated via the `New-AdfsAzureMfaTenantCertificate` PowerShell cmdlet are valid for two years. To determine how close to expiration your certificates are, and to renew and install new certificates, use the following procedure.
+The following guidance is designed to help you manage the Microsoft Entra multifactor authentication certificates on your AD FS servers.
 
-1. Assess AD FS Azure AD Multi-Factor Authentication certificate expiration date.
+By default, when you configure AD FS with Microsoft Entra multifactor authentication, the certificates generated via the `New-AdfsAzureMfaTenantCertificate` PowerShell cmdlet are valid for two years. To determine how close to expiration your certificates are, and to renew and install new certificates, use the following procedure.
 
-    On each AD FS server, in the local computer My store, there's a self signed certificate with "Microsoft AD FS Azure AD Multi-Factor Authentication" in the Issuer and Subject area. This certificate is the Azure AD Multi-Factor Authentication certificate. Check the validity period of this certificate on each AD FS server to determine the expiration date.
+1. Assess AD FS Microsoft Entra multifactor authentication certificate expiration date.
 
-1. Create a new AD FS Azure AD Multi-Factor Authentication Certificate on each AD FS server.
+    On each AD FS server, in the local computer My store, there's a self signed certificate with "Microsoft AD FS Microsoft Entra multifactor authentication" in the Issuer and Subject area. This certificate is the Microsoft Entra multifactor authentication certificate. Check the validity period of this certificate on each AD FS server to determine the expiration date.
 
-    If the validity period of your certificates is nearing its end, start the renewal process by generating a new Azure AD Multi-Factor Authentication certificate on each AD FS server. In PowerShell generate a new certificate on each AD FS server by using the following cmdlet:
+1. Create a new AD FS Microsoft Entra multifactor authentication Certificate on each AD FS server.
+
+    If the validity period of your certificates is nearing its end, start the renewal process by generating a new Microsoft Entra multifactor authentication certificate on each AD FS server. In PowerShell generate a new certificate on each AD FS server by using the following cmdlet:
 
     > [!CAUTION]
     > If your certificate has already expired, don't add the `-Renew $true` parameter to the following command. In this scenario, the existing expired certificate is replaced with a new one instead of being left in place and an additional certificate created.
@@ -170,21 +202,38 @@ By default, when you configure AD FS with Azure AD Multi-Factor Authentication, 
     $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such as contoso.onmicrosoft.com> -Renew $true
     ```
 
-    If the certificate hasn't already expired, the command generates a new certificate that is valid from two days after the current day to two years plus two days in the future. AD FS and Azure AD Multi-Factor Authentication operations aren't affected when running the cmdlet or renewing the certificate. The two-day delay is intentional and provides time to follow the next steps to configure the new certificate in the tenant before AD FS starts by using it for Azure AD Multi-Factor Authentication.
+    If the certificate hasn't already expired, the command generates a new certificate that is valid from two days after the current day to two years plus two days in the future. AD FS and Microsoft Entra multifactor authentication operations aren't affected when running the cmdlet or renewing the certificate. The two-day delay is intentional and provides time to follow the next steps to configure the new certificate in the tenant before AD FS starts by using it for Microsoft Entra multifactor authentication.
 
-1. Configure each new AD FS Azure AD Multi-Factor Authentication certificate in the Azure AD tenant.
+1. Configure each new AD FS Microsoft Entra multifactor authentication certificate in the Microsoft Entra tenant.
 
-    With the Azure AD PowerShell module, for each new certificate (on each AD FS server), update your Azure AD tenant settings as follows. You must first connect to the tenant by using `Connect-MsolService` to run the following commands.
+   > [!NOTE]
+   > In order to complete this step you need to connect to your instance of Microsoft Entra ID with Microsoft Graph PowerShell by using `Connect-MgGraph`. These steps assume you've already connected via PowerShell. 
 
     ```powershell
-    New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
+    Connect-MgGraph -Scopes 'Application.ReadWrite.All'
+    $servicePrincipalId = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").Id
+    $keyCredentials = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").KeyCredentials
+    $certX509 = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($newcert))
+    $newKey = @(@{
+        CustomKeyIdentifier = $null
+        DisplayName = $certX509.Subject
+        EndDateTime = $null
+        Key = $certX509.GetRawCertData()
+        KeyId = [guid]::NewGuid()
+        StartDateTime = $null
+        Type = "AsymmetricX509Cert"
+        Usage = "Verify"
+        AdditionalProperties = $null
+    })
+    $keyCredentials += $newKey
+    Update-MgServicePrincipal -ServicePrincipalId $servicePrincipalId -KeyCredentials $keyCredentials
     ```
 
     If your previous certificate is expired, restart the AD FS service to pick up the new certificate. You don't need to restart the AD FS service if you renewed a certificate before it expired.
 
-1. Verify that the new certificate(s) is used for Azure AD Multi-Factor Authentication.
+1. Verify that the new certificate(s) is used for Microsoft Entra multifactor authentication.
 
-After the new certificate(s) become valid, AD FS will pick them up and use each respective certificate for Azure AD Multi-Factor Authentication within a few hours to one day. After AD FS uses the new certificates, on each server you'll see an event logged in the AD FS Admin event log with the following information:
+After the new certificate(s) become valid, AD FS will pick them up and use each respective certificate for Microsoft Entra multifactor authentication within a few hours to one day. After AD FS uses the new certificates, on each server you'll see an event logged in the AD FS Admin event log with the following information:
 
 ```Output
 Log Name:      AD FS/Admin
@@ -213,7 +262,7 @@ Use the following examples to customize your AD FS web pages for users who haven
 ### Find the error
 
 First, AD FS returns a couple of different error messages when the user lacks verification information.
-If you're using Azure AD Multi-Factor Authentication as primary authentication, the unproofed user sees an AD FS error page containing the following messages:
+If you're using Microsoft Entra multifactor authentication as primary authentication, the unproofed user sees an AD FS error page containing the following messages:
 
 ```html
     <div id="errorArea">
@@ -225,7 +274,7 @@ If you're using Azure AD Multi-Factor Authentication as primary authentication, 
         </div>
 ```
 
-When Azure AD as extra authentication is being attempted, the unproofed user sees an AD FS error page containing the following messages:
+When Microsoft Entra ID as extra authentication is being attempted, the unproofed user sees an AD FS error page containing the following messages:
 
 ```html
 <div id='mfaGreetingDescription' class='groupMargin'>For security reasons, we require additional information to verify your account (mahesh@jenfield.net)</div>

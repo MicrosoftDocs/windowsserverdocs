@@ -7,8 +7,6 @@ ms.date: 08/08/2018
 ---
 # Schannel Security Support Provider Technical Reference
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
-
 This reference for IT professionals contains information about the Transport Layer Security (TLS) protocol, the Secure Sockets Layer (SSL) protocol, and the Datagram Transport Layer Security (DTLS) protocol as implemented by the Schannel Security Support Provider (SSP).
 
 These protocols provide a means to secure data that is being sent between applications across an untrusted network by using certificate-based authentication and symmetric encryption keys.

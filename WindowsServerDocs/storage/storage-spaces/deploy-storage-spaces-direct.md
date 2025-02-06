@@ -1,7 +1,7 @@
 ---
 title: Deploy Storage Spaces Direct on Windows Server
 manager: femil
-ms.author: inhenkel
+ms.author: roharwoo
 ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
@@ -10,12 +10,10 @@ description: Step-by-step instructions to deploy software-defined storage with S
 ---
 # Deploy Storage Spaces Direct on Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) on Windows Server. To deploy Storage Spaces Direct as part of Azure Local, see [About Azure Local](/azure/azure-local/deploy/deployment-introduction?context=/windows-server/context/windows-server-storage)
 
 > [!Tip]
-> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://aka.ms/azurestackhcicatalog).
+> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Local solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Local, see the [Azure Local Catalog](https://aka.ms/azurestackhcicatalog).
 
 > [!Tip]
 > You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server rapid lab deployment scripts](https://aka.ms/wslab), which we use for training purposes.
@@ -26,7 +24,7 @@ Review the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-H
 
 Gather the following information:
 
-- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](/azure-stack/hci/concepts/storage-spaces-direct-overview#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
+- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](/azure/azure-local/concepts/storage-spaces-direct-overview#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
 
 - **Server names.** Get familiar with your organization's naming policies for computers, files, paths, and other resources. You'll need to provision several servers, each with unique names.
 
@@ -154,28 +152,48 @@ The following steps are done on a management system that is the same version as 
 
 Before you enable Storage Spaces Direct, ensure your drives are empty: no old partitions or other data. Run the following script, substituting your computer names, to remove all any old partitions or other data.
 
-> [!Warning]
+> [!Important]
 > This script will permanently remove any data on any drives other than the operating system boot drive!
 
-```PowerShell
+```powershell
 # Fill in these variables with your values
 $ServerList = "Server01", "Server02", "Server03", "Server04"
 
-Invoke-Command ($ServerList) {
-    Update-StorageProviderCache
-    Get-StoragePool | ? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue
-    Get-StoragePool | ? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue
-    Get-StoragePool | ? IsPrimordial -eq $false | Remove-StoragePool -Confirm:$false -ErrorAction SilentlyContinue
-    Get-PhysicalDisk | Reset-PhysicalDisk -ErrorAction SilentlyContinue
-    Get-Disk | ? Number -ne $null | ? IsBoot -ne $true | ? IsSystem -ne $true | ? PartitionStyle -ne RAW | % {
-        $_ | Set-Disk -isoffline:$false
-        $_ | Set-Disk -isreadonly:$false
-        $_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false
-        $_ | Set-Disk -isreadonly:$true
-        $_ | Set-Disk -isoffline:$true
+foreach ($server in $serverlist) {
+    Invoke-Command ($server) {
+        # Check for the Azure Temporary Storage volume
+        $azTempVolume = Get-Volume -FriendlyName "Temporary Storage" -ErrorAction SilentlyContinue
+        If ($azTempVolume) {
+            $azTempDrive = (Get-Partition -DriveLetter $azTempVolume.DriveLetter).DiskNumber
+        }
+    
+        # Clear and reset the disks
+        $disks = Get-Disk | Where-Object { 
+            ($_.Number -ne $null -and $_.Number -ne $azTempDrive -and !$_.IsBoot -and !$_.IsSystem -and $_.PartitionStyle -ne "RAW") 
+        }
+        $disks | ft Number,FriendlyName,OperationalStatus
+        If ($disks) {
+            Write-Host "This action will permanently remove any data on any drives other than the operating system boot drive!`nReset disks? (Y/N)"
+            $response = read-host
+            if ( $response.ToLower() -ne "y" ) { exit }
+    
+            $disks | % {
+            $_ | Set-Disk -isoffline:$false
+            $_ | Set-Disk -isreadonly:$false
+            $_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false -verbose
+            $_ | Set-Disk -isreadonly:$true
+            $_ | Set-Disk -isoffline:$true
+        }
+            
+        #Get-PhysicalDisk | Reset-PhysicalDisk
+        
+        
+        }
+        Get-Disk | Where-Object {
+            ($_.Number -ne $null -and $_.Number -ne $azTempDrive -and !$_.IsBoot -and !$_.IsSystem -and $_.PartitionStyle -eq "RAW")
+        } | Group -NoElement -Property FriendlyName
     }
-    Get-Disk | Where Number -Ne $Null | Where IsBoot -Ne $True | Where IsSystem -Ne $True | Where PartitionStyle -Eq RAW | Group -NoElement -Property FriendlyName
-} | Sort -Property PsComputerName, Count
+}
 ```
 
 The output will look like this, where **Count** is the number of drives of each model in each server:
@@ -251,7 +269,7 @@ When this command is finished, which may take several minutes, the system will b
 
 We recommend using the `New-Volume` cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
-For more information, check out [Creating volumes in Storage Spaces Direct](/azure-stack/hci/manage/create-volumes).
+For more information, check out [Creating volumes in Storage Spaces Direct](/azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage).
 
 ### Step 3.7: Optionally enable the CSV cache
 
@@ -272,7 +290,7 @@ $CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
 Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 ```
 
-For more info, see [Using the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache).
+For more info, see [Using the CSV in-memory read cache](/azure/azure-local/manage/use-csv-cache?context=/windows-server/context/windows-server-storage).
 
 ### Step 3.8: Deploy virtual machines for hyper-converged deployments
 
@@ -290,7 +308,7 @@ If you're deploying a converged solution, the next step is to create a Scale-Out
 
 The next step in setting up the cluster services for your file server is creating the clustered file server role, which is when you create the Scale-Out File Server instance on which your continuously available file shares are hosted.
 
-#### To create a Scale-Out File Server role by using Server Manager
+#### To create a Scale-Out File Server role by using Failover Cluster Manager
 
 1. In Failover Cluster Manager, select the cluster, go to **Roles**, and then click **Configure Role…**.<br>The High Availability Wizard appears.
 2. On the **Select Role** page, click **File Server**.
@@ -320,14 +338,14 @@ Add-ClusterScaleOutFileServerRole -Name SOFS -Cluster FSCLUSTER
 
 After you've created your virtual disks and added them to CSVs, it's time to create file shares on them - one file share per CSV per virtual disk. System Center Virtual Machine Manager (VMM) is probably the handiest way to do this because it handles permissions for you, but if you don't have it in your environment, you can use Windows PowerShell to partially automate the deployment.
 
-Use the scripts included in the [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) script, which partially automates the process of creating groups and shares. It's written for Hyper-V workloads, so if you're deploying other workloads, you might have to modify the settings or perform additional steps after you create the shares. For example, if you're using Microsoft SQL Server, the SQL Server service account must be granted full control on the share and the file system.
+Use the scripts included in the SMB Share Configuration for Hyper-V Workloads script, which partially automates the process of creating groups and shares. It's written for Hyper-V workloads, so if you're deploying other workloads, you might have to modify the settings or perform additional steps after you create the shares. For example, if you're using Microsoft SQL Server, the SQL Server service account must be granted full control on the share and the file system.
 
 > [!NOTE]
 >  You'll have to update the group membership when you add cluster nodes unless you use System Center Virtual Machine Manager to create your shares.
 
 To create file shares by using PowerShell scripts, do the following:
 
-1. Download the scripts included in [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) to one of the nodes of the file server cluster.
+1. Download the scripts included in SMB Share Configuration for Hyper-V Workloads to one of the nodes of the file server cluster.
 2. Open a Windows PowerShell session with Domain Administrator credentials on the management system, and then use the following script to create an Active Directory group for the Hyper-V computer objects, changing the values for the variables as appropriate for your environment:
 
     ```PowerShell
@@ -361,7 +379,7 @@ To create file shares by using PowerShell scripts, do the following:
 
 ### Step 4.3 Enable Kerberos constrained delegation
 
-To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a). Here's a little wrapper for the script:
+To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in SMB Share Configuration for Hyper-V Workloads. Here's a little wrapper for the script:
 
 ```PowerShell
 $HyperVClusterName = "Compute01"
@@ -374,9 +392,9 @@ CD $ScriptFolder
 
 ## Additional References
 
--   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
--   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
--   [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
--   [Storage Spaces Fault Tolerance](/azure-stack/hci/concepts/fault-tolerance)
+-   [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+-   [Understand the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage)
+-   [Planning volumes in Storage Spaces Direct](/azure/azure-local/concepts/plan-volumes?context=/windows-server/context/windows-server-storage)
+-   [Storage Spaces Fault Tolerance](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
 -   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

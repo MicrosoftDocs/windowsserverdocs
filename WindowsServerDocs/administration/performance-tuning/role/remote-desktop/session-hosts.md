@@ -2,8 +2,8 @@
 title: Performance Tuning Remote Desktop Session Hosts
 description: Performance tuning guidelines for Remote Desktop Session Hosts
 ms.topic: article
-ms.author: hammadbu
-author: phstee
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/22/2019
 ---
 
