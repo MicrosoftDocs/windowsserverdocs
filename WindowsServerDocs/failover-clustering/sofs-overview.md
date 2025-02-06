@@ -19,21 +19,21 @@ You can deploy and configure a clustered file server by using either of the foll
 
 ## Scenario description
 
-With scale-out file shares, you can share the same folder from multiple nodes of a cluster. For instance, if you have a four-node file server cluster that is using SMB Scale-Out, a computer running Windows Server 2012 R2, or Windows Server 2012 can access file shares from any of the four nodes. This is achieved by applying new Windows Server Failover Clustering features and the capabilities of the Windows file server protocol, SMB 3.0. File server administrators can provide scale-out file shares and continuously available file services to server applications and respond to increased demands quickly by bringing more servers online. All of this can be done in a production environment, and it's transparent to the server application.
+With scale-out file shares, you can share the same folder from multiple nodes of a cluster. If you have a four-node file server cluster that is using SMB Scale-Out, including a device running Windows Server 2012 R2 (or Windows Server 2012), you can access file shares from any of the four nodes. This is achieved by applying new Windows Server Failover Clustering features and the capabilities of the Windows file server protocol, SMB 3.0. File server administrators can provide scale-out file shares and continuously available file services to server applications and respond to increased demands quickly by bringing more servers online. All of this can be done in a production environment, and it's transparent to the server application.
 
 Key benefits provided by Scale-Out File Server include:
 
-- **Active-Active file shares**. All cluster nodes can accept and serve SMB client requests. By making the file share content accessible through all cluster nodes simultaneously, SMB 3.0 clusters and clients cooperate to provide transparent failover to alternative cluster nodes during planned maintenance and unplanned failures with service interruption.
+- **Active-Active file shares**: All cluster nodes can accept and serve SMB client requests. By making the file share content accessible through all cluster nodes simultaneously, SMB 3.0 clusters and clients cooperate to provide transparent failover to alternative cluster nodes during planned maintenance and unplanned failures with service interruption.
 
-- **Increased bandwidth**. The maximum share bandwidth is the total bandwidth of all file server cluster nodes. Unlike previous versions of Windows Server, the total bandwidth is no longer constrained to the bandwidth of a single cluster node; but rather, the capability of the backing storage system defines the constraints. You can increase the total bandwidth by adding nodes.
+- **Increased bandwidth**: The maximum share bandwidth is the total bandwidth of all file server cluster nodes. Unlike previous versions of Windows Server, the total bandwidth is no longer constrained to the bandwidth of a single cluster node; but rather, the capability of the backing storage system defines the constraints. You can increase the total bandwidth by adding nodes.
 
-- **CHKDSK with zero downtime**. CHKDSK in Windows Server 2012 is enhanced to dramatically shorten the time a file system is offline for repair. Clustered shared volumes (CSVs) take this one step further by eliminating the offline phase. A CSV File System (CSVFS) can use CHKDSK without impacting applications with open handles on the file system.
+- **CHKDSK with zero downtime**: CHKDSK in Windows Server 2012 is enhanced to dramatically shorten the time a file system is offline for repair. Clustered shared volumes (CSVs) take this one step further by eliminating the offline phase. A CSV File System (CSVFS) can use CHKDSK without impacting applications with open handles on the file system.
 
-- **Clustered Shared Volume cache**. CSVs in Windows Server 2012 introduces support for a Read cache, which can significantly improve performance in certain scenarios, such as in Virtual Desktop Infrastructure (VDI).
+- **Clustered Shared Volume cache**: CSVs in Windows Server 2012 introduces support for a Read cache, which can significantly improve performance in certain scenarios, such as in Virtual Desktop Infrastructure (VDI).
 
-- **Simpler management**. With Scale-Out File Server, you create the scale-out file servers, and then add the necessary CSVs and file shares. It's no longer necessary to create multiple clustered file servers, each with separate cluster disks, and then develop placement policies to ensure activity on each cluster node.
+- **Simpler management**: With Scale-Out File Server, you create the scale-out file servers, and then add the necessary CSVs and file shares. It's no longer necessary to create multiple clustered file servers, each with separate cluster disks, and then develop placement policies to ensure activity on each cluster node.
 
-- **Automatic rebalancing of Scale-Out File Server clients**. In Windows Server 2012 R2, automatic rebalancing improves scalability and manageability for scale-out file servers. SMB client connections are tracked per file share (instead of per server), and clients are redirected to the cluster node with the best access to the volume used by the file share. This improves efficiency by reducing redirection traffic between file server nodes. Clients are redirected following an initial connection and when cluster storage is reconfigured.
+- **Automatic rebalancing of Scale-Out File Server clients**: In Windows Server 2012 R2, automatic rebalancing improves scalability and manageability for scale-out file servers. SMB client connections are tracked per file share (instead of per server), and clients are redirected to the cluster node with the best access to the volume used by the file share. This improves efficiency by reducing redirection traffic between file server nodes. Clients are redirected following an initial connection and when cluster storage is reconfigured.
 
 ## In this scenario
 
@@ -57,33 +57,29 @@ You shouldn't use Scale-Out File Server if your workload generates a high number
 
 The following table lists the capabilities in SMB 3.0, the common Windows file systems, file server data management technologies, and common workloads. You can see whether the technology is supported with Scale-Out File Server, or if it requires a traditional clustered file server (also known as a file server for general use).
 
-| Technology | Feature | General use File Server Cluster | Scale-Out File Server |
+| Technology area| Feature | General use File Server Cluster | Scale-Out File Server |
 |-|-|-|-|
-| SMB | SMB Continuous Availability<sup>1</sup> | Yes | Yes |
-| SMB | SMB Multichannel | Yes | Yes |
-| SMB | SMB Direct | Yes | Yes |
-| SMB | SMB Encryption | Yes | Yes |
-| SMB | SMB Transparent failover | Yes (if continuous availability is enabled) | Yes |
-| File System | NTFS | Yes | NA |
-| File System | Resilient File System (ReFS) | Recommended with Storage Spaces Direct | Recommended with Storage Spaces Direct |
-| File System | Cluster Shared Volume File System (CSV) | NA | Yes |
+| Applications | Hyper-V | Not recommended | Yes |
+| Applications | Microsoft SQL Server | Not recommended | Yes |
 | File Management | BranchCache | Yes | No |
 | File Management | Data Deduplication (Windows Server 2012) | Yes | No |
 | File Management | Data Deduplication (Windows Server 2012 R2) | Yes | Yes (VDI only) |
-| File Management | DFS Namespace (DFSN) root server root | Yes | No |
 | File Management | DFS Namespace (DFSN) folder target server | Yes | Yes |
+| File Management | DFS Namespace (DFSN) root server root | Yes | No |
 | File Management | DFS Replication (DFSR) | Yes | No |
-| File Management | File Server Resource Manager (Screens and Quotas) | Yes | No |
-| File Management | File Classification Infrastructure | Yes | No |
 | File Management | Dynamic Access Control (claim-based access, CAP) | Yes | No |
+| File Management | File Classification Infrastructure | Yes | No |
+| File Management | File Server Resource Manager (Screens and Quotas) | Yes | No |
 | File Management | Folder Redirection | Yes | Not recommended |
+| File Management | Home Directories | Yes | Not recommended |
 | File Management | Offline Files (client side caching) | Yes | Not recommended |
 | File Management | Roaming User Profiles | Yes | Not recommended |
-| File Management | Home Directories | Yes | Not recommended |
 | File Management | Work Folders | Yes | No |
+| File System | Cluster Shared Volume File System (CSV) | NA | Yes |
+| File System | NTFS | Yes | NA |
+| File System | Resilient File System (ReFS) | Recommended with Storage Spaces Direct | Recommended with Storage Spaces Direct |
 | NFS | NFS Server | Yes | No |
-| Applications | Hyper-V | Not recommended | Yes |
-| Applications | Microsoft SQL Server | Not recommended | Yes |
+| SMB | SMB Continuous Availability<sup>1 | Yes | Yes |
 
 <sup>1</sup>SMB loopback Continuous Availability (CA) in hyper-converged configurations is available in Windows Server 2019. To learn more, see [Deploy a cluster set](/windows-server/storage/storage-spaces/cluster-sets#scale-out-file-server-and-cluster-sets).
 
@@ -122,7 +118,7 @@ The following table lists the features that are part of this scenario and descri
 | Feature | How this scenario is supported |
 |-|-|
 | [Failover Clustering](/windows-server/failover-clustering/failover-clustering-overview) | Failover clusters added the following features in Windows Server 2012 to support scale-Out file server: Distributed Network Name, the Scale-Out File Server resource type, Cluster Shared Volumes (CSV) 2, and the Scale-Out File Server High Availability role. For more information about these features, see [What's New in Failover Clustering in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)). |
-| [Server Message Block](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)) | SMB 3.0 added the following features in Windows Server 2012 to support scale-Out File Server: SMB Transparent Failover, SMB Multichannel, and SMB Direct. For more information on new and changed functionality for SMB in Windows Server 2012 R2, see [What's New in SMB in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)).|
+| [Server Message Block](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)) | SMB 3.0 added the following features in Windows Server to support Scale-Out File Server, SMB Transparent Failover, SMB Multichannel, and SMB Direct. For more information on new and changed functionality for SMB, see [Overview of file sharing using the SMB 3 protocol in Windows Server](/windows-server/storage/file-server/file-server-smb-overview).|
 
 ## See also
 
