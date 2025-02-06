@@ -35,7 +35,7 @@ rundll32 devmgr,DeviceProperties_RunDLL /DeviceID root\system\0000
 
 ## Remarks
 
-Rundll32 assumes the procedure has an interface conforming with the [WinMain entry point](windows/win32/learnwin32/winmain--the-application-entry-point).
+Rundll32 assumes the procedure has an interface conforming with the [WinMain entry point](/windows/win32/learnwin32/winmain--the-application-entry-point).
 
 The ```,``` separator between the DLL name and the procedure can alternatively be a space (" ").
 
