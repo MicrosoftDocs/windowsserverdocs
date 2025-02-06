@@ -3,15 +3,13 @@ title: Get started with the iOS client
 description: Learn how to set up the Remote Desktop client for iOS
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
-author: Heidilohr
+ms.author: alalve
 manager: femila
-ms.author: helohr
-ms.date: 11/03/2022
+author: xelu86
+ms.date: 7/3/2024
 ---
 
 # Get started with the iOS client
-
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
@@ -36,6 +34,13 @@ To download the client:
 
 1. Download the Microsoft Remote Desktop client from the [iOS App Store](https://aka.ms/rdios) or [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.yml#how-do-i-set-up-a-pc-for-remote-desktop-).
+
+## Beta client
+
+If you want to help us test new builds before they're released, you should download our beta client. Organizations can use the beta client to validate new versions for their users before they're generally available. You can download the beta client for iOS and iPadOS from TestFlight. The beta client shouldn't be used in production. To get started, see [Microsoft Remote Desktop for iOS](https://testflight.apple.com/join/vkLIflUJ).
+
+> [!IMPORTANT]
+> The Remote Desktop app is changing to Windows App. To ensure you can validate the upcoming Windows App update before it's released into the store, the Windows App preview is now available in the Remote Desktop Beta channels where you can test the experience of updating from Remote Desktop to Windows App. To learn more about Windows App, see [Get started with Windows App to connect to devices and apps](/windows-app/get-started-connect-devices-desktops-apps).
 
 ### Add a PC
 
@@ -164,14 +169,17 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Mouse wheel          | Double-tap and hold with two fingers, then drag up or down |
 | Mouse pointer | Zoom                 | With two fingers, pinch to zoom out and spread fingers apart to zoom in |
 
-## Supported input devices
+## Supported input devices and redirection
+
+### Mouse input
 
 The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS.
 
 For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 
-> [!TIP]
-> Swiftpoint is offering an [exclusive discount on the ProPoint mouse](https://www.swiftpoint.com/microsoft) for iOS client users.
+### Camera redirection
+
+Camera redirection protocol (MS-RDPECAM) doesn't support dynamically changing the camera resolution while the camera is in use, such as when rotating the device. You need to start and restart the camera. For example, in the camera app, assuming you're using the front camera, change to the rear camera, then back to the front camera.
 
 ## Use a keyboard in a remote session
 

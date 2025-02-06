@@ -1,14 +1,14 @@
 ---
 description: Learn more about troubleshooting drive firmware updates
 title: Troubleshooting drive firmware updates
-ms.author: toklima
+ms.author: roharwoo
 ms.topic: article
 author: toklima
 ms.date: 04/01/2023
 ---
 # Troubleshooting drive firmware updates
 
-Applies to: Windows Server 2022, Windows Server 2019, Windows 10
+
 
 Windows 10, version 1703 and newer include the capability to update firmware of HDDs and SSDs that have been certified with the Firmware Upgradeable AQ (Additional Qualifier) via PowerShell.
 

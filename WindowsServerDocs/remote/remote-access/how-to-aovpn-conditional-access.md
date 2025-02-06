@@ -1,24 +1,21 @@
 ---
-title: Configure conditional access for VPN connectivity using Azure AD
-description: Learn how to configure conditional access for VPN connectivity using Azure AD.
+title: Configure conditional access for VPN connectivity using Microsoft Entra ID
+description: Learn how to configure conditional access for VPN connectivity using Microsoft Entra ID.
 ms.topic: article
-ms.date: 07/06/2023
-ms.author: wscontent
-author: anaharris-ms
-
+ms.date: 10/31/2023
+ms.author: roharwoo
+author: robinharwood
 ---
 
-# Conditional access for VPN connectivity using Azure AD
+# Conditional access for VPN connectivity using Microsoft Entra ID
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
-
-In this how-to guide, you'll learn how to grant VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.
+In this how-to guide, you'll learn how to grant VPN users access your resources using [Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Microsoft Entra Conditional Access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Microsoft Entra connected application.
 
 ## Prerequisites
 
 Before you start configuring Conditional Access for your VPN, you must have completed the following prerequisites:
 
-- [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access)
 
 - You've completed [Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md) or you already have setup the Always On VPN infrastructure in your environment.
@@ -26,11 +23,11 @@ Before you start configuring Conditional Access for your VPN, you must have comp
 
 ## Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
-An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well.
+An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Microsoft Entra ID do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well.
 
 In this section, you'll add `IgnoreNoRevocationCheck` and `NoRevocationCheck`. By default, `IgnoreNoRevocationCheck` and `NoRevocationCheck` are set to 0 (disabled).
 
-For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [NPS CRL Check Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771995(v=ws.10)#ignorenorevocationcheck).
+To learn more about NPS CRL registry settings, see [Configure Network Policy Server Certificate Revocation List check registry settings](../../networking/technologies/nps/network-policy-server-certificate-revocation-list-check-registry-settings.md).
 
 >[!IMPORTANT]
 >If a Windows Routing and Remote Access Server (RRAS) uses NPS to proxy RADIUS calls to a second NPS, then you must set `IgnoreNoRevocationCheck=1` on both servers.
@@ -57,29 +54,30 @@ For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 
 
-## Create root certificates for VPN authentication with Azure AD
+<a name='create-root-certificates-for-vpn-authentication-with-azure-ad'></a>
+## Create root certificates for VPN authentication with Microsoft Entra ID
 
-In this section, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
+In this section, you configure conditional access root certificates for VPN authentication with Microsoft Entra ID, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
 
 1. Create a VPN certificate in the Azure portal.
 2. Download the VPN certificate.
 3. Deploy the certificate to your VPN and NPS servers.
 
 > [!IMPORTANT]
-> Once a VPN certificate is created in the Azure portal, Azure AD will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server to avoid any issues with credential validation of the VPN client.
+> Once a VPN certificate is created in the Azure portal, Microsoft Entra ID will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server to avoid any issues with credential validation of the VPN client.
 
-When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Azure AD issues a token in the form of a short-lived (1-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client. 
+When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Microsoft Entra ID issues a token in the form of a short-lived (1-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client. 
 
-The VPN client then sends the certificate issued by Azure AD to the VPN for credential validation. 
+The VPN client then sends the certificate issued by Microsoft Entra ID to the VPN for credential validation. 
 
 > [!NOTE]
-> Azure AD uses the most recently created certificate in the VPN connectivity blade as the Issuer. Azure AD Conditional Access VPN connection leaf certificates now support strong certificate mappings, a certificate-based authentication requirement introduced by [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). VPN connection leaf certificates now include a [SID extension](https://learn.microsoft.com/openspecs/windows_protocols/ms-wcce/e563cff8-1af6-4e6f-a655-7571ca482e71) of (1.3.6.1.4.1.311.25.2), which contains an encoded version of the user’s SID obtained from the onPremisesSecurityIdentifier attribute.
+> Microsoft Entra ID uses the most recently created certificate in the VPN connectivity blade as the Issuer. Microsoft Entra Conditional Access VPN connection leaf certificates now support strong certificate mappings, a certificate-based authentication requirement introduced by [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). VPN connection leaf certificates now include a [SID extension](/openspecs/windows_protocols/ms-wcce/e563cff8-1af6-4e6f-a655-7571ca482e71) of (1.3.6.1.4.1.311.25.2), which contains an encoded version of the user’s SID obtained from the onPremisesSecurityIdentifier attribute.
 
 **To create root certificates:**
 
 1. Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
-2. On the left menu, click **Azure Active Directory**.
-3. On the **Azure Active Directory** page, in the **Manage** section, click **Security**.
+2. On the left menu, click **Microsoft Entra ID**.
+3. On the **Microsoft Entra ID** page, in the **Manage** section, click **Security**.
 4. On the **Security** page, in the **Protect** section, click **Conditional Access**.
 5. On the **Conditional Access | Policies** page, in the **Manage** section, click **VPN Connectivity**.
 6. On the **VPN connectivity** page, click **New certificate**.
@@ -152,7 +150,6 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
 9. On the **New** page, select **Create**.
 
-
 ## Deploy conditional access root certificates to on-premises AD
 
 In this section, you deploy a trusted root certificate for VPN authentication to your on-premises AD.
@@ -193,14 +190,14 @@ In this section, you'll create OMA-DM based VPNv2 profiles using Intune to deplo
 
 1. In the Azure portal, select **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created in [Configure the VPN client by using Intune](how-to-aovpn-client-intune.md).
 
-2. In the policy editor, select **Properties** > **Settings** > **Base VPN**. Extend the existing **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the Azure AD Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
+2. In the policy editor, select **Properties** > **Settings** > **Base VPN**. Extend the existing **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the Microsoft Entra Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
 
     >[!NOTE]
     >Without this, the VPN client could retrieve the user certificate issued from the on-premises certificate authority, resulting in a failed VPN connection.
 
     ![Intune portal](../media/Always-On-Vpn/intune-eap-xml.png)
 
-3. Locate the section that ends with **\</AcceptServerName>\</EapType>** and insert the following string between these two values to provide the VPN client with the logic to select the Azure AD Conditional Access Certificate:
+3. Locate the section that ends with **\</AcceptServerName>\</EapType>** and insert the following string between these two values to provide the VPN client with the logic to select the Microsoft Entra Conditional Access Certificate:
 
     ```XML
     <TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions>
@@ -236,7 +233,7 @@ If the VPN profile does not show up on the client device, under Settings\\Networ
 
 ## Next steps
 
-You are done configuring the VPN profile to use Azure AD conditional access.
+You are done configuring the VPN profile to use Microsoft Entra Conditional Access.
 
 - To learn more about how conditional access works with VPNs, see [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access).
 

@@ -4,14 +4,12 @@ description: This topic provides an overview of Network Policy Server in Windows
 manager: dougkim
 ms.topic: article
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/20/2018
 ---
 
 # Network Policy Server (NPS)
-
->Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 You can use this topic for an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019. NPS is installed when you install the Network Policy and Access Services (NPAS) feature in Windows Server 2016 and Server 2019.
 

@@ -3,15 +3,13 @@ description: "Learn more about: Reducing the Active Directory Attack Surface"
 ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Reducing the Active Directory Attack Surface
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
 
 # Reducing the Active Directory Attack Surface
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section focuses on technical controls to implement to reduce the attack surface of the Active Directory installation. The section contains the following information:
 

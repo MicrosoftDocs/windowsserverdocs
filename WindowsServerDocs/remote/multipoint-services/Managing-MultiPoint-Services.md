@@ -3,9 +3,9 @@ title: Managing MultiPoint Services
 description: Overview of articles about managing MultiPoint Services
 ms.topic: article
 ms.assetid: 81135740-e9ce-4b4c-a770-760d741f20b1
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Managing MultiPoint Services

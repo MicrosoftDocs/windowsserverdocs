@@ -3,8 +3,8 @@ title: Deploy Always On VPN profile to Windows clients with Microsoft Intune
 description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Intune.
 ms.topic: article
 ms.date:  03/14/2023
-ms.author: anaharris
-author: anaharris-ms
+ms.author: roharwoo
+author: robinharwood
 ---
 
 # Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune
@@ -15,11 +15,11 @@ However, if you want to create a custom VPN profileXML, follow the guidance in [
 
 ## Prerequisites
 
-Intune uses Azure Active Directory (Azure AD) user groups, so you need to:
+Intune uses Microsoft Entra user groups, so you need to:
 
 - Ensure that you have a Private Key Infrastructure (PKI) capable of issuing user and device certificates for authentication. For more information on certificates for Intune, see [Use certificates for authentication in Microsoft Intune](/mem/intune/protect/certificates-configure).
 
-- Create an Azure AD user group that's associated with VPN users and assign new users to the group as needed.
+- Create a Microsoft Entra user group that's associated with VPN users and assign new users to the group as needed.
 
 - Make sure that the VPN users have VPN server connection permissions.
 
@@ -114,7 +114,7 @@ To test the configuration policy, sign in to a Windows 10+ client computer as a 
 
 1. In Settings, select **Accounts**, and select **Access work or school**.
 
-1. Select the account to connect to your Azure AD, and select **Info**.
+1. Select the account to connect to your Microsoft Entra ID, and select **Info**.
 
 1. Move down and select **Sync** to force an Intune policy evaluation and retrieval.
 

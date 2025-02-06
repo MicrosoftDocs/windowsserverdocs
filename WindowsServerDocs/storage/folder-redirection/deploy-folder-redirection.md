@@ -2,14 +2,14 @@
 title: Deploy Folder Redirection with Offline Files
 description: Learn how to deploy Folder Redirection and Offline Files together, including the steps needed to control access to the redirected files.
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/20/2023
 ---
 
 # Deploy Folder Redirection with Offline Files
 
-> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+> **
 
 This article describes the requirements for deploying Folder Redirection and Offline Files together, including the steps that you need to follow to control access to the redirected files.
 
@@ -206,11 +206,12 @@ After you create a GPO for Folder Redirection settings, follow these steps to ed
 1. In Group Policy Management, right-click the GPO you created (for example, **Folder Redirection Settings**), and then select **Edit**.
 1. In the Group Policy Management Editor window, navigate to **User Configuration** > **Policies** > **Windows Settings** > **Folder Redirection**.
 1. Right-click a folder that you want to redirect (for example, **Documents**), and then select **Properties**.
-1. In the **Properties** dialog box, from the **Setting** box, select **Basic - Redirect everyone’s folder to the same location**.
+1. In the **Properties** dialog box, from the **Settings** box, select **Basic - Redirect everyone’s folder to the same location**.
+
+    (Optional) In the **Policy Removal** section, select **Redirect the folder back to the local userprofile location when the policy is removed**. This setting can help make Folder Redirection behave more predictably for administrators and users.
 
 1. In the **Target folder location** section, select **Create a folder for each user under the root path**.
 1. In the **Root Path** box, enter the path to the file share that stores the redirected folders, such as `\\fs1.corp.contoso.com\users$`.
-1. (Optional) Select the **Settings** tab, and in the **Policy Removal** section, select **Redirect the folder back to the local userprofile location when the policy is removed**. This setting can help make Folder Redirection behave more predictably for administrators and users.
 1. Select **OK**, and then select **Yes** in the **Warning** dialog box.
 
 ## Step 6: Enable the Folder Redirection GPO

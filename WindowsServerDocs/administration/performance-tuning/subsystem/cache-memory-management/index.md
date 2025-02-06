@@ -2,8 +2,8 @@
 title: Performance Tuning for Cache and Memory Manager Subsystems
 description: Performance Tuning for Cache and Memory Manager Subsystems
 ms.topic: landing-page
-ms.author: pavel
-author: phstee
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

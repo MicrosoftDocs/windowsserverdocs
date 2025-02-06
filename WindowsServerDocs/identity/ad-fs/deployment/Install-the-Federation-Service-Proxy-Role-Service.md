@@ -4,7 +4,7 @@ ms.assetid: c50ecc6a-9504-4b4a-816f-e762dcf3a95e
 title: Install the Federation Service Proxy Role Service
 author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.author: billmath
 ---

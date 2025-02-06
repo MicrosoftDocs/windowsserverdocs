@@ -3,15 +3,13 @@ description: "Learn more about: Appendix B: Privileged Accounts and Groups in Ac
 ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: Appendix B - Privileged Accounts and Groups in Active Directory
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 09/26/2023
 ms.topic: article
 ---
 
 # Appendix B: Privileged Accounts and Groups in Active Directory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix B: Privileged Accounts and Groups in Active Directory
@@ -192,7 +190,7 @@ In addition to the highest privileged groups described earlier in this appendix,
 |Remote Management Users (Windows Server 2012)|Built-in container<p>Domain-local security group|Members of this group can access WMI resources over management protocols (such as WS-Management via the Windows Remote Management service). This applies only to WMI namespaces that grant access to the user.<p>**Direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
 |Replicator|Built-in container<p>Domain-local security group|Supports legacy file replication in a domain.<p>**Direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
 |Schema Admins (exists only in forest root domain)|Users container<p>Universal security group|Schema admins are the only users who can make modifications to the Active Directory schema, and only if the schema is write-enabled.<p>**Direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
-|Server Operators|Built-in container<p>Domain-local security group|Members of this group can administer domain servers.<p>**Direct user rights:**<p>Allow log on locally<p>Back up files and directories<p>Change the system time<p>Change the time zone<p>Force shutdown from a remote system<p>Restore files and directories<p>Shut down the system<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
+|Server Operators|Built-in container<p>Domain-local security group|Members of this group can administer domain controllers.<p>**Direct user rights:**<p>Allow log on locally<p>Back up files and directories<p>Change the system time<p>Change the time zone<p>Force shutdown from a remote system<p>Restore files and directories<p>Shut down the system<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
 |Terminal Server License Servers|Built-in container<p>Domain-local security group|Members of this group can update user accounts in Active Directory with information about license issuance, for the purpose of tracking and reporting TS Per User CAL usage<p>**Default direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|
 |Users|Built-in container<p>Domain-local security group|Users have permissions that allow them to read many objects and attributes in Active Directory, although they cannot change most. Users are prevented from making accidental or intentional system-wide changes and can run most applications.<p>**Direct user rights:**<p>Increase a process working set<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking|
 |Windows Authorization Access Group|Built-in container<p>Domain-local security group|Members of this group have access to the computed tokenGroupsGlobalAndUniversal attribute on User objects<p>**Direct user rights:** None<p>**Inherited user rights:**<p>Access this computer from the network<p>Add workstations to domain<p>Bypass traverse checking<p>Increase a process working set|

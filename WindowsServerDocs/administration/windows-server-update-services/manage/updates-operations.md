@@ -3,14 +3,14 @@ title: Updates Operations
 description: Windows Server Update Service (WSUS) - How to manage updates, including the approval process
 ms.topic: article
 ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 07/12/2023
 ---
 # Updates Operations
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 After updates have been synchronized to your WSUS server, they'll be scanned automatically for relevance to the server's client computers. However, you must approve the updates before they're deployed to the computers on your network. When you approve an update, you're essentially telling WSUS what to do with it (your choices are **Install** or **Decline** for a new update). You can approve updates for the **All computers** group or for subgroups. If you don't approve an update, its approval status remains **Not approved**, and your WSUS server allows clients to evaluate whether or not they need the update.
 

@@ -3,16 +3,14 @@ title: Deploy a two-node Storage Spaces Direct SOFS for UPD storage in Azure
 description: Learn how to use Storage Spaces Direct with RDS.
 ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
-author: IngridAtMicrosoft
-ms.author: wscontent
-ms.date: 10/18/2021
+author: robinharwood
+ms.author: roharwoo
+ms.date: 7/3/2024
 manager: scottman
 ---
 # Deploy a two-node Storage Spaces Direct scale-out file server for UPD storage in Azure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
-Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct with Windows Server 2016. If you're not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
+Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct with Windows Server 2016. If you're not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](remote-desktop-services-overview.md).
 
 > [!NOTE]
 > Microsoft just published an [Azure template to deploy a Storage Spaces Direct scale-out file server](https://azure.microsoft.com/resources/templates/storage-spaces-direct/)! You can use the template to create your deployment, or use the steps in this article.
@@ -53,7 +51,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
       - Recommended size: DS2 (increase the size if the domain controller will host more domain objects)
       - Use an automatically generated VNet.
       - Follow the steps to install AD DS.
-5. Set up the file server cluster nodes. You can do this by deploying the [Windows Server 2016 Storage Spaces Direct SOFS cluster Azure template](https://azure.microsoft.com/resources/templates/301-storage-spaces-direct/) or by following steps 6-11 to deploy manually.
+5. Set up the file server cluster nodes. You can do this by deploying the [Windows Server 2016 Storage Spaces Direct SOFS cluster Azure template](/samples/azure/azure-quickstart-templates/storage-spaces-direct/) or by following steps 6-11 to deploy manually.
 6. To manually set up the file server cluster nodes:
    1. Create the first node:
       1. Create a new virtual machine using the Windows Server 2016 image. (Click **New > Virtual Machines > Windows Server 2016.** Select **Resource Manager**, and then click **Create**.)

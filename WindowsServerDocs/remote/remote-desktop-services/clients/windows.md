@@ -3,26 +3,22 @@ title: Get started with the Remote Desktop app for Windows
 description: Basic setup instructions for the Remote Desktop app for Windows.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
-author: Heidilohr
+ms.author: alalve
 manager: femila
-ms.author: helohr
-ms.date: 08/08/2023
+author: xelu86
+ms.date: 7/3/2024
 ---
 # Get started with the Remote Desktop app for Windows
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows 11, and Windows 10
 
 You can use the Remote Desktop app for Windows to work with Windows apps and PCs remotely from a different Windows device.
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
 > [!TIP]
-> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop app for Windows](/azure/virtual-desktop/users/connect-microsoft-store).
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, we recommend you download Windows App instead. For more information, see [What is Windows App](/windows-app/overview).
 
 > [!IMPORTANT]
 > We're no longer updating the Remote Desktop app for Windows with new features and support for Azure Virtual Desktop will be removed in the future.
->
-> For the best Azure Virtual Desktop experience that includes the latest features and updates, we recommend you download the [Windows Desktop client](/azure/virtual-desktop/users/connect-windows) instead.
 
 ## Get the Remote Desktop app and start using it
 

@@ -4,13 +4,11 @@ description: Learn how to configure domain member and non-domain member client c
 manager: brianlic
 ms.topic: how-to
 ms.assetid: e16dbea9-0f0a-41db-b460-14a1a7ad7540
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Configure BranchCache Client Computers
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the following topics to configure domain member and non-domain member client computers as BranchCache distributed cache or hosted cache mode clients.
 

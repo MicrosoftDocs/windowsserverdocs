@@ -2,7 +2,7 @@
 title: Obtain and configure token signing and token decryption certificates for AD FS
 description: Learn about tasks and procedures you can perform to ensure your Azure Directory Federation Services (AD FS) token signing and token decryption certificates are up to date.
 author: jenfieldmsft
-ms.author: wscontent
+ms.author: roharwoo
 manager: amycolannino
 ms.date: 06/13/2023
 ms.topic: article
@@ -45,7 +45,7 @@ You can use the following procedure to identify the primary token signing and to
 
 You can run the following Windows PowerShell command: `Get-AdfsCertificate –CertificateType token-signing` (or `Get-AdfsCertificate –CertificateType token-decrypting`). You can also examine the current certificates in the MMC: Service->Certificates.
 
-:::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts3.png" alt-text="Screenshot of the PowerShell window, highlighting the Not After date and the Is Primary properties.":::
+:::image type="content" source="media/configure-TS-TD-certs-ad-fs/certificate-powershell.png" alt-text="Screenshot of the PowerShell window, highlighting the Not After date and the Is Primary properties.":::
 
 The AD FS uses the certificate for which the `IsPrimary` value is set to `True`.
 
@@ -65,7 +65,7 @@ You can generate a new self-signed certificate manually prior to the end of the 
 1. Two certificates should be listed now. One should have a **Not After** date of approximately one year in the future. The other should have the **IsPrimary** value **False**.
 
 > [!IMPORTANT]
-> To avoid a service outage, update the certificate information on Azure AD with a valid token-signing certificate.
+> To avoid a service outage, update the certificate information on Microsoft Entra ID with a valid token-signing certificate.
 
 ## If you don't use self-signed certificates
 
@@ -81,7 +81,7 @@ Then you must configure this certificate as the secondary AD FS token signing or
 1. Once you have imported the certificate. Open the **AD FS Management** console.
 1. Expand **Service** and then select **Certificates**.
 1. In the **Actions** pane, select **Add Token-Signing Certificate**.
-    :::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts4.png" alt-text="Screenshot of the AD FS dialog box, highlighting the Add Token Signing Certificate option.":::
+    :::image type="content" source="media/configure-TS-TD-certs-ad-fs/add-token-signing.png" alt-text="Screenshot of the AD FS dialog box, highlighting the Add Token Signing Certificate option.":::
 1. Select the new certificate from the list of displayed certificates, and then select **OK**.
 1. Open PowerShell and run `Set-ADFSProperties -AutoCertificateRollover $true`.
 
@@ -97,7 +97,7 @@ Federation partners consume your new certificates by pulling your federation met
 1. Select the secondary token signing certificate.
 1. In the **Actions** pane, select **Set as Primary**. Select **Yes** at the confirmation prompt.
 
-    :::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts5.png" alt-text="Screenshot of the AD FS dialog box, highlighting the Set as Primary option.":::
+    :::image type="content" source="media/configure-TS-TD-certs-ad-fs/primary-token-signing-certificate.png" alt-text="Screenshot of the AD FS dialog box, highlighting the Set as Primary option.":::
 
 ## Update federation partners
 
@@ -115,6 +115,8 @@ If your federation partners can't consume your federation metadata, you must man
 
 If **AutoCertificateRollover** is set to `False`, AD FS doesn't automatically generate or use new token signing or token decrypting certificates. You must perform these tasks manually. After allowing a sufficient period of time for all of your federation partners to consume the new secondary certificate, promote this secondary certificate to primary. In the MMC snap-in, select the secondary token signing certificate and in the Actions pane, select **Set As Primary**.
 
-## Update Azure AD
+<a name='update-azure-ad'></a>
 
-AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials. For more information, see [Renew federation certificates for Office 365 and Azure AD](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+## Update Microsoft Entra ID
+
+AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials. For more information, see [Renew federation certificates for Office 365 and Microsoft Entra ID](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).

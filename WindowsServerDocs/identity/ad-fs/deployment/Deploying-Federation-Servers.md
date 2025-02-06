@@ -4,7 +4,7 @@ ms.assetid: c4d83dd3-2846-4658-8b9c-93901ee69766
 title: Deploying Federation Servers
 author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.author: billmath
 ---

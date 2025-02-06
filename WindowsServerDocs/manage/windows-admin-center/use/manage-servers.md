@@ -2,13 +2,11 @@
 title: Manage Servers with Windows Admin Center
 description: Manage Servers with Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 11/21/2019
 ---
 # Manage Servers with Windows Admin Center
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 > [!Tip]
 > New to Windows Admin Center?
@@ -41,36 +39,41 @@ The following tools are available for server connections:
 | Tool | Description |
 | ---- | ----------- |
 | [Overview](#overview) | View server details and control server state |
+| [Settings](#settings) | View and modify services |
 | [Active Directory](#active-directory-preview) | Manage Active Directory |
-| [Backup](#backup) | View and configure Azure Backup |
+| [Azure Backup](#azure-backup) | View and configure Azure Backup |
+| [Azure File Sync](#azure-file-sync) | View and configure Azure File Sync |
+| [Azure hybrid center](#azure-hybrid-center) | View and configure Azure hybrid services |
+| [Azure Monitor](#azure-monitor) | View and configure Azure Monitor |
 | [Certificates](#certificates) | View and modify certificates |
 | [Containers](#containers) | View Containers |
 | [Devices](#devices) | View and modify devices |
 | [DHCP](#dhcp) | View and manage DHCP server configuration |
 | [DNS](#dns) | View and manage DNS server configuration |
 | [Events](#events) | View events |
-| [Files and file sharing](#files-and-file-sharing) | Browse files and folders |
+| [Files & file sharing](#files-and-file-sharing) | Browse files and folders |
 | [Firewall](#firewall) | View and modify firewall rules |
-| [Installed Apps](#installed-apps) | View and remove installed apps |
-| [Local Users and Groups](#local-users-and-groups) | View and modify local users and groups |
-| [Network](#network) | View and modify network devices |
+| [Installed apps](#installed-apps) | View and remove installed apps |
+| [Local users and groups](#local-users-and-groups) | View and modify local users and groups |
+| [Microsoft Defender for Cloud](#microsoft-defender-for-cloud) | View and configure Microsoft Defender for Cloud |
+| [Networks](#networks) | View and modify network devices |
 | [Packet monitoring](https://aka.ms/wac1908) | Monitor network packets |
 | [Performance monitor](https://aka.ms/perfmon-blog) | View performance counters and reports |
 | [PowerShell](#powershell) | Interact with server via PowerShell |
 | [Processes](#processes) | View and modify running processes |
 | [Registry](#registry) | View and modify registry entries |
 | [Remote Desktop](#remote-desktop) | Interact with server via Remote Desktop |
-| [Roles and Features](#roles-and-features) | View and modify roles and features |
-| [Scheduled Tasks](#scheduled-tasks) | View and modify scheduled tasks |
+| [Roles & features](#roles-and-features) | View and modify roles and features |
+| [Scheduled tasks](#scheduled-tasks) | View and modify scheduled tasks |
+| [Security](#security) | View and modify security settings |
 | [Services](#services) | View and modify services |
-| [Settings](#settings) | View and modify services |
 | [Storage](#storage) | View and modify storage devices |
 | [Storage Migration Service](#storage-migration-service) | Migrate servers and file shares to Azure or Windows Server 2019 |
 | [Storage Replica](#storage-replica) | Use Storage Replica to manage server-to-server storage replication |
 | [System Insights](#system-insights) | System Insights gives you increased insight into the functioning of your server. |
 | [Updates](#updates) | View installed and check for new updates |
-| [Virtual Machines](manage-virtual-machines.md) | View and manage virtual machines |
-| [Virtual Switches](#virtual-switches) | View and manage virtual switches |
+| [Virtual machines](manage-virtual-machines.md) | View and manage virtual machines |
+| [Virtual switches](#virtual-switches) | View and manage virtual switches |
 
 ## Overview
 
@@ -96,7 +99,7 @@ The following features are supported in Server Manager Overview:
 
 ### Active Directory features
 
-The following Active Directory management are available:
+The following Active Directory management features are available:
 
 - Create user
 - Create group
@@ -108,14 +111,12 @@ The following Active Directory management are available:
 - Computer objects: configure delegation to a single machine
 - Group objects: manage membership (add/remove 1 user at a time)
 
-## Backup
+## Azure Backup
 
-**Backup** allows you to protect your Windows server from corruptions, attacks or disasters by backing up your server directly to Microsoft Azure.
+**Azure Backup** allows you to protect your Windows server from corruptions, attacks or disasters by backing up your server directly to Microsoft Azure.
 [Learn more about Azure Backup.](https://aka.ms/windows-admin-center-backup)
 
-[Provide feedback for backup in Windows Admin Center](https://aka.ms/backup-wac-feedback)
-
-### Backup features
+### Azure Backup features
 
 The following features are supported in Backup:
 
@@ -125,6 +126,21 @@ The following features are supported in Backup:
 - View backup job history and status
 - View recovery points and recover data
 - Delete backup data
+
+## Azure File Sync
+
+**Azure File Sync** allows you to sync your file server with the cloud.
+[Learn more about Azure File Sync.](../azure/azure-file-sync.md)
+
+## Azure hybrid center
+
+**Azure hybrid center** is your centralized location for learning about and onboarding to Azure hybrid services.
+[Learn more about Azure hybrid services in Windows Admin Center.](../azure/index.md)
+
+## Azure Monitor
+
+**Azure Monitor** allows you to monitor your servers and configure alerts.
+[Learn more about Azure Monitor.](../azure/azure-monitor.md)
 
 ## Certificates
 
@@ -143,7 +159,7 @@ The following features are supported in Certificates:
 
 ## Containers
 
-**Containers** allows you to view the containers on a Windows Server container host. In the case of a running Windows Server Core container, you can view the event logs and access the CLI of the container.
+**Containers** allows you to view the containers on a Windows Server container host. In the case of a running Windows Server Core container, you can view the event logs and access the CLI of the container. It is available on the [extension feed](../configure/using-extensions.md).
 
 ## Devices
 
@@ -160,17 +176,17 @@ The following features are supported in Devices:
 
 ## DHCP
 
-**DHCP** allows you to manage connected devices on a computer or server.
+**DHCP** allows you to manage connected devices on a computer or server. It is available on the [extension feed](../configure/using-extensions.md).
 
 ### DHCP features
 
-- Create/configure/view IPV4 and IPV6 scopes
+- Create, configure, and view IPV4 and IPV6 scopes
 - Create address exclusions and configure start and end IP address
 - Create address reservations and configure client MAC address (IPV4), DUID and IAID (IPV6)
 
 ## DNS
 
-**DNS** allows you to manage connected devices on a computer or server.
+**DNS** allows you to manage connected devices on a computer or server. It is available on the [extension feed](../configure/using-extensions.md).
 
 ### DNS features
 
@@ -238,17 +254,17 @@ The following features are supported in Firewall:
 - Delete a firewall rule
 - Edit the properties of a firewall rule
 
-## Installed Apps
+## Installed apps
 
-**Installed Apps** allows you to list and uninstall application that are installed.
+**Installed apps** allows you to list and uninstall applications that are installed.
 
-## Local Users and Groups
+## Local users and groups
 
-**Local Users and Groups** allows you to manage security groups and users that exist locally on a computer or server.
+**Local users and groups** allows you to manage security groups and users that exist locally on a computer or server.
 
-### Local Users and Groups features
+### Local users and groups features
 
-The following features are supported in Local Users and Groups:
+The following features are supported in Local users and groups:
 
 - View and search users and groups
 - Create a new user or group
@@ -257,18 +273,22 @@ The following features are supported in Local Users and Groups:
 - Change a user's password
 - Edit the properties of a user or group
 
-## Network
+## Microsoft Defender for Cloud
 
-**Network** allows you to manage network devices and settings on a computer or server.
+**Microsoft Defender for Cloud** is a cloud-native application protection platform with a set of security measures and practices designed to protect cloud-based applications from various cyber threats and vulnerabilities.
 
-### Network features
+## Networks
+
+**Networks** allows you to manage network devices and settings on a computer or server.
+
+### Networks features
 
 The following features are supported in Network:
 
 - Browse and search existing network adapters
 - View details of a network adapter
 - Edit properties of a network adapter
-- Create an [Azure Network Adapter (Preview feature)](https://blogs.technet.microsoft.com/networking/2018/09/05/azurenetworkadapter/)
+- Create an [Azure Network Adapter (Preview feature)](https://techcommunity.microsoft.com/t5/networking-blog/top-10-networking-features-in-windows-server-2019-3-azure/ba-p/339780)
 
 ## PowerShell
 
@@ -333,19 +353,33 @@ The following features are supported in Roles and Features:
 - Install a role or feature
 - Remove a role or feature
 
-## Scheduled Tasks
+## Scheduled tasks
 
-**Scheduled Tasks** allows you to manage scheduled tasks on a computer or server.
+**Scheduled tasks** allows you to manage scheduled tasks on a computer or server.
 
-### Scheduled Tasks features
+### Scheduled tasks features
 
-The following features are supported in Scheduled Tasks:
+The following features are supported in Scheduled tasks:
 
 - Browse the task scheduler library
 - Edit scheduled tasks
 - Enable & Disable scheduled tasks
 - Start & Stop scheduled tasks
 - Create scheduled tasks
+
+## Security
+
+**Security** allows you to manage your security settings on a computer or server.
+
+### Security features
+
+The following features are supported in Security: 
+
+- Run and schedule virus scans
+- Enable and disable real-time threat protection
+- View threat history
+- Check Secured-core status
+- Enable or disable Secured-core security features
 
 ## Services
 
@@ -368,8 +402,8 @@ The following features are supported in Services:
 
 ### Settings features
 
+- View and modify File share settings
 - View and modify user and system environment variables
-- View the configuration for monitoring alerts from [Azure Monitor](../azure/azure-monitor.md)
 - View and modify the power configuration
 - View and modify Remote Desktop settings
 - View and modify role-based access control settings
@@ -431,20 +465,20 @@ The following features are supported in Updates:
 - Check online for updates from Microsoft Update
 - Manage [Azure Update Management](/azure/automation/update-management/overview) integration
 
-## Virtual Machines
+## Virtual machines
 
 See [Managing Virtual Machines with Windows Admin Center](manage-virtual-machines.md)
 
-## Virtual Switches
+## Virtual switches
 
-**Virtual Switches** allows you to manage Hyper-V virtual switches on a computer or server.
+**Virtual switches** allows you to manage Hyper-V virtual switches on a computer or server.
 
-### Features
+### Virtual switches features
 
-The following features are supported in Virtual Switches:
+The following features are supported in Virtual switches:
 
-- Browse and search Virtual Switches on a server
-- Create a new Virtual Switch
-- Rename a Virtual Switch
-- Delete an existing Virtual Switch
+- Browse and search Virtual switches on a server
+- Create a new Virtual switch
+- Rename a Virtual switch
+- Delete an existing Virtual switch
 - Edit the properties of a Virtual Switch
