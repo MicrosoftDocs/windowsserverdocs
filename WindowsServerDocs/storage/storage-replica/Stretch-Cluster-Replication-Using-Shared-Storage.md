@@ -146,10 +146,10 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 3. Create the Hyper-V compute cluster. Ensure that the cluster name is 15 characters or fewer. The example used below is SR-SRVCLUS. If the nodes are going to reside in different subnets, you must create an IP Address for the Cluster Name for each subnet and use the “OR” dependency.  More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
 
-4. Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.
+4. Configure a file share witness or cloud witness to provide quorum in the event of site loss.
 
    > [!NOTE]
-   > Windows Server now includes an option for [Cloud (Azure)-based Witness](../../failover-clustering/deploy-cloud-witness.md). You can choose this quorum option instead of the file share witness.
+   > Windows Server now includes an option for [cloud witness](../../failover-clustering/deploy-quorum-witness.md). You can choose this quorum option instead of the file share witness.
 
    > [!WARNING]
    > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
@@ -250,9 +250,6 @@ You will now create a normal failover cluster. After configuration, validation, 
    Set-ClusterQuorum -FileShareWitness \\someserver\someshare
    ```
 
-   > [!NOTE]
-   > Windows Server now includes an option for [Cloud (Azure)-based Witness](../../failover-clustering/deploy-cloud-witness.md). You can choose this quorum option instead of the file share witness.
-
    For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 4. Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728(v=ws.11)) and ensure that you have optimally configured cluster networking.
@@ -312,10 +309,9 @@ You will now create a normal failover cluster. After configuration, validation, 
 3. Create the File Server for General Use storage cluster. Ensure that the cluster name is 15 characters or fewer. The example used below is SR-SRVCLUS.  If the nodes are going to reside in different subnets, you must create an IP Address for the Cluster Name for each subnet and use the “OR” dependency.  More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
 
 4. Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.
-   >[!NOTE]
-   > Windows Server now includes an option for [Cloud (Azure)-based Witness](../../failover-clustering/deploy-cloud-witness.md). You can choose this quorum option instead of the file share witness.
-   >[!NOTE]
-   >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
+
+   > [!NOTE]
+   > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 5. If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 

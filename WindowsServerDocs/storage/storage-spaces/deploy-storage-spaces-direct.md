@@ -243,7 +243,7 @@ We recommend that you configure a witness for the cluster, so clusters with thre
 For more info, see the following topics:
 
 - [Configure and manage quorum](../../failover-clustering/manage-cluster-quorum.md)
-- [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md)
+- [Deploy a quorum witness](../../failover-clustering/deploy-quorum-witness.md)
 
 ### Step 3.5: Enable Storage Spaces Direct
 
