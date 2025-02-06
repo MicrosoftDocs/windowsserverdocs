@@ -1,7 +1,7 @@
 ﻿---
 title: Use a policy module with Network Device Enrollment Service
 description: Learn about the policy module and how it works. Understand how to install and uninstall the policy module for the Network Device Enrollment Service.
-author: robinharwood
+author: meaghanlewis
 ms.topic: article
 ms.author: mosagie
 ms.date: 02/06/2025
@@ -9,7 +9,7 @@ ms.date: 02/06/2025
 
 # Use a policy module with Network Device Enrollment Service
 
-The Active Directory Certificate Services (AD CS) Network Device Enrollment Service (NDES) support a policy module that provides extra security for the Simple Certificate Enrollment Protocol (SCEP). Without this policy module, when a user or a device requests a certificate, the SCEP requires either a unique or shared password. Using a legitimately obtained password, a rogue user could request a certificate that creates the following security risks:
+The Active Directory Certificate Services (AD CS) Network Device Enrollment Service (NDES) support a policy module that provides extra security for the Simple Certificate Enrollment Protocol (SCEP). Without this policy module, when a user or a device requests a certificate, the SCEP requires either a unique or shared password. A rogue user using a legitimately obtained password could request a certificate that creates the following security risks:
 
 - The subject name value matches a different user, allowing the rogue user to impersonate that other user.
 
