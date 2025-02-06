@@ -11989,6 +11989,11 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md",
       "redirect_url": "/windows-server/storage/storage-spaces/upgrade-storage-spaces-direct",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-cloud-witness.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": true
     }
   ]
 }

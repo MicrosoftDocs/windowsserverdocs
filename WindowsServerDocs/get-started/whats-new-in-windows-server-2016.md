@@ -502,7 +502,7 @@ For more information, see [Cluster Operating System Rolling Upgrade](../failover
 
 Cloud witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The cloud witness, like any other quorum witness, gets a vote and can participate in quorum calculations. You can configure cloud witness as a quorum witness using the Configure a Cluster Quorum wizard.
 
-For more information, see [Deploy a quorum witness](../failover-clustering/deploy-cloud-witness.md).
+For more information, see [Deploy a quorum witness](../failover-clustering/deploy-quorum-witness.md).
 
 ### Virtual Machine resiliency
 
