@@ -1,14 +1,13 @@
 ---
-title: DNS processes and interactions in Windows and Windows Server
-description: Learn about DNS processes, including client-server communications for query resolution, dynamic updates, and zone administration in Windows and Windows Server.
+title: DNS queries and lookups in Windows and Windows Server
+description: Learn about DNS queries and lookups in Windows Server, including iteration, caching, and resource records.
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/06/2025
-
 ---
 
-# DNS processes and interactions
+# DNS queries and lookups
 
 DNS processes and interactions involve the communications between DNS clients and DNS servers during the resolution of DNS queries and dynamic update, and between DNS servers during name resolution and zone administration. Secondary processes and interactions depend on the support for technologies such as Unicode and WINS. In this article learn about DNS processes, including client-server communications for query resolution, dynamic updates, and zone administration in Windows and Windows Server.
 
@@ -231,71 +230,3 @@ Keep in mind that if the queried reverse name isn't answerable from the DNS serv
 
 > [!NOTE]
 > Information the user should notice even if skimmingThe DNS console provides a means for you to configure a subnetted reverse lookup “classless” zone when the **Advanced** view is selected. This allows you to configure a zone in the in-addr.arpa domain for a limited set of assigned IP addresses where a nondefault IP subnet mask is used with those addresses. Checked that on win2022 and it's not there so it needs to be removed or rephrased
-
-### Forwarding
-
-A forwarder is a DNS server on a network used to forward DNS queries for external DNS names to DNS servers outside of that network. You can also forward queries according to specific domain names using conditional forwarders.
-
-A DNS server on a network is designated as a forwarder by having the other DNS servers in the network forward the queries they can't resolve locally to that DNS server. By using a forwarder, you can manage name resolution for names outside of your network, such as names on the Internet, and improve the efficiency of name resolution for the computers in your network.
-
-The following figure illustrates how external name queries are directed using forwarders.
-
-:::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-7.png" alt-text="Diagram showing overview of complete DNS query process.":::
-**External Name Queries Directed Using Forwarders**
-
-Without having a specific DNS server designated as a forwarder, all DNS servers can send queries outside of a network using their root hints. As a result, internal, and possibly critical, DNS information can be exposed on the Internet. In addition to this security and privacy issue, this method of resolution can result in a large volume of external traffic that is costly and inefficient for a network with a slow Internet connection or a company with high Internet service costs.
-
-When you designate a DNS server as a forwarder, you make that forwarder responsible for handling external traffic, thereby limiting DNS server exposure to the Internet. A forwarder builds up a large cache of external DNS information because all of the external DNS queries in the network are resolved through it. In a short amount of time, a forwarder will resolve a good portion of external DNS queries using this cached data and thereby decrease the Internet traffic over the network and the response time for DNS clients.
-
-#### Behavior of a DNS server configured to use forwarding
-
-A DNS server configured to use a forwarder behaves differently from a DNS server that isn't configured to use a forwarder. A DNS server configured to use a forwarder behaves as follows:
-
-1. When the DNS server receives a query, it attempts to resolve this query using the primary and secondary zones that it hosts and its cache.
-1. If the query can't be resolved using this local data, then it forwards the query to the DNS server designated as a forwarder.
-1. The DNS server waits briefly for an answer from the forwarder before attempting to contact the DNS servers specified in its root hints.
-
-When a DNS server forwards a query to a forwarder, it sends a recursive query to the forwarder. This is different from the iterative query that a DNS server sends to another DNS server during standard name resolution (name resolution that doesn't involve a forwarder).
-
-#### Forwarding sequence
-
-The sequence in which the forwarders configured on a DNS server are used is determined by the order in which the IP addresses are listed on the DNS server. After the DNS server forwards the query to the forwarder with the first IP address, it waits a short period for an answer from that forwarder (according to the DNS server’s time-out setting) before resuming the forwarding operation with the next IP address. It continues this process until it receives an affirmative answer from a forwarder.
-
-The following behavior in RED has changed and needs to be updated:
-
-Which forwarder a Microsoft DNS Server uses depends on the server’s configuration.  By default, ‘Dynamic Forwarder Reordering’ is enabled, so if the default is kept, then this is how the algorithm works:
-
-EXISTING REORDERING ALGORITHM
-
-1. The DNS Server allows admin to create forwarders in a preferred order.
-
-1. A dynamic list of forwarders is maintained. This gets reordered based on the response times. But this also gets reset to the configured order every 15 minutes (approximately as this is called by a thread which is overloaded to perform other works as well.).
-
-1. For a given query, the forwarders are picked as they appear in the dynamic list.
-
-1. If the response time is > 1 second, then it's considered a slow response. Each forwarder is allowed two consecutive slow responses, on the third it's put to the end of the dynamic list.
-
-1. If all the servers in the list go dead, then DNS has no way to know if the server is dead or slow. This monitoring has to be done outside the system.
-
-Unlike conventional resolution, where a roundtrip time (RTT) is associated with each server, the IP addresses in the forwarders list aren't ordered according to roundtrip time and must be reordered manually to change preference.
-
-### Forwarders and delegation
-
-A DNS server configured with a forwarder and hosting a parent zone will use its delegation information before forwarding queries. If no delegation record exists for the DNS name in the query, then the DNS server uses its forwarders to resolve the query.
-
-### Forwarders and root servers
-
-A common error when configuring forwarding is to attempt to configure forwarding on the root servers of a private DNS namespace. The goal of attempting to configure forwarding on root servers for a private DNS namespace is to forward all offsite queries to Internet DNS servers. Root servers can't be configured with standard forwarding. If a root server is queried about any domain name, then it refers to a DNS server that can answer the question (from its local zones, cache), or it responds with a failure (NXDOMAIN), but it can't be configured to forward to specific servers.
-
-> [!NOTE]
-> Information the user should notice even if skimmingA root server can be configured with a conditional forwarder. Conditional forwarding can be used to forward queries between root servers in separate DNS namespaces, although the DNS servers for the top-level domains in the namespace are better suited for this method of resolution.
-
-### Conditional forwarders
-
-A conditional forwarder is a DNS server on a network that is used to forward DNS queries according to the DNS domain name in the query. For example, a DNS server can be configured to forward all the queries it receives for names ending with widgets.example.com to the IP address of a DNS server or to the IP addresses of multiple DNS servers.
-
-### Intranet name resolution
-
-A conditional forwarder can be used to improve name resolution for domains within your intranet. Intranet name resolution can be improved by configuring DNS servers with forwarders for specific internal domain names. For example, all DNS servers in the domain widgets.example.com could be configured to forward queries for names that end with test.example.com to the authoritative DNS servers for merged.widgets.example.com, thereby removing the step of querying the root servers of example.com, or removing the step of configuring DNS servers in the widgets.example.com zone with secondary zones for test.example.com.
-
-DNS servers can use conditional forwarders to resolve queries between the DNS domain names of companies that share information. For example, two companies, Widgets Toys and Tailspin Toys, want to improve how the DNS clients of Widgets Toys resolve the names of the DNS clients of Tailspin Toys. The administrators from Tailspin Toys inform the administrators of Widgets Toys about the set of DNS servers in the Tailspin Toys network where Widgets can send queries for the domain dolls.tailspintoys.com. The DNS servers within the Widgets Toys network are configured to forward all queries for names ending with dolls.tailspintoys.com to the designated DNS servers in the network for Tailspin Toys. So, the DNS servers in the Widgets Toys network don't need to query their internal root servers, or the Internet root servers, to resolve queries for names ending with dolls.tailspintoys.com.

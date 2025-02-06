@@ -1,6 +1,6 @@
 ---
-title: DNS aging and scavenging in Windows Server
-description: Learn about DNS processes, including client-server communications for query resolution, dynamic updates, and zone administration in Windows and Windows Server.
+title: DNS Aging and Ccavenging in Windows Server
+description: Learn about DNS aging and scavenging in Windows Server, including prerequisites, terminology, and the aging and scavenging process for a sample record.
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo

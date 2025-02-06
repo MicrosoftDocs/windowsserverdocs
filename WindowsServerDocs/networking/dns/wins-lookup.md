@@ -1,6 +1,6 @@
 ---
-title: DNS WINS lookup integration in Windows Server
-description: Learn about DNS processes, including client-server communications for query resolution, dynamic updates, and zone administration in Windows and Windows Server.
+title: DNS WINS Lookup Integration in Windows Server
+description: Learn about DNS WINS lookup integration, WINS resource records, how WINS lookup works, and how WINS reverse lookup works in Windows Server.
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
@@ -10,7 +10,7 @@ ai-usage: ai-assisted # Used for image alt text
 
 # DNS WINS lookup integration
 
-Support for using Windows Internet Name Service (WINS) is provided to look up DNS names that the DNS domain namespace can't resolve. To accomplish WINS lookup, two specific resource record types are used to and can be enabled for any zones loaded by the DNS service:
+Support for using Windows Internet Name Service (WINS) is provided to look up DNS names that the DNS domain namespace can't resolve. To accomplish WINS lookup using the DNS server role on Windows Server, two specific resource record types are used to and can be enabled for any zones loaded by the DNS service:
 
 - The WINS resource record, which can be enabled to integrate WINS lookup into forward lookup zones
 
