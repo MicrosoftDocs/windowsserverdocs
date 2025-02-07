@@ -109,7 +109,7 @@ The following table summarizes DNS server audit events.
 
 Enhanced DNS logging and diagnostics in Windows Server includes DNS Audit events and DNS Analytic events. DNS audit logs are enabled by default, and don't significantly affect DNS server performance.
 
-DNS analytical logs aren't enabled by default and typically will only affect DNS server performance at high DNS query rates. For example, a DNS server running on modern hardware that's receiving 100,000 queries per second (QPS) can experience a performance degradation of 5% when analytic logs are enabled. There's no apparent performance impact for query rates of 50,000 QPS and lower. However, we recommend you monitor DNS server performance whenever logging is enabled.
+DNS analytical logs aren't enabled by default and typically will only affect DNS server performance at high DNS query rates. For example, a DNS server running on modern hardware that's receiving 100,000 queries per second (QPS) can experience a performance degradation of 5% when analytic logs are enabled. There's no apparent performance impact for query rates of 50,000 QPS and lower. However, we recommend you monitor DNS server performance whenever logging is enabled. 
 
 To enable DNS diagnostic logging:
 
@@ -117,7 +117,9 @@ To enable DNS diagnostic logging:
 
 1. Right-click **Analytical** and then select **Properties**.
 
-1. In **Properties** under **When maximum event log size is reached**, select **Do not overwrite events (Clear logs manually)**, select the **Enable logging** checkbox, and then select **OK** when asked whether you want to enable this log.
+1. If you want to query and view the logs from event viewer, choose **When maximum event log size is reached**, select **Do not overwrite events (Clear logs manually)**, select the **Enable logging** checkbox, and then select **OK** when asked whether you want to enable this log.
+
+1. If you want to enable circular logging, choose **Overwrite as needed (oldest events first)** and select **Enable logging**. After selecting **OK**, a [query error](/troubleshoot/windows-server/system-management-components/error-when-enabling-analytic-debug-event-log) will display. Logging is taking place even though this error is displayed. The error only means you can't view the events that are currently being logged in event viewer.
 
 1. Select **OK** to enable the DNS Server Analytic event log.
 
