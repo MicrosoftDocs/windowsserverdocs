@@ -109,7 +109,7 @@ The following table summarizes DNS server audit events.
 
 Enhanced DNS logging and diagnostics in Windows Server includes DNS Audit events and DNS Analytic events. DNS audit logs are enabled by default, and don't significantly affect DNS server performance.
 
-DNS analytical logs aren't enabled by default and typically will only affect DNS server performance at high DNS query rates. For example, a DNS server running on modern hardware that's receiving 100,000 queries per second (QPS) can experience a performance degradation of 5% when analytic logs are enabled. There's no apparent performance impact for query rates of 50,000 QPS and lower. However, we recommend you monitor DNS server performance whenever logging is enabled. 
+DNS analytical logs aren't enabled by default and typically will only affect DNS server performance at high DNS query rates. For example, a DNS server running on modern hardware that's receiving 100,000 queries per second (QPS) can experience a performance degradation of 5% when analytic logs are enabled. There's no apparent performance impact for query rates of 50,000 QPS and lower. However, we recommend you monitor DNS server performance whenever logging is enabled.
 
 To enable DNS diagnostic logging:
 
