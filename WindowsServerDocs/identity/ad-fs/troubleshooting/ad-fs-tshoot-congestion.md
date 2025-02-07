@@ -8,7 +8,7 @@ ms.date: 10/14/2024
 ms.topic: article
 ---
 
-# AD FS troubleshooting: Congestion control
+# AD FS troubleshooting: congestion control
 
 This article assists you with troubleshooting Active Directory Federation Services (AD FS) congestion issues.
 

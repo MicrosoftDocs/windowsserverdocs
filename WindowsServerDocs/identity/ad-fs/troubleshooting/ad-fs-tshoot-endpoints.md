@@ -8,7 +8,7 @@ ms.date: 10/14/2024
 ms.topic: article
 ---
 
-# AD FS Troubleshooting - AD FS metadata endpoints
+# AD FS troubleshooting - AD FS metadata endpoints
 
 Endpoints provide access to the federation server functionality of Active Directory Federation Services (AD FS), such as publishing federation metadata. To verify that the AD FS server is responding to web requests, you can check the various endpoints.
 
@@ -18,8 +18,9 @@ Passive federation refers to scenarios where your browser is redirected to the A
 
 1. Use a web browser to go to your AD FS federation metadata endpoint. An example is `https://sts.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml`.
 1. The .xml file downloads locally to your machine.
-1. Open it and verify that it contains information similar to the following screenshot.
-![Screenshot that shows a passive scenario.](media/ad-fs-tshoot-endpoints/meta2.png)
+1. Open it and verify that it contains information similar to the following image.
+
+   ![Screenshot that shows a passive scenario.](media/ad-fs-tshoot-endpoints/meta2.png)
 
 ## WS-MEX test (active test)
 
@@ -28,7 +29,7 @@ WS-MetaDataExchange is a web services protocol and is part of the WS-Federation 
 1. Use a web browser to go to your AD FS Federation metadata endpoint. An example is `https://sts.contoso.com/adfs/services/trust/mex`.
 1. The .xml file appears in the browser automatically and should look like the following image.
 
-:::image type="content" source="media/ad-fs-tshoot-endpoints/security-trust-file.png" alt-text="Screenshot that shows the AD FS federation metadata endpoint .xml file.":::
+   :::image type="content" source="media/ad-fs-tshoot-endpoints/security-trust-file.png" alt-text="Screenshot that shows the AD FS federation metadata endpoint .xml file.":::
 
 ## Related content
 
