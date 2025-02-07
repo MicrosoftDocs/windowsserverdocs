@@ -52,7 +52,7 @@ Run the following PowerShell command on all AD FS and WAP servers to make sure t
 
 ## Update TLS/SSL certificate settings
 
-Use Microsoft Entra Connect to update the TLS/SSL certificate on the affected AD FS and WAP servers. Follow the instructions at [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](entra-docs/identity/hybrid/connect/how-to-connect-fed-ssl-update).
+Use Microsoft Entra Connect to update the TLS/SSL certificate on the affected AD FS and WAP servers. Follow the instructions at [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
 
 ## Check for any AD FS replication errors
 
