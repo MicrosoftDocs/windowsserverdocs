@@ -1,33 +1,35 @@
 ﻿---
 title: Install and configure a policy module with the Network Device Enrollment Service
 description: Learn how to install, configure, and uninstall a policy module with the Network Device Enrollment Service.
-author: robinharwood
-ms.topic: overview
-ms.author: gswashington
-ms.date: 09/21/2023
+author: meaghanlewis
+ms.topic: how-to
+ms.author: mosagie
+ms.date: 02/06/2025
 ---
 
 # Install and configure a policy module with the Network Device Enrollment Service
 
-Applies To: Windows Server 2012 R2
+[Network Device Enrollment Service(NDES) for Active Directory Certificate Services](/windows-server/identity/ad-cs/network-device-enrollment-service-overview) support a policy module that provides extra security for the Simple Certificate Enrollment Protocol (SCEP). Using a policy module the NDES requires extra authentication to ensure that the certificate is issued to the right user.
 
-In Windows Server 2012 R2 the Active Directory Certificate Services (AD CS) Network Device Enrollment Service (NDES) supports a policy module that provides additional security for the Simple Certificate Enrollment Protocol (SCEP). This enhancement lets an organization or mobile device management solution address the issue described in [CERT Vulnerability Note VU\#971035](https://www.kb.cert.org/vuls/id/971035) titled, “Simple Certificate Enrollment Protocol (SCEP) does not strongly authenticate certificate requests.” For more information on how the policy module works and to learn about deployment options for NDES and a policy module, see [Using a Policy Module with the Network Device Enrollment Service](/using-policy-module-ndes.md)
+This article covers how-to install and configure a policy module with the Network Device Enrollment Service (NDES).
 
-For more information about using the policy module with Configuration Manager, see [Certificate Profiles in Configuration Manager](https://technet.microsoft.com/library/dn261202.aspx) in the System Center 2012 Configuration Manager Documentation Library.
+## Prerequisites
 
-For developer information about how to create your own policy module, see [INDESPolicy interface](https://msdn.microsoft.com/en-us/library/windows/desktop/dn383665\(v=vs.85\).aspx) on MSDN.
+- NDES role service is installed
+- NDES is configured
+- Read [Use a policy module with Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)#how-to-install-and-uninstall-the-policy-module)
 
 ## How to install and uninstall the policy module
 
-Before you can install the policy module, you must first install and configure the Network Device Enrollment Service, and verify that this can communicate successfully with an issuing certification authority. For more information, see [Network Device Enrollment Service Guidance](hh831498\(v=ws.11\).md).
+Before you can install the policy module, you must first install and configure NDES, and verify that the service communicate successfully with an issuing certification authority.
 
-If you've obtained a software solution that includes the policy module, follow the installation and configuration instructions that accompany this software rather than the instructions in this section. For example, System Center 2012 R2 Configuration Manager provides its own wizard, the Configuration Manager Policy Module Setup wizard, to install and configure the policy module.
+If you have a software solution that includes the policy module, follow the installation and configuration instructions for the software rather than the instructions in this section. For example, Configuration Manager provides its own wizard, and the Configuration Manager Policy Module Setup wizard, to install and configure the policy module.
 
-If there are no accompanying instructions, or you have developed your own policy module, use the following procedures.
+If there are no accompanying instructions, or you have developed your own policy module, use the following steps.
 
-## To install and configure the policy module
+### Install and configure the policy module
 
-1. Copy the .dll file for the policy module onto the server that runs the Network Device Enrollment Service.
+1. Copy the .dll file for the policy module onto the server that runs the NDES.
 
 1. Register the policy module by using the Regsvr32.exe command from an elevated command prompt.
 
@@ -35,13 +37,13 @@ If there are no accompanying instructions, or you have developed your own policy
 
 1. Run the following Windows PowerShell cmdlets to update the registry path HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\MSCEP:
 
-    ```
+    ```powershell
     Item -Path HKLM:\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules
     ```
 
     This command creates the new \\Modules key.
 
-    ```
+    ```powershell
     New-ItemProperty HKLM:\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\ -Name Policy -PropertyType String -Value "NDESPolicy.OTA.1"
     ```
 
@@ -49,16 +51,16 @@ If there are no accompanying instructions, or you have developed your own policy
 
 1. Restart Internet Information Services (IIS) by typing **IISReset** from an elevated command prompt.
 
-The Network Device Enrollment Service supports only one registered policy module and after it's registered and configured, you can't choose whether to use it with the Network Device Enrollment Service; it's always used. To remove the policy module, you must manually uninstall it by updating the registry and unregistering the policy module.
+The NDES supports only one registered policy module and after it's registered and configured, you can't choose whether to use it with the NDES; it's always used. To remove the policy module, you must manually uninstall it by updating the registry and unregistering the policy module.
 
 >[!IMPORTANT]
-> Removing the Network Device Enrollment Service role service does not uninstall the policy module.
+> Removing the NDES role service does not uninstall the policy module.
 
-### To uninstall the policy module
+### Uninstall the policy module
 
 1. Run the following Windows PowerShell cmdlet to remove the registry settings:
 
-    ```
+    ```powershell
     Remove-Item -Path HKLM:\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules -Recurse
     ```
 
@@ -68,10 +70,6 @@ The Network Device Enrollment Service supports only one registered policy module
 
 ## Related content
 
-[Windows Server Security Forum](https://aka.ms/adcsforum)
-
-[Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
-
-[Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
-
-[Windows PKI Blog](https://blogs.technet.com/b/pki/)
+- [What is Network Device Enrollment Service for Active Directory Certificate Services?](/windows-server/identity/ad-cs/network-device-enrollment-service-overview)
+- [Configure Network Device Enrollment Service to use a domain user account](/windows-server/identity/ad-cs/create-domain-user-account-ndes-service-account)
+- [Troubleshooting the NDES policy module in Microsoft Intune](/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-ndes-policy-module)
