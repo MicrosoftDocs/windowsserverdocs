@@ -117,7 +117,9 @@ To enable DNS diagnostic logging:
 
 1. Right-click **Analytical** and then select **Properties**.
 
-1. In **Properties** under **When maximum event log size is reached**, select **Do not overwrite events (Clear logs manually)**, select the **Enable logging** checkbox, and then select **OK** when asked whether you want to enable this log.
+1. If you want to query and view the logs from event viewer, choose **When maximum event log size is reached**, select **Do not overwrite events (Clear logs manually)**, select the **Enable logging** checkbox, and then select **OK** when asked whether you want to enable this log.
+
+1. If you want to enable circular logging, choose **Overwrite as needed (oldest events first)** and select **Enable logging**. After selecting **OK**, a [query error](/troubleshoot/windows-server/system-management-components/error-when-enabling-analytic-debug-event-log) will display. Logging is taking place even though this error is displayed. The error only means you can't view the events that are currently being logged in event viewer.
 
 1. Select **OK** to enable the DNS Server Analytic event log.
 
