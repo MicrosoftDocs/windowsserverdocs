@@ -1,5 +1,5 @@
 ﻿---
-title: Install and configure a policy module with the Network Device Enrollment Service
+title: Install a policy module with the Network Device Enrollment Service
 description: Learn how to install, configure, and uninstall a policy module with the Network Device Enrollment Service.
 author: meaghanlewis
 ms.topic: how-to
@@ -7,7 +7,7 @@ ms.author: mosagie
 ms.date: 02/06/2025
 ---
 
-# Install and configure a policy module with the Network Device Enrollment Service
+# Install a policy module with the Network Device Enrollment Service
 
 [Network Device Enrollment Service(NDES) for Active Directory Certificate Services](/windows-server/identity/ad-cs/network-device-enrollment-service-overview) support a policy module that provides extra security for the Simple Certificate Enrollment Protocol (SCEP). Using a policy module the NDES requires extra authentication to ensure that the certificate is issued to the right user.
 

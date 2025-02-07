@@ -1038,6 +1038,8 @@
         href: ad-cs/certificate-template-concepts.md
       - name: Network Device Enrollment Service
         href: ad-cs/network-device-enrollment-service-overview.md
+      - name: Install a policy module with Network Device Enrollment Service
+        href: ad-cs/install-policy-module-network-device-enrollment-service.md
       - name: PKI design considerations
         href: ad-cs/pki-design-considerations.md
     - name: How-to guides
