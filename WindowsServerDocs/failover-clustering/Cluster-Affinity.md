@@ -22,11 +22,11 @@ Affinity is a rule you would set up that establishes a relationship between two 
 When looking at the properties of a group, the parameter AntiAffinityClassNames is blank as a default. In the examples below, Group1 and Group2 should be separated from running on the same node.  To view the property, the PowerShell command and result would be:
 
 ```powershell
-Get-ClusterGroup Group1 | fl AntiAffinityClassNames
-    AntiAffinityClassNames : {}
+Get-ClusterGroup DCVM01 | fl AntiAffinityClassNames
+#    AntiAffinityClassNames : {}
 
-Get-ClusterGroup Group2 | fl AntiAffinityClassNames
-    AntiAffinityClassNames : {}
+Get-ClusterGroup DCVM02 | fl AntiAffinityClassNames
+#    AntiAffinityClassNames : {}
 ```
 
 Because AntiAffinityClassNames are not defined as a default, these roles can run together or apart. The goal is to keep them separated. The value for AntiAffinityClassNames can be whatever you want them to be, they just have to be the same. Say that Group1 and Group2 are domain controllers running in virtual machines and they would be best served running on different nodes. Because these are domain controllers, I will use DC for the class name. To set the value, the PowerShell command and results would be:
@@ -34,19 +34,14 @@ Because AntiAffinityClassNames are not defined as a default, these roles can run
 ```powershell
 $AntiAffinity = New-Object System.Collections.Specialized.StringCollection
 $AntiAffinity.Add("DC")
-(Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
-(Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
+(Get-ClusterGroup -Name "DCVM01").AntiAffinityClassNames = $AntiAffinity
+(Get-ClusterGroup -Name "DCVM02").AntiAffinityClassNames = $AntiAffinity
 
-$AntiAffinity = New-Object System.Collections.Specialized.StringCollection
-$AntiAffinity.Add("DC")
-(Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
-(Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
+Get-ClusterGroup "DCVM01" | fl AntiAffinityClassNames
+#    AntiAffinityClassNames : {DC}
 
-Get-ClusterGroup "Group1" | fl AntiAffinityClassNames
-    AntiAffinityClassNames : {DC}
-
-Get-ClusterGroup "Group2" | fl AntiAffinityClassNames
-    AntiAffinityClassNames : {DC}
+Get-ClusterGroup "DCVM02" | fl AntiAffinityClassNames
+#    AntiAffinityClassNames : {DC}
 ```
 
 Now that they are set, failover clustering will attempt to keep them apart.
