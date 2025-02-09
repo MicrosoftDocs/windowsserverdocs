@@ -299,7 +299,7 @@ You should not require SSL for these virtual roots:
 
 - **SelfUpdate**
 
-The certificate of the certification authority (CA) must be imported into each WSUS server's Trusted Root CA store for the local computer, or the Trusted Root CA store for WSUS if it exists. 
+The certificate of the Root certification authority (CA) must be imported into each WSUS server's Trusted Root CA store for the local computer, or the Trusted Root CA store for WSUS if it exists. If there is an Intermediate CA (or CAs) that issued the WSUS Server's SSL certificate, the certificate for those CA(s) should be imported into the WSUS server's Intermediate CA store.
 
 For more information about how to use SSL certificates in IIS, see [Require Secure Sockets Layer (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732367(v=ws.10)).
 
@@ -382,7 +382,7 @@ There are two approaches to assigning client computers to computer groups. The r
 
 Assuming that you've configured the WSUS server to help protect the client computers' connections by using SSL, you must configure the client computers to trust those SSL connections.
 
-The WSUS server's SSL certificate must be imported into the client computers' Trusted Root CA store, or into the client computers' Automatic Update Service Trusted Root CA store if it exists.
+The WSUS server's SSL certificate issuing chain must be imported into the client computers' Trusted Root CA and Intermediate CA store(s), or into the client computers' Automatic Update Service Trusted Root CA store if it exists. If the WSUS server's SSL certificate is self-signed by the WSUS server, then it should be imported into the Trusted People store on the client computers.
 
 > [!IMPORTANT]
 > You must use the certificate store for the local computer. You can't use a user's certificate store.
