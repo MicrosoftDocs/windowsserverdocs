@@ -3,8 +3,8 @@ title: Tutorial - Deploy Always On VPN - Configure Certification Authority templ
 description:  Learn how to create certificate templates and enroll and validate certificates for Always On VPN connections.
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
-ms.author: anaharris
-author: anaharris-ms
+ms.author: roharwoo
+author: robinharwood
 ms.date:  03/14/2023
 ---
 
@@ -272,4 +272,4 @@ Because you're using Group Policy to autoenroll NPS certificates, you only need 
 
 - [Deploy Always On VPN Tutorial: Configure Windows client Always On VPN connections](tutorial-aovpn-deploy-configure-client.md)
 
-- [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md)
+- [Troubleshoot Always On VPN](/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn)

@@ -1,17 +1,16 @@
 ---
 title: Guest operating system and application supportability on Hyper-V
-description: Understand which versions of Windows Server or Azure Stack HCI are compatible products for a guest operating system or application that has been validated for Hyper-V.
+description: Understand which versions of Windows Server or Azure Local are compatible products for a guest operating system or application that has been validated for Hyper-V.
 ms.topic: conceptual
-author: dknappettmsft
-ms.author: daknappe
+author: meaghanlewis
+ms.author: mosagie
 manager: femila
 ms.date: 01/11/2022
-ms.prod: windows-server
 ---
 
 # Guest operating system and application supportability on Hyper-V
 
-Hyper-V is a hypervisor that is broadly used in many Microsoft server products, including the Windows Server family (Datacenter, Standard, and Essentials editions) and Azure Stack HCI. Hyper-V provides a platform with broad ecosystem support and compatibility. This article clarifies which versions of Windows Server or Azure Stack HCI map to which Hyper-V build numbers. This helps understand supported scenarios where a guest operating system or application has been validated for Hyper-V.
+Hyper-V is a hypervisor that is broadly used in many Microsoft server products, including the Windows Server family (Datacenter, Standard, and Essentials editions) and Azure Local. Hyper-V provides a platform with broad ecosystem support and compatibility. This article clarifies which versions of Windows Server or Azure Local map to which Hyper-V build numbers. This helps understand supported scenarios where a guest operating system or application has been validated for Hyper-V.
 
 Although the different products that include Hyper-V could contain variations in features, the common codebase provides a consistent platform for guest operating systems and applications running inside of a virtual machine to run on compatible products that share the same Hyper-V build number. This means that any support or compatibility statements for a guest operating system or application that is certified for specific builds of Hyper-V is compatible with all products that share the same build number for Hyper-V.
 

@@ -3,14 +3,11 @@ title: Credentials Processes in Windows Authentication
 description: Learn about how Windows authentication processes credentials.
 ms.topic: article
 ms.assetid: 48c60816-fb8b-447c-9c8e-800c2e05b14f
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/12/2016
+ms.author: roharwoo
+author: robinharwood
+ms.date: 09/13/2023
 ---
 # Credentials Processes in Windows Authentication
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This reference topic for the IT professional describes how Windows authentication processes credentials.
 
@@ -22,7 +19,7 @@ Local security information is stored in the registry under **HKEY_LOCAL_MACHINE\
 
 The following diagram shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.
 
-![Diagram that shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.](../media/credentials-processes-in-windows-authentication/AuthN_LSA_Architecture_Client.gif)
+![Diagram that shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.](../media/credentials-processes-in-windows-authentication/authn_lsa_architecture_client.png)
 
 The following table describes each component that manages credentials in the authentication process at the point of logon.
 
@@ -124,7 +121,8 @@ The credential provider enumerates logon tiles in the following instances:
 
 The following diagram shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic.
 
-![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic](../media/credentials-processes-in-windows-authentication/AuthN_CredMan_CredProv.gif)
+![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic.](../media/credentials-processes-in-windows-authentication/authn_credman_credprov.png)
+
 
 ## <a name="BKMK_CredentialInputForApplicationAndServiceLogon"></a>Credential input for application and service logon
 Windows authentication is designed to manage credentials for applications or services that do not require user interaction. Applications in user mode are limited in terms of what system resources they have access to, while services can have unrestricted access to the system memory and external devices.
@@ -153,7 +151,7 @@ Applications can run in user mode where the application can run as any principal
 
 SSPI is available through the Secur32.dll module, which is an API used for obtaining integrated security services for authentication, message integrity, and message privacy. It provides an abstraction layer between application-level protocols and security protocols. Because different applications require different ways of identifying or authenticating users and different ways of encrypting data as it travels across a network, SSPI provides a way to access dynamic-link libraries (DLLs) that contain different authentication and cryptographic functions. These DLLs are called Security Support Providers (SSPs).
 
-Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641731(v=ws.10)) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/group-managed-service-accounts-overview.md).
+Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641731(v=ws.10)) and [Group Managed Service Accounts Overview](../../identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md).
 
 **Services and kernel mode**
 

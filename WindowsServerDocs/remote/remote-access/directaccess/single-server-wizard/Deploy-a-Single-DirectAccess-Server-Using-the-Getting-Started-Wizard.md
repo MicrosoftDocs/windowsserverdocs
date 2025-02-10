@@ -4,13 +4,11 @@ description: Learn about the DirectAccess scenario that uses a single DirectAcce
 manager: brianlic
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 >[!IMPORTANT]
 >Microsoft highly recommends that you use Always On VPN instead of DirectAccess for new deployments. For more information, see [Always on VPN](../../overview-always-on-vpn.md).
@@ -153,6 +151,6 @@ The following table provides links to additional resources.
 |--------|-------|
 |**Remote Access on TechNet**|[Remote Access TechCenter](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn756544(v=ws.11))|
 |**Tools and settings**|[Remote Access PowerShell cmdlets](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn756544(v=ws.11))|
-|**Community resources**|[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|
+|**Community resources**|[DirectAccess Wiki entries](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn636118(v=ws.11))|
 |**Related technologies**|[How IPv6 works](/previous-versions/windows/it-pro/windows-server-2003/cc781672(v=ws.10))|
 

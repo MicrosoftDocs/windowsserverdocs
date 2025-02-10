@@ -1,17 +1,17 @@
 ---
 title: Set up the Remote Desktop web client for your users
 description: Describes how an admin can set up the Remote Desktop web client.
-ms.author: helohr
-ms.date: 09/19/2019
+author: xelu86
+ms.date: 7/3/2024
 ms.topic: article
-author: Heidilohr
+ms.author: alalve
 ---
 # Set up the Remote Desktop web client for your users
 
 The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
 >[!IMPORTANT]
->The web client does support using Azure AD Application Proxy but does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
+>The web client does support using Microsoft Entra application proxy but does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
 
 ## What you'll need to set up the web client
 
@@ -19,11 +19,12 @@ Before getting started, keep the following things in mind:
 
 * Make sure your [Remote Desktop deployment](../rds-deploy-infrastructure.md) has an RD Gateway, an RD Connection Broker, and RD Web Access running on Windows Server 2016 or 2019.
 * Make sure your deployment is configured for [per-user client access licenses](../rds-client-access-license.md) (CALs) instead of per-device, otherwise all licenses will be consumed.
-* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
+* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contain this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
-* Make sure that any computers your users will connect to are running one of the following OS versions:
-  * Windows 10
-  * Windows Server 2008R2 or later
+* Make sure that any computers your users connect to are running one of the following OS versions:
+  
+  * Windows 10 or later
+  * Windows Server 2016 or later
 
 Your users will see better performance connecting to Windows Server 2016 (or later) and Windows 10 (version 1611 or later).
 
@@ -46,32 +47,47 @@ To install the web client for the first time, follow these steps:
 1. On the RD Connection Broker server, obtain the certificate used for Remote Desktop connections and export it as a .cer file. Copy the .cer file from the RD Connection Broker to the server running the RD Web role.
 2. On the RD Web Access server, open an elevated PowerShell prompt.
 3. On Windows Server 2016, update the PowerShellGet module since the inbox version doesn't support installing the web client management module. To update PowerShellGet, run the following cmdlet:
+
     ```PowerShell
     Install-Module -Name PowerShellGet -Force
     ```
-
+    
+    > [!NOTE]
+    > To access the PowerShell Gallery, Transport Layer Security (TLS) 1.2 or higher is required. Use the following command to enable TLS 1.2 in your PowerShell session:
+    >
+    >```powershell
+    >[Net.ServicePointManager]::SecurityProtocol =
+    >[Net.ServicePointManager]::SecurityProtocol -bor
+    >[Net.SecurityProtocolType]::Tls12
+    >```
+    
     >[!IMPORTANT]
     >You'll need to restart PowerShell before the update can take effect, otherwise the module may not work.
 
 4. Install the Remote Desktop web client management PowerShell module from the PowerShell gallery with this cmdlet:
+
     ```PowerShell
     Install-Module -Name RDWebClientManagement
     ```
 
 5. After that, run the following cmdlet to download the latest version of the Remote Desktop web client:
+
     ```PowerShell
     Install-RDWebClientPackage
     ```
 
 6. Next, run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker:
+    
     ```PowerShell
     Import-RDWebClientBrokerCert <.cer file path>
     ```
 
 7. Finally, run this cmdlet to publish the Remote Desktop web client:
+    
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
+
     Make sure you can access the web client at the web client URL with your server name, formatted as `https://server_FQDN/RDWeb/webclient/index.html`. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
 
     >[!NOTE]
@@ -80,6 +96,7 @@ To install the web client for the first time, follow these steps:
 
 >[!NOTE]
 >To see a list of all supported cmdlets for the RDWebClientManagement module, run the following cmdlet in PowerShell:
+>
 >```PowerShell
 >Get-Command -Module RDWebClientManagement
 >```
@@ -98,13 +115,13 @@ When a new version of the Remote Desktop web client is available, follow these s
     Publish-RDWebClientPackage -Type Test -Latest
     ```
 
-    The client should appear on the test URL that corresponds to your web client URL (for example, <https://server_FQDN/RDWeb/webclient-test/index.html>).
+    The client should appear on the test URL that corresponds to your web client URL (for example, `<https://server_FQDN/RDWeb/webclient-test/index.html>`).
 3. Publish the client for users by running the following cmdlet:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
 
-    This will replace the client for all users when they relaunch the web page.
+    This replaces the client for all users when they relaunch the web page.
 
 ## How to uninstall the Remote Desktop web client
 
@@ -178,7 +195,7 @@ This section describes how to enable a web client connection to an RD Broker wit
 
 ### Setting up the RD Broker server
 
-#### Follow these steps if there is no certificate bound to the RD Broker server
+#### Follow these steps if there's no certificate bound to the RD Broker server
 
 1. Open **Server Manager** > **Remote Desktop Services**.
 
@@ -190,7 +207,7 @@ This section describes how to enable a web client connection to an RD Broker wit
 
 5. In the list of Certificate Levels, select **RD Connection Broker - Enable Single Sign On**. You have two options: (1) create a new certificate or (2) an existing certificate.
 
-#### Follow these steps if there is a certificate previously bound to the RD Broker server
+#### Follow these steps if there's a certificate previously bound to the RD Broker server
 
 1. Open the certificate bound to the Broker and copy the **Thumbprint** value.
 
@@ -244,10 +261,10 @@ Follow these steps if the RD Session Host server is different from the RD Broker
 * The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
 
 ## How to pre-configure settings for Remote Desktop web client users
-This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client.
+This section tells you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client.
 
 ### Suppress telemetry
-By default, users may choose to enable or disable collection of telemetry data that is sent to Microsoft. For information about the telemetry data Microsoft collects, please refer to our Privacy Statement via the link in the **About** side panel.
+By default, users may choose to enable or disable collection of telemetry data that is sent to Microsoft. For information about the telemetry data Microsoft collects, refer to our Privacy Statement via the link in the **About** side panel.
 
 As an administrator, you can choose to suppress telemetry collection for your deployment using the following PowerShell cmdlet:
 
@@ -262,12 +279,12 @@ By default, the user may select to enable or disable telemetry. A boolean value 
 >[!NOTE]
 >This setting currently only works with the RDS web client, not the Azure Virtual Desktop web client.
 
-By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following PowerShell command:
+By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an `.rdp` file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following PowerShell command:
 
    ```PowerShell
     Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)
    ```
- By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally installed RDP client.
+ By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** forces the user to launch resources by downloading an `.rdp` file to handle with a locally installed RDP client.
 
 ### Reset RDWebClientDeploymentSetting configurations to default
 
@@ -307,9 +324,9 @@ If you can't solve the issue based on the troubleshooting instructions in this a
 
 * Select the ellipsis in the upper-right corner and navigate to the **About** page in the dropdown menu.
 * Under **Capture support information** select the **Start recording** button.
-* Perform the operation(s) in the web client that produced the issue you are trying to diagnose.
+* Perform the operation(s) in the web client that produced the issue you're trying to diagnose.
 * Navigate to the **About** page and select **Stop recording**.
-* Your browser will automatically download a .txt file titled **RD Console Logs.txt**. This file will contain the full console log activity generated while reproducing the target issue.
+* Your browser will automatically download a .txt file titled **RD Console Logs.txt**. This file contains the full console log activity generated while reproducing the target issue.
 
 The console may also be accessed directly through your browser. The console is generally located under the developer tools. For example, you can access the log in Microsoft Edge by pressing the **F12** key, or by selecting the ellipsis, then navigating to **More tools** > **Developer Tools**.
 

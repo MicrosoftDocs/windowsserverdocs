@@ -3,15 +3,15 @@ title: wdsutil get-imagegroup
 description: Reference article for wdsutil get-imagegroup, which retrieves information about an image group and the images in it.
 ms.topic: reference
 ms.assetid: 0fc25aca-a529-44ee-bc8e-96bc8affb458
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-imagegroup
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Retrieves information about an image group and the images within it.
 

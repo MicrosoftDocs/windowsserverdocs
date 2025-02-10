@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Performance history for clusters"
 title: Performance history for clusters
-ms.author: cosdar
+ms.author: roharwoo
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
@@ -9,8 +9,6 @@ ms.date: 02/02/2018
 ---
 
 # Performance history for clusters
-
->Applies to: Windows Server 2022, Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes the performance history collected for clusters.
 

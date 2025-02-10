@@ -3,7 +3,7 @@ description: "Learn more about: Autonomy vs. Isolation"
 ms.assetid: ef63d40c-a262-4a18-938d-b95c10680c0b
 title: Autonomy vs. Isolation
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/16/2023
 ms.topic: article
@@ -11,8 +11,6 @@ ms.custom: inhenkel
 ---
 
 # Autonomy vs. Isolation
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can design your Active Directory logical structure to achieve either of the following:
 

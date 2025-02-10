@@ -3,8 +3,8 @@ title: Using the verbose command
 description: Reference article for verbose, which displays verbose output for a specified command.
 ms.topic: reference
 ms.assetid: fcf30ae7-818f-4e7e-a083-a1812682032b
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---

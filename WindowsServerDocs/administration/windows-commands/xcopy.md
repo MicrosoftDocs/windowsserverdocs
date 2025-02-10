@@ -3,9 +3,9 @@ title: xcopy
 description: Reference article for xcopy, which copies files and directories, including subdirectories.
 ms.topic: reference
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
-ms.author: jgerend
-author: JasonGerend
-ms.date: 09/06/2023
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/28/2024
 ---
 
 # xcopy
@@ -17,7 +17,7 @@ For examples of how to use this command, see [Examples](#examples).
 ## Syntax
 
 ```
-Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-DD-YYYY]] [/u] [/i] [/s [/e]] [/t] [/k] [/r] [/h] [{/a | /m}] [/n] [/o] [/x] [/exclude:FileName1[+[FileName2]][+[FileName3]]] [{/y | /-y}] [/z] [/b] [/j] [/compress]
+xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-DD-YYYY]] [/u] [/i] [/s [/e]] [/t] [/k] [/r] [/h] [{/a | /m}] [/n] [/o] [/x] [/exclude:FileName1[+[FileName2]][+[FileName3]]] [{/y | /-y}] [/z] [/b] [/j] [/compress]
 ```
 
 ### Parameters
@@ -48,13 +48,15 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the _destination_ file system. The _destination_ file system can be FAT or NTFS.|
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
-|/exclude:FileName1[+[FileName2]][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file. When any of the strings match any part of the absolute path of the file to be copied, that file will be excluded from being copied. For example, specifying the string **obj** will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
+|/exclude:FileName1[+[FileName2]][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file contains search strings with each string on a separate line in the file. When any of the strings match any part of the absolute path of the file to be copied, that file is excluded from being copied. For example, specifying the string **obj** will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
 |/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
 |/-y|Prompts to confirm that you want to overwrite an existing destination file.|
 |/z|Copies over a network in restartable mode.|
 |/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista®.|
 |/j|Copies files without buffering. Recommended for very large files. This parameter was added in Windows Server 2008 R2.|
 |/compress|Request network compression during file transfer where applicable.|
+|/[`-`]sparse|Enables or disables retaining the sparse state of files during copy process. If both parameters are specified, **/-sparse** overrides **/sparse**.|
+|/noclone|Doesn't attempt block cloning as an optimization.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks
@@ -95,9 +97,9 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
   The `xcopy` command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Related links](#related-links).
 
-- Comparing `xcopy` and **diskcopy**
+- Comparing `xcopy` and `diskcopy`
 
-  If you have a disk that contains files in subdirectories and you want to copy it to a disk that has a different format, use the `xcopy` command instead of **diskcopy**. Because the **diskcopy** command copies disks track by track, your source and destination disks must have the same format. The `xcopy` command does not have this requirement. Use `xcopy` unless you need a complete disk image copy.
+  If you have a disk that contains files in subdirectories and you want to copy it to a disk that has a different format, use the `xcopy` command instead of `diskcopy`. Because the `diskcopy` command copies disks track by track, your source and destination disks must have the same format. The `xcopy` command doesn't have this requirement. Use `xcopy` unless you need a complete disk image copy.
 
 - Insufficient memory error
 
@@ -112,7 +114,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
   |0|Files were copied without error.|
   |1|No files were found to copy.|
   |2|The user pressed CTRL+C to terminate `xcopy`.|
-  |4|Initialization error occurred. There is not enough memory or disk space, or you entered an invalid drive name or invalid syntax on the command line.|
+  |4|Initialization error occurred. There isn't enough memory or disk space, or you entered an invalid drive name or invalid syntax on the command line.|
   |5|Disk write error occurred.|
 
 ## Examples
@@ -155,7 +157,7 @@ The file xcopy.out lists every file that is to be copied.
 xcopy \customer h:\public\address /s /e /k /p
 ```
 
-**7.** To issue the previous command, ensure that `xcopy` creates the \Address directory if it does not exist, and suppress the message that appears when you create a new directory, add the **/i** command-line option as follows:
+**7.** To issue the previous command, ensure that `xcopy` creates the \Address directory if it doesn't exist, and suppress the message that appears when you create a new directory, add the **/i** command-line option as follows:
 
 ```
 xcopy \customer h:\public\address /s /e /k /p /i

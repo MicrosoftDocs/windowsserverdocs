@@ -3,15 +3,15 @@ title: Deploy roaming user profiles
 description: Learn how to deploy roaming user profiles so that users receive the same operating system and application settings on multiple computers.
 TOCTitle: Deploy roaming user profiles
 ms.topic: conceptual
-author: JasonGerend
+author: robinharwood
 manager: brianlic
 ms.date: 03/21/2023
-ms.author: jgerend
+ms.author: roharwoo
 ---
 
 # Deploy roaming user profiles
 
->**Applies To:** Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 11, Windows 10, Windows 8.1, Windows 8, Windows 7
+>**
 
 This article describes how to use Windows Server to deploy [roaming user profiles](folder-redirection-rup-overview.md) to Windows client computers. A roaming user profile redirects user profiles to a *file share* so that users receive the same operating system and application settings on multiple computers.
 
@@ -228,7 +228,7 @@ To specify a Start layout, do the following:
 
 5. (Optional) Enable first-time sign-in optimizations to make signing in faster for users. To do so, see [Apply policies to improve sign-in time](/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time).
 6. (Optional) Further decrease sign-in times by removing unnecessary apps from the Windows 10 base image you use to deploy client PCs. Windows Server 2019 and Windows Server 2016 don't have any pre-provisioned apps, so you can skip this step on server images.
-    - To remove apps, use the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage) cmdlet in Windows PowerShell to uninstall the following applications. If your PCs are already deployed, you can script the removal of these apps by using [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage).
+    - To remove apps, use the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage) cmdlet in Windows PowerShell to uninstall the following applications. If your PCs are already deployed, you can script the removal of some apps by using [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage).
 
       - Microsoft.windowscommunicationsapps\_8wekyb3d8bbwe
       - Microsoft.BingWeather\_8wekyb3d8bbwe
@@ -237,7 +237,6 @@ To specify a Start layout, do the following:
       - Microsoft.Windows.Photos\_8wekyb3d8bbwe
       - Microsoft.WindowsCamera\_8wekyb3d8bbwe
       - Microsoft.WindowsFeedbackHub\_8wekyb3d8bbwe
-      - Microsoft.WindowsStore\_8wekyb3d8bbwe
       - Microsoft.XboxApp\_8wekyb3d8bbwe
       - Microsoft.XboxIdentityProvider\_8wekyb3d8bbwe
       - Microsoft.ZuneMusic\_8wekyb3d8bbwe

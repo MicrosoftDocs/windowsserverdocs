@@ -3,7 +3,7 @@ description: "Learn more about: Command line process auditing"
 ms.assetid: c8597cc8-bdcb-4e59-a09e-128ef5ebeaf8
 title: Command line process auditing
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/01/2023
 ms.topic: article
@@ -11,8 +11,6 @@ ms.custom: inhenkel
 ---
 
 # Command line process auditing
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 

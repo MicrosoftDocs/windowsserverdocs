@@ -4,7 +4,7 @@ description: Reference
 ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 manager: femila
 ms.date: 04/25/2023
 ---
@@ -56,6 +56,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [add](add.md)
 - [add alias](add-alias.md)
 - [add volume](add-volume.md)
+- [adprep](adprep.md)
 - [append](append.md)
 - [arp](arp.md)
 - [assign](assign.md)
@@ -272,6 +273,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [date](date.md)
 - [dcdiag](dcdiag.md)
 - [dcgpofix](dcgpofix.md)
+- [dcpromo](dcpromo.md)
 - [defrag](defrag.md)
 - [del](del.md)
 - [delete](delete.md)
@@ -304,6 +306,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [dnscmd](dnscmd.md)
 - [doskey](doskey.md)
 - [driverquery](driverquery.md)
+- [dtrace](dtrace.md)
 
 ### E
 

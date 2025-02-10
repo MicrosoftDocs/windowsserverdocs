@@ -4,13 +4,11 @@ description: Learn how to start to test connectivity from the internet.
 manager: brianlic
 ms.topic: article
 ms.assetid: ed2a1616-30c6-482a-9a02-4a5023621f58
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 7 Test DirectAccess Connectivity from the Internet
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The DirectAccess one-time password (OTP) deployment has been tested from the Homenet subnet, and can now be tested from the Internet.
 

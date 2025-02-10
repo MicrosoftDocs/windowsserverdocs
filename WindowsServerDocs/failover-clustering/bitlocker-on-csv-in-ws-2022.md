@@ -4,14 +4,12 @@ title: Use BitLocker with Cluster Shared Volumes
 description: BitLocker on volumes within a cluster are managed based on how the cluster service "views" the volume to be protected. The volume can be a physical disk resource such as a logical unit number (LUN) on a storage area network (SAN) or network attached storage (NAS).
 ms.topic: article
 manager: femila
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/21/2021
 ---
 
 # Use BitLocker with Cluster Shared Volumes (CSV)
-
-> Applies to: Windows Server 2022; Azure Stack HCI, versions 22H2 and 21H2
 
 ## BitLocker overview
 
@@ -43,7 +41,7 @@ correct PIN or startup key is presented.
 ## Cluster Shared Volumes overview
 
 Cluster Shared Volumes (CSV) enable multiple nodes in a Windows Server failover
-cluster or Azure Stack HCI to simultaneously have read-write access to the same logical unit number
+cluster or Azure Local to simultaneously have read-write access to the same logical unit number
 (LUN), or disk, that is provisioned as an NTFS volume. The disk can be provisioned as
 Resilient File System (ReFS). However, the CSV drive is in redirected mode, which means write access is sent to the coordinator node. With CSV, clustered
 roles can fail over quickly from one node to another without requiring a
@@ -108,7 +106,7 @@ uses the BitLocker protect/unprotect APIs to unlock or deny the request.
 
 ## New functionality
 
-In previous versions of Windows Server and Azure Stack HCI, the only supported
+In previous versions of Windows Server and Azure Local, the only supported
 encryption protector is the SID-based protector where the account being used is
 Cluster Name Object (CNO) that is created in Active Directory as part of the
 Failover Clustering creation. This is a secure design because the protector is

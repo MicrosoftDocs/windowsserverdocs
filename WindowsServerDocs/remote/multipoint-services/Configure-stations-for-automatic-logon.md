@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 52fcfac9-d500-4f1d-819f-b2ffc795e435
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Configure stations for automatic logon

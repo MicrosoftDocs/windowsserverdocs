@@ -3,15 +3,13 @@ description: "Learn more about: Virtualized Domain Controller Deployment and Con
 ms.assetid: b146f47e-3081-4c8e-bf68-d0f993564db2
 title: Virtualized Domain Controller Deployment and Configuration
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
 
 # Virtualized Domain Controller Deployment and Configuration
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers:
 

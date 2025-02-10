@@ -3,14 +3,12 @@ title: Get started with the macOS client
 description: Learn how to set up the Remote Desktop client for Mac
 ms.topic: article
 ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
-author: Heidilohr
+ms.author: alalve
 manager: femila
-ms.author: helohr
-ms.date: 11/03/2022
+author: xelu86
+ms.date: 7/3/2024
 ---
 # Get started with the macOS client
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
 
@@ -32,9 +30,12 @@ Follow these steps to get started with Remote Desktop on your Mac:
 
 ## What about the Mac beta client?
 
-We're testing new features on our preview channel on AppCenter. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://aka.ms/rdmacbeta) and select **Download**. You don't need to create an account or sign into AppCenter to download the beta client.
+We're testing new features on our preview channel on AppCenter. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://aka.ms/rdmacbeta) and select **Download**. You don't need to create an account or sign into AppCenter to download the beta client. The beta client shouldn't be used in production.
 
 If you already have the client, you can check for updates to ensure you have the latest version. In the beta client, select **Microsoft Remote Desktop Beta** at the top, and then select **Check for updates**.
+
+> [!IMPORTANT]
+> The Remote Desktop app is changing to Windows App. To ensure you can validate the upcoming Windows App update before it's released into the store, the Windows App preview is now available in the Remote Desktop Beta channels where you can test the experience of updating from Remote Desktop to Windows App. To learn more about Windows App, see [Get started with Windows App to connect to devices and apps](/windows-app/get-started-connect-devices-desktops-apps).
 
 ## Add a workspace
 
@@ -148,7 +149,7 @@ By default, the remote session will use the same keyboard locale as the OS you'r
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
 
-Windows Server 2012 R2 introduced support for a new authentication method, Remote Desktop Gateway pluggable authentication and authorization, which provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client.
+Remote Desktop Gateway pluggable authentication and authorization provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client.
 
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 aren't supported, although the article above discusses them.

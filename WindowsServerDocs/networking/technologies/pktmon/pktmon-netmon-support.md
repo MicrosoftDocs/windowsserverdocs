@@ -3,13 +3,11 @@ title: Pktmon support for Microsoft Network Monitor (Netmon)
 description: Describes how to install and configure Microsoft Network Monitor (Netmon) to read Pktmon-generated ETL files.
 ms.topic: how-to
 author: khdownie
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 10/27/2021
 ---
 
 # Pktmon support for Microsoft Network Monitor (Netmon)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack Hub, Azure, Azure Stack HCI, versions 21H2 and 20H2
 
 Packet Monitor (Pktmon) generates logs in ETL format. These logs can be analyzed using Microsoft Network Monitor (Netmon) by using special parsers. This topic explains how to analyze Packet Monitor-generated ETL files within Netmon.
 

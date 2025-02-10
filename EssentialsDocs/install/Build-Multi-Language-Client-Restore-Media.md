@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 2fdbc016-d464-43cb-bd75-8a63e61588a2
 author: nnamuhcs
-ms.author: wscontent
+ms.author: roharwoo
 manager: mtillman
 ---
 
@@ -14,7 +14,7 @@ manager: mtillman
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) before you add the  Windows Server Essentials langauage pack into install.wim.
+>  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) before you add the Windows Server Essentials language pack into install.wim.
 
  When building the multi-language server installation DVD, the language packs will be installed for Server install.wim. The localized resources for restore wizard will be installed as part of language pack.
 

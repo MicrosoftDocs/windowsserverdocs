@@ -6,11 +6,9 @@ summary: Guidance on leveraging remote access and server administration. # < 160
 metadata:
   title: Remote # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Guidance on leveraging remote access and server administration. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
-  ms.prod: windows-server
-  ms.technology: manage-rsat
-  author: JasonGerend
-  ms.author: jgerend
+  ms.service: windows-server
+  author: robinharwood
+  ms.author: roharwoo
   manager: mtillman
   ms.localizationpriority: high
   ms.topic: landing-page # Required
@@ -40,8 +38,8 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Get started
-            url: ./remote-desktop-services/rds-get-started.md
+          - text: Remote Desktop Services overview
+            url: ./remote-desktop-services/remote-desktop-services-overview.md
       - linkListType: how-to-guide
         links:
           - text: Plan and design

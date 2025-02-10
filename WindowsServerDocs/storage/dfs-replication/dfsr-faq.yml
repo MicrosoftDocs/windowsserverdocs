@@ -5,14 +5,14 @@ metadata:
   ms.date: 4/30/2021
   author: nedpyle
   manager: brianm
-  ms.author: nedpyle
+  ms.author: alalve
   ms.topic: faq
-  ms.prod: windows-server
+  ms.service: windows-server
 title: "DFS Replication FAQ"
 summary: |
   Updated: January 30, 2019
   
-  Applies To: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+  
 
   > [!div class="nextstepaction"]
   > <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806278" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common File replication issues.
@@ -79,7 +79,7 @@ sections:
         answer: |
           No, using Windows Backup (Ntbackup.exe) on a computer running Windows Server 2003 or earlier to back up the contents of a replicated folder on a computer running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 isn't supported.
           
-          To back up files that are stored in a replicated folder, use Windows Server Backup or Microsoft&reg; System Center Data Protection Manager. For information about Backup and Recovery functionality in Windows Server 2008 R2 and Windows Server 2008, see [Backup and Recovery](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754097(v=ws.10)). For more information, see [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=182261) (https://go.microsoft.com/fwlink/?LinkId=182261).
+          To back up files that are stored in a replicated folder, use Windows Server Backup or Microsoft&reg; System Center Data Protection Manager. For information about Backup and Recovery functionality in Windows Server 2008 R2 and Windows Server 2008, see [Backup and Recovery](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754097(v=ws.10)). For more information, see [System Center Data Protection Manager](/system-center/dpm/how-dpm-protects-data).
           
       - question: |
           Do file system policies impact DFS Replication?

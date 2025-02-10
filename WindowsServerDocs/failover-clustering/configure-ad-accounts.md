@@ -2,15 +2,15 @@
 description: "Learn more about: Configuring cluster accounts in Active Directory"
 title: Configuring cluster accounts in Active Directory
 ms.date: 10/20/2021
-author: JasonGerend
+author: robinharwood
 manager: lizross
-ms.author: jgerend
+ms.author: roharwoo
 ms.topic: how-to
 ---
 
 # Configuring cluster accounts in Active Directory
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Azure Stack HCI, versions 21H2 and 20H2
+
 
 In Windows Server, when you create a failover cluster and configure clustered services or applications, the failover cluster wizards create the necessary Active Directory computer accounts (also called computer objects) and give them specific permissions. The wizards create a computer account for the cluster itself (this account is also called the cluster name object or CNO) and a computer account for most types of clustered services and applications, the exception being a Hyper-V virtual machine. The permissions for these accounts are set automatically by the failover cluster wizards. If the permissions are changed, they will need to be changed back to match cluster requirements. This guide describes these Active Directory accounts and permissions, provides background about why they are important, and describes steps for configuring and managing the accounts.
 
@@ -84,7 +84,7 @@ The following diagram illustrates how problems can result if the cluster name ac
 
 If the type of problem shown in the diagram occurs, a certain event (1193, 1194, 1206, or 1207) is logged in Event Viewer. For more information about these events, see [https://go.microsoft.com/fwlink/?LinkId=118271](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756188(v=ws.10)).
 
-Note that a similar problem with creating an account for a clustered service or application can occur if the domain-wide quota for creating computer objects (by default, 10) has been reached. If it has, it might be appropriate to consult with the domain administrator about increasing the quota, although this is a domain-wide setting and should be changed only after careful consideration, and only after confirming that the preceding diagram does not describe your situation. For more information, see [Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts), later in this guide.
+Note that a similar problem with creating an account for a clustered service or application can occur if the domain-wide quota for creating computer objects (by default, 10) has been reached. If it has, it might be appropriate to consult with the domain administrator about increasing the quota, although this is a domain-wide setting and should be changed only after careful consideration, and only after confirming that the preceding diagram does not describe your situation. For more information, see [Troubleshoot issues caused by changes in cluster-related Active Directory accounts](/troubleshoot/windows-server/high-availability/troubleshoot-issues-accounts-used-failover-clusters#troubleshoot-issues-caused-by-changes-in-cluster-related-active-directory-accounts).
 
 ## Requirements related to failover clusters, Active Directory domains, and accounts
 
@@ -105,7 +105,7 @@ As described in the preceding three sections, certain requirements must be met b
 
 ### Planning ahead for password resets and other account maintenance
 
-The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it is a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Steps for troubleshooting password problems with the cluster name account](#steps-for-troubleshooting-password-problems-with-the-cluster-name-account), later in this guide.
+The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it is a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Troubleshoot password issues with the cluster name account](/troubleshoot/windows-server/high-availability/troubleshoot-issues-accounts-used-failover-clusters#troubleshoot-password-issues-with-the-cluster-name-account).
 
 ## Steps for configuring the account for the person who installs the cluster
 
@@ -238,90 +238,4 @@ Membership in the **Account Operators** group, or equivalent, is the minimum req
 
 ## Steps for troubleshooting problems related to accounts used by the cluster
 
-As described earlier in this guide, when you create a failover cluster and configure clustered services or applications, the failover cluster wizards create the necessary Active Directory accounts and give them the correct permissions. If a needed account is deleted, or necessary permissions are changed, problems can result. The following subsections provide steps for troubleshooting these issues.
-
-  - [Steps for troubleshooting password problems with the cluster name account](#steps-for-troubleshooting-password-problems-with-the-cluster-name-account)
-
-  - [Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts)
-
-### Steps for troubleshooting password problems with the cluster name account
-
-Use this procedure if there is an event message about computer objects or about the cluster identity that includes the following text. Note that this text will be within the event message, not at the beginning of the event message:
-
-`Logon failure: unknown user name or bad password.`
-
-Event messages that fit the previous description indicate that the password for the cluster name account and the corresponding password stored by the clustering software no longer match.
-
-For information about ensuring that cluster administrators have the correct permissions to perform the following procedure as needed, see Planning ahead for password resets and other account maintenance, earlier in this guide.
-
-Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure. In addition, your account must be given **Reset password** permission for the cluster name account (unless your account is a **Domain Admins** account or is the Creator Owner of the cluster name account). The account that was used by the person who installed the cluster can be used for this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
-
-#### To troubleshoot password problems with the cluster name account
-
-1.  To open the failover cluster snap-in, click **Start**, click **Administrative Tools**, and then click **Failover Cluster Management**. (If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.)
-
-2.  In the Failover Cluster Management snap-in, if the cluster you want to configure is not displayed, in the console tree, right-click **Failover Cluster Management**, click **Manage a Cluster**, and select or specify the cluster you want.
-
-3.  In the center pane, expand **Cluster Core Resources**.
-
-4.  Under **Cluster Name**, right-click the **Name** item, point to **More Actions**, and then click **Repair Active Directory Object**.
-
-### Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts
-
-If the cluster name account is deleted or if permissions are taken away from it, problems will occur when you try to configure a new clustered service or application. To troubleshoot a problem where this might be the cause, use the Active Directory Users and Computers snap-in to view or change the cluster name account and other related accounts. For information about the events that are logged when this type of problem occurs (event 1193, 1194, 1206, or 1207), see [https://go.microsoft.com/fwlink/?LinkId=118271](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756188(v=ws.10)).
-
-Membership in the **Domain Admins** group, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
-
-#### To troubleshoot problems caused by changes in cluster-related Active Directory accounts
-
-1.  On a domain controller, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
-
-2.  Expand the default **Computers** container or the folder in which the cluster name account (the computer account for the cluster) is located. **Computers** is located in <b>Active Directory Users and Computers/</b><i>domain-node</i><b>/Computers</b>.
-
-3.  Examine the icon for the cluster name account. It must not have a downward-pointing arrow on it, that is, the account must not be disabled. If it appears to be disabled, right-click it and look for the command **Enable Account**. If you see the command, click it.
-
-4.  On the **View** menu, make sure that **Advanced Features** is selected.
-
-    When **Advanced Features** is selected, you can see the **Security** tab in the properties of accounts (objects) in **Active Directory Users and Computers**.
-
-5.  Right-click the default **Computers** container or the folder in which the cluster name account is located.
-
-6.  Click **Properties**.
-
-7.  On the **Security** tab, click **Advanced**.
-
-8.  In the list of accounts with permissions, click the cluster name account, and then click **Edit**.
-
-
-> [!NOTE]
-> If the cluster name account is not listed, click <STRONG>Add</STRONG> and add it to the list.
-<br>
-
-
-9. For the cluster name account (also known as the cluster name object or CNO), ensure that **Allow** is selected for the **Create Computer objects** and **Read All Properties** permissions.
-
-   ![Screenshot that shows the Permission Entry dialog box with the Create Computer objects option set to Allow.](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
-
-10. Click **OK** until you have returned to the **Active Directory Users and Computers** snap-in.
-
-11. Review domain policies (consulting with a domain administrator if applicable) related to the creation of computer accounts (objects). Ensure that the cluster name account can create a computer account each time you configure a clustered service or application. For example, if your domain administrator has configured settings that cause all new computer accounts to be created in a specialized container rather than the default **Computers** container, make sure that these settings allow the cluster name account to create new computer accounts in that container also.
-
-12. Expand the default **Computers** container or the container in which the computer account for one of the clustered services or applications is located.
-
-13. Right-click the computer account for one of the clustered services or applications, and then click **Properties**.
-
-14. On the **Security** tab, confirm that the cluster name account is listed among the accounts that have permissions, and select it. Confirm that the cluster name account has **Full Control** permission (the **Allow** check box is selected). If it does not, add the cluster name account to the list and give it **Full Control** permission.
-
-   ![Security tab](media/configure-ad-accounts/Cc731002.2e614376-87a6-453a-81ba-90ff7ebc3fa2(WS.10).gif)
-
-15. Repeat steps 13-14 for each clustered service and application configured in the cluster.
-
-16. Check that the domain-wide quota for creating computer objects (by default, 10) has not been reached (consulting with a domain administrator if applicable). If the previous items in this procedure have all been reviewed and corrected, and if the quota has been reached, consider increasing the quota. To change the quota:
-
-   1.  Open a command prompt as an administrator and run **ADSIEdit.msc**.
-
-   2.  Right-click **ADSI Edit**, click **Connect to**, and then click **OK**. The **Default naming context** is added to the console tree.
-
-   3.  Double-click **Default naming context**, right-click the domain object underneath it, and then click **Properties**.
-
-   4.  Scroll to **ms-DS-MachineAccountQuota**, select it, click **Edit**, change the value, and then click **OK**.
+For more information, see [Troubleshoot issues with accounts used by failover clusters](/troubleshoot/windows-server/high-availability/troubleshoot-issues-accounts-used-failover-clusters).
