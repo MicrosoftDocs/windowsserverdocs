@@ -1,30 +1,23 @@
 ﻿---
 title: Certificate Enrollment Web Service Guidance
-description: 
-author: robinharwood
+description: Learn about the installation requirements, steps to install, and configuration options for Certificate Enrollment Web Service.
+author: meaghanlewis
 ms.topic: overview
-ms.author: gswashington
-ms.date: 08/31/2016
+ms.author: mosagie
+ms.date: 02/10/2025
 ---
 
 # Certificate Enrollment Web Service Guidance
 
-Applies To: Windows Server 2012 R2, Windows Server 2012
+The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to perform certificate enrollment by using the HTTPS protocol. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer is not a member of a domain or when a domain member is not connected to the domain. The Certificate Enrollment Web Service uses the HTTPS protocol to accept certificate requests from and return issued certificates to network client computers. The Certificate Enrollment Web Service uses the DCOM protocol to connect to the certification authority (CA) and complete certificate enrollment on behalf of the requester.
 
-The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to perform certificate enrollment by using the HTTPS protocol. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer is not a member of a domain or when a domain member is not connected to the domain.
-
-The Certificate Enrollment Web Service uses the HTTPS protocol to accept certificate requests from and return issued certificates to network client computers. The Certificate Enrollment Web Service uses the DCOM protocol to connect to the certification authority (CA) and complete certificate enrollment on behalf of the requester. In versions of AD CS prior to Windows Server 2008 R2, policy-based certificate enrollment can be completed only by domain member client computers that are using the DCOM protocol. This limits certificate issuance to the trust boundaries that are established by Active Directory domains and forests.
-
-Certificate enrollment over HTTPS enables the following new deployment scenarios:
+Certificate enrollment over HTTPS enables the following deployment scenarios:
 
 - Certificate enrollment across forest boundaries to reduce the number of CAs in an enterprise
 
 - Extranet deployment to issue certificates to mobile workers and business partners
 
-For more information about the Certificate Enrollment Web Service and the Certificate Enrollment Policy Web Service, see [Certificate Enrollment Web Services](https://go.microsoft.com/fwlink/?linkid=258862). The remaining sections of this document provide the installation requirements for Certificate Enrollment Web Service and information about the configuration options that are presented when you use Server Manager to install the role service.
-
-> [!NOTE]
-> To comment on this content or ask questions about the information presented here, see [Feedback guidance](https://aka.ms/pkifeedback).
+This article provides the installation requirements for Certificate Enrollment Web Service and information about the configuration options that are presented when you use Server Manager to install the role service.
 
 ## Authentication types and considerations
 
@@ -38,10 +31,8 @@ Clients communicating with the Certificate Enrollment Web Service must use one o
 
 Each of these authentication types is discussed in more detail in the following sections.
 
-learn> [!NOTE]
-
-> - If you want to enable key-based renewal, you must enable client certificate authentication for the Certificate Enrollment Web Service.
-> - Anonymous authentication to the web services is not supported.
+> [!NOTE]
+> If you want to enable key-based renewal, you must enable client certificate authentication for the Certificate Enrollment Web Service. Anonymous authentication to the web services is not supported.
 
 ### Windows integrated authentication (Kerberos authentication)
 
@@ -49,7 +40,7 @@ Windows Integrated Authentication uses Kerberos to provide a seamless authentica
 
 ### Client certificate authentication (X.509 certificate authentication)
 
-If certificates will be provisioned to computers, then clients computers can use client certificate authentication. Client certificate authentication doesn'tt require a direct connection to the corporate network. Client certificate authentication is preferred over username and password authentication because it provides a more secure method of authenticating.  However, this method requires that x.509 certificates be initially provisioned to clients by separate means. Use this authentication method if you plan to provide users with digital X.509 certificates for client authentication. This authentication method enables you to make the web service available on the Internet. See [Client Certificate Authentication](https://social.technet.microsoft.com/wiki/contents/articles/7734.certificate-enrollment-web-services-in-active-directory-certificate-services.aspx#Authentication_Method_Considerations) for more information on how to configure client certificate authentication.
+If certificates will be provisioned to computers, then clients computers can use client certificate authentication. Client certificate authentication doesn'tt require a direct connection to the corporate network. Client certificate authentication is preferred over username and password authentication because it provides a more secure method of authenticating. However, this method requires that x.509 certificates be initially provisioned to clients by separate means. Use this authentication method if you plan to provide users with digital X.509 certificates for client authentication. This authentication method enables you to make the web service available on the Internet. See [Client Certificate Authentication](https://social.technet.microsoft.com/wiki/contents/articles/7734.certificate-enrollment-web-services-in-active-directory-certificate-services.aspx#Authentication_Method_Considerations) for more information on how to configure client certificate authentication.
 
 ### User name and password authentication
 
@@ -67,7 +58,7 @@ General best practices for load balancing the policy and enrollment web services
 - Don't publish multiple URIs behind a single URI (unless that URI is load balanced behind a device that is both network and application layer aware).
 - Don't use DNS round robin or other DNS load balancing techniques that don't provide application layer intelligence and routing.
 
-See [Planning_Load_Balancing_and_Fault_Tolerance](https://social.technet.microsoft.com/wiki/contents/articles/7734.certificate-enrollment-web-services-in-active-directory-certificate-services.aspx#Planning_Load_Balancing_and_Fault_Tolerance) for information on load balancing options for Windows client enrollment as well as 
+See [Planning_Load_Balancing_and_Fault_Tolerance](https://social.technet.microsoft.com/wiki/contents/articles/7734.certificate-enrollment-web-services-in-active-directory-certificate-services.aspx#Planning_Load_Balancing_and_Fault_Tolerance) for information on load balancing options for Windows client enrollment.
 
 For detailed gudance on example configurations including:
 
