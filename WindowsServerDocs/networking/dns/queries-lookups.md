@@ -45,7 +45,7 @@ Each process is explained in more detail in the following sections.
 
 The following figure shows an overview of the complete DNS query process.
 
-:::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-1.png" alt-text="Diagram showing overview of complete DNS query process.":::
+:::image type="content" source="../media/queries-lookups/client-service-resolver.png" alt-text="Flow chart showing the an overview of the DNS query process.":::
 
 As shown in the initial steps of the query process, a DNS domain name is used in a program on the local computer. The request is then passed to the DNS Client service for resolution using locally cached information. If the queried name can be resolved, the query is answered and the process is completed.
 
@@ -79,16 +79,17 @@ Finally, the `example.contoso.com.` server is contacted. Because this server con
 
 Although the recursive query process can be resource-intensive when performed as described, it has some performance advantages for the DNS server. For example, during the recursion process, the DNS server performing the recursive lookup obtains information about the DNS domain namespace. The server caches the information, which can be used again to help speed the answering of subsequent queries that use or match it. Over time, this cached information can grow to occupy a significant portion of server memory resources. The cache is cleared whenever the DNS service is restarted.
 
-The following three figures illustrate the process by which the DNS client queries the servers on each adapter.
- 
-:::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-2.png" alt-text="Diagram showing overview of complete DNS query process.":::
-**Querying the DNS Server - Part 1**
+The following flowchart shows the process of querying a DNS server.
 
-:::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-3.png" alt-text="Diagram showing overview of complete DNS query process.":::
-**Querying the DNS Server - Part 2**
+:::image type="content" source="../media/queries-lookups/processes-interactions-2.png" alt-text="Flowchart showing the process of querying a DNS server.":::
 
-:::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-4.png" alt-text="Diagram showing overview of complete DNS query process.":::
-**Querying the DNS Server - Part 3**
+The following flowchart shows the process of appending a parent domain name to a DNS query for devolved name. Meaning DNS names that are not fully qualified domain names (FQDNs) are appended with a parent domain name to make them FQDNs.
+
+:::image type="content" source="../media/queries-lookups/processes-interactions-3.png" alt-text="Flowchart showing the process appending a parent domain name to a DNS query.":::
+
+The following flowchart shows the process of checking and amending the cache for a DNS query.
+
+:::image type="content" source="../media/queries-lookups/processes-interactions-4.png" alt-text="Flowchart showing the process of checking and ammending the cache for a DNS query.":::
 
 Configuring DNS clients with more than one DNS Server IP adds fault tolerance to your DNS infrastructure. Adding multiple DNS server IPs ensures DNS names can still be resolved if the primary DNS server, the network link, or the supporting infrastructure fails.
 
@@ -126,8 +127,7 @@ The DNS Client service keeps track of which servers answer name queries more qui
 
 The following figure shows how the DNS client queries each server on each adapter.
 
-:::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-5.png" alt-text="Diagram showing overview of complete DNS query process.":::
-**Multihomed Name Resolution**
+:::image type="content" source="../media/queries-lookups/multihomed-name-resolution.png" alt-text="Diagram that shows the DNS multihomed name resolution queries for each server on each adapter.":::
 
 ### Alternate query responses
 
@@ -220,7 +220,7 @@ The following figure shows an example of a reverse query initiated by a DNS clie
 
 **Reverse Query**
 
-:::image type="content" source="../media/dns-processes-interactions/dns-processes-interactions-6.png" alt-text="Diagram showing overview of complete DNS query process.":::
+:::image type="content" source="../media/queries-lookups/reverse-query.png" alt-text="Diagram that shows a reverse query initiated by a DNS client to learn the name of another host based on its IP address.":::
 
 The reverse query process as shown in this figure occurs in the following steps:
 
