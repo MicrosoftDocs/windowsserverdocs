@@ -2,13 +2,11 @@
 title: Create a workgroup cluster in Windows Server
 description: Learn how-to create Failover Clusters without Active Directory using the Failover Cluster Manager or PowerShell.
 ms.topic: how-to
-ms.author: roharwoo
+ms.author: mosagie
 author: meaghanlewis
-ms.date: 07/16/2024
+ms.date: 01/29/2024
 ---
 # Create a workgroup cluster
-
-
 
 In this article, learn about and create a workgroup cluster. First, understand what workgroup clusters are and how they differ from traditional failover clusters. Then, create a workgroup cluster either using the Failover Cluster Manager or Windows PowerShell.
 
@@ -36,7 +34,7 @@ The following prerequisites must be met for your workgroup cluster to meet the c
 
 Workgroup clusters support several workloads. Workgroup clusters are recommended and supported for:
 
-- **Hyper-V VMs.** Supported cluster workload starting in Windows Server S2025.
+- **Hyper-V VMs.** Supported cluster workload starting in Windows Server 2025.
 - **SQL Server Availability Groups.** SQL Server is a supported workload for Windows Server 2016 through Windows Server 2025. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1).
 
 Workgroup clusters aren't supported for:
@@ -71,7 +69,7 @@ A consistent administrator user account must be created on each node. The userna
 1. If the nonbuiltin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The following set of steps describes how to set the LocalAccountTokenFilterPolicy.
 
     > [!IMPORTANT]
-    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly.     Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 1. Click **Start**, click **Run**, type _regedit_, and then press ENTER.
 
@@ -199,7 +197,7 @@ Now you're ready to create a workgroup cluster with the server nodes you prepare
 Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft supports a cluster solution only if the complete configuration passes all validation tests and if all hardware is certified for the version of Windows Server that the cluster nodes are running.
 
 > [!NOTE]
-> You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests do not run.
+> You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests don't run.
 
 #### Run cluster validation tests
 

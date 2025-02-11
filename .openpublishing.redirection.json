@@ -11906,6 +11906,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "EssentialsDocs/install/Create-a-Bootable-USB-Flash-Drive.md",
+      "redirect_url": "/windows-server/get-started/install-windows-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
       "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
       "redirect_document_id": true
@@ -11913,6 +11918,16 @@
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/resource-record-types.md",
+      "redirect_url": "/windows-server/networking/dns/dns-architecture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/dns-top.md",
+      "redirect_url": "/windows-server/networking/dns/dns-overview",
       "redirect_document_id": true
     },
     {
@@ -11931,8 +11946,18 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance.md",
+      "redirect_url": "/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/upgrade-storage-spaces-direct",
       "redirect_document_id": true
     }
   ]

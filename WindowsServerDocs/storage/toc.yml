@@ -319,7 +319,7 @@ items:
       - name: Configure quorum
         href: ../failover-clustering/manage-cluster-quorum.md
       - name: Upgrade a Storage Spaces Direct cluster
-        href: storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md
+        href: storage-spaces/upgrade-storage-spaces-direct.md
       - name: Understand and deploy persistent memory
         href: storage-spaces/deploy-persistent-memory.md
       - name: Understand and configure DAX

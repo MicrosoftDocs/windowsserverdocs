@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 01/14/2025
+ms.date: 01/29/2025
 zone_pivot_groups: windows
 ---
 
@@ -83,26 +83,25 @@ command.
     Get-NetAdapter
     ```
 
-1. To create an _external_ virtual switch, run the following commands, replacing the placeholder
-   `<value>` with your own values.
+1. To create an _external_ virtual switch, run the following command, replacing the placeholders
+   `<switch-name>` and `<netadapter-name>` with your own values.
 
     ```powershell
     New-VMSwitch -Name <switch-name>  -NetAdapterName <netadapter-name>
     ```
 
-    Or
+     Use either the parameter **NetAdapterName**, or **NetAdapterInterfaceDescription** to implicitly set the type of the virtual switch to _external_.
 
-    To create an _internal_ or _private_ switch, run the following command. Again, replace
-    `<switch-name>` with the name of your switch and `<switchtype>` with either `Internal` or
-    `External`.
+1. To create an _internal_ or _private_ switch, run the following command. Replace
+    `<switch-name>` with the name of your switch and `<switch-type>` with either `Internal` or
+    `Private`.
 
     ```powershell
-    New-VMSwitch -Name <switch-name> -SwitchType <switchtype>
+    New-VMSwitch -Name <switch-name> -SwitchType <switch-type>
     ```
 
 For more advanced PowerShell scripts that cover improved or new virtual switch features in
-Windows Server, see
-[Remote Direct Memory Access and Switch Embedded Teaming](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization).
+Windows Server, see [Remote Direct Memory Access and Switch Embedded Teaming](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization).
 
 ---
 
@@ -221,7 +220,7 @@ To set up a NAT network and connect it to a virtual machine, follow the [NAT net
 
 :::zone-end
 
-## Next step
+## Related content
 
 Now that you set up a virtual switch, here are other articles to help you continue with Hyper-V.
 

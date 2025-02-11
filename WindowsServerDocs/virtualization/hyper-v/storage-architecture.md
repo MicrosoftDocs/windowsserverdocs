@@ -3,8 +3,8 @@ title: Hyper-V storage architectures in Windows Server
 description: Learn how to use Windows Server with SAN, NAS, fiber channel, iSCSI, SMB storage for Hyper-V. Also learn about Hyper-V with hyperconverged and disaggregated storage.
 keywords: Hyper-V, Windows Server, storage, SAN, NAS, fiber channel, iSCSI, SMB, hyperconverged, disaggregated
 ms.topic: conceptual
-ms.author: helohr
-author: Heidilohr
+author: xelu86
+ms.author: alalve
 ms.date: 01/16/2025
 ---
 # Windows Server storage architectures with Hyper-V
