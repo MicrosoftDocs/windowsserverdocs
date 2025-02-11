@@ -17,9 +17,9 @@ Integrated Windows Authentication enables users to sign in with their Windows cr
 
 There are three main reasons why Integrated Windows Authentication fails:
 
-	- Service principal name (SPN) misconfiguration
-	- Channel binding token
-	- Internet Explorer configuration
+- Service principal name (SPN) misconfiguration
+- Channel binding token
+- Internet Explorer configuration
 
 ## SPN misconfiguration
 
@@ -33,7 +33,7 @@ Here's an example of how an SPN is used with AD FS:
 
 An AD FS service account with a misconfigured or wrong SPN can experience problems. When you look at network traces, you might see errors such as `KRB Error: KRB5KDC_ERR_S_PRINCIPAL_UNKNOWN`.
 
-By using network traces (like Wireshark), you can determine what SPN the browser is trying to resolve. Then you can use the command-line tool, `setspn - Q \`<spn>, and do a lookup on that SPN. You might not find it or it might be assigned to another account other than the AD FS service account.
+By using network traces (like Wireshark), you can determine what SPN the browser is trying to resolve. Then you can use the command-line tool, `setspn - Q \<spn>`, and do a lookup on that SPN. You might not find it or it might be assigned to another account other than the AD FS service account.
 
 ![Screenshot that shows the Command Prompt window.](media/ad-fs-tshoot-iwa/iwa3.png)
 
