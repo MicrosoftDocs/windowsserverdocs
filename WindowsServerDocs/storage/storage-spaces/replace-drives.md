@@ -12,7 +12,7 @@ ms.date: 02/10/2025
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
 
-Azure Stack HCI works with direct-attached SATA, SAS, NVMe, and persistent memory drives that are physically attached to a single server. Storage Spaces Direct automatically retires and evacuates failed drives. When this happens, the drive status is **Retired**, and its storage capacity bar is empty.
+Azure Stack HCI works with direct-attached SATA, SAS, NVMe, and persistent memory drives that are physically attached to a single server. Storage Spaces Direct automatically retires and evacuates failed drives. As a result, the drive status is marked as **Retired**, and its storage capacity bar is empty.
 
 If a drive fails, you need access to the physical server hardware to replace it.
 
@@ -31,13 +31,13 @@ In Windows Admin Center, under the **Drives > Inventory** tab, the new drive app
 
 ## Troubleshooting
 
-If the new drive isn't added to the pool, it may be because AutoPool is disabled. To determine this, run the following PowerShell command as administrator:
+If the new drive isn't added to the pool, it may be because AutoPool is disabled. To determine, run the following PowerShell command as administrator:
 
 ```powershell
 Get-StorageSubsystem Cluster* | Get-StorageHealthSetting | select "System.Storage.PhysicalDisk.AutoPool.Enabled"
 ```
 
-If the value is **True**, AutoPool is enabled.  If the value is **False**, AutoPool is disabled.  You have two options to resolve the issue:
+If the value is **True**, AutoPool is enabled.  If the value is **False**, AutoPool is disabled. You have two options to resolve the issue:
 
 ### Option A
 
@@ -49,7 +49,7 @@ Run the following and verify the new physical disk is listed with `OperationalSt
 Get-PhysicalDisk -CanPool $true
 ```
 
-Next, run the following command and make a note of the **FriendlyName** of the storage pool that you want to add the disk to. If this is a stretched cluster, you should see more than one pool name:
+Next, run the following command and make a note of the **FriendlyName** of the storage pool that you want to add the disk to. If it's a stretched cluster, you should see more than one pool name:
 
 ```powershell
 Get-StoragePool -IsPrimordial $False

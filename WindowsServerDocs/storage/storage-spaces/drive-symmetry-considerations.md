@@ -54,11 +54,11 @@ We recommend using drives of the same sizes whenever possible. Using capacity dr
 
 Storage Spaces Direct is robust enough to handle capacity imbalance across drives and across servers. Even if the imbalance is severe, everything continues to work. However, depending on several factors, capacity that isn't available in every server may not be usable.
 
-To see why this happens, consider the simplified illustration below. Each colored box represents one copy of mirrored data. For example, the boxes marked A, A', and A'' are three copies of the same data. To honor server fault tolerance, these copies *must* be stored in different servers.
+To see why this happens, consider the following simplified illustration. Each colored box represents one copy of mirrored data. For example, the boxes marked A, A', and A'' are three copies of the same data. To honor server fault tolerance, these copies *must* be stored in different servers.
 
 ### Stranded capacity
 
-As drawn, Server 1 (10 TB) and Server 2 (10 TB) are full. Server 3 has larger drives, therefore its total capacity is larger (15 TB). However, to store more three-way mirror data on Server 3 would require copies on Server 1 and Server 2 too, which are already full. The remaining 5 TB capacity on Server 3 can't be used – it's *"stranded"* capacity.
+As drawn, Server 1 (10 TB) and Server 2 (10 TB) are full. Server 3 has larger drives, therefore its total capacity is larger (15 TB). However, to store more three-way mirror data on Server 3 would require copies on Server 1 and Server 2 too, which are already full. The remaining 5 TB capacity on Server 3 can't be used – it's *stranded* capacity.
 
 :::image type="content" source="media/drive-symmetry-considerations/size-asymmetry-3n-stranded.png" alt-text="Three-way mirror, three servers, stranded capacity." lightbox="media/drive-symmetry-considerations/size-asymmetry-3n-stranded.png":::
 
@@ -110,7 +110,7 @@ This is supported.
 
 ### :::image type="icon" source="media/drive-symmetry-considerations/supported.png" border="false"::: Supported: different sizes across servers
 
-The first two servers use 4 TB HDD but the third server uses very similar 6 TB HDD.
+The first two servers use 4 TB HDD but the third server uses similar 6 TB HDD.
 
 | Server 1                | Server 2                | Server 3                |
 |-------------------------|-------------------------|-------------------------|
@@ -121,7 +121,7 @@ This is supported, although it results in stranded capacity.
 
 ### :::image type="icon" source="media/drive-symmetry-considerations/supported.png" border="false"::: Supported: different sizes within server
 
-Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD. Every server has 4 total SSD.
+Every server uses some different mix of 1.2 TB and similar 1.6 TB SSD. Every server has 4 total SSD.
 
 | Server 1                 | Server 2                 | Server 3                 |
 |--------------------------|--------------------------|--------------------------|
