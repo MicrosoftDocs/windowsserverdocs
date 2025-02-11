@@ -35,7 +35,7 @@ The parameter BusType in the output correctly shows bus type as *SCM*.
 
 This section describes how to view the health status of your persistent memory modules. When you use persistent memory, there are a few differences in the monitoring experience:
 
-- Persistent memory doesn't create Physical Disk performance counters, so you won't see it appear on charts in Windows Admin Center.
+- Persistent memory doesn't create Physical Disk performance counters, so you won't see it appears on charts in Windows Admin Center.
 - Persistent memory doesn't create Storport 505 data, so you won't get proactive outlier detection.
 
 Otherwise, the monitoring experience is the same as for any other physical disk.
@@ -69,7 +69,7 @@ Get-PhysicalDisk | where BusType -eq "SCM" | select SerialNumber, HealthStatus, 
 
 **HealthStatus** shows whether the persistent memory disk is healthy.
 
-The **UnsafeshutdownCount** value tracks the number of shutdowns that may cause data loss on this logical disk. It is the sum of the unsafe shutdown counts of all the underlying persistent memory devices of this disk. For more information about the health status, use the `Get-PmemPhysicalDevice` cmdlet to find information such as **OperationalStatus**.
+The **UnsafeshutdownCount** value tracks the number of shutdowns that may cause data loss on this logical disk. It's the sum of the unsafe shutdown counts of all the underlying persistent memory devices of this disk. For more information about the health status, use the `Get-PmemPhysicalDevice` cmdlet to find information such as **OperationalStatus**.
 
 ```PowerShell
 Get-PmemPhysicalDevice
@@ -84,7 +84,7 @@ DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation Fi
 
 This cmdlet shows which persistent memory device is unhealthy. The unhealthy device (**DeviceId** 20) matches the case in the previous example. The **PhysicalLocation** in BIOS can help identify which persistent memory device is in faulty state.
 
-For help understanding the various health conditions, see the following sections.
+To understand the various health conditions, see the following sections.
 
 ## Warning Health Status
 

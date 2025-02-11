@@ -1,6 +1,6 @@
 ---
 title: Drive symmetry considerations for Azure Stack HCI and Windows Server clusters
-description: This article explains drive symmetry constraints in Storage Spaces Direct and provides examples of supported and unsupported configurations.
+description: This article explains drive symmetry constraints in Storage Spaces Direct. It also provides examples of supported and unsupported configurations.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: conceptual
@@ -15,7 +15,7 @@ Azure Stack HCI and Windows Server clusters work best when every server has exac
 
 In reality, we recognize this isn't always practical. Today, you may buy spacious 3 TB hard drives; next year, it may become impossible to find drives that small. Therefore, some amount of mixing-and-matching is expected and supported. Keep in mind, however, that more symmetry is always better.
 
-This article explains the constraints and provides examples of supported and unsupported configurations in Storage Spaces Direct, the underlying storage virtualization technology behind Azure Stack HCI and Windows Server.
+Storage Spaces Direct is the underlying storage virtualization technology behind Azure Stack HCI and Windows Server. This article explains the constraints and provides examples of supported and unsupported configurations in Storage Spaces Direct.
 
 ## Constraints
 
@@ -64,7 +64,7 @@ As drawn, Server 1 (10 TB) and Server 2 (10 TB) are full. Server 3 has larger dr
 
 ### Optimal placement
 
-Conversely, with four servers of 10 TB, 10 TB, 10 TB, and 15 TB capacity and three-way mirror resiliency, it *is* possible to validly place copies in a way that uses all available capacity, as drawn. Whenever this is possible, the Storage Spaces Direct allocator finds and uses the optimal placement, leaving no stranded capacity.
+Conversely, with four servers of 10 TB, 10 TB, 10 TB, and 15 TB capacity and three-way mirror resiliency, it's possible to validly place copies in a way that uses all available capacity, as drawn. Whenever this is possible, the Storage Spaces Direct allocator finds and uses the optimal placement, leaving no stranded capacity.
 
 :::image type="content" source="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png" alt-text="Three-way mirror, four servers, no stranded capacity." lightbox="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png":::
 

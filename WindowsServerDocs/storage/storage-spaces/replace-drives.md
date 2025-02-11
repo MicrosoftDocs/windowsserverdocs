@@ -37,7 +37,7 @@ If the new drive isn't added to the pool, it may be because AutoPool is disabled
 Get-StorageSubsystem Cluster* | Get-StorageHealthSetting | select "System.Storage.PhysicalDisk.AutoPool.Enabled"
 ```
 
-If the value is **True**, AutoPool is enabled.  If the value is **False**, AutoPool is disabled.  You have two options to resolve this issue:
+If the value is **True**, AutoPool is enabled.  If the value is **False**, AutoPool is disabled.  You have two options to resolve the issue:
 
 ### Option A
 
