@@ -81,15 +81,15 @@ Although the recursive query process can be resource-intensive when performed as
 
 The following flowchart shows the process of querying a DNS server.
 
-:::image type="content" source="../media/queries-lookups/processes-interactions-2.png" alt-text="Flowchart showing the process of querying a DNS server.":::
+:::image type="content" source="../media/queries-lookups/dns-query.png" alt-text="Flowchart showing the process of querying a DNS server.":::
 
 The following flowchart shows the process of appending a parent domain name to a DNS query for devolved name. Meaning DNS names that are not fully qualified domain names (FQDNs) are appended with a parent domain name to make them FQDNs.
 
-:::image type="content" source="../media/queries-lookups/processes-interactions-3.png" alt-text="Flowchart showing the process appending a parent domain name to a DNS query.":::
+:::image type="content" source="../media/queries-lookups/append-parent-domain-name.png" alt-text="Flowchart showing the process appending a parent domain name to a DNS query.":::
 
 The following flowchart shows the process of checking and amending the cache for a DNS query.
 
-:::image type="content" source="../media/queries-lookups/processes-interactions-4.png" alt-text="Flowchart showing the process of checking and ammending the cache for a DNS query.":::
+:::image type="content" source="../media/queries-lookups/query-from-cache.png" alt-text="Flowchart showing the process of checking and amending the cache for a DNS query.":::
 
 Configuring DNS clients with more than one DNS Server IP adds fault tolerance to your DNS infrastructure. Adding multiple DNS server IPs ensures DNS names can still be resolved if the primary DNS server, the network link, or the supporting infrastructure fails.
 
