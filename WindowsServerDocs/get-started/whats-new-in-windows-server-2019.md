@@ -179,7 +179,7 @@ Here's what's new in Storage Spaces Direct. For more information about how to ac
 
 - Two-server clusters can now use a USB flash drive as a witness. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more information, see our [Storage Spaces Direct announcement blog post](https://techcommunity.microsoft.com/t5/storage-at-microsoft/here-s-what-you-missed-8211-five-big-announcements-for-storage/ba-p/428257) and [Configure a file share witness for Failover Clustering](../failover-clustering/file-share-witness.md).
 
-- Windows Admin Center supports a dashboard that lets you manage and monitor Storage Spaces direct. You can monitor IOPS and IO latency from the overall cluster level down to individual SSDs or HDDs at no extra cost. To learn more, see [What is Windows Admin Center?](../manage/windows-admin-center/use/manage-hyper-converged.md#what-is-windows-admin-center).
+- Windows Admin Center supports a dashboard that lets you manage and monitor Storage Spaces direct. You can monitor IOPS and IO latency from the overall cluster level down to individual SSDs or HDDs at no extra cost. To learn more, see [Manage a hyper-converged infrastructure by using Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md).
 
 - Performance history is a new feature that provides effortless visibility into resource utilization and measurements. To learn more, see [Performance history for Storage Spaces Direct](../storage/storage-spaces/performance-history.md).
 
