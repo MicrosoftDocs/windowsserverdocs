@@ -1,10 +1,10 @@
 ---
 title: Understanding the storage pool cache in Azure Stack HCI and Windows Server clusters
-description: How read and write caching works to accelerate performance in Storage Spaces Direct.
+description: How to read and write caching works to accelerate performance in Storage Spaces Direct.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: conceptual
-ms.date: 02/10/2025
+ms.date: 02/11/2025
 ---
 
 # Understanding the storage pool cache

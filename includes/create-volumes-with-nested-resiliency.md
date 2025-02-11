@@ -2,7 +2,7 @@
 author: ManikaDhiman
 ms.author: v-manidhiman
 ms.topic: include
-ms.date: 01/23/2025
+ms.date: 02/11/2025
 ---
 
 You can use familiar storage cmdlets in PowerShell to create volumes with nested resiliency, as described in the following section.
@@ -12,7 +12,7 @@ You can use familiar storage cmdlets in PowerShell to create volumes with nested
 Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these templates.
 
 > [!NOTE]
-> If you're running Windows Server 2022, Azure Stack HCI 21H2, or Azure Stack HCI 20H2, you can skip this step.
+> If you're running Windows Server 2022, Azure Stack HCI, version 21H2, or Azure Stack HCI, version 20H2, you can skip this step.
 
 Specify the `-MediaType` of your capacity drives and, optionally, the `-FriendlyName` of your choice. Don't modify other parameters.
 
@@ -20,13 +20,16 @@ For example, if your capacity drives are hard disk drives (HDD), launch PowerShe
 
 To create a NestedMirror tier:
 
-```PowerShell
+```powershell
 New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirrorOnHDD -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
 ```
+
 To create a NestedParity tier:
+
 ```powershell
 New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParityOnHDD -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
 ```
+
 If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead and change the `-FriendlyName` to `*OnSSD`. Don't modify other parameters.
 
 > [!TIP]
@@ -64,7 +67,7 @@ Volumes that use nested resiliency appear in [Windows Admin Center](/windows-ser
 
 ### Optional: Extend to cache drives
 
-With its default settings, nested resiliency protects against the loss of multiple capacity drives at the same time, or one server and one capacity drive at the same time. To extend this protection to [cache drives](/azure-stack/hci/concepts/cache), there's another consideration: because cache drives often provide read and write caching for multiple capacity drives, the only way to ensure you can tolerate the loss of a cache drive when the other server is down is to not cache writes, but that impacts performance.
+With its default settings, nested resiliency protects against the loss of multiple capacity drives at the same time, or one server and one capacity drive at the same time. To extend this protection to [cache drives](../WindowsServerDocs/storage/storage-spaces/cache.md), there's another consideration: because cache drives often provide read and write caching for multiple capacity drives, the only way to ensure you can tolerate the loss of a cache drive when the other server is down is to not cache writes, but that impacts performance.
 
 To address this scenario, Storage Spaces Direct offers the option to automatically disable write caching when one server in a two-server cluster is down, and then re-enable write caching once the server is back up. To allow routine restarts without performance impact, write caching isn't disabled until the server has been down for 30 minutes. Once write caching is disabled, the contents of the write cache is written to capacity devices. After this, the server can tolerate a failed cache device in the online server, though reads from the cache might be delayed or fail if a cache device fails.
 

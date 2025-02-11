@@ -60,13 +60,13 @@ To see why this happens, consider the following simplified illustration. Each co
 
 As drawn, Server 1 (10 TB) and Server 2 (10 TB) are full. Server 3 has larger drives, therefore its total capacity is larger (15 TB). However, to store more three-way mirror data on Server 3 would require copies on Server 1 and Server 2 too, which are already full. The remaining 5 TB capacity on Server 3 can't be used – it's *stranded* capacity.
 
-:::image type="content" source="media/drive-symmetry-considerations/size-asymmetry-3n-stranded.png" alt-text="Three-way mirror, three servers, stranded capacity." lightbox="media/drive-symmetry-considerations/size-asymmetry-3n-stranded.png":::
+:::image type="content" source="media/drive-symmetry-considerations/size-asymmetry-3n-stranded.png" alt-text="Three-way mirror, three servers, stranded capacity.":::
 
 ### Optimal placement
 
 Conversely, with four servers of 10 TB, 10 TB, 10 TB, and 15 TB capacity and three-way mirror resiliency, it's possible to validly place copies in a way that uses all available capacity, as drawn. Whenever this is possible, the Storage Spaces Direct allocator finds and uses the optimal placement, leaving no stranded capacity.
 
-:::image type="content" source="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png" alt-text="Three-way mirror, four servers, no stranded capacity." lightbox="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png":::
+:::image type="content" source="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png" alt-text="Three-way mirror, four servers, no stranded capacity.":::
 
 The number of servers, the resiliency, the severity of the capacity imbalance, and other factors affect whether there's stranded capacity. **The most prudent general rule is to assume that only capacity available in every server is guaranteed to be usable.**
 
@@ -76,7 +76,7 @@ Storage Spaces Direct can also withstand a cache imbalance across drives and acr
 
 Using cache drives of different sizes may not improve cache performance uniformly or predictably: only IO to [drive bindings](cache.md#server-side-architecture) with larger cache drives may see improved performance. Storage Spaces Direct distributes IO evenly across bindings and doesn't discriminate based on cache-to-capacity ratio.
 
-:::image type="content" source="media/drive-symmetry-considerations/cache-asymmetry.png" alt-text="Cache imbalance." lightbox="media/drive-symmetry-considerations/cache-asymmetry.png":::
+:::image type="content" source="media/drive-symmetry-considerations/cache-asymmetry.png" alt-text="Cache imbalance.":::
 
    > [!TIP]
    > See [Understanding the storage pool cache](cache.md) to learn more about cache bindings.
