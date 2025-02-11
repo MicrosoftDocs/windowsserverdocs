@@ -1,8 +1,8 @@
 ---
 title: Enable volume encryption and deduplication - Azure Stack HCI and Windows Server
 description: This topic covers how to use volume encryption and deduplication in Azure Stack HCI and Windows Server using Windows Admin Center.
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 08/17/2023
 ---

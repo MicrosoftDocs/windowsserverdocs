@@ -1,10 +1,10 @@
 ---
 title: Drive symmetry considerations for Azure Stack HCI and Windows Server clusters
 description: This article explains drive symmetry constraints in Storage Spaces Direct and provides examples of supported and unsupported configurations.
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.topic: conceptual
-ms.date: 02/22/2024
+ms.date: 02/10/2025
 ---
 
 # Drive symmetry considerations for Azure Stack HCI and Windows Server clusters
@@ -34,14 +34,14 @@ All servers should have the same number of drives of each type.
 For example, if one server has six SSD, they should *all* have six SSD.
 
    > [!NOTE]
-   > It is okay for the number of drives to differ temporarily during failures or while adding or removing drives.
+   > It's okay for the number of drives to differ temporarily during failures or while adding or removing drives.
 
 ### Model
 
 We recommend using drives of the same model and firmware version whenever possible. If you can't, carefully select drives that are as similar as possible. We discourage mixing-and-matching drives of the same type with sharply different performance or endurance characteristics (unless one is cache and the other is capacity) because Storage Spaces Direct distributes IO evenly and doesn't discriminate based on model.
 
    > [!NOTE]
-   > It is okay to mix-and-match similar SATA and SAS drives.
+   > It's okay to mix-and-match similar SATA and SAS drives.
 
 ### Size
 
@@ -52,7 +52,7 @@ We recommend using drives of the same sizes whenever possible. Using capacity dr
 
 ## Understand: capacity imbalance
 
-Storage Spaces Direct is robust enough to handle capacity imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. However, depending on several factors, capacity that isn't available in every server may not be usable.
+Storage Spaces Direct is robust enough to handle capacity imbalance across drives and across servers. Even if the imbalance is severe, everything continues to work. However, depending on several factors, capacity that isn't available in every server may not be usable.
 
 To see why this happens, consider the simplified illustration below. Each colored box represents one copy of mirrored data. For example, the boxes marked A, A', and A'' are three copies of the same data. To honor server fault tolerance, these copies *must* be stored in different servers.
 
@@ -64,7 +64,7 @@ As drawn, Server 1 (10 TB) and Server 2 (10 TB) are full. Server 3 has larger dr
 
 ### Optimal placement
 
-Conversely, with four servers of 10 TB, 10 TB, 10 TB, and 15 TB capacity and three-way mirror resiliency, it *is* possible to validly place copies in a way that uses all available capacity, as drawn. Whenever this is possible, the Storage Spaces Direct allocator will find and use the optimal placement, leaving no stranded capacity.
+Conversely, with four servers of 10 TB, 10 TB, 10 TB, and 15 TB capacity and three-way mirror resiliency, it *is* possible to validly place copies in a way that uses all available capacity, as drawn. Whenever this is possible, the Storage Spaces Direct allocator finds and uses the optimal placement, leaving no stranded capacity.
 
 :::image type="content" source="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png" alt-text="Three-way mirror, four servers, no stranded capacity." lightbox="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png":::
 
@@ -72,7 +72,7 @@ The number of servers, the resiliency, the severity of the capacity imbalance, a
 
 ## Understand: cache imbalance
 
-Storage Spaces Direct can also withstand a cache imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. Moreover, it always uses all available cache to the fullest.
+Storage Spaces Direct can also withstand a cache imbalance across drives and across servers. Even if the imbalance is severe, everything continues to work. Moreover, it always uses all available cache to the fullest.
 
 Using cache drives of different sizes may not improve cache performance uniformly or predictably: only IO to [drive bindings](cache.md#server-side-architecture) with larger cache drives may see improved performance. Storage Spaces Direct distributes IO evenly across bindings and doesn't discriminate based on cache-to-capacity ratio.
 
@@ -117,7 +117,7 @@ The first two servers use 4 TB HDD but the third server uses very similar 6 TB H
 | 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache) | 2 x 800 GB NVMe (cache) |
 | 4 x 4 TB HDD (capacity) | 4 x 4 TB HDD (capacity) | 4 x 6 TB HDD (capacity) |
 
-This is supported, although it will result in stranded capacity.
+This is supported, although it results in stranded capacity.
 
 ### :::image type="icon" source="media/drive-symmetry-considerations/supported.png" border="false"::: Supported: different sizes within server
 

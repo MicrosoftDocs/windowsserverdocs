@@ -1,8 +1,8 @@
 ---
 title: Understand and deploy persistent memory 
 description: This article provides details on what persistent memory is and how to deploy it as storage in Azure Stack HCI and Windows Server.
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 04/17/2023
 ---
@@ -17,7 +17,7 @@ Persistent memory (or PMem) is a new type of memory technology that retains its 
 
 Persistent memory is a type of non-volatile media that fits in a standard DIMM (memory) slot. It's slower than DRAM, but provides higher throughput than SSD and NVMe. Compared to DRAM, persistent memory modules come in much larger capacities and are less expensive per GB, however they are still more expensive than NVMe. Memory contents remain even when system power goes down in the event of an unexpected power loss, user initiated shutdown, or system crash. This means that you can use persistent memory modules as ultra-fast, persistent storage.
 
-Azure Stack HCI and Windows Server 2019 support using persistent memory as either a cache or a capacity drive. However, given the pricing model, persistent memory provides the most value as either a cache or as a small amount of dedicated storage for memory mapping data. In most cases, persistent memory drives will be automatically used as cache drives, and anything slower will be used as capacity drives. For more information about how to set up cache and capacity drives, see [Understanding the storage pool cache](cache.md) and [Plan volumes](plan-volumes.md).
+Azure Stack HCI and Windows Server 2019 support using persistent memory as either a cache or a capacity drive. However, given the pricing model, persistent memory provides the most value as either a cache or as a small amount of dedicated storage for memory mapping data. In most cases, persistent memory drives are automatically used as cache drives, and anything slower is used as capacity drives. For more information about how to set up cache and capacity drives, see [Understanding the storage pool cache](cache.md) and [Plan volumes](plan-volumes.md).
 
 ## Persistent memory concepts
 
@@ -27,7 +27,7 @@ This section describes the basic concepts you'll need to understand in order to 
 
 There are two methods for accessing persistent memory. They are:
 
-- **Block access**, which operates like storage for app compatibility. In this configuration, data flows through the file system and storage stacks as normal. You can use this configuration in combination with NTFS and ReFS, and it is recommended for most use cases.
+- **Block access**, which operates like storage for app compatibility. In this configuration, data flows through the file system and storage stacks as normal. You can use this configuration in combination with NTFS and ReFS, and it's recommended for most use cases.
 - **Direct access (DAX)**, which operates like memory to get the lowest latency. You can only use DAX in combination with NTFS. **If you don't use DAX correctly, there is potential for data loss.** We strongly recommend that you use DAX with [Block translation table (BTT)](#block-translation-table) turned on to mitigate the risk of torn writes. To learn more, see [Understand and configure DAX](/windows-server/storage/storage-spaces/persistent-memory-direct-access).
 
 > [!WARNING]
@@ -43,9 +43,9 @@ To use persistent memory as storage, you must define at least one **PmemDisk**, 
 
 ### Block translation table
 
-Unlike solid-state drives, persistent memory modules do not protect against "torn writes" that can occur in the case of a power failure or system outage, putting data at risk. BTT mitigates this risk by providing atomic sector update semantics for persistent memory devices, essentially enabling block-like sector writes so that apps can avoid mixing old and new data in a failure scenario. We strongly recommend turning on BTT in nearly all cases. Because BTT is a property of the PmemDisk, it must be turned on when the PmemDisk is created.
+Unlike solid-state drives, persistent memory modules don't protect against "torn writes" that can occur in the case of a power failure or system outage, putting data at risk. BTT mitigates this risk by providing atomic sector update semantics for persistent memory devices, essentially enabling block-like sector writes so that apps can avoid mixing old and new data in a failure scenario. We strongly recommend turning on BTT in nearly all cases. Because BTT is a property of the PmemDisk, it must be turned on when the PmemDisk is created.
 
-In block access mode, we recommend using BTT because all data will be using block semantics. BTT is also useful in DAX mode because metadata operations still use block semantics, even if the application's data operations don't. Even if all application operations are using memory-mapped files with DAX semantics, torn writes could still happen for the metadata operations; therefore, turning on BTT is still valuable.
+In block access mode, we recommend using BTT because all data uses block semantics. BTT is also useful in DAX mode because metadata operations still use block semantics, even if the application's data operations don't. Even if all application operations are using memory-mapped files with DAX semantics, torn writes could still happen for the metadata operations; therefore, turning on BTT is still valuable.
 
 ## Supported hardware
 
@@ -64,7 +64,7 @@ Operating mode is often preconfigured by the original device manufacturer.
 > [!NOTE]
 > When you restart a system that has multiple Intel&reg; Optane&trade; persistent memory modules in App Direct mode that are divided into multiple PmemDisks, you might lose access to some or all of the related logical storage disks. This issue occurs on Windows Server 2019 versions that are older than version 1903.
 >
-> This loss of access occurs because a persistent memory module is untrained or otherwise fails when the system starts. In such a case, all the PmemDisks on any persistent memory module on the system fail, including those that do not physically map to the failed module.
+> This loss of access occurs because a persistent memory module is untrained or otherwise fails when the system starts. In such a case, all the PmemDisks on any persistent memory module on the system fail, including those that don't physically map to the failed module.
 >
 > To restore access to all the PmemDisks, [replace the failed module](#replace-persistent-memory).
 >
@@ -88,7 +88,7 @@ You can also convert a VHD that doesn't have BTT enabled into one that does (and
 Convert-VHD .\pmemtest_nobtt.vhdpmem -AddressAbstractionType BTT -DestinationPath pmemtest_btt.vhdpmem
 ```
 
-After converting, the new VHD will have the same namespace GUID as the original one. That can lead to problems, especially if they're both attached to the same VM. To create a new namespace UUID for the converted VHD, use the `Set-VHD` cmdlet:
+After converting, the new VHD has the same namespace GUID as the original one. That can lead to problems, especially if they're both attached to the same VM. To create a new namespace UUID for the converted VHD, use the `Set-VHD` cmdlet:
 
 ```PowerShell
 Set-VHD -ResetDiskIdentifier .\pmemtest_btt.vhdpmem
@@ -172,7 +172,7 @@ DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds Unsa
 3          252 GB Healthy      None          True         {1020, 1120}      0
 ```
 
-It is worth noting that we can run `Get-PhysicalDisk | Where MediaType -eq SCM` instead of `Get-PmemDisk` to get the same results. The newly created persistent memory disk corresponds one-to-one with drives that appear in PowerShell and in Windows Admin Center.
+It's worth noting that we can run `Get-PhysicalDisk | Where MediaType -eq SCM` instead of `Get-PmemDisk` to get the same results. The newly created persistent memory disk corresponds one-to-one with drives that appear in PowerShell and in Windows Admin Center.
 
 ## Replace persistent memory
 

@@ -2,10 +2,10 @@
 title: Replace failed drives on Azure Stack HCI
 description: How to replace failed drives on Azure Stack HCI.
 ms.topic: how-to
-author: alkohli
-ms.author: alkohli
+author: robinharwood
+ms.author: roharwoo
 ms.reviewer: jgerend
-ms.date: 04/19/2023
+ms.date: 02/10/2025
 ---
 
 # Replace failed drives on Azure Stack HCI
@@ -27,11 +27,11 @@ When a drive fails, an alert appears in the upper **Alerts** area of the Windows
 
 ## Wait for the alert to clear
 
-In Windows Admin Center, under the **Drives > Inventory** tab, the new drive will appear. In time, the alert clears, volumes repair back to OK status, and storage rebalances onto the new drive automatically.
+In Windows Admin Center, under the **Drives > Inventory** tab, the new drive appears. In time, the alert clears, volumes repair back to OK status, and storage rebalances onto the new drive automatically.
 
 ## Troubleshooting
 
-If the new drive is not added to the pool, it may be because AutoPool is disabled. To determine this, run the following PowerShell command as administrator:
+If the new drive isn't added to the pool, it may be because AutoPool is disabled. To determine this, run the following PowerShell command as administrator:
 
 ```powershell
 Get-StorageSubsystem Cluster* | Get-StorageHealthSetting | select "System.Storage.PhysicalDisk.AutoPool.Enabled"
@@ -41,7 +41,7 @@ If the value is **True**, AutoPool is enabled.  If the value is **False**, AutoP
 
 ### Option A
 
-This option leaves AutoPool disabled and manually adds the disk(s) to the storage pool. Run the following series of PowerShell commands as administrator:
+This option leaves AutoPool disabled and manually adds the disks to the storage pool. Run the following series of PowerShell commands as administrator:
 
 Run the following and verify the new physical disk is listed with `OperationalStatus` is **OK**, and `HealthStatus` is **Healthy**.
 

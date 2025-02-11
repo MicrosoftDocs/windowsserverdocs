@@ -1,10 +1,10 @@
 ---
 title: Choose drives for Azure Stack HCI and Windows Server clusters
 description: How to choose drives for Azure Stack HCI and Windows Server clusters to meet performance and capacity requirements.
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.topic: conceptual
-ms.date: 02/21/2024
+ms.date: 02/10/2025
 ---
 
 # Choose drives for Azure Stack HCI and Windows Server clusters
@@ -28,11 +28,11 @@ Storage Spaces Direct, the underlying storage virtualization technology behind A
    > This article covers choosing drive configurations with NVMe, SSD, and HDD. For more information on PMem, see [Understand and deploy persistent memory](deploy-persistent-memory.md).
 
   > [!NOTE]
-  > Storage Bus Layer (SBL) cache is not supported in single server configuration. All flat single storage type configurations (for example all-NVMe or all-SSD) is the only supported storage type for single server.
+  > Storage Bus Layer (SBL) cache isn't supported in single server configuration. All flat single storage type configurations (for example all-NVMe or all-SSD) is the only supported storage type for single server.
 
 ## Built-in cache
 
-Storage Spaces Direct features a built-in server-side cache. It is a large, persistent, real-time read and write cache. In deployments with multiple types of drives, it is configured automatically to use all drives of the "fastest" type. The remaining drives are used for capacity.
+Storage Spaces Direct features a built-in server-side cache. It's a large, persistent, real-time read and write cache. In deployments with multiple types of drives, it's configured automatically to use all drives of the "fastest" type. The remaining drives are used for capacity.
 
 For more information, check out [Understanding the storage pool cache](cache.md).
 
@@ -44,14 +44,14 @@ There are multiple ways to do so:
 
 :::image type="content" source="media/choose-drives/all-flash-deployment-possibilities.png" alt-text="Diagram shows deployment options, including all NVMe for capacity, NVMe for cache with SSD for capacity, and all SSD for capacity." lightbox="media/choose-drives/all-flash-deployment-possibilities.png":::
 
-1. **All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there is no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter ([requires set-up](/windows-server/storage/storage-spaces/understand-the-cache#manual-configuration)).
+1. **All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there's no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter ([requires set-up](/windows-server/storage/storage-spaces/understand-the-cache#manual-configuration)).
 
-2. **NVMe + SSD.** Using NVMe together with SSDs, the NVMe will automatically cache writes to the SSDs. This allows writes to coalesce in cache and be de-staged only as needed, to reduce wear on the SSDs. This provides NVMe-like write characteristics, while reads are served directly from the also-fast SSDs.
+2. **NVMe + SSD.** Using NVMe together with SSDs, the NVMe automatically cache writes to the SSDs. This allows writes to coalesce in cache and be de-staged only as needed, to reduce wear on the SSDs. This provides NVMe-like write characteristics, while reads are served directly from the also-fast SSDs.
 
-3. **All SSD.** As with All-NVMe, there is no cache if all your drives are the same model. If you mix higher-endurance and lower-endurance models, you can configure the former to cache writes for the latter ([requires set-up](/windows-server/storage/storage-spaces/understand-the-cache#manual-configuration)).
+3. **All SSD.** As with All-NVMe, there's no cache if all your drives are the same model. If you mix higher-endurance and lower-endurance models, you can configure the former to cache writes for the latter ([requires set-up](/windows-server/storage/storage-spaces/understand-the-cache#manual-configuration)).
 
    >[!NOTE]
-   > An advantage to using all-NVMe or all-SSD with no cache is that you get usable storage capacity from every drive. There is no capacity "spent" on caching, which may be appealing at smaller scale.
+   > An advantage to using all-NVMe or all-SSD with no cache is that you get usable storage capacity from every drive. There's no capacity "spent" on caching, which may be appealing at smaller scale.
 
 ## Option 2 – Balancing performance and capacity
 
@@ -59,11 +59,11 @@ For environments with a variety of applications and workloads, some with stringe
 
 :::image type="content" source="media/choose-drives/hybrid-deployment-possibilities.png" alt-text="Diagram shows deployment possibilities, including NVMe for cache with HDD for capacity, SSD for cache with HDD for capacity, and NVMe for cache with mixed SSD and HDD for capacity." lightbox="media/choose-drives/hybrid-deployment-possibilities.png":::
 
-1. **NVMe + HDD**. The NVMe drives will accelerate reads and writes by caching both. Caching reads allows the HDDs to focus on writes. Caching writes absorbs bursts and allows writes to coalesce and be de-staged only as needed, in an artificially serialized manner that maximizes HDD IOPS and IO throughput. This provides NVMe-like write characteristics, and for frequently or recently read data, NVMe-like read characteristics too.
+1. **NVMe + HDD**. The NVMe drives accelerate reads and writes by caching both. Caching reads allows the HDDs to focus on writes. Caching writes absorbs bursts and allows writes to coalesce and be de-staged only as needed, in an artificially serialized manner that maximizes HDD IOPS and IO throughput. This provides NVMe-like write characteristics, and for frequently or recently read data, NVMe-like read characteristics too.
 
-2. **SSD + HDD**. Similar to the above, the SSDs will accelerate reads and writes by caching both. This provides SSD-like write characteristics, and SSD-like read characteristics for frequently or recently read data.
+2. **SSD + HDD**. Similar to the above, the SSDs accelerate reads and writes by caching both. This provides SSD-like write characteristics, and SSD-like read characteristics for frequently or recently read data.
 
-    There is one additional, rather exotic option: to use drives of *all three* types.
+    There's one additional, rather exotic option: to use drives of *all three* types.
 
 3. **NVMe + SSD + HDD.** With drives of all three types, the NVMe drives cache for both the SSDs and HDDs. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side by side in the same cluster, all accelerated by NVMe. The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
 
@@ -76,18 +76,18 @@ For workloads that require vast capacity and write infrequently, such as archiva
 
 :::image type="content" source="media/choose-drives/maximizing-capacity.png" alt-text="Deployment options for maximizing capacity." lightbox="media/choose-drives/maximizing-capacity.png":::
 
-1. **SSD + HDD**. The SSDs will cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs.
+1. **SSD + HDD**. The SSDs cache reads and writes, to absorb bursts and provide SSD-like write performance, with optimized de-staging later to the HDDs.
 
 >[!IMPORTANT]
->Configuration with HDDs only is not supported. High endurance SSDs caching to low endurance SSDs is not advised.
+>Configuration with HDDs only isn't supported. High endurance SSDs caching to low endurance SSDs isn't advised.
 
 ## Sizing considerations
 
 ### Cache
 
-Every server must have at least two cache drives (the minimum required for redundancy). We recommend making the number of capacity drives a multiple of the number of cache drives. For example, if you have 4 cache drives, you will experience more consistent performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
+Every server must have at least two cache drives (the minimum required for redundancy). We recommend making the number of capacity drives a multiple of the number of cache drives. For example, if you have 4 cache drives, you'll experience more consistent performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
 
-The cache should be sized to accommodate the working set of your applications and workloads, that is, all the data they are actively reading and writing at any given time. There is no cache size requirement beyond that. For deployments with HDDs, a fair starting place is 10 percent of capacity – for example, if each server has 4 x 4 TB HDD = 16 TB of capacity, then 2 x 800 GB SSD = 1.6 TB of cache per server. For all-flash deployments, especially with very [high endurance](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024) SSDs, it may be fair to start closer to 5 percent of capacity – for example, if each server has 24 x 1.2 TB SSD = 28.8 TB of capacity, then 2 x 750 GB NVMe = 1.5 TB of cache per server. You can always add or remove cache drives later to adjust.
+The cache should be sized to accommodate the working set of your applications and workloads, that is, all the data they're actively reading and writing at any given time. There's no cache size requirement beyond that. For deployments with HDDs, a fair starting place is 10 percent of capacity – for example, if each server has 4 x 4 TB HDD = 16 TB of capacity, then 2 x 800 GB SSD = 1.6 TB of cache per server. For all-flash deployments, especially with very [high endurance](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024) SSDs, it may be fair to start closer to 5 percent of capacity – for example, if each server has 24 x 1.2 TB SSD = 28.8 TB of capacity, then 2 x 750 GB NVMe = 1.5 TB of cache per server. You can always add or remove cache drives later to adjust.
 
 ### General
 

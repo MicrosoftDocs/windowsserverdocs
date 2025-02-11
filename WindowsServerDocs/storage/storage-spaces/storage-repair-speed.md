@@ -2,8 +2,8 @@
 title: Adjust storage repair speed in Azure Stack HCI and Windows Server clusters
 description: How to adjust storage repair speed in Azure Stack HCI and Windows Server clusters by using Windows Admin Center or PowerShell.
 ms.topic: how-to
-author: alkohli
-ms.author: alkohli
+author: robinharwood
+ms.author: roharwoo
 ms.reviewer: tinawu
 ms.date: 06/05/2023
 ---

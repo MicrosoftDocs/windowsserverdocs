@@ -1,8 +1,8 @@
 ---
 title: Manage SMB Multichannel
 description: Use this topic to use SMB Multichannel for increased throughput and network fault tolerance.
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 04/17/2023
 ---

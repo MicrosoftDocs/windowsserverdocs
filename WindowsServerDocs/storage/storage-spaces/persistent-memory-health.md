@@ -1,10 +1,10 @@
 ---
 title: Persistent memory health management in Azure Stack HCI and Windows Server
 description: This article provides information about error handling and health management specific to persistent memory (PMem) devices in Azure Stack HCI and Windows Server.
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
-ms.date: 04/17/2023
+ms.date: 02/10/2025
 ---
 
 # Persistent memory health management
@@ -29,7 +29,7 @@ In Windows Server 2016, the Storage Spaces GUI shows NVDIMM-N bus type as UNKNOW
 Get-PhysicalDisk | fl
 ```
 
-The parameter BusType in the output will correctly show bus type as *SCM*.
+The parameter BusType in the output correctly shows bus type as *SCM*.
 
 ## View persistent memory health status
 
@@ -120,7 +120,7 @@ The following table lists some information about this condition.
 | Heading | Description |
 | --- | --- |
 | Likely condition | Loss of persistence / backup Power |
-|Root Cause|Persistent memory devices rely on a back-up power source for their persistence – usually a battery or super-cap. If this back-up power source is unavailable or the device cannot perform a backup for any reason (Controller/Flash Error), data is at risk and Windows will prevent any further writes to the affected devices. Reads are still possible to evacuate data.|
+|Root Cause|Persistent memory devices rely on a back-up power source for their persistence – usually a battery or super-cap. If this back-up power source is unavailable or the device can't perform a backup for any reason (Controller/Flash Error), data is at risk and Windows will prevent any further writes to the affected devices. Reads are still possible to evacuate data.|
 |General behavior|The NTFS volume will be dismounted.<br>The PhysicalDisk Health Status field will show "Unhealthy" for all affected NVDIMM-N devices.|
 |Storage Spaces behavior|Storage Space will remain operational as long as only one persistent memory module is affected. If multiple devices are affected, writes to the Storage Space will fail. <br>The PhysicalDisk Health Status field will show "Unhealthy" for all affected persistent memory devices.|
 |More information|OperationalStatus field of the PhysicalDisk object.<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
@@ -128,7 +128,7 @@ The following table lists some information about this condition.
 
 ## Device is shown with a capacity of '0' bytes or as a "Generic Physical Disk"
 
-This condition is present when a persistent memory device is shown with a capacity of 0 bytes and cannot be initialized, or is exposed as a "Generic Physical Disk" object with no serial number that displays an  Operational Status of **Lost Communication**, as shown in this example output:
+This condition is present when a persistent memory device is shown with a capacity of 0 bytes and can't be initialized, or is exposed as a "Generic Physical Disk" object with no serial number that displays an  Operational Status of **Lost Communication**, as shown in this example output:
 
 | SerialNumber | HealthStatus | OperationalStatus | OperationalDetails |
 | --- | --- | --- | --- |
@@ -139,9 +139,9 @@ The following table lists some information about this condition.
 
 |Heading|Description|
 |---|---|
-|Likely condition|BIOS did not expose persistent memory module to OS|
+|Likely condition|BIOS didn't expose persistent memory module to OS|
 |Root Cause|Persistent memory devices are DRAM based. When a corrupt DRAM address is referenced, most CPUs will initiate a machine check and restart the server. Some server platforms then unmap the persistent memory module, preventing the OS from accessing it and potentially causing another machine check. This may also occur if the BIOS detects that the persistent memory module has failed and needs to be replaced.|
-|General behavior|Persistent memory module is shown as uninitialized, with a capacity of 0 bytes and cannot be read or written.|
+|General behavior|Persistent memory module is shown as uninitialized, with a capacity of 0 bytes and can't be read or written.|
 |Storage Spaces behavior|Storage Space remains operational (provided only one persistent memory module is affected).<br>PMem PhysicalDisk object is shown with a Health Status of Warning and as a "General Physical Disk"|
 |More information|OperationalStatus field of the PhysicalDisk object. <br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |What to do|The persistent memory device must be replaced or sanitized, such that the server platform exposes it to the host OS again. Replacement of the device is recommended, as more uncorrectable errors could occur. Adding a replacement device to a storage spaces configuration can be achieved with the `Add-PhysicalDisk` cmdlet.|
@@ -162,7 +162,7 @@ The following table lists some information about this condition.
 |Likely condition|Backup/Restore Failure|
 |Root cause|A failure in the backup or restore procedure will likely result in all data on the persistent memory module to be lost. When the operating system loads, it will appear as a brand new persistent memory device without a partition or file system and surface as RAW, meaning it doesn't have a file system.|
 |General behavior|Persistent memory will be in read-only mode. Explicit user action is needed to begin using it again.|
-|Storage Spaces behavior|Storage Spaces remains operational if only one persistent memory module is affected).<br>PMem physical disk object will be shown with the Health Status "Unhealthy" and is not used by Storage Spaces.|
+|Storage Spaces behavior|Storage Spaces remains operational if only one persistent memory module is affected.<br>PMem physical disk object will be shown with the Health Status "Unhealthy" and isn't used by Storage Spaces.|
 |More information|OperationalStatus field of the PhysicalDisk object.<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |What to do|If the user doesn't want to replace the affected device, they can use the `Reset-PhysicalDisk` cmdlet to clear the read-only condition on the affected persistent memory module. In Storage Spaces environments, this will also attempt to reintegrate the persistent memory module into Storage Spaces and start the repair process.|
 
