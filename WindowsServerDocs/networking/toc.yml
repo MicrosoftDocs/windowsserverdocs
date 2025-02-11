@@ -180,11 +180,11 @@ items:
         - name: Forwarding
           href: dns/forwarding.md
         - name: Dynamic updates
-          href: dns/dynamic-updates.md
+          href: dns/dynamic-update.md
         - name: Aging and scavenging
-          href: aging-scavenging.md
+          href: dns/aging-scavenging.md
         - name: WINS lookup integration
-          href: wins-lookup.md
+          href: dns/wins-lookup.md
       - name: DNSSEC
         items:
         - name: What is DNSSEC?
