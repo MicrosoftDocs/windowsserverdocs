@@ -74,7 +74,7 @@ The behavior of the cache is determined automatically based on the type(s) of dr
 
 Caching can be used in an all-flash scenario, for example using NVMe as cache to accelerate the performance of SSDs. When caching for all-flash deployments, only writes are cached. This reduces wear on the capacity drives because many writes and rewrites can coalesce in the cache and then destage only as needed, reducing the cumulative traffic to the capacity drives and extending their lifespan. For this reason, we recommend selecting [higher-endurance, write-optimized](http://whatis.techtarget.com/definition/DWPD-device-drive-writes-per-day) drives for the cache. The capacity drives may reasonably have lower write endurance.
 
-Because reads do not significantly affect the lifespan of flash, and because SSDs universally offer low read latency, reads aren't cached: they're served directly from the capacity drives (except when the data was written so recently that it hasn't yet been destaged). This allows the cache to be dedicated entirely to writes, maximizing its effectiveness.
+Because reads don't significantly affect the lifespan of flash, and because SSDs universally offer low read latency, reads aren't cached: they're served directly from the capacity drives (except when the data was written so recently that it hasn't yet been destaged). This allows the cache to be dedicated entirely to writes, maximizing its effectiveness.
 
 This results in write characteristics, such as write latency, being dictated by the cache drives, while read characteristics are dictated by the capacity drives. Both are consistent, predictable, and uniform.
 
@@ -82,7 +82,7 @@ This results in write characteristics, such as write latency, being dictated by 
 
 When caching for HDD, both reads *and* writes are cached, to provide flash-like latency (often ~10x better) for both. The read cache stores recently and frequently read data for fast access and to minimize random traffic to the HDDs. (Because of seek and rotational delays, the latency and lost time incurred by random access to an HDD is significant.) Writes are cached to absorb bursts and, as before, to coalesce writes and rewrites and minimize the cumulative traffic to the capacity drives.
 
-Storage Spaces Direct implements an algorithm that de-randomizes writes before de-staging them, to emulate an IO pattern to disk that seems sequential even when the actual I/O coming from the workload (such as virtual machines) is random. This maximizes the IOPS and throughput to the HDDs.
+Storage Spaces Direct implements an algorithm that derandomizes writes before de-staging them, to emulate an IO pattern to disk that seems sequential even when the actual I/O coming from the workload (such as virtual machines) is random. This maximizes the IOPS and throughput to the HDDs.
 
 ### Caching in deployments with NVMe, SSD, and HDD
 
@@ -123,7 +123,7 @@ We recommend making the number of capacity drives a multiple of the number of ca
 
 ## Handling cache drive failures
 
-When a cache drive fails, any writes which have not yet been destaged are lost *to the local server*, meaning they exist only on the other copies (in other servers). Just like after any other drive failure, Storage Spaces can and does automatically recover by consulting the surviving copies.
+When a cache drive fails, any writes which haven't yet been destaged are lost *to the local server*, meaning they exist only on the other copies (in other servers). Just like after any other drive failure, Storage Spaces can and does automatically recover by consulting the surviving copies.
 
 For a brief period, the capacity drives which were bound to the lost cache drive appear unhealthy. Once the cache rebinding has occurred (automatic) and the data repair has completed (automatic), they resume showing as healthy.
 
@@ -140,7 +140,7 @@ You can then replace the cache drive just like any other drive replacement.
 
 There are several other unrelated caches in the Windows software-defined storage stack. Examples include the Storage Spaces write-back cache and the Cluster Shared Volume (CSV) in-memory read cache.
 
-With Azure Stack HCI, the Storage Spaces write-back cache should not be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet should not be used.
+With Azure Stack HCI, the Storage Spaces write-back cache shouldn't be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet shouldn't be used.
 
 You may choose to use the CSV cache, or not – it's up to you. It's on by default in Azure Stack HCI, but it doesn't conflict with the cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [Use the CSV in-memory read cache with Azure Stack HCI](./use-csv-cache.md).
 
@@ -152,7 +152,7 @@ If you need to make changes to the cache device model after setup, edit the Heal
 
 ### Specify cache drive model
 
-In deployments where all drives are of the same type, such as all-NVMe or all-SSD deployments, no cache is configured because Windows cannot distinguish characteristics like write endurance automatically among drives of the same type.
+In deployments where all drives are of the same type, such as all-NVMe or all-SSD deployments, no cache is configured because Windows can't distinguish characteristics like write endurance automatically among drives of the same type.
 
 To use higher-endurance drives to cache for lower-endurance drives of the same type, you can specify which drive model to use with the **-CacheDeviceModel** parameter of the **Enable-ClusterS2D** cmdlet. All drives of that model are used for caching.
 
@@ -192,7 +192,7 @@ Manual configuration enables the following deployment possibilities:
 
 ### Set cache behavior
 
-It's possible to override the default behavior of the cache. For example, you can set it to cache reads even in an all-flash deployment. We discourage modifying the behavior unless you are certain the default doesn't suit your workload.
+It's possible to override the default behavior of the cache. For example, you can set it to cache reads even in an all-flash deployment. We discourage modifying the behavior unless you're certain the default doesn't suit your workload.
 
 To override the behavior, use **Set-ClusterStorageSpacesDirect** cmdlet and its **-CacheModeSSD** and **-CacheModeHDD** parameters. The **CacheModeSSD** parameter sets the cache behavior when caching for SSD. The **CacheModeHDD** parameter sets cache behavior when caching for HDD.
 
@@ -240,7 +240,7 @@ For example, 2 cache drives bound to 4 capacity drives results in 4 "Hybrid Disk
 
 :::image type="content" source="media/cache/perfmon.png" alt-text="Performance-Monitor." lightbox="media/cache/perfmon.png":::
 
-There is no universal rule, but if too many reads are missing the cache, it may be undersized and you should consider adding cache drives to expand your cache. You can add cache drives or capacity drives independently whenever you want.
+There's no universal rule, but if too many reads are missing the cache, it may be undersized and you should consider adding cache drives to expand your cache. You can add cache drives or capacity drives independently whenever you want.
 
 ## Next steps
 

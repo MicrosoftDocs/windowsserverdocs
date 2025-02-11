@@ -13,7 +13,7 @@ ms.date: 02/10/2025
 
 Azure Stack HCI and Windows Server clusters work best when every server has exactly the same drives.
 
-In reality, we recognize this is not always practical. Today, you may buy spacious 3 TB hard drives; next year, it may become impossible to find drives that small. Therefore, some amount of mixing-and-matching is expected and supported. Keep in mind, however, that more symmetry is always better.
+In reality, we recognize this isn't always practical. Today, you may buy spacious 3 TB hard drives; next year, it may become impossible to find drives that small. Therefore, some amount of mixing-and-matching is expected and supported. Keep in mind, however, that more symmetry is always better.
 
 This article explains the constraints and provides examples of supported and unsupported configurations in Storage Spaces Direct, the underlying storage virtualization technology behind Azure Stack HCI and Windows Server.
 
@@ -68,7 +68,7 @@ Conversely, with four servers of 10 TB, 10 TB, 10 TB, and 15 TB capacity and thr
 
 :::image type="content" source="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png" alt-text="Three-way mirror, four servers, no stranded capacity." lightbox="media/drive-symmetry-considerations/size-asymmetry-4n-no-stranded.png":::
 
-The number of servers, the resiliency, the severity of the capacity imbalance, and other factors affect whether there is stranded capacity. **The most prudent general rule is to assume that only capacity available in every server is guaranteed to be usable.**
+The number of servers, the resiliency, the severity of the capacity imbalance, and other factors affect whether there's stranded capacity. **The most prudent general rule is to assume that only capacity available in every server is guaranteed to be usable.**
 
 ## Understand: cache imbalance
 
