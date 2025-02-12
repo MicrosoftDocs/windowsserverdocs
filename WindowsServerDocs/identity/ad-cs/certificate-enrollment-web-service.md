@@ -1,6 +1,6 @@
 ﻿---
-title: Certificate Enrollment Web Service Guidance
-description: Learn about the Certificate Enrollment Web Service, including authentication types, and load balancing.
+title: Certificate Enrollment Web Service overview
+description: Learn about the Certificate Enrollment Web Service, including authentication types, load balancing, and configuration options.
 author: meaghanlewis
 ms.topic: concept-article
 ms.author: mosagie
@@ -9,7 +9,7 @@ ms.date: 02/10/2025
 #customer intent: As a PKI admin/architect, I want to find accurate and relevant Active Directory Certificate Services (AD CS) documentation, so that understand/plan/deploy/operate AD CS.
 ---
 
-# Certificate Enrollment Web Service Guidance
+# Certificate Enrollment Web Service overview
 
 The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to perform certificate enrollment by using the HTTPS protocol. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer isn't a member of a domain or when a domain member isn't connected to the domain. The Certificate Enrollment Web Service uses the HTTPS protocol to accept certificate requests from and return issued certificates to network client computers. The Certificate Enrollment Web Service uses the DCOM protocol to connect to the certification authority (CA) and complete certificate enrollment on behalf of the requester.
 
