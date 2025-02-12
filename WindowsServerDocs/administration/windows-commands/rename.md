@@ -3,15 +3,15 @@ title: rename
 description: Reference article for the rename command, which renames a file or directory.
 ms.topic: reference
 ms.assetid: 7f2ea658-0fa9-4015-8031-22c2b0089231
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # rename
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Renames files or directories.
 

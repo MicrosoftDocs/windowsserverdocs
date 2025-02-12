@@ -3,15 +3,13 @@ description: "Learn more about: Deploy Access-Denied Assistance (Demonstration S
 ms.assetid: b035e9f8-517f-432a-8dfb-40bfc215bee5
 title: Deploy Access-Denied Assistance (Demonstration Steps)
 author: billmath
-ms.author: wscontent
+ms.author: roharwoo
 manager: femila
 ms.date: 06/06/2023
 ms.topic: article
 ---
 
 # Deploy Access-Denied Assistance (Demonstration Steps)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to configure access-denied assistance, and verify that it is working properly.
 

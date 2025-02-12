@@ -3,14 +3,14 @@ title: Plan Your WSUS Deployment
 description: Windows Server Update Service (WSUS) - An overview of the deployment planning process with links to the related articles
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 07/12/2023
 ---
 # Plan your WSUS deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
@@ -349,7 +349,7 @@ Choosing languages for an upstream server isn't the same as choosing languages f
 WSUS allows you to target updates to groups of client computers, so you can ensure that specific computers always get the right updates at the most convenient times. For example, if all the computers in one department (such as the Accounting team) have a specific configuration, you can set up a group for that team, decide which updates their computers need and what time they should be installed, and then use WSUS reports to evaluate the updates for the team.
 
 > [!NOTE]
-> If a WSUS server is running in replica mode, computer groups can't be created on that server. All the computer groups that are needed for client computers of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see Manage WSUS Replica Servers [Manage WSUS Replica Servers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939893(v=ws.10)) in the WSUS 3.0 SP2 Operations Guide.
+> If a WSUS server is running in replica mode, computer groups can't be created on that server. All the computer groups that are needed for client computers of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see [Run WSUS Replica mode](../manage/running-wsus-replica-mode.md).
 
 Computers are always assigned to the **All computers** group, and they remain assigned to the **Unassigned computers** group until you assign them to another group. Computers can belong to more than one group.
 

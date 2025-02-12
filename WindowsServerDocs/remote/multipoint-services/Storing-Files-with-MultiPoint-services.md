@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: c9eb0461-3846-4ddc-97ff-de10f03f30cf
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 # Storing Files with MultiPoint Services
 MultiPoint Services supports storing user files in the following ways:

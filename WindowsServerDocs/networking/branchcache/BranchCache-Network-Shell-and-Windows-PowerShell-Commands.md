@@ -4,13 +4,11 @@ description: This topic provides links to Network Shell and Windows PowerShell c
 manager: brianlic
 ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 12/08/2020
 ---
 # BranchCache Network Shell and Windows PowerShell Commands
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In Windows Server, you can configure and manage BranchCache by using either Windows PowerShell or the Network Shell (Netsh) commands for BranchCache.
 

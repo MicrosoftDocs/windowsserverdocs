@@ -3,13 +3,11 @@ title: Use live migration without Failover Clustering to move a virtual machine
 description: Gives prerequisites and instructions for doing a live migration in a standalone environment.
 ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 01/17/2017
 ---
 # Use live migration without Failover Clustering to move a virtual machine
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article shows you how to move a virtual machine by doing a live migration without using Failover Clustering. A live migration moves running virtual machines between Hyper-V hosts without any noticeable downtime.
 

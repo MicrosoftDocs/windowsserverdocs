@@ -1,30 +1,31 @@
 ---
-title: Manage Azure Stack HCI clusters with Windows Admin Center in Azure (preview)
-description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Azure Stack HCI.
+title: Manage Azure Local clusters with Windows Admin Center in Azure (preview)
+description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Azure Local.
 ms.topic: overview
 author: prasidharora
-ms.author: praror
+ms.author: roharwoo
 ms.date: 05/06/2022
 ---
-# Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)
-
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2
+# Manage Azure Local clusters using Windows Admin Center in Azure (preview)
 
 > [!IMPORTANT]
 > Windows Admin Center in the Azure portal is currently in preview.
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-Using Windows Admin Center in the Azure portal you can manage the Azure Stack HCI operating system of your cluster. You can securely manage your cluster from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
+> [!IMPORTANT]
+> Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
 
-With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure portal. Azure Stack HCI cluster and workload management no longer require you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
+Using Windows Admin Center in the Azure portal you can manage the Azure Local operating system of your cluster. You can securely manage your cluster from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
+
+With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Azure Local cluster in the Azure portal. Azure Local cluster and workload management no longer require you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
 
 This article provides an overview of using Windows Admin Center in the Azure portal, requirements, and how to install Windows Admin Center and use it to manage your cluster. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
-:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-dashboard.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal for an Azure Stack HCI cluster, displaying the Windows Admin Center Dashboard page." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-dashboard.png":::
+:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-dashboard.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal for an Azure Local cluster, displaying the Windows Admin Center Dashboard page." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-dashboard.png":::
 
 ## Overview of Windows Admin Center in Azure
 
-Windows Admin Center in the Azure portal provides essential tools for managing your Azure Stack HCI cluster. You can manage clusters without the need to open any inbound port on your firewall.
+Windows Admin Center in the Azure portal provides essential tools for managing your Azure Local cluster. You can manage clusters without the need to open any inbound port on your firewall.
 
 Using Windows Admin Center in the Azure portal, you can manage:
 
@@ -50,7 +51,6 @@ Using Windows Admin Center in the Azure portal, you can manage:
 - Scheduled tasks
 - Services
 - Storage
-- Updates
 - Virtual machines
 - Virtual switches
 
@@ -66,7 +66,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 - [Azure account with an active subscription](#azure-account-with-an-active-subscription)
 - [Azure permissions](#azure-permissions)
 - [Azure region availability](#azure-region-availability)
-- [Azure Stack HCI requirements](#azure-stack-hci-requirements)
+- [Azure Local requirements](#azure-local-requirements)
 - [Networking requirements](#networking-requirements)
 
 ### Azure account with an active subscription
@@ -93,29 +93,29 @@ To check the status of the resource provider, and register if needed:
 
 ### Azure permissions
 
-Connecting to Windows Admin center requires you to have **Reader** and **Windows Admin Center Administrator Login** permissions at the Arc-enable Azure Stack HCI resource.
+Connecting to Windows Admin center requires you to have **Reader** and **Windows Admin Center Administrator Login** permissions at the Arc-enable Azure Local resource.
 
 [Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
 ### Azure region availability
 
-Windows Admin Center is supported in [all public regions Azure Stack HCI](/azure-stack/hci/deploy/register-with-azure#region-availability) is supported.
+Windows Admin Center is supported in [all public regions Azure Local](/azure/azure-local/deploy/register-with-azure#region-availability) is supported.
 
 > [!NOTE]
 > Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
 
-### Azure Stack HCI requirements
+### Azure Local requirements
 
 To use Windows Admin Center in the Azure portal, the Windows Admin Center agent must be installed on every node of your cluster via an Azure VM extension. Each node of the cluster should meet the following requirements:
 
-- Azure Stack HCI, version 21H2 or later
+- Azure Local, version 21H2 or later
 - 3 GB of memory or more
-- The Azure Stack HCI cluster must be [connected to Azure using Azure Arc](/azure-stack/hci/deploy/register-with-azure)
+- The Azure Local cluster must be [connected to Azure using Azure Arc](/azure/azure-local/deploy/register-with-azure)
 - Azure Arc agent version 1.13.21320.014 or later
 
 ### Networking requirements
 
-Every node of the Azure Stack HCI cluster must meet the following networking requirements:
+Every node of the Azure Local cluster must meet the following networking requirements:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 
@@ -136,34 +136,34 @@ Make sure you review the [supported devices and recommended browsers](/azure/azu
 
 Before you can use Windows Admin Center in the Azure portal, you must deploy the Windows Admin Center VM extension using the following steps:
 
-1. Open the Azure portal and navigate to your Azure Stack HCI cluster.
+1. Open the Azure portal and navigate to your Azure Local cluster.
 2. Under the **Settings** group, select **Windows Admin Center**.
 3. Specify the port on which you wish to install Windows Admin Center, and then select **Install**.
 
-:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-install.png" alt-text="Screenshot showing the install button for Windows Admin Center on an Azure Stack HCI cluster." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-install.png":::
+:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-install.png" alt-text="Screenshot showing the install button for Windows Admin Center on an Azure Local cluster." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-install.png":::
 
 ## Connect to Windows Admin Center in the Azure portal
 
-After you've installed Windows Admin Center on your cluster, perform the following steps to connect to it and use it to manage Azure Stack HCI:
+After you've installed Windows Admin Center on your cluster, perform the following steps to connect to it and use it to manage Azure Local:
 
-1. Open the Azure portal and navigate to your Azure Stack HCI cluster, and then under the **Settings** group, select **Windows Admin Center**.
+1. Open the Azure portal and navigate to your Azure Local cluster, and then under the **Settings** group, select **Windows Admin Center**.
 2. Select **Connect**.
 
 > [!NOTE]
-> Starting April 2023, Windows Admin Center now allows you to use Azure AD-based authentication for your 22H2 or higher clusters running the AdminCenter extension greater than 0.0.0.313. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required. Clusters running 21H2 or below will continue to require local administrator credentials.
+> Starting April 2023, Windows Admin Center now allows you to use Microsoft Entra ID-based authentication for your 22H2 or higher clusters running the AdminCenter extension greater than 0.0.0.313. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required. Clusters running 21H2 or below will continue to require local administrator credentials.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
-:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-connect.png" alt-text="Screenshot showing the Connect button for Windows Admin Center on an Azure Stack HCI cluster." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-connect.png":::
+:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-connect.png" alt-text="Screenshot showing the Connect button for Windows Admin Center on an Azure Local cluster." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-connect.png":::
 
 ## Configuring role assignments
 
-Access to Windows Admin Center is controlled by the **Windows Admin Center Administrator Login** Azure role. You **must** have this role configured on the Azure Stack HCI resource, **and** each of the Azure Arc-enabled servers associated with this cluster.
+Access to Windows Admin Center is controlled by the **Windows Admin Center Administrator Login** Azure role. You **must** have this role configured on the Azure Local resource, **and** each of the Azure Arc-enabled servers associated with this cluster.
 
 > [!NOTE]
 > The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
 
-To configure role assignments for your cluster using the Azure AD Portal experience:
+To configure role assignments for your cluster using the Microsoft Entra admin center experience:
 
 1. Select the **Resource Group** containing the cluster and the associated Azure Arc resources.
 
@@ -189,7 +189,7 @@ For more information on how to use Azure RBAC to manage access to your Azure sub
 
 By using Windows Admin Center in Azure, you can connect to your cluster without requiring any inbound port to be enabled on the firewall. Windows Admin Center, via the Arc agent, is able to securely establish a reverse proxy session connection with the Azure Arc service in an outbound manner.
 
-For each Azure Stack HCI cluster that you want to manage with Windows Admin Center in the Azure portal, you must deploy an agent to all the nodes in the cluster.
+For each Azure Local cluster that you want to manage with Windows Admin Center in the Azure portal, you must deploy an agent to all the nodes in the cluster.
 
 The agent communicates to an external service that manages certificates so that you can easily connect to your cluster.
 
@@ -233,6 +233,9 @@ Invoke-AzRestMethod -Method PATCH -Uri "https://management.azure.com/subscriptio
 ## Troubleshooting
 
 Here are some tips to try in case something isn't working. For general Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
+
+### Failed to connect with "404 endpoint not found"
+1. Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
 
 ### Failed to connect error
 
@@ -317,6 +320,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't available yet.
+- Updates isn’t supported. Users cannot apply updates to Azure Local cluster with CAU (Cluster-Aware Updating).
 
 ## Frequently asked questions
 
@@ -332,7 +336,7 @@ You can install the Hyper-V role using the Roles and Features extension. Once in
 
 ### What clusters can I manage using this extension?
 
-You can use the capability to manage Arc-enabled Azure Stack HCI clusters, version 21H2 or later. You can also [use Windows Admin Center to manage your Arc-enabled servers](manage-arc-hybrid-machines.md)
+You can use the capability to manage Arc-enabled Azure Local clusters, version 21H2 or later. You can also [use Windows Admin Center to manage your Arc-enabled servers](manage-arc-hybrid-machines.md)
 
 ### How does Windows Admin Center handle security?
 
@@ -368,5 +372,5 @@ Yes. You can follow the same steps outlined in this document.
 
 - Learn about [Windows Admin Center](../overview.md)
 - Learn about [managing servers with Windows Admin Center](../use/manage-servers.md)
-- Learn about [Azure Stack HCI](/azure-stack/hci/overview)
-- Learn about [connecting Azure Stack HCI to Azure](/azure-stack/hci/deploy/register-with-azure)
+- Learn about [Azure Local](/azure/azure-local/overview)
+- Learn about [connecting Azure Local to Azure](/azure/azure-local/deploy/register-with-azure)

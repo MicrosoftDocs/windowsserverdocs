@@ -10,8 +10,6 @@ ms.date: 11/09/2016
 
 # Preventing Kerberos change password that uses RC4 secret keys
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2008 R2, and Windows Server 2008
-
 This topic for the IT professional explains some limitations in the Kerberos protocol that could lead to a malicious user taking control of a user's account. There is a limitation in the Kerberos Network Authentication Service (V5) standard (RFC 4120), which is well-known within the industry, whereby an attacker can authenticate as a user or change that user's password if the attacker knows the user's secret key.
 
 Possession of a user's password-derived Kerberos secret keys (RC4 and Advanced Encryption Standard [AES] by default) is validated during the Kerberos password change exchange per RFC 4757. The user's plaintext password is never provided to the Key Distribution Center (KDC), and by default, Active Directory domain controllers do not possess a copy of plaintext passwords for accounts. If the domain controller does not support a Kerberos encryption type, that secret key cannot be used to change the password.

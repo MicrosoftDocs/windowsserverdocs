@@ -3,7 +3,7 @@ description: "Learn more about: Managing RID Issuance"
 ms.assetid: aac117a7-aa7a-4322-96ae-e3cc22ada036
 title: Managing RID Issuance
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/16/2023
 ms.topic: article
@@ -11,8 +11,6 @@ ms.custom: inhenkel
 ---
 
 # Managing RID Issuance
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article explains the change to the RID master FSMO role, including the new issuance and monitoring functionality in the RID master and how to analyze and troubleshoot RID issuance.
 

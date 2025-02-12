@@ -4,13 +4,11 @@ description: Learn how to configure the certificate template that Active Directo
 manager: brianlic
 ms.topic: article
 ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Configure the Server Certificate Template
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to configure the certificate template that Active Directory&reg; Certificate Services (AD CS) uses as the basis for server certificates that are enrolled to servers on your network.
 

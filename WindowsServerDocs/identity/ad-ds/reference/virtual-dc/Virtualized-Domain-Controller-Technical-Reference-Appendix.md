@@ -3,15 +3,13 @@ description: "Learn more about: Virtualized Domain Controller Technical Referenc
 ms.assetid: 73a4deba-7da6-4eae-8fdd-2a4d369f9cbb
 title: Virtualized Domain Controller Technical Reference Appendix
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
 
 # Virtualized Domain Controller Technical Reference Appendix
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers:
 

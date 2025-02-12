@@ -1,15 +1,13 @@
 ---
 title: Use at least SMB protocol version 3.0 configured for continuous availability on file shares that store files for virtual machines
 description: Learn what to do when virtual machine files or virtual hard disk files are stored on a network file share that is not configured with the continuous availability feature of SMB protocol version 3.0.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: a1fa5cf9-8a48-4f63-bb57-d81e63e77b30
 ms.date: 8/16/2016
 ---
 # Use at least SMB protocol version 3.0 configured for continuous availability on file shares that store files for virtual machines
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

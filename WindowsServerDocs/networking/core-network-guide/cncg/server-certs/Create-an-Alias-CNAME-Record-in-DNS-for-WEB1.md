@@ -4,13 +4,11 @@ description: Learn how to add an Alias canonical name (CNAME) resource record fo
 manager: brianlic
 ms.topic: article
 ms.assetid: bfae23f0-ae12-486b-94fe-50a137e141a5
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Create an Alias \(CNAME\) Record in DNS for WEB1
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to add an Alias canonical name \(CNAME\) resource record for your Web server to a zone in DNS on your domain controller. With CNAME records, you can use more than one name to point to a single host, making it easy to do such things as host both a File Transfer Protocol \(FTP\) server and a Web server on the same computer.
 

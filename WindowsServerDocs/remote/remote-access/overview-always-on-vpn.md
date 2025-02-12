@@ -2,14 +2,12 @@
 title: About Always On VPN for Windows Server Remote Access
 description: Learn about Always On VPN benefits over standard Windows VPN solutions. Key areas in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 ms.topic: article
-ms.author: wscontent
-author: anaharris-ms
+ms.author: roharwoo
+author: robinharwood
 ms.date: 04/28/2023
 ---
 
 # About Always On VPN
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10+
 
 Always On VPN allows you to:
 
@@ -25,7 +23,7 @@ Always On VPN allows you to:
 
 ## Supported integrations
 
-Always On VPN supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. Always On VPN is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.
+Always On VPN supports domain-joined, nondomain-joined (workgroup), or Microsoft Entra ID–joined devices to allow for both enterprise and BYOD scenarios. Always On VPN is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.
 
 Always On VPN supports integration with the following platforms:
 
@@ -33,9 +31,9 @@ Always On VPN supports integration with the following platforms:
 
 - [**Windows Hello for Business.**](/windows/access-protection/hello-for-business/hello-overview) Always On VPN natively supports Windows Hello for Business in certificate-based authentication mode. The native Windows Hello support provides a seamless single sign-on experience for both sign-in to the machine, as well as connection to the VPN. No secondary authentication (user credentials) is needed for the VPN connection.
 
-- [**Microsoft Azure conditional access platform.**](/azure/active-directory/active-directory-conditional-access-controls) The Always On VPN client can integrate with the Azure conditional access platform to enforce multifactor authentication (MFA), device compliance, or a combination of the two. When compliant with conditional access policies, Azure Active Directory (Azure AD) issues a short-lived (by default, sixty minutes) IP Security (IPsec) authentication certificate. The IPSec certificate can then be used to authenticate to the VPN gateway. Device compliance uses Configuration Manager/Intune compliance policies, which can include the device health attestation state as part of the connection compliance check. For more details, see [VPN and conditional access](/windows/security/identity-protection/vpn/vpn-conditional-access)
+- [**Microsoft Azure conditional access platform.**](/azure/active-directory/active-directory-conditional-access-controls) The Always On VPN client can integrate with the Azure conditional access platform to enforce multifactor authentication (MFA), device compliance, or a combination of the two. When compliant with conditional access policies, Microsoft Entra ID issues a short-lived (by default, sixty minutes) IP Security (IPsec) authentication certificate. The IPSec certificate can then be used to authenticate to the VPN gateway. Device compliance uses Configuration Manager/Intune compliance policies, which can include the device health attestation state as part of the connection compliance check. For more details, see [VPN and conditional access](/windows/security/identity-protection/vpn/vpn-conditional-access)
 
-- [**Azure AD Multi-Factor Authentication platform.**](/azure/active-directory/authentication/concept-mfa-howitworks) When combined with Remote Authentication Dial-In User Service (RADIUS) services and the Network Policy Server (NPS) extension for Azure AD Multi-Factor Authentication, VPN authentication can use strong MFA.
+- [**Microsoft Entra multifactor authentication platform.**](/azure/active-directory/authentication/concept-mfa-howitworks) When combined with Remote Authentication Dial-In User Service (RADIUS) services and the Network Policy Server (NPS) extension for Microsoft Entra multifactor authentication, VPN authentication can use strong MFA.
 
 - **Third-party VPN plug-ins.**  With the Universal Windows Platform (UWP), third-party VPN providers can create a single application for the full range of Windows devices. The UWP provides a guaranteed core API layer across devices, eliminating the complexity of and problems often associated with writing kernel-level drivers. Currently, Windows UWP VPN plug-ins exist for [Pulse Secure](https://www.microsoft.com/p/pulse-secure/9nblggh3b0bp), [F5 Access](https://www.microsoft.com/p/f5-access/9wzdncrdsfn0), [Check Point Capsule VPN](https://www.microsoft.com/p/check-point-capsule-vpn/9wzdncrdjxtj), [FortiClient](https://www.microsoft.com/p/forticlient/9wzdncrdh6mc), [SonicWall Mobile Connect](https://www.microsoft.com/p/sonicwall-mobile-connect/9wzdncrdsfkz), and [GlobalProtect](https://www.microsoft.com/p/globalprotect/9nblggh6bzl3).
 
@@ -74,7 +72,7 @@ Always On VPN supports the following security features:
     >[!NOTE]
     >These rules apply only to traffic outbound from the device. Use of traffic filters blocks inbound traffic from the corporate network to the client.
 
-- **VPN conditional access.** Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN. VPN conditional access allows you to restrict the VPN connections to the devices whose client authentication certificate contains the Azure AD Conditional Access OID of `1.3.6.1.4.1.311.87`. To learn how to restrict the VPN connections directly on the NPS server, see [Configure VPN conditional access on the Network Policy Server](how-to-always-on-vpn-conditional-access-network-policy-server.md). To learn how to restrict the VPN connections with [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal), see [Conditional access for VPN connectivity using Azure AD](how-to-aovpn-conditional-access.md).
+- **VPN conditional access.** Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN. VPN conditional access allows you to restrict the VPN connections to the devices whose client authentication certificate contains the Microsoft Entra Conditional Access OID of `1.3.6.1.4.1.311.87`. To learn how to restrict the VPN connections directly on the NPS server, see [Configure VPN conditional access on the Network Policy Server](how-to-always-on-vpn-conditional-access-network-policy-server.md). To learn how to restrict the VPN connections with [Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal), see [Conditional access for VPN connectivity using Microsoft Entra ID](how-to-aovpn-conditional-access.md).
 
 - **Limit remote access to specific users and devices.** You can configure Always On VPN to support granular authorization when using RADIUS, which includes the use of security groups to control VPN access.
 
@@ -99,7 +97,7 @@ Always On VPN supports the following security features:
 
 - **Windows Hello for Business two-factor authentication on PCs and mobile devices.** In Windows 10, [Windows Hello for Business](/windows/access-protection/hello-for-business/hello-identity-verification) replaces passwords by providing strong two-factor authentication on PCs and mobile devices. For more information, see [Enabling Remote Access with Windows Hello for Business in Windows 10](/previous-versions/mt728163(v=technet.10))
 
-- **Azure Multifactor Authentication (MFA).** Azure AD Multi-Factor Authentication has cloud and on-premises versions that you can integrate with the Windows VPN authentication mechanism. For more information, see [Integrate RADIUS authentication with Azure AD Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius).
+- **Azure multifactor authentication (MFA).** Microsoft Entra multifactor authentication has cloud and on-premises versions that you can integrate with the Windows VPN authentication mechanism. For more information, see [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius).
 
 - **Trusted Platform Module (TPM) Key Attestation.** A user certificate that has a TPM-attested key provides higher security assurance, backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM.
 
@@ -160,4 +158,4 @@ The following are more options for high availability.
 
 - [VPN auto-triggered profile options](/windows/access-protection/vpn/vpn-auto-trigger-profile): This topic provides an overview of VPN auto-triggered profile options, such as app trigger, name-based trigger, and Always On.
 
-- [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md)
+- [Troubleshoot Always On VPN](/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn)

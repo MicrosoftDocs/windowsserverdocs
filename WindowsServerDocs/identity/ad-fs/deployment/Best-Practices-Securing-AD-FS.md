@@ -5,7 +5,7 @@ title: Best Practices for securing AD FS and Web Application Proxy
 description: Best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.
 author: billmath
 ms.author: billmath
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -35,7 +35,7 @@ The following is a list of best practices and recommendations for hardening and 
 
 - Ensure only Active Directory Admins and AD FS Admins have admin rights to the AD FS system.
 - Reduce local Administrators group membership on all AD FS servers.
-- Require all cloud admins use Multi-Factor Authentication (MFA).
+- Require all cloud admins use multifactor authentication (MFA).
 - Minimal administration capability via agents.
 - Limit access on-network via host firewall.
 - Ensure AD FS Admins use Admin Workstations to protect their credentials.
@@ -44,15 +44,15 @@ The following is a list of best practices and recommendations for hardening and 
 - Ensure the installed certificates are protected against theft (don’t store these on a share on the network) and set a calendar reminder to ensure they get renewed before expiring (expired certificate breaks federation auth).  Additionally, we recommend protecting signing keys/certificates in a [hardware security module (HSM)](#hardware-security-module-hsm) attached to AD FS.
 - Set logging to the highest level and send the AD FS (& security) logs to a SIEM to correlate with AD authentication as well as AzureAD (or similar).
 - Remove unnecessary protocols & Windows features.
-- Use a long (>25 characters), complex password for the AD FS service account. We recommend using a [Group Managed Service Account (gMSA)](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md) as the service account, as it removes the need for managing the service account password over time by managing it automatically.
+- Use a long (>25 characters), complex password for the AD FS service account. We recommend using a [Group Managed Service Account (gMSA)](../../ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md) as the service account, as it removes the need for managing the service account password over time by managing it automatically.
 - Update to the latest AD FS version for security and logging improvements (as always, test first).
 
 ## Ports required
 
-The below diagram depicts the firewall ports that must be enabled between and amongst the components of the AD FS and WAP deployment. If the deployment does not include Azure AD / Office 365, the sync requirements can be disregarded.
+The below diagram depicts the firewall ports that must be enabled between and amongst the components of the AD FS and WAP deployment. If the deployment does not include Microsoft Entra ID / Office 365, the sync requirements can be disregarded.
 
 > [!NOTE]
-> Port 49443 is only required if user certificate authentication is used, which is optional for Azure AD and Office 365.
+> Port 49443 is only required if user certificate authentication is used, which is optional for Microsoft Entra ID and Office 365.
 
 ![A diagram showing the required ports and protocols for an A D F S deployment.](media/Best-Practices-Securing-AD-FS/adfssec2.png)
 
@@ -65,14 +65,16 @@ Federation servers on an AD FS farm communicate with other servers in the farm a
 
 Organizations can do achieve this state, by setting up firewall rules on each server.  The rules should only allow inbound communication from the IP addresses of the servers in the farm and WAP servers. Some Network Load Balancers (NLB) use HTTP port 80 for probing the health on individual federation servers. Make sure that you include the IP addresses of the NLB in the configured firewall rules.
 
-### Azure AD Connect and Federation Servers/WAP
+<a name='azure-ad-connect-and-federation-serverswap'></a>
 
-This table describes the ports and protocols that are required for communication between the Azure AD Connect server and Federation/WAP servers.
+### Microsoft Entra Connect and Federation Servers/WAP
+
+This table describes the ports and protocols that are required for communication between the Microsoft Entra Connect server and Federation/WAP servers.
 
 Protocol |Ports |Description
 -----|-----|--|
 HTTP|80 (TCP/UDP)|Used to download CRLs (Certificate Revocation Lists) to verify SSL certificates.|
-HTTPS|443(TCP/UDP)|Used to synchronize with Azure AD.|
+HTTPS|443(TCP/UDP)|Used to synchronize with Microsoft Entra ID.|
 WinRM|5985| WinRM Listener.|
 
 ### WAP and Federation Servers
@@ -94,24 +96,26 @@ TCP|49443 (TCP)|Used for certificate authentication.|
 
 For information on required ports and protocols required for hybrid deployments, see [Hybrid reference connect ports](/azure/active-directory/hybrid/reference-connect-ports).
 
-For information about ports and protocols required for an Azure AD and Office 365 deployment, see the document [Office 365 URL and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
+For information about ports and protocols required for a Microsoft Entra ID and Office 365 deployment, see the document [Office 365 URL and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
 
 ### Endpoints enabled
 
 When AD FS and WAP are installed, a default set of AD FS endpoints are enabled on the federation service and on the proxy. These defaults were chosen based on the most commonly required and used scenarios and it is not necessary to change them.
 
-### Min set of endpoints proxy enabled for Azure AD / Office 365 (optional)
+<a name='min-set-of-endpoints-proxy-enabled-for-azure-ad--office-365-optional'></a>
 
-Organizations deploying AD FS and WAP only for Azure AD and Office 365 scenarios can limit even further the number of AD FS endpoints enabled on the proxy to achieve a more minimal attack surface. Below is the list of endpoints that must be enabled on the proxy in these scenarios:
+### Min set of endpoints proxy enabled for Microsoft Entra ID / Office 365 (optional)
+
+Organizations deploying AD FS and WAP only for Microsoft Entra ID and Office 365 scenarios can limit even further the number of AD FS endpoints enabled on the proxy to achieve a more minimal attack surface. Below is the list of endpoints that must be enabled on the proxy in these scenarios:
 
 |Endpoint|Purpose |
 |-----|----- |
-|/adfs/ls/|Browser based authentication flows and current versions of Microsoft Office use this endpoint for Azure AD and Office 365 authentication |
+|/adfs/ls/|Browser based authentication flows and current versions of Microsoft Office use this endpoint for Microsoft Entra ID and Office 365 authentication |
 |/adfs/services/trust/2005/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint. |
 |/adfs/services/trust/13/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint. |
-|/adfs/oauth2/|Used for any modern apps (on-premises or in cloud) you have configured to authenticate directly to AD FS (i.e. not through Azure AD) |
+|/adfs/oauth2/|Used for any modern apps (on-premises or in cloud) you have configured to authenticate directly to AD FS (i.e. not through Microsoft Entra ID) |
 |/adfs/services/trust/mex|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint.|
-|/federationmetadata/2007-06/federationmetadata.xml    |Requirement for any passive flows; and used by Office 365 / Azure AD to check AD FS certificates. |
+|/federationmetadata/2007-06/federationmetadata.xml    |Requirement for any passive flows; and used by Office 365 / Microsoft Entra ID to check AD FS certificates. |
 
 AD FS endpoints can be disabled on the proxy using the following PowerShell cmdlet:
 
@@ -157,13 +161,15 @@ The proxy also performs the following standard checks against all traffic:
 
 Ensure all AD FS and WAP servers receive the most current updates. The most important security recommendation for your AD FS infrastructure is to ensure you have a means in place to keep your AD FS and WAP servers current with all security updates, as well as those optional updates specified as important for AD FS on this page.
 
-The recommended way for Azure AD customers to monitor and keep current their infrastructure is via Azure AD Connect Health for AD FS, a feature of Azure AD Premium. Azure AD Connect Health includes monitors and alerts that trigger if an AD FS or WAP machine is missing one of the important updates specifically for AD FS and WAP.
+The recommended way for Microsoft Entra customers to monitor and keep current their infrastructure is via Microsoft Entra Connect Health for AD FS, a feature of Microsoft Entra ID P1 or P2. Microsoft Entra Connect Health includes monitors and alerts that trigger if an AD FS or WAP machine is missing one of the important updates specifically for AD FS and WAP.
 
-To learn more about health monitoring for AD FS, see [Azure AD Connect Health agent installation](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
+To learn more about health monitoring for AD FS, see [Microsoft Entra Connect Health agent installation](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
 
-## Best practice for securing and monitoring the AD FS trust with Azure AD
+<a name='best-practice-for-securing-and-monitoring-the-ad-fs-trust-with-azure-ad'></a>
 
-When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to set up alerts, see [Monitor changes to federation configuration](/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes).
+## Best practice for securing and monitoring the AD FS trust with Microsoft Entra ID
+
+When you federate your AD FS with Microsoft Entra ID, it is critical that the federation configuration (trust relationship configured between AD FS and Microsoft Entra ID) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to set up alerts, see [Monitor changes to federation configuration](/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes).
 
 ## Additional security configurations
 
@@ -198,29 +204,33 @@ Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Pr
 
 ### Differentiate access policies for intranet and extranet access
 
-AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This differentiation can be done per application or globally.  For high business value applications or applications with sensitive information, consider requiring multi factor authentication. Multi factor authentication can be set up via the AD FS management snap-in.
+AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This differentiation can be done per application or globally.  For high business value applications or applications with sensitive information, consider requiring multifactor authentication. Multifactor authentication can be set up via the AD FS management snap-in.
 
-### Require Multi Factor Authentication (MFA)
+<a name='require-multi-factor-authentication-mfa'></a>
 
-AD FS can be configured to require strong authentication (such as multi factor authentication) specifically for requests coming in via the proxy, for individual applications, and for conditional access to both Azure AD / Office 365 and on premises resources.  Supported methods of MFA include both Microsoft Azure MF and third party providers.  The user is prompted to provide the additional information (such as an SMS text containing a one time code), and AD FS works with the provider specific plug-in to allow access.
+### Require multifactor authentication (MFA)
+
+AD FS can be configured to require strong authentication (such as multifactor authentication) specifically for requests coming in via the proxy, for individual applications, and for conditional access to both Microsoft Entra ID / Office 365 and on premises resources.  Supported methods of MFA include both Microsoft Azure MF and third party providers.  The user is prompted to provide the additional information (such as an SMS text containing a one time code), and AD FS works with the provider specific plug-in to allow access.
 
 Supported external MFA providers include those listed in the [Configure additional authentication methods for AD FS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page.
 
-### Enable protection to prevent by-passing of cloud Azure AD Multi-Factor Authentication when federated with Azure AD
+<a name='enable-protection-to-prevent-by-passing-of-cloud-azure-ad-multi-factor-authentication-when-federated-with-azure-ad'></a>
 
-Enable protection to prevent bypassing of cloud Azure AD Multi-Factor Authentication when federated with Azure AD and using Azure AD Multi-Factor Authentication as your multi factor authentication for your federated users.  
+### Enable protection to prevent by-passing of cloud Microsoft Entra multifactor authentication when federated with Microsoft Entra ID
 
-Enabling the protection for a federated domain in your Azure AD tenant will ensure that Azure AD Multi-Factor Authentication is always performed when a federated user accesses an application that is governed by a conditional access policy requiring MFA. This includes performing Azure AD Multi-Factor Authentication even when federated identity provider has indicated (via federated token claims) that on-premises MFA has been performed. Enforcing Azure AD Multi-Factor Authentication every time assures that a compromised on-premises account cannot bypass Azure AD Multi-Factor Authentication by imitating that a multi factor authentication has already been performed by the identity provider, and is highly recommended unless you perform MFA for your federated users using a third party MFA provider.  
+Enable protection to prevent bypassing of cloud Microsoft Entra multifactor authentication when federated with Microsoft Entra ID and using Microsoft Entra multifactor authentication as your multifactor authentication for your federated users.  
 
-The protection can be enabled using a new security setting, [`federatedIdpMfaBehavior`](/graph/api/resources/internaldomainfederation?view=graph-rest-beta&preserve-view=true), which is exposed as a part of the [Internal Federation MS Graph API](/graph/api/resources/internaldomainfederation) or [MS Graph PowerShell cmdlets](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration). The `federatedIdpMfaBehavior` setting determines whether Azure AD accepts the MFA performed by the federated identity provider when a federated user accesses an application that is governed by a conditional access policy that requires MFA.
+Enabling the protection for a federated domain in your Microsoft Entra tenant will ensure that Microsoft Entra multifactor authentication is always performed when a federated user accesses an application that is governed by a conditional access policy requiring MFA. This includes performing Microsoft Entra multifactor authentication even when federated identity provider has indicated (via federated token claims) that on-premises MFA has been performed. Enforcing Microsoft Entra multifactor authentication every time assures that a compromised on-premises account cannot bypass Microsoft Entra multifactor authentication by imitating that a multifactor authentication has already been performed by the identity provider, and is highly recommended unless you perform MFA for your federated users using a third party MFA provider.  
+
+The protection can be enabled using a new security setting, [`federatedIdpMfaBehavior`](/graph/api/resources/internaldomainfederation?view=graph-rest-beta&preserve-view=true), which is exposed as a part of the [Internal Federation MS Graph API](/graph/api/resources/internaldomainfederation) or [MS Graph PowerShell cmdlets](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration). The `federatedIdpMfaBehavior` setting determines whether Microsoft Entra ID accepts the MFA performed by the federated identity provider when a federated user accesses an application that is governed by a conditional access policy that requires MFA.
 
 Administrators can choose one of the following values:
 
 |Property|Description|
 |-----|-----|  
-|acceptIfMfaDoneByFederatedIdp|Azure AD accepts MFA if performed by identity provider. If not, performs Azure AD Multi-Factor Authentication.|  
-|enforceMfaByFederatedIdp|Azure AD accepts MFA if performed by identity provider. If not, it redirects request to identity provider to perform MFA.|
-|rejectMfaByFederatedIdp|Azure AD always performs Azure AD Multi-Factor Authentication and rejects MFA if performed by identity provider.|  
+|acceptIfMfaDoneByFederatedIdp|Microsoft Entra ID accepts MFA if performed by identity provider. If not, performs Microsoft Entra multifactor authentication.|  
+|enforceMfaByFederatedIdp|Microsoft Entra ID accepts MFA if performed by identity provider. If not, it redirects request to identity provider to perform MFA.|
+|rejectMfaByFederatedIdp|Microsoft Entra ID always performs Microsoft Entra multifactor authentication and rejects MFA if performed by identity provider.|  
 
 You can enable protection by setting `federatedIdpMfaBehavior` to `rejectMfaByFederatedIdp` using the following command.  
 

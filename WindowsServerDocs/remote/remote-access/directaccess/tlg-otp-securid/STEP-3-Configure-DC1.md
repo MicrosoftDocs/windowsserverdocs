@@ -4,13 +4,11 @@ description: Learn how to verify that User1 has a User Principal Name defined on
 manager: brianlic
 ms.topic: article
 ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 3 Configure DC1
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain. Configure DC1 as follows:
 

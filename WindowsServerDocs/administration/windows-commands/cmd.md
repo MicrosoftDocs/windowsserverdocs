@@ -3,7 +3,7 @@ title: cmd
 description: Reference article for the cmd command, which starts a new instance of the command interpreter, Cmd.exe.
 ms.topic: reference
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
-ms.author: wscontent
+ms.author: alalve
 author: xelu86
 ms.date: 09/12/2023
 ---
@@ -11,6 +11,9 @@ ms.date: 09/12/2023
 # cmd
 
 Starts a new instance of the command interpreter, Cmd.exe. If used without parameters, **cmd** displays the version and copyright information of the operating system.
+
+> [!NOTE]
+> Users seeking more advanced capabilities are encouraged to explore [PowerShell](/powershell/) for enhanced scripting and automation.
 
 ## Syntax
 

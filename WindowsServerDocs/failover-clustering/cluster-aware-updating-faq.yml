@@ -4,14 +4,14 @@ metadata:
   title: Cluster-Aware Updating - Frequently Asked Questions
   ms.topic: faq
   manager: lizross
-  ms.author: jgerend
-  author: JasonGerend
+  ms.author: roharwoo
+  author: robinharwood
   ms.date: 10/21/2021
   description: Answers to frequently asked questions about Cluster-Aware Updating in Windows Server.
-  ms.prod: windows-server
+  ms.service: windows-server
 title: "Cluster-Aware Updating: Frequently Asked Questions"
 summary: |
-  > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
+  > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Local, versions 23H2 and 22H2
   
   [Cluster-Aware Updating](cluster-aware-updating.md) \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that doesn't impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.x file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.
   
@@ -22,7 +22,7 @@ sections:
       - question: |
           Does CAU support updating Storage Spaces Direct clusters?
         answer: |
-          Yes. CAU supports updating [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) clusters regardless of the deployment type: hyper-converged or converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
+          Yes. CAU supports updating [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) clusters regardless of the deployment type: hyper-converged or converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
           
       - question: |
           Does CAU work with Windows Server 2008 R2 or Windows 7?

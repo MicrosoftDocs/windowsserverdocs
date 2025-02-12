@@ -4,15 +4,13 @@ description:  Learn how to deploy Always On VPN profile for Windows 10+ clients.
 ms.topic: article
 ms.date:  03/14/2023
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-ms.author: anaharris
-author: anaharris-ms
+ms.author: roharwoo
+author: robinharwood
 ---
 # Tutorial: Deploy Always On VPN - Configure Always On VPN profile for Windows 10+ clients
 
 - [**Previous:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11
 
 In this last part of the tutorial, you'll learn how to use a ProfileXML PowerShell configuration script to configure Always On VPN settings and create a user tunnel for client connections.
 
@@ -320,10 +318,10 @@ You have now configured your user tunnel for Always On VPN. If you want to learn
 
 - To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows clients with Microsoft Intune](how-to-aovpn-client-intune.md).
 
-- Learn how to [Configure conditional access for VPN connectivity using Azure AD](how-to-aovpn-conditional-access.md).
+- Learn how to [Configure conditional access for VPN connectivity using Microsoft Entra ID](how-to-aovpn-conditional-access.md).
 
 - To learn more about the advanced VPN features, see [Advanced VPN Features](vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features).
 
 - For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).
 
-- To troubleshoot issues with Always On VPN, see [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md).
+- To troubleshoot issues with Always On VPN, see [Troubleshoot Always On VPN](/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn).

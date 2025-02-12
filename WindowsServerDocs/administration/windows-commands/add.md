@@ -1,15 +1,14 @@
 ---
-title: add
+title: add (diskshadow)
 description: Reference article for the add command, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
 ms.topic: reference
 ms.assetid: 47efce7a-86d2-4872-ae31-baa108757afd
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: alalve
+author: xelu86
+ms.date: 10/13/2023
 ---
 
-# add
+# add (diskshadow)
 
 Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. If used without subcommands, **add** lists the current volumes and aliases.
 

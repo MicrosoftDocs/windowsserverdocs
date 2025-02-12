@@ -5,13 +5,11 @@ title: Deploy a Central Access Policy (Demonstration Steps)
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
 # Deploy a Central Access Policy (Demonstration Steps)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In this scenario, the finance department security operations is working with central information security to specify the need for a central access policy so that they can protect archived finance information stored on file servers. The archived finance information from each country can be accessed as read-only by finance employees from the same country. A central finance admin group can access the finance information from all countries.
 

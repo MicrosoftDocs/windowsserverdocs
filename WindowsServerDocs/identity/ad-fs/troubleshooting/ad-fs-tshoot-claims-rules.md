@@ -4,16 +4,15 @@ description:  This document describes how to troubleshoot claims rule syntax wit
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
 # AD FS troubleshooting - claims rules syntax
 
-A claim is a statement that one subject makes about itself or another subject. Claims are issued by a relying party, and they are given one or more values and then packaged in security tokens that are issued by the AD FS server. This article deals with the claims syntax and creation. For information on claims issuance see [AD FS Troubleshooting - Claims Issuance](ad-fs-tshoot-claims-issuance.md).
+A claim is a statement that one subject makes about itself or another subject. Claims are issued by a relying party, and they're given one or more values and then packaged in security tokens that are issued by the AD FS server. This article deals with the claims syntax and creation. For information on claims issuance see [AD FS Troubleshooting - Claims Issuance](ad-fs-tshoot-claims-issuance.md).
 
-> [!NOTE]
-> You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [AD FS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.
+
 
 ## How claim rules are processed
 
@@ -21,7 +20,7 @@ Claim rules are processed through the [claims pipeline](../../ad-fs/technical-re
 
 ## How to create a claim rule
 
-Claim rules are created separately for each federated trust relationship within the Federation Service and are not shared across multiple trusts. You can either create a rule from a [claim rule template](../../ad-fs/technical-reference/determine-the-type-of-claim-rule-template-to-use.md), start from scratch by authoring the rule using the [claim rule language](../../ad-fs/technical-reference/when-to-use-a-custom-claim-rule.md) or use Windows PowerShell to customize a rule.
+Claim rules are created separately for each federated trust relationship within the Federation Service and aren't shared across multiple trusts. You can either create a rule from a [claim rule template](../../ad-fs/technical-reference/determine-the-type-of-claim-rule-template-to-use.md), start from scratch by authoring the rule using the [claim rule language](../../ad-fs/technical-reference/when-to-use-a-custom-claim-rule.md) or use Windows PowerShell to customize a rule.
 
 ## Understanding the components of the claim rule language
 
@@ -46,7 +45,7 @@ For more information on claims and the syntax, see [The Role of the Claims Rule 
 
 ## Claims rule editor
 
-Syntax checking is performed by the claims rule editor once you have completed the claim and click **OK**. So if you have the incorrect syntax, then the editor will let you know.
+Syntax checking is performed by the claims rule editor once you have completed the claim and select **OK**. So if you have the incorrect syntax, then the editor will let you know.
 
 ![Screenshot of the A D F S Management dialog box showing a message stating that the custom claim rule syntax is not valid.](media/ad-fs-tshoot-claims/claims1.png)
 
@@ -67,6 +66,7 @@ A good sample web app is available here. This app echoes back the claims that it
 - Changing https://app1.contoso.com/sampapp to the URL that will be used for hosting the sample app.
 - Changing all instances of sts.contoso.com to point to your AD FS federation server.
 - Replacing the thumbprint with your thumbprint.
+- Replacing the `decryptionKey` and the `validationKey` with values that are appropriate for your scenario.
 
 ![Screenshot of Visual Studio showing the web config file.](media/ad-fs-tshoot-claims/claims3.png)
 

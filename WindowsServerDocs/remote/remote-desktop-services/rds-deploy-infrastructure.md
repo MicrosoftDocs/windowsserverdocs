@@ -1,15 +1,13 @@
 ---
 title: Deploy your Remote Desktop environment
 description: Basic steps to deploy a Remote Desktop environment.
-ms.author: elizapo
-ms.date: 04/10/2017
+ms.author: roharwoo
+ms.date: 7/3/2024
 ms.topic: article
-author: lizap
+author: robinharwood
 manager: dongill
 ---
 # Deploy your Remote Desktop environment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the following steps to deploy the Remote Desktop servers in your environment. You can install the server roles on physical machines or virtual machines, depending on whether you are creating an on-premises, cloud-based, or hybrid environment.
 
@@ -35,7 +33,7 @@ If you are using virtual machines for any of the Remote Desktop Services servers
     2.  In RD Licensing Manager, select the server, and then click **Action > Activate Server**.
     3.  Accept the default values in the Activate Server Wizard. Continue accepting default values until you reach the **Company information** page. Then, enter your company information.
     4.  Accept the defaults for the remaining pages until the final page. Clear **Start Install Licenses Wizard now**, and then click **Finish**.
-    5.  Click **Action > Review Configuration > Add to Group > OK**. Enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you are using Azure AD Domain Services, but you can ignore any warnings or errors.
+    5.  Select **Action** > **Review Configuration** > **Add to Group** > **OK**. Enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you are using Microsoft Entra Domain Services, but you can ignore any warnings or errors.
 5.  Add the RD Gateway server and certificate name:
     1.  In Server Manager, click **Remote Desktop Services > Overview > + RD Gateway**.
     2.  In the Add RD Gateway Servers wizard, select the virtual machine where you want to install the RD Gateway server (for example, Contoso-WebGw1).
@@ -70,7 +68,7 @@ If you are using virtual machines for any of the Remote Desktop Services servers
     9.  Repeat substeps 1-8 for the RD Gateway and Web certificate, (for example contoso.westus.cloudapp.azure.com), giving the exported certificate an appropriate file name, for example **ContosoWebGwClientCert**.
     10. In File Explorer, navigate to the folder where the certificates are stored, for example \Contoso-Cb1\Certificates.
     11. Select the two exported client certificates, then right-click them, and click **Copy**.
-    12. Paste the certifcates on the local client computer.
+    12. Paste the certificates on the local client computer.
 8.  Configure the RD Gateway and RD Licensing deployment properties:
     1.  In Server Manager, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.
     2.  Expand **RD Gateway** and clear the **Bypass RD Gateway server for local addresses** option.
@@ -85,4 +83,3 @@ If you are using virtual machines for any of the Remote Desktop Services servers
 
 
 You've now created a basic Remote Desktop Services infrastructure. If you need to create a highly-available deployment, you can add a [connection broker cluster](rds-connection-broker-cluster.md) or a [second RD Session Host server](rds-scale-rdsh-farm.md).
-

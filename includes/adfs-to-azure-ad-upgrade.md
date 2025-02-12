@@ -12,5 +12,5 @@ ms.custom: include file
 ---
 
 > [!IMPORTANT]
-> Instead of upgrading to the latest version of AD FS, Microsoft highly recommends migrating to Azure AD. 
+> Instead of upgrading to the latest version of AD FS, Microsoft highly recommends migrating to Microsoft Entra ID. 
 > For more information, see [Resources for decommissioning AD FS](../WindowsServerDocs/identity/ad-fs/ad-fs-decommission.md)

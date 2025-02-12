@@ -3,22 +3,20 @@ title: Get started with Windows Server Essentials
 description: Learn about Windows Server Essentials edition, which is a cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
 ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 manager: femila
 ms.date: 9/3/2021
 ---
 
 # Get started with Windows Server Essentials
 
->Applies To: Windows Server 2016 Essentials; Windows Server 2019 Essentials
+>Applies to: Windows Server 2016 Essentials; Windows Server 2019 Essentials
 
 **Windows Server Essentials** edition is a cloud-connected first server designed for small businesses with up to 25 users and 50 devices. However, if you are considering installing any version of Windows Server Essentials, we would encourage you to consider **Microsoft 365**. For more information about moving beyond Windows Server Essentials to Microsoft 365, see [What's New in Windows Server 2019 Essentials](what-s-new-19.md).
 
 > [!NOTE]
-> With Windows Server 2022, the Essentials edition is available to purchase from OEMs only, however there is no specific installation media. Instead, an Essentials edition product key is used to activate the Standard edition of Windows Server 2022. You get [all the same features](/windows-server/get-started/editions-comparison-windows-server-2022). Learn how to [get started with Windows Server 2022](/windows-server/get-started/get-started-with-windows-server).
->
->As a result, all the relevant documentation is found in the [Windows Server documentation](/windows-server/) area.
+> Windows Server 2022 Essentials edition is only available for purchase from original equipment manufacturers (OEMs), and only as a product key. When you receive the Essentials edition product key from the OEM, you use it to activate the Standard edition of Windows Server 2022. However, certain editions of Windows Server 2022, including the 2022 Essentials edition, may not be compatible with certain Windows Server 2022 Standard edition features, such as Remote Desktop Services (RDS). For more information, see [Microsoft License Terms](https://www.microsoft.com/useterms).
 
 ## In this library
 
@@ -38,7 +36,7 @@ For information about installing, configuring, managing, using, and troubleshoot
 
 - [Windows Server Essentials evaluation](https://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7)
 
-- [Windows Server Essentials Health Report](https://www.microsoft.com/download/details.aspx?id=35565)
+- [Windows Server Essentials Health Report](/windows-server/failover-clustering/health-service-reports)
 
 - **Updates:** see [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
 
