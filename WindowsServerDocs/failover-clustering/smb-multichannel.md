@@ -33,6 +33,7 @@ This section describes how to take advantage of the new multi-NIC clusters netwo
 Although it's rare, network switches can fail - it's still best practice to use at least two networks for Failover Clustering. All networks that are found are used for cluster heartbeats. Avoid using a single network for your Failover Cluster in order to avoid a single point of failure. Ideally, there are multiple physical communication paths between the nodes in the cluster, and no single point of failure.
 
 ![Illustration of two networks for Failover Clustering.](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig1.png)
+
 **Figure 1: Use at least two networks for Failover Clustering**
 
 ### Use Multiple NICs across clusters
@@ -44,6 +45,7 @@ Maximum benefit of the simplified SMB multichannel is achieved when multiple NIC
 **Figure 2: To achieve maximum network throughput, use multiple NICs on both the Scale-out File Server cluster and the Hyper-V or SQL Server Failover Cluster Instance cluster - which share the North-South subnet**
 
 ![Screenshot of two clusters using multiple NICs in the same subnet to leverage SMB multichannel.](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig3.png)
+
 **Figure 3: Two clusters (Scale-out File Server for storage, SQL Server Failover Clustering Instance (FCI) for workload) both use multiple NICs in the same subnet to leverage SMB Multichannel and achieve better network throughput.**
 
 ## Automatic recognition of IPv6 Link Local private networks
@@ -53,6 +55,7 @@ When using more than one private (cluster only) network, check the IPv6 routing 
 When using more than one private (cluster only) network, check the IPv6 routing configuration to ensure that routing isn't configured to cross subnets, since this reduces network performance.
 
 ![Screenshot of automatic network configuration in the Failover Cluster Manager UI.](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig4.png)
+
 **Figure 4: Automatic IPv6 Link Local (fe80) Address resource configuration**
 
 ## Throughput and Fault Tolerance
@@ -60,6 +63,7 @@ When using more than one private (cluster only) network, check the IPv6 routing 
 Windows Server 2016 and later automatically detect NIC capabilities and attempt to use each NIC in the fastest possible configuration. NICs that are teamed, NICs using RSS, and NICs with RDMA capability can all be used. The table below summarizes the trade-offs when using these technologies. Maximum throughput is achieved when using multiple RDMA capable NICs. For more information, see [The basics of SMB multichannel](/archive/blogs/josebda/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0).
 
 ![An illustration of throughput and fault tolerance for various NIC configurations.](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig5.png)
+
 **Figure 5: Throughput and fault tolerance for various NIC configurations**
 
 ## Frequently asked questions

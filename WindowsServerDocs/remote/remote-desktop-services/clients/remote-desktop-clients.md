@@ -3,8 +3,7 @@ title: Remote Desktop clients for Remote Desktop Services and remote PCs - Windo
 description: Overview of the Remote Desktop clients you can use to connect to Remote Desktop Services.
 ms.topic: overview
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
-author: HeidiLohr
-manager: femila
+author: robinharwood
 ms.author: roharwoo
 ms.date: 7/3/2024
 ---
