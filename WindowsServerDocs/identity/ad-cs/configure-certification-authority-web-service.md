@@ -1,65 +1,63 @@
 ﻿---
 title: Install the Certificate Enrollment Web Service role service
-description: Learn how to install and configure the Certificate Enrollment Web Service role service
-author: robinharwood
+description: Learn how to install and configure the Certificate Enrollment Web Service role service to enable secure certificate enrollment over HTTPS.
+author: meaghanlewis
 ms.topic: how-to
-ms.author: gswashington
-ms.date: 10/10/2023
+ms.author: mosagie
+ms.date: 02/12/2025
+
+#customer intent: As an IT administrator, I want to install and configure the Certificate Enrollment Web Service so that users and computers can securely enroll for certificates.
 ---
 
 # Install the Certificate Enrollment Web Service
 
-Applies To: Windows Server 2012 R2, Windows Server 2012
+The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to perform certificate enrollment by using the HTTPS protocol. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer is not a member of a domain or when a domain member is not connected to the domain.
 
-The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to perform certificate enrollment by using the HTTPS protocol. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer is not a member of a domain or when a domain member is not connected to the domain. See [Certificate Enrollment Web Service Guidance](/what-is-ca-web-service-role-service.md) for more information.
+This article describes how to install and configure Certificate Enrollment Web Service.
 
-## Installation requirements
+## Prerequisites
 
-The requirements for installing the Certificate Enrollment Web Service are:
+The prerequisites for installing the Certificate Enrollment Web Service are:
 
 - The administrator who performs the installation must be a member of the Enterprise Admins group.
 
 - The administrator who installs the Certificate Enrollment Web Service must have Request Certificates permissions on the target certification authority (CA).
 
-- The computer on which the Certificate Enrollment Web Service will be installed must be a member of the domain and must be running Windows Server 2008 R2 or Windows Server 2012.
+- The computer on which the Certificate Enrollment Web Service will be installed must be a member of the domain.
 
-- An AD DS forest with at least a Windows Server 2008 R2 schema. For more information, see [Prepare a Windows 2000 or Windows Server 2003 Forest Schema for a Domain Controller That Runs Windows Server 2008 or Windows Server 2008 R2](https://go.microsoft.com/fwlink/?linkid=93242).
+- An AD DS forest.
 
-  - An enterprise certification authority (CA) on a computer running Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
+- An enterprise certification authority (CA) on a computer running Windows Server.
 
-    - If the Certificate Enrollment Web Service is configured for client certificate authentication, the CA must be running at least Windows Server 2008.
+- Client computers must be running at least Windows 10 or Windows Server 2016.
 
-    - For enrollment across AD DS forests, the CA must be installed on a computer running Windows Server 2008 R2 Enterprise, Windows Server 2008 R2 Datacenter, or Windows Server 2012.
-
-    - For automatic renewal of certificates across AD DS forests or from computers that aren't part of an AD DS forest or domain, the CA and Certificate Enrollment Web Services servers must be running Windows Server 2012.
-
-  - Client computers must be running at least Windows 7 or Windows Server 2008 R2. For automatic renewal of certificates across AD DS forests or from computers that aren't part of an AD DS forest or domain, the CA and Certificate Enrollment Web Services clients must be running at least Windows 8 or Windows Server 2012.
-
-  - A Server Authentication certificate installed for HTTPS.
+- A Server Authentication certificate installed for HTTPS.
 
 > [!NOTE]
 > The Web Server (IIS) role service with the Microsoft .NET Framework are automatically added during the Certificate Enrollment Web Services installation, if they aren't already installed.
 
 ## Configure a CA for the Certificate Enrollment Web Service
 
-If the CA role service is installed on the local computer, then the local computer is automatically selected as the CA. However, the Certificate Enrollment Web Service and CA role service can't be installed at the same time. If you intend to install both the Certificate Enrollment Web Service and CA role service, complete the CA role service installation first. The following requirements apply to configuring the CA for the Certificate Enrollment Web Service:
+If the CA role service is installed on the local computer, then the local computer is automatically selected as the CA. However, the Certificate Enrollment Web Service and CA role service can't be installed at the same time.
 
-- The Certificate Enrollment Web Service can be configured to work with an enterprise CA on the same or on a different computer. The CA must be on a computer running at least Windows Server 2003.
+> [!IMPORTANT]
+> If you intend to install both the Certificate Enrollment Web Service and CA role service, complete the CA role service installation first.
+
+The following prerequisites apply to configuring the CA for the Certificate Enrollment Web Service:
+
+- The Certificate Enrollment Web Service can be configured to work with an enterprise CA on the same or on a different computer.
 
 - The Certificate Enrollment Web Service can't be configured to work with a stand-alone CA—an enterprise CA is required.
 
-- If client certificate authentication is used, the CA must be on a computer running at least Windows Server 2008. A CA on a computer running Windows Server 2003 won't work as the targeted CA of an enrollment service that's configured for client certificate authentication.
+Installation notes:
 
-- Running the enrollment service in renewal-only mode requires a CA on a computer running at least Windows Server 2008 R2.
+- If you want to avoid having to trust the Certificate Enrollment Web Service account for delegation, and you need to process only certificate renewal requests, enable renewal-only mode by selecting **Configure the Certificate Enrollment Web Service for renewal-only mode**.
+- If you want the Certificate Enrollment Web Service to process new certificate enrollment requests and certificate renewals, don't select **Configure the Certificate Enrollment Web Service for renewal-only mode.** 
+- Ensure the Certificate Enrollment Web Service account is trusted for delegation.
+- You can install multiple instances of the Certificate Enrollment Web Service on a single computer. However, you can only install one instance by using Server Manager. To install a second instance, you must use THE Windows PowerShell cmdlet [Install-AdcsEnrollmentWebService](https://technet.microsoft.com/library/hh848380).
 
-> [!NOTE]
->
-- If you want to avoid having to trust the Certificate Enrollment Web Service account for delegation, and you need to process only certificate renewal requests, you can enable renewal-only mode. To do so, select **Configure the Certificate Enrollment Web Service for renewal-only mode**.
-- If you want the Certificate Enrollment Web Service to process new certificate enrollment requests and certificate renewals, don't select **Configure the Certificate Enrollment Web Service for renewal-only mode.** Also, ensure the Certificate Enrollment Web Service account is trusted for delegation, as explained in [Configure a Service Account]().
-- You can install multiple instances of the Certificate Enrollment Web Service on a single computer. However, you can only install one instance by using Server Manager. To install a second instance, you must use Windows PowerShell as described in [Install-AdcsEnrollmentWebService](https://technet.microsoft.com/library/hh848380).
-
-> [!WARNING]
-> If the certification authority that the Certificate Enrollment Web Service will be using has spaces in the name, such as Margies Travel Issuing CA, instead of Margies-Travel-Issuing-CA, then additional configuration steps are required after installation of the service. The additional steps required are documented in the article [Implementing Certificate Enrollment Web Services in Windows Server® 2012 that uses an Issuing CA with spaces in the name](https://social.technet.microsoft.com/wiki/contents/articles/15668.implementing-certificate-enrollment-web-services-in-windows-server-2012-that-uses-an-issuing-ca-with-spaces-in-the-name.aspx).
+> [!NOTES]
+> If the certification authority that the Certificate Enrollment Web Service will be using has spaces in the name, such as Margies Travel Issuing CA, instead of Margies-Travel-Issuing-CA, then additional configuration steps are required after installation of the service. The additional steps required are documented in [Implementing Certificate Enrollment Web Services in Windows Server that uses an Issuing CA with spaces in the name](https://social.technet.microsoft.com/wiki/contents/articles/15668.implementing-certificate-enrollment-web-services-in-windows-server-2012-that-uses-an-issuing-ca-with-spaces-in-the-name.aspx).
 
 ## Set the authentication type for Certificate Enrollment Web Service
 
@@ -71,11 +69,11 @@ Clients communicating with the Certificate Enrollment Web Service must use one o
 
 - User name and password authentication
 
-This article shows you how to set up each authentication type. See [Certificate Enrollment Web Service Guidance](/what-is-ca-web-service-role-service.md) for detailed discussion intended to help you choose the best authentication type for your deployment.
+See [Certificate Enrollment Web Service Guidance](https://learn.microsoft.com/archive/technet-wiki/7734.certificate-enrollment-web-services-in-active-directory-certificate-services#authentication-method-considerations) for detailed descriptions of each authentication type.
 
 ## Allow key-based renewal for Certificate Enrollment Web Service
 
-Key-based renewal mode is a feature introduced in Windows Server 2012 that allows an existing valid certificate to be used to authenticate a certificate renewal request. This enables computers that are not connected directly to the internal network the ability to automatically renewal an existing certificate. To take advantage of this feature, the certificate client computers must be running at least Windows 8 or Windows Server 2012.
+Key-based renewal mode is a feature that allows an existing valid certificate to be used to authenticate a certificate renewal request. This enables computers that aren't connected directly to the internal network the ability to automatically renewal an existing certificate.
 
 ## Configure a service account
 
@@ -114,7 +112,7 @@ Using a specific user account as the service account is the recommended configur
 1. Select **Next**, and then select **Finished**.
 
 > [!TIP]
-> You can also use the [Windows PowerShell cmdlet]((https://technet.microsoft.com/library/hh852238">New-ADUser))to add a domain user account.
+> You can also use the [Windows PowerShell cmdlet New-ADUser](/powershell/module/activedirectory/new-aduser)to add a domain user account.
 
 #### To add the service account to the local IIS\_IUSERS group
 
@@ -247,10 +245,9 @@ If you enabled renewal-only mode, you need to complete the following additional 
 
 1. Restart the CA service. To do so from a command prompt, run `net stop certsvc && net start certsvc`. To restart from Windows PowerShell, run `restart-service certsvc`.
 
-## Next steps
+## Related content
 
-- [Certificate Enrollment Web Service Guidance](/what-is-ca-web-service-role-service.md)
-- [Windows Server Security Forum](https://aka.ms/adcsforum)
+- [Certificate Enrollment Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822%28v=ws.11%29)
 - [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
 - [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
 - [Windows PKI Blog](https://blogs.technet.com/b/pki/)
