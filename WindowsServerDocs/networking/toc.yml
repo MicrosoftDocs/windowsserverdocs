@@ -183,6 +183,8 @@ items:
           href: dns/dynamic-update.md
         - name: Aging and scavenging
           href: dns/aging-scavenging.md
+        - name: Reverse lookup
+          href: dns/reverse-lookup.md
         - name: WINS lookup integration
           href: dns/wins-lookup.md
       - name: DNSSEC
