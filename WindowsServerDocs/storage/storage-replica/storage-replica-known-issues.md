@@ -1,6 +1,6 @@
 ---
 description: Known Issues
-title: Known issues with Storage Replica in Windows Server.
+title: Known issues with Storage Replica in Windows Server and how to resolve them.
 manager: candyc
 ms.author: roharwoo
 ms.topic: troubleshooting
@@ -9,53 +9,53 @@ ms.date: 05/31/2023
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 
-# Known Issues in Storage Replica
+# Known issues in Storage Replica
 
 This article describes some of the known issues with Storage Replica in Windows Server.
 
 ## Disks offline after removing replication and you can't configure replication
 
-You may be unable to provision replication on a volume that was previously replicated or may find unmountable volumes. Disks can remain offline when replication isn't removed or when you reinstall the operating system on a computer that was previously replicating data.
+You might be unable to provision replication on a volume that was previously replicated, or you might find unmountable volumes. Disks can remain offline when replication isn't removed or when you reinstall the operating system on a computer that was previously replicating data.
 
-To fix, you must clear the hidden Storage Replica partition off the disks and return them to a writeable state using the `Clear-SRMetadata` cmdlet.
+To resolve the issue, clear the hidden Storage Replica partition from the disks and return them to a writeable state by using the Clear-SRMetadata cmdlet.
 
-- To remove all orphaned Storage Replica  partition databases slots and remount all partitions, use the `-AllPartitions` parameter as follows:
+- To remove all orphaned Storage Replica partition database slots and remount all partitions, use the `-AllPartitions` parameter:
 
     ```powershell
     Clear-SRMetadata -AllPartitions
     ```
 
-- To remove all orphaned Storage Replica log data, use the `-AllLogs` parameter as follows:
+- To remove all orphaned Storage Replica log data, use the `-AllLogs` parameter:
 
     ```powershell
     Clear-SRMetadata -AllLogs
     ```
 
-- To remove all orphaned failover cluster configuration data, use the `-AllConfiguration` parameter as follows:
+- To remove all orphaned failover cluster configuration data, use the `-AllConfiguration` parameter:
 
     ```powershell
     Clear-SRMetadata -AllConfiguration
     ```
 
-- To remove individual replication group metadata, use the `-Name` parameter and specify a replication group as follows:
+- To remove individual replication group metadata, use the `-Name` parameter and specify a replication group:
 
     ```powershell
     Clear-SRMetadata -Name RG01 -Logs -Partition
     ```
 
-The server may need to restart after cleaning the partition database. You can prevent the server from rebooting temporarily with `-NoRestart` but you shouldn't skip restarting if requested by the cmdlet. This cmdlet doesn't remove data volumes nor data contained within those volumes.
+The server might need to restart after you clean the partition database. You can temporarily prevent the server from restarting by using the`-NoRestart` parameter, but you shouldn't skip restarting if the cmdlet requests a restart. This cmdlet doesn't remove data volumes or data contained within those volumes.
 
 ## During initial sync, event ID 4004 warnings are seen in the event log
 
-After configuring replication, during initial sync both the source and destination servers may show multiple warnings events with event ID 4004 in the **StorageReplica\Admin** event log. The event description shows the status "insufficient system resources exist to complete the API". You're likely to see 5014 errors as well. These events indicate that the servers don't have enough available memory (RAM) to perform both initial synchronization and run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.
+During initial sync after you configure replication, both the source and the destination servers might show multiple warning events with event ID 4004 in the *StorageReplica\Admin* event log. The event description shows the status "insufficient system resources exist to complete the API." You likely also will see event ID 5014 errors. These events indicate that the servers don't have enough available memory (RAM) to both perform initial synchronization and run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.
 
-## Virtual machines stop responding after configuring in-guest replication
+## Virtual machines stop responding after you configure in-guest replication
 
-Virtual machines stop responding after you configure replication when using in-guest clustering and Storage Replica on a shared VHDX (not a cluster shared volume). If you restart the Hyper-V host, the virtual machines start responding, however the replication configuration won't be complete and no replication will occur.
+Virtual machines stop responding after you configure replication when you use in-guest clustering and Storage Replica on a shared Virtual Hard Disk v2 (VHDX), and not on a cluster shared volume (CSV). If you restart the Hyper-V host, the virtual machines start responding, but the replication configuration isn't complete, and no replication occurs.
 
-This behavior occurs when you're using `fltmc.exe attach svhdxflt` to bypass the requirement for the Hyper-V host running a CSV. Use of this command isn't supported and is intended only for test and demonstration purposes.
+This scenario happens if you use `fltmc.exe attach svhdxflt` to bypass the requirement for the Hyper-V host running a CSV. This command isn't supported and is intended only for test and demonstration purposes.
 
-The cause of the slowdown is an interoperability issue between Storage QoS  in Windows Server and the manually attached Shared VHDX filter. To resolve this issue, disable the Storage QoS filter driver and restart the Hyper-V host:
+The cause of the slowdown is an interoperability issue between Storage QoS in Windows Server and the manually attached Shared VHDX filter. To resolve this issue, disable the Storage QoS filter driver and restart the Hyper-V host:
 
 ```Console
 SC config storqosflt start= disabled
@@ -91,13 +91,13 @@ At line:1 char:1
 
 **ERROR EXAMPLE 2:**
 
-```Output
+```output
 WARNING: Invalid value entered for source computer name
 ```
 
 **ERROR EXAMPLE 3:**
 
-```Output
+```output
 The specified volume cannot be found G: cannot be found on computer SRCLUSTERNODE1
 ```
 
@@ -123,7 +123,7 @@ This cmdlet has limited error reporting in Windows Server and will return the sa
 
 When attempting to create a new replication partnership with `New-SRPartnership`, you receive the following error:
 
-```Output
+```output
 New-SRPartnership : Unable to create replication group test01, detailed reason: Failed to provision partition ed0dc93f-107c-4ab4-a785-afd687d3e734.
 At line: 1 char: 1
 + New-SRPartnership -SourceComputerName srv1 -SourceRGName test01
@@ -137,7 +137,7 @@ You'll experience this error when selecting a data volume that is on the same pa
 
 When attempting to grow or extend a replicated volume, you receive the following error:
 
-```Output
+```output
 Resize-Partition -DriveLetter d -Size 44GB
 Resize-Partition : The operation failed with return code 8
 At line:1 char:1
@@ -148,9 +148,9 @@ At line:1 char:1
 + FullyQualifiedErrorId : StorageWMI 8,Resize-Partition
 ```
 
-If using the Disk Management MMC snap-in, you receive this error:
+If using the Disk Management MMC snap-in, this error occurs:
 
-```Output
+```output
 Element not found
 ```
 
@@ -436,9 +436,9 @@ The error shown in the example is caused by a known code defect in Windows Serve
 
 ## Error "specified volume couldn't be found" when running Test-SRTopology between two clusters
 
-Running `Test-SRTopology` between two clusters and their CSV paths fail with error:
+Running the Test-SRTopology cmdlet between two clusters and their CSV paths fail and shows this error:
 
-```Output
+```output
 Test-SRTopology : The specified volume C:\ClusterStorage\Volume1 cannot be found on computer RRN44-14-09. If this is a cluster node, the volume must be part of a role or CSV; volumes in Available Storage are not accessible
 At line:1 char:1
 + Test-SRTopology -SourceComputerName RRN44-14-09 -SourceVolumeName C:\ ...
@@ -449,48 +449,44 @@ At line:1 char:1
 
 When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. An improved message was introduced beginning with Windows Server 2019.
 
-## Unable to access the data drive in Storage Replica after unexpected reboot when BitLocker is enabled
+## Can't access the data drive in Storage Replica after an unexpected restart when BitLocker is enabled
 
-If BitLocker is enabled on both drives (the Log Drive and Data Drive), the Primary Server reboots then you're unable to access the Primary Drive even after unlocking the Log Drive from BitLocker.
+If BitLocker is enabled on both drives (the log drive and the data drive), the primary server restarts. After the server restarts, you can't access the primary drive, even after you unlock the log drive in BitLocker.
 
-To recover the data or access the drive, you need to unlock the log drive first, and then open Diskmgmt.msc to locate the data drive. Mark the data drive offline and online again. Locate the BitLocker icon on the drive and unlock the drive.
+To recover the data or to access the drive, first unlock the log drive, and then open Diskmgmt.msc to locate the data drive. Mark the data drive as offline and then online again. Locate the BitLocker icon on the drive and unlock the drive.
 
-## Issue unlocking the Data drive on secondary server after breaking the Storage Replica partnership
+## Can't unlock the data drive on the secondary server after breaking the Storage Replica partnership
 
-After disabling the SR Partnership and removing the Storage Replica partnership, it's expected if you're unable to unlock the Secondary Server's Data drive with its respective password or key.
+After you disable the Storage Replica partnership and then remove the Storage Replica partnership, you can't unlock the secondary server's data drive by using its respective password or key.
 
-You need to use key or password of primary server's data drive to unlock the secondary server's data drive.
+To unlock the secondary server's data drive, you must use the key or password of the primary server's data drive.
 
-## Test Failover doesn't mount when using asynchronous replication
+## Test failover doesn't mount in asynchronous replication
 
-Running `Mount-SRDestination` to bring a destination volume online as part of  Test Failover fails with error:
+Running the Mount-SRDestination cmdlet to bring a destination volume online during test failover fails and shows this error:
 
-```Output
+```output
 Mount-SRDestination: Unable to mount SR group <TEST>, detailed reason: The group or resource is not in the correct state to perform the supported operation.
     At line:1 char:1
     + Mount-SRDestination -ComputerName SRV1 -Name TEST -TemporaryP . . .
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        + CategoryInfo          : NotSpecified: (MSFT WvrAdminTasks : root/Microsoft/...(MSFT WvrAdminTasks : root/Microsoft/. T_WvrAdminTasks) (Mount-SRDestination], CimException
-        + FullyQua1ifiedErrorId : Windows System Error 5823, Mount-SRDestination.
+        + CategoryInfo          : NotSpecified: {MSFT WvrAdminTasks : root/Microsoft/...(MSFT WvrAdminTasks : root/Microsoft/. T_WvrAdminTasks)} [Mount-SRDestination], CimException
+        + FullyQualifiedErrorId : Windows System Error 5823, Mount-SRDestination.
 ```
 
-If using a synchronous partnership type, test failover works normally.
+If you use a synchronous partnership type, test failover works normally.
 
-There's a known code defect in Windows Server, version 1709, which caused this error shown. To resolve this issue, install the [October 18, 2018 update](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). This issue isn't present in Windows Server 2019 and newer.
+A known code defect in Windows Server version 1709 causes this error. To resolve this issue, install the [October 18, 2018 update](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). The issue isn't present in Windows Server 2019 and later versions.
 
-## Unable to set up Storage Replica with physical sector sizes greater than 4K
+## Can't set up Storage Replica with a physical sector size larger than 4 KB
 
-Storage Replica does not support disks with physical sector sizes greater than 4K today. We are exploring implementing this feature in future releases.
+Currently, Storage Replica does not support disks that have a physical sector size larger than 4 KB. For more information and for resolutions, see [Troubleshoot 4-KB disk sector size](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size#resolutions).
 
-Please see [this document](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size#resolutions) for more information & workarounds.
+## Related content
 
-## Next steps
-
-Now you understand some of the known issues with Storage Replica in Windows Servers, here are some articles that might help you as you use it.
-
-- [Storage Replica](storage-replica-overview.md)
-- [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
-- [Server to Server Storage Replication](server-to-server-storage-replication.md)
-- [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
+- [Storage Replica overview](storage-replica-overview.md)
+- [Stretch cluster replication by using shared storage](stretch-cluster-replication-using-shared-storage.md)
+- [Server-to-server storage replication](server-to-server-storage-replication.md)
+- [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
