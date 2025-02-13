@@ -11,13 +11,15 @@ ms.date: 02/12/2025
 
 # Install the Certificate Enrollment Web Service
 
-The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to perform certificate enrollment by using the HTTPS protocol. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer is not a member of a domain or when a domain member is not connected to the domain.
+The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to enroll for and renew certificates even when the computer isn't a member of a domain or if a domain-joined computer isn't connected to the domain.
 
-This article describes how to install and configure Certificate Enrollment Web Service.
+Together with the Certificate Enrollment Policy Web Service, this enables policy-based automatic certificate enrollment for users and computers.
+
+This article describes how to install the Certificate Enrollment Web Service and configuration options.
 
 ## Prerequisites
 
-The prerequisites for installing the Certificate Enrollment Web Service are:
+The prerequisites for installing and using the Certificate Enrollment Web Service are:
 
 - The administrator who performs the installation must be a member of the Enterprise Admins group.
 
@@ -36,7 +38,22 @@ The prerequisites for installing the Certificate Enrollment Web Service are:
 > [!NOTE]
 > The Web Server (IIS) role service with the Microsoft .NET Framework are automatically added during the Certificate Enrollment Web Services installation, if they aren't already installed.
 
-## Configure a CA for the Certificate Enrollment Web Service
+## Install the Certificate Enrollment Web Service role
+
+1. Open Server Manager.
+1. Select Manage > Add Roles and Features.
+1. In the Add Roles and Features Wizard, choose your Installation Type, and Server Selection.
+1. Next, select server roles. Select Active Directory Certificate Services, then Certificate Enrollment Web Service.
+1. Select Add Features. Then Next.
+1. Confirm the rest of the details, and select Install.
+1. Wait for the role to install
+1. Repeat the same set of steps to install the role Certificate Enrollment Policy Web Service.
+
+## Certificate Enrollment Web Service configuration
+
+After the Certificate Enrollment Web Service is installed, it must be configured. Open the AD CS Configuration wizard, and walk through the steps to complete the configuration. Provide credentials, select confirm the role services to configure, then confirm the details.
+
+### Configure the CA role service
 
 If the CA role service is installed on the local computer, then the local computer is automatically selected as the CA. However, the Certificate Enrollment Web Service and CA role service can't be installed at the same time.
 
@@ -49,33 +66,31 @@ The following prerequisites apply to configuring the CA for the Certificate Enro
 
 - The Certificate Enrollment Web Service can't be configured to work with a stand-alone CA—an enterprise CA is required.
 
-Installation notes:
+Configuration tips:
 
 - If you want to avoid having to trust the Certificate Enrollment Web Service account for delegation, and you need to process only certificate renewal requests, enable renewal-only mode by selecting **Configure the Certificate Enrollment Web Service for renewal-only mode**.
-- If you want the Certificate Enrollment Web Service to process new certificate enrollment requests and certificate renewals, don't select **Configure the Certificate Enrollment Web Service for renewal-only mode.** 
+- If you want the Certificate Enrollment Web Service to process new certificate enrollment requests and certificate renewals, don't select **Configure the Certificate Enrollment Web Service for renewal-only mode.**
 - Ensure the Certificate Enrollment Web Service account is trusted for delegation.
-- You can install multiple instances of the Certificate Enrollment Web Service on a single computer. However, you can only install one instance by using Server Manager. To install a second instance, you must use THE Windows PowerShell cmdlet [Install-AdcsEnrollmentWebService](https://technet.microsoft.com/library/hh848380).
+- You can install multiple instances of the Certificate Enrollment Web Service on a single computer. However, you can only install one instance by using Server Manager. To install a second instance, you must use the Windows PowerShell cmdlet [Install-AdcsEnrollmentWebService](/powershell/module/adcsdeployment/install-adcsenrollmentwebservice).
 
 > [!NOTES]
 > If the certification authority that the Certificate Enrollment Web Service will be using has spaces in the name, such as Margies Travel Issuing CA, instead of Margies-Travel-Issuing-CA, then additional configuration steps are required after installation of the service. The additional steps required are documented in [Implementing Certificate Enrollment Web Services in Windows Server that uses an Issuing CA with spaces in the name](https://social.technet.microsoft.com/wiki/contents/articles/15668.implementing-certificate-enrollment-web-services-in-windows-server-2012-that-uses-an-issuing-ca-with-spaces-in-the-name.aspx).
 
-## Set the authentication type for Certificate Enrollment Web Service
+### Set the authentication type for Certificate Enrollment Web Service
 
 Clients communicating with the Certificate Enrollment Web Service must use one of the following authentication types:
 
-- Windows integrated authentication, also known as Kerberos authentication
-
-- Client certificate authentication, also known as X.509 certificate authentication
-
+- Windows integrated authentication
+- Client certificate authentication
 - User name and password authentication
 
 See [Certificate Enrollment Web Service Guidance](https://learn.microsoft.com/archive/technet-wiki/7734.certificate-enrollment-web-services-in-active-directory-certificate-services#authentication-method-considerations) for detailed descriptions of each authentication type.
 
-## Allow key-based renewal for Certificate Enrollment Web Service
+### Allow key-based renewal for Certificate Enrollment Web Service
 
 Key-based renewal mode is a feature that allows an existing valid certificate to be used to authenticate a certificate renewal request. This enables computers that aren't connected directly to the internal network the ability to automatically renewal an existing certificate.
 
-## Configure a service account
+### Configure a service account
 
 During Certificate Enrollment Web Service configuration, you have the option to specify one of the following types of accounts as the service account:
 
@@ -93,7 +108,7 @@ Using a specific user account as the service account is the recommended configur
 
 - Trusted for delegation for the host service and the Remote Procedure Call system service (RPCSS) , if Certificate Enrollment Web Service is installed on a different computer than the CA, and if new certificates are to be issued by the Certificate Enrollment Web Service.
 
-### To create a domain user account to act as the service account
+#### Create a domain user account to act as the service account
 
 1. Sign in to the domain controller or administrative computer with Active Directory Domain Services Remote Server Administration Tools installed. Open **Active Directory Users and Computers** by using an account that has permissions to add users to the domain.
 
@@ -114,7 +129,7 @@ Using a specific user account as the service account is the recommended configur
 > [!TIP]
 > You can also use the [Windows PowerShell cmdlet New-ADUser](/powershell/module/activedirectory/new-aduser)to add a domain user account.
 
-#### To add the service account to the local IIS\_IUSERS group
+#### Add the service account to the local IIS\_IUSERS group
 
 1. On the server that is hosting Certificate Enrollment Web Service, open **Computer Management** (compmgmt.msc).
 
@@ -131,13 +146,13 @@ Using a specific user account as the service account is the recommended configur
 > [!TIP]
 > You can also type `net localgroup IIS_IUSRS <domain>\<username> /Add</` to add the service account for the Certificate Enrollment Web Service to the local IIS_IUSRS group. The command prompt or Windows PowerShell must be run as an administrator. See [Add a member to a local group](https://technet.microsoft.com/library/cc739265.aspx) for more information.
 
-#### To set a service principal name for the service account
+#### Set a service principal name for the service account
 
 1. Ensure that you're using an account that's a member of the Domain Admins group. Open Windows PowerShell or a Command Prompt window as an administrator.
 
 1. Use the following command syntax to register the server principal name (SPN) for the service account: `setspn -s http/<computername> <domainname>\<accountname>`. For example, to register a service account with the sign-in name CES in the cpandl.com domain for a computer named CES1, you'd run the following command: `setspn -s http/CES1.cpandl.com cpandl\CES`.
 
-#### To configure the Certificate Enrollment Web Service user account for constrained delegation
+#### Configure the Certificate Enrollment Web Service user account for constrained delegation
 
 1. Sign in to the domain controller or administrative computer with Active Directory Domain Services Remote Server Administration Tools installed. Open **Active Directory Users and Computers** by using an account that has permissions to add users to the domain.
 
@@ -171,7 +186,7 @@ If you specified the default application pool instead of a user account to act a
 > [!IMPORTANT]
 > You need to perform the following procedure only if you selected **Use the built-in application pool identity** when you specified the service account for the Certificate Enrollment Web Service.
 
-#### To configure the Certificate Enrollment Web Service computer account for constrained delegation
+#### Configure the Certificate Enrollment Web Service computer account for constrained delegation
 
 1. Sign in to the domain controller or administrative computer with Active Directory Domain Services Remote Server Administration Tools installed. Open **Active Directory Users and Computers** by using an account that has permissions to add users to the domain.
 
@@ -202,11 +217,9 @@ If you specified the default application pool instead of a user account to act a
 The Certificate Enrollment Web Service and the Certificate Enrollment Policy Web Service must use Secure Sockets Layer (SSL) for communication with clients (by using HTTPS). Each service must have a valid certificate that has an enhanced key usage (EKU) policy of Server Authentication in the local computer certificate store.
 
 > [!NOTE]
-> If you have not yet provided an SSL certificate to the server that is hosting the Certificate Enrollment Web Service, you can do so by following the instructions in the article [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](https://social.technet.microsoft.com/wiki/contents/articles/12485.configure-ssltls-on-a-web-site-in-the-domain-with-an-enterprise-ca.aspx).
+> If you haven't yet provided an SSL certificate to the server that is hosting the Certificate Enrollment Web Service, you can do so by following the instructions in [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](https://social.technet.microsoft.com/wiki/contents/articles/12485.configure-ssltls-on-a-web-site-in-the-domain-with-an-enterprise-ca.aspx).
 
 ## Complete Certificate Enrollment Web Services Configuration
-
-If you need to enable delegation, see [Configure a Service Account]().
 
 If you enabled renewal-only mode, you need to complete the following additional configuration steps.
 
