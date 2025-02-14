@@ -1,5 +1,5 @@
 ﻿---
-title: Certificate Enrollment Policy Web Service Guidance
+title: Certificate Enrollment Policy Web Service overview
 description: Learn more about Certificate Enrollment Policy Web Service, including Server Manager configuration and authentication options 
 author: meaghanlewis
 ms.topic: concept-article
@@ -8,7 +8,7 @@ ms.date: 02/14/2025
 #customer intent: As an IT administrator, I want to understand the configuration and authentication options for the Certificate Enrollment Policy Web Service so that I can properly set it up and manage it.
 ---
 
-# Certificate Enrollment Policy Web Service guidance
+# Certificate Enrollment Policy Web Service overview
 
 The Certificate Enrollment Policy Web Service lets users and computers obtain certificate enrollment policy information even when the computer isn't a member of a domain, or if the computer is domain-joined but temporarily outside of the secure corporate network. The Certificate Enrollment Policy Web Service works with the Certificate Enrollment Web Service to provide policy-based automatic certificate enrollment for these users and computers. The Certificate Enrollment Policy Web Service uses an enrollment protocol based on WS-Trust Jump. WS-Trust Jump enables certificate policy retrieval, certificate enrollment, and certificate renewal using hypertext transfer protocol (HTTP) over a secure sockets layer or transport layer security (SSL/TLS) encryption (HTTPS).
 
