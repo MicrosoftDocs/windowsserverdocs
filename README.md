@@ -1,4 +1,73 @@
-# Windows Server Documentation
+# Windows exchange 
+Documentation
+authenticated 
+dApp 1inch - DeFi /5 y and 1 month ago
+X
+1inch DeFi Wallet
+migrated authenticated new owener and environment and new container into the blockchain wallet V2025011.2.4
+1 inch Network Movil from google pixel android divixe compliant number AP4A.250105.002
+valid - In data/blockhain.app/~Version202501.2.4~WQbiJKb9p5bM7hkRIAhb1Q==/piuk. blockchain.android-KjVy5ns2wAcvwq5pvFQLrw==/base. Google apl shell
+VIEW
+24ee18cb-6db4-482b-8a7a-1f373eb9e07d
+089158940891589408915894089158940
+89158940
+Swap
+8915894089158940
+Limit
+8915894089158940
+You pay
+8915894089158940
+Balance: 25 044.149 MAX
+891589408915894089158940
+VERSE >
+891589408915894089158940
+on Ethereum
+
+1608 589282.3186
+
+Verse
+
+~$255 585
+
+You receive
+
+Balance: 0
+
+ETH >
+
+on Ethereum
+
+47.435969
+
+Ether
+
+~$128 004 (-49.92%) Δ
+
+1 VERSE = 891589400.0000000294891 = ~$0
+
+X
+
+1inch Fusion sources all market liquidity to offer best rates for gas-free, MEV-resistant swaps, while ensuring top-tier AML compliance.
+
+Learn more
+
+Slippage tolerance
+
+Auto 0.5%
+
+Minimum receive
+
+~$127 364.558 47.198787 Ξ
+
+Network Fee
+
+Free $1.33
+
+Insufficient VERSE balance
+
+0xf58c...0c27
+
+?
 
 Welcome to the open source documentation of Microsoft Windows Server. Contributing to open source is more than just providing updates, it's also letting us know when there's an issue.
 
