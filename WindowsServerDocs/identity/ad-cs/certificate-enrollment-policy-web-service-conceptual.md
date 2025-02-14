@@ -12,9 +12,9 @@ ms.date: 02/14/2025
 
 The Certificate Enrollment Policy Web Service lets users and computers obtain certificate enrollment policy information even when the computer isn't a member of a domain, or if the computer is domain-joined but temporarily outside of the secure corporate network. The Certificate Enrollment Policy Web Service works with the Certificate Enrollment Web Service to provide policy-based automatic certificate enrollment for these users and computers. The Certificate Enrollment Policy Web Service uses an enrollment protocol based on WS-Trust Jump. WS-Trust Jump enables certificate policy retrieval, certificate enrollment, and certificate renewal using hypertext transfer protocol (HTTP) over a secure sockets layer or transport layer security (SSL/TLS) encryption (HTTPS).
 
-The Certificate Enrollment Policy Web Service communicates with Active Directory Domain Services (AD DS) using standard Lightweight Directory Access Protocol (LDAP) and the secure LDAP (LDAPS) ports, TCP 389 and TCP 636. The Certificate Enrollment Policy Web Service uses the credentials of the Internet Information Services (IIS) DefaultAppPool (ApplicationPoolIdentity) by default. You can't configure the account during role installation, but you can modify it using IIS manager after installation.
+The Certificate Enrollment Policy Web Service communicates with Active Directory Domain Services (AD DS) using standard Lightweight Directory Access Protocol (LDAP) and the secure LDAP (LDAPS) ports, TCP 389, and TCP 636. The Certificate Enrollment Policy Web Service uses the credentials of the Internet Information Services (IIS) DefaultAppPool (ApplicationPoolIdentity) by default. You can't configure the account during role installation, but you can modify it using IIS manager after installation.
 
-This article describes types of authentication you can use when configuring the Certificate Enrollment Policy Web Service in Server Manager. This article also describes the authentication options that Server Manager presents you when you use it to install the Certificate ENrollment Policy Web Service.
+This article describes types of authentication you can use when configuring the Certificate Enrollment Policy Web Service in Server Manager. This article also describes the authentication options that Server Manager presents you when you use it to install the Certificate Enrollment Policy Web Service.
 
 ## Authentication types
 
@@ -35,7 +35,7 @@ Clients that communicate with the Certificate Enrollment Policy Web Service must
 Key-based renewal mode allows an existing valid certificate to be used to authenticate a certificate renewal request. This feature allows computers that aren't connected directly to the internal network to automatically renew an existing certificate.
 
 > [!NOTE]
-> When you enable key-based renewal mode for the Certificate Enrollment Policy Web Service, the service won't accept requests for new certificates. You can install multiple instances of the Certificate Enrollment Policy Web Service on Windows Server, but you must use the [Install-AdcsEnrollmentPolicyWebService](/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice) PowerShell cmdlet to install and configure new instances.
+> When you enable key-based renewal mode for the Certificate Enrollment Policy Web Service, the service doesn't accept requests for new certificates. You can install multiple instances of the Certificate Enrollment Policy Web Service on Windows Server, but you must use the [Install-AdcsEnrollmentPolicyWebService](/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice) PowerShell cmdlet to install and configure new instances.
 
 ## Server certificate
 
