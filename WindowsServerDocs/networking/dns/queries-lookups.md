@@ -73,7 +73,7 @@ When information is cached, a Time-To-Live (TTL) value applies to all cached res
 
 The following figure shows an overview of the complete DNS query process.
 
-:::image type="content" source="../media/queries-lookups/client-service-resolver.png" alt-text="Flow chart showing the an overview of the DNS query process.":::
+:::image type="content" source="../media/queries-lookups/client-service-resolver.png" alt-text="Flow chart showing an overview of the DNS query process.":::
 
 As shown in the initial steps of the query process, a DNS domain name is used in a program on the local computer. The request is then passed to the DNS Client service for resolution using locally cached information. If the queried name can be resolved, the query is answered and the process is completed.
 

@@ -1,5 +1,5 @@
 ---
-title: DNS reverse lookups in Windows and Windows Server
+title: DNS Reverse Lookups in Windows and Windows Server
 description: Learn about DNS reverse lookups in Windows Server and how reverse lookup works with the in-addr.arpa domain.
 ms.topic: conceptual
 author: robinharwood
@@ -41,9 +41,8 @@ The reverse query process as shown in this figure occurs in the following steps:
 
 1. The client, `host-b`, queries the DNS server for a pointer (PTR) RR that maps to the IP address of 192.168.1.20 for `host-a`.
 
-Because the query is for PTR records, the resolver reverses the address and appends the `in-addr.arpa` domain to the end of the reverse address. This query forms the fully qualified domain name (`20.1.168.192.in-addr.arpa.`) to be searched in a reverse lookup zone.
+   Because the query is for PTR records, the resolver reverses the address and appends the `in-addr.arpa` domain to the end of the reverse address. This query forms the fully qualified domain name (`20.1.168.192.in-addr.arpa.`) to be searched in a reverse lookup zone.
 
 1. After the record is located, the authoritative DNS server for `20.1.168.192.in-addr.arpa` can respond with the PTR record information. This response includes the DNS domain name for `host-a`, completing the reverse lookup.
 
-Keep in mind that if the queried reverse name isn't answerable from the DNS server, normal DNS resolution (either recursion or iteration) can be used to locate a DNS server that is authoritative for the reverse lookup zone and that contains the queried name. In this sense, the name resolution process used in a reverse lookup is identical to that of a forward lookup.
-
+   If the queried reverse name isn't answerable from the DNS server, normal DNS resolution (either recursion or iteration) can be used to locate a DNS server that is authoritative for the reverse lookup zone and that contains the queried name. In this sense, the name resolution process used in a reverse lookup is identical to that of a forward lookup.

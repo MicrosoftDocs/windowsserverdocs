@@ -1,5 +1,5 @@
 ---
-title: DNS Aging and Ccavenging in Windows Server
+title: DNS Aging and Scavenging in Windows Server
 description: Learn about DNS aging and scavenging in Windows Server, including prerequisites, terminology, and the aging and scavenging process for a sample record.
 ms.topic: conceptual
 author: robinharwood
@@ -74,7 +74,7 @@ It shouldn't be increased to an unreasonably high level, because the benefits of
   - When a computer restarts on the network, it checks if its name and IP address are the same as before it was shut down. If the name and IP address are consistent, the computer sends a refresh to renew its associated resource records.
   - The computer sends a periodic refresh while it's running.
   - The Windows and Windows Server DNS Client service renews DNS registration of client resource records every 24 hours. If the dynamic update request doesn't cause modification to the DNS database, a refresh is performed.
-  - Another network service make a refresh attempt. For example:
+  - Another network service makes a refresh attempt. For example:
     - DHCP servers renew a client address lease.
     - Cluster servers register and update records for a cluster.
     - The Netlogon service registers and updates resource records used by Active Directory domain controllers.
@@ -90,7 +90,7 @@ It shouldn't be increased to an unreasonably high level, because the benefits of
   - The earliest date and time when the record can be refreshed and have its time stamp reset.
   - The earliest date and time when the record can be scavenged and removed from the zone database.
 
-This value should be large enough to allow all clients to refresh their records. By default, this interval is set to seven days. The refresh interval shouldn't be configure too high, because the benefits of the aging and scavenging feature might either be lost or diminished. Consider the requirements and behavior of your network when setting this value.
+This value should be large enough to allow all clients to refresh their records. By default, this interval is set to seven days. The refresh interval shouldn't be configured too high, because the benefits of the aging and scavenging feature might either be lost or diminished. Consider the requirements and behavior of your network when setting this value.
 
 - **Resource record time stamp** A date and time value used by the DNS server to determine removal of the resource record when it performs aging and scavenging operations.
 
@@ -141,10 +141,10 @@ In the following example, a record is added to a server and zone where aging and
 
    Each record is compared to current server time based on the following sum to determine whether the record should be removed:
 
-    Record time stamp + **No-refresh interval** for zone + **Refresh interval** for zone
+   Record time stamp + **No-refresh interval** for zone + **Refresh interval** for zone
 
    1. If the value of this sum is greater than current server time, no action is taken and the record continues to age in the zone.
 
-  Or
+      Or
 
    1. If the value of this sum is less than the current server time, the record is deleted from both the zone data in server memory and the DnsZone object store in Active Directory for the directory-integrated `example.contoso.com` zone.
