@@ -4,13 +4,11 @@ description: This topic provides links to information about IPAM in Windows Serv
 manager: brianlic
 ms.topic: article
 ms.assetid: 6a6291ba-0d39-4434-a8c5-0f0369860faa
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # IP Address Management (IPAM)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 IP Address Management (IPAM) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System (DNS) servers on your network and enables you to manage them from a central interface.
 

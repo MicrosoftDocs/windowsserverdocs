@@ -3,14 +3,12 @@ title: Remote Server Administration Tools
 description: Top level topic for Remote Server Administration Tools
 ms.topic: how-to
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 09/09/2020
 ---
 # Remote Server Administration Tools
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic supports Remote Server Administration Tools for Windows 10.
 
@@ -187,5 +185,5 @@ Although they are not listed in the Server Manager console **Tools** menu, Windo
 
 ## See Also
 >- [Remote Server Administration Tools for Windows 10](https://go.microsoft.com/fwlink/?LinkID=404281)
->- [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](https://go.microsoft.com/fwlink/p/?LinkID=221055)
+>- [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](/archive/technet-wiki/)
 '

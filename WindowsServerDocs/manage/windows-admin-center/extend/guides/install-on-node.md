@@ -2,14 +2,12 @@
 title: Install extension payload on a managed node
 description: Instructions about how to install extension payload on a managed node
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/18/2018
 ---
 
 # Install extension payload on a managed node
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Setup
 

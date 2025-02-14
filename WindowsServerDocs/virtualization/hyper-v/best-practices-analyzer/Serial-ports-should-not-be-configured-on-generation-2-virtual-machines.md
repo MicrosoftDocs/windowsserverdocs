@@ -1,15 +1,13 @@
 ---
 title: Serial ports should not be configured on generation 2 virtual machines
 description: Online version of the text for this Best Practices Analyzer rule.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 87061193-dd3f-4398-aa5d-4cee83cadfa3
 ms.date: 8/16/2016
 ---
 # Serial ports should not be configured on generation 2 virtual machines
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

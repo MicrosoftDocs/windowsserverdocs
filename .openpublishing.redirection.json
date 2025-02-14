@@ -1,63 +1,208 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-migrate-ad-fs-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-fed-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-fed-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-fed-server-proxy-r2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-fed-server-proxy-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/verify-ad-fs-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/verify-ad-fs-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-wid-farm.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-a-wid-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-a-sql-server-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-fed-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-the-ad-fs-fed-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-stand-alone-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-stand-alone-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-wid-farm.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-wid-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-sql-farm.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-sql-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-web-agent.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-the-ad-fs-web-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Relying-Party-Trust.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/operations/Create-a-Relying-Party-Trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Claims-Provider-Trust.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/operations/Create-a-Claims-Provider-Trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Interoperating-with-AD-FS-1.x.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Interoperating-with-AD-FS-1.x",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds_vdi-recommendations-1909.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds_vdi-recommendations-1909",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations-1803.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-1803",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations-2004.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-2004",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/get-started/Deploy-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/deploy-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Developing-PowerShell-Cmdlets-for-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/developing-powerShell-cmdlets-for-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Developing-on-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/developing-on-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Getting-Started-with-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/getting-started-with-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/IIS-on-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/iis-on-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/MPIO-on-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/mpio-on-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Manage-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/manage-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Nano-Server-Quick-Start.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/nano-server-quick-start",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/PowerShell-on-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/powershell-on-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Update-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/update-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Troubleshooting-Nano-Server.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/troubleshooting-nano-server",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/nano-in-semi-annual-channel.md",
-      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/get-started/nano-in-semi-annual-channel",
       "redirect_document_id": false
     },
     {
@@ -6456,9 +6601,9 @@
       "redirect_document_id": true
     },
     {
-    "source_path": "WindowsServerDocs/administration/windows-commands/timeout_1.md",
-    "redirect_url": "/windows-server/administration/windows-commands/timeout",
-    "redirect_document_id": false
+      "source_path": "WindowsServerDocs/administration/windows-commands/timeout_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/timeout",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/administration/windows-commands/title_1.md",
@@ -9677,47 +9822,47 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/manage/Use-Access-Control-Lists--ACLs--to-Manage-Datacenter-Network-Traffic-Flow.md",
-      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/manage/use-acls-for-traffic-flow.md",
-      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/manage/configure-datacenter-firewall-acls.md",
-      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/sdn-firewall-auditing.md",
-      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/plan/plan-a-software-defined-network-infrastructure.md",
-      "redirect_url": "/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure",
+      "redirect_url": "/azure/azure-local/concepts/plan-software-defined-networking-infrastructure",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller.md",
-      "redirect_url": "/azure-stack/hci/concepts/network-controller-overview",
+      "redirect_url": "/azure/azure-local/concepts/network-controller-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/plan/installation-and-preparation-requirements-for-deploying-network-controller.md",
-      "redirect_url": "/azure-stack/hci/concepts/network-controller",
+      "redirect_url": "/azure/azure-local/concepts/network-controller",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/ras-gateway-for-sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/gateway-overview",
+      "redirect_url": "/azure/azure-local/concepts/gateway-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/what-s-new-in-ras-gateway.md",
-      "redirect_url": "/azure-stack/hci/concepts/gateway-overview",
+      "redirect_url": "/azure/azure-local/concepts/gateway-overview",
       "redirect_document_id": false
     },
     {
@@ -9727,17 +9872,17 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-load-balancer",
+      "redirect_url": "/azure/azure-local/concepts/software-load-balancer",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-load-balancer",
+      "redirect_url": "/azure/azure-local/concepts/software-load-balancer",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview.md",
-      "redirect_url": "/azure-stack/hci/concepts/datacenter-firewall-overview",
+      "redirect_url": "/azure/azure-local/concepts/datacenter-firewall-overview",
       "redirect_document_id": false
     },
     {
@@ -10076,6 +10221,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/OpenSSH/OpenSSH_Overview.md",
+      "redirect_url": "/windows-server/administration/OpenSSH/openssh-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/OpenSSH/OpenSSH_Server_Configuration.md",
+      "redirect_url": "/windows-server/administration/OpenSSH/openssh-server-configuration",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/networking/technologies/vpn-stub.md",
       "redirect_url": "/windows-server/remote/remote-access/vpn/vpn-top",
       "redirect_document_id": false
@@ -10097,27 +10252,27 @@
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-overview.md",
-      "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
+      "redirect_url": "/azure/azure-local/manage/vm-load-balancing",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-deep-dive.md",
-      "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
+      "redirect_url": "/azure/azure-local/manage/vm-load-balancing",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/cluster-sets.md",
-      "redirect_url": "/azure-stack/hci/deploy/cluster-set",
+      "redirect_url": "/windows-server/failover-clustering/cluster-set",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/deploy-pmem.md",
-      "redirect_url": "/azure-stack/hci/concepts/deploy-persistent-memory",
+      "redirect_url": "/azure/azure-local/concepts/deploy-persistent-memory",
       "redirect_document_id": false
     },
     {
@@ -10132,17 +10287,17 @@
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-overview.md",
-      "redirect_url": "/azure-stack/hci/manage/health-service-overview",
+      "redirect_url": "/azure/azure-local/manage/health-service-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-actions.md",
-      "redirect_url": "/azure-stack/hci/manage/health-service-actions",
+      "redirect_url": "/azure/azure-local/manage/health-service-actions",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-settings.md",
-      "redirect_url": "/azure-stack/hci/manage/health-service-settings",
+      "redirect_url": "/azure/azure-local/manage/health-service-settings",
       "redirect_document_id": false
     },
     {
@@ -10167,7 +10322,7 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/data-collection.md",
-      "redirect_url": "/azure-stack/hci/manage/collect-diagnostic-data",
+      "redirect_url": "/azure/azure-local/manage/collect-diagnostic-data",
       "redirect_document_id": false
     },
     {
@@ -10462,7 +10617,7 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/maintain-servers.md",
-      "redirect_url": "/azure-stack/hci/manage/maintain-servers/",
+      "redirect_url": "/azure/azure-local/manage/maintain-servers/",
       "redirect_document_id": false
     },
     {
@@ -10472,12 +10627,12 @@
     },
     {
       "source_path": "WindowsServerDocs/sddc.md",
-      "redirect_url": "/azure-stack/hci/overview/",
+      "redirect_url": "/azure/azure-local/overview/",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/set-for-sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements#set/",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements#set/",
       "redirect_document_id": false
     },
     {
@@ -10532,107 +10687,92 @@
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/understand-the-cache.md",
-      "redirect_url": "/azure-stack/hci/concepts/cache",
+      "redirect_url": "/azure/azure-local/concepts/cache",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-fault-tolerance.md",
-      "redirect_url": "/azure-stack/hci/concepts/fault-tolerance",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/drive-symmetry-considerations.md",
-      "redirect_url": "/azure-stack/hci/concepts/drive-symmetry-considerations",
+      "redirect_url": "/azure/azure-local/concepts/fault-tolerance",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/understand-quorum.md",
-      "redirect_url": "/azure-stack/hci/concepts/quorum",
+      "redirect_url": "/azure/azure-local/concepts/quorum",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/choosing-drives.md",
-      "redirect_url": "/azure-stack/hci/concepts/choose-drives",
+      "redirect_url": "/azure/azure-local/concepts/choose-drives",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/csv-cache.md",
-      "redirect_url": "/azure-stack/hci/manage/use-csv-cache",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/plan-volumes.md",
-      "redirect_url": "/azure-stack/hci/concepts/plan-volumes",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/create-volumes.md",
-      "redirect_url": "/azure-stack/hci/manage/create-volumes",
+      "redirect_url": "/azure/azure-local/manage/use-csv-cache",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/resize-volumes.md",
-      "redirect_url": "/azure-stack/hci/manage/extend-volumes",
+      "redirect_url": "/azure/azure-local/manage/extend-volumes",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/delete-volumes.md",
-      "redirect_url": "/azure-stack/hci/manage/delete-volumes",
+      "redirect_url": "/azure/azure-local/manage/delete-volumes",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-adjustable-repair-speed.md",
-      "redirect_url": "/azure-stack/hci/manage/storage-repair-speed",
+      "redirect_url": "/azure/azure-local/manage/storage-repair-speed",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/software-defined-networking.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/contact-sdn-team.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/Azure_and_Sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/Sc-Tech-for-Sdn.md",
-      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-mac-address-use-and-management.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/create-a-new-nic-team-on-a-host.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/troubleshooting-nic-teaming.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-settings.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md",
-      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
       "redirect_document_id": false
     },
     {
@@ -10641,23 +10781,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-storage-resync.md",
-      "redirect_url": "/azure-stack/hci/concepts/understand-storage-resync",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-faq.yml",
       "redirect_url": "/windows-server/storage/storage-spaces/storage-spaces-direct-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-overview.md",
-      "redirect_url": "/azure-stack/hci/concepts/storage-spaces-direct-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/nested-resiliency.md",
-      "redirect_url": "/azure-stack/hci/concepts/nested-resiliency",
       "redirect_document_id": false
     },
     {
@@ -10712,22 +10837,22 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/sdn-security-top.md",
-      "redirect_url": "/azure-stack/hci/manage/nc-security",
+      "redirect_url": "/azure/azure-local/manage/nc-security",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/sdn-manage-certs.md",
-      "redirect_url": "/azure-stack/hci/manage/sdn-manage-certs",
+      "redirect_url": "/azure/azure-local/manage/sdn-manage-certs",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/nc-security.md",
-      "redirect_url": "/azure-stack/hci/manage/nc-security",
+      "redirect_url": "/azure/azure-local/manage/nc-security",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/security/kerberos-with-spn.md",
-      "redirect_url": "/azure-stack/hci/manage/kerberos-with-spn",
+      "redirect_url": "/azure/azure-local/manage/kerberos-with-spn",
       "redirect_document_id": false
     },
     {
@@ -10789,7 +10914,7 @@
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md",
       "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-configure-client",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md",
       "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
@@ -10885,7 +11010,6 @@
       "redirect_url": "/azure/active-directory/develop/msal-migration",
       "redirect_document_id": false
     },
-
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/development/single-page-application-with-ad-fs.md",
       "redirect_url": "/azure/active-directory/develop/msal-migration",
@@ -10911,14 +11035,12 @@
       "redirect_url": "/azure/active-directory/develop/msal-migration",
       "redirect_document_id": false
     },
-
     {
       "source_path": "WindowsServerDocs/administration/windows-commands/rcp.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
       "redirect_document_id": false
     },
     {
-
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10.md",
       "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
       "redirect_document_id": false
@@ -10980,7 +11102,7 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md",
-      "redirect_url": "/Windows-server/remote/remote-access/troubleshoot-always-on-vpn",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn",
       "redirect_document_id": false
     },
     {
@@ -11147,85 +11269,71 @@
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/Deploy-RA-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831379(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134227(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134170(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134220(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134161(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134154(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134229(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment-5.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134212(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134164(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134168(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134243(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618321(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618331(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618327(v=ws.11)",
       "redirect_document_id": false
-    
     },
     {
       "source_path": "WindowsServerDocs/administration/Linux-Package-Repository-for-Microsoft-Software.md",
@@ -11261,9 +11369,596 @@
       "source_path": "WindowsServerDocs/troubleshoot/windows-server-troubleshooting.md",
       "redirect_url": "/troubleshoot/windows-server/welcome-windows-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/component-updates/Executive-Summary.md",
+      "redirect_url": "/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/component-updates/Introduction.md",
+      "redirect_url": "/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/activation-error-codes.md",
+      "redirect_url": "/troubleshoot/windows-server/deployment/troubleshoot-activation-error-codes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/activation-troubleshoot-adba-clients.md",
+      "redirect_url": "/troubleshoot/windows-server/deployment/troubleshoot-adba-clients-not-activate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/troubleshoot-domain-controller-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/software-restriction-policies/troubleshoot-software-restriction-policies.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/troubleshoot-software-restriction-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/troubleshooting-cluster-event-id-1135.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/troubleshoot-cluster-event-id-1135",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/problem-nodes-failover-cluster.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/problem-nodes-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/nodes-failover-cluster-vmware.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/nodes-failover-cluster-vmware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/iaas-sql-failover-cluster.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/iaas-sql-failover-cluster-network-thresholds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/system-events.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/failover-clustering-system-log-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/general-guidance-to-troubleshoot-dhcp.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/general-guidance-troubleshoot-dhcp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/troubleshoot-problems-on-dhcp-client.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-problems-dhcp-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md",
+      "redirect_url": "/troubleshoot/windows-server/software-defined-networking/troubleshoot-software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md",
+      "redirect_url": "/troubleshoot/windows-server/software-defined-networking/troubleshoot-windows-server-software-defined-networking-stack",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/windows-time-service/support-boundary.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/support-boundary-high-accuracy-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-multisite-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-enabling-multisite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Adding-Entry-Points.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-adding-entry-points",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-setting-entry-point-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-general-issues-related-remote-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/Troubleshooting-Web-Application-Proxy.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-web-application-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/Troubleshooting-DirectAccess.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-directaccess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-error-general-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/credential-limit.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/credential-limit-per-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-class-not-registered.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-error-class-not-registered",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/cannot-authenticate-or-must-authenticate-twice.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/cannot-authenticate-must-authenticate-twice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/remote-desktop-service-currently-busy.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-service-currently-busy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-client-disconnects-cannot-reconnect-same-session",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/remote-laptop-disconnects-wireless-network.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-laptop-disconnects-wireless-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/poor-performance-or-application-problems.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/poor-performance-application-problems-rdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/input-method-editor-error.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/input-method-editor-issue-remoteapp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/out-of-memory-error.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/out-of-memory-error-avd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-diagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-hgs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-hosts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-shielded-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/disk-management/troubleshooting-disk-management.md",
+      "redirect_url": "/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/tcp-three-way-handshake-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/tcp-three-way-handshake-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/negotiate-session-setup-tree-connect-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/negotiate-session-setup-tree-connect-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/abort-during-validate-negotiate.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/tcp-connection-abort-validate-negotiate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/slow-file-transfer.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/slow-smb-file-transfer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/high-cpu-usage-issue-on-smb-server.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/high-cpu-usage-issue-smb-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/troubleshoot-event-id-50-error.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-event-id-50-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/smb-multichannel-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/smb-multichannel-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/fsrm/troubleshooting-file-server-resource-manager.md",
+      "redirect_url": "/troubleshoot/windows-server/backup-and-storage/troubleshoot-file-server-resource-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/folder-redirection/troubleshoot-user-profiles-events.md",
+      "redirect_url": "/troubleshoot/windows-server/user-profiles-and-logon/troubleshoot-user-profiles-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/troubleshoot-always-on-vpn.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-concepts.md",
+      "redirect_url": "/windows-server/identity/laps/laps-concepts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/whats-new-active-directory-domain-services-insider-preview.md",
+      "redirect_url": "/windows-server/get-started/whats-new-windows-server-insiders-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-windows-server-insiders-preview.md",
+      "redirect_url": "/windows-server/get-started/whats-new-windows-server-2025",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/What-s-New-in-DNS-Server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/What-s-New-in-DNS-Client.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/sdn-whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2016.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison?pivots=windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2019.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison?pivots=windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison?pivots=windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/server-1709-relnotes.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/credentials-protection-and-management/whats-new-in-credential-protection.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/kerberos/whats-new-in-kerberos-authentication.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dhcp/What-s-New-in-DHCP.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/plan/Finding-Additional-Resources-for-Enabling-Advanced-Features.md",
+      "redirect_url": "/windows-server/identity/ad-ds/plan/enabling-advanced-features-for-ad-ds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/whats-new-active-directory-domain-services.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/What-s-new-in-Active-Directory-Domain-Services.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-started.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-hosting-partners.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-in-azure.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-integrate-with-azure.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/welcome-to-rds.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/whats-new-in-failover-clustering.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/data-deduplication/whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/processor-compatibility-mode-hyper-v.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/dynamic-processor-compatibility-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/What-s-New-in-Networking.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/ipam/What-s-New-in-IPAM.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/active-directory-domain-services-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/active-directory-domain-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/group-managed-service-accounts-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
+      "redirect_url": "/windows-server/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831451(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/whats-new-in-storage.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-Technology-Overview.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-Server-2016.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/get-started/Get-started-with-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/configure-virtual-local-areal-networks-for-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md",
+      "redirect_url":"/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/deploy/configure-virtual-local-areal-networks-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/configure-virtual-local-area-networks-for-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-app-compare.md",
+      "redirect_url": "/azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-features.md",
+      "redirect_url": "/azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/rdp-files.md",
+      "redirect_url": "/azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/dc-locator-changes.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/dc-locator",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2016.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2019.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/application-compatibility-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility?pivots=windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-a-Bootable-USB-Flash-Drive.md",
+      "redirect_url": "/windows-server/get-started/install-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/resource-record-types.md",
+      "redirect_url": "/windows-server/networking/dns/dns-architecture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/dns-top.md",
+      "redirect_url": "/windows-server/networking/dns/dns-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller-high-availability.md",
+      "redirect_url": "/windows-server/networking/sdn/technologies/network-controller/network-controller-service-fabric",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/hyperconverged/index.yml",
+      "redirect_url": "/windows-server/",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/hyper-v-storage-architecture.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/storage-architecture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance.md",
+      "redirect_url": "/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/upgrade-storage-spaces-direct",
+      "redirect_document_id": true
     }
   ]
 }
-
-
-

@@ -2,7 +2,7 @@
 title: AD Forest Recovery - Verify Replication
 description: Learn more about resources to verify replication.
 ms.topic: article
-ms.author: daveba
+ms.author: justinha
 author: iainfoulds
 ms.date: 06/21/2023
 ms.custom: inhenkel
@@ -10,7 +10,7 @@ ms.custom: inhenkel
 
 # Active Directory Forest Recovery - Verify Replication
 
-Applies to: Windows Server (All supported versions)
+
 
 After you've restored or reinstalled all domain controllers (DCs), you can verify that AD DS, and the sysvol folder has recovered and is replicating correctly by using `repadmin /replsum`. `repadmin /replsum` runs on any version of Windows Server.
 

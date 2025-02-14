@@ -3,15 +3,15 @@ title: wdsutil get-multicasttransmission
 description: Reference article for wdsutil get-multicasttransmission, which displays information about the multicast transmission for a specified image.
 ms.topic: reference
 ms.assetid: b733737b-1e81-43d4-a058-d6985a613bef
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-multicasttransmission
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about the multicast transmission for a specified image.
 

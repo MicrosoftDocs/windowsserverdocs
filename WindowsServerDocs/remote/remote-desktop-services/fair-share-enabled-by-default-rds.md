@@ -1,30 +1,30 @@
 ---
 title: Fair Share technologies are enabled by default in Remote Desktop Services
 description: Describes how an RDSH server uses Fair Share technology to balance CPU, disk, and network bandwidth resources among multiple Remote Desktop sessions. 
-ms.date: 04/21/2022
+ms.date: 7/3/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, davean
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Fair Share technologies are enabled by default in Remote Desktop Services
 
 This article describes how a Remote Desktop Session Host (RDSH) server, Windows 10 Enterprise multi-session, Windows 11 Enterprise multi-session, and Windows Server use Fair Share technologies to balance CPU, disk, and network bandwidth resources among multiple Remote Desktop sessions.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 Enterprise multi-session, Windows 11 Enterprise multi-session  
+_
 _Original KB number:_ &nbsp; 4494631
 
 ## Introduction
 
-Fair Share technologies for CPU resources were introduced in Windows Server 2008 R2. Remote Desktop Services (RDS) server, Windows 10 Enterprise multi-session and Windows 11 Enterprise multi-session use Fair Share technology to manage resources. RDS builds on the Fair Share technologies to add features for allocating network bandwidth and disk resources. Fair Share technologies are enabled by default, but you can disable them using Windows PowerShell and WMI.
+Remote Desktop Services (RDS) server, Windows 10 Enterprise multi-session and Windows 11 Enterprise multi-session use Fair Share technologies for CPU resources to manage resources. RDS builds on the Fair Share technologies to add features for allocating network bandwidth and disk resources. Fair Share CPU Scheduling is enabled by default, while Dynamic Disk Fair Share and Dynamic Network Fair Share are disabled. You can change the defaults by using PowerShell and WMI.
 
 For more information about the related properties in WMI, see [Win32_TerminalServiceSetting class: Properties](/windows/desktop/termserv/win32-terminalservicesetting#properties).
+
+> [!NOTE]
+> Before turning on Dynamic Disk Fair Share or Dynamic Network Fair Share, it's recommended to review performance on applications that require exchanging larger amounts of data.
 
 ## Fair Share CPU Scheduling
 

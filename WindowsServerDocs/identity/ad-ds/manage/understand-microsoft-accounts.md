@@ -2,14 +2,14 @@
 title: Microsoft accounts
 description: Learn how to create and manage a local or domain Microsoft account. 
 author: dansimp
-ms.author: dansimp
+ms.author: roharwoo
 ms.topic: article
 ms.date: 08/02/2022
 ---
 
 # Microsoft accounts
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 Understand how a Microsoft account works to enhance security and privacy for users and how you can manage consumer account types in your organization.
 

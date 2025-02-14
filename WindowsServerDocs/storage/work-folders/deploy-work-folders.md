@@ -2,14 +2,12 @@
 ms.assetid: d2429185-9720-4a04-ad94-e89a9350cdba
 title: Deploying Work Folders
 ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 6/24/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
 ---
 # Deploying Work Folders
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This article discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).
 
@@ -75,10 +73,10 @@ Add-WindowsFeature FS-SyncShareService
 
 - Utilize the IIS management console on a server that has it installed. From within the console, connect to the file server you want to manage, and then select the Default Web Site for that server. The Default Web Site will appear disabled, but you can still edit the bindings for the site and select the certificate to bind it to that web site.
 
-- Use the netsh command to bind the certificate to the Default Web Site https interface. The command is as follows:
+- Use the netsh command to bind the certificate to the Default Web Site https interface. Run the following command to bind the certificate. Make sure to replace the `<Cert thumbprint>` with the thumbprint of the certificate you want to bind, the `<IP address>` with the IP address of the server, and the `<App GUID>` with a GUID that you generate. You can generate a GUID using the [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet in Windows PowerShell.
 
-    ```
-    netsh http add sslcert ipport=<IP address>:443 certhash=<Cert thumbprint> appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY
+    ```cmd
+    netsh http add sslcert ipport=<IP address>:443 certhash=<Cert thumbprint> appid={App GUID} certstorename=MY
     ```
 
 ## Step 5: Create security groups for Work Folders
@@ -193,7 +191,7 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 
 9. Review your selections and complete the wizard to create the sync share.
 
-You can create sync shares using Windows PowerShell by using the [New-SyncShare](/powershell/module/syncshare/new-syncshare?view=windowsserver2022-ps) cmdlet. Below is an example of this method:
+You can create sync shares using Windows PowerShell by using the [New-SyncShare](/powershell/module/syncshare/new-syncshare) cmdlet. Below is an example of this method:
 
 ```powershell
 New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
@@ -221,7 +219,7 @@ The example above creates a new sync share named *HR Sync Share* with the path *
 If you are hosting multiple sync servers in your environment, you should configure server automatic discovery by populating the **msDS-SyncServerURL** property on user accounts in AD DS.
 
 > [!NOTE]
-> The msDS-SyncServerURL property in Active Directory should not be defined for remote users that are accessing Work Folders through a reverse proxy solution such as Web Application Proxy or Azure AD Application Proxy. If the msDS-SyncServerURL property is defined, the Work Folders client will try to access an internal URL that's not accessible through the reverse proxy solution. When using Web Application Proxy or Azure AD Application Proxy, you need to create unique proxy applications for each Work Folders server. For more details, see [Deploying Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md) or [Deploying Work Folders with Azure AD Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+> The msDS-SyncServerURL property in Active Directory should not be defined for remote users that are accessing Work Folders through a reverse proxy solution such as Web Application Proxy or Microsoft Entra application proxy. If the msDS-SyncServerURL property is defined, the Work Folders client will try to access an internal URL that's not accessible through the reverse proxy solution. When using Web Application Proxy or Microsoft Entra application proxy, you need to create unique proxy applications for each Work Folders server. For more details, see [Deploying Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md) or [Deploying Work Folders with Microsoft Entra application proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 Before you can do so, you must install a Windows Server 2012 R2 domain controller or update the forest and domain schemas by using the `Adprep /forestprep` and `Adprep /domainprep` commands. For information on how to safely run these commands, see [Running Adprep](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
@@ -255,13 +253,15 @@ Set-ADUser –Add @{"msDS-SyncServerURL"=$SyncServerURL}
 
 ```
 
-## Step 10: Optionally configure Web Application Proxy, Azure AD Application Proxy, or another reverse proxy
+<a name='step-10-optionally-configure-web-application-proxy-azure-ad-application-proxy-or-another-reverse-proxy'></a>
 
-To enable remote users to access their files, you need to publish the Work Folders server through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, Azure Active Directory Application Proxy, or another reverse proxy solution.
+## Step 10: Optionally configure Web Application Proxy, Microsoft Entra application proxy, or another reverse proxy
+
+To enable remote users to access their files, you need to publish the Work Folders server through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, Microsoft Entra application proxy, or another reverse proxy solution.
 
 To configure Work Folders access using AD FS and Web Application Proxy, see [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md). For background information about Web Application Proxy, see [Web Application Proxy in Windows Server 2016](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md). For details on publishing applications such as Work Folders on the Internet using Web Application Proxy, see [Publishing Applications using AD FS Preauthentication](../../remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md).
 
-To configure Work Folders access using Azure Active Directory Application Proxy, see [Enable remote access to Work Folders using Azure Active Directory Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
+To configure Work Folders access using Microsoft Entra application proxy, see [Enable remote access to Work Folders using Microsoft Entra application proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
 
 ## Step 11: Optionally use Group Policy to configure domain-joined PCs
 

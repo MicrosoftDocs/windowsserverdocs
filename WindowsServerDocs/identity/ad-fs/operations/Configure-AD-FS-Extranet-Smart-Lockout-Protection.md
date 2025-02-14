@@ -3,7 +3,7 @@ ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Smart Lockout Protection
 description: Learn more about AD FS Extranet Lockout and Extranet Smart Lockout to protect your users from experiencing extranet account lockout from malicious activity.
 author: billmath
-ms.author: wscontent
+ms.author: roharwoo
 manager: amycolannino
 ms.date: 06/16/2023
 ms.topic: article
@@ -252,7 +252,7 @@ The following sections describe how to monitor event logging, user account activ
 
 ### Connect Health
 
-The recommended way to monitor user account activity is through Connect Health. Connect Health generates downloadable reporting on Risky IPs and bad password attempts. Each item in the Risky IP report shows aggregated information about failed AD FS sign-in activities that exceed designated threshold. Email notifications can be set to alert administrators with customizable email settings when failed AD FS sign-in activities occur. For more information and setup instructions, see [Monitor AD FS using Azure AD Connect Health](/azure/active-directory/hybrid/how-to-connect-health-adfs).
+The recommended way to monitor user account activity is through Connect Health. Connect Health generates downloadable reporting on Risky IPs and bad password attempts. Each item in the Risky IP report shows aggregated information about failed AD FS sign-in activities that exceed designated threshold. Email notifications can be set to alert administrators with customizable email settings when failed AD FS sign-in activities occur. For more information and setup instructions, see [Monitor AD FS using Microsoft Entra Connect Health](/azure/active-directory/hybrid/how-to-connect-health-adfs).
 
 ### AD FS Extranet Smart Lockout events
 
@@ -286,7 +286,7 @@ If AD FS Smart Lockout is set to **Enforce** mode, then you never see the legiti
 
 **What happens if ESL is enabled and the bad actor has a user's password?**
 
-The typical goal of the brute force attack scenario is to guess a password and successfully sign in. If a user is phished or if a password is guessed, then the ESL feature doesn't block the access since the sign-in meets successful criteria of a correct password plus new IP. The bad actors IP would then appear as a familiar one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require multi factor authentication for the users. You should install Azure AD Password Protection to ensure guessable passwords don't get into the system.
+The typical goal of the brute force attack scenario is to guess a password and successfully sign in. If a user is phished or if a password is guessed, then the ESL feature doesn't block the access since the sign-in meets successful criteria of a correct password plus new IP. The bad actors IP would then appear as a familiar one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require multi factor authentication for the users. You should install Microsoft Entra Password Protection to ensure guessable passwords don't get into the system.
 
 **If my user has never signed in successfully from an IP and then tries with a wrong password a few times, will they be able to sign in once they finally type their password correctly?**
 

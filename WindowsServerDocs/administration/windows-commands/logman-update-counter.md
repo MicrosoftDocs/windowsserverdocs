@@ -3,15 +3,15 @@ title: logman update counter
 description: Reference article for the logman update counter command, which updates an existing counter data collector's properties.
 ms.topic: reference
 ms.assetid: 607df6d5-876c-428d-a0b3-f59cb244e2ce
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # logman update counter
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Updates an existing counter data collector's properties.
 

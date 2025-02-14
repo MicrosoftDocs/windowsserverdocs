@@ -61,8 +61,6 @@ items:
       items:
       - name: Create a Simple Customized Image
         href: install/Create-a-Simple-Customized-Image.md
-      - name: Create a Bootable USB Flash Drive
-        href: install/Create-a-Bootable-USB-Flash-Drive.md
       - name: Create an Image By Using Answer Files
         href: install/Create-an-Image-By-Using-Answer-Files.md
         items:

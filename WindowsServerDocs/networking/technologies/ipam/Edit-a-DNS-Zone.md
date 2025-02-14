@@ -4,13 +4,11 @@ description: Learn how to edit a DNS zone in the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Edit a DNS Zone
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to edit a DNS zone in the IPAM client console.
 

@@ -1,17 +1,17 @@
 ---
 title: Set up the Remote Desktop web client for your users
 description: Describes how an admin can set up the Remote Desktop web client.
-ms.author: helohr
-ms.date: 09/28/2023
+author: xelu86
+ms.date: 7/3/2024
 ms.topic: article
-author: Heidilohr
+ms.author: alalve
 ---
 # Set up the Remote Desktop web client for your users
 
 The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
 >[!IMPORTANT]
->The web client does support using Azure AD Application Proxy but does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
+>The web client does support using Microsoft Entra application proxy but does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
 
 ## What you'll need to set up the web client
 
@@ -19,11 +19,12 @@ Before getting started, keep the following things in mind:
 
 * Make sure your [Remote Desktop deployment](../rds-deploy-infrastructure.md) has an RD Gateway, an RD Connection Broker, and RD Web Access running on Windows Server 2016 or 2019.
 * Make sure your deployment is configured for [per-user client access licenses](../rds-client-access-license.md) (CALs) instead of per-device, otherwise all licenses will be consumed.
-* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
+* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contain this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users connect to are running one of the following OS versions:
-  * Windows 10
-  * Windows Server 2008R2 or later
+  
+  * Windows 10 or later
+  * Windows Server 2016 or later
 
 Your users will see better performance connecting to Windows Server 2016 (or later) and Windows 10 (version 1611 or later).
 

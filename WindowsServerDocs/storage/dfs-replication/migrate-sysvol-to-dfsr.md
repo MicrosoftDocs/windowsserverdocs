@@ -2,15 +2,15 @@
 description: Learn how to migrate SYSVOL replication to DFS Replication by creating a new domain name or by upgrading an existing domain.
 title: Migrate SYSVOL replication to DFS Replication
 ms.date: 04/25/2023
-author: JasonGerend
+author: robinharwood
 manager: elizapo
-ms.author: jgerend
+ms.author: roharwoo
 ms.topic: conceptual
 ---
 
 # Migrate SYSVOL replication to DFS Replication
 
->**Applies To:** Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+>**
 
 Domain controllers use a special shared folder named SYSVOL to replicate sign-in scripts and Group Policy object files to other domain controllers. Windows 2000 Server and Windows Server 2003 use the File Replication Service (FRS) to replicate SYSVOL. Windows Server 2008 uses the newer Distributed File System Replication (DFS Replication) service for domains that use the Windows Server 2008 domain functional level. Windows Server 2008 uses FRS for domains that run older domain functional levels.
 

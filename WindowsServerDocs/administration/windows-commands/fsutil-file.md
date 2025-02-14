@@ -2,7 +2,7 @@
 title: fsutil file
 description: Reference article for the fsutil file command, which finds a file by user name, queries allocated ranges for a file, sets a file's short name, sets a file's valid data length, sets zero data for a file, or creates a new file.
 manager: dmoss
-ms.author: toklima
+ms.author: roharwoo
 author: toklima
 ms.assetid: 9f3dc104-dd69-4b03-b824-a29896780164
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # fsutil file
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Finds a file by user name (if Disk Quotas are enabled), queries allocated ranges for a file, sets a file's short name, sets a file's valid data length, sets zero data for a file, or creates a new file.
 

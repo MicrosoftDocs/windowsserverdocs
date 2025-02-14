@@ -2,10 +2,11 @@
 title: Uninstall and reinstall Remote Desktop Connection
 description: Learn how to uninstall and reinstall Remote Desktop Connection.
 ms.topic: article
-author: heidilohr
+ms.author: alalve
 manager: femila
-ms.author: helohr
-ms.date: 09/21/2023
+author: xelu86
+ms.custom: "se-defect-target"
+ms.date: 7/3/2024
 ---
 # Uninstall and reinstall Remote Desktop Connection
 

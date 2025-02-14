@@ -3,10 +3,9 @@ title: Windows Server servicing channels
 description: Explanation of Windows Server Long-Term Servicing Channel (LTSC) and Annual Channel
 ms.topic: article
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 manager: femila
 ms.date: 8/16/2021
-ms.prod: windows-server
 ---
 
 # Windows Server servicing channels

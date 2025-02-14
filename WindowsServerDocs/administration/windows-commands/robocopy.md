@@ -1,11 +1,11 @@
 ---
-title: robocopy
+title: Robocopy
 description: Reference article for the robocopy command, which copies file data from one location to another.
 ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: xelu86
-ms.author: wscontent
-ms.date: 09/01/2023
+ms.author: alalve
+ms.date: 05/28/2024
 ---
 
 # robocopy
@@ -59,15 +59,15 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /mir | Mirrors a directory tree (equivalent to **/e** plus **/purge**). Using this option with the **/e** option and a destination directory, overwrites the destination directory security settings. |
 | /mov | Moves files, and deletes them from the source after they're copied. |
 | /move | Moves files and directories, and deletes them from the source after they're copied. |
-| /a+:[RASHCNET] | Adds the specified attributes to copied files.  The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li></ul> |
+| /a+:[RASHCNET] | Adds the specified attributes to copied files. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li></ul> |
 | /a-:[RASHCNETO] | Removes the specified attributes from copied files. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
 | /create | Creates a directory tree and zero-length files only. |
 | /fat | Creates destination files by using 8.3 character-length FAT file names only. |
 | /256 | Turns off support for paths longer than 256 characters. |
 | /mon:`<n>` | Monitors the source and runs again when more than *n* changes are detected. |
 | /mot:`<m>` | Monitors the source and runs again in *m* minutes if changes are detected. |
-| /rh:hhmm-hhmm | Specifies run times when new copies may be started. |
-| /pf | Checks run times on a per-file (not per-pass) basis. |
+| /rh:hhmm-hhmm | Specifies run times when new copies can be started. |
+| /pf | Checks run times on a per file (not per-pass) basis. |
 | /ipg:`<n>` | Specifies the inter-packet gap to free bandwidth on slow lines. |
 | /sj | Copies junctions (soft-links) to the destination path instead of link targets. |
 | /sl | Don't follow symbolic links and instead create a copy of the link. |
@@ -75,7 +75,8 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /nodcopy | Copies no directory info (the default **/dcopy:DA** is done). |
 | /nooffload | Copies files without using the Windows Copy Offload mechanism. |
 | /compress | Requests network compression during file transfer, if applicable. |
-| /sparse | Enables retaining sparse state during copy. |
+| /sparse:`<y|n>` | Enables or disables retaining the sparse state of files during copy process. If no option is selected, it defaults to **yes** (enabled). |
+| /noclone | Doesn't attempt block cloning as an optimization. |
 
 > [!IMPORTANT]
 > When using the **/secfix** copy option, specify the type of security information you want to copy, using one of these additional copy options:
@@ -97,13 +98,15 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /iorate:`<n>`[kmg] | The requested i/o rate in *n* **k**ilobytes **m**egabytes, or **g**igabytes per second. |
 | /threshold:`<n>`[kmg] | The file size threshold for throttling in *n* **k**ilobytes, **m**egabytes, or **g**igabytes (see [Remarks](#remarks)). |
 
+These throttling options are used to specify the maximum I/O bandwidth that Robocopy allows to be used in bytes per second. If not specifying in bytes per second, whole numbers can be used if **k**, **m**, or **g** are specified. The minimum I/O bandwidth that is throttled is **524288** bytes even if a lesser value is specified.
+
 #### File selection options
 
 | Option | Description |
 |--|--|
 | /a | Copies only files for which the **Archive** attribute is set. |
 | /m | Copies only files for which the **Archive** attribute is set, and resets the **Archive** attribute. |
-| /ia:`[RASHCNETO]` | Includes only files for which any of the specified attributes are set.  The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
+| /ia:`[RASHCNETO]` | Includes only files for which any of the specified attributes are set. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
 | /xa:`[RASHCNETO]` | Excludes files for which any of the specified attributes are set. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
 | /xf `<filename>[ ...]` | Excludes files that match the specified names or paths. Wildcard characters (**&#42;** and **?**) are supported. |
 | /xd `<directory>[ ...]` | Excludes directories that match the specified names and paths. |
@@ -135,7 +138,7 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /w:`<n>` | Specifies the wait time between retries, in seconds. The default value of *n* is 30 (wait time 30 seconds). |
 | /reg | Saves the values specified in the **/r** and **/w** options as default settings in the registry. |
 | /tbd | Specifies that the system waits for share names to be defined (retry error 67). |
-| /lfsm | Operate in low free space mode that enables copy, pause and resume (see [Remarks](#remarks)). |
+| /lfsm | Operate in low free space mode that enables copy, pause, and resume (see [Remarks](#remarks)). |
 | /lfsm:`<n>`[kmg] | Specifies the floor size in *n* **k**ilobytes, **m**egabytes, or **g**igabytes. |
 
 #### Logging options
@@ -148,10 +151,10 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /ts | Includes source file time stamps in the output. |
 | /fp | Includes the full path names of the files in the output. |
 | /bytes | Prints sizes as bytes. |
-| /ns | Specifies that file sizes are not to be logged. |
-| /nc | Specifies that file classes are not to be logged. |
-| /nfl | Specifies that file names are not to be logged. |
-| /ndl | Specifies that directory names are not to be logged. |
+| /ns | Specifies that file sizes aren't to be logged. |
+| /nc | Specifies that file classes aren't to be logged. |
+| /nfl | Specifies that file names aren't to be logged. |
+| /ndl | Specifies that directory names aren't to be logged. |
 | /np | Specifies that the progress of the copying operation (the number of files or directories copied so far) won't be displayed. |
 | /eta | Shows the estimated time of arrival (ETA) of the copied files. |
 | /log:`<logfile>` | Writes the status output to the log file (overwrites the existing log file). |
@@ -182,9 +185,9 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 
 - The **/DCOPY:E** flag requests that extended attribute copying should be attempted for directories. Robocopy will continue if a directory's EAs couldn't be copied. This flag isn't included in **/COPYALL**.
 
-- If either **/IoMaxSize** or **/IoRate** are specified, robocopy will enable copy file throttling to reduce system load. Both may be adjusted to optimal values and copy parameters, but the system and robocopy are allowed to adjust them to allowed values as necessary.
+- If either **/IoMaxSize** or **/IoRate** are specified, robocopy will enable copy file throttling to reduce system load. Both can be adjusted to optimal values and copy parameters, but the system and robocopy are allowed to adjust them to allowed values as necessary.
 
-- If **/Threshold** is used, it specifies a minimum file size for engaging throttling. Files below that size won't be throttled. Values for all three parameters may be followed by an optional suffix character such as [KMG] (kilo, mega, giga).
+- If **/Threshold** is used, it specifies a minimum file size for engaging throttling. Files below that size won't be throttled. Values for all three parameters can be followed by an optional suffix character such as [KMG] (kilobytes, megabytes, gigabytes).
 
 - Using **/LFSM** requests robocopy to operate in 'low free space mode'. In this mode, robocopy will pause whenever a file copy would cause the destination volume's free space to go below a 'floor' value. This value can be explicitly specified using **/LFSM:_n_**[KMG] flag.
 
@@ -238,6 +241,12 @@ To copy all files and subdirectories, including empty directories, from the "Rec
 
 ```cmd
 robocopy C:\Users\Admin\Records D:\Backup /ETA /PURGE /LOG:C:\Logs\Backup.log
+```
+
+To copy all files and subdirectories from the folder named "Records" on the "C" drive to a folder named "Backup" on the "D" drive while limiting the I/O rate to 1 megabyte per second during the copy operation, type the following:
+
+```cmd
+robocopy C:\Records D:\Backup /iorate:1m
 ```
 
 ## Related links

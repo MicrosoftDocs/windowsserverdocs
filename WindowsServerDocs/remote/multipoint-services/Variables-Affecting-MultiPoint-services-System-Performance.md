@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 0f3e8875-1b5e-4789-b16c-d06d6e31f38e
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 # Variables Affecting MultiPoint Services System Performance
 There are many variables that can affect the overall performance of your MultiPoint Services system. You may want to consider these when designing your system.

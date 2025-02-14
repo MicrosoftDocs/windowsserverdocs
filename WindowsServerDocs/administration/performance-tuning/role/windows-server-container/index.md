@@ -2,7 +2,7 @@
 title: Performance Tuning Windows Server Containers
 description: Performance tuning recommendations for containers on Windows Server 2022
 ms.topic: landing-page
-ms.author: ericam
+ms.author: roharwoo
 author: akino
 ms.date: 06/21/2021
 ---
