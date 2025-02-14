@@ -10,11 +10,14 @@ ai-usage: ai-assisted # Used for image alt text
 
 # DNS WINS lookup integration
 
-Support for using Windows Internet Name Service (WINS) is provided to look up DNS names that the DNS domain namespace can't resolve. To accomplish WINS lookup using the DNS server role on Windows Server, two specific resource record types are used to and can be enabled for any zones loaded by the DNS service:
+Windows Internet Name Service (WINS) is a legacy computer name registration and resolution service that maps computer NetBIOS names to IP addresses. Support for using Windows Internet Name Service (WINS) is provided to look up DNS names that the DNS domain namespace can't resolve. To accomplish WINS lookup using the DNS server role on Windows Server, two specific resource record types are used to and can be enabled for any zones loaded by the DNS service:
 
 - The WINS resource record, which can be enabled to integrate WINS lookup into forward lookup zones
 
 - The WINS-R resource record, which can be enabled to integrate node adapter status request for reverse lookup zones
+
+> [!TIP]
+> If you have already deployed WINS on your network, it is recommended that you completely migrate your network to use DNS exclusively.
 
 ## WINS resource record
 

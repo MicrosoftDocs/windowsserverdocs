@@ -1,5 +1,5 @@
 ---
-title: DNS queries and lookups in Windows and Windows Server
+title: DNS Queries and Lookups in Windows and Windows Server
 description: Learn about DNS queries and lookups in Windows and Windows Server, including recursion, iteration, and the DNS query process.
 ms.topic: conceptual
 author: robinharwood
