@@ -92,12 +92,12 @@ To distribute certificates for computers:
 
 1. In the **Certificate Enrollment Policy Server** dialog box, under **Enter enrollment policy server URI**, enter the URI that you copied in the previous procedure.
 
-1. In **Authentication type**, set the authentication type that you configured for the Certificate Enrollment Web Policy Service. See [Certificate Enrollment Policy Web Service Guidance](/certificate-enrollment-policy-web-service-conceptual.md) for information on choosing an authentication type.
+1. In **Authentication type**, set the authentication type that you configured for the Certificate Enrollment Web Policy Service. See [Certificate Enrollment Policy Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11)) for information on choosing an authentication type.
 
 1. Select **Validate Server**, and when the server is validated, select **Add**. Select **OK**.
 
-        > [!NOTE]
-        > You can only validate the server if you have the appropriate credentials. This could be an issue if you have selected client certificate validation and you don't already have a certificate for the computer. If this is the case, you'll first have to obtain a certificate for the computer. You will need a computer certificate with the following characteristics: Enhanced Key Usage Client Authentication 1.3.6.1.5.5.7.3.2.
+    > [!NOTE]
+    > You can only validate the server if you have the appropriate credentials. This could be an issue if you have selected client certificate validation and you don't already have a certificate for the computer. If this is the case, you'll first have to obtain a certificate for the computer. You will need a computer certificate with the following characteristics: Enhanced Key Usage Client Authentication 1.3.6.1.5.5.7.3.2.
 
 1. To distribute certificates for users, in the **Console** pane, under **User Configuration**, select **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
 
