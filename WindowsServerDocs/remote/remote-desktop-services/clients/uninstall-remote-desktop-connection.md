@@ -2,10 +2,11 @@
 title: Uninstall and reinstall Remote Desktop Connection
 description: Learn how to uninstall and reinstall Remote Desktop Connection.
 ms.topic: article
-author: heidilohr
+ms.author: alalve
 manager: femila
-ms.author: helohr
-ms.date: 09/21/2023
+author: xelu86
+ms.custom: "se-defect-target"
+ms.date: 7/3/2024
 ---
 # Uninstall and reinstall Remote Desktop Connection
 
@@ -60,7 +61,7 @@ After you uninstall the Remote Desktop Connection app, you can reinstall it by f
 
 1. Download the Remote Desktop Connection installer file.
 
-   - [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2247659) (most common)
+   - [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2247659) *(most common)*
    - [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2247660)
    - [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2247577)
 

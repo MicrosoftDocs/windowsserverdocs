@@ -1,16 +1,15 @@
 ---
 title: Storage Migration Service overview
 description: Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows, Linux, and NetApp CIFS servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
-author: jasongerend
-ms.author: jgerend
-manager: elizapo
-ms.date: 03/25/2021
+author: robinharwood
+ms.author: roharwoo
+ms.date: 06/25/2024
 ms.topic: article
 ---
 
 # Storage Migration Service overview
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+> 
 
 Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows, Linux, and NetApp CIFS servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 
@@ -19,7 +18,7 @@ This article discusses the following Storage Migration Service aspects:
 - Why you'd want to use Storage Migration Service.
 - How the migration process works.
 - What the requirements are for source and destination servers.
-- [What's new in Storage Migration Service](#whats-new-in-storage-migration-service).
+- [What's new in Storage Migration Service](../../get-started/whats-new-in-windows-server-2019.md#storage-migration-service).
 
 ## Why use Storage Migration Service
 
@@ -52,9 +51,9 @@ The following video shows how to use Storage Migration Service to take a server,
 To use Storage Migration Service, you need the following items:
 
 - A **source server** or **failover cluster** to migrate files and data from.
-- A **destination server** running Windows Server 2019 or Windows Server 2022 (clustered or standalone) to migrate to. Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower.
-- An **orchestrator server** running Windows Server 2019 or Windows Server 2022 to manage the migration  <br>If you're migrating only a few servers, and one of the servers is running Windows Server 2019 or Windows Server 2022, you can use that as the orchestrator. If you're migrating more servers, use a separate orchestrator server.
-- A **PC or server running the latest [Windows Admin Center](../../manage/windows-admin-center/overview.md)** to run the Storage Migration Service user interface, along with the latest Storage Migration Service tool (extension) available from the feed. The Windows Admin Center must be at least version 2103.
+- A **destination server** running Windows Server 2019 or later (clustered or standalone) to migrate to. While Windows Server 2016 is also supported, it may be more difficult to migrate to and its support will end in January 2027.
+- An **orchestrator server** running Windows Server 2019 or later to manage the migration. If you're migrating only one server, you can use the destination as the orchestrator. If you're migrating several servers, use a separate orchestrator server.
+- A **PC or server running the latest [Windows Admin Center](../../manage/windows-admin-center/overview.md)** to run the Storage Migration Service user interface, along with the latest Storage Migration Service tool (extension) available from the feed.
 
 We strongly recommend that the orchestrator and destination computers have at least two cores or two vCPUs and at least 2 GB of memory. Inventory and transfer operations are faster with more processors and memory.
 
@@ -70,15 +69,16 @@ We strongly recommend that the orchestrator and destination computers have at le
   - Windows Management Instrumentation (WMI-In)
 
   > [!TIP]
-  > Installing the Storage Migration Service Proxy service on a Windows Server 2019 or Windows Server 2022 computer automatically opens the necessary firewall ports on that computer. To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then choose **Install**.
+  > Installing the Storage Migration Service Proxy service on a destination computer automatically opens the necessary firewall ports on that computer. To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then choose **Install**.
 
-- If the computers belong to an Active Directory Domain Services domain, they should all belong to the same forest. The destination server must also be in the same domain as the source server if you want to transfer the source's domain name to the destination when cutting over. Cutover technically works across domains, but the fully qualified domain name of the destination is different from the source.
+- If the computers belong to an Active Directory Domain Services domain, they should all belong to the same forest. The destination server must also be in the same domain as the source server if you want to transfer the source's domain name to the destination when cutting over. While cutover works across domains, the fully qualified domain name of the destination is different from the source and using two different domains will likely cause DNS issues.
 
 ### Requirements for source servers
 
 The source server must run one of the following operating systems:
 
 - Windows Server, Semi-Annual Channel
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
@@ -102,7 +102,7 @@ The source server must run one of the following operating systems:
 - Windows Storage Server 2016
 
 > [!NOTE]
-> Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but it can inventory and transfer files from them.
+> Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't cut over from domain controllers, but it can inventory and transfer files from them.
 
 You can migrate the following other source types if the orchestrator is running Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed or Windows Server 2022:
 
@@ -121,15 +121,16 @@ You can migrate the following other source types if the orchestrator is running 
 The destination server must run one of the following operating systems:
 
 - Windows Server, Semi-Annual Channel
+- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
 
-The destination servers can be standalone servers or part of a Windows failover cluster. They can't run Azure Stack HCI or use a non-Microsoft clustering add-on. While the Storage Migration Service doesn't support Azure Files as a destination, it fully supports servers running the Azure File Sync agent with cloud tiering.
+The destination servers can be standalone servers or a Windows failover cluster. Be aware that the clusters themselves are not migrated, solely the file server cluster resources. They can't run Azure Local or use a non-Microsoft clustering add-on. While the Storage Migration Service doesn't support Azure Files as a destination, it fully supports servers running the Azure File Sync agent with cloud tiering.
 
 > [!TIP]
-> Destination servers running Windows Server 2022 or Windows Server 2019 have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service.
+> Destination servers running Windows Server 2019 or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service.
 
 ## Azure VM migration
 
@@ -140,19 +141,6 @@ The following video shows how to use Storage Migration Service to migrate to Azu
 > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
 
 If you want to lift and shift virtual machines to Azure without migrating to a later operating system, consider using Azure Migrate. For more information, see [About Azure Migrate](/azure/migrate/migrate-services-overview).
-
-## What's new in Storage Migration Service
-
-Windows Admin Center version 1910 added the ability to deploy Azure virtual machines. This update integrates Azure VM deployment into Storage Migration Service. For more information, see [Azure VM migration](#azure-vm-migration).
-
-You can access the following post-RTM features when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed or on Windows Server 2022:
-
-- Migrate local users and groups to the new server.
-- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
-- Migrate storage from a Linux server that uses Samba.
-- Sync migrated shares more easily into Azure by using Azure File Sync.
-- Migrate to new networks such as Azure.
-- Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
 
 ## Related links
 

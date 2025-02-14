@@ -2,18 +2,15 @@
 title: Storage bus cache on Storage Spaces 
 description: Learn how to enable the storage bus cache on standalone servers for better read and write performance.
 author: TinaWu-Msft
-ms.author: tinawu
-ms.prod: windows-server
+ms.author: alalve
 ms.topic: tutorial #Required; leave this attribute/value as-is.
-ms.date: 06/06/2023
+ms.date: 02/12/2025
 ms.custom: template-tutorial #Required; leave this attribute/value as-is.
 ---
 
 # Tutorial: Enable storage bus cache with Storage Spaces on standalone servers
 
-> Applies to: Windows Server 2022
-
-The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. This feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. For more information, see [Understanding the storage pool cache](/azure-stack/hci/concepts/cache). By default, only a portion of the faster media tier is reserved for the cache.
+The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. This feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. For more information, see [Understanding the storage pool cache](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage). By default, only a portion of the faster media tier is reserved for the cache.
 
 |Resiliency  |Cache type  |
 |---------|---------|
@@ -27,6 +24,7 @@ If your system doesn't require resiliency or has external backups, the storage b
 In this tutorial, you learn about:
 
 > [!div class="checklist"]
+>
 > * What the storage bus cache is
 > * How to enable the storage bus cache  
 > * Managing the cache after deployment
@@ -69,14 +67,14 @@ Enabled                        : False
 ```
 
 > [!NOTE]
-> For general use, you should use default settings. Any changes must be made prior to enabling the storage bus cache.
+> For general use, you should use default settings. Any changes must be made before enabling the storage bus cache.
 
 ### Provision Mode
 
-This field determines if the faster media tier, or only a portion of it, is used for caching. This field can't be modified after enabling the storage bus cache. Prvision Mode has two options:
+This field determines if the faster media tier, or only a portion of it, is used for caching. This field can't be modified after enabling the storage bus cache. Provision Mode has two options:
 
 * Shared (default): The cache only takes up a portion of the faster media tier. The exact percentage is configurable by the Shared Cache Percentage field.
-* Cache: Dedicate most of the faster media tier to caching as opposed to only a portion. For more information, see [Understanding the storage pool cache](/azure-stack/hci/concepts/cache).
+* Cache: Dedicate most of the faster media tier to caching as opposed to only a portion. For more information, see [Understanding the storage pool cache](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage).
 
 ### Shared cache percentage
 
@@ -138,7 +136,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
     > * Bind the fast and slow media and form the cache.
     > * Add the storage bus cache with default or custom settings.
 
-    You can run `Get-StoragePool` to see the name of the storage pool and `Get-PhysicalDisk` again to see the effects of enabling storage bus cache. The output should resemble the following image. The Number column shows values over 500, indicating the storage bus claimed the drive. The CanPool column now shows False for all nonboot drives. If the `ProvisionMode` is set to Cache prior to enabling, the Usage column shows as Journal for the faster drives.  
+    You can run `Get-StoragePool` to see the name of the storage pool and `Get-PhysicalDisk` again to see the effects of enabling storage bus cache. The output should resemble the following image. The Number column shows values over 500, indicating the storage bus claimed the drive. The CanPool column now shows False for all nonboot drives. If the `ProvisionMode` is set to Cache before enabling, the Usage column shows as Journal for the faster drives.  
 
     :::image type="content" source="media/storage-bus-cache/get-physicaldisk-2.png" alt-text="Screenshot showing the results of Get-StoragePool and Get-PhysicalDisk after enabling the storage bus cache.":::
 
@@ -162,7 +160,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
     Enabled                        : True
     ```
 
-Because the storage bus cache has been successfully enabled, the next step is to create a volume.
+Once the storage bus cache is successfully enabled, the next step is to create a volume.
 
 ## Create a volume
 
@@ -186,11 +184,11 @@ New-Volume -FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName 
 
 ## Make changes after enabling storage bus cache
 
-After you run `Enable-StorageBusCache`, the Provision mode, Shared cache percent, Cache metadata reserve bytes, Cache mode HDD, Cache mode SSD, and Cache page size can't be modified. Limited changes can be made to the physical setup. For more information, see the following common scenarios.
+After you run `Enable-StorageBusCache`, the Provision Mode, Shared cache percent, Cache metadata reserve bytes, Cache mode HDD, Cache mode SSD, and Cache page size can't be modified. Limited changes can be made to the physical setup. For more information, see the following common scenarios.
 
 ### Add or replace capacity drives (HDDs)
 
-Once the drive has been manually added, run the following cmdlet to finish the intake process.
+Once the drive is manually added, run the following cmdlet to finish the intake process.
 
 ```powershell
 Update-StorageBusCache
@@ -213,7 +211,7 @@ Use the following cmdlet to check the existing cache and capacity bindings.
 Get-StorageBusBinding
 ```
 
-In the following example, the first column lists capacity drives, and the third column lists the cache drives that they're bound to. Follow the instructions in adding or replacing cache drives to balance, so the existing cache isn't preserved.
+In the following example, the first column lists capacity drives, and the third column lists the cache drives that they're bound to. Follow the instructions when adding or replacing cache drives to ensure the old cache drive assignments are cleared before new ones are set up. Skipping this step might keep the system from using the old cache assignments, which can interfere with achieving a balanced configuration.
 
 :::image type="content" source="media/storage-bus-cache/get-storagebusbinding.png" alt-text="Screenshot showing the output of Get-StorageBusBinding.":::
 
@@ -231,7 +229,7 @@ No, this feature only works when there are two media types, one of which must be
 
 ### How can the storage bus cache settings be changed?
 
-See the following example for changing the Provision mode from Shared (default) to Cache. Default settings are recommended, and any changes should be made before the storage bus cache is enabled.
+See the following example for changing the Provision Mode from Shared (default) to Cache. Default settings are recommended, and any changes should be made before the storage bus cache is enabled.
 
 ```powershell
 Set-StorageBusCache -ProvisionMode Cache

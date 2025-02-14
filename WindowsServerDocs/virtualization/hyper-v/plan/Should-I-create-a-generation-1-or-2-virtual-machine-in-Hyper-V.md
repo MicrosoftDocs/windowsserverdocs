@@ -1,28 +1,37 @@
 ---
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
 description: Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs.
-ms.topic: article
-ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 11/9/2021
+ms.topic: conceptual
+ms.author: mosagie
+author: meaghanlewis
+ms.date: 06/20/2024
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
->Applies to: Windows 10, Windows 11, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019, Windows Server 2022, Azure Stack HCI
+Creating a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend you create a generation 2 virtual machines to take advantage of features like Secure Boot unless one of the following statements is true:
 
-> [!NOTE]
-> If you plan to ever upload Windows virtual machines (VMs) from on-premises to Microsoft Azure, both generation 1 and generation 2 VMs are supported as long as they use the VHD file format and have a fixed (not dynamically expanding) sized disk. See [Generation 2 VMs on Azure](/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
-
-Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:
-
-- You're using an existing, pre-built virtual disk (VHD or VHDX), which isn't [compatible with UEFI](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
+- You're using an existing, prebuilt virtual hard drive (VHD or VHDX files), which isn't [compatible with UEFI](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
 - Generation 2 doesn't support the operating system you want to run on the virtual machine.
 - Generation 2 doesn't support the boot method you want to use.
 
 For more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](../Hyper-V-feature-compatibility-by-generation-and-guest.md).
 
-You can't change a virtual machine's generation after you've created it. So, we recommend that you review the considerations here, as well as choose the operating system, boot method, and features you want to use before you choose a generation.
+You can't change a virtual machine's generation once it's created. We recommend that you review the considerations here, and choose the operating system, boot method, and features you want to use before you choose a generation.
+
+## What are the advantages of using generation 2 virtual machines?
+
+Here are some of the advantages you get when you use a generation 2 virtual machine:
+
+- **Secure Boot**
+
+  Use Secure Boot to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot verifies the boot loader is signed by a trusted authority in the UEFI database. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that Secure Boot doesn't support, you can disable it after you create the virtual machine. For more information, see [Secure Boot](/previous-versions/windows/it-pro/windows-8.1-and-8/dn486875(v=ws.11)).
+
+  To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.
+
+- **Larger boot volume**
+  The maximum boot volume for generation 2 virtual machines is 64 TB. This maximum boot volume is the maximum disk size supported by a `.VHDX` For generation 1 virtual machines, the maximum boot volume is 2 TB for a `.VHDX`and 2040 GB for a `.VHD` For more information, see [Hyper-V Virtual Hard Disk Format Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831446(v=ws.11)).
+
+  You might also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
 
 ## Which guest operating systems are supported?
 
@@ -48,6 +57,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 
 | 64-bit versions of Windows | Generation 1 | Generation 2 |
 |--|--|--|
+| Windows Server 2025 |&#10004;|&#10004;|
 | Windows Server 2022 |&#10004;|&#10004;|
 | Windows Server 2019 |&#10004;|&#10004;|
 | Windows Server 2016 |&#10004;|&#10004;|
@@ -72,7 +82,7 @@ The following table shows which 32-bit versions of Windows you can use as a gues
 
 ### CentOS and Red Hat Enterprise Linux guest operating system support
 
-The following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.
+The following table shows which versions of Red Hat Enterprise Linux (RHEL) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
 |Operating system versions|Generation 1|Generation 2|
 |-----------------------------|----------------|----------------|
@@ -160,30 +170,15 @@ For more information, see [Ubuntu virtual machines on Hyper-V](../Supported-Ubun
 
 ## How can I boot the virtual machine?
 
-The following table shows which boot methods are supported by generation 1 and generation 2 virtual machines.
+Generation 1 and generation 2 VMs support different boot methods, these methods are shown in the following table.
 
 |Boot method|Generation 1|Generation 2|
 |---------------|----------------|----------------|
 |PXE boot by using a standard network adapter| &#10006;|&#10004;|
 |PXE boot by using a legacy network adapter|&#10004;| &#10006;|
-|Boot from a SCSI virtual hard disk (.VHDX) or virtual DVD (.ISO)| &#10006;|&#10004;|
-|Boot from IDE Controller virtual hard disk (.VHD), virtual DVD (.ISO) or a physical CD/DVD drive|&#10004;| &#10006;|
-|Boot from virtual floppy (.VFD)|&#10004;| &#10006;|
-
-## What are the advantages of using generation 2 virtual machines?
-
-Here are some of the advantages you get when you use a generation 2 virtual machine:
-
-- **Secure Boot**
-
-  This is a feature that verifies the boot loader is signed by a trusted authority in the UEFI database to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that's not supported by Secure Boot, you can disable it after the virtual machine's created.  For more information, see [Secure Boot](/previous-versions/windows/it-pro/windows-8.1-and-8/dn486875(v=ws.11)).
-
-  To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.
-
-- **Larger boot volume**
-  The maximum boot volume for generation 2 virtual machines is 64 TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2 TB for a .VHDX and 2040 GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831446(v=ws.11)).
-
-  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
+|Boot from a SCSI virtual hard disk (`.VHDX)` or virtual DVD (.ISO)| &#10006;|&#10004;|
+|Boot from IDE Controller virtual hard disk (`.VHD)`, virtual DVD (`.ISO)` or a physical CD/DVD drive|&#10004;| &#10006;|
+|Boot from virtual floppy (`.VFD)`|&#10004;| &#10006;|
 
 ## What's the difference in device support?
 
@@ -191,7 +186,7 @@ The following table compares the devices available between generation 1 and gene
 
 |Generation 1 Device|Generation 2 Replacement|Generation 2 Enhancements|
 |-----------------------|----------------------------|-----------------------------|
-|IDE controller|Virtual SCSI controller|Boot from .VHDX (64 TB maximum size, and online resize capability)|
+|IDE controller|Virtual SCSI controller|Boot from `.VHDX`(64 TB maximum size, and online resize capability)|
 |IDE CD-ROM|Virtual SCSI CD-ROM|Support for up to 64 SCSI DVD devices per SCSI controller.|
 |Legacy BIOS|UEFI firmware|Secure Boot|
 |Legacy network adapter|Synthetic network adapter|Network boot with IPv4 and IPv6|
@@ -206,9 +201,17 @@ The following table compares the devices available between generation 1 and gene
 |Programmable interval timer (PIT)|No longer required|N/A|
 |Super I/O device|No longer required|N/A|
 
-## More about generation 2 virtual machines
+## Considerations for using generation 1 and generation 2 virtual machines
 
-Here are some additional tips about using generation 2 virtual machines.
+Here are some more tips about using the different generations of virtual machines.
+
+### Creating VMs with more than 64 logical CPUs
+
+Hyper-V manager might fail to create a new generation 1 VM on a system with more than 64 logical CPUs. Hyper-V manager doesn’t let you specify the number of virtual processors at VM creation time. For hosts with more than 64 logical processors, specify the number of virtual processors at VM creation using Windows Admin Center, PowerShell, or another tool.
+
+### Uploading a virtual hard drive to Azure
+
+Virtual hard drives created on generation 1 and generation 2 VMs can be uploaded to Azure as long as they use the VHD file format. The virtual hard drive must have a fixed (not dynamically expanding) sized disk. See [Generation 2 VMs on Azure](/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
 ### Attach or add a DVD drive
 
@@ -217,16 +220,16 @@ Here are some additional tips about using generation 2 virtual machines.
 
 ### Use UEFI firmware
 
-- Secure Boot or UEFI firmware isn't required on the physical Hyper-V host. Hyper-V provides virtual firmware to virtual machines that is independent of what's on the Hyper-V host.
+- Secure Boot or UEFI firmware isn't required on the physical Hyper-V host. For generation 2 VMs, Hyper-V provides virtual firmware to virtual machines that is independent of what's on the Hyper-V host.
 - UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.
-- We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they're compiled directly from the sources. If these applications aren't appropriately digitally signed, you must disable Secure Boot for the virtual machine.
+- We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they're compiled directly from the sources. If these applications aren't digitally signed correctly, you must disable Secure Boot for the virtual machine.
 
 ### Work with VHDX files
 
 - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
 - We don't support or recommend that you create a single virtual disk (VHD or VHDX file) that is bootable to **both** generation 1 and generation 2 virtual machines. Instead, create bootable VHDX files that target only generation 1 **or** generation 2 virtual machines.
-- The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.
-- A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
+- The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. You can't tell if a VHDX file was created as a generation 1 or a generation 2 virtual machine.
+- A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if the virtual hard drive is a bootable VHDX file, the generation 1 virtual machine fails to boot.
 
 ### Use IPv6 instead of IPv4
 
@@ -238,7 +241,7 @@ Set-VMFirmware -VMName 'TestVM' -IPProtocolPreference IPv6
 
 ## Add a COM port for kernel debugging
 
-COM ports aren't available in generation 2 virtual machines until you add them. You can do this with Windows PowerShell or Windows Management Instrumentation (WMI). These steps show you how to do it with Windows PowerShell.
+COM ports aren't available in generation 2 virtual machines until you add them. You can add COM ports with Windows PowerShell or Windows Management Instrumentation (WMI). These steps show you how to do it with Windows PowerShell.
 
 To add a COM port:
 
@@ -248,7 +251,7 @@ To add a COM port:
     Set-VMFirmware -VMName 'TestVM' -EnableSecureBoot Off
     ```
 
-2. Add a COM port. Use the [Set-VMComPort](/powershell/module/hyper-v/set-vmcomport) cmdlet to do this. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:
+2. Add a COM port. Use the [Set-VMComPort](/powershell/module/hyper-v/set-vmcomport) cmdlet to add a COM port. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:
 
     ```powershell
     Set-VMComPort -VMName 'TestVM' -Number 1 -Path '\\.\pipe\TestPipe'

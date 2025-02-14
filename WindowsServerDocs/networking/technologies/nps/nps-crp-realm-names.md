@@ -4,14 +4,12 @@ description: This topic provides an overview of using realm names in Network Pol
 manager: brianlic
 ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Realm Names
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic for an overview of using realm names in Network Policy Server connection request processing.
 

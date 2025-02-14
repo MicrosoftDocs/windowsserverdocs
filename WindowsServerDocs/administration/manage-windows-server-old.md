@@ -2,13 +2,13 @@
 title: Manage Windows Server
 description: Learns about tools, recommendations and guidance on managing Windows Server
 ms.topic: article
-author: lizap
-ms.author: elizapo
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/16/2018
 ---
 # Manage Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/). You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
@@ -48,7 +48,7 @@ Use the following table to determine which tools to use when.
 | Sitting far away from my Windows Server system |X | | X |
 | Sitting far away from my Windows Server system but it DOES have desktop experience |X | Use RDS to remote into the server, then use Server Manager | X |
 
-In addition to the tools mentioned below, you can also use [Remote Desktop Services](../remote/remote-desktop-services/welcome-to-rds.md) to access on-premises, remote, and virtual servers. Then you can use Server Manager to perform management tasks.
+In addition to the tools mentioned below, you can also use [Remote Desktop Services](../remote/remote-desktop-services/remote-desktop-services-overview.md) to access on-premises, remote, and virtual servers. Then you can use Server Manager to perform management tasks.
 
 ### Manage on-premises systems, remote systems, and systems without UI with Windows Admin Center
 [Windows Admin Center](../manage/windows-admin-center/overview.md) is a browser-based management app that enables on-premises administration of Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for management on private networks that are not connected to the Internet. You can install Windows Admin Center on Windows 10, on a gateway server, or directly on the Windows Server system that you want to manage.

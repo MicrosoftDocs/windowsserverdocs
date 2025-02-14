@@ -3,64 +3,38 @@ title: Remote Desktop client - supported configuration
 description: Learn which PCs you can and can't access by using supported configurations for Remote Desktop clients.
 ms.topic: article
 ms.assetid: bb932dad-6f74-484f-8f7b-dd957b615d44
-author: lizap
+author: robinharwood
 manager: dongill
 ms.author: alalve
-ms.date: 06/19/2023
+ms.date: 7/3/2024
 ---
 
 # Remote Desktop client - supported configuration
 
 Learn which PCs you can access by using supported configurations for Remote Desktop clients.
 
-## Supported PCs
+## Supported operating systems for Remote Desktop client connections
 
 You can connect to PCs that run the following Windows operating systems:
 
+- Windows 11 Pro
+- Windows 11 Enterprise
 - Windows 10 Pro
 - Windows 10 Enterprise
-- Windows 8 Enterprise
-- Windows 8 Professional
-- Windows 7 Professional
-- Windows 7 Enterprise
-- Windows 7 Ultimate
-- Windows Server 2008
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Multipoint Server 2011
-- Windows Multipoint Server 2012
-- Windows Small Business Server 2008
-- Windows Small Business Server 2011
-
-The following computers can run the Remote Desktop gateway:
-
-- Windows Server 2008
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Small Business Server 2011
-
-The following operating systems can serve as RD Web Access or RemoteApp servers:
-
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
+- Windows Server 2022
+- Windows Server 2019
 - Windows Server 2016
 
-## Unsupported Windows Versions and Editions
+>[!NOTE]
+>Windows SKUs that aren't listed in this section, such as Windows 10 Home, aren't compatible with connecting remotely.
 
-The Remote Desktop client doesn't connect to these Windows Versions and Editions:
+## Supported operating systems for Remote Desktop Gateway, Web Access and RemoteApp
 
-- Windows 7 Starter
-- Windows 7 Home
-- Windows 8 Home
-- Windows 8.1 Home
-- Windows 10 Home
+The following operating systems can serve as Remote Desktop Gateway, Web Access, and RemoteApp:
 
-If you want to access computers that have one of these Windows versions installed, upgrade to a Windows version that supports RDP.
+- Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016
 
 ## RD Gateway messaging isn't supported
 

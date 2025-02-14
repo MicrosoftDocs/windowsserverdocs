@@ -3,14 +3,14 @@ title: Viewing and Managing Updates
 description: Windows Server Update Service (WSUS) article - How to view and manage updates in the WSUS console
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 manager: femila
 ms.date: 08/11/2023
 ---
 # Viewing and Managing Updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 You can use the WSUS console to view and manage updates.
 
@@ -20,7 +20,7 @@ On the **Updates** page, you can do the following:
 
 - View updates. The update overview displays updates that have been synchronized from the update source to your WSUS server and are available for approval.
 
-- Filter updates. In the default view, you can filter updates by approval status and installation status. The default setting is for unapproved updates that are needed by some clients or that's'had installation failures on some clients. You can change this view by changing the approval status and installation status filters, and then clicking **Refresh**.
+- Filter updates. In the default view, you can filter updates by approval status and installation status. The default setting is for unapproved updates that are needed by some clients or that had installation failures on some clients. You can change this view by changing the approval status and installation status filters, and then clicking **Refresh**.
 
 - Create new update views. In the **Actions** pane, select **New Update View**. You can filter updates by classification, product, the group for which they've been approved, and synchronization date. You can sort the list by clicking the appropriate column heading in the title bar.
 

@@ -4,13 +4,11 @@ description: Learn how to create a new Access Control user role in the IPAM clie
 manager: brianlic
 ms.topic: article
 ms.assetid: ae6a42db-a104-401b-a8e6-b85c47d30b46
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Create a User Role for Access Control
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to create a new Access Control user role in the IPAM client console.
 

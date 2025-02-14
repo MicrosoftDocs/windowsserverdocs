@@ -2,14 +2,12 @@
 title: Overview of Extended Security Updates for Windows Server 2008, 2008 R2, 2012, and 2012 R2
 description: Learn about Extended Security Updates (ESU) for Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2, and how to upgrade on-premises servers or rehost to Azure.
 ms.topic: conceptual
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 manager: femila
 ms.date: 08/04/2023
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.custom: contperf-fy22q3
 ---
 
 # Extended Security Updates for Windows Server overview

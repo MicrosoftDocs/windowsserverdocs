@@ -1,16 +1,15 @@
 ---
 title: Migrate a file server by using Storage Migration Service
 description: Learn how to install Storage Migration Service, and use the service and Windows Admin Center to migrate to a Windows server or Windows Failover Cluster.
-author: jasongerend
-ms.author: jgerend
-manager: elizapo
-ms.date: 03/21/2023
+author: robinharwood
+ms.author: roharwoo
+ms.date: 06/25/2024
 ms.topic: conceptual
 ---
 
 # Use Storage Migration Service to migrate a server
 
-You can use [Storage Migration Service](overview.md) and Windows Admin Center to migrate one server to another, including their files and configuration. This article describes how to migrate a Windows server, Windows Failover Cluster, Samba server, or a NetApp Fabric Attached Storage (FAS) array to another Windows server or Windows Failover Cluster.
+You can use [Storage Migration Service](overview.md) and Windows Admin Center (WAC) to migrate one server to another, including their files and configuration. This article describes how to migrate a Windows server, Windows Failover Cluster file server resource, Samba server, or a NetApp Fabric Attached Storage (FAS) array to another Windows server or Windows Failover Cluster.
 
 The migration process begins with a server inventory to identify the content to migrate, and a firewall check to ensure successful migration. The process transfers data from your source servers to the destination servers, and then cuts over to your new servers. After migration, you can process the decommissioned source servers, and reissue certificates on your new destination server.
 
@@ -18,33 +17,33 @@ The migration process begins with a server inventory to identify the content to 
 
 Before you get started, install Storage Migration Service and make sure the necessary firewall ports are open.
 
-1. Check the [Storage Migration Service requirements](overview.md#requirements) and install the latest version of [Windows Admin Center](../../manage/windows-admin-center/overview.md) on your PC or a management server if you haven't already. You also need the latest version of the Storage Migration Service extension, which is installed automatically by Windows Admin Center if **Automatically update extensions** is enabled in **Settings** > **Extensions**. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
-1. In Windows Admin Center, connect to the orchestrator server running Windows Server 2019 or Windows Server 2022.
+1. Check the [Storage Migration Service requirements](overview.md#requirements) and install the latest version of [Windows Admin Center](../../manage/windows-admin-center/overview.md) on your PC or a management server if you haven't already. You also need the latest version of the Storage Migration Service extension, which is installed automatically by WAC if **Automatically update extensions** is enabled in **Settings** > **Extensions**. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
+1. In WAC, connect to the orchestrator server running Windows Server 2019 or later.
    This orchestrator is the server that you install Storage Migration Service on and use to manage the migration.
 
-   - If you're migrating only one server, you can use the destination server as long as it's running Windows Server 2019 or Windows Server 2022.
+   - If you're migrating only one server, you can use the destination server as long as it's running Windows Server 2019 or later.
    - We recommend you use a separate orchestration server for any multi-server migrations.
 
-1. In Windows Admin Center, go to **Server Manager** > **Storage Migration Service**. Select **Install** to install Storage Migration Service and its required components, as shown in the following figure.
+1. In WAC, go to **Server Manager** > **Storage Migration Service**. Select **Install** to install Storage Migration Service and its required components, as shown in the following figure.
 
    :::image type="content" source="media/migrate/install.png" alt-text="Screenshot of the Storage Migration Service page showing the Install button.":::
 
-1. Install the Storage Migration Service proxy on all destination servers running Windows Server 2019 or Windows Server 2022. This setup doubles the transfer speed when installed on destination servers.
+1. Install the Storage Migration Service proxy on all destination servers running Windows Server 2019 or later. This setup doubles the transfer speed when installed on destination servers.
 
-   1. Connect to the destination server in Windows Admin Center.
-   1. Go to **Server Manager** (in Windows Admin Center) > **Roles and features** > **Features**.
+   1. Connect to the destination server in WAC.
+   1. Go to **Server Manager** (in WAC) > **Roles and features** > **Features**.
    1. Select **Storage Migration Service Proxy**, and then select **Install**.
 
-1. If you intend to migrate to or from Windows Failover Clusters, install the Failover Clustering tools on the orchestrator server. This installation happens automatically in the latest version of Windows Admin Center when you select **Migrate from failover clusters** in the **Job Settings** option of Inventory.
+1. If you intend to migrate to or from Windows Failover Clusters, install the Failover Clustering tools on the orchestrator server. This installation happens automatically in the latest version of WAC when you select **Migrate from failover clusters** in the **Job Settings** option of Inventory.
 
-   1. To install outside of the Storage Migration Service Inventory phase, connect to the orchestrator server in Windows Admin Center.
-   1. Go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, > **Remote Server Administration Tools**, > **Feature Administration Tools**.
+   1. To install outside of the Storage Migration Service Inventory phase, connect to the orchestrator server in WAC.
+   1. Go to **Server Manager** (in WAC) > **Roles and features**, > **Features**, > **Remote Server Administration Tools**, > **Feature Administration Tools**.
    1. Select **Failover Clustering Tools**, and then select **Install**.
 
    > [!NOTE]
    > If you're migrating from a NetApp FAS array, you must manually install the latest version of the NetApp PowerShell Toolkit onto the orchestrator. This toolkit is available to all licensed NetApp customers with an active NetApp support agreement from [mysupport.netapp.com](https://mysupport.netapp.com).  
 
-1. On all source servers and on any destination servers running Windows Server 2016 or Windows Server 2012 R2, in Windows Admin Center, connect to each server, go to **Server Manager** (in Windows Admin Center) > **Firewall** > **Incoming rules**, and then confirm the following rules are enabled:
+1. On all source servers and on any destination servers running Windows Server 2016 using WAC, connect to each server, go to **Server Manager** (in WAC) > **Firewall** > **Incoming rules**, and then confirm the following rules are enabled:
 
    - File and Printer Sharing (SMB-In)
    - Netlogon Service (NP-In)
@@ -68,7 +67,7 @@ Before you get started, install Storage Migration Service and make sure the nece
 
 In this step, specify what servers to migrate and then scan them to collect info on their files and configurations.
 
-1. Select **New job**, name the job, and then select whether to migrate Windows servers and clusters, Linux servers that use Samba, or NetApp FAS array. Then select **OK**.
+1. In Storage Migration Service, select **New job**, name the job, and then select whether to migrate Windows servers and clusters, Linux servers that use Samba, or NetApp FAS array. Then select **OK**.
 1. On the **Check prerequisites** page, review the prerequisites. Then select **Next**.
 1. If you're migrating from a NetApp FAS Array, on the **Select the NetApp FAS array** page, enter your NetApp FAS Array IP address, admin credential, and password. Then select **Next**.
 1. If you're migrating from a Windows server or cluster, on the **Enter credentials** page, enter admin credentials for the servers you want to migrate from, and then select **Next**.
@@ -81,7 +80,7 @@ In this step, specify what servers to migrate and then scan them to collect info
      1. Select **Next**.
 
 1. On the **Install required tools** page, confirm the required tools have installed without error. Then select **Next**.
-1. If you're migrating from a Windows server or cluster, or from Linux Samba, on the **Add and scan devices** page, select **Add a device**, then search Active Directory for a source server cluster. You can use an asterisk to perform wildcard partial searches. You can also enter an exact source server name or the name of a clustered file server. Select **OK**. <br>Repeat this step for any other servers you want to inventory. If you're migrating from a NetApp FAS array, the **Select and scan servers** page already lists the source server.
+1. If you're migrating from a Windows server or cluster, or from Linux Samba, on the **Add and scan devices** page, select **Add a device**, then search Active Directory for a source server cluster. You can use an asterisk to perform wildcard partial searches. You can also enter an exact source server name or the name of a cluster file server resource. Select **OK**. <br>Repeat this step for any other servers you want to inventory. If you're migrating from a NetApp FAS array, the **Select and scan servers** page already lists the source server.
 1. Select **Validate** and ensure validation passes for all servers.
 
    > [!NOTE]
@@ -101,14 +100,14 @@ In this step, specify what servers to migrate and then scan them to collect info
 In this step you transfer data after specifying where to put it on the destination servers.
 
 1. On the **Transfer data** > **Enter credentials** page, enter admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
-1. On the **Add a destination device and mappings** page, the first source server is listed. Enter the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain. You can also select **Create a new Azure VM** then use the wizard to deploy a new destination server in Azure. This function automatically sizes your VM, provisions storage, formats disks, joins the domain, and adds the Storage Migration Service proxy to a Windows Server 2019 or Windows Server 2022 destination. You can choose from Windows Server 2022 (recommended), Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2 VMs of any size and use managed disks.
+1. On the **Add a destination device and mappings** page, the first source server is listed. Enter the name of the server or file server cluster resource to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain. You can also select **Create a new Azure VM** then use the wizard to deploy a new destination server in Azure. This function automatically sizes your VM, provisions storage, formats disks, joins the domain, and adds the Storage Migration Service proxy to a Windows Server 2019 or later destination. You can choose from Windows Server 2025 (recommended), Windows Server 2022, Windows Server 2019, and Windows Server 2016 VMs of any size and use managed disks.
 
    > [!NOTE]
    > Using **Create a new Azure VM** requires you to have the following items:
    > - A valid Azure subscription.
    > - An existing Azure Compute resource group where you have *Create* rights.
    > - An existing Azure Virtual Network and subnet.
-   > - An [Azure ExpressRoute](https://azure.microsoft.com/services/expressroute/) circuit or [Azure VPN solution](https://azure.microsoft.com/services/vpn-gateway/) tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
+   > - An [Azure ExpressRoute](https://azure.microsoft.com/services/expressroute/) circuit or [Azure VPN solution](https://azure.microsoft.com/services/vpn-gateway/) tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the computer running WAC, and the source computer to be migrated.
 
    The following video shows how to use Storage Migration Service to migrate to Azure VMs.
 
@@ -132,10 +131,12 @@ In this step you transfer data after specifying where to put it on the destinati
    - **Don't transfer users and groups** skips migrating local users and groups, which is required when your source or destination is a domain controller, or when seeding data for DFS Replication (DFS Replication doesn't support local groups and users).
 
    > [!NOTE]
-   > Migrated user accounts are disabled on the destination and assigned a 127-character password that's both complex and random, so you'll have to enable them and assign a new password when you're finished to keep using them. This helps ensure any old accounts with forgotten and weak passwords on the source don't continue to be a security problem on the destination. You might also want to check out [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/download/details.aspx?id=46899) as a way to manage local Administrator passwords.
+   > Migrated user accounts are disabled on the destination and assigned a 127-character password that's both complex and random, so you'll have to enable them and assign a new password when you're finished to keep using them. This helps ensure any old accounts with forgotten and weak passwords on the source don't continue to be a security problem on the destination. You should also review [What is Windows LAPS?](/windows-server/identity/laps/laps-overview) as a way to manage local Administrator passwords.
 
 1. Select **Validate** and then select **Next**.
-1. Select **Start transfer** to start transferring data.<br>The first time you transfer, we move any existing files in a destination to a backup folder. For destination servers running Azure File Sync with cloud tiering, this backup option isn't supported. We otherwise fully support Azure File Sync with cloud tiering and include updated transfer information details in Windows Admin Center. On subsequent transfers, by default we refresh the destination without backing it up first. <br>Also, Storage Migration Service is smart enough to deal with overlapping shares&mdash;we don't copy the same folders twice in the same job.
+1. Select **Start transfer** to start transferring data.
+
+   The first time you transfer, we move any existing files in a destination to a backup folder. For destination servers running Azure File Sync with cloud tiering, this backup option isn't supported. We otherwise fully support Azure File Sync with cloud tiering and include updated transfer information details in WAC. On subsequent transfers, by default we refresh the destination without backing it up first. Storage Migration Service is smart enough to deal with overlapping shares&mdash;we don't copy the same folders twice in the same job.
 1. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
    > [!NOTE]
@@ -153,10 +154,10 @@ If your goal is to sync the files with Azure, you could set up the destination s
 
 In this step you cut over from the source servers to the destination servers, moving the IP addresses and computer names to the destination servers. After this step is finished, apps and users access the new servers via the names and addresses of the servers you migrated from.
 
-1. If you've navigated away from the migration job, in Windows Admin Center, go to **Server Manager** > **Storage Migration Service** and then select the job you want to complete.
+1. If you've navigated away from the migration job, in WAC, go to **Server Manager** > **Storage Migration Service** and then select the job you want to complete.
 1. On the **Cut over to the new servers** > **Enter credentials** page, select **Next** to use the credentials you entered previously.
 1. On the **Configure cutover** page, specify which network adapter on the destination should take over the settings from each adapter on the source. This option moves the IP address from the source to the destination as part of the cutover, giving the source server a new DHCP or static IP address. You can skip all network migrations or certain interfaces.
-1. Specify what IP address to use for the source server after cutover moves its address to the destination. If migrating a Windows server or cluster, or to Linux Samba, you can use DHCP or specify a new static IP address. If using a static address, the new subnet must be the same as the old subnet or cutover fails. If you're migrating a NetApp FAS array, use NetApp subnets instead of DHCP.
+1. Specify what IP address to use for the source server after cutover moves its address to the destination. If migrating a Windows server or cluster resource file server , or to Linux Samba, you can use DHCP or specify a new static IP address. If using a static address, the new subnet must be the same as the old subnet or cutover fails. If you're migrating a NetApp FAS array, use NetApp subnets instead of DHCP.
 
    :::image type="content" source="media/migrate/cutover.png" alt-text="Screenshot of a source server with IP addresses and computer names, and their replacement values after the cutover." lightbox="media/migrate/cutover.png":::
 

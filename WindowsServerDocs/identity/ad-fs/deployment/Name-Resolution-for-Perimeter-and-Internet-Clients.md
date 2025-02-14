@@ -4,7 +4,7 @@ ms.assetid: 1a6740e6-5b6d-41f8-9ec4-32cdbee3e1bb
 title: Name Resolution for Perimeter and Internet Clients
 author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.author: billmath
 ---

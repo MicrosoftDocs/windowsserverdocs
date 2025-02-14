@@ -4,14 +4,12 @@ description: This topic provides links to information about planning Network Pol
 manager: brianlic
 ms.topic: article
 ms.assetid: cd6fc1b8-26b0-47a4-b27d-f6fa9da0d447
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Plan Network Policy Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides links to information about planning NPS and proxy deployments.
 

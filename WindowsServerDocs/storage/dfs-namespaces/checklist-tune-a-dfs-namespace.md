@@ -3,13 +3,11 @@ title: Checklist Tune a DFS Namespace
 description: This article describes how to optimize how the DFS Namespace handles referrals and polls AD DS for updated namespace data
 ms.date: 6/5/2017
 ms.topic: article
-author: JasonGerend
+author: robinharwood
 manager: brianlic
-ms.author: jgerend
+ms.author: roharwoo
 ---
 # Checklist: Tune a DFS namespace
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 After creating a namespace and adding folders and targets, use the following checklist to tune or optimize the way the DFS namespace handles referrals and polls Active Directory Domain Services (AD DS) for updated namespace data.
 

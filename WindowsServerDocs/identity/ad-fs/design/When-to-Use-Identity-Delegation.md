@@ -5,7 +5,7 @@ title: When to Use Identity Delegation
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -49,7 +49,7 @@ AD FS does not restrict which users can be impersonated. After you configure AD 
 You can configure identity delegation by adding delegation authorization rules to a relying party trust in the AD FS Management snap\-in. For more information about how to do this, see [Checklist: Creating Claim Rules for a Relying Party Trust](../../ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Relying-Party-Trust.md).
 
 ## Configuring the front\-end Web application for identity delegation
-Developers have several options that they can use to appropriately program the Web front\-end application or service to redirect delegation requests to an AD FS computer. For more information about how to customize a Web application to work with identity delegation, see the [Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266).
+Developers have several options that they can use to appropriately program the Web front\-end application or service to redirect delegation requests to an AD FS computer. For more information about how to customize a Web application to work with identity delegation, see the [Windows Identity Foundation SDK](/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation).
 
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

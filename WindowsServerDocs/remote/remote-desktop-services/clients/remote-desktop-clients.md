@@ -2,15 +2,13 @@
 title: Remote Desktop clients for Remote Desktop Services and remote PCs - Windows Server
 description: Overview of the Remote Desktop clients you can use to connect to Remote Desktop Services.
 ms.topic: overview
-ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
-author: HeidiLohr
-manager: femila
-ms.author: wscontent
-ms.date: 09/05/2023
+author: robinharwood
+ms.author: roharwoo
+ms.date: 02/14/2025
 ---
 # Remote Desktop clients for Remote Desktop Services and remote PCs
 
-With Microsoft Remote Desktop clients, you can connect to Remote Desktop Services from Windows Server and remote PCs, and use and control desktops and apps that your admin has made available to you. There are clients available for many different types of devices on different platforms and form factors, such as desktops and laptops, tablets, smartphones, and through a web browser. Using your web browser on desktops and laptops, you can connect without having to download and install any software.
+With Microsoft Remote Desktop clients, connect to Remote Desktop Services from Windows Server and remote PCs. With a Remote Desktop Client, you can use desktops and apps that your admin makes available to you. There are clients available for many different types of devices on different platforms and form factors, such as desktops and laptops, tablets, smartphones, and through a web browser. Using your web browser on desktops and laptops, you can connect without having to download and install any software.
 
 There are many features you can use to enhance your remote experience, such as:
 
@@ -22,12 +20,12 @@ There are many features you can use to enhance your remote experience, such as:
 - Access files and network resources on the remote PC.
 - Leave the apps open when you turn off the client.
 
-Some features are only available with certain clients, so it's important to check [Compare the features of the Remote Desktop clients](remote-desktop-features.md) to understand the differences when connecting to Remote Desktop Services or remote PCs.
+Some features are only available with certain clients. It's important to check [Compare the features of the Remote Desktop clients](remote-desktop-features.md) to understand the differences when connecting to Remote Desktop Services or remote PCs.
 
 > [!TIP]
-> You can also use most versions of the Remote Desktop client to also connect to [Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/users/connect-windows?tabs=subscribe), as well as to Remote Desktop Services in Windows Server or to a remote PC. If you want information on Azure Virtual Desktop instead, see [Remote Desktop clients for Azure Virtual Desktop](https://learn.microsoft.com/azure/virtual-desktop/users/remote-desktop-clients-overview).
+> You can also use most versions of the Remote Desktop client to also connect to [Azure Virtual Desktop](/azure/virtual-desktop/users/connect-windows?tabs=subscribe), and to Remote Desktop Services in Windows Server or to a remote PC. If you want information on Azure Virtual Desktop instead, see [Remote Desktop clients for Azure Virtual Desktop](/azure/virtual-desktop/users/remote-desktop-clients-overview).
 
-Here's a list of the Remote Desktop client apps and our documentation for connecting to Remote Desktop Services or remote PCs, where you can find download links, what's new, and learn how to install and use each client.
+Here's a list of available Remote Desktop client apps. You can find documentation for connecting to Remote Desktop Services or remote PCs in the following links. The links include download information, what's new details, and instructions on how to install and use each client.
 
 | Remote Desktop client | Documentation and download links | Version information |
 |--|--|--|
@@ -39,4 +37,4 @@ Here's a list of the Remote Desktop client apps and our documentation for connec
 
 ## Connecting to your remote PC
 
-Before you can connect to your remote PC, you'll need to enable Remote Desktop on it. For more information, see [Enable Remote Desktop on your PC](remote-desktop-allow-access.md).
+Before you can connect to your remote PC, you need to enable Remote Desktop on it. For more information, see [Enable Remote Desktop on your PC](remote-desktop-allow-access.md).

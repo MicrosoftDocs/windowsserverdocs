@@ -2,9 +2,9 @@
 title: DFS Replication overview
 description: Learn how to use the Distributed File System (DFS) Replication role service in Windows Server to replicate folders across multiple servers and sites.
 ms.date: 03/24/2023
-author: JasonGerend
+author: robinharwood
 manager: elizapo
-ms.author: jgerend
+ms.author: roharwoo
 ms.topic: conceptual
 ---
 
@@ -69,7 +69,7 @@ DFS Replication on an Azure virtual machine is a verified scenario for Windows S
 
 - **DFS Replication backups**. To back up data in a replicated folder that's stored in a virtual machine, use backup software that's located on the guest virtual machine. Don't back up or restore a virtualized DFS Replication server from the host virtual machine.
 
-- **Domain controller access**. DFS Replication requires access to physical or virtualized domain controllers. The DFS Replication service can't communicate directly with Azure Active Directory.
+- **Domain controller access**. DFS Replication requires access to physical or virtualized domain controllers. The DFS Replication service can't communicate directly with Microsoft Entra ID.
 
 - **VPN connection**. DFS Replication requires a VPN connection between your on-premises replication group members and any members hosted in Azure virtual machines. You also need to configure the on-premises router (such as Forefront Threat Management Gateway) to allow the RPC Endpoint Mapper (port 135) and a randomly assigned port between 49152 and 65535 to pass over the VPN connection. You can use the `Set-DfsrMachineConfiguration` cmdlet or the `dfsrdiag` command-line tool to specify a static port instead of the random port. For more information about how to specify a static port for DFS Replication, see [`Set-DfsrServiceConfiguration`](/powershell/module/dfsr/set-dfsrserviceconfiguration). For information about related ports to open for managing Windows Server, see [Service overview and network port requirements for Windows](/support/windows-server/networking/service-overview-and-network-port-requirements).
 

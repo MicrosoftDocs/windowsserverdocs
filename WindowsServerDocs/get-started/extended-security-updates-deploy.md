@@ -6,9 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 07/12/2023
-ms.prod: windows-server
 ms.mktglfcycl: manage
-ms.custom: contperf-fy22q3
 ---
 
 # How to get Extended Security Updates (ESU) for Windows Server
@@ -49,6 +47,8 @@ Solutions (EES), or Server and Cloud Enrollment (SCE).
 > It may take 3-5 business days for your Multiple Activation Key to become available after
 > purchasing ESUs for on-premises VMs or physical servers. Your organization may also require time
 > to plan and deploy the new keys. Before purchasing ESUs, you should keep these timelines in mind.
+
+
 
 ## Extended Security Updates on Azure
 
@@ -99,7 +99,7 @@ To prepare for activating Windows Server 2012 and 2012R2 ESUs on your Arc-enable
 To learn more about ESUs with Azure Arc, see
 [Prepare to deliver Extended Security Updates for Windows Server 2012](/azure/azure-arc/servers/prepare-extended-security-updates) and [Deliver Extended Security Updates for Windows 2012 and 2012 R2](/azure/azure-arc/servers/deliver-extended-security-updates).
 
-### Access your Multiple Activation Key from the Microsoft 365 Admin Center
+## Access your Multiple Activation Key from the Microsoft 365 Admin Center
 
 Customers who can't connect to Azure Arc to apply ESUs can use Multiple Activation Keys (MAK)
 through Microsoft 365 Admin Center:
@@ -119,6 +119,8 @@ through Microsoft 365 Admin Center:
 ## Download and installation of Extended Security Updates
 
 Delivery, download, and application of ESUs for Windows Server is no different than other Windows Updates. The updates provided through ESUs are only *Security* updates.
+
+Before you can download and install ESUs, you must have installed the latest Servicing Stack Update (SSU) and the Licensing Preparation Package. To learn more about the steps required to install the latest SSU and Licensing Preparation Package, see [KB5031043: Procedure to continue receiving security updates after extended support has ended on October 10, 2023](https://support.microsoft.com/help/5031043).
 
 You can install the updates using whatever tools and processes you already have in place. The only difference is that the system must be registered using the key generated in the previous section for the updates to download and install.
 
