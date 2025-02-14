@@ -1032,6 +1032,8 @@
         href: ad-cs/certification-authority-role.md
       - name: Certification Authority Web Enrollment Role Service
         href: ad-cs/certificate-authority-web-enrollment.md
+      - name: Configure Certificate Enrollment Policy Web Service
+        href: ad-cs/configure-certificate-enrollment-policy-web-service.md
       - name: Certificates and trust
         href: ad-cs/certificate-trust.md
       - name: Certificate template concepts

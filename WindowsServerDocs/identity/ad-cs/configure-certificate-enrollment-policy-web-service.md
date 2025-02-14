@@ -1,23 +1,31 @@
 ﻿---
 title: Configure the Certificate Enrollment Policy Web Service
-description: Learn how to set up the Certificate Enrollment Policy Web Service
-author: robinharwood
+description: Learn how to configure the Certificate Enrollment Policy Web Service so that users and computers can get certificate enrollment policy information.
+author: meaghanlewis
 ms.topic: how-to
-ms.author: gswashington
-ms.date: 10/16/2023
+ms.author: mosagie
+ms.date: 02/14/2025
+#customer intent: As an IT administrator, I want to configure the Certificate Enrollment Policy Web Service so that users and computers can obtain certificate enrollment policy information.
 ---
 
 # Configure the Certificate Enrollment Policy Web Service
 
-Applies to: Windows Server 2012 R2, Windows Server 2012
+The Certificate Enrollment Policy Web Service lets users and computers obtain certificate enrollment policy information even when the computer isn't a member of a domain or if a domain-joined computer is temporarily outside the security boundary of the corporate network. The Certificate Enrollment Policy Web Service works with the Certificate Enrollment Web Service to provide policy-based automatic certificate enrollment for these users and computers. This article provides information on how to configure the Certificate Enrollment Policy Web Service.
 
-The Certificate Enrollment Policy Web Service lets users and computers obtain certificate enrollment policy information even when the computer isn't a member of a domain or if a domain-joined computer is temporarily outside the security boundary of the corporate network. The Certificate Enrollment Policy Web Service works with the Certificate Enrollment Web Service to provide policy-based automatic certificate enrollment for these users and computers. See [Certificate Enrollment Policy Web Service Guidance](/certificate-enrollment-policy-web-service-conceptual.md) for more information on how the Certificate Enrollment Policy Web Service works, including installation requirements as well as information for the Server Manager configuration pages.
+## Prerequisites
 
-## How to configure the Certificate Enrollment Policy Web Service
+- The Certificate Enrollment Policy Web Service server role is installed.
 
-After you install the Certificate Enrollment Policy Web Service, you need to configure a friendly name value for the service and create a Group Policy setting to enable using the service. 
+## Configure the Certificate Enrollment Policy Web Service
 
-### Configure a friendly name value for the Certificate Enrollment Policy Web Service
+After you install the Certificate Enrollment Policy Web Service, you need to:
+
+- Configure a friendly name value for the service
+- Create a Group Policy setting to enable using the service
+
+ The following sections describe how to complete configuration.
+
+### Configure a friendly name value
 
 To configure a friendly name value for the Certificate Enrollment Policy Web Service:
 
@@ -62,7 +70,7 @@ To configure Group Policy to enable using the Certificate Enrollment Policy Web 
     > [!NOTE]
     > You can only configure Group Policy settings if you've signed in using an account that's a member of the Domain Admins or Enterprise Admins groups.
 
-1. Navigate to the forest you want to target for the new Group Policy, then go to **Domains**. 
+1. Navigate to the forest you want to target for the new Group Policy, then go to **Domains**.
 
 1. Right-select the domain, then select **Create a GPO in this domain and link it here**.
 
@@ -110,11 +118,9 @@ To distribute certificates for computers:
 
 ## Related content
 
-- [Certificate Enrollment Policy Web Service Guidance](/certificate-enrollment-policy-web-service-conceptual.md)
+- [Certificate Enrollment Policy Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11))
 
 - [Certificate Enrollment Web Services in Active Directory Certificate Services](https://social.technet.microsoft.com/wiki/contents/articles/7734.certificate-enrollment-web-services-in-active-directory-certificate-services.aspx)
-
-- [Windows Server Security Forum](https://aka.ms/adcsforum)
 
 - [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
 
