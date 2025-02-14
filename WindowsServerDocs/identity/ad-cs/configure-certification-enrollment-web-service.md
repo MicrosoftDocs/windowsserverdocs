@@ -106,7 +106,7 @@ Using a specific user account as the service account is the recommended configur
 
 - Configured with a service principal name (SPN), if Kerberos authentication is selected or delegation required because the Certificate Enrollment Web Service is hosted on a different computer than the one running the CA role service.
 
-- Trusted for delegation for the host service and the Remote Procedure Call system service (RPCSS) , if Certificate Enrollment Web Service is installed on a different computer than the CA, and if new certificates are to be issued by the Certificate Enrollment Web Service.
+- Trusted for delegation for the host service and the Remote Procedure Call system service (RPCSS), if Certificate Enrollment Web Service is installed on a different computer than the CA, and if new certificates are to be issued by the Certificate Enrollment Web Service.
 
 #### Create a domain user account to act as the service account
 
@@ -137,7 +137,7 @@ Using a specific user account as the service account is the recommended configur
 
 1. In the details pane, double-click **IIS\_IUSRS**.
 
-1. On the **General** tab, click **Add**.
+1. On the **General** tab, select **Add**.
 
 1. In the **Select Users, Computers, Service Accounts, or Groups** text box, type the user sign-in name for the account that you configured to be the service account.
 
@@ -163,7 +163,7 @@ Using a specific user account as the service account is the recommended configur
 1. On the **Delegation** tab, select **Trust this user for delegation to specified services only**.
 
     > [!NOTE]
-    > The **Delegation** tab is only available in the user account properties after you have created an SPN for the user account.
+    > The **Delegation** tab is only available in the user account properties after you've created an SPN for the user account.
 
 1. Ensure that **Use Kerberos only** is selected (if the authentication type was set to Windows integrated authentication during installation) or **Use any authentication protocol** (if the authentication type was set to Client certificate authentication during installation), and then select **Add**.
 
