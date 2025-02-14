@@ -18,12 +18,7 @@ The Certificate Enrollment Policy Web Service lets users and computers obtain ce
 
 ## Configure the Certificate Enrollment Policy Web Service
 
-After you install the Certificate Enrollment Policy Web Service, you need to:
-
-- Configure a friendly name value for the service
-- Create a Group Policy setting to enable using the service
-
- The following sections describe how to complete configuration.
+After you install the Certificate Enrollment Policy Web Service, you need to **configure a friendly name value for the service**, and **create a Group Policy setting to enable using the service.** The following sections describe how to complete configuration.
 
 ### Configure a friendly name value
 
