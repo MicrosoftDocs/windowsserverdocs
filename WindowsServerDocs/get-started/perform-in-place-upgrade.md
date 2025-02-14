@@ -1,10 +1,10 @@
 ---
-title: Perform an in-place upgrade of Windows Server
+title: Perform an in-place Upgrade of Windows Server
 description: Learn how to perform an in-place OS upgrade (feature update) of an older operating system while keeping your settings, server roles, and data intact.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 01/20/2025
+ms.date: 02/14/2025
 # Customer intent: As a server administrator, I want perform a Feature Update of Windows Server, so
 # that my server remains supported and I can use the latest features.
 ---
@@ -116,7 +116,7 @@ To make sure your in-place upgrade was successful:
 If your computer isn't working as expected after the Feature Update, you can
 [contact Microsoft Support](https://support.microsoft.com/contactus) for technical assistance.
 
-## Next steps
+## Related content
 
 The following articles can help you prepare for and use your new Windows Server version:
 
