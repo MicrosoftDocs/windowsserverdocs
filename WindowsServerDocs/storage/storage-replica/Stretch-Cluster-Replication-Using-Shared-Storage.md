@@ -24,26 +24,44 @@ This walkthrough uses the following environment as an example:
 - A pair of logical "sites" that represents two different data centers, with one called **Redmond** and the other called **Bellevue.**
 
 > [!NOTE]
-> You can use only as few as two nodes, where one node each is in each site. However, you won't be able to perform intra-site failover with only two servers. You can use as many as 64 nodes.
+> You can use only as few as two nodes, where one node each is in each site. However, you can't perform intra-site failover with only two servers. You can use as many as 64 nodes.
 
 ![Diagram showing two nodes in Redmond replicating with two nodes of the same cluster in the Bellevue site](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_StretchClusterExample.png)
 
-**FIGURE 1: Storage Replication in a stretch cluster**
-
 ## Prerequisites
 
-- Active Directory Domain Services forest (doesn't need to run Windows Server 2016).
-- 2-64 servers running Windows Server 2019 or Windows Server 2016, Datacenter Edition. If you're running Windows Server 2019, you can instead use Standard Edition if you're OK replicating only a single volume up to 2 TB in size.
-- Two sets of shared storage, using SAS JBODs (such as with Storage Spaces), Fibre Channel SAN, Shared VHDX, or iSCSI Target. The storage should contain a mix of HDD and SSD media and must support Persistent Reservation. You'll make each storage set available to two of the servers only (asymmetric).
-- Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
-- At least one 1-GbE connection on each server for synchronous replication.
-- At least 2GB of RAM and two cores per server. You'll need more memory and cores for more virtual machines.
-- Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct), and WS-MAN (port 5985) bi-directional traffic between all nodes.
-- A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.
-- The replicated storage can't be located on the drive containing the Windows operating system folder.
+- **Software**:
+
+  - The **Active Directory Domain Services** role, **Failover Clustering**, and **Storage Replica** features must be installed on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+  - Your device must be part of an Active Directory forest.
+  - 2-64 servers running Windows Server 2016 Datacenter Edition or later. If you're running Windows Server 2019, you can use Standard Edition if you're comfortable replicating only a single volume up to 2 TB in size.
+  - Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct), and WS-MAN (port 5985) bidirectional traffic between all nodes.
+
+- **Hardware**:
+
+  - At least 2 GB of RAM and two cores per server. You'll need more memory and cores for more virtual machines.
+  - Two sets of shared storage, using SAS JBODs (such as with Storage Spaces), Fibre Channel SAN, Shared VHDX, or iSCSI Target.
+  - The storage should contain a mix of HDD and SSD media and must support Persistent Reservation. Each storage set should be available to two of the servers only (asymmetric).
+    - The physical storage must be identical in capacity, have the same sector sizes on all the data disks and log disks.
+    - The data and log disks must be initialized as GPT.
+    - The volumes must be formatted as NTFS or ReFS.
+    - The log volumes should use flash-based storage and high performance resiliency settings. Microsoft recommends that the log storage be faster than the data storage.
+    - The log volume must be at least 9 GB, or larger or smaller based on log requirements.
+  - Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs.
+  - The replicated storage can't be located on the drive containing the Windows operating system folder.
+
+- **Network**:
+
+  - At least one 1-GbE connection on each server for synchronous replication.
+  - A network between servers with sufficient bandwidth to contain your IO write workload and an average of ~5ms round trip latency for synchronous replication. Asynchronous replication doesn't have a latency recommendation.
+
+> [!NOTE]
+> Data disks can use either mirrored or parity spaces or RAID 1 or 10, RAID 5 or RAID 50.
+>
+> Log volumes must never be used for other workloads.
 
 > [!IMPORTANT]
-> While it's possible to attach a storage device to a single server and use this for replication, Windows Failover Clustering still relies on SCSI Persistent Reservations. Therefore, the storage must still be a Shared Storage type such as a SAN technology. Local disks or disks presented by a hypervisor might not be compatible. In Azure, the disks must be a Premium SSD size that supports sharing, even if only one VM is to be attached to it.
+> While it's possible to attach a storage device to a single server and use this for replication, Windows Failover Clustering still relies on SCSI Persistent Reservations. Therefore, the storage must still be a Shared Storage type such as a SAN technology. Local disks or disks presented by a hypervisor might not be compatible. In Azure, the disks must be a premium SSD size that supports sharing, even if only one VM is to be attached to it.
 
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There's no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the following steps.
 
@@ -95,12 +113,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
    > [!IMPORTANT]
    >
-   > - You must create two volumes on each enclosure: one for data and one for logs.
    > - Log and data disks must be initialized as GPT, not MBR.
-   > - The two data volumes must be of identical size.
-   > - The two log volumes should be of identical size.
-   > - All replicated data disks must have the same sector sizes.
-   > - All log  disks must have the same sector sizes.
    > - The log volumes should use flash-based storage and high performance resiliency settings. Microsoft recommends that the log storage be as faster than the data storage. Log volumes must never be used for other workloads.
    > - The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.
    > - The log volume must be at least 9GB by default and can be larger or smaller based on log requirements.
@@ -215,8 +228,6 @@ You'll now create a normal failover cluster. After configuration, validation, an
    > There's no option to configure site awareness using Failover Cluster Manager in Windows Server 2016.
 
    **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
-
-   For more information, review the Microsoft Ignite session: Stretching Failover Clusters and Using Storage Replica in Windows Server vNext and the [Enable Change Notifications between Sites - How and Why?](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why) blog post.
 
    **(Optional)** Configure VM resiliency so that guests don't pause for long during node failures. Instead, they failover to the new replication source storage within 10 seconds.
 
@@ -477,7 +488,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
 
    1. Start **eventvwr.exe**.
 
-      1. On the source server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Admin** and examine events 5015, 5002, 5004, 1237, 5001, and 2200.
+      1. On the source server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Admin** and examine event IDs 5015, 5002, 5004, 1237, 5001, and 2200.
 
       1. On the destination server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Operational** and wait for event 1215. This event states the number of copied bytes and the time taken. Example:
 
@@ -506,10 +517,10 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
          Elapsed Time (ms): 140
          ```
 
-        1. On the destination server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Admin** and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.
+      1. On the destination server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Admin** and examine event IDs 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. Several event IDs 1237 will populate indicating progress.
 
-           > [!WARNING]
-           > CPU and memory usage are likely to be higher than normal until initial synchronization completes.
+         > [!WARNING]
+         > CPU and memory usage are likely to be higher than normal until initial synchronization completes.
 
 #### Windows PowerShell method
 
@@ -518,7 +529,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
 1. Add the source data storage only to the cluster as CSV. To get the size, partition, and volume layout of the available disks, use the following commands:
 
     ```PowerShell
-    Move-ClusterGroup -Name "available storage" -Node sr-srv01
+    Move-ClusterGroup -Name "Available Storage" -Node SR-SRV01
 
     $DiskResources = Get-ClusterResource | Where-Object { $_.ResourceType -eq 'Physical Disk' -and $_.State -eq 'Online' }
     $DiskResources | foreach {
@@ -529,7 +540,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
             Select @{N="Name"; E={$resource.Name}}, @{N="Status"; E={$resource.State}}, DriveLetter, FileSystemLabel, Size, SizeRemaining
     } | FT -AutoSize
 
-    Move-ClusterGroup -Name "available storage" -Node sr-srv03
+    Move-ClusterGroup -Name "Available Storage" -Node SR-SRV03
 
     $DiskResources = Get-ClusterResource | Where-Object { $_.ResourceType -eq 'Physical Disk' -and $_.State -eq 'Online' }
     $DiskResources | foreach {
@@ -546,38 +557,47 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
     ```PowerShell
     Add-ClusterSharedVolume -Name "Cluster Disk 4"
     Get-ClusterSharedVolume
-    Move-ClusterSharedVolume -Name "Cluster Disk 4" -Node sr-srv01
+    Move-ClusterSharedVolume -Name "Cluster Disk 4" -Node SR-SRV01
     ```
 
 1. Configure the stretch cluster, specifying the following:
 
-    - Source and destination nodes (where the source data is a CSV disk and all other disks aren't).
+   - Source and destination nodes (where the source data is a CSV disk and all other disks aren't).
 
-    - Source and Destination replication group names.
+   - Source and Destination replication group names.
 
-    - Source and destination disks, where the partition sizes match.
+   - Source and destination disks, where the partition sizes match.
 
-    - Source and destination log volumes, where there's enough free space to contain the log size on both disks and the storage is SSD or similar fast media.
+   - Source and destination log volumes, where there's enough free space to contain the log size on both disks and the storage is SSD or similar fast media.
 
-    - Source and destination log volumes, where there's enough free space to contain the log size on both disks and the storage is SSD or similar fast media.
+   - Log size.
 
-    - Log size.
+   - The source log volume should be on a disk that uses SSD or similarly fast media, not spinning disks.
 
-    - The source log volume should be on a disk that uses SSD or similarly fast media, not spinning disks.
+   ```powershell
+   $params = @{
+     SourceComputerName    = 'SR-SRV01'
+     SourceRGName          = 'RG01'
+     SourceVolumeName      = 'C:\ClusterStorage\Volume1'
+     SourceLogVolumeName   = 'E:'
+     DestinationComputerName = 'SR-SRV03'
+     DestinationRGName     = 'RG02'
+     DestinationVolumeName = 'D:'
+     DestinationLogVolumeName = 'E:'
+     LogType               = 'Raw'
+   }
+   New-SRPartnership @params
+   ```
 
-    ```powershell
-    New-SRPartnership -SourceComputerName sr-srv01 -SourceRGName rg01 -SourceVolumeName "C:\ClusterStorage\Volume1" -SourceLogVolumeName e: -DestinationComputerName sr-srv03 -DestinationRGName rg02 -DestinationVolumeName d: -DestinationLogVolumeName e: -LogType Raw
-    ```
-
-    > [!NOTE]
-    > You can also use `New-SRGroup` on one node in each site and `New-SRPartnership` to create replication in stages, rather than all at once.
+   > [!NOTE]
+   > You can also use `New-SRGroup` on one node in each site and `New-SRPartnership` to create replication in stages, rather than all at once.
 
 1. Determine the replication progress.
 
-   1. On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:
+   1. On the source server, run the following command and examine event IDs 5015, 5002, 5004, 1237, 5001, and 2200:
 
       ```powershell
-      Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
+      Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -Max 20
       ```
 
    1. On the destination server, run the following command to see the Storage Replica events that show creation of the partnership. This event states the number of copied bytes and the time taken. Example:
@@ -602,13 +622,13 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
              Elapsed Time (ms): 140
       ```
 
-   1. On the destination server, run the following command and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.
+   1. On the destination server, run the following command and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. Several event IDs 1237 will populate indicating progress.
 
       ```powershell
       Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL
       ```
 
-   1. Alternately, the destination server group for the replica states the number of byte remaining to copy at all times, and can be queried through PowerShell. For example:
+   1. Alternately, the destination server group for the replica states the number of byte remaining to copy, and can be queried through PowerShell. For example:
 
       ```powershell
       (Get-SRGroup).Replicas | Select-Object numofbytesremaining
@@ -624,14 +644,6 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
       Start-Sleep -s 5
       }
       ```
-
-1. To get replication source and destination state within the stretch cluster, use `Get-SRGroup` and `Get-SRPartnership` to see the configured state of replication in the stretch cluster.
-
-   ```powershell
-   Get-SRGroup
-   Get-SRPartnership
-   (Get-SRGroup).replicas
-   ```
 
 ### Manage stretched cluster replication
 
@@ -666,20 +678,20 @@ Now you'll manage and operate your stretch cluster. You can perform all of the s
    1. To perform unplanned failover the replication direction from one site to another: cut power to both nodes in one site.
 
       > [!NOTE]
-      > In Windows Server 2016, you may need to use Failover Cluster Manager or Move-ClusterGroup to move the destination disks back to the other site manually after the nodes come back online.
+      > In Windows Server 2016, you may need to use Failover Cluster Manager or `Move-ClusterGroup` to move the destination disks back to the other site manually after the nodes come back online.
 
       > [!NOTE]
       > Storage Replica dismounts the destination volumes. This is by design.
 
-1. To change the log size from the default 8GB, right-click both the source and destination log disks, select the **Replication Log** tab, then change the sizes on both the  disks to match.
+1. To change the log size from the default 8 GB, right-click both the source and destination log disks, select the **Replication Log** tab, then change the sizes on both the  disks to match.
 
    > [!NOTE]
-   > The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use `-LogSizeInBytes` with a higher or lower value.
+   > The default log size is 8 GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use **LogSizeInBytes** with a higher or lower value.
 
 1. To add another pair of replicated disks to the existing replication group, you must ensure that there is at least one extra disk in available storage. You can then right-click the Source disk and select **Add replication partnership**.
 
    > [!NOTE]
-   > This need for an additional 'dummy' disk in available storage is due to a regression and not intentional. Failover Cluster Manager previously support adding more disks normally and will again in a later release.
+   > This need for an additional 'dummy' disk in available storage is due to a regression and not intentional.
 
 1. To remove the existing replication:
 
@@ -694,90 +706,90 @@ Now you'll manage and operate your stretch cluster. You can perform all of the s
 
 #### Windows PowerShell Method
 
-1. Use **Get-SRGroup** and **(Get-SRGroup).Replicas** to determine the current source and destination of replication and their status.
+1. Use `Get-SRGroup` and `(Get-SRGroup).Replicas` to determine the current source and destination of replication and their status.
 
 1. To measure replication performance, use the `Get-Counter` cmdlet on both the source and destination nodes. The counter names are:
 
-    ```
-    \Storage Replica Partition I/O Statistics(*)\Number of times flush paused
+   ```
+   \Storage Replica Partition I/O Statistics(*)\Number of times flush paused
 
-    \Storage Replica Partition I/O Statistics(*)\Number of pending flush I/O
+   \Storage Replica Partition I/O Statistics(*)\Number of pending flush I/O
 
-    \Storage Replica Partition I/O Statistics(*)\Number of requests for last log write
+   \Storage Replica Partition I/O Statistics(*)\Number of requests for last log write
 
-    \Storage Replica Partition I/O Statistics(*)\Avg. Flush Queue Length
+   \Storage Replica Partition I/O Statistics(*)\Avg. Flush Queue Length
 
-    \Storage Replica Partition I/O Statistics(*)\Current Flush Queue Length
+   \Storage Replica Partition I/O Statistics(*)\Current Flush Queue Length
 
-    \Storage Replica Partition I/O Statistics(*)\Number of Application Write Requests
+   \Storage Replica Partition I/O Statistics(*)\Number of Application Write Requests
 
-    \Storage Replica Partition I/O Statistics(*)\Avg. Number of requests per log write
+   \Storage Replica Partition I/O Statistics(*)\Avg. Number of requests per log write
 
-    \Storage Replica Partition I/O Statistics(*)\Avg. App Write Latency
+   \Storage Replica Partition I/O Statistics(*)\Avg. App Write Latency
 
-    \Storage Replica Partition I/O Statistics(*)\Avg. App Read Latency
+   \Storage Replica Partition I/O Statistics(*)\Avg. App Read Latency
 
-    \Storage Replica Statistics(*)\Target RPO
+   \Storage Replica Statistics(*)\Target RPO
 
-    \Storage Replica Statistics(*)\Current RPO
+   \Storage Replica Statistics(*)\Current RPO
 
-    \Storage Replica Statistics(*)\Avg. Log Queue Length
+   \Storage Replica Statistics(*)\Avg. Log Queue Length
 
-    \Storage Replica Statistics(*)\Current Log Queue Length
+   \Storage Replica Statistics(*)\Current Log Queue Length
 
-    \Storage Replica Statistics(*)\Total Bytes Received
+   \Storage Replica Statistics(*)\Total Bytes Received
 
-    \Storage Replica Statistics(*)\Total Bytes Sent
+   \Storage Replica Statistics(*)\Total Bytes Sent
 
-    \Storage Replica Statistics(*)\Avg. Network Send Latency
+   \Storage Replica Statistics(*)\Avg. Network Send Latency
 
-    \Storage Replica Statistics(*)\Replication State
+   \Storage Replica Statistics(*)\Replication State
 
-    \Storage Replica Statistics(*)\Avg. Message Round Trip Latency
+   \Storage Replica Statistics(*)\Avg. Message Round Trip Latency
 
-    \Storage Replica Statistics(*)\Last Recovery Elapsed Time
+   \Storage Replica Statistics(*)\Last Recovery Elapsed Time
 
-    \Storage Replica Statistics(*)\Number of Flushed Recovery Transactions
+   \Storage Replica Statistics(*)\Number of Flushed Recovery Transactions
 
-    \Storage Replica Statistics(*)\Number of Recovery Transactions
+   \Storage Replica Statistics(*)\Number of Recovery Transactions
 
-    \Storage Replica Statistics(*)\Number of Flushed Replication Transactions
+   \Storage Replica Statistics(*)\Number of Flushed Replication Transactions
 
-    \Storage Replica Statistics(*)\Number of Replication Transactions
+   \Storage Replica Statistics(*)\Number of Replication Transactions
 
-    \Storage Replica Statistics(*)\Max Log Sequence Number
+   \Storage Replica Statistics(*)\Max Log Sequence Number
 
-    \Storage Replica Statistics(*)\Number of Messages Received
+   \Storage Replica Statistics(*)\Number of Messages Received
 
-    \Storage Replica Statistics(*)\Number of Messages Sent
-    ```
+   \Storage Replica Statistics(*)\Number of Messages Sent
+   ```
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).
+   For more information on performance counters in Windows PowerShell, see [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).
 
-1. To alter replication source and destination within the stretch cluster, use the following methods:
+To alter replication source and destination within the stretch cluster, use the following methods:
 
-   1. To move the replication source from one node to another in the **Redmond** site, move the CSV resource using the Move-ClusterSharedVolume cmdlet.
+1. To move the replication source from one node to another in the **Redmond** site, move the CSV resource using the Move-ClusterSharedVolume cmdlet.
 
-      ```powershell
-      Get-ClusterSharedVolume | fl *
-      Move-ClusterSharedVolume -Name "cluster disk 4" -Node sr-srv02
-      ```
+   ```powershell
+   Get-ClusterSharedVolume | fl *
+   Move-ClusterSharedVolume -Name "Cluster Disk 4" -Node SR-SRV02
+   ```
 
-   1. To move the replication direction from one site to another "planned", move the CSV resource using the **Move-ClusterSharedVolume** cmdlet.
+1. To move the replication direction from one site to another "planned", move the CSV resource using the `Move-ClusterSharedVolume` cmdlet.
 
-      ```powershell
-      Get-ClusterSharedVolume | fl *
-      Move-ClusterSharedVolume -Name "cluster disk 4" -Node sr-srv04
-      ```
+   ```powershell
+   Get-ClusterSharedVolume | fl *
+   Move-ClusterSharedVolume -Name "Cluster Disk 4" -Node SR-SRV04
+   ```
 
-      This will also move the logs and data appropriately for the other site and nodes.
+   This will also move the logs and data appropriately for the other site and nodes.
 
-   1. To perform unplanned failover the replication direction from one site to another: cut power to both nodes in one site.
+1. To perform unplanned failover the replication direction from one site to another: cut power to both nodes in one site.
 
-      > [!NOTE]
-      > Storage Replica dismounts the destination volumes. This is by design.
+   > [!NOTE]
+   > Storage Replica dismounts the destination volumes. This is by design.
 
-1. To change the log size from the default 8GB, use **Set-SRGroup** on both the source and destination Storage Replica Groups.   For example, to set all logs to 2GB:
+1. To change the log size from the default 8GB, use `Set-SRGroup` on both the source and destination Storage Replica Groups. For example, to set all logs to 2 GB:
 
    ```powershell
    Get-SRGroup | Set-SRGroup -LogSizeInBytes 2GB
@@ -787,9 +799,9 @@ Now you'll manage and operate your stretch cluster. You can perform all of the s
 1. To add another pair of replicated disks to the existing replication group, you must ensure that there is at least one extra disk in available storage. You can then right-click the Source disk and select add replication partnership.
 
    > [!NOTE]
-   > This need for an additional 'dummy' disk in available storage is due to a regression and not intentional. Failover Cluster Manager previously support adding more disks normally and will again in a later release.
+   > This need for an additional 'dummy' disk in available storage is due to a regression and not intentional.
 
-   Use the **Set-SRPartnership** cmdlet with the **-SourceAddVolumePartnership** and **-DestinationAddVolumePartnership** parameters.
+   Use the `Set-SRPartnership` cmdlet with the **SourceAddVolumePartnership** and **DestinationAddVolumePartnership** parameters.
 
 1. To remove replication, use `Get-SRGroup`, Get-`SRPartnership`, `Remove-SRGroup`, and `Remove-SRPartnership` on any node.
 
