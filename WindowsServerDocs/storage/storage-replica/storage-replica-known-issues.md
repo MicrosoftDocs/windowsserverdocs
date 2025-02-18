@@ -45,7 +45,7 @@ To resolve the issue, clear the hidden Storage Replica partition from the disks 
 
 The server might need to restart after you clean the partition database. You can temporarily prevent the server from restarting by using the`-NoRestart` parameter, but you shouldn't skip restarting if the cmdlet requests a restart. This cmdlet doesn't remove data volumes or data contained within those volumes.
 
-## During initial sync, event ID 4004 warnings are seen in the event log
+## During initial sync, event ID 4004 warnings appear in the event log
 
 During initial sync after you configure replication, both the source and the destination servers might show multiple warning events with event ID 4004 in the *StorageReplica\Admin* event log. The event description shows the status "insufficient system resources exist to complete the API." You likely also will see event ID 5014 errors. These events indicate that the servers don't have enough available memory (RAM) to both perform initial synchronization and run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.
 
@@ -57,7 +57,7 @@ This scenario happens if you use `fltmc.exe attach svhdxflt` to bypass the requi
 
 The cause of the slowdown is an interoperability issue between Storage QoS in Windows Server and the manually attached Shared VHDX filter. To resolve this issue, disable the Storage QoS filter driver and restart the Hyper-V host:
 
-```Console
+```console
 SC config storqosflt start= disabled
 ```
 
@@ -65,7 +65,7 @@ SC config storqosflt start= disabled
 
 When using the `New-Volume` cmdlet along with differing sets of storage on the source and destination server, such as two different SANs or two JBODs with differing disks, you may not be able to configure replication using `New-SRPartnership`. The error shown may include:
 
-```Output
+```output
 Data partition sizes are different in those two groups
 ```
 
@@ -77,7 +77,7 @@ When attempting to use `Test-SRTopology`, you receive one of the following error
 
 **ERROR EXAMPLE 1:**
 
-```Output
+```output
 WARNING: Invalid value entered for target computer name: sr-srv03. Test-SrTopology cmdlet does not accept IP address as input for target computer name parameter. NetBIOS names and fully qualified domain names are acceptable inputs
 WARNING: System.Exception
 WARNING: at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.BeginProcessing()
@@ -162,7 +162,7 @@ The issue was fixed in Cumulative Update for Windows 10, version 1607 (Anniversa
 
 If you attempt to resize a replicated volume on the source server without setting `-AllowResizeVolume $TRUE` first, you'll receive the following errors:
 
-```Output
+```output
 Resize-Partition -DriveLetter I -Size 8GB
 Resize-Partition : Failed
 
@@ -204,7 +204,7 @@ When attempting to move a physical disk resource (PDR) attached role in order to
 
 If using the Failover Cluster Manager snap-in:
 
-```Output
+```output
 Error
 The operation has failed.
 The action 'Move' did not complete.
@@ -231,7 +231,7 @@ Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched clu
 
 When attempting to provision a cluster with only two nodes, prior to adding Storage Replica stretch replication, you attempt to add the disks in the second site to the Available Disks. You receive the following error:
 
-```Output
+```output
 No disks suitable for cluster disks found. For diagnostic information about disks available to the cluster, use the Validate a Configuration Wizard to run Storage tests.
 ```
 
@@ -247,7 +247,7 @@ The command won't work with node local storage. You can use Storage Replica to r
 
 When specifying a replication partnership is asynchronous, the source computer repeatedly logs event ID 1241 warning events in the Storage Replica Admin channel. For example:
 
-```Output
+```output
 Log Name:      Microsoft-Windows-StorageReplica/Admin
 Source:        Microsoft-Windows-StorageReplica
 Date:          3/21/2017 3:10:41 PM
@@ -282,7 +282,7 @@ During initial sync, the event is expected behavior and can safely be ignored. T
 
 Under rare circumstances, rebooting a server that is in a partnership leads to replication failing and the rebooted node logging event ID 4004 warning events with an access denied error.
 
-```Output
+```output
 Log Name:      Microsoft-Windows-StorageReplica/Admin
 Source:        Microsoft-Windows-StorageReplica
 Date:          3/21/2017 11:43:25 AM
@@ -314,7 +314,7 @@ Note the `Status: "{Access Denied}"` and the message `A process has requested ac
 
 When attempting to bring a cluster disk online after a successful failover, where you're attempting to make the original source site primary again, you receive an error in Failover Cluster Manager. For example:
 
-```Output
+```output
 Error
 The operation has failed.
 Failed to bring the resource 'Cluster Disk 2' online.
@@ -325,7 +325,7 @@ The operation failed because either the specified cluster node is not the owner 
 
 If you attempt to move the disk or CSV manually, you receive another error. For example:
 
-```Output
+```output
 Error
 The operation has failed.
 The action 'Move' did not complete.
@@ -342,7 +342,7 @@ We're working on providing an update that permanently resolves this issue. Conta
 
 Running `New-SRPartnership` fails with the error:
 
-```Output
+```output
 Disk layout type for volume \\?\Volume{GUID}\ is not a valid GPT style layout.
 New-SRPartnership : Unable to create replication group SRG01, detailed reason: Disk layout type for volume
 \\?\Volume{GUID}\ is not a valid GPT style layout.
@@ -357,7 +357,7 @@ In the Failover Cluster Manager GUI, there's no capability to set up replication
 
 Running `Test-SRTopology` fails with the following output:
 
-```Output
+```output
 WARNING: Object reference not set to an instance of an object.
 WARNING: System.NullReferenceException
 WARNING:    at Microsoft.FileServices.SR.Powershell.MSFTPartition.GetPartitionInStorageNodeByAccessPath(String AccessPath, String ComputerName, MIObject StorageNode)
@@ -387,7 +387,7 @@ To resolve the issue, raise the cluster functional level by running the PowerShe
 
 When running the Disk Management snap-in (DISKMGMT.MSC), you notice one or more volumes listed with no label or drive letter and 1 MB in size. You may be able to delete the unknown volume or you may receive:
 
-```Output
+```output
 An Unexpected Error has Occurred
 ```
 
@@ -397,13 +397,13 @@ To view details, use the DISKPART tool or `Get-Partition` cmdlet. These partitio
 
 ## A Storage Replica node hangs when creating snapshots
 
-Creating a VSS snapshot (through backup, VSSADMIN, etc.) causes a Storage Replica node hangs, you must force a restart of the node to recover. There's no error, just a hard hang of the server.
+Creating a VSS snapshot, such as through backup or VSSADMIN, a Storage Replica node hangs. You must force a restart of the node to recover. There's no error, just a hard hang of the server.
 
 This issue occurs when you create a VSS snapshot of the log volume. The underlying cause is a legacy design aspect of VSS, not Storage Replica. The resulting behavior when you snapshot the Storage Replica log volume is a VSS I/O queuing mechanism deadlocks the server.
 
 To prevent this behavior, don't snapshot Storage Replica log volumes. There's no need to snapshot Storage Replica log volumes, as these logs can't be restored. Furthermore, the log volume should never contain any other workloads, so no snapshot is needed in general.
 
-## High IO latency when using Storage Spaces Direct with Storage Replica
+## High I/O latency when using Storage Spaces Direct with Storage Replica
 
 When using Storage Spaces Direct with an NVMe (nonvolatile memory express) device or SSD (solid-state drive) cache, you see a greater than expected increase in latency when configuring Storage Replica replication between Storage Spaces Direct clusters. The change in latency is proportionally much higher than you see when using NVMe and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
 
@@ -417,7 +417,7 @@ This workaround isn't ideal and some customers may not be able to make use of it
 
 Running `Test-SRTopology` between two clusters and their CSV paths fails with the error:
 
-```Output
+```output
 Validating data and log volumes...
 Measuring Storage Replica recovery and initial synchronization performance...
 WARNING: Could not find file '\\SERVER01\C$\CLUSTERSTORAGE\VOLUME1TestSRTopologyRecoveryTest\SRRecoveryTestFile01.txt'.

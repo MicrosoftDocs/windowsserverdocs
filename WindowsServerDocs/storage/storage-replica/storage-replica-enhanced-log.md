@@ -38,7 +38,7 @@ Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log
     New-Volume -FriendlyName north-data -StoragePoolFriendlyName "Pool for Site North" -Size 1tb -FileSystem CSVFS_ReFS
     ```
 
-2. Create a new virtual disk for Storage Replica logs and initialize the partition for each site:
+1. Create a new virtual disk for Storage Replica logs and initialize the partition for each site:
 
     ```powershell
     New-VirtualDisk -FriendlyName south-log -StoragePoolFriendlyName "Pool for Site South" -Size 16gb
@@ -48,7 +48,7 @@ Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log
     New-VirtualDisk -FriendlyName north-log -StoragePoolFriendlyName "Pool for Site North" -Size 16gb
     ```
 
-3. Identify the disk number of the partitions you initialized in Step 2 so you can assign a drive letter:
+1. Identify the disk number of the partitions you initialized in Step 2 so you can assign a drive letter:
 
     ```powershell
     Get-Disk
@@ -66,7 +66,7 @@ Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log
     New-Partition -DiskNumber <Disk Number> -DriveLetter 'f' -UseMaximumSize
     ```
 
-4. Create the new Storage Replica Partnership using the `-LogType Raw` parameter to leverage Enhanced Log functionality:
+1. Create the new Storage Replica Partnership using the `-LogType Raw` parameter to leverage Enhanced Log functionality:
 
     ```powershell
     New-SRPartnership -SourceComputerName <Source Computer Hostname> -SourceRGName <Source Replication Group Name> -SourceVolumeName 'C:\ClusterStorage\south-data\' -SourceLogVolumeName e: -DestinationComputerName <Destination Computer Name> -DestinationRGName <Destination Replication Group Name> -DestinationVolumeName 'C:\ClusterStorage\north-data\' -DestinationLogVolumeName f: -LogType Raw -EnableCompression
@@ -75,9 +75,9 @@ Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log
     > [!NOTE]
     > `-EnableCompression` is only needed if you intend to use SMB Compression for Storage Replica traffic.
 
-You may use `-LogType FileBased` to deploy the Storage Replica Partnership using the Traditional Log format.
+You can use `-LogType FileBased` to deploy the Storage Replica Partnership using the Traditional Log format.
 
-## More information
+## Related content
 
 * [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
 * [Server to Server Storage Replication](server-to-server-storage-replication.md)
