@@ -1,30 +1,19 @@
 ---
 title: Manage Hyper-V hypervisor scheduler types
-description: Learn about new modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
+description: Learn about modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 08/04/2023
+ms.date: 02/18/2025
 ms.topic: article
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 ---
 
 # Manage Hyper-V hypervisor scheduler types
 
-This article describes new modes of virtual processor scheduling logic introduced in Windows Server 2016. These modes, or *scheduler types*, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can:
+This article describes the modes of virtual processor scheduling logic in Windows Server. These modes, or *scheduler types*, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can:
 
 - Select hypervisor scheduler types best suited for guest virtual machines (VMs).
 - Configure VMs to take advantage of scheduling logic.
-
-## Prerequisites
-
-You must install the following updates in order to use the [hypervisor scheduler](#hypervisor-scheduler-types) features described later in this article. These updates include changes to support the new `hypervisorschedulertype` BCD option, which is necessary for host configuration.
-
-| Version | Release  | Update Required | KB Article |
-|--------------------|------|---------|-------------:|
-|Windows Server 2016 | 1607 | 2018.07 C | [KB4338822](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822) |
-|Windows Server 2016 | 1703 | 2018.07 C | [KB4338827](https://support.microsoft.com/help/4338827/windows-10-update-kb4338827) |
-|Windows Server 2016 | 1709 | 2018.07 C | [KB4338817](https://support.microsoft.com/help/4338817/windows-10-update-kb4338817) |
-|Windows Server 2019 | 1804 | None | None |
 
 ## Background
 
@@ -64,7 +53,7 @@ Before considering hypervisor scheduler types, you should understand Hyper-V arc
 
 ## Hypervisor scheduler types
 
-In Windows Server 2016, the Hyper-V hypervisor supports several modes of scheduler logic, which determine how the hypervisor schedules virtual processors on the underlying logical processors. These scheduler types are:
+The Hyper-V hypervisor supports several modes of scheduler logic, which determine how the hypervisor schedules virtual processors on the underlying logical processors. These scheduler types are:
 
 - [The classic scheduler](#the-classic-scheduler).
 - [The core scheduler](#the-core-scheduler).
@@ -151,16 +140,16 @@ The following screenshot shows system information taken from the guest operating
 
 :::image type="content" source="media/Hyper-V-CoreScheduler-VM-Msinfo32.png" alt-text="Screenshot that shows msinfo32 in a guest VM with SMT enabled.":::
 
-## Configure the hypervisor scheduler type on Windows Server 2016 Hyper-V
+## Configure the hypervisor scheduler type
 
-Windows Server 2016 Hyper-V uses the classic hypervisor scheduler model by default. You can optionally configure the hypervisor to use the core scheduler. The core scheduler increases security by restricting guest VPs to run on corresponding physical SMT pairs. This configuration supports the use of VMs with SMT scheduling for their guest VPs.
+Hyper-V uses the classic hypervisor scheduler model by default. You can optionally configure the hypervisor to use the core scheduler. The core scheduler increases security by restricting guest VPs to run on corresponding physical SMT pairs. This configuration supports the use of VMs with SMT scheduling for their guest VPs.
 
 > [!NOTE]
 > We recommend that all customers running Windows Server 2016 Hyper-V select the core scheduler to ensure their virtualization hosts are optimally protected against potentially malicious guest VMs.
 
-## Windows Server 2019 Hyper-V defaults to using the core scheduler
+## Hyper-V defaults to using the core scheduler
 
-To ensure Hyper-V hosts are deployed in the optimal security configuration, Windows Server 2019 Hyper-V now uses the core hypervisor scheduler model by default. The host administrator might optionally configure the host to use the legacy classic scheduler. Prior to overriding the default settings, administrators should carefully read, understand, and consider the impacts each scheduler type has on the security and performance of virtualization hosts. For more information, see [About Hyper-V hypervisor scheduler type selection](./about-hyper-v-scheduler-type-selection.md).
+To ensure Hyper-V hosts are deployed in the optimal security configuration, Windows Server 2019 and later Hyper-V now uses the core hypervisor scheduler model by default. The host administrator might optionally configure the host to use the legacy classic scheduler. Prior to overriding the default settings, administrators should carefully read, understand, and consider the impacts each scheduler type has on the security and performance of virtualization hosts. For more information, see [About Hyper-V hypervisor scheduler type selection](./about-hyper-v-scheduler-type-selection.md).
 
 ## Select the hypervisor scheduler type on Windows Server
 
@@ -191,9 +180,9 @@ Hypervisor launch event ID 2 denotes the hypervisor scheduler type, where:
 - 3 = Core scheduler
 - 4 = Root scheduler
 
-:::image type="content" source="media/Hyper-V-CoreScheduler-EventID2-Details.png" alt-text="A screenshot of the hypervisor launch event ID 2 properties window. The user has selected the General tab, showing that the hypervisor scheduler type is 0x2.":::
+:::image type="content" source="media/Hyper-V-CoreScheduler-EventID2-Details.png" alt-text="A screenshot of the hypervisor launch event ID 2 properties window. The General tab is selected, showing the hypervisor scheduler type is 0x2.":::
 
-:::image type="content" source="media/Hyper-V-CoreScheduler-EventViewer.png" alt-text="A screenshot of the Event Viewer window. The user has selected Hyper-V Hypervisor launch event ID 2 from the list of events, highlighting it in dark blue.":::
+:::image type="content" source="media/Hyper-V-CoreScheduler-EventViewer.png" alt-text="A screenshot of the Event Viewer window. The user has selected Hyper-V Hypervisor launch event ID 2 from the list of events.":::
 
 ### Query the Hyper-V hypervisor scheduler type launch event using PowerShell
 
