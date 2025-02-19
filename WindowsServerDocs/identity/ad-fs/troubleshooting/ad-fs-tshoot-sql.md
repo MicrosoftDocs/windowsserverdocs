@@ -1,5 +1,5 @@
 ---
-title: AD FS troubleshooting - SQL connectivity
+title: AD FS Troubleshooting - SQL Connectivity
 description: Learn how to troubleshoot various aspects of Active Directory Federation Services as it relates to SQL connectivity.
 author: billmath
 ms.author: billmath
@@ -8,7 +8,7 @@ ms.date: 02/13/2024
 ms.topic: article
 ---
 
-# AD FS troubleshooting - SQL connectivity
+# AD FS troubleshooting: SQL connectivity
 
 With Active Directory Federation Services (AD FS), you can use remote SQL servers for AD FS farm data. You see issues if the AD FS servers in your farm can't communicate with the back-end SQL servers. This article provides basic steps to test the communication with the back-end servers.
 
@@ -32,12 +32,12 @@ A Universal Data Link (UDL) file is a text file that contains a database connect
 
 ### Create a test.udl file to test connectivity
 
-1. Open Notepad and save the file as `test.udl`. Under the **Save as type** dropdown, select **All Files**.
-1. Double-click `test.udl`.
+1. Open Notepad and save the file as **test.udl**. Under the **Save as type** dropdown, select **All Files**.
+1. Double-click **test.udl**.
 1. Fill in the following information:
 
     1. **Select or enter a server name:** Use the data source from the preceding connection string.
-    1. **Enter information to log on to the server:** Use the AD FS service account or an account that has permissions to sign in remotely. If the account is a Windows account, use integrated authentication. Otherwise, enter the username and password.
+    1. **Enter information to log on to the server:** Use the AD FS service account or an account that has permissions to sign in remotely. If the account is a Windows account, use Integrated Windows Authentication. Otherwise, enter the username and password.
     1. **Select the database on the server:** Use the Initial Catalog from the preceding string. An example is `AdfsConfigurationV3`.
 
     ![Screenshot that shows the Connection dialog.](media/ad-fs-tshoot-sql/sql4.png)
@@ -56,7 +56,7 @@ You can also [download](https://go.microsoft.com/fwlink/?linkid=864329) and inst
 
    ![Screenshot that shows the installation process.](media/ad-fs-tshoot-sql/sql5.png)
 1. Open SSMS and enter the server name from the preceding data source.
-1. Use the AD FS service account or an account that has permissions to sign in remotely. If the account is a Windows account, use integrated authentication. Otherwise, enter the username and password.
+1. Use the AD FS service account or an account that has permissions to sign in remotely. If the account is a Windows account, use Integrated Windows Authentication. Otherwise, enter the username and password.
 
    ![Screenshot that shows the Connect to Server pane.](media/ad-fs-tshoot-sql/sql6.png)
 1. After the left pane populates, expand databases and verify that you can see the AD FS databases.

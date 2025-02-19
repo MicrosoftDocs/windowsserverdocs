@@ -1,6 +1,6 @@
 ---
-title: AD FS troubleshooting - Microsoft Entra ID
-description: This document describes how to troubleshoot various aspects of Active Directory Federation Services (AD FS) and Microsoft Entra ID.
+title: AD FS Troubleshooting - Microsoft Entra ID
+description: This article describes how to troubleshoot various aspects of Active Directory Federation Services (AD FS) and Microsoft Entra ID.
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -9,7 +9,7 @@ ms.topic: article
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
-# AD FS troubleshooting - Microsoft Entra ID
+# AD FS troubleshooting: Microsoft Entra ID
 
 With the growth of the cloud, many companies moved to use Microsoft Entra ID for their various apps and services. Federating with Microsoft Entra ID is now a standard practice with many organizations. This article covers some of the aspects of troubleshooting issues that arise with this federation. Several of the topics in the general troubleshooting article still pertain to federating with Azure, so this article describes specifics with Microsoft Entra ID and Active Directory Federation Services (AD FS) interaction.
 
@@ -64,7 +64,7 @@ To enforce an authentication method, use one of the following methods:
 |Secure Sockets Layer (SSL) client authentication|`urn:ietf:rfc:2246`|
 |Windows integrated authentication|`urn:federation:authentication:windows`|
 
-Supported SAML authentication context classes
+The following table lists supported SAML authentication context classes:
 
 |Authentication method|Authentication context class URI|
 |-----|-----|
@@ -99,7 +99,7 @@ Under */adfs/ls/web.config*, make sure that the entry for the authentication typ
 
 1. On the **Edit Global Authentication Policy** pane, on the **Primary** tab, you can configure settings as part of the global authentication policy. For example, for primary authentication, select available authentication methods under **Extranet** and **Intranet**.
 
-   Make sure that the required authentication method checkbox is selected.
+   Make sure that the checkbox for the required authentication method is selected.
 
 #### AD FS 2016
 

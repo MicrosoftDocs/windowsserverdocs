@@ -1,6 +1,6 @@
 ---
-title: AD FS troubleshooting - claims rules
-description: This document describes how to troubleshoot claims rule syntax with Active Directory Federation Services (AD FS).
+title: AD FS Troubleshooting - Claims Rules
+description: This article describes how to troubleshoot claims rule syntax with Active Directory Federation Services (AD FS).
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -8,9 +8,9 @@ ms.date: 02/13/2024
 ms.topic: article
 ---
 
-# AD FS troubleshooting - claims rules syntax
+# AD FS troubleshooting: Claims rules syntax
 
-A claim is a statement that one subject makes about itself or another subject. A relying party issues the claims. They're given one or more values and then packaged in security tokens that the Active Directory Federation Services (AD FS) server issues. This article deals with the claims syntax and creation. For information on claims issuance, see [AD FS troubleshooting - claims issuance](ad-fs-tshoot-claims-issuance.md).
+A claim is a statement that one subject makes about itself or another subject. A relying party issues the claims. They're given one or more values and then packaged in security tokens that the Active Directory Federation Services (AD FS) server issues. This article deals with the claims syntax and creation. For information on claims issuance, see [AD FS troubleshooting - Claims issuance](ad-fs-tshoot-claims-issuance.md).
 
 ## How claim rules are processed
 
@@ -26,12 +26,12 @@ Claim rules are created separately for each federated trust relationship within 
 
 ## Understand the components of the claim rule language
 
-The claim rule language consists of the following components, separated by the " =>" operator:
+The claim rule language consists of the following components, separated by the `" =>"` operator:
 
 - A condition is used to check input claims and determine whether the issuance statement of the rule should be executed. It represents a logical expression that must be evaluated to true to run the rule body part.
 - An issuance statement.
 
-Example:
+Here's an example:
 
 ```
 c:[type == "Name", value == "domain user"] => issue(type = "Role", value = "employee");

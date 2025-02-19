@@ -1,6 +1,6 @@
 ---
-title: AD FS troubleshooting - Integrated Windows Authentication
-description: This document describes how to troubleshoot Integrated Windows Authentication.
+title: AD FS Troubleshooting - Integrated Windows Authentication
+description: This article describes how to troubleshoot Integrated Windows Authentication.
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -9,9 +9,9 @@ ms.topic: article
 ms.custom: inhenkel
 ---
 
-# AD FS troubleshooting - Integrated Windows Authentication
+# AD FS troubleshooting: Integrated Windows Authentication
 
-Integrated Windows Authentication enables users to sign in with their Windows credentials and experience single sign-on (SSO) by using Kerberos or NTLM.
+Integrated Windows Authentication enables users to sign in with their Windows credentials and experience single sign-on (SSO) by using Kerberos or New Technology LAN Manager (NTLM).
 
 ## Why Integrated Windows Authentication fails
 
@@ -27,8 +27,8 @@ An SPN is a unique identifier of a service instance. SPNs are used by Kerberos a
 
 Here's an example of how an SPN is used with AD FS:
 
-- A web browser queries Active Directory to determine which service account is running `sts.contoso.com`.
-- Active Directory tells the browser that it's the AD FS service account.
+- A web browser queries Microsoft Entra to determine which service account is running `sts.contoso.com`.
+- Microsoft Entra tells the browser that it's the AD FS service account.
 - The browser gets a Kerberos ticket for the AD FS service account.
 
 An AD FS service account with a misconfigured or wrong SPN can experience problems. When you look at network traces, you might see errors such as `KRB Error: KRB5KDC_ERR_S_PRINCIPAL_UNKNOWN`.

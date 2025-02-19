@@ -1,6 +1,6 @@
 ---
-title: AD FS troubleshooting - DNS resolution
-description: This document describes how to troubleshoot Domain Name System aspects of Active Directory Federation Services.
+title: AD FS Troubleshooting - DNS Resolution
+description: This article describes how to troubleshoot Domain Name System aspects of Active Directory Federation Services.
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -8,7 +8,7 @@ ms.date: 02/13/2024
 ms.topic: article
 ---
 
-# AD FS troubleshooting - DNS
+# AD FS troubleshooting: DNS
 
 If Active Directory Federation Services (AD FS) isn't working or responding, one of the first things to check is Domain Name System (DNS) name resolution. Basic tests determine if the AD FS or Web Application Proxy (WAP) servers are found on your network. For internal users, these tests should resolve to the AD FS servers security token service (STS). For external users, these tests should resolve to the WAP servers.
 

@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot AD FS IdP-initiated sign-in
+title: Troubleshoot AD FS IdP-Initiated Sign-In
 description: Learn how to use the sign-in page to troubleshoot Active Directory Federation Services (AD FS) authentication.
 author: billmath
 ms.author: roharwoo
@@ -13,7 +13,7 @@ You can use the Active Directory Federation Services (AD FS) sign-in page to che
 
 ## Enable the IdP-initiated sign-in page
 
-By default, AD FS in Windows 2016 doesn't have the sign-in page enabled. To enable the page, you can use the PowerShell command `Set-AdfsProperties`. Use the following procedure to enable the page:
+By default, AD FS in Windows 2016 doesn't have the sign-in page enabled. To enable the page, use the PowerShell command `Set-AdfsProperties`. Use the following procedure to enable the page:
 
 1. Open Windows PowerShell.
 1. Enter `Get-AdfsProperties` and select Enter.

@@ -1,6 +1,6 @@
 ---
-title: AD FS troubleshooting - loop detection
-description: This document describes how to troubleshoot loop detection for Active Directory Federation Services (AD FS).
+title: AD FS Troubleshooting - Loop Detection
+description: This article describes how to troubleshoot loop detection for Active Directory Federation Services (AD FS).
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -8,7 +8,7 @@ ms.date: 02/13/2024
 ms.topic: article
 ---
 
-# AD FS troubleshooting - loop detection
+# AD FS troubleshooting: Loop detection
 
 Looping in Active Directory Federation Services (AD FS) occurs when a relying party continuously rejects a valid security token and redirects back to AD FS.
 
@@ -29,11 +29,11 @@ You can use PowerShell to change the value for the number of tokens issued and t
 ```powershell
 Set-AdfsProperties -LoopDetectionMaximumTokensIssuedInterval 5  -LoopDetectionTimeIntervalInSeconds 20
 ```
-The minimum value for **LoopDetectionMaximumTokensIssuedInterval** is 1.
+The minimum value for `LoopDetectionMaximumTokensIssuedInterval` is 1.
 
-The minimum value for **LoopDetectionTimeIntervalInSeconds** is 5.
+The minimum value for `LoopDetectionTimeIntervalInSeconds` is 5.
 
-You can also disable loop detection when you are doing performance testing.
+You can also disable loop detection when you're doing performance testing.
 
 ```powershell
 Set-AdfsProperties -EnableLoopDetection $false
