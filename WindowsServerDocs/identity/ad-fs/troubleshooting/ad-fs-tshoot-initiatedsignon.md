@@ -16,7 +16,7 @@ You can use the Active Directory Federation Services (AD FS) sign-in page to che
 By default, AD FS in Windows 2016 doesn't have the sign-in page enabled. To enable the page, use the PowerShell command `Set-AdfsProperties`. Use the following procedure to enable the page:
 
 1. Open Windows PowerShell.
-1. Enter `Get-AdfsProperties` and select Enter.
+1. Enter `Get-AdfsProperties`.
 1. Verify that the `EnableIdpInitiatedSignonPage` property is set to `False`.
 
     :::image type="content" source="media/ad-fs-tshoot-initiatedsignon/idp2.png" alt-text="Screenshot that shows PowerShell output highlighting that the EnableIdpInitiatedSignonPage property is set to false.":::
@@ -49,7 +49,7 @@ You can test the seamless sign-in experience by making sure that the URL for you
 
 1. Select **Advanced**.
 
-1. Enter your URL and select **Add** > **Close**.
+1. Enter your URL, and then select **Add** > **Close**.
 
     ![Screenshot that shows the local intranet popup box requesting the URL to be added for authentication.](media/ad-fs-tshoot-initiatedsignon/idp9.png)
 
