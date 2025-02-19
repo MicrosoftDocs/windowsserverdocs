@@ -11,7 +11,7 @@ ms.custom: inhenkel
 
 # AD FS troubleshooting: Integrated Windows Authentication
 
-Integrated Windows Authentication enables users to sign in with their Windows credentials and experience single sign-on (SSO) by using Kerberos or New Technology LAN Manager (NTLM).
+Integrated Windows Authentication enables users to sign in with their Windows credentials and experience single sign-on (SSO) by using Kerberos or NTLM.
 
 ## Why Integrated Windows Authentication fails
 
@@ -23,7 +23,7 @@ There are three main reasons why Integrated Windows Authentication fails:
 
 ## SPN misconfiguration
 
-An SPN is a unique identifier of a service instance. SPNs are used by Kerberos authentication to associate a service instance with a service sign-on account. This configuration allows a client application to request the service to authenticate an account even if the client doesn't have the account name.
+An SPN is a unique identifier of a service instance. Kerberos authentication uses SPNs to associate a service instance with a service sign-on account. This configuration allows a client application to request the service to authenticate an account even if the client doesn't have the account name.
 
 Here's an example of how an SPN is used with AD FS:
 
@@ -43,7 +43,7 @@ To verify the SPN, look at the properties of the AD FS service account.
 
 ## Channel binding token
 
-Currently, when a client application authenticates itself to the server by using Kerberos, Digest, or NTLM by using HTTPS, a Transport Level Security (TLS) channel is first established. Authentication takes place by using this channel.
+Currently, when a client application authenticates itself to the server by using Kerberos, Digest, or NTLM by using HTTPS, a Transport Layer Security (TLS) channel is first established. Authentication takes place by using this channel.
 
 The channel binding token is a property of the TLS-secured outer channel. It's used to bind the outer channel to a conversation over the client-authenticated inner channel.
 
