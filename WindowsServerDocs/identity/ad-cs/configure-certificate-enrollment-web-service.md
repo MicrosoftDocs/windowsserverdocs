@@ -101,7 +101,7 @@ Using a specific user account as the service account is the recommended configur
 
 1. In the console tree, locate the container where you want to create the user account. For example, some organizations have a Services OU or similar account. Right-select the container, select **New**, and then select **User**.
 
-1. In the **New Object - User** text boxes, enter appropriate names for all the fields so that it's clear that you are creating a user account. Be sure to follow your organization's policy for creating a service account, if such a policy exists. As an example, you could enter the following, and then select **Next**.
+1. In the **New Object - User** text boxes, enter appropriate names for all the fields so that it's clear that you're creating a user account. Be sure to follow your organization's policy for creating a service account, if such a policy exists. As an example, you could enter the following, and then select **Next**.
 
     1. **First name**: **CES**
 
@@ -177,7 +177,7 @@ If you specified the default application pool instead of a user account to act a
 
 1. Sign in to the domain controller or administrative computer with Active Directory Domain Services Remote Server Administration Tools installed. Open **Active Directory Users and Computers** by using an account that has permissions to add users to the domain.
 
-1. In the console tree, expand the structure until you see the container that holds the computer account that's hosting the Certificate Enrollment Web Service. Selectg that container.
+1. In the console tree, expand the structure until you see the container that holds the computer account that's hosting the Certificate Enrollment Web Service. Select that container.
 
 1. In the details pane, right-click the computer account that is hosting the Certificate Enrollment Web Service, and then click **Properties**.
 
@@ -208,13 +208,13 @@ The Certificate Enrollment Web Service and the Certificate Enrollment Policy Web
 
 ## Complete Certificate Enrollment Web Services Configuration
 
-If you enabled renewal-only mode, you need to complete the following additional configuration steps.
+If you enabled renewal-only mode, you need to complete the following extra configuration steps.
 
 - Update CA permissions
 
 - Set the CA policy module flag
 
-### To Update CA permissions
+### Update CA permissions
 
 1. On the CA, sign in as a CA administrator.
 
@@ -227,13 +227,13 @@ If you enabled renewal-only mode, you need to complete the following additional 
 1. In the **Select Users, Computers, Service Accounts, or Groups** dialog box, type the name of service account for the Certificate Enrollment Service. Select **Check Names**, and then select **OK**.
 
     > [!NOTE]
-    > If you assigned the built-in application pool as the service account, you'll enter the computer account name that's hosting the Certificate Enrollment Web Service.
+    > If you assigned the built-in application pool as the service account, enter the computer account name that's hosting the Certificate Enrollment Web Service.
 
 1. In the **CA Properties** dialog box, under **Group or user names**, select the service account name for the Certificate Enrollment Web Service. Ensure that the **Allow** check box is selected for **Read** permission. Clear the **Allow** check box for **Request Certificates** permission (which is selected by default), and then select **OK**.
 
 1. Close the Certification Authority console.
 
-#### To Set the CA policy module flag
+#### Set the CA policy module flag
 
 1. On the CA, sign in as a CA administrator.
 
