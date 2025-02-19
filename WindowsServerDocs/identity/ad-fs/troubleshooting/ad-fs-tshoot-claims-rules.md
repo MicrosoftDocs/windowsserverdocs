@@ -10,7 +10,7 @@ ms.topic: article
 
 # AD FS troubleshooting: Claims rules syntax
 
-A claim is a statement that one subject makes about itself or another subject. A relying party issues the claims. They're given one or more values and then packaged in security tokens that the Active Directory Federation Services (AD FS) server issues. This article deals with the claims syntax and creation. For information on claims issuance, see [AD FS troubleshooting - Claims issuance](ad-fs-tshoot-claims-issuance.md).
+A claim is a statement that one subject makes about itself or another subject. A relying party issues the claims. They're given one or more values and then packaged in security tokens that the Active Directory Federation Services (AD FS) server issues. This article deals with the claims syntax and creation. For information on claims issuance, see [Troubleshoot AD FS](ad-fs-tshoot-claims-issuance.md).
 
 ## How claim rules are processed
 
@@ -24,7 +24,7 @@ Claim rules are created separately for each federated trust relationship within 
 - Start from scratch by authoring the rule by using the [claim rule language](../../ad-fs/technical-reference/when-to-use-a-custom-claim-rule.md).
 - Use Windows PowerShell to customize a rule.
 
-## Understand the components of the claim rule language
+## Components of the claim rule language
 
 The claim rule language consists of the following components, separated by the `" =>"` operator:
 
@@ -71,7 +71,7 @@ A good sample web app is available. The app echoes the claims that it receives f
 
 ![Screenshot that shows the web config file in Visual Studio.](media/ad-fs-tshoot-claims/claims3.png)
 
-The following [blog article](/archive/blogs/tangent_thoughts/install-and-configure-a-simple-net-4-5-sample-federated-application-samapp) has excellent, in-depth instructions for setting up the app.
+[This blog article](/archive/blogs/tangent_thoughts/install-and-configure-a-simple-net-4-5-sample-federated-application-samapp) has excellent, in-depth instructions for setting up the app.
 
 ## Related content
 
