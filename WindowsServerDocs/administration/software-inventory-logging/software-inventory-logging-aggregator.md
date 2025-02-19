@@ -471,8 +471,6 @@ With the `Set-SilAggregator` cmdlet you can:
 
 -   Note that the `–StartTime` and `–Endtime` parameters will show report data from the first of the month of start date and the last of the month of the end date.
 
-![Image of the completed Get-AggregatorData cmdlet](../media/software-inventory-logging/SILA_Get-SILAggregator.png)
-
 ### Get-SilVMHost
 
 -   This cmdlet outputs the list of physical hosts the SIL Aggregator is configured to poll, the most recent successful poll date and time, and the HostType (or OS manufacturer), and the HypervisorType (hypervisor manufacturer). See the Add-SilVMHost details for more information on HostType and HypervisorType.
