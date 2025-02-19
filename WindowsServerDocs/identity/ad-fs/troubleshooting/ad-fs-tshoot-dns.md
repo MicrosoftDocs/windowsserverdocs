@@ -21,11 +21,12 @@ A ping test verifies IP-level connectivity to another TCP/IP computer by sending
 > [!NOTE]
 > Some organizations block this port on their servers. You might get a **Request timed out** response.
 
-### Use a PING test
+To use a ping test:
 
 1. Open a command prompt.
 1. Enter ```ping <name of AD FS server>```.
-    - Example: `ping sts.contoso.com`
+   
+   Example: `ping sts.contoso.com`
 
 A reply from the server appears.
 
@@ -35,11 +36,12 @@ A reply from the server appears.
 
 NSLookup shows information that you can use to diagnose DNS infrastructure. For more information, see [NSLookup](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725991(v=ws.11)).
 
-### Use NSLookup
+To use NSLookup:
 
 1. Open a command prompt.
 1. Enter ```nslookup <name of AD FS server>```.
-    - Example: `nslookup sts.contoso.com`
+
+   Example: `nslookup sts.contoso.com`
 
 The DNS information for the server appears.
 
@@ -49,15 +51,16 @@ The DNS information for the server appears.
 
 Tracert determines the path taken to a destination by sending an ICMP Echo Request or ICMPv6 messages to the destination with incrementally increasing Time to Live (TTL) field values. For more information, see [Tracert](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff961507(v=ws.11)).
 
-### Use tracert
+To use tracert:
 
 1. Open a command prompt.
 1. Enter ```tracert <name of AD FS server>```.
-    - Example: `tracert sts.contoso.com`
+
+   Example: `tracert sts.contoso.com`
 
 The destination path used to reach the server appears.
 
-![Screenshot that shows Tracert.](media/ad-fs-tshoot-dns/dns3.png)
+![Screenshot that shows tracert.](media/ad-fs-tshoot-dns/dns3.png)
 
 ## Related content
 
