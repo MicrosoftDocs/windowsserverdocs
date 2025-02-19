@@ -321,11 +321,11 @@ Notes
 
 14. On Windows Server 2012 R2 Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
 
-        ```Powershell
-        Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-        ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
-        The Linux Integration Services download can be applied to existing Generation 2 VMs but does not impart Generation 2 capability.
+    The Linux Integration Services download can be applied to existing Generation 2 VMs but does not impart Generation 2 capability.
 
 15. In Red Hat Enterprise Linux or CentOS 5.2, 5.3, and 5.4 the filesystem freeze functionality is not available, so Live Virtual Machine Backup is also not available.
 
