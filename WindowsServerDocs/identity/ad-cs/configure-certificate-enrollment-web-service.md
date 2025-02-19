@@ -71,7 +71,7 @@ Clients communicating with the Certificate Enrollment Web Service must use one o
 - Client certificate authentication
 - User name and password authentication
 
-See [Certificate Enrollment Web Service Guidance](https://learn.microsoft.com/archive/technet-wiki/7734.certificate-enrollment-web-services-in-active-directory-certificate-services#authentication-method-considerations) for detailed descriptions of each authentication type.
+See [Certificate Enrollment Web Service Guidance](/archive/technet-wiki/7734.certificate-enrollment-web-services-in-active-directory-certificate-services#authentication-method-considerations) for detailed descriptions of each authentication type.
 
 ### Allow key-based renewal for Certificate Enrollment Web Service
 
