@@ -113,6 +113,8 @@ Under */adfs/ls/web.config*, make sure that the entry for the authentication typ
 
 ## Tokens issued by AD FS
 
+This section discusses tokens issued by AD FS.
+
 <a name='azure-ad-throws-error-after-token-issuance'></a>
 
 ### Microsoft Entra ID throws an error after token issuance
