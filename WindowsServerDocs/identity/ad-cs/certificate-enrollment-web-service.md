@@ -4,7 +4,7 @@ description: Learn about the Certificate Enrollment Web Service, including authe
 author: meaghanlewis
 ms.topic: concept-article
 ms.author: mosagie
-ms.date: 02/10/2025
+ms.date: 02/19/2025
 
 #customer intent: As a PKI admin/architect, I want to find accurate and relevant Active Directory Certificate Services (AD CS) documentation, so that understand/plan/deploy/operate AD CS.
 ---
@@ -18,7 +18,7 @@ Certificate enrollment over HTTPS enables:
 - Certificate enrollment across forest boundaries to reduce the number of CAs in an enterprise
 - Extranet deployment to issue certificates to mobile workers and business partners
 
-This article provides an overview of the Certificate Enrollment Web Service and information about the authentication types, load balancing considerations, and configuration options.
+This article provides an overview of the Certificate Enrollment Web Service, including information about the authentication types, load balancing considerations, and configuration options.
 
 ## Authentication types
 
@@ -31,9 +31,6 @@ The Certificate Enrollment Web Service supports the three following authenticati
 - User name and password authentication
 
 Each of these authentication types is discussed in more detail in the following sections.
-
-> [!NOTE]
-> If you want to enable key-based renewal, you must enable client certificate authentication for the Certificate Enrollment Web Service.
 
 ### Windows integrated authentication
 
@@ -63,21 +60,21 @@ General best practices for load balancing the policy and enrollment web services
 
 The following sections explain different configuration options for Certificate Enrollment Web Service.
 
-### Intranet with a Single Forest
+### Intranet with a single forest
 
 The most simple deployment scenario involves a single forest with intranet connected clients. In this design, the Certificate Enrollment Policy Web Service and Certificate Enrollment Web Service may be installed on an issuing CA, but it's recommended that they're installed on separate computers. If the Certificate Enrollment Policy Web Service and Certificate Enrollment Web Service are run on separate computers, the Certificate Enrollment Policy Web Service must be able to communicate with AD DS using LDAP. The Certificate Enrollment Web Service must be able to connect to the CA using DCOM. In intranet scenarios, either Kerberos or NTLM is the typical authentication type.
 
-### Intranet with Multiple Forests
+### Intranet with multiple forests
 
 A more advanced intranet scenario involves multiple forests with centralized issuing services in only one (or some) of them. In this design, the forests are connected with a two-way forest trust and the CA and the certificate enrollment web services are hosted in the same forest. The advantages of this model are that it provides for a high degree of consolidation in multiple forest environments. In the past, each forest required its own CA for auto-enrollment, now all PKI services are centralized, potentially resulting in a large reduction of the total number of CAs required. Again, because this is an intranet scenario, the most common authentication scheme is either Kerberos or NTLM.
 
-### Perimeter Network & Branch Office
+### Perimeter network & branch office
 
 This deployment scenario provides the ability to enroll users and computers that aren't directly connected to an organization's network or connected over a virtual private network (VPN). In this design, the Certificate Enrollment Policy Web Service and the Certificate Enrollment Web Service are both placed in the perimeter network, and internet based clients enroll over HTTPS to these endpoints. This deployment model is ideally suited to domain users who often work remotely or branch office scenarios in which the VPN or direct connection back to the corporate network is unreliable.
 
 A Read Only Domain Controller (RODC) can optionally be used. The external clients (remote users) have no access through the Corp firewall to the writeable domain controller or to the CA. The enrollment and policy web service servers have no access to the writeable domain controller. However, the Certificate Enrollment Web Service must be allowed to connect through the firewall to the CA over DCOM.
 
-### Renewal-Only Mode
+### Renewal-only mode
 
 For the Certificate Enrollment Web Service to be able to request certificates from a CA, it needs to delegate the call to the CA while impersonating the caller. This means that the Certificate Enrollment Web Service account should have delegation enabled. For internet facing Certificate Enrollment Web Service endpoints, this may not be preferred because it represents an increased level of exposure to internet based threats.
 
@@ -90,6 +87,9 @@ From a network design perspective, this scenario combines both the internal and 
 Key-based renewal mode allows an existing valid certificate to be used to authenticate its own renewal request. This enables computers that aren't connected directly to the internal network the ability to automatically renew an existing certificate.
 
 You can use key-based renewal to allow certificate client computers outside your AD DS forest to renew their certificates before they expire. This includes clients that are configured in workgroups or clients that are members of other AD DS forests. An account in the forest of the CA must be used in order to obtain the initial certificate. However, once that certificate is distributed to the client, key-based renewal doesn't require forest trusts in order to allow for certificate renewal.
+
+> [!NOTE]
+> If you want to enable key-based renewal, you must enable client certificate authentication for the Certificate Enrollment Web Service.
 
 ## Related content
 
