@@ -151,7 +151,7 @@ $ShareCredential = Get-NetworkControllerCredential -ConnectionURI $URI -Credenti
 If ($ShareCredential -eq $null) {
     $CredentialProperties = New-Object Microsoft.Windows.NetworkController.CredentialProperties
     $CredentialProperties.Type = "usernamePassword"
-    $CredentialProperties.UserName = "contoso\alyoung"
+    $CredentialProperties.UserName = "contoso\user01"
     $CredentialProperties.Value = "<Password>"
 
     $ShareCredential = New-NetworkControllerCredential -ConnectionURI $URI -Credential $Credential -Properties $CredentialProperties -ResourceId $ShareUserResourceId -Force
