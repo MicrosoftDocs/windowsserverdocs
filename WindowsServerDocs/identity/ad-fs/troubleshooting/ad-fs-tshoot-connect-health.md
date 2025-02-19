@@ -32,11 +32,12 @@ Depending on your machine settings, we have steps here to enable AD FS audit eve
 Use these commands:
 
 `Set-AD FSProperties -AuditLevel Verbose`
+
 `Run Restart-Service AdHealth*`
 
 ## Check for multiple service member entries in config.json
 
-Go to *C:\Program Files\Azure Ad Connect Health ADFS* `Agent\Insights\config.json`.
+Go to *C:\Program Files\Azure Ad Connect Health ADFS Agent\Insights\config.json*.
 Open the file in a JSON editor or look for multiple instances of the string `ServiceType: AdFederationService`.
 
 ## Look for runtime errors in the agent debug trace
@@ -47,6 +48,6 @@ Open the file in a JSON editor or look for multiple instances of the string `Ser
  1. Restart the insight service by running `Restart-Service AdHealth*`.
  1. Wait for five minutes, and then refresh the log.
  1. Select Ctrl+F to find `AgentType = Insights`. Look for logs with error/authorization information.
- 1. If errors look to be related to oAuth/token issuance, reregister to refresh the agent key for the insights service. Then run `Register-AzureADConnectHealthAD FSAgent`.
+ 1. If errors look to be related to OAuth/token issuance, reregister to refresh the agent key for the insights service. Then run `Register-AzureADConnectHealthAD FSAgent`.
  1. Otherwise, you can run the insights service in console mode to catch errors. Go to *C:\Program Files\Azure Ad Connect Health ADFS Agent\Insights* and run `Microsoft.Identity.Health.ADFS.InsightsService.exe /console`.
  1. Look at the debug log and find exception items.
