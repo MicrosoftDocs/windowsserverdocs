@@ -1,5 +1,5 @@
 ---
-title: AD FS troubleshooting - users can't sign in using AD FS from an external network
+title: AD FS Troubleshooting - Users Can't Sign in by Using AD FS from an External Network
 description: Learn how to troubleshoot various aspects of Active Directory Federation Services (AD FS) sign-in from an extranet.
 author: billmath
 ms.author: billmath
@@ -8,13 +8,13 @@ ms.date: 10/14/2024
 ms.topic: article
 ---
 
-# Users can't sign in using AD FS from an external network
+# Users can't sign in by using AD FS from an external network
 
-This article helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this article if users can't authenticate by using AD FS from an outside corpnet.
+This article helps to resolve sign-in issues with Active Directory Federation Services (AD FS) from an external network. Use this article if users can't authenticate by using AD FS from an outside corporate network.
 
 ## Check extranet access
 
-Check to see if you can authenticate to the AD FS servers from the Web Application Proxy (WAP).
+Check to see if you can authenticate to the AD FS servers from Web Application Proxy (WAP).
 
 The `IdpInitiatedSignOn` parameter can quickly verify if AD FS is up and running, and if authentication is working correctly.
 
@@ -47,12 +47,12 @@ If you have WAP servers:
 - Check that the firewall isn't blocking traffic between AD FS and the load balancer, and between the WAP and the load balancer.
 - Check if the probe is enabled.
 - Check if you're running Windows Server 2012 R2. Confirm that the August 2014 Windows Server 2012 R2 Update rollup (KB.2975719) is installed.
-- Check if port `80` is enabled in the firewall on the WAP and AD FS servers.
-- Ensure that the probe is set for port `80` and the endpoint `/adfs/probe`.
+- Check if port 80 is enabled in the firewall on the WAP and AD FS servers.
+- Ensure that the probe is set for port 80 and the endpoint `/adfs/probe`.
 
 ### Firewall
 
-Both the firewall located between the WAP and the federation server farm and the firewall between the clients and the WAP must have TCP port `443` enabled inbound.
+Both the firewall located between the WAP and the federation server farm and the firewall between the clients and the WAP must have TCP port 443 enabled inbound.
 
 ## Check if the endpoint is enabled
 
@@ -122,7 +122,7 @@ if ( $certbindingissuedetected -eq $FALSE ) { Write-Host "Check Passed: No certi
 
 function checkadfstrusteddevicesstore()
 {
-# check for CA-issued (nonself-signed) certs in the AdfsTrustedDevices cert store
+# Check for CA-issued (non-self-signed) certificates in the AdfsTrustedDevices certificate store
 Write-Host; Write-Host "2 Checking AdfsTrustedDevices cert store for nonself signed certificates"
 $certlist = Get-Childitem cert:\LocalMachine\AdfsTrustedDevices -recurse | Where-Object {$_.Issuer -ne $_.Subject}
 if ( $certlist.count -gt 0 )
@@ -273,7 +273,7 @@ If the user has Microsoft Entra Connect Sync installed, use the Microsoft Entra 
 
 The `AdfsTrustedDevices` store should contain only the MS-Organization-Access certificate, which is the self-signed certificate used for issuing Workplace Join certificates, and the Proxy Trust certificates for each of the WAP servers. Having a certificate issued by a Certificate Authority (CA) in a store where only self-signed certificates normally exist affects the CTL generated from this store. The CTL then contains only the CA-issued certificate.
 
-Delete the nonself-signed TLS/SSL server certificate from the `AdfsTrustedDevices` store.
+Delete the non-self-signed TLS/SSL server certificate from the `AdfsTrustedDevices` store.
 
 #### Is there a time skew between the AD FS and WAP servers?
 

@@ -1,5 +1,5 @@
 ---
-title: Active Directory Federation Services - offline tools
+title: Active Directory Federation Services - Offline Tools
 description: "List of downloadable tools that were previously made available through the Active Directory Federation Services Help site."
 author: billmath
 ms.author: billmath
@@ -8,9 +8,9 @@ ms.date: 09/26/2024
 ms.topic: article
 ---
 
-# Active Directory Federation Services - offline tools
+# Active Directory Federation Services: Offline tools
 
-The Active Directory Federation Services (AD FS) community and team created multiple tools that are available for download. You have different options to expand your toolbox that range from PowerShell scripts to standalone applications. This comprehensive list describes the downloadable tools that are currently available. Tooling is something that's an ongoing effort, so check back here for updates.
+The Active Directory Federation Services (AD FS) community and team created multiple tools that are available for download. You have different options to expand your toolbox that range from PowerShell scripts to standalone applications. This comprehensive list describes the downloadable tools that are currently available. Tooling is an ongoing effort, so check back here for updates.
 
 ## Offline tools available
 

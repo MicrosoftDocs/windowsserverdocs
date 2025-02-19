@@ -1,5 +1,5 @@
 ---
-title: AD FS troubleshooting - Microsoft Entra Connect Health data
+title: AD FS Troubleshooting - Microsoft Entra Connect Health Data
 description: Learn how to troubleshoot data freshness from the Microsoft Entra Connect Health agent for Active Directory Federation Services.
 author: billmath
 ms.author: billmath
@@ -8,9 +8,9 @@ ms.date: 10/14/2024
 ms.topic: article
 ---
 
-# Microsoft Entra Connect Health for AD FS data freshness alert troubleshooting steps
+# AD FS troubleshooting: Data freshness alert for Microsoft Entra Connect Health
 
-This article describes troubleshooting steps for the Microsoft Entra Connect Health for Active Directory Federation Services (AD FS) Data Freshness Alert: "Health service data is not up to date."
+This article describes troubleshooting steps for the Microsoft Entra Connect Health for Active Directory Federation Services (AD FS) data freshness alert: "Health service data is not up to date."
 
 ## Check if your AD FS security audits are enabled
 

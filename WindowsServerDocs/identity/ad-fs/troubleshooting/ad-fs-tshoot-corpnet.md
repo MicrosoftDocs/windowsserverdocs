@@ -1,6 +1,6 @@
 ---
-title: AD FS Troubleshooting - users can't sign in using AD FS from inside corpnet
-description: Learn how to troubleshoot various aspects of Active Directory Federation Services sign-in from inside corpnet.
+title: AD FS Troubleshooting - Corporate Network Sign-In
+description: Learn how to troubleshoot various aspects of Active Directory Federation Services (AD FS) sign-in from inside the corporate network.
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -8,9 +8,9 @@ ms.date: 01/23/2025
 ms.topic: article
 ---
 
-# Users can't sign in using AD FS from inside corpnet
+# Users can't sign in by using AD FS from inside the corporate network
 
-This article resolves sign-in issues with Active Directory Federation Services (AD FS) inside corpnet. It doesn't cover seamless SSO/unexpected prompt configuration or troubleshooting of sign-in that happens via the Web Application Proxy (WAP).
+This article resolves sign-in issues with Active Directory Federation Services (AD FS) inside the corporate network. It doesn't cover seamless single sign-on/unexpected prompt configuration or troubleshooting of sign-in that happens via Web Application Proxy (WAP).
 
 ## Check AD FS servers
 
@@ -33,7 +33,7 @@ If you have WAP servers:
 
 ### Load balancer
 
-- Check that the firewall isn't blocking traffic between AD FS and the load balancer, and between the WAP and the load balancer.
+- Check that the firewall isn't blocking traffic between AD FS and the load balancer, and between WAP and the load balancer.
 - Check if the probe is enabled.
 - Check if you're running Windows Server 2012 R2. Confirm that the August 2014 Windows Server 2012 R2 Update rollup (KB.2975719) is installed.
 - Check if port 80 is enabled in the firewall on the WAP and AD FS servers.
@@ -41,9 +41,9 @@ If you have WAP servers:
 
 ### Firewall
 
-Both the firewall located between the WAP and the federation server farm and the firewall between the clients and the WAP must have TCP port 443 enabled inbound.
+Both the firewall located between WAP and the federation server farm and the firewall between the clients and WAP must have TCP port 443 enabled inbound.
 
-Client Transport Layer Security (TLS) authentication using X509 user certificates might be required. If this client user certificate authentication is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 is enabled inbound on the firewall between the clients and the WAP. This configuration isn't required on the firewall between the WAP and the federation servers.
+Client Transport Layer Security (TLS) authentication using X509 user certificates might be required. If this client user certificate authentication is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 is enabled inbound on the firewall between the clients and WAP. This configuration isn't required on the firewall between WAP and the federation servers.
 
 ## Check the TLS/SSL certificate for corpnet access
 
@@ -63,7 +63,7 @@ The certificate subject name can be the same as your AD FS server name.
 
 ### Is the certificate revoked?
 
-Check for certificate revocation. If the certificate is revoked or the revocation list can't be reached, the TLS/SSL connection can't be trusted and clients block it.
+Check for certificate revocation. If the certificate is revoked or you can't reach the revocation list, the TLS/SSL connection can't be trusted and clients block it.
 
 ### Ensure that the certificate is installed on all AD FS and WAP servers certificate stores
 
@@ -81,9 +81,9 @@ If the thumbprint of the TLS/SSL certificate already configured doesn't match th
 
 ### Ensure that the certificate is set as the Service Communication certificate
 
-The TLS/SSL certificate also needs to be the service communication certificate in your AD FS farm. This setup doesn't happen automatically. To do this step, select **MMC** > **Certificates** > **Set Service Communications Certificate**. If the Service Communication certificate isn't set properly, use the Microsoft Management Console (MMC) to set the correct certificate and follow these steps to set correct permissions on the new certificate.
+The TLS/SSL certificate also needs to be the Service Communication certificate in your AD FS farm. This setup doesn't happen automatically. To do this step, select **MMC** > **Certificates** > **Set Service Communications Certificate**. If the Service Communication certificate isn't set properly, use the Microsoft Management Console (MMC) to set the correct certificate and follow these steps to set correct permissions on the new certificate.
 
- 1. Add the Certificates snap-in to the Microsoft Management Console, and select **Computer account** > **Next**. Then select **Local computer** > **Finish**.
+ 1. Add the Certificates snap-in to the MMC, and select **Computer account** > **Next**. Then select **Local computer** > **Finish**.
  1. Expand **Certificates (Local Computer)**, expand **Personal**, and select **Certificates**.
  1. Right-click your new TLS/SSL and Service Communications certificate, and select **All Tasks** > **Manage Private Keys**.
  1. Select **Add**.
