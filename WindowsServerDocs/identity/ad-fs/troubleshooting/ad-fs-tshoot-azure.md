@@ -123,17 +123,18 @@ After AD FS issues a token, Microsoft Entra ID might throw an error. In this sit
 
 - The claims that AD FS issues in the token should match the respective attributes of the user in Microsoft Entra ID.
 - The token for Microsoft Entra ID should contain the following required claims:
-    - **WSFED**:
-        - **UPN**: The value of this claim should match the user principal name (UPN) of the users in Microsoft Entra ID.
-        - **ImmutableID**: The value of this claim should match the `sourceAnchor` or `ImmutableID` attributes of the user in Microsoft Entra ID.
 
-To get the `User` attribute value in Microsoft Entra ID, run the following command line: `Get-AzureADUser –UserPrincipalName <UPN>`
+  - **WSFED**:
+    - **UPN**: The value of this claim should match the user principal name (UPN) of the users in Microsoft Entra ID.
+    - **ImmutableID**: The value of this claim should match the `sourceAnchor` or `ImmutableID` attributes of the user in Microsoft Entra ID.
 
-![Screenshot that shows the PowerShell pane showing the results of the Get-AzureADUser command.](media/ad-fs-tshoot-azure/azure5.png)
+    To get the `User` attribute value in Microsoft Entra ID, run the following command line: `Get-AzureADUser –UserPrincipalName <UPN>`
 
-   - **SAML 2.0**:
-       - **IDPEmail**: The value of this claim should match the UPN of the users in Microsoft Entra ID.
-       - **NAMEID**: The value of this claim should match the `sourceAnchor` or `ImmutableID` attributes of the user in Microsoft Entra ID.
+    ![Screenshot that shows the PowerShell pane showing the results of the Get-AzureADUser command.](media/ad-fs-tshoot-azure/azure5.png)
+
+  - **SAML 2.0**:
+    - **IDPEmail**: The value of this claim should match the UPN of the users in Microsoft Entra ID.
+    - **NAMEID**: The value of this claim should match the `sourceAnchor` or `ImmutableID` attributes of the user in Microsoft Entra ID.
 
 For more information, see [Use a SAML 2.0 identity provider to implement single sign-on](/previous-versions/azure/azure-services/dn641269(v=azure.100)).
 
