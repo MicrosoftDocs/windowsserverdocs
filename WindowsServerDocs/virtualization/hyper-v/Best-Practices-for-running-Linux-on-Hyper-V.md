@@ -1,15 +1,15 @@
 ---
 title: Best Practices for running Linux on Hyper-V
-description: Provides recommendations for running Linux on a virtual machine
+description: Provides recommendations and best practices for running Linux on a virtual machine on Hyper-V in Windows Server.
 ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 01/08/2021
+ms.date: 02/19/2025
 ---
 # Best Practices for running Linux on Hyper-V
 
-This topic contains a list of recommendations for running Linux virtual machine on Hyper-V.
+This article has a list of recommendations for running Linux virtual machine on Hyper-V.
 
 ## Tuning Linux File Systems on Dynamic VHDX Files
 
@@ -32,7 +32,7 @@ PS > New-VHD -Path C:\MyVHDs\test.vhdx -SizeBytes 127GB -Dynamic -BlockSizeBytes
 
 ## Grub Menu Timeout on Generation 2 Virtual Machines
 
-Because of legacy hardware being removed from emulation in Generation 2 virtual machines, the grub menu countdown timer counts down too quickly for the grub menu to be displayed, immediately loading the default entry. Until grub is fixed to use the EFI-supported timer, modify **/boot/grub/grub.conf**, /**etc/default/grub**, or equivalent to have "timeout=100000" instead of the default "timeout=5".
+Because of legacy hardware being removed from emulation in Generation 2 virtual machines, the grub menu countdown timer counts down too quickly for the grub menu to be displayed, immediately loading the default entry. Until grub is fixed to use the EFI-supported timer, modify **/boot/grub/grub.conf**, /**etc/default/grub**, or equivalent to have **"timeout=100000"** instead of the default **"timeout=5"**.
 
 ## PxE Boot on Generation 2 Virtual Machines
 
@@ -42,7 +42,7 @@ On RHEL 6.x, the legacy grub v0.97 EFI bootloader can be used instead of grub2 a
 
 On Linux distributions other than RHEL 6.x, similar steps can be followed to configure grub v0.97 to load Linux kernels from a PxE server.
 
-Additionally, on RHEL/CentOS 6.6 keyboard and mouse input will not work with the pre-install kernel which prevents specifying installation options in the menu. A serial console must be configured to allow choosing installation options.
+Additionally, on RHEL/CentOS 6.6 keyboard and mouse input won'tt work with the pre-install kernel which prevents specifying installation options in the menu. A serial console must be configured to allow choosing installation options.
 
 * In the **efidefault** file on the PxE server, add the following kernel parameter **"console=ttyS1"**
 
@@ -50,7 +50,6 @@ Additionally, on RHEL/CentOS 6.6 keyboard and mouse input will not work with the
 
 ```Powershell
 Set-VMComPort -VMName <Name> -Number 2 -Path \\.\pipe\dbg1
-
 ```
 
 Specifying a kickstart file to the pre-install kernel would also avoid the need for keyboard and mouse input during installation.
@@ -65,7 +64,7 @@ Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific netw
 
 ## Use I/O scheduler noop/none for better disk I/O performance
 
-The Linux kernel offers two sets of disk I/O schedulers to reorder requests.  One set is for the older ‘blk’ subsystem and one set is for the newer ‘blk-mq’ subsystem. In either case, with today’s solid state disks it is recommended to use a scheduler that passes the scheduling decisions to the underlying Hyper-V hypervisor. For Linux kernels using the ‘blk’ subsystem, this is the “noop” scheduler. For Linux kernels using the ‘blk-mq’ subsystem, this is the “none” scheduler.
+The Linux kernel offers two sets of disk I/O schedulers to reorder requests.  One set is for the older ‘blk’ subsystem and one set is for the newer ‘blk-mq’ subsystem. In either case, with today’s solid state disks it is recommended to use a scheduler that passes the scheduling decisions to the underlying Hyper-V hypervisor. For Linux kernels using the 'blk' subsystem, this is the "noop" scheduler. For Linux kernels using the 'blk-mq' subsystem, this is the "none" scheduler.
 
 For a particular disk, the available schedulers can be seen at this file system location: /sys/class/block/`<diskname>`/queue/scheduler, with the currently selected scheduler in square brackets. You can change the scheduler by writing to this file system location. The change must be added to an initialization script in order to persist across reboots. Consult your Linux distro documentation for details.
 
@@ -83,7 +82,7 @@ Hyper-V allows shrinking virtual disk (VHDX) files without regard for any partit
 
 After resizing a VHD or VHDX, administrators should use a utility like fdisk or parted to update the partition, volume, and file system structures to reflect the change in the size of the disk. Shrinking or expanding the size of a VHD or VHDX that has a GUID Partition Table (GPT) will cause a warning when a partition management tool is used to check the partition layout, and the administrator will be warned to fix the first and secondary GPT headers. This manual step is safe to perform without data loss.
 
-## Additional References
+## Additional references
 
 * [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 
