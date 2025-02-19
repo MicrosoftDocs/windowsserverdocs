@@ -58,7 +58,7 @@ To enforce an authentication method, use one of the following methods:
   
    When the enforced authentication method is sent with an incorrect value, or if that authentication method isn't supported on AD FS or STS, you receive an error message before you're authenticated.
 
-|Method of authentication wanted|wauth URI|
+|Method of authentication wanted|WAUTH URI|
 |-----|-----|
 |User name and password authentication|`urn:oasis:names:tc:SAML:1.0:am:password`|
 |Secure Sockets Layer (SSL) client authentication|`urn:ietf:rfc:2246`|
