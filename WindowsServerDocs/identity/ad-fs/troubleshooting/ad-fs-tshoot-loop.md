@@ -16,7 +16,7 @@ Looping in Active Directory Federation Services (AD FS) occurs when a relying pa
 
 To prevent this problem from happening, AD FS implemented a loop detection cookie. By default, AD FS writes a cookie to web passive clients named `MSISLoopDetectionCookie`. This cookie holds a timestamp value and a value for the number of tokens issued. This information allows AD FS to keep track of how often and how many times a client visited the federation service within a specific timespan.
 
-If a passive client visits the federation service for a token five (5) times within 20 seconds, AD FS throws the following error:
+If a passive client visits the federation service for a token five times within 20 seconds, AD FS throws the following error:
 
 `MSIS7042: The same client browser session has made '{0}' requests in the last '{1}' seconds. Contact your administrator for details.`
 
