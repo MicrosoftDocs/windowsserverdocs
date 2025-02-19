@@ -4,7 +4,7 @@ description: Learn how to install and configure the Certificate Enrollment Web S
 author: meaghanlewis
 ms.topic: how-to
 ms.author: mosagie
-ms.date: 02/12/2025
+ms.date: 02/19/2025
 
 #customer intent: As an IT administrator, I want to install and configure the Certificate Enrollment Web Service so that users and computers can securely enroll for certificates.
 ---
@@ -15,19 +15,17 @@ The Certificate Enrollment Web Service is an Active Directory Certificate Servic
 
 Together with the Certificate Enrollment Policy Web Service, this enables policy-based automatic certificate enrollment for users and computers.
 
-This article describes how to install the Certificate Enrollment Web Service and configuration options.
+This article describes how to configure the Certificate Enrollment Web Service.
 
 ## Prerequisites
 
-The prerequisites for installing and using the Certificate Enrollment Web Service are:
+- The Certificate Enrollment Web Service role is installed. A couple notes about installation:
 
-- The administrator who performs the installation must be a member of the Enterprise Admins group.
+  - The administrator who performs the installation must be a member of the Enterprise Admins group.
 
-- The administrator who installs the Certificate Enrollment Web Service must have Request Certificates permissions on the target certification authority (CA).
+  - The administrator who installs the Certificate Enrollment Web Service must have Request Certificates permissions on the target certification authority (CA).
 
-- The computer on which the Certificate Enrollment Web Service will be installed must be a member of the domain.
-
-- An AD DS forest.
+  - The computer on which the Certificate Enrollment Web Service will be installed must be a member of the domain.
 
 - An enterprise certification authority (CA) on a computer running Windows Server.
 
@@ -36,22 +34,11 @@ The prerequisites for installing and using the Certificate Enrollment Web Servic
 - A Server Authentication certificate installed for HTTPS.
 
 > [!NOTE]
-> The Web Server (IIS) role service with the Microsoft .NET Framework are automatically added during the Certificate Enrollment Web Services installation, if they aren't already installed.
-
-## Install the Certificate Enrollment Web Service role
-
-1. Open Server Manager.
-1. Select Manage > Add Roles and Features.
-1. In the Add Roles and Features Wizard, choose your Installation Type, and Server Selection.
-1. Next, select server roles. Select Active Directory Certificate Services, then Certificate Enrollment Web Service.
-1. Select Add Features. Then Next.
-1. Confirm the rest of the details, and select Install.
-1. Wait for the role to install
-1. Repeat the same set of steps to install the role Certificate Enrollment Policy Web Service.
+> The Web Server (IIS) role service with the Microsoft .NET Framework are automatically added during the Certificate Enrollment Web Service installation, if they aren't already installed.
 
 ## Certificate Enrollment Web Service configuration
 
-After the Certificate Enrollment Web Service is installed, it must be configured. Open the AD CS Configuration wizard, and walk through the steps to complete the configuration. Provide credentials, select confirm the role services to configure, then confirm the details.
+After the Certificate Enrollment Web Service is installed, it must be configured. The following sections describe how to complete configuration.
 
 ### Configure the CA role service
 
