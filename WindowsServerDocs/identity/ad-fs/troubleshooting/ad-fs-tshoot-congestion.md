@@ -64,7 +64,7 @@ You can use the system performance counters to review the load on each AD FS ser
 
 1. Open Performance Monitor.
 1. Add the `\AD FS\Token Request/Sec` counter.
-1. Review the **Average values for Token Requests/sec** and **% Processor Time**.
+1. Review **Average values for Token Requests/sec** and **% Processor Time**.
 
 The **Average values for Token requests/sec** values should be within the expected range for your hardware. The **% Processor Time** value should be less than 90%. If these values are exceeded, the farm is likely receiving more traffic than the hardware can handle. You might need to increase the farm capacity by adding more AD FS servers to the farm. You can also remove the unnecessary traffic.
 
