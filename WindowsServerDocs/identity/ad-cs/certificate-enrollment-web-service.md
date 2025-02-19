@@ -1,4 +1,4 @@
-﻿---
+---
 title: Certificate Enrollment Web Service overview
 description: Learn about the Certificate Enrollment Web Service, including authentication types, load balancing, and configuration options.
 author: meaghanlewis
@@ -46,9 +46,9 @@ The simplest form of authentication is username and password. This method typica
 
 ## Planning load balancing and fault tolerance
 
-When planning your Certificate Enrollment Web Service implementation, it's important to know that the single biggest factor affecting throughput according to extensive performance testing by Microsoft is network latency. Rather than relying on network load balancing (NLB) technologies, the Certificate Enrollment Policy Web Service and Certificate Enrollment Web Service client components have load balancing and fault tolerance logic built in. For example, the clients automatically randomize the list of endpoints they're provided and attempt to iterate through the list if the first endpoint is unresponsive. As long as multiple uniform resource identifiers (URIs) are published, basic load balancing and fault tolerance is built-in.
+When planning your Certificate Enrollment Web Service implementation, it's important to know that the single biggest factor affecting throughput according to extensive performance testing by Microsoft is network latency. Rather than relying on network load balancing (NLB) technologies, the Certificate Enrollment Policy Web Service and Certificate Enrollment Web Service client components have load balancing and fault tolerance logic built in. For example, the clients automatically randomize the list of endpoints they're provided and attempt to iterate through the list if the first endpoint is unresponsive. As long as multiple uniform resource identifiers (URIs) are published, basic load balancing and fault tolerance is built in.
 
-NLB shouldn't be used to provide fault tolerance or high availability because NLB could route traffic to a host where the policy or web service is stopped or unavailable. If all endpoints are published behind a single NLB balanced URI, the built-in client logic wouldn't be able to try the next URI, which results in a less fault tolerant solution than if no special load balancing was used at all.
+NLB shouldn't be used to provide fault tolerance or high availability because NLB could route traffic to a host where the policy or web service is stopped or unavailable. If all endpoints are published behind a single NLB balanced URI, the built in client logic wouldn't be able to try the next URI, which results in a less fault tolerant solution than if no special load balancing was used at all.
 
 General best practices for load balancing the policy and enrollment web services include:
 
@@ -66,7 +66,7 @@ The most simple deployment scenario involves a single forest with intranet conne
 
 ### Intranet with multiple forests
 
-A more advanced intranet scenario involves multiple forests with centralized issuing services in only one (or some) of them. In this design, the forests are connected with a two-way forest trust and the CA and the certificate enrollment web services are hosted in the same forest. The advantages of this model are that it provides for a high degree of consolidation in multiple forest environments. In the past, each forest required its own CA for auto-enrollment, now all PKI services are centralized, potentially resulting in a large reduction of the total number of CAs required. Again, because this is an intranet scenario, the most common authentication scheme is either Kerberos or NTLM.
+A more advanced intranet scenario involves multiple forests with centralized issuing services in only one (or some) of them. In this design, the forests are connected with a two-way forest trust and the CA and the certificate enrollment web services are hosted in the same forest. The advantages of this model are that it provides for a high degree of consolidation in multiple forest environments. In the past, each forest required its own CA for autoenrollment, now all PKI services are centralized, potentially resulting in a large reduction of the total number of CAs required. Again, because this is an intranet scenario, the most common authentication scheme is either Kerberos or NTLM.
 
 ### Perimeter network & branch office
 
@@ -78,7 +78,7 @@ A Read Only Domain Controller (RODC) can optionally be used. The external client
 
 For the Certificate Enrollment Web Service to be able to request certificates from a CA, it needs to delegate the call to the CA while impersonating the caller. This means that the Certificate Enrollment Web Service account should have delegation enabled. For internet facing Certificate Enrollment Web Service endpoints, this may not be preferred because it represents an increased level of exposure to internet based threats.
 
-To mitigate this risk, renewal-only mode allows the Certificate Enrollment Web Service to process only certificate renewal requests without delegation enabled. The Certificate Enrollment Web Service uses the original certificate, provisioned from within the internal network, to authenticate the renewal request sent over the internet. The Certificate Enrollment Web Service then submits the request to the CA under its own credential, and the CA will renew the certificate based on the Active Directory information of the requester of the original certificate and/or the subject information in the original certificate. In this mode, new certificate enrollment requests are denied by the Certificate Enrollment Web Service and will never reach the CA.
+To mitigate this risk, renewal-only mode allows the Certificate Enrollment Web Service to process only certificate renewal requests without delegation enabled. The Certificate Enrollment Web Service uses the original certificate, provisioned from within the internal network, to authenticate the renewal request sent over the internet. The Certificate Enrollment Web Service then submits the request to the CA under its own credential, and the CA will renew the certificate based on the Active Directory information of the requester of the original certificate and/or the subject information in the original certificate. In this mode, new certificate enrollment requests are denied by the Certificate Enrollment Web Service, and will never reach the CA.
 
 From a network design perspective, this scenario combines both the internal and perimeter network models discussed previously.
 
