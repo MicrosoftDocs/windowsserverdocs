@@ -11,6 +11,7 @@ ms.date: 01/06/2020
 Here's a listing of our latest released features:
 
 - Version [2410](https://aka.ms/wac2410) is the most recently available (GA) release - it includes an upgrade of the backend from .NET 4.6.2 to .NET 8, improvements to the virtual machines and security tools, and many improvements and bugfixes.
+- Version 2410.2. is the most recently recently available (GA) release - includes major bug fixes during installation and when adding a new server on the “All Connections" page. With this software release, we updated the Microsoft Software License Terms for Windows Admin Center. By using the updated software, you accept these terms. [https://aka.ms/wac-product-ga-eula]( https://aka.ms/wac-product-ga-eula).
 - Version [2311](https://aka.ms/wac2311) includes an Angular 15 upgrade, improvements to the Import VM experience, Azure Arc at-scale onboarding, and a new Azure Migrate assessment experience.
 - Version [2306](https://aka.ms/wac2306) includes the WDAC-enabled infra GA, new Hyper-V features and improvements, the long awaited cluster-aware event viewer, as well as a plethora of bug fixes and improvements.
 - Version [2211](https://aka.ms/wac2211) includes support for 400% zoom and WDAC-enabled infrastructure, improvements to Azure Local management features, as well as bug fixes and updates in several extensions.
