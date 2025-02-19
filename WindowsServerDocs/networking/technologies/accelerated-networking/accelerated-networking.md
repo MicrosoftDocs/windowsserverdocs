@@ -1,16 +1,17 @@
 ---
-title: Accelerated Networking at the Edge (preview)
-description: How to set up and validate Accelerated Networking on your VMs.
-ms.topic: article
+title: Accelerated Networking (preview) for Windows Server
+description: How to set up and validate Accelerated Networking on your virtual machines using PowerShell and Windows Admin Center.
+ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 11/01/2024
+ms.date: 02/20/2025
 ---
-# Accelerated Networking at the Edge (preview)
+
+# Accelerated Networking (preview)
 
 > [!IMPORTANT]
 > Accelerated Networking is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> This information relates to a prerelease product that might be substantially modified before release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Accelerated Networking enables single root input-output (I/O) virtualization (SR-IOV) on supported virtual machine (VM) types, greatly improving networking performance. Accelerated Networking lets network traffic bypass the software switch layer of Hyper-V virtualization stacks. Because Accelerated Networking assigns the virtual function (VF) to a child partition, the network traffic flows directly between the VF and child partition. As a result, the I/O overhead in the software emulation layer shrinks until network performance becomes almost the same as physical, on-premises environments.
 
@@ -34,247 +35,147 @@ Accelerated Networking also adds an extra management layer with the following fe
 
 - Simplified VM performance settings that show overall performance as Low, Medium, and High to make configuration easier.
 
-These features make Accelerated Networking useful for environments that require high-performance computing (HPC) for intensive computational tasks, real-time applications like financial trading platforms, or deployments that use Network Function Virtualization (NFV) to work around limits on network throughput.
+These features make Accelerated Networking useful for environments that require high-performance computing (HPC). It's ideal for intensive computational tasks and real-time applications like financial trading platforms. Additionally, it benefits deployments that use Network Function Virtualization (NFV) to work around limits on network throughput.
 
 ## Prerequisites
 
-Your deployment needs to meet the following prerequisites in order to be able to set up and use Accelerated Networking:
+Your deployment needs to meet the following prerequisites in order to use Accelerated Networking:
 
-- You must set up a functioning cluster on a deployment running Windows Server 2025 Datacenter edition.
+- You must set up a functioning cluster running Windows Server 2025 Datacenter Edition.
 
-  >[!NOTE]
-  >Non-clustered single servers and Windows Server Standard edition don't support Accelerated Networking.
+  > [!NOTE]
+  > Single servers that aren't clustered and Windows Server Standard Edition don't support Accelerated Networking.
 
-- Your hardware must support SR-IOV and you must enable SR-IOV in the BIOS. You may need to contact your hardware vendor to see if your machine supports SR-IOV.
+- You must install the **Network ATC** feature. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features) and configure a valid Compute intent before you enable Accelerated Networking.
 
-- You must [install Network ATC](/azure/azure-local/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server&tabs=22H2) and configure a valid Compute intent before you enable Accelerated Networking.
+  *Alternatively*, you can run the following command to install this feature:
 
-- You must have a network interface card (NIC) that supports SR-IOV.
+  ```powershell
+  Install-WindowsFeature -Name NetworkATC
+  ```  
 
-  - Run the following cmdlet to enable SR-IOV on your NIC if you haven't already:
+- Your network interface card (NIC) must support SR-IOV and SR-IOV enabled in the BIOS. You might need to contact your hardware vendor to see if your machine supports SR-IOV. Run the following cmdlet to enable SR-IOV on your NIC:
 
-    ```powershell
-    Enable-NetAdapterSriov
-    ```
+  ```powershell
+  Enable-NetAdapterSriov
+  ```
 
-  - You may also need to expose the Virtual Functions in the BIOS.
+  - Virtualization must be enabled in the BIOS. Review your hardware vendor guide on setting this feature.
 
->[!NOTE]
->The public preview version of Accelerated Networking currently doesn't support the following scenarios:
+## Configure Accelerated Networking
+
+To configure Accelerated Networking on your device, open an elevated PowerShell window and run the following commands.
+
+# [Enable](#tab/enable)
+
+Run the following cmdlet to ensure your system meets all prerequisite requirements:
+
+```powershell
+Get-AccelNetManagementPreReq
+```
+
+Run the following command to enable Accelerated Networking on a cluster:
+
+```powershell
+Enable-AccelNetManagement -IntentName "MyIntent" -NodeReservePercentage
+```
+
+> [!NOTE]
+> The `-IntentName` parameter is required.
 >
->- Switch Embedded Teaming (SET) NICs. You can only use one NIC at a time.
->
->- Network HUD support
->
->- Windows Admin Center management of Accelerated Networking
+> If you leave the `NodeReservePercentage` value blank, the system defaults to 50%. This value must be an integer greater than or equal to **0** and less than or equal to **99**.
 
-## Enable Accelerated Networking on a cluster
+Run the following command to enable Accelerated Networking on a VM set to high performance:
 
-To enable Accelerated Networking on a cluster:
+```powershell
+Enable-AccelNetVM -VMName "MyVM" -Performance High
+```
 
-1. Open an elevated PowerShell window as an administrator.
+The `-VMName` and `-Performance` parameters are required. You can set the performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status as shown in the following table:
 
-1. Run the following cmdlet to make sure your system meets all prerequisite requirements:
+| Hyperthreading configuration | Performance setting | Minimum vCPUs required |
+|---|---|---|
+| Disabled | Low | 2 |
+| Disabled | Medium | 2 |
+| Disabled | High | 4 |
+| Enabled | Low | 4 |
+| Enabled | Medium | 4 |
+| Enabled | High | 4 |
 
-   ```powershell
-   Get-AccelNetManagementPreReq
-   ```
+To enable Accelerated Networking for multiple VMs to run in low performance, run the following command:
 
-1. Go to any node that's on the cluster where you want to enable Accelerated Networking.
+```powershell
+Get-VM -VMName "MyVM01, MyVM02" | Enable-AccelNetVM -Performance Low
+```
 
-1. Run the following command to enable Accelerated Networking:
+# [Disable](#tab/disable)
 
-   ```powershell
-   Enable-AccelNetManagement -IntentName "MyIntent" -NodeReservePercentage
-   ```
+Run the following cmdlet to disable Accelerated Networking on a cluster:
 
-   >[!NOTE]
-   > The `-IntentName` parameter is required.
-   >
-   >If you leave the `NodeReservePercentage` value blank, the system defaults to 50%. This value must be an integer greater than or equal to 0 and less than or equal to 99.
+```powershell
+Disable-AccelNetManagement 
+```
 
-## Change Accelerated Networking settings on a cluster
+After you disable Accelerated Networking on the cluster, the Network HUD no longer monitors the health of the feature.
 
-To change Accelerated Networking settings on a cluster:
+> [!NOTE]
+> Disabling Accelerated Networking at the cluster level doesn't alter the settings on individual VMs. These VMs cease to be managed by Accelerated Networking and won't be monitored by the Network HUD.
 
-On a node with Accelerated Networking enabled, run the following command with the values for the new intent and node reserve:
+Run the following command to disable Accelerated Networking on a VM:
+  
+```powershell
+Disable-AccelNetVM -VMName "MyVM"
+```
+
+To disable Accelerated Networking for multiple VMs, run the following command:
+
+```powershell
+Get-VM -VMName "MyVM01, MyVM02" | Disable-AccelNetVM
+```
+
+# [Configure](#tab/configure)
+
+To configure Accelerated Networking on a cluster, go to your node and run the following command with the values for the new intent and node reserve:
 
 ```powershell
 Set-AccelNetManagement -IntentName "MyIntent" -NodeReservePercentage
 ```
 
-## Disable Accelerated Networking on a cluster
+Run the following command to configure your VM to run in medium performance:
 
-To disable Accelerated Networking on a cluster:
+```powershell
+Set-AccelNetManagement -VMName "MyVM" -Performance Medium
+```
 
-1. In a PowerShell window, go to any node in the cluster you want to disable Accelerated Networking for.
+---
 
-1. Run the following cmdlet to disable Accelerated Networking on the cluster:
+To learn more about the Accelerated Networking PowerShell cmdlets, see the [FailoverClusters](/powershell/module/failoverclusters) module set.
 
-   ```powershell
-   Disable-AccelNetManagement 
-   ```
+## Known PowerShell errors
 
-After you disable Accelerated Networking on the cluster, the Network HUD no longer monitors the health of the feature.
+You might encounter the following error messages while using this feature.
 
->[!NOTE]
->Disabling Accelerated Networking at the cluster doesn't change setting configurations on the VMs. VMs are no longer managed by Accelerated Networking or tracked by the Network HUD.
+| Error | Description | Resolution |
+| --- | --- | --- |
+| Accel_net_not_supported | Node {0} does not support Accelerated Networking. Windows Server 2025 or later is required. | To resolve this issue, your device must be running the latest version of Windows Server 2025. |
+| cannot_provision_performance | Cannot provision {0} on this system. | To resolve this issue, select a different Performance option or update your network adapters. |
+| cluster_not_enough_resources | The cluster does not have enough SRIOV resources to enable VM {0}. | To resolve this issue, either lower the **NodeReservePercentage** value, select a different Performance option, or increase the number of SRIOV resources in your cluster. |
+| enable_accel_net_failed | Failed to enable Accelerated Networking on the cluster {0}. | To resolve this issue, make sure you're using a valid Pay-as-you-go subscription license. |
+| Get_network_adapter_failed | Failed to get network adapters for VM {0}. | To resolve this issue, make sure the VM has at least one network adapter. |
+| ht_enabled_min_processor_counter | The minimum required processor count for requested performance with hyperthreading enabled/disabled is {0}. | To resolve this issue, add more vCPUs to the VM in order to meet the requirements. |
+| Hyperthreading_check_failed | Hyperthreading validation: Failed. There is an inconsistency across the cluster. Either disable or enable hyperthreading on all nodes. | To resolve this issue, make sure the hyperthreading configuration is consistent for every node in your cluster. |
+| Intent_not_found | Intent validation: Failed. Intent {0} not found. | To resolve this issue, make sure the intent name you entered is correct, then try again. |
+| Intent_type_check_failed | The selected intent {0} does not have Compute capabilities. | To resolve this issue, create or update an intent with the Compute state. |
+| Sriov_support_MissingAcs | Adapter {0} cannot be enabled for Accelerated Networking because it is in a PCIe slot that does not support Access Control Services (ACS). | To resolve this issue, either try moving the device to another PCIe slot or contact your hardware vendor. |
+| Sriov_support_MissingPfDriver | Adapter {0} cannot be enabled for Accelerated Networking because the device driver does not support SR-IOV. | To resolve this issue, update the driver. |
+| Sriov_support_NoBusResources | Adapter {0} cannot be enabled for Accelerated Networking because there are not enough PCI Express bus numbers available. | There are no known solutions for this issue at this time. |
+| Sriov_support_Unknown | Adapter {0} cannot be enabled for Accelerated Networking because it is not advertising SR-IOV Support. | To resolve this issue, make sure the computer hardware can support SR-IOV and that you enabled I/O virtualization in the BIOS. |
+| vm_not_enough_vcpus | VM {0} does not have enough vCPUs to enable Accelerated Networking with the specified performance. | There is no known way to resolve this issue at this time. |
 
-## Enable Accelerated Networking on a VM
+## See also
 
-To enable Accelerated Networking on a VM:
+- [Hyper-V overview](../../../virtualization/hyper-v/hyper-v-overview.md).
 
-1. Create a VM on a host in a cluster that has Accelerated Networking enabled.
+- [What are Azure Arc-enabled servers?](/azure/azure-arc/servers/overview)
 
-1. In a PowerShell window, go to the node containing the VM you want to enable Accelerated Networking.
-
-1. Run the following command to enable Accelerated Networking with high performance:
-
-   ```powershell
-   Enable-AccelNetVM -VMName "MyVM" -Performance High
-   ```
-
-   **VMName** and **Performance** are required parameters. You can set the performance value to Low, Medium, or High. Performance options have minimum vCPU requirements based on hyperthreading status, as shown in the following table:
-
-   | Hyperthreading configuration | Performance setting | Minimum vCPUs required |
-   |---|---|---|
-   | Disabled | Low | 2 |
-   | Disabled | Medium | 2 |
-   | Disabled | High | 4 |
-   | Enabled | Low | 4 |
-   | Enabled | Medium | 4 |
-   | Enabled | High | 4 |
-
-1. To enable Accelerated Networking for multiple VMs to run in low performance, run the following command:
-
-   ```powershell
-   Get-VM -VMName "MyVM01, MyVM02" | Enable-AccelNetVM -Performance Low
-   ```
-
-## Change Accelerated Networking settings on a VM
-
-To change the Accelerated Networking settings on a VM:
-
-1. Go to the node that contains the VMs you want to reconfigure.
-
-1. Run the following command to set your VM to run in medium performance:
-
-   ```powershell
-   Set-AccelNetManagement -VMName "MyVM" -Performance Medium
-   ```
-
-## Disable Accelerated Networking on a VM
-
-To disable Accelerated Networking on a VM:
-
-1. Go to the node that contains the VMs you want to disable Accelerated Networking for.
-
-1. Run the following command:
-  
-   ```powershell
-   Disable-AccelNetVM -VMName "MyVM"
-   ```
-
-1. To disable Accelerated Networking for multiple VMs, run the following command:
-
-   ```powershell
-   Get-VM -VMName "MyVM01, MyVM02" | Disable-AccelNetVM
-   ```
-
-## Known issues
-
-The following error messages are possible issues you may encounter while using this feature.
-
-### Accel_net_not_supported
-
-Node {0} does not support Accelerated Networking. Windows Server 2025 or later is required.
-
-To resolve this issue, update your OS to the latest version of Windows Server.
-
-### Hyperthreading_check_failed
-
-Hyperthreading validation: Failed. There is an inconsistency across the cluster. Either disable or enable hyperthreading on all nodes.
-
-To resolve this issue, make sure the hyperthreading configuration is consistent for every node in your cluster.
-
-### Intent_not_found
-
-Intent validation: Failed. Intent {0} not found.  
-
-To resolve this issue, make sure the intent name you entered is correct, then try again.
-
-### Intent_type_check_failed
-
-The selected intent {0} does not have Compute capabilities.
-
-To resolve this issue, create or update an intent with the Compute state.
-
-### Sriov_support_[KEY]
-
-#### Unknown
-
-Adapter {0} cannot be enabled for Accelerated Networking because it is not advertising SR-IOV Support.
-
-To resolve this issue, make sure the computer hardware can support SR-IOV and that you enabled I/O virtualization in the BIOS.
-
-#### MissingAcs
-
-Adapter {0} cannot be enabled for Accelerated Networking because it is in a PCIe slot that does not support Access Control Services (ACS).
-
-To resolve this issue, either try moving the device to another PCIe slot or contact your hardware vendor.
-
-#### MissingPfDriver
-
-Adapter {0} cannot be enabled for Accelerated Networking because the device driver does not support SR-IOV.
-
-To resolve this issue, update the driver.
-
-#### NoBusResources
-
-Adapter {0} cannot be enabled for Accelerated Networking because there are not enough PCI Express bus numbers available.
-
-There are no known solutions for this issue at this time.
-
-### Get_network_adapter_failed
-
-Failed to get network adapters for VM {0}.  
-
-To resolve this issue, make sure the VM has at least one network adapter.
-
-### ht_enabled_min_processor_counter
-
-The minimum required processor count for requested performance with hyperthreading enabled/disabled is {0}.
-
-To resolve this issue, add more vCPUs to the VM in order to meet the requirements.
-
-### cannot_provision_performance
-
-Cannot provision {0} on this system.
-
-To resolve this issue, select a different Performance option or update your network adapters.
-
-### enable_accel_net_failed
-
-Failed to enable Accelerated Networking on the cluster {0}.  
-
-To resolve this issue, make sure you're using a valid PayGo subscription license.
-
-### vm_not_enough_vcpus
-
-VM {0} does not have enough vCPUs to enable Accelerated Networking with the specified performance.
-
-There is no known way to resolve this issue at this time.
-
-### cluster_not_enough_resources
-
-The cluster does not have enough SRIOV resources to enable VM {0}.  
-
-To resolve this issue, either lower the NodeReservePercentage value, select a different Performance option, or increase the number of SRIOV resources in your cluster.
-
-## Next steps
-
-- For more information about virtualized networking, see [Hyper-V overview](../../../virtualization/hyper-v/hyper-v-overview.md).
-
-- For more information about Azure Arc-enabled servers, see [What are Azure Arc-enabled servers?](/azure/azure-arc/servers/overview)
-
-- For more information about high-performance networking (HPN), see [High-performance networking (HPN)](../hpn/hpn-top.md).
+- [High-performance networking (HPN)](../hpn/hpn-top.md).
