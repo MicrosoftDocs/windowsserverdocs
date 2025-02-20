@@ -56,15 +56,15 @@ Your deployment needs to meet the following prerequisites in order to use Accele
   Enable-NetAdapterSriov
   ```
 
-  - Virtualization must be enabled in the BIOS. Review your hardware vendor guide on setting this feature.
+- Virtualization must be enabled in the BIOS. Review your hardware vendor guide on setting this feature.
   
-  - You must use a Windows Server Pay-as-you-go subscription or [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) license types.
+- You must use a Windows Server Pay-as-you-go subscription or [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) license types.
 
-## Configure Accelerated Networking with PowerShell
+## Configure Accelerated Networking
 
-To configure Accelerated Networking on your device, open an elevated PowerShell window and run the following commands.
+To configure Accelerated Networking on your device, you can do so using an elevated PowerShell window, or through the Windows Admin Center.
 
-# [Enable](#tab/enable)
+# [PowerShell](#tab/powershell)
 
 Run the following cmdlet to ensure your system meets all prerequisite requirements:
 
@@ -103,8 +103,6 @@ The `-VMName` and `-Performance` parameters are required. You can set the perfor
 | Enabled | Medium | 4 |
 | Enabled | High | 4 |
 
-# [Disable](#tab/disable)
-
 Run the following cmdlet to disable Accelerated Networking on a cluster:
 
 ```powershell
@@ -128,8 +126,6 @@ To disable Accelerated Networking for multiple VMs, run the following command:
 Get-VM -VMName "MyVM01, MyVM02" | Disable-AccelNetVM
 ```
 
-# [Configure](#tab/configure)
-
 To configure Accelerated Networking on a cluster, go to your node and run the following command with the values for the new intent and node reserve:
 
 ```powershell
@@ -142,11 +138,9 @@ Run the following command to configure your VM to run in medium performance:
 Set-AccelNetManagement -VMName "MyVM" -Performance Medium
 ```
 
----
-
 To learn more about the Accelerated Networking PowerShell cmdlets, see the [FailoverClusters](/powershell/module/failoverclusters) module set.
 
-## Configure Accelerated Networking with Windows Admin Center
+# [Windows Admin Center](#tab/wac)
 
 To configure Accelerated Networking in Windows Admin Center, navigate to your cluster and follow these steps:
 
@@ -169,6 +163,8 @@ To change the performance settings on a single or multiple VMs, follow these ste
 1. On the same screen, select **Enabled virtual machines**, then select all the VMs where you want to change the performance setting.
 
 1. Select **Settings**, select your **Performance** level, then select **Apply**.
+
+---
 
 ## Known PowerShell errors
 
@@ -193,8 +189,8 @@ You might encounter the following error messages while using this feature.
 
 ## See also
 
-- [Hyper-V overview](../../../virtualization/hyper-v/hyper-v-overview.md).
+- [Hyper-V overview](../../../virtualization/hyper-v/hyper-v-overview.md)
 
 - [What are Azure Arc-enabled servers?](/azure/azure-arc/servers/overview)
 
-- [High-performance networking (HPN)](../hpn/hpn-top.md).
+- [High-performance networking (HPN)](../hpn/hpn-top.md)
