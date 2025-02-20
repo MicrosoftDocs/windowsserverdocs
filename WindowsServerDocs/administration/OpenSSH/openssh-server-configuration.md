@@ -67,7 +67,7 @@ There are other configuration settings possible that aren't listed here, as they
 
 > [!TIP]
 > The OpenSSH Server (sshd) reads the configuration file when the service starts. Any changes to the
-> configuration file requires the service to be restarted.
+> configuration file require the service to be restarted.
 
 ### AllowGroups, AllowUsers, DenyGroups, DenyUsers
 
