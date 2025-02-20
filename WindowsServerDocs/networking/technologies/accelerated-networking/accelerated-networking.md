@@ -10,8 +10,7 @@ ms.date: 02/20/2025
 # Accelerated Networking (preview)
 
 > [!IMPORTANT]
-> Accelerated Networking is currently in PREVIEW.
-> This information relates to a prerelease product that might be substantially modified before release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Accelerated Networking is currently in PREVIEW. This information relates to a prerelease product that might be substantially modified before release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 Accelerated Networking enables single root input-output (I/O) virtualization (SR-IOV) on supported virtual machine (VM) types, greatly improving networking performance. Accelerated Networking lets network traffic bypass the software switch layer of Hyper-V virtualization stacks. Because Accelerated Networking assigns the virtual function (VF) to a child partition, the network traffic flows directly between the VF and child partition. As a result, the I/O overhead in the software emulation layer shrinks until network performance becomes almost the same as physical, on-premises environments. Both single servers that aren't clustered and Windows Server Standard edition don't support Accelerated Networking.
 
@@ -115,7 +114,7 @@ Disable-AccelNetManagement
 After you disable Accelerated Networking on the cluster, the Network HUD no longer monitors the health of the feature.
 
 > [!NOTE]
-> Disabling Accelerated Networking at the cluster level doesn't alter the settings on individual VMs. These VMs cease to be managed by Accelerated Networking and won't be monitored by the Network HUD.
+> Disabling Accelerated Networking at the cluster level doesn't alter the settings on individual VMs. The Network HUD stops monitoring these VMs, and Accelerated Networking ceases to manage them.
 
 Run the following command to disable Accelerated Networking on a VM:
   
@@ -157,13 +156,13 @@ To configure Accelerated Networking in Windows Admin Center, navigate to your cl
 
    The next screen displays the Accelerated Networking status, intent, and node reserve used. If you need to make any changes to these settings, select **Cluster overview**, select **Settings**, make your adjustments, then select **Save**.
 
-1. On this same screen, if you wan't to disable Accelerated Networking on your cluster, select **Disable cluster-level accelerated networking**, then select **Disable Accelerated networking**.
+1. On this same screen, if you want to disable Accelerated Networking on your cluster, select **Disable cluster-level accelerated networking**, then select **Disable Accelerated networking**.
 
 To enable or disable Accelerated Networking on your VMs, you're given the option to perform this action on single or multiple VMs at once. On the same screen, perform the following steps:
 
-1. To disable one or more VMs, select **Enabled virtual machines**, select your VM(s), then select **Disable VM accelerated networking**.
+1. To disable one or more VMs, select **Enabled virtual machines**, select your VMs, then select **Disable VM accelerated networking**.
 
-1. To enable one or more VMs, select **Disabled virtual machines**, select your VM(s), select **Enable VM accelerated networking**, select the **Performance** level, then select **Enable**.
+1. To enable one or more VMs, select **Disabled virtual machines**, select your VMs, select **Enable VM accelerated networking**, select the **Performance** level, then select **Enable**.
 
 To change the performance settings on a single or multiple VMs, follow these steps:
 
@@ -187,7 +186,7 @@ You might encounter the following error messages while using this feature.
 | Intent_not_found | Intent validation: Failed. Intent {0} not found. | Make sure the intent name you entered is correct, then try again. |
 | Intent_type_check_failed | The selected intent {0} does not have Compute capabilities. | Create or update an intent with the Compute state. |
 | Sriov_support_MissingAcs | Adapter {0} cannot be enabled for Accelerated Networking because it is in a PCIe slot that does not support Access Control Services (ACS). | Either try moving the device to another PCIe slot or contact your hardware vendor. |
-| Sriov_support_MissingPfDriver | Adapter {0} cannot be enabled for Accelerated Networking because the device driver does not support SR-IOV. | UEnsure the drivers are updated. |
+| Sriov_support_MissingPfDriver | Adapter {0} cannot be enabled for Accelerated Networking because the device driver does not support SR-IOV. | Ensure the drivers are updated. |
 | Sriov_support_NoBusResources | Adapter {0} cannot be enabled for Accelerated Networking because there are not enough PCI Express bus numbers available. | Adjust the PCI Express bus speed in the BIOS settings, or add an expansion card that supports additional PCI Express slots. |
 | Sriov_support_Unknown | Adapter {0} cannot be enabled for Accelerated Networking because it is not advertising SR-IOV Support. | Make sure the computer hardware can support SR-IOV and that you enabled I/O virtualization in the BIOS. |
 | vm_not_enough_vcpus | VM {0} does not have enough vCPUs to enable Accelerated Networking with the specified performance. | Increase the vCPU amount for your VM. |
