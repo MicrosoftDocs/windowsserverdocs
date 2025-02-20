@@ -16,11 +16,9 @@ With Active Directory Federation Services (AD FS), you can use remote SQL server
 
 The first thing to test when you check SQL connectivity is if AD FS has the correct SQL connection information. Use PowerShell for this task.
 
-### Acquire the SQL connection string
-
 1. Open Windows PowerShell.
-1. Enter `$adfs = gwmi -Namespace root/ADFS -Class SecurityTokenService`, and then select Enter.
-1. Enter `$adfs.ConfigurationDatabaseConnectionString`, and then select Enter.
+1. Enter `$adfs = gwmi -Namespace root/ADFS -Class SecurityTokenService`, and then select the Enter key.
+1. Enter `$adfs.ConfigurationDatabaseConnectionString`, and then select the Enter key.
 
 The connection string information appears.
 
@@ -30,9 +28,7 @@ The connection string information appears.
 
 A Universal Data Link (UDL) file is a text file that contains a database connection string. By using the information you obtained, you can test whether or not the SQL server is responding to connections.
 
-### Create a test.udl file to test connectivity
-
-1. Open Notepad and save the file as **test.udl**. Under the **Save as type** dropdown, select **All Files**.
+1. Open Notepad and save the file as **test.udl**. In the **Save as type** dropdown list, select **All Files**.
 1. Double-click **test.udl**.
 1. Fill in the following information:
 
@@ -49,8 +45,6 @@ A Universal Data Link (UDL) file is a text file that contains a database connect
 ## Use SQL Server Management Studio to test connectivity
 
 You can also [download](https://go.microsoft.com/fwlink/?linkid=864329) and install SQL Server Management Studio (SSMS) to test database connectivity.
-
-### Test connectivity with SSMS
 
 1. Download and install SSMS.
 
