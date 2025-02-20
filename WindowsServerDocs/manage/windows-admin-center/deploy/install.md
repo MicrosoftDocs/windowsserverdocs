@@ -39,11 +39,11 @@ To install Windows Admin Center, you need the following prerequisites:
 
 To install Windows Admin Center, perform the following steps:
 
-:::zone pivot="windows-server-2025"
-
 ### [Desktop Experience](#tab/desktop-experience)
 
 To install Windows Admin Center on your machine running the Windows Server Desktop Experience, follow these steps:
+
+:::zone pivot="windows-server-2025"
 
 1. Open the **Start** menu and enter **Windows Admin Center Setup** into the search bar to search for Windows Admin Center.
 
@@ -76,6 +76,40 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 You've now installed Windows Admin Center on your machine.
 
+::: zone-end
+
+:::zone pivot="windows-server-2022"
+
+To install Windows Admin Center on your machine running the Windows Server Desktop Experience, follow these steps:
+
+1. Sign in to the machine you want to install Windows Admin Center on.
+
+1. Run the Windows Admin Center installer you previously downloaded.
+
+1. On the **windows Admin Center Setup** screen, if you agree to the terms, check the box to accept, then select **Next**.
+
+1. Select your preference for sharing diagnostic data with Microsoft, then select **Next**.
+
+1. Select your preference for using Microsoft Update, then select **Next**.
+
+1. Select **Next** to continue.
+
+1. In the **Installing Windows Admin Center** window, confirm the settings, then select **Next** to continue.
+
+   >[!NOTE]
+   >
+   > - The **Allow Windows Admin Center to modify this machine's trusted host settings** and **Automatically update Windows Admin Center** checkboxes are selected by default. We recommend leaving the defaults selected, but you can also deselect the box to disable these settings if you don't want Windows Admin Center to be able to modify your machine's trusted host settings or update automatically.
+   >
+   > - You must modify TrustedHosts in a workgroup environment or when you use local administrator credentials in a domain. If you choose to skip this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts) instead.
+
+1. Confirm or enter the port for the Windows Admin Center site to use, specify your preferred SSL certificate option, then select **Install**.
+
+1. Select the URL to open Windows Admin Center in a browser, then Select **Finish**.
+
+You've now installed Windows Admin Center on your machine.
+
+::: zone-end
+
 ### [Server Core](#tab/server-core)
 
 If you have a Server Core installation of Windows Server 2025, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
@@ -101,8 +135,6 @@ msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port
 > Don't invoke `msiexec` from PowerShell using dot-slash relative path notation, such as  `.\<WindowsAdminCenterInstallerName>.msi`. Windows Admin Center doesn't support that notation, and any attempt to use it in an installation won't work. Instead, either remove the `.\` prefix or specify the full path to the MSI.
 
 ---
-
-::: zone-end
 
 :::zone pivot="windows-server-2022"
 
