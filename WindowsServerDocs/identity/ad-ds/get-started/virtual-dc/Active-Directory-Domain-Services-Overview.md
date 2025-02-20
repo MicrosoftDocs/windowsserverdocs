@@ -5,7 +5,7 @@ title: Active Directory Domain Services Overview
 author: iainfoulds
 ms.author: justinha
 manager: daveba
-ms.date: 08/16/2022
+ms.date: 02/20/2025
 ms.topic: article
 ---
 
