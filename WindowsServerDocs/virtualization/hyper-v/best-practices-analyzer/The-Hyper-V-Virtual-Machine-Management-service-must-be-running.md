@@ -22,13 +22,13 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Issue
 
-*The service required to manage virtual machines is not running.*
+*The service required to manage virtual machines isn't running.*
 
 ## Impact
 
 *No virtual machine management operations can be performed.*
 
-Virtual machines that are running will continue to run. However, you won't be able to manage virtual machines, or create or delete them until the service is running.
+Virtual machines that are running continue to run. However, you can't manage virtual machines, or create or delete them until the service is running.
 
 ## Resolution
 
@@ -36,11 +36,11 @@ Virtual machines that are running will continue to run. However, you won't be ab
 
 > [!TIP]
 > If you can't find the service in the desktop app or the command-line tool reports that the service doesn't exist, the Hyper-V Management tools probably aren't installed.
-And if you are not able to see the Hyper-V MMC console from the Start menu, you should install the Hyper-V Management Tools.
+And if you aren't able to see the Hyper-V MMC console from the Start menu, you should install the Hyper-V Management Tools.
 
 To install the Hyper-V Management tools:
 >
-> - On Windows Server, open Server Manager and use the Add Roles and Features wizard. For more details, see [Install the Hyper-V role on Windows Server](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  You can also use PowerShell to install the tools (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`)
+> - On Windows Server, open Server Manager and use the Add Roles and Features wizard. For more information, see [Install the Hyper-V role on Windows Server](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  You can also use PowerShell to install the tools (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`)
 > - On Windows, from the Desktop, begin typing **programs**, select **Programs and Features** (Control panel) > **Turn Windows features on or off** > **Hyper-V** > **Hyper-V Management Tools**. Then, select **OK**.
 
 ### To reconfigure the service to start automatically using the Services desktop app
@@ -71,7 +71,7 @@ To install the Hyper-V Management tools:
     sc.exe start vmms
     ```
 
-If the service is already configured to start automatically and you just need to restart the service, you can do that from Hyper-V Manager, or from the sc start vmms command shown above.
+If the service is already configured to start automatically and you just need to restart the service, you can do that from Hyper-V Manager, or from the sc start vmms command.
 
 #### To restart the service from Hyper-V Manager
 
