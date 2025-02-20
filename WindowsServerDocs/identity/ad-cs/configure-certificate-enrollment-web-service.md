@@ -1,6 +1,6 @@
-﻿---
-title: Install the Certificate Enrollment Web Service role service
-description: Learn how to install and configure the Certificate Enrollment Web Service role service to enable secure certificate enrollment over HTTPS.
+---
+title: Configure the Certificate Enrollment Web Service role service
+description: Learn how to configure the Certificate Enrollment Web Service role service to enable secure certificate enrollment over HTTPS.
 author: meaghanlewis
 ms.topic: how-to
 ms.author: mosagie
@@ -9,7 +9,7 @@ ms.date: 02/19/2025
 #customer intent: As an IT administrator, I want to install and configure the Certificate Enrollment Web Service so that users and computers can securely enroll for certificates.
 ---
 
-# Install the Certificate Enrollment Web Service
+# Configure the Certificate Enrollment Web Service
 
 The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to enroll for and renew certificates even when the computer isn't a member of a domain or if a domain-joined computer isn't connected to the domain.
 
