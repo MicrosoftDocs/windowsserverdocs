@@ -1,7 +1,7 @@
 ---
 title: OpenSSH for Windows overview
 description: Overview of the OpenSSH tools used by Windows administrators for cross-platform management of remote systems.
-ms.date: 08/15/2024
+ms.date: 02/20/2025
 ms.author: roharwoo
 author: maertendmsft
 ms.topic: overview
@@ -13,12 +13,14 @@ OpenSSH is the open-source version of the Secure Shell (SSH) tools used by admin
 
 SSH is based on a client-server architecture where the system the user is working on is the client and the remote system being managed is the server. OpenSSH includes a range of components and tools designed to provide a secure and straightforward approach to remote system administration.
 
-| Windows Version | SSH Server |
+The following table lists the default install state of OpenSSH for Windows on different Windows releases.
+
+| Windows release | SSH install state |
 |----------|----------|
-|Windows Server 2019|Install and enable via optional features|
-|Windows Server 2022|Install and enable via optional features|
+|Windows Server 2019|Not installed, install and enable using optional features|
+|Windows Server 2022|Not installed, install and enable using optional features|
 |Windows Server 2025|Installed but not enabled|
-|Windows 10 build 1809 +|Install and enable via optional features|
+|Windows 10 build 1809 +|Not installed, install and enable using optional features|
 
 OpenSSH for Windows has the following commands built in.
 
