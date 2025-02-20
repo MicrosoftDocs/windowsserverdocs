@@ -9,26 +9,17 @@ ms.date: 02/19/2025
 ---
 # Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 
-The following feature distribution maps indicate the features that are present
-in built-in and downloadable versions of Linux Integration Services. The known
+The following feature distribution maps indicate the features that are present in built-in and downloadable versions of Linux Integration Services. The known
 issues and workarounds for each distribution are listed after the tables.
 
-The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V
-(available since Red Hat Enterprise Linux 6.4) are sufficient for Red Hat
-Enterprise Linux guests to run using the high performance synthetic devices on
-Hyper-V hosts. These built-in drivers are certified by Red Hat for this use.
-Certified configurations can be viewed in the [Red Hat
-Certification
-Catalog](https://access.redhat.com/ecosystem/search/#/ecosystem/Red%20Hat%20Enterprise%20Linux?sort=sortTitle%20asc&vendors=Microsoft&category=Server).
-It isn't necessary to download and install Linux Integration Services packages
-from the Microsoft Download Center, and doing so may limit your Red Hat support
-as described in [Red Hat Knowledgebase
-1067](https://access.redhat.com/articles/1067).
+The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V are sufficient for Red Hat Enterprise Linux guests to run using the high performance synthetic devices on Hyper-V hosts. These built-in drivers are certified by Red Hat for this use.
+Certified configurations can be viewed in the [Red Hat Certification Catalog](https://access.redhat.com/ecosystem/search/#/ecosystem/Red%20Hat%20Enterprise%20Linux?sort=sortTitle%20asc&vendors=Microsoft&category=Server).
 
-Because of potential conflicts between the built-in LIS support and the
-downloadable LIS support when you upgrade the kernel, disable automatic updates,
-uninstall the LIS downloadable packages, update the kernel, reboot, and then
-install the latest LIS release, and reboot again.
+It isn't necessary to download and install Linux Integration Services packages from the Microsoft Download Center, and doing so may limit your Red Hat support
+as described in [Red Hat Knowledgebase 1067](https://access.redhat.com/articles/1067).
+
+Because of potential conflicts between the built-in LIS support and the downloadable LIS support when you upgrade the kernel, disable automatic updates,
+uninstall the LIS downloadable packages, update the kernel, reboot, and then install the latest LIS release, and reboot again.
 
 In this section:
 
@@ -46,10 +37,8 @@ In this section:
 
 ## Table legend
 
-- **Built in** - LIS are included as part of this Linux distribution. The
-    kernel module version numbers for the built-in LIS (as shown by **lsmod**,
-    for example) are different from the version number on the Microsoft-provided
-    LIS download package. A mismatch doesn't indicate that the built-in LIS is
+- **Built in** - LIS are included as part of this Linux distribution. The kernel module version numbers for the built-in LIS (as shown by **lsmod**,
+    for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built-in LIS is
     out of date.
 
 - ✔ - Feature available
@@ -61,40 +50,40 @@ In this section:
 | **Feature** | **Host OS** | **9.x** |
 |--|--|--|
 | LIS Availability |  | Built in |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br/> Azure Stack HCI | ✔ |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016<br/> Azure Stack HCI | ✔ |
 | Windows Server 2016 Accurate Time | Windows Server 2025, 2022, 2019, 2016<br/> Azure Stack HCI | ✔ |
 | \>256 vCPUs |  | ✔ |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |
-| Jumbo frames | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| Live Migration | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| Static IP Injection | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 2 |
-| vRSS | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Jumbo frames | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| Live Migration | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| Static IP Injection | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 2 |
+| vRSS | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | SR-IOV | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |
-| VHDX resize | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 3 |
-| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 5 |
-| TRIM support | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| SCSI WWN | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| VHDX resize | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 3 |
+| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 5 |
+| TRIM support | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| SCSI WWN | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |
-| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI |  |
-| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 9, 10 |
-| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 9,10 |
+| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI |  |
+| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 9, 10 |
+| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 9,10 |
 | Runtime Memory Resize | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |
-| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |
-| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
-| lsvmbus command | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ |
+| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
+| lsvmbus command | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | Hyper-V Sockets | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | PCI Passthrough/DDA | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |
-| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 14, 17 |
+| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 14, 17 |
 | Secure boot | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 
 ## RHEL/CentOS 8.x Series
@@ -102,88 +91,86 @@ In this section:
 | **Feature** | **Host OS** | **8.1-8.6+** | **8.0** |
 |--|--|--|--|
 | LIS Availability |  | Built in | Built in |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | Windows Server 2016 Accurate Time | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | \>256 vCPUs |  | ✔ |  |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |  |
-| Jumbo frames | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| Live Migration | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| Static IP Injection | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 2 | ✔ Note 2 |
-| vRSS | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Jumbo frames | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| Live Migration | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| Static IP Injection | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 2 | ✔ Note 2 |
+| vRSS | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | SR-IOV | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |  |
-| VHDX resize | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 3 | ✔ Note 3 |
-| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 5 | ✔ Note 5 |
-| TRIM support | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| SCSI WWN | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| VHDX resize | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 3 | ✔ Note 3 |
+| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 5 | ✔ Note 5 |
+| TRIM support | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| SCSI WWN | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |  |
-| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | N/A | N/A |
-| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 |
-| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 |
+| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | N/A | N/A |
+| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 |
+| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 |
 | Runtime Memory Resize | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |  |
-| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |  |
-| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
-| lsvmbus command | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ | ✔ |
+| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
+| lsvmbus command | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | Hyper-V Sockets | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | PCI Passthrough/DDA | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 | [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |  |
-| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016, 2012 R2 <br/>Azure Stack HCI | ✔ Note 14, 17 | ✔ Note 14 |
+| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 14, 17 | ✔ Note 14 |
 | Secure boot | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ | ✔ |
 
-RHEL/CentOS 7.x Series
-----------------------
+## RHEL/CentOS 7.x Series
 
 This series only has 64-bit kernels.
 
 | **Feature** | **Host OS** | **7.5-7.7** | **7.3-7.4** | **7.0-7.2** | **7.6-7.9** | **7.5** | **7.4** | **7.3** | **7.2** | **7.1** | **7.0** |
 |--|--|--|--|--|--|--|--|--|--|--|--|
 | LIS Availability |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built-in | Built-in | Built-in | Built-in | Built-in | Built-in | Built-in |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Windows Server 2016 Accurate Time | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ |  |  |  |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ |  |  |  |  |
 | \>256 vCPUs |  |  |  |  | ✔ Note 16 |  |  |  |  |  |  |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |  |  |  |  |  |  |  |  |  |
-| Jumbo frames | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Live Migration | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Static IP Injection | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
-| vRSS | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
-| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
-| SR-IOV | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ |  |  |  |
+| Jumbo frames | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Live Migration | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Static IP Injection | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| vRSS | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| SR-IOV | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ |  |  |  |  |
 | [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |  |  |  |  |  |  |  |  |  |
-| VHDX resize | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
-| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 |
-| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 5 | ✔ Note 5 | ✔ Note 5 | ✔ Note 4,5 | ✔ Note 4,5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 |
-| TRIM support | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
-| SCSI WWN | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |  |  |
+| VHDX resize | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 |
+| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 5 | ✔ Note 5 | ✔ Note 5 | ✔ Note 4,5 | ✔ Note 4,5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5 |
+| TRIM support | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| SCSI WWN | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |  |  |  |
 | [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |  |  |  |  |  |  |  |  |  |
-| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
-| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 8, 9, 10 |
-| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note  9, 10 |
-| Runtime Memory Resize | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |  |  |
+| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 8, 9, 10 |
+| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note  9, 10 |
+| Runtime Memory Resize | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |  |  |  |
 | [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |  |  |  |  |  |  |  |  |  |
-| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |  |  |  |  |  |  |  |  |  |
-| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
-| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
-| lsvmbus command | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |  |  |
-| Hyper-V Sockets | Windows Server 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ |  |  |  |  |  |  |
-| PCI Passthrough/DDA | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ | ✔ |  |  |
+| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| lsvmbus command | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |  |  |  |
+| Hyper-V Sockets | Windows Server 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ |  |  |  |  |  |  |  |
+| PCI Passthrough/DDA | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  | ✔ | ✔ | ✔ | ✔ |  |  |  |
 | [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |  |  |  |  |  |  |  |  |  |
-| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 |
+| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 |
 | Secure boot | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
-RHEL/CentOS 6.x Series
-----------------------
+## RHEL/CentOS 6.x Series
 
 The 32-bit kernel for this series is PAE enabled. There's no built-in LIS
 support for RHEL/CentOS 6.0-6.3.
@@ -191,95 +178,92 @@ support for RHEL/CentOS 6.0-6.3.
 | **Feature** | **Host OS** | **6.7-6.10** | **6.4-6.6** | **6.0-6.3** | **6.10, 6.9, 6.8** | **6.6, 6.7** | **6.5** | **6.4** |
 |--|--|--|--|--|--|--|--|--|
 | LIS Availability |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built-in | Built-in | Built-in | Built-in |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Windows Server 2016 Accurate Time | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |  |  |  |  |
 | \>256 vCPUs |  |  |  |  |  |  |  |  |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |  |  |  |  |  |  |
-| Jumbo frames | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
-| Live Migration | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Static IP Injection | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
-| vRSS | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
-| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| Jumbo frames | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
+| Live Migration | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Static IP Injection | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| vRSS | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
 | SR-IOV | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |  |  |  |  |
 | [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |  |  |  |  |  |  |
-| VHDX resize | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
-| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 |  |
-| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 5 | ✔ Note 5 | ✔ Note 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5, 6 | ✔ Note 4, 5, 6 |
-| TRIM support | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
-| SCSI WWN | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |
+| VHDX resize | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 |  |
+| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 5 | ✔ Note 5 | ✔ Note 5 | ✔ Note 4, 5 | ✔ Note 4, 5 | ✔ Note 4, 5, 6 | ✔ Note 4, 5, 6 |
+| TRIM support | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
+| SCSI WWN | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |
 | [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |  |  |  |  |  |  |
-| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 8, 9, 10 | ✔ Note 7, 8, 9, 10 |  |
-| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10, 11 |
+| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 8, 9, 10 | ✔ Note 7, 8, 9, 10 |  |
+| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10 | ✔ Note 7, 9, 10, 11 |
 | Runtime Memory Resize | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |  |  |  |  |
 | [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |  |  |  |  |  |  |
-| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
 | [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |  |  |  |  |  |  |
-| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 12 | ✔ Note 12 | ✔ Note 12, 13 | ✔ Note 12, 13 |
-| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 12 | ✔ Note 12 |  |  |
-| lsvmbus command | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |
+| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 12 | ✔ Note 12 | ✔ Note 12, 13 | ✔ Note 12, 13 |
+| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ | ✔ Note 12 | ✔ Note 12 |  |  |
+| lsvmbus command | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |
 | Hyper-V Sockets | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |  |  |  |  |
 | PCI Passthrough/DDA | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ |  |  |  |  |  |  |
 | [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |  |  |  |  |  |  |
-| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 |  |  |  |
+| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 | ✔ Note 14 |  |  |  |
 | Secure boot | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |  |  |  |  |
 
-RHEL/CentOS 5.x Series
-----------------------
+## RHEL/CentOS 5.x Series
 
-This series has a supported 32-bit PAE kernel available. There's no built-in
-LIS support for RHEL/CentOS before 5.9.
+This series has a supported 32-bit PAE kernel available. There's no built-in LIS support for RHEL/CentOS before 5.9.
 
 | **Feature** | **Host OS** | 5.2 -5.11 | **5.2-5.11** | **5.9 - 5.11** |
 |--|--|--|--|--|
 | LIS Availability |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | LIS 4.1 | Built in |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |
 | Windows Server 2016 Accurate Time | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 | \>256 vCPUs |  |  |  |  |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) |  |  |  |  |
-| Jumbo frames | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
-| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
-| Live Migration | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
-| Static IP Injection | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
-| vRSS | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
-| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
+| Jumbo frames | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
+| Live Migration | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| Static IP Injection | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| vRSS | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
+| TCP Segmentation and Checksum Offloads | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  |
 | SR-IOV | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 | [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage) |  |  |  |  |
-| VHDX resize | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
-| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 |  |
-| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 5, 15 | ✔ Note 5 | ✔ Note 4, 5, 6 |
-| TRIM support | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
-| SCSI WWN | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| VHDX resize | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  |
+| Virtual Fibre Channel | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 3 | ✔ Note 3 |  |
+| Live virtual machine backup | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 5, 15 | ✔ Note 5 | ✔ Note 4, 5, 6 |
+| TRIM support | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
+| SCSI WWN | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 | [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) |  |  |  |  |
-| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
-| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
-| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
-| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ Note 7, 9, 10, 11 | ✔ Note 7, 9, 10, 11 |  |
+| PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
+| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ Note 7, 9, 10, 11 | ✔ Note 7, 9, 10, 11 |  |
 | Runtime Memory Resize | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 | [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |  |  |
-| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
+| Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  |
 | [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous) |  |  |  |  |
-| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
-| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ | ✔ |
-| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI | ✔ | ✔ |  |
-| lsvmbus command | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| Key-Value Pair | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  |
+| Non-Maskable Interrupt | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ | ✔ |
+| File copy from host to guest | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI | ✔ | ✔ |  |
+| lsvmbus command | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 | Hyper-V Sockets | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 | PCI Passthrough/DDA | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 | [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |  |  |  |  |
-| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016, 2012 R2<br />Azure Stack HCI |  |  |  |
+| Boot using UEFI | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 | Secure boot | Windows Server 2025, 2022, 2019, 2016<br />Azure Stack HCI |  |  |  |
 
-Notes
------
+## Notes
 
 1. For this RHEL/CentOS release, VLAN tagging works but VLAN trunking doesn't.
 
 2. Static IP injection may not work if Network Manager has been configured for a given synthetic network adapter on the virtual machine. For smooth functioning of static IP injection, make sure that either Network Manager is either turned off completely or has been turned off for a specific network adapter through its ifcfg-ethX file.
 
-3. On Windows Server 2012 R2 while using virtual fibre channel devices, make sure that logical unit number 0 (LUN 0) has been populated. If LUN 0 hasn't been populated, a Linux virtual machine might not be able to mount fibre channel devices natively.
+3. while using virtual fibre channel devices, make sure that logical unit number 0 (LUN 0) has been populated. If LUN 0 hasn't been populated, a Linux virtual machine might not be able to mount fibre channel devices natively.
 
 4. For built-in LIS, the "hyperv-daemons" package must be installed for this functionality.
 
@@ -303,13 +287,13 @@ Notes
 
 9. Dynamic memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:
 
-    * Startup memory and minimal memory should be equal to or greater than the
+    - Startup memory and minimal memory should be equal to or greater than the
     amount of memory that the distribution vendor recommends.
 
-    * Applications that tend to consume the entire available memory on a system
+    - Applications that tend to consume the entire available memory on a system
     are limited to consuming up to 80 percent of available RAM.
 
-10. If you're using Dynamic Memory on a Windows Server 2016 or Windows Server 2012 R2 operating system, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to hot-add failures, and you may not see any memory increase in a guest operating system.
+10. If you're using Dynamic Memory on Windows Server, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to hot-add failures, and you may not see any memory increase in a guest operating system.
 
 11. Certain distributions, including those using LIS 4.0 and 4.1, only provide Ballooning support and do not provide Hot-Add support. In such a scenario, the dynamic memory feature can be used by setting the Startup memory parameter to a value which is equal to the Maximum memory parameter. This results in all the requisite memory being Hot-Added to the virtual machine at boot time and then later depending upon the memory requirements of the host, Hyper-V can freely allocate or deallocate memory from the guest using Ballooning. Configure **Startup Memory** and **Minimum Memory** at or above the recommended value for the distribution.
 
@@ -319,7 +303,7 @@ Notes
 
 13. The key/value pair (KVP) infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
 
-14. On Windows Server 2012 R2 Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
+14. Windows Server Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
 
     ```Powershell
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
