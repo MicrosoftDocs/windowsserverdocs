@@ -2,8 +2,8 @@
 title: What's new in the Remote Desktop client for iOS and iPadOS - Remote Desktop Services
 description: Learn about recent changes to the Remote Desktop client for iOS and iPadOS
 ms.topic: conceptual
-author: heidilohr
-ms.author: helohr
+ms.author: alalve
+author: xelu86
 ms.date: 7/3/2024
 ---
 

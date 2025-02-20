@@ -25,7 +25,7 @@ Go to the Diagnostic Analyzer under [AD FS Offline tools](../operations/offline-
 
 ## Step 1: Set up the ADFSToolbox module on AD FS server
 
-To run the [Diagnostics Analyzer](https://aka.ms/adfsdiagnosticsanalyzer), you must install the ADFSToolbox PowerShell module. If the AD FS server has connectivity to the internet, you can install the ADFSToolbox module directly from the PowerShell gallery. If there's no connectivity to the internet, you can manually install it.
+To run the [Diagnostics Analyzer](/windows-server/identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer), you must install the ADFSToolbox PowerShell module. If the AD FS server has connectivity to the internet, you can install the ADFSToolbox module directly from the PowerShell gallery. If there's no connectivity to the internet, you can manually install it.
 
 [!WARNING]
 If you're using AD FS 2.1 or lower, you must install version 1.0.13 of ADFSToolbox. ADFSToolbox no longer supports AD FS 2.1 or lower on the latest versions.
@@ -80,7 +80,7 @@ The result is a JSON file that is created in the same directory where the comman
 
 ## Step 3: Upload the diagnostics file
 
-Following step 3 in the article [https://aka.ms/adfsdiagnosticsanalyzer](https://aka.ms/adfsdiagnosticsanalyzer), use the file browser to select the result file to upload.
+Following step 3 in the [article](/windows-server/identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer), use the file browser to select the result file to upload.
 
 Select **Upload** to finish the upload.
 

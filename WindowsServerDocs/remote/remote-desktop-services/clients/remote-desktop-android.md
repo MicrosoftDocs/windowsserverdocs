@@ -3,9 +3,9 @@ title: Get started with the Android client
 description: General information about the Android client.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
-author: Heidilohr
+ms.author: alalve
 manager: femila
-ms.author: helohr
+author: xelu86
 ms.date: 7/3/2024
 ---
 
