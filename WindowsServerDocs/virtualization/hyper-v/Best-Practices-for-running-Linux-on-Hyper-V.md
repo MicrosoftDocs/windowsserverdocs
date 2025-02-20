@@ -36,13 +36,13 @@ Because legacy hardware was removed from emulation in Generation 2 virtual machi
 
 ## PxE Boot on Generation 2 Virtual Machines
 
-Because the PIT timer isn't present in Generation 2 Virtual Machines, network connections to the PxE TFTP server are prematurely terminated and prevent the bootloader from reading Grub configuration and loading a kernel from the server.
+Because the PIT timer isn't present in Generation 2 Virtual Machines, network connections to the PxE TFTP server are terminated and prevent the bootloader from reading Grub configuration and loading a kernel from the server.
 
 On RHEL 6.x, the legacy grub v0.97 EFI bootloader can be used instead of grub2 as described here: [https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-netboot-pxe-config-efi.html](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s1-netboot-pxe-config-efi)
 
 On Linux distributions other than RHEL 6.x, similar steps can be followed to configure grub v0.97 to load Linux kernels from a PxE server.
 
-Additionally, on RHEL/CentOS 6.6 keyboard and mouse input won't work with the preinstall kernel which prevents specifying installation options in the menu. A serial console must be configured to allow choosing installation options.
+Additionally, on RHEL/CentOS 6.6 keyboard and mouse input don't work with the preinstalled kernel which prevents specifying installation options in the menu. A serial console must be configured to allow choosing installation options.
 
 * In the **efidefault** file on the PxE server, add the following kernel parameter **"console=ttyS1"**
 
@@ -52,7 +52,7 @@ Additionally, on RHEL/CentOS 6.6 keyboard and mouse input won't work with the pr
 Set-VMComPort -VMName <Name> -Number 2 -Path \\.\pipe\dbg1
 ```
 
-Specifying a kickstart file to the preinstall kernel would also avoid the need for keyboard and mouse input during installation.
+Specifying a kickstart file to the kernel would also avoid the need for keyboard and mouse input during installation.
 
 ## Use static MAC addresses with failover clustering
 
@@ -64,7 +64,7 @@ Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific netw
 
 ## Use I/O scheduler noop/none for better disk I/O performance
 
-The Linux kernel offers two sets of disk I/O schedulers to reorder requests.  One set is for the older 'blk' subsystem and one set is for the newer 'blk-mq' subsystem. In either case, with today’s solid state disks it is recommended to use a scheduler that passes the scheduling decisions to the underlying Hyper-V hypervisor. For Linux kernels using the 'blk' subsystem, this is the "noop" scheduler. For Linux kernels using the 'blk-mq' subsystem, this is the "none" scheduler.
+The Linux kernel offers two sets of disk I/O schedulers to reorder requests.  One set is for the older 'blk' subsystem and one set is for the newer 'blk-mq' subsystem. In either case, with today’s solid state disks it's recommended to use a scheduler that passes the scheduling decisions to the underlying Hyper-V hypervisor. For Linux kernels using the 'blk' subsystem, this is the "noop" scheduler. For Linux kernels using the 'blk-mq' subsystem, this is the "none" scheduler.
 
 For a particular disk, the available schedulers can be seen at this file system location: /sys/class/block/`<diskname>`/queue/scheduler, with the currently selected scheduler in square brackets. You can change the scheduler by writing to this file system location. The change must be added to an initialization script in order to persist across reboots. Consult your Linux distro documentation for details.
 
@@ -78,7 +78,7 @@ In case the dump capture kernel ends up with a panic on boot, reserve more memor
 
 ## Shrinking VHDX or expanding VHD and VHDX files can result in erroneous GPT partition tables
 
-Hyper-V allows shrinking virtual disk (VHDX) files without regard for any partition, volume, or file system data structures that may exist on the disk. If the VHDX is shrunk to where the end of the VHDX comes before the end of a partition, data can be lost, that partition can become corrupted, or invalid data can be returned when the partition is read.
+Hyper-V allows shrinking virtual disk (VHDX) files without regard for any partition, volume, or file system data structures that may exist on the disk. If the VHDX is shrunk to where the end of the VHDX comes before the end of a partition, data is lost, that partition can become corrupt, or invalid data is returned when the partition is read.
 
 After resizing a VHD or VHDX, administrators should use a utility like fdisk or parted to update the partition, volume, and file system structures to reflect the change in the size of the disk. Shrinking or expanding the size of a VHD or VHDX that has a GUID Partition Table (GPT) causes a warning when a partition management tool is used to check the partition layout, and the administrator is warned to fix the first and secondary GPT headers. This manual step is safe to perform without data loss.
 
