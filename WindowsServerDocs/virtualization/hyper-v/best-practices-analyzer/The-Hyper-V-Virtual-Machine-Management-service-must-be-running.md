@@ -39,9 +39,9 @@ Virtual machines that are running continue to run. However, you can't manage vir
 And if you aren't able to see the Hyper-V MMC console from the Start menu, you should install the Hyper-V Management Tools.
 
 To install the Hyper-V Management tools:
->
-> - On Windows Server, open Server Manager and use the Add Roles and Features wizard. For more information, see [Install the Hyper-V role on Windows Server](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  You can also use PowerShell to install the tools (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`)
-> - On Windows, from the Desktop, begin typing **programs**, select **Programs and Features** (Control panel) > **Turn Windows features on or off** > **Hyper-V** > **Hyper-V Management Tools**. Then, select **OK**.
+
+- On Windows Server, open Server Manager and use the Add Roles and Features wizard. For more information, see [Install the Hyper-V role on Windows Server](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  You can also use PowerShell to install the tools (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`)
+- On Windows, from the Desktop, begin typing **programs**, select **Programs and Features** (Control panel) > **Turn Windows features on or off** > **Hyper-V** > **Hyper-V Management Tools**. Then, select **OK**.
 
 ### To reconfigure the service to start automatically using the Services desktop app
 
