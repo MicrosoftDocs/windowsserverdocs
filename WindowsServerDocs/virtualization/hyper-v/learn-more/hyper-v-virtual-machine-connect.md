@@ -10,8 +10,6 @@ ms.date: 10/04/2016
 
 # Hyper-V Virtual Machine Connection
 
-> **
-
 Virtual Machine Connection \(VMConnect\) is a tool you can use to connect to a virtual machine to install or interact with the guest operating system in a virtual machine. Some of the tasks you can perform by using VMConnect include the following:
 
 - Start and shut down a virtual machine
