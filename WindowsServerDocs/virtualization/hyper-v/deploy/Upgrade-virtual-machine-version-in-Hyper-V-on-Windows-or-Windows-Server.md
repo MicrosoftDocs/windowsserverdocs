@@ -140,7 +140,7 @@ The following table shows the minimum virtual machine configuration version requ
 |---|---|
 |GPU partitioning|12.0|
 |Allow additional processor features for Perfmon|9.0|
-|Automatically expose [simultaneous multithreading](../manage/manage-hyper-v-scheduler-types.md#background) configuration for VMs running on hosts using the [Core Scheduler](../manage/manage-hyper-v-scheduler-types.md#windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler)|9.0|
+|Automatically expose [simultaneous multithreading](../manage/manage-hyper-v-scheduler-types.md#background) configuration for VMs running on hosts using the [Core Scheduler](../manage/manage-hyper-v-scheduler-types.md#hyper-v-defaults-to-using-the-core-scheduler)|9.0|
 |Hibernation support|9.0|
 |Increase the default maximum number for virtual devices to 64 per device (for example, networking and assigned devices)|8.3|
 |Guest Virtualization-Based Security support (VBS)|8.0|
