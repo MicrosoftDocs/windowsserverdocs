@@ -94,7 +94,7 @@ To install Windows Admin Center on your machine running the Windows Server Core 
 
    ```powershell
    $parameters = @{
-        Source = "https://go.microsoft.com/fwlink/?linkid=2220149"
+        Source = "https://aka.ms/WACdownload"
         Destination = ".\WindowsAdminCenter.exe"
    }
    Start-BitsTransfer @parameters
@@ -161,7 +161,7 @@ To install Windows Admin Center on your machine running the Windows Server Core 
 
    ```powershell
    $parameters = @{
-        Source = "https://go.microsoft.com/fwlink/?linkid=2220149"
+        Source = "https://aka.ms/WACdownload"
         Destination = ".\WindowsAdminCenter.exe"
    }
    Start-BitsTransfer @parameters
