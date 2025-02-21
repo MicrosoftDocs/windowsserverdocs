@@ -122,13 +122,9 @@ You've now installed Windows Admin Center on your machine.
 
 To install Windows Admin Center on your machine running the Windows Server Desktop Experience, follow these steps:
 
-1. Open the **Start** menu and enter **Windows Admin Center Setup** into the search bar to search for Windows Admin Center.
+1. Sign in to the machine you want to install Windows Admin Center on.
 
-1. Select the **Windows Admin Center Setup** app from the **Best match** list.
-
-1. On the **Get started with Windows Admin Center** window, if you agree to the license terms, select **Next** to continue.
-
-1. The latest installer download starts automatically and is saved to the _Downloads_ folder, when complete, select **Install**. Selecting **Install** initiates the installer from the Downloads folder.
+1. Run the Windows Admin Center installer you previously downloaded.
 
 1. On the **Welcome to the Windows Admin Center setup wizard** window, select **Next** to continue.
 
