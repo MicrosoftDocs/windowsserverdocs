@@ -9,14 +9,18 @@ ms.date: 12/03/2024
 
 # Cluster OS Rolling Upgrade
 
-Cluster OS (Operating System) Rolling Upgrade enables an administrator to upgrade the operating system of cluster nodes Hyper-V or Scale-Out File Server workloads without stopping them. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
+You can upgrade the operating system of a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This article describes the stages of the upgrade process, limitations, and frequently asked questions (FAQs).
 
-Cluster OS Rolling Upgrade provides the following benefits:
+This article applies to clusters running Hyper-V virtual machines or Scale-out File Server (SOFS) workload, but doesn't apply to clusters using virtual hard disks (.vhdx files) as shared storage.
 
-- Failover clusters running Hyper-V virtual machine and Scale-out File Server (SOFS) workloads can be upgraded from a version of Windows Server, starting with Windows Server 2012 R2, to a newer version of Windows Server. For example you can upgrade Windows Server 2016 (running on all cluster nodes of the cluster) to Windows Server 2019 (running on all nodes in the cluster) without downtime.
-- It doesn't require any other hardware. In small clusters, you can add more cluster nodes temporarily to improve availability of the cluster during the Cluster OS Rolling Upgrade process.
-- The cluster doesn't need to be stopped or restarted.
-- A new cluster isn't required. The existing cluster is upgraded. In addition, existing cluster objects stored in Active Directory are used.
+If you're using System Center Virtual Machine Manager (SCVMM), instead see [Perform a rolling upgrade of a Hyper-V host cluster to Windows Server 2016 in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true) for guidance on upgrading the clusters.
+
+## Overview
+
+A rolling upgrade of a Windows Server failover cluster provides the following benefits:
+
+- Upgrade a cluster running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads to a newer version of Windows Server without downtime.
+- No new hardware is required (though you can temporarily add cluster nodes to small clusters improve availability during the upgrade).
 - The upgrade process is reversible until the final step, when all cluster nodes are running the newer version of Windows Server and the `Update-ClusterFunctionalLevel` PowerShell cmdlet is run.
 - The cluster can support patching and maintenance operations while running in the mixed-OS mode.
 - It supports automation via PowerShell and WMI.
@@ -34,16 +38,7 @@ Cluster OS Rolling Upgrade provides the following benefits:
     | 9 | Windows Server 2016 |
     | 10 | Windows Server 2019 |
 
-This article describes the various stages of the Cluster OS Rolling Upgrade process, installation steps, feature limitations, and frequently asked questions (FAQs), and is applicable to the following Cluster OS Rolling Upgrade scenarios in Windows Server:
 
-- Hyper-V clusters
-- Scale-Out File Server clusters
-
-The following scenario isn't supported:
-
-- Cluster OS Rolling Upgrade of guest clusters using virtual hard disk (.vhdx file) as shared storage.
-
-System Center Virtual Machine Manager (SCVMM) supports Cluster OS Rolling Upgrade. If you're using SCVMM, see [Perform a rolling upgrade of a Hyper-V host cluster to Windows Server 2016 in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true) for guidance on upgrading the clusters and automating the steps that are described in this document.
 
 ## Requirements
 
