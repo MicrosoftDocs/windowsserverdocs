@@ -55,7 +55,7 @@ The following REG_DWORD registry settings can affect the performance of client c
 
 The general tuning parameters for client computers can optimize a computer for accessing remote file shares, particularly over some high-latency networks (such as branch offices, cross-datacenter communication, home offices, and mobile broadband). These settings aren't optimal or appropriate on all computers. You should evaluate the impact of individual settings before applying them.
 
-| Parameter                   | Value | Default |
+| Registry entry              | Value | Default |
 |-----------------------------|-------|---------|
 | DisableBandwidthThrottling  | 1     | 0       |
 | FileInfoCacheEntriesMax     | 32768 | 64      |
