@@ -1,25 +1,25 @@
 ---
-title: Cluster-to-Cluster Storage Replication Cross-Region in Azure
-description: Cluster-to-cluster storage replication cross-region in Azure.
+title: Cluster-to-Cluster Replication Cross-Region in Azure
+description: Learn how to use cluster-to-cluster Storage Replica in Windows Server for cross-region storage replication in Azure.
 author: arduppal
 ms.author: roharwoo
 ms.date: 02/18/2025
 ms.topic: article
 manager: mchad
 ---
-# Cluster-to-cluster storage replication cross-region in Azure
+# Set up cluster-to-cluster Storage Replica cross-region in Azure
 
-You can configure Storage Replica in Windows Server for cluster-to-cluster replication of cross-region applications in Azure. In the article examples, we use a two-node cluster, but cluster-to-cluster storage replica isn't restricted to a two-node cluster.
+You can configure Storage Replica in Windows Server for cluster-to-cluster replication of cross-region applications in Azure. In the article example, we use a two-node cluster, but you can use Storage Replica if you have more than two nodes in your clusters.
+
+For a complete walkthrough of the process, see the following video:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=677e525a-62b6-44c6-bf88-03de796b54ce]
 
 The diagram that follows depicts a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
 
-For a complete walkthrough of the process, see the following video:
-> [!video https://learn-video.azurefd.net/vod/player?id=677e525a-62b6-44c6-bf88-03de796b54ce]
+:::image type="content" source="media/Cluster-to-cluster-azure-cross-region/architecture.png" border="false" alt-text="Diagram that depicts the architecture of cluster-to-cluster Storage Replica in Azure in different regions.":::
 
-![Diagram that depicts the architecture of cluster-to-cluster Storage Replica in Azure in the same region.](media/Cluster-to-cluster-azure-cross-region/architecture.png)
-
-> [!IMPORTANT]
-> All referenced examples are specific to the diagram.
+The figure and the videos refer to the article examples.
 
 1. In the Azure portal, create [resource groups](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) in two different regions.
 
@@ -32,24 +32,24 @@ For a complete walkthrough of the process, see the following video:
 
    For example:
 
-   1. Create availability set **az2azAS1** in **SR-AZ2AZ**.
-   1. Create availability set **azcross-AS** in **SR-AZCROSS**.
+   1. Create availability set **az2azAS1** in resource group **SR-AZ2AZ**.
+   1. Create availability set **azcross-AS** in resource group **SR-AZCROSS**.
 
-1. Create two virtual networks.
+1. Create two [virtual networks](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM).
 
    For example:
 
-   1. Create [virtual network](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) **az2az-Vnet** in resource group **SR-AZ2AZ**. The virtual network should have one subnet and one gateway subnet.
+   1. Create  virtual network **az2az-Vnet** in resource group **SR-AZ2AZ**. The virtual network should have one subnet and one gateway subnet.
    1. Create [virtual network](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) **azcross-VNET** in resource group **SR-AZCROSS**. The virtual network should have one subnet and one gateway subnet.
 
-1. Create two network security groups.
+1. Create two network security groups. Add an inbound security rule for Remote Desktop Protocol (RDP) port 3389 to each network security group. You can choose to remove this rule after you finish setup.
 
    For example:
 
    1. Create [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) **az2az-NSG** in resource group **SR-AZ2AZ**.
+   1. Create an inbound security rule for RDP:3389 to the **az2az-NSG** network security group.
    1. Create [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) **azcross-NSG** in resource group **SR-AZCROSS**.
-
-   Add an inbound security rule for Remote Desktop Protocol (RDP) port 3389 to each network security group. You can choose to remove this rule after you finish setup.
+   1. Create an inbound security rule for RDP:3389 to the **azcross-NSG** network security group.
 
 1. Create Windows Server [virtual machines (VMs)](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the resource groups.
 
@@ -77,13 +77,13 @@ For a complete walkthrough of the process, see the following video:
 
    1. Connect all the nodes to the domain and provide administrator permissions to the user you created.
 
-      - Change the DNS server of the virtual network to the domain controller private IP address. In the example, the domain controller **az2azDC** has a private IP address (10.3.0.8). In the virtual network (**az2az-Vnet** and **azcross-VNET**), change **DNS Server** to **10.3.0.8**.
+      - Change the DNS server of the virtual network to the domain controller private IP address. In the example, the domain controller **az2azDC** has a private IP address (10.3.0.8). In the virtual networks (**az2az-Vnet** and **azcross-VNET**), change **DNS Server** to **10.3.0.8**.
 
-      - In the example, connect all the nodes to `contoso.com` and provide administrator privileges to the user *contosoadmin*.
+      - In the example, connect all the nodes to `contoso.com` and provide administrator permissions to the user *contosoadmin*.
 
       - Log in as *contosoadmin* from all the nodes.
 
-1. Create the clusters (**SRAZC1**, **SRAZCross**).
+1. Create two clusters: **SRAZC1** and **SRAZCross**.
 
    For the example, use the following PowerShell commands:
 
@@ -149,7 +149,7 @@ For a complete walkthrough of the process, see the following video:
      Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
-1. Run the following command from any one node on **azcross1** and **azcross2**:
+1. Run the following command from any node on **azcross1** and **azcross2**:
 
     ```powershell
      $ClusterNetworkName = "Cluster network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or later to find the name. Use Get-ClusterResource to find the IPResourceName.)
@@ -159,7 +159,7 @@ For a complete walkthrough of the process, see the following video:
      Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
-    Make sure that both clusters can connect and communicate with each other.
+1. Verify that both clusters can connect and communicate with each other.
 
     Either use the Connect to Cluster feature in Failover Cluster Manager to connect to the other cluster or verify that the other cluster responds from one of the nodes of the current cluster.
 
@@ -194,13 +194,13 @@ For a complete walkthrough of the process, see the following video:
      Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
     ```
 
-    If you're using Windows Server 2016, then also run this command:
+    If you're using Windows Server 2016, run this command also:
 
     ```powershell
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
     ```
 
-1. Create an SR-Partnership for the two clusters:
+1. Create an Storage Replica partnership for the two clusters:
 
     - Cluster **SRAZC1**: For volume location, use *C:\ClusterStorage\DataDisk1*. For log location, use *G:\*.
 

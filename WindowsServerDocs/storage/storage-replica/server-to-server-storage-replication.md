@@ -426,7 +426,8 @@ The process is, at a high level:
 1. Switch the destination server to be the new source, which surfaces its replicated volumes to users.
 1. If using synchronous replication, no data restore will be necessary unless the user was using an application that was writing data without transaction protection (this is irrespective of replication) during loss of the source server. If using asynchronous replication, the need for a VSS snapshot mount is higher but consider using VSS in all circumstances for application consistent snapshots.
 1. Add the server and its shares as a DFS Namespaces folder target.
-1. Users can then access their data.
+
+Users can then access their data.
 
    > [!NOTE]
    > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be unavailable.
