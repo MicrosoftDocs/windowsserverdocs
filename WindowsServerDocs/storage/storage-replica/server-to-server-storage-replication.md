@@ -1,121 +1,125 @@
 ---
-title: Server-to-server storage replication
-description: How to set up and use Storage Replica for server-to-server replication in Windows Server, including Windows Admin Center and PowerShell
+title: Server-to-Server Storage Replication
+description: Learn how to set up and use Storage Replica for server-to-server replication in Windows Server by using Windows Admin Center or PowerShell.
 manager: siroy
 ms.author: alalve
 ms.topic: how-to
 author: nedpyle
-ms.date: 03/26/2020
-ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
+ms.date: 02/24/2025
 ---
-# Server to Server Storage Replication
+# Set up server-to-server storage replication by using Storage Replica
 
-You can use Storage Replica to configure two servers to sync data so that each has an identical copy of the same volume. This topic provides some background of this server-to-server replication configuration, as well as how to set it up and manage the environment.
+You can use Storage Replica to configure two servers to sync data so that each has an identical copy of the same volume. This article describes the server-to-server replication configuration and how to set up and manage the environment.
 
-To manage Storage Replica you can use [Windows Admin Center](../../manage/windows-admin-center/overview.md) or PowerShell.
+To manage Storage Replica, you can use [Windows Admin Center](../../manage/windows-admin-center/overview.md) or PowerShell.
 
-Here's an overview video of using Storage Replica in Windows Admin Center.
+For an overview of using Storage Replica in Windows Admin Center, see the following video:
 
 > [!video 310d4531-23a6-4140-8892-fecc4a65c2a1]
 
-
 ## Prerequisites
 
-* Active Directory Domain Services forest (doesn't need to run Windows Server 2016).
-* Two servers running Windows Server 2019 or Windows Server 2016, Datacenter Edition. If you're running Windows Server 2019, you can instead use Standard Edition if you're OK replicating only a single volume up to 2 TB in size.
-* Two sets of storage, using SAS JBODs, fibre channel SAN, iSCSI target, or local SCSI/SATA storage. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the servers, with no shared access.
-* Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
-* At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.
-* Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.
-* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.<br>
-If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](#add-azure-vm-expressroute), a [Site-to-Site VPN gateway connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
-* The replicated storage cannot be located on the drive containing the Windows operating system folder.
+* An Active Directory Domain Services forest. (You don't need to run Windows Server 2016.)
+* Two servers running Windows Server 2019 or Windows Server 2016 Datacenter.
+
+   If you're running Windows Server 2019, you can instead use Standard Edition if replicating only a single volume up to 2 TB in size is suitable for your scenario.
+* Two sets of storage, using SAS "just a bunch of disk" enclosures (JBODs), fibre channel storage area network (FC SAN), iSCSI target, or local SCSI/SATA storage. The storage should contain a mix of hard disk drive (HDD) and solid-state drive (SSD) media. You make each storage set available only to each of the servers, with no shared access.
+
+   Each set of storage must support creating at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
+* At least one Ethernet/TCP connection on each server for synchronous replication, but Remote Direct Memory Access (RDMA) is preferred.
+* Appropriate firewall and router rules to allow ICMP, SMB (port 445, and port 5445 for SMB Direct) and WS-MAN (port 5985) bidirectional traffic between all nodes.
+* A network between servers that has enough bandwidth to contain your I/O write workload and an average of 5-ms roundtrip latency for synchronous replication. Asynchronous replication doesn't have a latency recommendation.
+
+  If you replicate between on-premises servers and Azure virtual machines (VMs), you must create a network link between the on-premises servers and the Azure VMs. To create the link, use [Azure ExpressRoute](#add-azure-vm-expressroute), use a [site-to-site VPN gateway connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
+* The replicated storage can't be located on the drive that contains the Windows operating system folder.
 
 > [!IMPORTANT]
->  In this scenario, each server should be in a different physical or logical site. Each server must be able to communicate with the other via a network.
+> In this scenario, each server must be at a different physical site or in a different logical site. Each server must be able to communicate with the other server via a network.
 
-
-Many of these requirements can be determined by using the `Test-SRTopology cmdlet`. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.
+You can verify many of these requirements by using the Test-SRTopology cmdlet. You get access to this tool if you install Storage Replica or install the Storage Replica Management Tools features on at least one server. To use the tool, just install and run the cmdlet. More information is included later in the article.
 
 ## Windows Admin Center requirements
 
-To use Storage Replica and Windows Admin Center together, you need the following:
+To use Storage Replica and Windows Admin Center together, you need the following items:
 
 | System                        | Operating system                                            | Required for     |
 |-------------------------------|-------------------------------------------------------------|------------------|
-| Two servers <br>(any mix of on-premises hardware, VMs, and cloud VMs including Azure VMs)| Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel) | Storage Replica  |
+| Two servers <br>(any mix of on-premises hardware, VMs, and cloud VMs, including Azure VMs) | Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel) | Storage Replica  |
 | One PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
-> Right now you can't use Windows Admin Center on a server to manage Storage Replica.
+> Currently, you can't use Windows Admin Center on a server to manage Storage Replica.
 
 ## Terms
+
 This walkthrough uses the following environment as an example:
 
--   Two servers, named **SR-SRV05** and **SR-SRV06**.
+* Two servers: **SR-SRV05** and **SR-SRV06**
 
--   A pair of logical "sites" that represent two different data centers, with one called **Redmond** and one called **Bellevue**.
+* A pair of logical "sites" that represent two different datacenters: **Redmond** and **Bellevue**
 
-![Diagram showing a server in Building 5 replicating with a server in Building 9](media/Server-to-Server-Storage-Replication/Storage_SR_ServertoServer.png)
-
-**Figure 1: Server to server replication**
+:::image type="content" source="media/Server-to-Server-Storage-Replication/Storage_SR_ServertoServer.png" border="false" alt-text="Diagram that shows a server in Building 5 replicating with a server in Building 9.":::
 
 ## Step 1: Install and configure Windows Admin Center on your PC
 
-If you're using Windows Admin Center to manage Storage Replica, use the following steps to prep your PC to manage Storage Replica.
+If you're using Windows Admin Center to manage Storage Replica, use the following steps to set up your PC to manage Storage Replica.
+
 1. Download and install [Windows Admin Center](../../manage/windows-admin-center/overview.md).
 1. Download and install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520).
-    - If you're using Windows 10, version 1809 or later, install the "RSAT: Storage Replica Module for Windows PowerShell" from Features on Demand.
-1. Open a PowerShell session as administrator by selecting the **Start** button, typing **PowerShell**, right-clicking **Windows PowerShell,** and then selecting **Run as administrator**.
-1. Enter the following command to enable the WS-Management protocol on the local computer and set up the default configuration for remote management on the client.
 
-    ```PowerShell
+    If you use Windows 10 version 1809 or later, install the feature RSAT: Storage Replica Module for Windows PowerShell from Features on Demand.
+1. Open a PowerShell session as administrator: Select **Start**, enter **PowerShell**, right-click **Windows PowerShell,** and then selecting **Run as administrator**.
+1. Enter the following command to enable the WS-Management protocol on the local computer and set up the default configuration for remote management on the client:
+
+    ```powershell
     winrm quickconfig
     ```
 
-1. Type **Y** to enable WinRM services and enable WinRM Firewall Exception.
+1. Enter **Y** to enable WinRM services and to enable WinRM Firewall Exception.
 
-## <a name="provision-os"></a>Step 2: Provision operating system, features, roles, storage, and network
+## <a name="provision-os"></a>Step 2: Provision the operating system, features, roles, storage, and the network
 
-1.  Install Windows Server on both server nodes with an installation type of Windows Server **(Desktop Experience)**.
+1. Install Windows Server on both server nodes by using the installation type Windows Server **(Desktop Experience)**.
 
-    To use an Azure VM connected to your network via an ExpressRoute, see [Adding an Azure VM connected to your network via ExpressRoute](#add-azure-vm-expressroute).
+    You can use an [Azure VM that's connected to your network via ExpressRoute](#add-azure-vm-expressroute).
 
     > [!NOTE]
     > Starting in Windows Admin Center version 1910, you can configure a destination server automatically in Azure. If you choose that option, install Windows Server on the source server and then skip to [Step 3: Set up server-to-server replication](#step-3-set-up-server-to-server-replication).
 
-1.  Add network information, join the servers to the same domain as your Windows 10 management PC (if you're using one), and then restart the servers.
+1. Add network information, join the servers to the same domain as your Windows 10 management PC (if you're using one), and then restart the servers.
 
     > [!NOTE]
-    > From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.
+    > From this point on, always log on as a domain user who is a member of the built-in Administrator group on all servers. Always remember to elevate your PowerShell and command prompts in the remaining steps if you're running a graphical server installation or on a Windows 10 computer.
 
-1.  Connect the first set of JBOD storage enclosure, iSCSI target, FC SAN, or local fixed disk (DAS) storage to the server in site **Redmond**.
+1. Connect the first set of JBOD storage enclosures, iSCSI target, FC SAN, or local fixed disk (DAS) storage to the server in site **Redmond**.
 
-1.  Connect the second set of storage to the server in site **Bellevue**.
+1. Connect the second set of storage to the server in site **Bellevue**.
 
-1.  As appropriate, install latest vendor storage and enclosure firmware and drivers, latest vendor HBA drivers, latest vendor BIOS/UEFI firmware, latest vendor network drivers, and latest motherboard chipset drivers on both nodes. Restart nodes as needed.
+1. As relevant, install the latest vendor storage and enclosure firmware and drivers, the latest vendor host bus adapter (HBA) drivers, the latest vendor BIOS/UEFI firmware, the latest vendor network drivers, and the latest motherboard chipset drivers on both nodes. Restart nodes as needed.
 
     > [!NOTE]
-    > Consult your hardware vendor documentation for configuring shared storage and networking hardware.
+    > Consult your hardware vendor documentation to configure shared storage and networking hardware.
 
-1.  Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required.
+1. Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required.
 
-1.  Configure roles as follows:
+1. Configure roles as follows:
 
-    -   **Windows Admin Center method**
+    * **Windows Admin Center method**
+
         1. In Windows Admin Center, navigate to Server Manager, and then select one of the servers.
         1. Navigate to **Roles & Features**.
         1. Select **Features** > **Storage Replica**, and then click **Install**.
         1. Repeat on the other server.
-    -   **Server Manager method**
 
-        1.  Run **ServerManager.exe** and create a Server Group, adding all server nodes.
+    * **Server Manager method**
 
-        1.  Install the **File Server** and **Storage Replica** roles and features on each of the nodes and restart them.
+        1. Run *ServerManager.exe* and create a server group. Add all server nodes.
 
-    -   **Windows PowerShell method**
+        1. Install the File Server and Storage Replica roles and features on each of the nodes. Then restart the nodes.
 
-        On SR-SRV06 or a remote management computer, run the following command in a Windows PowerShell console to install the required features and roles and restart them:
+    * **Windows PowerShell method**
+
+        On SR-SRV06 or a remote management computer, run the following command in a Windows PowerShell console to install the required features and roles. Then restart the nodes.
 
         ```powershell
         $Servers = 'SR-SRV05','SR-SRV06'
@@ -123,107 +127,111 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
         $Servers | ForEach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,FS-FileServer -IncludeManagementTools -restart }
         ```
 
-        For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)
+        For more information on these steps, see [Install or uninstall roles, role services, or features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)
 
-1.  Configure storage as follows:
+1. Configure storage as described in the following steps.
 
     > [!IMPORTANT]
-    > -   You must create two volumes on each enclosure: one for data and one for logs.
-    > -   Log and data disks must be initialized as GPT, not MBR.
-    > -   The two data volumes must be of identical size.
-    > -   The two log volumes should be of identical size.
-    > -   All replicated data disks must have the same sector sizes.
-    > -   All log disks must have the same sector sizes.
-    > -   The log volumes should use flash-based storage, such as SSD. Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
-    > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.
-    > -   The log volume must be at least 9GB by default and may be larger or smaller based on log requirements.
-    > -   The File Server role is only necessary for Test-SRTopology to operate, as it opens the necessary firewall ports for testing.
+    > * You must create two volumes on each enclosure: one for data and one for logs.
+    > * Log and data disks must be initialized as GUID Partition Table (GPT), not as Master Boot Record (MBR).
+    > * The two data volumes must be the identical size.
+    > * The two log volumes should be the identical size.
+    > * All replicated data disks must have the same sector sizes.
+    > * All log disks must have the same sector sizes.
+    > * The log volumes should use flash-based storage, such as SSD. We recommend that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
+    > * The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1, RAID 10, RAID 5, or RAID 50.
+    > * The log volume must be at least 9 GB by default. It can be larger or smaller based on log requirements.
+    > * The File Server role is necessary only for Test-SRTopology to operate. It opens required firewall ports for testing.
 
-    - **For JBOD enclosures:**
+    * **For JBOD enclosures:**
 
-        1.  Ensure that each server can see that site's storage enclosures only and that the SAS connections are correctly configured.
+        1. Ensure that each server can see only that site's storage enclosures and that the SAS connections are correctly configured.
 
-        1.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](../storage-spaces/deploy-standalone-storage-spaces.md) using Windows PowerShell or Server Manager.
+        1. Provision the storage by using Storage Spaces: Complete steps 1 to 3 in [Deploy Storage Spaces on a Stand-Alone Server](../storage-spaces/deploy-standalone-storage-spaces.md) by using Windows PowerShell or Server Manager.
 
-    - **For iSCSI storage:**
+    * **For iSCSI storage:**
 
-        1.  Ensure that each cluster can see that site's storage enclosures only. You should use more than one single network adapter if using iSCSI.
+        1. Ensure that each cluster can see only that site's storage enclosures. You should use more than a single network adapter if you use iSCSI.
 
-        1.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](../iscsi/iscsi-target-server.md).
+        1. Provision the storage by using your vendor documentation. If you use Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](../iscsi/iscsi-target-server.md).
 
-    - **For FC SAN storage:**
+    * **For FC SAN storage:**
 
-        1.  Ensure that each cluster can see that site's storage enclosures only and that you have properly zoned the hosts.
+        1. Ensure that each cluster can see only that site's storage enclosures and that you have properly zoned the hosts.
 
-        1.  Provision the storage using your vendor documentation.
+        1. Provision the storage by using your vendor documentation.
 
-    - **For local fixed disk storage:**
+    * **For local fixed disk storage:**
 
-        -   Ensure the storage doesn't contain a system volume, page file, or dump files.
+        * Ensure the storage doesn't contain a system volume, a page file, or dump files.
 
-        -   Provision the storage using your vendor documentation.
+        * Provision the storage by using your vendor documentation.
 
-1. Start Windows PowerShell and use the **Test-SRTopology** cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
+1. Start Windows PowerShell and use the Test-SRTopology cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test or in a long-running performance evaluation mode.
 
-    For example, to validate the proposed nodes that each have a **F:** and **G:** volume and run the test for 30 minutes:
+    For example, to validate that the proposed nodes each have an F: volume and a G: volume and to run the test for 30 minutes, run:
 
-    ```PowerShell
+    ```powershell
     MD c:\temp
 
     Test-SRTopology -SourceComputerName SR-SRV05 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV06 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp
     ```
 
     > [!IMPORTANT]
-      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](/azure/azure-local/manage/diskspd-overview?context=/windows-server/context/windows-server-storage) to generate write IOs. For instance, a sample with a low write IO workload for ten minutes to the D: volume:
+    > If you use a test server with no write I/O load on the specified source volume during the evaluation period, consider adding a workload to generate a useful report. You should test with production-like workloads to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](/azure/azure-local/manage/diskspd-overview?context=/windows-server/context/windows-server-storage) to generate write I/Os. For example, copy a sample with a low write I/O workload that runs for 10 minutes to the D: volume:
       >
       > `Diskspd.exe -c1g -d600 -W5 -C5 -b8k -t2 -o2 -r -w5 -i100 -j100 d:\test`
 
-1. Examine the **TestSrTopologyReport.html** report shown in Figure 2 to ensure that you meet the Storage Replica requirements.
+1. Examine the *TestSrTopologyReport.html* report to ensure that you meet the Storage Replica requirements.
 
-    ![Screen showing the topology report](media/Server-to-Server-Storage-Replication/SRTestSRTopologyReport.png)
-
-    **Figure 2: Storage replication topology report**
+    ![Screenshot that shows an example of a topology report.](media/Server-to-Server-Storage-Replication/SRTestSRTopologyReport.png)
 
 ## Step 3: Set up server-to-server replication
+
 ### Using Windows Admin Center
 
-1. Add the source server.
-    1. Select the **Add** button.
-    1. Select **Add server connection**.
-    1. Type the name of the server and then select **Submit**.
-1. On the **All Connections** page, select the source server.
-1. Select **Storage Replica** from Tools panel.
-1. Select **New** to create a new partnership. To create a new Azure VM to use as the destination for the partnership:
+1. Add the source server:
 
-    1. Under **Replicate with another server** select **Use a New Azure VM** and then select **Next**. If you don't see this option, make sure that you're using Windows Admin Center version 1910 or a later version.
-    1. Specify your source server information and replication group name, and then select **Next**.<br><br>This begins a process that automatically selects a Windows Server 2019 or Windows Server 2016 Azure VM as a destination for the migration source. Storage Migration Service recommends VM sizes to match your source, but you can override this by selecting **See all sizes**. Inventory data is used to automatically configure your managed disks and their file systems, as well as join your new Azure VM to your Active Directory domain.
-    1. After Windows Admin Center creates the Azure VM, provide a replication group name and then select **Create**. Windows Admin Center then begins the normal Storage Replica initial synchronization process to start protecting your data.
+   1. Select **Add**.
+   1. Select **Add server connection**.
+   1. Enter the name of the server, and then select **Submit**.
+1. On the **All Connections** pane, select the source server.
+1. On the **Tools** pane, select **Storage Replica**.
+1. Select **New** to create a new partnership.
 
-    Here's a video showing how to use Storage Replica to migrate to Azure VMs.
+   To create a new Azure VM to use as the destination for the partnership:
 
-    > [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ]
+   1. Under **Replicate with another server**, select **Use a New Azure VM**, and then select **Next**. If you don't see this option, make sure that you're using Windows Admin Center version 1910 or a later version.
+   1. Specify your source server information and replication group name, and then select **Next**.
 
-1. Provide the details of the partnership, and then select **Create** (as shown in Figure 3). <br>
+      This step begins a process that automatically selects a Windows Server 2019 or Windows Server 2016 Azure VM as a destination for the migration source. Storage Migration Service recommends VM sizes that match your source, but you can override this by selecting **See all sizes**. Inventory data is used to automatically configure your managed disks and their file systems, and to join your new Azure VM to your Active Directory domain.
+   1. After Windows Admin Center creates the Azure VM, provide a replication group name, and then select **Create**. Windows Admin Center then begins the normal Storage Replica initial synchronization process to start protecting your data.
+
+   Here's a video showing how to use Storage Replica to migrate to Azure VMs:
+
+   > [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ]
+
+1. Provide the details of the partnership, and then select **Create**.
+
    ![The New Partnership screen showing partnership details, such as an 8 GB log size.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
-
-    **Figure 3: Creating a new partnership**
 
 > [!NOTE]
 > Removing the partnership from Storage Replica in Windows Admin Center doesn't remove the replication group name.
 
 ### Using Windows PowerShell
 
-Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
+Next, configure server-to-server replication by using Windows PowerShell. You must perform all the following steps directly on the nodes or from a remote management computer that contains Windows Server Remote Server Administration Tools.
 
-1. Ensure you are using an elevated PowerShell console as an administrator.
+1. Check to ensure that you are using an elevated PowerShell console as an administrator.
 1. Configure the server-to-server replication, specifying the source and destination disks, the source and destination logs, the source and destination nodes, and the log size.
 
-    ```PowerShell
+    ```powershell
     New-SRPartnership -SourceComputerName sr-srv05 -SourceRGName rg01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName sr-srv06 -DestinationRGName rg02 -DestinationVolumeName f: -DestinationLogVolumeName g: -LogType Raw
     ```
 
-   Output:
-   ```PowerShell
+   Here's example output:
+
+   ```output
    DestinationComputerName : SR-SRV06
    DestinationRGName       : rg02
    SourceComputerName      : SR-SRV05
@@ -231,18 +239,19 @@ Now you will configure server-to-server replication using Windows PowerShell. Yo
    ```
 
     > [!IMPORTANT]
-    > The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use -LogSizeInBytes with a  higher or lower value.
+    > The default log size is 8 GB. Depending on the results of the Test-SRTopology cmdlet, you might choose to use the `-LogSizeInBytes` parameter to set a  higher or lower value.
 
-1.  To get replication source and destination state, use `Get-SRGroup` and `Get-SRPartnership` as follows:
+1. To get the replication source and destination state, use the Get-SRGroup and Get-SRPartnership cmdlets:
 
-    ```PowerShell
+    ```powershell
     Get-SRGroup
     Get-SRPartnership
     (Get-SRGroup).replicas
     ```
-    Output:
 
-    ```PowerShell
+    Here's example output:
+
+    ```output
     CurrentLsn             : 0
     DataVolume             : F:\
     LastInSyncTime         :
@@ -257,21 +266,25 @@ Now you will configure server-to-server replication using Windows PowerShell. Yo
     PSComputerName         :
     ```
 
-1.  Determine the replication progress as follows:
+1. Determine the replication progress as described in the following steps.
 
-    1.  On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:
+    1. On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:
 
-        ```PowerShell
+        ```powershell
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
         ```
 
-    1.  On the destination server, run the following command to see the Storage Replica events that show creation of the partnership. This event states the number of copied bytes and the time taken. Example:
+    1. On the destination server, run the following command to see the Storage Replica events that show partnership creation. This event states the number of copied bytes and how long it took to create the partnership.
 
-        ```PowerShell
+       For example:
+
+        ```powershell
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | fl
         ```
-        Here's some example output:
-        ```
+
+        Here's example output:
+
+        ```output
         TimeCreated  : 4/8/2016 4:12:37 PM
         ProviderName : Microsoft-Windows-StorageReplica
         Id           : 1215
@@ -290,17 +303,19 @@ Now you will configure server-to-server replication using Windows PowerShell. Yo
         ```
 
         > [!NOTE]
-        > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.
+        > Be design, Storage Replica dismounts the destination volumes and their drive letters or mount points.
 
-    1.  Alternatively, the destination server group for the replica states the number of byte remaining to copy at all times, and can be queried through PowerShell. For example:
+    1. Alternatively, the destination server group for the replica states the number of byte remaining to copy at all times. You can use PowerShell to query the information.
 
-        ```PowerShell
+       For example:
+
+        ```powershell
         (Get-SRGroup).Replicas | Select-Object numofbytesremaining
         ```
 
-        As a progress sample (that will not terminate):
+        Here's a progress sample (that will not terminate):
 
-        ```PowerShell
+        ```powershell
         while($true) {
 
          $v = (Get-SRGroup -Name "RG02").replicas | Select-Object numofbytesremaining
@@ -309,86 +324,88 @@ Now you will configure server-to-server replication using Windows PowerShell. Yo
         }
         ```
 
-    1.  On the destination server, run the following command and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.
+    1. On the destination server, run the following command and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events, which indicate processing progress.
 
-        ```PowerShell
+        ```powershell
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL
         ```
 
 ## Step 4: Manage replication
 
-Now you will manage and operate your server-to-server replicated infrastructure. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
+Finally, manage and operate your server-to-server replicated infrastructure. You can perform all the following steps directly on the nodes directly or from a remote management computer that contains Windows Server Remote Server Administration Tools.
 
-1.  Use `Get-SRPartnership` and `Get-SRGroup` to determine the current source and destination of replication and their status.
+1. Use the Get-SRPartnership and Get-SRGroup cmdlets to determine the current source and destination of replication and their status.
 
-1.  To measure replication performance, use the `Get-Counter` cmdlet on both the source and destination nodes. The counter names are:
+1. To measure replication performance, use the Get-Counter cmdlet on both the source and destination nodes. The counter names are:
 
-    -   \Storage Replica Partition I/O Statistics(*)\Number of times flush paused
+    * \Storage Replica Partition I/O Statistics(*)\Number of times flush paused
 
-    -   \Storage Replica Partition I/O Statistics(*)\Number of pending flush I/O
+    * \Storage Replica Partition I/O Statistics(*)\Number of pending flush I/O
 
-    -   \Storage Replica Partition I/O Statistics(*)\Number of requests for last log write
+    * \Storage Replica Partition I/O Statistics(*)\Number of requests for last log write
 
-    -   \Storage Replica Partition I/O Statistics(*)\Avg. Flush Queue Length
+    * \Storage Replica Partition I/O Statistics(*)\Avg. Flush Queue Length
 
-    -   \Storage Replica Partition I/O Statistics(*)\Current Flush Queue Length
+    * \Storage Replica Partition I/O Statistics(*)\Current Flush Queue Length
 
-    -   \Storage Replica Partition I/O Statistics(*)\Number of Application Write Requests
+    * \Storage Replica Partition I/O Statistics(*)\Number of Application Write Requests
 
-    -   \Storage Replica Partition I/O Statistics(*)\Avg. Number of requests per log write
+    * \Storage Replica Partition I/O Statistics(*)\Avg. Number of requests per log write
 
-    -   \Storage Replica Partition I/O Statistics(*)\Avg. App Write Latency
+    * \Storage Replica Partition I/O Statistics(*)\Avg. App Write Latency
 
-    -   \Storage Replica Partition I/O Statistics(*)\Avg. App Read Latency
+    * \Storage Replica Partition I/O Statistics(*)\Avg. App Read Latency
 
-    -   \Storage Replica Statistics(*)\Target RPO
+    * \Storage Replica Statistics(*)\Target RPO
 
-    -   \Storage Replica Statistics(*)\Current RPO
+    * \Storage Replica Statistics(*)\Current RPO
 
-    -   \Storage Replica Statistics(*)\Avg. Log Queue Length
+    * \Storage Replica Statistics(*)\Avg. Log Queue Length
 
-    -   \Storage Replica Statistics(*)\Current Log Queue Length
+    * \Storage Replica Statistics(*)\Current Log Queue Length
 
-    -   \Storage Replica Statistics(*)\Total Bytes Received
+    * \Storage Replica Statistics(*)\Total Bytes Received
 
-    -   \Storage Replica Statistics(*)\Total Bytes Sent
+    * \Storage Replica Statistics(*)\Total Bytes Sent
 
-    -   \Storage Replica Statistics(*)\Avg. Network Send Latency
+    * \Storage Replica Statistics(*)\Avg. Network Send Latency
 
-    -   \Storage Replica Statistics(*)\Replication State
+    * \Storage Replica Statistics(*)\Replication State
 
-    -   \Storage Replica Statistics(*)\Avg. Message Round Trip Latency
+    * \Storage Replica Statistics(*)\Avg. Message Round Trip Latency
 
-    -   \Storage Replica Statistics(*)\Last Recovery Elapsed Time
+    * \Storage Replica Statistics(*)\Last Recovery Elapsed Time
 
-    -   \Storage Replica Statistics(*)\Number of Flushed Recovery Transactions
+    * \Storage Replica Statistics(*)\Number of Flushed Recovery Transactions
 
-    -   \Storage Replica Statistics(*)\Number of Recovery Transactions
+    * \Storage Replica Statistics(*)\Number of Recovery Transactions
 
-    -   \Storage Replica Statistics(*)\Number of Flushed Replication Transactions
+    * \Storage Replica Statistics(*)\Number of Flushed Replication Transactions
 
-    -   \Storage Replica Statistics(*)\Number of Replication Transactions
+    * \Storage Replica Statistics(*)\Number of Replication Transactions
 
-    -   \Storage Replica Statistics(*)\Max Log Sequence Number
+    * \Storage Replica Statistics(*)\Max Log Sequence Number
 
-    -   \Storage Replica Statistics(*)\Number of Messages Received
+    * \Storage Replica Statistics(*)\Number of Messages Received
 
-    -   \Storage Replica Statistics(*)\Number of Messages Sent
+    * \Storage Replica Statistics(*)\Number of Messages Sent
 
     For more information on performance counters in Windows PowerShell, see [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).
 
-1.  To move the replication direction from one site, use the `Set-SRPartnership` cmdlet.
+1. To move the replication direction from one site, use the Set-SRPartnership cmdlet:
 
-    ```PowerShell
+    ```powershell
     Set-SRPartnership -NewSourceComputerName sr-srv06 -SourceRGName rg02 -DestinationComputerName sr-srv05 -DestinationRGName rg01
     ```
 
     > [!WARNING]
-    > Windows Server prevents role switching when the initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Don't force switch directions until the initial sync is complete.
+    > Windows Server prevents role switching when the initial sync is ongoing. Data loss might occur if you attempt to switch before allowing initial replication to complete. Don't force-switch directions until the initial sync is complete.
 
-    Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.
+    Check the event logs to see the direction of replication change and recovery mode, and then reconcile. Write I/Os can then write to the storage of the new source server. Changing the replication direction will block write I/Os on the originating source computer.
 
-1.  To remove replication, use `Get-SRGroup`, `Get-SRPartnership`, `Remove-SRGroup`, and `Remove-SRPartnership` on each node. Ensure you run the `Remove-SRPartnership` cmdlet on the current source of replication only, not on the destination server. Run `Remove-SRGroup` on both servers. For example, to remove all replication from two servers:
+1. To remove replication, use Get-SRGroup, Get-SRPartnership, Remove-SRGroup, and Remove-SRPartnership on each node. Ensure you run the Remove-SRPartnership cmdlet only on the current source of replication, not on the destination server. Run Remove-SRGroup on both servers.
+
+   For example, to remove all replication from two servers, run these commands:
 
     ```powershell
     Get-SRPartnership
@@ -396,8 +413,10 @@ Now you will manage and operate your server-to-server replicated infrastructure.
     Get-SRGroup | Remove-SRGroup
     ```
 
-## Replacing DFS Replication with Storage Replica
+## Replacs DFS Replication with Storage Replica
+
 Many Microsoft customers deploy DFS Replication as a disaster recovery solution for unstructured user data like home folders and departmental shares. DFS Replication has shipped in Windows Server 2003 R2 and all later operating systems and operates on low bandwidth networks, which makes it attractive for high latency and low change environments with many nodes. However, DFS Replication has notable limitations as a data replication solution:
+
 * It doesn't replicate in-use or open files.
 * It doesn't replicate synchronously.
 * Its asynchronous replication latency can be many minutes, hours, or even days.
@@ -415,13 +434,13 @@ The process is, at a high level:
 
 1. Install Windows Server on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.
 1. Ensure that any data you want to replicate exists on one or more data volumes and not on the C: drive.
-   a.  You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFS Replication.
+   1. You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFS Replication.
 1. Share the data on your source server and make it accessible through a DFS namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.
-   a.  You can create matching shares on the destination server, which will be unavailable during normal operations,
-   b.  Don't add the destination server to the DFS Namespaces namespace, or if you do, ensure that all its folder targets are disabled.
+   1. You can create matching shares on the destination server, which will be unavailable during normal operations,
+   1. Don't add the destination server to the DFS Namespaces namespace, or if you do, ensure that all its folder targets are disabled.
 1. Enable Storage Replica replication and complete initial sync. Replication can be either synchronous or asynchronous.
-   a.  However, synchronous is recommended in order to guarantee IO data consistency on the destination server.
-   b.  We strongly recommend enabling Volume Shadow Copies and periodically taking snapshots with VSSADMIN or your other tools of choice. This will guarantee applications flush their data files to disk consistently. In the event of a disaster, you can recover files from snapshots on the destination server that might have been partially replicated asynchronously. Snapshots replicate along with files.
+   1. However, synchronous is recommended in order to guarantee IO data consistency on the destination server.
+   1. We strongly recommend enabling Volume Shadow Copies and periodically taking snapshots with VSSADMIN or your other tools of choice. This will guarantee applications flush their data files to disk consistently. In the event of a disaster, you can recover files from snapshots on the destination server that might have been partially replicated asynchronously. Snapshots replicate along with files.
 1. Operate normally until there is a disaster.
 1. Switch the destination server to be the new source, which surfaces its replicated volumes to users.
 1. If using synchronous replication, no data restore will be necessary unless the user was using an application that was writing data without transaction protection (this is irrespective of replication) during loss of the source server. If using asynchronous replication, the need for a VSS snapshot mount is higher but consider using VSS in all circumstances for application consistent snapshots.
@@ -430,31 +449,35 @@ The process is, at a high level:
 Users can then access their data.
 
    > [!NOTE]
-   > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be unavailable.
+   > Disaster recovery planning is a complex subject and requires great attention to detail. We highly recommend that you create runbooks and perform annual live failover drills. When an actual disaster strikes, chaos rules, and experienced personnel might be unavailable.
 
-## <a name="add-azure-vm-expressroute"></a>Adding an Azure VM connected to your network via ExpressRoute
+## <a name="add-azure-vm-expressroute"></a>Add an Azure VM that's connected to your network via ExpressRoute
 
-1. [Create an ExpressRoute in the Azure portal](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view this new group. Take note of the virtual network name.
-![Azure portal showing the resource group added with the ExpressRoute](media/Server-to-Server-Storage-Replication/express-route-resource-group.png)
+1. In the Azure portal, create an [instance of ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).
 
-    **Figure 4: The resources associated with an ExpressRoute - take note of the virtual network name**
-1. [Create a new resource group](/azure/azure-resource-manager/resource-group-portal).
-1. [Add a network security group](/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When creating it, select the subscription ID associated with the ExpressRoute you created, and select the resource group you just created as well.
-<br><br>Add any inbound and outbound security rules you need to the network security group. For example, you might want to allow Remote Desktop access to the VM.
-1. [Create an Azure VM](/azure/virtual-machines/windows/quick-create-portal) with the following settings (shown in Figure 5):
-    - **Public IP address**: None
-    - **Virtual network**: Select the virtual network you took note of from the resource group added with the ExpressRoute.
-    - **Network security group (firewall)**: Select the network security group you created previously.
-    ![Create virtual machine showing ExpressRoute network settings](media/Server-to-Server-Storage-Replication/azure-vm-express-route.png)
-    **Figure 5: Creating a VM while selecting ExpressRoute network settings**
-1. After the VM is created, see [Step 2: Provision operating system, features, roles, storage, and network](#provision-os).
+   After the ExpressRoute is approved, a resource group is added to the subscription. To view this new group, go to **Resource groups**. Note the virtual network name.
 
+   ![Azure portal showing the resource group added with the ExpressRoute](media/Server-to-Server-Storage-Replication/express-route-resource-group.png)
+
+1. Create a [new resource group](/azure/azure-resource-manager/resource-group-portal).
+1. Add a [network security group](/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When you create it, select the subscription ID that's associated with the instance of ExpressRoute you created and select the resource group that's associated with ExpressRoute.
+
+   Add any inbound and outbound security rules you need to the network security group. For example, you might want to allow Remote Desktop access to the VM.
+1. Create an [Azure VM](/azure/virtual-machines/windows/quick-create-portal) that has the following settings (shown in the following figure):
+
+    * **Public IP address**: None
+    * **Virtual network**: Select the virtual network you noted from the resource group added with the ExpressRoute instance.
+    * **Network security group (firewall)**: Select the network security group you created previously.
+
+      ![Screenshot of creating a virtual machine that shows ExpressRoute network settings.](media/Server-to-Server-Storage-Replication/azure-vm-express-route.png)
+
+1. After the VM is created, see [Step 2: Provision the operating system, features, roles, storage, and a network](#provision-os).
 
 ## Related content
 
-- [Storage Replica Overview](storage-replica-overview.md)
-- [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
-- [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
-- [Storage Replica: Known Issues](storage-replica-known-issues.md)
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+* [Storage Replica Overview](storage-replica-overview.md)
+* [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
+* [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
+* [Storage Replica: Known Issues](storage-replica-known-issues.md)
+* [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
+* [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

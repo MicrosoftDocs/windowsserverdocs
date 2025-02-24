@@ -7,7 +7,7 @@ ms.date: 02/18/2025
 ms.topic: article
 manager: mchad
 ---
-# Set up cluster-to-cluster Storage Replica in the same Azure region
+# Set up cluster-to-cluster storage in the same Azure region by using Storage Replica
 
 You can configure Storage Replica in Windows Server for cluster-to-cluster replication within the same Azure region. In the article example, we use a two-node cluster, but you can use Storage Replica if you have more than two nodes in your clusters.
 
