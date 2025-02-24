@@ -4,7 +4,7 @@ description: How to install Windows Admin Center on a Windows PC or on a server 
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 02/21/2025
+ms.date: 02/24/2025
 zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
@@ -74,7 +74,7 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
-1. In the **Ready to install** window, select **Install** to start the installation process.
+1. Review the **Ready to install** window, select **Install** to start the installation process.
 
 1. After the installation process finishes, select **Start Windows Admin Center**, then select **Finish**.
 
@@ -141,7 +141,7 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
-1. In the **Ready to install** window, select **Install** to start the installation process.
+1. Review the **Ready to install** window, select **Install** to start the installation process.
 
 1. After the installation process finishes, select **Start Windows Admin Center**, then select **Finish**.
 
@@ -185,33 +185,39 @@ You've now installed Windows Admin Center on your machine.
 
 :::zone pivot="windows-client"
 
-To install Windows Admin Center on your Windows client machine, follow the steps.
+To install Windows Admin Center on your machine running the Windows client, follow these steps:
 
 1. Sign in to the machine you want to install Windows Admin Center on.
 
 1. Run the Windows Admin Center installer you previously downloaded.
 
-1. On the **windows Admin Center Setup** screen, if you agree to the terms, check the box to accept, then select **Next**.
+1. On the **Welcome to the Windows Admin Center setup wizard** window, select **Next** to continue.
 
-1. Select your preference for sharing diagnostic data with Microsoft, then select **Next**.
+1. On the **License Terms and Privacy Statement** window, if you agree to the terms select **I accept these terms and understand the privacy statement**, then select **Next** to start the installation process.
 
-1. Select **Use Microsoft Update when I check for updates (recommended)**, then select **Next**.
+1. In the **Select installation mode** window, select **Express setup**, then select **Next**.
 
-1. Select **Next** to continue.
-
-1. On the **Installing Windows Admin Center** screen, select the port that you want the Windows Admin Center site to use and confirm the settings. Select **Install** to begin the installation.
+1. In the **Select TLS certificate** window, select the option that matches your needs, then select **Next**.
 
    >[!NOTE]
-   >
-   > - The default port is 6516. The **Allow Windows Admin Center to modify this machine's trusted host settings** and **Automatically update Windows Admin Center** checkboxes are selected by default. We recommend leaving the defaults selected, but you can also deselect the box to disable this setting if you don't want Windows Admin Center to be able to modify your machine's trusted host settings or update automatically.
-   >
-   > - You must modify TrustedHosts in a workgroup environment or when you use local administrator credentials in a domain. If you choose to skip this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts) instead.
+   >You must select which Transport Layer Security (TLS) certificate Windows Admin Center should use. If you already have a certificate, it must be installed in the `LocalMachine\My` certificates store. If you're installing Windows Admin Center for testing purposes only, the installer can generate a self-signed certificate that expires after 60 days.
 
-1. On the **One more thing** screen, check **Open Windows Admin Center**, then select **Finish**.
+1. In the **Automatic updates** window, select your preferred update option, then select **Next**.  
 
-1. Wait for Windows Admin Center to launch, in the **Select a certificate for authentication** select the **Windows Admin Center Client**, then select **OK**.
+1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
-You've now installed Windows Admin Center on your Windows client machine.
+1. Select the Start Menu folder for where setup should place shortcuts. To use the default location, select **Next**. Alternatively, enter a folder name or select **Browse** followed by **Next**.
+
+1. Review the **Ready to install** window, select **Install** to start the installation process.
+
+1. After the installation process finishes, select **Start Windows Admin Center**, then select **Finish**.
+
+1. Sign in as an administrator to start using Windows Admin Center.
+
+>[!NOTE]
+> You must modify TrustedHosts in a workgroup environment or when you use local administrator credentials in a domain. If you choose to skip this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts) instead.
+
+You've now installed Windows Admin Center on your machine.
 
 ::: zone-end
 
