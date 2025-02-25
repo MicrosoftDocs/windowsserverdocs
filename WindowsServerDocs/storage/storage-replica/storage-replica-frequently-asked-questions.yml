@@ -195,7 +195,7 @@ sections:
           
           If you experience a disaster and the source volume is lost, you can use the Set-SRPartnership cmdlet to promote the destination as the new source volume. On the newly promoted source, you can back up or restore that volume. You can also remove replication with by using the Remove-SRPartnership and Remove-SRGroup cmdlets to remount the volume as read/writable.
           
-          To create periodic application-consistent snapshots, you can use Volume Shadow Copy Services (VSS) by running *VSSAdmin.exe* on the source server to snapshot replicated data volumes.
+          To create periodic application-consistent snapshots, you can use Volume Shadow Copy Service (VSS) by running *VSSAdmin.exe* on the source server to snapshot replicated data volumes.
           
           For example, where you're replicating the `F:` volume with Storage Replica, run this command:
           
@@ -212,7 +212,7 @@ sections:
           vssadmin revert shadow /shadow={shadown copy ID GUID listed previously}
           ```
           
-          You can also schedule this tool to run periodically by using a scheduled task. For more information on using VSS, see [VSSAdmin](../../administration/windows-commands/vssadmin.md). VSS ignores the log volume, so you don't need to back up the log volume.
+          You can also schedule this tool to run periodically by using a scheduled task. For more information on using VSS, see [vssadmin](../../administration/windows-commands/vssadmin.md). VSS ignores the log volume, so you don't need to back up the log volume.
           
           Storage Replica supports file-based backups. Storage Replica doesn't support block-based backup and restore.
           

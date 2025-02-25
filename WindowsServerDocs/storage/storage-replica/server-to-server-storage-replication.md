@@ -455,7 +455,7 @@ The process, at a high level, has these steps:
 1. Enable Storage Replica replication and complete initial sync. Replication can be either synchronous or asynchronous.
 
    * We recommend synchronous replication to guarantee I/O data consistency on the destination server.
-   * We strongly recommend enabling Volume Shadow Copies and periodically taking snapshots by using VSSADMIN or another tool. This action guarantees that applications flush their data files to disk consistently. If a disaster occurs, you can recover files from snapshots on the destination server that might be partially replicated asynchronously. Snapshots replicate along with files.
+   * We strongly recommend enabling Volume Shadow Copies and periodically taking snapshots by using vssadmin or another tool. This action guarantees that applications flush their data files to disk consistently. If a disaster occurs, you can recover files from snapshots on the destination server that might be partially replicated asynchronously. Snapshots replicate along with files.
 1. Operate normally until there's a disaster.
 1. Switch the destination server to be the new source, which surfaces its replicated volumes to users.
 1. If you choose to use synchronous replication, no data restore is necessary unless a user was using an application that was writing data without transaction protection (replication has no effect in this scenario) when the source server is lost. If you choose to use asynchronous replication, the need for a Volume Shadow Copy Service (VSS) snapshot mount is higher, but consider using VSS in all circumstances for application-consistent snapshots.

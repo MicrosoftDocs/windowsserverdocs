@@ -395,9 +395,9 @@ This message is expected and is by design. The listed items aren't volumes, but 
 
 To view details, use the DISKPART tool or the Get-Partition cmdlet. These partitions have a GPT type of `558d43c5-a1ac-43c0-aac8-d1472b2923d1`.
 
-## A Storage Replica node hangs when creating snapshots
+## A Storage Replica node stops responding when you create snapshots
 
-Creating a VSS snapshot, such as through backup or VSSADMIN, a Storage Replica node hangs. You must force a restart of the node to recover. There's no error, just a hard hang of the server.
+Creating a Volume Shadow Copy Service (VSS) snapshot, such as through backup or by using vssadmin, a Storage Replica node stops responding, or *hangs*. You must force a restart of the node to recover.
 
 This issue occurs when you create a VSS snapshot of the log volume. The underlying cause is a legacy design aspect of VSS, not Storage Replica. The resulting behavior when you take a snapshot of the Storage Replica log volume is a VSS I/O queuing mechanism deadlocks the server.
 

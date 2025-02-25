@@ -38,7 +38,7 @@ The following diagram shows storage replication in a stretch cluster:
 - Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
 - At least one 1-GbE connection on each server for synchronous replication.
 - At least 2 GB of RAM and two cores per server. You will need more memory and cores for more virtual machines (VMs).
-- Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct), and WS-MAN (port 5985) bidirectional traffic between all nodes.
+- Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct), and Web Services Management (WS-Man) (port 5985) bidirectional traffic between all nodes.
 - A network between servers with enough bandwidth to contain your I/O write workload and an average of =5 millisecond (ms) round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
 - The replicated storage cannot be located on the drive that contain the Windows operating system folder.
 

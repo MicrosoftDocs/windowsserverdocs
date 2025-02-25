@@ -37,7 +37,7 @@ This walkthrough uses the following environment as an example:
 * Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX, Storage Spaces Direct, or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.
-* Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.
+* Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and Web Services Management (WS-Man) (port 5985) bidirectional traffic between all nodes.
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
 * There are important considerations & limitations for Storage Spaces Direct replication - please review the detailed information below.
