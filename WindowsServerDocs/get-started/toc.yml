@@ -46,8 +46,8 @@ items:
       - name: Windows Server 2016
         href: removed-deprecated-features-windows-server-2016.md
     - name: Release information
-      items:
       href: /windows/release-health/windows-server-release-info?context=//windows-server/context/windows-server-get-started
+      items:
       - name: Windows Server 2025
         items:
         - name: Known issues and notifications
