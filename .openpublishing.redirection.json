@@ -11959,6 +11959,11 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md",
       "redirect_url": "/windows-server/storage/storage-spaces/upgrade-storage-spaces-direct",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/windows-server-release-info.md",
+      "redirect_url": "/windows/release-health/windows-server-release-info",
+      "redirect_document_id": false
     }
   ]
 }
