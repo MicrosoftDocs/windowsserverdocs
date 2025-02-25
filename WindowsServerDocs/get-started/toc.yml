@@ -45,22 +45,22 @@ items:
         href: removed-deprecated-features-windows-server-2019.md
       - name: Windows Server 2016
         href: removed-deprecated-features-windows-server-2016.md
+    - name: Release information
       items:
-      - name: Release information
-        href: /windows/release-health/windows-server-release-info?context=//windows-server/context/windows-server-get-started
-        - name: Windows Server 2025
-          items:
-          - name: 
-            href: /windows/release-health/status-windows-server-2025?context=//windows-server/context/windows-server-get-started
-          - name: 
-            href: /windows/release-health/resolved-issues-windows-server-2025context=//windows-server/context/windows-server-get-started
+      href: /windows/release-health/windows-server-release-info?context=//windows-server/context/windows-server-get-started
+      - name: Windows Server 2025
         items:
-        - name: Windows Server 2022
-          items:
-          - name: 
-            href: /windows/release-health/status-windows-server-2022?context=//windows-server/context/windows-server-get-started
-          - name: 
-            href: /windows/release-health/resolved-issues-windows-server-2022?context=//windows-server/context/windows-server-get-started
+        - name: Known issues and notifications
+          href: /windows/release-health/status-windows-server-2025?context=//windows-server/context/windows-server-get-started
+        - name: Resolved issues 
+          href: /windows/release-health/resolved-issues-windows-server-2025context=//windows-server/context/windows-server-get-started
+      items:
+      - name: Windows Server 2022
+        items:
+        - name: Known issues and notifications
+          href: /windows/release-health/status-windows-server-2022?context=//windows-server/context/windows-server-get-started
+        - name: Resolved issues 
+          href: /windows/release-health/resolved-issues-windows-server-2022?context=//windows-server/context/windows-server-get-started
     - name: Extended Security Updates
       href: extended-security-updates-overview.md
     - name: Upgrade Windows Server
