@@ -130,7 +130,7 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
     **Figure 10: Draining roles from a node using Failover Cluster Manager**
 
     ```PowerShell
-    Suspend-ClusterNode -Name Cluster01
+    Suspend-ClusterNode -Name Node1
     ```
 
     Here's an example of the output showing that the cluster node is now paused:
@@ -138,19 +138,19 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
     ```output
     Name           ID    State
     ----           --    -----
-    Cluster01      1     Paused
+    Node1          1     Paused
     ```
 
 2. Evict the paused node from the cluster by using Cluster Manager or the [Remove-ClusterNode](/powershell/module/failoverclusters/Remove-ClusterNode) cmdlet.
 
     ```PowerShell
-    Remove-ClusterNode -Name Cluster01
+    Remove-ClusterNode -Name Node1
     ```
 
     Here's an example of the output:
 
     ```output
-    Are you sure you want to evict node redshift-host?
+    Are you sure you want to evict node Node1?
     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
     ```
 
@@ -172,10 +172,6 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 5. Check network and storage connectivity settings using Failover Cluster Manager.
 6. If Windows Firewall is used, check that the Firewall settings are correct for the cluster. For example, Cluster Aware Updating might require Firewall configuration.
 7. For Hyper-V workloads, create virtual switches that exactly match the virtual switches used on the rest of the cluster nodes. You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
-
-    ```powershell
-    Get-VMSwitch -ComputerName 
-    ```
 
     ![Screencap showing the location of the Hyper-V Virtual Switch Manager dialog](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_VMSwitch.png)
     **Figure 14: Virtual Switch Manager**
@@ -199,10 +195,10 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 
 2. After the node is successfully added to the cluster, you can (optionally) move some of the cluster workloads to the newly added node to rebalance the workload across the cluster as follows:
 
-    1. Use **Live Migration** in Failover Cluster Manager for virtual machines or the [Move-ClusterVirtualMachineRole](/powershell/module/failoverclusters/Move-ClusterVirtualMachineRole) cmdlet (see Figure 17) to perform a live migration of the virtual machines.
+    - To move running virtual machines without downtime, use **Live Migration** in Failover Cluster Manager or the [Move-ClusterVirtualMachineRole](/powershell/module/failoverclusters/Move-ClusterVirtualMachineRole) cmdlet.
 
         ```PowerShell
-        Move-ClusterVirtualMachineRole -Name VM1 -Node clusternode1
+        Move-ClusterVirtualMachineRole -Name VM1 -Node node1
         ```
 
         Here's an example of the output:
@@ -210,9 +206,10 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
         ```output
         Name      OwnerNode     State
         ----      ---------     -----
-        VM1       clusternode1  Online
+        VM1       node1  Online
+        ```
 
-    2. Use **Move** from the Failover Cluster Manager or the [Move-ClusterGroup](/powershell/module/failoverclusters/Move-ClusterGroup) cmdlet for other cluster workloads.
+    - To move other cluster workloads, use the **Move** command in Failover Cluster Manager or the [Move-ClusterGroup](/powershell/module/failoverclusters/Move-ClusterGroup) cmdlet.
 
 ### Step 5: Repeat steps 2 through 4 for every other node in the cluster
 
@@ -228,35 +225,106 @@ When every node has the newer OS version installed and is added back to the clus
 >
 > After you update the cluster functional level, you cannot go back to an earlier functional level and you cannot add nodes running earlier versions of Windows Server to the cluster.
 
-1. Using the Failover Cluster Manager UI or the [Get-ClusterGroup](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet, check that all cluster roles are running on the cluster as expected. In the following example, Available Storage isn't being used, instead a CSV is used and Available Storage displays an **Offline** status (see Figure 18).
+1. Check that all cluster roles are running on the cluster as expected. You can use Failover Cluster Manager or the [Get-ClusterGroup](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet.
+In the following example, Available Storage isn't being used, instead a CSV is used and Available Storage displays an **Offline** status.
 
-    ![Screencap showing the output of the Get-ClusterGroup cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterGroup.png)
-    **Figure 18: Verifying that all cluster groups (cluster roles) are running using the [`Get-ClusterGroup`](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet**
+    ```PowerShell
+    Get-ClusterGroup
+    ```
 
-2. Check that all cluster nodes are online and running using the [`Get-ClusterNode`](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
-3. Run the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet - no errors should be returned (see Figure 19).
+    Here's an example of the output:
 
-    ![Screencap showing the output of the Update-ClusterFunctionalLevel cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SelectFunctionalLevel.png)
-    **Figure 19: Updating the functional level of a cluster using PowerShell**
+    ```output
+    Name                OwnerNode      State
+    ----                ---------      -----
+    Available Storage   node2          Offline
+    VM1                 node2          Online
+    VM2                 node1          Online
+    VM3                 node1          Online
+    VM4                 node3          Online
+    Cluster Group       node1          Online
+    ```
 
-4. After the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet is run, new features are available.
+2. Check that all cluster nodes are online and running using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
+
+    ```powershell
+    Get-ClusterNode
+    ```
+
+    Here's an example of output:
+
+    ```output
+    Name        ID    State
+    ----        --    -----
+    node1       1     Up
+    node2       2     Up
+    node3       3     Up
+    ```
+
+3. View the cluster functional level by using the [Get-Cluster](/powershell/module/failoverclusters/get-cluster) cmdlet:
+
+    ```PowerShell
+    Get-Cluster | Select ClusterFunctionalLevel
+    ```
+
+    Here's an example of output:
+
+    ```output
+    ClusterFunctionalLevel
+    -----------------------
+    8
+    ```
+
+4. Run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet - no errors should be returned (see Figure 19).
+
+    ```powershell
+    Update-ClusterFunctionalLevel
+    ```
+
+    Here's an example of the output:
+
+    ```output
+    Updating the Functional level for cluster robindh-TP4D.
+    Warning: You cannot undo this operation. Do you want to continue?
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+    ```
+
+5. Confirm that the cluster functional level was updated by using the [Get-Cluster](/powershell/module/failoverclusters/get-cluster) cmdlet:
+
+    ```PowerShell
+    Get-Cluster | Select ClusterFunctionalLevel
+    ```
+
+    Here's an example of the output:
+
+    ```output
+    ClusterFunctionalLevel
+    -----------------------
+    9
+    ```
 
 ### Step 7: Resume normal cluster operations and turn on new functionality
 
-4. Resume normal cluster updates and backups:
+To resume normal cluster operations and turn on new functionality, perform the following steps:
 
-    1. If you were previously running CAU, restart it using the CAU UI or use the [`Enable-CauClusterRole`](/powershell/module/clusterawareupdating/Enable-CauClusterRole) cmdlet (see Figure 20).
+1. Start Cluster Aware Updating by using the Cluster Aware Updating tool or the [Enable-CauClusterRole](/powershell/module/clusterawareupdating/Enable-CauClusterRole) cmdlet.
 
-        ![Screencap showing the output of the Enable-CauClusterRole](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_EnableCAUClusterRole.png)
-        **Figure 20: Enable Cluster Aware Updates role using the [`Enable-CauClusterRole`](/powershell/module/clusterawareupdating/Enable-CauClusterRole) cmdlet**
+    ```PowerShell
+    Enable-CauClusterRole
+    ```
 
-    2. Resume backup operations.
+    Here's an example of the output:
 
-5. Enable and use the Windows Server 2016 features on Hyper-V Virtual Machines.
+    ```output
+    Are you sure?
+    Do you want to enable the Cluster-Aware Updating Clustered role on Cluster "cluster01"?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+    ```
 
-    1. After the cluster has upgraded to Windows Server 2016 functional level, many workloads like Hyper-V VMs will have new capabilities. For a list of new Hyper-V capabilities. see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md)
+2. Resume backup operations using the backup tool of your choice.
+3. To turn new functionality available for Hyper-V virtual machines, upgrade the virtual machine configuration version for each VM. For a list of new Hyper-V capabilities, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md#what-happens-if-i-dont-upgrade-the-virtual-machine-configuration-version)
 
-    2. On each Hyper-V host node in the cluster, use the [`Get-VMHostSupportedVersion`](/powershell/module/hyper-v/Get-VMHostSupportedVersion) cmdlet to view the Hyper-V VM configuration versions that are supported by the host.
+    2. On each Hyper-V host node in the cluster, use the [`Get-VMHostSupportedVersion`](/powershell/module/hyper-v/Get-VMHostSupportedVersion) cmdlet to view the Hyper-V VM configuration versions that are supported by the host. 
 
         ![Screencap showing the output of the Get-VMHostSupportedVersion cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_GetVMHostSupportVersion.png)
         **Figure 21: Viewing the Hyper-V VM configuration versions supported by the host**
