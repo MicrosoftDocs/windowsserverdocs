@@ -1,13 +1,14 @@
 ---
-title: Cluster-to-Cluster Storage Replication
-description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server.
+title: Cluster-to-cluster storage replication
 manager: siroy
 ms.author: alalve
 ms.topic: how-to
+ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
-ms.date: 02/18/2025
+ms.date: 04/26/2019
+description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server.
 ---
-# Cluster-to-cluster storage replication
+# Cluster to Cluster Storage Replication
 
 Storage Replica can replicate volumes between clusters, including the replication of clusters using Storage Spaces Direct. The management and configuration is similar to server-to-server replication.
 
@@ -37,7 +38,7 @@ This walkthrough uses the following environment as an example:
 * Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX, Storage Spaces Direct, or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.
-* Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and Web Services Management (WS-Man) (port 5985) bidirectional traffic between all nodes.
+* Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
 * There are important considerations & limitations for Storage Spaces Direct replication - please review the detailed information below.
