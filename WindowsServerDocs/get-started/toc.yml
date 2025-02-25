@@ -54,7 +54,6 @@ items:
           href: /windows/release-health/status-windows-server-2025?context=//windows-server/context/windows-server-get-started
         - name: Resolved issues 
           href: /windows/release-health/resolved-issues-windows-server-2025context=//windows-server/context/windows-server-get-started
-      items:
       - name: Windows Server 2022
         items:
         - name: Known issues and notifications
