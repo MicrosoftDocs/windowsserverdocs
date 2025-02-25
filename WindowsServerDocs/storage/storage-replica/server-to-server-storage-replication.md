@@ -23,12 +23,12 @@ For an overview of using Storage Replica in Windows Admin Center, see the follow
 * Two servers running Windows Server 2019 or Windows Server 2016 Datacenter.
 
    If you're running Windows Server 2019, you can instead use Standard Edition if replicating only a single volume up to 2 TB in size is suitable for your scenario.
-* Two sets of storage, using Serial Attached SCSI (SAS) "just a bunch of disk" enclosures (JBODs), fibre channel storage area network (FC SAN), Internet Small Computer Systems Interface (iSCSI) target, or local SCSI/Serial Advanced Technology Attachment (SATA) storage. The storage should contain a mix of hard disk drive (HDD) and solid-state drive (SSD) media. You make each storage set available only to each of the servers, with no shared access.
+* Two sets of storage that can include Serial Attached SCSI (SAS) "just a bunch of disk" enclosures (JBODs), a fibre channel storage area network (FC SAN), Internet Small Computer Systems Interface (iSCSI) target, or local SCSI or Serial Advanced Technology Attachment (SATA) storage. The storage should contain a mix of hard disk drive (HDD) and solid-state drive (SSD) media. You make each storage set available only to each of the servers, with no shared access.
 
    Each set of storage must support creating at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
 * At least one Ethernet/TCP connection on each server for synchronous replication, but Remote Direct Memory Access (RDMA) is preferred.
 * Appropriate firewall and router rules to allow Internet Control Message Protocol (ICMP), Server Message Block (SMB) (port 445, and port 5445 for SMB Direct), and Web Services Management (WS-Man) (port 5985) bidirectional traffic between all nodes.
-* A network between servers that has enough bandwidth to contain your I/O write workload and an average of 5-ms roundtrip latency for synchronous replication. Asynchronous replication doesn't have a latency recommendation.
+* A network between servers that has enough bandwidth to contain your input/output (I/O) write workload and an average of 5-ms roundtrip latency for synchronous replication. Asynchronous replication doesn't have a latency recommendation.
 
   If you replicate between on-premises servers and Azure virtual machines (VMs), you must create a network link between the on-premises servers and the Azure VMs. To create the link, use [Azure ExpressRoute](#add-azure-vm-expressroute), use a [site-to-site VPN gateway connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
 * The replicated storage can't be located on the drive that contains the Windows operating system folder.

@@ -200,7 +200,7 @@ The figure and the videos refer to the article examples.
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
     ```
 
-1. Create an Storage Replica partnership for the two clusters:
+1. Create a Storage Replica partnership for the two clusters:
 
     - Cluster **SRAZC1**: For volume location, use *C:\ClusterStorage\DataDisk1*. For log location, use *G:\*.
 

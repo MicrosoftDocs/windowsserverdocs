@@ -42,7 +42,7 @@ The figure and the videos refer to the article examples.
 
    For example, create virtual network **az2az-Vnet** in resource group **SR-AZ2AZ**.
 
-1. Create a [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM). Add one inbound security rule for Remote Desktop Protocol (RDP) port 3389 to the network security group. You can choose to remove this rule after you finish setup..
+1. Create a [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM). Add one inbound security rule for Remote Desktop Protocol (RDP) port 3389 to the network security group. You can choose to remove this rule after you finish setup.
 
    For example:
 
@@ -195,7 +195,7 @@ The figure and the videos refer to the article examples.
      Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
     ```
 
-1. Create an Storage Replica partnership for the two clusters:
+1. Create a Storage Replica partnership for the two clusters:
 
     - Cluster **SRAZC1**: For volume location, use *C:\ClusterStorage\DataDisk1*. For log location, use *G:\*.
 
