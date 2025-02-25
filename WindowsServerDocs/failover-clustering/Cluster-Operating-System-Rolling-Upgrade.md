@@ -49,7 +49,7 @@ Complete the following requirements before you begin the upgrade:
 ## Limitations
 
 - The rolling upgrade involves reformatting each node and performing a clean installation of the newer version of Windows Server. We don't recommend performing *In-place* or *upgrade* installations.
-- We recommend moving through the cluster upgrade process quickly because some cluster features aren't optimized for mixed-OS mode.
+- We recommend moving through the cluster upgrade process quickly (within four weeks) because some cluster features aren't optimized for mixed-OS mode.
   - When managing a mixed-OS mode cluster, always perform the management tasks from a node running the newer version of Windows Server. Older versions of Windows Server often can't use UI or management tools to manage newer versions.
   - Avoid creating or resizing storage on newer Windows Server nodes while the cluster is running in mixed-OS mode because of possible incompatibilities on failover from a newer Windows Server node to an older Windows Server node.
 
@@ -120,7 +120,7 @@ Before you start evicting and upgrading nodes it's important to verify that the 
     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
     ```
 
-### Step 2: Transfer workloads and evict the node
+### Step 2: Transfer workloads and evict the node to upgrade
 
 Perform the following steps on one node in the cluster (you'll repeat this process one at a time for every node in the cluster):
 
@@ -216,18 +216,19 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 
 ### Step 5: Repeat steps 2 through 4 for every other node in the cluster
 
+The upgrade process is fully reversible until you update the cluster functional level in the next step. If you need to abandon the upgrade, you can add nodes running the original version of Windows Server and evict any nodes running the newer version of the OS until you upgrade the cluster functional level.
+
 ### Step 6: Update the cluster functional level
 
-1. When every node has been upgraded to Windows Server 2016 and added back to the cluster, or when any remaining Windows Server 2012 R2 nodes have been evicted, complete the following steps:
+Updating the cluster functional level makes it possible to use new features. It also improves some cluster operations, such as draining workloads from a node, which can lead to a node becoming isolated for a short period of time if performed on a mixed-OS cluster.
 
-    > [!IMPORTANT]
-    >
-    > - After you update the cluster functional level, you cannot go back to Windows Server 2012 R2 functional level and Windows Server 2012 R2 nodes cannot be added to the cluster.
-    > - Until the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet is run, the process is fully reversible and Windows Server 2012 R2 nodes can be added to this cluster and Windows Server 2016 nodes can be removed.
-    > - Some cluster operations, such as node drain can lead to a node becoming isolated for a short period of time. This behavior can occur when the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) operation hasn't been run.
-    > - After the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet is run, new features will be available.
+When every node has the newer OS version installed and is added back to the cluster or permanently evicted, complete the following steps to update the cluster functional level:
 
-1. Using the Failover Cluster Manager UI or the [`Get-ClusterGroup`](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet, check that all cluster roles are running on the cluster as expected. In the following example, Available Storage isn't being used, instead a CSV is used and Available Storage displays an **Offline** status (see Figure 18).
+> [!IMPORTANT]
+>
+> After you update the cluster functional level, you cannot go back to an earlier functional level and you cannot add nodes running earlier versions of Windows Server to the cluster.
+
+1. Using the Failover Cluster Manager UI or the [Get-ClusterGroup](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet, check that all cluster roles are running on the cluster as expected. In the following example, Available Storage isn't being used, instead a CSV is used and Available Storage displays an **Offline** status (see Figure 18).
 
     ![Screencap showing the output of the Get-ClusterGroup cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterGroup.png)
     **Figure 18: Verifying that all cluster groups (cluster roles) are running using the [`Get-ClusterGroup`](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet**
