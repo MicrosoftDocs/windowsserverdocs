@@ -119,25 +119,25 @@ To turn off SMBv1 on these operating systems, take the following steps:
 
 # [Server](#tab/server)
 
-Windows 8 and Windows Server 2012 introduced the new **Set-SMBServerConfiguration** Windows PowerShell cmdlet. The cmdlet enables you to enable or disable the SMBv1, SMBv2, and SMBv3 protocols on the server component.
+Windows 8 and Windows Server 2012 introduced the **Set-SMBServerConfiguration** Windows PowerShell cmdlet. You can use the cmdlet to turn on or turn off the SMBv1, SMBv2, and SMBv3 protocols on a server component.
 
 You don't have to restart the computer after you run the **Set-SMBServerConfiguration** cmdlet.
 
 ### SMBv1
 
-- Detect:
+- Detect SMBv1:
 
   ```powershell
   Get-SmbServerConfiguration | Select EnableSMB1Protocol
   ```
 
-- Disable:
+- Turn off SMBv1:
 
   ```powershell
   Set-SmbServerConfiguration -EnableSMB1Protocol $false
   ```
 
-- Enable:
+- Turn on SMBv1:
 
   ```powershell
   Set-SmbServerConfiguration -EnableSMB1Protocol $true
@@ -145,75 +145,77 @@ You don't have to restart the computer after you run the **Set-SMBServerConfigur
 
 For more information, see [Server storage at Microsoft](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Stop-using-SMB1/ba-p/425858).
 
-### SMB v2/v3
+### SMBv2 and SMBv3
 
-- Detect:
+- Detect SMBv2 or SMBv3:
 
   ```powershell
   Get-SmbServerConfiguration | Select EnableSMB2Protocol
   ```
 
-- Disable:
+- Turn off SMBv2 or SMBv3:
 
   ```powershell
   Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
-- Enable:
+- Turn on SMBv2 or SMBv3:
 
   ```powershell
   Set-SmbServerConfiguration -EnableSMB2Protocol $true
   ```
 
-### For Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008
+### Turn SMB on or off on Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008
 
-To enable or disable SMB protocols on an SMB Server that is running Windows 7, Windows Server 2008 R2, Windows Vista, or Windows Server 2008, use Windows PowerShell or Registry Editor.
+To turn SMB protocols on or off on an SMB Server that runs Windows 7, Windows Server 2008 R2, Windows Vista, or Windows Server 2008, use Windows PowerShell or Registry Editor, as explained in the following sections.
 
-#### Additional PowerShell methods
+#### Use Windows PowerShell
 
 > [!NOTE]
-> This method requires PowerShell 2.0 or later.
+> The commands in the following sections require PowerShell 2.0 or later.
 
 ##### SMBv1 on SMB Server
 
-Detect:
+Detect SMBv1:
 
 ```powershell
 Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
 ```
 
-Default configuration = Enabled (No registry named value is created), so no SMB1 value will be returned
+The default configuration is `Enabled`. As a result, no registry named value is created, so the command doesn't return an SMB1 value.
 
-Disable:
+Turn off SMBv1:
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 -Force
 ```
 
-Enable:
+Turn on SMBv1:
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 -Force
 ```
 
-**Note** You must restart the computer after you make these changes.
+> [!NOTE]
+> You must restart the computer after you make these changes.
+
 For more information, see [Server storage at Microsoft](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858).
 
-##### SMBv2/v3 on SMB Server
+##### SMBv2 and SMBv3 on SMB Server
 
-Detect:
+Detect SMBv2 or SMBv3:
 
 ```powershell
 Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
 ```
 
-Disable:
+Disable SMBv2 or SMBv3:
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 -Force
 ```
 
-Enable:
+Enable SMBv2 or SMBv3:
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 -Force
@@ -222,12 +224,12 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
 > [!NOTE]
 > You must restart the computer after you make these changes.
 
-#### Registry Editor
+#### Use Registry Editor
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-To enable or disable SMBv1 on the SMB server, configure the following registry key:
+To turn SMBv1 on or off on the SMB server, configure the following registry key:
 
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
 
