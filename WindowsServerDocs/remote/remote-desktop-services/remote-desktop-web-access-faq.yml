@@ -33,9 +33,9 @@ sections:
           
             ![A screenshot of the link displayed to change your password.](media/expired-password-no-iis-change.png)
 
-          If an administrator enabled password reset, follow the link to change your expired password. You need to enter your old password, then your new password, and confirm the new password. If you're unable to reset your 
+          If an administrator enabled password reset, follow the link to change your expired password. You need to enter your old password, then your new password, and confirm the new password. If you're unable to reset your password, and see 
           
-          password, and see that your new password doesn't meet the length, complexity, or history requirements of your domain, try choosing a different password, or contact your administrator to learn what the requirements are.
+          that your new password doesn't meet the length, complexity, or history requirements of your domain, try choosing a different password, or contact your administrator to learn what the requirements are.
 
             ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
       
