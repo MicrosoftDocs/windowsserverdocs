@@ -324,10 +324,27 @@ To resume normal cluster operations and turn on new functionality, perform the f
 2. Resume backup operations using the backup tool of your choice.
 3. To turn on new functionality available for VMs, upgrade the configuration version for each VM. For a list of new Hyper-V capabilities, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md#what-happens-if-i-dont-upgrade-the-virtual-machine-configuration-version)
 
-    2. On each Hyper-V host node in the cluster, use the [`Get-VMHostSupportedVersion`](/powershell/module/hyper-v/Get-VMHostSupportedVersion) cmdlet to view the Hyper-V VM configuration versions that are supported by the host. 
+    1. On each node in the cluster, use the [Get-VMHostSupportedVersion](/powershell/module/hyper-v/Get-VMHostSupportedVersion) cmdlet to view the Hyper-V VM configuration versions that are supported by the host. Each node should have the same supported versions at this point.
 
-        ![Screencap showing the output of the Get-VMHostSupportedVersion cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_GetVMHostSupportVersion.png)
-        **Figure 21: Viewing the Hyper-V VM configuration versions supported by the host**
+        ```PowerShell
+        Get-VMHostSupportedVersion -ComputerName node1
+        ```
+
+        Here's an example of the output:
+
+        ```output
+        Name                                                  Version IsDefault
+        ----                                                  ------- ---------
+        Microsoft Windows 10 Anniversary Update/Server 2016   8.0     False
+        Microsoft Windows 10 Creators Update                  8.1     False
+        Microsoft Windows 10 Fall Creators Update/Server 1709 8.2     False
+        Microsoft Windows 10 April 2018 Update/Server 1803    8.3     False
+        Microsoft Windows 10 October 2018 Update/Server 2019  9.0     False
+        Microsoft Windows 10 May 2019 Update/Server 1903      9.1     False
+        Microsoft Windows 10 May 2020 Update/Server 2004      9.2     False
+        Microsoft Windows 10 (Manganese)                      9.3     False
+        Microsoft Windows Server 2022                         10.0    True
+        ```
 
     3. On each Hyper-V host node in the cluster, Hyper-V VM configuration versions can be upgraded by scheduling a brief maintenance window with users, backing up, turning off virtual machines, and running the [`Update-VMVersion`](/powershell/module/hyper-v/Update-VMVersion) cmdlet (see Figure 22). This will update the virtual machine version, and enable new Hyper-V features, eliminating the need for future Hyper-V Integration Component (IC) updates. This cmdlet can be run from the Hyper-V node that is hosting the VM, or the `-ComputerName` parameter can be used to update the VM Version remotely. In this example, here we upgrade the configuration version of VM1 from 5.0 to 7.0 to take advantage of many new Hyper-V features associated with this VM configuration version such as Production Checkpoints (Application Consistent backups), and binary VM configuration file.
 
