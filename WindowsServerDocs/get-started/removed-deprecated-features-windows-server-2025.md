@@ -4,7 +4,7 @@ description: Learn about the features and functionalities removed or no longer d
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 02/20/2025
+ms.date: 02/22/2025
 ms.service: windows-server
 ---
 
@@ -24,6 +24,7 @@ We're removing the following features and functionalities from the installed pro
 
 | Feature | Explanation |
 |--|--|
+| Data Encryption Standard (DES) | DES, the symmetric-key block encryption cipher, is considered insecure against modern cryptographic attacks, and replaced by more robust encryption algorithms. DES was disabled starting with Windows Server 2008 R2 and is removed from Windows Server 2025 and later releases. |
 | IIS 6 Management Console (Web-Lgcy-Mgmt-Console) | The console has been removed after being no longer developed in Windows Server 2019. You should also start migration from IIS 6.0 or earlier versions, and move to the latest version of IIS, which is always available in the most recent release of Windows Server. |
 | NTLMv1 | NTLMv1 has been removed. Calls to NTLM should be replaced by calls to [Negotiate](/windows/win32/secauthn/microsoft-negotiate), which will try to authenticate with Kerberos and only fall back to NTLM when necessary. For more information, see [The evolution of Windows authentication](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-evolution-of-windows-authentication/ba-p/3926848). |
 | Wordpad | WordPad has been removed from Windows Server 2025. We recommend Microsoft Word for rich text documents like `.doc` and `.rtf` and Windows Notepad for plain text documents like `.txt`. |
