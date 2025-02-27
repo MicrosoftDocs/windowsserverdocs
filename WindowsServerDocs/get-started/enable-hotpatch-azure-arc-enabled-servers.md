@@ -44,7 +44,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 To install the preview version of the Hotpatch for Windows Server 2025 Standard and Datacenter Editions:
 
-1. Run the following command in an elevated command prompt:
+1. Run the following command in an elevated PowerShell or command prompt.
 
 # [PowerShell](#tab/powershell)
 
@@ -58,7 +58,17 @@ reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtua
 
 1. Restart your computer.
 
-1. After you enable Azure Arc, sign in to the Azure Arc portal and go to **Azure Arc** > **Machines**.
+1. After reboot, run the following command in PowerShell and verify that the output is `2` to make sure Virtual Secure Mode (VSM) is running.
+
+  ```powershell
+  Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
+  ```
+
+  If the output is not `2`, you'll have to troubleshoot Virtual Secure Mode (VSM) enablement.
+
+1. Connect (Arc-enable) the machine to Microsoft Azure.
+
+1. After you connected the machine to Azure Arc, sign in to the Azure Arc portal and go to **Azure Arc** → **Machines**.
 
 1. Select the name of your machine.
 
@@ -67,12 +77,12 @@ reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtua
 1. Wait about 10 minutes for the changes to apply. If the update stays stuck on the Pending status, run the following commands in PowerShell:
 
    ```powershell
-   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072;
-   Invoke-WebRequest -UseBasicParsing -Uri "https://aka.ms/azcmagent-windows" -TimeoutSec 30 -OutFile "$env:TEMP\install_windows_azcmagent.ps1";
-   & "$env:TEMP\install_windows_azcmagent.ps1";
+   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072
+   Invoke-WebRequest -UseBasicParsing -Uri "https://aka.ms/azcmagent-windows" -TimeoutSec 30 -OutFile "$env:TEMP\install_windows_azcmagent.ps1"
+   & "$env:TEMP\install_windows_azcmagent.ps1"
    ```
 
-1. You should now be prompted to install a Hotpatch update when a Hotpatch is available from Windows Update.
+1. You should now be prompted to install a Hotpatch update when a Hotpatch is available from Windows Update. Note that this does not happen every month, so you might have to wait for the next Hotpatch to be published. 
 
 ## Next steps
 
