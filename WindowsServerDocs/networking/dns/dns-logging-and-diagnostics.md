@@ -224,7 +224,7 @@ DNS server debug logging is enabled by default with individual diagnostic events
 
 You can enable debug logging using the Desktop Experience or PowerShell. Use the following methods to enable diagnostic event logging and change other event log parameters. Select the method that best fits your needs.
 
-###[Desktop Experience](#desktop-experience)
+###[Desktop Experience](#tab/desktop-experience)
 
 The following steps show how to enable debug logging using the Desktop Experience. To select and enable debug logging options on the DNS server, follow these steps:
 
@@ -282,7 +282,7 @@ Debug logging can be resource intensive, affecting overall server performance, a
 
 `Dns.log` contains debug logging activity. By default, the log is located in the `<windir>\System32\Dns` folder.  
 
-###[PowerShell](#powershell)
+###[PowerShell](#tab/powershell)
 
 The following steps show how to enable debug logging using PowerShell. To select and enable debug logging options on the DNS server, follow these steps:
 
