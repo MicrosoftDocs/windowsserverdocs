@@ -45,13 +45,16 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 1. Run the following command in an elevated PowerShell or command prompt.
 
    # [PowerShell](#tab/powershell)
+
    ```powershell
    New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -PropertyType 'Dword' -Value 1 -Force
    ```
+
    # [Command Prompt](#tab/cmd)
    ```cmd
    reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
    ```
+
    ---
 
 1. Restart your server.
@@ -80,7 +83,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
    & "$env:TEMP\install_windows_azcmagent.ps1"
    ```
 
-1. You should now be prompted to install a Hotpatch update when a Hotpatch is available from Windows Update. Note that this does not happen every month, so you might have to wait for the next Hotpatch to be published. 
+1. Whenever a Hotpatch is available from Windows Update, you should receive a prompt to install it. Since these updates aren't released every month, you may need to wait until the next Hotpatch is published.
 
 ## Next steps
 
