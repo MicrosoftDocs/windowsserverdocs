@@ -4,7 +4,7 @@ description: Learn how to enable enhanced DNS logging, auditing, and analytic ev
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 01/28/2025
+ms.date: 02/27/2025
 #customer intent: As a network administrator, I want to enable DNS logging and diagnostics in Windows Server so that I can monitor DNS server operations and troubleshoot DNS issues.
 ---
 
@@ -217,7 +217,16 @@ Before the introduction of DNS analytic logs, DNS debug logging was an available
 
 Debug logging can affect overall server performance and also consumes disk space. We recommended you enable debug logging temporarily only when detailed DNS transaction information is needed.
 
-To select and enable debug logging options on the DNS server, follow these steps:
+DNS server debug logging is enabled by default with individual diagnostic events disabled. `
+
+> [!TIP]
+> By default, the DNS debug log is located in the `%windir%\system32\dns` directory.
+
+You can enable debug logging using the Desktop Experience or PowerShell. Use the following methods to enable diagnostic event logging and change other event log parameters. Select the method that best fits your needs.
+
+###[Desktop Experience](#desktop-experience)
+
+The following steps show how to enable debug logging using the Desktop Experience. To select and enable debug logging options on the DNS server, follow these steps:
 
 1. Select **Start**, type **DNS Manager**, and then select **DNS Manager** from the best match list.
 
@@ -272,3 +281,109 @@ By default, all debug logging options are disabled. When selectively enabled, th
 Debug logging can be resource intensive, affecting overall server performance, and consuming disk space. Therefore, it should only be used temporarily when more detailed information about server performance is needed.
 
 `Dns.log` contains debug logging activity. By default, the log is located in the `<windir>\System32\Dns` folder.  
+
+###[PowerShell](#powershell)
+
+The following steps show how to enable debug logging using PowerShell. To select and enable debug logging options on the DNS server, follow these steps:
+
+### View event logging status
+
+To view the status of individual diagnostic events, follow the steps.
+
+1. Sign in to the DNS server with an account that has administrative privileges.
+
+1. Open an elevated Windows PowerShell prompt on a DNS server.
+
+1. Use the `Get-DnsServerDiagnostics` command to view the status of individual diagnostic events. The following example shows the default status of individual diagnostic events.
+
+   ```powershell
+   SaveLogsToPersistentStorage          : False
+   Queries                              : False
+   Answers                              : False
+   Notifications                        : False
+   Update                               : False
+   QuestionTransactions                 : False
+   UnmatchedResponse                    : False
+   SendPackets                          : False
+   ReceivePackets                       : False
+   TcpPackets                           : False
+   UdpPackets                           : False
+   FullPackets                          : False
+   FilterIPAddressList                  :
+   EventLogLevel                        : 4
+   UseSystemEventLog                    : False
+   EnableLoggingToFile                  : True
+   EnableLogFileRollover                : False
+   LogFilePath                          :
+   MaxMBFileSize                        : 500000000
+   WriteThrough                         : False
+   EnableLoggingForLocalLookupEvent     : False
+   EnableLoggingForPluginDllEvent       : False
+   EnableLoggingForRecursiveLookupEvent : False
+   EnableLoggingForRemoteServerEvent    : False
+   EnableLoggingForServerStartStopEvent : False
+   EnableLoggingForTombstoneEvent       : False
+   EnableLoggingForZoneDataWriteEvent   : False
+   EnableLoggingForZoneLoadingEvent     : False
+   ```
+
+### Enable diagnostic events in the event log
+
+To enable diagnostic events in the event log, follow the steps.
+
+1. To enable only specific diagnostic events, for example, `Queries`, `Answers`, `Notifications`, `SendPackets`, `ReceivePackets`, `TcpPackets`, and `UdpPackets` diagnostic events, use the following command.
+
+   ```powershell
+   Set-DnsServerDiagnostics -Queries $true -Answers $true -Notifications $true -SendPackets $true -ReceivePackets $true -TcpPackets $true -UdpPackets $true
+   ```
+
+1. Enable all diagnostic events at once using the following command.
+
+   ```powershell
+   Set-DnsServerDiagnostics -All $true
+   ```
+
+1. To verify the status of individual diagnostic events, use the `Get-DnsServerDiagnostics` command. The following example shows the status of individual diagnostic events after enabling all diagnostic events.
+
+    ```powershell
+    SaveLogsToPersistentStorage          : True
+    Queries                              : True
+    Answers                              : True
+    Notifications                        : True
+    Update                               : True
+    QuestionTransactions                 : True
+    UnmatchedResponse                    : True
+    SendPackets                          : True
+    ReceivePackets                       : True
+    TcpPackets                           : True
+    UdpPackets                           : True
+    FullPackets                          : True
+    FilterIPAddressList                  :
+    EventLogLevel                        : 7
+    UseSystemEventLog                    : False
+    EnableLoggingToFile                  : True
+    EnableLogFileRollover                : True
+    LogFilePath                          :
+    MaxMBFileSize                        : 500000000
+    WriteThrough                         : True
+    EnableLoggingForLocalLookupEvent     : True
+    EnableLoggingForPluginDllEvent       : True
+    EnableLoggingForRecursiveLookupEvent : True
+    EnableLoggingForRemoteServerEvent    : True
+    EnableLoggingForServerStartStopEvent : True
+    EnableLoggingForTombstoneEvent       : True
+    EnableLoggingForZoneDataWriteEvent   : True
+    EnableLoggingForZoneLoadingEvent     : True
+    ```
+
+### Enable debug log rollover
+
+The `Set -DnsServerDiagnostics -All $true` command implicitly sets the `-EnableLogFileRollover` option to `$true`. Meaning that when the log file reaches its maximum size, Windows starts a new log file instead of overwriting the existing log file. The computer can accumulate enough log files to affect its performance and fill its hard drive. To avoid these issues, consider enabling individual diagnostic events. Alternatively, if you can capture the information that you want in the log file before the file grows to 500 MB, you can enable log rollover. To enable log rollover, follow these steps.
+
+1. Open an elevated Windows PowerShell prompt on the DNS server where you wish to enable event logging.
+
+1. Use the **Set-DnsServerDiagnostics** command to enable debug log rollover. See the following example.
+
+   `Set-DnsServerDiagnostics -EnableLogFileRollover $true`
+
+---
