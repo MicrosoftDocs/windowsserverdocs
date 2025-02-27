@@ -215,12 +215,12 @@ DNS server performance can be affected when logging is enabled, however the enha
 
 Before the introduction of DNS analytic logs, DNS debug logging was an available method to monitor DNS transactions. DNS debug logging isn't the same as the enhanced DNS logging and diagnostics feature discussed in this article. Debug logging is a tool that also can be used for DNS logging and diagnostics. The DNS debug log provides detailed data about all DNS information sent and received by the DNS server. The information gathered is similar to the data that can be gathered using packet capture tools such as network monitor.
 
-Debug logging can affect overall server performance and also consumes disk space. We recommended you enable debug logging temporarily only when detailed DNS transaction information is needed.
+By default, all debug logging options are disabled. When selectively enabled, the DNS Server service can perform trace-level logging of selected types of events or messages for general troubleshooting and debugging of the server.
 
-DNS server debug logging is enabled by default with individual diagnostic events disabled. `
+Debug logging can be resource intensive, affecting overall server performance, and consuming disk space. Therefore, it should only be used temporarily when more detailed information about server performance is needed.
 
 > [!TIP]
-> By default, the DNS debug log is located in the `%windir%\system32\dns` directory.
+> `Dns.log` contains debug logging activity. By default, the DNS debug log is located in the `%windir%\system32\dns` directory.
 
 You can enable debug logging using the Desktop Experience or PowerShell. Use the following methods to enable diagnostic event logging and change other event log parameters. Select the method that best fits your needs.
 
@@ -275,12 +275,6 @@ The following DNS debug logging options are available:
     - **temp\dns.log** specifies that the DNS server log file should be saved as **dns.log** in the `<systemroot>\Temp directory`. Remember to replace `<systemroot>` with the actual path to the Windows directory on your computer.
 
 - **Log file maximum size limit** Lets you set the maximum file size for the DNS server log file. When the specified maximum size of the DNS server log file is reached, the DNS server overwrites the oldest packet information with new information. Note: If left unspecified, the DNS server log file's size can take up a large amount of hard disk space.  
-
-By default, all debug logging options are disabled. When selectively enabled, the DNS Server service can perform trace-level logging of selected types of events or messages for general troubleshooting and debugging of the server.
-
-Debug logging can be resource intensive, affecting overall server performance, and consuming disk space. Therefore, it should only be used temporarily when more detailed information about server performance is needed.
-
-`Dns.log` contains debug logging activity. By default, the log is located in the `<windir>\System32\Dns` folder.  
 
 ### [PowerShell](#tab/powershell)
 
