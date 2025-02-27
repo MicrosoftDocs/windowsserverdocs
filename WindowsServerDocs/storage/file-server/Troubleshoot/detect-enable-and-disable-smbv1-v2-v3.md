@@ -6,6 +6,7 @@ manager: dcscontentpm
 ms.topic: how-to
 ms.author: delhan
 ms.date: 02/26/2025
+# customer intent: As an administrator, I want to see how to detect the status of SMBv1, SMBv2, and SMBv3 and how to turn these protocols on and off so that I can improve the security of my environment.
 ---
 
 # Detect, turn on, and turn off SMBv1, SMBv2, and SMBv3 in Windows
@@ -92,7 +93,7 @@ To remove SMBv1 from these versions, take the following steps:
 
 1. On the **Remove features** page, clear the checkbox for **SMB 1.0/CIFS File Sharing Support**, and then select **Next**.
 
-   ![Server Manager - Dashboard method](media/detect-enable-and-disable-smbv1-v2-v3-1.png)
+   :::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-1.png" alt-text="Screenshot of the Remove features page in the Server Manager dashboard. In the Features list, SMBv1 is highlighted.":::
 
 1. On the **Confirm removal selections** page, confirm that the feature is listed, and then select **Remove**.
 
@@ -108,7 +109,7 @@ To turn off SMBv1 on these operating systems, take the following steps:
 
 1. In the **Windows Features** dialog, scroll down the list, clear the checkbox for **SMB 1.0/CIFS File Sharing Support**, and then select **OK**.
 
-   ![Add-Remove Programs client method](media/detect-enable-and-disable-smbv1-v2-v3-2.png)
+   :::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-2.png" alt-text="Screenshot of the Windows Features dialog. In the Turn Windows features on or off list, an arrow is pointing at SMBv1.":::
 
 1. After Windows applies the change, on the confirmation page, select **Restart now**.
 
@@ -178,25 +179,25 @@ To turn SMB protocols on or off on an SMB Server that runs Windows 7, Windows Se
 
 ##### SMBv1 on an SMB server
 
-Detect:
+- Detect:
 
-```powershell
-Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
-```
+  ```powershell
+  Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
+  ```
 
-The default configuration is `Enabled`. As a result, no registry named value is created, so the command doesn't return an SMB1 value.
+  The default configuration is `Enabled`. As a result, no registry named value is created, so the command doesn't return an SMB1 value.
 
-Turn off:
+- Turn off:
 
-```powershell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 -Force
-```
+  ```powershell
+  Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 -Force
+  ```
 
-Turn on:
+- Turn on:
 
-```powershell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 -Force
-```
+  ```powershell
+  Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 -Force
+  ```
 
 > [!NOTE]
 > You must restart the computer after you make these changes.
@@ -205,23 +206,23 @@ For more information, see [Server storage at Microsoft](https://techcommunity.mi
 
 ##### SMBv2 and SMBv3 on an SMB server
 
-Detect:
+- Detect:
 
-```powershell
-Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
-```
+  ```powershell
+  Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
+  ```
 
-Disable:
+- Turn off:
 
-```powershell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 -Force
-```
+  ```powershell
+  Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 -Force
+  ```
 
-Enable:
+- Turn on:
 
-```powershell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 -Force
-```
+  ```powershell
+  Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 -Force
+  ```
 
 > [!NOTE]
 > You must restart the computer after you make these changes.
@@ -334,18 +335,18 @@ To use Group Policy to configure this item, take the following steps:
 
 1. Right-click the **Registry** node, point to **New**, and then select **Registry Item**.
 
-   ![Registry - New - Registry Item](media/detect-enable-and-disable-smbv1-v2-v3-3.png)
+   :::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-3.png" alt-text="Screenshot of the console tree in Group Policy Management Console. The Registry shortcut menus are visible, with New highlighted in the first menu.":::
 
-In the **New Registry Properties** dialog, select or enter the following values:
+1. In the **New Registry Properties** dialog, select or enter the following values:
 
-- **Action**: **Create**
-- **Hive**: **HKEY_LOCAL_MACHINE**
-- **Key Path**: **SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
-- **Value name**: **SMB1**
-- **Value type**: **REG_DWORD**
-- **Value data**: **0**
+   - **Action**: **Create**
+   - **Hive**: **HKEY_LOCAL_MACHINE**
+   - **Key Path**: **SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
+   - **Value name**: **SMB1**
+   - **Value type**: **REG_DWORD**
+   - **Value data**: **0**
 
-![New Registry Properties - General](media/detect-enable-and-disable-smbv1-v2-v3-4.png)
+   :::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-4.png" alt-text="Screenshot of the New Registry Properties dialog. Values are visible in the action, hive, key path, name, type, and data fields.":::
 
 This procedure turns off the SMBv1 server components. You must apply this policy to all necessary workstations, servers, and domain controllers in the domain.
 
@@ -383,7 +384,7 @@ To configure this entry by using Group Policy, take the following steps:
 
 1. Right-click the **Registry** node, point to **New**, and then select **Registry Item**.
 
-1. In the **New Registry Properties** dialog, select or enter the following values:
+1. In the **Start Properties** dialog, select or enter the following values:
 
    - **Action**: **Update**
    - **Hive**: **HKEY_LOCAL_MACHINE**
@@ -392,9 +393,9 @@ To configure this entry by using Group Policy, take the following steps:
    - **Value type**: **REG_DWORD**
    - **Value data**: **4**
 
-   ![Start Properties - General](media/detect-enable-and-disable-smbv1-v2-v3-5.png)
+   :::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-5.png" alt-text="Screenshot of the Start Properties dialog. Values are visible in the action, hive, key path, name, type, and data fields.":::
 
-1. To remove the dependency on the **MRxSMB10** that was turned off, go to the **New Registry Properties** dialog, and then select or enter the following values:
+1. To remove the dependency on the **MRxSMB10** that was turned off, go to the **DependOnService Properties** dialog, and then select or enter the following values:
 
    - **Action**: **Replace**
    - **Hive**: **HKEY_LOCAL_MACHINE**
@@ -407,9 +408,9 @@ To configure this entry by using Group Policy, take the following steps:
       - NSI
 
    > [!NOTE]
-   > Don't include bullet points in the three **Value data** strings. List only the strings, as shown in the following screen shot.
+   > Don't include bullet points in the three **Value data** strings. List only the strings, as shown in the following screenshot.
 
-   ![DependOnService Properties](media/detect-enable-and-disable-smbv1-v2-v3-6.png)
+   :::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-6.png" alt-text="Screenshot of the DependOnService Properties dialog. Values are visible in the action, hive, key path, name, type, and data fields.":::
 
    The default value includes **MRxSMB10** in many versions of Windows. By replacing the default value with these three strings, you effectively remove **MRxSMB10** as a dependency for **LanmanWorkstation**. Instead of the four default values, you have these three values.
 
@@ -424,13 +425,13 @@ To configure this entry by using Group Policy, take the following steps:
 
 To determine which clients are attempting to connect to an SMB server by using SMBv1, you can turn on auditing on Windows Server 2016, Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
 
-- Enable:
+- Turn on:
 
   ```powershell
   Set-SmbServerConfiguration -AuditSmb1Access $true
   ```
 
-- Disable:
+- Turn off:
 
   ```powershell
   Set-SmbServerConfiguration -AuditSmb1Access $false
@@ -448,7 +449,7 @@ After you turn on SMBv1 auditing, you can check the `Microsoft-Windows-SMBServer
 
 If all the settings are in the same GPO, Group Policy Management displays the following settings:
 
-![Group Policy Management Editor - Registry](media/detect-enable-and-disable-smbv1-v2-v3-7.png)
+:::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-7.png" alt-text="Screenshot of the Group Policy Management Editor registry. Three items are visible: DependOnService, SMB1, and Start.":::
 
 ### Test and validate the policy
 
