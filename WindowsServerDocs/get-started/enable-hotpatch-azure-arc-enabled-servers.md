@@ -54,7 +54,6 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
    ```cmd
    reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
    ```
-
    ---
 
 1. Restart your server.
