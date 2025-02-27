@@ -48,7 +48,7 @@ To install the preview version of the Hotpatch for Windows Server 2025 Standard 
 
 # [PowerShell](#tab/powershell)
 
-Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -Value 1
+New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -PropertyType 'Dword' -Value 1 -Force
 
 # [Command Prompt](#tab/cmd)
 
