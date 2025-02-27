@@ -42,29 +42,27 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 ## Install Hotpatch preview version for Windows Server 2025
 
-To install the preview version of the Hotpatch for Windows Server 2025 Standard and Datacenter Editions:
-
 1. Run the following command in an elevated PowerShell or command prompt.
 
-# [PowerShell](#tab/powershell)
+   # [PowerShell](#tab/powershell)
+   ```powershell
+   New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -PropertyType 'Dword' -Value 1 -Force
+   ```
+   # [Command Prompt](#tab/cmd)
+   ```cmd
+   reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
+   ```
+   ---
 
-New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -PropertyType 'Dword' -Value 1 -Force
+1. Restart your server.
 
-# [Command Prompt](#tab/cmd)
+1. _(Optional)_ After reboot, run the following command in PowerShell and verify that the output is `2` to make sure Virtual Secure Mode (VSM) is running.
 
-reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
+   ```powershell
+   Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
+   ```
 
----
-
-1. Restart your computer.
-
-1. After reboot, run the following command in PowerShell and verify that the output is `2` to make sure Virtual Secure Mode (VSM) is running.
-
-  ```powershell
-  Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
-  ```
-
-  If the output is not `2`, you'll have to troubleshoot Virtual Secure Mode (VSM) enablement.
+   If the output is not `2`, you'll have to troubleshoot Virtual Secure Mode (VSM) enablement.
 
 1. Connect (Arc-enable) the machine to Microsoft Azure.
 
