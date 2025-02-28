@@ -17,7 +17,7 @@ If you turn off or remove SMBv1, you might encounter compatibility issues with o
 
 ## Turn off SMBv2 or SMBv3 for troubleshooting
 
-We recommend keeping SMBv2 and SMBv3 turned on, but you might find it useful to turn one off temporarily for troubleshooting. For more information, see [How to detect status, enable, and disable SMB protocols on the SMB Server](detect-enable-and-disable-smbv1-v2-v3.md#how-to-detect-status-enable-and-disable-smb-protocols).
+We recommend keeping SMBv2 and SMBv3 turned on, but you might find it useful to turn one off temporarily for troubleshooting. For more information, see [Use the command line or Registry Editor to manage SMB protocols](#use-the-command-line-or-registry-editor-to-manage-smb-protocols).
 
 In Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, turning off SMBv3 deactivates the following functionality:
 
@@ -31,21 +31,21 @@ In Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Se
 
 In Windows 7 and Windows Server 2008 R2, turning off SMBv2 deactivates the following functionality:
 
-- Request compounding - allows for sending multiple SMBv2 requests as a single network request
-- Larger reads and writes - better use of faster networks
-- Caching of folder and file properties - clients keep local copies of folders and files
-- Durable handles - allow for connection to transparently reconnect to the server if there's a temporary disconnection
-- Improved message signing - HMAC SHA-256 replaces MD5 as hashing algorithm
-- Improved scalability for file sharing - number of users, shares, and open files per server greatly increased
+- Request compounding: Supports sending multiple SMBv2 requests as a single network request
+- Larger reads and writes: Improves use of faster networks
+- Caching of folder and file properties: Gives clients the ability to keep local copies of folders and files
+- Durable handles: Provides a way for a connection to transparently reconnect to the server if there's a temporary disconnection
+- Improved message signing: Uses a hash-based message authentication code (HMAC) secure hash algorithm (SHA) with a 256-bit digest (HMAC SHA-256) instead of Message-Digest Algorithm 5 (MD5) as a hashing algorithm
+- Improved scalability for file sharing: Greatly increases the number of users, shares, and open files per server
 - Support for symbolic links
-- Client oplock leasing model - limits the data transferred between the client and server, improving performance on high-latency networks and increasing SMB server scalability
-- Large MTU support - for full use of 10 Gigabit Ethernet (GbE)
-- Improved energy efficiency - clients that have open files to a server can sleep
+- Client oplock leasing model: Limits the data transferred between the client and server, improving performance on high-latency networks and increasing SMB server scalability
+- Large maximum transmission unit (MTU) support: Supports full use of 10 Gigabit Ethernet (GbE)
+- Improved energy efficiency: Provides a way for clients that have open files to a server to sleep
 
 The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008. The SMBv3 protocol was introduced in Windows 8 and Windows Server 2012. For more information about SMBv2 and SMBv3 capabilities, see the following articles:
 
-- [Server Message Block overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v=ws.11))
-- [What's New in SMB](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff625695(v=ws.10))
+- [Overview of file sharing using the SMB 3 protocol in Windows Server](..file-server-smb-overview.md)
+- [1.3 Overview](/openspecs/windows_protocols/ms-smb2/4287490c-602c-41c0-a23e-140a1f137832)
 
 ## Use PowerShell to remove SMBv1
 
@@ -146,7 +146,7 @@ You don't have to restart the computer after you run the **Set-SMBServerConfigur
   Set-SmbServerConfiguration -EnableSMB1Protocol $true
   ```
 
-For more information, see [Server storage at Microsoft](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Stop-using-SMB1/ba-p/425858).
+For more information, see [Stop using SMB1](https://techcommunity.microsoft.com/blog/filecab/stop-using-smb1/425858).
 
 ### SMBv2 and SMBv3
 
@@ -202,7 +202,7 @@ To turn SMB protocols on or off on an SMB Server that runs Windows 7, Windows Se
 > [!NOTE]
 > You must restart the computer after you make these changes.
 
-For more information, see [Server storage at Microsoft](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858).
+For more information, see [Stop using SMB1](https://techcommunity.microsoft.com/blog/filecab/stop-using-smb1/425858).
 
 ##### SMBv2 and SMBv3 on an SMB server
 
@@ -238,7 +238,7 @@ To turn SMBv1 on or off on an SMB server, open Registry Editor and go to the fol
 
 Configure an entry that has the following properties:
 
-- For the name, use **SMB2**.
+- For the name, use **SMB1**.
 - For the type, use **REG_DWORD**.
 - For the data, use **0** for **Disabled** and **1** for **Enabled**. The default value is **1**, or **Enabled**. In this case, no registry key is created.
 
@@ -248,7 +248,7 @@ To turn SMBv2 on or off on an SMB server, open Registry Editor and go to the fol
 
 Configure an entry that has the following properties:
 
-- For the name, use **SMB1**.
+- For the name, use **SMB2**.
 - For the type, use **REG_DWORD**.
 - For the data, use **0** for **Disabled** and **1** for **Enabled**. The default value is **1**, or **Enabled**. In this case, no registry key is created.
 
@@ -281,7 +281,7 @@ On certain SMB clients, you can use the `sc.exe` command-line tool to detect the
   sc.exe config mrxsmb10 start= auto
   ```
 
-For more information, see [Server storage at Microsoft](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858)
+For more information, see [Stop using SMB1](https://techcommunity.microsoft.com/blog/filecab/stop-using-smb1/425858).
 
 ### SMBv2 and SMBv3 on an SMB client
 
@@ -354,13 +354,13 @@ This procedure turns off the SMBv1 server components. You must apply this policy
 > You can set Windows Management Instrumentation (WMI) filters to exclude specific operating systems or to exclude client or server operating systems. For more information, see [Group Policy Filtering](../../../identity/ad-ds/manage/group-policy/group-policy-processing.md#group-policy-filtering) and [Create WMI Filters for the GPO](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc947846(v=ws.10)).
 
 > [!IMPORTANT]
-> Some systems require access to the SYSVOL folder or other file shares but don't support SMBv2 or SMBv3. Examples of such systems include legacy Windows systems and older Linux and third-party systems. Be careful when you turn off SMBv1 on domain controllers on these systems.
+> Some systems require access to the SYSVOL folder or other file shares but don't support SMBv2 or SMBv3. Examples of such systems include legacy Windows systems and older Linux and partner systems. Be careful when you turn off SMBv1 on domain controllers on these systems.
 
 # [Client](#tab/client)
 
-### SMB v1
+### SMBv1
 
-To turn off the SMBv1 client, you need to update the services registry key to prevent the start of **MRxSMB10**. Then you need to remove the dependency on **MRxSMB10** from the entry for **LanmanWorkstation** so that it can start normally without requiring **MRxSMB10** to first start.
+To turn off the SMBv1 client, you need to update the services registry key to prevent the start of the **MRxSMB10** driver. Then you need to remove the dependency on **MRxSMB10** from the entry for **LanmanWorkstation** so that it can start normally without requiring **MRxSMB10** to first start.
 
 This section shows you how to update and replace the default values in the following two items in the registry:
 
@@ -371,12 +371,12 @@ This section shows you how to update and replace the default values in the follo
 - Key path: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation**
   - Registry entry: **DependOnService**
   - Entry type: REG_MULTI_SZ
-  - Entry data: **"Bowser","MRxSmb20″,"NSI"**
+  - Entry data: **Bowser**,**MRxSmb20**,**NSI**
 
 > [!NOTE]
 > The default value includes **MRxSMB10**, which is now removed as dependency.
 
-To configure this entry by using Group Policy, take the following steps:
+To configure these entries by using Group Policy, take the following steps:
 
 1. Open Group Policy Management Console. Right-click the GPO that should contain the new preference item, and then select **Edit**.
 
@@ -384,7 +384,7 @@ To configure this entry by using Group Policy, take the following steps:
 
 1. Right-click the **Registry** node, point to **New**, and then select **Registry Item**.
 
-1. In the **Start Properties** dialog, select or enter the following values:
+1. In the **New Registry Properties** dialog, select or enter the following values:
 
    - **Action**: **Update**
    - **Hive**: **HKEY_LOCAL_MACHINE**
@@ -395,7 +395,7 @@ To configure this entry by using Group Policy, take the following steps:
 
    :::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-5.png" alt-text="Screenshot of the Start Properties dialog. Values are visible in the action, hive, key path, name, type, and data fields.":::
 
-1. To remove the dependency on the **MRxSMB10** that was turned off, go to the **DependOnService Properties** dialog, and then select or enter the following values:
+1. To remove the dependency on the **MRxSMB10** driver that was turned off, open the **New Registry Properties** dialog, and then select or enter the following values:
 
    - **Action**: **Replace**
    - **Hive**: **HKEY_LOCAL_MACHINE**
@@ -403,16 +403,16 @@ To configure this entry by using Group Policy, take the following steps:
    - **Value name**: **DependOnService**
    - **Value type**: **REG_MULTI_SZ**
    - **Value data**:
-      - Bowser
-      - MRxSmb20
-      - NSI
+      - **Bowser**
+      - **MRxSmb20**
+      - **NSI**
 
    > [!NOTE]
    > Don't include bullet points in the three **Value data** strings. List only the strings, as shown in the following screenshot.
 
    :::image type="content" source="media/detect-enable-and-disable-smbv1-v2-v3-6.png" alt-text="Screenshot of the DependOnService Properties dialog. Values are visible in the action, hive, key path, name, type, and data fields.":::
 
-   The default value includes **MRxSMB10** in many versions of Windows. By replacing the default value with these three strings, you effectively remove **MRxSMB10** as a dependency for **LanmanWorkstation**. Instead of the four default values, you have these three values.
+   The default value includes **MRxSMB10** in many versions of Windows. By replacing the default value with these three strings, you effectively remove **MRxSMB10** as a dependency for **LanmanWorkstation**. Instead of the four default values, you use these three values.
 
    > [!NOTE]
    > When you use Group Policy Management Console, you don't have to use quotation marks or commas. Just type each entry on individual lines.
@@ -423,7 +423,7 @@ To configure this entry by using Group Policy, take the following steps:
 
 ### Audit SMBv1 usage
 
-To determine which clients are attempting to connect to an SMB server by using SMBv1, you can turn on auditing on Windows Server 2016, Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
+To determine which clients are attempting to connect to an SMB server by using SMBv1, you can turn on auditing on Windows Server 2016, Windows 10, and Windows Server 2019.
 
 - Turn on:
 
@@ -443,7 +443,7 @@ To determine which clients are attempting to connect to an SMB server by using S
   Get-SmbServerConfiguration | Select AuditSmb1Access
   ```
 
-After you turn on SMBv1 auditing, you can check the `Microsoft-Windows-SMBServer\Audit` event log for access events. Each time a client attempts to use SMBv1 to connect, an entry that has an event ID of 3000 appears in the log.
+After you turn on SMBv1 auditing, you can check the `Microsoft-Windows-SMBServer\Audit` event log for access events. Each time a client attempts to use SMBv1 to connect to a server, an entry that has an event ID of 3000 appears in the log.
 
 ### Check Group Policy settings
 
@@ -453,7 +453,7 @@ If all the settings are in the same GPO, Group Policy Management displays the fo
 
 ### Test and validate the policy
 
-After you complete the configuration steps in Group Policy Management Console, allow the policy time to be replicated and updated. If needed for testing, run `gpupdate /force` at a command prompt, and then review the target computers to make sure that the registry settings are applied correctly. Make sure SMBv2 and SMBv3 are functioning for all other systems in the environment.
+After you complete the configuration steps in Group Policy Management Console, give Group Policy time to apply the updates to its settings. If needed for testing, run `gpupdate /force` at a command prompt, and then review the target computers to make sure that the registry settings are applied correctly. Make sure SMBv2 and SMBv3 are functioning for all other systems in the environment.
 
 > [!NOTE]
 > After you test the policy, restart the target systems.
