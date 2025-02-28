@@ -66,7 +66,7 @@ The following sections take you through the steps to perform a rolling cluster u
 7. Resume normal cluster operations and turn on new functionality
 
 ![Illustration showing the workflow for upgrading a cluster](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png)
-**Figure 6: Cluster OS Rolling Upgrade workflow**
+**Figure 1: Cluster OS Rolling Upgrade workflow**
 
 ### Step 1: Prepare the cluster for the upgrade
 
@@ -125,10 +125,10 @@ Before you start evicting and upgrading nodes it's important to verify that the 
 
 Perform the following steps on one node in the cluster (you'll repeat this process one at a time for every node in the cluster):
 
-1. Using Cluster Manager (optionally in Windows Admin Center), select the appropriate node and then use the **Pause | Drain** menu option to drain the node (see Figure 10) or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet (see Figure 11).
+1. Using Cluster Manager (optionally in Windows Admin Center), select the appropriate node and then use the **Pause | Drain** menu option to drain the node (see Figure 10) or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet (see Figure 1).
 
     ![Screencap showing how to drain roles with the Cluster Manager UI](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png)
-    **Figure 10: Draining roles from a node using Failover Cluster Manager**
+    **Figure 1: Draining roles from a node using Failover Cluster Manager**
 
     ```PowerShell
     Suspend-ClusterNode -Name Node1
@@ -157,10 +157,10 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 
 ### Step 3: Format the system drive and install the new version of Windows Server
 
-1. Format the system drive and perform a clean install of Windows Server on the node using the **Custom: Install Windows only (advanced)** installation (see Figure 13) option in Setup. We do not recommend performing an upgrade installation.
+1. Format the system drive and perform a clean install of Windows Server on the node using the **Custom: Install Windows only (advanced)** installation (see Figure 2) option in Setup. We do not recommend performing an upgrade installation.
 
     ![Screencap of the Windows Server 2016 installation wizard showing the custom install option selected](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_InstallOption.png)
-    **Figure 13: Available installation options for Windows Server 2016**
+    **Figure 2: Available installation options for Windows Server 2016**
 
 2. Join the node to the appropriate Active Directory Domain Services domain.
 3. Add the appropriate users to the local Administrators group.
@@ -175,7 +175,7 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 7. For Hyper-V workloads, create virtual switches that exactly match the virtual switches used on the rest of the cluster nodes. You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
 
     ![Screencap showing the location of the Hyper-V Virtual Switch Manager dialog](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_VMSwitch.png)
-    **Figure 14: Virtual Switch Manager**
+    **Figure 3: Virtual Switch Manager**
 
 ### Step 4: Add the node back to the cluster
 
@@ -285,7 +285,7 @@ In the following example, Available Storage isn't being used, instead a CSV is u
     Here's an example of the output:
 
     ```output
-    Updating the Functional level for cluster robindh-TP4D.
+    Updating the Functional level for cluster cluster01.
     Warning: You cannot undo this operation. Do you want to continue?
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
     ```
