@@ -109,6 +109,8 @@ mechanism.
     ```powershell
     Certutil -syncWithWU \\<server>\<share>
     ```
+    > [!NOTE]
+    > Certutil -SyncWithWU -f <folder> updates existing files in the target folder. Certutil -syncWithWU -f -f <folder> removes and replaces files in the target folder.
 
     Substitute the actual server name for `<server>` and shared folder name for `<share>` For
     example, for a server named `Server1` with a shared folder named CTL, you'd run the command:
