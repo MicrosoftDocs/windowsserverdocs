@@ -207,7 +207,7 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
         ```output
         Name      OwnerNode     State
         ----      ---------     -----
-        VM1       node1  Online
+        VM1       node1         Online
         ```
 
     - To move other cluster workloads, use the **Move** command in Failover Cluster Manager or the [Move-ClusterGroup](/powershell/module/failoverclusters/Move-ClusterGroup) cmdlet.
