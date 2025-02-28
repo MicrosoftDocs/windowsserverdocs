@@ -13,7 +13,7 @@ ms.date: 02/28/2025
 
 This article describes how to turn on and turn off Server Message Block (SMB) version 1 (SMBv1), SMB version 2 (SMBv2), and SMB version 3 (SMBv3) on SMB client and server components.
 
-If you turn off or remove SMBv1, you might encounter compatibility issues with old computers or software. But SMBv1 has significant security vulnerabilities, and [we strongly encourage you not to use it](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858). [SMBv1 isn't installed by default](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows) in any edition of Windows 11 or Windows Server 2019 and later versions. SMBv1 also isn't installed by default in Windows 10, except Home and Pro editions. We recommend that instead of reinstalling SMBv1, you update the SMB server that still requires it. For a list of third parties that require SMBv1 and their updates that remove the requirement, see [SMB1 Product Clearinghouse](https://aka.ms/stillneedssmb1).
+If you turn off or remove SMBv1, you might encounter compatibility issues with old computers or software. But SMBv1 has significant security vulnerabilities, and [we strongly encourage you not to use it](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858). [SMBv1 isn't installed by default](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows) in any edition of Windows 11 or Windows Server 2019 and later versions. SMBv1 also isn't installed by default in Windows 10, except Home and Pro editions. We recommend that instead of reinstalling SMBv1, you update the SMB server that still requires it. For a list of partners that require SMBv1 and their updates that remove the requirement, see [SMB1 Product Clearinghouse](https://aka.ms/stillneedssmb1).
 
 ## Turn off SMBv2 or SMBv3 for troubleshooting
 
@@ -32,9 +32,9 @@ In Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Se
 In Windows 7 and Windows Server 2008 R2, turning off SMBv2 deactivates the following functionality:
 
 - Request compounding: Supports sending multiple SMBv2 requests as a single network request
-- Larger reads and writes: Improves use of faster networks
+- Larger reads and writes: Improves the use of faster networks
 - Caching of folder and file properties: Gives clients the ability to keep local copies of folders and files
-- Durable handles: Provides a way for a connection to transparently reconnect to the server if there's a temporary disconnection
+- Durable handles: Provides a way for a connection to transparently reconnect to the server after a temporary disconnection
 - Improved message signing: Uses a hash-based message authentication code (HMAC) secure hash algorithm (SHA) with a 256-bit digest (HMAC SHA-256) instead of Message-Digest Algorithm 5 (MD5) as a hashing algorithm
 - Improved scalability for file sharing: Greatly increases the number of users, shares, and open files per server
 - Support for symbolic links
@@ -44,7 +44,7 @@ In Windows 7 and Windows Server 2008 R2, turning off SMBv2 deactivates the foll
 
 The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008. The SMBv3 protocol was introduced in Windows 8 and Windows Server 2012. For more information about SMBv2 and SMBv3 capabilities, see the following articles:
 
-- [Overview of file sharing using the SMB 3 protocol in Windows Server](..file-server-smb-overview.md)
+- [Overview of file sharing using the SMB 3 protocol in Windows Server](../file-server-smb-overview.md)
 - [1.3 Overview](/openspecs/windows_protocols/ms-smb2/4287490c-602c-41c0-a23e-140a1f137832)
 
 ## Use PowerShell to remove SMBv1
@@ -423,7 +423,7 @@ To configure these entries by using Group Policy, take the following steps:
 
 ### Audit SMBv1 usage
 
-To determine which clients are attempting to connect to an SMB server by using SMBv1, you can turn on auditing on Windows Server 2016, Windows 10, and Windows Server 2019.
+To determine which clients attempt to connect to an SMB server by using SMBv1, you can turn on auditing on Windows Server 2016, Windows 10, and Windows Server 2019.
 
 - Turn on:
 
