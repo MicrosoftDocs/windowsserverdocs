@@ -4,7 +4,7 @@ description: Learn about the features and enhancements in Windows Server 2025 th
 ms.topic: article
 author: xelu86
 ms.author: alalve
-ms.date: 11/18/2024
+ms.date: 02/28/2025
 ---
 
 # What's new in Windows Server 2025
@@ -343,9 +343,15 @@ Existing configurations retain their behavior. For example, if you run Windows S
 
 The following sections discuss Hyper-V, AI, and performance.
 
-### Accelerated Networking
+### Accelerated Networking (preview)
 
-Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines (VMs) hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings. To learn more, see [Accelerated Networking at the Edge (preview)](/windows-server/networking/technologies/accelerated-networking/accelerated-networking).
+Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines (VMs) hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings. To learn more, see [Accelerated Networking (preview)](/windows-server/networking/technologies/accelerated-networking/accelerated-networking).
+
+### Dynamic processor compatibility
+
+The dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic processor compatibility uses the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility.
+
+You can also use dynamic processor compatibility to save its state between virtualization hosts that use different generations of processors. The processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation. To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
 
 ### Hyper-V Manager
 
@@ -361,16 +367,6 @@ Hypervisor-enforced paging translation (HVPT) is a security enhancement to enfor
 
 GPU-P Live Migration provides a solution to move a VM (for planned downtime or load balancing) with GPU-P to another node whether it's standalone or clustered. To learn more about GPU partitioning, see [GPU partitioning](../virtualization/hyper-v/gpu-partitioning.md).
 
-### Dynamic processor compatibility
-
-The dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic processor compatibility uses the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility.
-
-You can also use dynamic processor compatibility to save its state between virtualization hosts that use different generations of processors. The processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation. To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
-
-### Workgroup clusters
-
-Hyper-V workgroup clusters are a special type of Windows Server Failover Cluster where the Hyper-V cluster nodes aren't members of an Active Directory domain with the ability to live migrate VMs in a workgroup cluster.
-
 ### Network ATC
 
 Network ATC streamlines the deployment and management of network configurations for Windows Server 2025 clusters. Network ATC uses an intent-based approach, where users specify their desired intents, such as management, compute, or storage for a network adapter. The deployment is automated based on the intended configuration.
@@ -382,6 +378,10 @@ This approach reduces the time, complexity, and errors associated with host netw
 With Windows Server 2025, Hyper-V now supports up to 4 petabytes of memory and 2,048 logical processors per host. This increase allows for greater scalability and performance for virtualized workloads.
 
 Windows Server 2025 also supports up to 240 TB of memory and 2,048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+
+### Workgroup clusters
+
+Hyper-V workgroup clusters are a special type of Windows Server Failover Cluster where the Hyper-V cluster nodes aren't members of an Active Directory domain with the ability to live migrate VMs in a workgroup cluster.
 
 ## Storage
 
