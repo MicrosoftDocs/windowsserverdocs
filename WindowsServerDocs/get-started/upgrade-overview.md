@@ -4,7 +4,7 @@ description: General Windows Server upgrade information, along with what to thin
 ms.topic: how-to
 author: RobHindman
 ms.author: alalve
-ms.date: 11/13/2024
+ms.date: 03/03/2025
 ---
 
 # Overview of Windows Server upgrades
@@ -14,9 +14,9 @@ operating system you are starting with and the pathway you take. We use the foll
 distinguish between different actions, any of which could be involved in a new Windows Server
 deployment.
 
-- **Upgrade.** Also known as an "in-place upgrade". You move from an older version of the operating
-  system to a newer version, while staying on the same physical hardware. **This is the method we
-  will be covering in this section.**
+- **Upgrade.** Also known as an "in-place upgrade". For non-clustered systems, you move from an
+  older version of the operating system to a newer version, while staying on the same physical
+  hardware. **This is the method we will be covering in this section.**
 
     > [!Important]
     > In-place upgrades might also be supported by public or private cloud companies; however, you
@@ -32,8 +32,9 @@ deployment.
   operating system, by transferring to a different set of hardware or virtual machine.
 
 - **Cluster OS Rolling Upgrade.** You upgrade the operating system of your cluster nodes without
-  stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid
-  downtime which could impact Service Level Agreements. For more information, see
+  stopping the Hyper-V or the Scale-Out File Server workloads. Clusters can only upgrade one version
+  at at time. This feature allows you to avoid downtime which could impact Service Level Agreements.
+  For more information, see
   [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md)
 
 - **License conversion.** Convert a particular edition of the release to another edition of the same
@@ -47,12 +48,12 @@ We recommend upgrading to the latest version of Windows Server. Running the late
 Windows Server allows you to use the latest features – including the latest security features – and
 delivers the best performance.
 
-Beginning with Windows Server 2025, you can upgrade up to four versions at a time. Meaning you can
-upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later.
+Beginning with Windows Server 2025, non-clustered systems can upgrade up to four versions at a time.
+Meaning you can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later.
 
-With Windows Server 2022 and earlier, you can upgrade to a newer version of Windows Server by up to
-two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019 or
-Windows Server 2022. If you are using the
+With Windows Server 2022 and earlier, non-clustered systems can upgrade to a newer version of
+Windows Server by up to two versions at a time. For example, Windows Server 2016 can be upgraded to
+Windows Server 2019 or Windows Server 2022. If you are using the
 [Cluster OS Rolling Upgrade feature](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
 you can only one version at at time.
 
