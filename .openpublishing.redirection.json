@@ -12695,6 +12695,7 @@
       "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
       "redirect_document_id": true
     },
+    {
       "source_path": "WindowsServerDocs/get-started/windows-server-release-info.md",
       "redirect_url": "/windows/release-health/windows-server-release-info",
       "redirect_document_id": false
