@@ -15,14 +15,6 @@ This article describes some of the newest developments in Windows Server 2025, w
 
 Explore upgrade options and the desktop experience.
 
-### Upgrade by using Windows Update
-
-You can perform an in-place upgrade from source media or Windows Update. Microsoft offers an optional in-place upgrade capability through Windows Update, which is known as a feature update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices.
-
-When you upgrade by using Windows Update from the **Settings** dialog, you can perform the installation directly from Windows Update within the desktop or by using `SConfig` for Server Core. Your organization might prefer to implement upgrades incrementally and want to control the availability of this optional upgrade by using Group Policy.
-
-To learn more about how to manage the offer of feature updates, see [Manage feature updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
-
 ### In-place upgrade from Windows Server 2012 R2
 
 With Windows Server 2025, you can upgrade up to four versions at a time. You can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later.

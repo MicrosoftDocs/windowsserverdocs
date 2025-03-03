@@ -4,7 +4,7 @@ description: Important information when performing a feature update, clean insta
 ms.topic: conceptual
 author: robhindman
 ms.author: roharwoo
-ms.date: 11/13/2024
+ms.date: 03/03/2025
 ---
 
 # Feature update, clean install, or migrate to Windows Server
@@ -23,7 +23,7 @@ You can download and try the latest version of Windows Server free of charge at 
 
 An in-place OS upgrade (feature update) performs a feature update of your Windows Server installation. You can upgrade to a later version of Windows Server while keeping your original settings, server roles, features, and data. In-place feature update lets you jump ahead multiple versions. This method is the quickest way to move to a later version of Windows Server. For more information about OS upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to). Keep in mind that some roles and features don't support in-place feature upgrades. In-place feature upgrades work best with virtual machines (VMs) that don't need specific Original Equipment Manufacturer (OEM) hardware drivers to upgrade successfully.
 
-You can perform an in-place upgrade in one of two ways, from media or using Windows Update from the Settings dialog. Upgrading your installation using media involves downloading and preparing media such as an ISO, USB, or DVD disk. Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. When you upgrade using Windows Update from the Settings dialog, you can perform the install directly from Windows Update within the desktop or using SConfig for Server Core. Your organization may prefer to implement upgrades incrementally and want to control the availability of this optional upgrade using Group Policy. To learn more about how to manage the offer of Feature Updates, see [Manage Feature Updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
+You can perform an in-place upgrade from media. Upgrading your installation using media involves downloading and preparing media such as an ISO, USB, or DVD disk.
 
 For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md).
 
