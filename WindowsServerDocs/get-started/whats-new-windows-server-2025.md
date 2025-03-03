@@ -332,7 +332,7 @@ SMB signing is now required by default for all SMB outbound connections. Previou
 
 #### Remote Mailslot
 
-The Remote Mailslot protocol is disabled by default for SMB and for DC Locator protocol use with Active Directory. Remote Mailslot might be removed in a later release. To learn more, see [Features we're no longer developing](../get-started/removed-deprecated-features-windows-server-2025.md#features-were-no-longer-developing).
+The Remote Mailslot protocol is disabled by default for SMB and for DC Locator protocol use with Active Directory. Remote Mailslot might be removed in a later release. To learn more, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
 
 #### Routing and Remote Access Services hardening
 

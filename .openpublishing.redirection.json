@@ -12681,6 +12681,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2025.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2022.md",
       "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
       "redirect_document_id": true
