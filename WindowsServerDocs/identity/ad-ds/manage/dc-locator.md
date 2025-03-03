@@ -108,7 +108,7 @@ The process that the Locator follows can be summarized as follows:
 1. The Netlogon service sends a datagram as a mailslot message to the discovered domain controllers that register the name.
 
    > [!IMPORTANT]
-   > WINS and mailslots were deprecated in Windows Server 2022 and Windows Server 2025 respectively, as these legacy technologies are no longer secure in today's environments. To learn more, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md) and [Features removed or no longer developed starting with Windows Server 2025](../../../get-started/removed-deprecated-features-windows-server-2025.md).
+   > WINS and mailslots were deprecated in Windows Server 2022 and Windows Server 2025 respectively, as these legacy technologies are no longer secure in today's environments. To learn more, see [Features removed or no longer developed in Windows Server](../../../get-started/removed-deprecated-features-windows-server.md).
 
 1. Each available domain controller responds to the datagram to indicate that it's currently operational and then returns the information to DsGetDcName.
 

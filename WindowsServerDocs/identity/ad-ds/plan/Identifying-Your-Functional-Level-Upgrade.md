@@ -33,7 +33,7 @@ Consider the following items when assessing your current environment:
 
 - Check for any incompatible software or applications that might prevent you from upgrading to a newer version of Windows Server.
 
-- Check for removed features to make sure that none are being used. To learn more about removed features, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
+- Check for removed features to make sure that none are being used. To learn more about removed features, see [Features removed or no longer developed in Windows Server](../../../get-started/removed-deprecated-features-windows-server.md).
 
 Documenting this information can help you identify the steps to take to ensure that you have a fully functional Windows Server environment.
 
