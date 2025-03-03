@@ -36,16 +36,8 @@ items:
       href: annual-channel-for-containers.md
     - name: Hardware requirements
       href: hardware-requirements.md
-    - name: Features removed or no longer developed
-      items:
-      - name: Windows Server 2025
-        href: removed-deprecated-features-windows-server-2025.md
-      - name: Windows Server 2022
-        href: removed-deprecated-features-windows-server-2022.md
-      - name: Windows Server 2019
-        href: removed-deprecated-features-windows-server-2019.md
-      - name: Windows Server 2016
-        href: removed-deprecated-features-windows-server-2016.md
+    - name: Features removed or no longer developed in Windows Server
+      href: removed-deprecated-features-windows-server.md
     - name: Release information
       href: windows-server-release-info.md
     - name: Extended Security Updates
