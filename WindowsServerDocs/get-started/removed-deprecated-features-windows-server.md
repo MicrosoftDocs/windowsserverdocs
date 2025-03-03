@@ -10,7 +10,7 @@ ms.service: windows-server
 
 # Features removed or no longer developed in Windows Server
 
-Each release of Windows Server brings new features and improvements, while sometimes removing older ones to make room for better alternatives. This article details the features and functionalities removed in Windows Server.
+Each release of Windows Server brings new features and improvements, while sometimes removing older ones to make room for better alternatives. This article details the features and functionalities removed or deprecated in Windows Server.
 
 > [!TIP]
 > You can get early access to Windows Server builds by joining the [Windows Insider Program for Business](https://insider.windows.com/for-business), which is a great way to test feature changes.
