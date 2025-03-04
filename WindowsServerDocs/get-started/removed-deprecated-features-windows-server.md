@@ -23,51 +23,6 @@ Each release of Windows Server brings new features and improvements, while somet
 
 **This list is subject to change and might not include every affected feature or functionality.**
 
-## Features removed
-
-We're removing the following features and functionalities from the installed product image in Windows Server. Applications or code that depend on these features won't function in future releases unless you use an alternate method. Removal occurs when a feature or functionality is no longer available for use and are eliminated from a product or service. Removals can happen in any future release, whether it's the next LTSC release or several releases later. Some features are deprecated yet still ship in current versions of Windows Server. Components aren't removed from generally available supported versions that are within their product lifecycle.
-
-# [Windows Server 2025](#tab/ws25)
-
-| Feature | Explanation |
-|--|--|
-| Data Encryption Standard (DES) | DES, the symmetric-key block encryption cipher, is considered insecure against modern cryptographic attacks, and replaced by more robust encryption algorithms. DES was disabled starting with Windows Server 2008 R2 and is removed from Windows Server 2025 and later releases. |
-| Internet Information Services (IIS) 6 Management Console (Web-Lgcy-Mgmt-Console) | The console is removed after being no longer developed in Windows Server 2019. You should also start migration from IIS 6.0 or earlier versions, and move to the latest version of IIS, which is always available in the most recent release of Windows Server. |
-| NTLMv1 | Replace calls to NTLM by calls to [Negotiate](/windows/win32/secauthn/microsoft-negotiate), which tries to authenticate with Kerberos and only falls back to NTLM when necessary. For more information, see [The evolution of Windows authentication](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-evolution-of-windows-authentication/ba-p/3926848). |
-| SMTP Server | As SMTP Server features were removed from Windows Server 2025, there's no replacement within the operating system. Consider using Exchange Server or a non-Microsoft SMTP server as an alternative. To learn more about enabling SMTP connection in Exchange Server, see [Receive connectors in Exchange Server](/exchange/mail-flow/connectors/receive-connectors). |
-| Wordpad | We recommend Microsoft Word for rich text documents like `.doc` and `.rtf` and Windows Notepad for plain text documents like `.txt`. |
-
-# [Windows Server 2022](#tab/ws22)
-
-| Feature | Explanation |
-|--|--|
-| Internet Storage Name Service (iSNS) Server service | The iSNS Server service is removed after it was considered for removal in Windows Server version 1709. You can still connect to iSNS servers or add iSCSI targets individually. |
-
-# [Windows Server 2019](#tab/ws19)
-
-| Feature | Explanation |
-|--|--|
-| Business Scanning/<br> Distributed Scan Management (DSM) | We're removing this secure scanning and scanner management capability. There are no devices that support this feature. |
-| [File Replication Service](https://support.microsoft.com/help/4025991/windows-server-version-1709-no-longer-supports-frs) (FRS) | Distributed File System (DFS) Replication replaced FRS. If you need to migrate any domain controllers that use FRS for the SYSVOL folder to DFS Replication, see [Streamlined Migration of FRS to DFSR SYSVOL](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405). |
-| Hyper-V Network Virtualization (HNV) | [Network Virtualization](../networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md) is now included in Windows Server as part of the [Software Defined Networking](/azure/azure-local/concepts/software-defined-networking?context=/windows-server/context/windows-server-edge-networking) (SDN) solution. The SDN solution also includes the Network Controller, Software Load Balancing, User-Defined Routing, and Access Control Lists. |
-| Nano Server installation option | Nano Server isn't available as an installable host operating system. Instead, Nano Server is available as a container operating system. To learn more about Nano Server as a container, see [Windows Container Base Images](/virtualization/windowscontainers/manage-containers/container-base-images). |
-| Print components <br><br> (Now optional component for Server Core installations) | In previous releases of Windows Server, the print components were **disabled** by default in the Server Core installation option. We changed that in Windows Server 2016, enabling them by default. In Windows Server 2019, those print components are once again disabled by default for Server Core. If you need to enable the print components, you can do so by running the following cmdlet:<br><br> `Install-WindowsFeature Print-Server` |
-| [Remote Desktop Connection Broker and Remote Desktop Virtualization Host](../remote/remote-desktop-services/desktop-hosting-service.md) in a Server Core installation | Most Remote Desktop Services deployments have these roles colocated with the Remote Desktop Session Host (RDSH), which requires Server with Desktop Experience. To be consistent with RDSH, we're changing these roles to also require Server with Desktop Experience. These RDS roles are no longer available for use in a [Server Core installation](../administration/server-core/what-is-server-core.md). If you need to [deploy these roles as part of your Remote Desktop infrastructure](../remote/remote-desktop-services/rds-deploy-infrastructure.md), you can [install them on Windows Server with Desktop Experience](../get-started/getting-started-with-server-with-desktop-experience.md). <br/><br/>These roles are also included in the Desktop Experience installation option of Windows Server 2019. |
-| [RemoteFX 3D Video Adapter (vGPU)](../virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md) | We're developing new graphics acceleration options for virtualized environments. You can also use [Discrete Device Assignment (DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) as an alternative. |
-| Server Message Block (SMB) version 1 | Starting with this release, Server Message Block (SMB) version 1 is no longer installed by default. For details, see [SMBv1 isn't installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](../storage/file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md). |
-
-# [Windows Server 2016](#tab/ws16)
-
-| Feature | Explanation |
-|--|--|
-| Journal.dll | The file `Journal.dll` is removed from Windows Server 2016. There's no replacement. |
-| Security Configuration Wizard | The Security Configuration Wizard is removed. Instead, features are secured by default. If you need to control specific security settings, you can use either Group Policy or Microsoft Security Compliance Manager. |
-| Share and Storage Management snap-in for Microsoft Management Console | If the computer you want to manage is running an operating system older than Windows Server 2016, connect to it with Remote Desktop and use the local version of the Share and Storage Management snap-in. On a computer running Windows 8.1 or earlier, use the Share and Storage Management snap-in from the Remote Server Administration Tools (RSAT) to view the computer you want to manage. Use Hyper-V on a client computer to run a virtual machine (VM) running Windows 7, Windows 8, or Windows 8.1 that has the Share and Storage Management snap-in in RSAT. |
-| SQM | The opt-in components that manage participation in the Customer Experience Improvement Program is removed. |
-| Windows Update | The `wuauclt.exe /detectnow` command is removed and no longer supported. To trigger a scan for updates, run the following PowerShell command:<br><br>`$AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"; $AutoUpdates.DetectNow()` |
-
----
-
 ## Features no longer in development
 
 We're no longer actively developing these features and may remove them from a future update. Some features were replaced with other features or functionality, while others are now available from different sources. Deprecation means a feature, functionality, or service is no longer in active development. A deprecated feature may be removed in future releases. A deprecated component still ships in Windows Server, is supported for production deployments, and continues to receive security and quality updates as per the product lifecycle.
@@ -131,6 +86,51 @@ We're no longer actively developing these features and may remove them from a fu
 | Remote management | `WinRM.vbs` is deprecated. Instead, use functionality in the WinRM provider of PowerShell. |
 | Sconfig.exe | Use [Sconfig.cmd](./sconfig-on-ws2016.md) instead. |
 | SMB 2+ over NetBT | SMB 2+ over NetBT is deprecated. Instead, implement SMB over TCP or RDMA. |
+
+---
+
+## Features removed
+
+We're removing the following features and functionalities from the installed product image in Windows Server. Applications or code that depend on these features won't function in future releases unless you use an alternate method. Removal occurs when a feature or functionality is no longer available for use and are eliminated from a product or service. Removals can happen in any future release, whether it's the next LTSC release or several releases later. Some features are deprecated yet still ship in current versions of Windows Server. Components aren't removed from generally available supported versions that are within their product lifecycle.
+
+# [Windows Server 2025](#tab/ws25)
+
+| Feature | Explanation |
+|--|--|
+| Data Encryption Standard (DES) | DES, the symmetric-key block encryption cipher, is considered insecure against modern cryptographic attacks, and replaced by more robust encryption algorithms. DES was disabled starting with Windows Server 2008 R2 and is removed from Windows Server 2025 and later releases. |
+| Internet Information Services (IIS) 6 Management Console (Web-Lgcy-Mgmt-Console) | The console is removed after being no longer developed in Windows Server 2019. You should also start migration from IIS 6.0 or earlier versions, and move to the latest version of IIS, which is always available in the most recent release of Windows Server. |
+| NTLMv1 | Replace calls to NTLM by calls to [Negotiate](/windows/win32/secauthn/microsoft-negotiate), which tries to authenticate with Kerberos and only falls back to NTLM when necessary. For more information, see [The evolution of Windows authentication](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-evolution-of-windows-authentication/ba-p/3926848). |
+| SMTP Server | As SMTP Server features were removed from Windows Server 2025, there's no replacement within the operating system. Consider using Exchange Server or a non-Microsoft SMTP server as an alternative. To learn more about enabling SMTP connection in Exchange Server, see [Receive connectors in Exchange Server](/exchange/mail-flow/connectors/receive-connectors). |
+| Wordpad | We recommend Microsoft Word for rich text documents like `.doc` and `.rtf` and Windows Notepad for plain text documents like `.txt`. |
+
+# [Windows Server 2022](#tab/ws22)
+
+| Feature | Explanation |
+|--|--|
+| Internet Storage Name Service (iSNS) Server service | The iSNS Server service is removed after it was considered for removal in Windows Server version 1709. You can still connect to iSNS servers or add iSCSI targets individually. |
+
+# [Windows Server 2019](#tab/ws19)
+
+| Feature | Explanation |
+|--|--|
+| Business Scanning/<br> Distributed Scan Management (DSM) | We're removing this secure scanning and scanner management capability. There are no devices that support this feature. |
+| [File Replication Service](https://support.microsoft.com/help/4025991/windows-server-version-1709-no-longer-supports-frs) (FRS) | Distributed File System (DFS) Replication replaced FRS. If you need to migrate any domain controllers that use FRS for the SYSVOL folder to DFS Replication, see [Streamlined Migration of FRS to DFSR SYSVOL](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405). |
+| Hyper-V Network Virtualization (HNV) | [Network Virtualization](../networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md) is now included in Windows Server as part of the [Software Defined Networking](/azure/azure-local/concepts/software-defined-networking?context=/windows-server/context/windows-server-edge-networking) (SDN) solution. The SDN solution also includes the Network Controller, Software Load Balancing, User-Defined Routing, and Access Control Lists. |
+| Nano Server installation option | Nano Server isn't available as an installable host operating system. Instead, Nano Server is available as a container operating system. To learn more about Nano Server as a container, see [Windows Container Base Images](/virtualization/windowscontainers/manage-containers/container-base-images). |
+| Print components <br><br> (Now optional component for Server Core installations) | In previous releases of Windows Server, the print components were **disabled** by default in the Server Core installation option. We changed that in Windows Server 2016, enabling them by default. In Windows Server 2019, those print components are once again disabled by default for Server Core. If you need to enable the print components, you can do so by running the following cmdlet:<br><br> `Install-WindowsFeature Print-Server` |
+| [Remote Desktop Connection Broker and Remote Desktop Virtualization Host](../remote/remote-desktop-services/desktop-hosting-service.md) in a Server Core installation | Most Remote Desktop Services deployments have these roles colocated with the Remote Desktop Session Host (RDSH), which requires Server with Desktop Experience. To be consistent with RDSH, we're changing these roles to also require Server with Desktop Experience. These RDS roles are no longer available for use in a [Server Core installation](../administration/server-core/what-is-server-core.md). If you need to [deploy these roles as part of your Remote Desktop infrastructure](../remote/remote-desktop-services/rds-deploy-infrastructure.md), you can [install them on Windows Server with Desktop Experience](../get-started/getting-started-with-server-with-desktop-experience.md). <br/><br/>These roles are also included in the Desktop Experience installation option of Windows Server 2019. |
+| [RemoteFX 3D Video Adapter (vGPU)](../virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md) | We're developing new graphics acceleration options for virtualized environments. You can also use [Discrete Device Assignment (DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) as an alternative. |
+| Server Message Block (SMB) version 1 | Starting with this release, Server Message Block (SMB) version 1 is no longer installed by default. For details, see [SMBv1 isn't installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](../storage/file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md). |
+
+# [Windows Server 2016](#tab/ws16)
+
+| Feature | Explanation |
+|--|--|
+| Journal.dll | The file `Journal.dll` is removed from Windows Server 2016. There's no replacement. |
+| Security Configuration Wizard | The Security Configuration Wizard is removed. Instead, features are secured by default. If you need to control specific security settings, you can use either Group Policy or Microsoft Security Compliance Manager. |
+| Share and Storage Management snap-in for Microsoft Management Console | If the computer you want to manage is running an operating system older than Windows Server 2016, connect to it with Remote Desktop and use the local version of the Share and Storage Management snap-in. On a computer running Windows 8.1 or earlier, use the Share and Storage Management snap-in from the Remote Server Administration Tools (RSAT) to view the computer you want to manage. Use Hyper-V on a client computer to run a virtual machine (VM) running Windows 7, Windows 8, or Windows 8.1 that has the Share and Storage Management snap-in in RSAT. |
+| SQM | The opt-in components that manage participation in the Customer Experience Improvement Program is removed. |
+| Windows Update | The `wuauclt.exe /detectnow` command is removed and no longer supported. To trigger a scan for updates, run the following PowerShell command:<br><br>`$AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"; $AutoUpdates.DetectNow()` |
 
 ---
 
