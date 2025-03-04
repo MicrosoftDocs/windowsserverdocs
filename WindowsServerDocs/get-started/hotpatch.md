@@ -45,7 +45,7 @@ For more information about the available images, see [Windows Server](https://ak
 ### Azure Arc-connected machines
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch isn't currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](/azure/azure-arc/servers/pricing).
+> Azure Arc-enabled Hotpatch isn't currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](https://azure.microsoft.com/pricing/details/azure-arc/core-control-plane/).
 
 Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you enable the feature on Azure Arc Portal. To start using Azure Arc-enabled Hotpatch, connect Azure Arc to machines using one of the following editions:
 

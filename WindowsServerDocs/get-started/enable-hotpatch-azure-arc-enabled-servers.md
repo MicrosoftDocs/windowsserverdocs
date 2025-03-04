@@ -10,7 +10,7 @@ ms.date: 03/04/2025
 # Enable Hotpatch for Azure Arc-enabled servers
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch isn't currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](/azure/azure-arc/servers/pricing).
+> Azure Arc-enabled Hotpatch isn't currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](https://azure.microsoft.com/pricing/details/azure-arc/core-control-plane/).
 
 Hotpatch allows you to update your Windows Server installation without requiring your users to restart after installation. This feature minimizes downtime spent on updates and keeps your users running their workloads uninterrupted. For more information about how Hotpatch works, see [Hotpatch for virtual machines](hotpatch.md).
 
