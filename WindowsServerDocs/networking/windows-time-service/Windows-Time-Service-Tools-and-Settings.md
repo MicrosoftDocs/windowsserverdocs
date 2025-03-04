@@ -10,43 +10,41 @@ ms.date: 01/15/2025
 
 # Windows Time service tools and settings
 
-The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). This article covers the different tools and settings used to manage the Windows Time service.
+The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). This article covers the various tools and settings used to manage the Windows Time service.
 
-By default, a computer that is joined to a domain synchronizes time through a domain hierarchy of time sources. However, if a computer is manually configured to synchronize from a specific time source, perhaps because it was formerly not joined to a domain, you can reconfigure the computer to begin automatically sourcing its time from the domain hierarchy.
+By default, a computer that's joined to a domain synchronizes time through a domain hierarchy of time sources. However, if a computer is manually configured to synchronize from a specific time source, perhaps because it was formerly not joined to a domain, you can reconfigure the computer to begin automatically sourcing its time from the domain hierarchy.
 
-Most domain-joined computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. An exception to this is the domain controller, which functions as the primary domain controller (PDC) emulator operations master for the root forest domain. The PDC emulator operations master in turn is configured to synchronize time with an external time source.
+Most domain-joined computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. An exception is the domain controller, which functions as the primary domain controller (PDC) emulator operations master for the root forest domain. The PDC emulator operations master in turn is configured to synchronize time with an external time source.
 
 You can achieve down to one-millisecond time accuracy in your domain. For more information, see [Support boundary for high-accuracy time](support-boundary.md) and [Accurate Time for Windows Server 2016](accurate-time.md).
 
 > [!CAUTION]
 > Don't use the **Net time** command to configure or set a computer's clock time when the Windows Time service is running.
->
-> Also, on older computers that run Windows XP or earlier, the **Net time /querysntp** command displays the name of a Network Time Protocol (NTP) server with which a computer is configured to synchronize, but that NTP server is used only when the computer's time client is configured as NTP or AllSync. This command is deprecated.
 
 ## Network port
 
-The Windows Time service follows the Network Time Protocol (NTP) specification, which requires the use of UDP port 123 for all time synchronization. Whenever the computer synchronizes its clock or provides time to another computer, it happens over UDP port 123. This port's reserved by the Windows Time service as the destination port.
+The Windows Time service follows the Network Time Protocol (NTP) specification, which requires the use of UDP port 123 for all time synchronization. Whenever the computer synchronizes its clock or provides time to another computer, it happens over UDP port 123. The Windows Time service reserves this port as the destination port.
 
 > [!NOTE]
 >
-> - NTP Servers typically listen on UDP port 123 for requests and respond from the same port, which is also true for the inbox W32Time NTP Server.
-> - Inbox W32Time NTP Client and NTP Server can be enabled or disabled independently and both share UDP port 123 for their functions.
-> - Inbox W32Time NTP Client can only use UDP 123 as the source port.
-> - If you have a computer with multiple network adapters (is multi-homed), you can't enable the Windows Time service based on a network adapter.
+> - NTP Servers typically listen on UDP port 123 for requests and respond from the same port, which is also true for the built-in W32Time NTP server.
+> - You can turn on or turn off the built-in W32Time NTP client and NTP server independently. Both share UDP port 123 for their functions.
+> - The built-in W32Time NTP client can only use UDP 123 as the source port.
+> - If your computer has multiple network adapters (it's multi-homed), you can't turn on the Windows Time service based on a network adapter.
 
 ## Command-line parameters for W32Time
 
-You can use the `w32tm` command to configure Windows Time service settings and diagnose computer time problems. `W32tm` is the preferred command-line tool for configuring, monitoring, and troubleshooting the Windows Time service. Membership in the local **Administrators group** is required to run this tool locally and membership in the **Domain Admins group** is required to run this tool remotely.
+You can use the `w32tm` command to configure Windows Time service settings and diagnose computer time problems. The `w32tm` command is the preferred command-line tool for configuring, monitoring, and troubleshooting the Windows Time service. Membership in the local Administrators group is required to run this tool locally, and membership in the Domain Admins group is required to run this tool remotely.
 
-To use `w32tm`, perform the following steps:
+To use `w32tm`, take the following steps:
 
-1. Select **Start** > type **cmd** > right-click **Command Prompt** > select **Run as administrator**.
+1. Select **Start**, and then enter **cmd**. Right-click **Command Prompt**, and then select **Run as administrator**.
 1. At the command prompt, enter **w32tm** followed by the applicable parameters.
 
 |Parameter |Description |
 | --- | --- |
 |**/?** |Displays the `w32tm` command-line help |
-|**/config** [/computer:\<*target*>] [/update] [/manualpeerlist:\<*peers*>] [/syncfromflags:\<*source*>] [/LocalClockDispersion:\<*seconds*>] [/reliable:(YES\|NO)] [/largephaseoffset:\<*milliseconds*>]** |**/computer:\<*target*>**: Adjusts the configuration of \<*target*>. If not specified, the default is the local computer.<p>**/update**: Notifies the Windows Time service that the configuration changed, causing the changes to take effect.<p>**/manualpeerlist:\<*peers*>**: Sets the manual peer list to \<*peers*>, which is a space-delimited list of DNS or IP addresses. When specifying multiple peers, this option must be enclosed in quotes.<p>**/syncfromflags:\<*source*>**: Sets what sources the NTP client should synchronize from. \<*source*> should be a comma-separated list of these keywords (not case sensitive):<ul><li>**MANUAL**: Include peers from the manual peer list.</li><li>**DOMHIER**: Synchronize from a domain controller (DC) in the domain hierarchy.</li></ul><p>**/LocalClockDispersion:\<*seconds*>**: Configures the accuracy of the internal clock that W32Time assumes when it can't acquire time from its configured sources.<p>**/reliable:(YES\|NO)**: Set whether this computer is a reliable time source. This setting is only meaningful on domain controllers.<ul><li>**YES**: This computer is a reliable time service.</li><li>**NO**: This computer isn't a reliable time service.</li></ul><p>**/largephaseoffset:\<*milliseconds*>**: Sets the time difference between local and network time that W32Time considers a spike. |
+|**/config** [/computer:\<*target*>] [/update] [/manualpeerlist:\<*peers*>] [/syncfromflags:\<*source*>] [/LocalClockDispersion:\<*seconds*>] [/reliable:(YES\|NO)] [/largephaseoffset:\<*milliseconds*>]** |**/computer:\<*target*>**: Adjusts the configuration of \<*target*>. If not specified, the default target is the local computer.<p>**/update**: Notifies the Windows Time service that the configuration changed, causing the changes to take effect.<p>**/manualpeerlist:\<*peers*>**: Sets the manual peer list to \<*peers*>, which is a space-delimited list of DNS or IP addresses. When you specify multiple peers, this option must be enclosed in quotes.<p>**/syncfromflags:\<*source*>**: Sets the sources that the NTP client should synchronize from. The \<*source*> value should be a comma-separated list of the following keywords (not case sensitive):<ul><li>**MANUAL**: Include peers from the manual peer list.</li><li>**DOMHIER**: Synchronize from a domain controller (DC) in the domain hierarchy.</li></ul><p>**/LocalClockDispersion:\<*seconds*>**: Configures the accuracy of the internal clock that W32Time assumes when it can't acquire time from its configured sources.<p>**/reliable:(YES\|NO)**: Set whether this computer is a reliable time source. This setting is only meaningful on domain controllers.<ul><li>**YES**: This computer is a reliable time service.</li><li>**NO**: This computer isn't a reliable time service.</li></ul><p>**/largephaseoffset:\<*milliseconds*>**: Sets the time difference between local and network time that W32Time considers a spike. |
 |**/debug** {/disable \| {/enable /file:\<*name*> /size:/<*bytes*> /entries:\<*value*> [/truncate]}} |Enables or disables the local computer Windows Time service private log. This parameter was first made available for the Windows Time client in Windows Vista and Windows Server 2008.<p>**/disable**: Disables the private log.<p>**/enable**: Enables the private log.<ul><li>**file:\<*name*>**: Specifies the absolute file name.</li><li>**size:\<*bytes*>**: Specifies the maximum size for circular logging.</li><li>**entries:\<*value*>**: Contains a list of flags, specified by number and separated by commas that specifies the types of information that should be logged. Valid values are 0 to 300. A range of numbers is valid, in addition to single numbers, such as 0-100,103,106. Value 0-300 is for logging all information.</li></ul><p>**/truncate**: Truncate the file if it exists. |
 |**/dumpreg** [/subkey:\<*key*>] [/computer:\<*target*>] |Displays the values associated with a given registry key.<p>The default key is **HKLM\System\CurrentControlSet\Services\W32Time** (the root key for the Windows Time service).<p>**/subkey:\<*key*>**: Displays the values associated with subkey \<key> of the default key.<p>**/computer:\<*target*>**: Queries registry settings for computer \<*target*>. |
 |**/monitor** [/domain:\<*domain name*>] [/computers:\<*name*>[,\<*name*>[,\<*name*>...]]] [/threads:\<*num*>] |Monitors the Windows Time service.<p>**/domain**: Specifies which domain to monitor. If no domain name is given, or neither the **/domain** nor **/computers** option is specified, the default domain is used. This option might be used more than once.<p>**/computers**: Monitors the given list of computers. Computer names are separated by commas, with no spaces. If a name is prefixed with a **\***, it's treated as a PDC. This option might be used more than once.<p>**/threads**: Specifies the number of computers to analyze simultaneously. The default value is **3**. The allowed range is 1-50. |
