@@ -36,9 +36,9 @@ Following are the versions of Windows client that are supported as guest operati
 
 | Guest operating system (client) | Maximum number of virtual processors | Integration Services | Notes |
 |--|--|--|--|
-| Windows 11 | 32 | Built in | Generation 2 virtual machine hosted on Windows Server 2019 or above <br/> Azure Local, version 22H2 and later. |
-| Windows 10 | 32 | Built in |  |
-| Windows 8.1 | 32 | Built in |  |
+| Windows 11 | 32 | Built-in | Generation 2 virtual machine hosted on Windows Server 2019 or above <br/> Azure Local, version 22H2 and later. |
+| Windows 10 | 32 | Built-in |  |
+| Windows 8.1 | 32 | Built-in |  |
 | Windows 7 with Service Pack 1 (SP1) | 4 | Upgrade the integration services after you set up the guest operating system. | Ultimate, Enterprise, and Professional editions (32-bit and 64-bit). |
 
 ## Guest operating system support on other versions of Windows
