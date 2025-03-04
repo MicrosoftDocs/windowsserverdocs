@@ -1,17 +1,16 @@
 ---
-title: Enable Hotpatch for Azure Arc-enabled servers (preview)
+title: Enable Hotpatch for Azure Arc-enabled servers
 description: Learn how to enable Hotpatch for Windows Server 2025 installations on Azure Arc-enabled servers.
 ms.author: alalve
 ms.topic: how-to
 author: xelu86
-ms.date: 02/26/2025
+ms.date: 03/04/2025
 ---
 
-# Enable Hotpatch for Azure Arc-enabled servers (preview)
+# Enable Hotpatch for Azure Arc-enabled servers
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch is currently in **preview.**
-> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Azure Arc-enabled Hotpatch is not currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](/azure/azure-arc/servers/pricing).
 
 Hotpatch allows you to update your Windows Server installation without requiring your users to restart after installation. This feature minimizes downtime spent on updates and keeps your users running their workloads uninterrupted. For more information about how Hotpatch works, see [Hotpatch for virtual machines](hotpatch.md).
 
@@ -40,7 +39,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 - The machine should be connected to Azure Arc (Arc-enabled). To learn more about onboarding your machine to Azure Arc, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json).
 
 
-## Install Hotpatch preview version for Windows Server 2025
+## Install Hotpatch for Windows Server 2025
 
 1. Run the following command in an elevated PowerShell or command prompt.
 
@@ -72,7 +71,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 1. Select the name of your machine.
 
-1. Select **Hotpatch (preview)**, then select **Confirm**.
+1. Select **Hotpatch**, then select **Confirm**.
 
 1. Wait about 10 minutes for the changes to apply. If the update stays stuck on the Pending status, run the following commands in PowerShell:
 

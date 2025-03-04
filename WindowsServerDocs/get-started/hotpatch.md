@@ -3,7 +3,7 @@ title: Hotpatch for Windows Server
 description: 'Learn how Hotpatch for Windows Server works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
-ms.date: 02/27/2025
+ms.date: 03/04/2025
 ms.author: roharwoo
 ---
 
@@ -42,11 +42,10 @@ The following table lists the exact combinations of publisher, OS offer, and SKU
 
 For more information about the available images, see [Windows Server](https://aka.ms/hotpatchondesktopnewimage) on Azure Marketplace.
 
-### Azure Arc-connected machines (preview)
+### Azure Arc-connected machines
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch is currently in PREVIEW.
-> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Azure Arc-enabled Hotpatch is not currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](/azure/azure-arc/servers/pricing).
 
 Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you enable the feature on Azure Arc Portal. To start using Azure Arc-enabled Hotpatch, connect Azure Arc to machines using one of the following editions:
 
@@ -153,4 +152,4 @@ Hotpatch updates don't support automatic rollback. If you experience an issue du
 
 - [Azure Update Management](/azure/automation/update-management/overview)
 
-- [How to preview Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895)
+- [Enable Hotpatch for Azure Arc-enabled servers](enable-hotpatch-azure-arc-enabled-servers.md)
