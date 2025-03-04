@@ -45,7 +45,7 @@ For more information about the available images, see [Windows Server](https://ak
 ### Azure Arc-connected machines
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch is not currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](/azure/azure-arc/servers/pricing).
+> Azure Arc-enabled Hotpatch isn't currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](/azure/azure-arc/servers/pricing).
 
 Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you enable the feature on Azure Arc Portal. To start using Azure Arc-enabled Hotpatch, connect Azure Arc to machines using one of the following editions:
 
@@ -86,7 +86,7 @@ The following patches currently aren't included in the Hotpatch program and requ
 
 ## Patch orchestration process
 
-Hotpatch is an extension of Windows Update and typical management processes. However, the kinds of tools Hotpatch uses for patch management
+Hotpatch is an extension of Windows Update and typical management processes. However, the tools for patch management
 vary depending on which platform you're using.
 
 ### Azure
@@ -102,7 +102,7 @@ vary depending on which platform you're using.
 - Azure monitors VM health through platform health signals to detect patching failures.
 
 > [!NOTE]
-> You can't create Azure Virtual Machine Scale Sets with Uniform orchestration on Azure Edition images with Hotpatch. To learn more about which features are supported by Uniform orchestration for scale sets, see [A comparison of Flexible, Uniform, and availability sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes).
+> You can't create Azure Virtual Machine Scale Sets with Uniform orchestration on Azure Edition images with Hotpatch. To learn more about which features Uniform orchestration for scale sets supports, see [A comparison of Flexible, Uniform, and availability sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes).
 
 ### Azure Local
 
@@ -136,7 +136,7 @@ In the **Recommended updates** page, you can see the Hotpatch status of your VM 
 
 Patches outside of those two categories aren't automatically installed, and are instead displayed in the **Update compliance** tab as a list of available patches. You can also check the **Update history** tab to view patch installation details for update deployments on your VM from the past 30 days.
 
-Automatic VM Guest Patching regularly runs assessments of available patches, which you can view in the **Updates** tab. You can manually start an assessment by selecting the **Assess Now** button. You can also install patches on-demand by selecting the **Install updates now** button. This option lets you choose whether to install all updates under specific patch classifications or select individual updates to include or exclude by providing a list of knowledge base articles. However, keep in mind that patches you install manually don't follow availability-first principles and might require you to restart your VM.
+Automatic VM Guest Patching regularly runs assessments of available patches, which you can view in the **Updates** tab. You can manually start an assessment by selecting the **Assess Now** button. You can also install patches on-demand by selecting the **Install updates now** button. This option lets you choose whether to install all updates under specific patch classifications. You can also select individual updates to include or exclude by providing a list of knowledge base articles. However, keep in mind that patches you install manually don't follow availability-first principles and might require you to restart your VM.
 
 You can also view installed patches by running the [Get-HotFix](/powershell/module/microsoft.powershell.management/get-hotfix) cmdlet in PowerShell or by viewing the **Settings** menu in Desktop Experience.
 

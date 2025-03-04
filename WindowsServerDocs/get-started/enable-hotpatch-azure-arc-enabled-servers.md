@@ -10,7 +10,7 @@ ms.date: 03/04/2025
 # Enable Hotpatch for Azure Arc-enabled servers
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch is not currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](/azure/azure-arc/servers/pricing).
+> Azure Arc-enabled Hotpatch isn't currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](/azure/azure-arc/servers/pricing).
 
 Hotpatch allows you to update your Windows Server installation without requiring your users to restart after installation. This feature minimizes downtime spent on updates and keeps your users running their workloads uninterrupted. For more information about how Hotpatch works, see [Hotpatch for virtual machines](hotpatch.md).
 
@@ -63,7 +63,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
    Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
    ```
 
-   If the output is not `2`, you'll have to troubleshoot Virtual Secure Mode (VSM) enablement.
+   If the output isn't `2`, you have to troubleshoot Virtual Secure Mode (VSM) enablement.
 
 1. Connect (Arc-enable) the machine to Microsoft Azure.
 
@@ -81,7 +81,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
    & "$env:TEMP\install_windows_azcmagent.ps1"
    ```
 
-1. Whenever a Hotpatch is available from Windows Update, you should receive a prompt to install it. Since these updates aren't released every month, you may need to wait until the next Hotpatch is published.
+1. Whenever a Hotpatch is available from Windows Update, you should receive a prompt to install it. Since these updates aren't released every month, you might need to wait until the next Hotpatch is published.
 
 ## Next steps
 
