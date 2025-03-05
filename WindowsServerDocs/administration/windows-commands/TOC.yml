@@ -692,6 +692,8 @@
         href: fsutil-8dot3name.md
       - name: fsutil behavior
         href: fsutil-behavior.md
+      - name: fsutil clfs
+        href: fsutil-clfs.md  
       - name: fsutil-devdrv
         href: fsutil-devdrv.md
       - name: fsutil dirty
