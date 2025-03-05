@@ -4,7 +4,7 @@ description: How to install Windows Admin Center on a Windows PC or on a server 
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 02/24/2025
+ms.date: 03/05/2025
 zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
@@ -100,15 +100,17 @@ To install Windows Admin Center on your machine running the Windows Server Core 
    Start-BitsTransfer @parameters
    ```
 
-1. To install the Standalone Package, run the following command:
+1. To install Windows Admin Center, run the following command:
 
    ```powershell
-   & .\WindowsAdminCenter.exe /VERYSILENT
+   Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
 
-1. TODO: how to verify? Services seem to run then crash, then require a restart
+1. You may also need to start the Windows Admin Center service using the following command:
 
-1. Restart your machine to complete the installation.
+   ```powershell
+   Start-Service -Name WindowsAdminCenter
+   ```
 
 You've now installed Windows Admin Center on your machine.
 
@@ -167,15 +169,17 @@ To install Windows Admin Center on your machine running the Windows Server Core 
    Start-BitsTransfer @parameters
    ```
 
-1. To install the Standalone Package, run the following command:
+1. To install Windows Admin Center, run the following command:
 
    ```powershell
-   & .\WindowsAdminCenter.exe /VERYSILENT
+   Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
 
-1. TODO: how to verify? Services seem to run then crash, then require a restart
+1. You may also need to start the Windows Admin Center service using the following command:
 
-1. Restart your machine to complete the installation.
+   ```powershell
+   Start-Service -Name WindowsAdminCenter
+   ```
 
 You've now installed Windows Admin Center on your machine.
 
