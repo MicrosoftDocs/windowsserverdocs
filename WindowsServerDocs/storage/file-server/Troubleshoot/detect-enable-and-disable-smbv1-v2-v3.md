@@ -177,7 +177,7 @@ To enable or disable SMB protocols on an SMB Server that runs Windows 7, Windows
 
 #### Use Windows PowerShell
 
-You can use the [Get-Item](/powershell/module/microsoft.powershell.management/get-item), [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty), and [Set-ItemProperty](/powershell/module/microsoft.powershell.management) cmdlets to detect, enable, and disable SMB protocols.
+You can use the [Get-Item](/powershell/module/microsoft.powershell.management/get-item), [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty), and [Set-ItemProperty](/powershell/module/microsoft.powershell.management/set-itemproperty) cmdlets to detect, enable, and disable SMB protocols.
 
 > [!NOTE]
 > The commands in the following sections require PowerShell 2.0 or later.
