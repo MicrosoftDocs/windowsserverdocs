@@ -134,9 +134,9 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 - **Improved security for confidential attributes**: DCs and AD LDS instances only allow LDAP to add, search, and modify operations that involve confidential attributes when the connection is encrypted.
 - **Improved security for default machine account passwords**: Active Directory now uses default computer account passwords that are randomly generated. Windows 2025 DCs block setting computer account passwords to the default password of the computer account name.
 
-  To control this behavior, enable the Group Policy Object (GPO) setting **Domain controller: Refuse setting default machine account password** located in 
+  To control this behavior, enable the Group Policy Object (GPO) setting **Domain controller: Refuse setting default machine account password** located in
   *Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options*.
-  
+
   Utilities like Active Directory Administrative Center (ADAC), Active Directory Users and Computers (ADUC), `net computer`, and `dsmod` also honor this new behavior. Both ADAC and ADUC no longer allow creation of a pre-Windows 2000 account.
 
 - **Kerberos PKINIT support for cryptographic agility**: The Kerberos Public Key Cryptography for Initial Authentication in Kerberos (PKINIT) protocol implementation is updated to allow for cryptographic agility by supporting more algorithms and removing hardcoded algorithms.
@@ -208,7 +208,7 @@ Several features new to Microsoft LAPS introduce the following improvements:
 - **Post-authentication action support for terminating individual processes**: A new option is added to the **Post-authentication actions** (PAA) Group Policy setting, `Reset the password, sign out the managed account, and terminate any remaining processes`, which is located in **Computer Configuration** > **Administrative Templates** > **System** > **LAPS** > **Post-authentication actions**.
 
   This new option is an extension of the previous option, `Reset the password and log off the managed account`. After configuration, the PAA notifies and then terminates any interactive sign-in sessions. It enumerates and terminates any remaining processes that are still running under the local account identity managed by Windows LAPS. No notification precedes this termination.
-  
+
   The expansion of logging events during the execution of PAA provides deeper insights into the operation.
 
 To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview).
@@ -265,12 +265,12 @@ Set-SmbClientConfiguration -EnableSMBQUIC $false
 Administrators can enable auditing of the SMB server and client for support of SMB signing and encryption. If a non-Microsoft client or server lacks support for SMB encryption or signing, it can be detected. When a non-Microsoft device or software states it supports SMB 3.1.1, but fails to support SMB signing, it violates the [SMB 3.1.1 Pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
 
 You can configure SMB signing and encryption auditing settings by using Group Policy or PowerShell. You can change these policies in the following Group Policy paths:
-  
+
 - *Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support encryption*
 - *Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support signing*
 - *Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support encryption*
 - *Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support signing*
-  
+
 To perform these changes by using PowerShell, run these commands in an elevated prompt where `$true` enables and `$false` disables these settings:
 
 ```powershell
@@ -339,17 +339,13 @@ By default, new Routing and Remote Access Services (RRAS) installations don't ac
 
 Existing configurations retain their behavior. For example, if you run Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 by using an in-place upgrade, connections based on L2TP and PPTP are still accepted. This change doesn't affect Windows client operating systems. To learn more about how to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
-### IPsec default keying protocol changed
+### IPsec default keying protocol change
 
-The default keying modules have been changed to IKEv1 and IKEv2 for IPsec connections authenticated with machine certificates. For other authentication methods, the default remains AuthIP and IKEv1. To revert to the previous behavior, add the following registry key with a value of 1 on systems using the new default keying protocol sequence. This applies to both Windows Server 2025 and Windows 11 24H2 clients.
-```
-Path:    HKLM\SYSTEM\CurrentControlSet\Services\MpsSvc\Parameters  
-Name:    IpsecRestoreLegacyKeyMod  
-Type:    REG_DWORD  
-Values:  0 (default – new sequence, IKEv2 and IKEv1) | 1 (previous sequence used, AuthIP & IKEv1)  
-```
-A reboot is required to make this registry key effective.  
+The default keying modules have been changed to IKEv1 and IKEv2 for IPsec connections authenticated with machine certificates. For other authentication methods, the default AuthIP and IKEv1 remain. This applies to both Windows Server 2025 and Windows 11 24H2 clients. In the registry path `HKLM:\SYSTEM\CurrentControlSet\Services\MpsSvc\Parameters`, the `IpsecRestoreLegacyKeyMod` entry with a value of **0** utilizes the new sequence, IKEv2 and IKEv1. A value of **1** utilizes the previous sequence, AuthIP and IKEv1. To revert to the previous behavior, add the following registry key on systems using the new default keying protocol sequence. A reboot is required for changes to take effect.
 
+```powershell
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\MpsSvc\Parameters" -Name "IpsecRestoreLegacyKeyMod" -PropertyType "DWORD" -Value 1
+```
 
 ## Hyper-V, AI, and performance
 
