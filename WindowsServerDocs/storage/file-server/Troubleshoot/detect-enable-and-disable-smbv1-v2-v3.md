@@ -49,7 +49,7 @@ The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008. The 
 
 ## Use PowerShell to remove SMBv1
 
-You can use the [Get-WindowsOptionalFeature](powershell/module/dism/get-windowsoptionalfeature), [Disable-WindowsOptionalFeature](powershell/module/dism/disable-windowsoptionalfeature), and [Enable-WindowsOptionalFeature](powershell/module/dism/enable-windowsoptionalfeature) PowerShell commands to detect, disable, and enable an SMBv1 client or server. Run the commands at an elevated command prompt.
+You can use the [Get-WindowsOptionalFeature](/powershell/module/dism/get-windowsoptionalfeature), [Disable-WindowsOptionalFeature](/powershell/module/dism/disable-windowsoptionalfeature), and [Enable-WindowsOptionalFeature](/powershell/module/dism/enable-windowsoptionalfeature) PowerShell commands to detect, disable, and enable an SMBv1 client or server. Run the commands at an elevated command prompt.
 
 > [!NOTE]
 > The computer restarts after you run the PowerShell commands to disable or enable SMBv1.
@@ -73,7 +73,7 @@ You can use the [Get-WindowsOptionalFeature](powershell/module/dism/get-windowso
   ```
 
 > [!TIP]
-> You can detect the SMBv1 status without elevation by running the [Get-SmbServerConfiguration](powershell/module/smbshare/get-smbserverconfiguration) command: `Get-SmbServerConfiguration | Format-List EnableSMB1Protocol`.
+> You can detect the SMBv1 status without elevation by running the [Get-SmbServerConfiguration](/powershell/module/smbshare/get-smbserverconfiguration) command: `Get-SmbServerConfiguration | Format-List EnableSMB1Protocol`.
 
 ### Remove SMBv1
 
@@ -121,13 +121,11 @@ To disable SMBv1 on these operating systems, take the following steps:
 
 Starting with the Windows 10 Fall Creators Update and Windows Server 2019, SMBv1 is no longer installed by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](smbv1-not-installed-by-default-in-windows.md).
 
-In other systems, you can use the command line or Registry Editor to detect the status of SMB protocols and to enable and disable those protocols.
-
 When you enable or disable SMBv2 in Windows 8 or Windows Server 2012, SMBv3 is also enabled or disabled. This behavior occurs because these protocols share the same stack.
 
 # [Server](#tab/server)
 
-You can use the [Set-SMBServerConfiguration](powershell/module/smbshare/set-smbserverconfiguration) cmdlet to enable or disable the SMBv1, SMBv2, and SMBv3 protocols on a server component. You can use the [Get-SmbServerConfiguration](powershell/module/smbshare/get-smbserverconfiguration) cmdlet to retrieve the SMB server configuration.
+You can use the [Set-SMBServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration) cmdlet to enable or disable the SMBv1, SMBv2, and SMBv3 protocols on a server component. You can use the [Get-SmbServerConfiguration](/powershell/module/smbshare/get-smbserverconfiguration) cmdlet to retrieve the SMB server configuration.
 
 You don't have to restart the computer after you run the **Set-SMBServerConfiguration** cmdlet.
 
@@ -179,7 +177,7 @@ To enable or disable SMB protocols on an SMB Server that runs Windows 7, Windows
 
 #### Use Windows PowerShell
 
-You can use the [Get-Item](powershell/module/microsoft.powershell.management/get-item), [Get-ItemProperty](powershell/module/microsoft.powershell.management/get-itemproperty), and [Set-ItemProperty](powershell/module/microsoft.powershell.management) cmdlets to detect, enable, and disable DMB protocols.
+You can use the [Get-Item](/powershell/module/microsoft.powershell.management/get-item), [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty), and [Set-ItemProperty](/powershell/module/microsoft.powershell.management) cmdlets to detect, enable, and disable SMB protocols.
 
 > [!NOTE]
 > The commands in the following sections require PowerShell 2.0 or later.
@@ -192,7 +190,7 @@ You can use the [Get-Item](powershell/module/microsoft.powershell.management/get
   Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
   ```
 
-  The default configuration is `Enabled`. As a result, no registry named value is created, so the command doesn't return an SMB1 value.
+  The default configuration is `Enabled`. As a result, no registry named value is created, so the command doesn't return an `SMB1` value.
 
 - Disable:
 
@@ -430,7 +428,7 @@ To configure these entries by using Group Policy, take the following steps:
 
 ### Audit SMBv1 usage
 
-To determine which clients attempt to connect to an SMB server by using SMBv1, you can enable auditing on Windows Server and Windows client. To enable or disable auditing, use the [Set-SmbServerConfiguration](powershell/module/smbshare/set-smbserverconfiguration). To check the auditing status, use the [Get-SmbServerConfiguration](powershell/module/smbshare/get-smbserverconfiguration).
+To determine which clients attempt to connect to an SMB server by using SMBv1, you can enable auditing on Windows Server and Windows clients. To enable or disable auditing, use the [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration) cmdlet. To check the auditing status, use the [Get-SmbServerConfiguration](/powershell/module/smbshare/get-smbserverconfiguration) cmdlet.
 
 - Enable:
 
