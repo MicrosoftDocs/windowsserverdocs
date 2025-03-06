@@ -34,31 +34,31 @@ The following two sections provide an overview of what changes happen to the cer
 
 When you renew a CA certificate with an existing key pair, the new certificate contains the same public and private key. As a result, all previously issued certificates chain up to the new CA certificate. And clients chain previously and newly issued certificates up to new CA certificate. This is because all these client certificates are signed by the same CA signing key, and both CA certificates produce the same signature for the identical data.
 
-The following is a summary of important details to note about the new root CA certificate:
+The following is a summary of details to note about the new root CA certificate:
 
-- The new CA certificate doesn't replace a previous CA certificate. Instead, a new file is added and a certificate index is appended to the file name in parentheses. For example, the old certificate has a name: **TestCA.crt**, and the new certificate has the name: **TestCA(1).crt**.
+- The new CA certificate doesn't replace a previous CA certificate. Instead, a new file is added and a certificate index is appended to the file name in parentheses. For example, the old certificate has a name: **RootCA.crt**, and the new certificate has the name: **RootCA(1).crt**.
 
 - The new CA certificate has the same **Valid From** value as the old certificate. For example, if the old CA certificate is valid from 08/10/2020 to 08/10/2025, the new certificate is valid from 08/10/2020 to 08/10/2030. The renewal increases the current CA certificate validity period.
 
-- The new CA certificate's hash contains the previous certificate's **Thumbprint** value. And the new CA certificate changes the **CA Version**. The CA version extension helps to build the correct chains when a CA has more than one certificate. This extension consists of two values: the **CA Certificate Index**, and the **CA Key Index**. These values are separated by dot, for example: 0.0, 2.1, and 3.3. Each time you renew a CA certificate, the CA Certificate Index increases by 1. Since the key pair remains the same, the **CA Key Index** value doesn't increase.
+- The new CA certificate's hash contains the previous certificate's **Thumbprint** value.
+
+- The new CA certificate changes the **CA Version**. The CA version extension helps to build the correct chains when a CA has more than one certificate. This extension consists of two values: the **CA Certificate Index**, and the **CA Key Index**. These values are separated by dot, for example: 0.0, 2.1, and 3.3. Each time you renew a CA certificate, the CA Certificate Index increases by 1. Since the key pair remains the same, the **CA Key Index** value doesn't increase.
 
 - The new CA maintains the same CRL.
 
 ### Renew the root CA certificate with new key pair
 
-Renewal with a new key pair is more complex, and includes many changes in the CA certificate. The following is a summary of important details to note about the new root CA certificate:
+Renewal with a new key pair is more complex, and includes many changes in the CA certificate. A new public key produces a different **Subject Key Identifier**, which is the hash of public key. When the CA issues a new certificate, it gives a certificate a **Subject Key Identifier** value to an issued certificate **Authority Key Identifier** extension. The extension comparison is used by the certificate chaining engine (CCE). As a result, the previously issued certificates chain up to the previous CA certificate, and newly issued certificates chain up to the new CA certificate respectively.
 
-- A new public key produces a different **Subject Key Identifier**, which is the hash of public key. When the CA issues a new certificate, it gives a certificate a **Subject Key Identifier** value to an issued certificate **Authority Key Identifier** extension. The extension comparison is used by the certificate chaining engine (CCE). As a result, the previously issued certificates chain up to the previous CA certificate, and newly issued certificates chain up to the new CA certificate respectively.
+The following is a summary of details to note about the new root CA certificate:
 
-- A new CRL is generated. The new CRL contains only those revoked certificates that were signed using the renewed CA certificate, or signing key, and the new CRL file contains the CRL suffix. For example, the old CRL has the name **TestCA.crl**, and the new CRL has the name: **TestCA(1).crl**. This CRL suffix is maintained by the **CRLNameSuffix** variable in CDP location settings and the number always equals the CA Version extension value.
+- A new CRL is generated. The new CRL contains only those revoked certificates that were signed using the renewed CA certificate, or signing key, and the new CRL file contains the CRL suffix. For example, the old CRL has the name **RootCA.crl**, and the new CRL has the name: **RootCA(1).crl**. This CRL suffix is maintained by the **CRLNameSuffix** variable in CDP location settings and the number always equals the CA Version extension value.
 
-- Unlike CA Certificate Index value, the CA Key Index doesn't always increase by 1, but is set to the CA Certificate Index value. For example, the previous CA certificate has CA Version extension as 2.0, and the new CA certificate CA Version extension has the value: 3.3.
+- Unlike the **CA Certificate Index** value, the CA Key Index doesn't always increase by 1, but is set to the **CA Certificate Index** value. For example, the previous CA certificate has CA Version extension as 2.0, and the new CA certificate **CA Version** extension has the value 3.3.
 
-- When you use the new root CA certificate, but it isn't deployed to all clients yet, Windows CA generates two cross-certificates. The first cross-certificate is signed by the previous CA signing key and certifies the new CA certificate. Certification direction is determined by numbers in parentheses. In our case one cross-certification will have (0-1) suffix.
-  - By using cross-certification, CCE constructs certification paths for previously and newly  issued certificates, so both paths chain up to only the previous CA certificate, because new CA certificate isn't deployed yet. To chain both paths to a new CA certificate, when the new CA certificate is deployed, and you're ready to remove the old CA certificate from clients, another cross-certificate is generated. In that case, the new CA certificate certifies the previous CA certificate. This direction is shown in the file name parentheses: (1-0).
-  - By using these cross-certificates, you maintain only one root CA certificate with the ability to build correct chains for any certificate issued by this CA before and after CA certification renewal with new key pair.
+- When you use the new root CA certificate, but it isn't deployed to all clients yet, the CA generates two cross-certificates. The first cross-certificate is signed by the previous CA signing key and certifies the new CA certificate. The CCE builds certification paths for previously and newly issued certificates, so both paths chain up to only the previous CA certificate, because the new CA certificate isn't deployed yet. To chain both paths to a new CA certificate, a second cross-certificate is generated. The new CA certificate certifies the previous CA certificate in the reverse direction. By using cross-certificates, you maintain only one root CA certificate with the ability to build correct chains for any certificate issued by this CA.
 
-Once you have deployed the new CA certificate to clients, it must be published to the Trusted Root CAs container on the client computer, and only then you may remove the previous CA certificate from clients. Although, it's not recommended to remove old CA certificates, because they can be used during file digital signature validation.
+Once you have deployed the new CA certificate to clients, it must be published to the Trusted Root CAs container on the client computer, and only then can you may remove the previous CA certificate from clients. Although, it's not recommended to remove old CA certificates, because they can be used during file digital signature validation.
 
 ## How to renew the root CA certificate
 
@@ -83,7 +83,7 @@ Start by making a full backup of your root CA, including the CA database and pri
     1. Select **Yes** to generate a new key pair.
     1. Select **No** to use the existing key pair.
     ![A screenshot of the dialog asking whether to generate a new key pair or use existing key pair.](media/generate-new-key-pair-option.png)
-1. View the Properties for the root CA, and then view the new certificate details to confirm it was created successfully.
+1. View the Properties for the root CA, and then view the new certificate details to confirm it was created successfully.  
     ![A screenshot of the properties window for a root CA.](media/root-ca-properties.png)
 
 ### Step 3: Distribute the new root CA certificate
