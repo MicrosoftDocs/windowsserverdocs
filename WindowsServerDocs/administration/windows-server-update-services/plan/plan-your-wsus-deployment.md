@@ -6,7 +6,7 @@ ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 ms.author: roharwoo
 author: robinharwood
 manager: mtillman
-ms.date: 07/12/2023
+ms.date: 03/06/2025
 ---
 # Plan your WSUS deployment
 
@@ -285,6 +285,9 @@ We recommend that you use SQL Server with WSUS in the following cases:
 When updates are synchronized to your WSUS server, the metadata and update files are stored in two separate locations. Metadata is stored in the WSUS database. Update files can be stored on your WSUS server or on Microsoft Update servers, depending on how you've configured your synchronization options. If you choose to store update files on your WSUS server, client computers will download approved updates from the local WSUS server. If not, client computers will download approved updates directly from Microsoft Update. The option that makes the most sense for your organization will depend on network bandwidth to the Internet, network bandwidth on the intranet, and local storage availability.
 
 You can select a different update storage solution for each WSUS server that you deploy.
+
+> [!IMPORTANT]
+> Choose a secure folder that only Administrators can access for the update storage.
 
 #### Local WSUS server storage
 
