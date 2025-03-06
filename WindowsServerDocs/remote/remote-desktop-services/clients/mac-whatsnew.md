@@ -11,4 +11,4 @@ ms.date: 7/3/2024
 
 In this article you'll learn about the latest updates for the Remote Desktop client for macOS. To learn more about using the Remote Desktop client for macOS with Remote Desktop Services, see [Get started with the macOS client](remote-desktop-mac.md).
 
-[!INCLUDE [include-whats-new-client-macos](~/../_azuredocs/articles/virtual-desktop/includes/include-whats-new-client-macos.md)]
+[!INCLUDE [include-whats-new-client-macos](~/../articles/includes/include-whats-new-client-macos.md)]
