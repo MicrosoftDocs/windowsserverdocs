@@ -286,14 +286,14 @@ When updates are synchronized to your WSUS server, the metadata and update files
 
 You can select a different update storage solution for each WSUS server that you deploy.
 
-> [!IMPORTANT]
-> Choose a secure folder that only administrators can access for the update storage.
-
 #### Local WSUS server storage
 
 Local storage of update files is the default option when you install and configure WSUS. This option can save bandwidth on the corporate connection to the Internet because client computers download updates directly from the local WSUS server.
 
 This option requires that the server has sufficient disk space to store all needed updates. At a minimum, WSUS requires 20 GB to store updates locally; however, we recommend 30 GB based on tested variables.
+
+> [!IMPORTANT]
+> Choose a secure folder that only administrators can access for the update storage.
 
 #### Remote storage on Microsoft Update servers
 
