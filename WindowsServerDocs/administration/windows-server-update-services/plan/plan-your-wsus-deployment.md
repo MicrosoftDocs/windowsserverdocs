@@ -287,7 +287,7 @@ When updates are synchronized to your WSUS server, the metadata and update files
 You can select a different update storage solution for each WSUS server that you deploy.
 
 > [!IMPORTANT]
-> Choose a secure folder that only Administrators can access for the update storage.
+> Choose a secure folder that only administrators can access for the update storage.
 
 #### Local WSUS server storage
 
