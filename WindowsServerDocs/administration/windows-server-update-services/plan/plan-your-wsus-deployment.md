@@ -293,7 +293,7 @@ Local storage of update files is the default option when you install and configu
 This option requires that the server has sufficient disk space to store all needed updates. At a minimum, WSUS requires 20 GB to store updates locally; however, we recommend 30 GB based on tested variables.
 
 > [!IMPORTANT]
-> Choose a secure folder that only administrators can access for the update storage.
+> Choose a secure folder that only administrators can access for local storage of updates.
 
 #### Remote storage on Microsoft Update servers
 
