@@ -139,6 +139,8 @@ The following sections provide guidance on operational tasks you may need to per
 
 You can deploy additional AD FS servers to support the AD RMS deployment. You may choose to perform this action in the event of increased traffic to the AD RMS servers, or additional applications, or if you need to retire one of the servers currently being used for AD FS.
 
+Review the [Prerequisites for Microsoft Entra Connect](/entra/identity/hybrid/connect/how-to-connect-install-prerequisites) before proceeding.
+
 **To add the 2016 AD FS server to the farm**
 
 1.  From the Microsoft Entra Connect server, double click the **Microsoft Entra Connect** icon to launch the Microsoft Entra Connect wizard.
@@ -147,7 +149,7 @@ You can deploy additional AD FS servers to support the AD RMS deployment. You ma
 
 3.  In the Additional Tasks page, click **Deploy an additional Federation Server** and then click **Next**.
 
-4.  In the Connect to Microsoft Entra ID page, enter the user name and password of an account with Global Administrative permissions and then click **Next**.
+4.  In the Connect to Microsoft Entra ID page, enter the user name and password of an account with appropriate permissions as defined in [Microsoft Entra Connect installation prerequisites](/entra/identity/hybrid/connect/how-to-connect-install-prerequisites#installation-prerequisites) and then click **Next**.
 
 5.  In the Domain Administrator credentials page, enter the user name and password of an account with Domain Admin permissions and click **Next**.
 
