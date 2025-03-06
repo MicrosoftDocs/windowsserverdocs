@@ -290,7 +290,7 @@ You can select a different update storage solution for each WSUS server that you
 
 Local storage of update files is the default option when you install and configure WSUS. This option can save bandwidth on the corporate connection to the Internet because client computers download updates directly from the local WSUS server.
 
-This option requires that the server has sufficient disk space to store all needed updates. At a minimum, WSUS requires 20 GB to store updates locally; however, we recommend at least 40 GB. For more information about projecting the amount of disk space required, see [system requirements](1#system-requirements).
+This option requires that the server has sufficient disk space to store all needed updates. At a minimum, WSUS requires 20 GB to store updates locally; however, we recommend at least 40 GB. For more information about projecting the amount of disk space required, see [system requirements](1#system-requirements) and [UUP considerations](#uup-considerations).
 
 > [!IMPORTANT]
 > Choose a secure folder that only administrators can access for local storage of updates.
