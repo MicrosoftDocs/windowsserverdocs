@@ -249,7 +249,7 @@ If you install multiple WSUS servers, you must maintain a separate database for 
 SQL Server, SQL Server Express, and Windows Internal Database provide the same performance characteristics for a single-server configuration, where the database and the WSUS service are located on the same computer. A single-server configuration can support several thousand WSUS client computers.
 
 > [!NOTE]
-> Do not attempt to manage WSUS by accessing the database directly. directly manipulating the database can cause database corruption. The corruption might not be immediately obvious, but it can prevent upgrades to the next version of the product. You can manage WSUS by using the WSUS console or WSUS application programming interfaces (APIs).
+> Do not attempt to manage WSUS by accessing the database directly. Directly manipulating the database can cause database corruption. The corruption might not be immediately obvious, but it can prevent upgrades to the next version of the product. You can manage WSUS by using the WSUS console or WSUS application programming interfaces (APIs).
 
 #### WSUS with Windows Internal Database
 
