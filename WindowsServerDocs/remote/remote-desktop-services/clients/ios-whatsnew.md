@@ -11,4 +11,4 @@ ms.date: 7/3/2024
 
 In this article you'll learn about the latest updates for the Remote Desktop client for iOS and iPadOS. To learn more about using the Remote Desktop client for iOS and iPadOS with Remote Desktop Services, see [Get started with the iOS client](remote-desktop-ios.md).
 
-[!INCLUDE [include-whats-new-client-ios-ipados](../articles/includes/include-whats-new-client-ios-ipados.md)]
+[!INCLUDE [include-whats-new-client-ios-ipados](~/../articles/includes/include-whats-new-client-ios-ipados.md)]
