@@ -28,7 +28,7 @@ The first step in the deployment of Windows Server Update Services (WSUS) is to 
 
 ### System Requirements
 
-Hardware and database software requirements are driven by the number of client computers being updated in your organization.  Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
+Hardware and database software requirements are driven by the number of client computers being updated in your organization. Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
 
 - Server hardware requirements to enable WSUS role are bound to hardware requirements. The minimum hardware requirements for WSUS are:
 
@@ -256,7 +256,7 @@ SQL Server, SQL Server Express, and Windows Internal Database provide the same p
 By default, the installation wizard creates and uses a Windows Internal Database that is named SUSDB.mdf. This database is located in the %windir%\wid\data\ folder, where %windir% is the local drive on which the WSUS server software is installed.
 
 > [!NOTE]
-> Windows Internal Database (WID) was introduced in Windows Server 2008 .
+> Windows Internal Database (WID) was introduced in Windows Server 2008.
 
 WSUS supports Windows authentication only for the database. You can't use SQL Server authentication with WSUS. If you use Windows Internal Database for the WSUS database, WSUS Setup creates an instance of SQL Server that is named server\Microsoft##WID, where server is the name of the computer. With either database option, WSUS Setup creates a database named SUSDB. The name of this database isn't configurable.
 
@@ -293,7 +293,7 @@ You can select a different update storage solution for each WSUS server that you
 
 Local storage of update files is the default option when you install and configure WSUS. This option can save bandwidth on the corporate connection to the Internet because client computers download updates directly from the local WSUS server.
 
-This option requires that the server has sufficient disk space to store all needed updates. at a minimum, WSUS requires 20 GB to store updates locally; however, we recommend 30 GB based on tested variables.
+This option requires that the server has sufficient disk space to store all needed updates. At a minimum, WSUS requires 20 GB to store updates locally; however, we recommend 30 GB based on tested variables.
 
 #### Remote storage on Microsoft Update servers
 
@@ -405,7 +405,7 @@ Install actions override uninstall actions. Required installs override optional 
 
 #### Priority of Deadlines
 
-Actions that have a deadline override those with no deadline.  Actions with earlier deadlines override those with later deadlines.
+Actions that have a deadline override those with no deadline. Actions with earlier deadlines override those with later deadlines.
 
 ## 1.6. Plan WSUS performance considerations
 
@@ -454,7 +454,7 @@ Not all updates are good candidates for distribution by using express installati
 
 When you deploy large updates (such as service packs), you can avoid saturating the network by using the following practices:
 
-1. Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, please see [Group Policies](/windows/win32/bits/group-policies).
+1. Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, see [Group Policies](/windows/win32/bits/group-policies).
 
 1. Use Internet Information Services (IIS) throttling to limit throttling to one or more web services.
 
