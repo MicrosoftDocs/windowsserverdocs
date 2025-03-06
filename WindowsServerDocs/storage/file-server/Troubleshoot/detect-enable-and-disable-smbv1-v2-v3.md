@@ -79,9 +79,7 @@ You can use the [Get-WindowsOptionalFeature](/powershell/module/dism/get-windows
 
 # [Server](#tab/server)
 
-On the following versions of Windows Server, you can use Server Manager to remove SMBv1: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019.
-
-To remove SMBv1 from these versions, take the following steps:
+SMBv1 isn't installed by default on Windows Server 2019 and later versions. On earlier versions of Windows Server, you can use Server Manager to remove SMBv1:
 
 1. On the server that you want to remove SMBv1 from, open Server Manager.
 
@@ -119,7 +117,7 @@ To disable SMBv1 on these operating systems, take the following steps:
 
 ## Use the command line or Registry Editor to manage SMB protocols
 
-Starting with the Windows 10 Fall Creators Update and Windows Server 2019, SMBv1 is no longer installed by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](smbv1-not-installed-by-default-in-windows.md).
+Starting with the Windows 10 Fall Creators Update and Windows Server 2019, SMBv1 is no longer installed by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709, and later versions](smbv1-not-installed-by-default-in-windows.md).
 
 When you enable or disable SMBv2 in Windows 8 or Windows Server 2012, SMBv3 is also enabled or disabled. This behavior occurs because these protocols share the same stack.
 
@@ -262,7 +260,7 @@ Configure an entry that has the following properties:
 
 # [Client](#tab/client)
 
-Here is how to detect the status, enable, and disable SMB protocols on an SMB client that runs Windows client and Windows Server.
+Here's how to detect the status, enable, and disable SMB protocols on an SMB client that runs Windows client and Windows Server.
 
 ### SMBv1 on an SMB client
 
@@ -422,7 +420,7 @@ To configure these entries by using Group Policy, take the following steps:
    > [!NOTE]
    > When you use Group Policy Management Console, you don't have to use quotation marks or commas. Just type each entry on individual lines.
 
-1. Restart the targeted systems to finish disabling SMBv1.
+1. To finish disabling SMBv1, restart the targeted systems.
 
 ---
 
