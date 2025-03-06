@@ -86,7 +86,7 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_includes",
+      "path_to_root": "windowsserverdocs-pr",
       "url": "https://github.com/MicrosoftDocs/remote-desktop-client-archive-pr/",
       "branch": "main",
       "branch_mapping": {}
