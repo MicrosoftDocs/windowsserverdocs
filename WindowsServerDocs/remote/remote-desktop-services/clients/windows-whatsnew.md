@@ -14,4 +14,4 @@ In this article you'll learn about the latest updates for the Remote Desktop app
 > [!IMPORTANT]
 > We're no longer updating the Remote Desktop app for Windows with new features.
 
-[!INCLUDE [include-whats-new-client-microsoft-store](~/../articles/includes/include-whats-new-client-microsoft-store.md)]
+[!INCLUDE [include-whats-new-client-microsoft-store](~/../windowsserverdocs-pr/articles/includes/include-whats-new-client-microsoft-store.md)]
