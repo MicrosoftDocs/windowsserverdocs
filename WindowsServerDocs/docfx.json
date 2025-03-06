@@ -84,6 +84,14 @@
             "remote/remote-desktop-services/**/*.yml": "remote-desktop-services",
             "remote/**/*.md": "remote",
             "remote/**/*.yml": "remote",
+            "dependent_repositories": [
+    {
+      "path_to_root": "_includes",
+      "url": "https://github.com/MicrosoftDocs/remote-desktop-client-archive-pr/",
+      "branch": "main",
+      "branch_mapping": {}
+    }
+  ]
             "identity/ad-fs/**/*.md": "ad-fs",
             "identity/ad-fs/**/*.yml": "ad-fs",
             "EssentialsDocs/**/*.md": "essentials",
