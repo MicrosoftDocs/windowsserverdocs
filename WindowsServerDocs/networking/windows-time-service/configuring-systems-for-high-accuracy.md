@@ -161,4 +161,4 @@ net stop w32time && net start w32time
 | Setting | 2 |
 
 > [!NOTE]
-> To learn more about the W32Time registry settings, see [Windows Time registry reference](Windows-Time-Service-Tools-and-Settings.md#windows-time-registry-reference)
+> To learn more about the W32Time registry settings, see [W32Time registry reference](Windows-Time-Service-Tools-and-Settings.md#w32time-registry-reference)
