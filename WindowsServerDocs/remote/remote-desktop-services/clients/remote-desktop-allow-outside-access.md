@@ -33,7 +33,7 @@ After you map the port, you'll be able to connect to your host PC from outside t
 
 The router's IP address can change - your internet service provider (ISP) can assign you a new IP at any time. To avoid running into this issue, consider using Dynamic DNS. Dynamic DNS (DDNS) lets you connect to the PC using an easy to remember domain name, instead of the IP address. Your router automatically updates the DDNS service with your new IP address, should it change.
 
-Most routers allow you ton define which source IP or source network can use port mapping. So, if you know you're only going to connect from work, you can add the IP address for your work network - that lets you avoid opening the port to the entire public internet. If the host you're using to connect uses dynamic IP address, set the source restriction to allow access from the whole range of that particular ISP.
+Most routers allow you to define which source IP or source network can use port mapping. So, if you know you're only going to connect from work, you can add the IP address for your work network - that lets you avoid opening the port to the entire public internet. If the host you're using to connect uses dynamic IP address, set the source restriction to allow access from the whole range of that particular ISP.
 
 You might also consider setting up a static IP address on your PC so the internal IP address doesn't change. If you do that, then the router's port forwarding always point to the correct IP address.
 
