@@ -16,11 +16,11 @@ In this how-to guide, you'll learn how to grant VPN users access your resources 
 Before you start configuring Conditional Access for your VPN, you must have completed the following prerequisites:
 
 - [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
-  - Administrators who interact with Conditional Access must have one of the following role assignments depending on the tasks they're performing. To follow the [Zero Trust principle of least privilege](/security/zero-trust/), consider using [Privileged Identity Management (PIM)](~/id-governance/privileged-identity-management/pim-configure.md) to just-in-time activate privileged role assignments.
+  - Administrators who interact with Conditional Access must have one of the following role assignments depending on the tasks they're performing. To follow the [Zero Trust principle of least privilege](/security/zero-trust/), consider using [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to just-in-time activate privileged role assignments.
     - Read Conditional Access policies and configurations
-      - [Security Reader](~/identity/role-based-access-control/permissions-reference.md#security-reader)
+      - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
     - Create or modify Conditional Access policies
-      - [Conditional Access Administrator](~/identity/role-based-access-control/permissions-reference.md#conditional-access-administrator)
+      - [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator)
 - [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access)
 
 - You've completed [Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md) or you already have setup the Always On VPN infrastructure in your environment.
