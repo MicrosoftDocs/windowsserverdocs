@@ -42,13 +42,22 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 1. Check whether VSM is already running. It might be enabled if you previously configured other features that (like Hotpatching) depend on VSM. Common examples of such features include [Credential guard](/windows/security/identity-protection/credential-guard) or [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity), also known as Hypervisor-protected code integrity (HVCI).
 
-   Run the following command in PowerShell:
+   Run one of the following commands.
 
+   # [PowerShell](#tab/powershell)
    ```powershell
    Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
    ```
+   Expected output: `2`.
+      
+   # [Command Prompt](#tab/cmd)
+   ```cmd
+   wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value
+   ```
+   Expected output: `VirtualizationBasedSecurityStatus=2`.
+   ---
 
-   If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
+   If the result matches the expected output, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
 
    If the output isn't `2`, continue with the next steps.
 
@@ -68,11 +77,20 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 1. After reboot, run the following command again and verify that the output is `2` to make sure VSM is now running.
 
+   # [PowerShell](#tab/powershell)
    ```powershell
    Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
    ```
+   Expected output: `2`.
+      
+   # [Command Prompt](#tab/cmd)
+   ```cmd
+   wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value
+   ```
+   Expected output: `VirtualizationBasedSecurityStatus=2`.
+   ---
 
-   If the output isn't `2`, the VSM on your machine needs troubleshooting. The most likely reason is that the physical or virtual [hardware requirements](#prerequisites) aren't met. Refer to documentation from the vendor of your hardware or virtualization platform. For example, here's documentation for VMware vSphere: [Activate Virtualization-based Security on an Existing Virtual Machine](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security-7-0/securing-windows-guest-operating-systems-with-virtual-based-security/enable-virtualization-based-security-on-an-existing-virtual-machine.html).
+   If the result matches the expected output, the VSM on your machine needs troubleshooting. The most likely reason is that the physical or virtual [hardware requirements](#prerequisites) aren't met. Refer to documentation from the vendor of your hardware or virtualization platform. For example, here's documentation for VMware vSphere: [Activate Virtualization-based Security on an Existing Virtual Machine](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security-7-0/securing-windows-guest-operating-systems-with-virtual-based-security/enable-virtualization-based-security-on-an-existing-virtual-machine.html).
 
 1. Once you successfully enabled VSM and made sure it's running, proceed to the next section.
 
@@ -101,4 +119,4 @@ Now that Hotpatch is enabled, here are some articles that might help you with up
 - [Hotpatch for Windows Server](hotpatch.md)
 - [Patch a Server Core installation](../administration/server-core/server-core-servicing.md)
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
-- [Azure Update Manager](/azure/automation/update-management/overview)
+- [Azure Update Manager](/azure/automation/update-management/overview)VirtualizationBasedSecurityStatus=2
