@@ -53,6 +53,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
    ```cmd
    wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value
    ```
+   
    Expected output: `VirtualizationBasedSecurityStatus=2`.   
    ---
 
@@ -80,6 +81,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
    ```powershell
    Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
    ```
+
    Expected output: `2`.      
    # [Command Prompt](#tab/cmd)
    ```cmd
