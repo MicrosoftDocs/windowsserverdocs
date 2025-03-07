@@ -5,7 +5,7 @@ ms.topic: article
 ms.author: alalve
 author: xelu86
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
-ms.date: 03/06/2025
+ms.date: 03/07/2025
 # customer intent: As an administrator, I want to find out more about Windows Time service settings so that I can adjust their configuration when I need to.
 ---
 
