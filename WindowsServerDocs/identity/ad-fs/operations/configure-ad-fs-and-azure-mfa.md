@@ -79,7 +79,7 @@ The following prerequisites are required when you use Microsoft Entra multifacto
 - Your on-premises environment must be [federated with Microsoft Entra ID](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs).
 - [Microsoft Azure Active Directory module for Windows PowerShell](/powershell/module/azuread/).
 - Enterprise administrator credentials to configure the AD FS farm for Microsoft Entra multifactor authentication.
-- You'll need either an account with the global administrator role or an account that has the [Applicaation Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role on your instance of Microsoft Entra ID to configure it by using Azure AD PowerShell.
+- You'll need either an account that has the [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role on your instance of Microsoft Entra ID to configure it by using PowerShell.
 
 [!INCLUDE [Azure AD PowerShell deprecation note](~/../WindowsServerDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
