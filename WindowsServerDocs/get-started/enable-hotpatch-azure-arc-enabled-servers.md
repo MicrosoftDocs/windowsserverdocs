@@ -54,6 +54,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
    wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value
    ```
    Expected output: `VirtualizationBasedSecurityStatus=2`.
+   
    ---
 
    If the result matches the expected output, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
@@ -86,6 +87,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
    wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value
    ```
    Expected output: `VirtualizationBasedSecurityStatus=2`.
+   
    ---
       
    If the result matches the expected output, the VSM on your machine needs troubleshooting. The most likely reason is that the physical or virtual [hardware requirements](#prerequisites) aren't met. Refer to documentation from the vendor of your hardware or virtualization platform. For example, here's documentation for VMware vSphere: [Activate Virtualization-based Security on an Existing Virtual Machine](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security-7-0/securing-windows-guest-operating-systems-with-virtual-based-security/enable-virtualization-based-security-on-an-existing-virtual-machine.html).
