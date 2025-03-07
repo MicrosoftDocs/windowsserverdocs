@@ -9,7 +9,7 @@ ms.topic: overview
 
 # What is Windows LAPS?
 
-Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Restore Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
+Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Restore Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
 ## Windows LAPS supported platforms
 
@@ -23,11 +23,11 @@ Windows LAPS is available on the following OS platforms:
 - [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230) (and later)
 - [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229) (and later)
 
-All supported editions of the above platforms have been updated with Windows LAPS, including LTSC editions. The introduction of the Windows LAPS feature doesn't modify in any way whatsoever the standard Microsoft product lifecycle policies.
+All supported editions of these platforms have been updated with Windows LAPS, including long-term servicing channel (LTSC) editions. The introduction of the Windows LAPS feature doesn't modify the standard Microsoft product lifecycle policies.
 
 ## Windows LAPS and Microsoft Entra ID
 
-Windows LAPS with Microsoft Entra ID and Microsoft Intune support is now in General Availability as of October 23 2023. For more information, see [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999), and [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
+Windows LAPS with Microsoft Entra ID and Microsoft Intune support is generally available as of October 23 2023. For more information, see [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999), and [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
 
 ## Benefits of using Windows LAPS
 
@@ -41,7 +41,7 @@ Use Windows LAPS to regularly rotate and manage local administrator account pass
 
 ## Informational videos
 
-The following videos offer an informative way to learn more about the Windows LAPS feature.
+The following videos offer an informative way to see more about the Windows LAPS feature.
 
 Windows Technical Takeoff presentation (November 2022):
 
@@ -100,11 +100,12 @@ Azure-based monitoring and reporting solutions are available when you back up pa
 ## Deprecation of legacy Microsoft LAPS product
 
 > [!IMPORTANT]
-> NOTE: The [legacy Microsoft LAPS product](https://www.microsoft.com/download/details.aspx?id=46899) is deprecated as of Windows 11 23 H2 and later. Installation of the legacy Microsoft LAPS MSI package is blocked on newer OS versions, and Microsoft will no longer consider code changes for the legacy Microsoft LAPS product.
+> NOTE: The [legacy Microsoft LAPS product](https://www.microsoft.com/download/details.aspx?id=46899) is deprecated as of Windows 11 23 H2 and later. Installation of the legacy Microsoft LAPS MSI package is blocked on newer OS versions, and Microsoft no longer considers code changes for the legacy Microsoft LAPS product.
 > 
-> Please use Windows LAPS, available on Windows Server 2019 and above, and on supported Windows 10 and Windows 11 clients, for managing local administrator account passwords.
+> Use Windows LAPS, available on Windows Server 2019 and later, and on supported Windows 10 and Windows 11 clients, for managing local administrator account passwords.
 > 
-> Microsoft will continue to support the legacy Microsoft LAPS product on older versions of Windows (prior to Windows 11 23 H2) on which it was previously supported. That support will end upon the normal End of Support for those OSes.
+> Microsoft will continue to support the legacy Microsoft LAPS product on older versions of Windows (prior to Windows 11 23 H2) on which it was previously supported. That support will end upon the normal end of support for those OS versions.
+
 ## Windows LAPS vs. legacy Microsoft LAPS
 
 Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're familiar with legacy Microsoft LAPS, many Windows LAPS features are familiar. A key difference is that Windows LAPS is an entirely separate implementation that's native to Windows. Windows LAPS also adds many features that aren't available in legacy Microsoft LAPS. You can use Windows LAPS to back up passwords to Azure Active Directory, encrypt passwords in Windows Server Active Directory, and store your password history.
