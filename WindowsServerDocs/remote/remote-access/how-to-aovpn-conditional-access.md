@@ -98,7 +98,7 @@ Create a Conditional Access policy that is assigned to VPN users group and scope
 
 - **Users**: VPN Users
 - **Cloud App**: VPN Server
-- **Grant (access control)**: 'Require multi-factor authentication'. Other controls can be used if desired.
+- **Grant (access control)**: 'Require multifactor authentication'. Other controls can be used if desired.
 
 **Procedure:**
 This step covers creation of the most basic Conditional Access policy.  If desired, additional Conditions and Controls can be used.
