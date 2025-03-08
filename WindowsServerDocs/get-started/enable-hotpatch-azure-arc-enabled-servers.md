@@ -59,7 +59,7 @@ Alternatively, you can check VSM status manually before trying to enable hotpati
 
    If the output isn't `2`, continue with the next steps.
 
-1. Run one of the following commands in elevated PowerShell or command prompt to enable VSM.
+1. Run one of the following commands to enable VSM.
 
    # [PowerShell](#tab/powershell)
    ```powershell
@@ -69,7 +69,18 @@ Alternatively, you can check VSM status manually before trying to enable hotpati
    ```cmd
    reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
    ```
-   ---
+   ---   
+   > [!TIP]
+   > Alternatively, you can use Group policy or another centralized management tool to enable one or more of the following features.
+   >   
+   > - [Credential guard](/windows/security/identity-protection/credential-guard)
+   > - [Credential Guard protected machine accounts](/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts)
+   > - [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)
+   > - [System Guard Secure Launch and SMM protection](/windows/security/hardware-security/system-guard-secure-launch-and-smm-protection)
+   > - [Kernel Mode Hardware-enforced Stack Protection](/windows-server/security/kernel-mode-hardware-stack-protection)
+   > - [Secured-core server](/windows-server/security/configure-secured-core-server)
+   > 
+   > Configuring any of these features will also enable VSM behind the scenes.
 
 1. Restart your server.
 
