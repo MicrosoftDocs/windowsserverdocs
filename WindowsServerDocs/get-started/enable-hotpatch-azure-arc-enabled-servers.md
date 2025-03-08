@@ -38,11 +38,13 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 - The machine should be connected to Azure Arc (Arc-enabled). To learn more about onboarding your machine to Azure Arc, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json).
 
-## Enable VSM
+## Check status of VSM and enable it if necessary
 
-1. Check whether VSM is already running. It might be enabled if you previously configured other features that (like Hotpatching) depend on VSM. Common examples of such features include [Credential guard](/windows/security/identity-protection/credential-guard) or [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity), also known as Hypervisor-protected code integrity (HVCI).
+When you [enable hotpatching using Azure Portal](#enable-hotpatch-preview-on-windows-server-2025), it checks whether VSM is running on the machine. If VMS is not running, enabling hotpatch will fail, and you will have to enable VSM as described below.
 
-   Run either of the following commands and examine the output.
+Alternatively, you can check VSM status manually before trying to enable hotpating. VSM might be already enabled if you previously configured other features that (like Hotpatching) depend on VSM. Common examples of such features include [Credential guard](/windows/security/identity-protection/credential-guard) or [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity), also known as Hypervisor-protected code integrity (HVCI).
+
+1. Run either of the following commands and examine the output.
 
    # [PowerShell](#tab/powershell)
    ```powershell
