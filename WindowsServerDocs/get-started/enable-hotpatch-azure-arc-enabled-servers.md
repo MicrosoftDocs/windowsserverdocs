@@ -117,4 +117,4 @@ Now that Hotpatch is enabled, here are some articles that might help you with up
 - [Hotpatch for Windows Server](hotpatch.md)
 - [Patch a Server Core installation](../administration/server-core/server-core-servicing.md)
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
-- [Azure Update Manager](/azure/automation/update-management/overview)VirtualizationBasedSecurityStatus=2
+- [Azure Update Manager](/azure/automation/update-management/overview)
