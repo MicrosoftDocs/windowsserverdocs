@@ -36,11 +36,11 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 - Your server and infrastructure should satisfy the [Connected Machine agent prerequisites](/azure/azure-arc/servers/prerequisites) for enabling Azure Arc on a server.
 
-- The machine should be connected to Azure Arc (Arc-enabled). To learn more about onboarding your machine to Azure Arc, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json).
+- The machine should be connected to Azure Arc (Arc-enabled). To learn more about onboarding your machine to Azure Arc, see [Azure Connected Machine agent deployment options](/azure/azure-arc/servers/deployment-options?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json).
 
 ## Check status of VSM and enable it if necessary
 
-When you [enable hotpatching using Azure Portal](#enable-hotpatch-preview-on-windows-server-2025), it checks whether VSM is running on the machine. If VMS is not running, enabling hotpatch will fail, and you will have to enable VSM as described below.
+When you [enable hotpatching using Azure Portal](#enable-hotpatch-preview-on-windows-server-2025), it checks whether VSM is running on the machine. If VSM is not running, enabling hotpatch will fail, and you will have to enable VSM as described below.
 
 Alternatively, you can check VSM status manually before trying to enable hotpating. VSM might be already enabled if you previously configured other features that (like Hotpatching) depend on VSM. Common examples of such features include [Credential guard](/windows/security/identity-protection/credential-guard) or [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity), also known as Hypervisor-protected code integrity (HVCI).
 
