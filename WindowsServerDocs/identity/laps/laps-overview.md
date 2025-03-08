@@ -108,46 +108,46 @@ Azure-based monitoring and reporting solutions are available when you back up pa
 
 ## Windows LAPS vs. legacy Microsoft LAPS
 
-Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're familiar with legacy Microsoft LAPS, many Windows LAPS features are familiar. A key difference is that Windows LAPS is an entirely separate implementation that's native to Windows. Windows LAPS also adds many features that aren't available in legacy Microsoft LAPS. You can use Windows LAPS to back up passwords to Azure Active Directory, encrypt passwords in Windows Server Active Directory, and store your password history.
+Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're familiar with legacy Microsoft LAPS, many Windows LAPS features are familiar. A key difference is that Windows LAPS is an entirely separate implementation that's native to Windows. Windows LAPS also adds many features that aren't available in legacy Microsoft LAPS. You can use Windows LAPS to back up passwords to Microsoft Entra ID, encrypt passwords in Windows Server Active Directory, and store your password history.
 
 > [!IMPORTANT]
 > Windows LAPS doesn't require you to install legacy Microsoft LAPS. You can fully deploy and use all Windows LAPS features without installing or referring to legacy Microsoft LAPS. But to help migrate an existing legacy Microsoft LAPS deployment, Windows LAPS offers [legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
 
 > [!IMPORTANT]
-> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions - see [Deprecation of legacy Microsoft LAPS product](laps-overview.md#deprecation-of-legacy-microsoft-laps-product).
+> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions. For more information, see [Deprecation of legacy Microsoft LAPS product](laps-overview.md#deprecation-of-legacy-microsoft-laps-product).
 
 ## Support statement
 
-Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=46899). Windows LAPS shipped as part of Windows Updates released on April 11, 2023 for the platforms listed in [Windows LAPS and Microsoft Entra ID](laps-overview.md#windows-laps-and-microsoft-entra-id).
+Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=46899). Windows LAPS shipped as part of Windows Updates released on April 11, 2023, for the platforms listed in [Windows LAPS and Microsoft Entra ID](laps-overview.md#windows-laps-and-microsoft-entra-id).
 
 Microsoft and its support delivery organization offer assisted support for both Microsoft LAPS and Windows LAPS including interoperability between the two products.
 
 > [!IMPORTANT]
-> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions - see [Deprecation of legacy Microsoft LAPS product](laps-overview.md#deprecation-of-legacy-microsoft-laps-product).
+> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions. For more information, see [Deprecation of legacy Microsoft LAPS product](laps-overview.md#deprecation-of-legacy-microsoft-laps-product).
 
 Microsoft strongly recommends that customers begin planning now to migrate their Windows LAPS-capable systems from using legacy Microsoft LAPS over to the new Windows LAPS feature. Windows LAPS offers many new security features and improved product servicing.
 
-Questions about limitations and\or interoperability concerns between 3rd-party local account password management tools and Windows LAPS should be directed to the 3rd-party application developer not Microsoft.
+Questions about limitations and\or interoperability concerns between third-party local account password management tools and Windows LAPS should be directed to the third-party application developer, not Microsoft.
 
 ## Licensing requirements
 
 The Windows LAPS feature itself is available for free in all supported Windows platforms.
 
-You can back up passwords to your on-premises Active Directory with no other licensing requirements.
+You can back up passwords to Windows Server Active Directory with no other licensing requirements.
 
 You can back up passwords to Microsoft Entra ID with a Microsoft Entra ID Free or higher license.
 
-Other Azure- or Intune-related features can have other licensing requirements.
+Other Azure-related or Intune-related features can have other licensing requirements.
 
-## Submitting feedback
+## Submit feedback
 
-Want to send us feedback? Feel free to submit doc-specific questions via the Feedback links at the bottom of these doc pages.
+Want to send us feedback? Feel free to submit document-specific questions via the Feedback links at the bottom of this page.
 
 You can also submit feedback and other requests via the [Windows LAPS feedback](https://aka.ms/WindowsLAPSFeedback) Tech Community page.
 
-If your feedback is specific to the Microsoft Entra ID- or Intune-related LAPS functionality, you can submit feedback via the [Microsoft Entra feedback forum](https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789).
+If your feedback is specific to the Microsoft Entra ID-related or Intune-related LAPS functionality, you can submit feedback via the [Microsoft Entra feedback forum](https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789).
 
-If you aren't sure where your feedback should go, submit it using any of the above options.
+If you aren't sure where your feedback should go, submit it by using any of these options.
 
 ## See also
 
