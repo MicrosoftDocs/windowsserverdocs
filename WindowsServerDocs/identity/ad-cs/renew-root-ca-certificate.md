@@ -14,7 +14,7 @@ A root CA is the top of the public key infrastructure (PKI) and issues its own s
 
 ## Prerequisites
 
-Before you begin, ensure you complete the following prerequisites:
+Before you begin, confirm you meet the following prerequisites:
 
 - Administrative access to the Root CA server.
 - Backup of the CA database and private key.
@@ -22,7 +22,7 @@ Before you begin, ensure you complete the following prerequisites:
 
 ## Overview of root CA certificate renewal
 
-When the time comes to renew your root CA certificate, you'll use either your existing public and private key pair, or generate a new public and private key pair. Renewing with an existing pair is the easiest and most straightforward approach. However, there might be a requirement to renew a CA certificate with a new key pair if:
+When the time comes to renew your root CA certificate, you use either your existing public and private key pair, or generate a new public and private key pair. Renewing with an existing pair is the easiest and most straightforward approach. However, there might be a requirement to renew a CA certificate with a new key pair if:
 
 - The CA signing (existing CA key pair) is compromised.
 - You have a program that requires a new signing key to be used with a new CA certificate.
