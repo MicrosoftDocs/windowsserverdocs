@@ -175,6 +175,6 @@ Dism /Online /Remove-Package /PackageName:<package_name>
 
 ---
 
-## Patch the server with Azure Update Manager
+## Update with Azure Update Manager
 
-The latest option patching Windows Server (Core) installation option is to leverage [Azure Update Manager](https://learn.microsoft.com/azure/update-manager/overview?tabs=azure-arc-vms) from the Azure Portal.
+You can also update your Windows Server Core installation using [Azure Update Manager](/azure/update-manager/overview?tabs=azure-arc-vms) from the Azure Portal.
