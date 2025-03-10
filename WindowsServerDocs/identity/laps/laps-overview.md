@@ -1,16 +1,16 @@
 ---
 title: Windows LAPS overview
-description: Get an overview of Windows local administrator password solution (Windows LAPS), including key scenarios and setup and management options.
+description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS), including key scenarios and setup and management options.
 author: jay98014
 ms.author: justinha
 ms.date: 03/10/2025
 ms.topic: overview
-# customer intent: As an administrator, I want to become familiar with the Windows local administrator password solution (Windows LAPS) feature so that I can use it to manage and back up administrator passwords.
+# customer intent: As an administrator, I want to become familiar with the Windows Local Administrator Password Solution (Windows LAPS) feature so that I can use it to manage and back up administrator passwords.
 ---
 
 # What is Windows LAPS?
 
-Windows local administrator password solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the directory services restore mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
+Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Restore Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
 ## Windows LAPS supported platforms
 
@@ -80,7 +80,7 @@ Windows LAPS doesn't support Microsoft Entra workplace-joined clients.
 
 ## Set Windows LAPS policy
 
-To set up and manage policies for your Windows LAPS deployment, you have multiple options:
+To set up and manage policy for your Windows LAPS deployment, you have multiple options:
 
 - [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp)
 - [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy)
@@ -96,7 +96,7 @@ Options for Windows include:
 - A dedicated event log channel.
 - A Windows PowerShell module that's specific to Windows LAPS.
 
-Azure-based monitoring and reporting solutions are available when you back up passwords to Microsoft Entra ID.
+Entra-based monitoring and reporting solutions are available when you back up passwords to Microsoft Entra ID.
 
 ## Deprecation of the legacy Microsoft LAPS product
 
@@ -138,7 +138,7 @@ You can back up passwords to Windows Server Active Directory with no other licen
 
 You can back up passwords to Microsoft Entra ID with a Microsoft Entra ID Free or higher license.
 
-Other Azure-related or Intune-related features can have other licensing requirements.
+Other Entra-related or Intune-related features can have other licensing requirements.
 
 ## Submit feedback
 
