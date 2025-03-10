@@ -3,7 +3,7 @@ title: Time accuracy improvements for Windows Server 2016
 description: Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.
 author: dahavey
 ms.author: roharwoo
-ms.date: 10/17/2018
+ms.date: 10/25/2024
 ms.topic: article
 ---
 
@@ -169,8 +169,10 @@ In some scenarios involving guest DCs, Hyper-V TimeSync samples can disrupt doma
 
 To disable the Hyper-V TimeSync service from providing samples to W32Time, set the following guest registry key:
 
- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider
- "Enabled"=dword:00000000`
+ ```
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider
+ "Enabled"=dword:00000000
+ ```
 
 #### Allow Linux to use Hyper-V host time
 
@@ -200,38 +202,37 @@ TIMESERV is another related Domain Services flag that indicates whether a machin
 If you want to configure a DC as GTIMESERV, configure it manually by using the following command. In this case, the DC uses another machine as the master clock. This machine could be an appliance or dedicated machine.
 
 
-```dockerfile
+```cmd
 w32tm /config /manualpeerlist:"master_clock1,0x8 master_clock2,0x8" /syncfromflags:manual /reliable:yes /update
 ```
 
 > [!NOTE]
-> For more information, see [Configure the Windows Time service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191(v=ws.10))
+> For more information, see [Configure the Windows Time service](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191(v=ws.10))
 
 If the DC has the GPS hardware installed, use the following steps to disable the NTP client and enable the NTP server.
 
 Start by disabling the NTP client and enable the NTP server by using these registry key changes:
 
-```powershell
+```cmd
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpClient /v Enabled /t REG_DWORD /d 0 /f
-
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpServer /v Enabled /t REG_DWORD /d 1 /f
 ```
 
 Next, restart the Windows Time service:
 
-```sql
+```cmd
 net stop w32time && net start w32time
 ```
 
 Finally, you indicate that this machine has a reliable time source:
 
-```dockerfile
+```cmd
 w32tm /config /reliable:yes /update
 ```
 
 To check that the changes were done properly, run the following commands, which affect the results shown here:
 
-```sql
+```cmd
 w32tm /query /configuration
 
 Value|Expected Setting|
@@ -263,19 +264,20 @@ Because the chain of time hierarchy to the master clock source is dynamic in a d
 
 If you want to troubleshoot a specific client, the first step is to understand its time source by using this `w32tm` command:
 
-```dockerfile
+```cmd
 w32tm /query /status
 ```
 
 The results display the source, among other things. The source indicates with whom you synchronize time in the domain. It's the first step of this machine's time hierarchy. Next, use the source entry from the preceding command and use the `/stripchart` parameter to find the next time source in the chain.
 
-```yaml
+```cmd
 w32tm /stripchart /computer:MySourceEntry /packetinfo /samples:1
 ```
 
 Also useful, the following command lists each DC it can find in the specified domain and prints a result that lets you determine each partner. This command includes machines that were configured manually.
-
- `w32tm /monitor /domain:my_domain`
+```cmd
+ w32tm /monitor /domain:my_domain
+```
 
 By using the list, you can trace the results through the domain and understand the hierarchy and the time offset at each step. By locating the point where the time offset gets significantly worse, you can pinpoint the root of the incorrect time. From there, you can try to understand why that time is incorrect by turning on `w32tm` logging.
 
@@ -284,8 +286,10 @@ You can use Group Policy to accomplish stricter accuracy by, for instance, assig
 
 **Virtualized domains**: To control virtualized DCs in Windows Server 2012 R2 so that they synchronize time with their domain, rather than with the Hyper-V host, you can disable this registry entry. For the PDC, you don't want to disable the entry because the Hyper-V host delivers the most stable time source. The registry entry requires that you restart W32Time after it's changed.
 
- `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider]
- "Enabled"=dword:00000000`
+ ```
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider
+"Enabled"=dword:00000000
+```
 
 **Accuracy sensitive loads**: For time accuracy sensitive workloads, you could configure groups of machines to set the NTP servers and any related time settings, such as polling and clock update frequency. This task is normally handled by the domain, but for more control you could target specific machines to point directly to the master clock.
 
@@ -354,7 +358,9 @@ To enable `w32tm` for auditing purposes, the following command enables logging t
 
 For more information, see [Turn on debug logging in the Windows Time service](https://support.microsoft.com/kb/816043).
 
- `w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-73,103,107,110`
+```cmd
+w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-116
+```
 
 ### Performance Monitor
 The Windows Server 2016 Windows Time service exposes performance counters, which can be used to collect logging for auditing. These counters can be logged locally or remotely. You can record the **Computer Time Offset** and **Round Trip Delay** counters. Like any performance counter, you can monitor them remotely and create alerts by using System Center Operations Manager. For instance, you can use an alert to alarm you when the Time Offset drifts from the desired accuracy. For more information, see the [System Center Management Pack](/system-center/scsm/management-packs).
@@ -388,11 +394,11 @@ Windows supports simple NTP (RFC2030) by default for nondomain-joined machines. 
 
 Both the domain and nondomain-joined protocols require UDP port 123. For more information about NTP best practices, see [Network Time Protocol Best Current Practices IETF Draft](https://tools.ietf.org/html/draft-ietf-ntp-bcp-00).
 
-### Reliable hardware clock (RTC)
+### Phase Correction vs Clock reset
 
-Windows doesn't step time, unless certain bounds are exceeded, but instead disciplines the clock. That means `w32tm` adjusts the frequency of the clock at a regular interval by using the **Clock Update Frequency** setting, which defaults to once a second with Windows Server 2016. If the clock is behind, it accelerates the frequency. If it's ahead, it slows down the frequency. However, during the time between clock frequency adjustments, the hardware clock is in control. If there's an issue with the firmware or the hardware clock, the time on the machine can become less accurate.
+Windows doesn't set time directly, unless certain bounds are exceeded, but instead disciplines the clock. That means `w32tm` adjusts the frequency of the clock at a regular interval by using the **Clock Update Frequency** setting, which defaults to once a second with Windows Server 2016. If the clock is behind, it accelerates the frequency. If it's ahead, it slows down the frequency. For more information, refer to [Configure computer clock reset](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config#configure-computer-clock-reset).
 
-This scenario is another reason why you need to test and baseline in your environment. If the **Computed Time Offset** performance counter doesn't stabilize at the accuracy you're targeting, you might want to verify that your firmware is up to date. As another test, you can see if duplicate hardware reproduces the same issue.
+However, during the time between clock frequency adjustments, the hardware clock is in control. If there's an issue with the firmware or the hardware clock, the time on the machine can become less accurate. This scenario is another reason why you need to test and baseline in your environment. If the **Computed Time Offset** performance counter doesn't stabilize at the accuracy you're targeting, you might want to verify that your firmware is up to date. As another test, you can see if duplicate hardware reproduces the same issue.
 
 ### Troubleshoot time accuracy and NTP
 
@@ -436,20 +442,20 @@ The earth's rotation period varies over time owing to climatic and geological ev
 
 ## Secure Time Seeding
 
-W32Time in Server 2016 includes the Secure Time Seeding feature. This feature determines the approximate current time from outgoing SSL connections. This time value is used to monitor the local system clock and correct any gross errors. You can read more about the feature in [this blog post](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows). In deployments with reliable time sources and well-monitored machines that include monitoring for time offsets, you might choose to not use the Secure Time Seeding feature and rely on your existing infrastructure instead.
+W32Time in Server 2016 includes the Secure Time Seeding feature. This feature determines the approximate current time from outgoing SSL connections. This time value is used to monitor the local system clock and correct any gross errors. You can read more about the feature in [Secure Time Seeding – improving time keeping in Windows](https://learn.microsoft.com/en-us/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows). In deployments with reliable time sources and well-monitored machines that include monitoring for time offsets, you might choose to not use the Secure Time Seeding feature and rely on your existing infrastructure instead.
 
 To disable the feature:
 
 1. Use Group Policy to manage `SecureTimeSeeding`. See the section that refers to the setting `UtilizeSslTimeData`: Learn: [Policy CSP - ADMX_W32Time](/windows/client-management/mdm/policy-csp-admx-w32time).
 1. Alternatively, you can manually set the registry value. Set the `UtilizeSSLTimeData` registry configuration value to `0` on a specific machine:
 
-    ```yaml
+    ```cmd
     reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\Config /v UtilizeSslTimeData /t REG_DWORD /d 0 /f
     ```
 
 1. If you're unable to reboot the machine immediately, you can notify W32Time about the configuration update. This notification stops time monitoring and enforcement based on time data collected from SSL connections.
 
-    ```
+    ```cmd
     W32tm.exe /config /update
     ```
 
