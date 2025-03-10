@@ -84,10 +84,10 @@ Alternatively, you can use the [Save-Module](/powershell/module/powershellget/sa
 1. Run the following command to save the OSConfig module on the local device:
 
    ```powershell
-   Save-Module -Name Microsoft.OSConfig -Path [SHARED LOCATION] -Repository PSGallery
-   Get-ChildItem -Path [SHARED LOCATION]
+   Save-Module -Name Microsoft.OSConfig -Path "\\Server01\Public" -Repository PSGallery
+   Get-ChildItem -Path "\\Server01\Public"
 
-   Directory: [SHARED LOCATION]
+   Directory: \\Server001\Public
 
    Mode                 LastWriteTime         Length Name
    ----                 -------------         ------ ----
@@ -97,7 +97,7 @@ Alternatively, you can use the [Save-Module](/powershell/module/powershellget/sa
 1. Run the following command to load the OSConfig module on the target device:
 
    ```powershell
-   Import-Module [SHARED LOCATION]\Microsoft.OSConfig\*\Microsoft.OSConfig.psd1
+   Import-Module \\Server01\Public\Microsoft.OSConfig\*\Microsoft.OSConfig.psd1
    ```
 
 ## Manage Windows Server 2025 security baselines
