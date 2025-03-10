@@ -128,7 +128,7 @@ To remove the Latest Cumulative Update (LCU) after installing the combined Servi
 
 Download the `.msu` update file and pick your preferred method to install the update.
 
-### [PowerShell](#tab/powershell)
+### [PowerShell](#tab/update-powershell)
 
 From an elevated PowerShell prompt, run the following command:
 
@@ -150,7 +150,7 @@ Then, run the following command to uninstall the update:
 Remove-WindowsPackage -Online -PackageName "<package_name>"
 ```
 
-### [Dism](#tab/dism)
+### [Dism](#tab/update-dism)
 
 From an elevated prompt, run the following command:
 
