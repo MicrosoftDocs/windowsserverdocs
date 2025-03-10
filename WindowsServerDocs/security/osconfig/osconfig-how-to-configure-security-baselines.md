@@ -77,9 +77,9 @@ You also have the option to install the OSConfig module by manually downloading 
 1. Find the OSConfig module here: [Microsoft.OSConfig](https://www.powershellgallery.com/packages/Microsoft.OSConfig/).
 1. Under **Installation Options**, choose **Manual Download**.
 1. Select **Download the raw nupkg file** to download the NuGet package.
-1. Follow the instructions here to install the OSConfig module from the NuGet package: [Installing PowerShell modules from a NuGet package](https://learn.microsoft.com/en-us/powershell/gallery/how-to/working-with-packages/manual-download?view=powershellget-3.x#installing-powershell-modules-from-a-nuget-package).
+1. Follow the instructions here to install the OSConfig module from the NuGet package: [Installing PowerShell modules from a NuGet package](/powershell/gallery/how-to/working-with-packages/manual-download#installing-powershell-modules-from-a-nuget-package).
 
-Alternatively, you can use the [Save-Module](https://learn.microsoft.com/en-us/powershell/module/powershellget/save-module) PowerShell cmdlet to save the OSConfig module on the local device. You can then copy it to a shared location and use the [Import-Module](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/import-module) PowerShell cmdlet to add the OSConfig module to the current session.
+Alternatively, you can use the [Save-Module](/powershell/module/powershellget/save-module) PowerShell cmdlet to save the OSConfig module on the local device. You can then copy it to a shared location and use the [Import-Module](/powershell/module/microsoft.powershell.core/import-module) PowerShell cmdlet to add the OSConfig module to the current session.
 
 1. Run the following command to save the OSConfig module on the local device:
 
