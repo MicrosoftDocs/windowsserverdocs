@@ -8,13 +8,10 @@ ms.date: 01/28/2025
 ---
 # What's new in the web client
 
-We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Here's where you can find the latest updates.
-
-> [!NOTE]
-> We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Azure Virtual Desktop web client release changes the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+Here's where you can find the latest updates for the [Remote Desktop web client](remote-desktop-web-client.md) Updates add new features and fix issues.
 
 ## Updates for version 2.1.62.1
- 
+
 *Date published: January 30, 2025*
 
 - Endpoint that delivers client packages changed to `*.cdn.office.net`.
@@ -60,25 +57,24 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 *Date published: July 22, 2021*
 
-- Client now has web assembly on supported browsers. 
+- Client now has web assembly on supported browsers.
 - Added file transfer support.
 - Bug fixes.
 
 ## Updates for 1.0.24.0
+
 *Date published: January 6, 2021*
 
 >[!IMPORTANT]
-> Version 1.0.24.0 includes an important security fix. We have removed earlier versions of the web client containing this bug. 
+> Version 1.0.24.0 includes an important security fix. We have removed earlier versions of the web client containing this bug.
 
 - Added support for redirecting local microphone input to the remote session.
 - Fixed issues with **AltGr** and several other keyboard bugs.
 - Accessibility improvements.
 
 ## Updates for 1.0.22.0
-*Date published: September 2, 2020*
 
-> [!IMPORTANT]
-> In version 1.0.22.0, we introduced a regression that impacts some Chromebook operating systems. Users on impacted operating systems won't be able to connect to a remote session using the web client. We're currently investigating this issue and will release a new version of the web client as soon as we fix this regression. 
+*Date published: September 2, 2020*
 
 - Users can now move the minimized menu.
 - Improved support for 4K and ultra-wide monitors and fixed an issue where copying large amounts of data caused sessions to crash.
@@ -89,6 +85,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Accessibility improvements.
 
 ## Updates for version 1.0.21.0
+
 *Date published: November 15, 2019*
 
 - Added support for using an Input Method Editor (IME) in the remote session to input complex characters.
@@ -97,6 +94,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Added link to RDWeb password change when enabled by your administrator.
 
 ## Updates for version 1.0.20.0
+
 *Date published: October 18, 2019*
 
 - Added support for connections to Windows 7 and Windows Server 2008 R2 hosts.
@@ -107,6 +105,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Updated third-party libraries.
 
 ## Updates for version 1.0.18.0
+
 *Date published: May 14, 2019*
 
 - Added Resource Launch Method configuration in the Settings tab, enabling users to either open resources in the browser or download an .rdp file to handle with another client. This setting may be configured by your admin. Details regarding admin configurations for this feature can be found in the [web client setup documentation](remote-desktop-web-client-admin.md).
@@ -120,6 +119,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Fixed remote resource icon sizing in the resource taskbar.
 
 ## Updates for version 1.0.11
+
 *Date published: February 22, 2019*
 
 - Enabled connection to RD Broker without an RD Gateway in Windows Server 2019.
@@ -129,6 +129,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Various bug fixes.
 
 ## Updates for version 1.0.7
+
 *Date published: January 24, 2019*
 
 - Offline use on internal networks is now supported.
@@ -142,6 +143,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Various bug fixes.
 
 ## Updates for version 1.0.1
+
 *Date published: October 29, 2018*
 
 - Added an option to **Capture support information** on the About page to diagnose issues.
@@ -154,6 +156,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Various bug fixes.
 
 ## Updates for version 1.0.0
+
 *Date published: July 16, 2018*
 
 - Remote Desktop web client is now generally available.
@@ -161,6 +164,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Various bug fixes.
 
 ## Updates for version 0.9.0
+
 *Date published: July 5, 2018*
 
 - New sign in experience within the web client.
@@ -169,6 +173,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Various bug fixes.
 
 ## Updates for version 0.8.1
+
 *Date published: May 17, 2018*
 
 - Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
@@ -177,6 +182,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - **Help** and **Feedback** options were added.
 
 ## Updates for version 0.8.0
+
 *Date published: March 28, 2018*
 
 - Initial public preview release of the web client.
