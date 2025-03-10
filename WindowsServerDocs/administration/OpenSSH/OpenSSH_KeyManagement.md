@@ -9,39 +9,37 @@ author: maertendmsft
 
 # Key-based authentication in OpenSSH for Windows
 
-Most authentication in Windows environments is done with a username-password pair, which works well for systems that share a common domain. When you work across domains, such as between on-premises and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
+Most authentication in Windows environments is done with a username-password pair, which works well for systems that share a common domain. When you work across domains, such as between on-premises and cloud-hosted systems, this type of authentication becomes vulnerable to brute force intrusions.
 
 By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication that doesn't require the use of guessable passwords. OpenSSH includes tools to help support key based authentication, specifically:
 
-* __ssh-keygen__ for generating secure keys
-* __ssh-agent__ and __ssh-add__ for securely storing private keys
-* __scp__ and __sftp__ to securely copy public key files during initial use of a server
+* __ssh-keygen__ for generating secure keys.
+* __ssh-agent__ and __ssh-add__ for securely storing private keys.
+* __scp__ and __sftp__ to securely copy public key files during initial use of a server.
 
-This document provides an overview of how to use these tools on Windows to begin using key-based authentication with SSH.
-If you're unfamiliar with SSH key management, we strongly recommend you review [NIST document IR 7966](http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf) titled _Security of Interactive and Automated Access Management Using Secure Shell (SSH)_.
+This document provides an overview of how to use these tools on Windows to begin using key-based authentication with Secure Shell (SSH). If you're unfamiliar with SSH key management, we strongly recommend you review [NIST document IR 7966](http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf), titled _Security of Interactive and Automated Access Management Using Secure Shell (SSH)_.
 
 ## About key pairs
 
 Key pairs refer to the public and private key files that are used by certain authentication protocols.
 
-SSH public key authentication uses asymmetric cryptographic algorithms to generate two key files – one "private" and the other "public". The private key files are the equivalent of a password, and should stay protected under all circumstances. If someone acquires your private key, they can sign in as you to any SSH server you have access to. The public key is what is placed on the SSH server, and might be shared without compromising the private key.
+SSH public key authentication uses asymmetric cryptographic algorithms to generate two key files – one *private* and the other *public*. The private key files are the equivalent of a password, and should stay protected under all circumstances. If someone acquires your private key, they can sign in as you to any SSH server you have access to. The public key is what is placed on the SSH server, and can be shared without compromising the private key.
 
-Key based authentication enables the SSH server and client to compare the public key for a user name provided against the private key. If the server-side public key can't be validated against the client-side private key, authentication fails.
+The SSH server and client can use key based authentication to compare the public key for a user name provided against the private key. If the server-side public key can't be validated against the client-side private key, authentication fails.
 
-Multifactor authentication might be implemented with key pairs by entering a passphrase when the key pair is generated. To learn more, see [user key generation](#user-key-generation). The user is prompted for the passphrase during authentication. The passphrase combined with the presence of the private key is used on the SSH client to authenticate the user.
+Multifactor authentication can be implemented with key pairs by entering a passphrase when the key pair is generated. For more information, see [User key generation](#user-key-generation). The user is prompted for the passphrase during authentication. The passphrase combined with the presence of the private key is used on the SSH client to authenticate the user.
 
 > [!IMPORTANT]
-> A remote session opened via key based authentication doesn't have associated user credentials and
-> hence isn't capable of outbound authentication as the user, this is by design.
+> A remote session opened via key based authentication doesn't have associated user credentials. As a result, the session isn't capable of outbound authentication as the user. This behavior is by design.
 
 ## Host key generation
 
-Public keys have specific ACL requirements that, on Windows, equate to only allowing access to administrators and System. On first use of sshd, the key pair for the host is automatically generated.
+Public keys have specific access control list (ACL) requirements that, on Windows, equate to only allowing access to administrators and System. On the first use of the `sshd` service, the key pair for the host is automatically generated.
 
 > [!IMPORTANT]
-> You need to have OpenSSH Server installed first. To learn more, see [Getting started with OpenSSH](OpenSSH_Install_FirstUse.md).
+> You need to install OpenSSH Server before you can use the `sshd` service. For more information, see [Getting started with OpenSSH](OpenSSH_Install_FirstUse.md).
 
-By default the sshd service is set to start manually. To start it each time the server is rebooted, run the following commands from an elevated PowerShell prompt on your server:
+By default, you need to start the `sshd` service manually. To configure it to start each time the server is rebooted, run the following commands from an elevated PowerShell prompt on your server:
 
 ```powershell
 # Set the sshd service to be started automatically
