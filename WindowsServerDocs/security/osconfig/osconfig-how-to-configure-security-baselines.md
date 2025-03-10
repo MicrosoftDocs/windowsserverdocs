@@ -70,9 +70,9 @@ Before you can apply a security baseline for the first time, you need to install
    Get-Module -ListAvailable -Name Microsoft.OSConfig
    ```
 
-## Install the OSConfig PowerShell module (manual download)
+## Install the OSConfig PowerShell module (offline)
 
-You also have the option to install the OSConfig module by manually downloading it from the PowerShell Gallery. This method is especially beneficial when the target device doesn't have direct access to PowerShell Gallery, requiring the module to be installed offline.
+You also have the option to install the OSConfig module by manually downloading it from the PowerShell Gallery (requires Internet connection). This method is especially beneficial when the target device doesn't have direct access to PowerShell Gallery, requiring the module to be installed offline.
 
 1. Find the OSConfig module here: [Microsoft.OSConfig](https://www.powershellgallery.com/packages/Microsoft.OSConfig/).
 1. Under **Installation Options**, choose **Manual Download**.
