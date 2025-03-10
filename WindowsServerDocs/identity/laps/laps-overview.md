@@ -28,7 +28,7 @@ All supported editions of these platforms have been updated with Windows LAPS, i
 
 ## Windows LAPS and Microsoft Entra ID
 
-Windows LAPS with Microsoft Entra ID and Microsoft Intune support is generally available as of October 23, 2023. For more information, see [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999) and [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
+Windows LAPS with Microsoft Entra ID and Microsoft Intune support is generally available as of October 23, 2023. For more information, see [Windows Local Administrator Password Solution with Microsoft Entra ID now generally available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999) and [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
 
 ## Benefits of using Windows LAPS
 
@@ -154,10 +154,9 @@ If you aren't sure where your feedback should go, submit it by using any of thes
 
 - [Introducing Windows Local Administrator Password Solution with Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
 - [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps)
-- [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999)
-- [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords)
+- [Windows Local Administrator Password Solution with Microsoft Entra ID now generally available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999)
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
-- [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+- [LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Windows LAPS troubleshooting guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 - [LAPS PowerShell module reference](/powershell/module/laps)
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
