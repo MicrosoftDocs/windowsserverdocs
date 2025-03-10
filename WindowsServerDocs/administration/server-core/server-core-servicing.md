@@ -177,4 +177,4 @@ Dism /Online /Remove-Package /PackageName:<package_name>
 
 ## Update with Azure Update Manager
 
-You can also update your Windows Server Core installation using [Azure Update Manager](/azure/update-manager/overview?tabs=azure-arc-vms) from the Azure Portal.
+You can also update your Windows Server Core installation using [Azure Update Manager](/azure/update-manager/overview?tabs=azure-arc-vms) from the Azure portal.
