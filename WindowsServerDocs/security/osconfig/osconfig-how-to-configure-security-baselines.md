@@ -97,7 +97,7 @@ Alternatively, you can use the [Save-Module](https://learn.microsoft.com/en-us/p
 1. Run the following command to load the OSConfig module on the target device:
 
    ```powershell
-   Import-Module [SHARED LOCATION]\Microsoft.OSConfig\1.2.6\Microsoft.OSConfig.psd1
+   Import-Module [SHARED LOCATION]\Microsoft.OSConfig\*\Microsoft.OSConfig.psd1
    ```
 
 ## Manage Windows Server 2025 security baselines
