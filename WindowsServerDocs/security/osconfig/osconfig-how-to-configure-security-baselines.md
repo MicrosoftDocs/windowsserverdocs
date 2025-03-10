@@ -87,7 +87,7 @@ Alternatively, you can use the [Save-Module](/powershell/module/powershellget/sa
    Save-Module -Name Microsoft.OSConfig -Path "\\Server01\Public" -Repository PSGallery
    Get-ChildItem -Path "\\Server01\Public"
 
-   Directory: \\Server001\Public
+   Directory: \\Server01\Public
 
    Mode                 LastWriteTime         Length Name
    ----                 -------------         ------ ----
