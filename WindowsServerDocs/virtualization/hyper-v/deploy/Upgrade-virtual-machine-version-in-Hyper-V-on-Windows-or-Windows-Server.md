@@ -172,10 +172,12 @@ The following table shows the minimum virtual machine configuration version requ
 |Minimum VM configuration version|Feature|OS Version|
 |---|---|---|
 |12.0|GPU partitioning|Windows Server 2025 / Windows 11 24H2|
-|11.0|undocumented change|
-|10.5|undocumented change|Host OS (Cobalt+)|
+|11.2|undocumented change|Windows 11 23H2 "Zinc"|
+|11.1|undocumented change|Windows 11 "Copper"|
+|11.0|undocumented change|Windows 11 22H2|
+|10.5|undocumented change|Host OS "Cobalt+"|
 |10.0|undocumented change|Windows Server 2022|
-|9.3|undocumented change|Windows 10 (Manganese)|
+|9.3|undocumented change|Windows 10 "Manganese"|
 |9.2|undocumented change|Windows 10 May 2020 Update/Server 2004|
 |9.1|undocumented change|Windows 10 May 2019 Update/Server 1903|
 |9.0|Allow additional processor features for Perfmon|Windows 10 Oct. Update (19H2), Windows Server 2019|
