@@ -5,8 +5,8 @@ ms.topic: how-to
 ms.product: windows-server
 ms.author: alalve
 author: xelu86
-ms.contributor: Dona Mukherjee, Carlos Mayol Berral
-ms.date: 12/12/2024
+ms.contributor: Dona Mukherjee, Carlos Mayol Berral, Simon Jäger
+ms.date: 03/11/2025
 ---
 
 # Deploy Windows Server 2025 security baselines locally with OSConfig
@@ -28,7 +28,7 @@ You can get the full list of the settings for the security baselines on [GitHub]
 For at-scale operations, use Azure Policy and Azure Automanage Machine Configuration to monitor and see your compliance score.
 
 > [!IMPORTANT]
-> After applying the security baseline, your system's security setting will change along with default behaviors. Test carefully before applying these changes in production environments.
+> After you apply the security baseline, your system's security setting will change along with default behaviors. Test carefully before applying these changes in production environments.
 >
 > You'll be asked to change your local administrator password after applying the security baseline for Member server and Workgroup member scenarios.
 
@@ -52,7 +52,9 @@ Your device must be running Windows Server 2025. OSConfig doesn't support earlie
 
 ## Install the OSConfig PowerShell module
 
-Before you can apply a security baseline for the first time, you need to install the OSConfig module via an elevated PowerShell window:
+Before you can apply a security baseline for the first time, you need to install the OSConfig module via an elevated PowerShell window. There are two methods for install, online and offline. Follow these instructions pertaining to your environment.
+
+# [Online method](#tab/online)
 
 1. Select **Start**, type **PowerShell**, hover over **Windows PowerShell**, and select **Run as administrator**.
 
@@ -69,6 +71,30 @@ Before you can apply a security baseline for the first time, you need to install
    ```powershell
    Get-Module -ListAvailable -Name Microsoft.OSConfig
    ```
+
+# [Offline method](#tab/offline)
+
+You can manually download the OSConfig module from the PowerShell Gallery (requires Internet connection). This method is especially beneficial when the target device doesn't have direct access to PowerShell Gallery to allow an offline installation.
+
+1. Navigate to the [Microsoft.OSConfig](https://www.powershellgallery.com/packages/Microsoft.OSConfig) page.
+1. Under **Installation Options**, select **Manual Download**, then select **Download the raw nupkg file**.
+1. Follow the instructions to install the OSConfig module using the [NuGet package manager](/powershell/gallery/how-to/working-with-packages/manual-download#installing-powershell-modules-from-a-nuget-package).
+
+_Alternatively_, you can use the [Save-Module](/powershell/module/powershellget/save-module) cmdlet to save the OSConfig module on the local device. You can then copy it to a shared location and use the [Import-Module](/powershell/module/microsoft.powershell.core/import-module) cmdlet to add it to the current session.
+
+1. Run the following command to save the OSConfig module on the local device replacing **Server01** with your device name or IP address:
+
+   ```powershell
+   Save-Module -Name Microsoft.OSConfig -Path "\\Server01\Public" -Repository PSGallery
+   Get-ChildItem -Path "\\Server01\Public"
+
+1. Run the following command to load the OSConfig module on the target device:
+
+   ```powershell
+   Import-Module "\\Server01\Public\Microsoft.OSConfig\*\Microsoft.OSConfig.psd1"
+   ```
+
+---
 
 ## Manage Windows Server 2025 security baselines
 
@@ -212,7 +238,7 @@ Get-OSConfigDesiredConfiguration -Scenario SecuredCore | ft Name, @{ Name = "Sta
 To check the compliance details for the Microsoft Defender Antivirus baseline, run the following command:
 
 ```powershell
-Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap 
+Get-OSConfigDesiredConfiguration -Scenario Defender/Antivirus | ft Name, @{ Name = "Status"; Expression={$_.Compliance.Status} }, @{ Name = "Reason"; Expression={$_.Compliance.Reason} } -AutoSize -Wrap
 ```
 
 ---
@@ -232,13 +258,13 @@ After you complete the security baseline configuration, you can modify the secur
 To edit the default value of `AuditDetailedFileShare` from `2` to `3` for your member server, run the following command:
 
 ```powershell
-Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Setting AuditDetailedFileShare -Value 3 
+Set-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Setting AuditDetailedFileShare -Value 3
 ```
 
 To verify that the new value is applied, run the following command:
 
 ```powershell
-Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Setting AuditDetailedFileShare 
+Get-OSConfigDesiredConfiguration -Scenario SecurityBaseline/WS2025/MemberServer -Setting AuditDetailedFileShare
 ```
 
 > [!NOTE]
