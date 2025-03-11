@@ -35,7 +35,7 @@ Multifactor authentication can be implemented with key pairs by entering a passp
 
 ## Host key generation
 
-Public keys have specific access control list (ACL) requirements that, on Windows, equate to only allowing access to administrators and the System user. The first time you use the `sshd` service, the key pair for the host is automatically generated.
+Public keys have specific access control list (ACL) requirements that, on Windows, equate to only allowing access to administrators and the System user. The first time the `sshd` service is used, the key pair for the host is automatically generated.
 
 > [!IMPORTANT]
 > You need to install OpenSSH Server before you can run the commands in this article. For more information, see [Get started with OpenSSH for Windows](OpenSSH_Install_FirstUse.md).
