@@ -171,10 +171,6 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 | Operating system edition                | KMS Client Product Key        |
 |-----------------------------------------|-------------------------------|
-| Windows Server 2012                     | BN3D2-R7TKB-3YPBD-8DRP2-27GG4 |
-| Windows Server 2012 N                   | 8N2M2-HWPGY-7PGT9-HGDD8-GVGGY |
-| Windows Server 2012 Single Language     | 2WN2H-YGCQR-KFX6K-CD6TF-84YXQ |
-| Windows Server 2012 Country Specific    | 4K36P-JN4VD-GDC6V-KDT89-DYFKP |
 | Windows Server 2012 Standard            | XC9B7-NBPP2-83J2H-RHMBY-92BT4 |
 | Windows Server 2012 MultiPoint Standard | HM7DN-YVMH3-46JC3-XYTG7-CYQJJ |
 | Windows Server 2012 MultiPoint Premium  | XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G |
