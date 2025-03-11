@@ -26,7 +26,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
   - Windows Server 2025 Standard
   - Windows Server 2025 Datacenter
-  - Windows Server 2025 Datacenter: Azure Edition. This edition does **not** need to be Azure Arc-enabled, as it already includes Hotpatch by default. The remaining technical prerequisites still apply.
+  - Windows Server 2025 Datacenter: Azure Edition. This edition does **not** need to be Azure Arc-enabled, Hotpatch is already enabled by default. The remaining technical prerequisites still apply.
 
 - Both **Server with Desktop Experience** and **Server Core** installation options are supported.
 
@@ -38,7 +38,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 - The machine should be connected to Azure Arc (Arc-enabled). To learn more about onboarding your machine to Azure Arc, see [Azure Connected Machine agent deployment options](/azure/azure-arc/servers/deployment-options?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json).
 
-## Check and enable Virtual Secure Mode
+## Check and enable Virtual Secure Mode if necessary
 
 When you [enable Hotpatch using the Azure portal](#enable-hotpatch-preview-on-windows-server-2025), it checks whether [Virtual Secure Mode](/virtualization/hyper-v-on-windows/tlfs/vsm) (VSM) is running on the machine. If VSM isn't running, enabling hotpatch fails, and you'll have to enable VSM.
 
