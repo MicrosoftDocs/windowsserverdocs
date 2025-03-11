@@ -74,7 +74,7 @@ Before you can apply a security baseline for the first time, you need to install
 
 # [Offline method](#tab/offline)
 
-You can download the OSConfig module by manually downloading it from the PowerShell Gallery (requires Internet connection). This method is especially beneficial when the target device doesn't have direct access to PowerShell Gallery to allow an offline installation.
+You can manually download the OSConfig module from the PowerShell Gallery (requires Internet connection). This method is especially beneficial when the target device doesn't have direct access to PowerShell Gallery to allow an offline installation.
 
 1. Navigate to the [Microsoft.OSConfig](https://www.powershellgallery.com/packages/Microsoft.OSConfig) page.
 1. Under **Installation Options**, select **Manual Download**, then select **Download the raw nupkg file**.
@@ -91,7 +91,7 @@ _Alternatively_, you can use the [Save-Module](/powershell/module/powershellget/
 1. Run the following command to load the OSConfig module on the target device:
 
    ```powershell
-   Import-Module \\Server01\Public\Microsoft.OSConfig\*\Microsoft.OSConfig.psd1
+   Import-Module "\\Server01\Public\Microsoft.OSConfig\*\Microsoft.OSConfig.psd1"
    ```
 
 ---
