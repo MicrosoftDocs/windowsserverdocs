@@ -203,7 +203,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" -Name "MaxSMB2Dialect" -Value 0x000000311
 ```
 
-To learn more about how to set the minimum and maximum SMB dialect used in Windows Server and Windows , see [Manage SMB dialects in Windows](manage-smb-dialects.md).
+To learn more about how to set the minimum and maximum SMB dialect used in Windows Server and Windows, see [Manage SMB dialects in Windows](manage-smb-dialects.md).
 
 ### Use UNC hardening to require signing, encryption, and mutual authentication
 
