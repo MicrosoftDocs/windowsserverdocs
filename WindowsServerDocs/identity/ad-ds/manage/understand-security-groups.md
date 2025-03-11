@@ -9,15 +9,15 @@ ms.date: 01/15/2025
 
 # Active Directory security groups
 
-Learn about default Active Directory (AD) security groups, group scope, and group functions.
+This article discusses default Active Directory (AD) security groups, group scope, and group functions.
 
 ## What is a security group in AD?
 
-AD has two forms of common security principals: user accounts and computer accounts. These accounts represent a physical entity that is either a person or a computer. A user account also can be used as a dedicated service account for some applications.
+AD has two forms of common security principals: user accounts and computer accounts. These accounts represent a physical entity that's either a person or a computer. A user account also can be used as a dedicated service account for some applications.
 
 Security groups are a way to collect user accounts, computer accounts, and other groups into manageable units.
 
-In the Windows Server operating system (OS), several built-in accounts, and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In AD, administrative responsibilities are separated into two types of administrators:
+In the Windows Server operating system (OS), several built-in accounts and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In AD, administrative responsibilities are separated into two types of administrators:
 
 - **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring AD DS.
 
@@ -25,13 +25,13 @@ In the Windows Server operating system (OS), several built-in accounts, and secu
 
 ## How AD security groups work
 
-Use groups to collect user accounts, computer accounts, and other groups into manageable units. Working with groups instead of with individual users helps you simplify network maintenance and administration.
+You can use groups to collect user accounts, computer accounts, and other groups into manageable units. Working with groups instead of with individual users helps you simplify network maintenance and administration.
 
 AD has two types of groups:
 
-- **Security groups**: Use to assign permissions to shared resources.
+- **Security groups**: Used to assign permissions to shared resources.
 
-- **Distribution groups**: Use to create email distribution lists.
+- **Distribution groups**: Used to create email distribution lists.
 
 ### Security groups
 
@@ -39,17 +39,17 @@ Security groups can provide an efficient way to assign access to resources on yo
 
 - Assign user rights to security groups in AD.
 
-    Assign user rights to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when AD is installed to help administrators define a person’s administrative role in the domain.
+  You can assign user rights to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when AD is installed to help administrators define a person's administrative role in the domain.
 
-    For example, a user who you add to the Backup Operators group in AD can back up and restore files and directories that are located on each domain controller in the domain. The user can complete these actions because, by default, the user rights *Backup files and directories* and *Restore files and directories* are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
+  For example, a user who you add to the Backup Operators group in AD can back up and restore files and directories that are located on each domain controller in the domain. The user can complete these actions because, by default, the user rights *Backup files and directories* and *Restore files and directories* are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
 
-    You can use Group Policy to assign user rights to security groups to delegate specific tasks. For more information about using Group Policy, see [User Rights Assignment](/windows/device-security/security-policy-settings/user-rights-assignment).
+  You can use Group Policy to assign user rights to security groups to delegate specific tasks. For more information about using Group Policy, see [User Rights Assignment](/windows/device-security/security-policy-settings/user-rights-assignment).
 
 - Assign permissions to security groups for resources.
 
-    Permissions are different from user rights. Permissions are assigned to a security group for a shared resource. Permissions determine who can access the resource and the level of access, such as Full control or Read. Some permissions that are set on domain objects are automatically assigned to allow various levels of access to default security groups like the Account Operators group or the Domain Admins group.
+  Permissions are different from user rights. Permissions are assigned to a security group for a shared resource. Permissions determine who can access the resource and the level of access, such as Full control or Read. Some permissions that are set on domain objects are automatically assigned to allow various levels of access to default security groups like the Account Operators group or the Domain Admins group.
 
-    Security groups are listed in Discretionary Access Control Lists (DACLs) that define permissions on resources and objects. When administrators assign permissions for resources like file shares or printers, they should assign those permissions to a security group instead of to individual users. The permissions are assigned once to the group instead of multiple times to each individual user. Each account that's added to a group receives the rights that are assigned to that group in AD. The user receives permissions that are defined for that group.
+  Security groups are listed in discretionary access control lists (DACLs) that define permissions on resources and objects. When administrators assign permissions for resources like file shares or printers, they should assign those permissions to a security group instead of to individual users. The permissions are assigned once to the group instead of multiple times to each individual user. Each account that's added to a group receives the rights that are assigned to that group in AD. The user receives permissions that are defined for that group.
 
 You can use a security group as an email entity. Sending an email message to a security group sends the message to all the members of the group.
 
@@ -62,9 +62,7 @@ You can use distribution groups only to send email to collections of users by us
 Each group has a scope that identifies the extent to which the group is applied in the domain tree or forest. The scope of a group defines where in the network permissions can be granted for the group. AD defines the following three group scopes:
 
 - Universal
-
 - Global
-
 - Domain Local
 
 > [!NOTE]
@@ -74,13 +72,13 @@ The following table describes the three group scopes and how they work as securi
 
 |Scope|Possible members|Scope conversion|Can grant permissions|Possible member of|
 |--- |--- |--- |--- |--- |
-|Universal|Accounts from any domain in the same forest<p>Global groups from any domain in the same forest<p>Other Universal groups from any domain in the same forest|Can be converted to Domain Local scope if the group isn't a member of any other Universal group<p>Can be converted to Global scope if the group doesn't contain any other Universal group|On any domain within the same forest or trusting forests|Other Universal groups in the same forest<p>Domain Local groups in the same forest or trusting forests<p>Local groups on computers in the same forest or trusting forests|
-|Global|Accounts from the same domain<p>Other Global groups from the same domain|Can be converted to Universal scope if the group isn't a member of any other Global group|On any domain in the same forest, or trusting domains or forests|Universal groups from any domain in the same forest<p>Other Global groups from the same domain<p>Domain Local groups from any domain in the same forest, or from any trusting domain|
-|Domain Local|Accounts from any domain or any trusted domain<p>Global groups from any domain or any trusted domain<p>Universal groups from any domain in the same forest<p>Other Domain Local groups from the same domain<p>Accounts, Global groups, and Universal groups from other forests and from external domains|Can be converted to Universal scope if the group doesn't contain any other Domain Local group|Within the same domain|Other Domain Local groups from the same domain<p>Local groups on computers in the same domain, excluding built-in groups that have well-known security identifiers (SIDs)|
+|Universal|Accounts from any domain in the same forest<br><br>Global groups from any domain in the same forest<br><br>Other Universal groups from any domain in the same forest|Can be converted to Domain Local scope if the group isn't a member of any other Universal group<br><br>Can be converted to Global scope if the group doesn't contain any other Universal group|On any domain within the same forest or trusting forests|Other Universal groups in the same forest<br><br>Domain Local groups in the same forest or trusting forests<br><br>Local groups on computers in the same forest or trusting forests|
+|Global|Accounts from the same domain<br><br>Other Global groups from the same domain|Can be converted to Universal scope if the group isn't a member of any other Global group|On any domain in the same forest, or trusting domains or forests|Universal groups from any domain in the same forest<br><br>Other Global groups from the same domain<br><br>Domain Local groups from any domain in the same forest, or from any trusting domain|
+|Domain Local|Accounts from any domain or any trusted domain<br><br>Global groups from any domain or any trusted domain<br><br>Universal groups from any domain in the same forest<br><br>Other Domain Local groups from the same domain<br><br>Accounts, Global groups, and Universal groups from other forests and from external domains|Can be converted to Universal scope if the group doesn't contain any other Domain Local group|Within the same domain|Other Domain Local groups from the same domain<br><br>Local groups on computers in the same domain, excluding built-in groups that have well-known security identifiers (SIDs)|
 
 ### Special identity groups
 
-Special identity group is where certain special identities are grouped together. Special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
+A special identity group is where certain special identities are grouped together. Special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
 
 For more information, see [Special identity groups](understand-special-identities-groups.md).
 
@@ -88,7 +86,7 @@ For more information, see [Special identity groups](understand-special-identitie
 
 Default groups like the Domain Admins group are security groups that are created automatically when you create an AD domain. You can use these predefined groups to help control access to shared resources and to delegate specific domain-wide administrative roles.
 
-Many default groups are automatically assigned a set of user rights that authorize members of the group to perform specific actions in a domain, like logging on to a local system or backing up files and folders. For example, a member of the Backup Operators group can perform backup operations for all domain controllers in the domain.
+Many default groups are automatically assigned a set of user rights that authorize members of the group to perform specific actions in a domain, like signing in to a local system or backing up files and folders. For example, a member of the Backup Operators group can perform backup operations for all domain controllers in the domain.
 
 When you add a user to a group, the user receives all the user rights that are assigned to the group, including all the permissions that are assigned to the group for any shared resources.
 
