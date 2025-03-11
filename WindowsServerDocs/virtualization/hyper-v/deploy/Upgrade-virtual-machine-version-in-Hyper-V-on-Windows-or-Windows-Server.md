@@ -169,7 +169,7 @@ As a general guidance, we recommend updating the configuration version once you 
 
 The following table shows the minimum virtual machine configuration version required to use some Hyper-V features.
 
-|Feature|OS Version|Minimum VM configuration version|
+|Minimum VM configuration version|Feature|OS Version|
 |---|---|---|
 |12.0|GPU partitioning|Windows Server 2025 / Windows 11 24H2|
 |11.0|undocumented change|
