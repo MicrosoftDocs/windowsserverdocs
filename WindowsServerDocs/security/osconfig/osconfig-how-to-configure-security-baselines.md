@@ -87,6 +87,7 @@ _Alternatively_, you can use the [Save-Module](/powershell/module/powershellget/
    ```powershell
    Save-Module -Name Microsoft.OSConfig -Path "\\Server01\Public" -Repository PSGallery
    Get-ChildItem -Path "\\Server01\Public"
+   ```
 
 1. Run the following command to load the OSConfig module on the target device:
 
