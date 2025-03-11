@@ -11,6 +11,8 @@
       href: understand/case-studies.md
     - name: Related management products
       href: understand/related-management.md
+    - name: Windows Admin Center modernized gateway (preview)
+      href: understand/modernized-gateway.md  
   - name: Plan
     items:
     - name: What type of installation is right for you?
@@ -59,6 +61,8 @@
       href: use/manage-virtual-machines.md
     - name: Logging
       href: use/logging.md
+    - name: Manage AWS Machines
+      href: use/manage-aws-machines.md
   - name: Connect to Azure
     items:
     - name: Azure hybrid services
@@ -90,7 +94,7 @@
       href: azure/manage-vm.md
     - name: Azure Arc-enabled Servers
       href: azure/manage-arc-hybrid-machines.md
-    - name: Azure Stack HCI
+    - name: Azure Local
       href: azure/manage-hci-clusters.md
     - name: Azure extension release history
       href: azure/extension-release-notes.md
@@ -152,6 +156,10 @@
         href: extend/guides/extension-discovery-banner.md
       - name: Upgrade extensions to Angular 11
         href: extend/guides/upgrade-to-angular-11.md
+      - name: Upgrade extensions to Angular 15
+        href: extend/guides/upgrade-to-angular-15.md  
+      - name: Extension management of Application Control enforced infrastructure
+        href: extend/guides/application-control-infrastructure-extensions.md
     - name: Publishing extensions
       href: extend/publish-extensions.md
     - name: Case Studies

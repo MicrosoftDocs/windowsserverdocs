@@ -5,7 +5,7 @@ title: Determine Your Federated Application Strategy in the Resource Partner
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
@@ -31,7 +31,7 @@ Answering these questions will help you plan a solid AD FS design. It will also 
 
 -   [Provide Users in Another Organization Access to Your Claims-Aware Applications and Services](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)
 
-For more information about how to create a claims\-aware ASP.NET application or WCF service, see [Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266).
+For more information about how to create a claims\-aware ASP.NET application or WCF service, see [Windows Identity Foundation SDK](/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation).
 
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

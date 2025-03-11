@@ -1,8 +1,8 @@
 ---
-description: "Learn more about: Stretch Cluster Replication Using Shared Storage"
-title: Stretch Cluster Replication Using Shared Storage
+description: Stretch cluster replication using shared storage
+title: Stretch cluster replication using shared storage
 manager: eldenc
-ms.author: nedpyle
+ms.author: alalve
 ms.topic: how-to
 author: nedpyle
 ms.date: 01/19/2023
@@ -10,15 +10,10 @@ ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 # Stretch Cluster Replication Using Shared Storage
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 In this evaluation example, you will configure these computers and their storage in a single stretch cluster, where two nodes share one set of storage and two nodes share another set of storage, then replication keeps both sets of storage mirrored in the cluster to allow immediate failover. These nodes and their storage should be located in separate physical sites, although it is not required. There are separate steps for creating Hyper-V and File Server clusters as sample scenarios.
 
 > [!IMPORTANT]
 > In this evaluation, servers in different sites must be able to communicate with the other servers via a network, but not have any physical connectivity to the other site's shared storage. This scenario does not make use of Storage Spaces Direct.
-
-> [!NOTE]
-> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters).
 
 ## Terms
 This walkthrough uses the following environment as an example:
@@ -129,7 +124,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 ## Configure a Hyper-V Failover Cluster or a File Server for a General Use Cluster
 
-After you setup your server nodes, the next step is to create one of the following types of clusters:
+After you set up your server nodes, the next step is to create one of the following types of clusters:
 *  [Hyper-V failover cluster](#BKMK_HyperV)
 *  [File Server for general use cluster](#BKMK_FileServer)
 
@@ -242,7 +237,7 @@ You will now create a normal failover cluster. After configuration, validation, 
    > [!NOTE]
    >  You should expect storage errors from cluster validation, due to the use of asymmetric storage.
 
-2. Create the File Server for General Use storage cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
+2. Create the File Server for General Use storage cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, then an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
    ```PowerShell
    New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
    Add-ClusterResource -Name NewIPAddress -ResourceType "IP Address" -Group "Cluster Group"
@@ -379,7 +374,7 @@ For more information, review the Microsoft Ignite session Stretching Failover Cl
     > [!NOTE]
     >  You should expect storage errors from cluster validation, due to the use of asymmetric storage.
 
-2.  Create the Hyper-V compute cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
+2.  Create the Hyper-V compute cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, then an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
 
     ```PowerShell
     New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
@@ -399,7 +394,7 @@ For more information, review the Microsoft Ignite session Stretching Failover Cl
     >[!NOTE]
     > Windows Server now includes an option for cloud witness using Azure. You can choose this quorum option instead of the file share witness.
 
-   For more information about quorum configuration, see the [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
+   For more information about quorum configuration, see the [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 4.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
@@ -564,7 +559,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
     -   The source log volume should be on a disk that uses SSD or similarly fast media, not spinning disks.
 
     ```PowerShell
-    New-SRPartnership -SourceComputerName sr-srv01 -SourceRGName rg01 -SourceVolumeName "C:\ClusterStorage\Volume1" -SourceLogVolumeName e: -DestinationComputerName sr-srv03 -DestinationRGName rg02 -DestinationVolumeName d: -DestinationLogVolumeName e:
+    New-SRPartnership -SourceComputerName sr-srv01 -SourceRGName rg01 -SourceVolumeName "C:\ClusterStorage\Volume1" -SourceLogVolumeName e: -DestinationComputerName sr-srv03 -DestinationRGName rg02 -DestinationVolumeName d: -DestinationLogVolumeName e: -LogType Raw
     ```
 
     > [!NOTE]
@@ -658,7 +653,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 
     2.  To move the source replication from one site to another: right-click the source CSV, click **Move Storage**, click **Select Node**, and then select a node in another site. If you configured a preferred site, you can use best possible node to always move the source storage to a node in the preferred site. If using non-CSV storage for a role assigned disk, you move the role.
 
-    3.  To perform planned failover the replication direction from one site to another: shutdown both nodes in one site using **ServerManager.exe** or **SConfig**.
+    3.  To perform planned failover the replication direction from one site to another: shut down both nodes in one site using **ServerManager.exe** or **SConfig**.
 
     4.  To perform unplanned failover the replication direction from one site to another: cut power to both nodes in one site.
 
@@ -800,8 +795,5 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-
-## See Also
-- [Windows Server 2016](../../index.yml)
-- [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
-- [Stretched Clusters in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters)
+- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Stretched Clusters in Azure Local](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage)

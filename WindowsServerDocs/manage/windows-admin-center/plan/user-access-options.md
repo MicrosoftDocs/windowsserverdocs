@@ -2,14 +2,12 @@
 title: User access options with Windows Admin Center
 description: User access options and identity providers with Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: IngridAtMicrosoft
-ms.author: wscontent
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/07/2019
 ---
 
 # User access options with Windows Admin Center
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 When deployed on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
 
@@ -21,7 +19,7 @@ When deployed on Windows Server, Windows Admin Center provides a centralized poi
 Windows Admin Center defines two roles for access to the gateway service: gateway users and gateway administrators.
 
 > [!NOTE]
-> Access to the gateway does not imply access to the target servers visible by the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
+> Access to the gateway does not imply access to the target servers visible to the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
 
 **Gateway users** can connect to the Windows Admin Center gateway service in order to manage servers through that gateway, but they cannot change access permissions nor the authentication mechanism used to authenticate to the gateway.
 
@@ -37,7 +35,7 @@ Windows Admin Center defines two roles for access to the gateway service: gatewa
 Gateway administrators can choose either of the following:
 
  - [Active Directory/local machine groups](../configure/user-access-control.md#active-directory-or-local-machine-groups)
- - [Azure Active Directory as the identity provider for Windows Admin Center](../configure/user-access-control.md#azure-active-directory)
+ - [Microsoft Entra ID as the identity provider for Windows Admin Center](../configure/user-access-control.md#azure-active-directory)
 
 
 ### Smartcard authentication
@@ -46,7 +44,7 @@ When using Active Directory or local machine groups as the identity provider, yo
 
 ### Conditional access and multi-factor authentication
 
-By requiring Azure AD authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by Azure AD. [Learn more about configuring conditional access with Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+By requiring Microsoft Entra authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by Microsoft Entra ID. [Learn more about configuring conditional access with Microsoft Entra ID.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
 ## Role-based access control
 

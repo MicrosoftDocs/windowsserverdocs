@@ -5,7 +5,7 @@ title: Access Control Policies in AD FS Windows Server 2016
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 05/24/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.custom: inhenkel
 ---

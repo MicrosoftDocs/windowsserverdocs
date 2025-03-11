@@ -3,10 +3,9 @@ title: typeperf
 description: Reference article for the typeperf command, which writes performance data to the command window or to a log file.
 ms.topic: reference
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: alalve
+author: xelu86
+ms.date: 06/15/2023
 ---
 
 # typeperf
@@ -26,7 +25,7 @@ typeperf -qx [object] [options]
 
 | Parameter | Description |
 |--|--|
-| `<counter [counter […]]>` | Specifies performance counters to monitor. The `<counter>` parameter is the full name of a performance counter in \\Computer\Object(Instance)\Counter format, such as `\\Server1\Processor(0)\% User Time`.  |
+| `<counter [counter [...]]>` | Specifies performance counters to monitor. The `<counter>` parameter is the full name of a performance counter in \\Computer\Object(Instance)\Counter format, such as `\\Server1\Processor(0)\% User Time`.  |
 
 #### Options
 

@@ -5,7 +5,7 @@ title: Identify Your AD FS Deployment Goals
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

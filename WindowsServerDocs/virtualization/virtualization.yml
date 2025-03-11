@@ -7,13 +7,13 @@ metadata:
   title: Virtualization documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Virtualization in Windows Server is one of the foundational technologies required to create your software defined infrastructure. # Required; article description that is displayed in search results. < 160 chars.
   ms.topic: landing-page # Required
-  author: JasonGerend #Required; your GitHub user alias, with correct capitalization.
-  ms.author: jgerend #Required; microsoft alias of author; optional team alias.
-  ms.prod: windows-server
+  author: robinharwood #Required; your GitHub user alias, with correct capitalization.
+  ms.author: roharwoo #Required; microsoft alias of author; optional team alias.
+  ms.service: windows-server
   manager: brianlic
-  ms.technology: compute
   ms.assetid: c248b41f-0de3-7136-9a25-b4b07e41ebf0
   ms.localizationpriority: high
+  ms.date: 11/21/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -33,13 +33,13 @@ landingContent:
             url: /virtualization/windowscontainers/about/containers-vs-vm
 
   # Card
-  - title: Hyper-V on Windows 10
+  - title: Hyper-V on Windows
     linkLists:
       - linkListType: overview
         links:
-          - text: Hyper-V on Windows 10 overview
+          - text: Hyper-V on Windows overview
             url: /virtualization/hyper-v-on-windows
-          - text: About Hyper-V on Windows 10
+          - text: About Hyper-V on Windows
             url: /virtualization/hyper-v-on-windows/about/
       - linkListType: get-started
         links:
@@ -53,16 +53,18 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Hyper-V on Windows Server
-            url: hyper-v/Hyper-V-on-Windows-Server.md
-          - text: Hyper-V Technology Overview
-            url: hyper-v/Hyper-V-Technology-Overview.md
-      - linkListType: reference
-        links:
-          - text: Microsoft Hyper-V Server 2016
-            url: ./hyper-v/hyper-v-server-2016.md
-          - text: System requirements for Hyper-V on Windows Server
+          - text: Hyper-V overview
+            url: hyper-v/hyper-v-overview.md
+          - text: System requirements for Hyper-V
             url: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
+          - text: Supported Windows guest operating systems
+            url: hyper-v/Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md  
+      - linkListType: get-started
+        links:
+          - text: Install the Hyper-V role
+            url: hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md
+          - text: Create a virtual machine
+            url: hyper-v/get-started/create-a-virtual-machine-in-Hyper-V.md
 
   # Card
   - title: Hyper-V Virtual Switch

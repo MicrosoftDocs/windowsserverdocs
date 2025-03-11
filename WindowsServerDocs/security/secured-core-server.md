@@ -2,17 +2,14 @@
 title: What is Secured-core server for Windows Server
 description: Learn how Secured-core server by Windows Server hardware OEMs offers advanced protection of your operating system environment.
 author: roysasabe
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: conceptual 
 ms.date: 04/06/2023
-ms.prod: windows-server
 ms.custom: template-overview, team=cloud_advocates, kr2b-contr-experiment
 ms.contributors: socuff-01282022
 ---
 
 # What is Secured-core server?
-
->Applies to: Windows Server 2022, Azure Stack HCI version 21H2 and later
 
 Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and
 operating system security features. The protection provided by Secured-core systems begins before
@@ -120,7 +117,7 @@ To learn more about VBS and hardware requirements, see
 ## Simplified management
 
 You can view and configure the OS security features of Secured-core systems using Windows PowerShell
-or the security extension in Windows Admin Center. With Azure Stack HCI Integrated Systems,
+or the security extension in Windows Admin Center. With Azure Local integrated systems,
 manufacturing partners have further simplified the configuration experience for customers so that
 Microsoft’s best server security is available right out of the box.
 
@@ -139,8 +136,8 @@ monitoring by IT and SecOps teams.
 ## Begin your Secured-core journey
 
 You can find hardware certified for Secured-core server from the
-[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Stack HCI servers in the
-[Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
+[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Local servers in the
+[Azure Local Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
 These certified servers come fully equipped with industry-leading security mitigations built into the
 hardware, firmware, and the operating system to help thwart some of the most advanced attack
 vectors.
@@ -149,6 +146,7 @@ vectors.
 
 Now you understand what Secured-core server is, here are some resources to get you started. Learn about how:
 
+- [Configure Secured-core server](configure-secured-core-server.md).
 - [Microsoft brings advanced hardware security to Server and Edge with Secured-core](https://www.microsoft.com/security/blog/2021/03/02/microsoft-brings-advanced-hardware-security-to-server-and-edge-with-secured-core/) in the Microsoft Security Blog.
 - [New Secured-core servers are now available from the Microsoft ecosystem to help secure your infrastructure](https://www.microsoft.com/security/blog/2021/12/07/new-secured-core-servers-are-now-available-from-the-microsoft-ecosystem-to-help-secure-your-infrastructure/) in the Microsoft Security Blog.
 - Building Windows-compatible devices, systems, and filter drivers across all Windows Platforms in

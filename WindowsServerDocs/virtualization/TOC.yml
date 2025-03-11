@@ -4,12 +4,9 @@
   - name: Guarded fabric and shielded VMs
     href: ../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
   - name: Hyper-V
-    href: hyper-v/Hyper-V-on-Windows-Server.md
     items:
-    - name: Technology Overview
-      href: hyper-v/Hyper-V-Technology-Overview.md
-    - name: What's new in Hyper-V
-      href: hyper-v/What-s-new-in-Hyper-V-on-Windows.md
+    - name: Hyper-V overview
+      href: hyper-v/hyper-v-overview.md
     - name: System requirements
       href: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
     - name: Supported Windows guest operating systems
@@ -38,21 +35,17 @@
     - name: Feature compatibility by generation and guest
       href: hyper-v/Hyper-V-feature-compatibility-by-generation-and-guest.md
     - name: Get started
-      href: hyper-v/get-started/Get-started-with-Hyper-V-on-Windows.md
       items:
       - name: Install Hyper-V
-        href: hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md
+        href: hyper-v/get-started/Install-Hyper-V.md
       - name: Create and configure a virtual switch
         href: hyper-v/get-started/create-a-virtual-switch-for-Hyper-V-virtual-machines.md
       - name: Create a virtual machine
         href: hyper-v/get-started/create-a-virtual-machine-in-Hyper-V.md
     - name: Plan
-      href: hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md
       items:
-      - name: Compatibility
-        items:
-        - name: Guest operating system and application supportability
-          href: hyper-v/plan/guest-operating-system-application-supportability.md
+      - name: Guest operating system and application supportability
+        href: hyper-v/plan/guest-operating-system-application-supportability.md
       - name: VM Generation
         href: hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md
       - name: Networking
@@ -65,24 +58,38 @@
         href: hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md
       - name: Discrete Device Assignment
         href: hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md
+      - name: What is Nested Virtualization?
+        href: /virtualization/hyper-v-on-windows/user-guide/nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Virtual Fibre Channel for Hyper-V
+        href: hyper-v/plan/virtual-fibre-channel-for-hyper-v.md
     - name: Deploy
-      href: hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md
       items:
+      - name: Configure virtual local area networks for Hyper-V
+        href: hyper-v/deploy/configure-virtual-local-area-networks-for-hyper-v.md
       - name: Export and import virtual machines
         href: hyper-v/deploy/Export-and-import-virtual-machines.md
       - name: Set up hosts for live migration
         href: hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
       - name: Upgrade virtual machine version
         href: hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md
+      - name: GPU Partitioning
+        href: hyper-v/gpu-partitioning.md
+      - name: Partition and assign GPUs to a virtual machine
+        href: hyper-v/partition-assign-vm-gpu.md
       - name: Deploy graphics devices using DDA
         href: hyper-v/deploy/deploying-graphics-devices-using-dda.md
-      - name: Deploy graphics devices using RemoteFX vGPU
-        href: hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md
       - name: Deploy storage devices using DDA
         href: hyper-v/deploy/deploying-storage-devices-using-dda.md
+      - name: Enable Nested Virtualization
+        href: /virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Hyper-V storage architectures
+        href: hyper-v/storage-architecture.md
+      - name: Use GPUs with clustered VMs
+        href: hyper-v/deploy/use-gpu-with-clustered-vm.md
     - name: Manage
-      href: hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md
       items:
+      - name: About dump encryption
+        href: hyper-v/manage/About-dump-encryption.md
       - name: Configuring Persistent Memory Devices for Hyper-V VMs
         href: hyper-v/manage/persistent-memory-cmdlets.md
       - name: Choose between standard or production checkpoints
@@ -107,10 +114,12 @@
         href: hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md
       - name: Set up Hyper-V Replica
         href: hyper-v/manage/Set-up-Hyper-V-Replica.md
+      - name: Configure multiple CSV for VM replication
+        href: hyper-v/manage/configure-multiple-csv-for-vm-replication.md  
       - name: Enable Intel Performance Monitoring Hardware
         href: hyper-v/manage/Performance-Monitoring-Hardware.md
       - name: Enable processor compatibility mode
-        href: hyper-v/manage/processor-compatibility-mode-hyper-v.md
+        href: hyper-v/manage/dynamic-processor-compatibility-mode.md
       - name: Move VMs with live migration
         href: hyper-v/manage/Live-migration-overview.md
         items:
@@ -120,13 +129,25 @@
           href: hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
         - name: Use live migration without Failover Clustering
           href: hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md
+        - name: Use live migration with workgroup clusters
+          href: hyper-v/manage/live-migration-workgroup-cluster.md  
+    - name: Learn more
+      items:
+      - name: Generation 1 virtual machine security settings
+        href: hyper-v/learn-more\Generation-1-virtual-machine-security-settings-for-Hyper-V.md
+      - name: Generation 2 virtual machine security settings for Hyper-V
+        href: hyper-v\learn-more\Generation-2-virtual-machine-security-settings-for-Hyper-V.md
+      - name: Hyper-V Virtual Machine Connection
+        href: hyper-v/learn-more\hyper-v-virtual-machine-connect.md
+      - name: Use local resources on Hyper-V virtual machine with VMConnect
+        href:  hyper-v/learn-more\Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md
     - name: Hyper-V Performance Tuning
       href: ../administration/performance-tuning/role/hyper-v-server/index.md
   - name: Hyper-V Virtual Switch
     href: hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
     items:
     - name: Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)
-      href: /azure-stack/hci/concepts/host-network-requirements
+      href: /azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization
     - name: Manage Hyper-V Virtual Switch
       href: hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md
       items:

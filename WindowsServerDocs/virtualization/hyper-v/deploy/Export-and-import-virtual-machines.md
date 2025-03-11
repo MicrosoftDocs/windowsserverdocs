@@ -1,16 +1,14 @@
 ---
 title: Export and import virtual machines
-description: Shows you how to export and import virtual machines using Hyper-V Manager or Windows PowerShell.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 12/13/2016
+description: This article shows you how to export and import virtual machines using Hyper-V Manager or Windows PowerShell.
+ms.author: mosagie
+author: meaghanlewis
+ms.date: 02/18/2015
 ms.topic: article
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
 ---
 
 # Export and Import virtual machines
-
->Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article shows you how to export and import a virtual machine, which is a quick way to move or copy them. This article also discusses some of the choices to make when doing an export or import.
 
@@ -33,7 +31,7 @@ When the export is done, you can see all exported files under the export locatio
 Open a session as Administrator and run a command like the following, after replacing \<vm name\> and \<path\>:
 
 ```powershell
-Export-VM -Name \<vm name\> -Path \<path\>
+Export-VM -Name <vm name> -Path <path>
 ```
 
 For details, see [Export-VM](/powershell/module/hyper-v/export-vm).
@@ -51,17 +49,17 @@ The Import Virtual Machine wizard also helps you fix incompatibilities that can 
 
 To import a virtual machine:
 
-1. From the **Actions** menu in Hyper-V Manager, click **Import Virtual Machine**.
+1. From the **Actions** menu in Hyper-V Manager, select **Import Virtual Machine**.
 
-2. Click **Next**.
+1. Click **Next**.
 
-3. Select the folder that contains the exported files, and click **Next**.
+1. Select the folder that contains the exported files, and select **Next**.
 
-4. Select the virtual machine to import.
+1. Select the virtual machine to import.
 
-5. Choose the import type, and click **Next**. (For descriptions, see [Import types](#import-types), below.)
+1. Choose the import type, and select **Next**. For descriptions, see [Import types](#import-types).
 
-6. Click **Finish**.
+1. Select **Finish**.
 
 ### Import using PowerShell
 

@@ -3,13 +3,14 @@ title: Transport Layer Security protocol
 description: Learn about how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
 ms.topic: article
 ms.assetid: de510bb0-a9f6-4bbe-8f8a-8dd7473bbae8
-ms.date: 05/16/2018
+ms.date: 07/31/2023
 ---
 # Transport Layer Security protocol
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
-
 This topic for the IT professional describes how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
+
+> [!Note]
+> In a future release of Windows Server, TLS 1.0 and 1.1 will be disabled by default. For more information, see [TLS versions 1.0 and 1.1 disablement resources](/windows/whats-new/deprecated-features-resources).
 
 The TLS (and SSL) protocols are located between the application protocol layer and the TCP/IP layer, where they can secure and send application data to the transport layer. Because the protocols work between the application layer and the transport layer, TLS and SSL can support multiple application layer protocols.
 
@@ -22,6 +23,7 @@ TLS and SSL assume that a connection-oriented transport, typically TCP, is in us
 -   Message forgery
 
 The TLS and SSL protocols can be divided into two layers. The first layer consists of the application protocol and the three handshaking protocols: the handshake protocol, the change cipher spec protocol, and the alert protocol. The second layer is the record protocol.
+
 
 **TLS and SSL protocol layers**
 
@@ -57,7 +59,7 @@ Devices that connect TLS to servers frequently need to reconnect. TLS session re
 
 -   Reduced time spent for the TLS handshake due to resumptions of the connection
 
-For information about stateless TLS session resumption, see the IETF document [RFC 5077.](http://www.ietf.org/rfc/rfc5077)
+For information about stateless TLS session resumption, see the IETF document [RFC 5077](https://datatracker.ietf.org/doc/rfc5077/).
 
 ## <a name="BKMK_AppProtocolNego"></a>Application protocol negotiation
  Windows Server 2012 R2  and Windows 8.1 introduced support that allows client-side TLS application protocol negotiation. Applications can leverage protocols as part of the HTTP 2.0 standard development, and users can access online services such as Google and Twitter by using apps running the SPDY protocol.

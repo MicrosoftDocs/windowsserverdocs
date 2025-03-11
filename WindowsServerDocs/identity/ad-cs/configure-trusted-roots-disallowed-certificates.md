@@ -3,13 +3,13 @@ title: Configure trusted roots and disallowed certificates in Windows
 description: Guidance on how to configure individual software updates for automatic daily Root Certificate Updates, including certificate trust lists (CTLs)
 ms.topic: how-to 
 author: gswashington
-ms.author: wscontent
-ms.date: 05/04/2023
+ms.author: roharwoo
+ms.date: 08/22/2023
 ---
 
 # Configure trusted roots and disallowed certificates in Windows
 
-> Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
+> 
 
 Redirect the Microsoft Automatic Update URL to a file or web server hosting Certificate Trust Lists
 (CTLs), untrusted CTLs, or a subset of the trusted CTL files in a disconnected environment.
@@ -119,7 +119,7 @@ mechanism.
 
 1. Download the CTL files on a server that computers on a disconnected environment can access over
    the network by using a FILE path (for example, `FILE://\\Server1\CTL`) or an HTTP path (for
-   example, `https://Server1/CTL`).
+   example, `http://Server1/CTL`).
 
 > [!NOTE]
 >
@@ -176,7 +176,7 @@ The configuration in this section requires that you already completed the steps 
     - Ensure that the file name extension is `.adm` and not `.txt`.
 
     - If you haven't already enabled file name extension viewing, see
-      [How To: View File Name Extensions](https://social.technet.microsoft.com/wiki/contents/articles/1784.how-to-view-file-name-extensions.aspx).
+      [How To: View File Name Extensions](https://answers.microsoft.com/en-us/windows/forum/all/how-can-i-get-the-extension-to-display-along-with/ec523f53-357b-41eb-a6c7-9b6b95a91235).
 
     - If you save the file to the `%windir%\inf` folder, it's easier to locate in the following
       steps.
@@ -212,7 +212,7 @@ The configuration in this section requires that you already completed the steps 
    be used instead of default ctldl.windowsupdate.com**.
 
 1. Select **Enabled**. In the Options section, enter the URL to the file server or web server that
-   contains the CTL files. For example, `https://server1/CTL` or `file://\\server1\CTL`.
+   contains the CTL files. For example, `http://server1/CTL` or `file://\\server1\CTL`.
 
 1. Select **OK**.
 
@@ -349,7 +349,7 @@ There are two procedures to customize the list of trusted CTLs.
 
 Here's how to generate SST files by using the automatic Windows update mechanism from Windows. For
 more information about generating SST files, see the
-[Certutil](../../administration/windows-commands/certutil.md#-generatesstfromwu-sstfile) Windows
+[Certutil](../../administration/windows-commands/certutil.md#-generatesstfromwu) Windows
 commands reference.
 
 1. From a computer that is connected to the Internet, open Windows PowerShell as an Administrator or
@@ -443,7 +443,7 @@ domain. These settings must be reconfigured, if you want to change them.
   - **Key**: `SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot`
   - **Type**: `REG_DWORD`
   - **Name**: `EnableDisallowedCertAutoUpdate`
-  - **Data**: `0` to enabled or `1` to disable.
+  - **Data**: `1` to enabled or `0` to disable.
   - **Default**: There is no key present by default. Without a key present, the default is enabled.
 
 - Set the shared CTL file location (HTTP or the FILE path):
@@ -483,7 +483,5 @@ certutil -verifyctl Disallowed | findstr /i "lastsynctime"
 - [List of Participants - Microsoft Trusted Root Program](/security/trusted-root/participants-list)
 
 - [certutil](../../administration/windows-commands/certutil.md) Windows command reference
-  
-- [Windows Root certificate Certificate Program - Members List (All CAs)](https://go.microsoft.com/fwlink/?linkid=269988)
 
 - [Controlling the Update Root certificate Certificates Feature to Prevent the Flow of Information to and from the Internet](https://technet.microsoft.com/library/cc749331.aspx)

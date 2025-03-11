@@ -4,14 +4,14 @@ description: Describes how to install and manage Software Inventory Logging Aggr
 ms.topic: article
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: brentfor
-ms.author: brentf
+ms.author: roharwoo
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # Software Inventory Logging Aggregator
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2
+
 
 ## What is Software Inventory Logging Aggregator?
 
@@ -470,8 +470,6 @@ With the `Set-SilAggregator` cmdlet you can:
 -   Used with parameters, this cmdlet will retrieve data directly from the database intended to assist with customized uses of the SIL overall solution.
 
 -   Note that the `–StartTime` and `–Endtime` parameters will show report data from the first of the month of start date and the last of the month of the end date.
-
-![Image of the completed Get-AggregatorData cmdlet](../media/software-inventory-logging/SILA_Get-SILAggregator.png)
 
 ### Get-SilVMHost
 

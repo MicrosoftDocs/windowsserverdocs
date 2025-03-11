@@ -4,13 +4,13 @@ description: Describes how to manage Software Inventory Logging
 ms.topic: article
 ms.assetid: 812173d1-2904-42f4-a9e2-de19effec201
 author: brentfor
-ms.author: brentf
+ms.author: roharwoo
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage Software Inventory Logging
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+
 
 This document describes how to manage Software Inventory Logging, a feature that helps datacenter administrators easily log Microsoft software asset management data for their deployments over time. This document describes how to manage Software Inventory Logging. Before using Software Inventory Logging with Windows Server 2012 R2, make sure that Windows Update [KB 3000850](https://support.microsoft.com/kb/3000850) and [KB 3060681](https://support.microsoft.com/kb/3060681) are installed on each system needing to be inventoried. No Windows Updates are required for Windows Server 2016. This feature runs locally on each server to be inventoried. It does not collect data from remote servers.
 
@@ -212,7 +212,7 @@ Software Inventory Logging will temporarily store hourly collections of data if 
 > If for any reason managing the retention duration of data logged locally by SIL becomes important, this can be configured by changing the registry value here: \HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Windows\SoftwareInventoryLogging. The default is ‘30' for 30 days.
 
 ## <a name="BKMK_Step6"></a>Reading data logged and published by Software Inventory Logging
-Data logged by SIL, but stored locally (if the forward to the target URI fails), or data that is successfully forwarded to the target aggregation server, is stored in a binary file (for each day's data). To display this data in PowerShell, use the [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx) cmdlet.
+Data logged by SIL, but stored locally (if the forward to the target URI fails), or data that is successfully forwarded to the target aggregation server, is stored in a binary file (for each day's data). To display this data in PowerShell, use the [Import-BinaryMiLog](/powershell/module/cimcmdlets/import-binarymilog) cmdlet.
 
 ## <a name="BKMK_Step7"></a>Software Inventory Logging Security
 Administrative privileges on the local server are required to successfully retrieve data from Software Inventory Logging WMI and PowerShell APIs.
@@ -273,14 +273,6 @@ Below are two examples of what the output on the PowerShell console would look l
 
 > [!NOTE]
 > Since SIL data is output on the console, when using the Get-SilData cmdlet, in data streams, objects will not always be output in a predictive order.  In the two examples below, the text has been color coded (blue for physical host data and green for virtual guest data) only as an illustrative tool for this document.
-
-**Output Example 1**
-
-![Screenshot of the first example output report.](../media/software-inventory-logging/SILHyper-VExample1.png)
-
-**Output Example 2** (w/ Expand-SilData function)
-
-![Screenshot of the second example output report that includes the Expand-SilData function.](../media/software-inventory-logging/SILHyper-VExample2.png)
 
 ## See Also
 [Get Started with Software Inventory Logging](get-started-with-software-inventory-logging.md)

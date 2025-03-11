@@ -3,14 +3,14 @@ title: Updates Operations
 description: Windows Server Update Service (WSUS) - How to manage updates, including the approval process
 ms.topic: article
 ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
-ms.date: 04/24/2023
+ms.date: 07/12/2023
 ---
 # Updates Operations
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 After updates have been synchronized to your WSUS server, they'll be scanned automatically for relevance to the server's client computers. However, you must approve the updates before they're deployed to the computers on your network. When you approve an update, you're essentially telling WSUS what to do with it (your choices are **Install** or **Decline** for a new update). You can approve updates for the **All computers** group or for subgroups. If you don't approve an update, its approval status remains **Not approved**, and your WSUS server allows clients to evaluate whether or not they need the update.
 
@@ -106,9 +106,10 @@ If an update has been approved and you decide not to install it at this time, an
 3.  In the shortcut menu or the **Actions** pane, select **Not Approved**, and then select **Yes** on the confirmation message.
 
 ## Approving Updates for removal
+
 You can approve an update for removal (that is, to uninstall an already-installed update). This option is available only if the update is already installed and supports removal. You can specify a deadline for the update to be uninstalled, or specify a past date for the deadline if you want to remove the update immediately (the next time client computers contact the WSUS server).
 
-It's IMPORTANT to mention that not all updates support removal. You can see whether an update supports removal by selecting an individual update and looking at the **details** pane. Under **additional details**, you'll see the **removable** category. If the update can't be removed through WSUS, in some cases it can be removed with **add or remove Programs** from **Control Panel**.
+It's IMPORTANT to mention that not all updates, such as [UUP updates](../plan/plan-your-wsus-deployment.md#uup-considerations), support removal. You can see whether an update supports removal by selecting an individual update and looking at the **details** pane. Under **additional details**, you'll see the **removable** category. If the update can't be removed through WSUS, in some cases it can be removed with **add or remove Programs** from **Control Panel**.
 
 #### To approve updates for removal
 
@@ -118,7 +119,7 @@ It's IMPORTANT to mention that not all updates support removal. You can see whet
 
 3.  In the **Approve Updates** dialog, select the computer group from which you want to remove the update, and select the arrow next to it.
 
-4.  select **Approved for removal**, and then select the **remove** button.
+4.  Select **Approved for removal**, and then select the **remove** button.
 
 5.  After the remove approval has completed, you can select a deadline by right-clicking the update once more, selecting the appropriate computer group, and then clicking the arrow next to it. Then select **Deadline**. You may select one of the standard deadlines (one week, two weeks, one month), or you can select **Custom** to select a specific date and time.
 

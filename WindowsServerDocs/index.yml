@@ -8,9 +8,9 @@ metadata:
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
   author: robinharwood
   manager: femila
-  ms.prod: windows-server
+  ms.service: windows-server
   ms.topic: hub-page
-  ms.date: 08/05/2022
+  ms.date: 10/30/2024
   ms.author: roharwoo
 
 highlightedContent:
@@ -18,19 +18,16 @@ highlightedContent:
     - title: Get started with Windows Server
       itemType: get-started
       url: ./get-started/get-started-with-windows-server.md
-    - title: What's new in Windows Server 2022?
+    - title: What's new in Windows Server?
       itemType: whats-new
-      url: ./get-started/whats-new-in-windows-server-2022.md
+      url: ./get-started/whats-new-windows-server-2025.md
     - title: Windows Admin Center
       itemType: overview
       url: ./manage/windows-admin-center/overview.md
-    - title: Hyper-converged infrastructure
-      itemType: overview
-      url: ./hyperconverged/index.yml
     - title: Connect to Azure hybrid services
       itemType: how-to-guide
       url: ./manage/windows-admin-center/azure/index.md
-    - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
+    - title: Use Windows Server Extended Security Updates
       itemType: how-to-guide
       url: ./get-started/extended-security-updates-overview.md
     - title: Windows Insider Program for Windows Server
@@ -56,21 +53,27 @@ conceptualContent:
         - url: ./get-started/perform-in-place-upgrade.md
           itemType: how-to-guide
           text: Perform an in-place upgrade
+        - url: ./get-started/windows-server-pay-as-you-go.md
+          itemType: how-to-guide
+          text: Windows Server Pay-as-you-go
       footerLink:
         url: ./get-started/upgrade-overview.md
         text: See more
 
     - title: Identity and access
       links:
-        - url: ./identity/ad-ds/ad-ds-getting-started.md
+        - url: ./identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview.md
           itemType: overview
-          text: Getting started with Active Directory Domain Services (AD DS)
+          text: Active Directory Domain Services Overview
         - url: ./identity/active-directory-federation-services.md
           itemType: overview
           text: Active Directory Federation Services (AD FS)
         - url: /security/compass/overview
           itemType: concept
           text: Securing privileged access
+        - url: ./identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+          itemType: how-to-guide
+          text: Getting started with group managed service accounts (gMSA) 
       footerLink:
         url: ./identity/identity-and-access.yml
         text: See more
@@ -116,7 +119,7 @@ conceptualContent:
         - url: ./networking/sdn/index.yml
           itemType: overview
           text: Software-defined Networking (SDN) overview
-        - url: /azure-stack/hci/concepts/network-controller-overview
+        - url: /azure/azure-local/concepts/network-controller-overview
           itemType: overview
           text: Network controller
       footerLink:
@@ -125,7 +128,7 @@ conceptualContent:
 
     - title: Remote
       links:
-        - url: ./remote/remote-desktop-services/welcome-to-rds.md
+        - url: ./remote/remote-desktop-services/remote-desktop-services-overview.md
           itemType: overview
           text: Remote Desktop Services overview
         - url: ./remote/remote-desktop-services/clients/remote-desktop-clients.md
@@ -140,15 +143,15 @@ conceptualContent:
 
     - title: Security and assurance
       links:
+        - url: https://aka.ms/ws2025securitybook
+          itemType: overview
+          text: Windows Server 2025 Security Book  
         - url: ./security/windows-authentication/windows-authentication-overview.md
           itemType: overview
           text: Windows Authentication overview
         - url: ./security/secured-core-server.md
           itemType: overview
           text: Secured-core server
-        - url: ./security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
-          itemType: how-to-guide
-          text: Getting started with group-managed service accounts
         - url: ./security/windows-authentication/credentials-processes-in-windows-authentication.md
           itemType: overview
           text: Credentials processes in Windows Authentication
@@ -164,7 +167,7 @@ conceptualContent:
         - url: ./storage/disk-management/overview-of-disk-management.md
           itemType: overview
           text: Disk management overview
-        - url: /azure-stack/hci/concepts/quorum
+        - url: /azure/azure-local/concepts/quorum
           itemType: overview
           text: Understanding cluster and pool quorum
       footerLink:
@@ -222,5 +225,5 @@ additionalContent:
         summary: Archive of technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
         url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
       - title: Windows Server Essentials
-        summary: Technical content for for IT professionals administering Windows Server Essentials, the cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
+        summary: Technical content for IT professionals administering Windows Server Essentials, the cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
         url: /windows-server-essentials/get-started/get-started

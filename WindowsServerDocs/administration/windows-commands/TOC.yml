@@ -16,37 +16,20 @@
         href: remote-desktop-services-terminal-services-command-reference.md
       - name: Windows Server Backup Command Reference
         href: windows-server-backup-command-reference.md
-    - name: active
-      href: active.md
-    - name: add
-      href: add.md
-    - name: add alias
-      href: add-alias.md
-    - name: add volume
-      href: add-volume.md
+    - name: adprep
+      href: adprep.md
     - name: append
       href: append.md
     - name: arp
       href: arp.md
-    - name: assign
-      href: assign.md
     - name: assoc
       href: assoc.md
     - name: at
       href: at.md
     - name: atmadm
       href: atmadm.md
-    - name: attach-vdisk
-      href: attach-vdisk.md
     - name: attrib
       href: attrib.md
-    - name: attributes
-      href: attributes.md
-      items:
-      - name: attributes disk
-        href: attributes-disk.md
-      - name: attributes volume
-        href: attributes-volume.md
     - name: auditpol
       href: auditpol.md
       items:
@@ -72,8 +55,6 @@
       href: autoconv.md
     - name: autofmt
       href: autofmt.md
-    - name: automount
-      href: automount.md
     - name: bcdboot
       href: bcdboot.md
     - name: bcdedit
@@ -93,10 +74,6 @@
         href: bdehdcfg-size.md
       - name: bdehdcfg target
         href: bdehdcfg-target.md
-    - name: begin backup
-      href: begin-backup.md
-    - name: begin restore
-      href: begin-restore.md
     - name: bitsadmin
       href: bitsadmin.md
       items:
@@ -348,7 +325,7 @@
       - name: bootcfg timeout
         href: bootcfg-timeout.md
     - name: break
-      href: ./break.md
+      href: break.md
     - name: cacls
       href: cacls.md
     - name: call
@@ -386,8 +363,6 @@
       href: choice.md
     - name: cipher
       href: cipher.md
-    - name: clean
-      href: clean.md
     - name: cleanmgr
       href: cleanmgr.md
     - name: clip
@@ -395,7 +370,7 @@
     - name: cls
       href: cls.md
     - name: cmd
-      href: Cmd.md
+      href: cmd.md
     - name: cmdkey
       href: cmdkey.md
     - name: cmstp
@@ -406,42 +381,8 @@
       href: comp.md
     - name: compact
       href: compact.md
-    - name: compact vdisk
-      href: compact-vdisk.md
-    - name: convert
-      href: convert.md
-      items:
-      - name: convert basic
-        href: convert-basic.md
-      - name: convert dynamic
-        href: convert-dynamic.md
-      - name: convert gpt
-        href: convert-gpt.md
-      - name: convert mbr
-        href: convert-mbr.md
     - name: copy
       href: copy.md
-    - name: create
-      href: create.md
-      items:
-      - name: create partition efi
-        href: create-partition-efi.md
-      - name: create [partition extended
-        href: create-partition-extended.md
-      - name: create partition logical
-        href: create-partition-logical.md
-      - name: create partition msr
-        href: create-partition-msr.md
-      - name: create partition primary
-        href: create-partition-primary.md
-      - name: create volume mirror
-        href: create-volume-mirror.md
-      - name: create volume raid
-        href: create-volume-raid.md
-      - name: create volume simple
-        href: create-volume-simple.md
-      - name: create volume stripe
-        href: create-volume-stripe.md
     - name: cscript
       href: cscript.md
     - name: date
@@ -450,34 +391,12 @@
       href: dcdiag.md
     - name: dcgpofix
       href: dcgpofix.md
+    - name: dcpromo
+      href: dcpromo.md
     - name: defrag
       href: defrag.md
     - name: del
       href: del.md
-    - name: delete
-      href: delete.md
-      items:
-      - name: delete disk
-        href: delete-disk.md
-      - name: delete partition
-        href: delete-partition.md
-      - name: delete shadows
-        href: delete-shadows.md
-      - name: delete volume
-        href: delete-volume.md
-    - name: detach vdisk
-      href: detach-vdisk.md
-    - name: detail
-      href: detail.md
-      items:
-      - name: detail disk
-        href: detail-disk.md
-      - name: detail partition
-        href: detail-partition.md
-      - name: detail vdisk
-        href: detail-vdisk.md
-      - name: detail volume
-        href: detail-volume.md
     - name: dfsdiag
       href: dfsdiag.md
       items:
@@ -493,6 +412,8 @@
         href: dfsdiag-testsites.md
     - name: dfsrmig
       href: dfsrmig.md
+    - name: dfsutil
+      href: dfsutil.md  
     - name: diantz
       href: diantz.md
     - name: dir
@@ -503,12 +424,223 @@
       href: diskcopy.md
     - name: diskpart
       href: diskpart.md
+    - name: diskpart scripts and examples
+      href: diskpart-scripts-and-examples.md 
+      items:
+      - name: active
+        href: active.md
+      - name: add
+        href: add_2.md  
+      - name: assign
+        href: assign.md
+      - name: attach vdisk
+        href: attach-vdisk.md
+      - name: attributes
+        href: attributes.md
+        items:
+        - name: attributes disk
+          href: attributes-disk.md
+        - name: attributes volume
+          href: attributes-volume.md
+      - name: automount
+        href: automount.md  
+      - name: break
+        href: break.md 
+      - name: clean
+        href: clean.md
+      - name: compact vdisk
+        href: compact-vdisk.md
+      - name: convert
+        href: convert.md
+        items: 
+        - name: convert basic
+          href: convert-basic.md
+        - name: convert dynamic
+          href: convert-dynamic.md
+        - name: convert gpt
+          href: convert-gpt.md
+        - name: convert mbr
+          href: convert-mbr.md
+      - name: create
+        href: create.md
+        item:
+        - name: create partition efi
+          href: create-partition-efi.md
+        - name: create partition extended
+          href: create-partition-extended.md
+        - name: create partition logical
+          href: create-partition-logical.md
+        - name: create partition msr
+          href: create-partition-msr.md
+        - name: create partition primary
+          href: create-partition-primary.md
+        - name: create volume mirror
+          href: create-volume-mirror.md
+        - name: create volume raid
+          href: create-volume-raid.md
+        - name: create volume simple
+          href: create-volume-simple.md
+        - name: create volume stripe
+          href: create-volume-stripe.md
+      - name: delete
+        href: delete.md
+        items:
+        - name: delete disk
+          href: delete-disk.md
+        - name: delete partition
+          href: delete-partition.md
+        - name: delete volume
+          href: delete-volume.md
+      - name: detach vdisk
+        href: detach-vdisk.md
+      - name: detail
+        href: detail.md
+        items:
+        - name: detail disk
+          href: detail-disk.md
+        - name: detail partition
+          href: detail-partition.md
+        - name: detail vdisk
+          href: detail-vdisk.md
+        - name: detail volume
+          href: detail-volume.md
+      - name: exit
+        href: exit.md
+      - name: expand vdisk
+        href: expand-vdisk.md
+      - name: extend
+        href: extend.md
+      - name: filesystems
+        href: filesystems.md
+      - name: format  
+        href: format.md 
+      - name: gpt
+        href: gpt.md
+      - name: import
+        href: import_1.md
+      - name: inactive
+        href: inactive.md
+      - name: list
+        href: list.md
+      - name: merge vdisk
+        href: merge-vdisk.md
+      - name: offline
+        href: offline.md
+        items: 
+        - name: offline disk
+          href: offline-disk.md
+        - name: offline volume
+          href: offline-volume.md
+      - name: online
+        href: online.md
+        items:
+        - name: online disk
+          href: online-disk.md
+        - name: online volume
+          href: online-volume.md
+      - name: recover
+        href: recover.md
+      - name: rem
+        href: rem.md
+      - name: remove
+        href: remove.md
+      - name: repair
+        href: repair.md
+      - name: rescan
+        href: rescan.md
+      - name: retain
+        href: retain.md
+      - name: san
+        href: san.md
+      - name: select
+        href: select.md
+        items:
+        - name: select disk
+          href: select-disk.md
+        - name: select partition
+          href: select-partition.md
+        - name: select vdisk
+          href: select-vdisk.md
+        - name: select volume
+          href: select-volume.md
+      - name: set id
+        href: set-id.md
+      - name: shrink
+        href: shrink.md
+      - name: uniqueid
+        href: uniqueid.md   
     - name: diskperf
       href: diskperf.md
     - name: diskraid
       href: diskraid.md
     - name: diskshadow
       href: diskshadow.md
+      items:
+      - name: add
+        href: add.md
+        items:
+        - name: add alias
+          href: add-alias.md
+        - name: add volume
+          href: add-volume.md  
+      - name: begin backup
+        href: begin-backup.md
+      - name: begin restore
+        href: begin-restore.md
+      - name: break
+        href: break_2.md
+      - name: create
+        href: create_2.md
+      - name: delete shadows
+        href: delete-shadows.md
+      - name: end backup
+        href: end-backup.md
+      - name: end restore
+        href: end-restore.md
+      - name: exec
+        href: exec.md
+      - name: exit
+        href: exit-diskshadow.md
+      - name: expose
+        href: expose.md
+      - name: import
+        href: import.md
+      - name: list
+        href: list_2.md
+        items:
+        - name: list providers
+          href: list-providers.md
+        - name: list shadows
+          href: list-shadows.md
+        - name: list writers
+          href: list-writers.md
+      - name: load metadata
+        href: load-metadata.md
+      - name: mask
+        href: mask.md
+      - name: reset
+        href: reset.md
+      - name: reset session
+        href: reset-session.md
+      - name: revert
+        href: revert.md  
+      - name: set
+        href: set.md
+        items:
+        - name: set context
+          href: set-context.md
+        - name: set metadata
+          href: set-metadata.md
+        - name: set option
+          href: set-option.md
+        - name: set verbose
+          href: set-verbose.md
+      - name: simulate restore
+        href: simulate-restore.md  
+      - name: unexpose
+        href: unexpose.md
+      - name: writer
+        href: writer.md
     - name: dispdiag
       href: dispdiag.md
     - name: dnscmd
@@ -517,38 +649,26 @@
       href: doskey.md
     - name: driverquery
       href: driverquery.md
+    - name: dtrace
+      href: dtrace.md  
     - name: echo
       href: echo.md
     - name: edit
       href: edit.md
     - name: endlocal
       href: endlocal.md
-    - name: end restore
-      href: end-restore.md
     - name: erase
       href: erase.md
     - name: eventcreate
       href: eventcreate.md
-    - name: Evntcmd
+    - name: evntcmd
       href: evntcmd.md
-    - name: exec
-      href: exec.md
-    - name: exit
-      href: ./exit.md
     - name: expand
       href: expand.md
-    - name: expand vdisk
-      href: expand-vdisk.md
-    - name: expose
-      href: expose.md
-    - name: extend
-      href: extend.md
     - name: extract
       href: extract.md
     - name: fc
       href: fc.md
-    - name: filesystems
-      href: filesystems.md
     - name: find
       href: find.md
     - name: findstr
@@ -563,8 +683,6 @@
       href: for.md
     - name: forfiles
       href: forfiles.md
-    - name: format
-      href: format.md
     - name: freedisk
       href: freedisk.md
     - name: fsutil
@@ -574,6 +692,10 @@
         href: fsutil-8dot3name.md
       - name: fsutil behavior
         href: fsutil-behavior.md
+      - name: fsutil clfs
+        href: fsutil-clfs.md  
+      - name: fsutil-devdrv
+        href: fsutil-devdrv.md
       - name: fsutil dirty
         href: fsutil-dirty.md
       - name: fsutil file
@@ -682,7 +804,7 @@
       - name: ftp verbose
         href: ftp-verbose_1.md
       - name: ftp mdelete
-        href: ./ftp.mdelete_1.md
+        href: ftp.mdelete_1.md
       - name: ftp mdir
         href: ftp.mdir.md
     - name: ftype
@@ -699,8 +821,6 @@
       href: gpfixup.md
     - name: gpresult
       href: gpresult.md
-    - name: gpt
-      href: gpt.md
     - name: gpupdate
       href: gpupdate.md
     - name: graftabl
@@ -715,12 +835,6 @@
       href: icacls.md
     - name: if
       href: if.md
-    - name: import (shadowdisk)
-      href: import.md
-    - name: import (diskpart)
-      href: import_1.md
-    - name: inactive
-      href: inactive.md
     - name: ipconfig
       href: ipconfig.md
     - name: ipxroute
@@ -784,17 +898,6 @@
       href: ktpass.md
     - name: label
       href: label.md
-    - name: list
-      href: list.md
-      items:
-      - name: list providers
-        href: list-providers.md
-      - name: list shadows
-        href: list-shadows.md
-      - name: list writers
-        href: list-writers.md
-    - name: load metadata
-      href: load-metadata.md
     - name: lodctr
       href: lodctr.md
     - name: logman
@@ -885,8 +988,6 @@
       href: mapadmin.md
     - name: md
       href: md.md
-    - name: merge vdisk
-      href: merge-vdisk.md
     - name: mkdir
       href: mkdir.md
     - name: mklink
@@ -994,20 +1095,6 @@
       href: ntcmdprompt.md
     - name: ntfrsutl
       href: ntfrsutl.md
-    - name: offline
-      href: offline.md
-      items:
-      - name: offline disk
-        href: offline-disk.md
-      - name: offline volume
-        href: offline-volume.md
-    - name: online
-      href: online.md
-      items:
-      - name: online disk
-        href: online-disk.md
-      - name: online volume
-        href: online-volume.md
     - name: openfiles
       href: openfiles.md
     - name: pagefileconfig
@@ -1108,8 +1195,6 @@
       href: rd.md
     - name: rdpsign
       href: rdpsign.md
-    - name: recover
-      href: recover.md
     - name: recover disk group
       href: recover_1.md
     - name: refsutil
@@ -1145,32 +1230,14 @@
       href: regsvr32.md
     - name: relog
       href: relog.md
-    - name: rem
-      href: rem.md
-    - name: remove
-      href: remove.md
     - name: ren
       href: ren.md
     - name: rename
       href: rename.md
-    - name: repair
-      href: repair.md
-      items:
-      - name: repair bde
-        href: repair-bde.md
+    - name: repair bde
+      href: repair-bde.md
     - name: replace
       href: replace.md
-    - name: rescan
-      href: rescan.md
-    - name: reset
-      href: reset.md
-      items:
-      - name: reset session
-        href: reset-session.md
-    - name: retain
-      href: retain.md
-    - name: revert
-      href: revert.md
     - name: rexec
       href: rexec.md
     - name: risetup
@@ -1193,8 +1260,6 @@
       href: rundll32-printui.md
     - name: rwinsta
       href: rwinsta.md
-    - name: san
-      href: san.md
     - name: sc config
       href: sc-config.md
     - name: sc create
@@ -1248,17 +1313,6 @@
         href: secedit-import.md
       - name: secedit validate
         href: secedit-validate.md
-    - name: select
-      href: select.md
-      items:
-      - name: select disk
-        href: select-disk.md
-      - name: select partition
-        href: select-partition.md
-      - name: select vdisk
-        href: select-vdisk.md
-      - name: select volume
-        href: select-volume.md
     - name: serverceipoptin
       href: serverceipoptin.md
     - name: servermanagercmd
@@ -1269,19 +1323,8 @@
       href: services-for-network-file-system-command-reference.md
     - name: set environmental variables
       href: set_1.md
-    - name: set shadow copy
-      href: set.md
-      items:
-      - name: set context
-        href: set-context.md
-      - name: set id
-        href: set-id.md
-      - name: set metadata
-        href: set-metadata.md
-      - name: set option
-        href: set-option.md
-      - name: set verbose
-        href: set-verbose.md
+    - name: setlocal
+      href: setlocal.md  
     - name: setx
       href: setx.md
     - name: sfc
@@ -1292,8 +1335,6 @@
       href: shift.md
     - name: showmount
       href: showmount.md
-    - name: shrink
-      href: shrink.md
     - name: shutdown
       href: shutdown.md
     - name: simulate restore
@@ -1388,10 +1429,6 @@
       href: typeperf.md
     - name: tzutil
       href: tzutil.md
-    - name: unexpose
-      href: unexpose.md
-    - name: uniqueid
-      href: uniqueid.md
     - name: unlodctr
       href: unlodctr.md
     - name: ver
@@ -1529,6 +1566,8 @@
         href: wdsutil-get-drivergroup.md
       - name: wdsutil get driverpackage
         href: wdsutil-get-driverpackage.md
+      - name: wdsutil get driverpackagefile
+        href: wdsutil-get-driverpackagefile.md  
       - name: wdsutil get image
         href: wdsutil-get-image.md
       - name: wdsutil get imagefile
@@ -1639,8 +1678,6 @@
       href: winsat-mfmedia.md
     - name: wmic
       href: wmic.md
-    - name: writer
-      href: writer.md
     - name: wscript
       href: wscript.md
     - name: xcopy

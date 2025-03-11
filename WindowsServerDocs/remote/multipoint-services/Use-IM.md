@@ -3,9 +3,9 @@ title: Use IM
 description: Learn how to use instant messaging in MultiPoint Services
 ms.topic: article
 ms.assetid: 475cde97-d05c-4589-afa9-96db891bd271
-author: lizap
+author: robinharwood
 manager: dongill
-ms.author: elizapo
+ms.author: roharwoo
 ms.date: 08/04/2016
 ---
 # Use IM
@@ -13,7 +13,7 @@ If it has been enabled in the server settings, MultiPoint Dashboard users and st
 
 #### To send a chat message from the MultiPoint Dashboard to a user
 
-1.  In MultiPoint Dashboard, click the thumbnail image or images of the user ypu want to send a message.
+1.  In MultiPoint Dashboard, click the thumbnail image or images of the user you want to send a message.
 
 2.  Click **Send** in the ribbon - an IM chat window opens.
 

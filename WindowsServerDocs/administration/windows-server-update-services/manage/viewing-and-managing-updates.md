@@ -3,14 +3,14 @@ title: Viewing and Managing Updates
 description: Windows Server Update Service (WSUS) article - How to view and manage updates in the WSUS console
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 01/12/2023
+ms.author: roharwoo
+author: robinharwood
+manager: femila
+ms.date: 08/11/2023
 ---
 # Viewing and Managing Updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 You can use the WSUS console to view and manage updates.
 
@@ -20,7 +20,7 @@ On the **Updates** page, you can do the following:
 
 - View updates. The update overview displays updates that have been synchronized from the update source to your WSUS server and are available for approval.
 
-- Filter updates. In the default view, you can filter updates by approval status and installation status. The default setting is for unapproved updates that are needed by some clients or that's'had installation failures on some clients. You can change this view by changing the approval status and installation status filters, and then clicking **Refresh**.
+- Filter updates. In the default view, you can filter updates by approval status and installation status. The default setting is for unapproved updates that are needed by some clients or that had installation failures on some clients. You can change this view by changing the approval status and installation status filters, and then clicking **Refresh**.
 
 - Create new update views. In the **Actions** pane, select **New Update View**. You can filter updates by classification, product, the group for which they've been approved, and synchronization date. You can sort the list by clicking the appropriate column heading in the title bar.
 
@@ -154,13 +154,16 @@ Update classifications represent the type of update. For any given product or pr
 |--|--|
 |Critical Updates|Broadly released fixes for specific problems addressing critical, non-security related bugs.|
 |Definition Updates|Updates to virus or other definition files.|
+| Driver Sets | Packages of software modules designed to support the hardware of a specific model of computing device. |
 |Drivers|Software components designed to support new hardware.|
 |Feature packs|New feature releases, usually rolled into products at the next release.|
+|Hotfix| A single package composed of one or more files used to address an issue in a product. Hotfixes address a specific situation reported by one or more customers and aren't widely available. The classification only appears when you import a hotfix from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/).<br><br>Hotfixes were only published for Windows 8.1, Windows Server 2012 R2 and earlier.|
 |Security updates|Broadly released fixes for specific products, addressing security issues.|
 |Service packs|Cumulative sets of all hotfixes, security updates, critical updates, and updates created since the release of the product. Service packs might also contain a limited number of customer-requested design changes or features.|
 |Tools|Utilities or features that aid in accomplishing a task or set of tasks.|
 |Update rollups|A cumulative set of hotfixes, security updates, critical updates, and other updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a specific component, such as Internet Information Services (IIS).|
 |Updates|Broadly released fixes for specific problems addressing non-critical, non-security related bugs.|
+| Upgrades | New product releases upgrading a device to the next version. Upgrades contain bug fixes, design changes and other feature. |
 
 ## Icons used for updates in Windows Server Update Services
 

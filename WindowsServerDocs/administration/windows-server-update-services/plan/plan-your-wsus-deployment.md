@@ -3,14 +3,14 @@ title: Plan Your WSUS Deployment
 description: Windows Server Update Service (WSUS) - An overview of the deployment planning process with links to the related articles
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
-ms.date: 04/21/2023
+ms.date: 03/06/2025
 ---
 # Plan your WSUS deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
@@ -28,7 +28,7 @@ The first step in the deployment of Windows Server Update Services (WSUS) is to 
 
 ### System Requirements
 
-Hardware and database software requirements are driven by the number of client computers being updated in your organization.  Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
+Hardware and database software requirements are driven by the number of client computers being updated in your organization. Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
 
 - Server hardware requirements to enable WSUS role are bound to hardware requirements. The minimum hardware requirements for WSUS are:
 
@@ -77,7 +77,7 @@ During the installation process, WSUS will install the following items by defaul
 
 ### UUP considerations
 <!--max7633666-->
-Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the [Unified Update Platform (UUP)](/windows/deployment/update/windows-update-overview). UUP on-premises interoperates with WSUS and [Microsoft Configuration Manager](/mem/configmgr/sum/). The Windows 11, version 22H2 feature update will be updated monthly so you can easily deploy the latest build to your clients. UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. Clients that update using on-premises UUP gain the following capabilities:
+Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the [Unified Update Platform (UUP)](/windows/deployment/update/windows-update-overview). UUP on-premises interoperates with WSUS and [Microsoft Configuration Manager](/mem/configmgr/sum/). The Windows 11, version 22H2 feature update will be updated monthly so you can easily deploy the latest build to your clients. UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. While UUP updates can't be [removed](../manage/updates-operations.md#approving-updates-for-removal) through WSUS, clients that update using on-premises UUP gain the following capabilities:
 
 - Ability for end users to acquire Features on Demand and language packs in WSUS or Configuration Manager environments.
 - Automatic corruption repair
@@ -249,14 +249,14 @@ If you install multiple WSUS servers, you must maintain a separate database for 
 SQL Server, SQL Server Express, and Windows Internal Database provide the same performance characteristics for a single-server configuration, where the database and the WSUS service are located on the same computer. A single-server configuration can support several thousand WSUS client computers.
 
 > [!NOTE]
-> Do not attempt to manage WSUS by accessing the database directly. directly manipulating the database can cause database corruption. The corruption might not be immediately obvious, but it can prevent upgrades to the next version of the product. You can manage WSUS by using the WSUS console or WSUS application programming interfaces (APIs).
+> Do not attempt to manage WSUS by accessing the database directly. Directly manipulating the database can cause database corruption. The corruption might not be immediately obvious, but it can prevent upgrades to the next version of the product. You can manage WSUS by using the WSUS console or WSUS application programming interfaces (APIs).
 
 #### WSUS with Windows Internal Database
 
 By default, the installation wizard creates and uses a Windows Internal Database that is named SUSDB.mdf. This database is located in the %windir%\wid\data\ folder, where %windir% is the local drive on which the WSUS server software is installed.
 
 > [!NOTE]
-> Windows Internal Database (WID) was introduced in Windows Server 2008 .
+> Windows Internal Database (WID) was introduced in Windows Server 2008.
 
 WSUS supports Windows authentication only for the database. You can't use SQL Server authentication with WSUS. If you use Windows Internal Database for the WSUS database, WSUS Setup creates an instance of SQL Server that is named server\Microsoft##WID, where server is the name of the computer. With either database option, WSUS Setup creates a database named SUSDB. The name of this database isn't configurable.
 
@@ -290,7 +290,10 @@ You can select a different update storage solution for each WSUS server that you
 
 Local storage of update files is the default option when you install and configure WSUS. This option can save bandwidth on the corporate connection to the Internet because client computers download updates directly from the local WSUS server.
 
-This option requires that the server has sufficient disk space to store all needed updates. at a minimum, WSUS requires 20 GB to store updates locally; however, we recommend 30 GB based on tested variables.
+This option requires that the server has sufficient disk space to store all needed updates. At a minimum, WSUS requires 20 GB to store updates locally; however, we recommend at least 40 GB. For more information about projecting the amount of disk space required, see [system requirements](#system-requirements) and [UUP considerations](#uup-considerations).
+
+> [!IMPORTANT]
+> Choose a secure folder that only administrators can access for local storage of updates.
 
 #### Remote storage on Microsoft Update servers
 
@@ -349,7 +352,7 @@ Choosing languages for an upstream server isn't the same as choosing languages f
 WSUS allows you to target updates to groups of client computers, so you can ensure that specific computers always get the right updates at the most convenient times. For example, if all the computers in one department (such as the Accounting team) have a specific configuration, you can set up a group for that team, decide which updates their computers need and what time they should be installed, and then use WSUS reports to evaluate the updates for the team.
 
 > [!NOTE]
-> If a WSUS server is running in replica mode, computer groups can't be created on that server. All the computer groups that are needed for client computers of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see Manage WSUS Replica Servers [Manage WSUS Replica Servers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939893(v=ws.10)) in the WSUS 3.0 SP2 Operations Guide.
+> If a WSUS server is running in replica mode, computer groups can't be created on that server. All the computer groups that are needed for client computers of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see [Run WSUS Replica mode](../manage/running-wsus-replica-mode.md).
 
 Computers are always assigned to the **All computers** group, and they remain assigned to the **Unassigned computers** group until you assign them to another group. Computers can belong to more than one group.
 
@@ -402,7 +405,7 @@ Install actions override uninstall actions. Required installs override optional 
 
 #### Priority of Deadlines
 
-Actions that have a deadline override those with no deadline.  Actions with earlier deadlines override those with later deadlines.
+Actions that have a deadline override those with no deadline. Actions with earlier deadlines override those with later deadlines.
 
 ## 1.6. Plan WSUS performance considerations
 
@@ -451,7 +454,7 @@ Not all updates are good candidates for distribution by using express installati
 
 When you deploy large updates (such as service packs), you can avoid saturating the network by using the following practices:
 
-1. Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, please see [Group Policies](/windows/win32/bits/group-policies).
+1. Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, see [Group Policies](/windows/win32/bits/group-policies).
 
 1. Use Internet Information Services (IIS) throttling to limit throttling to one or more web services.
 

@@ -4,7 +4,7 @@ ms.assetid: 503733f8-be0c-429c-81f0-cd4205e8b118
 title: Checklist - Creating Claim Rules for a Claims Provider Trust
 author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.author: billmath
 ---

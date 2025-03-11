@@ -1,10 +1,24 @@
 - name: Security and Assurance
   href: security-and-assurance.yml
   items:
+  - name: Windows Server 2025 Security Book
+    href: https://aka.ms/ws2025securitybook
   - name: Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
     href: gdpr/gdpr-winserver-whitepaper.md
   - name: Secured-core server
     href: secured-core-server.md
+  - name: Configure Secured-core Server
+    href: configure-secured-core-server.md
+  - name: Kernel Mode Hardware-enforced Stack Protection
+    href: kernel-mode-hardware-stack-protection.md  
+  - name: OSConfig
+    items:
+    - name: OSConfig overview
+      href: osconfig/osconfig-overview.md
+    - name: 'OSConfig: How to configure security baselines'
+      href: osconfig/osconfig-how-to-configure-security-baselines.md
+    - name: 'OSConfig: How to configure App Control for Business'
+      href: osconfig/osconfig-how-to-configure-app-control-for-business.md
   - name: Set up HGS for a guarded fabric and shielded VMs
     href: guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
     items:
@@ -120,17 +134,6 @@
         href: guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md
       - name: Upgrade a guarded fabric to Windows Server 2019
         href: guarded-fabric-shielded-vm/guarded-fabric-upgrade-to-2019.md
-    - name: Troubleshoot
-      href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md
-      items:
-      - name: Guarded Fabric Diagnostic Tool
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md
-      - name: HGS
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md
-      - name: Guarded Hosts
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md
-      - name: Shielded VMs
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md
   - name: Device Health attestation
     href: device-health-attestation.md
   - name: Disabling System Services in Windows Server 2016
@@ -161,31 +164,27 @@
     items:
     - name: Configuring additional LSA Protection
       href: credentials-protection-and-management/configuring-additional-lsa-protection.md
-    - name: What's New in Credential Protection
-      href: credentials-protection-and-management/whats-new-in-credential-protection.md
-    - name: Protect derived domain credentials with Credential Guard
-      href: /windows/security/identity-protection/credential-guard/credential-guard
-    - name: Protect Remote Desktop credentials with Remote Credential Guard
-      href: /windows/security/identity-protection/remote-credential-guard
+    - name: Credential Guard
+      items:
+       - name: Overview
+         href: /windows/security/identity-protection/credential-guard?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: How Credential Guard Works
+         href: /windows/security/identity-protection/credential-guard/how-it-works?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: Configure Credential Guard
+         href: /windows/security/identity-protection/credential-guard/configure?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: Additional mitigations 
+         href: /windows/security/identity-protection/credential-guard/additional-mitigations?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: Considerations and known issues
+         href: /windows/security/identity-protection/credential-guard/considerations-known-issues?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
+       - name: Protect Remote Desktop credentials with Remote Credential Guard
+         href: /windows/security/identity-protection/remote-credential-guard?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Protected Users Security Group
       href: credentials-protection-and-management/protected-users-security-group.md
     - name: Authentication Policies and Authentication Policy Silos
       href: credentials-protection-and-management/authentication-policies-and-authentication-policy-silos.md
-  - name: Group Managed Service Accounts
-    href: group-managed-service-accounts/group-managed-service-accounts-overview.md
-    items:
-    - name: Getting started with Group Managed Service Accounts
-      href: group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
-      items:
-      - name: Create the Key Distribution Services KDS Root Key
-        href: group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
-      - name: Configuring Kerberos delegation for group Managed Service Accounts
-        href: group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
   - name: Kerberos Authentication
     href: kerberos/kerberos-authentication-overview.md
     items:
-    - name: What's new in Kerberos authentication
-      href: kerberos/whats-new-in-kerberos-authentication.md
     - name: Domain-joined Device Public Key Authentication
       href: kerberos/domain-joined-device-public-key-authentication.md
     - name: Kerberos Constrained delegation
@@ -203,7 +202,7 @@
       href: kerberos/passwords-technical-overview.md
     - name: System key utility technical overview
       href: kerberos/system-key-utility-technical-overview.md
-  - name: RPC Interface Restriction 
+  - name: RPC Interface Restriction
     href: rpc-interface-restrict.md
   - name: TLS - SSL (Schannel SSP)
     href: tls/tls-ssl-schannel-ssp-overview.md
@@ -212,7 +211,7 @@
       href: tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server.md
     - name: Manage TLS
       href: tls/manage-tls.md
-    - name: TLS Registry Settings
+    - name: TLS registry settings
       href: tls/tls-registry-settings.md
     - name: Schannel Security Support Provider Technical Reference
       href: tls/schannel-security-support-provider-technical-reference.md

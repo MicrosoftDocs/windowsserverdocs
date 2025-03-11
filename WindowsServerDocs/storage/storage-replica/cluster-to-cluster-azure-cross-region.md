@@ -1,20 +1,18 @@
 ---
-title: Cluster to Cluster Storage Replica cross region in Azure
-description: Cluster to Cluster Storage Replication cross region in Azure
+title: Cluster-to-cluster storage replication cross-region in Azure
+description: Cluster-to-cluster storage replication cross-region in Azure
 author: arduppal
-ms.author: arduppal
+ms.author: roharwoo
 ms.date: 12/19/2018
 ms.topic: article
 manager: mchad
 ---
-# Cluster to Cluster Storage Replica cross region in Azure
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+# Cluster to Cluster Storage Replication Cross-Region in Azure
 
 You can configure Cluster to Cluster Storage Replicas for cross-region applications in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
 
 Watch the video below for a complete walk-through of the process.
-> [!video https://www.microsoft.com/videoplayer/embed/RE26xeW]
+> [!video https://learn-video.azurefd.net/vod/player?id=677e525a-62b6-44c6-bf88-03de796b54ce]
 
 ![The architecture diagram showcasing C2C SR in Azure withing same region.](media/Cluster-to-cluster-azure-cross-region/architecture.png)
 > [!IMPORTANT]
@@ -41,7 +39,7 @@ Watch the video below for a complete walk-through of the process.
 
 5. Create Windows Server [virtual machines](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the previously created resource groups.
 
-   Domain Controller (**az2azDC**). You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability set. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation.
+   Domain Controller (**az2azDC**). You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability sets. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation.
       - Install Active Directory Domain Service.
       - Create a domain (contoso.com)
       - Create a user with administrator privileges (contosoadmin)
@@ -155,7 +153,7 @@ Watch the video below for a complete walk-through of the process.
     - Copy the storage account name and key from "access keys"
     - Create the cloud witness from "failover cluster manager" and use the above account name and key to create it.
 
-14. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step
+14. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#run-cluster-validation-tests) before moving on to the next step
 
 15. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
 
@@ -186,5 +184,5 @@ Run the command:
 ```powershell
 PowerShell
 
-New-SRPartnership -SourceComputerName SRAZC1 -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\DataDisk1 -SourceLogVolumeName  g: -DestinationComputerName SRAZCross -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\DataDiskCross -DestinationLogVolumeName  g:
+New-SRPartnership -SourceComputerName SRAZC1 -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\DataDisk1 -SourceLogVolumeName  g: -DestinationComputerName SRAZCross -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\DataDiskCross -DestinationLogVolumeName  g: -LogType Raw
 ```

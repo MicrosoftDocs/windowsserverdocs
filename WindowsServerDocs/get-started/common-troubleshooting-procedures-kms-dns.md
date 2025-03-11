@@ -4,7 +4,7 @@ title: Guidelines for troubleshooting DNS-related activation issues
 ms.topic: troubleshooting
 ms.date: 09/10/2019
 author: Teresa-Motiv
-ms.author: wscontent
+ms.author: roharwoo
 ---
 
 # Guidelines for troubleshooting DNS-related activation issues
@@ -182,8 +182,6 @@ To manually create an SRV record for a KMS host that uses a BIND 9.x-compliant D
 - Port: **1688**
 - Hostname: **&lt;*FQDN or A-Name of the KMS host*&gt;**
 
-> [!NOTE]
-> KMS does not use the **Priority** or **Weight** values. However, the record must include them.
 
 To configure a BIND 9.x-compatible DNS server to support KMS auto-publishing, configure the DNS server to enable resource record updates from KMS hosts. For example, add the following line to the zone definition in Named.conf or in Named.conf.local:
 

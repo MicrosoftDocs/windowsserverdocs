@@ -4,14 +4,12 @@ description: Learn about the network subsystem and for links to other topics in 
 ms.topic: article
 ms.assetid: 45217fce-bfb9-47e8-9814-88ffdb3c7b7d
 manager: dcscontentpm
-ms.author: wscontent
+ms.author: roharwoo
 author: Teresa-Motiv
 ms.date: 10/27/2021
 ---
 
 # Network Subsystem Performance Tuning
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 You can use this topic for an overview of the network subsystem and for links to other topics in this guide.
 

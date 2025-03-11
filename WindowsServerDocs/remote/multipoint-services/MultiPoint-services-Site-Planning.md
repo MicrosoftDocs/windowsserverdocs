@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: evaseydl
 manager: scottman
-ms.author: evas
+ms.author: roharwoo
 ---
 # MultiPoint Services Site Planning
 You should consider the location where one or more computers running MultiPoint Services and its associated stations will be deployed.

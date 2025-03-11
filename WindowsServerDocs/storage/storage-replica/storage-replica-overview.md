@@ -1,16 +1,14 @@
 ---
-description: "Learn more about: Storage Replica overview"
-title: Storage Replica Overview
+description: Storage Replica overview
+title: Overview of the Windows Storage Replica feature
 manager: siroy
-ms.author: billy
+ms.author: roharwoo
 ms.topic: how-to
-author: wbsmolen
+author: robinharwood
 ms.date: 10/04/2022
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
-# Storage Replica overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+# Storage Replica Overview
 
 Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync.
 
@@ -196,5 +194,5 @@ For a list of new features in Storage Replica in Windows Server 2019, see [What'
 * [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica: Known Issues](storage-replica-known-issues.md)
 * [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-* [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+* [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

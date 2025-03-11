@@ -11,7 +11,8 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "ZonePivotGroups": "Toc"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
@@ -75,6 +76,18 @@
     {
       "path_to_root": "_azuredocs",
       "url": "https://github.com/MicrosoftDocs/azure-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "WindowsServerDocs/reusable-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "windowsserverdocs-pr",
+      "url": "https://github.com/MicrosoftDocs/remote-desktop-client-archive-pr/",
       "branch": "main",
       "branch_mapping": {}
     }

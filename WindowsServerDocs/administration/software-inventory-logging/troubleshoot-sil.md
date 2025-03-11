@@ -3,14 +3,14 @@ title: Troubleshoot Software Inventory Logging
 description: Describes how to resolve common Software Inventory Logging deployment issues.
 ms.topic: article
 author: brentfor
-ms.author: brentf
+ms.author: roharwoo
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # Troubleshoot Software Inventory Logging
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+
 
 ## Understanding SIL
 

@@ -3,15 +3,13 @@ description: "Learn more about: Deploy Access-Denied Assistance (Demonstration S
 ms.assetid: b035e9f8-517f-432a-8dfb-40bfc215bee5
 title: Deploy Access-Denied Assistance (Demonstration Steps)
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
-ms.date: 05/31/2017
+ms.date: 06/06/2023
 ms.topic: article
 ---
 
 # Deploy Access-Denied Assistance (Demonstration Steps)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to configure access-denied assistance, and verify that it is working properly.
 
@@ -221,6 +219,6 @@ You can verify that the access-denied assistance is configured correctly by havi
 
 -   [Scenario: Access-Denied Assistance](Scenario--Access-Denied-Assistance.md)
 
--   [Plan for Access-Denied Assistance](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)
+-   [Plan for Access-Denied Assistance](/previous-versions/orphan-topics/ws.11/jj574182(v=ws.11)?redirectedfrom=MSDN)
 
 -   [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)

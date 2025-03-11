@@ -4,8 +4,8 @@ description: Introduces the advanced Server Message Block (SMB) troubleshooting 
 author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
-ms.author: delhan
-ms.date: 12/12/2022
+ms.author: roharwoo
+ms.date: 08/08/2023
 ---
 
 # Advanced Troubleshooting Server Message Block (SMB)
@@ -55,13 +55,13 @@ This section provides the steps for using netshell to collect network trace.
 1. On both the SMB server and SMB client, create a **Temp** folder on drive **C**. Then, run the following command:
 
    ```cmd
-   netsh trace start capture=yes report=yes scenario=NetConnection level=5 maxsize=1024 tracefile=c:\\Temp\\%computername%\_nettrace.etl**
+   netsh trace start capture=yes report=yes scenario=NetConnection level=5 maxsize=1024 tracefile=c:\Temp\netTrace.etl
    ```
    
    If you are using PowerShell, run the following cmdlets:
    
    ```PowerShell
-   New-NetEventSession -Name trace -LocalFilePath "C:\Temp\$env:computername`_netCap.etl" -MaxFileSize 1024
+   New-NetEventSession -Name trace -LocalFilePath "C:\Temp\netTrace.etl" -MaxFileSize 1024
 
    Add-NetEventPacketCaptureProvider -SessionName trace -TruncationLength 1500
 
