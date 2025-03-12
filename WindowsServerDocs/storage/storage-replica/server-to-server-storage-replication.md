@@ -26,7 +26,7 @@ Here's an overview video of using Storage Replica in Windows Admin Center.
 - Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
 - At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.
 - Appropriate firewall and router rules to allow ICMP, SMB port 445, SMB Direct port 5445, and WS-MAN port 5985 bi-directional traffic between all nodes.
-- A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.
+- A network between servers with enough bandwidth to contain your IO write workload and an average of ~5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.
 - The replicated storage can't be located on the drive containing the Windows operating system folder.
 
 If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](#adding-an-azure-vm-connected-to-your-network-via-expressroute), a [Site-to-Site VPN gateway connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
@@ -226,7 +226,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
 ### Using Windows PowerShell
 
-Configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
+Configure server-to-server replication using Windows PowerShell. You must perform all of the steps on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
 
 1. Ensure you're using an elevated PowerShell console as an administrator.
 1. Configure the server-to-server replication, specifying the source and destination disks, the source and destination logs, the source and destination nodes, and the log size.
@@ -281,10 +281,10 @@ Configure server-to-server replication using Windows PowerShell. You must perfor
 
 1. Determine the replication progress as follows:
 
-   1. On the source server, run the following command and examine events 1237, 2200, 5001, 5002, 5004, and 5015:
+   1. On the source server, run the following command and examine event IDs 1237, 2200, 5001, 5002, 5004, and 5015:
 
       ```PowerShell
-      Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
+      Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -Max 20
       ```
 
    1. On the destination server, run the following command to see the Storage Replica events that show creation of the partnership. This event states the number of copied bytes and the time taken.
@@ -299,9 +299,9 @@ Configure server-to-server replication using Windows PowerShell. You must perfor
       Id           : 1215
       Message      : Block copy completed for replica.
 
-      ReplicationGroupName: rg02
+      ReplicationGroupName: RG02
       ReplicationGroupId: {616F1E00-5A68-4447-830F-B0B0EFBD359C}
-      ReplicaName: f:\
+      ReplicaName: F:\
       ReplicaId: {00000000-0000-0000-0000-000000000000}
       End LSN in bitmap:
       LogGeneration: {00000000-0000-0000-0000-000000000000}
@@ -320,7 +320,7 @@ Configure server-to-server replication using Windows PowerShell. You must perfor
       (Get-SRGroup).Replicas | Select-Object numofbytesremaining
       ```
 
-      As a progress sample (that won't terminate):
+      As a progress sample (that doesn't terminate):
 
       ```PowerShell
       while($true) {
@@ -331,7 +331,7 @@ Configure server-to-server replication using Windows PowerShell. You must perfor
       }
       ```
 
-   1. On the destination server, run the following command and examine events 1237, 2200, 5001, 5002, 5004, and 5015 to understand the processing progress. There should be no warnings of errors in this sequence. If several 1237 events occur, this indicates progress.
+   1. On the destination server, run the following command and examine event IDs 1237, 2200, 5001, 5002, 5004, and 5015 to understand the processing progress. There should be no warnings of errors in this sequence. If several event IDs 1237 occur, this indicates progress.
 
       ```PowerShell
       Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL
@@ -339,7 +339,7 @@ Configure server-to-server replication using Windows PowerShell. You must perfor
 
 ## Step 4: Manage replication
 
-Now you'll manage and operate your server-to-server replicated infrastructure. You can perform all of the steps on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
+Manage and operate your server-to-server replicated infrastructure. You can perform all of the steps on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
 
 1. Use `Get-SRPartnership` and `Get-SRGroup` to determine the current source and destination of replication and their status.
 
@@ -379,7 +379,13 @@ Now you'll manage and operate your server-to-server replicated infrastructure. Y
 1. To move the replication direction from one site, use the `Set-SRPartnership` cmdlet.
 
    ```PowerShell
-   Set-SRPartnership -NewSourceComputerName sr-srv06 -SourceRGName rg02 -DestinationComputerName sr-srv05 -DestinationRGName rg01
+   $params = @{
+      NewSourceComputerName  = 'SR-SRV06'
+      SourceRGName           = 'RG02'
+      DestinationComputerName = 'SR-SRV05'
+      DestinationRGName      = 'RG01'
+   }
+   Set-SRPartnership @params
    ```
 
    > [!WARNING]
@@ -411,22 +417,20 @@ Storage Replica has none of these limitations. It does, however, have several th
 - While it supports asynchronous replication, it's not designed for low bandwidth, high latency networks.
 - It doesn't allow user access to the protected data on the destination while replication is ongoing
 
-If these aren't blocking factors, Storage Replica allows you to replace DFS Replication servers with this newer technology. The process at a high level is to:
+If these aren't blocking factors, Storage Replica allows you to replace DFS Replication servers with this newer technology. The process at a high level that allows users to access their data is as follows:
 
-1. Install Windows Server on two servers and configure your storage. This could mean to upgrade an existing set of servers or cleanly installing.
-1. Ensure that any data you want to replicate exists on one or more data volumes and not on the C: drive.
-   1. You can also seed the data on the other server to save time, using a backup or file copies, and use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFS Replication.
-1. Share the data on your source server and make it accessible through a DFS namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.
-   1. You can create matching shares on the destination server, which will be unavailable during normal operations,
-   1. Don't add the destination server to the DFS Namespaces namespace, or if you do, ensure that all its folder targets are disabled.
-1. Enable Storage Replica replication and complete initial sync. Replication can be either synchronous or asynchronous.
-   1. However, synchronous is recommended in order to guarantee IO data consistency on the destination server.
-   1. We strongly recommend enabling Volume Shadow Copies and periodically taking snapshots with VSSADMIN or your other tools of choice. This guarantees applications flush their data files to disk consistently. If a disaster, you can recover files from snapshots on the destination server that might have been partially replicated asynchronously. Snapshots replicate along with files.
-1. Operate normally until there's a disaster.
-1. Switch the destination server to be the new source, which surfaces its replicated volumes to users.
-1. If using synchronous replication, no data restore will be necessary unless the user was using an application that was writing data without transaction protection (this is irrespective of replication) during loss of the source server. If using asynchronous replication, the need for a VSS snapshot mount is higher but consider using VSS in all circumstances for application consistent snapshots.
-1. Add the server and its shares as a DFS Namespaces folder target.
-1. Users can then access their data.
+1. Install or upgrade Windows Server on two servers and configure storage.
+1. Ensure data to be replicated is on data volumes, not the **C:** drive.
+   1. Optionally seed the data on the other server using backups or file copies.
+1. Share the data on the source server via a DFS namespace to maintain accessibility.
+   1. Create matching shares on the destination server; keep them disabled in DFS Namespaces.
+1. Enable Storage Replica replication and complete the initial sync.
+   1. Prefer synchronous replication for data consistency.
+   1. Enable Volume Shadow Copies and periodically take snapshots for data consistency.
+1. Operate normally until a disaster occurs.
+1. Switch the destination server to the new source to surface replicated volumes.
+   1. With synchronous replication, minimal data restoration is needed; with asynchronous, use VSS snapshots if necessary.
+1. Add the server and shares to DFS Namespaces as folder targets.
 
 > [!NOTE]
 > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, experienced personnel might be unavailable.
