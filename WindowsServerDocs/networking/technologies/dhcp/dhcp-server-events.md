@@ -1,5 +1,5 @@
 ---
-title: DHCP server events for Windows Server
+title: Dynamic Host Configuration Protocol (DHCP) server events
 description: View a summary of DHCP server events for operational, administrative, system, filter, and audit events.
 ms.topic: troubleshooting-general
 author: meaghanlewis
@@ -187,8 +187,8 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1035     | EVENT_SERVER_READ_ONLY_GROUP_ERROR | The DHCP service was unable to create or look up the DHCP Users local group on this computer. The error code is in the data. |
 | 1036     | EVENT_SERVER_ADMIN_GROUP_ERROR | The DHCP server was unable to create or look up the DHCP Administrators local group on this computer. The error code is in the data. |
 | 1037     | EVENT_SERVER_CLEANUP_STARTED | The DHCP service has started to clean up the database. |
-| 1038     | EVENT_SERVER_IPCLEANUP_FINISHED | The DHCP service has cleaned up the database for unicast IP addresses-- %1 leases have been recovered and %2 records have been removed from the database. |
-| 1039     | EVENT_SERVER_MCASTCLEANUP_FINISHED | The DHCP service has cleaned up the database for multicast IP addresses-- %1 leases have expired (been marked for deletion) and %2 records have been removed from the database. |
+| 1038     | EVENT_SERVER_IPCLEANUP_FINISHED | The DHCP service has cleaned up the database for unicast IP addresses--%1 leases have been recovered and %2 records have been removed from the database. |
+| 1039     | EVENT_SERVER_MCASTCLEANUP_FINISHED | The DHCP service has cleaned up the database for multicast IP addresses--%1 leases have expired (been marked for deletion) and %2 records have been removed from the database. |
 | 1040     | EVENT_SERVER_DATABASE_RESTORE_SUCCEEDED | The DHCP service successfully restored the database. |
 | 1041     | DHCP_ROGUE_EVENT_NO_NETWORK | The DHCP service isn't servicing any DHCPv4 clients because none of the active network interfaces have statically configured IPv4 addresses, or there are no active interfaces. |
 | 1042     | DHCP_ROGUE_EVENT_UNAUTHORIZED_INFO | The DHCP/BINL service running on this machine has detected a server on the network. If the server does not belong to any domain, the domain is listed as empty. The IP address of the server is listed in parentheses. %1 |
@@ -216,8 +216,8 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1064     | EVENT_SERVER_BOOTP_FULL | There are no IP addresses available for BOOTP clients in the scope or superscope %1. |
 | 1065     | EVENT_SERVER_ORPHONED_ENTRIES_DELETED | There were some orphaned entries deleted in the configuration due to the deletion of a class or an option definition. Please recheck the server configuration. |
 | 1144     | EVENT_SERVER_NEED_STATIC_IP | This computer has at least one dynamically assigned IP address. For reliable DHCP Server operation, you should use only static IP addresses. |
-| 1338     | EVENT_SERVER_OFFER_QUEUE_FULL | The number of pending DHCPOFFER messages for delayed transmission to the client has exceeded the server's capacity of 1000 pending messages. The DHCP server will drop all subsequent DHCPDISCOVER messages for which the DHCPOFFER message response needs to be delayed as per the server configuration. The DHCP server will continue to process DHCPDISCOVER messages for which the DHCPOFFER message responses don't need to be delayed. The DHCP server will resume processing all DHCPDISCOVER messages once the number of pending DHCPOFFER messages for delayed transmission to the client is below the server's capacity. |
-| 1339     | EVENT_SERVER_OFFER_QUEUE_FUNCTIONAL | The number pending DHCPOFFER messages for delayed transmission to the client are now below the server's capacity of 1000. The DHCP server will now resume processing all DHCPDISCOVER messages. |
+| 1338     | EVENT_SERVER_OFFER_QUEUE_FULL | The number of pending DHCPOFFER messages for delayed transmission to the client has exceeded the server's capacity of 1,000 pending messages. The DHCP server will drop all subsequent DHCPDISCOVER messages for which the DHCPOFFER message response needs to be delayed as per the server configuration. The DHCP server will continue to process DHCPDISCOVER messages for which the DHCPOFFER message responses don't need to be delayed. The DHCP server will resume processing all DHCPDISCOVER messages once the number of pending DHCPOFFER messages for delayed transmission to the client is below the server's capacity. |
+| 1339     | EVENT_SERVER_OFFER_QUEUE_FUNCTIONAL | The number pending DHCPOFFER messages for delayed transmission to the client are now below the server's capacity of 1,000. The DHCP server will now resume processing all DHCPDISCOVER messages. |
 | 1340     | EVENT_SERVER_DNSDHCID_FAIL | The DNS registration for DHCPv4 Client IP address %1, FQDN %2, and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
 | 1341     | EVENT_SERVER_POLICY_RANGES_FULL | There are no IP addresses available for lease in IP address range(s) of the policy %1 in scope %2. |
 | 1342     | EVENT_SERVER_RESIDUAL_RANGES_FULL | IP address range of scope %1 is out of IP addresses. |
