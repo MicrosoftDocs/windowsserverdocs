@@ -187,15 +187,15 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1035     | EVENT_SERVER_READ_ONLY_GROUP_ERROR | The DHCP service was unable to create or look up the DHCP Users local group on this computer. The error code is in the data. |
 | 1036     | EVENT_SERVER_ADMIN_GROUP_ERROR | The DHCP server was unable to create or look up the DHCP Administrators local group on this computer. The error code is in the data. |
 | 1037     | EVENT_SERVER_CLEANUP_STARTED | The DHCP service has started to clean up the database. |
-| 1038     | EVENT_SERVER_IPCLEANUP_FINISHED | The DHCP service has cleaned up the database for unicast IP addresses -- %1 leases have been recovered and %2 records have been removed from the database. |
-| 1039     | EVENT_SERVER_MCASTCLEANUP_FINISHED | The DHCP service has cleaned up the database for multicast IP addresses -- %1 leases have expired (been marked for deletion) and %2 records have been removed from the database. |
+| 1038     | EVENT_SERVER_IPCLEANUP_FINISHED | The DHCP service has cleaned up the database for unicast IP addresses-- %1 leases have been recovered and %2 records have been removed from the database. |
+| 1039     | EVENT_SERVER_MCASTCLEANUP_FINISHED | The DHCP service has cleaned up the database for multicast IP addresses-- %1 leases have expired (been marked for deletion) and %2 records have been removed from the database. |
 | 1040     | EVENT_SERVER_DATABASE_RESTORE_SUCCEEDED | The DHCP service successfully restored the database. |
 | 1041     | DHCP_ROGUE_EVENT_NO_NETWORK | The DHCP service isn't servicing any DHCPv4 clients because none of the active network interfaces have statically configured IPv4 addresses, or there are no active interfaces. |
 | 1042     | DHCP_ROGUE_EVENT_UNAUTHORIZED_INFO | The DHCP/BINL service running on this machine has detected a server on the network. If the server does not belong to any domain, the domain is listed as empty. The IP address of the server is listed in parentheses. %1 |
 | 1043     | DHCP_ROGUE_EVENT_STARTED | The DHCP/BINL service on the local machine has determined that it's authorized to start. It's servicing clients now. |
 | 1044     | DHCP_ROGUE_EVENT_STARTED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it's authorized to start. It's servicing clients now. |
 | 1045     | DHCP_ROGUE_EVENT_STOPPED | The DHCP/BINL service on the local machine has determined that it isn't authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine belongs to a workgroup and has encountered another DHCP Server (belonging to a Windows Administrative Domain) servicing the same network. %n%n%tAn unexpected network error occurred. |
-| 1046     | DHCP_ROGUE_EVENT_STOPPED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it isn't authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine is part of a directory service enterprise and isn't authorized in the same domain. (See help on the DHCP Service Management Tool for additional information). %n%n%tThis machine can't reach its directory service enterprise and it has encountered another DHCP service on the network belonging to a directory service enterprise on which the local machine isn't authorized. %n%n%tSome unexpected network error occurred. |
+| 1046     | DHCP_ROGUE_EVENT_STOPPED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it isn't authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine is part of a directory service enterprise and isn't authorized in the same domain. For more information, see the DHCP Service Management Tool. %n%n%tThis machine can't reach its directory service enterprise and it has encountered another DHCP service on the network belonging to a directory service enterprise on which the local machine isn't authorized. %n%n%tSome unexpected network error occurred. |
 | 1047     | DHCP_ROGUE_EVENT_JUST_UPGRADED | The DHCP/BINL service on the local machine has determined that it is authorized to start. It is servicing clients now. %nThe DHCP/BINL service has determined that the machine was recently upgraded. If the machine is intended to belong to a directory service enterprise, the DHCP service must be authorized in the directory service for it to start servicing clients. (See help on DHCP Service Management Tool for authorizing the server). |
 | 1048     | DHCP_ROGUE_EVENT_JUST_UPGRADED_DOMAIN | The DHCP/BINL Service on the local machine, belonging to Windows Domain %2, has determined that it is authorized to start. It is servicing clients now. It has determined that the computer was recently upgraded. It has also determined that either there's no directory service enterprise for the domain or that the computer isn't authorized in the directory service. All DHCP services that belong to a directory service enterprise should be authorized in the directory service to service clients. (See help on the DHCP Service Management Tool for authorizing a DHCP service in the directory service). |
 | 1049     | DHCP_ROGUE_EVENT_CANT_FIND_DOMAIN | The DHCP/BINL service on the local machine encountered an error while trying to find the domain of the local machine. The error was: %3. |
@@ -218,7 +218,7 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1144     | EVENT_SERVER_NEED_STATIC_IP | This computer has at least one dynamically assigned IP address. For reliable DHCP Server operation, you should use only static IP addresses. |
 | 1338     | EVENT_SERVER_OFFER_QUEUE_FULL | The number of pending DHCPOFFER messages for delayed transmission to the client has exceeded the server's capacity of 1000 pending messages. The DHCP server will drop all subsequent DHCPDISCOVER messages for which the DHCPOFFER message response needs to be delayed as per the server configuration. The DHCP server will continue to process DHCPDISCOVER messages for which the DHCPOFFER message responses don't need to be delayed. The DHCP server will resume processing all DHCPDISCOVER messages once the number of pending DHCPOFFER messages for delayed transmission to the client is below the server's capacity. |
 | 1339     | EVENT_SERVER_OFFER_QUEUE_FUNCTIONAL | The number pending DHCPOFFER messages for delayed transmission to the client are now below the server's capacity of 1000. The DHCP server will now resume processing all DHCPDISCOVER messages. |
-| 1340     | EVENT_SERVER_DNSDHCID_FAIL | The DNS registration for DHCPv4 Client IP address %1, FQDN %2 and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
+| 1340     | EVENT_SERVER_DNSDHCID_FAIL | The DNS registration for DHCPv4 Client IP address %1, FQDN %2, and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
 | 1341     | EVENT_SERVER_POLICY_RANGES_FULL | There are no IP addresses available for lease in IP address range(s) of the policy %1 in scope %2. |
 | 1342     | EVENT_SERVER_RESIDUAL_RANGES_FULL | IP address range of scope %1 is out of IP addresses. |
 | 1343     | EVENT_SERVER_POLICY_RANGES_LOW_ADDRESS_WARNING | Ip address range(s) for the scope %1 policy %2 is %3 percent full with only %4 IP addresses available. |
@@ -226,7 +226,7 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1376     | EVENT_SERVER_RESIDUAL_RANGES_LOW_ADDRESS_WARNING | IP address range of scope %1 is %2 percent full with only %3 IP addresses available. |
 | 1377     | EVENT_SERVER_SUPERSCOPE_LOW_ADDRESS_WARNING | SuperScope, %1, is %2 percent full with only %3 IP addresses remaining. This superscope has the following scopes %4 |
 | 10000    | EVENT_DHCPV6_ADDERESS_NACKED | DHCPv6 confirmation has been declined because the address wasn't appropriate to the link or DHCPv6 renew request has a Zero lifetime for Client Address %1. |
-| 10001    | EVENT_DHCPV6_REQUEST_RECEIVED_FOR_ADDRESSES_NOT_LEASED | Renew, rebind or confirm received for IPv6 addresses %1 for which there are no active lease available. |
+| 10001    | EVENT_DHCPV6_REQUEST_RECEIVED_FOR_ADDRESSES_NOT_LEASED | Renew, rebind, or confirm received for IPv6 addresses %1 for which there are no active lease available. |
 | 10002    | EVENT_DHCPV6_SERVER_UNKNOWN_OPTION | DHCPv6 service received the unknown option %1, with a length of %2. The raw option data is given below. |
 | 10003    | EVENT_DHCPV6_SERVER_SCOPE_FULL | There are no IPv6 addresses available to lease in the scope serving the network with Prefix %1. |
 | 10004    | EVENT_DHCPV6_SERVER_LEASE_DECLINED | The DHCPv6 client, %2, declined the address %1. |
@@ -293,6 +293,8 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20291    | DHCPv4.SendBndAckMessageRejectReason | A BINDING-ACK message with transaction id: %1 was sent for IP address: %2 with reject reason: (%3) to partner server: %4 for failover relationship: %5. |
 | 20292    | DHCPv4.RecvBndAckMessageRejectReason | A BINDING-ACK message with transaction id: %1 was received for IP address: %2 with reject reason: (%3) from partner server: %4 for failover relationship: %5. |
 
+</details>
+
 ## DHCP server system events
 
 <details>
@@ -318,6 +320,8 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20164    | DHCPv4HA.TotalLeasesDeleted | The total leases deleted in scavenger are %1 |
 | 20165    | DHCPv4HA.FailoverScopeDeleted | Scope %1 which was part of failover relationship %2 wasn't found in DHCP server database. Please restore the DHCP server database. |
 
+</details>
+
 ## DHCP server filter notification events
 
 <details>
@@ -325,10 +329,10 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
-| 20096    | EVENT_FILTER_DENIED_IN_DENY_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %4 and FQDN/Hostname %2 because it matched entry %3 in the Deny List. |
-| 20097    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %3 and FQDN/Hostname %2 because it didn't match any entry in the Allow List. |
-| 20099    | EVENT_FILTER_DENIED_IN_DENY_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %4 and unspecified FQDN/Hostname%2 because it matched entry %3 in the Deny List. |
-| 20100    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %3 and unspecified FQDN/Hostname%2 because it didn't match any entry in the Allow List. |
+| 20096    | EVENT_FILTER_DENIED_IN_DENY_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %4, and FQDN/Hostname %2 because it matched entry %3 in the Deny List. |
+| 20097    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %3, and FQDN/Hostname %2 because it didn't match any entry in the Allow List. |
+| 20099    | EVENT_FILTER_DENIED_IN_DENY_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %4, and unspecified FQDN/Hostname%2 because it matched entry %3 in the Deny List. |
+| 20100    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %3, and unspecified FQDN/Hostname%2 because it didn't match any entry in the Allow List. |
 
 </details>
 
