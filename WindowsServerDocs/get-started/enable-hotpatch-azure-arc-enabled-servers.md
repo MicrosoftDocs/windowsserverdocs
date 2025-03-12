@@ -4,7 +4,7 @@ description: Learn how to enable Hotpatch for Windows Server 2025 installations 
 ms.author: alalve
 ms.topic: how-to
 author: xelu86
-ms.date: 03/07/2025
+ms.date: 03/11/2025
 ---
 
 # Enable Hotpatch for Azure Arc-enabled servers (preview)
@@ -44,27 +44,39 @@ When you [enable Hotpatch using the Azure portal](#enable-hotpatch-preview-on-wi
 
 Alternatively, you can check the VSM status manually before enabling Hotpatch. VSM might be already enabled if you previously configured other features that (like Hotpatch) depend on VSM. Common examples of such features include [Credential guard](/windows/security/identity-protection/credential-guard) or [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity), also known as Hypervisor-protected code integrity (HVCI).
 
-1. Run either of the following commands and examine the output.
+> [!TIP]
+> You can use Group policy or another centralized management tool to enable one or more of the following features.
+>
+> - [Credential guard](/windows/security/identity-protection/credential-guard)
+> - [Credential Guard protected machine accounts](/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts)
+> - [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)
+> - [System Guard Secure Launch and SMM protection](/windows/security/hardware-security/system-guard-secure-launch-and-smm-protection)
+> - [Kernel Mode Hardware-enforced Stack Protection](/windows-server/security/kernel-mode-hardware-stack-protection)
+> - [Secured-core server](/windows-server/security/configure-secured-core-server)
+>
+> Configuring any of these features also enables VSM.
 
-   ### [PowerShell](#tab/powershell)
+To verify VSM is configured and running, select your preferred method and examine the output.
 
-   ```powershell
-   Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
-   ```
+### [PowerShell](#tab/powershell)
 
-   ### [Command Prompt](#tab/cmd)
+```powershell
+Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
+```
 
-   ```cmd
-   for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value ^| find "="') do @echo %a
-   ```
+### [Command Prompt](#tab/cmd)
 
-   ---
+```cmd
+for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value ^| find "="') do @echo %a
+```
 
-   If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
+---
 
-   If the output isn't `2`, continue with the next steps.
+If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
 
-1. Run one of the following commands to enable VSM.
+If the output isn't `2`, continue with the next steps.
+
+1. To enable VSM, run one of the following commands.
 
    ### [PowerShell](#tab/powershell)
 
@@ -79,18 +91,6 @@ Alternatively, you can check the VSM status manually before enabling Hotpatch. V
    ```
 
    ---
-
-   > [!TIP]
-   > Alternatively, you can use Group policy or another centralized management tool to enable one or more of the following features.
-   >
-   > - [Credential guard](/windows/security/identity-protection/credential-guard)
-   > - [Credential Guard protected machine accounts](/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts)
-   > - [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)
-   > - [System Guard Secure Launch and SMM protection](/windows/security/hardware-security/system-guard-secure-launch-and-smm-protection)
-   > - [Kernel Mode Hardware-enforced Stack Protection](/windows-server/security/kernel-mode-hardware-stack-protection)
-   > - [Secured-core server](/windows-server/security/configure-secured-core-server)
-   >
-   > Configuring any of these features also enables VSM.
 
 1. Restart your server.
 
@@ -110,9 +110,9 @@ Alternatively, you can check the VSM status manually before enabling Hotpatch. V
 
    ---
 
-   If the output still isn't `2`, VSM on your machine needs troubleshooting. The most likely reason is that the physical or virtual [hardware requirements](#prerequisites) aren't met. Refer to documentation from the vendor of your hardware or virtualization platform. For example, here's documentation for VMware vSphere: [Activate Virtualization-based Security on an Existing Virtual Machine](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security-7-0/securing-windows-guest-operating-systems-with-virtual-based-security/enable-virtualization-based-security-on-an-existing-virtual-machine.html).
+If the output still isn't `2`, VSM on your machine needs troubleshooting. The most likely reason is that the physical or virtual [hardware requirements](#prerequisites) aren't met. Refer to documentation from the vendor of your hardware or virtualization platform. For example, here's documentation for VMware vSphere: [Activate Virtualization-based Security on an Existing Virtual Machine](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security-7-0/securing-windows-guest-operating-systems-with-virtual-based-security/enable-virtualization-based-security-on-an-existing-virtual-machine.html).
 
-1. Once you successfully enabled VSM and made sure it's running, proceed to the next section.
+Once you successfully enabled VSM and made sure it's running, proceed to the next section.
 
 ## Enable Hotpatch preview on Windows Server 2025
 
