@@ -74,49 +74,51 @@ for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\
 
 If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
 
-If the output isn't `2`, you need to enable VSM. 
+If the output isn't `2`, you need to enable VSM.<br /><br />
 
 <details>
-<summary>To enable VSM., expand this section.</summary>
+  <summary>To enable VSM, expand this section.</summary>
 
-Enable VSM using one of the following commands.
+  Enable VSM using one of the following commands.
 
-### [PowerShell](#tab/powershell)
+  ### [PowerShell](#tab/powershell)
 
-```powershell
-New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -PropertyType 'Dword' -Value 1 -Force
-```
+  ```powershell
+  New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -PropertyType 'Dword' -Value 1 -Force
+  ```
 
-### [Command Prompt](#tab/cmd)
+  ### [Command Prompt](#tab/cmd)
 
-```cmd
-reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
-```
+  ```cmd
+  reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
+  ```
 
----
+  ---
 
-> [!TIP]
-> After you enable VSM, you need to restart your server.
+  > [!TIP]
+  > After you enable VSM, you need to restart your server.
 
-After you reboot, run one the following commands again verify that the output is now `2` to make sure VSM is now running.
+  After you reboot, run one the following commands again verify that the output is now `2` to make sure VSM is now running.
 
-### [PowerShell](#tab/powershell)
+  ### [PowerShell](#tab/powershell)
 
-```powershell
-Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
-```
+  ```powershell
+  Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
+  ```
 
-### [Command Prompt](#tab/cmd)
+  ### [Command Prompt](#tab/cmd)
 
-```cmd
-for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value ^| find "="') do @echo %a
-```
+  ```cmd
+  for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value ^| find "="') do @echo %a
+  ```
+
+  ---
+
+  If the output still isn't `2`, VSM on your machine needs troubleshooting. The most likely reason is that the physical or virtual [hardware requirements](#prerequisites) aren't met. Refer to documentation from the vendor of your hardware or   virtualization platform. For example, here's documentation for VMware vSphere, [Activate Virtualization-based Security on an Existing Virtual Machine](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security-7-0/securing-windows-guest-operating-systems-with-virtual-based-security/enable-virtualization-based-security-on-an-existing-virtual-machine.html).
+
+  Once you successfully enabled VSM and made sure it's running, proceed to the next section.
 
 </details>
-
-If the output still isn't `2`, VSM on your machine needs troubleshooting. The most likely reason is that the physical or virtual [hardware requirements](#prerequisites) aren't met. Refer to documentation from the vendor of your hardware or virtualization platform. For example, here's documentation for VMware vSphere: [Activate Virtualization-based Security on an Existing Virtual Machine](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security-7-0/securing-windows-guest-operating-systems-with-virtual-based-security/enable-virtualization-based-security-on-an-existing-virtual-machine.html).
-
-Once you successfully enabled VSM and made sure it's running, proceed to the next section.
 
 ## Enable Hotpatch preview on Windows Server 2025
 
