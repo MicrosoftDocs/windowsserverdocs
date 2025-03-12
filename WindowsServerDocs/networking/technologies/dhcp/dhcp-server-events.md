@@ -157,12 +157,12 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1003     | EVENT_SERVER_INIT_REGISTRY_FAILED | The DHCP service failed to initialize its registry parameters. The following error occurred: %n%1 |
 | 1004     | EVENT_SERVER_INIT_DATABASE_FAILED | The DHCP service failed to initialize the database. The following error occurred: %n%1 |
 | 1005     | EVENT_SERVER_INIT_WINSOCK_FAILED | The DHCP service failed to initialize Winsock startup. The following error occurred: %n%1 |
-| 1006     | EVENT_SERVER_INIT_RPC_FAILED | The DHCP service failed to start as a RPC server. The following error occurred : %n%1 |
+| 1006     | EVENT_SERVER_INIT_RPC_FAILED | The DHCP service failed to start as an RPC server. The following error occurred: %n%1 |
 | 1007     | EVENT_SERVER_INIT_SOCK_FAILED | The DHCP service failed to initialize Winsock data. The following error occurred: %n%1 |
 | 1008     | EVENT_SERVER_SHUTDOWN | The DHCP service is shutting down due to the following error: %n%1 |
 | 1009     | EVENT_SERVER_CLIENT_CLEANUP | The DHCP service encountered the following error while cleaning up the pending client records: %n%1 |
 | 1010     | EVENT_SERVER_DATABASE_CLEANUP | The DHCP service encountered the following error while cleaning up the database: %n%1 |
-| 1011     | EVENT_SERVER_LEASE_NACK | The DHCP service issued a NACK (negative acknowledgement message) to the client, %2, for the address, %1. |
+| 1011     | EVENT_SERVER_LEASE_NACK | The DHCP service issued a NACK (negative acknowledgment message) to the client, %2, for the address, %1. |
 | 1012     | EVENT_SERVER_LEASE_DECLINED | The DHCP client, %2, declined the address %1. |
 | 1013     | EVENT_SERVER_LEASE_RELEASE | The DHCP Client, %2, released the address %1. |
 | 1016     | EVENT_SERVER_DATABASE_BACKUP | The DHCP service encountered the following error when backing up the database: %n%1 |
@@ -172,7 +172,7 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1020     | EVENT_SERVER_LOW_ADDRESS_WARNING | Scope, %1, is %2 percent full with only %3 IP addresses remaining. |
 | 1021     | EVENT_SERVER_LOAD_JET_FAILED | The DHCP service couldn't load the JET database library successfully. |
 | 1022     | EVENT_SERVER_JET_CONV_REQUIRED | The DHCP service couldn't use the database. If this service was started for the first time after the upgrade from NT 3.51 or earlier, you need to run the utility, upg351db.exe, on the DHCP database to convert it to the new JET database format. Restart the DHCP service after you have upgraded the database. |
-| 1023     | EVENT_SERVER_JET_CONV_IN_PROGRESS | The DHCP service will now terminate because the existing database needs conversion to Windows 2000 format. The conversion via the jetconv process, has initiated. Don't reboot or stop the jetconv process. The conversion may take up to 10 minutes depending on the size of the database. Terminate DHCP now by clicking OK. This is required for the database conversion to succeed. NOTE: The DHCP service will be restarted automatically when the conversion is completed. To check conversion status, look at the Application event log for the jetconv process. |
+| 1023     | EVENT_SERVER_JET_CONV_IN_PROGRESS | The DHCP service will now terminate because the existing database needs conversion to Windows 2000 format. The conversion via the jetconv process has initiated. Don't reboot or stop the jetconv process. The conversion may take up to 10 minutes depending on the size of the database. Terminate DHCP now by clicking OK. This is required for the database conversion to succeed. NOTE: The DHCP service will be restarted automatically when the conversion is completed. To check conversion status, look at the Application event log for the jetconv process. |
 | 1024     | EVENT_SERVER_INIT_AND_READY | The DHCP service has initialized and is ready |
 | 1025     | EVENT_SERVER_BOOT_FILE_TABLE | The DHCP service was unable to read the BOOTP file table from the registry. The DHCP service will be unable to respond to BOOTP requests that specify the boot file name. |
 | 1026     | EVENT_SERVER_BOOT_FILE_NAME | The DHCP service was unable to read the global BOOTP file name from the registry. |
@@ -184,8 +184,8 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1032     | EVENT_SERVER_CALLOUT_LOAD_EXCEPTION | The installed server callout .dll file has caused an exception. The exception was: %n%1. The server has ignored this exception and the .dll file couldn't be loaded. |
 | 1033     | EVENT_SERVER_CALLOUT_LOAD_SUCCESS | The DHCP service has successfully loaded one or more callout DLLs. |
 | 1034     | EVENT_SERVER_READ_ONLY_GROUP_ERROR | The DHCP service has failed to load one or more callout DLLs. The following error occurred: %n%1 |
-| 1035     | EVENT_SERVER_READ_ONLY_GROUP_ERROR | The DHCP service was unable to create or lookup the DHCP Users local group on this computer. The error code is in the data. |
-| 1036     | EVENT_SERVER_ADMIN_GROUP_ERROR | The DHCP server was unable to create or lookup the DHCP Administrators local group on this computer. The error code is in the data. |
+| 1035     | EVENT_SERVER_READ_ONLY_GROUP_ERROR | The DHCP service was unable to create or look up the DHCP Users local group on this computer. The error code is in the data. |
+| 1036     | EVENT_SERVER_ADMIN_GROUP_ERROR | The DHCP server was unable to create or look up the DHCP Administrators local group on this computer. The error code is in the data. |
 | 1037     | EVENT_SERVER_CLEANUP_STARTED | The DHCP service has started to clean up the database. |
 | 1038     | EVENT_SERVER_IPCLEANUP_FINISHED | The DHCP service has cleaned up the database for unicast IP addresses -- %1 leases have been recovered and %2 records have been removed from the database. |
 | 1039     | EVENT_SERVER_MCASTCLEANUP_FINISHED | The DHCP service has cleaned up the database for multicast IP addresses -- %1 leases have expired (been marked for deletion) and %2 records have been removed from the database. |
@@ -204,7 +204,7 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1052     | DHCP_ROGUE_EVENT_OTHER_SERVER | The DHCP/BINL service on this workgroup server has encountered another server with IP Address, %1, belonging to the domain %2. |
 | 1053     | DHCP_ROGUE_EVENT_SAM_OTHER_SERVER | The DHCP/BINL service has encountered another server on this network with IP Address, %1, belonging to the domain: %2. |
 | 1054     | DHCP_ROGUE_EVENT_SHUTDOWN | The DHCP/BINL service on this computer is shutting down. See the previous event log messages for reasons. |
-| 1055     | DHCP_EVENT_DNS_REGPARAMS_FAILURE | The DHCP service was unable to impersonate the credentials necessary for DNS registrations: %n%1. The local system credentials is being used. |
+| 1055     | DHCP_EVENT_DNS_REGPARAMS_FAILURE | The DHCP service was unable to impersonate the credentials necessary for DNS registrations: %n%1. The local system credentials are being used. |
 | 1056     | DHCP_EVENT_NO_DNSCREDENTIALS_ON_DC | The DHCP service has detected that it is running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCP service. This isn't a recommended security configuration. Credentials for Dynamic DNS registrations may be configured using the command line, or via the DHCP Administrative tool. |
 | 1057     | EVENT_SERVER_DATABASE_CONVERSION | The DHCP service was unable to convert the temporary database to ESE format: %n%1. |
 | 1058     | EVENT_SERVER_INIT_CONFIG_FAILED | The DHCP service failed to initialize its configuration parameters. The following error occurred: %n%1 |
@@ -217,11 +217,11 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1065     | EVENT_SERVER_ORPHONED_ENTRIES_DELETED | There were some orphaned entries deleted in the configuration due to the deletion of a class or an option definition. Please recheck the server configuration. |
 | 1144     | EVENT_SERVER_NEED_STATIC_IP | This computer has at least one dynamically assigned IP address. For reliable DHCP Server operation, you should use only static IP addresses. |
 | 1338     | EVENT_SERVER_OFFER_QUEUE_FULL | The number of pending DHCPOFFER messages for delayed transmission to the client has exceeded the server's capacity of 1000 pending messages. The DHCP server will drop all subsequent DHCPDISCOVER messages for which the DHCPOFFER message response needs to be delayed as per the server configuration. The DHCP server will continue to process DHCPDISCOVER messages for which the DHCPOFFER message responses don't need to be delayed. The DHCP server will resume processing all DHCPDISCOVER messages once the number of pending DHCPOFFER messages for delayed transmission to the client is below the server's capacity. |
-| 1339     | EVENT_SERVER_OFFER_QUEUE_FUNCTIONAL | The number pending DHCPOFFER messages for delayed transmission to the client is now below the server's capacity of 1000. The DHCP server will now resume processing all DHCPDISCOVER messages. |
-| 1340     | EVENT_SERVER_DNSDHCID_FAIL | The DNS registration for DHCPv4 Client IP address %1 , FQDN %2 and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
+| 1339     | EVENT_SERVER_OFFER_QUEUE_FUNCTIONAL | The number pending DHCPOFFER messages for delayed transmission to the client are now below the server's capacity of 1000. The DHCP server will now resume processing all DHCPDISCOVER messages. |
+| 1340     | EVENT_SERVER_DNSDHCID_FAIL | The DNS registration for DHCPv4 Client IP address %1, FQDN %2 and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
 | 1341     | EVENT_SERVER_POLICY_RANGES_FULL | There are no IP addresses available for lease in IP address range(s) of the policy %1 in scope %2. |
 | 1342     | EVENT_SERVER_RESIDUAL_RANGES_FULL | IP address range of scope %1 is out of IP addresses. |
-| 1343     | EVENT_SERVER_POLICY_RANGES_LOW_ADDRESS_WARNING | Ip address range(s) for the scope %1 policy %2 is %3 percent full with only %4 IP addresses available . |
+| 1343     | EVENT_SERVER_POLICY_RANGES_LOW_ADDRESS_WARNING | Ip address range(s) for the scope %1 policy %2 is %3 percent full with only %4 IP addresses available. |
 | 1344     | EVENT_SERVER_DNS_VALIDATION_FAILED | The DNS IP Address %1 isn't a valid DNS Server Address. |
 | 1376     | EVENT_SERVER_RESIDUAL_RANGES_LOW_ADDRESS_WARNING | IP address range of scope %1 is %2 percent full with only %3 IP addresses available. |
 | 1377     | EVENT_SERVER_SUPERSCOPE_LOW_ADDRESS_WARNING | SuperScope, %1, is %2 percent full with only %3 IP addresses remaining. This superscope has the following scopes %4 |
@@ -318,7 +318,7 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20164    | DHCPv4HA.TotalLeasesDeleted | The total leases deleted in scavenger are %1 |
 | 20165    | DHCPv4HA.FailoverScopeDeleted | Scope %1 which was part of failover relationship %2 wasn't found in DHCP server database. Please restore the DHCP server database. |
 
-## DHCP erver filter notification events
+## DHCP server filter notification events
 
 <details>
     <summary>To view all server filter notification events, expand this section.</summary>
