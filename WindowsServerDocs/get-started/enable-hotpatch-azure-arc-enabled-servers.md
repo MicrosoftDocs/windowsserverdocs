@@ -74,41 +74,45 @@ for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\
 
 If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
 
-If the output isn't `2`, continue with the next steps.
+If the output isn't `2`, you need to enable VSM. 
 
-1. To enable VSM, run one of the following commands.
+<details>
+<summary>To enable VSM., expand this section.</summary>
 
-   ### [PowerShell](#tab/powershell)
+Enable VSM using one of the following commands.
 
-   ```powershell
-   New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -PropertyType 'Dword' -Value 1 -Force
-   ```
+### [PowerShell](#tab/powershell)
 
-   ### [Command Prompt](#tab/cmd)
+```powershell
+New-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\DeviceGuard' -Name 'EnableVirtualizationBasedSecurity' -PropertyType 'Dword' -Value 1 -Force
+```
 
-   ```cmd
-   reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
-   ```
+### [Command Prompt](#tab/cmd)
 
-   ---
+```cmd
+reg.exe add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
+```
 
-1. Restart your server.
+---
 
-1. After reboot, run one the following commands again verify that the output is now `2` to make sure VSM is now running.
+> [!TIP]
+> After you enable VSM, you need to restart your server.
 
-   ### [PowerShell](#tab/powershell)
+After you reboot, run one the following commands again verify that the output is now `2` to make sure VSM is now running.
 
-   ```powershell
-   Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
-   ```
+### [PowerShell](#tab/powershell)
 
-   ### [Command Prompt](#tab/cmd)
+```powershell
+Get-CimInstance -Namespace 'root/Microsoft/Windows/DeviceGuard' -ClassName 'win32_deviceGuard' | Select-Object -ExpandProperty 'VirtualizationBasedSecurityStatus'
+```
 
-   ```cmd
-   for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value ^| find "="') do @echo %a
-   ```
+### [Command Prompt](#tab/cmd)
 
-   ---
+```cmd
+for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\DeviceGuard path win32_deviceGuard GET VirtualizationBasedSecurityStatus /value ^| find "="') do @echo %a
+```
+
+</details>
 
 If the output still isn't `2`, VSM on your machine needs troubleshooting. The most likely reason is that the physical or virtual [hardware requirements](#prerequisites) aren't met. Refer to documentation from the vendor of your hardware or virtualization platform. For example, here's documentation for VMware vSphere: [Activate Virtualization-based Security on an Existing Virtual Machine](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security-7-0/securing-windows-guest-operating-systems-with-virtual-based-security/enable-virtualization-based-security-on-an-existing-virtual-machine.html).
 
