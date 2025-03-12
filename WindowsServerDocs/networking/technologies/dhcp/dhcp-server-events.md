@@ -31,8 +31,8 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 80       | DHCPv4.ScopeDNSUpdate_Always | Scope: %1 for IPv4 is Updated with DNS Settings by %2: to always dynamically update DNS A and PTR records. |
 | 81       | DHCPv4.ScopeDNSEnable_Discard | Scope: %1 for IPv4 is Enabled for DNS Settings by %2: to discard DNS A and PTR records when lease is deleted. |
 | 82       | DHCPv4.ScopeDNSDisable_Discard | Scope: %1 for IPv4 is Disabled for DNS Settings by %2: to discard DNS A and PTR records when lease is deleted. |
-| 83       | DHCPv4.ScopeDNSEnable_Update_Client_NoReq | Scope: %1 for IPv4 is Enabled for DNS Settings by %2: to dynamically update DNS A and PTR records for DHCP Clients that do not request updates. |
-| 84       | DHCPv4.ScopeDNSDisable_Update_Client_NoReq | Scope: %1 for IPv4 is Disabled for DNS Settings by %2: to dynamically update DNS A and PTR records for DHCP Clients that do not request updates. |
+| 83       | DHCPv4.ScopeDNSEnable_Update_Client_NoReq | Scope: %1 for IPv4 is Enabled for DNS Settings by %2: to dynamically update DNS A and PTR records for DHCP Clients that don't request updates. |
+| 84       | DHCPv4.ScopeDNSDisable_Update_Client_NoReq | Scope: %1 for IPv4 is Disabled for DNS Settings by %2: to dynamically update DNS A and PTR records for DHCP Clients that don't request updates. |
 | 85       | DHCPv4.ScopePBA_DeActivated | Policy based assignment has been disabled for scope %1. |
 | 86       | DHCPv4.ScopePBA_Activated | Policy based assignment has been enabled for scope %1. |
 | 87       | DHCPv4.ScopeDHCIDEnable | Name Protection setting is Enabled on Scope: %1 for IPv4 by %2. |
@@ -60,8 +60,8 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 111      | DHCPv4.ReservationDNSUpdate_Always | Reservation: %1 for IPv4 under Scope: %2 is Updated with DNS Settings by %3: to always dynamically update DNS A and PTR records. |
 | 112      | DHCPv4.ReservationDNSEnable_Discard | Reservation: %1 for IPv4 under Scope: %2 is Enabled for DNS Settings by %3: to discard DNS A and PTR records when lease is deleted. |
 | 113      | DHCPv4.ReservationDNSDisable_Discard | Reservation: %1 for IPv4 under Scope: %2 is Disabled for DNS Settings by %3: to discard DNS A and PTR records when lease is deleted. |
-| 114      | DHCPv4.ReservationDNSEnableUpdate_No_Req_by_Client | Reservation: %1 for IPv4 under Scope: %2 is Enabled for DNS Settings by %3: to dynamically update DNS A and PTR records for DHCP Clients that do not request updates. |
-| 115      | DHCPv4.ReservationDNSDisableUpdate_No_Req_by_Client | Reservation: %1 for IPv4 under Scope: %2 is Disabled for DNS Settings by %3: to dynamically update DNS A and PTR records for DHCP Clients that do not request updates. |
+| 114      | DHCPv4.ReservationDNSEnableUpdate_No_Req_by_Client | Reservation: %1 for IPv4 under Scope: %2 is Enabled for DNS Settings by %3: to dynamically update DNS A and PTR records for DHCP Clients that don't request updates. |
+| 115      | DHCPv4.ReservationDNSDisableUpdate_No_Req_by_Client | Reservation: %1 for IPv4 under Scope: %2 is Disabled for DNS Settings by %3: to dynamically update DNS A and PTR records for DHCP Clients that don't request updates. |
 | 116      | DHCPv4.ReservationOptionUpdate | Reservation: %1 for IPv4 under Scope: %2 is Updated with Option Setting: %3 by %4. |
 | 117      | DHCPv4.ServerPBA_DeActivated | Policy based assignment has been disabled at server level. |
 | 118      | DHCPv4.ServerPBA_Activated | Policy based assignment has been enabled at server level. |
@@ -170,18 +170,18 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1018     | EVENT_SERVER_DATABASE_RESTORE_FAILED | The DHCP service failed to restore the database. The following error occurred: %n%1 |
 | 1019     | EVENT_SERVER_CONFIG_RESTORE_FAILED | The DHCP service failed to restore the DHCP registry configuration. The following error occurred: %n%1 |
 | 1020     | EVENT_SERVER_LOW_ADDRESS_WARNING | Scope, %1, is %2 percent full with only %3 IP addresses remaining. |
-| 1021     | EVENT_SERVER_LOAD_JET_FAILED | The DHCP service could not load the JET database library successfully. |
-| 1022     | EVENT_SERVER_JET_CONV_REQUIRED | The DHCP service could not use the database. If this service was started for the first time after the upgrade from NT 3.51 or earlier, you need to run the utility, upg351db.exe, on the DHCP database to convert it to the new JET database format. Restart the DHCP service after you have upgraded the database. |
-| 1023     | EVENT_SERVER_JET_CONV_IN_PROGRESS | The DHCP service will now terminate because the existing database needs conversion to Windows 2000 format. The conversion via the jetconv process, has initiated. Do not reboot or stop the jetconv process. The conversion may take up to 10 minutes depending on the size of the database. Terminate DHCP now by clicking OK. This is required for the database conversion to succeed. NOTE: The DHCP service will be restarted automatically when the conversion is completed. To check conversion status, look at the Application event log for the jetconv process. |
+| 1021     | EVENT_SERVER_LOAD_JET_FAILED | The DHCP service couldn't load the JET database library successfully. |
+| 1022     | EVENT_SERVER_JET_CONV_REQUIRED | The DHCP service couldn't use the database. If this service was started for the first time after the upgrade from NT 3.51 or earlier, you need to run the utility, upg351db.exe, on the DHCP database to convert it to the new JET database format. Restart the DHCP service after you have upgraded the database. |
+| 1023     | EVENT_SERVER_JET_CONV_IN_PROGRESS | The DHCP service will now terminate because the existing database needs conversion to Windows 2000 format. The conversion via the jetconv process, has initiated. Don't reboot or stop the jetconv process. The conversion may take up to 10 minutes depending on the size of the database. Terminate DHCP now by clicking OK. This is required for the database conversion to succeed. NOTE: The DHCP service will be restarted automatically when the conversion is completed. To check conversion status, look at the Application event log for the jetconv process. |
 | 1024     | EVENT_SERVER_INIT_AND_READY | The DHCP service has initialized and is ready |
 | 1025     | EVENT_SERVER_BOOT_FILE_TABLE | The DHCP service was unable to read the BOOTP file table from the registry. The DHCP service will be unable to respond to BOOTP requests that specify the boot file name. |
 | 1026     | EVENT_SERVER_BOOT_FILE_NAME | The DHCP service was unable to read the global BOOTP file name from the registry. |
-| 1027     | EVENT_SERVER_AUDIT_LOG_APPEND_FAILED | The audit log file cannot be appended. |
+| 1027     | EVENT_SERVER_AUDIT_LOG_APPEND_FAILED | The audit log file can't be appended. |
 | 1028     | EVENT_SERVER_INIT_AUDIT_LOG_FAILED | The DHCP service failed to initialize the audit log. The following error occurred: %n%1 |
 | 1029     | EVENT_SERVER_PING_FAILED | The DHCP service was unable to ping for a new IP address. The address was leased to the client. |
-| 1030     | EVENT_SERVER_MOVE_AUDIT_LOG_FAILED | The audit log file could not be backed up. The following error occurred: %n%1 |
+| 1030     | EVENT_SERVER_MOVE_AUDIT_LOG_FAILED | The audit log file couldn't be backed up. The following error occurred: %n%1 |
 | 1031     | EVENT_SERVER_CALLOUT_UNHANDLED_EXCEPTION | The installed server callout .dll file has caused an exception. The exception was: %n%1. The server has ignored this exception. All further exceptions will be ignored. |
-| 1032     | EVENT_SERVER_CALLOUT_LOAD_EXCEPTION | The installed server callout .dll file has caused an exception. The exception was: %n%1. The server has ignored this exception and the .dll file could not be loaded. |
+| 1032     | EVENT_SERVER_CALLOUT_LOAD_EXCEPTION | The installed server callout .dll file has caused an exception. The exception was: %n%1. The server has ignored this exception and the .dll file couldn't be loaded. |
 | 1033     | EVENT_SERVER_CALLOUT_LOAD_SUCCESS | The DHCP service has successfully loaded one or more callout DLLs. |
 | 1034     | EVENT_SERVER_READ_ONLY_GROUP_ERROR | The DHCP service has failed to load one or more callout DLLs. The following error occurred: %n%1 |
 | 1035     | EVENT_SERVER_READ_ONLY_GROUP_ERROR | The DHCP service was unable to create or lookup the DHCP Users local group on this computer. The error code is in the data. |
@@ -190,42 +190,42 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 1038     | EVENT_SERVER_IPCLEANUP_FINISHED | The DHCP service has cleaned up the database for unicast IP addresses -- %1 leases have been recovered and %2 records have been removed from the database. |
 | 1039     | EVENT_SERVER_MCASTCLEANUP_FINISHED | The DHCP service has cleaned up the database for multicast IP addresses -- %1 leases have expired (been marked for deletion) and %2 records have been removed from the database. |
 | 1040     | EVENT_SERVER_DATABASE_RESTORE_SUCCEEDED | The DHCP service successfully restored the database. |
-| 1041     | DHCP_ROGUE_EVENT_NO_NETWORK | The DHCP service is not servicing any DHCPv4 clients because none of the active network interfaces have statically configured IPv4 addresses, or there are no active interfaces. |
+| 1041     | DHCP_ROGUE_EVENT_NO_NETWORK | The DHCP service isn't servicing any DHCPv4 clients because none of the active network interfaces have statically configured IPv4 addresses, or there are no active interfaces. |
 | 1042     | DHCP_ROGUE_EVENT_UNAUTHORIZED_INFO | The DHCP/BINL service running on this machine has detected a server on the network. If the server does not belong to any domain, the domain is listed as empty. The IP address of the server is listed in parentheses. %1 |
-| 1043     | DHCP_ROGUE_EVENT_STARTED | The DHCP/BINL service on the local machine has determined that it is authorized to start. It is servicing clients now. |
-| 1044     | DHCP_ROGUE_EVENT_STARTED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it is authorized to start. It is servicing clients now. |
-| 1045     | DHCP_ROGUE_EVENT_STOPPED | The DHCP/BINL service on the local machine has determined that it is not authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine belongs to a workgroup and has encountered another DHCP Server (belonging to a Windows Administrative Domain) servicing the same network. %n%n%tAn unexpected network error occurred. |
-| 1046     | DHCP_ROGUE_EVENT_STOPPED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it is not authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine is part of a directory service enterprise and is not authorized in the same domain. (See help on the DHCP Service Management Tool for additional information). %n%n%tThis machine cannot reach its directory service enterprise and it has encountered another DHCP service on the network belonging to a directory service enterprise on which the local machine is not authorized. %n%n%tSome unexpected network error occurred. |
+| 1043     | DHCP_ROGUE_EVENT_STARTED | The DHCP/BINL service on the local machine has determined that it's authorized to start. It's servicing clients now. |
+| 1044     | DHCP_ROGUE_EVENT_STARTED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it's authorized to start. It's servicing clients now. |
+| 1045     | DHCP_ROGUE_EVENT_STOPPED | The DHCP/BINL service on the local machine has determined that it isn't authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine belongs to a workgroup and has encountered another DHCP Server (belonging to a Windows Administrative Domain) servicing the same network. %n%n%tAn unexpected network error occurred. |
+| 1046     | DHCP_ROGUE_EVENT_STOPPED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it isn't authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine is part of a directory service enterprise and isn't authorized in the same domain. (See help on the DHCP Service Management Tool for additional information). %n%n%tThis machine can't reach its directory service enterprise and it has encountered another DHCP service on the network belonging to a directory service enterprise on which the local machine isn't authorized. %n%n%tSome unexpected network error occurred. |
 | 1047     | DHCP_ROGUE_EVENT_JUST_UPGRADED | The DHCP/BINL service on the local machine has determined that it is authorized to start. It is servicing clients now. %nThe DHCP/BINL service has determined that the machine was recently upgraded. If the machine is intended to belong to a directory service enterprise, the DHCP service must be authorized in the directory service for it to start servicing clients. (See help on DHCP Service Management Tool for authorizing the server). |
-| 1048     | DHCP_ROGUE_EVENT_JUST_UPGRADED_DOMAIN | The DHCP/BINL Service on the local machine, belonging to Windows Domain %2, has determined that it is authorized to start. It is servicing clients now. It has determined that the computer was recently upgraded. It has also determined that either there is no directory service enterprise for the domain or that the computer is not authorized in the directory service. All DHCP services that belong to a directory service enterprise should be authorized in the directory service to service clients. (See help on the DHCP Service Management Tool for authorizing a DHCP service in the directory service). |
+| 1048     | DHCP_ROGUE_EVENT_JUST_UPGRADED_DOMAIN | The DHCP/BINL Service on the local machine, belonging to Windows Domain %2, has determined that it is authorized to start. It is servicing clients now. It has determined that the computer was recently upgraded. It has also determined that either there's no directory service enterprise for the domain or that the computer isn't authorized in the directory service. All DHCP services that belong to a directory service enterprise should be authorized in the directory service to service clients. (See help on the DHCP Service Management Tool for authorizing a DHCP service in the directory service). |
 | 1049     | DHCP_ROGUE_EVENT_CANT_FIND_DOMAIN | The DHCP/BINL service on the local machine encountered an error while trying to find the domain of the local machine. The error was: %3. |
 | 1050     | DHCP_ROGUE_EVENT_NETWORK_FAILURE | The DHCP/BINL service on the local machine encountered a network error. The error was: %3. |
-| 1051     | DHCP_ROGUE_EVENT_UNAUTHORIZED | The DHCP/BINL service has determined that it is not authorized to service clients on this network for the Windows domain: %2. All DHCP services that belong to a directory service enterprise must be authorized in the directory service to service clients. (See help on the DHCP Service Management Tool for authorizing a DHCP server in the directory service). |
+| 1051     | DHCP_ROGUE_EVENT_UNAUTHORIZED | The DHCP/BINL service has determined that it isn't authorized to service clients on this network for the Windows domain: %2. All DHCP services that belong to a directory service enterprise must be authorized in the directory service to service clients. (See help on the DHCP Service Management Tool for authorizing a DHCP server in the directory service). |
 | 1052     | DHCP_ROGUE_EVENT_OTHER_SERVER | The DHCP/BINL service on this workgroup server has encountered another server with IP Address, %1, belonging to the domain %2. |
 | 1053     | DHCP_ROGUE_EVENT_SAM_OTHER_SERVER | The DHCP/BINL service has encountered another server on this network with IP Address, %1, belonging to the domain: %2. |
 | 1054     | DHCP_ROGUE_EVENT_SHUTDOWN | The DHCP/BINL service on this computer is shutting down. See the previous event log messages for reasons. |
 | 1055     | DHCP_EVENT_DNS_REGPARAMS_FAILURE | The DHCP service was unable to impersonate the credentials necessary for DNS registrations: %n%1. The local system credentials is being used. |
-| 1056     | DHCP_EVENT_NO_DNSCREDENTIALS_ON_DC | The DHCP service has detected that it is running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCP service. This is not a recommended security configuration. Credentials for Dynamic DNS registrations may be configured using the command line &amp;quot;netsh dhcp server set dnscredentials&amp;quot; or via the DHCP Administrative tool. |
+| 1056     | DHCP_EVENT_NO_DNSCREDENTIALS_ON_DC | The DHCP service has detected that it is running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCP service. This isn't a recommended security configuration. Credentials for Dynamic DNS registrations may be configured using the command line, or via the DHCP Administrative tool. |
 | 1057     | EVENT_SERVER_DATABASE_CONVERSION | The DHCP service was unable to convert the temporary database to ESE format: %n%1. |
 | 1058     | EVENT_SERVER_INIT_CONFIG_FAILED | The DHCP service failed to initialize its configuration parameters. The following error occurred: %n%1 |
 | 1059     | VENT_SERVER_COULDNT_SEE_DS | The DHCP service failed to see a directory server for authorization. |
 | 1060     | EVENT_SERVER_AUDITLOG_PATH_NOT_ACCESSIBLE | The DHCP service was unable to access path specified for the audit log. |
 | 1061     | EVENT_SERVER_BACKUP_PATH_NOT_ACCESSIBLE | The DHCP service was unable to access path specified for the database backups. |
 | 1062     | EVENT_SERVER_DB_PATH_NOT_ACCESSIBLE | The DHCP service was unable to access path specified for the database |
-| 1063     | EVENT_SERVER_SCOPE_FULL | There are no IP addresses available for lease in the scope or superscope &amp;quot;%1&amp;quot;. |
-| 1064     | EVENT_SERVER_BOOTP_FULL | There are no IP addresses available for BOOTP clients in the scope or superscope &amp;quot;%1&amp;quot;. |
+| 1063     | EVENT_SERVER_SCOPE_FULL | There are no IP addresses available for lease in the scope or superscope %1. |
+| 1064     | EVENT_SERVER_BOOTP_FULL | There are no IP addresses available for BOOTP clients in the scope or superscope %1. |
 | 1065     | EVENT_SERVER_ORPHONED_ENTRIES_DELETED | There were some orphaned entries deleted in the configuration due to the deletion of a class or an option definition. Please recheck the server configuration. |
 | 1144     | EVENT_SERVER_NEED_STATIC_IP | This computer has at least one dynamically assigned IP address. For reliable DHCP Server operation, you should use only static IP addresses. |
-| 1338     | EVENT_SERVER_OFFER_QUEUE_FULL | The number of pending DHCPOFFER messages for delayed transmission to the client has exceeded the server&amp;apos;s capacity of 1000 pending messages. The DHCP server will drop all subsequent DHCPDISCOVER messages for which the DHCPOFFER message response needs to be delayed as per the server configuration. The DHCP server will continue to process DHCPDISCOVER messages for which the DHCPOFFER message responses do not need to be delayed. The DHCP server will resume processing all DHCPDISCOVER messages once the number of pending DHCPOFFER messages for delayed transmission to the client is below the server&amp;apos;s capacity. |
-| 1339     | EVENT_SERVER_OFFER_QUEUE_FUNCTIONAL | The number pending DHCPOFFER messages for delayed transmission to the client is now below the server&amp;apos;s capacity of 1000. The DHCP server will now resume processing all DHCPDISCOVER messages. |
-| 1340     | EVENT_SERVER_DNSDHCID_FAIL | The DNS registration for DHCPv4 Client IP address %1 , FQDN %2 and DHCID %3 has been denied as there is probably an existing client with same FQDN already registered with DNS. |
+| 1338     | EVENT_SERVER_OFFER_QUEUE_FULL | The number of pending DHCPOFFER messages for delayed transmission to the client has exceeded the server's capacity of 1000 pending messages. The DHCP server will drop all subsequent DHCPDISCOVER messages for which the DHCPOFFER message response needs to be delayed as per the server configuration. The DHCP server will continue to process DHCPDISCOVER messages for which the DHCPOFFER message responses don't need to be delayed. The DHCP server will resume processing all DHCPDISCOVER messages once the number of pending DHCPOFFER messages for delayed transmission to the client is below the server's capacity. |
+| 1339     | EVENT_SERVER_OFFER_QUEUE_FUNCTIONAL | The number pending DHCPOFFER messages for delayed transmission to the client is now below the server's capacity of 1000. The DHCP server will now resume processing all DHCPDISCOVER messages. |
+| 1340     | EVENT_SERVER_DNSDHCID_FAIL | The DNS registration for DHCPv4 Client IP address %1 , FQDN %2 and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
 | 1341     | EVENT_SERVER_POLICY_RANGES_FULL | There are no IP addresses available for lease in IP address range(s) of the policy %1 in scope %2. |
 | 1342     | EVENT_SERVER_RESIDUAL_RANGES_FULL | IP address range of scope %1 is out of IP addresses. |
 | 1343     | EVENT_SERVER_POLICY_RANGES_LOW_ADDRESS_WARNING | Ip address range(s) for the scope %1 policy %2 is %3 percent full with only %4 IP addresses available . |
-| 1344     | EVENT_SERVER_DNS_VALIDATION_FAILED | The DNS IP Address %1 is not a valid DNS Server Address. |
+| 1344     | EVENT_SERVER_DNS_VALIDATION_FAILED | The DNS IP Address %1 isn't a valid DNS Server Address. |
 | 1376     | EVENT_SERVER_RESIDUAL_RANGES_LOW_ADDRESS_WARNING | IP address range of scope %1 is %2 percent full with only %3 IP addresses available. |
 | 1377     | EVENT_SERVER_SUPERSCOPE_LOW_ADDRESS_WARNING | SuperScope, %1, is %2 percent full with only %3 IP addresses remaining. This superscope has the following scopes %4 |
-| 10000    | EVENT_DHCPV6_ADDERESS_NACKED | DHCPv6 confirmation has been declined because the address was not appropriate to the link or DHCPv6 renew request has a Zero lifetime for Client Address %1. |
+| 10000    | EVENT_DHCPV6_ADDERESS_NACKED | DHCPv6 confirmation has been declined because the address wasn't appropriate to the link or DHCPv6 renew request has a Zero lifetime for Client Address %1. |
 | 10001    | EVENT_DHCPV6_REQUEST_RECEIVED_FOR_ADDRESSES_NOT_LEASED | Renew, rebind or confirm received for IPv6 addresses %1 for which there are no active lease available. |
 | 10002    | EVENT_DHCPV6_SERVER_UNKNOWN_OPTION | DHCPv6 service received the unknown option %1, with a length of %2. The raw option data is given below. |
 | 10003    | EVENT_DHCPV6_SERVER_SCOPE_FULL | There are no IPv6 addresses available to lease in the scope serving the network with Prefix %1. |
@@ -234,23 +234,23 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 10006    | EVENT_DHCPV6_CLIENT_DELETE | A DHCPV6 client %1 has been deleted from DHCPV6 database. |
 | 10007    | EVENT_DHCPV6_DROP_TIMEOUT | A DHCPV6 message that was in the queue for more than 30 seconds has been dropped because it is too old to process. |
 | 10008    | EVENT_DHCPV6_DROP_INVALID | An invalid DHCPV6 message has been dropped. |
-| 10009    | EVENT_DHCPV6_DROP_WRONG_SERVER | A DHCPV6 message that was not meant for this server has been dropped. |
+| 10009    | EVENT_DHCPV6_DROP_WRONG_SERVER | A DHCPV6 message that wasn't meant for this server has been dropped. |
 | 10010    | EVENT_DHCPV6_DROP_UNICAST | DHCV6 message has been dropped because it was received on a Uni-cast address and unicast support is disabled on the server. |
-| 10011    | EVENT_DHCPV6_SERVER_AUDIT_LOG_APPEND_FAILED | DHCPV6 audit log file cannot be appended, Error Code returned %1. |
-| 10012    | EVENT_DHCPV6_DROP_UNAUTH | A DHCPV6 message has been dropped because the server is not authorized to process the message. |
+| 10011    | EVENT_DHCPV6_SERVER_AUDIT_LOG_APPEND_FAILED | DHCPV6 audit log file can't be appended, Error Code returned %1. |
+| 10012    | EVENT_DHCPV6_DROP_UNAUTH | A DHCPV6 message has been dropped because the server isn't authorized to process the message. |
 | 10013    | EVENT_DHCPv6_SERVER_INIT_AUDIT_LOG_FAILED | The DHCPv6 service failed to initialize the audit log. The following error occurred: %n%1 |
-| 10014    | EVENT_DHCPV6_SERVER_MOVE_AUDIT_LOG_FAILED | DHCPv6 audit log file could not be backed up. Error code %1 |
+| 10014    | EVENT_DHCPV6_SERVER_MOVE_AUDIT_LOG_FAILED | DHCPv6 audit log file couldn't be backed up. Error code %1 |
 | 10015    | EVENT_DHCPV6_SERVER_AUDITLOG_PATH_NOT_ACCESSIBLE | The DHCPv6 service was unable to access path specified for the audit log. |
 | 10016    | EVENT_DHCPV6_SERVER_INIT_WINSOCK_FAILED | The DHCPv6 service failed to initialize Winsock startup. The following error occurred %1. |
-| 10017    | EVENT_DHCPV6_NO_DNSCREDENTIALS_ON_DC | The DHCPv6 service has detected that it is running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCPv6 service. This is not a recommended security configuration. |
-| 10018    | EVENT_DHCPV6_SERVER_INTERFACE_NOTIFICATION | The DHCPv6 Server failed to receive a notification of interface list changes. Some of the interfaces will not be enabled in the DHCPv6 service. |
+| 10017    | EVENT_DHCPV6_NO_DNSCREDENTIALS_ON_DC | The DHCPv6 service has detected that it is running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCPv6 service. This isn't a recommended security configuration. |
+| 10018    | EVENT_DHCPV6_SERVER_INTERFACE_NOTIFICATION | The DHCPv6 Server failed to receive a notification of interface list changes. Some of the interfaces won't be enabled in the DHCPv6 service. |
 | 10019    | EVENT_DHCPV6_SERVER_INIT_CONFIG_FAILED | The DHCPv6 service failed to initialize its configuration parameters. The following error occurred: %n%1. |
 | 10020    | EVENT_DHCPV6_SERVER_NEED_STATIC_IP | This computer has at least one dynamically assigned IPv6 address. For reliable DHCPv6 server operation, you should use only static IPv6 addresses. |
 | 10021    | EVENT_DHCPV6_SERVER_INIT_DATABASE_FAILED | DHCPv6 service failed to initialize the database. The following error occurred: %n%1. |
 | 10022    | EVENT_DHCPV6_SERVER_INIT_AND_READY | The DHCPv6 service has initialized and is ready to serve. |
 | 10023    | EVENT_DHCPV6_PORT_UNAVAILABLE | DHCPv6 Server is unable to bind to UDP port number %1 as it is used by another application. This port must be made available to DHCPv6 Server to start servicing the clients. |
 | 10024    | ERROR_LAST_DHCPV6_SERVER_ERROR | ERROR_LAST_DHCPV6_SERVER_ERROR |
-| 10025    | EVENT_DHCPV6_DNSDHCID_FAIL | The DNS registration for DHCPv6 Client IPv6 address %1, FQDN %2 and DHCID %3 has been denied as there is probably an existing client with same FQDN already registered with DNS. |
+| 10025    | EVENT_DHCPV6_DNSDHCID_FAIL | The DNS registration for DHCPv6 Client IPv6 address %1, FQDN %2 and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
 | 20090    | EVENT_DHCP_PORT_UNAVAILABLE | DHCP Server is unable to bind to UDP port number %1 as it is used by another application. This port must be made available to DHCP Server to start servicing the clients. |
 | 20098    | EVENT_FILTER_EMPTY_ALLOW_LIST | No DHCP clients are being served, as the Allow list is empty and the server was configured to provide DHCP services, to clients whose hardware addresses are present in the Allow List. |
 | 20251    | DHCPv4.ChangeFailoverRelationState | The failover state of server: %1 for failover relationship: %2 changed from: %3 to %4. |
@@ -259,36 +259,36 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20254    | DHCPv4.FailoverCommUp | Server has established contact with failover partner server %1 for relationship %2. |
 | 20255    | DHCPv4.FailoverCommDown | Server has lost contact with failover partner server %1 for relationship %2. |
 | 20256    | DHCPv4.AuthFailedBndUpdMsgDigestFailedToCompare | Failover protocol message BINDING-UPDATE from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20257    | DHCPv4.AuthFailedBndUpdMsgDigestNotConfigured | Failover protocol message BINDING-UPDATE from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20258    | DHCPv4.AuthFailedBndUpdMsgDigestNotPresent | Failover protocol message BINDING-UPDATE from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20257    | DHCPv4.AuthFailedBndUpdMsgDigestNotConfigured | Failover protocol message BINDING-UPDATE from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20258    | DHCPv4.AuthFailedBndUpdMsgDigestNotPresent | Failover protocol message BINDING-UPDATE from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20259    | DHCPv4.ChangeFailoverRelationStateNoPrevState | The failover state of server: %1 for failover relationship: %2 changed to: %3. |
 | 20260    | DHCPv4.ChangeFailoverRelationStateErrorNoPrevState | The failover state of server: %1 for failover relationship: %2 changed to: %3. |
 | 20261    | DHCPv4.AuthFailedBndAckMsgDigestFailedToCompare | Failover protocol message BINDING-ACK from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20262    | DHCPv4.AuthFailedBndAckMsgDigestNotConfigured | Failover protocol message BINDING-ACK from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20263    | DHCPv4.AuthFailedBndAckMsgDigestNotPresent | Failover protocol message BINDING-ACK from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20262    | DHCPv4.AuthFailedBndAckMsgDigestNotConfigured | Failover protocol message BINDING-ACK from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20263    | DHCPv4.AuthFailedBndAckMsgDigestNotPresent | Failover protocol message BINDING-ACK from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20264    | DHCPv4.AuthFailedConnectMsgDigestFailedToCompare | Failover protocol message CONNECT from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20265    | DHCPv4.AuthFailedConnectMsgDigestNotConfigured | Failover protocol message CONNECT from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20266    | DHCPv4.AuthFailedConnectMsgDigestNotPresent | Failover protocol message CONNECT from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20265    | DHCPv4.AuthFailedConnectMsgDigestNotConfigured | Failover protocol message CONNECT from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20266    | DHCPv4.AuthFailedConnectMsgDigestNotPresent | Failover protocol message CONNECT from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20267    | DHCPv4.AuthFailedConnectAckMsgDigestFailedToCompare | Failover protocol message CONNECTACK from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20268    | DHCPv4.AuthFailedConnectAckMsgDigestNotConfigured | Failover protocol message CONNECTACK from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20269    | DHCPv4.AuthFailedConnectAckMsgDigestNotPresent | Failover protocol message CONNECTACK from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20268    | DHCPv4.AuthFailedConnectAckMsgDigestNotConfigured | Failover protocol message CONNECTACK from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20269    | DHCPv4.AuthFailedConnectAckMsgDigestNotPresent | Failover protocol message CONNECTACK from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20270    | DHCPv4.AuthFailedUpdReqAllMsgDigestFailedToCompare | Failover protocol message UPDREQALL from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20271    | DHCPv4.AuthFailedUpdReqAllMsgDigestNotConfigured | Failover protocol message UPDREQALL from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20272    | DHCPv4.AuthFailedUpdReqAllMsgDigestNotPresent | Failover protocol message UPDREQALL from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20271    | DHCPv4.AuthFailedUpdReqAllMsgDigestNotConfigured | Failover protocol message UPDREQALL from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20272    | DHCPv4.AuthFailedUpdReqAllMsgDigestNotPresent | Failover protocol message UPDREQALL from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20273    | DHCPv4.AuthFailedUpdDoneMsgDigestFailedToCompare | Failover protocol message UPDDONE from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20274    | DHCPv4.AuthFailedUpdDoneMsgDigestNotConfigured | Failover protocol message UPDDONE from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20275    | DHCPv4.AuthFailedUpdDoneMsgDigestNotPresent | Failover protocol message UPDDONE from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20274    | DHCPv4.AuthFailedUpdDoneMsgDigestNotConfigured | Failover protocol message UPDDONE from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20275    | DHCPv4.AuthFailedUpdDoneMsgDigestNotPresent | Failover protocol message UPDDONE from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20276    | DHCPv4.AuthFailedUpdReqMsgDigestFailedToCompare | Failover protocol message UPDREQ from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20277    | DHCPv4.AuthFailedUpdReqMsgDigestNotConfigured | Failover protocol message UPDREQ from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20278    | DHCPv4.AuthFailedUpdReqMsgDigestNotPresent | Failover protocol message UPDREQ from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20277    | DHCPv4.AuthFailedUpdReqMsgDigestNotConfigured | Failover protocol message UPDREQ from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20278    | DHCPv4.AuthFailedUpdReqMsgDigestNotPresent | Failover protocol message UPDREQ from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20279    | DHCPv4.AuthFailedStateMsgDigestFailedToCompare | Failover protocol message STATE from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20280    | DHCPv4.AuthFailedStateMsgDigestNotConfigured | Failover protocol message STATE from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20281    | DHCPv4.AuthFailedStateMsgDigestNotPresent | Failover protocol message STATE from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20280    | DHCPv4.AuthFailedStateMsgDigestNotConfigured | Failover protocol message STATE from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20281    | DHCPv4.AuthFailedStateMsgDigestNotPresent | Failover protocol message STATE from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20282    | DHCPv4.AuthFailedContactMsgDigestFailedToCompare | Failover protocol message CONTACT from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
-| 20283    | DHCPv4.AuthFailedContactMsgDigestNotConfigured | Failover protocol message CONTACT from server %1 for failover relationship %2 was rejected because message digest was not configured. |
-| 20284    | DHCPv4.AuthFailedContactMsgDigestNotPresent | Failover protocol message CONTACT from server %1 for failover relationship %2 is rejected because message digest was not present. |
+| 20283    | DHCPv4.AuthFailedContactMsgDigestNotConfigured | Failover protocol message CONTACT from server %1 for failover relationship %2 was rejected because message digest wasn't configured. |
+| 20284    | DHCPv4.AuthFailedContactMsgDigestNotPresent | Failover protocol message CONTACT from server %1 for failover relationship %2 is rejected because message digest wasn't present. |
 | 20285    | DHCPv4.InvalidAlgorithmProvider | An invalid cryptographic algorithm %1 was specified for failover message authentication in FailoverCryptoAlgorithm under registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DHCPServer\Parameters\Failover. The operation is halted. |
-| 20286    | DHCPv4.FailoverClientLeaseDropped | BINDING UPDATE message for IP address %1 could not be replicated to the partner server %2 of failover relation %3 as the internal BINDING UPDATE queue is full. |
+| 20286    | DHCPv4.FailoverClientLeaseDropped | BINDING UPDATE message for IP address %1 couldn't be replicated to the partner server %2 of failover relation %3 as the internal BINDING UPDATE queue is full. |
 | 20287    | DHCPv4.ClientRequestDropped | DHCP client request from %1 was dropped since the applicable IP address ranges in scope/superscope %2 are out of available IP addresses. This could be because of IP address ranges of a policy being out of available IP addresses. |
 | 20291    | DHCPv4.SendBndAckMessageRejectReason | A BINDING-ACK message with transaction id: %1 was sent for IP address: %2 with reject reason: (%3) to partner server: %4 for failover relationship: %5. |
 | 20292    | DHCPv4.RecvBndAckMessageRejectReason | A BINDING-ACK message with transaction id: %1 was received for IP address: %2 with reject reason: (%3) from partner server: %4 for failover relationship: %5. |
@@ -316,7 +316,7 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20161    | DHCPv4HA.AddrAllocationTriggered | Address allocation triggered for the failover relationship %1. |
 | 20163    | DHCPv4Stateless.ScavengerEnd | Scavenger finished purging stateless entries. |
 | 20164    | DHCPv4HA.TotalLeasesDeleted | The total leases deleted in scavenger are %1 |
-| 20165    | DHCPv4HA.FailoverScopeDeleted | Scope %1 which was part of failover relationship %2 was not found in DHCP server database. Please restore the DHCP server database. |
+| 20165    | DHCPv4HA.FailoverScopeDeleted | Scope %1 which was part of failover relationship %2 wasn't found in DHCP server database. Please restore the DHCP server database. |
 
 ## DHCP erver filter notification events
 
@@ -326,9 +326,9 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 20096    | EVENT_FILTER_DENIED_IN_DENY_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %4 and FQDN/Hostname %2 because it matched entry %3 in the Deny List. |
-| 20097    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %3 and FQDN/Hostname %2 because it did not match any entry in the Allow List. |
+| 20097    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %3 and FQDN/Hostname %2 because it didn't match any entry in the Allow List. |
 | 20099    | EVENT_FILTER_DENIED_IN_DENY_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %4 and unspecified FQDN/Hostname%2 because it matched entry %3 in the Deny List. |
-| 20100    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %3 and unspecified FQDN/Hostname%2 because it did not match any entry in the Allow List. |
+| 20100    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %3 and unspecified FQDN/Hostname%2 because it didn't match any entry in the Allow List. |
 
 </details>
 
