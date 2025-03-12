@@ -4,7 +4,7 @@ description: How to set up and use Storage Replica for server-to-server replicat
 ms.topic: how-to
 ms.author: alalve
 author: nedpyle
-ms.date: 03/26/2020
+ms.date: 03/12/2025
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 
