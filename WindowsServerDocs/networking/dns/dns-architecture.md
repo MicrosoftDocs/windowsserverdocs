@@ -110,7 +110,7 @@ Common resource records include:
 | Name server (NS) records | Specifies the authoritative name servers for a domain. |
 | Text (TXT) record | Enables the publication of text in a DNS record. Text records let you add text information that is returned by querying DNS. TXT records are often used to authenticate ownership of DNS zones. |
 | Delegation name (DNAME) record | Provides an alias for a domain, like a CNAME record, but includes all subdomains. |
-| Start of authority (SOA) record | Provides authoritative information about a DNS zone. The SOA record includes primary name server, contact of DNZ zone administrator, refresh information, and other information. |
+| Start of authority (SOA) record | Provides authoritative information about a DNS zone. The SOA record includes primary name server, contact of DNS zone administrator, refresh information, and other information. |
 
 ### Time-to-Live for resource records
 

@@ -172,7 +172,7 @@ information to be transferred to any host that can contact your DNS server.
 
 There are two types of zone file replication. The first, a full zone transfer (AXFR), replicates the entire zone file. The second, an incremental zone transfer (IXFR), replicates only records that have been modified.
 
-BIND 4.9.3 and earlier DNS server software, and Windows NT 4.0 DNS, support full zone transfer (AXFR) only. There are two types of the AXFR: one requires a single record per packet, the other allows multiple records per packet. The DNS Server service in Windows 2000 and Windows Server 2003 supports both types of zone transfer, but by default uses multiple records per packet. It can be configured differently for compatibility with servers that don't allow multiple records per packet, such as BIND servers versions 4.9.4 and earlier.
+BIND 4.9.3 and earlier DNS server software, and Windows NT 4.0 DNS, support full zone transfer (AXFR) only. There are two types of the AXFR: one requires a single record per packet, the other allows multiple records per packet. The DNS Server service in Windows servers supports both types of zone transfer, but by default uses multiple records per packet. It can be configured differently for compatibility with servers that don't allow multiple records per packet, such as BIND servers versions 4.9.4 and earlier.
 
 ## Zone delegation
 
