@@ -73,7 +73,7 @@ The following instructions allow users to create a new dMSA without migrating fr
    ```powershell
    $params = @{
     Identity = "dMSAsnmp"
-    Properties = @{
+    Replace = @{
      "msDS-DelegatedMSAState" = 3
     }
    }
