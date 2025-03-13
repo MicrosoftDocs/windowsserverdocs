@@ -3,9 +3,8 @@ title: Remote Desktop URI scheme
 description: Learn about the Uniform Resource Identifier scheme for Remote Desktop clients
 ms.topic: article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
-ms.author: alalve
-manager: femila
 author: xelu86
+ms.author: alalve
 ms.date: 7/3/2024
 ---
 # Remote Desktop URI scheme
@@ -23,7 +22,7 @@ The ms-rd URI provides the option to specify a command for the client and a set 
 ms-rd:command?parameters
 ```
 
-Parameters uses the query string format of key=value pair separated by & to provide additional information for the given command:
+`Parameters` uses the query string format of key=value pair separated by & to provide additional information for the given command:
 
 ```
 param1=value1&param2=value2&…
@@ -31,7 +30,7 @@ param1=value1&param2=value2&…
 
 ### Commands and parameters
 
-Here is the list of currently supported commands and their corresponding parameters.
+Here's the list of currently supported commands and their corresponding parameters.
 
 Using `ms-rd:` without any commands launches the client.
 
@@ -45,14 +44,14 @@ This command launches the client and starts the subscription process.
 
 | Parameter | Description                  | Values |
 |-----------|------------------------------|--------|
-| url       | Specifies the Workspace URL. | A valid URL, such as <https://contoso.com>. |
+| url       | Specifies the Workspace URL. | A valid URL, such as `https://contoso.com`>`. |
 
-**Example:** ms-rd:subscribe?url=https://contoso.com
+**Example:** `ms-rd:subscribe?url=https://contoso.com`
 
 ## Legacy rdp URI scheme
 
 >[!NOTE]
-> The following URI scheme is only supported with the clients for macOS, iOS, and Android devices. It is being replaced by the new ms-rd URI above.
+> The following URI scheme is only supported with the clients for macOS, iOS, and Android devices.
 
 Microsoft Remote Desktop uses the URI scheme rdp://query_string to store preconfigured attribute settings that are used when launching the client. The query strings represent a single or set of RDP attributes provided in the URL.
 
@@ -62,7 +61,7 @@ The RDP attributes are separated by the ampersand symbol (&). For example, when 
 rdp://full%20address=s:mypc:3389&audiomode=i:2&disable%20themes=i:1
 ```
 
-This table gives a complete list of supported attributes that may be used with the iOS, Mac, and Android Remote Desktop clients. (An "x" in the platform column indicates the attribute is supported. The values denoted by chevrons (<>) represent the values that are supported by the Remote Desktop clients.)
+This table gives a complete list of supported attributes that can be used with the iOS, Mac, and Android Remote Desktop clients. (An "x" in the platform column indicates the attribute is supported. The values denoted by chevrons (<>) represent the values that the Remote Desktop client supports.)
 
 | RDP attribute                                           | Android | Mac | iOS |
 |---------------------------------------------------------|---------|-----|-----|
