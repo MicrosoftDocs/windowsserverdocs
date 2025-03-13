@@ -4,7 +4,7 @@ description: Stretch cluster replication using shared storage
 ms.author: alalve
 ms.topic: how-to
 author: nedpyle
-ms.date: 02/20/2025
+ms.date: 03/13/2025
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 
@@ -27,7 +27,7 @@ This walkthrough uses the following environment as an example:
 
 - Servers **SR-SRV03** and **SR-SRV04** belong to the **Bellevue** site.
 
-![Diagram showing two nodes in Redmond replicating with two nodes of the same cluster in the Bellevue site](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_StretchClusterExample.png)
+![Diagram showing two nodes in Redmond replicating with two nodes of the same cluster in the Bellevue site.](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_StretchClusterExample.png)
 
 > [!NOTE]
 > You can use only as few as two nodes, where one node each is in each site. However, you can't perform intra-site failover with only two servers. You can use as many as 64 nodes.
@@ -317,7 +317,7 @@ After you configure, validate, and test your environment, the next steps are to 
 
 1. Select the appropriate destination data volume and select **Next**. The destination disks shown have a volume the same size as the selected source disk. When you move between these wizard dialogs, the available storage will automatically move and appear online in the background as needed.
 
-   ![Screen showing the Select destination disk page of the Configure Storage Replica wizard](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_SelectDestinationDataDisk2.png)
+   ![A screenshot showing the Select destination data disk page of the Configure Storage Replica wizard.](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_SelectDestinationDataDisk2.png)
 
 1. Select the appropriate source log disk and select **Next**. The source log volume should be on a disk that uses SSD or similarly fast media, not spinning disks.
 
@@ -331,7 +331,7 @@ After you configure, validate, and test your environment, the next steps are to 
 
 1. Select **Next** to configure replication and the stretch cluster formation.
 
-   ![Screen showing the Select Confirmation page of the Configure Storage Replica wizard](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_ConfigureSR2.png)
+   ![A screenshot showing the Confirmation page of the Configure Storage Replica wizard.](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_ConfigureSR2.png)
 
 1. On the Summary screen, note the completion dialog results. You can view the report in a web browser.
 
@@ -339,7 +339,7 @@ After you configure, validate, and test your environment, the next steps are to 
 
    1. Use the **Replication Role** column and the **Replication** tab. When done with initial synchronization, the source and destination disks have a Replication Status of **Continuously Replicating**.
 
-      ![Screen showing the Replication tab of a disk in Failover Cluster Manager](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_ReplicationDetails2.png)
+      ![A screenshot showing the Replication tab of the selected disk in Failover Cluster Manager being continuously replicated.](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_ReplicationDetails2.png)
 
    1. Start **eventvwr.exe**.
 
@@ -506,7 +506,7 @@ After you configure, validate, and test your environment, the next steps are to 
 
 ### Manage stretched cluster replication
 
-You can perform all of the steps on the cluster nodes directly or from a remote management computer that contains the RSAT. You can also use Failover Cluster Manager to determine the current source and destination of replication and their status. Managing stretched cluster replication can be performed using the GUI or Powershell.
+You can perform all of the steps on the cluster nodes directly or from a remote management computer that contains the RSAT. You can also use Failover Cluster Manager to determine the current source and destination of replication and their status. Managing stretched cluster replication can be performed using the GUI or PowerShell.
 
 # [Failover Cluster Manager](#tab/failovermanager2)
 
