@@ -370,10 +370,10 @@ After you configure, validate, and test your environment, the next steps are to 
       Elapsed Time (ms): 140
       ```
 
-      1. Open the **Event Viewer** on the _destination_ server, navigate to **Applications and Services\Microsoft\Windows\StorageReplica\Admin** and examine event IDs 1237, 2200, 5001, 5009, 5005, and 5015 to understand the processing progress. There should be no warnings of errors in this sequence. If you encounter several event IDs 1237, this indicates progress.
+   1. Open the **Event Viewer** on the _destination_ server, navigate to **Applications and Services\Microsoft\Windows\StorageReplica\Admin** and examine event IDs 1237, 2200, 5001, 5009, 5005, and 5015 to understand the processing progress. There should be no warnings of errors in this sequence. If you encounter several event IDs 1237, this indicates progress.
 
-         > [!WARNING]
-         > CPU and memory usage are likely to be higher than normal until initial synchronization completes.
+      > [!WARNING]
+      > CPU and memory usage are likely to be higher than normal until initial synchronization completes.
 
 # [PowerShell](#tab/powershell2)
 
