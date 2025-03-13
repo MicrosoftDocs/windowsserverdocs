@@ -11,11 +11,9 @@ ms.date: 03/12/2025
 
 DHCP server logs events for all changes that are made. In this article, learn where to view DHCP server events, and see the ID, category, and text for each event.
 
-## View DHCP server logs
+## View DHCP server event logs
 
-DHCP audit logs are enabled by default, and don't significantly affect DNS server performance.
-
-To view DHCP Server service event logs:
+DHCP audit logs are enabled by default, and don't significantly affect DNS server performance. To view DHCP Server event logs:
 
 1. Select the Start button, type Event viewer, open Event viewer from the best match list.
 
@@ -33,6 +31,7 @@ To view DHCP Server service event logs:
 
 DHCP server operational events log information about the server's operation. Whenever a scope is changed, an event is added.
 
+<br />
 <details>
     <summary>To view all server operational events, expand this section.</summary>
 
@@ -167,6 +166,8 @@ DHCP server operational events log information about the server's operation. Whe
 ## DHCP server administrative events
 
 DHCP server administrative events log information about administrative tasks that are performed on the DHCP server.
+
+<br />
 <details>
     <summary>To view all server administrative events, expand this section.</summary>
 
@@ -212,13 +213,13 @@ DHCP server administrative events log information about administrative tasks tha
 | 1039     | EVENT_SERVER_MCASTCLEANUP_FINISHED | The DHCP service has cleaned up the database for multicast IP addresses--%1 leases have expired (been marked for deletion) and %2 records have been removed from the database. |
 | 1040     | EVENT_SERVER_DATABASE_RESTORE_SUCCEEDED | The DHCP service successfully restored the database. |
 | 1041     | DHCP_ROGUE_EVENT_NO_NETWORK | The DHCP service isn't servicing any DHCPv4 clients because none of the active network interfaces have statically configured IPv4 addresses, or there are no active interfaces. |
-| 1042     | DHCP_ROGUE_EVENT_UNAUTHORIZED_INFO | The DHCP/BINL service running on this machine has detected a server on the network. If the server does not belong to any domain, the domain is listed as empty. The IP address of the server is listed in parentheses. %1 |
+| 1042     | DHCP_ROGUE_EVENT_UNAUTHORIZED_INFO | The DHCP/BINL service running on this machine has detected a server on the network. If the server doesn't belong to any domain, the domain is listed as empty. The IP address of the server is listed in parentheses. %1 |
 | 1043     | DHCP_ROGUE_EVENT_STARTED | The DHCP/BINL service on the local machine has determined that it's authorized to start. It's servicing clients now. |
 | 1044     | DHCP_ROGUE_EVENT_STARTED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it's authorized to start. It's servicing clients now. |
 | 1045     | DHCP_ROGUE_EVENT_STOPPED | The DHCP/BINL service on the local machine has determined that it isn't authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine belongs to a workgroup and has encountered another DHCP Server (belonging to a Windows Administrative Domain) servicing the same network. %n%n%tAn unexpected network error occurred. |
 | 1046     | DHCP_ROGUE_EVENT_STOPPED_DOMAIN | The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain %2, has determined that it isn't authorized to start. It has stopped servicing clients. The following are some possible reasons for this: %n%tThis machine is part of a directory service enterprise and isn't authorized in the same domain. For more information, see the DHCP Service Management Tool. %n%n%tThis machine can't reach its directory service enterprise and it has encountered another DHCP service on the network belonging to a directory service enterprise on which the local machine isn't authorized. %n%n%tSome unexpected network error occurred. |
-| 1047     | DHCP_ROGUE_EVENT_JUST_UPGRADED | The DHCP/BINL service on the local machine has determined that it is authorized to start. It is servicing clients now. %nThe DHCP/BINL service has determined that the machine was recently upgraded. If the machine is intended to belong to a directory service enterprise, the DHCP service must be authorized in the directory service for it to start servicing clients. (See help on DHCP Service Management Tool for authorizing the server). |
-| 1048     | DHCP_ROGUE_EVENT_JUST_UPGRADED_DOMAIN | The DHCP/BINL Service on the local machine, belonging to Windows Domain %2, has determined that it is authorized to start. It is servicing clients now. It has determined that the computer was recently upgraded. It has also determined that either there's no directory service enterprise for the domain or that the computer isn't authorized in the directory service. All DHCP services that belong to a directory service enterprise should be authorized in the directory service to service clients. (See help on the DHCP Service Management Tool for authorizing a DHCP service in the directory service). |
+| 1047     | DHCP_ROGUE_EVENT_JUST_UPGRADED | The DHCP/BINL service on the local machine has determined that it's authorized to start. It's servicing clients now. %nThe DHCP/BINL service has determined that the machine was recently upgraded. If the machine is intended to belong to a directory service enterprise, the DHCP service must be authorized in the directory service for it to start servicing clients. (See help on DHCP Service Management Tool for authorizing the server). |
+| 1048     | DHCP_ROGUE_EVENT_JUST_UPGRADED_DOMAIN | The DHCP/BINL Service on the local machine, belonging to Windows Domain %2, has determined that it's authorized to start. It's servicing clients now. It has determined that the computer was recently upgraded. It has also determined that either there's no directory service enterprise for the domain or that the computer isn't authorized in the directory service. All DHCP services that belong to a directory service enterprise should be authorized in the directory service to service clients. (See help on the DHCP Service Management Tool for authorizing a DHCP service in the directory service). |
 | 1049     | DHCP_ROGUE_EVENT_CANT_FIND_DOMAIN | The DHCP/BINL service on the local machine encountered an error while trying to find the domain of the local machine. The error was: %3. |
 | 1050     | DHCP_ROGUE_EVENT_NETWORK_FAILURE | The DHCP/BINL service on the local machine encountered a network error. The error was: %3. |
 | 1051     | DHCP_ROGUE_EVENT_UNAUTHORIZED | The DHCP/BINL service has determined that it isn't authorized to service clients on this network for the Windows domain: %2. All DHCP services that belong to a directory service enterprise must be authorized in the directory service to service clients. (See help on the DHCP Service Management Tool for authorizing a DHCP server in the directory service). |
@@ -226,7 +227,7 @@ DHCP server administrative events log information about administrative tasks tha
 | 1053     | DHCP_ROGUE_EVENT_SAM_OTHER_SERVER | The DHCP/BINL service has encountered another server on this network with IP Address, %1, belonging to the domain: %2. |
 | 1054     | DHCP_ROGUE_EVENT_SHUTDOWN | The DHCP/BINL service on this computer is shutting down. See the previous event log messages for reasons. |
 | 1055     | DHCP_EVENT_DNS_REGPARAMS_FAILURE | The DHCP service was unable to impersonate the credentials necessary for DNS registrations: %n%1. The local system credentials are being used. |
-| 1056     | DHCP_EVENT_NO_DNSCREDENTIALS_ON_DC | The DHCP service has detected that it is running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCP service. This isn't a recommended security configuration. Credentials for Dynamic DNS registrations may be configured using the command line, or via the DHCP Administrative tool. |
+| 1056     | DHCP_EVENT_NO_DNSCREDENTIALS_ON_DC | The DHCP service has detected that it's running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCP service. This isn't a recommended security configuration. Credentials for Dynamic DNS registrations may be configured using the command line, or via the DHCP Administrative tool. |
 | 1057     | EVENT_SERVER_DATABASE_CONVERSION | The DHCP service was unable to convert the temporary database to ESE format: %n%1. |
 | 1058     | EVENT_SERVER_INIT_CONFIG_FAILED | The DHCP service failed to initialize its configuration parameters. The following error occurred: %n%1 |
 | 1059     | VENT_SERVER_COULDNT_SEE_DS | The DHCP service failed to see a directory server for authorization. |
@@ -253,7 +254,7 @@ DHCP server administrative events log information about administrative tasks tha
 | 10004    | EVENT_DHCPV6_SERVER_LEASE_DECLINED | The DHCPv6 client, %2, declined the address %1. |
 | 10005    | EVENT_DHCPV6_SERVER_LOW_ADDRESS_WARNING | DHCPv6 Scope serving the network with prefix %1, is %2 percent full with only %3 IP addresses remaining. |
 | 10006    | EVENT_DHCPV6_CLIENT_DELETE | A DHCPV6 client %1 has been deleted from DHCPV6 database. |
-| 10007    | EVENT_DHCPV6_DROP_TIMEOUT | A DHCPV6 message that was in the queue for more than 30 seconds has been dropped because it is too old to process. |
+| 10007    | EVENT_DHCPV6_DROP_TIMEOUT | A DHCPV6 message that was in the queue for more than 30 seconds has been dropped because it's too old to process. |
 | 10008    | EVENT_DHCPV6_DROP_INVALID | An invalid DHCPV6 message has been dropped. |
 | 10009    | EVENT_DHCPV6_DROP_WRONG_SERVER | A DHCPV6 message that wasn't meant for this server has been dropped. |
 | 10010    | EVENT_DHCPV6_DROP_UNICAST | DHCV6 message has been dropped because it was received on a Uni-cast address and unicast support is disabled on the server. |
@@ -263,20 +264,20 @@ DHCP server administrative events log information about administrative tasks tha
 | 10014    | EVENT_DHCPV6_SERVER_MOVE_AUDIT_LOG_FAILED | DHCPv6 audit log file couldn't be backed up. Error code %1 |
 | 10015    | EVENT_DHCPV6_SERVER_AUDITLOG_PATH_NOT_ACCESSIBLE | The DHCPv6 service was unable to access path specified for the audit log. |
 | 10016    | EVENT_DHCPV6_SERVER_INIT_WINSOCK_FAILED | The DHCPv6 service failed to initialize Winsock startup. The following error occurred %1. |
-| 10017    | EVENT_DHCPV6_NO_DNSCREDENTIALS_ON_DC | The DHCPv6 service has detected that it is running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCPv6 service. This isn't a recommended security configuration. |
+| 10017    | EVENT_DHCPV6_NO_DNSCREDENTIALS_ON_DC | The DHCPv6 service has detected that it's running on a DC and has no credentials configured for use with Dynamic DNS registrations initiated by the DHCPv6 service. This isn't a recommended security configuration. |
 | 10018    | EVENT_DHCPV6_SERVER_INTERFACE_NOTIFICATION | The DHCPv6 Server failed to receive a notification of interface list changes. Some of the interfaces won't be enabled in the DHCPv6 service. |
 | 10019    | EVENT_DHCPV6_SERVER_INIT_CONFIG_FAILED | The DHCPv6 service failed to initialize its configuration parameters. The following error occurred: %n%1. |
 | 10020    | EVENT_DHCPV6_SERVER_NEED_STATIC_IP | This computer has at least one dynamically assigned IPv6 address. For reliable DHCPv6 server operation, you should use only static IPv6 addresses. |
 | 10021    | EVENT_DHCPV6_SERVER_INIT_DATABASE_FAILED | DHCPv6 service failed to initialize the database. The following error occurred: %n%1. |
 | 10022    | EVENT_DHCPV6_SERVER_INIT_AND_READY | The DHCPv6 service has initialized and is ready to serve. |
-| 10023    | EVENT_DHCPV6_PORT_UNAVAILABLE | DHCPv6 Server is unable to bind to UDP port number %1 as it is used by another application. This port must be made available to DHCPv6 Server to start servicing the clients. |
+| 10023    | EVENT_DHCPV6_PORT_UNAVAILABLE | DHCPv6 Server is unable to bind to UDP port number %1 as it's used by another application. This port must be made available to DHCPv6 Server to start servicing the clients. |
 | 10024    | ERROR_LAST_DHCPV6_SERVER_ERROR | ERROR_LAST_DHCPV6_SERVER_ERROR |
 | 10025    | EVENT_DHCPV6_DNSDHCID_FAIL | The DNS registration for DHCPv6 Client IPv6 address %1, FQDN %2 and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
-| 20090    | EVENT_DHCP_PORT_UNAVAILABLE | DHCP Server is unable to bind to UDP port number %1 as it is used by another application. This port must be made available to DHCP Server to start servicing the clients. |
+| 20090    | EVENT_DHCP_PORT_UNAVAILABLE | DHCP Server is unable to bind to UDP port number %1 as it's used by another application. This port must be made available to DHCP Server to start servicing the clients. |
 | 20098    | EVENT_FILTER_EMPTY_ALLOW_LIST | No DHCP clients are being served, as the Allow list is empty and the server was configured to provide DHCP services, to clients whose hardware addresses are present in the Allow List. |
 | 20251    | DHCPv4.ChangeFailoverRelationState | The failover state of server: %1 for failover relationship: %2 changed from: %3 to %4. |
 | 20252    | DHCPv4.ChangeFailoverRelationStateError | The failover state of server: %1 for failover relationship: %2 changed from: %3 to %4. |
-| 20253    | DHCPv4.FailoverServerTimeSync | The server detected that it is out of time synchronization with partner server: %1 for failover relationship: %2. The time is out of sync by: %3 seconds. |
+| 20253    | DHCPv4.FailoverServerTimeSync | The server detected that it's out of time synchronization with partner server: %1 for failover relationship: %2. The time is out of sync by: %3 seconds. |
 | 20254    | DHCPv4.FailoverCommUp | Server has established contact with failover partner server %1 for relationship %2. |
 | 20255    | DHCPv4.FailoverCommDown | Server has lost contact with failover partner server %1 for relationship %2. |
 | 20256    | DHCPv4.AuthFailedBndUpdMsgDigestFailedToCompare | Failover protocol message BINDING-UPDATE from server %1 for failover relationship %2 was rejected because message digest failed to compare. |
@@ -319,6 +320,7 @@ DHCP server administrative events log information about administrative tasks tha
 
 DHCP server system events log information about the DHCP server’s system.
 
+<br />
 <details>
     <summary>To view all server system events, expand this section.</summary>
 
@@ -347,6 +349,7 @@ DHCP server system events log information about the DHCP server’s system.
 
 DHCP server filter notification events log information about link-layer based filtering.
 
+<br />
 <details>
     <summary>To view all server filter notification events, expand this section.</summary>
 
@@ -362,6 +365,7 @@ DHCP server filter notification events log information about link-layer based fi
 
 DHCP server audit events log information about security-related events.
 
+<br />
 <details>
     <summary>To view all server audit events, expand this section.</summary>
 
