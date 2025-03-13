@@ -8,7 +8,7 @@ ms.date: 03/13/2025
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 
-# Stretch Cluster Replication using Shared Storage
+# Stretch cluster replication using shared storage
 
 This evaluation example allows you to configure computers and their storage in a single stretch cluster, where two nodes share one set of storage and two nodes share another set of storage, then replication keeps both sets of storage mirrored in the cluster to allow immediate failover. These nodes and their storage should be located in separate physical sites, although it isn't required. There are separate steps for creating Hyper-V and File Server clusters as sample scenarios.
 
@@ -161,7 +161,7 @@ No option is available to configure site awareness using Failover Cluster Manage
 > [!TIP]
 > Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728(v=ws.11)) to ensure cluster networking is optimally configured. Configure cluster networking and AD for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
 >
-> You can also configure VM resiliency so that guests don't pause for long during node failures. Instead, they failover to the new replication source storage within 10 seconds. To perform this action, run the `(Get-Cluster).ResiliencyDefaultPeriod=10` command.
+> You can also configure VM resiliency so that guests don't pause for long during node failures. Instead, they fail over to the new replication source storage within 10 seconds. To perform this action, run the `(Get-Cluster).ResiliencyDefaultPeriod=10` command.
 
 # [Hyper-V Failover Cluster](#tab/hyperv-failover)
 
@@ -532,7 +532,7 @@ To alter replication source and destination within the stretch cluster, use the 
 
 To remove the existing replication:
 
-1. Right-click the source CSV disk and select **Replication**, then select **Remove**. Accept the warning prompt.
+- Right-click the source CSV disk and select **Replication**, then select **Remove**. Accept the warning prompt.
 
    Optionally, remove the storage from CSV to return it to available storage for further testing.
 
