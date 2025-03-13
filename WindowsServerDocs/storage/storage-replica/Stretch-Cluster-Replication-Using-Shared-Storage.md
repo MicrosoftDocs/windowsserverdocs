@@ -341,11 +341,9 @@ After you configure, validate, and test your environment, the next steps are to 
 
       ![A screenshot showing the Replication tab of the selected disk in Failover Cluster Manager being continuously replicated.](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_ReplicationDetails2.png)
 
-   1. Start **eventvwr.exe**.
+   1. Open the **Event Viewer** on the _source_ server, navigate to **Applications and Services\Microsoft\Windows\StorageReplica\Admin** and examine event IDs 1237, 2200, 5001, 5002, 5004, and 5015.
 
-      1. On the source server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Admin** and examine event IDs 5015, 5002, 5004, 1237, 5001, and 2200.
-
-      1. On the destination server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Operational** and wait for event 1215. This event states the number of copied bytes and the time taken. Example:
+   1. Open the **Event Viewer** on the _destination_ server, navigate to **Applications and Services\Microsoft\Windows\StorageReplica\Operational** and wait for event ID 1215. This event states the number of copied bytes and the time taken. Example:
 
       ```
       Log Name:      Microsoft-Windows-StorageReplica/Operational
@@ -372,7 +370,7 @@ After you configure, validate, and test your environment, the next steps are to 
       Elapsed Time (ms): 140
       ```
 
-      1. On the destination server, navigate to **Applications and Services\Microsoft\Windows\StorageReplica\Admin** and examine event IDs 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. If you encounter several event IDs 1237, this indicates progress.
+      1. Open the **Event Viewer** on the _destination_ server, navigate to **Applications and Services\Microsoft\Windows\StorageReplica\Admin** and examine event IDs 1237, 2200, 5001, 5009, 5005, and 5015 to understand the processing progress. There should be no warnings of errors in this sequence. If you encounter several event IDs 1237, this indicates progress.
 
          > [!WARNING]
          > CPU and memory usage are likely to be higher than normal until initial synchronization completes.
