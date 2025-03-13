@@ -4,7 +4,7 @@ description: You can upgrade the operating system of a Windows Server failover c
 ms.topic: how-to
 author: jasongerend
 ms.author: jgerend
-ms.date: 2/27/2025
+ms.date: 3/13/2025
 ---
 
 # Upgrade the OS of a Windows Server cluster by performing a rolling upgrade
@@ -28,10 +28,12 @@ A rolling upgrade of a Windows Server failover cluster provides the following be
 At a high level, a rolling upgrade consists of these steps:
 
 1. Transfer workloads off of the first node, and then evict the node from the cluster.
-2. On the evicted node, perform a clean installation of the newer version of Windows Server.
-3. Add the evicted node back to the cluster, which is now running on two OS versions in mixed-OS version mode, and set up the workloads and data on the upgraded node.
+2. On the evicted node, install the newer version of Windows Server via an upgrade or clean install.
+3. Add the evicted node back to the cluster, which is now running on two OS versions in mixed-OS version mode. Also set up the workloads and data on the upgraded node if you performed a clean install.
 4. Repeat steps 2 through 4 for every other node in the cluster.
 5. Update the cluster functional level to the new version of Windows Server and update VM and storage pool versions.
+
+For a detailed diagram of the rolling upgrade process, see the following illustration: [Cluster upgrading workflow](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png).
 
 ## Requirements
 
@@ -44,10 +46,9 @@ Complete the following requirements before you begin the upgrade:
 
 ## Limitations
 
-- The rolling upgrade involves reformatting each node and performing a clean installation of the newer version of Windows Server. We don't recommend performing *In-place* or *upgrade* OS installations.
 - We recommend moving through the cluster upgrade process quickly (within four weeks) because some cluster features aren't optimized for mixed-OS mode.
   - When managing a mixed-OS mode cluster, always perform the management tasks from a node running the newer version of Windows Server. Older versions of Windows Server often can't use UI or management tools to manage newer versions.
-  - Avoid creating or resizing storage on newer Windows Server nodes while the cluster is running a mix of OS versions because of possible incompatibilities on failover from a newer Windows Server node to an older Windows Server node.
+  - Avoid creating or resizing storage on newer Windows Server nodes while the cluster is running a mix of OS versions because of possible incompatibilities when failing over from a newer to an older Windows Server node.
 - You can upgrade only to the next newer version of OS, for example from Windows Server 2022 to Windows Server 2025.
 <br>To upgrade across multiple versions, such as from Windows Server 2016 to Windows Server 2025, run the upgrade sequentially (first to Windows Server 2019, then to Windows Server 2022, and finally to Windows Server 2025), or migrate to a new cluster.
 - If you have VMs with a VM configuration version older than 8.0 (corresponding to Windows Server 2016 or Windows 10 version 1607), you might need to upgrade the VM configuration version to run the VMs on the upgraded cluster, regardless of how you upgrade. This can happen if you have older VMs running on Windows Server 2019 and upgrade to Windows Server 2022.
@@ -58,15 +59,12 @@ Complete the following requirements before you begin the upgrade:
 The following sections take you through the steps to perform a rolling cluster upgrade:
 
 1. Prepare the cluster for the operating system upgrade
-2. Transfer workloads off of the first node, and then evict the node from the cluster.
-3. Reformat the system drive and install the newer version of Windows Server on the evicted node.
-4. Add the evicted node back to the cluster, which now running in mixed-OS version mode, and set up the workloads and data on the node.
+2. Transfer workloads off of a node, and then evict the node from the cluster.
+3. Install the newer version of Windows Server on the evicted node.
+4. Add the evicted node back to the cluster, which is now running in mixed-OS version mode. If you performed a clean install, set up workloads on the node.
 5. Repeat steps 2 through 4 for every other node in the cluster.
 6. Update the cluster functional level to the new version of Windows Server.
-7. Resume normal cluster operations and turn on new functionality
-
-![Illustration showing the workflow for upgrading a cluster](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png)
-**Figure 1: Cluster OS Rolling Upgrade workflow**
+7. Resume normal cluster operations and turn on new functionality.
 
 ### Step 1: Prepare the cluster for the upgrade
 
@@ -77,8 +75,8 @@ Before you start evicting and upgrading nodes it's important to verify that the 
     - Are there enough nodes in the cluster to maintain the required fault tolerance with one node evicted? This is typically an issue for two-node clusters, where you might want to temporarily add a node to the cluster to maintain fault tolerance during the upgrade.
 2. For Hyper-V workloads, check that all Windows Server Hyper-V hosts have CPU support for Second-Level Address Table (SLAT). Only SLAT-capable machines can use the Hyper-V role in Windows Server 2016 and newer.
 3. Install the latest software updates on all nodes of the cluster.
-4. Check that any workload backups have completed, and consider backing-up the cluster database with a System State backup. Then stop backup operations while adding nodes to the cluster.
-5. Check that all cluster nodes are online /running/up using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
+4. Check that any workload backups have completed, and consider backing-up the cluster database with a System State backup.
+5. Check that all cluster nodes are up using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
 
     ```powershell
     Get-ClusterNode
@@ -155,27 +153,22 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
     ```
 
-### Step 3: Format the system drive and install the new version of Windows Server
+### Step 3: Install the new version of Windows Server
 
-1. Format the system drive and perform a clean install of Windows Server on the node using the **Custom: Install Windows only (advanced)** installation (see Figure 2) option in Setup. We do not recommend performing an upgrade installation.
+1. Perform an upgrade or clean install of the newer version of Windows Server on the node.
 
-    ![Screencap of the Windows Server 2016 installation wizard showing the custom install option selected](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_InstallOption.png)
-    **Figure 2: Available installation options for Windows Server 2016**
+2. If you performed a clean install, get the node ready to rejoin the cluster:
+    1. Join the node to the appropriate Active Directory Domain Services domain.
+    2. Add the appropriate users to the local Administrators group.
+    3. Install any server roles and features that you need, such as Hyper-V, Failover Clustering, and NetworkATC (available on Windows Server 2025). You can use Windows Admin Center, Server Manager, or the [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature) PowerShell cmdlet, as shown in the following example:
 
-2. Join the node to the appropriate Active Directory Domain Services domain.
-3. Add the appropriate users to the local Administrators group.
-4. Using Windows Admin Center, Server Manager, or the [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature) PowerShell cmdlet, install any server roles and features that you need, such as Hyper-V, Failover Clustering, and NetworkATC (available on Windows Server 2025).
+        ```PowerShell
+        Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "NetworkATC" -IncludeAllSubFeature -IncludeManagementTools
+        ```
 
-    ```PowerShell
-    Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "NetworkATC" -IncludeAllSubFeature -IncludeManagementTools
-    ```
-
-5. Check network and storage connectivity settings using Failover Cluster Manager.
-6. If Windows Firewall is used, check that the Firewall settings are correct for the cluster. For example, Cluster Aware Updating might require Firewall configuration.
-7. For Hyper-V workloads, create virtual switches that exactly match the virtual switches used on the rest of the cluster nodes. You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
-
-    ![Screencap showing the location of the Hyper-V Virtual Switch Manager dialog](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_VMSwitch.png)
-    **Figure 3: Virtual Switch Manager**
+    4. Check network and storage connectivity settings.
+    5. If Windows Firewall is used, check that the Firewall settings are correct for the cluster. For example, Cluster Aware Updating might require Firewall configuration.
+    6. For Hyper-V workloads, create virtual switches that exactly match the virtual switches used on the rest of the cluster nodes. You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
 
 ### Step 4: Add the node back to the cluster
 
@@ -227,13 +220,12 @@ When every node has the newer OS version installed and is added back to the clus
 > After you update the cluster functional level, you cannot go back to an earlier functional level and you cannot add nodes running earlier versions of Windows Server to the cluster.
 
 1. Check that all cluster roles are running on the cluster as expected. You can use Failover Cluster Manager or the [Get-ClusterGroup](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet.
-In the following example, Available Storage isn't being used, instead a CSV is used and Available Storage displays an **Offline** status.
 
     ```PowerShell
     Get-ClusterGroup
     ```
 
-    Here's an example of the output:
+    Here's an example of the output showing four VMs and the cluster group online:
 
     ```output
     Name                OwnerNode      State
@@ -245,6 +237,8 @@ In the following example, Available Storage isn't being used, instead a CSV is u
     VM4                 node3          Online
     Cluster Group       node1          Online
     ```
+
+    The Available Storage group isn't used and is offline because this cluster uses Cluster Shared Volumes (CSVs) for storage. Available Storage would be online if the cluster used disks assigned to it from LUNS on a SAN, but we recommend using CSVs instead.
 
 2. Check that all cluster nodes are online and running using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
 
@@ -276,7 +270,7 @@ In the following example, Available Storage isn't being used, instead a CSV is u
     8
     ```
 
-4. Run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet - no errors should be returned (see Figure 19).
+4. Run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet - no errors should be returned.
 
     ```powershell
     Update-ClusterFunctionalLevel
@@ -306,7 +300,7 @@ In the following example, Available Storage isn't being used, instead a CSV is u
 
 ### Step 7: Resume normal cluster operations and turn on new functionality
 
-To resume normal cluster operations and turn on new functionality, perform the following steps:
+To resume normal cluster operations and turn on new functionality, including in storage pools, perform the following steps:
 
 1. Start Cluster Aware Updating by using the Cluster Aware Updating tool or the [Enable-CauClusterRole](/powershell/module/clusterawareupdating/Enable-CauClusterRole) cmdlet.
 
@@ -322,7 +316,7 @@ To resume normal cluster operations and turn on new functionality, perform the f
     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
     ```
 
-2. Resume backup operations using the backup tool of your choice.
+2. Resume any backup operations that you stopped for the upgrade.
 3. To turn on new functionality available for VMs, upgrade the configuration version for each VM. For a list of new Hyper-V capabilities, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md#what-happens-if-i-dont-upgrade-the-virtual-machine-configuration-version).
 
     1. View the VM versions that are supported by each node in the cluster by using the [Get-VMHostSupportedVersion](/powershell/module/hyper-v/Get-VMHostSupportedVersion) cmdlet. Each node should have the same supported versions at this point.
@@ -344,7 +338,12 @@ To resume normal cluster operations and turn on new functionality, perform the f
         Microsoft Windows 10 May 2019 Update/Server 1903      9.1     False
         Microsoft Windows 10 May 2020 Update/Server 2004      9.2     False
         Microsoft Windows 10 (Manganese)                      9.3     False
-        Microsoft Windows Server 2022                         10.0    True
+        Microsoft Windows Server 2022                         10.0    False
+        Microsoft Host OS (Cobalt+)                           10.5    False
+        Microsoft Windows 11 (22H2)                           11.0    False
+        Microsoft Windows 11 (Copper)                         11.1    False
+        Microsoft Windows 11 (Zinc)                           11.2    False
+        Microsoft Windows Server 2025                         12.0    True
         ```
 
     2. View the VMs on each node in the cluster by using the [Get-VM](/powershell/module/hyper-v/Get-VM) cmdlet.
@@ -419,7 +418,7 @@ The following table shows the values and each corresponding functional level:
     If you have backed-up the cluster database with a System State backup before running [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel), you should be able to perform an Authoritative restore on a node running the previous version of Windows Server and restore the original cluster database and configuration.
 
 **Can I use in-place upgrade for each node instead of using clean-OS install by reformatting the system drive?**
-    We recommend performing a clean OS install on each node, but you can perform an in-place upgrade of a cluster node if you carefully read and resolve all warning messages displayed during the in-place upgrade.
+    Yes. In the past we recommended performing a clean OS install on each node, but you can perform an in-place upgrade of a cluster node if you carefully read and resolve all warning messages displayed during the in-place upgrade.
 
 **If I am using Hyper-V replication for a Hyper-V VM on my Hyper-V cluster, will replication remain intact during and after the Cluster OS Rolling Upgrade process?**
     Yes, Hyper-V replica remains intact during and after the Cluster OS Rolling Upgrade process.
