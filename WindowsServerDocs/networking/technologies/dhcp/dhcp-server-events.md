@@ -9,13 +9,32 @@ ms.date: 03/12/2025
 
 # DHCP server events
 
-The following tables summarize Windows DHCP server events. Events are displayed in tables based on their channel.
+DHCP server logs events for all changes that are made. In this article, learn where to view DHCP server events, and see the ID, category, and text for each event.
+
+## View DHCP server logs
+
+DHCP audit logs are enabled by default, and don't significantly affect DNS server performance.
+
+To view DHCP Server service event logs:
+
+1. Select the Start button, type Event viewer, open Event viewer from the best match list.
+
+1. In Event Viewer, navigate to **Applications and Services Logs** > **Microsoft** > **Windows** > **DHCP-Server**.
+
+1. Depending on the kind of issue, an event is logged to one of the following event channels:
+
+- DHCP Server Operational Events
+- DHCP Server Administrative Events
+- DHCP Server System Events
+- DHCP Server Filter Notification Events
+- DHCP Server Audit Events
 
 ## DHCP server operational events
 
+DHCP server operational events log information about the server's operation. Whenever a scope is changed, an event is added.
+
 <details>
     <summary>To view all server operational events, expand this section.</summary>
-
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 70       | DHCPv4.ScopeConfigured | Scope: %1 for IPv4 is Configured by %2. |
@@ -142,11 +161,11 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20313    | DHCPv4.DisabledSharedSecret | Message authentication for failover relationship %2 with server %1 has been disabled. |
 | 20315    | DHCPv4.UpdateScopePolicyDNSSuffix | DNSSuffix of scope %3 policy %2 was set to %1. |
 | 20316    | DHCPv4.UpdateServerPolicyDNSSuffix | DNSSuffix of server policy %2 was set to %1. |
-
 </details>
 
 ## DHCP server administrative events
 
+DHCP server administrative events log information about administrative tasks that are performed on the DHCP server.
 <details>
     <summary>To view all server administrative events, expand this section.</summary>
 | Event ID | Event category | Event text |
@@ -292,14 +311,14 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20287    | DHCPv4.ClientRequestDropped | DHCP client request from %1 was dropped since the applicable IP address ranges in scope/superscope %2 are out of available IP addresses. This could be because of IP address ranges of a policy being out of available IP addresses. |
 | 20291    | DHCPv4.SendBndAckMessageRejectReason | A BINDING-ACK message with transaction id: %1 was sent for IP address: %2 with reject reason: (%3) to partner server: %4 for failover relationship: %5. |
 | 20292    | DHCPv4.RecvBndAckMessageRejectReason | A BINDING-ACK message with transaction id: %1 was received for IP address: %2 with reject reason: (%3) from partner server: %4 for failover relationship: %5. |
-
 </details>
 
 ## DHCP server system events
 
+DHCP server system events log information about the DHCP server’s system.
+
 <details>
     <summary>To view all server system events, expand this section.</summary>
-
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 20035    | EVENT_SERVER_INTERFACE_NOTIFICATION | %1 %3 |
@@ -319,28 +338,28 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20163    | DHCPv4Stateless.ScavengerEnd | Scavenger finished purging stateless entries. |
 | 20164    | DHCPv4HA.TotalLeasesDeleted | The total leases deleted in scavenger are %1 |
 | 20165    | DHCPv4HA.FailoverScopeDeleted | Scope %1 which was part of failover relationship %2 wasn't found in DHCP server database. Please restore the DHCP server database. |
-
 </details>
 
 ## DHCP server filter notification events
 
+DHCP server filter notification events log information about link-layer based filtering.
+
 <details>
     <summary>To view all server filter notification events, expand this section.</summary>
-
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 20096    | EVENT_FILTER_DENIED_IN_DENY_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %4, and FQDN/Hostname %2 because it matched entry %3 in the Deny List. |
 | 20097    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %3, and FQDN/Hostname %2 because it didn't match any entry in the Allow List. |
 | 20099    | EVENT_FILTER_DENIED_IN_DENY_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %4, and unspecified FQDN/Hostname%2 because it matched entry %3 in the Deny List. |
 | 20100    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %3, and unspecified FQDN/Hostname%2 because it didn't match any entry in the Allow List. |
-
 </details>
 
 ## DHCP server audit events
 
+DHCP server audit events log information about security-related events.
+
 <details>
     <summary>To view all server audit events, expand this section.</summary>
-
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 20289    | DHCPv4.SendBndUpdMessage | A BINDING-UPDATE message with transaction id: %1 was sent for IP address: %2 with binding status: %3 to partner server: %4 for failover relationship: %5. |
@@ -363,5 +382,4 @@ The following tables summarize Windows DHCP server events. Events are displayed 
 | 20308    | DHCPv4.RecvBndAckMessageNoRejectReason | A BINDING-ACK message with transaction id: %1 was received for IP address: %2 from partner server: %3 for failover relationship: %4. |
 | 20309    | DHCPv4.SendConnectAckMessageRejectReason | A CONNECTACK message with transaction id %1 was sent to partner server: %2 for failover relationship: %3 with reject reason: %4. |
 | 20310    | DHCPv4.RecvConnectAckMessageRejectReason | A CONNECTACK message with transaction id %1 was received from partner server: %2 for failover relationship: %3 with reject reason: %4. |
-
 </details>
