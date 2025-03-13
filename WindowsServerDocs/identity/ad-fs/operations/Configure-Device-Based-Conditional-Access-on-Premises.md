@@ -39,7 +39,7 @@ In order to use on-premises conditional access with registered devices, you must
     - This is only required for the forest that AD FS is joined to
 
 > [!NOTE]
-> If you installed Microsoft Entra Connect prior to upgrading to the schema version (level 85 or greater) in Windows Server 2016, you will need to re-run the Microsoft Entra Connect installation and refresh the on-premises AD schema to ensure the synchronization rule for msDS-KeyCredentialLink is configured.
+> If you installed Microsoft Entra Connect prior to upgrading to the schema version (level 85 or greater) in Windows Server 2016, you'll need to re-run the Microsoft Entra Connect installation and refresh the on-premises AD schema to ensure the synchronization rule for msDS-KeyCredentialLink is configured.
 
 ### Verify your schema level
 To verify your schema level, do the following:
@@ -79,17 +79,17 @@ To do this, follow the steps under [Setting up Microsoft Entra join in your orga
 > If you ran Microsoft Entra Connect using Express Settings, the correct AD objects have been created for you.  However, in most AD FS scenarios, Microsoft Entra Connect was run with Custom Settings to configure AD FS, so the below steps are necessary.
 
 ### Create AD objects for AD FS Device Authentication
-If your AD FS farm is not already configured for Device Authentication (you can see this in the AD FS Management console under Service -> Device Registration), use the following steps to create the correct AD DS objects and configuration.
+If your AD FS farm isn't already configured for Device Authentication (you can see this in the AD FS Management console under Service -> Device Registration), use the following steps to create the correct AD DS objects and configuration.
 
 ![Screenshot that shows the Device Registration Overview screen.](media/Configure-Device-Based-Conditional-Access-on-Premises/device1.png)
 
->Note: The below commands require Active Directory administration tools, so if your federation server is not also a domain controller, first install the tools using step 1 below.  Otherwise you can skip step 1.
+>Note: The below commands require Active Directory administration tools, so if your federation server isn't also a domain controller, first install the tools using step 1 below.  Otherwise you can skip step 1.
 
 1.  Run the **Add Roles & Features** wizard and select feature **Remote Server Administration Tools** -> **Role Administration Tools** -> **AD DS and AD LDS Tools** -> Choose both the **Active Directory module for Windows PowerShell** and the **AD DS Tools**.
 
 ![Screenshot that highlights the Active Directory module for Windows PowerShell and the AD DS Tools options.](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
 
-2. On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin (EA) privileges and open an elevated PowerShell prompt.  Then, execute the following PowerShell commands:
+2. On your AD FS primary server, ensure you're logged in as AD DS user with Enterprise Admin (EA) privileges and open an elevated PowerShell prompt.  Then, execute the following PowerShell commands:
 
    `Import-module activedirectory`
    `PS C:\> Initialize-ADDeviceRegistration -ServiceAccountName "<your service account>" `
@@ -108,7 +108,7 @@ The above PSH creates the following objects:
 
 ![Screenshot that shows the progress of the objects being created.](media/Configure-Device-Based-Conditional-Access-on-Premises/device4.png)
 
-4. Once this is done, you will see a successful completion message.
+4. Once this is done, you'll see a successful completion message.
 
 ![Screenshot that shows the successful completion message.](media/Configure-Device-Based-Conditional-Access-on-Premises/device5.png)
 
@@ -154,7 +154,7 @@ The above command creates the following objects for device write-back to AD DS, 
 <a name='enable-device-write-back-in-azure-ad-connect'></a>
 
 ### Enable Device Write Back in Microsoft Entra Connect
-If you have not done so before, enable device write-back in Microsoft Entra Connect by running the wizard a second time and selecting **"Customize Synchronization Options"**, then checking the box for device write-back and selecting the forest in which you have run the above cmdlets
+If you haven't done so before, enable device write-back in Microsoft Entra Connect by running the wizard a second time and selecting **"Customize Synchronization Options"**, then checking the box for device write-back and selecting the forest in which you have run the above cmdlets
 
 ### Configure Device Authentication in AD FS
 Using an elevated PowerShell command window, configure AD FS policy by executing the following command
@@ -191,7 +191,7 @@ For your reference, below is a comprehensive list of the AD DS devices, containe
 ### See it work
 To evaluate the new claims and policies, first register a device.  For example, you can Microsoft Entra join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps [here](/azure/active-directory/devices/hybrid-azuread-join-plan).  For information on joining Windows 10 mobile devices, see the document [here](/windows/client-management/mdm/mdm-enrollment-of-windows-devices).
 
-For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. You will be able to see new claims including *isManaged*, *isCompliant*, and *trusttype*.  If you enable Windows Hello for Business, you will also see the *prt* claim.
+For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. you'll be able to see new claims including *isManaged*, *isCompliant*, and *trusttype*.  If you enable Windows Hello for Business, you'll also see the *prt* claim.
 
 
 ## Configure Additional Scenarios
@@ -199,7 +199,7 @@ For easiest evaluation, sign on to AD FS using a test application that shows a l
 To enable automatic device registration for Windows 10 domain joined computers, follow steps 1 and 2 [here](/azure/active-directory/devices/hybrid-azuread-join-plan).
 This will help you achieve the following:
 
-1. Ensure your service connection point in AD DS exists and has the proper permissions (we created this object above, but it does not hurt to double check).
+1. Ensure your service connection point in AD DS exists and has the proper permissions (we created this object above, but it doesn't hurt to double check).
 2. Ensure AD FS is configured properly
 3. Ensure your AD FS system has the correct endpoints enabled and claim rules configured
 4. Configure the group policy settings required for automatic device registration of domain joined computers
@@ -215,7 +215,7 @@ To enable automatic MDM enrollment of registered devices so that you can use the
 2.  For Windows 10 domain joined clients
     1. To verify that device authentication is working, sign on to the domain joined client as a test user account. To trigger provisioning quickly, lock and unlock the desktop at least one time.
     2. Instructions to check for STK key credential link on AD DS object (does sync still have to run twice?)
-3.  If you get an error upon trying to register a Windows computer that the device was already enrolled, but you are unable or have already unenrolled the device, you may have a fragment of device enrollment configuration in the registry.  To investigate and remove this, use the following steps:
+3.  If you get an error upon trying to register a Windows computer that the device was already enrolled, but you're unable or have already unenrolled the device, you may have a fragment of device enrollment configuration in the registry.  To investigate and remove this, use the following steps:
     1. On the Windows computer, open Regedit and navigate to **HKLM\Software\Microsoft\Enrollments**
     2. Under this key, there will be many subkeys in the GUID form.  Navigate to the subkey that has ~17 values in it and has "EnrollmentType" of  "6" [MDM joined] or "13" (Microsoft Entra joined)
     3. Modify **EnrollmentType** to **0**
