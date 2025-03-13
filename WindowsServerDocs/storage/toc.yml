@@ -123,7 +123,7 @@ items:
     - name: Advanced Troubleshooting SMB
       href: file-server/Troubleshoot/troubleshooting-smb.md
       items:
-      - name: Detect, enable and disable SMBv1, SMBv2, and SMBv3
+      - name: Detect, enable, and disable SMBv1, SMBv2, and SMBv3
         href: file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
       - name: SMBv1 is not installed by default
         href: file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md
