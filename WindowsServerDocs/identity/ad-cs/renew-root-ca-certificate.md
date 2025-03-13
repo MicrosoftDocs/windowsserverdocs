@@ -1,10 +1,10 @@
 ---
-title: Renew root CA certificate
-description: This article describes how to renew a root CA certificate with existing key pair, and a renew CA certificate with new key pair.
+title: Renew root CA certificate in Windows Server
+description: This article describes how to renew a root CA certificate with existing key pair, and renew a CA certificate with new key pair.
 author: meaghanlewis
 ms.author: mosagie
 ms.topic: how-to
-ms.date: 02/26/2025
+ms.date: 03/13/2025
 #customer intent: As an IT administrator, I want to renew the root CA certificate so that the PKI remains secure and trusted.
 ---
 
