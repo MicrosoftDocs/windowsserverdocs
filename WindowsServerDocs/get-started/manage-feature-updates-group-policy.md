@@ -18,7 +18,7 @@ Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrad
 In some cases, you might wish to delay this optional update until you evaluate Windows Server 2025 in your test environment. In this article, you learn how to disable the Windows Server 2025 optional feature update using the Targeted Release Vehicle (TRV) settings in Group Policy. To learn more about configuring Group Policy for updates, see [Configure Windows Update for Business via Group Policy](/windows/deployment/update/waas-wufb-group-policy) and [Update Policy CSP](/windows/client-management/mdm/policy-csp-update#targetreleaseversion).
 
 > [!NOTE]
-> Feature Update from the Windows Server Setting Dialog in Windows Server 2019 and Windows Server 2022 has been temporarily paused.
+> Feature Update from the Windows Server Setting Dialog in Windows Server 2019 and Windows Server 2022 is temporarily paused.
 
 ## Prerequisites
 
