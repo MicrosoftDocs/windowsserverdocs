@@ -6,12 +6,10 @@ ms.date: 7/3/2024
 ms.topic: article
 ms.author: alalve
 ---
+
 # Get started with the web client
 
 The Remote Desktop web client lets you use a compatible web browser to access your organization's remote resources (apps and desktops) published to you by your admin. You'll be able to interact with the remote apps and desktops like you would with a local PC no matter where you are, without having to switch to a different desktop PC. Once your admin sets up your remote resources, all you need are your domain, user name, password, the URL your admin sent you, and a supported web browser, and you're good to go.
-
-> [!TIP]
-> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services, see [Connect to Azure Virtual Desktop with the Remote Desktop Web client](/azure/virtual-desktop/users/connect-web).
 
 ## What you'll need to use the web client
 
@@ -55,8 +53,6 @@ Follow these steps to print from the web client:
 
 ## Transfer files with the web client
 
-To learn how to enable web client file transfer, check out [Configure device redirections](/azure/virtual-desktop/configure-device-redirections#local-drive-redirection).
-
 Follow these steps to transfer files from your local computer to the remote session:
 
 1. Connect to the remote session.
@@ -76,7 +72,7 @@ To download files from the remote session to your local computer:
 
 The web client currently supports copying and pasting text only. Files can't be copied or pasted to and from the web client. Additionally, you can only use **Ctrl+C** and **Ctrl+V** to copy and paste text.
 
-## Keyboard settings in the remote session 
+## Keyboard settings in the remote session
 
 The web client supports using an Input Method Editor (IME) in the remote session in version 1.0.21.16 or later. Before you can use the IME, you must install the language pack for the keyboard you want to use in the remote session on the host virtual machine. To learn more about setting up language packs in the remote session, see [Add language packs to a Windows 10 multi-session image](/azure/virtual-desktop/language-packs).
 
@@ -111,20 +107,6 @@ Native resolution is set to off by default. To turn native resolution on:
 
 1. In your session, go to the upper-right corner of the taskbar and select **Settings**.
 2. Set **Enable native display resolution** to **On**.
-
-## Open resources in your installed Azure Virtual Desktop client
-
-The web client supports opening resources in your installed Azure Virtual Desktop client instead of the browser by downloading the Remote Desktop Protocol (RDP) file. To learn how to install a Remote Desktop client, check out [Remote Desktop clients](remote-desktop-clients.md).
-
->[!NOTE]
->RDP files have a limited lifespan. We recommend you download the RDP file every time you need to use a resource
-
-To download the RDP file:
-
-1. In the web client, go to the upper-right corner of the taskbar and select **the settings (gear) icon**.
-2. Under **Resource Launch method**, select **Download the RDP file**.
-3. Select the resource you want to open (for example, Excel) to download the RDP file.
-4. Once the download is finished, select the downloaded RDP file to open the resource.
 
 ## Get help with the web client
 
