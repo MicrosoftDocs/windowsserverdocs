@@ -1,5 +1,5 @@
 ---
-title: Dynamic Host Configuration Protocol (DHCP) server events
+title: DHCP server events in Windows Server
 description: View a summary of DHCP server events for operational, administrative, system, filter, and audit events.
 ms.topic: troubleshooting-general
 author: meaghanlewis
@@ -86,14 +86,14 @@ DHCP server operational events log information about the server's operation. Whe
 | 118      | DHCPv4.ServerPBA_Activated | Policy based assignment has been enabled at server level. |
 | 119      | DHCPv4.ScopeExclusionAdded | Added exclusion IP Address range %1 in the Address Pool for IPv4 under Scope: %2 by %3. |
 | 120      | DHCPv4.ScopeExclusionDeleted | Deleted exclusion IP Address range %1 in the Address Pool for IPv4 under Scope: %2 by %3. |
-| 121      | DHCPv4.ScopeEnableAllow | Link Layer based filtering is Enabled in the Allow List of the IPv4 by %1 |
-| 122      | DHCPv4.ScopeDisableAllow | Link Layer based filtering is Disabled in the Allow List of the IPv4 by %1 |
-| 123      | DHCPv4.ScopeAllow_AddFilter | Filter for physical address: %1, hardware type: %3 added to the IPv4 Allow List by %2. |
-| 124      | DHCPv4.ScopeAllow_DeleteFilter | Filter for physical address: %1, hardware type: %3 removed from the IPv4 Allow List by %2. |
-| 125      | DHCPv4.ScopeEnableDeny | Link Layer based filtering is Enabled in the Deny List of the IPv4 by %1 |
-| 126      | DHCPv4.ScopeDisableDeny | Link Layer based filtering is Disabled in the Deny List of the IPv4 by %1 |
-| 127      | DHCPv4.ScopeDeny_AddFilter | Filter for physical address: %1, hardware type: %3 added to the IPv4 Deny List by %2. |
-| 128      | DHCPv4.ScopeDeny_DeleteFilter | Filter for physical address: %1, hardware type: %3 removed from the IPv4 Deny List by %2. |
+| 121      | DHCPv4.ScopeEnableAllow | Link Layer based filtering is Enabled in the allowlist of the IPv4 by %1 |
+| 122      | DHCPv4.ScopeDisableAllow | Link Layer based filtering is Disabled in the allowlist of the IPv4 by %1 |
+| 123      | DHCPv4.ScopeAllow_AddFilter | Filter for physical address: %1, hardware type: %3 added to the IPv4 allowlist by %2. |
+| 124      | DHCPv4.ScopeAllow_DeleteFilter | Filter for physical address: %1, hardware type: %3 removed from the IPv4 allowlist by %2. |
+| 125      | DHCPv4.ScopeEnableDeny | Link Layer based filtering is Enabled in the blocklist of the IPv4 by %1 |
+| 126      | DHCPv4.ScopeDisableDeny | Link Layer based filtering is Disabled in the blocklist of the IPv4 by %1 |
+| 127      | DHCPv4.ScopeDeny_AddFilter | Filter for physical address: %1, hardware type: %3 added to the IPv4 blocklist by %2. |
+| 128      | DHCPv4.ScopeDeny_DeleteFilter | Filter for physical address: %1, hardware type: %3 removed from the IPv4 blocklist by %2. |
 | 130      | DHCPv6.ScopeDeleted | Scope: %1 for IPv6 is Deleted by %2. |
 | 131      | DHCPv6.ScopeActivated | Scope: %1 for IPv6 is Activated by %2. |
 | 132      | DHCPv6.ScopeDeActivated | Scope: %1 for IPv6 is DeActivated by %2. |
@@ -161,6 +161,7 @@ DHCP server operational events log information about the server's operation. Whe
 | 20313    | DHCPv4.DisabledSharedSecret | Message authentication for failover relationship %2 with server %1 has been disabled. |
 | 20315    | DHCPv4.UpdateScopePolicyDNSSuffix | DNSSuffix of scope %3 policy %2 was set to %1. |
 | 20316    | DHCPv4.UpdateServerPolicyDNSSuffix | DNSSuffix of server policy %2 was set to %1. |
+
 </details>
 
 ## DHCP server administrative events
@@ -257,7 +258,7 @@ DHCP server administrative events log information about administrative tasks tha
 | 10007    | EVENT_DHCPV6_DROP_TIMEOUT | A DHCPV6 message that was in the queue for more than 30 seconds has been dropped because it's too old to process. |
 | 10008    | EVENT_DHCPV6_DROP_INVALID | An invalid DHCPV6 message has been dropped. |
 | 10009    | EVENT_DHCPV6_DROP_WRONG_SERVER | A DHCPV6 message that wasn't meant for this server has been dropped. |
-| 10010    | EVENT_DHCPV6_DROP_UNICAST | DHCV6 message has been dropped because it was received on a Uni-cast address and unicast support is disabled on the server. |
+| 10010    | EVENT_DHCPV6_DROP_UNICAST | DHCV6 message has been dropped because it was received on a Unicast address and unicast support is disabled on the server. |
 | 10011    | EVENT_DHCPV6_SERVER_AUDIT_LOG_APPEND_FAILED | DHCPV6 audit log file can't be appended, Error Code returned %1. |
 | 10012    | EVENT_DHCPV6_DROP_UNAUTH | A DHCPV6 message has been dropped because the server isn't authorized to process the message. |
 | 10013    | EVENT_DHCPv6_SERVER_INIT_AUDIT_LOG_FAILED | The DHCPv6 service failed to initialize the audit log. The following error occurred: %n%1 |
@@ -272,9 +273,9 @@ DHCP server administrative events log information about administrative tasks tha
 | 10022    | EVENT_DHCPV6_SERVER_INIT_AND_READY | The DHCPv6 service has initialized and is ready to serve. |
 | 10023    | EVENT_DHCPV6_PORT_UNAVAILABLE | DHCPv6 Server is unable to bind to UDP port number %1 as it's used by another application. This port must be made available to DHCPv6 Server to start servicing the clients. |
 | 10024    | ERROR_LAST_DHCPV6_SERVER_ERROR | ERROR_LAST_DHCPV6_SERVER_ERROR |
-| 10025    | EVENT_DHCPV6_DNSDHCID_FAIL | The DNS registration for DHCPv6 Client IPv6 address %1, FQDN %2 and DHCID %3 has been denied as there's probably an existing client with same FQDN already registered with DNS. |
+| 10025    | EVENT_DHCPV6_DNSDHCID_FAIL | The DNS registration for DHCPv6 Client IPv6 address %1, FQDN %2 and DHCID %3 have been denied as there's probably an existing client with same FQDN already registered with DNS. |
 | 20090    | EVENT_DHCP_PORT_UNAVAILABLE | DHCP Server is unable to bind to UDP port number %1 as it's used by another application. This port must be made available to DHCP Server to start servicing the clients. |
-| 20098    | EVENT_FILTER_EMPTY_ALLOW_LIST | No DHCP clients are being served, as the Allow list is empty and the server was configured to provide DHCP services, to clients whose hardware addresses are present in the Allow List. |
+| 20098    | EVENT_FILTER_EMPTY_ALLOW_LIST | No DHCP clients are being served, as the allowlist is empty and the server was configured to provide DHCP services, to clients whose hardware addresses are present in the allowlist. |
 | 20251    | DHCPv4.ChangeFailoverRelationState | The failover state of server: %1 for failover relationship: %2 changed from: %3 to %4. |
 | 20252    | DHCPv4.ChangeFailoverRelationStateError | The failover state of server: %1 for failover relationship: %2 changed from: %3 to %4. |
 | 20253    | DHCPv4.FailoverServerTimeSync | The server detected that it's out of time synchronization with partner server: %1 for failover relationship: %2. The time is out of sync by: %3 seconds. |
@@ -312,8 +313,9 @@ DHCP server administrative events log information about administrative tasks tha
 | 20285    | DHCPv4.InvalidAlgorithmProvider | An invalid cryptographic algorithm %1 was specified for failover message authentication in FailoverCryptoAlgorithm under registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DHCPServer\Parameters\Failover. The operation is halted. |
 | 20286    | DHCPv4.FailoverClientLeaseDropped | BINDING UPDATE message for IP address %1 couldn't be replicated to the partner server %2 of failover relation %3 as the internal BINDING UPDATE queue is full. |
 | 20287    | DHCPv4.ClientRequestDropped | DHCP client request from %1 was dropped since the applicable IP address ranges in scope/superscope %2 are out of available IP addresses. This could be because of IP address ranges of a policy being out of available IP addresses. |
-| 20291    | DHCPv4.SendBndAckMessageRejectReason | A BINDING-ACK message with transaction id: %1 was sent for IP address: %2 with reject reason: (%3) to partner server: %4 for failover relationship: %5. |
-| 20292    | DHCPv4.RecvBndAckMessageRejectReason | A BINDING-ACK message with transaction id: %1 was received for IP address: %2 with reject reason: (%3) from partner server: %4 for failover relationship: %5. |
+| 20291    | DHCPv4.SendBndAckMessageRejectReason | A BINDING-ACK message with transaction ID: %1 was sent for IP address: %2 with reject reason: (%3) to partner server: %4 for failover relationship: %5. |
+| 20292    | DHCPv4.RecvBndAckMessageRejectReason | A BINDING-ACK message with transaction ID: %1 was received for IP address: %2 with reject reason: (%3) from partner server: %4 for failover relationship: %5. |
+
 </details>
 
 ## DHCP server system events
@@ -343,6 +345,7 @@ DHCP server system events log information about the DHCP server’s system.
 | 20163    | DHCPv4Stateless.ScavengerEnd | Scavenger finished purging stateless entries. |
 | 20164    | DHCPv4HA.TotalLeasesDeleted | The total leases deleted in scavenger are %1 |
 | 20165    | DHCPv4HA.FailoverScopeDeleted | Scope %1 which was part of failover relationship %2 wasn't found in DHCP server database. Please restore the DHCP server database. |
+
 </details>
 
 ## DHCP server filter notification events
@@ -355,10 +358,11 @@ DHCP server filter notification events log information about link-layer based fi
 
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
-| 20096    | EVENT_FILTER_DENIED_IN_DENY_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %4, and FQDN/Hostname %2 because it matched entry %3 in the Deny List. |
-| 20097    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %3, and FQDN/Hostname %2 because it didn't match any entry in the Allow List. |
-| 20099    | EVENT_FILTER_DENIED_IN_DENY_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %4, and unspecified FQDN/Hostname%2 because it matched entry %3 in the Deny List. |
-| 20100    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST_UNSPECIFIED | DHCP Services were denied to machine with hardware address %1, hardware type %3, and unspecified FQDN/Hostname%2 because it didn't match any entry in the Allow List. |
+| 20096    | EVENT_FILTER_DENIED_IN_DENY_LIST | DHCP Services denied to machine with hardware address %1, hardware type %4, and FQDN/Hostname %2 because it matched entry %3 in the blocklist. |
+| 20097    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST | DHCP Services denied to machine with hardware address %1, hardware type %3, and FQDN/Hostname %2 because it didn't match any entry in the allowlist. |
+| 20099    | EVENT_FILTER_DENIED_IN_DENY_LIST_UNSPECIFIED | DHCP Services denied to machine with hardware address %1, hardware type %4, and unspecified FQDN/Hostname%2 because it matched entry %3 in the blocklist. |
+| 20100    | EVENT_FILTER_DENIED_NOT_IN_ALLOW_LIST_UNSPECIFIED | DHCP Services denied to machine with hardware address %1, hardware type %3, and unspecified FQDN/Hostname%2 because it didn't match any entry in the allowlist. |
+
 </details>
 
 ## DHCP server audit events
@@ -371,24 +375,25 @@ DHCP server audit events log information about security-related events.
 
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
-| 20289    | DHCPv4.SendBndUpdMessage | A BINDING-UPDATE message with transaction id: %1 was sent for IP address: %2 with binding status: %3 to partner server: %4 for failover relationship: %5. |
-| 20290    | DHCPv4.RecvBndUpdMessage | A BINDING-UPDATE message with transaction id: %1 was received for IP address: %2 with binding status: %3 from partner server: %4 for failover relationship: %5. |
-| 20293    | DHCPv4.SendUpdReqMessage | A UPDREQ message with transaction id: %1 was sent to partner server: %2 for failover relationship: %3. |
-| 20294    | DHCPv4.RecvUpdReqMessage | A UPDREQ message with transaction id: %1 was received from partner server: %2 for failover relationship: %3. |
-| 20295    | DHCPv4.SendUpdDoneMessage | A UPDDONE message with transaction id: %1 was sent to partner server: %2 for failover relationship: %3. |
-| 20296    | DHCPv4.RecvUpdDoneMessage | A UPDDONE message with transaction id: %1 was received from partner server: %2 for failover relationship: %3. |
-| 20297    | DHCPv4.SendUpdReqAllMessage | A UPDREQALL message with transaction id: %1 was sent to partner server: %2 for failover relationship: %3. |
-| 20298    | DHCPv4.RecvUpdReqAllMessage | A UPDREQALL message with transaction id: %1 was received from partner server: %2 for failover relationship: %3. |
-| 20299    | DHCPv4.SendContactMessage | A CONTACT message with transaction id: %1 was sent to partner server: %2 for failover relationship: %3. |
-| 20300    | DHCPv4.RecvContactMessage | A CONTACT message with transaction id: %1 was received from partner server: %2 for failover relationship: %3. |
-| 20301    | DHCPv4.SendConnectMessage | A CONNECT message with transaction id: %1 was sent to partner server: %2 for failover relationship: %3. |
-| 20302    | DHCPv4.RecvConnectMessage | A CONNECT message with transaction id: %1 was received from partner server: %2 for failover relationship: %3. |
-| 20303    | DHCPv4.SendStateMessage | A STATE message with transaction id: %1 was sent to partner server: %2 for failover relationship %3 with state: %4 and start time of state: %5. |
-| 20304    | DHCPv4.RecvStateMessage | A STATE message with transaction id: %1 was received from partner server: %2 for failover relationship %3 with state: %4 and start time of state %5. |
-| 20305    | DHCPv4.SendConnectAckMessage | A CONNECTACK message with transaction id %1 was sent to partner server: %2 for failover relationship: %3. |
-| 20306    | DHCPv4.RecvConnectAckMessage | A CONNECTACK message with transaction id %1 was received from partner server: %2 for failover relationship: %3. |
-| 20307    | DHCPv4.SendBndAckMessageNoRejectReason | A BINDING-ACK message with transaction id: %1 was sent for IP address: %2 to partner server: %3 for failover relationship: %4. |
-| 20308    | DHCPv4.RecvBndAckMessageNoRejectReason | A BINDING-ACK message with transaction id: %1 was received for IP address: %2 from partner server: %3 for failover relationship: %4. |
-| 20309    | DHCPv4.SendConnectAckMessageRejectReason | A CONNECTACK message with transaction id %1 was sent to partner server: %2 for failover relationship: %3 with reject reason: %4. |
-| 20310    | DHCPv4.RecvConnectAckMessageRejectReason | A CONNECTACK message with transaction id %1 was received from partner server: %2 for failover relationship: %3 with reject reason: %4. |
+| 20289    | DHCPv4.SendBndUpdMessage | A BINDING-UPDATE message with transaction ID: %1 was sent for IP address: %2 with binding status: %3 to partner server: %4 for failover relationship: %5. |
+| 20290    | DHCPv4.RecvBndUpdMessage | A BINDING-UPDATE message with transaction ID: %1 was received for IP address: %2 with binding status: %3 from partner server: %4 for failover relationship: %5. |
+| 20293    | DHCPv4.SendUpdReqMessage | A UPDREQ message with transaction ID: %1 was sent to partner server: %2 for failover relationship: %3. |
+| 20294    | DHCPv4.RecvUpdReqMessage | A UPDREQ message with transaction ID: %1 was received from partner server: %2 for failover relationship: %3. |
+| 20295    | DHCPv4.SendUpdDoneMessage | A UPDDONE message with transaction ID: %1 was sent to partner server: %2 for failover relationship: %3. |
+| 20296    | DHCPv4.RecvUpdDoneMessage | A UPDDONE message with transaction ID: %1 was received from partner server: %2 for failover relationship: %3. |
+| 20297    | DHCPv4.SendUpdReqAllMessage | A UPDREQALL message with transaction ID: %1 was sent to partner server: %2 for failover relationship: %3. |
+| 20298    | DHCPv4.RecvUpdReqAllMessage | A UPDREQALL message with transaction ID: %1 was received from partner server: %2 for failover relationship: %3. |
+| 20299    | DHCPv4.SendContactMessage | A CONTACT message with transaction ID: %1 was sent to partner server: %2 for failover relationship: %3. |
+| 20300    | DHCPv4.RecvContactMessage | A CONTACT message with transaction ID: %1 was received from partner server: %2 for failover relationship: %3. |
+| 20301    | DHCPv4.SendConnectMessage | A CONNECT message with transaction ID: %1 was sent to partner server: %2 for failover relationship: %3. |
+| 20302    | DHCPv4.RecvConnectMessage | A CONNECT message with transaction ID: %1 was received from partner server: %2 for failover relationship: %3. |
+| 20303    | DHCPv4.SendStateMessage | A STATE message with transaction ID: %1 was sent to partner server: %2 for failover relationship %3 with state: %4 and start time of state: %5. |
+| 20304    | DHCPv4.RecvStateMessage | A STATE message with transaction ID: %1 was received from partner server: %2 for failover relationship %3 with state: %4 and start time of state %5. |
+| 20305    | DHCPv4.SendConnectAckMessage | A CONNECTACK message with transaction ID %1 was sent to partner server: %2 for failover relationship: %3. |
+| 20306    | DHCPv4.RecvConnectAckMessage | A CONNECTACK message with transaction ID %1 was received from partner server: %2 for failover relationship: %3. |
+| 20307    | DHCPv4.SendBndAckMessageNoRejectReason | A BINDING-ACK message with transaction ID: %1 was sent for IP address: %2 to partner server: %3 for failover relationship: %4. |
+| 20308    | DHCPv4.RecvBndAckMessageNoRejectReason | A BINDING-ACK message with transaction ID: %1 was received for IP address: %2 from partner server: %3 for failover relationship: %4. |
+| 20309    | DHCPv4.SendConnectAckMessageRejectReason | A CONNECTACK message with transaction ID %1 was sent to partner server: %2 for failover relationship: %3 with reject reason: %4. |
+| 20310    | DHCPv4.RecvConnectAckMessageRejectReason | A CONNECTACK message with transaction ID %1 was received from partner server: %2 for failover relationship: %3 with reject reason: %4. |
+
 </details>
