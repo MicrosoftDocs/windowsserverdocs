@@ -23,11 +23,11 @@ To view DHCP Server service event logs:
 
 1. Depending on the kind of issue, an event is logged to one of the following event channels:
 
-- DHCP Server Operational Events
-- DHCP Server Administrative Events
-- DHCP Server System Events
-- DHCP Server Filter Notification Events
-- DHCP Server Audit Events
+- [DHCP Server Operational Events](#dhcp-server-operational-events)
+- [DHCP Server Administrative Events](#dhcp-server-administrative-events)
+- [DHCP Server System Events](#dhcp-server-system-events)
+- [DHCP Server Filter Notification Events](#dhcp-server-filter-notification-events)
+- [DHCP Server Audit Events](#dhcp-server-audit-events)
 
 ## DHCP server operational events
 
@@ -35,6 +35,7 @@ DHCP server operational events log information about the server's operation. Whe
 
 <details>
     <summary>To view all server operational events, expand this section.</summary>
+
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 70       | DHCPv4.ScopeConfigured | Scope: %1 for IPv4 is Configured by %2. |
@@ -168,6 +169,7 @@ DHCP server operational events log information about the server's operation. Whe
 DHCP server administrative events log information about administrative tasks that are performed on the DHCP server.
 <details>
     <summary>To view all server administrative events, expand this section.</summary>
+
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 1000     | EVENT_SERVER_UNKNOWN_OPTION | The DHCP service received the unknown option %1, with a length of %2. The raw option data is given below. |
@@ -319,6 +321,7 @@ DHCP server system events log information about the DHCP server’s system.
 
 <details>
     <summary>To view all server system events, expand this section.</summary>
+
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 20035    | EVENT_SERVER_INTERFACE_NOTIFICATION | %1 %3 |
@@ -346,6 +349,7 @@ DHCP server filter notification events log information about link-layer based fi
 
 <details>
     <summary>To view all server filter notification events, expand this section.</summary>
+
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 20096    | EVENT_FILTER_DENIED_IN_DENY_LIST | DHCP Services were denied to machine with hardware address %1, hardware type %4, and FQDN/Hostname %2 because it matched entry %3 in the Deny List. |
@@ -360,6 +364,7 @@ DHCP server audit events log information about security-related events.
 
 <details>
     <summary>To view all server audit events, expand this section.</summary>
+
 | Event ID | Event category | Event text |
 |----------|----------------|------------|
 | 20289    | DHCPv4.SendBndUpdMessage | A BINDING-UPDATE message with transaction id: %1 was sent for IP address: %2 with binding status: %3 to partner server: %4 for failover relationship: %5. |
