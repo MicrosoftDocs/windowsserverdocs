@@ -28,7 +28,7 @@ A rolling upgrade of a Windows Server failover cluster provides the following be
 At a high level, a rolling upgrade consists of these steps:
 
 1. Transfer workloads off of the first node, and then evict the node from the cluster.
-2. On the evicted node, install the newer version of Windows Server via an upgrade or clean install.
+2. On the evicted node, install the newer version of Windows Server via an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md).
 3. Add the evicted node back to the cluster, which is now running on two OS versions in mixed-OS version mode. Also set up the workloads and data on the upgraded node if you performed a clean install.
 4. Repeat steps 2 through 4 for every other node in the cluster.
 5. Update the cluster functional level to the new version of Windows Server and update VM and storage pool versions.
@@ -155,7 +155,7 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 
 ### Step 3: Install the new version of Windows Server
 
-1. Perform an upgrade or clean install of the newer version of Windows Server on the node.
+1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
 
 2. If you performed a clean install, get the node ready to rejoin the cluster:
     1. Join the node to the appropriate Active Directory Domain Services domain.
