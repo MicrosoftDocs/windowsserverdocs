@@ -123,11 +123,11 @@ If you plan to use Windows 10 domain join (with automatic registration to Micros
 
 ![Screenshot that shows the path to the AdSyncPrep file.](media/Configure-Device-Based-Conditional-Access-on-Premises/device6.png)
 
-2. Provide your Microsoft Entra Global Administrator credentials.
+2. Provide your Microsoft Entra Conditional Access Administrator credentials.
 
     `PS C:>$aadAdminCred = Get-Credential`
 
-![Screenshot that shows where to provide the Microsoft Entra Global Administrator credentials.](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png)
+![Screenshot that shows where to provide the Microsoft Entra Conditional Access Administrator credentials.](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png)
 
 3. Run the following PowerShell command
 
