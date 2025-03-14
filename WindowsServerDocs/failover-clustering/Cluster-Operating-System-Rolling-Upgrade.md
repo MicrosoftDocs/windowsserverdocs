@@ -4,7 +4,7 @@ description: You can upgrade the operating system of a Windows Server failover c
 ms.topic: how-to
 author: jasongerend
 ms.author: jgerend
-ms.date: 3/13/2025
+ms.date: 3/14/2025
 ---
 
 # Upgrade the OS of a Windows Server cluster by performing a rolling upgrade
@@ -92,32 +92,34 @@ Before you start evicting and upgrading nodes it's important to verify that the 
     Node3       3     Up
     ```
 
-6. Verify if Cluster Aware Updating (CAU) is currently performing a run by using the **Cluster-Aware Updating** UI, or the [Get-CauRun](/powershell/module/clusterawareupdating/Get-CauRun) cmdlet.
+6. Stop any updating tools that are running on the cluster. For example, if you're using Cluster Aware Updating:
 
-    ```powershell
-    Get-CauRun
-    ```
+    1. Verify if Cluster Aware Updating (CAU) is currently performing a run by using the **Cluster-Aware Updating** UI, or the [Get-CauRun](/powershell/module/clusterawareupdating/Get-CauRun) cmdlet.
 
-    Here's an example of output on the cluster named "Cluster01":
+        ```powershell
+        Get-CauRun
+        ```
 
-    ```output
-    RunNotInProgress
-    WARNING: No Updating Run is currently in progress on cluster Cluster01.
-    ```
+        Here's an example of output on the cluster named "Cluster01":
 
-7. Stop Cluster Aware Updating by using the [Disable-CauClusterRole](/powershell/module/clusterawareupdating/Disable-CauClusterRole) cmdlet to prevent any nodes from being paused and drained automatically during the upgrade.
+        ```output
+        RunNotInProgress
+        WARNING: No Updating Run is currently in progress on cluster Cluster01.
+        ```
 
-    ```powershell
-    Disable-CauClusterRole
-    ```
+    2. Stop Cluster Aware Updating by using the [Disable-CauClusterRole](/powershell/module/clusterawareupdating/Disable-CauClusterRole) cmdlet to prevent any nodes from being paused and drained automatically during the upgrade.
 
-    Here's an example of output:
+        ```powershell
+        Disable-CauClusterRole
+        ```
 
-    ```output
-    Are you sure?
-    Do you want to disable the Cluster-Aware Updating clustered role on cluster "Cluster01"?
-    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
-    ```
+        Here's an example of output:
+
+        ```output
+        Are you sure?
+        Do you want to disable the Cluster-Aware Updating clustered role on cluster "Cluster01"?
+        [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+        ```
 
 ### Step 2: Transfer workloads and evict the node to upgrade
 
@@ -302,7 +304,7 @@ When every node has the newer OS version installed and is added back to the clus
 
 To resume normal cluster operations and turn on new functionality, including in storage pools, perform the following steps:
 
-1. Start Cluster Aware Updating by using the Cluster Aware Updating tool or the [Enable-CauClusterRole](/powershell/module/clusterawareupdating/Enable-CauClusterRole) cmdlet.
+1. If you stopped updating tools, start them again. For example, to start Cluster Aware Updating, you can use the Cluster Aware Updating tool or the [Enable-CauClusterRole](/powershell/module/clusterawareupdating/Enable-CauClusterRole) cmdlet.
 
     ```PowerShell
     Enable-CauClusterRole
