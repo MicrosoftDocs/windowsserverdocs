@@ -484,6 +484,42 @@ Storage Replica does not support disks with physical sector sizes greater than 4
 
 Please see [this document](/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size#resolutions) for more information & workarounds.
 
+Other symptoms include:
+
+1. Setting up Replica from Failover Cluster Manager will fail with the error below:
+```Output
+Failed to create replication.
+ERROR CODE : 0x80131500;
+NATIVE ERROR CODE : 3.
+Invalid namespace
+```
+
+2. PowerShell will fail with the error below:
+```Output
+WARNING: Failed to issue Storage Replica cluster resource control to notify action of removing replication group <RGName>.
+New-SRGroup : Unable to create replication group <RGName>, detailed reason: Failed to provision partition <PartitionID>.
+(There was insufficient free space on the disk to create the Storage Replica partition database.)
+```
+3. Event in Microsoft-Windows-StorageReplica/Admin log
+```Output
+Log Name:      Microsoft-Windows-StorageReplica/Admin
+Source:        Microsoft-Windows-StorageReplica
+Event ID:      10421
+Level:         Error
+User:          SYSTEM
+
+Description:
+Filter driver attempted to configure the partition to be available for replication operations but was unable to complete the necessary steps.
+
+DeviceName: \Device\Harddisk5\DR619
+DiskReplicationState: Unmonitored
+PartitionId: XXXXXXXXXXXXX
+ReplicationGroupId: XXXXXXXXXXXXX
+Status: Unknown NTSTATUS Error code: 0xc05300cf
+
+Guidance: Ensure the disk is online, writeable, and is initialised with a GPT style layout.
+```
+
 ## Next steps
 
 Now you understand some of the known issues with Storage Replica in Windows Servers, here are some articles that might help you as you use it.
