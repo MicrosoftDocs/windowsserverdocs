@@ -4,7 +4,7 @@ description: You can upgrade the operating system of a Windows Server failover c
 ms.topic: how-to
 author: jasongerend
 ms.author: jgerend
-ms.date: 3/14/2025
+ms.date: 3/17/2025
 ---
 
 # Upgrade the OS of a Windows Server cluster by performing a rolling upgrade
@@ -33,7 +33,10 @@ At a high level, a rolling upgrade consists of these steps:
 4. Repeat steps 2 through 4 for every other node in the cluster.
 5. Update the cluster functional level to the new version of Windows Server and update VM and storage pool versions.
 
-For a detailed diagram of the rolling upgrade process, see the following illustration: [Cluster upgrading workflow](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png).
+For a detailed diagram of the rolling upgrade process, see Figure 1.
+
+![Diagram showing the details of the rolling upgrade process](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png)
+**Figure 1: Diagram of the rolling upgrade process**
 
 ## Requirements
 
@@ -74,7 +77,6 @@ Before you start evicting and upgrading nodes it's important to verify that the 
     - Does the cluster have enough storage, CPU, and networking resources to run the required workloads when one node is removed from the cluster?
     - Are there enough nodes in the cluster to maintain the required fault tolerance with one node evicted? This is typically an issue for two-node clusters, where you might want to temporarily add a node to the cluster to maintain fault tolerance during the upgrade.
 2. For Hyper-V workloads, check that all Windows Server Hyper-V hosts have CPU support for Second-Level Address Table (SLAT). Only SLAT-capable machines can use the Hyper-V role in Windows Server 2016 and newer.
-3. If you're using Hyper-V with virtual switches that are bound to an LBFO team and are upgrading to Windows Server 2022 or newer, remove the team before starting the upgrade. After the upgrade you can bind the network adapters to a virtual switch that uses the newer SET switch technology. <br><br>LBFO teams are no longer supported in Windows Server 2022 and newer. For more information on removed features, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
 1. Install the latest software updates on all nodes of the cluster.
 1. Check that any workload backups have completed, and consider backing-up the cluster database with a System State backup.
 1. Check that all cluster nodes are up using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
@@ -122,17 +124,17 @@ Before you start evicting and upgrading nodes it's important to verify that the 
         [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
         ```
 
-### Step 2: Transfer workloads and evict the node to upgrade
+### Step 2: Transfer workloads off a node
 
 Perform the following steps on one node in the cluster (you'll repeat this process one at a time for every node in the cluster):
 
-1. Using Cluster Manager (optionally in Windows Admin Center), select the appropriate node and then use the **Pause | Drain** menu option to drain the node (see Figure 10) or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet (see Figure 1).
+1. Using Cluster Manager (optionally in Windows Admin Center), select the appropriate node and then use the **Pause | Drain** menu option to drain the node (see Figure 2) or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet.
 
-    ![Screencap showing how to drain roles with the Cluster Manager UI](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png)
-    **Figure 1: Draining roles from a node using Failover Cluster Manager**
+    ![Screenshot showing how to drain roles with Failover Cluster Manager](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png)
+    **Figure 2: Draining roles from a node using Failover Cluster Manager**
 
     ```PowerShell
-    Suspend-ClusterNode -Name Node1
+    Suspend-ClusterNode -Name Node1 -Drain
     ```
 
     Here's an example of the output showing that the cluster node is now paused:
@@ -143,7 +145,8 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
     Node1          1     Paused
     ```
 
-2. Evict the paused node from the cluster by using Cluster Manager or the [Remove-ClusterNode](/powershell/module/failoverclusters/Remove-ClusterNode) cmdlet.
+2. If you're using Hyper-V with virtual switches that are bound to an LBFO team and are performing an in-place upgrade to Windows Server 2022 or newer, remove the team before starting the upgrade. After the upgrade you can bind the network adapters to a virtual switch that uses the newer SET switch technology. <br><br>LBFO teams are no longer supported in Windows Server 2022 and newer. For more information on removed features, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
+3. If you're going to perform a clean OS installation on the node, first evict the paused node from the cluster by using Cluster Manager or the [Remove-ClusterNode](/powershell/module/failoverclusters/Remove-ClusterNode) cmdlet.
 
     ```PowerShell
     Remove-ClusterNode -Name Node1
@@ -159,7 +162,7 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 ### Step 3: Install the new version of Windows Server
 
 1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
-2. If you performed an upgrade and removed an LBFO team prior to the upgrade, create a new Hyper-V virtual switch using the newer Switch Embedded Teaming (SET) technology. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
+2. If you upgraded to Windows Server 2022 or newer and removed an LBFO team prior to the upgrade, create a new Hyper-V virtual switch using the newer Switch Embedded Teaming (SET) technology. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
 3. If you performed a clean install, get the node ready to rejoin the cluster:
     1. Join the node to the appropriate Active Directory Domain Services domain. Make sure to use the same computer name if the cluster uses Storage Spaces Direct.
     2. Add the appropriate users to the local Administrators group.
@@ -172,25 +175,22 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
     4. Check network and storage connectivity settings.
     5. If Windows Firewall is used, check that the Firewall settings are correct for the cluster. For example, Cluster Aware Updating might require Firewall configuration.
     6. For Hyper-V workloads, create virtual switches that exactly match the virtual switches used on the rest of the cluster nodes. You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
+    7. Connect to the upgraded node and then use Failover Cluster Manager or the [Add-ClusterNode](/powershell/module/failoverclusters/Add-ClusterNode) cmdlet to add the upgraded node back to the cluster.
 
-### Step 4: Add the node back to the cluster
+        ```powershell
+        Add-ClusterNode
+        ```
 
-1. Connect to the upgraded node and then use Failover Cluster Manager or the [Add-ClusterNode](/powershell/module/failoverclusters/Add-ClusterNode) cmdlet (see Figure 16) to add the upgraded node back to the cluster.
+        Here's an example of the output:
 
-    ```powershell
-    Add-ClusterNode
-    ```
+        ```output
+        Waiting for notification that node clusternode1 is a fully functional member of the cluster.
+        ```
 
-    Here's an example of the output:
+        > [!NOTE]
+        > When the first upgraded node joins the cluster, the cluster enters "Mixed-OS" mode, and the cluster core resources are moved to the newer node. A "Mixed-OS" mode cluster is a fully functional cluster where the new nodes run in a compatibility mode with the old nodes. "Mixed-OS" mode is a transitory mode for the cluster and you should update all nodes of the cluster within four weeks.
 
-    ```output
-    Waiting for notification that node clusternode1 is a fully functional member of the cluster.
-    ```
-
-    > [!NOTE]
-    > When the first upgraded node joins the cluster, the cluster enters "Mixed-OS" mode, and the cluster core resources are moved to the newer node. A "Mixed-OS" mode cluster is a fully functional cluster where the new nodes run in a compatibility mode with the old nodes. "Mixed-OS" mode is a transitory mode for the cluster and you should update all nodes of the cluster within four weeks.
-
-2. After the node is successfully added to the cluster, you can (optionally) move some of the cluster workloads to the newly added node to rebalance the workload across the cluster as follows:
+    8. After the node is successfully added to the cluster, you can (optionally) move some of the cluster workloads to the newly added node to rebalance the workload across the cluster as follows:
 
     - To move running virtual machines without downtime, use **Live Migration** in Failover Cluster Manager or the [Move-ClusterVirtualMachineRole](/powershell/module/failoverclusters/Move-ClusterVirtualMachineRole) cmdlet.
 
@@ -208,19 +208,19 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 
     - To move other cluster workloads, use the **Move** command in Failover Cluster Manager or the [Move-ClusterGroup](/powershell/module/failoverclusters/Move-ClusterGroup) cmdlet.
 
-### Step 5: Repeat steps 2 through 4 for every other node in the cluster
+### Step 4: Repeat steps 2 through 4 for every other node in the cluster
 
 The upgrade process is fully reversible until you update the cluster functional level in the next step. If you need to abandon the upgrade, you can add nodes running the original version of Windows Server and evict any nodes running the newer version of the OS until you upgrade the cluster functional level.
 
-### Step 6: Update the cluster functional level
+### Step 5: Update the cluster functional level and storage pool version
 
-Updating the cluster functional level makes it possible to use new features. It also improves some cluster operations, such as draining workloads from a node, which can lead to a node becoming isolated for a short period of time if performed on a mixed-OS cluster.
+Updating the cluster functional level and storage pool version makes it possible to use new features. It also improves some cluster operations, such as draining workloads from a node, which can lead to a node becoming isolated for a short period of time if performed on a mixed-OS cluster.
 
 When every node has the newer OS version installed and is added back to the cluster or permanently evicted, complete the following steps to update the cluster functional level:
 
 > [!IMPORTANT]
 >
-> After you update the cluster functional level, you cannot go back to an earlier functional level and you cannot add nodes running earlier versions of Windows Server to the cluster.
+> After you update the cluster functional level and storage pool version, you cannot go back to an earlier functional level or storage pool version and you cannot add nodes running earlier versions of Windows Server to the cluster.
 
 1. Check that all cluster roles are running on the cluster as expected. You can use Failover Cluster Manager or the [Get-ClusterGroup](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet.
 
@@ -301,9 +301,11 @@ When every node has the newer OS version installed and is added back to the clus
     9
     ```
 
-### Step 7: Resume normal cluster operations and turn on new functionality
+6. If you're using storage pools, update them using the [Update-StoragePool](/powershell/module/storage/Update-StoragePool) PowerShell cmdlet - this is an online operation so you don't need to take anything offline.
 
-To resume normal cluster operations and turn on new functionality, including in storage pools, perform the following steps:
+### Step 6: Resume normal cluster operations and turn on new functionality
+
+To resume normal cluster operations and turn on new functionality, perform the following steps:
 
 1. If you stopped updating tools, start them again. For example, to start Cluster Aware Updating, you can use the Cluster Aware Updating tool or the [Enable-CauClusterRole](/powershell/module/clusterawareupdating/Enable-CauClusterRole) cmdlet.
 
@@ -381,8 +383,6 @@ To resume normal cluster operations and turn on new functionality, including in 
 
         [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
         ```
-
-4. If you're using storage pools, update them using the [Update-StoragePool](/powershell/module/storage/Update-StoragePool) PowerShell cmdlet - this is an online operation so you don't need to take anything offline.
 
 ## Cluster transition states during Cluster OS Rolling Upgrade
 
