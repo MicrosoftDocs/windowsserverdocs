@@ -249,6 +249,8 @@ items:
         href: ../troubleshoot/dynamic-host-configuration-protocol-basics.md
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
+      - name: DHCP server events
+        href: technologies/dhcp/dhcp-server-events.md  
   - name: Edge networking
     items:
     - name: Network ATC

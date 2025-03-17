@@ -11,7 +11,7 @@ ms.date: 08/19/2024
 
 # Enable Remote Desktop on your PC
 
-You can use Remote Desktop to connect to and control your PC from a remote device by using a [Microsoft Remote Desktop client](remote-desktop-clients.md) (available for Windows, iOS, macOS, and Android). When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.
+You can use Remote Desktop to connect to and control your PC from a remote device by using Windows App or the Microsoft Remote Desktop client. When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.
 
 > [!NOTE]
 > You can use Remote Desktop to connect to Professional and Enterprise SKUs of Windows. You can't connect to computers running a Home edition, such as Windows 10 Home.
@@ -24,7 +24,7 @@ If you need to connect to your PC from outside of the network your PC is running
 
 The simplest way to allow access to your PC from a remote device is by using the Remote Desktop options under Settings. Since this functionality was added in the Windows 10 Fall Creators update (1709), a separate downloadable app is also available that provides similar functionality for earlier versions of Windows.
 
-### Windows 10 Fall Creator Update (1709) or later
+### Windows 11 and Windows 10 Fall Creator Update (1709) or later
 
 You can configure your PC for remote access with a few easy steps.
 
@@ -33,11 +33,7 @@ You can configure your PC for remote access with a few easy steps.
 3. Use the slider to enable Remote Desktop.
 4. It's also recommended to keep the PC awake and discoverable to facilitate connections. Select **Show settings** to enable.
 5. As needed, add users who can connect remotely by clicking **Select users that can remotely access this PC**. Members of the Administrators group automatically have access.
-1. Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
-
-### Windows 7 and early version of Windows 10
-
-To configure your PC for remote access, download and run the [Microsoft Remote Desktop Assistant](https://www.microsoft.com/download/details.aspx?id=50042). This assistant updates your system settings to enable remote access, ensures your computer is awake for connections, and checks that your firewall allows Remote Desktop connections.
+6. Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
 
 ## Connect from a client device
 
