@@ -135,7 +135,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
     ```
 
 2. If you're using Hyper-V with virtual switches that are bound to an LBFO team and are performing an in-place upgrade to Windows Server 2022 or newer, remove the team before starting the upgrade. After the upgrade, you can bind the network adapters to a virtual switch that uses the newer SET switch technology. <br><br>LBFO teams are no longer supported with Hyper-V in Windows Server 2022 and newer. For more information on removed features, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
-3. If you're going to perform a clean OS installation on the node, first evict the paused node from the cluster by using Cluster Manager or the [Remove-ClusterNode](/powershell/module/failoverclusters/Remove-ClusterNode) cmdlet.
+3. If you're going to perform a clean OS installation on the node, first remove (evict) the paused node from the cluster by using Windows Admin Center, Failover Cluster Manager, or the [Remove-ClusterNode](/powershell/module/failoverclusters/Remove-ClusterNode) cmdlet.
 
     ```PowerShell
     Remove-ClusterNode -Name Node1
@@ -164,10 +164,10 @@ Perform the following steps on one node in the cluster (you repeat this process 
     4. Check network and storage connectivity settings.
     5. If Windows Firewall is used, check that the Firewall settings are correct for the cluster. For example, Cluster Aware Updating might require Firewall configuration.
     6. For Hyper-V workloads, create virtual switches that match the rest of the cluster nodes (except for LBFO configuration if you're replacing network adapter teams). You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
-    7. Connect to the upgraded node and then use Failover Cluster Manager or the [Add-ClusterNode](/powershell/module/failoverclusters/Add-ClusterNode) cmdlet to add the upgraded node back to the cluster.
+    7. Connect to the upgraded node and then use Windows Admin Center, Failover Cluster Manager, or the [Add-ClusterNode](/powershell/module/failoverclusters/Add-ClusterNode) cmdlet to add the upgraded node back to the cluster.
 
         ```powershell
-        Add-ClusterNode
+        Add-ClusterNode -Name clusternode1
         ```
 
         Here's an example of the output:
@@ -181,7 +181,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
 
     8. Optionally rebalance the cluster by moving workloads to the newly added node.
 
-    - To move running virtual machines without downtime, use **Live Migration** in Failover Cluster Manager or the [Move-ClusterVirtualMachineRole](/powershell/module/failoverclusters/Move-ClusterVirtualMachineRole) cmdlet.
+    - To move running virtual machines without downtime, use **Live Migration** in Windows Admin Center, Failover Cluster Manager, or the [Move-ClusterVirtualMachineRole](/powershell/module/failoverclusters/Move-ClusterVirtualMachineRole) cmdlet.
 
         ```PowerShell
         Move-ClusterVirtualMachineRole -Name VM1 -Node node1
@@ -211,7 +211,7 @@ When every node has the newer OS version installed and is added back to the clus
 >
 > After you update the cluster functional level and storage pool version, you can't go back to an earlier functional level or storage pool version and you can't add nodes running earlier versions of Windows Server to the cluster.
 
-1. Check that all cluster roles are running on the cluster as expected. You can use Failover Cluster Manager or the [Get-ClusterGroup](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet.
+1. Check that all cluster roles are running on the cluster as expected. You can use Windows Admin Center, Failover Cluster Manager, or the [Get-ClusterGroup](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet:
 
     ```PowerShell
     Get-ClusterGroup
@@ -232,7 +232,7 @@ When every node has the newer OS version installed and is added back to the clus
 
     The Available Storage group isn't used and is offline because this cluster uses Cluster Shared Volumes (CSVs) for storage. Available Storage would be online if the cluster used disks assigned to it from LUNS on a SAN, but we recommend using CSVs instead.
 
-2. Check that all cluster nodes are online and running using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
+2. Check that all cluster nodes are online and running by using Windows Admin Center, Failover Cluster Manager, or the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
 
     ```powershell
     Get-ClusterNode
@@ -248,7 +248,7 @@ When every node has the newer OS version installed and is added back to the clus
     node3       3     Up
     ```
 
-3. View the cluster functional level by using the [Get-Cluster](/powershell/module/failoverclusters/get-cluster) cmdlet:
+3. View the cluster functional level in Windows Admin Center by navigating to **Cluster Manager** > **Settings** > **Cluster** > **Properties**. Or use the [Get-Cluster](/powershell/module/failoverclusters/get-cluster) cmdlet:
 
     ```PowerShell
     Get-Cluster | Select ClusterFunctionalLevel
@@ -262,7 +262,7 @@ When every node has the newer OS version installed and is added back to the clus
     10
     ```
 
-4. Run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet - no errors should be returned.
+4. Select the new functional level in Windows Admin Center or run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet - no errors should be returned.
 
     ```powershell
     Update-ClusterFunctionalLevel
@@ -356,7 +356,7 @@ To resume normal cluster operations and turn on new functionality, perform the f
         VM3     Running 0           1216              2.20:09:38.9450000  Operating normally 8.0
         ```
 
-    3. During a scheduled maintenance window when you can take the VMs offline, back up and upgrade all older VMs on each node by using the [Update-VMVersion](/powershell/module/hyper-v/Update-VMVersion) cmdlet. This example updates all older VMs on one node.
+    3. During a scheduled maintenance window when you can take the VMs offline, back up and upgrade all older VMs on each node. <br>To do so in Windows Admin Center, navigate to **Cluster Manager** > **Virtual machines**, select a VM and then select **Manage** > **Upgrade configuration version**. <br>Or use the [Update-VMVersion](/powershell/module/hyper-v/Update-VMVersion) cmdlet as shown in this example that updates all VMs on one node to the most recent version.
 
         ```powershell
         Update-VMVersion -ComputerName node1 -Name * -WhatIf
