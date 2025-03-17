@@ -259,7 +259,7 @@ When every node has the newer OS version installed and is added back to the clus
     ```output
     ClusterFunctionalLevel
     -----------------------
-    8
+    10
     ```
 
 4. Run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet - no errors should be returned.
