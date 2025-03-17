@@ -64,7 +64,7 @@ Before you start upgrading nodes, verify that the cluster is healthy and ready f
 
 1. Check that the cluster has sufficient capacity to maintain appropriate uptime service level agreements with one node removed.
     - Does the cluster have enough storage, CPU, and networking resources to run the required workloads when one node is removed from the cluster?
-    - Are there enough nodes in the cluster to maintain the required fault tolerance with one node evicted? You might want to temporarily add a node to a two node cluster to maintain fault tolerance during the upgrade.
+    - Are there enough nodes in the cluster to maintain the required fault tolerance with one node offline? You might want to temporarily add a node to a two node cluster to maintain fault tolerance during the upgrade.
 2. For Hyper-V workloads, check that all Windows Server Hyper-V hosts have CPU support for Second-Level Address Table (SLAT). Only SLAT-capable machines can use the Hyper-V role in Windows Server 2016 and newer.
 3. Install the latest software updates on all nodes of the cluster.
 4. Check that any workload backups are complete, and consider backing up the cluster database with a System State backup.
@@ -117,7 +117,7 @@ Before you start upgrading nodes, verify that the cluster is healthy and ready f
 
 Perform the following steps on one node in the cluster (you repeat this process one at a time for every node in the cluster):
 
-1. To drain the node by using Cluster Manager (optionally in Windows Admin Center), select the appropriate node and then select **Pause** > **Drain**, as shown in Figure 2. Or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet with the `-Drain` parameter, as shown here.
+1. To drain the node in Windows Admin Center, navigate to **Cluster Manager** > **Servers**, select the node and then select **Pause**. To use Failover Cluster Manager, select the node and then select **Pause** > **Drain**, as shown in Figure 2. Or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet with the `-Drain` parameter, as shown here.
 
     :::image type="content" source="media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png" alt-text="Screenshot showing how to drain roles with Failover Cluster Manager" lightbox="media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png":::
     **Figure 2: Draining roles from a node using Failover Cluster Manager**
@@ -199,13 +199,13 @@ Perform the following steps on one node in the cluster (you repeat this process 
 
 ## Step 4: Repeat steps 2 through 4 for every other node in the cluster
 
-The upgrade process is fully reversible until you update the cluster functional level in the next step. To abandon the upgrade, add nodes that run the original version of Windows Server and then evict any nodes that run the newer version of the OS.
+The upgrade process is fully reversible until you update the cluster functional level in the next step. To abandon the upgrade, add nodes that run the original version of Windows Server and then remove any nodes that run the newer version of the OS.
 
 ## Step 5: Update the cluster functional level and storage pool version
 
 Updating the cluster functional level and storage pool version makes it possible to use new features. It also improves some cluster operations, such as draining workloads from a node, which can lead to a node becoming isolated for a short period of time if performed on a mixed-OS cluster.
 
-When every node has the newer OS version installed and is added back to the cluster or permanently evicted, complete the following steps to update the cluster functional level and storage pool version.
+When every node has the newer OS version installed and is added back to the cluster or permanently removed, complete the following steps to update the cluster functional level and storage pool version.
 
 > [!IMPORTANT]
 >
@@ -290,7 +290,7 @@ When every node has the newer OS version installed and is added back to the clus
     11
     ```
 
-6. If you're using storage pools, update them using the [Update-StoragePool](/powershell/module/storage/Update-StoragePool) PowerShell cmdlet, which is an online operation that doesn't require downtime. <br><br>Or use Windows Admin Center > **Cluster Manager** > **Settings** > **Storage Spaces and Pools** > **Storage pool version**.
+6. If you're using storage pools, you can update them without downtime by using Windows Admin Center > **Cluster Manager** > **Settings** > **Storage Spaces and Pools** > **Storage pool version**. Or use the [Update-StoragePool](/powershell/module/storage/Update-StoragePool) PowerShell cmdlet.
 
 ## Step 6: Resume normal cluster operations and turn on new functionality
 
