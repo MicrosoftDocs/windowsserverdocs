@@ -287,10 +287,10 @@ When every node has the newer OS version installed and is added back to the clus
     ```output
     ClusterFunctionalLevel
     -----------------------
-    9
+    11
     ```
 
-6. If you're using storage pools, update them using the [Update-StoragePool](/powershell/module/storage/Update-StoragePool) PowerShell cmdlet, which is an online operation that doesn't require downtime.
+6. If you're using storage pools, update them using the [Update-StoragePool](/powershell/module/storage/Update-StoragePool) PowerShell cmdlet, which is an online operation that doesn't require downtime. <br><br>Or use Windows Admin Center > **Cluster Manager** > **Settings** > **Storage Spaces and Pools** > **Storage pool version**.
 
 ## Step 6: Resume normal cluster operations and turn on new functionality
 
@@ -388,6 +388,7 @@ The following table shows the values and each corresponding functional level:
 | 8 | Windows Server 2012 R2 |
 | 9 | Windows Server 2016 |
 | 10 | Windows Server 2019 |
+| 11 | Windows Server 2022 |
 
 ## Frequently asked questions
 
