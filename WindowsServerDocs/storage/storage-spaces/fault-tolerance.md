@@ -204,4 +204,3 @@ For further reading on subjects mentioned in this article, see the following:
 - [Erasure Coding in Azure by Microsoft Research](https://www.microsoft.com/research/publication/erasure-coding-in-windows-azure-storage/)
 - [Local Reconstruction Codes and Accelerating Parity Volumes](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
 - [Volumes in the Storage Management API](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
-- [Capacity Calculator PREVIEW for Storage Spaces Direct](https://gabrielluiz.com/2019/07/storage-spaces-direct-calculator-preview)
