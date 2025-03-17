@@ -1,7 +1,7 @@
 ---
 title: DHCP failover in Windows Server
 description: Learn how DHCP Failover replicates IP address leases and settings in DHCP scopes from a primary DHCP server to a failover partner server.
-ms.topic: concept-article
+ms.topic: overview
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 03/11/2025
@@ -74,6 +74,40 @@ You can configure DHCP failover can be configured using Server Manager or Window
 ## DHCP failover and IPv6
 
 DHCP failover isn't supported for Internet Protocol version 6 (IPv6) scopes. Network adapters using IPv6 typically determine their own IPv6 address using stateless IP auto-configuration. In this mode, the DHCP server delivers only the DHCP option configuration, and the server does not maintain any lease state information. A high availability deployment for stateless DHCPv6 is possible by simply setting up two servers with identical option configuration. Even in a stateful DHCPv6 deployment, the scopes do not run under high address utilization, which makes split scope a viable solution for high availability.
+
+## DHCP failover modes
+
+Two DHCP failover modes are available to use when you create a DHCP failover relationship:
+
+- **Hot standby mode**: This mode provides redundancy for DHCP services.
+
+- **Load balance mode**: This mode allocates DHCP client leases across two servers.
+
+You can switch between hot standby and load balance mode if desired, but you can only use one mode at a time with a single DHCP scope. You can also use both modes on the same DHCP server if you configure multiple failover relationships. Customize your deployment based on the physical architecture of your network.
+
+### Hot standby mode
+
+In hot standby mode, two servers operate in a failover relationship where an active server is responsible for leasing IP addresses and configuration information to all clients in a scope or subnet. The partner server assumes a standby role, with responsibility to issue leases to DHCP clients only if the active server becomes unavailable. Hot standby mode is ideal for scenarios where the failover partner is only intended to be used temporarily when the active server is unavailable.
+
+A server is active or standby in the context of a failover relationship. For instance, a server that has the role of active for a given relationship could be a standby server for another relationship. By default, the server that is used to create the failover relationship is the active server, but this isn't required.
+
+When you choose hot standby, you must also configure the percentage of IP addresses on the active server that are reserved for use on the standby server in the event that the active server doesn't respond. By default, this reserve percentage is 5%.
+
+The reserve percentage is used for new DHCP leases. If a DHCP client attempts to renew a DHCP lease with the standby server that is unable to contact the active server, the same IP address that was previously assigned to the DHCP client will be renewed. In this situation, a temporary lease is granted for the maximum client lead time (MCLT) duration, not the full scope lease time.
+
+If the standby server issues all its available reserve percentage leases to new DHCP clients before the MCLT expires, it'll refuse to issue new DHCP leases, and will continue to renew existing leases. After the MCLT has expired, the standby server will be permitted to use the entire available IP address pool for new DHCP leases. If the server is still in communications interrupted state, it won't use the entire available IP address pool for new DHCP leases.
+
+The hot standby mode of operation is best suited to deployments where a central office or data center server acts as a standby backup server to a server at a remote site, which is local to the DHCP clients. In such deployments, it's undesirable to have a remote standby server service any clients unless the local DHCP server becomes unavailable.
+
+### Load balance mode
+
+Load balance mode is the default mode of deployment. In this mode, two DHCP servers simultaneously serve IP addresses and options to clients on a given subnet. DHCP client requests are load balanced and shared between the two DHCP servers. The default load balancing ratio between the two servers is 50:50, but this can be customized to any ratio from 0 to 100%.
+
+The load-balancing mechanism is defined in RFC 3074, in which a hash is computed from the MAC address contained in each DHCP client request. A range of hash values (also called the hash bucket) is assigned to each DHCP server based on the load balancing percentages that are configured. Servers determine if they are designated to respond to the client based on their assigned hash bucket.
+
+In load balancing mode, when a DHCP server loses contact with its failover partner it'll begin granting leases to all DHCP clients. If it receives a lease renewal request from a DHCP client that is assigned to its failover partner, it'll temporarily renew the same IP address lease for the duration of the MCLT. If it receives a request from a client that wasn't previously assigned a lease, it'll grant a new lease from its free IP address pool until this is exhausted, and then begin using the free IP address pool of its failover partner. If the DHCP server enters a partner down state, it'll wait for the MCLT duration and then assume responsibility for 100% of the IP address pool.
+
+The load balance mode of operation is best suited to deployments where both servers in a failover relationship are located at the same physical site. Both servers respond to DHCP client requests based on the load distribution ratio configured by the administrator.
 
 ## DHCP failover and Windows Failover Clustering
 
