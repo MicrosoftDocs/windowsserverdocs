@@ -20,8 +20,8 @@ Security groups are a way to collect user accounts, computer accounts, and other
 
 In the Windows Server operating system (OS), several built-in accounts and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In AD, administrative responsibilities are separated into two types of administrators:
 
-- **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring AD DS.
-- **Data administrators**: Responsible for maintaining the data that's stored in AD DS and on domain member servers and workstations.
+- **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring AD DS
+- **Data administrators**: Responsible for maintaining the data that's stored in AD DS and on domain member servers and workstations
 
 ## How AD security groups work
 
@@ -665,9 +665,9 @@ The Group Policy Creator Owners group applies to the operating systems listed in
 
 ### Guests
 
-Members of the Guests and Users group have similar access by default. The difference is that the Guest account has further restrictions. By default, the only member is the Guest account. The Guests group makes it possible for occasional or one-time users to sign in with limited privileges to a computer's built-in Guest account.
+Members of the Guests and Users group have similar access by default. The difference is that the Guest account has further restrictions. By default, the only member of the Guests group is the Guest account. The Guests group makes it possible for occasional or one-time users to sign in with limited privileges to a computer's built-in Guest account.
 
-When a member of the Guests group signs out, the entire profile is deleted. The profile deletion includes everything that's stored in the `%userprofile%` directory, including the user's registry hive information, custom desktop icons, and other user-specific settings. This fact implies that a guest must use a temporary profile to sign in to the system. This security group interacts with the following Group Policy setting: *Do not log users on with temporary profiles*. To access this setting, go to **Computer Configuration** > **Administrative Templates** > **System** > **User Profiles**.
+When a member of the Guests group signs out, the entire profile is deleted. The profile deletion includes everything that's stored in the `%userprofile%` directory, including the user's registry hive information, custom desktop icons, and other user-specific settings. This fact implies that a guest must use a temporary profile to sign in to the system. This security group interacts with the following Group Policy setting: *Do not log users on with temporary profiles*. To access this setting, open the Group Policy Management editor, and then go to **Computer Configuration** > **Administrative Templates** > **System** > **User Profiles**.
 
 > [!NOTE]
 > A Guest account is a default member of the Guests security group. People who don't have an actual account in the domain can use the Guest account. A user whose account is disabled (but not deleted) can also use the Guest account. The Guest account doesn't require a password. You can set rights and permissions for the Guest account as in any user account. By default, the Guest account is a member of the built-in Guests group and of the Domain Guests Global group, which allows a user to sign in to a domain. The Guest account is disabled by default, and we recommend that it stay disabled.
@@ -725,7 +725,7 @@ For more information, see [Understand built-in user and group accounts in IIS 7]
 
 ### Incoming Forest Trust Builders
 
-Members of the Incoming Forest Trust Builders group can create incoming, one-way trusts to your forest. AD provides security across multiple domains or forests through domain and forest trust relationships. Before authentication can occur across trusts, Windows must determine whether the domain requested is by a user, computer, or service has a trust relationship with the sign-in domain of the requesting account.
+Members of the Incoming Forest Trust Builders group can create incoming, one-way trusts to a forest. AD provides security across multiple domains or forests through domain and forest trust relationships. Before authentication can occur across trusts, Windows must determine whether the domain requested is by a user, computer, or service that has a trust relationship with the sign-in domain of the requesting account.
 
 To make this determination, the Windows security system computes a trust path between the domain controller for the server that receives the request and a domain controller in the domain of the requesting account. A secured channel extends to other AD domains through interdomain trust relationships. This secured channel is used to obtain and verify security information, including SIDs for users and groups.
 
@@ -839,9 +839,6 @@ Specifically, members of this security group:
 - Can change the Performance Monitor display properties while viewing data.
 - Can't create or modify Data Collector Sets.
 
-> [!WARNING]
-> Members of the Performance Monitor Users group can't configure Data Collection Sets.
-
 This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 The Performance Monitor Users group applies to the operating systems listed in the **Applies to** line at the beginning of the article.
@@ -918,8 +915,6 @@ Depending on the account's domain functional level, members of the Protected Use
 The Protected Users group applies to the operating systems listed in the **Applies to** line at the beginning of the article.
 
 This group was introduced in Windows Server 2012 R2. For more information about how this group works, see [Protected Users security group](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466518(v=ws.11)).
-
-The following table specifies the properties of the Protected Users group:
 
 |Attribute|Value|
 |--- |--- |
@@ -1207,7 +1202,7 @@ The Users group applies to the operating systems listed in the **Applies to** li
 This security group includes the following changes since Windows Server 2008:
 
 - In Windows Server 2008 R2, Interactive was added to the default members list.
-- In Windows Server 2012, the default Member Of list changed from Domain Users to none.
+- In Windows Server 2012, the default members of this group changed from Domain Users to none.
 
 |Attribute|Value|
 |--- |--- |
