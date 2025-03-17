@@ -58,11 +58,7 @@ Complete the following requirements before you begin the upgrade:
 - You must upgrade the configuration version of older VMs before they can run on a Windows Server 2022 or newer cluster, regardless of how you upgrade. VM configuration versions older than 8.0 (corresponding to Windows Server 2016), can't run on Windows Server 2022.
 <br>For example, if your VMs use version 5.0 (Windows Server 2012 R2 and Windows 8.1), and you upgrade the cluster to Windows Server 2022, you must upgrade the VM configuration version to 8.0 or newer. For more info, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
 
-## Perform a rolling cluster upgrade
-
-The following sections take you through the steps to perform a rolling cluster upgrade.
-
-### Step 1: Prepare the cluster for the upgrade
+## Step 1: Prepare the cluster for the upgrade
 
 Before you start upgrading nodes, verify that the cluster is healthy and ready for the upgrade:
 
@@ -117,7 +113,7 @@ Before you start upgrading nodes, verify that the cluster is healthy and ready f
         [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
         ```
 
-### Step 2: Transfer workloads off a node
+## Step 2: Transfer workloads off a node
 
 Perform the following steps on one node in the cluster (you repeat this process one at a time for every node in the cluster):
 
@@ -152,7 +148,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
     ```
 
-### Step 3: Install the new version of Windows Server
+## Step 3: Install the new version of Windows Server
 
 1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
 2. If you upgraded to Windows Server 2022 or newer and removed an LBFO team before upgrading, create a new Hyper-V virtual switch that uses the newer Switch Embedded Teaming (SET) technology to bind to multiple network adapters. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
@@ -201,11 +197,11 @@ Perform the following steps on one node in the cluster (you repeat this process 
 
     - To move other cluster workloads, use the **Move** command in Failover Cluster Manager or the [Move-ClusterGroup](/powershell/module/failoverclusters/Move-ClusterGroup) cmdlet.
 
-### Step 4: Repeat steps 2 through 4 for every other node in the cluster
+## Step 4: Repeat steps 2 through 4 for every other node in the cluster
 
 The upgrade process is fully reversible until you update the cluster functional level in the next step. To abandon the upgrade, add nodes that run the original version of Windows Server and then evict any nodes that run the newer version of the OS.
 
-### Step 5: Update the cluster functional level and storage pool version
+## Step 5: Update the cluster functional level and storage pool version
 
 Updating the cluster functional level and storage pool version makes it possible to use new features. It also improves some cluster operations, such as draining workloads from a node, which can lead to a node becoming isolated for a short period of time if performed on a mixed-OS cluster.
 
@@ -296,7 +292,7 @@ When every node has the newer OS version installed and is added back to the clus
 
 6. If you're using storage pools, update them using the [Update-StoragePool](/powershell/module/storage/Update-StoragePool) PowerShell cmdlet, which is an online operation that doesn't require downtime.
 
-### Step 6: Resume normal cluster operations and turn on new functionality
+## Step 6: Resume normal cluster operations and turn on new functionality
 
 To resume normal cluster operations and turn on new functionality, perform the following steps:
 
