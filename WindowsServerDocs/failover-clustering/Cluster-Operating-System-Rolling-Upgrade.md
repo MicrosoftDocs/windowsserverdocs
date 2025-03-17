@@ -9,7 +9,7 @@ ms.date: 3/17/2025
 
 # Upgrade the OS of a Windows Server cluster by performing a rolling upgrade
 
-You can manually upgrade the operating system of a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This article describes the stages of the rolling upgrade process, limitations, and frequently asked questions (FAQs).
+You can manually install a feature update (upgrade the operating system) on a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This article describes the stages of the rolling upgrade process, limitations, and frequently asked questions (FAQs).
 
 This article applies to clusters running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads, but doesn't apply to clusters using virtual hard disks (.vhdx files) as shared storage.
 
@@ -55,20 +55,12 @@ Complete the following requirements before you begin the upgrade:
   - Avoid creating or resizing storage on newer Windows Server nodes while the cluster is running a mix of OS versions. Doing so can lead to possible incompatibilities when failing over from a newer to an older Windows Server node.
 - You can upgrade only to the next newer version of OS, for example from Windows Server 2022 to Windows Server 2025.
 <br>To upgrade across multiple versions, such as from Windows Server 2016 to Windows Server 2025, run the upgrade sequentially (first to Windows Server 2019, then to Windows Server 2022, and finally to Windows Server 2025), or migrate to a new cluster.
-- You might need to upgrade the configuration version of older VMs before they can run on a Windows Server 2022 or newer cluster, regardless of how you upgrade. VM configuration versions older than 8.0 (corresponding to Windows Server 2016), won't run on Windows Server 2022.
-<br>For example, if your VMs use version 5.0 (Windows Server 2012 R2 and Windows 8.1), and you upgrade the cluster to Windows Server 2022, you must upgrade the VM configuration version. For more info, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
+- You must upgrade the configuration version of older VMs before they can run on a Windows Server 2022 or newer cluster, regardless of how you upgrade. VM configuration versions older than 8.0 (corresponding to Windows Server 2016), won't run on Windows Server 2022.
+<br>For example, if your VMs use version 5.0 (Windows Server 2012 R2 and Windows 8.1), and you upgrade the cluster to Windows Server 2022, you must upgrade the VM configuration version to 8.0 or newer. For more info, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
 
 ## Perform a rolling cluster upgrade
 
-The following sections take you through the steps to perform a rolling cluster upgrade:
-
-1. Prepare the cluster for the operating system upgrade
-2. Transfer workloads off of a node, and then evict the node from the cluster.
-3. Install the newer version of Windows Server on the evicted node.
-4. Add the evicted node back to the cluster, which is now running in mixed-OS version mode. If you performed a clean install, set up workloads on the node.
-5. Repeat steps 2 through 4 for every other node in the cluster.
-6. Update the cluster functional level to the new version of Windows Server.
-7. Resume normal cluster operations and turn on new functionality.
+The following sections take you through the steps to perform a rolling cluster upgrade.
 
 ### Step 1: Prepare the cluster for the upgrade
 
@@ -79,7 +71,7 @@ Before you start upgrading nodes, verify that the cluster is healthy and ready f
     - Are there enough nodes in the cluster to maintain the required fault tolerance with one node evicted? You might want to temporarily add a node to a two node cluster to maintain fault tolerance during the upgrade.
 2. For Hyper-V workloads, check that all Windows Server Hyper-V hosts have CPU support for Second-Level Address Table (SLAT). Only SLAT-capable machines can use the Hyper-V role in Windows Server 2016 and newer.
 3. Install the latest software updates on all nodes of the cluster.
-4. Check that any workload backups are complete, and consider backing-up the cluster database with a System State backup.
+4. Check that any workload backups are complete, and consider backing up the cluster database with a System State backup.
 5. Check that all cluster nodes are up using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
 
     ```powershell
@@ -96,7 +88,7 @@ Before you start upgrading nodes, verify that the cluster is healthy and ready f
     Node3       3     Up
     ```
 
-6. Stop any updating tools that are running on the cluster. For example, if you're using Cluster Aware Updating:
+6. Stop any updating tools that are running on the cluster. For example, if you're using Cluster Aware Updating, use the following steps:
 
     1. Verify if Cluster Aware Updating (CAU) is currently performing a run by using the **Cluster-Aware Updating** UI, or the [Get-CauRun](/powershell/module/clusterawareupdating/Get-CauRun) cmdlet.
 
@@ -129,7 +121,7 @@ Before you start upgrading nodes, verify that the cluster is healthy and ready f
 
 Perform the following steps on one node in the cluster (you repeat this process one at a time for every node in the cluster):
 
-1. Using Cluster Manager (optionally in Windows Admin Center), select the appropriate node and then use the **Pause | Drain** menu option to drain the node (see Figure 2) or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet.
+1. To drain the node by using Cluster Manager (optionally in Windows Admin Center), select the appropriate node and then select **Pause** > **Drain**, as shown in Figure 2. Or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet with the `-Drain` parameter, as shown here.
 
     ![Screenshot showing how to drain roles with Failover Cluster Manager](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png)
     **Figure 2: Draining roles from a node using Failover Cluster Manager**
@@ -146,7 +138,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
     Node1          1     Paused
     ```
 
-2. If you're using Hyper-V with virtual switches that are bound to an LBFO team and are performing an in-place upgrade to Windows Server 2022 or newer, remove the team before starting the upgrade. After the upgrade, you can bind the network adapters to a virtual switch that uses the newer SET switch technology. <br><br>LBFO teams are no longer supported in Windows Server 2022 and newer. For more information on removed features, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
+2. If you're using Hyper-V with virtual switches that are bound to an LBFO team and are performing an in-place upgrade to Windows Server 2022 or newer, remove the team before starting the upgrade. After the upgrade, you can bind the network adapters to a virtual switch that uses the newer SET switch technology. <br><br>LBFO teams are no longer supported with Hyper-V in Windows Server 2022 and newer. For more information on removed features, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
 3. If you're going to perform a clean OS installation on the node, first evict the paused node from the cluster by using Cluster Manager or the [Remove-ClusterNode](/powershell/module/failoverclusters/Remove-ClusterNode) cmdlet.
 
     ```PowerShell
@@ -163,7 +155,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
 ### Step 3: Install the new version of Windows Server
 
 1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
-2. If you upgraded to Windows Server 2022 or newer and removed an LBFO team before upgrading, create a new Hyper-V virtual switch using the newer Switch Embedded Teaming (SET) technology. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
+2. If you upgraded to Windows Server 2022 or newer and removed an LBFO team before upgrading, create a new Hyper-V virtual switch that uses the newer Switch Embedded Teaming (SET) technology to bind to multiple NICs. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
 3. If you performed a clean install, get the node ready to rejoin the cluster:
     1. Join the node to the appropriate Active Directory Domain Services domain. Make sure to use the same computer name if the cluster uses Storage Spaces Direct.
     2. Add the appropriate users to the local Administrators group.
@@ -175,7 +167,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
 
     4. Check network and storage connectivity settings.
     5. If Windows Firewall is used, check that the Firewall settings are correct for the cluster. For example, Cluster Aware Updating might require Firewall configuration.
-    6. For Hyper-V workloads, create virtual switches that exactly match the virtual switches used on the rest of the cluster nodes. You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
+    6. For Hyper-V workloads, create virtual switches that match the virtual switches used on the rest of the cluster nodes (except for LBFO configuration if you're replacing NIC teams). You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
     7. Connect to the upgraded node and then use Failover Cluster Manager or the [Add-ClusterNode](/powershell/module/failoverclusters/Add-ClusterNode) cmdlet to add the upgraded node back to the cluster.
 
         ```powershell
@@ -217,11 +209,11 @@ The upgrade process is fully reversible until you update the cluster functional 
 
 Updating the cluster functional level and storage pool version makes it possible to use new features. It also improves some cluster operations, such as draining workloads from a node, which can lead to a node becoming isolated for a short period of time if performed on a mixed-OS cluster.
 
-When every node has the newer OS version installed and is added back to the cluster or permanently evicted, complete the following steps to update the cluster functional level:
+When every node has the newer OS version installed and is added back to the cluster or permanently evicted, complete the following steps to update the cluster functional level and storage pool version.:
 
 > [!IMPORTANT]
 >
-> After you update the cluster functional level and storage pool version, you can' go back to an earlier functional level or storage pool version and you can't add nodes running earlier versions of Windows Server to the cluster.
+> After you update the cluster functional level and storage pool version, you can't go back to an earlier functional level or storage pool version and you can't add nodes running earlier versions of Windows Server to the cluster.
 
 1. Check that all cluster roles are running on the cluster as expected. You can use Failover Cluster Manager or the [Get-ClusterGroup](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet.
 
@@ -427,5 +419,5 @@ The following table shows the values and each corresponding functional level:
 **If I am using Hyper-V replication for a Hyper-V VM on my Hyper-V cluster, will replication remain intact during and after the Cluster OS Rolling Upgrade process?**
     Yes, Hyper-V replica remains intact during and after the Cluster OS Rolling Upgrade process.
 
-**Can I use System Center Virtual Machine Manager (SCVMM) to automate the Cluster OS Rolling Upgrade process?**
+**Can I use System Center Virtual Machine Manager (VMM) to automate the Cluster OS Rolling Upgrade process?**
     Yes, you can automate the Cluster OS Rolling Upgrade process using VMM in System Center.
