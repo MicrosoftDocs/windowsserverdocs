@@ -161,7 +161,7 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
 2. If you performed an upgrade and removed an LBFO team prior to the upgrade, create a new Hyper-V virtual switch using the newer Switch Embedded Teaming (SET) technology. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
 3. If you performed a clean install, get the node ready to rejoin the cluster:
-    1. Join the node to the appropriate Active Directory Domain Services domain.
+    1. Join the node to the appropriate Active Directory Domain Services domain. Make sure to use the same computer name if the cluster uses Storage Spaces Direct.
     2. Add the appropriate users to the local Administrators group.
     3. Install any server roles and features that you need, such as Hyper-V, Failover Clustering, and NetworkATC (available on Windows Server 2025). You can use Windows Admin Center, Server Manager, or the [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature) PowerShell cmdlet, as shown in the following example:
 
