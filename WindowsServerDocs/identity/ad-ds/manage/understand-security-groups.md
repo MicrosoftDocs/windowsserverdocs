@@ -1,10 +1,11 @@
 ---
 title: Active Directory security groups
-description: Learn about Windows Server Active Directory security groups, group scope, and group functions.
+description: Become familiar with Windows Server Active Directory security groups, group scope, and group functions. See information on groups, such as members and rights.
 author: dansimp
 ms.author: alalve
 ms.topic: article
-ms.date: 01/15/2025
+ms.date: 03/17/2025
+# customer intent: As an administrator, I want to become familiar with Windows Server Active Directory security groups so that I can simplify network maintenance and administration by organizing user accounts, computer accounts, and other groups into manageable units.
 ---
 
 # Active Directory security groups
@@ -84,11 +85,11 @@ For more information, see [Special identity groups](understand-special-identitie
 
 Default groups like the Domain Admins group are security groups that are created automatically when you create an AD domain. You can use these predefined groups to help control access to shared resources and to delegate specific domain-wide administrative roles.
 
-Many default groups are automatically assigned a set of user rights that authorize members of the group to perform specific actions in a domain, like signing in to a local system or backing up files and folders. For example, a member of the Backup Operators group can perform backup operations for all domain controllers in the domain.
+Many default groups are automatically assigned a set of user rights. These rights authorize members of the group to perform specific actions in a domain, like signing in to a local system or backing up files and folders. For example, a member of the Backup Operators group can perform backup operations for all domain controllers in the domain.
 
 When you add a user to a group, the user receives all the user rights that are assigned to the group, including all the permissions that are assigned to the group for any shared resources.
 
-Default groups are located in the Builtin container or the Users container in the AD Users and Computers tool. The Builtin container includes groups that are defined with the Domain Local scope. The Users container includes groups that are defined with Global scope and groups that are defined with Domain Local scope. You can move groups that are located in these containers to other groups or organizational units within the domain, but you can't move them to other domains.
+Default groups are located in the Builtin container or the Users container in the AD Users and Computers tool. The Builtin container includes groups that are defined with the Domain Local scope. The Users container includes groups that are defined with Global scope and groups that are defined with Domain Local scope. You can move groups that are located in these containers to other groups or organizational units within the domain. But you can't move them to other domains.
 
 Some of the administrative groups that are listed in this article and all members of these groups are protected by a background process that periodically checks for and applies a specific security descriptor. This descriptor is a data structure that contains security information that's associated with a protected object. This process ensures that any successful unauthorized attempt to modify the security descriptor on one of the administrative accounts or groups is overwritten with the protected settings.
 
@@ -437,13 +438,13 @@ The Distributed COM Users group applies to the operating systems listed in the *
 
 Members of the DnsUpdateProxy group are Domain Name System (DNS) clients. They're permitted to perform dynamic updates on behalf of other clients, such as DHCP servers. A DNS server can develop stale resource records when a DHCP server is configured to dynamically register host (A) and pointer (PTR) resource records on behalf of DHCP clients by using dynamic update. Adding clients to this security group mitigates this scenario.
 
-To protect against unsecured records or to permit members of the DnsUpdateProxy group to register records in zones that allow only secured dynamic updates, you must create a dedicated user account and configure DHCP servers to perform DNS dynamic updates by using the username, password, and domain of this account. Multiple DHCP servers can use the credentials of one dedicated user account. This group exists only if the DNS server role is or was once installed on a domain controller in the domain.
+To protect against unsecured records or to permit members of the DnsUpdateProxy group to register records in zones that allow only secured dynamic updates, you must create a dedicated user account. You must also configure DHCP servers to perform DNS dynamic updates by using the username, password, and domain of this account. Multiple DHCP servers can use the credentials of one dedicated user account. This group exists only if the DNS server role is or was once installed on a domain controller in the domain.
 
 For more information, see [DNS record ownership and the DnsUpdateProxy group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd334715(v=ws.10)).
 
 |Attribute|Value|
 |--- |--- |
-|Well-known SID/RID|S-1-5-21-\<domain>-\<variable RI>|
+|Well-known SID/RID|S-1-5-21-\<domain>-\<variable RID>|
 |Type|Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
@@ -461,7 +462,7 @@ For more information about security and DNS, see [DNSSEC in Windows Server 2012]
 
 |Attribute|Value|
 |--- |--- |
-|Well-known SID/RID|S-1-5-21-\<domain>-\<variable RI>|
+|Well-known SID/RID|S-1-5-21-\<domain>-\<variable RID>|
 |Type|Builtin Local|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
@@ -505,7 +506,7 @@ The Domain Computers group applies to the operating systems listed in the **Appl
 |Default members|All computers joined to the domain, excluding domain controllers|
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
-|Safe to move out of default container?|Yes (but not required)|
+|Safe to move out of default container?|Yes, but not required|
 |Safe to delegate management of this group to non-service admins?|Yes |
 |Default user rights|None|
 
@@ -549,7 +550,7 @@ The Domain Guests group applies to the operating systems listed in the **Applies
 
 The Domain Users group includes all user accounts in a domain. When you create a user account in a domain, it's added to this group by default.
 
-You can use this group to represent all users in the domain. For example, if you want all domain users to have access to a printer, you can assign permissions for the printer to this group or add the Domain Users group to a Local group on the print server that has permissions for the printer.
+You can use this group to represent all users in the domain. For example, if you want all domain users to have access to a printer, you can assign permissions for the printer to this group. Or you can add the Domain Users group to a Local group on the print server that has permissions for the printer.
 
 The Domain Users group applies to the operating systems listed in the **Applies to** line at the beginning of the article.
 
@@ -664,9 +665,9 @@ The Group Policy Creator Owners group applies to the operating systems listed in
 
 ### Guests
 
-Members of the Guests group have the same access as members of the Users group by default, except that the Guest account has further restrictions. By default, the only member is the Guest account. The Guests group makes it possible for occasional or one-time users to sign in with limited privileges to a computer's built-in Guest account.
+Members of the Guests and Users group have similar access by default. The difference is that the Guest account has further restrictions. By default, the only member is the Guest account. The Guests group makes it possible for occasional or one-time users to sign in with limited privileges to a computer's built-in Guest account.
 
-When a member of the Guests group signs out, the entire profile is deleted. The profile deletion includes everything that's stored in the *%userprofile%* directory, including the user's registry hive information, custom desktop icons, and other user-specific settings. This fact implies that a guest must use a temporary profile to sign in to the system. This security group interacts with the following Group Policy setting: *Do not log users on with temporary profiles*. To access this setting, go to **Computer Configuration** > **Administrative Templates** > **System** > **User Profiles**.
+When a member of the Guests group signs out, the entire profile is deleted. The profile deletion includes everything that's stored in the `%userprofile%` directory, including the user's registry hive information, custom desktop icons, and other user-specific settings. This fact implies that a guest must use a temporary profile to sign in to the system. This security group interacts with the following Group Policy setting: *Do not log users on with temporary profiles*. To access this setting, go to **Computer Configuration** > **Administrative Templates** > **System** > **User Profiles**.
 
 > [!NOTE]
 > A Guest account is a default member of the Guests security group. People who don't have an actual account in the domain can use the Guest account. A user whose account is disabled (but not deleted) can also use the Guest account. The Guest account doesn't require a password. You can set rights and permissions for the Guest account as in any user account. By default, the Guest account is a member of the built-in Guests group and of the Domain Guests Global group, which allows a user to sign in to a domain. The Guest account is disabled by default, and we recommend that it stay disabled.
@@ -706,7 +707,7 @@ Members of the Hyper-V Administrators group have complete and unrestricted acces
 
 ### IIS\_IUSRS
 
-IIS\_IUSRS is a built-in group that's used by Internet Information Services (IIS) beginning with IIS 7. A built-in account and group are guaranteed by the OS to always have a unique SID. IIS 7 replaces the IUSR\_MachineName account and the IIS\_WPG group with the IIS\_IUSRS group to ensure that the actual names that the new account and group use are never localized. For example, regardless of the language of the Windows OS that you install, the IIS account name is IUSR, and the group name is IIS\_IUSRS.
+IIS\_IUSRS is a built-in group that's used by Internet Information Services (IIS) beginning with IIS 7. The OS guarantees that each built-in account and group have a unique SID. IIS 7 replaces the IUSR\_MachineName account and the IIS\_WPG group with the IIS\_IUSRS group to ensure that the actual names that the new account and group use are never localized. For example, regardless of the language of the Windows OS that you install, the IIS account name is IUSR, and the group name is IIS\_IUSRS.
 
 For more information, see [Understand built-in user and group accounts in IIS 7](/iis/get-started/planning-for-security/understanding-built-in-user-and-group-accounts-in-iis).
 
@@ -768,14 +769,14 @@ The Key Admins group applies to the operating systems listed in the **Applies to
 
 Members of the Network Configuration Operators group have the following administrative privileges to manage configuration of networking features:
 
-- Modify the Transmission Control Protocol/Internet Protocol (TCP/IP) properties for a local area network (LAN) connection, which includes the IP address, the subnet mask, the default gateway, and the name servers.
-- Rename the LAN connections or remote access connections that are available to all the users.
-- Enable or disable a LAN connection.
-- Modify the properties of all remote access connections of users.
-- Delete all the remote access connections of users.
-- Rename all the remote access connections of users.
-- Issue `ipconfig`, `ipconfig /release`, and `ipconfig /renew` commands.
-- Enter the PIN unblock key (PUK) for mobile broadband devices that support a SIM card.
+- Modify the Transmission Control Protocol/Internet Protocol (TCP/IP) properties for a local area network (LAN) connection, which includes the IP address, the subnet mask, the default gateway, and the name servers
+- Rename the LAN connections or remote access connections that are available to all the users
+- Enable or disable a LAN connection
+- Modify the properties of all remote access connections of users
+- Delete all the remote access connections of users
+- Rename all the remote access connections of users
+- Issue `ipconfig`, `ipconfig /release`, and `ipconfig /renew` commands
+- Enter the PIN unblock key (PUK) for mobile broadband devices that support a SIM card
 
 This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
@@ -861,8 +862,7 @@ The Performance Monitor Users group applies to the operating systems listed in t
 
 Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers that run Windows NT 4.0 and earlier. By default, the special identity group Everyone is a member of this group. Add users to this group only if they run Windows NT 4.0 or earlier.
 
-> [!WARNING]
-> This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
 
 The Pre–Windows 2000 Compatible Access group applies to the operating systems listed in the **Applies to** line at the beginning of the article.
 
@@ -953,7 +953,7 @@ The RAS and IAS Servers group applies to the operating systems listed in the **A
 
 ### RDS Endpoint Servers
 
-Servers that are members of the RDS Endpoint Servers group can run virtual machines and host sessions where user RemoteApp programs and personal virtual desktops run. You must populate this group on servers that run Remote Desktop Connection Broker (RD Connection Broker). Session Host servers and Remote Desktop Virtualization Host (RD Virtualization Host) servers used in the deployment must be in this group.
+Servers that are members of the RDS Endpoint Servers group can run virtual machines and host sessions where user programs of the RemoteApp feature and personal virtual desktops run. You must populate this group on servers that run Remote Desktop Connection Broker (RD Connection Broker). Session Host servers and Remote Desktop Virtualization Host (RD Virtualization Host) servers used in the deployment must be in this group.
 
 For information about Remote Desktop Services (RDS), see [Remote Desktop Services overview in Windows Server](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
 
@@ -1049,7 +1049,7 @@ The Remote Desktop Users group applies to the operating systems listed in the **
 
 ### Remote Management Users
 
-Members of the Remote Management Users group can access Windows Management Instrumentation (WMI) resources over management protocols like WS-Management via the Windows Remote Management service. Access to WMI resources applies only to WMI namespaces that grant access to the user.
+Members of the Remote Management Users group can access Windows Management Instrumentation (WMI) resources over management protocols like Web Services for Management (WS-Management) via the Windows Remote Management service. Access to WMI resources applies only to WMI namespaces that grant access to the user.
 
 Use the Remote Management Users group to allow users to manage servers through the Server Manager console. Use the [WinRMRemoteWMIUsers\_\_](#winrmremotewmiusers__) group to allow users to remotely run Windows PowerShell commands.
 
@@ -1069,7 +1069,7 @@ For more information, see [About WMI](/windows/win32/wmisdk/about-wmi) and [What
 
 ### Replicator
 
-Computers that are members of the Replicator group support file replication in a domain. Windows Server uses the File Replication Service (FRS) to replicate system policies and sign-in scripts that are stored in the System Volume folder (sysvol folder). Each domain controller keeps a copy of the sysvol folder for network clients to access. FRS can also replicate data for the Distributed File System (DFS) and sync the content of each member in a replica set as defined by DFS. FRS can copy and maintain shared files and folders on multiple servers simultaneously. When changes occur, content is synced immediately within sites and on a schedule between sites.
+Computers that are members of the Replicator group support file replication in a domain. Windows Server uses File Replication Service (FRS) to replicate system policies and sign-in scripts that are stored in the System Volume folder (sysvol folder). Each domain controller keeps a copy of the sysvol folder for network clients to access. FRS can also replicate data for the Distributed File System (DFS) and sync the content of each member in a replica set as defined by the DFS. FRS can copy and maintain shared files and folders on multiple servers simultaneously. When changes occur, content is synced immediately within sites and on a schedule between sites.
 
 > [!WARNING]
 > In Windows Server 2008 R2, you can't use FRS to replicate DFS folders or custom (non-sysvol) data. A Windows Server 2008 R2 domain controller can still use FRS to replicate the contents of the sysvol folder shared resource in a domain that uses FRS to replicate the sysvol folder shared resource between domain controllers. However, Windows Server 2008 R2 servers can't use FRS to replicate the contents of any replica set except the sysvol folder shared resource. The DFS Replication service is a replacement for FRS. You can use DFS Replication to replicate the contents of a sysvol folder shared resource, DFS folders, and other custom (non-sysvol) data. You should migrate all non-sysvol FRS replica sets to DFS Replication.
@@ -1223,7 +1223,7 @@ This security group includes the following changes since Windows Server 2008:
 
 ### Windows Authorization Access
 
-Members of this group have access to the `tokenGroupsGlobalAndUniversal` attribute on user objects. This access is useful, because some application features read the `token-groups-global-and-universal` (TGGAU) attribute on user account objects or on computer account objects in AD DS. Some Win32 functions make it easier to read the TGGAU attribute. But applications that read this attribute or that call an API that reads this attribute don't succeed if the calling security context doesn't have access to the attribute. This group makes it easier to grant read access to the attribute.
+Members of this group have access to the `tokenGroupsGlobalAndUniversal` attribute on user objects. This access is useful, because some application features read the `token-groups-global-and-universal` (`TGGAU`) attribute on user account objects or on computer account objects in AD DS. Some Win32 functions make it easier to read the `TGGAU` attribute. But applications that read this attribute or that call an API that reads this attribute don't succeed if the calling security context doesn't have access to the attribute. This group makes it easier to grant read access to the attribute.
 
 This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
@@ -1261,7 +1261,7 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 
 |Attribute|Value|
 |--- |--- |
-|Well-known SID/RID|S-1-5-21-\<domain>-\<variable RI>|
+|Well-known SID/RID|S-1-5-21-\<domain>-\<variable RID>|
 |Type|Domain local|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
