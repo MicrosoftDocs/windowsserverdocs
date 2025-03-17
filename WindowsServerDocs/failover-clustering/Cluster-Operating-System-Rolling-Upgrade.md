@@ -9,7 +9,7 @@ ms.date: 3/17/2025
 
 # Upgrade the OS of a Windows Server cluster by performing a rolling upgrade
 
-You can manually install a feature update (upgrade the operating system) on a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This article describes the stages of the rolling upgrade process, limitations, and frequently asked questions (FAQs).
+You can manually install a feature update on a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This article describes the stages of the rolling OS upgrade process, limitations, and frequently asked questions (FAQs).
 
 This article applies to clusters running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads, but doesn't apply to clusters using virtual hard disks (.vhdx files) as shared storage.
 
@@ -50,12 +50,12 @@ Complete the following requirements before you begin the upgrade:
 
 ## Limitations
 
-- We recommend moving through the cluster upgrade process within four weeks. This is because some cluster features aren't optimized for clusters that contain nodes with different OS versions (mixed-OS mode).
+- We recommend moving through the cluster upgrade process within four weeks because some cluster features aren't optimized for clusters that run two different OS versions.
   - When managing a mixed-OS mode cluster, always perform the management tasks from a node running the newer version of Windows Server. Older versions of Windows Server often can't use UI or management tools to manage newer versions.
   - Avoid creating or resizing storage on newer Windows Server nodes while the cluster is running a mix of OS versions. Doing so can lead to possible incompatibilities when failing over from a newer to an older Windows Server node.
 - You can upgrade only to the next newer version of OS, for example from Windows Server 2022 to Windows Server 2025.
 <br>To upgrade across multiple versions, such as from Windows Server 2016 to Windows Server 2025, run the upgrade sequentially (first to Windows Server 2019, then to Windows Server 2022, and finally to Windows Server 2025), or migrate to a new cluster.
-- You must upgrade the configuration version of older VMs before they can run on a Windows Server 2022 or newer cluster, regardless of how you upgrade. VM configuration versions older than 8.0 (corresponding to Windows Server 2016), won't run on Windows Server 2022.
+- You must upgrade the configuration version of older VMs before they can run on a Windows Server 2022 or newer cluster, regardless of how you upgrade. VM configuration versions older than 8.0 (corresponding to Windows Server 2016), can't run on Windows Server 2022.
 <br>For example, if your VMs use version 5.0 (Windows Server 2012 R2 and Windows 8.1), and you upgrade the cluster to Windows Server 2022, you must upgrade the VM configuration version to 8.0 or newer. For more info, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
 
 ## Perform a rolling cluster upgrade
@@ -155,7 +155,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
 ### Step 3: Install the new version of Windows Server
 
 1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
-2. If you upgraded to Windows Server 2022 or newer and removed an LBFO team before upgrading, create a new Hyper-V virtual switch that uses the newer Switch Embedded Teaming (SET) technology to bind to multiple NICs. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
+2. If you upgraded to Windows Server 2022 or newer and removed an LBFO team before upgrading, create a new Hyper-V virtual switch that uses the newer Switch Embedded Teaming (SET) technology to bind to multiple network adapters. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
 3. If you performed a clean install, get the node ready to rejoin the cluster:
     1. Join the node to the appropriate Active Directory Domain Services domain. Make sure to use the same computer name if the cluster uses Storage Spaces Direct.
     2. Add the appropriate users to the local Administrators group.
@@ -167,7 +167,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
 
     4. Check network and storage connectivity settings.
     5. If Windows Firewall is used, check that the Firewall settings are correct for the cluster. For example, Cluster Aware Updating might require Firewall configuration.
-    6. For Hyper-V workloads, create virtual switches that match the virtual switches used on the rest of the cluster nodes (except for LBFO configuration if you're replacing NIC teams). You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
+    6. For Hyper-V workloads, create virtual switches that match the rest of the cluster nodes (except for LBFO configuration if you're replacing network adapter teams). You can use Windows Admin Center, Hyper-V Manager, or the [Get-VMSwitch](/powershell/module/hyper-v/Get-VMswitch) and [Add-VMSwitch](/powershell/module/hyper-v/Add-VMswitch) PowerShell cmdlets.
     7. Connect to the upgraded node and then use Failover Cluster Manager or the [Add-ClusterNode](/powershell/module/failoverclusters/Add-ClusterNode) cmdlet to add the upgraded node back to the cluster.
 
         ```powershell
@@ -209,7 +209,7 @@ The upgrade process is fully reversible until you update the cluster functional 
 
 Updating the cluster functional level and storage pool version makes it possible to use new features. It also improves some cluster operations, such as draining workloads from a node, which can lead to a node becoming isolated for a short period of time if performed on a mixed-OS cluster.
 
-When every node has the newer OS version installed and is added back to the cluster or permanently evicted, complete the following steps to update the cluster functional level and storage pool version.:
+When every node has the newer OS version installed and is added back to the cluster or permanently evicted, complete the following steps to update the cluster functional level and storage pool version.
 
 > [!IMPORTANT]
 >
