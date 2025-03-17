@@ -74,9 +74,10 @@ Before you start evicting and upgrading nodes it's important to verify that the 
     - Does the cluster have enough storage, CPU, and networking resources to run the required workloads when one node is removed from the cluster?
     - Are there enough nodes in the cluster to maintain the required fault tolerance with one node evicted? This is typically an issue for two-node clusters, where you might want to temporarily add a node to the cluster to maintain fault tolerance during the upgrade.
 2. For Hyper-V workloads, check that all Windows Server Hyper-V hosts have CPU support for Second-Level Address Table (SLAT). Only SLAT-capable machines can use the Hyper-V role in Windows Server 2016 and newer.
-3. Install the latest software updates on all nodes of the cluster.
-4. Check that any workload backups have completed, and consider backing-up the cluster database with a System State backup.
-5. Check that all cluster nodes are up using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
+3. If you're using Hyper-V with virtual switches that are bound to an LBFO team and are upgrading to Windows Server 2022 or newer, remove the team before starting the upgrade. After the upgrade you can bind the network adapters to a virtual switch that uses the newer SET switch technology. <br><br>LBFO teams are no longer supported in Windows Server 2022 and newer. For more information on removed features, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
+1. Install the latest software updates on all nodes of the cluster.
+1. Check that any workload backups have completed, and consider backing-up the cluster database with a System State backup.
+1. Check that all cluster nodes are up using the [Get-ClusterNode](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
 
     ```powershell
     Get-ClusterNode
@@ -158,8 +159,8 @@ Perform the following steps on one node in the cluster (you'll repeat this proce
 ### Step 3: Install the new version of Windows Server
 
 1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
-
-2. If you performed a clean install, get the node ready to rejoin the cluster:
+2. If you performed an upgrade and removed an LBFO team prior to the upgrade, create a new Hyper-V virtual switch using the newer Switch Embedded Teaming (SET) technology. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
+3. If you performed a clean install, get the node ready to rejoin the cluster:
     1. Join the node to the appropriate Active Directory Domain Services domain.
     2. Add the appropriate users to the local Administrators group.
     3. Install any server roles and features that you need, such as Hyper-V, Failover Clustering, and NetworkATC (available on Windows Server 2025). You can use Windows Admin Center, Server Manager, or the [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature) PowerShell cmdlet, as shown in the following example:
