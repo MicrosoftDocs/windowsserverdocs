@@ -4,7 +4,7 @@ description: Learn how to plan for Key Management Services (KMS) activation in W
 ms.topic: conceptual
 author: xelu86
 ms.author: alalve
-ms.date: 11/12/2024
+ms.date: 03/17/2025
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 ---
 
