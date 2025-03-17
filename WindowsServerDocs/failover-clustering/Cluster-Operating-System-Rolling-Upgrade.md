@@ -392,20 +392,20 @@ The following table shows the values and each corresponding functional level:
 ## Frequently asked questions
 
 - **How long can the failover cluster run in mixed-OS mode?**
-    We encourage customers to complete the upgrade within four weeks. Hyper-V and Scale-out File Server clusters can be upgraded with no downtime in less than four hours total.
+    <br>We encourage customers to complete the upgrade within four weeks. Hyper-V and Scale-out File Server clusters can be upgraded with no downtime in less than four hours total.
 - **Can I run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet while nodes are Off or Paused?**
-    No. All cluster nodes must be on and in active membership for the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet to work.
+    <br>No. All cluster nodes must be on and in active membership for the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet to work.
 - **Does the Cluster OS Rolling Upgrade work for any cluster workload? Does it work for SQL Server?**
-    Yes, the Cluster OS Rolling Upgrade works for any cluster workload. However, it's only zero-downtime for Hyper-V and Scale-out File Server clusters. Most other workloads incur some downtime (typically a couple of minutes) when they failover, and failover is required at least once during the Cluster OS Rolling Upgrade process.
+    <br>Yes, the Cluster OS Rolling Upgrade works for any cluster workload. However, it's only zero-downtime for Hyper-V and Scale-out File Server clusters. Most other workloads incur some downtime (typically a couple of minutes) when they failover, and failover is required at least once during the Cluster OS Rolling Upgrade process.
 - **Can I automate this process using PowerShell?**
-    Yes.
+    <br>Yes.
 - **For a large cluster that has extra failover capacity, can I upgrade multiple nodes simultaneously?**
-    Yes. When one node is removed from the cluster to upgrade the OS, the cluster has one less node for failover, hence has a reduced failover capacity. For large clusters with enough workload and failover capacity, multiple nodes can be upgraded simultaneously.
+    <br>Yes. When one node is removed from the cluster to upgrade the OS, the cluster has one less node for failover, hence has a reduced failover capacity. For large clusters with enough workload and failover capacity, multiple nodes can be upgraded simultaneously.
 - **What if I discover an issue in my cluster after [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) has been run successfully?**
-    If you have backed-up the cluster database with a System State backup before running [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel), you should be able to perform an Authoritative restore on a node running the previous version of Windows Server and restore the original cluster database and configuration.
+    <br>If you have backed-up the cluster database with a System State backup before running [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel), you should be able to perform an Authoritative restore on a node running the previous version of Windows Server and restore the original cluster database and configuration.
 - **Can I use in-place upgrade for each node instead of using clean-OS install by reformatting the system drive?**
-    Yes. In the past, we recommended that you perform a clean OS install on each node. However, you can now perform an in-place upgrade of a cluster node if you carefully read and resolve any warning messages.
+    <br>Yes. In the past, we recommended that you perform a clean OS install on each node. However, you can now perform an in-place upgrade of a cluster node if you carefully read and resolve any warning messages.
 - **If I am using Hyper-V replication for a Hyper-V VM on my Hyper-V cluster, will replication remain intact during and after the Cluster OS Rolling Upgrade process?**
-    Yes, Hyper-V replica remains intact during and after the Cluster OS Rolling Upgrade process.
+    <br>Yes, Hyper-V replica remains intact during and after the Cluster OS Rolling Upgrade process.
 - **Can I use System Center Virtual Machine Manager (VMM) to automate the Cluster OS Rolling Upgrade process?**
     Yes, you can automate the Cluster OS Rolling Upgrade process using VMM in System Center.
