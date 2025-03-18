@@ -66,7 +66,7 @@ For more information on upgrading, see [Upgrade Domain Controllers to Windows Se
 ## Enable Microsoft Entra Device Registration
 To configure this scenario, you must configure the device registration capability in Microsoft Entra ID.
 
-To do this, follow the steps under [Setting up Microsoft Entra join in your organization](/azure/active-directory/devices/device-management-azure-portal)
+To do this, follow the steps under [Setting up Microsoft Entra join in your organization](/azure/active-directory/devices/device-management-azure-portal).
 
 ## Set up AD FS
 
@@ -83,7 +83,8 @@ If your AD FS farm isn't already configured for Device Authentication (you may s
 
 ![Screenshot that shows the Device Registration Overview screen.](media/Configure-Device-Based-Conditional-Access-on-Premises/device1.png)
 
->Note: The below commands require Active Directory administration tools, so if your federation server isn't also a domain controller, first install the tools using step 1 below. Otherwise you may skip step 1.
+>[!Note]
+> The below commands require Active Directory administration tools, so if your federation server isn't also a domain controller, first install the tools using step 1 below. Otherwise you may skip step 1.
 
 1. Run the **Add Roles & Features** wizard and select feature **Remote Server Administration Tools** -> **Role Administration Tools** -> **AD DS and AD LDS Tools** -> Choose both the **Active Directory module for Windows PowerShell** and the **AD DS Tools**.
 
@@ -95,7 +96,8 @@ If your AD FS farm isn't already configured for Device Authentication (you may s
   `PS C:\> Initialize-ADDeviceRegistration -ServiceAccountName "<your service account>" `
 3. On the pop-up window hit Yes.
 
->Note: If your AD FS service is configured to use a GMSA account, enter the account name in the format "domain\accountname$"
+>[!Note]
+> If your AD FS service is configured to use a GMSA account, enter the account name in the format "domain\accountname$"
 
 ![Screenshot that shows how to use the listed PowerShell commands.](media/Configure-Device-Based-Conditional-Access-on-Premises/device3.png)
 
