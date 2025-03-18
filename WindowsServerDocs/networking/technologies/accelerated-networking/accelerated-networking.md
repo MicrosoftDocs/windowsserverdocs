@@ -16,7 +16,7 @@ Accelerated Networking enables single root input-output (I/O) virtualization (SR
 
 The following diagram illustrates how two VMs communicate with and without Accelerated Networking.
 
-<img src="./media/accelerated-networking.png" alt="A diagram showing the difference between two deployments with and without Accelerated Networking. The deployment without Accelerated Networking has to send its network traffic through two virtual switches on physical servers, while the network with Accelerated Networking doesn't." style="display:block; margin-left:auto; margin-right:auto;"/>
+![A diagram showing the difference between two deployments with and without Accelerated Networking. The deployment without Accelerated Networking sends network traffic through two virtual switches on physical servers, while the network with Accelerated Networking doesn't.](./media/accelerated-networking.png)
 
 Accelerated Networking's high-performance data path enables single root I/O virtualization (SR-IOV) on supported VM types, greatly improving networking performance in the following ways:
 
