@@ -13,7 +13,7 @@ ms.topic: article
 # Configure on-premises Conditional Access using registered devices
 
 
-The following document will guide you through installing and configuring on-premises conditional access with registered devices.
+The following document guides you through installing and configuring on-premises conditional access with registered devices.
 
 ![conditional access](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
@@ -24,10 +24,10 @@ The following per-requisites are required before you can begin with on-premises 
 |-----|-----
 |A Microsoft Entra subscription with Microsoft Entra ID P1 or P2 | To enable device write-back for on premises conditional access - [a free trial is fine](https://azure.microsoft.com/trial/get-started-active-directory/)
 |Intune subscription|only required for MDM integration for device compliance scenarios -[a free trial is fine](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0)
-|Microsoft Entra Connect|November 2015 QFE or later.  Get the latest version [here](https://www.microsoft.com/download/details.aspx?id=47594).
+|Microsoft Entra Connect|Get the latest version [here](https://www.microsoft.com/download/details.aspx?id=47594).
 |Windows Server 2016|Build 10586 or newer for AD FS
 |Windows Server 2016 Active Directory schema|Schema level 85 or higher is required.
-|Windows Server 2016 domain controller|This is only required for Hello For Business key-trust deployments.  Additional information can be found at [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+|Windows Server 2016 domain controller|Only required for Hello For Business key-trust deployments.  Additional information can be found at [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 |Windows 10 client|Build 10586 or newer, joined to the above domain is required for Windows 10 Domain Join and Windows Hello for Business scenarios only
 |Microsoft Entra user account with Microsoft Entra ID P1 or P2 licenses assigned|For registering the device
 
@@ -36,7 +36,7 @@ The following per-requisites are required before you can begin with on-premises 
 ## Upgrade your Active Directory Schema
 In order to use on-premises conditional access with registered devices, you must first upgrade your AD schema.  The following conditions must be met:
     - The schema should be version 85 or later
-    - This is only required for the forest that AD FS is joined to
+    - Only required for the forest that AD FS is joined to
 
 > [!NOTE]
 > If you installed Microsoft Entra Connect prior to upgrading to the schema version (level 85 or greater) in Windows Server 2016, you'll need to re-run the Microsoft Entra Connect installation and refresh the on-premises AD schema to ensure the synchronization rule for msDS-KeyCredentialLink is configured.
@@ -45,8 +45,8 @@ In order to use on-premises conditional access with registered devices, you must
 To verify your schema level, do the following:
 
 1.  You can use ADSIEdit or LDP and connect to the Schema Naming Context.
-2.  Using ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=\<domain>,DC=\<com> and select properties.  Replace domain and the com portions with your forest information.
-3.  Under the Attribute Editor locate the objectVersion attribute and it will tell you, your version.
+2.  In ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=\<domain>,DC=\<com> and select properties.  Replace domain and the com portions with your forest information.
+3.  Under the Attribute Editor locate the objectVersion attribute and it tells you, your version.
 
 ![ADSI Edit](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)
 
@@ -197,7 +197,7 @@ For easiest evaluation, sign on to AD FS using a test application that shows a l
 ## Configure Additional Scenarios
 ### Automatic Registration for Windows 10 Domain Joined computers
 To enable automatic device registration for Windows 10 domain joined computers, follow steps 1 and 2 [here](/azure/active-directory/devices/hybrid-azuread-join-plan).
-This will help you achieve the following:
+
 
 1. Ensure your service connection point in AD DS exists and has the proper permissions (we created this object above, but it doesn't hurt to double check).
 2. Ensure AD FS is configured properly
@@ -217,7 +217,7 @@ To enable automatic MDM enrollment of registered devices so that you can use the
     2. Instructions to check for STK key credential link on AD DS object (does sync still have to run twice?)
 3.  If you get an error upon trying to register a Windows computer that the device was already enrolled, but you're unable or have already unenrolled the device, you may have a fragment of device enrollment configuration in the registry.  To investigate and remove this, use the following steps:
     1. On the Windows computer, open Regedit and navigate to **HKLM\Software\Microsoft\Enrollments**
-    2. Under this key, there will be many subkeys in the GUID form.  Navigate to the subkey that has ~17 values in it and has "EnrollmentType" of  "6" [MDM joined] or "13" (Microsoft Entra joined)
+    2. Under this key, there are subkeys in the GUID form.  Navigate to the subkey that has ~17 values in it and has "EnrollmentType" of  "6" [MDM joined] or "13" (Microsoft Entra joined)
     3. Modify **EnrollmentType** to **0**
     4. Try the device enrollment or registration again
 
