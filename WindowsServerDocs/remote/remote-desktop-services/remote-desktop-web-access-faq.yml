@@ -24,6 +24,8 @@ sections:
 
             ![A screenshot of the link displayed to change your password.](media/incorrect-or-account-locked-out.png)
 
+          If you see a message that your password doesn't meet the criteria for your domain, contact your Active Directory administrator to help reset your password.
+          
       - question: |
           How do I reset my expired password?
         answer: |
@@ -32,6 +34,8 @@ sections:
             ![A screenshot of the link displayed to change your password.](media/expired-password-no-iis-change.png)
 
           If an administrator enabled password reset, follow the link to change your expired password. You need to enter your old password, then your new password, and confirm the new password.
+          
+          If you're unable to reset your password, and see that your new password doesn't meet the length, complexity, or history requirements of your domain, try choosing a different password, or contact your administrator to learn what the requirements are.
 
             ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
       
@@ -55,7 +59,7 @@ sections:
           
             ![A screenshot of the link displayed to change your password.](media/change-password-link.png)
           
-          When you open the password reset page there's a user interface where you enter your current password, new password, and confirm the new password.
+          When you open the password reset page, there's a user interface where you enter your current password, new password, and confirm the new password.
           
             ![A screenshot of the form to change your password.](media/change-password-form.png)
           

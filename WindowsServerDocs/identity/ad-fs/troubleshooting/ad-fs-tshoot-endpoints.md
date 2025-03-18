@@ -1,6 +1,6 @@
 ---
-title: AD FS Troubleshooting - AD FS endpoints
-description: This document describes how to troubleshoot AD FS endpoints
+title: AD FS Troubleshooting - AD FS Endpoints
+description: This article describes how to troubleshoot Active Directory Federation Services (AD FS) endpoints.
 author: billmath
 ms.author: billmath
 manager: amycolannino
@@ -8,25 +8,27 @@ ms.date: 10/14/2024
 ms.topic: article
 ---
 
-# AD FS Troubleshooting - AD FS metadata endpoints
-Endpoints provide access to the federation server functionality of AD FS, such as publishing federation metadata. To verify that the AD FS server is responding to web requests, we can check the various endpoints.
+# AD FS troubleshooting: AD FS metadata endpoints
 
+Endpoints provide access to the federation server functionality of Active Directory Federation Services (AD FS), such as publishing federation metadata. To verify that the AD FS server is responding to web requests, you can check the various endpoints.
 
 ## Federation metadata test
-Passive federation refers to scenarios where your browser is re-directed to the AD FS sign-in page. By testing the metadata endpoint, we can determine if the AD FS server is responding to web requests in these passive scenarios. Use the following procedure to test the endpoint.
 
-1. Using a web browser, navigate to your AD FS Federation metadata endpoint. For example: https://sts.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml
-2. The xml file should download locally to your machine.
-3. Open it and verify that it contains information similar to the information below:
-![Passive](media/ad-fs-tshoot-endpoints/meta2.png)
+Passive federation refers to scenarios where your browser is redirected to the AD FS sign-in page. By testing the metadata endpoint, you can determine if the AD FS server is responding to web requests in these passive scenarios. Use the following procedure to test the endpoint.
 
-## WS-MEX test (Active test)
-WS-MetaDataExchange is a web services protocol and is part of the WS-Federation roadmap. It uses a SOAP message to request metadata. By testing the endpoint we can determine if the AD FS server is responding to web requests for WS-MetaDataExchange. Use the following procedure to test the endpoint.
-1. Using a web browser, navigate to your AD FS Federation metadata endpoint. For example: https://sts.contoso.com/adfs/services/trust/mex
-2. The xml file should be displayed in the browser automatically. It should look like the image below:
+1. Use a web browser to go to your AD FS federation metadata endpoint. An example is `https://sts.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml`. The .xml file downloads locally to your machine.
+1. Open the .xml file and verify that it contains information similar to the following image.
 
-:::image type="content" source="media/ad-fs-tshoot-endpoints/security-trust-file.png" alt-text="A screenshot of the AD FS Federation metadata endpoint XML file.":::
+   ![Screenshot that shows a passive scenario.](media/ad-fs-tshoot-endpoints/meta2.png)
 
-## Next steps
+## WS-MEX test (active test)
 
-- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
+WS-MetaDataExchange is a web services protocol and is part of the WS-Federation roadmap. It uses a SOAP message to request metadata. By testing the endpoint, you can determine if the AD FS server is responding to web requests for WS-MetaDataExchange.
+
+To test the endpoint, use a web browser to go to your AD FS federation metadata endpoint. An example is `https://sts.contoso.com/adfs/services/trust/mex`. The .xml file automatically appears in the browser and should look like the following image.
+
+   :::image type="content" source="media/ad-fs-tshoot-endpoints/security-trust-file.png" alt-text="Screenshot that shows the AD FS federation metadata endpoint .xml file.":::
+
+## Related content
+
+- [AD FS troubleshooting](ad-fs-tshoot-overview.md)

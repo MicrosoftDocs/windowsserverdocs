@@ -2,8 +2,8 @@
 title: Hyper-V Virtual Fibre Channel in Windows Server
 description: Learn about how Virtual Fibre Channel works and device support in Hyper-V for Windows Server.
 ms.topic: conceptual
-ms.author: helohr
-author: Heidilohr
+author: xelu86
+ms.author: alalve
 ms.date: 04/12/2024
 ---
 

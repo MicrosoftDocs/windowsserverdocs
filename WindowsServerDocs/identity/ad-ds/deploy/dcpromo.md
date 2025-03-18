@@ -1,8 +1,8 @@
 ---
 description: An overview of the syntax and structure of DCPROMO answer files.
 title: DCPROMO answer file syntax
-author: Heidilohr
-ms.author: helohr
+ms.author: alalve
+author: xelu86
 manager: femila
 ms.date: 04/25/2024
 ms.topic: conceptual

@@ -18,6 +18,10 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 ## General
 
+- Windows Admin Center version 2410 build 2.4.2.1 may appear as build number 2.4.1 on the Windows Admin Center Updates settings page.
+
+- In Windows Admin Center version 2410, users are unable to register their Windows Admin Center gateways to sovereign clouds. This issue is actively being investigated.
+
 - Self-signed certificates accessed on `https://localhost:[port]` can cause the Microsoft Edge and Google Chrome browsers to block Windows Admin Center. When you're blocked, you should see an error message that says your connection isn't private. To resolve this issue, update Windows Admin Center to the latest version.
 
 - Using certain versions of extensions with earlier versions of Windows Admin Center can result in icons not displaying properly. To resolve this issue, update to the latest version of Windows Admin Center
