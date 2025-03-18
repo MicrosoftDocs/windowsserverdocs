@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - SQL Connectivity
 description: Learn how to troubleshoot various aspects of Active Directory Federation Services as it relates to SQL connectivity.
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

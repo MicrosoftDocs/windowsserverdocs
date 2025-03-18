@@ -1,5 +1,5 @@
 ---
-manager: amycolannino
+manager: femila
 title: Active Directory Federation Services (AD FS) decommission guide 
 description: Describes the recommended way to decommission Active Directory Federation Services (AD FS) servers.
 author: billmath
