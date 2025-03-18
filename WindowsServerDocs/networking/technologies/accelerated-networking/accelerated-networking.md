@@ -4,7 +4,7 @@ description: How to set up and validate Accelerated Networking on your virtual m
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 02/20/2025
+ms.date: 03/18/2025
 ---
 
 # Accelerated Networking (preview)
@@ -16,7 +16,7 @@ Accelerated Networking enables single root input-output (I/O) virtualization (SR
 
 The following diagram illustrates how two VMs communicate with and without Accelerated Networking.
 
-:::image type="content" source="./media/accelerated-networking.png" alt-text="A diagram showing the difference between two deployments with and without Accelerated Networking. The deployment without accelerated networking has to send its network traffic through two virtual switches on physical servers, while the network with Accelerated Networking doesn't.":::
+:::image type="content" source="./media/accelerated-networking.png" alt-text="A diagram showing the difference between two deployments with and without Accelerated Networking. The deployment without Accelerated Networking has to send its network traffic through two virtual switches on physical servers, while the network with Accelerated Networking doesn't.":::
 
 Accelerated Networking's high-performance data path enables single root I/O virtualization (SR-IOV) on supported VM types, greatly improving networking performance in the following ways:
 
@@ -48,7 +48,7 @@ Your deployment needs to meet the following prerequisites in order to use Accele
 
   ```powershell
   Install-WindowsFeature -Name NetworkATC
-  ```  
+  ```
 
 - Your network interface card (NIC) must support SR-IOV and SR-IOV enabled in the BIOS. You might need to contact your hardware vendor to see if your machine supports SR-IOV. Run the following cmdlet to enable SR-IOV on your NIC:
 
@@ -57,7 +57,7 @@ Your deployment needs to meet the following prerequisites in order to use Accele
   ```
 
 - Virtualization must be enabled in the BIOS. Review your hardware vendor guide on setting this feature.
-  
+
 - You must use a Windows Server Pay-as-you-go subscription or [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) license types.
 
 ## Configure Accelerated Networking
@@ -106,7 +106,7 @@ The `-VMName` and `-Performance` parameters are required. You can set the perfor
 Run the following cmdlet to disable Accelerated Networking on a cluster:
 
 ```powershell
-Disable-AccelNetManagement 
+Disable-AccelNetManagement
 ```
 
 After you disable Accelerated Networking on the cluster, the Network HUD no longer monitors the health of the feature.
@@ -115,7 +115,7 @@ After you disable Accelerated Networking on the cluster, the Network HUD no long
 > Disabling Accelerated Networking at the cluster level doesn't alter the settings on individual VMs. The Network HUD stops monitoring these VMs, and Accelerated Networking ceases to manage them.
 
 Run the following command to disable Accelerated Networking on a VM:
-  
+
 ```powershell
 Disable-AccelNetVM -VMName "MyVM"
 ```
@@ -144,19 +144,19 @@ To learn more about the Accelerated Networking PowerShell cmdlets, see the [Fail
 
 To configure Accelerated Networking in Windows Admin Center, navigate to your cluster and follow these steps:
 
-1. On the left-hand menu, under **Networking**, select **Accelerated networking**, then select **Set up Accelerated networking**.
+1. On the left-hand menu, under **Networking**, select **Accelerated Networking**, then select **Set up Accelerated Networking**.
 
-1. Select a valid **Intent**, select the **Node reserve** percentage for failover, then select **Enable accelerated networking**.
+1. Select a valid **Intent**, select the **Node reserve** percentage for failover, then select **Enable accelerated Networking**.
 
    The next screen displays the Accelerated Networking status, intent, and node reserve used. If you need to make any changes to these settings, select **Cluster overview**, select **Settings**, make your adjustments, then select **Save**.
 
-1. On this same screen, if you want to disable Accelerated Networking on your cluster, select **Disable cluster-level accelerated networking**, then select **Disable Accelerated networking**.
+1. On this same screen, if you want to disable Accelerated Networking on your cluster, select **Disable cluster-level Accelerated Networking**, then select **Disable Accelerated Networking**.
 
 To enable or disable Accelerated Networking on your VMs, you're given the option to perform this action on single or multiple VMs at once. On the same screen, perform the following steps:
 
-1. To disable one or more VMs, select **Enabled virtual machines**, select your VMs, then select **Disable VM accelerated networking**.
+1. To disable one or more VMs, select **Enabled virtual machines**, select your VMs, then select **Disable VM Accelerated Networking**.
 
-1. To enable one or more VMs, select **Disabled virtual machines**, select your VMs, select **Enable VM accelerated networking**, select the **Performance** level, then select **Enable**.
+1. To enable one or more VMs, select **Disabled virtual machines**, select your VMs, select **Enable VM Accelerated Networking**, select the **Performance** level, then select **Enable**.
 
 To change the performance settings on a single or multiple VMs, follow these steps:
 
