@@ -1,23 +1,23 @@
 ---
-description: "Learn more about: Configure On-Premises Conditional Access using registered devices"
+description: "Learn more about: Configure on-premises Conditional Access using registered devices"
 ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configure Device-based Conditional Access on-Premises
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 03/18/2025
 ms.topic: article
 ---
 
 
-# Configure On-Premises Conditional Access using registered devices
+# Configure on-premises Conditional Access using registered devices
 
 
 The following document will guide you through installing and configuring on-premises conditional access with registered devices.
 
 ![conditional access](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
-## Infrastructure pre-requisites
+## Infrastructure prerequisites
 The following per-requisites are required before you can begin with on-premises conditional access.
 
 |Requirement|Description
@@ -29,7 +29,7 @@ The following per-requisites are required before you can begin with on-premises 
 |Windows Server 2016 Active Directory schema|Schema level 85 or higher is required.
 |Windows Server 2016 domain controller|This is only required for Hello For Business key-trust deployments.  Additional information can be found at [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 |Windows 10 client|Build 10586 or newer, joined to the above domain is required for Windows 10 Domain Join and Windows Hello for Business scenarios only
-|Microsoft Entra user account with Microsoft Entra ID P1 or P2 license assigned|For registering the device
+|Microsoft Entra user account with Microsoft Entra ID P1 or P2 licenses assigned|For registering the device
 
 
 
@@ -191,7 +191,7 @@ For your reference, below is a comprehensive list of the AD DS devices, containe
 ### See it work
 To evaluate the new claims and policies, first register a device.  For example, you can Microsoft Entra join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps [here](/azure/active-directory/devices/hybrid-azuread-join-plan).  For information on joining Windows 10 mobile devices, see the document [here](/windows/client-management/mdm/mdm-enrollment-of-windows-devices).
 
-For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. you'll be able to see new claims including *isManaged*, *isCompliant*, and *trusttype*.  If you enable Windows Hello for Business, you'll also see the *prt* claim.
+For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. You'll be able to see new claims including *isManaged*, *isCompliant*, and *trusttype*.  If you enable Windows Hello for Business, you'll also see the *prt* claim.
 
 
 ## Configure Additional Scenarios
