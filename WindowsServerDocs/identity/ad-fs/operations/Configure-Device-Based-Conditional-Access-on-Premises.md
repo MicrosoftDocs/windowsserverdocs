@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Configure on-premises Conditional Access using registered devices"
 ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
-title: Configure Device-based Conditional Access on-Premises
+title: Configure Device-based Conditional Access on-premises
 author: billmath
 ms.author: billmath
 manager: femila
@@ -18,7 +18,7 @@ The following document guides you through installing and configuring on-premises
 ![conditional access](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
 ## Infrastructure prerequisites
-The following per-requisites are required before you can begin with on-premises conditional access.
+The following perrequisites are required.
 
 |Requirement|Description
 |-----|-----
@@ -27,7 +27,7 @@ The following per-requisites are required before you can begin with on-premises 
 |Microsoft Entra Connect|Get the latest version [here](https://www.microsoft.com/download/details.aspx?id=47594).
 |Windows Server 2016|Build 10586 or newer for AD FS
 |Windows Server 2016 Active Directory schema|Schema level 85 or higher is required.
-|Windows Server 2016 domain controller|Only required for Hello For Business key-trust deployments.  Additional information can be found at [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+|Windows Server 2016 domain controller|Only required for Hello For Business key-trust deployments.  For more information, see [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 |Windows 10 client|Build 10586 or newer, joined to the above domain is required for Windows 10 Domain Join and Windows Hello for Business scenarios only
 |Microsoft Entra user account with Microsoft Entra ID P1 or P2 licenses assigned|For registering the device
 
@@ -44,13 +44,13 @@ In order to use on-premises conditional access with registered devices, you must
 ### Verify your schema level
 To verify your schema level, do the following:
 
-1.  You can use ADSIEdit or LDP and connect to the Schema Naming Context.
+1.  Use ADSIEdit.exe or LDP.exe and connect to the Schema Naming Context.
 2.  In ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=\<domain>,DC=\<com> and select properties.  Replace domain and the com portions with your forest information.
 3.  Under the Attribute Editor locate the objectVersion attribute and it tells you, your version.
 
 ![ADSI Edit](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)
 
-You can also use the following PowerShell cmdlet (replace the object with your schema-naming context information):
+You may also use the following PowerShell cmdlet (replace the object with your schema-naming context information):
 
 ``` powershell
 Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVersion
@@ -79,11 +79,11 @@ To do this, follow the steps under [Setting up Microsoft Entra join in your orga
 > If you ran Microsoft Entra Connect using Express Settings, the correct AD objects have been created for you.  However, in most AD FS scenarios, Microsoft Entra Connect was run with Custom Settings to configure AD FS, so the below steps are necessary.
 
 ### Create AD objects for AD FS Device Authentication
-If your AD FS farm isn't already configured for Device Authentication (you can see this in the AD FS Management console under Service -> Device Registration), use the following steps to create the correct AD DS objects and configuration.
+If your AD FS farm isn't already configured for Device Authentication (you may see this in the AD FS Management console under Service -> Device Registration), use the following steps to create the correct AD DS objects and configuration.
 
 ![Screenshot that shows the Device Registration Overview screen.](media/Configure-Device-Based-Conditional-Access-on-Premises/device1.png)
 
->Note: The below commands require Active Directory administration tools, so if your federation server isn't also a domain controller, first install the tools using step 1 below.  Otherwise you can skip step 1.
+>Note: The below commands require Active Directory administration tools, so if your federation server isn't also a domain controller, first install the tools using step 1 below.  Otherwise you may skip step 1.
 
 1.  Run the **Add Roles & Features** wizard and select feature **Remote Server Administration Tools** -> **Role Administration Tools** -> **AD DS and AD LDS Tools** -> Choose both the **Active Directory module for Windows PowerShell** and the **AD DS Tools**.
 
@@ -146,7 +146,7 @@ To ensure AD DS objects and containers are in the correct state for write-back o
 
 Where the [AD connector account name] is the name of the account you configured in Microsoft Entra Connect when adding your on-premises AD DS directory in domain\accountname format
 
-The above command creates the following objects for device write-back to AD DS, if they do not exist already, and allows access to the specified AD connector account name
+The above command creates the following objects for device write-back to AD DS, if they don't exist already, and allows access to the specified AD connector account name
 
 - RegisteredDevices container in the AD domain partition
 - Device Registration Service container and object under Configuration --> Services --> Device Registration Configuration
@@ -189,9 +189,9 @@ For your reference, below is a comprehensive list of the AD DS devices, containe
 - Object of type msDS-DeviceRegistrationService in the above container
 
 ### See it work
-To evaluate the new claims and policies, first register a device.  For example, you can Microsoft Entra join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps [here](/azure/active-directory/devices/hybrid-azuread-join-plan).  For information on joining Windows 10 mobile devices, see the document [here](/windows/client-management/mdm/mdm-enrollment-of-windows-devices).
+To evaluate the new claims and policies, first register a device.  For example, Microsoft Entra join a Windows 10 computer using the Settings app under System -> About, or set up Windows 10 domain join with automatic device registration following the additional steps [here](/azure/active-directory/devices/hybrid-azuread-join-plan).  For information on joining Windows 10 mobile devices, see the document [here](/windows/client-management/mdm/mdm-enrollment-of-windows-devices).
 
-For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. You'll be able to see new claims including *isManaged*, *isCompliant*, and *trusttype*.  If you enable Windows Hello for Business, you'll also see the *prt* claim.
+For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. You'll be able to see new claims including `isManaged`, `isCompliant`, and `trusttype`.  If you enable Windows Hello for Business, you'll also see the `prt` claim.
 
 
 ## Configure Additional Scenarios
@@ -208,7 +208,7 @@ To enable automatic device registration for Windows 10 domain joined computers, 
 For information on enabling Windows 10 with Windows Hello for Business, see [Enable Windows Hello for Business in your organization.](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 
 ### Automatic MDM enrollment
-To enable automatic MDM enrollment of registered devices so that you can use the isCompliant claim in your access control policy, follow the steps [here.](/windows/client-management/mdm/mdm-enrollment-of-windows-devices)
+To enable automatic MDM enrollment of registered devices follow the steps [here.](/windows/client-management/mdm/mdm-enrollment-of-windows-devices)
 
 ## Troubleshooting
 1.  If you get an error on `Initialize-ADDeviceRegistration` that complains about an object already existing in the wrong state, such as "The DRS service object has been found without all the required attributes", you may have executed Microsoft Entra Connect PowerShell commands previously and have a partial configuration in AD DS.  Try deleting manually the objects under **CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;** and trying again.
