@@ -16,7 +16,7 @@ Accelerated Networking enables single root input-output (I/O) virtualization (SR
 
 The following diagram illustrates how two VMs communicate with and without Accelerated Networking.
 
-:::image type="content" source="./media/accelerated-networking.png" alt-text="A diagram showing the difference between two deployments with and without Accelerated Networking. The deployment without Accelerated Networking has to send its network traffic through two virtual switches on physical servers, while the network with Accelerated Networking doesn't.":::
+<img src="./media/accelerated-networking.png" alt="A diagram showing the difference between two deployments with and without Accelerated Networking. The deployment without Accelerated Networking has to send its network traffic through two virtual switches on physical servers, while the network with Accelerated Networking doesn't." style="display:block; margin-left:auto; margin-right:auto;"/>
 
 Accelerated Networking's high-performance data path enables single root I/O virtualization (SR-IOV) on supported VM types, greatly improving networking performance in the following ways:
 
@@ -177,7 +177,7 @@ You might encounter the following error messages while using this feature.
 | cluster_not_enough_resources | The cluster does not have enough SRIOV resources to enable VM {0}. | Either lower the **NodeReservePercentage** value, select a different performance option, or increase the number of SRIOV resources in your cluster. |
 | enable_accel_net_failed | Failed to enable Accelerated Networking on the cluster {0}. | Make sure you're using a valid Pay-as-you-go subscription license. |
 | Get_network_adapter_failed | Failed to get network adapters for VM {0}. | Make sure the VM has at least one network adapter. |
-| ht_enabled_min_processor_counter | The minimum required processor count for requested performance with hyperthreading enabled/disabled is {0}. | Add more vCPUs to the VM in order to meet the requirements. |
+| ht_enabled_min_processor_counter | The minimum required processor count for requested performance with hyperthreading enabled/disabled is {0}. | Add more vCPUs to the VM to meet the requirements. |
 | Hyperthreading_check_failed | Hyperthreading validation: Failed. There is an inconsistency across the cluster. Either disable or enable hyperthreading on all nodes. | Make sure the hyperthreading configuration is consistent for every node in your cluster. |
 | Intent_not_found | Intent validation: Failed. Intent {0} not found. | Make sure the intent name you entered is correct, then try again. |
 | Intent_type_check_failed | The selected intent {0} does not have Compute capabilities. | Create or update an intent with the Compute state. |
