@@ -1,10 +1,10 @@
 ---
 title: Install Active Directory Domain Services on an Azure virtual machine
 description: How to create a new Active Directory forest on a virtual machine (VM) on an Azure virtual machine.
-author: iainfoulds
+author: justinha
 ms.author: justinha
-manager: daveba
-ms.date: 6/28/2022
+manager: femila
+ms.date: 03/18/2025
 ms.topic: article
 ---
 
@@ -60,7 +60,7 @@ The script below can be run directly from the Azure portal. If you choose to ins
 | DC2IP | IP address for second domain controller. |
 
 ```azurecli
-#Update based on your organizational requirements
+#Add lines for AdminUsername and AdminPassword, and uupdate based on your organizational requirements
 Location=westus2
 ResourceGroupName=ADonAzureVMs
 NetworkSecurityGroup=NSG-DomainControllers
@@ -71,8 +71,6 @@ SubnetAddress=10.10.10.0/24
 AvailabilitySet=DomainControllers
 VMSize=Standard_DS1_v2
 DataDiskSize=20
-AdminUsername=azureuser
-AdminPassword=ChangeMe123456
 DomainController1=AZDC01
 DC1IP=10.10.10.11
 DomainController2=AZDC02
