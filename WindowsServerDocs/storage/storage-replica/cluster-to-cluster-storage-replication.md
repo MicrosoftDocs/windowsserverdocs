@@ -40,6 +40,8 @@ This walkthrough uses the following environment as an example:
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
+* Dedicated static IP addresses for each cluster.
+* A dedicated file share accessible by both clusters to act as a witness.
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
 * There are important considerations & limitations for Storage Spaces Direct replication - please review the detailed information below.
 
