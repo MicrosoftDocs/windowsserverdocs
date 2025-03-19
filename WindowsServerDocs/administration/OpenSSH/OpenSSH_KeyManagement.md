@@ -144,7 +144,7 @@ To use the user key that you created previously, you need to place the contents 
 
 ### Standard user
 
-You need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file called _authorized_keys_ in _C:\Users\username\\.ssh\\_. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file.
+You need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file called `authorized_keys` in _C:\Users\username\\.ssh\\_. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file.
 
 You can use the following code to copy the public key to the server. In the last line, replace `username` with your username. Initially, you're prompted to enter a password for the user account for the server.
 
@@ -161,12 +161,12 @@ ssh username@domain1@contoso.com $remotePowershell
 
 ### Administrative user
 
-You need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file called _administrators_authorized_keys_ in _C:\ProgramData\ssh\\_. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and the System user.
+You need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file called `administrators_authorized_keys` in _C:\ProgramData\ssh\\_. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and the System user.
 
 You can use the following code to copy the public key to the server and configure the ACL. In the last line, replace `username` with your username. Initially, you're prompted to enter a password for the user account for the server.
 
 > [!NOTE]
-> This example shows the steps for creating the _administrators_authorized_keys_ file. This file only applies to administrator accounts. You must use it instead of the user-specific file within the user's profile location.
+> This example shows the steps for creating the `administrators_authorized_keys` file. This file only applies to administrator accounts. You must use it instead of the user-specific file within the user's profile location.
 
 ```powershell
 # Get the public key file generated previously on your client.
