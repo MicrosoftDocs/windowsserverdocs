@@ -31,7 +31,7 @@ At a high level, a rolling upgrade consists of these steps:
 1. Prepare the cluster for the OS feature update.
 2. Transfer workloads off of the first node.
 3. Perform the Windows Server feature update via an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md).
-4. Repeat steps 2 through 4 for every other node in the cluster.
+4. Repeat steps 2 through 3 for every other node in the cluster.
 5. Update the cluster functional level and storage pools to the new version of Windows Server.
 6. Resume normal operation and update VM configuration versions to turn on new functionality.
 
