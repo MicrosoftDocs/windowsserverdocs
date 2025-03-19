@@ -1,28 +1,29 @@
 ---
-title: Upgrade the OS of a Windows Server cluster by performing a rolling upgrade
-description: You can upgrade the operating system of a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This article describes the stages of the rolling upgrade process, limitations, and frequently asked questions (FAQs).
+title: Upgrade the OS of a Windows Server failover cluster by performing a cluster OS rolling upgrade
+description: Manually upgrade the operating system of a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling OS upgrade. This article describes the stages of the rolling upgrade process, limitations, and frequently asked questions (FAQs).
+# customer intent: As an IT professional, I want to learn how to upgrade the OS of a Windows Server failover cluster by manually performing a cluster OS rolling upgrade.
 ms.topic: how-to
 author: jasongerend
 ms.author: jgerend
-ms.date: 3/17/2025
+ms.date: 3/19/2025
 ---
 
-# Upgrade the OS of a Windows Server cluster by performing a rolling upgrade
+# Upgrade a Windows Server failover cluster with a cluster OS rolling upgrade
 
-You can manually install a feature update on a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This article describes the stages of the rolling OS upgrade process, limitations, and frequently asked questions (FAQs).
+This article describes how to manually install a feature update on a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This is often called a Rolling OS Cluster Upgrade.
 
-This article applies to clusters running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads, but doesn't apply to clusters using virtual hard disks (.vhdx files) as shared storage.
+**You can upgrade the cluster one OS version at a time**, such as from Windows Server 2022 to Windows Server 2025. To upgrade across multiple OS versions, such as from Windows Server 2016 to Windows Server 2025, perform the steps in this article additional times.
 
-If you're using System Center Virtual Machine Manager (VMM), instead see [Perform a rolling upgrade of a Hyper-V host cluster in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true) for guidance on upgrading clusters.
+This article applies to clusters running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads upgrading one OS version, but doesn't apply to clusters using virtual hard disks (.vhdx files) as shared storage. If you're using System Center Virtual Machine Manager (VMM), instead see [Perform a rolling upgrade of a Hyper-V host cluster in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true).
 
 ## Overview
 
-A rolling upgrade of a Windows Server failover cluster provides the following benefits:
+A rolling upgrade of a cluster to the next newer version of Windows Server provides the following benefits:
 
-- Upgrade a cluster running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads to a newer version of Windows Server without downtime.
+- Upgrade a cluster running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads to the next newer version of Windows Server without downtime.
 - No new hardware is required, though you might choose to temporarily add cluster nodes to small clusters to improve availability during the upgrade.
 - The cluster can support patching and maintenance operations during the upgrade, when there are a mix of OS versions in the cluster.
-- The upgrade process is reversible until the final step, when all cluster nodes are running the newer version of Windows Server and you update the cluster functional level by using.
+- The upgrade process is reversible until the final step, when all cluster nodes are running the newer version of Windows Server and you update the cluster functional level.
 - It supports automation via PowerShell and WMI.
 
 At a high level, a rolling upgrade consists of these steps:
@@ -389,6 +390,7 @@ The following table shows the values and each corresponding functional level:
 | 9 | Windows Server 2016 |
 | 10 | Windows Server 2019 |
 | 11 | Windows Server 2022 |
+| 12 | Windows Server 2025 |
 
 ## Frequently asked questions
 
