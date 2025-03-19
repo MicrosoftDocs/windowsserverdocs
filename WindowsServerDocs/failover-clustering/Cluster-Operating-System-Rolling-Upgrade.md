@@ -14,7 +14,7 @@ This article describes how to manually install a feature update on a Windows Ser
 
 **You can upgrade the cluster one OS version at a time**, such as from Windows Server 2022 to Windows Server 2025. To upgrade across multiple OS versions, such as from Windows Server 2016 to Windows Server 2025, perform the steps in this article additional times.
 
-This article applies to clusters running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads upgrading one OS version, but doesn't apply to clusters using virtual hard disks (.vhdx files) as shared storage. If you're using System Center Virtual Machine Manager (VMM), instead see [Perform a rolling upgrade of a Hyper-V host cluster in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true).
+This article applies to clusters running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads upgrading one OS version, but doesn't apply to clusters using virtual hard disks (.vhdx files) as shared storage. If you're using System Center Virtual Machine Manager (VMM), instead see [Perform a rolling upgrade of a Hyper-V host cluster in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true). Azure Local customers should use the updating process described in [About Azure Local upgrades](/azure/azure-local/upgrade/about-upgrades-23h2), though you can use this article if none of the Azure Local updating methods work for you.
 
 ## Overview
 
