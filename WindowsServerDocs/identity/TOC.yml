@@ -1052,6 +1052,8 @@
         href: ad-cs/export-certificate-private-key.md
       - name: Manage certificate templates
         href: ad-cs/manage-certificate-templates.md
+      - name: Migrate the Certification Authority
+        href: ad-cs/migrate-certification-authority.md
       - name: Renew root CA certificate
         href: ad-cs/renew-root-ca-certificate.md
       - name: Request certificates using Web Enrollment

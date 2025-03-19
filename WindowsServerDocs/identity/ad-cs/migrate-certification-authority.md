@@ -1,5 +1,5 @@
 ---
-title: Migrate the Certification Authority
+title: Migrate the Certification Authority in Windows Server
 description: Learn how to migrate your Certification Authority with step-by-step instructions and best practices.
 ms.topic: how-to
 ms.author: mosagie
