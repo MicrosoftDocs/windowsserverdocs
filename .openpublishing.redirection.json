@@ -12572,7 +12572,7 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md",
-      "redirect_url":"/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
       "redirect_document_id": false
     },
     {
@@ -12685,7 +12685,8 @@
       "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
       "redirect_document_id": true
     },
-    { "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2025.md",
+    {
+      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2025.md",
       "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
       "redirect_document_id": true
     },
@@ -12818,6 +12819,11 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-supported-config.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config",
       "redirect_document_id": true
+    },
+    {
+     "source_path": "WindowsServerDocs/failover-clustering/file-share-witness.md",
+     "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+     "redirect_document_id": false
     }
   ]
 }

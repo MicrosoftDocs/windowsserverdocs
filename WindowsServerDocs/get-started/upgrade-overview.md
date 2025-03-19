@@ -50,7 +50,7 @@ Meaning you can upgrade directly to Windows Server 2025 from Windows Server 2012
 With Windows Server 2022 and earlier, nonclustered systems can upgrade to a newer version of
 Windows Server by up to two versions at a time. For example, Windows Server 2016 can be upgraded to
 Windows Server 2019 or Windows Server 2022. If you're using the
-[Cluster OS Rolling Upgrade feature](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements),
+[Cluster OS Rolling Upgrade feature](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md),
 you can only upgrade one version at a time.
 
 In this table you can see the supported upgrade paths, based on the version you're currently on.
