@@ -12823,7 +12823,7 @@
     {
      "source_path": "WindowsServerDocs/failover-clustering/file-share-witness.md",
      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
-     "redirect_document_id": true
+     "redirect_document_id": false
     }
   ]
 }
