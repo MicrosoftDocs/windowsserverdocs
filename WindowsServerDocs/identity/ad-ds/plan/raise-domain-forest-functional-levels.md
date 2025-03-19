@@ -70,10 +70,10 @@ To view the domain or forest functional level using PowerShell, follow these ste
 
 1. Open PowerShell as an administrator.
 
-1. Run the following command to view the current domain functional level, replacing `<domain>` with the domain name.
+1. Run the following command to view the current domain functional levels of all domains in the forest.
 
    ```powershell
-   Get-ADDomain -Identity <domain> | Select-Object DomainMode
+   Get-ADForest | Select-Object -ExpandProperty Domains | ForEach-Object { Get-ADDomain $_ } | Select-Object Name, DomainMode
    ```
 
 1. Run the following command to view the current forest functional level, replacing `<forest>` with the forest name.
@@ -92,6 +92,9 @@ To raise the domain and forest functional levels, you can use the Active Directo
 
 > [!WARNING]
 > Changes to the domain and forest functional levels are irreversible. In order to undo the change, you must perform a forest recovery to revert to an earlier point of time.
+
+> [!IMPORTANT]
+> If all domain controllers in all domains in the forest are running Windows Server 2025, it isn't necessary to raise individual domain functional levels manually as raising the forest functional level to Windows Server 2025 automatically raises the domain functional level of all domains in the forest to Windows Server 2025.
 
 ### [Desktop](#tab/desktop)
 

@@ -4,7 +4,7 @@ description: Learn about the features and enhancements in Windows Server 2025 th
 ms.topic: article
 author: xelu86
 ms.author: alalve
-ms.date: 11/18/2024
+ms.date: 02/28/2025
 ---
 
 # What's new in Windows Server 2025
@@ -14,14 +14,6 @@ This article describes some of the newest developments in Windows Server 2025, w
 ## Desktop experience and upgrade
 
 Explore upgrade options and the desktop experience.
-
-### Upgrade by using Windows Update
-
-You can perform an in-place upgrade from source media or Windows Update. Microsoft offers an optional in-place upgrade capability through Windows Update, which is known as a feature update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices.
-
-When you upgrade by using Windows Update from the **Settings** dialog, you can perform the installation directly from Windows Update within the desktop or by using `SConfig` for Server Core. Your organization might prefer to implement upgrades incrementally and want to control the availability of this optional upgrade by using Group Policy.
-
-To learn more about how to manage the offer of feature updates, see [Manage feature updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md).
 
 ### In-place upgrade from Windows Server 2012 R2
 
@@ -134,12 +126,13 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 - **Improved security for confidential attributes**: DCs and AD LDS instances only allow LDAP to add, search, and modify operations that involve confidential attributes when the connection is encrypted.
 - **Improved security for default machine account passwords**: Active Directory now uses default computer account passwords that are randomly generated. Windows 2025 DCs block setting computer account passwords to the default password of the computer account name.
 
-  To control this behavior, enable the Group Policy Object (GPO) setting **Domain controller: Refuse setting default machine account password** located in 
+  To control this behavior, enable the Group Policy Object (GPO) setting **Domain controller: Refuse setting default machine account password** located in
   *Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options*.
-  
+
   Utilities like Active Directory Administrative Center (ADAC), Active Directory Users and Computers (ADUC), `net computer`, and `dsmod` also honor this new behavior. Both ADAC and ADUC no longer allow creation of a pre-Windows 2000 account.
 
 - **Kerberos PKINIT support for cryptographic agility**: The Kerberos Public Key Cryptography for Initial Authentication in Kerberos (PKINIT) protocol implementation is updated to allow for cryptographic agility by supporting more algorithms and removing hardcoded algorithms.
+- **Kerberos changes for Algorithms used for Ticket Granting Tickets**: The Kerberos Distribution Center will no longer issue Ticket Granting Tickets using RC4 encryption, such as RC4-HMAC(NT).  
 - **LAN Manager GPO setting**: The GPO setting **Network security: Don't store LAN Manager hash value on next password change** is no longer present and doesn't apply to new versions of Windows.
 - **LDAP encryption by default**: All LDAP client communication after a Simple Authentication and Security Layer (SASL) bind uses LDAP sealing by default. To learn more about SASL, see [SASL Authentication](/openspecs/windows_protocols/ms-adts/989e0748-0953-455d-9d37-d08dfbf3998b).
 - **LDAP support for Transport Layer Security (TLS) 1.3**: LDAP uses the latest SCHANNEL implementation and supports TLS 1.3 for LDAP over TLS connections. Using TLS 1.3 eliminates obsolete cryptographic algorithms and enhances security over older versions. TLS 1.3 aims to encrypt as much of the handshake as possible. To learn more, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and [TLS Cipher Suites in Windows Server 2022](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
@@ -208,7 +201,7 @@ Several features new to Microsoft LAPS introduce the following improvements:
 - **Post-authentication action support for terminating individual processes**: A new option is added to the **Post-authentication actions** (PAA) Group Policy setting, `Reset the password, sign out the managed account, and terminate any remaining processes`, which is located in **Computer Configuration** > **Administrative Templates** > **System** > **LAPS** > **Post-authentication actions**.
 
   This new option is an extension of the previous option, `Reset the password and log off the managed account`. After configuration, the PAA notifies and then terminates any interactive sign-in sessions. It enumerates and terminates any remaining processes that are still running under the local account identity managed by Windows LAPS. No notification precedes this termination.
-  
+
   The expansion of logging events during the execution of PAA provides deeper insights into the operation.
 
 To learn more about Windows LAPS, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview).
@@ -265,12 +258,12 @@ Set-SmbClientConfiguration -EnableSMBQUIC $false
 Administrators can enable auditing of the SMB server and client for support of SMB signing and encryption. If a non-Microsoft client or server lacks support for SMB encryption or signing, it can be detected. When a non-Microsoft device or software states it supports SMB 3.1.1, but fails to support SMB signing, it violates the [SMB 3.1.1 Pre-authentication integrity](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) protocol requirement.
 
 You can configure SMB signing and encryption auditing settings by using Group Policy or PowerShell. You can change these policies in the following Group Policy paths:
-  
+
 - *Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support encryption*
 - *Computer Configuration\Administrative Templates\Network\Lanman Server\Audit client does not support signing*
 - *Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support encryption*
 - *Computer Configuration\Administrative Templates\Network\Lanman Workstation\Audit server does not support signing*
-  
+
 To perform these changes by using PowerShell, run these commands in an elevated prompt where `$true` enables and `$false` disables these settings:
 
 ```powershell
@@ -331,7 +324,7 @@ SMB signing is now required by default for all SMB outbound connections. Previou
 
 #### Remote Mailslot
 
-The Remote Mailslot protocol is disabled by default for SMB and for DC Locator protocol use with Active Directory. Remote Mailslot might be removed in a later release. To learn more, see [Features we're no longer developing](../get-started/removed-deprecated-features-windows-server-2025.md#features-were-no-longer-developing).
+The Remote Mailslot protocol is disabled by default for SMB and for DC Locator protocol use with Active Directory. Remote Mailslot might be removed in a later release. To learn more, see [Features removed or no longer developed in Windows Server](../get-started/removed-deprecated-features-windows-server.md).
 
 #### Routing and Remote Access Services hardening
 
@@ -339,13 +332,27 @@ By default, new Routing and Remote Access Services (RRAS) installations don't ac
 
 Existing configurations retain their behavior. For example, if you run Windows Server 2019 and accept PPTP and L2TP connections, and you upgrade to Windows Server 2025 by using an in-place upgrade, connections based on L2TP and PPTP are still accepted. This change doesn't affect Windows client operating systems. To learn more about how to reenable PPTP and L2TP, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md).
 
+### IPsec default keying protocol change
+
+The default keying modules have been changed to IKEv1 and IKEv2 for IPsec connections authenticated with machine certificates. For other authentication methods, the default AuthIP and IKEv1 remain. This applies to both Windows Server 2025 and Windows 11 24H2 clients. In the registry path `HKLM:\SYSTEM\CurrentControlSet\Services\MpsSvc\Parameters`, the `IpsecRestoreLegacyKeyMod` entry with a value of **0** utilizes the new sequence, IKEv2 and IKEv1. A value of **1** utilizes the previous sequence, AuthIP and IKEv1. To revert to the previous behavior, add the following registry key on systems using the new default keying protocol sequence. A reboot is required for changes to take effect.
+
+```powershell
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\MpsSvc\Parameters" -Name "IpsecRestoreLegacyKeyMod" -PropertyType "DWORD" -Value 1
+```
+
 ## Hyper-V, AI, and performance
 
 The following sections discuss Hyper-V, AI, and performance.
 
-### Accelerated Networking
+### Accelerated Networking (preview)
 
-Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines (VMs) hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings. To learn more, see [Accelerated Networking at the Edge (preview)](/windows-server/networking/technologies/accelerated-networking/accelerated-networking).
+Accelerated Networking (AccelNet) simplifies the management of single root I/O virtualization (SR-IOV) for virtual machines (VMs) hosted on Windows Server 2025 clusters. This feature uses the high-performance SR-IOV data path to reduce latency, jitter, and CPU utilization. AccelNet also includes a management layer that handles prerequisite checking, host configuration, and VM performance settings. To learn more, see [Accelerated Networking (preview)](/windows-server/networking/technologies/accelerated-networking/accelerated-networking).
+
+### Dynamic processor compatibility
+
+The dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic processor compatibility uses the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility.
+
+You can also use dynamic processor compatibility to save its state between virtualization hosts that use different generations of processors. The processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation. To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
 
 ### Hyper-V Manager
 
@@ -361,16 +368,6 @@ Hypervisor-enforced paging translation (HVPT) is a security enhancement to enfor
 
 GPU-P Live Migration provides a solution to move a VM (for planned downtime or load balancing) with GPU-P to another node whether it's standalone or clustered. To learn more about GPU partitioning, see [GPU partitioning](../virtualization/hyper-v/gpu-partitioning.md).
 
-### Dynamic processor compatibility
-
-The dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic processor compatibility uses the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility.
-
-You can also use dynamic processor compatibility to save its state between virtualization hosts that use different generations of processors. The processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation. To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
-
-### Workgroup clusters
-
-Hyper-V workgroup clusters are a special type of Windows Server Failover Cluster where the Hyper-V cluster nodes aren't members of an Active Directory domain with the ability to live migrate VMs in a workgroup cluster.
-
 ### Network ATC
 
 Network ATC streamlines the deployment and management of network configurations for Windows Server 2025 clusters. Network ATC uses an intent-based approach, where users specify their desired intents, such as management, compute, or storage for a network adapter. The deployment is automated based on the intended configuration.
@@ -382,6 +379,10 @@ This approach reduces the time, complexity, and errors associated with host netw
 With Windows Server 2025, Hyper-V now supports up to 4 petabytes of memory and 2,048 logical processors per host. This increase allows for greater scalability and performance for virtualized workloads.
 
 Windows Server 2025 also supports up to 240 TB of memory and 2,048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+
+### Workgroup clusters
+
+Hyper-V workgroup clusters are a special type of Windows Server Failover Cluster where the Hyper-V cluster nodes aren't members of an Active Directory domain with the ability to live migrate VMs in a workgroup cluster.
 
 ## Storage
 

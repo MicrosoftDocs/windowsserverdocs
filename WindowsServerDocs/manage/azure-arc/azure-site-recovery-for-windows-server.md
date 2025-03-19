@@ -25,7 +25,7 @@ By default, an Azure storage account isn't included in this experience. To proce
 
 - Your device must be running an Arc-enabled on-premises Windows Server 2016 or later operating system with a minimum of 4 GB of memory.
 - Azure Arc must be installed and configured on your device.
-- You must use Windows Server Pay-as-you-go or Software Assurance license types.
+- You must use [Windows Server Pay-as-you-go](../../get-started/windows-server-pay-as-you-go.md) or [Software Assurance](/azure/azure-arc/servers/windows-server-management-overview) license types.
 - The Windows Server **Hyper-V** role must be installed. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
   *Alternatively*, users can run the following command in an elevated PowerShell window:
@@ -134,3 +134,5 @@ To report app feedback for disaster recovery or if other issues are encountered,
 ## See also
 
 - [Configure Best Practices Assessment for Arc-enabled Windows servers](best-practices-assessment-for-windows-server.md)
+
+- [Configure Remote Support for Arc-enabled Windows servers](remote-support-for-windows-server.md)

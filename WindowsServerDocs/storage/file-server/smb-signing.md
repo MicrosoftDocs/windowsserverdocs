@@ -2,8 +2,8 @@
 title: Control SMB signing behavior
 description: How to disable SMB signing on third-party servers in Windows 11 and Windows Server.
 ms.topic: article
-author: Heidilohr
-ms.author: helohr
+ms.author: alalve
+author: xelu86
 ms.date: 10/25/2024
 ---
 

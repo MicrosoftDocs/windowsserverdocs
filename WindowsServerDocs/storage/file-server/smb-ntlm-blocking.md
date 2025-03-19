@@ -2,8 +2,8 @@
 title: Block NTLM connections on SMB in Windows Server 2025
 description: Learn how to make SMB more secure by blocking NTLM.
 ms.topic: how-to
-author: Heidilohr
-ms.author: helohr
+ms.author: alalve
+author: xelu86
 ms.date: 10/25/2024
 ---
 # Block NTLM connections on SMB
