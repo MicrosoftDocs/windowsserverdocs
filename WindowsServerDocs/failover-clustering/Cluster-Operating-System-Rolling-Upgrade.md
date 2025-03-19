@@ -10,9 +10,9 @@ ms.date: 3/19/2025
 
 # Upgrade a Windows Server failover cluster with a cluster OS rolling upgrade
 
-This article describes how to manually install a feature update on a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling upgrade. This is often called a Rolling OS Cluster Upgrade.
+This article describes how to manually install a feature update on a Windows Server failover cluster without stopping workloads. The process upgrades one node at a time in a rolling upgrade and is often called a Rolling OS Cluster Upgrade.
 
-**You can upgrade the cluster one OS version at a time**, such as from Windows Server 2022 to Windows Server 2025. To upgrade across multiple OS versions, such as from Windows Server 2016 to Windows Server 2025, perform the steps in this article additional times.
+**You can upgrade the cluster one OS version at a time**, such as from Windows Server 2022 to Windows Server 2025. To upgrade across multiple OS versions, such as from Windows Server 2016 to Windows Server 2025, perform the steps in this article again.
 
 This article applies to clusters running Hyper-V virtual machines or Scale-out File Server (SOFS) workloads upgrading one OS version, but doesn't apply to clusters using virtual hard disks (.vhdx files) as shared storage. If you're using System Center Virtual Machine Manager (VMM), instead see [Perform a rolling upgrade of a Hyper-V host cluster in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true). Azure Local customers should use the updating process described in [About Azure Local upgrades](/azure/azure-local/upgrade/about-upgrades-23h2), though you can use this article if none of the Azure Local updating methods work for you.
 
@@ -57,7 +57,7 @@ Here are some limitations to be aware of:
 - You can upgrade only to the next newer version of OS, for example from Windows Server 2022 to Windows Server 2025.
 <br>To upgrade across multiple versions, such as from Windows Server 2016 to Windows Server 2025, run the upgrade sequentially (first to Windows Server 2019, then to Windows Server 2022, and finally to Windows Server 2025), or migrate to a new cluster.
 - You must upgrade the configuration version of older VMs before they can run on a Windows Server 2022 or newer cluster, regardless of how you upgrade. VM configuration versions older than 8.0 (corresponding to Windows Server 2016), can't run on Windows Server 2022.
-<br>For example, if your VMs use version 5.0 (Windows Server 2012 R2 and Windows 8.1), and you upgrade the cluster to Windows Server 2022, you must upgrade the VM configuration version to 8.0 or newer. For more info, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
+<br>For example, if your VMs were created on a Windows Server 2012 R2 system and use VM configuration version 5.0, and you upgrade the cluster to Windows Server 2022, you must upgrade the VM configuration version to 8.0 or newer. For more info, see [Migrate and upgrade virtual machines](../virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server.md).
 
 ## Step 1: Prepare the cluster for the upgrade
 
@@ -118,7 +118,7 @@ Before you start upgrading nodes, verify that the cluster is healthy and ready f
 
 Perform the following steps on one node in the cluster (you repeat this process one at a time for every node in the cluster):
 
-1. To drain the node in Windows Admin Center, navigate to **Cluster Manager** > **Servers**, select the node and then select **Pause**. To use Failover Cluster Manager, select the node and then select **Pause** > **Drain**, as shown in Figure 2. Or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet with the `-Drain` parameter, as shown here.
+1. To drain the node in Windows Admin Center, navigate to **Cluster Manager** > **Servers**, select the node, and then select **Pause**. To use Failover Cluster Manager, select the node and then select **Pause** > **Drain**, as shown in Figure 2. Or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet with the `-Drain` parameter, as shown here.
 
     :::image type="content" source="media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png" alt-text="Screenshot showing how to drain roles with Failover Cluster Manager" lightbox="media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png":::
     **Figure 2: Draining roles from a node using Failover Cluster Manager**
@@ -357,7 +357,7 @@ To resume normal cluster operations and turn on new functionality, perform the f
         VM3     Running 0           1216              2.20:09:38.9450000  Operating normally 8.0
         ```
 
-    3. During a scheduled maintenance window when you can take the VMs offline, back up and upgrade all older VMs on each node. <br>To do so in Windows Admin Center, navigate to **Cluster Manager** > **Virtual machines**, select a VM and then select **Manage** > **Upgrade configuration version**. <br>Or use the [Update-VMVersion](/powershell/module/hyper-v/Update-VMVersion) cmdlet as shown in this example that updates all VMs on one node to the most recent version.
+    3. During a scheduled maintenance window when you can take the VMs offline, back up and upgrade all older VMs on each node. <br>To do so in Windows Admin Center, navigate to **Cluster Manager** > **Virtual machines**, select a VM, and then select **Manage** > **Upgrade configuration version**. <br>Or use the [Update-VMVersion](/powershell/module/hyper-v/Update-VMVersion) cmdlet as shown in this example that updates all VMs on one node to the most recent version.
 
         ```powershell
         Update-VMVersion -ComputerName node1 -Name * -WhatIf
