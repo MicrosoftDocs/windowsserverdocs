@@ -12681,7 +12681,11 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2025.md",
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-cloud-witness.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": true
+    },
+    { "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2025.md",
       "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
       "redirect_document_id": true
     },
