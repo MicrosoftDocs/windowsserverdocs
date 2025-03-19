@@ -139,7 +139,6 @@ You can enable LSA protection on a single computer by using the registry or by u
 1. Open the Registry Editor RegEdit.exe, and navigate to the registry key **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**.
 1. Set the value of the registry key to:
    - **"RunAsPPL"=dword:00000001** to configure the feature with a UEFI variable.
-   - **"RunAsPPL"=dword:00000002** to configure the feature without a UEFI variable, only enforced on Windows 11 build 22H2 and higher.
 1. Restart the computer.
 
 #### Enable by using Local Group Policy on Windows 11 version 22H2 and later
