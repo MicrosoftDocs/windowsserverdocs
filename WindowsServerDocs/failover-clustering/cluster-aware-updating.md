@@ -20,9 +20,9 @@ This topic provides an overview of Cluster\-Aware Updating \(CAU\), a feature th
 ## <a name="BKMK_OVER"></a>Feature description
 Cluster-Aware Updating is an automated feature that enables you to update servers in a [failover cluster](failover-clustering-overview.md) with little or no loss in availability during the update process. During an Updating Run, Cluster-Aware Updating transparently performs the following tasks:
 
-1. Puts each node of the cluster into node maintenance mode.
-2. Moves the clustered roles off the node.
-3. Installs the updates and any dependent updates.
+1. Installs the updates and any dependent updates.
+2. Puts each node of the cluster into node maintenance mode.
+3. Moves the clustered roles off the node.
 4. Performs a restart if necessary.
 5. Brings the node out of maintenance mode.
 6. Restores the clustered roles on the node.
