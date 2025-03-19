@@ -26,6 +26,9 @@ Alternatively, you can use the following procedure to create a namespace after i
     To create a stand-alone namespace on a failover cluster, specify the name of a clustered file server instance on the **Namespace Server** page of the **New Namespace Wizard** .
 
 > [!IMPORTANT]
+> For both stand-alone and domain-based namespaces, the designated location for namespace, whether explicitly specified by the administrator or set to the default path (C:\DFSRoots), must be secured with access restricted to authorized users to maintain configuration integrity and mitigate the risk of exploitation.
+
+> [!IMPORTANT]
 > Do not attempt to create a domain-based namespace using the Windows Server 2008 mode unless the forest functional level is Windows Server 2003 or higher. Doing so can result in a namespace for which you cannot delete DFS folders, yielding the following error message: "The folder cannot be deleted. Cannot complete this function".
 
 ## Additional References
