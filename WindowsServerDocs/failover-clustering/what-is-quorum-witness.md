@@ -4,7 +4,7 @@ description: Learn more about failover cluster quorum cloud witness, disk witnes
 ms.author: alalve
 author: xelu86
 ms.topic: conceptual
-ms.date: 02/05/2025
+ms.date: 03/19/2025
 ---
 
 # What is a quorum witness?
