@@ -37,7 +37,7 @@ At a high level, a rolling upgrade consists of these steps:
 
 For a detailed diagram of the rolling upgrade process, see Figure 1.
 
-:::image type="content" source="media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png" alt-text="Diagram showing the details of the rolling upgrade process" lightbox="media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png":::
+:::image type="content" source="media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png" alt-text="Diagram showing the details of the rolling upgrade process." lightbox="media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png":::
 **Figure 1: Diagram of the rolling upgrade process**
 
 ## Requirements and limitations
@@ -120,7 +120,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
 
 1. To drain the node in Windows Admin Center, navigate to **Cluster Manager** > **Servers**, select the node, and then select **Pause**. To use Failover Cluster Manager, select the node and then select **Pause** > **Drain**, as shown in Figure 2. Or use the [Suspend-ClusterNode](/powershell/module/failoverclusters/Suspend-ClusterNode) cmdlet with the `-Drain` parameter, as shown here.
 
-    :::image type="content" source="media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png" alt-text="Screenshot showing how to drain roles with Failover Cluster Manager" lightbox="media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png":::
+    :::image type="content" source="media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png" alt-text="Screenshot showing how to drain roles with Failover Cluster Manager." lightbox="media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png":::
     **Figure 2: Draining roles from a node using Failover Cluster Manager**
 
     ```PowerShell
