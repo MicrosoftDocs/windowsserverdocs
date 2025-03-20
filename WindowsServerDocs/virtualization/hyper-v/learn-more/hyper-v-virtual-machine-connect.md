@@ -54,6 +54,7 @@ By default, the keyboard input and mouse clicks are sent to the virtual machine.
 |CTRL\+E|Revert to a checkpoint|
 |CTRL\+C|Do a screen capture|
 
+Note: Laptop keyboards currently have no standard BREAK key. You might want to connect an external full keyboard for this.
 ## See Also
 
 - [Hyper-V overview](/windows-server/virtualization/hyper-v/hyper-v-overview?pivots=windows-server)
