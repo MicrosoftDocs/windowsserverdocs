@@ -194,6 +194,9 @@ You can select **Or**, **And**, or **Not** to modify the filter behavior of the 
 
 [!INCLUDE [ps-connections](../includes/ps-connections.md)]
 
+> [!NOTE]
+> File content cannot contain invalid characters: backslash (\), slash mark (/), asterisk (*), question mark (?), single quotation mark ('), less than sign (<), or greater than sign (>).
+
 ## View PowerShell scripts used in Windows Admin Center
 
 After you connect to a server, cluster, or PC, you can view the PowerShell scripts that power the UI actions available in Windows Admin Center:
