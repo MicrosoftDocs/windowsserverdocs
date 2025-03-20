@@ -31,7 +31,11 @@ Before migrating your Certification Authority (CA), ensure the following prerequ
 
 By completing these prerequisites, you can ensure a smooth and secure migration of your Certification Authority.
 
-## Back up a CA database and private key
+## Perform backups
+
+Before you begin to migrate your CA, you'll first want to back up: the CA database, private key, CA registry settings, and CAPolicy.inf.
+
+### Back up a CA database and private key
 
 You can back up the CA database and private key by using the Certification Authority snap-in, PowerShell, or by using Certutil.exe. Complete one of the backup procedures described in this section while logged on to the source CA.
 
@@ -130,9 +134,6 @@ Certutil.exe is a command-line program installed as part of Certificate Services
 
 1. Type `certutil –backupkey BackupDirectory` and press ENTER.
 
-    > [!NOTE]
-    > **BackupDirectory** specifies the directory in which the backup files are created. The specified value can be a relative or absolute path. If the specified directory doesn't exist, it's created. The backup files are created in a subdirectory named Database.
-
 1. Type a password at the prompt, and press ENTER. You must retain a copy of the password to access the key during CA installation on the destination server.
 
 1. Type **net stop certsvc** and press ENTER to stop the Active Directory Certificate Services service. The service must be stopped to prevent issuance of additional certificates.
@@ -147,7 +148,7 @@ Certutil.exe is a command-line program installed as part of Certificate Services
 
 ---
 
-## Backing up CA registry settings
+### Back up CA registry settings
 
 Complete one of the following procedures to back up the CA registry settings.
 
@@ -155,7 +156,7 @@ The files created during the backup procedure should be stored in the same locat
 
 You must be logged on to the source CA using an account that is a member of the local Administrators group.
 
-### To back up CA registry settings by using Regedit.exe
+#### To back up CA registry settings by using Regedit.exe
 
 1. Click **Start**, point to **Run**, and type **regedit** to open the Registry Editor.
 
@@ -173,13 +174,13 @@ You must be logged on to the source CA using an account that is a member of the 
 
 1. Copy the registry file to a location that is accessible from the destination server; for example, a shared folder or removable media.
 
-## Backing up CAPolicy.inf
+### Back up CAPolicy.inf
 
 If your source CA is using a custom CAPolicy.inf file, you should copy the file to the same location as the source CA backup files.
 
 The CAPolicy.inf file is located in the %SystemRoot% directory, which is usually **C:\\Windows**.
 
-## Removing the CA role service from the source server
+## Remove the CA role service from the source server
 
 It's important to remove the CA role service from the source server after completing backup procedures and before installing the CA role service on the destination server. Enterprise CAs and standalone CAs that are domain members store in Active Directory Domain Services (AD DS) configuration data that is associated with the common name of the CA. Removing the CA role service also removes the CA's configuration data from AD DS. Because the source CA and destination CA share the same common name, removing the CA role service from the source server after installing the CA role service on the destination server removes configuration data that is required by destination CA and interferes with its operation.
 
@@ -252,11 +253,11 @@ Review the following statements to determine which procedures to complete.
 
 - If your destination server is running the Server Core installation option, you can use Windows PowerShell to install the CA. See [Install-AdcsCertificationAuthority](/powershell/module/adcsdeployment/install-adcscertificationauthority) for more information.
 
-- If you're migrating to a CA that uses failover clustering, you must review the section "Special instructions for migrating to a failover cluster" and complete the procedures [Import the CA certificate]() and [Add the CA role service by using Server Manager]().
+- If you're migrating to a CA that uses failover clustering, you must review the section "Special instructions for migrating to a failover cluster" and complete the procedures [Import the CA certificate](#import-the-ca-certificate) and [Add the CA role service](#add-the-ca-role-service).
 
-  - If you're migrating to a CA that uses an HSM, you must complete the procedures [Import the CA certificate]() and [Adding the CA role service by using Server Manager]().
+- If you're migrating to a CA that uses an HSM, you must complete the procedures [Import the CA certificate](#import-the-ca-certificate) and [Add the CA role service](#add-the-ca-role-service).
 
-  - If none of the above statements describes your migration scenario, you can use the following procedure to add the CA role service: [Add the CA role service by using Server Manager](). If you use Server Manager, you must also complete the procedure [Import the CA certificate]().
+- If none of the above statements describes your migration scenario, use the procedure: [Add the CA role service](#add-the-ca-role-service). If you use Server Manager, you must also complete the procedure [Import the CA certificate](#import-the-ca-certificate).
 
 ## Special instructions for migrating to a failover cluster
 
@@ -266,21 +267,11 @@ Additionally, it's important to ensure that the shared storage used by the CA is
 
 The CA database and log files must be located on shared storage. Specify the shared storage location during step 12 of the CA installation procedure.
 
-#### To verify shared storage is online
-
-1. Log on to the destination server.
-
-1. Start Server Manager.
-
-1. In the console tree, double-click **Storage**, and click **Disk Management**.
-
-1. Ensure that the shared storage is online and assigned to the node you're logged on to.
-
 ## Import the CA certificate
 
 If you're adding the CA role service by using Server Manager, you must complete the following procedure to import the CA certificate.
 
-#### To import the CA certificate
+### To import the CA certificate
 
 1. Start the Certificates snap-in for the local computer account.
 
@@ -297,7 +288,7 @@ If you're adding the CA role service by using Server Manager, you must complete 
 7. Verify **Personal** is displayed in **Certificate store**. If it isn't, click **Browse**, click **Personal**, click **OK**.
 
     > [!NOTE]
-    > If you're using a network HSM, complete steps 8 through 10 to repair the association between the imported CA certificate and the private key that is stored in the HSM. Otherwise, click <STRONG>Finish</STRONG> to complete the wizard and click <STRONG>OK</STRONG> to confirm that the certificate was imported successfully.
+    > If you're using a network HSM, complete steps 8 through 10 to repair the association between the imported CA certificate and the private key that is stored in the HSM. Otherwise, click Finish to complete the wizard and click OK to confirm that the certificate was imported successfully.
 
 8. In the console tree, double-click **Personal Certificates**, and click the imported CA certificate.
 
@@ -307,12 +298,10 @@ If you're adding the CA role service by using Server Manager, you must complete 
 
 ## Add the CA role service
 
-If your destination server is a domain member, you must use an account that is a member of the Domain Admins or Enterprise Admins group in order for the installation wizard to access objects in AD DS. Add the CA role service either by using Server Manager or PowerShell
+If your destination server is a domain member, you must use an account that is a member of the Domain Admins or Enterprise Admins group in order for the installation wizard to access objects in AD DS. Add the CA role service either by using Server Manager or PowerShell.
 
 > [!IMPORTANT]
 > If you made a backup CAPolicy.inf file from the source CA, review the settings and make adjustments, if necessary. Copy the CAPolicy.inf file to the %windir% folder (C:\Windows by default) of the destination CA before adding the CA role service.
-
-# [Server Manager](#tab/server-manager)
 
 To add the CA role service by using Server Manager, follow these steps.
 
@@ -350,29 +339,13 @@ To add the CA role service by using Server Manager, follow these steps.
 
 14. If you're migrating to a failover cluster, stop the Active Directory Certificate Services service (Certsvc) and HSM service if your CA uses an HSM. Then repeat the procedures to import the CA certificate and add the CA role service on other cluster nodes.
 
-# [PowerShell](#tab/powershell)
+If you'd like to install the CA role service using PowerShell, use the [Install-AdcsCertificationAuthority](/powershell/module/adcsdeployment/install-adcscertificationauthority) cmdlet.
 
-Use the following procedure to add the CA role service by using the [Install-AdcsCertificationAuthority](/powershell/module/adcsdeployment/install-adcscertificationauthority) cmdlet with the ExistingCertificateParameterSet:
+## Restore the CA
 
-1. Right-click **Windows PowerShell** and click **Run as Administrator**.
+Now it's time to start to restore the CA. Restore the CA database, CA registry settings, and certificate template list if ncessary.
 
-2. To install the CA role service binaries with the Certification Authority and Certificate Templates MMC tools, type the following command and press ENTER:
-
-    ```powershell
-    Add-WindowsFeature ADCS-Cert-Authority -IncludeManagementTools
-    ```
-
-3. Type the Install-AdcsCertificationAuthority cmdlet with the appropriate parameters and press ENTER. For example, to restore an Enterprise Subordinate CA by using the certificate you imported in the [import the CA certificate]() section, type the following command and press ENTER:
-
-    ```powershell
-    Install-AdcsCertificationAuthority –CAType EnterpriseSubordinateCA –CertificateID "YourCertSerialNumber or YourCertThumbprint" –credential (get-credential domain\administrator)
-    ```
-
-    Type the password for a member of the Enterprise Admins group or Domain Admins group as needed.
-
----
-
-## Restore the CA database and configuration on the destination server
+### Restore the CA database and configuration on the destination server
 
 The procedures in this section should be completed only after the CA role service has been installed on the destination server.
 
@@ -385,7 +358,7 @@ Restoring the source CA backup includes the following tasks:
 - Verify the certificate extensions on the destination CA
 - Restore the certificate templates list (required only for enterprise CAs)
 
-## Restore the source CA database on the destination server
+### Restore the source CA database on the destination server
 
 This section describes different procedures for restoring the source CA database backup on the destination server using either the Certification Authority snap-in, PowerShell, or Certutil.
 
@@ -461,7 +434,7 @@ To restore the CA database by using Certutil.exe, follow these steps:
 
 ---
 
-## Restore the source CA registry settings on the destination server
+### Restore the source CA registry settings on the destination server
 
 The CA configuration information is stored in the registry in: **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CertSvc**
 
@@ -479,7 +452,7 @@ A suggested way of performing the registry configuration import is first to open
 | HKEY_LOCAL_MACHINE\system\currentcontrolset\services\certsvc\Configuration\<CAname>\ExitModules\CertificateAuthority_MicrosoftDefault.Exit | PublishCertFlags                                                                                                 |
 | HKEY_LOCAL_MACHINE\system\currentcontrolset\services\certsvc\Configuration\<CAname>\PolicyModules\CertificateAuthority_MicrosoftDefault.Policy | EnableRequestExtensionList<br>EnableEnrolleeRequestExtensionList<br>DisableExtensionList<br>SubjectAltName<br>SubjectAltName2<br>RequestDisposition<br>EditFlags |
 
-### To analyze the registry file
+#### To analyze the registry file
 
 1. Right-click the .reg text file created by exporting the settings from the source CA.
 
@@ -487,30 +460,14 @@ A suggested way of performing the registry configuration import is first to open
 
 3. If the target CA's computer name is different from the source CA's computer name, search the file for the host name of the source CA computer. For each instance of the host name found, ensure that it's the appropriate value for the target environment. Change the host name, if necessary. Update the **CAServerName** value.
 
-4. Check any registry values that indicate local file paths, such as the following, to ensure drive letter names and paths are correct for the target CA. If there's a mismatch between the source and the target CA, either update the values in the file or remove them from the file so that the default settings are preserved on the target CA.
-
-    These storage location settings are elected during CA setup. They exist under the Configuration registry key:
-
-      - DBDirectory
-
-      - DBLogDirectory
-
-      - DBSystemDirectory
-
-      - DBTempDirectory
-
-    The following settings under the Configuration\\{*CA Name*} registry key contain, in their default values, a local path. (Alternatively, you can update these values after importing them by using the Certification Authority snap-in. The values are located on the CA properties **Extensions** tab.)
-
-      - CACertPublicationURLs
-
-      - CRLPublicationURLs
+4. Check any registry values that indicate local file paths, to ensure drive letter names and paths are correct for the target CA. If there's a mismatch between the source and the target CA, either update the values in the file or remove them from the file so that the default settings are preserved on the target CA.
 
 > [!WARNING]
 > Some registry values are associated with the CA, while others are associated with the domain environment, the physical host computer, the Windows version, or even other role services. Consequently, some registry parameters should be migrated without changes from the source CA computer and others shouldn't. Any value that isn't listed in the .reg text file that is restored on the target CA retains its existing setting or default value.
 
 Remove any registry values that you don't want to import into the target CA. Once the .reg text file is edited, it can be imported into the target CA. By importing the source server registry settings backup into the destination server, the source CA configuration is migrated to the destination server.
 
-### To import the source CA registry backup on the destination CA
+#### To import the source CA registry backup on the destination CA
 
 1. Log on to the destination server as a member of the local Administrators group.
 
@@ -520,7 +477,7 @@ Remove any registry values that you don't want to import into the target CA. Onc
 
 4. Type **reg import "Registry Settings Backup.reg"** and press ENTER.
 
-### To edit the CA registry settings
+#### To edit the CA registry settings
 
 1. Click **Start**, type **regedit.exe** in the **Search programs and files** box, and press ENTER to open the Registry Editor.
 
@@ -556,7 +513,7 @@ Remove any registry values that you don't want to import into the target CA. Onc
 
       - ConfigurationDirectory – This value should appear in Windows Registry under the following location: HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\services\\CertSvc\\Configuration.
 
-## Verifying certificate extensions on the destination CA
+### Verify certificate extensions on the destination CA
 
 The steps described for importing the source CA registry settings and editing the registry in case of a server name change are intended to retain the network locations that were used by the source CA to publish CRLs and CA certificates. If the source CA was published to default Active Directory locations, after completing the previous procedure, there should be an extension with publishing options enabled and an LDAP URL that references the source server's NetBIOS name; for example, ldap:///CN=\<CATruncatedName\>\<CRLNameSuffix\>,CN=\<ServerShortName\>,CN=CDP,CN=Public Key Services,CN=Services,\<ConfigurationContainer\>\<CDPObjectClass\>.
 
@@ -564,7 +521,7 @@ Because many administrators configure extensions that are customized for their n
 
 Carefully review the configured locations and publishing options, and ensure that the extensions are correct according to your organization's requirements.
 
-### To verify extensions by using the Certification Authority snap-in
+#### To verify extensions by using the Certification Authority snap-in
 
 1. Review and modify the CRL distribution point and authority information access extensions and publishing options by following example procedures described in [Specify CRL Distribution Points](https://go.microsoft.com/fwlink/?linkid=145848) (https://go.microsoft.com/fwlink/?LinkID=145848).
 
@@ -572,11 +529,11 @@ Carefully review the configured locations and publishing options, and ensure tha
 
 3. Ensure that the CDP options are set so that the former CDP location isn't included in the CDP extension of newly issued certificates or in the Freshest CRL extension of CRLs.
 
-## Restore the certificate templates list
+### Restore the certificate templates list
 
 The following procedure is required only for an enterprise CA. A standalone CA doesn't have certificate templates.
 
-### To assign certificate templates to the destination CA
+#### To assign certificate templates to the destination CA
 
 1. Log on with administrative credentials to the destination CA.
 
@@ -615,7 +572,7 @@ If the name of the destination server is different from the source server, the d
 
 11. In the console tree, expand **CDP**, and then select the folder with the same name as the CA.
 
-12. In the details pane, right-click the **cRLDistributionPoint** item at the top of the list, and then select **Properties**.
+12. In the details pane, right-click the **CRLDistributionPoint** item at the top of the list, and then select **Properties**.
 
 13. Select the **Security** tab, and then select **Add**.
 
@@ -627,7 +584,7 @@ If the name of the destination server is different from the source server, the d
 
 17. The previous CA computer object is displayed (as **Account Unknown** with a security identifier following it) in **Group or user names**. You can remove that account. To do so, select it and then select **Remove**. select **OK**.
 
-18. Repeat steps 13 through 18 for each **cRLDistributionPoint** item.
+18. Repeat steps 13 through 18 for each **CRLDistributionPoint** item.
 
 > [!NOTE]
 > If you're using file//\\computer\share syntax in the CDP Extensions for publishing the CRL to a shared folder location, then you may need to adjust the permissions to that shared folder so that the destination CA has the ability to write to that location.
@@ -637,16 +594,16 @@ If the name of the destination server is different from the source server, the d
 
 If you're migrating to a failover cluster, complete the following procedures after the CA database and registry settings have been migrated to the destination server.
 
-- Configuring failover clustering for the destination CA
-- Granting permissions on public key containers
-- Editing the DNS name for a clustered CA in AD DS
-- Configuring CRL distribution points for failover clusters
+- Configure failover clustering for the destination CA
+- Grant permissions on public key containers
+- Edit the DNS name for a clustered CA in AD DS
+- Configure CRL distribution points for failover clusters
 
-## Configure failover clustering for the destination CA
+### Configure failover clustering for the destination CA
 
 If you're migrating to a failover cluster, complete the following procedures to configure failover clustering for AD CS.
 
-### To configure AD CS as a cluster resource
+#### To configure AD CS as a cluster resource
 
 1. Select **Start**, point to **Run**, type **Cluadmin.msc**, and then select **OK**.
 
@@ -674,7 +631,7 @@ If you're migrating to a failover cluster, complete the following procedures to 
 
 If you use a hardware security module (HSM) for your CA, complete the following procedure.
 
-### To create a dependency between a CA and the network HSM service
+#### To create a dependency between a CA and the network HSM service
 
 1. Open the Failover Cluster Management snap-in. In the console tree, select **Services and Applications**.
 
@@ -694,7 +651,7 @@ If you use a hardware security module (HSM) for your CA, complete the following 
 
 9. On the **Dependencies** tab, select **Insert**, select the network HSM service from the list, and select **OK**.
 
-## Grant permissions on public key containers
+### Grant permissions on public key containers
 
 If you're migrating to a failover cluster, complete the following procedures to grant all cluster nodes permissions to on the following AD DS containers:
 
@@ -702,7 +659,7 @@ If you're migrating to a failover cluster, complete the following procedures to 
 - The Enrollment container
 - The KRA container
 
-### To grant permissions on public key containers in AD DS
+#### To grant permissions on public key containers in AD DS
 
 1. Log on to a domain member computer as a member of the Domain Admins group or Enterprise Admins group.
 
@@ -748,13 +705,13 @@ If you're migrating to a failover cluster, complete the following procedures to 
 
 22. In the **Allow** column, select the **Full Control** check box next to each cluster node, and select **OK**.
 
-## Edit the DNS name for a clustered CA in AD DS
+### Edit the DNS name for a clustered CA in AD DS
 
 When the CA service was installed on the first cluster node, the Enrollment Services object was created and the DNS name of that cluster node was added to the dNSHostName attribute of the Enrollment Services object. Because the CA must operate on all cluster nodes, the value of the dNSHostName attribute of the Enrollment Services object must be the service name specified in step 6 of the procedure "To configure AD CS as a cluster resource."
 
 If you're migrating to a clustered CA, complete the following procedure on the active cluster node. It's necessary to complete the procedure on only one cluster node.
 
-### To edit the DNS name for a clustered CA in AD DS
+#### To edit the DNS name for a clustered CA in AD DS
 
 1. Log on to the active cluster node as a member of the Enterprise Admins group.
 
@@ -776,7 +733,7 @@ If you're migrating to a clustered CA, complete the following procedure on the a
 
 10. Select **OK** to save changes.
 
-## Configure CRL distribution points for failover clusters
+### Configure CRL distribution points for failover clusters
 
 In a CA's default configuration, the server's short name is used as part of the CRL distribution point and authority information access locations.
 
@@ -785,7 +742,7 @@ When a CA is running on a failover cluster, the server's short name must be repl
 > [!IMPORTANT]
 > The following procedures must be performed on the active cluster node.
 
-### To change the configured CRL distribution points
+#### To change the configured CRL distribution points
 
 1. Log on to the active cluster node as a member of the local Administrators group.
 
@@ -815,6 +772,6 @@ When a CA is running on a failover cluster, the server's short name must be repl
 
 2. To publish the CRL in AD DS, type **certutil -f -dspublish**  *"CRLFile.crl"* and press ENTER.
 
-## Next steps
+## Next step
 
 After completing the procedures to migrate the CA, you should complete the procedures described in [Verifying the Certification Authority Migration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486770(v=ws.11)).
