@@ -4,7 +4,7 @@ description: "Learn more about: AD FS single sign-on Settings"
 ms.topic: article
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ---
 # AD FS single sign-on settings

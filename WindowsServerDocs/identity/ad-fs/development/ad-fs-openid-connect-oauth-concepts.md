@@ -3,7 +3,7 @@ title: AD FS OpenID Connect/OAuth concepts
 description: Learn about Active Directory Federation Services modern authentication concepts.
 author: billmath
 ms.author: roharwoo
-manager: amycolannino
+manager: femila
 ms.date: 05/25/2023
 ms.topic: article
 ms.custom: inhenkel
