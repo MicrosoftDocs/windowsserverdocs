@@ -1,6 +1,6 @@
 ﻿---
 title: Certificate Enrollment Policy Web Service overview
-description: Learn more about Certificate Enrollment Policy Web Service, including Server Manager configuration and authentication options 
+description: Learn more about Certificate Enrollment Policy Web Service, including Server Manager configuration and authentication options. 
 author: meaghanlewis
 ms.topic: concept-article
 ms.author: mosagie
