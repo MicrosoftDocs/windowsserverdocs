@@ -4,8 +4,9 @@ description: Learn how to set up and use Storage Replica for server-to-server re
 manager: siroy
 ms.author: alalve
 ms.topic: how-to
+ms.author: alalve
 author: nedpyle
-ms.date: 02/24/2025
+ms.date: 03/12/2025
 ---
 # Set up server-to-server storage replication by using Storage Replica
 
@@ -72,7 +73,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
    1. Select **Start**.
    1. Enter **PowerShell**.
-   1. Rright-click **Windows PowerShell**.
+   1. Right-click **Windows PowerShell**.
    1. Select **Run as administrator**.
 1. Enter the following command to enable the WS-Man protocol on the local computer and set up the default configuration for remote management on the client:
 
@@ -126,11 +127,9 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
         On SR-SRV06 or a remote management computer, run the following command in a Windows PowerShell console to install the required features and roles. Then restart the nodes.
 
-        ```powershell
-        $Servers = 'SR-SRV05','SR-SRV06'
+     1. In **Server Manager**, select **Create a server group**, then add all server nodes.
 
-        $Servers | ForEach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,FS-FileServer -IncludeManagementTools -restart }
-        ```
+     1. Install the **File Server** role and **Storage Replica** feature on each of the nodes and restart them. To learn more, see [Install or Uninstall Roles, Role Services, or Features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)
 
         For more information on these steps, see [Install or uninstall roles, role services, or features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)
 
@@ -179,8 +178,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     ```powershell
     MD c:\temp
 
-    Test-SRTopology -SourceComputerName SR-SRV05 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV06 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp
-    ```
+   To validate the proposed nodes that each have a **F:** and **G:** volume and run the test for 30 minutes:
 
    > [!IMPORTANT]
    > If you use a test server with no write I/O load on the specified source volume during the evaluation period, consider adding a workload to generate a useful report. You should test with production-like workloads to see real numbers and recommended log sizes. Alternatively, copy some files into the source volume during the test or download and run [DISKSPD](/azure/azure-local/manage/diskspd-overview?context=/windows-server/context/windows-server-storage) to generate write I/Os. For example, copy a sample with a low write I/O workload that runs for 10 minutes to the D: volume:
@@ -238,7 +236,7 @@ Next, configure server-to-server replication by using Windows PowerShell. You mu
 
    ```output
    DestinationComputerName : SR-SRV06
-   DestinationRGName       : rg02
+   DestinationRGName       : RG02
    SourceComputerName      : SR-SRV05
    PSComputerName          :
    ```
@@ -273,10 +271,10 @@ Next, configure server-to-server replication by using Windows PowerShell. You mu
 
 1. Determine the replication progress as described in the following steps.
 
-    1. On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:
+    1. On the source server, run the following command and examine event IDs 5015, 5002, 5004, 1237, 5001, and 2200:
 
         ```powershell
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
+        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -Max 20
         ```
 
     1. On the destination server, run the following command to see the Storage Replica events that show partnership creation. This event states the number of copied bytes and how long it took to create the partnership.
@@ -295,17 +293,11 @@ Next, configure server-to-server replication by using Windows PowerShell. You mu
         Id           : 1215
         Message      : Block copy completed for replica.
 
-        ReplicationGroupName: rg02
-        ReplicationGroupId: {616F1E00-5A68-4447-830F-B0B0EFBD359C}
-        ReplicaName: f:\
-        ReplicaId: {00000000-0000-0000-0000-000000000000}
-        End LSN in bitmap:
-        LogGeneration: {00000000-0000-0000-0000-000000000000}
-        LogFileId: 0
-        CLSFLsn: 0xFFFFFFFF
-        Number of Bytes Recovered: 68583161856
-        Elapsed Time (ms): 117
-        ```
+      ```output
+      TimeCreated  : 4/8/2016 4:12:37 PM
+      ProviderName : Microsoft-Windows-StorageReplica
+      Id           : 1215
+      Message      : Block copy completed for replica.
 
        > [!NOTE]
        > By design, Storage Replica dismounts the destination volumes and their drive letters or mount points.
@@ -323,13 +315,7 @@ Next, configure server-to-server replication by using Windows PowerShell. You mu
         ```powershell
         while($true) {
 
-         $v = (Get-SRGroup -Name "RG02").replicas | Select-Object numofbytesremaining
-         [System.Console]::Write("Number of bytes remaining: {0}`r", $v.numofbytesremaining)
-         Start-Sleep -s 5
-        }
-        ```
-
-    1. On the destination server, run the following command and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events, which indicate processing progress.
+    1. On the destination server, run the following command and examine event IDs 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 event IDs, which indicate processing progress.
 
         ```powershell
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL
@@ -399,9 +385,15 @@ Finally, manage and operate your server-to-server replicated infrastructure. You
 
 1. To move the replication direction from one site, use the Set-SRPartnership cmdlet:
 
-    ```powershell
-    Set-SRPartnership -NewSourceComputerName sr-srv06 -SourceRGName rg02 -DestinationComputerName sr-srv05 -DestinationRGName rg01
-    ```
+   ```powershell
+     $params = @{
+     NewSourceComputerName  = 'SR-SRV06'
+     SourceRGName           = 'RG02'
+     DestinationComputerName = 'SR-SRV05'
+     DestinationRGName      = 'RG01'
+   }
+   Set-SRPartnership @params
+   ```
 
    > [!WARNING]
    > Windows Server prevents role switching when the initial sync is ongoing. Data loss might occur if you attempt to switch before allowing initial replication to complete. Don't force-switch directions until the initial sync is complete.

@@ -4,7 +4,7 @@ ms.assetid: f775cbda-a75d-439d-9aa7-82f3bc8dc932
 title: Federation Server Farm Using WID
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---
