@@ -116,7 +116,7 @@ The following steps describe how to back up the CA database and private key by u
     > [!IMPORTANT]
     > The private key must be protected against compromise. Protect a shared folder by granting permission to only authorized CA administrators. Protect removable media against unauthorized access and damage.
 
-# [Certutil](#tab/certutil.exe)
+# [Certutil](#tab/certutil)
 
 The following procedure describes the steps to back up the CA database and private key by using [Certutil.exe](/windows-server/administration/windows-commands/certutil) while logged on to the source CA.
 
@@ -458,6 +458,8 @@ To restore the CA database by using Certutil.exe, follow these steps:
 4. Type `certutil.exe -f -restoredb "CA Database Backup Directory"` and press ENTER.
 
 5. Type the following command to restart the CA service and press ENTER: `net start certsvc`
+
+---
 
 ## Restore the source CA registry settings on the destination server
 
