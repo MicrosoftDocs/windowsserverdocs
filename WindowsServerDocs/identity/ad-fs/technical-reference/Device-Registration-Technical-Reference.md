@@ -4,7 +4,7 @@ ms.assetid: 69ec592a-5499-4249-8ba0-afa356a8ff75
 title: Device Registration Technical Reference
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

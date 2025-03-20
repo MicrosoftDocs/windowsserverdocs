@@ -4,7 +4,7 @@ ms.assetid: dc24adb7-385d-4a92-ab81-78ba73df0118
 title: Certificate Requirements for Federation Server Proxies
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

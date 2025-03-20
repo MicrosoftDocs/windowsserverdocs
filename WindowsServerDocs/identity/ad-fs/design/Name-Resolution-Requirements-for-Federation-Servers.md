@@ -4,7 +4,7 @@ ms.assetid: 74ef34c8-e13f-499b-b2bb-952ad7036622
 title: Name Resolution Requirements for Federation Servers
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---
