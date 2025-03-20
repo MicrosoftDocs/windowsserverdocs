@@ -65,7 +65,7 @@ Otherwise, Windows Admin Center will check if the user belongs to any of the pre
 A user is said to have *limited access* if they belong to a Windows Admin Center role but are not a full administrator.
 Finally, if the user is neither an administrator nor a member of a role, they will be denied access to manage the machine.
 
-Role-based access control is available for the Server Manager and Failover Cluster solutions.
+Role-based access control is available for the Server Manager.
 
 ### Available roles
 
