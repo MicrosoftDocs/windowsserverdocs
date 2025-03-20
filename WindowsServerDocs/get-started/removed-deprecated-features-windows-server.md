@@ -4,7 +4,8 @@ description: Learn about the features and functionalities removed or no longer d
 ms.topic: article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 03/04/2025
+ms.date: 03/20/2025
+ms.contributor: alalve
 ms.service: windows-server
 ---
 
@@ -91,7 +92,7 @@ We're no longer actively developing these features and may remove them from a fu
 
 ## Features removed
 
-We're removing the following features and functionalities from the installed product image in Windows Server. Applications or code that depend on these features won't function in future releases unless you use an alternate method. Removal occurs when a feature or functionality is no longer available for use and are eliminated from a product or service. Removals can happen in any future release, whether it's the next LTSC release or several releases later. Some features are deprecated yet still ship in current versions of Windows Server. Components aren't removed from generally available supported versions that are within their product lifecycle.
+We're removing the following features and functionalities from the installed product image in Windows Server. Applications or code that depend on these features won't function in future releases unless you use an alternate method. Removal occurs when a feature or functionality is no longer available for use and are eliminated from a product or service. The removal of features and functionalities can take place in any release of Windows Server. Some features are deprecated yet still ship in current versions of Windows Server. Components aren't removed from generally available supported versions that are within their product lifecycle.
 
 # [Windows Server 2025](#tab/ws25)
 
