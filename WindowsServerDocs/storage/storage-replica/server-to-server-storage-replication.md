@@ -2,7 +2,6 @@
 title: Server-to-Server Storage Replication
 description: Learn how to set up and use Storage Replica for server-to-server replication in Windows Server by using Windows Admin Center or PowerShell.
 manager: siroy
-ms.author: alalve
 ms.topic: how-to
 ms.author: alalve
 author: nedpyle
