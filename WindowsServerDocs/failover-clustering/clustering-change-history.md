@@ -76,7 +76,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 |[Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[Create a failover cluster](create-failover-cluster.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 |[Prestage a cluster in AD DS](prestage-cluster-adds.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Deploy a quorum witness](deploy-quorum-witness.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 
 ## June 2017
 
@@ -93,13 +93,13 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 |[Cluster-Aware Updating advanced options](cluster-aware-updating-options.md)|New topic.|
 |[Cluster-Aware Updating FAQ](cluster-aware-updating-faq.yml)|New topic.|
 |[Cluster-Aware Updating plug-ins](cluster-aware-updating-plug-ins.md)|New topic.|
-|[Deploy a cloud witness for a Failover Cluster](deploy-cloud-witness.md)|Clarified the type of storage account that's required (you can't use Azure Premium Storage or Blob storage accounts).|
+|[Deploy a quorum witness](deploy-quorum-witness.md)|Clarified the type of storage account that's required (you can't use Azure Premium Storage or Blob storage accounts).|
 
 ## March 2017
 
 |New or changed topic|Description|
 |---|---|
-|[Deploy a cloud witness for a Failover Cluster](deploy-cloud-witness.md)| Updated screenshots to match changes to Microsoft Azure.|
+|[Deploy a quorum witness](deploy-quorum-witness.md)| Updated screenshots to match changes to Microsoft Azure.|
 
 ## February 2017
 

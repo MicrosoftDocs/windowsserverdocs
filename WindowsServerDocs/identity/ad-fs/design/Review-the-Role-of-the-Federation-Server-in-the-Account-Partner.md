@@ -4,7 +4,7 @@ ms.assetid: d0ba3c0d-869f-4e24-89d7-499da7576f22
 title: Review the Role of the Federation Server in the Account Partner
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

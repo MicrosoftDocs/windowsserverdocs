@@ -35,7 +35,7 @@ The Pay-as-you-go license only applies to the exact device where the feature is 
 During the installation of the Windows Server 2025 OS, you can choose to set up Pay-as-you-go. This option is available on the **Choose a licensing method** screen where you would normally enter a product key. Once Pay-as-you-go is selected, providing a product key isn't required.
 
 > [!NOTE]
-> Windows Server Pay-as-you-go is only available if installed from a retail copy of Windows Server 2025. Pay-as-you-go isn't available in Preview, Evaluation, or VL versions of Windows Server 2025.
+> Pay-as-you-go integration is only available during the operating system installation if you're running Windows Setup from a retail copy of Windows Server 2025 media. If you're using Evaluation or Volume license (VL) media of Windows Server 2025, then the Product key page is bypassed, and hence you cannot opt in to Pay-as-you-go during the operating system installation. Nevertheless, you can enable Pay-as-you-go after installation as described below.
 
 There are two methods for setting up Pay-as-you-go, via the graphical wizard and through the command line. Follow these steps based on which edition of Windows you're installing:
 

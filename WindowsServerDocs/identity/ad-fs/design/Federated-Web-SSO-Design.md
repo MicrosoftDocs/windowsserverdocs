@@ -4,7 +4,7 @@ ms.assetid: 09f335bb-896a-45dd-adc2-f215b8fba828
 title: Federated Web SSO Design
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

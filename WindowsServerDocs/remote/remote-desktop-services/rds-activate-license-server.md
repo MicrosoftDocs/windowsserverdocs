@@ -2,15 +2,25 @@
 title: Activate the Remote Desktop Services license server
 description: Install and activate the RD license server
 ms.topic: article
-ms.assetid: eb24ddd2-0361-41fe-bd6b-c7c63427cb71
 author: robinharwood
 ms.author: roharwoo
-ms.date: 7/3/2024
-manager: dongill
+ms.date: 02/14/2025
 ---
 # Activate the Remote Desktop Services license server
 
 The Remote Desktop Services license server issues client access licenses (CALs) to users and devices when they access the RD Session Host. You can activate the license server by using the Remote Desktop Licensing Manager.
+
+## Prerequisites
+
+Before you can activate your Remote Desktop Services license server, ensure that you have:
+
+- A Windows Server with the Remote Desktop Services licensing role service installed, including the Remote Desktop Licensing Tools feature.
+
+- Administrative privileges on the server.
+
+- A basic understanding of Remote Desktop licensing.
+
+- You need to have you company information ready to enter during the activation process.
 
 ## Install the Remote Desktop Licensing role
 
@@ -20,7 +30,7 @@ The Remote Desktop Services license server issues client access licenses (CALs) 
 
 1. On the **Select installation type** page, select **Role-based or feature-based installation**.
 
-1. Specify the server on which you'll install the licensing role.
+1. Specify the server on which you install the licensing role.
 
 1. On the **Server Roles** page, check the box for **Remote Desktop Services**, then select **Next** until you see the **Remote Desktop Services** page.
 
@@ -44,10 +54,10 @@ For detailed information and other installation options, see [Install or uninsta
     - **Web Browser**: This method requires the administrator to connect to the Microsoft Clearinghouse web site. Use this method if the license server doesn't have internet access, but you have internet access through another computer.
 
     - **Telephone**: This method allows the administrator to complete the migration process over the phone with a Microsoft Clearinghouse operator. Use this method if you don't have internet access.
-    
+
 ### Activate with automatic connection
 
-1. Enter your required **Company information** including First name, Last name, Company, and Country or Region. Select **Next**.
+1. Enter your required **Company information** including First name, Family name, Company, and Country or Region. Select **Next**.
 
 1. Then enter your optional company information. Select **Next** until you complete the Activate Server Wizard.
 
@@ -67,5 +77,4 @@ For detailed information and other installation options, see [Install or uninsta
 
 1. Select your Country or Region. Then select **Next**.
 
-1. On the **License Server Activation** page, call Microsoft at the number displayed. The representative will provide you with a license server ID to enter. Select **Next**.
-
+1. On the **License Server Activation** page, call Microsoft at the number displayed. The representative provides you with a license server ID to enter. Select **Next**.

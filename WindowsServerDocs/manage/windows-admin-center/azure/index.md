@@ -91,9 +91,9 @@ For more info, see [Use Storage Migration Service to migrate a server](../../../
 - **Create a new Azure virtual machine without leaving Windows Admin Center**
 From the *All Connections* page within Windows Admin Center, go to **Add** and select **Create new** under **Azure VM**. You even can domain-join your Azure VM and configure storage from within this step-by-step creation tool.
 
-- **Leverage Azure to achieve quorum on your failover cluster with [Cloud Witness](../../../failover-clustering/deploy-cloud-witness.md)**
+- **Leverage Azure to achieve quorum on your failover cluster with a quorum witness**
 Instead of investing in additional hardware to achieve quorum on a 2-node cluster, you can use an Azure storage account to serve as the cluster witness for your Azure Local cluster or other failover cluster.
-For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../../failover-clustering/deploy-cloud-witness.md).
+For more info, see [quorum witness](../../../failover-clustering/deploy-quorum-witness.md).
 
 ### Simplify network connectivity between your on-premises and Azure networks
 
@@ -148,7 +148,7 @@ These are the Azure services that provide functionality to clusters as a whole:
 
 - [Monitor a hyper-converged cluster with Azure Monitor](../../../storage/storage-spaces/configure-azure-monitor.md)
 - [Protect your VMs with Azure Site Recovery](azure-site-recovery.md)
-- [Deploy a cluster cloud witness](../../../failover-clustering/deploy-cloud-witness.md)
+- [Deploy a quorum witness](../../../failover-clustering/deploy-quorum-witness.md)
 
 ## Other Azure-integrated abilities of Windows Admin Center
 

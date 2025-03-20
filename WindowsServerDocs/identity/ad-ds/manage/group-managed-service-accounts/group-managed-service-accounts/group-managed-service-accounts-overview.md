@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
 ms.author: roharwoo
 author: robinharwood
-ms.date: 09/17/2024
+ms.date: 03/18/2025
 ---
 # Group Managed Service Accounts Overview
 
@@ -49,7 +49,6 @@ Here are some other resources you can read to learn more about Managed Service A
 
 - [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641731(v=ws.10))
 - [Service Accounts Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd548356(v=ws.10))
-- [Managed Service Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378925(v=ws.10))
 - [Getting Started with Group Managed Service Accounts](getting-started-with-group-managed-service-accounts.md)
 - [Managed Service Accounts in Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378925(v=ws.10))
 - [Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](/archive/blogs/askds/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting)
