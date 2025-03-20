@@ -4,12 +4,12 @@ description: Learn how to migrate your Certification Authority with step-by-step
 ms.topic: how-to
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 03/18/2025
+ms.date: 03/20/2025
 ---
 
 # Migrate the Certification Authority
 
-Migrating a Certification Authority (CA) is a critical process that ensures the continuity of your organization's certificate services. This guide provides step-by-step instructions and best practices for successfully migrating a CA. It covers essential tasks such as backing up the CA database and private key, removing the CA role service from the source server, and restoring the CA on the destination server. Whether you're using the Certification Authority snap-in, Windows PowerShell, or command-line tools like Certutil.exe, this guide offers detailed procedures tailored to various migration scenarios. Follow these instructions to ensure a smooth and secure migration process.
+Migrating a Certification Authority (CA) ensures the continuity of your organization's certificate services. This guide provides step-by-step instructions and best practices for successfully migrating a CA. It covers essential tasks such as backing up the CA database and private key, removing the CA role service from the source server, and restoring the CA on the destination server. Whether you're using the Certification Authority snap-in, Windows PowerShell, or command-line tools like Certutil, this guide offers detailed steps tailored to various migration scenarios. Follow these instructions to ensure a smooth and secure migration process.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ Before you begin to migrate your CA, you'll first want to back up: the CA databa
 
 ### Back up a CA database and private key
 
-You can back up the CA database and private key by using the Certification Authority snap-in, PowerShell, or by using Certutil.exe. Complete one of the backup procedures described in this section while logged on to the source CA.
+You can back up the CA database and private key by using the Certification Authority snap-in, PowerShell, or by using Certutil. Complete one of the backup procedures described in this section while logged on to the source CA.
 
 You must use an account that is a CA administrator. On an enterprise CA, the default configuration for CA administrators includes the local Administrators group, the Enterprise Admins group, and the Domain Admins group. On a standalone CA, the default configuration for CA administrators includes the local Administrators group.
 
@@ -46,7 +46,7 @@ You must use an account that is a CA administrator. On an enterprise CA, the def
 
 After completing backup steps, the Active Directory Certificate Services service (Certsvc) should be stopped to prevent issuance of additional certificates. Before adding the CA role service to the destination server, the CA role service should be removed from the source server.
 
-The backup files created during these procedures should be stored in the same location to simplify the migration. The location should be accessible from the destination server; for example, removable media or a shared folder on the destination server or another domain member.
+The backup files created during these procedures should be stored in the same location to simplify the migration. The location should be accessible from the destination server.
 
 # [Server Manager](#tab/server-manager)
 
@@ -65,8 +65,6 @@ The following steps describe how to back up the CA database and private key by s
 1. On the **Items to Back Up** page, select the **Private key and CA certificate** and **Certificate database and certificate database log** check boxes, specify the backup location, and then click **Next**.
 
 1. On the **Select a Password** page, type a password to protect the CA private key, and click **Next**.
-    > [!IMPORTANT]
-    > Use a strong password; for example, at least eight characters long with a combination of uppercase and lowercase characters, numbers, and punctuation characters.
 
 1. On the **Completing the Backup Wizard** page, click **Finish**.
 
@@ -78,13 +76,7 @@ The following steps describe how to back up the CA database and private key by s
 
 1. Open a Command Prompt window, and type **net stop certsvc** to stop the Active Directory Certificate Services service.
 
-    > [!IMPORTANT]
-    > The service should be stopped to prevent issuance of additional certificates. If certificates are issued by the source CA after a database backup is completed, repeat the CA database backup procedure to ensure the database backup contains all issued certificates.
-
 1. Copy all backup files to a location that is accessible from the destination server; for example, a network share or removable media.
-
-    > [!IMPORTANT]
-    > The private key must be protected against compromise. Protect a shared folder by limiting its access control list to authorized CA administrators. Protect removable media against unauthorized access and damage.
 
 # [PowerShell](#tab/powershell)
 
@@ -97,11 +89,8 @@ The following steps describe how to back up the CA database and private key by u
 1. Type the following command and press ENTER:
 
     ```powershell
-    Backup-CARoleService –path <BackupDirectory>
+    Backup-CARoleService –Path "BackupDirectoryPath"
     ```
-
-    > [!NOTE]
-    > **BackupDirectory** specifies the directory in which the backup files are created. The specified value can be a relative or absolute path. If the specified directory doesn't exist, it's created. The backup files are created in a subdirectory named Database.
 
 1. The service must be stopped to prevent issuance of additional certificates. Type the following command and press ENTER:
 
@@ -117,14 +106,9 @@ The following steps describe how to back up the CA database and private key by u
 
 1. Copy all backup files to a location that is accessible from the destination server. For example, a network share, or removable media.
 
-    > [!IMPORTANT]
-    > The private key must be protected against compromise. Protect a shared folder by granting permission to only authorized CA administrators. Protect removable media against unauthorized access and damage.
-
 # [Certutil](#tab/certutil)
 
-The following procedure describes the steps to back up the CA database and private key by using [Certutil.exe](/windows-server/administration/windows-commands/certutil) while logged on to the source CA.
-
-Certutil.exe is a command-line program installed as part of Certificate Services. You can use certutil.exe to display certification authority (CA) configuration information, configure Certificate Services, and back up and restore CA components.
+The following procedure describes the steps to back up the CA database and private key by using [Certutil.exe](/windows-server/administration/windows-commands/certutil) while logged on to the source CA. Certutil.exe is a command-line program installed as part of Certificate Services. You can use certutil.exe to display certification authority (CA) configuration information, configure Certificate Services, and back up and restore CA components.
 
 1. Log on with local administrative credentials to the CA computer.
 
@@ -136,7 +120,7 @@ Certutil.exe is a command-line program installed as part of Certificate Services
 
 1. Type a password at the prompt, and press ENTER. You must retain a copy of the password to access the key during CA installation on the destination server.
 
-1. Type **net stop certsvc** and press ENTER to stop the Active Directory Certificate Services service. The service must be stopped to prevent issuance of additional certificates.
+1. Type: `net stop certsvc` and press ENTER to stop the Active Directory Certificate Services service. The service must be stopped to prevent issuance of additional certificates.
 
 1. After the backup completes, verify the following files in the location you specified:
 
@@ -259,19 +243,15 @@ Review the following statements to determine which procedures to complete.
 
 - If none of the above statements describes your migration scenario, use the procedure: [Add the CA role service](#add-the-ca-role-service). If you use Server Manager, you must also complete the procedure [Import the CA certificate](#import-the-ca-certificate).
 
-## Special instructions for migrating to a failover cluster
+- If you're migrating to a failover cluster, the procedures to[Import the CA certificate](#import-the-ca-certificate) and [Add the CA role service](#add-the-ca-role-service) must be completed on each cluster node. After the CA role service is added to each node, you should stop the Active Directory Certificate Services service (Certsvc). Also confirm that:
+  - The shared storage used by the CA is online and assigned to the node you're adding the CA role service to.
+  - The CA database and log files must be located on shared storage.
 
-If you're migrating to a failover cluster, the procedures to import the CA certificate and add the CA role service must be completed on each cluster node. After the CA role service is added to each node, you should stop the Active Directory Certificate Services service (Certsvc).
-
-Additionally, it's important to ensure that the shared storage used by the CA is online and assigned to the node you're adding the CA role service to.
-
-The CA database and log files must be located on shared storage. Specify the shared storage location during step 12 of the CA installation procedure.
-
-## Import the CA certificate
+### Import the CA certificate
 
 If you're adding the CA role service by using Server Manager, you must complete the following procedure to import the CA certificate.
 
-### To import the CA certificate
+#### To import the CA certificate
 
 1. Start the Certificates snap-in for the local computer account.
 
@@ -296,7 +276,7 @@ If you're adding the CA role service by using Server Manager, you must complete 
 
 10. Open a Command Prompt window, type **certutil –repairstore My** **"{Serialnumber}"** and then press ENTER.
 
-## Add the CA role service
+### Add the CA role service
 
 If your destination server is a domain member, you must use an account that is a member of the Domain Admins or Enterprise Admins group in order for the installation wizard to access objects in AD DS. Add the CA role service either by using Server Manager or PowerShell.
 
@@ -438,25 +418,18 @@ To restore the CA database by using Certutil.exe, follow these steps:
 
 The CA configuration information is stored in the registry in: **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\CertSvc**
 
-Before importing the registry settings from the source CA to the target CA, create a backup of the default target CA registry configuration by using the procedure Backing up CA registry settings. Be sure to perform these steps on the target CA and to name the registry file a name such as "DefaultRegCfgBackup.reg" to avoid confusion.
+Before importing the registry settings from the source CA to the target CA, make sure you create a backup of the default target CA registry configuration. Be sure to perform these steps on the target CA and to name the registry file a name such as "DefaultRegCfgBackup.reg" to avoid confusion.
 
 > [!IMPORTANT]
 > Some registry parameters should be migrated without changes from the source CA computer, and some shouldn't be migrated. If they are migrated, they should be updated in the target system after migration because some values are associated with the CA itself, whereas others are associated with the domain environment, the physical host, the Windows version, or other factors that may be different in the target system.
 
-A suggested way of performing the registry configuration import is first to open the registry file you exported from the source CA in a text editor and analyze it for settings that may need to be changed or removed. The following table shows the configuration parameters that should be transferred from the source CA to the target CA.
-
-| Registry location                                                                 | Configuration parameter                                                                                           |
-|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| HKEY_LOCAL_MACHINE\system\currentcontrolset\services\certsvc\Configuration       | LDAPFlags                                                                                                        |
-| HKEY_LOCAL_MACHINE\system\currentcontrolset\services\certsvc\Configuration\<CAname> | DSConfigDN<br>ForceTeletex<br>CRLEditFlags<br>CRLFlags<br>InterfaceFlags (required only if has been changed manually)<br>EnforceX500NameLengths<br>SubjectTemplate<br>ValidityPeriod<br>ValidityPeriodUnits<br>KRACertHash<br>KRACertCount<br>KRAFlags<br>CRLPublicationURLs<br>CRLPeriod<br>CRLPeriodUnits<br>CRLOverlapPeriod<br>CRLOverlapUnits<br>CRLDeltaPeriod<br>CRLDeltaPeriodUnits<br>CRLDeltaOverlapPeriod<br>CRLDeltaOverlapUnits<br>CACertPublicationURLs (check for custom entries with hard-coded host names or other data specific to the source CA)<br>CACertHash |
-| HKEY_LOCAL_MACHINE\system\currentcontrolset\services\certsvc\Configuration\<CAname>\ExitModules\CertificateAuthority_MicrosoftDefault.Exit | PublishCertFlags                                                                                                 |
-| HKEY_LOCAL_MACHINE\system\currentcontrolset\services\certsvc\Configuration\<CAname>\PolicyModules\CertificateAuthority_MicrosoftDefault.Policy | EnableRequestExtensionList<br>EnableEnrolleeRequestExtensionList<br>DisableExtensionList<br>SubjectAltName<br>SubjectAltName2<br>RequestDisposition<br>EditFlags |
+A suggested way of performing the registry configuration import is first to open the registry file you exported from the source CA in a text editor and analyze it for settings that may need to be changed or removed.
 
 #### To analyze the registry file
 
 1. Right-click the .reg text file created by exporting the settings from the source CA.
 
-2. Click **Edit** to open the file in a text editor.
+2. Select **Edit** to open the file in a text editor.
 
 3. If the target CA's computer name is different from the source CA's computer name, search the file for the host name of the source CA computer. For each instance of the host name found, ensure that it's the appropriate value for the target environment. Change the host name, if necessary. Update the **CAServerName** value.
 
@@ -544,11 +517,11 @@ The following procedure is required only for an enterprise CA. A standalone CA d
     > [!NOTE]
     > Replace **templatelist** with a comma-separated list of the template names that are listed in the catemplates.txt file created during the procedure "To record a CA templates list by using Certutil.exe."
 
-## Grant permissions on AIA and CDP containers
+### Grant permissions on AIA and CDP containers
 
-If the name of the destination server is different from the source server, the destination server must be granted permissions on the source server's CDP and AIA containers in AD DS to publish CRLs and CA certificates. Complete the following procedure if there's a server name change.
+If the name of the destination server is different from the source server, the destination server must be granted permissions on the source server's CDP and AIA containers in AD DS to publish CRLs and CA certificates. **Complete the following procedure if there's a server name change.**
 
-### To grant permissions on the AIA and CDP containers
+#### To grant permissions on the AIA and CDP containers
 
 1. Log on as a member of the Enterprise Admins group to a computer on which the Active Directory Sites and Services snap-in is installed. Open Active Directory Sites and Services (dssite.msc).
 
