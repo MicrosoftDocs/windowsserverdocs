@@ -40,6 +40,16 @@ groups:
     title: Windows Server 2022
   - id: windows-server-2019
     title: Windows Server 2019
+- id : windows-admin-center-os
+  title: Version
+  prompt: "Choose your product version:"
+  pivots:
+  - id: windows-server-2025
+    title: Windows Server 2025 and later
+  - id: windows-server-2022
+    title: Windows Server 2022 and earlier
+  - id: windows-client
+    title: Windows Client
 - id: windows
   title: Products
   prompt: "Choose your product:"
@@ -48,3 +58,13 @@ groups:
     title: Windows Server
   - id: windows
     title: Windows
+- id: quorum-witness
+  title: Quorum witness type
+  prompt: "Choose your quorum witness type:"
+  pivots:
+  - id: cloud-witness
+    title: Cloud witness
+  - id: disk-witness
+    title: Disk witness
+  - id: file-share-witness
+    title: File share witness

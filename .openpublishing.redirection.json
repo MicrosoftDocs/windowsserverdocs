@@ -1,6 +1,726 @@
 {
   "redirections": [
     {
+      "source_path": "EssentialsDocs/get-started/azure-site-recovery-services-integration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/azure-site-recovery-services-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/azure-virtual-network-integration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/azure-virtual-network-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/get-started.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/hardware-limits.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/hardware-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/release-notes.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/support-for-larger-deployments.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/support-for-larger-deployments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/what-s-new-19.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/what-s-new-19",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/what-s-new.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/what-s-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-a-Tab-to-Settings.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-a-Tab-to-Settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Health-Alerts.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Health-Alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Third-Level-Domain-Names.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Third-Level-Domain-Names",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Top-Level-Categories-to-the-Launchpad--Macintosh-Operating-System-.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Top-Level-Categories-to-the-Launchpad--Macintosh-Operating-System-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Windows-Server-Essentials-as-a-Member-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Windows-Server-Essentials-as-a-Member-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Additional-Customizations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Additional-Customizations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Assessment-and-Deployment-Kit-for-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Assessment-and-Deployment-Kit-for-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Automate-Installation-of-Add-Ins-During-Setup.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Automate-Installation-of-Add-Ins-During-Setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Before-You-Install-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Before-You-Install-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Build-Multi-Language-Client-Restore-Media.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Build-Multi-Language-Client-Restore-Media",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Change-Media-Streaming-Settings.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Change-Media-Streaming-Settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Change-the-Order-and-Grouping-of-Tabs.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Change-the-Order-and-Grouping-of-Tabs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Configure-Server-Storage.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Configure-Server-Storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Configure-Support-for-a-Wireless-Network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Configure-Support-for-a-Wireless-Network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-a-Simple-Customized-Image.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-a-Simple-Customized-Image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-an-Image-By-Using-Answer-Files.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-an-Image-By-Using-Answer-Files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-the-Cfg.ini-File.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-the-Cfg.ini-File",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-the-Oobe.xml-File-Including-Logo-and-EULA.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-the-Oobe.xml-File-Including-Logo-and-EULA",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Creating-and-Customizing-the-Image.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Creating-and-Customizing-the-Image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-and-Deploy-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-and-Deploy-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Disk-Partitions.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Disk-Partitions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Server-Backup.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Server-Backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Shared-Folders.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Shared-Folders",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Storage-Spaces.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Storage-Spaces",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-the-Image.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-the-Image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Define-Display-Settings.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Define-Display-Settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Getting-Started-with-the-Windows-Server-Essentials-ADK",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Hardware-Requirements-for-the-Target-Computer.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Hardware-Requirements-for-the-Target-Computer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Hosted-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Hosted-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-Add-Ins.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-Add-Ins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-and-Configure-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-and-Configure-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-or-Remove-Language-Packs.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-or-Remove-Language-Packs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Manage-Domain-Names-and-Domain-Name-Providers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Manage-Domain-Names-and-Domain-Name-Providers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Preconfiguring-a-Router.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Preconfiguring-a-Router",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Prepare-the-Technician-Computer.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Prepare-the-Technician-Computer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Preparing-the-Image-for-Deployment.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Preparing-the-Image-for-Deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Replace-the-List-of-Domain-Name-Providers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Replace-the-List-of-Domain-Name-Providers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Set-the-WinSAT-Score-on-the-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Set-the-WinSAT-Score-on-the-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Testing-the-Customer-Experience.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Testing-the-Customer-Experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Configure-DirectAccess-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Configure-DirectAccess-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Anywhere-Access-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Applications-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Applications-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-BranchCache-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-BranchCache-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Devices-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Devices-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Digital-Media-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Digital-Media-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Email-Service-Integration-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Email-Service-Integration-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Microsoft-Online-Services-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Microsoft-Online-Services-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Office-365-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Office-365-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Online-Accounts-for-Users.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Online-Accounts-for-Users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Online-Backup-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Online-Backup-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Server-Backup-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Server-Backup-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Server-Folders-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Server-Folders-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Server-Storage-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Server-Storage-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-SharePoint-Online-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-SharePoint-Online-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-System-Health-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-System-Health-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-User-Accounts-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-User-Accounts-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-VPN-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-VPN-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Overview-of-the-Dashboard-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Overview-of-the-Dashboard-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Remote-desktop-options.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Remote-desktop-options",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Restore-a-full-system-from-an-existing-client-computer-backup.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Restore-a-full-system-from-an-existing-client-computer-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Restore-or-repair-your-server-running-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Set-up-or-customize-server-backup.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Set-up-or-customize-server-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Configure-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Configure-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Install-Windows-Server-Essentials-in-migration-mode.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Install-Windows-Server-Essentials-in-migration-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Join-computers-to-the-new-Windows-Server-Essentials-network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Join-computers-to-the-new-Windows-Server-Essentials-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Join-computers-to-the-new-Windows-Server-Essentials-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Join-computers-to-the-new-Windows-Server-Essentials-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Server-Data-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Server-2008-Foundation-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Server-2008-Foundation-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Server-Essentials-to-New-Hardware.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Server-Essentials-to-New-Hardware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2003-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-SBS-2003-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2008-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-SBS-2008-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Standard-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-SBS-2011-Standard-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-Server-2008-Foundation-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-Server-2008-Foundation-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Run-the-Windows-Server-Essentials-Best-Practices-Analyzer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Install-the-Windows-Server-Essentials-Log-Collector.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Install-the-Windows-Server-Essentials-Log-Collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Run-the-Windows-Server-Essentials-Log-Collector.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Run-the-Windows-Server-Essentials-Log-Collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Support-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Support-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-computer-monitoring-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-computer-monitoring-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-File-History-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-File-History-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-Windows-Server-Essentials-installation.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-Windows-Server-Essentials-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-your-firewall-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Use-the-Windows-Server-Essentials-Log-Collector.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Use-the-Windows-Server-Essentials-Log-Collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Get-Connected-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Get-Connected-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Play-Digital-Media-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Play-Digital-Media-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Use-Remote-Web-Access-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Use-Shared-Folders-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Use-Shared-Folders-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Use-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Use-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Work-Remotely-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Work-Remotely-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md",
       "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2",
       "redirect_document_id": false
@@ -1972,13 +2692,13 @@
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-supported-config.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-supported-config",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-uri.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-uri",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Add-or-Remove-Computers.md",
@@ -11852,7 +12572,7 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md",
-      "redirect_url":"/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
       "redirect_document_id": false
     },
     {
@@ -11959,6 +12679,151 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md",
       "redirect_url": "/windows-server/storage/storage-spaces/upgrade-storage-spaces-direct",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-cloud-witness.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2025.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2016.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/windows-server-release-info.md",
+      "redirect_url": "/windows/release-health/windows-server-release-info",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-clients.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/connect-remote-desktop-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windows.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-windows-urdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windows-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-windows?tabs=windows-urdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-android.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/android-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-android-chrome-os",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-ios.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/ios-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-mac.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/mac-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-client-faq.yml",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-pc-connections-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-web-client.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-web-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-web-client-admin.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-web-client-admin",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/web-client-whatsnew.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/web-client-whats-new",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-privacy-settings.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-privacy-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/change-listening-port.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/change-listening-port",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-allow-access.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-allow-outside-access.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-outside-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-connection-single-sign-on.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-connection-single-sign-on",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-supported-config",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config.md",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/uninstall-remote-desktop-connection.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/uninstall-remote-desktop-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-uri.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-uri",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-supported-config.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config",
+      "redirect_document_id": true
+    },
+    {
+     "source_path": "WindowsServerDocs/failover-clustering/file-share-witness.md",
+     "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+     "redirect_document_id": false
     }
   ]
 }

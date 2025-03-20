@@ -28,7 +28,7 @@ On the host, you configure the virtual switch to allow network traffic on the ph
 
 1. Select **OK**.
 
-All traffic that goes through the physical network adapter connected to the virtual switch is tagged with the VLAN ID you set.
+All traffic that goes through the physical network adapter connected to the virtual switch is tagged with the VLAN ID you set on the virtual switch and virtual machines.
 
 ## To allow a virtual machine to use a VLAN
 

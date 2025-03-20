@@ -2,7 +2,7 @@
 title: What is KDFv2 for AD FS? | Microsoft Docs
 description: Describes the new Key Derivation Function (KDF) called "KDFv2" for AD FS
 author: billmath
-manager: amycolannino
+manager: femila
 ms.topic: article
 ms.date: 02/13/2024
 ms.author: billmath
