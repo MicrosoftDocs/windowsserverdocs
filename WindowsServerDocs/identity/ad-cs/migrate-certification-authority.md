@@ -44,9 +44,9 @@ After completing backup steps, the Active Directory Certificate Services service
 
 The backup files created during these procedures should be stored in the same location to simplify the migration. The location should be accessible from the destination server; for example, removable media or a shared folder on the destination server or another domain member.
 
-# [Certification Authority snap-in](#tab/certification-authority-snap-in)
+# [Server Manager](#tab/server-manager)
 
-The following steps describe how to back up the CA database and private key by using the Certification Authority snap-in.
+The following steps describe how to back up the CA database and private key by starting in Server Manager, and using the Certification Authority snap-in.
 
 1. Choose a backup location and attach media, if necessary.
 
@@ -393,9 +393,9 @@ If you're migrating to a Server Core installation, you must use Certutil PowerSh
 
 If you're migrating to a failover cluster, ensure that shared storage is online and restore the CA database on only one cluster node.
 
-# [Certification Authority snap-in](#tab/certification-authority-snap-in)
+# [Server Manager](#tab/server-manager)
 
-To restore the CA database by using the Certification Authority snap-in, follow these steps:
+To restore the CA database, start from Server Manager, and use the Certification Authority snap-in to complete these steps:
 
 1. Log on to the destination server by using an account that is a CA administrator.
 
