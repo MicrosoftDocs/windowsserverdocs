@@ -119,7 +119,7 @@ To install the DFS Replication by using Windows PowerShell, follow these steps:
    - To install the DFS Replication service only, enter the following command:
 
       ```powershell
-      Install-WindowsFeature "RSAT-DFS-Mgmt-Con"
+      Install-WindowsFeature "FS-DFS-Replication"
       ```
       
    - To install both the DFS Replication service and the DFS Management Tools, enter the following command:
