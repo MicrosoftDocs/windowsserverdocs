@@ -79,7 +79,7 @@ You can duplicate an existing computer template, and configure the following set
 4. Publish the new template on the CA.
 
 > [!NOTE]
-> Make sure the compatibility settings on the template is set to **Windows Server 2012 R2** as there is a known issue in which the templates aren't visible if the compatibility is set to Windows Server 2016 or later version. For more information, see [Cannot select Windows Server 2016 CA-compatible certificate templates from Windows Server 2016 or later-based CAs or CEP servers](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
+> Make sure the compatibility settings on the template is set to **Windows Server 2012 R2** as there's a known issue in which the templates aren't visible if the compatibility is set to Windows Server 2016 or later version. For more information, see [Can't select Windows Server 2016 CA-compatible certificate templates from Windows Server 2016 or later-based CAs or CEP servers](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
 
 
 #### Configure the CEPCES01 instance
@@ -124,7 +124,7 @@ Install-AdcsEnrollmentWebService -ApplicationPoolIdentity -CAConfig "CA1.contoso
 
 This command installs the Certificate Enrollment Web Service (CES) to use the certification authority for a computer name of **CA1.contoso.com** and a CA common name of **contoso-CA1-CA**. The identity of the CES is specified as the default application pool identity. The authentication type is **username**. SSLCertThumbPrint is the thumbprint of the certificate to bind IIS.
 
-##### Step 2 Check the Internet Information Services (IIS) Manager console
+##### Step 2: Check the Internet Information Services (IIS) Manager console
 
 After a successful installation, you expect to see the following display in the Internet Information Services (IIS) Manager console.
 ![Screenshot that shows the Internet Information Services Manager console.](media/certificate-enrollment-certificate-key-based-renewal-4.png)
@@ -171,7 +171,7 @@ After a successful installation, you expect to see the following display in the 
 Select **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** under **Default Web Site** and open **Application Settings**. Take a note of the **ID** and the **URI**. You can add a **Friendly Name** for management.
 
 > [!NOTE]
-> If the instance is installed on a new server double check the ID to make sure that the ID is the same one that was generated in the CEPCES01 instance. You can copy and paste the value directly if it is different.
+> If the instance is installed on a new server double check the ID to make sure that the ID is the same one that was generated in the CEPCES01 instance. You can copy and paste the value directly if it's different.
 
 #### Complete Certificate Enrollment Web Services configuration
 
@@ -182,7 +182,7 @@ To enroll the certificate for the functionality of CEP and CES, you have to conf
 This account is used for authentication towards key-based renewal and the Publish to Active Directory option on the certificate template.
 
 > [!NOTE]
-> You don't have to domain join the client machine. This account comes into picture while doing certificate based authentication in KBR for dsmapper service.
+> You don't have to domain join the client machine.
 
 ![New Object](media/certificate-enrollment-certificate-key-based-renewal-6.png)
 
@@ -199,7 +199,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 > In this command, \<cepcessvc\> is the service account, and <CA1.contoso.com> is the Certification Authority.
 
 > [!IMPORTANT]
-> We aren't enabling the RENEWALONBEHALOF flag on the CA in this configuration because we are using constrained delegation to do the same job for us. This lets us avoid adding the permission for the service account to the CA’s security.
+> We aren't enabling the RENEWALONBEHALOF flag on the CA in this configuration because we're using constrained delegation to do the same job for us. This lets us avoid adding the permission for the service account to the CA’s security.
 
 ##### Step 3: Configure a custom port on the IIS web server
 
