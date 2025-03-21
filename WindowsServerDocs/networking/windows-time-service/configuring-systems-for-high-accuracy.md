@@ -161,7 +161,7 @@ The following command restarts Windows Time to pick up the updated settings:
 net stop w32time && net start w32time
 ```
 
-Applying UtilizeSslTimeData settings changes requires systestem restart.
+Applying UtilizeSslTimeData setting change requires system restart.
 
 > [!NOTE]
 > To learn more about the W32Time registry settings, see [Windows Time registry reference](Windows-Time-Service-Tools-and-Settings.md#windows-time-registry-reference)
