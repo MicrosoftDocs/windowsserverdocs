@@ -39,7 +39,7 @@ SIDs always remain unique. Security authorities never issue the same SID twice, 
 
 ## SID architecture
 
-A SID is a data structure in binary format that contains a variable number of values. The first values in the structure contain information about the SID structure. The remaining values are arranged in a hierarchy (similar to a telephone number), and they identify the SID-issuing authority (for example, "NT Authority"), the SID-issuing domain, and a particular security principal or group. The following image illustrates the structure of a SID.
+A SID is a data structure in binary format that contains a variable number of values. The first values in the structure contain information about the SID structure. The remaining values are arranged in a hierarchy (similar to a telephone number), and they identify the SID-issuing authority (for example, NT Authority), the SID-issuing domain, and a particular security principal or group. The following image illustrates the structure of a SID.
 
 :::image type="content" source="media/security-identifier-architecture.png" alt-text="Diagram that shows the architecture of a security identifier and illustrates the domain identifier and relative identifier components.":::
 
