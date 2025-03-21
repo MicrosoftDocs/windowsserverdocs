@@ -1048,6 +1048,8 @@
       items:
       - name: Configure Network Device Enrollment Service to use a domain user account
         href: ad-cs/create-domain-user-account-ndes-service-account.md
+      - name: Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port
+        href: solution-guides/certificate-enrollment-certificate-key-based-renewal.md
       - name: Configure trusted roots and disallowed certificates
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
       - name: Distribute certificates using Group Policy

@@ -12821,9 +12821,10 @@
       "redirect_document_id": true
     },
     {
-     "source_path": "WindowsServerDocs/failover-clustering/file-share-witness.md",
-     "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+     "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
+     "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
      "redirect_document_id": false
-    }
+    },
+
   ]
 }

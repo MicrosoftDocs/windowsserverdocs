@@ -1,5 +1,5 @@
 ---
-title: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
+title: Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port
 description: "Learn more about: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port"
 author: Deland-Han
 ms.author: delhan
@@ -8,7 +8,7 @@ ms.date: 11/12/2019
 ms.topic: article
 ---
 
-# Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
+# Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port
 
 > Authors: Jitesh Thakur, Meera Mohideen, Technical Advisors with the Windows Group.
 Ankit Tyagi Support Engineer with the Windows Group
