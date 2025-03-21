@@ -286,7 +286,7 @@ The following table describes changes in SID implementation in the Windows opera
 
 ## Capability SIDs
 
-Capability SIDs are used to uniquely and immutably identify capabilities. A capability represents an unforgeable token of authority that grants Universal Windows Applications access to resources (for example, documents, cameras, and locations). An app that *has* a capability is granted access to the resource that the capability is associated with. An app that *doesn't have* a capability is denied access to the resource.
+Capability SIDs serve as unique and immutable identifiers for capabilities. A capability represents an unforgeable token of authority that grants Universal Windows Applications access to resources (for example, documents, cameras, and locations). An app that *has* a capability is granted access to the resource that the capability is associated with. An app that *doesn't have* a capability is denied access to the resource.
 
 All capability SIDs that the operating system is aware of are stored in the Windows registry in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities path. Any capability SID that's added to Windows by Microsoft or partner applications is added to this location.
 
