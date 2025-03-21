@@ -17,12 +17,12 @@ Ankit Tyagi Support Engineer with the Windows Group
 
 This article provides step-by-step instructions to implement the Certificate Enrollment Policy Web Service (CEP) and Certificate Enrollment Web Service (CES) on a custom port other than 443 for certificate key-based renewal to take advantage of the automatic renewal feature of CEP and CES.
 
-This article also explains how CEP and CES works and provides setup guidelines.
+This article also explains how CEP and CES work and provides setup guidelines.
 
 > [!NOTE]
 > The workflow that's included in this article applies to a specific scenario. The same workflow may not work for a different situation. However, the principles remain the same.
 >
-> Disclaimer: This setup is created for a specific requirement in which you do not want to use port 443 for the default HTTPS communication for CEP and CES servers. Although this setup is possible, it has limited supportability. Customer Services and Support can best assist you if you follow this guide carefully using minimal deviation from the provided web server configuration.
+> Disclaimer: This setup is created for a specific requirement in which you don't want to use port 443 for the default HTTPS communication for CEP and CES servers. Although this setup is possible, it has limited supportability. Customer Services and Support can best assist you if you follow this guide carefully using minimal deviation from the provided web server configuration.
 
 ## Scenario
 
@@ -32,9 +32,9 @@ For this example, the instructions are based on an environment that uses the fol
 
 - Two CEP/CES instances that are configured on one server that’s running under a service account. One instance uses username and password for initial enrollment. The other uses certificate-based authentication for key-based renewal in renewal only mode.
 
-- A user has a workgroup or non-domain-joined computer for which he will be enrolling the computer certificate by using username and password credentials.
+- A user has a workgroup or non-domain-joined computer to enroll the computer certificate by using username and password credentials.
 
-- The connection from the user to CEP and CES over HTTPS occurs on a custom port such as 49999. (This port is selected from a dynamic port range and is not used as a static port by any other service.)
+- The connection from the user to CEP and CES over HTTPS occurs on a custom port such as 49999. (This port is selected from a dynamic port range and isn't used as a static port by any other service.)
 
 - When the certificate lifetime is nearing its end, the computer uses certificate-based CES key-based renewal to renew the certificate over the same channel.
 
@@ -49,9 +49,9 @@ For this example, the instructions are based on an environment that uses the fol
 2. As a prerequisite, configure a CEP and CES server for username and password authentication.
    In this environment, we refer to the instance as "CEPCES01".
 
-3. Configure another CEP and CES instance by using PowerShell for certificate-based authentication on the same server. The CES instance will use a service account.
+3. Configure another CEP and CES instance by using PowerShell for certificate-based authentication on the same server. The CES instance uses a service account.
 
-    In this environment, we refer to the instance as “CEPCES02”. The service account that’s used is ”cepcessvc”.
+    In this environment, we refer to the instance as "CEPCES02". The service account that’s used is "cepcessvc".
 
 4. Configure client-side settings.
 
@@ -79,7 +79,7 @@ You can duplicate an existing computer template, and configure the following set
 4. Publish the new template on the CA.
 
 > [!NOTE]
-> Make sure the compatibility settings on the template is set to **Windows Server 2012 R2** as there is a known issue in which the templates are not visible if the compatibility is set to Windows Server 2016 or later version. For more information, see [Cannot select Windows Server 2016 CA-compatible certificate templates from Windows Server 2016 or later-based CAs or CEP servers](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
+> Make sure the compatibility settings on the template is set to **Windows Server 2012 R2** as there is a known issue in which the templates aren't visible if the compatibility is set to Windows Server 2016 or later version. For more information, see [Cannot select Windows Server 2016 CA-compatible certificate templates from Windows Server 2016 or later-based CAs or CEP servers](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
 
 
 #### Configure the CEPCES01 instance
@@ -97,7 +97,7 @@ See the following articles for step-by-step guidance to enable CEP and CES for u
 [Certificate Enrollment Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
 
 > [!NOTE]
-> Make sure that you do not select the “Enable Key-Based Renewal” option if you configure both CEP and CES instances of username and password authentication.
+> Make sure that you don't select the "Enable Key-Based Renewal" option if you configure both CEP and CES instances of username and password authentication.
 
 **Method 2**
 
@@ -116,13 +116,13 @@ Install-AdcsEnrollmentPolicyWebService -AuthenticationType Username -SSLCertThum
 This command installs the Certificate Enrollment Policy Web Service (CEP) by specifying that a username and password is used for authentication.
 
 > [!NOTE]
-> In this command, \<**SSLCertThumbPrint**\> is the thumbprint of the certificate that will be used to bind IIS.
+> In this command, \<**SSLCertThumbPrint**\> is the thumbprint of the certificate to bind IIS.
 
 ```PowerShell
 Install-AdcsEnrollmentWebService -ApplicationPoolIdentity -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSLCertThumbprint "sslCertThumbPrint" -AuthenticationType Username
 ```
 
-This command installs the Certificate Enrollment Web Service (CES) to use the certification authority for a computer name of **CA1.contoso.com** and a CA common name of **contoso-CA1-CA**. The identity of the CES is specified as the default application pool identity. The authentication type is **username**. SSLCertThumbPrint is the thumbprint of the certificate that will be used to bind IIS.
+This command installs the Certificate Enrollment Web Service (CES) to use the certification authority for a computer name of **CA1.contoso.com** and a CA common name of **contoso-CA1-CA**. The identity of the CES is specified as the default application pool identity. The authentication type is **username**. SSLCertThumbPrint is the thumbprint of the certificate to bind IIS.
 
 ##### Step 2 Check the Internet Information Services (IIS) Manager console
 
@@ -146,9 +146,9 @@ Install-AdcsEnrollmentPolicyWebService -AuthenticationType Certificate -SSLCertT
 This command installs the Certificate Enrollment Policy Web Service (CEP) and specifies that a certificate is used for authentication.
 
 > [!NOTE]
-> In this command, \<SSLCertThumbPrint\> is the thumbprint of the certificate that will be used to bind IIS.
+> In this command, \<SSLCertThumbPrint\> is the thumbprint of the certificate to bind IIS.
 
-Key-based renewal lets certificate clients renew their certificates by using the key of their existing certificate for authentication. When in key-based renewal mode, the service will return only certificate templates that are set for key-based renewal.
+Key-based renewal lets certificate clients renew their certificates by using the key of their existing certificate for authentication. When in key-based renewal mode, the service returns only certificate templates that are set for key-based renewal.
 
 ```PowerShell
 Install-AdcsEnrollmentWebService -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSLCertThumbprint "sslCertThumbPrint" -AuthenticationType Certificate -ServiceAccountName "Contoso\cepcessvc" -ServiceAccountPassword (read-host "Set user password" -assecurestring) -RenewalOnly -AllowKeyBasedRenewal
@@ -156,9 +156,9 @@ Install-AdcsEnrollmentWebService -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSL
 
 This command installs the Certificate Enrollment Web Service (CES) to use the certification authority for a computer name of **CA1.contoso.com** and a CA common name of **contoso-CA1-CA**.
 
-In this command, the identity of the Certificate Enrollment Web Service is specified as the **cepcessvc** service account. The authentication type is **certificate**. **SSLCertThumbPrint** is the thumbprint of the certificate that will be used to bind IIS.
+In this command, the identity of the Certificate Enrollment Web Service is specified as the **cepcessvc** service account. The authentication type is **certificate**. **SSLCertThumbPrint** is the thumbprint of the certificate to bind IIS.
 
-The **RenewalOnly** cmdlet lets CES run in renewal only mode. The **AllowKeyBasedRenewal** cmdlet also specifies that the CES will accept key based renewal requests for the enrollment server. These are valid client certificates for authentication that do not directly map to a security principal.
+The **RenewalOnly** cmdlet lets CES run in renewal only mode. The **AllowKeyBasedRenewal** cmdlet also specifies that the CES accepts key based renewal requests for the enrollment server. These are valid client certificates for authentication that don't directly map to a security principal.
 
 > [!NOTE]
 > The service account must be part of **IIS_IUSRS** group on the server.
@@ -175,14 +175,14 @@ Select **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** under **Default Web 
 
 #### Complete Certificate Enrollment Web Services configuration
 
-To be able to enroll the certificate on behalf of the functionality of CEP and CES, you have to configure the workgroup’s computer account in Active Directory and then configure constrained delegation on the service account.
+To enroll the certificate for the functionality of CEP and CES, you have to configure the workgroup’s computer account in Active Directory and then configure constrained delegation on the service account.
 
 ##### Step 1: Create a computer account of the workgroup computer in Active Directory
 
-This account will be used for authentication towards key-based renewal and the “Publish to Active Directory” option on the certificate template.
+This account is used for authentication towards key-based renewal and the Publish to Active Directory option on the certificate template.
 
 > [!NOTE]
-> You do not have to domain join the client machine. This account comes into picture while doing certificate based authentication in KBR for dsmapper service.
+> You don't have to domain join the client machine. This account comes into picture while doing certificate based authentication in KBR for dsmapper service.
 
 ![New Object](media/certificate-enrollment-certificate-key-based-renewal-6.png)
 
@@ -199,7 +199,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 > In this command, \<cepcessvc\> is the service account, and <CA1.contoso.com> is the Certification Authority.
 
 > [!IMPORTANT]
-> We are not enabling the RENEWALONBEHALOF flag on the CA in this configuration because we are using constrained delegation to do the same job for us. This lets us to avoid adding the permission for the service account to the CA’s security.
+> We aren't enabling the RENEWALONBEHALOF flag on the CA in this configuration because we are using constrained delegation to do the same job for us. This lets us avoid adding the permission for the service account to the CA’s security.
 
 ##### Step 3: Configure a custom port on the IIS web server
 
@@ -260,7 +260,7 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
 
    a. Click **Add**, enter the CEP URI with **Certificate** that we edited in ADSI.
 
-   b. Set a priority of **1**, and then validate the policy server. You will be prompted to authenticate and choose the certificate we enrolled initially.
+   b. Set a priority of **1**, and then validate the policy server. You'll be prompted to authenticate and choose the certificate we enrolled initially.
 
    ![Enrollment Policy](media/certificate-enrollment-certificate-key-based-renewal-13.png)
 
@@ -271,7 +271,7 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
 
 To make sure that Auto-Renewal is working, verify that manual renewal works by renewing the certificate with the same key using mmc. Also, you should be prompted to select a certificate while renewing. You can choose the certificate we enrolled earlier. The prompt is expected.
 
-Open the computer personal certificate store, and add the “archived certificates” view. To do this, add the local computer account snap-in to mmc.exe, highlight **Certificates (Local Computer)** by clicking on it, click **view** from the **action tab** at the right or the top of mmc, click **view options**, select **Archived certificates**, and then click **OK**.
+Open the computer personal certificate store, and add the archived certificates view. To do this, add the local computer account snap-in to mmc.exe, highlight **Certificates (Local Computer)** by clicking on it, click **view** from the **action tab** at the right or the top of mmc, click **view options**, select **Archived certificates**, and then click **OK**.
 
 ### Method 1
 
@@ -294,7 +294,7 @@ Therefore, if you advance the time to 8:10 P.M. on the 19th since our renewal wi
 After the test finishes, revert the time setting to the original value, and then restart the client computer.
 
 > [!NOTE]
-> The previous screenshot is an example to demonstrate that the Auto-Enrollment engine works as expected because the CA date is still set to the 18th. Therefore, it continues to issue certificates. In a real-life situation, this large amount of renewals will not occur.
+> The previous screenshot is an example to demonstrate that the Auto-Enrollment engine works as expected because the CA date is still set to the 18th. Therefore, it continues to issue certificates. In a real-life situation, this large number of renewals won't occur.
 
 ## References
 
