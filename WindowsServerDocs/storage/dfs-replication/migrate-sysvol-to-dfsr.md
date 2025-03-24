@@ -4,7 +4,7 @@ title: Migrate SYSVOL replication to DFS Replication
 ms.date: 04/25/2023
 author: robinharwood
 manager: elizapo
-ms.author: roharwoo
+ms.author: daknappe
 ms.topic: conceptual
 ---
 
