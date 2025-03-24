@@ -4,7 +4,7 @@ description: Describes how to install and start using Software Inventory Logging
 ms.topic: article
 ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
 author: brentfor
-ms.author: roharwoo
+ms.author: alalve
 manager: mtillman
 ms.date: 10/16/2017
 ---
