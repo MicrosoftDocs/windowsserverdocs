@@ -34,23 +34,14 @@ This guide is intended for IT administrators, IT professionals, and other knowle
 
 DHCP Server migration is divided into the following major sections:
 
-- Prepare to migrate
-- Migrate the DHCP Server Role
-- Verify the migration
-- Post-migration tasks
+- [Prepare to migrate](#prepare-to-migrate)
+- [Migrate the DHCP Server Role](#migrate-the-dhcp-server-role)
+- [Verify the migration](#verify-the-migration)
+- [Post-migration tasks](#post-migration-tasks)
 
 As shown in the following illustration, the pre-migration process involves the manual collection of data, followed by procedures on the destination and source servers. The migration process includes source and destination server procedures that use the Export and Import cmdlets to automatically collect, store, and then migrate server role settings. Post-migration procedures include verifying that the destination server successfully replaced the source server and then retiring or repurposing the source server. If the verification procedure indicates that the migration failed, troubleshooting begins. If troubleshooting fails, rollback instructions are provided to return to the use of the original source server.
 
 ![Illustration of the server migration process, showing pre-migration, migration, and post-migration steps.](media/server-migration-process.png)
-
-## Server migration overview
-
-DHCP Server migration is divided into the following major sections:
-
-- Prepare to migrate
-- Migrate the DHCP Server Role
-- Verify the migration
-- Post-migration tasks
 
 ## Prepare to migrate
 
@@ -58,7 +49,7 @@ DHCP Server migration is divided into the following major sections:
 
 - Determine the domain, server name, and passwords on the source server. To identify the domain of the original server, click **Start**, right-click **Computer**, and then click **Properties**.
 
-- If you have not already done so, install Windows Server Migration Tools on the destination and source servers as instructed in [Install migration tools]().
+- If you have not already done so, install Windows Server Migration Tools on the destination and source servers as instructed in [Install migration tools](#install-migration-tools).
 
 - Before migration, install all critical updates and service packs on the source server. It's a recommended best practice that all current critical updates and service packs are installed on both the source and the destination servers.
 
@@ -205,7 +196,7 @@ Follow these steps to migrate DHCP Server from the source server.
     Netsh DHCP delete server <Server FQDN> <Server IPAddress>
     ```
 
-## Complete the migration on the destination server
+### Complete the migration on the destination server
 
 Return to the destination server and follow these steps to complete the migration.
 
@@ -322,7 +313,7 @@ For DHCP-specific troubleshooting tips, see [Troubleshoot problems on DHCP serve
 
 2. Before you run **Send-SmigServerData** or **Receive-SmigServerData** again, remove all unresolved domain users or groups who have user rights to files, folders, or shares on the migration source server.
 
-## View the content of Windows Server Migration Tools result objects
+### View the content of Windows Server Migration Tools result objects
 
 All Windows Server Migration Tools cmdlets return results as objects. You can save result objects, and query them for more information about settings and data that were migrated. You can also use result objects as input for other Windows PowerShell commands and scripts.
 
