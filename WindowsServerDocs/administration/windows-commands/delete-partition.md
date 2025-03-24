@@ -3,7 +3,7 @@ title: delete partition
 description: Reference article for the delete partition command, which deletes the partition with focus.
 ms.topic: reference
 ms.assetid: 65752312-cb16-46f6-870f-1b95c507b101
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
