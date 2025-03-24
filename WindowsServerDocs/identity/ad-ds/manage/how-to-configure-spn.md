@@ -244,4 +244,6 @@ $computerDN = (Get-ADComputer -Identity ComputerName).DistinguishedName
 
 - [Service principal names](/windows/win32/ad/service-principal-names)
 
-- [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
+- [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10))
+
+- [SetSPN command reference](/windows-server/administration/windows-commands/setspn)
