@@ -13,11 +13,11 @@ You can configure Storage Replica in Windows Server for cluster-to-cluster repli
 
 For a complete walkthrough of the process, see the following videos:
 
-Part one:
+Part one:  
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=f95b2b39-1000-4b43-ae2b-534b70cc0667]
 
-Part two:
+Part two:  
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=65d7d183-938e-48fc-bc46-df5cb8216393]
 
@@ -33,7 +33,7 @@ The figure and the videos refer to the article examples.
 
 1. Create two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM) in the resource group, one for each cluster.
 
-   For example:
+   For example:  
 
    1. Create availability set **az2azAS1** in resource group **SR-AZ2AZ**.
    1. Create availability set **az2azAS2** in resource group **SR-AZ2AZ**.
@@ -44,14 +44,14 @@ The figure and the videos refer to the article examples.
 
 1. Create a [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM). Add one inbound security rule for Remote Desktop Protocol (RDP) port 3389 to the network security group. You can choose to remove this rule after you finish setup.
 
-   For example:
+   For example:  
 
    1. Create network security group (**az2az-NSG**) in resource group **SR-AZ2AZ**.
    1. Create an inbound security rule for RDP:3389 to the network security group.
 
 1. Create a Windows Server [virtual machine](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the resource group (**SR-AZ2AZ**). Use the previously created virtual network (**az2az-VNet**) and network security group (**az2az-NSG**).
 
-   For example:
+   For example:  
 
    1. Create domain controller **az2azDC**. You can choose to create a third availability set for your domain controller or add the domain controller in one of the two availability sets. If you add the domain controller to the availability set you created for the two clusters, assign it a standard public IP address when you create the VM.
 
@@ -87,7 +87,7 @@ The figure and the videos refer to the article examples.
 
 1. Create two clusters: **SRAZC1** and **SRAZC2**.
 
-   For the example, use the following PowerShell commands:
+   For the example, use the following PowerShell commands:  
 
    ```powershell
     New-Cluster -Name SRAZC1 -Node az2az1,az2az2 –StaticAddress 10.3.0.100
@@ -158,7 +158,7 @@ The figure and the videos refer to the article examples.
 
     Either use the Connect to Cluster feature in Failover Cluster Manager to connect to the other cluster or verify that the other cluster responds from one of the nodes of the current cluster.
 
-    For example:
+    For example:  
 
     ```powershell
       Get-Cluster -Name SRAZC1 (run from az2az3)

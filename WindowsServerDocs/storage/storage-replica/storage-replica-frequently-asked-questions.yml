@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  description: "Frequently asked questions about Storage Replica"
+  description: "Storage Replica FAQ"
   title: FAQ
   manager: siroy
   ms.author: alalve
@@ -9,7 +9,7 @@ metadata:
   ms.date: 04/15/2020
   ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
   ms.service: windows-server
-title: Frequently asked questions about Storage Replica
+title: Storage Replica FAQ
 summary: |
   >
   

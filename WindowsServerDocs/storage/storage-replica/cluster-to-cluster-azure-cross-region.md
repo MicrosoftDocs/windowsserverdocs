@@ -23,28 +23,28 @@ The figure and the videos refer to the article examples.
 
 1. In the Azure portal, create [resource groups](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) in two different regions.
 
-   For example:
+   For example:  
 
    1. Create **SR-AZ2AZ** in **West US 2**.
    1. Create **SR-AZCROSS** in **West Central US**.
 
 1. Create two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), one in each resource group for each cluster.
 
-   For example:
+   For example: 
 
    1. Create availability set **az2azAS1** in resource group **SR-AZ2AZ**.
    1. Create availability set **azcross-AS** in resource group **SR-AZCROSS**.
 
 1. Create two [virtual networks](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM).
 
-   For example:
+   For example:  
 
    1. Create  virtual network **az2az-VNet** in resource group **SR-AZ2AZ**. The virtual network should have one subnet and one gateway subnet.
    1. Create [virtual network](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) **azcross-VNet** in resource group **SR-AZCROSS**. The virtual network should have one subnet and one gateway subnet.
 
 1. Create two network security groups. Add an inbound security rule for Remote Desktop Protocol (RDP) port 3389 to each network security group. You can choose to remove this rule after you finish setup.
 
-   For example:
+   For example:  
 
    1. Create [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) **az2az-NSG** in resource group **SR-AZ2AZ**.
    1. Create an inbound security rule for RDP:3389 to the **az2az-NSG** network security group.
@@ -53,7 +53,7 @@ The figure and the videos refer to the article examples.
 
 1. Create Windows Server [virtual machines (VMs)](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the resource groups.
 
-   For example:
+   For example:  
 
    1. Create domain controller **az2azDC**. You can choose to create a third availability set for your domain controller or add the domain controller in one of the two availability sets. If you add the domain controller to the availability set you created for the two clusters, assign it a standard public IP address when you create the VM.
 
@@ -163,7 +163,7 @@ The figure and the videos refer to the article examples.
 
     Either use the Connect to Cluster feature in Failover Cluster Manager to connect to the other cluster or verify that the other cluster responds from one of the nodes of the current cluster.
 
-    For example:
+    For example:  
 
     ```powershell
       Get-Cluster -Name SRAZC1 (run from azcross1)
@@ -188,7 +188,7 @@ The figure and the videos refer to the article examples.
 
     Grant access from one cluster to another cluster in both directions:
 
-    From our example:
+    From our example:  
 
     ```powershell
      Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross

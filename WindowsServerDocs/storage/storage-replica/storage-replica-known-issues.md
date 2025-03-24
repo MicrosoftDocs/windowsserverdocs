@@ -247,7 +247,7 @@ Get-ClusterAvailableDisk -All | Add-ClusterDisk
 
 The command doesn't work with node local storage. You can use Storage Replica to replicate a stretch cluster between two total nodes, *each one using its own set of shared storage*.
 
-## Event ID 1241 warning repeat during initial sync
+## Event ID 1241 warning repeats during initial sync
 
 You specify that a replication partnership is asynchronous, and the source computer repeatedly logs event ID 1241 warning events in the Storage Replica Admin channel. For example:
 
@@ -282,7 +282,7 @@ Event ID 1241, "The Recovery Point Objective (RPO) of the asynchronous destinati
 
 During initial sync, this event is expected and can be safely ignored. The event behavior might change in a later release. If you see this behavior during ongoing asynchronous replication, investigate the partnership to determine why replication is delayed beyond your configured RPO (30 seconds by default).
 
-## Event ID 4004 warning repeated after you restart a replicated node
+## Event ID 4004 warning repeats after you restart a replicated node
 
 Under rare circumstances, restarting a server that is in a partnership leads to replication failing. The restarted node logs event ID 4004 as a warning event, with an "access denied" error.
 

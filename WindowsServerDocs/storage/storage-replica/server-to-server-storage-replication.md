@@ -176,6 +176,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
     ```powershell
     MD c:\temp
+    ```
 
    > [!IMPORTANT]
    > If you use a test server with no write I/O load on the specified source volume during the evaluation period, consider adding a workload to generate a useful report. You should test with production-like workloads to see real numbers and recommended log sizes. Alternatively, copy some files into the source volume during the test or download and run [DISKSPD](/azure/azure-local/manage/diskspd-overview?context=/windows-server/context/windows-server-storage) to generate write I/Os. For example, copy a sample with a low write I/O workload that runs for 10 minutes to the D: volume:
@@ -290,12 +291,6 @@ Next, configure server-to-server replication by using Windows PowerShell. You mu
         Id           : 1215
         Message      : Block copy completed for replica.
 
-      ```output
-      TimeCreated  : 4/8/2016 4:12:37 PM
-      ProviderName : Microsoft-Windows-StorageReplica
-      Id           : 1215
-      Message      : Block copy completed for replica.
-
        > [!NOTE]
        > By design, Storage Replica dismounts the destination volumes and their drive letters or mount points.
 
@@ -311,6 +306,12 @@ Next, configure server-to-server replication by using Windows PowerShell. You mu
 
         ```powershell
         while($true) {
+
+        $v = (Get-SRGroup -Name "RG02").replicas | Select-Object numofbytesremaining
+        [System.Console]::Write("Number of bytes remaining: {0}`r", $v.numofbytesremaining)
+        Start-Sleep -s 5
+        }
+        ```
 
     1. On the destination server, run the following command and examine event IDs 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 event IDs, which indicate processing progress.
 
