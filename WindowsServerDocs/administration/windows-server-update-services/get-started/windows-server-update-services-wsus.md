@@ -2,7 +2,7 @@
 title: Windows Server Update Services (WSUS) Overview
 description: Windows Server Update Service (WSUS) - An overview of the Server role and its practical applications
 ms.topic: overview
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 02/14/2025
 ---

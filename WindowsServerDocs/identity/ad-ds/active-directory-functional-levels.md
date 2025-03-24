@@ -2,7 +2,7 @@
 title: Active Directory Domain Services functional levels
 description: Learn more about the different Active Directory Domain and Forest functional levels in Windows Server
 ms.topic: conceptual
-ms.author: roharwoo
+ms.author: mosagie
 author: gswashington
 ms.date: 10/25/2024
 ---

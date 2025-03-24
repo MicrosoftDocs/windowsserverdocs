@@ -4,7 +4,7 @@ description: See various ways to detect, enable, and disable the Server Message 
 author: Deland-Han
 manager: dcscontentpm
 ms.topic: how-to
-ms.author: delhan
+ms.author: jgerend
 ms.date: 02/28/2025
 # customer intent: As an administrator, I want to see how to detect the status of SMBv1, SMBv2, and SMBv3 and how to enable and disable these protocols so that I can improve the security of my environment.
 ---

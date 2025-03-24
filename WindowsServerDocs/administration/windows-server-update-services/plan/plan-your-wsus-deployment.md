@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
+manager: jgerend
 ms.date: 03/06/2025
 ---
 # Plan your WSUS deployment
