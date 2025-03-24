@@ -22,7 +22,7 @@ Traditional Log is based on the [Common Log File System (CLFS)](/windows-hardwar
 Enhanced Log avoids file system abstractions and their performance costs by using a raw format for logging I/O that needs to be replicated. Enhanced Log introduces an architecture that allows multiple I/O data records to be concurrently written to the secondary volume in a replication group, improving overall workload performance.
 
 > [!IMPORTANT]
-> There is no migration path from Storage Replica Traditional Log to Enhanced Log or vice versa. You must declare the log format when you create the Storage Replica partnership.
+> There's no migration path from Storage Replica Traditional Log to Enhanced Log or vice versa. You must declare the log format when you create the Storage Replica partnership.
 
 ## Enhanced Log deployment steps
 
@@ -81,7 +81,7 @@ You can use `-LogType FileBased` to deploy the Storage Replica partnership by us
 
 * [Stretch cluster replication by using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
 * [Server-to-server storage replication](server-to-server-storage-replication.md)
-* [Cluster-to-c;uster storage replication](cluster-to-cluster-storage-replication.md)
+* [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica: Known issues](storage-replica-known-issues.md)
 * [Storage Replica: FAQ](storage-replica-frequently-asked-questions.yml)
 * [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)

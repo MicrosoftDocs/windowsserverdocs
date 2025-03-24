@@ -23,13 +23,13 @@ Storage Replica offers disaster recovery and preparedness capabilities in Window
 
 Use Storage Replica for a more efficient use of multiple datacenters. By stretching or replicating clusters, you can run workloads in multiple datacenters for quicker data access by close-proximity users and applications. You also get better load distribution and use of compute resources. If a disaster takes one datacenter offline, you can temporarily move its typical workloads to the other site.
 
-When you implement Storage Replica, you might be able to decommission existing file replication systems such as DFS Replication that were pressed into duty as low-end disaster recovery solutions. Although DFS Replication works well over low-bandwidth networks, its latency is high. Latency in that scenario often is measured in hours or days. The high latency is caused by its requirement for files to close and its artificial throttles, which are meant to prevent network congestion. With those design characteristics, the newest and hottest files in a DFS Replication replica are the least likely to replicate.
+When you implement Storage Replica, you might be able to decommission existing file replication systems, like DFS Replication, that were pressed into duty as low-end disaster recovery solutions. Although DFS Replication works well over low-bandwidth networks, its latency is high. Latency in that scenario often is measured in hours or days. The high latency is due to its requirement that files close and to its artificial throttles, which are meant to prevent network congestion. With those design characteristics, the newest and hottest files in a DFS Replication replica are the least likely to replicate.
 
 Storage Replica operates below the file level and has none of these restrictions.
 
 Storage Replica also supports asynchronous replication for longer ranges and higher-latency networks. Because it isn't checkpoint-based, and instead, it continuously replicates, the delta of changes tends to be far lower than snapshot-based products.
 
-Storage Replica operates at the partition layer and therefore replicates all Volume Shadow Copy Service (VSS) snapshots that Windows Server or backup software creates. By using VSS snapshots, you can get application-consistent data snapshots for point-in-time recovery, especially for unstructured user data that's replicated asynchronously.
+Storage Replica operates at the partition layer and therefore replicates all Volume Shadow Copy Service (VSS) snapshots that Windows Server or backup software creates. By using VSS snapshots, you can get application-consistent data snapshots for point-in-time recovery, especially for unstructured user data that replicates asynchronously.
 
 ## Supported configurations
 
@@ -37,9 +37,9 @@ You can deploy Storage Replica in a stretch cluster, from cluster to cluster, an
 
 ### Stretch cluster replication
 
-Use *stretch cluster replication* to replicate data between computers and storage in a single cluster. In this scenario, some nodes share one set of asymmetric storage and some nodes share another set of storage. Then, they synchronously or asynchronously replicate with site awareness.
+Use *stretch cluster replication* to replicate data between computers and storage in a single cluster. In this scenario, some nodes share a set of asymmetric storage and some nodes share another set of storage. Then, they synchronously or asynchronously replicate with site awareness.
 
-In Storage Replica stretch cluster replication, you can use Storage Spaces with shared SAS storage, SAN LUNs, and iSCSI-attached LUNs.
+In Storage Replica stretch cluster replication, you can use Storage Spaces with shared Serial Attached SCSI (SAS) storage, Storage Area Network (SAN) Logical Unit Numbers (LUNs), and iSCSI-attached LUNs.
 
 You manage a stretch cluster configuration by using PowerShell and the Failover Cluster Manager graphical tool. The scenario supports automated workload failover.
 
@@ -94,7 +94,7 @@ Storage Replica in Windows Server offers the following features:
 
 * *User delegation*. Users can be granted permissions to manage replication without being a member of the built-in Administrators group on the replicated nodes. The advantage is that their access to unrelated areas is limited.
 
-* *Network constraint*. Storage Replica can be limited to individual networks by server and by replicated volumes to provide application, backup, and management software bandwidth.
+* *Network constraint*. You can limit Storage Replica to individual networks by server and by replicated volumes to provide application, backup, and management software bandwidth.
 
 * *Thin provisioning*. Thin provisioning in Storage Spaces and SAN devices is supported to provide near-instantaneous initial replication times under many circumstances. After initial replication is initiated, you can't shrink or trim the volume.
 
@@ -132,7 +132,7 @@ Storage Replica includes the following features:
 ## Storage Replica prerequisites
 
 * Active Directory Domain Services forest.
-* Storage Spaces with Serial Attached SCSI (SAS) "just a bunch of disk" enclosures (JBODs), Storage Spaces Direct, a fibre channel storage area network (FC SAN), a shared Virtual Hard Disk v2 (VHDX), an Internet Small Computer Systems Interface (iSCSI) target, or local SAS, SCSI, or Serial Advanced Technology Attachment (SATA) storage. We recommend solid-state drive (SSD) or faster for replication log drives. We recommend that you use log storage that is faster than your data storage. Log volumes must never be used for other workloads.
+* Storage Spaces with Serial Attached SCSI (SAS) "just a bunch of disk" enclosures (JBODs), Storage Spaces Direct, a Fibre Channel Storage Area Network (FC SAN), a shared Virtual Hard Disk v2 (VHDX), an Internet Small Computer Systems Interface (iSCSI) target, or local SAS, SCSI, or Serial Advanced Technology Attachment (SATA) storage. We recommend solid-state drive (SSD) or faster for replication log drives. We recommend that you use log storage that is faster than your data storage. Log volumes must never be used for other workloads.
 * At least one Ethernet/TCP connection on each server for synchronous replication, but Remote Direct Memory Access (RDMA) is preferred.
 * At least 2 GB of RAM and two cores per server.
 * A network between servers with enough bandwidth to contain your input/output (I/O) write workload and an average of 5-ms roundtrip latency or less for synchronous replication. Asynchronous replication doesn't have a latency recommendation.

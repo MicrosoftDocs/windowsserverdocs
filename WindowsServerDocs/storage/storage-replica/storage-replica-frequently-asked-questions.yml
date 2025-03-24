@@ -165,7 +165,7 @@ sections:
       - question: |
           How can I reduce time for initial synchronization?
         answer: |
-          You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including nonclustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs. After initial replication begins, you can't shrink or trim the volume.
+          You can use thin-provisioned storage to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including nonclustered Storage Spaces, Hyper-V dynamic disks, and Storage Area Network (SAN) Logical Unit Numbers (LUNs). After initial replication begins, you can't shrink or trim the volume.
           
           You can also use seeded data volumes to reduce bandwidth usage and, in some scenarios, synchronization time. Use the Seeded option in Failover Cluster Manager or use the `New-SRPartnership` cmdlet to ensure that the destination volume has some subset of data from the primary site. If the volume is mostly empty, using seeded sync might reduce time and bandwidth usage.
           
@@ -195,7 +195,7 @@ sections:
           
           If you experience a disaster and the source volume is lost, you can use the `Set-SRPartnership` cmdlet to promote the destination as the new source volume. On the newly promoted source, you can back up or restore that volume. You can also remove replication with by using the `Remove-SRPartnership` and `Remove-SRGroup` cmdlets to remount the volume as read/writable.
           
-          To create periodic application-consistent snapshots, you can use Volume Shadow Copy Service (VSS) by running *VSSAdmin.exe* on the source server to snapshot replicated data volumes.
+          To create periodic application-consistent snapshots, you can use Volume Shadow Copy Service (VSS) by running `VSSAdmin.exe` on the source server to snapshot replicated data volumes.
           
           For example, where you're replicating the `F:` volume with Storage Replica, run this command:
           
@@ -288,11 +288,11 @@ sections:
         answer: |
           Storage Replica is a one-way replication technology. It replicates only from the source to the destination on a per-volume basis. The direction can be reversed at any time, but it still replicates in only one direction.
           
-          You can have set of volumes (source and destination) replicated in one direction and a different set of drives (source and destination) replicated in the opposite direction.
+          You can have a set of volumes (source and destination) replicated in one direction and a different set of drives (source and destination) replicated in the opposite direction.
           
           For example, you want to have server-to-server replication configured. Server1 and Server2 each have drive letters `L:`, `M:`, `N:`, and `O:`. You want to replicate drive `M:` from `Server1` to `Server2`, and replicate drive `O:` from `Server2` to `Server1`. As long as there are separate log drives for each of the groups, you can use this configuration:
           
-          - `Server1` source drive `M:` with source log drive `L:` replicating to `Server2` destination `drive M:` with destination log drive `L:`.
+          - `Server1` source drive `M:` with source logs drive `L:` replicating to `Server2` destination `drive M:` with destination logs drive `L:`.
           - `Server2` source drive `O:` with source log drive `N:` replicating to `Server1` destination `drive O:` with destination log drive `N:`.
 
       - question: |

@@ -23,7 +23,7 @@ For an overview of how to use Storage Replica in Windows Admin Center, see the f
 * Two servers running Windows Server 2019 or Windows Server 2016 Datacenter.
 
    If you're running Windows Server 2019, you can instead use Standard Edition if replicating only a single volume up to 2 TB in size is suitable for your scenario.
-* Two sets of storage that can include Serial Attached SCSI (SAS) "just a bunch of disk" enclosures (JBODs), a fibre channel storage area network (FC SAN), Internet Small Computer Systems Interface (iSCSI) target, or local SCSI or Serial Advanced Technology Attachment (SATA) storage. The storage should contain a mix of hard disk drive (HDD) and solid-state drive (SSD) media. You make each storage set available only to each of the servers, with no shared access.
+* Two sets of storage that can include Serial Attached SCSI (SAS) "just a bunch of disk" enclosures (JBODs), a Fibre Channel Storage Area Network (FC SAN), Internet Small Computer Systems Interface (iSCSI) target, or local SCSI or Serial Advanced Technology Attachment (SATA) storage. The storage should contain a mix of hard disk drive (HDD) and solid-state drive (SSD) media. You make each storage set available only to each of the servers, with no shared access.
 
    Each set of storage must support creating at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
 * At least one Ethernet/TCP connection on each server for synchronous replication, but Remote Direct Memory Access (RDMA) is preferred.
@@ -105,7 +105,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
    > [!NOTE]
    > Consult your hardware vendor documentation to configure shared storage and networking hardware.
 
-1. Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-state, setting QPI speed, enabling non-uniform memory access (NUMA), and setting the highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required.
+1. Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-state, setting QPI speed, enabling nonuniform memory access (NUMA), and setting the highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required.
 
 1. Configure roles as described in the following sections:
 
