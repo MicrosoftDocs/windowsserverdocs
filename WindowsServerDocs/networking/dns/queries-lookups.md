@@ -75,7 +75,7 @@ When a DNS domain name is used in a program on the local computer, the request i
 
 The following diagram shows a simple example of a DNS client querying the DNS Client service for a name resolution.
 
-:::image type="content" source="../media/queries-lookups/client-service-resolver.png" alt-text="A diagram showing a simple example of a DNS client querying the DNS Client service for a name resolution" lightbox="../media/queries-lookups/client-service-resolver.png":::
+:::image type="content" source="../media/queries-lookups/client-service-resolver.svg" alt-text="A diagram showing a simple example of a DNS client querying the DNS Client service for a name resolution" lightbox="../media/queries-lookups/client-service-resolver.svg":::
 
 The local resolver cache can include name information obtained from two possible sources:
 
@@ -87,7 +87,7 @@ If the query doesn't match an entry in the cache, the resolution process continu
 
 The following diagram shows the DNS client service checking the cache for a DNS query.
 
-:::image type="content" source="../media/queries-lookups/locally-cached-name-query.png" alt-text="A diagram that shows the DNS client service checking the cache for a DNS query" lightbox="../media/queries-lookups/locally-cached-name-query.png":::
+:::image type="content" source="../media/queries-lookups/locally-cached-name-query.svg" alt-text="A diagram that shows the DNS client service checking the cache for a DNS query" lightbox="../media/queries-lookups/locally-cached-name-query.svg":::
 
 Configuring DNS clients with more than one DNS Server IP adds fault tolerance to your DNS infrastructure. Adding multiple DNS server IPs ensures DNS names can still be resolved if the primary DNS server, the network link, or the supporting infrastructure fails.
 
@@ -129,7 +129,7 @@ In all cases, the response is stored in the DNS client cache, regardless of whet
 
 The following flowchart illustrates the described process of querying a DNS server.
 
-:::image type="content" source="../media/queries-lookups/dns-query.png" alt-text="A flowchart illustrating the process of querying a DNS server" lightbox="../media/queries-lookups/dns-query.png":::
+:::image type="content" source="../media/queries-lookups/dns-query.svg" alt-text="A flowchart illustrating the process of querying a DNS server" lightbox="../media/queries-lookups/dns-query.svg":::
 
 #### DNS recursion
 
