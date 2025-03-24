@@ -3,7 +3,7 @@ title: ksetup getenctypeattr
 description: Reference article for the ksetup getenctypeattr command, which retrieves the encryption type attribute for the domain.
 ms.topic: reference
 ms.assetid: 6c7ec002-355e-474d-bc27-27215049f1a8
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

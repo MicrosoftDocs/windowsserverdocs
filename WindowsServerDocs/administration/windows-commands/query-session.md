@@ -3,7 +3,7 @@ title: query session
 description: Reference article for the query session command, which displays information about sessions on a Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: abc0ace8-0b74-4b6e-a937-a78bb4b61a1f
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
