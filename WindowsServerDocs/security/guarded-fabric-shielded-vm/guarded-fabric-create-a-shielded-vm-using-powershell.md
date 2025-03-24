@@ -4,7 +4,7 @@ title: Create a shielded VM using PowerShell
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 09/25/2019
 ---
 
