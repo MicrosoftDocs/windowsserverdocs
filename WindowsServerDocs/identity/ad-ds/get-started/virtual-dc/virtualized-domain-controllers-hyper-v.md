@@ -2,7 +2,7 @@
 title: Virtualizing domain controllers with Hyper-V
 description: Learn about considerations for virtualizing Windows Server Active Directory domain controllers (DCs) in Hyper-V.
 author: daveba
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 03/07/2024
 ms.topic: article
 ms.custom: inhenkel
