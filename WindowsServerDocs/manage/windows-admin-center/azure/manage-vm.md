@@ -3,7 +3,7 @@ title: Manage a Windows VMs using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Windows Server and Client Azure VMs
 ms.topic: overview
 author: prasidharora
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 07/26/2022
 ---
 # Manage a Windows VM using Windows Admin Center in Azure
