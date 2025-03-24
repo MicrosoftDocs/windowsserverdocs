@@ -325,7 +325,7 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan.md
         - name: Steps to recover the forest
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-steps-for-restoring-the-forest.md
-        - name: Perform a system state backup 
+        - name: Perform a system state backup
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-system-state.md
         - name: Identify the problem
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-identify-the-problem.md
@@ -335,33 +335,33 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery.md
         - name: Procedures
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures.md
-        - name: Configure the DNS Server service 
+        - name: Configure the DNS Server service
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-configure-dns.md
         - name: Perform a full server backup
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-a-full-server.md
-        - name: Perform a full server recovery 
+        - name: Perform a full server recovery
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-full-server-recovery.md
         - name: Synchronize DFSR-replicated SYSVOL
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-authoritative-recovery-sysvol.md
         - name: Add the global catalog to a domain controller
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-add-gc.md
-        - name: Remove the global catalog from a domain controller 
+        - name: Remove the global catalog from a domain controller
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-remove-gc.md
-        - name: Raise the RID pool 
+        - name: Raise the RID pool
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-raise-rid-pool.md
-        - name: Invalidate the RID pool 
+        - name: Invalidate the RID pool
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-invaildate-rid-pool.md
-        - name: Perform nonauthoritative restore 
+        - name: Perform nonauthoritative restore
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-nonauthoritative-restore.md
-        - name: Reset computer account domain controller 
+        - name: Reset computer account domain controller
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-computer-account-dc.md
-        - name: Reset the krbgt account password 
+        - name: Reset the krbgt account password
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password.md
-        - name: Reset a trust password on one side of the trust 
+        - name: Reset a trust password on one side of the trust
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-trust.md
-        - name: Seize operations master role 
+        - name: Seize operations master role
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-seizing-operations-master-role.md
-        - name: Verify DC replication 
+        - name: Verify DC replication
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-verify-replication.md
         - name: FAQ
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
@@ -373,7 +373,7 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-virtualization.md
         - name: Cleanup
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup.md
-        - name: Clean up metadata of removed domain controllers 
+        - name: Clean up metadata of removed domain controllers
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleaning-metadata-of-removed-dcs.md
       - name: Best Practices for Securing Active Directory
         href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
@@ -443,6 +443,8 @@
           items:
           - name: SPN and UPN uniqueness
             href: ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md
+          - name: How to configure SPN
+            href: ad-ds/manage/how-to-configure-spn.md
           - name: Winlogon Automatic Restart Sign-On (ARSO)
             href: ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-.md
           - name: TPM key attestation
@@ -510,7 +512,7 @@
       - name: Enable Database 32k pages optional feature
         href: ad-ds/enable-32K-pages-optional-feature.md
       - name: Replication Priority Boost
-        href: ad-ds/manage/replication-priority-boost.md  
+        href: ad-ds/manage/replication-priority-boost.md
       - name: Monitoring
         items:
         - name: LSA performance counters

@@ -3,7 +3,7 @@ title: tasklist
 description: Reference article for the tasklist command, which displays a list of the processes running on the local or remote computer.
 ms.topic: reference
 ms.assetid: 8dbe30ee-1484-46be-917b-5ca3ff4fdc9c
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

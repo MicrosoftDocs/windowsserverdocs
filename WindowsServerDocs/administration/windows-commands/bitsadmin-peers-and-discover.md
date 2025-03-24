@@ -2,7 +2,7 @@
 title: bitsadmin peers and discover
 description: Reference article for the bitsadmin peers and discover command that rediscovers peers.
 ms.topic: reference
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 ms.date: 01/03/2023
 ---

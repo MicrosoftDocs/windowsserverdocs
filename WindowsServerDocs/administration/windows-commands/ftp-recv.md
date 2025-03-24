@@ -3,7 +3,7 @@ title: ftp recv
 description: Reference article for the ftp recv command, which copies a remote file to the local computer using the current file transfer type.
 ms.topic: reference
 ms.assetid: f249ce61-247d-421b-9b93-48bce5108800
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
