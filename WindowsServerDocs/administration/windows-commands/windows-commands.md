@@ -713,6 +713,8 @@ To find information about a specific command, in the following A-Z menu, select 
   - [set metadata](set-metadata.md)
   - [set option](set-option.md)
   - [set verbose](set-verbose.md)
+- [setlocal](setlocal.md)
+- [setspn](setspn.md)
 - [setx](setx.md)
 - [sfc](sfc.md)
 - [shadow](shadow.md)
