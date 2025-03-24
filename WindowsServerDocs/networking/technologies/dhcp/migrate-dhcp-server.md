@@ -186,7 +186,7 @@ Follow these steps to migrate DHCP Server from the source server.
 
           - The **-IPConfig** parameter collects IP information when it is used with the **Export-SmigServerSetting** cmdlet on the source server; the **-IPConfig** parameter applies settings when the **Import-SmigServerSetting** cmdlet is used on the destination server.
 
-            If the source DHCP Server has multiple network adapters and the DHCP server service is bound to more than one network adapter and serving IP addresses on different subnets, the destination DHCP Server must also have multiple network adapters so that it can serve the same subnets as the source DHCP Server. For more information, see [Migrate IP Configuration to Windows Server 2012](jj574133\(v=ws.11\).md). Because IP configuration details will be used later when importing IP configuration settings to the destination server, it is a best practice to save the IP configuration settings by using the following command: `IPConfig /all > IPSettings.txt`.
+            If the source DHCP Server has multiple network adapters and the DHCP server service is bound to more than one network adapter and serving IP addresses on different subnets, the destination DHCP Server must also have multiple network adapters so that it can serve the same subnets as the source DHCP Server. Because IP configuration details will be used later when importing IP configuration settings to the destination server, it is a best practice to save the IP configuration settings by using the following command: `IPConfig /all > IPSettings.txt`.
 
             The **Import-SmigServerSetting** cmdlet requires you to map the source physical address to the destination physical address.
 
@@ -242,19 +242,19 @@ Return to the destination server and follow these steps to complete the migratio
 
   ```powershell
   netsh DHCP add server <Server FQDN> <Server IPAddress>
-    ```
+  ```
 
 When this migration is finished, client computers on the network server are served by the new x64-based destination server running Windows Server. The migration is complete when the destination server is ready to serve IP addresses to the network.
 
 ## Verify the migration
 
-When all the migration steps are complete, you can use the following procedure to verify that the DHCP server role migration was successful. If the migration failed, you can return to the previous valid configuration by following the steps in [Post-Migration Tasks]().
+When all the migration steps are complete, you can use the following procedure to verify that the DHCP server role migration was successful. If the migration failed, you can return to the previous valid configuration by following the steps in [Post-Migration Tasks](#post-migration-tasks).
 
 ### Verify the configuration of the destination server
 
 Follow these steps to confirm that the DHCP destination server is now serving the domain.
 
-1.  Make sure that the destination server is authorized by running the following command in a Windows PowerShell window:
+1. Make sure that the destination server is authorized by running the following command in a Windows PowerShell window:
 
     ```powershell
     netsh DHCP show server
@@ -262,9 +262,9 @@ Follow these steps to confirm that the DHCP destination server is now serving th
 
     The output of this command must contain the name of the DHCP destination server.
 
-2.  Check whether DHCP server is running on the destination server. In Task Manager, on the **Services** tab, the DHCP server status should be **Started**. You also use Task Manager to confirm that the status of the source server is **Stopped**.
+2. Check whether DHCP server is running on the destination server. In Task Manager, on the **Services** tab, the DHCP server status should be **Started**. You also use Task Manager to confirm that the status of the source server is **Stopped**.
 
-3.  Verify that the client computers are correctly receiving IP addresses on request by running the following commands at a command prompt on a client computer:
+3. Verify that the client computers are correctly receiving IP addresses on request by running the following commands at a command prompt on a client computer:
 
     ```powershell
     ipconfig /release
@@ -276,7 +276,7 @@ Follow these steps to confirm that the DHCP destination server is now serving th
 
     The output of these commands should show that the client computer was issued an IP address.
 
-4.  Use the DHCP console to verify that the scopes and other settings were migrated. To connect to the destination server, click **Action**, click **Add Server**, and then type the IP address or host name of the DHCP server. In the console tree, expand the server node, and then expand the IPv4 and IPv6 nodes to confirm that the scopes have been migrated. Then locate the folders for the scopes and view the address range, reservations, scope options, and active leases to verify the same. You can also go to the Server Options folder and verify the migrated server options.
+4. Use the DHCP console to verify that the scopes and other settings were migrated. To connect to the destination server, click **Action**, click **Add Server**, and then type the IP address or host name of the DHCP server. In the console tree, expand the server node, and then expand the IPv4 and IPv6 nodes to confirm that the scopes have been migrated. Then locate the folders for the scopes and view the address range, reservations, scope options, and active leases to verify the same. You can also go to the Server Options folder and verify the migrated server options.
 
 ## Post-migration tasks
 
@@ -288,39 +288,39 @@ Migration is complete after you verify that the destination server, not the sour
 
 After you verify the migration, you can disconnect, repurpose, or retire the source server. If the source server is running other server roles, it should be left on the network. If you don't have to use this computer, you can store it as a backup in case you ever have to revert to your previous DHCP configuration.
 
-  - If your migration scenario includes a standalone DHCP Server, then this source server was taken offline after the export file was created. In this scenario, the DHCP service was interrupted from the time that it was stopped until the migration was complete on the new server.
+- If your migration scenario includes a standalone DHCP Server, then this source server was taken offline after the export file was created. In this scenario, the DHCP service was interrupted from the time that it was stopped until the migration was complete on the new server.
 
-  - If your migration scenario includes more than one DHCP Server in a domain, a backup or other DHCP server continues to serve IP addresses during the migration so that services to clients are never interrupted. The migration is complete on the new server when the IP address of the source server is migrated to the destination server.
+- If your migration scenario includes more than one DHCP Server in a domain, a backup or other DHCP server continues to serve IP addresses during the migration so that services to clients are never interrupted. The migration is complete on the new server when the IP address of the source server is migrated to the destination server.
 
 ### Retire your source server
 
-After you confirm that the destination server is performing the functions previously handled by the source server, you can retire or repurpose the source server, depending on your needs. Follow your organization’s policy regarding server decommissioning. For information about decommissioning a domain controller, see [Decommissioning a Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816644(v=ws.10)).
+After you confirm that the destination server is performing the functions previously handled by the source server, you can retire or repurpose the source server, depending on your needs. Follow your organization’s policy regarding server decommissioning. For information about decommissioning a domain controller, see [Demoting domain controllers and domains](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-).
 
 ### Restore DHCP in the event of migration failure
 
 If the migration of DHCP Server fails, you have these options:
 
-  - If the source server has not been repurposed, an administrator can reassign the IP configuration settings, reauthorize the server, and restart the DHCP service on the original server.
+- If the source server has not been repurposed, an administrator can reassign the IP configuration settings, reauthorize the server, and restart the DHCP service on the original server.
 
-  - Use the backup files that were created on the source server, to restore DHCP server on the original DHCP server.
+- Use the backup files that were created on the source server, to restore DHCP server on the original DHCP server.
 
 ### Troubleshoot cmdlet-based migration
 
 The Windows Server Migration Tools deployment log file is located at %*windir*%\\Logs\\SmigDeploy.log. Additional Windows Server Migration Tools log files are created at the following locations.
 
-  - %*windir*%\\Logs\\ServerMigration.log
+- %*windir*%\\Logs\\ServerMigration.log
 
-  - %*localappdata*%\\SvrMig\\Log
+- %*localappdata*%\\SvrMig\\Log
 
 If migration log files cannot be created in the previous locations, **ServerMigration.log** and **SmigDeploy.log** are created in %*temp*%, and other logs are created in %*windir*%\\System32.
 
 For DHCP-specific troubleshooting tips, see [Troubleshoot problems on DHCP servers](/windows-server/troubleshoot/troubleshoot-problems-on-dhcp-server).
 
-#### If connections between either the source or destination servers and the domain controllers or global catalog servers cannot be restored, do the following.
+#### If connections between either the source or destination servers and the domain controllers or global catalog servers cannot be restored
 
-1.  Before you run **Export-SmigServerSetting**, **Import-SmigServerSetting** or **Get-SmigServerFeature** again, remove all unresolved domain users or groups who are members of local groups from the server on which you are running the cmdlet.
+1. Before you run **Export-SmigServerSetting**, **Import-SmigServerSetting** or **Get-SmigServerFeature** again, remove all unresolved domain users or groups who are members of local groups from the server on which you are running the cmdlet.
 
-2.  Before you run **Send-SmigServerData** or **Receive-SmigServerData** again, remove all unresolved domain users or groups who have user rights to files, folders, or shares on the migration source server.
+2. Before you run **Send-SmigServerData** or **Receive-SmigServerData** again, remove all unresolved domain users or groups who have user rights to files, folders, or shares on the migration source server.
 
 ## View the content of Windows Server Migration Tools result objects
 
