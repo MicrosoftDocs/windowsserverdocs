@@ -229,14 +229,16 @@ Run the following command to grant appropriate permissions for the user account 
 ```powershell
 $userDN = (Get-ADUser -Identity UserName).DistinguishedName
 
-& dsacls.exe $userDN /G "Domain\UserName:CA;servicePrincipalName"
+& dsacls.exe $userDN /G "MyDomain\UserName:CA;servicePrincipalName"
 ```
 
 ```powershell
 $computerDN = (Get-ADComputer -Identity ComputerName).DistinguishedName
 
-& dsacls.exe $computerDN /G "Domain\UserName:CA;servicePrincipalName"
+& dsacls.exe $computerDN /G "MyDomain\UserName:CA;servicePrincipalName"
 ```
+
+---
 
 ## See also
 
