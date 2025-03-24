@@ -242,6 +242,8 @@ items:
         href: technologies/dhcp/dhcp-deploy-wps.md
       - name: Install DHCP relay agent
         href: technologies/dhcp/dhcp-deploy-relay-agent.md
+      - name: Migrate DHCP server
+        href: technologies/dhcp/dhcp-migrate-server.md  
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
