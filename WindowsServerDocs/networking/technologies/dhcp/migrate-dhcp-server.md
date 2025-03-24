@@ -335,7 +335,7 @@ The Windows Server Migration Tools **Import-SmigServerSetting** and **Export-Sm
 | ItemType            | Enum                        | The type of item being migrated. Values include **General**, **WindowsFeatureInstallation**, **WindowsFeature**, and **OSSetting**. |
 | ID                  | String                      | The ID of the migrated item. Examples of values include **Local User**, **Local Group**, and **DHCP**. |
 | Success             | Boolean                     | The value **True** is displayed if migration was successful; otherwise, **False** is displayed. |
-| DetailsList         | List<MigrationResultDetails>| A list of **MigrationResultDetails** objects.                              |
+| DetailsList         | `List<MigrationResultDetails>` | A list of **MigrationResultDetails** objects.                              |
 
 **Send-SmigServerData** and **Receive-SmigServerData** cmdlets return results in a list of **MigrationDataResult** objects. Each **MigrationDataResult** object contains information about the data or share that the cmdlet processes, the result of the operation, any error or warning messages, and other related information. The following table describes the properties of a **MigrationDataResult** object.
 
@@ -346,16 +346,16 @@ The Windows Server Migration Tools **Import-SmigServerSetting** and **Export-Sm
 | DestinationLocation | String                      | The destination location of the item, shown as a path.                     |
 | Success             | Boolean                     | The value **True** is displayed if migration was successful; otherwise, **False** is displayed. |
 | Size                | Integer                     | The item size, in bytes.                                                   |
-| ErrorDetails        | List<MigrationResultDetails>| A list of **MigrationResultDetails** objects.                              |
+| ErrorDetails        | `List<MigrationResultDetails>`| A list of **MigrationResultDetails** objects.                              |
 | Error               | Enum                        | Errors enumeration for errors that occurred.                               |
-| WarningMessageList  | List<String>                | A list of warning messages.                                                |
+| WarningMessageList  | `List<String>`                | A list of warning messages.                                                |
 
 The following table describes the properties of objects within the **MigrationResultDetails** object that are common to both **MigrationResult** and **MigrationDataResult** objects.
 
 | Property name | Type | Definition |
 |---------------|------|------------|
 | FeatureId     | String | The name of the migration setting that is related to the item. Examples of values include **IPConfig** and **DNS**. This property is empty for data migration. |
-| Messages      | List<String> | A list of detailed event messages. |
+| Messages      | `List<String>` | A list of detailed event messages. |
 | DetailCode    | Integer | The error or warning code associated with each event message. |
 | Severity      | Enum | The severity of an event, if events occurred. Examples of values include **Information**, **Error**, and **Warning**. |
 | Title         | String | Title of the result object. Examples of values include the network adapter physical address for IP configuration, or user name for local user migration. |
