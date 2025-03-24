@@ -40,7 +40,7 @@ The figure and the videos refer to the article examples.
 
 1. Create a [virtual network](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) in the resource group. The virtual network should have one subnet.
 
-   For example, create virtual network **az2az-Vnet** in resource group **SR-AZ2AZ**.
+   For example, create virtual network **az2az-VNet** in resource group **SR-AZ2AZ**.
 
 1. Create a [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM). Add one inbound security rule for Remote Desktop Protocol (RDP) port 3389 to the network security group. You can choose to remove this rule after you finish setup.
 
@@ -49,7 +49,7 @@ The figure and the videos refer to the article examples.
    1. Create network security group (**az2az-NSG**) in resource group **SR-AZ2AZ**.
    1. Create an inbound security rule for RDP:3389 to the network security group.
 
-1. Create a Windows Server [virtual machine](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the resource group (**SR-AZ2AZ**). Use the previously created virtual network (**az2az-Vnet**) and network security group (**az2az-NSG**).
+1. Create a Windows Server [virtual machine](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the resource group (**SR-AZ2AZ**). Use the previously created virtual network (**az2az-VNet**) and network security group (**az2az-NSG**).
 
    For example:
 
@@ -79,7 +79,7 @@ The figure and the videos refer to the article examples.
 
    1. Connect all the nodes to the domain and provide administrator permissions to the user you created.
 
-      - Change the DNS server of the virtual network to the domain controller private IP address. In the example, the domain controller **az2azDC** has a private IP address (10.3.0.8). In the virtual network (**az2az-Vnet**), change **DNS Server** to **10.3.0.8**.
+      - Change the DNS server of the virtual network to the domain controller private IP address. In the example, the domain controller **az2azDC** has a private IP address (10.3.0.8). In the virtual network (**az2az-VNet**), change **DNS Server** to **10.3.0.8**.
 
       - In the example, connect all the nodes to `contoso.com` and provide administrator permissions to the user *contosoadmin*.
 
@@ -110,19 +110,19 @@ The figure and the videos refer to the article examples.
 
    1. Provide the cluster IP address as a static private IP address for the load balancer **azlbr1**:
 
-      - Front-end IP: 10.3.0.100 (pick up an unused IP address from the virtual network **az2az-Vnet** subnet).
+      - Front-end IP: 10.3.0.100 (pick up an unused IP address from the virtual network **az2az-VNet** subnet).
       - Create a back-end pool for each load balancer. Add the associated cluster nodes.
-      - Create a Health Probe on port 59999.
-      - Create a load balance rule. Allow high availability ports, with Floating IP enabled.
+      - Create a health probe on port 59999.
+      - Create a load-balance rule. Allow high-availability ports, with floating IP enabled.
 
    1. Provide the cluster IP address as a static private IP address for the load balancer **azlbr2**:
 
-      - Front-end IP: 10.0.0.10 (pick up an unused IP address from the virtual network **az2az-Vnet** subnet).
+      - Front-end IP: 10.0.0.10 (pick up an unused IP address from the virtual network **az2az-VNet** subnet).
       - Create a back-end pool for each load balancer. Add the associated cluster nodes.
-      - Create a Health Probe on port 59999.
-      - Create a load balance rule. Allow high availability ports, with Floating IP enabled.
+      - Create a health probe on port 59999.
+      - Create a load-balance rule. Allow high-availability ports, with floating IP enabled.
 
-1. On each cluster node, open port 59999 (Health Probe).
+1. On each cluster node, open port 59999 (the health probe).
 
     Run the following command on each node:
 
@@ -130,9 +130,9 @@ The figure and the videos refer to the article examples.
       netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any
     ```
 
-1. Instruct the cluster to listen for Health Probe messages on port 59999 and respond from the node that currently owns this resource.
+1. Instruct the cluster to listen for health probe messages on port 59999 and respond from the node that currently owns this resource.
 
-    For each cluster, run Health Probe once from any one node of the cluster.
+    For each cluster, run the health probe once from any one node of the cluster.
 
     In the following sample code, make sure that you change the value for `ILBIP` per your configuration values. Run the following command from any one node **az2az1**/**az2az2**:
 
@@ -177,7 +177,7 @@ The figure and the videos refer to the article examples.
 
 1. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#run-cluster-validation-tests) before you go to the next step.
 
-1. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test and in long-running performance evaluation mode.
+1. Start Windows PowerShell and use the [`Test-SRTopology`](/powershell/module/storagereplica/test-srtopology) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test and in long-running performance evaluation mode.
 
 1. Configure cluster-to-cluster storage replication.
 
@@ -197,9 +197,9 @@ The figure and the videos refer to the article examples.
 
 1. Create a Storage Replica partnership for the two clusters:
 
-    - Cluster **SRAZC1**: For volume location, use *C:\ClusterStorage\DataDisk1*. For log location, use *G:\*.
+    - Cluster **SRAZC1**: For volume location, use *C:\ClusterStorage\DataDisk1*. For log location, use *G:\\*.
 
-    - Cluster **SRAZC2**: For volume location, use *C:\ClusterStorage\DataDiskCross*. For log location, use *G:\*.
+    - Cluster **SRAZC2**: For volume location, use *C:\ClusterStorage\DataDiskCross*. For log location, use *G:\\*.
 
 Then run the following command:
 

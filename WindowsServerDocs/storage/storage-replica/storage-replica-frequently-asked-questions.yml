@@ -60,7 +60,7 @@ sections:
       - question: |
           Can I specify the network interfaces to use for replication?
         answer: |
-          Yes. To specify the network interfaces to use for replication, use the Set-SRNetworkConstraint cmdlet. This cmdlet operates at the interface layer. You can use it both in cluster and noncluster scenarios.
+          Yes. To specify the network interfaces to use for replication, use the `Set-SRNetworkConstraint` cmdlet. This cmdlet operates at the interface layer. You can use it both in cluster and noncluster scenarios.
 
           For example, with a standalone server (on each node), run these commands:
           
@@ -167,7 +167,7 @@ sections:
         answer: |
           You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including nonclustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs. After initial replication begins, you can't shrink or trim the volume.
           
-          You can also use seeded data volumes to reduce bandwidth usage and, in some scenarios, synchronization time. Use the Seeded option in Failover Cluster Manager or use the New-SRPartnership cmdlet to ensure that the destination volume has some subset of data from the primary site. If the volume is mostly empty, using seeded sync might reduce time and bandwidth usage.
+          You can also use seeded data volumes to reduce bandwidth usage and, in some scenarios, synchronization time. Use the Seeded option in Failover Cluster Manager or use the `New-SRPartnership` cmdlet to ensure that the destination volume has some subset of data from the primary site. If the volume is mostly empty, using seeded sync might reduce time and bandwidth usage.
           
           To seed data, you can choose from options that offer varying degrees of efficacy:
           
@@ -178,7 +178,7 @@ sections:
       - question: |
           Can I delegate users to administer replication?
         answer: |
-          Yes. Use the Grant-SRDelegation cmdlet to delegate users. You can use the command to set specific users in server-to-server, cluster-to-cluster, and stretch cluster replication scenarios. The command delegates the permissions to create, modify, or remove replication without being a member of the local administrators group.
+          Yes. Use the `Grant-SRDelegation` cmdlet to delegate users. You can use the command to set specific users in server-to-server, cluster-to-cluster, and stretch cluster replication scenarios. The command delegates the permissions to create, modify, or remove replication without being a member of the local administrators group.
 
           For example:
           
@@ -186,14 +186,14 @@ sections:
           Grant-SRDelegation -UserName contoso\tonywang
           ```
           
-          The cmdlet reminds you that the user needs to sign out and then sign in to the server they're planning to administer for the change to take effect. You can use the Get-SRDelegation and Revoke-SRDelegation cmdlets to further control delegation.
+          The cmdlet reminds you that the user needs to sign out and then sign in to the server they're planning to administer for the change to take effect. You can use the `Get-SRDelegation` and `Revoke-SRDelegation` cmdlets to further control delegation.
           
       - question: |
           What are my backup and restore options for replicated volumes?
         answer: |
           Storage Replica supports backing up and restoring the source volume. It also supports creating and restoring snapshots of the source volume. You can't back up or restore the destination volume while it's protected by Storage Replica because it isn't mounted or accessible.
           
-          If you experience a disaster and the source volume is lost, you can use the Set-SRPartnership cmdlet to promote the destination as the new source volume. On the newly promoted source, you can back up or restore that volume. You can also remove replication with by using the Remove-SRPartnership and Remove-SRGroup cmdlets to remount the volume as read/writable.
+          If you experience a disaster and the source volume is lost, you can use the `Set-SRPartnership` cmdlet to promote the destination as the new source volume. On the newly promoted source, you can back up or restore that volume. You can also remove replication with by using the `Remove-SRPartnership` and `Remove-SRGroup` cmdlets to remount the volume as read/writable.
           
           To create periodic application-consistent snapshots, you can use Volume Shadow Copy Service (VSS) by running *VSSAdmin.exe* on the source server to snapshot replicated data volumes.
           
@@ -226,7 +226,7 @@ sections:
           - 5985 (WSManHTTP; management protocol for Windows Management Instrumentation (WMI)/Common Information Model (CIM)/PowerShell)
           
           > [!NOTE]
-          > The Test-SRTopology cmdlet requires ICMPv4/ICMPv6, but not for replication or management.
+          > The `Test-SRTopology` cmdlet requires ICMPv4/ICMPv6, but not for replication or management.
           
       - question: |
           What are log volume best practices?
@@ -243,7 +243,7 @@ sections:
           > [!IMPORTANT]
           > We recommend that your log storage be faster than your data storage, and that log volumes are never used for other workloads.
           
-          You can get log sizing recommendations by running the Test-SRTopology cmdlet. Alternatively, you can use performance counters on existing servers to make a log size judgment. The formula is simple: monitor the data disk throughput (`Avg Write Bytes/Sec``) under the workload and use it to calculate the amount of time it takes to fill up the log of different sizes. For example, data disk throughput of 50 MB/s causes the log of 120 GB to wrap in 120 GB divided by 50 MB per seconds, which is 2,400 seconds or 40 minutes. So the amount of time that the destination server could be unreachable before the log wrapped is 40 minutes. If the log wraps but the destination becomes reachable again, the source replays blocks via the bitmap log instead of the main log. The size of the log doesn't have an effect on performance.
+          You can get log sizing recommendations by running the `Test-SRTopology` cmdlet. Alternatively, you can use performance counters on existing servers to make a log size judgment. The formula is simple: monitor the data disk throughput (`Avg Write Bytes/Sec`) under the workload and use it to calculate the amount of time it takes to fill up the log of different sizes. For example, data disk throughput of 50 MB/s causes the log of 120 GB to wrap in 120 GB divided by 50 MB per seconds, which is 2,400 seconds or 40 minutes. So the amount of time that the destination server could be unreachable before the log wrapped is 40 minutes. If the log wraps but the destination becomes reachable again, the source replays blocks via the bitmap log instead of the main log. The size of the log doesn't have an effect on performance.
           
           *Only* the data disk from the source cluster should be backed up. The Storage Replica log disks should *not* be backed up because a backup can conflict with Storage Replica operations.
           
@@ -274,7 +274,7 @@ sections:
         answer: |
           Unfortunately, we don't support creating a *new* partnership between Windows Server 2019 and Windows Server 2016. You can safely upgrade a server or cluster running Windows Server 2016 to Windows Server 2019 and any *existing* partnerships continue to work.
           
-          To get the improved replication performance of Windows Server 2019, all members of the partnership must run Windows Server 2019. You must also delete existing partnerships and associated replication groups, and then re-create them with seeded data (either when you create the partnership in Windows Admin Center or by using the New-SRPartnership cmdlet).
+          To get the improved replication performance of Windows Server 2019, all members of the partnership must run Windows Server 2019. You must also delete existing partnerships and associated replication groups, and then re-create them with seeded data (either when you create the partnership in Windows Admin Center or by using the `New-SRPartnership` cmdlet).
           
       - question: |
           How do I report an issue with Storage Replica or with the documentation?

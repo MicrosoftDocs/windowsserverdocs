@@ -13,7 +13,7 @@ You can use Storage Replica to configure two servers to sync data so that each h
 
 To manage Storage Replica, you can use [Windows Admin Center](../../manage/windows-admin-center/overview.md) or PowerShell.
 
-For an overview of using Storage Replica in Windows Admin Center, see the following video:
+For an overview of how to use Storage Replica in Windows Admin Center, see the following video:
 
 > [!video 310d4531-23a6-4140-8892-fecc4a65c2a1]
 
@@ -36,7 +36,7 @@ For an overview of using Storage Replica in Windows Admin Center, see the follow
 > [!IMPORTANT]
 > In this scenario, each server must be at a different physical site or in a different logical site. Each server must be able to communicate with the other server via a network.
 
-You can verify many of these requirements by using the Test-SRTopology cmdlet. You get access to this tool if you install Storage Replica or install the Storage Replica Management Tools features on at least one server. To use the tool, just install and run the cmdlet. More information is included later in the article.
+You can verify many of these requirements by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or install the Storage Replica Management Tools features on at least one server. To use the tool, just install and run the cmdlet. More information is included later in the article.
 
 ## Windows Admin Center requirements
 
@@ -170,14 +170,12 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
         * Provision the storage by using your vendor documentation.
 
-1. Start Windows PowerShell and use the Test-SRTopology cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test or in a long-running performance evaluation mode.
+1. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test or in a long-running performance evaluation mode.
 
-    For example, to validate that the proposed nodes each have an F: volume and a G: volume and to run the test for 30 minutes, run:
+    For example, to validate that the proposed nodes each have an F: volume and a G: volume and to run the test for 30 minutes, use this command:
 
     ```powershell
     MD c:\temp
-
-   To validate the proposed nodes that each have a **F:** and **G:** volume and run the test for 30 minutes:
 
    > [!IMPORTANT]
    > If you use a test server with no write I/O load on the specified source volume during the evaluation period, consider adding a workload to generate a useful report. You should test with production-like workloads to see real numbers and recommended log sizes. Alternatively, copy some files into the source volume during the test or download and run [DISKSPD](/azure/azure-local/manage/diskspd-overview?context=/windows-server/context/windows-server-storage) to generate write I/Os. For example, copy a sample with a low write I/O workload that runs for 10 minutes to the D: volume:
@@ -241,9 +239,9 @@ Next, configure server-to-server replication by using Windows PowerShell. You mu
    ```
 
    > [!IMPORTANT]
-   > The default log size is 8 GB. Depending on the results of the Test-SRTopology cmdlet, you might choose to use the `-LogSizeInBytes` parameter to set a  higher or lower value.
+   > The default log size is 8 GB. Depending on the results of the `Test-SRTopology` cmdlet, you might choose to use the `-LogSizeInBytes` parameter to set a higher or lower value.
 
-1. To get the replication source and destination state, use the Get-SRGroup and Get-SRPartnership cmdlets:
+1. To get the replication source and destination state, use the `Get-SRGroup` and `Get-SRPartnership` cmdlets:
 
     ```powershell
     Get-SRGroup
@@ -324,9 +322,9 @@ Next, configure server-to-server replication by using Windows PowerShell. You mu
 
 Finally, manage and operate your server-to-server replicated infrastructure. You can perform all the following steps directly on the nodes directly or from a remote management computer that contains Windows Server Remote Server Administration Tools.
 
-1. Use the Get-SRPartnership and Get-SRGroup cmdlets to determine the current source and destination of replication and their status.
+1. Use the `Get-SRPartnership` and `Get-SRGroup` cmdlets to determine the current source and destination of replication and their status.
 
-1. To measure replication performance, use the Get-Counter cmdlet on both the source and destination nodes. The counter names are:
+1. To measure replication performance, use the `Get-Counter` cmdlet on both the source and destination nodes. The counter names are:
 
     * \Storage Replica Partition I/O Statistics(*)\Number of times flush paused
 
@@ -382,7 +380,7 @@ Finally, manage and operate your server-to-server replicated infrastructure. You
 
     For more information on performance counters in Windows PowerShell, see [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).
 
-1. To move the replication direction from one site, use the Set-SRPartnership cmdlet:
+1. To move the replication direction from one site, use the `Set-SRPartnership` cmdlet:
 
    ```powershell
      $params = @{
@@ -399,7 +397,7 @@ Finally, manage and operate your server-to-server replicated infrastructure. You
 
     Check the event logs to see the direction of replication change and recovery mode, and then reconcile. Write I/Os can then write to the storage of the new source server. Changing the replication direction blocks write I/Os on the originating source computer.
 
-1. To remove replication, use Get-SRGroup, Get-SRPartnership, Remove-SRGroup, and Remove-SRPartnership on each node. Ensure you run the Remove-SRPartnership cmdlet only on the current source of replication, not on the destination server. Run Remove-SRGroup on both servers.
+1. To remove replication, use `Get-SRGroup`, `Get-SRPartnership`, `Remove-SRGroup`, and `Remove-SRPartnership` on each node. Ensure you run the `Remove-SRPartnership` cmdlet only on the current source of replication, not on the destination server. Run `Remove-SRGroup` on both servers.
 
    For example, to remove all replication from two servers, run these commands:
 
