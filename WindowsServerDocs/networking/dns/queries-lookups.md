@@ -129,7 +129,7 @@ In all cases, the response is stored in the DNS client cache, regardless of whet
 
 The following flowchart illustrates the described process of querying a DNS server.
 
-:::image type="content" source="../media/queries-lookups/dns-query.svg" alt-text="A flowchart illustrating the process of querying a DNS server" lightbox="../media/queries-lookups/dns-query.svg":::
+:::image type="content" source="../media/queries-lookups/dns-query.svg" alt-text="A flowchart illustrating the process of querying a DNS server" border="false" lightbox="../media/queries-lookups/dns-query.svg":::
 
 #### DNS recursion
 
