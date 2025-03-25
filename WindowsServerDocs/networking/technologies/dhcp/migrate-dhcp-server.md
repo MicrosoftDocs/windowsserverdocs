@@ -18,7 +18,7 @@ This guide describes the steps for migrating existing DHCP server settings to a 
 - Migration from a source server to a destination server that is running an operating system in a different system user interface (UI) language than the source server isn't supported.
 - Migration is recommended instead of an upgrade even when the hardware is native x64-based.
 
-This guide is intended for IT administrators, IT professionals, and other knowledge workers who are responsible for the operation and deployment of DHCP servers in a managed environment. The server administrator can choose which components of an existing installation to migrate; together with the server role, these components usually include configuration, data, system identity, and operating system settings.
+This guide is intended for IT administrators, IT professionals, and other knowledge workers who are responsible for the operation and deployment of DHCP servers in a managed environment. The server administrator can choose which components of an existing installation to migrate. Together with the server role, these components usually include configuration, data, system identity, and operating system settings.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ DHCP Server migration is divided into the following major sections:
 - [Prepare to migrate](#prepare-to-migrate): The premigration process involves the manual collection of data, followed by steps to prepare the destination and source servers.
 - [Migrate the DHCP Server Role](#migrate-the-dhcp-server-role): The migration process includes source and destination server procedures that use the Export and Import cmdlets to automatically collect, store, and then migrate server role settings.
 - [Verify the migration](#verify-the-migration): Confirm that the destination server successfully replaced the source server.
-- [Post-migration tasks](#post-migration-tasks): Retire, or repurpose the source server. Troubleshoot the migration if it failed, and rollback if needed.
+- [Complete post-migration tasks](#post-migration-tasks): Retire, or repurpose the source server. Troubleshoot the migration if it failed, and roll back if needed.
 
 ![Illustration of the server migration process, showing premigration, migration, and post-migration steps.](media/server-migration-process.png)
 
@@ -178,7 +178,7 @@ Follow the steps in this section to migrate DHCP Server from the source server.
             The **-Users** parameter must be specified only if the DHCP Administrators group includes local users. Otherwise, you can use the **-Group** parameter and all members of DHCP administrators will be migrated. Administrator group members can include domain users.
 
             > [!IMPORTANT]
-            > If the source server is a domain controller, but the destination server isn't , Domain Local groups are migrated as local groups, and domain users are migrated as local users.
+            > If the source server is a domain controller, but the destination server isn't, Domain Local groups are migrated as local groups, and domain users are migrated as local users.
 
           - The **-IPConfig** parameter collects IP information when it's used with the **Export-SmigServerSetting** cmdlet on the source server; the **-IPConfig** parameter applies settings when the **Import-SmigServerSetting** cmdlet is used on the destination server.
 
@@ -209,14 +209,14 @@ Return to the destination server and follow these steps to complete the migratio
 
     - You can either use a single command line with all the parameters to import DHCP settings (as when you export data from the source server) or you can use the cmdlet multiple times to import data one parameter at a time.
 
-    - If you decide to run the **Import-SmigServerSetting** cmdlet separately to import the IP settings, use the source IPSettings.txt file, referred to in step 3 of the previous procedure. You the source physical addresses to the destination physical addresses in step 3 of this procedure. If you plan to import role and IP settings separately, you should import IP settings first to avoid any IP conflicts. You can then import the DHCP role.
+    - If you decide to run the **Import-SmigServerSetting** cmdlet separately to import the IP settings, use the source IPSettings.txt file, referred to in step 3 of the previous procedure. You map the source physical addresses to the destination physical addresses in step 3 of this procedure. If you plan to import role and IP settings separately, you should import IP settings first to avoid any IP conflicts. You can then import the DHCP role.
 
     - If the DHCP Administrators group includes local users, then use the **-Users** parameter combined with the **-Group** parameter to import local users into the DHCP Administrators group. If it only contains domain users, then use only the **-Group** parameter.
 
     > [!NOTE]
     > If the source server is a domain member server, but the destination server is a domain controller, imported local users are elevated to domain users, and imported local groups become Domain Local groups on the destination server.
 
-    - If the DHCP Server role that you're migrating hasn't been installed on the destination server, the **Import-SmigServerSetting** cmdlet installs that DHCP Server role and its dependencies. You might have to restart the destination computer to complete the installation after the DHCP Server role is installed by the cmdlet. Then, to complete the import operation after you restart the computer you must run the **Import-SmigServerSetting** cmdlet again along with the **-Force** parameter..
+    - If the DHCP Server role that you're migrating hasn't been installed on the destination server, the **Import-SmigServerSetting** cmdlet installs that DHCP Server role and its dependencies. You might have to restart the destination computer to complete the installation after the DHCP Server role is installed by the cmdlet. Then, to complete the import operation after you restart the computer you must run the **Import-SmigServerSetting** cmdlet again along with the **-Force** parameter.
 
 1. On the destination server, run the following command, where *\<storepath\>* is the available path that contains the Svrmig.mig file, *\<SourcePhysicalAddress-1\>* and *\<SourcePhysicalAddress-2\>* are comma-separated lists of the physical addresses of the source network adapter, and *\<TargetPhysicalAddress-1\>* and *\<TargetPhysicalAddress-2\>* are comma-separated lists of the physical addresses of the destination network adapter:
 
