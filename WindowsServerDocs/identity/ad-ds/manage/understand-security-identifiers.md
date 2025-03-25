@@ -218,16 +218,16 @@ The following table lists the well-known SIDs:
 | S-1-5-32-549| Server Operators| A built-in group that exists only on domain controllers. By default, the group has no members. Server Operators can:<li>Sign in to a server interactively.</li><li>Create and delete network shares.</li><li>Start and stop services.</li><li>Back up and restore files.</li><li>Format the hard disk of the computer.</li><li>Shut down the computer.</li>|
 | S-1-5-32-550 | Print Operators| A built-in group that exists only on domain controllers. By default, the only member is the Domain Users group. Print Operators can manage printers and document queues.|
 | S-1-5-32-551 | Backup Operators| A built-in group. By default, the group has no members. Backup Operators can back up and restore all files on a computer, regardless of the permissions that protect those files. Backup Operators also can sign in to the computer and shut it down.|
-| S-1-5-32-552 | Replicators | A built-in group that's used by the File Replication Service on domain controllers. By default, the group has no members. *Don't* add users to this group.|
+| S-1-5-32-552 | Replicators | A built-in group that supports file replication in a domain. By default, the group has no members. *Don't* add users to this group.|
 | S-1-5-*domain*-553| RAS and IAS Servers| A local domain group. By default, this group has no members. Computers that are running the Routing and Remote Access Service are added to the group automatically.<br>Members of this group have access to certain properties of User objects, such as Read Account Restrictions, Read Logon Information, and Read Remote Access Information.|
-|S-1-5-32-554|Builtin\Pre-Windows 2000 Compatible Access|An alias added by Windows 2000. A backward compatibility group that allows read access on all users and groups in the domain.|
+|S-1-5-32-554|Builtin\Pre-Windows 2000 Compatible Access|A backward compatibility group that allows read access on all users and groups in the domain.|
 |S-1-5-32-555|Builtin\Remote Desktop Users|An alias. Members of this group are granted the right to sign in remotely.|
 |S-1-5-32-556|Builtin\Network Configuration Operators|An alias. Members of this group can have some administrative privileges to manage configuration of networking features.|
 |S-1-5-32-557|Builtin\Incoming Forest Trust Builders|An alias. Members of this group can create incoming, one-way trusts to the forest.|
 |S-1-5-32-558|Builtin\Performance Monitor Users|An alias. Members of this group have remote access to monitor the computer.|
 |S-1-5-32-559|Builtin\Performance Log Users|An alias. Members of this group have remote access to schedule logging of performance counters on the computer.|
 |S-1-5-32-560|Builtin\Windows Authorization Access Group|An alias. Members of this group have access to the computed `tokenGroupsGlobalAndUniversal` attribute on User objects.|
-|S-1-5-32-561|Builtin\Terminal Server License Servers|An alias. A group for Terminal Server license servers. When Windows Server 2003 Service Pack 1 is installed, a new local group is created.|
+|S-1-5-32-561|Builtin\Terminal Server License Servers|An alias. A group for Terminal Server license servers.|
 |S-1-5-32-562|Builtin\Distributed COM Users|An alias. A group for Component Object Model (COM) users to provide computer-wide access controls that govern access to all call, activation, or launch requests on the computer.|
 |S-1-5-32-568|Builtin\IIS_IUSRS|An alias. A built-in group account for IIS users.|
 |S-1-5-32-569|Builtin\Cryptographic Operators|A built-in local group. Members are authorized to perform cryptographic operations.|
@@ -245,7 +245,7 @@ The following table lists the well-known SIDs:
 | S-1-5-64-14 | SChannel Authentication| A SID that's used when the Secure Channel (Schannel) authentication package authenticates the client.|
 | S-1-5-64-21 | Digest Authentication| A SID that's used when the Digest authentication package authenticates the client.|
 | S-1-5-80 | NT Service | A SID that's used as a New Technology Service (NT Service) account prefix.|
-| S-1-5-80-0 | All Services| A group that includes all service processes that are configured on the system. The operating system controls the membership of this group. The S-1-5-80-0 SID represents NT SERVICES\ALL SERVICES. This SID was introduced in Windows Server 2008 R2.|
+| S-1-5-80-0 | All Services| A group that includes all service processes that are configured on the system. The operating system controls the membership of this group. The S-1-5-80-0 SID represents NT SERVICES\ALL SERVICES.|
 | S-1-5-83-0| NT VIRTUAL MACHINE\Virtual Machines| A built-in group. The group is created when the Hyper-V role is installed. The Hyper-V Management Service (VMMS) maintains the membership of this group. This group requires the *Create Symbolic Links* right (SeCreateSymbolicLinkPrivilege) and the *Log on as a Service* right (SeServiceLogonRight). |
 
 The following RIDs are relative to each domain:
