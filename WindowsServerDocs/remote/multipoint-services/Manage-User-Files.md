@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: e94efa0b-8531-4a2d-94ce-858b5642cc68
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Manage User Files

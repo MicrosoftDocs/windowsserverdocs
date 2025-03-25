@@ -4,7 +4,7 @@ description: Learn how to configure the infrastructure that is required for an a
 manager: brianlic
 ms.topic: article
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

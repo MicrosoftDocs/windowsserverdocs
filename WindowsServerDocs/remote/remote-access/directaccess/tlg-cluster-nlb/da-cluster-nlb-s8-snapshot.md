@@ -4,7 +4,7 @@ description: Learn how to create and save a snapshot of the DirectAccess Cluster
 manager: brianlic
 ms.topic: article
 ms.assetid: 915ef7dd-169d-4d58-9174-438d8ffa3584
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
