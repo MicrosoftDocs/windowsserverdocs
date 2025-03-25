@@ -4,7 +4,7 @@ description: This topic provides links to the test lab guides for DirectAccess i
 manager: brianlic
 ms.topic: article
 ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

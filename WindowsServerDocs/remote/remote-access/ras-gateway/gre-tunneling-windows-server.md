@@ -4,7 +4,7 @@ description: You can use this topic to gain an understanding of updates to Gener
 manager: brianlic
 ms.topic: article
 ms.assetid: df2023bf-ba64-481e-b222-6f709edaa5c1
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

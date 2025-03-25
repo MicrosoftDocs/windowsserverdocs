@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: fc9ce813-6ecb-4422-8f4b-5226386823f3
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Restart or Shut Down

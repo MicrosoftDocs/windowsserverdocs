@@ -3,7 +3,7 @@ title: Beginning your General Data Protection Regulation (GDPR) journey for Wind
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
 ms.topic: article
 ms.date: 09/25/2017
-ms.author: roharwoo
+ms.author: jgerend
 author: nirb-ms
 ---
 

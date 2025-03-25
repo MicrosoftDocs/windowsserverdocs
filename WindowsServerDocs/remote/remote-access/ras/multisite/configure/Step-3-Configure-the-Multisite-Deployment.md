@@ -4,7 +4,7 @@ description: Learn about the steps required to set up the  Remote Access multisi
 manager: brianlic
 ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

@@ -3,7 +3,7 @@ title: add-DriverGroupFilter
 description: Reference article for the add-DriverGroupFilter command, which adds a filter to a driver group on a server.
 ms.topic: reference
 ms.assetid: a66c5e68-99ea-4e47-b68d-8109633ae336
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

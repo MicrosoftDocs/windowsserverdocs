@@ -4,7 +4,7 @@ description: Learn how to plan any additional certificate requirements, how clie
 manager: brianlic
 ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

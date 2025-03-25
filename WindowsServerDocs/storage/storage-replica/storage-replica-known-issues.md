@@ -2,7 +2,7 @@
 title: Storage Replica Known Issues
 description: Review known issues with Storage Replica in Windows Server and how to resolve them.
 manager: candyc
-ms.author: roharwoo
+ms.author: jgerend
 ms.topic: troubleshooting
 author: robinharwood
 ms.date: 05/31/2023
@@ -278,7 +278,7 @@ Event ID 1241, "The Recovery Point Objective (RPO) of the asynchronous destinati
 
 - The asynchronous destination is currently disconnected. The RPO might become available after the connection is restored.
 
-- The asynchronous destination can't keep pace with the source, so the most recent destination log record is no longer present in the source log. The destination starts block copying. The RPO should become available after block copying completes.
+- The asynchronous destination can't keep pace with the source, so the most recent destination log record is no longer present in the source log. The destination begins block copying. The RPO should become available after block copying completes.
 
 During initial sync, this event is expected and can be safely ignored. The event behavior might change in a later release. If you see this behavior during ongoing asynchronous replication, investigate the partnership to determine why replication is delayed beyond your configured RPO (30 seconds by default).
 
