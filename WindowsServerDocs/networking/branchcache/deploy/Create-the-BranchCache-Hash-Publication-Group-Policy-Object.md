@@ -4,7 +4,7 @@ description: Learn how to create the BranchCache hash publication Group Policy O
 manager: brianlic
 ms.topic: how-to
 ms.assetid: c3d33bed-83ef-4eb8-acf9-0719ecb4a931
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 01/05/2021
 ---

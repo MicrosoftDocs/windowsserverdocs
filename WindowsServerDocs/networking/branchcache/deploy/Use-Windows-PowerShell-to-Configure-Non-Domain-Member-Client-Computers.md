@@ -4,7 +4,7 @@ description: Learn how to manually configure a BranchCache client computer for d
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 1b511e1a-686d-441f-a1c7-d4d029e1a061
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 01/05/2021
 ---
