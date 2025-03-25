@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 00aba4c4-0244-4b39-8c85-c46fd96e1d6a
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 # Enable or Disable Disk Protection

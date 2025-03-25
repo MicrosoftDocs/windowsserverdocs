@@ -4,7 +4,7 @@ description: Learn about completing the steps in the Demonstrate DirectAccess Si
 manager: brianlic
 ms.topic: article
 ms.assetid: e1e15544-b575-4f39-af0b-771bfae8b0b7
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

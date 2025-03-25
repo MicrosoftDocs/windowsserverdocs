@@ -4,7 +4,7 @@ description: Learn how to configure the infrastructure required for enabling Dir
 manager: brianlic
 ms.topic: article
 ms.assetid: 5dc529f7-7bc3-48dd-b83d-92a09e4055c4
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
