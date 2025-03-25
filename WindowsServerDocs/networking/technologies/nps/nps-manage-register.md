@@ -4,7 +4,7 @@ description: Learn how to register a server running Network Policy Server in Win
 manager: brianlic
 ms.topic: article
 ms.assetid: 2de954fd-a7d8-4cc6-85b1-b0c3c06f788f
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---

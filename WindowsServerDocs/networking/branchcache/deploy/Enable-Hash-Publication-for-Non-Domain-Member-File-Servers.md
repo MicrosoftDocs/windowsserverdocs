@@ -4,7 +4,7 @@ description: Learn how to configure hash publication for BranchCache using local
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 11584b73-f9e2-4530-afa5-b8df970e6b24
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 01/05/2021
 ---

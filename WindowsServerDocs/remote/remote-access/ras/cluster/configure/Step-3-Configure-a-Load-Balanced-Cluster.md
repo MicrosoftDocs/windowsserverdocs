@@ -4,7 +4,7 @@ description: Learn how to configure load-balancing on the single server, configu
 manager: brianlic
 ms.topic: article
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
