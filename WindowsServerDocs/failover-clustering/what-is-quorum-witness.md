@@ -4,7 +4,7 @@ description: Learn more about failover cluster quorum cloud witness, disk witnes
 ms.author: alalve
 author: xelu86
 ms.topic: conceptual
-ms.date: 03/19/2025
+ms.date: 03/25/2025
 ---
 
 # What is a quorum witness?
@@ -13,7 +13,7 @@ In a failover cluster, a quorum witness is a component that helps maintain the h
 
 In a cluster, each node gets a vote, and the quorum witness can also have a vote. The total number of votes determines the quorum. For the cluster to be operational, more than half of the votes must be active. If the number of votes falls below this threshold, the cluster stops running to avoid split-brain scenarios, where two parts of the cluster think they're the active part, leading to data corruption.
 
-The role of the quorum witness is to provide an additional vote to achieve or maintain a majority when there's an even number of nodes, or if certain nodes fail. If the active vote count drops below the required majority, the cluster ceases operations to prevent 'split-brain' conditions. Split-brain is a scenario where when separate sections of the cluster each believe they're functioning independently, which can result in data inconsistencies or corruption.
+The role of the quorum witness is to provide an extra vote to achieve or maintain a majority when there's an even number of nodes, or if certain nodes fail. If the active vote count drops below the required majority, the cluster ceases operations to prevent 'split-brain' conditions. Split-brain is a scenario where when separate sections of the cluster each believe they're functioning independently, which can result in data inconsistencies or corruption.
 
 ## Quorum witness types
 
@@ -23,7 +23,18 @@ There are three distinct types of quorum witnesses that can be configured to mai
 - **Disk witness** - A shared disk accessible by all nodes
 - **File share witness** - A shared folder accessible by all nodes
 
-To ensure continuous operation and data integrity, these quorum witnesses each offering a unique method to achieve a majority vote for cluster operations.
+To ensure continuous operation and data integrity, these quorum witnesses each offer a unique method to achieve a majority vote for cluster operations. As a best practice, configure the quorum to have an odd number of voting elements. If the cluster has an even number of voting nodes, add a disk witness or a file share witness. This configuration allows the cluster to tolerate one extra node failure. Moreover, adding a witness vote ensures the cluster can continue operating even if half of the cluster nodes fail or lose connectivity simultaneously. Depending on the quorum configuration you choose, the cluster is configured in one of the following quorum modes:
+
+| Mode | Description |
+|--|--|
+| Node majority (no witness) | Only nodes have votes. No quorum witness is configured. The cluster quorum depends on the majority votes from the active cluster nodes. |
+| Node majority with witness (disk or file share) | Nodes have votes. In addition, a quorum witness has a vote. The cluster quorum relies on the majority votes from the active cluster nodes, including any witness votes. A quorum witness can be a designated disk witness or a designated file share witness. |
+| No majority (disk witness only) | No nodes have votes. Only a disk witness has a vote. <br><br>The cluster quorum relies on the state of the disk witness. Generally, this mode isn't recommended, and it shouldn't be selected because it creates a single point of failure for the cluster. |
+
+> If you're using a file share witness or a cloud witness and need to shut down all cluster nodes for maintenance or other purposes, make sure to restart the cluster service on the last node that was active before the shutdown. Witness types like these don't store the latest cluster database, which can lead to errors during device startup. To learn more, see [Event 1561](/previous-versions/troubleshoot/windows-server/failover-clustering-system-log-events#event-1561-service_nonstorage_witness_better_tag).
+
+> [!TIP]
+> You can verify the dynamic vote assigned to a node by checking the **DynamicWeight** property of the cluster node using the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) cmdlet. A **DynamicWeight** value of **0** means the node doesn't have a quorum vote, while a value of **1** indicates that the node has a quorum vote.
 
 ### Cloud witness
 
@@ -33,7 +44,7 @@ Cloud witness is different from traditional cluster quorum witness configuration
 
 Cloud witness configurations don't require a third separate datacenter and gets an extra vote to prevent total shutdowns if one of the other datacenters turns off. It doesn't need an extra site for storing the quorum witness and also doesn't need the regular physical maintenance required for an on-site datacenter.
 
-Along with redundancy, there are other benefits to using the Cloud Witness feature:
+Along with redundancy, there are other benefits to using the cloud witness feature:
 
 - Using Azure Blob Storage removes extra maintenance overhead normally required for hosting VMs in the public cloud.
 
@@ -43,6 +54,8 @@ Along with redundancy, there are other benefits to using the Cloud Witness featu
 
 - Azure comes with a built-in cloud witness resource type.
 
+- A cloud witness doesn't store a copy of the cluster database.
+
 ### Disk witness
 
 A disk witness is a type of quorum witness used in a failover cluster to help maintain the high availability of the cluster. A disk witness is a shared disk that all nodes in the cluster have access to. The disk witness contains a small amount of storage space that is used to store the cluster configuration database. This storage space includes important information about the cluster, such as the state of each node and the ownership of cluster resources. Here's how it works:
@@ -51,27 +64,23 @@ A disk witness is a type of quorum witness used in a failover cluster to help ma
 
 - When the cluster service starts, each node communicates with the disk witness to read the latest cluster configuration.
 
-- The disk witness participates in the quorum voting process. If a node fails, the disk witness provides an additional vote, which can help prevent a split-brain scenario.
+- The disk witness participates in the quorum voting process. If a node fails, the disk witness provides an extra vote, which can help prevent a split-brain scenario.
 
 - If there's a network partition, the side of the partition with access to the disk witness that has the most votes continues to run, maintaining the integrity of the cluster.
 
 The disk witness is useful in clusters with an even number of nodes, where it can act as a tiebreaker to ensure there's always a majority vote. It's also helpful in scenarios where multiple nodes fail simultaneously, as the disk witness can help maintain quorum.
 
-The key benefit of using a disk witness is that it provides a consistent and reliable method for all nodes to agree on the current state of the cluster, which is crucial for the proper functioning of a failover cluster. It's important to note that the disk witness doesn't store user or application data, it's solely for the cluster configuration database and quorum voting.
+The key benefit of using a disk witness is that it provides a consistent and reliable method for all nodes to agree on the current state of the cluster. Consistency is crucial for ensuring the proper functioning of a failover cluster. It's important to note that the disk witness doesn't store user or application data, it's solely for the cluster configuration database and quorum voting.
 
 ### File share witness
 
 When a cluster contains an even number of voting nodes, you should configure a witness. Adding a witness vote enables the cluster to continue running if half the cluster nodes simultaneously go down or are disconnected. A file share witness is a type of quorum witness that uses a Server Message Block (SMB) file share to maintain cluster information in a log file. This file share can be hosted on a server, USB storage, or Network Attached Storage (NAS).
 
-The file share witness is also beneficial for multisite clusters with replicated storage.
+The file share witness is also beneficial for multisite clusters with replicated storage. You might use a file share witness when:
 
-You might use a file share witness when:
-
-- A Cloud Witness can't be used because your cluster nodes don't have a reliable internet connection or an internet connectivity.
+- A cloud witness can't be used because your cluster nodes don't have a reliable internet connection or an internet connectivity.
 
 - A disk witness can't be used because there aren't any shared drives to use for a disk witness. For example, a Storage Spaces Direct cluster, SQL Server Always On Availability Groups (AG), or Exchange Database Availability Group (DAG). None of these types of clusters use shared disks.
-
-For information about quorum configuration options, see [Configure and manage quorum](manage-cluster-quorum.md).
 
 :::image type="content" source="media/deploy-failover-cluster-quorum-witness/quorum-file-share-witness.png" alt-text="A diagram depicting a cluster quorum with a site labeled file share witness connected to site one and site two.":::
 
@@ -80,6 +89,29 @@ This example is a simplified configuration with two nodes in two on-site datacen
 However, you might notice that in addition to the two datacenters, there's also a third datacenter that acts as the *file share witness*. This datacenter is kept separate from the other two sites and hosts a file server that backs up the system file share. The file share witness functions as the quorum witness in this cluster quorum configuration, making sure the system still runs even if one of the datacenters unexpectedly shuts down.
 
 Having a file share witness provides enough redundancy to keep your file server highly available. However, you should remember that hosting the file share witness on another server in a separate site requires setup, regular maintenance, and independent connectivity to the other sites.
+
+## Node vote assignment
+
+In advanced quorum configurations, you're able to assign or remove quorum votes for individual nodes. By default, every node in the cluster is assigned a vote. However, even if a node's vote is removed, it still participates in the cluster, receive updates to the cluster database, and remain capable of hosting applications.
+
+In specific disaster recovery scenarios, you might consider removing votes from certain nodes. For instance, in a multisite cluster, you can remove votes from the nodes located in a backup site to prevent them from influencing quorum calculations. This approach is typically recommended only when planning for manual failover between sites.
+
+> [!NOTE]
+>
+> - Node vote assignment isn't recommended to enforce an odd number of voting nodes. Instead, you should configure a disk witness or file share witness.
+> - If dynamic quorum management is enabled, only the nodes that are configured to have node votes assigned can have their votes assigned or removed dynamically.
+
+## Dynamic quorum management
+
+Dynamic quorum management is an advanced configuration option that allows the cluster to adjust its quorum majority requirements dynamically. This feature enables the cluster to remain operational even as nodes are sequentially shut down, allowing the cluster to run on the last surviving node.
+
+Dynamic quorum management provides enhanced flexibility and resilience for failover clusters, making it a valuable feature for maintaining high availability in dynamic environments. With dynamic quorum management enabled, the cluster can automatically adjust the votes assigned to nodes based on the current cluster state, ensuring that the cluster can sustain node failures or planned shutdowns while maintaining quorum.
+
+Key considerations:
+
+- Dynamic quorum management doesn't allow the cluster to survive the simultaneous failure of most voting members. At the time of a node failure or shutdown, the cluster must still have a quorum majority to continue running.
+- If a node's vote is explicitly removed, the cluster can't dynamically add or remove that vote.
+- In clusters with **Storage Spaces Direct** enabled, the cluster can only tolerate up to two node failures.
 
 ## See also
 
