@@ -1,6 +1,6 @@
 ---
-description: Storage Replica Overview
-title: Overview of the Storage Replica in Windows Storage Replica
+title: Storage Replica Overview
+description: Get an overview of Storage Replica in Windows Server.
 manager: siroy
 ms.author: roharwoo
 ms.topic: how-to

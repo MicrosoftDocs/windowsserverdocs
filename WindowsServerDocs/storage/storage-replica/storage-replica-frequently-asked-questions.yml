@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
-  description: "Storage Replica FAQ"
-  title: FAQ
+  title: "Storage Replica FAQ"
+  description: Get answers to common questions for Storage Replica in Windows Server.
   manager: siroy
   ms.author: alalve
   ms.topic: faq
@@ -13,7 +13,7 @@ title: Storage Replica FAQ
 summary: |
   >
   
-  This article contains answers to the frequently asked questions (FAQ) for Storage Replica.
+  This article contains answers to frequently asked questions for Storage Replica.
   
 
 sections:
