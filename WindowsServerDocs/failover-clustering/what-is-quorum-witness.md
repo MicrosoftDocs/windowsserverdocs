@@ -31,7 +31,8 @@ To ensure continuous operation and data integrity, these quorum witnesses each o
 | Node majority with witness (disk or file share) | Nodes have votes. In addition, a quorum witness has a vote. The cluster quorum relies on the majority votes from the active cluster nodes, including any witness votes. A quorum witness can be a designated disk witness or a designated file share witness. |
 | No majority (disk witness only) | No nodes have votes. Only a disk witness has a vote. <br><br>The cluster quorum relies on the state of the disk witness. Generally, this mode isn't recommended, and it shouldn't be selected because it creates a single point of failure for the cluster. |
 
-> If you're using a file share witness or a cloud witness and need to shut down all cluster nodes for maintenance or other purposes, make sure to restart the cluster service on the last node that was active before the shutdown. Witness types like these don't store the latest cluster database, which can lead to errors during device startup. To learn more, see [Event 1561](/previous-versions/troubleshoot/windows-server/failover-clustering-system-log-events#event-1561-service_nonstorage_witness_better_tag).
+> [!NOTE]
+> If you're using a file share witness or a cloud witness, don't forget to restart the cluster service on the last active node before shutting down all cluster nodes for maintenance. This ensures the cluster can resume operations smoothly when brought back online. Witness types like these don't store the latest cluster database, which can lead to errors during device startup. To learn more, see [Event 1561](/previous-versions/troubleshoot/windows-server/failover-clustering-system-log-events#event-1561-service_nonstorage_witness_better_tag).
 
 > [!TIP]
 > You can verify the dynamic vote assigned to a node by checking the **DynamicWeight** property of the cluster node using the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) cmdlet. A **DynamicWeight** value of **0** means the node doesn't have a quorum vote, while a value of **1** indicates that the node has a quorum vote.
@@ -94,18 +95,13 @@ Having a file share witness provides enough redundancy to keep your file server 
 
 In advanced quorum configurations, you're able to assign or remove quorum votes for individual nodes. By default, every node in the cluster is assigned a vote. However, even if a node's vote is removed, it still participates in the cluster, receive updates to the cluster database, and remain capable of hosting applications.
 
-In specific disaster recovery scenarios, you might consider removing votes from certain nodes. For instance, in a multisite cluster, you can remove votes from the nodes located in a backup site to prevent them from influencing quorum calculations. This approach is typically recommended only when planning for manual failover between sites.
-
-> [!NOTE]
->
-> - Node vote assignment isn't recommended to enforce an odd number of voting nodes. Instead, you should configure a disk witness or file share witness.
-> - If dynamic quorum management is enabled, only the nodes that are configured to have node votes assigned can have their votes assigned or removed dynamically.
+In specific disaster recovery scenarios, you might consider removing votes from certain nodes. For instance, in a multisite cluster, you can remove votes from the nodes located in a backup site to prevent them from influencing quorum calculations. This approach is typically recommended only when planning for manual failover between sites. Node vote assignment isn't recommended to enforce an odd number of voting nodes. Instead, you should configure a disk witness or file share witness.
 
 ## Dynamic quorum management
 
 Dynamic quorum management is an advanced configuration option that allows the cluster to adjust its quorum majority requirements dynamically. This feature enables the cluster to remain operational even as nodes are sequentially shut down, allowing the cluster to run on the last surviving node.
 
-Dynamic quorum management provides enhanced flexibility and resilience for failover clusters, making it a valuable feature for maintaining high availability in dynamic environments. With dynamic quorum management enabled, the cluster can automatically adjust the votes assigned to nodes based on the current cluster state, ensuring that the cluster can sustain node failures or planned shutdowns while maintaining quorum.
+Dynamic quorum management provides enhanced flexibility and resilience for failover clusters, making it a valuable feature for maintaining high availability in dynamic environments. With dynamic quorum management enabled, the cluster can automatically adjust the votes assigned to nodes based on the current cluster state, ensuring that the cluster can sustain node failures or planned shutdowns while maintaining quorum. If dynamic quorum management is enabled, only the nodes that are configured to have node votes assigned can have their votes assigned or removed dynamically.
 
 Key considerations:
 
