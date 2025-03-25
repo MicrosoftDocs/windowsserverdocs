@@ -122,4 +122,6 @@ setspn -T contoso -F -Q */MyServer
 
 ## See also
 
-[Command-Line Syntax Key](/windows-server/administration/windows-commands/command-line-syntax-key)
+- [Command-Line Syntax Key](/windows-server/administration/windows-commands/command-line-syntax-key)
+
+- [How to configure SPN](/windows-server/identity/ad-ds/manage/how-to-configure-spn)
