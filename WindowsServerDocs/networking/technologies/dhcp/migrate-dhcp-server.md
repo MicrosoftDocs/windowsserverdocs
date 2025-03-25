@@ -32,36 +32,36 @@ This guide is intended for IT administrators, IT professionals, and other knowle
 
 DHCP Server migration is divided into the following major sections:
 
-- [Prepare to migrate](#prepare-to-migrate)
-- [Migrate the DHCP Server Role](#migrate-the-dhcp-server-role)
-- [Verify the migration](#verify-the-migration)
-- [Post-migration tasks](#post-migration-tasks)
-
-As shown in the following illustration, the premigration process involves the manual collection of data, followed by procedures on the destination and source servers. The migration process includes source and destination server procedures that use the Export and Import cmdlets to automatically collect, store, and then migrate server role settings. Post-migration procedures include verifying that the destination server successfully replaced the source server and then retiring or repurposing the source server. If the verification procedure indicates that the migration failed, troubleshooting begins. If troubleshooting fails, rollback instructions are provided to return to the use of the original source server.
+- [Prepare to migrate](#prepare-to-migrate): The premigration process involves the manual collection of data, followed by steps to prepare the destination and source servers.
+- [Migrate the DHCP Server Role](#migrate-the-dhcp-server-role): The migration process includes source and destination server procedures that use the Export and Import cmdlets to automatically collect, store, and then migrate server role settings.
+- [Verify the migration](#verify-the-migration): Confirm that the destination server successfully replaced the source server.
+- [Post-migration tasks](#post-migration-tasks): Retire, or repurpose the source server. Troubleshoot the migration if it failed, and rollback if needed.
 
 ![Illustration of the server migration process, showing premigration, migration, and post-migration steps.](media/server-migration-process.png)
 
 ## Prepare to migrate
 
-- Identify your DHCP Server source and destination servers.
+- **Identify your DHCP Server source and destination servers.**
 
-- Determine the domain, server name, and passwords on the source server. To identify the domain of the original server, view System Settings from the Control Panel.
+- **Determine the domain, server name, and passwords on the source server.** To identify the domain of the original server, view System Settings from the Control Panel.
 
-- Before migration, install all critical updates and service packs on the source server. It's a recommended best practice that all current critical updates and service packs are installed on both the source and the destination servers.
+- **Before migration, install all critical updates and service packs on the source server.** It's a recommended best practice that all current critical updates and service packs are installed on both the source and the destination servers.
 
-- Count the number of network adapters in the source and destination servers and make sure that they're equal in number. If the source server that is running DHCP Server has multiple network adapters and the DHCP Server service is bound to all and serving IP addresses on different subnets, the destination server that is running DHCP Server must also have multiple network adapters so that it can serve the same subnets as on the source server.
+- **Count the number of network adapters in the source and destination servers and make sure that they're equal in number.** If the source server that is running DHCP Server has multiple network adapters and the DHCP Server service is bound to all and serving IP addresses on different subnets, the destination server that is running DHCP Server must also have multiple network adapters so that it can serve the same subnets as on the source server.
 
-- Prepare a migration store file location. The store location must be accessible from the source server during the export and from the destination server during the import. Use a common drive that can contain all DHCP Server–related information from the source server. The storage location should be similar to the following: \\\\fileserver\\users\\username\\.
+- **Prepare a migration store file location.** The store location must be accessible from the source server during the export and from the destination server during the import. Use a common drive that can contain all DHCP Server–related information from the source server. The storage location should be similar to the following: \\\\fileserver\\users\\username\\.
 
 ### Install migration tools
 
-If you haven't already done so, install Windows Server Migration Tools on the destination and source servers. The migration tools can be installed either using PowerShell or Server Manager. For PowerShell, use the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet:
+If you haven't already done so, install Windows Server Migration Tools on the destination and source servers. The migration tools can be installed either using PowerShell or Server Manager.
+
+For PowerShell, use the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet:
 
 ```powershell
 Install-WindowsFeature -Name Migration -ComputerName Server1
 ```
 
-Use Server Manager Add Roles and Features Wizard. Find and install the feature: **Windows Server Migration Tools**.
+Use Server Manager, and open the Add Roles and Features Wizard. Find and install the feature: **Windows Server Migration Tools**.
 
 ### Prepare the destination server
 
@@ -71,22 +71,32 @@ To install DHCP Server on the destination server, complete the menu-driven insta
 
 1. Install Windows Server and configure the destination server.
 
-2. Make sure that there's sufficient disk space to store the DHCP Server database. The disk space needed varies with each installation and should be equal to or greater than the space for the DHCP Server database.
+1. Make sure that there's sufficient disk space to store the DHCP Server database. The disk space needed varies with each installation and should be equal to or greater than the space for the DHCP Server database.
 
-3. Add the destination server as a member server in the domain of the source server that is being replaced.
+1. Add the destination server as a member server in the domain of the source server that's being replaced.
 
-4. Verify that the destination server can resolve the names of domain users who are members of the local group during the import operation. If source and destination servers are in different domains, the destination server must be able to contact a global catalog server for the forest in which the source domain user accounts are located.
+1. Verify that the destination server can resolve the names of domain users who are members of the local group during the import operation. If source and destination servers are in different domains, the destination server must be able to contact a global catalog server for the forest in which the source domain user accounts are located.
 
-5. On a computer that is running Windows Server, open a Windows PowerShell session with elevated user rights. To do this, click **Start**, click **All Programs**, click **Accessories**, open the **Windows PowerShell** folder, right-click **Windows PowerShell**, and then click **Run as administrator**.
+1. On a computer that is running Windows Server, open Windows PowerShell as an administrator.
 
-6. Load the Server Manager module into your Windows PowerShell session. To load the Server Manager module, type the command: `Import-Module -Name ServerManager`, and then press **Enter**.
+1. Load the Server Manager module into your Windows PowerShell session. To load the Server Manager module, enter the command:
+
+    ```powershell
+    Import-Module -Name ServerManager
+    ```
 
     > [!NOTE]
-    > It isn't mandatory that DHCP Server is installed on the destination server before you import the settings. If the role isn't installed on the destination server, it will be installed automatically during the import process. However, because installation of the role during import might extend downtime, we recommend that you install DHCP Server by using the Server Manager console on the destination server as part of your preparation for the migration.
+    > It isn't mandatory that DHCP Server is installed on the destination server before you import the settings. If the role isn't installed on the destination server, it'll be installed automatically during the import process. However, because installation of the role during import might extend downtime, we recommend that you install DHCP Server by using the Server Manager console on the destination server as part of your preparation for the migration.
 
-7. On the destination server, to install the DHCP server, run the following command: `Install-WindowsFeature -Name DHCP`. You can also install DHCP Server manually by using Server Manager. For more information, see [Install and configure DHCP Server](/windows-server/networking/technologies/dhcp/quickstart-install-configure-dhcp-server).
+1. On the destination server, to install the DHCP server, run the following command:
+  
+    ```powershell
+    Install-WindowsFeature -Name DHCP
+    ```
+  
+  You can also install DHCP Server manually by using Server Manager. For more information, see [Install and configure DHCP Server](/windows-server/networking/technologies/dhcp/quickstart-install-configure-dhcp-server).
 
-8. By the end of the migration process, the destination server should have a static IP address. Although you won't change the destination server IP address now, consider the following scenarios in preparation for changing it when migration is complete.
+1. By the end of the migration process, the destination server should have a static IP address. Although you won't change the destination server IP address now, consider the following scenarios in preparation for changing it when migration is complete.
 
     - If your migration scenario requires that you decommission and disconnect the source server from the network, only then can you make the IP address on the destination server the same as the IP address on the source server. The source server must be disconnected from the network or shut down so that there's no IP address conflict between the source server and destination server. However, the destination server can still serve clients that are searching for the legacy (source) server that was running DHCP Server.
 
@@ -97,7 +107,7 @@ To install DHCP Server on the destination server, complete the menu-driven insta
     > [!WARNING]
     > If the source server is running multiple roles, renaming the source server or changing its IP address can cause other roles that are running on the source server to fail.
 
-9. If the DHCP Server database path doesn't match the default path, you must ensure that the destination server has a disk with the same drive letter as seen in source server’s DHCP Server database path.
+1. If the DHCP Server database path doesn't match the default path, you must ensure that the destination server has a disk with the same drive letter as seen in source server’s DHCP Server database path.
 
 The destination server is now prepared for migration.
 
@@ -107,7 +117,11 @@ Follow these steps to prepare the source server for migration.
 
 1. Back up the source server. The backup should be a DHCP Server-specific backup, not a Windows backup. (A Windows backup backs up the complete operating system.) You can create the DHCP Server-specific backup by using the [Netsh command-line tool](/windows-server/networking/technologies/netsh/netsh-contexts) or [Microsoft Management Console (MMC)](/windows-server/administration/windows-commands/mmc).
 
-1. If it's running, stop the DHCP Server service. In a session that was opened as described in step 5 of [prepare the destination server](#prepare-the-destination-server), type: `Stop-Service -Name "DHCPserver"`, and then press **Enter**.
+1. If it's running, stop the DHCP Server service. In a session that was opened as described in step 5 of [prepare the destination server](#prepare-the-destination-server), enter:
+
+    ```powershell
+    Stop-Service -Name "DHCPserver"
+    ```
 
 1. If the DHCP Server database path doesn't match the default path, make sure that the destination server has a disk with the same drive letter as in source server’s DHCP Server database path.
 
@@ -121,19 +135,23 @@ In this section, you'll migrate the DHCP Server to the destination server from t
 
 1. If it isn't already installed, install DHCP Server on the destination server.
 
-2. If it's running, stop the DHCP Server service by running the following command: `Stop-Service -Name "DHCPserver"`
+1. If it's running, stop the DHCP Server service by running the following command:
+
+    ```powershell
+    Stop-Service -Name "DHCPserver"
+    ```
 
 ### Migrate DHCP Server from the source server
 
 Follow the steps in this section to migrate DHCP Server from the source server.
 
 > [!IMPORTANT]
-> Before you run the **Import-SmigServerSetting**, **Export-SmigServerSetting**, or **Get-SmigServerFeature** cmdlets, verify that during migration, both source and destination servers can contact the domain controller that is associated with domain users or groups who are members of local groups on the source server.
-> Before you run the **Send-SmigServerData** or **Receive-SmigServerData** cmdlets, verify that during migration, both source and destination servers can contact the domain controller that is associated with those domain users who own files or shares that are being migrated.
+> Before you run the **Import-SmigServerSetting**, **Export-SmigServerSetting**, or **Get-SmigServerFeature** cmdlets, verify that during migration, both source and destination servers can contact the domain controller that's associated with domain users or groups who are members of local groups on the source server.
+> Before you run the **Send-SmigServerData** or **Receive-SmigServerData** cmdlets, verify that during migration, both source and destination servers can contact the domain controller that's associated with those domain users who own files or shares that are being migrated.
 
-1. Open a Windows PowerShell session with elevated user rights. To do this, click **Start**, click **All Programs**, click **Accessories**, open the **Windows PowerShell** folder, right-click **Windows PowerShell,** and then click **Run as administrator**.
+1. On a computer that's running Windows Server, open Windows PowerShell as an administrator.
 
-2. Load Windows Server Migration Tools into your session.
+1. Load Windows Server Migration Tools into your session.
 
     If you opened the current session by using the Windows Server Migration Tools shortcut on the **Start** menu, skip this step, and go to step 3. Only load the Windows Server Migration Tools snap-in in a session that was opened by using some other method, and into which the snap-in hasn't already been loaded. To load Windows Server Migration Tools, type the following, and then press **Enter**.
 
@@ -141,7 +159,7 @@ Follow the steps in this section to migrate DHCP Server from the source server.
     Add-PSSnapin Microsoft.Windows.ServerManager.Migration
     ```
 
-3. Collect data from the source server by running the **Export-SmigServerSetting** cmdlet as an administrator. The **Export-SmigServerSetting** cmdlet parameters can collect all source DHCP server data in a single file (Svrmig.mig). Or, the **Export-SmigServerSetting** cmdlet can be run multiple times, with each iteration using one or more parameters to collect and store data in multiple Svrmig.mig files. Before you run this command, review the following:
+1. Collect data from the source server by running the **Export-SmigServerSetting** cmdlet as an administrator. The **Export-SmigServerSetting** cmdlet parameters can collect all source DHCP server data in a single file (Svrmig.mig). Or, the **Export-SmigServerSetting** cmdlet can be run multiple times, with each iteration using one or more parameters to collect and store data in multiple Svrmig.mig files. Before you run this command, review the following:
 
       - When you run the command in step 4, you're prompted to provide a password to encrypt the migration store data. You must provide this same password to import from the migration store.
 
@@ -171,13 +189,13 @@ Follow the steps in this section to migrate DHCP Server from the source server.
         > [!NOTE]
         > The destination server can be assigned the same static IP address as the source server, unless other roles on the source server must continue to run on it. In that case, the static IP address of the destination server can be any unallocated static IP address in the same subnet as the source server.
 
-4. On the source server, run the **Export-SmigServerSetting** cmdlet, where *\<storepath\>* is the path that contains the Svrmig.mig file after this step is completed. An example of the path is \\\\fileserver\\users\\username\\dhcpstore.
+1. On the source server, run the **Export-SmigServerSetting** cmdlet, where *\<storepath\>* is the path that contains the Svrmig.mig file after this step is completed. An example of the path is \\\\fileserver\\users\\username\\dhcpstore.
 
     ```powershell
     Export-SmigServerSetting -featureID DHCP -User All -Group -IPConfig -path <storepath> -Verbose
     ```
 
-5. On the source server, delete the DHCP authorization for the source DHCP server by running the following command, where *Server FQDN* is the fully qualified domain name (FQDN) of the DHCP server and *Server IPAddress* is the IP address of the server. The command parameters are case-sensitive and must appear exactly as shown.
+1. On the source server, delete the DHCP authorization for the source DHCP server by running the following command, where *Server FQDN* is the fully qualified domain name (FQDN) of the DHCP server and *Server IPAddress* is the IP address of the server. The command parameters are case-sensitive and must appear exactly as shown.
 
     ```powershell
     Netsh DHCP delete server <Server FQDN> <Server IPAddress>
@@ -189,16 +207,16 @@ Return to the destination server and follow these steps to complete the migratio
 
 1. Before you use the [**Import-SmigServerSetting**](/powershell/module/servermigration/import-smigserversetting) cmdlet to import the DHCP server settings, be aware of the following conditions:
 
-  - You can either use a single command line with all the parameters to import DHCP settings (as when you export data from the source server) or you can use the cmdlet multiple times to import data one parameter at a time.
+    - You can either use a single command line with all the parameters to import DHCP settings (as when you export data from the source server) or you can use the cmdlet multiple times to import data one parameter at a time.
 
-  - If you decide to run the **Import-SmigServerSetting** cmdlet separately to import the IP settings, use the source IPSettings.txt file, referred to in step 3 of the previous procedure. You the source physical addresses to the destination physical addresses in step 3 of this procedure. If you plan to import role and IP settings separately, you should import IP settings first to avoid any IP conflicts. You can then import the DHCP role.
+    - If you decide to run the **Import-SmigServerSetting** cmdlet separately to import the IP settings, use the source IPSettings.txt file, referred to in step 3 of the previous procedure. You the source physical addresses to the destination physical addresses in step 3 of this procedure. If you plan to import role and IP settings separately, you should import IP settings first to avoid any IP conflicts. You can then import the DHCP role.
 
-  - If the DHCP Administrators group includes local users, then use the **-Users** parameter combined with the **-Group** parameter to import local users into the DHCP Administrators group. If it only contains domain users, then use only the **-Group** parameter.
+    - If the DHCP Administrators group includes local users, then use the **-Users** parameter combined with the **-Group** parameter to import local users into the DHCP Administrators group. If it only contains domain users, then use only the **-Group** parameter.
 
     > [!NOTE]
     > If the source server is a domain member server, but the destination server is a domain controller, imported local users are elevated to domain users, and imported local groups become Domain Local groups on the destination server.
 
-  - If the DHCP Server role that you're migrating hasn't been installed on the destination server, the **Import-SmigServerSetting** cmdlet installs that DHCP Server role and its dependencies. You might have to restart the destination computer to complete the installation after the DHCP Server role is installed by the cmdlet. Then, to complete the import operation after you restart the computer you must run the **Import-SmigServerSetting** cmdlet again along with the **-Force** parameter..
+    - If the DHCP Server role that you're migrating hasn't been installed on the destination server, the **Import-SmigServerSetting** cmdlet installs that DHCP Server role and its dependencies. You might have to restart the destination computer to complete the installation after the DHCP Server role is installed by the cmdlet. Then, to complete the import operation after you restart the computer you must run the **Import-SmigServerSetting** cmdlet again along with the **-Force** parameter..
 
 1. On the destination server, run the following command, where *\<storepath\>* is the available path that contains the Svrmig.mig file, *\<SourcePhysicalAddress-1\>* and *\<SourcePhysicalAddress-2\>* are comma-separated lists of the physical addresses of the source network adapter, and *\<TargetPhysicalAddress-1\>* and *\<TargetPhysicalAddress-2\>* are comma-separated lists of the physical addresses of the destination network adapter:
 
@@ -254,7 +272,7 @@ Follow these steps to confirm that the DHCP destination server is now serving th
 
     The output of these commands should show that the client computer was issued an IP address.
 
-1. Use the DHCP console to verify that the scopes and other settings were migrated. To connect to the destination server, click **Action**, click **Add Server**, and then type the IP address or host name of the DHCP server. In the console tree, expand the server node, and then expand the IPv4 and IPv6 nodes to confirm that the scopes have been migrated. Then locate the folders for the scopes and view the address range, reservations, scope options, and active leases to verify the same. You can also go to the Server Options folder and verify the migrated server options.
+1. Use the DHCP console to verify that the scopes and other settings were migrated. To connect to the destination server, select **Action**, select **Add Server**, and then type the IP address or host name of the DHCP server. In the console tree, expand the server node, and then expand the IPv4 and IPv6 nodes to confirm that the scopes have been migrated. Then locate the folders for the scopes and view the address range, reservations, scope options, and active leases to verify the same. You can also go to the Server Options folder and verify the migrated server options.
 
 ## Post-migration tasks
 
@@ -297,7 +315,7 @@ For DHCP-specific troubleshooting tips, see [Troubleshoot problems on DHCP serve
 
 1. Before you run **Export-SmigServerSetting**, **Import-SmigServerSetting** or **Get-SmigServerFeature** again, remove all unresolved domain users or groups who are members of local groups from the server on which you're running the cmdlet.
 
-2. Before you run **Send-SmigServerData** or **Receive-SmigServerData** again, remove all unresolved domain users or groups who have user rights to files, folders, or shares on the migration source server.
+1. Before you run **Send-SmigServerData** or **Receive-SmigServerData** again, remove all unresolved domain users or groups who have user rights to files, folders, or shares on the migration source server.
 
 ### View the content of Windows Server Migration Tools result objects
 
