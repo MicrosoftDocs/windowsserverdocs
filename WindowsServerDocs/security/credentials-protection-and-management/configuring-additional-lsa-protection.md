@@ -58,8 +58,8 @@ The events described in this section are recorded in Event Viewer in the **Opera
 
 ### Enable audit mode for LSASS.exe on a single computer
 
-1. Open the Registry Editor, RegEdit.exe, and go to the registry key at **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe**.
-1. Set the value of the registry key to **AuditLevel=dword:00000008**.
+1. Open the Registry Editor, RegEdit.exe, and go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe** registry key.
+1. Open the **AuditLevel** value. Set its data type to **dword** and its data value to **00000008**.
 1. Restart the computer.
 
 After you take these steps, look for events that have the following IDs: 3065 and 3066. To check for these events, open Event Viewer, and then expand **Applications and Services Logs** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**.
@@ -138,7 +138,7 @@ You can enable LSA protection on a single computer by using the registry or by u
 
 #### Enable by using the registry
 
-1. Open the Registry Editor, RegEdit.exe, and go to the registry key **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**.
+1. Open the Registry Editor, RegEdit.exe, and go to the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key.
 1. Open the **RunAsPPL** value, and set its data:
    - To configure the feature with a UEFI variable, use a type of **dword** and a data value of **00000001**.
    - To configure the feature without a UEFI variable, use a type of **dword** and a data value of **00000002**. This value is only enforced on Windows 11 build 22H2 and later.
@@ -165,7 +165,7 @@ You can enable LSA protection on a single computer by using the registry or by u
 1. Right-click **Registry**, point to **New**, and then select **Registry Item**. The **New Registry Properties** dialog appears.
 1. In the **New Registry Properties** dialog, select or enter the following values:
    - For **Hive**, select **HKEY_LOCAL_MACHINE.**
-   - For **Key Path**, go to **SYSTEM\CurrentControlSet\Control\Lsa**.
+   - For **Key Path**, select **SYSTEM\CurrentControlSet\Control\Lsa**.
    - For **Value name**, enter **RunAsPPL**.
    - For **Value type**, select **REG_DWORD**.
    - For **Value data**, enter one of the following values:
@@ -213,7 +213,7 @@ You can disable LSA protection by using the registry or by using Local Group Pol
 
 ### Disable by using the registry
 
-1. Open the Registry Editor, RegEdit.exe, and go to the registry key **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**.
+1. Open the Registry Editor, RegEdit.exe, and go to the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key.
 1. Open the **RunAsPPL** value, and set its data value to **00000000**. Or delete the **RunAsPPL** value.
 1. If the protected processes light (PPL) feature was enabled with a UEFI variable, use the [Local Security Authority Protected Process Opt-out tool](#remove-the-lsa-protection-uefi-variable) to remove the UEFI variable.
 1. Restart the computer.
