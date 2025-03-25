@@ -2,7 +2,7 @@
 description: Storage Replica Overview
 title: Overview of the Storage Replica in Windows Storage Replica
 manager: siroy
-ms.author: roharwoo
+ms.author: jgerend
 ms.topic: how-to
 author: robinharwood
 ms.date: 10/04/2022
