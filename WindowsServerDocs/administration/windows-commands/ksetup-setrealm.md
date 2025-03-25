@@ -3,7 +3,7 @@ title: ksetup setrealm
 description: Reference article for the ksetup setrealm command, which sets the name of a Kerberos realm.
 ms.topic: reference
 ms.assetid: ab268c40-276b-46ef-ab16-d5ce7667fbed
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

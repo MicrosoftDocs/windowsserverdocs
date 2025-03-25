@@ -5,7 +5,7 @@ ms.date: 08/21/2024
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: roharwoo
+ms.author: jgerend
 ---
 
 # Initialize new disks

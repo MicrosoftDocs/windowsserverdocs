@@ -3,7 +3,7 @@ title: Remote Desktop - Allow access to your PC from outside your network
 description: Learn about your options for remotely accessing your PC from outside the PC's network
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 03/07/2025
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network

@@ -3,7 +3,7 @@ title: detail partition
 description: Reference article for the detail partition command, which displays the properties of the selected partition.
 ms.topic: reference
 ms.assetid: 672a2c7a-1721-4845-9c23-7af50367170e
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

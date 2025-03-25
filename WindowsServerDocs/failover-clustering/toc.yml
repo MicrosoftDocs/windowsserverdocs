@@ -46,10 +46,10 @@
     href: bitlocker-on-csv-in-ws-2022.md
   - name: Deploy a witness
     items:
-    - name: Deploy a Cloud Witness
-      href: deploy-cloud-witness.md
-    - name: Deploy a file share witness
-      href: file-share-witness.md
+    - name: What is a quorum witness?
+      href: what-is-quorum-witness.md
+    - name: Deploy a quorum witness
+      href: deploy-quorum-witness.md
   - name: Upgrade your failover cluster
     items:
     - name: Cluster operating system rolling upgrades

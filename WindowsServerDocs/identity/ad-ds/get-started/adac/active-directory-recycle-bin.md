@@ -1,7 +1,7 @@
 ---
 description: Learn how to enable Active Directory Recycle Bin and restore deleted objects in Active Directory Domain Services on Windows Server.
 title: Enable Active Directory Recycle Bin in Windows Server
-ms.author: orthomas
+ms.author: daknappe
 author: orin-thomas
 ms.date: 07/15/2024
 ms.topic: how-to

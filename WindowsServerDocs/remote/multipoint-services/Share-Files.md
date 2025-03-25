@@ -6,7 +6,7 @@ ms.assetid: 5e138e01-39e3-4d60-ad3c-5a33b1e0b076
 author: robinharwood
 manager: dongill
 ms.date: 08/04/2016
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Share Files
 You can share content with other MultiPoint Services users by storing the content in a public folder in Windows Explorer. All content that is stored in public folders in Windows Explorer in a MultiPoint Services system is accessible to all users on the MultiPoint Services system.

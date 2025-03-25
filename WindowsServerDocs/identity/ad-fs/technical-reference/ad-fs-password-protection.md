@@ -2,7 +2,7 @@
 title: AD FS Password Attack protection
 description:  This document describes how to protect AD FS users from password attacks
 author: billmath
-manager: amycolannino
+manager: femila
 ms.reviewer: andandyMSFT
 ms.date: 02/13/2024
 ms.topic: article

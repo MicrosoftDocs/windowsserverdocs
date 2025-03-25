@@ -3,7 +3,7 @@ title: query process
 description: Reference article for the query process command, which displays information about processes that are running on a Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: 36ce3ffc-0092-4eb1-a374-28e6616ca946
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

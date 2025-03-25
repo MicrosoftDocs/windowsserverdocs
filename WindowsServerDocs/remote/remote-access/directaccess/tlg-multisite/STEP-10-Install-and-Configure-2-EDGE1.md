@@ -4,7 +4,7 @@ description: Learn how to install and configure 2-EDGE1.
 manager: brianlic
 ms.topic: article
 ms.assetid: d98d6f7a-a2e6-45b1-9c63-08e2986a5c03
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

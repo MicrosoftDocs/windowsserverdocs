@@ -1,7 +1,7 @@
 ---
 title: Manage Hyper-V Integration Services
 description: This article describes how to turn Hyper-V integration services on and off, and install them if needed.
-ms.author: mosagie
+ms.author: daknappe
 author: meaghanlewis
 ms.date: 02/18/2025
 ms.topic: article

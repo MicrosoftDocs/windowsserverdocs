@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - Loop Detection
 description: This article describes how to troubleshoot loop detection for Active Directory Federation Services (AD FS).
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

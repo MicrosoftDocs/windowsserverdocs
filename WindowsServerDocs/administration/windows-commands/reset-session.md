@@ -3,7 +3,7 @@ title: reset session
 description: Reference article for reset session command, which enables you to reset a session on a Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 manager: mtillman
 ms.date: 07/11/2018
