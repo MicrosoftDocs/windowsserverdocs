@@ -12824,6 +12824,11 @@
      "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
      "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
      "redirect_document_id": false
+    },
+    {
+     "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
+     "redirect_url": "/powershell/module/remoteaccess/",
+     "redirect_document_id": false
     }
   ]
 }

@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 1e113666-e45f-48b6-aad8-42c361c9046d
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 09/14/2020
 ---
 # Create a Standard User Account

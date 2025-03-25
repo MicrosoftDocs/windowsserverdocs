@@ -4,7 +4,7 @@ description: Learn about the planning and configuration steps for a multi-forest
 manager: brianlic
 ms.topic: article
 ms.assetid: c44fecc9-fe39-40bd-b6da-d8f8afe1a01d
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

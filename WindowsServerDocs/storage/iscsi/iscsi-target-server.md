@@ -5,7 +5,7 @@ TOCTitle: iSCSI Target Server
 ms.topic: article
 author: robinharwood
 manager: dougkim
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 09/11/2018
 ---
 

@@ -4,7 +4,7 @@ description: Learn about how, to configure a multisite deployment, there are a n
 manager: brianlic
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

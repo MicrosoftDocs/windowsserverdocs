@@ -1,8 +1,8 @@
 ---
-description: Known Issues
-title: Known issues with Storage Replica in Windows Server and how to resolve them.
+title: Storage Replica Known Issues
+description: Review known issues with Storage Replica in Windows Server and how to resolve them.
 manager: candyc
-ms.author: roharwoo
+ms.author: jgerend
 ms.topic: troubleshooting
 author: robinharwood
 ms.date: 05/31/2023
@@ -278,7 +278,7 @@ Event ID 1241, "The Recovery Point Objective (RPO) of the asynchronous destinati
 
 - The asynchronous destination is currently disconnected. The RPO might become available after the connection is restored.
 
-- The asynchronous destination can't keep pace with the source, so the most recent destination log record is no longer present in the source log. The destination starts to block copying. The RPO should become available after block copying completes.
+- The asynchronous destination can't keep pace with the source, so the most recent destination log record is no longer present in the source log. The destination begins block copying. The RPO should become available after block copying completes.
 
 During initial sync, this event is expected and can be safely ignored. The event behavior might change in a later release. If you see this behavior during ongoing asynchronous replication, investigate the partnership to determine why replication is delayed beyond your configured RPO (30 seconds by default).
 
@@ -391,7 +391,7 @@ To resolve the issue, raise the cluster functional level by running the PowerShe
 
 ## Small unknown volume is listed in DISKMGMT for each replicated volume
 
-When you run the Disk Management snap-in (`DiskMgmt.msc`), you notice one or more volumes listed with no label or drive letter and 1 MB in size. You might be able to delete the unknown volume, or you might see this error:
+When you run the Disk Management snap-in (`DiskMgmt.msc`), you notice one or more volumes listed with no label or drive letter. The volumes are 1 MB in size. You might be able to delete the unknown volumes, or you might see this error:
 
 ```output
 An Unexpected Error has Occurred
@@ -413,7 +413,8 @@ To prevent this scenario, don't snapshot Storage Replica log volumes. The logs c
 
 When you use Storage Spaces Direct with a nonvolatile memory express (NVMe) device or a solid-state drive (SSD) cache, you see a greater than expected increase in latency when configuring Storage Replica replication between Storage Spaces Direct clusters. The change in latency is proportionally much higher than you see when you use NVMe and SSD in a *performance + capacity* configuration and no HDD tier or capacity tier.
 
-This issue occurs because of architectural limitations in the Storage Replica log mechanism combined with the low latency of NVMe compared to slower media. In Storage Spaces Direct cache, all Storage Replica log I/O and all recent read/write I/Os from applications occur in the cache and never on the performance or capacity tiers. All Storage Replica activity happens on same-speed media. The configuration is supported, but we don't recommend it. For log recommendations, see [Frequently asked questions about Storage Replica](storage-replica-frequently-asked-questions.yml).
+This issue occurs because of architectural limitations in the Storage Replica log mechanism combined with the low latency of NVMe compared to slower media. In Storage Spaces Direct cache, all Storage Replica log I/O and all recent read/write I/Os from applications occur in the cache and never on the performance or capacity tiers. All Storage Replica activity happens on same-speed media. The configuration is supported, but we don't recommend it. For log recommendations, see [Frequently asked questions about Storage Replica](storage-replica-frequently-asked-questions.yml).
+
 
 When you use Storage Spaces Direct with HDDs, you can't disable or avoid creating a cache. As a workaround, if you use only SSD and NVMe, you can configure only performance and capacity tiers. In that scenario, if you place only the Storage Replica logs on the performance tier and place only the data volumes they service on the capacity tier, you avoid a high-latency scenario. You can get a similar result by using a mix of faster and slower SSDs and no NVMe.
 

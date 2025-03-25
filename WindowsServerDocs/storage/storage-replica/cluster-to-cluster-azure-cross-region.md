@@ -2,7 +2,7 @@
 title: Cluster-to-Cluster Replication Cross-Region in Azure
 description: Learn how to use cluster-to-cluster Storage Replica in Windows Server for cross-region storage replication in Azure.
 author: arduppal
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 02/18/2025
 ms.topic: article
 manager: mchad

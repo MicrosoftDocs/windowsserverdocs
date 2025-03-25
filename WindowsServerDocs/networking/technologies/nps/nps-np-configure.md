@@ -4,7 +4,7 @@ description: This topic provides an overview of network policy configuration for
 manager: brianlic
 ms.topic: article
 ms.assetid: fe77655a-e2be-4949-92e1-aaaa215d86ea
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---

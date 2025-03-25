@@ -4,7 +4,7 @@ description: Learn how to create and test a network load balanced Remote Access 
 manager: brianlic
 ms.topic: article
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

@@ -4,7 +4,7 @@ description: Learn how to leverage the monitoring capabilities of Remote Access 
 manager: brianlic
 ms.topic: article
 ms.assetid: 92519b49-0df4-43c1-9717-f13570644212
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

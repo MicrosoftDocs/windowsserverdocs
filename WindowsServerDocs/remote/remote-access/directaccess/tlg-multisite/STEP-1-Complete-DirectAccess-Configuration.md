@@ -4,7 +4,7 @@ description: Learn How to complete the Test Lab Guide.
 manager: brianlic
 ms.topic: article
 ms.assetid: 68fdc02b-2904-4a67-8bfe-45e426f2bd6c
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
