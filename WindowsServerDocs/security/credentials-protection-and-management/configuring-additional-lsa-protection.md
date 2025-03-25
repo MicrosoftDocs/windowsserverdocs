@@ -58,7 +58,7 @@ The events described in this section are recorded in Event Viewer in the **Opera
 
 ### Enable audit mode for LSASS.exe on a single computer
 
-1. Open the Registry Editor, RegEdit.exe, and go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe** registry key.
+1. Open the Registry Editor, or enter **RegEdit.exe** in the **Run** dialog, and then go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe** registry key.
 1. Open the **AuditLevel** value. Set its data type to **dword** and its data value to **00000008**.
 1. Restart the computer.
 
@@ -138,8 +138,8 @@ You can enable LSA protection on a single computer by using the registry or by u
 
 #### Enable by using the registry
 
-1. Open the Registry Editor, RegEdit.exe, and go to the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key.
-1. Open the **RunAsPPL** value, and set its data:
+1. Open the Registry Editor, or enter **RegEdit.exe** in the **Run** dialog, and then go to the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key.
+1. Open the **RunAsPPL** value, and edit its data:
    - To configure the feature with a UEFI variable, use a type of **dword** and a data value of **00000001**.
    - To configure the feature without a UEFI variable, use a type of **dword** and a data value of **00000002**. This value is only enforced on Windows 11 build 22H2 and later.
 1. Restart the computer.
@@ -213,7 +213,7 @@ You can disable LSA protection by using the registry or by using Local Group Pol
 
 ### Disable by using the registry
 
-1. Open the Registry Editor, RegEdit.exe, and go to the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key.
+1. Open the Registry Editor, or enter **RegEdit.exe** in the **Run** dialog, and then go to the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key.
 1. Open the **RunAsPPL** value, and set its data value to **00000000**. Or delete the **RunAsPPL** value.
 1. If the protected processes light (PPL) feature was enabled with a UEFI variable, use the [Local Security Authority Protected Process Opt-out tool](#remove-the-lsa-protection-uefi-variable) to remove the UEFI variable.
 1. Restart the computer.
