@@ -9,7 +9,7 @@ ms.date: 03/11/2025
 
 # DHCP failover overview
 
-DHCP failover is a feature that enables two Microsoft DHCP servers to share service availability information with each other, providing DHCP high availability. DHCP failover works by replicating IP address leases and settings in one or more DHCP scopes from a primary DHCP server to a failover partner server.
+DHCP failover allows two Microsoft DHCP servers to share availability information, ensuring high availability by replicating IP address leases and settings between a primary server and its failover partner.
 
 All scope information is shared between the two DHCP servers, including active leases. This enables either DHCP server to assume responsibility for DHCP clients if the other server becomes unavailable.
 
@@ -54,7 +54,7 @@ The following specifications apply to DHCP failover:
 
 - DHCP servers configured as failover partners can be located on different subnets, but this isn't required.
 
-- When DHCP failover is enabled on a DHCP scope, the DHCP server that renews a DHCP client lease can be different from the DHCP server that initially granted the lease.
+- When DHCP failover is enabled, a DHCP client lease can be renewed by a different server than the one that originally issued it.
 
 - Two DHCP servers configured as failover partners attempt to maintain a persistent TCP/IP connection.
 
@@ -73,7 +73,7 @@ You can configure DHCP failover can be configured using Server Manager or Window
 
 ## DHCP failover and IPv6
 
-DHCP failover isn't supported for Internet Protocol version 6 (IPv6) scopes. Network adapters using IPv6 typically determine their own IPv6 address using stateless IP auto-configuration. In this mode, the DHCP server delivers only the DHCP option configuration, and the server does not maintain any lease state information. A high availability deployment for stateless DHCPv6 is possible by simply setting up two servers with identical option configuration. Even in a stateful DHCPv6 deployment, the scopes do not run under high address utilization, which makes split scope a viable solution for high availability.
+DHCP failover isn't supported for Internet Protocol version 6 (IPv6) scopes. Network adapters using IPv6 typically determine their own IPv6 address using stateless IP autoconfiguration. In this mode, the DHCP server delivers only the DHCP option configuration, and the server does not maintain any lease state information. A high availability deployment for stateless DHCPv6 is possible by simply setting up two servers with identical option configuration. Even in a stateful DHCPv6 deployment, the scopes do not run under high address utilization, which makes split scope a viable solution for high availability.
 
 ## DHCP failover modes
 
@@ -93,23 +93,23 @@ In hot standby mode, two servers operate in a failover relationship where an act
 
 A server is active or standby in the context of a failover relationship. For instance, a server that has the role of active for a given relationship could be a standby server for another relationship. By default, the server that is used to create the failover relationship is the active server, but this isn't required.
 
-When you choose hot standby, you must also configure the percentage of IP addresses on the active server that are reserved for use on the standby server in the event that the active server doesn't respond. By default, this reserve percentage is 5%.
+When you choose hot standby, you must also configure the percentage of IP addresses on the active server that are reserved for use on the standby server if the active server doesn't respond. By default, this reserve percentage is 5%.
 
-The reserve percentage is used for new DHCP leases. If a DHCP client attempts to renew a DHCP lease with the standby server that is unable to contact the active server, the same IP address that was previously assigned to the DHCP client will be renewed. In this situation, a temporary lease is granted for the maximum client lead time (MCLT) duration, not the full scope lease time.
+The reserve percentage is used for new DHCP leases. If a DHCP client attempts to renew a DHCP lease with the standby server that is unable to contact the active server, the same IP address that was previously assigned to the DHCP client is renewed. In this situation, a temporary lease is granted for the maximum client lead time (MCLT) duration, not the full scope lease time.
 
-If the standby server issues all its available reserve percentage leases to new DHCP clients before the MCLT expires, it'll refuse to issue new DHCP leases, and will continue to renew existing leases. After the MCLT has expired, the standby server will be permitted to use the entire available IP address pool for new DHCP leases. If the server is still in communications interrupted state, it won't use the entire available IP address pool for new DHCP leases.
+If the standby server issues all its available reserve percentage leases to new DHCP clients before the MCLT expires, it refuses to issue new DHCP leases, and continue to renew existing leases. After the MCLT expires, the standby server is permitted to use the entire available IP address pool for new DHCP leases. If the server is still in communications interrupted state, it doesn't use the entire available IP address pool for new DHCP leases.
 
-The hot standby mode of operation is best suited to deployments where a central office or data center server acts as a standby backup server to a server at a remote site, which is local to the DHCP clients. In such deployments, it's undesirable to have a remote standby server service any clients unless the local DHCP server becomes unavailable.
+In hot standby mode, a central office or data center server typically acts as a standby backup server. This server provides redundancy for a local DHCP server at a remote site, which directly serves the DHCP clients. In such deployments, the standby server should only service clients if the local DHCP server becomes unavailable.
 
 ### Load balance mode
 
-Load balance mode is the default mode of deployment. In this mode, two DHCP servers simultaneously serve IP addresses and options to clients on a given subnet. DHCP client requests are load balanced and shared between the two DHCP servers. The default load balancing ratio between the two servers is 50:50, but this can be customized to any ratio from 0 to 100%.
+Load balance mode is the default mode of deployment. In this mode, two DHCP servers simultaneously serve IP addresses and options to clients on a given subnet. DHCP client requests are load balanced and shared between the two DHCP servers. The default load balancing ratio between the two servers is 50:50, but this can be customized to any ratio from 0% to 100%.
 
 ![Load balance mode illustration.](media/load-balance-mode.png)
 
 The load-balancing mechanism is defined in RFC 3074, in which a hash is computed from the MAC address contained in each DHCP client request. A range of hash values (also called the hash bucket) is assigned to each DHCP server based on the load balancing percentages that are configured. Servers determine if they are designated to respond to the client based on their assigned hash bucket.
 
-In load balancing mode, when a DHCP server loses contact with its failover partner it'll begin granting leases to all DHCP clients. If it receives a lease renewal request from a DHCP client that is assigned to its failover partner, it'll temporarily renew the same IP address lease for the duration of the MCLT. If it receives a request from a client that wasn't previously assigned a lease, it'll grant a new lease from its free IP address pool until this is exhausted, and then begin using the free IP address pool of its failover partner. If the DHCP server enters a partner down state, it'll wait for the MCLT duration and then assume responsibility for 100% of the IP address pool.
+In load balancing mode, when a DHCP server loses contact with its failover partner, it begins granting leases to all DHCP clients. If it receives a lease renewal request from a DHCP client that is assigned to its failover partner, it temporarily renews the same IP address lease for the duration of the MCLT. If it receives a request from a client that wasn't previously assigned a lease, it grants a new lease from its free IP address pool until this is exhausted, and then begin using the free IP address pool of its failover partner. If the DHCP server enters a partner down state, it waits for the MCLT duration, and then assumes responsibility for 100% of the IP address pool.
 
 The load balance mode of operation is best suited to deployments where both servers in a failover relationship are located at the same physical site. Both servers respond to DHCP client requests based on the load distribution ratio configured by the administrator.
 
@@ -121,44 +121,14 @@ DHCP failover is supported with clustered DHCP in the following configurations:
 
 - A DHCP failover cluster can have a failover relationship with another DHCP failover cluster.
 
-In both cases, you must configure DHCP failover to use the name or IP address of the cluster, not the name or IP address of an cluster node. If an individual cluster node is configured as the failover partner, the primary server will enter a communications interrupted state if the DHCP Server service moves to a different node in the cluster.
+In both cases, you must configure DHCP failover to use the name or IP address of the cluster, not the name or IP address of an cluster node. If an individual cluster node is configured as the failover partner, the primary server enters a communications interrupted state if the DHCP Server service moves to a different node in the cluster.
 
 > [!IMPORTANT]
-> If you use a shared secret, you must manually replicate the shared secret to all cluster nodes. See the following procedure for more information.
-
-## Replicate a shared secret on DHCP failover cluster nodes
-
-1. On the Server Manager menu, select Tools and then select Failover Cluster Manager.
-
-1. In Failover Cluster Manager, determine the currently active node. To determine the active node, you can click on each node under Nodes until you see the DHCP Server role with a status of Running. You can also type the following command at a Windows PowerShell prompt:
-
-    ```powershell
-    Get-ClusterResource –Name "dhcp1.contoso.com"
-    ```
-
-    In this example, the cluster name is **dhcp1.contoso.com**. Output from this command will be the name of the currently active node.
-
-1. On the currently active cluster node, type the following command at an elevated Windows PowerShell prompt, and then press ENTER.
-
-    ```powershell
-    Set-DhcpServerv4Failover –Name "dhcp1.contoso.com"  -SharedSecret "123"
-    ```
-
-    In this example, the cluster name is dhcp1.contoso.com and the shared secret is 123.
-
-1. Next, move the DHCP Server role to another node. To move a role, select Action on the Failover Cluster Manager menu, point to Move, and then click Select Node.
-
-1. In the Move Clustered Role dialog box, select a node under Cluster nodes and then select OK.
-
-1. Repeat steps 3-5 until you have set the shared secret on all nodes in the cluster.
-
-The reason you must replicate the shared secret is because it's encrypted in the Windows Registry.
-
-Windows Failover Clustering will automatically replicate registry parameters related to the DHCP Server service when it moves to a new node, but encryption of a shared secret is specific to each node. Therefore, each node can only decrypt a shared secret if it was configured on the same node.
+> If you use a shared secret, you must manually replicate the shared secret to all cluster nodes. You can replicate the shared secret on the active cluster node using the PowerShell cmdlet [Set-DhcpServerv4Failover](/powershell/module/dhcpserver/set-dhcpserverv4failover).
 
 ## DHCP failover and DNS dynamic updates
 
-If DHCP servers are configured to perform DNS dynamic updates on behalf of the client computer, both DHCP servers in a DHCP failover relationship must use the same DNS credentials to update DNS records. If the failover partner attempts to use different credentials to update DNS resource records, this update will fail.
+If DHCP servers are configured to perform DNS dynamic updates on behalf of the client computer, both DHCP servers in a DHCP failover relationship must use the same DNS credentials to update DNS records. If the failover partner attempts to use different credentials to update DNS resource records, this update fails.
 
 The following steps describe how DNS dynamic updates might fail when a client computer uses a different DHCP server:
 
@@ -171,3 +141,41 @@ The following steps describe how DNS dynamic updates might fail when a client co
 1. The original server fails and a second backup DHCP server comes online; now the second server can't update the client name because it isn't the name’s owner.
 
 Also see [DNS Record Ownership and the DnsUpdateProxy Group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd334715(v=ws.10)) for a discussion of this scenario.
+
+## Deployment considerations
+
+Before you deploy DHCP failover, consider the following:
+
+### Time synchronization
+
+For DHCP failover to function correctly, time must be kept synchronized between the two servers in a failover relationship. Time synchronization can be maintained by deployment of the Network Time Protocol (NTP) or any other alternative mechanism. When the failover configuration wizard is run, it will compare the current time on the servers being configured for failover. If the time difference between the servers is greater than one minute, the failover setup process will halt with a critical error and request that time on the servers be synchronized.
+
+Each failover protocol message includes a time field that is populated with the Coordinated Universal Time (UTC) when the source server transmitted the message. For each message, the receiving server will perform a check of the time difference between the time stamp field in the packet and the time at the receiving server. If this time difference is found to be greater than one minute, the receiving server will log a critical event indicating that the two servers are not time synchronized.
+
+### Policy based assignment
+
+Windows Server includes a policy based IP address assignment feature, which allows a Windows DHCP administrator to group the DHCP clients by a specific attribute of the client, such as vendor class, user class, client identifier, or MAC address. By grouping the clients based on these attributes, an administrator is able to assign parameters such as IP address, default gateway, DNS server and other DHCP options to a specific grouping of clients. This allows the administrator to exercise greater control on the configuration parameters delivered to end hosts. This feature introduces the concept of multiple IP address ranges within a single scope. To accommodate this, DHCP failover address distribution in load sharing mode is done on a per IP address range basis.
+
+### Windows Firewall
+
+DHCP failover uses TCP port 647 to listen for failover messages between two failover partner servers. For this traffic to be allowed by the Windows firewall, the following inbound and outbound firewall rules are added then you install the DHCP Server role:
+
+- Microsoft-Windows-DHCP-Failover-TCP-In
+
+- Microsoft-Windows-DHCP-Failover-TCP-Out
+
+### Relay agents
+
+Initial DHCPDISCOVER messages are broadcast by DHCP clients on the subnet to which they belong. Since routers typically do not forward broadcast traffic, a mechanism is required to enable DHCP clients to communicate with DHCP servers if the DHCP server is not located on the same subnet. Relay agents (typically provided on a router) are designed to perform this function, relaying DHCP and BOOTP messages between clients and servers on different subnets. Relay agents are commonly configured with on a network device, or you can configure DHCP relay on a Windows Server with the Remote Access role installed. For more information, see [Deploy the DHCP Relay Agent](/windows-server/networking/technologies/dhcp/dhcp-deploy-relay-agent).
+
+If your DHCP relay is configured on a network device, consult your vendor’s documentation for details. The **helper-address** command is commonly used to configure DHCP relay on a network device, for example: `ip helper-address 10.0.1.1`.
+
+When you deploy DHCP failover, a single DHCP relay address might not be sufficient, since DHCP clients must always be able to communicate with both the primary DHCP server and the failover partner server. If both DHCP servers are located on a different subnet than DHCP clients, this requires at least two DHCP relay agents. For example: `ip helper-address 10.0.1.1`, `ip helper-address 10.0.1.2`.
+
+In this example, both DHCP servers are on the same subnet (10.0.1.0/24). The primary DHCP server’s IP address is 10.0.1.1 and 10.0.1.2 is the IP address for the failover partner server. If both DHCP servers are located on the same subnet, you can also configure the subnet broadcast address (ex: 10.0.1.255) as a single DHCP relay. The use of a subnet broadcast address as a single DHCP relay is not possible if DHCP servers are located on separate subnets.
+
+### Duplicate relay agents
+
+Virtual Router Redundancy Protocol (VRRP) is another failover protocol used to enable redundancy on network devices. An example of VRRP includes Hot Standby Router Protocol (HSRP), which is a Cisco proprietary VRRP. If VRRP/HSRP is configured on a network device that is also configured with one or more DHCP relays, this can cause duplicate DHCP relay messages to be sent to the same DHCP failover server.
+
+If a single DHCP server configured for DHCP failover receives duplicate lease requests, this can cause inconsistent client lease durations, and clients might lease IP addresses that belong to other clients. Consult your vendor documentation to determine if the router redundancy protocol requires a specific configuration to support DHCP relay. For example, Cisco provides DHCP relay support for the HSRP protocol using virtual router groups.
