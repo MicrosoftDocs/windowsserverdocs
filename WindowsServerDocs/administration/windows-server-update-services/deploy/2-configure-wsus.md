@@ -18,7 +18,7 @@ This article walks you through the following procedures:
 |Task|Description|
 |----|--------|
 |[2.1. Configure network connections](#21-configure-network-connections)|Configure your firewall and proxy settings to allow the server to make the connections that it needs.|
-|[2.2. Configure WSUS by using the WSUS configuration wizard](#22-configure-wsus-by-using-the-wsus-configuration-wizard)|Use the WSUS configuration wizard to perform the base WSUS configuration.|
+|[2.2. Configure WSUS by using the WSUS Configuration Wizard](#22-configure-wsus-by-using-the-wsus-configuration-wizard)|Use the WSUS Configuration Wizard to perform the base WSUS configuration.|
 |[2.3. Secure WSUS with the Secure Sockets Layer protocol](#23-secure-wsus-with-the-secure-sockets-layer-protocol)|Configure the Secure Sockets Layer (SSL) protocol to help protect WSUS.|
 |[2.4. Configure WSUS computer groups](#24-configure-wsus-computer-groups)|Create computer groups in the WSUS Administration Console to manage updates in your organization.|
 |[2.5. Configure client computers to establish SSL connections with the WSUS server](#25-configure-client-computers-to-establish-ssl-connections-with-the-wsus-server)|Set up the client computers to establish secure connections to the WSUS server.|
@@ -118,7 +118,7 @@ If the corporate network uses proxy servers, the proxy servers must support the 
 
 1. Sign in to the computer that you plan to use as the WSUS server by using an account that's a member of the Local Administrators group.
 
-1. Install the WSUS server role. When you use the WSUS configuration wizard, don't specify a proxy server.
+1. Install the WSUS server role. When you use the WSUS Configuration Wizard, as explained in [Configure WSUS by using the WSUS Configuration Wizard](#22-configure-wsus-by-using-the-wsus-configuration-wizard), don't specify a proxy server.
 
 1. Open a command prompt (*Cmd.exe*) as an administrator:
 
@@ -136,21 +136,17 @@ If the corporate network uses proxy servers, the proxy servers must support the 
 
    - *proxy_port* is the port number of the proxy server.
 
-1. Close the command prompt window.
+1. Close Command Prompt.
 
 #### To add a proxy server to the WSUS configuration
 
 1. Open the WSUS Administration Console.
 
-1. On the left pane, expand the server name, and then select **Options**.
+1. Under **Update Services**, expand the server name, and then select **Options**.
 
-1. On the **Options** pane, select **Update Source and Update Server**, and then go to the **Proxy Server** tab.
+1. On the **Options** pane, select **Update Source and Proxy Server**, and then go to the **Proxy Server** tab.
 
-1. Select **Use a proxy server when synchronizing**.
-
-1. In the **Proxy server name** text box, enter the name of the proxy server.
-
-1. In the **Proxy port number** text box, enter the port number of the proxy server. The default port number is 80.
+1. Select **Use a proxy server when synchronizing**, and then enter the name and the port number of the proxy server in the corresponding boxes. The default port number is 80.
 
 1. If the proxy server requires that you use a specific user account, select **Use user credentials to connect to the proxy server**. Enter the required user name, domain, and password into the corresponding boxes.
 
@@ -160,6 +156,10 @@ If the corporate network uses proxy servers, the proxy servers must support the 
 
 #### To remove a proxy server from the WSUS configuration
 
+1. In the WSUS Administration Console, under **Update Services**, expand the server name, and then select **Options**.
+
+1. On the **Options** pane, select **Update Source and Proxy Server**, and then go to the **Proxy Server** tab.
+
 1. Clear the **Use a proxy server when synchronizing** checkbox.
 
 1. Select **OK**.
@@ -168,47 +168,57 @@ If the corporate network uses proxy servers, the proxy servers must support the 
 
 Your client computers all need to connect to one of your WSUS servers. The client computer must have outbound access to two ports on the WSUS server. By default, these ports are 8530 and 8531.
 
-## 2.2. Configure WSUS by using the WSUS configuration wizard
+## 2.2. Configure WSUS by using the WSUS Configuration Wizard
 
-This procedure assumes that you're using the WSUS configuration wizard, which appears the first time you start the WSUS Management Console. Later in this article, you see how to perform these configurations by using the **Options** page.
+The procedures in the following sections use the WSUS Configuration Wizard to configure WSUS settings. The WSUS Configuration Wizard appears the first time you start the WSUS Management Console. You can also use the **Options** page in the WSUS Administration Console to configure WSUS settings. For more information, see the following procedures in other sections of this article:
 
-#### To configure WSUS
+- [Add a proxy server to the WSUS configuration](#to-add-a-proxy-server-to-the-wsus-configuration)
+- [Enable client-side targeting](#242-enable-client-side-targeting-if-appropriate)
 
-1. On the left pane of Server Manager, select **Dashboard** > **Tools** > **Windows Server Update Services**.
+### Start the wizard and configure initial settings
+
+1. In the Server Manager dashboard, select **Tools** > **Windows Server Update Services**.
 
     > [!NOTE]
     > If the **Complete WSUS Installation** dialog appears, select **Run**. In the **Complete WSUS Installation** dialog, select **Close** when the installation successfully finishes.
 
-1. The WSUS configuration wizard opens. On the **Before you Begin** page, review the information, and then select **Next**.
+1. The WSUS Configuration Wizard opens. On the **Before you Begin** page, review the information, and then select **Next**.
 
 1. Read the instructions on the **Join the Microsoft Update Improvement Program** page. Keep the default selection if you want to participate in the program, or clear the checkbox if you don't. Then select **Next**.
 
-1. On the **Choose Upstream Server** page, select one of the two options: **Synchronize the updates with Microsoft Update** or **Synchronize from another Windows Server Update Services server**.
+### Configure upstream and proxy server settings
 
-    If you choose to synchronize from another WSUS server:
-    
-    - Specify the server name and the port on which this server should communicate with the upstream server.
+1. On the **Choose Upstream Server** page, select one of the following options:
 
-    - To use SSL, select **Use SSL when synchronizing update information**. The servers use port 443 for synchronization. (Make sure that this server and the upstream server support SSL.)
+   - **Synchronize from Microsoft Update**
 
-    - If this server is a replica server, select **This is a replica of the upstream server**.
+   - **Synchronize from another Windows Server Update Services server**
+
+    If you choose to synchronize from another WSUS server, take the following steps:
+
+    1. Specify the server name and the port on which this server should communicate with the upstream server.
+
+    1. To use SSL, select **Use SSL when synchronizing update information**. The servers use port 443 for synchronization. (Make sure that this server and the upstream server support SSL.)
+
+    1. If this server is a replica server, select **This is a replica of the upstream server**.
 
 1. After you select the options for your deployment, select **Next**.
 
-1. On the **Specify Proxy Server** page, select **Use a proxy server when synchronizing**. Then enter the proxy server name and port number (port 80 by default) in the corresponding boxes.
+1. If WSUS needs a proxy server to access the internet, configure the following proxy settings. Otherwise, skip this step.
 
-    > [!IMPORTANT]
-    > You must complete this step if you identify in an earlier section that WSUS needs a proxy server to have internet access.
+   1. On the **Specify Proxy Server** page, select **Use a proxy server when synchronizing**. Then enter the proxy server name and port number (port 80 by default) in the corresponding boxes.
 
-1. If you want to connect to the proxy server by using specific user credentials, select **Use user credentials to connect to the proxy server**. Then enter the user name, domain, and password of the user in the corresponding boxes.
+   1. If you want to connect to the proxy server by using specific user credentials, select **Use user credentials to connect to the proxy server**. Then enter the user name, domain, and password of the user in the corresponding boxes.
 
-   If you want to enable basic authentication for the user who's connecting to the proxy server, select **Allow basic authentication (password is sent in cleartext)**.
+      If you want to enable basic authentication for the user who's connecting to the proxy server, select **Allow basic authentication (password is sent in cleartext)**.
 
 1. Select **Next**.
 
-1. On the **Connect to Upstream Server** page, select **start Connecting**.
+1. On the **Connect to Upstream Server** page, select **Start Connecting**.
 
 1. When WSUS connects to the server, select **Next**.
+
+### Select languages, products, and classifications
 
 1. On the **Choose Languages** page, you have the option to select the languages from which WSUS receives updates: all languages or a subset of languages. Selecting a subset of languages saves disk space, but it's important to choose all the languages that all the clients of this WSUS server need.
 
@@ -219,11 +229,13 @@ This procedure assumes that you're using the WSUS configuration wizard, which ap
 
 1. Select **Next**.
 
-1. Use the **Choose Products** page to specify the products for which you want updates. Select product categories, such as Windows, or specific products, such as Windows Server 2012. Selecting a product category selects all the products in that category.
+1. Use the **Choose Products** page to specify the products for which you want updates. Select product categories, such as Windows, or specific products, such as Windows Server 2019. Selecting a product category selects all the products in that category.
 
 1. Select **Next**.
 
 1. On the **Choose Classifications** page, select the update classifications that you want to get. Choose all the classifications or a subset of them, and then select **Next**.
+
+### Configure the sync schedule
 
 1. On the **Set Sync Schedule** page, select whether to perform synchronization manually or automatically.
 
@@ -231,15 +243,17 @@ This procedure assumes that you're using the WSUS configuration wizard, which ap
 
    - If you select **Synchronize automatically**, the WSUS server synchronizes at set intervals.
 
-   Set the time for **First synchronization**, and then specify the number of synchronizations per day that you want this server to perform. For example, if you specify four synchronizations per day, starting at 3:00 AM, synchronizations occur at 3:00 AM, 9:00 AM, 3:00 PM, and 9:00 PM.
+     Set the time for **First synchronization**, and then specify the number of synchronizations per day that you want this server to perform. For example, if you specify four synchronizations per day, starting at 3:00 AM, synchronizations occur at 3:00 AM, 9:00 AM, 3:00 PM, and 9:00 PM.
 
 1. Select **Next**.
 
-1. On the **Finished** page, if you want to start the synchronization right away, select **Begin initial synchronization**.
+### Complete the wizard
 
-   If you don't select this option, you need to use the WSUS Management Console to perform the initial synchronization. Select **Next** if you want to read more about additional settings, or select **Finish** to conclude this wizard and finish the initial WSUS setup.
+1. On the **Finished** page, if you want to start the synchronization right away, select **Begin initial synchronization**. If you don't select this option, you need to use the WSUS Management Console to perform the initial synchronization.
 
-1. After you select **Finish**, the WSUS Administration Console appears. You use this console to manage your WSUS network, as described later.
+1. If you want to read more about additional settings, select **Next**. Otherwise, select **Finish** to conclude this wizard and finish the initial WSUS setup.
+
+1. After you select **Finish**, the WSUS Administration Console appears. You use this console to manage your WSUS network, as described later in this article.
 
 ## 2.3. Secure WSUS with the Secure Sockets Layer protocol
 
@@ -361,11 +375,11 @@ There are two approaches to assigning client computers to computer groups. The r
 ### 2.4.2. Enable client-side targeting, if appropriate
 
 > [!IMPORTANT]
-> Skip this step if you plan to use server-side targeting.
+> Skip the steps in this section if you plan to use server-side targeting.
 
-1. In the WSUS Administration Console, under **Update Services**, expand the WSUS server, and then select **options**.
+1. In the WSUS Administration Console, under **Update Services**, expand the WSUS server, and then select **Options**.
 
-1. On the **Options** pane, go to the **General** tab, and then select **Use Group Policy or registry settings on computers**.
+1. On the **Options** pane, select **Computers**. Go to the **General** tab, and then select **Use Group Policy or registry settings on computers**.
 
 ### 2.4.3. Create the desired computer groups
 
@@ -408,32 +422,40 @@ If you don't use Active Directory in your network, you need to configure each co
 
 ### 2.6.2. Edit policies to configure the client computers
 
+Take the steps in the following sections to configure the client computers by using policy settings.
+
 > [!NOTE]
 > These instructions assume that you're using the most recent versions of the policy editing tools. On older versions of the tools, the policies might be arranged differently.
+
+#### Open the policy editor and go to the Windows Update item
 
 1. Open the appropriate policy object:
 
     - If you're using Active Directory, open the Group Policy Management Console, go to the GPO on which you want to configure WSUS, and select **Edit**. Then expand **Computer Configuration**, and expand **Policies**.
     - If you're not using Active Directory, open the Local Group Policy Editor. The local computer policy appears. Expand **Computer Configuration**.
 
-1. In the object that you expanded in the previous step, expand **Administrative Templates** > **Windows components** > **Windows Update**, and then select **Manage end user experience**.
+1. In the object that you expanded in the previous step, expand **Administrative Templates** > **Windows components** > **Windows Update**. If your operating system is Windows 10 or Windows 11, also select **Manage end user experience**.
+
+#### Edit the setting for automatic updates
 
 1. On the details pane, double-click **Configure Automatic Updates**. The **Configure Automatic Updates** policy opens.
 
 1. Select **Enabled**, and then select the desired option under the **Configure automatic updating** setting to manage how Automatic Updates should download and install approved updates.
-   
-    We recommend using the **Auto download and schedule the install** setting. It ensures that the updates you approve in WSUS are downloaded and installed in a timely fashion, without the need for user intervention.
 
-1. If desired, edit other parts of the policy. For more information, see [Manage additional Windows Update settings](/windows/deployment/update/waas-wu-settings). 
+   We recommend using the **Auto download and schedule the install** setting. It ensures that the updates you approve in WSUS are downloaded and installed in a timely fashion, without the need for user intervention.
 
-    >[!NOTE]
-    >The **Install updates from other Microsoft products** setting has no effect on client computers receiving updates from WSUS. The client computers receive all updates approved for them on the WSUS server.
+1. If desired, edit other parts of the policy. For more information, see [Manage additional Windows Update settings](/windows/deployment/update/waas-wu-settings).
+
+   >[!NOTE]
+   >The **Install updates from other Microsoft products** setting has no effect on client computers receiving updates from WSUS. The client computers receive all updates approved for them on the WSUS server.
 
 1. Select **OK** to close the **Configure Automatic Updates** policy.
 
-1. Go back to the **Windows Update** node of the tree, and then select **Manage updates offered from Windows Server Update Service**.
+#### Edit the setting for specifying an intranet server to host updates
 
-1. On the **Manage updates offered from Windows Server Update Service** details pane, double-click **Specify intranet Microsoft update service location**. The **Specify intranet Microsoft update service location** policy opens.
+1. On the details pane, double-click **Specify intranet Microsoft update service location**. If your operating system is Windows 10 or Windows 11, first go back to the **Windows Update** node of the tree, and then select **Manage updates offered from Windows Server Update Service**.
+
+   The **Specify intranet Microsoft update service location** policy opens.
 
 1. Select **Enabled**, and then enter the URL of the WSUS server in both the **Set the intranet update service for detecting updates** and **Set the intranet statistics server** boxes.
 
@@ -444,14 +466,16 @@ If you don't use Active Directory in your network, you need to configure each co
 
 #### Configure client-side targeting, if appropriate
 
-If you choose to use client-side targeting, you should now specify the appropriate computer group for the client computers you're configuring.
+If you choose to use client-side targeting, take the steps in this section to specify the appropriate computer group for the client computers you're configuring.
 
 > [!NOTE]
 > These steps assume that you've just completed the steps for editing policies to configure the client computers.
 
-1. On the **Manage updates offered from Windows Server Update Service** details pane, double-click **Enable client-side targeting**. The **Enable client-side targeting** policy opens.
+1. In the policy editor, go to the **Windows Update** item. If your operating system is Windows 10 or Windows 11, also select **Manage updates offered from Windows Server Update Service**.
 
-1. Select **Enabled**. For **Target group name for this computer**, enter the name of the WSUS computer group to which you want to add the client computers.
+1. On the details pane, double-click **Enable client-side targeting**. The **Enable client-side targeting** policy opens.
+
+1. Select **Enabled**. Under **Target group name for this computer**, enter the name of the WSUS computer group to which you want to add the client computers.
 
    If you're running a current version of WSUS, you can add the client computers to multiple computer groups by entering the group names, separated by semicolons. For example, you can enter **Accounting;Executive** to add the client computers to both the Accounting and Executive computer groups.
 
@@ -464,7 +488,7 @@ Client computers don't appear in the WSUS Administration Console until they conn
 1. Wait for the policy changes to take effect on the client computer.
 
    If you use an Active Directory-based GPO to configure the client computers, it takes some time for the Group Policy Update mechanism to deliver the changes to a client computer. If you want to speed up this process, you can open Command Prompt with elevated privileges and then enter the command **gpupdate /force**.
-   
+
    If you use the Local Group Policy Editor to configure an individual client computer, the changes take effect immediately.
 
 1. Restart the client computer. This step makes sure that the Windows Update software on the computer detects the policy changes.
@@ -472,9 +496,9 @@ Client computers don't appear in the WSUS Administration Console until they conn
 1. Let the client computer scan for updates. This scan normally takes some time.
   
    You can speed up the process by using one of these options:
-    
+
    - On Windows 10 or 11, use the **Settings** app's Windows Update page to manually check for updates.
-   - On versions of Windows before Windows 10, use the **Windows Update** icon in Control Panel to manually check for updates. 
+   - On versions of Windows before Windows 10, use the **Windows Update** icon in Control Panel to manually check for updates.
    - On versions of Windows before Windows 10, open Command Prompt with elevated privileges, and enter the command **wuauclt /detectnow**.
 
 ### 2.6.4 Verify the client computer's successful connection to the WSUS server
