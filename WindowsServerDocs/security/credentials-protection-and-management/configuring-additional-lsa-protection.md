@@ -129,9 +129,6 @@ For client devices running Windows 11 version 22H2 and later, added LSA protecti
 
 Automatic enablement of added LSA protection on Windows 11 version 22H2 and later doesn't set a UEFI variable for the feature. If you want to set a UEFI variable, you can use a registry configuration or policy.
 
-> [!NOTE]
-> For devices running Windows RT 8.1, added LSA protection is always enabled, and it can't be turned off.
-
 ### Enable LSA protection on a single computer
 
 You can enable LSA protection on a single computer by using the registry or by using Local Group Policy.
@@ -255,7 +252,7 @@ To determine whether LSA starts in protected mode when Windows starts, take the 
 
 LSA protection is a security feature that defends sensitive information like credentials from theft by blocking untrusted LSA code injection and process memory dumping. LSA protection runs in the background by isolating the LSA process in a container and preventing other processes, like malicious actors or apps, from accessing the feature. This isolation makes LSA protection a vital security feature, which is why it's enabled by default in Windows 11.
 
-Starting in Windows 10, Credential Guard also helps prevent credential theft attacks by protecting New Technology LAN Manager (NTLM) password hashes, Kerberos ticket-granting tickets (TGTs), and credentials stored by applications as domain credentials. Kerberos, NTLM, and Credential Manager isolate secrets by using virtualization-based security (VBS).
+Starting in Windows 10, Credential Guard also helps prevent credential theft attacks by protecting NTLM password hashes, Kerberos ticket-granting tickets (TGTs), and credentials stored by applications as domain credentials. Kerberos, NTLM, and Credential Manager isolate secrets by using virtualization-based security (VBS).
 
 When Credential Guard is enabled, the LSA process communicates with a component called the isolated LSA process, or LSAIso.exe, that stores and protects secrets. Data stored by the isolated LSA process is protected by using VBS and isn't accessible to the rest of the operating system. LSA uses remote procedure calls to communicate with the isolated LSA process.
 
