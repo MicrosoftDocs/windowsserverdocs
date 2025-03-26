@@ -162,7 +162,7 @@
   - name: Credentials Protection and Management
     href: credentials-protection-and-management/credentials-protection-and-management.md
     items:
-    - name: Configuring additional LSA Protection
+    - name: Configure additional LSA protection
       href: credentials-protection-and-management/configuring-additional-lsa-protection.md
     - name: Credential Guard
       items:
