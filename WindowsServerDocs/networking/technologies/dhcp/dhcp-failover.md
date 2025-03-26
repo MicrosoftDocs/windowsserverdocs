@@ -23,7 +23,7 @@ When two DHCP servers are configured for failover, they share scope information,
 
 The following figure illustrates how components and settings for a failover-enabled DHCP scope are shared between two DHCP servers.
 
-![Diagram of DHCP failover.](media/dhcp-failover-diagram.png)
+![Diagram of DHCP failover.](media/dhcp-failover-relationship.png)
 
 The scopes and settings used with DHCP servers that are configured for DHCP failover are shared using a new object called the **DHCP failover relationship**. For more information, see [DHCP Failover Relationships](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn338986(v=ws.11)).
 
@@ -89,6 +89,8 @@ You can switch between hot standby and load balance mode if desired, but you can
 
 In hot standby mode, two servers operate in a failover relationship where an active server is responsible for leasing IP addresses and configuration information to all clients in a scope or subnet. The partner server assumes a standby role, with responsibility to issue leases to DHCP clients only if the active server becomes unavailable. Hot standby mode is ideal for scenarios where the failover partner is only intended to be used temporarily when the active server is unavailable.
 
+![Hot standby mode illustration.](media/hot-standby-mode.png)
+
 A server is active or standby in the context of a failover relationship. For instance, a server that has the role of active for a given relationship could be a standby server for another relationship. By default, the server that is used to create the failover relationship is the active server, but this isn't required.
 
 When you choose hot standby, you must also configure the percentage of IP addresses on the active server that are reserved for use on the standby server in the event that the active server doesn't respond. By default, this reserve percentage is 5%.
@@ -102,6 +104,8 @@ The hot standby mode of operation is best suited to deployments where a central 
 ### Load balance mode
 
 Load balance mode is the default mode of deployment. In this mode, two DHCP servers simultaneously serve IP addresses and options to clients on a given subnet. DHCP client requests are load balanced and shared between the two DHCP servers. The default load balancing ratio between the two servers is 50:50, but this can be customized to any ratio from 0 to 100%.
+
+![Load balance mode illustration.](media/load-balance-mode.png)
 
 The load-balancing mechanism is defined in RFC 3074, in which a hash is computed from the MAC address contained in each DHCP client request. A range of hash values (also called the hash bucket) is assigned to each DHCP server based on the load balancing percentages that are configured. Servers determine if they are designated to respond to the client based on their assigned hash bucket.
 
@@ -129,7 +133,7 @@ In both cases, you must configure DHCP failover to use the name or IP address of
 1. In Failover Cluster Manager, determine the currently active node. To determine the active node, you can click on each node under Nodes until you see the DHCP Server role with a status of Running. You can also type the following command at a Windows PowerShell prompt:
 
     ```powershell
-    Get-ClusterResource –Name dhcp1.contoso.com | select OwnerNode
+    Get-ClusterResource –Name "dhcp1.contoso.com"
     ```
 
     In this example, the cluster name is **dhcp1.contoso.com**. Output from this command will be the name of the currently active node.
