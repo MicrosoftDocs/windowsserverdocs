@@ -4,7 +4,7 @@ description: Learn how to configure the Certificate Enrollment Web Service role 
 author: meaghanlewis
 ms.topic: how-to
 ms.author: mosagie
-ms.date: 02/19/2025
+ms.date: 03/27/2025
 
 #customer intent: As an IT administrator, I want to install and configure the Certificate Enrollment Web Service so that users and computers can securely enroll for certificates.
 ---
@@ -60,7 +60,7 @@ Configuration tips:
 - Ensure the Certificate Enrollment Web Service account is trusted for delegation.
 - You can install multiple instances of the Certificate Enrollment Web Service on a single computer. However, you can only install one instance by using Server Manager. To install a second instance, you must use the Windows PowerShell cmdlet [Install-AdcsEnrollmentWebService](/powershell/module/adcsdeployment/install-adcsenrollmentwebservice).
 
-> [!NOTES]
+> [!NOTE]
 > If the certification authority that the Certificate Enrollment Web Service will be using has spaces in the name, such as Margies Travel Issuing CA, instead of Margies-Travel-Issuing-CA, then additional configuration steps are required after installation of the service. The additional steps required are documented in [Implementing Certificate Enrollment Web Services in Windows Server that uses an Issuing CA with spaces in the name](https://social.technet.microsoft.com/wiki/contents/articles/15668.implementing-certificate-enrollment-web-services-in-windows-server-2012-that-uses-an-issuing-ca-with-spaces-in-the-name.aspx).
 
 ### Set the authentication type for Certificate Enrollment Web Service
@@ -76,6 +76,8 @@ See [Certificate Enrollment Web Service Guidance](/archive/technet-wiki/7734.cer
 ### Allow key-based renewal for Certificate Enrollment Web Service
 
 Key-based renewal mode is a feature that allows an existing valid certificate to be used to authenticate a certificate renewal request. This enables computers that aren't connected directly to the internal network the ability to automatically renewal an existing certificate.
+
+For more information, see [Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port](/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal).
 
 ### Configure a service account
 
