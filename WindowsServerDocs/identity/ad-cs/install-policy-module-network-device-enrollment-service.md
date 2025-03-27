@@ -1,10 +1,10 @@
 ﻿---
-title: Install a policy module with the Network Device Enrollment Service
+title: Install a policy module with the Network Device Enrollment Service in Windows Server
 description: Learn how to install, configure, and uninstall a policy module with the Network Device Enrollment Service.
 author: meaghanlewis
 ms.topic: how-to
 ms.author: mosagie
-ms.date: 02/06/2025
+ms.date: 03/27/2025
 ---
 
 # Install a policy module with the Network Device Enrollment Service
@@ -17,7 +17,7 @@ This article covers how-to install and configure a policy module with the Networ
 
 - NDES role service is installed
 - NDES is configured
-- Read [Use a policy module with Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)#how-to-install-and-uninstall-the-policy-module)
+- Read [Use a policy module with Network Device Enrollment Service](/windows-server/identity/ad-cs/use-policy-module-with-network-device-enrollment-service)
 
 ## How to install and uninstall the policy module
 
@@ -38,7 +38,7 @@ If there are no accompanying instructions, or you developed your own policy modu
 1. Run the following Windows PowerShell cmdlets to update the registry path HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\MSCEP:
 
     ```powershell
-    Item -Path HKLM:\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules
+    Invoke-Item -Path HKLM:\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules
     ```
 
     This command creates the new \\Modules key.
@@ -47,7 +47,7 @@ If there are no accompanying instructions, or you developed your own policy modu
     New-ItemProperty HKLM:\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\ -Name Policy -PropertyType String -Value "NDESPolicy.OTA.1"
     ```
 
-    This command specifies the policy module name, using *NDESPolicy.OTA.1* as an example. Replace *NDESPolicy.OTA.1* with the name of your own policy module.
+    This command specifies the policy module name, using **NDESPolicy.OTA.1** as an example. Replace **NDESPolicy.OTA.1** with the name of your own policy module.
 
 1. Restart Internet Information Services (IIS) by typing **IISReset** from an elevated command prompt.
 
