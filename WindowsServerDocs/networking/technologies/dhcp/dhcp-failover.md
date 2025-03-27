@@ -79,7 +79,7 @@ You can configure DHCP failover can be configured using Server Manager or Window
 
 ## DHCP failover and IPv6
 
-DHCP failover isn't supported for Internet Protocol version 6 (IPv6) scopes. Network adapters using IPv6 typically determine their own IPv6 address using stateless IP autoconfiguration. In this mode, the DHCP server delivers only the DHCP option configuration, and the server does not maintain any lease state information. A high availability deployment for stateless DHCPv6 is possible by simply setting up two servers with identical option configuration. Even in a stateful DHCPv6 deployment, the scopes do not run under high address utilization, which makes split scope a viable solution for high availability.
+DHCP failover isn't supported for Internet Protocol version 6 (IPv6) scopes. Network adapters using IPv6 typically determine their own IPv6 address using stateless IP autoconfiguration. In this mode, the DHCP server delivers only the DHCP option configuration, and the server doesnt maintain any lease state information. A high availability deployment for stateless DHCPv6 is possible by setting up two servers with identical option configuration. Even in a stateful DHCPv6 deployment, the scopes don't run under high address utilization, which makes split scope a viable solution for high availability.
 
 ## DHCP failover modes
 
@@ -113,7 +113,7 @@ Load balance mode is the default mode of deployment. In this mode, two DHCP serv
 
 ![Diagram that shows how load balance mode works.](media/load-balance-mode.png)
 
-The load-balancing mechanism is defined in [RFC 3074](https://www.rfc-editor.org/rfc/rfc3074), in which a hash is computed from the MAC address contained in each DHCP client request. A range of hash values (also called the hash bucket) is assigned to each DHCP server based on the load balancing percentages that are configured. Servers determine if they are designated to respond to the client based on their assigned hash bucket.
+The load-balancing mechanism is defined in [RFC 3074](https://www.rfc-editor.org/rfc/rfc3074), in which a hash is computed from the MAC address contained in each DHCP client request. A range of hash values (also called the hash bucket) is assigned to each DHCP server based on the load balancing percentages that are configured. Servers determine if they're designated to respond to the client based on their assigned hash bucket.
 
 In load balancing mode, when a DHCP server loses contact with its failover partner, it begins granting leases to all DHCP clients. If it receives a lease renewal request from a DHCP client that is assigned to its failover partner, it temporarily renews the same IP address lease for the duration of the MCLT. If it receives a request from a client that wasn't previously assigned a lease, it grants a new lease from its free IP address pool until this is exhausted, and then begin using the free IP address pool of its failover partner. If the DHCP server enters a partner down state, it waits for the MCLT duration, and then assumes responsibility for 100% of the IP address pool.
 
@@ -160,7 +160,7 @@ Each failover protocol message includes a time field that is populated with the 
 
 ### Policy based assignment
 
-Windows Server includes a policy based IP address assignment feature, which allows a Windows DHCP administrator to group the DHCP clients by a specific attribute of the client, such as vendor class, user class, client identifier, or MAC address. By grouping the clients based on these attributes, an administrator is able to assign parameters such as IP address, default gateway, DNS server and other DHCP options to a specific grouping of clients. This allows the administrator to exercise greater control on the configuration parameters delivered to end hosts. This feature introduces the concept of multiple IP address ranges within a single scope. To accommodate this, DHCP failover address distribution in load sharing mode is done on a per IP address range basis.
+Windows Server includes a policy based IP address assignment feature, which allows a Windows DHCP administrator to group the DHCP clients by a specific attribute of the client, such as vendor class, user class, client identifier, or MAC address. Administrators group the clients based on these attributes, and can assign parameters such as IP address, default gateway, DNS server, and other DHCP options to a specific grouping of clients. This allows the administrator to exercise greater control on the configuration parameters delivered to end hosts. This feature introduces the concept of multiple IP address ranges within a single scope. To accommodate this, DHCP failover address distribution in load sharing mode is done on a per IP address range basis.
 
 ### Windows Firewall
 
@@ -172,13 +172,13 @@ DHCP failover uses TCP port 647 to listen for failover messages between two fail
 
 ### Relay agents
 
-Initial DHCPDISCOVER messages are broadcast by DHCP clients on the subnet to which they belong. Since routers typically do not forward broadcast traffic, a mechanism is required to enable DHCP clients to communicate with DHCP servers if the DHCP server is not located on the same subnet. Relay agents (typically provided on a router) are designed to perform this function, relaying DHCP and BOOTP messages between clients and servers on different subnets. Relay agents are commonly configured with on a network device, or you can configure DHCP relay on a Windows Server with the Remote Access role installed. For more information, see [Deploy the DHCP Relay Agent](/windows-server/networking/technologies/dhcp/dhcp-deploy-relay-agent).
+Initial DHCPDISCOVER messages are broadcast by DHCP clients on the subnet to which they belong. Since routers typically do not forward broadcast traffic, a mechanism is required to enable DHCP clients to communicate with DHCP servers if the DHCP server isn't located on the same subnet. Relay agents (typically provided on a router) are designed to perform this function, relaying DHCP, and BOOTP messages between clients and servers on different subnets. Relay agents are commonly configured with on a network device, or you can configure DHCP relay on a Windows Server with the Remote Access role installed. For more information, see [Deploy the DHCP Relay Agent](/windows-server/networking/technologies/dhcp/dhcp-deploy-relay-agent).
 
 If your DHCP relay is configured on a network device, consult your vendor’s documentation for details. The **helper-address** command is commonly used to configure DHCP relay on a network device, for example: `ip helper-address 10.0.1.1`.
 
 When you deploy DHCP failover, a single DHCP relay address might not be sufficient, since DHCP clients must always be able to communicate with both the primary DHCP server and the failover partner server. If both DHCP servers are located on a different subnet than DHCP clients, this requires at least two DHCP relay agents. For example: `ip helper-address 10.0.1.1`, `ip helper-address 10.0.1.2`.
 
-In this example, both DHCP servers are on the same subnet (10.0.1.0/24). The primary DHCP server’s IP address is 10.0.1.1 and 10.0.1.2 is the IP address for the failover partner server. If both DHCP servers are located on the same subnet, you can also configure the subnet broadcast address (ex: 10.0.1.255) as a single DHCP relay. The use of a subnet broadcast address as a single DHCP relay is not possible if DHCP servers are located on separate subnets.
+In this example, both DHCP servers are on the same subnet (10.0.1.0/24). The primary DHCP server’s IP address is 10.0.1.1 and 10.0.1.2 is the IP address for the failover partner server. If both DHCP servers are located on the same subnet, you can also configure the subnet broadcast address (ex: 10.0.1.255) as a single DHCP relay. The use of a subnet broadcast address as a single DHCP relay isn't possible if DHCP servers are located on separate subnets.
 
 ### Duplicate relay agents
 
