@@ -5,7 +5,7 @@ ms.date: 03/10/2023
 ms.topic: conceptual
 author: robinharwood
 manager: brianlic
-ms.author: roharwoo
+ms.author: jgerend
 ---
 
 # Manage Virtual Hard Disks (VHD)

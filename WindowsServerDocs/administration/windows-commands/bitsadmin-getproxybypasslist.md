@@ -2,7 +2,7 @@
 title: bitsadmin getproxybypasslist
 description: Reference article for the bitsadmin getproxybypasslist command that retrieves the proxy bypass list for the specified job.
 ms.topic: reference
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 ms.date: 01/06/2023
 ---

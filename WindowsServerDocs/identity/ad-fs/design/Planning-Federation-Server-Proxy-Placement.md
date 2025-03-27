@@ -4,7 +4,7 @@ ms.assetid: d3cf4cb9-9b9e-4dcf-b6c6-8c6c42ec5f3e
 title: Planning Federation Server Proxy Placement
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

@@ -3,7 +3,7 @@ title: What's new in Windows Server 2016
 description: This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: alalve
 ms.date: 07/31/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
@@ -498,11 +498,11 @@ Cluster Operating System Rolling Upgrade enables an administrator to upgrade the
 
 For more information, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
 
-### Cloud Witness
+### Cloud witness
 
-Cloud Witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The Cloud Witness, like any other quorum witness, gets a vote and can participate in quorum calculations. You can configure Cloud Witness as a quorum witness using the Configure a Cluster Quorum wizard.
+Cloud witness is a new type of Failover Cluster quorum witness in Windows Server 2016 that leverages Microsoft Azure as the arbitration point. The cloud witness, like any other quorum witness, gets a vote and can participate in quorum calculations. You can configure cloud witness as a quorum witness using the Configure a Cluster Quorum wizard.
 
-For more information, see [Deploy Cloud Witness for a failover cluster](../failover-clustering/deploy-cloud-witness.md).
+For more information, see [Deploy a quorum witness](../failover-clustering/deploy-quorum-witness.md).
 
 ### Virtual Machine resiliency
 

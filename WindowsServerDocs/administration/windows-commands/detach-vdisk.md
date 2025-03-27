@@ -3,7 +3,7 @@ title: detach vdisk
 description: Reference article for the detach vdisk command, which stops the selected virtual hard disk (VHD) from appearing as a local hard disk drive on the host computer.
 ms.topic: reference
 ms.assetid: 5f01dcb8-9237-4564-ad94-8a8dd0fd0cca
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

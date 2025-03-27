@@ -4,7 +4,7 @@ description: Learn how to prepare additional servers to add to the cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

@@ -4,7 +4,7 @@ ms.assetid: 7e804590-6d6c-4cca-ac14-02d4dff06cec
 title: Update password customization
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

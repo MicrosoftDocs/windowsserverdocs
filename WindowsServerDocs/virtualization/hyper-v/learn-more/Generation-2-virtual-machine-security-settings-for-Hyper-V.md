@@ -1,9 +1,9 @@
 ---
 title: Generation 2 virtual machine security settings for Hyper-V
-description: Describes the security settings available in Hyper-V Manager for generation 2 virtual machines
+description: Describes the security settings available in Hyper-V Manager for generation 2 virtual machines.
 ms.topic: article
 ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
-ms.author: mosagie
+ms.author: daknappe
 author: meaghanlewis
 ms.date: 10/04/2016
 ---
@@ -13,7 +13,7 @@ Use the virtual machine security settings in Hyper-V Manager to help protect the
 
 The Host Guardian Service is a new role in Windows Server 2016. It identifies legitimate Hyper-V hosts and allows them to run a given virtual machine. You'd most commonly set up the Host Guardian Service for a datacenter. But you can create a shielded virtual machine to run it locally without setting up a Host Guardian Service. You can later distribute the shielded virtual machine to a Host Guardian Fabric.
 
-If you haven't set up the Host Guardian Service or are running it in local mode on the Hyper-V host and the host has the virtual machine owner's guardian key, you can change the settings described in this topic.   An owner of a guardian key is an organization that creates and shares a private or public key to own all virtual machines created with that key.
+If you haven't set up the Host Guardian Service or are running it in local mode on the Hyper-V host and the host has the virtual machine owner's guardian key, you can change the settings described in this topic. An owner of a guardian key is an organization that creates and shares a private or public key to own all virtual machines created with that key.
 
 To learn how you can make your virtual machines more secure with the Host Guardian Service, see the following resources.
 
@@ -29,7 +29,7 @@ The templates described in the following table refer to the certificates that yo
 |Template name|Description|
 |-----------------|---------------|
 |Microsoft Windows|Select to secure boot the virtual machine for a Windows operating system.|
-|Microsoft UEFI Certificate Authority|Select to  secure boot the virtual machine for  a Linux distribution operating system.|
+|Microsoft UEFI Certificate Authority|Select to secure boot the virtual machine for  a Linux distribution operating system.|
 |Open Source Shielded VM|This template is leveraged to secure boot for [Linux-based shielded VMs](../../../security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template.md).|
 
 For more information, see the following topics.
@@ -52,11 +52,11 @@ If you select **Enable Trusted Platform Module** on Hyper-V hosts that run versi
 
 Isolated User Mode is the runtime environment that hosts security applications inside Virtual Secure Mode on the Hyper-V host. Virtual Secure Mode is used to secure and protect the state of the virtual TPM chip.
 
-To enable Isolated User Mode on the Hyper-V host that run earlier versions of Windows 10,
+To enable Isolated User Mode on the Hyper-V host that run earlier versions of Windows 10:
 
-1.  Open Windows PowerShell as an administrator.
+1. Open Windows PowerShell as an administrator.
 
-2.  Run the following commands:
+1. Run the following commands:
 
     ```powershell
     Enable-WindowsOptionalFeature -Feature IsolatedUserMode -Online
@@ -67,6 +67,7 @@ To enable Isolated User Mode on the Hyper-V host that run earlier versions of Wi
 You can migrate a virtual machine with virtual TPM enabled to any host that runs Windows Server 2016, Windows 10 build 10586 or higher versions. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) and [System requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md).
 
 ## Security Policy in Hyper-V Manager
+
 For more virtual machine security, use the **Enable Shielding** option to disable management features like console connection, PowerShell Direct, and some integration components. If you select this option, **Secure Boot**, **Enable Trusted Platform Module**, and **Encrypt State and VM migration traffic** options are selected and enforced.
 
 You can run the shielded virtual machine locally without setting up a Host Guardian Service. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md).

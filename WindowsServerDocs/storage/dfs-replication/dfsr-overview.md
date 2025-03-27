@@ -4,7 +4,7 @@ description: Learn how to use the Distributed File System (DFS) Replication role
 ms.date: 03/24/2023
 author: robinharwood
 manager: elizapo
-ms.author: roharwoo
+ms.author: daknappe
 ms.topic: conceptual
 ---
 

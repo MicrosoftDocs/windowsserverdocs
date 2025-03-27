@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: e5b604fa-17d7-4d23-88ca-8ffa6caad4e8
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Log Off User Sessions
