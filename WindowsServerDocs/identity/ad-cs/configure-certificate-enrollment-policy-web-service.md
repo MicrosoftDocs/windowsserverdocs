@@ -1,10 +1,10 @@
 ﻿---
-title: Configure the Certificate Enrollment Policy Web Service
+title: Configure the Certificate Enrollment Policy Web Service in Windows Server
 description: Learn how to configure the Certificate Enrollment Policy Web Service so that users and computers can get certificate enrollment policy information.
 author: meaghanlewis
 ms.topic: how-to
 ms.author: mosagie
-ms.date: 02/14/2025
+ms.date: 03/27/2025
 #customer intent: As an IT administrator, I want to configure the Certificate Enrollment Policy Web Service so that users and computers can obtain certificate enrollment policy information.
 ---
 
@@ -31,7 +31,7 @@ To configure a friendly name value for the Certificate Enrollment Policy Web Ser
     > [!NOTE]
     > If you see a prompt that asks you to get started with the Microsoft Web Platform, select **No**.
 
-1. Go to **Sites** > **Default Web Site**. Select the appropriate installation virtual application name. The name of the virtual application name changes based on how you installed the service, but should follow the basic syntax of *KeyBasedRenewal* **\_ADPolicyProvider\_CEP\_** *AuthenticationType*.
+1. Go to **Sites** > **Default Web Site**. Select the appropriate installation virtual application name. The name of the virtual application name changes based on how you installed the service, but should follow the basic syntax of **KeyBasedRenewal** **\_ADPolicyProvider\_CEP\_** **AuthenticationType**.
 
       - If you enabled key-based renewal and configured client certificate authentication, the virtual application name should is **KeyBasedRenewal\_ADPolicyProvider\_CEP\_Certificate**.
 
@@ -39,7 +39,7 @@ To configure a friendly name value for the Certificate Enrollment Policy Web Ser
 
       - If you didn't enable key-based renuwal but configured Windows integrated authentication, the virtual application name is **ADPolicyProvider\_CEP\_Kerberos**.
 
-1. In the *virtual application name* Home pane, open **Application Settings**, then open **FriendlyName**.
+1. In the **virtual application name** Home pane, open **Application Settings**, then open **FriendlyName**.
 
 1. In the **Edit Application Setting** dialog box, under **Value**, enter the name that you want to use as the friendly name for the service.
 
@@ -113,7 +113,7 @@ To distribute certificates for computers:
 
 ## Related content
 
-- [Certificate Enrollment Policy Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11))
+- [Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port](/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal)
 
 - [Certificate Enrollment Web Services in Active Directory Certificate Services](https://social.technet.microsoft.com/wiki/contents/articles/7734.certificate-enrollment-web-services-in-active-directory-certificate-services.aspx)
 
