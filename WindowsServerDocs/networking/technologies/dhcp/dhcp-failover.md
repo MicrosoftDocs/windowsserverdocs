@@ -42,7 +42,7 @@ DHCP scopes:
 
 - If parameters of a failover-enabled scope are modified, these settings must be manually replicated to the partner DHCP server.
 
-- Replication of scope settings can be initiated from either DHCP server to it's failover partner server.
+- Replication of scope settings can be initiated from either DHCP server to its failover partner server.
 
 DHCP client/server:
 
@@ -95,7 +95,7 @@ You can switch between hot standby and load balance mode if desired, but you can
 
 In hot standby mode, two servers operate in a failover relationship where an active server is responsible for leasing IP addresses and configuration information to all clients in a scope or subnet. The partner server assumes a standby role, with responsibility to issue leases to DHCP clients only if the active server becomes unavailable. Hot standby mode is ideal for scenarios where the failover partner is only intended to be used temporarily when the active server is unavailable.
 
-![Hot standby mode illustration.](media/hot-standby-mode.png)
+![Diagram showing how hot standby mode works.](media/hot-standby-mode.png)
 
 A server is active or standby in the context of a failover relationship. For instance, a server that has the role of active for a given relationship could be a standby server for another relationship. By default, the server that is used to create the failover relationship is the active server, but this isn't required.
 
@@ -111,9 +111,9 @@ In hot standby mode, a central office or data center server typically acts as a 
 
 Load balance mode is the default mode of deployment. In this mode, two DHCP servers simultaneously serve IP addresses and options to clients on a given subnet. DHCP client requests are load balanced and shared between the two DHCP servers. The default load balancing ratio between the two servers is 50:50, but this can be customized to any ratio from 0% to 100%.
 
-![Load balance mode illustration.](media/load-balance-mode.png)
+![Diagram that shows how load balance mode works.](media/load-balance-mode.png)
 
-The load-balancing mechanism is defined in RFC 3074, in which a hash is computed from the MAC address contained in each DHCP client request. A range of hash values (also called the hash bucket) is assigned to each DHCP server based on the load balancing percentages that are configured. Servers determine if they are designated to respond to the client based on their assigned hash bucket.
+The load-balancing mechanism is defined in [RFC 3074](https://www.rfc-editor.org/rfc/rfc3074), in which a hash is computed from the MAC address contained in each DHCP client request. A range of hash values (also called the hash bucket) is assigned to each DHCP server based on the load balancing percentages that are configured. Servers determine if they are designated to respond to the client based on their assigned hash bucket.
 
 In load balancing mode, when a DHCP server loses contact with its failover partner, it begins granting leases to all DHCP clients. If it receives a lease renewal request from a DHCP client that is assigned to its failover partner, it temporarily renews the same IP address lease for the duration of the MCLT. If it receives a request from a client that wasn't previously assigned a lease, it grants a new lease from its free IP address pool until this is exhausted, and then begin using the free IP address pool of its failover partner. If the DHCP server enters a partner down state, it waits for the MCLT duration, and then assumes responsibility for 100% of the IP address pool.
 
@@ -127,7 +127,7 @@ DHCP failover is supported with clustered DHCP in the following configurations:
 
 - A DHCP failover cluster can have a failover relationship with another DHCP failover cluster.
 
-In both cases, you must configure DHCP failover to use the name or IP address of the cluster, not the name or IP address of an cluster node. If an individual cluster node is configured as the failover partner, the primary server enters a communications interrupted state if the DHCP Server service moves to a different node in the cluster.
+In both cases, you must configure DHCP failover to use the name or IP address of the cluster, not the name or IP address of a cluster node. If an individual cluster node is configured as the failover partner, the primary server enters a communications interrupted state if the DHCP Server service moves to a different node in the cluster.
 
 > [!IMPORTANT]
 > If you use a shared secret, you must manually replicate the shared secret to all cluster nodes. You can replicate the shared secret on the active cluster node using the PowerShell cmdlet [Set-DhcpServerv4Failover](/powershell/module/dhcpserver/set-dhcpserverv4failover).
@@ -164,7 +164,7 @@ Windows Server includes a policy based IP address assignment feature, which allo
 
 ### Windows Firewall
 
-DHCP failover uses TCP port 647 to listen for failover messages between two failover partner servers. For this traffic to be allowed by the Windows firewall, the following inbound and outbound firewall rules are added then you install the DHCP Server role:
+DHCP failover uses TCP port 647 to listen for failover messages between two failover partner servers. For this traffic to be allowed by the Windows Firewall, the following inbound and outbound firewall rules are added then you install the DHCP Server role:
 
 - Microsoft-Windows-DHCP-Failover-TCP-In
 
