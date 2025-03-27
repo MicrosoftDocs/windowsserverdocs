@@ -4,7 +4,7 @@ title: Guidelines for troubleshooting DNS-related activation issues
 ms.topic: troubleshooting
 ms.date: 09/10/2019
 author: Teresa-Motiv
-ms.author: roharwoo
+ms.author: alalve
 ---
 
 # Guidelines for troubleshooting DNS-related activation issues

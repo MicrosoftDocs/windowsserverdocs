@@ -4,7 +4,7 @@ description: Learn how to test connectivity when returning to the corpnet on CLI
 manager: brianlic
 ms.topic: article
 ms.assetid: 5a7252d0-6db8-4a9d-98ee-75082ecd2929
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

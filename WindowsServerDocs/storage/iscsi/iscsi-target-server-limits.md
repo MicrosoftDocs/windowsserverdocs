@@ -5,7 +5,7 @@ description: "Learn more about: iSCSI Target Server Scalability Limits"
 ms.topic: article
 author: robinharwood
 manager: dougkim
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 09/11/2018
 ---
 

@@ -2,7 +2,7 @@
 title: Windows Server management overview
 description: Learn about more about the different capabilities and solutions to manage Windows Server.
 author: thomasmaurer
-ms.author: roharwoo
+ms.author: mosagie
 manager: carmencr
 ms.reviewer: carmencr
 ms.topic: overview

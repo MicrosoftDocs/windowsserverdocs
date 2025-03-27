@@ -4,7 +4,7 @@ description: Learn about extending the Test Lab Guide - Demonstrate DirectAccess
 manager: brianlic
 ms.topic: article
 ms.assetid: 3c98106c-67cc-406a-810e-f2e09f7e2c5e
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

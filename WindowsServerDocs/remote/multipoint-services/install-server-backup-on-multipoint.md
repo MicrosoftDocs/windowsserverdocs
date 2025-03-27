@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: e4331370-ba07-4529-92ab-db14a41bfc3b
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Install Server Backup on your MultiPoint server
 It is recommended that you consider a backup and recovery plan for your MultiPoint servers.

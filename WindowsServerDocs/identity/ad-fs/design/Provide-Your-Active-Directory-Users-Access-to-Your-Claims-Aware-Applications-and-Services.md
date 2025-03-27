@@ -4,7 +4,7 @@ ms.assetid: d254fca3-85a1-424d-ac22-d6687ec3798e
 title: Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

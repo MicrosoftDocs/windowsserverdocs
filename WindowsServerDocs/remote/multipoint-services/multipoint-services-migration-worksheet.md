@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 864405bb-47ed-4c83-97a2-8df4c6e6f96b
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Planning worksheet for MultiPoint Services migration
 

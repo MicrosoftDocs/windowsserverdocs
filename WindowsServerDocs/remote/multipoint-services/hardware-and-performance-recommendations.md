@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 99a5c9c2-270f-4753-a28c-434882c03125
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Hardware Requirements and Performance Recommendations
 This topic describes the hardware that is required to run a MultiPoint Services system and support user application scenarios. The user scenario directly affects the CPU, RAM, and network bandwidth requirements.

@@ -4,7 +4,7 @@ description: Provides information about the KMS service, and suggests tools and 
 ms.topic: troubleshooting
 ms.date: 9/19/2023
 author: Teresa-Motiv
-ms.author: roharwoo
+ms.author: alalve
 manager: dcscontentpm
 ---
 

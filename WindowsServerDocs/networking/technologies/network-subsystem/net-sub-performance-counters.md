@@ -4,7 +4,7 @@ description: Learn about the counters that are relevant to managing network perf
 ms.topic: article
 ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: dcscontentpm
-ms.author: roharwoo
+ms.author: jgerend
 author: Teresa-Motiv
 ms.date: 10/27/2021
 ---

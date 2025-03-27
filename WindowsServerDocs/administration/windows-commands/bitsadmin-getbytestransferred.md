@@ -3,7 +3,7 @@ title: bitsadmin getbytestransferred
 description: Reference article for the bitsadmin getbytestransferred command, which retrieves the number of bytes transferred for the specified job.
 ms.topic: reference
 ms.assetid: 47bbf184-e06f-4be0-b2ba-d32b10d82002
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

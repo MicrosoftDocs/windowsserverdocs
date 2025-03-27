@@ -2,7 +2,7 @@
 title: fsutil wim
 description: Reference article for the fsutil wim command, which provides functions to discover and manage Windows Image (WIM)-backed files.
 manager: dmoss
-ms.author: roharwoo
+ms.author: alalve
 author: toklima
 ms.assetid: 6c6ff819-f349-4aea-b0be-1f637f631736
 ms.topic: reference

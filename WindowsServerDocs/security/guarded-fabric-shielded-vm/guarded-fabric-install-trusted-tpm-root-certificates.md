@@ -4,7 +4,7 @@ title: Install trusted TPM root certificates
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 06/27/2019
 ---
 

@@ -2,7 +2,7 @@
 title: gettype
 description: Reference article for the gettype command. This command is deprecated and may not be supported in future releases of Windows.
 ms.topic: reference
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 ms.date: 04/01/2023
 ---

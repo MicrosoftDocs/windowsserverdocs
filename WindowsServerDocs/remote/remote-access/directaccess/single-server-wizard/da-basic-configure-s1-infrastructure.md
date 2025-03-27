@@ -4,7 +4,7 @@ description: Learn how to configure the infrastructure required for a basic Dire
 manager: brianlic
 ms.topic: article
 ms.assetid: ba4de2a4-f237-4b14-a8a7-0b06bfcd89ad
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

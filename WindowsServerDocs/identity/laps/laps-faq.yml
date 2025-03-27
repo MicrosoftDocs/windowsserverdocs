@@ -37,7 +37,7 @@ sections:
 
       - question: How can I submit unanswered questions or feature requests?
         answer: |
-          See [Submitting feedback](laps-overview.md#submitting-feedback).
+          See [Submit feedback](laps-overview.md#submit-feedback).
 
       - question: I see errors in my Windows LAPS event log - how do I fix them?
         answer: |

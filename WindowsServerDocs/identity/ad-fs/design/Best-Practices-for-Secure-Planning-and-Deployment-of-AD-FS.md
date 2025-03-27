@@ -4,7 +4,7 @@ ms.assetid: 963a3d37-d5f1-4153-b8d5-2537038863cb
 title: Best Practices for Secure Planning and Deployment of AD FS
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

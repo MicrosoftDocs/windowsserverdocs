@@ -4,7 +4,7 @@ description: Learn how to force the creation of content information - also calle
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 01/05/2021
 ---
