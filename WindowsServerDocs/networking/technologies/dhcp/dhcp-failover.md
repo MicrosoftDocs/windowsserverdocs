@@ -23,48 +23,54 @@ When two DHCP servers are configured for failover, they share scope information,
 
 The following figure illustrates how components and settings for a failover-enabled DHCP scope are shared between two DHCP servers.
 
-![Diagram of DHCP failover.](media/dhcp-failover-relationship.png)
+![Diagram of DHCP failover.](media/dhcp-failover-diagram.png)
 
-The scopes and settings used with DHCP servers that are configured for DHCP failover are shared using a new object called the **DHCP failover relationship**. For more information, see [DHCP Failover Relationships](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn338986(v=ws.11)).
-
-Several configuration options are available with DHCP failover. You can configure failover on all scopes that exist on a DHCP server, or only on some scopes. You can also easily use the same DHCP failover settings for many scopes by adding them to the same failover relationship. A failover relationship is always between only two DHCP servers. However, a server can have many failover relationships, and each failover relationship can be with a different DHCP server.
+The scopes and settings used with DHCP servers that are configured for DHCP failover are shared using a new object called the **DHCP failover relationship**. Several configuration options are available with DHCP failover. You can configure failover on all scopes that exist on a DHCP server, or only on some scopes. You can also easily use the same DHCP failover settings for many scopes by adding them to the same failover relationship. A failover relationship is always between only two DHCP servers. However, a server can have many failover relationships, and each failover relationship can be with a different DHCP server.
 
 > [!IMPORTANT]
 > If changes are made to a failover-enabled scope, you must manually replicate these changes to the partner server in order to synchronize scopes on both DHCP servers. Replication copies scope settings from the DHCP server where replication is initiated to the partner server, overwriting settings on the partner server. Therefore, it's important to always initiate replication from the server that has DHCP scope settings you wish to use.
 
 ## DHCP failover specifications
 
-The following specifications apply to DHCP failover:
+The following specifications apply to DHCP failover.
+
+DHCP scopes:
 
 - You can't configure DHCP failover on a DHCP scope to include more than two DHCP servers.
 
 - DHCP failover supports DHCPv4 scopes only. DHCPv6 scopes can't be failover-enabled.
 
-- DHCP failover partners must both be running at least Windows Server 2016.
-
-- DHCP failover can be configured, and settings can be modified without the need to pause, stop, or restart the DHCP Server service.
-
 - If parameters of a failover-enabled scope are modified, these settings must be manually replicated to the partner DHCP server.
 
 - Replication of scope settings can be initiated from either DHCP server to it's failover partner server.
 
-- Clustered DHCP is supported in conjunction with DHCP failover. For purposes of failover, a DHCP cluster is considered a single DHCP server.
+DHCP client/server:
 
 - DHCP clients must be able to communicate with both DHCP failover partner servers, either directly or using a DHCP relay.
 
-- DHCP servers configured as failover partners can be located on different subnets, but this isn't required.
-
 - When DHCP failover is enabled, a DHCP client lease can be renewed by a different server than the one that originally issued it.
 
-- Two DHCP servers configured as failover partners attempt to maintain a persistent TCP/IP connection.
-
 - Two separate, synchronized client lease databases are maintained independently by each DHCP failover partner server.
+
+- DHCP servers configured as failover partners can be located on different subnets, but this isn't required.
+
+- Clustered DHCP is supported in conjunction with DHCP failover. For purposes of failover, a DHCP cluster is considered a single DHCP server.
+
+- DHCP failover can be configured, and settings can be modified without the need to pause, stop, or restart the DHCP Server service.
+
+DHCP failover partners:
+
+- DHCP failover partners must both be running at least Windows Server 2016.
+
+- Two DHCP servers configured as failover partners attempt to maintain a persistent TCP/IP connection.
 
 - DHCP servers configured as failover partners are both aware of the status of the DHCP service on the other server, and are informed of any change in that status with minimal delay.
 
 - If two DHCP servers configured as failover partners are unable to communicate, precautions are taken to avoid the same IP address lease being issued to two different DHCP clients.
 
 - If a DHCP server becomes unavailable before it's able to successfully synchronize all DHCP client information with its failover partner, precautions are taken to ensure DHCP lease continuity for DHCP clients.
+
+- Two separate, synchronized client lease databases are maintained independently by each DHCP failover partner server.
 
 > [!IMPORTANT]
 > When replicating settings between DHCP failover partner servers that have different operating system versions, always modify settings and initiate replication from the DHCP server with the more recent operating system version. This ensures that settings are recognized by both failover partners and replicated consistently.
