@@ -87,7 +87,7 @@ To distribute certificates for computers:
 
 1. In the **Certificate Enrollment Policy Server** dialog box, under **Enter enrollment policy server URI**, enter the URI that you copied in the previous procedure.
 
-1. In **Authentication type**, set the authentication type that you configured for the Certificate Enrollment Web Policy Service. See [Certificate Enrollment Policy Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11)) for information on choosing an authentication type.
+1. In **Authentication type**, set the authentication type that you configured for the Certificate Enrollment Web Policy Service. For more information, see [Certificate Enrollment Policy Web Service overview](/windows-server/identity/ad-cs/certificate-enrollment-policy-web-service-overview) on choosing an authentication type.
 
 1. Select **Validate Server**, and when the server is validated, select **Add**. Select **OK**.
 
@@ -113,12 +113,8 @@ To distribute certificates for computers:
 
 ## Related content
 
+- [Certificate Enrollment Policy Web Service overview](/windows-server/identity/ad-cs/certificate-enrollment-policy-web-service-overview)
+
 - [Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port](/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal)
 
-- [Certificate Enrollment Web Services in Active Directory Certificate Services](https://social.technet.microsoft.com/wiki/contents/articles/7734.certificate-enrollment-web-services-in-active-directory-certificate-services.aspx)
-
-- [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
-
-- [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
-
-- [Windows PKI Blog](https://blogs.technet.com/b/pki/)
+- [PKI design considerations](/windows-server/identity/ad-cs/pki-design-considerations)
