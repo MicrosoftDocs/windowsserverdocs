@@ -317,7 +317,7 @@ items:
       - name: Nested resiliency
         href: storage-spaces/nested-resiliency.md
       - name: Configure quorum
-        href: ../failover-clustering/deploy-cluster-quorum.md
+        href: ../failover-clustering/deploy-quorum-witness.md
       - name: Upgrade a Storage Spaces Direct cluster
         href: storage-spaces/upgrade-storage-spaces-direct.md
       - name: Understand and deploy persistent memory
