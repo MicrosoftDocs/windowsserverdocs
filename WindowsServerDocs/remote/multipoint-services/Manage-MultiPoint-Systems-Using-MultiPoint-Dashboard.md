@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 28b5383e-6996-4e1c-953d-00d5205ec55f
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Manage MultiPoint Systems Using MultiPoint Dashboard

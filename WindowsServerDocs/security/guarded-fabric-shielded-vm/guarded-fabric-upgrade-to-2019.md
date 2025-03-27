@@ -4,7 +4,7 @@ title: Upgrade a guarded fabric to Windows Server 2019
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 11/21/2018
 ---
 

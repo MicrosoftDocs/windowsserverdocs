@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 1497cae0-071e-467d-89b8-a7050815d7de
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # MultiPoint Services - post-migration tasks
 

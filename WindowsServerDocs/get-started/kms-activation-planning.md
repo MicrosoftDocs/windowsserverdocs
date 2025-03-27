@@ -4,7 +4,7 @@ description: Learn how to plan for Key Management Services (KMS) activation in W
 ms.topic: conceptual
 author: xelu86
 ms.author: alalve
-ms.date: 11/12/2024
+ms.date: 03/17/2025
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 ---
 
@@ -16,7 +16,7 @@ KMS uses a client-server model to active clients and is used for volume activati
 
 KMS hosts don't need to be dedicated servers, and KMS can be cohosted with other services. You can run a KMS host on any physical or virtual system that is running a [supported](windows-server-release-info.md) Windows Server or Windows client operating system. A KMS host running on a Windows Server operating system can activate computers running both server and client operating systems. However, a KMS host running on a Windows client operating system can only activate computers also running client operating systems.
 
-To use KMS, a KMS host needs a key that activates, or authenticates, the KMS host with Microsoft. This key is sometimes referred to as the KMS host key, but it's formally known as a Microsoft Customer Specific Volume License Key (CSVLK). You can get this key from the Product Keys section of the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) for the following agreements: Open, Open Value, Select, Enterprise, and Services Provider License. You can also get assistance by contacting your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
+To use KMS, a KMS host needs a key that activates, or authenticates, the KMS host with Microsoft. This key is sometimes referred to as the KMS host key, but is formally known as a Microsoft Customer Specific Volume License Key (CSVLK). You can get this key from the Product Keys section of the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) for the following agreements: Open, Open Value, Select, Enterprise, and Services Provider License. You can also get assistance by contacting your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
 
 ## Operational requirements
 
@@ -30,7 +30,7 @@ A single KMS host can support an unlimited number of KMS clients. If you have mo
 
 After the first KMS host is activated, the CSVLK that is used on the first host can be used to activate up to five more KMS hosts on your network for a total of six. After a KMS host is activated, administrators can reactivate the same host up to nine times with the same key.
 
-If your organization needs more than six KMS hosts, you can request additional activations for your organization's CSVLK. For example, if you have 10 physical locations under one volume licensing agreement and you want each location to have a local KMS host. To request this exception, contact your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
+If your organization needs more than six KMS hosts, you can request more activations for your organization's CSVLK. For example, if you have 10 physical locations under one volume licensing agreement and you want each location to have a local KMS host. To request this exception, contact your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
 
 Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed.
 
@@ -53,13 +53,13 @@ The following table summarizes KMS host and client versions for networks that in
 
 | CSVLK group | CSVLK can <br> be hosted on | Windows editions <br> activated by this KMS host |
 |--|--|--|
-| Volume License for Windows Server 2025 | <ul><li>Windows Server 2025</li><li>Windows Server 2022</li><li>Windows Server 2019</li></ul> | <ul><li>Windows Server 2025 (all editions)</li><li>Windows Server 2022 (all editions)</li><li>Windows Server Semi-Annual Channel</li><li>Windows Server 2019 (all editions)</li><li>Windows Server 2016 (all editions)</li><li>Windows Server 2012 R2 (all editions)</li><li>Windows Server 2012 (all editions)</li><li>Windows Server 2008 R2 (all editions)</li><li>Windows Server 2008 (all editions)</li> <br> <li>Windows 11 Enterprise LTSC 2024</li><li>Windows 11 Enterprise/Enterprise N</li><li>Windows 11 Professional/Professional N</li><li>Windows 11 Professional for Workstations/Professional N for Workstations</li><li>Windows 11 for Education/Education N</li><li>Windows 10 Enterprise LTSC/LTSC N/LTSB</li><li>Windows 10 Enterprise/Enterprise N</li><li>Windows 10 Professional/Professional N</li><li>Windows 10 Professional for Workstations/Professional N for Workstations</li><li>Windows 10 for Education/Education N</li><li>Windows 8.1 Enterprise</li><li>Windows 8.1 Professional</li><li>Windows 7 Enterprise</li><li>Windows 7 Professional</li></ul> |
+| Volume License for Windows Server 2025 | <ul><li>Windows Server 2025&sup1;</li><li>Windows Server 2022&sup1;</li><li>Windows Server 2019</li></ul> | <ul><li>Windows Server 2025 (all editions)</li><li>Windows Server 2022 (all editions)</li><li>Windows Server Semi-Annual Channel</li><li>Windows Server 2019 (all editions)</li><li>Windows Server 2016 (all editions)</li><li>Windows Server 2012 R2 (all editions)</li><li>Windows Server 2012 (all editions)</li><li>Windows Server 2008 R2 (all editions)</li><li>Windows Server 2008 (all editions)</li> <br> <li>Windows 11 Enterprise LTSC 2024</li><li>Windows 11 Enterprise/Enterprise N</li><li>Windows 11 Professional/Professional N</li><li>Windows 11 Professional for Workstations/Professional N for Workstations</li><li>Windows 11 for Education/Education N</li><li>Windows 10 Enterprise LTSC/LTSC N/LTSB</li><li>Windows 10 Enterprise/Enterprise N</li><li>Windows 10 Professional/Professional N</li><li>Windows 10 Professional for Workstations/Professional N for Workstations</li><li>Windows 10 for Education/Education N</li><li>Windows 8.1 Enterprise</li><li>Windows 8.1 Professional</li><li>Windows 7 Enterprise</li><li>Windows 7 Professional</li></ul> |
 
 # [Windows Server 2022](#tab/server22)
 
 | CSVLK group | CSVLK can <br> be hosted on | Windows editions <br> activated by this KMS host |
 |--|--|--|
-| Volume License for Windows Server 2022 | <ul><li>Windows Server 2022</li><li>Windows Server 2019</li><li>Windows Server 2016</li></ul> | <ul><li>Windows Server 2022 (all editions)</li><li>Windows Server Semi-Annual Channel</li><li>Windows Server 2019 (all editions)</li><li>Windows Server 2016 (all editions)</li><li>Windows Server 2012 R2 (all editions)</li><li>Windows Server 2012 (all editions)</li><li>Windows Server 2008 R2 (all editions)</li><li>Windows Server 2008 (all editions)</li> <br> <li>Windows 11 Enterprise/Enterprise N</li><li>Windows 11 Professional/Professional N</li><li>Windows 11 Professional for Workstations/Professional N for Workstations</li><li>Windows 11 for Education/Education N</li><li>Windows 10 Enterprise LTSC/LTSC N/LTSB</li><li>Windows 10 Enterprise/Enterprise N</li><li>Windows 10 Professional/Professional N</li><li>Windows 10 Professional for Workstations/Professional N for Workstations</li><li>Windows 10 for Education/Education N</li><li>Windows 8.1 Enterprise</li><li>Windows 8.1 Professional</li><li>Windows 7 Enterprise</li><li>Windows 7 Professional</li></ul> |
+| Volume License for Windows Server 2022 | <ul><li>Windows Server 2022&sup1;</li><li>Windows Server 2019</li><li>Windows Server 2016</li></ul> | <ul><li>Windows Server 2022 (all editions)</li><li>Windows Server Semi-Annual Channel</li><li>Windows Server 2019 (all editions)</li><li>Windows Server 2016 (all editions)</li><li>Windows Server 2012 R2 (all editions)</li><li>Windows Server 2012 (all editions)</li><li>Windows Server 2008 R2 (all editions)</li><li>Windows Server 2008 (all editions)</li> <br> <li>Windows 11 Enterprise/Enterprise N</li><li>Windows 11 Professional/Professional N</li><li>Windows 11 Professional for Workstations/Professional N for Workstations</li><li>Windows 11 for Education/Education N</li><li>Windows 10 Enterprise LTSC/LTSC N/LTSB</li><li>Windows 10 Enterprise/Enterprise N</li><li>Windows 10 Professional/Professional N</li><li>Windows 10 Professional for Workstations/Professional N for Workstations</li><li>Windows 10 for Education/Education N</li><li>Windows 8.1 Enterprise</li><li>Windows 8.1 Professional</li><li>Windows 7 Enterprise</li><li>Windows 7 Professional</li></ul> |
 
 # [Windows Server 2019](#tab/server19)
 
@@ -81,12 +81,14 @@ The following table summarizes KMS host and client versions for networks that in
 
 ---
 
+1. Azure activates Windows Server Datacenter: Azure Edition, meaning it can't be configured as a KMS host
+
 ## KMS host required updates
 
-Depending on which operating system your KMS host is running and which operating systems you want to activate, you might need to install one or more of the updates below. This is required when you want to activate a version of Windows that is newer than the version your KMS host is running.
+Depending on which operating system your KMS host is running and which operating systems you want to activate, you might need to install one or more of the following updates. Updates are required when you want to activate a version of Windows that is newer than the version your KMS host is running.
 
 > [!NOTE]
-> The updates listed below are the minimum required. Where later cumulative updates or monthly rollups are listed as an option, please install the latest available version for your operating system to benefit from additional security and other fixes.
+> The updates listed are the minimum required. Where later cumulative updates or monthly rollups are listed as an option, install the latest available version for your operating system to benefit from security and other fixes.
 
 | KMS host OS version | KMS client OS version(s) to activate | Required update |
 |--|--|--|

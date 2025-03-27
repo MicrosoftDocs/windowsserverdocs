@@ -4,7 +4,7 @@ ms.assetid: 8c179884-f0d9-4c7a-973d-820119cf3c38
 title: Create a Rule to Permit All Users
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

@@ -4,7 +4,7 @@ title: Configure AD FS Extranet Smart Lockout Protection
 description: Learn more about AD FS Extranet Lockout and Extranet Smart Lockout to protect your users from experiencing extranet account lockout from malicious activity.
 author: billmath
 ms.author: roharwoo
-manager: amycolannino
+manager: femila
 ms.date: 06/16/2023
 ms.topic: article
 ---
@@ -257,7 +257,7 @@ The recommended way to monitor user account activity is through Connect Health. 
 ### AD FS Extranet Smart Lockout events
 
 > [!NOTE]
-> To troubleshoot ESL, see [Mitigating password spray attacks and account lockouts](https://adfshelp.microsoft.com/TroubleshootingGuides/Workflow/a73d5843-9939-4c03-80a1-adcbbf3ccec8).
+> To troubleshoot ESL, see [Mitigating password spray attacks and account lockouts](/answers/questions/192958/adfs-extranet-smart-lockout-users-cannot-be-unlock).
 
 For Extranet Smart Lockout events to be written, ESL must be enabled in **Log-Only** or **Enforce** mode, and AD FS security auditing must be enabled.
 AD FS writes extranet lockout events to the security audit log when:

@@ -3,7 +3,7 @@ title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: article
 author: davannaw-msft
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 06/05/2024
 ---
 # Windows Admin Center known issues
@@ -17,6 +17,10 @@ If you encounter an issue not described on this page, let us know at the [Window
 - Windows Admin Center doesn't support ports lower than 1024. In service mode, you can optionally configure port 80 to redirect to your specified port.
 
 ## General
+
+- Windows Admin Center version 2410 build 2.4.2.1 may appear as build number 2.4.1 on the Windows Admin Center Updates settings page.
+
+- In Windows Admin Center version 2410, users are unable to register their Windows Admin Center gateways to sovereign clouds. This issue is actively being investigated.
 
 - Self-signed certificates accessed on `https://localhost:[port]` can cause the Microsoft Edge and Google Chrome browsers to block Windows Admin Center. When you're blocked, you should see an error message that says your connection isn't private. To resolve this issue, update Windows Admin Center to the latest version.
 

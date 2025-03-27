@@ -4,7 +4,7 @@ ms.assetid: 8b15d44e-e4e6-4510-aa91-cc7ec7161b0a
 title: The Role of the Claims Engine
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

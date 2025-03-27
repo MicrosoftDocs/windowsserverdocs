@@ -4,7 +4,7 @@ description: Learn how to use Group Policy to configure domain member client com
 manager: dougkim
 ms.topic: how-to
 ms.assetid: 911c1538-f79d-42e9-ba38-f4618f87b008
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 06/02/2018
 ---

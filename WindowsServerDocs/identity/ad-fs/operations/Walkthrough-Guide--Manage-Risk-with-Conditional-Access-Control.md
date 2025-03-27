@@ -4,7 +4,7 @@ ms.assetid: 3a840b63-78b7-4e62-af7b-497026bfdb93
 title: Walkthrough Guide - Manage Risk with Conditional Access Control
 author: billmath
 ms.author: roharwoo
-manager: amycolannino
+manager: femila
 ms.date: 10/22/2021
 ms.topic: article
 ---
