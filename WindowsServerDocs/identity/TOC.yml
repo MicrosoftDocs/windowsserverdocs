@@ -1036,8 +1036,6 @@
         href: ad-cs/certificate-authority-web-enrollment.md
       - name: Certificate Enrollment Policy Web Service overview
         href: ad-cs/certificate-enrollment-policy-web-service-overview.md
-      - name: PKI design considerations
-        href: ad-cs/pki-design-considerations.md
       - name: Network Device Enrollment Service
         href: ad-cs/network-device-enrollment-service-overview.md
       - name: Use policy module with Network Device Enrollment Service
@@ -1046,6 +1044,8 @@
         href: ad-cs/certificate-trust.md
       - name: Certificate template concepts
         href: ad-cs/certificate-template-concepts.md
+      - name: PKI design considerations
+        href: ad-cs/pki-design-considerations.md
     - name: How-to guides
       items:
       - name: Configure Network Device Enrollment Service to use a domain user account
@@ -1058,6 +1058,8 @@
         href: ad-cs/distribute-certificates-group-policy.md
       - name: Export a certificate with its private key
         href: ad-cs/export-certificate-private-key.md
+      - name: Install a policy module with Network Device Enrollment Service
+        href: ad-cs/install-policy-module-network-device-enrollment-service.md
       - name: Manage certificate templates
         href: ad-cs/manage-certificate-templates.md
       - name: Renew root CA certificate
