@@ -256,6 +256,10 @@ items:
         href: technologies/dhcp/dhcp-deploy-wps.md
       - name: Install DHCP relay agent
         href: technologies/dhcp/dhcp-deploy-relay-agent.md
+    - name: DHCP failover
+      items:
+      - name: DHCP failover overview
+        href: technologies/dhcp/dhcp-failover.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
