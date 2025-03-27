@@ -51,7 +51,7 @@ The following prerequisites apply to configuring the CA for the Certificate Enro
 
 - The Certificate Enrollment Web Service can be configured to work with an enterprise CA on the same or on a different computer.
 
-- The Certificate Enrollment Web Service can't be configured to work with a stand-alone CA—an enterprise CA is required.
+- The Certificate Enrollment Web Service can't be configured to work with a standalone CA—an enterprise CA is required.
 
 Configuration tips:
 
@@ -61,7 +61,7 @@ Configuration tips:
 - You can install multiple instances of the Certificate Enrollment Web Service on a single computer. However, you can only install one instance by using Server Manager. To install a second instance, you must use the Windows PowerShell cmdlet [Install-AdcsEnrollmentWebService](/powershell/module/adcsdeployment/install-adcsenrollmentwebservice).
 
 > [!NOTE]
-> If the certification authority that the Certificate Enrollment Web Service will be using has spaces in the name, such as Margies Travel Issuing CA, instead of Margies-Travel-Issuing-CA, then additional configuration steps are required after installation of the service. The additional steps required are documented in [Implementing Certificate Enrollment Web Services in Windows Server that uses an Issuing CA with spaces in the name](https://social.technet.microsoft.com/wiki/contents/articles/15668.implementing-certificate-enrollment-web-services-in-windows-server-2012-that-uses-an-issuing-ca-with-spaces-in-the-name.aspx).
+> If the certification authority that the Certificate Enrollment Web Service will be using has spaces in the name, such as Margies Travel Issuing CA, instead of Margies-Travel-Issuing-CA, then extra configuration steps are required after installation of the service. The extra steps required are documented in [Implementing Certificate Enrollment Web Services in Windows Server that uses an Issuing CA with spaces in the name](https://social.technet.microsoft.com/wiki/contents/articles/15668.implementing-certificate-enrollment-web-services-in-windows-server-2012-that-uses-an-issuing-ca-with-spaces-in-the-name.aspx).
 
 ### Set the authentication type for Certificate Enrollment Web Service
 
@@ -81,7 +81,7 @@ For more information, see [Configure Certificate Enrollment Web Service for cert
 
 ### Configure a service account
 
-During Certificate Enrollment Web Service configuration, you have the option to specify one of the following types of accounts as the service account:
+During Certificate Enrollment Web Service configuration, you can specify one of the following types of accounts as the service account:
 
 - User account that acts as the service account (recommended)
 
@@ -116,7 +116,7 @@ Using a specific user account as the service account is the recommended configur
 1. Select **Next**, and then select **Finished**.
 
 > [!TIP]
-> You can also use the [Windows PowerShell cmdlet New-ADUser](/powershell/module/activedirectory/new-aduser)to add a domain user account.
+> You can also use the [Windows PowerShell cmdlet New-ADUser](/powershell/module/activedirectory/new-aduser) to add a domain user account.
 
 #### Add the service account to the local IIS\_IUSERS group
 
@@ -160,7 +160,7 @@ Using a specific user account as the service account is the recommended configur
 
 1. In the **Select Users or Computers** dialog box, type the name of the computer that is hosting the CA. Select **Check Names**, and then select **OK**.
 
-1. In the **Add Services** dialog box, press the CRTL key, and then select both of the following services:
+1. In the **Add Services** dialog box, press the Ctrl key, and then select both of the following services:
 
       - **HOST**
 
@@ -191,7 +191,7 @@ If you specified the default application pool instead of a user account to act a
 
 1. In the **Select Users or Computers** dialog box, type the name of the computer that's hosting the Certificate Enrollment Web Service. Select **Check Names**, and then select **OK**.
 
-1. In the **Add Services** dialog box, press the CRTL key, and then select both of the following services:
+1. In the **Add Services** dialog box, press the Ctrl key, and then select both of the following services:
 
       - **HOST**
 
@@ -201,14 +201,14 @@ If you specified the default application pool instead of a user account to act a
 
 1. Close Active Directory Users and Computers.
 
-## Select a Server Certificate
+## Select a server certificate
 
 The Certificate Enrollment Web Service and the Certificate Enrollment Policy Web Service must use Secure Sockets Layer (SSL) for communication with clients (by using HTTPS). Each service must have a valid certificate that has an enhanced key usage (EKU) policy of Server Authentication in the local computer certificate store.
 
 > [!NOTE]
 > If you haven't yet provided an SSL certificate to the server that is hosting the Certificate Enrollment Web Service, you can do so by following the instructions in [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](https://social.technet.microsoft.com/wiki/contents/articles/12485.configure-ssltls-on-a-web-site-in-the-domain-with-an-enterprise-ca.aspx).
 
-## Complete Certificate Enrollment Web Services Configuration
+## Complete configuration
 
 If you enabled renewal-only mode, you need to complete the following extra configuration steps.
 
