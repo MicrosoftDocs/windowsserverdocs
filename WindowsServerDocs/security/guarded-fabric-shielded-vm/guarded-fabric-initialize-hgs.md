@@ -4,7 +4,7 @@ title: Initialize HGS
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 

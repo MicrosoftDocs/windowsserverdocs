@@ -5,7 +5,7 @@ ms.date: 03/08/2023
 ms.topic: article
 author: robinharwood
 manager: brianlic
-ms.author: roharwoo
+ms.author: jgerend
 ---
 
 # Manage disks

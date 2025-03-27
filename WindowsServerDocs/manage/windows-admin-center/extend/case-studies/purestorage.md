@@ -3,7 +3,7 @@ title: Windows Admin Center SDK Case Study - Pure Storage
 description: Windows Admin Center SDK Case Study - Pure Storage
 ms.topic: article
 author: daniellee-msft
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 1/7/2019
 ---
 # Pure Storage Extension

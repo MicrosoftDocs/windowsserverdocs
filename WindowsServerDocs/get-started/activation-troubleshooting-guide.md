@@ -4,7 +4,7 @@ description: Lists resources that provide information about best practices for v
 ms.topic: troubleshooting
 ms.date: 09/24/2019
 author: Teresa-Motiv
-ms.author: roharwoo
+ms.author: alalve
 manager: dcscontentpm
 ---
 

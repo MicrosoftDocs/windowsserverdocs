@@ -4,7 +4,7 @@ description: Learn how to use DDA to deploy graphics devices in Windows Server a
 ms.topic: how-to
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 04/04/2024
+ms.date: 02/19/2025
 ---
 # Deploy graphics devices by using Discrete Device Assignment
 

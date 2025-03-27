@@ -4,7 +4,7 @@ ms.assetid: eb047a19-e5cb-43f4-a7bb-c4b7c8fc55a5
 title: AD FS Deployment Guide
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

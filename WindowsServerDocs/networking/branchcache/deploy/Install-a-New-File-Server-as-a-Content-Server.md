@@ -4,7 +4,7 @@ description: Learn how to install the File Services server role and the BranchCa
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 01/05/2021
 ---

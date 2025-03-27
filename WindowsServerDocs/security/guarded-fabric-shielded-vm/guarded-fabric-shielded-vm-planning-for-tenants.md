@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
 author: nirb-ms
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 12/10/2020
 ---
 

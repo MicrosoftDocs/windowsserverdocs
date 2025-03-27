@@ -4,7 +4,7 @@ description: Learn about the DirectAccess scenario that uses a single DirectAcce
 manager: brianlic
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

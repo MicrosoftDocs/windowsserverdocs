@@ -4,7 +4,7 @@ description: Learn how to manage the offer feature updates with Group Policy on 
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 11/11/2024
+ms.date: 03/13/2025
 appliesto: "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>, ✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>"
 #CustomerIntent: As a Windows Server administrator, I want to manage feature updates with Group Policy so that I can control when Windows Server 2025 is offered to my devices.
 ---
@@ -16,6 +16,9 @@ appliesto: "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started
 Beginning with Windows Server 2025, Microsoft offers an optional in-place upgrade capability through Windows Update, known as a feature update. The feature update allows organizations to easily perform an in-place upgrade to Windows Server 2025 using Windows Update. The feature update is available to Windows Server 2019 and Windows Server 2022 devices.
 
 In some cases, you might wish to delay this optional update until you evaluate Windows Server 2025 in your test environment. In this article, you learn how to disable the Windows Server 2025 optional feature update using the Targeted Release Vehicle (TRV) settings in Group Policy. To learn more about configuring Group Policy for updates, see [Configure Windows Update for Business via Group Policy](/windows/deployment/update/waas-wufb-group-policy) and [Update Policy CSP](/windows/client-management/mdm/policy-csp-update#targetreleaseversion).
+
+> [!NOTE]
+> Feature Update from the Windows Server Setting Dialog in Windows Server 2019 and Windows Server 2022 is temporarily paused.
 
 ## Prerequisites
 

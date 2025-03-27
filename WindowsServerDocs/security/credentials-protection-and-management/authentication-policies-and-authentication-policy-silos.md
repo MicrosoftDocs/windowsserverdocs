@@ -3,7 +3,7 @@ title: Authentication Policies and Authentication Policy Silos
 description: Learn about authentication policy silos and the policies that can restrict accounts to those silos.
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
