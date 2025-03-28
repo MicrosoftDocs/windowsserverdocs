@@ -1048,6 +1048,8 @@
         href: ad-cs/pki-design-considerations.md
     - name: How-to guides
       items:
+      - name: Configure Certificate Enrollment Web Service
+        href: ad-cs/configure-certificate-enrollment-web-service.md
       - name: Configure Network Device Enrollment Service to use a domain user account
         href: ad-cs/create-domain-user-account-ndes-service-account.md
       - name: Configure Certificate Enrollment Policy Web Service
