@@ -1,6 +1,6 @@
 ---
 title: File Server Resource Manager (FSRM) overview
-ms.author: roharwoo
+ms.author: jgerend
 manager: brianlic
 ms.topic: article
 author: robinharwood

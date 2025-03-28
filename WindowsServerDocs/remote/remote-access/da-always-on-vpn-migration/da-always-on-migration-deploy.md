@@ -4,7 +4,7 @@ description: Migrating from DirectAccess to Always On VPN requires a specific pr
 manager: dougkim
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 06/07/2018
 ---

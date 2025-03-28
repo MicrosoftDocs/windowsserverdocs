@@ -3,7 +3,7 @@ title: Event Logging in Windows Admin Center
 description: Learn about event logging in Windows Admin Center.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 06/18/2018
 ---
 

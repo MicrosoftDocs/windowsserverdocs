@@ -4,7 +4,7 @@ description: You can use this topic to verify Windows Server 2016 Network Policy
 manager: brianlic
 ms.topic: article
 ms.assetid: fc77450e-2af1-47ba-bb23-1fd36d9efdbf
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---

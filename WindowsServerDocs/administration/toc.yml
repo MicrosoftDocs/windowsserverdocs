@@ -23,7 +23,9 @@ items:
         - name: Azure Site Recovery
           href: ../manage/azure-arc/azure-site-recovery-for-windows-server.md
         - name: Best Practices Assessment
-          href: ../manage/azure-arc/best-practices-assessment-for-windows-server.md          
+          href: ../manage/azure-arc/best-practices-assessment-for-windows-server.md
+        - name: Remote Support
+          href: ../manage/azure-arc/remote-support-for-windows-server.md  
     - name: Windows Admin Center 
       items:
         - name: Windows Admin Center Overview

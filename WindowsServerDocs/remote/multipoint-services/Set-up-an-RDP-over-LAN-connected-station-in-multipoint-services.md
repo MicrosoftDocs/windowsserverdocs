@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 60e1a025-c2fb-4708-a3ff-c44c223a3224
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Set up an RDP-over-LAN connected station in MultiPoint Services
 An RDP-over-LAN connected station is a thin client, traditional desktop, or laptop computer that connects to MultiPoint Services on a local area network (LAN) by using the Remote Desktop Protocol (RDP). For more information about this and other station types, see [MultiPoint Stations](MultiPoint-services-Stations.md).

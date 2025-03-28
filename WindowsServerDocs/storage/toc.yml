@@ -123,7 +123,7 @@ items:
     - name: Advanced Troubleshooting SMB
       href: file-server/Troubleshoot/troubleshooting-smb.md
       items:
-      - name: Detect, enable and disable SMBv1, SMBv2, and SMBv3
+      - name: Detect, enable, and disable SMBv1, SMBv2, and SMBv3
         href: file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
       - name: SMBv1 is not installed by default
         href: file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md
@@ -276,20 +276,22 @@ items:
     - name: Health and operational states
       href: storage-spaces/storage-spaces-states.md
   - name: Storage Spaces Direct
-    href: /azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage
+    href: storage-spaces/storage-spaces-direct-overview.md
     items:
     - name: Understand
       items:
       - name: Understand the cache
-        href: /azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/cache.md
       - name: Fault tolerance and storage efficiency
-        href: /azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/fault-tolerance.md
       - name: Drive symmetry considerations
-        href: /azure/azure-local/concepts/drive-symmetry-considerations?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/drive-symmetry-considerations.md
       - name: Understand and monitor storage resync
-        href: /azure/azure-local/concepts/understand-storage-resync?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/understand-storage-resync.md
       - name: Cluster and pool quorum
-        href: /azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/quorum.md
+      - name: Persistent memory health management
+        href: storage-spaces/persistent-memory-health.md
       - name: Cluster sets
         href: /windows-server/failover-clustering/cluster-set
     - name: Plan
@@ -297,11 +299,11 @@ items:
       - name: Hardware requirements
         href: storage-spaces/storage-spaces-direct-hardware-requirements.md
       - name: Using the CSV in-memory read cache
-        href: /azure/azure-local/manage/use-csv-cache?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/use-csv-cache.md
       - name: Choose drives
-        href: /azure/azure-local/concepts/choose-drives?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/choose-drives.md
       - name: Plan volumes
-        href: /azure/azure-local/concepts/plan-volumes?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/plan-volumes.md
       - name: Guest VM clusters
         href: storage-spaces/storage-spaces-direct-in-vm.md
       - name: Disaster recovery
@@ -311,15 +313,15 @@ items:
       - name: Deploy Storage Spaces Direct
         href: storage-spaces/deploy-storage-spaces-direct.md
       - name: Create volumes
-        href: /azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/create-volumes.md
       - name: Nested resiliency
-        href: /azure/azure-local/concepts/nested-resiliency?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/nested-resiliency.md
       - name: Configure quorum
         href: ../failover-clustering/manage-cluster-quorum.md
       - name: Upgrade a Storage Spaces Direct cluster
         href: storage-spaces/upgrade-storage-spaces-direct.md
       - name: Understand and deploy persistent memory
-        href: /azure/azure-local/concepts/deploy-persistent-memory?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/deploy-persistent-memory.md
       - name: Understand and configure DAX
         href: storage-spaces/persistent-memory-direct-access.md
     - name: Manage
@@ -328,6 +330,8 @@ items:
         href: ../manage/windows-admin-center/use/manage-hyper-converged.md
       - name: Add servers or drives
         href: storage-spaces/add-nodes.md
+      - name: Replace drives
+        href: storage-spaces/replace-drives.md
       - name: Take a server offline for maintenance
         href: /azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-storage
       - name: Remove servers
@@ -335,7 +339,7 @@ items:
       - name: Update drive firmware
         href: update-firmware.md
       - name: Manage volumes
-        href: /azure/azure-local/manage/manage-volumes?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/manage-volumes.md
       - name: Performance history
         href: storage-spaces/performance-history.md
         items:
@@ -355,12 +359,16 @@ items:
           href: storage-spaces/performance-history-for-clusters.md
         - name: Scripting samples
           href: storage-spaces/performance-history-scripting.md
+      - name: Encrypt and deduplicate volumes
+        href: storage-spaces/volume-encryption-deduplication.md
       - name: Delimit the allocation of volumes
         href: storage-spaces/delimit-volume-allocation.md
       - name: Monitor with Azure Monitor
         href: storage-spaces/configure-azure-monitor.md
+      - name: Manage SMB Multichannel
+        href: storage-spaces/manage-smb-multichannel.md
       - name: Adjustable storage repair speed
-        href: /azure/azure-local/manage/storage-repair-speed?context=/windows-server/context/windows-server-storage
+        href: storage-spaces/storage-repair-speed.md
     - name: Troubleshoot
       items:
       - name: Troubleshooting scenarios

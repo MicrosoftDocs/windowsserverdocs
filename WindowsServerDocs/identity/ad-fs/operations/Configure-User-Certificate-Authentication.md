@@ -4,7 +4,7 @@ ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
 author: jenfieldmsft
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
@@ -68,7 +68,7 @@ If certificate trusted issuers aren't configured properly, a common symptom is a
 
 AD FS uses the underlying Windows operating system to prove possession of the user certificate and ensure that it matches a trusted issuer by validating the certificate trust chain. To match the trusted issuer, you need to ensure that all root and intermediate authorities are configured as trusted issuers in the local store for computer certificate authorities.
 
-To validate this automatically, use the [AD FS Diagnostics Analyzer tool](https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze). The tool queries all the servers and ensures that the right certificates are provisioned correctly.
+To validate this automatically, use the [AD FS Diagnostics Analyzer tool](/windows-server/identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer). The tool queries all the servers and ensures that the right certificates are provisioned correctly.
 
 1. Download and run the tool.
 1. Upload the results and review for any failures.

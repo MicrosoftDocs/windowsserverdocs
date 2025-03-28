@@ -4,7 +4,7 @@ description: Learn about the DirectAccess Cluster-NLB test lab Scenario and the 
 manager: brianlic
 ms.topic: article
 ms.assetid: cd1e9efd-19e9-49e7-8432-881f661c9792
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

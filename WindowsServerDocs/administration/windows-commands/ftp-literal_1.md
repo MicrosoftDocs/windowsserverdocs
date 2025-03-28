@@ -3,7 +3,7 @@ title: ftp literal
 description: Reference article for the ftp literal command, which sends verbatim arguments to the remote ftp server.
 ms.topic: reference
 ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

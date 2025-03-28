@@ -3,7 +3,7 @@ title: unlodctr
 description: Reference article for the unlodctr command, which removes Performance counter names and Explain text for a service or device driver from the system registry.
 ms.topic: reference
 ms.assetid: fc8aa6f0-c1d9-47ea-937a-28152148e774
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

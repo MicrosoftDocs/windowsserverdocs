@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: afb64b94-9055-4703-b8ce-a8839b2718da
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 # Edit Server Settings

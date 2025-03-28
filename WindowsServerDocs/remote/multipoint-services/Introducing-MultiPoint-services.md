@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 1cbef744-4661-4ba9-9e2b-0bbd8854fd5c
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Introducing MultiPoint Services
 MultiPoint Services role in Windows Server 2016 allows multiple users, each with their own independent and familiar Windows experience, to simultaneously share one computer.There are several ways users can access their sessions. One way is by remoting into the server using the [remote desktop apps](../remote-desktop-services/clients/remote-desktop-clients.md) with any device. Another way is through physical stations attached to the MultiPoint server:

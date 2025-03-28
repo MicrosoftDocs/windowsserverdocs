@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 93814c41-60ba-4154-8283-f5d7baf790c0
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Save Connection Settings to File
