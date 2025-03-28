@@ -124,7 +124,7 @@ sections:
       - question: |
           Are there any cloud dependencies?
         answer: |
-          Windows Admin Center does not require internet access and does not require Microsoft Azure. Windows Admin Center manages Windows Server and Windows instances anywhere: on physical systems, or in virtual machines on any hypervisor, or running in any cloud. Although integration with various Azure services will be added over time, these will be optional value-added features and not a requirement to use Windows Admin Center.
+          Windows Admin Center does not require internet access and does not require Microsoft Azure. Windows Admin Center manages Windows Server and Windows instances anywhere: on physical systems, or in virtual machines on any hypervisor, or running in any cloud. Although integration with various Azure services will be added over time, these will be optional value-added features and not a requirement to use Windows Admin Center. It should be noted, however, connections to Azure based resources DO require an active and functional internet/network connection, in order to enforce administrative changes and view statuses.
           
       - question: |
           Are there any other dependencies or prerequisites?
