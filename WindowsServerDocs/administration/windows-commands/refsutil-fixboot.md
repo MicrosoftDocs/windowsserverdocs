@@ -11,6 +11,9 @@ ms.topic: reference
 
 The `refsutil fixboot` command repairs or updates the boot sector of a specified ReFS (Resilient File System) volume. It ensures the boot sector is correctly configured based on the provided drive, version, and cluster size.
 
+> [WARNING]
+> This operation modifies the boot sector(s) of a volume and may lead to complete data loss. Proceed with caution.
+
 ## Syntax
 
 ```
