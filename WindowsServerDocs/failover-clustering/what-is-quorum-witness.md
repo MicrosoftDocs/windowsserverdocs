@@ -4,7 +4,7 @@ description: Learn more about failover cluster quorum cloud witness, disk witnes
 ms.author: alalve
 author: xelu86
 ms.topic: conceptual
-ms.date: 03/25/2025
+ms.date: 03/28/2025
 ---
 
 # What is a quorum witness?
@@ -91,6 +91,12 @@ However, you might notice that in addition to the two datacenters, there's also 
 
 Having a file share witness provides enough redundancy to keep your file server highly available. However, you should remember that hosting the file share witness on another server in a separate site requires setup, regular maintenance, and independent connectivity to the other sites.
 
+#### Witness configuration
+
+As a best practice, configure the quorum to have an odd number of voting elements. If the cluster has an even number of voting nodes, add a disk witness or a file share witness to ensure high availability. This configuration allows the cluster to tolerate the failure of one extra node. Furthermore, adding a witness vote ensures the cluster can continue operating even if half of the cluster nodes fail or lose connectivity simultaneously.
+
+A disk witness is typically recommended when all cluster nodes have access to the shared disk. On the other hand, a file share witness is preferred for multisite disaster recovery scenarios involving replicated storage. Configuring a disk witness with replicated storage is feasible only if the storage solution supports read-write access from all sites to the replicated storage. To learn more about witness configuration types, see [Deploy a quorum witness](deploy-quorum-witness.md).
+
 ## Node vote assignment
 
 In advanced quorum configurations, you're able to assign or remove quorum votes for individual nodes. By default, every node in the cluster is assigned a vote. However, even if a node's vote is removed, it still participates in the cluster, receive updates to the cluster database, and remain capable of hosting applications.
@@ -109,8 +115,23 @@ Key considerations:
 - If a node's vote is explicitly removed, the cluster can't dynamically add or remove that vote.
 - In clusters with **Storage Spaces Direct** enabled, the cluster can only tolerate up to two node failures.
 
+## General recommendations for quorum configuration
+
+The cluster software automatically determines the quorum configuration for a new cluster based on the number of nodes and the availability of shared storage. This default configuration is typically the most suitable for the cluster. We recommend you review the quorum settings after the cluster is created and before deploying it in a production environment.
+
+To examine the detailed quorum configuration, you can use the **Validate a Configuration Wizard** or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) cmdlet to run the **Validate Quorum Configuration** test. In **Failover Cluster Manager**, the basic quorum configuration is displayed in the summary section for the selected cluster. Alternatively, you can retrieve detailed information about quorum resources by running the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
+
+At any time, you can run the **Validate Quorum Configuration** test to ensure the quorum settings are optimal for your cluster. The test results indicate whether a configuration change is recommended and provides the optimal settings. If adjustments are needed, you can apply the recommended changes using the **Configure Cluster Quorum Wizard**. Once the cluster is in production, avoid modifying the quorum configuration unless you thoroughly evaluate and confirm that the change is necessary for your cluster's specific requirements. You might want to consider changing the quorum configuration in the following situations:
+
+- Adding or evicting nodes
+- Adding or removing storage
+- A long-term node or witness failure
+- Recovering a cluster in a multisite disaster recovery scenario
+
 ## See also
 
 - [Set up a cluster witness](/azure/azure-local/manage/witness?context=/windows-server/context/windows-server-failover-clustering) in Azure Local
 
 - [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering)
+
+- [Validate hardware for a failover cluster](/troubleshoot/windows-server/high-availability/validate-hardware-failover-cluster)
