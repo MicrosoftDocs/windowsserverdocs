@@ -37,7 +37,7 @@ DHCP Server migration is divided into the following major sections:
 - [Verify the migration](#verify-the-migration): Confirm that the destination server successfully replaced the source server.
 - [Complete post-migration tasks](#post-migration-tasks): Retire, or repurpose the source server. Troubleshoot the migration if it failed, and roll back if needed.
 
-![Illustration of the server migration process, showing premigration, migration, and post-migration steps.](media/server-migration-process.png)
+![Diagram showing the server migration process, showing premigration, migration, and post-migration steps.](media/server-migration-process.png)
 
 ## Prepare to migrate
 
@@ -227,18 +227,18 @@ Return to the destination server and follow these steps to complete the migratio
         -Force -Path <storepath> -Verbose
     ```
 
-  The **-IPConfig** switch should be used with the value **All** in case the user wants to import all source settings.
+    The **-IPConfig** switch should be used with the value **All** in case the user wants to import all source settings.
 
-  > [!IMPORTANT]
-  > If you import the source server IP address to the target server together with the DHCP role without disconnecting or changing the IP address of the source server, an IP address conflict will occur.
+    > [!IMPORTANT]
+    > If you import the source server IP address to the target server together with the DHCP role without disconnecting or changing the IP address of the source server, an IP address conflict will occur.
 
 1. Run the following command to start the DHCP service: `Start-Service -Name "DHCPServer"`
 
 1. Authorize the destination server. Command parameters are case-sensitive and must appear exactly as shown. On the destination server, run the following command where *Server FQDN* is the FQDN of the DHCP Server and *Server IPAddress* is the IP address of the server:
 
-  ```powershell
-  netsh DHCP add server <Server FQDN> <Server IPAddress>
-  ```
+    ```powershell
+    netsh DHCP add server <Server FQDN> <Server IPAddress>
+    ```
 
 When this migration is finished, client computers on the network server are served by the new x64-based destination server running Windows Server. The migration is complete when the destination server is ready to serve IP addresses to the network.
 
