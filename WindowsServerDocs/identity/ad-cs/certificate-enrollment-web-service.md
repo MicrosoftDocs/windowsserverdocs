@@ -4,7 +4,7 @@ description: Learn about the Certificate Enrollment Web Service, including authe
 author: meaghanlewis
 ms.topic: concept-article
 ms.author: mosagie
-ms.date: 02/19/2025
+ms.date: 03/28/2025
 
 #customer intent: As a PKI admin/architect, I want to find accurate and relevant Active Directory Certificate Services (AD CS) documentation, so that understand/plan/deploy/operate AD CS.
 ---
@@ -19,6 +19,12 @@ Certificate enrollment over HTTPS enables:
 - Extranet deployment to issue certificates to mobile workers and business partners
 
 This article provides an overview of the Certificate Enrollment Web Service, including information about the authentication types, load balancing considerations, and configuration options.
+
+## How Certification Authority Web Enrollment Differs from Certificate Enrollment Web Services
+
+Although CA Web Enrollment and Certificate Enrollment Web Services both use HTTPS, they are fundamentally different technologies. CA Web Enrollment provides a browser-based interactive method of requesting individual certificates that does not require specific client components or configuration. CA Web Enrollment only supports interactive requests that the requester creates and uploads manually through the web site. For example, if an administrator want to provision a certificate to an Apache Web server running the Linux operating system, a PKCS #10 request that was created by using OpenSSL could be uploaded. After the CA issued the request, the certificate could be downloaded by using the browser.
+
+The Certificate Enrollment Policy Web Service and the Certificate Enrollment Web Service focus on automated certificate requests and provisioning by using the native client. Certificate Enrollment Web Services and CA Web Enrollment are complementary technologies. CA Web Enrollment supports certificate requests and a broad set of client operating systems. The Certificate Enrollment Web Services offer automated requests and certificate provisioning for client computers.
 
 ## Authentication types
 
@@ -38,11 +44,42 @@ Windows Integrated Authentication uses either Kerberos or NT LAN Manager (NTLM) 
 
 ### Client certificate authentication
 
-If certificates are provisioned to computers, then clients computers can use client certificate authentication. Client certificate authentication doesn't require a direct connection to the corporate network. Client certificate authentication is preferred over username and password authentication because it provides a more secure method of authenticating. However, this method requires that [x.509 certificates](https://datatracker.ietf.org/doc/html/rfc5280) are initially provisioned to clients by separate means. Use this authentication method if you plan to provide users with digital X.509 certificates for client authentication. This authentication method enables you to make the web service available on the Internet. See [Client Certificate Authentication](https://social.technet.microsoft.com/wiki/contents/articles/7734.certificate-enrollment-web-services-in-active-directory-certificate-services.aspx#Authentication_Method_Considerations) for more information on how to configure client certificate authentication.
+If certificates are provisioned to computers, then clients computers can use client certificate authentication. Client certificate authentication doesn't require a direct connection to the corporate network. Client certificate authentication is preferred over username and password authentication because it provides a more secure method of authenticating. However, this method requires that [x.509 certificates](https://datatracker.ietf.org/doc/html/rfc5280) are initially provisioned to clients by separate means. Use this authentication method if you plan to provide users with digital X.509 certificates for client authentication. This authentication method enables you to make the web service available on the Internet.
+
+If you want to use certificate-based authentication from outside the domain (for a computer configured in a workgroup or that is a member of a domain from which there is no forest trust relationship), then you must also do the following:
+
+- Ensure that a computer account exists in the forest of which the CA is a member that has the same computer name as the computer to which the certificate is to be issued
+- Issue a certificate using names that are appropriate for the computer to which the certificate is issued.
+- Manually transfer the issued certificate from a computer inside the domain to the appropriate computer that is either configured in a workgroup or that is a member of a domain from which there is no forest trust relationship.
 
 ### User name and password authentication
 
-The simplest form of authentication is username and password. This method typically is used for servicing clients that aren't directly connected to the internal network. It's a less secure authentication option than using client certificates, but it doesn't require provisioning a certificate to clients and therefore often easier to implement than client certificate authentication. Use this authentication method if you would like users to enter a username and password to authenticate to the web service. This authentication method can be used when the web service is accessed on the internal network or over the Internet.
+The simplest form of authentication is username and password. This method typically is used for servicing clients that aren't directly connected to the internal network. It's a less secure authentication option than using client certificates, but it doesn't require provisioning a certificate to clients, and therefore often easier to implement than client certificate authentication. Use this authentication method if you would like users to enter a username and password to authenticate to the web service. This authentication method can be used when the web service is accessed on the internal network or over the Internet.
+
+### Delegation requirements
+
+Delegation allows a service to impersonate a user account, or computer account in order to access resources throughout the network. When a service is trusted for delegation, that service can impersonate a user to use other network services.
+
+Delegation is required for the Certificate Enrollment Web Service account when all of the following are true:
+
+- The CA isn't on the same computer as the Certificate Enrollment Web Service
+
+- Certificate Enrollment Web Service needs to be able to process initial enrollment requests, as opposed to only processing certificate renewal requests
+
+- The authentication type is set to Windows Integrated Authentication or Client certificate authentication
+
+Delegation for the Certificate Enrollment Web Service isn't required when:
+
+- The CA and the Certificate Enrollment Web Service are on the same computer
+
+- Username and password is the authentication method.
+
+If the Certificate Enrollment Web Service is running as the built-in application pool identity, you should configure delegation on the computer account that's hosting the service. If the Certificate Enrollment Web Service is running as a domain user account, then you must first create an appropriate service principal name (SPN) and then configure delegation on the domain user account.
+
+The specific type of delegation that you should configure depends upon the authentication method selected for the Certificate Enrollment Web Service:
+
+- If you selected Windows integrated authentication, then you should configure delegation to Use Kerberos only.
+- If the service is using client certificate authentication, then you should configure delegation to Use any authentication protocol.
 
 ## Planning load balancing and fault tolerance
 
