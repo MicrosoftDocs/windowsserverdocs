@@ -2,7 +2,7 @@
 title: bitsadmin peers and clear
 description: Reference article for the bitsadmin peers and clear command that clears the peer list.
 ms.topic: reference
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 ms.date: 04/01/2023
 ---

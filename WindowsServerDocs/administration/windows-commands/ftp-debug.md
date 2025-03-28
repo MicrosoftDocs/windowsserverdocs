@@ -3,7 +3,7 @@ title: ftp debug
 description: Reference article for the ftp debug command, which toggles Debugging mode.
 ms.topic: reference
 ms.assetid: 16293dbf-1b7f-4b62-be4d-876179563ad7
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

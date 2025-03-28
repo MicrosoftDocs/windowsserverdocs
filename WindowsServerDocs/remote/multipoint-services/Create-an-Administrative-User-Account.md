@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 8ce4c5a9-3dec-412f-910b-54a252f8f209
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Create an Administrative User Account

@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: e225900b-cee9-48c9-b21c-394dc5e72b78
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # User Account Considerations

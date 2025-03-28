@@ -3,7 +3,7 @@ title: ksetup listrealmflags
 description: Reference article for the ksetup listrealmflags command, which lists the available realm flags that can be reported by ksetup.
 ms.topic: reference
 ms.assetid: aa96e4da-6b98-4c05-bccf-73cbf33258c2
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

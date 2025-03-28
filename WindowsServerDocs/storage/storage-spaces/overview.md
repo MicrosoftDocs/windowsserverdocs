@@ -1,7 +1,7 @@
 ---
 description: Learn about Storage Spaces in Windows and Windows Server and how it can help you take care of your data and the four main ways to use Storage Spaces.
 title: Storage Spaces overview
-ms.author: roharwoo
+ms.author: daknappe
 manager: dougkim
 ms.topic: article
 author: robinharwood

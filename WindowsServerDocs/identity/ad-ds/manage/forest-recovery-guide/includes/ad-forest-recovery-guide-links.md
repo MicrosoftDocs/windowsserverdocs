@@ -5,7 +5,7 @@ author: robinharwood
 ms.service: active-directory
 ms.topic: include
 ms.date: 07/11/2023
-ms.author: roharwoo
+ms.author: mosagie
 ---
 
 - [AD Forest Recovery - Prerequisites](../ad-forest-recovery-prerequisites.md)

@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: efede045-c20b-4541-9db0-dc96848b987a
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Launch or Close Applications on a Station

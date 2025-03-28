@@ -4,7 +4,7 @@ description: Learn how to perform an in-place OS upgrade (feature update) of an 
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 02/14/2025
+ms.date: 03/03/2025
 # Customer intent: As a server administrator, I want perform a Feature Update of Windows Server, so
 # that my server remains supported and I can use the latest features.
 ---
@@ -33,6 +33,7 @@ Before you start upgrading, complete the following prerequisites:
   - Meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
   - Isn't running in Azure.
 - Perform a full backup of your computer. The backup should include the operating system, apps, data, and any virtual machines (VMs) running on the server. You can use Windows Server Backup or a partner backup solution.
+- Your computer is not clustered. If you're running a cluster, instead use [Cluster-Aware Updating overview](../failover-clustering/cluster-aware-updating.md) or [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 
 > [!NOTE]
 > If you're performing a Feature Update of a Windows Server 2012 or Windows Server 2012 R2 server with Configuration Manager installed, follow the preupgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).

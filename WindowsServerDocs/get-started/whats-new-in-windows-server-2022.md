@@ -3,7 +3,7 @@ title: What's new in Windows Server 2022
 description: Find out what is new in Windows Server 2022.
 ms.topic: how-to
 author: robinharwood
-ms.author: roharwoo
+ms.author: alalve
 ms.date: 07/10/2024
 ---
 

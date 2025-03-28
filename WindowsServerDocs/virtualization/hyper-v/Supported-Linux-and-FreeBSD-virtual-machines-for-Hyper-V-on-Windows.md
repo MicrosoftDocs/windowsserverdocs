@@ -3,7 +3,7 @@ title: Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Serve
 description: Lists the Linux and FreeBSD integration services and features included in each version.
 ms.topic: article
 ms.assetid: 990ff94a-30fb-434b-b4a2-3804a5245ba6
-ms.author: mosagie
+ms.author: daknappe
 author: meaghanlewis
 ms.date: 10/25/2024
 ---

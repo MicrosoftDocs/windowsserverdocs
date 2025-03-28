@@ -4,7 +4,7 @@ description: Learn how to enable BranchCache hash publication for multiple file 
 manager: brianlic
 ms.topic: how-to
 ms.assetid: a3f1f7c4-d9b2-43e6-8bfa-fac707bbd4d3
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 01/05/2021
 ---

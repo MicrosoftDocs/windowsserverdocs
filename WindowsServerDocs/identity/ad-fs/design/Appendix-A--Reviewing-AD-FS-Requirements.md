@@ -4,7 +4,7 @@ ms.assetid: 39ecc468-77c5-4938-827e-48ce498a25ad
 title: Appendix A - Reviewing AD FS Requirements
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
 ms.topic: article
 ---

@@ -4,7 +4,7 @@ description: Learn how to use the monitoring dashboard to monitor the configurat
 manager: brianlic
 ms.topic: article
 ms.assetid: de285d13-9e54-4c46-88f0-607182e5e3dc
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

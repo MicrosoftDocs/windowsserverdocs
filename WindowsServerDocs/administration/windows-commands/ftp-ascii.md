@@ -3,7 +3,7 @@ title: ftp ascii
 description: Reference article for the ftp ascii command, which sets the file transfer type to ASCII.
 ms.topic: reference
 ms.assetid: 523be48e-eab0-4237-8fb5-ca222824f0b6
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

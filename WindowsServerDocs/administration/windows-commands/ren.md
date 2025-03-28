@@ -3,7 +3,7 @@ title: ren
 description: Reference article for the ren command, which renames a file or directory.
 ms.topic: reference
 ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 manager: mtillman
 ms.date: 07/11/2018

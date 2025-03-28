@@ -4,7 +4,7 @@ description: Learn how to install and configure ROUTER1.
 manager: brianlic
 ms.topic: article
 ms.assetid: dc20b1a0-540d-4531-a176-50b87c071600
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
