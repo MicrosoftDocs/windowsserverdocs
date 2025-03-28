@@ -1199,6 +1199,8 @@
       href: recover_1.md
     - name: refsutil
       href: refsutil.md
+    - name: refsutil fixboot
+      href: refsutil-fixboot.md
     - name: reg
       href: reg.md
       items:
