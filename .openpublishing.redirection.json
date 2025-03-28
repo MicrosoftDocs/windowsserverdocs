@@ -12829,6 +12829,11 @@
      "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
      "redirect_url": "/powershell/module/remoteaccess/",
      "redirect_document_id": false
+    },
+    {
+     "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
+     "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
+     "redirect_document_id": false
     }
   ]
 }
