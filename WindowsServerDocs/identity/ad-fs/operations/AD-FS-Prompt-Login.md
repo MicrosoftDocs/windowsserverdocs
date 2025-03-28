@@ -41,7 +41,7 @@ The following is a list of AD FS versions that support the `prompt=login` parame
 
 Use the [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) module to configure the setting.
 
-1. First obtain the current values of `FederatedIdpMfaBehavior`, `PreferredAuthenticationProtocol`, and `PromptLoginBehavior` for the federated domain by running the following PowerShell command:
+1. First obtain the current values of 'Id' and `PromptLoginBehavior` for the federated domain by running the following PowerShell command:
 
    ```powershell
    Get-MgDomainFederationConfiguration -DomainId <your_domain_name> | Format-List *
@@ -55,11 +55,14 @@ Use the [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) mo
 2. Configure the desired value of `PromptLoginBehavior` by running the following command:
 
    ```powershell
-   New-MgDomainFederationConfiguration -DomainId <your_domain_name> `
-      -FederatedIdpMfaBehavior <current_value_from_step1> `
-      -PreferredAuthenticationProtocol <current_value_from_step1> `
-      -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled>
+   Update-MgDomainFederationConfiguration `
+   -DomainId <your_domain_name> `
+   -InternalDomainFederationId <Id from the get command above> `
+   -PromptLoginBehavior <translateToFreshPasswordAuth|nativeSupport|disabled>
+   
    ```
+ > [!NOTE]
+   > The value for PromptLoginBehavior is case sensitive. The value should be one of the following. `translateToFreshPasswordAuth` `nativeSupport` `disabled`
 
 Following are the possible values of `PromptLoginBehavior` parameter and their meaning:
 
