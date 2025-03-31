@@ -26,6 +26,9 @@ refsutil compression <drive> <[/q]> | <[/c] [/f <format>] [/e <engine>] [/cs <si
 | `/e <engine>` | Defines the compression level to use, which varies by format:<br><br> <li> `LZ4`: Levels `1`, `3-12`. The default is `1`. <br>Levels `3-12` use the LZ4HC algorithm, which provides higher compression ratios at the cost of slower compression speeds. <br><li> `ZSTD`: Levels `1-22`. The default is `3`. <br>Higher levels provide better compression ratios but reduce compression speed and might require more memory (especially levels `20` and greater). <br><br>Decompression speed remains consistent regardless of the chosen compression level.</li><br> Omitting the `/e` parameter or using the value `0` sets the default level for any given compression format. |
 | `/cs <size>` | Specifies the compression chunk size in bytes. This value must be to the power of two (2^*n*), at least equal to the volume's cluster size, and no greater than `64MB`. Larger chunk sizes can enhance compression ratios but might negatively impact read performance for smaller data amounts. Beyond `1MB`, the benefits diminish significantly, so larger sizes aren't recommended.<br><br> If omitted or set to `0`, the volume's cluster size is used. |
 
+> [!NOTE]
+> For the `/e` parameter, the default compression values are subject to change.
+
 ## Examples
 
 To query the F: volume compression parameters, run the command:
