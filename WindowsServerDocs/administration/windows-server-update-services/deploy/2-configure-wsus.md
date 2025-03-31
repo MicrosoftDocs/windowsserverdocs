@@ -20,9 +20,9 @@ This article walks you through the following procedures:
 |----|--------|
 |[2.1. Configure network connections](#21-configure-network-connections)|Configure your firewall and proxy settings to allow the server to make the connections that it needs.|
 |[2.2. Configure WSUS by using the WSUS Configuration Wizard](#22-configure-wsus-by-using-the-wsus-configuration-wizard)|Use the WSUS Configuration Wizard to perform the base WSUS configuration.|
-|[2.3. Secure WSUS with the TLS protocol](#23-secure-wsus-with-the-secure-sockets-layer-protocol)|Configure the Transport Layer Security (TLS) protocol to help protect WSUS.|
+|[2.3. Secure WSUS with the TLS protocol](#23-secure-wsus-with-the-tls-protocol)|Configure the Transport Layer Security (TLS) protocol to help protect WSUS.|
 |[2.4. Configure WSUS computer groups](#24-configure-wsus-computer-groups)|Create computer groups in the WSUS Administration Console to manage updates in your organization.|
-|[2.5. Configure client computers to establish TLS connections with the WSUS server](#25-configure-client-computers-to-establish-ssl-connections-with-the-wsus-server)|Configure the client computers to trust the WSUS server certificate.|
+|[2.5. Configure client computers to establish TLS connections with the WSUS server](#25-configure-client-computers-to-establish-tls-connections-with-the-wsus-server)|Configure the client computers to trust the WSUS server certificate.|
 |[2.6. Configure client computers to receive updates from the WSUS server](#26-configure-client-computers-to-receive-updates-from-the-wsus-server)|Set up the client computers to receive their updates from the WSUS server.|
 
 ## 2.1. Configure network connections
@@ -253,7 +253,7 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
 1. If you want to read more about other settings, select **Next**. Otherwise, select **Finish** to conclude the wizard and finish the initial WSUS setup.
 
-1. After you select **Finish**, the WSUS Administration Console appears. You use this console to manage your WSUS network, as described in later sections in this article.
+After you select **Finish**, the WSUS Administration Console appears. You use this console to manage your WSUS network, as described in later sections in this article.
 
 ## 2.3. Secure WSUS with the TLS protocol
 
@@ -269,7 +269,7 @@ You should use the TLS protocol to help secure your WSUS network. WSUS can use T
 
 To begin the process of using TLS/HTTPS, you must enable TLS support on the WSUS server's Internet Information Services (IIS) service. This effort involves creating a TLS/Secure Sockets Layer (SSL) certificate for the server.
 
-The steps that are required to get a TLS/SSL certificate for the server are beyond the scope of this article and depend on your network configuration. For more information and for instructions about how to install certificates and set up this environment, see the documentation for [Active Directory Certificate Services](../../../identity/ad-cs/).
+The steps that are required to get a TLS/SSL certificate for the server are beyond the scope of this article and depend on your network configuration. For more information and for instructions about how to install certificates and set up this environment, see the documentation for [Active Directory Certificate Services](../../../identity/ad-cs/index.yml).
 
 ### 2.3.2. Configure the WSUS server's IIS web server to use TLS for some connections
 
@@ -344,7 +344,7 @@ Besides distributing updates that Microsoft provides, WSUS supports local publis
 Enabling and configuring local publishing is beyond the scope of this article. For full details, see [Local publishing](/previous-versions/windows/desktop/bb902470(v=vs.85)).
 
 > [!IMPORTANT]
-> Local publishing is a complicated process and is often not needed. Before you decide to enable local publishing, you should carefully review the documentation and consider whether to use this functionality and how you might use it.
+> Local publishing is a complicated process and is often not needed. Before you decide to enable local publishing, you should carefully review the documentation and consider whether you want to use this functionality and how you might use it.
 
 ## 2.4. Configure WSUS computer groups
 
