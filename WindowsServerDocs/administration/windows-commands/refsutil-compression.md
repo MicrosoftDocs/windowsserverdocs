@@ -17,6 +17,8 @@ The `refsutil compression` command is used to query or set the compression param
 refsutil compression <drive> <[/q]> | <[/c] [/f <format>] [/e <engine>] [/cs <size>]>
 ```
 
+## Parameters
+
 | Parameters | Description |
 |--|--|
 | `<drive>` | Specifies the drive letter of the volume to be compressed in the format `E:`. |
