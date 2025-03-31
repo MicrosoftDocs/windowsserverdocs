@@ -168,7 +168,7 @@ Your client computers all need to connect to one of your WSUS servers. Each clie
 
 ## 2.2. Configure WSUS by using the WSUS Configuration Wizard
 
-The procedures in the following sections use the WSUS Configuration Wizard to configure WSUS settings. The WSUS Configuration Wizard appears the first time you start the WSUS Management Console. You can also use the **Options** page in the WSUS Administration Console to configure WSUS settings. For more information, see the following procedures in other sections of this article:
+The procedures in the following sections use the WSUS Configuration Wizard to configure WSUS settings. The WSUS Configuration Wizard appears the first time you start the WSUS Management Console. You can also use the **Options** pane in the WSUS Administration Console to configure WSUS settings. For more information about using the **Options** pane, see the following procedures in other sections of this article:
 
 - [Add a proxy server to the WSUS configuration](#to-add-a-proxy-server-to-the-wsus-configuration)
 - [Enable client-side targeting](#242-enable-client-side-targeting-if-appropriate)
@@ -177,10 +177,12 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
 1. In the Server Manager dashboard, select **Tools** > **Windows Server Update Services**.
 
-    > [!NOTE]
-    > If the **Complete WSUS Installation** dialog appears, select **Run**. In the **Complete WSUS Installation** dialog, select **Close** when the installation successfully finishes.
+   > [!NOTE]
+   > If the **Complete WSUS Installation** dialog appears, select **Run**. In the **Complete WSUS Installation** dialog, select **Close** when the installation successfully finishes.
 
-1. The WSUS Configuration Wizard opens. On the **Before you Begin** page, review the information, and then select **Next**.
+   The WSUS Configuration Wizard opens.
+
+1. On the **Before you Begin** page, review the information, and then select **Next**.
 
 1. On the **Join the Microsoft Update Improvement Program** page, read the instructions. Keep the default selection if you want to participate in the program, or clear the checkbox if you don't. Then select **Next**.
 
@@ -218,7 +220,7 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
 ### Select languages, products, and classifications
 
-1. On the **Choose Languages** page, you have the option to select the languages from which WSUS receives updates: all languages or a subset of languages. Selecting a subset of languages saves disk space, but it's important to select all the languages that all the clients of this WSUS server need.
+1. On the **Choose Languages** page, you can select the languages from which WSUS receives updates: all languages or a subset of languages. Selecting a subset of languages saves disk space, but it's important to select all the languages that all the clients of this WSUS server need.
 
    If you choose to get updates only for specific languages, select **Download updates only in these languages**, and then select the languages for which you want updates. Otherwise, leave the default selection.
 
@@ -249,7 +251,7 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
 1. On the **Finished** page, if you want to start the synchronization right away, select **Begin initial synchronization**. If you don't select this option, you need to use the WSUS Management Console to perform the initial synchronization.
 
-1. If you want to read more about additional settings, select **Next**. Otherwise, select **Finish** to conclude the wizard and finish the initial WSUS setup.
+1. If you want to read more about other settings, select **Next**. Otherwise, select **Finish** to conclude the wizard and finish the initial WSUS setup.
 
 1. After you select **Finish**, the WSUS Administration Console appears. You use this console to manage your WSUS network, as described in later sections in this article.
 
@@ -258,7 +260,7 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 You should use the TLS protocol to help secure your WSUS network. WSUS can use TLS to authenticate connections and to encrypt and protect update information.
 
 > [!WARNING]
-> Securing WSUS by using the TLS protocol is important for the security of your network. If your WSUS server doesn't properly use TLS to secure its connections, an attacker might be able to modify crucial update information when it's sent from one WSUS server to another, or from the WSUS server to the client computers. *In this situation, the attacker can install malicious software on client computers.*
+> Securing WSUS by using the TLS protocol is important for the security of your network. If your WSUS server doesn't properly use TLS to secure its connections, an attacker might modify crucial update information when it's sent from one WSUS server to another, or from the WSUS server to the client computers. *In this situation, the attacker can install malicious software on client computers.*
 
 > [!IMPORTANT]
 > Clients and downstream servers that are configured to use TLS or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.
@@ -342,7 +344,7 @@ Besides distributing updates that Microsoft provides, WSUS supports local publis
 Enabling and configuring local publishing is beyond the scope of this article. For full details, see [Local publishing](/previous-versions/windows/desktop/bb902470(v=vs.85)).
 
 > [!IMPORTANT]
-> Local publishing is a complicated process and is often not needed. Before you decide to enable local publishing, you should carefully review the documentation and consider whether and how you might use this functionality.
+> Local publishing is a complicated process and is often not needed. Before you decide to enable local publishing, you should carefully review the documentation and consider whether to use this functionality and how you might use it.
 
 ## 2.4. Configure WSUS computer groups
 
@@ -430,7 +432,7 @@ Take the steps in the following sections to configure the client computers by us
 
 1. On the details pane, double-click **Configure Automatic Updates**. The **Configure Automatic Updates** policy opens.
 
-1. Select **Enabled**, and then select the desired option under the **Configure automatic updating** setting to manage how Automatic Updates should download and install approved updates.
+1. Select **Enabled**, and then select the desired option under the **Configure automatic updating** setting to manage how the automatic updates feature should download and install approved updates.
 
    We recommend using the **Auto download and schedule the install** setting. It ensures that the updates you approve in WSUS are downloaded and installed in a timely fashion, without the need for user intervention.
 
@@ -459,7 +461,7 @@ Take the steps in the following sections to configure the client computers by us
 If you choose to use client-side targeting, take the steps in this section to specify the appropriate computer group for the client computers you're configuring.
 
 > [!NOTE]
-> These steps assume that you've just completed the steps for editing policies to configure the client computers.
+> These steps assume that you just completed the steps for editing policies to configure the client computers.
 
 1. In the policy editor, go to the **Windows Update** item. If your operating system is Windows 10 or Windows 11, also select **Manage updates offered from Windows Server Update Service**.
 
@@ -487,7 +489,7 @@ Client computers don't appear in the WSUS Administration Console until they conn
   
    You can speed up the process by using one of these options:
 
-   - On Windows 10 or 11, use the **Settings** app's **Windows Update** page to manually check for updates.
+   - On Windows 10 or 11, use the Settings app **Windows Update** page to manually check for updates.
    - On versions of Windows before Windows 10, use the **Windows Update** icon in Control Panel to manually check for updates.
    - On versions of Windows before Windows 10, open Command Prompt with elevated privileges, and enter the command **wuauclt /detectnow**.
 
