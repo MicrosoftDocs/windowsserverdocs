@@ -17,6 +17,8 @@ The `refsutil streamsnapshot` command allows you to manage snapshots of data str
 refsutil streamsnapshot [/c <name>] [/l] [/d <name>] [/q <name>] <file[:stream]>
 ```
 
+## Parameters
+
 | Parameter | Description |
 |--|--|
 | `/c <name>` | Creates a snapshot named `<name>` of the stream specified by `file[:stream]` at the current point in time. This option is mutually exclusive with `/d`, `/l`, and `/q`. |
