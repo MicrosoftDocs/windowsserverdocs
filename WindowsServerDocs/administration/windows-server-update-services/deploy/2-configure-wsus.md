@@ -1,12 +1,13 @@
 ---
 title: Step 2 - Configure WSUS
-description: Windows Server Update Services (WSUS) topic - Configure WSUS is step two in a four-step process for deploying WSUS.
+description: See how to configure a Windows Server Update Services (WSUS) server and how to configure client computers to receive updates from the WSUS server.
 ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
 ms.author: jgerend
 author: robinharwood
 manager: mtillman
-ms.date: 9/18/2020
+ms.date: 3/31/2025
+# customer intent: As an administrator, I want to see how to configure Windows Server Update Services (WSUS) so that I can deploy the latest Microsoft product updates to computers in my network.
 ---
 
 # Step 2: Configure WSUS
@@ -19,9 +20,9 @@ This article walks you through the following procedures:
 |----|--------|
 |[2.1. Configure network connections](#21-configure-network-connections)|Configure your firewall and proxy settings to allow the server to make the connections that it needs.|
 |[2.2. Configure WSUS by using the WSUS Configuration Wizard](#22-configure-wsus-by-using-the-wsus-configuration-wizard)|Use the WSUS Configuration Wizard to perform the base WSUS configuration.|
-|[2.3. Secure WSUS with the Secure Sockets Layer protocol](#23-secure-wsus-with-the-secure-sockets-layer-protocol)|Configure the Secure Sockets Layer (SSL) protocol to help protect WSUS.|
+|[2.3. Secure WSUS with the TLS protocol](#23-secure-wsus-with-the-secure-sockets-layer-protocol)|Configure the Transport Layer Security (TLS) protocol to help protect WSUS.|
 |[2.4. Configure WSUS computer groups](#24-configure-wsus-computer-groups)|Create computer groups in the WSUS Administration Console to manage updates in your organization.|
-|[2.5. Configure client computers to establish SSL connections with the WSUS server](#25-configure-client-computers-to-establish-ssl-connections-with-the-wsus-server)|Set up the client computers to establish secure connections to the WSUS server.|
+|[2.5. Configure client computers to establish TLS connections with the WSUS server](#25-configure-client-computers-to-establish-ssl-connections-with-the-wsus-server)|Configure the client computers to trust the WSUS server certificate.|
 |[2.6. Configure client computers to receive updates from the WSUS server](#26-configure-client-computers-to-receive-updates-from-the-wsus-server)|Set up the client computers to receive their updates from the WSUS server.|
 
 ## 2.1. Configure network connections
@@ -30,7 +31,7 @@ Before you start the configuration process, be sure that you know the answers to
 
 - Is the server's firewall configured to allow clients to access the server?
 
-- Can this computer connect to the upstream server (such as the server that's designated to download updates from Microsoft Update)?
+- Can this computer connect to the upstream server (the server that's designated to download updates from Microsoft Update)?
 
 - Do you have the name of the proxy server and the user credentials for the proxy server, if you need them?
 
@@ -38,15 +39,15 @@ You can then start configuring the following WSUS network settings:
 
 - **Updates**: Specify the way this server should get updates (from Microsoft Update or from another WSUS server).
 
-- **Proxy**: If you identify that WSUS needs to use a proxy server to have internet access, you need to configure proxy settings in the WSUS server.
+- **Proxy**: If you identify that WSUS needs to use a proxy server to have internet access, configure proxy settings in the WSUS server.
 
-- **Firewall**: If you identify that WSUS is behind a corporate firewall, you need to take additional steps at the edge device to allow WSUS traffic.
+- **Firewall**: If you identify that WSUS is behind a corporate firewall, take extra steps at the edge device to allow WSUS traffic.
 
 > [!IMPORTANT]
-> If you only have one WSUS server, it must have internet access, because it needs to download updates from Microsoft. If you have multiple WSUS servers, only one server needs internet access. The others only need network access to the internet-connected WSUS server. Your client computers don't need internet access. They only need network access to a WSUS server.
+> If you have only one WSUS server, it must have internet access, because it needs to download updates from Microsoft. If you have multiple WSUS servers, only one server needs internet access. The others only need network access to the internet-connected WSUS server. Your client computers don't need internet access. They only need network access to a WSUS server.
 
 > [!TIP]
-> If your network is *air gapped*—if it doesn't have access to the internet at all—you can still use WSUS to provide updates to client computers on the network. This approach requires two WSUS servers. One WSUS server with internet access collects the updates from Microsoft. A second WSUS server on the protected network serves the updates to the client computers. Updates are exported from the first server onto removable media, carried across the air gap, and imported onto the second server. This configuration is advanced and is beyond the scope of this article.
+> If your network is *air gapped*—if it doesn't have access to the internet at all—you can still use WSUS to provide updates to client computers on the network. This approach requires two WSUS servers. One WSUS server with internet access collects the updates from Microsoft. A second WSUS server on the protected network serves the updates to the client computers. Updates are exported from the first server onto removable media, carried across the air gap, and imported into the second server. This configuration is advanced and is beyond the scope of this article.
 
 ### 2.1.1. Configure your firewall to allow your first WSUS server to connect to Microsoft domains on the internet
 
@@ -89,13 +90,11 @@ Your first WSUS server must have outbound access to ports 80 and 443 on the foll
 > [!IMPORTANT]
 > You must configure your firewall to allow the first WSUS server to access any URL within these domains. The IP addresses associated with these domains are constantly changing, so don't try to use IP address ranges instead.
 
-For a scenario in which WSUS fails to get updates because of firewall configurations, see [article 885819](https://support.microsoft.com/kb/885819) in the Microsoft Knowledge Base.
-
 ### 2.1.2. Configure the firewall to allow your other WSUS servers to connect to the first server
 
-If you have multiple WSUS servers, you should configure the other WSUS servers to access the first (*topmost*) server. Your other WSUS servers will receive all their update information from the topmost server. This configuration allows you to manage your entire network by using the WSUS Administration Console on the topmost server.
+If you have multiple WSUS servers, you should configure the other WSUS servers to access the first (*topmost*) server. Your other WSUS servers then receive all their update information from the topmost server. This configuration allows you to manage your entire network by using the WSUS Administration Console on the topmost server.
 
-Your other WSUS servers must have outbound access to the topmost server through two ports. By default, these ports are 8530 and 8531. You can change these ports, as described later in this article.
+Your other WSUS servers must have outbound access to the topmost server through two ports. By default, these ports are 8530 and 8531. You can change these ports, as described in [Configure the WSUS server's IIS web server to use TLS for some connections](#232-configure-the-wsus-servers-iis-web-server-to-use-tls-for-some-connections) later in this article.
 
 > [!NOTE]
 > If the network connection between the WSUS servers is slow or expensive, you can configure one or more of the other WSUS servers to receive update payloads directly from Microsoft. In this case, only a small amount of data is sent from those WSUS servers to the topmost server. For this configuration to work, the other WSUS servers must have access to the same internet domains as the topmost server.
@@ -112,7 +111,7 @@ If the corporate network uses proxy servers, the proxy servers must support the 
   > [!NOTE]
   > You can set up one proxy server that handles both protocols for WSUS during the installation of WSUS server software.
 
-- Two proxy servers, each of which supports a single protocol. In this case, one proxy server is configured to use HTTP, and the other proxy server is configured to use HTTPS.
+- Two proxy servers, each of which supports a single protocol. In this case, configure one proxy server to use HTTP, and the other proxy server to use HTTPS.
 
 #### To set up WSUS to use two proxy servers
 
@@ -120,15 +119,14 @@ If the corporate network uses proxy servers, the proxy servers must support the 
 
 1. Install the WSUS server role. When you use the WSUS Configuration Wizard, as explained in [Configure WSUS by using the WSUS Configuration Wizard](#22-configure-wsus-by-using-the-wsus-configuration-wizard), don't specify a proxy server.
 
-1. Open a command prompt (*Cmd.exe*) as an administrator:
-
-   1. From the **Start** menu, search for **Command prompt**.
-   1. Right-click **Command prompt**, and then select **Run as administrator**.
+1. Open Command Prompt (*Cmd.exe*) as an administrator:
+   1. On the **Start** menu, search for **Command Prompt**.
+   1. Right-click **Command Prompt**, and then select **Run as administrator**.
    1. If the **User Account Control** dialog appears, enter the appropriate credentials (if requested), confirm that the action that it displays is what you want, and then select **Continue**.
 
 1. In Command Prompt, go to the *C:\Program Files\Update Services\Tools* folder. Enter the following command:
 
-   `wsusutil ConfigureSSLproxy [<proxy_server proxy_port>] -enable`
+   `wsusutil ConfigureSSLproxy [<proxy-server proxy-port>] -enable`
 
    In that command:
 
@@ -166,7 +164,7 @@ If the corporate network uses proxy servers, the proxy servers must support the 
 
 ### 2.1.4. Configure your firewall to allow client computers to access a WSUS server
 
-Your client computers all need to connect to one of your WSUS servers. The client computer must have outbound access to two ports on the WSUS server. By default, these ports are 8530 and 8531.
+Your client computers all need to connect to one of your WSUS servers. Each client computer must have outbound access to two ports on the WSUS server. By default, these ports are 8530 and 8531.
 
 ## 2.2. Configure WSUS by using the WSUS Configuration Wizard
 
@@ -184,7 +182,7 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
 1. The WSUS Configuration Wizard opens. On the **Before you Begin** page, review the information, and then select **Next**.
 
-1. Read the instructions on the **Join the Microsoft Update Improvement Program** page. Keep the default selection if you want to participate in the program, or clear the checkbox if you don't. Then select **Next**.
+1. On the **Join the Microsoft Update Improvement Program** page, read the instructions. Keep the default selection if you want to participate in the program, or clear the checkbox if you don't. Then select **Next**.
 
 ### Configure upstream and proxy server settings
 
@@ -194,13 +192,13 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
    - **Synchronize from another Windows Server Update Services server**
 
-    If you choose to synchronize from another WSUS server, take the following steps:
+   If you choose to synchronize from another WSUS server, take the following steps:
 
-    1. Specify the server name and the port on which this server should communicate with the upstream server.
+   1. Specify the server name and the port on which this server should communicate with the upstream server.
 
-    1. To use SSL, select **Use SSL when synchronizing update information**. The servers use port 443 for synchronization. (Make sure that this server and the upstream server support SSL.)
+   1. To use TLS, select **Use SSL when synchronizing update information**. The servers use port 443 for synchronization. (Make sure that this server and the upstream server support TLS.)
 
-    1. If this server is a replica server, select **This is a replica of the upstream server**.
+   1. If this server is a replica server, select **This is a replica of the upstream server**.
 
 1. After you select the options for your deployment, select **Next**.
 
@@ -220,7 +218,7 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
 ### Select languages, products, and classifications
 
-1. On the **Choose Languages** page, you have the option to select the languages from which WSUS receives updates: all languages or a subset of languages. Selecting a subset of languages saves disk space, but it's important to choose all the languages that all the clients of this WSUS server need.
+1. On the **Choose Languages** page, you have the option to select the languages from which WSUS receives updates: all languages or a subset of languages. Selecting a subset of languages saves disk space, but it's important to select all the languages that all the clients of this WSUS server need.
 
    If you choose to get updates only for specific languages, select **Download updates only in these languages**, and then select the languages for which you want updates. Otherwise, leave the default selection.
 
@@ -229,11 +227,11 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
 1. Select **Next**.
 
-1. Use the **Choose Products** page to specify the products for which you want updates. Select product categories, such as Windows, or specific products, such as Windows Server 2019. Selecting a product category selects all the products in that category.
+1. On the **Choose Products** page, specify the products for which you want updates. Select product categories, such as Windows, or specific products, such as Windows Server 2019. Selecting a product category selects all the products in that category.
 
 1. Select **Next**.
 
-1. On the **Choose Classifications** page, select the update classifications that you want to get. Choose all the classifications or a subset of them, and then select **Next**.
+1. On the **Choose Classifications** page, select the update classifications that you want to get. Select all the classifications or a subset of them, and then select **Next**.
 
 ### Configure the sync schedule
 
@@ -243,7 +241,7 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
    - If you select **Synchronize automatically**, the WSUS server synchronizes at set intervals.
 
-     Set the time for **First synchronization**, and then specify the number of synchronizations per day that you want this server to perform. For example, if you specify four synchronizations per day, starting at 3:00 AM, synchronizations occur at 3:00 AM, 9:00 AM, 3:00 PM, and 9:00 PM.
+     For **First synchronization**, set the time, and then specify the number of synchronizations per day that you want this server to perform. For example, if you specify four synchronizations per day, starting at 3:00 AM, synchronizations occur at 3:00 AM, 9:00 AM, 3:00 PM, and 9:00 PM.
 
 1. Select **Next**.
 
@@ -251,44 +249,36 @@ The procedures in the following sections use the WSUS Configuration Wizard to co
 
 1. On the **Finished** page, if you want to start the synchronization right away, select **Begin initial synchronization**. If you don't select this option, you need to use the WSUS Management Console to perform the initial synchronization.
 
-1. If you want to read more about additional settings, select **Next**. Otherwise, select **Finish** to conclude this wizard and finish the initial WSUS setup.
+1. If you want to read more about additional settings, select **Next**. Otherwise, select **Finish** to conclude the wizard and finish the initial WSUS setup.
 
-1. After you select **Finish**, the WSUS Administration Console appears. You use this console to manage your WSUS network, as described later in this article.
+1. After you select **Finish**, the WSUS Administration Console appears. You use this console to manage your WSUS network, as described in later sections in this article.
 
-## 2.3. Secure WSUS with the Secure Sockets Layer protocol
+## 2.3. Secure WSUS with the TLS protocol
 
-You should use the SSL protocol to help secure your WSUS network. WSUS can use SSL to authenticate connections and to encrypt and protect update information.
+You should use the TLS protocol to help secure your WSUS network. WSUS can use TLS to authenticate connections and to encrypt and protect update information.
 
 > [!WARNING]
-> Securing WSUS by using the SSL protocol is important for the security of your network. If your WSUS server doesn't properly use SSL to secure its connections, an attacker might be able to modify crucial update information when it's sent from one WSUS server to another, or from the WSUS server to the client computers. *In this situation, the attacker can install malicious software on client computers.*
+> Securing WSUS by using the TLS protocol is important for the security of your network. If your WSUS server doesn't properly use TLS to secure its connections, an attacker might be able to modify crucial update information when it's sent from one WSUS server to another, or from the WSUS server to the client computers. *In this situation, the attacker can install malicious software on client computers.*
 
 > [!IMPORTANT]
-> Clients and downstream servers that are configured to use Transport Layer Security (TLS) or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.
+> Clients and downstream servers that are configured to use TLS or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.
 
-### 2.3.1. Enable SSL/HTTPS on the WSUS server's IIS service to use SSL/HTTPS
+### 2.3.1. Enable TLS/HTTPS on the WSUS server's IIS service to use TLS/HTTPS
 
-To begin the process, you must enable SSL support on the WSUS server's IIS service. This effort involves creating an SSL certificate for the server.
+To begin the process of using TLS/HTTPS, you must enable TLS support on the WSUS server's Internet Information Services (IIS) service. This effort involves creating a TLS/Secure Sockets Layer (SSL) certificate for the server.
 
-The steps that are required to get an SSL certificate for the server are beyond the scope of this article and depend on your network configuration. For more information and for instructions about how to install certificates and set up this environment, see the following articles:
+The steps that are required to get a TLS/SSL certificate for the server are beyond the scope of this article and depend on your network configuration. For more information and for instructions about how to install certificates and set up this environment, see the documentation for [Active Directory Certificate Services](../../../identity/ad-cs/).
 
-- [Suite B PKI step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff829847(v=ws.10))
+### 2.3.2. Configure the WSUS server's IIS web server to use TLS for some connections
 
-- [Implementing and administering certificate templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731256(v=ws.10))
-
-- [Active Directory Certificate Services upgrade and migration guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc742515(v=ws.10))
-
-- [Configure certificate autoenrollment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731522(v=ws.11))
-
-### 2.3.2. Configure the WSUS server's IIS web server to use SSL for some connections
-
-WSUS requires two ports for connections to other WSUS servers and to client computers. One port uses SSL/HTTPS to send update *metadata* (crucial information about the updates). By default, port 8531 is used for this purpose. A second port uses HTTP to send update payloads. By default, port 8530 is used for this purpose.
+WSUS requires two ports for connections to other WSUS servers and to client computers. One port uses TLS/HTTPS to send update *metadata* (crucial information about the updates). By default, port 8531 is used for this purpose. A second port uses HTTP to send update payloads. By default, port 8530 is used for this purpose.
 
 > [!IMPORTANT]
-> You can't configure the entire WSUS website to require SSL. WSUS is designed to encrypt update metadata only. Windows Update distributes updates in the same way.
+> You can't configure the entire WSUS website to require TLS. WSUS is designed to encrypt update metadata only. Windows Update distributes updates in the same way.
 >
-> To guard against an attacker tampering with the update payloads, all update payloads are signed through a specific set of trusted signing certificates. In addition, a cryptographic hash is computed for each update payload. The hash is sent to the client computer over the secure HTTPS metadata connection, along with the other metadata for the update. When an update is downloaded, the client software verifies the payload's digital signature and hash. If the update has been changed, it's not installed.
+> To guard against an attacker tampering with the update payloads, all update payloads are signed through a specific set of trusted signing certificates. Also, a cryptographic hash is computed for each update payload. The hash is sent to the client computer over the secure HTTPS metadata connection, along with the other metadata for the update. When an update is downloaded, the client software verifies the payload's digital signature and hash. If the update has been changed, it's not installed.
 
-You should require SSL only for these IIS virtual roots:
+You should require TLS only for the following IIS virtual roots:
 
 - **SimpleAuthWebService**
 
@@ -300,7 +290,7 @@ You should require SSL only for these IIS virtual roots:
 
 - **ClientWebService**
 
-You shouldn't require SSL for these virtual roots:
+You shouldn't require TLS for the following virtual roots:
 
 - **Content**
 
@@ -310,34 +300,34 @@ You shouldn't require SSL for these virtual roots:
 
 - **SelfUpdate**
 
-The certificate of the certification authority (CA) must be imported into each WSUS server's Trusted Root CA store for the local computer, or the Trusted Root CA store for WSUS if it exists. 
+The certificate of the certification authority (CA) must be imported into each WSUS server's Trusted Root CA store for the local computer, or the Trusted Root CA store for WSUS if it exists.
 
-For more information about how to use SSL certificates in IIS, see [Require Secure Sockets Layer (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732367(v=ws.10)).
+For more information about how to use TLS/SSL certificates in IIS, see [How to Set Up SSL on IIS 7 or later](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 > [!IMPORTANT]
 > You must use the certificate store for the local computer. You can't use a user's certificate store.
 
 Normally, you should configure IIS to use port 8531 for HTTPS connections and port 8530 for HTTP connections. If you change these ports, you must use two adjacent port numbers. The port number used for HTTP connections must be exactly 1 less than the port number used for HTTPS connections.
 
-You must reinitialize *ClientServicingProxy* if the server name, SSL configuration, or port number has changed.
+You must reinitialize the `ClientServicingProxy` client proxy if the server name, TLS configuration, or port number changes.
 
-### 2.3.3. Configure WSUS to use the SSL signing certificate for its client connections
+### 2.3.3. Configure WSUS to use the TLS/SSL signing certificate for its client connections
 
 1. Sign in to the WSUS server by using an account that's a member of the WSUS Administrators group or the Local Administrators group.
 
-1. Go to **Start**, type **CMD**, right-click **Command prompt**, and then select **Run as administrator**.
+1. On the **Start** menu, enter **CMD**, right-click **Command Prompt**, and then select **Run as administrator**.
 
-1. Go to the *%ProgramFiles%\\Update Services\\Tools\\* folder.
+1. Go to the *C:\Program Files\Update Services\Tools* folder.
 
 1. In Command Prompt, enter the following command:
 
-    `wsusutil configuressl _certificateName_`
+   `wsusutil configuressl <certificate-name>`
 
-    In that command, *certificateName* is the DNS name of the WSUS server.
+   In that command, *certificate-name* is the Domain Name System (DNS) name of the WSUS server.
 
 ### 2.3.4. Secure the SQL Server connection, if needed
 
-If you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server isn't secured through SSL. This situation creates a potential attack vector. To help protect this connection, consider the following recommendations:
+If you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server isn't secured through TLS. This situation creates a potential attack vector. To help protect this connection, consider the following recommendations:
 
 - Move the WSUS database to the WSUS server.
 
@@ -390,11 +380,11 @@ There are two approaches to assigning client computers to computer groups. The r
 
 1. In the **Add Computer Group** dialog, for **Name**, specify the name of the new group. Then select **Add**.
 
-## 2.5. Configure client computers to establish SSL connections with the WSUS server
+## 2.5. Configure client computers to establish TLS connections with the WSUS server
 
-Assuming that you configure the WSUS server to help protect the client computers' connections by using SSL, you must configure the client computers to trust those SSL connections.
+Assuming that you configure the WSUS server to help protect the client computers' connections by using TLS, you must configure the client computers to trust those TLS connections.
 
-The WSUS server's SSL certificate must be imported into the client computers' Trusted Root CA store, or into the client computers' Automatic Update Service Trusted Root CA store if it exists.
+The WSUS server's TLS/SSL certificate must be imported into the client computers' Trusted Root CA store, or into the client computers' Automatic Update Service Trusted Root CA store if it exists.
 
 > [!IMPORTANT]
 > You must use the certificate store for the local computer. You can't use a user's certificate store.
@@ -408,7 +398,7 @@ If you're using local publishing, you should also configure the client computers
 By default, your client computers receive updates from Windows Update. They must be configured to receive updates from the WSUS server instead.
 
 > [!IMPORTANT]
-> This article presents one set of steps for configuring client computers by using Group Policy. These steps are appropriate in many situations. But many other options are available for configuring update behavior on client computers, including using mobile device management. For documentation on these options, see [Manage additional Windows Update settings](/windows/deployment/update/waas-wu-settings). 
+> This article presents one set of steps for configuring client computers by using Group Policy. These steps are appropriate in many situations. But many other options are available for configuring update behavior on client computers, including using mobile device management. For documentation on these options, see [Manage additional Windows Update settings](/windows/deployment/update/waas-wu-settings).
 
 ### 2.6.1. Choose the correct set of policies to edit
 
@@ -431,8 +421,8 @@ Take the steps in the following sections to configure the client computers by us
 
 1. Open the appropriate policy object:
 
-    - If you're using Active Directory, open the Group Policy Management Console, go to the GPO on which you want to configure WSUS, and select **Edit**. Then expand **Computer Configuration**, and expand **Policies**.
-    - If you're not using Active Directory, open the Local Group Policy Editor. The local computer policy appears. Expand **Computer Configuration**.
+   - If you're using Active Directory, open the Group Policy Management Console, go to the GPO on which you want to configure WSUS, and select **Edit**. Then expand **Computer Configuration**, and expand **Policies**.
+   - If you're not using Active Directory, open the Local Group Policy Editor. The local computer policy appears. Expand **Computer Configuration**.
 
 1. In the object that you expanded in the previous step, expand **Administrative Templates** > **Windows components** > **Windows Update**. If your operating system is Windows 10 or Windows 11, also select **Manage end user experience**.
 
@@ -460,7 +450,7 @@ Take the steps in the following sections to configure the client computers by us
 1. Select **Enabled**, and then enter the URL of the WSUS server in both the **Set the intranet update service for detecting updates** and **Set the intranet statistics server** boxes.
 
     > [!WARNING]
-    > Make sure to include the correct port in the URL. Assuming that you configure the server to use SSL as recommended, you should specify the port that's configured for HTTPS. For example, if you choose to use port 8531 for HTTPS, and the server's domain name is wsus.contoso.com, you should enter **https://wsus.contoso.com:8531** in both boxes.
+    > Make sure to include the correct port in the URL. Assuming that you configure the server to use TLS as recommended, you should specify the port that's configured for HTTPS. For example, if you choose to use port 8531 for HTTPS, and the server's domain name is wsus.contoso.com, you should enter `https://wsus.contoso.com:8531` in both boxes.
 
 1. Select **OK** to close the **Specify intranet Microsoft update service location** policy.
 
@@ -497,7 +487,7 @@ Client computers don't appear in the WSUS Administration Console until they conn
   
    You can speed up the process by using one of these options:
 
-   - On Windows 10 or 11, use the **Settings** app's Windows Update page to manually check for updates.
+   - On Windows 10 or 11, use the **Settings** app's **Windows Update** page to manually check for updates.
    - On versions of Windows before Windows 10, use the **Windows Update** icon in Control Panel to manually check for updates.
    - On versions of Windows before Windows 10, open Command Prompt with elevated privileges, and enter the command **wuauclt /detectnow**.
 
