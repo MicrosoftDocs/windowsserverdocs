@@ -52,3 +52,7 @@ To check the amount of space needed for a leak analysis on the D: drive, run thi
 ```
 refsutil leak D: /q
 ```
+
+## Related links
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
