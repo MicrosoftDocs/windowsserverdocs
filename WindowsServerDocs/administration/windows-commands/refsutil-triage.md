@@ -39,3 +39,7 @@ To perform a directory scrub on the directory with file ID `16040` on the D: dri
 ```
 refsutil triage D: /s 16040 /v
 ```
+
+## Related links
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
