@@ -636,6 +636,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [recover disk group](recover_1.md)
 - [refsutil](refsutil.md)
 - [refsutil leak](refsutil-leak.md)
+- [refsutil fixboot](refsutil-fixboot.md)
 - [reg](reg.md)
   - [reg add](reg-add.md)
   - [reg compare](reg-compare.md)
