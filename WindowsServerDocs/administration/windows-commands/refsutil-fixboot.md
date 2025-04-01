@@ -52,3 +52,7 @@ To fix the boot sector of the ReFS volume on drive D: with a major version of 2,
 ```
 refsutil fixboot D: 2 0 65536 -smr 128
 ```
+
+## Related links
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
