@@ -24,8 +24,8 @@ refsutil dedup <drive> [/d] [/s] [/cpu <percentage>] [/mm]
 | `drive` | Specifies the volume path in the `E:` format or a mount point. |
 | `/d` | Deduplicates the volume. <br><br>This parameter can't be used with the `/s` parameter. |
 | `/s` | Scans the volume to determine how much space can be saved by deduplicating equivalent clusters. <br><br>This parameter can't be used with the `/d` parameter. |
-| `/mm` | Uses memory-mapped file I/O to read files for deduplication. <br><br>This parameter must be used with either the `/d` or `/s` parameters. |
 | `/cpu percentage` | Specifies the maximum percentage of CPU to use. Acceptable values are between 1-100. |
+| `/mm` | Uses memory-mapped file I/O to read files for deduplication. <br><br>This parameter must be used with either the `/d` or `/s` parameters. |
 
 ## Examples
 
@@ -40,3 +40,7 @@ To deduplicate the D: volume using 50% of CPU resources, run the command:
 ```
 refsutil dedup D: /d /cpu 50
 ```
+
+## Related links
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
