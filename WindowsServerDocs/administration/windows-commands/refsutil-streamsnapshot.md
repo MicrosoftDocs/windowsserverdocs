@@ -54,3 +54,7 @@ To list all modifications between the snapshot "snapshot_jan_2024" and the strea
 ```
 refsutil streamsnapshot /q "snapshot_jan_2024" C:\file.dat:snapshot_feb_2024
 ```
+
+## Related links
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
