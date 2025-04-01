@@ -62,3 +62,7 @@ To decompress the F: volume, run the command:
 ```
 refsutil compression F: /c /f NONE
 ```
+
+## Related links
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
