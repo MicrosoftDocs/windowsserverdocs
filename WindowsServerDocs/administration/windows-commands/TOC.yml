@@ -1199,6 +1199,8 @@
       href: recover_1.md
     - name: refsutil
       href: refsutil.md
+    - name: refsutil iometrics
+      href: refsutil-iometrics.md
     - name: refsutil dedup
       href: refsutil-dedup.md
     - name: refsutil compression

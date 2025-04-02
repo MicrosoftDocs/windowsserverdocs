@@ -635,6 +635,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [recover](recover.md)
 - [recover disk group](recover_1.md)
 - [refsutil](refsutil.md)
+- [refsutil iometrics](refsutil-iometrics.md)
 - [refsutil dedup](refsutil-dedup.md)
 - [refsutil compression](refsutil-compression.md)
 - [refsutil streamsnapshot](refsutil-streamsnapshot.md)
