@@ -22,7 +22,7 @@ In automatic mode, both the Scan Phase and Copy Phase run sequentially without u
 You typically don't need to use the `refsutil salvage` tool unless the volume appears as RAW, indicating corruption. If the volume is in a read-only state, the data is still accessible and can be retrieved without this tool.
 
 > [!NOTE]
-> The `refsutil salvage` command is only supported in the following operating systems (OS):
+> The `refsutil salvage` command is only supported in the following operating systems:
 >
 > - Windows 10 Pro for Workstations or later
 > - Windows Server 2019 or later
