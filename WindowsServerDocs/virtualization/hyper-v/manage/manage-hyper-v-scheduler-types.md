@@ -187,7 +187,7 @@ You can use Event Viewer or PowerShell to view hypervisor launch event logs.
 
 :::image type="content" source="media/Hyper-V-CoreScheduler-EventViewer.png" alt-text="Screenshot of events in Event Viewer. A Hyper-V-Hypervisor launch event with an ID of 2 is selected. A lower pane shows event details.":::
 
-### User PowerShell to query system logs for a hypervisor launch event
+### Use PowerShell to query system logs for a hypervisor launch event
 
 To query the system logs for a hypervisor event with an ID of 2 by using PowerShell, run the following command:
 
