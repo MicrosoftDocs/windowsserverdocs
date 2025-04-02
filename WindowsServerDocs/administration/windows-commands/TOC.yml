@@ -1199,6 +1199,10 @@
       href: recover_1.md
     - name: refsutil
       href: refsutil.md
+    - name: refsutil leak
+      href: refsutil-leak.md
+    - name: refsutil fixboot
+      href: refsutil-fixboot.md
     - name: refsutil triage
       href: refsutil-triage.md
     - name: reg

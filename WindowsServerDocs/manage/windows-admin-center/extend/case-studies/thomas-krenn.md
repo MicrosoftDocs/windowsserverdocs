@@ -10,7 +10,7 @@ ms.date: 06/24/2019
 
 ## Intuitive server and storage health management
 
-The Thomas Krenn.AG Windows Admin Center extension is designed specifically for the highly available, 2-node [S2D Micro-Cluster](https://www.thomas-krenn.com/en/products/application/software-defined-storage/s2d-micro-cluster.html) appliance. The user-friendly, graphical web interface visualizes a Micro-Cluster's health status through a simple dashboard and allows you to drill down on storage devices, network interfaces or the entire cluster to view more details.
+The Thomas Krenn.AG Windows Admin Center extension is designed specifically for the highly available, 2-node [S2D Micro-Cluster](https://www.thomas-krenn.com/en/products/application/software-defined-storage/microsoft-s2d-azure-local/azure-stack-hci-microcluster.html) appliance. The user-friendly, graphical web interface visualizes a Micro-Cluster's health status through a simple dashboard and allows you to drill down on storage devices, network interfaces or the entire cluster to view more details.
 
 The extension provides intuitive access to information typically needed for first-level service and support calls, such as serial numbers, software versions, storage utilization and more. It is designed to be useful to admins who have no prior experience with Windows Server hyper-converged infrastructure.
 
