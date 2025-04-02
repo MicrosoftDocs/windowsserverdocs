@@ -1199,18 +1199,23 @@
       href: recover_1.md
     - name: refsutil
       href: refsutil.md
-    - name: refsutil dedup
-      href: refsutil-dedup.md
-    - name: refsutil compression
-      href: refsutil-compression.md
-    - name: refsutil fixboot
-      href: refsutil-fixboot.md
-    - name: refsutil leak
-      href: refsutil-leak.md
-    - name: refsutil streamsnapshot
-      href: refsutil-streamsnapshot.md
-    - name: refsutil triage
-      href: refsutil-triage.md
+      items:
+      - name: refsutil compression
+        href: refsutil-compression.md
+      - name: refsutil dedup
+        href: refsutil-dedup.md
+      - name: refsutil fixboot
+        href: refsutil-fixboot.md
+      - name: refsutil iometrics
+        href: refsutil-iometrics.md
+      - name: refsutil leak
+        href: refsutil-leak.md
+      - name: refsutil salvage
+        href: refsutil-salvage.md
+      - name: refsutil streamsnapshot
+        href: refsutil-streamsnapshot.md
+      - name: refsutil triage
+        href: refsutil-triage.md
     - name: reg
       href: reg.md
       items:
