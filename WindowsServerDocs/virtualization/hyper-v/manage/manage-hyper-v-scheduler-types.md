@@ -1,34 +1,34 @@
 ---
-title: Manage Hyper-V hypervisor scheduler types
-description: Learn about modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
+title: Manage Hyper-V Hypervisor Scheduler Types
+description: Find out about modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 02/18/2025
+ms.date: 04/02/2025
 ms.topic: article
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
+# customer intent: As an administrator, I want to become familiar with the scheduler types that are available in the Hyper-V hypervisor so that I can optimize the security and performance of virtualization hosts.
 ---
 
 # Manage Hyper-V hypervisor scheduler types
 
-This article describes the modes of virtual processor (VP) scheduling logic in Windows Server. These modes, or *scheduler types*, determine how the Hyper-V hypervisor allocates and manages work across guest VPs. A Hyper-V host administrator can:
+This article describes the modes of virtual processor (VP) scheduling logic in Windows Server and Windows. These modes, or *scheduler types*, determine how the Hyper-V hypervisor allocates and manages work across guest VPs. A Hyper-V host administrator can:
 
 - Select hypervisor scheduler types best suited for guest virtual machines (VMs).
 - Configure VMs to take advantage of scheduling logic.
 
 ## Background
 
-To comprehend the logic and controls behind Hyper-V VP scheduling, it's important to understand certain concepts like simultaneous multithreading (SMT) and how Hyper-V virtualizes processors.
+To understand the logic and controls behind Hyper-V VP scheduling, it's important to first grasp certain concepts like simultaneous multithreading (SMT) and how Hyper-V virtualizes processors.
 
 ### Understand SMT
 
-SMT is a technique in modern processor design that provides a way for separate, independent execution threads to share processor resources. SMT usually gives a modest performance boost to most workloads. It parallelizes computations when possible, increasing instruction throughput. However, there are also times where there's no noticeable improvement in performance or even a slight loss when threads compete with each other for shared processor resources.
+SMT is a technique in modern processor design that provides a way for separate, independent execution threads to share processor resources. SMT usually gives a modest performance boost to workloads. It parallelizes computations when possible, increasing instruction throughput. However, when threads compete with each other for shared processor resources, there's sometimes no noticeable improvement in performance. There might even be a slight decrease in performance.
 
 In order to use SMT with Windows Server, you must have a compatible processor. Processors with Intel Hyper-Threading Technology (Intel HT Technology) or Advanced Micro Devices (AMD) SMT are examples of compatible processors.
 
 For the purposes of this article, the descriptions of SMT and how it's used by Hyper-V apply equally to both Intel and AMD systems.
 
 - For more information on Intel HT Technology, see [Intel Hyper-Threading Technology](https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html).
-
 - For more information on AMD SMT, see [The "Zen" Core Architecture](https://www.amd.com/en/technologies/zen-core.html).
 
 ### Understand how Hyper-V virtualizes processors
@@ -38,7 +38,6 @@ Before you consider hypervisor scheduler types, you should understand Hyper-V ar
 - Hyper-V creates and manages VM partitions, allocating and sharing compute resources across them, under control of the hypervisor. Partitions provide strong isolation boundaries between all guest VMs and between guest VMs and the root partition.
 
 - The root partition is itself a VM partition, although it has unique properties and greater privileges than guest VMs. The root partition:
-
   - Provides management services that control all guest VMs.
   - Provides virtual device support for guests.
   - Manages all device input and output for guest VMs.
@@ -49,19 +48,19 @@ Before you consider hypervisor scheduler types, you should understand Hyper-V ar
 
 - By default, the LPs that host the root partition VPs can also run guest VPs.
 
-- The hypervisor can schedule the guest VP to run on any available LP. The hypervisor scheduler tries to consider temporal cache locality, non-uniform memory access (NUMA) topology, and many other factors when it schedules a guest VP. But ultimately, the VP can be scheduled on any host LP.
+- The hypervisor can schedule a guest VP to run on any available LP. The hypervisor scheduler tries to consider temporal cache locality, nonuniform memory access (NUMA) topology, and many other factors when it schedules a guest VP. But ultimately, the VP can be scheduled on any host LP.
 
 ## Hypervisor scheduler types
 
 The Hyper-V hypervisor supports several modes of scheduler logic, which determine how the hypervisor schedules VPs on the underlying LPs. These scheduler types are:
 
-- [The classic scheduler](#the-classic-scheduler).
-- [The core scheduler](#the-core-scheduler).
-- [The root scheduler](#the-root-scheduler).
+- [The classic scheduler](#the-classic-scheduler)
+- [The core scheduler](#the-core-scheduler)
+- [The root scheduler](#the-root-scheduler)
 
 ### The classic scheduler
 
-The classic scheduler is the default scheduler used on all versions of Hyper-V earlier than Windows Server 2019. The classic scheduler provides a fair-share, preemptive, round-robin scheduling model for guest VPs.
+The classic scheduler is the default scheduler that's used on all versions of Hyper-V earlier than Windows Server 2019. The classic scheduler provides a fair-share, preemptive, round-robin scheduling model for guest VPs.
 
 The classic scheduler type is the most appropriate for most traditional Hyper-V uses, such as private clouds, hosting providers, and so on. The performance characteristics of the classic scheduler type are best optimized to support a wide range of virtualization scenarios, such as:
 
@@ -80,11 +79,11 @@ The core scheduler:
 - Optionally exposes SMT pairs to guest VMs.
 - Schedules groups of guest VPs from the same VM onto groups of SMT LPs.
 
-This work happens symmetrically. If LPs are in groups of two, VPs are scheduled in groups of two, and a core is never shared between VMs. When you schedule a VP for a VM without SMT enabled, that VP consumes the entire core when it runs. The overall result of using the core scheduler is that:
+This work happens symmetrically. If LPs are in groups of two, VPs are scheduled in groups of two, and a core is never shared between VMs. When you schedule a VP for a VM without SMT enabled, that VP consumes the entire core when it runs. When you use the core scheduler:
 
 - It creates a strong security boundary for guest workload isolation. Guest VPs can only run on underlying physical core pairs, reducing vulnerability to side-channel snooping attacks.
 - It reduces variability in throughput.
-- It can potentially reduce performance. If only one VP in a group can run, only one of the instruction streams in the core launches while the other is left idle.
+- It can potentially reduce performance. If only one VP in a group can run, only one of the instruction streams in the core launches. The other is left idle.
 - The operating system (OS) and applications running in the guest VM can use SMT behavior and programming interfaces (APIs) to control and distribute work across SMT threads, just like they do with a physical machine.
 
 As of Windows Server 2019, Hyper-V uses the core scheduler by default. In earlier versions like Windows Server 2016, the core scheduler is optional, and the classic scheduler is the default one.
@@ -95,7 +94,7 @@ In some cases, you might configure the hypervisor to use the core scheduler type
 
 ### The root scheduler
 
-The root scheduler arrived with Windows 10, version 1803. When you enable the root scheduler type, the hypervisor gives the root partition control of work scheduling. The NT scheduler in the root partition OS instance manages all aspects of assigning work to system LPs.
+The root scheduler arrived with Windows 10, version 1803. When you enable the root scheduler type, the hypervisor gives the root partition control of work scheduling. In the root partition OS instance, the NT scheduler manages all aspects of assigning work to system LPs.
 
 The root scheduler addresses the unique requirements to support a utility partition and provide strong workload isolation, as used with Windows Defender Application Guard (WDAG). In this scenario, leaving scheduling responsibilities to the root OS offers several advantages:
 
@@ -114,7 +113,7 @@ This configuration is the only supported hypervisor scheduler configuration for 
 
 #### VM CPU resource controls and the root scheduler
 
-The resource controls that the Hyper-V hypervisor uses on individual VM processors aren't supported when you enable the hypervisor root scheduler. The scheduler logic on the root OS manages host resources on a global basis and doesn't manage the guest resources of individual VMs. The Hyper-V per-VM processor resource controls, such as caps, weights, and reserves, only apply where the hypervisor directly controls VP scheduling, such as with the classic and core scheduler types.
+The resource controls that the Hyper-V hypervisor uses on individual VM processors aren't supported when you enable the hypervisor root scheduler. On the root OS, the scheduler logic manages host resources on a global basis and doesn't manage the guest resources of individual VMs. The Hyper-V per-VM processor resource controls, such as caps, weights, and reserves, only apply where the hypervisor directly controls VP scheduling, such as with the classic and core scheduler types.
 
 #### Root scheduler use on server systems
 
@@ -122,15 +121,16 @@ We don't recommend using the root scheduler with Hyper-V on servers. Its perform
 
 ## Enable SMT in guest VMs
 
-After you configure the virtualization host's hypervisor to use the core scheduler type, you can also configure guest VMs to use SMT. When you expose the fact that VPs are hyperthreaded to a guest VM, the scheduler in the guest OS and workloads running in the VM can detect and use the SMT topology in their own work scheduling.
+After you configure the virtualization host's hypervisor to use the core scheduler type, you can also configure guest VMs to use SMT. Specifically, you can specify the number of virtual SMT threads to expose to a guest VM. The guest OS scheduler and VM workloads can then detect and use the SMT topology in their own work scheduling.
 
 - In Windows Server 2016, guest SMT isn't configured by default. A Hyper-V host administrator must explicitly enable it.
-- Starting with Windows Server 2019, new VMs you create on the host inherit the host SMT topology by default. For example, a version 9.0 VM that you create on a host with two SMT threads per core also has two SMT threads per core.
+- In Windows Server 2019 and later versions, new VMs that you create on the host inherit the host SMT topology by default. For example, a version 9.0 VM that you create on a host with two SMT threads per core also has two SMT threads per core.
 
 You must use PowerShell to enable SMT in a guest VM. There's no user interface provided in Hyper-V Manager.
 To enable SMT in a guest VM:
 
-1. Open a PowerShell window using an account that's a member of the Hyper-V Administrators group or equivalent.
+1. Open a PowerShell window by using an account that's a member of the Hyper-V Administrators or equivalent group.
+
 1. Run `Set-VMProcessor -VMName <VM-name> -HwThreadCountPerCore <n>`, where `<n>` is the number of SMT threads per core the guest VM sees. If you use a value of `0` for `<n>`, the `HwThreadCountPerCore` value is set to the host's SMT thread count per core.
 
    > [!NOTE]
@@ -142,14 +142,14 @@ The following screenshot shows system information taken from the guest OS runnin
 
 ## Configure the hypervisor scheduler type
 
-The type of hypervisor scheduler that Hyper-V uses by default depends on the OS version. You can optionally configure the hypervisor to use the core scheduler. The core scheduler increases security by restricting guest VPs to run on corresponding physical SMT pairs. This configuration supports the use of VMs with SMT scheduling for their guest VPs.
+The type of hypervisor scheduler that Hyper-V uses by default depends on the OS version. You can configure the hypervisor to use the core scheduler if it's not the default scheduler on your OS. The core scheduler increases security by restricting guest VPs to run on corresponding physical SMT pairs. This configuration supports the use of VMs with SMT scheduling for their guest VPs.
 
 > [!NOTE]
-> On Windows Server 2016, Hyper-V uses the classic scheduler by default. We recommend that all customers who use Hyper-V on Windows Server 2016 select the core scheduler to ensure their virtualization hosts are optimally protected against potentially malicious guest VMs.
+> On Windows Server 2016, Hyper-V uses the classic scheduler by default. If you use Hyper-V on Windows Server 2016, we recommend that you select the core scheduler. Making this switch ensures your virtualization hosts are optimally protected against potentially malicious guest VMs.
 
 ## Consider impacts on security and performance
 
-To help ensure Hyper-V hosts are deployed in an optimal security configuration, Hyper-V uses the core hypervisor scheduler model by default starting with Windows Server 2019. The host administrator might optionally configure the host to use the legacy classic scheduler. Prior to overriding the default settings, administrators should carefully read, understand, and consider the impacts each scheduler type has on the security and performance of virtualization hosts. For more information, see [About Hyper-V hypervisor scheduler type selection](./about-hyper-v-scheduler-type-selection.md).
+To help ensure Hyper-V hosts are deployed in an optimal security configuration, Hyper-V uses the core hypervisor scheduler model by default starting with Windows Server 2019. The host administrator might optionally configure the host to use the legacy classic scheduler. Before overriding the default settings, administrators should carefully read, understand, and consider the impacts each scheduler type has on the security and performance of virtualization hosts. For more information, see [About Hyper-V hypervisor scheduler type selection](./about-hyper-v-scheduler-type-selection.md).
 
 ## Select the hypervisor scheduler type on Windows Server
 
@@ -157,23 +157,22 @@ The hypervisor scheduler configuration is controlled by the `hypervisorscheduler
 
 To select a scheduler type:
 
-1. Open a command prompt with administrator privileges.
+1. Open Command Prompt with administrator privileges.
+
 1. Enter `bcdedit /set hypervisorschedulertype <type>`, where `<type>` is one of the following options:
 
    - `Classic`
    - `Core`
    - `Root`
 
-You must reboot the system for any changes you make to the hypervisor scheduler type to take effect.
+You must restart the system for any changes you make to the hypervisor scheduler type to take effect.
 
 > [!NOTE]
 > The hypervisor root scheduler isn't supported on Hyper-V on Windows Server at this time. Hyper-V administrators shouldn't attempt to configure the root scheduler for use with server virtualization scenarios.
 
 ## Determine the current scheduler type
 
-You can determine the hypervisor scheduler type that Hyper-V is currently using by examining the Event Viewer system log. Look for the most recent hypervisor launch event that has an ID of 2. That event reports the hypervisor scheduler type configured at the hypervisor launch. You can use Windows Event Viewer or PowerShell to see hypervisor launch events.
-
-A hypervisor launch event with an ID of 2 tells you the hypervisor scheduler type. The following values are possible:
+You can determine the hypervisor scheduler type that Hyper-V is currently using by examining the Windows system log. Look for the most recent hypervisor launch event that has an ID of 2. That event reports the hypervisor scheduler type configured at the hypervisor launch. The following values are possible for the hypervisor scheduler type:
 
 | Value | Scheduler type |
 | --- | --- |
@@ -182,16 +181,18 @@ A hypervisor launch event with an ID of 2 tells you the hypervisor scheduler typ
 | 3 | Core scheduler |
 | 4 | Root scheduler |
 
-:::image type="content" source="media/Hyper-V-CoreScheduler-EventID2-Details.png" alt-text="A screenshot of the hypervisor launch event ID 2 properties window. The General tab is selected, showing the hypervisor scheduler type is 0x2.":::
+You can use Event Viewer or PowerShell to view hypervisor launch event logs.
 
-:::image type="content" source="media/Hyper-V-CoreScheduler-EventViewer.png" alt-text="Screenshot of Event Viewer. In the event list, a Hyper-V-Hypervisor launch event with an ID of 2 is selected. A lower pane shows event details.":::
+:::image type="content" source="media/Hyper-V-CoreScheduler-EventID2-Details.png" alt-text="Screenshot of the Event Viewer properties window for a Hyper-V-Hypervisor event with ID 2. Text in the General tab indicates a scheduler type of 0x2.":::
+
+:::image type="content" source="media/Hyper-V-CoreScheduler-EventViewer.png" alt-text="Screenshot of events in Event Viewer. A Hyper-V-Hypervisor launch event with an ID of 2 is selected. A lower pane shows event details.":::
 
 ### Query the Hyper-V hypervisor scheduler type launch event by using PowerShell
 
-To query for hypervisor event ID 2 by using PowerShell, run the following command:
+To query for a hypervisor event with an ID of 2 by using PowerShell, run the following command:
 
 ``` powershell
 Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Hypervisor"; ID=2} -MaxEvents 1
 ```
 
-:::image type="content" source="media/Hyper-V-CoreScheduler-PowerShell.png" alt-text="A screenshot of a query for hypervisor launch event ID 2. The results say hypervisor scheduler type is 0x2.":::
+:::image type="content" source="media/Hyper-V-CoreScheduler-PowerShell.png" alt-text="Screenshot of a PowerShell window. A command queries for the latest hypervisor launch event with ID 2. The output shows the scheduler type as 0x2.":::
