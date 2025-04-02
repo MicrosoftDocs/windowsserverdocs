@@ -635,6 +635,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [recover](recover.md)
 - [recover disk group](recover_1.md)
 - [refsutil](refsutil.md)
+- [refsutil streamsnapshot](refsutil-streamsnapshot.md)
 - [refsutil fixboot](refsutil-fixboot.md)
 - [refsutil leak](refsutil-leak.md)
 - [refsutil triage](refsutil-triage.md)
