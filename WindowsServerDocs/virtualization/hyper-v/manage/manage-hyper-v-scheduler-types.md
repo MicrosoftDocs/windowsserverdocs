@@ -18,7 +18,7 @@ This article describes the modes of virtual processor (VP) scheduling logic in W
 
 ## Background
 
-To understand the logic and controls behind Hyper-V VP scheduling, it's important to first grasp certain concepts like simultaneous multithreading (SMT) and how Hyper-V virtualizes processors.
+Before you consider the logic and controls behind Hyper-V VP scheduling, it's important to understand certain concepts like simultaneous multithreading (SMT) and how Hyper-V virtualizes processors.
 
 ### Understand SMT
 
@@ -29,11 +29,11 @@ In order to use SMT with Windows Server, you must have a compatible processor. P
 For the purposes of this article, the descriptions of SMT and how it's used by Hyper-V apply equally to both Intel and AMD systems.
 
 - For more information on Intel HT Technology, see [Intel Hyper-Threading Technology](https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html).
-- For more information on AMD SMT, see [The "Zen" Core Architecture](https://www.amd.com/en/technologies/zen-core.html).
+- For more information on AMD SMT, see [AMD "Zen" Core Architecture](https://www.amd.com/en/technologies/zen-core.html).
 
 ### Understand how Hyper-V virtualizes processors
 
-Before you consider hypervisor scheduler types, you should understand Hyper-V architecture. For a detailed summary of how this architecture works, see [Hyper-V overview](../hyper-v-overview.md). For now, keep the following concepts in mind:
+Before you consider hypervisor scheduler types, you should understand Hyper-V architecture. For a detailed summary of how this architecture works, see [Hyper-V Technology overview](../hyper-v-overview.md). For now, keep the following concepts in mind:
 
 - Hyper-V creates and manages VM partitions, allocating and sharing compute resources across them, under control of the hypervisor. Partitions provide strong isolation boundaries between all guest VMs and between guest VMs and the root partition.
 
@@ -62,7 +62,7 @@ The Hyper-V hypervisor supports several modes of scheduler logic, which determin
 
 The classic scheduler is the default scheduler that's used on all versions of Hyper-V earlier than Windows Server 2019. The classic scheduler provides a fair-share, preemptive, round-robin scheduling model for guest VPs.
 
-The classic scheduler type is the most appropriate for most traditional Hyper-V uses, such as private clouds, hosting providers, and so on. The performance characteristics of the classic scheduler type are best optimized to support a wide range of virtualization scenarios, such as:
+The classic scheduler type is appropriate for most traditional Hyper-V uses, such as private clouds, hosting providers, and so on. The performance characteristics of the classic scheduler type are optimized to support a wide range of virtualization scenarios, such as:
 
 - Over-subscribing of VPs to LPs.
 - Running many heterogeneous VMs and workloads at the same time.
@@ -142,7 +142,7 @@ The following screenshot shows system information taken from the guest OS runnin
 
 ## Configure the hypervisor scheduler type
 
-The type of hypervisor scheduler that Hyper-V uses by default depends on the OS version. You can configure the hypervisor to use the core scheduler if it's not the default scheduler on your OS. The core scheduler increases security by restricting guest VPs to run on corresponding physical SMT pairs. This configuration supports the use of VMs with SMT scheduling for their guest VPs.
+The type of hypervisor scheduler that Hyper-V uses by default depends on the OS version. No matter which scheduler is the default one on your OS, you can configure the hypervisor to use the core scheduler. The core scheduler increases security by restricting guest VPs to run on corresponding physical SMT pairs. This configuration supports the use of VMs with SMT scheduling for their guest VPs.
 
 > [!NOTE]
 > On Windows Server 2016, Hyper-V uses the classic scheduler by default. If you use Hyper-V on Windows Server 2016, we recommend that you select the core scheduler. Making this switch ensures your virtualization hosts are optimally protected against potentially malicious guest VMs.
@@ -187,9 +187,9 @@ You can use Event Viewer or PowerShell to view hypervisor launch event logs.
 
 :::image type="content" source="media/Hyper-V-CoreScheduler-EventViewer.png" alt-text="Screenshot of events in Event Viewer. A Hyper-V-Hypervisor launch event with an ID of 2 is selected. A lower pane shows event details.":::
 
-### Query the Hyper-V hypervisor scheduler type launch event by using PowerShell
+### User PowerShell to query system logs for a hypervisor launch event
 
-To query for a hypervisor event with an ID of 2 by using PowerShell, run the following command:
+To query the system logs for a hypervisor event with an ID of 2 by using PowerShell, run the following command:
 
 ``` powershell
 Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Hypervisor"; ID=2} -MaxEvents 1
