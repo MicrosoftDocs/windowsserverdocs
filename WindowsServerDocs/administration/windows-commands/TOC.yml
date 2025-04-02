@@ -1205,13 +1205,13 @@
       - name: refsutil dedup
         href: refsutil-dedup.md
       - name: refsutil fixboot
-        href: refsutil-fixboot.md  
+        href: refsutil-fixboot.md
       - name: refsutil iometrics
         href: refsutil-iometrics.md
       - name: refsutil leak
         href: refsutil-leak.md
       - name: refsutil salvage
-        href: refsutil-salvage.md  
+        href: refsutil-salvage.md
       - name: refsutil streamsnapshot
         href: refsutil-streamsnapshot.md
       - name: refsutil triage
