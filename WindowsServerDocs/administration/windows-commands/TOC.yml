@@ -1203,6 +1203,8 @@
       href: refsutil-leak.md
     - name: refsutil fixboot
       href: refsutil-fixboot.md
+    - name: refsutil triage
+      href: refsutil-triage.md
     - name: reg
       href: reg.md
       items:
