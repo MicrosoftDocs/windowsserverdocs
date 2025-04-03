@@ -64,7 +64,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[Configure and manage quorum](manage-cluster-quorum.md) | Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library. |
+|[Recover a failover cluster without quorum](recover-failover-cluster-without-quorum.md) | Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library. |
 
 ## April 2018
 

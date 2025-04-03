@@ -77,13 +77,13 @@ items:
     href: file-server/file-server-smb-overview.md
     items:
     - name: SMB security hardening
-      href: file-server/smb-security-hardening.md    
+      href: file-server/smb-security-hardening.md
     - name: SMB signing
       href: file-server/smb-signing-overview.md
     - name: Control SMB signing behavior
       href: file-server/smb-signing.md
     - name: Configure alternative SMB ports
-      href: file-server/smb-ports.md      
+      href: file-server/smb-ports.md
     - name: SMB over QUIC
       href: file-server/smb-over-quic.md
     - name: Configure client access control for SMB over QUIC
@@ -317,7 +317,7 @@ items:
       - name: Nested resiliency
         href: storage-spaces/nested-resiliency.md
       - name: Configure quorum
-        href: ../failover-clustering/manage-cluster-quorum.md
+        href: ../failover-clustering/deploy-quorum-witness.md
       - name: Upgrade a Storage Spaces Direct cluster
         href: storage-spaces/upgrade-storage-spaces-direct.md
       - name: Understand and deploy persistent memory
