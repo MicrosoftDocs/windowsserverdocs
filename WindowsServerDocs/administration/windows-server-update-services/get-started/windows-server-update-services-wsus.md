@@ -40,7 +40,7 @@ For system administrators to automate their operations, they need coverage throu
 Beginning March 28, 2023, WSUS supports Unified Update Platform (UUP) updates for Windows 11 version 21H2 clients. For more information, see [Plan your WSUS deployment](../plan/plan-your-wsus-deployment.md).
 
 > [!IMPORTANT]
-> This change requires either an update installation, or manually adding MIME types to Internet Information Services (IIS) on WSUS servers. Clients using Windows 11 version 22H2 might fail to install updates from WSUS if the server isn't updated. For more information, see [UUP considerations](../plan/plan-your-wsus-deployment.md#uup-considerations).
+> This change requires either an update installation or the manual addition of Multipurpose Internet Mail Extensions (MIME) types to Internet Information Services (IIS) on WSUS servers. Clients using Windows 11 version 22H2 might fail to install updates from WSUS if the server isn't updated. For more information, see [UUP considerations](../plan/plan-your-wsus-deployment.md#uup-considerations).
 
 ## Related content
 
