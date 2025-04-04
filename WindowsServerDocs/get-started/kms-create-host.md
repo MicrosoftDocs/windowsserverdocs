@@ -105,7 +105,7 @@ If your DNS service doesn't support dynamic updates, you must manually create th
 | Priority | 0 |
 | Weight | 0 |
 | Port number | 1688 |
-| Hostname | <FQDN-of-KMS-host> |
+| Hostname | \<FQDN-of-KMS-host\> |
 
 You should also disable publishing on all KMS hosts if your DNS service doesn't support dynamic updates. For instructions, see [Disable publishing of DNS records](#disable-publishing-of-dns-records) later in this article. By disabling publishing, you prevent event logs from collecting failed DNS publishing events.
 
