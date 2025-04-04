@@ -467,6 +467,8 @@
           href: ad-ds/manage/group-policy/group-policy-backup-restore.md
       - name: Active Directory accounts
         href: ad-ds/manage/understand-default-user-accounts.md
+      - name: Manage user accounts
+        href: ad-ds/manage-user-accounts-in-windows-server.md
       - name: Special identities
         href: ad-ds/manage/understand-special-identities-groups.md
       - name: Active Directory security groups

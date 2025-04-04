@@ -1,6 +1,6 @@
 ---
-title: "Manage user accounts with Active Directory Users and Computers"
-description: Learn to manage users using Active Directory Users and Computers.
+title: "Manage user accounts with Active Directory Users and Computers in Windows Server"
+description: Create, delete, and manage user accounts in Active Directory Users and Computers. Learn how to manage user account properties, group memberships, and passwords.
 ms.date: 03/05/2025
 ms.topic: article
 author: orin-thomas
@@ -11,7 +11,15 @@ ms.author: orthomas
 
 You can create, delete, and manage security principals, including user accounts, in the Active Directory Users and Computers console. This console is available when the Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS) Tools component of the Remote Server Administration tools are installed on a Windows Server or client computer. To create, delete, and manage security permissions you need to have the appropriate permissions. By default members of the Domain Admins and Enterprise Admins group can manage user, group, and computer accounts. Members of the Account Operators group are able to create, modify, and delete user accounts but are unable to manage groups or permissions.
 
-##  Managing user accounts
+## Prerequisites
+
+To manage user accounts in Active Directory Users and Computers, you need to have the following prerequisites:
+
+- A computer running Windows Server or Windows client operating system with the Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS) Tools component of the Remote Server Administration tools installed.
+
+- The computer must be joined to a domain and the user account you are using must have the appropriate permissions to manage user accounts in that domain.
+
+## Managing user accounts
 
 The following sections of this page provide information manage the user accounts on the server:
 
@@ -25,7 +33,7 @@ The following sections of this page provide information manage the user accounts
 
 ### Create a user account
 
-When you add a user account, the assigned user can log on to a domain joined computer. You can give the user permission to access network resources such as shared folders, printers, and applications. To create a user account using Active Directory Users and Computers, perform the following steps:
+When you add a user account, the assigned user can sign in a domain joined computer. You can give the user permission to access network resources such as shared folders, printers, and applications. To create a user account using Active Directory Users and Computers, perform the following steps:
 
 1. In the Active Directory Users and Computers console, expand the domain tree and select the container or organizational unit that you wish to host the user account.
 1. On the Action menu, select New and then select User.
@@ -41,7 +49,7 @@ When you add a user account, the assigned user can log on to a domain joined com
     - User must change password at next logon. A checkbox that can be enabled to force the user to change password at next logon. Can be enabled or left blank.
     - User cannot change password. A checkbox that can be enabled to restrict the user from changing their password. Can be enabled or left blank.
     - Password never expires. A checkbox that can be enabled to exempt the account from password policies. Can be enabled or left blank.
-    - Account is disabled. A checkbox that allows to you create the account in a disabled state. Can be enabled or left black. 
+    - Account is disabled. A checkbox that allows to you create the account in a disabled state. Can be enabled or left black.
 1. Review the summary page of the New Object - User dialog and choose Finish to create the account.
 
 ### Manage group memberships
@@ -94,7 +102,7 @@ Removing an account from Active Directory deletes the account. Best practice is 
 1. From the Action menu, select Enable Account.
 1. On the Active Directory Domain Services dialog, select OK. The account is enabled.
 
-Deleted accounts can be recovered using Active Directory Recycle Bin if you enable the Active Directory Recycle Bin before account deletion. If Active Directory Recycle Bin isn't enabled, you'll need to perform an authoritative restore of AD DS using a backup of AD DS that includes the account.
+Deleted accounts can be recovered using Active Directory Recycle Bin if you enable the Active Directory Recycle Bin before account deletion. If Active Directory Recycle Bin isn't enabled, you need to perform an authoritative restore of AD DS using a backup of AD DS that includes the account.
 
 ## User account properties
 
@@ -145,7 +153,7 @@ The Address tab of the user account properties page allows you to store location
 
 ### Account
 
-The Account tab of the user account properties page allows you to configure account options including logon hours, computers an account can log on to, encryption supported by the account, whether the account can be delegated, and whether the account is set to expire. This tab includes the following settings:
+The Account tab of the user account properties page allows you to configure various account settings. These include logon hours, the specific computers that the account can log on to, and the types of encryption the account supports. You can also set whether the account can be delegated and specify if or when the account should expire. This tab includes the following settings:
 
 - User logon name, including user logon domain
 - User logon name (Pre-Windows 2000)
@@ -208,7 +216,7 @@ The COM+ tab of the user account properties page allows you to specify which COM
 
 ### Attribute Editor
 
-The Attribute Editor tab of the user account properties page allows you to directly edit each account attribute directly rather, including attributes that aren't exposed directly through the user properties page user interface.
+The Attribute Editor tab of the user account properties page allows you to edit each account attribute directly. The Attribute Editor also shows attributes that are not exposed through the user properties page interface.
 
 ### Security
 
@@ -264,4 +272,4 @@ The Dial-in tab of the user account properties page allows you to configure the 
 
 ### Object
 
-The Object tab of the user account properties page allows you to view information about the security principal object and to configure the protect object from accidental deletion setting.
+The Object tab of the user account properties page allows you to view information about the security principal object and to configure the "Protect object from accidental deletion" setting.
