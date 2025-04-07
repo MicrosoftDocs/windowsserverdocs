@@ -2,7 +2,7 @@
 title: Install the Certification Authority
 description: Learn how to install Active Directory Certificate Services so that you can enroll a server certificate to servers that are running Network Policy Server, Routing and Remote Access Service, or both.
 manager: brianlic
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 ms.author: mosagie
 author: robinharwood

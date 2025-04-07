@@ -2,7 +2,7 @@
 title: STEP 3 Install and Configure EDGE2
 description: Learn how to install and configure EDGE2 which is the second member of a Remote Access cluster.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f04eb11e-ed5f-42a1-a77b-57a248ba2d10
 ms.author: daknappe
 author: robinharwood

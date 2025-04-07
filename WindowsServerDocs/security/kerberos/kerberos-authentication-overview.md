@@ -1,7 +1,7 @@
 ---
 title: Kerberos Authentication Overview
 description: Learn about Kerberos authentication in Windows Server 2012 and Windows 8.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
 ms.author: mosagie
 author: robinharwood

@@ -3,7 +3,7 @@ title: Add an RD Connection Broker server to configure high availability in RDS
 description: Learn how to add an RD Connection Broker to an RDS deployment for high availability.
 ms.author: daknappe
 ms.date: 7/3/2024
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: dongill
 ---

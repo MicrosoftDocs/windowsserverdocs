@@ -2,7 +2,7 @@
 title: Install the Web Server WEB1
 description: Learn how to install the Web Server (IIS) server role.
 manager: brianlic
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
 ms.author: roharwoo
 author: robinharwood

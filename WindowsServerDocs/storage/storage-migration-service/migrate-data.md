@@ -4,7 +4,7 @@ description: Learn how to install Storage Migration Service, and use the service
 author: robinharwood
 ms.author: jgerend
 ms.date: 06/25/2024
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ---
 
 # Use Storage Migration Service to migrate a server
