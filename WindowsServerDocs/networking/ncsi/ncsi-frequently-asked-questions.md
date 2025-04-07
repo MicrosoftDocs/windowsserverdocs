@@ -1,7 +1,7 @@
 ---
 title: Network Connectivity Status Indicator FAQ for Windows
 description: Frequently asked questions surrounding the Network Connectivity Status Indicator (NCSI) in Windows.
-ms.topic: article
+ms.topic: faq
 ms.date: 02/06/2025
 ms.author: alalve
 author: xelu86

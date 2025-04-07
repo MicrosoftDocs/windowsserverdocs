@@ -1,7 +1,7 @@
 ---
 title: Automatic Virtual Machine Activation in Windows Server
 description: Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purchase mechanism, helping to ensure that Windows products are used in accordance with the Product Use Rights and Microsoft Software License Terms.
-ms.topic: conceptual
+ms.topic: article
 author: xelu86
 ms.author: alalve
 ms.date: 09/30/2024
