@@ -4,8 +4,8 @@ description: Learn how to troubleshoot various aspects of Active Directory Feder
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: troubleshooting-general
 ---
 
 # AD FS troubleshooting: SQL connectivity

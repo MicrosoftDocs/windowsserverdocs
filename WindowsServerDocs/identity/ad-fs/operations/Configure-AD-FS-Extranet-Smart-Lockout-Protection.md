@@ -6,7 +6,7 @@ author: billmath
 ms.author: roharwoo
 manager: femila
 ms.date: 06/16/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # AD FS Extranet Lockout and Extranet Smart Lockout Overview

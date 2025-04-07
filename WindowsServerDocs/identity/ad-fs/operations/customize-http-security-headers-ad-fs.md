@@ -6,7 +6,7 @@ ms.author: roharwoo
 manager: femila
 ms.reviewer: akgoel23
 ms.date: 06/14/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Customize HTTP security response headers with AD FS 2019

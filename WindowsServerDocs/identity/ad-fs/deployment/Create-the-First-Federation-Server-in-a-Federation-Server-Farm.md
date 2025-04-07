@@ -4,8 +4,8 @@ ms.assetid: 5e334c4e-75a7-453c-83e8-5ab4243cc685
 title:  Create the First Federation Server in a Federation Server Farm
 author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ms.author: billmath
 ---
 

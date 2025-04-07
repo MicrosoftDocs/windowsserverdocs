@@ -5,8 +5,8 @@ title: Manage Risk with Additional Multi-Factor Authentication for Sensitive App
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
