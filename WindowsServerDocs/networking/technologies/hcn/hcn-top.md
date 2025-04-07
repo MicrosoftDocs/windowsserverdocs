@@ -4,7 +4,7 @@ description: Host Compute Network (HCN) service API is a public-facing Win32 API
 ms.author: roharwoo
 author: daschott
 ms.date: 11/05/2018
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Host Compute Network (HCN) service API for VMs and containers
