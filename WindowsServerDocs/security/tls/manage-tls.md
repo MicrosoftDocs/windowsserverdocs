@@ -1,7 +1,7 @@
 ---
 title: Manage Transport Layer Security (TLS) in Windows
 description: Learn how to manage the Transport Layer Security in Windows.
-ms.topic: article
+ms.topic: how-to
 author: andreipo
 ms.author: mosagie
 ms.contributor: alalve 
