@@ -4,7 +4,7 @@ description: Learn how to get started with Windows Local Administrator Password 
 author: jay98014
 ms.author: daknappe
 ms.date: 05/15/2023
-ms.topic: conceptual
+ms.topic: get-started
 ---
 
 # Get started with Windows LAPS during deployment and migration scenarios

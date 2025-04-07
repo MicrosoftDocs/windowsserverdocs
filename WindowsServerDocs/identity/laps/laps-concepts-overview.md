@@ -4,7 +4,7 @@ description: Documents basic design concepts for Windows Local Administrator Pas
 author: jay98014
 ms.author: justinha
 ms.date: 12/25/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Key concepts in Windows LAPS
