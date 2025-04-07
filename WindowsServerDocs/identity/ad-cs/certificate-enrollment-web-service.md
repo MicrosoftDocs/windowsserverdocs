@@ -20,12 +20,6 @@ Certificate enrollment over HTTPS enables:
 
 This article provides an overview of the Certificate Enrollment Web Service, including information about the authentication types, load balancing considerations, and configuration options.
 
-## How Certification Authority Web Enrollment Differs from Certificate Enrollment Web Services
-
-Although CA Web Enrollment and Certificate Enrollment Web Services both use HTTPS, they are fundamentally different technologies. CA Web Enrollment provides a browser-based interactive method of requesting individual certificates that does not require specific client components or configuration. CA Web Enrollment only supports interactive requests that the requester creates and uploads manually through the web site. For example, if an administrator want to provision a certificate to an Apache Web server running the Linux operating system, a PKCS #10 request that was created by using OpenSSL could be uploaded. After the CA issued the request, the certificate could be downloaded by using the browser.
-
-The Certificate Enrollment Policy Web Service and the Certificate Enrollment Web Service focus on automated certificate requests and provisioning by using the native client. Certificate Enrollment Web Services and CA Web Enrollment are complementary technologies. CA Web Enrollment supports certificate requests and a broad set of client operating systems. The Certificate Enrollment Web Services offer automated requests and certificate provisioning for client computers.
-
 ## Authentication types
 
 The Certificate Enrollment Web Service supports the three following authentication types:
@@ -81,9 +75,9 @@ The specific type of delegation that you should configure depends upon the authe
 - If you selected Windows integrated authentication, then you should configure delegation to Use Kerberos only.
 - If the service is using client certificate authentication, then you should configure delegation to Use any authentication protocol.
 
-## Planning load balancing and fault tolerance
+## Load balancing and fault tolerance best practices
 
-When planning your Certificate Enrollment Web Service implementation, it's important to know that the single biggest factor affecting throughput according to extensive performance testing by Microsoft is network latency. Rather than relying on network load balancing (NLB) technologies, the Certificate Enrollment Policy Web Service, and Certificate Enrollment Web Service client components have load balancing and fault tolerance logic built-in. For example, the clients automatically randomize the list of endpoints they're provided and attempt to iterate through the list if the first endpoint is unresponsive. As long as multiple uniform resource identifiers (URIs) are published, basic load balancing and fault tolerance is built-in.
+The single biggest factor affecting throughput, according to extensive performance testing by Microsoft, is network latency. Rather than relying on network load balancing (NLB) technologies, the Certificate Enrollment Policy Web Service, and Certificate Enrollment Web Service client components have load balancing and fault tolerance logic built-in. For example, the clients automatically randomize the list of endpoints they're provided and attempt to iterate through the list if the first endpoint is unresponsive. As long as multiple uniform resource identifiers (URIs) are published, basic load balancing and fault tolerance is built-in.
 
 NLB shouldn't be used to provide fault tolerance or high availability because NLB could route traffic to a host where the policy or web service is stopped or unavailable. If all endpoints are published behind a single NLB balanced URI, the built in client logic wouldn't be able to try the next URI, which results in a less fault tolerant solution than if no special load balancing was used at all.
 
@@ -101,6 +95,8 @@ The following sections explain different configuration options for Certificate E
 
 The most simple deployment scenario involves a single forest with intranet connected clients. In this design, the Certificate Enrollment Policy Web Service and Certificate Enrollment Web Service may be installed on an issuing CA, but it's recommended that they're installed on separate computers. If the Certificate Enrollment Policy Web Service and Certificate Enrollment Web Service are run on separate computers, the Certificate Enrollment Policy Web Service must be able to communicate with AD DS using LDAP. The Certificate Enrollment Web Service must be able to connect to the CA using DCOM. In intranet scenarios, either Kerberos or NTLM is the typical authentication type.
 
+![A diagram showing an intranet with a single forest.](media/intranet-single-forest.png)
+
 ### Intranet with multiple forests
 
 A more advanced intranet scenario involves multiple forests with centralized issuing services in only one (or some) of them. In this design, the forests are connected with a two-way forest trust and the CA and the certificate enrollment web services are hosted in the same forest. The advantages of this model are that it provides for a high degree of consolidation in multiple forest environments. In the past, each forest required its own CA for autoenrollment, now all PKI services are centralized, potentially resulting in a large reduction of the total number of CAs required. Again, because this is an intranet scenario, the most common authentication scheme is either Kerberos or NTLM.
@@ -108,6 +104,8 @@ A more advanced intranet scenario involves multiple forests with centralized iss
 ### Perimeter network & branch office
 
 This deployment scenario provides the ability to enroll users and computers that aren't directly connected to an organization's network or connected over a virtual private network (VPN). In this design, the Certificate Enrollment Policy Web Service and the Certificate Enrollment Web Service are both placed in the perimeter network, and internet based clients enroll over HTTPS to these endpoints. This deployment model is ideally suited to domain users who often work remotely or branch office scenarios in which the VPN or direct connection back to the corporate network is unreliable.
+
+![A diagram showing a setup using a perimeter network.](media/perimeter-network-branch-office.png)
 
 A Read Only Domain Controller (RODC) can optionally be used. The external clients (remote users) have no access through the Corp firewall to the writeable domain controller or to the CA. The enrollment and policy web service servers have no access to the writeable domain controller. However, the Certificate Enrollment Web Service must be allowed to connect through the firewall to the CA over DCOM.
 
@@ -119,15 +117,30 @@ To mitigate this risk, renewal-only mode allows the Certificate Enrollment Web S
 
 From a network design perspective, this scenario combines both the internal and perimeter network models discussed previously.
 
+![A diagram showing how renewal-only mode works.](media/renewal-only-mode.png)
+
 ### Key-based renewal
 
 Key-based renewal mode allows an existing valid certificate to be used to authenticate its own renewal request. This enables computers that aren't connected directly to the internal network the ability to automatically renew an existing certificate.
 
 You can use key-based renewal to allow certificate client computers outside your AD DS forest to renew their certificates before they expire. This includes clients that are configured in workgroups or clients that are members of other AD DS forests. An account in the forest of the CA must be used in order to obtain the initial certificate. However, once that certificate is distributed to the client, key-based renewal doesn't require forest trusts in order to allow for certificate renewal.
 
+For example, a certificate issued to a web server configured in a workgroup could be renewed by an Enterprise CA domain member. An example of such a configuration is shown in the following diagram.
+
+![A diagram showing an example of how key-based renewal works.](media/key-based-renewal.png)
+
+ Web1 must have the root CA certificate in the Trusted Root Certification Authorities store before requesting a certificate renewal. Web1 uses Certificate Enrollment Web Services to renew its certificates automatically if key-based renewal is enabled. And an administrator of Web1 must ensure that the URI of the Certificate Enrollment Policy Web Service is configured on Web1.
+
 > [!NOTE]
 > If you want to enable key-based renewal, you must enable client certificate authentication for the Certificate Enrollment Web Service.
 
+## Differences with Certification Authority Web Enrollment Role Service
+
+Although CA Web Enrollment and Certificate Enrollment Web Services both use HTTPS, they're fundamentally different technologies. CA Web Enrollment provides a browser-based interactive method of requesting individual certificates that does not require specific client components, or configuration. CA Web Enrollment only supports interactive requests that the requester creates and uploads manually through the web site. For example, if an administrator want to provision a certificate to an Apache Web server running the Linux operating system, a PKCS #10 request that was created by using OpenSSL could be uploaded. After the CA issued the request, the certificate could be downloaded by using the browser.
+
+The Certificate Enrollment Policy Web Service and the Certificate Enrollment Web Service focus on automated certificate requests and provisioning by using the native client. Certificate Enrollment Web Services and CA Web Enrollment are complementary technologies. CA Web Enrollment supports certificate requests and a broad set of client operating systems. The Certificate Enrollment Web Services offer automated requests and certificate provisioning for client computers.
+
 ## Related content
 
-- [Install and configure the Certificate Enrollment Web Service](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822%28v=ws.11%29)
+- [Configure the Certificate Enrollment Web Service](/windows-server/identity/ad-cs/configure-certificate-enrollment-web-service)
+- [Certification Authority Web Enrollment Role Service](/windows-server/identity/ad-cs/certificate-authority-web-enrollment)
