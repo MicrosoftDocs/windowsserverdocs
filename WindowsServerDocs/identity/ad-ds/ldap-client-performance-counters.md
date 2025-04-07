@@ -1,7 +1,7 @@
 ---
 title: Active Directory LDAP client performance counters in Windows Server
 description: Learn about Active Directory LDAP client performance counters in Windows Server.
-ms.topic: conceptual
+ms.topic: article
 author: gswashington
 ms.author: roharwoo
 ms.date: 10/25/2024
