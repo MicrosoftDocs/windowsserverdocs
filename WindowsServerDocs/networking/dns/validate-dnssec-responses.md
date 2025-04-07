@@ -1,7 +1,7 @@
 ---
 title: Validate and secure DNS responses using DNSSEC on DNS Server in Windows Server
 description: Learn how to use DNSSEC resource records to validate and secure DNS responses.
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 02/17/2025

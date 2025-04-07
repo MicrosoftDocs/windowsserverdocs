@@ -2,7 +2,7 @@
 title: View DNS Resource Records for a DNS Zone
 description: Learn how to view DNS resource records for a DNS zone in the IPAM client console.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 375feefc-949e-47c3-9e61-35b79e021966
 ms.author: jgerend
 author: robinharwood

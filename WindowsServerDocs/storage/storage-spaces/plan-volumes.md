@@ -3,7 +3,7 @@ title: Plan volumes on Azure Stack HCI and Windows Server clusters
 description: How to plan storage volumes on Azure Stack HCI and Windows Server clusters.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 02/11/2025
 ---
 

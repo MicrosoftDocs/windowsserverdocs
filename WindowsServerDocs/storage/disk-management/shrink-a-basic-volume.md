@@ -2,7 +2,7 @@
 title: Shrink a basic volume
 description: Learn how to decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk.
 ms.date: 09/11/2023
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: jgerend

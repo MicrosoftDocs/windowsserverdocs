@@ -2,7 +2,7 @@
 title: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
 description: Learn how to create DNS policy for geo-location based traffic management when your DNS deployment includes both primary and secondary DNS servers.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
 ms.author: roharwoo
 author: robinharwood

@@ -1,7 +1,7 @@
 ---
 title: DNS Reverse Lookups in Windows and Windows Server
 description: Learn about DNS reverse lookups in Windows Server and how reverse lookup works with the in-addr.arpa domain.
-ms.topic: conceptual
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/13/2025

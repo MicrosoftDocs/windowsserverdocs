@@ -1,7 +1,7 @@
 ---
 title: Create and Manage Server Groups
 description: Learn how to create custom, user-defined groups of servers in Server Manager in Windows Server.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 9d5b1be8-49fd-4ff7-9580-e4ff21fe4b17
 ms.author: jgerend
 author: robinharwood
