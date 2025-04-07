@@ -4,7 +4,7 @@ description: Learn about modes of virtual processor scheduling logic that determ
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 02/18/2025
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 ---
 

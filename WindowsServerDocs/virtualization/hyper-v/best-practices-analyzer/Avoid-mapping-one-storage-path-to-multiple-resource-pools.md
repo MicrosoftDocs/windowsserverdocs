@@ -3,7 +3,7 @@ title: Avoid mapping one storage path to multiple resource pools
 description: Learn what to do when a storage file path is mapped to multiple resource pools.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 24992453-762b-4892-9a50-55d237b9b7f2
 ms.date: 8/16/2016
 ---

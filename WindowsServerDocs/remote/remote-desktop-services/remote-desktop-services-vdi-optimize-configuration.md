@@ -5,7 +5,7 @@ ms.service: windows-server
 ms.subservice: remote-desktop-services
 author: meaghanlewis
 ms.author: mosagie
-ms.topic: article
+ms.topic: how-to
 manager: femila
 ms.date: 7/3/2024
 ---

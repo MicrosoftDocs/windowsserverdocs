@@ -3,7 +3,7 @@ title: Virtual machines should be backed up at least once every week
 description: Learn what to do when one or more virtual machines have not been backed up in the past week.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 7dbd3dfc-c873-4a77-89f7-3166e18d9531
 ms.date: 8/16/2016
 ---
