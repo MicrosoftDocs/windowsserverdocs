@@ -4,7 +4,7 @@ description: Kerberos support for IP-based SPNs
 author: daveba
 ms.author: justinha
 ms.date: 07/27/2020
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Kerberos clients allow IPv4 and IPv6 address hostnames in Service Principal Names (SPNs)

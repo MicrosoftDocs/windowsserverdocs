@@ -4,7 +4,7 @@ description: Learn about considerations for virtualizing Windows Server Active D
 author: daveba
 ms.author: mosagie
 ms.date: 03/07/2024
-ms.topic: article
+ms.topic: how-to
 ms.custom: inhenkel
 ---
 
