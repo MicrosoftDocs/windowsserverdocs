@@ -1,7 +1,7 @@
 ---
 title: Credential Guard protected machine accounts in Windows Server 2025
 description: Learn how to enhance machine accounts security in Windows Server 2025 through Credential Guard machine protected identity isolation group policy settings.
-ms.topic: conceptual
+ms.topic: article
 ms.author: alalve
 author: mariamgewida
 ms.date: 10/25/2024
