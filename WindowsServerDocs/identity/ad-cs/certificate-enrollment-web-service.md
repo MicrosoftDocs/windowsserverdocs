@@ -40,11 +40,11 @@ Windows Integrated Authentication uses either Kerberos or NT LAN Manager (NTLM) 
 
 If certificates are provisioned to computers, then clients computers can use client certificate authentication. Client certificate authentication doesn't require a direct connection to the corporate network. Client certificate authentication is preferred over username and password authentication because it provides a more secure method of authenticating. However, this method requires that [x.509 certificates](https://datatracker.ietf.org/doc/html/rfc5280) are initially provisioned to clients by separate means. Use this authentication method if you plan to provide users with digital X.509 certificates for client authentication. This authentication method enables you to make the web service available on the Internet.
 
-If you want to use certificate-based authentication from outside the domain (for a computer configured in a workgroup or that is a member of a domain from which there is no forest trust relationship), then you must also do the following:
+If you want to use certificate-based authentication from outside the domain for a computer configured in a workgroup or that is a member of a domain from which there's no forest trust relationship, then you must also do the following:
 
-- Ensure that a computer account exists in the forest of which the CA is a member that has the same computer name as the computer to which the certificate is to be issued
+- Ensure that a computer account exists in the forest of which the CA is a member that has the same name as the computer receiving the certificate.
 - Issue a certificate using names that are appropriate for the computer to which the certificate is issued.
-- Manually transfer the issued certificate from a computer inside the domain to the appropriate computer that is either configured in a workgroup or that is a member of a domain from which there is no forest trust relationship.
+- Manually transfer the issued certificate from a computer inside the domain to the appropriate computer that is either configured in a workgroup or that is a member of a domain from which there's no forest trust relationship.
 
 ### User name and password authentication
 
@@ -68,7 +68,7 @@ Delegation for the Certificate Enrollment Web Service isn't required when:
 
 - Username and password is the authentication method.
 
-If the Certificate Enrollment Web Service is running as the built-in application pool identity, you should configure delegation on the computer account that's hosting the service. If the Certificate Enrollment Web Service is running as a domain user account, then you must first create an appropriate service principal name (SPN) and then configure delegation on the domain user account.
+If the Certificate Enrollment Web Service is running as the built in application pool identity, you should configure delegation on the computer account that's hosting the service. If the Certificate Enrollment Web Service is running as a domain user account, then you must first create an appropriate service principal name (SPN) and then configure delegation on the domain user account.
 
 The specific type of delegation that you should configure depends upon the authentication method selected for the Certificate Enrollment Web Service:
 
@@ -77,7 +77,7 @@ The specific type of delegation that you should configure depends upon the authe
 
 ## Load balancing and fault tolerance best practices
 
-The single biggest factor affecting throughput, according to extensive performance testing by Microsoft, is network latency. Rather than relying on network load balancing (NLB) technologies, the Certificate Enrollment Policy Web Service, and Certificate Enrollment Web Service client components have load balancing and fault tolerance logic built-in. For example, the clients automatically randomize the list of endpoints they're provided and attempt to iterate through the list if the first endpoint is unresponsive. As long as multiple uniform resource identifiers (URIs) are published, basic load balancing and fault tolerance is built-in.
+The single biggest factor affecting throughput, according to extensive performance testing by Microsoft, is network latency. Rather than relying on network load balancing (NLB) technologies, the Certificate Enrollment Policy Web Service, and Certificate Enrollment Web Service client components have load balancing and fault tolerance logic built in. For example, the clients automatically randomize the list of endpoints they're provided and attempt to iterate through the list if the first endpoint is unresponsive. As long as multiple uniform resource identifiers (URIs) are published, basic load balancing and fault tolerance is built in.
 
 NLB shouldn't be used to provide fault tolerance or high availability because NLB could route traffic to a host where the policy or web service is stopped or unavailable. If all endpoints are published behind a single NLB balanced URI, the built in client logic wouldn't be able to try the next URI, which results in a less fault tolerant solution than if no special load balancing was used at all.
 
@@ -113,7 +113,7 @@ A Read Only Domain Controller (RODC) can optionally be used. The external client
 
 For the Certificate Enrollment Web Service to be able to request certificates from a CA, it needs to delegate the call to the CA while impersonating the caller. This means that the Certificate Enrollment Web Service account should have delegation enabled. For internet facing Certificate Enrollment Web Service endpoints, this may not be preferred because it represents an increased level of exposure to internet based threats.
 
-To mitigate this risk, renewal-only mode allows the Certificate Enrollment Web Service to process only certificate renewal requests without delegation enabled. The Certificate Enrollment Web Service uses the original certificate, provisioned from within the internal network, to authenticate the renewal request sent over the internet. The Certificate Enrollment Web Service then submits the request to the CA under its own credential, and the CA will renew the certificate based on the Active Directory information of the requester of the original certificate and/or the subject information in the original certificate. In this mode, new certificate enrollment requests are denied by the Certificate Enrollment Web Service, and will never reach the CA.
+To mitigate this risk, renewal-only mode allows the Certificate Enrollment Web Service to process only certificate renewal requests without delegation enabled. The Certificate Enrollment Web Service uses the original certificate, provisioned from within the internal network, to authenticate the renewal request sent over the internet. The Certificate Enrollment Web Service then submits the request to the CA under its own credential, and the CA will renew the certificate based on the Active Directory information of the requester of the original certificate and/or the subject information in the original certificate. In this mode, new certificate enrollment requests are denied by the Certificate Enrollment Web Service, and never reach the CA.
 
 From a network design perspective, this scenario combines both the internal and perimeter network models discussed previously.
 
@@ -136,9 +136,9 @@ For example, a certificate issued to a web server configured in a workgroup coul
 
 ## Differences with Certification Authority Web Enrollment Role Service
 
-Although CA Web Enrollment and Certificate Enrollment Web Services both use HTTPS, they're fundamentally different technologies. CA Web Enrollment provides a browser-based interactive method of requesting individual certificates that does not require specific client components, or configuration. CA Web Enrollment only supports interactive requests that the requester creates and uploads manually through the web site. For example, if an administrator want to provision a certificate to an Apache Web server running the Linux operating system, a PKCS #10 request that was created by using OpenSSL could be uploaded. After the CA issued the request, the certificate could be downloaded by using the browser.
+Although CA Web Enrollment and Certificate Enrollment Web Services both use HTTPS, they're fundamentally different technologies. CA Web Enrollment provides a browser-based interactive method of requesting individual certificates that doesn't require specific client components, or configuration. CA Web Enrollment only supports interactive requests that the requester creates and uploads manually through the web site. For example, if an administrator want to provision a certificate to an Apache Web server running the Linux operating system, a PKCS #10 request that was created by using OpenSSL could be uploaded. After the CA issued the request, the certificate could be downloaded by using the browser.
 
-The Certificate Enrollment Policy Web Service and the Certificate Enrollment Web Service focus on automated certificate requests and provisioning by using the native client. Certificate Enrollment Web Services and CA Web Enrollment are complementary technologies. CA Web Enrollment supports certificate requests and a broad set of client operating systems. The Certificate Enrollment Web Services offer automated requests and certificate provisioning for client computers.
+The Certificate Enrollment Policy Web Service and the Certificate Enrollment Web Service focus on automated certificate requests and provisioning by using the native client. Certificate Enrollment Web Services and CA Web Enrollment are complementary technologies. CA Web Enrollment supports certificate requests and a broad set of client operating systems. The Certificate Enrollment Web Services offers automated requests and certificate provisioning for client computers.
 
 ## Related content
 
