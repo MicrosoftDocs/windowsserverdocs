@@ -2,7 +2,7 @@
 title: Flexible Single Master Operations roles in Windows Server
 description: Learn about the Flexible Single Master Operations (FSMO) roles in Active Directory Domain Services (AD DS) and how to place them effectively.
 author: Orin-Thomas
-ms.topic: conceptual
+ms.topic: article
 ms.author: orthomas
 contributor: orthomas
 ms.date: 07/01/2024
