@@ -235,12 +235,7 @@ After the cluster is created, it can take time for Domain Name System (DNS) entr
 
 ### Step 3.4: Configure a cluster witness
 
-We recommend that you configure a witness for the cluster, so clusters with three or more servers can withstand two servers failing or being offline. A two-server deployment requires a cluster witness, otherwise either server going offline causes the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness.
-
-For more info, see the following articles:
-
-- [Configure and manage quorum](../../failover-clustering/manage-cluster-quorum.md)
-- [Deploy a quorum witness](../../failover-clustering/deploy-quorum-witness.md)
+We recommend that you configure a witness for the cluster, so clusters with three or more servers can withstand two servers failing or being offline. A two-server deployment requires a cluster witness, otherwise either server going offline causes the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. To learn more, see [Deploy a quorum witness](../../failover-clustering/deploy-quorum-witness.md).
 
 ### Step 3.5: Enable Storage Spaces Direct
 

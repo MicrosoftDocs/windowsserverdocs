@@ -4,7 +4,7 @@ description: Learn how to configure, grant, and revoke remote support assistance
 ms.topic: how-to
 ms.author: alalve
 author: trungtran
-ms.date: 11/07/2024
+ms.date: 03/04/2025
 ---
 
 # Configure Remote Support for Arc-enabled Windows servers

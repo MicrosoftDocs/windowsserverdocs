@@ -10,8 +10,8 @@
     href: create-failover-cluster.md
   - name: Deploy a two-node file server
     href: deploy-two-node-clustered-file-server.md
-  - name: Manage quorum and witnesses
-    href: manage-cluster-quorum.md
+  - name: Recover a failover cluster without quorum
+    href: recover-failover-cluster-without-quorum.md
   - name: Create a workgroup cluster
     href: create-workgroup-cluster.md
 - name: Tutorials
