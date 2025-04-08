@@ -19,9 +19,9 @@ Displays one screen of output at a time.
 ## Syntax
 
 ```
-<command> | more [/c] [/p] [/s] [/t<n>] [+<n>]
-more [[/c] [/p] [/s] [/t<n>] [+<n>]] < [<drive>:][<path>]<filename>
-more [/c] [/p] [/s] [/t<n>] [+<n>] [<files>]
+<command> | more [/e [/c] [/p] [/s] [/t<n>] [+<n>]]
+more [/e [/c] [/p] [/s] [/t<n>] [+<n>]] < [<drive>:][<path>]<filename>
+more /e [/c] [/p] [/s] [/t<n>] [+<n>] [<files>]
 ```
 
 ### Parameters
@@ -29,6 +29,7 @@ more [/c] [/p] [/s] [/t<n>] [+<n>] [<files>]
 | Parameter | Description |
 | --------- | ----------- |
 | `<command>` | Specifies a command for which you want to display the output. |
+| /e | Enables extended features
 | /c | Clears the screen before displaying a page. |
 | /p | Expands form-feed characters. |
 | /s | Displays multiple blank lines as a single blank line. |
@@ -40,7 +41,7 @@ more [/c] [/p] [/s] [/t<n>] [+<n>] [<files>]
 
 #### Remarks
 
-- The following subcommands are accepted at the **more** prompt (`-- More --`), including:
+- Regardless if /e is supplied, the following extended feature commands are accepted at the **more** prompt (`-- More --`), including:
 
     | Key | Action |
     | --- | ------ |
