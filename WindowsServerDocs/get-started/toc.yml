@@ -12,7 +12,7 @@ items:
     - name: What's new in Windows Server
       items:
       - name: Windows Server 2025
-        href: whats-new-windows-server-2025.md  
+        href: whats-new-windows-server-2025.md
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
       - name: Windows Server 2019
@@ -20,7 +20,7 @@ items:
       - name: Windows Server 2016
         href: whats-new-in-windows-server-2016.md
     - name: Install Windows Server from installation media
-      href: install-windows-server.md 
+      href: install-windows-server.md
     - name: Servicing channels comparison
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
@@ -44,13 +44,13 @@ items:
         items:
         - name: Known issues and notifications
           href: /windows/release-health/status-windows-server-2025?context=/windows-server/context/windows-server-get-started
-        - name: Resolved issues 
+        - name: Resolved issues
           href: /windows/release-health/resolved-issues-windows-server-2025?context=/windows-server/context/windows-server-get-started
       - name: Windows Server 2022
         items:
         - name: Known issues and notifications
           href: /windows/release-health/status-windows-server-2022?context=/windows-server/context/windows-server-get-started
-        - name: Resolved issues 
+        - name: Resolved issues
           href: /windows/release-health/resolved-issues-windows-server-2022?context=/windows-server/context/windows-server-get-started
     - name: Extended Security Updates
       href: extended-security-updates-overview.md
@@ -87,8 +87,10 @@ items:
     items:
     - name: Activation
       items:
-      - name: Create KMS host
+      - name: Create a KMS host
         href: kms-create-host.md
+      - name: Migrate a KMS host
+        href: kms-host-migration.md
       - name: KMS client activation
         href: kms-client-activation-keys.md
     - name: Connect to Azure Arc
