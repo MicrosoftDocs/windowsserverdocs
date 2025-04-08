@@ -15,7 +15,7 @@ Before proceeding with your installation and licensing tasks, review the followi
 
 - Ensure you have access to your new KMS host key for Windows and Office. This is commonly found in the Microsoft 365 Admin Center. KMS host keys have a predefined activation limit. If you encounter an error indicating that the activation limit has been reached, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
 
-- If you're unable to find your KMS host key, [contact support](https://learn.microsoft.com/en-us/licensing/contact-us) for licensing assistance.
+- If you're unable to find your KMS host key, [contact support](https://learn.microsoft.com/licensing/contact-us) for licensing assistance.
 
 > [!NOTE]
 >
@@ -84,7 +84,7 @@ When a KMS host is deployed, network administrators can streamline the activatio
 
 ## Retrieve a KMS host
 
-# [Command Prompt](#tab/cmd)
+# [Command Prompt](#tab/cmd1)
 
 To retrieve KMS hosts by the Domain Name System (DNS), run the following command:
 
@@ -210,7 +210,7 @@ Check which clients are sending activation requests to the new KMS host:
 
 Performing these actions must be done in an elevated command prompt or PowerShell window. To further troubleshoot other issues, see [Guidelines for troubleshooting the Key Management Service (KMS)](/windows-server/get-started/activation-troubleshoot-kms-general).
 
-# [Command Prompt](#tab/cmd)
+# [Command Prompt](#tab/cmd1)
 
 If client machines aren't connecting to the new KMS host, verify if they're still connected through the old KMS host by running the following command:
 
