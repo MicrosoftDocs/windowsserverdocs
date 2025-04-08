@@ -5,7 +5,7 @@ title: Configure Device-based Conditional Access on-premises
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/18/2025
+ms.date: 04/08/2025
 ms.topic: article
 ---
 
