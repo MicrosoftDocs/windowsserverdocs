@@ -9,11 +9,11 @@ ms.date: 04/09/2025
 
 # Migrate a KMS host to other devices
 
-This article outlines the steps and best practices for migrating the Key Management Services (KMS) host role to a new server. Migrating the KMS host is typically required when the existing host's operating system (OS) is nearing its end-of-support or when operational or organizational changes necessitate moving the role to a different server. The instructions in this guide provide a seamless migration process while maintaining uninterrupted activation services for Microsoft Windows and Microsoft Office clients. No data migration is required during this process as the KMS Host doesn't rely on any database or backup.
+This article outlines the steps and best practices for migrating the Key Management Services (KMS) host role to a new server. Migrating the KMS host is often necessary when the existing host's operating system (OS) is approaching its end-of-support. It might also be required due to operational or organizational changes that mandate moving the role to a different server. The instructions in this guide provide a seamless migration process while maintaining uninterrupted activation services for Microsoft Windows and Microsoft Office clients. No data migration is required during this process as the KMS Host doesn't rely on any database or backup.
 
 Before proceeding with your installation and licensing tasks, review the following details regarding your new KMS host:
 
-- Ensure you have access to your new KMS host key for Windows and Office. This is commonly found in the Microsoft 365 Admin Center. KMS host keys have a predefined activation limit. If you encounter an error indicating that the activation limit has been reached, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
+- Ensure you have access to your new KMS host key for Windows and Office through the Microsoft 365 Admin Center. KMS host keys have a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
 
 - If you're unable to find your KMS host key, [contact support](https://learn.microsoft.com/licensing/contact-us) for licensing assistance.
 
@@ -76,7 +76,7 @@ To verify that traffic is allowed through port 1688, run the following command w
 Test-NetConnection -ComputerName "MyDevice" -Port 1688
 ```
 
-When the connection succeeds, the entry **TcpTestSucceeded** equals **True**, while if the connection to port 1688 can’t be made (for instance, if no service is listening or because of a firewall or network issue) then **TcpTestSucceeded** will be **False**.
+When the connection succeeds, the entry **TcpTestSucceeded** equals **True**, while if the connection to port 1688 can’t be made (for instance, if no service is listening or because of a firewall or network issue) then **TcpTestSucceeded** equals **False**.
 
 ## Manage a KMS host
 
@@ -123,6 +123,8 @@ To retrieve KMS hosts by a specific DNS server, such as 8.8.8.8, run the followi
 ```powershell
 Resolve-DnsName -Name _vlmcs._tcp.example.com -Type SRV -Server 8.8.8.8
 ```
+
+---
 
 ## Evaluate a KMS host
 
@@ -172,7 +174,7 @@ If you receive an "insufficient count" error, it verifies that basic network con
 
 Register the new KMS host in DNS to enable automatic discovery by client machines. This approach also facilitates a faster increase in the activation count. To register the new KMS host in DNS, follow these steps:
 
-1. Manually create the appropriate SRV records. To learn more, see [Manually create DNS records](/windows-server/get-started/kms-create-host#manually-create-dns-records).
+1. Manually create the appropriate service (SRV) records. To learn more, see [Manually create DNS records](/windows-server/get-started/kms-create-host#manually-create-dns-records).
 1. Verify that the new SRV record is published by using `nslookup` as described in [Retrieve a KMS host](#retrieve-a-kms-host).
 1. On the client machines, ensure that any previous manual settings (if any) are cleared so that the client can automatically locate the KMS host via DNS. Then run one of the following commands with elevation:
 
