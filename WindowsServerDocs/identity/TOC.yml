@@ -1036,6 +1036,8 @@
         href: ad-cs/certification-authority-role.md
       - name: Certification Authority Web Enrollment Role Service
         href: ad-cs/certificate-authority-web-enrollment.md
+      - name: Certificate Enrollment Web Service overview
+        href: ad-cs/certificate-enrollment-web-service.md
       - name: Certificate Enrollment Policy Web Service overview
         href: ad-cs/certificate-enrollment-policy-web-service-overview.md
       - name: Network Device Enrollment Service
