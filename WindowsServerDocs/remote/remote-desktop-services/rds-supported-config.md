@@ -44,7 +44,7 @@ Starting in Windows Server 2016, there's no restriction for the number of Connec
 
 RDS supports systems equipped with GPUs. Applications that require a GPU can be used over the remote connection. Additionally, GPU-accelerated rendering and encoding can be enabled for improved app performance and scalability.
 
-Remote Desktop Services Session Hosts and single-session client operating systems can take advantage of the physical or virtual GPUs presented to the operating system in many ways, including the [Azure GPU optimized virtual machine sizes](/en-us/azure/virtual-machines/windows/sizes-gpu), GPUs available to the physical RDSH server, and GPUs presented to the VMs by supported hypervisors.
+Remote Desktop Session Hosts and single-session client operating systems can take advantage of the physical or virtual GPUs presented to the operating system in many ways, including the [Azure GPU optimized virtual machine sizes](/en-us/azure/virtual-machines/windows/sizes-gpu), GPUs available to the physical RDSH server, and GPUs presented to the VMs by supported hypervisors.
 
 See [Which graphics virtualization technology is right for you?](rds-graphics-virtualization.md) for help with figuring out what you need. For specific information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
 
@@ -81,7 +81,7 @@ The following table shows support for GPU scenarios in the client OS.
 > [!NOTE]
 > Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
 
-Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server. The following guest operating systems have RemoteFX vGPU support:
+RDS supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server. The following guest operating systems have RemoteFX vGPU support:
 
 - Windows 11
 - Windows 10
@@ -89,7 +89,7 @@ Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V 
 
 ### Discrete Device Assignment support
 
-Remote Desktop Services supports Physical GPUs presented with Discrete Device Assignment from Hyper-V hosts running Windows Server 2016 or later. See [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) for more details.
+RDS supports Physical GPUs presented with Discrete Device Assignment from Hyper-V hosts running Windows Server 2016 or later. See [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) for more details.
 
 ## VDI deployment – supported guest operating systems
 
@@ -99,7 +99,8 @@ Windows Server RD Virtualization Host servers support the following guest operat
 - Windows 10 Enterprise
 
 > [!NOTE]
-> - Remote Desktop Services doesn't support heterogeneous session collections. The OSs of all VMs in a collection must be the same version.
+>
+> - RDS doesn't support heterogeneous session collections. The OSs of all VMs in a collection must be the same version.
 > - You can have separate homogeneous collections with different guest OS versions on the same host.
 > - The Hyper-V host used to run VMs must be the same version as the Hyper-V host used to create the original VM templates.
 
@@ -121,8 +122,8 @@ To connect to desktops and RemoteApps with SSO through the inbox Remote Desktop 
 > [!NOTE]
 > Due to the required configuration options, Web SSO isn't supported with smartcards. Users who sign in via smartcards might face multiple prompts to sign in.
 
-For more information about creating VDI deployment of Remote Desktop Services, check out [Supported Windows 10 security configurations for Remote Desktop Services VDI](rds-vdi-supported-config.md).
+For more information about creating VDI deployment of RDS, see [Supported Windows 10 security configurations for Remote Desktop Services VDI](rds-vdi-supported-config.md).
 
-## Using Remote Desktop Services with application proxy services
+## Using RDS with application proxy services
 
-You can use Remote Desktop Services with [Microsoft Entra application proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services doesn't support using [Web Application Proxy](../remote-access/web-application-proxy/web-app-proxy-windows-server.md).
+You can use RDS with [Microsoft Entra application proxy](/azure/active-directory/application-proxy-publish-remote-desktop). RDS doesn't support using [Web Application Proxy](../remote-access/web-application-proxy/web-app-proxy-windows-server.md).
