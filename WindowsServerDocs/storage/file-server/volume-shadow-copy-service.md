@@ -81,8 +81,8 @@ To create a shadow copy, the requester, writer, and provider perform the followi
 
 1. VSS tells the writers to thaw application write I/O requests. At this point, applications are free to resume writing data to the disk that is being shadow-copied.
 
-> [!NOTE]
-> The shadow copy creation can be aborted if the writers are kept in the freeze state for longer than 60 seconds or if the providers take longer than 10 seconds to commit the shadow copy.
+   > [!NOTE]
+   > The shadow copy creation can be aborted if the writers are kept in the freeze state for longer than 60 seconds or if the providers take longer than 10 seconds to commit the shadow copy.
 
 1. The requester can retry the process (go back to step 1) or notify the administrator to retry at a later time.
 
