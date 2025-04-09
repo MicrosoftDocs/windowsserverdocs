@@ -4,10 +4,13 @@ description: Learn how to enhance machine accounts security in Windows Server 20
 ms.topic: conceptual
 ms.author: alalve
 author: mariamgewida
-ms.date: 10/25/2024
+ms.date: 04/09/2025
 ---
 
 # Credential Guard protected machine accounts
+
+> [!IMPORTANT]
+> Beginning with the April 2025 Windows cumulative security update, Credential Guard for machine accounts is disabled in Windows Server 2025 and Windows 11, version 24H2. Credential Guard for machine accounts is disabled until a permanent fix is made available. To learn more about the authentication issues due to failed password rotation in Kerberos, see the [Windows Server 2025 known issues and notifications](/windows/release-health/status-windows-server-2025?context=%2Fwindows-server%2Fcontext%2Fwindows-server-get-started) article.
 
 Recent Windows features, such as the Flexible Authentication Secure Tunneling (FAST) Kerberos extension, also known as Kerberos Armoring, became increasingly dependent on machine accounts to enhance security. The machine account is used to add entropy to the client's secret key and both gMSA and dMSA service accounts now rely on machine accounts and grant them access to service accounts. However, this reliance on machine accounts created a vulnerability in service account security, as machine accounts can be easily extracted from the registry and used to access highly secured service accounts.
 
