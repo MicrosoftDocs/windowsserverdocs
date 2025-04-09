@@ -1,18 +1,18 @@
 ---
 title: Supported configurations for Remote Desktop Services
-description: Provides information about supported configurations for RDS in Windows Server.
-ms.author: alalve
-ms.date: 7/3/2024
+description: Provides information about supported configurations for Remote Desktop Services (RDS) in Windows Server.
 ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
 author: robinharwood
-manager: dongill
+ms.author: alalve
+ms.date: 04/09/2025
 ---
+
 # Supported configurations for Remote Desktop Services
 
-When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you may have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to a later version of Windows Server to take advantage of the new features. The question then becomes, which RDS components can work with different versions and which need to be the same?
+When it comes to the supported configurations for Remote Desktop Services (RDS) environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you might have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to a later version of Windows Server to take advantage of the new features. The question then becomes, which RDS components can work with different versions and which need to be the same?
 
-So with that in mind, here are basic guidelines for supported configurations of Remote Desktop Services in Windows Server.
+So with that in mind, here are basic guidelines for supported configurations of RDS in Windows Server.
 
 > [!NOTE]
 > Make sure to review the [system requirements for Windows Server](../../get-started/hardware-requirements.md).
@@ -27,7 +27,7 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 - Follow the upgrade order recommended in [Upgrading your Remote Desktop Services environment](upgrade-to-rds.md#flow-for-deployment-upgrades).
 
-- If you are creating a highly available environment, all of your Connection Brokers need to be at the same OS level.
+- If you're creating a highly available environment, all of your Connection Brokers need to be at the same OS level.
 
 ## RD Connection Brokers
 
@@ -42,15 +42,15 @@ Starting in Windows Server 2016, there's no restriction for the number of Connec
 
 ## Support for graphics processing unit (GPU) acceleration
 
-Remote Desktop Services support systems equipped with GPUs. Applications that require a GPU can be used over the remote connection. Additionally, GPU-accelerated rendering and encoding can be enabled for improved app performance and scalability.
+RDS supports systems equipped with GPUs. Applications that require a GPU can be used over the remote connection. Additionally, GPU-accelerated rendering and encoding can be enabled for improved app performance and scalability.
 
 Remote Desktop Services Session Hosts and single-session client operating systems can take advantage of the physical or virtual GPUs presented to the operating system in many ways, including the [Azure GPU optimized virtual machine sizes](/en-us/azure/virtual-machines/windows/sizes-gpu), GPUs available to the physical RDSH server, and GPUs presented to the VMs by supported hypervisors.
 
-See [Which graphics virtualization technology is right for you?](rds-graphics-virtualization.md) for help figuring out what you need. For specific information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
+See [Which graphics virtualization technology is right for you?](rds-graphics-virtualization.md) for help with figuring out what you need. For specific information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
 
-GPU vendors may have a separate licensing scheme for RDSH scenarios or restrict GPU use on the server OS, verify the requirements with your favorite vendor.
+GPU vendors might have a separate licensing scheme for RDSH scenarios or restrict GPU use on the server OS. Verify the requirements with your favorite vendor.
 
-GPUs presented by a non-Microsoft hypervisor or Cloud Platform must have drivers digitally-signed by WHQL and supplied by the GPU vendor.
+GPUs presented by a non-Microsoft hypervisor or Cloud Platform must have drivers digitally signed by WHQL and supplied by the GPU vendor.
 
 ### Remote Desktop Session Host support for GPUs
 
@@ -99,7 +99,7 @@ Windows Server RD Virtualization Host servers support the following guest operat
 - Windows 10 Enterprise
 
 > [!NOTE]
-> - Remote Desktop Services doesn't support heterogeneous session collections. The OSes of all VMs in a collection must be the same version.
+> - Remote Desktop Services doesn't support heterogeneous session collections. The OSs of all VMs in a collection must be the same version.
 > - You can have separate homogeneous collections with different guest OS versions on the same host.
 > - The Hyper-V host used to run VMs must be the same version as the Hyper-V host used to create the original VM templates.
 
@@ -119,7 +119,7 @@ To connect to desktops and RemoteApps with SSO through the inbox Remote Desktop 
 - RDS Deployment set to "Use RD Gateway credentials for remote computers" (Default) in the RD Gateway properties
 
 > [!NOTE]
-> Due to the required configuration options, Web SSO is not supported with smartcards. Users who login via smartcards might face multiple prompts to login.
+> Due to the required configuration options, Web SSO isn't supported with smartcards. Users who sign in via smartcards might face multiple prompts to sign in.
 
 For more information about creating VDI deployment of Remote Desktop Services, check out [Supported Windows 10 security configurations for Remote Desktop Services VDI](rds-vdi-supported-config.md).
 
