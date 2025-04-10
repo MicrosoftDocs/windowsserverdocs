@@ -5,7 +5,7 @@ description: Find out about the Active Directory Domain Services Configuration W
 author: iainfoulds
 ms.author: mosagie
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 04/10/2025
 ms.topic: article
 # customer intent: As an administrator, I want to become familiar with the Active Directory Domain Services Configuration Wizard so that I can promote servers to domain controllers and demote servers.
 ---
@@ -25,6 +25,7 @@ In Server Manager, you can use the Active Directory Domain Services Configuratio
   - [Review Options](#BKMK_ViewInstallOptionsPage)
   - [Prerequisites Check](#BKMK_PrerqCheckPage)
   - [Results](#BKMK_Results)
+
 - For demoting a domain controller:
   - [Credentials](#BKMK_RemovalCredsPage)
   - [Warnings](#BKMK_RemovalOptionsPage)
@@ -40,7 +41,7 @@ The following sections describe the pages that you see when you use the Active D
 
 Server Manager begins every domain controller installation with the **Deployment Configuration** page. The options and required fields that you see on this page and subsequent pages depend on which deployment operation you select. For example, if you create a forest, the **Preparation Options** page doesn't appear. But if you install the first domain controller that runs Windows Server 2012 in an existing forest or domain, that page does appear.
 
-The wizard runs some validations and tests on this page and again later as part of prerequisite checks. For example, a check is performed when you try to install the first Windows Server domain controller in a forest. If the functional level of the forest doesn't support the Windows Server version of the domain controller, an error appears on this page.
+The wizard runs some validations and tests on the **Deployment Configuration** page and again later as part of prerequisite checks. For example, a check is performed when you try to install the first Windows Server domain controller in a forest. If the functional level of the forest doesn't support the Windows Server version of the domain controller, an error appears on this page.
 
 The following sections describe the deployment operations that you can select on this page.
 
@@ -113,7 +114,7 @@ When you create a forest, the **Domain Controller Options** page displays the op
 
   For more information, see [Support for claims, compound authentication, and Kerberos armoring](s/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)#support-for-claims-compound-authentication-and-kerberos-armoring).
 
-  Any domains that you create in a forest automatically operate at the domain functional level that corresponds to the same version of Windows Server as the selected forest functional level. Also, any domain controllers in the domain run the version of Windows Server that corresponds to the selected domain functional level.
+  Any domains that you create in a forest automatically operate at the domain functional level that's equal to the selected forest functional level. Also, any domain controllers in the domain run the Windows Server version of the selected domain functional level.
 
   For more information about features that are available at various functional levels, see [Active Directory Domain Services functional levels](../active-directory-functional-levels.md).
 
@@ -121,7 +122,7 @@ When you create a forest, the **Domain Controller Options** page displays the op
 
 - When you create a forest, the **Domain Name System (DNS) server** option is selected by default. The first domain controller in the forest must be a global catalog server, and it can't be a read-only domain controller (RODC).
 
-- To sign in to a domain controller that's not running AD DS, you need the Directory Services Restore Mode (DSRM) password. The password you specify must adhere to the password policy applied to the server. By default, that policy doesn't require a strong password. It only requires a non-blank password. Always choose a strong, complex password or preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see the [support article about synchronizing the passwords](https://support.microsoft.com/topic/a-feature-is-available-for-windows-server-2008-that-lets-you-synchronize-the-dsrm-administrator-password-with-a-domain-user-account-a9a2ef06-2771-b0d4-6cd3-e1fe836f69e1).
+- To sign in to a domain controller that's not running AD DS, you need the Directory Services Restore Mode (DSRM) password. The password you specify must adhere to the password policy applied to the server. By default, that policy doesn't require a strong password. It only requires a non-blank password. Always choose a strong, complex password or preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see the [support article about synchronizing passwords](https://support.microsoft.com/topic/a-feature-is-available-for-windows-server-2008-that-lets-you-synchronize-the-dsrm-administrator-password-with-a-domain-user-account-a9a2ef06-2771-b0d4-6cd3-e1fe836f69e1).
 
 For more information about how to create a forest, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).
 
@@ -247,11 +248,11 @@ This page prompts you to supply credentials to run `adprep.exe`. The wizard disp
 
 The `adprep.exe` tool is required to run in the following situations:
 
-- You must run `adprep /forestprep` to add the first domain controller that runs Windows Server to an existing forest. To run this command, you must be a member of the Enterprise Admins group, the Schema Admins group, and the Domain Admins group of the domain that hosts the schema master. For this command to run successfully, there must be connectivity between the computer where you run the command and the schema master for the forest.
+- The `adprep /forestprep` command must be run to add the first domain controller that runs Windows Server 2012 to an existing forest. To run this command, you must be a member of the Enterprise Admins group, the Schema Admins group, and the Domain Admins group of the domain that hosts the schema master. For this command to run successfully, there must be connectivity between the computer where you run the command and the schema master for the forest.
 
-- You must run `adprep /domainprep` to add the first domain controller that runs Windows Server to an existing domain. This command must be run by a member of the Domain Admins group of the domain where you install the domain controller that runs Windows Server. For this command to run successfully, there must be connectivity between the computer where you run the command and the infrastructure master for the domain.
+- The `adprep /domainprep` command must be run to add the first domain controller that runs Windows Server 2012 to an existing domain. This command must be run by a member of the Domain Admins group of the domain where you install the domain controller that runs Windows Server. For this command to run successfully, there must be connectivity between the computer where you run the command and the infrastructure master for the domain.
 
-- You must run `adprep /rodcprep` to add the first RODC to an existing forest. This command must be run by a member of the Enterprise Admins group. For this command to run successfully, there must be connectivity between the computer where you run the command and the infrastructure master for each application directory partition in the forest.
+- The `adprep /rodcprep` command must be run to add the first RODC to an existing forest. This command must be run by a member of the Enterprise Admins group. For this command to run successfully, there must be connectivity between the computer where you run the command and the infrastructure master for each application directory partition in the forest.
 
 For more information about `adprep.exe`, see [Adprep.exe integration](./What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep) and [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
@@ -345,11 +346,15 @@ If you force the removal of a domain controller:
   | Schema master | You can no longer modify the schema for the forest. | Transfer the schema master role to a domain controller in the root domain in the forest. |
   | Domain naming master | You can no longer add domains to or remove domains from the forest. | Transfer the domain naming master role to a domain controller in the root domain in the forest. |
 
-Before you remove a domain controller that hosts any operations master roles, try to transfer the role to another domain controller. If it isn't possible to transfer the role, first remove AD DS from the computer. Then seize the role by using `ntdsutil.exe` on the domain controller that you plan to seize the role to. If possible, use a recent replication partner in the same site as the domain controller that you're demoting. For more information about transferring and seizing operations master roles, see [Transfer or seize Operation Master roles in Active Directory Domain Services](/troubleshoot/windows-server/active-directory/transfer-or-seize-operation-master-roles-in-ad-ds). If the wizard can't determine whether the domain controller hosts an operations master role, run the `netdom.exe` command to determine whether the domain controller performs any operations master roles.
+Before you remove a domain controller that hosts any operations master roles, try to transfer the role to another domain controller.
+
+If it isn't possible to transfer the role, first remove AD DS from the computer. Then seize the role by using `ntdsutil.exe` on the domain controller that you plan to seize the role to. If possible, use a recent replication partner in the same site as the domain controller that you're demoting. For more information about transferring and seizing operations master roles, see [Transfer or seize Operation Master roles in Active Directory Domain Services](/troubleshoot/windows-server/active-directory/transfer-or-seize-operation-master-roles-in-ad-ds).
+
+If the wizard can't determine whether the domain controller hosts an operations master role, run the `netdom.exe` command to determine whether the domain controller performs any operations master roles.
 
 After you uninstall AD DS from the last domain controller in the domain, the domain no longer exists.
 
-## Removal Options
+### Removal Options
 
 If the domain controller that you demote is a DNS server that's delegated to host the DNS zone, you see the following page. It provides the option to remove the DNS server from the DNS zone delegation.
 
@@ -371,7 +376,7 @@ The following screenshot shows the **Review Options** page that you see when you
 
 :::image type="content" source="media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_ReviewOptions.gif" alt-text="Screenshot of the final Review Options page of the wizard. Text summarizes selected options for demoting a domain controller.":::
 
-You can use this page to review your selections and then to start the demotion.
+You can use this page to review your selections and start the demotion.
 
 This page also provides you with the chance to export the configuration settings for demotion to a Windows PowerShell script so you can automate other demotions.
 
