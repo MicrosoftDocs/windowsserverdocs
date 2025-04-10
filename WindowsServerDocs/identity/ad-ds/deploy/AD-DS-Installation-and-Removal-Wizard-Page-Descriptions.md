@@ -112,7 +112,7 @@ When you create a forest, the **Domain Controller Options** page displays the op
   - Always provide claims
   - Fail unarmored authentication requests
 
-  For more information, see [Support for claims, compound authentication, and Kerberos armoring](s/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)#support-for-claims-compound-authentication-and-kerberos-armoring).
+  For more information, see [Support for claims, compound authentication, and Kerberos armoring](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)#support-for-claims-compound-authentication-and-kerberos-armoring).
 
   Any domains that you create in a forest automatically operate at the domain functional level that's equal to the selected forest functional level. Also, any domain controllers in the domain run the Windows Server version of the selected domain functional level.
 
@@ -132,7 +132,7 @@ When you create a child domain, the **Domain Controller Options** page displays 
 
 :::image type="content" source="media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DCOptions_Child.gif" alt-text="Screenshot of the Domain Controller Options page of the wizard. A domain functional level, available roles, and DSRM password fields are visible.":::
 
-- The default value of the domain functional level depends on your Windows Server version. You can specify any value that's equal to or greater than the forest functional level.
+- The default value of the domain functional level depends on your Windows Server version. You can specify any value that's greater than or equal to the forest functional level.
 
 - You can configure the following domain controller options:
   - **Domain Name System (DNS) server**
@@ -316,7 +316,7 @@ On this page, you configure demotion options. The following credentials are need
 - Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force removal of the domain controller** demotes the domain controller without removing the domain controller object's metadata from Active Directory.
 
   > [!IMPORTANT]
-  > Don't select the **Force removal of the domain controller** option unless the domain controller can't contact other domain controllers and there's *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. Also, all unreplicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft support cases for AD DS, Microsoft Exchange, SQL Server, and other software. If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For instructions, see [Clean up server metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10)).
+  > Don't select the **Force the removal of this domain controller** option unless the domain controller can't contact other domain controllers and there's *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. Also, all unreplicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft support cases for AD DS, Microsoft Exchange, SQL Server, and other software. If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For instructions, see [Clean up server metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10)).
 
 - Demoting the last domain controller in a domain requires Enterprise Admins group membership, because this action removes the domain itself. If the domain is the last one in the forest, this action also removes the forest. Server Manager informs you if the current domain controller is the last domain controller in the domain. Select **Last domain controller in the domain** to confirm the domain controller is the last domain controller in the domain.
 
@@ -339,7 +339,7 @@ If you force the removal of a domain controller:
   | Role | Result of removing the domain controller | Action to take before you continue |
   | --- | --- | --- |
   | Global catalog | Users might have trouble signing in to domains in the forest. | Ensure that enough global catalog servers are in the forest and site to service user sign-ins. If necessary, designate another global catalog server, and update clients and applications with the new information. |
-  | DNS server | All the DNS data that's stored in Active Directory-integrated zones is lost. After you remove AD DS, the DNS server isn't able to perform name resolution for the DNS zones that were Active Directory-integrated. | Update the DNS configuration of all computers that currently refer to the IP address of the DNS server for name resolution with the IP address of a new DNS server. |
+  | DNS server | All the DNS data that's stored in Active Directory-integrated zones is lost. After you remove AD DS, the DNS server isn't able to perform name resolution for the DNS zones that were Active Directory-integrated. | Update the DNS configuration of all computers that currently refer to the IP address of the DNS server for name resolution. Configure them with the IP address of a new DNS server. |
   | Infrastructure master | Clients in the domain might have difficulty locating objects in other domains. | Transfer the infrastructure master role to a domain controller that isn't a global catalog server. |
   | Relative ID (RID) master | You might have problems creating user accounts, computer accounts, and security groups. | Transfer the RID master role to a domain controller in the same domain as the domain controller that you're demoting. |
   | Primary domain controller (PDC) emulator | Operations that are performed by the PDC emulator, such as Group Policy updates and password resets for non-AD DS accounts, don't function properly. | Transfer the PDC emulator master role to a domain controller that's in the same domain as the domain controller that you're demoting. |
