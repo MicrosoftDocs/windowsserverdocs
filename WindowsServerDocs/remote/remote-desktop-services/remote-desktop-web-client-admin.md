@@ -11,7 +11,7 @@ ms.author: alalve
 The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
 >[!IMPORTANT]
->The web client does support using Microsoft Entra application proxy but doesn't support Web Application Proxy at all. See [Using RDS with application proxy services](rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
+>The web client does support using Microsoft Entra application proxy but doesn't support Web Application Proxy at all. See [Using RDS with application proxy services](rds-supported-config.md#using-rds-with-application-proxy-services) for details.
 
 ## What you'll need to set up the web client
 
@@ -22,7 +22,7 @@ Before getting started, keep the following things in mind:
 * Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contain this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users connect to are running one of the following OS versions:
-  
+
   * Windows 10 or later
   * Windows Server 2016 or later
 
@@ -51,7 +51,7 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Install-Module -Name PowerShellGet -Force
     ```
-    
+
     > [!NOTE]
     > To access the PowerShell Gallery, Transport Layer Security (TLS) 1.2 or higher is required. Use the following command to enable TLS 1.2 in your PowerShell session:
     >
@@ -60,7 +60,7 @@ To install the web client for the first time, follow these steps:
     >[Net.ServicePointManager]::SecurityProtocol -bor
     >[Net.SecurityProtocolType]::Tls12
     >```
-    
+
     >[!IMPORTANT]
     >You'll need to restart PowerShell before the update can take effect, otherwise the module may not work.
 
@@ -77,13 +77,13 @@ To install the web client for the first time, follow these steps:
     ```
 
 6. Next, run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker:
-    
+
     ```PowerShell
     Import-RDWebClientBrokerCert <.cer file path>
     ```
 
 7. Finally, run this cmdlet to publish the Remote Desktop web client:
-    
+
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
