@@ -11,8 +11,6 @@ ms.date: 09/21/2023
 
 # Step 4: Configure Group Policy settings for automatic updates
 
-
-
 In an Active Directory environment, you can use Group Policy to define how computers and users can interact with Windows Update to obtain automatic updates from Windows Server Update Services (WSUS). This article refers to these computers and users as *WSUS clients*.
 
 This article contains two main sections:
@@ -645,7 +643,7 @@ The following table summarizes key differences between the current and past vers
 
 ### Terms and definitions
 
-This article used the following terms:
+This article uses the following terms:
 
 |Term|Definition|
 |----|-------|
@@ -657,11 +655,11 @@ This article used the following terms:
 |replica server|A downstream WSUS server that mirrors the approvals and settings on the upstream server to which it's connected. You can't manage WSUS on a replica server.|
 |Microsoft Update|A Microsoft internet site that stores and distributes updates for Windows computers, device drivers, Windows operating systems, and other Microsoft software products.|
 |Software Update Services (SUS)|The predecessor product for WSUS.|
-|updates|Any of a collection of software revisions, hotfixes, service packs, feature packs, and device drivers that can be installed on a computer to extend functionality, or to improve performance and security.|
+|updates|Any of a collection of software revisions, hot fixes, service packs, feature packs, and device drivers that can be installed on a computer to extend functionality, or to improve performance and security.|
 |update files|The files required to install an update on a computer.|
-|update information or update metadata|The information about an update, as opposed to the binary files in an update package. For example, metadata supplies information for the properties of an update so you can find out what the update is useful for. Metadata also includes Microsoft Software License Terms. The metadata package downloaded for an update is typically much smaller than the update file package.|
+|update information or update metadata|The information about an update, as opposed to the binary files in an update package. For example, metadata supplies information about the properties of an update so you can find out what the update is useful for. Metadata also includes Microsoft Software License Terms. The metadata package downloaded for an update is typically much smaller than the update file package.|
 |update source|The location to which a WSUS server synchronizes to get update files. This location can be either Microsoft Update or an upstream WSUS server.|
 |upstream server|A WSUS server that provides update files to another, downstream WSUS server.|
-|Windows Server Update Services (WSUS)|A server role program that runs on one or more Windows Server computers on a corporate network. A WSUS infrastructure enables you to manage updates for computers on your network to install.<p>You can use WSUS to approve or decline updates before release, to force updates to install by a certain date, and to obtain extensive reports on what updates each computer on your network requires. You can configure WSUS to approve certain classes of updates automatically, including critical updates, security updates, service packs, and drivers. WSUS also enables you to approve updates for detection only, so that you can see what computers require a particular update without having to install the update.<p>In a WSUS implementation, at least one WSUS server in the network must be able to connect to Microsoft Update to get available updates. Based on network security and configuration, the administrator can determine how many other servers connect directly to Microsoft Update.<p>You can configure a WSUS server to get updates over the internet from Microsoft Update, Windows Update, or Microsoft Store.|
+|Windows Server Update Services (WSUS)|A server role program that runs on one or more Windows Server computers on a corporate network. A WSUS infrastructure enables you to manage updates for computers on your network to install.<p>You can use WSUS to approve or decline updates before release, to force updates to install by a certain date, and to obtain extensive reports on what updates each computer on your network requires. You can configure WSUS to approve certain classes of updates automatically, including critical updates, security updates, service packs, and drivers. You can also use WSUS to approve updates for detection only, so that you can see what computers require a particular update without having to install the update.<p>In a WSUS implementation, at least one WSUS server in the network must be able to connect to Microsoft Update to get available updates. Based on network security and configuration, the administrator can determine how many other servers connect directly to Microsoft Update.<p>You can configure a WSUS server to get updates over the internet from Microsoft Update, Windows Update, or Microsoft Store.|
 |Windows Update|A Microsoft internet site that stores and distributes updates for Windows computers, device drivers, and Windows operating systems. Windows Update is also the name of a service that runs on Windows computers and detects, downloads, and installs updates.<p>Depending on computer and policy configurations, the Windows Update Agent can download updates from:<p>- Microsoft Update<br />- Windows Update<br />- Microsoft Store<br />- An internet (network) update service (WSUS)<p>Computers that aren't managed in a WSUS-based environment typically use Windows Update to connect directly over the internet to Windows Update, Microsoft Update, or Microsoft Store to obtain updates.|
 |WSUS client|A computer that receives updates from a WSUS intranet update service. In the case of Group Policy settings that control user interaction with Automatic Updates, a WSUS client is a user of a computer in a WSUS environment.|
