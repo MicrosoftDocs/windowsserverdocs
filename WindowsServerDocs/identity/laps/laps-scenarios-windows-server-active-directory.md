@@ -1,40 +1,41 @@
 ---
 title: Get started with Windows LAPS and Windows Server Active Directory
-description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory.
+description: See how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory.
 author: jay98014
 ms.author: mosagie
-ms.date: 07/04/2022
-ms.topic: conceptual
+ms.date: 04/11/2025
+ms.topic: how-to
+# customer intent: As an administrator, I want to see how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory so that I can manage and back up administrator passwords.
 ---
 
 # Get started with Windows LAPS and Windows Server Active Directory
 
-Windows Local Administrator Password Solution (Windows LAPS) provides automatic management of passwords for local administrator accounts and domain controller Directory Services Restore Mode (DSRM) accounts. This article shows you how to get started with Windows LAPS and Windows Server Active Directory. It describes basic procedures for using Windows LAPS to back up passwords to Windows Server Active Directory and retrieve them.
+You can use Windows Local Administrator Password Solution (Windows LAPS) to manage the passwords of local administrator accounts and domain controller Directory Services Restore Mode (DSRM) accounts. This article shows you how to get started with Windows LAPS and Windows Server Active Directory. It describes basic procedures for using Windows LAPS to back up passwords to Windows Server Active Directory and to retrieve them.
 
 ## Domain functional level and domain controller operating system version requirements
 
-If you domain functional level (DFL) is earlier than 2016, you can't enable Windows LAPS password encryption. Without password encryption:
+If your domain functional level (DFL) is earlier than 2016, you can't enable Windows LAPS password encryption. Without password encryption:
 
-- You can configure clients to store passwords only in clear text, secured by Active Directory access control lists (ACLs).
-- You can't configure domain controllers (DCs) to manage their local DSRM account.
+- You can configure clients to store passwords only in clear text, secured by Windows Server Active Directory access control lists (ACLs).
+- You can't configure domain controllers to manage their local DSRM account.
 
-When your domain uses a DFL of 2016, you can enable Windows LAPS password encryption. However, any Windows Server 2016 DCs that you run don't support Windows LAPS. As a result, those DCs can't use the DSRM account management feature.
+When your domain uses a DFL of 2016 or later, you can enable Windows LAPS password encryption. However, any Windows Server 2016 and earlier domain controllers that you run don't support Windows LAPS. As a result, those domain controllers can't use the DSRM account management feature.
 
-It's fine to use Windows Server 2016 and earlier supported operating systems on your DCs as long as you're aware of these limitations.
+It's fine to use Windows Server 2016 and earlier supported operating systems on your domain controllers as long as you're aware of these limitations.
 
-The following table summarizes the support that's provided for various scenarios:
+The following table summarizes the functionality that's supported in various scenarios:
 
-|Domain details|Clear-text password storage supported|Encrypted password storage supported (for domain-joined clients) |DSRM account management supported (for DCs)|
+|Domain details|Clear-text password storage supported|Encrypted password storage supported (for domain-joined clients) |DSRM account management supported (for domain controllers)|
 |--- |--- |--- |--- |
 |DFL earlier than 2016|Yes|No|No|
-|2016 DFL with one or more Windows Server 2016 DCs|Yes|Yes|Yes but only for Windows Server 2019 and later DCs|
-|2016 DFL with only Windows Server 2019 and later DCs|Yes|Yes|Yes|
+|2016 DFL with one or more Windows Server 2016 domain controllers|Yes|Yes|Yes but only for Windows Server 2019 and later domain controllers|
+|2016 DFL with only Windows Server 2019 and later domain controllers|Yes|Yes|Yes|
 
-We strongly recommend that you upgrade to the latest available operating system on clients, servers, and DCs in order to take advantage of the latest features and security improvements.
+We strongly recommend that you upgrade to the latest available operating system on clients, servers, and domain controllers in order to take advantage of the latest features and security improvements.
 
 ## Update the Windows Server Active Directory schema
 
-Before you can use Windows LAPS, you must update the Windows Server Active Directory schema. You can perform this action by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. You can run the `Update-LapsADSchema` cmdlet locally on a Windows Server 2022 or Windows Server 2019 DC updated with Windows LAPS. But you can also run this cmdlet on a server that's not a domain controller as long as the server supports the Windows LAPS PowerShell module.
+Before you can use Windows LAPS, you must update the Windows Server Active Directory schema. You can perform this action by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. You can run the `Update-LapsADSchema` cmdlet locally on a Windows Server 2019 or later domain controller updated with Windows LAPS. But you can also run this cmdlet on a server that's not a domain controller as long as the server supports the Windows LAPS PowerShell module.
 
 ```powershell
 PS C:\> Update-LapsADSchema
@@ -62,7 +63,7 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 
 ## Query extended rights permissions
 
-Some users or groups might have the extended rights permission on the managed device's OU. This permission is problematic, because users who have this permission can read confidential attributes, and all the Windows LAPS password attributes are marked as confidential.
+Some users or groups might have the extended rights permission on the managed device's OU. This situation is problematic, because users who have this permission can read confidential attributes, and all the Windows LAPS password attributes are marked as confidential.
 
 You can use the `Find-LapsADExtendedRights` cmdlet to see who has this permission, as shown in the following code:
 
@@ -76,7 +77,7 @@ ObjectDN                  ExtendedRightHolders
 OU=NewLAPS,DC=laps,DC=com {NT AUTHORITY\SYSTEM, LAPS\Domain Admins}
 ```
 
-In the output, only trusted entities (SYSTEM and Domain Admins) have the permission. No other action is required in this case.
+In the output, only the trusted entities SYSTEM and Domain Admins have the permission. No other action is required in this case.
 
 ## Configure device policy
 
@@ -88,7 +89,7 @@ The first step is to choose how to apply policy on your devices.
 
 Most environments use [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy) to deploy the required settings to their Windows Server Active Directory-domain-joined devices.
 
-If your devices are also hybrid-joined to Microsoft Entra ID, you can deploy policy by using [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
+If your devices are also hybrid-joined to Microsoft Entra ID, you can deploy policy by using [Microsoft Intune](/intune/intune-service/) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
 ### Configure specific policies
 
@@ -111,7 +112,7 @@ Windows LAPS processes the active policy every hour. You can also start the proc
 
 To verify that a password is successfully updated in Windows Server Active Directory, look in the event log for an event with ID 10018:
 
-:::image type="content" source="./media/laps-scenarios-windows-server-active-directory/laps-scenarios-windows-server-active-directory-password-update-event.png" alt-text="Screenshot of the event log that shows a successful Windows Server Active Directory password update event log message.":::
+:::image type="content" source="./media/laps-scenarios-windows-server-active-directory/laps-scenarios-windows-server-active-directory-password-update-event.png" alt-text="Screenshot of the event log. An event with ID 10018 is selected. Its log shows a password was successfully updated in Windows Server Active Directory.":::
 
 To avoid waiting after you apply the policy, you can run the `Invoke-LapsPolicyProcessing` PowerShell cmdlet.
 
@@ -143,7 +144,7 @@ Windows LAPS reads the password expiration time for a managed device from Window
 
 In some situations, you might want to rotate the password early, for instance, after a security breach or during ad hoc testing. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet.
 
-You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time that's stored in Windows Server Active Directory for a managed device. The following code provides an example:
+You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time that's stored in Windows Server Active Directory for a managed device. The following code sets the expiration time to the current time:
 
 ```powershell
 PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsAD2
@@ -159,21 +160,21 @@ The next time Windows LAPS processes the current policy, it sees the modified pa
 
 You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotation of the password.
 
-## Retrieve passwords during AD disaster recovery scenarios
+## Retrieve passwords during Windows Server Active Directory disaster recovery scenarios
 
-To retrieve Windows LAPS passwords (including DSRM passwords), you normally need at least one Active Directory DC to be available. In a catastrophic scenario, all the DCs in a domain might be down. How do you recover passwords in that situation?
+To retrieve Windows LAPS passwords (including DSRM passwords), you normally need at least one Windows Server Active Directory domain controller to be available. In a catastrophic scenario, all the domain controllers in a domain might be down. How do you recover passwords in that situation?
 
-Active Directory management best practices advise regularly backing up all DCs. You can query Windows LAPS passwords stored in a mounted backup AD database by using the `Get-LapsADPassword` PowerShell cmdlet and specifying the `-Port` parameter.
+Best practices for the management of Windows Server Active Directory advise regularly backing up all domain controllers. You can query Windows LAPS passwords stored in a mounted backup Windows Server Active Directory database by using the `Get-LapsADPassword` PowerShell cmdlet and specifying the `-Port` parameter.
 
-In Windows Insider build 27695 and later, the `Get-LapsADPassword` cmdlet offers improved password retrieval capabilities. Specifically, when you use the `Get-LapsADPassword` cmdlet and specify both the `-Port` and `-RecoveryMode` parameters, password recovery succeeds with no need to contact a DC. Also, you can run `Get-LapsADPassword` in this mode on a workgroup (non-domain-joined) machine. This functionality is available in client and server operating systems.
+In Windows Insider build 27695 and later, the `Get-LapsADPassword` cmdlet offers improved password retrieval capabilities. Specifically, when you use the `Get-LapsADPassword` cmdlet and specify both the `-Port` and `-RecoveryMode` parameters, password recovery succeeds with no need to contact a domain controller. Also, you can run `Get-LapsADPassword` in this mode on a workgroup (non-domain-joined) machine. This functionality is available in client and server operating systems.
 
 > [!TIP]
-> You can use the `dsamain.exe` utility to mount Active Directory backup media and query it over LDAP. The `dsamain.exe` tool isn't installed by default, so it has to be added. You can use the `Enable-WindowsOptionalFeature` cmdlet to enable it.
+> You can use the `dsamain.exe` utility to mount Windows Server Active Directory backup media and query it over Lightweight Directory Access Protocol (LDAP). The `dsamain.exe` tool isn't installed by default, so it has to be added. You can use the `Enable-WindowsOptionalFeature` cmdlet to enable it.
 >
 > - On Windows Client machines, you can run `Enable-WindowsOptionalFeature -Online -FeatureName DirectoryServices-ADAM-Client`.
 > - On a Windows Server machine, you can run `Enable-WindowsOptionalFeature -Online -FeatureName DirectoryServices-ADAM`.
 
-The following code queries Windows LAPS passwords that are stored in an Active Directory backup database that's locally mounted on port 50000:
+The following code queries Windows LAPS passwords that are stored in a Windows Server Active Directory backup database that's locally mounted on port 50000:
 
 ```powershell
 PS C:\> Get-LapsADPassword -Identity lapsDC -AsPlainText -Port 50000 -RecoveryMode
@@ -192,21 +193,21 @@ AuthorizedDecryptor : S-1-5-21-2127521184-1604012920-1887927527-35197
 ```
 
 > [!IMPORTANT]
-> When encrypted Windows LAPS passwords are retrieved from an AD backup database that's mounted on a workgroup machine, the `AuthorizedDecryptor` field is always displayed in raw security identifier (SID) format. The workgroup machine is unable to translate the SID into a friendly name.
+> When encrypted Windows LAPS passwords are retrieved from a Windows Server Active Directory backup database that's mounted on a workgroup machine, the `AuthorizedDecryptor` field is always displayed in raw security identifier (SID) format. The workgroup machine is unable to translate the SID into a friendly name.
 
 ## See also
 
-- [Introducing Windows Local Administrator Password Solution with Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Introducing Windows Local Administrator Password Solution with Microsoft Entra ID (Azure AD)](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/introducing-windows-local-administrator-password-solution-with-microsoft-entra-a/1942487)
 - [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps)
 - [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups)
-- [Microsoft Intune](/mem/intune)
-- [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
+- [Microsoft Intune](/intune/intune-service/)
+- [Microsoft Intune support for Windows LAPS](/intune/intune-service/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
+- [Windows LAPS troubleshooting guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 
-- [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
+- [Configure policy settings for Windows LAPS](laps-management-policy-settings.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
 - [Use Windows LAPS PowerShell cmdlets](laps-management-powershell.md)
 - [Key concepts in Windows LAPS](laps-concepts-overview.md)
