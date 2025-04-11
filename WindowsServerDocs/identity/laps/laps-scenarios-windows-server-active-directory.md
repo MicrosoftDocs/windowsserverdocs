@@ -46,7 +46,7 @@ PS C:\> Update-LapsADSchema
 
 ## Grant the managed device permission to update its password
 
-When you use Windows LAPS to manage a password for a device, that managed device needs to be granted permission to update its password. You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADComputerSelfPermission` cmdlet for this purpose, as shown in the following code:
+When you use Windows LAPS to manage a password on a device, that managed device needs to be granted permission to update its password. You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADComputerSelfPermission` cmdlet for this purpose, as shown in the following code:
 
 ```powershell
 PS C:\> Set-LapsADComputerSelfPermission -Identity NewLaps
@@ -63,7 +63,7 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 
 ## Query extended rights permissions
 
-Some users or groups might have the extended rights permission on the managed device's OU. This situation is problematic, because users who have this permission can read confidential attributes, and all the Windows LAPS password attributes are marked as confidential.
+Some users or groups might have the extended rights permission on the OU of the managed device. This situation is problematic, because users who have this permission can read confidential attributes, and all the Windows LAPS password attributes are marked as confidential.
 
 You can use the `Find-LapsADExtendedRights` cmdlet to see who has this permission, as shown in the following code:
 
@@ -140,11 +140,11 @@ In this output, the `Source` line indicates that password encryption is enabled.
 
 ## Rotate a password
 
-Windows LAPS reads the password expiration time for a managed device from Windows Server Active Directory during each policy processing cycle. If the password is expired, a new password is generated and stored immediately.
+Windows LAPS reads the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password is expired, a new password is generated and stored immediately.
 
 In some situations, you might want to rotate the password early, for instance, after a security breach or during ad hoc testing. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet.
 
-You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time that's stored in Windows Server Active Directory for a managed device. The following code sets the expiration time to the current time:
+You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time that's stored in Windows Server Active Directory. The following code sets the expiration time to the current time:
 
 ```powershell
 PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsAD2
