@@ -9,24 +9,24 @@ ms.topic: conceptual
 
 # Get started with Windows LAPS and Windows Server Active Directory
 
-See how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Windows Server Active Directory and how to retrieve them.
+Windows Local Administrator Password Solution (Windows LAPS) provides automatic management of passwords for local administrator accounts and domain controller Directory Services Restore Mode (DSRM) accounts. This article shows you how to get started with Windows LAPS and Windows Server Active Directory. It describes basic procedures for using Windows LAPS to back up passwords to Windows Server Active Directory and retrieve them.
 
 ## Domain functional level and domain controller operating system version requirements
 
-If your domain is configured below the 2016 domain functional level (DFL), you can't enable Windows LAPS password encryption. Without password encryption:
+If you domain functional level (DFL) is earlier than 2016, you can't enable Windows LAPS password encryption. Without password encryption:
 
 - You can configure clients to store passwords only in clear text, secured by Active Directory access control lists (ACLs).
-- You can't configure domain controllers (DCs) to manage their local Directory Services Restore Mode (DSRM) account.
+- You can't configure domain controllers (DCs) to manage their local DSRM account.
 
-When your domain uses a DFL of 2016, you can enable Windows LAPS password encryption. However, any Windows Server 2016 DCs that you're running don't support Windows LAPS. As a result, those DCs can't use the DSRM account management feature.
+When your domain uses a DFL of 2016, you can enable Windows LAPS password encryption. However, any Windows Server 2016 DCs that you run don't support Windows LAPS. As a result, those DCs can't use the DSRM account management feature.
 
-It's fine to use supported operating systems older than Windows Server 2016 on your DCs as long as you're aware of these limitations.
+It's fine to use Windows Server 2016 and earlier supported operating systems on your DCs as long as you're aware of these limitations.
 
 The following table summarizes the support that's provided for various scenarios:
 
 |Domain details|Clear-text password storage supported|Encrypted password storage supported (for domain-joined clients) |DSRM account management supported (for DCs)|
 |--- |--- |--- |--- |
-|Below 2016 DFL|Yes|No|No|
+|DFL earlier than 2016|Yes|No|No|
 |2016 DFL with one or more Windows Server 2016 DCs|Yes|Yes|Yes but only for Windows Server 2019 and later DCs|
 |2016 DFL with only Windows Server 2019 and later DCs|Yes|Yes|Yes|
 
@@ -43,9 +43,9 @@ PS C:\> Update-LapsADSchema
 > [!TIP]
 > Include the `-Verbose` parameter in the command to see detailed information about the progress of the cmdlet during processing. You can use the `-Verbose` parameter with any cmdlet in the LAPS PowerShell module.
 
-## Grant the managed device password update permission
+## Grant the managed device permission to update its password
 
-When you use Windows LAPS to manage a password for a device, that managed device needs to be granted permission to update its password. You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. The following code shows you how to use the `Set-LapsADComputerSelfPermission` cmdlet for this purpose:
+When you use Windows LAPS to manage a password for a device, that managed device needs to be granted permission to update its password. You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADComputerSelfPermission` cmdlet for this purpose, as shown in the following code:
 
 ```powershell
 PS C:\> Set-LapsADComputerSelfPermission -Identity NewLaps
@@ -62,7 +62,9 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 
 ## Query extended rights permissions
 
-Some users or groups might have the extended rights permission on the managed device's OU. This permission is problematic, because users who have this permission can read confidential attributes, and all the Windows LAPS password attributes are marked as confidential. The following code shows you how to use the `Find-LapsADExtendedRights` cmdlet to see who has this permission:
+Some users or groups might have the extended rights permission on the managed device's OU. This permission is problematic, because users who have this permission can read confidential attributes, and all the Windows LAPS password attributes are marked as confidential.
+
+You can use the `Find-LapsADExtendedRights` cmdlet to see who has this permission, as shown in the following code:
 
 ```powershell
 PS C:\> Find-LapsADExtendedRights -Identity newlaps
@@ -74,7 +76,7 @@ ObjectDN                  ExtendedRightHolders
 OU=NewLAPS,DC=laps,DC=com {NT AUTHORITY\SYSTEM, LAPS\Domain Admins}
 ```
 
-In the output, only trusted entities (SYSTEM and Domain Admins) have the permission. No other action is required.
+In the output, only trusted entities (SYSTEM and Domain Admins) have the permission. No other action is required in this case.
 
 ## Configure device policy
 
@@ -105,7 +107,7 @@ When you don't configure a given setting, the default value is applied. Make sur
 
 ## Update a password in Windows Server Active Directory
 
-Windows LAPS processes the currently active policy on a periodic basis (every hour) and responds to Group Policy change notifications. It responds based on the policy and change notifications.
+Windows LAPS processes the active policy every hour. You can also start the processing cycle manually, because Windows LAPS responds to Group Policy change notifications.
 
 To verify that a password is successfully updated in Windows Server Active Directory, look in the event log for an event with ID 10018:
 
@@ -115,7 +117,7 @@ To avoid waiting after you apply the policy, you can run the `Invoke-LapsPolicyP
 
 ## Retrieve a password from Windows Server Active Directory
 
-The following code shows you how to use the `Get-LapsADPassword` cmdlet to retrieve passwords from Windows Server Active Directory:
+You can use the `Get-LapsADPassword` cmdlet to retrieve passwords from Windows Server Active Directory, as shown in the following code:
 
 ```powershell
 PS C:\> Get-LapsADPassword -Identity lapsAD2 -AsPlainText
@@ -125,7 +127,7 @@ PS C:\> Get-LapsADPassword -Identity lapsAD2 -AsPlainText
 ComputerName        : LAPSAD2
 DistinguishedName   : CN=LAPSAD2,OU=NewLAPS,DC=laps,DC=com
 Account             : Administrator
-Password            : Zlh+lzC[0e0/VU
+Password            : <password>
 PasswordUpdateTime  : 7/1/2022 1:23:19 PM
 ExpirationTimestamp : 7/31/2022 1:23:19 PM
 Source              : EncryptedPassword
@@ -135,13 +137,13 @@ AuthorizedDecryptor : LAPS\Domain Admins
 
 In this output, the `Source` line indicates that password encryption is enabled. Password encryption requires that your domain is configured for a Windows Server 2016 or later DFL.
 
-## Rotate the password
+## Rotate a password
 
 Windows LAPS reads the password expiration time for a managed device from Windows Server Active Directory during each policy processing cycle. If the password is expired, a new password is generated and stored immediately.
 
 In some situations, you might want to rotate the password early, for instance, after a security breach or during ad hoc testing. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet.
 
-The following code shows you how to use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time that's stored in Windows Server Active Directory for a managed device:
+You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time that's stored in Windows Server Active Directory for a managed device. The following code provides an example:
 
 ```powershell
 PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsAD2
@@ -157,7 +159,7 @@ The next time Windows LAPS processes the current policy, it sees the modified pa
 
 You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotation of the password.
 
-## Retrieving passwords during AD disaster recovery scenarios
+## Retrieve passwords during AD disaster recovery scenarios
 
 To retrieve Windows LAPS passwords (including DSRM passwords), you normally need at least one Active Directory DC to be available. In a catastrophic scenario, all the DCs in a domain might be down. How do you recover passwords in that situation?
 
@@ -171,7 +173,7 @@ In Windows Insider build 27695 and later, the `Get-LapsADPassword` cmdlet offers
 > - On Windows Client machines, you can run `Enable-WindowsOptionalFeature -Online -FeatureName DirectoryServices-ADAM-Client`.
 > - On a Windows Server machine, you can run `Enable-WindowsOptionalFeature -Online -FeatureName DirectoryServices-ADAM`.
 
-The following code shows you how to query Windows LAPS passwords stored in an Active Directory backup database that's locally mounted on port 50000:
+The following code queries Windows LAPS passwords that are stored in an Active Directory backup database that's locally mounted on port 50000:
 
 ```powershell
 PS C:\> Get-LapsADPassword -Identity lapsDC -AsPlainText -Port 50000 -RecoveryMode
@@ -181,7 +183,7 @@ PS C:\> Get-LapsADPassword -Identity lapsDC -AsPlainText -Port 50000 -RecoveryMo
 ComputerName        : LAPSDC
 DistinguishedName   : CN=LAPSDC,OU=Domain Controllers,DC=laps,DC=com
 Account             : Administrator
-Password            : ArrowheadArdentlyJustifyingKryptonVixen
+Password            : <password>
 PasswordUpdateTime  : 8/15/2024 10:31:51 AM
 ExpirationTimestamp : 9/14/2024 10:31:51 AM
 Source              : EncryptedDSRMPassword
