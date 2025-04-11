@@ -28,7 +28,7 @@ The following table summarizes the functionality that's supported in various sce
 |Domain details|Clear-text password storage supported|Encrypted password storage supported (for domain-joined clients) |DSRM account management supported (for domain controllers)|
 |--- |--- |--- |--- |
 |DFL earlier than 2016|Yes|No|No|
-|2016 DFL with one or more Windows Server 2016 domain controllers|Yes|Yes|Yes but only for Windows Server 2019 and later domain controllers|
+|2016 DFL with one or more Windows Server 2016 or earlier domain controllers|Yes|Yes|Yes but only for Windows Server 2019 and later domain controllers|
 |2016 DFL with only Windows Server 2019 and later domain controllers|Yes|Yes|Yes|
 
 We strongly recommend that you upgrade to the latest available operating system on clients, servers, and domain controllers in order to take advantage of the latest features and security improvements.
@@ -42,7 +42,7 @@ PS C:\> Update-LapsADSchema
 ```
 
 > [!TIP]
-> Include the `-Verbose` parameter in the command to see detailed information about the progress of the cmdlet during processing. You can use the `-Verbose` parameter with any cmdlet in the LAPS PowerShell module.
+> Include the `-Verbose` parameter in the command line to see detailed information about the progress of the cmdlet during processing. You can use the `-Verbose` parameter with any cmdlet in the LAPS PowerShell module.
 
 ## Grant the managed device permission to update its password
 
@@ -114,7 +114,7 @@ To verify that a password is successfully updated in Windows Server Active Direc
 
 :::image type="content" source="./media/laps-scenarios-windows-server-active-directory/laps-scenarios-windows-server-active-directory-password-update-event.png" alt-text="Screenshot of the event log. An event with ID 10018 is selected. Its log shows a password was successfully updated in Windows Server Active Directory.":::
 
-To avoid waiting after you apply the policy, you can run the `Invoke-LapsPolicyProcessing` PowerShell cmdlet.
+To avoid waiting after you apply the policy, you can run the `Invoke-LapsPolicyProcessing` PowerShell cmdlet to process the policy immediately.
 
 ## Retrieve a password from Windows Server Active Directory
 
@@ -142,7 +142,7 @@ In this output, the `Source` line indicates that password encryption is enabled.
 
 Windows LAPS reads the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password is expired, a new password is generated and stored immediately.
 
-In some situations, you might want to rotate the password early, for instance, after a security breach or during ad hoc testing. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet.
+In some situations, you might want to rotate the password early, for instance, after a security breach or during impromptu testing. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet.
 
 You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time that's stored in Windows Server Active Directory. The following code sets the expiration time to the current time:
 
@@ -156,7 +156,7 @@ DistinguishedName                           Status
 CN=LAPSAD2,OU=NewLAPS,DC=laps,DC=com PasswordReset
 ```
 
-The next time Windows LAPS processes the current policy, it sees the modified password expiration time and rotates the password. If you don't want to wait, you can run the `Invoke-LapsPolicyProcessing` cmdlet.
+The next time Windows LAPS processes the current policy, it sees the modified password expiration time and rotates the password. If you don't want to wait for the next processing cycle, you can run the `Invoke-LapsPolicyProcessing` cmdlet to process the policy immediately.
 
 You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotation of the password.
 
