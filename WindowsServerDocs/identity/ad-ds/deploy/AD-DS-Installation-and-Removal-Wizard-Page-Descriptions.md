@@ -281,7 +281,7 @@ This page displays potential problems that are detected during the prerequisites
 
 - Domain controllers that run Windows Server have a default setting, **Allow cryptography algorithms compatible with Windows NT 4**, that prevents clients that use weaker cryptography algorithms from establishing secure channel sessions. For more information about the potential impact and a workaround, see [Disable the AllowNT4Crypto setting on all affected domain controllers](/services-hub/unified/health/remediation-steps-ad/disable-the-allownt4crypto-setting-on-all-affected-domain-controllers).
 
-- A DNS delegation can't be created or updated. For more information, see [DNS Options](#BKMK_DNSOptionsPage).
+- A DNS delegation can't be created or updated. For more information, see [DNS Options](#dns-options).
 
 - Windows Management Instrumentation (WMI) calls fail. The prerequisite check requires WMI calls. If a WMI call is blocked by firewall rules, it can fail and return a remote procedure call (RPC) server unavailable error.
 
