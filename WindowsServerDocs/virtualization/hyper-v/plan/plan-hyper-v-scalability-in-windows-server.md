@@ -24,7 +24,7 @@ These maximums apply to each virtual machine when the host is run the selected p
 > [!TIP]
 > The total number of virtual processors in VMs we created does not map directly to the number of logical processors on the host. As the example, if a machine has 8 logical processors and we created 8 VMs with 2 virtual processors for each. This does not mean the machine now has 16 logical processors. This simply means that we are oversubscribing the VMs we created.
 > •	Each VM is allowed a maximum of 2,048 virtual processors. 
-> •	The host is limited to 2,048 logical processors. 
+> The host is limited to 2,048 logical processors. 
 
 
 |Component|Maximum|Notes|
