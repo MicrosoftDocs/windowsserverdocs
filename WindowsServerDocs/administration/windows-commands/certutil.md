@@ -22,7 +22,7 @@ If `certutil` is run on a certification authority without other parameters, it d
 
 ## Parameters
 
-### -dump
+### :::no-loc::: -dump
 
 Dumps the configuration information or files.
 
@@ -268,7 +268,7 @@ certutil [options] -getconfig2
 Options:
 
 ```cmd
-[-idispatch] 
+[-idispatch]
 ```
 
 ### -getconfig3
@@ -282,7 +282,7 @@ certutil [options] -getconfig3
 Options:
 
 ```cmd
-[-idispatch] 
+[-idispatch]
 ```
 
 ### -ping
@@ -853,7 +853,7 @@ Where:
   - `ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)`
   - `ldap: (AD computer object certificates)`
   - `-user ldap: (AD user object certificates)`
-  
+
 - **CertId** is the certificate or CRL match token. This ID can be a:
 
   - Serial number
@@ -1269,7 +1269,7 @@ Displays DS CRLs.
 ```cmd
 certutil [options] -dsCRL [FullDSDN] | [CRLIndex [OutFile]]
 ```
-  
+
 Options:
 
 ```cmd
@@ -1283,7 +1283,7 @@ Displays DS delta CRLs.
 ```cmd
 certutil [options] -dsDeltaCRL [FullDSDN] | [CRLIndex [OutFile]]
 ```
-  
+
 Options:
 
 ```cmd
@@ -1297,7 +1297,7 @@ Displays DS template attributes.
 ```cmd
 certutil [options] -dsTemplate [Template]
 ```
-  
+
 Options:
 
 ```cmd
@@ -1589,7 +1589,7 @@ certutil [options] -pulse [TaskName [SRKThumbprint]]
 Where:
 
 - **TaskName** is the task to trigger.
-  - **Pregen** is the NGC Key pregen task.  
+  - **Pregen** is the NGC Key pregen task.
   - **AIKEnroll** is the NGC AIK certificate enrollment task. (Defaults to the autoenrollment event).
 - **SRKThumbprint** is the thumbprint of the Storage Root Key
 - **Modifiers**:
@@ -1718,7 +1718,7 @@ certutil [options] -key [KeyContainerName | -]
 Where:
 
 - **KeyContainerName** is the key container name for the key to verify. This option defaults to machine keys. To switch to user keys, use `-user`.
-- Using the `-` sign refers to using the default key container.  
+- Using the `-` sign refers to using the default key container.
 
 Options:
 
@@ -2142,7 +2142,7 @@ Where:
       2.5.29.15 = {hex} ; Update Key Usage extension
       _continue_=03 02 01 86
   ```
-  
+
 - **HashAlgorithm** is the name of the hash algorithm. This must only be the text preceded by the `#` sign.
 - **AlternateSignatureAlgorithm** is the alternate signature algorithm specifier.
 
