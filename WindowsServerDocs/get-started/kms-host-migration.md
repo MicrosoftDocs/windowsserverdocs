@@ -45,39 +45,6 @@ Before proceeding with your installation and licensing tasks, review the followi
 
 - Your OS must have the latest Windows updates installed before configuring your device as a KMS host.
 
-## Verify firewall settings
-
-Before proceeding on how to manage a KMS host, ensure that the firewall exception is configured for port **1688** to accept activation requests from KMS clients.
-
-# [GUI](#tab/gui)
-
-1. Select **Start**, type **wf.msc**, then select it to open the **Windows Defender Firewall with Advanced Security**.
-1. In the left pane, select **Inbound Rules**.
-1. In the right pane, select **New Rule** to open the **New Inbound Rule Wizard**.
-1. Under **Rule Type**, select **Port**, then select **Next**.
-1. Under **Protocol and Ports**, select **TCP**, enter **1688** in the **Specific local ports** field, then select **Next**.
-1. Under **Action**, ensure **Allow the connection** is selected, then select **Next**.
-1. Under **Profile**, **Domain**, **Private**, and **Public** are selected by default. Select **Next**.
-1. Under **Name**, provide any name desired for your rule, such as "KMS Host", then select **Finish**.
-
-# [PowerShell](#tab/powershell)
-
-Run the following command in an elevated PowerShell window:
-
-```powershell
-New-NetFirewallRule -DisplayName "KMS Host" -Direction Inbound -Protocol TCP -LocalPort 1688 -Action Allow
-```
-
----
-
-To verify that traffic is allowed through port 1688, run the following command where values for **ComputerName** are the device name or IP address:
-
-```powershell
-Test-NetConnection -ComputerName "MyDevice" -Port 1688
-```
-
-When the connection succeeds, the entry **TcpTestSucceeded** equals **True**, while if the connection to port 1688 can’t be made (for instance, if no service is listening or because of a firewall or network issue) then **TcpTestSucceeded** equals **False**.
-
 ## Manage a KMS host
 
 When a KMS host is deployed, network administrators can streamline the activation process for all client machines, reducing the need for individual product keys while bolstering compliance. This process involves installing the appropriate KMS host key, configuring services for automatic client discovery through DNS, and implementing secure communication channels via firewall rules. Performing these actions can be done in an elevated command prompt or PowerShell window.
@@ -126,6 +93,10 @@ Resolve-DnsName -Name _vlmcs._tcp.example.com -Type SRV -Server 8.8.8.8
 
 ---
 
+## Install OS on KMS host
+
+
+
 ## Evaluate a KMS host
 
 To verify which products the current KMS host is activating and ensure the new KMS host activates the same Windows OS and Microsoft Office clients, run the following command:
@@ -139,6 +110,39 @@ cscript $env:windir\system32\slmgr.vbs /dlv All
 ```
 
 Check the output to determine whether the KMS host is processing activation requests for the Windows OS, Microsoft Office, or both. The partial product keys displayed can help you match these KMS host keys (CSVLK) with your records. Additionally, review the KMS Host Event log to identify which clients are sending activation requests to this KMS host.
+
+## Verify firewall settings
+
+Before proceeding on how to manage a KMS host, ensure that the firewall exception is configured for port **1688** to accept activation requests from KMS clients.
+
+# [GUI](#tab/gui)
+
+1. Select **Start**, type **wf.msc**, then select it to open the **Windows Defender Firewall with Advanced Security**.
+1. In the left pane, select **Inbound Rules**.
+1. In the right pane, select **New Rule** to open the **New Inbound Rule Wizard**.
+1. Under **Rule Type**, select **Port**, then select **Next**.
+1. Under **Protocol and Ports**, select **TCP**, enter **1688** in the **Specific local ports** field, then select **Next**.
+1. Under **Action**, ensure **Allow the connection** is selected, then select **Next**.
+1. Under **Profile**, **Domain**, **Private**, and **Public** are selected by default. Select **Next**.
+1. Under **Name**, provide any name desired for your rule, such as "KMS Host", then select **Finish**.
+
+# [PowerShell](#tab/powershell)
+
+Run the following command in an elevated PowerShell window:
+
+```powershell
+New-NetFirewallRule -DisplayName "KMS Host" -Direction Inbound -Protocol TCP -LocalPort 1688 -Action Allow
+```
+
+---
+
+To verify that traffic is allowed through port 1688, run the following command where values for **ComputerName** are the device name or IP address:
+
+```powershell
+Test-NetConnection -ComputerName "MyDevice" -Port 1688
+```
+
+When the connection succeeds, the entry **TcpTestSucceeded** equals **True**, while if the connection to port 1688 can’t be made (for instance, if no service is listening or because of a firewall or network issue) then **TcpTestSucceeded** equals **False**.
 
 ## Test a KMS host
 
