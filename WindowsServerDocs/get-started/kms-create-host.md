@@ -23,13 +23,13 @@ KMS hosts don't need to be dedicated servers. You can host other services on a K
 
 The version of Windows you use for your KMS host determines the version of Windows you can activate for your KMS clients. For help with deciding which version is appropriate for your environment, see the [table of activation versions](kms-activation-planning.md#activation-versions).
 
-By default, KMS hosts publish Service (SRV) resource records in Domain Name System (DNS). As a result, KMS clients can automatically discover the KMS host and activate without the need for any configuration on the KMS client. You can disable automatic publishing and create the records manually. These steps are needed for automatic activation if the DNS service doesn't support dynamic updates.
+By default, KMS hosts publish Service (SRV) resource records in your Domain Name System (DNS). As a result, KMS clients can automatically discover the KMS host and activate without the need for any configuration on the KMS client. You can disable automatic publishing and create the records manually. These steps are needed for automatic activation if the DNS service doesn't support dynamic updates.
 
 To create a KMS host, you need the following prerequisites:
 
 - A computer running Windows Server or Windows. A KMS host running on Windows Server can activate computers running both server and client operating systems. However, a KMS host running on a Windows client operating system can only activate computers also running client operating systems.
 - A user account that's a member of the Administrators group on the KMS host.
-- KMS and client versions that are compatible with each other, and a Windows version that can run KMS. For more information, see [Key Management Services (KMS) activation planning](kms-activation-planning.md?tabs=server25).
+- KMS and client versions that are compatible with each other, and a Windows version that can host KMS. For more information, see [Key Management Services (KMS) activation planning](kms-activation-planning.md?tabs=server25).
 - A KMS host key for your organization. You can get this key from the Microsoft 365 admin center. For more information, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl).
 - Access to the internet for activating the KMS host or performing a phone activation.
 
@@ -95,7 +95,7 @@ After the activation finishes successfully, the KMS host configuration appears.
 
 ## Manually create DNS records
 
-If your DNS service doesn't support dynamic updates, you must manually create the resource records in order to publish the KMS host. Create DNS resource records for KMS manually with your DNS service by using the following information. If you change the default port number in the KMS host configuration, also adjust the port number that you use for the records.
+If your DNS service doesn't support dynamic updates, you must manually create the resource records in order to publish the KMS host. Create DNS resource records for KMS manually with your DNS service by using the following information. If you change the default port number in the KMS host configuration, also adjust the port number that you use for the resource records.
 
 | Property | Value |
 |--|--|
