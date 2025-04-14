@@ -22,7 +22,7 @@ If `certutil` is run on a certification authority without other parameters, it d
 
 ## Parameters
 
-### :::no-loc::: -dump
+### :::no-loc text="-dump":::
 
 Dumps the configuration information or files.
 
