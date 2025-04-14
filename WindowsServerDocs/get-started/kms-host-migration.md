@@ -124,7 +124,7 @@ Check the output to determine whether the KMS host is processing activation requ
 
 ## Verify firewall settings
 
-Before proceeding on how to manage a KMS host, ensure that the firewall exception is configured for port **1688** to accept activation requests from KMS clients.
+Before proceeding on how to manage a KMS host, ensure that the firewall exception is configured for port **1688** to accept activation requests from KMS clients. Additionally, port **135** (Anonymous RPC) also needs to be configured.
 
 # [GUI](#tab/gui)
 
@@ -137,17 +137,20 @@ Before proceeding on how to manage a KMS host, ensure that the firewall exceptio
 1. Under **Profile**, **Domain**, **Private**, and **Public** are selected by default. Select **Next**.
 1. Under **Name**, provide any name desired for your rule, such as "KMS Host", then select **Finish**.
 
+Repeat these steps to configure port **135**.
+
 # [PowerShell](#tab/powershell)
 
 Run the following command in an elevated PowerShell window:
 
 ```powershell
-New-NetFirewallRule -DisplayName "KMS Host" -Direction Inbound -Protocol TCP -LocalPort 1688 -Action Allow
+New-NetFirewallRule -DisplayName "KMS Host Activation" -Direction Inbound -Protocol TCP -LocalPort 1688 -Action Allow
+New-NetFirewallRule -DisplayName "KMS Host RPC" -Direction Inbound -Protocol TCP -LocalPort 135 -Action Allow
 ```
 
 ---
 
-To verify that traffic is allowed through port 1688, run the following command where values for **ComputerName** are the device name or IP address:
+To verify that traffic is allowed through port **1688** or **135**, run the following command where values for **ComputerName** are the device name or IP address:
 
 ```powershell
 Test-NetConnection -ComputerName "MyDevice" -Port 1688
