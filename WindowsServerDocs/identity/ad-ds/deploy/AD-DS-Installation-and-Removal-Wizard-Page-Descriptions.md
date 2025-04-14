@@ -15,31 +15,31 @@ ms.topic: article
 In Server Manager, you can use the Active Directory Domain Services Configuration Wizard to promote a server to a domain controller and to demote a server. This article describes the controls on the following pages in that wizard.
 
 - For promoting a server to a domain controller:
-  - [Deployment Configuration](#BKMK_DepConfigPage)
-  - [Domain Controller Options](#BKMK_DCOptionsPage)
-  - [DNS Options](#BKMK_DNSOptionsPage)
-  - [RODC Options](#BKMK_RODCOptionsPage)
-  - [Additional Options](#BKMK_AdditionalOptionsPage)
-  - [Paths](#BKMK_Paths)
-  - [Preparation Options](#BKMK_AdprepCreds)
-  - [Review Options](#BKMK_ViewInstallOptionsPage)
-  - [Prerequisites Check](#BKMK_PrerqCheckPage)
-  - [Results](#BKMK_Results)
+  - [Deployment Configuration](#deployment-configuration)
+  - [Domain Controller Options](#domain-controller-options)
+  - [DNS Options](#dns-options)
+  - [RODC Options](#rodc-options)
+  - [Additional Options](#additional-options)
+  - [Paths](#paths)
+  - [Preparation Options](#preparation-options)
+  - [Review Options](#review-options)
+  - [Prerequisites Check](#prerequisites-check)
+  - [Results](#results)
 
 - For demoting a domain controller:
-  - [Credentials](#BKMK_RemovalCredsPage)
-  - [Warnings](#BKMK_RemovalOptionsPage)
+  - [Credentials](#credentials)
+  - [Warnings](#warnings)
   - [Removal Options](#removal-options)
-  - [New Administrator Password](#BKMK_NewAdminPwdPage)
-  - [Review Options](#BKMK_ConfirmRoleRemovalPage)
+  - [New Administrator Password](#new-administrator-password)
+  - [Review Options](#review-options)
 
 ## Promote a server to a domain controller
 
 The following sections describe the pages that you see when you use the Active Directory Domain Services Configuration Wizard to promote a server to a domain controller.
 
-### <a name="BKMK_DepConfigPage"></a>Deployment Configuration
+### Deployment Configuration
 
-Server Manager begins every domain controller installation with the **Deployment Configuration** page. The options and required fields that you see on this page and subsequent pages depend on which deployment operation you select. For example, if you create a forest, the **Preparation Options** page doesn't appear. But if you install the first domain controller that runs Windows Server 2012 in an existing forest or domain, that page does appear.
+Server Manager begins every domain controller installation with the **Deployment Configuration** page. The options and required fields that you see on this page and subsequent pages depend on which deployment operation you select.
 
 The wizard runs some validations and tests on the **Deployment Configuration** page and again later as part of prerequisite checks. For example, a check is performed when you try to install the first Windows Server domain controller in a forest. If the functional level of the forest doesn't support the Windows Server version of the domain controller, an error appears on this page.
 
@@ -95,7 +95,7 @@ The following screenshot shows you the options that appear when you add a new do
 
 For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](./Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
 
-### <a name="BKMK_DCOptionsPage"></a>Domain Controller Options
+### Domain Controller Options
 
 The options that you see on the **Domain Controller Options** page depend on your deployment operation. The following sections describe the options that you configure for each operation.
 
@@ -165,7 +165,7 @@ We recommend that all domain controllers provide DNS and global catalog services
 
 For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](./Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
 
-### <a name="BKMK_DNSOptionsPage"></a>DNS Options
+### DNS Options
 
 If you install the DNS server role, the following **DNS Options** page appears:
 
@@ -190,7 +190,7 @@ For more information about delegation, see [Understanding zone delegation](/prev
 - [Understanding stub zones](/previous-versions/windows/it-pro/windows-server-2003/cc779197(v=ws.10))
 - [Understanding forwarders](/previous-versions/windows/it-pro/windows-server-2003/cc782142(v=ws.10))
 
-### <a name="BKMK_RODCOptionsPage"></a>RODC Options
+### RODC Options
 
 The following screenshot shows the options that appear when you install an RODC.
 
@@ -211,7 +211,7 @@ The following screenshot shows the options that appear when you install an RODC.
 
 For more information about installing RODCs, see [Install a Windows Server 2012 Active Directory Read-Only Domain Controller &#40;RODC&#41; &#40;Level 200&#41;](./RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md).
 
-### <a name="BKMK_AdditionalOptionsPage"></a>Additional Options
+### Additional Options
 
 The following screenshot shows the option that appears on the **Additional Options** page when you create a domain:
 
@@ -227,7 +227,7 @@ The following screenshot shows the options that appear on the **Additional Optio
 
 For more information about how to create a domain, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md). For more information about how to add a domain controller to an existing domain, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](./Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).
 
-### <a name="BKMK_Paths"></a>Paths
+### Paths
 
 The following screenshot shows the options that appear on the **Paths** page:
 
@@ -235,7 +235,7 @@ The following screenshot shows the options that appear on the **Paths** page:
 
 You can use the **Paths** page to override the default folder locations of the AD DS database (NTDS.DIT), the database transaction logs, and the SYSVOL share. The default locations are always in the `%systemroot%` folder. For a local installation, you can select a location for storing the files.
 
-### <a name="BKMK_AdprepCreds"></a>Preparation Options
+### Preparation Options
 
 The following screenshot shows the **Preparation Options** page:
 
@@ -256,7 +256,7 @@ The `adprep.exe` tool is required to run in the following situations:
 
 For more information about `adprep.exe`, see [Adprep.exe integration](./What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep) and [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
-### <a name="BKMK_ViewInstallOptionsPage"></a>Review Options
+### Review Options
 
 The following screenshot shows the **Review Options** page:
 
@@ -271,7 +271,7 @@ The following screenshot shows the **Review Options** page:
 
   This process creates a valid and syntactically correct sample for further modification or direct use.
 
-### <a name="BKMK_PrerqCheckPage"></a>Prerequisites Check
+### Prerequisites Check
 
 The following screenshot shows the **Prerequisites Check** page:
 
@@ -287,7 +287,7 @@ This page displays potential problems that are detected during the prerequisites
 
 For more information about the specific prerequisite checks that are performed for AD DS installation, see [Prerequisite tests](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_ADDSInstallPrerequisiteTests).
 
-### <a name="BKMK_Results"></a>Results
+### Results
 
 The following screenshot shows the **Results** page:
 
@@ -305,7 +305,7 @@ If the target server fails to restart in these cases, you must manually restart 
 
 The following sections describe the pages that you see when you use the Active Directory Domain Services Configuration Wizard to demote a domain controller.
 
-### <a name="BKMK_RemovalCredsPage"></a>Credentials
+### Credentials
 
 The following screenshot shows the **Credentials** page that appears at the start of the demotion process.
 
@@ -322,7 +322,7 @@ On this page, you configure demotion options. The following credentials are need
 
 For more information about removing AD DS, see [Remove Active Directory Domain Services (Level 100)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472163(v=ws.11)) and [Demoting domain controllers and domains](Demoting-Domain-Controllers-and-Domains--Level-200-.md).
 
-### <a name="BKMK_RemovalOptionsPage"></a>Warnings
+### Warnings
 
 When you use Server Manager to demote a domain controller, the wizard displays warnings in certain cases. If the domain controller also hosts other roles, such as the DNS server or global catalog server roles, the following **Warnings** page appears:
 
@@ -362,7 +362,7 @@ If the domain controller that you demote is a DNS server that's delegated to hos
 
 For more information about removing AD DS, see [Remove Active Directory Domain Services (Level 100)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472163(v=ws.11)) and [Demoting domain controllers and domains](Demoting-Domain-Controllers-and-Domains--Level-200-.md).
 
-### <a name="BKMK_NewAdminPwdPage"></a>New Administrator Password
+### New Administrator Password
 
 The **New Administrator Password** page requires you to provide a password for the built-in local computer's Administrator account. This password is used when the demotion is complete and the computer becomes a domain member server or workgroup computer.
 
@@ -370,7 +370,7 @@ The **New Administrator Password** page requires you to provide a password for t
 
 For more information about removing AD DS, see [Remove Active Directory Domain Services (Level 100)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472163(v=ws.11)) and [Demoting domain controllers and domains](Demoting-Domain-Controllers-and-Domains--Level-200-.md).
 
-### <a name="BKMK_ConfirmRoleRemovalPage"></a>Review Options
+### Review Options
 
 The following screenshot shows the **Review Options** page that you see when you demote a domain controller:
 

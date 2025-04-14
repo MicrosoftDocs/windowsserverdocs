@@ -387,13 +387,13 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
 
     -   If you are adding a domain controller to an existing domain, click **Domain Name System (DNS) server**, **Global Catalog (GC)**, or **Read Only Domain Controller (RODC)** as needed, choose the site name, and type the DSRM password and then click **Next**.
 
-    For more information about which options on this page are available or not available under different conditions, see [Domain Controller Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DCOptionsPage).
+    For more information about which options on this page are available or not available under different conditions, see [Domain Controller Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#domain-controller-options).
 
 12. On the **DNS Options** page (which appears only if you install a DNS server), click **Update DNS delegation** as needed. If you do, provide credentials that have permission to create DNS delegation records in the parent DNS zone.
 
     If a DNS server that hosts the parent zone cannot be contacted, the **Update DNS Delegation** option is not available.
 
-    For more information about whether you need to update the DNS delegation, see [Understanding Zone Delegation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771640(v=ws.11)). If you attempt to update the DNS delegation and encounter an error, see [DNS Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage).
+    For more information about whether you need to update the DNS delegation, see [Understanding Zone Delegation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771640(v=ws.11)). If you attempt to update the DNS delegation and encounter an error, see [DNS Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#dns-options).
 
 13. On the **RODC Options** page (which appears only if you install an RODC), specify the name of a group or user who will manage the RODC, add accounts to or remove accounts from the Allowed or Denied password replication groups, and then click **Next**.
 
