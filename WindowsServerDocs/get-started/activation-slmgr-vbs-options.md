@@ -4,7 +4,7 @@ description: Provides a list of options available for the Slmgr.vbs script and d
 ms.topic: article
 author: Teresa-Motiv
 ms.author: alalve
-ms.date: 04/15/2015
+ms.date: 04/15/2025
 ---
 
 # Slmgr.vbs options for obtaining volume activation information
