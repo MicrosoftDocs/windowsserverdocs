@@ -3,8 +3,8 @@ title: Set up Remote Desktop web client for users
 description: Learn how to configure and manage the Remote Desktop web client for user access to remote apps and desktops.
 ms.topic: article
 author: xelu86
-ms.date: 04/15/2025
 ms.author: alalve
+ms.date: 04/15/2025
 ---
 
 # Set up the Remote Desktop web client for your users
@@ -29,7 +29,7 @@ Before getting started, keep the following things in mind:
 
 You'll see better performance connecting to Windows Server 2016 (or later) and Windows 10 (version 1611 or later).
 
-If you used the web client during the preview period and installed version 1.0.0 or earlier, you must first uninstall the old client before moving to the new version. If you receive an error that says "The web client was installed using an older version of RDWebClientManagement and must first be removed before deploying the new version," follow these steps:
+If you used the web client during the preview period and installed version 1.0.0 or earlier, you must first uninstall the old client before moving to the new version. If you receive an error that says "*The web client was installed using an older version of RDWebClientManagement and must first be removed before deploying the new version*", follow these steps:
 
 1. Open an elevated PowerShell prompt.
 1. Run **Uninstall-Module RDWebClientManagement** to uninstall the new module.
@@ -44,7 +44,7 @@ If you used the web client during the preview period and installed version 1.0.0
 
 To install the web client for the first time, follow these steps:
 
-1. On the RD Connection Broker server, obtain the certificate used for Remote Desktop connections and export it as a `.cer` file. Copy the .cer file from the RD Connection Broker to the server running the RD Web role.
+1. On the RD Connection Broker server, obtain the certificate used for Remote Desktop connections and export it as a `.cer` file. Copy the `.cer` file from the RD Connection Broker to the server running the RD Web role.
 1. On the RD Web Access server, open an elevated PowerShell prompt.
 1. On Windows Server 2016, update the PowerShellGet module since the inbox version doesn't support installing the web client management module. To update PowerShellGet, run the following cmdlet:
 
@@ -76,7 +76,7 @@ To install the web client for the first time, follow these steps:
    Install-RDWebClientPackage
    ```
 
-1. Next, run this cmdlet with the bracketed value replaced with the path of the .cer file that you copied from the RD Broker:
+1. Next, run this cmdlet with the bracketed value replaced with the path of the `.cer` file that you copied from the RD Broker:
 
    ```PowerShell
    Import-RDWebClientBrokerCert <.cer file path>
