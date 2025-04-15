@@ -299,7 +299,7 @@
         items:
         - name: AD DS metadata cleanup
           href: ad-ds/deploy/ad-ds-metadata-cleanup.md
-      - name: AD DS Installation and removal Wizard Page Descriptions
+      - name: AD DS installation and removal wizard page descriptions
         href: ad-ds/deploy/AD-DS-Installation-and-removal-Wizard-Page-Descriptions.md
       - name: Changes Made by Adprep
         href: ad-ds/deploy/adprep/changes-Made-by-Adprep.md
