@@ -386,8 +386,8 @@ To use this setting, you must set two server name values: the server from which 
 
 |                    Setting option                    |    Example value    |
 |-------------------------------------------------------|----------------------|
-| Set the intranet update service for detecting updates |  `http://wsus01:8530`  |
-|          Set the intranet statistics server           | `http://IntranetUpd01` |
+| Set the intranet update service for detecting updates |  `https://wsus01:8531`  |
+|          Set the intranet statistics server           | `https://IntranetUpd01` |
 
 #### Turn on recommended updates via Automatic Updates
 
@@ -453,9 +453,9 @@ The activation boundary is the daily scheduled time at which Automatic Maintenan
 
 |Policy setting state|Behavior|
 |-|-|
-|**Not Configured**|The daily scheduled time as specified on client computers in Control Panel > **Action Center** > **Automatic Maintenance** applies.|
-|**Enabled**|Any default or modified settings configured on client computers in Control Panel > **Action Center** > **Automatic Maintenance** (or in some client versions, **Maintenance**) are overridden.|
-|**Disabled**|The daily scheduled time as specified in Control Panel > **Action Center** > **Automatic Maintenance** applies.|
+|**Not Configured**|The daily scheduled time applies that's specified on client computers in Control Panel on the **Automatic Maintenance** page.|
+|**Enabled**|Any default or modified settings configured on client computers in Control Panel on the **Automatic Maintenance** page (or in some client versions, the **Maintenance** page) are overridden.|
+|**Disabled**|The daily scheduled time applies that's specified in Control Panel on the **Automatic Maintenance** page.|
 
 #### Automatic Maintenance Random Delay
 
@@ -493,9 +493,9 @@ The wake-up policy specifies whether Automatic Maintenance makes a wake-up reque
 
 |Policy setting state|Behavior|
 |-|-|
-|**Not Configured**|The wake-up setting as specified in Control Panel > **Action Center** > **Automatic Maintenance** applies.|
+|**Not Configured**|The wake-up setting applies that's specified in Control Panel on the **Automatic Maintenance** page.|
 |**Enabled**|Automatic Maintenance attempts to set an operating system wake-up policy and make a wake-up request for the daily scheduled time, if required.|
-|**Disabled**|The wake-up setting as specified in Control Panel > **Action Center** > **Automatic Maintenance** applies.|
+|**Disabled**|The wake-up setting applies that's specified in Control Panel on the **Automatic Maintenance** page.|
 
 ### User Configuration > Windows Update policy settings
 
@@ -542,7 +542,7 @@ You can use this policy setting to specify whether the **Install Updates and Shu
 |Policy setting state|Behavior|
 |-|-|
 |**Not Configured**|Specifies whether the **Install Updates and Shut Down** option is the default option in the **Shut Down Windows** dialog if updates are available for installation at the time the user selects the **Shut Down** option to shut down the computer.|
-|**Enabled**|Specifies whether the user's last shutdown choice (for example, **Hibernate** or **Restart**) is the default option in the **Shut Down Windows** dialog, regardless of whether the **Install Updates and Shut Down** option is available on the **What do you want the computer to do?** menu.|
+|**Enabled**|Specifies settings for the default option in the **Shut Down Windows** dialog. In particular, it specifies whether the user's last shutdown choice is the default option, regardless of whether the **Install Updates and Shut Down** option is available on the **What do you want the computer to do?** menu. Examples of shutdown choices are **Hibernate** and **Restart**.|
 |**Disabled**|Specifies whether the **Install Updates and Shut Down** option is the default option in the **Shut Down Windows** dialog if updates are available for installation at the time the user selects the **Shut Down** option to shut down the computer.|
 
 **Options:** There are no options for this setting.
