@@ -3,7 +3,7 @@ title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Arc-enabled Windows Server
 ms.topic: overview
 author: davannaw-msft
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 10/30/2024
 ms.custom: references_regions
 ---
@@ -11,7 +11,7 @@ ms.custom: references_regions
 # Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
 
 > [!IMPORTANT]
-> Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
+> Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) The current version can be [downloaded here](https://aka.ms/AzureConnectedMachineAgent).
 
 Using Windows Admin Center in the Azure portal allows you to manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine. To learn more about Arc-enables servers, see [What is Azure Arc-enabled servers?](/azure/azure-arc/servers/overview).
 
@@ -394,7 +394,7 @@ You can install the Hyper-V role using the Roles and Features extension. Once in
 
 ### What servers can I manage using this extension?
 
-You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Stack HCI](manage-hci-clusters.md).
+You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Local](manage-hci-clusters.md).
 
 ### How does Windows Admin Center handle security?
 

@@ -1,15 +1,13 @@
 ---
 title: Deploy your Remote Desktop environment
 description: Basic steps to deploy a Remote Desktop environment.
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 7/3/2024
 ms.topic: article
 author: robinharwood
 manager: dongill
 ---
 # Deploy your Remote Desktop environment
-
->
 
 Use the following steps to deploy the Remote Desktop servers in your environment. You can install the server roles on physical machines or virtual machines, depending on whether you are creating an on-premises, cloud-based, or hybrid environment.
 

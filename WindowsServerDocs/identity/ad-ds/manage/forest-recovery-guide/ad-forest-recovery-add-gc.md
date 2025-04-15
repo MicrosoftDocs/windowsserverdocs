@@ -11,8 +11,6 @@ ms.custom: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 
 # Active Directory Forest Recovery - Add the GC
 
->
-
 Use the following procedure to add the global catalog to a DC.
 
 ## Add the global catalog

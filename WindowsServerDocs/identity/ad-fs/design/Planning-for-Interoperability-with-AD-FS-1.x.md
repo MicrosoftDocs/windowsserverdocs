@@ -4,8 +4,8 @@ ms.assetid: 04b63d9f-e924-4146-9b1d-785ed8b4239c
 title: Planning for Interoperability with AD FS 1.x
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

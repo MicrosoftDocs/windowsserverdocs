@@ -3,7 +3,7 @@ title: Tutorial - Set up infrastructure for Always On VPN
 description: Learn how to deploy Always On VPN (AOV) connections for Windows client computers that are working offsite (for example, from home, a customer site, or a public wireless access point).
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date:  03/14/2023
 ---
@@ -11,8 +11,6 @@ ms.date:  03/14/2023
 # Tutorial: Deploy Always On VPN - Set up infrastructure for Always On VPN
 
 - [**Next:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
-
->
 
 In this tutorial, you'll learn how to deploy Always On VPN connections for remote domain-joined Windows client computers. You'll create a sample infrastructure that shows you how to implement an Always On VPN connection process. The process is composed of the following steps:
 

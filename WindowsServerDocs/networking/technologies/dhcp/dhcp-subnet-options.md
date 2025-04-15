@@ -11,8 +11,6 @@ ms.date: 08/17/2018
 
 # DHCP Subnet Selection Options
 
->
-
 You can use this topic for information about new DHCP subnet selection options.
 
 DHCP now supports option 82 \(sub-option 5\). You can use these options to allow DHCP proxy clients and relay agents to request an IP address for a specific subnet, and from a specific IP address range and scope.  For more details, see **Option 82 Sub Option 5**: [RFC 3527 Link Selection sub-option for the Relay Agent Information Option for DHCPv4](https://tools.ietf.org/html/rfc3527).

@@ -1,15 +1,13 @@
 ---
 title: One or more network adapters should be configured as the source for Port Mirroring
 description: Learn what to do when one or more virtual machines have a network adapter configured as a destination for Port Mirroring, but there is no corresponding source on the virtual switch.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 147fd00f-1440-44d1-94e3-3a8af63aa7ed
 ms.date: 8/16/2016
 ---
 # One or more network adapters should be configured as the source for Port Mirroring
-
->
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

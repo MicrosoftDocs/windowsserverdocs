@@ -4,8 +4,8 @@ ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
 author: jenfieldmsft
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
@@ -68,7 +68,7 @@ If certificate trusted issuers aren't configured properly, a common symptom is a
 
 AD FS uses the underlying Windows operating system to prove possession of the user certificate and ensure that it matches a trusted issuer by validating the certificate trust chain. To match the trusted issuer, you need to ensure that all root and intermediate authorities are configured as trusted issuers in the local store for computer certificate authorities.
 
-To validate this automatically, use the [AD FS Diagnostics Analyzer tool](https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze). The tool queries all the servers and ensures that the right certificates are provisioned correctly.
+To validate this automatically, use the [AD FS Diagnostics Analyzer tool](/windows-server/identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer). The tool queries all the servers and ensures that the right certificates are provisioned correctly.
 
 1. Download and run the tool.
 1. Upload the results and review for any failures.
@@ -109,7 +109,7 @@ To fix this problem, work with your network engineer to ensure that the load bal
 1. Open an elevated Command Prompt window on the primary AD FS server.
 1. Enter `Netsh http show sslcert`.
 1. Copy the application GUID and certificate hash of the federation service.
-1. Enter `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}`.
+1. Enter `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicationGUID}`.
 
 ### Check if the client device has been provisioned with the certificate correctly
 

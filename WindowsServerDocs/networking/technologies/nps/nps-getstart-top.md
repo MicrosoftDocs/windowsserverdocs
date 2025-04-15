@@ -4,14 +4,12 @@ description: This topic provides links to introductory topics for Network Policy
 manager: brianlic
 ms.topic: article
 ms.assetid: 29976baf-b0e2-4c01-ab4d-f2940e2bc327
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Getting Started with Network Policy Server
-
->
 
 You can use the topics in this section to learn about Network Policy Server features and capabilities.
 

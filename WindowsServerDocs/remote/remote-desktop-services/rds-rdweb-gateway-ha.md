@@ -3,13 +3,11 @@ title: Add high availability to the RD Web and Gateway web front
 description: Provides steps for installing the RD Web and Gateway servers in an RDS deployment.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 manager: dongill
 ---
 # Add high availability to the RD Web and Gateway web front
-
->
 
 
 You can deploy a Remote Desktop Web Access (RD Web Access) and Remote Desktop Gateway (RD Gateway) farm to improve the availability and scale of a Windows Server Remote Desktop Services (RDS) deployment

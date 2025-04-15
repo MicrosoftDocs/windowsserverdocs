@@ -4,13 +4,11 @@ description: Learn how to delete utilization data from the IPAM database.
 manager: brianlic
 ms.topic: article
 ms.assetid: 45cada9e-69b9-43df-b6f5-6d3942435809
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Purge Utilization Data
-
->
 
 You can use this topic to learn how to delete utilization data from the IPAM database.
 

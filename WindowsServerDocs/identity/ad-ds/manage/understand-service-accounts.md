@@ -2,7 +2,7 @@
 title: Service Accounts
 description: Windows Server standalone and group managed service accounts in Active Directory.
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 ms.topic: article
 ms.date: 08/14/2024
 ---
@@ -24,7 +24,7 @@ This article contains information about the following types of service accounts:
 
 Managed service accounts are designed to isolate domain accounts in crucial applications, such as Internet Information Services (IIS). They eliminate the need for an administrator to manually administer the service principal name (SPN) and credentials for the accounts.
 
-To use managed service accounts, the server on which the application or service is installed must be running Windows Server 2008 R2 or later. One managed service account can be used for services on a single computer. Managed service accounts can't be shared between multiple computers, and they can't be used in server clusters where a service is replicated on multiple cluster nodes. For this scenario, you must use a group-managed service account. For more information, see [Group Managed Service Accounts Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11)).
+One managed service account can be used for services on a single computer. Managed service accounts can't be shared between multiple computers, and they can't be used in server clusters where a service is replicated on multiple cluster nodes. For this scenario, you must use a group-managed service account. For more information, see [Group Managed Service Accounts Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11)).
 
 In addition to the enhanced security that's provided by having individual accounts for critical services, there are four important administrative benefits associated with managed service accounts:
 
@@ -41,7 +41,7 @@ In addition to the enhanced security that's provided by having individual accoun
 
 ## Group managed service accounts
 
-Group managed service accounts are an extension of standalone managed service accounts, which were introduced in Windows Server 2008 R2. These accounts are managed domain accounts that provide automatic password management and simplified SPN management, including delegation of management to other administrators.
+Group managed service accounts are an extension of standalone managed service accounts. These accounts are managed domain accounts that provide automatic password management and simplified SPN management, including delegation of management to other administrators.
 
 A group managed service account provides the same functionality as a standalone managed service account within the domain, but it extends that functionality over multiple servers. When you're connecting to a service that's hosted on a server farm, such as Network Load Balancing, the authentication protocols that support mutual authentication require all instances of the services to use the same principal. When group managed service accounts are used as service principals, the Windows Server operating system manages the password for the account instead of relying on the administrator to manage the password.
 
@@ -55,11 +55,11 @@ Users have the option to create a dMSA as a standalone account or replace an exi
 
 ## Virtual accounts
 
-Virtual accounts were introduced in Windows Server 2008 R2 and Windows 7. They're managed local accounts that simplify service administration by providing the following benefits:
+Virtual accounts are managed local accounts that simplify service administration by providing the following benefits:
 
 - The virtual account is automatically managed.
 - The virtual account can access the network in a domain environment.
-- No password management is required. For example, if the default value is used for the service accounts during SQL Server setup on Windows Server 2008 R2, a virtual account that uses the instance name as the service name is established in the format `NT SERVICE\<SERVICENAME>`.
+- No password management is required. For example, if the default value is used for the service accounts during SQL Server setup on Windows Server, a virtual account that uses the instance name as the service name is established in the format `NT SERVICE\<SERVICENAME>`.
 
 Services that run as virtual accounts access network resources by using the credentials of the computer account in the format `<domain_name>\<computer_name>$`.
 
@@ -77,7 +77,7 @@ Service accounts are used to control the service's access to local and network r
 | App runs on a single server | Yes | Yes | Yes | Yes |
 | App runs on multiple servers | No | Yes | No | No |
 | App runs behind a load balancer | No | Yes | No | No |
-| App runs on Windows Server 2008 R2 and later | Yes | No | No | Yes |
+| App runs on Windows Server | Yes | No | No | Yes |
 | Requirement to restrict service account to single server | Yes | No | Yes | No |
 | Supports machine account linked to device identity | No | No | Yes | No |
 | Use for high-security scenarios (prevent credential harvesting) | No | No | Yes | No |

@@ -484,10 +484,8 @@
         href: remote-access/directaccess/directAccess-Known-Issues.md      
     - name: Reference
       items:
-      - name: BGP Windows PowerShell Command reference
-        href: remote-access/bgp/BGP-Windows-powershell-Command-Reference.md
       - name: Remote Access PowerShell Command reference
-        href: /powershell/module/remoteaccess/?view=windowsserver2022-ps&preserve-view=true?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        href: /powershell/module/remoteaccess/?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
       - name: Windows VPN technical guide
         href: /windows/security/identity-protection/vpn/vpn-guide?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
     - name: Resources

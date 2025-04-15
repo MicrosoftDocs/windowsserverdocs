@@ -3,8 +3,8 @@ description: "Learn more about: Name Resolution for Perimeter and Internet Clien
 ms.assetid: 1a6740e6-5b6d-41f8-9ec4-32cdbee3e1bb
 title: Name Resolution for Perimeter and Internet Clients
 author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

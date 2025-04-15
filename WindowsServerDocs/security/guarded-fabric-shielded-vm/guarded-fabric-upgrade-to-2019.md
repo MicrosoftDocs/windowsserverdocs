@@ -4,13 +4,11 @@ title: Upgrade a guarded fabric to Windows Server 2019
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 11/21/2018
 ---
 
 # Upgrade a guarded fabric to Windows Server 2019
-
->
 
 This article describes the steps necessary to upgrade an existing guarded fabric from Windows Server 2016, Windows Server version 1709 or Windows Server version 1803 to Windows Server 2019.
 

@@ -5,12 +5,10 @@ title: Understanding Data Deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 02/18/2022
 ---
 # Understanding Data Deduplication
-
->
 
 This document describes how [Data Deduplication](overview.md) works.
 

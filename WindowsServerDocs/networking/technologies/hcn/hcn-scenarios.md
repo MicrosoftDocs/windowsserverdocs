@@ -9,8 +9,6 @@ ms.topic: article
 
 # Common scenarios
 
->
-
 ## Scenario: HCN
 
 ### Create a HCN

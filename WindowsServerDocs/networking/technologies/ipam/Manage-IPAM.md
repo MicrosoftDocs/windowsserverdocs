@@ -4,13 +4,11 @@ description: Learn about administration and troubleshooting information for the 
 manager: brianlic
 ms.topic: article
 ms.assetid: c68905ef-d54f-4fc8-80ac-1006125db64f
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Manage IPAM
-
->
 
 This guide provides administration and troubleshooting information for the IP Address Management (IPAM) feature in  Windows Server 2016.
 

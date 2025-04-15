@@ -5,13 +5,11 @@ TOCTitle: iSCSI Target Server
 ms.topic: article
 author: robinharwood
 manager: dougkim
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 09/11/2018
 ---
 
 # iSCSI Target Server overview
-
->
 
 This topic provides a brief overview of iSCSI Target Server, a role service in Windows Server that enables you to make storage available via the iSCSI protocol. This is useful for providing access to storage on your Windows server for clients that can't communicate over the native Windows file sharing protocol, SMB.
 

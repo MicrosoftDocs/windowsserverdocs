@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Create a Quota
 
->
-
 Quotas can be created from a template or with custom properties. The following procedure describes how to create a quota that is based on a template (recommended). If you need to create a quota with custom properties, you can save these properties as a template to re-use at a later date.
 
 When you create a quota, you choose a quota path, which is a volume or folder that the storage limit applies to. On a given quota path, you can use a template to create one of the following types of quota:

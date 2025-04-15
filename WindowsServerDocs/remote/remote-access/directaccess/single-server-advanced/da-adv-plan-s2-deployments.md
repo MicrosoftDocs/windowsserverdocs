@@ -4,13 +4,11 @@ description: Learn how to plan the settings for the Remote Access Setup Wizard.
 manager: brianlic
 ms.topic: article
 ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Plan Advanced DirectAccess Deployments
-
->
 
 After you plan the DirectAccess infrastructure, the next step in deploying advanced DirectAccess on a single server with IPv4 and IPv6 is to plan the settings for the Remote Access Setup Wizard.
 

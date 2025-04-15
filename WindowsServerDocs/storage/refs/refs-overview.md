@@ -1,15 +1,13 @@
 ---
 description: "Learn more about: Resilient File System (ReFS) overview"
 title: Resilient File System (ReFS) overview
-ms.author: roharwoo
+ms.author: jgerend
 manager: candyc
 ms.topic: article
 author: wbsmolen
 ms.date: 10/28/2022
 ---
 # Resilient File System (ReFS) overview
-
->
 
 The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity with resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations.
 
@@ -182,4 +180,4 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 - [ReFS integrity streams](integrity-streams.md)
 - [Troubleshoot ReFS with ReFSUtil](../../administration/windows-commands/refsutil.md)
 - [Use of ReFS with Cluster-Shared Volumes](../../failover-clustering/failover-cluster-csvs.md)
-- [ReFS versions and compatibility matrix](https://gist.github.com/0xbadfca11/da0598e47dd643d933dc)
+- [ReFS versions and compatibility matrix](https://gist.github.com/XenoPanther/15d8fad49fbd51c6bd946f2974084ef8)

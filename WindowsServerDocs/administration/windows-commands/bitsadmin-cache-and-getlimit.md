@@ -2,7 +2,7 @@
 title: bitsadmin cache and getlimit
 description: Reference article for the bitsadmin cache and getlimit command that retrieves the cache limit.
 ms.topic: reference
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 ms.date: 01/03/2023
 ---

@@ -1,7 +1,7 @@
 ---
 title: Tenant on-premises components
 description: Describes the on-premises components in your RDS deployment.
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: b3eebb38-a835-4fa6-9e41-1966014bf2cb
@@ -9,8 +9,6 @@ author: robinharwood
 manager: dongill
 ---
 # Tenant on-premises components
-
->
 
 The following information describes the on-premises components that make up the desktop hosting deployment.
 

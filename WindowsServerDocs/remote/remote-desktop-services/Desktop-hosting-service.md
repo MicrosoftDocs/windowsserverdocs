@@ -1,15 +1,13 @@
 ---
 title: Desktop hosting service 
 description: Learn about the desktop hosting service's components in Windows Server.
-ms.author: helohr
+author: xelu86
 ms.date: 7/3/2024
 ms.topic: article
-author: heidilohr
+ms.author: alalve
 manager: femila
 ---
 # Desktop hosting service
-
->
 
 This article will tell you more about the desktop hosting service's components.
 

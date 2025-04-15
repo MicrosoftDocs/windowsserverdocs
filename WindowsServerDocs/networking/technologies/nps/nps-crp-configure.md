@@ -4,14 +4,12 @@ description: This topic provides information on how to configure Connection Requ
 manager: brianlic
 ms.topic: article
 ms.assetid: f62c6a67-4dda-47f8-8bdf-9b76c37953e6
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Configure Connection Request Policies
-
->
 
 You can use this topic to create and configure connection request policies that designate whether the local NPS processes connection requests or forwards them to remote RADIUS server for processing.
 

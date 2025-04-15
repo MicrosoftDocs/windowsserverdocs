@@ -5,12 +5,10 @@ title: Running Data Deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 02/18/2022
 ---
 # Running Data Deduplication
-
->
 
 ## <a id="running-dedup-jobs-manually"></a>Running Data Deduplication jobs manually
 

@@ -4,13 +4,11 @@ description: Learn how to plan to add additional servers to the cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: 673c5bfb-b590-4932-8e54-ca0a466d90cc
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Plan Cluster Servers
-
->
 
 After deploying a single Remote Access server, plan to add additional servers to the cluster.
 

@@ -3,13 +3,11 @@ title: Settings
 description: Learn about settings in Windows Admin Center (Project Honolulu). User settings let users change their language/region and other preferences. Gateway settings let administrators configure the gateway.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 04/12/2018
 ---
 
 # Windows Admin Center Settings
-
->
 
 Windows Admin Center settings consist of user-level and gateway-level settings. A change to a user-level setting only affects the current user's profile, while a change to a gateway-level setting affects all users on that Windows Admin Center gateway.
 

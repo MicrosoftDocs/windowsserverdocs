@@ -6,11 +6,9 @@ ms.topic: article
 ms.assetid: 1497cae0-071e-467d-89b8-a7050815d7de
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # MultiPoint Services - post-migration tasks
-
->
 
 After you migrate to MultiPoint Services in Windows Server 2016, use the following information to validate the migration and to perform clean-up steps.
 

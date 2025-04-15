@@ -3,12 +3,10 @@ title: Connecting Windows Server to Azure hybrid services
 description: You can extend on-premises deployments of Windows Server to the cloud by using Azure hybrid services.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 05/31/2019
 ---
 # Connecting Windows Server to Azure hybrid services
-
->
 
 You can extend on-premises deployments of Windows Server to the cloud by using Azure hybrid services. These cloud services provide an array of useful functions, both for extending on-premises into Azure, and for centrally managing from Azure.
 
@@ -93,9 +91,9 @@ For more info, see [Use Storage Migration Service to migrate a server](../../../
 - **Create a new Azure virtual machine without leaving Windows Admin Center**
 From the *All Connections* page within Windows Admin Center, go to **Add** and select **Create new** under **Azure VM**. You even can domain-join your Azure VM and configure storage from within this step-by-step creation tool.
 
-- **Leverage Azure to achieve quorum on your failover cluster with [Cloud Witness](../../../failover-clustering/deploy-cloud-witness.md)**
-Instead of investing in additional hardware to achieve quorum on a 2-node cluster, you can use an Azure storage account to serve as the cluster witness for your Azure Stack HCI cluster or other failover cluster.
-For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../../failover-clustering/deploy-cloud-witness.md).
+- **Leverage Azure to achieve quorum on your failover cluster with a quorum witness**
+Instead of investing in additional hardware to achieve quorum on a 2-node cluster, you can use an Azure storage account to serve as the cluster witness for your Azure Local cluster or other failover cluster.
+For more info, see [quorum witness](../../../failover-clustering/deploy-quorum-witness.md).
 
 ### Simplify network connectivity between your on-premises and Azure networks
 
@@ -127,7 +125,7 @@ Inventory, organize, and manage on-premises servers from Azure. You can govern s
 Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
-- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](/azure/azure-local/overview), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
+- Clusters, including hyper-converged clusters certified by the [Azure Local](/azure/azure-local/overview), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
 <!-- Alternate link that might be more helpful than the second link in the preceding bullet for WSSD: https://learn.microsoft.com/en-us/troubleshoot/windows-server/software-defined-networking/software-defined-data-center-and-networking -->
 
 ### Services for stand-alone servers and VMs
@@ -150,7 +148,7 @@ These are the Azure services that provide functionality to clusters as a whole:
 
 - [Monitor a hyper-converged cluster with Azure Monitor](../../../storage/storage-spaces/configure-azure-monitor.md)
 - [Protect your VMs with Azure Site Recovery](azure-site-recovery.md)
-- [Deploy a cluster cloud witness](../../../failover-clustering/deploy-cloud-witness.md)
+- [Deploy a quorum witness](../../../failover-clustering/deploy-quorum-witness.md)
 
 ## Other Azure-integrated abilities of Windows Admin Center
 

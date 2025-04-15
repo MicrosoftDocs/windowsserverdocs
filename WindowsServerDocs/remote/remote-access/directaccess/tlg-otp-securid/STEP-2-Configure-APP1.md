@@ -4,13 +4,11 @@ description: Learn how to create and deploy a certificate template used to sign 
 manager: brianlic
 ms.topic: article
 ms.assetid: 19a7a4a6-9a04-42ea-a5d0-ecb28a34dbaa
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 2 Configure APP1
-
->
 
 Use the following steps to prepare APP1 for OTP support:
 

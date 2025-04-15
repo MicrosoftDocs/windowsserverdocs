@@ -3,13 +3,11 @@ title: Windows Admin Center network requirements
 description: Networking requirements to use Windows Admin Center
 ms.topic: article
 author: prasidharora
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 01/12/2023
 ---
 
 # Windows Admin Center network requirements
-
->
 
 This article describes the networking requirements for using Windows Admin center to manage your servers and clusters.
 

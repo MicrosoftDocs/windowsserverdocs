@@ -4,13 +4,11 @@ description: This topic provides links to the test lab guides for DirectAccess i
 manager: brianlic
 ms.topic: article
 ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # DirectAccess Test Lab Guides
-
->
 
 Following are links to the test lab guides for DirectAccess in Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012.
 

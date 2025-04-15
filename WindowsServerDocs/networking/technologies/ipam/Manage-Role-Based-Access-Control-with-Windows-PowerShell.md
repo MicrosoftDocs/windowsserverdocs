@@ -4,13 +4,11 @@ description: Learn how to use IPAM to manage role based access control with Wind
 manager: brianlic
 ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Manage Role Based Access Control with Windows PowerShell
-
->
 
 You can use this topic to learn how to use IPAM to manage role based access control with Windows PowerShell.
 

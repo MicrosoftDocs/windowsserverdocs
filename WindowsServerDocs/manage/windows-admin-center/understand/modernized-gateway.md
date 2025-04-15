@@ -1,14 +1,12 @@
 ---
-title: Windows Admin Center modernized gateway (Preview)
+title: Windows Admin Center modernized gateway
 description: Windows Admin Center (Project Honolulu) modernized gateway
 ms.topic: article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 01/02/2024
 ---
-# What is the Windows Admin Center modernized gateway (preview)?
-
->
+# What is the Windows Admin Center modernized gateway?
 
 In December 2023, the Windows Admin Center modernized gateway was released to public preview through the [Windows Server Insider program](/windows-insider/business/server-get-started). This release is in addition to the latest generally available release of Windows Admin Center, version 2311. 
 

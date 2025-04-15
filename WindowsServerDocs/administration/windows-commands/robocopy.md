@@ -4,8 +4,8 @@ description: Reference article for the robocopy command, which copies file data 
 ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: xelu86
-ms.author: roharwoo
-ms.date: 05/28/2024
+ms.author: alalve
+ms.date: 03/17/2025
 ---
 
 # robocopy
@@ -25,7 +25,7 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 ```
 
 > [!IMPORTANT]
-> If any data is copied from the _root_ of a device, the destination directory will adopt the "hidden" attribute during the copy process.
+> If any data is copied from the _root_ of a device, the destination directory adopts the "hidden" and "system" attributes during the copy process.
 
 ### Parameters
 
@@ -113,15 +113,15 @@ These throttling options are used to specify the maximum I/O bandwidth that Robo
 | /xc | Excludes existing files with the same timestamp, but different file sizes. |
 | /xn | Source directory files newer than the destination are excluded from the copy. |
 | /xo | Source directory files older than the destination are excluded from the copy. |
-| /xx | Excludes extra files and directories present in the destination but not the source. Excluding extra files won't delete files from the destination. |
+| /xx | Excludes extra files and directories present in the destination but not the source. Excluding extra files doesn't delete files from the destination. |
 | /xl | Excludes "lonely" files and directories present in the source but not the destination. Excluding lonely files prevents any new files from being added to the destination. |
 | /im | Include modified files (differing change times). |
 | /is | Includes the same files. Same files are identical in name, size, times, and all attributes. |
 | /it | Includes "tweaked" files. Tweaked files have the same name, size, and times, but different attributes. |
 | /max:`<n>` | Specifies the maximum file size (to exclude files bigger than *n* bytes). |
 | /min:`<n>` | Specifies the minimum file size (to exclude files smaller than *n* bytes). |
-| /maxage:`<n>` | Specifies the maximum file age (to exclude files older than *n* days or date). |
-| /minage:`<n>` | Specifies the minimum file age (exclude files newer than *n* days or date). |
+| /maxage:`<n>` | Specifies the maximum file age to exclude files older than *n* days or a date based on when the files were last _modified_. |
+| /minage:`<n>` | Specifies the minimum file age to exclude files newer than *n* days or a date based on when the files were last _modified_. |
 | /maxlad:`<n>` | Specifies the maximum last access date (excludes files unused since *n*). |
 | /minlad:`<n>` | Specifies the minimum last access date (excludes files used since *n*) If *n* is less than 1900, *n* specifies the number of days. Otherwise, *n* specifies a date in the format YYYYMMDD. |
 | /xj | Excludes junction points, which are normally included by default. |
@@ -155,7 +155,7 @@ These throttling options are used to specify the maximum I/O bandwidth that Robo
 | /nc | Specifies that file classes aren't to be logged. |
 | /nfl | Specifies that file names aren't to be logged. |
 | /ndl | Specifies that directory names aren't to be logged. |
-| /np | Specifies that the progress of the copying operation (the number of files or directories copied so far) won't be displayed. |
+| /np | Specifies to not display the progress of the copying operation (the number of files or directories copied so far). |
 | /eta | Shows the estimated time of arrival (ETA) of the copied files. |
 | /log:`<logfile>` | Writes the status output to the log file (overwrites the existing log file). |
 | /log+:`<logfile>` | Writes the status output to the log file (appends the output to the existing log file). |
@@ -179,17 +179,17 @@ These throttling options are used to specify the maximum I/O bandwidth that Robo
 
 #### Remarks
 
-- Using **/PURGE** or **/MIR** on the root directory of the volume formerly caused robocopy to apply the requested operation on files inside the System Volume Information directory as well. This is no longer the case as if either is specified, robocopy will skip any files or directories with that name in the top-level source and destination directories of the copy session.
+- Using **/PURGE** or **/MIR** on the root directory of the volume formerly caused robocopy to apply the requested operation on files inside the System Volume Information directory as well. This is no longer the case as if either is specified, robocopy skips any files or directories with that name in the top-level source and destination directories of the copy session.
 
 - Modified files classification applies only when both source and destination filesystems support change timestamps, such as NTFS, and the source and destination files have different change times but are otherwise the same. These files aren't copied by default. Specify **/IM** to include them.
 
-- The **/DCOPY:E** flag requests that extended attribute copying should be attempted for directories. Robocopy will continue if a directory's EAs couldn't be copied. This flag isn't included in **/COPYALL**.
+- The **/DCOPY:E** flag requests that extended attribute copying should be attempted for directories. Robocopy continues the copy operation even if a directory's EAs couldn't be copied. This flag isn't included in **/COPYALL**.
 
-- If either **/IoMaxSize** or **/IoRate** are specified, robocopy will enable copy file throttling to reduce system load. Both can be adjusted to optimal values and copy parameters, but the system and robocopy are allowed to adjust them to allowed values as necessary.
+- If either **/IoMaxSize** or **/IoRate** are specified, robocopy enables copy file throttling to reduce system load. Both can be adjusted to optimal values and copy parameters, but the system and robocopy are allowed to adjust them to allowed values as necessary.
 
-- If **/Threshold** is used, it specifies a minimum file size for engaging throttling. Files below that size won't be throttled. Values for all three parameters can be followed by an optional suffix character such as [KMG] (kilobytes, megabytes, gigabytes).
+- If **/Threshold** is used, it specifies a minimum file size for engaging throttling. Files below that size aren't throttled. Values for all three parameters can be followed by an optional suffix character such as [KMG] (kilobytes, megabytes, gigabytes).
 
-- Using **/LFSM** requests robocopy to operate in 'low free space mode'. In this mode, robocopy will pause whenever a file copy would cause the destination volume's free space to go below a 'floor' value. This value can be explicitly specified using **/LFSM:_n_**[KMG] flag.
+- Using **/LFSM** requests robocopy to operate in 'low free space mode'. In this mode, robocopy pauses whenever a file copy would cause the destination volume's free space to go below a 'floor' value. This value can be explicitly specified using **/LFSM:_n_**[KMG] flag.
 
 - If **/LFSM** is specified with no explicit floor value, the floor is set to 10% of the destination volume's size. Low free space mode is incompatible with **/MT** and **/EFSRAW**.
 
@@ -213,40 +213,46 @@ These throttling options are used to specify the maximum I/O bandwidth that Robo
 
 It's highly recommended when running the `robocopy` command to create a log file that can be viewed once the process completes verifying its integrity. In the following examples, each one uses the `/LOG:` parameter. To append any log information to the same log file, use the `/LOG+:` parameter instead.
 
-To copy all files and subdirectories, including empty directories, from the "Records" folder to the "Backup" folder on drive "D", type the following:
+To copy all files and subdirectories, including empty directories, from the "Records" folder to the "Backup" folder on drive "D", type:
 
 ```cmd
 robocopy C:\Users\Admin\Records D:\Backup /E /ZB /LOG:C:\Logs\Backup.log
 ```
 
-To mirror the contents of the "Records" folder to the "Backup" folder on drive "D", delete any files in the destination that don't exist in the source with 2 retries and waiting 5 seconds between each retry, type the following:
+To mirror the contents of the "Records" folder to the "Backup" folder on drive "D", delete any files in the destination that don't exist in the source with 2 retries and waiting 5 seconds between each retry, type:
 
 ```cmd
 robocopy C:\Users\Admin\Records D:\Backup /MIR /R:2 /W:5 /LOG:C:\Logs\Backup.log
 ```
 
-To copy all files and subdirectories that aren't empty from the "Records" folder to the "Backup" folder on drive "D", retaining the file data, attributes, and timestamps with 16 multi-threaded copy operation, type the following:
+To copy all files and subdirectories that aren't empty from the "Records" folder to the "Backup" folder on drive "D", retaining the file data, attributes, and timestamps with 16 multi-threaded copy operation, type:
 
 ```cmd
 robocopy C:\Users\Admin\Records D:\Backup /S /E /COPY:DAT /MT:16 /LOG:C:\Logs\Backup.log
 ```
 
-To move files and subdirectories, excluding empty directories, from the "Records" folder to the "Backup" folder on drive "D", and exclude files older than 7 days, type the following:
+To move files and subdirectories, excluding empty directories, from the "Records" folder to the "Backup" folder on drive "D", and exclude files older than 7 days, type:
 
 ```cmd
 robocopy C:\Users\Admin\Records D:\Backup /S /MAXAGE:7 /MOV /LOG:C:\Logs\Backup.log
 ```
 
-To copy all files and subdirectories, including empty directories, from the "Records" folder to the "Backup" folder on drive "D" showing the estimated time for each file and delete any files and directories in the destination that don't exist from the source, type the following:
+To copy all files and subdirectories, including empty directories, from the "Records" folder to the "Backup" folder on drive "D" showing the estimated time for each file and delete any files and directories in the destination that don't exist from the source, type:
 
 ```cmd
 robocopy C:\Users\Admin\Records D:\Backup /ETA /PURGE /LOG:C:\Logs\Backup.log
 ```
 
-To copy all files and subdirectories from the folder named "Records" on the "C" drive to a folder named "Backup" on the "D" drive while limiting the I/O rate to 1 megabyte per second during the copy operation, type the following:
+To copy all files and subdirectories from the folder named "Records" on the "C" drive to a folder named "Backup" on the "D" drive while limiting the I/O rate to 1 megabyte per second during the copy operation, type:
 
 ```cmd
 robocopy C:\Records D:\Backup /iorate:1m
+```
+
+To skip copying files from a source folder to a destination folder when the files already exist in the destination folder, regardless of whether they're newer, older, or modified, type:
+
+```cmd
+robocopy C:\Source C:\Destination /XC /XN /XO
 ```
 
 ## Related links

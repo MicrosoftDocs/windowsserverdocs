@@ -3,12 +3,10 @@ title: Network File System overview
 description: Explains what Network File System is.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 12/06/2022
 ---
 # Network File System overview
-
->
 
 This article describes the Network File System role service and features included with the File and Storage Services server role in Windows Server. Network File System (NFS) provides a file sharing solution for enterprises that have heterogeneous environments that include both Windows and non-Windows computers.
 

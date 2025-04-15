@@ -4,14 +4,12 @@ description: This topic provides an overview of network policy access permission
 manager: brianlic
 ms.topic: article
 ms.assetid: d6d1ca5e-bde0-4509-9e14-dc3fa9ff447e
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Access Permission
-
->
 
 Access permission is configured on the **Overview** tab of each network policy in Network Policy Server (NPS).
 

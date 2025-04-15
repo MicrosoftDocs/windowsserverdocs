@@ -1,15 +1,13 @@
 ---
 title: What's new in Windows Server 2022
 description: Find out what is new in Windows Server 2022.
-ms.topic: how-to
+ms.topic: article
 author: robinharwood
-ms.author: roharwoo
-ms.date: 07/10/2024
+ms.author: alalve
+ms.date: 04/08/2025
 ---
 
 # What's new in Windows Server 2022
-
-
 
 This article describes some of the new features in Windows Server 2022. Windows Server 2022 is built
 on the strong foundation of Windows Server 2019 and brings many innovations on three key themes:
@@ -39,7 +37,7 @@ article.
 #### Hotpatching
 
 Windows Server 2022 Datacenter: Azure Edition Hotpatching is now public preview for the Desktop
-Experience both in Azure and as a supported guest VM on Azure Stack HCI version 22H2.
+Experience both in Azure and as a supported guest VM on Azure Local version 22H2.
 
 ### September 2022
 
@@ -58,40 +56,38 @@ in fewer network packets to transfer the same amount of data, allowing for more 
 network utilization. Higher data throughput should also result in lowering synchronization time for
 when you need it most, for example in a disaster recovery scenario.
 
-New Storage Replica PowerShell parameters are available for existing commands, review the [Windows
-PowerShell StorageReplica reference](/powershell/module/storagereplica/) to learn more. For more
+New Storage Replica PowerShell parameters are available for existing commands, review the
+[StorageReplica](/powershell/module/storagereplica/) PowerShell reference to learn more. For more
 information about Storage Replica, see the
 [Storage Replica overview](../storage/storage-replica/storage-replica-overview.md).
 
-#### Support for Azure Stack HCI
+#### Support for Azure Local
 
 With this release you can run Windows Server 2022 Datacenter: Azure Edition as a supported guest VM
-on Azure Stack HCI version 22H2. With Azure Edition running on Azure Stack HCI, you'll be able to use
+on Azure Local, version 22H2. With Azure Edition running on Azure Local, you'll be able to use
 all the existing features including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
 [SMB over QUIC](#smb-over-quic) at your datacenter and edge locations.
 
-Begin deploying Windows Server 2022 Datacenter: Azure Edition using the
-[Azure Marketplace on Arc-enabled Azure Stack HCI](#deploy-from-azure-marketplace-on-arc-enabled-azure-stack-hci-preview)
-or using an ISO. You can download the ISO from here:
+Begin deploying Windows Server 2022 Datacenter: Azure Edition using the [Deploy from Azure Marketplace on Arc-enabled Azure Local (preview)](#deploy-from-azure-marketplace-on-arc-enabled-azure-local-preview) or using an ISO. You can download the ISO from here:
 
 - [Windows Server 2022 Datacenter: Azure Edition (EN-US) ISO](https://aka.ms/AAi4r31)
 - [Windows Server 2022 Datacenter: Azure Edition (ZH-CN) ISO](https://aka.ms/AAi4bii)
 
 Your Azure subscription permits you to use Windows Server Datacenter: Azure Edition on any virtual
-machine instances running on Azure Stack HCI. For more information, see your product terms
+machine instances running on Azure Local. For more information, see your product terms
 [Product Terms](https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS).
 
-Learn more about the latest Azure Stack HCI features in our
-[What's new in Azure Stack HCI, version 22H2](/azure/azure-local/whats-new) article.
+Learn more about the latest Azure Local features in our
+[What's new in Azure Local, version 22H2](/azure/azure-local/whats-new) article.
 
-#### Deploy from Azure Marketplace on Arc-enabled Azure Stack HCI (preview)
+#### Deploy from Azure Marketplace on Arc-enabled Azure Local (preview)
 
-Windows Server 2022 Datacenter: Azure Edition images will be available in the Azure Marketplace for
-Arc-enabled Azure Stack HCI, making it easy to try, buy, and deploy using Azure certified images.
+Windows Server 2022 Datacenter: Azure Edition images are available in the Azure Marketplace for
+Arc-enabled Azure Local, making it easy to try, buy, and deploy using Azure certified images.
 
-Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Stack HCI features in
+Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Local features in
 our
-[What's new in Azure Stack HCI, version 22H2](/azure/azure-local/whats-new#azure-arc-vm-changes-and-azure-marketplace)
+[What's new in Azure Local, version 22H2](/azure/azure-local/whats-new#azure-arc-vm-changes-and-azure-marketplace)
 article.
 
 ### Azure Edition (initial release)
@@ -141,7 +137,7 @@ Certified Secured-core server hardware from an OEM partner provides more securit
 
 ##### Hardware root-of-trust
 
-Used by features such as [BitLocker drive encryption](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10), Trusted Platform Module 2.0 (TPM 2.0) secure crypto-processor chips provide a secure, hardware-based store for sensitive cryptographic keys and data, including systems integrity measurements. [TPM 2.0](/windows/security/information-protection/tpm/trusted-platform-module-top-node) can verify that the server has been started with legitimate code and can be trusted by subsequent code execution, known as a hardware root-of-trust.
+Used by features such as [BitLocker drive encryption](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10), Trusted Platform Module 2.0 (TPM 2.0) secure crypto-processor chips provide a secure, hardware-based store for sensitive cryptographic keys and data, including systems integrity measurements. [TPM 2.0](/windows/security/information-protection/tpm/trusted-platform-module-top-node) can verify that the server starts with legitimate code and is trusted by subsequent code execution, known as a hardware root-of-trust.
 
 ##### Firmware protection
 
@@ -173,7 +169,7 @@ DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encryp
 
 ##### Server Message Block (SMB): SMB AES-256 encryption for the most security conscious
 
-Windows Server now supports AES-256-GCM and AES-256-CCM cryptographic suites for SMB encryption. Windows will automatically negotiate more advanced cipher method when connecting to another computer that also supports it, and it can also be mandated through Group Policy. Windows Server still supports AES-128 for down-level compatibility. AES-128-GMAC signing now also accelerates signing performance.
+Windows Server now supports AES-256-GCM and AES-256-CCM cryptographic suites for SMB encryption. Windows automatically negotiates more advanced cipher method when connecting to another computer that also supports it, and it can also be mandated through Group Policy. Windows Server still supports AES-128 for down-level compatibility. AES-128-GMAC signing now also accelerates signing performance.
 
 ##### SMB: East-West SMB encryption controls for internal cluster communications
 
@@ -203,7 +199,7 @@ To learn more, see [Connect Windows Server machines to Azure through Azure Arc S
 
 #### Windows Admin Center
 
-Improvements to Windows Admin Center to manage Windows Server 2022 include capabilities to both report on the current state of the Secured-core features mentioned above, and where applicable, allow customers to enable the features. More information on these and many more improvements to Windows Admin Center can be found at the [Windows Admin Center documentation](../manage/windows-admin-center/understand/what-is.md).
+Improvements to Windows Admin Center to manage Windows Server 2022 include capabilities to both report on the current state of the Secured-core features mentioned, and where applicable, allow customers to enable the features. More information on these and many more improvements to Windows Admin Center can be found at the [Windows Admin Center documentation](../manage/windows-admin-center/understand/what-is.md).
 
 ### Application platform
 
@@ -221,7 +217,7 @@ Some of the new features are:
 
 - There are several other enhancements that simplify the Windows Container experience with Kubernetes. These enhancements include support for host-process containers for node configuration, IPv6, and consistent network policy implementation with Calico.
 
-- Windows Admin Center has been updated to make it easy to containerize .NET applications. Once the application is in a container, you can host it on Azure Container Registry to then deploy it to other Azure services, including Azure Kubernetes Service.
+- Windows Admin Center is updated to make it easy to containerize .NET applications. Once the application is in a container, you can host it on Azure Container Registry to then deploy it to other Azure services, including Azure Kubernetes Service.
 
 - With support for Intel Ice Lake processors, Windows Server 2022 supports business-critical and large-scale applications that require up to 48 TB of memory and 2,048 logical cores running on 64 physical sockets. Confidential computing with Intel Secured Guard Extension (SGX) on Intel Ice Lake improves application security by isolating applications from each other with protected memory.
 
@@ -251,7 +247,7 @@ Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer
 
 ##### UDP performance improvements
 
-UDP is becoming a popular protocol carrying more network traffic due to the increasing popularity of RTP and custom (UDP) streaming and gaming protocols. The QUIC protocol, built on top of UDP, brings the performance of UDP to a level on par with TCP. Significantly, Windows Server 2022 includes UDP Segmentation Offload (USO). USO moves most of the work required to send UDP packets from the CPU to the network adapter's specialized hardware. Complimenting USO is UDP Receive Side Coalescing (UDP RSC), which coalesces packets and reduces CPU usage for UDP processing. In addition, we have also made hundreds of improvements to the UDP data path both transmit and receive. Windows Server 2022 and Windows 11 both have this new capability.
+UDP is becoming a popular protocol carrying more network traffic due to the increasing popularity of RTP and custom (UDP) streaming and gaming protocols. The QUIC protocol, built on top of UDP, brings the performance of UDP to a level on par with TCP. Significantly, Windows Server 2022 includes UDP Segmentation Offload (USO). USO moves most of the work required to send UDP packets from the CPU to the network adapter's specialized hardware. Complimenting USO is UDP Receive Side Coalescing (UDP RSC), which coalesces packets and reduces CPU usage for UDP processing. In addition, hundreds of improvements to the UDP data path both transmit and receive. Windows Server 2022 and Windows 11 both have this new capability.
 
 ##### TCP performance improvements
 
@@ -259,7 +255,7 @@ Windows Server 2022 uses TCP [HyStart++](https://datatracker.ietf.org/doc/html/d
 
 ##### Hyper-V virtual switch improvements
 
-Virtual switches in Hyper-V have been enhanced with updated Receive Segment Coalescing (RSC). RSC allows the hypervisor network to coalesce packets and process as one larger segment. CPU cycles are reduced and segments will remain coalesced across the entire data path until processed by the intended application. RSC results in improved performance for both network traffic from an external host, received by a virtual NIC, and from a virtual NIC to another virtual NIC on the same host.
+Virtual switches in Hyper-V are enhanced with updated Receive Segment Coalescing (RSC). RSC allows the hypervisor network to coalesce packets and process as one larger segment. CPU cycles are reduced and segments remain coalesced across the entire data path until processed by the intended application. RSC results in improved performance for both network traffic from an external host, received by a virtual NIC, and from a virtual NIC to another virtual NIC on the same host.
 
 In vSwitch, RSC can also coalesce multiple TCP segments into a larger segment before data traversing the vSwitch. This change also improves networking performance for virtual workloads. RSC is enabled on external virtual switches by default.
 
@@ -292,11 +288,11 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 
 #### Adjustable storage repair speed
 
-[User adjustable storage repair speed](/azure/azure-local/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process.  Adjustable storage repair speed enables you to allocate resources to either repair data copies (resiliency) or to run active workloads (performance). Controlling the repair speed helps improve availability and allows you to service your clusters more flexibly and efficiently.
+[User adjustable storage repair speed](/azure/azure-local/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process. Adjustable storage repair speed enables you to allocate resources to either repair data copies (resiliency) or to run active workloads (performance). Controlling the repair speed helps improve availability and allows you to service your clusters more flexibly and efficiently.
 
 #### Faster repair and resynchronization
 
-Storage repair and resynchronization after events such as node reboots and disk failures are now twice as fast. Repairs have less variance in time taken so you can be more sure of how long the repairs will take, which has been achieved through adding more granularity to data tracking. Repairs now only move the data that needs to be moved, reducing the system resources used and time taken.
+Storage repair and resynchronization after events such as node reboots and disk failures are now twice as fast. Repairs have less variance in time taken so you can be more sure of how long the repairs take, which is achieved through adding more granularity to data tracking. Repairs now only move the data that needs to be moved, reducing the system resources used and time taken.
 
 #### Storage bus cache with Storage Spaces on standalone servers
 
@@ -308,7 +304,7 @@ Microsoft's Resilient File System (ReFS) now includes the ability to snapshot fi
 
 #### SMB compression
 
-Enhancement to SMB in Windows Server 2022 and Windows 11 allows a user or application to compress files as they transfer over the network. Users no longer have to manually zip files in order to transfer much faster on slower or more congested networks. For details, see [SMB Compression](../storage/file-server/smb-compression.md).
+Enhancement to SMB in Windows Server 2022 and Windows 11 allows a user or application to compress files as they transfer over the network. Users no longer have to manually zip files in order to transfer faster on slower or more congested networks. For details, see [SMB Compression](../storage/file-server/smb-compression.md).
 
 ### Containers
 
@@ -316,7 +312,7 @@ Windows Server 2022 includes the following changes to Windows containers.
 
 #### Server Core image size reduction
 
-We've reduced the size of Server Core images. This smaller image size allows you to deploy containerized applications faster. In Windows Server 2022, the Server Core container image release to manufacturing (RTM) layer at the time of GA clocks in at 2.76 GB uncompressed on disk. Compared to the Windows Server 2019 RTM layer at the time of GA, which clocks in at 3.47 GB uncompressed on disk, that's a 33% reduction in on-disk footprint for that layer. While you shouldn't expect the total image size to be reduced by 33%, a smaller RTM layer size generally means the overall image size will be smaller.
+We've reduced the size of Server Core images. This smaller image size allows you to deploy containerized applications faster. In Windows Server 2022, the Server Core container image release to manufacturing (RTM) layer at the time of GA clocks in at 2.76 GB uncompressed on disk. Compared to the Windows Server 2019 RTM layer at the time of GA, which clocks in at 3.47 GB uncompressed on disk, that's a 33% reduction in on-disk footprint for that layer. While you shouldn't expect the total image size to be reduced by 33%, a smaller RTM layer size generally means the overall image size is smaller.
 
 > [!NOTE]
 > Windows container base images ship as two layers: and RTM layer and a patch layer that contains the latest security fixes for OS libraries and binaries that's overlaid on the RTM layer. The patch layer's size changes over the life of the container image support cycle depending on how many changes are in the binaries. When you pull a container base image onto a new host, you need to pull both layers.
@@ -362,7 +358,7 @@ The Host Network Service (HNS) now allows you to use more restrictive subnets, s
 
 #### HostProcess containers for node management
 
-HostProcess containers are a new container type that runs directly on the host and extends the Windows container model to enable a wider range of Kubernetes cluster management scenarios. With HostProcess containers, users can package and distribute management operations that require host access while retaining versioning and deployment methods provided by containers. You can use Windows containers for a variety of device plug-in, storage, and networking management scenarios in Kubernetes.
+HostProcess containers are a new container type that runs directly on the host and extends the Windows container model to enable a wider range of Kubernetes cluster management scenarios. With HostProcess containers, users can package and distribute management operations that require host access while retaining versioning and deployment methods provided by containers. You can use Windows containers for various device plug-in, storage, and networking management scenarios in Kubernetes.
 
 HostProcess containers have the following benefits:
 

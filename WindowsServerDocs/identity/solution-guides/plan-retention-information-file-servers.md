@@ -3,14 +3,12 @@ title: Plan for retention of information on file servers
 description: Plan how you can retain information on file servers.
 ms.topic: conceptual
 author: robinharwood
-ms.author: roharwoo
+ms.author: alalve
 manager: femila
 ms.date: 04/01/2022
 ---
 
 # Plan for retention of information on file servers
-
->
 
 A data retention policy is important for any organization. You can use the following information to plan how you retain information in your organization.
 

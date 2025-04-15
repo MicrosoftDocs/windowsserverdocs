@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Configure File Screen Audit
 
->
-
 By using File Server Resource Manager, you can record file screening activity in an auditing database. The information saved in this database is used to generate the File Screening Audit report.
 
 > [!Important]

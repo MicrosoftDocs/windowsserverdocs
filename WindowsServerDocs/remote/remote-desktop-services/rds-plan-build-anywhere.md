@@ -4,14 +4,12 @@ description: Planning information to help you determine where to host your RDS d
 ms.topic: article
 ms.assetid: c803a383-0eea-4e11-bca5-d204ab758048
 author: robinharwood
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 manager: dongill
 
 ---
 # Remote Desktop Services - Build anywhere
-
->
 
 Deploy on-premises, in the cloud, or a hybrid of the two. Modify your deployment as your business needs change.
 

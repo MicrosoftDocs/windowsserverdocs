@@ -4,14 +4,12 @@ description: You can use this topic to learn how to create a batch file that per
 ms.topic: article
 ms.assetid: c94e37a4-3637-4613-9eb5-ed604e831eca
 manager: brianlic
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 10/27/2021
 ---
 
 # Network Shell (Netsh) Example Batch File
-
->
 
 You can use this topic to learn how to create a batch file that performs multiple tasks by using Netsh in Windows Server. In this example batch file, the **netsh wins** context is used.
 

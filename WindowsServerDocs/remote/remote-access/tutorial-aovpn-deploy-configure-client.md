@@ -4,15 +4,13 @@ description:  Learn how to deploy Always On VPN profile for Windows 10+ clients.
 ms.topic: article
 ms.date:  03/14/2023
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ---
 # Tutorial: Deploy Always On VPN - Configure Always On VPN profile for Windows 10+ clients
 
 - [**Previous:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
-
->
 
 In this last part of the tutorial, you'll learn how to use a ProfileXML PowerShell configuration script to configure Always On VPN settings and create a user tunnel for client connections.
 

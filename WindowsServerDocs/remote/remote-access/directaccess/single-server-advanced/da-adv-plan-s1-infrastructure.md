@@ -4,13 +4,11 @@ description: Learn how to plan the infrastructure that is required for the deplo
 manager: brianlic
 ms.topic: article
 ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 1 Plan the Advanced DirectAccess Infrastructure
-
->
 
 The first step of planning for an advanced DirectAccess deployment on a single server is to plan the infrastructure that is required for the deployment. This topic describes the infrastructure planning steps. These planning tasks do not need to be completed in a specific order.
 

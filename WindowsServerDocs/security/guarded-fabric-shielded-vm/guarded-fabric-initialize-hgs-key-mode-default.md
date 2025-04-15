@@ -4,13 +4,11 @@ title: Initialize the HGS cluster using key mode in a new dedicated forest (defa
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Initialize the HGS cluster using key mode in a new dedicated forest (default)
-
->
 
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]

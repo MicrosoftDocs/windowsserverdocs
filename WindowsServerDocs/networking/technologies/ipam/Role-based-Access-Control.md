@@ -4,13 +4,11 @@ description: Learn how to use role-based access control in IPAM.
 manager: brianlic
 ms.topic: article
 ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Role-based Access Control
-
->
 
 This topic provides information about using role-based access control in IPAM.
 

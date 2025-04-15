@@ -3,12 +3,10 @@ title: Enabling the extension discovery banner
 description: Enabling the extension discovery banner
 ms.topic: article
 author: daniellee-msft
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 06/06/2019
 ---
 # Enabling the extension discovery banner
-
->
 
 The extension discovery banner feature was introduced in the Windows Admin Center Preview 1903 release. This feature allows an extension to declare the server hardware manufacturer and models it supports, and when a user connects to a server or cluster for which an extension is available, a notification banner will be displayed to easily install the extension. Extension developers will be able to get more visibility for their extensions and users will be able to easily discover more management capabilities for their servers.
 

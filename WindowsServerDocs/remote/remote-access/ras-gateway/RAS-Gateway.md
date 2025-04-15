@@ -4,14 +4,12 @@ description: This topic, which is intended for Information Technology (IT) profe
 manager: dougkim
 ms.topic: article
 ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 05/23/2018
 ---
 
 # RAS Gateway
-
->
 
 With RAS Gateway, Cloud Service Providers (CSPs) and Enterprises can enable datacenter and cloud network traffic routing between both virtual and physical networks, including the Internet. 
 

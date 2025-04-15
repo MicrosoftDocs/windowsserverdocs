@@ -4,13 +4,11 @@ description: Learn how to install and configure RSA and EDGE1.
 manager: brianlic
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 4 Install and Configure RSA and EDGE1
-
->
 
 RSA is the RADIUS and OTP server, and is installed prior to configuring RADIUS and OTP.
 

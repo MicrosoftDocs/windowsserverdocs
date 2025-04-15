@@ -11,8 +11,6 @@ ms.topic: article
 
 # DNS for AD DS Owner Role
 
->
-
 The DNS for AD DS owner of the forest is a person (or group of people) who is responsible for overseeing the deployment of the DNS for AD DS infrastructure and for making sure that (if necessary) domain names are registered with the proper Internet authorities. The forest owner assigns a Domain Name System (DNS) for Active Directory Domain Services (AD DS) owner for the forest.
 
 The DNS for AD DS owner is responsible for the DNS for AD DS design for the forest. If your organization is currently operating a DNS Server service, the DNS designer for the existing DNS Server service works with the DNS for AD DS owner to delegate the forest root DNS name to DNS servers running on domain controllers.

@@ -4,8 +4,8 @@ description: Reference article for the shutdown command, which enables you to sh
 ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
 author: xelu86
-ms.author: roharwoo
-ms.date: 10/04/2023
+ms.author: alalve
+ms.date: 03/18/2025
 ---
 
 # shutdown
@@ -110,6 +110,12 @@ To force apps to close and to restart the local computer after a one-minute dela
 
 ```
 shutdown /r /t 60 /c "Reconfiguring myapp.exe" /f /d p:4:1
+```
+
+To perform a planned shutdown of a device in 10 minutes and capture the reason in the shutdown event tracker with the comment "Scheduled maintenance", type:
+
+```
+shutdown.exe /s /t 600 /d p:0:0 /e /c "Scheduled maintenance"
 ```
 
 To restart the remote computer *myremoteserver* with the same parameters as the previous example, type:

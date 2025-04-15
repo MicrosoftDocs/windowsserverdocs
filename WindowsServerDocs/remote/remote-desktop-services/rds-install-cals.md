@@ -3,13 +3,11 @@ title: Install RDS client access licenses
 description: Learn how to install CALs for RD clients.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 manager: dongill
 ---
 # Install RDS client access licenses on the Remote Desktop license server
-
->
 
 Use the following information to install Remote Desktop Services client access licenses (CALs) on the license server. Once the CALs are installed, the license server will issue them to users as appropriate. Be sure to [activate your license server](./rds-activate-license-server.md) first before continuing with the following steps.
 

@@ -4,7 +4,7 @@ description: Cluster-Aware Updating (CAU) automates software update installation
 ms.topic: article
 manager: lizross
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 10/21/2021
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
 ---
@@ -75,7 +75,7 @@ To install the Failover Clustering feature, you can use the following tools:
 - [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature) Windows PowerShell cmdlet
 - Deployment Image Servicing and Management (DISM) command-line tool
 
-For more information, see [Install the Failover Clustering feature](create-failover-cluster.md#install-the-failover-clustering-feature).
+For more information, see [Install the Failover Clustering feature using Failover Cluster Manager](create-failover-cluster.md#install-the-failover-clustering-feature-using-failover-cluster-manager) or [PowerShell](create-failover-cluster.md#install-the-failover-clustering-feature-using-powershell).
 
 You must also install the Failover Clustering Tools, which are part of the Remote Server Administration Tools and are installed by default when you install the Failover Clustering feature in Server Manager. The Failover Clustering tools include the Cluster-Aware Updating user interface and PowerShell cmdlets.
 

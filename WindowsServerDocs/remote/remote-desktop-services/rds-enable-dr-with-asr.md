@@ -1,15 +1,13 @@
 ---
 title: Enable disaster recovery of RDS using Azure Site Recovery
 description: Learn how to enable disaster recovery of RDS using Azure Site Recovery.
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: article
 author: robinharwood
 manager: dongill
 ---
 # Enable disaster recovery of RDS using Azure Site Recovery
-
->
 
 To ensure that your RDS deployment is adequately configured for disaster recovery, you need to protect all of the components that make up your RDS deployment:
 

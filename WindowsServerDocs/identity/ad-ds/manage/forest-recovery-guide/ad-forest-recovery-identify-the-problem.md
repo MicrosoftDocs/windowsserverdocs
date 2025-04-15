@@ -1,7 +1,7 @@
 ---
 title: Active Directory Forest Recovery - Identify the problem
 description: When symptoms of a forest-wide failure appear, such as in event logs or other monitoring solutions, work with Microsoft Support to determine the cause of the failure and evaluate any possible remedies.
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 ms.date: 06/10/2023
 ms.topic: article
@@ -13,7 +13,7 @@ ms.topic: article
 
 When symptoms of a forest-wide failure appear, such as in event logs or other monitoring solutions, work with Microsoft Support to determine the cause of the failure and evaluate any possible remedies.
 
-> [!MPORTANT]
+> [!IMPORTANT]
 > This guide doesn't cover security recommendations for how to recover a forest that has been hacked or compromised. In general, it's recommended to follow [Best Practices for Securing Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory) and Pass-the-Hash mitigation techniques to harden the environment. For more information, see [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft Techniques](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Examples of forest-wide failures

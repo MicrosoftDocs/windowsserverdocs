@@ -2,8 +2,8 @@
 title: Plan for Hyper-V scalability in Windows Server
 description: Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory, and how many virtual processors, in Windows Server.
 ms.topic: article
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 10/25/2024
 zone_pivot_groups: windows-os-version
 ---
@@ -20,6 +20,12 @@ This article gives you details about the maximum configuration for components yo
 These maximums apply to each virtual machine when the host is run the selected product version. The guest operating system might support less than the virtual machine maximum. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md)
 
 :::zone pivot="windows-server-2025"
+
+> [!TIP]
+> The total number of virtual processors in VMs we created does not map directly to the number of logical processors on the host. As the example, if a machine has 8 logical processors and we created 8 VMs with 2 virtual processors for each. This does not mean the machine now has 16 logical processors. This simply means that we are oversubscribing the VMs we created.
+> Each VM is allowed a maximum of 2,048 virtual processors. 
+> The host is limited to 2,048 logical processors. 
+
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|
@@ -41,7 +47,7 @@ These maximums apply to each virtual machine when the host is run the selected p
 :::zone pivot="windows-server-2022"
 
 > [!TIP]
-> This tables also applies to Azure Stack HCI version 21H2, 22H2, and 23H2.
+> This tables also applies to Azure Local.
 
 |Component|Maximum|Notes|
 |-------------|-----------|---------|

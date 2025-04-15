@@ -3,13 +3,11 @@ title: Configure conditional access for VPN connectivity using Microsoft Entra I
 description: Learn how to configure conditional access for VPN connectivity using Microsoft Entra ID.
 ms.topic: article
 ms.date: 10/31/2023
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ---
 
 # Conditional access for VPN connectivity using Microsoft Entra ID
-
->
 
 In this how-to guide, you'll learn how to grant VPN users access your resources using [Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Microsoft Entra Conditional Access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Microsoft Entra connected application.
 
@@ -18,6 +16,11 @@ In this how-to guide, you'll learn how to grant VPN users access your resources 
 Before you start configuring Conditional Access for your VPN, you must have completed the following prerequisites:
 
 - [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
+  - Administrators who interact with Conditional Access must have one of the following role assignments depending on the tasks they're performing. To follow the [Zero Trust principle of least privilege](/security/zero-trust/), consider using [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to just-in-time activate privileged role assignments.
+    - Read Conditional Access policies and configurations
+      - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+    - Create or modify Conditional Access policies
+      - [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator)
 - [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access)
 
 - You've completed [Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md) or you already have setup the Always On VPN infrastructure in your environment.
@@ -95,7 +98,7 @@ Create a Conditional Access policy that is assigned to VPN users group and scope
 
 - **Users**: VPN Users
 - **Cloud App**: VPN Server
-- **Grant (access control)**: 'Require multi-factor authentication'. Other controls can be used if desired.
+- **Grant (access control)**: 'Require multifactor authentication'. Other controls can be used if desired.
 
 **Procedure:**
 This step covers creation of the most basic Conditional Access policy.  If desired, additional Conditions and Controls can be used.

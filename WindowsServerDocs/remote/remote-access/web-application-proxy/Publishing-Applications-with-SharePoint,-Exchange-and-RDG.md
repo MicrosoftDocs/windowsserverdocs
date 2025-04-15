@@ -11,8 +11,6 @@ ms.topic: article
 
 # Publishing Applications with SharePoint, Exchange and RDG
 
->
-
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/azure/active-directory/manage-apps/application-proxy).**
 
 This topic describes the tasks necessary to publish SharePoint Server, Exchange Server or Remote Desktop Gateway (RDP) through Web Application Proxy.

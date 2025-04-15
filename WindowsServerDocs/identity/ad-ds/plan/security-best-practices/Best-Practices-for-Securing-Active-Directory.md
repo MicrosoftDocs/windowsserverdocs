@@ -3,15 +3,13 @@ description: "Learn more about: Best Practices for Securing Active Directory"
 ms.assetid: e2651dc8-4b31-4cd8-a400-3b8123890210
 title: Best Practices for Securing Active Directory
 author: iainfoulds
-ms.author: justinha
+ms.author: mosagie
 manager: daveba
 ms.date: 10/11/2023
 ms.topic: article
 ---
 
 # Best Practices for Securing Active Directory
-
->
 
 Attacks against computing infrastructure have increased over the last decade in all parts of the world. We live in an age of cyber-warfare, cybercrime, and hacktivism. As a result, organizations of all sizes all over the world have had to deal with information leaks, theft of intellectual property (IP), denial-of-service (DDoS) attacks, or even destroyed infrastructure.
 

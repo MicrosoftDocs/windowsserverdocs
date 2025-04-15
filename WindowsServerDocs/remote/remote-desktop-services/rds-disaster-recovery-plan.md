@@ -1,15 +1,13 @@
 ---
 title: Create your disaster recovery plan
 description: Learn how to create a disaster recovery plan for your RDS deployment.
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: article
 author: robinharwood
 manager: dongill
 ---
 # Create your disaster recovery plan for RDS
-
->
 
 You can create a disaster recovery plan in Azure Site Recovery to automate the failover process. Add all RDS component VMs to the recovery plan.
 

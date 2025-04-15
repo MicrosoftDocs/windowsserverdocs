@@ -1,7 +1,7 @@
 ---
 title: Desktop Hosting Reference Architecture
 description: Architectural guidance for creating a desktop hosting solution with RDS and Azure.
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: 1bac5dd3-8430-46ee-8bef-10cc4b7cc437
@@ -9,8 +9,6 @@ author: robinharwood
 manager: dongill
 ---
 # Desktop Hosting Reference Architecture
-
->
 
 This article defines a set of architectural blocks for using Remote Desktop Services (RDS) and Microsoft Azure virtual machines to create multitenant, hosted Windows desktop and application services, which we call "desktop hosting." You can use this architecture reference to create highly secure, scalable, and reliable desktop hosting solutions for small- and medium-sized organizations with 5 to 5000 users.
 

@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Tuning DFS Namespaces
 
->
-
 After creating a namespace and adding folders and targets, refer to the following sections to tune or optimize the way DFS Namespace handles referrals and polls Active Directory Domain Services (AD DS) for updated namespace data:
 
 -   [Enable Access-Based Enumeration on a Namespace](enable-access-based-enumeration-on-a-namespace.md)

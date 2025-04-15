@@ -4,8 +4,8 @@ ms.assetid: 7d230527-f4fe-4572-8838-0b354ee0b06b
 title: Add a Claim Description
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

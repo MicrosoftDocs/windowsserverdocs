@@ -4,13 +4,11 @@ description: This topic provides an introduction to the DirectAccess scenario in
 manager: brianlic
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Deploy Remote Access in an Enterprise
-
->
 
 This topic provides an introduction to the DirectAccess scenario for the Enterprise.
 

@@ -5,13 +5,11 @@ ms.topic: article
 ms.assetid: c1992f8b-6f88-4dbc-b4a5-08368bba2787
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Shielded VMs for tenants - Creating a template disk (optional)
-
->
 
 To create a new shielded VM, you will need to use a specially prepared, signed template disk. Metadata from signed template disks helps ensure that the disks are not modified after they have been created and allows you as a tenant to restrict which disks can be used to create your shielded VMs. One way to provide this disk is for you, the tenant, to create it, as described in this topic.
 

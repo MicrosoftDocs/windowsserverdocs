@@ -1,16 +1,14 @@
 ---
 title: Active Directory Domain Services maximum limits and scalability
 description: Recommended limits for creating objects, entries, names, and more in your Active Directory deployment to ensure optimal performance.
-author: Heidilohr
-ms.author: helohr
+ms.author: alalve
+author: xelu86
 manager: helohr
 ms.date: 08/24/2024
 ms.topic: conceptual
 ---
 
 # Active Directory Domain Services maximum limits and scalability
-
->
 
 This article describes the maximum limits for certain aspects of your Active Directory environment that can affect scalability. We recommend you keep these limits in mind while planning for your Active Directory deployment.
 

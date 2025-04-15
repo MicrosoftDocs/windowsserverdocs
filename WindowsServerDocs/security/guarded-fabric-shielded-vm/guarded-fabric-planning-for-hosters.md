@@ -5,13 +5,11 @@ ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
 author: nirb-ms
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Guarded Fabric and Shielded VM Planning Guide for Hosters
-
->
 
 This topic covers planning decisions that will need to be made to enable shielded virtual machines to run on your fabric. Whether you upgrade an existing Hyper-V fabric or create a new fabric, running shielded VMs consists of two main components:
 

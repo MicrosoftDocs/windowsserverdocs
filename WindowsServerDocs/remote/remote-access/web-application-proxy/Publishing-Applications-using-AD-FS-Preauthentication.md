@@ -2,15 +2,13 @@
 description: "Learn more about: Publishing Applications using AD FS Preauthentication"
 ms.assetid: 5f733510-c96e-4d3a-85d2-4407de95926e
 title: Publishing Applications using AD FS Preauthentication
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 07/13/2016
 ms.topic: article
 ---
 
 # Publishing Applications using AD FS Preauthentication
-
->
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/azure/active-directory/manage-apps/application-proxy).**
 

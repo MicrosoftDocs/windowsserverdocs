@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Set the Ordering Method for Targets in Referrals
 
->
-
 A referral is an ordered list of targets that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or folder with targets. After the client receives the referral, the client attempts to access the first target in the list. If the target is not available, the client attempts to access the next target.
 Targets on the client's site are always listed first in a referral. Targets outside of the client's site are listed according to the ordering method.
 

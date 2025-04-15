@@ -5,8 +5,8 @@ ms.topic: conceptual
 ms.product: windows-server
 ms.author: alalve
 author: xelu86
-ms.contributor: Dona Mukherjee, Carlos Mayol Berral
-ms.date: 10/31/2024
+ms.contributor: Dona Mukherjee, Carlos Mayol Berral, Simon Jäger
+ms.date: 03/17/2025
 ---
 
 # OSConfig overview
@@ -19,7 +19,7 @@ OSConfig is commonly released with the Windows Server operating system (OS) to p
 
 ![Flowchart of the o s config PowerShell module.](../media/osconfig/osconfig-module-flowchart.png)
 
-Currently, you can use OSConfig to establish security baselines for various Microsoft Edge OSs, such as Windows Server 2025 and Azure Stack HCI 23H2. It integrates with Azure Policy, Microsoft Defender, Windows Admin Center, and Azure Automanage machine configuration to facilitate monitoring and compliance reporting.
+Currently, with OSConfig, you can establish security baselines for various Microsoft OSs, including Windows Server 2025 and Azure Local, version 23H2. It integrates with Azure Policy, Microsoft Defender, Windows Admin Center, and Azure Automanage machine configuration to facilitate monitoring and compliance reporting.
 
 OSConfig enables improved mapping or even direct conversion with other preexisting management definitions. These definitions include `.admx` files in Group Policy, `.mof` files in Windows Management Instrumentation (WMI), and Device Description Framework (DDF) files in the configuration service provider (CSP).
 

@@ -3,13 +3,11 @@ description: "Learn more about: Block cloning on ReFS"
 ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
 title: Block cloning on ReFS
 author: xelu86
-ms.author: wscontent
+ms.author: jgerend
 ms.date: 09/23/2024
 ms.topic: article
 ---
 # Block cloning on ReFS
-
->
 
 Block cloning instructs the file system to copy a range of file bytes on behalf of an application, where the destination file may be the same as, or different from, the source file. Traditional copy operations, unfortunately, are expensive since they trigger expensive read and writes to the underlying physical data.
 

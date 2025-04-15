@@ -3,15 +3,13 @@ description: "Learn more about: Scenario: Access-Denied Assistance"
 ms.assetid: aae907eb-11cf-4a87-a046-8680872ed0b1
 title: Scenario Access-Denied Assistance
 author: billmath
-ms.author: roharwoo
+ms.author: alalve
 manager: femila
 ms.date: 06/06/2023
 ms.topic: article
 ---
 
 # Scenario: Access-Denied Assistance
-
->
 
 Users will get an access-denied message when they try to access shared files and folders on a file server for which they do not have permissions. Administrators often do not have the appropriate context to troubleshoot the access issue, which makes it hard to resolve the issue.
 

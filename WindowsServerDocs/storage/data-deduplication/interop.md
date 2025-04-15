@@ -5,12 +5,10 @@ title: Data Deduplication interoperability
 ms.topic: article
 author: robinharwood
 manager: klaasl
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 02/18/2022
 ---
 # Data Deduplication interoperability
-
->
 
 ## Supported
 

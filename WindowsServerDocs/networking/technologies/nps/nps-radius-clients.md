@@ -4,14 +4,12 @@ description: This topic provides an overview of RADIUS Clients for Network Polic
 manager: brianlic
 ms.topic: article
 ms.assetid: d3a09ac9-75f8-4f57-aab4-b0fdfe110118
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # RADIUS Clients
-
->
 
 A network access server \(NAS\) is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
 

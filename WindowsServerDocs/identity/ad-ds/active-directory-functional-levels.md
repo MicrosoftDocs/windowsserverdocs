@@ -2,13 +2,11 @@
 title: Active Directory Domain Services functional levels
 description: Learn more about the different Active Directory Domain and Forest functional levels in Windows Server
 ms.topic: conceptual
-ms.author: roharwoo
+ms.author: mosagie
 author: gswashington
 ms.date: 10/25/2024
 ---
 # Active Directory Domain Services functional levels
-
->
 
 Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels don't affect which operating systems you can run on workstations and member servers joined to the domain or forest. This article describes which functioning levels are compatible with which versions of Windows Server.
 
@@ -61,7 +59,6 @@ All default Active Directory features in earlier domain functional levels plus t
 
 You can use the following operating systems as domain controllers (DCs) with the Windows Server 2012 R2 forest and domain function level.
 
-- Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016

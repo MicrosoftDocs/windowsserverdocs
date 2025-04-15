@@ -4,13 +4,11 @@ description: Planning information for using MFA with RDS.
 ms.topic: article
 ms.assetid: 09ea784e-5644-417a-a3d9-bdbcebc313f9
 author: robinharwood
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 manager: dongill
 ---
 # Remote Desktop Services - Multi-Factor Authentication
-
->
 
 Leverage the power of Active Directory with Multi-Factor Authentication to enforce high security protection of your business resources.
 

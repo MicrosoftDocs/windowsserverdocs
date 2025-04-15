@@ -11,8 +11,6 @@ ms.topic: article
 
 # Appendix A: Reviewing Key AD DS Terms
 
->
-
 The following terms are relevant to the deployment process for  Windows Server 2008  Active Directory Domain Services (AD DS).
 
 ## Active Directory domain

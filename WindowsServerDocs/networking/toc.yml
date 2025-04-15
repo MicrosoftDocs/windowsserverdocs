@@ -152,10 +152,10 @@ items:
   - name: DirectAccess
     href: ../remote/remote-access/directaccess/directaccess.md
   - name: Domain Name System (DNS)
-    href: dns/dns-top.md
+    href: dns/dns-overview.md
     items:
     - name: Overview
-      href: dns/dns-top.md
+      href: dns/dns-overview.md
       items:
       - name: Anycast DNS
         href: dns/deploy/anycast.md
@@ -169,8 +169,24 @@ items:
       items:
       - name: DNS zones
         href: dns/zone-types.md
-      - name: DNS resource records
-        href: dns/resource-record-types.md
+      - name: DNS architecture
+        href: dns/dns-architecture.md  
+      - name: Network Ports
+        href: dns/network-ports.md
+      - name: DNS processes
+        items:
+        - name: Queries and lookups
+          href: dns/queries-lookups.md
+        - name: Forwarding
+          href: dns/forwarding.md
+        - name: Dynamic updates
+          href: dns/dynamic-update.md
+        - name: Aging and scavenging
+          href: dns/aging-scavenging.md
+        - name: Reverse lookup
+          href: dns/reverse-lookup.md
+        - name: WINS lookup integration
+          href: dns/wins-lookup.md
       - name: DNSSEC
         items:
         - name: What is DNSSEC?
@@ -185,6 +201,8 @@ items:
         href: dns/manage-resource-records.md
       - name: Secure DNS Client over HTTPS (DoH)
         href: dns/doh-client-support.md
+      - name: Enable DNS Logging and Diagnostics
+        href: dns/dns-logging-and-diagnostics.md 
     - name: Tutorials
       items:
       - name: DNS policy
@@ -238,6 +256,12 @@ items:
         href: technologies/dhcp/dhcp-deploy-wps.md
       - name: Install DHCP relay agent
         href: technologies/dhcp/dhcp-deploy-relay-agent.md
+      - name: Migrate DHCP server to Windows Server
+        href: technologies/dhcp/migrate-dhcp-server.md  
+    - name: DHCP failover
+      items:
+      - name: DHCP failover overview
+        href: technologies/dhcp/dhcp-failover.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
@@ -245,6 +269,8 @@ items:
         href: ../troubleshoot/dynamic-host-configuration-protocol-basics.md
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
+      - name: DHCP server events
+        href: technologies/dhcp/dhcp-server-events.md  
   - name: Edge networking
     items:
     - name: Network ATC
@@ -272,8 +298,10 @@ items:
         - name: Network Controller
           href: /azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking
           items:
-          - name: Network Controller high availability
-            href: sdn/technologies/network-controller/network-controller-high-availability.md
+          - name: Network Controller with Failover Clustering
+            href: sdn/technologies/network-controller/network-controller-failover-clustering.md
+          - name: Network Controller with Service Fabric
+            href: sdn/technologies/network-controller/network-controller-service-fabric.md
           - name: Install the Network Controller server role using Server Manager
             href: sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md
           - name: Post-deployment steps for Network Controller
@@ -313,6 +341,8 @@ items:
           items:
           - name: Deploy Network Controller using Windows PowerShell
             href: sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md
+        - name: Deploy Network Controller with Failover Clustering
+          href: sdn/deploy/deploy-network-controller-failover-clustering.md
       - name: Manage SDN
         href: sdn/manage/manage-sdn.md
         items:

@@ -4,14 +4,12 @@ description: This topic provides links to management procedures for Network Poli
 manager: brianlic
 ms.topic: article
 ms.assetid: a275b02c-62b3-4b8a-8417-a710f24bebfe
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Manage Network Policy Server (NPS)
-
->
 
 You can use the topics in this section to manage Network Policy Server.
 

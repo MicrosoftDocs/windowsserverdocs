@@ -4,13 +4,11 @@ title: Branch Office Considerations
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 10/25/2024
 ---
 
 # Branch office considerations
-
->
 
 This article describes best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.
 

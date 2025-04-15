@@ -4,13 +4,11 @@ title: Install trusted TPM root certificates
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 06/27/2019
 ---
 
 # Install trusted TPM root certificates
-
->
 
 When you configure HGS to use TPM attestation, you also need to configure HGS to trust the vendors of the TPMs in your servers.
 This extra verification process ensures only authentic, trustworthy TPMs are able to attest with your HGS.

@@ -3,7 +3,7 @@ title: Failover clustering hardware requirements and storage options
 description: Hardware requirements and storage options for creating a failover cluster.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 manager: lizross
 ms.date: 10/10/2023
 ---
@@ -28,7 +28,7 @@ The following sections describe hardware requirements and recommendations for fa
 We recommend that you use a set of matching computers that contain the same or similar components.
 
 > [!NOTE]
-> If you've purchased Azure Stack HCI Integrated System solution hardware from the [Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net) through your preferred Microsoft hardware partner, the Azure Stack HCI operating system should be pre-installed.
+> If you've purchased Azure Local Integrated System solution hardware from the [Azure Local Catalog](https://azurestackhcisolutions.azure.microsoft.com/) through your preferred Microsoft hardware partner, the Azure Stack HCI operating system should be pre-installed.
 
 ### Network adapters and cables
 

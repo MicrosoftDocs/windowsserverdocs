@@ -3,7 +3,7 @@ title: Get started with Windows Server
 description: Get started with detailed information about Windows Server and get ready to deploy, upgrade, or migrate.
 ms.topic: landing-page
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.date: 08/16/2024
 ---
 

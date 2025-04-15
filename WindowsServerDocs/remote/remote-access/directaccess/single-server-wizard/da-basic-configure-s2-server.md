@@ -4,13 +4,11 @@ description: Learn how to configure the client and server settings required for 
 manager: brianlic
 ms.topic: article
 ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Basic DirectAccess Server
-
->
 
 This topic describes how to configure the client and server settings required for a basic DirectAccess deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](Plan-a-Basic-DirectAccess-Deployment.md).
 

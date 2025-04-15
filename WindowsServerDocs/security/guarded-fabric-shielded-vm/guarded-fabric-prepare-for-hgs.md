@@ -5,13 +5,11 @@ ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Review prerequisites for the Host Guardian Service
-
->
 
 
 This topic covers HGS prerequisites and initial steps to prepare for the HGS deployment.

@@ -2,7 +2,7 @@
 title: bitsadmin help
 description: Reference article for the bitsadmin help command, which displays the command-line usage.
 ms.topic: reference
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 ms.date: 01/06/2023
 ---

@@ -3,7 +3,7 @@ title: ftp trace
 description: Reference article for the ftp trace command, which toggles packet tracing.
 ms.topic: reference
 ms.assetid: 8740c1fb-a7bf-45c8-b2f9-61fae4f3506e
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

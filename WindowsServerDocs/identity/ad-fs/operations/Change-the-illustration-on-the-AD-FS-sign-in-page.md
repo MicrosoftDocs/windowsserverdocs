@@ -4,8 +4,8 @@ ms.assetid: a4526500-24b3-423d-805c-24b0d8061aba
 title: Change the illustration on the AD FS sign-in page
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # Change the illustration on the AD FS sign-in page

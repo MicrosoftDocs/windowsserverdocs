@@ -4,13 +4,11 @@ description: "Learn more about: Install HGS in an existing bastion forest"
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Install HGS in an existing bastion forest
-
->
 
 
 ## Join the HGS server to the root domain

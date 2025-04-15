@@ -4,13 +4,11 @@ title: Create a shielded VM using PowerShell
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 09/25/2019
 ---
 
 # Create a shielded VM using PowerShell
-
->
 
 In production, you would typically use a fabric manager (e.g. VMM) to deploy shielded VMs.
 However, the steps illustrated below allow you to deploy and validate the entire scenario without a fabric manager.

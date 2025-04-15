@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
-description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
-ms.date: 08/01/2024
+description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Local and Azure Kubernetes Service (AKS) on Azure Local and Windows Server at no extra cost.
+ms.date: 03/10/2025
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
@@ -9,7 +9,7 @@ ms.author: roharwoo
 
 # Azure Hybrid Benefit for Windows Server
 
-Azure Hybrid Benefit enables commercial customers to use their qualifying on-premises licenses to get Windows virtual machines (VMs) on Azure at a reduced cost. This article focuses on the benefits of using qualifying Windows Server licenses to get cost savings for Windows Server VMs in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) hybrid deployments.
+Azure Hybrid Benefit enables commercial customers to use their qualifying on-premises licenses to get Windows virtual machines (VMs) on Azure at a reduced cost. This article focuses on the benefits of using qualifying Windows Server licenses to get cost savings for Windows Server VMs in Azure, Azure Local, and Azure Kubernetes Service (AKS) hybrid deployments.
 
 For other Azure hybrid benefits (for example, Microsoft SQL Server), see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit).
 
@@ -30,11 +30,11 @@ Azure Hybrid Benefit includes the following cost savings:
 
 - **Windows Server VMs on Azure:** The license for Windows Server is covered by Azure Hybrid Benefit, so you only need to pay for the base compute rate of the VM. The base compute rate is equal to the Linux rate for VMs.
 
-- **Azure Stack HCI:** The Azure Stack HCI host fee and Windows Server subscription fee are waived with Azure Hybrid Benefit. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Stack HCI (for example, customer-managed hardware, Azure services, and workloads).
+- **Azure Local:** The Azure Local host fee and Windows Server subscription fee are waived with Azure Hybrid Benefit. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Local (for example, customer-managed hardware, Azure services, and workloads).
 
-- **AKS:** Run AKS on Windows Server and Azure Stack HCI at no extra cost. You still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for Azure Hybrid Benefit for Azure Stack HCI. With Azure Hybrid Benefit for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
+- **AKS:** Run AKS on Windows Server and Azure Local at no extra cost. You still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for Azure Hybrid Benefit for Azure Local. With Azure Hybrid Benefit for Azure Local, you can waive fees for the Azure Local host and Windows Server subscription.
 
-![Illustration showing Azure Hybrid Benefit savings for Windows Server VMs on Azure, AKS on Azure Stack HCI and Windows Server.](media/azure-hybrid-benefit/azure-hybrid-benefit-savings.png)
+![Illustration showing Azure Hybrid Benefit savings for Windows Server VMs on Azure, AKS on Azure Local and Windows Server.](media/azure-hybrid-benefit/azure-hybrid-benefit-savings.png)
 
 ## Pricing for Azure Hybrid Benefit
 
@@ -42,9 +42,9 @@ To evaluate your potential cost savings, you can use these resources:
 
 - **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/) to estimate cost savings, or compare Windows VM pricing with and without Azure Hybrid Benefit.
 
-- **Azure Stack HCI:** [Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/hci).  
+- **Azure Local:** [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/).  
 
-- **Azure Kubernetes Service (AKS):** [AKS on Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
+- **Azure Kubernetes Service (AKS):** [AKS on Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
 
 ## Getting Azure Hybrid Benefit
 
@@ -116,13 +116,13 @@ If you don't have enough eligible Windows Server licenses for your deployed VMs,
 > [!NOTE]
 > Microsoft reserves the right to audit customers at any time to verify eligibility for Azure Hybrid Benefit utilization.
 
-# [Azure Stack HCI](#tab/azure-stack-hci)
+# [Azure Local](#tab/azure-local)
 
-Follow the guidance in this section to get Azure Hybrid Benefit for your Windows VMs on Azure Stack HCI infrastructure.
+Follow the guidance in this section to get Azure Hybrid Benefit for your Windows VMs on Azure Local infrastructure.
 
 ### Licensing prerequisites
 
-To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the following licensing prerequisites.
+To qualify for Azure Hybrid Benefit for Azure Local, you must meet the following licensing prerequisites.
 
 #### Types of license
 
@@ -130,19 +130,19 @@ To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the follo
 
 #### Number of licenses
 
-Each Windows Server core license entitles use on one physical core of Azure Stack HCI. You need to allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
+Each Windows Server core license entitles use on one physical core of Azure Local. You need to allocate enough core licenses for all physical cores on servers in the Azure Local cluster.
 
 #### Unlimited virtualization
 
-You can use any number of Windows Server VMs on the Azure Stack HCI cluster if you allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
+You can use any number of Windows Server VMs on the Azure Local cluster if you allocate enough core licenses for all physical cores on servers in the Azure Local cluster.
 
 #### Use rights
 
-Licenses must be used either on-premises or on Azure Stack HCI, but not on both. You have 180 days of concurrent licensing to migrate your servers.
+Licenses must be used either on-premises or on Azure Local, but not on both. You have 180 days of concurrent licensing to migrate your servers.
 
-### How to apply Azure Hybrid Benefit for Azure Stack HCI
+### How to apply Azure Hybrid Benefit for Azure Local
 
-You need to activate Azure Hybrid Benefit for your Azure Stack HCI cluster. You can learn how to activate Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure/azure-local/concepts/azure-hybrid-benefit).
+You need to activate Azure Hybrid Benefit for your Azure Local cluster. You can learn how to activate Azure Hybrid Benefit for Azure Local by following the steps in [Azure Local billing and payment](/azure/azure-local/concepts/azure-hybrid-benefit).
 
 # [AKS](#tab/aks)
 
@@ -155,7 +155,7 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 #### Eligible hosts
 
 - Windows Server 2019 or later (Datacenter only), or
-- Azure Stack HCI
+- Azure Local
 
 #### Types of license
 
@@ -204,4 +204,4 @@ You can purchase Software Assurance through Volume Licensing. Your Software Assu
 
 - [Azure Hybrid Benefit product page](https://azure.microsoft.com/pricing/hybrid-benefit)
 - [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
-- [Azure Hybrid Benefit for Azure Stack HCI](/azure/azure-local/concepts/azure-hybrid-benefit-hci)
+- [Azure Hybrid Benefit for Azure Stack HCI](/azure/azure-local/concepts/azure-hybrid-benefit)

@@ -2,15 +2,13 @@
 description: "Learn more about: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)"
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 author: robinharwood
-ms.author: roharwoo
+ms.author: alalve
 manager: femila
 ms.date: 04/01/2022
 ms.topic: how-to
 ---
 
 # Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
-
->
 
 You can set retention periods for folders and put files on legal hold by using File Classification Infrastructure and File Server Resource Manager.
 

@@ -4,13 +4,11 @@ description: Learn how to configure the default gateway and DNS server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7000e80f-31b1-43c5-b51e-1469d26909e5
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 4 Configure APP1
-
->
 
 Configure static IPv6 addressing and gateway settings to enable APP1 access to the 2-Corpnet subnet.
 

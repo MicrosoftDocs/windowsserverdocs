@@ -1,8 +1,8 @@
 ---
 title: Find the current Active Directory Schema version
 description: This article describes how to find the current Schema version in Active Directory for Windows Server.
-author: Heidilohr
-ms.author: roharwoo
+ms.author: jgerend
+author: robinharwood
 ms.date: 04/03/2024
 ms.topic: how-to
 ---

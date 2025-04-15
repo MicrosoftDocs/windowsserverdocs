@@ -2,14 +2,12 @@
 title: About Always On VPN for Windows Server Remote Access
 description: Learn about Always On VPN benefits over standard Windows VPN solutions. Key areas in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 ms.topic: article
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 04/28/2023
 ---
 
 # About Always On VPN
-
->
 
 Always On VPN allows you to:
 
@@ -37,7 +35,7 @@ Always On VPN supports integration with the following platforms:
 
 - [**Microsoft Entra multifactor authentication platform.**](/azure/active-directory/authentication/concept-mfa-howitworks) When combined with Remote Authentication Dial-In User Service (RADIUS) services and the Network Policy Server (NPS) extension for Microsoft Entra multifactor authentication, VPN authentication can use strong MFA.
 
-- **Third-party VPN plug-ins.**  With the Universal Windows Platform (UWP), third-party VPN providers can create a single application for the full range of Windows devices. The UWP provides a guaranteed core API layer across devices, eliminating the complexity of and problems often associated with writing kernel-level drivers. Currently, Windows UWP VPN plug-ins exist for [Pulse Secure](https://www.microsoft.com/p/pulse-secure/9nblggh3b0bp), [F5 Access](https://www.microsoft.com/p/f5-access/9wzdncrdsfn0), [Check Point Capsule VPN](https://www.microsoft.com/p/check-point-capsule-vpn/9wzdncrdjxtj), [FortiClient](https://www.microsoft.com/p/forticlient/9wzdncrdh6mc), [SonicWall Mobile Connect](https://www.microsoft.com/p/sonicwall-mobile-connect/9wzdncrdsfkz), and [GlobalProtect](https://www.microsoft.com/p/globalprotect/9nblggh6bzl3).
+- **Third-party VPN plug-ins.**  With the Universal Windows Platform (UWP), third-party VPN providers can create a single application for the full range of Windows devices. The UWP provides a guaranteed core API layer across devices, eliminating the complexity of and problems often associated with writing kernel-level drivers. Currently, Windows UWP VPN plug-ins exist for [Pulse Secure](https://www.microsoft.com/p/pulse-secure/9nblggh3b0bp), [F5 Access](https://www.microsoft.com/p/f5-access/9wzdncrdsfn0), [Check Point Capsule VPN](https://www.microsoft.com/p/check-point-capsule-vpn/9wzdncrdjxtj), [FortiClient](https://www.microsoft.com/p/forticlient/9wzdncrdh6mc), [SonicWall Mobile Connect](https://go.logically.com/security-bulletin/sonicwall-mobile-connect), and [GlobalProtect](https://www.microsoft.com/p/globalprotect/9nblggh6bzl3).
 
 ## Security features
 

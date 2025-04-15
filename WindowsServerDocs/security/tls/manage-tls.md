@@ -3,14 +3,12 @@ title: Manage Transport Layer Security (TLS) in Windows
 description: Learn how to manage the Transport Layer Security in Windows.
 ms.topic: article
 author: andreipo
-ms.author: roharwoo
+ms.author: mosagie
 ms.contributor: alalve 
 ms.date: 06/15/2023
 ---
 
 # Manage Transport Layer Security (TLS)
-
->
 
 ## Configuring TLS Cipher Suite Order
 

@@ -5,13 +5,11 @@ ms.topic: article
 ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 01/14/2020
 ---
 
 # Deploy the Host Guardian Service (HGS)
-
->
 
 
 To deploy the HGS, complete the following tasks:

@@ -4,14 +4,12 @@ description: Learn about performance tools including the Client to Server Traffi
 ms.topic: article
 ms.assetid: c7789781-87e8-464e-981b-af887d01badd
 manager: dcscontentpm
-ms.author: roharwoo
+ms.author: jgerend
 author: Teresa-Motiv
 ms.date: 10/27/2021
 ---
 
 # Performance Tools for Network Workloads
-
->
 
 You can use this topic to learn about performance tools.
 

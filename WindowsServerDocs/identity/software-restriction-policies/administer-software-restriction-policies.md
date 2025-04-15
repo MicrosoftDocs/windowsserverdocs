@@ -10,8 +10,6 @@ ms.date: 10/12/2016
 ---
 # Administer Software Restriction Policies
 
->
-
 This topic for the IT professional contains procedures how to administer application control policies using Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
 
 ## Introduction

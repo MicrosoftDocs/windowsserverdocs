@@ -3,14 +3,12 @@ title: Remote Server Administration Tools
 description: Top level topic for Remote Server Administration Tools
 ms.topic: how-to
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 manager: mtillman
 ms.date: 09/09/2020
 ---
 # Remote Server Administration Tools
-
->
 
 This topic supports Remote Server Administration Tools for Windows 10.
 

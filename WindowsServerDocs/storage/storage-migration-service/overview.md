@@ -2,7 +2,7 @@
 title: Storage Migration Service overview
 description: Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows, Linux, and NetApp CIFS servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 author: robinharwood
-ms.author: roharwoo
+ms.author: alalve
 ms.date: 06/25/2024
 ms.topic: article
 ---
@@ -127,7 +127,7 @@ The destination server must run one of the following operating systems:
 - Windows Server 2016
 - Windows Server 2012 R2
 
-The destination servers can be standalone servers or a Windows failover cluster. Be aware that the clusters themselves are not migrated, solely the file server cluster resources. They can't run Azure Stack HCI or use a non-Microsoft clustering add-on. While the Storage Migration Service doesn't support Azure Files as a destination, it fully supports servers running the Azure File Sync agent with cloud tiering.
+The destination servers can be standalone servers or a Windows failover cluster. Be aware that the clusters themselves are not migrated, solely the file server cluster resources. They can't run Azure Local or use a non-Microsoft clustering add-on. While the Storage Migration Service doesn't support Azure Files as a destination, it fully supports servers running the Azure File Sync agent with cloud tiering.
 
 > [!TIP]
 > Destination servers running Windows Server 2019 or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service.

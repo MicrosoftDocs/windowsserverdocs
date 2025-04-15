@@ -4,8 +4,8 @@ ms.assetid: c89a977c-b09f-44ec-be42-41e76a6cf3ad
 title: Remove the Microsoft copyright
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # Remove the Microsoft copyright

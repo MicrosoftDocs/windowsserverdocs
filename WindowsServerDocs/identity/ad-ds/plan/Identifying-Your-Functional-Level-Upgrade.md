@@ -9,8 +9,6 @@ ms.topic: conceptual
 
 # Identifying your functional level upgrade
 
->
-
 In this article learn about the process for upgrading your domain and forest functional levels in Active Directory Domain Services.
 
 Before you can raise domain and forest functional levels, evaluate your current environment and identify your target functional level. Assess your current environment by identifying:
@@ -35,7 +33,7 @@ Consider the following items when assessing your current environment:
 
 - Check for any incompatible software or applications that might prevent you from upgrading to a newer version of Windows Server.
 
-- Check for removed features to make sure that none are being used. To learn more about removed features, see [Features removed or no longer developed starting with Windows Server 2025](../../../get-started/removed-deprecated-features-windows-server-2025.md).
+- Check for removed features to make sure that none are being used. To learn more about removed features, see [Features removed or no longer developed in Windows Server](../../../get-started/removed-deprecated-features-windows-server.md).
 
 Documenting this information can help you identify the steps to take to ensure that you have a fully functional Windows Server environment.
 

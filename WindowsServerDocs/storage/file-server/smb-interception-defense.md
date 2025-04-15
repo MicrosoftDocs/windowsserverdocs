@@ -92,7 +92,7 @@ encryption, and signing. Learn more in the [SMB security enhancements](smb-secur
 
 Before removing the SMB 1.0 feature, be sure no applications and processes on the computer require
 it. For more information on how to detect and disable SMB 1.0, see the article
-[How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows](Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md#how-to-detect-status-enable-and-disable-smb-protocols).
+[Detect, enable, and disable SMBv1, SMBv2, and SMBv3 in Windows](Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md#use-the-command-line-or-registry-editor-to-manage-smb-protocols).
 
 You can also use the Windows Admin Center
 [Files and file sharing tool](../../manage/windows-admin-center/use/manage-servers.md) to both
@@ -203,7 +203,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" -Name "MaxSMB2Dialect" -Value 0x000000311
 ```
 
-To learn more about how to set the minimum and maximum SMB dialect used in Windows Server and Windows , see [Manage SMB dialects in Windows](manage-smb-dialects.md).
+To learn more about how to set the minimum and maximum SMB dialect used in Windows Server and Windows, see [Manage SMB dialects in Windows](manage-smb-dialects.md).
 
 ### Use UNC hardening to require signing, encryption, and mutual authentication
 

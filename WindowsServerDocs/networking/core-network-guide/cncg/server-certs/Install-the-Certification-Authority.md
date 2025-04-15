@@ -4,13 +4,11 @@ description: Learn how to install Active Directory Certificate Services so that 
 manager: brianlic
 ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Install the Certification Authority
-
->
 
 You can use this procedure to install Active Directory Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.
 

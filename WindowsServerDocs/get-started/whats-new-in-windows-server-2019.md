@@ -3,7 +3,7 @@ title: What's new in Windows Server 2019
 description: This article describes some of the new features in Windows Server 2019.
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 07/31/2024
 ---
 
@@ -53,7 +53,7 @@ We made several improvements to the core network stack, such as TCP Fast Open (T
 
 In the past, Virtual Machine Queues and Virtual Machine Multi-Queues (VMMQs) enabled much higher throughput to individual VMs as network throughputs first reached the 10GbE mark and beyond. Unfortunately, the planning, baselining, tuning, and monitoring required for success became a much larger undertaking than IT administrators anticipated.
 
-Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as needed. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Stack HCI](/azure/azure-local/concepts/host-network-requirements).
+Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as needed. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
 ## Security
 
@@ -169,7 +169,7 @@ You can also access the following post-release-to-manufacturing (RTM) features w
 
 ### Storage Spaces Direct
 
-Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Stack HCI solution overview](/azure-stack/operator/azure-stack-hci-overview).
+Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Local solution overview](/azure/azure-local/overview).
 
 - Deduplication and compression for ReFS volumes. Variable-size chunk store with optional compression maximizes savings rates, while multi-threaded post-processing architecture minimizes performance impact. This feature supports volumes up to 64 TB and deduplicates the first 4 MB of each file.
 
@@ -179,7 +179,7 @@ Here's what's new in Storage Spaces Direct. For more information about how to ac
 
 - Two-server clusters can now use a USB flash drive as a witness. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more information, see our [Storage Spaces Direct announcement blog post](https://techcommunity.microsoft.com/t5/storage-at-microsoft/here-s-what-you-missed-8211-five-big-announcements-for-storage/ba-p/428257) and [Configure a file share witness for Failover Clustering](../failover-clustering/file-share-witness.md).
 
-- Windows Admin Center supports a dashboard that lets you manage and monitor Storage Spaces direct. You can monitor IOPS and IO latency from the overall cluster level down to individual SSDs or HDDs at no extra cost. To learn more, see [What is Windows Admin Center?](../manage/windows-admin-center/use/manage-hyper-converged.md#what-is-windows-admin-center).
+- Windows Admin Center supports a dashboard that lets you manage and monitor Storage Spaces direct. You can monitor IOPS and IO latency from the overall cluster level down to individual SSDs or HDDs at no extra cost. To learn more, see [Manage a hyper-converged infrastructure by using Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md).
 
 - Performance history is a new feature that provides effortless visibility into resource utilization and measurements. To learn more, see [Performance history for Storage Spaces Direct](../storage/storage-spaces/performance-history.md).
 

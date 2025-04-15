@@ -1,7 +1,7 @@
 ---
 title: Active Directory Forest Recovery - Procedures
 description: This section contains procedures related to the forest recovery process. The following is a list of procedures that are used in backing up and restoring domain controllers and Active Directory.
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 ms.date: 06/21/2023
 ms.topic: article
@@ -26,7 +26,7 @@ These steps explain how to perform an authoritative restore of SYSVOL at the
 same time.
 
 - [Configure the DNS Server service](ad-forest-recovery-configure-dns.md)
-- [Removethe global catalog](ad-forest-recovery-remove-gc.md)
+- [Remove the global catalog](ad-forest-recovery-remove-gc.md)
 - [Raise the value of available RID pools](ad-forest-recovery-raise-rid-pool.md)
 - [Invalidate the current RID pool](ad-forest-recovery-invaildate-rid-pool.md)
 - [Seize an operations master role](ad-forest-recovery-seizing-operations-master-role.md)

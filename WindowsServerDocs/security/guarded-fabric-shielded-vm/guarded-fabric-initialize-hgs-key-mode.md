@@ -4,13 +4,11 @@ title: Initialize HGS using host key attestation
 ms.topic: article
 manager: dongill
 author: robinharwood
-ms.author: roharwoo
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Initialize HGS using host key attestation
-
->
 
 This step depends on whether you are initializing HGS in a new forest or an existing bastion forest:
 

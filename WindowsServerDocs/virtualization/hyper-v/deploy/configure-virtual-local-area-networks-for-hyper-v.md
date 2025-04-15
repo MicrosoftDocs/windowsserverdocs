@@ -3,8 +3,8 @@ title: Configure virtual local area networks for Hyper-V
 description: Learn how to configure a virtual local area network (VLAN) for use by virtual machines on a Hyper-V host.
 ms.topic: article
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 08/13/2024
 ---
 # Configure virtual local area networks for Hyper-V
@@ -28,7 +28,7 @@ On the host, you configure the virtual switch to allow network traffic on the ph
 
 1. Select **OK**.
 
-All traffic that goes through the physical network adapter connected to the virtual switch is tagged with the VLAN ID you set.
+All traffic that goes through the physical network adapter connected to the virtual switch is tagged with the VLAN ID you set on the virtual switch and virtual machines.
 
 ## To allow a virtual machine to use a VLAN
 

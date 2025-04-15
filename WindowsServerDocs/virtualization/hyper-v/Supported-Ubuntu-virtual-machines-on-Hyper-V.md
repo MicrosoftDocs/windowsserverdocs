@@ -1,15 +1,13 @@
 ---
 title: Supported Ubuntu virtual machines on Hyper-V
-description: Lists the Ubuntu/Linux integration services and features included in each version
+description: Lists the Ubuntu/Linux integration services and features included in each version of Windows Server.
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
-ms.author: roharwoo
-author: kkkashan
-ms.date: 09/27/2023
+ms.author: daknappe
+author: meaghanlewis
+ms.date: 02/19/2025
 ---
 # Supported Ubuntu virtual machines on Hyper-V
-
-> 
 
 The following feature distribution map indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.
 
@@ -21,43 +19,43 @@ The following feature distribution map indicates the features in each version. T
 
 * (*blank*) - Feature not available
 
-| **Feature** | **Windows Server operating system version** | **22.04 LTS** | **20.04 LTS** | **18.04 LTS** | **16.04 LTS** |
-|--|--|--|--|--|--|
-| **Availability** |  | Built-in | Built-in | Built-in | Built-in |
-| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| Windows Server 2016 Accurate Time | 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ |
-| **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)** |  |  |  |  |  |
-| Jumbo frames | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| VLAN tagging and trunking | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| Live migration | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| Static IP Injection | 2022, 2019, 2016, 2012 R2 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
-| vRSS | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| TCP Segmentation and Checksum Offloads | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| SR-IOV | 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ |
-| **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |  |  |  |  |
-| VHDX resize | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| Virtual Fibre Channel | 2022, 2019, 2016, 2012 R2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
-| Live virtual machine backup | 2022, 2019, 2016, 2012 R2 | ✔ Note 3, 4, 5 | ✔ Note 3, 4, 5 | ✔ Note 3, 4, 5 | ✔ Note 3, 4, 5 |
-| TRIM support | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| SCSI WWN | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** |  |  |  |  |  |
-| PAE Kernel Support | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| Configuration of MMIO gap | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| Dynamic Memory - Hot-Add | 2022, 2019, 2016, 2012 R2 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 |
-| Dynamic Memory - Ballooning | 2022, 2019, 2016, 2012 R2 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 |
-| Runtime Memory Resize | 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ |
-| **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** |  |  |  |  |  |
-| Hyper-V specific video device | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** |  |  |  |  |  |
-| Key/value pair | 2022, 2019, 2016, 2012 R2 | ✔ Note 5, 9 | ✔ Note 5, 9 | ✔ Note 5, 9 | ✔ Note 5, 9 |
-| Non-Maskable Interrupt | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| File copy from host to guest | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| lsvmbus command | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ | ✔ |
-| Hyper-V Sockets | 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ |
-| PCI Passthrough/DDA | 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ |
-| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |  |  |  |  |  |
-| Boot using UEFI | 2022, 2019, 2016, 2012 R2 | ✔ | ✔ Note 10, 11 | ✔ Note 10, 11 | ✔ Note 10, 11 |
-| Secure boot | 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ |
+| **Feature** | **Windows Server operating system version** | **24.04 LTS** | **22.04 LTS** | **20.04 LTS** | **18.04 LTS** | **16.04 LTS** |
+|--|--|--|--|--|--|--|
+| **Availability** |  | Built-in | Built-in | Built-in | Built-in | Built-in |
+| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)** |  |  |  |  |  |  |
+| Jumbo frames | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Live migration | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Static IP Injection | 2025, 2022, 2019, 2016 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
+| vRSS | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| TCP Segmentation and Checksum Offloads | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| SR-IOV | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |  |  |  |  |  |
+| VHDX resize | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Virtual Fibre Channel | 2025, 2022, 2019, 2016 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| Live virtual machine backup | 2025, 2022, 2019, 2016 | ✔ Note 3, 4, 5 | ✔ Note 3, 4, 5 | ✔ Note 3, 4, 5 | ✔ Note 3, 4, 5 | ✔ Note 3, 4, 5 |
+| TRIM support | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| SCSI WWN | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** |  |  |  |  |  |  |
+| PAE Kernel Support | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Configuration of MMIO gap | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | 2025, 2022, 2019, 2016 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 |
+| Dynamic Memory - Ballooning | 2025, 2022, 2019, 2016 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 |
+| Runtime Memory Resize | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** |  |  |  |  |  |  |
+| Hyper-V specific video device | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** |  |  |  |  |  |  |
+| Key/value pair | 2025, 2022, 2019, 2016 | ✔ Note 5, 9 | ✔ Note 5, 9 | ✔ Note 5, 9 | ✔ Note 5, 9 | ✔ Note 5, 9 |
+| Non-Maskable Interrupt | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| File copy from host to guest | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| lsvmbus command | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Hyper-V Sockets | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| PCI Passthrough/DDA | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
+| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |  |  |  |  |  |  |
+| Boot using UEFI | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ Note 10, 11 | ✔ Note 10, 11 | ✔ Note 10, 11 |
+| Secure boot | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 ## Notes
 
@@ -71,7 +69,7 @@ The following feature distribution map indicates the features in each version. T
 
 1. On long term support (LTS) releases use latest virtual Hardware Enablement (HWE) kernel for up to date Linux Integration Services.
 
-   To install the Azure-tuned kernel on 16.04, 18.04, 20.04 and 22.04, run the following commands as root (or sudo):
+   To install the Azure-tuned kernel on Ubuntu, run the following commands as root (or sudo):
 
    ```bash
    # apt-get update
@@ -86,11 +84,11 @@ The following feature distribution map indicates the features in each version. T
 
    * Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.
 
-1. If you're using Dynamic Memory on Windows Server 2019, Windows Server 2016 or Windows Server 2012/2012 R2 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.
+1. If you're using Dynamic Memory on Windows Server, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.
 
-1. In Windows Server 2019, Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
+1. In Windows Server 2019, and Windows Server 2016, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
 
-1. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines won't boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
+1. Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines won't boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
 
     ```Powershell
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off

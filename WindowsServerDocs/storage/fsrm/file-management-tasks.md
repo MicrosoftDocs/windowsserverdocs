@@ -10,8 +10,6 @@ ms.author: roharwoo
 
 # File Management Tasks
 
->
-
 File management tasks automate the process of finding subsets of files on a server and applying simple commands. These tasks can be scheduled to occur periodically to reduce repetitive costs. Files that will be processed by a file management task can be defined through any of the following properties:
 
 -   Location

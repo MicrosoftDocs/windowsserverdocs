@@ -20,6 +20,16 @@ groups:
     title: Windows Server 2019
   - id: windows-server-2016
     title: Windows Server 2016
+- id: failover-clustering-management-tools
+  title: Failover Clustering Management Tools
+  prompt: "Choose your failover clustering management tool:"
+  pivots:
+  - id: windows-admin-center
+    title: Windows Admin Center
+  - id: powershell
+    title: PowerShell 
+  - id: failover-cluster-manager
+    title: Failover Cluster Manager
 - id: openssh-windows-version
   title: Version
   prompt: "Choose your product version:"
@@ -30,3 +40,31 @@ groups:
     title: Windows Server 2022
   - id: windows-server-2019
     title: Windows Server 2019
+- id : windows-admin-center-os
+  title: Version
+  prompt: "Choose your product version:"
+  pivots:
+  - id: windows-server-2025
+    title: Windows Server 2025 and later
+  - id: windows-server-2022
+    title: Windows Server 2022 and earlier
+  - id: windows-client
+    title: Windows Client
+- id: windows
+  title: Products
+  prompt: "Choose your product:"
+  pivots:
+  - id: windows-server
+    title: Windows Server
+  - id: windows
+    title: Windows
+- id: quorum-witness
+  title: Quorum witness type
+  prompt: "Choose your quorum witness type:"
+  pivots:
+  - id: cloud-witness
+    title: Cloud witness
+  - id: disk-witness
+    title: Disk witness
+  - id: file-share-witness
+    title: File share witness

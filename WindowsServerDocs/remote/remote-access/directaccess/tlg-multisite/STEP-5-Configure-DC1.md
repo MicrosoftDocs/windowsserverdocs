@@ -4,13 +4,11 @@ description: Learn how to configure the default gateway on the domain controller
 manager: brianlic
 ms.topic: article
 ms.assetid: 70357156-fcb0-4346-a61e-4ea963e3ffb0
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 5 Configure DC1
-
->
 
 DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain.
 

@@ -1,8 +1,8 @@
 ---
 title: Remote Desktop Services overview in Windows Server
 description: Provides an overview of Remote Desktop Services.
-ms.author: roharwoo
-ms.date: 7/3/2024
+ms.author: daknappe
+ms.date: 01/03/2025
 ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
@@ -35,3 +35,4 @@ Here are some next steps to help you get a better understanding of RDS and even 
 - Understand the [supported configurations](rds-supported-config.md) for RDS with the various Windows and Windows Server versions
 - [Plan and design](rds-plan-and-design.md) an RDS environment to accommodate various requirements, such as high availability and multifactor authentication.
 - Review the [Remote Desktop Services architecture models](desktop-hosting-logical-architecture.md) that work best for your desired environment.
+- Connect to your RDS environment using one of the [available clients](clients/remote-desktop-clients.md).

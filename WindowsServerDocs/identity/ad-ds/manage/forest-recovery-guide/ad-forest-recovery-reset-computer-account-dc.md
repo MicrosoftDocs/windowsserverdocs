@@ -11,8 +11,6 @@ ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
 
 # Active Directory Forest Recovery - Reset the computer account on the recovered DC
 
->
-
  Use the following procedure to reset the computer account password of the Domain Controller (DC).
 
 ## Reset the computer account password of the domain controller

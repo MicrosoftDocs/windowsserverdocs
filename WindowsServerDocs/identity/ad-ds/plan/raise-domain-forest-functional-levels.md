@@ -8,8 +8,6 @@ ms.date: 10/25/2024
 ---
 # Raise domain and forest functional levels in Active Directory Domain Services
 
->
-
 Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. Functional levels also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. Level changes happen when you use later versions of your domain controller operating system, the domain, or your forest functional level. This article describes how to raise Active Directory domain and forest functional levels. We recommend you upgrade Active Directory Domain Service servers to the latest release.
 
 To enable the latest domain features, all domain controllers in the domain must run the version of Windows Server that matches or is newer than the desired functional level. If they don't meet this requirement, the administrator can't raise the domain functional level.
@@ -72,10 +70,10 @@ To view the domain or forest functional level using PowerShell, follow these ste
 
 1. Open PowerShell as an administrator.
 
-1. Run the following command to view the current domain functional level, replacing `<domain>` with the domain name.
+1. Run the following command to view the current domain functional levels of all domains in the forest.
 
    ```powershell
-   Get-ADDomain -Identity <domain> | Select-Object DomainMode
+   Get-ADForest | Select-Object -ExpandProperty Domains | ForEach-Object { Get-ADDomain $_ } | Select-Object Name, DomainMode
    ```
 
 1. Run the following command to view the current forest functional level, replacing `<forest>` with the forest name.
@@ -94,6 +92,9 @@ To raise the domain and forest functional levels, you can use the Active Directo
 
 > [!WARNING]
 > Changes to the domain and forest functional levels are irreversible. In order to undo the change, you must perform a forest recovery to revert to an earlier point of time.
+
+> [!IMPORTANT]
+> If all domain controllers in all domains in the forest are running Windows Server 2025, it isn't necessary to raise individual domain functional levels manually as raising the forest functional level to Windows Server 2025 automatically raises the domain functional level of all domains in the forest to Windows Server 2025.
 
 ### [Desktop](#tab/desktop)
 

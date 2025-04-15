@@ -4,15 +4,13 @@ title: Creating an AD FS farm without Domain Administrator privileges
 description: Using the Install-AdfsFarm cmdlet and script to create an AD FS farm using delegated admin credentials
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 
 ---
 
 # Creating an AD FS Farm without domain admin privileges
-
->
 
 ## Overview
 Starting with AD FS in Windows Server 2016, you can run the cmdlet Install-AdfsFarm as a local administrator on your federation server, provided your Domain Administrator has prepared Active Directory.  The script below in this article can be used to prepare AD.  The steps are as follows:

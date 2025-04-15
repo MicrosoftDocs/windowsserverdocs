@@ -4,12 +4,10 @@ description: Learn how to create a VPN device tunnel in Windows client.
 ms.date: 01/25/2023
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ---
 # Configure VPN device tunnels in Windows client
-
->
 
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels:
 

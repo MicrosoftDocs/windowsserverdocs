@@ -1,7 +1,7 @@
 ---
 title: Add an RD Connection Broker server to configure high availability in RDS
 description: Learn how to add an RD Connection Broker to an RDS deployment for high availability.
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: article
 author: robinharwood
@@ -9,8 +9,6 @@ manager: dongill
 ---
 
 # Add the RD Connection Broker server to the deployment and configure high availability
-
->
 
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of your Remote Desktop Services infrastructure.
 
@@ -45,7 +43,7 @@ Set up a database for the Connection Broker. You can use [Azure SQL Database](/a
         2. Click **Connect > Open** to open the Remote Desktop client.
         3. In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for a domain administrator account.
         4. Click **Yes** when warned about the certificate.
-    3. Download the [ODBC driver for SQL Server](https://www.microsoft.com/download/confirmation.aspx?id=50420) that matches the version in the ODBC connection string. For the example string above, we need to install the version 13 ODBC driver.
+    3. Download the [ODBC driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server) that matches the version in the ODBC connection string. For the example string above, we need to install the version 13 ODBC driver.
     4. Copy the sqlincli.msi file to the first RD Connection Broker server.
     5. Open the sqlincli.msi file and install the native client.
     6. Repeat steps 1-5 for each additional RD Connection Brokers (for example, Contoso-Cb2).

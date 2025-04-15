@@ -3,8 +3,8 @@ description: "Learn more about: Install the Federation Service Role Service"
 ms.assetid: e33673ff-ea1c-4476-a549-3bf5899a47dd
 title: Install the Federation Service Role Service
 author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

@@ -4,14 +4,12 @@ description: This topic provides a list of error and event messages for Quality 
 ms.topic: article
 ms.assetid: 76974e10-6a57-4533-83be-cfd5a0d364a3
 manager: brianlic
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # QoS Policy Error and Event Messages
-
->
 
 Following are the error and event messages that are associated with QoS Policy.
 

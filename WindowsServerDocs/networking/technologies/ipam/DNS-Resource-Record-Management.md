@@ -4,13 +4,11 @@ description: Learn how to manage DNS resource records by using IPAM.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7b66c09d-e401-4f70-9a2a-6047dd629bfa
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # DNS Resource Record Management
-
->
 
 This topic provides information about managing DNS resource records by using IPAM.
 

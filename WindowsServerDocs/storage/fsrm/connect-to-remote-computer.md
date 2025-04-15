@@ -9,8 +9,6 @@ ms.author: roharwoo
 ---
 # Connect to a Remote Computer
 
->
-
 To manage storage resources on a remote computer, you can connect to the computer from File Server Resource Manager. While you are connected, File Server Resource Manager allows you to manage quotas, screen files, manage classifications, schedule file management tasks, and generate reports with those remote resources.
 
 > [!Note]

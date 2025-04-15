@@ -4,13 +4,11 @@ description: Learn how to deploy BranchCache file server-based content servers o
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 68b0f5a0-1ae8-489e-b8f8-1190267a0e1d
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 01/05/2021
 ---
 # Configure the File Services server role
-
->
 
 You can deploy BranchCache file server-based content servers on computers running Windows Server 2016 and the File Services server role with the **BranchCache for network files** role service installed.
 

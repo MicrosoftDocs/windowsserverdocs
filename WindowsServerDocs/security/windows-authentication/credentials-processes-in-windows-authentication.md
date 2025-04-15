@@ -3,13 +3,11 @@ title: Credentials Processes in Windows Authentication
 description: Learn about how Windows authentication processes credentials.
 ms.topic: article
 ms.assetid: 48c60816-fb8b-447c-9c8e-800c2e05b14f
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 09/13/2023
 ---
 # Credentials Processes in Windows Authentication
-
->
 
 This reference topic for the IT professional describes how Windows authentication processes credentials.
 

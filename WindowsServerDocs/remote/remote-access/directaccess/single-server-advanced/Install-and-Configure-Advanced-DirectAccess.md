@@ -4,13 +4,11 @@ description: Learn about the configuration steps required to deploy a single Dir
 manager: brianlic
 ms.topic: article
 ms.assetid: f45e5b6f-fc66-4deb-bed4-a1baa3cc6dae
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Install and Configure Advanced DirectAccess
-
->
 
 This overview lists the configuration steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with IPv4 and IPv6.
 

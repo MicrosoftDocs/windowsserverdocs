@@ -413,7 +413,7 @@
     - name: dfsrmig
       href: dfsrmig.md
     - name: dfsutil
-      href: dfsutil.md  
+      href: dfsutil.md
     - name: diantz
       href: diantz.md
     - name: dir
@@ -425,12 +425,12 @@
     - name: diskpart
       href: diskpart.md
     - name: diskpart scripts and examples
-      href: diskpart-scripts-and-examples.md 
+      href: diskpart-scripts-and-examples.md
       items:
       - name: active
         href: active.md
       - name: add
-        href: add_2.md  
+        href: add_2.md
       - name: assign
         href: assign.md
       - name: attach vdisk
@@ -443,16 +443,16 @@
         - name: attributes volume
           href: attributes-volume.md
       - name: automount
-        href: automount.md  
+        href: automount.md
       - name: break
-        href: break.md 
+        href: break.md
       - name: clean
         href: clean.md
       - name: compact vdisk
         href: compact-vdisk.md
       - name: convert
         href: convert.md
-        items: 
+        items:
         - name: convert basic
           href: convert-basic.md
         - name: convert dynamic
@@ -512,8 +512,8 @@
         href: extend.md
       - name: filesystems
         href: filesystems.md
-      - name: format  
-        href: format.md 
+      - name: format
+        href: format.md
       - name: gpt
         href: gpt.md
       - name: import
@@ -526,7 +526,7 @@
         href: merge-vdisk.md
       - name: offline
         href: offline.md
-        items: 
+        items:
         - name: offline disk
           href: offline-disk.md
         - name: offline volume
@@ -568,7 +568,7 @@
       - name: shrink
         href: shrink.md
       - name: uniqueid
-        href: uniqueid.md   
+        href: uniqueid.md
     - name: diskperf
       href: diskperf.md
     - name: diskraid
@@ -582,7 +582,7 @@
         - name: add alias
           href: add-alias.md
         - name: add volume
-          href: add-volume.md  
+          href: add-volume.md
       - name: begin backup
         href: begin-backup.md
       - name: begin restore
@@ -623,7 +623,7 @@
       - name: reset session
         href: reset-session.md
       - name: revert
-        href: revert.md  
+        href: revert.md
       - name: set
         href: set.md
         items:
@@ -636,7 +636,7 @@
         - name: set verbose
           href: set-verbose.md
       - name: simulate restore
-        href: simulate-restore.md  
+        href: simulate-restore.md
       - name: unexpose
         href: unexpose.md
       - name: writer
@@ -650,7 +650,7 @@
     - name: driverquery
       href: driverquery.md
     - name: dtrace
-      href: dtrace.md  
+      href: dtrace.md
     - name: echo
       href: echo.md
     - name: edit
@@ -692,6 +692,8 @@
         href: fsutil-8dot3name.md
       - name: fsutil behavior
         href: fsutil-behavior.md
+      - name: fsutil clfs
+        href: fsutil-clfs.md
       - name: fsutil-devdrv
         href: fsutil-devdrv.md
       - name: fsutil dirty
@@ -1197,6 +1199,23 @@
       href: recover_1.md
     - name: refsutil
       href: refsutil.md
+      items:
+      - name: refsutil compression
+        href: refsutil-compression.md
+      - name: refsutil dedup
+        href: refsutil-dedup.md
+      - name: refsutil fixboot
+        href: refsutil-fixboot.md
+      - name: refsutil iometrics
+        href: refsutil-iometrics.md
+      - name: refsutil leak
+        href: refsutil-leak.md
+      - name: refsutil salvage
+        href: refsutil-salvage.md
+      - name: refsutil streamsnapshot
+        href: refsutil-streamsnapshot.md
+      - name: refsutil triage
+        href: refsutil-triage.md
     - name: reg
       href: reg.md
       items:
@@ -1322,7 +1341,9 @@
     - name: set environmental variables
       href: set_1.md
     - name: setlocal
-      href: setlocal.md  
+      href: setlocal.md
+    - name: setspn
+      href: setspn.md
     - name: setx
       href: setx.md
     - name: sfc
@@ -1565,7 +1586,7 @@
       - name: wdsutil get driverpackage
         href: wdsutil-get-driverpackage.md
       - name: wdsutil get driverpackagefile
-        href: wdsutil-get-driverpackagefile.md  
+        href: wdsutil-get-driverpackagefile.md
       - name: wdsutil get image
         href: wdsutil-get-image.md
       - name: wdsutil get imagefile

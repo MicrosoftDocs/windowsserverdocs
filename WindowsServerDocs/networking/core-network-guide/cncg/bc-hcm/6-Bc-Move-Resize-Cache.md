@@ -11,8 +11,6 @@ ms.date: 08/07/2020
 
 # Move and Resize the Hosted Cache \(Optional\)
 
->
-
 You can use this procedure to move the hosted cache to the drive and folder that you prefer, and to specify the amount of disk space that the hosted cache server can use for the hosted cache.
 
 This procedure is optional. If the default cache location \(%windir%\\ServiceProfiles\\NetworkService\\AppData\\Local\\PeerDistPub\) and size – which is 5% of the total hard disk space – are appropriate for your deployment, you do not need to change them.

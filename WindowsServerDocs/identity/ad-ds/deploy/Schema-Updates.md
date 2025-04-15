@@ -3,13 +3,12 @@ ms.assetid: abf69b09-6528-42e0-b164-813c7c2c78e7
 title: Schema updates in Windows Server
 description: Schema changes made by Adprep.exe listed by operating system version.
 author: xelu86
-ms.author: roharwoo
-ms.date: 03/25/2024
+ms.author: alalve
+ms.date: 02/06/2025
 ms.topic: article
 ---
-# Windows Server Active Directory schema updates
 
->
+# Windows Server Active Directory schema updates
 
 This article lists the LDF (Log Database File) files that include the changes that Adprep.exe makes.
 

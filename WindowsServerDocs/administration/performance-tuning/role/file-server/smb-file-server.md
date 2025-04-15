@@ -1,36 +1,49 @@
 ---
 title: Performance Tuning for SMB File Servers
-description: Performance Tuning for SMB File Servers
+description: Performance Tuning for SMB File Servers in Windows.
 ms.topic: article
 author: robinharwood
 ms.author: alalve
-ms.date: 11/27/2023
+ms.date: 01/16/2025
 ---
+
 # Performance tuning for SMB file servers
 
 ## SMB configuration considerations
 
-Don't enable any services or features that your file server and clients don't require. Unnecessary services or features might include SMB signing, client-side caching, file system mini-filters, search service, scheduled tasks, NTFS encryption, NTFS compression, IPSEC, firewall filters, Teredo, or SMB encryption.
+Ensure that the BIOS and operating system power management modes are set as needed, which might include High Performance mode or altered C-State. Ensure that the latest, most resilient, and fastest storage and networking device drivers are installed before configuring any Server Message Block (SMB) tuning.
 
-Ensure that the BIOS and operating system power management modes are set as needed, which might include High Performance mode or altered C-State. Ensure that the latest, most resilient, and fastest storage and networking device drivers are installed.
+Don't enable any services or features that your file server and clients don't require. Consider disabling unnecessary services or features, such as:
 
-Copying files is a common operation performed on a file server. Windows Server has several built-in file copy utilities that you can run by using a command prompt. Robocopy is recommended. Introduced in Windows Server 2008 R2, the `/mt` option of Robocopy can significantly improve speed on remote file transfers by using multiple threads when copying multiple small files. We also recommend using the `/log` option to reduce console output by redirecting logs to a NUL device or to a file. When you use Xcopy, we recommend adding the `/q` and `/k` options to your existing parameters. The former option reduces CPU overhead by reducing console output and the latter reduces network traffic.
+- Client-side caching
+- File system mini-filters
+- Firewall filters
+- IPSEC
+- NTFS compression
+- NTFS encryption
+- Scheduled tasks
+- Search service
+- SMB encryption
+- SMB signing
+- Teredo
+
+Copying files is a common operation performed on a file server. Windows Server has several built-in file copy utilities that you can run by using a command prompt. Robocopy is recommended for these operations. Windows Server 2008 R2 introduced the `/mt` option of Robocopy which significantly improves speed on remote file transfers by using multiple threads when copying multiple small files. We also recommend using the `/log` option to reduce console output by redirecting logs to a NUL device or to a file. When you use `xcopy`, we recommend adding the `/q` and `/k` options to your existing parameters. The former option reduces CPU overhead by reducing console output and the latter reduces network traffic.
 
 ## SMB performance tuning
 
-File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2022, Windows Server 2016 and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell `Get-SMBConnection` on clients and `Get-SMBSession | FL` on servers.
+File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2022, Windows Server 2016, and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell `Get-SMBConnection` on clients and `Get-SMBSession | FL` on servers.
 
 ### SMB 3.0 protocol family
 
-SMB 3.0 was introduced in Windows Server 2012 and further enhanced in Windows Server 2012 R2 (SMB 3.02) and Windows Server 2016 (SMB 3.1.1). This version introduced technologies that may significantly improve performance and availability of the file server. For more info, see [SMB in Windows Server 2012 and 2012 R2 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) and [What's new in SMB 3.1.1](https://aka.ms/smb311).
+SMB 3.0 was introduced in Windows Server 2012 and further enhanced in Windows Server 2012 R2 (SMB 3.02) and Windows Server 2016 (SMB 3.1.1). This version introduced technologies that might significantly improve performance and availability of the file server. For more info, see [SMB in Windows Server 2012 and 2012 R2 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) and [What's new in SMB 3.1.1](https://aka.ms/smb311).
 
 ### SMB Direct
 
 SMB Direct introduced the ability to use RDMA network interfaces for high throughput with low latency and low CPU utilization.
 
-Whenever SMB detects an RDMA-capable network, it automatically tries to use the RDMA capability. However, if for any reason the SMB client fails to connect using the RDMA path, it continues to use TCP/IP connections instead. All RDMA interfaces that are compatible with SMB Direct are required to also implement a TCP/IP stack, and SMB Multichannel is aware of that.
+Whenever SMB detects an RDMA-capable network, it automatically attempts to use the RDMA capability. If the SMB client fails to connect using the RDMA path, it falls back to using TCP/IP connections. All RDMA interfaces compatible with SMB Direct must also implement a TCP/IP stack, and SMB Multichannel recognizes this.
 
-SMB Direct isn't required in any SMB configuration, but it's always recommended for those who want lower latency and lower CPU utilization.
+SMB Direct isn't required in any SMB configuration, but it's always recommended for users who want lower latency and lower CPU utilization.
 
 For more info about SMB Direct, see [Improve Performance of a File Server with SMB Direct](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134210(v=ws.11)).
 
@@ -42,7 +55,7 @@ For more info about SMB Multichannel, see [Deploy SMB Multichannel](/previous-ve
 
 ### SMB Scale-Out
 
-SMB Scale-out allows SMB 3.0 in a cluster configuration to show a share in all nodes of a cluster. This active/active configuration makes it possible to scale file server clusters further, without a complex configuration with multiple volumes, shares and cluster resources. The maximum share bandwidth is the total bandwidth of all file server cluster nodes. The total bandwidth is no longer limited by the bandwidth of a single cluster node, but rather depends on the capability of the backing storage system. You can increase the total bandwidth by adding nodes.
+SMB Scale-out allows SMB 3.0 in a cluster configuration to show a share in all nodes of a cluster. This active/active configuration makes it possible to scale file server clusters further, without a complex configuration with multiple volumes, shares, and cluster resources. The maximum share bandwidth is the total bandwidth of all file server cluster nodes. The total bandwidth is no longer limited by the bandwidth of a single cluster node, but rather depends on the capability of the backing storage system. You can increase the total bandwidth by adding nodes.
 
 For more info about SMB Scale-Out, see [Scale-Out File Server for Application Data Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)) and the blog post [To scale out or not to scale out, that is the question](https://aka.ms/scaleoutornot).
 
@@ -52,7 +65,7 @@ The following SMB performance counters were introduced in Windows Server 2012, t
 
 - **SMB Client Shares**
 
-    These counters display information about file shares on the server that are being accessed by a client that is using SMB 2.0 or higher versions.
+    These counters display information about file shares on the server accessed by clients using SMB 2.0 or higher versions.
 
     If you' re familiar with the regular disk counters in Windows, you might notice a certain resemblance. That' s not by accident. The SMB client shares performance counters were designed to exactly match the disk counters. This way you can easily reuse any guidance on application disk performance tuning you currently have. For more info about counter mapping, see [Per share client performance counters blog](/archive/blogs/josebda/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight).
 
@@ -64,7 +77,7 @@ The following SMB performance counters were introduced in Windows Server 2012, t
 
     These counters display information about SMB server sessions that are using SMB 2.0 or higher.
 
-    Turning on counters on server side (server shares or server sessions) may have significant performance impact for high IO workloads.
+    Turning on counters on server side (server shares or server sessions) might have significant performance impact for high IO workloads.
 
 - **Resume Key Filter**
 
@@ -72,7 +85,7 @@ The following SMB performance counters were introduced in Windows Server 2012, t
 
 - **SMB Direct Connection**
 
-    These counters measure different aspects of connection activity. A computer can have multiple SMB Direct connections. SMB Direct Connection counters represent each connection as a pair of IP addresses and ports, where the first IP address and port represent the connection's local endpoint, and the second IP address and port represent the connection's remote endpoint.
+    These counters measure different aspects of connection activity. A computer can have multiple SMB Direct connections. SMB Direct Connection counters represent each connection as a pair of IP addresses and ports. The first IP address and port represent the connection's local endpoint and the second IP address and port represent the connection's remote endpoint.
 
 - **Physical Disk, SMB, CSV FS performance counters relationships**
 
@@ -95,7 +108,7 @@ The following `REG_DWORD` registry settings can affect the performance of SMB fi
   The defaults are 512 and 8192 for Windows Server, respectively. These parameters allow the server to throttle client operation concurrency dynamically within the specified boundaries. Some clients might achieve increased throughput with higher concurrency limits, for example, copying files over high-bandwidth, high-latency links. These default values apply to Windows Server, not Windows.
 
   > [!TIP]
-  > Prior to Windows 10 and Windows Server 2016, the number of credits granted to the client varied dynamically between Smb2CreditsMin and Smb2CreditsMax based on an algorithm that attempted to determine the optimal number of credits to grant based on network latency and credit usage. In Windows 10 and Windows Server 2016, the SMB server was changed to unconditionally grant credits upon request up to the configured maximum number of credits. As part of this change, the credit throttling mechanism, which reduces the size of each connection's credit window when the server is under memory pressure, was removed. The kernel's low memory event that triggered throttling is only signaled when the server is so low on memory (< a few MB) as to be useless. Since the server no longer shrinks credit windows the Smb2CreditsMin setting is no longer necessary and is now ignored.
+  > Before Windows 10 and Windows Server 2016, the number of credits granted to the client varied dynamically between **Smb2CreditsMin** and **Smb2CreditsMax** based on an algorithm that attempted to determine the optimal number of credits to grant based on network latency and credit usage. In Windows 10 and Windows Server 2016, the SMB server was changed to unconditionally grant credits upon request up to the configured maximum number of credits. As part of this change, the credit throttling mechanism, which reduces the size of each connection's credit window when the server is under memory pressure, was removed. The kernel's low memory event that triggered throttling is only signaled when the server is so low on memory (< a few MB) as to be useless. Since the server no longer shrinks credit windows, the **Smb2CreditsMin** setting is no longer necessary and is now ignored.
   >
   > You can monitor SMB Client Shares\\Credit Stalls /Sec to see if there are any issues with credits.
 
@@ -111,7 +124,7 @@ The following `REG_DWORD` registry settings can affect the performance of SMB fi
   > This setting mainly applies to Windows 7, Windows Server 2008 R2, and older operating systems. In later operating systems, while Cache Manager still indirectly consumes this value, Cache Manager does not create dedicated worker threads in later operating systems; rather, this value indirectly influences how many work-items of each type (generic workers, lazy writers, etc.) Cache Manager will allocate for later submission to the kernel thread pool.
 
   > [!TIP]
-  > The value may need to be increased if the amount of cache manager dirty data (performance counter Cache\\Dirty Pages) is growing to consume a large portion (over ~25%) of memory or if the system is doing lots of synchronous read I/Os.
+  > Consider increasing the value if the Cache Manager's dirty data (performance counter Cache\\Dirty Pages) exceeds approximately ~25% of memory or if the system is performing numerous synchronous read I/Os.
 
 - **MaxThreadsPerNumaNode**
 
@@ -119,13 +132,13 @@ The following `REG_DWORD` registry settings can affect the performance of SMB fi
   HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\MaxThreadsPerNumaNode
   ```
 
-  The default is 20. Increasing this value raises the number of threads that the file server can use to service concurrent requests. When a large number of active connections need to be serviced, increasing the value might improve performance when inefficient third party filter drivers are affecting IO. It's better to install updated third party filter drivers and print drivers that process IO more efficiently instead of altering this setting. 
+  The default is **20**. Increasing this value raises the number of threads that the file server can use to service concurrent requests. When a large number of active connections need to be serviced, increasing the value might improve performance when inefficient third-party filter drivers are affecting IO. It's better to install updated third-party filter drivers and print drivers that process IO more efficiently instead of altering this setting.
 
   >[!TIP]
-  > An indication that the value may need to be increased is if the SMB2 work queues are growing very large (performance counter ‘Server Work Queues\\Queue Length\\SMB2 NonBlocking \*'  is consistently over ~100).
+  > An indication that the value might need to be increased is if the SMB2 work queues are growing relatively large (performance counter 'Server Work Queues\\Queue Length\\SMB2 NonBlocking \*' is consistently over ~100).
 
   >[!Note]
-  >In SMB1 and in Windows Server 2012 and Windows Server 2008, MaxThreadsPerQueue was used to control this setting. SMB1 is deprecated and no longer installed, and this setting itself is now defunct.
+  >In SMB1 and in Windows Server 2012 and Windows Server 2008, **MaxThreadsPerQueue** was used to control this setting. SMB1 is deprecated and no longer installed, and this setting itself is now defunct.
 
 - **AsynchronousCredits**
 
@@ -137,11 +150,11 @@ The following `REG_DWORD` registry settings can affect the performance of SMB fi
   
 - **RemoteFileDirtyPageThreshold**
 
-```registry
-  HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\RemoteFileDirtyPageThreshold
-```
+   ```registry
+   HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\RemoteFileDirtyPageThreshold
+   ```
 
-  The default is 5GB. This value determines the maximum number of dirty pages in the cache (on a per file basis) for a remote write before an inline flush is performed. We don't recommend changing this value unless the system experiences consistent slowdowns during heavy remote writes. This slowdown behavior would typically be seen where the client has faster storage IO performance than the remote server. The setting change is applied to the server. Client and server refer to the distributed system architecture, not to particular operating systems; for example, a Windows Server copying data to another Windows Server over SMB would still involve an SMB client and an SMB server. For more information, see [Troubleshoot Cache and Memory Manager Performance Issues](../../subsystem/cache-memory-management/troubleshoot.md).
+  The default is **5 GB**. This value determines the maximum number of dirty pages in the cache (on a per file basis) for a remote write before an inline flush is performed. We don't recommend changing this value unless the system experiences consistent slowdowns during heavy remote writes. This slowdown behavior would typically be seen where the client has faster storage IO performance than the remote server. The setting change is applied to the server. Client and server refer to the distributed system architecture, not to particular operating systems; for example, a Windows Server copying data to another Windows Server over SMB would still involve an SMB client and an SMB server. For more information, see [Troubleshoot Cache and Memory Manager Performance Issues](../../subsystem/cache-memory-management/troubleshoot.md).
 
 ### SMB server tuning example
 
@@ -153,4 +166,4 @@ The following settings can optimize a computer for file server performance in ma
 
 ### SMB client performance monitor counters
 
-For more info about SMB client counters, see [Windows Server 2012 File Server Tip: New per-share SMB client performance counters provide great insight](/archive/blogs/josebda/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight).
+For more information about SMB client counters, see [Windows Server 2012 File Server Tip: New per-share SMB client performance counters provide great insight](/archive/blogs/josebda/windows-server-2012-file-server-tip-new-per-share-smb-client-performance-counters-provide-great-insight).

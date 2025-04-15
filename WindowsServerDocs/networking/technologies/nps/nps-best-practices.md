@@ -4,14 +4,12 @@ description: This topic provides best practices for deploying and managing Netwo
 manager: brianlic
 ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 12/08/2020
 ---
 
 # Network Policy Server Best Practices
-
->
 
 You can use this topic to learn about best practices for deploying and managing Network Policy Server \(NPS\).
 

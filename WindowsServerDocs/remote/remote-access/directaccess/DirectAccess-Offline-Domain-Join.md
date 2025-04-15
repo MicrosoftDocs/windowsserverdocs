@@ -4,13 +4,11 @@ description: This guide explains the steps to perform an offline domain join wit
 manager: brianlic
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # DirectAccess Offline Domain Join
-
->
 
 This guide explains the steps to perform an offline domain join with DirectAccess. During an offline domain join, a computer is configured to join a domain without physical or VPN connection.
 

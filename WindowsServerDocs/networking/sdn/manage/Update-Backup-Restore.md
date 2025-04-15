@@ -11,8 +11,6 @@ ms.date: 11/02/2021
 
 # Upgrade, backup, and restore SDN infrastructure
 
->
-
 In this topic, you learn how to update, backup and restore an SDN infrastructure.
 
 ## Upgrade the SDN infrastructure
@@ -153,7 +151,7 @@ $ShareCredential = Get-NetworkControllerCredential -ConnectionURI $URI -Credenti
 If ($ShareCredential -eq $null) {
     $CredentialProperties = New-Object Microsoft.Windows.NetworkController.CredentialProperties
     $CredentialProperties.Type = "usernamePassword"
-    $CredentialProperties.UserName = "contoso\alyoung"
+    $CredentialProperties.UserName = "contoso\user01"
     $CredentialProperties.Value = "<Password>"
 
     $ShareCredential = New-NetworkControllerCredential -ConnectionURI $URI -Credential $Credential -Properties $CredentialProperties -ResourceId $ShareUserResourceId -Force

@@ -5,12 +5,10 @@ title: Data Deduplication Overview
 ms.topic: article
 author: wmgries
 manager: klaasl
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 02/18/2022
 ---
 # Data Deduplication Overview
-
->
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 

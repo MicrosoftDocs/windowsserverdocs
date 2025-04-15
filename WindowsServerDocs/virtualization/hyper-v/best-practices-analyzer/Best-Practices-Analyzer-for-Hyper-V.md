@@ -1,16 +1,14 @@
 ---
 title: Best Practices Analyzer for Hyper-V
 description: Learn how the Best Practices Analyzer scans your computer using rules based on these best practices and reports the results.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.topic: article
 ms.assetid: 3747faa5-6e9f-499e-8a79-3fb9d73b6b92
 ms.date: 8/16/2016
 ---
 
 # Best Practices Analyzer for Hyper-V
-
->
 
 In Windows management, *best practices* are guidelines that are considered the ideal way, under normal circumstances, to configure a server as defined by experts. Best practice violations, even critical ones, might not necessarily cause problems. But, they can indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.
 

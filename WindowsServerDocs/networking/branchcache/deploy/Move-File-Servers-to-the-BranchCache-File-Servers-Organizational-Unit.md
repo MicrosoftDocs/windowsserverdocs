@@ -4,13 +4,11 @@ description: Learn how to add BranchCache file servers to an organizational unit
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 56c915ec-edb1-43b0-8ad2-c93841bb566f
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 01/05/2021
 ---
 # Move File Servers to the BranchCache File Servers Organizational Unit
-
->
 
 You can use this procedure to add BranchCache file servers to an organizational unit (OU) in Active Directory Domain Services (AD DS).
 

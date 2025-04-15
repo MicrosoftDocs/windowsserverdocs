@@ -10,8 +10,6 @@ ms.date: 08/07/2020
 ---
 # Server Certificate Deployment Planning
 
->
-
 Before you deploy server certificates, you must plan the following items:
 
 - [Plan basic server configuration](#bkmk_basic)

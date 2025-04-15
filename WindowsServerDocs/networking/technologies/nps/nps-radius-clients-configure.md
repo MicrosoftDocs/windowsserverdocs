@@ -4,14 +4,12 @@ description: This topic provides information about configuring RADIUS Clients fo
 manager: brianlic
 ms.topic: article
 ms.assetid: cde37849-ce79-4c26-aa14-cd0ef31cae18
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Configure RADIUS Clients
-
->
 
 You can use this topic to configure network access servers as RADIUS Clients in NPS.
 

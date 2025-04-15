@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: f6007f1a-95d3-4a6e-a9fb-a2b82fa6918a
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Remap Selected MultiPoint Systems

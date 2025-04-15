@@ -4,8 +4,8 @@ ms.assetid: 208928eb-bb17-4984-a312-23fff43133e3
 title: Auditing Enhancements to AD FS in Windows Server 2016
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

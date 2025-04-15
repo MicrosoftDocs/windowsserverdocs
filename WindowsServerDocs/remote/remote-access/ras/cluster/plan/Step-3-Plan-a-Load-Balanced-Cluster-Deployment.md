@@ -4,13 +4,11 @@ description: Learn how to plan the load-balancing configuration and cluster depl
 manager: brianlic
 ms.topic: article
 ms.assetid: 7540c17b-81de-47de-a04f-3247afa26f70
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 3 Plan a Load-Balanced Cluster Deployment
-
->
 
 The next step is to plan the load-balancing configuration and cluster deployment.
 

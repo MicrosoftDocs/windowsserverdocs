@@ -3,13 +3,11 @@ title: Monitor servers and configure alerts with Azure Monitor from Windows Admi
 description: Windows Admin Center integrates with Azure Monitor
 ms.topic: article
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 07/04/2023
 ---
 
 # Monitor servers and configure alerts with Azure Monitor from Windows Admin Center
-
->
 
 [Azure Monitor](/azure/azure-monitor/overview) is a solution that collects, analyzes, and acts on telemetry from various resources, including Windows Servers and VMs, both on-premises and in the cloud. Though Azure Monitor pulls data from Azure virtual machines (VMs) and other Azure resources, this article focuses on how Azure Monitor works with on-premises servers and VMs, specifically with Windows Admin Center. If you're interested to learn how you can use Azure Monitor to get email alerts about your hyper-converged cluster, read about [using Azure Monitor to send emails for Health Service Faults](../../../storage/storage-spaces/configure-azure-monitor.md).
 

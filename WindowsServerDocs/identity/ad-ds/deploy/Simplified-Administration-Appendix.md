@@ -12,8 +12,6 @@ ms.custom: inhenkel
 
 # Simplified Administration Appendix
 
->
-
 -   [Server Manager Add Servers Dialog (Active Directory)](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_AddServers)
 
 -   [Server Manager Remote Server Status](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_ServerMgrStatus)
