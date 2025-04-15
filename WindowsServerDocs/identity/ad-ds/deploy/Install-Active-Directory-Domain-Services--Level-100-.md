@@ -525,7 +525,8 @@ After an RODC account is created, you can attach a server to account to complete
     To complete the AD DS installation, the server will restart automatically.
 
 ## See Also
-[Troubleshooting Domain Controller Deployment](Troubleshooting-Domain-Controller-Deployment.md)
-[Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)
-[Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)
-[Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](./Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)
+
+- [Troubleshooting Domain Controller Deployment](Troubleshooting-Domain-Controller-Deployment.md)
+- [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)
+- [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)
+- [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](./Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)
