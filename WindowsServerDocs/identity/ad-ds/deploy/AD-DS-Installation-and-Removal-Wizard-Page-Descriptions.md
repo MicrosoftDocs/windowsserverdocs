@@ -31,7 +31,7 @@ In Server Manager, you can use the Active Directory Domain Services Configuratio
   - [Warnings](#warnings)
   - [Removal Options](#removal-options)
   - [New Administrator Password](#new-administrator-password)
-  - [Review Options](#review-options)
+  - [Review Options](#review-options-1)
 
 ## Promote a server to a domain controller
 
