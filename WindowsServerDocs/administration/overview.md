@@ -25,7 +25,7 @@ This article walks you through each one, describing their capabilities, and give
 
 ## Azure Arc
 
-Azure Arc provides cloud-based management for servers. When you enable Azure Arc, you can manage physical servers running Windows, or Linux and virtual machines (VMs) even if they're hosted outside of Azure on your corporate network or another cloud provider. The management experience is seamless, so it feels like managing native Azure virtual machines. You can manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more.
+Azure Arc provides cloud-based management for servers. When you enable Azure Arc, you can manage physical servers running Windows, or Linux and virtual machines (VMs) even if they're hosted outside of Azure on your corporate network or another cloud provider. The management experience is seamless, so it feels like managing native Azure virtual machines. You can manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, and Azure Update Management.
 
 Azure Automanage offers a unified solution to simplify IT management of Windows Server and Linux servers in Azure or in hybrid environments enabled by Azure Arc.
 
@@ -98,7 +98,7 @@ You can use System Center when you want to:
 - Use Data Protection Manager for your enterprise's disaster recovery strategy.
 - Use Virtual Machine Manager to create a unified management experience across both your on-premises datacenters and virtualized workloads.
 
-### More resource for System Center
+### More resources for System Center
 
 To get started using System Center, visit [the System Center website](https://www.microsoft.com/system-center). After that, start learning how to use its various features at our [System Center documentation](/system-center).
 
