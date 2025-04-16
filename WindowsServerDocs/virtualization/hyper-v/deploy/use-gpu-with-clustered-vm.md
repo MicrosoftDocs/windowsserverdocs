@@ -26,7 +26,7 @@ You can include graphics processing units (GPUs) in your clusters to provide GPU
 
 In this article, you will learn how to use GPUs with clustered VMs to provide GPU acceleration to workloads using Discrete Device Assignment. This article guides you through preparing the cluster, assigning a GPU to a cluster VM, and failing over that VM using Windows Admin Center and PowerShell.
 
-For information about how to manage GPUs in Azure Local, version 23H2, see [Prepare GPUs for Azure Local](/azure/azure-local/manage/gpu-preparation).
+For information about how to manage GPUs in Azure Local, see [Prepare GPUs for Azure Local](/azure/azure-local/manage/gpu-preparation).
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-local"
 
-- You need an Azure Local instance running Azure Stack HCI operating system, version 22H2 or later..
+- You need an Azure Local instance running Azure Stack HCI operating system, version 22H2 or later.
 
 ::: zone-end
 
