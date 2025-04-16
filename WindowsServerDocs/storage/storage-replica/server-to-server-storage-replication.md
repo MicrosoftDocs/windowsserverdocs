@@ -143,7 +143,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
    > * All log disks must have the same sector sizes.
    > * The log volumes should use flash-based storage, such as SSD. We recommend log storage that is faster data storage. Log volumes must never be used for other workloads.
    > * The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1, RAID 10, RAID 5, or RAID 50.
-   > * The log volume must be at least 9 GB by default. It can be larger or smaller based on log requirements.
+   > * The log size defaults to 8 GB if unspecified. Your log volume must be at least 10 GB or larger based on log requirements and organizational needs.
    > * The File Server role is necessary only for Test-SRTopology to operate. It opens required firewall ports for testing.
 
     * **For JBOD enclosures:**

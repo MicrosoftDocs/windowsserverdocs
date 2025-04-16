@@ -51,7 +51,7 @@ This walkthrough uses the following environment as an example:
     - The data and log disks must be initialized as GPT.
     - The volumes must be formatted as NTFS or ReFS.
     - The log volumes should use flash-based storage and high performance resiliency settings. Microsoft recommends that the log storage be faster than the data storage.
-    - The log volume must be at least 9 GB, or larger or smaller based on log requirements.
+    - The log size defaults to 8 GB if unspecified. Your log volume must be at least 10 GB or larger based on log requirements and organizational needs.
   - Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs.
   - The replicated storage can't be located on the drive containing the Windows operating system folder.
 
@@ -164,7 +164,6 @@ No option is available to configure site awareness using Failover Cluster Manage
 >
 > You can also configure VM resiliency so that guests don't pause for long during node failures. Instead, they fail over to the new replication source storage within 10 seconds. To perform this action, run the `(Get-Cluster).ResiliencyDefaultPeriod=10` command.
 
-
 # [Hyper-V Failover Cluster](#tab/hyperv-failover)
 
 1. In **Server Manager**, select **Tools**, then select **Failover Cluster Manager**.
@@ -276,7 +275,7 @@ No option is available to configure site awareness using Failover Cluster Manage
    ```powershell
    Set-ClusterQuorum -FileShareWitness \\SomeServer\SomeShare
    ```
-   
+
    If you're configuring the File Server role, run the following command:
 
    ```powershell
@@ -523,7 +522,7 @@ To alter replication source and destination within the stretch cluster, use the 
    >
    > Storage Replica dismounts the destination volumes. This is by design.
 
-1. To change the log size from the default 8 GB, right-click both the source and destination log disks, select the **Replication Log** tab, then change the sizes on both the disks to match.
+1. To change the log size, right-click both the source and destination log disks, select the **Replication Log** tab, then change the sizes on both the disks to match.
 
 1. To add another pair of replicated disks to the existing replication group, you must ensure that there is at least one extra disk in available storage. You can then right-click the Source disk and select **Add replication partnership**.
 
@@ -614,10 +613,10 @@ To alter replication source and destination within the stretch cluster, use the 
    > [!NOTE]
    > Storage Replica dismounts the destination volumes. This is by design.
 
-1. To change the log size from the default 8GB, use `Set-SRGroup` on both the source and destination Storage Replica Groups. For example, to set all logs to 2 GB:
+1. To change the log size, use `Set-SRGroup` on both the source and destination Storage Replica Groups. For example, to set all logs to 12 GB:
 
    ```powershell
-   Get-SRGroup | Set-SRGroup -LogSizeInBytes 2GB
+   Get-SRGroup | Set-SRGroup -LogSizeInBytes 12GB
    Get-SRGroup
    ```
 
