@@ -4,7 +4,7 @@ description: Stretch cluster replication using shared storage
 ms.author: alalve
 ms.topic: how-to
 author: nedpyle
-ms.date: 03/13/2025
+ms.date: 04/16/2025
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 
