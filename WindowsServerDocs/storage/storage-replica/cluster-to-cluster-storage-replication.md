@@ -4,7 +4,7 @@ description: How to use Storage Replica to replicate volumes in one cluster to a
 ms.topic: how-to
 ms.author: alalve
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 04/16/2025
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 ---
 # Cluster to Cluster Storage Replication
