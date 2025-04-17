@@ -119,7 +119,7 @@ items:
                   href: windows-server-update-services/deploy/2-configure-wsus.md
                 - name: "Step 3: Approve and Deploy Updates in WSUS"
                   href: windows-server-update-services/deploy/3-approve-and-deploy-updates-in-wsus.md
-                - name: "Step 4: Configure Group Policy Settings for Automatic Updates"
+                - name: "Step 4: Configure Group Policy settings for automatic updates"
                   href: windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md
             - name: Update Management with Windows Server Update Services
               href: windows-server-update-services/manage/update-management-with-windows-server-update-services.md
