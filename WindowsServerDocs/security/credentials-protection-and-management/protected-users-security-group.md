@@ -1,12 +1,12 @@
 ---
-title: Protected Users Security Group
-description: Learn about the Active Directory security group Protected Users feature, and how it works.
+title: Protected Users Security Group in Windows Server
+description: Learn about the Active Directory security group Protected Users feature, and how it works in Windows Server.
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
 ms.author: mosagie
 author: robinharwood
 manager: mtillman
-ms.date: 02/12/2024
+ms.date: 04/17/2025
 ---
 # Protected Users Security Group
 
@@ -18,13 +18,13 @@ Your system must meet the following prerequisites before you can deploy a Protec
 
 - Hosts must be running one of the following operating systems:
   
-  - Windows 8.1 or later
+  - Windows 10 or Windows 11
   - Windows Server 2012 R2 or later with the most recent security updates installed
 
-- The domain functional level must be Windows Server 2012 R2 or later. For more information about functional levels, see [Forest and domain functional levels](../../identity/ad-ds/active-directory-functional-levels.md).
+- The domain functional level must be Windows Server 2012 R2 or later. For more information about functional levels, see [Forest and domain functional levels](/windows-server/identity/ad-ds/active-directory-functional-levels).
 
 > [!NOTE]
-> The built-in domain Administrator, `S-1-5-<domain>-500`, is always exempt from Authentication Policies, even when they're assigned to an Authentication Policy Silo. For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
+> The built-in domain Administrator, `S-1-5-<domain>-500`, is always exempt from Authentication Policies, even when they're assigned to an Authentication Policy Silo. For more information, see [How to Configure Protected Accounts](/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
 
 - Protected Users global security group memberships restrict members to only use Advanced Encryption Standards (AES) for Kerberos. Members of the Protected Users group must be able to authenticate using AES.
 
@@ -38,19 +38,19 @@ When the signed in user is a member of the Protected Users group, the group prov
 
 - Credential delegation (CredSSP) doesn't cache the user's plain text credentials even when the user enables the **Allow delegating default credentials** Group Policy setting.
 
-- For Windows 8.1 and later and Windows Server 2012 R2 and later, Windows Digest doesn't cache the user's plaintext credentials even when they've enabled Windows Digest.
+- Windows Digest doesn't cache the user's plaintext credentials even when they've enabled Windows Digest.
 
 - NTLM stops caching the user's plaintext credentials or NT one-way function (NTOWF).
 
-- Kerberos stops creating Data Encryption Standard (DES) or RC4 keys. Kerberos also doesn't cache the user's plaintext credentials or long-term keys after acquiring the initial Ticket Granting Ticket (TGT).
+- Kerberos stops creating Data Encryption Standard (DES) or RC4 keys. Kerberos also doesn't cache the user's plaintext credentials, or long-term keys after acquiring the initial Ticket Granting Ticket (TGT).
 
 - The system doesn't create a cached verifier at user sign-in or unlock, so member systems no longer support offline sign-in.
 
-After you add a new user account to the Protected Users group, these protections will activate when the new Protected User signs in to their device.
+After you add a new user account to the Protected Users group, these protections activate when the new Protected User signs in to their device.
 
 ### Domain controller protections for Protected Users
 
-Protected User accounts that authenticate to a domain running Windows Server 2012 R2 or later are unable to do the following:
+Protected User accounts that authenticate to a domain running Windows Server are unable to do the following:
 
 - Authenticate with NTLM authentication.
 
@@ -72,8 +72,7 @@ For Protected Users members, the group automatically sets these lifetime limits 
 You can add users to the Protected Users group using the following methods:
 
 - UI tools, such as [Active Directory Administrative Center (ADAC)](../../identity/ad-ds\get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md) or [Active Directory Users and Computers](/troubleshoot/windows-server/system-management-components/remote-server-administration-tools).
-- A command-line tool, such as [PowerShell](/powershell/module/activedirectory/add-adgroupmember).
-- With PowerShell, using the [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember) cmdlet.
+- [PowerShell](/powershell/module/activedirectory/add-adgroupmember), using the [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember) cmdlet.
 
 >[!IMPORTANT]
 >
@@ -90,21 +89,6 @@ To avoid lockouts and missing AES keys, we recommend you follow these guidelines
 - If you have migrated accounts from other domains, you need to reset the password so the accounts have AES hashes. Otherwise, these accounts become able to authenticate.
 
 - Users need to change passwords after switching to domain functional level of Windows Server 2008 or later. This ensures they have AES password hashes once they become members of the Protected Users group.
-
-### Adding a Protected User global security group to down-level domains
-
-Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This way, these members can benefit from device protections before you upgrade the domain.
-
-> [!NOTE]
-> Domain controllers running earlier versions of Windows Server 2012 R2 don't support domain protections.
-
-To create a Protected Users group on a domain controller running an earlier version of Windows Server:
-
-1. [Transfer the PDC emulator role](/troubleshoot/windows-server/identity/view-transfer-fsmo-roles#transfer-the-rid-master-pdc-emulator-and-infrastructure-master-roles) to a domain controller that runs Windows Server 2012 R2.
-
-1. Replicate the group object to the other domain controllers.
-
-After that, users can benefit from device protections before you upgrade the domain.
 
 ### Protected Users group AD properties
 
