@@ -10,7 +10,7 @@ ms.date: 04/17/2025
 ---
 # Protected Users Security Group
 
-Protected Users is a global security group for Active Directory (AD) designed to protect against credential theft attacks. The group triggers non-configurable protection on devices and host computers to prevent credentials from being cached when group members sign-in.
+Protected Users is a global security group for Active Directory (AD) designed to protect against credential theft attacks. The group triggers nonconfigurable protection on devices and host computers to prevent credentials from being cached when group members sign-in.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Your system must meet the following prerequisites before you can deploy a Protec
 
 ## Protections applied by Active Directory
 
-Becoming a member of the Protected Users group means AD automatically applies certain pre-configured controls that the users won't be able to change unless they stop being group members.
+Becoming a member of the Protected Users group means AD automatically applies certain preconfigured controls that the users won't be able to change unless they stop being group members.
 
 ### Device protections for signed in Protected Users
 
@@ -54,7 +54,7 @@ Protected User accounts that authenticate to a domain running Windows Server are
 
 - Authenticate with NTLM authentication.
 
-- Use DES or RC4 encryption types in Kerberos pre-authentication.
+- Use DES or RC4 encryption types in Kerberos preauthentication.
 
 - Delegate with unconstrained or constrained delegation.
 
@@ -78,7 +78,7 @@ You can add users to the Protected Users group using the following methods:
 >
 > - Never add accounts for services and computers to the Protected Users group. For those accounts, membership doesn't provide local protections because the password and certificate is always available on the host.
 >
-> - Don't add accounts that are already members of highly privileged groups, such as the Enterprise Admins or Domain Admins groups, until you can guarantee adding them won't have negative consequences. Highly privileged users in the Protected Users are subject to the same [limitations and restrictions](#protections-applied-by-active-directory) as regular users, and it's not possible to work around or change those settings. If you add all members of those groups to the Protected Users group, it's possible to accidentally lock out their accounts. It's important to test your system to make sure the mandatory setting changes won't interfere with account access for these privileged user groups.
+> - Don't add accounts that are already members of highly privileged groups, such as the Enterprise Admins or Domain Admins groups, until you can guarantee to add them won't have negative consequences. Highly privileged users in the Protected Users are subject to the same [limitations and restrictions](#protections-applied-by-active-directory) as regular users, and it's not possible to work around or change those settings. If you add all members of those groups to the Protected Users group, it's possible to accidentally lock out their accounts. It's important to test your system to make sure the mandatory setting changes won't interfere with account access for these privileged user groups.
 
 Members of the Protected Users group can only authenticate using Kerberos with Advanced Encryption Standards (AES). This method requires AES keys for the account in Active Directory. The built-in Administrator doesn't have an AES key unless the password for the domain running Windows Server 2008 or later changes. Any account who has their password changed by a domain controller running an earlier version of Windows Server is locked out of authentication.
 
@@ -120,10 +120,10 @@ To enable capturing these logs:
 
 |Event ID and Log|Description|
 |----------|--------|
-|104<p>**ProtectedUser-Client**|Reason: The security package on the client does not contain the credentials.<br>The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package does not cache the credentials that are needed to authenticate to the server.<p>Displays the package name, user name, domain name, and server name.|
-|304<p>**ProtectedUser-Client**|Reason: The security package does not store the Protected User's credentials.<br>An informational event is logged in the client to indicate that the security package does not cache the user's sign-in credentials. It is expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<p>Displays the package name, user name, and domain name.|
+|104<p>**ProtectedUser-Client**|Reason: The security package on the client doesn't contain the credentials.<br>The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package doesn't cache the credentials that are needed to authenticate to the server.<p>Displays the package name, user name, domain name, and server name.|
+|304<p>**ProtectedUser-Client**|Reason: The security package doesn't store the Protected User's credentials.<br>An informational event is logged in the client to indicate that the security package doesn't cache the user's sign-in credentials. It's expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<p>Displays the package name, user name, and domain name.|
 |100<p>**ProtectedUserFailures-DomainController**|Reason: An NTLM sign-in failure occurs for an account that is in the Protected Users security group.<br>An error is logged in the domain controller to indicate that NTLM authentication failed because the account was a member of the Protected Users security group.<p>Displays the account name and device name.|
-|104<p>**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected User security group.<br>Kerberos preauthentication failed because DES and RC4 encryption types cannot be used when the account is a member of the Protected Users security group.<p>(AES is acceptable.)|
+|104<p>**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected User security group.<br>Kerberos preauthentication failed because DES and RC4 encryption types can't be used when the account is a member of the Protected Users security group.<p>(AES is acceptable.)|
 |303<p>**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group.|
 
 ## Additional resources
