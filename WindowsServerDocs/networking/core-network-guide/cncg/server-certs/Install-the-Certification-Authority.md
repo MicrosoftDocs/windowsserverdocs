@@ -11,7 +11,7 @@ ms.date: 04/15/2025
 ---
 # Install the Certification Authority on Windows Server
 
-Follow these steps to set up Active Directory Certificate Services (AD CS). This will allow you to issue server certificates for servers running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.
+Follow these steps to set up Active Directory Certificate Services (AD CS). This allows you to issue server certificates for servers running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.
 
 ## Prerequisites
 
@@ -45,24 +45,24 @@ To use Server Manager to install Active Directory Certificate Services, complete
 
 1. Log on as a member of both the Enterprise Admins group and the root domain's Domain Admins group.
 
-1. In Server Manager, select **Manage**, and then select **Add Roles and Features**. The Add Roles and Features Wizard opens.
+1. In Server Manager, select **Manage**, and then select **Add Roles and Features** to open the Add Roles and Features Wizard.
 
 1. In **Before You Begin**, select **Next**.
 
     > [!NOTE]
-    > The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you have previously selected **Skip this page by default** when the Add Roles and Features Wizard was run.
+    > The **Before You Begin** page of the Add Roles and Features Wizard isn't displayed if you have previously selected **Skip this page by default**.
 
 1. In **Select Installation Type**, ensure that **Role-Based or feature-based installation** is selected, and then select **Next**.
 
 1. In **Select destination server**, ensure that **Select a server from the server pool** is selected. In **Server Pool**, ensure that the local computer is selected. Select **Next**.
 
-1. In **Select Server Roles**, in **Roles**, select **Active Directory Certificate Services**. When you are prompted to add required features, select **Add Features**, and then select **Next**.
+1. In **Select Server Roles**, in **Roles**, select **Active Directory Certificate Services**. When you're prompted to add required features, select **Add Features**, and then select **Next**.
 
 1. In **Select features**, select **Next**.
 
 1. In **Active Directory Certificate Services**, read the provided information, and then select **Next**.
 
-1. In **Confirm installation selections**, select **Install**. Do not close the wizard during the installation process. When installation is complete, select **Configure Active Directory Certificate Services on the destination server**. The AD CS Configuration wizard opens. Read the credentials information and, if needed, provide the credentials for an account that is a member of the Enterprise Admins group. Select **Next**.
+1. In **Confirm installation selections**, select **Install**. Don't close the wizard during the installation process. When installation is complete, select **Configure Active Directory Certificate Services on the destination server**. The AD CS Configuration wizard opens. Read the credentials information and, if needed, provide the credentials for an account that is a member of the Enterprise Admins group. Select **Next**.
 
 1. In **Role Services**, select **Certification Authority**, and then select **Next**.
 
@@ -72,9 +72,9 @@ To use Server Manager to install Active Directory Certificate Services, complete
 
 1. On the **Specify the type of the private key** page, verify that **Create a new private key** is selected, and then select **Next**.
 
-1. On the **Cryptography for CA** page, keep the default settings for CSP (**RSA#Microsoft Software Key Storage Provider**) and hash algorithm (**SHA2**), and determine the best key character length for your deployment. Large key character lengths provide optimal security; however, they can impact server performance and might not be compatible with legacy applications. It is recommended that you keep the default setting of 2048. Select **Next**.
+1. On the **Cryptography for CA** page, keep the default settings for CSP (**RSA#Microsoft Software Key Storage Provider**) and hash algorithm (**SHA2**), and determine the best key character length for your deployment. Large key character lengths provide optimal security; however, they can impact server performance and might not be compatible with legacy applications. It's recommended that you keep the default setting of 2048. Select **Next**.
 
-1. On the **CA Name** page, keep the suggested common name for the CA or change the name according to your requirements. Ensure that you are certain the CA name is compatible with your naming conventions and purposes, because you cannot change the CA name after you have installed AD CS. Select **Next**.
+1. On the **CA Name** page, keep the suggested common name for the CA or change the name according to your requirements. Ensure that you're certain the CA name is compatible with your naming conventions and purposes, because you can't change the CA name after you have installed AD CS. Select **Next**.
 
 1. On the **Validity Period** page, in **Specify the validity period**, type the number and select a time value (Years, Months, Weeks, or Days). The default setting of five years is recommended. Select **Next**.
 
