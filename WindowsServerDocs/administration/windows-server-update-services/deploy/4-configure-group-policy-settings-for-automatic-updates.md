@@ -616,17 +616,17 @@ After you open the extension of Group Policy that you want, you can use the foll
 
 1. Take one of the following steps:
 
-   - Retain the default unspecified state of the setting, select **Not Configured**.
-   - Enable the setting, select **Enabled**.
-   - Disable the setting, select **Disabled**.
+   - To retain the default unspecified state of the setting, select **Not Configured**.
+   - To enable the setting, select **Enabled**.
+   - To disable the setting, select **Disabled**.
 
 1. In **Options**, if any options are listed, retain the default values or modify them as needed.
 
 1. Take one of the following steps:
 
-   - Save your changes and proceed to the next setting, select **Apply**, and then select **Next Setting**.
-   - Save your changes and close the dialog, select **OK**.
-   - Discard all unsaved changes and close the dialog, select **Cancel**.
+   - To save your changes and proceed to the next setting, select **Apply**, and then select **Next Setting**.
+   - To save your changes and close the dialog, select **OK**.
+   - To discard all unsaved changes and close the dialog, select **Cancel**.
 
 ### Changes to WSUS
 
