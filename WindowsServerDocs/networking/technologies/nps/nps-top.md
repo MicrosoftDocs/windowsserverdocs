@@ -98,7 +98,7 @@ When you use NPS as a RADIUS proxy, it serves as a central switching or routing 
 
 You can use NPS as a RADIUS proxy in the following cases:
 
-- You're a service provider who offers outsourced dial-up, VPN, or wireless network access services to multiple customers. Your network-attached storage (NAS) systems send connection requests to the NPS RADIUS proxy. Based on the realm portion of the user name in the connection request, the NPS RADIUS proxy forwards the connection request to a RADIUS server. The customer maintains that server. It can authenticate and authorize the connection attempt.
+- You're a service provider who offers outsourced dial-up, VPN, or wireless network access services to multiple customers. Your network-attached storage (NAS) systems send connection requests to the NPS RADIUS proxy. Based on the realm portion of the user name in the connection request, the NPS RADIUS proxy forwards the connection request to a RADIUS server. The customer maintains that server, which can authenticate and authorize the connection attempt.
 
 - You want to provide authentication and authorization for user accounts that aren't members of either of the following domains:
   - The domain in which the NPS deployment is a member
@@ -144,7 +144,7 @@ This example uses the following configuration:
 - The default connection request policy is the only configured policy.
 - The local NPS RADIUS server processes all connection requests.
 
-The NPS RADIUS server can authenticate and authorize user accounts that are in its domain and in trusted domains.
+The NPS RADIUS server can authenticate and authorize user accounts that are in the domain of the NPS RADIUS server and in trusted domains.
 
 ### NPS as a RADIUS proxy
 
@@ -227,10 +227,10 @@ For instructions on making these configurations, see the following articles:
 
 NPS logging is also called RADIUS accounting. You can configure NPS logging to meet your requirements whether NPS is used as a RADIUS server, proxy, or any combination of these configurations.
 
-To configure NPS logging, you must configure the events that you want to log and view with Event Viewer, and then determine which other information you want to log. Also, you must decide where to store user authentication and accounting information logs:
+To configure NPS logging, you must configure the events that you want to log and view with Event Viewer, and then determine which other information you want to log. Also, you must decide where to store user authentication and accounting information logs. The following options are available:
 
-- In text log files stored on the local computer
-- In a SQL Server database on either the local computer or a remote computer
+- Text log files stored on the local computer
+- A SQL Server database on either the local computer or a remote computer
 
 For more information, see [Configure Network Policy Server accounting](nps-accounting-configure.md).
 
