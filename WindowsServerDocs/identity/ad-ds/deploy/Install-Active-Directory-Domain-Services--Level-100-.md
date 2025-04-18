@@ -1,121 +1,100 @@
 ---
-description: "Learn more about: Install Active Directory Domain Services (Level 100)"
+title: Install Active Directory Domain Services
+description: Learn more about how to install Active Directory Domain Services in Windows Server using PowerShell, Server Manager, or a GUI.
 ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
-title: Install Active Directory Domain Services (Level 100)
 author: iainfoulds
 ms.author: mosagie
 manager: daveba
-ms.date: 02/28/2023
-ms.topic: article
+ms.date: 04/18/2025
+ms.topic: how-to
 ---
 
-# Install Active Directory Domain Services (Level 100)
+# Install Active Directory Domain Services
 
-This topic explains how to install Active Directory Domain Services (AD DS) in  Windows Server 2012 by using any of the following methods:
+This topic explains how to install Active Directory Domain Services (AD DS) in  Windows Server by using any of the following methods:
 
--   [Credential requirements to run Adprep.exe and install Active Directory Domain Services](#BKMK_Creds)
+- Windows PowerShell
 
--   [Installing AD DS by Using Windows PowerShell](#BKMK_PS)
+- Server Manager
 
--   [Installing AD DS by using Server Manager](#BKMK_GUI)
+- RODC installation using the GUI
 
--   [Performing a Staged RODC Installation using the Graphical User Interface](#BKMK_UIStaged)
+## Prerequisites
 
-## <a name="BKMK_Creds"></a>Credential requirements to run Adprep.exe and install Active Directory Domain Services
 The following credentials are required to run Adprep.exe and install AD DS.
 
--   To install a new forest, you must be logged on as the local Administrator for the computer.
+- To install a new forest, you must be logged on as the local Administrator for the computer.
 
--   To install a new child domain or new domain tree, you must be logged on as a member of the Enterprise Admins group.
+- To install a new child domain or new domain tree, you must be logged on as a member of the Enterprise Admins group.
 
--   To install an additional domain controller in an existing domain, you must be a member of the Domain Admins group.
+- To install an additional domain controller in an existing domain, you must be a member of the Domain Admins group.
 
     > [!NOTE]
-    > If you don't run adprep.exe command separately and you're installing the first domain controller that runs Windows Server 2012 in an existing domain or forest, you're prompted to supply credentials to run Adprep commands. The credential requirements are as follows:
+    > If you don't run adprep.exe command separately and you're installing the first domain controller that runs Windows Server in an existing domain or forest, you're prompted to supply credentials to run Adprep commands. The credential requirements are as follows:
     >
-    > -   To introduce the first  Windows Server 2012 domain controller in the forest, you need to supply credentials for a member of Enterprise Admins group, the Schema Admins group, and the Domain Admins group in the domain that hosts the schema master.
-    > -   To introduce the first  Windows Server 2012 domain controller in a domain, you need to supply credentials for a member of the Domain Admins group.
-    > -   To introduce the first read-only domain controller (RODC) in the forest, you need to supply credentials for a member of the Enterprise Admins group.
-    >
-    >     > [!NOTE]
-    >     > If you have already run adprep /rodcprep in Windows Server 2008 or Windows Server 2008 R2, you don't need to run it again for  Windows Server 2012.
+    > To introduce the first  Windows Server domain controller in the forest, you need to supply credentials for a member of Enterprise Admins group, the Schema Admins group, and the Domain Admins group in the domain that hosts the schema master.
+    > To introduce the first  Windows Server domain controller in a domain, you need to supply credentials for a member of the Domain Admins group.
+    > To introduce the first read-only domain controller (RODC) in the forest, you need to supply credentials for a member of the Enterprise Admins group.
 
-## <a name="BKMK_PS"></a>Installing AD DS by Using Windows PowerShell
-Beginning with Windows Server 2012, you can install AD DS using Windows PowerShell. Dcpromo.exe is deprecated beginning with Windows Server 2012, but you can still run dcpromo.exe by using an answer file (dcpromo /unattend:\<answerfile> or dcpromo /answer:\<answerfile>). The ability to continue running dcpromo.exe with an answer file provides organizations that have resources invested in existing automation time to convert the automation from dcpromo.exe to Windows PowerShell. For more information about running dcpromo.exe with an answer file, see [https://support.microsoft.com/kb/947034](https://support.microsoft.com/kb/947034).
-
-For more information about removing AD DS using Windows PowerShell, see [Remove AD DS using Windows PowerShell](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c#BKMK_RemovePS).
+## Install AD DS by Using Windows PowerShell
 
 Start with adding the role using Windows PowerShell. This command installs the AD DS server role and installs the AD DS and Active Directory Lightweight Directory Services (AD LDS) server administration tools, including GUI-based tools such as Active Directory Users and Computers and command-line tools such as dcdia.exe. Server administration tools aren't installed by default when you use Windows PowerShell. You need to specify **"IncludeManagementTools** to manage the local server or install [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=28972) to manage a remote server.
 
-```
+```powershell
 Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools
-<<Windows PowerShell cmdlet and arguments>>
 ```
 
 No reboot is required until after the AD DS installation is complete.
 
 You can then run this command to see the available cmdlets in the ADDSDeployment module.
 
-```
+```powershell
 Get-Command -Module ADDSDeployment
 ```
 
 To see the list of arguments that can be specified for a cmdlets and syntax:
 
-```
+```powershell
 Get-Help <cmdlet name>
 ```
 
 For example, to see the arguments for creating an unoccupied read-only domain controller (RODC) account, type
 
-```
+```powershell
 Get-Help Add-ADDSReadOnlyDomainControllerAccount
 ```
-
-Optional arguments appear in square brackets.
 
 You can also download the latest Help examples and concepts for Windows PowerShell cmdlets. For more information, see [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1&preserve-view=true).
 
 You can run Windows PowerShell cmdlets against remote servers:
 
--   In Windows PowerShell, use Invoke-Command with the ADDSDeployment cmdlet. For example, to install AD DS on a remote server named ConDC3 in the contoso.com domain, type:
+- In Windows PowerShell, use Invoke-Command with the ADDSDeployment cmdlet. For example, to install AD DS on a remote server named ConDC3 in the contoso.com domain, type:
 
-    ```
+    ```powershell
     Invoke-Command { Install-ADDSDomainController -DomainName contoso.com -Credential (Get-Credential) } -ComputerName ConDC3
     ```
 
 -or-
 
--   In Server Manager, create a server group that includes the remote server. Right-click the name of the remote server and click **Windows PowerShell**.
+- In Server Manager, create a server group that includes the remote server. Right-click the name of the remote server and click **Windows PowerShell**.
 
 The next sections explain how to run ADDSDeployment module cmdlets to install AD DS.
 
--   [ADDSDeployment cmdlet arguments](#BKMK_Params)
+### AD DS Deployment cmdlet arguments
 
--   [Specifying Windows PowerShell Credentials](#BKMK_PSCreds)
-
--   [Using test cmdlets](#BKMK_TestCmdlets)
-
--   [Installing a new forest root domain using Windows PowerShell](#BKMK_PSForest)
-
--   [Installing a new child or tree domain using Windows PowerShell](#BKMK_PSDomain)
-
--   [Installing an additional (replica) domain controller using Windows PowerShell](#BKMK_PSReplica)
-
-### <a name="BKMK_Params"></a>ADDSDeployment cmdlet arguments
 The following table lists arguments for the ADDSDeployment cmdlets in Windows PowerShell. Arguments in bold are required. Equivalent arguments for dcpromo.exe are listed in parentheses if they're named different in Windows PowerShell.
 
 Windows PowerShell switches accept $TRUE or $FALSE arguments. Arguments that are $TRUE by default don't need to be specified.
 
 To override default values, you can specify the argument with a $False value. For example, because **-InstallDNS** is automatically run for a new forest installation if it isn't specified, the only way to *prevent* DNS installation when you install a new forest is to use:
 
-```
+```powershell
 -InstallDNS:$False
 ```
 
 Similarly, because **-InstallDNS** has a default value of $False if you install a domain controller in an environment that doesn't host Windows Server DNS server, you need to specify the following argument in order to install DNS server:
 
-```
+```powershell
 -InstallDNS:$True
 ```
 
