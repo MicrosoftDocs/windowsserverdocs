@@ -82,7 +82,7 @@ You can use NPS as a RADIUS server in the following cases:
 - You're outsourcing your dial-up, VPN, or wireless access to a service provider. The access servers use RADIUS to authenticate and authorize connections that are made by members of your organization.
 - You want to centralize authentication, authorization, and accounting for a heterogeneous set of access servers.
 
-The following illustration shows NPS as a RADIUS server for various access clients.
+The following diagram shows NPS as a RADIUS server for various access clients.
 
 :::image type="content" source="../../media/Nps-Server/Nps-Server.jpg" alt-text="Diagram that shows NPS as a RADIUS server that communicates with various types of access servers, a domain controller, and SQL Server.":::
 
@@ -118,7 +118,7 @@ You can use NPS as a RADIUS proxy in the following cases:
 > - Extensible Authentication Protocol-Transport Layer Security (EAP-TLS)
 > - Protected Extensible Authentication Protocol-Transport Layer Security (PEAP-TLS)
 
-The following illustration shows NPS as a RADIUS proxy between RADIUS clients and RADIUS servers.
+The following diagram shows NPS as a RADIUS proxy between RADIUS clients and RADIUS servers.
 
 :::image type="content" source="../../media/Nps-Proxy/Nps-Proxy.jpg" alt-text="Diagram that shows NPS as a proxy server that uses the RADIUS protocol to communicate with access servers and RADIUS servers.":::
 
