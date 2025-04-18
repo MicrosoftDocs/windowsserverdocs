@@ -12,7 +12,7 @@ ms.date: 04/18/2025
 This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols.
 
 > [!CAUTION]
-> This information is provided as a reference to use when you're troubleshooting or verifying that the required settings are applied. We recommend that you don't directly edit the registry unless there is no other alternative. Modifications to the registry aren't validated by the Registry Editor or by the Windows operating system before they are applied. As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system. When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC). If you must edit the registry, use extreme caution.
+> This information is provided as a reference to use when you're troubleshooting or verifying that the required settings are applied. We recommend that you don't directly edit the registry unless there's no other alternative. Modifications to the registry aren't validated by the Registry Editor or by the Windows operating system before they're applied. As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system. When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC). If you must edit the registry, use extreme caution.
 
 ## Schannel logging
 
@@ -64,7 +64,7 @@ Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 TLS/SSL ciphers should be controlled by configuring the cipher suite order. For details, see [Configuring TLS Cipher Suite Order](manage-tls.md#configure-tls-cipher-suite-order).
 
-For information about default cipher suite orders that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
+For information about default cipher suite orders that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ## CipherSuites
 
@@ -120,7 +120,7 @@ Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 ## IssuerCacheTime
 
-This entry controls the length of the cache timeout interval in milliseconds. The Schannel SSP attempts to map all of the issuers in the client's certificate chain, not just the direct issuer of the client certificate. In the case where the issuers don't map to an account, which is the typical case, the server might attempt to map the same issuer name repeatedly, hundreds of times per second.
+This entry controls the length of the cache time-out interval in milliseconds. The Schannel SSP attempts to map all of the issuers in the client's certificate chain, not just the direct issuer of the client certificate. In the case where the issuers don't map to an account, which is the typical case, the server might attempt to map the same issuer name repeatedly, hundreds of times per second.
 
 To prevent this, the server has a negative cache, so if an issuer name doesn't map to an account, it's added to the cache and the Schannel SSP doesn't attempt to map the issuer name again until the cache entry expires. This cache is kept for performance reasons, so that the system doesn't continue trying to map the same issuers. This entry doesn't exist in the registry by default. The default value is 10 minutes.
 
@@ -128,7 +128,7 @@ Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 ## KeyExchangeAlgorithm key sizes
 
-These following entries might not exist in the registry by default and must be manually created. Use of key exchange algorithms should be controlled by configuring the cipher suite order. To learn more about TLS/SSL cipher suite cryptographic algorithms, see [Cipher suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
+These following entries might not exist in the registry by default and must be manually created. Use of key exchange algorithms should be controlled by configuring the cipher suite order. To learn more about TLS/SSL cipher suite cryptographic algorithms, see [Cipher suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 # [Diffie-Hellman](#tab/diffie-hellman)
 
@@ -230,13 +230,13 @@ In order to override a system default and set a supported (D)TLS or SSL protocol
 
 The following example shows TLS 1.0 client set to the **Enabled** state:
 
-:::image type="content" source="images/tls-10-client-enabled.png" alt-text="Screenshot of Set TLS 1.0 client-side to enabled in Windows Server registry setting.":::
+:::image type="content" source="images/tls-10-client-enabled.png" alt-text="Screenshot of Set TLS 1.0 client-side to be enabled in Windows Server registry setting.":::
 
 In order to override a system default and set a supported (D)TLS or SSL protocol version to the `Disabled` state, change the DWORD registry value of `Enabled` to "**0**" under the corresponding version-specific subkey.
 
 The following example shows DTLS 1.2 disabled in the registry:
 
-:::image type="content" source="images/dtls-12-server-disabled.png" alt-text="Screenshot of Windows Server registry setting for DTLS 1.2 set to disabled by default.":::
+:::image type="content" source="images/dtls-12-server-disabled.png" alt-text="Screenshot of Windows Server registry setting for DTLS 1.2 set to be disabled by default.":::
 
 Switching a (D)TLS or SSL protocol version to `Disabled` state might cause [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of `Enabled` (D)TLS and SSL versions could break interoperability with remote peers.
 
