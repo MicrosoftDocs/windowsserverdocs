@@ -46,7 +46,7 @@ Adprep.exe is located in the \support\adprep folder of the Windows Server instal
 
 ![What's new](media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)
 
-For information about resolving other errors returned by Adprep.exe, see [Known issues](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues).
+For information about resolving other errors returned by Adprep.exe, see [Known issues](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md).
 
 ### Group membership check against Windows Server 2003 operations master roles
 
@@ -62,7 +62,7 @@ When group membership can't be checked, Adprep shows a warning message in the ad
 Adprep was unable to check the specified user's group membership. This could happen if the FSMO role owner <DNS host name of operations master> is running Windows Server 2003 or lower version of Windows.
 ```
 
-If Adprep finishes successfully, there's no action required. If Adprep fails during execution with access errors, provide an account with the correct membership. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md##prerequisites).
+If Adprep finishes successfully, there's no action required. If Adprep fails during execution with access errors, provide an account with the correct membership. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#prerequisites).
 
 ### Syntax for Adprep in Windows Server 2012
 
