@@ -249,9 +249,9 @@ Description:
 The tenant certificate for Azure MFA has been renewed.
 
 TenantId: contoso.onmicrosoft.com.
-Old thumbprint: 7CC103D60967318A11D8C51C289EF85214D9FC63.
+Old thumbprint: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00.
 Old expiration date: 9/15/2019 9:43:17 PM.
-New thumbprint: 8110D7415744C9D4D5A4A6309499F7B48B5F3CCF.
+New thumbprint: BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11.
 New expiration date: 2/27/2020 2:16:07 AM.
 ```
 

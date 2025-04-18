@@ -100,7 +100,7 @@ add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ 
 
 Following is an example of the **add sslcert** command.
 
-add sslcert ipport=1.1.1.1:443 certhash=0102030405060708090A0B0C0D0E0F1011121314
+add sslcert ipport=1.1.1.1:443 certhash=AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 appid={00112233-4455-6677-8899- AABBCCDDEEFF}
 
 ---

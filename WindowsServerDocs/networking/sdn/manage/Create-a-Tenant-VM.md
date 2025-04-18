@@ -141,7 +141,7 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
 3. Get the logical network subnet and create the network interface.
 
    ```PowerShell
-    $logicalnet = Get-NetworkControllerLogicalNetwork -ConnectionUri $uri -ResourceId "00000000-2222-1111-9999-000000000002"
+    $logicalnet = Get-NetworkControllerLogicalNetwork -ConnectionUri $uri -ResourceId "a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1"
 
     $vmnicproperties = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
     $vmnicproperties.PrivateMacAddress = "00-1D-C8-B7-01-02"

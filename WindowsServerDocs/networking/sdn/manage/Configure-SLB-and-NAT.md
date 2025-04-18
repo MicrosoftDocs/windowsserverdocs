@@ -196,14 +196,14 @@ You can also repeat this process on a single network interface to add it to mult
 2. Get the network interface and add the backendaddress pool to the loadbalancerbackendaddresspools array.
 
    ```PowerShell
-   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06 -PassInnerException
+   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1 -PassInnerException
    $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
    ```
 
 3. Put the network interface to apply the change.
 
    ```PowerShell
-   new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06 -properties $nic.properties -force -PassInnerException
+   new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1 -properties $nic.properties -force -PassInnerException
    ```
 
 
@@ -229,7 +229,7 @@ If you defined the VIP and DIP as the same subnet, then this is equivalent to pe
 2. Assign the PublicIPAddress to a network interface.
 
    ```PowerShell
-   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06
+   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
    $nic.properties.IpConfigurations[0].Properties.PublicIPAddress = $publicIP
    New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $nic.ResourceId -Properties $nic.properties -PassInnerException
    ```
@@ -269,7 +269,7 @@ This example repeats the same action as the previous example, but it automatical
 3. Assign the PublicIPAddress to a network interface.
 
    ```PowerShell
-   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06
+   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
    $nic.properties.IpConfigurations[0].Properties.PublicIPAddress = $publicIP
    New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $nic.ResourceId -Properties $nic.properties -PassInnerException
    ```
@@ -283,5 +283,3 @@ This example repeats the same action as the previous example, but it automatical
    ```
 
 ---
-
-
