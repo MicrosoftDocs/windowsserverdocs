@@ -20,7 +20,7 @@ A cipher suite is a set of cryptographic algorithms. Different Windows versions 
 Changes to the TLS cipher suite order take effect on the next boot. Until restart or shutdown, the existing order is in effect.
 
 > [!WARNING]
-> Updating the registry settings for the default priority ordering is not supported and may be reset with servicing updates.
+> Updating the registry settings for the default priority ordering isn't supported and may be reset with servicing updates.
 
 ### Configure TLS cipher suite order by using Group Policy
 
@@ -43,7 +43,7 @@ You can use the SSL cipher suite order Group Policy settings to configure the de
 
 ### Configure TLS cipher suite order by using MDM
 
-The Windows 10 Policy CSP supports configuration of the TLS Cipher Suites.  For more information, see  [Cryptography/TLSCipherSuites](/windows/client-management/mdm/policy-csp-cryptography#cryptography-tlsciphersuites).
+The Windows 10 Policy CSP supports configuration of the TLS Cipher Suites. For more information, see [Cryptography/TLSCipherSuites](/windows/client-management/mdm/policy-csp-cryptography#cryptography-tlsciphersuites).
 
 ### Configure TLS cipher suite order by using TLS PowerShell Cmdlets
 
@@ -51,11 +51,11 @@ The TLS PowerShell module supports getting the ordered list of TLS cipher suites
 
 ## Configure TLS ECC curve order
 
-Beginning with Windows 10 and Windows Server 2016, ECC curve order can be configured independent of the cipher suite order. If the TLS cipher suite order list has elliptic curve suffixes, they'll be overridden by the new elliptic curve priority order, when enabled. This allow organizations to use a Group Policy object to configure different versions of Windows Server with the same cipher suites order.
+Beginning with Windows 10 and Windows Server 2016, ECC curve order can be configured independent of the cipher suite order. If the TLS cipher suite order list has elliptic curve suffixes, they'll be overridden by the new elliptic curve priority order, when enabled. This allows organizations to use a Group Policy object to configure different versions of Windows Server with the same cipher suites order.
 
 ### Manage ECC curves using CertUtil
 
-Beginning with Windows 10 and Windows Server 2016, Windows provides elliptic curve parameter management through the command line utility **certutil.exe**. Elliptic curve parameters are stored in the bcryptprimitives.dll. Using certutil.exe, administrators can add and remove curve parameters to and from Windows Server, respectively. Certutil.exe stores the curve parameters securely in the registry.
+Beginning with Windows 10 and Windows Server 2016, Windows provides elliptic curve parameter management through the command line utility **certutil.exe**. Elliptic curve parameters are stored in the bcryptprimitives.dll. Administrators can add, and remove curve parameters to and from Windows Server using certutil.exe. Certutil.exe stores the curve parameters securely in the registry.
 Windows Server can begin using the curve parameters by the name associated with the curve.
 
 #### Display registered curves
@@ -91,7 +91,7 @@ Administrators can remove a previously added curve using the following certutil.
 certutil.exe –deleteEccCurve curveName
 ```
 
-Windows cannot use a named curve after an administrator removes the curve from computer.
+Windows can't use a named curve after an administrator removes the curve from computer.
 
 ## Manage ECC curves using Group Policy
 
@@ -99,7 +99,7 @@ Organizations can distribute curve parameters to enterprise, domain-joined, comp
 
 1. Use **certutil.exe** to add a new registered named curve.
 1. From that same computer, Open the Group Policy Management Console (GPMC), create a new Group Policy object, and edit it.
-1. Navigate to **Computer Configuration|Preferences|Windows Settings|Registry**.  Right-click **Registry**. Hover over **New** and select **Collection Item**. Rename the collection item to match the name of the curve. You'll create one Registry Collection item for each registry key under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters*.
+1. Navigate to **Computer Configuration|Preferences|Windows Settings|Registry**. Right-click **Registry**. Hover over **New** and select **Collection Item**. Rename the collection item to match the name of the curve. You'll create one Registry Collection item for each registry key under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters*.
 1. Configure the newly created Group Policy Preference Registry Collection by adding a new **Registry Item** for each registry value listed under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters\[curveName]*.
 1. Deploy the Group Policy object containing Group Policy Registry Collection item computers that should receive the new named curves.
 
@@ -107,8 +107,8 @@ Organizations can distribute curve parameters to enterprise, domain-joined, comp
 
 ## Manage TLS ECC order
 
-Beginning with Windows 10 and Windows Server 2016, ECC Curve Order group policy settings can be used configure the default TLS ECC Curve Order.
-Using Generic ECC and this setting, organizations can add their own trusted named curves (that are approved for use with TLS) to the operating system and then add those named curves to the curve priority Group Policy setting to ensure they are used in future TLS handshakes.
+Beginning with Windows 10 and Windows Server 2016, ECC Curve Order group policy settings can be used to configure the default TLS ECC Curve Order.
+Using Generic ECC and this setting, organizations can add their own trusted named curves (that are approved for use with TLS) to the operating system and then add those named curves to the curve priority Group Policy setting to ensure they're used in future TLS handshakes.
 New curve priority lists become active on the next reboot after receiving the policy settings.
 
 ![Screenshot of the EEC Curve Order dialog box.](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
