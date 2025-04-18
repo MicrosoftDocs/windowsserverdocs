@@ -2,12 +2,10 @@
 title: Transport Layer Security (TLS) registry settings
 description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: article
-ms.date: 08/19/2024
+ms.date: 04/18/2025
 ---
 
 # Transport Layer Security (TLS) registry settings
-
-> 
 
 This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS and SSL protocols.
 
@@ -64,13 +62,13 @@ Applicable versions: As designated in the **Applies to** list at the beginning o
 
 ## Ciphers
 
-TLS/SSL ciphers should be controlled by configuring the cipher suite order. For details, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order).
+TLS/SSL ciphers should be controlled by configuring the cipher suite order. For details, see [Configuring TLS Cipher Suite Order](manage-tls.md#configure-tls-cipher-suite-order).
 
 For information about default cipher suite orders that are used by the SChannel SSP, see [Cipher Suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ## CipherSuites
 
-Configuring TLS/SSL cipher suites should be done using group policy, MDM, or PowerShell, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order) for details.
+Configuring TLS/SSL cipher suites should be done using group policy, MDM, or PowerShell, see [Configuring TLS Cipher Suite Order](manage-tls.md#configure-tls-cipher-suite-order) for details.
 
 For information about default cipher suite orders that are used by the SChannel SSP, see [Cipher Suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
@@ -112,7 +110,7 @@ To disable, set the DWORD value to 0:
 
 ## Hashes
 
-TLS/SSL hash algorithms should be controlled by configuring the cipher suite order. See [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order) for details.
+TLS/SSL hash algorithms should be controlled by configuring the cipher suite order. See [Configuring TLS cipher suite order](manage-tls.md#configure-tls-cipher-suite-order) for details.
 
 ## IssuerCacheSize
 
@@ -136,7 +134,7 @@ Registry path: `HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 ## KeyExchangeAlgorithm key sizes
 
-These following entries might not exist in the registry by default and must be manually created. Use of key exchange algorithms should be controlled by configuring the cipher suite order. To learn more about TLS/SSL cipher suite cryptographic algorithms, see [Cipher Suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
+These following entries might not exist in the registry by default and must be manually created. Use of key exchange algorithms should be controlled by configuring the cipher suite order. To learn more about TLS/SSL cipher suite cryptographic algorithms, see [Cipher suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 # [Diffie-Hellman](#tab/diffie-hellman)
 
@@ -264,4 +262,4 @@ These registry settings only apply to SChannel SSP and don't affect any third-pa
 > [!WARNING]
 > Attempting to create or adjust any SChannel registry settings that are not explicitly detailed in this article isn't recommended due to potential risks and unintended consequences that may arise from unsupported configurations.
 
-To learn about managing the TLS cipher suite using PowerShell, see [TLS command reference](/powershell/module/tls). If interested in managing TLS settings via Group Policy, see [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
+To learn about managing the TLS cipher suite using PowerShell, see [TLS command reference](/powershell/module/tls). If interested in managing TLS settings via Group Policy, see [Configure TLS cipher suite order by using Group Policy](/windows-server/security/tls/manage-tls#configure-tls-cipher-suite-order-by-using-group-policy).
