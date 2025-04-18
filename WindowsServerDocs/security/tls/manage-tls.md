@@ -99,7 +99,7 @@ Organizations can distribute curve parameters to enterprise, domain-joined, comp
 
 1. Use **certutil.exe** to add a new registered named curve.
 1. From that same computer, Open the Group Policy Management Console (GPMC), create a new Group Policy object, and edit it.
-1. Navigate to **Computer Configuration|Preferences|Windows Settings|Registry**. Right-click **Registry**. Hover over **New** and select **Collection Item**. Rename the collection item to match the name of the curve. You'll create one Registry Collection item for each registry key under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters*.
+1. Navigate to **Computer Configuration|Preferences|Windows Settings|Registry**. Right-click **Registry**. Hover over **New** and select **Collection Item**. Rename the collection item to match the name of the curve. You create one Registry Collection item for each registry key under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters*.
 1. Configure the newly created Group Policy Preference Registry Collection by adding a new **Registry Item** for each registry value listed under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters\[curveName]*.
 1. Deploy the Group Policy object containing Group Policy Registry Collection item computers that should receive the new named curves.
 
@@ -107,8 +107,6 @@ Organizations can distribute curve parameters to enterprise, domain-joined, comp
 
 ## Manage TLS ECC order
 
-Beginning with Windows 10 and Windows Server 2016, ECC Curve Order group policy settings can be used to configure the default TLS ECC Curve Order.
-Using Generic ECC and this setting, organizations can add their own trusted named curves (that are approved for use with TLS) to the operating system and then add those named curves to the curve priority Group Policy setting to ensure they're used in future TLS handshakes.
-New curve priority lists become active on the next reboot after receiving the policy settings.
+Beginning with Windows 10 and Windows Server 2016, ECC Curve Order group policy settings can be used to configure the default TLS ECC Curve Order. Organizations can add their own trusted named curves to the operating system, and then add those named curves to the curve priority Group Policy setting to ensure they're used in future TLS handshakes. New curve priority lists become active on the next reboot after receiving the policy settings.
 
 ![Screenshot of the EEC Curve Order dialog box.](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
