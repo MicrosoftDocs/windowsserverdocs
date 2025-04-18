@@ -27,19 +27,19 @@ Changes to the TLS cipher suite order take effect on the next boot. Until restar
 You can use the SSL cipher suite order Group Policy settings to configure the default TLS cipher suite order.
 
 1. From the Group Policy Management Console, go to **Computer Configuration** > **Administrative Templates** > **Network** > **SSL Configuration Settings**.
-2. Double-click **SSL Cipher Suite Order**, and then select the **Enabled** option.
-3. Right-click **SSL Cipher Suites** box and select **Select all** from the pop-up menu.
+1. Double-click **SSL Cipher Suite Order**, and then select the **Enabled** option.
+1. Right-click **SSL Cipher Suites** box and select **Select all** from the pop-up menu.
 
    ![Group Policy setting](../media/Transport-Layer-Security-protocol/ssl-cipher-suite-order-gp-setting.png)
 
-4. Right-click the selected text, and select **copy** from the pop-up menu.
-5. Paste the text into a text editor such as notepad.exe and update with the new cipher suite order list.
+1. Right-click the selected text, and select **copy** from the pop-up menu.
+1. Paste the text into a text editor such as notepad.exe and update with the new cipher suite order list.
 
    > [!NOTE]
    > The TLS cipher suite order list must be in strict comma delimited format. Each cipher suite string ends with a comma to the right side of it. Additionally, the list of cipher suites is limited to 1,023 characters.
 
-6. Replace the list in the **SSL Cipher Suites** with the updated ordered list.
-7. Select **OK** or **Apply**.
+1. Replace the list in the **SSL Cipher Suites** with the updated ordered list.
+1. Select **OK** or **Apply**.
 
 ### Configure TLS cipher suite order by using MDM
 
@@ -67,8 +67,6 @@ certutil.exe –displayEccCurve
 ```
 
 ![Certutil display curves](../media/Transport-Layer-Security-protocol/certutil-display-curves.png)
-
-*Figure 1 Certutil.exe output to display the list of registered curves.*
 
 #### Add a new curve
 
@@ -100,10 +98,10 @@ Windows cannot use a named curve after an administrator removes the curve from c
 Organizations can distribute curve parameters to enterprise, domain-joined, computer using Group Policy and the Group Policy Preferences Registry extension. The process for distributing a curve is:
 
 1. Use **certutil.exe** to add a new registered named curve.
-2. From that same computer, Open the Group Policy Management Console (GPMC), create a new Group Policy object, and edit it.
-3. Navigate to **Computer Configuration|Preferences|Windows Settings|Registry**.  Right-click **Registry**. Hover over **New** and select **Collection Item**. Rename the collection item to match the name of the curve. You'll create one Registry Collection item for each registry key under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters*.
-4. Configure the newly created Group Policy Preference Registry Collection by adding a new **Registry Item** for each registry value listed under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters\[curveName]*.
-5. Deploy the Group Policy object containing Group Policy Registry Collection item computers that should receive the new named curves.
+1. From that same computer, Open the Group Policy Management Console (GPMC), create a new Group Policy object, and edit it.
+1. Navigate to **Computer Configuration|Preferences|Windows Settings|Registry**.  Right-click **Registry**. Hover over **New** and select **Collection Item**. Rename the collection item to match the name of the curve. You'll create one Registry Collection item for each registry key under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters*.
+1. Configure the newly created Group Policy Preference Registry Collection by adding a new **Registry Item** for each registry value listed under *HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Cryptography\ECCParameters\[curveName]*.
+1. Deploy the Group Policy object containing Group Policy Registry Collection item computers that should receive the new named curves.
 
     ![Screenshot of the Preferences tab of the Group Policy Management Editor.](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
 
