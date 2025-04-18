@@ -25,7 +25,7 @@ Follow these steps to set up Active Directory Certificate Services (AD CS). This
 
 To use Windows PowerShell to install Active Directory Certificate Services, complete the following steps.
 
-1. open Windows PowerShell and type the following command, and then press ENTER.
+1. Open Windows PowerShell and type the following command, and then press ENTER.
 
     ```powershell
     Add-WindowsFeature Adcs-Cert-Authority -IncludeManagementTools
