@@ -393,7 +393,7 @@ After an RODC account is created, you can attach a server to account to complete
     > [!IMPORTANT]
     > If you close Add Roles Wizard at this point without starting the Active Directory Domain Services Configuration Wizard, you can restart it by selecting Tasks in Server Manager.
 
-    (media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)
+    ![Screenshot of the Post-deployment Configuration Warning icon.](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)
 
 11. On the **Deployment Configuration** page, select **Add a domain controller to an existing domain**, type the name of the domain (for example, emea.contoso.com) and credentials (for example, specify an account that is delegated to manage and install the RODC), and then select **Next**.
 
