@@ -40,9 +40,9 @@ You can shrink primary partitions and logical drives on raw partitions&mdash;par
 
 1. Open Command Prompt and enter `diskpart`.
 
-1. At the `DISKPART` prompt, enter `list volume`. The output lists the volumes on all disks. Note the number of the simple volume that you want to shrink.
+1. At the `DISKPART` prompt, enter `list volume`. The output lists information about the volumes on all disks. Note the number of the simple volume that you want to shrink.
 
-1. To select the volume that you want to shrink, at the `DISKPART` prompt, enter `select volume <volume-number>`, where *volume-number* is the number you noted in the previous step.
+1. To select the volume that you want to shrink, at the `DISKPART` prompt, enter `select volume <volume-number>`. For the *volume-number* value, use the number you noted in the previous step.
 
 1. To shrink the volume that you selected, at the `DISKPART` prompt, enter `shrink [desired=<desired-size>] [minimum=<minimum-size>]`. If possible, this command shrinks the volume by the amount specified in megabytes (MB) in *desired-size*. If *desired-size* is too large, the command shrinks the volume by the amount specified in *minimum-size*.
 
