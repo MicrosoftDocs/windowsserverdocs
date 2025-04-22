@@ -62,15 +62,13 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 1. Right-click Windows PowerShell and select **Run as Administrator**.
 
     >[!IMPORTANT]
-  >You must run PowerShell as an Administrator, or the commands will fail.
+    >You must run PowerShell as an Administrator, or the commands will fail.
 
-1. To install Hyper-V on a server you're connected to remotely, run the following command and replace `<computer_name>` with the name of server.
+1. To install Hyper-V on a server you're connected to remotely, run the following command and replace `<computer_name>` with the name of server. If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.
 
     ```powershell
     Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart
     ```
-
-    If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.
 
     ![Screenshot of PowerShell window after running the command to install Hyper-V in Windows Server.](media/install-hyper-v-powershell.png)
 
@@ -153,6 +151,8 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 
 ## Enable the Hyper-V role through Settings
 
+### Enable Hyper-V on Windows 11
+
 1. Navigate to the Control Panel. Select **Start**, then search for **Control Panel** to open the application.
 
 1. Select **Programs**, then **Programs and Features**.
@@ -164,6 +164,14 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 ![Windows programs and features dialogue box](media/enable-hyper-v.png)
 
 When the installation completes you're prompted to restart your computer.
+
+## Enable Hyper-V on Windows 10
+
+1. Select **Start**, then search for and select **Settings**.
+1. Select **Apps & features**. Then select **Programs and Features**
+1. Select **Turn Windows features on or off**.
+1. Select **Hyper-V** and then select **OK**.
+1. Restart your computer to complete the installation.
 
 ::: zone-end
 
