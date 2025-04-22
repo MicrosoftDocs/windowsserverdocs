@@ -22,8 +22,8 @@ how to move to a later version of Windows Server by using a feature update.
 
 - The setup media for the version of Windows Server that you want to upgrade to.
   - For information about available Windows Server versions and supported upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
-  - Setup media for the target version of Windows Server can be obtained from an original equipment manufacturer (OEM), a retail distribution channel, a Visual Studio subscription, and the Microsoft 365 admin center.
-- A valid product key and activation method. Keys and methods can vary depending on the distribution channel you receive Windows Server media from. Examples include a Commercial Licensing program, a retail channel, or an OEM.
+  - You can obtain setup media for your target version of Windows Server from an original equipment manufacturer (OEM), a retail distribution channel, a Visual Studio subscription, and the Microsoft 365 admin center.
+- A valid product key and activation method. Keys and methods can vary depending on the distribution channel you receive Windows Server media from. Examples of channels include a Commercial Licensing program, a retail channel, or an OEM.
 - A location to store files away from your computer, such as a USB flash drive or network location.
 - Knowledge of:
   - The roles and features that support an in-place upgrade. See [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
