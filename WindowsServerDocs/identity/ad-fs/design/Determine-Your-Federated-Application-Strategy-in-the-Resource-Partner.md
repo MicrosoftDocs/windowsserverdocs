@@ -4,8 +4,8 @@ ms.assetid: 9eab8c43-a0f2-4d19-a5a4-e1399f0d5f25
 title: Determine Your Federated Application Strategy in the Resource Partner
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

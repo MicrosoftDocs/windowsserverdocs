@@ -2,7 +2,7 @@
 title: Windows LAPS overview
 description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS), including key scenarios and setup and management options.
 author: jay98014
-ms.author: justinha
+ms.author: mosagie
 ms.date: 03/10/2025
 ms.topic: overview
 # customer intent: As an administrator, I want to become familiar with the Windows Local Administrator Password Solution (Windows LAPS) feature so that I can use it to manage and back up administrator passwords.

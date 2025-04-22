@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 16be3ef9-a05b-4621-a431-5806b567e997
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Update and install device drivers if needed
 If you are using USB zero clients or peripherals that require drivers, you should install the drivers at this time. It's a good idea also to check **Device Manager** for any driver alerts, and install drivers for those devices.

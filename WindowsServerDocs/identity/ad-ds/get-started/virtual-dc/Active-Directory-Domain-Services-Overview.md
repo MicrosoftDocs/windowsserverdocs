@@ -3,7 +3,7 @@ description: Find out about Active Directory Domain Services, a directory servic
 ms.assetid: f052dfcd-dace-4485-8d0a-cc7df5cf3751
 title: Active Directory Domain Services overview
 author: iainfoulds
-ms.author: justinha
+ms.author: mosagie
 manager: daveba
 ms.date: 03/10/2025
 ms.topic: article

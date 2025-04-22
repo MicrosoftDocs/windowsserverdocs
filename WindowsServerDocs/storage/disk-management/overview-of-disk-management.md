@@ -5,7 +5,7 @@ ms.date: 08/22/2024
 ms.topic: conceptual
 author: robinharwood
 manager: brianlic
-ms.author: roharwoo
+ms.author: jgerend
 ---
 
 # Overview of Disk Management

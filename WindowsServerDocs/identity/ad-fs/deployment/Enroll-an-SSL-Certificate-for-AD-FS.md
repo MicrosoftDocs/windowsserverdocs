@@ -4,8 +4,8 @@ ms.assetid: 3095e6a7-b562-4c6a-bf29-13b32c133cac
 title: Enroll an SSL Certificate for AD FS
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

@@ -3,8 +3,8 @@ description: "Learn more about: Verify That a Federation Server Proxy Is Operati
 ms.assetid: d555041a-709e-42c7-920a-8dfd2c7e0488
 title: Verify That a Federation Server Proxy Is Operational
 author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

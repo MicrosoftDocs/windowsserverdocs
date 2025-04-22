@@ -8,7 +8,7 @@ metadata:
   description: Guidance on leveraging remote access and server administration. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: windows-server
   author: robinharwood
-  ms.author: roharwoo
+  ms.author: daknappe
   manager: mtillman
   ms.localizationpriority: high
   ms.topic: landing-page # Required

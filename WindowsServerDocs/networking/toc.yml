@@ -170,9 +170,23 @@ items:
       - name: DNS zones
         href: dns/zone-types.md
       - name: DNS architecture
-        href: dns/dns-architecture.md
+        href: dns/dns-architecture.md  
       - name: Network Ports
         href: dns/network-ports.md
+      - name: DNS processes
+        items:
+        - name: Queries and lookups
+          href: dns/queries-lookups.md
+        - name: Forwarding
+          href: dns/forwarding.md
+        - name: Dynamic updates
+          href: dns/dynamic-update.md
+        - name: Aging and scavenging
+          href: dns/aging-scavenging.md
+        - name: Reverse lookup
+          href: dns/reverse-lookup.md
+        - name: WINS lookup integration
+          href: dns/wins-lookup.md
       - name: DNSSEC
         items:
         - name: What is DNSSEC?
@@ -242,6 +256,12 @@ items:
         href: technologies/dhcp/dhcp-deploy-wps.md
       - name: Install DHCP relay agent
         href: technologies/dhcp/dhcp-deploy-relay-agent.md
+      - name: Migrate DHCP server to Windows Server
+        href: technologies/dhcp/migrate-dhcp-server.md  
+    - name: DHCP failover
+      items:
+      - name: DHCP failover overview
+        href: technologies/dhcp/dhcp-failover.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:

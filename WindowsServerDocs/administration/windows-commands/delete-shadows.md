@@ -3,7 +3,7 @@ title: delete shadows
 description: Reference article for the delete shadows command, which deletes shadow copies.
 ms.topic: reference
 ms.assetid: e29a84d2-04d1-4eb1-910a-5a47bddbc24d
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

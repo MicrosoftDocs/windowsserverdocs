@@ -179,8 +179,6 @@
         href: /azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services
       - name: Remote Desktop URI scheme
         href: remote-desktop-uri.md
-      - name: Privacy settings for managed apps and desktops
-        href: remote-privacy-settings.md
   - name: Connect to a remote PC
     items:
     - name: Setting up your PC for Remote Desktop

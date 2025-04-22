@@ -171,7 +171,7 @@ Backing up DSRM passwords to Microsoft Entra ID isn't supported.
 > [!IMPORTANT]
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
 >
-> Consider a catastrophic scenario in which all the domain controllers in a domain are down. In that situation, as long as you have been maintaining regular backups per Active Directory best practices, you can still recover DSRM passwords from backups using the procedure outlined in [Retrieving passwords during AD disaster recovery scenarios](laps-scenarios-windows-server-active-directory.md#retrieving-passwords-during-ad-disaster-recovery-scenarios).
+> Consider a catastrophic scenario in which all the domain controllers in a domain are down. In that situation, as long as you have been maintaining regular backups per Active Directory best practices, you can still recover DSRM passwords from backups using the procedure outlined in [Retrieve passwords during Active Directory disaster recovery scenarios](laps-scenarios-windows-server-active-directory.md#retrieve-passwords-during-windows-server-active-directory-disaster-recovery-scenarios).
 
 ## Password reset after authentication
 

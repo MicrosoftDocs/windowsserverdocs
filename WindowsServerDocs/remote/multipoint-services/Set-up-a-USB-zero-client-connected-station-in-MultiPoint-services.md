@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: d2908865-6be3-474d-88f1-995f40bb61d0
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Set up a USB zero client-connected station in MultiPoint Services
 When you use USB zero clients to create MultiPoint Services stations, the monitor for each station is connected to the video port on the USB zero client, as shown in the following illustration. For more information about this and other station types, see [MultiPoint Stations](MultiPoint-services-Stations.md).

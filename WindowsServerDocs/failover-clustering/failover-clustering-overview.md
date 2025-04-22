@@ -5,7 +5,7 @@ description: "Learn more about: Failover Clustering in Windows Server and Azure 
 ms.topic: landing-page
 manager: lizross
 author: robinharwood
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 10/20/2021
 ---
 # Failover Clustering in Windows Server and Azure Local
@@ -29,11 +29,10 @@ To learn more about failover clustering in Azure Local, see [Understanding clust
 | [Scale-Out File Server for application data](sofs-overview.md)               | [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md) | [Deploy a two-node file server](deploy-two-node-clustered-file-server.md) |
 |  [Cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering)   |  [Using guest virtual machine clusters with Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Prestage cluster computer objects in Active Directory Domain Services](prestage-cluster-adds.md) |
 | [Fault domain awareness](fault-domains.md)                                 |                                 | [Configuring cluster accounts in Active Directory](configure-ad-accounts.md) |
-| [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md) |                       | [Manage the quorum and witnesses](manage-cluster-quorum.md) |
-| [VM load balancing](/azure/azure-local/manage/vm-load-balancing)                         |                             | [Deploy a cloud witness](deploy-cloud-witness.md) |
-| [Cluster sets](/windows-server/failover-clustering/cluster-set)                  |                             |[Deploy a file share witness](file-share-witness.md) |
-| [Cluster affinity](cluster-affinity.md)                                     |                            | [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md) |
-|                                                                             |                            | [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md) |
+| [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md) |                       | [Recover a failover cluster without quorum](recover-failover-cluster-without-quorum.md) |
+| [VM load balancing](/azure/azure-local/manage/vm-load-balancing)                         |                             | [Deploy a quorum witness](deploy-quorum-witness.md) |
+| [Cluster sets](/windows-server/failover-clustering/cluster-set)                  |                             | [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md) |
+| [Cluster affinity](cluster-affinity.md)                                     |                            | [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md)                          |
 |                                                                            |                             | [Deploy an Active Directory Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
 
 |**Manage**  |  **Tools and settings**  |  **Community resources**       |

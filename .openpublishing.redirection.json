@@ -12572,7 +12572,7 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md",
-      "redirect_url":"/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
       "redirect_document_id": false
     },
     {
@@ -12678,6 +12678,11 @@
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md",
       "redirect_url": "/windows-server/storage/storage-spaces/upgrade-storage-spaces-direct",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-cloud-witness.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
       "redirect_document_id": true
     },
     {
@@ -12814,6 +12819,26 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-supported-config.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config",
       "redirect_document_id": true
+    },
+    {
+     "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
+     "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
+     "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/manage-cluster-quorum.md",
+      "redirect_url": "/windows-server/failover-clustering/recover-failover-cluster-without-quorum",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
+     "redirect_url": "/powershell/module/remoteaccess/",
+     "redirect_document_id": false
+    },
+    {
+     "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
+     "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
+     "redirect_document_id": false
     }
   ]
 }

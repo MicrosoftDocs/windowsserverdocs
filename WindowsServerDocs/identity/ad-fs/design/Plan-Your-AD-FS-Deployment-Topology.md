@@ -4,7 +4,7 @@ ms.assetid: 5c8c6cc0-0d22-4f27-a111-0aa90db7d6c8
 title: Plan Your AD FS Deployment Topology
 author: billmath
 ms.author: alalve
-manager: amycolannino
+manager: femila
 ms.date: 11/04/2022
 ms.topic: article
 ---

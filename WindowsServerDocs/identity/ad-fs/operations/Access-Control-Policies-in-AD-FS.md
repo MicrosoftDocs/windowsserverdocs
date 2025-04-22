@@ -4,8 +4,8 @@ ms.assetid: 102eeeb1-6c55-42a2-b321-71a7dab46146
 title: Access Control Policies in AD FS Windows Server 2016
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.custom: inhenkel
 ---

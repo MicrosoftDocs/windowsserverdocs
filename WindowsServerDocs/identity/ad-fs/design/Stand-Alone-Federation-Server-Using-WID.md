@@ -4,8 +4,8 @@ ms.assetid: 33b80a3f-67f3-4da7-ac4a-7fd2232fbd5d
 title: Stand-Alone Federation Server Using WID
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

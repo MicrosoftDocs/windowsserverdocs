@@ -4,7 +4,7 @@ description: This topic provides an overview of Network Policy Server in Windows
 manager: dougkim
 ms.topic: article
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 ms.date: 06/20/2018
 ---

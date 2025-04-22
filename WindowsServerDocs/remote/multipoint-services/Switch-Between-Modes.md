@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 5f1b2324-c1b0-4b61-ab51-39af15e7792a
 author: robinharwood
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Switch Between Modes

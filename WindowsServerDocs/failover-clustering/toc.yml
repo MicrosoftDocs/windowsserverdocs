@@ -10,8 +10,8 @@
     href: create-failover-cluster.md
   - name: Deploy a two-node file server
     href: deploy-two-node-clustered-file-server.md
-  - name: Manage quorum and witnesses
-    href: manage-cluster-quorum.md
+  - name: Recover a failover cluster without quorum
+    href: recover-failover-cluster-without-quorum.md
   - name: Create a workgroup cluster
     href: create-workgroup-cluster.md
 - name: Tutorials
@@ -46,10 +46,10 @@
     href: bitlocker-on-csv-in-ws-2022.md
   - name: Deploy a witness
     items:
-    - name: Deploy a Cloud Witness
-      href: deploy-cloud-witness.md
-    - name: Deploy a file share witness
-      href: file-share-witness.md
+    - name: What is a quorum witness?
+      href: what-is-quorum-witness.md
+    - name: Deploy a quorum witness
+      href: deploy-quorum-witness.md
   - name: Upgrade your failover cluster
     items:
     - name: Cluster operating system rolling upgrades

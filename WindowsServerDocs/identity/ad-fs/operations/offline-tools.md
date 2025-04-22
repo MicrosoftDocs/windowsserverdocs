@@ -3,8 +3,8 @@ title: Active Directory Federation Services - Offline Tools
 description: "List of downloadable tools that were previously made available through the Active Directory Federation Services Help site."
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 09/26/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

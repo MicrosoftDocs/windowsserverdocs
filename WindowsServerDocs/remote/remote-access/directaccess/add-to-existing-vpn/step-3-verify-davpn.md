@@ -4,7 +4,7 @@ description: Learn how to verify that you have correctly configured your DirectA
 manager: brianlic
 ms.topic: article
 ms.assetid: 43ac612e-2e77-418c-8171-ebb2086b7cb6
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---
