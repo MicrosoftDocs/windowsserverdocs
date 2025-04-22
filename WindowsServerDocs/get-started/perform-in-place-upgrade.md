@@ -62,7 +62,7 @@ To collect your information:
    > 1. Go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key.
    > 1. Copy the Windows Server **BuildLabEx** and **EditionID** values.
 
-1. Open **File Explorer**, go to the directory you noted down, and copy the files to a
+1. Open File Explorer, go to the directory you noted down, and copy the files to a
    USB flash drive or network location off your computer.
 
 After you collect your Windows Server-related information, we recommend that you back up
@@ -77,7 +77,7 @@ Server. During the update, your computer restarts several times.
 
 To perform the in-place upgrade:
 
-1. Open **File Explorer**, go to the Windows Server Setup media, and then open **setup.exe**.
+1. Open File Explorer, go to the Windows Server Setup media, and then open **setup.exe**.
    If you're using removal media, the file path might be _D:\setup.exe_.
 
    > [!IMPORTANT]
@@ -128,5 +128,5 @@ The following articles can help you prepare for and use your new Windows Server 
 - [Key Management Services (KMS) activation planning](kms-activation-planning.md)
 - [Activate using Active Directory-based activation](/windows/deployment/volume-activation/activate-using-active-directory-based-activation-client)
 
-To learn more about deploying and post-installation configuration and activation options, see the
+To learn more about deployment and post-installation configuration and activation options, see the
 [Windows Server deployment, configuration, and administration](/training/paths/windows-server-deployment-configuration-administration/) learning path.
