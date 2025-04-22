@@ -3,8 +3,8 @@ description: "Learn more about: Checklist: Configuring the Account Partner Organ
 ms.assetid: 826974ea-3635-40df-aa37-77dd12a363c8
 title: Checklist - Configuring the Account Partner Organization
 author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

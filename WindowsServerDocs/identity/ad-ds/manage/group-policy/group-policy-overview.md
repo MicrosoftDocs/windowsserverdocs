@@ -1,14 +1,15 @@
 ---
-title: Group Policy overview for Windows
+title: Group Policy overview for Windows Server
 description: Learn about what Group Policy does and how it works with Active Directory Domain Services in Windows.
 author: Orin-Thomas
 ms.topic: overview
-ms.author: orthomas
+ms.author: mosagie
 contributor: orthomas
-ms.date: 04/16/2024
+ms.date: 04/18/2025
+#customer intent: As an IT administrator, I want to understand Group Policy so that I can manage user and computer settings effectively.
 ---
 
-# Group Policy overview
+# Group Policy overview for Windows Server
 
 Group Policy enables configuration and settings management of user and computer settings on computers running Windows Server and Windows Client operating systems. In addition to using Group Policy to define configurations for groups of users and client computers, you can also use Group Policy to help manage server computers, by configuring many server-specific operational and security settings.
 

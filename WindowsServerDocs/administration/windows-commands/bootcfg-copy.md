@@ -3,7 +3,7 @@ title: bootcfg copy
 description: Reference article for the bootcfg copy command, which makes a copy of an existing boot entry, to which you can add command-line options.
 ms.topic: reference
 ms.assetid: 2a236c2a-8675-444d-b695-9cbc9aff643b
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

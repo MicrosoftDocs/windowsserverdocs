@@ -4,7 +4,7 @@ title: Configuring cluster accounts in Active Directory
 ms.date: 10/20/2021
 author: robinharwood
 manager: lizross
-ms.author: roharwoo
+ms.author: alalve
 ms.topic: how-to
 ---
 

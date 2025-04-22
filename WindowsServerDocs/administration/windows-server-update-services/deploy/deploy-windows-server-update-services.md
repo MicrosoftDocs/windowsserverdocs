@@ -3,7 +3,7 @@ title: Deploy Windows Server Update Services
 description: Windows Server Update Service (WSUS) topic - An overview of the deployment process with links to the four steps to accomplish it
 ms.topic: how-to
 ms.assetid: 2708f6b2-4252-4b8f-9b7e-84c9b4222075
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

@@ -299,7 +299,7 @@
         items:
         - name: AD DS metadata cleanup
           href: ad-ds/deploy/ad-ds-metadata-cleanup.md
-      - name: AD DS Installation and removal Wizard Page Descriptions
+      - name: AD DS installation and removal wizard page descriptions
         href: ad-ds/deploy/AD-DS-Installation-and-removal-Wizard-Page-Descriptions.md
       - name: Changes Made by Adprep
         href: ad-ds/deploy/adprep/changes-Made-by-Adprep.md
@@ -325,7 +325,7 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan.md
         - name: Steps to recover the forest
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-steps-for-restoring-the-forest.md
-        - name: Perform a system state backup 
+        - name: Perform a system state backup
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-system-state.md
         - name: Identify the problem
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-identify-the-problem.md
@@ -335,33 +335,33 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery.md
         - name: Procedures
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures.md
-        - name: Configure the DNS Server service 
+        - name: Configure the DNS Server service
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-configure-dns.md
         - name: Perform a full server backup
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-a-full-server.md
-        - name: Perform a full server recovery 
+        - name: Perform a full server recovery
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-full-server-recovery.md
         - name: Synchronize DFSR-replicated SYSVOL
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-authoritative-recovery-sysvol.md
         - name: Add the global catalog to a domain controller
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-add-gc.md
-        - name: Remove the global catalog from a domain controller 
+        - name: Remove the global catalog from a domain controller
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-remove-gc.md
-        - name: Raise the RID pool 
+        - name: Raise the RID pool
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-raise-rid-pool.md
-        - name: Invalidate the RID pool 
+        - name: Invalidate the RID pool
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-invaildate-rid-pool.md
-        - name: Perform nonauthoritative restore 
+        - name: Perform nonauthoritative restore
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-nonauthoritative-restore.md
-        - name: Reset computer account domain controller 
+        - name: Reset computer account domain controller
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-computer-account-dc.md
-        - name: Reset the krbgt account password 
+        - name: Reset the krbgt account password
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password.md
-        - name: Reset a trust password on one side of the trust 
+        - name: Reset a trust password on one side of the trust
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-trust.md
-        - name: Seize operations master role 
+        - name: Seize operations master role
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-seizing-operations-master-role.md
-        - name: Verify DC replication 
+        - name: Verify DC replication
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-verify-replication.md
         - name: FAQ
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
@@ -373,7 +373,7 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-virtualization.md
         - name: Cleanup
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup.md
-        - name: Clean up metadata of removed domain controllers 
+        - name: Clean up metadata of removed domain controllers
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleaning-metadata-of-removed-dcs.md
       - name: Best Practices for Securing Active Directory
         href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
@@ -443,6 +443,8 @@
           items:
           - name: SPN and UPN uniqueness
             href: ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md
+          - name: How to configure SPN
+            href: ad-ds/manage/how-to-configure-spn.md
           - name: Winlogon Automatic Restart Sign-On (ARSO)
             href: ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-.md
           - name: TPM key attestation
@@ -467,6 +469,8 @@
           href: ad-ds/manage/group-policy/group-policy-backup-restore.md
       - name: Active Directory accounts
         href: ad-ds/manage/understand-default-user-accounts.md
+      - name: Manage user accounts
+        href: ad-ds/manage-user-accounts-in-windows-server.md
       - name: Special identities
         href: ad-ds/manage/understand-special-identities-groups.md
       - name: Active Directory security groups
@@ -510,7 +514,7 @@
       - name: Enable Database 32k pages optional feature
         href: ad-ds/enable-32K-pages-optional-feature.md
       - name: Replication Priority Boost
-        href: ad-ds/manage/replication-priority-boost.md  
+        href: ad-ds/manage/replication-priority-boost.md
       - name: Monitoring
         items:
         - name: LSA performance counters
@@ -1032,26 +1036,42 @@
         href: ad-cs/certification-authority-role.md
       - name: Certification Authority Web Enrollment Role Service
         href: ad-cs/certificate-authority-web-enrollment.md
+      - name: Certificate Enrollment Web Service overview
+        href: ad-cs/certificate-enrollment-web-service.md
+      - name: Certificate Enrollment Policy Web Service overview
+        href: ad-cs/certificate-enrollment-policy-web-service-overview.md
+      - name: Network Device Enrollment Service
+        href: ad-cs/network-device-enrollment-service-overview.md
+      - name: Use policy module with Network Device Enrollment Service
+        href: ad-cs/use-policy-module-with-network-device-enrollment-service.md
       - name: Certificates and trust
         href: ad-cs/certificate-trust.md
       - name: Certificate template concepts
         href: ad-cs/certificate-template-concepts.md
-      - name: Network Device Enrollment Service
-        href: ad-cs/network-device-enrollment-service-overview.md
       - name: PKI design considerations
         href: ad-cs/pki-design-considerations.md
     - name: How-to guides
       items:
+      - name: Configure Certificate Enrollment Web Service
+        href: ad-cs/configure-certificate-enrollment-web-service.md
       - name: Configure Network Device Enrollment Service to use a domain user account
         href: ad-cs/create-domain-user-account-ndes-service-account.md
+      - name: Configure Certificate Enrollment Policy Web Service
+        href: ad-cs/configure-certificate-enrollment-policy-web-service.md
+      - name: Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port
+        href: ad-cs/certificate-enrollment-certificate-key-based-renewal.md
       - name: Configure trusted roots and disallowed certificates
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
       - name: Distribute certificates using Group Policy
         href: ad-cs/distribute-certificates-group-policy.md
       - name: Export a certificate with its private key
         href: ad-cs/export-certificate-private-key.md
+      - name: Install a policy module with Network Device Enrollment Service
+        href: ad-cs/install-policy-module-network-device-enrollment-service.md
       - name: Manage certificate templates
         href: ad-cs/manage-certificate-templates.md
+      - name: Renew root CA certificate
+        href: ad-cs/renew-root-ca-certificate.md
       - name: Request certificates using Web Enrollment
         href: ad-cs/request-certificate-windows-server.md
       - name: Retrieve base and delta CRLs

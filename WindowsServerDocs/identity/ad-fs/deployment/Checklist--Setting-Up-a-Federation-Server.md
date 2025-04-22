@@ -3,8 +3,8 @@ description: "Learn more about: Checklist: Setting Up a Federation Server"
 ms.assetid: 8f954004-40d5-4c5e-8e0d-e8700c8ec7b1
 title: Checklist - Setting Up a Federation Server
 author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

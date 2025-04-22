@@ -4,8 +4,8 @@ ms.assetid: 53ee93e2-09ea-4f8b-adb7-c24c59f055ea
 title: How URIs Are Used in AD FS
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

@@ -37,7 +37,7 @@ sections:
 
       - question: How can I submit unanswered questions or feature requests?
         answer: |
-          See [Submitting feedback](laps-overview.md#submitting-feedback).
+          See [Submit feedback](laps-overview.md#submit-feedback).
 
       - question: I see errors in my Windows LAPS event log - how do I fix them?
         answer: |
@@ -54,11 +54,11 @@ sections:
     questions:
       - question: Can I deploy and use Windows LAPS even if my domain is running older domain controllers?
         answer: |
-          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
+          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-operating-system-version-requirements).
 
       - question: Can I deploy and use Windows LAPS even if my domain isn't yet at Windows Server 2016 Domain Functional Level?
         answer: |
-          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
+          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-operating-system-version-requirements).
 
       - question: Do I need to deploy a Windows Server 2022 or 2019 DC in order to extend my forest's schema with the Windows LAPS schema extensions?
         answer: |
@@ -79,7 +79,7 @@ sections:
 
       - question: Are Windows LAPS passwords available during a catastrophic AD disaster scenario?
         answer: |
-          Yes, assuming that AD domain controller database backups are being regularly taken and maintained. For more information, see [Retrieving passwords during AD disaster recovery scenarios](laps-scenarios-windows-server-active-directory.md#retrieving-passwords-during-ad-disaster-recovery-scenarios)
+          Yes, assuming that AD domain controller database backups are being regularly taken and maintained. For more information, see [Retrieve passwords during Active Directory disaster recovery scenarios](laps-scenarios-windows-server-active-directory.md#retrieve-passwords-during-windows-server-active-directory-disaster-recovery-scenarios)
 
       - question: Is it supported to run legacy Microsoft LAPS side-by-side with Windows LAPS?
         answer: |

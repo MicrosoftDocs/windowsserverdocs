@@ -4,8 +4,8 @@ ms.assetid: 9aaca9c5-ce44-495c-aad6-61aede87a83f
 title: Deploying AD FS in the Account Partner Organization
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

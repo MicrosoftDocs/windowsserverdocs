@@ -2,7 +2,7 @@
 title: Cluster affinity
 manager: femila
 ms.topic: article
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 10/20/2021
 description: This article describes failover cluster affinity and antiaffinity levels

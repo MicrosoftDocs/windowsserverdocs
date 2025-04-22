@@ -4,7 +4,7 @@ description: Learn how to configure the client and server settings that are requ
 manager: brianlic
 ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

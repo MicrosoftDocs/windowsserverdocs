@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 807bce1d-b993-49c6-9783-b01a3c55846c
 author: evaseydl
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Glossary
 **associate a station**

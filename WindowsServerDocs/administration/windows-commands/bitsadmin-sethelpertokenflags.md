@@ -2,7 +2,7 @@
 title: bitsadmin sethelpertokenflags
 description: Reference article for the bitsadmin sethelpertokenflags command, which sets the usage flags for a helper token that is associated with a BITS transfer job.
 ms.topic: reference
-ms.author: roharwoo
+ms.author: mosagie
 author: robinharwood
 manager: mtillman
 ms.date: 03/01/2019

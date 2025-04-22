@@ -3,7 +3,7 @@ ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 title: Audit Policy Recommendations
 description: Addresses the Windows default audit policy settings, baseline recommended audit policy settings, and the more aggressive recommendations from Microsoft, for workstation and server products.
 author: iainfoulds
-ms.author: justinha
+ms.author: alalve
 manager: daveba
 ms.date: 08/03/2023
 ms.topic: article

@@ -4,7 +4,7 @@ description: Learn how to set the access scope for a DNS resource records by usi
 manager: brianlic
 ms.topic: article
 ms.assetid: a96a8752-5678-49c5-b069-d2cce8042a51
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---

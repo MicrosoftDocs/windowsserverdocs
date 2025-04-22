@@ -3,7 +3,7 @@ title: Configure Network Policy Server Certificate Revocation List registry sett
 description: This article provides information about configuring Certificate Revocation List registry settings for EAP-TLS authentication on a Network Policy Server in a Windows Server environment.
 ms.topic: how-to
 ms.assetid: 9624b301-d9f9-4d97-8651-39bf4bbae83e
-ms.author: roharwoo
+ms.author: jgerend
 author: marcussa
 ms.date: 10/31/2023
 ms.contributor: alalve

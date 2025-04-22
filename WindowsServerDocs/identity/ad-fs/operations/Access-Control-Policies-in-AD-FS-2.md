@@ -3,8 +3,8 @@ description: "Learn more about: Client Access Control policies in AD FS 2.0"
 title: Client Access Control policies in Active Directory Federation Services 2.0
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # Client Access Control policies in AD FS 2.0

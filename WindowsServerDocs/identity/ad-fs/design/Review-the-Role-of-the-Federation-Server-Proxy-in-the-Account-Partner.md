@@ -4,8 +4,8 @@ ms.assetid: 1b3a03c0-5558-4177-9b2f-e9d6ce3271cd
 title: Review the Role of the Federation Server Proxy in the Account Partner
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

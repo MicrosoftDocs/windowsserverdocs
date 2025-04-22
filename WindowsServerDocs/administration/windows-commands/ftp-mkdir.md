@@ -3,7 +3,7 @@ title: ftp mkdir
 description: Reference article for the ftp mkdir command, which creates a directory on the remote computer.
 ms.topic: reference
 ms.assetid: 5fac19fb-6835-4011-93cc-ac62f484d5d4
-ms.author: roharwoo
+ms.author: alalve
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

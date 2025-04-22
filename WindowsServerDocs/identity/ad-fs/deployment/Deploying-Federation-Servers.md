@@ -3,8 +3,8 @@ description: "Learn more about: Deploying Federation Servers"
 ms.assetid: c4d83dd3-2846-4658-8b9c-93901ee69766
 title: Deploying Federation Servers
 author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

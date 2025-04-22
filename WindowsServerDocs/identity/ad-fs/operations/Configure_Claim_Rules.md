@@ -4,8 +4,8 @@ ms.assetid: 20d48afc-2623-43e9-8ed9-aeb9a0505630
 title: Configure Claims Rules in AD FS
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

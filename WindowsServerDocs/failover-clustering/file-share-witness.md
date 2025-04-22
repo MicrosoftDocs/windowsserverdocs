@@ -20,8 +20,6 @@ You might use a file share witness when:
 
 - A disk witness can't be used because there aren't any shared drives to use for a disk witness. For example, a Storage Spaces Direct cluster, SQL Server Always On Availability Groups (AG), or Exchange Database Availability Group (DAG). None of these types of clusters use shared disks.
 
-For information about quorum configuration options, see [Configure and manage quorum](manage-cluster-quorum.md).
-
 In this article, learn how-to configure a file share witness for your Failover Cluster.
 
 ## Prerequisites

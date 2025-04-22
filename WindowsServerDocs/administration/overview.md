@@ -1,20 +1,20 @@
 ---
 title: Windows Server management overview
-description: Learn about more about the different capabilities and solutions to manage Windows Server.
+description: Learn about the various tools and solutions available to manage Windows Server effectively, including Azure Arc and Windows Admin Center.
 author: thomasmaurer
-ms.author: roharwoo
+ms.author: mosagie
 manager: carmencr
 ms.reviewer: carmencr
 ms.topic: overview
-ms.date: 10/10/2023
+ms.date: 04/16/2025
+#customer intent: As an IT administrator, I want to understand Windows Server management tools so that I can choose the best solution for my organization.
 ---
+
 # Windows Server management overview
 
-Windows Server has many tools that let administrators connect applications, networks, and web services into an infrastructure. You should already be familiar with some of these tools, such as the Windows Server Microsoft Management Consoles (MMC). However, it's important to be familiar with all the management tools Windows Server offers so you can choose which one is right for your organization.
+Windows Server has many tools that let administrators connect applications, networks, and web services into an infrastructure. You should already be familiar with some of these tools, like the Windows Server Microsoft Management Console (MMC). However, it's important to be familiar with all the management tools Windows Server offers so you can choose which one is right for your organization.
 
-We designed these management tools to work together in Windows Server environments because on-premises, hybrid, and cloud-native infrastructures have complex and interconnected needs when it comes to management and administration.
-
-The four main options for managing your Windows Server infrastructure are:
+On-premises, hybrid, and cloud-native infrastructures have complex and interconnected needs when it comes to management and administration. Windows Server has four management tools designed to meet the need of any infrastructure setup. The four main options for managing your Windows Server infrastructure are:
 
 - [Azure Arc](#azure-arc)
 - [Windows Admin Center](#windows-admin-center)
@@ -25,29 +25,31 @@ This article walks you through each one, describing their capabilities, and give
 
 ## Azure Arc
 
-Azure Arc provides cloud-based management for servers. When you enable Azure Arc, you can manage physical servers running Windows or Linux and virtual machines (VMs) even if they're hosted outside of Azure on your corporate network or another cloud provider. The management experience is seamless, so it feels like managing native Azure virtual machines. You can manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more.
+Azure Arc provides cloud-based management for servers. When you enable Azure Arc, you can manage physical servers running Windows, or Linux and virtual machines (VMs) even if they're hosted outside of Azure on your corporate network or another cloud provider. The management experience is seamless, so it feels like managing native Azure virtual machines. You can manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, and Azure Update Management.
+
+Azure Automanage offers a unified solution to simplify IT management of Windows Server and Linux servers in Azure or in hybrid environments enabled by Azure Arc.
 
 Here's a brief summary of the capabilities of Azure Arc and Azure Automanage:
 
-- Scaling across Windows and Linux servers
-- Web-based browser interface, REST API, and command-line tools
-- Limited support for disconnected mode
+- Scale across Windows and Linux servers.
+- Provide web-based browser interface, REST API, and command-line tools.
+- Offer limited support for disconnected mode.
 - Focused on at-scale governance, security, monitoring, and reducing operating expenses.
 
 ### When to use Azure Arc
 
-You can use Azure Arc and Azure Automanage in the following situations:
+You can use Azure Arc and Azure Automanage when you want to:
 
-- You want to proactively monitor the operating system (OS) and workloads running on your machines.
-- You want to manage your system using Automation runbooks or solutions like Update Management
-- You want to secure your Windows Server using Microsoft Defender for Cloud.
-- You want to use Azure Policy Guest Configuration to govern your Windows Server machines.
+- Monitor the operating system (OS) and workloads running on your machines.
+- Manage your system using Automation runbooks or solutions like Update Management.
+- Secure your Windows Server using Microsoft Defender for Cloud.
+- Use Azure Policy Guest Configuration to govern your Windows Server machines.
 
 ### Azure Arc resources
 
-You can start setting up Azure Arc for your servers at [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+Start setting up Azure Arc for your servers at [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
-Otherwise, you can learn more about Azure Arc at [What is an Azure Arc-enabled server](/azure/azure-arc/servers/overview).
+Otherwise, learn more about Azure Arc at [What is an Azure Arc-enabled server](/azure/azure-arc/servers/overview).
 
 ## Windows Admin Center
 
@@ -57,25 +59,25 @@ Windows Admin Center is the modern evolution of in-box management tools, such as
 
 Here's a brief summary of the capabilities of Windows Admin Center:
 
-- Covers single Windows Server deployments or hyperconverged clusters
-- Includes a web browser-based interface
-- Supports disconnected mode
-- Focused on general server management, role configuration, and troubleshooting
+- Covers single Windows Server deployments or hyperconverged clusters.
+- Includes a web browser-based interface.
+- Supports disconnected mode.
+- Focused on general server management, role configuration, and troubleshooting.
 
 ### When to use Windows Admin Center
 
-You can use Windows Admin Center for the following situations:
+You can use Windows Admin Center when you want to:
 
-- You want to manage your servers and clusters with modernized versions of familiar tools, such as Server Manager.
-- You want to integrate your system with Azure to connect your on-premises servers with relevant cloud services with Azure Arc.
-- You want to streamline management of Azure Local or Windows Server hyperconverged clusters.
-- You want to use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking, and so on.
+- Manage your servers and clusters with modernized versions of familiar tools, such as Server Manager.
+- Integrate your system with Azure to connect your on-premises servers with relevant cloud services with Azure Arc.
+- Streamline management of Azure Local or Windows Server hyperconverged clusters.
+- Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking, and so on.
 
 ### More resources for Windows Admin Center
 
 If you're interested in learning more about Windows Admin Center, see [What is Windows Admin Center](../manage/windows-admin-center/understand/what-is.md).
 
-To get started using Windows Admin Center, you can [download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center), then follow [the installation instructions](../manage/windows-admin-center/deploy/install.md). Once you're set up, you can learn how to start using Windows Admin Center at [Get started with Windows Admin Center](../manage/windows-admin-center/use/get-started.md).
+To get started using Windows Admin Center, [download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center), then follow [the installation instructions](../manage/windows-admin-center/deploy/install.md). Once you're set up, learn how to start using Windows Admin Center at [Get started with Windows Admin Center](../manage/windows-admin-center/use/get-started.md).
 
 ## System Center
 
@@ -83,42 +85,40 @@ System Center is for datacenter-scale management, and lets you control IT infras
 
 Here's a brief summary of the capabilities of System Center:
 
-- Covers the entire datacenter, or multi-server management
-- Includes both a GUI and command-line tools
-- Supports disconnected mode
-- Focused on day-to-day operations
+- Covers the entire datacenter, or multi-server management.
+- Includes both a GUI and command-line tools.
+- Supports disconnected mode.
+- Focused on day-to-day operations.
 
 ### When to use System Center
 
-You can use System Center in the following situations:
+You can use System Center when you want to:
 
-- You want to use Operations Manager for flexible, cost-effective, and comprehensive infrastructure monitoring for your datacenters and private cloud.
-- You want to use Data Protection Manager for your enterprise's disaster recovery strategy.
-- You want to use Virtual Machine Manager to create a unified management experience across both your on-premises datacenters and virtualized workloads.
+- Use Operations Manager for flexible, cost-effective, and comprehensive infrastructure monitoring for your datacenters and private cloud.
+- Use Data Protection Manager for your enterprise's disaster recovery strategy.
+- Use Virtual Machine Manager to create a unified management experience across both your on-premises datacenters and virtualized workloads.
 
-### More resource for System Center
+### More resources for System Center
 
-To get started using System Center, visit [the System Center website](https://www.microsoft.com/system-center). After that, you can start learning how to use its various features at our [System Center documentation](/system-center).
+To get started using System Center, visit [the System Center website](https://www.microsoft.com/system-center). After that, start learning how to use its various features at our [System Center documentation](/system-center).
 
 ## Local management tools
 
-Windows Server comes with many local tools that let you manage your environment.
-
-These tools include:
+Windows Server comes with many local tools that let you manage your environment. These tools include:
 
 - Server Manager
 - PowerShell
 - Windows commands
 - Remote Server Administration Tools (RSAT)
 
-You can use these tools to analyze your Windows Server environment, manage specific servers, fine-tune performance, troubleshoot issues, and automate management tasks.
+Use these tools to analyze your Windows Server environment, manage specific servers, fine-tune performance, troubleshoot issues, and automate management tasks.
 
 Here's a brief summary of what the local management tools for your Windows Server environment can do:
 
-- Covers single-server deployments and deployments with fewer servers
-- Includes a GUI and command-line interface
-- Support for disconnected mode
-- Focused on general server management, role configuration, and troubleshooting
+- Covers single-server deployments and deployments with fewer servers.
+- Includes a GUI and command-line interface.
+- Support for disconnected mode.
+- Focused on general server management, role configuration, and troubleshooting.
 
 ### When to use local management tools
 
@@ -129,7 +129,7 @@ You can use local management tools for Windows Server in the following situation
 - You want to use PowerShell to automate management for Windows Server and other systems.
 - You want to use SConfig to manage Windows Server Core.
 
-### More resources for local management tools
+### Related content
 
 You can learn more about the various tools that comprise local management tools at the following articles:
 

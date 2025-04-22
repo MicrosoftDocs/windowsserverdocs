@@ -4,7 +4,7 @@ description: Learn about the steps for planning an infrastructure that you can u
 manager: brianlic
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date: 08/07/2020
 ---

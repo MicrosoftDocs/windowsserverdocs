@@ -4,8 +4,8 @@ ms.assetid: 5007a619-ef57-4636-9aa9-93b0f02be1fc
 title: Active Directory Federation Services Overview
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # AD FS Overview

@@ -4,8 +4,8 @@ title: AD FS 2016 Requirements
 description: Learn about the requirements for installing Active Directory Federation Services (ADFS) for your systems.
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

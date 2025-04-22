@@ -2692,13 +2692,13 @@
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-supported-config.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-supported-config",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-uri.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-uri",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Add-or-Remove-Computers.md",
@@ -12572,7 +12572,7 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md",
-      "redirect_url":"/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
       "redirect_document_id": false
     },
     {
@@ -12681,6 +12681,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-cloud-witness.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2025.md",
       "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
       "redirect_document_id": true
@@ -12704,6 +12709,136 @@
       "source_path": "WindowsServerDocs/get-started/windows-server-release-info.md",
       "redirect_url": "/windows/release-health/windows-server-release-info",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-clients.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/connect-remote-desktop-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windows.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-windows-urdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windows-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-windows?tabs=windows-urdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-android.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/android-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-android-chrome-os",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-ios.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/ios-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-mac.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/mac-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-client-faq.yml",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-pc-connections-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-web-client.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-web-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-web-client-admin.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-web-client-admin",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/web-client-whatsnew.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/web-client-whats-new",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-privacy-settings.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-privacy-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/change-listening-port.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/change-listening-port",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-allow-access.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-allow-outside-access.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-outside-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-connection-single-sign-on.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-connection-single-sign-on",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-supported-config",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config.md",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/uninstall-remote-desktop-connection.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/uninstall-remote-desktop-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-uri.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-uri",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-supported-config.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config",
+      "redirect_document_id": true
+    },
+    {
+     "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
+     "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
+     "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/manage-cluster-quorum.md",
+      "redirect_url": "/windows-server/failover-clustering/recover-failover-cluster-without-quorum",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
+     "redirect_url": "/powershell/module/remoteaccess/",
+     "redirect_document_id": false
+    },
+    {
+     "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
+     "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
+     "redirect_document_id": false
     }
   ]
 }

@@ -4,7 +4,7 @@ description: Learn how to create a DNS zone by using the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: a030ff51-a815-4fc4-b26d-aae41c3e4ce5
-ms.author: roharwoo
+ms.author: jgerend
 author: robinharwood
 ms.date: 08/07/2020
 ---

@@ -4,8 +4,8 @@ ms.assetid: 22f53391-8c6a-4873-a1f4-08b4760ea621
 title: The Role of Claims
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

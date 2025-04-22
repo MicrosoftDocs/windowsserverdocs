@@ -4,8 +4,8 @@ ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
 author: jenfieldmsft
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---

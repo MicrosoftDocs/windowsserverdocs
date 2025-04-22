@@ -3,7 +3,7 @@ title: Tutorial - Set up infrastructure for Always On VPN
 description: Learn how to deploy Always On VPN (AOV) connections for Windows client computers that are working offsite (for example, from home, a customer site, or a public wireless access point).
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
-ms.author: roharwoo
+ms.author: daknappe
 author: robinharwood
 ms.date:  03/14/2023
 ---
@@ -43,7 +43,7 @@ To complete the steps in this tutorial,
 
 1. Install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview). For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#to-install-ad-ds-by-using-server-manager).
 
-1. Promote the Windows Server to domain controller. For this tutorial, you'll create a new forest and the domain to that new forest. For detailed information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage).
+1. Promote the Windows Server to domain controller. For this tutorial, you'll create a new forest and the domain to that new forest. For detailed information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#dns-options).
 
 1. Install and configure the Certificate Authority (CA) on the domain controller. For detailed information on how to install CA, see [Install the Certification Authority](/windows-server/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
 

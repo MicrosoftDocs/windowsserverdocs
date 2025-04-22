@@ -3,8 +3,8 @@ title: AD FS Troubleshooting - Fiddler - WS-Federation
 description:  This document shows an in-depth trace of a WS-Federation exchange with AD FS
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 
