@@ -1,32 +1,22 @@
 ---
-title: Use GPUs with clustered VMs on Hyper-V
+title: Use GPUs with Discrete Device Assignment in clustered VMs on Windows Server and Azure Local
 description: Learn how to use GPUs with clustered virtual machines (VMs) to provide GPU acceleration to workloads in the clustered VMs on Windows Server and Azure Local.
 author: meaghanlewis
 ms.author: mosagie
 ms.topic: how-to
-ms.date: 12/09/2024
+ms.date: 04/22/2025
 zone_pivot_groups: windows-os
 #customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Local.
 ---
 
-# Use GPUs with clustered VMs
+# Use GPUs with Discrete Device Assignment in clustered VMs
 
-:::zone pivot="windows-server"
->
-
-::: zone-end
-
-:::zone pivot="azure-local"
-
-[!INCLUDE [applies-to](~/../_azurestack/azure-local//includes/hci-applies-to-22h2.md)]
-
-::: zone-end
-
-You can include graphics processing units (GPUs) in your clusters to provide GPU acceleration to workloads running in clustered VMs. GPU acceleration can be provided via Discrete Device Assignment (DDA), which allows you to dedicate one or more physical GPUs to a VM, or through GPU Partitioning. Clustered VMs can take advantage of GPU acceleration, and clustering capabilities such as high availability via failover. Live migration of virtual machines (VMs) isn't currently supported, but VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
+You can include graphics processing units (GPUs) in your clusters to provide GPU acceleration to workloads running in clustered VMs. GPU acceleration can be provided via Discrete Device Assignment (DDA), which allows you to dedicate one or more physical GPUs to a VM, or through GPU Partitioning. Clustered VMs can take advantage of GPU acceleration, and clustering capabilities such as high availability via failover.
 
 In this article, you will learn how to use GPUs with clustered VMs to provide GPU acceleration to workloads using Discrete Device Assignment. This article guides you through preparing the cluster, assigning a GPU to a cluster VM, and failing over that VM using Windows Admin Center and PowerShell.
 
-For information about how to manage GPUs in Azure Local, version 23H2, see [Prepare GPUs for Azure Local](/azure/azure-local/manage/gpu-preparation).
+> [!TIP]
+> Live migration of virtual machines (VMs) using GPUs provided by DDA isn't currently supported, but VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
 
 ## Prerequisites
 
@@ -34,7 +24,9 @@ There are several requirements and things to consider before you begin to use GP
 
 :::zone pivot="azure-local"
 
-- You need an Azure Local instance running Azure Stack HCI operating system, version 22H2 or later..
+- You need Azure Local 2311.2 and later.
+
+- Review how to manage GPUs in Azure Local 2311.2 and later, see [Prepare GPUs for Azure Local](/azure/azure-local/manage/gpu-preparation).
 
 ::: zone-end
 
@@ -43,6 +35,8 @@ There are several requirements and things to consider before you begin to use GP
 - You need a Windows Server Failover cluster running Windows Server 2025 or later.
 
 ::: zone-end
+
+- You must have a familiarity with Failover clustering and Hyper-V.
 
 - You must install the same make and model of the GPUs across all the servers in your cluster.
 
@@ -208,11 +202,15 @@ When you start the VM, the cluster ensures that the VM is placed on a server wit
 ## Fail over a VM with an assigned GPU
 
 :::zone pivot="windows-server"
-To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-virtualization). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+To test the cluster’s ability to fail over your GPU workload, perform a drain operation on the server where the VM is running with an assigned GPU. Performing a drain operation on the server will cause the cluster to restart the VM on another server in the cluster, as long as another server has sufficient available resources in the pool that you created.
+
+To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-virtualization). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
 :::zone pivot="azure-local"
-To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-failover-clustering). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+To test the cluster’s ability to fail over your GPU workload, perform a drain operation on the server where the VM is running with an assigned GPU. Performing a drain operation on the server will cause the cluster to restart the VM on another server in the cluster, as long as another server has sufficient available resources in the pool that you created.
+
+To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-failover-clustering). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
 ## Related content
