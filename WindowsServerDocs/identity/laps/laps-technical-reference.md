@@ -13,7 +13,7 @@ Use detailed information about schema extensions and extended rights to help you
 
 ## Schema extensions
 
-Windows LAPS offers specific schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema PowerShell` cmdlet.
+Windows LAPS offers specific schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema` PowerShell cmdlet.
 
 ## Schema attributes
 
