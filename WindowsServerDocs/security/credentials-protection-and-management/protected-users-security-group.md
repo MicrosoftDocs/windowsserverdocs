@@ -18,7 +18,7 @@ Your system must meet the following prerequisites before you can deploy a Protec
 
 - Hosts must be running one of the following operating systems:
   
-  - Windows 8.1 or later
+  - Windows 10 or later
   - Windows Server 2012 R2 or later with the most recent security updates installed
 
 - The domain functional level must be Windows Server 2012 R2 or later. For more information about functional levels, see [Forest and domain functional levels](../../identity/ad-ds/active-directory-functional-levels.md).
@@ -38,7 +38,7 @@ When the signed in user is a member of the Protected Users group, the group prov
 
 - Credential delegation (CredSSP) doesn't cache the user's plain text credentials even when the user enables the **Allow delegating default credentials** Group Policy setting.
 
-- For Windows 8.1 and later and Windows Server 2012 R2 and later, Windows Digest doesn't cache the user's plaintext credentials even when they've enabled Windows Digest.
+- For Windows 10 and later and Windows Server 2012 R2 and later, Windows Digest doesn't cache the user's plaintext credentials even when they've enabled Windows Digest.
 
 - NTLM stops caching the user's plaintext credentials or NT one-way function (NTOWF).
 
@@ -87,9 +87,9 @@ To avoid lockouts and missing AES keys, we recommend you follow these guidelines
 
 - Don't run tests in domains unless all domain controllers run Windows Server 2008 or later.
 
-- If you have migrated accounts from other domains, you need to reset the password so the accounts have AES hashes. Otherwise, these accounts become able to authenticate.
+- If you have migrated accounts from other domains, you need to reset the password twice so the accounts have AES hashes. Otherwise, these accounts become able to authenticate.
 
-- Users need to change passwords after switching to domain functional level of Windows Server 2008 or later. This ensures they have AES password hashes once they become members of the Protected Users group.
+- Users need to change passwords twice after switching to domain functional level of Windows Server 2008 or later. This ensures they have AES password hashes once they become members of the Protected Users group.
 
 ### Adding a Protected User global security group to down-level domains
 
@@ -100,7 +100,7 @@ Domain controllers that run an operating system earlier than Windows Server 2012
 
 To create a Protected Users group on a domain controller running an earlier version of Windows Server:
 
-1. [Transfer the PDC emulator role](/troubleshoot/windows-server/identity/view-transfer-fsmo-roles#transfer-the-rid-master-pdc-emulator-and-infrastructure-master-roles) to a domain controller that runs Windows Server 2012 R2.
+1. [Transfer the PDC emulator role](/troubleshoot/windows-server/identity/view-transfer-fsmo-roles#transfer-the-rid-master-pdc-emulator-and-infrastructure-master-roles) to a domain controller that runs Windows Server 2012 R2 or later.
 
 1. Replicate the group object to the other domain controllers.
 
