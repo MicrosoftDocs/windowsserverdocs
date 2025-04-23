@@ -4,7 +4,7 @@ description: Lists the Windows operating systems supported for use as a guest in
 ms.topic: conceptual
 ms.author: daknappe
 author: robinharwood
-ms.date: 04/22/2025
+ms.date: 04/23/2025
 ---
 
 # Supported Windows guest operating systems for Hyper-V on Windows, Windows Server, and Azure Local
@@ -91,9 +91,9 @@ Following are the versions of Windows client that are supported as guest operati
 - **Integration Services**: Built-in
 - **Host operating systems**:
   - Generation 2 virtual machine hosted on Windows Server 2019 and later
-  - Generation 2 virtual machine hosted on Azure Local, version 22H2 and later.
+  - Generation 2 virtual machine hosted on Azure Local 2311.2 and later.
 - **Notes**:  
-  - Windows 11 requires an increased CPU instruction (POPCNT and SSE4.2) for installation and boot. To meet these requirements in Hyper-V:  
+  - Windows 11 requires an increased CPU instructions for installation and boot (POPCNT and SSE4.2). To meet these requirements in Hyper-V:  
     - On Windows 11, Windows Server 2022 (standalone or clustered hosts), or standalone Windows Server 2025 hosts, disable processor compatibility to enable these features. Disabling processor compatibility limits live migration to hosts with the same processor features.  
     - On Windows Server 2025 clusters with CPUs supporting POPCNT and SSE4.2, enable dynamic processor compatibility to ensure these features are available while retaining live migration capabilities within the cluster. To learn more about dynamic processor compatibility, see [Dynamic processor compatibility mode](manage/dynamic-processor-compatibility-mode.md).
 
