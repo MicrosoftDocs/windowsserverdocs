@@ -74,7 +74,7 @@ Use the below instructions to import updates into WSUS:
     .\ImportUpdateToWSUS.ps1 -WsusServer WSUSServer.contoso.com -PortNumber 8531 -UseSsl -UpdateIdFilePath C:\temp\UpdateIDs.txt
     ```
 
-1. The update files for updates that are imported are downloaded based on your **Update files** settings. For instance, if you use the option to **Download update files to this serer only when updates are approved**, the update files are downloaded when the update is approved. For more information about options for storing updates, see section [1.3 Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy).
+1. The update files for updates that are imported are downloaded based on your **Update files** settings. For instance, if you use the option to **Download update files to this server only when updates are approved**, the update files are downloaded when the update is approved. For more information about options for storing updates, see section [1.3 Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy).
 
 ## PowerShell script to import updates into WSUS
 
