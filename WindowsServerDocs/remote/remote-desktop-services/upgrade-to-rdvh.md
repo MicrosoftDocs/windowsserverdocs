@@ -3,7 +3,7 @@ title: Upgrading your Remote Desktop Virtualization Host
 description: Learn how to upgrade your existing Remote Desktop Virtualization Host.
 ms.author: daknappe
 ms.date: 7/3/2024
-ms.topic: how-to
+ms.topic: upgrade-and-migration-article
 ms.assetid: 5aed8ba7-f541-4416-b01c-4d3b1712e2b1
 author: spatnaik
 manager: scottman
