@@ -126,6 +126,10 @@ Before you can install Windows Server via USB or DVD, the computer's boot order 
 
 Once you're in the BIOS settings, navigate through the menus until you see the **Boot Order** or **Boot Sequence** option. Refer to the user manual for your device to locate this setting. Once you select the boot order setting, you can edit the boot order priority based in top-down order. Move booting from the USB or optical drive to the top of the list depending on which media installation method you're using. Once appropriate changes are made, save and exit from the BIOS. Your device reboots automatically in applying these changes.
 
+> [!NOTE]
+> If your system has two disks and you attempt to install Windows Server 2025 on the second disk, the installation may fail. This is because Legacy BIOS system requires the OS to be installed on the first BIOS enumerated disk (typically BIOS Disk 0).
+> If your BIOS allows explicit configuration of the first BIOS enumerated disk, ensure you select the designated disk during installation. You can run **SELECT DISK=SYSTEM** in diskpart to identify the first BIOS enumerated disk.
+
 ## Install Windows Server
 
 Once modifications are made to the boot order and you select to boot from either the USB or DVD drive, follow these steps to install Windows Server.
