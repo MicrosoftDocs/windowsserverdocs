@@ -4,7 +4,7 @@ description: Learn about Windows Local Administrator Password Solution (Windows 
 author: jay98014
 ms.author: daknappe
 ms.date: 07/04/2022
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Use Windows LAPS PowerShell cmdlets

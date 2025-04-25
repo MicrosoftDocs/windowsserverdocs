@@ -4,7 +4,7 @@ description: Learn how to use the LAPS properties dialog to configure Windows Lo
 author: jay98014
 ms.author: justinha
 ms.date: 07/04/2022
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Set up Windows LAPS in the LAPS properties dialog

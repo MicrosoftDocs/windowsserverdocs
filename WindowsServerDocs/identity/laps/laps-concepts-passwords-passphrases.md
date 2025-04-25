@@ -4,7 +4,7 @@ description: Documents password and passphrase details for Windows Local Adminis
 author: jay98014
 ms.author: justinha
 ms.date: 12/25/2023
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Windows LAPS passwords and passphrases
