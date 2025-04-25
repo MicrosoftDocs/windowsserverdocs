@@ -1,7 +1,7 @@
 ---
 title: PKI design considerations using Active Directory Certificate Services in Windows Server
 description: Use this article to understand PKI design considerations for the Active Directory Certificate Services Certification Authority role.
-ms.topic: article
+ms.topic: concept-article
 author: Orin-Thomas
 ms.author: orthomas
 contributor: orthomas
