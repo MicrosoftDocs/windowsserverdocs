@@ -4,7 +4,7 @@ ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
 title: Fault domain awareness
 ms.author: jgerend
 manager: eldenc
-ms.topic: article
+ms.topic: how-to
 author: cosmosdarwin
 ms.date: 02/16/2023
 ---
