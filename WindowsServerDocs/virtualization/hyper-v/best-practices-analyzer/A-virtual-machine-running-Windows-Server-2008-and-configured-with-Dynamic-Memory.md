@@ -3,7 +3,7 @@ title: A virtual machine running Windows Server 2008 and configured with Dynamic
 description: Learn how to use Hyper-V Manager or Windows PowerShell to increase the minimum memory to at least 256 MB, and the startup memory and maximum memory to at least 512 MB.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: f4c05a2c-52d0-4fa2-987d-37a6ed667134
 ms.date: 8/16/2016
 ---

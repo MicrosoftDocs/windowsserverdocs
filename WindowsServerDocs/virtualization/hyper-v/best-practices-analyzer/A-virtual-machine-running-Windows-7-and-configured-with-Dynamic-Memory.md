@@ -3,7 +3,7 @@ title: A virtual machine running Windows 7 and configured with Dynamic Memory sh
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows 7.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: c3a0292a-a619-4d1c-8f9d-391c741411c1
 ms.date: 8/16/2016
 ---
