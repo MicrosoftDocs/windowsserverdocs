@@ -1,6 +1,6 @@
 ---
-title: Network Policy Server (NPS)
-description: See general information about using Network Policy Server (NPS) in Windows Server to manage network access authentication, authorization, and accounting.
+title: Network Policy Server (NPS) Overview
+description: Learn about using Network Policy Server (NPS) in Windows Server to manage network access authentication, authorization, and accounting.
 manager: dougkim
 ms.topic: overview
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
@@ -10,11 +10,11 @@ ms.date: 04/18/2025
 # customer intent: As an administrator, I want to become familiar with Network Policy Server (NPS) in Windows Server so that I can centrally configure and manage network access authentication, authorization, and accounting.
 ---
 
-# Network Policy Server (NPS)
+# Network Policy Server (NPS) overview
 
 This article provides an overview of Network Policy Server (NPS) in Windows Server.
 
-You can use NPS to create and enforce organization-wide network access policies for connection request authentication and authorization. You can also configure NPS as a Remote Authentication Dial-In User Service (RADIUS) proxy. When you use NPS as a RADIUS proxy, NPS forwards connection requests to a remote NPS RADIUS server or other RADIUS server. You can use this configuration to load-balance connection requests and forward them to the correct domain for authentication and authorization.
+You can use NPS to create and enforce organization-wide network access policies for connection request authentication and authorization. You can also configure NPS as a Remote Authentication Dial-In User Service (RADIUS) proxy. When you use NPS as a RADIUS proxy, NPS forwards connection requests to a remote NPS RADIUS server or other RADIUS servers. You can use the proxy configuration to load-balance connection requests and forward them to the correct domain for authentication and authorization.
 
 NPS is installed when you install the Network Policy and Access Services (NPAS) role in Windows Server.
 
@@ -57,7 +57,7 @@ You can use NPS as a RADIUS server, a RADIUS proxy, or both. The following secti
 
 ### RADIUS server
 
-NPS is the Microsoft implementation of the RADIUS standard specified by the Internet Engineering Task Force (IETF) in Request for Comments (RFCs) 2865 and 2866. As a RADIUS server, NPS performs centralized connection authentication, authorization, and accounting for many types of network access. Examples of network access types include wireless, authenticating switch, dial-up, and VPN remote access, and router-to-router connections.
+NPS is the Microsoft implementation of the RADIUS standard specified by the Internet Engineering Task Force (IETF) in Request for Comments (RFCs) [2865](https://datatracker.ietf.org/doc/rfc2865/) and [2866](https://datatracker.ietf.org/doc/rfc2866/). As a RADIUS server, NPS performs centralized connection authentication, authorization, and accounting for many types of network access. Examples of network access types include wireless, authenticating switch, dial-up, and VPN remote access, and router-to-router connections.
 
 > [!NOTE]
 > For information on deploying NPS as a RADIUS server, see [Deploy Network Policy Server](nps-deploy.md).
