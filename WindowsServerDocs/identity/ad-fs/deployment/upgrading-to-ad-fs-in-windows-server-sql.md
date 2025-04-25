@@ -3,7 +3,7 @@ title: Upgrade to AD FS on Windows Server 2016 with SQL Server
 description: Upgrade to AD FS on Windows Server 2016 with SQL Server, including joining a farm and raising the FBL level.
 author: billmath
 manager: femila
-ms.date: 05/24/2024
+ms.date: 04/08/2025
 ms.topic: article
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.author: billmath

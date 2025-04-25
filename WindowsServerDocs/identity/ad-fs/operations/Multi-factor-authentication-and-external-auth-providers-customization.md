@@ -5,7 +5,7 @@ title: Multi-factor authentication and external authentication providers customi
 ms.topic: article
 author: billmath
 ms.author: billmath
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ---
 
 # Multi-factor authentication and external authentication providers customization

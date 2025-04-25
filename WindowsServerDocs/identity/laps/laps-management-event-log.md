@@ -4,7 +4,7 @@ description: Learn about key events in Windows Local Administrator Password Solu
 author: jay98014
 ms.author: justinha
 ms.date: 07/04/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Use Windows LAPS event logs

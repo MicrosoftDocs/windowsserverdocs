@@ -2,7 +2,7 @@
 title: Storage Spaces Direct overview
 ms.author: cosdar
 manager: dongill
-ms.topic: article
+ms.topic: overview
 author: cosmosdarwin
 ms.date: 02/11/2025
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd

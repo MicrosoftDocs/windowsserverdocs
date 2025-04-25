@@ -4,7 +4,7 @@ title: AD FS to Microsoft Entra FAQ
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

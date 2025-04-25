@@ -5,7 +5,7 @@ author: Teresa-Motiv
 manager: dcscontentpm-dev
 audience: Admin
 ms.author: mosagie
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.date: 11/22/2019
 ---
 

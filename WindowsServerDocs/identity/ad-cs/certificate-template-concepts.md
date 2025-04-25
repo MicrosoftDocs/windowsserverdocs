@@ -2,7 +2,7 @@
 title: Certificate template concepts in Windows Server
 description: This article describes certificate templates concepts for Active Directory Certificate Services in Windows Server.
 author: Orin-Thomas
-ms.topic: conceptual
+ms.topic: concept-article
 ms.author: orthomas
 ms.date: 02/18/2024
 ---
