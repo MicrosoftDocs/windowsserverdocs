@@ -32,7 +32,7 @@ Follow the steps for the type of replication you want to perform, using either t
 - Membership in the **Administrators** group, or equivalent, is the minimum required to complete these procedures.
 
 > [!IMPORTANT]
-> Replication can be initiated from either DHCP server in a failover relationship. Settings on the failover partner server will be overwritten with the settings that are configured on the server where replication is initiated. Therefore, it's important to always ensure replication is initiated on the server that's configured with the settings you wish to use.
+> Replication can be initiated from either DHCP server in a failover relationship. Settings on the failover partner server are overwritten with the settings that are configured on the server where replication is initiated. Therefore, it's important to always ensure replication is initiated on the server that are configured with the settings you wish to use.
 
 ## Replicate failover settings at the server level
 
@@ -40,19 +40,19 @@ To replicate failover settings at the server level, follow these steps.
 
 ### [DHCP console](#tab/dhcp-console)
 
-1. On a DHCP server, open Server Manager, click **Tools** and then click **DHCP**.
+1. On a DHCP server, open Server Manager, select **Tools** and then select **DHCP**.
 
-1. In the DHCP console, right-click **IPv4**, and then click **Replicate Failover Scopes**.
+1. In the DHCP console, right-click **IPv4**, and then select **Replicate Failover Scopes**.
 
-1. Click **OK** in the alert that appears.
+1. Select **OK** in the alert that appears.
 
-1. In the **Failover Scope Configuration Replication** dialog box, verify that replication was successful, and then click **Close**.
+1. In the **Failover Scope Configuration Replication** dialog box, verify that replication was successful, and then select **Close**.
 
 ### [PowerShell](#tab/powershell)
 
-1. On a computer with the Windows PowerShell DHCP Server module installed, right-click **Windows PowerShell** and then click **Run as Administrator**.
+1. On a computer with the Windows PowerShell DHCP Server module installed, right-click **Windows PowerShell** and then select **Run as Administrator**.
 
-1. Type the following at the command line, and then press ENTER. Replace the example values with values used in your environment.
+1. Type the following command, and then press Enter. Replace the example values with values used in your environment.
 
     ```powershell
     Invoke-DhcpServerv4FailoverReplication –ComputerName dhcp1.contoso.com -Force
@@ -70,19 +70,19 @@ To replicate failover settings at the relationship level, follow these steps.
 
 ### [DHCP console](#tab/dhcp-console)
 
-1. On a DHCP server, open Server Manager, click **Tools** and then click **DHCP**.
+1. On a DHCP server, open Server Manager, select **Tools** and then select **DHCP**.
 
-1. In the DHCP console, right-click any failover-enabled scope, and then click **Replicate Relationship**.
+1. In the DHCP console, right-click any failover-enabled scope, and then select **Replicate Relationship**.
 
-1. Click **OK** in the alert that appears.
+1. Select **OK** in the alert that appears.
 
-1. In the **Failover Scope Configuration Replication** dialog box, verify that replication was successful, and then click **Close**.
+1. In the **Failover Scope Configuration Replication** dialog box, verify that replication was successful, and then select **Close**.
 
 ### [PowerShell](#tab/powershell)
 
-1. On a computer with the Windows PowerShell DHCP Server module installed, right-click **Windows PowerShell** and then click **Run as Administrator**.
+1. On a computer with the Windows PowerShell DHCP Server module installed, right-click **Windows PowerShell** and then select **Run as Administrator**.
 
-1. Type the following at the command line, and then press ENTER. Replace the example values with values used in your environment.
+1. Type the following command, and then press Enter. Replace the example values with values used in your environment.
 
     ```powershell
     Invoke-DhcpServerv4FailoverReplication –ComputerName dhcp1.contoso.com –Name dhcp1-dhcp2 -Force
@@ -90,7 +90,7 @@ To replicate failover settings at the relationship level, follow these steps.
 
 1. Verify that the scope IDs are listed in the command output for all failover enabled scopes that are configured to use the specified failover relationship.
 
-In this example, the primary DHCP server is named **dhcp1.contoso.com** and the failover relationship name is **dhcp1-dhcp2**. If the **ComputerName** parameter is not specified, the command is run on the local server.
+In this example, the primary DHCP server is named **dhcp1.contoso.com** and the failover relationship name is **dhcp1-dhcp2**. If the **ComputerName** parameter isn't specified, the command is run on the local server.
 
 ---
 
@@ -100,17 +100,17 @@ To replicate failover settings at the scope level, follow these steps:
 
 ### [DHCP console](#tab/dhcp-console)
 
-1. On a DHCP server, open Server Manager, click **Tools** and then click **DHCP**.
+1. On a DHCP server, open Server Manager, select **Tools** and then select **DHCP**.
 
-2. In the DHCP console, right-click any failover-enabled scope, and then click **Replicate Scope**.
+2. In the DHCP console, right-click any failover-enabled scope, and then select **Replicate Scope**.
 
-3. In the **Failover Scope Configuration Replication** dialog box, verify that replication was successful, and then click **Close**.
+3. In the **Failover Scope Configuration Replication** dialog box, verify that replication was successful, and then select **Close**.
 
 ### [PowerShell](#tab/powershell)
 
-1. On a computer with the Windows PowerShell DHCP Server module installed, right-click **Windows PowerShell** and then click **Run as Administrator**.
+1. On a computer with the Windows PowerShell DHCP Server module installed, right-click **Windows PowerShell** and then select **Run as Administrator**.
 
-1. Type the following at the command line, and then press ENTER. Replace the example values with values used in your environment.
+1. Type the following command, and then press Enter. Replace the example values with values used in your environment.
 
     ```powershell
     Invoke-DhcpServerv4FailoverReplication –ComputerName dhcp1.contoso.com –ScopeID 10.0.10.0,10.0.20.0 -Force
@@ -118,7 +118,7 @@ To replicate failover settings at the scope level, follow these steps:
 
 1. Verify that the scope IDs are listed in the command output for all scopes that were specified on the command line.
 
-In this example, the primary DHCP server is named **dhcp1.contoso.com**, and the DHCP scope IDs specified are **10.0.10.0** and **10.0.20.0**. If the **ComputerName** parameter is not specified, the command is run on the local server.
+In this example, the primary DHCP server is named **dhcp1.contoso.com**, and the DHCP scope IDs specified are **10.0.10.0** and **10.0.20.0**. If the **ComputerName** parameter isn't specified, the command is run on the local server.
 
 ---
 
