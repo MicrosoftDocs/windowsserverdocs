@@ -32,7 +32,7 @@ Follow the steps for the type of replication you want to perform, using either t
 - Membership in the **Administrators** group, or equivalent, is the minimum required to complete these procedures.
 
 > [!IMPORTANT]
-> Replication can be initiated from either DHCP server in a failover relationship. Settings on the failover partner server are overwritten with the settings that are configured on the server where replication is initiated. Therefore, it's important to always ensure replication is initiated on the server that are configured with the settings you wish to use.
+> Replication can be initiated from either DHCP server in a failover relationship. Settings on the failover partner server are overwritten with the settings that are configured on the server where replication is initiated. Therefore, it's important to always ensure replication is initiated on the server that's configured with the settings you wish to use.
 
 ## Replicate failover settings at the server level
 
