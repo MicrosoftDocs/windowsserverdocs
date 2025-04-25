@@ -94,7 +94,7 @@ In this example, the primary DHCP server is named **dhcp1.contoso.com** and the 
 
 ---
 
-## Replicate failover settings at the scope level using the DHCP console
+## Replicate failover settings at the scope level
 
 To replicate failover settings at the scope level, follow these steps:
 
