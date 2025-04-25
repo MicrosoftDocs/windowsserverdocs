@@ -6,7 +6,7 @@ ms.sitesec: library
 author: pronichkin
 ms.author: alalve
 ms.date: 05/07/2018
-ms.topic: article
+ms.topic: concept-article
 ---
 # Roles, Role Services, and Features not in Server Core containers - Windows Server, version 1803
 
