@@ -1,7 +1,7 @@
 ---
 title: Replicate DHCP failover in Windows Server
 description: Follow the steps to replicate DHCP failover, using either the DHCP Console, or Windows PowerShell.
-ms:author: mosagie
+ms.author: mosagie
 author: meaghanlewis
 ms.date: 04/25/2025
 ms.topic: how-to
