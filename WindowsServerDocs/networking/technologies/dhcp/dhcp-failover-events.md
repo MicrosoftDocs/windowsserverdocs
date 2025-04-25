@@ -25,13 +25,13 @@ The following DHCP Server event channels are available using Event Viewer with t
 
 Event Tracing for Windows (ETW) events are logged for state transition of the local server, or its partner server. These events are logged to the DHCP server **Admin** channel. The following data is provided as part of each state change event.
 
-1. The previous state of the server.
+- The previous state of the server.
 
-1. The current state of the server.
+- The current state of the server.
 
-1. The failover relationship name.
+- The failover relationship name.
 
-1. The server host name or IP address.
+- The server host name or IP address.
 
 In addition to logging its own state change, the server logs changes in the state of its failover partner server. This information is communicated by state messages from the failover partner. The following table lists the values populated for the various fields in the event log.
 
