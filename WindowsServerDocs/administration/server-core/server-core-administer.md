@@ -6,7 +6,7 @@ ms.sitesec: library
 author: pronichkin
 ms.author: alalve
 ms.date: 02/24/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Administer a Server Core server
