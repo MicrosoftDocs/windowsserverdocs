@@ -4,7 +4,7 @@ ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: Updating drive firmware
 ms.author: roharwoo
 manager: dmoss
-ms.topic: concept-article
+ms.topic: how-to
 author: toklima
 ms.date: 10/04/2016
 ---
