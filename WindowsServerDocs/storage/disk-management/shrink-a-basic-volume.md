@@ -15,7 +15,7 @@ You can decrease the space used by primary partitions and logical drives by shri
 
 When you shrink a partition, any ordinary files are automatically relocated on the disk to create the new unallocated space. There's no need to reformat the disk to shrink the partition.
 
-You can shrink primary partitions and logical drives on raw partitions&mdash;partitions without a file system&mdash;or partitions that use the New Technology File System (NTFS).
+You can shrink primary partitions and logical drives on raw partitions, which are partitions without a file system, or on partitions that use New Technology File System (NTFS).
 
 > [!CAUTION]
 > If the partition is a raw partition that contains data, such as a database file, shrinking the partition might destroy the data.
@@ -34,7 +34,7 @@ You can shrink primary partitions and logical drives on raw partitions&mdash;par
 1. Follow the on-screen instructions.
 
 > [!NOTE]
-> You can only shrink basic volumes that have no file system or that use the NTFS.
+> You can only shrink basic volumes that have no file system or that use NTFS.
 
 ### Shrink a basic volume by using the command line
 
