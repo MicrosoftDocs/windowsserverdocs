@@ -18,35 +18,56 @@ A single failover relationship can be associated to multiple DHCP scopes. You do
 
 ## Prerequisites
 
+- At least Windows Server 2012
+
+- The DHCP server role is installed
+
 - Understand how failover relationships work. For more information about DHCP failover relationships, see [DHCP failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover).
 
-- Two network-connected partner DHCP servers
+- Two network-connected DHCP servers that can communicate with each other
 
-- At least one DHCP scope exists on the local server
+- At least one IPv4 DHCP scope scope must be configured on the primary DHCP server.
 
-## Create failover relationships
+## Configure failover relationships
 
 To create a failover relationship on a DHCP server, you can use PowerShell, or you can use the DHCP console.
 
-The default DHCP failover mode is load balance with 50% of leases being assigned by the local server and 50% being assigned by the partner server. Authentication is also enabled by default, but this setting isn't required. If authentication is enabled, you must also supply a shared secret. The scope ID provided must correspond to a scope configured on the local server that is not already failover-enabled, and doesn't already exist on the partner server. If DHCP failover is being configured remotely, the "local server" refers to the server specified on the command line or added to the management console.
+Some notes to consider about creating a failover relationship:
 
-You can't enable DHCP failover on a DHCP scope if the scope already exists on both DHCP servers in a failover relationship, as might occur in a split scope configuration. If a DHCP scope exists on the partner DHCP server it must be deleted prior to configuring DHCP failover. See the following examples:
+- The default DHCP failover mode is load balance with 50% of leases assigned by the local server and 50% assigned by the partner server.
+- Authentication is enabled by default, but this setting isn't required. If authentication is enabled, you must also provide a shared secret.
+- The scope ID provided must correspond to a scope configured on the local server that isn't already failover-enabled, and doesn't already exist on the partner server.
+- If DHCP failover is being configured remotely, the "local server" refers to the server specified on the command line or added to the management console.
+- You can't enable DHCP failover on a DHCP scope if the scope already exists on both DHCP servers in a failover relationship, as might occur in a split scope configuration.
+- If a DHCP scope exists on the partner DHCP server, it must be deleted prior to configuring DHCP failover.
 
 ### Configure DHCP failover using PowerShell
+
+To configure a failover relationship using PowerShell, complete the following steps:
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
 1. Right-click Windows PowerShell and select **Run as Administrator**.
 
-1. Use the PowerShell cmdlet [Add-DhcpServerv4Failover](/powershell/module/dhcpserver/add-dhcpserverv4failover) to add an IPv4 failover relationship on the DHCP server service. Run the following command:
+1. Use the PowerShell cmdlet [Add-DhcpServerv4Failover](/powershell/module/dhcpserver/add-dhcpserverv4failover) to add an IPv4 failover relationship on the DHCP server service. Run the following command to create a **load balance failover relationship**:
 
 ```powershell
 Add-DhcpServerv4Failover -ComputerName "dhcp1.contoso.com" -Name "dc1-dhcp1" -PartnerServer "dhcp2.contoso.com" -ScopeId 10.10.10.0,10.20.20.0 -SharedSecret "sEcReT"
 ```
 
-This command creates a load balance failover relationship between **dhcp1.contoso.com** and **dhcp2.contoso.com**. The failover has scopes 10.10.10.0, and 10.20.20.0 present on **dhcp1.contoso.com**. These scopes are created on the partner DHCP server service that runs on the computer named **dhcp2.contoso.com** as part of the failover relationship creation. Message authentication is enabled for the server-to-server message exchange with the specified shared secret.
+This command creates a **load balance failover relationship** between **dhcp1.contoso.com** and **dhcp2.contoso.com**. The failover has scopes 10.10.10.0, and 10.20.20.0 present on **dhcp1.contoso.com**. These scopes are created on the partner DHCP server service that runs on the computer named **dhcp2.contoso.com** as part of the failover relationship creation. Message authentication is enabled for the server-to-server message exchange with the specified shared secret.
+
+You can create a hot standby failover relationship, using the command:
+
+```powershell
+Add-DhcpServerv4Failover -ComputerName "dhcp1.contoso.com" -Name "dc1-dhcp1" -PartnerServer "dhcp2.contoso.com" -ServerRole Standby -ScopeId 10.10.10.0,10.20.20.0
+```
+
+**dhcpserver.contoso.com** is the standby DHCP server service, and **dhcpserver2.contoso.com** is the active DHCP server service in the failover relationship.
 
 ### Configure DHCP failover using the DHCP console
+
+To configure a failover relationship using the DHCP console, complete the following steps:
 
 1. Open Server Manager if it's not already open.
 
@@ -54,21 +75,33 @@ This command creates a load balance failover relationship between **dhcp1.contos
 
 1. In the DHCP console, select your server, and expand it so you see IPv4.
 
-1. Right-click, and select **Configure Failover...**.
+1. Right-click on IPv4, and select **Configure Failover...**.
 
     ![Screenshot of selecting Confgiure Failover from the option menu.](media/select-configure-failover.png)
 
-1. The Configure Failover wizard opens.
+1. The Configure Failover wizard opens. A list of available DHCP scopes displays. You can choose multiple scopes if you like. In this example, a single DHCP scope is configured using a new failover relationship.
 
-1. Complete the steps to setup DHCP failover.
+    ![Screenshot of the Configure Failover wizard.](media/configure-failover-wizard.png)
+
+1. Select **Next**, and then on the Specify the partner server to use for failover page, for **Partner Server** type the name, or IP address of the failover partner DHCP server. You can also use the drop-down list to choose from a list of authorized DHCP servers in the domain.
+
+1. To reuse an existing DHCP failover relationship, select **Next**. Alternatively, to create a new DHCP failover relationship, clear the **Reuse existing failover relationships…** checkbox, and then select **Next**.
+
+1. On the Create a new failover relationship page, type a name for the failover relationship next to **Relationship Name**, or accept the default name.
+
+    For **Mode**, select either **Load balance**, or **Hot standby**. Complete the configuration details for your selected mode.
+
+    By default, the Enable Message Authentication checkbox is enabled. Clear this checkbox if you do not wish to use a shared secret. Otherwise, type a shared secret next to Shared Secret. By default, load balancing is set to 50% for both the local server and the partner server.
 
     ![Screenshot of using the DHCP console to create a failover relationship.](media/configure-failover.png)
 
-In the previous examples, a new failover relationship named **dc1-dhcp1** is established between **dhcp1.contoso.com** and **dhcp2.contoso.com**. to use a 50-50 load balancing percentage for the DHCP scope with ID 192.168.10.0.
+1. Select **Next**, select **Finish**, verify that the status of all the tasks are successful, and then select **Close**.
+
+In the previous examples, a new failover relationship named **dc1-dhcp1** is established between **dhcp1.contoso.com** and **dhcp2.contoso.com**. To use a 50-50 load balancing percentage for the DHCP scope with ID 192.168.10.0.
 
 > [!IMPORTANT]
 > A single DHCP server can support up to 31 failover relationships. To avoid exceeding this limit, reuse existing failover relationships when possible and delete failover relationships that aren't in use.
-> Failover relationships can exist with no association to a DHCP scope. This occurs if you deconfigure failover on the last DHCP scope associated to a failover relationship, and do not also delete the failover relationship. You might do this if you plan to reuse the failover relationship later.
+> Failover relationships can exist with no association to a DHCP scope. This occurs if you deconfigure failover on the last DHCP scope associated to a failover relationship, and don't also delete the failover relationship. You might do this if you plan to reuse the failover relationship later.
 
 ## View failover relationships
 
@@ -122,15 +155,13 @@ To view failover relationships using the DHCP console, complete the following st
 
 1. In the DHCP console, select your server, and expand it so you see IPv4.
 
-1. Select **Properties**, and then select the **Failover** tab.
+1. Right-click on the scope name, and then select **Properties**, and then select the **Failover** tab.
 
     ![Screenshot of viewing the failover properties in the DHCP console.](media/failover-properties.png)
 
 ## Edit failover relationships
 
 To edit failover relationships on a DHCP server, you can either use PowerShell or the DHCP console.
-
- or you can open the DHCP console, right-click **IPv4**, click **Properties**, and then click the **Failover** tab. See the following examples:
 
 ### Edit DHCP failover using Windows PowerShell
 
@@ -150,6 +181,8 @@ This command changes the failover relationship **dhcp1-dc1** to take 70% of the 
 
 ### Edit properties of the failover relationship using the DHCP console
 
+To edit failover relationships using the DHCP console, complete the following steps:
+
 1. Open Server Manager if it's not already open.
 
 1. Select **Tools**, then **DHCP**.
@@ -158,7 +191,7 @@ This command changes the failover relationship **dhcp1-dc1** to take 70% of the 
 
 1. Select **Properties**, and then select the **Failover** tab.
 
-1. Choose a failover relationship, and then select **Edit**.
+1. Choose a failover relationship, and then select **Edit**. A window opens where you can edit details about the selected failover relationship.
 
 ![Screenshot of editing the failover properties in the DHCP console.](media/edit-failover-relationship.png)
 
@@ -192,14 +225,14 @@ To delete a failover relationship using the DHCP console, complete the following
 
 1. Select **Properties**, and then select the **Failover** tab.
 
-1. Highlight the relationship name on the **Failover** tab and then select **Delete**. You're prompted to confirm the deletion, and if any scopes are currently associated with the failover relationship, these are listed.
+1. Highlight the relationship name on the **Failover** tab and then select **Delete**. You're prompted to confirm the deletion, and see if any scopes are currently associated with the failover relationship.
 
     ![Screenshot of deleting a failover relationship in the DHCP console.](media/delete-failover-relationship.png)
 
-1. Select **OK** to confirm deletion of the failover relationship. Deleting a failover relationship that has DHCP scopes associated with it removes those scopes from the partner DHCP server. The scopes remain on the DHCP server where the failover relationship was deleted.
+1. Select **OK** to confirm deletion of the failover relationship. Deleting a failover relationship with DHCP scopes associated with it removes those scopes from the partner DHCP server. The scopes remain on the DHCP server where the failover relationship was deleted.
 
 > [!NOTE]
-> If you remove the last DHCP scope from a failover relationship using the DHCP console, you're notified that the failover relationship can be deleted. The failover relationship is not automatically removed. If you do not plan to reuse the relationship later, manually delete this relationship from either the primary DHCP server or the failover partner.
+> If you remove the last DHCP scope from a failover relationship using the DHCP console, you're notified that the failover relationship can be deleted. The failover relationship isn't automatically removed. If you don't plan to reuse the relationship later, manually delete this relationship from either the primary DHCP server or the failover partner.
 
 ## Related content
 
