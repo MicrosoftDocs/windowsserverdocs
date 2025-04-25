@@ -2,7 +2,7 @@
 title: OpenSSH Server configuration for Windows
 description: Learn about the Windows-specific configuration options for OpenSSH Server on Windows Server and Windows.
 ms.date: 08/15/2024
-ms.topic: conceptual
+ms.topic: article
 ms.author: roharwoo
 author: maertendmsft
 ---

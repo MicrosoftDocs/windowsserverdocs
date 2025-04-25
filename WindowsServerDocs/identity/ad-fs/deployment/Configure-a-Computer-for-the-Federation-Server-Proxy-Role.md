@@ -4,7 +4,7 @@ ms.assetid: a2f23877-30a7-439f-817d-387da9e00e86
 title: Configure a Computer for the Federation Server Proxy Role
 author: billmath
 manager: femila
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

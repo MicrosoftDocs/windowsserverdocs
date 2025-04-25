@@ -5,7 +5,7 @@ title: AD FS OpenID Connect/OAuth flows and Application Scenarios
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/05/2024
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

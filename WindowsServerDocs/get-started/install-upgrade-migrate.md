@@ -1,7 +1,7 @@
 ---
 title: Feature update, clean install, or migrate to Windows Server
 description: Important information when performing a feature update, clean install, or a migration to Windows Server.
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: robhindman
 ms.author: roharwoo
 ms.date: 03/03/2025

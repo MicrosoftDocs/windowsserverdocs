@@ -1,7 +1,7 @@
 ---
 title: Manage User Access Logging
 description: Describes how to manage User Access Logging
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 4f039017-4152-47eb-838e-bb6ef730b638
 author: brentfor
 ms.author: alalve

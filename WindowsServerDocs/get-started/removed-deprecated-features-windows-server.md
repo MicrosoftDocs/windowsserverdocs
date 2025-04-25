@@ -4,9 +4,7 @@ description: Learn about the features and functionalities removed or no longer d
 ms.topic: article
 author: robinharwood
 ms.author: alalve
-ms.date: 03/20/2025
-ms.contributor: alalve
-ms.service: windows-server
+ms.date: 04/24/2025
 ---
 
 # Features removed or no longer developed in Windows Server
