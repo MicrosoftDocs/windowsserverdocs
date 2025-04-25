@@ -13,12 +13,14 @@ ms.date: 04/22/2025
 
 You can use an in-place operating system upgrade (a feature update) to go from an older operating system
 to a newer one while keeping your settings, server roles, and data intact. This article shows you
-how to move to a later version of Windows Server by using a feature update.
+how to move to a later version of Windows Server using installation media.
 
 > [!IMPORTANT]
-> This article covers the Windows Server feature update process for non-Azure servers and virtual machines (VMs) only. To do a feature update of Windows Server running in an Azure VM, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+> This article covers the Windows Server upgrade process for non-Azure servers and virtual machines (VMs) only. To do an upgrade of Windows Server running in an Azure VM, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 
 ## Prerequisites
+
+Before you start upgrading, complete the following prerequisites:
 
 - The setup media for the version of Windows Server that you want to upgrade to.
   - For information about available Windows Server versions and supported upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
