@@ -10,11 +10,9 @@ ms.date: 04/23/2025
 
 # Manage DHCP failover relationships in Windows Server
 
-Learn how to manage DHCP failover relationships in Windows Server.
-
 Failover relationships are settings used by two DHCP servers to share one or more failover-enabled DHCP scopes.
 
-A single failover relationship can be associated to multiple DHCP scopes. You don't need to create a new failover relationship every time you enable failover on a DHCP scope, unless a new DHCP server is used as the failover partner or a new set of failover settings are required. It's recommended to reuse existing failover relationships whenever possible to avoid unnecessary duplication of failover settings.
+In this article, follow the steps to create, view, edit, and delete DHCP failover relationships in Windows Server.
 
 ## Prerequisites
 
@@ -26,11 +24,11 @@ A single failover relationship can be associated to multiple DHCP scopes. You do
 
 - Two network-connected DHCP servers that can communicate with each other
 
-- At least one IPv4 DHCP scope scope must be configured on the primary DHCP server.
+- At least one IPv4 DHCP scope is configured on the primary DHCP server.
 
 ## Configure failover relationships
 
-To create a failover relationship on a DHCP server, you can use PowerShell, or you can use the DHCP console.
+To create a failover relationship on a DHCP server, you can use PowerShell, or you can use the DHCP console. Follow the steps for the method of your choice.
 
 Some notes to consider about creating a failover relationship:
 
@@ -41,7 +39,7 @@ Some notes to consider about creating a failover relationship:
 - You can't enable DHCP failover on a DHCP scope if the scope already exists on both DHCP servers in a failover relationship, as might occur in a split scope configuration.
 - If a DHCP scope exists on the partner DHCP server, it must be deleted prior to configuring DHCP failover.
 
-### Configure DHCP failover using PowerShell
+### [PowerShell](#tab/powershell)
 
 To configure a failover relationship using PowerShell, complete the following steps:
 
@@ -65,7 +63,7 @@ Add-DhcpServerv4Failover -ComputerName "dhcp1.contoso.com" -Name "dc1-dhcp1" -Pa
 
 **dhcpserver.contoso.com** is the standby DHCP server service, and **dhcpserver2.contoso.com** is the active DHCP server service in the failover relationship.
 
-### Configure DHCP failover using the DHCP console
+### [DHCP console](#tab/dhcp-console)
 
 To configure a failover relationship using the DHCP console, complete the following steps:
 
@@ -91,7 +89,7 @@ To configure a failover relationship using the DHCP console, complete the follow
 
     For **Mode**, select either **Load balance**, or **Hot standby**. Complete the configuration details for your selected mode.
 
-    By default, the Enable Message Authentication checkbox is enabled. Clear this checkbox if you do not wish to use a shared secret. Otherwise, type a shared secret next to Shared Secret. By default, load balancing is set to 50% for both the local server and the partner server.
+    By default, the Enable Message Authentication checkbox is enabled. Clear this checkbox if you don't wish to use a shared secret. Otherwise, type a shared secret next to Shared Secret. By default, load balancing is set to 50% for both the local server and the partner server.
 
     ![Screenshot of using the DHCP console to create a failover relationship.](media/configure-failover.png)
 
@@ -103,11 +101,13 @@ In the previous examples, a new failover relationship named **dc1-dhcp1** is est
 > A single DHCP server can support up to 31 failover relationships. To avoid exceeding this limit, reuse existing failover relationships when possible and delete failover relationships that aren't in use.
 > Failover relationships can exist with no association to a DHCP scope. This occurs if you deconfigure failover on the last DHCP scope associated to a failover relationship, and don't also delete the failover relationship. You might do this if you plan to reuse the failover relationship later.
 
+---
+
 ## View failover relationships
 
 You can view failover relationships on a DHCP server using either Windows PowerShell, or the DHCP console.
 
-### View DHCP failover using Windows PowerShell
+### [PowerShell](#tab/powershell)
 
 To view failover relationships on a DHCP server, you can use the cmdlet [Get-DhcpServerv4Failover](/powershell/module/dhcpserver/get-dhcpserverv4failover) in an elevated Windows PowerShell prompt.
 
@@ -145,7 +145,7 @@ Get-DhcpServerv4Failover
 
 An advantage to using Windows PowerShell to view failover relationships is that you can view more properties of the DHCP failover relationship than you can see in the DHCP console.
 
-### View DHCP failover using the DHCP console
+### [DHCP console](#tab/dhcp-console)
 
 To view failover relationships using the DHCP console, complete the following steps:
 
@@ -159,11 +159,13 @@ To view failover relationships using the DHCP console, complete the following st
 
     ![Screenshot of viewing the failover properties in the DHCP console.](media/failover-properties.png)
 
+---
+
 ## Edit failover relationships
 
 To edit failover relationships on a DHCP server, you can either use PowerShell or the DHCP console.
 
-### Edit DHCP failover using Windows PowerShell
+### [PowerShell](#tab/powershell)
 
 To edit failover relationships on a DHCP server, you can use the cmdlet [Set-DhcpServerv4Failover](/powershell/module/dhcpserver/set-dhcpserverv4failover).
 
@@ -179,7 +181,7 @@ Set-DhcpServerv4Failover –Name "dhcp1-dc1" –LoadBalancePercent 70
 
 This command changes the failover relationship **dhcp1-dc1** to take 70% of the client requests served by the DHCP server.
 
-### Edit properties of the failover relationship using the DHCP console
+### [DHCP console](#tab/dhcp-console)
 
 To edit failover relationships using the DHCP console, complete the following steps:
 
@@ -195,11 +197,13 @@ To edit failover relationships using the DHCP console, complete the following st
 
 ![Screenshot of editing the failover properties in the DHCP console.](media/edit-failover-relationship.png)
 
+---
+
 ## Delete failover relationships
 
 To delete a failover relationship on a DHCP server, you can either use PowerShell or the DHCP console.
 
-### Delete a DHCP failover relationship using Windows PowerShell
+### [PowerShell](#tab/powershell)
 
 To edit failover relationships on a DHCP server, you can use the cmdlet [Remove-DhcpServerv4Failover](/powershell/module/dhcpserver/remove-dhcpserverv4failover).
 
@@ -213,7 +217,7 @@ To edit failover relationships on a DHCP server, you can use the cmdlet [Remove-
 Remove-DhcpServerv4Failover –Name dhcp1.contoso.com-dhcp2-dns1.contoso.com
 ```
 
-### Delete a DHCP failover relationship using the DHCP console
+### [DHCP console](#tab/dhcp-console)
 
 To delete a failover relationship using the DHCP console, complete the following steps:
 
