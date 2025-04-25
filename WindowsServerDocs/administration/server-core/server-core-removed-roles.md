@@ -6,7 +6,7 @@ ms.sitesec: library
 author: pronichkin
 ms.author: alalve
 ms.date: 02/23/2018
-ms.topic: article
+ms.topic: concept-article
 ---
 # Roles, Role Services, and Features not in Windows Server - Server Core
 
