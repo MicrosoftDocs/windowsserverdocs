@@ -17,9 +17,9 @@ In DHCP failover, the client messages which are broadcast are received by both t
 
 The following DHCP Server event channels are available using Event Viewer with the path: **Applications and Services Logs\\Microsoft\\Windows\\DHCP-Server**. There are two event channels where you can view DHCP failover events.
 
-1. **Admin** channel (Microsoft-Windows-DHCP Server Events/Admin): This channel provides DHCP server administrative event logging. For example, events are logged to this channel if a DHCP failover state of a server changes.
+- **Admin** channel (Microsoft-Windows-DHCP Server Events/Admin): This channel provides DHCP server administrative event logging. For example, events are logged to this channel if a DHCP failover state of a server changes.
 
-1. **Operational** channel (Microsoft-Windows-DHCP Server Events/Operational): This channel provides DHCP configuration auditing. For example, an event is logged if a scope on the DHCP server is added or removed from a DHCP failover relationship.
+- **Operational** channel (Microsoft-Windows-DHCP Server Events/Operational): This channel provides DHCP configuration auditing. For example, an event is logged if a scope on the DHCP server is added or removed from a DHCP failover relationship.
 
 ## Administrative event logging
 
@@ -96,9 +96,9 @@ Windows Server has the following DHCP failover-related performance counters to t
 
 - Binding Updates sent per minute
 
-- Binding Acks received per minute
-
 - Binding Updates received per minute
+
+- Binding Acks received per minute
 
 - Binding Acks sent per minute
 
@@ -110,12 +110,12 @@ Windows Server has the following DHCP failover-related performance counters to t
 
 - Number of transitions into RECOVER state
 
-- Number of Binding Update queue running at 90% of the maximum queue size
+- Number of Binding Update queues running at 90% of the maximum queue size
 
 - Number of Binding Updates dropped
 
 ## Related content
 
-[DHCP failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
+- [DHCP failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
 
-[DHCP server events](/windows-server/networking/technologies/dhcp/dhcp-server-events)
+- [DHCP server events](/windows-server/networking/technologies/dhcp/dhcp-server-events)
