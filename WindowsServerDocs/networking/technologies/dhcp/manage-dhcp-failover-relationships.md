@@ -35,7 +35,7 @@ Some notes to consider about creating a failover relationship:
 - The default DHCP failover mode is load balance with 50% of leases assigned by the local server and 50% assigned by the partner server.
 - Authentication is enabled by default, but this setting isn't required. If authentication is enabled, you must also provide a shared secret.
 - The scope ID provided must correspond to a scope configured on the local server that isn't already failover-enabled, and doesn't already exist on the partner server.
-- If DHCP failover is being configured remotely, the "local server" refers to the server specified on the command line or added to the management console.
+- If DHCP failover is being configured remotely, the local server refers to the server specified on the command line or added to the management console.
 - You can't enable DHCP failover on a DHCP scope if the scope already exists on both DHCP servers in a failover relationship, as might occur in a split scope configuration.
 - If a DHCP scope exists on the partner DHCP server, it must be deleted prior to configuring DHCP failover.
 
@@ -47,7 +47,7 @@ To configure a failover relationship using PowerShell, complete the following st
 
 1. Right-click Windows PowerShell and select **Run as Administrator**.
 
-1. Use the PowerShell cmdlet [Add-DhcpServerv4Failover](/powershell/module/dhcpserver/add-dhcpserverv4failover) to add an IPv4 failover relationship on the DHCP server service. Run the following command to create a **load balance failover relationship**:
+1. Use the PowerShell cmdlet [Add-DhcpServerv4Failover](/powershell/module/dhcpserver/add-dhcpserverv4failover) to add an IPv4 failover relationship on the DHCP server service. Run the following command to create a **load balance failover** relationship:
 
 ```powershell
 Add-DhcpServerv4Failover -ComputerName "dhcp1.contoso.com" -Name "dc1-dhcp1" -PartnerServer "dhcp2.contoso.com" -ScopeId 10.10.10.0,10.20.20.0 -SharedSecret "sEcReT"
@@ -55,7 +55,7 @@ Add-DhcpServerv4Failover -ComputerName "dhcp1.contoso.com" -Name "dc1-dhcp1" -Pa
 
 This command creates a **load balance failover relationship** between **dhcp1.contoso.com** and **dhcp2.contoso.com**. The failover has scopes 10.10.10.0, and 10.20.20.0 present on **dhcp1.contoso.com**. These scopes are created on the partner DHCP server service that runs on the computer named **dhcp2.contoso.com** as part of the failover relationship creation. Message authentication is enabled for the server-to-server message exchange with the specified shared secret.
 
-You can create a hot standby failover relationship, using the command:
+To create a **hot standby failover** relationship, use the command:
 
 ```powershell
 Add-DhcpServerv4Failover -ComputerName "dhcp1.contoso.com" -Name "dc1-dhcp1" -PartnerServer "dhcp2.contoso.com" -ServerRole Standby -ScopeId 10.10.10.0,10.20.20.0
