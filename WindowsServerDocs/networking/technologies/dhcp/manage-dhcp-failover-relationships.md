@@ -111,6 +111,12 @@ You can view failover relationships on a DHCP server using either Windows PowerS
 
 To view failover relationships on a DHCP server, you can use the cmdlet [Get-DhcpServerv4Failover](/powershell/module/dhcpserver/get-dhcpserverv4failover) in an elevated Windows PowerShell prompt.
 
+1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
+
+1. Right-click Windows PowerShell and select **Run as Administrator**.
+
+1. Run the following command:
+
 ```powershell
 Get-DhcpServerv4Failover
 ```
