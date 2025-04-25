@@ -4,7 +4,7 @@ description: Learn how to upgrade a Storage Spaces Direct cluster to a newer ver
 author: robhindman
 ms.author: mosagie
 ms.date: 01/24/2025
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ---
 
 # Upgrade a Storage Spaces Direct cluster
