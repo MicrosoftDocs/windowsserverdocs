@@ -3,7 +3,7 @@ title: Windows Server 2008 R2 should be configured with the recommended amount o
 description: Learn what to do when a virtual machine running Windows Server 2008 R2 is configured with less than the recommended amount of RAM, which is 2 GB.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 26872519-ccf0-4757-827f-8df2a7a2b9f9
 ms.date: 8/16/2016
 ---

@@ -3,7 +3,7 @@ title: All networks for live migration traffic should have a link speed of at le
 description: Learn what to do when none of the networks for live migration traffic have a link speed of at least 1 Gbps.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 89411b63-bec8-463d-b486-107548ed440e
 ms.date: 8/16/2016
 ---
