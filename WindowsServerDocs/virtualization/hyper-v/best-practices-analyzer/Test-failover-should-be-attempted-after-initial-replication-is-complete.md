@@ -3,7 +3,7 @@ title: Test failover should be attempted after initial replication is complete
 description: Learn what to do when there has been no test failover after the initial replication is complete.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: cea7eeaa-c1a7-4f87-89be-d4e1208c546f
 ms.date: 8/16/2016
 ---

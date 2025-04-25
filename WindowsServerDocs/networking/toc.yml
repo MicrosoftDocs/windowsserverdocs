@@ -264,6 +264,8 @@ items:
         href: technologies/dhcp/dhcp-failover.md
       - name: Manage DHCP failover relationships
         href: technologies/dhcp/manage-dhcp-failover-relationships.md  
+      - name: DHCP failover events
+        href: technologies/dhcp/dhcp-failover-events.md  
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:

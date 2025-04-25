@@ -4,7 +4,7 @@ description: Learn how to configure policy settings for Windows Local Administra
 author: jay98014
 ms.author: mosagie
 ms.date: 08/19/2024
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Configure policy settings for Windows LAPS

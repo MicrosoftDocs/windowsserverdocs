@@ -1,7 +1,7 @@
 ---
 title: Publishing extensions for Windows Admin Center
 description: Publishing extensions for Windows Admin Center (Project Honolulu)
-ms.topic: article
+ms.topic: how-to
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 04/01/2023

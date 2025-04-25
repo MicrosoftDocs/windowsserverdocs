@@ -3,7 +3,7 @@ title: Virtual machines configured with a virtual Fibre Channel adapter should b
 description: Learn what to do when one or more virtual machines lack a highly available connection to Fibre Channel-based storage because those virtual machines are configured with a virtual Fibre Channel adapter that is connected to only one host bus adapter (HBA).
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 73127bdd-8086-4268-a93c-2fdf1623e91b
 ms.date: 8/16/2016
 ---
