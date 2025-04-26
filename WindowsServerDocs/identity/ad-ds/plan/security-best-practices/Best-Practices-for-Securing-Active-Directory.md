@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: mosagie
 manager: daveba
 ms.date: 10/11/2023
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Best Practices for Securing Active Directory

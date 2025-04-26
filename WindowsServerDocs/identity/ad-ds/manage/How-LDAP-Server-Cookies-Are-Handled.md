@@ -4,7 +4,7 @@ title: How LDAP server cookies are handled
 author: iainfoulds
 ms.author: justinha
 ms.date: 04/01/2023
-ms.topic: article
+ms.topic: concept-article
 ms.custom: inhenkel
 ---
 
