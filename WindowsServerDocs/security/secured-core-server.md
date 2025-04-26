@@ -137,7 +137,7 @@ monitoring by IT and SecOps teams.
 
 You can find hardware certified for Secured-core server from the
 [Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Local servers in the
-[Azure Local Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
+[Azure Local Catalog](https://azurelocalsolutions.azure.microsoft.com/#/catalog?FeatureSupported=securedCoreServer).
 These certified servers come fully equipped with industry-leading security mitigations built into the
 hardware, firmware, and the operating system to help thwart some of the most advanced attack
 vectors.
