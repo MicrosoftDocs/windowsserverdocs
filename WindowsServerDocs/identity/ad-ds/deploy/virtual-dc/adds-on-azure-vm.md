@@ -5,7 +5,7 @@ author: justinha
 ms.author: justinha
 manager: femila
 ms.date: 03/18/2025
-ms.topic: article
+ms.topic: install-set-up-deploy
 ---
 
 # Install a new Active Directory forest using Azure CLI
