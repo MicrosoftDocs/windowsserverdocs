@@ -47,7 +47,7 @@ The following table lists the maximum suggested number of users per virtual cent
 | Light | 6 | 8 vCPUs, 16-GB RAM, 32-GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
 | Medium | 4 | 8 vCPUs, 16-GB RAM, 32-GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
 | Heavy | 2 | 8 vCPUs, 16-GB RAM, 32-GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
-| Power | 1 | 6 vCPUs, 56-GB RAM, 340-GB storage | D16ds_v5, D16s_v4, D16as_v4, NV6, NV16as_v4 | 30 GB |
+| Power | 1 | 16 vCPUs, 56-GB RAM, 340-GB storage | D16ds_v5, D16s_v4, D16as_v4, NV6, NV16as_v4 | 30 GB |
 
 For multi-session workloads, you should limit VM size to between 4 vCPUs and 24 vCPUs for the following reasons:
 
