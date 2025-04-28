@@ -4,7 +4,7 @@ description: How to find and understand the different health and operational sta
 author: robinharwood
 ms.author: roharwoo
 ms.date: 12/06/2019
-ms.topic: article
+ms.topic: troubleshooting-general
 manager: brianlic
 ---
 # Troubleshoot Storage Spaces and Storage Spaces Direct health and operational states

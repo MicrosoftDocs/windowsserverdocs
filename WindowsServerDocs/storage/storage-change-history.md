@@ -1,7 +1,7 @@
 ---
 ms.assetid: 87174225-a60f-4718-b4cc-9b172f205b72
 title: Change history for storage topics
-ms.topic: article
+ms.topic: whats-new
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

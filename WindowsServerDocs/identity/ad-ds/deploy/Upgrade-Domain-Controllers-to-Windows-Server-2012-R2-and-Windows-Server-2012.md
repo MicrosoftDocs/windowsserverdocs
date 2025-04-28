@@ -4,7 +4,7 @@ description: Learn more about upgrading domain controllers to Windows Server 201
 ms.author: justinha
 author: iainfoulds
 ms.date: 05/16/2023
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ms.custom: inhenke
 ---
 

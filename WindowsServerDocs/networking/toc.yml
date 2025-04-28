@@ -262,6 +262,8 @@ items:
       items:
       - name: DHCP failover overview
         href: technologies/dhcp/dhcp-failover.md
+      - name: Manage DHCP failover relationships
+        href: technologies/dhcp/manage-dhcp-failover-relationships.md
       - name: Replicate DHCP failover settings
         href: technologies/dhcp/replicate-dhcp-failover.md  
       - name: DHCP failover events

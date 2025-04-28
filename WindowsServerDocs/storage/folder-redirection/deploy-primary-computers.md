@@ -1,7 +1,7 @@
 ---
 title: Deploy primary computers for Folder Redirection and Roaming User Profiles
 description: How to enable primary computer support and designate primary computers for users with Folder Redirection and Roaming User Profiles.
-ms.topic: article
+ms.topic: install-set-up-deploy
 author: robinharwood
 ms.author: roharwoo
 ms.date: 06/06/2019

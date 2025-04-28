@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Create a security group for guarded hosts and register the group with HGS"
 title: Create a security group for guarded hosts and register the group with HGS
-ms.topic: article
+ms.topic: how-to
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill
 author: robinharwood

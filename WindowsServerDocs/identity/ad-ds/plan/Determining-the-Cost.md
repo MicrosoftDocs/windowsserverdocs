@@ -4,7 +4,7 @@ title: Determining the Cost
 author: iainfoulds
 ms.author: justinha
 ms.date: 05/16/2023
-ms.topic: article
+ms.topic: concept-article
 ms.custom: inhenkel
 
 ---

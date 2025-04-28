@@ -5,7 +5,7 @@ ms.date: 03/20/2023
 author: robinharwood
 manager: elizapo
 ms.author: jgerend
-ms.topic: conceptual
+ms.topic: troubleshooting-problem-resolution
 ---
 
 # SMB: File and printer sharing ports should be open

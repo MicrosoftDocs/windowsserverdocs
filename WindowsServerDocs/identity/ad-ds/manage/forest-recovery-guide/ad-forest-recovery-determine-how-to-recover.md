@@ -4,7 +4,7 @@ description: Recovering an entire Active Directory forest involves restoring at 
 ms.author: mosagie
 author: robinharwood
 ms.date: 07/10/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Determine how to recover the forest

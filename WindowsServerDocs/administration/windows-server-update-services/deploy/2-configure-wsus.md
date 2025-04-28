@@ -1,7 +1,7 @@
 ---
 title: Step 2 - Configure WSUS
 description: See how to configure a Windows Server Update Services (WSUS) server and how to configure client computers to receive updates from the WSUS server.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
 ms.author: jgerend
 author: robinharwood

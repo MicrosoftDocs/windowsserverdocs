@@ -2,7 +2,7 @@
 title: Verify Server Enrollment of a Server Certificate
 description: Learn how to verify that your Network Policy Server servers have enrolled a server certificate from the certification authority.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: bd80a018-5a30-47c3-89fc-aacb9f5ad298
 ms.author: roharwoo
 author: robinharwood
