@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Initialize the HGS cluster using AD mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using AD mode in a new dedicated forest (default)
-ms.topic: article
+ms.topic: how-to
 manager: dongill
 author: robinharwood
 ms.author: mosagie
