@@ -4,7 +4,8 @@ title: Learn about upgrading your domain and forest functional levels in Active 
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024
-ms.topic: upgrade-and-migration-article
+ms.topic: concept-article
+
 ---
 
 # Identifying your functional level upgrade
