@@ -4,7 +4,7 @@ title: The Role of the Claim Rule Language
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ms.topic: article
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ---

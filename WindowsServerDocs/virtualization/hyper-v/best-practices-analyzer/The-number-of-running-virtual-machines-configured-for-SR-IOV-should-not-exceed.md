@@ -3,7 +3,7 @@ title: The number of running virtual machines configured for SR-IOV should not e
 description: Learn what to do when there are not enough virtual functions available for the number of running virtual machines configured for single-root I/O virtualization (SR-IOV).
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 8bd4af5e-9e7d-4710-8950-39435a8bb373
 ms.date: 8/16/2016
 ---

@@ -1,7 +1,7 @@
 ---
 title: Set up hosts for live migration without Failover Clustering
 description: Gives instructions for setting up live migration in a non-clustered environment
-ms.topic: article
+ms.topic: how-to
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 ms.author: mosagie
 author: meaghanlewis

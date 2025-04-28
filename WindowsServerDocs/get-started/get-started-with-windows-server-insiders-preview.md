@@ -25,7 +25,7 @@ The following keys are valid only for preview builds:
 |Azure Edition|Keys aren't accepted|
 
 > [!NOTE]
-> Downloads may be restricted in certain countries. To learn more, see [Microsoft suspends new sales in Russia](https://blogs.microsoft.com/on-the-issues/2022/03/04/microsoft-suspends-russia-sales-ukraine-conflict/).
+> Downloads may be restricted in certain countries/regions. To learn more, see [Microsoft suspends new sales in Russia](https://blogs.microsoft.com/on-the-issues/2022/03/04/microsoft-suspends-russia-sales-ukraine-conflict/).
 
 ## Insiders Preview known issues
 

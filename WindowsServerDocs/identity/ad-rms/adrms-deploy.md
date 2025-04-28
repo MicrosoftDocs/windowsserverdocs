@@ -5,7 +5,7 @@ title: Upgrading AD RMS to Windows Server 2016
 author: msmbaldwin
 ms.author: alalve
 ms.date: 05/30/2019
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Upgrading AD RMS to Windows Server 2016

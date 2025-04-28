@@ -1,7 +1,7 @@
 ---
 title: Develop a tool extension
 description: Develop a tool extension Windows Admin Center SDK (Project Honolulu)
-ms.topic: article
+ms.topic: how-to
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 09/18/2018

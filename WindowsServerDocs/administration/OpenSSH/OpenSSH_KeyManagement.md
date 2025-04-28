@@ -2,7 +2,7 @@
 title: Key-based authentication in OpenSSH for Windows
 description: Find out about OpenSSH Server key-based authentication, generation, and deployment for Windows. See how to use built-in Windows tools or PowerShell to manage keys.
 ms.date: 03/11/2025
-ms.topic: conceptual
+ms.topic: article
 ms.author: roharwoo
 author: maertendmsft
 # customer intent: As an administrator, I want to become familiar with OpenSSH Server key-based authentication so that I can improve the security of cross-domain work.

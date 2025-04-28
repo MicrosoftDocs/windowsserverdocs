@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
-ms.topic: article
+ms.topic: install-set-up-deploy
 ---
 
 # Install a New Windows Server 2012 Active Directory Forest (Level 200)

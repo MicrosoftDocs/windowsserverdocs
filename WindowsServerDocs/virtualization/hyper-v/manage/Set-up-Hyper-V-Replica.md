@@ -1,7 +1,7 @@
 ---
 title: Set up Hyper-V Replica
 description: Gives instructions for setting up Replica, testing failover, and doing a first replication.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 ms.author: daknappe
 author: meaghanlewis

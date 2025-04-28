@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: alalve
 manager: daveba
 ms.date: 08/03/2023
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Audit Policy Recommendations

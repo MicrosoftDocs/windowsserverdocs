@@ -6,7 +6,8 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
-ms.topic: article
+ms.topic: how-to
+
 ---
 
 # Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)

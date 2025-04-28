@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 01/20/2024
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Appendix D: Securing Built-in Administrator Accounts in Active Directory
