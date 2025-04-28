@@ -1,7 +1,7 @@
 ---
 title: What is Windows Admin Center
 description: What is Windows Admin Center (Project Honolulu)
-ms.topic: article
+ms.topic: concept-article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 01/02/2024

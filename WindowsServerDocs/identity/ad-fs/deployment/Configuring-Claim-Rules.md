@@ -4,7 +4,7 @@ ms.assetid: 46dce9d4-7293-4b1c-9710-78b04f2e347a
 title: Configuring Claim Rules
 author: billmath
 manager: femila
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

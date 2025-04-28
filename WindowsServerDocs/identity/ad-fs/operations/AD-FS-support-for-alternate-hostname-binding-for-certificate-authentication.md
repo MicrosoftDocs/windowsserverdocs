@@ -4,7 +4,7 @@ description: Learn how AD FS supports alternate hostname binding for certificate
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/24/2024
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

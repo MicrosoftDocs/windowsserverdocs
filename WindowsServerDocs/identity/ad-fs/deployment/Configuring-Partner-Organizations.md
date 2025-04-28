@@ -4,7 +4,7 @@ ms.assetid: 4d002764-58b4-4137-9c86-1e55b02e07ce
 title: Configuring Partner Organizations
 author: billmath
 manager: femila
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ms.topic: article
 ms.author: billmath
 ---

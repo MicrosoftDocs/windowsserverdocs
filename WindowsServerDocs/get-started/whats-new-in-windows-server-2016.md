@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server 2
 ms.topic: article
 author: robinharwood
 ms.author: alalve
-ms.date: 07/31/2024
+ms.date: 04/08/2025
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -38,16 +38,16 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - Discrete device assignment lets you give a virtual machine (VM) direct and exclusive access to certain PCIe hardware devices. This feature bypasses the Hyper-V virtualization stack, which results in faster access. For more information, see [Discrete device assignment](../virtualization/hyper-v/System-requirements-for-Hyper-V-on-Windows.md#discrete-device-assignment) and [Discrete Device Assignment - Description and background](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-description-and-background/ba-p/382262).
 
-- Hyper-V now supports BitLocker drive encryption for operating system disks in generation 1 VMs. This protection method replaces virtual Trusted Platform Modules (TPMs), which are only available in generation 2 VMs. To decrypt the disk and start the VM, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the VM's guardians. Key storage requires a version 8 VM. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+- Hyper-V now supports BitLocker drive encryption for operating system (OS) disks in generation 1 VMs. This protection method replaces virtual Trusted Platform Modules (TPMs), which are only available in generation 2 VMs. To decrypt the disk and start the VM, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the VM's guardians. Key storage requires a version 8 VM. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 
 - Host resource protection prevents VMs from using too many system resources by tracking excessive levels of activity. When monitoring detects an unusually high activity level in a VM, it throttles the amount of resources the VM consumes. You can enable this feature by running the [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor) cmdlet in PowerShell.
 
-- You can now use hot add or remove to add or remove network adapters while the VM is running without downtime in generation 2 VMs running either Linux or Windows operating systems. You can also adjust how much memory is assigned to a VM while it's running even if you haven't enabled Dynamic Memory on both generation 1 and 2 VMs running Windows Server 2016 and later or Windows 10 and later.
+- You can now use hot add or remove to add or remove network adapters while the VM is running without downtime in generation 2 VMs running either Linux or Windows OSs. You can also adjust how much memory is assigned to a VM while it's running even if Dynamic Memory isn't enabled on both generation 1 and 2 VMs running Windows Server 2016 and later or Windows 10 and later.
 
 - Hyper-V Manager now supports the following features:
 
   - Alternate credentials, which let you use a different set of credentials in Hyper-V Manager when connecting to another Windows Server 2016 or Windows 10 remote host. You can also save these credentials to make signing in easier.
-  
+
   - You can now manage Hyper-V on machines running Windows Server 2012 R2, Windows Server 2012, Windows 8.1, and Windows 8.
 
   - Hyper-V Manager now communicates with remote Hyper-V hosts using the WS-MAN protocol, which permits CredSSP, Kerberos, and NTLM authentication. When you use CredSSP to connect to a remote Hyper-V host, you can perform a live migration without enabling constrained delegation in Active Directory. WS-MAN also makes it easier to enable hosts for remote management. WS-MAN connects over port 80, which is open by default.
@@ -57,9 +57,9 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
     > [!IMPORTANT]
     > Hyper-V for Windows Server 2016 no longer includes the vmguest.iso image file because it's no longer required.
 
-- Linux operating systems running on generation 2 VMs can now boot with the Secure Boot option enabled. The OSes that support Secure Boot on Windows Server 2016 hosts include Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later. Before you boot the VM for the first time, you must configure it to use the Microsoft UEFI Certificate Authority in either Hyper-V Manager, Virtual Machine Manager, or by running the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) cmdlet in PowerShell.
+- Linux OSs running on generation 2 VMs can now boot with the Secure Boot option enabled. The OSs that support Secure Boot on Windows Server 2016 hosts include Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later. Before you boot the VM for the first time, you must configure it to use the Microsoft UEFI Certificate Authority in either Hyper-V Manager, Virtual Machine Manager, or by running the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) cmdlet in PowerShell.
 
-- Generation 2 VMs and Hyper-V hosts can now use significantly more memory and virtual processors. You can also configure hosts with more memory and virtual processors than previous versions. These changes support scenarios such as running large in-memory databases for online transaction processing (OLTP) and data warehousing (DW) for e-commerce. For more information, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://www.microsoft.com/windows-server/blog/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). Learn more about version compatibility and supported maximum configurations at [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md) and [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+- Generation 2 VMs and Hyper-V hosts can now use more memory and virtual processors. You can also configure hosts with more memory and virtual processors than previous versions. These changes support scenarios such as running large in-memory databases for online transaction processing (OLTP) and data warehousing (DW) for e-commerce. For more information, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://www.microsoft.com/windows-server/blog/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). To earn more about version compatibility and supported maximum configurations, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md) and [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
 
 - The Nested Virtualization feature lets you use a VM as a Hyper-V host and create VMs within the virtualized host. You can use this feature to build development and test environments running at least Windows Server 2016 or Windows 10 with an Intel VT-x capable processor. For more information, see [What is Nested Virtualization?](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
 
@@ -71,11 +71,11 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 - You can now resize shared virtual hard disks (`.vhdx` files) for guest clustering without downtime. You can also use guest clusters to protect shared virtual hard disks by using Hyper-V Replica for disaster recovery. You can only use this feature on collections in a guest cluster that you've enabled replication through Windows Management Instrumentation (WMI). For more information, see [Msvm_CollectionReplicationService class](/previous-versions/windows/desktop/clushyperv/msvm-collectionreplicationservice) and [Virtual Hard Disk Sharing Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281956(v=ws.11)).
 
   > [!NOTE]
-  > Managing replication of a collection is not possible via PowerShell cmdlets or using the WMI interface.
+  > Managing replication of a collection isn't possible via PowerShell cmdlets or using the WMI interface.
 
 - When backing up a single virtual machine, we don't recommend using a VM group or snapshot collection regardless of whether the host is clustered or not. These options are intended for backing up guest clusters that use a shared vhdx. Instead, we recommend taking a snapshot using the [Hyper-V WMI provider (V2)](/windows/win32/hyperv_v2/windows-virtualization-portal).
 
-- You can now create shielded Hyper-V VMs that include features that prevent Hyper-V admins on the host or malware from inspecting, tampering with, or stealing data from the shielded VM state. Data and state are encrypted so that Hyper-V admins can't see video output and available disks. You can also restrict the VMs to only run on hosts that a Host Guardian Server has determined are healthy and trustworthy. For more information, see [Guarded fabric and shielded VMs overview](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md).
+- You can now create shielded Hyper-V VMs that include features to prevent Hyper-V admins on the host or malware from inspecting or tampering with the shielded VM state. These features also protect against data theft from the shielded VM state. Data and state are encrypted so that Hyper-V admins can't see video output and available disks. You can also restrict the VMs to only run on hosts that a Host Guardian Server determines are healthy and trustworthy. For more information, see [Guarded fabric and shielded VMs overview](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md).
 
   > [!NOTE]
   > Shielded VMs are compatible with Hyper-V Replica. To replicate a shielded virtual machine, you must authorize the host you want to replicate to run that shielded VM.
@@ -94,14 +94,13 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 - You can now run cmdlets using Windows PowerShell Direct to configure your VM from the host machine as an alternative to VMConnect or Remote PowerShell. You don't need to meet any networking or firewall requirements or have a special remote management configuration in order to start using it. For more information, see [Manage Windows virtual machines with PowerShell Direct](../virtualization/hyper-v/manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md).
 
 ### Nano Server
-
-Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality and support for different Windows Server editions. For more information, see [Install Nano Server](/previous-versions/windows-server/it-pro/windows-server-2016/get-started/getting-started-with-nano-server).
+Nano Server now includes an updated module for building Nano Server images. This update provides more separation of physical host and guest virtual machine functionality and adds support for different Windows Server editions. For more information, see [Install Nano Server](/previous-versions/windows-server/it-pro/windows-server-2016/get-started/getting-started-with-nano-server).
 
 There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules and the ability to repair WinRM configuration.
 
 ### Shielded Virtual Machines
 
-Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to protect any Generation 2 virtual machine from a compromised fabric. Among the features introduced in Windows Server 2016 are the following:
+Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to protect any Generation 2 virtual machine from a compromised fabric. Some of the key features introduced in Windows Server 2016 include:
 
 - A new **Encryption Supported** mode that offers more protections than for an ordinary virtual machine, but less than **Shielded** mode, while still supporting vTPM, disk encryption, Live Migration traffic encryption, and other features, including direct fabric administration conveniences such as virtual machine console connections and PowerShell Direct.
 
@@ -137,7 +136,7 @@ Privileged access management (PAM) helps mitigate security concerns in Active Di
 
 - New shadow security principals, or groups, provisioned in the bastion forest by MIM in response to administrative privilege requests. The shadow security groups have an attribute that references the SID of an administrative group in an existing forest. This allows the shadow group to access resources in existing forests without changing any access control lists (ACLs).
 
-- An expiring links feature, which enables limited time memberships to a shadow group. You can add users to the group for a set amount of time that allows them to perform administrative tasks. The limited time membership is configured by a time-to-live (TTL) value that's propagated to Kerberos ticket lifetime.
+- An expiring links feature that allows users to temporarily join a shadow group for a specified duration, enabling them to perform administrative tasks. The membership duration is controlled by a time-to-live (TTL) value, which also determines the Kerberos ticket's validity period.
 
   >[!NOTE]
   >Expiring links are available on all linked attributes. However, only the *member/memberOF* linked attribute relationship between a group and a user comes preconfigured with PAM to use the expiring links feature.
@@ -180,7 +179,7 @@ Microsoft Entra join enhances identity experiences for enterprise, business, and
 
 Windows Hello for Business is a key-based authentication approach for organizations and consumers that goes beyond passwords. This form of authentication relies on credentials that are resistant to breaches, theft, and phishing.
 
-The user signs in to the device with a biometric or PIN linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), by phone, or a different notification mechanism.
+The user signs in to the device with a biometric or PIN linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides sign in information through One Time Password (OTP), by phone, or a different notification mechanism.
 
 For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/).
 
@@ -201,7 +200,7 @@ Active Directory Federation Services (AD FS) in Windows Server 2016 includes new
 
 ### Web Application Proxy
 
-The latest version of Web Application Proxy focuses on new features that enable publishing and pre-authentication for more applications and improved user experience. Check out the full list of new features that includes pre-authentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md).
+The latest version of Web Application Proxy focuses on new features that enable publishing and pre-authentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md).
 
 ## Administration
 
@@ -245,10 +244,10 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
   - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
-  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more details, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
+  - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more information, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
   - Virtual machine multi-queues (VMMQs) improve on VMQ through put by allocating multiple hardware queues per VM. The default queue becomes a set of queues for a VM and spreads traffic between the queues.
-  
+
   - Quality of service (QoS) for software-defined networks manages the default class of traffic through the virtual switch within the default class bandwidth.
 
 - Network Function Virtualization (NFV), which lets you mirror or route network functions performed by hardware appliances to virtual appliances, such as load balancers, firewalls, routers, switches, and so on. You can also deploy and manage your entire SDN stack using System Center Virtual Machine Manager. You can manage Windows Server container networking with Docker and associate SDN policies with both virtual machines and containers.
@@ -275,9 +274,9 @@ Windows Server 2016 includes the following cloud scale fundamentals:
 
 ### TCP performance improvements
 
-The default Initial Congestion Window (ICW) has been increased from 4 to 10 and TCP Fast Open (TFO) has been implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
+The default Initial Congestion Window (ICW) have increased from 4 to 10 and TCP Fast Open (TFO) is implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
 
-In order to improve TCP behavior when recovering from packet loss, we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
+In order to improve TCP behavior when recovering from packet loss, TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK) are implemented. TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
 
 ### Dynamic Host Configuration Protocol (DHCP)
 
@@ -301,22 +300,22 @@ RAS Gateway now supports high availability Generic Routing Encapsulation (GRE) t
 
 IPAM has the following updates:
 
-- Enhanced IP address management. IPAM has improved capabilities for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.
+- Enhanced IP address management. IPAM capabilities are improved for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.
 
-- You can now run the `Find-IpamFreeSubnet` cmdlet to find available subnets for allocation. This function doesn't allocate the subnets, only reports their availability. However, you can pipe the cmdlet output to the `Add-IpamSubnet` cmdlet to create a subnet. For more information, see [Find-IpamFreeSubnet](/powershell/module/ipamserver/Find-IpamFreeSubnet).
+- You can now run the `Find-IpamFreeSubnet` cmdlet to find available subnets for allocation. This function doesn't allocate the subnets and only reports their availability. However, you can pipe the cmdlet output to the `Add-IpamSubnet` cmdlet to create a subnet. For more information, see [Find-IpamFreeSubnet](/powershell/module/ipamserver/Find-IpamFreeSubnet).
 
 - You can now run the `Find-IpamFreeRange` cmdlet to find available IP address ranges within an IP block, prefix length, and number of requested subnets. This cmdlet doesn't allocate the IP address range, only reports their availability. However, you can pipe the output into the `AddIpamRange` cmdlet to create the range. For more information, see [Find-IpamFreeRange](/powershell/module/ipamserver/Find-IpamFreeRange).
 
 - Enhanced DNS service management:
 
   - DNS resource records collection for non-DNSSEC DNS servers.
-  
+
   - Configuring properties and operations on all types of non-DNSSEC Resource Records.
-  
+
   - DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers. You can manage all types of DNS zones, including Primary, Secondary, and Stub zones.
-  
-  - Trigger tasks on Secondary and Stub zones regardless of whether they're forward or reverse lookup zones.
-  
+
+  - Trigger tasks on Secondary and Stub zones regardless of whether it's forward or reverse lookup zones.
+
   - Role-based access control for supported DNS configurations for records and zones.
 
   - Conditional forwarders
@@ -335,9 +334,9 @@ For more information, see [Manage IPAM](../networking/technologies/ipam/Manage-I
 
 The [Security and Assurance area](../security/Security-and-Assurance.yml) Includes security solutions and features for the IT professional to deploy in your data center and cloud environment. For information about security in Windows Server 2016 generally, see [Security and Assurance](../security/Security-and-Assurance.yml).
 
-### Just Enough Administration
+### Just Enough Administration (JEA)
 
-Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. Capabilities include support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more information, see [JEA on GitHub](https://aka.ms/JEA).
+JEA in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. Capabilities include support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more information, see [JEA on GitHub](https://aka.ms/JEA).
 
 ### Credential Guard
 
@@ -386,7 +385,7 @@ From the Active Directory Administrative Center, right-click on the domain in th
 
 ### Allowing network NTLM when user is restricted to specific domain-joined devices
 
-DCs can now support allowing network NTLM when a user is restricted to specific domain-joined devices in the Windows Server 2016 DFL and higher. This feature is unavailable in DFLs running an earlier operating system than Windows Server 2016.
+DCs can now support allowing network NTLM when a user is restricted to specific domain-joined devices in the Windows Server 2016 DFL and higher. This feature is unavailable in DFLs running an earlier OS than Windows Server 2016.
 
 To configure this setting, in the authentication policy, select **Allow NTLM network authentication when the user is restricted to selected devices**.
 
@@ -398,7 +397,7 @@ Device Guard provides kernel mode code integrity (KMCI) and user mode code integ
 
 ### Windows Defender
 
-[Windows Defender Overview for Windows Server 2016](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware isn't installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.
+[Windows Defender Overview for Windows Server 2016](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Anti-malware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Anti-malware isn't installed. However, Windows Server Anti-malware updates anti-malware definitions and protects the computer without the user interface. If you need the user interface for Windows Server Anti-malware, you can install it after the OS installation by using the Add Roles and Features Wizard.
 
 ### Control Flow Guard
 
@@ -412,7 +411,7 @@ Control Flow Guard (CFG) is a platform security feature that was created to comb
 
 Storage Spaces Direct enables building highly available and scalable storage using servers with local storage. It simplifies deploying and managing software-defined storage systems and lets you use new classes of disk devices, such as SATA SSDs and NVMe disk devices, that previously weren't available with clustered Storage Spaces with shared disks.
 
-For more details, see [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview).
+For more information, see [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview).
 
 ### Storage Replica
 
@@ -444,11 +443,11 @@ As of Windows Server 2016, Data Deduplication uses stream map structures and oth
 
 #### Support for Nano Server
 
-Nano Server is a headless deployment option in Windows Server 2016 that requires a far smaller system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Nano Server also fully supports Data Deduplication. For more information about Nano Server, see [Container Base Images](/virtualization/windowscontainers/manage-containers/container-base-images).
+Nano Server is a headless deployment option in Windows Server 2016 that requires a far smaller system resource footprint, starts up faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Nano Server also fully supports Data Deduplication. For more information about Nano Server, see [Container Base Images](/virtualization/windowscontainers/manage-containers/container-base-images).
 
 #### Simplified configuration for Virtualized Backup Applications
 
-Starting with Windows Server 2016, Data Deduplication for Virtualized Backup Applications scenarios are vastly simplified. This scenario is now a predefined Usage Type option. You no longer need to manually tune the deduplication settings, just enable Deduplication for a volume just like you would General Purpose File Server and Virtual Desktop Infrastructure (VDI).
+Starting with Windows Server 2016, Data Deduplication for Virtualized Backup Applications scenarios is vastly simplified. This scenario is now a predefined Usage Type option. You no longer need to manually tune the deduplication settings, just enable Deduplication for a volume just like you would General Purpose File Server and Virtual Desktop Infrastructure (VDI).
 
 #### Cluster OS Rolling Upgrade support
 
@@ -461,7 +460,7 @@ You can also now use rolling upgrades on Hyper-V. With Rolling Hyper-V Cluster u
 
 ### SMB hardening improvements for SYSVOL and NETLOGON connections
 
-In Windows 10 and Windows Server 2016, client connections to the Active Directory Domain Services used SYSVOL and NETLOGON shares on domain controllers by default. Now these connections require SMB signing and mutual authentication using services such as Kerberos. If SMB signing and mutual authentication are unavailable, a Windows 10 or Windows Server 2016 computer won't process domain-based Group Policy and scripts. This change protects devices from adversary-in-the-middle attacks.
+In Windows 10 and Windows Server 2016, client connections to the Active Directory Domain Services used SYSVOL and NETLOGON shares on domain controllers by default. Now these connections require SMB signing and mutual authentication using services such as Kerberos. If SMB signing and mutual authentication are unavailable, a Windows 10 or Windows Server 2016 computer doesn't process domain-based Group Policy and scripts. This change protects devices from adversary-in-the-middle attacks.
 
 > [!NOTE]
 > The registry values for these settings aren't present by default, but the hardening rules still apply until you override them by editing Group Policy or other registry values.
@@ -478,7 +477,7 @@ The next iteration of ReFS provides support for large-scale storage deployments 
 
 ReFS introduces the following improvements:
 
-- New storage tier functionality, delivering faster performance and increased storage capacity, including the following:
+- New storage tier functionality, delivering faster performance and increased storage capacity, including:
 
   - Multiple resiliency types on the same virtual disk using mirroring in the performance tier and parity in the capacity tier.
 
@@ -494,7 +493,7 @@ Windows Server 2016 includes many new features and enhancements for multiple ser
 
 ### Cluster Operating System Rolling Upgrade
 
-Cluster Operating System Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or Scale-Out File Server workloads. You can use this feature to avoid downtime penalties against Service Level Agreements (SLAs).
+Cluster Operating System Rolling Upgrade enables an administrator to upgrade the OS of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or Scale-Out File Server workloads. You can use this feature to avoid downtime penalties against Service Level Agreements (SLAs).
 
 For more information, see [Cluster Operating System Rolling Upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
 
@@ -518,17 +517,17 @@ Windows Server 2016 includes increased virtual machine (VM) compute resiliency t
 
 For more information about compute resiliency features, see [Virtual Machine Compute Resiliency in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/virtual-machine-compute-resiliency-in-windows-server-2016/ba-p/372027).
 
-Windows Server 2016 VMs also include new storage resiliency features for handling transient storage failures. Improved resiliency helps preserve tenant VM session states in the event of a storage disruption. When a VM disconnects from its underlying storage, it pauses and waits for storage to recover. While paused, the VM retains the context of applications that were running in it at the time of the storage failure. When the connection between the VM and storage is restored, the VM returns to its running state. As a result, the tenant machine's session state is retained on recovery.
+Windows Server 2016 VMs also include new storage resiliency features for handling transient storage failures. Improved resiliency helps preserve tenant VM session states if a storage disruption occurs. When a VM disconnects from its underlying storage, it pauses and waits for storage to recover. While paused, the VM retains the context of applications that were running in it at the time of the storage failure. When the connection between the VM and storage is restored, the VM returns to its running state. As a result, the tenant machine's session state is retained on recovery.
 
 The new storage resiliency features also apply to guest clusters.
 
 ### Diagnostic improvements
 
-To help diagnose issues with failover clusters, Windows Server 2016 includes the following:
+To help diagnose issues with failover clusters, Windows Server 2016 includes:
 
 - Several enhancements to cluster log files, such as Time Zone Information and DiagnosticVerbose log, make it easier to troubleshoot failover clustering issues. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372005).
 
-- A new type of active memory dump filters out most memory pages allocated to VMs, making the memory.dmp file much smaller and easier to save or copy. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372008).
+- A new type of active memory dump filters out most memory pages allocated to VMs, making the memory.dmp file smaller and easier to save or copy. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372008).
 
 ### Site-aware failover clusters
 
@@ -571,7 +570,7 @@ New features provided by the IIS 10.0 web server in Windows Server 2016 include:
 - Support for Wildcard Host Headers, enabling administrators to set up a web server for a domain and then have the web server serve requests for any subdomain.
 - A new PowerShell module (IISAdministration) for managing IIS.
 
-For more details, see [IIS](https://iis.net/learn).
+For more information, see [IIS](https://iis.net/learn).
 
 ### Distributed Transaction Coordinator (MSDTC)
 
@@ -616,7 +615,7 @@ Windows Server 2016 includes new commands you can use to configure DNS in PowerS
 You can deploy DNS servers in Windows Server 2016 on a Nano Server image. This deployment option is available if you're using file-based DNS. By running DNS server on a Nano Server image, you can run your DNS servers with reduced footprint, quick boot up, and minimal patching.
 
 > [!NOTE]
-> Active Directory integrated DNS is not supported on Nano Server.
+> Active Directory integrated DNS isn't supported on Nano Server.
 
 ## DNS client
 
@@ -645,7 +644,7 @@ The Remote Desktop (RD) Connection Broker can now store all deployment informati
 
 ### Graphical improvements
 
-Discrete Device Assignment for Hyper-V lets you map graphics processing units (GPUs) on a host machine directly to a virtual machine (VM). Any applications on the VM that need more GPU than the VM can provide can use the mapped GPU instead. We also improved the RemoteFX vGPU, including support for OpenGL 4.4, OpenCL 1.1, 4K resolution, and Windows Server VMs. For more information, see [Discrete Device Assignment](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization).
+Discrete Device Assignment for Hyper-V lets you map graphics processing units (GPUs) on a host machine directly to a virtual machine (VM). Any applications on the VM that need more GPUs than the VM can provide can use the mapped GPU instead. We also improved the RemoteFX vGPU, including support for OpenGL 4.4, OpenCL 1.1, 4K resolution, and Windows Server VMs. For more information, see [Discrete Device Assignment](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization).
 
 ### RD Connection Broker improvements
 
@@ -667,7 +666,7 @@ Windows Server 2016 includes the following updates for Kerberos authentication.
 
 Key Distribution Centers (KDCs) now support public key mapping. If you provision a public key for an account, the KDC supports Kerberos PKInit explicitly using that key. Because there's no certificate validation, Kerberos supports self-signed certificates but doesn't support authentication mechanism assurance.
 
-Accounts you've configured to use Key Trust will only use Key Trust regardless of how you configured the UseSubjectAltName setting.
+Accounts you've configured to use Key Trust only uses Key Trust regardless of how you configured the UseSubjectAltName setting.
 
 ### Kerberos client and KDC support for RFC 8070 PKInit Freshness Extension
 
@@ -714,7 +713,7 @@ Domain controllers now support Key Trust account mapping and fallback to existin
   - If you configure a Key Trust for an account in Windows Server 2016 or later, then KDC uses the KeyTrust for mapping.
 
   - If there's no UPN in the SAN, KDC attempts to use the AltSecID for mapping.
-  
+
   - If there's a UPN in the SAN, KDC attempts to use the UPN for mapping.
 
 ## Active Directory Federation Services (AD FS)
@@ -811,10 +810,10 @@ For more information, see [Improved interoperability with SAML 2.0](../identity/
 
 ### Simplified password management for federated Microsoft 365 users
 
-You can configure AD FS to send password expiry claims to any relying party trusts or applications that it protects. How these claims appear varies between applications. For example, with Office 365 as your relying party, updates have been implemented to Exchange and Outlook to notify federated users of their soon-to-be-expired passwords.
+You can configure AD FS to send password expiry claims to any relying party trusts or applications that it protects. How these claims appear varies between applications. For example, with Office 365 as your relying party, updates are implemented to Exchange and Outlook to notify federated users of their soon-to-be-expired passwords.
 
 For more information, see [Configure AD FS to send password expiry claims](../identity/ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md).
 
 ### Moving from AD FS in Windows Server 2012 R2 to AD FS in Windows Server 2016 is easier
 
-Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and have removed the older servers, you can change the operational level to Windows Server 2016. For more information, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).
+Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and you removed the older servers, you can change the operational level to Windows Server 2016. For learn more, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).

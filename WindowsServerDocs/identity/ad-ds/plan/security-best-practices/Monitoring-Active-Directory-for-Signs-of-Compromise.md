@@ -4,7 +4,7 @@ title: Monitoring Active Directory for Signs of Compromise
 author: iainfoulds
 ms.author: justinha
 ms.date: 02/01/2023
-ms.topic: article
+ms.topic: concept-article
 ---
 # Monitoring Active Directory for Signs of Compromise
 

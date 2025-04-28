@@ -3,7 +3,7 @@ title: Integration services must be installed before primary or Replica virtual 
 description: Online version of the text for this Best Practices Analyzer rule, with links to more information.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: a7fdd185-d6c8-4f58-9b58-2df5827bb056
 ms.date: 8/16/2016
 ---

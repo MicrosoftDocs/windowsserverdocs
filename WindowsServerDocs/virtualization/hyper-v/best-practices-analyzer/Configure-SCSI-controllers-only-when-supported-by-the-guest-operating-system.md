@@ -3,7 +3,7 @@ title: Configure SCSI controllers only when supported by the guest operating sys
 description: Learn what to do when a virtual machine is configured with a SCSI controller that cannot be used because the guest operating system does not support SCSI controllers.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 861f194f-467e-4b07-a1c5-55b35f6327c4
 ms.date: 8/16/2016
 ---
