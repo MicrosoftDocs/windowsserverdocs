@@ -2,7 +2,7 @@
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Local and Azure Kubernetes Service (AKS) on Azure Local and Windows Server at no extra cost.
 ms.date: 03/10/2025
-ms.topic: conceptual
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ---

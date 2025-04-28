@@ -2,7 +2,7 @@
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment by confirming the make and model of your SSD, inspecting for faulty drives, and more.
 ms.author: roharwoo
-ms.topic: article
+ms.topic: troubleshooting-general
 author: robinharwood
 ms.date: 06/06/2023
 ---

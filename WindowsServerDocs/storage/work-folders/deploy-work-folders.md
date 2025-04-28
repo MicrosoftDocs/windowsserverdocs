@@ -1,7 +1,7 @@
 ---
 ms.assetid: d2429185-9720-4a04-ad94-e89a9350cdba
 title: Deploying Work Folders
-ms.topic: article
+ms.topic: install-set-up-deploy
 author: robinharwood
 ms.author: jgerend
 ms.date: 6/24/2017

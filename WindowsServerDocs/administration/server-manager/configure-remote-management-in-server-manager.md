@@ -1,7 +1,7 @@
 ---
 title: Configure remote Management in Server Manager
 description: Learn how to add the server to the Server Manager server pool to perform management tasks on remote servers.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
 ms.author: jgerend
 author: robinharwood

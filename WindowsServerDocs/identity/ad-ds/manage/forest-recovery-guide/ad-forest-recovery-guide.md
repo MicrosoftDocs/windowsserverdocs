@@ -4,7 +4,7 @@ description: This guide contains best-practice recommendations for recovering an
 ms.author: mosagie
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: troubleshooting
 ---
 
 # Active Directory Forest Recovery Guide

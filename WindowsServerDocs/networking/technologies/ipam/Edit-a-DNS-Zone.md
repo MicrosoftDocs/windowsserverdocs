@@ -2,7 +2,7 @@
 title: Edit a DNS Zone
 description: Learn how to edit a DNS zone in the IPAM client console.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
 ms.author: jgerend
 author: robinharwood

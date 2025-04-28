@@ -2,7 +2,7 @@
 title: STEP 4 Create the Network Load Balanced Remote Access Cluster
 description: Learn how to create and test a network load balanced Remote Access cluster.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
 ms.author: daknappe
 author: robinharwood

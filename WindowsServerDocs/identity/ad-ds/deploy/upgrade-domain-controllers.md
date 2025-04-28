@@ -5,7 +5,7 @@ ms.author: justinha
 author: robinharwood
 manager: daveba
 ms.date: 12/16/2021
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ---
 # Upgrade domain controllers to a newer version of Windows Server
 
