@@ -89,8 +89,8 @@ items:
       items:
       - name: Create a KMS host
         href: kms-create-host.md
-      - name: Migrate a KMS host
-        href: kms-host-migration.md
+      - name: Replace a KMS host
+        href: kms-replace-host.md
       - name: KMS client activation
         href: kms-client-activation-keys.md
     - name: Connect to Azure Arc

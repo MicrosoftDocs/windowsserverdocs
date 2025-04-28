@@ -1,13 +1,13 @@
 ---
 title: Replace a KMS host in Windows Server
-description: Learn how to replace your Key Management Services (KMS) host to another device in Windows Server.
+description: Learn how to replace your Key Management Services (KMS) host in Windows Server.
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 04/28/2025
+ms.date: 04/30/2025
 ---
 
-# Replace a KMS host on other devices
+# Replace a KMS host
 
 This article outlines the steps and best practices for migrating the Key Management Services (KMS) host role to a new server. Migrating the KMS host is often necessary when the existing host's operating system (OS) is approaching its end-of-support. It might also be required due to operational or organizational changes that mandate moving the role to a different server. The instructions in this guide provide a seamless migration process while maintaining uninterrupted activation services for Microsoft Windows and Microsoft Office clients. No data migration is required during this process as the KMS Host doesn't rely on any database or backup.
 
@@ -166,7 +166,7 @@ When the connection succeeds, the entry **TcpTestSucceeded** equals **True**, wh
 
 ## Register a KMS host
 
-Once the KMS host is configured for the Windows OS and Microsoft Office, there are two options available to test the KMS host registration.
+Once the KMS host is configured for the Windows OS and Microsoft Office, there are two options available to perform KMS host registration.
 
 # [Without DNS](#tab/nodns)
 
@@ -210,7 +210,7 @@ Register the new KMS host in DNS to enable automatic discovery by client machine
    cscript $env:windir\system32\slmgr.vbs /ato
    ```
 
-Check which clients are sending activation requests to the new KMS host:
+Check which devices are sending activation requests to the new KMS host:
 
 1. Right-click **Start**, then select **Event Viewer**.
 1. Expand **Applications and Services Logs**, then select **Key Management Service** to view the baseline.
