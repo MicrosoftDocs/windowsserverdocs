@@ -5,7 +5,7 @@ perform an authoritative restore of SYSVOL by using these alternative methods:
 ms.author: mosagie
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Perform a nonauthoritative restore of Active Directory Domain Services

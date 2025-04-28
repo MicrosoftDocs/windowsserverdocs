@@ -1,7 +1,7 @@
 ---
 title: DNS Forwarding in Windows Server
 description: Learn about DNS forwarding, including delegation, conditional forwarders, and intranet name resolution in Windows Server.
-ms.topic: conceptual
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/13/2025

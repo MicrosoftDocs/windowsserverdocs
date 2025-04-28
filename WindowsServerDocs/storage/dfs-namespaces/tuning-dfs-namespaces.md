@@ -2,7 +2,7 @@
 title: Tuning DFS Namespaces
 description: This article describes how to tune or optimize DFS namespaces
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

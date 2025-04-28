@@ -1,7 +1,7 @@
 ---
 title: Processor Power Management (PPM) tuning for the Windows Server balanced power plan
 description: Processor Power Management (PPM) Tuning for the Windows Server balanced power plan
-ms.topic: conceptual
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

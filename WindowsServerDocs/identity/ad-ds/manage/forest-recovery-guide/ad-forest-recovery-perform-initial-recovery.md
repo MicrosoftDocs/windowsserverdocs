@@ -4,7 +4,7 @@ description: Beginning with a writeable DC in the forest root domain, complete t
 ms.author: mosagie
 author: robinharwood
 ms.date: 07/10/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Perform the initial recovery
