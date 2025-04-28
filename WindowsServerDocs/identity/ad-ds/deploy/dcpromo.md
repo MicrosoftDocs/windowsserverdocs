@@ -5,7 +5,7 @@ ms.author: alalve
 author: xelu86
 manager: femila
 ms.date: 04/25/2024
-ms.topic: article
+ms.topic: reference
 ---
 
 # DCPROMO answer file syntax
