@@ -1,7 +1,7 @@
 ---
 title: Configure secure protocol options for Windows HTTP Services (WinHTTP)
 description: This article provides information about how to configure secure protocol options for Windows HTTP Services (WinHTTP).
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 03/27/2024

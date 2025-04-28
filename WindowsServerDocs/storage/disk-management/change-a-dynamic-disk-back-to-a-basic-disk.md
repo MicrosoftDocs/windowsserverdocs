@@ -2,7 +2,7 @@
 title: Change a dynamic disk back to a basic disk
 description: Learn how to convert a dynamic disk back to a basic disk by using Windows Disk Management or the command line.
 ms.date: 03/20/2023
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: jgerend

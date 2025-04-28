@@ -2,7 +2,7 @@
 title: Use DNS Policy for Application Load Balancing
 description: Learn how to learn how to configure DNS policy to perform application load balancing.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: roharwoo
 author: robinharwood

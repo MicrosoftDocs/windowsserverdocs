@@ -2,7 +2,7 @@
 title: Replicate Folder Targets using DFS Replication
 description: This article describes how to replicate folder targets using DFS Replication
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

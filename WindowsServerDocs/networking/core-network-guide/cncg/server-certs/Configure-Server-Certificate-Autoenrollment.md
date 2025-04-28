@@ -2,7 +2,7 @@
 title: Configure server certificate auto-enrollment
 description: Learn how to configure server certificate auto-enrollment and user certificate auto-enrollment.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
 ms.author: daknappe
 author: robinharwood
