@@ -4,7 +4,7 @@ description: Learn how to migrate your Key Management Services (KMS) host to ano
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 04/15/2025
+ms.date: 04/28/2025
 ---
 
 # Migrate a KMS host to other devices
@@ -93,21 +93,6 @@ Resolve-DnsName -Name _vlmcs._tcp.mydomain.com -Type SRV -Server 8.8.8.8
 
 ---
 
-## Prepare the KMS host
-
-Before configuring your environment as a KMS host, start with a clean installation of the target OS on the new server. To learn how to install your Windows Server OS, see [Install Windows Server from installation media](/windows-server/get-started/install-windows-server). Ensure that all available OS updates and security patches are applied and reboot as necessary.
-
-After preparing the host OS, the next step is to configure it to serve as a KMS host. Review the steps outlined in [How to create a Key Management Services (KMS) activation host](/windows-server/get-started/kms-create-host).
-
-If you're setting up a KMS host for Microsoft Office activation, other requirement considerations apply. This process involves installing the appropriate Volume License Pack for your Microsoft Office product, which in turn prompts for the Microsoft Office KMS host key activation. To learn more, see [Configure a KMS host computer to activate volume licensed versions of Office](/office/volume-license-activation/configure-a-kms-host-computer-for-office). Activation can be performed over the internet or manually via phone activation.
-
-It's essential to review the system requirements specific to each Microsoft Office Volume License Pack. On the download page, expand **System Requirements** and review the supported host OS for the following versions:
-
-- [Office LTSC 2024 Volume License Pack](https://www.microsoft.com/download/details.aspx?id=106246)
-- [Office LTSC 2021 Volume License Pack](https://www.microsoft.com/download/details.aspx?id=103446)
-- [Office 2019 Volume License Pack](https://www.microsoft.com/download/details.aspx?id=57342)
-- [Office 2016 Volume License Pack](https://www.microsoft.com/download/details.aspx?id=49164)
-
 ## Verify KMS host product activation
 
 To verify which products the current KMS host is activating and ensure the new KMS host activates the same Windows OS and Microsoft Office clients, run the following command:
@@ -121,6 +106,27 @@ cscript $env:windir\system32\slmgr.vbs /dlv All
 ```
 
 Check the output to determine whether the KMS host is processing activation requests for the Windows OS, Microsoft Office, or both. The partial product keys displayed can help you match these KMS host keys (CSVLK) with your records. Additionally, review the KMS Host Event log to identify which clients are sending activation requests to this KMS host.
+
+## Prepare the KMS host
+
+Before configuring your environment as a KMS host, start with a clean installation of the target OS on the new server. To learn how to install your Windows Server OS, see [Install Windows Server from installation media](/windows-server/get-started/install-windows-server). Ensure that all available OS updates and security patches are applied and reboot as necessary. There are two options available for setting up your KMS host.
+
+# [Windows OS KMS host](#tab/winoshost)
+
+After preparing the host OS, the next step is to configure it to serve as a KMS host. Review the steps outlined in [How to create a Key Management Services (KMS) activation host](/windows-server/get-started/kms-create-host).
+
+# [Microsoft Office KMS host](#tab/officehost)
+
+If you're setting up a KMS host for Microsoft Office activation, other requirement considerations apply. This process involves installing the appropriate Volume License Pack for your Microsoft Office product, which in turn prompts for the Microsoft Office KMS host key activation. To learn more, see [Configure a KMS host computer to activate volume licensed versions of Office](/office/volume-license-activation/configure-a-kms-host-computer-for-office). Activation can be performed over the internet or manually via phone activation.
+
+It's essential to review the system requirements specific to each Microsoft Office Volume License Pack. On the download page, expand **System Requirements** and review the supported host OS for the following versions:
+
+- [Office LTSC 2024 Volume License Pack](https://www.microsoft.com/download/details.aspx?id=106246)
+- [Office LTSC 2021 Volume License Pack](https://www.microsoft.com/download/details.aspx?id=103446)
+- [Office 2019 Volume License Pack](https://www.microsoft.com/download/details.aspx?id=57342)
+- [Office 2016 Volume License Pack](https://www.microsoft.com/download/details.aspx?id=49164)
+
+---
 
 ## Verify firewall settings
 
