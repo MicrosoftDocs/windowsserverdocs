@@ -4,7 +4,7 @@ description: Improve Windows Time synchronization tuning under reasonable operat
 author: xelu86
 ms.author: alalve
 ms.date: 02/25/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configuring systems for high accuracy
