@@ -244,6 +244,8 @@ To delete a failover relationship using the DHCP console, complete the following
 > [!NOTE]
 > If you remove the last DHCP scope from a failover relationship using the DHCP console, you're notified that the failover relationship can be deleted. The failover relationship isn't automatically removed. If you don't plan to reuse the relationship later, manually delete this relationship from either the primary DHCP server or the failover partner.
 
+---
+
 ## Related content
 
 [DHCP Failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
