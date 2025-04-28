@@ -3,7 +3,7 @@ title: What is Secured-core server for Windows Server
 description: Learn how Secured-core server by Windows Server hardware OEMs offers advanced protection of your operating system environment.
 author: roysasabe
 ms.author: roharwoo
-ms.topic: conceptual 
+ms.topic: concept-article
 ms.date: 04/06/2023
 ms.custom: template-overview, team=cloud_advocates, kr2b-contr-experiment
 ms.contributors: socuff-01282022

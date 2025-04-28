@@ -6,7 +6,7 @@ ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
-ms.topic: article
+ms.topic: concept-article
 ---
 # Creating a Site Link Design
 

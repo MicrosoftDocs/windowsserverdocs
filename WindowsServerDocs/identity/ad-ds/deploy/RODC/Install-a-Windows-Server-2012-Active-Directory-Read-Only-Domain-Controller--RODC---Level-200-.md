@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 05/16/2023
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.custom: inhenkel
 ---
 
