@@ -5,7 +5,6 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024
 ms.topic: concept-article
-
 ---
 
 # Identifying your functional level upgrade
