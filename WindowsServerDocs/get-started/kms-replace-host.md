@@ -1,13 +1,13 @@
 ---
-title: KMS host migration in Windows Server
-description: Learn how to migrate your Key Management Services (KMS) host to another device in Windows Server.
+title: Replace a KMS host in Windows Server
+description: Learn how to replace your Key Management Services (KMS) host to another device in Windows Server.
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
 ms.date: 04/28/2025
 ---
 
-# Migrate a KMS host to other devices
+# Replace a KMS host on other devices
 
 This article outlines the steps and best practices for migrating the Key Management Services (KMS) host role to a new server. Migrating the KMS host is often necessary when the existing host's operating system (OS) is approaching its end-of-support. It might also be required due to operational or organizational changes that mandate moving the role to a different server. The instructions in this guide provide a seamless migration process while maintaining uninterrupted activation services for Microsoft Windows and Microsoft Office clients. No data migration is required during this process as the KMS Host doesn't rely on any database or backup.
 
@@ -164,7 +164,7 @@ Test-NetConnection -ComputerName "MyDevice" -Port 1688
 
 When the connection succeeds, the entry **TcpTestSucceeded** equals **True**, while if the connection to port 1688 can’t be made (for instance, if no service is listening or because of a firewall or network issue) then **TcpTestSucceeded** equals **False**.
 
-## Test a KMS host
+## Register a KMS host
 
 Once the KMS host is configured for the Windows OS and Microsoft Office, there are two options available to test the KMS host registration.
 
