@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: daknappe
 manager: daveba
 ms.date: 09/26/2023
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Appendix B: Privileged Accounts and Groups in Active Directory

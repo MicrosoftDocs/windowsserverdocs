@@ -4,7 +4,7 @@ description: This article shows you how to export and import virtual machines us
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 02/18/2015
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
 ---
 

@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: mosagie
 manager: daveba
 ms.date: 08/23/2024
-ms.topic: article
+ms.topic: how-to
 ms.custom: inhenkel
 ---
 

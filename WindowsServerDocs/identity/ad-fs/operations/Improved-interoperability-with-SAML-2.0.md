@@ -5,7 +5,7 @@ title: Improved interoperability with SAML 2.0
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # Improved interoperability with SAML 2.0

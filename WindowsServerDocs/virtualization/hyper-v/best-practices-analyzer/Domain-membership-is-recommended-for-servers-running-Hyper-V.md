@@ -3,7 +3,7 @@ title: Domain membership is recommended for servers running Hyper-V
 description: Learn what to do when the server is a member of a workgroup.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 2f4578e5-0848-46b4-a50b-7dbd480b80bf
 ms.date: 8/16/2016
 ---

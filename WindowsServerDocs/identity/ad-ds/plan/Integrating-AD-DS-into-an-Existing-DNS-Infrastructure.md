@@ -6,7 +6,8 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 05/24/2023
-ms.topic: article
+ms.topic: best-practice
+
 ms.custom: inhenkel
 ---
 

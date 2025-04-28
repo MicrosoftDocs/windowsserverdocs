@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 01/30/2024
-ms.topic: article
+ms.topic: best-practice
 ms.custom: inhenkel, orthomas
 ---
 # Appendix C: Protected Accounts and Groups in Active Directory

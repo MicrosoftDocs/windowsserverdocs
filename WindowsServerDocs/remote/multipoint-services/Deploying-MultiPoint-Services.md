@@ -2,7 +2,7 @@
 title: Deploying MultiPoint Services
 description: Overview of the MultiPoint Services deployment process
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 594bc09e-5d2d-4984-a9de-79d40b1308d6
 author: evaseydl
 ms.author: daknappe

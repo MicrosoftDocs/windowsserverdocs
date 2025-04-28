@@ -3,7 +3,7 @@ title: Certificate-based authentication is recommended for replication
 description: Learn what to do when one or more virtual machines selected for replication are configured for Kerberos authentication.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: d931cc57-414f-4bdf-9ebd-08fd5e22b19d
 ms.date: 8/16/2016
 ---

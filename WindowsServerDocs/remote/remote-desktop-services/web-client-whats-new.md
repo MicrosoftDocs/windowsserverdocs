@@ -1,7 +1,7 @@
 ---
 title: What's new in the web client
 description: Learn about recent changes to the Remote Desktop web client.
-ms.topic: article
+ms.topic: whats-new
 author: sipastak
 ms.author: sipastak
 ms.date: 01/28/2025

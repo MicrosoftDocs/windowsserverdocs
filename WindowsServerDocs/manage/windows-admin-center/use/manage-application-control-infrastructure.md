@@ -1,7 +1,7 @@
 ---
 title: Manage Windows Defender Application Control (WDAC) Enforced Infrastructure with Windows Admin Center
 description: Learn about managing WDAC-enforced servers and clusters by using Windows Admin Center.
-ms.topic: article
+ms.topic: how-to
 author: davannaw-msft
 ms.author: jgerend
 ms.date: 08/18/2022
