@@ -13,7 +13,7 @@ Have you ever had trouble getting your end users connected to their published RD
 Before you set up email discovery, do the following:
 
 - Make sure you have permission to add a TXT record to the domain associated with your email (for example, if your users have @contoso.com email addresses, you would need permissions for the contoso.com domain).
-- Create an RD Web feed URL (`https://<rdweb-dns-name>.<domain>/RDWeb/Feed/webfeed.aspx, such as `https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx`.
+- Create an RD Web feed URL (`https://<rdweb-dns-name>.<domain>/RDWeb/Feed/webfeed.aspx`), such as `https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx`.
 
 >[!NOTE]
 >If you're using Azure Virtual Desktop instead of Remote Desktop, you'll want to use these URLs instead:
