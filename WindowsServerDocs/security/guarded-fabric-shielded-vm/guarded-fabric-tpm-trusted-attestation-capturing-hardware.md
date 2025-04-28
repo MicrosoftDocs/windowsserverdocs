@@ -1,7 +1,7 @@
 ---
 title: Capture TPM-mode information required by HGS
 description: "Learn more about: Authorize guarded hosts using TPM-based attestation"
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: robinharwood
