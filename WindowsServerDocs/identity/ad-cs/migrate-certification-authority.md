@@ -89,7 +89,7 @@ The following steps describe how to back up the CA database and private key by u
 
 1. Log on with local administrative credentials to the CA computer.
 
-1. Right-click **Windows PowerShell** and select **Run as Administrator**.
+1. Right- **Windows PowerShell** and select **Run as Administrator**.
 
 1. Type the following command and press ENTER:
 
@@ -185,11 +185,12 @@ You can determine the certificate templates assigned to a CA by using the Certif
 
 1. Open the Certification Authority snap-in.
 
-1. In the console tree, expand **Certification Authority**, and click **Certificate Templates**.
+1. In the console tree, expand **Certification Authority**, and select **Certificate Templates**.
 
-1. Record the list of certificate templates by taking a screen shot or by typing the list into a text file.
+1. Record the list of certificate templates by taking a screen shot, or by typing the list into a text file.
 
-#### To record a CA templates list by using Certutil.exe
+#### Record a CA templates list by using Certutil.exe
+
 1. Log on with local administrative credentials to the CA computer.
 
 1. Open a Command Prompt window.
@@ -210,18 +211,11 @@ Before beginning CA migration, it's a good practice to publish a CRL with a vali
 
 You should publish a CRL with an extended validity period for each CA being migrated. This procedure is particularly important in the case of a root CA because of the potentially large number of certificates that would be affected by the unavailability of a CRL.
 
-By default, the CRL validity period is equal to the CRL publishing period plus 10 percent. After determining an appropriate CRL validity period, set the CRL publishing interval and manually publish the CRL by completing the following procedures:
+By default, the CRL validity period is equal to the CRL publishing period plus 10 percent. After determining an appropriate CRL validity period, set the CRL publishing interval and manually publish the CRL by completing the following procedures: [Schedule the publication of the certificate revocation list](https://technet.microsoft.com/library/cc781735(ws.10).aspx), and [Manually publish the certificate revocation list](https://technet.microsoft.com/library/cc778151(ws.10).aspx).
 
 > [!IMPORTANT]
 > Record the value of the CRL publishing period before changing it. After migration is complete, the CRL publishing period should be reset to its previous value.
-
-[Schedule the publication of the certificate revocation list](https://technet.microsoft.com/library/cc781735(ws.10).aspx)
-
-[Manually publish the certificate revocation list](https://technet.microsoft.com/library/cc778151(ws.10).aspx)
-
-> [!WARNING]
 > Client computers download a new CRL only after the validity period of a locally cached CRL expires. Therefore, you shouldn't use a CRL validity period that is excessively long.
-
 
 ## Remove the CA role service from the source server
 
