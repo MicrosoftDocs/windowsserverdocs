@@ -5,7 +5,7 @@ author: nedpyle
 ms.author: alalve
 manager: tiaascs
 ms.date: 04/24/2023
-ms.topic: article
+ms.topic: troubleshooting-known-issue
 ---
 # Storage Migration Service known issues
 

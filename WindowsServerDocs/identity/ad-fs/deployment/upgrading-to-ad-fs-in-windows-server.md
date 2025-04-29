@@ -5,7 +5,7 @@ title: Upgrade an AD FS farm by using Windows Internal Database in Windows Serve
 author: billmath
 manager: femila
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ms.author: roharwoo
 ---
 

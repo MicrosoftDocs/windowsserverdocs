@@ -6,7 +6,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Using AD DS Claims with AD FS

@@ -3,7 +3,7 @@ title: Resynchronization of replication should be scheduled for off-peak hours
 description: Learn what to do when resynchronization of replication for the primary virtual machines is not scheduled for off-peak hours.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 093a7bb7-8e0a-486b-b42b-04edd8809710
 ms.date: 8/16/2016
 ---

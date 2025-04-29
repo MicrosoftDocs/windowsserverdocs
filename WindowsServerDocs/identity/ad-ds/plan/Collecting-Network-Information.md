@@ -6,7 +6,8 @@ ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018
-ms.topic: article
+ms.topic: how-to
+
 ---
 
 # Collecting Network Information

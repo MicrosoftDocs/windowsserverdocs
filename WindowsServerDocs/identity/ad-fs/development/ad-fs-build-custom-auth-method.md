@@ -5,7 +5,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Build a Custom Authentication Method for AD FS in Windows Server

@@ -2,7 +2,7 @@
 title: Initialize new disks
 description: Learn how to initialize new disks with Disk Management and get them ready to use. Also access links for troubleshooting.
 ms.date: 08/21/2024
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: jgerend

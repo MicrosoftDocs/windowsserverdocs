@@ -3,7 +3,7 @@ title: Reserve one or more external virtual networks for exclusive use by virtua
 description: Learn what to do when all external virtual networks are configured for use by both the management operating system and virtual machines.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f7732258-93f1-44e8-835b-5ad2d1c45cd9
 ms.date: 8/16/2016
 ---

@@ -4,7 +4,7 @@ description: The following document discusses prerequisites that you should be f
 ms.author: mosagie
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Active Directory Forest Recovery - Prerequisites

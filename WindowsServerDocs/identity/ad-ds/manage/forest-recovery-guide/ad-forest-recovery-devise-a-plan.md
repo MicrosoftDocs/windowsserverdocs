@@ -5,7 +5,7 @@ ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 06/12/2023
-ms.topic: article
+ms.topic: how-to
 ms.custom: 17381f30-55f2-4e00-977a-b701675fa4ff, inhenkel
 ---
 

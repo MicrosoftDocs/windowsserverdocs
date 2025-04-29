@@ -5,7 +5,7 @@ title: Join a computer to a domain
 author: billmath
 manager: femila
 ms.date: 08/19/2024
-ms.topic: article
+ms.topic: how-to
 ms.author: alalve
 ---
 

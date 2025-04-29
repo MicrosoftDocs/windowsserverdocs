@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Guarded fabric and shielded VMs overview"
 title: Guarded Fabric and Shielded VMs overview
-ms.topic: article
+ms.topic: concept-article
 manager: dongill
 author: robinharwood
 ms.author: mosagie

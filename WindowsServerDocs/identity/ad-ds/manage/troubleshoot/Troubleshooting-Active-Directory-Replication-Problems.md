@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 03/07/2024
-ms.topic: article
+ms.topic: troubleshooting-general
 ---
 # Troubleshooting Active Directory Replication Problems
 

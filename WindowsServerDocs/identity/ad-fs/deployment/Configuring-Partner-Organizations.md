@@ -5,7 +5,7 @@ title: Configuring Partner Organizations
 author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ms.author: billmath
 ---
 

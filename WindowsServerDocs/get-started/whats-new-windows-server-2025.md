@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Server 2025
 description: Learn about the features and enhancements in Windows Server 2025 that help to improve security, performance, and flexibility.
-ms.topic: article
+ms.topic: whats-new
 author: xelu86
 ms.author: alalve
 ms.date: 02/28/2025

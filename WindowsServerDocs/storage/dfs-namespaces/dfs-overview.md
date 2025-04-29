@@ -2,7 +2,7 @@
 title: DFS Namespaces overview
 ms.author: mosagie
 manager: daveba
-ms.topic: article
+ms.topic: overview
 author: robinharwood
 ms.date: 01/05/2022
 description: This article describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.

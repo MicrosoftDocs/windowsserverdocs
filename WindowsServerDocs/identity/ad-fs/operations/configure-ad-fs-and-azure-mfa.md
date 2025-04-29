@@ -5,7 +5,7 @@ ms.author: roharwoo
 author: billmath
 manager: femila
 ms.date: 03/13/2024
-ms.topic: article
+ms.topic: how-to
 ms.custom: has-azure-ad-ps-ref
 ---
 

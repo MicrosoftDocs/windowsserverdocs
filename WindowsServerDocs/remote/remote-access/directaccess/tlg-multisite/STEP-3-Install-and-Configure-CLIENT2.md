@@ -2,7 +2,7 @@
 title: STEP 3 Install and Configure CLIENT2
 description: Learn how to install and configure CLIENT2.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f009fdd1-94e6-4ccb-8c6e-609a5394db53
 ms.author: daknappe
 author: robinharwood

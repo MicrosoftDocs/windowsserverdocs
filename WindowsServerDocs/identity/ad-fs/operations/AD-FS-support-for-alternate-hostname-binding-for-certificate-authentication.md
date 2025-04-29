@@ -5,7 +5,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/24/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Alternate hostname binding for certificate authentication in AD FS on Windows Server
