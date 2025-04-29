@@ -219,7 +219,7 @@ By default, the CRL validity period is equal to the CRL publishing period plus 1
 
 ## Remove the CA role service from the source server
 
-It's important to remove the CA role service from the source server after completing back up procedures and before installing the CA role service on the destination server. Enterprise CAs and standalone CAs that are domain members store in Active Directory Domain Services (AD DS) configuration data that is associated with the common name of the CA. Removing the CA role service also removes the CAs configuration data from AD DS. Because the source CA and destination CA share the same common name, removing the CA role service from the source server after installing the CA role service on the destination server removes configuration data that is required by destination CA and interferes with its operation.
+It's important to remove the CA role service from the source server after completing backup procedures and before installing the CA role service on the destination server. Enterprise CAs and standalone CAs that are domain members store in Active Directory Domain Services (AD DS) configuration data that is associated with the common name of the CA. Removing the CA role service also removes the CAs configuration data from AD DS. Because the source CA and destination CA share the same common name, removing the CA role service from the source server after installing the CA role service on the destination server removes configuration data that is required by destination CA and interferes with its operation.
 
 The CA database, private key, and certificate aren't removed from the source server by removing the CA role service. Therefore, reinstalling the CA role service on the source server restores the source CA if migration fails and performing a rollback is required.
 
@@ -487,7 +487,7 @@ A suggested way of performing the registry configuration import is first to open
 > [!WARNING]
 > Some registry values are associated with the CA, while others are associated with the domain environment, the physical host computer, the Windows version, or even other role services. Consequently, some registry parameters should be migrated without changes from the source CA computer and others shouldn't. Any value that isn't listed in the .reg text file that is restored on the target CA retains its existing setting or default value.
 
-Remove any registry values that you don't want to import into the target CA. Once the .reg text file is edited, it can be imported into the target CA. By importing the source server registry settings backup into the destination server, the source CA configuration is migrated to the destination server.
+Remove any registry values that you don't want to import into the target CA. Once the .reg text file is edited, it can be imported into the target CA. By importing the source server registry settings back up into the destination server, the source CA configuration is migrated to the destination server.
 
 #### Import the source CA registry backup on the destination CA
 
