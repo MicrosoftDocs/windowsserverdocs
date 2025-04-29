@@ -179,7 +179,7 @@ This is because certificate templates and their association with enterprise CAs 
 
 You can determine the certificate templates assigned to a CA by using the Certification Authority snap-in or the **Certutil.exe –catemplates** command.
 
-#### To record a CA templates list by using the Certification Authority snap-in
+#### Record a CA templates list by using the Certification Authority snap-in
 
 1. Log on with local administrative credentials to the CA computer.
 
