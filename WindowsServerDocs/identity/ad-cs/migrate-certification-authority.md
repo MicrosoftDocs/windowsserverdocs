@@ -204,7 +204,7 @@ You can determine the certificate templates assigned to a CA by using the Certif
 > [!NOTE]
 > If no certificate templates are assigned to the CA, the file contains an error message: 0x80070490 (Element not found).
 
-### Publishing a CRL with an extended validity period
+### Publish a CRL with an extended validity period
 Before beginning CA migration, it is a good practice to publish a CRL with a validity period that extends beyond the planned migration period. The validity period of the CRL should be at least the length of time that is planned for the migration. This is necessary to enable certificate validation processes on client computers to continue during the migration period.
 
 You should publish a CRL with an extended validity period for each CA being migrated. This procedure is particularly important in the case of a root CA because of the potentially large number of certificates that would be affected by the unavailability of a CRL.
