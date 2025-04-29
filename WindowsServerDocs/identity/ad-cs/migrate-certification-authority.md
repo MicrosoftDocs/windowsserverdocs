@@ -187,7 +187,7 @@ You can determine the certificate templates assigned to a CA by using the Certif
 
 1. In the console tree, expand **Certification Authority**, and select **Certificate Templates**.
 
-1. Record the list of certificate templates by taking a screen shot, or by typing the list into a text file.
+1. Record the list of certificate templates by taking a screenshot, or by typing the list into a text file.
 
 #### Record a CA templates list by using Certutil.exe
 
@@ -209,7 +209,7 @@ You can determine the certificate templates assigned to a CA by using the Certif
 
 Before beginning CA migration, it's a good practice to publish a CRL with a validity period that extends beyond the planned migration period. The validity period of the CRL should be at least the length of time that is planned for the migration. This is necessary to enable certificate validation processes on client computers to continue during the migration period.
 
-You should publish a CRL with an extended validity period for each CA being migrated. This procedure is particularly important in the case of a root CA because of the potentially large number of certificates that would be affected by the unavailability of a CRL.
+You should publish a CRL with an extended validity period for each CA being migrated. This procedure is particularly important for a root CA because of the potentially large number of certificates that would be affected by the unavailability of a CRL.
 
 By default, the CRL validity period is equal to the CRL publishing period plus 10 percent. After determining an appropriate CRL validity period, set the CRL publishing interval and manually publish the CRL by completing the following procedures: [Schedule the publication of the certificate revocation list](https://technet.microsoft.com/library/cc781735(ws.10).aspx), and [Manually publish the certificate revocation list](https://technet.microsoft.com/library/cc778151(ws.10).aspx).
 
@@ -219,7 +219,7 @@ By default, the CRL validity period is equal to the CRL publishing period plus 1
 
 ## Remove the CA role service from the source server
 
-It's important to remove the CA role service from the source server after completing backup procedures and before installing the CA role service on the destination server. Enterprise CAs and standalone CAs that are domain members store in Active Directory Domain Services (AD DS) configuration data that is associated with the common name of the CA. Removing the CA role service also removes the CA's configuration data from AD DS. Because the source CA and destination CA share the same common name, removing the CA role service from the source server after installing the CA role service on the destination server removes configuration data that is required by destination CA and interferes with its operation.
+It's important to remove the CA role service from the source server after completing back up procedures and before installing the CA role service on the destination server. Enterprise CAs and standalone CAs that are domain members store in Active Directory Domain Services (AD DS) configuration data that is associated with the common name of the CA. Removing the CA role service also removes the CAs configuration data from AD DS. Because the source CA and destination CA share the same common name, removing the CA role service from the source server after installing the CA role service on the destination server removes configuration data that is required by destination CA and interferes with its operation.
 
 The CA database, private key, and certificate aren't removed from the source server by removing the CA role service. Therefore, reinstalling the CA role service on the source server restores the source CA if migration fails and performing a rollback is required.
 
