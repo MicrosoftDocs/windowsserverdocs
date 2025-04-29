@@ -197,9 +197,9 @@ You can determine the certificate templates assigned to a CA by using the Certif
 
 1. Type the following command and press ENTER.
 
-  ```
-  certutil.exe –catemplates > catemplates.txt
-  ```
+    ```
+    certutil.exe –catemplates > catemplates.txt
+    ```
 1. Verify that the catemplates.txt file contains the templates list.
 
 > [!NOTE]
