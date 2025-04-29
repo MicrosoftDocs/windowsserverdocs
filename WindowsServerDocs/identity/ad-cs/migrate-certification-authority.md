@@ -219,7 +219,7 @@ By default, the CRL validity period is equal to the CRL publishing period plus 1
 
 [Manually publish the certificate revocation list](https://technet.microsoft.com/library/cc778151(ws.10).aspx)
 
-> [!Warning]
+> [!WARNING]
 > Client computers download a new CRL only after the validity period of a locally cached CRL expires. Therefore, you should not use a CRL validity period that is excessively long.
 
 
