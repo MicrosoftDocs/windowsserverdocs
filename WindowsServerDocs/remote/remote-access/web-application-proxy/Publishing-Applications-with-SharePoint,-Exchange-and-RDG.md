@@ -6,7 +6,7 @@ author: billmath
 manager: mtillman
 ms.author: billmath
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Publishing Applications with SharePoint, Exchange and RDG

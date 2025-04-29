@@ -4,8 +4,8 @@ ms.assetid: 6b49cde3-d2cb-4ece-b9b7-dc600e037495
 title: Checklist - Implementing a Federated Web SSO Design
 author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: checklist
 ms.author: billmath
 ---
 

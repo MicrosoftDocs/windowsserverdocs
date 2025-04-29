@@ -5,8 +5,8 @@ title: Configure a Federation Server for Windows Server 2012 R2 AD FS
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Configure a Federation Server

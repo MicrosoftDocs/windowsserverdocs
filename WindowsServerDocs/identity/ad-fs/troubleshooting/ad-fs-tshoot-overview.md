@@ -5,7 +5,7 @@ author: billmath
 ms.author: roharwoo
 manager: femila
 ms.date: 05/19/2023
-ms.topic: article
+ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot AD FS
