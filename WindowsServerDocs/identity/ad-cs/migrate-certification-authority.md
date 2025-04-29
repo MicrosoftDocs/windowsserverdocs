@@ -171,7 +171,7 @@ The CAPolicy.inf file is located in the %SystemRoot% directory, which is usually
 
 ### Back up a CA templates list
 
-An enterprise CA can have certificate templates assigned to it. You should record the assigned certificate templates before beginning the CA migration. The information is not backed up with the CA database or registry settings backup.
+An enterprise CA can have certificate templates assigned to it. You should record the assigned certificate templates before beginning the CA migration. The information isn't backed up with the CA database, or registry settings backup.
 This is because certificate templates and their association with enterprise CAs are stored in AD DS. You will need to add the same list of templates to the destination server to complete CA migration.
 
 > [!NOTE]
