@@ -14,7 +14,9 @@ Migrating a Certification Authority (CA) ensures the continuity of your organiza
 
 ## Prerequisites
 
-Before migrating your Certification Authority (CA), ensure the following prerequisites are met. You must have:
+Before migrating your Certification Authority (CA), ensure the following prerequisites are met.
+
+You must have:
 
 - Administrative access for both the source and destination servers. For enterprise CAs, ensure you're a member of the Enterprise Admins or Domain Admins group.
 - Access to tools such as the Certification Authority snap-in, PowerShell, or Certutil for performing backups and restores.
@@ -31,9 +33,12 @@ By completing these prerequisites, you can ensure a smooth and secure migration 
 Before you begin to migrate your CA, you'll first want to back up the:
 
 - CA database
-- Private key
+- Private key(s)
 - CA registry settings
 - CAPolicy.inf file
+- The CA templates list (required only for enterprise CAs)
+
+Before proceeding with CA Role removal you should also publish a CRL with an extended validity period.
 
 ### Back up a CA database and private key
 
@@ -163,6 +168,59 @@ You must be logged on to the source CA using an account that is a member of the 
 If your source CA is using a custom CAPolicy.inf file, you should copy the file to the same location as the source CA backup files.
 
 The CAPolicy.inf file is located in the %SystemRoot% directory, which is usually **C:\\Windows**.
+
+### Backing up a CA templates list
+
+An enterprise CA can have certificate templates assigned to it. You should record the assigned certificate templates before beginning the CA migration. The information is not backed up with the CA database or registry settings backup.
+This is because certificate templates and their association with enterprise CAs are stored in AD DS. You will need to add the same list of templates to the destination server to complete CA migration.
+
+> [!NOTE]
+> It is important that the certificate templates assigned to the source CA are not changed after this procedure is completed.
+
+You can determine the certificate templates assigned to a CA by using the Certification Authority snap-in or the **Certutil.exe –catemplates** command.
+
+#### To record a CA templates list by using the Certification Authority snap-in
+
+1. Log on with local administrative credentials to the CA computer.
+
+1. Open the Certification Authority snap-in.
+
+1. In the console tree, expand **Certification Authority**, and click **Certificate Templates**.
+
+1. Record the list of certificate templates by taking a screen shot or by typing the list into a text file.
+
+#### To record a CA templates list by using Certutil.exe
+1. Log on with local administrative credentials to the CA computer.
+
+1. Open a Command Prompt window.
+
+1. Type the following command and press ENTER.
+
+  ```
+  certutil.exe –catemplates > catemplates.txt
+  ```
+1. Verify that the catemplates.txt file contains the templates list.
+
+> [!NOTE]
+> If no certificate templates are assigned to the CA, the file contains an error message: 0x80070490 (Element not found).
+
+### Publishing a CRL with an extended validity period
+Before beginning CA migration, it is a good practice to publish a CRL with a validity period that extends beyond the planned migration period. The validity period of the CRL should be at least the length of time that is planned for the migration. This is necessary to enable certificate validation processes on client computers to continue during the migration period.
+
+You should publish a CRL with an extended validity period for each CA being migrated. This procedure is particularly important in the case of a root CA because of the potentially large number of certificates that would be affected by the unavailability of a CRL.
+
+By default, the CRL validity period is equal to the CRL publishing period plus 10 percent. After determining an appropriate CRL validity period, set the CRL publishing interval and manually publish the CRL by completing the following procedures:
+
+ > [!Important]
+> Record the value of the CRL publishing period before changing it. After migration is complete, the CRL publishing period should be reset to its previous value.
+
+[Schedule the publication of the certificate revocation list](https://technet.microsoft.com/library/cc781735(ws.10).aspx)
+
+[Manually publish the certificate revocation list](https://technet.microsoft.com/library/cc778151(ws.10).aspx)
+
+> [!Warning]
+> Client computers download a new CRL only after the validity period of a locally cached CRL expires. Therefore, you should not use a CRL validity period that is excessively long.
+
 
 ## Remove the CA role service from the source server
 
