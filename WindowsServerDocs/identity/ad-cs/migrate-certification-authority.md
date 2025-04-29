@@ -212,7 +212,7 @@ You should publish a CRL with an extended validity period for each CA being migr
 
 By default, the CRL validity period is equal to the CRL publishing period plus 10 percent. After determining an appropriate CRL validity period, set the CRL publishing interval and manually publish the CRL by completing the following procedures:
 
- > [!Important]
+> [!IMPORTANT]
 > Record the value of the CRL publishing period before changing it. After migration is complete, the CRL publishing period should be reset to its previous value.
 
 [Schedule the publication of the certificate revocation list](https://technet.microsoft.com/library/cc781735(ws.10).aspx)
