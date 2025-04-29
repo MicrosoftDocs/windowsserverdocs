@@ -175,7 +175,7 @@ An enterprise CA can have certificate templates assigned to it. You should recor
 This is because certificate templates and their association with enterprise CAs are stored in AD DS. You'll need to add the same list of templates to the destination server to complete CA migration.
 
 > [!NOTE]
-> It is important that the certificate templates assigned to the source CA are not changed after this procedure is completed.
+> It's important that the certificate templates assigned to the source CA aren't changed after this procedure is completed.
 
 You can determine the certificate templates assigned to a CA by using the Certification Authority snap-in or the **Certutil.exe –catemplates** command.
 
