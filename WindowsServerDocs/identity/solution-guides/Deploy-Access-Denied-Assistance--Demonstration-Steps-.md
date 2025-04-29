@@ -6,7 +6,7 @@ author: billmath
 ms.author: alalve
 manager: femila
 ms.date: 06/06/2023
-ms.topic: install-set-up-deploy
+ms.topic: how-to
 ---
 
 # Deploy Access-Denied Assistance (Demonstration Steps)

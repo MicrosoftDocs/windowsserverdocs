@@ -5,7 +5,7 @@ title: Create a Stand-Alone Federation Server
 author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: how-to
+ms.topic: install-set-up-deploy
 ms.author: billmath
 ---
 

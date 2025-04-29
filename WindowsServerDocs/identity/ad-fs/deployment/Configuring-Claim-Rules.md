@@ -5,7 +5,7 @@ title: Configuring Claim Rules
 author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: concept-article
+ms.topic: checklist
 ms.author: billmath
 ---
 

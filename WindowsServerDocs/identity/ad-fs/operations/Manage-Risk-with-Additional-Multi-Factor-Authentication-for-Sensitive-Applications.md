@@ -6,7 +6,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: how-to
+ms.topic: concept-article
 ---
 
 # Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications

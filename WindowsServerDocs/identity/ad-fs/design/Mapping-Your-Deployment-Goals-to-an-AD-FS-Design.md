@@ -6,7 +6,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: concept-article
+ms.topic: install-set-up-deploy
 ---
 
 # Mapping Your Deployment Goals to an AD FS Design

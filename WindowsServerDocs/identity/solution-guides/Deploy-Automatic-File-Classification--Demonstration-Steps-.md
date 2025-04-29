@@ -6,7 +6,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: install-set-up-deploy
+ms.topic: how-to
 ---
 
 # Deploy Automatic File Classification (Demonstration Steps)
