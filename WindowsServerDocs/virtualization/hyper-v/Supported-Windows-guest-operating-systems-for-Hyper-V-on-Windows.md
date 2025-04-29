@@ -21,8 +21,8 @@ Following are the versions of Windows Server that are supported as guest operati
 
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|
 |-------------------------------------|----------------------------------------|------------------------|---------|
-|Windows Server 2025 |2,048 for generation 2;<br>64 for generation 1;<br>2,048 available to the host OS (root partition)|Built-in| <p>Maximum number of virtual processors depends on the host OS. For example, Windows Server 2025 can provide up to 2,048 virtual processors.</p><p>Hosted on Windows Server 2022 and later, and on Azure Local 2311.2 and later with Windows Server subscription.</p> |
-|Windows Server 2022 |1,024 for generation 2;<br>64 for generation 1;<br>1,024 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2019 and later, Azure Local, version 22H2 and later.|
+|Windows Server 2025 |2,048 for generation 2;<br>64 for generation 1;<br>2,048 available to the host OS (root partition)|Built-in| <p>Maximum number of virtual processors depends on the host OS. For example, Windows Server 2025 can provide up to 2,048 virtual processors.</p><p>Hosted on Windows Server 2022 and later, and on Azure Local OS, version 23H2 and later with Windows Server subscription.</p> |
+|Windows Server 2022 |1,024 for generation 2;<br>64 for generation 1;<br>1,024 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2019 and later, Azure Local OS, version 23H2 and later.|
 |Windows Server 2019 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
 |Windows Server 2016 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
 |Windows Server 2012 R2 |64|Built-in||
@@ -36,7 +36,7 @@ Following are the versions of Windows client that are supported as guest operati
 
 | Guest operating system (client) | Maximum number of virtual processors | Integration Services | Notes |
 |--|--|--|--|
-| Windows 11 | 32 | Built-in | Generation 2 virtual machine hosted on Windows Server 2019 or above <br/> Azure Local, version 22H2 and later. |
+| Windows 11 | 32 | Built-in | Generation 2 virtual machine hosted on Windows Server 2019 or above <br/> Azure Local OS, version 23H2 and later. |
 | Windows 10 | 32 | Built-in |  |
 | Windows 8.1 | 32 | Built-in |  |
 | Windows 7 with Service Pack 1 (SP1) | 4 | Upgrade the integration services after you set up the guest operating system. | Ultimate, Enterprise, and Professional editions (32-bit and 64-bit). |
@@ -47,7 +47,6 @@ The following table gives links to information about guest operating systems sup
 
 |Host operating system|Article|
 |-------------------------|---------|
-|Windows 10, 11|[Supported Guest Operating Systems for Client Hyper-V in Windows 10](/virtualization/hyper-v-on-windows/about/supported-guest-os)|
 |Windows Server 2012 R2 and Windows 8.1|-   [Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 R2 and Windows 8.1](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|
 |Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|
 |Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|
