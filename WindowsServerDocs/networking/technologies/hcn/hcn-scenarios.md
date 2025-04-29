@@ -4,7 +4,7 @@ description: Sample showing how to use Host Compute Network Service API to creat
 ms.author: roharwoo
 author: daschott
 ms.date: 6/28/2022
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Common scenarios
