@@ -6,7 +6,7 @@ author: jenfieldmsft
 ms.author: billmath
 manager: femila
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 

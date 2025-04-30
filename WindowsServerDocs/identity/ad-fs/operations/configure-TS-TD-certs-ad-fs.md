@@ -5,7 +5,7 @@ author: jenfieldmsft
 ms.author: roharwoo
 manager: femila
 ms.date: 06/13/2023
-ms.topic: article
+ms.topic: how-to
 ms.contributor: billmath
 ---
 
