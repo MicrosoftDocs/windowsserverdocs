@@ -1,7 +1,7 @@
 ---
 title: Security identifiers
 description: Become familiar with unique identifiers for Windows Server accounts and groups, such as security identifiers (SIDs). See tables of well-known SIDs.
-author: dansimp
+author: meaghanlewis
 ms.author: mosagie
 ms.topic: article
 ms.date: 03/21/2025
