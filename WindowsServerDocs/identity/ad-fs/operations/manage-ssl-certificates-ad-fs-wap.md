@@ -6,7 +6,7 @@ author: jenfieldmsft
 ms.author: billmath
 manager: femila
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Manage TLS/SSL certificates in AD FS and WAP in Windows Server 2016

@@ -5,7 +5,7 @@ title: Securing Domain Controllers Against Attack
 ms.author: mosagie
 author: MicrosoftGuyJFlo
 ms.date: 05/30/2024
-ms.topic: article
+ms.topic: concept-article
 ms.reviewer: rickys
 ---
 # Securing Domain Controllers Against Attack

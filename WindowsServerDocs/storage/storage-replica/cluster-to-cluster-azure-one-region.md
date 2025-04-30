@@ -4,7 +4,7 @@ description: Learn how to use cluster-to-cluster Storage Replica in Windows Serv
 author: arduppal
 ms.author: jgerend
 ms.date: 02/18/2025
-ms.topic: article
+ms.topic: how-to
 manager: mchad
 ---
 # Set up cluster-to-cluster storage in the same Azure region by using Storage Replica
