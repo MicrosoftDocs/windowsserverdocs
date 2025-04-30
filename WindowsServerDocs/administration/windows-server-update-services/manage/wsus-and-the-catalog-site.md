@@ -278,21 +278,21 @@ The “.NOTES” section of the script can be used for troubleshooting issues wh
 - If you get an error, try enabling Transport Layer Security (TLS) 1.2. For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - You can use the following command to automate the process of adding a registry value related to the use of strong crypto. Manually restart the Windows Server Update Services service and World Wide Web Publishing service after adding the registry value.
 
-```
-reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /V SchUseStrongCrypto /T REG_DWORD /D 1
-```
+    ```command
+    reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /V SchUseStrongCrypto /T REG_DWORD /D 1
+    ```
 
 - Run this PowerShell script to automate the process of adding a registry value related to the use of strong crypto and restart the Windows Server Update Services service and World Wide Web Publishing service:
 
-```powershell
-$registryPath = "HKLM:\Software\Microsoft\.NETFramework\v4.0.30319"
-$Name = "SchUseStrongCrypto"
-$value = "1"
-if (!(Test-Path $registryPath)) {
-   New-Item -Path $registryPath -Force | Out-Null
-}
-New-ItemProperty -Path $registryPath -Name $name -Value $value -PropertyType DWORD -Force | Out-Null
-Restart-Service WsusService, w3svc
-```
+    ```powershell
+    $registryPath = "HKLM:\Software\Microsoft\.NETFramework\v4.0.30319"
+    $Name = "SchUseStrongCrypto"
+    $value = "1"
+    if (!(Test-Path $registryPath)) {
+       New-Item -Path $registryPath -Force | Out-Null
+    }
+    New-ItemProperty -Path $registryPath -Name $name -Value $value -PropertyType DWORD -Force | Out-Null
+    Restart-Service WsusService, w3svc
+    ```
 
 - Activity and/or errors related to importing updates can be found in **%ProgramFiles%\Update Services\LogFiles\SoftwareDistribution.log** of the WSUS server where updates are being imported.
