@@ -3,7 +3,7 @@ title: Customize the RDS title “Work Resources” using PowerShell on Windows 
 description: Provides description of how to change workspace name from default in Windows Server.
 author: xelu86
 ms.date: 7/3/2024
-ms.topic: article
+ms.topic: how-to
 ms.author: alalve
 ---
 # Customize the RDS title “Work Resources” using PowerShell on Windows Server

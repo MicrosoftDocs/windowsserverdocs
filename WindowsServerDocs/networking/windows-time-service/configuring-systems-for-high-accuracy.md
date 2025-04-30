@@ -4,7 +4,7 @@ description: Improve Windows Time synchronization tuning under reasonable operat
 author: xelu86
 ms.author: alalve
 ms.date: 02/25/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configuring systems for high accuracy
@@ -99,12 +99,6 @@ Configures the smallest interval in log2 seconds allowed for system polling.
 | Setting | 6 |
 | Outcome | The minimum polling interval is now 64 seconds. |
 
-The following command signals Windows Time to pick up the updated settings:
-
-```cmd
-w32tm /config /update
-```
-
 ### MaxPollInterval
 
 Configures the largest interval in log2 seconds allowed for system polling.
@@ -114,12 +108,6 @@ Configures the largest interval in log2 seconds allowed for system polling.
 | Key location | HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config |
 | Setting | 6 |
 | Outcome | The maximum polling interval is now 64 seconds. |
-
-The following command signals Windows Time to pick up the updated settings:
-
-```cmd
-w32tm /config /update
-```
 
 ### UpdateInterval
 
@@ -131,12 +119,6 @@ The number of clock ticks between phase correction adjustments.
 | Setting | 100 |
 | Outcome | The number of clock ticks between phase correction adjustments is now 100 ticks. |
 
-The following command signals Windows Time to pick up the updated settings:
-
-```cmd
-w32tm /config /update
-```
-
 ### SpecialPollInterval
 
 Configures the poll interval in seconds when the SpecialInterval 0x1 flag is enabled.
@@ -147,18 +129,64 @@ Configures the poll interval in seconds when the SpecialInterval 0x1 flag is ena
 | Setting | 64 |
 | Outcome | The poll interval is now 64 seconds. |
 
-The following command restarts Windows Time to pick up the updated settings:
-
-```cmd
-net stop w32time && net start w32time
-```
-
 ### FrequencyCorrectRate
 
 | Description | Value |
 |--|--|
 | Key location | HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config |
 | Setting | 2 |
+
+### UtilizeSslTimeData
+
+| Description | Value |
+|--|--|
+| Key location | HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config |
+| Setting | 0 |
+| Outcome | Secure Time Seeding feature is disabled. |
+
+## Applying modified registry settings
+
+
+The following command signals Windows Time to pick up the updated settings:
+
+```cmd
+w32tm /config /update
+```
+
+The following command restarts Windows Time to pick up the updated settings:
+
+```cmd
+net stop w32time && net start w32time
+```
+
+Applying UtilizeSslTimeData setting change requires system restart.
+
+
+
+### UtilizeSslTimeData
+
+| Description | Value |
+|--|--|
+| Key location | HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config |
+| Setting | 0 |
+| Outcome | Secure Time Seeding feature is disabled. |
+
+## Applying Modified Registry settings
+
+The following command signals Windows Time to pick up the updated settings:
+
+```cmd
+w32tm /config /update
+```
+
+The following command restarts Windows Time to pick up the updated settings:
+
+```cmd
+net stop w32time && net start w32time
+```
+
+Applying UtilizeSslTimeData setting change requires system restart.
+
 
 > [!NOTE]
 > To learn more about the W32Time registry settings, see [Windows Time registry reference](Windows-Time-Service-Tools-and-Settings.md#windows-time-registry-reference)

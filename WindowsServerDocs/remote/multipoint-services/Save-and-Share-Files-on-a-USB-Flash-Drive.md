@@ -1,7 +1,7 @@
 ---
 title: Save and Share Files on a USB Flash Drive
 description: Learn how to save filese to a USB flash drive in MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 51f6564e-a07f-4b13-8567-a5f080cc2e0d
 author: robinharwood
 manager: dongill

@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: alalve
 manager: femila
 ms.date: 04/01/2022
-ms.topic: conceptual
+ms.topic: solution-overview
 ---
 
 # Scenario: Implement Retention of Information on File Servers

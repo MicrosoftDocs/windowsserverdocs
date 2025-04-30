@@ -4,7 +4,7 @@ description: Learn more about how to configure AD FS Extranet Lockout Protection
 author: billmath
 ms.author: billmath
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configure AD FS Extranet Lockout Protection

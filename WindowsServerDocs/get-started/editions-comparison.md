@@ -1,7 +1,7 @@
 ---
 title: Comparison of Windows Server editions
 description: "Learn about the differences between Windows Server Standard, Datacenter, Datacenter: Azure Edition and Annual Channel for Containers editions."
-ms.topic: conceptual
+ms.topic: product-comparison
 author: robinharwood
 ms.author: roharwoo
 ms.date: 12/20/2024

@@ -1,7 +1,7 @@
 ---
 title: Hyper-V storage I/O performance
 description: Learn about storage I/O performance considerations in Hyper-V performance tuning, including advantages, limitations, and recommendations.
-ms.topic: article
+ms.topic: best-practice
 ms.author: roharwoo
 author: robinharwood
 ms.date: 12/14/2023

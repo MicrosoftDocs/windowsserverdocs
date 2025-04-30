@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Server 2025
 description: Learn about the features and enhancements in Windows Server 2025 that help to improve security, performance, and flexibility.
-ms.topic: article
+ms.topic: whats-new
 author: xelu86
 ms.author: alalve
 ms.date: 02/28/2025
@@ -451,7 +451,7 @@ Software-Defined Networking (SDN) is an approach to networking that network admi
 
 - **Network Controller**: This control plane for SDN is now hosted directly as Failover Cluster services on the physical host machines. Using a cluster role eliminates the need to deploy VMs, which simplifies deployment and management and conserves resources.
 - **Tag-based segmentation**: Administrators can use custom service tags to associate network security groups (NSGs) and VMs for access control. Instead of specifying IP ranges, administrators can now use simple, self-explanatory labels to tag workload VMs and apply security policies based on these tags. Tags simplify the process of managing network security and eliminate the need to remember and retype IP ranges. To learn more, see [Configure network security groups with tags in Windows Admin Center](/azure/azure-local/manage/configure-network-security-groups-with-tags?pivots=windows-server).
-- **Default network policies in Windows Server 2025**: These policies bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. Default network policies ensure that workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Local, version 23H2](/azure/azure-local/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
+- **Default network policies in Windows Server 2025**: These policies bring Azure-like protection options to NSGs for workloads deployed through Windows Admin Center. The default policy denies all inbound access, allowing selective opening of well-known inbound ports while permitting full outbound access from workload VMs. Default network policies ensure that workload VMs are secured from the point of creation. To learn more, see [Use default network access policies on virtual machines on Azure Local](/azure/azure-local/manage/manage-default-network-access-policies-virtual-machines-23h2?pivots=windows-server).
 - **SDN Multisite**: This feature provides native layer 2 and layer 3 connectivity between applications across two locations without any extra components. With SDN Multisite, applications can move seamlessly without the need to reconfigure the application or networks. It also offers unified network policy management for workloads so that you don't need to update policies when a workload VM moves from one location to another. To learn more, see [What is SDN Multisite?](/azure/azure-local/concepts/sdn-multisite-overview?pivots=windows-server).
 - **Enhanced performance of SDN layer 3 gateways**: Layer 3 gateways achieve higher throughput and reduced CPU cycles. These improvements are enabled by default. Users automatically experience better performance when an SDN gateway layer 3 connection is configured through PowerShell or Windows Admin Center.
 

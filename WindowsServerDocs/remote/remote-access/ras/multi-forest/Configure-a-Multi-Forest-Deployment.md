@@ -2,7 +2,7 @@
 title: Configure a Multi-Forest Deployment
 description: Learn how to configure a Remote Access multi-forest deployment in several possible scenarios.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
 ms.author: daknappe
 author: robinharwood

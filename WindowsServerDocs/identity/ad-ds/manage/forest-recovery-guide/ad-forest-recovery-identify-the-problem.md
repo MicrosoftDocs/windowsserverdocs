@@ -4,7 +4,7 @@ description: When symptoms of a forest-wide failure appear, such as in event log
 ms.author: mosagie
 author: robinharwood
 ms.date: 06/10/2023
-ms.topic: article
+ms.topic: troubleshooting
 ---
 
 # Active Directory Forest Recovery - Identify the problem

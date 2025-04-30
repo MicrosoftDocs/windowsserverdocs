@@ -5,7 +5,7 @@ title: Checklist - Creating Claim Rules for a Relying Party Trust
 author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: checklist
 ms.author: billmath
 ---
 

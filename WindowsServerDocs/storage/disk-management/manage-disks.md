@@ -2,7 +2,7 @@
 title: Manage disks
 description: Learn how to manage disks in a computer using Disk Management and discover whether a disk is online or offline and how to bring it online.
 ms.date: 03/08/2023
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: jgerend

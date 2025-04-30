@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Initialize HGS using TPM-trusted attestation"
 title: Initialize HGS using TPM-trusted attestation
-ms.topic: article
+ms.topic: how-to
 manager: dongill
 author: robinharwood
 ms.author: mosagie

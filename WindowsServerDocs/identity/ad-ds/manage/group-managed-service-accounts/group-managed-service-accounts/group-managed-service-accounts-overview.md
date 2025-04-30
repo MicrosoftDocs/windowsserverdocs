@@ -1,7 +1,7 @@
 ---
 title: Group Managed Service Accounts Overview
 description: Learn about the group Managed Service Account; practical applications, changes in Microsoft's implementation, both hardware and software requirements.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
 ms.author: alalve
 author: robinharwood

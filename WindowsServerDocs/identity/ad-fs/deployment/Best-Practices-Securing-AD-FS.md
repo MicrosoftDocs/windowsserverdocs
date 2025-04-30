@@ -6,7 +6,7 @@ description: Best practices for the secure planning and deployment of Active Dir
 author: billmath
 ms.author: billmath
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Best practices for securing Active Directory Federation Services

@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 01/28/2024
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Appendix E: Securing Enterprise Admins Groups in Active Directory

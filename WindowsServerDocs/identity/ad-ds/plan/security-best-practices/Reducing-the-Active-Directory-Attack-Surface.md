@@ -6,7 +6,8 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
-ms.topic: article
+ms.topic: best-practice
+
 ---
 
 # Reducing the Active Directory Attack Surface

@@ -2,7 +2,7 @@
 title: View DNS Zones
 description: Learn how to view DNS zones in the IPAM client console.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 ms.author: jgerend
 author: robinharwood

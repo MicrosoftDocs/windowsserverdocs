@@ -2,7 +2,7 @@
 title: Configure the Server Certificate Template
 description: Learn how to configure the certificate template that Active Directory Certificate Services uses as the basis for server certificates that are enrolled to servers on your network.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
 ms.author: daknappe
 author: robinharwood

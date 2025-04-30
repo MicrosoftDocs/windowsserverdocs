@@ -4,7 +4,7 @@ description: In certain scenarios, it may be necessary to recover only a single 
 ms.author: mosagie
 author: robinharwood
 ms.date: 07/10/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Recover a single domain in a multidomain forest

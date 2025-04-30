@@ -5,7 +5,7 @@ title: Configure a Computer for the Federation Server Proxy Role
 author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ms.author: billmath
 ---
 

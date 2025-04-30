@@ -4,7 +4,7 @@ description: This section contains procedures related to the forest recovery pro
 ms.author: mosagie
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Procedures

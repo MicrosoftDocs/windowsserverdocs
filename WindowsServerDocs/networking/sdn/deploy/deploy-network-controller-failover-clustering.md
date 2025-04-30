@@ -11,7 +11,7 @@ zone_pivot_groups: windows-os
 
 # Deploy Network Controller with Failover Clustering
 
-Beginning with Windows Server 2025 and Azure Local, version 23H2, Network Controller (NC) can now be deployed directly as a Failover Clustering service. In this article you learn about the prerequisites required, installing the SDN Express PowerShell module, and how to deploy Network Controller with Failover Clustering. To learn more about how it works with Software Load Balancer and Gateways, and how it differs from Network Controller on Service Fabric, see [Network Controller with Failover Clustering](../technologies/network-controller/network-controller-failover-clustering.md).
+Beginning with Windows Server 2025 and Azure Local 2311.2, Network Controller (NC) can now be deployed directly as a Failover Clustering service. In this article you learn about the prerequisites required, installing the SDN Express PowerShell module, and how to deploy Network Controller with Failover Clustering. To learn more about how it works with Software Load Balancer and Gateways, and how it differs from Network Controller on Service Fabric, see [Network Controller with Failover Clustering](../technologies/network-controller/network-controller-failover-clustering.md).
 
 ## Prerequisites
 
@@ -27,9 +27,9 @@ Before you can deploy Network Controller with Failover Clustering, you must comp
 
 :::zone pivot="azure-local"
 
-- You have a failover cluster with at least two nodes running Azure Local, version 23H2 or later.
+- You have a failover cluster with at least two nodes running Azure Local 2311.2 or later.
 
-- (Optional) If you intend to deploy the Software Load Balancer and Gateway Services as VMs using Failover Cluster, download the Azure Local VHDX image for use later in this article. To learn more about downloading the VHDX, see [/azure-stack/hci/deploy/download-azure-local-23h2-software](Download Azure Local, version 23H2 software).
+- (Optional) If you intend to deploy the Software Load Balancer and Gateway Services as VMs using Failover Cluster, download the Azure Local VHDX image for use later in this article. To learn more about downloading the VHDX, see [/azure/azure-local/deploy/download-23h2-software](Download Azure Local software).
 
 :::zone-end
 
