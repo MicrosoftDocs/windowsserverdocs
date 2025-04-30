@@ -4,7 +4,7 @@ description: Windows Server 2016 has improved the algorithms it uses to correct 
 author: dahavey
 ms.author: alalve
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Time accuracy improvements for Windows Server 2016
