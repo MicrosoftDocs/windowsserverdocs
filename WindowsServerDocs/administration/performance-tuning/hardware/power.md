@@ -1,7 +1,7 @@
 ---
 title: Windows Server hardware power considerations
 description: Considerations about Windows Server hardware power.
-ms.topic: conceptual
+ms.topic: best-practice
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

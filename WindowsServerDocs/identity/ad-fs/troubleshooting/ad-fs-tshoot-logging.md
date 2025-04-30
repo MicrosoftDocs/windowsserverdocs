@@ -4,7 +4,7 @@ description:  Learn how to use the admin and Tracelog to troubleshoot various Ac
 author: billmath
 ms.author: roharwoo
 ms.date: 05/25/2023
-ms.topic: article
+ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot Active Directory Federation Services with events and logging

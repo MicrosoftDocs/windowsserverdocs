@@ -5,7 +5,7 @@ ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ms.custom: inhenkel
 ---
 # Active Directory Forest Recovery - Configure the DNS Server service

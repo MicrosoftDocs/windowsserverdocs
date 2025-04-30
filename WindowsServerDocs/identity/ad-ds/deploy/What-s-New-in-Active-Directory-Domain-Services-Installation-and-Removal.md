@@ -6,7 +6,7 @@ ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 05/16/2023
-ms.topic: article
+ms.topic: whats-new
 ms.custom: inhenkel
 ---
 # What's New in Active Directory Domain Services Installation and Removal

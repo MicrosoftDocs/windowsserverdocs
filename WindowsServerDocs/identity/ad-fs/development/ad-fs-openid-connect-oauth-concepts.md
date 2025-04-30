@@ -5,7 +5,7 @@ author: billmath
 ms.author: roharwoo
 manager: femila
 ms.date: 05/25/2023
-ms.topic: article
+ms.topic: concept-article
 ms.custom: inhenkel
 ---
 

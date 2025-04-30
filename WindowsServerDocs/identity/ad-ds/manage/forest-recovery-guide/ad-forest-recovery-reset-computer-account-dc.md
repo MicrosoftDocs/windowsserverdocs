@@ -5,7 +5,7 @@ ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
 ---
 

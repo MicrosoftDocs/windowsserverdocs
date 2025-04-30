@@ -5,7 +5,7 @@ ms.date: 03/24/2023
 author: robinharwood
 manager: elizapo
 ms.author: daknappe
-ms.topic: conceptual
+ms.topic: overview
 ---
 
 # DFS Replication overview

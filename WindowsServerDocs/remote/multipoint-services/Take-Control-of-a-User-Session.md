@@ -1,7 +1,7 @@
 ---
 title: Take Control of a User Session
 description: Learn how to access and take control of another user's station in MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 99e93b4c-17be-40c2-a9fc-2b4574abf6b6
 author: robinharwood
 manager: dongill

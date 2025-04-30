@@ -1,7 +1,7 @@
 ---
 title: Protect SMB traffic from interception
 description: How to configure Windows Server to harden SMB protocol to defend against interception attacks.
-ms.topic: conceptual
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 12/12/2022

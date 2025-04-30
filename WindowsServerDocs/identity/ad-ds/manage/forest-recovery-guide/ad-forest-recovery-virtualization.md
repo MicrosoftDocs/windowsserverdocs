@@ -4,7 +4,7 @@ description: Virtualized domain controller (DC) cloning simplifies and expedites
 ms.author: mosagie
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Virtualization

@@ -1,10 +1,10 @@
 ---
 title: Supported Windows guest operating systems for Hyper-V on Windows, Windows Server, and Azure Local
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
-ms.topic: conceptual
+ms.topic: concept-article
 ms.author: daknappe
 author: robinharwood
-ms.date: 04/23/2025
+ms.date: 04/30/2025
 ---
 
 # Supported Windows guest operating systems for Hyper-V on Windows, Windows Server, and Azure Local
@@ -28,7 +28,7 @@ Following are the versions of Windows Server that are supported as guest operati
 - **Integration Services**: Built-in  
 - **Host operating systems**:
   - Windows Server 2022 and later
-  - Azure Local 2311.2 and later with Windows Server subscription.
+  - Azure Local OS, version 23H2 and later with Windows Server subscription.
 - **Notes**:  
   - Maximum number of virtual processors depends on the host OS. For example, Windows Server 2025 can provide up to 2,048 virtual processors.  
 
@@ -41,7 +41,7 @@ Following are the versions of Windows Server that are supported as guest operati
 - **Integration Services**: Built-in  
 - **Host operating systems**:
   - Windows Server 2019 and later
-  - Azure Local 2311.2 and later with Windows Server subscription.
+  - Azure Local OS, version 23H2 and later.
 
 ### Windows Server 2019
 
@@ -91,7 +91,7 @@ Following are the versions of Windows client that are supported as guest operati
 - **Integration Services**: Built-in
 - **Host operating systems**:
   - Generation 2 virtual machine hosted on Windows Server 2019 and later
-  - Generation 2 virtual machine hosted on Azure Local 2311.2 and later.
+  - Generation 2 virtual machine hosted on Azure Local OS, version 23H2 and later..
 - **Notes**:  
   - Windows 11 requires an increased CPU instructions for installation and boot (POPCNT and SSE4.2). To meet these requirements in Hyper-V:  
     - On Windows 11, Windows Server 2022 (standalone or clustered hosts), or standalone Windows Server 2025 hosts, disable processor compatibility to enable these features. Disabling processor compatibility limits live migration to hosts with the same processor features.  
@@ -119,7 +119,6 @@ The following table gives links to information about guest operating systems sup
 
 |Host operating system|Article|
 |-------------------------|---------|
-|Windows 10, 11|[Supported Guest Operating Systems for Client Hyper-V in Windows 10](/virtualization/hyper-v-on-windows/about/supported-guest-os)|
 |Windows Server 2012 R2 and Windows 8.1|-   [Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 R2 and Windows 8.1](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|
 |Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|
 |Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|

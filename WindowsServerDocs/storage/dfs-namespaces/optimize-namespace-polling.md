@@ -2,7 +2,7 @@
 title: Optimize Namespace Polling
 description: This article describes how to optimize namespace polling to maintain a consistent domain-based namespace across namespace servers
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

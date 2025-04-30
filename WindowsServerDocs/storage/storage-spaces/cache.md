@@ -3,7 +3,7 @@ title: Understanding the storage pool cache in Azure Stack HCI and Windows Serve
 description: How to read and write caching works to accelerate performance in Storage Spaces Direct.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 02/11/2025
 ---
 

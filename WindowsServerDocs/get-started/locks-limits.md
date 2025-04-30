@@ -1,7 +1,7 @@
 ---
 title: Locks and limits in Windows Server
 description: In this article, you can compare the operating system locks and limits across the different editions of Windows Server.
-ms.topic: conceptual
+ms.topic: product-comparison
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024

@@ -1,7 +1,7 @@
 ---
 title: Folder Redirection, Offline Files, and Roaming User Profiles overview
 description: In this overview, learn about Folder Redirection, Offline Files, and Roaming User Profiles technologies, previously known as Intellimirror.
-ms.topic: article
+ms.topic: overview
 author: robinharwood
 ms.author: roharwoo
 ms.date: 03/20/2023

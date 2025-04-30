@@ -6,7 +6,8 @@ author: iainfoulds
 ms.author: mosagie
 manager: daveba
 ms.date: 03/10/2025
-ms.topic: article
+ms.topic: overview
+
 # customer intent: As an administrator, I want to become familiar with Active Directory Domain Services so that I can store data on network resources and make this data available to authorized network users and administrators.
 ---
 

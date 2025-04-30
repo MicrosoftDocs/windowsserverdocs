@@ -2,7 +2,7 @@
 title: What is Server Core 2008?
 description: Learn about the Server Core installation option in Windows Server 2008
 ms.date: 11/01/2017
-ms.topic: article
+ms.topic: concept-article
 author: pronichkin
 ms.author: alalve
 ---
