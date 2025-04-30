@@ -135,15 +135,15 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 |                                                  | Windows PowerShell Desired State Configuration Service         | ✅               | ✅                  | ✅                        |
 |                                                  | Windows PowerShell Web Access                                  | ✅               | ✅                  | ✅                        |
 | Windows Process Activation Service               |                                                                | ✅               | ✅                  | ✅                        |
-| Windows Server Management enabled by Azure Arc&#8311;   |                                                         | ✅               | ✅                  | ✅                        |
-|                                                  | Azure Update Manager&#8311;                                    | ✅               | ✅                  | ✅                        |
-|                                                  | Change Tracking and Inventory&#8311;                           | ✅               | ✅                  | ✅                        |
-|                                                  | Azure Machine Configuration&#8311;                             | ✅               | ✅                  | ✅                        |
-|                                                  | Windows Admin Center in Azure for Arc&#8311;                   | ✅               | ✅                  | ✅                        |
-|                                                  | Remote Support&#8311;                                          | ✅               | ✅                  | ✅                        |
-|                                                  | Network HUD&#8311;                                             | ✅               | ✅                  | ✅                        |
-|                                                  | Best Practices Assessment&#8311;                               | ✅               | ✅                  | ✅                        |
-|                                                  | Azure Site Recovery Configuration&#8311;                       | ✅               | ✅                  | ✅                        |
+| Windows Server Management enabled by Azure Arc   |                                                                | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Azure Update Manager                                           | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Change Tracking and Inventory                                  | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Azure Machine Configuration                                    | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Windows Admin Center in Azure for Arc                          | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Remote Support                                                 | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Network HUD                                                    | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Best Practices Assessment                                      | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Azure Site Recovery Configuration                              | ✅&#8311;        | ✅&#8311;           | ❌                        |
 | Windows Search Service                           |                                                                | ✅&#8308;        | ✅&#8308;           | ✅&#8308;                 |
 | Windows Server Backup                            |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Server Migration Tools                   |                                                                | ✅               | ✅                  | ✅                        |
@@ -290,14 +290,14 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 |                                                  | Windows PowerShell Web Access                                  | ✅               | ✅                  | ✅                        |
 | Windows Process Activation Service               |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Search Service                           |                                                                | ✅&sup3;         | ✅&sup3;            | ✅&sup3;                  |
-| Windows Server Management enabled by Azure Arc&#8308;   |                                                         | ✅               | ✅                  | ✅                        |
-|                                                  | Azure Update Manager&#8308;                                    | ✅               | ✅                  | ✅                        |
-|                                                  | Change Tracking and Inventory&#8308;                           | ✅               | ✅                  | ✅                        |
-|                                                  | Azure Machine Configuration&#8308;                             | ✅               | ✅                  | ✅                        |
-|                                                  | Windows Admin Center in Azure for Arc&#8308;                   | ✅               | ✅                  | ✅                        |
-|                                                  | Remote Support&#8308;                                          | ✅               | ✅                  | ✅                        |
-|                                                  | Best Practices Assessment&#8308;                               | ✅               | ✅                  | ✅                        |
-|                                                  | Azure Site Recovery Configuration&#8308;                       | ✅               | ✅                  | ✅                        |
+| Windows Server Management enabled by Azure Arc   |                                                                | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Azure Update Manager                                           | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Change Tracking and Inventory                                  | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Azure Machine Configuration                                    | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Windows Admin Center in Azure for Arc                          | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Remote Support                                                 | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Best Practices Assessment                                      | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Azure Site Recovery Configuration                              | ✅&#8308;        | ✅&#8308;           | ❌                        |
 | Windows Server Backup                            |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Server Migration Tools                   |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Server Update Services                   |                                                                | ✅               | ✅                  | ✅                        |
