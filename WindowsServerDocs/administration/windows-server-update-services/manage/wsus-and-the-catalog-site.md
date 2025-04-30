@@ -6,11 +6,11 @@ ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 ms.author: jgerend
 author: robinharwood
 manager: mtillman
-ms.date: 08/08/2023
+ms.date: 04/30/2025
 ---
 # WSUS and the Microsoft Update Catalog
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The [Microsoft Update Catalog](https://catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to **Import Updates** from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script. The script allows you to import a single update, or multiple updates into WSUS. This article provides information about the catalog, the import script, and how to use the script.
 
@@ -284,7 +284,7 @@ reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /V SchUse
 
 - Run this PowerShell script to automate the process of adding a registry value related to the use of strong crypto and restart the Windows Server Update Services service and World Wide Web Publishing service:
 
-```
+```powershell
 $registryPath = "HKLM:\Software\Microsoft\.NETFramework\v4.0.30319"
 $Name = "SchUseStrongCrypto"
 $value = "1"
