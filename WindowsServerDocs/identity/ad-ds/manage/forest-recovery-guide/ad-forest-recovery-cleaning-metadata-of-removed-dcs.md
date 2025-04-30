@@ -4,7 +4,7 @@ description: Metadata cleanup removes Active Directory data that identifies a DC
 ms.author: mosagie
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery -  Clean the metadata of removed writable domain controllers

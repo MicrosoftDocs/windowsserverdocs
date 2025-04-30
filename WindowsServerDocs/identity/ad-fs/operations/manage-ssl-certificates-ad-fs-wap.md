@@ -5,7 +5,7 @@ description: Learn how to manage TLS/SSL Certificates in Active Directory Federa
 author: jenfieldmsft
 ms.author: billmath
 manager: femila
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ms.topic: how-to
 ---
 

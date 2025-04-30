@@ -6,7 +6,7 @@ ms.author: justinha
 author: iainfoulds
 manager: daveba
 ms.date: 02/14/2023
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Creating a Site Link Bridge Design

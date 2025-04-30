@@ -6,7 +6,7 @@ ms.author: justinha
 author: iainfoulds
 manager: dcscontentpm
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: troubleshooting-general
 ---
 
 # AD DS Troubleshooting

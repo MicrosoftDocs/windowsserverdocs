@@ -5,7 +5,7 @@ title: Publishing Applications using AD FS Preauthentication
 ms.author: daknappe
 author: robinharwood
 ms.date: 07/13/2016
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Publishing Applications using AD FS Preauthentication

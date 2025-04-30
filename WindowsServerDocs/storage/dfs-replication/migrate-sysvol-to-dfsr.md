@@ -5,7 +5,7 @@ ms.date: 04/25/2023
 author: robinharwood
 manager: elizapo
 ms.author: daknappe
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ---
 
 # Migrate SYSVOL replication to DFS Replication

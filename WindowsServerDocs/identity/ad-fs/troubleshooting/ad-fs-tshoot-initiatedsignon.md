@@ -4,7 +4,7 @@ description: Learn how to use the sign-in page to troubleshoot Active Directory 
 author: billmath
 ms.author: roharwoo
 ms.date: 05/19/2023
-ms.topic: article
+ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot AD FS IdP-initiated sign-in

@@ -1,7 +1,7 @@
 ---
 title: Passwords Overview
 description: Learn about passwords as they are used in the Windows operating systems, and find links to documentation and discussions about the use of passwords in a credential management strategy.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: f608960e-2039-4c91-9c8c-9b81053c675e
 ms.author: mosagie
 author: robinharwood

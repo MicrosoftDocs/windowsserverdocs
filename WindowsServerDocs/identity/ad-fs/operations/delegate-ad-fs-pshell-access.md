@@ -4,7 +4,7 @@ description: This article describes how to delegate permissions for AD FS PowerS
 author: billmath
 ms.author: billmath
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Delegate AD FS PowerShell commandlet access to nonadmin users

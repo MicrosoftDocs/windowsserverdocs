@@ -4,7 +4,7 @@ description: Storage Migration Service makes it easier to migrate storage to Win
 author: robinharwood
 ms.author: alalve
 ms.date: 06/25/2024
-ms.topic: article
+ms.topic: overview
 ---
 
 # Storage Migration Service overview

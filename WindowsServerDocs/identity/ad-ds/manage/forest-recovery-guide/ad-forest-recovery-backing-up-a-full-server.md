@@ -4,7 +4,7 @@ description: A Bare Metal Recovery (BMR) backup is recommended to prepare for a 
 ms.author: mosagie
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Back up a full server

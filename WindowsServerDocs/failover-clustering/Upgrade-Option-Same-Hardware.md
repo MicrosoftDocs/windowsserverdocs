@@ -2,7 +2,7 @@
 title: Upgrading Failover Clusters Using the Same Hardware
 description: This article describes upgrading a 2-node Failover Cluster using the same hardware
 manager: femila
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ms.author: jgerend
 author: robinharwood
 ms.date: 1/08/2025

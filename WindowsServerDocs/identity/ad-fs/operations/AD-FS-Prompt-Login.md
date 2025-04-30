@@ -4,7 +4,7 @@ description: Learn about the native support for the prompt=login parameter that 
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/13/2024
+ms.date: 04/08/2025
 ms.topic: article
 ms.custom: it-pro, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---

@@ -6,7 +6,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Access Control Policies in Windows Server 2012 R2 and Windows Server 2012 AD FS

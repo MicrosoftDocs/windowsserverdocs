@@ -1,7 +1,7 @@
 ---
 title: Upgrade Windows Admin Center extensions to Angular 15
 description: Guide on how to upgrade existing Windows Admin Center extensions to Angular 15
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 11/30/2023

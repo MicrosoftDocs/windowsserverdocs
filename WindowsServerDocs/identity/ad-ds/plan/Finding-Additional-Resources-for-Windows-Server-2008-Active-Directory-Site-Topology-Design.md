@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design

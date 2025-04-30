@@ -4,7 +4,7 @@ description: This article describes new authentication methods available with AD
 author: billmath
 ms.author: billmath
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configure third party authentication providers as primary authentication in AD FS 2019

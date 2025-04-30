@@ -1,7 +1,7 @@
 ---
 title: Passwords technical overview
 description: Explains how Windows implements passwords in versions of Windows beginning with Windows Server 2012 and Windows 8.1. It also discusses strong passwords, passphrases, and password policies.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 0288c73f-8ce8-4bfd-9016-2e47139fa38d
 ms.author: mosagie
 author: robinharwood

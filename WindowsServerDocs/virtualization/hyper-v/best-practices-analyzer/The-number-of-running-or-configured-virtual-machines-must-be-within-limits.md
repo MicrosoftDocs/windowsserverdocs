@@ -3,7 +3,7 @@ title: The number of running or configured virtual machines must be within suppo
 description: Learn what to do when more virtual machines are running or configured than are supported.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
 ms.date: 8/16/2016
 ---

@@ -2,7 +2,7 @@
 title: Create an Automatic Classification Rule
 description: This article describes how to create a classification rule for a property.
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

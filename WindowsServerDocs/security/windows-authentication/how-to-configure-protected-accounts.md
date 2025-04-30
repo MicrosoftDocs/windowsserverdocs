@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: How to Configure Protected Accounts"
 title: How to Configure Protected Accounts
-ms.topic: article
+ms.topic: how-to
 ms.author: mosagie
 author: robinharwood
 manager: mtillman

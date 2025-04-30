@@ -5,7 +5,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 10/14/2024
-ms.topic: article
+ms.topic: troubleshooting-general
 ---
 
 # Users can't sign in by using AD FS from an external network

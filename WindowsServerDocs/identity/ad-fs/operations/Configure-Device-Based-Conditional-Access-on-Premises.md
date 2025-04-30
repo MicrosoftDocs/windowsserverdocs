@@ -6,7 +6,7 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 03/18/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 

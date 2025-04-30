@@ -3,7 +3,7 @@ title: A Replica server must be configured to accept replication requests
 description: Learn what to do when your computer is designated as a Hyper-V Replica server but is not configured to accept incoming replication data from primary servers.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.date: 8/16/2016
 ---
 # A Replica server must be configured to accept replication requests
