@@ -270,3 +270,29 @@ The catalog includes updates that support multiple languages.
 > Match the languages supported by the WSUS server with the languages supported by the imported updates.
 
 If the WSUS server doesn't support all the languages included in the update, the update won't be deployed to client computers. If an update supporting multiple languages has been downloaded to the WSUS server but not yet deployed to client computers, and an administrator deselects one of the languages included in the update, the update won't be deployed to the clients.
+
+## Troubleshooting
+
+The “.NOTES” section of the script can be used for troubleshooting issues which may occur when running the script.
+
+- If you get an error, try enabling Transport Layer Security (TLS) 1.2. For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
+- You can use the following command to automate the process of adding a registry value related to the use of strong crypto. Manually restart the Windows Server Update Services service and World Wide Web Publishing service after adding the registry value.
+
+```
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /V SchUseStrongCrypto /T REG_DWORD /D 1
+```
+
+- Run this PowerShell script to automate the process of adding a registry value related to the use of strong crypto and restart the Windows Server Update Services service and World Wide Web Publishing service:
+
+```
+$registryPath = "HKLM:\Software\Microsoft\.NETFramework\v4.0.30319"
+$Name = "SchUseStrongCrypto"
+$value = "1"
+if (!(Test-Path $registryPath)) {
+   New-Item -Path $registryPath -Force | Out-Null
+}
+New-ItemProperty -Path $registryPath -Name $name -Value $value -PropertyType DWORD -Force | Out-Null
+Restart-Service WsusService, w3svc
+```
+
+- Activity and/or errors related to importing updates can be found in **%ProgramFiles%\Update Services\LogFiles\SoftwareDistribution.log** of the WSUS server where updates are being imported.
