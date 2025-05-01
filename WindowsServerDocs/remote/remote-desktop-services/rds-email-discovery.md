@@ -4,7 +4,7 @@ description: Learn how to set up email discovery in your RDS deployment.
 ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: how-to
-author: christianmontoya
+author: dknappettmsft
 ---
 # Set up email discovery to subscribe to your RDS feed
 

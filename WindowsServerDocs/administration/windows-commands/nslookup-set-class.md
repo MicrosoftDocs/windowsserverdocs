@@ -4,7 +4,7 @@ description: Reference article for the nslookup set class command, which changes
 ms.topic: reference
 ms.assetid: ed826400-40da-42b6-b7f0-95db73790723
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

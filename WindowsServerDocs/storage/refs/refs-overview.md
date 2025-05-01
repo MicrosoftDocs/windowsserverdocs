@@ -5,7 +5,7 @@ ms.author: jgerend
 manager: candyc
 ms.topic: overview
 
-author: wbsmolen
+author: jasongerend
 ms.date: 10/28/2022
 ---
 # Resilient File System (ReFS) overview

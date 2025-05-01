@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Configure certificate auto-enrollment

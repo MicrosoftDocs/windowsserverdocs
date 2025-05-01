@@ -2,7 +2,7 @@
 title: Features removed or no longer developed in Windows Server
 description: Learn about the features and functionalities removed or no longer developed in Windows Server.
 ms.topic: article
-author: robinharwood
+author: xelu86
 ms.author: alalve
 ms.date: 04/28/2025
 ---

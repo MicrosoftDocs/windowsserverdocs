@@ -4,7 +4,7 @@ description: Learn about User Account Control (UAC) and how it helps prevent mal
 ms.topic: concept-article
 ms.assetid: da83ddb2-6182-417c-aa8e-0b47b2e17d13
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/12/2016
 ---

@@ -2,7 +2,7 @@
 title: Create a failover cluster
 description: How to create a failover cluster for Windows Server 2012 R2, Windows Server 2012, Windows Server 2016, and Windows Server 2019.
 ms.topic: how-to
-author: robinharwood
+author: jasongerend
 ms.author: jgerend
 manager: lizross
 ms.date: 1/15/2025

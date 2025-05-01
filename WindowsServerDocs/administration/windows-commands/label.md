@@ -4,7 +4,7 @@ description: Reference article for the label command, which creates, changes, or
 ms.topic: reference
 ms.assetid: bbae8bdd-97d4-4566-9118-7c95aa07645f
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

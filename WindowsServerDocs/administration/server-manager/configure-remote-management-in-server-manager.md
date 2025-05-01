@@ -4,7 +4,7 @@ description: Learn how to add the server to the Server Manager server pool to pe
 ms.topic: how-to
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

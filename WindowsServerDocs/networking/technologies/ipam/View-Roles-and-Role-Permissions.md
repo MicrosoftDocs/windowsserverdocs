@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # View Roles and Role Permissions

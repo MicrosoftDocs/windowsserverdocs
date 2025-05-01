@@ -4,7 +4,7 @@ description: Reference article for the manage-bde off command, which decrypts th
 ms.topic: reference
 ms.assetid: 0a27c119-d385-45e5-89fe-e311d4429876
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,7 +1,7 @@
 ---
 title: Advanced Troubleshooting Server Message Block (SMB)
 description: Introduces the advanced Server Message Block (SMB) troubleshooting methods.
-author: Deland-Han
+author: robinharwood
 manager: dcscontentpm
 ms.topic: troubleshooting-general
 ms.author: roharwoo

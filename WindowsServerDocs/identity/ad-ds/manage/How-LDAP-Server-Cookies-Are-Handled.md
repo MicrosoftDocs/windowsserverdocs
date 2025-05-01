@@ -1,7 +1,7 @@
 ---
 description: Learn more about How LDAP Server Cookies Are Handled
 title: How LDAP server cookies are handled
-author: iainfoulds
+author: justinha
 ms.author: justinha
 ms.date: 04/01/2023
 ms.topic: concept-article

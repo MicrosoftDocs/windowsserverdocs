@@ -4,7 +4,7 @@ description: Reference article for the ksetup command, which performs tasks rela
 ms.topic: reference
 ms.assetid: 4e046f8a-811b-48dc-9a69-18d8e097f353
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

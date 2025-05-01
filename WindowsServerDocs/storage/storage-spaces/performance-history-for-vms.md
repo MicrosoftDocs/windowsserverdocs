@@ -4,7 +4,7 @@ title: Performance history for virtual machines
 ms.author: roharwoo
 manager: eldenc
 ms.topic: article
-author: cosmosdarwin
+author: robinharwood
 ms.date: 09/07/2018
 ---
 

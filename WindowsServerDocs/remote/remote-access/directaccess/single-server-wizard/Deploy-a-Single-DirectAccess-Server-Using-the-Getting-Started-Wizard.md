@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: install-set-up-deploy
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard

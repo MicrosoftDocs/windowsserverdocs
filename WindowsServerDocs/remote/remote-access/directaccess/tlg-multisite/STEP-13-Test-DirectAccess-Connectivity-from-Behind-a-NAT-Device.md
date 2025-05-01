@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 796825c3-5e3e-4745-a921-25ab90b95ede
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 13 Test DirectAccess Connectivity from Behind a NAT Device

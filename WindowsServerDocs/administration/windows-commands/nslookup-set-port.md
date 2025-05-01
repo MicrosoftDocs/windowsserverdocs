@@ -4,7 +4,7 @@ description: Reference article for the nslookup set port command, which changes 
 ms.topic: reference
 ms.assetid: 4dab7a09-d400-4062-b863-2d32c191c3bd
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

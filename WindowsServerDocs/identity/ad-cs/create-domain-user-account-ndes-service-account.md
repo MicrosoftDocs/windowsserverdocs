@@ -1,7 +1,7 @@
 ---
 title: Configure Network Device Enrollment Service to use a domain user account for Active Directory Certificate Services
 description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) as a role service with certificates based on Simple Certificate Enrollment Protocol (SCEP)
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 04/03/2023

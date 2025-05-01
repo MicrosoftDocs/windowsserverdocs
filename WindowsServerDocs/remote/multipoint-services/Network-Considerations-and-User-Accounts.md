@@ -4,7 +4,7 @@ description: Provides planning information for different network and user scenar
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: ef4859fc-b7ae-4827-ab9c-b1dc07ab6c16
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

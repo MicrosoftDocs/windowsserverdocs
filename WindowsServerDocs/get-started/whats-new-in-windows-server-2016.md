@@ -2,7 +2,7 @@
 title: What's new in Windows Server 2016
 description: This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
 ms.topic: whats-new
-author: robinharwood
+author: xelu86
 ms.author: alalve
 ms.date: 04/08/2025
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7

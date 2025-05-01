@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) topic - How to configure Repli
 ms.topic: concept-article
 ms.assetid: d218cd6b-3b6b-4429-913b-31d412ce3356
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

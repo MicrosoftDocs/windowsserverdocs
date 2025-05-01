@@ -4,7 +4,7 @@ description: Get an overview of Storage Replica in Windows Server.
 manager: siroy
 ms.author: jgerend
 ms.topic: how-to
-author: robinharwood
+author: jasongerend
 ms.date: 10/04/2022
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---

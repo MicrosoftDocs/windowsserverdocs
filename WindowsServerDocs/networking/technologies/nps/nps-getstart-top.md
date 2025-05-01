@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: get-started
 ms.assetid: 29976baf-b0e2-4c01-ab4d-f2940e2bc327
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

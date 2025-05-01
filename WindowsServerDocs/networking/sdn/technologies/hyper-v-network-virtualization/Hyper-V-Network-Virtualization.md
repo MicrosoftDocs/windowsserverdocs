@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/27/2021
 ---
 # Hyper-V Network Virtualization

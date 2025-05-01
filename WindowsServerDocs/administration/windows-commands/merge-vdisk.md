@@ -4,7 +4,7 @@ description: Reference article for the merge vdisk command, which merges a diffe
 ms.topic: reference
 ms.assetid: 5865bb08-89a3-406c-8328-0ef8868d03e8
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

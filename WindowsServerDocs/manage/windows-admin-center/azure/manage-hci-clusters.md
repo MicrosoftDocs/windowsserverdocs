@@ -2,7 +2,7 @@
 title: Manage Azure Local clusters with Windows Admin Center in Azure (preview)
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Azure Local.
 ms.topic: overview
-author: prasidharora
+author: jasongerend
 ms.author: jgerend
 ms.date: 05/06/2022
 ---

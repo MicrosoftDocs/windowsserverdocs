@@ -4,7 +4,7 @@ description: Reference article for the netcfg command, which installs the Window
 ms.topic: reference
 ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

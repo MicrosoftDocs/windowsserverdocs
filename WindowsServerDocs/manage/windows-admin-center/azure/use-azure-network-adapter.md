@@ -2,7 +2,7 @@
 title: Connect server to Azure Virtual Network - Azure Network Adapter
 description: This article provides requirements and steps on how to use Azure Network Adapter to connect a server to an Azure Virtual Network.
 ms.topic: how-to
-author: thomasmaurer
+author: jasongerend
 ms.author: jgerend
 ms.date: 07/14/2020
 ms.custom: team=cloud_advocates

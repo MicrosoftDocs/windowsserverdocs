@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) topic - Approve and Deploy Upd
 ms.topic: how-to
 ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 04/24/2023
 ---

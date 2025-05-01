@@ -4,7 +4,7 @@ description: Reference article for the mqbkup command, which backs up MSMQ messa
 ms.topic: reference
 ms.assetid: 7bdd41c4-75ef-455f-b241-1d64a4c7acf5
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

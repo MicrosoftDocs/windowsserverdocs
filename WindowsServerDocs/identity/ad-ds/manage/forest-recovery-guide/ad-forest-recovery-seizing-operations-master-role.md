@@ -2,7 +2,7 @@
 description: "Learn more about: AD Forest Recovery - Seizing an operations master role"
 title: AD Forest Recovery - Seizing an Operations Master Role
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 06/21/2023
 ms.topic: how-to

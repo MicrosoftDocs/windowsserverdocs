@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: install-set-up-deploy
 ms.assetid: 4adce101-1e30-439e-b78b-65b26479f33e
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Install and Configure Deployment for Remote Management of DirectAccess Clients

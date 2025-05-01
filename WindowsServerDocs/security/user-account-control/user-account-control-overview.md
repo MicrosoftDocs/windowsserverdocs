@@ -4,7 +4,7 @@ description: Learn about User Account Control, how it is a fundamental component
 ms.topic: concept-article
 ms.assetid: 1b7a39cd-fc10-4408-befd-4b2c45806732
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/12/2016
 ---

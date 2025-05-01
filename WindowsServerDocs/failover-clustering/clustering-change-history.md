@@ -3,7 +3,7 @@ ms.assetid: 289cbd10-e7ec-4f2e-8dd1-eb5692565578
 title: Change history for Failover Clustering topics
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ms.topic: whats-new
-author: robinharwood
+author: jasongerend
 manager: lizross
 ms.author: jgerend
 ms.date: 01/07/2020

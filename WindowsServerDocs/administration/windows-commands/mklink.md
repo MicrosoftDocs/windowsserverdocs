@@ -4,7 +4,7 @@ description: Reference article for the mklink command, which creates a directory
 ms.topic: reference
 ms.assetid: 0ce4df22-2dbc-48fc-9c16-b721ae85f857
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

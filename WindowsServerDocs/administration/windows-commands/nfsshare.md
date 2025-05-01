@@ -4,7 +4,7 @@ description: Reference article for the nfsshare command, which controls Network 
 ms.topic: reference
 ms.assetid: 437a2615-335a-442f-9713-d50d5f3983a3
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

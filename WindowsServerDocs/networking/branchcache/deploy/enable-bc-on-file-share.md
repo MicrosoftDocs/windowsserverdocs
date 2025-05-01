@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 9c465a9e-c504-44ec-9ebc-4e06ba54db30
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Enable BranchCache on a File Share (Optional)

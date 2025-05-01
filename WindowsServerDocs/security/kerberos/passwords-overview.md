@@ -4,7 +4,7 @@ description: Learn about passwords as they are used in the Windows operating sys
 ms.topic: concept-article
 ms.assetid: f608960e-2039-4c91-9c8c-9b81053c675e
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/12/2016
 ---

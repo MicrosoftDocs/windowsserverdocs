@@ -3,7 +3,7 @@ description: "Learn more about: Delimit the allocation of volumes in Storage Spa
 title: Delimit the allocation of volumes in Storage Spaces Direct
 manager: eldenc
 ms.topic: how-to
-author: cosmosdarwin
+author: robinharwood
 ms.author: roharwoo
 ms.date: 03/29/2018
 ---

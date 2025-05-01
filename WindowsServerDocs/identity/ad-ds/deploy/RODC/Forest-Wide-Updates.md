@@ -1,7 +1,7 @@
 ---
 description: Learn more about Forest-Wide Updates
 title: Active Directory Forest-Wide Updates
-author: iainfoulds
+author: justinha
 ms.author: justinha
 ms.topic: article
 ms.date: 04/01/2023

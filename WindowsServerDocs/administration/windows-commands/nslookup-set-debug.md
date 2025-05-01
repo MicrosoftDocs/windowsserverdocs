@@ -4,7 +4,7 @@ description: Reference article for the nslookup set debug command, which turns d
 ms.topic: reference
 ms.assetid: b51e04e7-5f6f-4183-88bf-5628a506bdab
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: how-to
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Use network virtual appliances on a virtual network

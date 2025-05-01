@@ -4,7 +4,7 @@ description: Learn about authentication policy silos and the policies that can r
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/12/2016
 ---

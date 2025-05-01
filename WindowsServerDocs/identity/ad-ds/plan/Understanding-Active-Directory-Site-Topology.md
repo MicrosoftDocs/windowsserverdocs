@@ -2,7 +2,7 @@
 description: "Learn more about: Understanding Active Directory Site Topology"
 ms.assetid: 2971996b-7019-4a08-8e99-89b4b3f688a7
 title: Understanding Active Directory Site Topology
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017

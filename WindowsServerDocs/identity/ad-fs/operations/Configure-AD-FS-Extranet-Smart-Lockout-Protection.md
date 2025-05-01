@@ -2,7 +2,7 @@
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Smart Lockout Protection
 description: Learn more about AD FS Extranet Lockout and Extranet Smart Lockout to protect your users from experiencing extranet account lockout from malicious activity.
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 06/16/2023

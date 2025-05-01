@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 1b511e1a-686d-441f-a1c7-d4d029e1a061
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Use Windows PowerShell to Configure Non-Domain Member Client Computers

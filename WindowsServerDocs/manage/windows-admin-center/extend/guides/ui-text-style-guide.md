@@ -2,7 +2,7 @@
 title: Windows Admin Center UI text and design style guide
 description: Windows Admin Center UI text and design style guide SDK
 ms.topic: article
-author: robinharwood
+author: jasongerend
 ms.author: jgerend
 ms.date: 05/12/2021
 ---

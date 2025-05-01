@@ -2,7 +2,7 @@
 description: "Learn more about: Disjoint Namespace"
 ms.assetid: d92731f1-e4d8-4223-9b07-ca1f40bb0e1f
 title: Disjoint Namespace
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017

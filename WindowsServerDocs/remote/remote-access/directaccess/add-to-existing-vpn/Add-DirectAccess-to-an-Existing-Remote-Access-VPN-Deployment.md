@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: b5db01f7-1ae0-46f2-9be7-8d9e121446b2
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 01/05/2021
 ---
 # Add DirectAccess to an Existing Remote Access (VPN) Deployment

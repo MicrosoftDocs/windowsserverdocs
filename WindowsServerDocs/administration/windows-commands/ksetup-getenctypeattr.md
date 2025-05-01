@@ -4,7 +4,7 @@ description: Reference article for the ksetup getenctypeattr command, which retr
 ms.topic: reference
 ms.assetid: 6c7ec002-355e-474d-bc27-27215049f1a8
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

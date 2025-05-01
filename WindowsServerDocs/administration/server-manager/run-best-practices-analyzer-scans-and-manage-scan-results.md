@@ -4,7 +4,7 @@ description: Learn how to run Best Practices Analyzer (BPA) scans either from Se
 ms.topic: how-to
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 01/25/2023
 ---
