@@ -4,7 +4,7 @@ description: Learn about stations in MultiPoint Services, including the differen
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

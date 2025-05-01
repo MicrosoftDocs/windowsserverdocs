@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/27/2021
 ---
 # SDN Technologies

@@ -4,7 +4,7 @@ description: Learn how to create Windows Server 2016 desktops for station
 ms.date: 07/22/2016
 ms.topic: how-to
 ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
-author: evaseydl
+author: dknappettmsft
 ms.author: daknappe
 manager: scottman
 ---

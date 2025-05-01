@@ -4,7 +4,7 @@ description: Learn how to set the date, time, and time zone in MultiPoint Servic
 ms.date: 07/22/2016
 ms.topic: how-to
 ms.assetid: 22a87c5f-3bfc-4da1-9905-24f768ede959
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

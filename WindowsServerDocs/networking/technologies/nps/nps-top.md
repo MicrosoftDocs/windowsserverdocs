@@ -5,7 +5,7 @@ manager: dougkim
 ms.topic: overview
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
 ms.author: alalve
-author: robinharwood
+author: xelu86
 ms.date: 04/18/2025
 # customer intent: As an administrator, I want to become familiar with Network Policy Server (NPS) in Windows Server so that I can centrally configure and manage network access authentication, authorization, and accounting.
 ---

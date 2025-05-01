@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: install-set-up-deploy
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 ms.date: 04/15/2025
 #customer intent: As a system administrator, I want to install and configure a Certification Authority so that I can issue server certificates for secure communication.
 ---

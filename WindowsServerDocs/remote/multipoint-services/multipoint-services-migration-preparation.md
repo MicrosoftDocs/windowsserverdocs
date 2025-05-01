@@ -4,7 +4,7 @@ description: Describes information to gather before you migrate to MultiPoint Se
 ms.date: 07/29/2016
 ms.topic: upgrade-and-migration-article
 ms.assetid: 3060c531-98a2-4957-a02c-be273f25f493
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ---

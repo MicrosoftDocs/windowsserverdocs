@@ -4,7 +4,7 @@ description: This article provides information about configuring Certificate Rev
 ms.topic: how-to
 ms.assetid: 9624b301-d9f9-4d97-8651-39bf4bbae83e
 ms.author: jgerend
-author: marcussa
+author: jasongerend
 ms.date: 10/31/2023
 ms.contributor: alalve
 ---

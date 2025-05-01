@@ -4,7 +4,7 @@ title: Virtual network peering
 manager: grcusanz
 ms.topic: how-to
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/04/2021
 ---
 
