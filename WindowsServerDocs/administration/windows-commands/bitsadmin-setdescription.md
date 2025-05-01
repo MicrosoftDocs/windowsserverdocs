@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin setdescription command, which s
 ms.topic: reference
 ms.assetid: 1e46a5dd-4637-4a2e-b88f-d3f85b177db8
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

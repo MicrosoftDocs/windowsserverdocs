@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin peers command, which lists the 
 ms.topic: reference
 ms.assetid: 5effbd52-993a-4657-b331-596c64deb8fb
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

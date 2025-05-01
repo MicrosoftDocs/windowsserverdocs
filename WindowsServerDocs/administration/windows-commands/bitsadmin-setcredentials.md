@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin setcredentials command, which a
 ms.topic: reference
 ms.assetid: 3cd099a4-9e85-46d8-8527-edb6dfab7f97
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

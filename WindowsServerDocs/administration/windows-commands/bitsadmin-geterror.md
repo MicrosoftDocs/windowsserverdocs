@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin geterror command, which retriev
 ms.topic: reference
 ms.assetid: cbe5bca1-d2dd-4ce6-903f-f85de4a2ec6a
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---
