@@ -4,7 +4,7 @@ description: Receive Segment Coalescing (RSC) in the vSwitch is a feature in Win
 manager: dougkim
 ms.topic: how-to
 ms.author: roharwoo
-author: dcuomo
+author: robinharwood
 ms.date: 10/25/2021
 ---
 

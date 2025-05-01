@@ -3,7 +3,7 @@ title: Block or Unblock USB Storage
 description: Learn how to prevent users from using USB storage on MultiPoint stations
 ms.topic: how-to
 ms.assetid: 63f99c10-0289-4e79-b596-7c19160b3ad0
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016

@@ -1,7 +1,7 @@
 ---
 title: EAP - What's changed in Windows 11
 description: This article presents information about the changes in Windows 11 for Extensible Authentication Protocol (EAP) settings.
-author: samyun
+author: jasongerend
 ms.author: jgerend
 ms.topic: concept-article
 ms.date: 06/27/2024

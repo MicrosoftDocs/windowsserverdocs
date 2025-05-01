@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: how-to
 ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)

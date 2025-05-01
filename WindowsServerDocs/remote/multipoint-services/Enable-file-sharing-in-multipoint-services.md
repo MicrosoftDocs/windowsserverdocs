@@ -4,7 +4,7 @@ description: Learn about file sharing in MultiPoint Services
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: 508ad056-8e0c-4d59-a4fa-05775a54125d
-author: evaseydl
+author: dknappettmsft
 ms.author: daknappe
 manager: Scottman
 ---

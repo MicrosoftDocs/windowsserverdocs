@@ -3,7 +3,7 @@ title: Privacy and Security Considerations
 description: Provides privacy and security insights about MultiPoint Services
 ms.topic: article
 ms.assetid: 00eb89e5-aaf5-450e-94d8-3ef759dc5e26
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016

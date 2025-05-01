@@ -4,7 +4,7 @@ description: Describes how to set up MultiPoint Services so two users can share 
 ms.date: 07/22/2016
 ms.topic: how-to
 ms.assetid: 35d1d434-79b2-4e0a-835f-d94ed8ee6b21
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

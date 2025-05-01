@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: how-to
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Configure Encryption for a Virtual Subnet

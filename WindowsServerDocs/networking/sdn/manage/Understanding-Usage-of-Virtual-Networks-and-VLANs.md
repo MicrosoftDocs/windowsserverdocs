@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: concept-article
 ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Understand the usage of virtual networks and VLANs

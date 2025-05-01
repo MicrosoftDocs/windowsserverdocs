@@ -2,7 +2,7 @@
 title: SDN Data Path Diagnostics Extension in Windows Admin Center
 description: Describes how to automate Packet Monitor-based packet captures with the SDN Data Path Diagnostics Extension in Windows Admin Center.
 ms.topic: how-to
-author: khdownie
+author: robinharwood
 ms.author: roharwoo
 ms.date: 10/27/2021
 ---

@@ -3,7 +3,7 @@ title: How to configure remote support for Arc-enabled Windows servers (preview)
 description: Learn how to configure, grant, and revoke remote support assistance for your Arc-enabled Windows server.
 ms.topic: how-to
 ms.author: alalve
-author: trungtran
+author: xelu86
 ms.date: 03/04/2025
 ---
 

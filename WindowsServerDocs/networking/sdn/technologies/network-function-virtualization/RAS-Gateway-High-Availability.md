@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: how-to
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # RAS Gateway High Availability
