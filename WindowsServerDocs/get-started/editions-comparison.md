@@ -136,14 +136,14 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 |                                                  | Windows PowerShell Web Access                                  | ✅               | ✅                  | ✅                        |
 | Windows Process Activation Service               |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Server Management enabled by Azure Arc   |                                                                | ✅&#8311;        | ✅&#8311;           | ❌                        |
-|                                                  | Azure Update Manager                                           | ✅&#8311;        | ✅&#8311;           | ❌                        |
-|                                                  | Change Tracking and Inventory                                  | ✅&#8311;        | ✅&#8311;           | ❌                        |
-|                                                  | Azure Machine Configuration                                    | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Azure Update Manager                                           | ✅&#8311;        | ✅&#8311;           | ✅&#8312;                 |
+|                                                  | Change Tracking and Inventory                                  | ✅&#8311;        | ✅&#8311;           | ✅&#8312;                 |
+|                                                  | Azure Machine Configuration                                    | ✅&#8311;        | ✅&#8311;           | ✅&#8312;                 |
 |                                                  | Windows Admin Center in Azure for Arc                          | ✅&#8311;        | ✅&#8311;           | ❌                        |
 |                                                  | Remote Support                                                 | ✅&#8311;        | ✅&#8311;           | ❌                        |
 |                                                  | Network HUD                                                    | ✅&#8311;        | ✅&#8311;           | ❌                        |
 |                                                  | Best Practices Assessment                                      | ✅&#8311;        | ✅&#8311;           | ❌                        |
-|                                                  | Azure Site Recovery Configuration                              | ✅&#8311;        | ✅&#8311;           | ❌                        |
+|                                                  | Azure Site Recovery Configuration                              | ✅&#8311;        | ✅&#8311;           | ✅&#8312;                 |
 | Windows Search Service                           |                                                                | ✅&#8308;        | ✅&#8308;           | ✅&#8308;                 |
 | Windows Server Backup                            |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Server Migration Tools                   |                                                                | ✅               | ✅                  | ✅                        |
@@ -170,6 +170,8 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 6. Available with Windows Server 2025 Standard, and is designed for standalone servers. Live migrate VMs between standalone nodes for planned downtime. If clustering is required for unplanned downtime, Windows Server 2025 Datacenter must be used instead.
 
 7. Available for machines enrolled in Windows Server Management enabled by Azure Arc with Windows Server licenses that have active Software Assurances or Windows Server licenses that with active subscription licenses. To learn more about the available Azure benefits, billing, and requirements, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
+
+8. Available in Azure for Azure virtual machines
 
 ::: zone-end
 
@@ -291,13 +293,13 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 | Windows Process Activation Service               |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Search Service                           |                                                                | ✅&sup3;         | ✅&sup3;            | ✅&sup3;                  |
 | Windows Server Management enabled by Azure Arc   |                                                                | ✅&#8308;        | ✅&#8308;           | ❌                        |
-|                                                  | Azure Update Manager                                           | ✅&#8308;        | ✅&#8308;           | ❌                        |
-|                                                  | Change Tracking and Inventory                                  | ✅&#8308;        | ✅&#8308;           | ❌                        |
-|                                                  | Azure Machine Configuration                                    | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Azure Update Manager                                           | ✅&#8308;        | ✅&#8308;           | ✅&#8309;                 |
+|                                                  | Change Tracking and Inventory                                  | ✅&#8308;        | ✅&#8308;           | ✅&#8309;                 |
+|                                                  | Azure Machine Configuration                                    | ✅&#8308;        | ✅&#8308;           | ✅&#8309;                 |
 |                                                  | Windows Admin Center in Azure for Arc                          | ✅&#8308;        | ✅&#8308;           | ❌                        |
 |                                                  | Remote Support                                                 | ✅&#8308;        | ✅&#8308;           | ❌                        |
 |                                                  | Best Practices Assessment                                      | ✅&#8308;        | ✅&#8308;           | ❌                        |
-|                                                  | Azure Site Recovery Configuration                              | ✅&#8308;        | ✅&#8308;           | ❌                        |
+|                                                  | Azure Site Recovery Configuration                              | ✅&#8308;        | ✅&#8308;           | ✅&#8309;                 |
 | Windows Server Backup                            |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Server Migration Tools                   |                                                                | ✅               | ✅                  | ✅                        |
 | Windows Server Update Services                   |                                                                | ✅               | ✅                  | ✅                        |
@@ -317,6 +319,8 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 3. When installed as Server with Desktop Experience
 
 4. Available for machines enrolled in Windows Server Management enabled by Azure Arc with Windows Server licenses that have active Software Assurances or Windows Server licenses that with active subscription licenses. To learn more about the available Azure benefits, billing, and requirements, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
+
+5. Available in Azure for Azure virtual machines
 
 ::: zone-end
 
