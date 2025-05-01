@@ -1,7 +1,7 @@
 ---
 description: Learn more about planning for compromise
 title: Planning for compromise
-author: iainfoulds
+author: justinha
 ms.author: justinha
 ms.date: 05/16/2023
 ms.topic: concept-article

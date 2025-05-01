@@ -2,7 +2,7 @@
 description: "Learn more about: AD Forest Recovery - Cleanup"
 title: AD Forest Recovery - Cleanup
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 06/21/2023
 ms.topic: how-to

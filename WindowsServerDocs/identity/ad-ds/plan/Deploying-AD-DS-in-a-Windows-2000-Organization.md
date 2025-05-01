@@ -2,7 +2,7 @@
 description: "Learn more about: Deploying AD DS in a Windows 2000 Organization"
 ms.assetid: 7530cafe-98d7-46c9-95d9-e49d39caa021
 title: Deploying AD DS in a Windows 2000 Organization
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017

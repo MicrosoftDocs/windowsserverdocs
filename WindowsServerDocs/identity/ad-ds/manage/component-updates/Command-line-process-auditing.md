@@ -2,7 +2,7 @@
 description: "Learn more about: Command line process auditing"
 ms.assetid: c8597cc8-bdcb-4e59-a09e-128ef5ebeaf8
 title: Command line process auditing
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/01/2023

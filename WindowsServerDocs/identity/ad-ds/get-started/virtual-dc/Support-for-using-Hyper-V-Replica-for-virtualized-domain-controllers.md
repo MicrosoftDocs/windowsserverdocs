@@ -2,7 +2,7 @@
 description: "Learn more about: Support for using Hyper-V Replica for virtualized domain controllers"
 ms.assetid: 45a65504-70b5-46ea-b2e0-db45263fabaa
 title: Support for using Hyper-V Replica for virtualized domain controllers
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017

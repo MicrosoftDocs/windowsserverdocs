@@ -1,7 +1,7 @@
 ---
 title: Get started with Windows LAPS deployment and migration scenarios
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) deployment and migration scenarios.
-author: jay98014
+author: dknappettmsft
 ms.author: daknappe
 ms.date: 05/15/2023
 ms.topic: get-started

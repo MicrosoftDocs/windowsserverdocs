@@ -2,7 +2,7 @@
 ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: AD DS Installation and Removal Wizard Page Descriptions
 description: Find out about the Active Directory Domain Services Configuration Wizard pages that you use to promote a server to a domain controller and to demote a server.
-author: iainfoulds
+author: meaghanlewis
 ms.author: mosagie
 manager: daveba
 ms.date: 04/10/2025
