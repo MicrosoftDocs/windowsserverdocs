@@ -4,7 +4,7 @@ description: Reference article for the sysocmgr command. This command has been d
 ms.topic: reference
 ms.assetid: 9ab50021-7433-4fac-92be-f164b2c7453a
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

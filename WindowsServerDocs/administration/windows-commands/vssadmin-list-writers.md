@@ -2,7 +2,7 @@
 title: vssadmin list writers
 description: A description of the vssadmin list writer command, which lists subscribed volume shadow copy writers.
 ms.topic: reference
-author: robinharwood
+author: dknappettmsft
 ms.author: daknappe
 ms.date: 05/18/2018
 ---

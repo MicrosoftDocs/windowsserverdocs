@@ -4,7 +4,7 @@ description: Reference article for the telnet unset command, which turns off pre
 ms.topic: reference
 ms.assetid: da9a0d99-1930-4858-93c7-0e9c3797ee09
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---
