@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getsecurityflags command, which
 ms.topic: reference
 ms.assetid: c2e73519-34f4-487b-af11-97d5d08ef9bb
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

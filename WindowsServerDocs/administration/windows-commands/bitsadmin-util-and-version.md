@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin util and version command, which
 ms.topic: reference
 ms.assetid: 98f17328-dfbd-4cbb-93c1-b8d424bc3f0a
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

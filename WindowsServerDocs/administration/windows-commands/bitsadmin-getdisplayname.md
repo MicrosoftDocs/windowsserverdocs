@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getdisplayname command, which r
 ms.topic: reference
 ms.assetid: e5c0e76c-4cc6-42d8-ac30-30bf3dc11b9b
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

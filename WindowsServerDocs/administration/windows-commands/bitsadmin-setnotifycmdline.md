@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin setnotifycmdline command, which
 ms.topic: reference
 ms.assetid: 415ae6ef-8549-48b2-9693-2368a6e24075
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

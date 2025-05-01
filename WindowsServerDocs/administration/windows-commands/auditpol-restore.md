@@ -4,7 +4,7 @@ description: Reference article for the auditpol restore command, which restores 
 ms.topic: reference
 ms.assetid: ad73e520-484f-4cf1-a7f9-ae7488e9edf6
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the copy command, which copies one or more fi
 ms.topic: reference
 ms.assetid: 9624d4a1-349a-4693-ad00-1d1d4e59e9ac
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

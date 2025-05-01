@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin reset command, which cancels al
 ms.topic: reference
 ms.assetid: 0e4f9d1d-072c-493f-8d7a-f6d713c3ef29
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---
