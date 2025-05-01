@@ -4,7 +4,7 @@ description: "Learn about the differences between Windows Server Standard, Datac
 ms.topic: product-comparison
 author: robinharwood
 ms.author: roharwoo
-ms.date: 04/29/2025
+ms.date: 05/01/2025
 zone_pivot_groups: windows-os-version
 ---
 
@@ -19,7 +19,7 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 
 :::zone pivot="windows-server-2025"
 
-| Feature                                          | Sub-feature                                                    | Standard edition | Datacenter edition | Datacenter: Azure Edition |
+| Feature                                          | Subfeature                                                    | Standard edition | Datacenter edition | Datacenter: Azure Edition |
 |--------------------------------------------------|:--------------------------------------------------------------:|:----------------:|:------------------:|:-------------------------:|
 | .NET Framework 3.5 Features                      |                                                                | ✅               | ✅                  | ✅                        |
 | .NET Framework 4.8 Features                      |                                                                | ✅               | ✅                  | ✅                        |
@@ -177,7 +177,7 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 
 :::zone pivot="windows-server-2022"
 
-| Feature                                          | Sub-feature                                                    | Standard edition | Datacenter edition | Datacenter: Azure Edition |
+| Feature                                          | Subfeature                                                    | Standard edition | Datacenter edition | Datacenter: Azure Edition |
 |--------------------------------------------------|:--------------------------------------------------------------:|:----------------:|:------------------:|:-------------------------:|
 | .NET Framework 3.5 Features                      |                                                                | ✅               | ✅                  | ✅                        |
 | .NET Framework 4.8 Features                      |                                                                | ✅               | ✅                  | ✅                        |
@@ -326,7 +326,7 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 
 :::zone pivot="windows-server-2019"
 
-| Feature                                          | Sub-feature                                                    | Standard edition | Datacenter edition |
+| Feature                                          | Subfeature                                                    | Standard edition | Datacenter edition |
 |--------------------------------------------------|:--------------------------------------------------------------:|:----------------:|:------------------:|
 | .NET Framework 3.5 Features                      |                                                                | ✅               | ✅                  |
 | .NET Framework 4.7 Features                      |                                                                | ✅               | ✅                  |
@@ -470,7 +470,7 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 
 :::zone pivot="windows-server-2016"
 
-| Feature                                          | Sub-feature                                                    | Standard edition | Datacenter edition |
+| Feature                                          | Subfeature                                                    | Standard edition | Datacenter edition |
 |--------------------------------------------------|:--------------------------------------------------------------:|:----------------:|:------------------:|
 | .NET Framework 3.5 Features                      |                                                                | ✅               | ✅                  |
 | .NET Framework 4.6 Features                      |                                                                | ✅               | ✅                  |
