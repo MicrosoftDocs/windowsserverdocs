@@ -1,7 +1,7 @@
 ---
 title: Windows LAPS passwords and passphrases
 description: Documents password and passphrase details for Windows Local Administrator Password Solution (Windows LAPS).
-author: justinha
+author: jay98014
 ms.author: justinha
 ms.date: 12/25/2023
 ms.topic: concept-article

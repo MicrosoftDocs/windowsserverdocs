@@ -2,7 +2,7 @@
 description: Learn how to create, view, edit, and delete fine grained password policies in Active Directory Domain Services on Windows Server.
 title: Configure fine grained password policies for Active Directory Domain Services in Windows Server
 ms.author: mosagie
-author: meaghanlewis
+author: orin-thomas
 ms.date: 07/15/2024
 ms.topic: how-to
 #customer intent: As an Active Directory administrator, I want to configure fine grained password policies so that I can apply different password and account lockout policies to different sets of users in a domain.
