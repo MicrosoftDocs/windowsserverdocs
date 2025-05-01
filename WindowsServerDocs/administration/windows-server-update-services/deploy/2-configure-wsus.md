@@ -4,7 +4,7 @@ description: See how to configure a Windows Server Update Services (WSUS) server
 ms.topic: how-to
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 3/31/2025
 # customer intent: As an administrator, I want to see how to configure Windows Server Update Services (WSUS) so that I can deploy the latest Microsoft product updates to computers in my network.

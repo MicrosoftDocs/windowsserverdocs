@@ -4,7 +4,7 @@ description: Learn how to remove feature files in a Features on Demand configura
 ms.topic: how-to
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

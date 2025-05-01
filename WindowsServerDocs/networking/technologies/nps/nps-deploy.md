@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: install-set-up-deploy
 ms.assetid: 6cfb50e0-7088-4295-97c5-14ff8776cbf8
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

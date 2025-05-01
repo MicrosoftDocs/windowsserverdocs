@@ -4,7 +4,7 @@ description: Reference article for the logman create counter command, which crea
 ms.topic: reference
 ms.assetid: 1e214c32-b704-43c1-b548-e1cf43b583c3
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

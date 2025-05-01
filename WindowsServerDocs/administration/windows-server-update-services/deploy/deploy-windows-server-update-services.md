@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) topic - An overview of the dep
 ms.topic: how-to
 ms.assetid: 2708f6b2-4252-4b8f-9b7e-84c9b4222075
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

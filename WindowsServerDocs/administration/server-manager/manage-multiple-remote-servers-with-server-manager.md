@@ -4,7 +4,7 @@ description: Learn how to use features in the Server Manager console to manage m
 ms.topic: how-to
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: ReFS integrity streams"
 title: ReFS integrity streams
-author: gawatu
+author: jasongerend
 ms.author: jgerend
 manager: dmoss
 ms.date: 10/16/2018

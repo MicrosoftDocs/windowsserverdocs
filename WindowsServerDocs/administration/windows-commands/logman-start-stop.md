@@ -4,7 +4,7 @@ description: Reference article for the logman start and logman stop commands, wh
 ms.topic: reference
 ms.assetid: a40006a1-876e-474b-aaf1-f365c730deea
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

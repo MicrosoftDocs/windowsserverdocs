@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 12/08/2020
 ---
 # Network Policy Server Management with Administration Tools

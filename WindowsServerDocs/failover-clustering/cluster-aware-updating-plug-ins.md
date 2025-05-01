@@ -5,7 +5,7 @@ description: How to use plug-ins to coordinate updates when using Cluster-Aware 
 ms.topic: how-to
 manager: lizross
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 10/21/2021
 ---
 # How Cluster-Aware Updating plug-ins work

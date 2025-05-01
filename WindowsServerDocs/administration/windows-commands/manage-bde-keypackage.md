@@ -4,7 +4,7 @@ description: Reference article for the manage-bde keypackage command, which gene
 ms.topic: reference
 ms.assetid: c631ef10-2a2f-4541-8578-292f2d4e9e80
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

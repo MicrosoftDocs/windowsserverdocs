@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) article - How to import update
 ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 04/30/2025
 ---

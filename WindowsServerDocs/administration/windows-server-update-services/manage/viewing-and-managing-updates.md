@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) article - How to view and mana
 ms.topic: how-to
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: femila
 ms.date: 08/11/2023
 ---

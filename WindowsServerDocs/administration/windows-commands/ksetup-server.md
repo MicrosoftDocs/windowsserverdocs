@@ -4,7 +4,7 @@ description: Reference article for the ksetup server command, which allows you t
 ms.topic: reference
 ms.assetid: e3407111-ac92-457f-aa1f-a04fe9109d59
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

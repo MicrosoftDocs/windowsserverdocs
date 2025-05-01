@@ -4,7 +4,7 @@ description: Reference article for the ksetup delkpasswd command, which removes 
 ms.topic: reference
 ms.assetid: 2db0bfcd-bc08-48e3-9f30-65b6411839c6
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

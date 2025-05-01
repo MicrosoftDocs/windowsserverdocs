@@ -4,7 +4,7 @@ description: Reference article for the mountvol command, which creates, deletes,
 ms.topic: reference
 ms.assetid: fea8ad4d-f04a-4aaa-a3e5-75931e867b39
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

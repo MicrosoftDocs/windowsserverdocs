@@ -4,7 +4,7 @@ description: Reference article for the mkdir command, which creates a directory 
 ms.topic: reference
 ms.assetid: 033a57a2-5deb-4c98-aa78-61ce8df2a330
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

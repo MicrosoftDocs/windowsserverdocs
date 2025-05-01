@@ -2,7 +2,7 @@
 title: Add a module to a tool extension
 description: Develop a tool extension in Windows Admin Center SDK (Project Honolulu) - Add a module to a tool extension.
 ms.topic: how-to
-author: robinharwood
+author: jasongerend
 ms.author: jgerend
 ms.date: 04/01/2023
 ---

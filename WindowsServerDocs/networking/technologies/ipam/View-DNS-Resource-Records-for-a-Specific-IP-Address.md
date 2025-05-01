@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: f590fb86-4195-4f90-98cb-e90459d4c1e3
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # View DNS Resource Records for a Specific IP Address

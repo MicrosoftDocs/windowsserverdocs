@@ -4,7 +4,7 @@ description: This article describes upgrading a 2-node Failover Cluster using th
 manager: femila
 ms.topic: upgrade-and-migration-article
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 1/08/2025
 ---
 

@@ -4,7 +4,7 @@ description: Reference article for the nslookup view command, which sorts and li
 ms.topic: reference
 ms.assetid: c1d9fff7-b567-451c-af80-6be8f604e193
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

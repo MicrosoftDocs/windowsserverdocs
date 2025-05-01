@@ -4,7 +4,7 @@ description: This article describes creating a two-node file server cluster
 manager: femila
 ms.topic: install-set-up-deploy
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 10/16/2023
 ---
 # Deploying a two-node clustered file server

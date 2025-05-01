@@ -4,7 +4,7 @@ description: Reference article for the logman create alert command, which create
 ms.topic: reference
 ms.assetid: 93e6fc2b-5bf5-413b-84b4-be8b9dd3a57d
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

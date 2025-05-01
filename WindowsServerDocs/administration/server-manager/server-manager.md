@@ -4,7 +4,7 @@ description: Learn about the management console in Windows Server that helps IT 
 ms.topic: concept-article
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

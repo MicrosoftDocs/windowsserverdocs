@@ -4,7 +4,7 @@ description: Reference article for the logman create api command, which creates 
 ms.topic: reference
 ms.assetid: 2ecc0a75-2613-464a-8616-c5dc404bb736
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

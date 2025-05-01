@@ -4,7 +4,7 @@ description: Reference article for the if command, which performs conditional pr
 ms.topic: reference
 ms.assetid: 698b3fb9-532b-4c2b-af7f-179f8dc57131
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

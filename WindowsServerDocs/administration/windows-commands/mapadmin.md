@@ -4,7 +4,7 @@ description: Reference article for the mapadmin command, which manages User Name
 ms.topic: reference
 ms.assetid: b17332c7-8622-4223-9c43-2fb9cf4d992d
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

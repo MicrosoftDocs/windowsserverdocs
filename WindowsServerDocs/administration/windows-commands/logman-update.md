@@ -4,7 +4,7 @@ description: Reference article for the logman update command, which updates an e
 ms.topic: reference
 ms.assetid: c98af84f-64ba-40c3-826d-75b80dfb9b34
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

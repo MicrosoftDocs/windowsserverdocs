@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) topic - Describes how to insta
 ms.topic: how-to
 ms.assetid: fabc8619-350e-403b-96f8-116424931300
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 09/27/2023
 ---

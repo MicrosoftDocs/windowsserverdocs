@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Verify Client Computer Settings

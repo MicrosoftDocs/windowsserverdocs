@@ -4,7 +4,7 @@ description: Reference article for the nslookup set search command, which append
 ms.topic: reference
 ms.assetid: 064ac660-8b04-4af9-8b2c-e4e0549771b8
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
