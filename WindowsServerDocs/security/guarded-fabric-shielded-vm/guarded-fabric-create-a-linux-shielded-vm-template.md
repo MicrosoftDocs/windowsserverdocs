@@ -4,7 +4,7 @@ description: "Learn more about: Create a Linux shielded VM template disk"
 ms.topic: how-to
 ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

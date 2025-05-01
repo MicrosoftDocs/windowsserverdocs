@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Install a New File Server as a Content Server

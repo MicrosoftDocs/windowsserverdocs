@@ -4,7 +4,7 @@ description: Reference article for the nslookup ls command, which lists DNS doma
 ms.topic: reference
 ms.assetid: f15f06fe-67e7-41a9-93b5-192ab14ab380
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

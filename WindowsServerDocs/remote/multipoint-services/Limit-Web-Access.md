@@ -4,7 +4,7 @@ description: Learn how to limit user access to the Internet in MultiPoint Servic
 ms.date: 07/08/2016
 ms.topic: how-to
 ms.assetid: 044f2fd5-5b87-42bb-ba0d-c06516ac48c8
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ---

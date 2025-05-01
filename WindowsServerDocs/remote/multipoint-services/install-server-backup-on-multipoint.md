@@ -4,7 +4,7 @@ description: Walks you through the steps to install the backup and recovery tool
 ms.date: 07/22/2016
 ms.topic: install-set-up-deploy
 ms.assetid: e4331370-ba07-4529-92ab-db14a41bfc3b
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

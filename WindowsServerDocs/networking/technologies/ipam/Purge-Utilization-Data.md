@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 45cada9e-69b9-43df-b6f5-6d3942435809
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # Purge Utilization Data

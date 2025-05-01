@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Authorize Hyper-V hosts using Admin-trusted attestation"
 title: Add host information for Admin-trusted attestation
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 87089ebc-b953-4aa3-96b5-966cf91acb02
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

@@ -4,7 +4,7 @@ description: Reference article for the import command, which imports a transport
 ms.topic: reference
 ms.assetid: 7bd78d76-0560-4d47-944c-fe960be2c10b
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

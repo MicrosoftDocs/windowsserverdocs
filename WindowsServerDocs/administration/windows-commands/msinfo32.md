@@ -4,7 +4,7 @@ description: Reference article for the msinfo32 command, which opens the System 
 ms.topic: reference
 ms.assetid: a38f31d7-1766-4103-becc-9d0b87c2826d
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

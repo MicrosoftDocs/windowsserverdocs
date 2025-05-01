@@ -4,7 +4,7 @@ description: Reference article for the lodctr command, which allows you to regis
 ms.topic: reference
 ms.assetid: 5a849abd-6b31-4833-bc8a-306c05eca29a
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

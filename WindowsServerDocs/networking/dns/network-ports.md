@@ -1,7 +1,7 @@
 ---
 title: Network Ports Used by DNS
 description: Learn about network ports used by DNS in Windows Server 
-ms.topic: conceptual
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 01/27/2025

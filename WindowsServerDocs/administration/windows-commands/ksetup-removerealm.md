@@ -4,7 +4,7 @@ description: Reference article for the ksetup removerealm command, which deletes
 ms.topic: reference
 ms.assetid: 39f0c6f0-4c50-4781-941e-0893495405e8
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

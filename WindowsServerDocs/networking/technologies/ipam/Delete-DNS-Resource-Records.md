@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 366e6fd5-d563-4de3-9551-5614cbb8f2cb
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # Delete DNS Resource Records

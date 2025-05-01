@@ -1,7 +1,7 @@
 ---
 title: How cutover works in Storage Migration Service
 description: Summary and details of cutover stages in Storage Migration Service
-author: nedpyle
+author: xelu86
 ms.author: alalve
 ms.date: 08/31/2020
 ms.topic: concept-article

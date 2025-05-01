@@ -4,7 +4,7 @@ description: Use netsh http to query and configure HTTP.sys settings and paramet
 ms.topic: article
 manager: dougkim
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 10/27/2021
 ---
 

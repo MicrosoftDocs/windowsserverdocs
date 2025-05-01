@@ -1,7 +1,7 @@
 ---
 title: DNS Architecture in Windows Server
 description: Learn about the architecture of the Domain Name System (DNS) using Windows Server, including DNS domain names, DNS domain namespace, DNS resource records, and DNS zones.
-ms.topic: conceptual
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/06/2025

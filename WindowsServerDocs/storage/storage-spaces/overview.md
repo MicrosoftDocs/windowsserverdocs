@@ -3,8 +3,8 @@ description: Learn about Storage Spaces in Windows and Windows Server and how it
 title: Storage Spaces overview
 ms.author: daknappe
 manager: dougkim
-ms.topic: article
-author: robinharwood
+ms.topic: concept-article
+author: dknappettmsft
 ms.date: 03/09/2023
 ---
 

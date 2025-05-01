@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: bdac7d2a-25b4-4f61-bed1-b290700c18f3
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Configure an Existing File Server as a Content Server

@@ -2,7 +2,7 @@
 title: Volume Shadow Copy Service (VSS)
 description: Learn how to use Volume Shadow Copy Service to coordinate the actions that are required to create a consistent shadow copy for backup and restore operations in Windows Server.
 ms.topic: article
-author: robinharwood
+author: xelu86
 ms.author: alalve
 ms.date: 04/09/2025
 ---

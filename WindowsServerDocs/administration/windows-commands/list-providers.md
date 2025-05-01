@@ -4,7 +4,7 @@ description: Reference article for the list providers command, which lists shado
 ms.topic: reference
 ms.assetid: 844b4036-c0b9-449d-8347-7d58ef9bf16d
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -3,7 +3,7 @@ title: Extend a basic volume
 description: Learn how to add space to an existing volume in Windows by extending the volume into available unallocated (empty) space on a disk drive.
 ms.date: 08/21/2024
 ms.topic: how-to
-author: robinharwood
+author: jasongerend
 manager: brianlic
 ms.author: jgerend
 ---

@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 4f31dc61-2dbe-4c7e-b3f9-85ae49a45049
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Install the BranchCache Feature

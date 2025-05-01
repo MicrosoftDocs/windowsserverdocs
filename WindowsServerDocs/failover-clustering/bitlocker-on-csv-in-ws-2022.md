@@ -5,7 +5,7 @@ description: BitLocker on volumes within a cluster are managed based on how the 
 ms.topic: how-to
 manager: femila
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 10/21/2021
 ---
 

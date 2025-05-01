@@ -4,7 +4,7 @@ description: Reference article for the ksetup delkdc command, which deletes inst
 ms.topic: reference
 ms.assetid: 7d6ec389-094c-4a7b-a78b-605497ddc289
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 375feefc-949e-47c3-9e61-35b79e021966
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # View DNS Resource Records for a DNS Zone

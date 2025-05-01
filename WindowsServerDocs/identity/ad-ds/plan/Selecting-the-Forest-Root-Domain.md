@@ -3,7 +3,7 @@ description: "Learn more about: Selecting the Forest Root Domain"
 ms.assetid: ef4ef4a9-8969-4ad0-bd17-b2bb24f36ef6
 title: Selecting the Forest Root Domain
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 05/18/2023
 ms.topic: how-to

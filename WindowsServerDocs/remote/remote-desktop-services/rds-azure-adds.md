@@ -4,7 +4,7 @@ description: Learn how to integrate Microsoft Entra Domain Services into your RD
 ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: how-to
-author: christianmontoya
+author: dknappettmsft
 ---
 # Integrate Microsoft Entra Domain Services with your RDS deployment
 

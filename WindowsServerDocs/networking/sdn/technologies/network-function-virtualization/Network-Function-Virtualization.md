@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Network Function Virtualization

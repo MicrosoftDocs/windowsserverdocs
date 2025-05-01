@@ -4,7 +4,7 @@ description: Reference article for the offline disk command, which takes the onl
 ms.topic: reference
 ms.assetid: 8fb9b3c3-0b2c-4192-a2e7-f706292653e3
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

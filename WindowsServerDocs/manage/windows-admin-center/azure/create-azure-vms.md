@@ -2,7 +2,7 @@
 title: Deploy Azure Virtual Machines using Windows Admin Center
 description: Deploying Azure virtual machines with Windows Admin Center. Configuring Azure virtual machines as part of Windows Admin Center-managed scenarios.
 ms.topic: install-set-up-deploy
-author: nedpyle
+author: xelu86
 ms.author: alalve
 manager: jgerend
 ms.date: 01/28/2020

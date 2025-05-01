@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) - An overview of the deploymen
 ms.topic: concept-article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: jgerend
 ms.date: 03/06/2025
 ---

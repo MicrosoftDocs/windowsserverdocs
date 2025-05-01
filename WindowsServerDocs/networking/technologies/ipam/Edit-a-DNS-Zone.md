@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # Edit a DNS Zone

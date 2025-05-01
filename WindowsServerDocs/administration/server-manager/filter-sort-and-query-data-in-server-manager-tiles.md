@@ -4,7 +4,7 @@ description: Learn how to use tiles in Server Manager to filter and sort data, a
 ms.topic: article
 ms.assetid: 8786f791-73e5-4c75-8d12-46e88a196976
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

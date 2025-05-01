@@ -2,7 +2,7 @@
 description: "Learn more about: Virtualized Domain Controller Troubleshooting"
 ms.assetid: 249ba1be-b0d3-4a77-99af-3699074a2b6e
 title: Virtualized Domain Controller Troubleshooting
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/16/2023

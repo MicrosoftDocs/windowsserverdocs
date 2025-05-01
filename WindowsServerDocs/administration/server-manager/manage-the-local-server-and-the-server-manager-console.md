@@ -4,7 +4,7 @@ description: Learn how to  manage both the local server and remote servers that 
 ms.topic: how-to
 ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

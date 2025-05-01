@@ -2,9 +2,9 @@
 title: Host Compute Network (HCN) JSON document schemas
 description: Information about HCN JSON document schemas.
 ms.author: roharwoo
-author: daschott
+author: robinharwood
 ms.date: 11/05/2018
-ms.topic: article
+ms.topic: reference
 ---
 
 # HCN JSON document schemas

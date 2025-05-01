@@ -5,7 +5,7 @@ ms.date: 01/25/2023
 ms.topic: how-to
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ---
 # Configure VPN device tunnels in Windows client
 

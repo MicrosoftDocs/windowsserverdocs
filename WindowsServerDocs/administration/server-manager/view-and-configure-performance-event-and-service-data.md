@@ -4,7 +4,7 @@ description: Learn how to view and configure the event log entries, performance 
 ms.topic: how-to
 ms.assetid: ccd59c35-4dbf-48e7-88a4-c519c00184d1
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

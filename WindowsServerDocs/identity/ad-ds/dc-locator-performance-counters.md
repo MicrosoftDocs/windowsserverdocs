@@ -2,7 +2,7 @@
 title: Active Directory DC Locator performance counters in Windows Server
 description: Learn about Active Directory DC Locator performance counters in Windows Server.
 ms.topic: concept-article
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024
 

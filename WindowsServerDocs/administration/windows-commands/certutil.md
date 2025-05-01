@@ -5,7 +5,8 @@ ms.service: windows-server
 ms.topic: reference
 author: xelu86
 ms.author: alalve
-ms.date: 01/15/2025
+ms.date: 04/30/2025
+no-loc: [-dump, -dumpPFX, -asn, -decodehex, -encodehex, -decode, -encode, -deny, -resubmit, -setattributes, -setextension, -revoke, -isvalid, -getconfig, -getconfig2, -getconfig3, -ping, -pingadmin, -CAInfo, -CAPropInfo, -ca.cert, -ca.chain, -GetCRL, -CRL, -shutdown, -installCert, -renewCert, -schema, -view, -db, -deleterow, -backup, -backupDB, -backupkey, -restore, -restoredb, -restorekey, -exportPFX, -importPFX, -dynamicfilelist, -databaselocations, -hashfile, -store, -enumstore, -addstore, -delstore, -verifystore, -repairstore, -viewstore, -viewdelstore, -UI, -TPMInfo, -attest, -getcert, -ds, -dsDel, -dsPublish, -dsCert, -dsCRL, -dsDeltaCRL, -dsTemplate, -dsAddTemplate, -ADTemplate, -Template, -TemplateCAs, -CATemplates, -SetCATemplates, -SetCASites, -enrollmentServerURL, -ADCA, -CA, -Policy, -PolicyCache, -CredStore, -InstallDefaultTemplates, -URL, -URLCache, -pulse, -MachineInfo, -DCInfo, -EntInfo, -TCAInfo, -SCInfo, -SCRoots, -key, -delkey, -DeleteHelloContainer, -verifykeys, -verify, -verifyCTL, -syncWithWU, -generateSSTFromWU, -generatePinRulesCTL, -downloadOcsp, -generateHpkpHeader, -flushCache, -addEccCurve, -deleteEccCurve, -displayEccCurve, -csplist, -csptest, -CNGConfig, -sign, -vroot, -vocsproot, -addEnrollmentServer, -deleteEnrollmentServer, -addPolicyServer, -deletePolicyServer, -Class, -7f, -oid, -error, -getsmtpinfo, -setsmtpinfo, -getreg, -setreg, -delreg, -importKMS, -ImportCert, -GetKey, -RecoverKey, -mergePFX, -add-chain, -add-pre-chain, -get-sth, -get-sth-consistency, -get-proof-by-hash, -get-entries, -get-roots, -get-entry-and-proof, -VerifyCT, -?]
 ---
 
 # certutil
@@ -22,7 +23,7 @@ If `certutil` is run on a certification authority without other parameters, it d
 
 ## Parameters
 
-### :::no-loc text="-dump":::
+### -dump
 
 Dumps the configuration information or files.
 

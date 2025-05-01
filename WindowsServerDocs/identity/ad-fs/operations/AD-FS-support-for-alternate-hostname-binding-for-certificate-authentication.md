@@ -4,8 +4,8 @@ description: Learn how AD FS supports alternate hostname binding for certificate
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 05/24/2024
+ms.topic: how-to
 ---
 
 # Alternate hostname binding for certificate authentication in AD FS on Windows Server

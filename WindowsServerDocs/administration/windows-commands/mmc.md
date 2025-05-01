@@ -4,7 +4,7 @@ description: Reference article for the mmc command, which lets you open a specif
 ms.topic: reference
 ms.assetid: 7bfa4030-ce42-40fb-922f-2f5145a80872
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

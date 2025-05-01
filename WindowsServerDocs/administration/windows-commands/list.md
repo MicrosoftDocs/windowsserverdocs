@@ -4,7 +4,7 @@ description: Reference article for the list command, which displays a list of di
 ms.topic: reference
 ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

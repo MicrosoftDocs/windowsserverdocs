@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Monitor the existing load on the Remote Access server

@@ -4,7 +4,7 @@ description: Reference article for logman import and logman export, which import
 ms.topic: reference
 ms.assetid: c258daba-fb93-47c0-a53b-2fe83ed2c743
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

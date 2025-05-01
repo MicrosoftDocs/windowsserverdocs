@@ -4,7 +4,7 @@ description: Reference article for the manage-bde -pause command, which pauses B
 ms.topic: reference
 ms.assetid: efda0e08-b9ff-4e71-83d8-bb666b3032bd
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

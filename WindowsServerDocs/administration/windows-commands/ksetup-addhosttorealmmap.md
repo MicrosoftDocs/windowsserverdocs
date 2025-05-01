@@ -4,7 +4,7 @@ description: Reference article for the ksetup addhosttorealmmap command, which a
 ms.topic: reference
 ms.assetid: 237742d5-fa68-466c-b97e-636f489248ea
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

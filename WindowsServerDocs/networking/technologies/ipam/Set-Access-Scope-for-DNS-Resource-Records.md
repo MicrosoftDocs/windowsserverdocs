@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: a96a8752-5678-49c5-b069-d2cce8042a51
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # Set Access Scope for DNS Resource Records

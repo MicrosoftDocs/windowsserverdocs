@@ -2,7 +2,7 @@
 description: "Learn more about: Resetting a trust password on one side of the trust"
 title: AD Forest Recovery - Resetting a trust password
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 06/21/2023
 ms.topic: how-to

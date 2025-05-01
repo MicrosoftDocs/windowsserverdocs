@@ -5,7 +5,7 @@ title: Updating drive firmware
 ms.author: roharwoo
 manager: dmoss
 ms.topic: how-to
-author: toklima
+author: robinharwood
 ms.date: 10/04/2016
 ---
 # Updating drive firmware

@@ -4,7 +4,7 @@ description: Reference article for the logman update counter command, which upda
 ms.topic: reference
 ms.assetid: 607df6d5-876c-428d-a0b3-f59cb244e2ce
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

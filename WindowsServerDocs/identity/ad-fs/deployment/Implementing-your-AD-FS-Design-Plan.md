@@ -4,8 +4,8 @@ ms.assetid: d04dd17e-a843-46fd-8711-0039918f92d9
 title: Implementing Your AD FS Design Plan
 author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ms.author: billmath
 ---
 

@@ -2,7 +2,7 @@
 title: Migrate a Domain-based Namespace to Windows Server 2008 Mode
 description: This article describes how to migrate a domain-based namespace to Windows Server 2008 mode
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

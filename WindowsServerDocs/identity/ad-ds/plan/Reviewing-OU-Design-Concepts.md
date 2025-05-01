@@ -2,7 +2,7 @@
 description: "Learn more about: Reviewing OU Design Concepts"
 ms.assetid: 41b56704-c6f9-4d29-af97-62123e300565
 title: Reviewing OU Design Concepts
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017

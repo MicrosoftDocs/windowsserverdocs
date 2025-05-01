@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: how-to
 ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Create a VM and connect to a tenant virtual network or VLAN

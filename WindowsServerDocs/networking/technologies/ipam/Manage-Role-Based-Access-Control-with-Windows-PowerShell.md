@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: concept-article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # Manage Role Based Access Control with Windows PowerShell

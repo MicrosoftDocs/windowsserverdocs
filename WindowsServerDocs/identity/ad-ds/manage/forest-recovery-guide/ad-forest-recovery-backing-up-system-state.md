@@ -2,7 +2,7 @@
 description: "Learn more about: AD Forest Recovery - Backing up the System State data"
 title: AD Forest Recovery - Backing up the System State data
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 06/21/2023
 ms.topic: how-to

@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) - How to manage updates, inclu
 ms.topic: article
 ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 07/12/2023
 ---

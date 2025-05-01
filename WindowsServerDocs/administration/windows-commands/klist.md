@@ -4,7 +4,7 @@ description: Reference article for the klist command, which displays a list of c
 ms.topic: reference
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -5,7 +5,7 @@ manager: dougkim
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 09/13/2018
 ---
 # Network Load Balancing

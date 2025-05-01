@@ -4,7 +4,7 @@ description: Reference article for the logman update trace command, which update
 ms.topic: reference
 ms.assetid: b7111f7f-4162-4d1a-8e53-d766db0ede1f
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
