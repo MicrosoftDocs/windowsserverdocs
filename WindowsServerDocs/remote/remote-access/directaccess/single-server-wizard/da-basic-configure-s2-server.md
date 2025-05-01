@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Basic DirectAccess Server

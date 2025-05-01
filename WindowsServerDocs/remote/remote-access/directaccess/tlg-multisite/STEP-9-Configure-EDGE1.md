@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: f6e8d85b-de65-43b3-bf3e-ec84471a1fcc
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 9 Configure EDGE1

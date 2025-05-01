@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 2 Plan the Basic DirectAccess Deployment

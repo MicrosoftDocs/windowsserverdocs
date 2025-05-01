@@ -4,7 +4,7 @@ description: Learn how to configure conditional access for VPN connectivity usin
 ms.topic: how-to
 ms.date: 10/31/2023
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ---
 
 # Conditional access for VPN connectivity using Microsoft Entra ID

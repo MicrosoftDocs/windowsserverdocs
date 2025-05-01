@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: article
 ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # DirectAccess Test Lab Guides

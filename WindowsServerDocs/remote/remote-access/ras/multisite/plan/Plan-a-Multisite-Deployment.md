@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: concept-article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Plan a Multisite Deployment

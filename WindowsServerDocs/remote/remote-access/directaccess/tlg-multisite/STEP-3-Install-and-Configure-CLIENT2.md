@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: f009fdd1-94e6-4ccb-8c6e-609a5394db53
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 3 Install and Configure CLIENT2

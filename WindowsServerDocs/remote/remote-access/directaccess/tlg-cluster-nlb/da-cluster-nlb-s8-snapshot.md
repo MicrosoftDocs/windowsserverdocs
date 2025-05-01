@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 915ef7dd-169d-4d58-9174-438d8ffa3584
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 8 Snapshot the DirectAccess Cluster-NLB Configuration

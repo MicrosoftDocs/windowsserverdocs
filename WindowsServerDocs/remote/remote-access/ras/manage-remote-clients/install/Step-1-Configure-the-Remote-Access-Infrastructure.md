@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 1 Configure the Remote Access Infrastructure

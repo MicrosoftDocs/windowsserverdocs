@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: concept-article
 ms.assetid: 36255d80-a13e-4af7-a5c0-ab4c8f302622
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Manage DirectAccess Clients Remotely

@@ -5,7 +5,7 @@ manager: dougkim
 ms.topic: upgrade-and-migration-article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 06/07/2018
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to configure a DNS entry for 2-EDGE1 on INET1.
 ms.topic: how-to
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 08/07/2020
 ---

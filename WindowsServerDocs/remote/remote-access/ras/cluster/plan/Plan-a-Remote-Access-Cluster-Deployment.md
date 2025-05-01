@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: article
 ms.assetid: 88ffd598-2fde-402c-bd12-be790f84dc96
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Plan a Remote Access Cluster Deployment
