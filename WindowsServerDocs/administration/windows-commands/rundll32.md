@@ -4,7 +4,7 @@ description: Reference article for the rundll32 command, which loads and runs 32
 ms.topic: reference
 ms.assetid: 46d9cd64-8186-4cd4-a500-44700340fe81
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

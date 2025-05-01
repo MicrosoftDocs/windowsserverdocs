@@ -4,7 +4,7 @@ description: Reference article for the wdsutil get-alldriverpackages command, wh
 ms.topic: reference
 ms.assetid: 9eb8fcb7-ef46-4c8d-9623-8969a3c8b8a4
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

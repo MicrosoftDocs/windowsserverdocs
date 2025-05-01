@@ -4,7 +4,7 @@ description: Reference article for the subst command, which associates a path wi
 ms.topic: reference
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the serverceipoptin, which allows you to part
 ms.topic: reference
 ms.assetid: 3d7d7fa7-0689-4797-b802-36fe260d21a0
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

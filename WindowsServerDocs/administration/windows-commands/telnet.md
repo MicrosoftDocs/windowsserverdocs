@@ -4,7 +4,7 @@ description: Reference article for the telnet command, which communicates with a
 ms.topic: reference
 ms.assetid: b70a6156-9413-4300-84ce-a34c467e2b4e
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 6/21/2022
 ---
 

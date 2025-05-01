@@ -4,7 +4,7 @@ description: Reference article for the create partition primary command, which c
 ms.topic: reference
 ms.assetid: 6d652d8e-3935-4a91-8ced-b17c0e7937be
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---
