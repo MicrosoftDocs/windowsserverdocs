@@ -4,7 +4,7 @@ title: Storage Spaces overview
 ms.author: daknappe
 manager: dougkim
 ms.topic: concept-article
-author: robinharwood
+author: dknappettmsft
 ms.date: 03/09/2023
 ---
 

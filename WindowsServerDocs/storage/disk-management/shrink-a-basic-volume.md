@@ -3,7 +3,7 @@ title: Shrink a Basic Volume
 description: See how to decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk.
 ms.date: 04/22/2025
 ms.topic: how-to
-author: robinharwood
+author: jasongerend
 manager: brianlic
 ms.author: jgerend
 # customer intent: As an administrator, I want to see how to shrink primary partitions and logical drives into adjacent, contiguous space on the same disk so that I can create new unallocated space.

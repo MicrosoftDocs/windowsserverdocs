@@ -4,7 +4,7 @@ title: Adding servers or drives to Storage Spaces Direct
 ms.author: roharwoo
 manager: dongill
 ms.topic: how-to
-author: cosmosdarwin
+author: robinharwood
 ms.date: 11/06/2017
 description: How to add servers or drives to a Storage Spaces Direct cluster
 ---

@@ -3,7 +3,7 @@ description: "Learn more about: Guarded fabric and shielded VMs overview"
 title: Guarded Fabric and Shielded VMs overview
 ms.topic: concept-article
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 02/16/2023
 ---
