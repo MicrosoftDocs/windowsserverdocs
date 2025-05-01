@@ -4,7 +4,7 @@ description: Reference article for the pushprinterconnections command, which rea
 ms.topic: reference
 ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

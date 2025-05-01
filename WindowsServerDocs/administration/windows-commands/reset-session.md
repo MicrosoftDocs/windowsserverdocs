@@ -4,7 +4,7 @@ description: Reference article for reset session command, which enables you to r
 ms.topic: reference
 ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 07/11/2018
 ---

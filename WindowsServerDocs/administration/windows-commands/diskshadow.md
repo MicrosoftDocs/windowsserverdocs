@@ -4,7 +4,7 @@ description: Reference article for the Diskshadow command, which is a tool that 
 ms.topic: reference
 ms.assetid: e962537d-b759-4368-b6f1-e8391cf7b221
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the endlocal command, which ends localization
 ms.topic: reference
 ms.assetid: 765fae3c-0c0a-4639-99a4-cf613489b949
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

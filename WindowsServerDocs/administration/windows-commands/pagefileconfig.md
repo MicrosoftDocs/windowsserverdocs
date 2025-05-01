@@ -4,7 +4,7 @@ description: Reference article for the pagefileconfig command. This command has 
 ms.topic: reference
 ms.assetid: a18c98ce-a0dc-41cc-8d44-dc7eee0131e8
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---
