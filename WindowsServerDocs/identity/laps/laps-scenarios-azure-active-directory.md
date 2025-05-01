@@ -1,7 +1,7 @@
 ---
 title: Get started with Windows LAPS and Microsoft Entra ID
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Microsoft Entra ID.
-author: justinha
+author: jay98014
 ms.author: justinha
 ms.date: 07/04/2022
 ms.topic: get-started
