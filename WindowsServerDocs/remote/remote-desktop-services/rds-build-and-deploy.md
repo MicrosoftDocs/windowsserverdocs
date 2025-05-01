@@ -5,7 +5,7 @@ ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: install-set-up-deploy
 ms.assetid: 176ae424-96e9-4c78-88f5-da418e76c3d7
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ---
 # Build and deploy your Remote Desktop Services deployment

@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 43ac612e-2e77-418c-8171-ebb2086b7cb6
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Verify the Remote Access (VPN) Deployment

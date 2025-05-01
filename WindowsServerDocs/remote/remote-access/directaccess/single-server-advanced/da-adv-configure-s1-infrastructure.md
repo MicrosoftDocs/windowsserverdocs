@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 1 Configure Advanced DirectAccess Infrastructure

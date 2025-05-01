@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 4 Create the Network Load Balanced Remote Access Cluster

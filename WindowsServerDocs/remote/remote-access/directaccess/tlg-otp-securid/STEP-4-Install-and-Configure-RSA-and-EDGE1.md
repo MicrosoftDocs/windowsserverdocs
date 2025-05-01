@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 4 Install and Configure RSA and EDGE1

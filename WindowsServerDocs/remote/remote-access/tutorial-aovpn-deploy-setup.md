@@ -4,7 +4,7 @@ description: Learn how to deploy Always On VPN (AOV) connections for Windows cli
 ms.topic: tutorial
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date:  03/14/2023
 ---
 

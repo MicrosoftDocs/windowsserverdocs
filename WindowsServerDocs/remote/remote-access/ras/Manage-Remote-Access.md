@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: concept-article
 ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Manage Remote Access

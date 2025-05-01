@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: fe221fc9-c7d9-4508-b8a1-000d2515283c
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 #  Step 2 Configure the DirectAccess-VPN Server
