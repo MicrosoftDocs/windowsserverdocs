@@ -1,7 +1,7 @@
 ---
 title: Understand Direct Access (DAX) and create DAX volumes with persistent memory devices
 description: This article provides information on DAX and how to configure it with persistent memory modules.
-author: khdownie
+author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 05/14/2021

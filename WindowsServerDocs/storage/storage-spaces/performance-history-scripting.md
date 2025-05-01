@@ -4,7 +4,7 @@ title: Scripting with Storage Spaces Direct performance history
 ms.author: roharwoo
 manager: eldenc
 ms.topic: how-to
-author: cosmosdarwin
+author: robinharwood
 ms.date: 05/15/2018
 ---
 

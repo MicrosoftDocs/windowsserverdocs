@@ -2,7 +2,7 @@
 title: Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)
 description: In Windows Server and Azure Local, you can use the Server Configuration tool (SConfig) to configure and manage several common aspects of server lifecycle. It includes network configuration, Active Directory domain membership, installation of Microsoft updates, and operating system activation
 ms.topic: how-to
-author: Orin-Thomas
+author: xelu86
 ms.author: alalve
 manager: femila
 ms.date: 08/18/2021

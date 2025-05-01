@@ -2,7 +2,7 @@
 ms.assetid: c91c7196-ee0d-4856-8cfb-4c38494ccf1f
 title: Work Folders overview
 ms.topic: concept-article
-author: robinharwood
+author: meaghanlewis
 manager: femila
 ms.author: mosagie
 ms.date: 04/16/2025

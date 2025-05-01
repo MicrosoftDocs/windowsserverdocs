@@ -4,7 +4,7 @@ description: Describes Virtual Machine Connection, and includes details on how t
 ms.topic: article
 ms.assetid: deae35b9-7647-42b8-b6bf-45645a44c9c4
 ms.author: daknappe
-author: meaghanlewis
+author: dknappettmsft
 ms.date: 02/18/2025
 ---
 

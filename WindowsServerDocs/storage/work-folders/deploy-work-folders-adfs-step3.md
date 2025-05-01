@@ -4,7 +4,7 @@ title: Deploy Work Folders with AD FS and Web Application Proxy - Step 3, Set Up
 ms.topic: install-set-up-deploy
 manager: klaasl
 ms.author: jgerend
-author: JeffPatt24
+author: jasongerend
 ms.date: 4/5/2017
 ms.assetid: 5a43b104-4d02-4d73-a385-da1cfb67e341
 ---
