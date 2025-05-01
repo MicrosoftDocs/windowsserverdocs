@@ -71,7 +71,7 @@
       - name: Azure Backup
         href: azure/azure-backup.md
       - name: Azure Site Recovery
-        href: azure/azure-site-recovery.md
+        href: /azure/azure-local/manage/azure-site-recovery?toc=/windows-server/manage/windows-admin-center/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Azure File Sync
         href: azure/azure-file-sync.md
       - name: Azure Monitor

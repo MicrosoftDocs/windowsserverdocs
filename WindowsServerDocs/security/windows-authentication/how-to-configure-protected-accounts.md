@@ -17,9 +17,7 @@ Through Pass-the-hash (PtH) attacks, an attacker can authenticate to a remote se
 
 -   [Authentication policy silos](#authentication-policy-silos)
 
-There are additional mitigations built in to Windows 8.1 and Windows Server 2012 R2 to help protect against credential theft, which are covered in the following topics:
-
--   [Restricted Admin mode for Remote Desktop](https://blogs.technet.com/b/kfalde/archive/20../restricted-admin-mode-for-rdp-in-windows-8-1-2012-r2.aspx)
+There are additional mitigations built in to Windows 8.1 and Windows Server 2012 R2 to help protect against credential theft, which are covered in the following topic:
 
 -   [LSA Protection](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408187(v=ws.11))
 
