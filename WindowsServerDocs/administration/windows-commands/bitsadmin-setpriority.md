@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin setpriority command, which sets
 ms.topic: reference
 ms.assetid: 90788363-01a2-4d7c-a560-a3eba45b5e9e
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

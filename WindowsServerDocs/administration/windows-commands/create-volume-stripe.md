@@ -4,7 +4,7 @@ description: Reference article for the create volume stripe command, which creat
 ms.topic: reference
 ms.assetid: 20dce735-5f7c-4f83-a580-d087e2913a00
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

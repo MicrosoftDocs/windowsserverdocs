@@ -4,7 +4,7 @@ description: Reference article for the diskcomp command, which compares the cont
 ms.topic: reference
 ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the active command, which on basic disks, mar
 ms.topic: reference
 ms.assetid: 1f25da2e-87fc-4392-a7ee-f38d09b7873c
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the ren command, which renames a file or dire
 ms.topic: reference
 ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 07/11/2018
 ---

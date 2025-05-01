@@ -4,7 +4,7 @@ description: Reference article for create partition msr, which creates a Microso
 ms.topic: reference
 ms.assetid: 04fba033-23cb-4521-bd5d-db96131f2e73
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the getmac command, which returns the media a
 ms.topic: reference
 ms.assetid: a749a348-7cd1-4336-9f33-bb42dd0e31e1
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

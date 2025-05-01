@@ -4,7 +4,7 @@ description: Reference article for the attributes disk command, which displays, 
 ms.topic: reference
 ms.assetid: eed57071-c1c6-4394-9542-62b52a878c92
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

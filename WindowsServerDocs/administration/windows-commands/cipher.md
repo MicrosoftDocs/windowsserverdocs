@@ -4,7 +4,7 @@ description: Reference article for the cipher command, which displays or alters 
 ms.topic: reference
 ms.assetid: 78ef795e-0f87-4acd-8d15-192c972c0f41
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the color command, which changes the foregrou
 ms.topic: reference
 ms.assetid: f5b67131-d196-45ec-a3f9-b5d9f091fd86
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 09/19/2023
 ---

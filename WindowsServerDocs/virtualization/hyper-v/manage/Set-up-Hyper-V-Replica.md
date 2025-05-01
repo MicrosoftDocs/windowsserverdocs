@@ -4,7 +4,7 @@ description: Gives instructions for setting up Replica, testing failover, and do
 ms.topic: how-to
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 ms.author: daknappe
-author: meaghanlewis
+author: dknappettmsft
 ms.date: 01/16/2025
 ---
 

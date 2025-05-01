@@ -4,7 +4,7 @@ description: Reference article for the wdsutil add-imagedriverpackages command, 
 ms.topic: reference
 ms.assetid: 9dc78909-a4d1-42a2-af8f-21ebcbfe8302
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

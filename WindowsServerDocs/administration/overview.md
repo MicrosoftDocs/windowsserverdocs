@@ -1,7 +1,7 @@
 ---
 title: Windows Server management overview
 description: Learn about the various tools and solutions available to manage Windows Server effectively, including Azure Arc and Windows Admin Center.
-author: thomasmaurer
+author: meaghanlewis
 ms.author: mosagie
 manager: carmencr
 ms.reviewer: carmencr

@@ -4,7 +4,7 @@ description: Learn about the Windows-specific configuration options for OpenSSH 
 ms.date: 08/15/2024
 ms.topic: article
 ms.author: roharwoo
-author: maertendmsft
+author: robinharwood
 ---
 
 # OpenSSH Server configuration for Windows Server and Windows

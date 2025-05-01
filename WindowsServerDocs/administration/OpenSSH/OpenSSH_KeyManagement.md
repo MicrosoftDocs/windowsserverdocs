@@ -4,7 +4,7 @@ description: Find out about OpenSSH Server key-based authentication, generation,
 ms.date: 03/11/2025
 ms.topic: article
 ms.author: roharwoo
-author: maertendmsft
+author: robinharwood
 # customer intent: As an administrator, I want to become familiar with OpenSSH Server key-based authentication so that I can improve the security of cross-domain work.
 ---
 
