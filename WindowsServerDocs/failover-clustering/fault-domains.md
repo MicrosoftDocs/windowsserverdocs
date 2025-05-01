@@ -5,7 +5,7 @@ title: Fault domain awareness
 ms.author: jgerend
 manager: eldenc
 ms.topic: how-to
-author: cosmosdarwin
+author: jasongerend
 ms.date: 02/16/2023
 ---
 # Fault domain awareness

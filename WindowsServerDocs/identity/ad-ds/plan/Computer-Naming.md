@@ -2,7 +2,7 @@
 description: "Learn more about: Computer Naming"
 ms.assetid: f7002265-60fa-40b8-9dd7-4bf131d9320a
 title: Computer Naming
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017

@@ -2,7 +2,7 @@
 title: Active Directory Forest Recovery - Determine how to recover the forest 
 description: Recovering an entire Active Directory forest involves restoring at least one Domain Controller (DC) in every domain from available backup. Recovering the forest restores each domain in the forest to its state at the time of the last trusted backup. Consequently, the restore operation will result in the loss of at least the following Active Directory data...
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 ms.date: 07/10/2023
 ms.topic: how-to
 ---

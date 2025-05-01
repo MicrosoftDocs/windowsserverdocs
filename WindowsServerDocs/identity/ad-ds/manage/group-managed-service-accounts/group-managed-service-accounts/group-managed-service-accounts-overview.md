@@ -4,7 +4,7 @@ description: Learn about the group Managed Service Account; practical applicatio
 ms.topic: concept-article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
 ms.author: alalve
-author: robinharwood
+author: xelu86
 ms.date: 03/18/2025
 ---
 # Group Managed Service Accounts Overview

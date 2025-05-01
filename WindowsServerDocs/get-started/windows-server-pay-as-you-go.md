@@ -2,7 +2,7 @@
 title: Configure Windows Server Pay-as-you-go with Azure Arc
 description: Configure Windows Server Pay-as-you-go to license your devices with usage-based charges available through Azure Arc service and billed via Azure subscription.
 ms.topic: how-to
-author: artemp
+author: xelu86
 ms.author: alalve
 ms.date: 10/31/2024
 ---

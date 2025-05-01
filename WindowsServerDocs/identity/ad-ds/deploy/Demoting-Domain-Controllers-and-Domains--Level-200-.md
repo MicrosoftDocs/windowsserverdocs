@@ -2,7 +2,7 @@
 description: Demoting domain controllers and domains
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: How to demote domain controllers and domains using Server Manger or PowerShell.
-author: iainfoulds
+author: meaghanlewis
 ms.author: mosagie
 manager: daveba
 ms.date: 08/23/2024

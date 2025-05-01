@@ -2,7 +2,7 @@
 description: Learn how to use the Windows PowerShell History Viewer in Active Directory Administrative Center to construct Windows PowerShell scripts.
 title: Use the Active Directory Administrative Center Windows PowerShell History Viewer in Windows Server
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 ms.date: 09/05/2024
 ms.topic: how-to
 #customer intent: As an Active Directory administrator, I want to use the Windows PowerShell History Viewer in Active Directory Administrative Center so that I can construct Windows PowerShell scripts based on the commands I run in Active Directory Administrative Center.

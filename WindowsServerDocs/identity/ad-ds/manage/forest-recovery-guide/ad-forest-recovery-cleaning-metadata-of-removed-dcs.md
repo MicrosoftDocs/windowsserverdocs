@@ -2,7 +2,7 @@
 title: AD Forest Recovery - Cleaning metadata of removed writable domain controllers  
 description: Metadata cleanup removes Active Directory data that identifies a DC to the replication system. Note that outside of a Forest Recovery, metadata cleanup is part of the demotion process of domain controllers, however, when they aren't reachable anymore, this process also applies. Use the following procedure to delete the DC objects for DCs that you plan to add back to the network by reinstalling AD DS.
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 ms.date: 06/21/2023
 ms.topic: how-to
 ---

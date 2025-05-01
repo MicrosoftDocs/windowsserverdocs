@@ -2,7 +2,7 @@
 title:  Active Directory Forest Recovery - Perform initial recovery
 description: Beginning with a writeable DC in the forest root domain, complete the steps in this section in order to restore the first DC.
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 ms.date: 07/10/2023
 ms.topic: how-to
 ---
