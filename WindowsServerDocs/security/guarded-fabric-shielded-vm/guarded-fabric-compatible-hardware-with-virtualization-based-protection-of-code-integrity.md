@@ -25,7 +25,7 @@ The adoption of the new UEFI standard takes time; meanwhile, to prevent customer
 The following configurations are known to be non-compatible with Virtualization-based protection of code integrity and cannot be used as a host for Shielded VMs:
 
 - Dell PowerEdge Servers running PERC H330 RAID Controllers
-    For more information, see the following article from Dell Support [H330 – Enabling "Host Guardian Hyper-V Support" or "Device Guard" on Win 2016 OS causes OS boot failure](https://www.dell.com/support/manuals/en-uk/microsoft-windows-server-2016/ws2016_iig_pub/unable-to-boot-into-windows-server-2016-if-host-guardian-hyper-v-support-or-device-guard-is-enable~?guid=guid-a8273240-e45b-4c18-a553-97250a7e835d&lang=en-us).
+    For more information, see the following article from Dell Support [H330 – Enabling "Host Guardian Hyper-V Support" or "Device Guard" on Win 2016 OS causes OS boot failure](https://www.dell.com/support/manuals/microsoft-windows-server-2016/ws2016_iig_pub/unable-to-boot-into-windows-server-2016-if-host-guardian-hyper-v-support-or-device-guard-is-enable~?guid=guid-a8273240-e45b-4c18-a553-97250a7e835d&lang=en-us).
 
 
 ## Compatible systems
