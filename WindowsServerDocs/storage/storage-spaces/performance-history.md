@@ -4,7 +4,7 @@ title: Performance history for Storage Spaces Direct
 ms.author: roharwoo
 manager: eldenc
 ms.topic: article
-author: cosmosdarwin
+author: robinharwood
 ms.date: 10/25/2024
 ---
 # Performance history for Storage Spaces Direct
