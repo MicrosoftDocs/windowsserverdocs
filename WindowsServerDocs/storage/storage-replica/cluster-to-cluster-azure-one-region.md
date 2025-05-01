@@ -1,7 +1,7 @@
 ---
 title: Cluster-to-Cluster Replication in the Same Azure Region
 description: Learn how to use cluster-to-cluster Storage Replica in Windows Server for storage replication in the same region in Azure.
-author: arduppal
+author: jasongerend
 ms.author: jgerend
 ms.date: 02/18/2025
 ms.topic: how-to

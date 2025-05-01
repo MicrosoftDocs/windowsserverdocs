@@ -3,7 +3,7 @@ description: "Learn more about: Branch office considerations"
 title: Branch Office Considerations
 ms.topic: best-practice
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 10/25/2024
 ---

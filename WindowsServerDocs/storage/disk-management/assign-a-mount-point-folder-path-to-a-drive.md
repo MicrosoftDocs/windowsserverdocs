@@ -3,7 +3,7 @@ title: Assign a mount point folder path to a drive.
 description: Learn how to mount a drive as a folder rather than a letter and how to unmount a drive from a folder.
 ms.date: 03/24/2023
 ms.topic: how-to
-author: robinharwood
+author: jasongerend
 manager: brianlic
 ms.author: jgerend
 ---

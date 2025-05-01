@@ -4,7 +4,7 @@ description: Explore Kerberos authentication in Windows Server, including its pr
 ms.topic: concept-article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 04/17/2025
 ---

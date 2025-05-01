@@ -4,7 +4,7 @@ description: "Learn more about: Shielded VMs - Hosting service provider sets up 
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

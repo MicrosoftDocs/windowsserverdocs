@@ -4,7 +4,7 @@ description: Learn about NTLM, and find links to technical resources to Windows 
 ms.topic: concept-article
 ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 04/17/2025
 ---

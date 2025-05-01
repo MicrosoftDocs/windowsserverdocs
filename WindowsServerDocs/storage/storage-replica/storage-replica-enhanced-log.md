@@ -4,7 +4,7 @@ description: Learn how to use Enhanced Log in Storage Replica and about the perf
 manager: candyc
 ms.author: jgerend
 ms.topic: how-to
-author: robinharwood
+author: jasongerend
 ms.date: 10/25/2024
 ---
 

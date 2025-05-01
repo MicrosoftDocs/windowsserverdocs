@@ -3,7 +3,7 @@ description: "Learn more about: Initialize the HGS cluster using TPM mode in a n
 title: Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
 ms.topic: how-to
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---
