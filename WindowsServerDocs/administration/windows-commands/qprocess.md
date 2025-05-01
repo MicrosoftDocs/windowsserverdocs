@@ -4,7 +4,7 @@ description: Reference article for the qprocess command, which displays informat
 ms.topic: reference
 ms.assetid: 9825cb01-11e0-4cd1-8142-57910e2f4056
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

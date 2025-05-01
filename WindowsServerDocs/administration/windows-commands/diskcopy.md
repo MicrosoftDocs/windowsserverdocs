@@ -4,7 +4,7 @@ description: Reference article for the diskcopy command, which copies the conten
 ms.topic: reference
 ms.assetid: 5fd21efa-52cc-4e70-a7fe-35125a435106
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 05/07/2018
 ---

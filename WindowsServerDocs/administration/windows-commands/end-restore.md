@@ -4,7 +4,7 @@ description: Reference article for the end restore command, which ends a restore
 ms.topic: reference
 ms.assetid: 67ce83ec-a51e-4d1f-a182-d84ded999dc3
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

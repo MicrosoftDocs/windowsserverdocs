@@ -4,7 +4,7 @@ description: Reference article for the delete volume command, which deletes the 
 ms.topic: reference
 ms.assetid: f625933d-0f47-409e-93b2-a3e234049a5d
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

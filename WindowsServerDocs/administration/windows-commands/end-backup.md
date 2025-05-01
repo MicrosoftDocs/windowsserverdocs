@@ -4,7 +4,7 @@ description: Reference article for the end backup command, which ends a full bac
 ms.topic: reference
 ms.assetid: 8ac1f283-6ecf-4523-8e96-95d435dd4f7f
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

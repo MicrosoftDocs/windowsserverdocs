@@ -4,7 +4,7 @@ description: Reference article for the prompt command, which customizes your Cmd
 ms.topic: reference
 ms.assetid: 3d98e965-02eb-46ad-9d0a-5dc44830373e
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 07/11/2018
 ---

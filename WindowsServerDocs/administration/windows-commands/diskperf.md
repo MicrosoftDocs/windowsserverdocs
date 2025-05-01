@@ -4,7 +4,7 @@ description: Reference article for the diskperf command, which can be used to re
 ms.topic: reference
 ms.assetid: f06916e8-069b-4ec8-a6eb-59f1d9f77111
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---
