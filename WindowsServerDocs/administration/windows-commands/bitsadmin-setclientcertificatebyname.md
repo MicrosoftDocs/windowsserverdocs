@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin setclientcertificatebyname comm
 ms.topic: reference
 ms.assetid: f308a6d9-d0da-48be-ae41-eced14b3cccb
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

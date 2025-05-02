@@ -4,7 +4,7 @@ description: Reference article for the wdsutil enable-server command, which enab
 ms.topic: reference
 ms.assetid: 939ffbfb-cf3c-4310-9627-6e7e0c0644d6
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

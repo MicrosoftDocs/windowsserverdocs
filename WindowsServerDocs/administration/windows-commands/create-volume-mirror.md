@@ -4,7 +4,7 @@ description: Reference article for the create volume mirror command, which creat
 ms.topic: reference
 ms.assetid: 48776917-783a-47ff-8da4-1cab77cea34b
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

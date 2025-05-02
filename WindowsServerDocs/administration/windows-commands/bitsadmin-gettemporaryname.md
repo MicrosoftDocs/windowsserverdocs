@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin gettemporaryname command, which
 ms.topic: reference
 ms.assetid: 68925edc-a801-4292-a812-7471c4f60fdd
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

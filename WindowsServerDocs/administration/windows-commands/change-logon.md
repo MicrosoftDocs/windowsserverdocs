@@ -4,7 +4,7 @@ description: Reference article for the change logon command, which enables or di
 ms.topic: reference
 ms.assetid: 41466260-aee9-4333-bcb6-178112c22afd
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

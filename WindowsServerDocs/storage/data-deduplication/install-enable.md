@@ -2,7 +2,7 @@
 ms.assetid: 07d6b251-c492-4d9f-bcc4-031023695b24
 title: Installing and enabling Data Deduplication
 ms.topic: install-set-up-deploy
-author: wmgries
+author: jasongerend
 manager: klaasl
 ms.author: jgerend
 ms.date: 02/18/2022

@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getreplyprogress command, which
 ms.topic: reference
 ms.assetid: 7f7cb0b4-ad95-44fd-a35d-0ddf5fc0b0d0
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

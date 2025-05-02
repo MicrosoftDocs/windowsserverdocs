@@ -4,7 +4,7 @@ description: Reference article for the reg copy command, which copies a registry
 ms.topic: reference
 ms.assetid: 3fe74213-39ec-4b2d-ba3d-086243eac997
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin geterrorcount command, which re
 ms.topic: reference
 ms.assetid: 8840ae78-52b0-4c7e-b592-0547359a237e
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

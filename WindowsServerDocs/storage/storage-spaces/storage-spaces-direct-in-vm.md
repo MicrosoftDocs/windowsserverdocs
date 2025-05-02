@@ -4,7 +4,7 @@ description: How to deploy Storage Spaces Direct in a virtual machine guest clus
 ms.author: roharwoo
 manager: eldenc
 ms.topic: best-practice
-author: eldenchristensen
+author: robinharwood
 ms.date: 11/25/2024
 ---
 

@@ -3,7 +3,7 @@ title: tapicfg show
 description: Reference article for the tapicfg show command, which displays the names and locations of the TAPI application directory partitions in the domain.
 ms.topic: reference
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 09/29/2020
 ---

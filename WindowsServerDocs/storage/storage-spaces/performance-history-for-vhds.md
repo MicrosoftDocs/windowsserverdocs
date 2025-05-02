@@ -4,7 +4,7 @@ title: Performance history for virtual hard disks
 ms.author: roharwoo
 manager: eldenc
 ms.topic: article
-author: cosmosdarwin
+author: robinharwood
 ms.date: 02/09/2018
 ---
 

@@ -4,7 +4,7 @@ description: Review known issues with Storage Replica in Windows Server and how 
 manager: candyc
 ms.author: jgerend
 ms.topic: troubleshooting
-author: robinharwood
+author: jasongerend
 ms.date: 05/31/2023
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---

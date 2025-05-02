@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getnotifyflags command, which r
 ms.topic: reference
 ms.assetid: d4657e6c-8959-4db7-a4af-e73d3f80ecf8
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

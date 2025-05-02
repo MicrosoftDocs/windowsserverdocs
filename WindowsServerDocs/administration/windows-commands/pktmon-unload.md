@@ -2,7 +2,7 @@
 title: pktmon unload
 description: Reference article for the pktmon unload command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
+author: dknappettmsft
 ms.author: daknappe
 ms.date: 06/24/2021
 ---

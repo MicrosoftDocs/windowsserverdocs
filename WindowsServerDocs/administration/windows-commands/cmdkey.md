@@ -4,7 +4,7 @@ description: Reference article for the cmdkey command, which creates, lists, and
 ms.topic: reference
 ms.assetid: 5fcd68ee-a14a-4b71-9300-c3f5c5d31e8e
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

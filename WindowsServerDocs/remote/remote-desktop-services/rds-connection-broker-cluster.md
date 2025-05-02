@@ -4,7 +4,7 @@ description: Learn how to add an RD Connection Broker to an RDS deployment for h
 ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: how-to
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ---
 

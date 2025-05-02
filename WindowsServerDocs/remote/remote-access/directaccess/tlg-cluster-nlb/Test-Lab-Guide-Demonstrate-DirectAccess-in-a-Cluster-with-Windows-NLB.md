@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: db15dcf5-4d64-48d7-818a-06c2839e1289
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB

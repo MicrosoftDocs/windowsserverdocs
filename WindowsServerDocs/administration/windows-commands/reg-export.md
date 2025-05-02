@@ -4,7 +4,7 @@ description: Reference article for the reg export command, which copies the spec
 ms.topic: reference
 ms.assetid: 0ad9526f-1e29-4fa5-9d2d-feaa92f12d7c
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

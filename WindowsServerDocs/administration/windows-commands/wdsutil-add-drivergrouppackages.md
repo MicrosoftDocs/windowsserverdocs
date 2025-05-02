@@ -4,7 +4,7 @@ description: Reference article for the wdsutil add-drivergrouppackages command, 
 ms.topic: reference
 ms.assetid: 29022f53-ce14-4b2d-a81a-679c18e022b2
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

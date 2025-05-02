@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Monitor the operations status of the Remote Access server and its components

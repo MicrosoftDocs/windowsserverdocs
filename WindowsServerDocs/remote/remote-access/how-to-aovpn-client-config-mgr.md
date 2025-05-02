@@ -4,7 +4,7 @@ description:  Learn how to deploy Always On VPN profile to Windows clients with 
 ms.topic: install-set-up-deploy
 ms.date:  03/14/2023
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ---
 
 

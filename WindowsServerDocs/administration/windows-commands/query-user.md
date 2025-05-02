@@ -4,7 +4,7 @@ description: Reference article for the query user command, which displays inform
 ms.topic: reference
 ms.assetid: a670fb78-c055-464a-b61d-3a85632c52c5
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

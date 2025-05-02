@@ -4,7 +4,7 @@ description: Reference article for the chdir command, which performs the same ac
 ms.topic: reference
 ms.assetid: 8d78901e-4f6e-4cb6-9ff8-ccf5a9d04fac
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

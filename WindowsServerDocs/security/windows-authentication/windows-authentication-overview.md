@@ -4,7 +4,7 @@ description: Learn about lists documentation resources for Windows authenticatio
 ms.topic: concept-article
 ms.assetid: 485a0774-0785-457f-a964-0e9403c12bb1
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/12/2016
 ---

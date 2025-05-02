@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: install-set-up-deploy
 ms.assetid: c44fecc9-fe39-40bd-b6da-d8f8afe1a01d
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Multi-Forest Environment

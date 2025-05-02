@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: article
 ms.assetid: 6b71d18e-1939-4fc0-bb42-29e0e5ffc8da
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 11/16/2022
 ---
 # DirectAccess

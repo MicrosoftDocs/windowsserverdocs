@@ -4,7 +4,7 @@ title: Managing the Host Guardian Service
 ms.topic: how-to
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 12/10/2020
 ---

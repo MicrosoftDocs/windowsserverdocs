@@ -4,7 +4,7 @@ description: Reference article for the set commands, which sets the context, opt
 ms.topic: reference
 ms.assetid: acf24663-1a50-4321-b48d-1717655e9476
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

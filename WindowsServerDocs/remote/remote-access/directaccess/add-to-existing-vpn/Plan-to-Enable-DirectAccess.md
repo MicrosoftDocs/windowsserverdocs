@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: article
 ms.assetid: 458a3bcf-50b6-47b2-b53c-1b8204c5189e
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 01/05/2021
 ---
 # Plan to Enable DirectAccess

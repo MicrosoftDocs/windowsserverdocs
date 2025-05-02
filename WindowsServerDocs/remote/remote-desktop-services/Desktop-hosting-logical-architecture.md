@@ -5,7 +5,7 @@ ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: 7f73bb0a-ce98-48a4-9d9f-cf7438936ca1
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ---
 # Remote Desktop Services architecture

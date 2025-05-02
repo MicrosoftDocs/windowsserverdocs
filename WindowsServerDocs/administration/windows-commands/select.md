@@ -4,7 +4,7 @@ description: Reference article for the select commands, which shifts the focus t
 ms.topic: reference
 ms.assetid: 9eeb40c0-4258-46e2-8dbc-94f63497e771
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

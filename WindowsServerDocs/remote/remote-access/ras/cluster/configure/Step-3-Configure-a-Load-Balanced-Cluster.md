@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Configure a Load-Balanced Cluster

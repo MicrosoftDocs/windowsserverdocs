@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: concept-article
 ms.assetid: ce584811-b209-48fe-ab2b-4c399bd0bd79
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario OTP Authentication and RSA SecurID
