@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
 author: xelu86
 ms.author: alalve
-ms.date: 03/18/2025
+ms.date: 05/01/2025
 ---
 
 # shutdown
@@ -23,7 +23,7 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/sof
 | Parameter | Description |
 |--|--|
 | /i | Displays the **Remote Shutdown** box. The **/i** option must be the first parameter following the command. If **/i** is specified, all other options are ignored. |
-| /l | Logs off the current user immediately, with no time-out period. You can't use **/l** with **/m** or **/t**. |
+| /l | Signs out the current user immediately, with no time-out period. You can't use **/l** with **/m** or **/t**. |
 | /s | Shuts down the computer. |
 | /sg | Shuts down the computer. On the next boot, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /r | Restarts the computer after shutdown. |
@@ -57,11 +57,9 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/sof
 
 - If you specify major and minor reason codes, you must first define these reason codes on each computer where you plan to use the reasons. If the reason codes aren't defined on the target computer, Shutdown Event Tracker can't log the correct reason text.
 
-- Remember to indicate that a shutdown is planned by using the **/p** parameter. Not using the **/p** parameter, indicates that the shutdown was unplanned.
+- Remember to indicate that a shutdown is planned by using `/d p|u:xx:yy`, where `xx` and `yy` represent the major and minor reason codes. Not using the `/d` parameter might cause the shutdown to be logged without a specified reason.
 
-  - Using the **/p** parameter, along the reason code for an unplanned shutdown, causes the shutdown to fail.
-
-  - Not using the **/p** parameter, and only providing the reason code for a planned shutdown, also causes the shutdown to fail.
+  - Using the `/d` parameter for an unplanned shutdown allows the shutdown to be logged correctly.
 
 The shutdown or restart reasons uses the following legend:
 
