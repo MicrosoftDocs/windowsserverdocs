@@ -6,19 +6,12 @@ ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
 ms.author: jgerend
 author: jasongerend
 manager: mtillman
-ms.date: 04/24/2023
+ms.date: 05/03/2025
+# freshness notes: Other than specific feedback, this article should be evergreen as of 5/02/2025 until the next version released or the end of support. The content is still relevant and accurate, and the links are still valid. The article is not time-sensitive and does not require any updates or changes at this time.
 ---
 # Step 3: Approve and Deploy Updates in WSUS
 
-
-
-Computers in a computer group automatically contact the WSUS server over the next 24 hours to obtain updates. You can use the WSUS reporting feature to determine whether those updates were deployed to the test computers. When the tests are successfully completed, you can approve the updates for the applicable computer groups in your organization. The following checklist describes the steps to approve and deploy updates by using WSUS management console.
-
-|Task|Description|
-|----|--------|
-|[3.1. Approve and deploy WSUS updates](3-approve-and-deploy-updates-in-wsus.md#BKM_3.1.)|Approve and deploy WSUS updates by using the WSUS Management Console.|
-|[3.2. Configure auto-approval rules](3-approve-and-deploy-updates-in-wsus.md#BKM_3.2.a.)|Configure WSUS to automatically approve installation of updates for selected groups, and how to approve revisions to existing updates.|
-|[3.3. Review installed updates with WSUS Reports](3-approve-and-deploy-updates-in-wsus.md#BKM_3.3.)|Review the updates that were installed, the computers that received those updates and other details by using the WSUS Reporting feature.|
+Computers in a computer group automatically contact the WSUS server over the next 24 hours to obtain updates. You can use the WSUS reporting feature to determine whether those updates were deployed to the test computers. When the tests are successfully completed, you can approve the updates for the applicable computer groups in your organization. 
 
 ## <a name=BKM_3.1.></a>3.1. Approve and deploy WSUS updates
 Use the following procedure to approve and deploy updates.
@@ -80,3 +73,8 @@ Automatic Approvals enables you to specify how to automatically approve installa
 5.  You can save or print this report by clicking the applicable icon on the toolbar.
 
 6.  After you test the updates, you can approve the updates for installation on the applicable computer groups in your organization.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Step 4: Configure Group Policy settings for automatic Updates](4-configure-group-policy-settings-for-automatic-updates.md)
