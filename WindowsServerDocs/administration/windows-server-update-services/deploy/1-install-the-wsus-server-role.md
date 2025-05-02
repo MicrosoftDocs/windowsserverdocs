@@ -65,6 +65,8 @@ The following procedure describes how to install the WSUS server role by using W
 
     The **-IncludeManagementTools** parameter installs the WSUS management console. The **-Restart** parameter restarts the server if required.
 
+---
+
 ## Next step
 
 > [!div class="nextstepaction"]
