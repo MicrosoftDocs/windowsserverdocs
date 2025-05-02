@@ -13,7 +13,7 @@ ms.date: 05/03/2025
 
 The next step in the deployment of your WSUS server is to install the WSUS server role.
 
-# [Server Manager](#tab/Server Manager)
+# [Server Manager](#tab/server-manager)
 
 The following procedure describes how to install the WSUS server role by using Server Manager.
 
@@ -51,7 +51,7 @@ The following procedure describes how to install the WSUS server role by using S
 
 14. In **Server Manager**, verify if a notification appears to inform you that a restart is required. This can vary according to the installed server role. If it requires a restart make sure to restart the server to complete the installation.
 
-# [PowerShell](#tab/PowerShell)
+# [PowerShell](#tab/powershell)
 
 The following procedure describes how to install the WSUS server role by using Windows PowerShell.
 
