@@ -6,24 +6,14 @@ ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
 ms.author: jgerend
 author: jasongerend
 manager: mtillman
-ms.date: 3/31/2025
+ms.date: 5/02/2025
 # customer intent: As an administrator, I want to see how to configure Windows Server Update Services (WSUS) so that I can deploy the latest Microsoft product updates to computers in my network.
+# freshness notes: Other than specific feedback, this article should be evergreen as of 5/02/2025 until the next version released or the end of support. The content is still relevant and accurate, and the links are still valid. The article is not time-sensitive and does not require any updates or changes at this time.
 ---
 
 # Step 2: Configure WSUS
 
 After you install the Windows Server Update Services (WSUS) server role on your server, you need to properly configure it. You also need to configure your client computers to receive their updates from the WSUS server.
-
-This article walks you through the following procedures:
-
-|Task|Description|
-|----|--------|
-|[2.1. Configure network connections](#21-configure-network-connections)|Configure your firewall and proxy settings to allow the server to make the connections that it needs.|
-|[2.2. Configure WSUS by using the WSUS Configuration Wizard](#22-configure-wsus-by-using-the-wsus-configuration-wizard)|Use the WSUS Configuration Wizard to perform the base WSUS configuration.|
-|[2.3. Secure WSUS with the TLS protocol](#23-secure-wsus-with-the-tls-protocol)|Configure the Transport Layer Security (TLS) protocol to help protect WSUS.|
-|[2.4. Configure WSUS computer groups](#24-configure-wsus-computer-groups)|Create computer groups in the WSUS Administration Console to manage updates in your organization.|
-|[2.5. Configure client computers to establish TLS connections with the WSUS server](#25-configure-client-computers-to-establish-tls-connections-with-the-wsus-server)|Configure the client computers to trust the WSUS server certificate.|
-|[2.6. Configure client computers to receive updates from the WSUS server](#26-configure-client-computers-to-receive-updates-from-the-wsus-server)|Set up the client computers to receive their updates from the WSUS server.|
 
 ## 2.1. Configure network connections
 
@@ -86,6 +76,8 @@ Your first WSUS server must have outbound access to ports 80 and 443 on the foll
 - http\://*.delivery.mp.microsoft.com
 
 - https\://*.delivery.mp.microsoft.com
+
+If you're managing Microsoft 365 updates, which requires Microsoft Configuration Manager, see [Manage updates to Microsoft 365 Apps with Microsoft Configuration Manager](/microsoft-365/apps-management/manage-updates-to-microsoft-365-apps-with-microsoft-configuration-manager) for more information about the domains that you need to allow.
 
 > [!IMPORTANT]
 > You must configure your firewall to allow the first WSUS server to access any URL within these domains. The IP addresses associated with these domains are constantly changing, so don't try to use IP address ranges instead.
@@ -514,3 +506,8 @@ If you're using server-side targeting, you should now add the new client compute
 1. Right-click the client computer and select **Change membership**.
 
 1. In the dialog, select the appropriate computer groups, and then select **OK**.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Step 3: Approve and Deploy Updates](3-approve-and-deploy-updates-in-wsus.md)
