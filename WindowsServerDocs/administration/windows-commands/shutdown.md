@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
 author: xelu86
 ms.author: alalve
-ms.date: 03/18/2025
+ms.date: 05/01/2025
 ---
 
 # shutdown
@@ -23,12 +23,12 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/sof
 | Parameter | Description |
 |--|--|
 | /i | Displays the **Remote Shutdown** box. The **/i** option must be the first parameter following the command. If **/i** is specified, all other options are ignored. |
-| /l | Logs off the current user immediately, with no time-out period. You can't use **/l** with **/m** or **/t**. |
+| /l | Signs out the current user immediately with no time-out period. The **/l** parameter works independently and can't be combined with any other parameters. Attempts to combine **/l** with any other parameter is ignored. |
 | /s | Shuts down the computer. |
 | /sg | Shuts down the computer. On the next boot, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /r | Restarts the computer after shutdown. |
 | /g | Fully shuts down and restarts the computer. On restart, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
-| /a | Aborts a system shutdown. Can only be used during the time-out period. Combine with /fw to clear any pending boots to firmware. |
+| /a | Aborts a system shutdown. Can only be used during the time-out period. Combine with **/fw** to clear any pending boots to firmware. |
 | /p | Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it shuts down when you use **/p**, but the power to the computer remains on. |
 | /h | Puts the local computer into hibernation, if hibernation is enabled. The **/f** switch can be used with the **/h** switch. |
 | /hybrid | Shuts down the device and prepares it for fast startup. This option must be used with the **/s** option. |
@@ -37,7 +37,7 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/sof
 | /e | Enables you to document the reason for an unexpected shutdown of a computer in the [Shutdown Event Tracker](/troubleshoot/windows-server/application-management/description-shutdown-event-tracker). |
 | /o | Goes to the **Advanced boot options** menu and restarts the device. This option must be used with the **/r** option. |
 | /f | Forces running applications to close without warning users.<br>**Caution:** Using the **/f** option might result in loss of unsaved data. |
-| /m `\\<computername>` | Specifies the target computer. Can't be used with the **/l** option. |
+| /m `\\<computername>` | Specifies the target computer. |
 | /t `<xxx>` | Sets the time-out period before shutdown to *xxx* seconds. The valid range is 0-315360000 (10 years), with a default of 30. If the timeout period is greater than 0, the **/f** parameter is implied. |
 | /d `[p \| u:]<xx>:<yy>` | Lists the reason for the system restart or shutdown. The supported parameter values are:<br><ul><li>**P** - Indicates that the restart or shutdown is planned.</li><li>**U** - Indicates that the reason is user-defined.<br>If **p** or **u** aren't specified, the restart or shutdown is unplanned.</li><br><li>*xx* - Specifies the major reason number (a positive integer, less than 256).</li><li>*yy* Specifies the minor reason number (a positive integer, less than 65536).</li></ul> |
 | /c `<comment>` | Enables you to create a custom reason for the system shutdown or restart, which must be enclosed in double quotation marks. You can use a maximum of 512 characters. Can also be used with the **/d** parameter. |
@@ -53,15 +53,11 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/sof
 
   - [Default groups](/previous-versions/windows/it-pro/windows-server-2003/cc756898(v=ws.10))
 
-- If you want to shut down more than one computer at a time, you can call **shutdown** for each computer by using a script, or you can use **shutdown** **/i** to display the **Remote Shutdown** box.
+- If you want to shut down more than one computer at a time, you can call **shutdown** for each computer by using a script, or you can use `shutdown /i` to display the **Remote Shutdown** box.
 
 - If you specify major and minor reason codes, you must first define these reason codes on each computer where you plan to use the reasons. If the reason codes aren't defined on the target computer, Shutdown Event Tracker can't log the correct reason text.
 
-- Remember to indicate that a shutdown is planned by using the **/p** parameter. Not using the **/p** parameter, indicates that the shutdown was unplanned.
-
-  - Using the **/p** parameter, along the reason code for an unplanned shutdown, causes the shutdown to fail.
-
-  - Not using the **/p** parameter, and only providing the reason code for a planned shutdown, also causes the shutdown to fail.
+- Remember to indicate that a shutdown is planned by using `/d p|u:xx:yy`, where `xx` and `yy` represent the major and minor reason codes. Not using the `/d` parameter might cause the shutdown to be logged without a specified reason. Using the `/d` parameter for an unplanned shutdown allows the shutdown to be logged correctly.
 
 The shutdown or restart reasons uses the following legend:
 
