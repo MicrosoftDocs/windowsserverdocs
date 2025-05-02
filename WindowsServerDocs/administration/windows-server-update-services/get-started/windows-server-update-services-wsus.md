@@ -13,7 +13,7 @@ ms.date: 05/02/2025
 Windows Server Update Services (WSUS) provides a way for IT administrators to deploy the latest Microsoft product updates. You can use WSUS to fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This article provides an overview of this server role and more information about how to deploy and maintain WSUS.
 
 > [!NOTE]
-> WSUS is deprecated and is no longer being actively developed. However, it continues to be supported for production deployments, and receives security and quality updates as per the product lifecycle. For more info, see [Features removed or no longer developed in Windows Server](../../../get-started/removed-deprecated-features-windows-server.md).
+> WSUS is deprecated and is no longer adding new features. However, it continues to be supported for production deployments, and receives security and quality updates as per the product lifecycle. For more info, see [Features removed or no longer developed in Windows Server](../../../get-started/removed-deprecated-features-windows-server.md).
 
 ## WSUS Server role description
 
