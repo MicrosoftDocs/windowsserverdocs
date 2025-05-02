@@ -77,7 +77,7 @@ Your first WSUS server must have outbound access to ports 80 and 443 on the foll
 
 - https\://*.delivery.mp.microsoft.com
 
-If you're managing Microsoft 365 updates, which requires Microsoft Configuration Manager, see [Manage updates to Microsoft 365 Apps with Microsoft Configuration Manager](/microsoft-365/apps-management/manage-updates-to-microsoft-365-apps-with-microsoft-configuration-manager) for more information about the domains that you need to allow.
+If you're managing Microsoft 365 updates, which requires Microsoft Configuration Manager, see [Manage updates to Microsoft 365 Apps with Microsoft Configuration Manager](/microsoft-365-apps/updates/manage-microsoft-365-apps-updates-configuration-manager) for more information about the domains that you need to allow.
 
 > [!IMPORTANT]
 > You must configure your firewall to allow the first WSUS server to access any URL within these domains. The IP addresses associated with these domains are constantly changing, so don't try to use IP address ranges instead.
