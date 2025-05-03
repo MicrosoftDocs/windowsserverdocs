@@ -156,12 +156,12 @@ To disable Windows Server Pay-as-you-go, follow these steps:
    $licenseProfile   = Set-AzResource -ResourceId $licenseProfileId -Properties $property -ApiVersion $apiVersion
    ```
 
+---
+
 > [!NOTE]
 > You have the ability to disable Windows Server Pay-as-you-go whenever you desire. It's important to remember to disable it when you're no longer using Pay-as-you-go, as failing to do so could result in continued charges for the Windows Server license even if the device is shut down, disconnected, or unavailable.
 >
 > After disabling Windows Server Pay-as-you-go, you'll need a different type of license if you want to continue using your device. You can install a traditional perpetual license by entering a product key.
-
----
 
 ## See also
 
