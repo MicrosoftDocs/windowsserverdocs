@@ -267,7 +267,7 @@ Here's how to detect the status, enable, and disable SMB protocols on an SMB cli
 - Detect:
 
   ```cmd
-  sc.exe qc lanmanworkstation
+  sc.exe qc mrxsmb10
   ```
 
 - Disable:
@@ -291,7 +291,7 @@ For more information, see [Stop using SMB1](https://techcommunity.microsoft.com/
 - Detect:
 
   ```cmd
-  sc.exe qc lanmanworkstation
+  sc.exe qc mrxsmb20
   ```
 
 - Disable:
