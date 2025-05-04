@@ -11,7 +11,7 @@ ms.date: 08/14/2024
 
 > 
 
-A service account is a user account that's created explicitly to provide a security context for services that are running on Windows Server operating systems. The security context determines the service's ability to access local and network resources. Windows operating systems rely on services to run various features. These services can be configured through the applications, the Services snap-in, or Task Manager, or by using Windows PowerShell.
+A service account is a user account that's created explicitly to provide a security context for services that are running on Windows Server operating systems. The security context determines the service's ability to access local and network resources. Windows operating systems rely on services to run various features. These services can be configured through the applications, the Services snap-in, or Task Scheduler, or by using Windows PowerShell.
 
 This article contains information about the following types of service accounts:
 
