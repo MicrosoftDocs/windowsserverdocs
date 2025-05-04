@@ -70,7 +70,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         1.  Run **ServerManager.exe** and create a server group, adding all server nodes.
 
-        2.  Install the **File Server** and **Storage Replica** roles and features on each of the nodes and restart them.
+        2.  Install the **File Server** Role and **Storage Replica**, and **Failover Clustering** features on each of the nodes and restart them.
 
     -   **Windows PowerShell method**
 
