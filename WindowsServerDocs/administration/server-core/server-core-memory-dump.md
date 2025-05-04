@@ -36,7 +36,7 @@ You don't have to have the page file on the partition where the operating system
 6. In **Value data** type **\<Drive\>:\\\<Dedicateddumpfile.sys\>**, and then click **OK**.
 
    >[!NOTE]
-   > Replace \<Drive\> with a drive that has enough disk space for the paging file, and replace \<Dedicateddumpfile.dmp\> with the full path to the dedicated file.
+   > Replace \<Drive\> with a drive that has enough disk space for the paging file, and replace \<Dedicateddumpfile.sys\> with the full path to the dedicated file.
 
 7. Click **Edit > New > DWORD Value**.
 8. Type **DumpFileSize**, and then press ENTER.
