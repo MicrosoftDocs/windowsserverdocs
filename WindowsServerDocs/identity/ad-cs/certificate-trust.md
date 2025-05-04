@@ -4,7 +4,7 @@ description: Learn how the Microsoft Root Certificate Program works to distribut
 author: robinharwood
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 08/22/2023
+ms.date: 10/24/2024
 
 ---
 
@@ -15,7 +15,7 @@ ms.date: 08/22/2023
 The Microsoft Root Certificate Program enables distribution of trusted and untrusted root
 certificates within Windows operating systems. For more information about the list of members in
 Windows Root Certificate Program, see
-[List of Participants - Microsoft Trusted Root Program](/security/trusted-root/participants-list).
+[List of Participants - Microsoft Trusted Root Program](https://learn.microsoft.com/en-us/security/trusted-root/participants-list).
 
 Trusted and untrusted root certificates are used by Windows operating systems and applications as a
 reference when determining whether public key infrastructure (PKI) hierarchies and digital
@@ -27,7 +27,7 @@ Trusted and untrusted root certificates are contained in a certificate trust lis
 want to distribute root certificates, you use a CTL. Windows Server features automatic daily update
 functionality that includes downloads of latest CTLs. The list of trusted and untrusted root
 certificates are called the Trusted CTL and Untrusted CTL, respectively. For more information, see
-[Announcing the automated updater of untrustworthy certificates and keys](https://blogs.technet.com/b/pki/archive/2012/06/12/announcing-the-automated-updater-of-untrustworthy-certificates-and-keys.aspx).
+[An automatic updater of untrusted certificates is available for Windows Vista, Windows Server 2008, Windows 7, and Windows Server 2008 R2](https://support.microsoft.com/en-us/topic/an-automatic-updater-of-untrusted-certificates-is-available-for-windows-vista-windows-server-2008-windows-7-and-windows-server-2008-r2-117bc163-d9e0-63ad-5a79-e61f38be8b77)
 
 Servers and clients access the Windows Update site to update the CTL using the automatic daily
 update mechanism (CTL updater) discussed in this article. You can take advantage of CTL updater
@@ -97,7 +97,7 @@ more articles that might help you as configure your systems.
 
 - [Configure trusted roots and disallowed certificates](configure-trusted-roots-disallowed-certificates.md)
 
-- [List of Participants - Microsoft Trusted Root Program](/security/trusted-root/participants-list)
+- [List of Participants - Microsoft Trusted Root Program](https://learn.microsoft.com/en-us/security/trusted-root/participants-list)
 
 - [Controlling the Update Root certificate Certificates Feature to Prevent the Flow of Information to and from the Internet](https://technet.microsoft.com/library/cc749331.aspx)
 
