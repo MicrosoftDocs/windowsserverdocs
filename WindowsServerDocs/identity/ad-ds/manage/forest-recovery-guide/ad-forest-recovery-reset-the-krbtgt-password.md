@@ -25,7 +25,11 @@ Use the following procedure to reset the krbtgt password for the domain. The fol
 1. In the console tree, double-click the domain container, and then select **Users**.
 1. In the details pane, right-click the **krbtgt** user account, and then select **Reset Password**.
    :::image type="content" source="media/resetpass1.png" alt-text="Reset password":::
-1. In **New password**, type a new password, retype the password in **Confirm password**, and then select **OK**. The password that you specify isn't significant because the system will generate a strong password automatically independent of the password that you specify.
+1. In **New password**, type a new password, retype the password in **Confirm password**. The password that you specify isn't significant because the system will generate a strong password automatically independent of the password that you specify.
+1. Please clear the check box **User must change password at next logon**. Then select **OK**.
+
+You can automate this task by using the KrbTGT password reset script on [Microsoft Open Source repository on GitHub](https://github.com/microsoft/New-KrbtgtKeys.ps1/blob/master/New-KrbtgtKeys.ps1).
+
 > [!IMPORTANT]
 > You should perform this operation twice. When resetting the Key Distribution Center Service Account password twice, a 10 hour waiting period is required between resets. 10 hours are the default **Maximum lifetime for user ticket** and **Maximum lifetime for service ticket** policy settings, hence in a case where the Maximum lifetime period has been altered, the minimum waiting period between resets should be greater than the configured value.
 > [!NOTE]
