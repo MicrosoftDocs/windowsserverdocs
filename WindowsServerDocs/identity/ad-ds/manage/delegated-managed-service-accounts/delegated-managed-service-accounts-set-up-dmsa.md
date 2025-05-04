@@ -48,34 +48,12 @@ The following instructions allow users to create a new dMSA without migrating fr
    New-ADServiceAccount @params
    ```
 
-1. Grant permission to the specific device to retrieve the password for the service account in AD:
+2. Grant permission to the specific device to retrieve the password for the service account in AD:
 
    ```powershell
    $params = @{
     Identity = "DMSA Name"
     PrincipalsAllowedToRetrieveManagedPassword = "Machine$"
-   }
-   Set-ADServiceAccount @params
-   ```
-
-1. The **msDS-DelegatedMSAState** property value for the dMSA must be set to **3**. To view the current property value, run:
-
-   ```powershell
-   $params = @{
-    Identity = "dMSAsnmp"
-    Properties = "msDS-DelegatedMSAState"
-   }
-   Get-ADServiceAccount @params
-   ```  
-
-   To set this value to **3**, run:
-
-   ```powershell
-   $params = @{
-    Identity = "dMSAsnmp"
-    Properties = @{
-     "msDS-DelegatedMSAState" = 3
-    }
    }
    Set-ADServiceAccount @params
    ```
