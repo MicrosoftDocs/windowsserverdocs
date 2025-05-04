@@ -48,7 +48,7 @@ dfsrmig [/setglobalstate <state> | /getglobalstate | /getmigrationstate | /creat
 
 - Read-only domain controllers can't delete settings from AD DS, the PDC emulator performs this operation, and the changes eventually replicate to the read-only domain controllers after the applicable latencies for active directory replication.
 
-- The **dfsrmig** command is supported only on domain controllers that run at the Windows Server domain functional level, because SYSvol migration from FRS to DFS Replication is only possible on domain controllers that operate at that level.
+- The **dfsrmig** command is supported only on domain controllers that run at the Windows Server 2008 domain functional level, because SYSvol migration from FRS to DFS Replication is only possible on domain controllers that operate at that level.
 
 - You can run the **dfsrmig** command on any domain controller, but operations that create or manipulate AD DS objects are only allowed on read-write capable domain controllers (not on read-only domain controllers).
 
