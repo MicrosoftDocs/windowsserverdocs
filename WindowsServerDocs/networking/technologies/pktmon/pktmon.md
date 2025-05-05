@@ -17,7 +17,7 @@ Any machine that communicates over the network has at least one network adapter.
 
 <center>
 
-:::image type="content" source="media/networking-stack.png" alt-text="An image of a traditional network stack." border="false":::
+:::image type="content" source="media/networking-stack.png" alt-text="Screenshot of a traditional network stack." border="false":::
 
 </center>
 
@@ -25,7 +25,7 @@ However, with the advent of network virtualization, the size of the networking s
 
 <center>
 
-:::image type="content" source="media/packet-capture.png" alt-text="An image of PacketMon's cross-component packet capture locations in a network stack." border="false":::
+:::image type="content" source="media/packet-capture.png" alt-text="Screenshot of packet mons cross-component packet capture locations in a network stack." border="false":::
 
 </center>
 
@@ -33,7 +33,7 @@ Packet Monitor intercepts packets at multiple locations throughout the networkin
 
 <center>
 
-:::image type="content" source="media/drop-detection.png" alt-text="An image of PacketMon's packet drop detection during packet interception." border="false":::
+:::image type="content" source="media/drop-detection.png" alt-text="Screenshot of packet mons packet drop detection during packet interception." border="false":::
 
 </center>
 
