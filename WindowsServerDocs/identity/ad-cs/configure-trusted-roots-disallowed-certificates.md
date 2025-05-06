@@ -107,14 +107,17 @@ mechanism.
 1. From an elevated PowerShell prompt, run the following command:
 
     ```powershell
-    Certutil -syncWithWU \\<server>\<share>
+    Certutil -f -f -syncWithWU \\<server>\<share>
     ```
+   > [!TIP]
+   > 
+   > Certutil -SyncWithWU -f <folder> updates existing files in the target folder. Certutil -syncWithWU -f -f <folder> removes and replaces files in the target folder.
 
     Substitute the actual server name for `<server>` and shared folder name for `<share>` For
     example, for a server named `Server1` with a shared folder named CTL, you'd run the command:
 
     ```powershell
-    Certutil -syncWithWU \\Server1\CTL
+    Certutil -f -f -syncWithWU \\Server1\CTL
     ```
 
 1. Download the CTL files on a server that computers on a disconnected environment can access over
