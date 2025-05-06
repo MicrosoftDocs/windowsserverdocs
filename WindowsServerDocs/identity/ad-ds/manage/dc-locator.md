@@ -2,8 +2,8 @@
 title: Locating Active Directory domain controllers in Windows and Windows Server
 description: Learn how domain controllers are located in Windows and Windows Server using the DC Locator algorithm.
 ms.date: 10/25/2024
-ms.topic: conceptual
-author: gswashington
+ms.topic: concept-article
+author: robinharwood
 ms.author: roharwoo
 ---
 

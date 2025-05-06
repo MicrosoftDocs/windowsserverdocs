@@ -4,8 +4,8 @@ description: Learn how to install the BranchCache for Network Files role service
 manager: brianlic
 ms.topic: how-to
 ms.assetid: bdac7d2a-25b4-4f61-bed1-b290700c18f3
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Configure an Existing File Server as a Content Server

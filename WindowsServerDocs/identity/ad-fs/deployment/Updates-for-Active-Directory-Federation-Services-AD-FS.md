@@ -4,8 +4,8 @@ ms.assetid: ed3206b4-bbfc-4bc7-a43c-981b0544a50d
 title: Required Updates for Active Directory Federation Services (AD FS)
 author: billmath
 ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+manager: femila
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)

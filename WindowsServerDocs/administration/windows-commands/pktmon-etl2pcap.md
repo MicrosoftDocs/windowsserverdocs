@@ -2,8 +2,8 @@
 title: pktmon etl2pcap
 description: Reference article for the pktmon etl2pcap command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
-ms.author: roharwoo
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/24/2021
 ---
 

@@ -2,11 +2,11 @@
 title: Set up the physical computer and primary station
 description: Learn how to set up your first system, the primary station, in MultiPoint Services
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 4e83b126-ce9a-4cd7-a0bd-6627c9e0f81b
-author: evaseydl
+author: dknappettmsft
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Set up the physical computer and primary station
 Before you install MultiPoint Services, you need to set up the primary station for your MultiPoint Services system. If you will use a local area network (LAN) connect the computer to the LAN.

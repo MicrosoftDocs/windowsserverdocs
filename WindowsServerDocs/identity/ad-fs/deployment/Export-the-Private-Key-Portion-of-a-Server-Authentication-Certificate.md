@@ -3,9 +3,9 @@ description: "Learn more about: Export the Private Key Portion of a Server Authe
 ms.assetid: cd4d4902-dcdf-49dd-8059-82a56bf4b585
 title: Export the Private Key Portion of a Server Authentication Certificate
 author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ms.author: billmath
 ---
 

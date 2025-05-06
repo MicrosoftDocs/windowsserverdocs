@@ -2,10 +2,10 @@
 description: "Learn more about: iSCSI Target Server overview"
 title: iSCSI Target Server Overview
 TOCTitle: iSCSI Target Server
-ms.topic: article
-author: robinharwood
+ms.topic: concept-article
+author: jasongerend
 manager: dougkim
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 09/11/2018
 ---
 

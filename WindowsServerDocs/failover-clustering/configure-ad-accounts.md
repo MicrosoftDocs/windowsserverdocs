@@ -2,9 +2,9 @@
 description: "Learn more about: Configuring cluster accounts in Active Directory"
 title: Configuring cluster accounts in Active Directory
 ms.date: 10/20/2021
-author: robinharwood
+author: xelu86
 manager: lizross
-ms.author: roharwoo
+ms.author: alalve
 ms.topic: how-to
 ---
 

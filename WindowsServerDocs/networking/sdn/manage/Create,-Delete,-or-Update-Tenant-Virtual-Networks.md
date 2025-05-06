@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: article
 ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Create, delete, or update tenant virtual networks

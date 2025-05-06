@@ -1,11 +1,11 @@
 ---
 title: Supported Windows security configurations for Remote Desktop Services VDI
 description: Provides information about supported configurations for Windows VDI with RDS in Windows Server.
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: 8f164f5d-a498-4f91-a12f-3e01d554f810
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ---
 

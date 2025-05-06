@@ -1,9 +1,9 @@
 ---
 title: File Server Resource Manager (FSRM) overview
-ms.author: roharwoo
+ms.author: jgerend
 manager: brianlic
-ms.topic: article
-author: robinharwood
+ms.topic: how-to
+author: jasongerend
 ms.date: 03/15/2023
 description: Learn about File Server Resource Manager (FSRM), which is a tool that enables you to manage and classify data on a Windows Server file server.
 ---

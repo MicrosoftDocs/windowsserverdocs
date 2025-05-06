@@ -1,10 +1,10 @@
 ---
 title: Storage Spaces Direct hardware requirements
 description: Learn about the minimum hardware requirements for Storage Spaces Direct.
-ms.author: roharwoo
+ms.author: daknappe
 manager: eldenc
 ms.topic: article
-author: eldenchristensen
+author: dknappettmsft
 ms.date: 07/24/2023
 ---
 # Storage Spaces Direct hardware requirements

@@ -2,10 +2,10 @@
 title: Move disks to another computer
 description: This article describes how to move disks to another computer
 ms.date: 10/12/2017
-ms.topic: article
-author: robinharwood
+ms.topic: how-to
+author: jasongerend
 manager: brianlic
-ms.author: roharwoo
+ms.author: jgerend
 ---
 
 # Move disks to another computer

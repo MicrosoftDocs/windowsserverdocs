@@ -1,7 +1,7 @@
 ---
 title: Manage Server Core
 description: Learn how to manage a Server Core installation of Windows Server.
-author: pronichkin
+author: xelu86
 ms.author: alalve
 ms.date: 01/16/2025
 ms.topic: how-to

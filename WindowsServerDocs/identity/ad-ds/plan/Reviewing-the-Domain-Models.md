@@ -3,10 +3,10 @@ description: "Learn more about: Reviewing the Domain Models"
 ms.assetid: e727a33d-133b-43c9-b6a4-7c00f9cb6000
 title: Reviewing the Domain Models
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 08/08/2018
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Reviewing the Domain Models

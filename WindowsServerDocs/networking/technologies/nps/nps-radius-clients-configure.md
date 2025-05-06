@@ -2,10 +2,10 @@
 title: Configure RADIUS Clients
 description: This topic provides information about configuring RADIUS Clients for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: cde37849-ce79-4c26-aa14-cd0ef31cae18
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

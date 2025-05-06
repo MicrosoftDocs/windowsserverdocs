@@ -1,10 +1,10 @@
 ---
 title: Active Directory Forest Recovery - Prerequisites  
 description: The following document discusses prerequisites that you should be familiar with before devising a forest recovery plan or attempting a recovery.
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Active Directory Forest Recovery - Prerequisites

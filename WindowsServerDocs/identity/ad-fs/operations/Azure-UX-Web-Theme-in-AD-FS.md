@@ -3,9 +3,9 @@ title: Microsoft Entra UX Web Theme in AD FS
 description: The following document describes how to change the AD FS forms sign-in so that it resembles the Microsoft Entra user experience.
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Using a Microsoft Entra UX Web Theme in Active Directory Federation Services

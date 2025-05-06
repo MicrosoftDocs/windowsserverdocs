@@ -2,7 +2,7 @@
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment by confirming the make and model of your SSD, inspecting for faulty drives, and more.
 ms.author: roharwoo
-ms.topic: article
+ms.topic: troubleshooting-general
 author: robinharwood
 ms.date: 06/06/2023
 ---
@@ -431,7 +431,7 @@ You might see an issue where an Intel SSD DC P4600 series device seems to be rep
 
 To fix this issue, update the firmware on the Intel drives to the latest version. Firmware version QDV101B1 from May 2018 is known to resolve this issue.
 
-The [May 2018 release of the Intel SSD Data Center Tool](https://downloadmirror.intel.com/27778/eng/Intel_SSD_Data_Center_Tool_3_0_12_Release_Notes_330715-026.pdf) includes a firmware update, QDV101B1, for the Intel SSD DC P4600 series.
+The [May 2018 release of the Intel SSD Data Center Tool](https://ftp.infania.net/pub/Windows%20Drivers/Intel/downloadmirror.intel.com/Intel_SSD_Data_Center_Tool_3_0_18_Release_Notes.pdf) includes a firmware update, QDV101B1, for the Intel SSD DC P4600 series.
 
 ## HealthStatus for the physical disk and OperationalStatus
 

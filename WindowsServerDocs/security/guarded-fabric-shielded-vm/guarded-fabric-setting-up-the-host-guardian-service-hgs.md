@@ -1,11 +1,11 @@
 ---
 description: "Learn more about: Deploy the Host Guardian Service (HGS)"
 title: Deploy the Host Guardian Service
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
 manager: dongill
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 01/14/2020
 ---
 

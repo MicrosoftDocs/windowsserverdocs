@@ -170,9 +170,23 @@ items:
       - name: DNS zones
         href: dns/zone-types.md
       - name: DNS architecture
-        href: dns/dns-architecture.md
+        href: dns/dns-architecture.md  
       - name: Network Ports
         href: dns/network-ports.md
+      - name: DNS processes
+        items:
+        - name: Queries and lookups
+          href: dns/queries-lookups.md
+        - name: Forwarding
+          href: dns/forwarding.md
+        - name: Dynamic updates
+          href: dns/dynamic-update.md
+        - name: Aging and scavenging
+          href: dns/aging-scavenging.md
+        - name: Reverse lookup
+          href: dns/reverse-lookup.md
+        - name: WINS lookup integration
+          href: dns/wins-lookup.md
       - name: DNSSEC
         items:
         - name: What is DNSSEC?
@@ -242,6 +256,18 @@ items:
         href: technologies/dhcp/dhcp-deploy-wps.md
       - name: Install DHCP relay agent
         href: technologies/dhcp/dhcp-deploy-relay-agent.md
+      - name: Migrate DHCP server to Windows Server
+        href: technologies/dhcp/migrate-dhcp-server.md  
+    - name: DHCP failover
+      items:
+      - name: DHCP failover overview
+        href: technologies/dhcp/dhcp-failover.md
+      - name: Manage DHCP failover relationships
+        href: technologies/dhcp/manage-dhcp-failover-relationships.md
+      - name: Replicate DHCP failover settings
+        href: technologies/dhcp/replicate-dhcp-failover.md  
+      - name: DHCP failover events
+        href: technologies/dhcp/dhcp-failover-events.md  
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
@@ -249,6 +275,8 @@ items:
         href: ../troubleshoot/dynamic-host-configuration-protocol-basics.md
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
+      - name: DHCP server events
+        href: technologies/dhcp/dhcp-server-events.md  
   - name: Edge networking
     items:
     - name: Network ATC

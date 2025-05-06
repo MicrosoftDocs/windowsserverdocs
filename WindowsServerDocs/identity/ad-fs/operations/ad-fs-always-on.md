@@ -3,9 +3,9 @@ title: Setting up an AD FS Deployment with AlwaysOn Availability Groups
 description: "Learn more about: Setting up an AD FS Deployment with AlwaysOn Availability Groups"
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Setting up an AD FS Deployment with AlwaysOn Availability Groups

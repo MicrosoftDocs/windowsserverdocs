@@ -1,7 +1,7 @@
 ---
 title: Active Directory security groups
 description: Become familiar with Windows Server Active Directory security groups, group scope, and group functions. See information on groups, such as members and rights.
-author: dansimp
+author: Xelu86
 ms.author: alalve
 ms.topic: article
 ms.date: 03/17/2025

@@ -1,9 +1,9 @@
 ---
 title: Use Cluster Shared Volumes in a failover cluster
 description: How to use Cluster Shared Volumes in a failover cluster.
-ms.topic: article
-author: robinharwood
-ms.author: roharwoo
+ms.topic: how-to
+author: jasongerend
+ms.author: jgerend
 manager: lizross
 ms.date: 10/20/2021
 ---

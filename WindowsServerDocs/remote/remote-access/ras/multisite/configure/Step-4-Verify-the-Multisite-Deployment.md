@@ -2,10 +2,10 @@
 title: Step 4 Verify the Multisite Deployment
 description: Learn how to verify that you have correctly configured your Remote Access multisite deployment.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 345b676a-a397-4d51-9973-8b25bc05fa55
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 4 Verify the Multisite Deployment

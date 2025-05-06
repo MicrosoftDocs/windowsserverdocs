@@ -2,11 +2,11 @@
 title: Join MultiPoint Services to a domain (optional)
 description: Provides the steps to join MultiPoint Services to your domain
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 623b7c21-dcbb-402e-8b5a-8e434cd225bd
-author: evaseydl
+author: dknappettmsft
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Join the MultiPoint Services computer to a domain (optional)
 If you will access your MultiPoint Services computer over an Active Directory domain, your next step is to add the computer to the domain.

@@ -1,10 +1,10 @@
 ---
 title: Manage Multiple, remote Servers with Server Manager
 description: Learn how to use features in the Server Manager console to manage multiple, remote servers.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -49,7 +49,7 @@ To manage servers that are running  Windows Server 2012 ,  Windows Server 2008 R
 
 To manage servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , apply the following updates to the older operating systems.
 
--   [.NET Framework 4](https://www.microsoft.com/download/en/details.aspx?id=17718)
+-   [.NET Framework 4](https://www.microsoft.com/download/details.aspx?id=17718)
 
 -   [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008  and  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008  or  Windows Server 2008 R2  have a manageability status of **Not accessible - verify earlier versions run Windows Management Framework 3.0**.
 

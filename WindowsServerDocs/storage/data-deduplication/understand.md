@@ -2,10 +2,11 @@
 description: "Learn more about: Understanding Data Deduplication"
 ms.assetid: acc0803b-fa05-4fc3-b94d-2916abf4fdbd
 title: Understanding Data Deduplication
-ms.topic: article
-author: wmgries
+ms.topic: concept-article
+
+author: jasongerend
 manager: klaasl
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 02/18/2022
 ---
 # Understanding Data Deduplication

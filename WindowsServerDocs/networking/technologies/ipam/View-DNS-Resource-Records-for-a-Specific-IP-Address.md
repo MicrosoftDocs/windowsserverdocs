@@ -2,10 +2,10 @@
 title: View DNS Resource Records for a Specific IP Address
 description: Learn how to view the DNS resource records that are associated with the IP Address that you choose.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f590fb86-4195-4f90-98cb-e90459d4c1e3
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # View DNS Resource Records for a Specific IP Address

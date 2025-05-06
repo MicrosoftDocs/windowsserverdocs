@@ -4,8 +4,8 @@ description: This topic provides links to procedures for managing NPSs in Window
 manager: brianlic
 ms.topic: article
 ms.assetid: 6005dc27-f49e-427f-92f7-b0e558ffe3ff
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

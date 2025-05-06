@@ -4,9 +4,9 @@ ms.assetid: 39acccd9-0402-49ca-8ce1-b239e1e7e455
 title: Deploying AD FS in the Resource Partner Organization
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Deploying AD FS in the Resource Partner Organization

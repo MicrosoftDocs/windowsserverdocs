@@ -3,10 +3,10 @@ description: "Learn more about: Planning Regional Domain Controller Placement"
 ms.assetid: eb600904-24b8-4488-a278-c1c971dc2f2d
 title: Planning Regional Domain Controller Placement
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 05/16/2023
-ms.topic: article
+ms.topic: concept-article
 ms.custom: inhenkel
 
 ---

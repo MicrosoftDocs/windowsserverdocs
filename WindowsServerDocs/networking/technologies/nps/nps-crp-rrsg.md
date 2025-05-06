@@ -4,8 +4,8 @@ description: This topic provides an overview of Network Policy Server Remote RAD
 manager: brianlic
 ms.topic: article
 ms.assetid: d81678a7-be21-48f2-9b3f-5a75d6aef013
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

@@ -4,9 +4,9 @@ description: Planning information for MultiPoint Services deployments in Windows
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
-author: evaseydl
+author: dknappettmsft
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # MultiPoint Services Site Planning
 You should consider the location where one or more computers running MultiPoint Services and its associated stations will be deployed.

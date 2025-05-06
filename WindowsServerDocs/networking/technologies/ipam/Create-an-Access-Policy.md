@@ -2,10 +2,10 @@
 title: Create an Access Policy
 description: Learn how to create an access policy in the IPAM client console.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # Create an Access Policy

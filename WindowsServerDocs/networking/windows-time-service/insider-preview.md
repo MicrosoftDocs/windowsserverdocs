@@ -1,8 +1,8 @@
 ---
 title: Insider preview for Windows Time Service features in Windows Server 2019
 description: New Windows Time Service features in Windows Server 2019
-author: dahavey
-ms.author: roharwoo
+author: xelu86
+ms.author: alalve
 ms.date: 11/04/2021
 ms.topic: article
 ---

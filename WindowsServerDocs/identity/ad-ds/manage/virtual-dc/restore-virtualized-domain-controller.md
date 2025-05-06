@@ -4,7 +4,7 @@ description: Learn about how to restore a virtualized Active Directory Domain Se
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 01/24/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Restore a virtual domain controller

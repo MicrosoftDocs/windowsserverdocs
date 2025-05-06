@@ -4,7 +4,7 @@ description: Learn how to disable and enable certain TLS/SSL protocols and ciphe
 author: andreipo
 ms.author: roharwoo
 ms.date: 05/31/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Manage SSL/TLS protocols and cipher suites for AD FS

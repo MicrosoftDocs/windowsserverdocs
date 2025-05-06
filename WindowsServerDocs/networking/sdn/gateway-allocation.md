@@ -4,7 +4,7 @@ title: Gateway bandwidth allocation
 manager: grcusanz
 ms.topic: how-to
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 01/04/2023
 ---
 

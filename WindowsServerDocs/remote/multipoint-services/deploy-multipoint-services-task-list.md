@@ -4,9 +4,9 @@ description: Lists all the tasks involved in deploying MultiPoint Services, alon
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: e08c5784-5b3e-4028-86c1-96deaee41f09
-author: evaseydl
+author: dknappettmsft
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # Task Lists: MultiPoint Services
 Use the task lists in this topic to help you're the deployment of your MultiPoint Services system and keep track of completed tasks. Not all tasks apply to every environment. For example, some tasks are performed only if you deploy a MultiPoint server on an Active Directory domain. Others, such as creating split-screen stations or deploying virtual desktops for stations, are optional. For procedures that explain how to perform these tasks, see [Deploying MultiPoint Services](deploying-multipoint-services.md).

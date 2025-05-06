@@ -2,9 +2,9 @@
 title: Use Windows LAPS PowerShell cmdlets
 description: Learn about Windows Local Administrator Password Solution (Windows LAPS) PowerShell cmdlets and how to use them.
 author: jay98014
-ms.author: justinha
+ms.author: daknappe
 ms.date: 07/04/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Use Windows LAPS PowerShell cmdlets

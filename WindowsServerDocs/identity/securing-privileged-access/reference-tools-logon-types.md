@@ -6,7 +6,7 @@ ms.topic: reference
 ms.date: 05/30/2024
 
 ms.author: roharwoo
-author: MicrosoftGuyJFlo
+author: robinharwood
 ms.reviewer: mas
 ---
 # Administrative tools and logon types

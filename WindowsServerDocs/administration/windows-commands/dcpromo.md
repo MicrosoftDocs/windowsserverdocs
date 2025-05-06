@@ -2,8 +2,8 @@
 title: dcpromo in Windows Server
 description: Learn about using the dcpromo command to install, promote, demote, and remove Active Directory Domain Services (AD DS) from a Windows Server.
 ms.topic: reference
-author: gswashington
-ms.author: roharwoo
+author: xelu86
+ms.author: alalve
 ms.date: 04/22/2024
 ---
 

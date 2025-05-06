@@ -3,8 +3,8 @@ description: "Learn more about: Winlogon Automatic Restart Sign-On (ARSO)"
 title: Winlogon Automatic Restart Sign-On (ARSO)
 ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/12/2016
 ---

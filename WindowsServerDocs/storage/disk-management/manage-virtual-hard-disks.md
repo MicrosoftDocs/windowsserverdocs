@@ -2,10 +2,10 @@
 title: Manage Virtual Hard Disks (VHD)
 description: Learn about Virtual Hard Disks (VHD) and how to manage them with Disk Management, where you can view, create, attach, and detach them in a computer.
 ms.date: 03/10/2023
-ms.topic: conceptual
-author: robinharwood
+ms.topic: how-to
+author: jasongerend
 manager: brianlic
-ms.author: roharwoo
+ms.author: jgerend
 ---
 
 # Manage Virtual Hard Disks (VHD)

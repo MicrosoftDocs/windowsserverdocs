@@ -3,8 +3,8 @@ title: DNS zones in DNS Server on Windows Server
 description: Learn about the different DNS zone types and how they're stored with DNS server in Windows Server.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: conceptual
-ms.date: 01/21/2025
+ms.topic: concept-article
+ms.date: 01/31/2025
 ms.custom: template-concept, team=cloud_advocates
 ms.contributors: orthomas
 ---
@@ -158,7 +158,7 @@ A primary DNS server is any authoritative server configured to be the source of 
 The zone transfer is initiated in one of the following ways:
 
 - The primary DNS server sends a notification (RFC 1996) to one or more secondary DNS servers of a change in the zone file.
-- When the DNS Server service on the secondary DNS server starts, or the refresh interval of the zone expires, the secondary DNS server will query the primary DNS server for the changes. By default the refresh interval is set to 15 minutes in the SOA RR of the zone.
+- When the DNS Server service on the secondary DNS server starts, or the refresh interval of the zone expires, the secondary DNS server queries the primary DNS server for the changes. By default the refresh interval is set to 15 minutes in the SOA RR of the zone.
 
 ## Zone transfer settings
 
@@ -172,7 +172,7 @@ information to be transferred to any host that can contact your DNS server.
 
 There are two types of zone file replication. The first, a full zone transfer (AXFR), replicates the entire zone file. The second, an incremental zone transfer (IXFR), replicates only records that have been modified.
 
-BIND 4.9.3 and earlier DNS server software, as well as Windows NT 4.0 DNS, support full zone transfer (AXFR) only. There are two types of the AXFR: one requires a single record per packet, the other allows multiple records per packet. The DNS Server service in Windows 2000 and Windows Server 2003 supports both types of zone transfer, but by default uses multiple records per packet. It can be configured differently for compatibility with servers that don't allow multiple records per packet, such as BIND servers versions 4.9.4 and earlier.
+BIND 4.9.3 and earlier DNS server software, and Windows NT 4.0 DNS, support full zone transfer (AXFR) only. There are two types of the AXFR: one requires a single record per packet, the other allows multiple records per packet. The DNS Server service in Windows servers supports both types of zone transfer, but by default uses multiple records per packet. It can be configured differently for compatibility with servers that don't allow multiple records per packet, such as BIND servers versions 4.9.4 and earlier.
 
 ## Zone delegation
 
@@ -185,6 +185,20 @@ When you delegate a zone, remember that for each new zone that you create, you n
 records in other zones that point to the authoritative DNS servers for the new zone. Delegation
 records are necessary both to transfer authority and to provide correct referral to other DNS
 servers and clients of the new servers that are being made authoritative for the new zone.
+
+## Access to zones and names
+
+Access to the DNS zones and resource records stored in Active Directory is controlled with access control lists (ACLs). ACLs can be specified for the DNS Server service, an entire zone or for specific DNS names. By default, any authenticated Active Directory user can create the A or PTR RRs in any zone. When an owner creates an A or PTR record (regardless of the type of resource record), only the users or groups specified in the ACL for that name that have write permission are enabled to modify records corresponding to that name. While this approach is desirable in most scenarios, some situations need to be considered separately.
+
+### DNSAdmins group
+
+By default, the _DNSAdmins_ group has full control of all zones and records in the Active Directory domain. In order for a user to be able to enumerate zones in a specific domain, the user (or a group the user belongs to) must be enlisted in the DNSAdmin group.
+
+A domain administrator might not want to grant full control to all users listed in the DNSAdmins group. Instead a domain administrator might want to grant a specific set of users full control for one zone and read-only permissions for other zones. To configure these permissions, the domain administrator can create a separate group for each of the zones, and add specific users to each group. Then the ACL for each zone contains a group with full control for that zone only. All of the groups are added to the DNSAdmins group, which can be configured with read permissions only. A zone’s ACL always contains the DNSAdmins group, meaning all users enlisted in the zone-specific groups have the can read all zones in the domain.
+
+### Reserving names
+
+Environments that require a high level of security might need to reserve names in a zone and prevent authenticated users from creating new names in that zone, which is the default behavior. To secure the DNS records, the default ACL can be changed to allow for the creation of objects by certain groups or users only. Per-name administration of ACLs provides another solution to this problem. An administrator can reserve a name in a zone leaving the rest of the zone open for the creation of any new objects by all authenticated users. An administrator creates a record for the reserved name and sets the appropriate list of groups or users in the ACL. Meaning, only the users listed in the ACL are able to register another record under the reserved name.
 
 ## Next steps
 

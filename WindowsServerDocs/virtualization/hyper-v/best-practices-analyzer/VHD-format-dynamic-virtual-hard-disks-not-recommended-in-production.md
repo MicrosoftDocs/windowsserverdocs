@@ -3,7 +3,7 @@ title: VHD-format dynamic virtual hard disks are not recommended for virtual mac
 description: Learn what to do when one or more virtual machines use VHD-format dynamically expanding virtual hard disks.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 324a60a0-1d15-4ef2-9f17-23cbd2eb42ce
 ms.date: 8/16/2016
 ---

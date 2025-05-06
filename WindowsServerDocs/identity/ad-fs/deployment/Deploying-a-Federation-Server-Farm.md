@@ -4,9 +4,9 @@ title: Deploying a Federation Server Farm for Windows Server 2012 R2 AD FS
 description: "Learn more about: Deploying a Federation Server Farm"
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: checklist
 ---
 
 # Deploying a Federation Server Farm

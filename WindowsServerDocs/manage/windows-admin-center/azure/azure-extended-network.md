@@ -1,9 +1,9 @@
 ---
 title: Extend your on-premises subnets into Azure using extended network for Azure
 description: Extend your on-premises subnets into Azure using extended network for Azure
-ms.topic: article
-author: grcusanz
-ms.author: roharwoo
+ms.topic: how-to
+author: jasongerend
+ms.author: jgerend
 ms.date: 12/17/2019
 ---
 

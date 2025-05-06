@@ -2,10 +2,10 @@
 description: "Learn more about: Fault domain awareness"
 ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
 title: Fault domain awareness
-ms.author: roharwoo
+ms.author: jgerend
 manager: eldenc
-ms.topic: article
-author: cosmosdarwin
+ms.topic: how-to
+author: jasongerend
 ms.date: 02/16/2023
 ---
 # Fault domain awareness

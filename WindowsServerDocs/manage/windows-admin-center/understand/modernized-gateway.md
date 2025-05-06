@@ -1,7 +1,7 @@
 ---
 title: Windows Admin Center modernized gateway
 description: Windows Admin Center (Project Honolulu) modernized gateway
-ms.topic: article
+ms.topic: concept-article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 01/02/2024

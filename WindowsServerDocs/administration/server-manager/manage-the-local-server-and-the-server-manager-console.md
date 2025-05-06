@@ -1,10 +1,10 @@
 ---
 title: Manage the Local Server and the Server Manager Console
 description: Learn how to  manage both the local server and remote servers that are running Windows Server 2008 and newer releases of the Windows Server operating system.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -2,7 +2,7 @@
 title: Create a File Expiration Task
 description: This article describes the process of creating a file management task for files about to expire
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

@@ -1,11 +1,11 @@
 ---
 title: AD Forest Recovery - Resetting the krbtgt password
 description: How to reset the krbtgt password for the domain. 
-ms.author: justinha
-author: iainfoulds
+ms.author: mosagie
+author: meaghanlewis
 manager: daveba
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ms.custom: 3bd6c1d0-d316-4b03-b7b4-557d4537635c, inhenkel
 ---
 

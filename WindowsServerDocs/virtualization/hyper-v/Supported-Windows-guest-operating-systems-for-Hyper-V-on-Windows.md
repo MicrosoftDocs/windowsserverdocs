@@ -1,10 +1,10 @@
 ---
 title: Supported Windows guest operating systems for Hyper-V on Windows, Windows Server, and Azure Local
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
-ms.topic: conceptual
-ms.author: roharwoo
-author: robinharwood
-ms.date: 03/04/2025
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 04/30/2025
 ---
 
 # Supported Windows guest operating systems for Hyper-V on Windows, Windows Server, and Azure Local
@@ -19,27 +19,99 @@ Guest operating systems configurable components are confined based on the hostin
 
 Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V on Windows Server.
 
-|Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|
-|-------------------------------------|----------------------------------------|------------------------|---------|
-|Windows Server 2025 |2,048 for generation 2;<br>64 for generation 1;<br>2,048 available to the host OS (root partition)|Built-in| <p>Maximum number of virtual processors depends on the host OS. For example, Windows Server 2025 can provide up to 2,048 virtual processors.</p><p>Hosted on Windows Server 2022 and later, and on Azure Local 2311.2 and later with Windows Server subscription.</p> |
-|Windows Server 2022 |1,024 for generation 2;<br>64 for generation 1;<br>1,024 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2019 and later, Azure Local, version 22H2 and later.|
-|Windows Server 2019 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
-|Windows Server 2016 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
-|Windows Server 2012 R2 |64|Built-in||
-|Windows Server 2012 |64|Built-in||
-|Windows Server 2008 R2 with Service Pack 1 (SP 1)|64|Install all critical Windows updates after you set up the guest operating system.|Datacenter, Enterprise, Standard, and Web editions.|
-|Windows Server 2008 with Service Pack 2 (SP2)|8|Install all critical Windows updates after you set up the guest operating system.|Datacenter, Enterprise, Standard, and Web editions (32-bit and 64-bit).|
+### Windows Server 2025
+
+- **Maximum number of virtual processors**:  
+  - 2,048 for generation 2  
+  - 64 for generation 1  
+  - 2,048 available to the host OS (root partition)  
+- **Integration Services**: Built-in  
+- **Host operating systems**:
+  - Windows Server 2022 and later
+  - Azure Local OS, version 23H2 and later with Windows Server subscription.
+- **Notes**:  
+  - Maximum number of virtual processors depends on the host OS. For example, Windows Server 2025 can provide up to 2,048 virtual processors.  
+
+### Windows Server 2022
+
+- **Maximum number of virtual processors**:  
+  - 1,024 for generation 2  
+  - 64 for generation 1  
+  - 1,024 available to the host OS (root partition)  
+- **Integration Services**: Built-in  
+- **Host operating systems**:
+  - Windows Server 2019 and later
+  - Azure Local OS, version 23H2 and later.
+
+### Windows Server 2019
+
+- **Maximum number of virtual processors**:  
+  - 240 for generation 2  
+  - 64 for generation 1  
+  - 320 available to the host OS (root partition)  
+- **Integration Services**: Built-in  
+
+### Windows Server 2016
+
+- **Maximum number of virtual processors**:  
+  - 240 for generation 2  
+  - 64 for generation 1  
+  - 320 available to the host OS (root partition)  
+- **Integration Services**: Built-in  
+
+### Windows Server 2012 R2
+
+- **Maximum number of virtual processors**: 64  
+- **Integration Services**: Built-in  
+
+### Windows Server 2012
+
+- **Maximum number of virtual processors**: 64  
+- **Integration Services**: Built-in  
+
+### Windows Server 2008 R2 with Service Pack 1 (SP1)
+
+- **Maximum number of virtual processors**: 64  
+- **Integration Services**: Install all critical Windows updates after you set up the guest operating system.  
+- **Notes**: Datacenter, Enterprise, Standard, and Web editions.  
+
+### Windows Server 2008 with Service Pack 2 (SP2)
+
+- **Maximum number of virtual processors**: 8  
+- **Integration Services**: Install all critical Windows updates after you set up the guest operating system.  
+- **Notes**: Datacenter, Enterprise, Standard, and Web editions (32-bit and 64-bit).  
 
 ## Supported Windows client guest operating systems
 
 Following are the versions of Windows client that are supported as guest operating systems for Hyper-V on Windows Server.
 
-| Guest operating system (client) | Maximum number of virtual processors | Integration Services | Notes |
-|--|--|--|--|
-| Windows 11 | 32 | Built-in | Generation 2 virtual machine hosted on Windows Server 2019 or above <br/> Azure Local, version 22H2 and later. |
-| Windows 10 | 32 | Built-in |  |
-| Windows 8.1 | 32 | Built-in |  |
-| Windows 7 with Service Pack 1 (SP1) | 4 | Upgrade the integration services after you set up the guest operating system. | Ultimate, Enterprise, and Professional editions (32-bit and 64-bit). |
+### Windows 11
+
+- **Maximum number of virtual processors**: 32
+- **Integration Services**: Built-in
+- **Host operating systems**:
+  - Generation 2 virtual machine hosted on Windows Server 2019 and later
+  - Generation 2 virtual machine hosted on Azure Local OS, version 23H2 and later
+- **Notes**:  
+  - Windows 11 requires an increased CPU instruction for installation and boot (POPCNT and SSE4.2). To meet these requirements in Hyper-V:  
+    - On Windows 11, Windows Server 2022 (standalone or clustered hosts), or standalone Windows Server 2025 hosts, disable processor compatibility to enable these features. Disabling processor compatibility limits live migration to hosts with the same processor features.  
+    - On Windows Server 2025 clusters with CPUs supporting POPCNT and SSE4.2, enable dynamic processor compatibility to ensure these features are available while retaining live migration capabilities within the cluster. To learn more about dynamic processor compatibility, see [Dynamic processor compatibility mode](manage/dynamic-processor-compatibility-mode.md).
+
+### Windows 10
+
+- **Maximum number of virtual processors**: 32  
+- **Integration Services**: Built-in  
+
+### Windows 8.1
+
+- **Maximum number of virtual processors**: 32  
+- **Integration Services**: Built-in  
+
+### Windows 7 with Service Pack 1 (SP1)
+
+- **Maximum number of virtual processors**: 4  
+- **Integration Services**: Upgrade the integration services after you set up the guest operating system.  
+- **Notes**: Ultimate, Enterprise, and Professional editions (32-bit and 64-bit).  
 
 ## Guest operating system support on other versions of Windows
 
@@ -47,7 +119,6 @@ The following table gives links to information about guest operating systems sup
 
 |Host operating system|Article|
 |-------------------------|---------|
-|Windows 10, 11|[Supported Guest Operating Systems for Client Hyper-V in Windows 10](/virtualization/hyper-v-on-windows/about/supported-guest-os)|
 |Windows Server 2012 R2 and Windows 8.1|-   [Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 R2 and Windows 8.1](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|
 |Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|
 |Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|

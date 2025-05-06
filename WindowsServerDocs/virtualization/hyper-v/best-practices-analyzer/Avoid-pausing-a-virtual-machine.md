@@ -3,7 +3,7 @@ title: Avoid pausing a virtual machine
 description: Learn what to do when this server has one or more virtual machines in a paused state.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
 ms.date: 8/16/2016
 ---

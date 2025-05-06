@@ -2,10 +2,10 @@
 title: Deploy a Single DirectAccess Server Using the Getting Started Wizard
 description: Learn about the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess in a few easy steps.
 manager: brianlic
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard

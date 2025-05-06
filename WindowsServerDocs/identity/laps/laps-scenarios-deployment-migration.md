@@ -2,9 +2,9 @@
 title: Get started with Windows LAPS deployment and migration scenarios
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) deployment and migration scenarios.
 author: jay98014
-ms.author: justinha
+ms.author: daknappe
 ms.date: 05/15/2023
-ms.topic: conceptual
+ms.topic: get-started
 ---
 
 # Get started with Windows LAPS during deployment and migration scenarios
@@ -23,7 +23,7 @@ The following steps should be followed before configuring your Active Directory-
 
 1. Extend your AD schema to support Windows LAPS. See [Update the Windows Server Active Directory schema](laps-scenarios-windows-server-active-directory.md#update-the-windows-server-active-directory-schema).
 1. If you're using a GPO Central Store, manually copy the Windows LAPS Group Policy template files to the central store. See [GPO Central Store](laps-management-policy-settings.md#group-policy-object-central-store).
-1. Assign device self-write permissions. See [Grant the managed device password update permission](laps-scenarios-windows-server-active-directory.md#grant-the-managed-device-password-update-permission).
+1. Assign device self-write permissions. See [Grant the managed device permission to update its password](laps-scenarios-windows-server-active-directory.md#grant-the-managed-device-permission-to-update-its-password).
 1. Analyze, determine, and configure the appropriate AD permissions for password expiration and password retrieval. See [Windows Server Active Directory passwords](laps-concepts-overview.md#windows-server-active-directory-passwords).
 1. Analyze and determine the appropriate authorized groups for decrypting passwords. See [Windows Server Active Directory passwords](laps-concepts-overview.md#windows-server-active-directory-passwords).
 1. Create a new Windows LAPS policy that targets the managed device(s) with the appropriate settings as determined in the previous steps.

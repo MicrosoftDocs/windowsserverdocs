@@ -4,8 +4,8 @@ description: Learn how to configure the BranchCache hash publication Group Polic
 manager: brianlic
 ms.topic: how-to
 ms.assetid: da74fea7-52b2-4d6d-9d21-19184eedbe3c
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Configure the BranchCache Hash Publication Group Policy Object

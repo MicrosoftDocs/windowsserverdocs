@@ -1,10 +1,10 @@
 ---
 title: Cluster-Aware Updating overview
 description: Cluster-Aware Updating (CAU) automates software update installation on clusters running Windows Server.
-ms.topic: article
+ms.topic: overview
 manager: lizross
-author: robinharwood
-ms.author: roharwoo
+author: jasongerend
+ms.author: jgerend
 ms.date: 10/21/2021
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
 ---

@@ -3,9 +3,9 @@ description: "Learn more about: Data Deduplication interoperability"
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
 title: Data Deduplication interoperability
 ms.topic: article
-author: robinharwood
+author: jasongerend
 manager: klaasl
-ms.author: roharwoo
+ms.author: jgerend
 ms.date: 02/18/2022
 ---
 # Data Deduplication interoperability

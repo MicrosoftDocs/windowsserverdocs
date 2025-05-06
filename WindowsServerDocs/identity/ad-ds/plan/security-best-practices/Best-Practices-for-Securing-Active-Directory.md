@@ -2,11 +2,11 @@
 description: "Learn more about: Best Practices for Securing Active Directory"
 ms.assetid: e2651dc8-4b31-4cd8-a400-3b8123890210
 title: Best Practices for Securing Active Directory
-author: iainfoulds
-ms.author: justinha
+author: meaghanlewis
+ms.author: mosagie
 manager: daveba
 ms.date: 10/11/2023
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Best Practices for Securing Active Directory

@@ -2,10 +2,10 @@
 title: Delete DNS Resource Records
 description: Learn how to delete one or more DNS resource records by using the IPAM client console.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 366e6fd5-d563-4de3-9551-5614cbb8f2cb
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # Delete DNS Resource Records

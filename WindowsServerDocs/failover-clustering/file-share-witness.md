@@ -2,7 +2,7 @@
 title: Configure a file share witness for Failover Clustering in Windows Server
 description: Configure cluster quorum as a file share witness in domain-joined and non-domain joined devices using Failover Cluster Manager.
 ms.topic: how-to
-author: robhind
+author: xelu86
 ms.author: alalve
 ms.date: 01/28/2025
 #customer intent: As a cluster administrator, I want to configure a file share witness so that I can use it to determine the availability of the cluster nodes in addition to the node majority vote.
@@ -19,8 +19,6 @@ You might use a file share witness when:
 - A Cloud Witness can't be used because your cluster nodes don't have a reliable internet connection or an internet connectivity.
 
 - A disk witness can't be used because there aren't any shared drives to use for a disk witness. For example, a Storage Spaces Direct cluster, SQL Server Always On Availability Groups (AG), or Exchange Database Availability Group (DAG). None of these types of clusters use shared disks.
-
-For information about quorum configuration options, see [Configure and manage quorum](manage-cluster-quorum.md).
 
 In this article, learn how-to configure a file share witness for your Failover Cluster.
 

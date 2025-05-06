@@ -2,10 +2,10 @@
 title: Filter the View of DNS Resource Records
 description: Learn how to filter the view of DNS resource records in the IPAM client console.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 5b80294a-7325-476b-84eb-69f0d051e8b2
-ms.author: roharwoo
-author: robinharwood
+ms.author: jgerend
+author: jasongerend
 ms.date: 08/07/2020
 ---
 # Filter the View of DNS Resource Records

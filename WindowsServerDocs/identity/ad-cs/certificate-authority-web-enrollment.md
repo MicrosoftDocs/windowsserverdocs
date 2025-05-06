@@ -1,8 +1,8 @@
 ---
 title: Certification Authority Web Enrollment Role Service in Windows Server
 description: Use this article to understand the Active Directory Certification Authority Web Enrollment Role Service.
-author: gswashington
-ms.author: roharwoo
+author: dknappettmsft
+ms.author: daknappe
 ms.topic: overview
 ms.date: 08/31/2023
 

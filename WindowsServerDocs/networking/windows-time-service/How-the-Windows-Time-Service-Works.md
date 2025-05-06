@@ -2,10 +2,10 @@
 description: "Learn more about: How the Windows Time Service Works"
 ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: How the Windows Time Service Works
-author: dahavey
-ms.author: roharwoo
+author: jasongerend
+ms.author: jgerend
 ms.date: 11/04/2021
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # How the Windows Time Service Works

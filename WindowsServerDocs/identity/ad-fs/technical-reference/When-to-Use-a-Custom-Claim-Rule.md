@@ -4,9 +4,9 @@ ms.assetid: 20d183f0-ef94-44bb-9dfc-ed93799dd1a6
 title: When to Use a Custom Claim Rule
 author: billmath
 ms.author: billmath
-manager: amycolannino
+manager: femila
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 
 

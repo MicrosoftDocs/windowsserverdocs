@@ -3,8 +3,8 @@ description: "Learn more about: Initialize the HGS cluster using key mode in an 
 title: Initialize the HGS cluster using key mode in a bastion forest
 ms.topic: article
 manager: dongill
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
