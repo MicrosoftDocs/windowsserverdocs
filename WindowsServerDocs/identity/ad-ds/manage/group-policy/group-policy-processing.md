@@ -8,7 +8,7 @@ contributor: alalve
 ms.date: 05/06/2025
 ---
 
-# Group Policy Processing
+# Group Policy processing
 
 By default, Group Policy is inherited and cumulative, and it affects all computers and users in an Active Directory container and its children. Computer-related policy settings override user-related policy settings.
 
