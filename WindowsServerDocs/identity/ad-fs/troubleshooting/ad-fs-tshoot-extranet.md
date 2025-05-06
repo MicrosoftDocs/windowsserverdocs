@@ -4,8 +4,8 @@ description: Learn how to troubleshoot various aspects of Active Directory Feder
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 10/14/2024
+ms.topic: troubleshooting-general
 ---
 
 # Users can't sign in by using AD FS from an external network

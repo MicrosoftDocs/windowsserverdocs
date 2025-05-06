@@ -4,7 +4,7 @@ description: Reference article for the chkntfs command, which displays or modifi
 ms.topic: reference
 ms.assetid: 93eca810-8699-4716-8e9d-aecd54f704be
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Learn how to learn about BranchCache modes and to select the best m
 ms.topic: how-to
 ms.assetid: 86c1ccad-2aa4-40fe-84c1-f77c49eb1216
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 01/05/2021
 ---
 # Choosing a BranchCache Design

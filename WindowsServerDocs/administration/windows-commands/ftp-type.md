@@ -4,7 +4,7 @@ description: Reference article for the ftp type command, which sets or displays 
 ms.topic: reference
 ms.assetid: 6e96dcd4-08f8-4e7b-90b7-1e1761fea4c7
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the ksetup addkpasswd command, which adds a K
 ms.topic: reference
 ms.assetid: d3196995-1b38-48ff-ba08-911cfab77317
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

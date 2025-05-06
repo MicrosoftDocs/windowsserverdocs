@@ -1,5 +1,5 @@
 ---
-title: Connect to Azure Virtual Desktop
+title: Connect to Remote Desktop Services
 description: Learn how you can connect to a remote session running in Remote Desktop Services using Windows App or the Remote Desktop client.
 ms.topic: concept-article
 author: dknappettmsft

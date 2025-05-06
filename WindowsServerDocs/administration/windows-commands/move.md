@@ -4,7 +4,7 @@ description: Reference article for the move command, which moves one or more fil
 ms.topic: reference
 ms.assetid: fde290a8-d385-450f-8987-ee837fed667d
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

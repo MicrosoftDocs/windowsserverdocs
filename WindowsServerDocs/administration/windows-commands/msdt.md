@@ -4,7 +4,7 @@ description: Reference article for the msdt command, which invokes a troubleshoo
 ms.topic: reference
 ms.assetid: ead1b672-a120-4e16-94aa-a8e13602c1d0
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 01/31/2023
 ---

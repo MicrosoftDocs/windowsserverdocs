@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin peercaching and setconfiguratio
 ms.topic: reference
 ms.assetid: ff0a2b49-66e3-4d40-824c-6a3816055d2e
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

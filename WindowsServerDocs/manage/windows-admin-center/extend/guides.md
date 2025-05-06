@@ -2,7 +2,7 @@
 title: Guides
 description: Guides Windows Admin Center SDK (Project Honolulu)
 ms.topic: article
-author: robinharwood
+author: jasongerend
 ms.author: jgerend
 ms.date: 09/17/2018
 ---

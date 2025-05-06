@@ -1,8 +1,8 @@
 ---
 title: Create a connection provider for a solution extension
 description: Develop a solution extension Windows Admin Center SDK (Project Honolulu) - create a connection provider
-ms.topic: article
-author: robinharwood
+ms.topic: how-to
+author: jasongerend
 ms.author: jgerend
 ms.date: 06/06/2019
 ---

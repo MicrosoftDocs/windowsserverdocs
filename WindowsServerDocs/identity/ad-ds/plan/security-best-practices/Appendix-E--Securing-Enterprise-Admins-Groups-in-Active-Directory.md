@@ -2,11 +2,11 @@
 description: "Learn more about: Appendix E: Securing Enterprise Admins Groups in Active Directory"
 ms.assetid: f643099e-f9c6-476f-9378-5a9228c39b33
 title: Appendix E - Securing Enterprise Admins Groups in Active Directory
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 01/28/2024
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Appendix E: Securing Enterprise Admins Groups in Active Directory

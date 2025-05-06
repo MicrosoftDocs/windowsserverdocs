@@ -4,7 +4,7 @@ description: Reference article for the regini command, which modifies the regist
 ms.topic: reference
 ms.assetid: 5ff18dc3-5bd8-400a-b311-fd73a3267e8c
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 07/11/2018
 ---

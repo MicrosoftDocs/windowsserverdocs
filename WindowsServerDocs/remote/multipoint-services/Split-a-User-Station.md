@@ -2,9 +2,9 @@
 title: Split a User Station
 description: Learn how to split a display in MultiPoint Services so two users can use the same station
 ms.date: 07/08/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f0d1fc9c-f5ea-45bc-a8da-623c5d081cdf
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ---

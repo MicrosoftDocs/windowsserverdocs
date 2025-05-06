@@ -4,7 +4,7 @@ description: Reference article for the bootcfg default command, which specifies 
 ms.topic: reference
 ms.assetid: e21824d7-8278-41d7-a2c5-ce09803d513a
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

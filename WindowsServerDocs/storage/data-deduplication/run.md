@@ -2,8 +2,8 @@
 description: "Learn more about: Running Data Deduplication"
 ms.assetid: f15c02d7-1cbd-4eba-a571-0ea34ab93ef4
 title: Running Data Deduplication
-ms.topic: article
-author: wmgries
+ms.topic: concept-article
+author: jasongerend
 manager: klaasl
 ms.author: jgerend
 ms.date: 02/18/2022

@@ -3,8 +3,8 @@ description: "Learn more about: Scripting with PowerShell and Storage Spaces Dir
 title: Scripting with Storage Spaces Direct performance history
 ms.author: roharwoo
 manager: eldenc
-ms.topic: article
-author: cosmosdarwin
+ms.topic: how-to
+author: robinharwood
 ms.date: 05/15/2018
 ---
 

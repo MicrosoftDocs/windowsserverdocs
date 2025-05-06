@@ -3,10 +3,11 @@ description: "Learn more about: Collecting Network Information"
 ms.assetid: 8be8c48d-790c-4199-b9d3-9f4a07d5ced2
 title: Collecting Network Information
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 08/08/2018
-ms.topic: article
+ms.topic: how-to
+
 ---
 
 # Collecting Network Information

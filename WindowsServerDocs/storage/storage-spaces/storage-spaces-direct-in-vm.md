@@ -3,8 +3,8 @@ title: Using Storage Spaces Direct in a virtual machine
 description: How to deploy Storage Spaces Direct in a virtual machine guest cluster - for example, in Microsoft Azure.
 ms.author: roharwoo
 manager: eldenc
-ms.topic: article
-author: eldenchristensen
+ms.topic: best-practice
+author: robinharwood
 ms.date: 11/25/2024
 ---
 

@@ -4,7 +4,7 @@ description: Reference article for the nslookup help command, which displays the
 ms.topic: reference
 ms.assetid: 20ffe3e4-4cf3-4bc4-9392-a6be4ccd2c23
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

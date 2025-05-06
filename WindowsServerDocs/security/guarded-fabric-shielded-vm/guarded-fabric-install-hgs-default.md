@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Install HGS in a new forest"
 title: Install HGS in a new forest
-ms.topic: article
+ms.topic: install-set-up-deploy
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

@@ -2,10 +2,10 @@
 title: Configure NPS on a Multihomed Computer
 description: This topic provides instructions on configuring a server with multiple network adapters that is running Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: d9d9e9ac-4859-4522-89ed-a23092c9e12a
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

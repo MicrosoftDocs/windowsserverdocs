@@ -2,7 +2,7 @@
 title: Windows Admin Center SDK Case Study - Lenovo
 description: Windows Admin Center SDK Case Study - Lenovo
 ms.topic: article
-author: daniellee-msft
+author: jasongerend
 ms.author: jgerend
 ms.date: 1/7/2019
 ---

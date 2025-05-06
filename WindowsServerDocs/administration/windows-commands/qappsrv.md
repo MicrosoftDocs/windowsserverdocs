@@ -4,7 +4,7 @@ description: Reference article for the qappsrv command, which displays a list of
 ms.topic: reference
 ms.assetid: 7df68283-2484-418c-a8f0-d273884919ad
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

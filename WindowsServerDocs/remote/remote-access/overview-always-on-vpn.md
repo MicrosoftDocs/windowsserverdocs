@@ -1,9 +1,9 @@
 ---
 title: About Always On VPN for Windows Server Remote Access
 description: Learn about Always On VPN benefits over standard Windows VPN solutions. Key areas in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
-ms.topic: article
+ms.topic: concept-article
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 04/28/2023
 ---
 

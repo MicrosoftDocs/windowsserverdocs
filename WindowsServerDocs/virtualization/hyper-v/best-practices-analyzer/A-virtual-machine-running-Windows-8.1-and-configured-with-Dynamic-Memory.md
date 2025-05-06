@@ -3,7 +3,7 @@ title: A virtual machine running Windows 8.1 and configured with Dynamic Memory 
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows 8.1.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: b9a14f85-326f-4916-9278-2c8d39a32848
 ms.date: 8/16/2016
 ---

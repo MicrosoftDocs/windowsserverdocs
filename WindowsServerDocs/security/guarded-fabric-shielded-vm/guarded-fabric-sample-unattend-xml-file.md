@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Create OS specialization answer file"
 title: Create OS specialization answer file
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

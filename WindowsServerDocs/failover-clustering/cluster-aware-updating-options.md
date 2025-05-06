@@ -5,7 +5,7 @@ description: How to configure advanced options and updating run profiles for Clu
 ms.topic: article
 manager: lizross
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 10/21/2021
 ---
 # Cluster-Aware Updating advanced options and updating run profiles

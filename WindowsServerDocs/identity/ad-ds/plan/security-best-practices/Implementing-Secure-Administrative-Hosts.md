@@ -2,11 +2,11 @@
 description: "Learn more about: Implementing Secure Administrative Hosts"
 ms.assetid: eafdddc3-40d7-4a75-8f4f-a45294aabfc8
 title: Implementing Secure Administrative Hosts
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Implementing Secure Administrative Hosts

@@ -1,8 +1,8 @@
 ---
 title: Change the listening port for Remote Desktop on Windows and Windows Server
 description: Learn how to change the listening port for Remote Desktop client using the registry on Windows and Windows Server.
-ms.topic: article
-author: robinharwood
+ms.topic: how-to
+author: dknappettmsft
 ms.author: daknappe
 ms.date: 02/14/2025
 ---

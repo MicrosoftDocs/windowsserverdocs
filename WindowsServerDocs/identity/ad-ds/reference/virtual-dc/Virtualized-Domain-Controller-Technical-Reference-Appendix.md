@@ -2,7 +2,7 @@
 description: "Learn more about: Virtualized Domain Controller Technical Reference Appendix"
 ms.assetid: 73a4deba-7da6-4eae-8fdd-2a4d369f9cbb
 title: Virtualized Domain Controller Technical Reference Appendix
-author: iainfoulds
+author: justinha
 ms.author: justinha
 manager: daveba
 ms.date: 05/31/2017

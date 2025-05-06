@@ -4,7 +4,7 @@ description: Reference article for the manage-bde protectors command, which mana
 ms.topic: reference
 ms.assetid: 1f9b22c5-cc93-45df-9165-bedee94998da
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 08/06/2018
 ---

@@ -2,7 +2,7 @@
 ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: AD DS Installation and Removal Wizard Page Descriptions
 description: Find out about the Active Directory Domain Services Configuration Wizard pages that you use to promote a server to a domain controller and to demote a server.
-author: iainfoulds
+author: meaghanlewis
 ms.author: mosagie
 manager: daveba
 ms.date: 04/10/2025
@@ -254,7 +254,7 @@ The `adprep.exe` tool is required to run in the following situations:
 
 - The `adprep /rodcprep` command must be run to add the first RODC to an existing forest. This command must be run by a member of the Enterprise Admins group. For this command to run successfully, there must be connectivity between the computer where you run the command and the infrastructure master for each application directory partition in the forest.
 
-For more information about `adprep.exe`, see [Adprep.exe integration](./What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep) and [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
+For more information about `adprep.exe`, see [Adprep.exe integration](./What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md) and [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
 ### Review Options
 

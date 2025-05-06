@@ -4,7 +4,7 @@ description: Reference article for the mode command, which displays system statu
 ms.topic: reference
 ms.assetid: b59b04f2-b41d-42df-b5be-19c3721445b1
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

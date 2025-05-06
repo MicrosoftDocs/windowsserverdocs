@@ -2,10 +2,10 @@
 description: "Learn more about: AD Forest Recovery - Resetting the computer account on the recovered DC"
 title: AD Forest Recovery - Resetting the computer account on the recovered DC
 ms.author: justinha
-author: iainfoulds
+author: justinha
 manager: daveba
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
 ---
 

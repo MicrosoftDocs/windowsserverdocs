@@ -4,7 +4,7 @@ description: Reference article for wdsutil get-autoadddevices, which displays al
 ms.topic: reference
 ms.assetid: 24b4b688-55b0-4bd9-a2f5-7ef4b3dfe2f2
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

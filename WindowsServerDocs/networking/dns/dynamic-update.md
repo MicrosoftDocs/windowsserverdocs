@@ -1,7 +1,7 @@
 ---
 title: Dynamic DNS Update in Windows and Windows Server
 description: Learn about dynamic DNS updates in Windows and Windows Server, including how client and server computers update their DNS names, how secure dynamic update works, and how to resolve name conflicts.
-ms.topic: conceptual
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/13/2025

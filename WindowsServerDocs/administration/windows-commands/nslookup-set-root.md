@@ -4,7 +4,7 @@ description: Reference article for the nslookup set root command, which changes 
 ms.topic: reference
 ms.assetid: 8ad5393c-d4fd-4594-8187-576b1dcde60a
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

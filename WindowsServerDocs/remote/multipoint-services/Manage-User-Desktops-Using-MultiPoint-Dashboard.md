@@ -3,7 +3,7 @@ title: Manage User Desktops Using MultiPoint Dashboard
 description: Provides an overview of the MultiPoint Dashboard
 ms.topic: article
 ms.assetid: eadfc544-4c13-4216-b0fd-89fbc659a80b
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016

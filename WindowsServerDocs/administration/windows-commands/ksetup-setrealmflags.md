@@ -4,7 +4,7 @@ description: Reference article for the ksetup setrealmflags command, which sets 
 ms.topic: reference
 ms.assetid: bcb2824e-fba7-4ebe-be62-e62b4fae5b17
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

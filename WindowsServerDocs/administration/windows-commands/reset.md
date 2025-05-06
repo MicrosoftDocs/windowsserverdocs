@@ -4,7 +4,7 @@ description: Reference article for the reset command, which resets DiskShadow.ex
 ms.topic: reference
 ms.assetid: afbdab44-199c-4e11-884f-e96804965c21
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -2,7 +2,7 @@
 title: Checklist Deploy DFS Namespaces
 description: This article describes how to configure and deploy DFS Namespaces.
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: checklist
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

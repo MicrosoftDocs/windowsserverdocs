@@ -2,10 +2,10 @@
 title: Configure Network Policies
 description: This topic provides an overview of network policy configuration for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: fe77655a-e2be-4949-92e1-aaaa215d86ea
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

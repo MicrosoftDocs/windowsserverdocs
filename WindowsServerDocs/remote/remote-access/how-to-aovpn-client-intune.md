@@ -1,10 +1,10 @@
 ---
 title: Deploy Always On VPN profile to Windows clients with Microsoft Intune
 description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Intune.
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.date:  03/14/2023
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ---
 
 # Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune

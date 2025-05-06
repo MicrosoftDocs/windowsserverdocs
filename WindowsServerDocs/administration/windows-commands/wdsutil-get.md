@@ -4,7 +4,7 @@ description: Reference article for wdsutil get command, which retrieves properti
 ms.topic: reference
 ms.assetid: fbd44c67-0670-4dfe-a1c0-2ab8abe327b5
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 08/19/2024
 ---

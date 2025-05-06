@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: article
 ms.assetid: eea0aca9-8d89-48fb-8068-fca40c90d34b
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Post-Deployment Steps for Network Controller

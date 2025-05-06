@@ -4,7 +4,7 @@ description: Reference article for the date command, which displays or sets the 
 ms.topic: reference
 ms.assetid: ce6700fb-32f9-4350-a1af-5aee61d4448c
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/26/2022
 ---

@@ -4,7 +4,7 @@ description: Documents account management modes for Windows Local Administrator 
 author: jay98014
 ms.author: justinha
 ms.date: 12/25/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Windows LAPS account management modes

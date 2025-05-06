@@ -4,7 +4,7 @@ description: Reference article for the ksetup dumpstate command, which displays 
 ms.topic: reference
 ms.assetid: 3ef2f7b8-97af-4f42-9542-cff324840637
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Provides hardware and performance requirements and recommendations 
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: 99a5c9c2-270f-4753-a28c-434882c03125
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

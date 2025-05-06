@@ -2,10 +2,10 @@
 title: Configure Remote RADIUS Server Groups
 description: This topic provides information on how to configure Remote RADIUS Server Groups in Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: ca125e57-249c-4d97-85d1-2929cbf871f1
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

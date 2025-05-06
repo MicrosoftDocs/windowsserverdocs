@@ -2,7 +2,7 @@
 title: Create a Quota
 description: This article describes how to create a quota based on a template
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

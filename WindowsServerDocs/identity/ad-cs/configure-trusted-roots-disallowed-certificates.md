@@ -2,7 +2,7 @@
 title: Configure trusted roots and disallowed certificates in Windows
 description: Guidance on how to configure individual software updates for automatic daily Root Certificate Updates, including certificate trust lists (CTLs)
 ms.topic: how-to 
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
 ms.date: 08/22/2023
 ---

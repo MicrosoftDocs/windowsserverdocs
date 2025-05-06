@@ -4,7 +4,7 @@ description: Reference article for the rsh command, which runs commands on remot
 ms.topic: reference
 ms.assetid: 9e3b2b29-208d-4257-8379-0b4738274146
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

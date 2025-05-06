@@ -4,7 +4,7 @@ description: Reference article for the bdehdcfg restart command, which tells bde
 ms.topic: reference
 ms.assetid: a98b76bb-36f1-4790-b337-7dc35f606bc6
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

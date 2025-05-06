@@ -2,9 +2,9 @@
 title: Host Compute Network (HCN) scenarios
 description: Sample showing how to use Host Compute Network Service API to create a Host Compute Network on the host that can be used to connect Virtual NICS to Virtual Machines or Containers.
 ms.author: roharwoo
-author: daschott
+author: robinharwood
 ms.date: 6/28/2022
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Common scenarios

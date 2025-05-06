@@ -4,7 +4,7 @@ description: Reference article for the logman update alert command, which update
 ms.topic: reference
 ms.assetid: ede94a76-931c-40ed-9fda-6766bed8ff72
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

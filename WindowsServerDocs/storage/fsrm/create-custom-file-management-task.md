@@ -2,7 +2,7 @@
 title: Create a Custom File Management Task
 description: This article describes how to create a custom file management task and custom tasks.
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

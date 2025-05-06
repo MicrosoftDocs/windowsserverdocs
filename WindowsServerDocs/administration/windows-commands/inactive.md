@@ -4,7 +4,7 @@ description: Reference article for the inactive command, which marks the system 
 ms.topic: reference
 ms.assetid: f4fb4695-4e66-4166-b4ab-2c86a4605580
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

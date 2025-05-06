@@ -1,8 +1,8 @@
 ---
 title: System Insights FAQ
 description: System Insights FAQ
-ms.topic: article
-author: gawatu
+ms.topic: faq
+author: robinharwood
 ms.author: roharwoo
 manager: mallikarjun.chadalapaka
 ms.date: 5/23/2018

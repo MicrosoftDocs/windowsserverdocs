@@ -4,7 +4,7 @@ description: Reference article for the ktmutil command, which starts the Kernel 
 ms.topic: reference
 ms.assetid: 53bc56df-f0e5-443b-ab20-bbf8b11d4a9a
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

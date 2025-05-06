@@ -1,10 +1,10 @@
 ---
 title: Anycast DNS overview
 description: This topic provides a brief overview of Anycast DNS
-ms.topic: article
+ms.topic: overview
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: roharwoo
-author: greg-lindsay
+author: robinharwood
 ms.date: 02/13/2023
 ---
 # Anycast DNS overview

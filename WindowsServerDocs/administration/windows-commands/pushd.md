@@ -4,7 +4,7 @@ description: Reference article for the pushd command, which stores the current d
 ms.topic: reference
 ms.assetid: 396bc545-0f41-473e-b0ac-76fbbb74d390
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

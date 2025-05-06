@@ -4,8 +4,8 @@ ms.assetid: 67d8a8d7-2fbd-4ed7-bb41-75769f942024
 title: Configure Performance Monitoring
 author: billmath
 manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ms.author: billmath
 ---
 

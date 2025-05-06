@@ -4,7 +4,7 @@ description: Reference article for the ftp lcd command, which changes the workin
 ms.topic: reference
 ms.assetid: 60a25808-6abb-408b-8373-0bbdcd0994b4
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

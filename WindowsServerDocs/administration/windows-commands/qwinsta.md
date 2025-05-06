@@ -4,7 +4,7 @@ description: Reference article for the qwinsta command, which displays informati
 ms.topic: reference
 ms.assetid: a793212a-7ecd-44cb-a77b-c5c2edb34979
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

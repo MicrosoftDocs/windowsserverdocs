@@ -4,7 +4,7 @@ description: Reference article for the mask command, which removes hardware shad
 ms.topic: reference
 ms.assetid: bf301474-d74a-44e7-9fad-c8a11e7ca3bd
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the ktpass command, which configures the serv
 ms.topic: reference
 ms.assetid: 47087676-311e-41f1-8414-199740d01444
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
