@@ -50,7 +50,7 @@ Here are some variables you should pay attention to in the output while troubles
   A common issue related to the count happens when the environment has an activated KMS host and enough clients, but the count doesn't increase beyond one. When this issue happens, it means the deployed client image wasn't configured correctly, so the systems don't have unique Client Machine IDs (CMIDs). To learn more, see:
 
   - [KMS client](#kms-client)
-  - [The KMS current count doesn't increase when you add new Windows Vista or Windows 7-based client computers to the network](https://learn.microsoft.com/troubleshoot/windows-client/licensing-and-activation/kms-current-count-not-increase)
+  - [The KMS current count doesn't increase when you add new Windows Vista or Windows 7-based client computers to the network](/troubleshoot/windows-client/licensing-and-activation/kms-current-count-not-increase)
   - [KMS Host Client Count not Increasing Due to Duplicate CMIDs](/archive/blogs/askcore/kms-host-client-count-not-increasing-due-to-duplicate-cmids)
 
   Another reason why the count might not be increasing is that there are too many KMS hosts in the environment and the count is distributed over all of them.
