@@ -124,23 +124,25 @@ Connect-MgGraph -Scopes 'Application.ReadWrite.All'
 $servicePrincipalId = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").Id
 $keyCredentials = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").KeyCredentials
 $certX509 = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($certBase64))
-$newKey = @(@{
+$newKey = [Microsoft.Graph.PowerShell.Models.MicrosoftGraphKeyCredential]@{
     CustomKeyIdentifier = $null
-    DisplayName = $certX509.Subject
+    DisplayName = "$env:COMPUTERNAME - $($certX509.Subject)"
     EndDateTime = $null
     Key = $certX509.GetRawCertData()
     KeyId = [guid]::NewGuid()
     StartDateTime = $null
     Type = "AsymmetricX509Cert"
     Usage = "Verify"
-    AdditionalProperties = $null
-})
+}
 $keyCredentials += $newKey
 Update-MgServicePrincipal -ServicePrincipalId $servicePrincipalId -KeyCredentials $keyCredentials
 ```
 
 > [!IMPORTANT]
 > This command needs to be run on all of the AD FS servers in your farm. Microsoft Entra multifactor authentication will fail on servers that haven't had the certificate set as the new credential against the Azure multifactor authentication Client.
+
+> [!IMPORTANT]
+> There is a bug in Microsoft.Graph PS module 2.27 which makes Update-MgServicePrincipal not work, downgrade to 2.26 or earlier.
 
 > [!NOTE]
 > 981f26a1-7f43-403b-a875-f8b09b8cd720 is the GUID for Azure multifactor authentication Client.
@@ -214,16 +216,15 @@ By default, when you configure AD FS with Microsoft Entra multifactor authentica
     $servicePrincipalId = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").Id
     $keyCredentials = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").KeyCredentials
     $certX509 = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($newcert))
-    $newKey = @(@{
+    $newKey =  [Microsoft.Graph.PowerShell.Models.MicrosoftGraphKeyCredential]@{
         CustomKeyIdentifier = $null
-        DisplayName = $certX509.Subject
+        DisplayName = "$env:COMPUTERNAME - $($certX509.Subject)"
         EndDateTime = $null
         Key = $certX509.GetRawCertData()
         KeyId = [guid]::NewGuid()
         StartDateTime = $null
         Type = "AsymmetricX509Cert"
         Usage = "Verify"
-        AdditionalProperties = $null
     })
     $keyCredentials += $newKey
     Update-MgServicePrincipal -ServicePrincipalId $servicePrincipalId -KeyCredentials $keyCredentials
@@ -231,29 +232,60 @@ By default, when you configure AD FS with Microsoft Entra multifactor authentica
 
     If your previous certificate is expired, restart the AD FS service to pick up the new certificate. You don't need to restart the AD FS service if you renewed a certificate before it expired.
 
+    > [!IMPORTANT]
+    > This command needs to be run on all of the AD FS servers in your farm. Microsoft Entra multifactor authentication will fail on servers that haven't had the certificate set as the new credential against the Azure multifactor authentication Client.
+
+    > [!IMPORTANT]
+    > There is a bug in Microsoft.Graph PS module 2.27 which makes Update-MgServicePrincipal not work, downgrade to 2.26 or earlier.
+
+    > [!NOTE]
+    > 981f26a1-7f43-403b-a875-f8b09b8cd720 is the GUID for Azure multifactor authentication Client.
+
 1. Verify that the new certificate(s) is used for Microsoft Entra multifactor authentication.
 
-After the new certificate(s) become valid, AD FS will pick them up and use each respective certificate for Microsoft Entra multifactor authentication within a few hours to one day. After AD FS uses the new certificates, on each server you'll see an event logged in the AD FS Admin event log with the following information:
+    After the new certificate(s) become valid, AD FS will pick them up and use each respective certificate for Microsoft Entra multifactor authentication within a few hours to one day. After AD FS uses the new certificates, on each server you'll see an event logged in the AD FS Admin event log with the following information:
 
-```Output
-Log Name:      AD FS/Admin
-Source:        AD FS
-Date:          2/27/2018 7:33:31 PM
-Event ID:      547
-Task Category: None
-Level:         Information
-Keywords:      AD FS
-User:          DOMAIN\adfssvc
-Computer:      ADFS.domain.contoso.com
-Description:
-The tenant certificate for Azure MFA has been renewed.
+    ```Output
+    Log Name:      AD FS/Admin
+    Source:        AD FS
+    Date:          2/27/2018 7:33:31 PM
+    Event ID:      547
+    Task Category: None
+    Level:         Information
+    Keywords:      AD FS
+    User:          DOMAIN\adfssvc
+    Computer:      ADFS.domain.contoso.com
+    Description:
+    The tenant certificate for Azure MFA has been renewed.
 
-TenantId: contoso.onmicrosoft.com.
-Old thumbprint: 7CC103D60967318A11D8C51C289EF85214D9FC63.
-Old expiration date: 9/15/2019 9:43:17 PM.
-New thumbprint: 8110D7415744C9D4D5A4A6309499F7B48B5F3CCF.
-New expiration date: 2/27/2020 2:16:07 AM.
-```
+    TenantId: contoso.onmicrosoft.com.
+    Old thumbprint: 7CC103D60967318A11D8C51C289EF85214D9FC63.
+    Old expiration date: 9/15/2019 9:43:17 PM.
+    New thumbprint: 8110D7415744C9D4D5A4A6309499F7B48B5F3CCF.
+    New expiration date: 2/27/2020 2:16:07 AM.
+    ```
+
+1. Remove expired or unused certificates
+
+    After the new certificates are verified above, they can be removed from the serviceprincipals keyCredentials.
+    Fetch the current serviceprincipal from Entra and determine which credentials should be kept.
+    ```powershell
+    Connect-MgGraph -Scopes 'Application.ReadWrite.All'
+    $sp = Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'"
+    $servicePrincipalId = $sp.Id
+    $keyCredentials = sp.KeyCredentials
+    $newKeyCredentials = $keyCredentials[0,1,4,5] # index of whichever credentials should be kept
+    Update-MgServicePrincipal -ServicePrincipalId $servicePrincipalId -KeyCredentials $newKeyCredentials
+    ```
+    
+    > [!IMPORTANT]
+    > This command needs to be run only once.
+
+    > [!IMPORTANT]
+    > There is a bug in Microsoft.Graph PS module 2.27 which makes Update-MgServicePrincipal not work, downgrade to 2.26 or earlier.
+
+    > [!NOTE]
+    > 981f26a1-7f43-403b-a875-f8b09b8cd720 is the GUID for Azure multifactor authentication Client.
 
 ## Customize the AD FS web page to guide users to register MFA verification methods
 
