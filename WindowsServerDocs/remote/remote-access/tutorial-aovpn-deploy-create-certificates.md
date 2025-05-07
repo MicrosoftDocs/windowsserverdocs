@@ -8,7 +8,7 @@ author: dknappettmsft
 ms.date:  03/14/2023
 ---
 
-# Tutorial: Deploy Always On VPN - Configure Certificate Authority templates
+# Tutorial: Configure Certificate Authority templates for Always On VPN
 
 - [**Previous:** 1 - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md)
 - [**Next:** 3 - Configure Always On VPN profile for Windows 10+ clients](tutorial-aovpn-deploy-configure-client.md)
