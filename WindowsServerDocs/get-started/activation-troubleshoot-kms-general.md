@@ -134,19 +134,19 @@ The Info section of event ID 12289 provides the following information:
 
 KMS client server activation model works on renewal basis, requiring client devices to connect with KMS host server every 180 days to renew their activation. By default, KMS client devices attempts to renew their activation every seven days. Once a client's activation is renewed, the activation validity interval resets and begins again.  
 
-For any reason, if renewal requirement is not met, users are prompted with a toast notification 30 days prior to 180 days for renewal. Renewal notification will display in the form of toast as well as appear in the activation pane:
+For any reason, if the renewal requirement isn't met, you're prompted with a toast notification 30 days prior to 180 days for renewal. The renewal notification will display in the form of toast as well as appear in the activation pane.
 
 #### Troubleshoot KMS client renewal requirements
 
-- You receive this notification ONLY if you are on a corporate owned/managed device, if this is incorrect, please obtain a Retail key from MS Store and install it. [Buy and Download Windows 11 Pro | Microsoft](https://www.microsoft.com/en-us/d/windows-11-pro/dg7gmgf0d8h4)
+- You'll receive this notification *only* if you're on a corporate-owned or managed device. If this is incorrect, you can obtain a Retail key from [Buy and Download Windows 11 Pro](https://www.microsoft.com/d/windows-11-pro/dg7gmgf0d8h4).
 
 - If you are using a corporate-owned or managed device, please engage with your IT administrator. Here are some possible reasons you might be receiving this message:
 
-  - KMS host is decommissioned: The IT administrator must configure KMS client version with the KMS Server. Refer to [Activate using Key Management Service | Microsoft Learn](/windows/deployment/volume-activation/activate-using-key-management-service-vamt). 
+  - **KMS host is decommissioned**: The IT administrator must configure KMS client version with the KMS Server. Refer to [Activate using Key Management Service](/windows/deployment/volume-activation/activate-using-key-management-service-vamt). 
   
-  - Listening on Port: Communication with KMS uses anonymous RPC. By default, clients use TCP port 1688 to connect to the KMS host. Ensure this port is open between your KMS clients and the KMS host. Refer to [Guidelines for troubleshooting KMS | Microsoft Learn](/windows-server/get-started/activation-troubleshoot-kms-general)
+  - **Listening on Port**: Communication with KMS uses anonymous RPC. By default, clients use TCP port 1688 to connect to the KMS host. Ensure this port is open between your KMS clients and the KMS host through the Windows Defender Firewall with Advanced Security.
   
-  - Verify DNS Configuration: By default, the KMS clients use the automatic discovery process to query DNS for list of servers. Refer to [Guidelines for troubleshooting DNS-related activation issues | Microsoft Learn.](/windows-server/get-started/common-troubleshooting-procedures-kms-dns) 
+  - **Verify DNS Configuration**: By default, the KMS clients use the automatic discovery process to query DNS for a list of servers. Refer to [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns).
   
 ## What does support ask for?
 
