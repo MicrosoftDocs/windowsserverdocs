@@ -83,10 +83,10 @@ If you're troubleshooting a client and can't find a corresponding event ID 12290
 
   - The port could also be blocked in other places within the environment, including on the KMS host system itself. By default, the KMS host has a firewall exception for KMS, but this exception isn't automatically enabled. To add this exception, run the following command in an elevated PowerShell window:
 
-  ```powershell
-  New-NetFirewallRule -DisplayName "KMS Host Activation" -Direction Inbound -Protocol TCP -LocalPort 1688 -Action Allow
-  New-NetFirewallRule -DisplayName "KMS Host RPC" -Direction Inbound -Protocol TCP -LocalPort 135 -Action Allow
-  ```
+    ```powershell
+    New-NetFirewallRule -DisplayName "KMS Host Activation" -Direction Inbound -Protocol TCP -LocalPort 1688 -Action Allow
+    New-NetFirewallRule -DisplayName "KMS Host RPC" -Direction Inbound -Protocol TCP -LocalPort 135 -Action Allow
+    ```
 
 - The event log is full.
 
