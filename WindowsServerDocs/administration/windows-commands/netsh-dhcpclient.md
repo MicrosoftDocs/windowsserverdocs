@@ -1,5 +1,5 @@
 ---
-title: netsh dump
+title: netsh dhcpclient
 description: Reference article for the netsh dhcpclient command which configures and manages the DHCP client settings.
 ms.topic: reference
 ms.author: alalve
