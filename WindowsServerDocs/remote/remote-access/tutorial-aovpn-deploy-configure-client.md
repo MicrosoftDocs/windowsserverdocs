@@ -7,7 +7,7 @@ ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 ms.author: daknappe
 author: dknappettmsft
 ---
-# Tutorial: Deploy Always On VPN - Configure Always On VPN profile for Windows 10+ clients
+# Tutorial: Configure an Always On VPN profile for Windows client devices
 
 - [**Previous:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
