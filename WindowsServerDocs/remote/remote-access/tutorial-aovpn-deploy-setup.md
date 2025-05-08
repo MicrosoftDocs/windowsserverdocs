@@ -30,9 +30,9 @@ To learn more about Always On VPN, including supported integrations, security an
 
 To complete the steps in this tutorial, you need to meet the following prerequisites:
 
-- Three physical computers or virtual machines (VMs) with a supported version Windows Server installed on them. These Windows Server computers are the domain controller, NPS server, and VPN server.
+- Three servers (physical or virtual) with a supported version Windows Server installed on them. These servers are the domain controller, NPS server, and VPN server.
 
-- The computer you use for the NPS server needs two physical network adapters installed: one to connect to the internet, and one to connect to the network where the domain controller is located.
+- The server you use for the NPS server needs two physical network adapters installed: one to connect to the internet, and one to connect to the network where the domain controller is located.
 
 - A user account on all machines that is a member of the local **Administrators** security group, or equivalent.
 
@@ -41,7 +41,7 @@ To complete the steps in this tutorial, you need to meet the following prerequis
 
 ## Create the domain controller
 
-1. On the computer you want to be the domain controller, install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview). For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#to-install-ad-ds-by-using-server-manager).
+1. On the server you want to be the domain controller, install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview). For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#to-install-ad-ds-by-using-server-manager).
 
 1. Promote the Windows Server to domain controller. For this tutorial, you create a new forest and the domain to that new forest. For detailed information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#dns-options).
 
@@ -91,7 +91,7 @@ In this section, you create a Group Policy on the domain controller so that doma
 
 ## Create the NPS server
 
-1. On the computer you want to be the NPS server, install the [Network Policy and Access Services (NPS) role](/windows-server/networking/technologies/nps/nps-top). For detailed information on how to install NPS, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
+1. On the server you want to be the NPS server, install the [Network Policy and Access Services (NPS) role](/windows-server/networking/technologies/nps/nps-top). For detailed information on how to install NPS, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
 1. Register the NPS Server in Active Directory. For information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
 
@@ -111,13 +111,13 @@ In this section, you create a Group Policy on the domain controller so that doma
 
    1. Select **Object Types**, select the **Computers** check box, then select **OK**.
 
-   1. In **Enter the object names to select**, enter the computer name of the NPS server. Select **OK**.
+   1. In **Enter the object names to select**, enter the hostname of the NPS server. Select **OK**.
 
    1. Close Active Directory Users and Computers.
 
 ## Create the VPN server
 
-1. For the computer that runs the VPN server, ensure that the machine has two physical network adapters installed: one to connect to the internet, and one to connect to the network where the domain controller is located.
+1. For the server that runs the VPN server, ensure that the machine has two physical network adapters installed: one to connect to the internet, and one to connect to the network where the domain controller is located.
 
 1. Identify which network adapter connects to the internet and which network adapter connects to the domain. Configure the network adapter facing the internet with a public IP address, while the adapter facing the intranet can use an IP address from the local network.
 
@@ -141,7 +141,7 @@ In this section, you create a Group Policy on the domain controller so that doma
 
     1. Select **Object Types**, select the **Computers** check box, then select **OK**.
 
-    1. In **Enter the object names to select**, enter the computer name of the VPN server. Select **OK**.
+    1. In **Enter the object names to select**, enter the hostname of the VPN server. Select **OK**.
 
     1. Close Active Directory Users and Computers.
 
@@ -281,7 +281,7 @@ In this section, you create a Group Policy on the domain controller so that doma
 
 ## Next step
 
-Now you created your sample infrastructure, you're ready to being configuring your Certificate Authority.
+Now you created your sample infrastructure, you're ready to begin configuring your Certificate Authority.
 
 > [!div class="nextstepaction"]
 > [Tutorial: Configure Certificate Authority templates for Always On VPN](tutorial-aovpn-deploy-create-certificates.md)
