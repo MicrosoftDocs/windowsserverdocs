@@ -6,7 +6,7 @@ author: meaghanlewis
 ms.author: mosagie
 ms.date: 05/06/2025
 ---
-## Migrate to DHCP failover
+# Migrate to DHCP failover
 
 This guide provides guidance for migrating your existing DHCP server deployment to a DHCP failover configuration in Windows Server. Whether you're transitioning from a split-scope or clustered DHCP setup, this document outlines the necessary steps to ensure a smooth migration.
 
