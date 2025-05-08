@@ -12,19 +12,19 @@ This guide provides guidance for migrating your existing DHCP server deployment 
 
 ## Prerequisites
 
-- The DCHP Server role is installed on both DHCP servers used to configure the failover relationship. For more information on how to do this, follow the steps in [Install and configure DHCP server](/windows-server/networking/technologies/dhcp/quickstart-install-configure-dhcp-server).
+- The DCHP Server role is installed on both DHCP servers used to configure the failover relationship. To install the DHCP server role, follow the steps in [Install and configure DHCP server](/windows-server/networking/technologies/dhcp/quickstart-install-configure-dhcp-server).
 - An existing DHCP server that is set up and running.
 
 ## Export DHCP settings and leases
 
-If you are using clustered DHCP, you only need to export DHCP settings from the currently active DHCP server. Perform the following procedure for both the currently active DHCP server, and the backup server only if you're using a split-scope design and need to replicate DHCP leases from both DHCP servers.
+If you're using clustered DHCP, you only need to export DHCP settings from the currently active DHCP server. Perform the following procedure for both the currently active DHCP server, and the backup server only if you're using a split-scope design and need to replicate DHCP leases from both DHCP servers.
 
 > [!IMPORTANT]
-> You can't import DHCP leases for the same scope from two different DHCP servers without first consolidating the exported files into a single file.
+> You can't import DHCP leases for the same scope from two different DHCP servers. You must consolidate the exported files into a single file.
 
 ### Export DHCP settings and leases
 
-1. On the DHCP server that'll be used to initially configure DHCP failover, **dhcp-failover-server.contoso.com**, open an elevated Windows PowerShell prompt, type the following commands, and then press ENTER:
+1. On the DHCP server that will be used to initially configure DHCP failover, **dhcp-failover-server.contoso.com**, open an elevated Windows PowerShell prompt, type the following commands, and then press ENTER:
 
     ```powershell
         mkdir C:\export
@@ -34,7 +34,7 @@ If you are using clustered DHCP, you only need to export DHCP settings from the 
 
     This example exports all of the DHCP server, DHCPv4 and DHCPv6, configurations including scopes present on the DHCP server service to the specified export file in XML file format.
 
-1. If needed, perform the export step again specifying a **Computername** of **dhcp-server-2.contoso.com**, and exporting to the file **C:\exportdir\dhcpexport2.xml**. When you're finished, you'll have one XML file for every DHCP server that has leases you wish to import to **dhcp-failover-server.contoso.com**.
+1. If needed, perform the export step again specifying a computer name of **dhcp-server-2.contoso.com**, and exporting to the file **C:\exportdir\dhcpexport2.xml**. When you're finished, you have one XML file for every DHCP server that has leases you wish to import to **dhcp-failover-server.contoso.com**.
 
 1. If you have multiple files that contain leases for the same scope ID, these files must be consolidated before importing data to **dhcp-failover-server.contoso.com**.
 
@@ -52,7 +52,7 @@ Before you perform this procedure, verify that you have consolidated and saved l
 
     This example imports the configuration data in the specified file onto the DHCP failover server service named **dhcp-failover-server.contoso.com**. The file can contain DHCPv4 and DHCPv6 configuration data.
 
-By default, all scopes are imported. If a scope already exists on the destination server it won't be imported. To specify only some scopes for import, use the **–ScopeId** parameter. For example:
+By default, all scopes are imported. A scope won't be imported if it already exists on the destination server. To specify only some scopes for import, use the **–ScopeId** parameter. For example:
 
 ```powershell
 Import-DhcpServer -ComputerName "dhcp-failover-server.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ScopeId 10.10.10.0,10.20.20.0
