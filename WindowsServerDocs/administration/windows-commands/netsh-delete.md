@@ -1,0 +1,32 @@
+---
+title: netsh delete
+description: Reference article for the netsh delete command which removes a helper dll.
+ms.topic: reference
+ms.author: alalve
+author: xelu86
+ms.date: 05/08/2025
+---
+
+# netsh delete
+
+The `netsh delete` command is used to remove helper Dynamic Link Libraries (DLL) allowing for more specialized network configurations.
+
+## Syntax
+
+```
+netsh delete helper [file]
+```
+
+## Parameters
+
+| Command | Description |
+|--|--|
+| helper | Calls the helper DLL file. |
+
+## Example
+
+To remove a helper DLL located at "C:\Helpers\HelperDLL.dll", run the following command:
+
+```cmd
+netsh delete helper C:\Helpers\HelperDLL.dll
+```
