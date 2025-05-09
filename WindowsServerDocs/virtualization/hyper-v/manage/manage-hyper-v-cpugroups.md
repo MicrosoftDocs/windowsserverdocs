@@ -20,7 +20,7 @@ This article describes Hyper-V resource and isolation controls for virtual machi
 
 ## Managing CPU Groups
 
-CPU groups are managed through the Hyper-V Host Compute Service, or HCS. A great description of the HCS, its genesis, links to the HCS APIs, and more is available on the Microsoft Virtualization team's blog in the posting [Introducing the Host Compute Service (HCS)](https://blogs.technet.microsoft.com/virtualization/2017/01/27/introducing-the-host-compute-service-hcs/).
+CPU groups are managed through the Hyper-V Host Compute Service, or HCS. A great description of the HCS, its genesis, links to the HCS APIs, and more is available on the Microsoft Virtualization team's blog in the posting [Introducing the Host Compute Service (HCS)](https://techcommunity.microsoft.com/blog/containers/introducing-the-host-compute-service-hcs/382332).
 
 >[!NOTE]
 >Only the HCS may be used to create and manage CPU groups; the Hyper-V Manager applet, WMI and PowerShell management interfaces don't support CPU groups.
