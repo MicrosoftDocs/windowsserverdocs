@@ -12827,7 +12827,7 @@
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/manage-cluster-quorum.md",
-      "redirect_url": "/windows-server/failover-clustering/recover-failover-cluster-without-quorum",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
       "redirect_document_id": false
     },
     {
