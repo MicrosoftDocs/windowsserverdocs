@@ -12,24 +12,26 @@ ms.date: 05/08/2025
 
 Use the following procedures to migrate an existing DHCP failover deployment on an earlier version of Windows Server to a newer version of Windows Server.
 
-For this article, consider the scenario where the DHCP failover deployment is migrated from Windows Server 2022 to Windows Server 2025.
-
-| Host name   | Details       |
-|-------------|---------------|
-| DHCP-2022-1 | The DHCP server that will initially remain online with active scopes while a new DHCP failover partner server running Windows Server 2015 is made available          |
-| DHCP-2022-2 | The initial DHCP failover partner server for DHCP-2022-1. DHCP-2022-2 is removed from the DHCP failover relationship at the beginning of the procedure and taken offline.        |
-| DHCP-2025-1 | The DHCP server running Windows Server 2025 that will replace  DHCP-2022-1.         |
-| DHCP-2025-2 | The DHCP server running Windows Server 2025 that will replace  DHCP-2022-2.        |
-
 ## Prerequisites
 
 - At least Windows Server 2012 installed
 
 - The DHCP server role is installed
 
-- An existing failover relationships exists
+- An existing failover relationship exists
 
 - Membership in the **Administrators** group, or equivalent, is the minimum required to complete these procedures.
+
+## Server details
+
+The steps in this guide are valid for Windows Server versions starting from Windows Server 2012.
+
+For this guide, consider the scenario where the DHCP failover deployment is migrated from Windows Server 2022 to Windows Server 2025. The following servers will be used as an example:
+
+- **DHCP-2022-1**: The DHCP server that's online with active scopes while a new DHCP failover partner server running Windows Server 2025 is being configured.
+- **DHCP-2022-2**: The initial DHCP failover partner server for DHCP-2022-1. DHCP-2022-2 is removed from the DHCP failover relationship at the beginning of the procedure and taken offline.
+- **DHCP-2025-1**: The DHCP server running Windows Server 2025 that replaces DHCP-2022-1.
+- **DHCP-2025-2**: The DHCP server running Windows Server 2025 that replaces DHCP-2022-2.
 
 ## Delete the failover relationship between DHCP-2022-1 and DHCP-2022-2
 
@@ -38,7 +40,7 @@ You can delete the failover relationship using PowerShell, or the DHCP console.
 > [!WARNING]
 > Deleting a failover relationship removes all scopes that are members of the failover relationship from the partner DHCP server.
 
-### [Powershell](#tab/powershell)
+### [PowerShell](#tab/powershell)
 
 1. At an elevated Windows PowerShell prompt on DHCP-2022-1, type the following command, and press ENTER:
 
@@ -54,7 +56,7 @@ You can delete the failover relationship using PowerShell, or the DHCP console.
     Get-DhcpServerv4Failover
     ```
 
-    Verify that the DHCP failover relationship name is not displayed in the command output, indicating that it has been successfully deleted.
+    Verify that the DHCP failover relationship name isn't displayed in the command output, indicating that it has been successfully deleted.
 
 > [!NOTE]
 > DHCP scopes from the failover relationship are removed from the partner DHCP server. Scopes remain on the server where you entered the Remove-DhcpServerv4Failover command (DHCP-2022-1 in this example).
@@ -94,11 +96,11 @@ Follow the steps to export DHCP settings from DHCP-2022-1.
     ```
 
 > [!IMPORTANT]
-> Note that DHCP configuration settings are exported from a remote DHCP server (DHCP-2022-1) to a file on the local server (DHCP-2025-1 and DHCP-2025-1). Alternatively, you can export to a file on DHCP-2022-1, and then copy the settings file over the network to DHCP-2025-2 and DHCP-2025-1.
+> DHCP configuration settings are exported from a remote DHCP server (DHCP-2022-1) to a file on the local server (DHCP-2025-1 and DHCP-2025-1). Alternatively, you can export to a file on DHCP-2022-1, and then copy the settings file over the network to DHCP-2025-2 and DHCP-2025-1.
 
 ## Import DHCP settings
 
-The following procedure assumes DHCP settings are saved in the **C:\\export\\DHCP-2022-1exp.xml** file on a DHCP server with a host name of **DHCP-2025-1**. Replace the file and host names with names used in your environment. Do not repeat this procedure on DHCP-2025-2.
+The following procedure assumes DHCP settings are saved in the **C:\\export\\DHCP-2022-1exp.xml** file on a DHCP server with a host name of **DHCP-2025-1**. Replace the file and host names with names used in your environment. Don't repeat this procedure on DHCP-2025-2.
 
 #### Import DHCP settings and leases to new server
 
@@ -110,7 +112,7 @@ Follow the steps to import DHCP settings and leases to DHCP-2025-1.
     Import-DhcpServer –ComputerName DHCP-2025-1 –File C:\export\DHCP-2022-1exp.xml -BackupPath C:\backup\ -ServerConfigOnly -Verbose -Force
     ```
 
-This command imports only the server-level configuration of DHCP-2022-1 to DHCP-2025-1. Server-level settings include the following:
+This command imports only the server-level configuration of DHCP-2022-1 to DHCP-2025-1. Server-level settings include:
 
 - Custom vendor classes and user classes
 
@@ -127,7 +129,7 @@ This command imports only the server-level configuration of DHCP-2022-1 to DHCP-
 These server-level settings must also be imported to the new DHCP failover partner server (DHCP-2025-2) with the same procedure, also provided below.
 
 > [!NOTE]
-> The **–BackupPath** parameter is used to specify a path where the current DHCP server’s database is backed up prior to making any configuration changes as part of the import operation. To roll back the import operation, use the [Restore-DhcpServer](/powershell/module/dhcpserver/restore-dhcpserver) cmdlet, and specify **C:\backup** for the value of the **-Path** parameter.</A>.
+> The **–BackupPath** parameter is used to specify a path where the current DHCP server’s database is backed up prior to making any configuration changes as part of the import operation. To roll back the import operation, use the [Restore-DhcpServer](/powershell/module/dhcpserver/restore-dhcpserver) cmdlet, and specify **C:\backup** for the value of the **-Path** parameter.
 
 > [!IMPORTANT]
 > Verify that options and settings on DHCP-2025-1 are correct before proceeding.
@@ -168,7 +170,7 @@ Delete the DHCP failover relationship on DHCP-2025-1.
     Get-DhcpServerv4Failover
     ```
 
-    Verify that the DHCP failover relationship name is not displayed in the command output, indicating that it has been successfully deleted.
+    Verify that the DHCP failover relationship name is not displayed in the command output, indicating that it's been successfully deleted.
 
 >[!NOTE]
 > DHCP scopes added to the failover relationship ARE removed from the partner DHCP server. Scopes remain on the server where you entered the Remove-DhcpServerv4Failover command (DHCP-2025-1 in this procedure).
