@@ -44,7 +44,7 @@ Before you perform this procedure, verify that you have consolidated and saved l
 
 ### Import DHCP settings and leases
 
-1. At an elevated Windows PowerShell prompt, type the following commands and press ENTER:
+- At an elevated Windows PowerShell prompt, type the following commands and press ENTER:
 
     ```powershell
     Import-DhcpServer -ComputerName "dhcp-failover-server.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\"
@@ -69,7 +69,7 @@ Use the following steps to import server-level settings from **dhcp-server.conto
 
 ### Import server level settings
 
-1. At an elevated Windows PowerShell prompt on the failover partner server, type the following commands and press ENTER:
+- At an elevated Windows PowerShell prompt on the failover partner server, type the following commands and press ENTER:
 
     ```powershell
     mkdir C:\dhcpbackup\
