@@ -4,7 +4,7 @@ description: Learn more about multi-factor authentication and external authentic
 title: Multi-factor authentication and external authentication providers customization
 ms.topic: article
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 ms.date: 04/08/2025
 ---
 

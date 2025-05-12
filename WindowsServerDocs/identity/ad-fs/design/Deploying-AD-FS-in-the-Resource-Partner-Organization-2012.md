@@ -3,7 +3,7 @@ description: "Learn more about: Deploying AD FS in the Resource Partner Organiza
 ms.assetid: 39acccd9-0402-49ca-8ce1-b239e1e7e455
 title: Deploying AD FS in the Resource Partner Organization
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: concept-article

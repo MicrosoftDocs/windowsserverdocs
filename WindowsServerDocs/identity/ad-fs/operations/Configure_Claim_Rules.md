@@ -3,7 +3,7 @@ description: "Learn more about: Configure Claim Rules"
 ms.assetid: 20d48afc-2623-43e9-8ed9-aeb9a0505630
 title: Configure Claims Rules in AD FS
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

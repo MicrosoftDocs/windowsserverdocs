@@ -3,7 +3,7 @@ description: "Learn more about: Walkthrough: Workplace Join with an iOS Device"
 ms.assetid: 299e4fb9-8f1a-4275-ad7d-dad4f1594657
 title: Walkthrough - Workplace Join with an iOS Device
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

@@ -3,7 +3,7 @@ description: "Learn more about: AD FS Legacy Design Guide in Windows Server"
 ms.assetid: bb16e39d-566d-436c-b957-394c06d556db
 title: AD FS Design Guide in Windows Server 2012
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

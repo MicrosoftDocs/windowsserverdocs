@@ -2,7 +2,7 @@
 title: AD FS Troubleshooting - Microsoft Entra Connect Health Data
 description: Learn how to troubleshoot data freshness from the Microsoft Entra Connect Health agent for Active Directory Federation Services.
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 10/14/2024
 ms.topic: troubleshooting-general

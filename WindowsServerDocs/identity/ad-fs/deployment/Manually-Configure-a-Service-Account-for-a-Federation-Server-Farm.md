@@ -6,7 +6,7 @@ author: billmath
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article
-ms.author: billmath
+ms.author: roharwoo
 ---
 
 # Manually Configure a Service Account for a Federation Server Farm

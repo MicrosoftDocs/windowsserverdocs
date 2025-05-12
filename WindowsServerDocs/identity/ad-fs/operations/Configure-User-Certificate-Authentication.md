@@ -3,7 +3,7 @@ description: Learn how to enable and troubleshoot user certificate authenticatio
 ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: how-to

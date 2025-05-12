@@ -3,7 +3,7 @@ description: "Learn more about: When to Use a Send LDAP Attributes as Claims Rul
 ms.assetid: 606f4196-b579-4806-a462-3abd4d93e87c
 title: When to Use a Send LDAP Attributes as Claims Rule
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: concept-article

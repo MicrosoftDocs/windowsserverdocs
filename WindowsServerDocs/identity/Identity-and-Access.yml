@@ -8,7 +8,7 @@ metadata:
   description: Access and Identity technologies enable secure Active Directory environments on-premises and in cloud-only and hybrid deployments where some applications and services are hosted in the cloud and others are hosted on premises.
   ms.topic: landing-page # Required
   author: billmath 
-  ms.author: billmath
+  ms.author: roharwoo
   ms.date: 5/18/2020 
   ms.service: windows-server
 

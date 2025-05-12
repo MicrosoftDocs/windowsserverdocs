@@ -3,7 +3,7 @@ description: "Learn more about: Set up the lab environment for AD FS in Windows 
 ms.assetid: 6b38480e-5b1c-49f0-9d46-8cf22f70f0d2
 title: Set up the lab environment for AD FS in Windows Server 2012 R2
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: how-to

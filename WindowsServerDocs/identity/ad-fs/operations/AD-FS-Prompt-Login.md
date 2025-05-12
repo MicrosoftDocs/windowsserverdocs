@@ -2,7 +2,7 @@
 title: AD FS prompt=login
 description: Learn about the native support for the prompt=login parameter that is available in AD FS.
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

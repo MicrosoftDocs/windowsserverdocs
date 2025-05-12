@@ -3,7 +3,7 @@ description: "Learn more about: Provide Your Active Directory Users Access to th
 ms.assetid: 2d62386c-b466-4a54-b6fa-5d16cda120d8
 title: Provide Your Active Directory Users Access to the Applications and Services of Other Organizations
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

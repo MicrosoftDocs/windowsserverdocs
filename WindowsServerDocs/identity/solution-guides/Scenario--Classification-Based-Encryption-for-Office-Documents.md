@@ -3,7 +3,7 @@ description: "Learn more about: Scenario: Classification-Based Encryption for Of
 ms.assetid: 73542e1c-53ef-4ddb-89b1-bc563b2bfb49
 title: Scenario Classification-Based Encryption for Office Documents
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: article

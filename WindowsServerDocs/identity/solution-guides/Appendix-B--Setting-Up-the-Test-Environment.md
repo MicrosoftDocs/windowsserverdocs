@@ -3,7 +3,7 @@ description: "Learn more about: Appendix B: Setting Up the Test Environment"
 ms.assetid: 82918181-525d-4e93-af96-957dac6aedb6
 title: Appendix B Setting Up the Test Environment
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: article

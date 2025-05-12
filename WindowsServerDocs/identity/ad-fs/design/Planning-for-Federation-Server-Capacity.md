@@ -3,7 +3,7 @@ description: "Learn more about: Planning for Federation Server Capacity"
 ms.assetid: 7013fc21-9ced-4f9d-9588-cb04d6d60924
 title: Planning for Federation Server Capacity
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: concept-article

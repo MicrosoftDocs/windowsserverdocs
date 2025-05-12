@@ -3,7 +3,7 @@ description: "Learn more about: Prepare Client Computers in the Account Partner"
 ms.assetid: cea6011d-3753-4b95-aaa5-38d4e97d6e42
 title: Prepare Client Computers in the Account Partner
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

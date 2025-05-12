@@ -4,7 +4,7 @@ title: Active Directory Federation Services and certificate Key Specification pr
 author: billmath
 ms.date: 04/08/2025
 ms.topic: article
-ms.author: billmath
+ms.author: roharwoo
 ---
 
 # AD FS and certificate KeySpec property information

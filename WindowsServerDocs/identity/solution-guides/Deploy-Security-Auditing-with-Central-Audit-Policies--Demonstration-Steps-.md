@@ -3,7 +3,7 @@ description: "Learn more about: Deploy Security Auditing with Central Audit Poli
 ms.assetid: 22347a94-aeea-44b4-85fb-af2c968f432a
 title: Deploy Security Auditing with Central Audit Policies (Demonstration Steps)
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: how-to

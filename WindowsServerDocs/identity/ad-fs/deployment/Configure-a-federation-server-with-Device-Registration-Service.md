@@ -3,7 +3,7 @@ description: "Learn more about: Configure a federation server with Device Regist
 ms.assetid: fdd1c1fd-55aa-4eb8-ae84-53f811de042c
 title: Configure a federation server with Device Registration Service
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: how-to

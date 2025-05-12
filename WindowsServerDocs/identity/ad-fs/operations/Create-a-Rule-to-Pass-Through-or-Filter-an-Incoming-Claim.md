@@ -3,7 +3,7 @@ description: "Learn more about: Create a Rule to Pass Through or Filter an Incom
 ms.assetid: 6127963f-71b2-4d8f-8b53-7c525bf06521
 title: Create a Rule to Pass Through or Filter an Incoming Claim
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: how-to

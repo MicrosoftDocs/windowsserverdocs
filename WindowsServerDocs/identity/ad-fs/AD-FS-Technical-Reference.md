@@ -3,7 +3,7 @@ description: "Learn more about: AD FS Technical Reference"
 ms.assetid: e2c940f5-4b1f-457a-bc71-dcced0c752f7
 title: AD FS Technical Reference
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

@@ -2,7 +2,7 @@
 title: AD FS Troubleshooting - Users Can't Sign in by Using AD FS from an External Network
 description: Learn how to troubleshoot various aspects of Active Directory Federation Services (AD FS) sign-in from an extranet.
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 10/14/2024
 ms.topic: troubleshooting-general

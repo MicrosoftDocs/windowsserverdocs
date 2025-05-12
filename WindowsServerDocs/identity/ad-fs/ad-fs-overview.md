@@ -3,7 +3,7 @@ description: "Learn more about: AD FS Overview"
 ms.assetid: 5007a619-ef57-4636-9aa9-93b0f02be1fc
 title: Active Directory Federation Services Overview
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: concept-article

@@ -2,7 +2,7 @@
 title: AD FS Troubleshooting - AD FS Endpoints
 description: This article describes how to troubleshoot Active Directory Federation Services (AD FS) endpoints.
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 10/14/2024
 ms.topic: troubleshooting-general

@@ -6,7 +6,7 @@ manager: femila
 ms.date: 05/24/2024
 ms.topic: upgrade-and-migration-article
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
-ms.author: billmath
+ms.author: roharwoo
 ---
 
 # Upgrade to AD FS in Windows Server 2016 with SQL Server

@@ -6,7 +6,7 @@ author: billmath
 manager: femila
 ms.date: 02/13/2024
 ms.topic: how-to
-ms.author: billmath
+ms.author: roharwoo
 ---
 
 # Add a Host (A) Resource Record to Corporate DNS for a Federation Server

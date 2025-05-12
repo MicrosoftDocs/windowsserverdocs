@@ -6,7 +6,7 @@ author: billmath
 manager: femila
 ms.date: 02/13/2024
 ms.topic: concept-article
-ms.author: billmath
+ms.author: roharwoo
 ---
 
 # Deploying Legacy AD FS Federation Server Proxies

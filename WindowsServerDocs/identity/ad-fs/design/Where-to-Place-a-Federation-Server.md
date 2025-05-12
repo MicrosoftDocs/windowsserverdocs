@@ -3,7 +3,7 @@ description: "Learn more about: Where to Place a Federation Server"
 ms.assetid: 935ea7c2-4678-4033-b50f-2036a0359c5d
 title: Where to Place a Federation Server
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: concept-article

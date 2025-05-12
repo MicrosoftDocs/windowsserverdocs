@@ -3,7 +3,7 @@ description: "Learn more about: Legacy AD FS Federation Server Farm Using WID an
 ms.assetid: f0464182-56a2-4bfa-a8c8-7e39c1bd62d3
 title: Federation Server Farm Using WID and Proxies
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

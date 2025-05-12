@@ -3,7 +3,7 @@ description: "Learn more about: Solutions and Scenario Guides"
 ms.assetid: bdb9ad4b-139c-4031-8f26-827432779829
 title: Solutions and Scenario Guides
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: article

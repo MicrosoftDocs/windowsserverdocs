@@ -3,7 +3,7 @@ description: "Learn more about: Configure AD FS to authenticate users stored in 
 ms.assetid: e863ab80-4e4c-48d3-bdaa-31815ef36bae
 title: Configure AD FS to authenticate users stored in LDAP directories
 author: billmath
-ms.author: billmath
+ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
 ms.topic: how-to
