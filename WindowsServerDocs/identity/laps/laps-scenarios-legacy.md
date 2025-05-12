@@ -2,8 +2,8 @@
 title: Get started with Windows LAPS in legacy Microsoft LAPS emulation mode
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) in legacy Microsoft LAPS emulation mode.
 author: jay98014
-ms.author: justinha
-ms.date: 07/04/2022
+ms.author: roharwoo
+ms.date: 05/12/2025
 ms.topic: get-started
 ---
 

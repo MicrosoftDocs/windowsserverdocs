@@ -4,7 +4,7 @@ description: Information on how to migrate roles and features to a later version
 ms.topic: upgrade-and-migration-article
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 11/22/2021
 ms.assetid: 0f78ef4c-dd12-4b1b-8c6e-251dd803c5d1
 ---

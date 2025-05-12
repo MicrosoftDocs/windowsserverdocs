@@ -1,9 +1,9 @@
 ---
 description: Learn about event log monitoring in Active Directory to improve security
 title: Monitoring Active Directory for Signs of Compromise
-author: justinha
-ms.author: justinha
-ms.date: 02/01/2023
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
 ms.topic: concept-article
 ---
 # Monitoring Active Directory for Signs of Compromise

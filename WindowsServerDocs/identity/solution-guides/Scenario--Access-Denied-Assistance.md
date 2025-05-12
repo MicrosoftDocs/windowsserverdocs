@@ -4,7 +4,7 @@ ms.assetid: aae907eb-11cf-4a87-a046-8680872ed0b1
 title: Scenario Access-Denied Assistance
 author: xelu86
 ms.author: alalve
-manager: femila
+manager: tedhudek
 ms.date: 06/06/2023
 ms.topic: article
 ---
