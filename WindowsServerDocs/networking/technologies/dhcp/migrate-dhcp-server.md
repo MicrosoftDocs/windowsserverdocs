@@ -8,7 +8,7 @@ ms.date: 03/24/2025
 #customer intent: As an IT administrator, I want to migrate a DHCP server to Windows Server so that I can ensure seamless network configuration and management.
 ---
 
-# Migrate DHCP server to Windows Server
+# Migrate a DHCP server installation to another Windows Server
 
 DHCP server migration involves moving the settings for your existing DHCP server to a new DHCP server on the network. The goal of this server migration is to install the DHCP server role on the Windows Server operating system so that it provides DHCP leases on a network without any perceptible change to DHCP client computers.
 
