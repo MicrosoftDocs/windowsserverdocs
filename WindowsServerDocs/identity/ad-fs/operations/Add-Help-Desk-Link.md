@@ -2,7 +2,7 @@
 description: "Learn more about: Add Help Desk Link"
 ms.assetid: 2bac7744-9de3-491a-b0a2-4e843cec7344
 title: Add Help Desk Link
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024

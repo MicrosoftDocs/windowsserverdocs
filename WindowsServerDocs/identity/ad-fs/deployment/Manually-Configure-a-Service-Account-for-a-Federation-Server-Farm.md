@@ -2,7 +2,7 @@
 description: "Learn more about: Manually Configure a Service Account for a Federation Server Farm"
 ms.assetid: 5a1ae56b-adcb-447e-9e34-c0629d7cb241
 title: Manually Configure a Service Account for a Federation Server Farm
-author: billmath
+author: robinharwood
 manager: femila
 ms.date: 04/08/2025
 ms.topic: article

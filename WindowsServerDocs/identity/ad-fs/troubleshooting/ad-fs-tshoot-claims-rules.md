@@ -1,7 +1,7 @@
 ---
 title: AD FS Troubleshooting - Claims Rules
 description: This article describes how to troubleshoot claims rule syntax with Active Directory Federation Services (AD FS).
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024

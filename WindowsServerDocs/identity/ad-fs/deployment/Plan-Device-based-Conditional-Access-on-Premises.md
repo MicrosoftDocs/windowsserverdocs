@@ -2,7 +2,7 @@
 description: "Learn more about: Plan Device-based Conditional Access on-Premises"
 ms.assetid: c5eb3fa0-550c-4a2f-a0bc-698b690c4199
 title: Plan Device-based Conditional Access on-Premises
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025

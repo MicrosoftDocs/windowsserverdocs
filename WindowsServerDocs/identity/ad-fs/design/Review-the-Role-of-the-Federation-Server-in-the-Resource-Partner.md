@@ -2,7 +2,7 @@
 description: "Learn more about: Review the Role of the Federation Server in the Resource Partner"
 ms.assetid: f88238ea-d851-4129-8b4e-a3a62b813614
 title: Review the Role of the Federation Server in the Resource Partner
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025

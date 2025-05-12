@@ -2,7 +2,7 @@
 description: "Learn more about: Add Privacy Link"
 ms.assetid: 1ca6f87f-7272-4767-b609-3e295ac7d32f
 title: Add Privacy Link
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024

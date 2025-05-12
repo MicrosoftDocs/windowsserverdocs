@@ -2,7 +2,7 @@
 description: "Learn more about: Add a Claim Description"
 ms.assetid: 7d230527-f4fe-4572-8838-0b354ee0b06b
 title: Add a Claim Description
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024

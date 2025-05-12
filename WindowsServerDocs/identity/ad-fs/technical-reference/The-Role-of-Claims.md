@@ -2,7 +2,7 @@
 description: "Learn more about: The Role of Claims"
 ms.assetid: 22f53391-8c6a-4873-a1f4-08b4760ea621
 title: The Role of Claims
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025

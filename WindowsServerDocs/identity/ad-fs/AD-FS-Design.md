@@ -1,7 +1,7 @@
 ---
 title: Design options for AD FS for Windows Server
 description: "Learn about design options for Active Directory Federation Services (AD FS) in Windows Server."
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025

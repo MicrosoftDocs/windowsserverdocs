@@ -1,7 +1,7 @@
 ---
 title: Identity delegation scenario with AD FS
 description: This scenario describes an application that needs to access back-end resources that require the identity delegation chain to perform access control checks.
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025

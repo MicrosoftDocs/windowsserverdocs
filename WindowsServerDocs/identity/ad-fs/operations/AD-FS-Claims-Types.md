@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Client access policy claim Types in AD FS"
 title: Client access claim types in AD FS
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 04/08/2025

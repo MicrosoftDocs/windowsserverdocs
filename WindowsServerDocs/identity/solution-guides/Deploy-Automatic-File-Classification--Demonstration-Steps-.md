@@ -2,7 +2,7 @@
 description: "Learn more about: Deploy Automatic File Classification (Demonstration Steps)"
 ms.assetid: 01988844-df02-4952-8535-c87aefd8a38a
 title: Deploy Automatic File Classification (Demonstration Steps)
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024

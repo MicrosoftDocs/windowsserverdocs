@@ -1,7 +1,7 @@
 ---
 title: AD FS Troubleshooting - DNS Resolution
 description: This article describes how to troubleshoot Domain Name System aspects of Active Directory Federation Services.
-author: billmath
+author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 02/13/2024
