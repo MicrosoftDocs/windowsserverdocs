@@ -67,14 +67,14 @@ Automatic update functionality using the CTL Updater delivers several benefits:
   folder, the local shared folder must be synchronized with the Windows Update folder. This software
   update adds a set of options in the Certutil tool that you use to enable synchronization. For more
   information, see the
-  [Certutil -syncWithWU](../../administration/windows-commands/certutil.md#-syncwithwu) Windows
+  [Certutil -syncWithWU](../../administration/windows-commands/certutil.md) Windows
   command reference.
 
 - **Tool to select trusted root certificates** This software update introduces a tool for managing
   the set of trusted root certificates in your enterprise environment. You can view and select the
   set of trusted root certificates, export them to a serialized certificate store, and distribute
   them by using Group Policy. For more information, see the
-  [Certutil -generateSSTFromWU SSTFile](../../administration/windows-commands/certutil.md#-generatesstfromwu)
+  [Certutil -generateSSTFromWU SSTFile](../../administration/windows-commands/certutil.md)
   Windows command reference.
 
 - **Independent configurability** The automatic update mechanism for trusted and untrusted
