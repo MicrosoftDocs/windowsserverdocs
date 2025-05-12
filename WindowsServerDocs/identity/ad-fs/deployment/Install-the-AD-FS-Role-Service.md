@@ -2,9 +2,9 @@
 description: "Learn more about: Install the AD FS Role Service"
 ms.assetid: c28a1b8b-5bec-4eed-8c95-a1a29cfc957c
 title: Install the AD FS Role Service
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: install-set-up-deploy
 ---

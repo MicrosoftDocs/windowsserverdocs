@@ -2,9 +2,9 @@
 description: "Learn more about: Home Realm Discovery Customization"
 ms.assetid: 626e33fc-4ac2-4d38-9ac9-addaa4c8d9bb
 title: Home Realm Discovery Customization
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

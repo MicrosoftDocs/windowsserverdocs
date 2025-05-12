@@ -4,7 +4,7 @@ description: Learn about Extended Security Updates (ESU) for Windows Server 2008
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 08/04/2023
 ms.mktglfcycl: manage
 ms.sitesec: library
