@@ -12844,6 +12844,11 @@
      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
      "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
      "redirect_document_id": false
+    },
+    {
+     "source_path": "WindowsServerDocs/storage/storage-change-history.md",
+     "redirect_url": "/windows-server/storage",
+     "redirect_document_id": false
     }
   ]
 }
