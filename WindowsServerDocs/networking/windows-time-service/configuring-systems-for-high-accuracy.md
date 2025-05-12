@@ -162,31 +162,5 @@ net stop w32time && net start w32time
 Applying UtilizeSslTimeData setting change requires system restart.
 
 
-
-### UtilizeSslTimeData
-
-| Description | Value |
-|--|--|
-| Key location | HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config |
-| Setting | 0 |
-| Outcome | Secure Time Seeding feature is disabled. |
-
-## Applying Modified Registry settings
-
-The following command signals Windows Time to pick up the updated settings:
-
-```cmd
-w32tm /config /update
-```
-
-The following command restarts Windows Time to pick up the updated settings:
-
-```cmd
-net stop w32time && net start w32time
-```
-
-Applying UtilizeSslTimeData setting change requires system restart.
-
-
 > [!NOTE]
 > To learn more about the W32Time registry settings, see [Windows Time registry reference](Windows-Time-Service-Tools-and-Settings.md#windows-time-registry-reference)
