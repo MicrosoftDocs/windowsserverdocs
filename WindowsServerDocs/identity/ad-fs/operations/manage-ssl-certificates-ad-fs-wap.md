@@ -4,7 +4,7 @@ title: Manage TLS/SSL Certificates in AD FS and WAP in Windows Server 2016
 description: Learn how to manage TLS/SSL Certificates in Active Directory Federation Services (AD FS) and WAP in Windows Server 2016.
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: how-to
 ---

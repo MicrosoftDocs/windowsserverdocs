@@ -3,7 +3,7 @@ title: Active Directory Federation Services Rapid Restore tool
 description: "Learn about the Active Directory Federation Services (AD FS) Rapid Restore tool and restore AD FS data without a full backup or export an AD FS configuration."
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ms.custom: inhenkel

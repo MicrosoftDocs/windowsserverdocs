@@ -4,7 +4,7 @@ title: Dynamic Access Control Scenario Overview
 description: "Learn more about: Dynamic Access Control: Scenario Overview"
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: concept-article
 ---

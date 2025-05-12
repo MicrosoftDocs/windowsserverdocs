@@ -4,7 +4,7 @@ ms.assetid: cea6011d-3753-4b95-aaa5-38d4e97d6e42
 title: Prepare Client Computers in the Account Partner
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

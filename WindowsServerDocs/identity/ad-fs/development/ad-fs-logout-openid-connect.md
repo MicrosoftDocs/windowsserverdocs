@@ -3,7 +3,7 @@ description: "Learn more about: Single log-out for OpenID Connect with AD FS"
 title: Single log-out for OpenID Connect with AD FS
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---

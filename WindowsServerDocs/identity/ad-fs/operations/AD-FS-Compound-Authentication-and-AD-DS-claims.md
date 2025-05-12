@@ -3,7 +3,7 @@ title: Compound Authentication and Active Directory Domain Services claims in Ac
 description: The following document discusses compound authentication and AD DS claims in AD FS.
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---

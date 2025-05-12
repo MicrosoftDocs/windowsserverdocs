@@ -4,7 +4,7 @@ ms.assetid: e831f781-3c45-4d44-b411-160d121d1324
 title: Claims Transformation Rules Language
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: article
 ---

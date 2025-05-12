@@ -4,7 +4,7 @@ ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configure Device-based Conditional Access on-premises
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 03/18/2025
 ms.topic: how-to
 ---

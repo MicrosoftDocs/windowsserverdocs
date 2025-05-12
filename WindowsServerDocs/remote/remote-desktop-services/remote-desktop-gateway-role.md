@@ -5,7 +5,7 @@ ms.author: alalve
 ms.topic: how-to
 ms.date: 7/3/2024
 author: xelu86
-manager: femila
+manager: tedhudek
 ---
 
 # Deploy the Remote Desktop Gateway role

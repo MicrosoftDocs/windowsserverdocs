@@ -1,5 +1,5 @@
 ---
-manager: femila
+manager: tedhudek
 description: Learn more about multi-factor authentication and external authentication providers customization.
 title: Multi-factor authentication and external authentication providers customization
 ms.topic: article

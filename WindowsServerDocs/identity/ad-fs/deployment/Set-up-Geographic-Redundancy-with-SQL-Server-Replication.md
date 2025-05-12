@@ -2,7 +2,7 @@
 title: Setup Geographic Redundancy with SQL Server Replication
 description: "Learn more about: Setup Geographic Redundancy with SQL Server Replication"
 author: robinharwood
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ms.author: roharwoo

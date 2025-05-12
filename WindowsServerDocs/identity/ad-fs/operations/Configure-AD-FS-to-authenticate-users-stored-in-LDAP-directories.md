@@ -4,7 +4,7 @@ ms.assetid: e863ab80-4e4c-48d3-bdaa-31815ef36bae
 title: Configure AD FS to authenticate users stored in LDAP directories
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---

@@ -3,7 +3,7 @@ description: "Learn more about: Import a Server Authentication Certificate to th
 ms.assetid: e1f2ce2d-b24f-4ccd-8add-9e69419fc6c1
 title: Import a Server Authentication Certificate to the Default Web Site
 author: robinharwood
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ms.author: roharwoo

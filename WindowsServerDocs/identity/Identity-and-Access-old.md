@@ -4,7 +4,7 @@ ms.assetid: c248b41f-0de3-4247-9a25-b4b08e50ebf0
 title: Identity and Access
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: article
 ---

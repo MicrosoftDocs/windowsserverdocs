@@ -4,7 +4,7 @@ ms.assetid: 309d6358-777d-496a-856d-728246c7d9a1
 title: Customize the display names and descriptions for authentication methods
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

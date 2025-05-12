@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - Microsoft Entra ID
 description: This article describes how to troubleshoot various aspects of Active Directory Federation Services (AD FS) and Microsoft Entra ID.
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: troubleshooting-general
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done

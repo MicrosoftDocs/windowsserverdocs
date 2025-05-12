@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - Congestion Control
 description: Learn how to troubleshoot various aspects of Active Directory Federation Services load or congestion issues.
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 10/14/2024
 ms.topic: troubleshooting-general
 ---

@@ -4,7 +4,7 @@ ms.assetid: 8ce6e7c4-cf8e-4b55-980c-048fea28d50f
 title: AD FS Requirements for Windows Server
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

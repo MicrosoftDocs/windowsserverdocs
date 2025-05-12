@@ -4,7 +4,7 @@ ms.assetid: d31006b1-c468-4196-be5a-9b293622e710
 title: AD FS 2016 Deployment
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

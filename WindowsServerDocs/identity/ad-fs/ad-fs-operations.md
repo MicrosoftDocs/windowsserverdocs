@@ -4,7 +4,7 @@ ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: AD FS Operations
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

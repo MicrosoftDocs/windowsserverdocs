@@ -4,7 +4,7 @@ ms.assetid: 69ec592a-5499-4249-8ba0-afa356a8ff75
 title: Device Registration Technical Reference
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

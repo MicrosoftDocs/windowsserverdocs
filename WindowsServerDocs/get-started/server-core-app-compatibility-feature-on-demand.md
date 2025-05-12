@@ -4,7 +4,7 @@ description: The Server Core App Compatibility Feature on Demand (FOD) is an opt
 ms.topic: how-to
 author: jasongerend
 ms.author: jgerend
-manager: femila
+manager: tedhudek
 ms.date: 03/07/2023
 ---
 

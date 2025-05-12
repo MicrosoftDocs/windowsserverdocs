@@ -4,7 +4,7 @@ ms.assetid: aca4a4fa-b12c-4eed-a499-f9aedb7d2fd6
 title: Configure Corporate DNS for the Federation Service and DRS
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---

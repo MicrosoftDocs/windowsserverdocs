@@ -3,7 +3,7 @@ description: Learn how to configure a computer that functions as a federation se
 ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
 title: Join a computer to a domain
 author: xelu86
-manager: femila
+manager: tedhudek
 ms.date: 08/19/2024
 ms.topic: how-to
 ms.author: alalve

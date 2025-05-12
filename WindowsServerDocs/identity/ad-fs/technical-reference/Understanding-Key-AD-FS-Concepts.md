@@ -4,7 +4,7 @@ ms.assetid: 204f5fe9-3611-4da0-b057-a386004b4598
 title: Understanding Key Active Directory Federation Services Concepts
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: concept-article
 ---

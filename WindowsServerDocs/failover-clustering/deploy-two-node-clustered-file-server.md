@@ -1,7 +1,7 @@
 ---
 title: Deploying a two-node clustered file server
 description: This article describes creating a two-node file server cluster
-manager: femila
+manager: tedhudek
 ms.topic: install-set-up-deploy
 ms.author: jgerend
 author: jasongerend

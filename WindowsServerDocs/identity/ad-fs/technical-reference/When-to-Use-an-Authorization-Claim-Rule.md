@@ -4,7 +4,7 @@ ms.assetid: b734cbcb-342c-4a28-8ab5-b9cd990bb1c2
 title: When to Use an Authorization Claim Rule
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: concept-article
 ---

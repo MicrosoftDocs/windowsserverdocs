@@ -3,7 +3,7 @@ description: "Learn more about: Controlling Access to Organizational Data with A
 title: Client Access Control policies in AD FS
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: concept-article
 ---

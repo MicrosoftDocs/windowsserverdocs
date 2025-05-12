@@ -4,7 +4,7 @@ ms.assetid: eb047a19-e5cb-43f4-a7bb-c4b7c8fc55a5
 title: AD FS Deployment Guide
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---
