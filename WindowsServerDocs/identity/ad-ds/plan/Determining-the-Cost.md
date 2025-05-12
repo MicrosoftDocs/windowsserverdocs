@@ -1,9 +1,9 @@
 ---
 description: Learn more about assigning cost values to links
 title: Determining the Cost
-author: justinha
-ms.author: justinha
-ms.date: 05/16/2023
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
 ms.topic: concept-article
 ms.custom: inhenkel
 

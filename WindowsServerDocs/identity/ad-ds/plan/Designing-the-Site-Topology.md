@@ -2,10 +2,10 @@
 description: "Learn more about: Designing the Site Topology"
 ms.assetid: eeb919de-e21e-48d8-8186-e42adec6933f
 title: Designing the Site Topology
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: concept-article
 
 ---

@@ -2,10 +2,10 @@
 description: "Learn more about: Enabling Clients to Locate the Next Closest Domain Controller"
 ms.assetid: 7dd905ea-4235-4519-8400-31b4fa0ed1bf
 title: Enabling Clients to Locate the Next Closest Domain Controller
-ms.author: justinha
-author: justinha
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 08/08/2018
+ms.date: 05/12/2025
 ms.topic: concept-article
 ---
 
