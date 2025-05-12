@@ -10,15 +10,15 @@ ms.date: 05/08/2025
 
 # Migrate existing DHCP failover deployment
 
-Use the following procedures to migrate an existing DHCP failover deployment on an earlier version of Windows Server to a newer version of Windows Server.
+Migrating an existing DHCP failover deployment to a newer version of Windows Server ensures your network infrastructure remains up-to-date, secure, and efficient. This comprehensive guide walks you through the entire migration process, starting with breaking the failover relationship on your current servers, exporting and importing DHCP settings, and configuring failover on the new servers. By following this guide, IT administrators can transition their DHCP failover setup to the latest Windows Server environment, ensuring minimal downtime, and uninterrupted network services.
 
 ## Prerequisites
 
-- At least Windows Server 2012 installed
+- At least Windows Server 2012 installed.
 
-- The DHCP server role is installed
+- The DHCP server role is installed.
 
-- An existing failover relationship exists
+- An existing failover relationship exists.
 
 - Membership in the **Administrators** group, or equivalent, is the minimum required to complete these procedures.
 
@@ -26,23 +26,20 @@ Use the following procedures to migrate an existing DHCP failover deployment on 
 
 The steps in this guide are valid for Windows Server versions starting from Windows Server 2012.
 
-For this guide, consider the scenario where the DHCP failover deployment is migrated from Windows Server 2022 to Windows Server 2025. The following servers will be used as an example:
+For this guide, consider the scenario where the DHCP failover deployment is migrated from Windows Server 2022 to Windows Server 2025. The following servers are used in this migration scenario:
 
-- **DHCP-2022-1**: The DHCP server that's online with active scopes while a new DHCP failover partner server running Windows Server 2025 is being configured.
-- **DHCP-2022-2**: The initial DHCP failover partner server for DHCP-2022-1. DHCP-2022-2 is removed from the DHCP failover relationship at the beginning of the procedure and taken offline.
+- **DHCP-2022-1**: The initial DHCP server that's online with active scopes.
+- **DHCP-2022-2**: The initial DHCP failover partner server for DHCP-2022-1.
 - **DHCP-2025-1**: The DHCP server running Windows Server 2025 that replaces DHCP-2022-1.
 - **DHCP-2025-2**: The DHCP server running Windows Server 2025 that replaces DHCP-2022-2.
 
 ## Delete the failover relationship between DHCP-2022-1 and DHCP-2022-2
 
-You can delete the failover relationship using PowerShell, or the DHCP console.
-
-> [!WARNING]
-> Deleting a failover relationship removes all scopes that are members of the failover relationship from the partner DHCP server.
+You can delete the failover relationship using PowerShell, or the DHCP console. Deleting a failover relationship removes all scopes that are members of the failover relationship from the partner DHCP server.
 
 ### [PowerShell](#tab/powershell)
 
-1. At an elevated Windows PowerShell prompt on DHCP-2022-1, type the following command, and press ENTER:
+1. At an elevated Windows PowerShell prompt on DHCP-2022-1, use the cmdlet [Remove-DhcpServerv4Failover](/powershell/module/dhcpserver/remove-dhcpserverv4failover) to delete a failover relationship with the name **DHCP-2022-1-DHCP-2022-2**.  Type the following command and then press ENTER:
 
     ```powershell
     Remove-DhcpServerv4Failover –Name DHCP-2022-1-DHCP-2022-2
@@ -50,7 +47,7 @@ You can delete the failover relationship using PowerShell, or the DHCP console.
 
     Replace *DHCP-2022-1-DHCP-2022-2* with the name of the DHCP failover relationship you wish to delete.
 
-1. Type the following command and then press ENTER:
+1. Use the cmdlet [Get-DhcpServerv4Failover](/powershell/module/dhcpserver/get-dhcpserverv4failover) to get the failover relationships configured on the current DHCP server. Type the following command and then press ENTER:
 
     ```powershell
     Get-DhcpServerv4Failover
@@ -65,9 +62,9 @@ You can delete the failover relationship using PowerShell, or the DHCP console.
 
 1. In the DHCP console on DHCP-2022-1, right-click **IPv4** and then select the **Failover** tab.
 
-1. Click **DHCP-2022-1-DHCP-2022-2** and then click **Delete**.
+1. Click **DHCP-2022-1-DHCP-2022-2** and then select **Delete**.
 
-1. In the Delete Failover Relationship dialog box, click **OK**, confirm that deletion was successful, and then click **Close**.
+1. In the Delete Failover Relationship dialog box, select **OK**, confirm that deletion was successful, and then select **Close**.
 
 1. Click **OK** to close the IPv4 properties window.
 
@@ -87,7 +84,7 @@ Use the following procedure to export server level settings from the DHCP server
 
 Follow the steps to export DHCP settings from DHCP-2022-1.
 
-1. On DHCP-2025-2 and DHCP-2025-1, open an elevated Windows PowerShell prompt, type the following commands, and then press ENTER:
+1. On **DHCP-2025-1**, open an elevated Windows PowerShell prompt, type the following commands, and then press ENTER:
 
     ```powershell
     mkdir C:\export
@@ -95,8 +92,17 @@ Follow the steps to export DHCP settings from DHCP-2022-1.
     Export-DhcpServer –ComputerName DHCP-2022-1 –File C:\export\DHCP-2022-1exp.xml -Verbose
     ```
 
-> [!IMPORTANT]
-> DHCP configuration settings are exported from a remote DHCP server (DHCP-2022-1) to a file on the local server (DHCP-2025-1 and DHCP-2025-1). Alternatively, you can export to a file on DHCP-2022-1, and then copy the settings file over the network to DHCP-2025-2 and DHCP-2025-1.
+1. Connect to **DHCP-2025-2**, and in an elevated Windows PowerShell prompt, run the following:
+
+    ```powershell
+    mkdir C:\export
+    mkdir C:\backup
+    Export-DhcpServer –ComputerName DHCP-2022-1 –File C:\export\DHCP-2022-1exp.xml -Verbose
+    ```
+
+DHCP configuration settings are exported from a remote DHCP server, **DHCP-2022-1**, to a file on the local server, **DHCP-2025-1** and **DHCP-2025-2**.
+
+Alternatively, you can export to a file on DHCP-2022-1, and then copy the settings file over the network to DHCP-2025-2 and DHCP-2025-1.
 
 ## Import DHCP settings
 
@@ -148,7 +154,7 @@ Follow the steps to import DHCP settings to DHCP-2025-2.
 
 Next, configure DHCP failover for all desired scopes on DHCP-2022-1, specifying DHCP-2025-1 as the failover partner server. For procedures to configure DHCP failover using PowerShell or the DHCP console, see [Configure DHCP Failover](/windows-server/networking/technologies/dhcp/manage-dhcp-failover-relationships?tabs=powershell#configure-failover-relationships).
 
-This step replicates scopes and leases to DHCP2012R2-1 in preparation for taking DHCP2012-1 offline.
+This step replicates scopes and leases to DHCP-2025-1 in preparation for taking DHCP-2022-1 offline.
 
 ## Delete the DHCP failover relationship on DHCP-2025-1
 
@@ -188,6 +194,8 @@ Delete the DHCP failover relationship on DHCP-2025-1.
 >[!NOTE]
 > DHCP scopes added to the failover relationship ARE removed from the partner DHCP server. Scopes remain on the server where you entered the Remove-DhcpServerv4Failover command (DHCP-2025-1 in this procedure).
 
+---
+
 ## Configure DHCP failover between DHCP-2025-1 and DHCP-2025-2
 
 Next, configure DHCP failover for all desired scopes on DHCP-2025-1, specifying DHCP-2025-2 as the failover partner server. For procedures to configure DHCP failover using PowerShell or the DHCP console, see [Configure DHCP Failover](/windows-server/networking/technologies/dhcp/manage-dhcp-failover-relationships?tabs=powershell#configure-failover-relationships).
@@ -196,10 +204,10 @@ Next, configure DHCP failover for all desired scopes on DHCP-2025-1, specifying 
 
 Finally, update [DHCP relay agents](/windows-server/networking/technologies/dhcp/dhcp-failover#relay-agents) to use the new DHCP servers and complete DHCP migration.
 
-After leases and settings have been replicated to DHCP-2025-1 and DHCP-2025-2, settings are verified, and DHCP relays are updated, you can stop the DHCP Server service on DHCP-2022-1 and DHCP-2022-2 so that new DHCP leases are only issued from DHCP-2025-1 or DHCP-2025-2.
+After leases and settings are replicated to DHCP-2025-1 and DHCP-2025-2, settings are verified, and DHCP relays are updated, you can stop the DHCP Server service on DHCP-2022-1 and DHCP-2022-2 so that new DHCP leases are only issued from DHCP-2025-1 or DHCP-2025-2.
 
 ## Related content
 
-[DHCP failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
+- [DHCP failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
 
-[Manage DHCP failover relationships](/windows-server/networking/technologies/dhcp/manage-dhcp-failover-relationships?tabs=powershell)
+- [Manage DHCP failover relationships](/windows-server/networking/technologies/dhcp/manage-dhcp-failover-relationships?tabs=powershell)
