@@ -10,7 +10,7 @@ ms.date: 03/18/2025
 
 # Deploy Storage Spaces Direct on Windows Server
 
-This article provides step-by-step instructions to deploy [Storage Spaces Direct](../storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Local, see [About Azure Local](/azure/azure-local/deploy/deployment-introduction?context=/windows-server/context/windows-server-storage)
+This article provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Local, see [About Azure Local](/azure/azure-local/deploy/deployment-introduction?context=/windows-server/context/windows-server-storage)
 
 > [!Tip]
 > Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Local solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Local, see the [Azure Local Catalog](https://aka.ms/azurestackhcicatalog).
@@ -385,7 +385,7 @@ CD $ScriptFolder
 
 ## Additional References
 
-- [Storage Spaces Direct overview](../storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Understand the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage)
 - [Planning volumes in Storage Spaces Direct](/azure/azure-local/concepts/plan-volumes?context=/windows-server/context/windows-server-storage)
 - [Storage Spaces Fault Tolerance](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage)
