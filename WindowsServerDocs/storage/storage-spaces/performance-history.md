@@ -9,7 +9,7 @@ ms.date: 10/25/2024
 ---
 # Performance history for Storage Spaces Direct
 
-Performance history is a new feature that gives [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
+Performance history is a new feature that gives [Storage Spaces Direct](../storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
    > [!IMPORTANT]
    > This feature is new in Windows Server 2019. It is not available in Windows Server 2016.
@@ -219,4 +219,4 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct overview](../storage-spaces-direct-overview.md)
