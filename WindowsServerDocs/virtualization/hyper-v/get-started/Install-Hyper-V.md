@@ -11,7 +11,7 @@ zone_pivot_groups: windows
 ---
 # Install Hyper-V
 
-This articles shows how to install Hyper-V in **Windows** and **Windows Server**. Follow the set of instructions that fit your needs.
+This article shows how to install Hyper-V in **Windows** and **Windows Server**. Follow the set of instructions that fit your needs.
 
 :::zone pivot="windows-server"
 
@@ -25,7 +25,7 @@ Before you install Windows Server or add the Hyper-V role, make sure that:
 
 - Your computer hardware is compatible. For more information, see [System Requirements for Windows Server](../../../get-started/hardware-requirements.md) and [System requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md).
 
-- You don't plan to use third-party virtualization apps that rely on the same processor features that Hyper-V requires. Examples include VMWare Workstation and VirtualBox. You can install Hyper-V without uninstalling these other apps. But, if you try to use them to manage virtual machines when the Hyper-V hypervisor is running, the virtual machines might not start or might run unreliably. For details and instructions for turning off the Hyper-V hypervisor if you need to use one of these apps, see [Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard](https://support.microsoft.com/help/3204980/virtualization-applications-do-not-work-together-with-hyper-v-device-g).
+- You don't plan to use third-party virtualization apps that rely on the same processor features that Hyper-V requires. Examples include VMware Workstation and VirtualBox. You can install Hyper-V without uninstalling these other apps. But, if you try to use them to manage virtual machines when the Hyper-V hypervisor is running, the virtual machines might not start or might run unreliably. For details and instructions for turning off the Hyper-V hypervisor if you need to use one of these apps, see [Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard](https://support.microsoft.com/help/3204980/virtualization-applications-do-not-work-together-with-hyper-v-device-g).
 
 If you want to install only the management tools, such as Hyper-V Manager, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
 
@@ -91,17 +91,17 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 
 :::zone pivot="windows"
 
-Enable Hyper-V to create virtual machines on Windows. Hyper-V can be enabled in many ways including using the **Windows control panel**, **PowerShell** or using the **Deployment Imaging Servicing and Management tool (DISM)**. This article walks through each option.
+Enable Hyper-V to create virtual machines on Windows. Hyper-V can be enabled in many ways including using the **Windows control panel**, **PowerShell**, or using the **Deployment Imaging Servicing and Management tool (DISM)**. This article walks through each option.
 
 >[!NOTE]
-> Hyper-V is built into Windows as an optional feature -- there's no Hyper-V download.
+> Hyper-V is built into Windows as an optional feature--there's no Hyper-V download.
 
 ## Check requirements for Windows
 
 - Windows 10 (Pro or Enterprise), or Windows 11 (Pro or Enterprise)
 - 64-bit Processor with Second Level Address Translation (SLAT).
 - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
-- Minimum of 4 GB memory.
+- Minimum of 4-GB memory.
 
 >[!NOTE]
 > The Hyper-V role **can't** be installed on Windows 10 Home or Windows 11 Home.
