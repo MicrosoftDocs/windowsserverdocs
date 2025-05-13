@@ -27,7 +27,7 @@ mode com<m>[:] [baud=<b>] [parity=<p>] [data=<d>] [stop=<s>] [to={on|off}] [xon=
 
 | Parameter  | Description |
 | ---------- | ----------- |
-| `com<m>[:]` | Specifies the number of the async Prncnfg.vbshronous communications port. |
+| `com<m>[:]` | Specifies the number of the asynchronous communications port. |
 | `baud=<b>`  | Specifies the transmission rate in bits per second. The valid values include:<ul><li>**11** - 110 baud</li><li>**15** - 150 baud</li><li>**30** - 300 baud</li><li>**60** - 600 baud</li><li>**12** - 1200 baud</li><li>**24** - 2400 baud</li><li>**48** - 4800 baud</li><li>**96** - 9600 baud</li><li>**19** - 19,200 baud</li></ul> |
 | `parity=<p>` | Specifies how the system uses the parity bit to check for transmission errors. The valid values include:<ul><li>**n** - none</li><li>**e** - even (default value)</li><li>**o** - odd</li><li>**m** - mark</li><li>**s** - space</li></ul>Not all devices support using the **m** or **s** parameters. |
 | `data=<d>` | Specifies the number of data bits in a character. Valid values range from **5** through **8**. The default value is **7**. Not all devices support the values **5** and **6**. |
