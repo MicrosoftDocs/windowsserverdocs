@@ -496,4 +496,4 @@ Currently, Storage Replica doesn't support disks that have a physical sector siz
 - [Server-to-server storage replication](server-to-server-storage-replication.md)
 - [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica FAQ](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
